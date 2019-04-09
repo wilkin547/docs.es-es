@@ -2,12 +2,12 @@
 title: Transferencia de mensajes por secuencias
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 5a146b9f0bd2eb74b5ef4b5877e6cb925d386abc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136882"
 ---
 # <a name="streaming-message-transfer"></a>Transferencia de mensajes por secuencias
 Los transportes de Windows Communication Foundation (WCF) admiten dos modos de transferencia de mensajes:  
@@ -47,4 +47,5 @@ Los transportes de Windows Communication Foundation (WCF) admiten dos modos de t
  Si se cambia el modo de transferencia de almacenado en búfer a por secuencias, también se cambia la forma del canal nativo de transportes de canalización con nombre y TCP. Para transferencias almacenadas en búfer, la forma del canal nativo es <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Para las transferencias por secuencias, los canales nativos son <xref:System.ServiceModel.Channels.IRequestChannel> y <xref:System.ServiceModel.Channels.IReplyChannel>. Al cambiar el modo de transferencia en una aplicación existente que utiliza estos transportes directamente (es decir, no a través de un contrato de servicios), requiere el cambio de la forma del canal esperada para los generadores de canales y agentes de escucha.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Habilitar el Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [Filtrar para habilitar el streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

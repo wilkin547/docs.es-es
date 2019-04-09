@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db9876727244d528ec3b7f1c3c9875bb5ca645b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111662"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > elemento (.NET Native)
 Aplica la directiva al tipo de parámetro de un método o tipo genérico.  
@@ -55,7 +55,7 @@ Aplica la directiva al tipo de parámetro de un método o tipo genérico.
 |-----------|-----------------|  
 |*generic_parameter_name*|Atributo necesario. Nombre del parámetro de tipo genérico. Por ejemplo, en el delegado genérico <xref:System.Func%603>, un valor *generic_parameter_name* de "TResult" aplica la directiva en tiempo de ejecución al valor devuelto del delegado.|  
   
-## <a name="all-other-attributes"></a>Todos los demás atributos  
+## <a name="all-other-attributes"></a>Resto de atributos  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -68,8 +68,8 @@ Aplica la directiva al tipo de parámetro de un método o tipo genérico.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un constructor o un método.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un tipo determinado, como una clase o una estructura.|  
+|[\<Método >](../../../docs/framework/net-native/method-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un constructor o método.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un tipo determinado, como una clase o una estructura.|  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento `<GenericParameter>` es un elemento secundario del elemento [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) o [\<Type>](../../../docs/framework/net-native/type-element-net-native.md), y sirve para aplicar directivas a un parámetro de tipo genérico concreto especificado por su nombre en el tipo genérico o en la firma del método.  
@@ -87,8 +87,9 @@ Aplica la directiva al tipo de parámetro de un método o tipo genérico.
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
+
+- [\<Método > elemento](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Configuración de directiva de la directiva en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Elementos de directivas en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-elements.md)

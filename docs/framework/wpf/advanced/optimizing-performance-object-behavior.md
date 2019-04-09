@@ -11,23 +11,21 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-ms.openlocfilehash: 5548292480f07fa192985800931f9d0262f2b791
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 49318059435c5f5669510f7cf3fb7c93a4bc05e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137441"
 ---
 # <a name="optimizing-performance-object-behavior"></a>Optimizar el rendimiento: Comportamiento de objetos
 Entender el comportamiento intrínseco de los objetos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le ayudará a lograr un equilibrio correcto entre funcionalidad y rendimiento.  
-  
 
-  
 <a name="Not_Removing_Event_Handlers"></a>   
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>No quitar los controladores de eventos en objetos puede mantener los objetos activos  
  El delegado que un objeto pasa a su evento es realmente una referencia a ese objeto. Por lo tanto, los controladores de eventos pueden mantener los objetos activos durante más tiempo de lo esperado. Al realizar la limpieza de un objeto registrado para escuchar los eventos de un objeto, es esencial quitar ese delegado antes de liberar el objeto. Mantener activos objetos innecesarios aumenta el uso de memoria de la aplicación. Esto es especialmente cierto cuando el objeto es la raíz de un árbol lógico o un árbol visual.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] presenta un patrón de agente de escucha de evento débil para los eventos que pueden ser útiles en situaciones donde es difícil mantener el seguimiento de las relaciones de vigencia de objeto entre el origen y el agente de escucha. Algunos eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] existentes usan este patrón. Si implementa objetos con eventos personalizados, este patrón puede resultarle de utilidad. Para obtener más información, consulte [Modelos de evento débil](weak-event-patterns.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] presenta un patrón de agente de escucha de evento débil para los eventos que puede resultar útil en situaciones donde son difíciles de mantener un seguimiento de las relaciones de vigencia de objetos entre el origen y el agente de escucha. Algunos eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] existentes usan este patrón. Si implementa objetos con eventos personalizados, este patrón puede resultarle de utilidad. Para obtener más información, consulte [Modelos de evento débil](weak-event-patterns.md).  
   
  Hay varias herramientas, como CLR Profiler y Visor de espacios de trabajo, que pueden proporcionar información sobre el uso de memoria de un proceso especificado. CLR Profiler incluye varias vistas muy útiles del perfil de asignación, incluido un histograma de tipos asignados, gráficos de asignación y llamadas, una línea de tiempo que muestra recolecciones de elementos no usados de varias generaciones y el estado resultante del montón administrado después de esas colecciones, y un árbol de llamadas que muestra las asignaciones por método y las cargas de ensamblado. Para obtener más información, consulte [Centro para desarrolladores de .NET Framework](https://go.microsoft.com/fwlink/?LinkId=117435).  
   
@@ -67,7 +65,7 @@ Entender el comportamiento intrínseco de los objetos [!INCLUDE[TLA2#tla_winclie
   
  Inmovilizar un <xref:System.Windows.Freezable> puede mejorar su rendimiento, porque ya no necesita dedicar recursos a mantener notificaciones de cambio. En la tabla siguiente se muestra el tamaño de una sencilla <xref:System.Windows.Media.SolidColorBrush> cuando su <xref:System.Windows.Freezable.IsFrozen%2A> propiedad está establecida en `true`, en comparación con cuando no lo es. Esto supone aplicar un pincel a la <xref:System.Windows.Shapes.Shape.Fill%2A> propiedad diez <xref:System.Windows.Shapes.Rectangle> objetos.  
   
-|**Estado**|**Size**|  
+|**Estado**|**Tamaño**|  
 |---------------|--------------|  
 |Inmovilizado <xref:System.Windows.Media.SolidColorBrush>|212 bytes|  
 |No inmovilizado <xref:System.Windows.Media.SolidColorBrush>|972 bytes|  
@@ -105,12 +103,13 @@ Entender el comportamiento intrínseco de los objetos [!INCLUDE[TLA2#tla_winclie
   
  En la tabla siguiente se muestra el tiempo transcurrido, agregar y representar 5000 <xref:System.Windows.Controls.TextBlock> elementos a un <xref:System.Windows.Controls.StackPanel> y un <xref:System.Windows.Controls.VirtualizingStackPanel>. En este escenario, las mediciones representan el tiempo entre que se adjunta una cadena de texto para el <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propiedad de un <xref:System.Windows.Controls.ItemsControl> objeto a la hora cuando los elementos del panel muestran la cadena de texto.  
   
-|**Panel de host**|**Tiempo de representación (ms)**|  
+|**Panel de host**|**Representar el tiempo (ms)**|  
 |--------------------|----------------------------|  
 |<xref:System.Windows.Controls.StackPanel>|3210|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Optimizar WPF: Rendimiento de aplicaciones](optimizing-wpf-application-performance.md)
 - [Planear para mejorar el rendimiento de aplicaciones](planning-for-application-performance.md)
 - [Aprovechar el hardware](optimizing-performance-taking-advantage-of-hardware.md)

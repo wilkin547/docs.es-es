@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: 3d59fac08ee59ab5ede943de5109805ff1633d48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3102ae8d8c28be43883eeaff6c4f829b355384a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111402"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 Asocia el generador usado para crear el host del servicio con el servicio que se va a hospedar y otros aspectos de programación necesarios para tener acceso o compilar el código de hospedaje proporcionado en el archivo .svc.  
@@ -25,7 +25,7 @@ CodeBehind = "CodeBehind"%>
   
 ## <a name="attributes"></a>Atributos  
   
-#### <a name="service"></a>Servicio  
+#### <a name="service"></a>web de Office  
  El nombre del tipo de CLR del servicio hospedado. Esto debería ser un nombre completo de un tipo que implementa uno o varios contactos del servicio.  
   
 #### <a name="factory"></a>Factory  
@@ -67,4 +67,5 @@ Factory="WebScriptServiceHostFactory"
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Host de servicio personalizado](../../../../../docs/framework/wcf/samples/custom-service-host.md)

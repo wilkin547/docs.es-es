@@ -1,5 +1,5 @@
 ---
-title: Filtrar Establecer la alineación horizontal y vertical de TileBrush
+title: Filtrar Establecer la alineación horizontal y vertical de un TileBrush
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - aligning [WPF], TileBrushes
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
-ms.openlocfilehash: d18e4a9fe4f99c1947402c252082e1580a0b22cc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ddef63bba7fce1bfb8d50b4f2dbaaddfa76709ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352560"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149193"
 ---
-# <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Procedimiento Establecer la alineación horizontal y vertical de TileBrush
+# <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Filtrar Establecer la alineación horizontal y vertical de un TileBrush
 En este ejemplo se muestra cómo controlar la alineación horizontal y vertical del contenido en un mosaico. Para controlar la alineación horizontal y vertical de un <xref:System.Windows.Media.TileBrush>, use su <xref:System.Windows.Media.TileBrush.AlignmentX%2A> y <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propiedades.  
   
  El <xref:System.Windows.Media.TileBrush.AlignmentX%2A> y <xref:System.Windows.Media.TileBrush.AlignmentY%2A> las propiedades de un <xref:System.Windows.Media.TileBrush> se usan cuando cualquiera de las siguientes condiciones es verdadera:  
@@ -73,6 +73,7 @@ Patrón de mosaico con el contenido alineado en la parte inferior derecha en el 
  Los ejemplos usan <xref:System.Windows.Media.DrawingBrush> objetos para demostrar cómo el <xref:System.Windows.Media.TileBrush.AlignmentX%2A> y <xref:System.Windows.Media.TileBrush.AlignmentY%2A> se usan las propiedades. Estas propiedades se comportan exactamente igual para todos los pinceles en mosaicos: <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.ImageBrush>, y <xref:System.Windows.Media.VisualBrush>. Para más información sobre los pinceles en mosaicos, vea [Pintar con imágenes, dibujos y elementos visuales](painting-with-images-drawings-and-visuals.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.VisualBrush>

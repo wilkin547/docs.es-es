@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3cc3b0258381b10c27dd58bee66dbb6b2cf5b2c8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 298620092c37b2c02332e9135f73584272e326bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351091"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111688"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>Método DacpGetModuleAddress::Request
 
@@ -46,7 +46,6 @@ HRESULT Request(
 Esta estructura reside en el tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para ello, la manera más fácil es imitar la implementación:
 
 - Devolver el valor obtenido del que realiza la llamada la `Request` método en el `IXCLRDataModule*` parámetro con los siguientes parámetros: `((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
-
 
 ## <a name="requirements"></a>Requisitos
 

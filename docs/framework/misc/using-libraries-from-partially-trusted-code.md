@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d32e5ed28153ae3ad54e1f75242a767d2e764a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a3bbbaa565a6c118082456a1ab6d7af59db7067
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585280"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119280"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Utilizar bibliotecas de código que no es de plena confianza
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -52,4 +52,5 @@ ms.locfileid: "54585280"
 >  Algunas clases en la biblioteca de clases de .NET Framework no tienen la **AllowPartiallyTrustedCallersAttribute** atributo y no se puede llamar mediante código de confianza parcial.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Seguridad de acceso del código](../../../docs/framework/misc/code-access-security.md)

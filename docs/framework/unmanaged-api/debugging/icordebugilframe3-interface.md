@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c87578c3a5e2bec9bbd754929308645f7862ee5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b46c74ec0bfc1fc44bcaca07439c472b0fd8393f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701682"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113768"
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 (Interfaz)
 Proporciona un método que encapsula el valor devuelto de una función. `ICorDebugILFrame3` es una extensión lógica de las interfaces ICorDebugILFrame y ICorDebugILFrame2.  
@@ -26,7 +26,7 @@ Proporciona un método que encapsula el valor devuelto de una función. `ICorDeb
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetReturnValueForILOffset (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)|Obtiene un objeto ICorDebugValue que encapsula el valor devuelto de una función.|  
+|[Método GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)|Obtiene un objeto ICorDebugValue que encapsula el valor devuelto de una función.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -43,5 +43,6 @@ Proporciona un método que encapsula el valor devuelto de una función. `ICorDeb
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICorDebugCode3 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebugCode3 (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - client coordinates
 - coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
-ms.openlocfilehash: a6f082eb57a9cfe1af0d4207cbf5226637191c90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556056"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116147"
 ---
 # <a name="windows-forms-coordinates"></a>Coordenadas de formularios Windows Forms
 El sistema de coordenadas de un formulario Windows Forms se basa en coordenadas de dispositivo y la unidad básica de medida cuando se dibuja en Windows Forms es la unidad del dispositivo (normalmente, el píxel). Puntos en la pantalla se describen mediante pares de coordenadas x e y, con las coordenadas x si se aumenta a la derecha y las coordenadas y aumento de arriba a abajo. La ubicación de origen, con respecto a la pantalla, variará dependiendo de si está especificando las coordenadas de pantalla o el cliente.  
@@ -29,5 +29,6 @@ El sistema de coordenadas de un formulario Windows Forms se basa en coordenadas 
  En ocasiones, deberá asignar de coordenadas de pantalla a coordenadas de cliente. Puede hacerlo fácilmente mediante el uso de la <xref:System.Windows.Forms.Control.PointToClient%2A> y <xref:System.Windows.Forms.Control.PointToScreen%2A> métodos disponibles en la <xref:System.Windows.Forms.Control> clase. Por ejemplo, el <xref:System.Windows.Forms.Control.MousePosition%2A> propiedad de <xref:System.Windows.Forms.Control> se notifica en coordenadas de pantalla, pero es posible que desea convertir a coordenadas de cliente.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.Control.PointToClient%2A>
 - <xref:System.Windows.Forms.Control.PointToScreen%2A>

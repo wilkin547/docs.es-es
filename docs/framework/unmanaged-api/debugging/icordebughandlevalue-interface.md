@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHandleValue (Interfaz)
+title: Interfaz ICorDebugHandleValue
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHandleValue
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6dddc1665dff5c1a0629d25aa99066ce6eeca94a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9a9eb63e681b47f058901b0ff002015baffe6048
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117448"
 ---
-# <a name="icordebughandlevalue-interface"></a>ICorDebugHandleValue (Interfaz)
+# <a name="icordebughandlevalue-interface"></a>Interfaz ICorDebugHandleValue
 
 Una subclase de ICorDebugReferenceValue que representa un valor de referencia a la que el depurador ha creado un identificador para la recolección.  
   
@@ -31,8 +31,8 @@ Una subclase de ICorDebugReferenceValue que representa un valor de referencia a 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Dispose (método)](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|Libera el identificador que hace referencia esta `ICorDebugHandleValue` objeto sin liberar explícitamente el puntero de interfaz.|  
-|[GetHandleType (método)](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|Obtiene un valor de CorDebugHandleType que describe el tipo de identificador que hace referencia esta `ICorDebugHandleValue`.|  
+|[Dispose (Método)](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|Libera el identificador que hace referencia esta `ICorDebugHandleValue` objeto sin liberar explícitamente el puntero de interfaz.|  
+|[Método GetHandleType](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|Obtiene un valor de CorDebugHandleType que describe el tipo de identificador que hace referencia esta `ICorDebugHandleValue`.|  
   
 ## <a name="remarks"></a>Comentarios  
  Un `ICorDebugReferenceValue` objeto queda invalidado por una interrupción en la ejecución del código depurado. Un `ICorDebugHandleValue` mantiene su referencia a través de interrupciones y continuaciones, hasta que se libera explícitamente.  
@@ -50,4 +50,5 @@ Una subclase de ICorDebugReferenceValue que representa un valor de referencia a 
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

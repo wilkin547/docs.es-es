@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Mostrar pestañas alineadas a la izquierda con TabControl
+title: Filtrar para mostrar fichas alineadas a la izquierda con TabControl
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tabs [Windows Forms], displaying side-aligned tabs
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
-ms.openlocfilehash: 8715cb1a1f0d5795afc4003afcecdb3fb89912c3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ce0c7d48f053094d0026348fea8221ea80ccca59
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705196"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142901"
 ---
-# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Filtrar Mostrar pestañas alineadas a la izquierda con TabControl
+# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Filtrar para mostrar fichas alineadas a la izquierda con TabControl
 La propiedad <xref:System.Windows.Forms.TabControl.Alignment%2A> de <xref:System.Windows.Forms.TabControl> permite mostrar pestañas verticalmente (a lo largo del borde izquierdo o derecho del control) en lugar de horizontalmente (en la parte superior o inferior del control). De forma predeterminada, esta presentación vertical produce una mala experiencia de usuario porque la propiedad <xref:System.Windows.Forms.TabPage.Text%2A> del objeto <xref:System.Windows.Forms.TabPage> no se muestra en la pestaña cuando se habilitan estilos visuales. Tampoco hay una manera directa de controlar la dirección del texto dentro de la pestaña. Puede usar la característica «dibujado por el propietario» en <xref:System.Windows.Forms.TabControl> para mejorar la experiencia.  
   
  El procedimiento siguiente muestra cómo representar pestañas alineadas a la derecha, con el texto de la pestaña escrito de izquierda a derecha usando la característica "dibujado por el propietario".  
@@ -41,4 +41,5 @@ La propiedad <xref:System.Windows.Forms.TabControl.Alignment%2A> de <xref:System
      [!code-vb[TabControl.RightAlignedTabs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabControl.RightAlignedTabs/VB/Form1.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
-- [TabControl (control)](tabcontrol-control-windows-forms.md)
+
+- [TabControl (Control)](tabcontrol-control-windows-forms.md)

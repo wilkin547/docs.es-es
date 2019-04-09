@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: dda03c9c1e1390ca6a5250471f047d3747e989e2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 505028c491228ffdf9c11d0c71dcd5e1afdc5103
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114054"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>Filtrar para girar, reflejar y sesgar imágenes
 Puede girar, reflejar y sesgar una imagen mediante la especificación de puntos de destino para las esquinas superior izquierda, superior derecha e inferior izquierda de la imagen original. Los tres puntos de destino determinan una transformación afín que asigna la imagen rectangular original a un paralelogramo.  
@@ -46,7 +46,8 @@ Puede girar, reflejar y sesgar una imagen mediante la especificación de puntos 
  [!code-vb[System.Drawing.WorkingWithImages#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>. No olvide reemplazar `Stripes.bmp` con la ruta de acceso a una imagen que sea válida en el sistema.  
+ El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos. No olvide reemplazar `Stripes.bmp` con la ruta de acceso a una imagen que sea válida en el sistema.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Trabajar con imágenes, mapas de bits, iconos y metarchivos](working-with-images-bitmaps-icons-and-metafiles.md)

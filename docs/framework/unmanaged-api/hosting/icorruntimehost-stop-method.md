@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ef92fbe5ba99d93eaf06aacc7efd943136e9785
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c59a0c5ef1e89c2853a566bd3b587d15a1ed80c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119267"
 ---
 # <a name="icorruntimehoststop-method"></a>ICorRuntimeHost::Stop (Método)
 Detiene la ejecución de código en tiempo de ejecución para el proceso actual.  
@@ -58,4 +58,5 @@ HRESULT Stop ();
  **Versiones de .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Vea también
-- [ICorRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+
+- [ICorRuntimeHost (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 4546ce2a08fc2ac20717bbaa55d4688b43d34b47
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093819"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111155"
 ---
 # <a name="sql-server-express-user-instances"></a>Instancias de usuario de SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) incorpora una nueva característica de instancia de usuario, que solo está disponible cuando se usa el proveedor de datos .NET Framework para SQL Server (`SqlClient`). Una instancia de usuario es una instancia independiente del motor de base de datos de SQL Server Express que se genera mediante una instancia primaria. Las instancias de usuario permiten a los usuarios que no son administradores en sus equipos locales adjuntar y conectarse a bases de datos de SQL Server Express. Cada instancia se ejecuta en el contexto de seguridad del usuario individual, ya que solo se puede ejecutar una instancia por usuario.  
@@ -37,17 +37,17 @@ sp_configure 'user instances enabled','0'
  El protocolo de red para las instancias de usuario debe ser el de Canalizaciones con nombre locales. No se puede iniciar una instancia de usuario en una instancia remota de SQL Server y los inicios de sesión de SQL Server no están permitidos.  
   
 ## <a name="connecting-to-a-user-instance"></a>Conectarse a una instancia de usuario  
- El `User Instance` y `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> palabras clave permiten un <xref:System.Data.SqlClient.SqlConnection> para conectarse a una instancia de usuario. Las instancias de usuario también funcionan con las propiedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` y `AttachDBFilename`.  
+ El `User Instance` y `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> palabras clave permiten un <xref:System.Data.SqlClient.SqlConnection> para conectarse a una instancia de usuario. Las instancias de usuario también son compatibles con el <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` y `AttachDBFilename` propiedades.  
   
  Tenga en cuenta lo siguiente sobre la cadena de conexión de ejemplo que se muestra a continuación:  
   
 -   La palabra clave `Data Source` hace referencia a la instancia primaria de SQL Server Express que está generando la instancia de usuario. La instancia predeterminada es .\sqlexpress.  
   
--   El valor de `Integrated Security` está establecido en `true`. Para conectarse a una instancia de usuario, se requiere la autenticación de Windows; los inicios de sesión de SQL no están permitidos.  
+-   `Integrated Security` se establece en `true`. Para conectarse a una instancia de usuario, se requiere la autenticación de Windows; los inicios de sesión de SQL no están permitidos.  
   
 -   La `User Instance` está establecida en `true`, por lo que invoca una instancia de usuario. (El valor predeterminado es `false`.)  
   
--   La palabra clave de cadena de conexión `AttachDbFileName` se utiliza para adjuntar el archivo de base de datos primario (.mdf), que debe incluir el nombre de ruta de acceso completo. `AttachDbFileName` se corresponde también con las claves "extended properties" e "initial file name" dentro de una cadena de conexión <xref:System.Data.SqlClient.SqlConnection>.  
+-   La palabra clave de cadena de conexión `AttachDbFileName` se utiliza para adjuntar el archivo de base de datos primario (.mdf), que debe incluir el nombre de ruta de acceso completo. `AttachDbFileName` También se corresponde con la "extended properties" y las claves "initial file name" dentro de un <xref:System.Data.SqlClient.SqlConnection> cadena de conexión.  
   
 -   La cadena de sustitución `|DataDirectory|`, que va entre barras verticales, hace referencia al directorio de datos de la aplicación que abre la conexión y proporciona una ruta de acceso relativa que muestra la ubicación de los archivos de la base de datos y de registro .mdf y .ldf. Si quiere ubicar estos archivos en cualquier otro lugar, debe indicar la ruta de acceso completa.  
   
@@ -58,10 +58,10 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  También puede usar las propiedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> y <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> para compilar una cadena de conexión en tiempo de ejecución.  
+>  También puede usar el <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> y <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> propiedades para generar una cadena de conexión en tiempo de ejecución.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>Mediante el &#124;DataDirectory&#124; cadena de sustitución  
- `AttachDbFileName` se amplió en ADO.NET 2.0 con la incorporación de la cadena de sustitución `|DataDirectory|` (entre barras verticales). `DataDirectory` se usa junto con `AttachDbFileName` para indicar una ruta de acceso relativa a un archivo de datos, lo que permite a los desarrolladores crear cadenas de conexión basadas en una ruta relativa al origen de datos en lugar de tener que especificar la ruta completa.  
+ `AttachDbFileName` se amplió en ADO.NET 2.0 con la introducción de la `|DataDirectory|` (entre barras verticales) cadena de sustitución. `DataDirectory` se usa junto con `AttachDbFileName` para indicar una ruta de acceso relativa a un archivo de datos, lo que permite a los desarrolladores crear cadenas de conexión que se basan en una ruta de acceso relativa al origen de datos en lugar de ser necesarias para especificar una ruta de acceso completa.  
   
  La ubicación física que indica `DataDirectory` depende del tipo de aplicación. En este ejemplo, el archivo Northwind.mdf que se va a adjuntar se encuentra en la carpeta \app_data de la aplicación.  
   
@@ -77,7 +77,7 @@ Initial Catalog=Northwind;
  Si la cadena de conexión tiene una cadena de sustitución con formato incorrecto, se producirá una <xref:System.ArgumentException>.  
   
 > [!NOTE]
->  <xref:System.Data.SqlClient> resuelve las cadenas de sustitución en rutas de acceso completas del sistema de archivos del equipo local. Por eso, no se admiten rutas de acceso a servidores remotos, HTTP ni UNC. Si el servidor no se encuentra en el equipo local, se produce una excepción.  
+>  <xref:System.Data.SqlClient> resuelve las cadenas de sustitución en rutas de acceso completas en el sistema de archivos del equipo local. Por eso, no se admiten rutas de acceso a servidores remotos, HTTP ni UNC. Si el servidor no se encuentra en el equipo local, se produce una excepción.  
   
  Cuando se abre <xref:System.Data.SqlClient.SqlConnection>, se redirige desde la instancia de SQL Server Express predeterminada a una instancia iniciada en tiempo de ejecución que se ejecuta en la cuenta del llamador.  
   
@@ -151,7 +151,8 @@ private static void OpenSqlConnection()
 -   Hospedaje de ASP.NET dedicado con autenticación de Windows. Una sola instancia de SQL Express Server se puede hospedar en una intranet. La aplicación se conecta usando la cuenta de Windows ASPNET, sin que haya suplantación. No se debería utilizar instancias de usuario en escenarios de hospedaje compartido o de terceros en los que todas las aplicaciones compartirían la misma instancia de usuario y dejarían de permanecer aisladas las unas de las otras.  
   
 ## <a name="see-also"></a>Vea también
+
 - [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [Cadenas de conexión](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [Conexión a un origen de datos](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Conectarse a un origen de datos](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

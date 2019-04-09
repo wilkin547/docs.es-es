@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15226e6efc468974c32c11adec48a35764bc8446
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf62000fd4ec5c8f3dea3fa7d560b3f9ead33fa7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612260"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113924"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType (Enumeración)
 Contiene valores que describen los tipos nativos no administrados.  
@@ -98,7 +98,7 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_U1`|Un valor entero de 8 bits sin signo.|  
 |`NATIVE_TYPE_I2`|Un valor entero de 16 bits con signo.|  
 |`NATIVE_TYPE_U2`|Un valor entero de 16 bits sin signo.|  
-|`NATIVE_TYPE_I4`|Valor entero de 32 bits con signo.|  
+|`NATIVE_TYPE_I4`|Un valor entero de 32 bits con signo.|  
 |`NATIVE_TYPE_U4`|Valor entero de 32 bits sin signo.|  
 |`NATIVE_TYPE_I8`|Un valor entero de 64 bits con signo.|  
 |`NATIVE_TYPE_U8`|Un valor entero de 64 bits sin signo.|  
@@ -147,5 +147,6 @@ typedef enum CorNativeType {
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.InteropServices.UnmanagedType>
 - [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

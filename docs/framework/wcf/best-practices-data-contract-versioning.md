@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119007"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Procedimientos recomendados: Versiones de contratos de datos
 En este tema se enumeran los procedimientos recomendados para crear contratos de datos que pueden evolucionar con facilidad con el tiempo. Para obtener más información acerca de los contratos de datos, vea los temas de [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -91,6 +91,7 @@ En este tema se enumeran los procedimientos recomendados para crear contratos de
  Se pueden omitir algunas de las instrucciones enumeradas aquí sin ningún riesgo cuando se aplican circunstancias especiales. Asegúrese de que entiende totalmente la serialización, deserialización y mecanismos de esquema implicados en caso de no cumplir las instrucciones.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>

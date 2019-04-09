@@ -2,12 +2,12 @@
 title: Requisitos del sistema para el proveedor de datos .NET Framework para Oracle
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: cc3fc61c5adebf67b1203897579b2f959cbc0546
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61f8509cce248f6cc0a56900227f9758eb27c4e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111052"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Requisitos del sistema para el proveedor de datos .NET Framework para Oracle
 El proveedor de datos .NET Framework para Oracle requiere Microsoft Data Access Components (MDAC), versión 2.6 o posterior. Se recomienda MDAC 2.8 SP1.  
@@ -38,5 +38,6 @@ Unicode=True
  Por motivos de facilidad de uso, el <xref:System.Data.OracleClient.OracleLob> objeto hereda de la clase Stream de .NET Framework y proporciona **ReadByte** y **WriteByte** métodos. También implementa métodos, como **CopyTo** y **borrar**, que funcionan en secciones de Oracle **LOB** objetos. En cambio, el software cliente de Oracle proporciona varias API que funcionan con caracteres **LOB**s (**CLOB** y **NCLOB**). No obstante, estas API sólo funcionan en caracteres completos. Debido a esta diferencia, el proveedor de datos para Oracle implementa compatibilidad para **lectura** y **ReadByte** para trabajar con datos UTF-16 en una forma de byte a byte. Sin embargo, los otros métodos de la **OracleLob** objeto sólo permiten operaciones de caracteres completos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Oracle y ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

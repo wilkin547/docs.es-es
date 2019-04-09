@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Creación de una interfaz de tipo explorador con el ListView y los controles TreeView mediante el diseñador'
+title: 'Tutorial: Crear una interfaz de tipo Explorador con los controles ListView y TreeView mediante el diseñador'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: a849eae086c3507bbaf7050afd2e0496ab5a970e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 21a3f7f687f72fe6e73b5d2420675634ff834d2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716990"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117993"
 ---
-# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Tutorial: Creación de una interfaz de tipo explorador con el ListView y los controles TreeView mediante el diseñador
+# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Tutorial: Crear una interfaz de tipo Explorador con los controles ListView y TreeView mediante el diseñador
 Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de Windows Forms con aspecto profesional en muy poco tiempo. Un escenario común es crear una interfaz de usuario (UI) con <xref:System.Windows.Forms.ListView> y <xref:System.Windows.Forms.TreeView> los controles que se parece a la característica Explorador de Windows de los sistemas operativos de Windows. El Explorador de Windows muestra una estructura jerárquica de los archivos y carpetas en el equipo del usuario.  
   
 > [!NOTE]
@@ -46,7 +46,7 @@ Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de 
   
     1.  Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> en <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-    2.  Establezca la propiedad <xref:System.Windows.Forms.TreeView.ImageList%2A> en `imagelist1.`.  
+    2.  Establecer el <xref:System.Windows.Forms.TreeView.ImageList%2A> propiedad `imagelist1.`  
   
 7.  Agregar un <xref:System.Windows.Forms.ListView> control denominado `listView1` al formulario y colóquelo en el lado derecho de la <xref:System.Windows.Forms.SplitContainer> control. En la ventana Propiedades para `listview1` haga lo siguiente:  
   
@@ -56,7 +56,7 @@ Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de 
   
     3.  Abra el Editor de la colección ColumnHeader haciendo clic en el botón de puntos suspensivos (![de pantalla de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) en el <xref:System.Windows.Forms.ListView.Columns%2A> propiedad **.** Agregue tres columnas y establezca sus <xref:System.Windows.Forms.ColumnHeader.Text%2A> propiedad `Name`, `Type`, y `Last Modified`, respectivamente. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
-    4.  Establezca la propiedad <xref:System.Windows.Forms.ListView.SmallImageList%2A> en `imageList1.`.  
+    4.  Establecer el <xref:System.Windows.Forms.ListView.SmallImageList%2A> propiedad `imageList1.`  
   
 8.  Implemente el código para rellenar el <xref:System.Windows.Forms.TreeView> con nodos y subnodos. Agregue este código a la clase `Form1`.  
   
@@ -94,16 +94,17 @@ Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de 
 ## <a name="next-steps"></a>Pasos siguientes  
  Esta aplicación le ofrece un ejemplo de cómo puede usar <xref:System.Windows.Forms.TreeView> y <xref:System.Windows.Forms.ListView> controles juntos. Para obtener más información sobre estos controles, vea los temas siguientes:  
   
--   [Cómo: Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [Filtrar para agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [Cómo: Agregar capacidades de búsqueda a un Control ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
+-   [Filtrar para agregar funcionalidades de búsqueda a un control ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [Cómo: Asociar un menú contextual a un nodo TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+-   [Filtrar para asociar un menú contextual a un nodo TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
-- [ListView (Control)](listview-control-windows-forms.md)
-- [Cómo: Agregar y quitar nodos con el Control TreeView de formularios Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Cómo: Agregar y quitar elementos con el Control ListView de formularios de Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Cómo: Agregar columnas al Control de ListView de Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Control ListView](listview-control-windows-forms.md)
+- [Filtrar para agregar y quitar nodos con el control TreeView de formularios Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Filtrar para agregar y quitar elementos con el control ListView de formularios Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Filtrar para agregar columnas al control ListView de formularios Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)

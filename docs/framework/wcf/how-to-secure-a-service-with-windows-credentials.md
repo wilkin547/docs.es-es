@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Proteger un servicio con credenciales de Windows
+title: Filtrar para proteger un servicio con credenciales de Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: b5fece86dca524cb3f94f64dcb98361a93bf84a3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 70b8e2f28559d5fc54736db1319d2309aa5b86a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111337"
 ---
-# <a name="how-to-secure-a-service-with-windows-credentials"></a>Filtrar Proteger un servicio con credenciales de Windows
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>Filtrar para proteger un servicio con credenciales de Windows
 En este tema se muestra cómo habilitar la seguridad de transporte en un servicio de Windows Communication Foundation (WCF) que reside en un dominio de Windows y es llamado por los clientes en el mismo dominio. Para obtener más información acerca de este escenario, consulte [seguridad de transporte con autenticación de Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Para una aplicación de ejemplo, consulte el [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) ejemplo.  
   
  En este tema se parte del supuesto de que ya tiene definidas una interfaz e implementación de contrato. También puede modificar un servicio y cliente existentes.  
@@ -148,8 +148,9 @@ En este tema se muestra cómo habilitar la seguridad de transporte en un servici
  [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]      
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Cómo: Crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Filtrar Crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [Seguridad de servicios](../../../docs/framework/wcf/securing-services.md)
 - [Información general sobre seguridad](../../../docs/framework/wcf/feature-details/security-overview.md)

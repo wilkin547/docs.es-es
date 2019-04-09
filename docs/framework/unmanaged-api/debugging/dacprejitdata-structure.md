@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 974b99da085a5cb969ab37cddb0f2f2c62010d14
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a2850add9acb2f7c5297ac6956e349c9277be291
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122803"
 ---
 # <a name="dacprejitdata-structure"></a>Estructura DacpReJitData
 
@@ -55,7 +55,6 @@ struct MSLAYOUT DacpReJitData
 | `flags`          | Una marca que indica el estado actual de la instrumentación ReJit del método para la versión especificada. |
 | `NativeCodeAddr` | La dirección base de la implementación del método rejitted.                                         |
 
-
 ## <a name="remarks"></a>Comentarios
 
 Esta estructura reside en el tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para ello, defina la estructura según lo especificado anteriormente. La estructura también debe definirse mediante `ms_struct` empaquetado si no se usan los compiladores de Microsoft.
@@ -67,5 +66,6 @@ Esta estructura reside en el tiempo de ejecución y no se expone a través de lo
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también
+
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

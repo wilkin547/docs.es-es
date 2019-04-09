@@ -2,12 +2,12 @@
 title: <windowsStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-ms.openlocfilehash: aff415bb75cf719ce19fb2189cc69c2c159af6cf
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 32e8ed6b70a23462fac3c53d1bc353167ff67560
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113638"
 ---
 # <a name="windowsstreamsecurity"></a>\<windowsStreamSecurity>
 Especifique configuración de seguridad de secuencia de Windows del enlace personalizado.  
@@ -46,6 +46,7 @@ Especifique configuración de seguridad de secuencia de Windows del enlace perso
  Transportes que utilizan un protocolo orientado a secuencias como TCP y canalizaciones con nombre que admiten las actualizaciones de transporte basadas en secuencias. Concretamente, WCF proporciona actualizaciones de seguridad. La configuración de seguridad de este transporte es encapsulada por este elemento de configuración así como por [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md), que se pueden configurar y agregar a un enlace personalizado  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>
 - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], get started
 - get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 66211cfcf2b742e43eccbefb2bc7c4bd1147b05b
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d4613edefeb8db2c0d1e11e925f8ac41329efb0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137935"
 ---
 # <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>Tutorial: Introducción a las aplicaciones de Windows Communication Foundation
 La siguiente serie de tutoriales de introducción a la Windows Communication Foundation (WCF) experiencia de programación. Trabajar con estos tutoriales en orden le proporcionará una introducción a los pasos necesarios para crear aplicaciones WCF. Cuando termine, tendrá un servicio WCF y un cliente WCF que llama al servicio. 
@@ -63,14 +63,12 @@ Los siguientes dos tutoriales describen cómo crear, configurar y expone el uso 
 - [Ciclo de vida de programación básica](basic-programming-lifecycle.md)
 - [Creación de clientes](building-clients.md)
 - [Programación básica de WCF](basic-wcf-programming.md)
-- [Cómo: Crear un contrato dúplex](feature-details/how-to-create-a-duplex-contract.md)
-- [Cómo: Servicios de Access con un contrato dúplex](feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Filtrar Crear un contrato dúplex](feature-details/how-to-create-a-duplex-contract.md)
+- [Filtrar Servicios de Access con un contrato dúplex](feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Cómo: Utilice Svcutil.exe para descargar documentos de metadatos](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
-- [Cómo: Publicar metadatos para un servicio mediante un archivo de configuración](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Filtrar Utilice Svcutil.exe para descargar documentos de metadatos](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
+- [Filtrar Publicar metadatos para un servicio mediante un archivo de configuración](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Utilización de enlaces para configurar servicios y clientes](using-bindings-to-configure-services-and-clients.md)
 - [Ejemplo de introducción](samples/getting-started-sample.md)
 - [Ejemplos de Windows Communication Foundation](samples/index.md)
 - [Probar internamente](samples/self-host.md)
-
-

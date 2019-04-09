@@ -2,12 +2,12 @@
 title: Transacciones distribuidas
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 002ed52b0f760376e813b15d0344a349da669f4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150207"
 ---
 # <a name="distributed-transactions"></a>Transacciones distribuidas
 Entre otras cosas, una transacción es un conjunto de tareas relacionadas que se ejecutan correctamente (confirman) o dan error (anulan) como una unidad. Un *transacción distribuida* es una transacción que afecta a varios recursos. Para que una transacción distribuida se confirme, todos los participantes deben garantizar que los cambios en los datos serán permanentes. Los cambios deben conservarse a pesar de bloqueos del sistema u otros eventos imprevistos. Si alguno de los participantes no cumple esta garantía, toda la transacción da error y se revertirán los cambios en los datos en el ámbito de la transacción.  
@@ -39,7 +39,7 @@ Entre otras cosas, una transacción es un conjunto de tareas relacionadas que se
 >  Una vez que una conexión se inscribe explícitamente en una transacción, no se puede anular su inscripción ni inscribirse en otra transacción hasta que finaliza la primera transacción.  
   
 > [!CAUTION]
->  Si la conexión ya ha comenzado una transacción mediante el método `EnlistTransaction` de la conexión, <xref:System.Data.Common.DbConnection.BeginTransaction%2A> inicia una excepción. No obstante, si la transacción es una transacción local iniciada en el origen de datos (por ejemplo, al ejecutar la instrucción BEGIN TRANSACTION de forma explícita mediante un <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` la revertirá e inscribirá en la transacción distribuida existente como se ha solicitado. No recibirá aviso de que la transacción local se ha revertido y deberá administrar todas las transacciones locales no iniciadas mediante <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Si usa el proveedor de datos .NET Framework para SQL Server (`SqlClient`) con SQL Server, se producirá una excepción al intentar una inscripción. Todos los demás casos no se detectarán.  
+>  `EnlistTransaction` produce una excepción si la conexión ya ha comenzado una transacción mediante la conexión <xref:System.Data.Common.DbConnection.BeginTransaction%2A> método. No obstante, si la transacción es una transacción local iniciada en el origen de datos (por ejemplo, al ejecutar la instrucción BEGIN TRANSACTION de forma explícita mediante un <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` la revertirá e inscribirá en la transacción distribuida existente como se ha solicitado. No recibirá aviso de que la transacción local se ha revertido y deberá administrar todas las transacciones locales no iniciadas mediante <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Si usa el proveedor de datos .NET Framework para SQL Server (`SqlClient`) con SQL Server, se producirá una excepción al intentar una inscripción. Todos los demás casos no se detectarán.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>Transacciones que se pueden promover en SQL Server  
  SQL Server 2005 admite transacciones que se pueden promover en las que se pueda promover automáticamente una transacción ligera local a una transacción distribuida solamente cuando es necesario. Las transacciones promovibles no invocan la sobrecarga adicional de las transacciones distribuidas a menos que sea necesario. Para obtener más información y un ejemplo de código, vea [integración de System.Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
@@ -48,6 +48,7 @@ Entre otras cosas, una transacción es un conjunto de tareas relacionadas que se
  Puede que necesite habilitar MS DTC a través de la red para usar transacciones distribuidas. Si tiene Firewall de Windows habilitado, debe permitir que el servicio MS DTC use la red o abrir el puerto MS DTC.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Integración de System.Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

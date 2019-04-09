@@ -2,12 +2,12 @@
 title: Resoluciones del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: f7d7b055312fe82bd628f8b07304dc9bb188fffb
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: de19e08c1c001076c56e26020584d17079f1a45f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151624"
 ---
 # <a name="peer-resolvers"></a>Resoluciones del mismo nivel
 Para conectar a una malla, un nodo del mismo nivel necesita las direcciones IP de otros nodos. Las direcciones IP se obtienen al establecer contacto con un servicio de resolución, que toma el identificador de la malla y devuelve una lista de direcciones que corresponden a los nodos registrados con ese identificador de malla concreto. La resolución mantiene una lista de direcciones registradas, que crea mediante el registro de cada nodo de la malla en el servicio.  
@@ -35,9 +35,10 @@ Para conectar a una malla, un nodo del mismo nivel necesita las direcciones IP d
  Para ver una demostración de cómo implementar un solucionador personalizado, consulte [personalizada del mismo nivel resolución del canal del mismo nivel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Dentro de CustomPeerResolverService: Registros de cliente](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [Dentro de CustomPeerResolverService: registros de cliente](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - [Conceptos del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
 - [Seguridad del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
 - [Creación de una aplicación de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

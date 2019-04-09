@@ -1,5 +1,5 @@
 ---
-title: <runtime> (Elemento)
+title: <runtime> Elemento
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-ms.openlocfilehash: 05a94116d3b3cc662036b2ed15e255d4f8eda2c4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3ac5fdeaebfd67d6ad4f68166fda588b9e58ca98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119527"
 ---
 # <a name="runtime-element"></a>\<en tiempo de ejecución > elemento
 Proporciona información de common language runtime usada para configurar las aplicaciones.  
@@ -90,5 +90,6 @@ Proporciona información de common language runtime usada para configurar las ap
  Los elementos de la [ \<en tiempo de ejecución >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sección lee automáticamente common language runtime al iniciarse la aplicación. También puede definir el archivo de configuración para un dominio de aplicación no predeterminado proporcionando su nombre a la <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> propiedad; su configuración se lee de forma automática cuando se carga el dominio de aplicación. Debe rara vez, si alguna vez, tiene una necesidad de leer directamente la configuración en el [ \<en tiempo de ejecución >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sección en el archivo de configuración de la aplicación.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)

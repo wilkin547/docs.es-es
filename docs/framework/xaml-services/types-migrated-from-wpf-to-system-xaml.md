@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: 4fc9d1b2666db05fc4fb902cf8db03d9d876001b
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: dcfad1c2b2f95783e2b348a3a1111501f958143f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031474"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116485"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>Tipos migrados de WPF a System.Xaml
 En [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] y [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], ambos [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] y Windows Workflow Foundation incluye una implementación del lenguaje XAML. Muchos de los tipos públicos que proporcionaban extensibilidad para la implementación XAML de WPF existían en los ensamblados de WindowsBase, PresentationCore y PresentationFramework. Del mismo modo, los tipos públicos que proporcionaban extensibilidad para XAML de Windows Workflow Foundation existían en el ensamblado System.Workflow.ComponentModel. En [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], algunos de los tipos relacionados con XAML se migran al ensamblado System.Xaml. Una implementación común de .NET Framework de los servicios de lenguaje XAML habilita muchos escenarios de extensibilidad de XAML que se definieron originalmente en la implementación de XAML de un marco concreto, pero ahora forman parte de la compatibilidad global de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] para el lenguaje XAML. En este tema se enumeran los tipos que se han migrado y se describen los problemas relacionados con la migración.  
@@ -41,7 +41,7 @@ En [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] y [!INCLUDE[ne
   
 <a name="markupextension_supporting_service_classes"></a>   
 ## <a name="markupextension-supporting-service-classes"></a>Clases de servicio de soporte de MarkupExtension  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] y [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] para WPF proporcionan varios servicios que estaban disponibles para los implementadores de <xref:System.Windows.Markup.MarkupExtension> y las implementaciones de <xref:System.ComponentModel.TypeConverter> para admitir el uso de tipo y propiedad en XAML. Estos servicios son los siguientes:  
+ [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] y [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] para WPF proporciona varios servicios que estaban disponibles para <xref:System.Windows.Markup.MarkupExtension> los implementadores y <xref:System.ComponentModel.TypeConverter> implementaciones para admitir el uso de tipo y propiedad en XAML. Estos servicios son los siguientes:  
   
 -   <xref:System.Windows.Markup.IProvideValueTarget>  
   
@@ -50,7 +50,7 @@ En [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] y [!INCLUDE[ne
 -   <xref:System.Windows.Markup.IXamlTypeResolver>  
   
 > [!NOTE]
->  Otro servicio de [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] que está relacionado con las extensiones de marcado es la interfaz <xref:System.Windows.Markup.IReceiveMarkupExtension> . <xref:System.Windows.Markup.IReceiveMarkupExtension> no se migró y se marcó como `[Obsolete]` para [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Los escenarios que usaban <xref:System.Windows.Markup.IReceiveMarkupExtension> deben usar devoluciones de llamada con atributos <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> en su lugar. <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> también está marcado como `[Obsolete]`.  
+>  Otro servicio de [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] que está relacionado con las extensiones de marcado es la interfaz <xref:System.Windows.Markup.IReceiveMarkupExtension> . <xref:System.Windows.Markup.IReceiveMarkupExtension> no se ha migrado y está marcado como `[Obsolete]` para [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Los escenarios que usaban <xref:System.Windows.Markup.IReceiveMarkupExtension> deben usar devoluciones de llamada con atributos <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> en su lugar. <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> También se marca como `[Obsolete]`.  
   
 <a name="xaml_language_features"></a>   
 ## <a name="xaml-language-features"></a>Características del lenguaje XAML  
@@ -107,9 +107,9 @@ En [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] y [!INCLUDE[ne
   
 <a name="miscellaneous_classes"></a>   
 ## <a name="miscellaneous-classes"></a>Clases diversas  
- La interfaz <xref:System.Windows.Markup.IComponentConnector> existía en WindowsBase en [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] y [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], pero existe en System.Xaml en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. <xref:System.Windows.Markup.IComponentConnector> sirve principalmente para el soporte técnico de herramientas y los compiladores de marcado de XAML.  
+ La interfaz <xref:System.Windows.Markup.IComponentConnector> existía en WindowsBase en [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] y [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], pero existe en System.Xaml en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. <xref:System.Windows.Markup.IComponentConnector> sirve principalmente para el soporte herramientas y compiladores de marcado XAML.  
   
- La interfaz <xref:System.Windows.Markup.INameScope> existía en WindowsBase en [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] y [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], pero existe en System.Xaml en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. <xref:System.Windows.Markup.INameScope> define las operaciones básicas de un ámbito de nombres de XAML.  
+ La interfaz <xref:System.Windows.Markup.INameScope> existía en WindowsBase en [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] y [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], pero existe en System.Xaml en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. <xref:System.Windows.Markup.INameScope> define las operaciones básicas para un ámbito de nombres XAML.  
   
 <a name="xamlrelated_classes_with_shared_names_that_exist_in_wpf_and_systemxaml"></a>   
 ## <a name="xaml-related-classes-with-shared-names-that-exist-in-wpf-and-systemxaml"></a>Clases relacionadas con XAML con nombres compartidos que existen en WPF y System.Xaml  
@@ -126,4 +126,5 @@ En [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] y [!INCLUDE[ne
  Si va a incluir referencias a ensamblados de WPF y System.Xaml y también usa instrucciones `include` para los espacios de nombres tanto <xref:System.Windows.Markup> como <xref:System.Xaml> , puede que necesite completar las llamadas a estas API para resolver los tipos sin ambigüedad.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Servicios XAML](index.md)

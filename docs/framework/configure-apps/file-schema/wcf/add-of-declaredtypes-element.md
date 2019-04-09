@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: e6aab0b1eca340e212c34e2d25b9b84984dcc7a0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9b280a63e85beac3231bc1a414430239bea4a1f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111519"
 ---
 # <a name="add-of-declaredtypes-element"></a>\<Agregar > de \<declaredTypes > elemento
 Agrega un tipo usado por <xref:System.Runtime.Serialization.DataContractSerializer> durante la deserialización. Cada tipo declarado incluye los tipos conocidos que se devolverán como un campo o propiedad del tipo declarado.  
@@ -40,7 +40,7 @@ Agrega un tipo usado por <xref:System.Runtime.Serialization.DataContractSerializ
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|tipo|Atributo de cadena necesario.<br /><br /> Especifica el nombre del tipo (incluido el espacio de nombres), nombre de ensamblado, número de versión, referencia cultural y símbolo (token) de clave pública.|  
+|type|Atributo de cadena necesario.<br /><br /> Especifica el nombre del tipo (incluido el espacio de nombres), nombre de ensamblado, número de versión, referencia cultural y símbolo (token) de clave pública.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -76,6 +76,7 @@ Agrega un tipo usado por <xref:System.Runtime.Serialization.DataContractSerializ
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - [Tipos conocidos de contratos de datos](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132305"
 ---
 # <a name="styling-and-templating"></a>Aplicar estilos y plantillas
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicar estilos y plantillas que hacen referencia a un conjunto de características (estilos, plantillas, desencadenadores y guiones gráficos) que permite a los desarrolladores y diseñadores crear efectos visualmente atractivos y para crear una apariencia coherente para su producto. Aunque los desarrolladores y los diseñadores pueden personalizar muchas apariencias aplicación por aplicación, es necesario un modelo de aplicación de estilos y plantillas para el mantenimiento y el uso compartido de la apariencia entre las distintas aplicaciones. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ofrece ese modelo.  
@@ -197,6 +197,7 @@ ms.locfileid: "59055331"
  Si va a crear un tema para su control personalizado, consulte la sección de la biblioteca de controles externos de [Control Authoring Overview](control-authoring-overview.md) (Introducción a la creación de controles).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Pack URI en WPF](../app-development/pack-uris-in-wpf.md)
 - [Filtrar para buscar elementos generados por un objeto ControlTemplate](how-to-find-controltemplate-generated-elements.md)
 - [Buscar elementos generados por una clase DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)

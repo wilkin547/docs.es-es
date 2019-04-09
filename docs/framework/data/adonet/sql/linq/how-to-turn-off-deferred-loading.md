@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Desactivar la carga aplazada
+title: Filtrar para desactivar la carga diferida
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b84b852-3cad-41a7-8077-149a70d50c8b
-ms.openlocfilehash: 9878ec468333ba79d0171d0bf96235d48273e03e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f82e347ecdb3c69cee3749855d1e4cb457a460f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112962"
 ---
-# <a name="how-to-turn-off-deferred-loading"></a>Procedimiento Desactivar la carga aplazada
+# <a name="how-to-turn-off-deferred-loading"></a>Filtrar para desactivar la carga diferida
 Puede desactivar la carga aplazada al establecer <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> en `false`. Para obtener más información, consulte [carga inmediata y carga diferida](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
   
 > [!NOTE]
@@ -25,5 +25,6 @@ Puede desactivar la carga aplazada al establecer <xref:System.Data.Linq.DataCont
  [!code-vb[DLinqQuerying#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#3)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Consulta de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Consultar la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

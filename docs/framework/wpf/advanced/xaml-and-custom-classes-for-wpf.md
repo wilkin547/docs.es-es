@@ -6,18 +6,16 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: a1de1ee80d1f88b0c0a7adfb75b96353b6861d97
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371897"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122361"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Clases XAML y personalizadas para WPF
 XAML implementado en marcos de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] admite la capacidad de definir una clase o estructura personalizada en cualquier lenguaje de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], y después, tiene acceso a esa clase mediante marcado XAML. Puede usar una mezcla de tipos definidos por [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] y sus tipos personalizados dentro del mismo archivo de marcado, normalmente asignando los tipos personalizados a un prefijo de espacio de nombres de XAML. En este tema se describen los requisitos que debe satisfacer una clase personalizada para que se pueda usar como elemento XAML.  
-  
- 
-  
+
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## <a name="custom-classes-in-applications-or-assemblies"></a>Clases personalizadas en aplicaciones o ensamblados  
  Las clases personalizadas que se usan en XAML pueden definirse de dos maneras distintas: dentro del código subyacente o de otro código que genera la aplicación primaria de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], o como una clase en un ensamblado independiente, como una aplicación ejecutable o DLL usado como una biblioteca de clases. Cada uno de estos enfoques tiene ventajas y desventajas determinadas.  
@@ -113,6 +111,7 @@ XAML implementado en marcos de [!INCLUDE[TLA#tla_clr](../../../../includes/tlash
  En determinados escenarios, como si es un creador de controles, quizá también quiera asegurarse de que cualquier representación de objeto de la que se pueda crear una instancia en XAML también pueda serializarse de nuevo al marcado equivalente de XAML. Los requisitos de serialización no se describen en este tema. Vea [Información general sobre la creación de controles](../controls/control-authoring-overview.md) y [Árbol de elementos y serialización](element-tree-and-serialization.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
 - [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
 - [Información general sobre la creación de controles](../controls/control-authoring-overview.md)

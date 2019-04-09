@@ -1,5 +1,5 @@
 ---
-title: Filtrar Controlar la entrada de teclado en el nivel de formulario
+title: Filtrar para controlar la entrada de teclado en el formulario
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, handling keyboard input
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
-ms.openlocfilehash: 1b458287e5becf7f8da7cab676efdb2af1ab92b5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fbb6587dde53592a94887c1ea19562e06c15afe3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135176"
 ---
-# <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Filtrar Controlar la entrada de teclado en el nivel de formulario
+# <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Filtrar para controlar la entrada de teclado en el formulario
 Windows Forms permite controlar los mensajes del teclado en el nivel de formulario, antes de que los mensajes lleguen a un control. En este tema se muestra cómo realizar esta tarea.  
   
 ### <a name="to-handle-a-keyboard-message-at-the-form-level"></a>Para controlar un mensaje de teclado en el nivel de formulario  
@@ -43,4 +43,5 @@ Windows Forms permite controlar los mensajes del teclado en el nivel de formular
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
 
 ## <a name="see-also"></a>Vea también
+
 - [Entradas mediante teclado en una aplicación de Windows Forms](keyboard-input-in-a-windows-forms-application.md)
