@@ -1,5 +1,5 @@
 ---
-title: ICorDebugValueBreakpoint (Interfaz)
+title: Interfaz ICorDebugValueBreakpoint
 ms.date: 03/30/2017
 api_name:
 - ICorDebugValueBreakpoint
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4c291c12de9cb95416e12e1a5fca273c542df36
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 778359a7d26b6e2f19984a1f7ff06a527f2449f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167751"
 ---
-# <a name="icordebugvaluebreakpoint-interface"></a>ICorDebugValueBreakpoint (Interfaz)
+# <a name="icordebugvaluebreakpoint-interface"></a>Interfaz ICorDebugValueBreakpoint
 Extiende la interfaz ICorDebugBreakpoint para proporcionar acceso a valores específicos.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetValue (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-getvalue-method.md)|Obtiene un puntero de interfaz a un objeto ICorDebugValue que representa el valor del objeto en el que se establece el punto de interrupción.|  
+|[Método GetValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-getvalue-method.md)|Obtiene un puntero de interfaz a un objeto ICorDebugValue que representa el valor del objeto en el que se establece el punto de interrupción.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -47,4 +47,5 @@ Extiende la interfaz ICorDebugBreakpoint para proporcionar acceso a valores espe
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

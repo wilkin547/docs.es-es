@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 6e5ede5141d2edb24a688bf700c22870c8886906
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157682"
 ---
 # <a name="securing-services"></a>Seguridad de servicios
 Seguridad de un servicio de Windows Communication Foundation (WCF) se compone de dos requisitos principales: seguridad y autorización de transferencia. (Un tercer requisito, la auditoría de eventos de seguridad, se describe en [auditoría](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Resumiendo, la seguridad de la transferencia incluye la autenticación (comprobar la identidad del servicio y del cliente), la confidencialidad (cifrado de mensajes) y la integridad (firma digital para detectar la modificación). La autorización es el control del acceso a los recursos, por ejemplo, permitiendo la lectura de un archivo solo a usuarios privilegiados. Uso de características de WCF, se implementan fácilmente los dos requisitos primarios.  
@@ -99,6 +99,7 @@ Seguridad de un servicio de Windows Communication Foundation (WCF) se compone de
  La propiedad `ProtectionLevel` se encuentra en varias clases de atributos (como las clases <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.OperationContractAttribute> ). El nivel de protección es un valor que especifica si los mensajes (o partes del mensaje) que soportan un servicio están firmados, firmados y cifrados, o si se envían sin firmar o cifrar. Para obtener más información acerca de la propiedad, vea [Understanding Protection Level](../../../docs/framework/wcf/understanding-protection-level.md)y ejemplos de programación, vea [Cómo: Establezca la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md). Para obtener más información sobre cómo diseñar un contrato de servicio con el `ProtectionLevel` en contexto, vea [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ServiceContractAttribute>
@@ -106,13 +107,13 @@ Seguridad de un servicio de Windows Communication Foundation (WCF) se compone de
 - [Identidad del servicio y autenticación](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Descripción de los niveles de protección](../../../docs/framework/wcf/understanding-protection-level.md)
 - [Delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
-- [Diseño de contratos de servicio](../../../docs/framework/wcf/designing-service-contracts.md)
+- [Diseño de contratos de servicios](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Seguridad](../../../docs/framework/wcf/feature-details/security.md)
 - [Información general sobre seguridad](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Cómo: Establezca la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [Cómo: Proteger un servicio con credenciales de Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Cómo: Establecer el modo de seguridad](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [Cómo: Especifique el tipo de credencial de cliente](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
-- [Cómo: Restringir el acceso con la clase PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [Cómo: Suplantar a un cliente en un servicio](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
-- [Cómo: Examine el contexto de seguridad](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+- [Filtrar para establecer la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Filtrar para proteger un servicio con credenciales de Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Filtrar para establecer el modo de seguridad](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Filtrar para especificar el tipo de credencial de cliente](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Filtrar para restringir el acceso con la clase PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Filtrar para suplantar a un cliente en un servicio](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Filtrar para examinar el contexto de seguridad](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

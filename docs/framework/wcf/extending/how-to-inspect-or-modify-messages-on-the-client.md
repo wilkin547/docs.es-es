@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Inspeccionar o modificar mensajes en el cliente
+title: Filtrar para inspeccionar o modificar mensajes en el cliente
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 4cb4560aa9edf9b9de30ab387f24f2f5300f1097
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cc2a03806dbc9ff33c1b16da7a31d862001534aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167484"
 ---
-# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Procedimiento Inspeccionar o modificar mensajes en el cliente
+# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Filtrar para inspeccionar o modificar mensajes en el cliente
 Puede inspeccionar o modificar los mensajes entrantes o salientes a través de un cliente WCF mediante la implementación de un <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> e insertarlos en el tiempo de ejecución del cliente. Para obtener más información, consulte [los clientes extender](../../../../docs/framework/wcf/extending/extending-clients.md). La característica equivalente del servicio es <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Para obtener un ejemplo de código completo, vea el [inspectores de mensaje](../../../../docs/framework/wcf/samples/message-inspectors.md) ejemplo.  
   
 ### <a name="to-inspect-or-modify-messages"></a>Inspeccionar o modificar los mensajes  
@@ -25,11 +25,11 @@ Puede inspeccionar o modificar los mensajes entrantes o salientes a través de u
   
 -   Una implementación de inspector de cliente.  
   
--   Un comportamiento del extremo que inserta el inspector.  
+-   Un comportamiento del punto de conexión que inserta el inspector.  
   
 -   <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>- clase derivada que permite agregar el comportamiento en un archivo de configuración.  
   
--   Un archivo de configuración que agrega el comportamiento del punto de conexión que inserta el inspector de mensaje de cliente en el tiempo de ejecución del cliente.  
+-   Un archivo de configuración que agrega el comportamiento del extremo que inserta el inspector de mensaje de cliente en el tiempo de ejecución del cliente.  
   
 ```csharp  
 // Client message inspector  
@@ -127,6 +127,7 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>
 - [Configuración y extensión del tiempo de ejecución con comportamientos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

@@ -2,12 +2,12 @@
 title: 'Servicio: Errores de llamadas por segundo'
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-ms.openlocfilehash: a043cf30fa67707aca3edf50cf23372ade5e5a42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d87d5f06d0c9a3849ec80a3d1c7badefde7cf372
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559897"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167497"
 ---
 # <a name="service-calls-failed-per-second"></a>Servicio: Errores de llamadas por segundo
 Nombre del contador: Errores de llamadas por segundo.  
@@ -26,4 +26,5 @@ Nombre del contador: Errores de llamadas por segundo.
  El contador se incrementa cada vez que hay una excepción no atendida en este servicio.  
   
 ## <a name="see-also"></a>Vea también
-- [Especificación y gestión de errores en contratos y servicios](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+
+- [Especificación y administración de errores en contratos y servicios](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

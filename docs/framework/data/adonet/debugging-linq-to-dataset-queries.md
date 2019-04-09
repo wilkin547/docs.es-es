@@ -2,12 +2,12 @@
 title: Depurar consultas de LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 636d42566275f042f82f939e160c7fec5f180e96
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0e015cc6042a21bf6d35915c3e19bfeb9b0dbb2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133339"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Depurar consultas de LINQ to DataSet
 
@@ -28,5 +28,6 @@ Visual Studio admite la depuración de [!INCLUDE[linq_dataset](../../../../inclu
  En Visual Basic en Visual Studio, puede usar Editar y continuar en el que no sean de[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] código, incluso en un método que contiene un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consulta. Puede agregar o quitar el código antes del [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] instrucción, incluso si los cambios afectan al número de línea de la [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consulta. Experiencia de depuración de Visual Basic que no sean de[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] código sigue siendo el mismo que eran antes [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] introducida. No se puede cambiar, agregar o quitar un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consultar, sin embargo, a menos que detenga la depuración para aplicar los cambios.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Depurar código administrado](/visualstudio/debugger/debugging-managed-code)
 - [Guía de programación](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

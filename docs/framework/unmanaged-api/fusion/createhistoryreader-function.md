@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e9c9866ee5ee3076d144dc732286ee008cd78c4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e438006d6424866514e73119c05e8fd69d7ba62e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132267"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader (Función)
 Crea un lector de historial para el archivo especificado.  
@@ -58,4 +58,5 @@ HRESULT CreateHistoryReader (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

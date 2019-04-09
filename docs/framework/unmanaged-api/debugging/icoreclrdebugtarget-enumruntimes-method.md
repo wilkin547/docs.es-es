@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9b434edc10a7c11d738bd3fc10402ef3f83d9dc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: afb31646d21ec7e15f79601f5fe83ea6ce44fa90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468278"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134685"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes (Método)
 Enumera los Common Language Runtime(CLR) del proceso especificado que se están ejecutando en un equipo remoto.  
@@ -54,7 +54,7 @@ HRESULT EnumRuntimes (
  Correcto.  
   
  S_FALSE  
- `dwInternalProcessID` no coincide con ningún proceso que se esté ejecutando en el equipo, probablemente porque finalizó el proceso. `pcRuntimes` y `ppRuntimes` serán nulos.  
+ `dwInternalProcessID` no coincide con cualquier proceso que se está ejecutando en el equipo, probablemente porque se canceló el proceso. `pcRuntimes` y `ppRuntimes` será null.  
   
  E_OUTOFMEMORY  
  No se puede asignar memoria suficiente para `ppRuntimes`.  
@@ -75,4 +75,5 @@ HRESULT EnumRuntimes (
  **Versiones de .NET framework:** 3.5 SP1  
   
 ## <a name="see-also"></a>Vea también
-- [ICoreClrDebugTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+
+- [ICoreClrDebugTarget (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

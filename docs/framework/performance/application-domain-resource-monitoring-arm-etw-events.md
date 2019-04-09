@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8442b8723476984b90f740beac912688719f1791
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb2b0dd95877fc6492f6d23a19c14688cd78f7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689840"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133827"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Eventos ETW de supervisión de recursos de dominio de aplicación (ARM)
 <a name="top"></a> Estos eventos proporcionan información de diagnóstico detallada sobre el estado de un dominio de aplicación. Puede utilizar estos eventos o la característica de supervisión de recursos del dominio de aplicación (ARM) para obtener la misma información.  
@@ -37,12 +37,12 @@ ms.locfileid: "54689840"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|  
+|`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`ThreadCreated`|85|Se crea un subproceso para el dominio de aplicación.|  
   
@@ -65,11 +65,11 @@ ms.locfileid: "54689840"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|  
+|`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`AppDomainMemAllocated`|83|Cada vez que se asignan 4 MB de memoria (aproximadamente) en el dominio de aplicación.|  
   
@@ -89,11 +89,11 @@ ms.locfileid: "54689840"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|  
+|`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`AppDomainMemSurvived`|84|Fnalizadas todas las recolecciones de elementos no utilizados.|  
   
@@ -114,12 +114,12 @@ ms.locfileid: "54689840"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|  
+|`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`ThreadAppDomainEnter`|87|Un subproceso entra en un dominio de aplicación.|  
   
@@ -139,12 +139,12 @@ ms.locfileid: "54689840"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|  
+|`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`ThreadTerminated`|86|Finaliza un subproceso.|  
   
@@ -157,4 +157,5 @@ ms.locfileid: "54689840"
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 ## <a name="see-also"></a>Vea también
-- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md)

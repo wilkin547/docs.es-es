@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: b0db690bfd1a0cabf3060067ea23cf01acf3251d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171163"
 ---
 # <a name="routed-events-overview"></a>Información general sobre eventos enrutados
 En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En el tema se define la terminología de los eventos enrutados, se describe cómo se enrutan a través de un árbol de elementos, se resume cómo controlar los eventos enrutados y se explica cómo crear sus propios eventos enrutados personalizados.
@@ -195,7 +195,7 @@ En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_w
 ## <a name="wpf-input-events"></a>Eventos de entrada de WPF  
  En la plataforma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], con frecuencia se emplean los eventos enrutados como eventos de entrada. En [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], a los nombres de los eventos enrutados con tunelización se les antepone la palabra "Preview" por convención. Los eventos de entrada suelen presentarse en parejas, donde uno es el evento de propagación y el otro es el evento de tunelización. Por ejemplo, el <xref:System.Windows.ContentElement.KeyDown> eventos y el <xref:System.Windows.ContentElement.PreviewKeyDown> eventos tienen la misma firma, el primero es el evento de entrada de propagación y el último es la tunelización de evento de entrada. En ocasiones, los eventos de entrada solo tienen una versión de propagación o quizás solo una versión enrutada directa. En la documentación, los temas sobre eventos enrutados contienen referencias cruzadas a los temas relativos a los eventos enrutados similares con estrategias de enrutamiento alternativas, si existen dichos eventos enrutados, y las secciones de las páginas de referencia administradas clarifican la estrategia de enrutamiento de cada evento enrutado.  
   
- Los eventos de entrada de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que se presentan en parejas se implementan de forma que una única acción del usuario desde la entrada, como presionar un botón del mouse, desencadenará los dos eventos enrutados de la pareja secuencialmente. En primer lugar, se desencadena el evento de tunelización, que viaja por su ruta. Después se desencadena el evento de propagación y este viaja por su ruta. Los dos eventos comparten literalmente la misma instancia de datos de evento, porque la <xref:System.Windows.UIElement.RaiseEvent%2A> llamada al método en la clase de implementación que genera el evento de propagación realiza escuchas para los datos del evento desde el evento de tunelización y los reutiliza en el nuevo evento generado. Los agentes de escucha con controladores para el evento de tunelización tienen la primera oportunidad de marcar el evento enrutado como controlado (en primer lugar los controladores de clase y después los controladores de instancia). Si un elemento a lo largo de la ruta de tunelización ha marcado el evento enrutado como controlado, los datos del evento ya controlado se envían para el evento de propagación y no se invocarán los controladores adjuntos típicos para los eventos de entrada de propagación equivalentes. Externamente dará la impresión de que el evento de propagación controlado ni siquiera se ha desencadenado. Este comportamiento de control es útil para la composición de controles, donde podría ser conveniente que fuera el control final y no sus partes compuestas el que informara de todos los eventos de entrada basados en pruebas de posicionamiento o de los eventos de entrada basados en el foco. El elemento del control final está más próximo a la raíz en la composición y, por tanto, tiene la oportunidad de controlar desde la clase el evento de tunelización en primer lugar y posiblemente "reemplazar" dicho evento enrutado por un evento más específico del control, como parte del código que respalda la clase del control.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eventos de entrada que se presentan en parejas se implementan para que una acción del usuario solo de entrada, como presionar un botón del mouse, producirá dos eventos enrutados del par en secuencia. En primer lugar, se desencadena el evento de tunelización, que viaja por su ruta. Después se desencadena el evento de propagación y este viaja por su ruta. Los dos eventos comparten literalmente la misma instancia de datos de evento, porque la <xref:System.Windows.UIElement.RaiseEvent%2A> llamada al método en la clase de implementación que genera el evento de propagación realiza escuchas para los datos del evento desde el evento de tunelización y los reutiliza en el nuevo evento generado. Los agentes de escucha con controladores para el evento de tunelización tienen la primera oportunidad de marcar el evento enrutado como controlado (en primer lugar los controladores de clase y después los controladores de instancia). Si un elemento a lo largo de la ruta de tunelización ha marcado el evento enrutado como controlado, los datos del evento ya controlado se envían para el evento de propagación y no se invocarán los controladores adjuntos típicos para los eventos de entrada de propagación equivalentes. Externamente dará la impresión de que el evento de propagación controlado ni siquiera se ha desencadenado. Este comportamiento de control es útil para la composición de controles, donde podría ser conveniente que fuera el control final y no sus partes compuestas el que informara de todos los eventos de entrada basados en pruebas de posicionamiento o de los eventos de entrada basados en el foco. El elemento del control final está más próximo a la raíz en la composición y, por tanto, tiene la oportunidad de controlar desde la clase el evento de tunelización en primer lugar y posiblemente "reemplazar" dicho evento enrutado por un evento más específico del control, como parte del código que respalda la clase del control.  
   
  Para ilustrar cómo funciona el procesamiento de eventos de entrada, observe el ejemplo de evento de entrada siguiente. En la ilustración del árbol siguiente, `leaf element #2` es el origen de un evento `PreviewMouseDown` y, después, de un evento `MouseDown`.  
   
@@ -206,13 +206,13 @@ Propagación y tunelización de eventos de entrada
   
 1.  `PreviewMouseDown` (túnel) en el elemento raíz.  
   
-2.  `PreviewMouseDown` (túnel) en el elemento intermedio n.º 1.  
+2.  `PreviewMouseDown` (túnel) en el elemento intermedio #1.  
   
-3.  `PreviewMouseDown` (túnel) en el elemento de origen n.º 2.  
+3.  `PreviewMouseDown` (túnel) en el elemento de origen #2.  
   
-4.  `MouseDown` (propagación) en el elemento de origen n.º 2.  
+4.  `MouseDown` (propagación) en el elemento de origen #2.  
   
-5.  `MouseDown` (propagación) en el elemento intermedio n.º 1.  
+5.  `MouseDown` (propagación) en el elemento intermedio #1.  
   
 6.  `MouseDown` (propagación) en el elemento raíz.  
   
@@ -245,6 +245,7 @@ Propagación y tunelización de eventos de entrada
  En este tema se explican principalmente los eventos enrutados desde la perspectiva de describir los conceptos básicos y proporcionar orientación sobre cómo y cuándo responder a los eventos enrutados que ya existen en los distintos elementos y controles base. Pero puede crear sus propios eventos enrutados en su clase personalizada junto con toda la compatibilidad necesaria, como clases y delegados de datos de evento especializados. El propietario del evento enrutado puede ser cualquier clase, pero deben ser producidola y controlando los eventos enrutados <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> las clases derivadas para que sean útiles. Para más información sobre los eventos personalizados, vea [Crear un evento enrutado personalizado](how-to-create-a-custom-routed-event.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>

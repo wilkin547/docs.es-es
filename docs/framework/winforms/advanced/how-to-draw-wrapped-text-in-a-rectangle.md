@@ -1,5 +1,5 @@
 ---
-title: Filtrar Dibujar texto ajustado en un rectángulo
+title: Filtrar para dibujar texto ajustado en un rectángulo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: 35eca2fc0fe40db1b590f4c599baee01c9a9faf3
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: ae6ceb2ca3e541be1d7dd3e5a61a6e52b27e93c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654538"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152794"
 ---
-# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Filtrar Dibujar texto ajustado en un rectángulo
+# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Filtrar para dibujar texto ajustado en un rectángulo
 Puede dibujar texto ajustado en un rectángulo mediante el uso de la <xref:System.Drawing.Graphics.DrawString%2A> sobrecargar el método de la <xref:System.Drawing.Graphics> clases que toman un <xref:System.Drawing.Rectangle> o <xref:System.Drawing.RectangleF> parámetro. También se puede utilizar un <xref:System.Drawing.Brush> y un <xref:System.Drawing.Font>.  
   
  También puede dibujar texto ajustado en un rectángulo mediante el uso de la <xref:System.Windows.Forms.TextRenderer.DrawText%2A> sobrecargar el método de la <xref:System.Windows.Forms.TextRenderer> que toma un <xref:System.Drawing.Rectangle> y un <xref:System.Windows.Forms.TextFormatFlags> parámetro. También se puede utilizar un <xref:System.Drawing.Color> y un <xref:System.Drawing.Font>.  
@@ -45,7 +45,8 @@ Puede dibujar texto ajustado en un rectángulo mediante el uso de la <xref:Syste
 -   <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Dibujar texto con GDI](how-to-draw-text-with-gdi.md)
+
+- [Filtrar para dibujar texto con GDI](how-to-draw-text-with-gdi.md)
 - [Utilizar fuentes y texto](using-fonts-and-text.md)
-- [Cómo: Construir fuentes y familias de fuentes](how-to-construct-font-families-and-fonts.md)
-- [Cómo: Dibujar texto en una ubicación especificada](how-to-draw-text-at-a-specified-location.md)
+- [Filtrar para construir fuentes y familias de fuentes](how-to-construct-font-families-and-fonts.md)
+- [Filtrar para dibujar texto en una ubicación especificada](how-to-draw-text-at-a-specified-location.md)

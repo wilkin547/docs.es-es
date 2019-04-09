@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e40f08a3dae6f17617e97e07a23b9d7eb611083
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bae2d134c412023d0f126453b5285662d994c78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207765"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost (Coclase)
 Proporciona interfaces para administrar la ejecución de código por el tiempo de ejecución.  
@@ -39,8 +39,8 @@ coclass CLRRuntimeHost {
   
 |Interfaz|Descripción|  
 |---------------|-----------------|  
-|[ICLRRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|Proporciona métodos para controlar la ejecución de aplicaciones por el tiempo de ejecución.|  
-|[ICLRValidator (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|Proporciona métodos para la validación de imágenes ejecutables portables y para generar informes detallados de errores de validación.|  
+|[ICLRRuntimeHost (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|Proporciona métodos para controlar la ejecución de aplicaciones por el tiempo de ejecución.|  
+|[ICLRValidator (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|Proporciona métodos para la validación de imágenes ejecutables portables y para generar informes detallados de errores de validación.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -52,4 +52,5 @@ coclass CLRRuntimeHost {
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Coclases para el hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

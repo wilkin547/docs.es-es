@@ -2,12 +2,12 @@
 title: Constructor de tipos con nombre (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: f6577b49c299e1497da2692daef6d22cba1473b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 26fb2839f0cc7d645f6ce6daea2d27e35868b63c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168797"
 ---
 # <a name="named-type-constructor-entity-sql"></a>Constructor de tipos con nombre (Entity SQL)
 Se usa para crear instancias de los tipos nominales del modelo conceptual como los tipos de entidad o los tipos complejos.  
@@ -47,7 +47,7 @@ Se usa para crear instancias de los tipos nominales del modelo conceptual como l
   
  `MyModel.Person("Bill", MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567')))`  
   
- En el ejemplo siguiente se muestra cómo inicializar una propiedad de un tipo complejo en NULL:`MyModel.ZipCode(‘98118’, null)`  
+ El ejemplo siguiente muestra cómo inicializar una propiedad de un tipo complejo en null:`MyModel.ZipCode(‘98118’, null)`  
   
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente usa el constructor de tipos con nombre para crear una instancia de un tipo del modelo conceptual. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
@@ -59,5 +59,6 @@ Se usa para crear instancias de los tipos nominales del modelo conceptual como l
  [!code-csharp[DP EntityServices Concepts 2#NAMED_TYPE_CONSTRUCTOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#named_type_constructor)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Tipos de constructores](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
 - [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
