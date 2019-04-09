@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45795d4f3c0d043a46a750312484b93407ae8434
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 89a2424548bb577e3580d6eaa72f61e5cf9ccc7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111220"
 ---
-# <a name="icorprofilerinfogetmodulemetadata-method"></a><span data-ttu-id="35325-102">ICorProfilerInfo::GetModuleMetaData (Método)</span><span class="sxs-lookup"><span data-stu-id="35325-102">ICorProfilerInfo::GetModuleMetaData Method</span></span>
-<span data-ttu-id="35325-103">Obtiene una instancia de la interfaz de metadatos que se asigna para el módulo especificado.</span><span class="sxs-lookup"><span data-stu-id="35325-103">Gets a metadata interface instance that maps to the specified module.</span></span>  
+# <a name="icorprofilerinfogetmodulemetadata-method"></a><span data-ttu-id="0deba-102">ICorProfilerInfo::GetModuleMetaData (Método)</span><span class="sxs-lookup"><span data-stu-id="0deba-102">ICorProfilerInfo::GetModuleMetaData Method</span></span>
+<span data-ttu-id="0deba-103">Obtiene una instancia de la interfaz de metadatos que se asigna para el módulo especificado.</span><span class="sxs-lookup"><span data-stu-id="0deba-103">Gets a metadata interface instance that maps to the specified module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="35325-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="35325-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0deba-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0deba-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModuleMetaData(  
@@ -37,32 +37,33 @@ HRESULT GetModuleMetaData(
     [out] IUnknown **ppOut);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="35325-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="35325-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0deba-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="0deba-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="35325-106">[in] El identificador del módulo al que se asignará la instancia de interfaz.</span><span class="sxs-lookup"><span data-stu-id="35325-106">[in] The ID of the module to which the interface instance will be mapped.</span></span>  
+ <span data-ttu-id="0deba-106">[in] El identificador del módulo al que se asignará la instancia de interfaz.</span><span class="sxs-lookup"><span data-stu-id="0deba-106">[in] The ID of the module to which the interface instance will be mapped.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="35325-107">[in] Un valor de la [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeración que especifica el modo de abrir archivos de manifiesto.</span><span class="sxs-lookup"><span data-stu-id="35325-107">[in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration that specifies the mode for opening manifest files.</span></span> <span data-ttu-id="35325-108">Solo el `ofRead`, `ofWrite` y `ofNoTransform` bits son válidos.</span><span class="sxs-lookup"><span data-stu-id="35325-108">Only the `ofRead`, `ofWrite` and `ofNoTransform` bits are valid.</span></span>  
+ <span data-ttu-id="0deba-107">[in] Un valor de la [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeración que especifica el modo de abrir archivos de manifiesto.</span><span class="sxs-lookup"><span data-stu-id="0deba-107">[in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration that specifies the mode for opening manifest files.</span></span> <span data-ttu-id="0deba-108">Solo el `ofRead`, `ofWrite` y `ofNoTransform` bits son válidos.</span><span class="sxs-lookup"><span data-stu-id="0deba-108">Only the `ofRead`, `ofWrite` and `ofNoTransform` bits are valid.</span></span>  
   
  `riid`  
- <span data-ttu-id="35325-109">[in] La referencia de identificador (GUID) de la interfaz de metadatos cuya instancia se va a recuperar.</span><span class="sxs-lookup"><span data-stu-id="35325-109">[in] The reference ID (GUID) of the metadata interface whose instance will be retrieved.</span></span> <span data-ttu-id="35325-110">Consulte [Interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) para obtener una lista de las interfaces.</span><span class="sxs-lookup"><span data-stu-id="35325-110">See [Metadata Interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) for a list of the interfaces.</span></span>  
+ <span data-ttu-id="0deba-109">[in] La referencia de identificador (GUID) de la interfaz de metadatos cuya instancia se va a recuperar.</span><span class="sxs-lookup"><span data-stu-id="0deba-109">[in] The reference ID (GUID) of the metadata interface whose instance will be retrieved.</span></span> <span data-ttu-id="0deba-110">Consulte [Interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) para obtener una lista de las interfaces.</span><span class="sxs-lookup"><span data-stu-id="0deba-110">See [Metadata Interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) for a list of the interfaces.</span></span>  
   
  `ppOut`  
- <span data-ttu-id="35325-111">[out] Un puntero a la dirección de la instancia de la interfaz de metadatos.</span><span class="sxs-lookup"><span data-stu-id="35325-111">[out] A pointer to the address of the metadata interface instance.</span></span>  
+ <span data-ttu-id="0deba-111">[out] Un puntero a la dirección de la instancia de la interfaz de metadatos.</span><span class="sxs-lookup"><span data-stu-id="0deba-111">[out] A pointer to the address of the metadata interface instance.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="35325-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="35325-112">Remarks</span></span>  
- <span data-ttu-id="35325-113">Puede solicitar los metadatos que se abrirá en modo de lectura/escritura, pero esto dará como resultado una ejecución más lenta de los metadatos del programa, porque los cambios realizan en los metadatos no se puede optimizar como si fueran del compilador.</span><span class="sxs-lookup"><span data-stu-id="35325-113">You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0deba-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="0deba-112">Remarks</span></span>  
+ <span data-ttu-id="0deba-113">Puede solicitar los metadatos que se abrirá en modo de lectura/escritura, pero esto dará como resultado una ejecución más lenta de los metadatos del programa, porque los cambios realizan en los metadatos no se puede optimizar como si fueran del compilador.</span><span class="sxs-lookup"><span data-stu-id="0deba-113">You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.</span></span>  
   
- <span data-ttu-id="35325-114">Algunos módulos (por ejemplo, los módulos de recursos) no tienen metadatos.</span><span class="sxs-lookup"><span data-stu-id="35325-114">Some modules (such as resource modules) have no metadata.</span></span> <span data-ttu-id="35325-115">En esos casos, `GetModuleMetaData` devolverá un valor HRESULT de S_FALSE y un valor null en \*`ppOut`.</span><span class="sxs-lookup"><span data-stu-id="35325-115">In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in \*`ppOut`.</span></span>  
+ <span data-ttu-id="0deba-114">Algunos módulos (por ejemplo, los módulos de recursos) no tienen metadatos.</span><span class="sxs-lookup"><span data-stu-id="0deba-114">Some modules (such as resource modules) have no metadata.</span></span> <span data-ttu-id="0deba-115">En esos casos, `GetModuleMetaData` devolverá un valor HRESULT de S_FALSE y un valor null en \*`ppOut`.</span><span class="sxs-lookup"><span data-stu-id="0deba-115">In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in \*`ppOut`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="35325-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="35325-116">Requirements</span></span>  
- <span data-ttu-id="35325-117">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="35325-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0deba-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0deba-116">Requirements</span></span>  
+ <span data-ttu-id="0deba-117">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0deba-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="35325-118">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="35325-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0deba-118">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0deba-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="35325-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="35325-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0deba-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0deba-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="35325-120">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35325-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="0deba-120">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="0deba-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="35325-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="35325-121">See also</span></span>
-- [<span data-ttu-id="35325-122">ICorProfilerInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="35325-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0deba-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="0deba-121">See also</span></span>
+
+- [<span data-ttu-id="0deba-122">ICorProfilerInfo (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="0deba-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

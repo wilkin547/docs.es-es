@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e51cb1049737e6b325656057060a88123f69a9b4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6b7cfba90edab44a0053fdfc759417ee7f074401
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132039"
 ---
-# <a name="imetadataemitsetparamprops-method"></a><span data-ttu-id="74a60-102">IMetaDataEmit::SetParamProps (Método)</span><span class="sxs-lookup"><span data-stu-id="74a60-102">IMetaDataEmit::SetParamProps Method</span></span>
-<span data-ttu-id="74a60-103">Establece o cambia las características de un parámetro de método que se ha definido por una llamada anterior a [DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).</span><span class="sxs-lookup"><span data-stu-id="74a60-103">Sets or changes features of a method parameter that was defined by a prior call to [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).</span></span>  
+# <a name="imetadataemitsetparamprops-method"></a><span data-ttu-id="e4a0d-102">IMetaDataEmit::SetParamProps (Método)</span><span class="sxs-lookup"><span data-stu-id="e4a0d-102">IMetaDataEmit::SetParamProps Method</span></span>
+<span data-ttu-id="e4a0d-103">Establece o cambia las características de un parámetro de método que se ha definido por una llamada anterior a [DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).</span><span class="sxs-lookup"><span data-stu-id="e4a0d-103">Sets or changes features of a method parameter that was defined by a prior call to [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="74a60-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="74a60-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e4a0d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e4a0d-104">Syntax</span></span>  
   
 ```  
 HRESULT SetParamProps (   
@@ -40,34 +40,35 @@ HRESULT SetParamProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="74a60-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="74a60-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e4a0d-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="e4a0d-105">Parameters</span></span>  
  `pd`  
- <span data-ttu-id="74a60-106">[in] El token para el parámetro de destino.</span><span class="sxs-lookup"><span data-stu-id="74a60-106">[in] The token for the target parameter.</span></span>  
+ <span data-ttu-id="e4a0d-106">[in] El token para el parámetro de destino.</span><span class="sxs-lookup"><span data-stu-id="e4a0d-106">[in] The token for the target parameter.</span></span>  
   
  `szName`  
- <span data-ttu-id="74a60-107">[in] El nombre del parámetro en Unicode.</span><span class="sxs-lookup"><span data-stu-id="74a60-107">[in] The name of the parameter in Unicode.</span></span>  
+ <span data-ttu-id="e4a0d-107">[in] El nombre del parámetro en Unicode.</span><span class="sxs-lookup"><span data-stu-id="e4a0d-107">[in] The name of the parameter in Unicode.</span></span>  
   
  `dwParamFlags`  
- <span data-ttu-id="74a60-108">[in] Marcas para el parámetro.</span><span class="sxs-lookup"><span data-stu-id="74a60-108">[in] The flags for the parameter.</span></span>  
+ <span data-ttu-id="e4a0d-108">[in] Marcas para el parámetro.</span><span class="sxs-lookup"><span data-stu-id="e4a0d-108">[in] The flags for the parameter.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="74a60-109">[in] El ELEMENT_TYPE_ \* para el valor constante.</span><span class="sxs-lookup"><span data-stu-id="74a60-109">[in] The ELEMENT_TYPE_\* for the constant value.</span></span>  
+ <span data-ttu-id="e4a0d-109">[in] El ELEMENT_TYPE_ \* para el valor constante.</span><span class="sxs-lookup"><span data-stu-id="e4a0d-109">[in] The ELEMENT_TYPE_\* for the constant value.</span></span>  
   
  `pValue`  
- <span data-ttu-id="74a60-110">[in] El valor constante para el parámetro.</span><span class="sxs-lookup"><span data-stu-id="74a60-110">[in] The constant value for the parameter.</span></span>  
+ <span data-ttu-id="e4a0d-110">[in] El valor constante para el parámetro.</span><span class="sxs-lookup"><span data-stu-id="e4a0d-110">[in] The constant value for the parameter.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="74a60-111">[in] El tamaño en caracteres (Unicode) de `pValue`.</span><span class="sxs-lookup"><span data-stu-id="74a60-111">[in] The size in (Unicode) characters of `pValue`.</span></span>  
+ <span data-ttu-id="e4a0d-111">[in] El tamaño en caracteres (Unicode) de `pValue`.</span><span class="sxs-lookup"><span data-stu-id="e4a0d-111">[in] The size in (Unicode) characters of `pValue`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="74a60-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="74a60-112">Requirements</span></span>  
- <span data-ttu-id="74a60-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="74a60-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e4a0d-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e4a0d-112">Requirements</span></span>  
+ <span data-ttu-id="e4a0d-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e4a0d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="74a60-114">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="74a60-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e4a0d-114">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="e4a0d-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="74a60-115">**Biblioteca:** Usar como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="74a60-115">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e4a0d-115">**Biblioteca:** Usar como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e4a0d-115">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="74a60-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="74a60-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="e4a0d-116">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="e4a0d-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="74a60-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="74a60-117">See also</span></span>
-- [<span data-ttu-id="74a60-118">IMetaDataEmit (interfaz)</span><span class="sxs-lookup"><span data-stu-id="74a60-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="74a60-119">IMetaDataEmit2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="74a60-119">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e4a0d-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="e4a0d-117">See also</span></span>
+
+- [<span data-ttu-id="e4a0d-118">IMetaDataEmit (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="e4a0d-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="e4a0d-119">IMetaDataEmit2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="e4a0d-119">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

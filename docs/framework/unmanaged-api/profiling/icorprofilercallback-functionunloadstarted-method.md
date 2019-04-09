@@ -17,38 +17,39 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1944b84863cea1cfdc464489640a6f78d476537d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c1c1c9a15e9f56765710ffb2015a29b4206b3bd4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152612"
 ---
-# <a name="icorprofilercallbackfunctionunloadstarted-method"></a><span data-ttu-id="8bbcc-102">ICorProfilerCallback::FunctionUnloadStarted (Método)</span><span class="sxs-lookup"><span data-stu-id="8bbcc-102">ICorProfilerCallback::FunctionUnloadStarted Method</span></span>
-<span data-ttu-id="8bbcc-103">Notifica al generador de perfiles que se ha iniciado el tiempo de ejecución a una función de punto de descargarse.</span><span class="sxs-lookup"><span data-stu-id="8bbcc-103">Notifies the profiler that the runtime has started to unload a function.</span></span>  
+# <a name="icorprofilercallbackfunctionunloadstarted-method"></a><span data-ttu-id="5f31a-102">ICorProfilerCallback::FunctionUnloadStarted (Método)</span><span class="sxs-lookup"><span data-stu-id="5f31a-102">ICorProfilerCallback::FunctionUnloadStarted Method</span></span>
+<span data-ttu-id="5f31a-103">Notifica al generador de perfiles que se ha iniciado el tiempo de ejecución a una función de punto de descargarse.</span><span class="sxs-lookup"><span data-stu-id="5f31a-103">Notifies the profiler that the runtime has started to unload a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8bbcc-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8bbcc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f31a-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5f31a-104">Syntax</span></span>  
   
 ```  
 HRESULT FunctionUnloadStarted(  
     [in] FunctionID functionId);   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8bbcc-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="8bbcc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5f31a-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5f31a-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="8bbcc-106">[in] El identificador de la función que se está descargando.</span><span class="sxs-lookup"><span data-stu-id="8bbcc-106">[in] The ID of the function that is being unloaded.</span></span>  
+ <span data-ttu-id="5f31a-106">[in] El identificador de la función que se está descargando.</span><span class="sxs-lookup"><span data-stu-id="5f31a-106">[in] The ID of the function that is being unloaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8bbcc-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="8bbcc-107">Remarks</span></span>  
- <span data-ttu-id="8bbcc-108">El valor de la `functionId` parámetro ya no es válido después de que este método devuelve al llamador.</span><span class="sxs-lookup"><span data-stu-id="8bbcc-108">The value of the `functionId` parameter is no longer valid after this method returns to the caller.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5f31a-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5f31a-107">Remarks</span></span>  
+ <span data-ttu-id="5f31a-108">El valor de la `functionId` parámetro ya no es válido después de que este método devuelve al llamador.</span><span class="sxs-lookup"><span data-stu-id="5f31a-108">The value of the `functionId` parameter is no longer valid after this method returns to the caller.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8bbcc-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8bbcc-109">Requirements</span></span>  
- <span data-ttu-id="8bbcc-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8bbcc-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f31a-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5f31a-109">Requirements</span></span>  
+ <span data-ttu-id="5f31a-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5f31a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8bbcc-111">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8bbcc-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="5f31a-111">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5f31a-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="8bbcc-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8bbcc-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5f31a-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5f31a-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8bbcc-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8bbcc-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="5f31a-113">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="5f31a-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="8bbcc-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="8bbcc-114">See also</span></span>
-- [<span data-ttu-id="8bbcc-115">ICorProfilerCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="8bbcc-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5f31a-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="5f31a-114">See also</span></span>
+
+- [<span data-ttu-id="5f31a-115">ICorProfilerCallback (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="5f31a-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
