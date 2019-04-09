@@ -1,5 +1,5 @@
 ---
-title: Filtrar Construir fuentes y familias de fuentes
+title: Filtrar para construir fuentes y familias de fuentes
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: b651671e525ae5cfc365a392b96d258ac835a21c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708568"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181225"
 ---
-# <a name="how-to-construct-font-families-and-fonts"></a>Filtrar Construir fuentes y familias de fuentes
+# <a name="how-to-construct-font-families-and-fonts"></a>Filtrar para construir fuentes y familias de fuentes
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] las fuentes con el mismo tipo de letra pero distintos estilos se agrupa en familias de fuentes. Por ejemplo, la familia de fuentes Arial contiene las siguientes fuentes:  
   
 -   Arial normal  
@@ -50,5 +50,6 @@ ms.locfileid: "57708568"
  El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilizar fuentes y texto](using-fonts-and-text.md)
 - [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)

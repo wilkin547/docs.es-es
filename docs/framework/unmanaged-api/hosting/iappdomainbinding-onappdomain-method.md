@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 798ef6a9b058d9d49019554feba63627360e6a0e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2903395f5f834f2435b14d0b3f3e8bfe24af2867
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183058"
 ---
 # <a name="iappdomainbindingonappdomain-method"></a>IAppDomainBinding::OnAppDomain (Método)
 Lo llama common language runtime (CLR) para notificar al host que se ha creado un dominio de aplicación.  
@@ -49,4 +49,5 @@ HRESULT OnAppDomain (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [IAppDomainBinding (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)
+
+- [IAppDomainBinding (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)

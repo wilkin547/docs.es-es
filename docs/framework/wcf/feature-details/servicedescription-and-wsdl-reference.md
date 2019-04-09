@@ -2,12 +2,12 @@
 title: ServiceDescription y referencias WSDL
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182889"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription y referencias WSDL
 Este tema describe cómo Windows Communication Foundation (WCF) asigna los documentos de lenguaje de descripción de servicios Web (WSDL) a y desde <xref:System.ServiceModel.Description.ServiceDescription> instancias.  
@@ -31,15 +31,15 @@ Este tema describe cómo Windows Communication Foundation (WCF) asigna los docum
 ### <a name="serviceendpoint"></a>ServiceEndpoint  
  Se asigna una instancia <xref:System.ServiceModel.Description.ServiceEndpoint> a un elemento `wsdl:port`. Una instancia <xref:System.ServiceModel.Description.ServiceEndpoint> contiene una dirección, un enlace y un contrato.  
   
- Los comportamientos del extremo que implementan la interfaz <xref:System.ServiceModel.Description.IWsdlExportExtension> pueden modificar el elemento `wsdl:port` del extremo al que están adjuntos.  
+ Los comportamientos del punto de conexión que implementan la interfaz <xref:System.ServiceModel.Description.IWsdlExportExtension> pueden modificar el elemento `wsdl:port` del punto de conexión al que están adjuntos.  
   
 |Propiedades|Asignación WSDL|  
 |----------------|------------------|  
 |`Name`|El `wsdl:port` /@name valor para el punto de conexión y la `wsdl:binding` /@name valor para el enlace de punto de conexión.|  
-|`Address`|La dirección para la definición `wsdl:port` del punto de conexión.<br /><br /> El transporte del punto de conexión determina el formato de la dirección. Por ejemplo, para los transportes admitidos por WCF podría ser una dirección SOAP o una referencia del extremo.|  
-|`Binding`|La definición `wsdl:binding` del punto de conexión.<br /><br /> A diferencia de `wsdl:binding` definiciones, enlaces de WCF no están asociadas con un contrato.|  
-|`Contract`|La definición `wsdl:portType` del punto de conexión.|  
-|`Behaviors`|Los comportamientos del extremo que implementan la interfaz <xref:System.ServiceModel.Description.IWsdlExportExtension> pueden modificar `wsdl:port` del extremo.|  
+|`Address`|La dirección para la definición `wsdl:port` del punto de conexión.<br /><br /> El transporte del extremo determina el formato de la dirección. Por ejemplo, para los transportes admitidos por WCF podría ser una dirección SOAP o una referencia del extremo.|  
+|`Binding`|La definición `wsdl:binding` del extremo.<br /><br /> A diferencia de `wsdl:binding` definiciones, enlaces de WCF no están asociadas con un contrato.|  
+|`Contract`|La definición `wsdl:portType` del extremo.|  
+|`Behaviors`|Los comportamientos del punto de conexión que implementan la interfaz <xref:System.ServiceModel.Description.IWsdlExportExtension> pueden modificar `wsdl:port` del punto de conexión.|  
   
 ### <a name="bindings"></a>Enlaces  
  La instancia de enlace para una instancia `ServiceEndpoint` se asigna a una definición `wsdl:binding`. A diferencia de `wsdl:binding` definiciones, que deben asociarse con un valor concreto `wsdl:portType` definición, los enlaces de WCF son independientes de cualquier contrato.  
@@ -50,8 +50,8 @@ Este tema describe cómo Windows Communication Foundation (WCF) asigna los docum
 |----------------|------------------|  
 |`Name`|Se utiliza en el nombre predeterminado de un extremo, que es el nombre del enlace al que se anexa el nombre del contrato separado por un guión bajo.|  
 |`Namespace`|`targetNamespace` para la definición `wsdl:binding`.<br /><br /> En importación, si una directiva está adjunta al puerto WSDL, el espacio de nombres del enlace importado se asigna a `targetNamespace` para la definición `wsdl:port`.|  
-|`BindingElementCollection`, como lo devuelve el método `CreateBindingElements`().|Varias extensiones específicas del dominio para la definición `wsdl:binding`, normalmente, las aserciones de directiva.|  
-|`MessageVersion`|`EnvelopeVersion` y `AddressingVersion` para el extremo.<br /><br /> Cuando se especifica `MessageVersion.None`, el enlace de WSDL no contiene un enlace SOAP y el puerto WSDL no incluye contenido de WS-Addressing. Este valor se utiliza normalmente para extremos “XML sin formato” (POX).|  
+|`BindingElementCollection`, tal como lo devuelve el `CreateBindingElements`(método))|Varias extensiones específicas del dominio para la definición `wsdl:binding`, normalmente, las aserciones de directiva.|  
+|`MessageVersion`|`EnvelopeVersion` y `AddressingVersion` para el extremo.<br /><br /> Cuando se especifica `MessageVersion.None`, el enlace de WSDL no contiene un enlace SOAP y el puerto WSDL no incluye contenido de WS-Addressing. Este valor se utiliza normalmente para puntos de conexión “XML sin formato” (POX).|  
   
 #### <a name="bindingelements"></a>BindingElements  
  Los elementos de enlace de un enlace de extremo se asignan a distintas extensiones WSDL en `wsdl:binding`, por ejemplo, las aserciones de directiva.  
@@ -152,4 +152,5 @@ Este tema describe cómo Windows Communication Foundation (WCF) asigna los docum
 |`Name, ContractDescription.Name, OperationDescription.Name,`|Utilizado para derivar el `wsdl:message` /@name valor para el mensaje de error.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Description>

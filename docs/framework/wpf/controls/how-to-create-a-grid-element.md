@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], creating [WPF], grid instance
 ms.assetid: b2f07626-9df8-43b8-8d36-492f3cb42837
-ms.openlocfilehash: 5aa0e5b617d952fd5df1f80ae0ff146a6899aa32
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ebb9369da73bd595338e5b6ef42bda639bde6ed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134542"
 ---
 # <a name="how-to-create-a-grid-element"></a>Filtrar Crear un elemento Grid
 ## <a name="example"></a>Ejemplo  
@@ -26,5 +26,6 @@ ms.locfileid: "57379515"
 
   ![una captura de pantalla muestra una interfaz de usuario WPF que contiene una cuadrícula dividida en tres columnas.  Lleve el encabezado '2018 productos enviados' que abarca todas las columnas de la fila superior y tiene tres columnas con las cifras de ventas para un determinado trimestre.  La fila inferior contiene el texto que abarca dos columnas con el mensaje "Total de unidades: 300,000'](././media/how-to-create-a-grid-element/how-to-create-a-grid-element.png)
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.Grid>
 - [Información general sobre elementos Panel](panels-overview.md)

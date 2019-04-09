@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a999dc1850a41612f8896ff9a7ed96cd8c3a2fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ead1c1a91b910e7cfbb09f17ba823fc7a77ce0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181446"
 ---
 # <a name="getcurrentapartmenttype-function"></a>Función GetCurrentApartmentType
 Recupera el tipo de contenedor en el que se está ejecutando el llamador.   
@@ -51,7 +51,6 @@ HRESULT GetCurrentApartmentType (
 
 ## <a name="return-value"></a>Valor devuelto
 
-
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `S_OK` | 0 | La función que se completó correctamente. |
@@ -69,4 +68,5 @@ Esta función contiene una llamada a la [IComThreadingInfo::GetCurrentApartmentT
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

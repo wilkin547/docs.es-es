@@ -1,17 +1,17 @@
 ---
-title: 'Ejemplo: Solución de problemas de programación dinámica'
+title: 'Ejemplo: solucionar problemas de programación dinámica'
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f17552a98683e4278dbdfbfa927ca3b075b225
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af71c4916a2abdeb019e538a33ad05efa727e720
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137896"
 ---
-# <a name="example-troubleshooting-dynamic-programming"></a>Ejemplo: Solución de problemas de programación dinámica
+# <a name="example-troubleshooting-dynamic-programming"></a>Ejemplo: solucionar problemas de programación dinámica
 > [!NOTE]
 >  En este tema se hace referencia a .NET Native Developer Preview, que es una versión preliminar del software. Puede descargar esta versión preliminar desde el [sitio web de Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (es necesario registrarse).  
   
@@ -35,7 +35,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
   
  Vamos a intentar solucionar esta excepción mediante el enfoque de tres pasos descrito en la sección "Resolver manualmente los metadatos que faltan" de [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md).  
   
-## <a name="what-was-the-app-doing"></a>¿Qué ha hecho la aplicación?  
+## <a name="what-was-the-app-doing"></a>¿Qué estaba haciendo la aplicación?  
  Lo primero que hay tener en cuenta es la maquinaria de la palabra clave `async` en la base de la pila.  Determinar lo que la aplicación estaba haciendo realmente en un método `async` puede ser problemático, ya que la pila ha perdido el contexto de la llamada original y ha ejecutado el código `async` en un subproceso diferente. Sin embargo, podemos deducir que la aplicación estaba intentando cargar su primera página.  En la implementación de `NavigationArgs.Setup`, el código siguiente produjo la infracción de acceso:  
   
 ```  
@@ -61,5 +61,6 @@ AppViewModel.Current.LayoutVM.PageMap
  Si la aplicación hubiera usado `typeof(LayoutApplicationVM)` en lugar de `Type.GetType("LayoutApplicationVM")`, la cadena de herramientas podría haber conservado los metadatos de `browse`.  En cambio, aun así no habría creado metadatos de `invoke`, que habrían producido una excepción [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) al crear una instancia del tipo. Para evitar la excepción, se tendría que agregar una directiva de tiempo de ejecución para el espacio de nombres o el tipo que especifica la directiva `dynamic`. Para obtener información sobre las directivas de tiempo de ejecución, vea [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Ejemplo: Control de excepciones al enlazar datos](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [Ejemplo: control de excepciones al enlazar datos](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

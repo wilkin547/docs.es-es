@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Controlar un MediaElement (Reproducir, Pausar, Detener, Volumen y Velocidad)
+title: Filtrar Controlar un control MediaElement (Reproducir, Pausar, Detener, Volumen y Velocidad)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - multimedia [WPF], controlling playback of media
 - media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
-ms.openlocfilehash: 7fe8107f7b5b65f00f2c5ac029f806aeba758d20
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bb7319fc7ccec0220cbd79a32d5d015f9f2422d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182863"
 ---
-# <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Filtrar Controlar un MediaElement (Reproducir, Pausar, Detener, Volumen y Velocidad)
+# <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Filtrar Controlar un control MediaElement (Reproducir, Pausar, Detener, Volumen y Velocidad)
 El ejemplo siguiente muestra cómo controlar la reproducción de medios mediante un <xref:System.Windows.Controls.MediaElement>. El ejemplo crea un Reproductor de medios sencillo que permite reproducir, pausar, detener y avanzar o retroceder en el medio así como ajustar la proporción de volumen y velocidad.  
   
 ## <a name="example"></a>Ejemplo  
@@ -35,4 +35,5 @@ El ejemplo siguiente muestra cómo controlar la reproducción de medios mediante
  [!code-vb[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml.vb#codebehindmediaelementexamplewholepage)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Controlar un control MediaElement mediante un guión gráfico](how-to-control-a-mediaelement-by-using-a-storyboard.md)

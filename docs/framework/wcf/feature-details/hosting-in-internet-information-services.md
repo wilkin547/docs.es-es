@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: edf3927fb9fdbd9855561b32aec2a425d7ee0638
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cb67a30ca5453142f906be918b891ac959cdaf2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180026"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hospedaje en Internet Information Services
 Es una opción para hospedar servicios Windows Communication Foundation (WCF) dentro de una aplicación de Internet Information Services (IIS). Este modelo de hospedaje es similar al modelo utilizado por [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y los servicios Web ASP.NET (ASMX).  
@@ -19,7 +19,7 @@ Es una opción para hospedar servicios Windows Communication Foundation (WCF) de
   
 -   IIS 5.1 en [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]. Este entorno es útil para el diseño y desarrollo de aplicaciones hospedadas por IIS que se implementarán más adelante en un sistema operativo de servidor como [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
   
--   [!INCLUDE[iis601](../../../../includes/iis601-md.md)] en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] proporciona un modelo de procesamiento avanzado que ofrece una mejor escalabilidad, confiabilidad y aislamiento de aplicaciones. Este entorno es adecuado para la implementación de producción de servicios WCF que utilizan comunicación HTTP de forma exclusiva.  
+-   [!INCLUDE[iis601](../../../../includes/iis601-md.md)] en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] Proporciona un modelo de proceso avanzado que ofrece una mejor escalabilidad, confiabilidad y aislamiento de la aplicación. Este entorno es adecuado para la implementación de producción de servicios WCF que utilizan comunicación HTTP de forma exclusiva.  
   
 -   IIS 7.0 en [!INCLUDE[wv](../../../../includes/wv-md.md)] y [!INCLUDE[lserver](../../../../includes/lserver-md.md)]. IIS 7.0 proporciona el mismo modelo de procesamiento avanzado que [!INCLUDE[iis601](../../../../includes/iis601-md.md)], pero utiliza Windows Process Activation Service (WAS) para permitir la activación y comunicación por red a través de protocolos que no sean HTTP. Este entorno es adecuado para el desarrollo de servicios WCF que se comunican a través de cualquier protocolo de red compatible con WCF (incluidos HTTP, net.tcp, net.pipe y net.msmq). Para obtener más información acerca de WAS, vea [hospedaje en Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
@@ -57,6 +57,7 @@ Es una opción para hospedar servicios Windows Communication Foundation (WCF) de
  Los servicios WCF pueden ser hospedado cualquier side-by-side con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] o en [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidad en el que los servicios pueden aprovechar al máximo de características proporcionadas por el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] plataforma de aplicaciones Web. Para obtener una explicación de estas características, consulte [servicios WCF y ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Extensión del hospedaje mediante ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)
 - [Implementación de un servicio WFC hospedado en Internet Information Services](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)
 - [Servicios WCF y ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

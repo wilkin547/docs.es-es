@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cd5e660778b852cfee84359bb4d7253ca8f118d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11a19dce496423883e5fed62375c6db8ed5efdb1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134035"
 ---
 # <a name="security-etw-events"></a>Eventos ETW de seguridad
 <a name="top"></a> Los eventos de seguridad se generan durante la comprobación de nombre seguro y la comprobación de Authenticode.  
@@ -29,11 +29,11 @@ ms.locfileid: "54608081"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword` (0 x 400)|Informativo (4)|  
+|`SecurityKeyword` (0x400)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`StrongNameVerificationStart_V1`|181|Inicio de comprobación de nombre seguro.|  
 |`StrongNameVerificationStop_V1`|182|Fin de comprobación de nombre seguro.|  
@@ -55,11 +55,11 @@ ms.locfileid: "54608081"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword` (0 x 400)|Informativo (4)|  
+|`SecurityKeyword` (0x400)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`AuthenticodeVerificationStart_V1`|183|Inicio de la comprobación de Authenticode.|  
 |`AuthenticodeVerificationStop_V1`|184|Fin de la comprobación de Authenticode.|  
@@ -74,4 +74,5 @@ ms.locfileid: "54608081"
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 ## <a name="see-also"></a>Vea también
-- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md)

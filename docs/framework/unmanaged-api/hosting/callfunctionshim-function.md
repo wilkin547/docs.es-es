@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44f343fa6d9f620145c707e5987ecaedf17dcba8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7aeb813cafbf5b18739c4574c386398ac3c7a77b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478991"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180484"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim (Función)
 Realiza una llamada a la función que tiene el nombre especificado y los parámetros de la biblioteca especificada.  
@@ -70,4 +70,5 @@ HRESULT CallFunctionShim (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

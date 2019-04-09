@@ -1,5 +1,5 @@
 ---
-title: Filtrar Establecer atributos de fuente para el Control RichTextBox de formularios de Windows
+title: Filtrar para establecer atributos de fuente para el control RichTextBox de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], formatting text
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
-ms.openlocfilehash: 92578bd267230f5878bda9533bd117e8f98d8f13
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 50a65a6828968f7bd9f1b17f5b8c8b1e4f70d051
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182915"
 ---
-# <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Filtrar Establecer atributos de fuente para el Control RichTextBox de formularios de Windows
+# <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Filtrar para establecer atributos de fuente para el control RichTextBox de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control tiene numerosas opciones para dar formato al texto que muestra. Puede realizar los caracteres seleccionados en negrita, subrayado o cursiva, utilizando el <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> propiedad. También puede usar esta propiedad para cambiar el tamaño y el tipo de letra de los caracteres seleccionados. El <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> propiedad le permite cambiar el color de los caracteres seleccionados.  
   
 ### <a name="to-change-the-appearance-of-characters"></a>Para cambiar la apariencia de los caracteres  
@@ -54,6 +54,7 @@ Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control tiene
     >  Estas propiedades solo afectan al texto seleccionado o, si no hay texto seleccionado, al texto que se escriba en la posición actual del punto de inserción. Para obtener información sobre cómo seleccionar texto mediante programación, vea <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox (control)](richtextbox-control-windows-forms.md)
+- [Control RichTextBox](richtextbox-control-windows-forms.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

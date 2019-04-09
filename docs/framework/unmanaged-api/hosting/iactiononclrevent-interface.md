@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f547d1bafa37c2cbb285a5d55cef8e1a6e29d0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 864a8a4dd9f96da2fd0e0025848a910b4f8b0a70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180526"
 ---
 # <a name="iactiononclrevent-interface"></a>IActionOnCLREvent (Interfaz)
 Proporciona el [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) método, que realiza las devoluciones de llamada de eventos que se han registrado mediante el uso de una llamada a la [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) método.  
@@ -30,7 +30,7 @@ Proporciona el [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanage
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[OnEvent (método)](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)|Realiza una devolución de llamada para un evento registrado.|  
+|[Método OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)|Realiza una devolución de llamada para un evento registrado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -42,7 +42,8 @@ Proporciona el [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanage
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [EClrEvent (enumeración)](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
-- [ICLRControl (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [ICLROnEventManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)
+
+- [EClrEvent (Enumeración)](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
+- [ICLRControl (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [ICLROnEventManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)
 - [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Proteger un servicio con un certificado X.509
+title: Filtrar para proteger un servicio con un certificado X.509
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: d96897b9b11419bba8a6ef9d3c9579a62e19ee20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6757d6375cbe1662b8bd7beb8a7562be166bc414
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686496"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181511"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procedimiento Proteger un servicio con un certificado X.509
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Filtrar para proteger un servicio con un certificado X.509
 Protección de un servicio con un certificado X.509 es una técnica básica que utilizan la mayoría de los enlaces de Windows Communication Foundation (WCF). En este tema se describen los pasos necesarios para configurar un servicio autoalojado con un certificado X.509.  
   
  Un requisito previo es un certificado válido que se puede utilizar para autenticar el servidor. Una entidad emisora de certificados de confianza debe emitir el certificado. Si el certificado no es válido, cualquier cliente que intente usar el servicio no confiará en el servicio y, por tanto, no se realizará ninguna conexión. Para obtener más información sobre el uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
@@ -41,7 +41,7 @@ Protección de un servicio con un certificado X.509 es una técnica básica que 
      [!code-csharp[C_SecureWithCertificate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#4)]
      [!code-vb[C_SecureWithCertificate#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#4)]  
   
-6.  Agregue un <xref:System.ServiceModel.Description.ServiceEndpoint> al servicio mediante el método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>. Pase el contrato, enlace y una dirección del punto de conexión al constructor, tal y como se muestra en el código siguiente.  
+6.  Agregue un <xref:System.ServiceModel.Description.ServiceEndpoint> al servicio mediante el método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>. Pase el contrato, enlace y una dirección del extremo al constructor, tal y como se muestra en el código siguiente.  
   
      [!code-csharp[C_SecureWithCertificate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#5)]
      [!code-vb[C_SecureWithCertificate#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#5)]  
@@ -83,4 +83,5 @@ Protección de un servicio con un certificado X.509 es una técnica básica que 
 -   <xref:System.Runtime.Serialization>  
   
 ## <a name="see-also"></a>Vea también
-- [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+
+- [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

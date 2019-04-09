@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e9f58a0bc51e8a22672df6ab9bd94009c00f9bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79ef77e52e14fede9949121e7ec4575d10b820c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135855"
 ---
 # <a name="icordebugheapenum-interface"></a>ICorDebugHeapEnum (Interfaz)
 Proporciona un enumerador para los objetos del montón administrado. Esta interfaz es una subclase de ICorDebugEnum (interfaz).  
@@ -30,7 +30,7 @@ Proporciona un enumerador para los objetos del montón administrado. Esta interf
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)|Obtiene el número especificado de [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) instancias que contienen información acerca de los objetos del montón administrado.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)|Obtiene el número especificado de [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) instancias que contienen información acerca de los objetos del montón administrado.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `ICorDebugHeapEnum` interfaz implementa la interfaz ICorDebugEnum.  
@@ -47,4 +47,5 @@ Proporciona un enumerador para los objetos del montón administrado. Esta interf
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -1,19 +1,19 @@
 ---
-title: Filtrar Agrupar controles con el Control GroupBox de formularios de Windows
+title: Filtrar para agrupar controles con el control GroupBox de formularios Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 14c832251a76eaff21611c88179c4d2ffa7ab738
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 706655c8cb2c2548b393b6ad731c13e47fd9381a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179640"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Procedimiento Agrupar controles con el Control GroupBox de formularios de Windows
+# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Filtrar para agrupar controles con el control GroupBox de formularios Windows Forms
 Windows Forms <xref:System.Windows.Forms.GroupBox> controles se usan para agrupar otros controles. Existen tres razones para controles de grupo:  
   
 -   Para crear una agrupación visual de elementos de formulario relacionados para una interfaz de usuario clara.  
@@ -33,5 +33,6 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> controles se usan para agrupa
 3.  Establecer el <xref:System.Windows.Forms.GroupBox.Text%2A> propiedad del cuadro de grupo para el título apropiado.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.GroupBox>
-- [GroupBox (control)](groupbox-control-windows-forms.md)
+- [Control GroupBox](groupbox-control-windows-forms.md)

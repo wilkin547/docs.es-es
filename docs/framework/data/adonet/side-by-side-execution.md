@@ -2,12 +2,12 @@
 title: Ejecución en paralelo en ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 122cb33f4cca203f09104c5a40a1ad5d13326c57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538640"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136765"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Ejecución en paralelo en ADO.NET
 La ejecución en paralelo en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] es la posibilidad de ejecutar una aplicación en un equipo que tiene instaladas varias versiones de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], utilizando exclusivamente la versión para la que se ha compilado la aplicación. Para obtener información detallada sobre la configuración de ejecución en paralelo, vea [ejecución Side-by-Side](../../../../docs/framework/deployment/side-by-side-execution.md).  
@@ -15,7 +15,7 @@ La ejecución en paralelo en [!INCLUDE[dnprdnshort](../../../../includes/dnprdns
  Una aplicación compilada mediante una versión de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se puede ejecutar en otra versión distinta de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. No obstante, se recomienda compilar una versión de la aplicación por cada versión instalada de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] y ejecutarlas por separado. En cualquier caso, debe tener en cuenta los cambios entre las diferentes versiones de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] que pueden afectar a la compatibilidad con versiones posteriores o anteriores de la aplicación.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>Compatibilidad con versiones anteriores y posteriores  
- La compatibilidad con versiones posteriores implica que una aplicación se puede compilar con una versión anterior de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], aunque se podrá ejecutar asimismo correctamente en una versión posterior de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. El código [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] escrito para [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versión 1.1 es compatible con versiones posteriores.  
+ La compatibilidad con versiones posteriores implica que una aplicación se puede compilar con una versión anterior de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], aunque se podrá ejecutar asimismo correctamente en una versión posterior de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] el código escrito para la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versión 1.1 es compatible con versiones posteriores.  
   
  La compatibilidad con versiones anteriores significa que una aplicación compilada para una versión posterior de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se ejecuta también en versiones anteriores de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], sin que su funcionalidad se vea afectada. Por supuesto, no será así en el caso de las características incluidas en una versión nueva de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
@@ -65,6 +65,7 @@ SET NOCOUNT OFF;
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

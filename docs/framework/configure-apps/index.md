@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 184be04c963116906c1dc2c0a5803814402ea8e0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147113"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurar aplicaciones con archivos de configuración
 .NET Framework, a través de archivos de configuración, proporciona a los programadores y administradores control y flexibilidad sobre la manera en que se ejecutan las aplicaciones. Los archivos de configuración son archivos XML que se pueden cambiar según sea necesario. Un administrador puede controlar a qué recursos protegidos puede tener acceso una aplicación, qué versiones de ensamblados utilizará la aplicación y dónde se ubican las aplicaciones y los objetos remotos. Los programadores pueden colocar valores en archivos de configuración, con lo que no es necesario volver a compilar una aplicación cada vez que cambia un valor. En esta sección se describe lo que se puede configurar y por qué es útil configurar una aplicación.  
@@ -101,7 +101,7 @@ ms.locfileid: "55826439"
 -   Archivo de configuración de directiva de usuario: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo: Buscar ensamblados mediante DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [Filtrar para buscar ensamblados mediante DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  Describe cómo indicar al runtime que utilice la variable de entorno DEVPATH al buscar ensamblados.  
   
  [Redirigir versiones de ensamblado](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
@@ -113,17 +113,18 @@ ms.locfileid: "55826439"
  [Configurar clases de criptografía](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  Describe la forma de asignar un nombre de algoritmo a una clase criptográfica y un identificador de objetos a un algoritmo criptográfico.  
   
- [Cómo: Crear una directiva de publicador](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [Filtrar para crear una directiva de publicador](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
  Describe cuándo y cómo debe agregar un archivo de directivas de editor para especificar la redirección del ensamblado y la configuración del código base.  
   
  [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)  
  Describe la jerarquía de esquema para el inicio, el tiempo de ejecución, la red y otros tipos de valores de configuración.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Especificar la ubicación de un ensamblado](../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [Redirigir versiones de ensamblado](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
-- [Administrar sitios web ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [Administración de sitios Web ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Administración de directivas de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
 - [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModuleBreakpoint (Interfaz)
+title: Interfaz ICorDebugModuleBreakpoint
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModuleBreakpoint
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3916bf8f7792e82ba905554bb32696f81634f819
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d6a43a264fcaa94ce4e629d8db504e9d416f6b89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971525"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179717"
 ---
-# <a name="icordebugmodulebreakpoint-interface"></a>ICorDebugModuleBreakpoint (Interfaz)
+# <a name="icordebugmodulebreakpoint-interface"></a>Interfaz ICorDebugModuleBreakpoint
 
 Proporciona acceso a módulos específicos. Esta interfaz es una subclase de ICorDebugBreakpoint (interfaz).  
   
@@ -31,7 +31,7 @@ Proporciona acceso a módulos específicos. Esta interfaz es una subclase de ICo
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetModule (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|Obtiene un puntero de interfaz a una instancia de ICorDebugModule que hace referencia al módulo donde se establece este punto de interrupción.|  
+|[Método GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|Obtiene un puntero de interfaz a una instancia de ICorDebugModule que hace referencia al módulo donde se establece este punto de interrupción.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -48,4 +48,5 @@ Proporciona acceso a módulos específicos. Esta interfaz es una subclase de ICo
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

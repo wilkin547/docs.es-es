@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Responder a los cambios de esquema de fuentes en una aplicación de Windows Forms
+title: Filtrar para responder a los cambios de las combinaciones de fuentes en una aplicación de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 4c34a65ed8ddabfb99451e055048502cb7617e4f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85770687ecfad690a251eafec9051c4c20f45dd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182109"
 ---
-# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Filtrar Responder a los cambios de esquema de fuentes en una aplicación de Windows Forms
+# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Filtrar para responder a los cambios de las combinaciones de fuentes en una aplicación de formularios Windows Forms
 En los sistemas operativos Windows, un usuario puede cambiar la configuración de fuente de todo el sistema para que la fuente predeterminada aparezca mayor o menor. Cambiar esta configuración de fuente es fundamental para los usuarios que son personas con discapacidad visual y requieren un tipo mayor leer el texto en sus pantallas. Puede ajustar la aplicación de Windows Forms para reaccionar a estos cambios aumentando o reduciendo el tamaño del formulario y todo el texto cada vez que cambia el esquema de la fuente. Si desea que el formulario para adaptarse dinámicamente a cambios en los tamaños de fuente, puede agregar código al formulario.  
   
  Normalmente, la fuente predeterminada utilizada por Windows Forms es la fuente devuelta por la <xref:Microsoft.Win32> llamada del espacio de nombres a `GetStockObject(DEFAULT_GUI_FONT)`. La fuente devuelta por esta llamada sólo cambia cuando la resolución de pantalla. Como se muestra en el siguiente procedimiento, el código debe cambiar la fuente predeterminada para <xref:System.Drawing.SystemFonts.IconTitleFont%2A> para responder a cambios en el tamaño de fuente.  
@@ -65,5 +65,6 @@ En los sistemas operativos Windows, un usuario puede cambiar la configuración d
  El constructor de este ejemplo de código contiene una llamada a `InitializeComponent`, que se define al crear un nuevo proyecto de Windows Forms en Visual Studio. Si va a compilar la aplicación en la línea de comandos, quite esta línea de código.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
-- [Ajuste automático de escala en Windows Forms](automatic-scaling-in-windows-forms.md)
+- [Ajuste automático de escala en formularios Windows Forms](automatic-scaling-in-windows-forms.md)

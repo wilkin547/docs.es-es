@@ -2,12 +2,12 @@
 title: <unrecognizedPolicyAssertion>
 ms.date: 03/30/2017
 ms.assetid: 043c3c8f-f263-4ac7-a1af-945d03413f0b
-ms.openlocfilehash: 6fdfa696890459e92aabd4bdf24e0c3a1b0e17f2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9de33512f4240dffdd9e549a49f3daf106418258
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179613"
 ---
 # <a name="unrecognizedpolicyassertion"></a>\<unrecognizedPolicyAssertion>
 Representa un elemento de enlace que especifica la aserción de directiva. Este elemento no tiene ningún atributo y está presente como modificador vacío.  
@@ -43,6 +43,7 @@ Representa un elemento de enlace que especifica la aserción de directiva. Este 
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Enlaces](../../../../../docs/framework/wcf/bindings.md)
 - [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)

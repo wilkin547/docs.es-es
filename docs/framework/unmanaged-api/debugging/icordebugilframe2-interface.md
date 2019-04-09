@@ -1,5 +1,5 @@
 ---
-title: ICorDebugILFrame2 (Interfaz)
+title: Interfaz ICorDebugILFrame2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugILFrame2
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e82238fbd617d56feb5c71c6161b6fd206b8b5b6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a4f57f27ec92e7977b46ebfa5967b0590674d2a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113443"
 ---
-# <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2 (Interfaz)
+# <a name="icordebugilframe2-interface"></a>Interfaz ICorDebugILFrame2
 
 Una extensión lógica de ICorDebugILFrame (interfaz).  
   
@@ -31,8 +31,8 @@ Una extensión lógica de ICorDebugILFrame (interfaz).
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[EnumerateTypeParameters (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Obtiene un objeto ICorDebugTypeEnum que contiene el <xref:System.Type> parámetros de este marco.|  
-|[RemapFunction (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Reasigna una función editada especificando el nuevo desplazamiento MSIL.|  
+|[Método EnumerateTypeParameters](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Obtiene un objeto ICorDebugTypeEnum que contiene el <xref:System.Type> parámetros de este marco.|  
+|[Método RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Reasigna una función editada especificando el nuevo desplazamiento MSIL.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -49,4 +49,5 @@ Una extensión lógica de ICorDebugILFrame (interfaz).
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

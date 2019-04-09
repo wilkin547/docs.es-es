@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: d07af0df30f46d272b81042b009fca9661bbcbe5
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 1c16c0936f729636aaa56e6e50c33e18c2b0f788
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332421"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181357"
 ---
 # <a name="guidelines-and-best-practices"></a>Instrucciones y procedimientos recomendados
 Esta sección contiene temas que proporcionan instrucciones para crear aplicaciones de Windows Communication Foundation (WCF).  
@@ -45,6 +45,7 @@ Esta sección contiene temas que proporcionan instrucciones para crear aplicacio
  [Programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - [¿Qué es Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)
 - [Ejemplos de Windows Communication Foundation (WCF)](./samples/index.md)
 - [Información conceptual](../../../docs/framework/wcf/conceptual-overview.md)

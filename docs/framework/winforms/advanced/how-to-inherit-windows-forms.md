@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Heredar Windows Forms
+title: Filtrar para heredar formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 97964f64f1a846327b2d014088c22e53d85231e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112754"
 ---
-# <a name="how-to-inherit-windows-forms"></a>Filtrar Heredar Windows Forms
+# <a name="how-to-inherit-windows-forms"></a>Filtrar para heredar formularios Windows Forms
 Crear nuevos Windows Forms heredando de formularios base es una forma práctica de aprovechar el trabajo ya hecho sin tener que pasar por todo el proceso de crear un formulario cada vez que lo necesite.  
   
  Para obtener más información acerca de la herencia de formularios en tiempo de diseño mediante el **selector de herencia** cuadro de diálogo y cómo distinguir visualmente los niveles de seguridad de los controles heredados, vea [Cómo: Heredar formularios mediante el cuadro de diálogo Selector de herencia](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
@@ -41,8 +41,9 @@ Crear nuevos Windows Forms heredando de formularios base es una forma práctica 
  Al heredar formularios, tenga en cuenta que pueden surgir problemas por controladores de eventos a los que se llama dos veces, porque cada evento está siendo controlado por la clase base y por la clase heredada. Para más información acerca de cómo evitar este problema, vea [Solución de problemas de controladores de eventos heredados en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Inherits (instrucción)](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [Imports (instrucción), espacio de nombres y tipo .NET](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [using](~/docs/csharp/language-reference/keywords/using.md)
+
+- [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [Instrucción Imports (Tipo y espacio de nombres de .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [utilizar](~/docs/csharp/language-reference/keywords/using.md)
 - [Efectos de modificar la apariencia de un formulario base](effects-of-modifying-base-form-appearance.md)
-- [Herencia visual de Windows Forms](windows-forms-visual-inheritance.md)
+- [Herencia visual de formularios Windows Forms](windows-forms-visual-inheritance.md)

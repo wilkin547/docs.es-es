@@ -1,21 +1,24 @@
 ---
 title: Deshabilitar el reconocimiento de PPP en Visual Studio
-description: Se describen los límites del Diseñador de Windows Forms en monitores HDPI y cómo ejecutar Visual Studio como un proceso no reconocen el PPP.
-ms.date: 03/19/2019
+description: Describe las limitaciones del Diseñador de Windows Forms en monitores HDPI y cómo ejecutar Visual Studio como un proceso no reconocen el PPP.
+ms.date: 04/05/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.custom: seoapril2019
+ms.openlocfilehash: e52debea382033417afe0bd47f899af1666192bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181390"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Deshabilitar el reconocimiento de PPP en Visual Studio
 
 Visual Studio es un puntos por aplicación para pulgada (PPP), lo que significa que las escalas de mostrar automáticamente. Si una aplicación indica que no es compatible con PPP, el sistema operativo escala la aplicación como un mapa de bits. Este comportamiento también se denomina la virtualización de PPP. La aplicación sigue pensando que se está ejecutando en el ajuste de escala de 100% o 96 PPP.
+
+Este artículo describen las limitaciones del Diseñador de Windows Forms en monitores HDPI y cómo ejecutar Visual Studio como un proceso no reconocen el PPP.
 
 ## <a name="windows-forms-designer-on-hdpi-monitors"></a>Diseñador de Windows Forms en monitores HDPI
 
@@ -32,11 +35,15 @@ Lee el mensaje **ajuste de escala en la pantalla principal está establecido en 
 > [!NOTE]
 > Esta barra informativa se introdujo en Visual Studio 2017 versión 15,8.
 
-Si no está trabajando en el diseñador y no es necesario ajustar el diseño del formulario, puede omitir la barra informativa y seguir trabajando en el editor de código o en otros tipos de diseñadores. (También puede [deshabilitar las notificaciones](#disable-notifications) para que la barra informativa no seguirán apareciendo.) Solo el **Diseñador de Windows Forms** se ve afectado. Si necesita trabajar el **Diseñador de Windows Forms**, la siguiente sección le ayuda a [resolver el problema](#to-resolve-the-problem).
+Si no está trabajando en el diseñador y no es necesario ajustar el diseño del formulario, puede omitir la barra informativa y seguir trabajando en el editor de código o en otros tipos de diseñadores. (También puede [deshabilitar las notificaciones](#disable-notifications) para que la barra informativa no seguirán apareciendo.) Solo el **Diseñador de Windows Forms** se ve afectado. Si necesita trabajar el **Diseñador de Windows Forms**, la siguiente sección le ayuda a [resolver el problema](#to-resolve-the-display-problem).
 
-## <a name="to-resolve-the-problem"></a>Para resolver el problema
+## <a name="to-resolve-the-display-problem"></a>Para resolver el problema de presentación
 
-Existen tres opciones para resolver el problema de presentación.
+Hay tres opciones para resolver el problema de presentación:
+
+1. [Reinicie Visual Studio como un proceso no reconocen el PPP](#restart-visual-studio-as-a-dpi-unaware-process)
+2. [Agregar una entrada del registro](#add-a-registry-entry)
+3. [Establecer la configuración al 100% de escala](#set-your-display-scaling-setting-to-100)
 
 ### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a>Reinicie Visual Studio como un proceso no reconocen el PPP
 

@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Mostrar el contenido de ListView mediante un control GridView
+title: Filtrar Mostrar el contenido de ListView mediante un control GridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], displaying contents with GridView
 - GridView [WPF], displaying ListView contents
 ms.assetid: 5bc1e767-ab46-4f14-bd41-3d5d39e1d000
-ms.openlocfilehash: 1066869c80bf5bd87d656bcb4994c188ee0e8efc
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 9b467c95d541c326a41d1ed4bd9eb5c87e25bd5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112793"
 ---
-# <a name="how-to-display-listview-contents-by-using-a-gridview"></a>Procedimiento Mostrar el contenido de ListView mediante un control GridView
+# <a name="how-to-display-listview-contents-by-using-a-gridview"></a>Filtrar Mostrar el contenido de ListView mediante un control GridView
 En este ejemplo se muestra cómo definir un <xref:System.Windows.Controls.GridView> modo de vista para un <xref:System.Windows.Controls.ListView> control.  
   
 ## <a name="example"></a>Ejemplo  
@@ -25,6 +25,7 @@ En este ejemplo se muestra cómo definir un <xref:System.Windows.Controls.GridVi
  ![Captura de pantalla que muestra un ListView con resultado GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
 - [Información general sobre ListView](listview-overview.md)
