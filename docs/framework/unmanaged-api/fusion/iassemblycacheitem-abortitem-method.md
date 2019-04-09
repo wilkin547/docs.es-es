@@ -17,28 +17,29 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39728865e3c6fc676673a634cf16710f37652ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59d785178f5c97dcd8e3911a2e51b4cc12f6a70f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120845"
 ---
-# <a name="iassemblycacheitemabortitem-method"></a><span data-ttu-id="b24da-102">IAssemblyCacheItem::AbortItem (Método)</span><span class="sxs-lookup"><span data-stu-id="b24da-102">IAssemblyCacheItem::AbortItem Method</span></span>
-<span data-ttu-id="b24da-103">Permite que el ensamblado en la caché global de ensamblados realizar operaciones de limpieza antes de su lanzamiento.</span><span class="sxs-lookup"><span data-stu-id="b24da-103">Allows the assembly in the global assembly cache to perform cleanup operations before it is released.</span></span>  
+# <a name="iassemblycacheitemabortitem-method"></a><span data-ttu-id="863c6-102">IAssemblyCacheItem::AbortItem (Método)</span><span class="sxs-lookup"><span data-stu-id="863c6-102">IAssemblyCacheItem::AbortItem Method</span></span>
+<span data-ttu-id="863c6-103">Permite que el ensamblado en la caché global de ensamblados realizar operaciones de limpieza antes de su lanzamiento.</span><span class="sxs-lookup"><span data-stu-id="863c6-103">Allows the assembly in the global assembly cache to perform cleanup operations before it is released.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b24da-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b24da-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="863c6-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="863c6-104">Syntax</span></span>  
   
 ```  
 HRESULT AbortItem ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="b24da-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b24da-105">Requirements</span></span>  
- <span data-ttu-id="b24da-106">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b24da-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="863c6-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="863c6-105">Requirements</span></span>  
+ <span data-ttu-id="863c6-106">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="863c6-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b24da-107">**Encabezado**: Fusion.h</span><span class="sxs-lookup"><span data-stu-id="b24da-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="863c6-107">**Encabezado**: Fusion.h</span><span class="sxs-lookup"><span data-stu-id="863c6-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="b24da-108">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b24da-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="863c6-108">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="863c6-108">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="b24da-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="b24da-109">See also</span></span>
-- [<span data-ttu-id="b24da-110">IAssemblyCacheItem (interfaz)</span><span class="sxs-lookup"><span data-stu-id="b24da-110">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+## <a name="see-also"></a><span data-ttu-id="863c6-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="863c6-109">See also</span></span>
+
+- [<span data-ttu-id="863c6-110">IAssemblyCacheItem (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="863c6-110">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
