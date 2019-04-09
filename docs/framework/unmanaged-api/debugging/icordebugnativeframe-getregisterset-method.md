@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18db366bde4211afa0f65052affa0ab9639df122
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 03a4f7ecc227679e6b0afa29b20de1aefeae3b76
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077932"
 ---
-# <a name="icordebugnativeframegetregisterset-method"></a><span data-ttu-id="64dde-102">ICorDebugNativeFrame::GetRegisterSet (Método)</span><span class="sxs-lookup"><span data-stu-id="64dde-102">ICorDebugNativeFrame::GetRegisterSet Method</span></span>
-<span data-ttu-id="64dde-103">Obtiene el conjunto de registros para este marco de pila.</span><span class="sxs-lookup"><span data-stu-id="64dde-103">Gets the register set for this stack frame.</span></span>  
+# <a name="icordebugnativeframegetregisterset-method"></a><span data-ttu-id="00299-102">ICorDebugNativeFrame::GetRegisterSet (Método)</span><span class="sxs-lookup"><span data-stu-id="00299-102">ICorDebugNativeFrame::GetRegisterSet Method</span></span>
+<span data-ttu-id="00299-103">Obtiene el conjunto de registros para este marco de pila.</span><span class="sxs-lookup"><span data-stu-id="00299-103">Gets the register set for this stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="64dde-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="64dde-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="00299-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="00299-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRegisterSet (  
@@ -35,18 +35,17 @@ HRESULT GetRegisterSet (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="64dde-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="64dde-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="00299-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="00299-105">Parameters</span></span>  
  `ppRegisters`  
- <span data-ttu-id="64dde-106">[out] Un puntero a la dirección de un [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) establece el objeto que representa el registro para este marco de pila.</span><span class="sxs-lookup"><span data-stu-id="64dde-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) object that represents the register set for this stack frame.</span></span>  
+ <span data-ttu-id="00299-106">[out] Un puntero a la dirección de un [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) establece el objeto que representa el registro para este marco de pila.</span><span class="sxs-lookup"><span data-stu-id="00299-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) object that represents the register set for this stack frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="64dde-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="64dde-107">Requirements</span></span>  
- <span data-ttu-id="64dde-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="64dde-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="00299-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="00299-107">Requirements</span></span>  
+ <span data-ttu-id="00299-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="00299-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="64dde-109">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="64dde-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="00299-109">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="00299-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="64dde-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="64dde-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="00299-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="00299-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="64dde-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="64dde-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="00299-111">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="00299-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="64dde-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="64dde-112">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="00299-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="00299-112">See also</span></span>

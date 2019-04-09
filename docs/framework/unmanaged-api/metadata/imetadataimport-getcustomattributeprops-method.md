@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 422ff5d5a2924bf66fee9dad99d57fed9477d0f1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c27a55166ebc055f324ec45ba6dfd835c8b8bbf6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075748"
 ---
-# <a name="imetadataimportgetcustomattributeprops-method"></a><span data-ttu-id="990dd-102">IMetaDataImport::GetCustomAttributeProps (Método)</span><span class="sxs-lookup"><span data-stu-id="990dd-102">IMetaDataImport::GetCustomAttributeProps Method</span></span>
-<span data-ttu-id="990dd-103">Obtiene el valor del atributo personalizado a partir de su token de metadatos.</span><span class="sxs-lookup"><span data-stu-id="990dd-103">Gets the value of the custom attribute, given its metadata token.</span></span>  
+# <a name="imetadataimportgetcustomattributeprops-method"></a><span data-ttu-id="9749b-102">IMetaDataImport::GetCustomAttributeProps (Método)</span><span class="sxs-lookup"><span data-stu-id="9749b-102">IMetaDataImport::GetCustomAttributeProps Method</span></span>
+<span data-ttu-id="9749b-103">Obtiene el valor del atributo personalizado a partir de su token de metadatos.</span><span class="sxs-lookup"><span data-stu-id="9749b-103">Gets the value of the custom attribute, given its metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="990dd-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="990dd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9749b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9749b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCustomAttributeProps (  
@@ -39,34 +39,35 @@ HRESULT GetCustomAttributeProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="990dd-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="990dd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9749b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9749b-105">Parameters</span></span>  
  `cv`  
- <span data-ttu-id="990dd-106">[in] Token de metadatos que representa el atributo personalizado que se va a recuperar.</span><span class="sxs-lookup"><span data-stu-id="990dd-106">[in] A metadata token that represents the custom attribute to be retrieved.</span></span>  
+ <span data-ttu-id="9749b-106">[in] Token de metadatos que representa el atributo personalizado que se va a recuperar.</span><span class="sxs-lookup"><span data-stu-id="9749b-106">[in] A metadata token that represents the custom attribute to be retrieved.</span></span>  
   
  `ptkObj`  
- <span data-ttu-id="990dd-107">[out, optional] Token de metadatos que representa el objeto que es modificado por el atributo personalizado.</span><span class="sxs-lookup"><span data-stu-id="990dd-107">[out, optional] A metadata token representing the object that the custom attribute modifies.</span></span> <span data-ttu-id="990dd-108">Este valor puede ser cualquier tipo de token de metadatos, excepto `mdCustomAttribute`.</span><span class="sxs-lookup"><span data-stu-id="990dd-108">This value can be any type of metadata token except `mdCustomAttribute`.</span></span>  
+ <span data-ttu-id="9749b-107">[out, optional] Token de metadatos que representa el objeto que es modificado por el atributo personalizado.</span><span class="sxs-lookup"><span data-stu-id="9749b-107">[out, optional] A metadata token representing the object that the custom attribute modifies.</span></span> <span data-ttu-id="9749b-108">Este valor puede ser cualquier tipo de token de metadatos, excepto `mdCustomAttribute`.</span><span class="sxs-lookup"><span data-stu-id="9749b-108">This value can be any type of metadata token except `mdCustomAttribute`.</span></span>  
   
  `ptkType`  
- <span data-ttu-id="990dd-109">[out, optional] Token de metadatos `mdMethodDef` o `mdMemberRef` que representa el objeto <xref:System.Type> del atributo personalizado devuelto.</span><span class="sxs-lookup"><span data-stu-id="990dd-109">[out, optional] An `mdMethodDef` or `mdMemberRef` metadata token representing the <xref:System.Type> of the returned custom attribute.</span></span>  
+ <span data-ttu-id="9749b-109">[out, optional] Token de metadatos `mdMethodDef` o `mdMemberRef` que representa el objeto <xref:System.Type> del atributo personalizado devuelto.</span><span class="sxs-lookup"><span data-stu-id="9749b-109">[out, optional] An `mdMethodDef` or `mdMemberRef` metadata token representing the <xref:System.Type> of the returned custom attribute.</span></span>  
   
  `ppBlob`  
- <span data-ttu-id="990dd-110">[out, optional] Puntero a una matriz de datos que es el valor del atributo personalizado.</span><span class="sxs-lookup"><span data-stu-id="990dd-110">[out, optional] A pointer to an array of data that is the value of the custom attribute.</span></span>  
+ <span data-ttu-id="9749b-110">[out, optional] Puntero a una matriz de datos que es el valor del atributo personalizado.</span><span class="sxs-lookup"><span data-stu-id="9749b-110">[out, optional] A pointer to an array of data that is the value of the custom attribute.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="990dd-111">[out, optional] Tamaño en bytes de los datos devueltos en \*`ppBlob`.</span><span class="sxs-lookup"><span data-stu-id="990dd-111">[out, optional] The size in bytes of the data returned in \*`ppBlob`.</span></span>  
+ <span data-ttu-id="9749b-111">[out, optional] Tamaño en bytes de los datos devueltos en \*`ppBlob`.</span><span class="sxs-lookup"><span data-stu-id="9749b-111">[out, optional] The size in bytes of the data returned in \*`ppBlob`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="990dd-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="990dd-112">Remarks</span></span>  
- <span data-ttu-id="990dd-113">Un atributo personalizado se almacena como una matriz de datos, que es el formato que reconoce el motor de metadatos.</span><span class="sxs-lookup"><span data-stu-id="990dd-113">A custom attribute is stored as an array of data, the format which is understood by the metadata engine.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9749b-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9749b-112">Remarks</span></span>  
+ <span data-ttu-id="9749b-113">Un atributo personalizado se almacena como una matriz de datos, que es el formato que reconoce el motor de metadatos.</span><span class="sxs-lookup"><span data-stu-id="9749b-113">A custom attribute is stored as an array of data, the format which is understood by the metadata engine.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="990dd-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="990dd-114">Requirements</span></span>  
- <span data-ttu-id="990dd-115">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="990dd-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9749b-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9749b-114">Requirements</span></span>  
+ <span data-ttu-id="9749b-115">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9749b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="990dd-116">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="990dd-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9749b-116">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="9749b-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="990dd-117">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="990dd-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9749b-117">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9749b-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="990dd-118">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="990dd-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="9749b-118">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="9749b-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="990dd-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="990dd-119">See also</span></span>
-- [<span data-ttu-id="990dd-120">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="990dd-120">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="990dd-121">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="990dd-121">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9749b-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="9749b-119">See also</span></span>
+
+- [<span data-ttu-id="9749b-120">IMetaDataImport (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="9749b-120">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="9749b-121">IMetaDataImport2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="9749b-121">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

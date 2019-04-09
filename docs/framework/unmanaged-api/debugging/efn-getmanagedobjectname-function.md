@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a9bef248d00cb62de7c93ba837ebc9f135490cc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4a95008d98436161ac919ef307273bc797519f15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479914"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080623"
 ---
-# <a name="efngetmanagedobjectname-function"></a><span data-ttu-id="02f69-102">_EFN_GetManagedObjectName (Función)</span><span class="sxs-lookup"><span data-stu-id="02f69-102">_EFN_GetManagedObjectName Function</span></span>
-<span data-ttu-id="02f69-103">Obtiene el nombre de un tipo mediante el puntero de objeto administrado proporcionado.</span><span class="sxs-lookup"><span data-stu-id="02f69-103">Gets the name of a type using the provided managed object pointer.</span></span>  
+# <a name="efngetmanagedobjectname-function"></a><span data-ttu-id="49ae1-102">_EFN_GetManagedObjectName (Función)</span><span class="sxs-lookup"><span data-stu-id="49ae1-102">_EFN_GetManagedObjectName Function</span></span>
+<span data-ttu-id="49ae1-103">Obtiene el nombre de un tipo mediante el puntero de objeto administrado proporcionado.</span><span class="sxs-lookup"><span data-stu-id="49ae1-103">Gets the name of a type using the provided managed object pointer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="02f69-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="02f69-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="49ae1-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="49ae1-104">Syntax</span></span>  
   
 ```  
 HRESULT _EFN_GetManagedObjectName(  
@@ -37,28 +37,29 @@ HRESULT _EFN_GetManagedObjectName(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="02f69-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="02f69-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="49ae1-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="49ae1-105">Parameters</span></span>  
  `Client`  
- <span data-ttu-id="02f69-106">[in] Un puntero al cliente de depuración.</span><span class="sxs-lookup"><span data-stu-id="02f69-106">[in] A pointer to the debug client.</span></span>  
+ <span data-ttu-id="49ae1-106">[in] Un puntero al cliente de depuración.</span><span class="sxs-lookup"><span data-stu-id="49ae1-106">[in] A pointer to the debug client.</span></span>  
   
  `objAddr`  
- <span data-ttu-id="02f69-107">[in] Un puntero de objeto administrado.</span><span class="sxs-lookup"><span data-stu-id="02f69-107">[in] A managed object pointer.</span></span>  
+ <span data-ttu-id="49ae1-107">[in] Un puntero de objeto administrado.</span><span class="sxs-lookup"><span data-stu-id="49ae1-107">[in] A managed object pointer.</span></span>  
   
- <span data-ttu-id="02f69-108">szName</span><span class="sxs-lookup"><span data-stu-id="02f69-108">szName</span></span>  
- <span data-ttu-id="02f69-109">[out] El nombre del tipo.</span><span class="sxs-lookup"><span data-stu-id="02f69-109">[out] The name of the type.</span></span>  
+ <span data-ttu-id="49ae1-108">szName</span><span class="sxs-lookup"><span data-stu-id="49ae1-108">szName</span></span>  
+ <span data-ttu-id="49ae1-109">[out] El nombre del tipo.</span><span class="sxs-lookup"><span data-stu-id="49ae1-109">[out] The name of the type.</span></span>  
   
  `cbName`  
- <span data-ttu-id="02f69-110">[out] El número de caracteres disponibles en el búfer de cadena.</span><span class="sxs-lookup"><span data-stu-id="02f69-110">[out] The number of characters available in the string buffer.</span></span>  
+ <span data-ttu-id="49ae1-110">[out] El número de caracteres disponibles en el búfer de cadena.</span><span class="sxs-lookup"><span data-stu-id="49ae1-110">[out] The number of characters available in the string buffer.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="02f69-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="02f69-111">Remarks</span></span>  
- <span data-ttu-id="02f69-112">Si no hay ningún código administrado en el subproceso actualmente en contexto, la función devuelve HRESULT SOS_E_NOMANAGEDCODE con un valor 0xa0 y un código de error de 0 x 1000.</span><span class="sxs-lookup"><span data-stu-id="02f69-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="49ae1-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="49ae1-111">Remarks</span></span>  
+ <span data-ttu-id="49ae1-112">Si no hay ningún código administrado en el subproceso actualmente en contexto, la función devuelve HRESULT SOS_E_NOMANAGEDCODE con un valor 0xa0 y un código de error de 0 x 1000.</span><span class="sxs-lookup"><span data-stu-id="49ae1-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="02f69-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="02f69-113">Requirements</span></span>  
- <span data-ttu-id="02f69-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="02f69-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="49ae1-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="49ae1-113">Requirements</span></span>  
+ <span data-ttu-id="49ae1-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="49ae1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="02f69-115">**Encabezado**: SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="02f69-115">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="49ae1-115">**Encabezado**: SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="49ae1-115">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="02f69-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02f69-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="49ae1-116">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="49ae1-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="02f69-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="02f69-117">See also</span></span>
-- [<span data-ttu-id="02f69-118">Funciones estáticas globales de depuración</span><span class="sxs-lookup"><span data-stu-id="02f69-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="49ae1-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="49ae1-117">See also</span></span>
+
+- [<span data-ttu-id="49ae1-118">Funciones estáticas globales para la depuración</span><span class="sxs-lookup"><span data-stu-id="49ae1-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

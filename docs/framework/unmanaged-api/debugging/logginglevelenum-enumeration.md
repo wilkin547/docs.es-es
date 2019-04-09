@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e72654dc62020e05f18c4d7d4d528617a0cd0c9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fe8e1355382273a681e927897f4a8ff5814b8de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086512"
 ---
-# <a name="logginglevelenum-enumeration"></a><span data-ttu-id="4930e-102">LoggingLevelEnum (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="4930e-102">LoggingLevelEnum Enumeration</span></span>
-<span data-ttu-id="4930e-103">Indica el nivel de gravedad de un mensaje descriptivo que se escribe en el registro de eventos cuando un subproceso administrado registra un evento.</span><span class="sxs-lookup"><span data-stu-id="4930e-103">Indicates the severity level of a descriptive message that is written to the event log when a managed thread logs an event.</span></span>  
+# <a name="logginglevelenum-enumeration"></a><span data-ttu-id="d956c-102">LoggingLevelEnum (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="d956c-102">LoggingLevelEnum Enumeration</span></span>
+<span data-ttu-id="d956c-103">Indica el nivel de gravedad de un mensaje descriptivo que se escribe en el registro de eventos cuando un subproceso administrado registra un evento.</span><span class="sxs-lookup"><span data-stu-id="d956c-103">Indicates the severity level of a descriptive message that is written to the event log when a managed thread logs an event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4930e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4930e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d956c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d956c-104">Syntax</span></span>  
   
 ```  
 typedef enum LoggingLevelEnum {  
@@ -46,36 +46,37 @@ typedef enum LoggingLevelEnum {
 } LoggingLevelEnum;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4930e-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="4930e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="d956c-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="d956c-105">Members</span></span>  
   
-|<span data-ttu-id="4930e-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="4930e-106">Member</span></span>|<span data-ttu-id="4930e-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="4930e-107">Description</span></span>|  
+|<span data-ttu-id="d956c-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="d956c-106">Member</span></span>|<span data-ttu-id="d956c-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="d956c-107">Description</span></span>|  
 |------------|-----------------|  
-|`LTraceLevel0`|<span data-ttu-id="4930e-108">El mensaje es un nivel de seguimiento 0.</span><span class="sxs-lookup"><span data-stu-id="4930e-108">The message is a trace level 0.</span></span>|  
-|`LTraceLevel1`|<span data-ttu-id="4930e-109">El mensaje es un nivel de seguimiento 1.</span><span class="sxs-lookup"><span data-stu-id="4930e-109">The message is a trace level 1.</span></span>|  
-|`LTraceLevel2`|<span data-ttu-id="4930e-110">El mensaje es un nivel de seguimiento 2.</span><span class="sxs-lookup"><span data-stu-id="4930e-110">The message is a trace level 2.</span></span>|  
-|`LTraceLevel3`|<span data-ttu-id="4930e-111">El mensaje es un nivel de seguimiento 3.</span><span class="sxs-lookup"><span data-stu-id="4930e-111">The message is a trace level 3.</span></span>|  
-|`LTraceLevel4`|<span data-ttu-id="4930e-112">El mensaje es un nivel de seguimiento 4.</span><span class="sxs-lookup"><span data-stu-id="4930e-112">The message is a trace level 4.</span></span>|  
-|`LStatusLevel0`|<span data-ttu-id="4930e-113">El mensaje es un nivel de estado 0.</span><span class="sxs-lookup"><span data-stu-id="4930e-113">The message is a status level 0.</span></span>|  
-|`LStatusLevel1`|<span data-ttu-id="4930e-114">El mensaje es un nivel de estado 1.</span><span class="sxs-lookup"><span data-stu-id="4930e-114">The message is a status level 1.</span></span>|  
-|`LStatusLevel2`|<span data-ttu-id="4930e-115">El mensaje es un nivel de estado 2.</span><span class="sxs-lookup"><span data-stu-id="4930e-115">The message is a status level 2.</span></span>|  
-|`LStatusLevel3`|<span data-ttu-id="4930e-116">El mensaje es un nivel de estado 3.</span><span class="sxs-lookup"><span data-stu-id="4930e-116">The message is a status level 3.</span></span>|  
-|`LStatusLevel4`|<span data-ttu-id="4930e-117">El mensaje es un nivel de estado 4.</span><span class="sxs-lookup"><span data-stu-id="4930e-117">The message is a status level 4.</span></span>|  
-|`LWarningLevel`|<span data-ttu-id="4930e-118">El mensaje es un nivel de advertencia.</span><span class="sxs-lookup"><span data-stu-id="4930e-118">The message is a warning level.</span></span>|  
-|`LErrorLevel`|<span data-ttu-id="4930e-119">El mensaje es un nivel de error.</span><span class="sxs-lookup"><span data-stu-id="4930e-119">The message is an error level.</span></span>|  
-|`LPanicLevel`|<span data-ttu-id="4930e-120">El mensaje es un nivel de pánico.</span><span class="sxs-lookup"><span data-stu-id="4930e-120">The message is a panic level.</span></span>|  
+|`LTraceLevel0`|<span data-ttu-id="d956c-108">El mensaje es un nivel de seguimiento 0.</span><span class="sxs-lookup"><span data-stu-id="d956c-108">The message is a trace level 0.</span></span>|  
+|`LTraceLevel1`|<span data-ttu-id="d956c-109">El mensaje es un nivel de seguimiento 1.</span><span class="sxs-lookup"><span data-stu-id="d956c-109">The message is a trace level 1.</span></span>|  
+|`LTraceLevel2`|<span data-ttu-id="d956c-110">El mensaje es un nivel de seguimiento 2.</span><span class="sxs-lookup"><span data-stu-id="d956c-110">The message is a trace level 2.</span></span>|  
+|`LTraceLevel3`|<span data-ttu-id="d956c-111">El mensaje es un nivel de seguimiento 3.</span><span class="sxs-lookup"><span data-stu-id="d956c-111">The message is a trace level 3.</span></span>|  
+|`LTraceLevel4`|<span data-ttu-id="d956c-112">El mensaje es un nivel de seguimiento 4.</span><span class="sxs-lookup"><span data-stu-id="d956c-112">The message is a trace level 4.</span></span>|  
+|`LStatusLevel0`|<span data-ttu-id="d956c-113">El mensaje es un nivel de estado 0.</span><span class="sxs-lookup"><span data-stu-id="d956c-113">The message is a status level 0.</span></span>|  
+|`LStatusLevel1`|<span data-ttu-id="d956c-114">El mensaje es un nivel de estado 1.</span><span class="sxs-lookup"><span data-stu-id="d956c-114">The message is a status level 1.</span></span>|  
+|`LStatusLevel2`|<span data-ttu-id="d956c-115">El mensaje es un nivel de estado 2.</span><span class="sxs-lookup"><span data-stu-id="d956c-115">The message is a status level 2.</span></span>|  
+|`LStatusLevel3`|<span data-ttu-id="d956c-116">El mensaje es un nivel de estado 3.</span><span class="sxs-lookup"><span data-stu-id="d956c-116">The message is a status level 3.</span></span>|  
+|`LStatusLevel4`|<span data-ttu-id="d956c-117">El mensaje es un nivel de estado 4.</span><span class="sxs-lookup"><span data-stu-id="d956c-117">The message is a status level 4.</span></span>|  
+|`LWarningLevel`|<span data-ttu-id="d956c-118">El mensaje es un nivel de advertencia.</span><span class="sxs-lookup"><span data-stu-id="d956c-118">The message is a warning level.</span></span>|  
+|`LErrorLevel`|<span data-ttu-id="d956c-119">El mensaje es un nivel de error.</span><span class="sxs-lookup"><span data-stu-id="d956c-119">The message is an error level.</span></span>|  
+|`LPanicLevel`|<span data-ttu-id="d956c-120">El mensaje es un nivel de pánico.</span><span class="sxs-lookup"><span data-stu-id="d956c-120">The message is a panic level.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4930e-121">Comentarios</span><span class="sxs-lookup"><span data-stu-id="4930e-121">Remarks</span></span>  
- <span data-ttu-id="4930e-122">Common language runtime (CLR) llama a la [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) método para notificar al depurador que un subproceso administrado ha iniciado sesión un evento.</span><span class="sxs-lookup"><span data-stu-id="4930e-122">The common language runtime (CLR) calls the [ICorDebugManagedCallback::LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) method to notify the debugger that a managed thread has logged an event.</span></span> <span data-ttu-id="4930e-123">El CLR pasa un valor de la `LoggingLevelEnum` enumeración para indicar el nivel de gravedad del mensaje que el subproceso administrado se escribió en el registro de eventos.</span><span class="sxs-lookup"><span data-stu-id="4930e-123">The CLR passes a value of the `LoggingLevelEnum` enumeration to indicate the severity level of the message that the managed thread wrote to the event log.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d956c-121">Comentarios</span><span class="sxs-lookup"><span data-stu-id="d956c-121">Remarks</span></span>  
+ <span data-ttu-id="d956c-122">Common language runtime (CLR) llama a la [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) método para notificar al depurador que un subproceso administrado ha iniciado sesión un evento.</span><span class="sxs-lookup"><span data-stu-id="d956c-122">The common language runtime (CLR) calls the [ICorDebugManagedCallback::LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) method to notify the debugger that a managed thread has logged an event.</span></span> <span data-ttu-id="d956c-123">El CLR pasa un valor de la `LoggingLevelEnum` enumeración para indicar el nivel de gravedad del mensaje que el subproceso administrado se escribió en el registro de eventos.</span><span class="sxs-lookup"><span data-stu-id="d956c-123">The CLR passes a value of the `LoggingLevelEnum` enumeration to indicate the severity level of the message that the managed thread wrote to the event log.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4930e-124">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4930e-124">Requirements</span></span>  
- <span data-ttu-id="4930e-125">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4930e-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d956c-124">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d956c-124">Requirements</span></span>  
+ <span data-ttu-id="d956c-125">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d956c-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4930e-126">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4930e-126">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d956c-126">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d956c-126">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4930e-127">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4930e-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d956c-127">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d956c-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4930e-128">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4930e-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="d956c-128">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="d956c-128">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="4930e-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="4930e-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d956c-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="d956c-129">See also</span></span>
+
 - <xref:System.Diagnostics.EventLog>
-- [<span data-ttu-id="4930e-130">Enumeraciones de depuración</span><span class="sxs-lookup"><span data-stu-id="4930e-130">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="d956c-130">Enumeraciones de depuración</span><span class="sxs-lookup"><span data-stu-id="d956c-130">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

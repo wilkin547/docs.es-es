@@ -12,34 +12,34 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 028ff1048813ccbc845d5ad3e7f522b492348f87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90f59f4d593a8aa077a6710cc0f5c1747ac1a3ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103771"
 ---
-# <a name="memberinfocachecreation-mda"></a><span data-ttu-id="dbbf4-102">MDA de memberInfoCacheCreation</span><span class="sxs-lookup"><span data-stu-id="dbbf4-102">memberInfoCacheCreation MDA</span></span>
-<span data-ttu-id="dbbf4-103">El asistente para la depuración administrada (MDA) `memberInfoCacheCreation` se activa cuando se crea una caché de <xref:System.Reflection.MemberInfo>.</span><span class="sxs-lookup"><span data-stu-id="dbbf4-103">The `memberInfoCacheCreation` managed debugging assistant (MDA) is activated when a <xref:System.Reflection.MemberInfo> cache is created.</span></span> <span data-ttu-id="dbbf4-104">Esto es una indicación clara de un programa que está usando características de reflexión que consumen muchos recursos.</span><span class="sxs-lookup"><span data-stu-id="dbbf4-104">This is a strong indication of a program that is making use of resource-expensive reflection features.</span></span>  
+# <a name="memberinfocachecreation-mda"></a><span data-ttu-id="5c67c-102">MDA de memberInfoCacheCreation</span><span class="sxs-lookup"><span data-stu-id="5c67c-102">memberInfoCacheCreation MDA</span></span>
+<span data-ttu-id="5c67c-103">El asistente para la depuración administrada (MDA) `memberInfoCacheCreation` se activa cuando se crea una caché de <xref:System.Reflection.MemberInfo>.</span><span class="sxs-lookup"><span data-stu-id="5c67c-103">The `memberInfoCacheCreation` managed debugging assistant (MDA) is activated when a <xref:System.Reflection.MemberInfo> cache is created.</span></span> <span data-ttu-id="5c67c-104">Esto es una indicación clara de un programa que está usando características de reflexión que consumen muchos recursos.</span><span class="sxs-lookup"><span data-stu-id="5c67c-104">This is a strong indication of a program that is making use of resource-expensive reflection features.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="dbbf4-105">Síntomas</span><span class="sxs-lookup"><span data-stu-id="dbbf4-105">Symptoms</span></span>  
- <span data-ttu-id="dbbf4-106">El espacio de trabajo de un programa aumenta porque el programa está usando reflexión que consume muchos recursos.</span><span class="sxs-lookup"><span data-stu-id="dbbf4-106">A program's working set increases because the program is using resource-expensive reflection.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="5c67c-105">Síntomas</span><span class="sxs-lookup"><span data-stu-id="5c67c-105">Symptoms</span></span>  
+ <span data-ttu-id="5c67c-106">El espacio de trabajo de un programa aumenta porque el programa está usando reflexión que consume muchos recursos.</span><span class="sxs-lookup"><span data-stu-id="5c67c-106">A program's working set increases because the program is using resource-expensive reflection.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="dbbf4-107">Motivo</span><span class="sxs-lookup"><span data-stu-id="dbbf4-107">Cause</span></span>  
- <span data-ttu-id="dbbf4-108">Las operaciones de reflexión que implican dos objetos <xref:System.Reflection.MemberInfo> se consideran que consumen muchos recursos porque deben leer metadatos que se almacenan en páginas frías y en general indican que el programa usa algún tipo de escenario enlazado en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="dbbf4-108">Reflection operations that involve <xref:System.Reflection.MemberInfo> objects are considered resource expensive because they must read metadata that is stored in cold pages and in general they indicate the program is using some type of late-bound scenario.</span></span>  
+## <a name="cause"></a><span data-ttu-id="5c67c-107">Motivo</span><span class="sxs-lookup"><span data-stu-id="5c67c-107">Cause</span></span>  
+ <span data-ttu-id="5c67c-108">Las operaciones de reflexión que implican dos objetos <xref:System.Reflection.MemberInfo> se consideran que consumen muchos recursos porque deben leer metadatos que se almacenan en páginas frías y en general indican que el programa usa algún tipo de escenario enlazado en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="5c67c-108">Reflection operations that involve <xref:System.Reflection.MemberInfo> objects are considered resource expensive because they must read metadata that is stored in cold pages and in general they indicate the program is using some type of late-bound scenario.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="dbbf4-109">Resolución</span><span class="sxs-lookup"><span data-stu-id="dbbf4-109">Resolution</span></span>  
- <span data-ttu-id="dbbf4-110">Puede determinar dónde se usa la reflexión en su programa si habilita este MDA y, después, ejecuta el código en un depurador o lo adjunta con un depurador cuando se activa el MDA.</span><span class="sxs-lookup"><span data-stu-id="dbbf4-110">You can determine where reflection is being used in your program by enabling this MDA and then running your code in a debugger or attaching with a debugger when the MDA is activated.</span></span> <span data-ttu-id="dbbf4-111">Bajo un depurador obtendrá un seguimiento de pila en el que se muestra dónde se creó la caché de <xref:System.Reflection.MemberInfo> y desde allí puede determinar dónde usa la reflexión el programa.</span><span class="sxs-lookup"><span data-stu-id="dbbf4-111">Under a debugger you will get a stack trace showing where the <xref:System.Reflection.MemberInfo> cache was created and from there you can determine where your program is using reflection.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="5c67c-109">Resolución</span><span class="sxs-lookup"><span data-stu-id="5c67c-109">Resolution</span></span>  
+ <span data-ttu-id="5c67c-110">Puede determinar dónde se usa la reflexión en su programa si habilita este MDA y, después, ejecuta el código en un depurador o lo adjunta con un depurador cuando se activa el MDA.</span><span class="sxs-lookup"><span data-stu-id="5c67c-110">You can determine where reflection is being used in your program by enabling this MDA and then running your code in a debugger or attaching with a debugger when the MDA is activated.</span></span> <span data-ttu-id="5c67c-111">Bajo un depurador obtendrá un seguimiento de pila en el que se muestra dónde se creó la caché de <xref:System.Reflection.MemberInfo> y desde allí puede determinar dónde usa la reflexión el programa.</span><span class="sxs-lookup"><span data-stu-id="5c67c-111">Under a debugger you will get a stack trace showing where the <xref:System.Reflection.MemberInfo> cache was created and from there you can determine where your program is using reflection.</span></span>  
   
- <span data-ttu-id="dbbf4-112">La resolución depende de los objetivos del código.</span><span class="sxs-lookup"><span data-stu-id="dbbf4-112">The resolution is dependent on the objectives of the code.</span></span> <span data-ttu-id="dbbf4-113">Este MDA le avisa de que el programa tiene un escenario enlazado en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="dbbf4-113">This MDA alerts you that your program has a late-bound scenario.</span></span> <span data-ttu-id="dbbf4-114">Es posible que quiera determinar si puede sustituir un escenario enlazado en tiempo de compilación o considerar el rendimiento del escenario enlazado en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="dbbf4-114">You might want to determine if you can substitute an early-bound scenario or consider the performance of the late bound scenario.</span></span>  
+ <span data-ttu-id="5c67c-112">La resolución depende de los objetivos del código.</span><span class="sxs-lookup"><span data-stu-id="5c67c-112">The resolution is dependent on the objectives of the code.</span></span> <span data-ttu-id="5c67c-113">Este MDA le avisa de que el programa tiene un escenario enlazado en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="5c67c-113">This MDA alerts you that your program has a late-bound scenario.</span></span> <span data-ttu-id="5c67c-114">Es posible que quiera determinar si puede sustituir un escenario enlazado en tiempo de compilación o considerar el rendimiento del escenario enlazado en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="5c67c-114">You might want to determine if you can substitute an early-bound scenario or consider the performance of the late bound scenario.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="dbbf4-115">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="dbbf4-115">Effect on the Runtime</span></span>  
- <span data-ttu-id="dbbf4-116">Este MDA se activa para cada caché de <xref:System.Reflection.MemberInfo> que se crea.</span><span class="sxs-lookup"><span data-stu-id="dbbf4-116">This MDA is activated for every <xref:System.Reflection.MemberInfo> cache that is created.</span></span> <span data-ttu-id="dbbf4-117">El rendimiento se ve afectado de forma insignificante.</span><span class="sxs-lookup"><span data-stu-id="dbbf4-117">The performance impact is negligible.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="5c67c-115">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="5c67c-115">Effect on the Runtime</span></span>  
+ <span data-ttu-id="5c67c-116">Este MDA se activa para cada caché de <xref:System.Reflection.MemberInfo> que se crea.</span><span class="sxs-lookup"><span data-stu-id="5c67c-116">This MDA is activated for every <xref:System.Reflection.MemberInfo> cache that is created.</span></span> <span data-ttu-id="5c67c-117">El rendimiento se ve afectado de forma insignificante.</span><span class="sxs-lookup"><span data-stu-id="5c67c-117">The performance impact is negligible.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="dbbf4-118">Salida</span><span class="sxs-lookup"><span data-stu-id="dbbf4-118">Output</span></span>  
- <span data-ttu-id="dbbf4-119">El MDA genera un mensaje que indica que se creó la caché de <xref:System.Reflection.MemberInfo>.</span><span class="sxs-lookup"><span data-stu-id="dbbf4-119">The MDA outputs a message indicating the <xref:System.Reflection.MemberInfo> cache was created.</span></span> <span data-ttu-id="dbbf4-120">Use un depurador para realizar un seguimiento de pila en el que se muestre dónde usa la reflexión el programa.</span><span class="sxs-lookup"><span data-stu-id="dbbf4-120">Use a debugger to get a stack trace showing where your program is using reflection.</span></span>  
+## <a name="output"></a><span data-ttu-id="5c67c-118">Salida</span><span class="sxs-lookup"><span data-stu-id="5c67c-118">Output</span></span>  
+ <span data-ttu-id="5c67c-119">El MDA genera un mensaje que indica que se creó la caché de <xref:System.Reflection.MemberInfo>.</span><span class="sxs-lookup"><span data-stu-id="5c67c-119">The MDA outputs a message indicating the <xref:System.Reflection.MemberInfo> cache was created.</span></span> <span data-ttu-id="5c67c-120">Use un depurador para realizar un seguimiento de pila en el que se muestre dónde usa la reflexión el programa.</span><span class="sxs-lookup"><span data-stu-id="5c67c-120">Use a debugger to get a stack trace showing where your program is using reflection.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="dbbf4-121">Configuración</span><span class="sxs-lookup"><span data-stu-id="dbbf4-121">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="5c67c-121">Configuración</span><span class="sxs-lookup"><span data-stu-id="5c67c-121">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -49,8 +49,8 @@ ms.locfileid: "54651037"
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="dbbf4-122">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="dbbf4-122">Example</span></span>  
- <span data-ttu-id="dbbf4-123">Este código de ejemplo activará el MDA `memberInfoCacheCreation`.</span><span class="sxs-lookup"><span data-stu-id="dbbf4-123">This sample code will activate the `memberInfoCacheCreation` MDA.</span></span>  
+## <a name="example"></a><span data-ttu-id="5c67c-122">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5c67c-122">Example</span></span>  
+ <span data-ttu-id="5c67c-123">Este código de ejemplo activará el MDA `memberInfoCacheCreation`.</span><span class="sxs-lookup"><span data-stu-id="5c67c-123">This sample code will activate the `memberInfoCacheCreation` MDA.</span></span>  
   
 ```csharp
 using System;  
@@ -64,6 +64,7 @@ public class Exe
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dbbf4-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="dbbf4-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5c67c-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="5c67c-124">See also</span></span>
+
 - <xref:System.Reflection.MemberInfo>
-- [<span data-ttu-id="dbbf4-125">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="dbbf4-125">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="5c67c-125">Diagnóstico de errores con asistentes de depuraciones administradas</span><span class="sxs-lookup"><span data-stu-id="5c67c-125">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
