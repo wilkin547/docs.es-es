@@ -2,23 +2,24 @@
 title: FailedToCreateMessageLoggingTraceSource
 ms.date: 03/30/2017
 ms.assetid: 75e91aad-6d83-4e5e-8c70-fed1625e522f
-ms.openlocfilehash: 0700af7667cad815b393885c1941b9cf925a1877
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e50c881bf10e05508408814c28c8570745b672fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688806"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104265"
 ---
-# <a name="failedtocreatemessageloggingtracesource"></a><span data-ttu-id="5489e-102">FailedToCreateMessageLoggingTraceSource</span><span class="sxs-lookup"><span data-stu-id="5489e-102">FailedToCreateMessageLoggingTraceSource</span></span>
-<span data-ttu-id="5489e-103">Id.: 115</span><span class="sxs-lookup"><span data-stu-id="5489e-103">Id: 115</span></span>  
+# <a name="failedtocreatemessageloggingtracesource"></a><span data-ttu-id="9299a-102">FailedToCreateMessageLoggingTraceSource</span><span class="sxs-lookup"><span data-stu-id="9299a-102">FailedToCreateMessageLoggingTraceSource</span></span>
+<span data-ttu-id="9299a-103">Id.: 115</span><span class="sxs-lookup"><span data-stu-id="9299a-103">Id: 115</span></span>  
   
- <span data-ttu-id="5489e-104">Gravedad: Error</span><span class="sxs-lookup"><span data-stu-id="5489e-104">Severity: Error</span></span>  
+ <span data-ttu-id="9299a-104">Gravedad: Error</span><span class="sxs-lookup"><span data-stu-id="9299a-104">Severity: Error</span></span>  
   
- <span data-ttu-id="5489e-105">Categoría: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="5489e-105">Category: ServiceModel</span></span>  
+ <span data-ttu-id="9299a-105">Categoría: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="9299a-105">Category: ServiceModel</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5489e-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="5489e-106">Description</span></span>  
- <span data-ttu-id="5489e-107">Este evento indica que el registro de mensajes no pudo crear el origen de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="5489e-107">This event indicates that message logging failed to create the trace source.</span></span> <span data-ttu-id="5489e-108">El evento enumera la excepción, el nombre del proceso y el id. del mismo.</span><span class="sxs-lookup"><span data-stu-id="5489e-108">The event lists Exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="9299a-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="9299a-106">Description</span></span>  
+ <span data-ttu-id="9299a-107">Este evento indica que el registro de mensajes no pudo crear el origen de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="9299a-107">This event indicates that message logging failed to create the trace source.</span></span> <span data-ttu-id="9299a-108">El evento enumera la excepción, el nombre del proceso y el id. del mismo.</span><span class="sxs-lookup"><span data-stu-id="9299a-108">The event lists Exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5489e-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="5489e-109">See also</span></span>
-- [<span data-ttu-id="5489e-110">Registro de eventos</span><span class="sxs-lookup"><span data-stu-id="5489e-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="5489e-111">Referencia general de eventos</span><span class="sxs-lookup"><span data-stu-id="5489e-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="9299a-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="9299a-109">See also</span></span>
+
+- [<span data-ttu-id="9299a-110">Registro de eventos</span><span class="sxs-lookup"><span data-stu-id="9299a-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [<span data-ttu-id="9299a-111">Referencia general de eventos</span><span class="sxs-lookup"><span data-stu-id="9299a-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
