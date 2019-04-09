@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
-ms.openlocfilehash: 351c1e42bb775331cbe0e2005b6bea284716de75
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124155"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Datos introducidos por el usuario en una aplicación de formularios Windows Forms
 En Windows Forms, proporcionados por el usuario se envían a las aplicaciones en forma de mensajes de Windows. Una serie de métodos reemplazables procesan estos mensajes en la aplicación, el formulario y controlar el nivel. Cuando estos métodos reciben los mensajes del mouse y teclado, generan eventos que pueden administrarse para obtener información sobre el mouse o entrada del teclado. En muchos casos, las aplicaciones de Windows Forms será capaces de procesar todas las entradas de usuario controlando estos eventos. En otros casos, una aplicación puede necesitar reemplazar uno de los métodos que procesan mensajes para interceptar un mensaje concreto antes de ser recibido por la aplicación, formulario o control.  
@@ -31,6 +31,7 @@ En Windows Forms, proporcionados por el usuario se envían a las aplicaciones en
  También se procesan los mensajes del teclado y mouse (ratón) por un conjunto adicional de métodos reemplazables que son específicos de esos tipos de mensajes. Para obtener más información, consulte [cómo funciona la entrada de teclado](how-keyboard-input-works.md) y [cómo funciona de entrada de mouse (ratón) en Windows Forms](how-mouse-input-works-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Datos proporcionados por el usuario en Windows Forms](user-input-in-windows-forms.md)
+
+- [Datos proporcionados por el usuario en formularios Windows Forms](user-input-in-windows-forms.md)
 - [Entradas mediante teclado en una aplicación de Windows Forms](keyboard-input-in-a-windows-forms-application.md)
-- [Entradas mediante el mouse en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Entradas mediante el mouse (ratón) en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)

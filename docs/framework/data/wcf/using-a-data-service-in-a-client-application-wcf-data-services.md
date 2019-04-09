@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: ff68a8bee17b55f7865d6f6c289ba514729be70d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155940"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Usar un servicio de datos en una aplicación cliente (Data Services de WCF)
 Puede tener acceso a un servicio que expone un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuente especificando un URI a un explorador Web. El URI proporciona la dirección de un recurso y los mensajes de solicitud se envían a estas direcciones para obtener acceso o cambiar los datos subyacentes que el recurso representa. El explorador emite un comando GET de HTTP y devuelve el recurso solicitado como una fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Para obtener más información, consulte [acceder al servicio desde un explorador Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -21,7 +21,7 @@ Puede tener acceso a un servicio que expone un [!INCLUDE[ssODataFull](../../../.
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ayuda a garantiza la interoperabilidad entre los servicios que exponen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes y las aplicaciones que consumen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes de distribución. Las aplicaciones obtener acceso y cambiar datos en un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-servicio basado en mediante el envío de mensajes de solicitud de una acción HTTP concreta y con un URI que direcciona un recurso de entidad en la que debe realizarse la acción. Cuando sea obligatorio proporcionar datos de la entidad, se proporcionan mediante una carga específicamente codificada en el cuerpo del mensaje.  
   
 ### <a name="http-actions"></a>Acciones HTTP  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] admite las siguientes acciones HTTP para realizar operaciones de creación, lectura, actualización y eliminación en los datos de la entidad que el recurso direccionado representa:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] admite las siguientes acciones HTTP para realizar creación, leer, actualizar y elimina operaciones en los datos de entidad que el recurso direccionado representa:  
   
 -   **HTTP GET** -esta es la acción predeterminada cuando se tiene acceso a un recurso desde un explorador. No se proporciona ninguna carga en el mensaje de solicitud y se devuelve un método de respuesta con una carga que contiene los datos solicitados.  
   
@@ -52,5 +52,6 @@ Puede tener acceso a un servicio que expone un [!INCLUDE[ssODataFull](../../../.
  Hay bibliotecas de programación disponibles que puede usar para consumir un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes de distribución en otros tipos de aplicaciones cliente. Para obtener más información, consulte el [SDK de OData](https://go.microsoft.com/fwlink/?LinkId=185796).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Acceso a recursos de servicios de datos](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
 - [Inicio rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

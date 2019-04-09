@@ -1,5 +1,5 @@
 ---
-title: Filtrar Aplicar una transformación a un elemento cuando se provoca un evento
+title: Filtrar Aplicar una transformación a un elemento cuando se produce un evento
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [WPF], RenderTransform
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
-ms.openlocfilehash: c14f746846943d3fa5150fbee405a62249dee9c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126443"
 ---
-# <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Filtrar Aplicar una transformación a un elemento cuando se provoca un evento
+# <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Filtrar Aplicar una transformación a un elemento cuando se produce un evento
 En este ejemplo se muestra cómo aplicar un <xref:System.Windows.Media.ScaleTransform> cuando se produce un evento. El concepto que se muestra aquí es el mismo que se utiliza para aplicar otros tipos de transformaciones. Para obtener más información acerca de los tipos de transformaciones disponibles, consulte el <xref:System.Windows.Media.Transform> clase o [información general sobre transformaciones](transforms-overview.md).  
   
  Puede aplicar una transformación a un elemento de cualquiera de estas dos maneras:  
@@ -36,6 +36,7 @@ En este ejemplo se muestra cómo aplicar un <xref:System.Windows.Media.ScaleTran
  [!code-vb[ButtonTransform#1cb](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ButtonTransform/VisualBasic/ButtonTransformExample.xaml.vb#1cb)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
 - [Información general sobre transformaciones](transforms-overview.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 230a5e3e3231ad6675d214d370f74eb37405c89c
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 32e74a76b6b1bedee4efc5715d0710c8efce2455
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120762"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Nombres seguros (Referencia de la API no administrada)
 La API de nombres seguros permite a los clientes administrar la firma de ensamblados con nombre seguro.  
@@ -103,9 +103,10 @@ La API de nombres seguros permite a los clientes administrar la firma de ensambl
  [StrongNameTokenFromPublicKey (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Obtiene un token que representa una clave pública. Ha quedado en desuso a partir de la versión [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [PublicKeyBlob (estructura)](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
+ [PublicKeyBlob (Estructura)](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  Representa la clave pública de un par de claves pública y privada en formato binario.  
   
 ## <a name="see-also"></a>Vea también
-- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
-- [Referencia de API no administrada](../../../../docs/framework/unmanaged-api/index.md)
+
+- [ICLRStrongName (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Referencia de la API no administrada](../../../../docs/framework/unmanaged-api/index.md)
