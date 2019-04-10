@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 80340bcf25ec3299629af34f7fafe53877ad571c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213303"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331681"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Filtrar para eliminar filas de la base de datos
 Puede eliminar filas en una base de datos mediante la eliminación de la correspondiente [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objetos de su colección relacionada con la tabla. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Convierte los cambios en el código SQL apropiado `DELETE` comandos.  
@@ -32,11 +32,11 @@ Puede eliminar filas en una base de datos mediante la eliminación de la corresp
   
 ### <a name="to-delete-a-row-in-the-database"></a>Para eliminar una fila en la base de datos  
   
-1.  Consulte en la base de datos la fila que se va a eliminar.  
+1. Consulte en la base de datos la fila que se va a eliminar.  
   
-2.  Llame al método <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>.  
+2. Llame al método <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>.  
   
-3.  Envíe el cambio a la base de datos.  
+3. Envíe el cambio a la base de datos.  
   
 ## <a name="example"></a>Ejemplo  
  En este primer ejemplo de código se consultan en la base de datos los detalles del pedido #11000, se marcan dichos detalles para eliminarlos y se envían estos cambios a la base de datos.  

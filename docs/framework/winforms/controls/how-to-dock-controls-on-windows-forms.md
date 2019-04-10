@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-ms.openlocfilehash: 61ccad615eec81eb1aa77e6a99d48ef29ecb5be2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231531"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317264"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Filtrar para acoplar controles en formularios Windows Forms
 Puede acoplar controles a los bordes del formulario o hacer que rellene el contenedor del control (un formulario o un control contenedor). Por ejemplo, en el Explorador de Windows se acopla su <xref:System.Windows.Forms.TreeView> control a la izquierda de la ventana y su <xref:System.Windows.Forms.ListView> control a la derecha de la ventana. Use el <xref:System.Windows.Forms.Control.Dock%2A> propiedad para todos los controles de Windows Forms visibles definir el modo de acoplamiento.  
@@ -23,13 +23,13 @@ Puede acoplar controles a los bordes del formulario o hacer que rellene el conte
   
 ### <a name="to-dock-a-control"></a>Para acoplar un control  
   
-1.  Seleccione el control que desee acoplar.  
+1. Seleccione el control que desee acoplar.  
   
-2.  En la ventana Propiedades, haga clic en la flecha situada a la derecha de la <xref:System.Windows.Forms.Control.Dock%2A> propiedad.  
+2. En la ventana Propiedades, haga clic en la flecha situada a la derecha de la <xref:System.Windows.Forms.Control.Dock%2A> propiedad.  
   
      Se muestra un editor que muestra una serie de cuadros que representan los bordes y el centro del formulario.  
   
-3.  Haga clic en el botón que representa el borde del formulario donde desea acoplar el control. Para rellenar el contenido del control de contenedor o el formulario del control, haga clic en el cuadro del centro. Haga clic en **(ninguno)** para deshabilitar el acoplamiento.  
+3. Haga clic en el botón que representa el borde del formulario donde desea acoplar el control. Para rellenar el contenido del control de contenedor o el formulario del control, haga clic en el cuadro del centro. Haga clic en **(ninguno)** para deshabilitar el acoplamiento.  
   
      El control cambia automáticamente de tamaño para ajustarse a los límites del borde acoplado.  
   

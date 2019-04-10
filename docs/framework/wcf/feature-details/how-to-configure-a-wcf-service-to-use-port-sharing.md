@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: 30c9719c7c53b2e0e99043bd8ff2cb5d7da393a0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bc0c822659ee57ac8dd87a2adddcd32e934ea4fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218958"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302410"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Filtrar Configurar un servicio de Windows Communication Foundation para utilizar puertos compartidos
 La manera más fácil de usar puertos de net.tcp:// en su aplicación de Windows Communication Foundation (WCF) es exponer un servicio mediante el <xref:System.ServiceModel.NetTcpBinding>.  
@@ -21,17 +21,17 @@ La manera más fácil de usar puertos de net.tcp:// en su aplicación de Windows
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>Para habilitar la compartición de puertos de net.tcp:// en un NetTcpBinding mediante código  
   
-1.  Crear un servicio para implementar un contrato denominado `IMyService` y llámelo `MyService`,.  
+1. Crear un servicio para implementar un contrato denominado `IMyService` y llámelo `MyService`,.  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
   
-2.  Cree una instancia de la clase <xref:System.ServiceModel.NetTcpBinding> y establezca la propiedad <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> en `true`.  
+2. Cree una instancia de la clase <xref:System.ServiceModel.NetTcpBinding> y establezca la propiedad <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> en `true`.  
   
      [!code-csharp[c_ConfigurePortSharing#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#2)]
      [!code-vb[c_ConfigurePortSharing#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#2)]  
   
-3.  Cree un <xref:System.ServiceModel.ServiceHost> y agregue el punto de conexión de servicio a él para `MyService` que utiliza el <xref:System.ServiceModel.NetTcpBinding> con uso compartido de puerto habilitado y que realiza escuchas en el URI de la dirección del punto de conexión "net.tcp://localhost/MyService".  
+3. Cree un <xref:System.ServiceModel.ServiceHost> y agregue el punto de conexión de servicio a él para `MyService` que utiliza el <xref:System.ServiceModel.NetTcpBinding> con uso compartido de puerto habilitado y que realiza escuchas en el URI de la dirección del punto de conexión "net.tcp://localhost/MyService".  
   
      [!code-csharp[c_ConfigurePortSharing#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#3)]
      [!code-vb[c_ConfigurePortSharing#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#3)]  
@@ -41,7 +41,7 @@ La manera más fácil de usar puertos de net.tcp:// en su aplicación de Windows
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-configuration"></a>Para habilitar el uso compartido de puerto de  net.tcp:// en un NetTcpBinding mediante configuración  
   
-1.  El ejemplo siguiente muestra cómo habilitar el uso compartido de puerto y agregar el punto de conexión de servicio mediante elementos de configuración.  
+1. El ejemplo siguiente muestra cómo habilitar el uso compartido de puerto y agregar el punto de conexión de servicio mediante elementos de configuración.  
   
 ```xml  
 <system.serviceModel>  

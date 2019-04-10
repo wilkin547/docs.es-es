@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cc1ac9adf40948a5109b37336d45a2be833e54f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225968"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317212"
 ---
 # <a name="optimizing-performance-text"></a>Optimizar el rendimiento: Texto
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluye compatibilidad para la presentación del contenido de texto mediante el uso de características enriquecidas [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] controles. En general, puede dividir la representación de texto en tres capas:  
   
-1.  Mediante el <xref:System.Windows.Documents.Glyphs> y <xref:System.Windows.Media.GlyphRun> objetos directamente.  
+1. Mediante el <xref:System.Windows.Documents.Glyphs> y <xref:System.Windows.Media.GlyphRun> objetos directamente.  
   
-2.  Mediante el <xref:System.Windows.Media.FormattedText> objeto.  
+2. Mediante el <xref:System.Windows.Media.FormattedText> objeto.  
   
-3.  Con los controles de alto nivel, como el <xref:System.Windows.Controls.TextBlock> y <xref:System.Windows.Documents.FlowDocument> objetos.  
+3. Con los controles de alto nivel, como el <xref:System.Windows.Controls.TextBlock> y <xref:System.Windows.Documents.FlowDocument> objetos.  
   
  En este tema se proporcionan recomendaciones de rendimiento para la representación de texto.  
 

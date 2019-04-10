@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 1d9e01ab1fbabeb7b20fb5d2449ca7bba5f1853a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125982"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332084"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Filtrar para crear listas maestro y detalle con el control DataGrid de formularios Windows Forms mediante el diseñador
 
@@ -27,26 +27,26 @@ ms.locfileid: "59125982"
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>Para crear una lista de detalles principales en el diseñador  
   
-1.  Agregue dos <xref:System.Windows.Forms.DataGrid> controles al formulario. Para obtener más información, vea [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md). En Visual Studio 2005, el <xref:System.Windows.Forms.DataGrid> control no está en el **cuadro de herramientas** de forma predeterminada. Para obtener más información, vea [Cómo: Agregar elementos al cuadro de herramientas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
+1. Agregue dos <xref:System.Windows.Forms.DataGrid> controles al formulario. Para obtener más información, vea [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md). En Visual Studio 2005, el <xref:System.Windows.Forms.DataGrid> control no está en el **cuadro de herramientas** de forma predeterminada. Para obtener más información, vea [Cómo: Agregar elementos al cuadro de herramientas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
   
     > [!NOTE]
     >  Los pasos siguientes no son aplicables a Visual Studio 2005, que usa el **orígenes de datos** ventana para el enlace de datos en tiempo de diseño. Para obtener más información, consulte [enlazar controles a datos en Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) y [Cómo: Mostrar relacionados con datos en un Windows Forms Application](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120)).  
   
-2.  Arrastre dos o más tablas de **Explorador de servidores** al formulario.  
+2. Arrastre dos o más tablas de **Explorador de servidores** al formulario.  
   
-3.  Desde el **datos** menú, seleccione **Generar conjunto de datos**.  
+3. Desde el **datos** menú, seleccione **Generar conjunto de datos**.  
   
-4.  Establecer las relaciones entre las tablas mediante el Diseñador XML. Para obtener más información, vea "Cómo: Crear relaciones de uno a varios en esquemas XML y conjuntos de datos"en MSDN.  
+4. Establecer las relaciones entre las tablas mediante el Diseñador XML. Para obtener más información, vea "Cómo: Crear relaciones de uno a varios en esquemas XML y conjuntos de datos"en MSDN.  
   
-5.  Guarde la relación seleccionando **guardar todo** desde el **archivo** menú.  
+5. Guarde la relación seleccionando **guardar todo** desde el **archivo** menú.  
   
-6.  Configurar el <xref:System.Windows.Forms.DataGrid> control que desea designar como cuadrícula principal, como se indica a continuación:  
+6. Configurar el <xref:System.Windows.Forms.DataGrid> control que desea designar como cuadrícula principal, como se indica a continuación:  
   
     1.  Seleccione el <xref:System.Data.DataSet> en la lista desplegable en el <xref:System.Windows.Forms.DataGrid.DataSource%2A> propiedad.  
   
     2.  Seleccione la tabla principal (por ejemplo, "Customers") en la lista desplegable en el <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedad.  
   
-7.  Configurar el <xref:System.Windows.Forms.DataGrid> control que desea designar la cuadrícula de detalles, como se indica a continuación:  
+7. Configurar el <xref:System.Windows.Forms.DataGrid> control que desea designar la cuadrícula de detalles, como se indica a continuación:  
   
     1.  Seleccione el <xref:System.Data.DataSet> en la lista desplegable en el <xref:System.Windows.Forms.DataGrid.DataSource%2A> propiedad.  
   

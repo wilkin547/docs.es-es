@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: f7fecf2f90c56e5ac10ea5929f1c23b25bf181bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9aac3a0efd6359c25a6972f0e0b52dd489ec31db
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221761"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327534"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Filtrar para llevar a cabo operaciones de arrastrar y colocar entre aplicaciones
 Realizar operaciones de arrastrar y colocar entre aplicaciones es similar a habilitar esta acción dentro de una aplicación, siempre que ambas aplicaciones implicadas se comporten según el "contrato" establecido entre las propiedades <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> y <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
@@ -18,21 +18,21 @@ Realizar operaciones de arrastrar y colocar entre aplicaciones es similar a habi
   
 ### <a name="to-perform-a-drag-and-drop-procedure-between-applications"></a>Para realizar un procedimiento de arrastrar y colocar entre aplicaciones  
   
-1.  Cree una nueva aplicación de Windows Forms.  
+1. Cree una nueva aplicación de Windows Forms.  
   
-2.  Agregue un control <xref:System.Windows.Forms.TextBox> al formulario.  
+2. Agregue un control <xref:System.Windows.Forms.TextBox> al formulario.  
   
-3.  Configure el control <xref:System.Windows.Forms.TextBox> para recibir datos colocados.  
+3. Configure el control <xref:System.Windows.Forms.TextBox> para recibir datos colocados.  
   
      Para obtener más información, vea [Tutorial: Realizar una operación de arrastrar y colocar en Windows Forms](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
-4.  Ejecute la aplicación basada en Windows y, mientras la aplicación se está ejecutando, ejecute WordPad.  
+4. Ejecute la aplicación basada en Windows y, mientras la aplicación se está ejecutando, ejecute WordPad.  
   
      WordPad es un editor de texto instalado por Windows que permite operaciones de arrastrar y colocar. Es accesible presionando el **iniciar** button, seleccionar **ejecutar**y, a continuación, escriba `WordPad` en el cuadro de texto de la **ejecutar** cuadro de diálogo y haga clic en **Aceptar**.  
   
-5.  Una vez abierto WordPad, escriba una cadena de texto en él.  
+5. Una vez abierto WordPad, escriba una cadena de texto en él.  
   
-6.  Use el mouse para seleccionar el texto y, después, arrastre el texto seleccionado al control <xref:System.Windows.Forms.TextBox> de la aplicación basada en Windows.  
+6. Use el mouse para seleccionar el texto y, después, arrastre el texto seleccionado al control <xref:System.Windows.Forms.TextBox> de la aplicación basada en Windows.  
   
      Observe que, cuando el mouse se desplaza sobre el control <xref:System.Windows.Forms.TextBox> (y, por lo tanto, se genera el evento <xref:System.Windows.Forms.Control.DragEnter>), el cursor cambia y puede colocar el texto seleccionado en el control <xref:System.Windows.Forms.TextBox>.  
   

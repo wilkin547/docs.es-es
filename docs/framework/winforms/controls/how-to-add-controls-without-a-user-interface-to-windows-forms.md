@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 90166821181e6562d0bef3ff85f7e7a95c479be0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223698"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330108"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Filtrar para agregar controles sin una interfaz de usuario a formularios Windows Forms
 Un control no Visual (o componente) proporciona funcionalidad para la aplicación. A diferencia de otros controles, componentes no proporcionan una interfaz de usuario para el usuario y, por tanto, no es necesario que se mostrará en la superficie del Diseñador de formularios de Windows. Cuando se agrega un componente a un formulario, el Diseñador de Windows Forms muestra una bandeja de tamaño variable en la parte inferior del formulario donde se muestran todos los componentes. Una vez que un control se ha agregado a la Bandeja de componentes, puede seleccionar el componente y establezca sus propiedades como lo haría con cualquier otro control en el formulario.  
@@ -29,9 +29,9 @@ Un control no Visual (o componente) proporciona funcionalidad para la aplicació
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Para agregar un componente a un formulario de Windows  
   
-1.  Abra el formulario. Para obtener más detalles, vea [Cómo: Mostrar Windows Forms en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Abra el formulario. Para obtener más detalles, vea [Cómo: Mostrar Windows Forms en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  En el **cuadro de herramientas**, haga clic en un componente y arrástrelo al formulario.  
+2. En el **cuadro de herramientas**, haga clic en un componente y arrástrelo al formulario.  
   
      El componente aparecerá en la Bandeja de componentes.  
   
@@ -42,11 +42,11 @@ Un control no Visual (o componente) proporciona funcionalidad para la aplicació
   
 #### <a name="to-add-a-component-to-a-windows-form-programmatically"></a>Para agregar un componente a un formulario Windows Forms mediante programación  
   
-1.  Cree una instancia de la <xref:System.Windows.Forms.Timer> clase en código.  
+1. Cree una instancia de la <xref:System.Windows.Forms.Timer> clase en código.  
   
-2.  Establecer el `Interval` propiedad para determinar el tiempo entre los pasos del temporizador.  
+2. Establecer el `Interval` propiedad para determinar el tiempo entre los pasos del temporizador.  
   
-3.  Configurar las otras propiedades necesarias para el componente.  
+3. Configurar las otras propiedades necesarias para el componente.  
   
      El código siguiente muestra la creación de un <xref:System.Windows.Forms.Timer> con su `Interval` conjunto de propiedades.  
   

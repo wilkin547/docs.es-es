@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 5bc4bce984c4159949f840f395005ec9fe746e85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227319"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312168"
 ---
 # <a name="how-to-enable-streaming"></a>Filtrar para habilitar el streaming
 Windows Communication Foundation (WCF) puede enviar mensajes mediante transferencias almacenadas en búfer o transmitidas. En el modo de transferencia almacenado en búfer (predeterminado), se debe entregar completamente un mensaje antes de que un receptor pueda leerlo. En modo de transferencia de transmisión por secuencias, el receptor puede empezar a procesar el mensaje antes de se entregue completamente. El modo de transmisión por secuencias es útil cuando la información que se pasa es larga y puede procesarse en serie. El modo de transmisión por secuencias también es útil cuando el mensaje es demasiado grande para que se almacene en búfer completamente.  
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) puede enviar mensajes mediante transferen
   
 ### <a name="to-stream-data"></a>Transmisión de datos por secuencias  
   
-1.  Para transmitir datos por secuencias, `OperationContract` del servicio debe satisfacer dos requisitos:  
+1. Para transmitir datos por secuencias, `OperationContract` del servicio debe satisfacer dos requisitos:  
   
     1.  El parámetro que contiene los datos que se van a transmitir debe ser el único parámetro del método. Por ejemplo, si el mensaje de entrada es el que se va a transmitir por secuencia, la operación debe tener exactamente un parámetro de entrada. De igual forma, si el mensaje de salida se va a transmitir por secuencia, la operación debe tener exactamente un parámetro de salida o un valor devuelto.  
   
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF) puede enviar mensajes mediante transferen
   
      La operación `GetStream` recibe algunos datos de entrada en búfer como `string`, que también se almacena en búfer y devuelve `Stream`, que se transmite por secuencias. A la inversa, `UploadStream` admite una `Stream` (transmitida por secuencias) y devuelve un `bool` (almacenado en búfer). `EchoStream` toma y devuelve `Stream` y es un ejemplo de una operación cuya entrada y los mensajes de salida se transmiten. Finalmente, `GetReversedStream` no toma ninguna entrada y devuelve un `Stream` (transmitido por secuencia).  
   
-2.  La transmisión por secuencias debe habilitarse en el enlace. Defina una propiedad `TransferMode`, que puede adoptar uno de los siguientes valores:  
+2. La transmisión por secuencias debe habilitarse en el enlace. Defina una propiedad `TransferMode`, que puede adoptar uno de los siguientes valores:  
   
     1.  `Buffered`,  
   
@@ -60,14 +60,14 @@ Windows Communication Foundation (WCF) puede enviar mensajes mediante transferen
          [!code-csharp[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#3)]
          [!code-vb[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#3)]  
   
-3.  Las operaciones `GetStream`, `UploadStream` y `EchoStream` tratan con el envío de datos directamente desde un archivo o guardando los datos recibidos directamente en un archivo. El siguiente código se aplica a `GetStream`.  
+3. Las operaciones `GetStream`, `UploadStream` y `EchoStream` tratan con el envío de datos directamente desde un archivo o guardando los datos recibidos directamente en un archivo. El siguiente código se aplica a `GetStream`.  
   
      [!code-csharp[c_HowTo_EnableStreaming#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#4)]
      [!code-vb[c_HowTo_EnableStreaming#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#4)]  
   
 ### <a name="writing-a-custom-stream"></a>Escritura de una secuencia personalizada  
   
-1.  Para hacer un procesamiento especial en cada fragmento de un flujo de datos mientras se envía o recibe, derive una clase de flujo personalizada de <xref:System.IO.Stream>. Como un ejemplo de una secuencia personalizada, el siguiente código contiene un método `GetReversedStream` y una clase `ReverseStream`.  
+1. Para hacer un procesamiento especial en cada fragmento de un flujo de datos mientras se envía o recibe, derive una clase de flujo personalizada de <xref:System.IO.Stream>. Como un ejemplo de una secuencia personalizada, el siguiente código contiene un método `GetReversedStream` y una clase `ReverseStream`.  
   
      `GetReversedStream` Crea y devuelve una nueva instancia de `ReverseStream`. El procesamiento real se produce cuando el sistema lee desde el objeto `ReverseStream`. El método `ReverseStream.Read` lee un fragmento de bytes del archivo subyacente, los invierte y después devuelve los bytes invertidos. Este método no invierte el contenido del archivo completo, sino un fragmento de bytes cada vez. Este ejemplo muestra cómo puede realizar el procesamiento de la secuencia cuando el contenido se lee o escribe desde la secuencia.  
   

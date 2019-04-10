@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842517"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331707"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Filtrar Ocultar una Variable heredada (Visual Basic)
 Una clase derivada hereda todas las definiciones de su clase base. Si desea definir una variable con el mismo nombre que un elemento de la clase base, puede ocultar, o *sombra*, ese elemento de la clase base al definir la variable en la clase derivada. Si lo hace, el código en la clase derivada tiene acceso a la variable a menos que explícitamente omite el mecanismo de sombreado.  
@@ -25,11 +25,11 @@ Una clase derivada hereda todas las definiciones de su clase base. Si desea defi
   
 ### <a name="to-hide-an-inherited-variable"></a>Para ocultar una variable heredada  
   
-1.  Asegúrese de que se declara la variable que desea ocultar en el nivel de clase (fuera de cualquier procedimiento). En caso contrario, no es necesario ocultarlo.  
+1. Asegúrese de que se declara la variable que desea ocultar en el nivel de clase (fuera de cualquier procedimiento). En caso contrario, no es necesario ocultarlo.  
   
-2.  Dentro de la clase derivada, escribe un [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) declarar la variable. Use el mismo nombre que el de la variable heredada.  
+2. Dentro de la clase derivada, escribe un [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) declarar la variable. Use el mismo nombre que el de la variable heredada.  
   
-3.  Incluir el [sombras](../../../../visual-basic/language-reference/modifiers/shadows.md) palabra clave en la declaración.  
+3. Incluir el [sombras](../../../../visual-basic/language-reference/modifiers/shadows.md) palabra clave en la declaración.  
   
      Cuando el código de la clase derivada hace referencia al nombre de variable, el compilador resuelve la referencia a la variable.  
   
@@ -57,11 +57,11 @@ Una clase derivada hereda todas las definiciones de su clase base. Si desea defi
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Sombrear en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Diferencias entre sombrear y reemplazar](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [Cómo: Ocultar una Variable con el mismo nombre que su Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
-- [Cómo: Obtener acceso a una Variable que oculta una clase derivada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [Filtrar para ocultar una variable con el mismo nombre que su variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [Filtrar para obtener acceso a una variable que se encuentra oculta por una clase derivada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me, My, MyBase y MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Fundamentos de la herencia](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

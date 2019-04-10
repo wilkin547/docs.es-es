@@ -2,12 +2,12 @@
 title: Ejemplo de configuración
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 6ceea71e4adc4e8c25ca624ca8adb6e08713a93b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158709"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332526"
 ---
 # <a name="configuration-sample"></a>Ejemplo de configuración
 En este ejemplo se muestra el uso de un archivo de configuración para hacer que un servicio se pueda detectar.  
@@ -261,10 +261,10 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
-1.  Este ejemplo utiliza los extremos HTTP y para ejecutar este ejemplo las ACL de dirección URL apropiadas; se debe agregar vea [configurar HTTP y HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obtener más información. Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Este ejemplo utiliza los extremos HTTP y para ejecutar este ejemplo las ACL de dirección URL apropiadas; se debe agregar vea [configurar HTTP y HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obtener más información. Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Compile la solución.  
+2. Compile la solución.  
   
-3.  Ejecute el ejecutable de servicio desde el directorio de compilación.  
+3. Ejecute el ejecutable de servicio desde el directorio de compilación.  
   
-4.  Ejecute la aplicación cliente. Observe que el cliente puede localizar el servicio.  
+4. Ejecute la aplicación cliente. Observe que el cliente puede localizar el servicio.  

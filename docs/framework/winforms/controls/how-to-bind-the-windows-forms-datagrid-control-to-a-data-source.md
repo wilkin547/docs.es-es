@@ -14,12 +14,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 80edd3718195fa3c47f7073136031cbddb13168b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176688"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332578"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Filtrar para enlazar el control DataGrid de formularios Windows Forms a un origen de datos
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "59176688"
   
 ### <a name="to-data-bind-the-datagrid-control-programmatically"></a>Para enlazar el control DataGrid mediante programación  
   
-1.  Escribir código para llenar el conjunto de datos.  
+1. Escribir código para llenar el conjunto de datos.  
   
      Si el origen de datos es un conjunto de datos o una vista de datos basado en una tabla de conjunto de datos, agregue código al formulario para rellenar el conjunto de datos.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59176688"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2.  Llame a la <xref:System.Windows.Forms.DataGrid> del control <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método y pásele el origen de datos y un miembro de datos. Si no es necesario pasar explícitamente un miembro de datos, pase una cadena vacía.  
+2. Llame a la <xref:System.Windows.Forms.DataGrid> del control <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método y pásele el origen de datos y un miembro de datos. Si no es necesario pasar explícitamente un miembro de datos, pase una cadena vacía.  
   
     > [!NOTE]
     >  Si va a enlazar la cuadrícula por primera vez, puede establecer el control <xref:System.Windows.Forms.DataGrid.DataSource%2A> y <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedades. Sin embargo, no se puede restablecer estas propiedades una vez que se han establecido. Por lo tanto, se recomienda usar siempre el <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método.  
@@ -101,7 +101,7 @@ ms.locfileid: "59176688"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3.  (Opcional) Agregar los estilos de tabla adecuada y estilos de columna a la cuadrícula. Si no hay ningún estilo de tabla, verá la tabla, pero con un formato mínimo y con todas las columnas visibles.  
+3. (Opcional) Agregar los estilos de tabla adecuada y estilos de columna a la cuadrícula. Si no hay ningún estilo de tabla, verá la tabla, pero con un formato mínimo y con todas las columnas visibles.  
   
 ## <a name="see-also"></a>Vea también
 

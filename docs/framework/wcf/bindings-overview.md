@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: c450de0eb3eead3a2d3b21c3635caa71d92ce07f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212809"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325064"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Información general de enlaces de Windows Communication Foundation
 Los enlaces son objetos que se usan para especificar los detalles de comunicación que son necesarias para conectarse al punto de conexión de un servicio de Windows Communication Foundation (WCF). Cada punto de conexión en un servicio WCF requiere un enlace esté bien especificado. En este tema se describe los tipos de datos de comunicación que definen los enlaces, los elementos de un enlace, qué enlaces están incluidos en WCF y cómo se puede especificar un enlace para un punto de conexión.  
@@ -50,9 +50,9 @@ Los enlaces son objetos que se usan para especificar los detalles de comunicaci�
 ## <a name="using-bindings"></a>Utilizar los enlaces  
  El uso de enlaces conlleva dos pasos básicos:  
   
-1.  Seleccione o defina un enlace. El método más fácil es elegir uno de los enlaces proporcionados por el sistema incluidos con WCF y su uso con sus valores predeterminados. Puede elegir también un enlace proporcionado por el sistema y restablecer sus valores de propiedad para satisfacer sus necesidades Otra manera es crear un enlace personalizado o un enlace definido por el usuario para tener grados de control y personalización más altos.  
+1. Seleccione o defina un enlace. El método más fácil es elegir uno de los enlaces proporcionados por el sistema incluidos con WCF y su uso con sus valores predeterminados. Puede elegir también un enlace proporcionado por el sistema y restablecer sus valores de propiedad para satisfacer sus necesidades Otra manera es crear un enlace personalizado o un enlace definido por el usuario para tener grados de control y personalización más altos.  
   
-2.  Cree un punto de conexión que utilice el enlace seleccionado o definido.  
+2. Cree un punto de conexión que utilice el enlace seleccionado o definido.  
   
 ## <a name="code-and-configuration"></a>Código y configuración  
  Puede definir los enlaces de dos maneras: a través del código o a través de la configuración. Estos dos enfoques no dependen de si está utilizando un enlace proporcionado por el sistema o un enlace personalizado. En general, utilizar el código le proporciona un control total sobre la definición de un enlace y el tiempo de diseño. Con la configuración, por otro lado, permite que un administrador del sistema o el usuario de un servicio WCF o cliente cambiar los parámetros de un enlace sin tener que volver a compilar la aplicación de servicio. Esta flexibilidad es a menudo deseable porque no hay ninguna manera de predecir los requisitos específicos del equipo en el que es implementar una aplicación de WCF. Dejar fuera la información de enlace (y el direccionamiento) del código les permite cambiar sin requerir recopilación o nueva implementación de la aplicación. Tenga en cuenta que se crean enlaces definidos en código después de los enlaces especificados en la configuración, de modo que se permite a los enlaces definidos por código sobrescribir los enlaces definidos por la configuración.  

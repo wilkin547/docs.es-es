@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219218"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298916"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Seguimiento e instrumentación de aplicaciones
 El seguimiento es una manera de supervisar la ejecución de la aplicación mientras se está ejecutando. Puede agregar instrumentación de seguimiento y de depuración a la aplicación de .NET Framework cuando la desarrolle, y puede usar dicha instrumentación mientras desarrolla la aplicación y después de implementarla. Puede usar las clases <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> para registrar información sobre errores y ejecución de la aplicación en registros, archivos de texto u otros dispositivos para su análisis posterior.  
@@ -67,11 +67,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 ### <a name="phases-of-code-tracing"></a>Fases del seguimiento de código  
  El seguimiento de código consta de tres fases:  
   
-1.  **Instrumentación**: agregar código de seguimiento a la aplicación.  
+1. **Instrumentación**: agregar código de seguimiento a la aplicación.  
   
-2.  **Seguimiento**: el código de seguimiento escribe información en el destino especificado.  
+2. **Seguimiento**: el código de seguimiento escribe información en el destino especificado.  
   
-3.  **Análisis**: se evalúa la información de seguimiento para identificar y comprender los problemas de la aplicación.  
+3. **Análisis**: se evalúa la información de seguimiento para identificar y comprender los problemas de la aplicación.  
   
  Durante el desarrollo, todos los métodos de salida debug y trace<bpt i="1000001" x="1000001" type="formatting">{i&gt;</bpt><ept i="1000001">&lt;i}</ept>escriben información en la ventana de salida de Visual Studio de forma predeterminada. En una aplicación implementada, los métodos escriben información de seguimiento en los destinos que se especifiquen. Para más información sobre cómo especificar un destino de salida para el seguimiento o la depuración, vea [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
   
@@ -79,17 +79,17 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 ##### <a name="to-use-tracing-in-an-application"></a>Para usar el seguimiento en una aplicación  
   
-1.  Considere qué salida de seguimiento desea recibir in situ después de haber implementado la aplicación.  
+1. Considere qué salida de seguimiento desea recibir in situ después de haber implementado la aplicación.  
   
-2.  Cree un conjunto de conmutadores. Para obtener más información, vea [Cómo: Configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+2. Cree un conjunto de conmutadores. Para obtener más información, vea [Cómo: Configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
-3.  Agregue las instrucciones de seguimiento al código de aplicación.  
+3. Agregue las instrucciones de seguimiento al código de aplicación.  
   
-4.  Determine dónde desea que aparezca la salida del seguimiento y agregue los agentes de escucha apropiados. Para más información, vea [Creación e inicialización de agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
+4. Determine dónde desea que aparezca la salida del seguimiento y agregue los agentes de escucha apropiados. Para más información, vea [Creación e inicialización de agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
   
-5.  Pruebe y depure la aplicación y el código de seguimiento que contiene.  
+5. Pruebe y depure la aplicación y el código de seguimiento que contiene.  
   
-6.  Compile la aplicación en código ejecutable mediante uno de los siguientes procedimientos:  
+6. Compile la aplicación en código ejecutable mediante uno de los siguientes procedimientos:  
   
     -   Use el menú **Compilación** junto con la página **Depurar** del cuadro de diálogo **Páginas de propiedades** del **Explorador de soluciones**. Use este procedimiento si compila en Visual Studio.  
   
@@ -97,11 +97,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     -   Use las directivas de compilador **Trace** y **Debug** para el método de línea de comandos de compilación. Para más información, vea [Compilación condicional con Trace y Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Use este procedimiento si compila desde la línea de comandos.  
   
-7.  Si se produce un problema durante el tiempo de ejecución, active el modificador de seguimiento adecuado. Para más información, vea [Configuración de modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+7. Si se produce un problema durante el tiempo de ejecución, active el modificador de seguimiento adecuado. Para más información, vea [Configuración de modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
      El código de seguimiento escribe mensajes de seguimiento en un destino especificado, por ejemplo, una pantalla, un archivo de texto o un registro de eventos. El tipo de agente de escucha incluido en la colección **Trace.Listeners** determina el destino.  
   
-8.  Analice los mensajes de seguimiento para identificar y comprender los problemas de la aplicación.  
+8. Analice los mensajes de seguimiento para identificar y comprender los problemas de la aplicación.  
   
 ## <a name="trace-instrumentation-and-distributed-applications"></a>Instrumentación de seguimiento y aplicaciones distribuidas  
  Con las aplicaciones distribuidas no resulta fácil probar la aplicación de la manera en que se usará. No hay muchos equipos de desarrollo que tengan la capacidad de probar todas las posibles combinaciones de sistemas operativos o exploradores web (incluidas todas las opciones de idiomas de localización), o de simular el elevado número de usuarios que tendrán acceso simultáneo a la aplicación. En estas circunstancias, no es posible probar cómo responderá una aplicación distribuida ante grandes volúmenes, diferentes instalaciones y comportamientos únicos de usuario final. Además, muchas de las partes de una aplicación distribuida no disponen de ninguna interfaz de usuario con la que poder interactuar directamente o ver la actividad de esas partes.  

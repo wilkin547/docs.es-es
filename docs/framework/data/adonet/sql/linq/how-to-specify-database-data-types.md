@@ -2,12 +2,12 @@
 title: Filtrar para especificar tipos de datos de base de datos
 ms.date: 03/30/2017
 ms.assetid: 2228fdad-7e6a-4b1b-b4d1-79d0198b7c28
-ms.openlocfilehash: bf53463be8c715fd1c599efac1b19d838be19f86
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 67f23ff06aefbcff4ba7e2eaab63d9b8493b9717
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218048"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333215"
 ---
 # <a name="how-to-specify-database-data-types"></a>Filtrar para especificar tipos de datos de base de datos
 Use la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> propiedad en un <xref:System.Data.Linq.Mapping.ColumnAttribute> atributo para especificar el texto exacto que define la columna en una declaración de tabla de Transact-SQL.  
@@ -18,9 +18,9 @@ Use la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref
   
 ### <a name="to-specify-text-to-define-a-data-type-in-a-t-sql-table"></a>Para especificar texto para definir un tipo de datos en una tabla T-SQL  
   
-1.  Agregue la propiedad <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> al atributo <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
+1. Agregue la propiedad <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> al atributo <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
-2.  Establezca el valor de la propiedad <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> en el texto exacto que T-SQL utiliza.  
+2. Establezca el valor de la propiedad <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> en el texto exacto que T-SQL utiliza.  
   
 ## <a name="see-also"></a>Vea también
 

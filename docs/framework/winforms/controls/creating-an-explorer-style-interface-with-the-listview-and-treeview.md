@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 21a3f7f687f72fe6e73b5d2420675634ff834d2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117993"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332123"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Tutorial: Crear una interfaz de tipo Explorador con los controles ListView y TreeView mediante el diseñador
 Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de Windows Forms con aspecto profesional en muy poco tiempo. Un escenario común es crear una interfaz de usuario (UI) con <xref:System.Windows.Forms.ListView> y <xref:System.Windows.Forms.TreeView> los controles que se parece a la característica Explorador de Windows de los sistemas operativos de Windows. El Explorador de Windows muestra una estructura jerárquica de los archivos y carpetas en el equipo del usuario.  
@@ -28,27 +28,27 @@ Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de 
   
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>Para crear el formulario que contiene un control ListView y TreeView  
   
-1.  En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**.  
+1. En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**.  
   
-2.  En el **nuevo proyecto** diálogo cuadro, realice lo siguiente:  
+2. En el **nuevo proyecto** diálogo cuadro, realice lo siguiente:  
   
     1.  En las categorías, elija **Visual Basic** o **Visual C#**.  
   
     2.  En la lista de plantillas, elija **aplicación de Windows Forms**.  
   
-3.  Haga clic en **Aceptar**. Se crea un nuevo proyecto de Windows Forms.  
+3. Haga clic en **Aceptar**. Se crea un nuevo proyecto de Windows Forms.  
   
-4.  Agregar un <xref:System.Windows.Forms.SplitContainer> control al formulario y establezca su <xref:System.Windows.Forms.SplitContainer.Dock%2A> propiedad <xref:System.Windows.Forms.DockStyle.Fill>.  
+4. Agregar un <xref:System.Windows.Forms.SplitContainer> control al formulario y establezca su <xref:System.Windows.Forms.SplitContainer.Dock%2A> propiedad <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-5.  Agregar un <xref:System.Windows.Forms.ImageList> denominado `imageList1` al formulario y usar la ventana de propiedades para agregar dos imágenes: una imagen de una carpeta y una imagen de documento, en ese orden.  
+5. Agregar un <xref:System.Windows.Forms.ImageList> denominado `imageList1` al formulario y usar la ventana de propiedades para agregar dos imágenes: una imagen de una carpeta y una imagen de documento, en ese orden.  
   
-6.  Agregar un <xref:System.Windows.Forms.TreeView> control denominado `treeview1` al formulario y colóquelo en el lado izquierdo de la <xref:System.Windows.Forms.SplitContainer> control. En la ventana Propiedades para `treeView1` haga lo siguiente:  
+6. Agregar un <xref:System.Windows.Forms.TreeView> control denominado `treeview1` al formulario y colóquelo en el lado izquierdo de la <xref:System.Windows.Forms.SplitContainer> control. En la ventana Propiedades para `treeView1` haga lo siguiente:  
   
     1.  Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> en <xref:System.Windows.Forms.DockStyle.Fill>.  
   
     2.  Establecer el <xref:System.Windows.Forms.TreeView.ImageList%2A> propiedad `imagelist1.`  
   
-7.  Agregar un <xref:System.Windows.Forms.ListView> control denominado `listView1` al formulario y colóquelo en el lado derecho de la <xref:System.Windows.Forms.SplitContainer> control. En la ventana Propiedades para `listview1` haga lo siguiente:  
+7. Agregar un <xref:System.Windows.Forms.ListView> control denominado `listView1` al formulario y colóquelo en el lado derecho de la <xref:System.Windows.Forms.SplitContainer> control. En la ventana Propiedades para `listview1` haga lo siguiente:  
   
     1.  Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> en <xref:System.Windows.Forms.DockStyle.Fill>.  
   
@@ -58,7 +58,7 @@ Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de 
   
     4.  Establecer el <xref:System.Windows.Forms.ListView.SmallImageList%2A> propiedad `imageList1.`  
   
-8.  Implemente el código para rellenar el <xref:System.Windows.Forms.TreeView> con nodos y subnodos. Agregue este código a la clase `Form1`.  
+8. Implemente el código para rellenar el <xref:System.Windows.Forms.TreeView> con nodos y subnodos. Agregue este código a la clase `Form1`.  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  

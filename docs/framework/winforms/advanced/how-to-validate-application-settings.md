@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212094"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317898"
 ---
 # <a name="how-to-validate-application-settings"></a>Filtrar para validar la configuración de la aplicación
 En este tema se muestra cómo validar la configuración de la aplicación antes de conservarla.  
@@ -78,7 +78,7 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
   
 ### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>Para validar la configuración de la aplicación al cambiar un valor de configuración  
   
-1.  Si es un C# developer, en el formulario o un control `Load` evento, agregue un controlador de eventos para el <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> eventos.  
+1. Si es un C# developer, en el formulario o un control `Load` evento, agregue un controlador de eventos para el <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> eventos.  
   
      -o bien-  
   
@@ -97,7 +97,7 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
     End Sub   
     ```  
   
-2.  Defina el controlador de eventos y escriba el código dentro de él para realizar una comprobación de los límites en la fecha de nacimiento.  
+2. Defina el controlador de eventos y escriba el código dentro de él para realizar una comprobación de los límites en la fecha de nacimiento.  
   
     ```csharp  
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)  
@@ -126,7 +126,7 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
   
 ### <a name="to-validate-application-settings-when-a-save-occurs"></a>Para validar la configuración de la aplicación al guardar  
   
-1.  En el formulario o un control `Load` evento, agregue un controlador de eventos para el <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> eventos.  
+1. En el formulario o un control `Load` evento, agregue un controlador de eventos para el <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> eventos.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -141,7 +141,7 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
     End Sub  
     ```  
   
-2.  Defina el controlador de eventos y escriba el código dentro de él para realizar una comprobación de los límites en la fecha de nacimiento.  
+2. Defina el controlador de eventos y escriba el código dentro de él para realizar una comprobación de los límites en la fecha de nacimiento.  
   
     ```csharp  
     private void MyCustomSettings_SettingsSaving(Object sender, SettingsSavingEventArgs e)  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 519d3aa218fca734a9159503b4107bdbcfc31652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215955"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295905"
 ---
 # <a name="document-serialization-and-storage"></a>Almacenamiento y serialización de documentos
 Microsoft .NET Framework proporciona un potente entorno para crear y mostrar documentos de alta calidad.  Las características mejoradas que admiten tanto documentos fijos como documentos dinámicos, advanced ver los controles, combinan con eficaces en 2D y 3D capacidades gráficas tomar las aplicaciones de .NET Framework a un nuevo nivel de calidad y experiencia del usuario.  Que se va a administrar con flexibilidad una representación en memoria de un documento es una característica clave de .NET Framework y poder guardar y cargar documentos desde un almacén de datos de forma eficaz es una necesidad de casi cualquier aplicación.  El proceso de convertir un documento de una representación en memoria interna a un almacén de datos externo se denomina “serialización”.  El proceso inverso de leer un almacén de datos y volver a crear la instancia en memoria original se denomina “deserialización”.  
@@ -65,11 +65,11 @@ Microsoft .NET Framework proporciona un potente entorno para crear y mostrar doc
 ### <a name="creating-a-plug-in-serializer"></a>Crear un serializador de complemento  
  Tanto los serializadores de complemento como los serializadores vinculados utilizan los mismos métodos y eventos públicos expuestos y, de forma similar, se pueden diseñar para funcionar de forma sincrónica o asincrónica.  Existen tres pasos básicos que se suelen seguir para crear un serializador de complemento:  
   
-1.  Implementar y depurar el serializador en primer lugar como serializador vinculado.  Crear inicialmente el serializador compilado y vinculado directamente en una aplicación de prueba proporciona acceso total a los puntos de interrupción y otros servicios de depuración útiles para realizar pruebas.  
+1. Implementar y depurar el serializador en primer lugar como serializador vinculado.  Crear inicialmente el serializador compilado y vinculado directamente en una aplicación de prueba proporciona acceso total a los puntos de interrupción y otros servicios de depuración útiles para realizar pruebas.  
   
-2.  Después de que se ha probado completamente el serializador, una <xref:System.Windows.Documents.Serialization.ISerializerFactory> interfaz se agrega al crear un complemento.  El <xref:System.Windows.Documents.Serialization.ISerializerFactory> interfaz permite el acceso completo a todos los objetos de .NET Framework que incluye el árbol lógico, <xref:System.Windows.UIElement> objetos, <xref:System.Windows.Documents.IDocumentPaginatorSource>, y <xref:System.Windows.Media.Visual> elementos.  Además <xref:System.Windows.Documents.Serialization.ISerializerFactory> proporciona los mismos métodos sincrónicos y asincrónicos y eventos utilizados por los serializadores vinculados.  Dado que los documentos de gran tamaño pueden tardar tiempo en generarse, se recomiendan las operaciones asincrónicas para mantener una interacción receptiva con el usuario y ofrecer la opción "Cancelar" si se produce algún problema con el almacén de datos.  
+2. Después de que se ha probado completamente el serializador, una <xref:System.Windows.Documents.Serialization.ISerializerFactory> interfaz se agrega al crear un complemento.  El <xref:System.Windows.Documents.Serialization.ISerializerFactory> interfaz permite el acceso completo a todos los objetos de .NET Framework que incluye el árbol lógico, <xref:System.Windows.UIElement> objetos, <xref:System.Windows.Documents.IDocumentPaginatorSource>, y <xref:System.Windows.Media.Visual> elementos.  Además <xref:System.Windows.Documents.Serialization.ISerializerFactory> proporciona los mismos métodos sincrónicos y asincrónicos y eventos utilizados por los serializadores vinculados.  Dado que los documentos de gran tamaño pueden tardar tiempo en generarse, se recomiendan las operaciones asincrónicas para mantener una interacción receptiva con el usuario y ofrecer la opción "Cancelar" si se produce algún problema con el almacén de datos.  
   
-3.  Después de crear el serializador del complemento, se implementa un script de instalación para distribuir e instalar (y desinstalar) el complemento (véase más arriba, "[Instalar serializadores de complemento](#InstallingPluginSerializers)").  
+3. Después de crear el serializador del complemento, se implementa un script de instalación para distribuir e instalar (y desinstalar) el complemento (véase más arriba, "[Instalar serializadores de complemento](#InstallingPluginSerializers)").  
   
 ## <a name="see-also"></a>Vea también
 

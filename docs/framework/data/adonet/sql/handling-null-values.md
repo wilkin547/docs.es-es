@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191476"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332149"
 ---
 # <a name="handling-null-values"></a>Controlar valores Null
 Los valores NULL se utilizan en bases de datos relacionales cuando el valor de una columna se desconoce o falta. Un NULL no es ni una cadena vacía (en los tipos de datos de caracteres o de fecha y hora) ni un valor cero (en los tipos de datos numéricos). La especificación ANSI SQL-92 afirma que un NULL debe ser igual en todos los tipos de datos; por lo tanto, todos los NULL se tratan de forma coherente. El espacio de nombres <xref:System.Data.SqlTypes> proporciona semántica para valores NULL mediante la implementación de la interfaz <xref:System.Data.SqlTypes.INullable>. Cada uno de los tipos de datos de <xref:System.Data.SqlTypes> tiene su propia propiedad  `IsNull` y un valor `Null` que se puede asignar a una instancia de ese tipo de datos.  
@@ -87,15 +87,15 @@ WHERE TerritoryID IN (1, 2, 3)
   
  Además, las siguientes reglas se aplican para una instancia de asignaciones de NULL de `DataRow.["columnName"]`:  
   
-1.  El valor predeterminado *predeterminada* es el valor `DbNull.Value` para todo excepto las columnas null fuertemente tipadas que encuentra el fuertemente tipado valor null.  
+1. El valor predeterminado *predeterminada* es el valor `DbNull.Value` para todo excepto las columnas null fuertemente tipadas que encuentra el fuertemente tipado valor null.  
   
-2.  Los valores NULL nunca se escriben durante la serialización a archivos XML (como en "xsi:nil").  
+2. Los valores NULL nunca se escriben durante la serialización a archivos XML (como en "xsi:nil").  
   
-3.  Todos los valores que no son NULL, incluidos los predeterminados, siempre se escriben durante la serialización a XML. Esto no es característico de la semántica de XSD/XML en la que un valor NULL (xsi:nil) es explícito y el valor predeterminado es implícito (si no está presente en XML, un analizador de validación puede obtenerlo de un esquema XSD asociado). Lo contrario se cumple para `DataTable`: un valor NULL es implícito y el valor predeterminado es explícito.  
+3. Todos los valores que no son NULL, incluidos los predeterminados, siempre se escriben durante la serialización a XML. Esto no es característico de la semántica de XSD/XML en la que un valor NULL (xsi:nil) es explícito y el valor predeterminado es implícito (si no está presente en XML, un analizador de validación puede obtenerlo de un esquema XSD asociado). Lo contrario se cumple para `DataTable`: un valor NULL es implícito y el valor predeterminado es explícito.  
   
-4.  A todos los valores de columna que faltan en las filas leídas de la información XML introducida se les asigna NULL. A las filas creadas mediante <xref:System.Data.DataTable.NewRow%2A> o métodos similares se les asigna el valor predeterminado de DataColumn.  
+4. A todos los valores de columna que faltan en las filas leídas de la información XML introducida se les asigna NULL. A las filas creadas mediante <xref:System.Data.DataTable.NewRow%2A> o métodos similares se les asigna el valor predeterminado de DataColumn.  
   
-5.  El método <xref:System.Data.DataRow.IsNull%2A> devuelve `true` para `DbNull.Value` y `INullable.Null`.  
+5. El método <xref:System.Data.DataRow.IsNull%2A> devuelve `true` para `DbNull.Value` y `INullable.Null`.  
   
 ## <a name="assigning-null-values"></a>Asignación de valores NULL  
  El valor predeterminado de cualquier instancia de <xref:System.Data.SqlTypes> es NULL.  

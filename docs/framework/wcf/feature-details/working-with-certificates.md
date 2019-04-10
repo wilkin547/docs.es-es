@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331720"
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 Para programar la seguridad de Windows Communication Foundation (WCF), los certificados digitales de X.509 se usan normalmente para autenticar clientes y servidores, cifrar y firmar mensajes digitalmente. En este tema se explican brevemente las características de los certificados digitales X.509 y cómo usarlos en WCF, y se incluyen vínculos a los temas en los que se explican estos conceptos en mayor profundidad o en los que se muestra cómo llevar a cabo tareas comunes mediante WCF y los certificados.  
@@ -90,13 +90,13 @@ Para programar la seguridad de Windows Communication Foundation (WCF), los certi
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Para generar una cadena de confianza con el cmdlet New-SelfSignedCertificate  
   
-1.  Cree un certificado (autofirmado) de autoridad de raíz temporal mediante el cmdlet New-SelfSignedCertificate. Guarde la clave privada en el disco.  
+1. Cree un certificado (autofirmado) de autoridad de raíz temporal mediante el cmdlet New-SelfSignedCertificate. Guarde la clave privada en el disco.  
   
-2.  Utilice el nuevo certificado para emitir otro certificado que contenga la clave pública.  
+2. Utilice el nuevo certificado para emitir otro certificado que contenga la clave pública.  
   
-3.  Importe el certificado de la entidad emisora raíz en el almacén Entidades emisoras de certificados raíz de confianza.  
+3. Importe el certificado de la entidad emisora raíz en el almacén Entidades emisoras de certificados raíz de confianza.  
   
-4.  Para obtener instrucciones detalladas, consulte [Cómo: Crear certificados temporales para su uso durante el desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+4. Para obtener instrucciones detalladas, consulte [Cómo: Crear certificados temporales para su uso durante el desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ## <a name="which-certificate-to-use"></a>¿Qué certificado utilizar?  
  Las preguntas más comunes sobre certificados son qué certificados utilizar y por qué. La respuesta depende de si está programando un cliente o servicio. La siguiente información proporciona una directriz general y no es una respuesta exhaustiva a estas preguntas.  

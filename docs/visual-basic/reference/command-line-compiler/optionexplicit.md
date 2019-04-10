@@ -9,12 +9,12 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 4aca6e9c20dbce7aa8a94067c96fcf44329a6fe4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814879"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332396"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 Hace que el compilador notifique errores si no se declaran las variables antes de utilizarlas.  
@@ -34,11 +34,11 @@ Hace que el compilador notifique errores si no se declaran las variables antes d
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Establecer - optionexplicit en el IDE de Visual Studio  
   
-1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.   
+1. Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.   
   
-2.  Haga clic en la pestaña **Compilar**.  
+2. Haga clic en la pestaña **Compilar**.  
   
-3.  Modifique el valor en el **Option Explicit** cuadro.  
+3. Modifique el valor en el **Option Explicit** cuadro.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila cuando `-optionexplicit-` se utiliza.  
@@ -52,5 +52,5 @@ Hace que el compilador notifique errores si no se declaran las variables antes d
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Explicit (instrucción)](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Option Explicit (Instrucción)](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Valores predeterminados de Visual Basic, Proyectos, Opciones (Cuadro de diálogo)](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

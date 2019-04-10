@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825162"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332266"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Filtrar Contener más de un valor en una Variable (Visual Basic)
 Una variable contiene más de un valor si se declara de un *tipo de datos compuesto*.  
@@ -25,9 +25,9 @@ Una variable contiene más de un valor si se declara de un *tipo de datos compue
   
 ### <a name="to-hold-more-than-one-value-in-a-variable"></a>Para contener más de un valor en una variable  
   
-1.  Determinar el tipo de datos compuestos que desea usar para la variable.  
+1. Determinar el tipo de datos compuestos que desea usar para la variable.  
   
-2.  Si ya no está definido el tipo de datos compuestos, definirlo para que la variable para usarlo.  
+2. Si ya no está definido el tipo de datos compuestos, definirlo para que la variable para usarlo.  
   
     -   Definir una estructura con un [Structure (instrucción)](../../../../visual-basic/language-reference/statements/structure-statement.md).  
   
@@ -35,11 +35,11 @@ Una variable contiene más de un valor si se declara de un *tipo de datos compue
   
     -   Definir una clase con un [Class (instrucción)](../../../../visual-basic/language-reference/statements/class-statement.md).  
   
-3.  Declare la variable con un `Dim` instrucción.  
+3. Declare la variable con un `Dim` instrucción.  
   
-4.  Siga el nombre de variable con un `As` cláusula.  
+4. Siga el nombre de variable con un `As` cláusula.  
   
-5.  Siga el `As` palabra clave con el nombre del tipo de datos compuesto adecuado.  
+5. Siga el `As` palabra clave con el nombre del tipo de datos compuesto adecuado.  
   
 ## <a name="see-also"></a>Vea también
 
@@ -49,4 +49,4 @@ Una variable contiene más de un valor si se declara de un *tipo de datos compue
 - [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

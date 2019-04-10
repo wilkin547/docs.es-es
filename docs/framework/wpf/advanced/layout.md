@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231128"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330498"
 ---
 # <a name="layout"></a>Diseño
 En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Comprender cómo y cuándo se producen los cálculos de diseño es esencial para crear interfaces de usuario en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -64,17 +64,17 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
   
  Cada vez que un elemento secundario <xref:System.Windows.UIElement> cambia de posición, tiene potencial para desencadenar un nuevo pase por el sistema de diseño. Por lo tanto, es importante comprender los eventos que pueden invocar el sistema de diseño, ya que una invocación innecesaria puede provocar un bajo rendimiento de la aplicación. A continuación, se describe el proceso que se produce cuando se invoca el sistema de diseño.  
   
-1.  Un elemento secundario <xref:System.Windows.UIElement> empezar el proceso de diseño, se miden las propiedades del núcleo.  
+1. Un elemento secundario <xref:System.Windows.UIElement> empezar el proceso de diseño, se miden las propiedades del núcleo.  
   
-2.  Ajustar el tamaño de las propiedades definidas en <xref:System.Windows.FrameworkElement> se evalúan, tales como <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, y <xref:System.Windows.FrameworkElement.Margin%2A>.  
+2. Ajustar el tamaño de las propiedades definidas en <xref:System.Windows.FrameworkElement> se evalúan, tales como <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, y <xref:System.Windows.FrameworkElement.Margin%2A>.  
   
-3.  <xref:System.Windows.Controls.Panel>-se aplica la lógica específica, como <xref:System.Windows.Controls.Dock> dirección o apilamiento <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
+3. <xref:System.Windows.Controls.Panel>-se aplica la lógica específica, como <xref:System.Windows.Controls.Dock> dirección o apilamiento <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
   
-4.  El contenido se organiza después de medir todos los elementos secundarios.  
+4. El contenido se organiza después de medir todos los elementos secundarios.  
   
-5.  El <xref:System.Windows.Controls.Panel.Children%2A> colección se dibuja en la pantalla.  
+5. El <xref:System.Windows.Controls.Panel.Children%2A> colección se dibuja en la pantalla.  
   
-6.  El proceso se vuelve a invocar si adicionales <xref:System.Windows.Controls.Panel.Children%2A> se agregan a la colección, un <xref:System.Windows.FrameworkElement.LayoutTransform%2A> se aplica, o el <xref:System.Windows.UIElement.UpdateLayout%2A> se llama al método.  
+6. El proceso se vuelve a invocar si adicionales <xref:System.Windows.Controls.Panel.Children%2A> se agregan a la colección, un <xref:System.Windows.FrameworkElement.LayoutTransform%2A> se aplica, o el <xref:System.Windows.UIElement.UpdateLayout%2A> se llama al método.  
   
  Este proceso y cómo se invoca se definen con más detalle en las secciones siguientes.  
   

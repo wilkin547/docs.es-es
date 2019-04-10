@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 81cb9b55f53c152e755ada1803e4ba5731498627
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229477"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300611"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Filtrar para determinar el formulario secundario MDI activo
 En ocasiones, desee proporcionar un comando que funciona en el control que tiene el foco en el formulario secundario activo actualmente. Por ejemplo, suponga que desea copiar el texto seleccionado del cuadro de texto del formulario secundario en el Portapapeles. Creación de un procedimiento que se copia el texto seleccionado en el Portapapeles usando el <xref:System.Windows.Forms.Control.Click> eventos del elemento de menú Copiar en el menú de edición estándar.  
@@ -27,7 +27,7 @@ En ocasiones, desee proporcionar un comando que funciona en el control que tiene
   
 ### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Para determinar el formulario secundario MDI activo (para copiar el texto en el Portapapeles)  
   
-1.  Dentro de un método, copie el texto del control activo del formulario secundario activo en el Portapapeles.  
+1. Dentro de un método, copie el texto del control activo del formulario secundario activo en el Portapapeles.  
   
     > [!NOTE]
     >  En este ejemplo se da por supuesto que hay un formulario primario MDI (`Form1`) que tiene una o varias ventanas secundarias MDI que contiene un <xref:System.Windows.Forms.RichTextBox> control. Para obtener más información, consulte [crear los formularios MDI primario](how-to-create-mdi-parent-forms.md).  

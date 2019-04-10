@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Enlazar datos mediante un origen de datos del proyecto (WCF Data Services)
+title: Filtrar Enlazar datos mediante un origen de datos del proyecto (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f02c551c4382c9db03be2f4a0adbb9061fd4fe65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540759"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332513"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Procedimiento Enlazar datos mediante un origen de datos del proyecto (WCF Data Services)
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Filtrar Enlazar datos mediante un origen de datos del proyecto (WCF Data Services)
 
 Puede crear orígenes de datos que se basan en los objetos de datos generados en una aplicación de cliente de WCF Data Services. Cuando agrega una referencia a un servicio de datos mediante el uso de la **Add Service Reference** cuadro de diálogo, se crea un origen de datos del proyecto junto con las clases de datos de cliente generadas. Para cada conjunto de entidades expuesto por el servicio de datos se crea un origen de datos. Puede crear formularios que muestren los datos del servicio arrastrando estos elementos de origen de datos desde el **orígenes de datos** ventana hasta el diseñador. Estos elementos se convierten en controles enlazados al origen de datos. Durante la ejecución, este origen de datos se enlaza a una instancia de la <xref:System.Data.Services.Client.DataServiceCollection%601> (clase), que se rellena con los objetos devueltos por una consulta al servicio de datos. Para obtener más información, consulte [enlazar datos a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
 
@@ -23,11 +23,11 @@ Puede crear orígenes de datos que se basan en los objetos de datos generados en
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>Usar un origen de datos de proyecto en una ventana de WPF
 
-1.  En Visual Studio, en un proyecto de WPF, agregue una referencia al servicio de datos Northwind. Para obtener más información, vea [Cómo: Agregar una referencia de servicio de datos](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1. En Visual Studio, en un proyecto de WPF, agregue una referencia al servicio de datos Northwind. Para obtener más información, vea [Cómo: Agregar una referencia de servicio de datos](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
 
-2.  En el **orígenes de datos** ventana, expanda el `Customers` nodo en el **NorthwindEntities** origen de datos del proyecto.
+2. En el **orígenes de datos** ventana, expanda el `Customers` nodo en el **NorthwindEntities** origen de datos del proyecto.
 
-3.  Haga clic en el **CustomerID** elemento, seleccione **ComboBox** en la lista y arrastre el **CustomerID** de elemento de la **clientes** nodo a la diseñador.
+3. Haga clic en el **CustomerID** elemento, seleccione **ComboBox** en la lista y arrastre el **CustomerID** de elemento de la **clientes** nodo a la diseñador.
 
      Con ello se crean los siguientes elementos de objeto en el archivo XAML de la ventana:
 
@@ -37,7 +37,7 @@ Puede crear orígenes de datos que se basan en los objetos de datos generados en
 
     -   Objeto <xref:System.Windows.Controls.Label>.
 
-4.  Arrastre el **pedidos** propiedad de navegación en el diseñador.
+4. Arrastre el **pedidos** propiedad de navegación en el diseñador.
 
      Con ello se crean los siguientes elementos de objeto adicionales en el archivo XAML de la ventana:
 
@@ -45,18 +45,18 @@ Puede crear orígenes de datos que se basan en los objetos de datos generados en
 
     -   Un control <xref:System.Windows.Controls.DataGrid> enlazado a datos denominado `ordersDataGrid`.
 
-5.  (Opcional) Arrastre elementos adicionales desde el **clientes** nodo hasta el diseñador.
+5. (Opcional) Arrastre elementos adicionales desde el **clientes** nodo hasta el diseñador.
 
-6.  Abra la página de códigos del formulario y agregue las instrucciones `using` siguientes (`Imports` en Visual Basic):
+6. Abra la página de códigos del formulario y agregue las instrucciones `using` siguientes (`Imports` en Visual Basic):
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
 
-7.  En la clase parcial que define el formulario, agregue el código siguiente que crea una instancia de <xref:System.Data.Objects.ObjectContext> y define la constante `customerID`.
+7. En la clase parcial que define el formulario, agregue el código siguiente que crea una instancia de <xref:System.Data.Objects.ObjectContext> y define la constante `customerID`.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
 
-8.  En el diseñador, seleccione la ventana.
+8. En el diseñador, seleccione la ventana.
 
     > [!NOTE]
     > Asegúrese de que selecciona la ventana, y no el contenido situado dentro de ella. Si se selecciona la ventana, el **nombre** cuadro de texto en la parte superior de la **propiedades** ventana debe contener el nombre de la ventana.
@@ -76,9 +76,9 @@ Puede crear orígenes de datos que se basan en los objetos de datos generados en
 
 ## <a name="use-a-project-data-source-in-a-windows-form"></a>Usar un origen de datos del proyecto en un formulario de Windows
 
-1.  En el **orígenes de datos** ventana, expanda el **clientes** nodo en el **NorthwindEntities** origen de datos del proyecto.
+1. En el **orígenes de datos** ventana, expanda el **clientes** nodo en el **NorthwindEntities** origen de datos del proyecto.
 
-2.  Haga clic en el **CustomerID** elemento, seleccione **ComboBox** en la lista y arrastre el **CustomerID** de elemento de la **clientes** nodo a la diseñador.
+2. Haga clic en el **CustomerID** elemento, seleccione **ComboBox** en la lista y arrastre el **CustomerID** de elemento de la **clientes** nodo a la diseñador.
 
      De esta forma se crean los controles siguientes en el formulario:
 
@@ -90,23 +90,23 @@ Puede crear orígenes de datos que se basan en los objetos de datos generados en
 
     -   Objeto <xref:System.Windows.Forms.Label>.
 
-3.  Arrastre el **pedidos** propiedad de navegación al formulario.
+3. Arrastre el **pedidos** propiedad de navegación al formulario.
 
-4.  De esta forma se crea el control `ordersBindingSource` con la propiedad <xref:System.Windows.Forms.BindingSource.DataSource%2A> del control establecida en `customersBindingSource` y la propiedad <xref:System.Windows.Forms.BindingSource.DataMember%2A> establecida en `Customers`. También se crea el control enlazado a datos `ordersDataGridView` en el formulario, acompañado de un control de etiqueta con el título apropiado.
+4. De esta forma se crea el control `ordersBindingSource` con la propiedad <xref:System.Windows.Forms.BindingSource.DataSource%2A> del control establecida en `customersBindingSource` y la propiedad <xref:System.Windows.Forms.BindingSource.DataMember%2A> establecida en `Customers`. También se crea el control enlazado a datos `ordersDataGridView` en el formulario, acompañado de un control de etiqueta con el título apropiado.
 
-5.  (Opcional) Arrastre elementos adicionales desde el **clientes** nodo hasta el diseñador.
+5. (Opcional) Arrastre elementos adicionales desde el **clientes** nodo hasta el diseñador.
 
-6.  Abra la página de códigos del formulario y agregue las instrucciones `using` siguientes (`Imports` en Visual Basic):
+6. Abra la página de códigos del formulario y agregue las instrucciones `using` siguientes (`Imports` en Visual Basic):
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersusing)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersusing)]
 
-7.  En la clase parcial que define el formulario, agregue el código siguiente que crea una instancia de <xref:System.Data.Objects.ObjectContext> y define la constante `customerID`.
+7. En la clase parcial que define el formulario, agregue el código siguiente que crea una instancia de <xref:System.Data.Objects.ObjectContext> y define la constante `customerID`.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdefinition)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdefinition)]
 
-8.  En el diseñador de formularios, haga doble clic en el formulario.
+8. En el diseñador de formularios, haga doble clic en el formulario.
 
      De esta forma se abre la página de código del formulario y se crea el método que administra el evento `Load` para el formulario.
 
@@ -119,5 +119,5 @@ Puede crear orígenes de datos que se basan en los objetos de datos generados en
 
 ## <a name="see-also"></a>Vea también
 
-- [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Cómo: Enlazar datos a elementos de Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [Biblioteca cliente de Data Services de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Filtrar para enlazar datos a elementos de Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

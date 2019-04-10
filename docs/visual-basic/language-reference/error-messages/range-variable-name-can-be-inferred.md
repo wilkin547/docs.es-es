@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: 344a813907483dcb0e9f531b54db68a88d77f3dc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0b5633bb0efb3c67f73810552ef9a14ac3d0c70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842387"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331655"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>El nombre de una variable de rango sólo se puede inferir a partir de un nombre simple o completo sin argumentos
 Se incluye un elemento de programación que toma uno o más argumentos en una consulta LINQ. El compilador no puede inferir una variable de rango de ese elemento de programación.  
@@ -21,7 +21,7 @@ Se incluye un elemento de programación que toma uno o más argumentos en una co
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Proporcione un nombre de variable explícito para el elemento de programación, como se muestra en el código siguiente:  
+1. Proporcione un nombre de variable explícito para el elemento de programación, como se muestra en el código siguiente:  
   
 ```  
 Dim query = From var1 In collection1   
@@ -31,4 +31,4 @@ Dim query = From var1 In collection1
 ## <a name="see-also"></a>Vea también
 
 - [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Select (Cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)

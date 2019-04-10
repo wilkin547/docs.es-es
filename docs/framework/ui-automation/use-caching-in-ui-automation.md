@@ -8,12 +8,12 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: 41c1aa0e2a5219cdb40ba6d79c2a55bbf8568322
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b63d94789d081ce7337b5f9c2abca3f7d9e99eeb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211418"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308671"
 ---
 # <a name="use-caching-in-ui-automation"></a>Utilizar el almacenamiento en caché en la UI Automation
 > [!NOTE]
@@ -23,33 +23,33 @@ ms.locfileid: "59211418"
   
 ### <a name="activate-a-cache-request"></a>Activar una solicitud de almacenamiento en caché  
   
-1.  Creará un control <xref:System.Windows.Automation.CacheRequest>.  
+1. Creará un control <xref:System.Windows.Automation.CacheRequest>.  
   
-2.  Especifique las propiedades y los patrones que se almacenarán en caché mediante el uso de <xref:System.Windows.Automation.CacheRequest.Add%2A>.  
+2. Especifique las propiedades y los patrones que se almacenarán en caché mediante el uso de <xref:System.Windows.Automation.CacheRequest.Add%2A>.  
   
-3.  Especifique el ámbito del almacenamiento en caché estableciendo la propiedad <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> .  
+3. Especifique el ámbito del almacenamiento en caché estableciendo la propiedad <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> .  
   
-4.  Especifique la vista del subárbol estableciendo la propiedad <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A> .  
+4. Especifique la vista del subárbol estableciendo la propiedad <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A> .  
   
-5.  Establezca la propiedad <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> en <xref:System.Windows.Automation.AutomationElementMode.None> si quiere aumentar la eficacia sin recuperar una referencia completa a objetos. (Esto hará que no sea posible recuperar los valores actuales de esos objetos).  
+5. Establezca la propiedad <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> en <xref:System.Windows.Automation.AutomationElementMode.None> si quiere aumentar la eficacia sin recuperar una referencia completa a objetos. (Esto hará que no sea posible recuperar los valores actuales de esos objetos).  
   
-6.  Activar la solicitud mediante <xref:System.Windows.Automation.CacheRequest.Activate%2A> dentro de un `using` bloque (`Using` en Microsoft Visual Basic. NET).  
+6. Activar la solicitud mediante <xref:System.Windows.Automation.CacheRequest.Activate%2A> dentro de un `using` bloque (`Using` en Microsoft Visual Basic. NET).  
   
  Después de obtener objetos <xref:System.Windows.Automation.AutomationElement> o de suscribirse a eventos, desactive la solicitud mediante <xref:System.Windows.Automation.CacheRequest.Pop%2A> (si se usó <xref:System.Windows.Automation.CacheRequest.Push%2A> ) o eliminando el objeto creado por <xref:System.Windows.Automation.CacheRequest.Activate%2A>. (Use <xref:System.Windows.Automation.CacheRequest.Activate%2A> en un `using` bloque (`Using` en Microsoft Visual Basic. NET).  
   
 ### <a name="cache-automationelement-properties"></a>Propiedades de AutomationElement de almacenamiento en caché  
   
-1.  Mientras un elemento <xref:System.Windows.Automation.CacheRequest> está activo, obtenga objetos <xref:System.Windows.Automation.AutomationElement> mediante <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> o <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; u obtenga un elemento <xref:System.Windows.Automation.AutomationElement> como el origen de un evento para el que se registró para cuando el elemento <xref:System.Windows.Automation.CacheRequest> estaba activo. (También puede crear una caché pasando un elemento <xref:System.Windows.Automation.CacheRequest> a GetUpdatedCache o uno de los métodos <xref:System.Windows.Automation.TreeWalker> ).  
+1. Mientras un elemento <xref:System.Windows.Automation.CacheRequest> está activo, obtenga objetos <xref:System.Windows.Automation.AutomationElement> mediante <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> o <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; u obtenga un elemento <xref:System.Windows.Automation.AutomationElement> como el origen de un evento para el que se registró para cuando el elemento <xref:System.Windows.Automation.CacheRequest> estaba activo. (También puede crear una caché pasando un elemento <xref:System.Windows.Automation.CacheRequest> a GetUpdatedCache o uno de los métodos <xref:System.Windows.Automation.TreeWalker> ).  
   
-2.  Use <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> o recupere una propiedad desde la propiedad <xref:System.Windows.Automation.AutomationElement.Cached%2A> del elemento <xref:System.Windows.Automation.AutomationElement>.  
+2. Use <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> o recupere una propiedad desde la propiedad <xref:System.Windows.Automation.AutomationElement.Cached%2A> del elemento <xref:System.Windows.Automation.AutomationElement>.  
   
 ### <a name="obtain-cached-patterns-and-their-properties"></a>Obtener patrones almacenados en caché y sus propiedades  
   
-1.  Mientras un elemento <xref:System.Windows.Automation.CacheRequest> está activo, obtenga objetos <xref:System.Windows.Automation.AutomationElement> mediante <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> o <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; u obtenga un elemento <xref:System.Windows.Automation.AutomationElement> como el origen de un evento para el que se registró para cuando el elemento <xref:System.Windows.Automation.CacheRequest> estaba activo. (También puede crear una caché pasando un elemento <xref:System.Windows.Automation.CacheRequest> a GetUpdatedCache o uno de los métodos <xref:System.Windows.Automation.TreeWalker> ).  
+1. Mientras un elemento <xref:System.Windows.Automation.CacheRequest> está activo, obtenga objetos <xref:System.Windows.Automation.AutomationElement> mediante <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> o <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; u obtenga un elemento <xref:System.Windows.Automation.AutomationElement> como el origen de un evento para el que se registró para cuando el elemento <xref:System.Windows.Automation.CacheRequest> estaba activo. (También puede crear una caché pasando un elemento <xref:System.Windows.Automation.CacheRequest> a GetUpdatedCache o uno de los métodos <xref:System.Windows.Automation.TreeWalker> ).  
   
-2.  Use <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> o <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> para recuperar un patrón almacenado en caché.  
+2. Use <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> o <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> para recuperar un patrón almacenado en caché.  
   
-3.  Recupere valores de propiedad de la propiedad `Cached` del patrón de control.  
+3. Recupere valores de propiedad de la propiedad `Cached` del patrón de control.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se muestran varios aspectos del almacenamiento en caché en los que se usa <xref:System.Windows.Automation.CacheRequest.Activate%2A> para activar el elemento <xref:System.Windows.Automation.CacheRequest>.  

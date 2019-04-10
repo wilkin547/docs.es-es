@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160945"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332565"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Filtrar para usar diferentes certificados X.509 para la firma y el cifrado
 En este tema se muestra cómo configurar Windows Communication Foundation (WCF) para usar certificados diferentes para firmar los mensajes y el cifrado en el cliente y el servicio.  
@@ -47,34 +47,34 @@ En este tema se muestra cómo configurar Windows Communication Foundation (WCF) 
   
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>Para utilizar certificados independientes para la firma y el cifrado  
   
-1.  Defina una nueva clase de credenciales de cliente que herede de la clase <xref:System.ServiceModel.Description.ClientCredentials>. Implemente cuatro nuevas propiedades para permitir la especificación de múltiples certificados: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` y `ServiceEncryptingCertificate`. Invalide también el método <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> para devolver una instancia de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> personalizada que se define en el paso siguiente.  
+1. Defina una nueva clase de credenciales de cliente que herede de la clase <xref:System.ServiceModel.Description.ClientCredentials>. Implemente cuatro nuevas propiedades para permitir la especificación de múltiples certificados: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` y `ServiceEncryptingCertificate`. Invalide también el método <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> para devolver una instancia de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> personalizada que se define en el paso siguiente.  
   
      [!code-csharp[c_FourCerts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#1)]
      [!code-vb[c_FourCerts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#1)]  
   
-2.  Defina un nuevo administrador de tokens de seguridad del cliente que herede de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>. Invalide el método <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> para crear un proveedor de tokens de seguridad adecuado. El parámetro `requirement` (un <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>) proporciona la dirección del mensaje y el uso de las claves.  
+2. Defina un nuevo administrador de tokens de seguridad del cliente que herede de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>. Invalide el método <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> para crear un proveedor de tokens de seguridad adecuado. El parámetro `requirement` (un <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>) proporciona la dirección del mensaje y el uso de las claves.  
   
      [!code-csharp[c_FourCerts#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#2)]
      [!code-vb[c_FourCerts#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#2)]  
   
-3.  Defina una nueva clase de credenciales de servicio que hereda de la clase <xref:System.ServiceModel.Description.ServiceCredentials>. Implemente cuatro nuevas propiedades para permitir la especificación de múltiples certificados: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` y `ServiceEncryptingCertificate`. Invalide también el método <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> para devolver una instancia de la clase <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> personalizada que se define en el paso siguiente.  
+3. Defina una nueva clase de credenciales de servicio que hereda de la clase <xref:System.ServiceModel.Description.ServiceCredentials>. Implemente cuatro nuevas propiedades para permitir la especificación de múltiples certificados: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` y `ServiceEncryptingCertificate`. Invalide también el método <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> para devolver una instancia de la clase <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> personalizada que se define en el paso siguiente.  
   
      [!code-csharp[c_FourCerts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#3)]
      [!code-vb[c_FourCerts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#3)]  
   
-4.  Defina un nuevo administrador de tokens de seguridad de servicio que herede de la clase <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>. Invalide el método <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> para crear un proveedor de tokens de seguridad adecuado dada la dirección del mensaje pasada y el uso de las claves.  
+4. Defina un nuevo administrador de tokens de seguridad de servicio que herede de la clase <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>. Invalide el método <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> para crear un proveedor de tokens de seguridad adecuado dada la dirección del mensaje pasada y el uso de las claves.  
   
      [!code-csharp[c_FourCerts#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#4)]
      [!code-vb[c_FourCerts#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#4)]  
   
 ### <a name="to-use-multiple-certificates-on-the-client"></a>Para utilizar varios certificados en el cliente  
   
-1.  Cree un enlace personalizado. El elemento de enlace de seguridad debe funcionar en modo dúplex para permitir que distintos proveedores de tokens de seguridad estén presentes para las solicitudes y respuestas. Una manera de hacerlo es utilizar un transporte de tipo dúplex o utilizar <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> tal y como se muestra en el código siguiente. Vincule el objeto <xref:System.ServiceModel.Security.IdentityVerifier> personalizado que se define en el paso siguiente al elemento de enlace de seguridad. Reemplace las credenciales de cliente predeterminadas con las credenciales de cliente personalizadas creadas previamente.  
+1. Cree un enlace personalizado. El elemento de enlace de seguridad debe funcionar en modo dúplex para permitir que distintos proveedores de tokens de seguridad estén presentes para las solicitudes y respuestas. Una manera de hacerlo es utilizar un transporte de tipo dúplex o utilizar <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> tal y como se muestra en el código siguiente. Vincule el objeto <xref:System.ServiceModel.Security.IdentityVerifier> personalizado que se define en el paso siguiente al elemento de enlace de seguridad. Reemplace las credenciales de cliente predeterminadas con las credenciales de cliente personalizadas creadas previamente.  
   
      [!code-csharp[c_FourCerts#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#5)]
      [!code-vb[c_FourCerts#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#5)]  
   
-2.  Defina un objeto <xref:System.ServiceModel.Security.IdentityVerifier> personalizado. El servicio tiene varias identidades porque se usan certificados diferentes para cifrar la solicitud y firmar la respuesta.  
+2. Defina un objeto <xref:System.ServiceModel.Security.IdentityVerifier> personalizado. El servicio tiene varias identidades porque se usan certificados diferentes para cifrar la solicitud y firmar la respuesta.  
   
     > [!NOTE]
     >  En el ejemplo siguiente, el comprobador de identidad personalizado proporcionado no realiza ninguna comprobación de identidad del punto de conexión con fines de demostración. No se trata de una práctica recomendada para el código de producción.  
@@ -84,7 +84,7 @@ En este tema se muestra cómo configurar Windows Communication Foundation (WCF) 
   
 ### <a name="to-use-multiple-certificates-on-the-service"></a>Para utilizar varios certificados en el servicio  
   
-1.  Cree un enlace personalizado. El elemento de enlace de seguridad debe funcionar en modo dúplex para permitir que distintos proveedores de tokens de seguridad estén presentes para las solicitudes y respuestas. Tal y como ocurre con el cliente, utilice un transporte de tipo dúplex o use <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> tal y como se muestra en el código siguiente. Reemplace las credenciales de servicio predeterminadas con las credenciales de servicio personalizadas creadas previamente.  
+1. Cree un enlace personalizado. El elemento de enlace de seguridad debe funcionar en modo dúplex para permitir que distintos proveedores de tokens de seguridad estén presentes para las solicitudes y respuestas. Tal y como ocurre con el cliente, utilice un transporte de tipo dúplex o use <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> tal y como se muestra en el código siguiente. Reemplace las credenciales de servicio predeterminadas con las credenciales de servicio personalizadas creadas previamente.  
   
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  

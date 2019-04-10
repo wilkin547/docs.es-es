@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: fba9caecc71c5cb77c811fc112616647c79689c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40679136ea62a437009b308a8b206cf251b46222
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220193"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307332"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Filtrar para mostrar una lista de fuentes con el componente FontDialog
 El [FontDialog](fontdialog-component-windows-forms.md) componente permite a los usuarios seleccionar una fuente, así como cambiar sus características de presentación, como el tamaño y peso.  
@@ -27,11 +27,11 @@ El [FontDialog](fontdialog-component-windows-forms.md) componente permite a los 
   
 ### <a name="to-select-font-properties-using-the-fontdialog-component"></a>Para seleccionar las propiedades de fuente mediante el componente FontDialog  
   
-1.  Mostrar el cuadro de diálogo mediante la <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método.  
+1. Mostrar el cuadro de diálogo mediante la <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método.  
   
-2.  Use el <xref:System.Windows.Forms.DialogResult> propiedad para determinar cómo se cerró el cuadro de diálogo.  
+2. Use el <xref:System.Windows.Forms.DialogResult> propiedad para determinar cómo se cerró el cuadro de diálogo.  
   
-3.  Use el <xref:System.Windows.Forms.FontDialog.Font%2A> propiedad para establecer la fuente deseada.  
+3. Use el <xref:System.Windows.Forms.FontDialog.Font%2A> propiedad para establecer la fuente deseada.  
   
      En el ejemplo siguiente, la <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Click> controlador de eventos abre un <xref:System.Windows.Forms.FontDialog> componente. Cuando una fuente es elegido y el usuario hace clic en **Aceptar**, <xref:System.Windows.Forms.FontDialog.Font%2A> propiedad de un <xref:System.Windows.Forms.TextBox> control que está en el formulario se establece en la fuente elegida. En el ejemplo se da por supuesto que el formulario tiene un <xref:System.Windows.Forms.Button> (control), un <xref:System.Windows.Forms.TextBox> control y un <xref:System.Windows.Forms.FontDialog> componente.  
   

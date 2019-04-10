@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: bdcdce58d78a305493bd698cf4d849e640f14ce0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230998"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325701"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Creación de reflejo de la base de datos en SQL Server
 La creación de reflejo de base de datos de SQL Server permite mantener una copia, o reflejo, de una base de datos de SQL Server en un servidor en modo de espera. El reflejo garantiza que en todo momento existen dos copias distintas de los datos, lo que proporciona una alta disponibilidad y una completa redundancia de datos. El proveedor de datos .NET para SQL Server ofrece compatibilidad implícita con la creación de reflejo de base de datos; de modo que el desarrollador no tiene que realizar ninguna acción ni escribir ningún código una vez que se ha configurado para una base de datos de SQL Server. Además, el objeto <xref:System.Data.SqlClient.SqlConnection> admite un modo de conexión explícita que permita proporcionar el nombre de un servidor asociado de conmutación por error en la propiedad <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
  La siguiente secuencia simplificada de eventos tiene lugar para un objeto <xref:System.Data.SqlClient.SqlConnection> que identifica una base de datos configurada para el reflejo:  
   
-1.  La aplicación cliente se conecta correctamente a la base de datos principal y el servidor devuelve el nombre del servidor asociado, el cual se almacena en caché en el cliente.  
+1. La aplicación cliente se conecta correctamente a la base de datos principal y el servidor devuelve el nombre del servidor asociado, el cual se almacena en caché en el cliente.  
   
-2.  Si el servidor que contiene la base de datos principal da error o se interrumpe la conectividad, se pierde el estado de la conexión y de la transacción. La aplicación cliente intenta restablecer la conexión a la base de datos principal pero no lo consigue.  
+2. Si el servidor que contiene la base de datos principal da error o se interrumpe la conectividad, se pierde el estado de la conexión y de la transacción. La aplicación cliente intenta restablecer la conexión a la base de datos principal pero no lo consigue.  
   
-3.  La aplicación cliente intenta entonces de forma transparente establecer una conexión a la base de datos de reflejo del servidor asociado. Si lo consigue, la conexión se redirecciona a la base de datos de reflejo, que se convierte entonces en la nueva base de datos principal.  
+3. La aplicación cliente intenta entonces de forma transparente establecer una conexión a la base de datos de reflejo del servidor asociado. Si lo consigue, la conexión se redirecciona a la base de datos de reflejo, que se convierte entonces en la nueva base de datos principal.  
   
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Especificación del asociado de conmutación por error en la cadena de conexión  
  Si proporciona el nombre de un servidor asociado de conmutación por error en la cadena de conexión, el cliente intenta una conexión al asociado de conmutación por error de forma transparente si la base de datos principal no está disponible cuando la aplicación cliente se conecta por primera vez.  

@@ -2,12 +2,12 @@
 title: Compatibilidad de SqlClient para alta disponibilidad y recuperación ante desastres
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213797"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307625"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SqlClient para alta disponibilidad y recuperación ante desastres
 Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) para grupos de disponibilidad AlwaysOn de alta disponibilidad y recuperación ante desastres.  Se agregó la característica de grupos de disponibilidad AlwaysOn para SQL Server 2012. Para obtener más información acerca de los grupos de disponibilidad AlwaysOn, vea los libros en pantalla de SQL Server.  
@@ -27,9 +27,9 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
   
  Mediante programación puede modificar estas palabras clave de cadena de conexión con:  
   
-1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
+1. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
 >  Establecer `MultiSubnetFailover` a `true` no es necesario con [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] o versiones posteriores.
@@ -59,9 +59,9 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
   
  Si el enrutamiento de solo lectura no está vigente, la conexión a una ubicación de réplica secundaria producirá un error en las situaciones siguientes:  
   
-1.  Si la ubicación de réplica secundaria no está configurada para aceptar conexiones.  
+1. Si la ubicación de réplica secundaria no está configurada para aceptar conexiones.  
   
-2.  Si una aplicación usa `ApplicationIntent=ReadWrite` (descrito a continuación) y la ubicación de la réplica secundaria está configurada para acceso de solo lectura.  
+2. Si una aplicación usa `ApplicationIntent=ReadWrite` (descrito a continuación) y la ubicación de la réplica secundaria está configurada para acceso de solo lectura.  
   
  <xref:System.Data.SqlClient.SqlDependency> no se admite en las réplicas secundarias de solo lectura.  
   
@@ -86,11 +86,11 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
 ## <a name="read-only-routing"></a>Enrutamiento de solo lectura  
  El enrutamiento de solo lectura es una característica que puede garantizar la disponibilidad de una réplica de solo lectura de una base de datos. Para habilitar el enrutamiento de solo lectura:  
   
-1.  Debe conectarse a un agente de escucha de grupo de disponibilidad AlwaysOn.  
+1. Debe conectarse a un agente de escucha de grupo de disponibilidad AlwaysOn.  
   
-2.  La palabra clave de cadena de conexión `ApplicationIntent` se debe establecer en `ReadOnly`.  
+2. La palabra clave de cadena de conexión `ApplicationIntent` se debe establecer en `ReadOnly`.  
   
-3.  El administrador de bases de datos debe configurar el grupo de disponibilidad para habilitar el enrutamiento de solo lectura.  
+3. El administrador de bases de datos debe configurar el grupo de disponibilidad para habilitar el enrutamiento de solo lectura.  
   
  Es posible que varias conexiones que usen enrutamiento de solo lectura no se conecten todas a la misma réplica de solo lectura. Los cambios en la sincronización de la base de datos o los cambios en la configuración de enrutamiento del servidor pueden producir conexiones de cliente a distintas réplicas de solo lectura. Para asegurarse de que todas las solicitudes de solo lectura se conectan a la misma réplica de solo lectura, no pase un agente de escucha de grupo de disponibilidad a la palabra clave de cadena de conexión `Data Source`. En su lugar, especifique el nombre de la instancia de solo lectura.  
   

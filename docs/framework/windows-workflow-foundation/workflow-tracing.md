@@ -2,12 +2,12 @@
 title: Traza del flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: 92497768e7e8d720cdcc7c8f2c7c04b4dfcc47b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cd53ed834fdacb639b38346dca831ef4c3e26337
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224941"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321671"
 ---
 # <a name="workflow-tracing"></a>Traza del flujo de trabajo
 La traza del flujo de trabajo ofrece una forma de capturar la información de diagnóstico con los agentes de escucha de seguimiento de .NET Framework. Se puede habilitar la traza si se detecta un problema con la aplicación y se deshabilita de nuevo una vez resuelto el problema. Hay dos maneras de poder habilitar la traza de depuración para los flujos de trabajo. Puede configurarlo con el visor del seguimiento de eventos o puede usar <xref:System.Diagnostics> para enviar los eventos de seguimiento a un archivo.  
@@ -15,13 +15,13 @@ La traza del flujo de trabajo ofrece una forma de capturar la información de di
 ## <a name="enabling-debug-tracing-in-etw"></a>Habilitar la traza de depuración en ETW  
  Para habilitar la traza mediante ETW, habilite el canal de depuración en el visor de eventos:  
   
-1.  Desplácese hasta el nodo de registros analíticos y de depuración en el visor de eventos.  
+1. Desplácese hasta el nodo de registros analíticos y de depuración en el visor de eventos.  
   
-2.  En la vista de árbol en el Visor de eventos, vaya a **aplicaciones -> el Visor de eventos y registros de servicios -> Microsoft -> Windows -> servidor de aplicaciones-aplicaciones**. Haga clic en **aplicaciones de servidor-aplicaciones** y seleccione **Ver -> Mostrar registros analíticos y depuración**. Haga clic en **depurar** y seleccione **Habilitar registro**.  
+2. En la vista de árbol en el Visor de eventos, vaya a **aplicaciones -> el Visor de eventos y registros de servicios -> Microsoft -> Windows -> servidor de aplicaciones-aplicaciones**. Haga clic en **aplicaciones de servidor-aplicaciones** y seleccione **Ver -> Mostrar registros analíticos y depuración**. Haga clic en **depurar** y seleccione **Habilitar registro**.  
   
-3.  Cuando un flujo de trabajo ejecuta la depuración y los seguimientos se emiten en el canal de depuración de ETW, se pueden ver en el Visor de eventos. Vaya a **aplicaciones -> el Visor de eventos y registros de servicios -> Microsoft -> Windows -> servidor de aplicaciones-aplicaciones**. Haga clic en **depurar** y seleccione **actualizar**.  
+3. Cuando un flujo de trabajo ejecuta la depuración y los seguimientos se emiten en el canal de depuración de ETW, se pueden ver en el Visor de eventos. Vaya a **aplicaciones -> el Visor de eventos y registros de servicios -> Microsoft -> Windows -> servidor de aplicaciones-aplicaciones**. Haga clic en **depurar** y seleccione **actualizar**.  
   
-4.  El tamaño predeterminado del búfer de traza analítica es solo de 4 kilobytes (KB); se recomienda aumentar el tamaño a 32 KB. Para ello, realice los pasos siguientes.  
+4. El tamaño predeterminado del búfer de traza analítica es solo de 4 kilobytes (KB); se recomienda aumentar el tamaño a 32 KB. Para ello, realice los pasos siguientes.  
   
     1.  Ejecute el siguiente comando en el directorio del marco de trabajo actual (por ejemplo, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 85cf8f32a3dbf283e75052548f5963e8a7da0ed2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222723"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321060"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Filtrar para crear e inicializar agentes de escucha de seguimiento
 Las clases <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:System.Diagnostics.Trace?displayProperty=nameWithType> envían mensajes a objetos denominados agentes de escucha que reciben y procesan estos mensajes. Un agente de escucha de este tipo, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, se crea y se inicializa automáticamente si la traza o la depuración está habilitada. Si desea que los resultados de <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.Debug> se envíen a otros destinos adicionales, deberá crear e inicializar agentes de escucha adicionales.  
@@ -29,7 +29,7 @@ Las clases <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:
   
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Para crear y usar un agente de escucha de traza mediante un archivo de configuración  
   
-1.  Declare el agente de escucha de traza en el archivo de configuración de la aplicación. Si el agente de escucha que va a crear requiere otros objetos, declárelos también. En el ejemplo siguiente, se muestra cómo crear un agente de escucha denominado `myListener` que escribe en el archivo de texto `TextWriterOutput.log`.  
+1. Declare el agente de escucha de traza en el archivo de configuración de la aplicación. Si el agente de escucha que va a crear requiere otros objetos, declárelos también. En el ejemplo siguiente, se muestra cómo crear un agente de escucha denominado `myListener` que escribe en el archivo de texto `TextWriterOutput.log`.  
   
     ```xml  
     <configuration>  
@@ -44,7 +44,7 @@ Las clases <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:
     </configuration>  
     ```  
   
-2.  Utilice la clase <xref:System.Diagnostics.Trace> en el código para escribir un mensaje a los agentes de escucha de traza.   
+2. Utilice la clase <xref:System.Diagnostics.Trace> en el código para escribir un mensaje a los agentes de escucha de traza.   
   
     ```vb  
     Trace.TraceInformation("Test message.")  

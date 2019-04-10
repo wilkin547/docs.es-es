@@ -2,12 +2,12 @@
 title: Introducción a F# en Visual Studio para Mac
 description: Aprenda a usar F# con Visual Studio para Mac.
 ms.date: 07/03/2018
-ms.openlocfilehash: e37600b2ca8f845ec1068a55ff1f9964d2527742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604176"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331876"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Introducción a F# en Visual Studio para Mac
 
@@ -19,7 +19,7 @@ Uno de los proyectos en Visual Studio para Mac más básicos es la aplicación d
 
 1. En el **archivo** menú, elija **nueva solución**.
 
-2.  En el cuadro de diálogo nuevo proyecto, hay 2 distintas plantillas de aplicación de consola.  Hay uno en otras opciones -> .NET que tiene como destino .NET Framework.  La otra plantilla está en .NET Core -> aplicación destinada a .NET Core.  Cualquier plantilla debería funcionar con el propósito de este artículo.
+2. En el cuadro de diálogo nuevo proyecto, hay 2 distintas plantillas de aplicación de consola.  Hay uno en otras opciones -> .NET que tiene como destino .NET Framework.  La otra plantilla está en .NET Core -> aplicación destinada a .NET Core.  Cualquier plantilla debería funcionar con el propósito de este artículo.
 
 3. En la aplicación de consola, cambie C# a F# si es necesario.  Elija la **siguiente** botón para desplazarse hacia delante.  
 
@@ -116,7 +116,7 @@ Si no lo ha hecho ya, consulte el [paseo F# ](../tour.md), donde abordan algunas
 ## <a name="see-also"></a>Vea también
 
 - [Visual F#](../index.md)
-- [Paseo por F](../tour.md)
+- [Paseo por F#](../tour.md)
 - [F#referencia del lenguaje](../language-reference/index.md)
 - [Inferencia de tipos](../language-reference/type-inference.md)
 - [Referencia de símbolos y el operador](../language-reference/symbol-and-operator-reference/index.md)

@@ -2,12 +2,12 @@
 title: 'Tarea 2: Hospedar el diseñador de flujo de trabajo'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218711"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299272"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tarea 2: Hospedar el diseñador de flujo de trabajo
 Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] en una aplicación de Windows Presentation Foundation (WPF).  
@@ -16,19 +16,19 @@ Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[
   
 ### <a name="to-host-the-workflow-designer"></a>Para hospedar el diseñador de flujo de trabajo  
   
-1.  Abra el proyecto HostingApplication que creó en [tarea 1: Crear una nueva aplicación de Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
+1. Abra el proyecto HostingApplication que creó en [tarea 1: Crear una nueva aplicación de Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
   
-2.  Ajuste el tamaño de la ventana para facilitar el uso de [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Para ello, seleccione **MainWindow** en el diseñador, presione F4 para mostrar la **propiedades** ventana y, en el **diseño** sección no existe, establezca el **deancho** en un valor de 600 y **alto** en un valor de 350.  
+2. Ajuste el tamaño de la ventana para facilitar el uso de [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Para ello, seleccione **MainWindow** en el diseñador, presione F4 para mostrar la **propiedades** ventana y, en el **diseño** sección no existe, establezca el **deancho** en un valor de 600 y **alto** en un valor de 350.  
   
-3.  Establezca el nombre de la cuadrícula seleccionando el **cuadrícula** panel en el diseñador (haga clic en el cuadro de la **MainWindow**) y configuración de la **nombre** propiedad en la parte superior de la  **Propiedades** ventana en "grid1".  
+3. Establezca el nombre de la cuadrícula seleccionando el **cuadrícula** panel en el diseñador (haga clic en el cuadro de la **MainWindow**) y configuración de la **nombre** propiedad en la parte superior de la  **Propiedades** ventana en "grid1".  
   
-4.  En el **propiedades** ventana, haga clic en el botón de puntos suspensivos (**...** ) junto a la `ColumnDefinitions` propiedad para abrir el **Editor de la colección** cuadro de diálogo.  
+4. En el **propiedades** ventana, haga clic en el botón de puntos suspensivos (**...** ) junto a la `ColumnDefinitions` propiedad para abrir el **Editor de la colección** cuadro de diálogo.  
   
-5.  En el **Editor de la colección** cuadro de diálogo, haga clic en el **agregar** tres veces para insertar tres columnas en el diseño de botón. La primera columna contendrá el **cuadro de herramientas**, la segunda columna va a hospedar el [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], y la tercera columna se utilizará para el inspector de propiedad.  
+5. En el **Editor de la colección** cuadro de diálogo, haga clic en el **agregar** tres veces para insertar tres columnas en el diseño de botón. La primera columna contendrá el **cuadro de herramientas**, la segunda columna va a hospedar el [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], y la tercera columna se utilizará para el inspector de propiedad.  
   
-6.  Establecer el `Width` propiedad de la columna central en el valor "4 *".  
+6. Establecer el `Width` propiedad de la columna central en el valor "4 *".  
   
-7.  Haga clic en **Aceptar** para guardar los cambios. El siguiente XAML se agrega a su archivo MainWindow.xaml:  
+7. Haga clic en **Aceptar** para guardar los cambios. El siguiente XAML se agrega a su archivo MainWindow.xaml:  
   
     ```xml  
     <Grid Name="grid1">  
@@ -40,7 +40,7 @@ Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[
     </Grid>  
     ```  
   
-8.  En **el Explorador de soluciones**, haga clic en MainWindow.xaml y seleccione **ver código**. Modifique el código siguiendo estos pasos:  
+8. En **el Explorador de soluciones**, haga clic en MainWindow.xaml y seleccione **ver código**. Modifique el código siguiendo estos pasos:  
   
     1.  Agregue los siguientes espacios de nombres:  
   
