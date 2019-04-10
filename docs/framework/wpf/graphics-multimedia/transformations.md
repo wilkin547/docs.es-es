@@ -16,22 +16,23 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 614f4fac288e53677d072c6c88edfa46df18f40a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227239"
 ---
-# <a name="transformations"></a><span data-ttu-id="8f6bf-102">Transformaciones</span><span class="sxs-lookup"><span data-stu-id="8f6bf-102">Transformations</span></span>
-<span data-ttu-id="8f6bf-103">Las transformaciones se usan para girar, escalar, traducir o sesgar <xref:System.Windows.FrameworkElement> objetos.</span><span class="sxs-lookup"><span data-stu-id="8f6bf-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="95124-102">Transformaciones</span><span class="sxs-lookup"><span data-stu-id="95124-102">Transformations</span></span>
+<span data-ttu-id="95124-103">Las transformaciones se usan para girar, escalar, traducir o sesgar <xref:System.Windows.FrameworkElement> objetos.</span><span class="sxs-lookup"><span data-stu-id="95124-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8f6bf-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="8f6bf-104">In This Section</span></span>  
- [<span data-ttu-id="8f6bf-105">Información general sobre transformaciones</span><span class="sxs-lookup"><span data-stu-id="8f6bf-105">Transforms Overview</span></span>](transforms-overview.md)  
- [<span data-ttu-id="8f6bf-106">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="8f6bf-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="95124-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="95124-104">In This Section</span></span>  
+ [<span data-ttu-id="95124-105">Información general sobre transformaciones</span><span class="sxs-lookup"><span data-stu-id="95124-105">Transforms Overview</span></span>](transforms-overview.md)  
+ [<span data-ttu-id="95124-106">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="95124-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="8f6bf-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="8f6bf-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95124-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="95124-107">See also</span></span>
+
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="8f6bf-108">Gráficos y multimedia</span><span class="sxs-lookup"><span data-stu-id="8f6bf-108">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="8f6bf-109">Información general sobre la representación de gráficos en WPF</span><span class="sxs-lookup"><span data-stu-id="8f6bf-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="8f6bf-110">Diseño</span><span class="sxs-lookup"><span data-stu-id="8f6bf-110">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="95124-108">Gráficos y multimedia</span><span class="sxs-lookup"><span data-stu-id="95124-108">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="95124-109">Información general sobre la representación de gráficos en WPF</span><span class="sxs-lookup"><span data-stu-id="95124-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="95124-110">Diseño</span><span class="sxs-lookup"><span data-stu-id="95124-110">Layout</span></span>](../advanced/layout.md)
