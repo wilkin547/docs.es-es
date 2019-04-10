@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 8089c857d2406f8cfb357ba2efe188ad84605541
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377034"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335327"
 ---
 # <a name="the-ink-threading-model"></a>Modelo de subprocesamiento de entrada manuscrita
 Una de las ventajas de la tinta de Tablet PC es que asemeja mucho a escribir con un lápiz normal y el papel.  Para lograr esto, el lápiz de tablet PC recopila datos de entrada a una velocidad mucho mayor que un mouse y representa la entrada de lápiz mientras el usuario escribe.  Subproceso de interfaz (IU) de usuario de la aplicación no es suficiente para recopilar datos del lápiz y representar entrada manuscrita, porque puede quedarse bloqueado.  Para resolver esto, un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación usa dos subprocesos adicionales cuando un usuario escribe con el lápiz.  
@@ -38,7 +38,7 @@ Una de las ventajas de la tinta de Tablet PC es que asemeja mucho a escribir con
   
  ![Modelo de subprocesos mientras dibuja un trazo. ](./media/inkthreading-drawingink.png "InkThreading_DrawingInk")  
   
-1.  Acciones que se producen mientras el usuario dibuja el trazo  
+1. Acciones que se producen mientras el usuario dibuja el trazo  
   
     1.  Cuando el usuario dibuja un trazo, los puntos del lápiz llegaran en el subproceso del lápiz.  Complementos del lápiz, incluido el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, acepte los puntos del lápiz en el subproceso del lápiz y tienen la oportunidad de modificarlos antes el <xref:System.Windows.Controls.InkCanvas> los recibe.  
   
@@ -46,7 +46,7 @@ Una de las ventajas de la tinta de Tablet PC es que asemeja mucho a escribir con
   
     3.  El <xref:System.Windows.Controls.InkCanvas> recibe los puntos del lápiz en el subproceso de interfaz de usuario.  
   
-2.  Acciones que se produzcan después de que el usuario termina el trazo  
+2. Acciones que se produzcan después de que el usuario termina el trazo  
   
     1.  Cuando el usuario termina de dibujar el trazo, el <xref:System.Windows.Controls.InkCanvas> crea un <xref:System.Windows.Ink.Stroke> objeto y lo agrega a la <xref:System.Windows.Controls.InkPresenter>, que representa de forma estática.  
   
@@ -61,13 +61,13 @@ Una de las ventajas de la tinta de Tablet PC es que asemeja mucho a escribir con
   
  En el diagrama anterior, realiza el siguiente comportamiento:  
   
-1.  `StylusPlugin1` modifica los valores de x e y.  
+1. `StylusPlugin1` modifica los valores de x e y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> recibe los puntos del lápiz modificados y los representa en el subproceso de representación dinámica.  
+2. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> recibe los puntos del lápiz modificados y los representa en el subproceso de representación dinámica.  
   
-3.  `StylusPlugin2` recibe los puntos del lápiz modificada y modifica aún más los valores de x e y.  
+3. `StylusPlugin2` recibe los puntos del lápiz modificada y modifica aún más los valores de x e y.  
   
-4.  La aplicación recopila los puntos del lápiz y, cuando el usuario termina el trazo, representa el trazo estáticamente.  
+4. La aplicación recopila los puntos del lápiz y, cuando el usuario termina el trazo, representa el trazo estáticamente.  
   
  Suponga que `stylusPlugin1` restringe los puntos del lápiz a un rectángulo y `stylusPlugin2` traduce los puntos del lápiz a la derecha.  En el escenario anterior, el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> recibe los puntos del lápiz restringidos, pero no los puntos del lápiz traducidos.  Cuando el usuario dibuja el trazo, el trazo se representa dentro de los límites del rectángulo, pero no aparece el trazo que se traducirá hasta que el usuario levanta el lápiz.  
   
@@ -83,15 +83,15 @@ Una de las ventajas de la tinta de Tablet PC es que asemeja mucho a escribir con
   
  ![Diagrama de subprocesos de tinta](./media/inkthreading-visualtree.png "InkThreading_VisualTree")  
   
-1.  El usuario inicia el trazo.  
+1. El usuario inicia el trazo.  
   
     1.  El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> crea el árbol visual.  
   
-2.  El usuario dibuja el trazo.  
+2. El usuario dibuja el trazo.  
   
     1.  El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> compila el árbol visual.  
   
-3.  El usuario termina el trazo.  
+3. El usuario termina el trazo.  
   
     1.  El <xref:System.Windows.Controls.InkPresenter> el trazo se agrega a su árbol visual.  
   

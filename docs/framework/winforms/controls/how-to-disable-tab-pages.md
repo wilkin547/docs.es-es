@@ -9,28 +9,28 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: ace713a635b5d9c4b73f85cd3d378c0f1ff3dba1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 21592fdd74c43d40310e0fcbc96af6565a42e08b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107580"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336075"
 ---
 # <a name="how-to-disable-tab-pages"></a>Filtrar para deshabilitar fichas
 En algunas ocasiones, deseará restringir el acceso a datos que están disponibles dentro de la aplicación de Windows Forms. Un ejemplo de esto podría ser si tiene datos que se muestran en las páginas de fichas de un control de ficha; los administradores podrían tener información sobre una página de ficha que desee restringir invitados o de los usuarios de nivel inferior.  
   
 ### <a name="to-disable-tab-pages-programmatically"></a>Para deshabilitar páginas de fichas mediante programación  
   
-1.  Escribir código para controlar el control de ficha <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> eventos. Este es el evento que se desencadena cuando el usuario cambia de una ficha a la siguiente.  
+1. Escribir código para controlar el control de ficha <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> eventos. Este es el evento que se desencadena cuando el usuario cambia de una ficha a la siguiente.  
   
-2.  Compruebe las credenciales. Dependiendo de la información presentada, es posible que desee comprobar el usuario haya iniciado sesión con el nombre de usuario o alguna otra forma de credenciales antes de permitir al usuario ver la pestaña.  
+2. Compruebe las credenciales. Dependiendo de la información presentada, es posible que desee comprobar el usuario haya iniciado sesión con el nombre de usuario o alguna otra forma de credenciales antes de permitir al usuario ver la pestaña.  
   
-3.  Si el usuario tiene las credenciales adecuadas, muestre la ficha que se hizo clic. Si el usuario no tiene las credenciales adecuadas, mostrar un cuadro de mensaje u otra interfaz de usuario que indica que no tiene acceso y vuelva a la pestaña inicial.  
+3. Si el usuario tiene las credenciales adecuadas, muestre la ficha que se hizo clic. Si el usuario no tiene las credenciales adecuadas, mostrar un cuadro de mensaje u otra interfaz de usuario que indica que no tiene acceso y vuelva a la pestaña inicial.  
   
     > [!NOTE]
     >  Al implementar esta funcionalidad en sus aplicaciones de producción, puede realizar esta comprobación de credenciales durante el formulario <xref:System.Windows.Forms.Form.Load> eventos. Esto le permitirá ocultar la ficha antes de que se muestra ninguna interfaz de usuario, que es un enfoque mucho más limpio a la programación. La metodología utilizada a continuación (comprobación de credenciales y deshabilitación de la ficha durante el <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> evento) es para fines ilustrativos.  
   
-4.  Opcionalmente, si tiene más de dos páginas de fichas, muestre una página diferente del original.  
+4. Opcionalmente, si tiene más de dos páginas de fichas, muestre una página diferente del original.  
   
      En el ejemplo siguiente, un <xref:System.Windows.Forms.CheckBox> control se usa en lugar de comprobar las credenciales, como los criterios para el acceso a la pestaña variará por aplicación. Cuando el <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> se genera el evento, si la comprobación de credenciales es true (es decir, se activa la casilla de verificación) y la pestaña seleccionada es `TabPage2` (la ficha con la información confidencial, en este ejemplo), a continuación, `TabPage2` se muestra. En caso contrario, `TabPage3` se muestra y se muestra un cuadro de mensaje para el usuario, que indica que no tiene privilegios de acceso adecuados. El código siguiente supone un formulario con un <xref:System.Windows.Forms.CheckBox> control (`CredentialCheck`) y un <xref:System.Windows.Forms.TabControl> control con tres páginas de ficha.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971798"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333839"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Filtrar Definir un parámetro para un procedimiento (Visual Basic)
 Un *parámetro* permite pasar un valor al procedimiento cuando lo llama el código de llamada. Declarar cada parámetro para un procedimiento de la misma manera que se declara una variable, especificando su nombre y tipo de datos. También especifica el mecanismo de paso, y si el parámetro es opcional.  
@@ -22,17 +22,17 @@ Un *parámetro* permite pasar un valor al procedimiento cuando lo llama el códi
   
 ### <a name="to-define-a-procedure-parameter"></a>Para definir un parámetro de procedimiento  
   
-1.  En la declaración de procedimiento, agregue el nombre de parámetro a la lista de parámetros del procedimiento, sepárelo de otros parámetros mediante comas.  
+1. En la declaración de procedimiento, agregue el nombre de parámetro a la lista de parámetros del procedimiento, sepárelo de otros parámetros mediante comas.  
   
-2.  Decida el tipo de datos del parámetro.  
+2. Decida el tipo de datos del parámetro.  
   
-3.  Siga el nombre del parámetro con un `As` cláusula para especificar el tipo de datos.  
+3. Siga el nombre del parámetro con un `As` cláusula para especificar el tipo de datos.  
   
-4.  Decidir el mecanismo de paso que desee para el parámetro. Normalmente se pasa un parámetro por valor, a menos que desee que el procedimiento para que pueda cambiar su valor en el código de llamada.  
+4. Decidir el mecanismo de paso que desee para el parámetro. Normalmente se pasa un parámetro por valor, a menos que desee que el procedimiento para que pueda cambiar su valor en el código de llamada.  
   
-5.  Delante del nombre de parámetro [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) para especificar el mecanismo de paso. Para obtener más información, consulte [las diferencias entre pasar un argumento por valor y por referencia](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5. Delante del nombre de parámetro [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) para especificar el mecanismo de paso. Para obtener más información, consulte [las diferencias entre pasar un argumento por valor y por referencia](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6.  Si el parámetro es opcional, preceder el mecanismo de paso con [opcional](../../../../visual-basic/language-reference/modifiers/optional.md) y siga el tipo de datos de parámetro con un signo igual (`=`) y un valor predeterminado.  
+6. Si el parámetro es opcional, preceder el mecanismo de paso con [opcional](../../../../visual-basic/language-reference/modifiers/optional.md) y siga el tipo de datos de parámetro con un signo igual (`=`) y un valor predeterminado.  
   
      En el ejemplo siguiente se define el contorno de un `Sub` procedimiento con tres parámetros. Los dos primeros son necesarios y el tercero es opcional. Las declaraciones de parámetro se separan en la lista de parámetros mediante comas.  
   
@@ -55,10 +55,10 @@ Un *parámetro* permite pasar un valor al procedimiento cuando lo llama el códi
 ## <a name="see-also"></a>Vea también
 
 - [Procedimientos](./index.md)
-- [Subprocedimientos](./sub-procedures.md)
+- [Procedimientos Sub](./sub-procedures.md)
 - [Procedimientos de función](./function-procedures.md)
-- [Cómo: Pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)
-- [Paso de argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)
+- [Filtrar para pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)
+- [Pasar argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)
 - [Procedimientos recursivos](./recursive-procedures.md)
 - [Sobrecarga de procedimientos](./procedure-overloading.md)
 - [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 0d4a17528ca3eb81f93419491766e370be551b1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c1c3d8529662c1e1f1a3d28e3853d31f5d940ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153132"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336516"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Filtrar para definir un icono para un botón de la barra de herramientas
 > [!NOTE]
@@ -28,11 +28,11 @@ ms.locfileid: "59153132"
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Para establecer un icono para un botón de barra de herramientas mediante programación  
   
-1.  En un procedimiento, una instancia de un <xref:System.Windows.Forms.ImageList> componente y un <xref:System.Windows.Forms.ToolBar> control.  
+1. En un procedimiento, una instancia de un <xref:System.Windows.Forms.ImageList> componente y un <xref:System.Windows.Forms.ToolBar> control.  
   
-2.  En el mismo procedimiento, asigne una imagen a la <xref:System.Windows.Forms.ImageList> componente.  
+2. En el mismo procedimiento, asigne una imagen a la <xref:System.Windows.Forms.ImageList> componente.  
   
-3.  En el mismo procedimiento, asigne el <xref:System.Windows.Forms.ImageList> el control a la <xref:System.Windows.Forms.ToolBar> controlar y asignar la <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> propiedad de los botones de barra de herramientas individuales.  
+3. En el mismo procedimiento, asigne el <xref:System.Windows.Forms.ImageList> el control a la <xref:System.Windows.Forms.ToolBar> controlar y asignar la <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> propiedad de los botones de barra de herramientas individuales.  
   
      En el ejemplo de código siguiente establece la ruta de acceso para la ubicación de la imagen es la **Mis documentos** carpeta. Hecho esto, ya que puede asumir que la mayoría de los equipos que ejecutan el sistema operativo de Windows tendrán este directorio. Esto permite también a los usuarios con niveles de acceso mínimos ejecutar la aplicación de forma segura. El ejemplo siguiente se da por supuesto un formulario con un <xref:System.Windows.Forms.PictureBox> control ya se ha agregado.  
   

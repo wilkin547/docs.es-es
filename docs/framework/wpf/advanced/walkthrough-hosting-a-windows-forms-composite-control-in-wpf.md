@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: f9e0477b2c186ea9b23886f460caf965a5db0244
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 90d0e2f3c6ebab070809a4813c87da3539fd14f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174361"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337856"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Tutorial: Hospedar un control compuesto de formularios Windows Forms en WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Proporciona un entorno rico para crear aplicaciones. Sin embargo, cuando tiene una inversión sustancial [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] código, puede ser más efectivo reutilizar al menos parte de ese código en su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación en lugar de a escribirlo desde cero. El escenario más común es cuando tiene controles de Windows Forms existentes. En algunos casos, incluso podría no tener acceso al código fuente de estos controles. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Proporciona un procedimiento sencillo para hospedar estos controles en un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación. Por ejemplo, puede usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para la mayoría de la programación mientras hospeda sus especializada <xref:System.Windows.Forms.DataGridView> controles.  
@@ -44,17 +44,17 @@ Necesita Visual Studio para completar este tutorial.
 ### <a name="creating-the-project"></a>Crear el proyecto  
  Para iniciar el proyecto:  
   
-1.  Iniciar [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]y abra el **nuevo proyecto** cuadro de diálogo.  
+1. Iniciar [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]y abra el **nuevo proyecto** cuadro de diálogo.  
   
-2.  En la categoría de ventana, seleccione el **biblioteca de controles de Windows Forms** plantilla.  
+2. En la categoría de ventana, seleccione el **biblioteca de controles de Windows Forms** plantilla.  
   
-3.  Asigne al nuevo proyecto el nombre de `MyControls`.  
+3. Asigne al nuevo proyecto el nombre de `MyControls`.  
   
-4.  Para la ubicación, especifique una carpeta con el nombre de nivel superior, como `WpfHostingWindowsFormsControl`. Más tarde, colocará la aplicación host en esta carpeta.  
+4. Para la ubicación, especifique una carpeta con el nombre de nivel superior, como `WpfHostingWindowsFormsControl`. Más tarde, colocará la aplicación host en esta carpeta.  
   
-5.  Haga clic en **Aceptar** para crear el proyecto. El proyecto predeterminado contiene un solo control denominado `UserControl1`.  
+5. Haga clic en **Aceptar** para crear el proyecto. El proyecto predeterminado contiene un solo control denominado `UserControl1`.  
   
-6.  En el Explorador de soluciones, cambie el nombre `UserControl1` a `MyControl1`.  
+6. En el Explorador de soluciones, cambie el nombre `UserControl1` a `MyControl1`.  
   
  El proyecto debe tener referencias a los siguientes archivos DLL del sistema. Si alguno de estos archivos DLL no está incluido de forma predeterminada, agréguelo al proyecto.  
   
@@ -112,19 +112,19 @@ Necesita Visual Studio para completar este tutorial.
 ### <a name="giving-the-assembly-a-strong-name-and-building-the-assembly"></a>Dar un nombre seguro al ensamblado y compilar el ensamblado
  Para este ensamblado hacer referencia a un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación, debe tener un nombre seguro. Para crear un nombre seguro, cree un archivo de clave con Sn.exe y agréguelo al proyecto.
 
-1.  Abra un símbolo del sistema de [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]. Para ello, haga clic en el **iniciar** menú y, a continuación, seleccione **todos los programas/Microsoft/Visual Studio 2010 símbolo Visual Studio Tools y Visual Studio**. Esto inicia una ventana de consola con variables de entorno personalizadas.
+1. Abra un símbolo del sistema de [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]. Para ello, haga clic en el **iniciar** menú y, a continuación, seleccione **todos los programas/Microsoft/Visual Studio 2010 símbolo Visual Studio Tools y Visual Studio**. Esto inicia una ventana de consola con variables de entorno personalizadas.
 
-2.  En el símbolo del sistema, use el `cd` comando para ir a la carpeta del proyecto.
+2. En el símbolo del sistema, use el `cd` comando para ir a la carpeta del proyecto.
 
-3.  Ejecute el comando siguiente para generar un archivo de clave denominado MyControls.snk.
+3. Ejecute el comando siguiente para generar un archivo de clave denominado MyControls.snk.
 
     ```
     Sn.exe -k MyControls.snk
     ```
 
-4.  Para incluir el archivo de clave en el proyecto, haga clic en el nombre del proyecto en el Explorador de soluciones y, a continuación, haga clic en **propiedades**. En el Diseñador de proyectos, haga clic en el **firma** ficha, seleccione el **firmar el ensamblado** casilla de verificación y, a continuación, vaya al archivo de clave.
+4. Para incluir el archivo de clave en el proyecto, haga clic en el nombre del proyecto en el Explorador de soluciones y, a continuación, haga clic en **propiedades**. En el Diseñador de proyectos, haga clic en el **firma** ficha, seleccione el **firmar el ensamblado** casilla de verificación y, a continuación, vaya al archivo de clave.
 
-5.  Compile la solución. La compilación generará un archivo DLL denominado MyControls.dll.
+5. Compile la solución. La compilación generará un archivo DLL denominado MyControls.dll.
 
 ## <a name="implementing-the-wpf-host-application"></a>Implementar la aplicación host de WPF
  El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hospedar la aplicación usa el <xref:System.Windows.Forms.Integration.WindowsFormsHost> control para hospedar `MyControl1`. La aplicación controla el `OnButtonClick` eventos para recibir los datos del control. También tiene una colección de botones de opción que le permiten cambiar algunas de las propiedades del control desde el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación. En la ilustración siguiente se muestra la aplicación finalizada.
@@ -136,25 +136,25 @@ La siguiente imagen muestra la aplicación completa, incluido el control incrust
 ### <a name="creating-the-project"></a>Crear el proyecto
  Para iniciar el proyecto:
 
-1.  Abra [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]y seleccione **nuevo proyecto**.
+1. Abra [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]y seleccione **nuevo proyecto**.
 
-2.  En la categoría de ventana, seleccione el **aplicación WPF** plantilla.
+2. En la categoría de ventana, seleccione el **aplicación WPF** plantilla.
 
-3.  Asigne al nuevo proyecto el nombre de `WpfHost`.
+3. Asigne al nuevo proyecto el nombre de `WpfHost`.
 
-4.  Para la ubicación, especifique la misma carpeta de nivel superior que contiene el proyecto MyControls.
+4. Para la ubicación, especifique la misma carpeta de nivel superior que contiene el proyecto MyControls.
 
-5.  Haga clic en **Aceptar** para crear el proyecto.
+5. Haga clic en **Aceptar** para crear el proyecto.
 
  También deberá agregar referencias a la DLL que contiene `MyControl1` y a otros ensamblados.
 
-1.  Haga clic en el nombre del proyecto en el Explorador de soluciones y seleccione **Agregar referencia**.
+1. Haga clic en el nombre del proyecto en el Explorador de soluciones y seleccione **Agregar referencia**.
 
-2.  Haga clic en el **examinar** pestaña y vaya a la carpeta que contiene MyControls.dll. En este tutorial, esta carpeta es MyControls\bin\Debug.
+2. Haga clic en el **examinar** pestaña y vaya a la carpeta que contiene MyControls.dll. En este tutorial, esta carpeta es MyControls\bin\Debug.
 
-3.  Seleccione MyControls.dll y, a continuación, haga clic en **Aceptar**.
+3. Seleccione MyControls.dll y, a continuación, haga clic en **Aceptar**.
 
-4.  Agregue una referencia al ensamblado WindowsFormsIntegration, denominado WindowsFormsIntegration.dll.
+4. Agregue una referencia al ensamblado WindowsFormsIntegration, denominado WindowsFormsIntegration.dll.
 
 ### <a name="implementing-the-basic-layout"></a>Implementar el diseño básico
  El [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] del host de aplicación se implementa en MainWindow.xaml. Este archivo contiene [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] marcado que define el diseño y hospeda el control de Windows Forms. La aplicación se divide en tres regiones:

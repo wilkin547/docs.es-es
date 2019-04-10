@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: d1676cea520c42a40082e31cce9de9797b06e9ee
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fd6240faf702ccb5e543bfd6a7779284f38d8850
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814047"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337245"
 ---
 # <a name="-main"></a>-main
 Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.  
@@ -37,13 +37,13 @@ Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>Para establecer - main en el entorno de desarrollo integrado de Visual Studio  
   
-1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.  
+1. Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.  
   
-2.  Haga clic en la pestaña **Aplicación** .  
+2. Haga clic en la pestaña **Aplicación** .  
   
-3.  Asegúrese de que el **Habilitar marco de trabajo de aplicación** no está activada la casilla de verificación.  
+3. Asegúrese de que el **Habilitar marco de trabajo de aplicación** no está activada la casilla de verificación.  
   
-4.  Modifique el valor en el **objeto Startup** cuadro.  
+4. Modifique el valor en el **objeto Startup** cuadro.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `T2.vb` y `T3.vb`, especificando que el `Sub Main` procedimiento se encuentra en la `Test2` clase.  

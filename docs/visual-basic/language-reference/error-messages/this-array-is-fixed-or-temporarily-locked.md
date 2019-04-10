@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-ms.openlocfilehash: f0b80e2be007ff44569365f37a2331f1ecd7a216
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839410"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337973"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Esta matriz es fija o está bloqueada temporalmente (Visual Basic)
 Este error tiene las siguientes causas posibles:  
@@ -22,11 +22,11 @@ Este error tiene las siguientes causas posibles:
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Convertir la matriz original dinámico en lugar de fija declarándola con `ReDim` (si la matriz se declara dentro de un procedimiento,) o declarando sin especificar el número de elementos (si la matriz se declara en el nivel de módulo.  
+1. Convertir la matriz original dinámico en lugar de fija declarándola con `ReDim` (si la matriz se declara dentro de un procedimiento,) o declarando sin especificar el número de elementos (si la matriz se declara en el nivel de módulo.  
   
-2.  Determinar si realmente necesita pasar el elemento, ya que es visible dentro de todos los procedimientos en el módulo.  
+2. Determinar si realmente necesita pasar el elemento, ya que es visible dentro de todos los procedimientos en el módulo.  
   
-3.  Determinar la causa del bloqueo del `Variant` y soluciónelo.  
+3. Determinar la causa del bloqueo del `Variant` y soluciónelo.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: a1d138bcdc2c4637cd6aa035360ff258d3fe7100
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178794"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338103"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados
 Si los componentes están definidos por un proyecto en la solución actualmente abierta, estas aparecerán automáticamente en el **cuadro de herramientas**, con ninguna acción requerida por el usuario. Puede rellenar manualmente el **cuadro de herramientas** con componentes personalizados mediante el uso de la [elegir elementos de cuadro de diálogo) (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), pero la **cuadro de herramientas** tiene en cuenta de elementos de la solución de resultados de la compilación con las siguientes características:  
@@ -45,31 +45,31 @@ Si los componentes están definidos por un proyecto en la solución actualmente 
   
 #### <a name="to-create-the-project"></a>Para crear el proyecto  
   
-1.  Cree un proyecto de aplicación basada en Windows llamado `ToolboxExample` (**archivo** > **New** > **proyecto**  >  **Visual C#** o **Visual Basic** > **escritorio clásico de** > **aplicación de Windows Forms**).  
+1. Cree un proyecto de aplicación basada en Windows llamado `ToolboxExample` (**archivo** > **New** > **proyecto**  >  **Visual C#** o **Visual Basic** > **escritorio clásico de** > **aplicación de Windows Forms**).  
   
-2.  Agregue un nuevo componente al proyecto. Asígnele el nombre `DemoComponent`.  
+2. Agregue un nuevo componente al proyecto. Asígnele el nombre `DemoComponent`.  
   
      Para obtener más información, vea [Cómo: Agregar nuevos elementos de proyecto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)).  
   
-3.  Compile el proyecto.  
+3. Compile el proyecto.  
   
-4.  Desde el **herramientas** menú, haga clic en el **opciones** elemento. Haga clic en **General** bajo el **Diseñador de Windows Forms** de elementos y asegúrese de que el **AutoToolboxPopulate** opción está establecida en **True**.  
+4. Desde el **herramientas** menú, haga clic en el **opciones** elemento. Haga clic en **General** bajo el **Diseñador de Windows Forms** de elementos y asegúrese de que el **AutoToolboxPopulate** opción está establecida en **True**.  
   
 ## <a name="creating-an-instance-of-a-custom-component"></a>Creación de una instancia de un componente personalizado  
  El siguiente paso es crear una instancia del componente personalizado en el formulario. Dado que el **cuadro de herramientas** automáticamente cuentas para el componente nuevo, esto es tan fácil como crear cualquier otro componente o control.  
   
 #### <a name="to-create-an-instance-of-a-custom-component"></a>Para crear una instancia de un componente personalizado  
   
-1.  Abra el formulario del proyecto en el **Diseñador de formularios**.  
+1. Abra el formulario del proyecto en el **Diseñador de formularios**.  
   
-2.  En el **cuadro de herramientas**, haga clic en la nueva ficha denominada **Componentes ToolboxExample**.  
+2. En el **cuadro de herramientas**, haga clic en la nueva ficha denominada **Componentes ToolboxExample**.  
   
      Al hacer clic en la pestaña, verá **DemoComponent**.  
   
     > [!NOTE]
     >  Por motivos de rendimiento, los componentes en el área rellena automáticamente de la **cuadro de herramientas** no mostrar mapas de bits personalizados y el <xref:System.Drawing.ToolboxBitmapAttribute> no se admite. Para mostrar un icono para un componente personalizado en el **cuadro de herramientas**, utilice el **elegir elementos del cuadro de herramientas** cuadro de diálogo para cargar el componente.  
   
-3.  Arrastre el componente al formulario.  
+3. Arrastre el componente al formulario.  
   
      Se crea una instancia del componente y se agrega a la **Bandeja de componentes**.  
   
@@ -78,15 +78,15 @@ Si los componentes están definidos por un proyecto en la solución actualmente 
   
 #### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>Para experimentar con el efecto en el cuadro de herramientas de descarga y carga de componentes  
   
-1.  Descargue el proyecto de la solución.  
+1. Descargue el proyecto de la solución.  
   
      Para obtener más información sobre cómo descargar los proyectos, vea [Cómo: Descargar y recargar proyectos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/tt479x1t(v=vs.100)). Si se le solicite guardar, elija **Sí**.  
   
-2.  Agregue un nuevo **aplicación Windows** proyecto a la solución. Abra el formulario en el **diseñador**.  
+2. Agregue un nuevo **aplicación Windows** proyecto a la solución. Abra el formulario en el **diseñador**.  
   
      El **Componentes ToolboxExample** ficha desde el proyecto anterior es ahora han desaparecido.  
   
-3.  Volver a cargar el `ToolboxExample` proyecto.  
+3. Volver a cargar el `ToolboxExample` proyecto.  
   
      El **Componentes ToolboxExample** pestaña ahora vuelve a aparecer.  
   

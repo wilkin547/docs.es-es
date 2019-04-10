@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 0bc7c9d09922b7fbef534e6b58389ca343cc1e13
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974398"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333917"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Filtrar Pasar argumentos a un procedimiento (Visual Basic)
 Cuando se llama a un procedimiento, siga el nombre del procedimiento con una lista de argumentos entre paréntesis. Se proporciona un argumento correspondiente a cada parámetro necesario que se define el procedimiento y, opcionalmente, puede proporcionar argumentos a la `Optional` parámetros. Si no se suministra un `Optional` parámetro de la llamada, debe incluir una coma para marcar su lugar en la lista de argumentos si está proporcionando los argumentos subsiguientes.  
@@ -27,15 +27,15 @@ Cuando se llama a un procedimiento, siga el nombre del procedimiento con una lis
   
 ### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>Para pasar uno o más argumentos a un procedimiento  
   
-1.  En la instrucción de llamada, siga el nombre del procedimiento con paréntesis.  
+1. En la instrucción de llamada, siga el nombre del procedimiento con paréntesis.  
   
-2.  Dentro de los paréntesis, coloque una lista de argumentos. Incluir un argumento para cada parámetro necesario que el procedimiento define y separe los argumentos con comas.  
+2. Dentro de los paréntesis, coloque una lista de argumentos. Incluir un argumento para cada parámetro necesario que el procedimiento define y separe los argumentos con comas.  
   
-3.  Asegúrese de que cada argumento es una expresión válida que se evalúa como un tipo de datos convertible al tipo el procedimiento se define para el parámetro correspondiente.  
+3. Asegúrese de que cada argumento es una expresión válida que se evalúa como un tipo de datos convertible al tipo el procedimiento se define para el parámetro correspondiente.  
   
-4.  Si se define un parámetro como [opcional](../../../../visual-basic/language-reference/modifiers/optional.md), puede incluirlo en la lista de argumentos u omitirlo. Si se omite, el procedimiento utiliza el valor predeterminado definido para ese parámetro.  
+4. Si se define un parámetro como [opcional](../../../../visual-basic/language-reference/modifiers/optional.md), puede incluirlo en la lista de argumentos u omitirlo. Si se omite, el procedimiento utiliza el valor predeterminado definido para ese parámetro.  
   
-5.  Si se omite un argumento para un `Optional` parámetro y hay otro parámetro después de él en la lista de parámetros, puede marcar el lugar del argumento omitido por una coma adicional en la lista de argumentos.  
+5. Si se omite un argumento para un `Optional` parámetro y hay otro parámetro después de él en la lista de parámetros, puede marcar el lugar del argumento omitido por una coma adicional en la lista de argumentos.  
   
      El ejemplo siguiente se llama a la de Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> función.  
   
@@ -47,12 +47,12 @@ Cuando se llama a un procedimiento, siga el nombre del procedimiento con una lis
   
 ## <a name="see-also"></a>Vea también
 
-- [Subprocedimientos](./sub-procedures.md)
+- [Procedimientos Sub](./sub-procedures.md)
 - [Procedimientos de función](./function-procedures.md)
-- [Procedimientos de propiedades](./property-procedures.md)
-- [Procedimientos de operadores](./operator-procedures.md)
-- [Cómo: Definir un parámetro para un procedimiento](./how-to-define-a-parameter-for-a-procedure.md)
-- [Paso de argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)
+- [Procedimientos de propiedad](./property-procedures.md)
+- [Procedimientos de operador](./operator-procedures.md)
+- [Filtrar para definir un parámetro para un procedimiento](./how-to-define-a-parameter-for-a-procedure.md)
+- [Pasar argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)
 - [Procedimientos recursivos](./recursive-procedures.md)
 - [Sobrecarga de procedimientos](./procedure-overloading.md)
 - [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

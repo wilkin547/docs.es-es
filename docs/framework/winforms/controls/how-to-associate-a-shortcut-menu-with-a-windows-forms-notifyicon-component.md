@@ -10,12 +10,12 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: 702a848631ce45c0efcb8eadfdf64074b454ac7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f2a086cc25eb6996b2643742a887bccf481916d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097995"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337063"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Filtrar para asociar un menú contextual con un componente NotifyIcon de formularios Windows Forms
 > [!NOTE]
@@ -28,23 +28,23 @@ ms.locfileid: "59097995"
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>Para asociar un menú contextual con el componente NotifyIcon en tiempo de diseño  
   
-1.  Agregar un <xref:System.Windows.Forms.NotifyIcon> al formulario y establecer las propiedades importantes, como el <xref:System.Windows.Forms.NotifyIcon.Icon%2A> y <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propiedades.  
+1. Agregar un <xref:System.Windows.Forms.NotifyIcon> al formulario y establecer las propiedades importantes, como el <xref:System.Windows.Forms.NotifyIcon.Icon%2A> y <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propiedades.  
   
      Para obtener más información, vea [Cómo: Agregar iconos de aplicación a la barra de tareas con el Windows Forms control NotifyIcon](app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
-2.  Agregar un <xref:System.Windows.Forms.ContextMenu> al formulario de Windows.  
+2. Agregar un <xref:System.Windows.Forms.ContextMenu> al formulario de Windows.  
   
      Agregar elementos de menú al menú contextual que representan los comandos que desea que estén disponibles en tiempo de ejecución. También es un buen momento para agregar mejoras a estos elementos de menú, como las claves de acceso.  
   
-3.  Establecer el <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propiedad de la <xref:System.Windows.Forms.NotifyIcon> componente en el menú contextual que agregó.  
+3. Establecer el <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propiedad de la <xref:System.Windows.Forms.NotifyIcon> componente en el menú contextual que agregó.  
   
      Con esta propiedad establecida, se mostrará el menú contextual cuando se hace clic en el icono de la barra de tareas.  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>Para asociar un menú contextual con el componente NotifyIcon mediante programación  
   
-1.  Cree una instancia de la <xref:System.Windows.Forms.NotifyIcon> clase y un <xref:System.Windows.Forms.ContextMenu> (clase), con cualquier configuración de propiedad es necesarios para la aplicación (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> y <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propiedades para el <xref:System.Windows.Forms.NotifyIcon> componente, elementos de menú para el <xref:System.Windows.Forms.ContextMenu> componente).  
+1. Cree una instancia de la <xref:System.Windows.Forms.NotifyIcon> clase y un <xref:System.Windows.Forms.ContextMenu> (clase), con cualquier configuración de propiedad es necesarios para la aplicación (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> y <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propiedades para el <xref:System.Windows.Forms.NotifyIcon> componente, elementos de menú para el <xref:System.Windows.Forms.ContextMenu> componente).  
   
-2.  Establecer el <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propiedad de la <xref:System.Windows.Forms.NotifyIcon> componente en el menú contextual que agregó.  
+2. Establecer el <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propiedad de la <xref:System.Windows.Forms.NotifyIcon> componente en el menú contextual que agregó.  
   
      Con esta propiedad establecida, se mostrará el menú contextual cuando se hace clic en el icono de la barra de tareas.  
   

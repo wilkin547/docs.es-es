@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: ccf569aea1363d256728e122818b70284a9e250d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 770dcad385c522a548a0c6fd3b6ef02dfbac82f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830375"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334606"
 ---
 # <a name="-delaysign"></a>-delaysign
 Especifica si el ensamblado estará firmado total o parcialmente.  
@@ -37,11 +37,11 @@ Especifica si el ensamblado estará firmado total o parcialmente.
   
 ### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>Para establecer delaysign - en el entorno de desarrollo integrado de Visual Studio  
   
-1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.   
+1. Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.   
   
-2.  Haga clic en la pestaña **Firma**.  
+2. Haga clic en la pestaña **Firma**.  
   
-3.  Establezca el valor el **Retrasar firma solo** cuadro.  
+3. Establezca el valor el **Retrasar firma solo** cuadro.  
   
 ## <a name="see-also"></a>Vea también
 

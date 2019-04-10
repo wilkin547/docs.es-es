@@ -2,12 +2,12 @@
 title: Filtrar para serializar y deserializar datos JSON
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 6363a8e161969c188c5dd18c425ffd42969e9adc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7edce66a23021fa03a6f98b3b847a5b671c17124
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106163"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336959"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>Filtrar Serializar y deserializar datos JSON
 JSON (notación de objetos JavaScript) es un formato de codificación de datos eficaz que permite intercambios rápidos de cantidades pequeñas de datos entre los exploradores de cliente y servicios web con AJAX (JavaScript asincrónico y XML) habilitado.  
@@ -23,7 +23,7 @@ JSON (notación de objetos JavaScript) es un formato de codificación de datos e
   
 ## <a name="to-define-the-data-contract-for-a-person-type"></a>Para definir el contrato de datos para un tipo de persona 
   
-1.  Defina el contrato de datos para `Person` adjuntando <xref:System.Runtime.Serialization.DataContractAttribute> a la clase y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> a los miembros que desee serializar. Para obtener más información acerca de los contratos de datos, vea [diseño de contratos de servicio](../designing-service-contracts.md).  
+1. Defina el contrato de datos para `Person` adjuntando <xref:System.Runtime.Serialization.DataContractAttribute> a la clase y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> a los miembros que desee serializar. Para obtener más información acerca de los contratos de datos, vea [diseño de contratos de servicio](../designing-service-contracts.md).  
   
     ```csharp  
     [DataContract]  
@@ -39,7 +39,7 @@ JSON (notación de objetos JavaScript) es un formato de codificación de datos e
   
 ## <a name="to-serialize-an-instance-of-type-person-to-json"></a>Para serializar una instancia de tipo Persona a JSON  
   
-1.  Cree una instancia del tipo `Person`.  
+1. Cree una instancia del tipo `Person`.  
   
     ```csharp  
     Person p = new Person();  
@@ -47,20 +47,20 @@ JSON (notación de objetos JavaScript) es un formato de codificación de datos e
     p.age = 42;  
     ```  
   
-2.  Serializar el `Person` objeto a una secuencia de memoria mediante el uso de la <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+2. Serializar el `Person` objeto a una secuencia de memoria mediante el uso de la <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
     ```csharp  
     MemoryStream stream1 = new MemoryStream();  
     DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
-3.  Utilice el método <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> para escribir datos JSON en la secuencia.  
+3. Utilice el método <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> para escribir datos JSON en la secuencia.  
   
     ```csharp  
     ser.WriteObject(stream1, p);  
     ```  
   
-4.  Muestre la salida JSON.  
+4. Muestre la salida JSON.  
   
     ```csharp  
     stream1.Position = 0;  
@@ -71,14 +71,14 @@ JSON (notación de objetos JavaScript) es un formato de codificación de datos e
   
 ## <a name="to-deserialize-an-instance-of-type-person-from-json"></a>Deserialización de una instancia de tipo Persona a partir de JSON  
   
-1.  Deserialice los datos codificados con JSON en una nueva instancia de `Person` utilizando el método <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> de <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:  
+1. Deserialice los datos codificados con JSON en una nueva instancia de `Person` utilizando el método <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> de <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:  
   
     ```csharp  
     stream1.Position = 0;  
     Person p2 = (Person)ser.ReadObject(stream1);  
     ```  
   
-2.  Muestre los resultados.  
+2. Muestre los resultados.  
   
     ```csharp  
     Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");  

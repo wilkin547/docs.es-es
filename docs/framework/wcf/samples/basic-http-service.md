@@ -2,12 +2,12 @@
 title: Servicio HTTP básico
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 2e4aee93341404df5f06b096a9a7bf18a3c94f56
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 247fedac339ebb22a6ef3b3e84f557451ecaaf1a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087159"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337115"
 ---
 # <a name="basic-http-service"></a>Servicio HTTP básico
 Este ejemplo muestra cómo implementar un servicio basado en HTTP, basados en RPC contemplado habitualmente como servicio "POX" (Plain Old XML): con el modelo de programación de REST de Windows Communication Foundation (WCF). Este ejemplo consta de dos componentes: un servicio HTTP WCF autohospedado (Service.cs) y una aplicación de consola (Program.cs) que crea el servicio y lo llama.  
@@ -27,11 +27,11 @@ Este ejemplo muestra cómo implementar un servicio basado en HTTP, basados en RP
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
-1.  Abra la solución del ejemplo de servicio HTTP básico. Al iniciar Visual Studio 2012, debe ejecutar como administrador para el ejemplo se ejecute correctamente. Hacer esto haciendo clic en el icono de Visual Studio 2012 y seleccionar **ejecutar como administrador** en el menú contextual.  
+1. Abra la solución del ejemplo de servicio HTTP básico. Al iniciar Visual Studio 2012, debe ejecutar como administrador para el ejemplo se ejecute correctamente. Hacer esto haciendo clic en el icono de Visual Studio 2012 y seleccionar **ejecutar como administrador** en el menú contextual.  
   
-2.  Presione CTRL+MAYÚS+B para compilar la solución y, a continuación, presione Ctrl+F5 para ejecutar la aplicación de consola sin depurar. La ventana de la consola aparece y proporciona el URI del servicio en ejecución y el URI de la página de Ayuda HTML para este. Puede ver la página de Ayuda HTML en cualquier momento escribiendo su URI en un explorador. A medida que el ejemplo se ejecuta, el cliente escribe el estado de la actividad actual.  
+2. Presione CTRL+MAYÚS+B para compilar la solución y, a continuación, presione Ctrl+F5 para ejecutar la aplicación de consola sin depurar. La ventana de la consola aparece y proporciona el URI del servicio en ejecución y el URI de la página de Ayuda HTML para este. Puede ver la página de Ayuda HTML en cualquier momento escribiendo su URI en un explorador. A medida que el ejemplo se ejecuta, el cliente escribe el estado de la actividad actual.  
   
-3.  Presione cualquier tecla para terminar el ejemplo.  
+3. Presione cualquier tecla para terminar el ejemplo.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

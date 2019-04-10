@@ -8,12 +8,12 @@ helpviewer_keywords:
 - control patterns, supporting in UI Automation provider
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
-ms.openlocfilehash: dd8bc880126cd6fa82f7f3a775edf47f0725b6d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 65ec0f85bf0a63d0051ff9491623a65abee7a05c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123934"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336686"
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>Patrones de control compatibles en un proveedor de UI Automation
 > [!NOTE]
@@ -23,9 +23,9 @@ ms.locfileid: "59123934"
   
 ### <a name="support-control-patterns"></a>Admitir patrones de control  
   
-1.  Implemente las interfaces adecuadas para los patrones de control que el elemento debe admitir, como <xref:System.Windows.Automation.Provider.IInvokeProvider> para <xref:System.Windows.Automation.InvokePattern>.  
+1. Implemente las interfaces adecuadas para los patrones de control que el elemento debe admitir, como <xref:System.Windows.Automation.Provider.IInvokeProvider> para <xref:System.Windows.Automation.InvokePattern>.  
   
-2.  Devolver el objeto que contiene la implementación de cada interfaz de control en la implementación de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
+2. Devolver el objeto que contiene la implementación de cada interfaz de control en la implementación de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra una implementación de <xref:System.Windows.Automation.Provider.ISelectionProvider> para un cuadro de lista personalizada de selección única. Devuelve tres propiedades y obtiene el elemento actualmente seleccionado.  

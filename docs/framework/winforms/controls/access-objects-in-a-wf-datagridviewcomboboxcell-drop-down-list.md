@@ -9,12 +9,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 221774895fa5867ad6ec870f7e293c9366e442f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 17b7c93effe9338a9e2d6cb207a948a956d9b666
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080792"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334281"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Filtrar para obtener acceso a objetos de una lista desplegable DataGridViewComboBoxCell en formularios Windows Forms
 Al igual que el <xref:System.Windows.Forms.ComboBox> (control), el <xref:System.Windows.Forms.DataGridViewComboBoxColumn> y <xref:System.Windows.Forms.DataGridViewComboBoxCell> tipos le permiten agregar objetos arbitrarios a las listas de la lista desplegable. Con esta característica, puede representar estados complejos en una lista desplegable sin tener que almacenar los objetos correspondientes en una colección independiente.  
@@ -27,17 +27,17 @@ Al igual que el <xref:System.Windows.Forms.ComboBox> (control), el <xref:System.
   
 ### <a name="to-add-business-objects-to-the-drop-down-list"></a>Para agregar objetos de negocios a la lista desplegable  
   
-1.  Cree un nuevo <xref:System.Windows.Forms.DataGridViewComboBoxColumn> y rellenar sus <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> colección. Como alternativa, puede establecer la columna <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> propiedad a la colección de objetos de negocios. En ese caso, sin embargo, no puede agregar "sin asignar" a la lista desplegable sin crear un objeto comercial correspondiente en la colección.  
+1. Cree un nuevo <xref:System.Windows.Forms.DataGridViewComboBoxColumn> y rellenar sus <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> colección. Como alternativa, puede establecer la columna <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> propiedad a la colección de objetos de negocios. En ese caso, sin embargo, no puede agregar "sin asignar" a la lista desplegable sin crear un objeto comercial correspondiente en la colección.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#110)]  
   
-2.  Establezca las propiedades <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> y <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> indica la propiedad del objeto comercial que se muestra en la lista desplegable. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> indica la propiedad que devuelve una referencia al objeto de negocios.  
+2. Establezca las propiedades <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> y <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> indica la propiedad del objeto comercial que se muestra en la lista desplegable. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> indica la propiedad que devuelve una referencia al objeto de negocios.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#115)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#115)]  
   
-3.  Asegúrese de que el tipo de objeto de negocios contiene una propiedad que devuelve una referencia a la instancia actual. Esta propiedad se debe denominar con el valor asignado a <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> en el paso anterior.  
+3. Asegúrese de que el tipo de objeto de negocios contiene una propiedad que devuelve una referencia a la instancia actual. Esta propiedad se debe denominar con el valor asignado a <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> en el paso anterior.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#310)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#310)]  
@@ -54,11 +54,11 @@ Al igual que el <xref:System.Windows.Forms.ComboBox> (control), el <xref:System.
   
  Para ver el comportamiento de este ejemplo, realice los pasos siguientes:  
   
-1.  Cambiar las asignaciones en el `Assigned To` columna seleccionando valores diferentes en las listas desplegables o presionar CTRL + 0 en una celda de cuadro combinado.  
+1. Cambiar las asignaciones en el `Assigned To` columna seleccionando valores diferentes en las listas desplegables o presionar CTRL + 0 en una celda de cuadro combinado.  
   
-2.  Haga clic en `Generate Report` para mostrar las asignaciones actuales. Esto demuestra que un cambio en el `Assigned To` columna se actualiza automáticamente el `tasks` colección.  
+2. Haga clic en `Generate Report` para mostrar las asignaciones actuales. Esto demuestra que un cambio en el `Assigned To` columna se actualiza automáticamente el `tasks` colección.  
   
-3.  Haga clic en un `Request Status` botón para llamar a la `RequestStatus` método del actual `Employee` objeto para esa fila. Esto demuestra que el objeto seleccionado se ha recuperado correctamente.  
+3. Haga clic en un `Request Status` botón para llamar a la `RequestStatus` método del actual `Employee` objeto para esa fila. Esto demuestra que el objeto seleccionado se ha recuperado correctamente.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#000)]  

@@ -2,12 +2,12 @@
 title: Validación de seguridad
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: b6e97b7b8662a13628bd8b0b353e4d28c0c84a9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1ad52431d68af847d7c26a0a3bd42dbcb3ce51c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334658"
 ---
 # <a name="security-validation"></a>Validación de seguridad
 Este ejemplo muestra cómo utilizar un comportamiento personalizado para validar los servicios en un equipo a fin de asegurarse de que cumplen criterios específicos. En este ejemplo, el comportamiento personalizado valida estos servicios analizando cada extremo en el servicio y comprobando si contienen elementos de enlace seguros. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -81,21 +81,21 @@ public void Validate(ServiceDescription serviceDescription,
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Para ver los mensajes de excepción de validación del extremo en el visor de eventos  
   
-1.  Haga clic en el **iniciar** menú y seleccione **ejecutar...** .  
+1. Haga clic en el **iniciar** menú y seleccione **ejecutar...** .  
   
-2.  Tipo `eventvwr` y haga clic en **Aceptar**.  
+2. Tipo `eventvwr` y haga clic en **Aceptar**.  
   
-3.  En la ventana Visor de eventos, haga clic en **aplicación**.  
+3. En la ventana Visor de eventos, haga clic en **aplicación**.  
   
-4.  Haga doble clic en el evento "System.ServiceModel 4.0.0.0" recientemente agregado en la categoría "WebHost" en el **aplicación** ventana para ver los mensajes inseguros del extremo.  
+4. Haga doble clic en el evento "System.ServiceModel 4.0.0.0" recientemente agregado en la categoría "WebHost" en el **aplicación** ventana para ver los mensajes inseguros del extremo.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

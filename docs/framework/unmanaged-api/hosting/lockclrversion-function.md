@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571a676496683ba3251f13c41600bb017e1ced5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156109"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336699"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion (Función)
 Permite al host determinar qué versión de common language runtime (CLR) que se usará dentro del proceso antes de inicializar CLR de forma explícita.  
@@ -66,11 +66,11 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  Los pasos siguientes se producen durante la inicialización del tiempo de ejecución:  
   
-1.  El host llama [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) o una de las demás funciones de inicialización en tiempo de ejecución. Como alternativa, el host puede inicializar el tiempo de ejecución mediante la activación de objetos COM.  
+1. El host llama [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) o una de las demás funciones de inicialización en tiempo de ejecución. Como alternativa, el host puede inicializar el tiempo de ejecución mediante la activación de objetos COM.  
   
-2.  El tiempo de ejecución llama a la función especificada por el `hostCallback` parámetro.  
+2. El tiempo de ejecución llama a la función especificada por el `hostCallback` parámetro.  
   
-3.  La función especificada por `hostCallback` , a continuación, realiza la siguiente secuencia de llamadas:  
+3. La función especificada por `hostCallback` , a continuación, realiza la siguiente secuencia de llamadas:  
   
     -   La función especificada por el `pBeginHostSetup` parámetro.  
   

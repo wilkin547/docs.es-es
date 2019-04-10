@@ -2,12 +2,12 @@
 title: Filtrar para usar la configuración para agregar un punto de conexión AJAX de ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 26a7b0d3fef67cf9dae0913e22e3cd7ec443c111
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: db5085d01dbed841109ac46fe4e8b2a0143352e3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202981"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337622"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Filtrar para usar la configuración para agregar un punto de conexión AJAX de ASP.NET
 Windows Communication Foundation (WCF) le permite crear un servicio que hace que sea un punto de conexión compatible con AJAX de ASP.NET disponible que se puede llamar desde JavaScript en un sitio Web del cliente. Para crear este tipo de extremo, puede usar un archivo de configuración, al igual que con todos los demás extremos de Windows Communication Foundation (WCF) o usar un método que no requiera ningún elemento de configuración. En este tema se muestra el enfoque de configuración.  
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que hace que
   
 ### <a name="to-create-a-basic-wcf-service"></a>Para crear un servicio WCF básico  
   
-1.  Definir un contrato de servicio WCF básico con una interfaz marcada con el <xref:System.ServiceModel.ServiceContractAttribute> atributo. Marque cada operación con el <xref:System.ServiceModel.OperationContractAttribute>. Asegúrese de establecer la propiedad <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>.  
+1. Definir un contrato de servicio WCF básico con una interfaz marcada con el <xref:System.ServiceModel.ServiceContractAttribute> atributo. Marque cada operación con el <xref:System.ServiceModel.OperationContractAttribute>. Asegúrese de establecer la propiedad <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>.  
   
     ```  
     [ServiceContract(Namespace = "MyService")]  
@@ -33,7 +33,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que hace que
     }  
     ```  
   
-2.  Implemente el contrato de servicios `ICalculator` con un `CalculatorService`.  
+2. Implemente el contrato de servicios `ICalculator` con un `CalculatorService`.  
   
     ```  
     public class CalculatorService : ICalculator  
@@ -46,7 +46,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que hace que
     //Other operations omitted…  
     ```  
   
-3.  Defina un espacio de nombres para las implementaciones de `ICalculator` e `CalculatorService` ajustándolas en un bloque de espacios de nombres.  
+3. Defina un espacio de nombres para las implementaciones de `ICalculator` e `CalculatorService` ajustándolas en un bloque de espacios de nombres.  
   
     ```  
     Namespace Microsoft.Ajax.Samples  
@@ -57,7 +57,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que hace que
   
 ### <a name="to-create-an-aspnet-ajax-endpoint-for-the-service"></a>Creación de un punto de conexión de AJAX de ASP.NET para el servicio.  
   
-1.  Cree una configuración de comportamiento y especifique el [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) comportamiento para ASP.NET con AJAX habilitado puntos de conexión del servicio.  
+1. Cree una configuración de comportamiento y especifique el [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) comportamiento para ASP.NET con AJAX habilitado puntos de conexión del servicio.  
   
     ```xml  
     <system.serviceModel>  
@@ -71,7 +71,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que hace que
     </system.serviceModel>  
     ```  
   
-2.  Cree un punto de conexión para el servicio que utilice el <xref:System.ServiceModel.WebHttpBinding> y el comportamiento de AJAX de ASP.NET definido en el paso anterior.  
+2. Cree un punto de conexión para el servicio que utilice el <xref:System.ServiceModel.WebHttpBinding> y el comportamiento de AJAX de ASP.NET definido en el paso anterior.  
   
     ```xml  
     <system.serviceModel>  
@@ -88,7 +88,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que hace que
   
 ### <a name="to-host-the-service-in-iis"></a>Hospedaje del servicio en IIS  
   
-1.  Para hospedar el servicio en IIS, cree un nuevo archivo denominado service con extensión .svc en la aplicación. Modifique este archivo agregando adecuado [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) información de directiva para el servicio. Por ejemplo, el contenido del archivo de servicio para el ejemplo de `CalculatorService` contiene la siguiente información:  
+1. Para hospedar el servicio en IIS, cree un nuevo archivo denominado service con extensión .svc en la aplicación. Modifique este archivo agregando adecuado [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) información de directiva para el servicio. Por ejemplo, el contenido del archivo de servicio para el ejemplo de `CalculatorService` contiene la siguiente información:  
   
     ```  
     <%@ServiceHost   
@@ -98,11 +98,11 @@ Windows Communication Foundation (WCF) le permite crear un servicio que hace que
     %>  
     ```  
   
-2.  Para obtener más información sobre el hospedaje en IIS, vea [Cómo: Hospedar un servicio WCF en IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+2. Para obtener más información sobre el hospedaje en IIS, vea [Cómo: Hospedar un servicio WCF en IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ### <a name="to-call-the-service"></a>Realización de llamadas al servicio  
   
-1.  El extremo se configura en una dirección vacía relativa al archivo .svc, por lo que el servicio ahora está disponible y se puede invocar enviando solicitudes a Service.svc /\<operación >; por ejemplo, Service.svc/Add para el `Add` operación. Puede utilizarlo introduciendo la URL del punto de conexión en la colección Scripts del control del administrador de scripts de AJAX de ASP.NET. Para obtener un ejemplo, vea el [servicio AJAX mediante HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
+1. El extremo se configura en una dirección vacía relativa al archivo .svc, por lo que el servicio ahora está disponible y se puede invocar enviando solicitudes a Service.svc /\<operación >; por ejemplo, Service.svc/Add para el `Add` operación. Puede utilizarlo introduciendo la URL del punto de conexión en la colección Scripts del control del administrador de scripts de AJAX de ASP.NET. Para obtener un ejemplo, vea el [servicio AJAX mediante HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
 ## <a name="see-also"></a>Vea también
 

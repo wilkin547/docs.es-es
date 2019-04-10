@@ -12,19 +12,19 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 031ddcb3b852e75353fed7420735350e79f23df3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1de835bda5ac906837ac3fbd97b87f68f14d1953
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085095"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333930"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Filtrar para establecer la imagen mostrada por un control de formularios Windows Forms
 Varios controles de Windows Forms pueden mostrar imágenes. Estas imágenes pueden ser iconos que aclarar el propósito del control, como un icono de disquete en un botón que denota el **guardar** comando. Como alternativa, los iconos pueden ser las imágenes de fondo para proporcionar el control de la apariencia y comportamiento que desee.  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>Para establecer la imagen que muestra un control  
   
-1.  Establecer el control `Image` o `BackgroundImage` propiedad a un objeto de tipo <xref:System.Drawing.Image>. Por lo general, se carga la imagen desde un archivo mediante el uso de la <xref:System.Drawing.Image.FromFile%2A> método.  
+1. Establecer el control `Image` o `BackgroundImage` propiedad a un objeto de tipo <xref:System.Drawing.Image>. Por lo general, se carga la imagen desde un archivo mediante el uso de la <xref:System.Drawing.Image.FromFile%2A> método.  
   
      En el ejemplo de código siguiente establece la ruta de acceso para la ubicación de la imagen es la **Mis imágenes** carpeta. Mayoría de los equipos que ejecutan el sistema operativo de Windows tendrán este directorio. Esto también permite a los usuarios con niveles de acceso mínimos ejecutar la aplicación de forma segura. El siguiente ejemplo de código requiere que ya tiene un formulario con un <xref:System.Windows.Forms.PictureBox> control agregado.  
   

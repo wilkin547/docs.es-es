@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6d246c56af191189fa775be3248d3099d2aa2544
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203696"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336660"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Tutorial: Crear una aplicación accesible basada en Windows
 Crear una aplicación accesible conlleva importantes implicaciones empresariales. Muchos gobiernos tienen normativas sobre accesibilidad aplicadas a la compra de software. El logotipo “Certificado para Windows” incluye requisitos de accesibilidad. Tan solo en EE. UU hay aproximadamente unos 30 millones de ciudadanos, muchos de ellos clientes potenciales, que se ven afectados por la accesibilidad del software.  
@@ -158,7 +158,7 @@ Crear una aplicación accesible conlleva importantes implicaciones empresariales
   
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Para habilitar el modo de contraste alto de forma eficaz  
   
-1.  Cree un método para establecer los colores de la etiqueta en los colores del sistema.  
+1. Cree un método para establecer los colores de la etiqueta en los colores del sistema.  
   
     ```  
     ' Visual Basic  
@@ -188,7 +188,7 @@ Crear una aplicación accesible conlleva importantes implicaciones empresariales
     }  
     ```  
   
-2.  Llame al procedimiento `SetColorScheme` en el constructor del formulario (`Public Sub New()` en Visual Basic y `public class Form1` en Visual C#). Para acceder al constructor en Visual Basic, deberá expandir la región denominada **Código generado por el Diseñador de Windows Forms**.  
+2. Llame al procedimiento `SetColorScheme` en el constructor del formulario (`Public Sub New()` en Visual Basic y `public class Form1` en Visual C#). Para acceder al constructor en Visual Basic, deberá expandir la región denominada **Código generado por el Diseñador de Windows Forms**.  
   
     ```  
     ' Visual Basic   
@@ -206,7 +206,7 @@ Crear una aplicación accesible conlleva importantes implicaciones empresariales
     }  
     ```  
   
-3.  Cree un procedimiento de evento con la firma apropiada para responder al evento <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>.  
+3. Cree un procedimiento de evento con la firma apropiada para responder al evento <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>.  
   
     ```  
     ' Visual Basic  
@@ -223,7 +223,7 @@ Crear una aplicación accesible conlleva importantes implicaciones empresariales
     }  
     ```  
   
-4.  Agregue código al constructor del formulario, después de la llamada a `InitializeComponents`, para enlazar el procedimiento de evento al evento del sistema. Este método llama al procedimiento `SetColorScheme`.  
+4. Agregue código al constructor del formulario, después de la llamada a `InitializeComponents`, para enlazar el procedimiento de evento al evento del sistema. Este método llama al procedimiento `SetColorScheme`.  
   
     ```  
     ' Visual Basic  
@@ -246,7 +246,7 @@ Crear una aplicación accesible conlleva importantes implicaciones empresariales
     }  
     ```  
   
-5.  Agregue código al método <xref:System.Windows.Forms.Control.Dispose%2A> del formulario, antes de llamar al método <xref:System.Windows.Forms.Control.Dispose%2A> de la clase base, para liberar el evento cuando se cierre la aplicación. Para tener acceso al método <xref:System.Windows.Forms.Control.Dispose%2A> en Visual Basic, deberá expandir la región denominada Código generado por el Diseñador de Windows Forms.  
+5. Agregue código al método <xref:System.Windows.Forms.Control.Dispose%2A> del formulario, antes de llamar al método <xref:System.Windows.Forms.Control.Dispose%2A> de la clase base, para liberar el evento cuando se cierre la aplicación. Para tener acceso al método <xref:System.Windows.Forms.Control.Dispose%2A> en Visual Basic, deberá expandir la región denominada Código generado por el Diseñador de Windows Forms.  
   
     > [!NOTE]
     >  El código de evento del sistema ejecuta un subproceso independiente de la aplicación principal. Si no libera el evento, el código que enlazó al evento se ejecutará incluso después de cerrar el programa.  
@@ -281,38 +281,38 @@ Crear una aplicación accesible conlleva importantes implicaciones empresariales
     }  
     ```  
   
-6.  Presione F5 para ejecutar la aplicación.  
+6. Presione F5 para ejecutar la aplicación.  
   
 ## <a name="conveying-important-information-by-means-other-than-sound"></a>Ofrecer información importante por medios diferentes del sonido  
  En esta aplicación no se muestra ninguna información solo mediante sonido. Si usa sonido en la aplicación, también debe proporcionar la información de algún otro modo.  
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>Para proporcionar información por otros medios distintos del sonido  
   
-1.  Haga parpadear la barra de título flash con la función de API de Windows FlashWindow. Para obtener un ejemplo de cómo llamar a funciones de la API de Windows, consulte [Tutorial: Llamar a las API de Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+1. Haga parpadear la barra de título flash con la función de API de Windows FlashWindow. Para obtener un ejemplo de cómo llamar a funciones de la API de Windows, consulte [Tutorial: Llamar a las API de Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
     > [!NOTE]
     >  El usuario puede tener el servicio SoundSentry de Windows habilitado, que también hace que la ventana parpadee cuando se reproducen los sonidos del sistema a través de los altavoces integrados en el equipo.  
   
-2.  Muestre la información importante en una ventana no modal para que el usuario pueda responder a ella.  
+2. Muestre la información importante en una ventana no modal para que el usuario pueda responder a ella.  
   
-3.  Muestre un cuadro de mensaje que adquiera el foco del teclado. Evite usar este método cuando el usuario esté escribiendo.  
+3. Muestre un cuadro de mensaje que adquiera el foco del teclado. Evite usar este método cuando el usuario esté escribiendo.  
   
-4.  Muestre un indicador de estado en el área de notificación de estado de la barra de tareas. Para ver detalles, consulte [Cómo: Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de Windows Forms](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+4. Muestre un indicador de estado en el área de notificación de estado de la barra de tareas. Para ver detalles, consulte [Cómo: Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de Windows Forms](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
 ## <a name="testing-the-application"></a>Probar la aplicación  
  Antes de implementar la aplicación, pruebe las características de accesibilidad que se han implementado.  
   
 #### <a name="to-test-accessibility-features"></a>Para probar las características de accesibilidad  
   
-1.  Para probar el acceso mediante teclado, desconecte el mouse y desplácese por cada característica de la interfaz de usuario usando solo el teclado. Asegúrese de que todas las tareas pueden realizarse utilizando únicamente el teclado.  
+1. Para probar el acceso mediante teclado, desconecte el mouse y desplácese por cada característica de la interfaz de usuario usando solo el teclado. Asegúrese de que todas las tareas pueden realizarse utilizando únicamente el teclado.  
   
-2.  Para probar la compatibilidad de contraste alto, elija el icono de opciones de accesibilidad en el Panel de control. Haga clic en la ficha Pantalla y seleccione la casilla Usar contraste alto. Desplácese por todos los elementos de la interfaz de usuario para asegurarse de que se reflejan los cambios de color y fuente. Asegúrese también de que se omiten las imágenes o las tramas que se representan detrás del texto.  
+2. Para probar la compatibilidad de contraste alto, elija el icono de opciones de accesibilidad en el Panel de control. Haga clic en la ficha Pantalla y seleccione la casilla Usar contraste alto. Desplácese por todos los elementos de la interfaz de usuario para asegurarse de que se reflejan los cambios de color y fuente. Asegúrese también de que se omiten las imágenes o las tramas que se representan detrás del texto.  
   
     > [!NOTE]
     >  Windows NT 4 no tiene un icono de opciones de accesibilidad en el Panel de control. Por lo tanto, este procedimiento para cambiar el valor SystemInformation.HighContrast no funciona en Windows NT 4.  
   
-3.  Hay otras herramientas disponibles para probar la accesibilidad de una aplicación.  
+3. Hay otras herramientas disponibles para probar la accesibilidad de una aplicación.  
   
-4.  Para probar la exposición del foco de teclado, ejecute la Lupa. (Para abrirla, haga clic en **Inicio**, elija **Programas**, **Accesorios** y **Accesibilidad**, y haga clic en **Lupa**). Desplácese por la interfaz de usuario usando tanto la tabulación de teclado como el mouse. Asegúrese de que la **Lupa** siga correctamente todos los desplazamientos.  
+4. Para probar la exposición del foco de teclado, ejecute la Lupa. (Para abrirla, haga clic en **Inicio**, elija **Programas**, **Accesorios** y **Accesibilidad**, y haga clic en **Lupa**). Desplácese por la interfaz de usuario usando tanto la tabulación de teclado como el mouse. Asegúrese de que la **Lupa** siga correctamente todos los desplazamientos.  
   
-5.  Para probar la exposición de los elementos de pantalla, ejecute Inspeccionar y use el mouse y la tecla TAB para desplazarse a cada elemento. Asegúrese de que la información contenida en los campos de nombre, estado, rol, ubicación y valor de la ventana Inspeccionar es significativa para el usuario en relación a cada objeto de la interfaz de usuario.
+5. Para probar la exposición de los elementos de pantalla, ejecute Inspeccionar y use el mouse y la tecla TAB para desplazarse a cada elemento. Asegúrese de que la información contenida en los campos de nombre, estado, rol, ubicación y valor de la ventana Inspeccionar es significativa para el usuario en relación a cada objeto de la interfaz de usuario.

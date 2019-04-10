@@ -10,21 +10,21 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 7ccebf128d533a0e0cf0a17e5702807371e1bea7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 816da93218e20f73f16c14769ed1a549dd3d8eb3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170981"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335412"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>Filtrar para crear trabajos de impresión estándar de formularios Windows Forms
 La base de la impresión en Windows Forms es la <xref:System.Drawing.Printing.PrintDocument> componente, más concretamente, el <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos. Al escribir código para controlar la <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos, puede especificar lo que desea imprimir y cómo imprimirlo.  
   
 ### <a name="to-create-a-print-job"></a>Para crear un trabajo de impresión  
   
-1.  Agregar un <xref:System.Drawing.Printing.PrintDocument> al formulario.  
+1. Agregar un <xref:System.Drawing.Printing.PrintDocument> al formulario.  
   
-2.  Escriba código para controlar el evento <xref:System.Drawing.Printing.PrintDocument.PrintPage> .  
+2. Escriba código para controlar el evento <xref:System.Drawing.Printing.PrintDocument.PrintPage> .  
   
      Tendrá que codificar su propia lógica de impresión. Además, tendrá que especificar el material que se imprimen.  
   

@@ -2,12 +2,12 @@
 title: Información general de Detección de WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 8f89a3b52728f10a0d0e0544f3663c9af13488c9
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084945"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335347"
 ---
 # <a name="wcf-discovery-overview"></a>Información general de Detección de WCF
 Las API de detección proporcionan un modelo de programación unificado para la detección y la publicación dinámica de servicios Web mediante el protocolo WS-Discovery. Estas API permiten a los servicios publicarse y a los clientes encontrar los servicios publicados. Una vez que un servicio es reconocible, tiene la capacidad de enviar mensajes de anuncio, así como realizar escuchas y responder a solicitudes de detección. Los servicios reconocibles pueden enviar mensajes de Hola para anunciar su llegada a la red, así como mensajes de Adiós para anunciar su salida de la red. Para encontrar un servicio, los clientes envían a una solicitud `Probe` que contiene criterios específicos, como tipos de contratos de servicios, palabras clave y ámbito de red. Los servicios reciben la solicitud `Probe` y determinan si coinciden con los criterios. Si un servicio coincide, responde devolviendo un mensaje `ProbeMatch` al cliente con la información necesaria para ponerse en contacto con el servicio. Los clientes también pueden enviar solicitudes `Resolve` para buscar servicios que pueden haber cambiado la dirección de punto de conexión. Los servicios coincidentes responden a las solicitudes `Resolve` devolviendo un mensaje `ResolveMatch` al cliente.  
@@ -94,7 +94,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 ```  
   
 ## <a name="service-discovery"></a>Detección de servicios  
- Una aplicación cliente puede usar la clase <xref:System.ServiceModel.Discovery.DiscoveryClient> para buscar servicios. El desarrollador crea una instancia de la clase <xref:System.ServiceModel.Discovery.DiscoveryClient> que pasa un extremo de detección que especifica dónde se deben enviar los mensajes `Probe` o `Resolve`. A continuación, el cliente llama a <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, que especifica los criterios de búsqueda dentro de una instancia <xref:System.ServiceModel.Discovery.FindCriteria>. Si se encuentran servicios correspondientes, <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> devuelve una colección de <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>. El siguiente código muestra cómo llamar al método `Find` y, a continuación, conectarse a un servicio detectado.  
+ Una aplicación cliente puede usar la clase <xref:System.ServiceModel.Discovery.DiscoveryClient> para buscar servicios. El desarrollador crea una instancia de la clase <xref:System.ServiceModel.Discovery.DiscoveryClient> que pasa un punto de conexión de detección que especifica dónde se deben enviar los mensajes `Probe` o `Resolve`. A continuación, el cliente llama a <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, que especifica los criterios de búsqueda dentro de una instancia <xref:System.ServiceModel.Discovery.FindCriteria>. Si se encuentran servicios correspondientes, <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> devuelve una recopilación de <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>. El siguiente código muestra cómo llamar al método `Find` y, a continuación, conectarse a un servicio detectado.  
   
 ```csharp  
 class Client
@@ -151,9 +151,9 @@ class Client
 ## <a name="discovery-and-web-hosted-services"></a>Servicios de hospedaje web y detección  
  Para que los servicios WCF puedan detectarse, deben estar ejecutándose. Los servicios WCF hospedados en IIS o WAS no se ejecutan hasta que IIS/WAS recibe un mensaje enlazado al servicio, de modo que no pueden detectarse de forma predeterminada.  Hay dos opciones para hacer que los servicios hospedados en web puedan detectarse:  
   
-1.  Usar la característica de inicio automático de Windows Server AppFabric  
+1. Usar la característica de inicio automático de Windows Server AppFabric  
   
-2.  Usar un proxy de detección para comunicarse en nombre del servicio  
+2. Usar un proxy de detección para comunicarse en nombre del servicio  
   
  Windows Server AppFabric tiene una característica de inicio automático que permite que un servicio se inicie antes de recibir ningún mensaje. Con este inicio automático establecido, un servicio hospedado por IIS/WAS se puede configurar como detectable. Para obtener más información acerca de la característica de inicio automático, vea [característica de inicio automático de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=205545). Además de activar la característica de inicio automático, debe configurar el servicio para la detección. Para obtener más información, vea [Cómo: Agregar detectabilidad mediante programación a un cliente y servicio WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[configurar la detección en un archivo de configuración](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   

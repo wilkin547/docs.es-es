@@ -2,12 +2,12 @@
 title: Ejemplo de anuncios
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 7506dcc2b73ce2ee3437020c958f480fb521f4f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 895043976fd39ac0057c8dbc1c7daf0394393984
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094559"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333982"
 ---
 # <a name="announcements-sample"></a>Ejemplo de anuncios
 En este ejemplo se muestra cómo utilizar la funcionalidad de anuncio de la característica de detección. Los anuncios permiten a los servicios enviar mensajes de anuncio que contienen metadatos del servicio. De forma predeterminada, se envía un anuncio de saludo cuando el servicio se inicia y otro de despedida al cerrarse. Estos anuncios pueden ser de multidifusión o se pueden enviar de punto a punto. Este ejemplo está compuesto de dos proyectos: servicio y cliente.  
@@ -68,15 +68,15 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
-1.  Este ejemplo utiliza los extremos HTTP y para ejecutar este ejemplo las ACL de dirección URL apropiadas; se debe agregar vea [configurar HTTP y HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obtener más información. Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Este ejemplo utiliza los extremos HTTP y para ejecutar este ejemplo las ACL de dirección URL apropiadas; se debe agregar vea [configurar HTTP y HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obtener más información. Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Compile la solución.  
+2. Compile la solución.  
   
-3.  Ejecute la aplicación client.exe.  
+3. Ejecute la aplicación client.exe.  
   
-4.  Ejecute la aplicación service.exe. Observe que el cliente recibe un anuncio en línea.  
+4. Ejecute la aplicación service.exe. Observe que el cliente recibe un anuncio en línea.  
   
-5.  Cierre la aplicación service.exe. Observe que el cliente recibe un anuncio sin conexión.  
+5. Cierre la aplicación service.exe. Observe que el cliente recibe un anuncio sin conexión.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

@@ -2,12 +2,12 @@
 title: Filtrar para especificar nombres de base de datos
 ms.date: 03/30/2017
 ms.assetid: b80f0fd2-7f75-45fe-9e12-496f80f183df
-ms.openlocfilehash: 1c694678dc3a60cf91dea62f2a17973b396e2b19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a43a7ac541adb984eeb8bb88b7ab96db86baf26c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184527"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335282"
 ---
 # <a name="how-to-specify-database-names"></a>Filtrar para especificar nombres de base de datos
 Utilice la propiedad <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> en un atributo <xref:System.Data.Linq.Mapping.DatabaseAttribute> para especificar el nombre de una base de datos cuando la conexión no proporciona ninguno.  
@@ -16,11 +16,11 @@ Utilice la propiedad <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> e
   
 ### <a name="to-specify-the-name-of-the-database"></a>Para especificar el nombre de la base de datos  
   
-1.  Agregue el atributo <xref:System.Data.Linq.Mapping.DatabaseAttribute> a la declaración de clase para la base de datos.  
+1. Agregue el atributo <xref:System.Data.Linq.Mapping.DatabaseAttribute> a la declaración de clase para la base de datos.  
   
-2.  Agregue la propiedad <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> al atributo <xref:System.Data.Linq.Mapping.DatabaseAttribute>.  
+2. Agregue la propiedad <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> al atributo <xref:System.Data.Linq.Mapping.DatabaseAttribute>.  
   
-3.  Establezca el valor de propiedad <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> en el nombre que desea especificar.  
+3. Establezca el valor de propiedad <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> en el nombre que desea especificar.  
   
 ## <a name="see-also"></a>Vea también
 

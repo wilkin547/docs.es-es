@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID321
 ms.assetid: d41e6286-6e4a-463b-87fa-e140723e5c7e
-ms.openlocfilehash: 46b041b04506cca0b724c2680035d58b651ddc01
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: b21ef68e514bec7ac644adcddbd25574e18098cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58043682"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334567"
 ---
 # <a name="file-format-not-valid"></a>Formato de archivo no válido
 Ha intentado cargar un archivo en un componente, pero el formato de los datos del archivo no es compatible con el componente, o bien ha intentado guardar datos del componente en un archivo, pero el formato de los datos no es compatible con el formato del archivo.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Consulte la documentación del componente para determinar el formato correcto para los datos del archivo de disco.  
+1. Consulte la documentación del componente para determinar el formato correcto para los datos del archivo de disco.  
   
-2.  Consulte la documentación del componente para determinar si es compatible con la conversión de un formato a otro.  
+2. Consulte la documentación del componente para determinar si es compatible con la conversión de un formato a otro.  
   
 ## <a name="see-also"></a>Vea también
 

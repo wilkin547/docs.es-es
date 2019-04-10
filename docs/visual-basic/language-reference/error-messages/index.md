@@ -7,26 +7,26 @@ helpviewer_keywords:
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: c326b781222429d68ec4385d95507a6ba99eafcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 822c0f266e7dd68f063043d98a9f4af308ae93fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590139"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338142"
 ---
 # <a name="error-messages-visual-basic"></a>Mensajes de error (Visual Basic)
 Al escribir, compilar o ejecutar una aplicación de Visual Basic, pueden producirse los siguientes tipos de errores:  
   
-1.  Errores en tiempo de diseño, que se producen al escribir una aplicación en Visual Studio.  
+1. Errores en tiempo de diseño, que se producen al escribir una aplicación en Visual Studio.  
   
-2.  Errores en tiempo de compilación, que se producen cuando se compila una aplicación en Visual Studio o en un símbolo del sistema.  
+2. Errores en tiempo de compilación, que se producen cuando se compila una aplicación en Visual Studio o en un símbolo del sistema.  
   
-3.  Errores en tiempo de ejecución, que se producen al ejecutar una aplicación en Visual Studio o como un archivo ejecutable independiente.  
+3. Errores en tiempo de ejecución, que se producen al ejecutar una aplicación en Visual Studio o como un archivo ejecutable independiente.  
   
  Para obtener información sobre cómo solucionar un error específico, vea [Recursos adicionales para programadores de Visual Basic](../../../visual-basic/getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Errores en tiempo de ejecución  
- Si una aplicación de Visual Basic intenta realizar una acción que no se puede ejecutar el sistema, se produce un error de tiempo de ejecución, y Visual Basic produce una `Exception` objeto. Visual Basic puede generar errores personalizados de cualquier dato escriba, incluyendo `Exception` objetos mediante el uso de la `Throw` instrucción. Una aplicación puede identificar el error y mostrar el número de error y el mensaje de una excepción detectada. Si no se detecta ningún error, la aplicación finaliza.  
+ Si una aplicación Visual Basic intenta realizar una acción que no se puede ejecutar el sistema, se produce un error de tiempo de ejecución y Visual Basic produce una `Exception` objeto. Visual Basic puede generar errores personalizados de cualquier dato de tipo, incluidos `Exception` objetos mediante el uso de la `Throw` instrucción. Una aplicación puede identificar el error y mostrar el número de error y el mensaje de una excepción detectada. Si no se detecta ningún error, la aplicación finaliza.  
   
  El código puede capturar y examinar los errores en tiempo de ejecución. Si se incluye el código que produce el error en un bloque `Try`, puede capturar cualquier error producido dentro de un bloque `Catch` coincidente. Para obtener información sobre cómo capturar errores en tiempo de ejecución y responder a ellos en el código, vea [Instrucción Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   

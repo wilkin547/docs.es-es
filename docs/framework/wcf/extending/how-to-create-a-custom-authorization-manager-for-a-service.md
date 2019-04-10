@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e3d0143cd68bc94c6ff07e65ca5a3c8971b45f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156499"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337843"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Filtrar para crear un administrador de autorización personalizado para un servicio
 La infraestructura del modelo de identidad en Windows Communication Foundation (WCF) admite un modelo de autorización basada en notificaciones extensible. Las demandas se extraen de los tokens y opcionalmente son procesadas por directivas de autorización personalizadas y, a continuación, colocadas en <xref:System.IdentityModel.Policy.AuthorizationContext>. Un administrador de autorización examina las demandas en <xref:System.IdentityModel.Policy.AuthorizationContext> para tomar las decisiones de autorización.  
@@ -28,12 +28,12 @@ La infraestructura del modelo de identidad en Windows Communication Foundation (
   
 ### <a name="to-create-a-custom-authorization-manager"></a>Para crear un administrador de autorización personalizado  
   
-1.  Derive una clase de la clase <xref:System.ServiceModel.ServiceAuthorizationManager>.  
+1. Derive una clase de la clase <xref:System.ServiceModel.ServiceAuthorizationManager>.  
   
      [!code-csharp[c_CustomAuthMgr#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#5)]
      [!code-vb[c_CustomAuthMgr#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#5)]  
   
-2.  Invalide el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> .  
+2. Invalide el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> .  
   
      Utilice el <xref:System.ServiceModel.OperationContext> que se pasa al método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> para tomar las decisiones de autorización.  
   
@@ -44,7 +44,7 @@ La infraestructura del modelo de identidad en Windows Communication Foundation (
   
 ### <a name="to-register-a-custom-authorization-manager-using-code"></a>Para registrar a un administrador de autorización personalizado mediante código  
   
-1.  Cree una instancia del administrador de autorización personalizado y asígnelo a la propiedad <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>.  
+1. Cree una instancia del administrador de autorización personalizado y asígnelo a la propiedad <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>.  
   
      Se puede tener acceso a <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> mediante la propiedad <xref:System.ServiceModel.ServiceHostBase.Authorization%2A>.  
   
@@ -55,17 +55,17 @@ La infraestructura del modelo de identidad en Windows Communication Foundation (
   
 ### <a name="to-register-a-custom-authorization-manager-using-configuration"></a>Para registrar a un administrador de autorización personalizado mediante configuración  
   
-1.  Abra el archivo de configuración para el servicio.  
+1. Abra el archivo de configuración para el servicio.  
   
-2.  Agregar un [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) a la [ \<comportamientos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
+2. Agregar un [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) a la [ \<comportamientos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
   
      Para el [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), agregue un `serviceAuthorizationManagerType` de atributo y establezca su valor en el tipo que representa el Administrador de autorización personalizado.  
   
-3.  Agregue un enlace que proteja la comunicación entre el cliente y el servicio.  
+3. Agregue un enlace que proteja la comunicación entre el cliente y el servicio.  
   
      El enlace que se elige para esta comunicación determina las demandas que se agregan al <xref:System.IdentityModel.Policy.AuthorizationContext>, que el administrador de autorización personalizado utiliza para tomar las decisiones de autorización. Para obtener más información acerca de los enlaces proporcionados por el sistema, consulte [System-provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
-4.  Asociar el comportamiento a un extremo de servicio, mediante la adición de un [ \<servicio >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento y establezca el valor de la `behaviorConfiguration` en el valor del atributo name para la [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento.  
+4. Asociar el comportamiento a un extremo de servicio, mediante la adición de un [ \<servicio >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento y establezca el valor de la `behaviorConfiguration` en el valor del atributo name para la [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento.  
   
      Para obtener más información acerca de cómo configurar un extremo de servicio, vea [Cómo: Crear un punto de conexión de servicio en la configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
   
