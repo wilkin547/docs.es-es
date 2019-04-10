@@ -2,12 +2,12 @@
 title: Compatibilidad de SqlClient para alta disponibilidad y recuperación ante desastres
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609127"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213797"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SqlClient para alta disponibilidad y recuperación ante desastres
 Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) para grupos de disponibilidad AlwaysOn de alta disponibilidad y recuperación ante desastres.  Se agregó la característica de grupos de disponibilidad AlwaysOn para SQL Server 2012. Para obtener más información acerca de los grupos de disponibilidad AlwaysOn, vea los libros en pantalla de SQL Server.  
@@ -79,7 +79,7 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
   
  La palabra clave `ApplicationIntent` no funciona con bases de datos heredadas de solo lectura.  
   
- Una base de datos puede permitir o denegar cargas de trabajo de lectura en la base de datos de destino de AlwaysOn. (Esto se hace con la cláusula `ALLOW_CONNECTIONS` de las instrucciones `PRIMARY_ROLE` y `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)].)  
+ Una base de datos puede permitir o denegar cargas de trabajo de lectura en la base de datos de destino de AlwaysOn. (Esto se realiza con el `ALLOW_CONNECTIONS` cláusula de la `PRIMARY_ROLE` y `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrucciones.)  
   
  La palabra clave `ApplicationIntent` se usa para habilitar el enrutamiento de solo lectura.  
   
@@ -97,5 +97,6 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
  El enrutamiento de solo lectura puede tardar más que la conexión a la réplica primaria, ya que primero se conecta a la réplica primaria y después busca la mejor réplica secundaria legible disponible. Debido a esto, debe aumentar el tiempo de espera de inicio de sesión.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Características de SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

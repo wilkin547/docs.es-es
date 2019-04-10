@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear un pincel sólido
+title: Filtrar para crear un pincel sólido
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - brushes [Windows Forms], examples
 - brushes [Windows Forms], creating solid
 ms.assetid: 85c3fe7d-fb1d-4591-8a9f-d75b556b90af
-ms.openlocfilehash: d7fb7c11a69cae69210dd2eece3336bc40c505c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ed9ec1f52b41c83b3cc6e36dedf97f1c00db42e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213446"
 ---
-# <a name="how-to-create-a-solid-brush"></a>Filtrar Crear un pincel sólido
+# <a name="how-to-create-a-solid-brush"></a>Filtrar para crear un pincel sólido
 Este ejemplo se crea un <xref:System.Drawing.SolidBrush> objeto que puede utilizarse por un <xref:System.Drawing.Graphics> objeto para rellenar formas.  
   
 ## <a name="example"></a>Ejemplo  
@@ -29,6 +29,7 @@ Este ejemplo se crea un <xref:System.Drawing.SolidBrush> objeto que puede utiliz
  Cuando haya terminado de usarlos, debe llamar a <xref:System.IDisposable.Dispose%2A> en objetos que consuman recursos del sistema, como los objetos de pincel.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.SolidBrush>
 - <xref:System.Drawing.Brush>
 - [Introducción a la programación de gráficos](getting-started-with-graphics-programming.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Guardar los archivos con el Control RichTextBox de formularios de Windows
+title: Filtrar para guardar archivos con el control RichTextBox de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: c9a5d471a58c646c786cf441ee7d7ec235788f10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a646d9b04bbe824d093b106f5cfcb0f1703c6e21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723046"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213537"
 ---
-# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Procedimiento Guardar los archivos con el Control RichTextBox de formularios de Windows
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Filtrar para guardar archivos con el control RichTextBox de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control puede escribir la información que se muestra en uno de los siguientes formatos:  
   
 -   Texto sin formato  
@@ -88,7 +88,8 @@ Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control puede
     >  En este ejemplo se crea un nuevo archivo, si este no existe aún. Si una aplicación necesita crear un archivo, precisará acceso de creación para la carpeta. Los permisos se establecen usando listas de control de acceso. Si el archivo ya existe, la aplicación necesitará solo acceso de escritura, un privilegio menor. Siempre que sea posible, resulta más seguro crear el archivo durante la implementación y únicamente conceda acceso de lectura a un único archivo, en lugar de acceso de creación para una carpeta. Además, es más seguro escribir datos en carpetas de usuario que en la carpeta raíz o en la carpeta Archivos de programa.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox (control)](richtextbox-control-windows-forms.md)
+- [Control RichTextBox](richtextbox-control-windows-forms.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

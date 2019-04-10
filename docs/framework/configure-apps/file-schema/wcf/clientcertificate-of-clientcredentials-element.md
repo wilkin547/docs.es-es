@@ -2,12 +2,12 @@
 title: <clientCertificate> de <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: 1ca2973b4c0e745f13c1364b2284909d07da738c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5abf0a99beff1b9fb3655cb82d74484f3b88237f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273141"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216462"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate > de \<clientCredentials > elemento
 Define un certificado X.509 que se usa para autenticar un cliente en un servicio.  
@@ -53,6 +53,7 @@ Define un certificado X.509 que se usa para autenticar un cliente en un servicio
  Este elemento de configuración especifica que el certificado utilizado para autenticar el cliente con este elemento. Para obtener más información, vea [Cómo: Especificar los valores de credencial de cliente](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>
@@ -60,7 +61,7 @@ Define un certificado X.509 que se usa para autenticar un cliente en un servicio
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Cómo: Especificar los valores de credencial de cliente](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Filtrar para especificar valores de credenciales de cliente](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)
-- [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

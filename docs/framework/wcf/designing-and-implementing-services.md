@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 51cdcc4789ac553c2775c89d6124cf90624b8747
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ccac3dd26ff03f235827c4bb3135dc2028f09032
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716057"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216430"
 ---
 # <a name="designing-and-implementing-services"></a>Diseño e implementación de servicios
 En esta sección se muestra cómo definir e implementar los contratos de WCF. Un contrato de servicio especifica lo que un punto de conexión comunica al mundo exterior. En un nivel más concreto, es una instrucción sobre un conjunto de mensajes concretos organizada en patrones de intercambio de mensajes básicos (MEP), como solicitud/respuesta, unidireccional y dúplex. Si un contrato de servicio es un conjunto relacionado de forma lógica de intercambios de mensajes, una operación de servicio es un intercambio único de mensajes. Por ejemplo, una operación `Hello` debe aceptar obviamente un mensaje (de manera que el autor de la llamada pueda anunciar el saludo) y puede o no devolver un mensaje (dependiendo de la cortesía de la operación).  
@@ -67,5 +67,6 @@ En esta sección se muestra cómo definir e implementar los contratos de WCF. Un
  Este proceso de requisito aditivo es importante tener en cuenta al diseñar, implementar, configurar y hospedar una aplicación de servicio de Windows Communication Foundation (WCF). Por ejemplo, el contrato puede especificar que necesita admitir una sesión. En ese caso, deberá configurar el enlace para admitir ese requisito contractual o la implementación del servicio no funcionará. O si su servicio requiere Autenticación integrada de Windows y se hospeda en Internet Information Services (IIS), la aplicación web en la que el servicio reside debe tener Autenticación integrada de Windows activada y la compatibilidad anónima desactivada. Para obtener más información sobre las características y el impacto de los tipos de aplicación de host de servicio diferente, consulte [servicios de hospedaje](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Diseño de contratos de servicio](../../../docs/framework/wcf/designing-service-contracts.md)
+
+- [Diseño de contratos de servicios](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Implementación de contratos de servicio](../../../docs/framework/wcf/implementing-service-contracts.md)

@@ -1,5 +1,5 @@
 ---
-title: <shadowCopyVerifyByTimestamp> (Elemento)
+title: <shadowCopyVerifyByTimestamp> Elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <shadowCopyTimeStampVerification> element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 902ed07264615e91721d92861b9d974ea10f0d1e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4ad61b3824b8155cf3f68f61865891c023b4cf32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216434"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp> Element
 Especifica si la creación de instantáneas usa el comportamiento de inicio predeterminado especificado en [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o se revierte el comportamiento de inicio de versiones anteriores de .NET Framework.  
@@ -68,6 +68,7 @@ Especifica si la creación de instantáneas usa el comportamiento de inicio pred
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Copias sombra de ensamblados](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)

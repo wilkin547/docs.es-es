@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider, exposing
 - server-side UI Automation provider, exposing
 ms.assetid: 55d419c0-2201-4101-90c9-2888df4dbb47
-ms.openlocfilehash: d2964e8cee509062353e0eb7aed998c49dd86dbe
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 61515c4c87638d7e2bde63f0ca9faac58128f2e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225032"
 ---
 # <a name="expose-a-server-side-ui-automation-provider"></a>Exponer un proveedor de UI Automation en el servidor
 > [!NOTE]
@@ -29,5 +29,6 @@ ms.locfileid: "57673306"
  [!code-vb[UIAFragmentProvider_snip#116](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#116)]  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre proveedores de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+
+- [Información general sobre proveedores de UI Automation](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [Implementación del proveedor de UI Automation en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

@@ -10,12 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 658f5b7ede2895eaf774b2ef9cf7ca17f6682ac8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 96cdfb79c1573648173305d6ee789aa8db030ff8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211015"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>Método ICorProfilerCallback9::DynamicMethodUnloaded
 [Compatible con .NET Framework 4.7.2 y versiones posteriores]  
@@ -44,7 +44,8 @@ El identificador de la función en memoria que se ha recolectado y descarga.
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Método ICorProfilerCallback8.DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [Método ICorProfilerCallback8.DynamicMethodJITCompilationFinished](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
-- [ICorProfilerCallback9 (interfaz)](icorprofilercallback9-interface.md)
+- [Interfaz ICorProfilerCallback9](icorprofilercallback9-interface.md)
 - [COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS](cor-prf-high-monitor-enumeration.md)

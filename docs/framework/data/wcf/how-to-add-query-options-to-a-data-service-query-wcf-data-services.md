@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar opciones de consulta a una consulta de servicio de datos (WCF Data Services)
+title: Filtrar Agregar opciones de consulta a una consulta de servicio de datos (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: e4258526-557e-4e96-91e1-2175400c7c8f
-ms.openlocfilehash: 2f02f28127650f316b954eaca182945e83fd418a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07e327846e2fdda279e38b4f05ca0a2b3bbacb61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519039"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211080"
 ---
-# <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Procedimiento Agregar opciones de consulta a una consulta de servicio de datos (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite consultar un servicio datos desde una aplicación cliente basada en .NET Framework usando las clases generadas del servicio de datos del cliente. La forma más fácil de hacerlo es crear una expresión de consulta Language Integrated Query (LINQ) que incluya las opciones de consulta deseadas. Además, puede llamar a una serie de métodos de consulta LINQ para crear una consulta equivalente. Por último, puede usar el método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> para agregar las opciones de consulta a una consulta. En cada uno de estos casos, el URI que genera el cliente incluye el conjunto de entidades solicitado con las opciones de consulta seleccionadas aplicadas. Para obtener más información, consulte [consultar el servicio de datos](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+# <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Filtrar Agregar opciones de consulta a una consulta de servicio de datos (WCF Data Services)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite consultar un servicio de datos desde una aplicación cliente basada en .NET Framework mediante el uso de las clases de servicio de datos de cliente generado. La forma más fácil de hacerlo es crear una expresión de consulta Language Integrated Query (LINQ) que incluya las opciones de consulta deseadas. Además, puede llamar a una serie de métodos de consulta LINQ para crear una consulta equivalente. Por último, puede usar el método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> para agregar las opciones de consulta a una consulta. En cada uno de estos casos, el URI que genera el cliente incluye el conjunto de entidades solicitado con las opciones de consulta seleccionadas aplicadas. Para obtener más información, consulte [consultar el servicio de datos](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean cuando se completa la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
@@ -46,5 +46,6 @@ ms.locfileid: "54519039"
  [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#orderwithfilter)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consultar el servicio de datos](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [Cómo: Resultados de la consulta](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)
+- [Filtrar relativo a los resultados de la consulta del proyecto](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c2969551bef279e6b13d2b08ff7f0e4711a80794
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216475"
 ---
 # <a name="net-performance-tips"></a>Sugerencias para mejorar el rendimiento de .NET
 El término *rendimiento* suele hacer referencia a la velocidad de ejecución de un programa. A veces se puede aumentar la velocidad de ejecución si se siguen algunas reglas básicas en el código fuente. En algunos programas, es importante examinar el código detenidamente y usar generadores de perfiles para asegurarse de que se está ejecutando lo más rápidamente posible. En otros programas, no es necesario realizar esta optimización, ya que el código se ejecuta con una velocidad aceptable mientras se escribe. En este artículo se enumeran algunas áreas donde el rendimiento puede verse afectado y sugerencias para mejorar, así como vínculos a temas de rendimiento adicionales. Para más información sobre cómo planear y medir el rendimiento, vea [Rendimiento](../../../docs/framework/performance/index.md)  
@@ -34,15 +34,16 @@ El término *rendimiento* suele hacer referencia a la velocidad de ejecución de
   
 -   [Aplicaciones administradas de alto rendimiento de escritura: Un manual](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=99296) (Conceptos básicos del recolector de elementos no utilizados y sugerencias de rendimiento)  
+-   [Conceptos básicos del recolector de elementos no utilizados y sugerencias de rendimiento](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [Performance Tips and Tricks in .NET Applications](https://go.microsoft.com/fwlink/?LinkId=99297) (Sugerencias y trucos de rendimiento en aplicaciones .NET)  
+-   [Performance Tips and Tricks en aplicaciones .NET](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
--   [Rico Mariani's Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679) (Curiosidades sobre rendimiento de Rico Mariani)  
+-   [Alicientes de rendimiento de Mariani](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
 -   [Blog de Vance Morrison](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>Vea también
+
 - [Rendimiento](../../../docs/framework/performance/index.md)
 - [Guía de programación en Visual Basic](../../visual-basic/programming-guide/index.md)
 - [Guía de programación de C#](../../csharp/programming-guide/index.md)

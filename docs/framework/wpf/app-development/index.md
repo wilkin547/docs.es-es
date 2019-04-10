@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 979a5324fe9cb6c3469660e061d5df7f312ef2c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211067"
 ---
 # <a name="application-development"></a>Desarrollo de aplicaciones
 <a name="introduction"></a> Windows Presentation Foundation (WPF) es un marco de presentación que se puede usar para desarrollar los siguientes tipos de aplicaciones:  
   
 -   Aplicaciones independientes (aplicaciones en el estilo tradicional de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] compiladas como ensamblados ejecutables que se instalan en el equipo cliente y se ejecutan desde él).  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (aplicaciones compuestas de páginas de navegación que se compilan como ensamblados ejecutables y se hospedan en exploradores web como [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] o Mozilla Firefox).  
+-   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (las aplicaciones se componen de las páginas de navegación que se compilan como ensamblados ejecutables y hospedadas por los exploradores Web, como [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] o Mozilla Firefox).  
   
 -   Bibliotecas de control personalizadas (ensamblados no ejecutables que contienen controles reutilizables).  
   
@@ -27,9 +27,7 @@ ms.locfileid: "57365140"
 >  Se recomienda encarecidamente no usar los tipos WPF en un servicio de Windows. Si intenta usar estas características en un servicio de Windows, pueden no funcionar como se esperaba.  
   
  Para compilar este conjunto de aplicaciones, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementa un host de servicios. En este tema se proporciona información general sobre estos servicios y se indica dónde buscar más información.  
-  
 
-  
 <a name="Application_Management"></a>   
 ## <a name="application-management"></a>Administración de aplicaciones  
  Las aplicaciones ejecutables de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] suelen necesitar un conjunto básico de funciones, que incluye las siguientes:  
@@ -74,7 +72,7 @@ ms.locfileid: "57365140"
   
  Para obtener más información, vea [Información general sobre ventanas de WPF](wpf-windows-overview.md).  
   
- <xref:System.Windows.Window> admite la capacidad de crear un tipo especial de ventana denominado cuadro de diálogo. Se pueden crear los tipos modales y no modales de cuadros de diálogo.  
+ <xref:System.Windows.Window> admite la capacidad para crear un tipo especial de ventana que se conoce como un cuadro de diálogo. Se pueden crear los tipos modales y no modales de cuadros de diálogo.  
   
  Por comodidad y las ventajas de reusabilidad y una experiencia de usuario coherente en todas las aplicaciones, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] expone tres de los cuadros de diálogo comunes de Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, y <xref:System.Windows.Controls.PrintDialog>.  
   
@@ -84,7 +82,7 @@ ms.locfileid: "57365140"
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Navegación  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] admite la navegación tipo web mediante páginas (<xref:System.Windows.Controls.Page>) e hipervínculos (<xref:System.Windows.Documents.Hyperlink>). La navegación se puede implementar de diversas maneras que incluyen las siguientes:  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] admite la navegación de estilo Web con páginas (<xref:System.Windows.Controls.Page>) e hipervínculos (<xref:System.Windows.Documents.Hyperlink>). La navegación se puede implementar de diversas maneras que incluyen las siguientes:  
   
 -   Páginas independientes que se hospedan en un explorador web.  
   
@@ -96,7 +94,7 @@ ms.locfileid: "57365140"
   
  Para facilitar la navegación, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementa lo siguiente:  
   
--   <xref:System.Windows.Navigation.NavigationService>, el motor de navegación compartido para procesar solicitudes de navegación que usan <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> y [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] para permitir la navegación entre aplicaciones.  
+-   <xref:System.Windows.Navigation.NavigationService>, el motor de navegación compartido para procesar las solicitudes de navegación que está usando <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, y [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] para permitir la navegación dentro de la aplicación.  
   
 -   Métodos de navegación para iniciar la navegación.  
   
@@ -106,11 +104,11 @@ ms.locfileid: "57365140"
   
  Para obtener más información, vea [Información general sobre navegación](navigation-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] también admite un tipo especial de navegación denominado navegación estructurada. La navegación estructurada se puede usar para llamar a una o más páginas que devuelven datos de una manera estructurada y previsible, y que es coherente con las funciones de llamada. Esta funcionalidad depende de la clase <xref:System.Windows.Navigation.PageFunction%601>, que se describe más detalladamente en [Información general sobre la navegación estructurada](structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> también sirve para simplificar la creación de topologías de navegación complejas, que se describen en [Información general sobre topologías de navegación](navigation-topologies-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] también admite un tipo especial de navegación denominado navegación estructurada. La navegación estructurada se puede usar para llamar a una o más páginas que devuelven datos de una manera estructurada y previsible, y que es coherente con las funciones de llamada. Esta funcionalidad depende de la clase <xref:System.Windows.Navigation.PageFunction%601>, que se describe más detalladamente en [Información general sobre la navegación estructurada](structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> También sirve para simplificar la creación de topologías de navegación complejas, que se describen en [información general sobre topologías de navegación](navigation-topologies-overview.md).  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Hospedaje  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] puede hospedarse en [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] o en Firefox. Cada modelo de hospedaje tiene su propio conjunto de consideraciones y restricciones, que se abordan en el tema [Hospedar aplicaciones de WPF](hosting-wpf-applications.md).  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se pueden hospedar en [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] o Firefox. Cada modelo de hospedaje tiene su propio conjunto de consideraciones y restricciones, que se abordan en el tema [Hospedar aplicaciones de WPF](hosting-wpf-applications.md).  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Compilación e implementación  
@@ -124,9 +122,9 @@ ms.locfileid: "57365140"
 |Título|Descripción|  
 |-----------|-----------------|  
 |[Información general sobre la administración de aplicaciones](application-management-overview.md)|Proporciona información general sobre la clase <xref:System.Windows.Application> incluida la administración de la duración de la aplicación, las ventanas, los recursos de la aplicación y la navegación.|  
-|[Windows en aplicaciones para WPF](windows-in-wpf-applications.md)|Proporciona información detallada sobre la administración de ventanas en la aplicación incluida la forma de usar la clase <xref:System.Windows.Window> y los cuadros de diálogo.|  
+|[Windows en WPF](windows-in-wpf-applications.md)|Proporciona información detallada sobre la administración de ventanas en la aplicación incluida la forma de usar la clase <xref:System.Windows.Window> y los cuadros de diálogo.|  
 |[Información general sobre navegación](navigation-overview.md)|Proporciona información general sobre la administración de la navegación entre las páginas de la aplicación.|  
-|[Hospedar aplicaciones de WPF](hosting-wpf-applications.md)|Proporciona información general acerca de [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
-|[Compilar e implementar aplicaciones WPF](building-and-deploying-wpf-applications.md)|Describe cómo compilar e implementar la aplicación de WPF.|  
+|[Hospedaje](hosting-wpf-applications.md)|Proporciona información general acerca de [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
+|[Compilación e implementación](building-and-deploying-wpf-applications.md)|Describe cómo compilar e implementar la aplicación de WPF.|  
 |[Introducción a WPF en Visual Studio](../getting-started/introduction-to-wpf-in-vs.md)|Describe las características principales de WPF.|  
 |[Tutorial: Mi primera aplicación de escritorio WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Un tutorial que muestra cómo crear una aplicación de WPF mediante la navegación por páginas, diseño, controles, imágenes, estilos y enlaces.|

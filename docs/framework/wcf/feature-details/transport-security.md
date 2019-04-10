@@ -2,12 +2,12 @@
 title: Seguridad de transporte
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-ms.openlocfilehash: f9cb184c1fae3088f6bc682e4e54c63f201ac8c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218971"
 ---
 # <a name="transport-security"></a>Seguridad de transporte
 Seguridad de transporte en Windows Communication Foundation (WCF) depende el enlace seleccionado. El transporte que el enlace implementa determina el mecanismo de seguridad real. Los temas de esta sección explican los mecanismos que se implementan y sus opciones.  
@@ -25,7 +25,7 @@ Seguridad de transporte en Windows Communication Foundation (WCF) depende el enl
  [Utilización de la suplantación con la seguridad de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  Explica los cinco niveles de suplantación que son posibles con el modo de seguridad de transporte.  
   
- [Cómo: Configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Filtrar para configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  Describe los fundamentos para configurar un puerto en un equipo con un certificado X.509 para la seguridad de SSL (transporte).  
   
 ## <a name="reference"></a>Referencia  
@@ -39,4 +39,5 @@ Seguridad de transporte en Windows Communication Foundation (WCF) depende el enl
  [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - [Programación de la seguridad de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

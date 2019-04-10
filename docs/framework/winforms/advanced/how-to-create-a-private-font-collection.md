@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear una colección de fuentes privada
+title: Filtrar para crear una colección de fuentes privada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: 7cfd2a1fd29b58019d49c8cd5df9adb5b0873302
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210697"
 ---
-# <a name="how-to-create-a-private-font-collection"></a>Procedimiento Crear una colección de fuentes privada
+# <a name="how-to-create-a-private-font-collection"></a>Filtrar para crear una colección de fuentes privada
 El <xref:System.Drawing.Text.PrivateFontCollection> clase hereda de la <xref:System.Drawing.Text.FontCollection> clase base abstracta. Puede usar un <xref:System.Drawing.Text.PrivateFontCollection> objeto para mantener un conjunto de fuentes específicamente para la aplicación. Una colección de fuentes privada puede incluir fuentes del sistema instalados, así como las fuentes que no se han instalado en el equipo. Para agregar un archivo de fuente a una colección de fuentes privada, llame el <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> método de un <xref:System.Drawing.Text.PrivateFontCollection> objeto.  
   
  El <xref:System.Drawing.Text.FontCollection.Families%2A> propiedad de un <xref:System.Drawing.Text.PrivateFontCollection> objeto contiene una matriz de <xref:System.Drawing.FontFamily> objetos.  
@@ -37,9 +37,9 @@ El <xref:System.Drawing.Text.PrivateFontCollection> clase hereda de la <xref:Sys
   
  Si una combinación de familia y estilo concreta está disponible, un <xref:System.Drawing.Font> objeto se construye utilizando esa familia y el estilo. El primer argumento pasado a la <xref:System.Drawing.Font.%23ctor%2A> constructor es el nombre de familia de fuentes (no un <xref:System.Drawing.FontFamily> objeto como es el caso de otras variaciones de la <xref:System.Drawing.Font.%23ctor%2A> constructor). Después de la <xref:System.Drawing.Font> se construye el objeto, se pasa a la <xref:System.Drawing.Graphics.DrawString%2A> método de la <xref:System.Drawing.Graphics> clase para mostrar el nombre de familia junto con el nombre del estilo.  
   
- La salida del código siguiente es similar a la salida mostrada en la siguiente ilustración.  
+ La salida del código siguiente es similar a la salida mostrada en la ilustración siguiente:  
   
- ![Fonts Text](./media/csfontstext7.png "csfontstext7")  
+ ![Captura de pantalla que muestra el texto de diversas fuentes.](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
  Arial.tff (que se agregó a la colección de fuentes privada en el siguiente ejemplo de código) es el archivo de fuente para el estilo normal Arial. Sin embargo, tenga en cuenta que la salida del programa muestra varios estilos disponibles aparte del normal para la familia de fuentes Arial. Eso es porque [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] puede simular los estilos negrita, cursiva, negrita y cursiva a partir del estilo normal. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] También puede generar subrayados y tachados a partir del estilo normal.  
   
@@ -52,5 +52,6 @@ El <xref:System.Drawing.Text.PrivateFontCollection> clase hereda de la <xref:Sys
  El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.Text.PrivateFontCollection>
 - [Utilizar fuentes y texto](using-fonts-and-text.md)

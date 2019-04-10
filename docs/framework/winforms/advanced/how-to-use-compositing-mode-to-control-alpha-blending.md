@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar el modo de composición para controlar la mezcla alfa
+title: Filtrar para usar el modo de composición para controlar la combinación alfa
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 1a5cf23890cd6183d92e33ec4e24f87c226e8ec3
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462869"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210703"
 ---
-# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Filtrar Usar el modo de composición para controlar la mezcla alfa
+# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Filtrar para usar el modo de composición para controlar la combinación alfa
 Puede haber ocasiones en que desee crear un mapa de bits fuera de la pantalla que tiene las siguientes características:  
   
 -   Colores tienen valores alfabéticos que son menos de 255.  
@@ -57,5 +57,6 @@ Puede haber ocasiones en que desee crear un mapa de bits fuera de la pantalla qu
  El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.Color.FromArgb%2A>
-- [Líneas y rellenos con combinación alfa](alpha-blending-lines-and-fills.md)
+- [Líneas y rellenos con mezcla alfa](alpha-blending-lines-and-fills.md)
