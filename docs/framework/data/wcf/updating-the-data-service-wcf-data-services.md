@@ -1,5 +1,5 @@
 ---
-title: Actualizar el servicio de datos (Data Services de WCF)
+title: Actualizar el servicio de datos (Servicios de datos de WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: ddc9e3ec1a07e52e366ff5c17d4dd2ce3a3192a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b8fa13bf5db7f3c3df97febe4bb6f9ee4c184a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569172"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231297"
 ---
-# <a name="updating-the-data-service-wcf-data-services"></a>Actualizar el servicio de datos (Data Services de WCF)
+# <a name="updating-the-data-service-wcf-data-services"></a>Actualizar el servicio de datos (Servicios de datos de WCF)
 Cuando se usa el [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente para consumir un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuente, la biblioteca traduce las entradas de la fuente en instancias de clases de servicio de datos de cliente. La instancia de <xref:System.Data.Services.Client.DataServiceContext> a la que pertenece la instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> realiza el seguimiento de estas clases del servicio de datos. El cliente realiza el seguimiento de los cambios en las entidades que se notifican utilizando métodos de <xref:System.Data.Services.Client.DataServiceContext>. Estos métodos permiten al cliente realizar el seguimiento de las entidades agregadas y eliminadas y también de los cambios que se realizan en los valores de propiedad o en las relaciones entre instancias de entidad. Estos cambios se devuelven al servicio de datos como operaciones basadas en REST al llamar al método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
   
 > [!NOTE]
@@ -73,7 +73,7 @@ Cuando se usa el [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bib
 |------------|-----------------|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|Crea un nuevo vínculo entre dos objetos entidad relacionados. Llamar a este método es equivalente a llamar a los métodos <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> y <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> tanto para crear el nuevo objeto como para definir la relación en un objeto existente.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|Crea un nuevo vínculo entre dos objetos entidad relacionados.|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Actualiza un vínculo existente entre dos objetos de entidad relacionados. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> también se usa para eliminar los vínculos con una cardinalidad de cero o uno a uno (`0..1:1`) y de uno a uno (`1:1`). Para ello, puede establecer el objeto relacionado en `null`.|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Actualiza un vínculo existente entre dos objetos de entidad relacionados. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> También se usa para eliminar vínculos con una cardinalidad de cero o uno-a-uno (`0..1:1`) y uno a uno (`1:1`). Para ello, puede establecer el objeto relacionado en `null`.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|Marca para su eliminación un vínculo cuyo seguimiento lo está realizando el contexto cuando se llame al método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>. Use este método cuando elimine un objeto relacionado o cuando cambie una relación eliminando primero el vínculo a un objeto existente y luego agregando un vínculo al nuevo objeto relacionado.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|Notifica al contexto la existencia de un vínculo entre dos objetos entidad. El contexto supone que esta relación ya existe en el servicio de datos y no intenta crear el vínculo cuando se llama al método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>. Use este método cuando adjunte objetos a un contexto y también necesite adjuntar el vínculo entre los dos. Si está definiendo una nueva relación, en su lugar debe usar el método <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|Deja de realizar el seguimiento del vínculo especificado en el contexto. Este método se usa para eliminar relaciones uno a varios (`*:*`). En vínculos de relación con una cardinalidad de uno, debe usar el método <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> en su lugar.|  
@@ -94,7 +94,8 @@ Cuando se usa el [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bib
  El seguimiento de los cambios se realiza en la instancia de la clase <xref:System.Data.Services.Client.DataServiceContext>, pero los cambios no se envían al servidor inmediatamente. Una vez que haya efectuado los cambios necesarios de una actividad determinada, llame al método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> para enviar todos los cambios al servicio de datos. Para obtener más información, consulte [administrar el contexto de servicio de datos](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md). También puede guardar cambios de forma asincrónica utilizando los métodos <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> y <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>. Para obtener más información, consulte [operaciones asincrónicas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+- [Biblioteca cliente de Data Services de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Consultar el servicio de datos](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [Operaciones asincrónicas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
 - [Procesamiento por lotes de operaciones](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)

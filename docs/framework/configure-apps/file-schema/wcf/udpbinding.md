@@ -2,12 +2,12 @@
 title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: 1b2c4615445a906d1c48f386288a3d21e1e1f470
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84a5bc763f898b3d323a6cee468c6e22d27d85a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229607"
 ---
 # <a name="udpbinding"></a>\<udpBinding>
 Un elemento de configuración usado para configurar el enlace <xref:System.ServiceModel.UdpBinding>.  
@@ -81,7 +81,7 @@ Un elemento de configuración usado para configurar el enlace <xref:System.Servi
  El UdpBinding permite que los servicios de WCF se comuniquen sobre el transporte UDP. Permite intercambios de mensajes "desencadenar y omitir" donde un cliente envía un mensaje a un servicio y no espera ninguna respuesta.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo configurar <xref:System.ServiceModel.UdpBinding> con el elemento <`udpBinding`>.  
+ El ejemplo siguiente muestra cómo configurar el <xref:System.ServiceModel.UdpBinding> con el <`udpBinding`> elemento.  
   
 ```xml  
 <udpBinding>
@@ -104,6 +104,7 @@ Un elemento de configuración usado para configurar el enlace <xref:System.Servi
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>

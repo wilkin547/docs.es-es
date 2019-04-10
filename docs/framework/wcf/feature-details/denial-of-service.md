@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: bc209d184ac330b112d17c34f0bf1c479a8b5f7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228889"
 ---
 # <a name="denial-of-service"></a>Denegación de servicio
 La denegación de servicio se produce cuando un sistema está sobrecargado de tal manera que no se pueden procesar los mensajes, o se procesan muy lentamente.  
@@ -28,13 +28,13 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
   
  Mitigación: Utilice las siguientes propiedades de la <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> clase:  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: controla el número máximo de `SecurityContextToken`s limitados por tiempo que el servidor almacena en memoria caché después de `SPNego` o negociación `SSL`.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: controla el número máximo de tiempo limitado `SecurityContextToken`s que el servidor almacena en caché después de `SPNego` o `SSL` negociación.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: controla la duración de `SecurityContextTokens` que el servidor emite tras `SPNego` o una negociación `SSL`. El servidor almacena en memoria caché los `SecurityContextToken`s para este período de tiempo.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: controla la duración de la `SecurityContextTokens` que el servidor emite tras `SPNego` o `SSL` negociación. El servidor almacena en memoria caché los `SecurityContextToken`s para este período de tiempo.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: controla el número máximo de conversaciones seguras que se establecen en el servidor pero para las que no se ha procesado ningún mensaje de aplicación. Esta cuota evita que los clientes establezcan conversaciones seguras en el servicio, por lo que el servicio mantiene el estado por cliente, pero sin usarlos.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: controla el número máximo de conversaciones seguras que se establecen en el servidor, pero para que se han procesado ningún mensaje de aplicación. Esta cuota evita que los clientes establezcan conversaciones seguras en el servicio, por lo que el servicio mantiene el estado por cliente, pero sin usarlos.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: controla el tiempo máximo en el que el servicio mantiene viva una conversación segura sin recibir un mensaje de aplicación del cliente para la conversación. Esta cuota evita que los clientes establezcan conversaciones seguras en el servicio, por lo que el servicio mantiene el estado por cliente, pero sin usarlos.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: controla el tiempo máximo que el servicio mantiene una conversación segura activo sin recibir un mensaje de aplicación del cliente para la conversación. Esta cuota evita que los clientes establezcan conversaciones seguras en el servicio, por lo que el servicio mantiene el estado por cliente, pero sin usarlos.  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding o los enlaces personalizados duales requieren autenticación del cliente  
  De forma predeterminada, <xref:System.ServiceModel.WSDualHttpBinding> tiene la seguridad habilitada. Es posible, sin embargo, que si la autenticación del cliente se deshabilita estableciendo la propiedad <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> en <xref:System.ServiceModel.MessageCredentialType.None>, un usuario malintencionado pueda producir un ataque de denegación de servicio en un tercer servicio. Esto se puede producir porque un cliente malintencionado puede hacer que el servicio envíe una secuencia de mensajes a un tercer servicio.  
@@ -80,6 +80,7 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
  Para mitigar esto, establezca el límite para el número máximo de sesiones activas y la duración máxima para una sesión estableciendo la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Divulgación de información](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Elevación de privilegios](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)

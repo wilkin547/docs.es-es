@@ -7,12 +7,12 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: f93ef787c74a4581d45c24c5a704cc5fb044bd46
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409970"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228398"
 ---
 # <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Tutorial: Definir un contrato de servicio de Windows Communication Foundation
 
@@ -29,10 +29,9 @@ En este tutorial aprenderá a:
 > - Crear un **biblioteca de servicios WCF** proyecto.
 > - Defina una interfaz de contrato de servicio.
 
-
 ## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Crear un proyecto de biblioteca de servicios WCF y definir una interfaz de contrato de servicio
 
-1. Abra Visual Studio como administrador. Para ello, seleccione el programa de Visual Studio en el **iniciar** menú y, a continuación, seleccione **más** > **ejecutar como administrador** en el menú contextual.
+1. Abra Visual Studio como administrador. Para ello, seleccione el programa de Visual Studio en el **iniciar** menú y, a continuación, seleccione **más** > **ejecutar como administrador** en el menú contextual.
 
 2. Crear un **biblioteca de servicios WCF** proyecto.
 
@@ -54,7 +53,6 @@ En este tutorial aprenderá a:
 
       > [!NOTE]
       > Si ha instalado Visual Studio con la configuración del entorno de desarrollo de Visual Basic, la solución podría estar oculto. Si esto es así, seleccione **opciones** desde el **herramientas** menú, a continuación, seleccione **proyectos y soluciones** > **General** en el **opciones** ventana. Seleccione **Mostrar solución siempre**. Además, compruebe que **guardar nuevos proyectos al crearlos** está seleccionada.
-
 
 3. Desde **el Explorador de soluciones**, abra el **IService1.cs** o **IService1.vb** y reemplace su código con el código siguiente:
 

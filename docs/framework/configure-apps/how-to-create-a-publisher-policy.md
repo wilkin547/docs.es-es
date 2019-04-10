@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear una directiva de publicador
+title: Filtrar para crear una directiva de publicador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: b98d3ef62fc9dda48920d32fed6f6acf797334d6
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: MT
+ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758994"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227397"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Filtrar Crear una directiva de publicador
+# <a name="how-to-create-a-publisher-policy"></a>Filtrar para crear una directiva de publicador
 Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar una versión más reciente de un ensamblado mediante la inclusión de un archivo de directiva de publicador con el ensamblado actualizado. El archivo de directiva de publicador especifica redirección de ensamblado y la configuración de base de código y usa el mismo formato que un archivo de configuración de la aplicación. El archivo de directiva de publicador se compila en un ensamblado y colocar en la caché global de ensamblados.  
   
  Hay tres pasos implicados en la creación de una directiva de publicador:  
@@ -61,7 +61,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
     -   El *publisherPolicyAssemblyFile* argumento es el nombre del ensamblado de directiva de publicador que da como resultado de este comando. El nombre de archivo de ensamblado debe tener el formato:  
   
-         **policy.** *número principal* **.** *número secundario* **.** *mainAssemblyName* **.dll**  
+         **Directiva.** *número principal* **.** *número secundario* **.** *mainAssemblyName* **.dll**  
   
     -   El *keyPairFile* argumento es el nombre del archivo que contiene el par de claves. Debe firmar el ensamblado y el ensamblado de directivas del publicador con el mismo par de claves.  
   
@@ -101,6 +101,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
     >  No se puede agregar el ensamblado de directivas de publicador a la caché global de ensamblados, a menos que se encuentra el archivo de directiva de publicador original en el mismo directorio que el ensamblado.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Configurar aplicaciones con archivos de configuración](../../../docs/framework/configure-apps/index.md)

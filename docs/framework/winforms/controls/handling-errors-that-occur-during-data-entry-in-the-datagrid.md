@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Controlar los errores que se producen durante la entrada de datos en el Control DataGridView de Windows Forms'
+title: 'Tutorial: Controlar los errores que se producen durante la entrada de datos en el control DataGridView de formularios Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - error handling [Windows Forms], data entry
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
-ms.openlocfilehash: a8eb4584060924684eacc99d46b88408451f1c82
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: dfd0753895a937ccef9a8bc14b2f692219eb7f06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230478"
 ---
-# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Tutorial: Controlar los errores que se producen durante la entrada de datos en el Control DataGridView de Windows Forms
+# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Tutorial: Controlar los errores que se producen durante la entrada de datos en el control DataGridView de formularios Windows Forms
 Control de errores del almacén de datos subyacente es una característica necesaria para una aplicación de entrada de datos. Los formularios de Windows <xref:System.Windows.Forms.DataGridView> control facilita esta tarea mediante la exposición de la <xref:System.Windows.Forms.DataGridView.DataError> evento, que se produce cuando el almacén de datos detecta una infracción de restricción o una regla de negocios roto.  
   
  En este tutorial, va a recuperar las filas de la `Customers` de tabla en la base de datos de ejemplo Northwind y mostrarlos en un <xref:System.Windows.Forms.DataGridView> control. Cuando un duplicado `CustomerID` se detecta el valor en una nueva fila o una fila existente editada, el <xref:System.Windows.Forms.DataGridView.DataError> se produce un evento que se controlarán mostrando un <xref:System.Windows.Forms.MessageBox> que describe la excepción.  
@@ -89,9 +89,10 @@ Control de errores del almacén de datos subyacente es una característica neces
 -   Personalizar la apariencia de celdas. Para obtener más información, vea [Cómo: Personalizar la apariencia de celdas en el Control DataGridView de formularios de Windows](customize-the-appearance-of-cells-in-the-datagrid.md) y [Cómo: Establecer estilos de celda predeterminados para los Windows Forms DataGridView Control](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Entrada de datos en el control DataGridView de Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Cómo: Controlar los errores que se producen durante la entrada de datos en el Control DataGridView de Windows Forms](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
-- [Tutorial: Validar datos en el Control DataGridView de Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [Entrada de datos en el control DataGridView de formularios Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Filtrar para controlar los errores que se producen durante la entrada de datos en el control DataGridView de formularios Windows Forms](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Tutorial: Validar datos en el control DataGridView de formularios Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
 - [Proteger la información de conexión](../../data/adonet/protecting-connection-information.md)

@@ -2,12 +2,12 @@
 title: Sesiones, creación de instancias y simultaneidad
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 5ccd6fe5e07b2a1bc36b89d1fe14f7990dc7231d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661830"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229074"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sesiones, creación de instancias y simultaneidad
 Una *sesión* es una correlación de todos los mensajes enviados entre dos extremos. *Creación de instancias* hace referencia al control de la vida de los objetos de servicio definidos por el usuario y sus objetos <xref:System.ServiceModel.InstanceContext> relacionados. La*simultaneidad* es el término dado al control del número de subprocesos que se ejecutan al mismo tiempo en un <xref:System.ServiceModel.InstanceContext> .  
@@ -29,11 +29,11 @@ Una *sesión* es una correlación de todos los mensajes enviados entre dos extre
   
  Si está familiarizado con el <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> clase [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicaciones y la funcionalidad que proporciona, es posible que tenga en cuenta las siguientes diferencias entre ese tipo de sesión y las sesiones WCF:  
   
--   Las sesiones[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] siempre son iniciadas por servidor.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] las sesiones son siempre iniciadas por el servidor.  
   
--   Las sesiones[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] están implícitamente desordenadas.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] las sesiones están implícitamente desordenadas.  
   
--   Las sesiones[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proporcionan un mecanismo del almacenamiento de datos general para todas las solicitudes.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] las sesiones proporcionan un mecanismo de almacenamiento de datos general en todas las solicitudes.  
   
  Las aplicaciones de cliente y servicio interactúan con sesiones de maneras diferentes. Las aplicaciones cliente inician sesiones y, a continuación, reciben y procesan los mensajes enviados dentro de la sesión. Las aplicaciones de servicio pueden utilizar sesiones como un punto de la extensibilidad para agregar comportamiento adicional. Esto se realiza trabajando directamente con <xref:System.ServiceModel.InstanceContext> o implementando un proveedor de contexto de instancia personalizado.  
   
@@ -108,9 +108,10 @@ public class CalculatorService : ICalculatorConcurrency
 |Single|-Comportamiento con canal con sesión: Una sesión y un <xref:System.ServiceModel.InstanceContext> para todas las llamadas.<br />-Comportamiento con canal sin sesión: Se produce una excepción.|-Comportamiento con canal con sesión: Una sesión y <xref:System.ServiceModel.InstanceContext> para el singleton creado o especificado por el usuario.<br />-Comportamiento con canal sin sesión: Un <xref:System.ServiceModel.InstanceContext> para el singleton creado o especificado por el usuario.|-Comportamiento con canal con sesión: Se produce una excepción.<br />-Comportamiento con canal sin sesión: Un <xref:System.ServiceModel.InstanceContext> para cada singleton creado o para el singleton especificado por el usuario.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Uso de sesiones](../../../../docs/framework/wcf/using-sessions.md)
-- [Cómo: Crear un servicio que requiere sesiones](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
-- [Cómo: Creación de instancias de servicio de control](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
-- [Simultaneidad](../../../../docs/framework/wcf/samples/concurrency.md)
+- [Filtrar para crear un servicio que requiere sesiones](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [Filtrar para controlar la creación de instancias de servicio](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [simultaneidad](../../../../docs/framework/wcf/samples/concurrency.md)
 - [Creación de instancias](../../../../docs/framework/wcf/samples/instancing.md)
 - [Sesión](../../../../docs/framework/wcf/samples/session.md)

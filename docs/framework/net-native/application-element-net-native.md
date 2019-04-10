@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 366878fbfbfbe3e3951095c9ad82c1260638a0cb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228307"
 ---
 # <a name="application-element-net-native"></a>\<Aplicación > elemento (.NET Native)
 Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos metadatos están disponibles para la reflexión en tiempo de ejecución y aplica la directiva de reflexión en tiempo de ejecución a todos los elementos de programa en una aplicación.  
@@ -48,7 +48,7 @@ Elemento \<Application> (rd.xml)
 |`XmlSerializer`|Serialización|Atributo opcional. Controla la directiva de serialización XML que usa la clase <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|  
 |`MarshalObject`|Interop|Atributo opcional. Controla la directiva de serialización de tipos de referencia a Windows Runtime y COM.|  
 |`MarshalDelegate`|Interop|Atributo opcional. Controla la directiva de serialización de tipos de delegado como punteros de función a código nativo.|  
-|`MarshalStructure`|Interop|Atributo opcional. Controla la directiva de cálculo de referencias de estructuras a código nativo.|  
+|`MarshalStructure`|Interop|Atributo opcional. Controla la directiva para calcular referencias de estructuras a código nativo.|  
   
 ## <a name="all-attributes"></a>Todos los atributos  
   
@@ -60,21 +60,21 @@ Elemento \<Application> (rd.xml)
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Aplica la directiva a todos los tipos en un ensamblado determinado.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Aplica la directiva a todos los tipos en un espacio de nombres determinado.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva a un tipo determinado, como una clase o una estructura.|  
+|[\<Ensamblado >](../../../docs/framework/net-native/assembly-element-net-native.md)|Aplica la directiva a todos los tipos en un ensamblado determinado.|  
+|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Aplica la directiva a todos los tipos en un espacio de nombres determinado.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva a un tipo determinado, como una clase o una estructura.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica la directiva a un tipo genérico construido. Por ejemplo, se podría usar un elemento [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) para definir la directiva para un tipo `List<String>`.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Aplica la directiva a un método en un tipo determinado.|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Aplica la directiva a un método genérico construido.|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Aplica la directiva a una propiedad en un tipo determinado.|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Aplica la directiva a un campo en un tipo determinado.|  
+|[\<Método >](../../../docs/framework/net-native/method-element-net-native.md)|Aplica la directiva a un método en un tipo determinado.|  
+|[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Aplica la directiva a un método genérico construido.|  
+|[\<Propiedad >](../../../docs/framework/net-native/property-element-net-native.md)|Aplica la directiva a una propiedad en un tipo determinado.|  
+|[\<Campo >](../../../docs/framework/net-native/field-element-net-native.md)|Aplica la directiva a un campo en un tipo determinado.|  
 |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Aplica la directiva a un evento en un tipo determinado.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|Elemento raíz de un archivo de directivas en tiempo de ejecución.|  
+|[\<Directivas >](../../../docs/framework/net-native/directives-element-net-native.md)|Elemento raíz de un archivo de directivas en tiempo de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) puede contener cero o un elemento `<Application>`. No se admiten varios elementos `<Application>` en un único archivo de directivas de reflexión.  
@@ -86,7 +86,8 @@ Elemento \<Application> (rd.xml)
 -   Como un elemento que establece la directiva de la aplicación para la reflexión, serialización e interoperabilidad. Los atributos del elemento `<Application>` definen las directivas de la aplicación, que pueden ser invalidadas por los elementos secundarios definidos por el elemento `<Application>` o [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
 ## <a name="see-also"></a>Vea también
-- [\<Biblioteca > elemento](../../../docs/framework/net-native/library-element-net-native.md)
-- [\<Directivas > elemento](../../../docs/framework/net-native/directives-element-net-native.md)
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [Elemento \<Library>](../../../docs/framework/net-native/library-element-net-native.md)
+- [Elemento \<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)
+- [Elementos de directivas en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

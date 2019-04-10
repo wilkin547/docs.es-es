@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: ad285b5a0fa37867b1b80b3d7293a976fbd12c61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231284"
 ---
 # <a name="one-way-services"></a>Servicios unidireccionales
 El comportamiento predeterminado de una operación de servicio es el patrón de solicitud-respuesta. En un patrón de este tipo, el cliente espera el mensaje de respuesta, aun cuando la operación de servicio se representa en código como un método `void`. Con una operación unidireccional, sólo se transmite un mensaje. El receptor no envía un mensaje de respuesta, ni el remitente lo espera.  
@@ -55,4 +55,5 @@ public interface IOneWayCalculator
  En su lugar, se recomienda que examine los distintos controles en el servicio así como en el cliente y después pruebe sus escenarios de aplicación para determinar la mejor configuración en cada lado. Por ejemplo, si el uso de sesiones está bloqueando el procesamiento de mensajes en su servicio, puede establecer la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.InstanceContextMode.PerCall> de manera que una instancia del servicio diferente pueda procesar cada mensaje, y establecer <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> en <xref:System.ServiceModel.ConcurrencyMode.Multiple> para permitir que más de un subproceso envíe los mensajes cada vez. Otro enfoque es aumentar las cuotas de lectura de los enlaces de cliente y servicio.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Unidireccional](../../../../docs/framework/wcf/samples/one-way.md)

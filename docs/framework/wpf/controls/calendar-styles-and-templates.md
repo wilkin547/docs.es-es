@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: beba15f12b0ae2b819c641de9af8485767ad1a78
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 18bef548b11f1a680c1361027b86f6952bedaad0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373418"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227129"
 ---
 # <a name="calendar-styles-and-templates"></a>Estilos y plantillas de Calendar
 En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Calendar> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -83,7 +83,7 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 |Con foco|FocusStates|El botón tiene el foco.|  
 |Sin foco|FocusStates|El botón no tiene el foco.|  
 |Activo|ActiveStates|El botón está activo.|  
-|inactivo|ActiveStates|El botón está inactivo.|  
+|Inactivo|ActiveStates|El botón está inactivo.|  
 |RegularDay|DayStates|No representa el botón <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |Hoy|DayStates|Representa el botón <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |NormalDay|BlackoutDayStates|El botón representa un día que se puede seleccionar.|  
@@ -111,7 +111,7 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 |Con foco|FocusStates|El botón tiene el foco.|  
 |Sin foco|FocusStates|El botón no tiene el foco.|  
 |Activo|ActiveStates|El botón está activo.|  
-|inactivo|ActiveStates|El botón está inactivo.|  
+|Inactivo|ActiveStates|El botón está inactivo.|  
 |Válido|ValidationStates|El control utiliza el <xref:System.Windows.Controls.Validation> clase y el <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `false`.|  
 |InvalidFocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control tiene el foco.|  
 |InvalidUnfocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control no tiene el foco.|  
@@ -128,9 +128,10 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
  Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
-- [Control Customization](control-customization.md) (Personalización de controles)
+- [Personalización de controles](control-customization.md)
 - [Aplicar estilos y plantillas](styling-and-templating.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Personalizar la apariencia de un control existente creando una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

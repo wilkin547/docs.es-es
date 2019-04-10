@@ -1,23 +1,23 @@
 ---
-title: Procedimiento Exponer una fuente como Atom y RSS
+title: Filtrar para exponer una fuente como Atom y RSS
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: 43ad8ae0b12b07e2d0abe3e208f6d1ccdb2ec77d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 17494b00259839be3beb580a516ff017ec3de50e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681175"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228411"
 ---
-# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Procedimiento Exponer una fuente como Atom y RSS
-Windows Communication Foundation (WCF) le permite crear un servicio que expone una fuente de distribución. En este tema se explica cómo crear un servicio de distribución que exponga una fuente de distribución mediante Atom 1.0 y RSS 2.0. Este servicio expone un extremo que puede devolver cualquiera de los dos formatos de distribución. Para simplificar, el servicio usado en este ejemplo tiene host propio. En un entorno de producción un servicio de este tipo estaría hospedado en IIS o WAS. Para obtener más información acerca de la WCF diferentes opciones de hospedaje, vea [hospedaje](../../../../docs/framework/wcf/feature-details/hosting.md).  
+# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Filtrar para exponer una fuente como Atom y RSS
+Windows Communication Foundation (WCF) le permite crear un servicio que expone una fuente de distribución. En este tema se explica cómo crear un servicio de distribución que exponga una fuente de distribución mediante Atom 1.0 y RSS 2.0. Este servicio expone un punto de conexión que puede devolver cualquiera de los dos formatos de distribución. Para simplificar, el servicio usado en este ejemplo tiene host propio. En un entorno de producción un servicio de este tipo estaría hospedado en IIS o WAS. Para obtener más información acerca de la WCF diferentes opciones de hospedaje, vea [hospedaje](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Creación de un servicio de distribución básico  
   
-1.  Defina un contrato de servicios utilizando una interfaz marcada con el atributo <xref:System.ServiceModel.Web.WebGetAttribute>. Cada operación que se expone como una fuente de distribución devuelve un objeto <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Observe los parámetros de <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` especifica la dirección URL usada para invocar esta operación de servicio. La cadena de este parámetro contiene literales y una variable entre llaves ({*formato*}). Esta variable corresponde al parámetro `format` de la operación del servicio. Para obtener más información, consulta <xref:System.UriTemplate>. `BodyStyle` afecta a cómo se escriben los mensajes que esta operación de servicio envía y recibe. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> especifica que los datos enviados a y desde esta operación de servicio no están ajustados por los elementos XML definidos por la infraestructura. Para obtener más información, consulta <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
+1.  Defina un contrato de servicios utilizando una interfaz marcada con el atributo <xref:System.ServiceModel.Web.WebGetAttribute>. Cada operación que se expone como una fuente de distribución devuelve un objeto <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Observe los parámetros de <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` Especifica la dirección URL utilizada para invocar esta operación de servicio. La cadena de este parámetro contiene literales y una variable entre llaves ({*formato*}). Esta variable corresponde al parámetro `format` de la operación del servicio. Para obtener más información, consulta <xref:System.UriTemplate>. `BodyStyle` afecta a cómo se escriben los mensajes que esta operación de servicio envía y recibe. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> Especifica que no se ajustan los datos enviados hacia y desde esta operación de servicio mediante los elementos XML definidos en la infraestructura. Para obtener más información, consulta <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  
@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que expone u
   
 ### <a name="to-host-the-service"></a>Para hospedar el servicio  
   
-1.  Crear un objeto <xref:System.ServiceModel.Web.WebServiceHost>. La clase <xref:System.ServiceModel.Web.WebServiceHost> agrega automáticamente un extremo en la dirección base del servicio, salvo que se especifique uno en el código o en la configuración. En este ejemplo, no se especifica ningún extremo, por lo que se expone el predeterminado.  
+1.  Crear un objeto <xref:System.ServiceModel.Web.WebServiceHost>. La clase <xref:System.ServiceModel.Web.WebServiceHost> agrega automáticamente un punto de conexión en la dirección base del servicio, salvo que se especifique uno en el código o en la configuración. En este ejemplo, no se especifica ningún punto de conexión, por lo que se expone el predeterminado.  
   
      [!code-csharp[htAtomRss#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#6)]
      [!code-vb[htAtomRss#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#6)]  
@@ -96,5 +96,6 @@ Windows Communication Foundation (WCF) le permite crear un servicio que expone u
  Al compilar el código anterior, haga referencia a System.ServiceModel.dll y System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

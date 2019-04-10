@@ -2,12 +2,12 @@
 title: <filterTable>
 ms.date: 03/30/2017
 ms.assetid: e9f05441-3ad1-49b9-a267-71724aa094b4
-ms.openlocfilehash: ba65d3858cdbdf6b49c50e60f4e3cc9624fef136
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4e5c7d56e35afe3001f4c70064adbfef7702c720
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229282"
 ---
 # <a name="filtertable"></a>\<filterTable>
 Representa una tabla de enrutamiento que contiene una lista de filtros para evaluar los mensajes y el punto de conexión de cliente para enrutar mensajes a si el filtro se evalúa como true.  
@@ -56,4 +56,5 @@ Representa una tabla de enrutamiento que contiene una lista de filtros para eval
 |[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Sección de configuración que contiene tablas de enrutamiento.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>

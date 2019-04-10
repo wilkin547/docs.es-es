@@ -1,5 +1,5 @@
 ---
-title: ICorDebugValue (Interfaz)
+title: Interfaz ICorDebugValue
 ms.date: 03/30/2017
 api_name:
 - ICorDebugValue
@@ -16,24 +16,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2de5d3a208594a03bfdca837e592f53b3da7f0f0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bdc889dd6b2854654bfe43b24afbe4cc19863c80
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981418"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227826"
 ---
-# <a name="icordebugvalue-interface"></a>ICorDebugValue (Interfaz)
+# <a name="icordebugvalue-interface"></a>Interfaz ICorDebugValue
 Representa un valor en el proceso que se está depurando. El valor puede ser de lectura o un valor de escritura.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[CreateBreakpoint (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|Este método no está implementado actualmente.|  
-|[GetAddress (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|Obtiene la dirección de esta `ICorDebugValue` objeto, que se está depurando.|  
-|[GetSize (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|Obtiene el tamaño, en bytes, de este `ICorDebugValue` objeto.|  
-|[GetType (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|Obtiene el tipo primitivo de este `ICorDebugValue` objeto.|  
+|[Método CreateBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|Este método no está implementado actualmente.|  
+|[Método GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|Obtiene la dirección de esta `ICorDebugValue` objeto, que se está depurando.|  
+|[Método GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|Obtiene el tamaño, en bytes, de este `ICorDebugValue` objeto.|  
+|[Método GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|Obtiene el tipo primitivo de este `ICorDebugValue` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
  En general, la propiedad de un objeto de valor se pasa cuando se devuelve. El destinatario es responsable de quitar una referencia del objeto cuando haya finalizado con el objeto.  
@@ -54,8 +54,5 @@ Representa un valor en el proceso que se está depurando. El valor puede ser de 
   
 ## <a name="see-also"></a>Vea también
 
-
-
-
-- [ICorDebugValue3 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugValue3 (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

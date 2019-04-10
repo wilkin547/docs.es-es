@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230660"
 ---
 # <a name="graphics-how-to-topics"></a>Temas "Cómo..." de gráficos
 Los temas siguientes muestran cómo usar las capacidades gráficas de la [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -23,10 +23,11 @@ Los temas siguientes muestran cómo usar las capacidades gráficas de la [!INCLU
  [Animar la posición de un objeto mediante PointAnimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
  [Transformar puntos y vectores](how-to-transform-points-and-vectors.md)  
  [Ampliar el marco de vidrio en una aplicación de WPF](extend-glass-frame-into-a-wpf-application.md)  
- [Cómo: Mejorar el rendimiento al almacenar en caché un elemento de la representación](how-to-improve-rendering-performance-by-caching-an-element.md)  
- [Cómo: Usar un elemento almacenado en caché como pincel](how-to-use-a-cached-element-as-a-brush.md)  
+ [Filtrar para mejorar el rendimiento de la representación mediante el almacenamiento en caché de un elemento](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [Filtrar para usar un elemento almacenado en caché como pincel](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>

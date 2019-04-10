@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tile patterns [WPF], creating
 - creating [WPF], tile patterns with TileBrush
 ms.assetid: 5aa46632-3527-4668-9d8d-0375c8af28aa
-ms.openlocfilehash: 2efd070ac9ad502f2539d100fa450f95bcdddced
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c1051b234961eee9ae740af2abac3d64c523656c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227410"
 ---
 # <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a>Filtrar Crear patrones de mosaico diferentes con un objeto TileBrush
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.TileBrush.TileMode%2A> propiedad de un <xref:System.Windows.Media.TileBrush> para crear un patrón.  
@@ -34,5 +34,6 @@ Patrones de mosaico creados con la propiedad TileMode
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/TileModeExample.xaml#graphicsmmdrawingbrushtilemodeexample)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Establecer el tamaño del mosaico de un TileBrush](how-to-set-the-tile-size-for-a-tilebrush.md)
 - [Pintar con imágenes, dibujos y elementos visuales](painting-with-images-drawings-and-visuals.md)

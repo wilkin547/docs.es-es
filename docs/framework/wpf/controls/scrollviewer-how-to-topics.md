@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
-ms.openlocfilehash: 0bd8925e2449df7d86502ed3b12385eb6f786063
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fcb7809c1025997a0e78647c32590e1abee865ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229419"
 ---
 # <a name="scrollviewer-how-to-topics"></a>Temas "Cómo..." del elemento ScrollViewer
 Los temas de esta sección muestran cómo usar el <xref:System.Windows.Controls.ScrollViewer> elemento para crear las regiones desplazables en sus aplicaciones.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Controlar el evento ScrollChanged](how-to-handle-the-scrollchanged-event.md)  
- [Desplazarse por contenido utilizando la interfaz IScrollInfo](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
- [Utilizar los métodos de desplazamiento de contenido de ScrollViewer](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
+ [Desplazarse por contenido mediante la interfaz IScrollInfo](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
+ [Usar los métodos de desplazamiento de contenido de ScrollViewer](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
@@ -28,5 +28,6 @@ Los temas de esta sección muestran cómo usar el <xref:System.Windows.Controls.
  <xref:System.Windows.Controls.ScrollViewer>  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre elementos Panel](panels-overview.md)
 - [Diseño](../advanced/layout.md)

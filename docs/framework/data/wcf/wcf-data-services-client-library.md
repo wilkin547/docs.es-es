@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 9af19f2ef552c5871d488c968368a9192bae9edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d14a1be3cd40ace2e31fec6f44a86707e5c4476
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656224"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230205"
 ---
 # <a name="wcf-data-services-client-library"></a>Biblioteca cliente de Data Services de WCF
 Cualquier aplicación puede interactuar con un servicio de datos basado en [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] si puede enviar una solicitud HTTP y procesar la fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] que devuelve un servicio de datos. Esta interoperabilidad permite tener acceso a los servicios basados en [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] de una amplia gama de aplicaciones habilitadas para web. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye bibliotecas de cliente que proporcionan una experiencia de programación más enriquecida cuando se usan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes de distribución de .NET Framework o aplicaciones basadas en Silverlight.  
@@ -39,18 +39,19 @@ Cualquier aplicación puede interactuar con un servicio de datos basado en [!INC
  [Procesamiento por lotes de operaciones](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
  Describe cómo enviar varias solicitudes al servicio de datos en un solo lote usando las bibliotecas de cliente.  
   
- [Enlace de datos a los controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
+ [Enlazar datos a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
  Describe cómo enlazar controles a un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente AtomPub devuelta por un servicio de datos.  
   
- [Operaciones de servicio de llamada](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
+ [Llamar a operaciones de servicio](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
  Describe cómo usar la biblioteca de cliente para llamar a operaciones de servicio.  
   
  [Administración del contexto del servicio de datos](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
  Describe las opciones para administrar el comportamiento de la biblioteca cliente.  
   
- [Trabajo con datos binarios](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
+ [Trabajar con datos binarios](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
  Describe cómo obtener acceso y cambiar los datos binarios devueltos por el servicio de datos como un flujo de datos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Definir Servicios de datos de WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Introducción](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

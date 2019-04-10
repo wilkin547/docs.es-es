@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar un elemento almacenado en caché como pincel
+title: Filtrar para usar un elemento almacenado en caché como pincel
 ms.date: 03/30/2017
 helpviewer_keywords:
 - BitmapCache [WPF], using
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BitmapCacheBrush [WPF], using
 - CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
-ms.openlocfilehash: 008bec87390a807ae2b4797af8b86aaf59c92ef5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 78df242c7f00b69e36ea4ab6751f51509d9e2220
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229373"
 ---
-# <a name="how-to-use-a-cached-element-as-a-brush"></a>Procedimiento Usar un elemento almacenado en caché como pincel
+# <a name="how-to-use-a-cached-element-as-a-brush"></a>Filtrar para usar un elemento almacenado en caché como pincel
 Use la <xref:System.Windows.Media.BitmapCacheBrush> clase para reutilizar un elemento almacenado en caché eficazmente. Para almacenar en caché un elemento, crear una nueva instancia de la <xref:System.Windows.Media.BitmapCache> clase y se asigna a la propiedad del elemento <xref:System.Windows.UIElement.CacheMode%2A> propiedad.  
   
 ## <a name="example"></a>Ejemplo  
@@ -23,7 +23,8 @@ Use la <xref:System.Windows.Media.BitmapCacheBrush> clase para reutilizar un ele
  [!code-xaml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>
-- [Cómo: Mejorar el rendimiento al almacenar en caché un elemento de la representación](how-to-improve-rendering-performance-by-caching-an-element.md)
+- [Filtrar para mejorar el rendimiento de la representación mediante el almacenamiento en caché de un elemento](how-to-improve-rendering-performance-by-caching-an-element.md)

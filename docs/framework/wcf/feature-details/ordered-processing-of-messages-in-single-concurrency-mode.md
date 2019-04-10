@@ -2,12 +2,12 @@
 title: Procesamiento de mensajes por orden en modo de simultaneidad única
 ms.date: 03/30/2017
 ms.assetid: a90f5662-a796-46cd-ae33-30a4072838af
-ms.openlocfilehash: c9f2460a1def19212d3ba866b0b443830e9b69bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 785c2953e57eaf967209b0d9e52ab85a3a99c450
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229724"
 ---
 # <a name="ordered-processing-of-messages-in-single-concurrency-mode"></a>Procesamiento de mensajes por orden en modo de simultaneidad única
 WCF ofrece ninguna garantía sobre el orden en que se procesan los mensajes, a menos que el canal subyacente sea con sesión.  Por ejemplo, un servicio WCF que usa MsmqInputChannel, que no es un canal con sesión, se producirá un error al procesar los mensajes en orden. Hay algunas circunstancias donde un desarrollador puede desea el comportamiento de procesamiento de pedidos en pero no desea utilizar las sesiones. En este tema se describe cómo configurar este comportamiento cuando un servicio se ejecuta en modo de simultaneidad única.  
@@ -26,5 +26,6 @@ WCF ofrece ninguna garantía sobre el orden en que se procesan los mensajes, a m
  Si <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> se establece en cualquier otro valor, se produce <xref:System.InvalidOperationException>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Sesiones, creación de instancias y simultaneidad](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
-- [Simultaneidad](../../../../docs/framework/wcf/samples/concurrency.md)
+- [simultaneidad](../../../../docs/framework/wcf/samples/concurrency.md)

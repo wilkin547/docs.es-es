@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Resolver conflictos de simultaneidad conservando valores de la base de datos
+title: Filtrar para resolver conflictos conservando valores de base de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-ms.openlocfilehash: f647dad951acfbc309257212018db32e655169df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8440ffe61e254403357970d771aea207a6eb6092
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230114"
 ---
-# <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Procedimiento Resolver conflictos de simultaneidad conservando valores de la base de datos
+# <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Filtrar para resolver conflictos conservando valores de base de datos
 Para conciliar las diferencias entre los valores de base de datos esperados y reales antes de intentar reenviar los cambios, puede utilizar <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> para conservar los valores que se encuentran en la base de datos. Los valores actuales del modelo de objetos se sobrescriben. Para obtener más información, consulte [simultaneidad optimista: Información general sobre](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
@@ -25,7 +25,7 @@ Para conciliar las diferencias entre los valores de base de datos esperados y re
 |------|-------------|---------------|----------------|  
 |Estado de la base de datos original cuando la consultan User1 y User2.|Alfreds|Maria|Ventas|  
 |User1 se prepara para enviar los cambios.|Alfred||Marketing|  
-|User2 ya ha enviado los cambios.||Mary|Servicio|  
+|User2 ya ha enviado los cambios.||Mary|web de Office|  
   
  User1 decide resolver este conflicto haciendo que los valores más nuevos de la base de datos sobrescriban los valores actuales del modelo de objetos.  
   
@@ -33,7 +33,7 @@ Para conciliar las diferencias entre los valores de base de datos esperados y re
   
 ||Administrador|Asistente|Department|  
 |------|-------------|---------------|----------------|  
-|Nuevo estado tras la resolución del conflicto.|Alfreds<br /><br /> (original)|Mary<br /><br /> (de User2)|Servicio<br /><br /> (de User2)|  
+|Nuevo estado tras la resolución del conflicto.|Alfreds<br /><br /> (original)|Mary<br /><br /> (de User2)|web de Office<br /><br /> (de User2)|  
   
  El código de ejemplo siguiente muestra cómo sobrescribir los valores actuales del modelo de objetos con los valores de la base de datos. (No se produce ninguna inspección o control personalizado de los conflictos entre miembros individuales.)  
   
@@ -41,4 +41,5 @@ Para conciliar las diferencias entre los valores de base de datos esperados y re
  [!code-vb[System.Data.Linq.RefreshMode#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+
+- [Filtrar para administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

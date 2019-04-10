@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Geometría de una prueba de posicionamiento en un objeto Visual
+title: Filtrar Geometría de una prueba de posicionamiento en un objeto visual
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: e51dd73a65666ffee5958325079e8f06f13ac61b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227345"
 ---
-# <a name="how-to-hit-test-geometry-in-a-visual"></a>Filtrar Geometría de una prueba de posicionamiento en un objeto Visual
+# <a name="how-to-hit-test-geometry-in-a-visual"></a>Filtrar Geometría de una prueba de posicionamiento en un objeto visual
 En este ejemplo se muestra cómo realizar una prueba de posicionamiento en un objeto visual que se compone de uno o varios <xref:System.Windows.Media.Geometry> objetos.  
   
 ## <a name="example"></a>Ejemplo  
@@ -36,5 +36,6 @@ En este ejemplo se muestra cómo realizar una prueba de posicionamiento en un ob
 >  Esta muestra no tiene en cuenta ninguna transformación o recorte que pueda aplicarse a la geometría. Además, este ejemplo no funcionará con un control con estilo, puesto que no tiene los dibujos asociados a él.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Realizar pruebas de posicionamiento en la capa visual](hit-testing-in-the-visual-layer.md)
-- [Realizar una prueba de posicionamiento usando Geometry como parámetro](how-to-hit-test-using-geometry-as-a-parameter.md)
+- [Realizar una prueba de posicionamiento mediante el uso de Geometry como parámetro](how-to-hit-test-using-geometry-as-a-parameter.md)

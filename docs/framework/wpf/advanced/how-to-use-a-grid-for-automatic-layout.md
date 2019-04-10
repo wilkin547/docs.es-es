@@ -5,12 +5,12 @@ helpviewer_keywords:
 - grids [WPF], automatic layout
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
-ms.openlocfilehash: 5fa023002ac66a65e3c179434841c975287d170c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 590ad7292fea572b20ccaa09ce2886724e004a6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227137"
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>Filtrar Usar una cuadrícula para el diseño automático
 En este ejemplo se describe cómo usar una cuadrícula en el enfoque de diseño automático para crear una aplicación localizable.  
@@ -30,5 +30,6 @@ En este ejemplo se describe cómo usar una cuadrícula en el enfoque de diseño 
 Cuadrícula  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre el uso del diseño automático](use-automatic-layout-overview.md)
 - [Usar el diseño automático para crear un botón](how-to-use-automatic-layout-to-create-a-button.md)

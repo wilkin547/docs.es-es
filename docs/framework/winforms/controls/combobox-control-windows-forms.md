@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-ms.openlocfilehash: a4ce6b0ce2bbf37499bcbe917067ec2539044be8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227130"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox (Control, formularios Windows Forms)
 Los formularios de Windows `ComboBox` control se usa para mostrar datos en un cuadro combinado desplegable. De forma predeterminada, el `ComboBox` control aparece en dos partes: la parte superior es un cuadro de texto que permite al usuario escribir un elemento de lista. La segunda parte es un cuadro de lista que muestra una lista de elementos desde el que el usuario puede seleccionar uno.  
@@ -24,11 +24,11 @@ Los formularios de Windows `ComboBox` control se usa para mostrar datos en un cu
  [Información general sobre el control ComboBox](combobox-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
- [Cómo: Crear texto de tamaño Variable en un Control ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ [Filtrar para crear texto de tamaño variable en un control ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
  Muestra el dibujo personalizado de texto en un `ComboBox` control.  
   
 ## <a name="reference"></a>Referencia  
- Clase <xref:System.Windows.Forms.ComboBox>  
+ <xref:System.Windows.Forms.ComboBox> clase  
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
@@ -36,4 +36,5 @@ Los formularios de Windows `ComboBox` control se usa para mostrar datos en un cu
  Proporciona una lista de cosas que puede hacer con cuadros de lista, cuadros combinados y cuadros de lista activados.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

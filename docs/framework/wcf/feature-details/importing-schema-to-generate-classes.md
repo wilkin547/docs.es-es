@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: e12b4967a84797432ec30cdc88863f8530ea9afd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620531"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228593"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importación del esquema para generar clases
 Para generar clases de esquemas que se pueden usar con Windows Communication Foundation (WCF), use el <xref:System.Runtime.Serialization.XsdDataContractImporter> clase. En este tema se describen el proceso y variaciones.  
@@ -31,7 +31,7 @@ Para generar clases de esquemas que se pueden usar con Windows Communication Fou
   
 2. Opcional. Pase `CodeCompileUnit` en el constructor. Los tipos generados durante la importación del esquema se agregan a la instancia `CodeCompileUnit` en lugar de iniciarse con un `CodeCompileUnit`en blanco.  
   
-3. Opcional. Llame a uno de los métodos <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A>. El método determina si el esquema determinado es un esquema de contrato de datos válido y si se puede importar. El método `CanImport` tiene las mismas sobrecargas que `Import` (el paso siguiente).  
+3. Opcional. Llame a uno de los métodos <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> . El método determina si el esquema determinado es un esquema de contrato de datos válido y si se puede importar. El método `CanImport` tiene las mismas sobrecargas que `Import` (el paso siguiente).  
   
 4. Llame a uno de los métodos `Import` sobrecargados, por ejemplo, el método <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29>.  
   
@@ -52,7 +52,7 @@ Para generar clases de esquemas que se pueden usar con Windows Communication Fou
   
  Normalmente, los tipos públicos se generan a partir del esquema, con campos privados y propiedades de miembro de datos públicos coincidentes. Para generar tipos internos en su lugar, establezca la propiedad <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> en `true`.  
   
- El ejemplo siguiente muestra un esquema transformado en una clase interna cuando la propiedad <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> está establecida en `true.`  
+ El ejemplo siguiente muestra un esquema transformado en una instancia interna de clase cuando la <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> propiedad está establecida en `true.`  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
@@ -163,7 +163,7 @@ Para generar clases de esquemas que se pueden usar con Windows Communication Fou
 ##### <a name="working-with-generated-ixmlserializable-types"></a>Trabajar con tipos generados IXmlSerializable  
  Los tipos `IXmlSerializable` generados contienen un campo privado, denominado "nodesField", que devuelve una matriz de los objetos <xref:System.Xml.XmlNode>. Cuando se deserializa una instancia de este tipo, usted puede tener acceso directamente a los datos XML a través de este campo utilizando el Modelo de objetos del documento XML. Cuando se serializa una instancia de este tipo, usted puede establecer este campo a los datos XML deseados y se serializará.  
   
- Esto se logra a través de la implementación `IXmlSerializable`. En el tipo `IXmlSerializable` generado, la implementación <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> llama al método <xref:System.Runtime.Serialization.XmlSerializableServices.ReadNodes%2A> de la clase <xref:System.Runtime.Serialization.XmlSerializableServices>. El método es un método auxiliar que convierte XML proporcionado a través de <xref:System.Xml.XmlReader> a una matriz de los objetos <xref:System.Xml.XmlNode>. La implementación <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> hace el contrario y convierte la matriz de los objetos `XmlNode` a una secuencia de llamadas <xref:System.Xml.XmlWriter>. Esto se realiza mediante el método <xref:System.Runtime.Serialization.XmlSerializableServices.WriteNodes%2A>.  
+ Esto se logra a través de la implementación `IXmlSerializable`. En el tipo `IXmlSerializable` generado, la implementación <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> llama al método <xref:System.Runtime.Serialization.XmlSerializableServices.ReadNodes%2A> de la clase <xref:System.Runtime.Serialization.XmlSerializableServices>. El método es un método del asistente que convierte XML proporcionado a través de <xref:System.Xml.XmlReader> a una matriz de los objetos <xref:System.Xml.XmlNode>. La implementación <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> hace el contrario y convierte la matriz de los objetos `XmlNode` a una secuencia de llamadas <xref:System.Xml.XmlWriter>. Esto se realiza mediante el método <xref:System.Runtime.Serialization.XmlSerializableServices.WriteNodes%2A>.  
   
  Se puede ejecutar el proceso de exportación del esquema en las clases `IXmlSerializable` generadas. Como se ha expresado previamente, no se le devolverá el esquema original. En su lugar, obtendrá el tipo XSD estándar de "anyType", el que es un carácter comodín para cualquier tipo XSD.  
   
@@ -175,11 +175,12 @@ Para generar clases de esquemas que se pueden usar con Windows Communication Fou
 #### <a name="import-options-advanced-options"></a>Opciones de importación: Opciones avanzadas  
  Estas son opciones de importación avanzadas:  
   
--   Propiedad <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Especifique <xref:System.CodeDom.Compiler.CodeDomProvider> que quiere utilizar para generar el código para las clases generadas. El mecanismo de importación intenta evitar características que <xref:System.CodeDom.Compiler.CodeDomProvider> no admite. Si no se establece <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>, el conjunto completo de características de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se utiliza sin restricciones.  
+-   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> Propiedad. Especifique <xref:System.CodeDom.Compiler.CodeDomProvider> que quiere utilizar para generar el código para las clases generadas. El mecanismo de importación intenta evitar características que <xref:System.CodeDom.Compiler.CodeDomProvider> no admite. Si no se establece <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>, el conjunto completo de características de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se utiliza sin restricciones.  
   
--   Propiedad <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. Se puede especificar una implementación <xref:System.Runtime.Serialization.IDataContractSurrogate> con esta propiedad. <xref:System.Runtime.Serialization.IDataContractSurrogate> personaliza el proceso de importación. Para obtener más información, consulte [suplentes de contratos de datos](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). De forma predeterminada, no se utiliza ningún suplente.  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> Propiedad. Se puede especificar una implementación <xref:System.Runtime.Serialization.IDataContractSurrogate> con esta propiedad. <xref:System.Runtime.Serialization.IDataContractSurrogate> personaliza el proceso de importación. Para obtener más información, consulte [suplentes de contratos de datos](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). De forma predeterminada, no se utiliza ningún suplente.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>

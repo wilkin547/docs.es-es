@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 3fefbe9696ba7618dc811c6ac8f600bb6322dad5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228203"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Entidades de caracteres XML y XAML
 XAML usa entidades de caracteres definidas en XML para los caracteres especiales. En este tema se describen algunas entidades de caracteres específicas y consideraciones generales para otros conceptos XML en XAML.  
@@ -46,7 +46,7 @@ XAML usa entidades de caracteres definidas en XML para los caracteres especiales
   
 |Carácter|Entity|Notas|  
 |---------------|------------|-----------|  
-|& (símbolo de Y comercial)|\&amp;|Debe usarse tanto para los valores de atributo como para el contenido de un elemento.|  
+|& (y comercial)|\&amp;|Debe usarse tanto para los valores de atributo como para el contenido de un elemento.|  
 |> (mayor-de carácter)|\&gt;|Se debe utilizar para un valor de atributo, pero > es aceptable como contenido de un elemento siempre que < no lo preceden.|  
 |< (menor-que carácter)|\&lt;|Se debe utilizar para un valor de atributo, pero \< es aceptable como contenido de un elemento siempre y cuando > no la cumple.|  
 |" (comillas dobles rectas)|\&quot;|Debe usarse para un valor de atributo, pero las comillas dobles rectas (") son aceptables como contenido de un elemento. Tenga en cuenta que los valores de atributo se pueden incluir entre comillas simples rectas (') o entre comillas dobles rectas ("); el carácter que aparece primero define el carácter que cierra el valor del atributo, mientras que el otro tipo de comillas se puede usar como valor literal dentro del valor.|  
@@ -63,7 +63,8 @@ XAML usa entidades de caracteres definidas en XML para los caracteres especiales
  XAML controla las instrucciones de procesamiento de XML de acuerdo con las especificaciones de XML, que indican que las instrucciones deben pasarse. XAML de procesamiento en los servicios XAML de .NET Framework no utiliza las instrucciones de procesamiento. Otros marcos existentes que usan XAML tampoco usan las instrucciones de procesamiento de XAML.   
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [Extensiones de marcado y XAML de WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [Gramática de XamlName](xamlname-grammar.md)
-- [Espacio en blanco en XAML de procesamiento](whitespace-processing-in-xaml.md)
+- [Procesamiento de espacios en blanco en XAML](whitespace-processing-in-xaml.md)
