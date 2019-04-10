@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 30dd3a54092c5b30cdd8dfd2917b6ea57edd7086
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e139cafa168b0a6851e5d8474e6bb4db94f36e9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153626"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339156"
 ---
 # <a name="local-transactions"></a>Transacciones locales
 Las transacciones de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] se utilizan cuando se desea enlazar varias tareas para que se ejecuten como una sola unidad de trabajo. Por ejemplo, imagine que una aplicación realiza dos tareas. Primero, actualiza una tabla con información de pedidos. Luego, actualiza una tabla que contiene la información de inventario, cargando en cuenta los elementos pedidos. Si se produce un error en alguna de las tareas, a continuación, ambas actualizaciones se revierten.  
@@ -34,13 +34,13 @@ Las transacciones de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] s
 ## <a name="example"></a>Ejemplo  
  Para llevar a cabo una transacción, siga estos pasos.  
   
-1.  Llame al método <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> del objeto <xref:System.Data.SqlClient.SqlConnection> para marcar el comienzo de la transacción. El método <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> devuelve una referencia a la transacción. Esta referencia se asigna a los objetos <xref:System.Data.SqlClient.SqlCommand> que están inscritos en la transacción.  
+1. Llame al método <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> del objeto <xref:System.Data.SqlClient.SqlConnection> para marcar el comienzo de la transacción. El método <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> devuelve una referencia a la transacción. Esta referencia se asigna a los objetos <xref:System.Data.SqlClient.SqlCommand> que están inscritos en la transacción.  
   
-2.  Asigne el objeto `Transaction` a la propiedad <xref:System.Data.SqlClient.SqlCommand.Transaction%2A> del objeto <xref:System.Data.SqlClient.SqlCommand> que se va a ejecutar. Si el comando se ejecuta en una conexión con una transacción activa y el objeto `Transaction` no se ha asignado a la propiedad `Transaction` del objeto `Command`, se inicia una excepción.  
+2. Asigne el objeto `Transaction` a la propiedad <xref:System.Data.SqlClient.SqlCommand.Transaction%2A> del objeto <xref:System.Data.SqlClient.SqlCommand> que se va a ejecutar. Si el comando se ejecuta en una conexión con una transacción activa y el objeto `Transaction` no se ha asignado a la propiedad `Transaction` del objeto `Command`, se inicia una excepción.  
   
-3.  Ejecute los comandos necesarios.  
+3. Ejecute los comandos necesarios.  
   
-4.  Llame al método <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> del objeto <xref:System.Data.SqlClient.SqlTransaction> para completar la transacción, o al método <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> para finalizarla. Si la conexión se cierra o elimina antes de que se hayan ejecutado los métodos <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> o <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A>, la transacción se revierte.  
+4. Llame al método <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> del objeto <xref:System.Data.SqlClient.SqlTransaction> para completar la transacción, o al método <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> para finalizarla. Si la conexión se cierra o elimina antes de que se hayan ejecutado los métodos <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> o <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A>, la transacción se revierte.  
   
  En el siguiente código de ejemplo se muestra la lógica transaccional utilizando [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] con Microsoft SQL Server.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: 652fcef75f8d5a8dee824bb89bf4695f1629fed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5a4550e4c914dcdbc9908e766c67a2efa53e6e9e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116407"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339390"
 ---
 # <a name="how-to-set-the-security-mode"></a>Filtrar para establecer el modo de seguridad
 Seguridad de Windows Communication Foundation (WCF) tiene tres modos de seguridad comunes que se encuentran en los enlaces más predefinidos: transporte, mensaje y "transporte con credencial de mensaje". Dos modos adicionales son específicos para dos enlaces: el modo “solo credencial de transporte” encontrado en el <xref:System.ServiceModel.BasicHttpBinding>y el modo “Ambos” encontrado en el <xref:System.ServiceModel.NetMsmqBinding>. Sin embargo, este tema se concentra en los tres modos de seguridad comunes: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>y <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
@@ -25,9 +25,9 @@ Seguridad de Windows Communication Foundation (WCF) tiene tres modos de segurida
   
 ### <a name="to-set-the-security-mode-in-code"></a>Para establecer el modo de seguridad en código  
   
-1.  Cree una instancia de la clase del enlace que está utilizando. Para obtener una lista de enlaces predefinidos, vea [System-provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). En el siguiente ejemplo se crea una instancia de la clase <xref:System.ServiceModel.WSHttpBinding>.  
+1. Cree una instancia de la clase del enlace que está utilizando. Para obtener una lista de enlaces predefinidos, vea [System-provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). En el siguiente ejemplo se crea una instancia de la clase <xref:System.ServiceModel.WSHttpBinding>.  
   
-2.  Establezca la propiedad `Mode` del objeto devuelto por la propiedad `Security`.  
+2. Establezca la propiedad `Mode` del objeto devuelto por la propiedad `Security`.  
   
      [!code-csharp[c_SettingSecurityMode#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#1)]
      [!code-vb[c_SettingSecurityMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#1)]  
@@ -42,7 +42,7 @@ Seguridad de Windows Communication Foundation (WCF) tiene tres modos de segurida
      [!code-csharp[c_SettingSecurityMode#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#3)]
      [!code-vb[c_SettingSecurityMode#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#3)]  
   
-3.  También puede establecer el modo en el constructor del enlace, como se muestra en el código siguiente.  
+3. También puede establecer el modo en el constructor del enlace, como se muestra en el código siguiente.  
   
      [!code-csharp[c_SettingSecurityMode#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#4)]
      [!code-vb[c_SettingSecurityMode#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#4)]  
@@ -52,35 +52,35 @@ Seguridad de Windows Communication Foundation (WCF) tiene tres modos de segurida
   
 #### <a name="to-set-the-clientcredentialtype-property-for-transport-mode"></a>Para establecer la propiedad ClientCredentialType para el modo de transporte  
   
-1.  Cree una instancia del enlace.  
+1. Cree una instancia del enlace.  
   
-2.  Establezca la propiedad `Mode` en `Transport`.  
+2. Establezca la propiedad `Mode` en `Transport`.  
   
-3.  Establezca la propiedad `ClientCredential` en un valor apropiado. El siguiente código establece la propiedad en `Windows`:  
+3. Establezca la propiedad `ClientCredential` en un valor apropiado. El siguiente código establece la propiedad en `Windows`:  
   
      [!code-csharp[c_SettingSecurityMode#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#5)]
      [!code-vb[c_SettingSecurityMode#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#5)]  
   
 #### <a name="to-set-the-clientcredentialtype-property-for-message-mode"></a>Para establecer la propiedad ClientCredentialType para el modo de mensaje  
   
-1.  Cree una instancia del enlace.  
+1. Cree una instancia del enlace.  
   
-2.  Establezca la propiedad `Mode` en `Message`.  
+2. Establezca la propiedad `Mode` en `Message`.  
   
-3.  Establezca la propiedad `ClientCredential` en un valor apropiado. El siguiente código establece la propiedad en `Certificate`:  
+3. Establezca la propiedad `ClientCredential` en un valor apropiado. El siguiente código establece la propiedad en `Certificate`:  
   
      [!code-csharp[c_SettingSecurityMode#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#6)]
      [!code-vb[c_SettingSecurityMode#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#6)]  
   
 #### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>Para establecer el Modo y la propiedad ClientCredentialType en configuración  
   
-1.  Agregar un elemento de enlace apropiado para la [ \<enlaces >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento del archivo de configuración. En el ejemplo siguiente se agrega un [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento.  
+1. Agregar un elemento de enlace apropiado para la [ \<enlaces >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento del archivo de configuración. En el ejemplo siguiente se agrega un [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento.  
   
-2.  Agregar un `<binding>` y establezca su `name` atributo en un valor adecuado.  
+2. Agregar un `<binding>` y establezca su `name` atributo en un valor adecuado.  
   
-3.  Agregar un `<security>` y establezca el `mode` atributo `Message`, `Transport`, o `TransportWithMessageCredential`.  
+3. Agregar un `<security>` y establezca el `mode` atributo `Message`, `Transport`, o `TransportWithMessageCredential`.  
   
-4.  Si se establece el modo en `Transport`, agregue un elemento `<transport>` y establezca el atributo `clientCredential` en un valor apropiado.  
+4. Si se establece el modo en `Transport`, agregue un elemento `<transport>` y establezca el atributo `clientCredential` en un valor apropiado.  
   
      El siguiente ejemplo establece el modo en "`Transport"`, y, a continuación, establece el atributo `clientCredentialType` del `<transport>`" en "`Windows"`.  
   

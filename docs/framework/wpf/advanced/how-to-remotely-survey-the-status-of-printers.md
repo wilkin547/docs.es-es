@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143551"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340794"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Filtrar Supervisar de forma remota el estado de las impresoras
 En un momento dado, en las empresas de tamaño medio y grande puede haber varias impresoras que no funcionen debido a un atasco del papel, que se queden sin papel y otras situaciones problemáticas. El amplio conjunto de propiedades de la impresora expuesto en el [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] de Microsoft .NET Framework proporciona un medio para realizar una encuesta rápida de los Estados de las impresoras.  
@@ -24,11 +24,11 @@ En un momento dado, en las empresas de tamaño medio y grande puede haber varias
 ## <a name="example"></a>Ejemplo  
  Los pasos principales para crear este tipo de utilidad son los siguientes.  
   
-1.  Obtener una lista de todos los servidores de impresión.  
+1. Obtener una lista de todos los servidores de impresión.  
   
-2.  Recorrer los servidores para consultar sus colas de impresión.  
+2. Recorrer los servidores para consultar sus colas de impresión.  
   
-3.  Dentro de cada paso del bucle de servidor, recorra en iteración todas las colas del servidor y lea cada propiedad que podría indicar que la cola no está funcionando actualmente.  
+3. Dentro de cada paso del bucle de servidor, recorra en iteración todas las colas del servidor y lea cada propiedad que podría indicar que la cola no está funcionando actualmente.  
   
  El código siguiente es una serie de fragmentos de código. Para simplificar, en este ejemplo se da por hecho que hay una lista delimitada por CRLF de servidores de impresión. La variable `fileOfPrintServers` es un <xref:System.IO.StreamReader> objeto para este archivo. Puesto que cada nombre de servidor está en su propia línea, todas las llamadas de <xref:System.IO.StreamReader.ReadLine%2A> Obtiene el nombre del servidor siguiente y mueve el <xref:System.IO.StreamReader>del cursor al principio de la línea siguiente.  
   

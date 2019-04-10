@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: 1e6ec63688899533b64a6fc5215f77019b64b49c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f168d6d9cd6970353e75fa35a7e52cc7156fda72
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830167"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343348"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Filtrar Declarar enumeraciones (Visual Basic)
 Crear una enumeración con el `Enum` instrucción en la sección de declaraciones de una clase o módulo. No se puede declarar una enumeración dentro de un método. Para especificar el nivel adecuado de acceso, use `Private`, `Protected`, `Friend`, o `Public`.  
@@ -24,15 +24,15 @@ Crear una enumeración con el `Enum` instrucción en la sección de declaracione
   
 ### <a name="to-declare-an-enumeration"></a>Para declarar una enumeración  
   
-1.  Escriba una declaración que incluye un nivel de acceso del código, el `Enum` palabra clave y un nombre válido, como se muestra en los ejemplos siguientes, cada uno de los cuales declara otro `Enum`.  
+1. Escriba una declaración que incluye un nivel de acceso del código, el `Enum` palabra clave y un nombre válido, como se muestra en los ejemplos siguientes, cada uno de los cuales declara otro `Enum`.  
   
      [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
-2.  Defina las constantes en la enumeración. De forma predeterminada, se inicializa la primera constante de enumeración en `0`, y posteriores se inicializan con un valor de la constante anterior más uno. Por ejemplo, la siguiente enumeración, `Days`, contiene una constante denominada `Sunday` con el valor `0`, una constante denominada `Monday` con el valor `1`, una constante denominada `Tuesday` con el valor de `2`, y así sucesivamente.  
+2. Defina las constantes en la enumeración. De forma predeterminada, se inicializa la primera constante de enumeración en `0`, y posteriores se inicializan con un valor de la constante anterior más uno. Por ejemplo, la siguiente enumeración, `Days`, contiene una constante denominada `Sunday` con el valor `0`, una constante denominada `Monday` con el valor `1`, una constante denominada `Tuesday` con el valor de `2`, y así sucesivamente.  
   
      [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
-3.  Puede asignar explícitamente valores a las constantes de enumeración mediante el uso de una instrucción de asignación. Puede asignar cualquier valor entero, incluidos los números negativos. Por ejemplo, es posible que desee constantes con valores inferiores a cero para representar las condiciones de error. En la siguiente enumeración, la constante `Invalid` se asigna explícitamente el valor `–1`y la constante `Sunday` se asigna el valor `0`. Porque es la primera constante de la enumeración, `Saturday` también se inicializa con el valor `0`. El valor de `Monday` es `1` (uno más que el valor de `Sunday`); el valor de `Tuesday` es `2`, y así sucesivamente.  
+3. Puede asignar explícitamente valores a las constantes de enumeración mediante el uso de una instrucción de asignación. Puede asignar cualquier valor entero, incluidos los números negativos. Por ejemplo, es posible que desee constantes con valores inferiores a cero para representar las condiciones de error. En la siguiente enumeración, la constante `Invalid` se asigna explícitamente el valor `–1`y la constante `Sunday` se asigna el valor `0`. Porque es la primera constante de la enumeración, `Saturday` también se inicializa con el valor `0`. El valor de `Monday` es `1` (uno más que el valor de `Sunday`); el valor de `Tuesday` es `2`, y así sucesivamente.  
   
      [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
@@ -45,9 +45,9 @@ Crear una enumeración con el `Enum` instrucción en la sección de declaracione
 ## <a name="see-also"></a>Vea también
 
 - [Enumeraciones y calificación de nombres](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [Cómo: Hacer referencia a un miembro de enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [Cómo: Recorrer en iteración una enumeración en Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
-- [Cómo: Determinar la cadena asociada con un valor de enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [Filtrar para hacer referencia al miembro de una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
+- [Filtrar Recorrer en iteración una enumeración en Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [Filtrar para determinar la cadena asociada a un valor de enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Cuándo se debe utilizar una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [Información general sobre las constantes](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [Tipos de datos constantes y literales](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)

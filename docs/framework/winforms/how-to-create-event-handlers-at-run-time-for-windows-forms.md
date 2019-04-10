@@ -12,21 +12,21 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 3c1dca420b9e63fe8a2cb93b2e7918d9dc35e84d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 09f090c6267093e3ad59266d8c77ea13b13b63d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158553"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343275"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Filtrar para crear controladores de eventos en tiempo de ejecución para formularios Windows Forms
 Además de crear eventos mediante Diseñador de Windows Forms, también puede crear un controlador de eventos en tiempo de ejecución. Esta acción le permite conectar controladores de eventos basándose en las condiciones del código en tiempo de ejecución en lugar de conectarlos cuando se inicia el programa.  
   
 ### <a name="to-create-an-event-handler-at-run-time"></a>Para crear un controlador de eventos en tiempo de ejecución  
   
-1.  Abra el formulario en el editor de código al que desee agregar un controlador de eventos.  
+1. Abra el formulario en el editor de código al que desee agregar un controlador de eventos.  
   
-2.  Agregue un método al formulario con la firma del método para el evento que desee controlar.  
+2. Agregue un método al formulario con la firma del método para el evento que desee controlar.  
   
      Por ejemplo, si desea controlar la <xref:System.Windows.Forms.Control.Click> eventos de un <xref:System.Windows.Forms.Button> control, debe crear un método como la siguiente:  
   
@@ -52,11 +52,11 @@ Además de crear eventos mediante Diseñador de Windows Forms, también puede cr
        }  
     ```  
   
-3.  Agregue el código al controlador de eventos según corresponda a su aplicación.  
+3. Agregue el código al controlador de eventos según corresponda a su aplicación.  
   
-4.  Determine el formulario o control para el que desea crear un controlador de eventos.  
+4. Determine el formulario o control para el que desea crear un controlador de eventos.  
   
-5.  En un método de la clase del formulario, agregue código que especifique el controlador de eventos para controlar el evento. Por ejemplo, el código siguiente especifica el controlador de eventos `button1_Click` controla la <xref:System.Windows.Forms.Control.Click> eventos de un <xref:System.Windows.Forms.Button> control:  
+5. En un método de la clase del formulario, agregue código que especifique el controlador de eventos para controlar el evento. Por ejemplo, el código siguiente especifica el controlador de eventos `button1_Click` controla la <xref:System.Windows.Forms.Control.Click> eventos de un <xref:System.Windows.Forms.Button> control:  
   
     ```vb  
     AddHandler Button1.Click, AddressOf Button1_Click  

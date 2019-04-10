@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: c6230d7618b7885d72ddfebc67157bb48ff9cb38
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 932ad347730b35a936e040e116e5aa6af36cd3dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122023"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343316"
 ---
 # <a name="how-to-compare-claims"></a>Filtrar para comparar notificaciones
 La infraestructura del modelo de identidad en Windows Communication Foundation (WCF) se usa para realizar la comprobación de autorización. Como tal, una tarea común es comparar las notificaciones en el contexto de autorización con las notificaciones necesarias para realizar la acción solicitada o tener acceso al recurso solicitado. En este tema se describe cómo comparar las notificaciones, incluidos los tipos de notificación integrados y personalizados. Para obtener más información acerca de la infraestructura del modelo de identidad, vea [Administrar notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
@@ -36,33 +36,33 @@ La infraestructura del modelo de identidad en Windows Communication Foundation (
   
 ### <a name="comparing-built-in-claims"></a>Comparación de notificaciones integradas  
   
-1.  Dadas dos instancias de la clase <xref:System.IdentityModel.Claims.Claim>, utilice <xref:System.IdentityModel.Claims.Claim.Equals%2A> para realizar la comparación, tal y como se muestra en el código siguiente.  
+1. Dadas dos instancias de la clase <xref:System.IdentityModel.Claims.Claim>, utilice <xref:System.IdentityModel.Claims.Claim.Equals%2A> para realizar la comparación, tal y como se muestra en el código siguiente.  
   
      [!code-csharp[c_CustomClaimComparison#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#5)]
      [!code-vb[c_CustomClaimComparison#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#5)]  
   
 ### <a name="comparing-custom-claims-with-primitive-resource-types"></a>Comparación de las notificaciones personalizadas con los tipos de recursos primitivos  
   
-1.  En el caso de las notificaciones personalizadas con tipos de recursos primitivos, se puede realizar la comparación para las notificaciones integradas, tal y como se muestra en el código siguiente.  
+1. En el caso de las notificaciones personalizadas con tipos de recursos primitivos, se puede realizar la comparación para las notificaciones integradas, tal y como se muestra en el código siguiente.  
   
      [!code-csharp[c_CustomClaimComparison#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#6)]
      [!code-vb[c_CustomClaimComparison#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#6)]  
   
-2.  En el caso de las notificaciones con tipos de recursos basados en la estructura o la clase, el tipo de recurso debería invalidar el método <xref:System.IdentityModel.Claims.Claim.Equals%2A>.  
+2. En el caso de las notificaciones con tipos de recursos basados en la estructura o la clase, el tipo de recurso debería invalidar el método <xref:System.IdentityModel.Claims.Claim.Equals%2A>.  
   
-3.  Primero compruebe si el parámetro `obj` es `null` y, en ese caso, devuelva `false`.  
+3. Primero compruebe si el parámetro `obj` es `null` y, en ese caso, devuelva `false`.  
   
      [!code-csharp[c_CustomClaimComparison#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#7)]
      [!code-vb[c_CustomClaimComparison#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#7)]  
   
-4.  A continuación, llame a <xref:System.Object.ReferenceEquals%2A> y pase `this` y `obj` como parámetros. Si devuelve `true`, devuelva `true`.  
+4. A continuación, llame a <xref:System.Object.ReferenceEquals%2A> y pase `this` y `obj` como parámetros. Si devuelve `true`, devuelva `true`.  
   
      [!code-csharp[c_CustomClaimComparison#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#8)]
      [!code-vb[c_CustomClaimComparison#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#8)]  
   
-5.  Luego intente asignar `obj` a una variable local del tipo de clase. Si se produce un error, la referencia será `null`. En tales casos, devuelva `false`.  
+5. Luego intente asignar `obj` a una variable local del tipo de clase. Si se produce un error, la referencia será `null`. En tales casos, devuelva `false`.  
   
-6.  Realice la comparación personalizada necesaria para comparar correctamente la notificación actual con la notificación proporcionada.  
+6. Realice la comparación personalizada necesaria para comparar correctamente la notificación actual con la notificación proporcionada.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra una comparación de notificaciones personalizadas donde el recurso de la notificación es un tipo no primitivo.  

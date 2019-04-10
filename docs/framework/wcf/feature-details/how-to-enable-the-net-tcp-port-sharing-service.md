@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 77d1d983da87b37c6267cc38a16db446782797f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 20db0ef427a5e791bd6b8dcef90bf7911ae0d4a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130655"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343485"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Filtrar para habilitar el servicio de uso compartido de puertos Net.TCP
 Windows Communication Foundation (WCF) utiliza un servicio de Windows denominado el servicio de uso compartido de puertos Net.TCP para facilitar el uso compartido de puertos TCP entre varios procesos. Este servicio se instala como parte de WCF, pero el servicio no está habilitado de forma predeterminada como precaución de seguridad y por lo que debe habilitarse manualmente antes de usarse por primera vez. En este tema se describe cómo configurar el Servicio de uso compartido de puertos Net.TCP mediante el complemento de Microsoft Management Console (MMC).  
@@ -21,15 +21,15 @@ Windows Communication Foundation (WCF) utiliza un servicio de Windows denominado
   
 ### <a name="to-enable-the-nettcp-port-sharing-service-using-mmc"></a>Habilitación del servicio de uso compartido de puertos Net.TCP mediante MMC  
   
-1.  En el menú Inicio, abra la consola de administración de servicios, ya sea abriendo una ventana del símbolo del sistema y escribiendo `services.msc` o abriendo ejecutar y escribiendo `services.msc` en el cuadro Abrir.  
+1. En el menú Inicio, abra la consola de administración de servicios, ya sea abriendo una ventana del símbolo del sistema y escribiendo `services.msc` o abriendo ejecutar y escribiendo `services.msc` en el cuadro Abrir.  
   
-2.  En el **nombre** columna de la lista de servicios, haga clic en el **servicio de uso compartido de puertos Net.Tcp**y seleccione **propiedades** en el menú.  
+2. En el **nombre** columna de la lista de servicios, haga clic en el **servicio de uso compartido de puertos Net.Tcp**y seleccione **propiedades** en el menú.  
   
-3.  Para habilitar el inicio manual del servicio, en el **propiedades** ventana Seleccione el **General** ficha y en el **tipo de inicio** seleccione Manual y, a continuación, haga clic en **Aplicar**.  
+3. Para habilitar el inicio manual del servicio, en el **propiedades** ventana Seleccione el **General** ficha y en el **tipo de inicio** seleccione Manual y, a continuación, haga clic en **Aplicar**.  
   
-4.  Para iniciar el servicio, en el área de estado del servicio, haga clic en el **iniciar** botón. El estado del servicio debería mostrar ahora "Iniciado".  
+4. Para iniciar el servicio, en el área de estado del servicio, haga clic en el **iniciar** botón. El estado del servicio debería mostrar ahora "Iniciado".  
   
-5.  Para volver a la lista de servicios, haga clic en el **Aceptar**y salga de la consola de MMC.  
+5. Para volver a la lista de servicios, haga clic en el **Aceptar**y salga de la consola de MMC.  
   
 ## <a name="example"></a>Ejemplo  
   

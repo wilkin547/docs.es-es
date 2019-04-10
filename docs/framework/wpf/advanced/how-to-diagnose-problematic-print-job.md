@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211047"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338480"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Filtrar Diagnosticar trabajos de impresión problemáticos
 A menudo, los administradores de red reciben quejas de los usuarios sobre trabajos de impresión que no se imprimen o que se imprimen lentamente. El amplio conjunto de propiedades del trabajo de impresión expuesto en el [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] de Microsoft .NET Framework proporciona un medio para realizar un diagnóstico remoto rápido de trabajos de impresión.  
@@ -23,7 +23,7 @@ A menudo, los administradores de red reciben quejas de los usuarios sobre trabaj
 ## <a name="example"></a>Ejemplo  
  Los pasos principales para crear este tipo de utilidad son los siguientes.  
   
-1.  Identificar el trabajo de impresión sobre el que se queja el usuario. Los usuarios a menudo no pueden hacer esto con precisión. Puede que no conozcan los nombres de los servidores de impresión o de las impresoras. Es posible que describen la ubicación de la impresora con una terminología distinta a la utilizada en la configuración de su <xref:System.Printing.PrintQueue.Location%2A> propiedad. Por lo tanto, es conveniente generar una lista de los trabajos enviados actualmente por el usuario. Si hay más de uno, la comunicación entre el usuario y el administrador del sistema de impresión puede utilizarse para identificar el trabajo que está experimentando problemas. Los pasos secundarios son los siguientes.  
+1. Identificar el trabajo de impresión sobre el que se queja el usuario. Los usuarios a menudo no pueden hacer esto con precisión. Puede que no conozcan los nombres de los servidores de impresión o de las impresoras. Es posible que describen la ubicación de la impresora con una terminología distinta a la utilizada en la configuración de su <xref:System.Printing.PrintQueue.Location%2A> propiedad. Por lo tanto, es conveniente generar una lista de los trabajos enviados actualmente por el usuario. Si hay más de uno, la comunicación entre el usuario y el administrador del sistema de impresión puede utilizarse para identificar el trabajo que está experimentando problemas. Los pasos secundarios son los siguientes.  
   
     1.  Obtener una lista de todos los servidores de impresión.  
   
@@ -33,7 +33,7 @@ A menudo, los administradores de red reciben quejas de los usuarios sobre trabaj
   
     4.  En cada superación del bucle de cola, recorrer todos los trabajos y recopilar la información de identificación sobre lo enviado por el usuario que se queja.  
   
-2.  Cuando se haya identificado el trabajo de impresión problemático, examine las propiedades pertinentes para ver cuál puede ser el problema. Por ejemplo, ¿el trabajo está en estado de error o la impresora mantuvo la cola sin conexión antes de que se pudiera imprimir el trabajo?  
+2. Cuando se haya identificado el trabajo de impresión problemático, examine las propiedades pertinentes para ver cuál puede ser el problema. Por ejemplo, ¿el trabajo está en estado de error o la impresora mantuvo la cola sin conexión antes de que se pudiera imprimir el trabajo?  
   
  El código siguiente es una serie de ejemplos de código. El primer ejemplo de código contiene el recorrido por las colas de impresión. (Paso 1c anterior). La variable `myPrintQueues` es la <xref:System.Printing.PrintQueueCollection> objeto para el servidor de impresión actual.  
   

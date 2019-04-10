@@ -2,19 +2,19 @@
 title: Filtrar Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: efd8ebdcc12c2941753b6811028d73655167c2f9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0083c49c344a45a977793254d8062f2a6aa155a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828971"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341275"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Filtrar Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)
 En este ejemplo se muestra cómo combinar archivos que contienen líneas de texto y después ordenar los resultados. En concreto, se muestra cómo realizar una concatenación simple, una unión y una intersección en los dos conjuntos de líneas de texto.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Para configurar el proyecto y los archivos de texto  
   
-1.  Copie estos nombres en un archivo de texto denominado names1.txt y guárdelo en la carpeta del proyecto:  
+1. Copie estos nombres en un archivo de texto denominado names1.txt y guárdelo en la carpeta del proyecto:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ En este ejemplo se muestra cómo combinar archivos que contienen líneas de text
     Garcia, Debra  
     ```  
   
-2.  Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto. Tenga en cuenta que los dos archivos tienen algunos nombres en común.  
+2. Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto. Tenga en cuenta que los dos archivos tienen algunos nombres en común.  
   
     ```  
     Liu, Jinghao  

@@ -1,15 +1,15 @@
 ---
-title: Filtrar Mensajes de Exchange dentro de una sesión confiable
+title: Filtrar para intercambiar mensajes dentro de una sesión confiable
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: aad4eae870e3ba603c56a28a620fe8bc0e31ceb6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260691"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342992"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Filtrar Mensajes de Exchange dentro de una sesión confiable
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Filtrar para intercambiar mensajes dentro de una sesión confiable
 
 En este tema se describen los pasos necesarios para habilitar una sesión confiable utilizando uno de los enlaces proporcionados por el sistema que admiten este tipo de sesión, pero no de forma predeterminada. Habilitar una sesión confiable de manera imperativa mediante código o mediante declaración en el archivo de configuración. Este procedimiento utiliza los archivos de configuración de cliente y servicio para habilitar la sesión confiable y para estipular que los mensajes lleguen en el mismo orden en que se enviaron.
 
@@ -37,7 +37,7 @@ Para la copia de origen de este ejemplo, vea [sesión confiable WS](../../../../
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1.  Colocar el *Service.svc* archivo en el directorio virtual de Internet Information Services (IIS).
+1. Colocar el *Service.svc* archivo en el directorio virtual de Internet Information Services (IIS).
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Configurar al cliente con un WSHttpBinding para utilizar una sesión confiable
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: 0662b82661e4fb3cde85930c2c4544f541d3a2a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 17b6dd979f7554cd433cc1abcf2a4da8dd9b83cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202734"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338922"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Filtrar para llamar a operaciones de manera asincrónica mediante un generador de canales
 En este tema se cubre cómo un cliente puede obtener acceso de forma asincrónica a una operación del servicio al utilizar una aplicación de cliente basada en <xref:System.ServiceModel.ChannelFactory%601>. (Al utilizar un objeto <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> para invocar un servicio, puede utilizar el modelo de llamada asincrónica orientado a eventos. Para obtener más información, vea [Cómo: Llamar a las operaciones de servicio de forma asincrónica](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Para obtener más información sobre el modelo de llamada asincrónica basado en eventos, vea [patrón asincrónico basado en eventos (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
@@ -21,7 +21,7 @@ En este tema se cubre cómo un cliente puede obtener acceso de forma asincrónic
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>Para llamar a operaciones de servicio WCF de forma asincrónica  
   
-1.  Ejecute el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta con el `/async` opción tal como se muestra en el siguiente comando.  
+1. Ejecute el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta con el `/async` opción tal como se muestra en el siguiente comando.  
   
     ```  
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a  
@@ -29,12 +29,12 @@ En este tema se cubre cómo un cliente puede obtener acceso de forma asincrónic
   
      Esto genera una versión de cliente asincrónica del contrato de servicio para la operación.  
   
-2.  Cree una función de devolución de llamada a la que se va a llamar cuando la operación asincrónica haya finalizado, tal y como aparece en el siguiente código de ejemplo.  
+2. Cree una función de devolución de llamada a la que se va a llamar cuando la operación asincrónica haya finalizado, tal y como aparece en el siguiente código de ejemplo.  
   
      [!code-csharp[C_How_To_CF_Async#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/client.cs#2)]
      [!code-vb[C_How_To_CF_Async#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/client.vb#2)]  
   
-3.  Para obtener acceso de forma asincrónica a una operación de servicio, cree el cliente y llame a `Begin[Operation]` (por ejemplo, `BeginAdd`) y especifique una función de devolución de llamada, tal y como se muestra en el siguiente código de ejemplo.  
+3. Para obtener acceso de forma asincrónica a una operación de servicio, cree el cliente y llame a `Begin[Operation]` (por ejemplo, `BeginAdd`) y especifique una función de devolución de llamada, tal y como se muestra en el siguiente código de ejemplo.  
   
      [!code-csharp[C_How_To_CF_Async#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/client.cs#3)]
      [!code-vb[C_How_To_CF_Async#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/client.vb#3)]  

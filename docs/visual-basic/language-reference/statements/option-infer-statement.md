@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: a3846c952969a4814151757c5210d9df6f3c97b4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823498"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338571"
 ---
 # <a name="option-infer-statement"></a>Option Infer (instrucción)
 Permite el uso de la inferencia de tipo de variable local en la declaración de variables.  
@@ -63,11 +63,11 @@ Option Infer { On | Off }
   
 #### <a name="to-set-option-infer-in-the-ide"></a>Cómo establecer Option Infer en el IDE  
   
-1.  En el **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**.  
+1. En el **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**.  
   
-2.  Haga clic en la pestaña **Compilar**.  
+2. Haga clic en la pestaña **Compilar**.  
   
-3.  Establezca el valor el **Option infer** cuadro.  
+3. Establezca el valor el **Option infer** cuadro.  
   
  Cuando se crea un nuevo proyecto, el **Option Infer** en el **compilar** ficha se establece en el **Option Infer** en el **valores predeterminados de VB** cuadro de diálogo. Para tener acceso a la **valores predeterminados de VB** cuadro de diálogo el **herramientas** menú, haga clic en **opciones**. En el cuadro de diálogo **Opciones**, expanda **Proyectos y soluciones** y, después, haga clic en **Valores predeterminados de VB**. El valor predeterminado inicial de **valores predeterminados de VB** es `On`.  
   
@@ -97,11 +97,11 @@ Option Infer { On | Off }
   
 ## <a name="see-also"></a>Vea también
 
-- [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Dim (Instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Inferencia de tipo de variable local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Compare (instrucción)](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [Option Explicit (instrucción)](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Compare (Instrucción)](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Option Explicit (Instrucción)](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Valores predeterminados de Visual Basic, Proyectos, Opciones (Cuadro de diálogo)](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Conversión boxing y conversión unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

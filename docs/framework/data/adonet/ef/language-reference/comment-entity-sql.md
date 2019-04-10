@@ -2,12 +2,12 @@
 title: -- (Comentario) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5d9de735-2099-47f1-b7e7-60856f494924
-ms.openlocfilehash: 40a0ee8f6bc2cf8fae5779ecb3d103c77dde161b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c10b17931c6024e2a9e947083747435d8aa54fa2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59137181"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339520"
 ---
 # <a name="---comment-entity-sql"></a>-- (Comentario) (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] las consultas pueden contener comentarios. Dos guiones (`--`) inician una línea de comentario.  
@@ -25,9 +25,9 @@ ms.locfileid: "59137181"
 ## <a name="example"></a>Ejemplo  
  En la siguiente consulta de Entity SQL se muestra cómo usar los comentarios. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1.  Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
+2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#COMMENT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#comment)]  
   

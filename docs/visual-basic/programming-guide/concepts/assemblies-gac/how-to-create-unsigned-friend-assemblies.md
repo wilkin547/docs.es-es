@@ -2,21 +2,21 @@
 title: Filtrar Crear ensamblados de confianza sin firmar (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: 814c2584ea9e1e14c3af003a0515166f53b6d913
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4771d0fe116d1532c270cf41b209665d5403a9b8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819390"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339182"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Filtrar Crear ensamblados de confianza sin firmar (Visual Basic)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados sin firmar.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Para crear un ensamblado y un ensamblado de confianza  
   
-1.  Abra un símbolo del sistema.  
+1. Abra un símbolo del sistema.  
   
-2.  Cree un archivo de Visual Basic llamado `friend_signed_A.` que contiene el código siguiente. El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como un ensamblado de confianza.  
+2. Cree un archivo de Visual Basic llamado `friend_signed_A.` que contiene el código siguiente. El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como un ensamblado de confianza.  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -42,13 +42,13 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
     End Class  
     ```  
   
-3.  Compile y firme friend_signed_A mediante el siguiente comando.  
+3. Compile y firme friend_signed_A mediante el siguiente comando.  
   
     ```console  
     vbc -target:library friend_unsigned_A.vb  
     ```  
   
-4.  Cree un archivo de Visual Basic llamado `friend_unsigned_B` que contiene el código siguiente. Como friend_unsigned_A especifica que friend_unsigned_B es un ensamblado de confianza, el código de friend_unsigned_B puede tener acceso a tipos `Friend` y miembros de friend_unsigned_A.  
+4. Cree un archivo de Visual Basic llamado `friend_unsigned_B` que contiene el código siguiente. Como friend_unsigned_A especifica que friend_unsigned_B es un ensamblado de confianza, el código de friend_unsigned_B puede tener acceso a tipos `Friend` y miembros de friend_unsigned_A.  
   
     ```vb  
     ' friend_unsigned_B.vb  
@@ -69,7 +69,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
     End Module  
     ```  
   
-5.  Compile friend_signed_B mediante el siguiente comando.  
+5. Compile friend_signed_B mediante el siguiente comando.  
   
     ```console
     vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
@@ -77,7 +77,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
   
      El nombre del ensamblado que genera el compilador debe coincidir con el nombre del ensamblado de confianza que se ha pasado al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Puede establecer explícitamente el ensamblado utilizando el `/out` opción del compilador.  
   
-6.  Ejecute el archivo friend_signed_B.exe.  
+6. Ejecute el archivo friend_signed_B.exe.  
   
      El programa muestra dos cadenas: "Class1.Test" y "Class2.Test".  
   
@@ -89,5 +89,5 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Ensamblados de .NET](../../../../standard/assembly/index.md)
 - [Ensamblados de confianza](../../../../standard/assembly/friend-assemblies.md)
-- [Cómo: Crear ensamblados de confianza firmados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [Filtrar Crear ensamblados de confianza firmados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [Conceptos de la Guía de programación](../../../../visual-basic/programming-guide/concepts/index.md)

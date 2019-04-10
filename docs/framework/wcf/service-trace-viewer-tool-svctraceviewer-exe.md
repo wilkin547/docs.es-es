@@ -2,12 +2,12 @@
 title: Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213394"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341106"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ayuda a analizar seguimientos del diagnóstico generados por WCF. Service Trace Viewer proporciona una manera de combinar fácilmente, ver y filtrar los mensajes de seguimiento en el registro de modo que puede diagnosticar, reparar y comprobar los problemas de servicio WCF.  
@@ -72,7 +72,7 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
   
 ##### <a name="to-open-a-trace-file"></a>Para abrir un archivo de seguimiento  
   
-1.  Inicie Service Trace Viewer mediante una ventana de comandos para navegar a la ubicación de instalación de WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) y, a continuación, escriba `SvcTraceViewer.exe`.  
+1. Inicie Service Trace Viewer mediante una ventana de comandos para navegar a la ubicación de instalación de WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) y, a continuación, escriba `SvcTraceViewer.exe`.  
   
 > [!NOTE]
 >  La herramienta del visor de seguimiento de servicio puede asociar dos tipos de archivo: .svclog y .stvproj. Puede utilizar dos parámetros en línea de comandos para registrar y eliminar del registro las extensiones de archivo.  
@@ -81,14 +81,14 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
 >   
 >  /unregister: eliminar del registro la asociación de las extensiones de archivo “.svclog” y “.stvproj” con SvcTraceViewer.exe  
   
-1.  Cuando se inicia el Visor de seguimiento de servicio, haga clic en **archivo** y, a continuación, elija **abierto**. Navegue a la ubicación donde se almacenan sus archivos de seguimiento.  
+1. Cuando se inicia el Visor de seguimiento de servicio, haga clic en **archivo** y, a continuación, elija **abierto**. Navegue a la ubicación donde se almacenan sus archivos de seguimiento.  
   
-2.  Haga doble clic en el archivo de seguimiento que desea abrir.  
+2. Haga doble clic en el archivo de seguimiento que desea abrir.  
   
     > [!NOTE]
     >  Presione MAYÚS mientras hace clic en varios archivos de seguimiento para seleccionarlos y abrirlos de forma simultánea. El visor de seguimiento de servicio combina el contenido de todos los archivos y los muestra en una vista. Por ejemplo, puede abrir archivos de seguimiento tanto de cliente como de servicio. Esto es útil cuando ha habilitado en la configuración el registro de mensajes y la propagación de la actividad. De esta manera, puede examinar el intercambio de mensajes entre cliente y servicio. También puede arrastrar varios archivos al visor o utilizar el **proyecto** ficha. Para obtener información más detallada, consulte la sección Administrar proyecto.  
   
-3.  Para agregar archivos de seguimiento adicionales a la colección que está abierta, haga clic en **archivo** y, a continuación, elija **agregar**. En la ventana que se abre, navegue a la ubicación de los archivos de seguimiento y haga doble clic en el archivo que desea agregar.  
+3. Para agregar archivos de seguimiento adicionales a la colección que está abierta, haga clic en **archivo** y, a continuación, elija **agregar**. En la ventana que se abre, navegue a la ubicación de los archivos de seguimiento y haga doble clic en el archivo que desea agregar.  
   
 > [!CAUTION]
 >  No se recomienda cargar un archivo de seguimiento mayor de 200MB. Si intenta cargar un archivo mayor que ese límite, el proceso de carga puede tardar mucho tiempo, dependiendo de su recurso informático. Puede que la herramienta del visor de seguimiento de servicio no responda durante mucho tiempo o que agote la memoria de su equipo. Se recomienda que configure carga parcial para evitarlo. Para obtener más información sobre cómo hacerlo, vea la sección “Cargar archivos de seguimiento grandes”.  
@@ -154,24 +154,24 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
   
 ###### <a name="selecting-traces-in-the-graph"></a>Seleccionar seguimientos en el gráfico  
   
-1.  Haga clic en un bloque del gráfico.  
+1. Haga clic en un bloque del gráfico.  
   
-2.  Utilice las teclas arriba y abajo para seleccionar los seguimientos adyacentes.  
+2. Utilice las teclas arriba y abajo para seleccionar los seguimientos adyacentes.  
   
-3.  Puede ver la información del seguimiento en el panel de seguimiento y en el panel detalle.  
+3. Puede ver la información del seguimiento en el panel de seguimiento y en el panel detalle.  
   
 ###### <a name="expanding-or-collapsing-activity-transfers"></a>Expandir o contraer transferencias de la actividad  
  Puede expandir las transferencias de la actividad cuando la actividad seleccionada transfiere a otra actividad. Le permite seguir las transferencias.  
   
  Para expandir o contraer transferencias de la actividad,  
   
-1.  Busque la traza de transferencia con un signo "+" de la izquierda del icono de transferencia.  
+1. Busque la traza de transferencia con un signo "+" de la izquierda del icono de transferencia.  
   
-2.  Haga clic en "+", o presione **Ctrl** y "+" mediante el teclado.  
+2. Haga clic en "+", o presione **Ctrl** y "+" mediante el teclado.  
   
-3.  La actividad siguiente aparece en el gráfico.  
+3. La actividad siguiente aparece en el gráfico.  
   
-4.  Un "-" aparece a la izquierda del icono de transferencia. Haga clic en el "-" iniciar sesión o presione la tecla Ctrl y "-", se contrae la transferencia de actividad.  
+4. Un "-" aparece a la izquierda del icono de transferencia. Haga clic en el "-" iniciar sesión o presione la tecla Ctrl y "-", se contrae la transferencia de actividad.  
   
 > [!NOTE]
 >  Cuando una actividad tiene varias transferencias y expande una de ellas, se muestran las actividades que llevan a la nueva actividad desde la actividad raíz. Estas nuevas actividades se muestran en formato contraído. Si desea ver los detalles de estas actividades, expándalas verticalmente haciendo clic en el icono de expandir, en el encabezado del gráfico.  
@@ -181,13 +181,13 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
   
  Para expandir o contraer verticalmente las actividades,  
   
-1.  Haga clic en el icono "+" en el encabezado de la actividad para expandir verticalmente la actividad.  
+1. Haga clic en el icono "+" en el encabezado de la actividad para expandir verticalmente la actividad.  
   
-2.  Tenga en cuenta que todas las trazas se muestran en el gráfico.  
+2. Tenga en cuenta que todas las trazas se muestran en el gráfico.  
   
-3.  Haga clic en el "-" icono en el encabezado de la actividad para contraer verticalmente la actividad.  
+3. Haga clic en el "-" icono en el encabezado de la actividad para contraer verticalmente la actividad.  
   
-4.  Tenga en cuenta que sólo se muestran en la actividad las transferencias importantes, registros de mensajes y seguimientos de advertencia y de excepción.  
+4. Tenga en cuenta que sólo se muestran en la actividad las transferencias importantes, registros de mensajes y seguimientos de advertencia y de excepción.  
   
 ###### <a name="options"></a>Opciones  
  Puede seleccionar dos opciones en el **opción** menú en la vista de gráfico.  
@@ -259,17 +259,17 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
 ###### <a name="creating-a-custom-filter-using-the-template-wizard"></a>Crear un filtro personalizado mediante el Asistente para plantillas  
  Puede hacer clic en un seguimiento existente y crear un filtro basado en la estructura del seguimiento. En este ejemplo se crea un filtro personalizado basado en un id. de subproceso.  
   
-1.  En el panel de traza, en la parte superior derecha del visor, seleccione un seguimiento que incluya el elemento que desea filtrar.  
+1. En el panel de traza, en la parte superior derecha del visor, seleccione un seguimiento que incluya el elemento que desea filtrar.  
   
-2.  Haga clic en el **Crear filtro personalizado** situado en la parte superior del panel de traza.  
+2. Haga clic en el **Crear filtro personalizado** situado en la parte superior del panel de traza.  
   
-3.  En el cuadro de diálogo que aparece, escriba un nombre para su filtro. En este ejemplo, escriba `Thread ID`. También puede proporcionar una descripción de su filtro.  
+3. En el cuadro de diálogo que aparece, escriba un nombre para su filtro. En este ejemplo, escriba `Thread ID`. También puede proporcionar una descripción de su filtro.  
   
-4.  La vista de árbol a la izquierda muestra la estructura del registro de seguimiento que seleccionó en el paso 1. Vaya al elemento para el que desea crear una condición. En este ejemplo, vaya a ThreadID, que se encuentra en la expresión XPath: /E2ETraceEvent/System/Execution/@ThreadID nodo. Haga doble clic en el atributo ThreadID en la vista de árbol. Esto crea una expresión para el atributo a la derecha del diálogo.  
+4. La vista de árbol a la izquierda muestra la estructura del registro de seguimiento que seleccionó en el paso 1. Vaya al elemento para el que desea crear una condición. En este ejemplo, vaya a ThreadID, que se encuentra en la expresión XPath: /E2ETraceEvent/System/Execution/@ThreadID nodo. Haga doble clic en el atributo ThreadID en la vista de árbol. Esto crea una expresión para el atributo a la derecha del diálogo.  
   
-5.  Cambie el campo de parámetro para la condición ThreadID de ninguno a '{0}'. Este paso permite configurar el valor de ThreadID cuando se aplica el filtro. (Vea la sección Cómo aplicar un filtro) Puede definir hasta cuatro parámetros. Las condiciones se combinan mediante el operador O.  
+5. Cambie el campo de parámetro para la condición ThreadID de ninguno a '{0}'. Este paso permite configurar el valor de ThreadID cuando se aplica el filtro. (Vea la sección Cómo aplicar un filtro) Puede definir hasta cuatro parámetros. Las condiciones se combinan mediante el operador O.  
   
-6.  Haga clic en **Aceptar** para crear el filtro.  
+6. Haga clic en **Aceptar** para crear el filtro.  
   
 > [!NOTE]
 >  Una vez que se haya creado un filtro mediante el Asistente para plantillas, solo se podrá editar manualmente. No es posible activar el Asistente para un filtro que se ha creado previamente. Además, las condiciones de un filtro de XPath creado mediante el Asistente para plantillas se combinan con el operador O. Si necesita una operador Y, puede modificar la expresión del filtro una vez haya sido creado.  
@@ -277,20 +277,20 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
 ###### <a name="creating-a-custom-filter-manually"></a>Crear manualmente un filtro personalizado  
  El menú Filtros personalizados le permite escribir manualmente los filtros de XPath.  
   
-1.  En el menú Ver, haga clic en el **filtros personalizados** elemento de menú.  
+1. En el menú Ver, haga clic en el **filtros personalizados** elemento de menú.  
   
-2.  En el cuadro de diálogo que aparece, haga clic en **nuevo.**  
+2. En el cuadro de diálogo que aparece, haga clic en **nuevo.**  
   
-3.  Como mínimo especifique un nombre de filtro y una expresión XPath.  
+3. Como mínimo especifique un nombre de filtro y una expresión XPath.  
   
-4.  Haga clic en **Aceptar**.  
+4. Haga clic en **Aceptar**.  
   
 ###### <a name="applying-a-custom-filter"></a>Aplicar un filtro personalizado  
  Una vez creado un filtro personalizado, puede acceder a él a través de la barra de herramientas de filtro. Seleccione el filtro que desea aplicar en el **buscar en** campo de la barra de herramientas de filtro. Para el ejemplo anterior, seleccione “Thread ID”.  
   
-1.  Especifique el valor que está buscando en el **buscar** campo. En este ejemplo, escriba el id. del subproceso que desea buscar.  
+1. Especifique el valor que está buscando en el **buscar** campo. En este ejemplo, escriba el id. del subproceso que desea buscar.  
   
-2.  Haga clic en **filtrar ahora**y observe el resultado de la operación.  
+2. Haga clic en **filtrar ahora**y observe el resultado de la operación.  
   
  Si su filtro usa varios parámetros, escríbalos mediante ';' como separador en la **buscar** campo. Por ejemplo, la cadena siguiente define 3 parámetros: '1; findValue; text'. El Visor aplica '1' para el {0} parámetro del filtro. 'findValue' y 'text' se aplican a {1} y {2} respectivamente.  
   
@@ -299,21 +299,21 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
   
  Para importar un filtro personalizado:  
   
-1.  En el **vista** menú, haga clic en **filtros personalizados**.  
+1. En el **vista** menú, haga clic en **filtros personalizados**.  
   
-2.  En el cuadro de diálogo que aparece, haga clic en el **importación** botón.  
+2. En el cuadro de diálogo que aparece, haga clic en el **importación** botón.  
   
-3.  Navegue hasta el archivo de filtro personalizado (.stvcf), haga clic en el archivo y haga clic en el **abierto** botón.  
+3. Navegue hasta el archivo de filtro personalizado (.stvcf), haga clic en el archivo y haga clic en el **abierto** botón.  
   
  Para exportar un filtro personalizado:  
   
-1.  En el menú Ver, haga clic en **filtros personalizados**.  
+1. En el menú Ver, haga clic en **filtros personalizados**.  
   
-2.  En el cuadro de diálogo que aparece, seleccione el filtro que desea exportar.  
+2. En el cuadro de diálogo que aparece, seleccione el filtro que desea exportar.  
   
-3.  Haga clic en el **exportar** botón.  
+3. Haga clic en el **exportar** botón.  
   
-4.  Especifique el nombre y la ubicación del archivo de definición de filtro personalizado (.stvcf) y haga clic en el **guardar** botón.  
+4. Especifique el nombre y la ubicación del archivo de definición de filtro personalizado (.stvcf) y haga clic en el **guardar** botón.  
   
 > [!NOTE]
 >  Estos filtros personalizados se pueden importar y exportar sólo desde el visor de seguimiento de servicio. No se pueden leer con otras herramientas.  
@@ -396,9 +396,9 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
 #### <a name="adjusting-partial-loading"></a>Ajustar la carga parcial  
  Después de haber cargado parcialmente el archivo de seguimiento, puede cambiar el conjunto de datos que se está cargando. Puede hacer esto ajustando la barra de herramientas de carga parcial en la parte superior del visor.  
   
-1.  Mueva la barra de herramientas con el mouse o escriba la hora de inicio y finalización.  
+1. Mueva la barra de herramientas con el mouse o escriba la hora de inicio y finalización.  
   
-2.  Haga clic en el **ajustar** botón.  
+2. Haga clic en el **ajustar** botón.  
   
 ## <a name="understanding-trace-icons"></a>Introducción a los iconos de seguimiento  
  La siguiente es una lista de iconos que usa la herramienta Service Trace Viewer en el **actividad** vista, **Graph** vista y **seguimiento** panel para representar elementos diferentes.  

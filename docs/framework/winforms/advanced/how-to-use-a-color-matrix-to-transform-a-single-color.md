@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 66ddd85d4f841edf9cabf338fbb66a8e2dda491a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075189"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342861"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Filtrar para usar una matriz de colores para transformar un color único
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona el <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> clases para almacenar y manipular imágenes. <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> objetos almacenan el color de cada píxel como un número de 32 bits: 8 bits para cada color rojo, verde, azul y alfa. Cada uno de los cuatro componentes es un número comprendido entre 0 y 255, donde 0 representa ninguna intensidad y que representa la intensidad máxima de 255. El componente alfa especifica la transparencia del color: 0 es completamente transparente y 255 es completamente opaco.  
@@ -26,9 +26,9 @@ ms.locfileid: "59075189"
   
  Por ejemplo, suponga que desea empezar con el color (0.2, 0.0, 0.4, 1.0) y aplicar las transformaciones siguientes:  
   
-1.  Duplique el componente rojo  
+1. Duplique el componente rojo  
   
-2.  Agregue 0.2 a los componentes rojos, verde y azules  
+2. Agregue 0.2 a los componentes rojos, verde y azules  
   
  La multiplicación de matriz siguientes llevará a cabo el par de transformaciones en el orden mostrado.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "59075189"
   
  El código en el ejemplo siguiente utiliza los siguientes pasos para realizar el cambio de color:  
   
-1.  Inicializar un <xref:System.Drawing.Imaging.ColorMatrix> objeto.  
+1. Inicializar un <xref:System.Drawing.Imaging.ColorMatrix> objeto.  
   
-2.  Crear un <xref:System.Drawing.Imaging.ImageAttributes> objeto y pase el <xref:System.Drawing.Imaging.ColorMatrix> de objeto para el <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> método de la <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+2. Crear un <xref:System.Drawing.Imaging.ImageAttributes> objeto y pase el <xref:System.Drawing.Imaging.ColorMatrix> de objeto para el <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> método de la <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
   
-3.  Pase el <xref:System.Drawing.Imaging.ImageAttributes> de objeto para el <xref:System.Drawing.Graphics.DrawImage%2A> método de un <xref:System.Drawing.Graphics> objeto.  
+3. Pase el <xref:System.Drawing.Imaging.ImageAttributes> de objeto para el <xref:System.Drawing.Graphics.DrawImage%2A> método de un <xref:System.Drawing.Graphics> objeto.  
   
  [!code-csharp[System.Drawing.RecoloringImages#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.RecoloringImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  

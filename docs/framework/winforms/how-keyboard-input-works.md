@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204749"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342179"
 ---
 # <a name="how-keyboard-input-works"></a>Funcionamiento de las entradas mediante teclado
 Los Windows Forms procesan las entradas mediante teclado provocando eventos de teclado en respuesta a los mensajes de Windows. La mayoría de las aplicaciones de Windows Forms procesan exclusivamente las entradas mediante teclado controlando los eventos de teclado. No obstante, es necesario comprender cómo funcionan los mensajes del teclado de modo que pueda implementar escenarios de entrada mediante teclado más avanzados, como interceptar teclas antes de que lleguen a un control. En este tema se describen los tipos de datos de tecla que los Windows Forms reconocen y se proporciona información general de cómo se enrutan los mensajes del teclado. Para información sobre los eventos de teclado, vea [Utilizar eventos de teclado](using-keyboard-events.md).  
@@ -22,13 +22,13 @@ Los Windows Forms procesan las entradas mediante teclado provocando eventos de t
 ## <a name="order-of-keyboard-events"></a>Orden de eventos de teclado  
  Como se ha indicado anteriormente, hay 3 eventos relacionados con el teclado que pueden ocurrir en un control. La secuencia siguiente muestra el orden general de los eventos:  
   
-1.  El usuario presiona la tecla "a", se preprocesa la tecla, se envía y un <xref:System.Windows.Forms.Control.KeyDown> se produce el evento.  
+1. El usuario presiona la tecla "a", se preprocesa la tecla, se envía y un <xref:System.Windows.Forms.Control.KeyDown> se produce el evento.  
   
-2.  El usuario mantiene presionada la tecla "a", se preprocesa la tecla, se envía y un <xref:System.Windows.Forms.Control.KeyPress> se produce el evento.  
+2. El usuario mantiene presionada la tecla "a", se preprocesa la tecla, se envía y un <xref:System.Windows.Forms.Control.KeyPress> se produce el evento.  
   
      Este evento se produce varias veces cuando el usuario mantiene presionada una tecla.  
   
-3.  Envía el usuario libera se preprocesa la tecla "a", la clave y un <xref:System.Windows.Forms.Control.KeyUp> se produce el evento.  
+3. Envía el usuario libera se preprocesa la tecla "a", la clave y un <xref:System.Windows.Forms.Control.KeyUp> se produce el evento.  
   
 ## <a name="preprocessing-keys"></a>Preprocesamiento de teclas  
  Como otros mensajes, se procesan los mensajes del teclado en el <xref:System.Windows.Forms.Control.WndProc%2A> método de un formulario o control. Sin embargo, antes de teclado se procesan los mensajes, el <xref:System.Windows.Forms.Control.PreProcessMessage%2A> método llama a uno o varios métodos que se pueden reemplazar para controlar teclas de caracteres especiales y teclas físicas. Puede reemplazar estos métodos para detectar y filtrar determinadas teclas antes de que el control procese los mensajes. En la tabla siguiente se muestra la acción que se realiza y el método relacionado que se produce, en el orden en que se produce el método.  

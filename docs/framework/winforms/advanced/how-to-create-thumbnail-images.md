@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144019"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341496"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Filtrar para crear imágenes en miniatura
 Una imagen en miniatura es una versión reducida de una imagen. Puede crear una imagen en miniatura mediante una llamada a la <xref:System.Drawing.Image.GetThumbnailImage%2A> método de un <xref:System.Drawing.Image> objeto.  
@@ -34,19 +34,19 @@ Una imagen en miniatura es una versión reducida de una imagen. Puede crear una 
 ## <a name="compiling-the-code"></a>Compilar el código  
  El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos. Para ejecutar el ejemplo, siga estos pasos:  
   
-1.  Cree una nueva aplicación de Windows Forms.  
+1. Cree una nueva aplicación de Windows Forms.  
   
-2.  Agregue el código de ejemplo al formulario.  
+2. Agregue el código de ejemplo al formulario.  
   
-3.  Cree un controlador para el formulario <xref:System.Windows.Forms.Control.Paint> eventos  
+3. Cree un controlador para el formulario <xref:System.Windows.Forms.Control.Paint> eventos  
   
-4.  En el <xref:System.Windows.Forms.Control.Paint> controlador, llamada la `GetThumbnail` método y pase `e` para <xref:System.Windows.Forms.PaintEventArgs>.  
+4. En el <xref:System.Windows.Forms.Control.Paint> controlador, llamada la `GetThumbnail` método y pase `e` para <xref:System.Windows.Forms.PaintEventArgs>.  
   
-5.  Buscar un archivo de imagen que desea realizar una miniatura.  
+5. Buscar un archivo de imagen que desea realizar una miniatura.  
   
-6.  En el `GetThumbnail` método, especifique la ruta de acceso y nombre de la imagen de archivo.  
+6. En el `GetThumbnail` método, especifique la ruta de acceso y nombre de la imagen de archivo.  
   
-7.  Presione F5 para ejecutar el ejemplo.  
+7. Presione F5 para ejecutar el ejemplo.  
   
      Aparece una imagen en miniatura del 100 por 100 en el formulario.  
   

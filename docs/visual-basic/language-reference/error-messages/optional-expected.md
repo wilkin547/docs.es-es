@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
-ms.openlocfilehash: d70a71f8b5f72edbd7f3e50bc099360d02e95389
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 71a25784f357a7e596093b314ed5b3d721d6f92c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840554"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341886"
 ---
 # <a name="optional-expected"></a>Se esperaba 'Optional'
 Un argumento opcional en una declaración de procedimiento va seguido de un argumento necesario. Cada argumento que sigue a un argumento opcional también debe ser opcional.  
@@ -21,9 +21,9 @@ Un argumento opcional en una declaración de procedimiento va seguido de un argu
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Si el argumento debe ser necesario, muévalo para que preceda al primer argumento opcional en la lista de argumentos.  
+1. Si el argumento debe ser necesario, muévalo para que preceda al primer argumento opcional en la lista de argumentos.  
   
-2.  Si el argumento está pensado para que sea opcional, use la `Optional` palabra clave.  
+2. Si el argumento está pensado para que sea opcional, use la `Optional` palabra clave.  
   
 ## <a name="see-also"></a>Vea también
 

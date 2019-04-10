@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 346fb3399993246eb8d90f7fa900ab382ae12c71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194895"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339442"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Filtrar para crear e inicializar orígenes de seguimiento
 Las aplicaciones utilizan la clase <xref:System.Diagnostics.TraceSource> para generar seguimientos que pueden asociarse con la aplicación. <xref:System.Diagnostics.TraceSource> Proporciona métodos de traza que permiten rastrear fácilmente eventos, datos de seguimiento y emitir seguimientos de información. El resultado del seguimiento de <xref:System.Diagnostics.TraceSource> se puede crear e inicializar con o sin archivos de configuración. En este tema se proporcionan instrucciones para ambas opciones. Sin embargo, se recomienda usar archivos de configuración para facilitar la reconfiguración de las trazas generadas por los orígenes de traza en tiempo de ejecución.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Para crear e inicializar un origen de traza mediante un archivo de configuración  
   
-1.  Cree un proyecto de aplicación de consola de Visual Studio y reemplace el código proporcionado por el código siguiente. Este código registra errores y advertencias, y muestra algunos de ellos en la consola y otros en el archivo myListener creado por las entradas del archivo de configuración.  
+1. Cree un proyecto de aplicación de consola de Visual Studio y reemplace el código proporcionado por el código siguiente. Este código registra errores y advertencias, y muestra algunos de ellos en la consola y otros en el archivo myListener creado por las entradas del archivo de configuración.  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
   
-2.  Agregue al proyecto un archivo de configuración de la aplicación (si no hay uno) para inicializar el origen de seguimiento denominado `TraceSourceApp` en el ejemplo de código del paso 1.  
+2. Agregue al proyecto un archivo de configuración de la aplicación (si no hay uno) para inicializar el origen de seguimiento denominado `TraceSourceApp` en el ejemplo de código del paso 1.  
   
-3.  Reemplace el contenido del archivo de configuración predeterminado con la configuración siguiente para inicializar un agente de escucha de seguimiento de consola y un agente de escucha de seguimiento de escritor de texto para el origen de seguimiento creado en el paso 1.  
+3. Reemplace el contenido del archivo de configuración predeterminado con la configuración siguiente para inicializar un agente de escucha de seguimiento de consola y un agente de escucha de seguimiento de escritor de texto para el origen de seguimiento creado en el paso 1.  
   
     ```xml  
     <configuration>  

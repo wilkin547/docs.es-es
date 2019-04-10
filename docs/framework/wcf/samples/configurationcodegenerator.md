@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: 7625060cd0512bb7498a931d7b93a731e52c9f00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 97197926db0b44f1ad36e2eba6ab6bec42eced33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195194"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342016"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator es una herramienta que puede utilizar para exponer sus implementaciones de canales personalizadas en el sistema de configuración. Esto permite a los usuarios de su canal personalizado configurar el canal utilizando un archivo .config tal y como lo haría si configuraran un enlace proporcionado por el sistema como `NetTcpBinding` o un enlace personalizado usando `TcpTransportBindingElement`.  
@@ -16,13 +16,13 @@ ConfigurationCodeGenerator es una herramienta que puede utilizar para exponer su
   
 ### <a name="to-build-the-tool"></a>Para compilar la herramienta  
   
-1.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Al compilar la solución, se genera un archivo: ConfigurationCodeGenerator.exe. ConfigurationCodeGenerator.exe. Samplerun.cmd del archivo tiene una línea de comandos de ejemplo que muestra cómo utilizar esta herramienta para generar las clases para el [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo.  
+2. Al compilar la solución, se genera un archivo: ConfigurationCodeGenerator.exe. ConfigurationCodeGenerator.exe. Samplerun.cmd del archivo tiene una línea de comandos de ejemplo que muestra cómo utilizar esta herramienta para generar las clases para el [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo.  
   
 ### <a name="to-run-the-tool"></a>Para ejecutar la herramienta  
   
-1.  En el símbolo del sistema escriba lo siguiente si tiene un tipo `BindingElement` personalizado y un tipo `Binding` personalizado:  
+1. En el símbolo del sistema escriba lo siguiente si tiene un tipo `BindingElement` personalizado y un tipo `Binding` personalizado:  
   
     ```  
     ConfigurationCodeGenerator.exe /be:YourCustomBindingElementTypeName /sb:YourCustomStdBindingTypeName /dll:TheAssemblyWhereTheseTypesAreDefined  

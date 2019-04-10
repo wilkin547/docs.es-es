@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: cd86757d43d7d57dc7777422086a7b7a96b6611e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 50f5f91a946aeebc4d82630b25d18d8f8d2ea4be
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162129"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339910"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Filtrar para establecer el orden de tabulación en formularios Windows Forms
 El orden de tabulación es el orden en el que usuario mueve el foco de un control a otro, presione la tecla TAB. Cada formulario tiene su propio orden de tabulación. De forma predeterminada, el orden de tabulación es el mismo que el orden en el que se crearon los controles. Orden de tabulación la numeración empieza por cero.  
@@ -25,16 +25,16 @@ El orden de tabulación es el orden en el que usuario mueve el foco de un contro
   
 ### <a name="to-set-the-tab-order-of-a-control"></a>Para establecer el orden de tabulación de un control  
   
-1.  En el **vista** menú, haga clic en **orden de tabulación**.  
+1. En el **vista** menú, haga clic en **orden de tabulación**.  
   
      Esto activa el modo de selección de orden de tabulación del formulario. Un número (que representa el <xref:System.Windows.Forms.Control.TabIndex%2A> propiedad) aparece en la esquina superior izquierda de cada control.  
   
-2.  Haga clic en los controles de forma secuencial para establecer el orden de tabulación que desee.  
+2. Haga clic en los controles de forma secuencial para establecer el orden de tabulación que desee.  
   
     > [!NOTE]
     >  Posición de un control en el orden de tabulación puede establecerse en cualquier valor mayor o igual que 0. Cuando se produzcan duplicados, se evalúa el orden z de los dos controles y el control en la parte superior se pone en primer lugar. (El orden z es el diseño visual de los controles en un formulario de eje z del formulario [profundidad]. El orden z determina qué controles están delante de otros controles.) Para obtener más información acerca del orden z, vea [disponer objetos en Windows Forms](how-to-layer-objects-on-windows-forms.md).  
   
-3.  Cuando haya terminado, haga clic en **orden de tabulación** en el **vista** nuevo menú para abandonar el modo de orden de tabulación.  
+3. Cuando haya terminado, haga clic en **orden de tabulación** en el **vista** nuevo menú para abandonar el modo de orden de tabulación.  
   
     > [!NOTE]
     >  Los controles que no se pueden obtener el foco, así como los controles deshabilitados e invisibles, no tiene un <xref:System.Windows.Forms.Control.TabIndex%2A> propiedad y no se incluyen en el orden de tabulación. Cuando el usuario presiona la tecla TAB, se omiten estos controles.  
@@ -47,7 +47,7 @@ El orden de tabulación es el orden en el que usuario mueve el foco de un contro
   
 #### <a name="to-remove-a-control-from-the-tab-order"></a>Para quitar un control del orden de tabulación  
   
-1.  Establecer el control <xref:System.Windows.Forms.Control.TabStop%2A> propiedad `false` en la ventana Propiedades.  
+1. Establecer el control <xref:System.Windows.Forms.Control.TabStop%2A> propiedad `false` en la ventana Propiedades.  
   
      Un control cuya <xref:System.Windows.Forms.Control.TabStop%2A> se ha establecido la propiedad en `false` todavía mantiene su posición en el orden de tabulación, aunque se omita al recorrer los controles con la tecla TAB.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 73f2004470d5d1da04199af75832cefd6348ce18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124532"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342484"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Filtrar para crear formularios secundarios MDI
 Formularios secundarios MDI son un elemento esencial de [aplicaciones de interfaz de múltiples documentos (MDI)](multiple-document-interface-mdi-applications.md), ya que estos formularios son el centro de la interacción del usuario.  
@@ -26,17 +26,17 @@ Formularios secundarios MDI son un elemento esencial de [aplicaciones de interfa
   
 ### <a name="to-create-mdi-child-forms"></a>Para crear formularios secundarios MDI  
   
-1.  Cree un nuevo proyecto de Windows Forms. En **las propiedades de Windows** del formulario, establezca su <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propiedad `true`y su `WindowsState` propiedad `Maximized`.  
+1. Cree un nuevo proyecto de Windows Forms. En **las propiedades de Windows** del formulario, establezca su <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propiedad `true`y su `WindowsState` propiedad `Maximized`.  
   
      Esto hace que el formulario se designe como contenedor MDI de las ventanas secundarias.  
   
-2.  Desde el `Toolbox`, arrastre un control <xref:System.Windows.Forms.MenuStrip> al formulario. Establezca su `Text` propiedad **archivo**.  
+2. Desde el `Toolbox`, arrastre un control <xref:System.Windows.Forms.MenuStrip> al formulario. Establezca su `Text` propiedad **archivo**.  
   
-3.  Haga clic en el botón de puntos suspensivos (...) junto a la **elementos** propiedad y haga clic en **agregar** para agregar dos elementos de menú de franja de herramientas secundarios. Establecer el `Text` propiedad para que estos elementos **New** y **ventana**.  
+3. Haga clic en el botón de puntos suspensivos (...) junto a la **elementos** propiedad y haga clic en **agregar** para agregar dos elementos de menú de franja de herramientas secundarios. Establecer el `Text` propiedad para que estos elementos **New** y **ventana**.  
   
-4.  En **el Explorador de soluciones**, haga clic en el proyecto, seleccione **agregar**y, a continuación, seleccione **Agregar nuevo elemento**.  
+4. En **el Explorador de soluciones**, haga clic en el proyecto, seleccione **agregar**y, a continuación, seleccione **Agregar nuevo elemento**.  
   
-5.  En el **Agregar nuevo elemento** cuadro de diálogo, seleccione **formulario Windows** (en Visual Basic o Visual C#) o **aplicación de Windows Forms (. NET)** (en [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) desde el  **Plantillas** panel. En el **nombre** cuadro, asigne el nombre del formulario **Form2**. Haga clic en el **abierto** para agregar el formulario al proyecto.  
+5. En el **Agregar nuevo elemento** cuadro de diálogo, seleccione **formulario Windows** (en Visual Basic o Visual C#) o **aplicación de Windows Forms (. NET)** (en [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) desde el  **Plantillas** panel. En el **nombre** cuadro, asigne el nombre del formulario **Form2**. Haga clic en el **abierto** para agregar el formulario al proyecto.  
   
     > [!NOTE]
     >  El formulario secundario MDI creado en este paso es un Windows Form estándar. Como tal, tiene una propiedad <xref:System.Windows.Forms.Form.Opacity%2A>, que le permite controlar la transparencia del formulario. Sin embargo, la propiedad <xref:System.Windows.Forms.Form.Opacity%2A> se diseñó para ventanas de nivel superior. No la use con formularios secundarios MDI porque se pueden producir problemas de dibujo.  
@@ -45,13 +45,13 @@ Formularios secundarios MDI son un elemento esencial de [aplicaciones de interfa
   
      El **Diseñador de Windows Forms** se abre, mostrando **Form2**.  
   
-6.  Desde el **cuadro de herramientas**, arrastre un **RichTextBox** control al formulario.  
+6. Desde el **cuadro de herramientas**, arrastre un **RichTextBox** control al formulario.  
   
-7.  En el **propiedades** ventana, establezca el `Anchor` propiedad **superior, izquierdo** y el `Dock` propiedad **rellenar**.  
+7. En el **propiedades** ventana, establezca el `Anchor` propiedad **superior, izquierdo** y el `Dock` propiedad **rellenar**.  
   
      Esto hace que el control <xref:System.Windows.Forms.RichTextBox> rellene completamente el área del formulario MDI secundario, incluso cuando se cambia el tamaño del formulario.  
   
-8.  Haga doble clic en el **New** elemento de menú para crear un <xref:System.Windows.Forms.Control.Click> controlador de eventos para él.  
+8. Haga doble clic en el **New** elemento de menú para crear un <xref:System.Windows.Forms.Control.Click> controlador de eventos para él.  
   
 9. Inserte código similar al siguiente para crear un nuevo formulario MDI secundario cuando el usuario hace clic en el **New** elemento de menú.  
   

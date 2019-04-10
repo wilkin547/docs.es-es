@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: 2a399b92c66c8a88d10d661ff41aef58a82bbc2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829920"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341912"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Filtrar Eliminar un recurso de sistema (Visual Basic)
 Puede usar un `Using` bloque para garantizar que el sistema elimina un recurso al que el código sale del bloque. Esto es útil si está utilizando un recurso del sistema que consume una gran cantidad de memoria o que otros componentes que desee utilizar.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Para eliminar una conexión de base de datos cuando lo esté utilizando el código  
   
-1.  Asegúrese de incluir la correspondiente [instrucción Imports (tipo y Namespace. NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para la conexión de base de datos al principio del archivo de origen (en este caso, <xref:System.Data.SqlClient>).  
+1. Asegúrese de incluir la correspondiente [instrucción Imports (tipo y Namespace. NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para la conexión de base de datos al principio del archivo de origen (en este caso, <xref:System.Data.SqlClient>).  
   
-2.  Crear un `Using` bloquear con el `Using` y `End Using` instrucciones. Dentro del bloque, coloque el código que se ocupa de la conexión de base de datos.  
+2. Crear un `Using` bloquear con el `Using` y `End Using` instrucciones. Dentro del bloque, coloque el código que se ocupa de la conexión de base de datos.  
   
-3.  Declare la conexión y cree una instancia de ella como parte de la `Using` instrucción.  
+3. Declare la conexión y cree una instancia de ella como parte de la `Using` instrucción.  
   
     ```  
     ' Insert the following line at the beginning of your source file.  
@@ -52,4 +52,4 @@ Puede usar un `Using` bloque para garantizar que el sistema elimina un recurso a
 - [Estructuras de bucle](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Estructuras de control adicionales](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
 - [Estructuras de control anidadas](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [Using (instrucción)](../../../../visual-basic/language-reference/statements/using-statement.md)
+- [Using (Instrucción)](../../../../visual-basic/language-reference/statements/using-statement.md)

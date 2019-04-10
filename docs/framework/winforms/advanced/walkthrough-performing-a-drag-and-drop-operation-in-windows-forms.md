@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: e9b21d7bfa188ebb053f36e2637ffce5d6fa0dd7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189032"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340729"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Tutorial: Llevar a cabo una operación de arrastrar y colocar en formularios Windows Forms
 Para realizar operaciones de arrastrar y colocar en aplicaciones basadas en Windows debe controlar una serie de eventos, sobre todo la <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, y <xref:System.Windows.Forms.Control.DragDrop> eventos. Trabajando con la información disponible en los argumentos de estos eventos, puede facilitar sin problemas las operaciones de arrastrar y colocar.  
@@ -28,7 +28,7 @@ Para realizar operaciones de arrastrar y colocar en aplicaciones basadas en Wind
   
 #### <a name="to-start-a-drag-operation"></a>Para iniciar una operación de arrastrar  
   
-1.  En el <xref:System.Windows.Forms.Control.MouseDown> eventos del control donde se iniciará la operación de arrastrar, utilice el `DoDragDrop` tendrán método para establecer los datos que se arrastran y el efecto permitido. Para obtener más información, vea <xref:System.Windows.Forms.DragEventArgs.Data%2A> y <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
+1. En el <xref:System.Windows.Forms.Control.MouseDown> eventos del control donde se iniciará la operación de arrastrar, utilice el `DoDragDrop` tendrán método para establecer los datos que se arrastran y el efecto permitido. Para obtener más información, vea <xref:System.Windows.Forms.DragEventArgs.Data%2A> y <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
   
      En el ejemplo siguiente se muestra cómo iniciar una operación de arrastrar. El control donde comienza la operación de arrastrar es un <xref:System.Windows.Forms.Button> control, los datos que se arrastran es la cadena que representa el <xref:System.Windows.Forms.Control.Text%2A> propiedad de la <xref:System.Windows.Forms.Button> control y los efectos permitidos son copiar o mover.  
   
@@ -57,9 +57,9 @@ Para realizar operaciones de arrastrar y colocar en aplicaciones basadas en Wind
   
 #### <a name="to-perform-a-drop"></a>Para llevar a cabo la operación de colocar  
   
-1.  Establecer el <xref:System.Windows.Forms.Control.AllowDrop%2A> propiedad en true.  
+1. Establecer el <xref:System.Windows.Forms.Control.AllowDrop%2A> propiedad en true.  
   
-2.  En el `DragEnter` eventos para el control donde tendrá lugar la operación de colocar, asegúrese de que los datos que se arrastran son de un tipo aceptable (en este caso, <xref:System.Windows.Forms.Control.Text%2A>). El código, a continuación, Establece el efecto que tendrá lugar cuando se produce la entrega a un valor en el <xref:System.Windows.Forms.DragDropEffects> enumeración. Para obtener más información, consulta <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
+2. En el `DragEnter` eventos para el control donde tendrá lugar la operación de colocar, asegúrese de que los datos que se arrastran son de un tipo aceptable (en este caso, <xref:System.Windows.Forms.Control.Text%2A>). El código, a continuación, Establece el efecto que tendrá lugar cuando se produce la entrega a un valor en el <xref:System.Windows.Forms.DragDropEffects> enumeración. Para obtener más información, consulta <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -85,7 +85,7 @@ Para realizar operaciones de arrastrar y colocar en aplicaciones basadas en Wind
     > [!NOTE]
     >  Puede definir sus propios <xref:System.Windows.Forms.DataFormats> especificando su propio objeto como el <xref:System.Object> parámetro de la <xref:System.Windows.Forms.DataObject.SetData%2A> método. Cuando lo haga, asegúrese de que el objeto especificado sea serializable. Para obtener más información, consulta <xref:System.Runtime.Serialization.ISerializable>.  
   
-3.  En el <xref:System.Windows.Forms.Control.DragDrop> eventos del control donde tendrá lugar la operación de colocar, utilice el <xref:System.Windows.Forms.DataObject.GetData%2A> método para recuperar los datos que se está arrastrando. Para obtener más información, consulta <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
+3. En el <xref:System.Windows.Forms.Control.DragDrop> eventos del control donde tendrá lugar la operación de colocar, utilice el <xref:System.Windows.Forms.DataObject.GetData%2A> método para recuperar los datos que se está arrastrando. Para obtener más información, consulta <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
   
      En el ejemplo siguiente, un <xref:System.Windows.Forms.TextBox> control es el control que se está arrastrando (donde tendrá lugar la operación de colocar). El código establece la <xref:System.Windows.Forms.Control.Text%2A> propiedad de la <xref:System.Windows.Forms.TextBox> controlar igual a los datos que se está arrastrando.  
   

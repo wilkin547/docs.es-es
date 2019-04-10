@@ -10,25 +10,25 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: f1f7a15d1457390bf77f5e53c7fd657304725df6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218217"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339845"
 ---
 # <a name="saml-tokens-and-claims"></a>Tokens y notificaciones SAML
 Lenguaje de marcado de aserción de seguridad (SAML) *tokens* son representaciones XML de notificaciones. De forma predeterminada, los tokens SAML que Windows Communication Foundation (WCF) se usa en escenarios de seguridad federada son *tokens emitidos*.  
   
  Los tokens SAML llevan instrucciones que son conjuntos de notificaciones realizadas por una entidad sobre otra entidad. Por ejemplo, en escenarios de seguridad asociados, las instrucciones son realizadas por un servicio de token de seguridad sobre un usuario del sistema. El servicio de token de seguridad firma el token SAML para indicar la veracidad de las instrucciones contenidas en el token. Además, el token SAML está asociado a material clave criptográfico del que el usuario del token SAML demuestra tener conocimiento. Esta prueba convence al usuario de confianza que el token SAML fue realmente emitido para ese usuario. Por ejemplo, en un escenario típico:  
   
-1.  Un cliente solicita un token de SAML de un servicio de token de seguridad, autenticándose para ese servicio de token de seguridad usando las credenciales de Windows.  
+1. Un cliente solicita un token de SAML de un servicio de token de seguridad, autenticándose para ese servicio de token de seguridad usando las credenciales de Windows.  
   
-2.  El servicio de token de seguridad emite un token SAML para el cliente. El token SAML se firma con un certificado asociado al servicio de token de seguridad y contiene una clave de prueba cifrada para el servicio de destino.  
+2. El servicio de token de seguridad emite un token SAML para el cliente. El token SAML se firma con un certificado asociado al servicio de token de seguridad y contiene una clave de prueba cifrada para el servicio de destino.  
   
-3.  El cliente también recibe una copia de la *clave de prueba*. El cliente presenta el token SAML para el servicio de aplicación (el *confianza*) y firma el mensaje con esa clave de prueba.  
+3. El cliente también recibe una copia de la *clave de prueba*. El cliente presenta el token SAML para el servicio de aplicación (el *confianza*) y firma el mensaje con esa clave de prueba.  
   
-4.  La firma a través del token SAML indica al usuario de confianza que el servicio de token de seguridad emitió el token. La firma del mensaje creada con la clave de prueba indica al usuario de confianza que el token fue emitido para el cliente.  
+4. La firma a través del token SAML indica al usuario de confianza que el servicio de token de seguridad emitió el token. La firma del mensaje creada con la clave de prueba indica al usuario de confianza que el token fue emitido para el cliente.  
   
 ## <a name="from-claims-to-samlattributes"></a>De notificaciones a SamlAttributes  
  En WCF, las instrucciones en tokens SAML se modelan como <xref:System.IdentityModel.Tokens.SamlAttribute> objetos, que se pueden rellenar directamente desde <xref:System.IdentityModel.Claims.Claim> objetos, que proporciona el <xref:System.IdentityModel.Claims.Claim> objeto tiene un <xref:System.IdentityModel.Claims.Claim.Right%2A> propiedad de <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> y <xref:System.IdentityModel.Claims.Claim.Resource%2A> es propiedad de tipo <xref:System.String>. Por ejemplo:  

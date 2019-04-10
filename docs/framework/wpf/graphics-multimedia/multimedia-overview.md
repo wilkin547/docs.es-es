@@ -5,12 +5,12 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-ms.openlocfilehash: ffdcb58cdd332f9c730e7ed367e0f8bcc56da459
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222099"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340495"
 ---
 # <a name="multimedia-overview"></a>Información general sobre multimedia
 Las características multimedia de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] le permiten integrar audio y vídeo en las aplicaciones para mejorar la experiencia del usuario. En este tema se presentan las características multimedia de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -77,13 +77,13 @@ Las características multimedia de [!INCLUDE[TLA#tla_winclient](../../../../incl
   
  El <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> y <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> propiedades no son la única forma de controlar la reproducción multimedia. En el modo de reloj, el reloj puede controlar la <xref:System.Windows.Controls.MediaElement> y los métodos de control interactivos tiene el control cuando el <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> es <xref:System.Windows.Controls.MediaState.Manual>. <xref:System.Windows.Controls.MediaElement> esta competición para el control se controla mediante la evaluación de las siguientes prioridades.  
   
-1.  <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>. Vigente cuando el elemento multimedia está descargado. Esto garantiza que todos los recursos multimedia se liberen de forma predeterminada, incluso cuando un <xref:System.Windows.Media.MediaClock> está asociado el <xref:System.Windows.Controls.MediaElement>.  
+1. <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>. Vigente cuando el elemento multimedia está descargado. Esto garantiza que todos los recursos multimedia se liberen de forma predeterminada, incluso cuando un <xref:System.Windows.Media.MediaClock> está asociado el <xref:System.Windows.Controls.MediaElement>.  
   
-2.  <xref:System.Windows.Media.MediaClock>. Vigente cuando el elemento multimedia tiene un <xref:System.Windows.Controls.MediaElement.Clock%2A>. Si se ha descargado, la media la <xref:System.Windows.Media.MediaClock> surtirá efecto siempre y cuando la <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> es <xref:System.Windows.Controls.MediaState.Manual>. Modo de reloj siempre invalida el comportamiento de carga el <xref:System.Windows.Controls.MediaElement>.  
+2. <xref:System.Windows.Media.MediaClock>. Vigente cuando el elemento multimedia tiene un <xref:System.Windows.Controls.MediaElement.Clock%2A>. Si se ha descargado, la media la <xref:System.Windows.Media.MediaClock> surtirá efecto siempre y cuando la <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> es <xref:System.Windows.Controls.MediaState.Manual>. Modo de reloj siempre invalida el comportamiento de carga el <xref:System.Windows.Controls.MediaElement>.  
   
-3.  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>. Vigente cuando el elemento multimedia está cargado.  
+3. <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>. Vigente cuando el elemento multimedia está cargado.  
   
-4.  Métodos de control interactivos. En lugar de cuando <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> es <xref:System.Windows.Controls.MediaState.Manual>. Los métodos de control disponibles son <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, <xref:System.Windows.Controls.MediaElement.Close%2A>, y <xref:System.Windows.Controls.MediaElement.Stop%2A>.  
+4. Métodos de control interactivos. En lugar de cuando <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> es <xref:System.Windows.Controls.MediaState.Manual>. Los métodos de control disponibles son <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, <xref:System.Windows.Controls.MediaElement.Close%2A>, y <xref:System.Windows.Controls.MediaElement.Stop%2A>.  
   
 ### <a name="displaying-a-mediaelement"></a>Visualización de MediaElement  
  Para mostrar un <xref:System.Windows.Controls.MediaElement> debe tener contenido que debe representarse y tendrá su <xref:System.Windows.FrameworkElement.ActualWidth%2A> y <xref:System.Windows.FrameworkElement.ActualHeight%2A> propiedades se establecen en cero hasta que se carga el contenido. Para contenido de solo audio, estas propiedades siempre son cero. Para obtener contenido de vídeo, una vez el <xref:System.Windows.Controls.MediaElement.MediaOpened> ha generado el evento el <xref:System.Windows.FrameworkElement.ActualWidth%2A> y <xref:System.Windows.FrameworkElement.ActualHeight%2A> notificará el tamaño del elemento multimedia cargado. Esto significa que hasta que se carga media, la <xref:System.Windows.Controls.MediaElement> no ocupará espacio físico en el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] a menos que el <xref:System.Windows.FrameworkElement.Width%2A> o <xref:System.Windows.FrameworkElement.Height%2A> se establecen las propiedades.  
@@ -99,9 +99,9 @@ Las características multimedia de [!INCLUDE[TLA#tla_winclient](../../../../incl
 ### <a name="controlling-mediaplayer"></a>Control de MediaPlayer  
  Dado que <xref:System.Windows.Media.MediaPlayer> es sin estado, hay solo dos formas de controlar la reproducción multimedia.  
   
-1.  Métodos de control interactivos. En su lugar en el modo independiente (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> propiedad).  
+1. Métodos de control interactivos. En su lugar en el modo independiente (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> propiedad).  
   
-2.  <xref:System.Windows.Media.MediaClock>. Vigente cuando el elemento multimedia tiene un <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
+2. <xref:System.Windows.Media.MediaClock>. Vigente cuando el elemento multimedia tiene un <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   
 ### <a name="displaying-a-mediaplayer"></a>Visualización de MediaPlayer  
  Técnicamente, un <xref:System.Windows.Media.MediaPlayer> no se puede mostrar porque no tiene representación física. Sin embargo, se puede usar para presentar elementos multimedia en un <xref:System.Windows.Media.Drawing> utilizando la <xref:System.Windows.Media.VideoDrawing> clase. En el ejemplo siguiente se muestra el uso de un <xref:System.Windows.Media.VideoDrawing> para mostrar los medios.  

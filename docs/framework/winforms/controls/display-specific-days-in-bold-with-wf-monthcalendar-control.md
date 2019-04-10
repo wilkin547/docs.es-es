@@ -11,12 +11,12 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: cf3ec21aa0272f60599f5659d78214120bcfcaf8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 27b19e47d108b9af43a6d8882264d62c726ffe56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073707"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343276"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Filtrar para mostrar días específicos en negrita con el control MonthCalendar de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control puede mostrar días en negrita, como fechas singulares o de forma repetida. Puede hacerlo para llamar la atención sobre las fechas especiales, tales como vacaciones y fines de semana.  
@@ -25,7 +25,7 @@ Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control pue
   
 ### <a name="to-make-a-date-appear-in-bold-type"></a>Para que una fecha aparecen en negrita  
   
-1.  Crear el <xref:System.DateTime> objetos.  
+1. Crear el <xref:System.DateTime> objetos.  
   
     ```vb  
     Dim myVacation1 As Date = New DateTime(2001, 6, 10)  
@@ -42,7 +42,7 @@ Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control pue
     DateTime myVacation2 = DateTime(2001, 6, 17);  
     ```  
   
-2.  Realizar una sola fecha en negrita mediante una llamada a la <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, o <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> método de la <xref:System.Windows.Forms.MonthCalendar> control.  
+2. Realizar una sola fecha en negrita mediante una llamada a la <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, o <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> método de la <xref:System.Windows.Forms.MonthCalendar> control.  
   
     ```vb  
     MonthCalendar1.AddBoldedDate(myVacation1)  
@@ -80,7 +80,7 @@ Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control pue
   
 ### <a name="to-make-a-date-appear-in-the-regular-font"></a>Para que una fecha aparezca en la fuente normal  
   
-1.  Para que una fecha en negrita solo aparecen en la fuente normal mediante una llamada a la <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, o <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> método.  
+1. Para que una fecha en negrita solo aparecen en la fuente normal mediante una llamada a la <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, o <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> método.  
   
     ```vb  
     MonthCalendar1.RemoveBoldedDate(myVacation1)  
@@ -113,7 +113,7 @@ Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control pue
     monthCalendar1->RemoveAllBoldedDates();  
     ```  
   
-2.  Actualizar la apariencia de la fuente mediante una llamada a la <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> método.  
+2. Actualizar la apariencia de la fuente mediante una llamada a la <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> método.  
   
     ```vb  
     MonthCalendar1.UpdateBoldedDates()  

@@ -6,23 +6,23 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: c4ff7c8e616c9126eae11a23e001c219dcbc0907
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f59e00d80d28fc4bf24874d25b5c12643649c834
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819208"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342107"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Filtrar Determinar si dos objetos están relacionados (Visual Basic)
 Puede comparar dos objetos para determinar la relación, si hay alguno, entre las clases desde el que se crean. El <xref:System.Type.IsInstanceOfType%2A> método de la <xref:System.Type?displayProperty=nameWithType> clase devuelve `True` si hereda de la clase especificada de la clase actual, o si el tipo actual es una interfaz compatible con la clase especificada.  
   
 ### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Para determinar si un objeto hereda de otro objeto clase o interfaz  
   
-1.  En el objeto que piensa que podría ser del tipo base, invoque el <xref:System.Object.GetType%2A> método.  
+1. En el objeto que piensa que podría ser del tipo base, invoque el <xref:System.Object.GetType%2A> método.  
   
-2.  En el <xref:System.Type?displayProperty=nameWithType> objeto devuelto por <xref:System.Object.GetType%2A>, invocar el <xref:System.Type.IsInstanceOfType%2A> método.  
+2. En el <xref:System.Type?displayProperty=nameWithType> objeto devuelto por <xref:System.Object.GetType%2A>, invocar el <xref:System.Type.IsInstanceOfType%2A> método.  
   
-3.  En la lista de argumentos para <xref:System.Type.IsInstanceOfType%2A>, especifique el objeto que piensa que podría ser del tipo derivado.  
+3. En la lista de argumentos para <xref:System.Type.IsInstanceOfType%2A>, especifique el objeto que piensa que podría ser del tipo derivado.  
   
      <xref:System.Type.IsInstanceOfType%2A> Devuelve `True` si su tipo de argumento que se hereda de la <xref:System.Type?displayProperty=nameWithType> tipo de objeto.  
   
@@ -52,7 +52,7 @@ End Class
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
-- [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Valores de las variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Cómo: Determinar si dos objetos son idénticos](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [Filtrar para determinar si dos objetos son idénticos](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

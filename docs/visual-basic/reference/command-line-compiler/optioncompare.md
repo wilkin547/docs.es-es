@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: 0c23a74f91cd6666a0c4bef5ea67c58430c511b8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b88cba4d16c5a770a72b47868d11b16cbba6cae8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819422"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340443"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 Especifica la forma en que se realizan las comparaciones de cadenas.  
@@ -38,11 +38,11 @@ Especifica la forma en que se realizan las comparaciones de cadenas.
   
 ### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>Para establecer - optioncompare en el IDE de Visual Studio  
   
-1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.   
+1. Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.   
   
-2.  Haga clic en la pestaña **Compilar**.  
+2. Haga clic en la pestaña **Compilar**.  
   
-3.  Modifique el valor en el **Option Compare** cuadro.  
+3. Modifique el valor en el **Option Compare** cuadro.  
   
 ### <a name="to-set--optioncompare-programmatically"></a>Para establecer mediante programación - optioncompare  
   
@@ -62,5 +62,5 @@ vbc -optioncompare:binary projFile.vb
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Compare (instrucción)](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Option Compare (Instrucción)](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Valores predeterminados de Visual Basic, Proyectos, Opciones (Cuadro de diálogo)](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

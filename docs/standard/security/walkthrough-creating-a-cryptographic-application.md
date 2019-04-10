@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964720"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341769"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Tutorial: Crear una aplicación criptográfica
 En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de código están diseñados para una aplicación de Windows Forms. Esta aplicación no muestra escenarios del mundo real, como el uso de tarjetas inteligentes. En su lugar, muestra los aspectos básicos del cifrado y el descifrado.  
@@ -53,7 +53,7 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
 ## <a name="creating-a-windows-forms-application"></a>Crear una aplicación de Windows Forms  
  La mayoría de los ejemplos de código de este tutorial están diseñados para actuar como controladores de eventos de los controles de botón. En la tabla siguiente se enumeran los controles necesarios para que la aplicación de ejemplo y los nombres necesarios coincidan con los ejemplos de código.  
   
-|Control|nombre|Propiedad de texto (según sea necesario)|  
+|Control|Name|Propiedad de texto (según sea necesario)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Cifrar archivo|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Descifrar archivo|  
@@ -88,15 +88,15 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
   
  El método `EncryptFile` hace lo siguiente:  
   
-1.  Crea un algoritmo simétrico <xref:System.Security.Cryptography.RijndaelManaged> para cifrar el contenido.  
+1. Crea un algoritmo simétrico <xref:System.Security.Cryptography.RijndaelManaged> para cifrar el contenido.  
   
-2.  Crea un objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider> para cifrar la clave <xref:System.Security.Cryptography.RijndaelManaged>.  
+2. Crea un objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider> para cifrar la clave <xref:System.Security.Cryptography.RijndaelManaged>.  
   
-3.  Usa un objeto <xref:System.Security.Cryptography.CryptoStream> para leer y cifrar el <xref:System.IO.FileStream> del archivo de código fuente, en bloques de bytes, en un objeto <xref:System.IO.FileStream> de destino para el archivo cifrado.  
+3. Usa un objeto <xref:System.Security.Cryptography.CryptoStream> para leer y cifrar el <xref:System.IO.FileStream> del archivo de código fuente, en bloques de bytes, en un objeto <xref:System.IO.FileStream> de destino para el archivo cifrado.  
   
-4.  Determina la longitud de la clave cifrada y del IV y crea matrices de bytes de sus valores de longitud.  
+4. Determina la longitud de la clave cifrada y del IV y crea matrices de bytes de sus valores de longitud.  
   
-5.  Escribe la clave, el IV y sus valores de longitud en el paquete cifrado.  
+5. Escribe la clave, el IV y sus valores de longitud en el paquete cifrado.  
   
  El paquete de cifrado usa el siguiente formato:  
   
@@ -127,15 +127,15 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
   
  El método `Decrypt` hace lo siguiente:  
   
-1.  Crea un algoritmo simétrico <xref:System.Security.Cryptography.RijndaelManaged> para descifrar el contenido.  
+1. Crea un algoritmo simétrico <xref:System.Security.Cryptography.RijndaelManaged> para descifrar el contenido.  
   
-2.  Lee los primeros ocho bytes del <xref:System.IO.FileStream> del paquete de cifrado en matrices de bytes para obtener la longitud de la clave cifrada y del IV.  
+2. Lee los primeros ocho bytes del <xref:System.IO.FileStream> del paquete de cifrado en matrices de bytes para obtener la longitud de la clave cifrada y del IV.  
   
-3.  Extrae la clave y el IV del paquete de cifrado en matrices de bytes.  
+3. Extrae la clave y el IV del paquete de cifrado en matrices de bytes.  
   
-4.  Crea un objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider> para descifrar la clave <xref:System.Security.Cryptography.RijndaelManaged>.  
+4. Crea un objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider> para descifrar la clave <xref:System.Security.Cryptography.RijndaelManaged>.  
   
-5.  Usa un objeto <xref:System.Security.Cryptography.CryptoStream> para leer y descifrar la sección de texto cifrado del paquete de cifrado <xref:System.IO.FileStream>, en bloques de bytes, en el objeto <xref:System.IO.FileStream> del archivo descifrado. Al finalizar, se habrá completado el descifrado.  
+5. Usa un objeto <xref:System.Security.Cryptography.CryptoStream> para leer y descifrar la sección de texto cifrado del paquete de cifrado <xref:System.IO.FileStream>, en bloques de bytes, en el objeto <xref:System.IO.FileStream> del archivo descifrado. Al finalizar, se habrá completado el descifrado.  
   
  Agregue el siguiente código como controlador de eventos `Click` del botón `Decrypt File`.  
   
@@ -182,34 +182,34 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>Para crear claves, cifrar y descifrar  
   
-1.  Haga clic en el botón `Create Keys`. La etiqueta muestra el nombre de la clave e indica que se trata de un par de claves completo.  
+1. Haga clic en el botón `Create Keys`. La etiqueta muestra el nombre de la clave e indica que se trata de un par de claves completo.  
   
-2.  Haga clic en el botón `Export Public Key`. Tenga en cuenta que al exportar los parámetros de la clave pública no se cambia la clave actual.  
+2. Haga clic en el botón `Export Public Key`. Tenga en cuenta que al exportar los parámetros de la clave pública no se cambia la clave actual.  
   
-3.  Haga clic en el botón `Encrypt File` y seleccione un archivo.  
+3. Haga clic en el botón `Encrypt File` y seleccione un archivo.  
   
-4.  Haga clic en el botón `Decrypt File` y seleccione el archivo que acaba de cifrar.  
+4. Haga clic en el botón `Decrypt File` y seleccione el archivo que acaba de cifrar.  
   
-5.  Examine el archivo que acaba de descifrar.  
+5. Examine el archivo que acaba de descifrar.  
   
-6.  Cierre la aplicación y reiníciela para intentar recuperar los contenedores de claves persistentes en el siguiente escenario.  
+6. Cierre la aplicación y reiníciela para intentar recuperar los contenedores de claves persistentes en el siguiente escenario.  
   
 #### <a name="to-encrypt-using-the-public-key"></a>Para cifrar con la clave pública  
   
-1.  Haga clic en el botón `Import Public Key`. La etiqueta muestra el nombre de la clave e indica que solo es pública.  
+1. Haga clic en el botón `Import Public Key`. La etiqueta muestra el nombre de la clave e indica que solo es pública.  
   
-2.  Haga clic en el botón `Encrypt File` y seleccione un archivo.  
+2. Haga clic en el botón `Encrypt File` y seleccione un archivo.  
   
-3.  Haga clic en el botón `Decrypt File` y seleccione el archivo que acaba de cifrar. Esto generará un error porque debe disponer de la clave privada para efectuar el descifrado.  
+3. Haga clic en el botón `Decrypt File` y seleccione el archivo que acaba de cifrar. Esto generará un error porque debe disponer de la clave privada para efectuar el descifrado.  
   
  En este escenario se muestra una situación en la que solo se dispone de la clave pública para cifrar un archivo para otra persona. Normalmente, esa persona debe proporcionarle únicamente la clave pública y conservar la clave privada para el descifrado.  
   
 #### <a name="to-decrypt-using-the-private-key"></a>Para descifrar con la clave privada  
   
-1.  Haga clic en el botón `Get Private Key`. La etiqueta muestra el nombre de la clave e indica si se trata del par de claves completo.  
+1. Haga clic en el botón `Get Private Key`. La etiqueta muestra el nombre de la clave e indica si se trata del par de claves completo.  
   
-2.  Haga clic en el botón `Decrypt File` y seleccione el archivo que acaba de cifrar. Esta acción se llevará a cabo correctamente porque dispone del par de claves completo para efectuar el descifrado.  
+2. Haga clic en el botón `Decrypt File` y seleccione el archivo que acaba de cifrar. Esta acción se llevará a cabo correctamente porque dispone del par de claves completo para efectuar el descifrado.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [servicios criptográficos](../../../docs/standard/security/cryptographic-services.md)

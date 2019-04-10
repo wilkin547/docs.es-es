@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: a81aa6ac0716b94625c0ce7868730d55d062e3e4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814645"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343017"
 ---
 # <a name="comments-in-code-visual-basic"></a>Comentarios en el código (Visual Basic)
 Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Este símbolo indica al compilador de Visual Basic para pasar por alto el texto que aparece a continuación o *comentario*. Los comentarios son notas cortas explicativas que se agregan al código para aportar mayor información a las personas que lo lean.  
@@ -54,7 +54,7 @@ Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Est
   
 -   Después de la secuencia de continuación de línea no puede escribirse un comentario en la misma línea.  
   
- Puede agregar o quitar símbolos de comentario de un bloque de código seleccionando una o varias líneas de código y eligiendo la **comentario** (![VisualBasicWinAppCodeEditorCommentButton](../../../visual-basic/programming-guide/program-structure/media/vacommentbutton.gif "vaCommentButton ")) y **sin comentarios** (![VisualStudioWinAppProjectUncommentButton](../../../visual-basic/programming-guide/program-structure/media/vauncommentbutton.gif "vaUncommentButton")) los botones de la **editar**  barra de herramientas.  
+ Puede agregar o quitar símbolos de comentario de un bloque de código seleccionando una o varias líneas de código y eligiendo la **comentario** (![botón el comentario de Visual Basic en Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) y **sin comentarios**  (![Botón la quite de Visual Basic en Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) los botones de la **editar** barra de herramientas.  
   
 > [!NOTE]
 >  También puede agregar comentarios al código poniendo la palabra clave `REM` antes del texto. Sin embargo, el `'` símbolo y el **comentario**/**sin comentarios** botones son más fáciles de utilizar y requieren menos espacio y memoria.  
@@ -62,7 +62,7 @@ Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Est
 ## <a name="see-also"></a>Vea también
 
 - [Instintos básicos – documentar el código con comentarios XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
-- [Cómo: Crear documentación XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Filtrar para crear documentación XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)
 - [Convenciones de código y estructura de programas](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [REM (instrucción)](../../../visual-basic/language-reference/statements/rem-statement.md)
+- [REM (Instrucción)](../../../visual-basic/language-reference/statements/rem-statement.md)

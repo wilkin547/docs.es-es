@@ -2,12 +2,12 @@
 title: Participantes de seguimiento
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138832"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340183"
 ---
 # <a name="tracking-participants"></a>Participantes de seguimiento
 Los participantes de seguimiento son puntos de extensibilidad que permiten a un desarrollador de flujo de trabajo tener acceso a objetos <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> y procesarlos. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] incluye a un participante de seguimiento estándar que escribe registros de seguimiento como eventos de seguimiento de eventos para Windows (ETW). Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado.  
@@ -81,13 +81,13 @@ Los participantes de seguimiento son puntos de extensibilidad que permiten a un 
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>Para habilitar la visualización de los registros de seguimiento en el visor de eventos  
   
-1.  Inicie el visor de eventos (EVENTVWR.EXE)  
+1. Inicie el visor de eventos (EVENTVWR.EXE)  
   
-2.  Seleccione **Visor de eventos, aplicaciones y servicios, Microsoft, Windows, servidor de aplicaciones-aplicaciones**.  
+2. Seleccione **Visor de eventos, aplicaciones y servicios, Microsoft, Windows, servidor de aplicaciones-aplicaciones**.  
   
-3.  Haga clic en y asegúrese de que **vista, mostrar registros analíticos y depuración** está seleccionada. Si no, seleccione la opción de manera que la marca de verificación aparezca junto a ella. Esto muestra la **analítico**, **Perf**, y **depurar** registros.  
+3. Haga clic en y asegúrese de que **vista, mostrar registros analíticos y depuración** está seleccionada. Si no, seleccione la opción de manera que la marca de verificación aparezca junto a ella. Esto muestra la **analítico**, **Perf**, y **depurar** registros.  
   
-4.  Haga clic en el **analítico** inicie sesión y, a continuación, seleccione **Habilitar registro**. El registro existirá en el archivo %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl.  
+4. Haga clic en el **analítico** inicie sesión y, a continuación, seleccione **Habilitar registro**. El registro existirá en el archivo %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl.  
   
 ## <a name="custom-tracking-participant"></a>Participante de seguimiento personalizado  
  La API de participante de seguimiento permite la ampliación del tiempo de ejecución de seguimiento mediante un participante de seguimiento proporcionado por el usuario que puede incluir una lógica personalizada para controlar los registros de seguimiento emitidos por el tiempo de ejecución del flujo de trabajo. Para escribir un participante de seguimiento personalizado, el desarrollador de software debe implementar el método `Track` en la clase <xref:System.Activities.Tracking.TrackingParticipant>. Se llama a este método cuando el tiempo de ejecución emite un registro de seguimiento.  

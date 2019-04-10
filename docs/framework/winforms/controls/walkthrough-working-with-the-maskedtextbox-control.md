@@ -11,12 +11,12 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-ms.openlocfilehash: ca505b062be8c60c1dd9b08fead4855eb1eb4cd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff9a0edb44a95f5853edf711e0a1559e3b2e3b15
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103849"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342475"
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>Tutorial: Trabajar con el control MaskedTextBox
 Las tareas ilustradas en este tutorial incluyen:  
@@ -31,15 +31,15 @@ Las tareas ilustradas en este tutorial incluyen:
   
 #### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>Para agregar un control MaskedTextBox al formulario  
   
-1.  Abra el formulario en el que desea colocar el <xref:System.Windows.Forms.MaskedTextBox> control.  
+1. Abra el formulario en el que desea colocar el <xref:System.Windows.Forms.MaskedTextBox> control.  
   
-2.  Arrastre un <xref:System.Windows.Forms.MaskedTextBox> controlar desde la **cuadro de herramientas** al formulario.  
+2. Arrastre un <xref:System.Windows.Forms.MaskedTextBox> controlar desde la **cuadro de herramientas** al formulario.  
   
-3.  Haga clic en el control y elija **propiedades**. En el **propiedades** ventana, seleccione el **máscara** propiedad y haga clic en el **...**  () botón de puntos suspensivos junto al nombre de propiedad.  
+3. Haga clic en el control y elija **propiedades**. En el **propiedades** ventana, seleccione el **máscara** propiedad y haga clic en el **...**  () botón de puntos suspensivos junto al nombre de propiedad.  
   
-4.  En el **máscara de entrada** cuadro de diálogo, seleccione el **fecha corta** enmascarar y haga clic en **Aceptar**.  
+4. En el **máscara de entrada** cuadro de diálogo, seleccione el **fecha corta** enmascarar y haga clic en **Aceptar**.  
   
-5.  En el **propiedades** ventana conjunto el <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> propiedad `true`. Esta propiedad hace que un bip breve sonido cada vez que el usuario trata de un carácter que infringe la definición de la máscara de entrada.  
+5. En el **propiedades** ventana conjunto el <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> propiedad `true`. Esta propiedad hace que un bip breve sonido cada vez que el usuario trata de un carácter que infringe la definición de la máscara de entrada.  
   
  Para obtener un resumen de los caracteres compatibles con la propiedad de máscara, consulte la sección Comentarios de la <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propiedad.  
   
@@ -47,9 +47,9 @@ Las tareas ilustradas en este tutorial incluyen:
   
 #### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>Agregar un globo de sugerencias para la entrada de máscara rechazadas  
   
-1.  Vuelva a la **cuadro de herramientas** y agregue un <xref:System.Windows.Forms.ToolTip> al formulario.  
+1. Vuelva a la **cuadro de herramientas** y agregue un <xref:System.Windows.Forms.ToolTip> al formulario.  
   
-2.  Crear un controlador de eventos para el <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> eventos que provoca la <xref:System.Windows.Forms.ToolTip> cuando se produce un error de entrada. El globo de sugerencias permanece visible durante cinco segundos, o hasta que el usuario hace clic en él.  
+2. Crear un controlador de eventos para el <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> eventos que provoca la <xref:System.Windows.Forms.ToolTip> cuando se produce un error de entrada. El globo de sugerencias permanece visible durante cinco segundos, o hasta que el usuario hace clic en él.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -82,7 +82,7 @@ Las tareas ilustradas en este tutorial incluyen:
   
 #### <a name="add-a-balloon-tip-for-invalid-data-types"></a>Agregar un globo de sugerencias para los tipos de datos no válidos  
   
-1.  En el formulario <xref:System.Windows.Forms.Form.Load> controlador de eventos, asigne un <xref:System.Type> objeto que representa el <xref:System.DateTime> escriba a la <xref:System.Windows.Forms.MaskedTextBox> del control <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> propiedad:  
+1. En el formulario <xref:System.Windows.Forms.Form.Load> controlador de eventos, asigne un <xref:System.Type> objeto que representa el <xref:System.DateTime> escriba a la <xref:System.Windows.Forms.MaskedTextBox> del control <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> propiedad:  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  
@@ -100,7 +100,7 @@ Las tareas ilustradas en este tutorial incluyen:
     End Sub  
     ```  
   
-2.  Agregue un controlador de eventos para el evento <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>:  
+2. Agregue un controlador de eventos para el evento <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>:  
   
     ```csharp  
     public void maskedTextBox1_TypeValidationCompleted(object sender, TypeValidationEventArgs e)  

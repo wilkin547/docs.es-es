@@ -13,19 +13,19 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: 4cb9b351b5ed1ab9cd05be0763d967000791fb46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ef579923ac2b9ea9905a60000d93f6bfc90ed5b8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140652"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342679"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Filtrar para establecer sangrías, sangrías francesas y párrafos con viñetas con el control RichTextBox de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control tiene numerosas opciones para dar formato al texto que muestra. Puede dar formato a párrafos seleccionados como listas con viñetas estableciendo el <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> propiedad. También puede usar el <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, y <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propiedades para establecer la sangría de párrafos relativa a la izquierda y derecha bordes del control y el borde izquierdo de otras líneas de texto.  
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Para aplicar formato a un párrafo como una lista con viñetas  
   
-1.  Establezca la propiedad <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> en `true`.  
+1. Establezca la propiedad <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> en `true`.  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
@@ -41,11 +41,11 @@ Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control tiene
   
 ### <a name="to-indent-a-paragraph"></a>Para aplicar sangría a un párrafo  
   
-1.  Establecer el <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> propiedad en un entero que representa la distancia en píxeles entre el borde izquierdo del control y el borde izquierdo del texto.  
+1. Establecer el <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> propiedad en un entero que representa la distancia en píxeles entre el borde izquierdo del control y el borde izquierdo del texto.  
   
-2.  Establecer el <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propiedad en un entero que representa la distancia en píxeles entre el borde izquierdo de la primera línea del texto del párrafo y el borde izquierdo de las líneas siguientes del mismo párrafo. El valor de la <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propiedad solo se aplica a las líneas de un párrafo encapsuladas bajo la primera línea.  
+2. Establecer el <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propiedad en un entero que representa la distancia en píxeles entre el borde izquierdo de la primera línea del texto del párrafo y el borde izquierdo de las líneas siguientes del mismo párrafo. El valor de la <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propiedad solo se aplica a las líneas de un párrafo encapsuladas bajo la primera línea.  
   
-3.  Establecer el <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> propiedad en un entero que representa la distancia en píxeles entre el borde derecho del control y el borde derecho del texto.  
+3. Establecer el <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> propiedad en un entero que representa la distancia en píxeles entre el borde derecho del control y el borde derecho del texto.  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  

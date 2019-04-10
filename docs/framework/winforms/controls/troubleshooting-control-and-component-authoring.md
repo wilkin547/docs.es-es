@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 988121bce1fd63c9560fb77fea6dedddd318c4ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168069"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343420"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Solución de problemas relacionados con la creación de controles y componentes
 En este tema se enumeran los siguientes problemas comunes que surgen cuando se desarrollan componentes y controles. Para obtener más información, vea [Programar con componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -38,9 +38,9 @@ En este tema se enumeran los siguientes problemas comunes que surgen cuando se d
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>Para agregar un control al cuadro de herramientas  
   
-1.  Haga clic con el botón derecho en el **cuadro de herramientas** y, en el menú contextual, seleccione **Elegir elementos**.  
+1. Haga clic con el botón derecho en el **cuadro de herramientas** y, en el menú contextual, seleccione **Elegir elementos**.  
   
-2.  En el cuadro de diálogo **Elegir elementos de cuadro de herramientas**, agregue el componente:  
+2. En el cuadro de diálogo **Elegir elementos de cuadro de herramientas**, agregue el componente:  
   
     -   Si desea agregar un control o un componente de .NET Framework, haga clic en la pestaña **Componentes de .NET Framework**.  
   
@@ -48,11 +48,11 @@ En este tema se enumeran los siguientes problemas comunes que surgen cuando se d
   
     -   Si desea agregar un componente COM o un control ActiveX, haga clic en la pestaña **Componentes COM**.  
   
-3.  Si el control aparece en el cuadro de diálogo, confirme que está seleccionado y, a continuación, haga clic en **Aceptar**.  
+3. Si el control aparece en el cuadro de diálogo, confirme que está seleccionado y, a continuación, haga clic en **Aceptar**.  
   
      El control se agrega al **cuadro de herramientas**.  
   
-4.  Si el control no aparece en el cuadro de diálogo, haga lo siguiente:  
+4. Si el control no aparece en el cuadro de diálogo, haga lo siguiente:  
   
     1.  Haga clic en el botón **Examinar**.  
   
@@ -73,15 +73,15 @@ En este tema se enumeran los siguientes problemas comunes que surgen cuando se d
   
 #### <a name="to-debug-a-control-or-component"></a>Para depurar un control o componente  
   
-1.  Para compilar la solución, en el menú **Compilar**, haga clic en **Compilar solución**.  
+1. Para compilar la solución, en el menú **Compilar**, haga clic en **Compilar solución**.  
   
-2.  En el menú **Archivo**, elija **Agregar** y, luego, elija **Nuevo proyecto** para agregar un proyecto de prueba a la aplicación.  
+2. En el menú **Archivo**, elija **Agregar** y, luego, elija **Nuevo proyecto** para agregar un proyecto de prueba a la aplicación.  
   
-3.  En el cuadro de diálogo **Agregar nuevo proyecto**, elija **Aplicación de Windows** como tipo de proyecto.  
+3. En el cuadro de diálogo **Agregar nuevo proyecto**, elija **Aplicación de Windows** como tipo de proyecto.  
   
-4.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo **Referencias** del nuevo proyecto. En el menú contextual, haga clic en **Agregar referencia** para agregar una referencia al proyecto que contiene el control o componente.  
+4. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo **Referencias** del nuevo proyecto. En el menú contextual, haga clic en **Agregar referencia** para agregar una referencia al proyecto que contiene el control o componente.  
   
-5.  Crear una instancia de un control o componente en el proyecto de prueba. Si el componente está en el **cuadro de herramientas**, puede arrastrarlo a la superficie del diseñador o puede crear la instancia mediante programación, tal y como se muestra en el ejemplo de código siguiente.  
+5. Crear una instancia de un control o componente en el proyecto de prueba. Si el componente está en el **cuadro de herramientas**, puede arrastrarlo a la superficie del diseñador o puede crear la instancia mediante programación, tal y como se muestra en el ejemplo de código siguiente.  
   
     ```vb  
     Dim Component1 As New MyNeatComponent()  
