@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: dde627edfeb1d4473c9d2e01b9ff83c580a0f122
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319604"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Filtrar Combinar datos con LINQ usando cláusulas Join (Visual Basic)
 Visual Basic proporciona el `Join` y `Group Join` cláusulas que le permite combinar el contenido de varias colecciones basadas en valores comunes entre las colecciones de consulta. Estos valores se conocen como *clave* valores. Reconocerán los desarrolladores familiarizados con conceptos de base de datos relacional el `Join` cláusula como INNER JOIN y `Group Join` cláusula as, de hecho, LEFT OUTER JOIN.  
@@ -25,9 +25,9 @@ Visual Basic proporciona el `Join` y `Group Join` cláusulas que le permite comb
   
 #### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>Para crear un proyecto que contiene los tipos y datos de ejemplo  
   
-1.  Para ejecutar los ejemplos de este tema, abra Visual Studio y agregue un nuevo proyecto de aplicación de consola de Visual Basic. Haga doble clic en el archivo Module1.vb creado por Visual Basic.  
+1. Para ejecutar los ejemplos de este tema, abra Visual Studio y agregue un nuevo proyecto de aplicación de consola de Visual Basic. Haga doble clic en el archivo Module1.vb creado por Visual Basic.  
   
-2.  Los ejemplos de este tema usan el `Person` y `Pet` tipos y los datos de ejemplo de código siguiente. Copie este código en el valor predeterminado `Module1` módulo creado por Visual Basic.  
+2. Los ejemplos de este tema usan el `Person` y `Pet` tipos y los datos de ejemplo de código siguiente. Copie este código en el valor predeterminado `Module1` módulo creado por Visual Basic.  
   
      [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
@@ -43,7 +43,7 @@ Visual Basic proporciona el `Join` y `Group Join` cláusulas que le permite comb
   
 #### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>Para realizar una combinación interna mediante la cláusula de combinación  
   
-1.  Agregue el código siguiente a la `Module1` módulo en el proyecto para ver ejemplos de ambos una implícita y explícita combinación interna.  
+1. Agregue el código siguiente a la `Module1` módulo en el proyecto para ver ejemplos de ambos una implícita y explícita combinación interna.  
   
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
@@ -56,7 +56,7 @@ Visual Basic proporciona el `Join` y `Group Join` cláusulas que le permite comb
   
 #### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Para llevar a cabo Left Outer Join con la cláusula Group Join  
   
-1.  Agregue el código siguiente a la `Module1` módulo en el proyecto para ver ejemplos de una combinación externa izquierda agrupada y una combinación externa izquierda sin agrupar.  
+1. Agregue el código siguiente a la `Module1` módulo en el proyecto para ver ejemplos de una combinación externa izquierda agrupada y una combinación externa izquierda sin agrupar.  
   
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
@@ -65,7 +65,7 @@ Visual Basic proporciona el `Join` y `Group Join` cláusulas que le permite comb
   
 #### <a name="to-perform-a-join-by-using-a-composite-key"></a>Para realizar una combinación con una clave compuesta  
   
-1.  Agregue el código siguiente a la `Module1` módulo en el proyecto para ver ejemplos de una combinación que utiliza una clave compuesta.  
+1. Agregue el código siguiente a la `Module1` módulo en el proyecto para ver ejemplos de una combinación que utiliza una clave compuesta.  
   
      [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
@@ -73,19 +73,19 @@ Visual Basic proporciona el `Join` y `Group Join` cláusulas que le permite comb
   
 #### <a name="to-add-code-to-run-the-examples"></a>Para agregar código para ejecutar los ejemplos  
   
-1.  Reemplace el `Sub Main` en el `Module1` módulo en el proyecto con el código siguiente para ejecutar los ejemplos de este tema.  
+1. Reemplace el `Sub Main` en el `Module1` módulo en el proyecto con el código siguiente para ejecutar los ejemplos de este tema.  
   
      [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
-2.  Presione F5 para ejecutar los ejemplos.  
+2. Presione F5 para ejecutar los ejemplos.  
   
 ## <a name="see-also"></a>Vea también
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Join (cláusula)](../../../../visual-basic/language-reference/queries/join-clause.md)
-- [Group Join (cláusula)](../../../../visual-basic/language-reference/queries/group-join-clause.md)
-- [From (cláusula)](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [Where (cláusula)](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [Join (Cláusula)](../../../../visual-basic/language-reference/queries/join-clause.md)
+- [Group Join (Cláusula)](../../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [From (Cláusula)](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where (Cláusula)](../../../../visual-basic/language-reference/queries/where-clause.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)
 - [Transformaciones de datos con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

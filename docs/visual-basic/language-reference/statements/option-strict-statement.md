@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355134"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310192"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Restringe las conversiones de tipos de datos implícitos a conversiones de ampliación únicamente, no permite el enlace en tiempo de ejecución y no permite tipos implícitos que da como resultado un `Object` tipo.  
@@ -29,7 +29,7 @@ Option Strict { On | Off }
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`On`|Opcional. Permite `Option Strict` comprobación.|  
 |`Off`|Opcional. Deshabilita `Option Strict` comprobación.|  
@@ -65,15 +65,15 @@ Option Strict { On | Off }
   
  Las conversiones que pueden causar errores incluyen las conversiones implícitas que se producen en las expresiones. Para obtener más información, vea los temas siguientes:  
   
--   [Operador +](../../../visual-basic/language-reference/operators/addition-operator.md)  
+-   [+ (Operador)](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
 -   [Operador +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\ (Operador) (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+-   [\ (Operador, Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ = (Operador) (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+-   [/= (Operador, Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [Char (tipo de datos)](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+-   [Char (Tipo de datos)](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  Al concatenar cadenas mediante el uso de la [& operador](../../../visual-basic/language-reference/operators/concatenation-operator.md), todas las conversiones a las cadenas se consideran de ampliación. Para que estas conversiones no genere un error de conversión de restricción implícitas, incluso si `Option Strict` está activado.  
   
@@ -109,18 +109,18 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>Cómo establecer Option Strict en el IDE  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  En el **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**.  
+1. En el **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**.  
   
-2.  En el **compilar** pestaña, establezca el valor de la **Option Strict** cuadro.  
+2. En el **compilar** pestaña, establezca el valor de la **Option Strict** cuadro.  
   
 ### <a name="conditions"></a> Para establecer configuraciones de advertencias en el IDE  
  Cuando se usa el [página compilación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) en lugar de un `Option Strict` instrucción, tenga más control sobre las condiciones que generan errores. El **configuraciones de advertencias** sección de la **página compilación** tiene una configuración que se corresponde con las tres condiciones que producen un error en tiempo de compilación cuando `Option Strict` está activado. Estas opciones son las siguientes:  
   
 -   **Conversión implícita**  
   
--   **Enlace en tiempo de ejecución; la llamada podría generar un error en tiempo de ejecución**  
+-   **Enlace en tiempo de ejecución; la llamada podría dar error en tiempo de ejecución.**  
   
--   **Tipo implícito; se supone el objeto**  
+-   **Tipo implícito; se supone el objeto.**  
   
  Al establecer **Option Strict** en **On**, estos tres valores de configuración de advertencias se establecen en **Error**. Al establecer **Option Strict** en **Off**, las tres opciones se establecen en **None**.  
   
@@ -153,13 +153,13 @@ Option Strict { On | Off }
   
 ## <a name="see-also"></a>Vea también
 
-- [Conversiones de ampliación y de restricción](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Conversiones implícitas y explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Página Compilación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [Option Explicit (instrucción)](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Cómo: Obtener acceso a miembros de un objeto](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
-- [Expresiones incrustadas en XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [Option Explicit (Instrucción)](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Filtrar para obtener acceso a los miembros de un objeto](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [Expresiones insertadas en XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Conversión de delegado flexible](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Enlace en tiempo de ejecución en las soluciones de Office](/visualstudio/vsto/late-binding-in-office-solutions)
 - [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)

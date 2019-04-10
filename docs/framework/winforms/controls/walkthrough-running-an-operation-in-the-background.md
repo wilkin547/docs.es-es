@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: cb06aa6bfa960a493090b67c8baa4d7b3b46756a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149089"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308450"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Tutorial: Ejecutar una operación en segundo plano
 Si tiene una operación que tarda mucho tiempo en completarse y no desea causar retrasos en la interfaz de usuario, puede utilizar la clase <xref:System.ComponentModel.BackgroundWorker> para ejecutar la operación en otro subproceso.  
@@ -30,33 +30,33 @@ Si tiene una operación que tarda mucho tiempo en completarse y no desea causar 
   
 ### <a name="to-run-an-operation-in-the-background"></a>Para ejecutar una operación en segundo plano  
   
-1.  Con el formulario activo en el Diseñador de Windows Forms, arrastre dos <xref:System.Windows.Forms.Button> controla desde el **cuadro de herramientas** al formulario y, a continuación, establezca el `Name` y <xref:System.Windows.Forms.Control.Text%2A> las propiedades de los botones de acuerdo con la tabla siguiente.  
+1. Con el formulario activo en el Diseñador de Windows Forms, arrastre dos <xref:System.Windows.Forms.Button> controla desde el **cuadro de herramientas** al formulario y, a continuación, establezca el `Name` y <xref:System.Windows.Forms.Control.Text%2A> las propiedades de los botones de acuerdo con la tabla siguiente.  
   
     |Botón|Name|Texto|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**Iniciar**|  
     |`button2`|`cancelBtn`|**Cancelar**|  
   
-2.  Abra el **cuadro de herramientas**, haga clic en el **componentes** pestaña y, a continuación, arrastre el <xref:System.ComponentModel.BackgroundWorker> componente al formulario.  
+2. Abra el **cuadro de herramientas**, haga clic en el **componentes** pestaña y, a continuación, arrastre el <xref:System.ComponentModel.BackgroundWorker> componente al formulario.  
   
      El `backgroundWorker1` componente aparecerá en el **Bandeja de componentes**.  
   
-3.  En la ventana **Propiedades** , establezca la propiedad <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> en `true`.  
+3. En la ventana **Propiedades** , establezca la propiedad <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> en `true`.  
   
-4.  En el **propiedades** ventana, haga clic en el **eventos** botón y, a continuación, haga doble clic en el <xref:System.ComponentModel.BackgroundWorker.DoWork> y <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventos para crear controladores de eventos.  
+4. En el **propiedades** ventana, haga clic en el **eventos** botón y, a continuación, haga doble clic en el <xref:System.ComponentModel.BackgroundWorker.DoWork> y <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventos para crear controladores de eventos.  
   
-5.  Inserte el código que requieren mucho tiempo en el <xref:System.ComponentModel.BackgroundWorker.DoWork> controlador de eventos.  
+5. Inserte el código que requieren mucho tiempo en el <xref:System.ComponentModel.BackgroundWorker.DoWork> controlador de eventos.  
   
-6.  Extraer los parámetros requeridos por la operación desde el <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> propiedad de la <xref:System.ComponentModel.DoWorkEventArgs> parámetro.  
+6. Extraer los parámetros requeridos por la operación desde el <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> propiedad de la <xref:System.ComponentModel.DoWorkEventArgs> parámetro.  
   
-7.  Asignar el resultado del cálculo a la <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> propiedad de la <xref:System.ComponentModel.DoWorkEventArgs>.  
+7. Asignar el resultado del cálculo a la <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> propiedad de la <xref:System.ComponentModel.DoWorkEventArgs>.  
   
      Esta forma se estén disponibles para el <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> controlador de eventos.  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#2)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#2)]  
   
-8.  Inserte código para recuperar el resultado de la operación en el <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> controlador de eventos.  
+8. Inserte código para recuperar el resultado de la operación en el <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> controlador de eventos.  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#3)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#3)]  
@@ -90,7 +90,7 @@ Si tiene una operación que tarda mucho tiempo en completarse y no desea causar 
 > [!NOTE]
 >  Si presiona F5 para ejecutar la aplicación en el depurador, la excepción se produce en el `TimeConsumingOperation` método se detectará y mostrará el depurador. Al ejecutar la aplicación fuera del depurador, el <xref:System.ComponentModel.BackgroundWorker> controla la excepción y lo almacena en caché en el <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> propiedad de la <xref:System.ComponentModel.RunWorkerCompletedEventArgs>.  
   
-1.  Haga clic en el **iniciar** botón para ejecutar una operación asincrónica y, a continuación, haga clic en el **cancelar** botón para detener una operación asincrónica.  
+1. Haga clic en el **iniciar** botón para ejecutar una operación asincrónica y, a continuación, haga clic en el **cancelar** botón para detener una operación asincrónica.  
   
      El resultado de cada operación se muestra en un elemento <xref:System.Windows.Forms.MessageBox>.  
   

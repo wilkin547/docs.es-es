@@ -5,21 +5,21 @@ helpviewer_keywords:
 - application settings [Windows Forms], changing
 - application settings [Windows Forms], between application sessions
 ms.assetid: 1a85911f-97b2-476c-930b-83379edd890c
-ms.openlocfilehash: 03a10e95362b1d49e4929c07ab6193f53898d34f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 95e613cb280813cd75d887d3cf147d7c897bc2e6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142862"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318908"
 ---
 # <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a>Cómo cambiar el valor de una opción de configuración entre sesiones de aplicación
 En ocasiones, es posible que desea cambiar el valor de una configuración entre sesiones de aplicación después de compilar e implementada la aplicación. Por ejemplo, es posible que desee cambiar una cadena de conexión para que apunte a la ubicación de la base de datos correcta. Dado que las herramientas de tiempo de diseño no están disponibles después de compilar e implementada la aplicación, debe cambiar el valor de configuración manualmente en el archivo.  
   
 ### <a name="to-change-the-value-of-a-setting-between-application-sessions"></a>Para cambiar el valor de una configuración entre sesiones de aplicación  
   
-1.  Con Microsoft Notepad o algún otro editor XML o texto, abra el archivo .config asociado con la aplicación.  
+1. Con Microsoft Notepad o algún otro editor XML o texto, abra el archivo .config asociado con la aplicación.  
   
-2.  Busque la entrada para la configuración que desee cambiar. Debe ser similar al ejemplo presentado a continuación.  
+2. Busque la entrada para la configuración que desee cambiar. Debe ser similar al ejemplo presentado a continuación.  
   
     ```xml  
     <setting name="Setting1" serializeAs="String" >  
@@ -27,7 +27,7 @@ En ocasiones, es posible que desea cambiar el valor de una configuración entre 
     </setting>  
     ```  
   
-3.  Escriba un nuevo valor para la configuración y guarde el archivo.  
+3. Escriba un nuevo valor para la configuración y guarde el archivo.  
   
 ## <a name="see-also"></a>Vea también
 

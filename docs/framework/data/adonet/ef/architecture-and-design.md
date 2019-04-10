@@ -2,12 +2,12 @@
 title: Arquitectura y diseño
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096142"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307579"
 ---
 # <a name="architecture-and-design"></a>Arquitectura y diseño
 El módulo de generación de SQL en el [proveedor de ejemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) se implementa como un visitante en el árbol de expresión que representa el árbol de comandos. La generación se realiza en un paso único al árbol de expresión.  
@@ -252,13 +252,13 @@ private bool IsParentAJoin{get}
   
  La visita a estos nodos sigue este patrón:  
   
-1.  Visite la entrada relacional y obtenga la instrucción SqlSelectStatement resultante. La entrada a un nodo relacional puede ser:  
+1. Visite la entrada relacional y obtenga la instrucción SqlSelectStatement resultante. La entrada a un nodo relacional puede ser:  
   
     -   Un nodo relacional, incluida una extensión (una expresión DbScanExpression, por ejemplo). Al visitar este tipo de nodo, se devuelve una instrucción SqlSelectStatement.  
   
     -   Una expresión de operación set (UNION ALL, por ejemplo). El resultado tiene que incluirse entre corchetes y colocarse en la cláusula FROM de una nueva instrucción SqlSelectStatement.  
   
-2.  Compruebe si el nodo actual se puede agregar a la instrucción SqlSelectStatement generada por la entrada. Esto se describe en la sección titulada Agrupar expresiones en instrucciones SQL. En caso contrario,  
+2. Compruebe si el nodo actual se puede agregar a la instrucción SqlSelectStatement generada por la entrada. Esto se describe en la sección titulada Agrupar expresiones en instrucciones SQL. En caso contrario,  
   
     -   Extraiga el objeto SqlSelectStatement actual.  
   
@@ -266,13 +266,13 @@ private bool IsParentAJoin{get}
   
     -   Coloque el nuevo objeto en la parte superior de la pila.  
   
-3.  Redirija el enlace de expresión de entrada al símbolo correcto de la entrada. Esta información se conserva en el objeto SqlSelectStatement.  
+3. Redirija el enlace de expresión de entrada al símbolo correcto de la entrada. Esta información se conserva en el objeto SqlSelectStatement.  
   
-4.  Agregue un nuevo ámbito SymbolTable.  
+4. Agregue un nuevo ámbito SymbolTable.  
   
-5.  Visite la parte que no es de entrada de la expresión (por ejemplo, Projection y Predicado).  
+5. Visite la parte que no es de entrada de la expresión (por ejemplo, Projection y Predicado).  
   
-6.  Extraiga todos los objetos agregados a las pilas globales.  
+6. Extraiga todos los objetos agregados a las pilas globales.  
   
  DbSkipExpression no tiene un equivalente directo en SQL. Lógicamente, se traduce como:  
   
@@ -301,9 +301,9 @@ ORDER BY sk1, sk2, ...
   
  En segundo lugar, procese las entradas de una en una. Para cada entrada:  
   
-1.  Visite la entrada.  
+1. Visite la entrada.  
   
-2.  Posprocese el resultado de la visita a la entrada llamando a ProcessJoinInputResult, que se encarga de mantener la tabla de símbolos después de visitar un elemento secundario de una expresión de combinación y finalizar posiblemente la instrucción SqlSelectStatement generada por el elemento secundario. El resultado del elemento secundario puede ser:  
+2. Posprocese el resultado de la visita a la entrada llamando a ProcessJoinInputResult, que se encarga de mantener la tabla de símbolos después de visitar un elemento secundario de una expresión de combinación y finalizar posiblemente la instrucción SqlSelectStatement generada por el elemento secundario. El resultado del elemento secundario puede ser:  
   
     -   Un objeto SqlSelectStatement distinto del objeto al que se agregará el elemento principal. En este caso, puede que resulte necesario completarlo agregando columnas predeterminadas. Si la entrada fue un objeto Join, tendrá que crear un nuevo símbolo de combinación. De lo contrario, cree un símbolo normal.  
   

@@ -2,12 +2,12 @@
 title: Transferir
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145046"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311024"
 ---
 # <a name="transfer"></a>Transferir
 Este tema describe la transferencia en el modelo de seguimiento de actividad de Windows Communication Foundation (WCF).  
@@ -42,21 +42,21 @@ Este tema describe la transferencia en el modelo de seguimiento de actividad de 
 ## <a name="activity-transfer-sequence"></a>Secuencia de transferencia de actividad  
  Una secuencia de transferencia de actividad bien formada incluye los pasos siguientes.  
   
-1.  Comenzar una nueva actividad, que consiste en seleccionar un nuevo gAId.  
+1. Comenzar una nueva actividad, que consiste en seleccionar un nuevo gAId.  
   
-2.  Emitir un seguimiento de transferencia a ese nuevo gAId desde el id. de actividad actual  
+2. Emitir un seguimiento de transferencia a ese nuevo gAId desde el id. de actividad actual  
   
-3.  Establecer el nuevo id. en TLS  
+3. Establecer el nuevo id. en TLS  
   
-4.  Emitir un seguimiento de inicio para indicar el principio de la nueva actividad.  
+4. Emitir un seguimiento de inicio para indicar el principio de la nueva actividad.  
   
-5.  Volver a la actividad original consiste en lo siguiente:  
+5. Volver a la actividad original consiste en lo siguiente:  
   
-6.  Emitir un seguimiento de transferencia al gAId original  
+6. Emitir un seguimiento de transferencia al gAId original  
   
-7.  Emitir un seguimiento de detención para indicar el fin de la nueva actividad  
+7. Emitir un seguimiento de detención para indicar el fin de la nueva actividad  
   
-8.  Establecer TLS en el gAId anterior.  
+8. Establecer TLS en el gAId anterior.  
   
  En el ejemplo de código siguiente se muestra cómo utilizar este recurso. Este ejemplo supone que se realiza una llamada de bloqueo al transferir a la nueva actividad, e incluye seguimientos de suspensión/reanudación.  
   

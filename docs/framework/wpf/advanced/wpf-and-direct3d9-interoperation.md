@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199328"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307735"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Interoperabilidad entre WPF y Direct3D9
 Puede incluir contenido Direct3D9 en una aplicación de Windows Presentation Foundation (WPF). Este tema describe cómo crear contenido Direct3D9 para que interopere eficazmente con WPF.  
@@ -112,13 +112,13 @@ Puede incluir contenido Direct3D9 en una aplicación de Windows Presentation Fou
   
  Para evitar la disminución del rendimiento, escribir código específicamente para el caso de varios monitor. En la lista siguiente se muestra una forma de escribir código de varios monitor.  
   
-1.  Buscar un punto de la <xref:System.Windows.Interop.D3DImage> en el espacio de pantalla con la `Visual.ProjectToScreen` método.  
+1. Buscar un punto de la <xref:System.Windows.Interop.D3DImage> en el espacio de pantalla con la `Visual.ProjectToScreen` método.  
   
-2.  Use el `MonitorFromPoint` método GDI para buscar el monitor que muestra el punto.  
+2. Use el `MonitorFromPoint` método GDI para buscar el monitor que muestra el punto.  
   
-3.  Use el `IDirect3D9::GetAdapterMonitor` método para buscar qué adaptador de Direct3D9 el monitor se encuentra en.  
+3. Use el `IDirect3D9::GetAdapterMonitor` método para buscar qué adaptador de Direct3D9 el monitor se encuentra en.  
   
-4.  Si el adaptador no es el mismo que el adaptador con el búfer de reserva, cree un nuevo búfer de reserva en el nuevo monitor y asígnelo a la <xref:System.Windows.Interop.D3DImage> búfer de reserva.  
+4. Si el adaptador no es el mismo que el adaptador con el búfer de reserva, cree un nuevo búfer de reserva en el nuevo monitor y asígnelo a la <xref:System.Windows.Interop.D3DImage> búfer de reserva.  
   
 > [!NOTE]
 >  Si el <xref:System.Windows.Interop.D3DImage> sobrepasa los monitores, rendimiento será lentos, excepto en el caso de WDDM y `IDirect3D9Ex` en el mismo adaptador. No hay ninguna manera de mejorar el rendimiento en esta situación.  

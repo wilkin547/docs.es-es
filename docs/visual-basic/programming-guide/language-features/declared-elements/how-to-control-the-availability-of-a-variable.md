@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: fb7c04ac6c24648dfb2a8cfa5e01bf97c6b0b3be
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841698"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311531"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Filtrar Controlar la disponibilidad de una Variable (Visual Basic)
 Controlar la disponibilidad de una variable especificando su *nivel de acceso*. El nivel de acceso determina qué código tiene permiso para leer o escribir en la variable.  
@@ -31,25 +31,25 @@ Controlar la disponibilidad de una variable especificando su *nivel de acceso*. 
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>Para hacer que una variable sea accesible únicamente desde dentro de su módulo, clase o estructura  
   
-1.  Colocar el [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) para la variable dentro del módulo, clase o estructura, pero fuera de cualquier procedimiento.  
+1. Colocar el [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) para la variable dentro del módulo, clase o estructura, pero fuera de cualquier procedimiento.  
   
-2.  Incluir el [privada](../../../../visual-basic/language-reference/modifiers/private.md) palabra clave en el `Dim` instrucción.  
+2. Incluir el [privada](../../../../visual-basic/language-reference/modifiers/private.md) palabra clave en el `Dim` instrucción.  
   
      Puede leer o escribir en la variable desde cualquier lugar dentro del módulo, clase o estructura, pero no desde fuera de él.  
   
 #### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>Para que una variable sea accesible desde cualquier código que pueda verla  
   
-1.  Para una variable miembro, coloque el `Dim` instrucción para la variable dentro de un módulo, clase o estructura, pero fuera de cualquier procedimiento.  
+1. Para una variable miembro, coloque el `Dim` instrucción para la variable dentro de un módulo, clase o estructura, pero fuera de cualquier procedimiento.  
   
-2.  Incluir el [pública](../../../../visual-basic/language-reference/modifiers/public.md) palabra clave en el `Dim` instrucción.  
+2. Incluir el [pública](../../../../visual-basic/language-reference/modifiers/public.md) palabra clave en el `Dim` instrucción.  
   
      Puede leer o escribir en la variable desde cualquier código que interactúa con el ensamblado.  
   
  -o bien-  
   
-1.  Para una variable local, coloque el `Dim` instrucción para la variable dentro de un procedimiento.  
+1. Para una variable local, coloque el `Dim` instrucción para la variable dentro de un procedimiento.  
   
-2.  No incluya el `Public` palabra clave en el `Dim` instrucción.  
+2. No incluya el `Public` palabra clave en el `Dim` instrucción.  
   
      Puede leer o escribir en la variable desde cualquier lugar dentro del procedimiento, pero no desde fuera de él.  
   
@@ -58,17 +58,17 @@ Controlar la disponibilidad de una variable especificando su *nivel de acceso*. 
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>Para hacer que una variable sea accesible únicamente desde dentro de su clase y cualquiera de las clases derivadas  
   
-1.  Colocar el `Dim` instrucción para la variable dentro de una clase, pero fuera de cualquier procedimiento.  
+1. Colocar el `Dim` instrucción para la variable dentro de una clase, pero fuera de cualquier procedimiento.  
   
-2.  Incluir el [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) palabra clave en el `Dim` instrucción.  
+2. Incluir el [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) palabra clave en el `Dim` instrucción.  
   
      Puede leer o escribir en la variable desde cualquier lugar dentro de la clase, así como desde cualquier clase derivada de él, pero no desde fuera de cualquier clase en la cadena de derivación.  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>Para hacer que una variable sea accesible únicamente desde dentro del mismo ensamblado  
   
-1.  Colocar el `Dim` instrucción para la variable dentro de un módulo, clase o estructura, pero fuera de cualquier procedimiento.  
+1. Colocar el `Dim` instrucción para la variable dentro de un módulo, clase o estructura, pero fuera de cualquier procedimiento.  
   
-2.  Incluir el [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) palabra clave en el `Dim` instrucción.  
+2. Incluir el [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) palabra clave en el `Dim` instrucción.  
   
      Puede leer o escribir en la variable desde cualquier lugar dentro del módulo, clase o estructura, así como desde cualquier código en el mismo ensamblado, pero no desde fuera del ensamblado.  
   
@@ -89,8 +89,8 @@ Private numberForMeOnly As Integer
 ## <a name="see-also"></a>Vea también
 
 - [Niveles de acceso en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Dim (Instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Public](../../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [Protegido](../../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private](../../../../visual-basic/language-reference/modifiers/private.md)

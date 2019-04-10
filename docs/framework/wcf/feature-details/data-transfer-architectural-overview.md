@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127464"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315886"
 ---
 # <a name="data-transfer-architectural-overview"></a>Información general sobre la arquitectura de transferencia de datos
 Windows Communication Foundation (WCF) puede considerarse como una infraestructura de mensajería. Puede recibir mensajes, procesarlos y enviarlos al código de usuario para realizar acciones adicionales o puede construir mensajes a partir de los datos proporcionados por el código de usuario y entregarlos en un destino. Este tema, que está dirigido a desarrolladores avanzados, describe la arquitectura para el manejo de mensajes y los datos contenidos. Para obtener una vista más sencilla y orientada a tareas sobre cómo enviar y recibir datos, consulte [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -107,15 +107,15 @@ Windows Communication Foundation (WCF) puede considerarse como una infraestructu
   
  Para que esto sea posible, se debe definir una asignación entre la instancia `Message` completa y un conjunto de información XML. Este tipo de asignación, de hecho, existe: WCF utiliza la norma de SOAP para definir esta asignación. Cuando una instancia `Message` se escribe como un conjunto de información XML, el conjunto de información resultante es la envoltura SOAP válida que contiene el mensaje. Así, `WriteMessage` realizaría normalmente los siguientes pasos:  
   
-1.  Escribir la etiqueta de apertura del elemento de envoltura SOAP.  
+1. Escribir la etiqueta de apertura del elemento de envoltura SOAP.  
   
-2.  Escribir la etiqueta de apertura de elemento de encabezado SOAP, escribir todos los encabezados y cerrar el elemento de encabezado.  
+2. Escribir la etiqueta de apertura de elemento de encabezado SOAP, escribir todos los encabezados y cerrar el elemento de encabezado.  
   
-3.  Escribir la etiqueta de apertura del elemento de cuerpo SOAP.  
+3. Escribir la etiqueta de apertura del elemento de cuerpo SOAP.  
   
-4.  Llamar a `WriteBodyContents` o a un método equivalente para escribir el cuerpo.  
+4. Llamar a `WriteBodyContents` o a un método equivalente para escribir el cuerpo.  
   
-5.  Cerrar los elementos de envoltura y cuerpo.  
+5. Cerrar los elementos de envoltura y cuerpo.  
   
  Los pasos anteriores están estrechamente unidos a la norma de SOAP. Esto es complicado, por el hecho de que existen múltiples versiones de SOAP, por ejemplo, es imposible escribir correctamente el elemento de envoltura de SOAP sin conocer la versión SOAP que se está utilizando. Asimismo, en algunos casos, puede ser deseable desactivar completamente esta compleja asignación específica del SOAP.  
   
@@ -170,11 +170,11 @@ Windows Communication Foundation (WCF) puede considerarse como una infraestructu
   
  Para este propósito, se utiliza la interfaz <xref:System.Xml.IStreamProvider> . La interfaz tiene un método <xref:System.Xml.IStreamProvider.GetStream> que devuelve la secuencia que se va a escribir. La manera correcta de escribir un cuerpo de mensaje transmitido <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> es la siguiente:  
   
-1.  Escriba cualquier información necesaria que preceda a la secuencia (por ejemplo, la etiqueta de apertura XML)  
+1. Escriba cualquier información necesaria que preceda a la secuencia (por ejemplo, la etiqueta de apertura XML)  
   
-2.  Llame a la sobrecarga `WriteValue` en el <xref:System.Xml.XmlDictionaryWriter> que toma <xref:System.Xml.IStreamProvider>, con una implementación `IStreamProvider` que devuelve la secuencia que se va a escribir.  
+2. Llame a la sobrecarga `WriteValue` en el <xref:System.Xml.XmlDictionaryWriter> que toma <xref:System.Xml.IStreamProvider>, con una implementación `IStreamProvider` que devuelve la secuencia que se va a escribir.  
   
-3.  Escriba cualquier información que siga a la secuencia (por ejemplo, la etiqueta de cierre XML)  
+3. Escriba cualquier información que siga a la secuencia (por ejemplo, la etiqueta de cierre XML)  
   
  Con este enfoque, el sistema de escritura XML puede escoger cuándo llamar <xref:System.Xml.IStreamProvider.GetStream> y escribir los datos transmitidos por secuencias. Por ejemplo, los sistemas de escritura XML textuales y binarios lo llamarán inmediatamente y escribirán el contenido transmitido por secuencias entre las etiquetas de inicio y cierre. El sistema de escritura de MTOM puede decidir llamar <xref:System.Xml.IStreamProvider.GetStream> posteriormente, cuando esté listo para escribir la parte adecuada del mensaje.  
   

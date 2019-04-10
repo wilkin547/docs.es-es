@@ -2,31 +2,31 @@
 title: Participantes de persistencia
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: f9a1f2142a2aef617c3337bf1bc384a51c8ed049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115900"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316367"
 ---
 # <a name="persistence-participants"></a>Participantes de persistencia
 Un participante de persistencia puede tomar parte en una operación de persistencia (guardar o cargar) desencadenada por un host de la aplicación. El [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] se suministra con dos clases abstractas, **PersistenceParticipant** y **PersistenceIOParticipant**, que puede usar para crear un participante de persistencia. Un participante de persistencia se deriva de una de estas clases, implementa los métodos de interés y, a continuación, agrega una instancia de la clase a la colección <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> del objeto <xref:System.ServiceModel.Activities.WorkflowServiceHost>. El host de la aplicación puede buscar estas extensiones de flujo de trabajo cuando se conserve una instancia de flujo de trabajo e invocar los métodos apropiados en los participantes de persistencia en los momentos adecuados.  
   
  La siguiente lista describe las tareas realizadas por el subsistema de persistencia en distintas fases de la operación de persistencia (guardar). Los participantes de persistencia se usan en la tercera y cuarta fase. Si el participante es un participante de E/S (un participante de persistencia que también participa en operaciones de E/S), también se utiliza el participante en la sexta fase.  
   
-1.  Recopila valores integrados, incluso el estado del flujo de trabajo, marcadores, variables asignadas y marca de tiempo.  
+1. Recopila valores integrados, incluso el estado del flujo de trabajo, marcadores, variables asignadas y marca de tiempo.  
   
-2.  Recopila todos los participantes de persistencia que se agregaron a la colección de extensiones asociada a la instancia de flujo de trabajo.  
+2. Recopila todos los participantes de persistencia que se agregaron a la colección de extensiones asociada a la instancia de flujo de trabajo.  
   
-3.  Invoca el método <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> implementado por todos los participantes de persistencia.  
+3. Invoca el método <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> implementado por todos los participantes de persistencia.  
   
-4.  Invoca el método <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> implementado por todos los participantes de persistencia.  
+4. Invoca el método <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> implementado por todos los participantes de persistencia.  
   
-5.  Conserve o guarde el flujo de trabajo en el almacén de persistencia.  
+5. Conserve o guarde el flujo de trabajo en el almacén de persistencia.  
   
-6.  Invoca el <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> método en todos los participantes de E/S de persistencia. Si el participante no es un participante de E/S, se omite esta tarea. Si el episodio de persistencia es transaccional, la transacción se proporciona en la propiedad Transaction.Current.  
+6. Invoca el <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> método en todos los participantes de E/S de persistencia. Si el participante no es un participante de E/S, se omite esta tarea. Si el episodio de persistencia es transaccional, la transacción se proporciona en la propiedad Transaction.Current.  
   
-7.  Espera a que se completen todos los participantes de persistencia. Si todos los participantes consiguen almacenar datos de instancia, confirma la transacción.  
+7. Espera a que se completen todos los participantes de persistencia. Si todos los participantes consiguen almacenar datos de instancia, confirma la transacción.  
   
  Un participante de persistencia se deriva de la **PersistenceParticipant** clase y puede implementar el **CollectValues** y **MapValues** métodos. Un participante de E/S de persistencia se deriva de la **PersistenceIOParticipant** clase y puede implementar el **BeginOnSave** método además de implementar el **CollectValues**y **MapValues** métodos.  
   
@@ -34,15 +34,15 @@ Un participante de persistencia puede tomar parte en una operación de persisten
   
  La siguiente lista describe las tareas realizadas por el subsistema de persistencia en distintas fases de la operación de carga. Los participantes de persistencia se usan en la cuarta fase. Los participantes de E/S de persistencia (participantes de persistencia que también participan en las operaciones de E/S) también se usan en la tercera fase.  
   
-1.  Recopila todos los participantes de persistencia que se agregaron a la colección de extensiones asociada a la instancia de flujo de trabajo.  
+1. Recopila todos los participantes de persistencia que se agregaron a la colección de extensiones asociada a la instancia de flujo de trabajo.  
   
-2.  Carga el flujo de trabajo del almacén de persistencia.  
+2. Carga el flujo de trabajo del almacén de persistencia.  
   
-3.  Invoca el <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> en todos los participantes de E/S de persistencia y espera a que todos los participantes de persistencia en completarse. Si el episodio de persistencia es transaccional, la transacción se proporciona en la propiedad Transaction.Current.  
+3. Invoca el <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> en todos los participantes de E/S de persistencia y espera a que todos los participantes de persistencia en completarse. Si el episodio de persistencia es transaccional, la transacción se proporciona en la propiedad Transaction.Current.  
   
-4.  Carga la instancia de flujo de trabajo en memoria según los datos recuperados del almacén de persistencia.  
+4. Carga la instancia de flujo de trabajo en memoria según los datos recuperados del almacén de persistencia.  
   
-5.  Invoca <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> en cada participante de persistencia.  
+5. Invoca <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> en cada participante de persistencia.  
   
  Un participante de persistencia se deriva de la **PersistenceParticipant** clase y puede implementar el **PublishValues** método. Un participante de E/S de persistencia se deriva de la **PersistenceIOParticipant** clase y puede implementar el **BeginOnLoad** método además de implementar el **PublishValues**método.  
   

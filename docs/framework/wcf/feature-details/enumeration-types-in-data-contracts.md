@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 236871ff5b8976bb9f8a27bce26195b1a84cf954
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195883"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309646"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Tipos de enumeración en contratos de datos
 Las enumeraciones se pueden expresar en el modelo del contrato de datos. En este tema se exponen varios ejemplos que explican el modelo de programación.  
@@ -79,11 +79,11 @@ Las enumeraciones se pueden expresar en el modelo del contrato de datos. En este
   
  Los pasos siguientes se aplican al envío de un valor de enumeración de un marca:  
   
-1.  Intente buscar un miembro de enumeración (con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute> aplicado) que asigna al valor numérico. Si lo encuentra, envíe una lista que contenga solo ese miembro.  
+1. Intente buscar un miembro de enumeración (con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute> aplicado) que asigna al valor numérico. Si lo encuentra, envíe una lista que contenga solo ese miembro.  
   
-2.  Intente desglosar el valor numérico en una suma de tal forma que haya miembros de enumeración (cada uno con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute> aplicado) que estén asignados a cada parte de la suma. Envíe la lista de todos estos miembros. Tenga en cuenta que el *algoritmo voraz* se utiliza para buscar como una suma, y, por tanto, no hay ninguna garantía de que se encuentra como una suma incluso si está presente. Para evitar este problema, asegúrese de que los valores numéricos de los miembros de enumeración son potencias de dos.  
+2. Intente desglosar el valor numérico en una suma de tal forma que haya miembros de enumeración (cada uno con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute> aplicado) que estén asignados a cada parte de la suma. Envíe la lista de todos estos miembros. Tenga en cuenta que el *algoritmo voraz* se utiliza para buscar como una suma, y, por tanto, no hay ninguna garantía de que se encuentra como una suma incluso si está presente. Para evitar este problema, asegúrese de que los valores numéricos de los miembros de enumeración son potencias de dos.  
   
-3.  Si los dos pasos anteriores fallan, y el valor numérico es distinto de cero, inicie <xref:System.Runtime.Serialization.SerializationException>. Si el valor numérico es cero, envíe la lista vacía.  
+3. Si los dos pasos anteriores fallan, y el valor numérico es distinto de cero, inicie <xref:System.Runtime.Serialization.SerializationException>. Si el valor numérico es cero, envíe la lista vacía.  
   
 ### <a name="example"></a>Ejemplo  
  El ejemplo de enumeración siguiente se puede utilizar en una operación de la marca.  

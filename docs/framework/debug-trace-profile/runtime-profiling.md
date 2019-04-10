@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 036744362c414fe51c919b59c693d447c92a87c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141393"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306396"
 ---
 # <a name="runtime-profiling"></a>Generar perfiles en tiempo de ejecución
 La generación de perfiles es un método de recopilación de datos de rendimiento en cualquier escenario de desarrollo o implementación. Esta sección está dirigida a los desarrolladores y administradores del sistema que quieren recopilar información sobre el rendimiento de la aplicación.  
@@ -28,19 +28,19 @@ La generación de perfiles es un método de recopilación de datos de rendimient
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Para ejecutar Perfmon.exe en Windows Vista y versiones posteriores  
   
-1.  En el símbolo del sistema, escriba **perfmon**. Aparece la consola **Monitor de rendimiento** .  
+1. En el símbolo del sistema, escriba **perfmon**. Aparece la consola **Monitor de rendimiento** .  
   
-2.  En la carpeta **Herramientas de supervisión** , haga clic en **Monitor de rendimiento**.  
+2. En la carpeta **Herramientas de supervisión** , haga clic en **Monitor de rendimiento**.  
   
-3.  En la barra de herramientas del Monitor de rendimiento, haga clic en el icono **Agregar** (el signo más), si está presente. Si no está presente, haga clic con el botón secundario en la ventana del monitor y seleccione la opción **Agregar contadores** .  
+3. En la barra de herramientas del Monitor de rendimiento, haga clic en el icono **Agregar** (el signo más), si está presente. Si no está presente, haga clic con el botón secundario en la ventana del monitor y seleccione la opción **Agregar contadores** .  
   
      De este modo se abrirá el cuadro de diálogo **Agregar contadores** . El cuadro de lista **Contadores disponibles** muestra los objetos de rendimiento disponibles. Hay una serie de objetos predefinidos para las aplicaciones de .NET Framework, incluidos los de administración de memoria (**memoria de .NET CLR**), interoperabilidad (**interoperabilidad de .NET CLR**), control de excepciones (**excepciones de .NET CLR**) y el multithreading (**LocksAndThreads de .NET CLR**). Cada objeto de rendimiento incluye una serie de contadores de rendimiento individuales. Para obtener una lista de los contadores de rendimiento disponibles en el Monitor de rendimiento, consulte [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
-4.  Active la casilla situada junto al nombre de un objeto de rendimiento para ver la lista de contadores de rendimiento individuales que admite.  
+4. Active la casilla situada junto al nombre de un objeto de rendimiento para ver la lista de contadores de rendimiento individuales que admite.  
   
-5.  Haga clic en el contador de rendimiento que quiere ver.  
+5. Haga clic en el contador de rendimiento que quiere ver.  
   
-6.  En el cuadro de lista **Instancias del objeto seleccionado**, haga clic en **\<Todas las instancias>** para especificar que quiere supervisar el contador de rendimiento para Common Language Runtime globalmente (es decir, en todo el sistema).  
+6. En el cuadro de lista **Instancias del objeto seleccionado**, haga clic en **\<Todas las instancias>** para especificar que quiere supervisar el contador de rendimiento para Common Language Runtime globalmente (es decir, en todo el sistema).  
   
      -o bien-  
   

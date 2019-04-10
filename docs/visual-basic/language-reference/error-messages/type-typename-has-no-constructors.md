@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: b06c1d930a3551e9bc175c814a6297894799237d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8564499b9ff55514179314217b7d40d8d3cdf6a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837993"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311659"
 ---
 # <a name="type-typename-has-no-constructors"></a>Tipo de '\<typename >' no tiene constructores
 Un tipo no admite una llamada a `Sub New()`. Una causa probable puede ser un archivo binario o un compilador dañado.  
@@ -21,15 +21,15 @@ Un tipo no admite una llamada a `Sub New()`. Una causa probable puede ser un arc
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Si el tipo está en proyecto distinto o en un archivo al que se hace referencia, reinstale el proyecto o archivo en cuestión.  
+1. Si el tipo está en proyecto distinto o en un archivo al que se hace referencia, reinstale el proyecto o archivo en cuestión.  
   
-2.  Si el tipo se encuentra en el mismo proyecto, vuelva a compilar el ensamblado que contiene dicho tipo.  
+2. Si el tipo se encuentra en el mismo proyecto, vuelva a compilar el ensamblado que contiene dicho tipo.  
   
-3.  Si el error se repite, reinstale el compilador de Visual Basic.  
+3. Si el error se repite, reinstale el compilador de Visual Basic.  
   
-4.  Si el error persiste, reúna información sobre las circunstancias y notifíquelo a los Servicios de soporte técnico de Microsoft.  
+4. Si el error persiste, reúna información sobre las circunstancias y notifíquelo a los Servicios de soporte técnico de Microsoft.  
   
 ## <a name="see-also"></a>Vea también
 
 - [Objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Hable con nosotros](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

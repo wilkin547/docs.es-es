@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cda9f6c71361d3865b40669c7ba09f2c2fb0c253
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102991"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314079"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB (Estructura)
 Contiene información sobre un solo atributo en un ensamblado y consta de tres `DWORD`s. Cada `DWORD` es un desplazamiento en un búfer de caracteres producido por la `CurrentIntoBuffer` método de la [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interfaz  
@@ -49,13 +49,13 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 ## <a name="sample"></a>Ejemplo  
  El ejemplo siguiente muestra varios pasos básicos que suponer de relleno `IDENTITY_ATTRIBUTE_BLOB` estructura:  
   
-1.  Obtener un [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) para el ensamblado.  
+1. Obtener un [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) para el ensamblado.  
   
-2.  Llame a la `IReferenceIdentity::EnumAttributes` método y obtener un [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
+2. Llame a la `IReferenceIdentity::EnumAttributes` método y obtener un [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
   
-3.  Crear un búfer de caracteres y convertirla a una `IDENTITY_ATTRIBUTE_BLOB` estructura.  
+3. Crear un búfer de caracteres y convertirla a una `IDENTITY_ATTRIBUTE_BLOB` estructura.  
   
-4.  Llame a la `CurrentIntoBuffer` método de la `IEnumIDENTITY_ATTRIBUTE` interfaz. Este método copia los atributos `Namespace`, `Name`, y `Value` en el búfer de caracteres. Los desplazamientos de tres a esas cadenas pasará a estar disponibles en el `IDENTITY_ATTRIBUTE_BLOB` estructura.  
+4. Llame a la `CurrentIntoBuffer` método de la `IEnumIDENTITY_ATTRIBUTE` interfaz. Este método copia los atributos `Namespace`, `Name`, y `Value` en el búfer de caracteres. Los desplazamientos de tres a esas cadenas pasará a estar disponibles en el `IDENTITY_ATTRIBUTE_BLOB` estructura.  
   
 ```  
 // EnumAssemblyAttributes.cpp : main project file.  

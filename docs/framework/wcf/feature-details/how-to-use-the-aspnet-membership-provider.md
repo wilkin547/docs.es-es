@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: df86f87bfc2456d77e3c1ee209cb8b4c61f53b21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8011b026e857dd6e5815ef7da00c1c33db8b5b4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310361"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Filtrar para usar el proveedor de pertenencia de ASP.NET
 El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] es una característica que permite a los programadores de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] crear sitios web que permiten a los usuarios crear combinaciones únicas de nombre de usuario y contraseña. Con esta función, cualquier usuario puede establecer una cuenta en el sitio e iniciar sesión para obtener acceso exclusivo al sitio y a sus servicios. Esto contrasta con la seguridad de Windows, que exige a los usuarios que tengan cuentas en un dominio de Windows. En su lugar, cualquier usuario que proporcione sus credenciales (la combinación de nombre de usuario/contraseña) puede utilizar el sitio y sus servicios.  
@@ -27,13 +27,13 @@ El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp
   
 ### <a name="to-configure-the-membership-provider"></a>Para configurar el proveedor de pertenencia  
   
-1.  En el archivo Web.config, bajo el <`system.web`> elemento, cree un <`membership`> elemento.  
+1. En el archivo Web.config, bajo el <`system.web`> elemento, cree un <`membership`> elemento.  
   
-2.  Bajo el elemento `<membership>`, cree un elemento `<providers>`.  
+2. Bajo el elemento `<membership>`, cree un elemento `<providers>`.  
   
-3.  Como elemento secundario de la <`providers`> elemento, agregue un `<clear />` elemento para vaciar la colección de proveedores.  
+3. Como elemento secundario de la <`providers`> elemento, agregue un `<clear />` elemento para vaciar la colección de proveedores.  
   
-4.  En el `<clear />` elemento, cree un <`add`> elemento con los siguientes atributos se establecen en los valores adecuados: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, y `passwordFormat`. El atributo `name` se utiliza más adelante como un valor en el archivo de configuración. El siguiente ejemplo lo define en `SqlMembershipProvider`.  
+4. En el `<clear />` elemento, cree un <`add`> elemento con los siguientes atributos se establecen en los valores adecuados: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, y `passwordFormat`. El atributo `name` se utiliza más adelante como un valor en el archivo de configuración. El siguiente ejemplo lo define en `SqlMembershipProvider`.  
   
      En el ejemplo siguiente se muestra la sección de configuración.  
   
@@ -58,13 +58,13 @@ El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp
   
 ### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>Para configurar la seguridad de servicio con el fin de que acepte la combinación de nombre de usuario y contraseña  
   
-1.  En el archivo de configuración en el [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, agregue un [ \<enlaces >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
+1. En el archivo de configuración en el [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, agregue un [ \<enlaces >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
   
-2.  Agregar un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) a la sección de enlaces. Para obtener más información acerca de cómo crear un elemento de enlace de WCF, vea [Cómo: Especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2. Agregar un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) a la sección de enlaces. Para obtener más información acerca de cómo crear un elemento de enlace de WCF, vea [Cómo: Especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
-3.  Establezca el atributo `mode` del elemento `<security>` en `Message`:  
+3. Establezca el atributo `mode` del elemento `<security>` en `Message`:  
   
-4.  Establecer el `clientCredentialType` atributo de la <`message`> elemento para `UserName`. Esto especifica que un par de nombre de usuario y contraseña se utilizará como credencial del cliente.  
+4. Establecer el `clientCredentialType` atributo de la <`message`> elemento para `UserName`. Esto especifica que un par de nombre de usuario y contraseña se utilizará como credencial del cliente.  
   
      El siguiente ejemplo muestra el código de configuración para el enlace.  
   
@@ -85,22 +85,22 @@ El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp
   
 ### <a name="to-configure-a-service-to-use-the-membership-provider"></a>Para configurar un servicio para que utilice el proveedor de pertenencia  
   
-1.  Como elemento secundario de la `<system.serviceModel>` elemento, agregue un [ \<comportamientos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento  
+1. Como elemento secundario de la `<system.serviceModel>` elemento, agregue un [ \<comportamientos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento  
   
-2.  Agregar un [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) a la <`behaviors`> elemento.  
+2. Agregar un [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) a la <`behaviors`> elemento.  
   
-3.  Agregar un [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) y establezca el `name` atributo en un valor adecuado.  
+3. Agregar un [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) y establezca el `name` atributo en un valor adecuado.  
   
-4.  Agregar un [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) a la <`behavior`> elemento.  
+4. Agregar un [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) a la <`behavior`> elemento.  
   
-5.  Agregar un [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) a la `<serviceCredentials>` elemento.  
+5. Agregar un [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) a la `<serviceCredentials>` elemento.  
   
-6.  Defina el atributo `userNamePasswordValidationMode` a `MembershipProvider`.  
+6. Defina el atributo `userNamePasswordValidationMode` a `MembershipProvider`.  
   
     > [!IMPORTANT]
     >  Si el `userNamePasswordValidationMode` valor no está establecido, WCF usa la autenticación de Windows en lugar de la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proveedor de pertenencia.  
   
-7.  Establezca el atributo `membershipProviderName` en el nombre del proveedor (especificado al agregar el proveedor en el primer procedimiento de este tema). El ejemplo siguiente muestra el fragmento `<serviceCredentials>` en este punto.  
+7. Establezca el atributo `membershipProviderName` en el nombre del proveedor (especificado al agregar el proveedor en el primer procedimiento de este tema). El ejemplo siguiente muestra el fragmento `<serviceCredentials>` en este punto.  
   
     ```xml  
     <behaviors>  

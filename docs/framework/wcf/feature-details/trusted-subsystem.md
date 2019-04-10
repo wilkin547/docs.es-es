@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 681312f4fcc76b275697024a45503f5c4cf89a4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208545"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319370"
 ---
 # <a name="trusted-subsystem"></a>Subsistema de confianza
 Un cliente obtiene acceso a uno o varios servicios Web distribuidos a través de una red. Los servicios Web están diseñados para que el acceso a recursos adicionales (como bases de datos u otros servicios Web) se encapsule en la lógica empresarial del servicio Web. Estos recursos deben protegerse frente al acceso no autorizado. La siguiente ilustración describe un proceso de subsistema de confianza.  
@@ -19,15 +19,15 @@ Un cliente obtiene acceso a uno o varios servicios Web distribuidos a través de
   
  Los siguientes pasos describen el proceso del subsistema de confianza tal y como se ilustra:  
   
-1.  El cliente envía una solicitud al subsistema de confianza, junto con las credenciales.  
+1. El cliente envía una solicitud al subsistema de confianza, junto con las credenciales.  
   
-2.  El subsistema de confianza autentica y autoriza al usuario.  
+2. El subsistema de confianza autentica y autoriza al usuario.  
   
-3.  El subsistema de confianza envía un mensaje de solicitud al recurso remoto. Las credenciales acompañan a esta solicitud para el subsistema de confianza (o la cuenta de servicio bajo la que se ejecuta el proceso del subsistema de confianza).  
+3. El subsistema de confianza envía un mensaje de solicitud al recurso remoto. Las credenciales acompañan a esta solicitud para el subsistema de confianza (o la cuenta de servicio bajo la que se ejecuta el proceso del subsistema de confianza).  
   
-4.  El recurso de back-end autentica y autoriza al subsistema de confianza. A continuación, procesa la solicitud y emite una respuesta al subsistema de confianza.  
+4. El recurso de back-end autentica y autoriza al subsistema de confianza. A continuación, procesa la solicitud y emite una respuesta al subsistema de confianza.  
   
-5.  El subsistema de confianza procesa la respuesta y emite su propia respuesta al cliente.  
+5. El subsistema de confianza procesa la respuesta y emite su propia respuesta al cliente.  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  

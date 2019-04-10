@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169616"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313962"
 ---
 # <a name="documents-in-wpf"></a>Documentos en WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ofrece una amplia gama de características de documento que permiten la creación de contenido de alta fidelidad que está diseñado para ser más accesible y fácil de leer que en generaciones anteriores de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Además de las capacidades y la calidad mejoradas, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también proporciona servicios integrados de presentación, empaquetado y seguridad de documentos. En este tema se proporciona una introducción a los tipos de documentos y el empaquetado de documentos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -89,9 +89,9 @@ ms.locfileid: "59169616"
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  
  Para la seguridad, un <xref:System.IO.Packaging.PackageDigitalSignature> ("firma digital") se puede asociar con los elementos dentro de un paquete. Un <xref:System.IO.Packaging.PackageDigitalSignature> incorpora [509] que proporciona dos características:  
   
-1.  Identifica y autentica al originador del elemento.  
+1. Identifica y autentica al originador del elemento.  
   
-2.  Valida que no se haya modificado el elemento.  
+2. Valida que no se haya modificado el elemento.  
   
  La firma digital no impide que se modifique un elemento, pero no se podrá realizar la comprobación de validación de la firma digital si el elemento se ha modificado de alguna manera. La aplicación, a continuación, puede emprender la acciones apropiadas: por ejemplo, bloquear la apertura del elemento o notificar al usuario que se ha modificado el elemento y que los datos no son seguros.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "59169616"
   
  Las relaciones de los paquetes proporcionan un medio reconocible para agregar y asociar información adicional a los elementos individuales o al paquete completo. Las relaciones de los paquetes se utilizan para dos funciones principales:  
   
-1.  Definir las relaciones de dependencia de un elemento con otro elemento.  
+1. Definir las relaciones de dependencia de un elemento con otro elemento.  
   
-2.  Definir las relaciones de información que agregan notas u otros datos relacionados con el elemento.  
+2. Definir las relaciones de información que agregan notas u otros datos relacionados con el elemento.  
   
  Un <xref:System.IO.Packaging.PackageRelationship> proporciona un medio rápido y reconocible para definir las dependencias y agregar otra información asociada con una parte del paquete o el paquete como un todo.  
   

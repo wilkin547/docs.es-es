@@ -2,12 +2,12 @@
 title: Ejemplo de tecnología de serialización básica
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 43e69ce90b86053badad91b62ec288378e63e2ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315015"
 ---
 # <a name="basic-serialization-technology-sample"></a>Ejemplo de tecnología de serialización básica
 [Descargar ejemplo](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -18,25 +18,25 @@ ms.locfileid: "54681708"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>Para generar el ejemplo desde el símbolo del sistema  
   
-1.  Navegue hasta uno de los subdirectorios específicos de lenguaje bajo el directorio Technologies\Serialization\Runtime Serialization\Basic, utilizando el símbolo del sistema.  
+1. Navegue hasta uno de los subdirectorios específicos de lenguaje bajo el directorio Technologies\Serialization\Runtime Serialization\Basic, utilizando el símbolo del sistema.  
   
-2.  Escriba **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** o **msbuild SerializationVB.sln**, según el lenguaje de programación que prefiera, en la línea de comandos.  
+2. Escriba **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** o **msbuild SerializationVB.sln**, según el lenguaje de programación que prefiera, en la línea de comandos.  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Para compilar el ejemplo con Visual Studio  
   
-1.  Abra [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] y navegue hasta uno de los subdirectorios específicos del lenguaje del ejemplo.  
+1. Abra [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] y navegue hasta uno de los subdirectorios específicos del lenguaje del ejemplo.  
   
-2.  Haga doble clic en el icono del archivo SerializationCS.sln, SerializationJSL.sln o SerializationVB.sln, dependiendo del lenguaje de programación elegido, para abrir el archivo en Visual Studio.  
+2. Haga doble clic en el icono del archivo SerializationCS.sln, SerializationJSL.sln o SerializationVB.sln, dependiendo del lenguaje de programación elegido, para abrir el archivo en Visual Studio.  
   
-3.  En el menú **Compilar**, seleccione **Compilar solución**.  
+3. En el menú **Compilar**, seleccione **Compilar solución**.  
   
  La aplicación de ejemplo se generará en el subdirectorio predeterminado \bin o \bin\Debug.  
   
 ### <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
   
-1.  Navegue hasta el directorio que contiene el ejecutable generado.  
+1. Navegue hasta el directorio que contiene el ejecutable generado.  
   
-2.  Escriba **Serialization.exe**, junto con los valores de parámetro que quiera, en la línea de comandos.  
+2. Escriba **Serialization.exe**, junto con los valores de parámetro que quiera, en la línea de comandos.  
   
     > [!NOTE]
     >  En este ejemplo se genera una aplicación de consola. Para poder ver el resultado, debe iniciarla desde la línea de comandos.  
@@ -46,13 +46,13 @@ ms.locfileid: "54681708"
   
  Por ejemplo:  
   
- **Serialize.exe -sx Test.xml 10**  
+ **Serialize.exe - sx Test.xml 10**  
   
  Para deserializar el archivo **Test.xml** del ejemplo anterior, use los parámetros **dx Test.xml**.  
   
  Por ejemplo:  
   
- **Serialize.exe -dx Test.xml**  
+ **Serialize.exe - dx Test.xml**  
   
  En los dos ejemplos anteriores, la "x" en el modificador de la línea de comandos indica que desea realizar una serialización de XML SOAP. Puede utilizar "b" en su lugar para utilizar la serialización binaria. Si desea realizar la serialización con un gran número de nodos, puede que prefiera redirigir el resultado de la consola a un archivo.  
   
@@ -64,17 +64,17 @@ ms.locfileid: "54681708"
   
 -   Serialización en tiempo de ejecución  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> Se utiliza para hacer referencia a un objeto <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> o <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.  
+    -   <xref:System.Runtime.Serialization.IFormatter> Usar para hacer referencia a un <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> o un <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> objeto.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Se utiliza para serializar una lista vinculada a una secuencia en formato binario. El formateador binario utiliza un formato que solo entiende el tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Sin embargo, los datos son concisos.  
+    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Usado para serializar una lista vinculada a una secuencia en un formato binario. El formateador binario utiliza un formato que solo entiende el tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Sin embargo, los datos son concisos.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Se utiliza para serializar una lista vinculada a una secuencia en formato SOAP. SOAP es un formato estándar.  
+    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Usado para serializar una lista vinculada a una secuencia en formato SOAP. SOAP es un formato estándar.  
   
 -   E/S de secuencia  
   
     -   <xref:System.IO.Stream> Se utiliza para serializar y deserializar. El tipo de secuencia concreto utilizado en este ejemplo es el tipo <xref:System.IO.FileStream>. Sin embargo, la serialización se puede utilizar con cualquier tipo derivado de <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File> Se utiliza para crear objetos <xref:System.IO.FileStream> para leer y crear archivos en disco.  
+    -   <xref:System.IO.File> Utilizado para crear <xref:System.IO.FileStream> objetos para leer y crear archivos en disco.  
   
     -   <xref:System.IO.FileStream> Se utiliza para serializar y deserializar las listas vinculadas.  
   
@@ -94,6 +94,6 @@ ms.locfileid: "54681708"
 - [Serialización básica](../../../docs/standard/serialization/basic-serialization.md)
 - [Serialización binaria](../../../docs/standard/serialization/binary-serialization.md)
 - [Controlar la serialización XML mediante atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [Introducir la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Serialización](../../../docs/standard/serialization/index.md)
-- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Serialización de SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)

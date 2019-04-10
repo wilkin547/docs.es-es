@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-ms.openlocfilehash: 6d2edadc323994f7f25394321fb1aff18f7154c5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 017a2458562068727674bd3fd9cda8c33d989e8b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824278"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314625"
 ---
 # <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>Expresión tiene el tipo '\<typename >' que es un tipo restringido y no se puede usar para tener acceso a miembros heredados de 'Object' o 'ValueType'
 Una expresión se evalúa como un tipo que no se puede realizar la conversión boxing por common language runtime (CLR), pero tiene acceso a un miembro que requiere la conversión boxing.  
@@ -25,11 +25,11 @@ Una expresión se evalúa como un tipo que no se puede realizar la conversión b
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Localice la expresión que se evalúa en el tipo mencionado.  
+1. Localice la expresión que se evalúa en el tipo mencionado.  
   
-2.  Busque la parte de la instrucción que intenta llamar al método se hereda de <xref:System.Object> o <xref:System.ValueType>.  
+2. Busque la parte de la instrucción que intenta llamar al método se hereda de <xref:System.Object> o <xref:System.ValueType>.  
   
-3.  Reescriba la instrucción para evitar la llamada al método.  
+3. Reescriba la instrucción para evitar la llamada al método.  
   
 ## <a name="see-also"></a>Vea también
 

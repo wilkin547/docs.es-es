@@ -3,12 +3,12 @@ title: Información general sobre el módulo de autenticación WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 4b15952e2fdc050c5291bed6a58d2eecbf5ddbfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092478"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310257"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Información general sobre el módulo de autenticación WSFederation
 Windows Identity Foundation (WIF) es compatible con la autenticación federada en aplicaciones ASP.NET a través del Módulo de autenticación de WS-Federation (WS-FAM). Este tema le ayudará a comprender cómo funciona la autenticación federada y cómo se utiliza.  
@@ -18,26 +18,26 @@ Windows Identity Foundation (WIF) es compatible con la autenticación federada e
   
  ![Escenario de autenticación de federación](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
   
-1.  Un cliente del dominio de confianza Fabrikam envía una solicitud a una aplicación de usuario de confianza (RP) del dominio de confianza Contoso.  
+1. Un cliente del dominio de confianza Fabrikam envía una solicitud a una aplicación de usuario de confianza (RP) del dominio de confianza Contoso.  
   
-2.  El RP redirige al cliente a un STS del dominio de confianza Contoso. Este STS no conoce al cliente.  
+2. El RP redirige al cliente a un STS del dominio de confianza Contoso. Este STS no conoce al cliente.  
   
-3.  El STS de Contoso redirige al cliente a un STS del dominio de confianza Fabrikam, con el que el dominio de confianza Contoso tiene una relación de confianza.  
+3. El STS de Contoso redirige al cliente a un STS del dominio de confianza Fabrikam, con el que el dominio de confianza Contoso tiene una relación de confianza.  
   
-4.  El STS de Fabrikam comprueba la identidad del cliente y emite un token de seguridad para el STS de Contoso.  
+4. El STS de Fabrikam comprueba la identidad del cliente y emite un token de seguridad para el STS de Contoso.  
   
-5.  El STS de Contoso utiliza el token de Fabrikam para crear su propio token que pueda utilizar el RP y lo envía al RP.  
+5. El STS de Contoso utiliza el token de Fabrikam para crear su propio token que pueda utilizar el RP y lo envía al RP.  
   
-6.  El RP extrae las notificaciones del cliente del token de seguridad y toma una decisión de autorización.  
+6. El RP extrae las notificaciones del cliente del token de seguridad y toma una decisión de autorización.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>Usar el módulo de autenticación federada con ASP.NET  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) es un módulo HTTP que le permite agregar autenticación federada a una [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplicación. La autenticación federada permite al STS controlar la lógica de autenticación y permite al usuario centrarse en la escritura de la lógica de negocios.  
   
  Configure WS-FAM para especificar el STS al que deben redirigirse las solicitudes no autenticadas. WIF le permite autenticar a un usuario de dos maneras:  
   
-1.  Redirección pasiva: Cuando un usuario no autenticado intenta tener acceso a un recurso protegido, y desea simplemente redirigirlas al STS sin necesidad de una página de inicio de sesión, es el enfoque correcto. El STS comprueba la identidad del usuario y emite un token de seguridad que contiene las notificaciones adecuadas para dicho usuario. Esta opción requiere que se agregue el WS-FAM a la canalización de módulos HTTP. Puede utilizar la herramienta denominada Identity and Access Tool de Visual Studio 2012 para modificar el archivo de configuración de la aplicación de modo que use WS-FAM y se federe con un STS. Para más información, vea [Identity and Access Tool for Visual Studio 2012 (Herramienta de identidad y acceso para Visual Studio 2012)](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+1. Redirección pasiva: Cuando un usuario no autenticado intenta tener acceso a un recurso protegido, y desea simplemente redirigirlas al STS sin necesidad de una página de inicio de sesión, es el enfoque correcto. El STS comprueba la identidad del usuario y emite un token de seguridad que contiene las notificaciones adecuadas para dicho usuario. Esta opción requiere que se agregue el WS-FAM a la canalización de módulos HTTP. Puede utilizar la herramienta denominada Identity and Access Tool de Visual Studio 2012 para modificar el archivo de configuración de la aplicación de modo que use WS-FAM y se federe con un STS. Para más información, vea [Identity and Access Tool for Visual Studio 2012 (Herramienta de identidad y acceso para Visual Studio 2012)](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
-2.  Puede llamar al método <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> o al método <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> desde el código subyacente para utilizar una página de inicio de sesión en su aplicación de RP.  
+2. Puede llamar al método <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> o al método <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> desde el código subyacente para utilizar una página de inicio de sesión en su aplicación de RP.  
   
  En la redirección pasiva, toda la comunicación se lleva a cabo a través de la respuesta/redirección desde el cliente (normalmente, un explorador). Puede agregar el WS-FAM a la canalización HTTP de la aplicación, donde está a la espera de solicitudes de usuario no autenticadas y redirige a los usuarios al STS especificado.  
   

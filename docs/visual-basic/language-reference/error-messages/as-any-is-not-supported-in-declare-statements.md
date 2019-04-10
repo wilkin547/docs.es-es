@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30828
 ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
-ms.openlocfilehash: c6c792e02bb655dc8a9544c4b5b46a64210556f6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3593f238c72cbcce911c72e42552d6a75188b628
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839930"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310699"
 ---
 # <a name="as-any-is-not-supported-in-declare-statements"></a>'As Any' no se admite en instrucciones 'Declare'
 El `Any` se utilizó el tipo de datos con `Declare` instrucciones en Visual Basic 6.0 y versiones anteriores para permitir el uso de argumentos que puede contener cualquier tipo de datos. Visual Basic admite sobrecargas, sin embargo y por lo que facilita la `Any` obsoleto del tipo de datos.  
@@ -21,11 +21,11 @@ El `Any` se utilizó el tipo de datos con `Declare` instrucciones en Visual Basi
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Declare los parámetros del tipo específico que desea usar; Por ejemplo.  
+1. Declare los parámetros del tipo específico que desea usar; Por ejemplo.  
   
      [!code-vb[VbVbalrStatements#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class5.vb#95)]  
   
-2.  Use la <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo para especificar `As Any` cuando `Void*` se espera que el procedimiento que se llama.  
+2. Use la <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo para especificar `As Any` cuando `Void*` se espera que el procedimiento que se llama.  
   
      [!code-vb[VbVbalrStatements#96](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class5.vb#96)]  
   
@@ -33,5 +33,5 @@ El `Any` se utilizó el tipo de datos con `Declare` instrucciones en Visual Basi
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Tutorial: Llamar a las API de Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
-- [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Crear prototipos en código administrado](../../../framework/interop/creating-prototypes-in-managed-code.md)

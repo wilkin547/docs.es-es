@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: ca6537d81f080120fcbea0cf083f450dce4e9f62
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826020"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316276"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Filtrar Coincide con una cadena con un patrón (Visual Basic)
 Si desea averiguar si una expresión de la [tipo de datos String](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisface un patrón, puede usar el [Like (operador)](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -68,11 +68,11 @@ Si desea averiguar si una expresión de la [tipo de datos String](../../../../vi
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Para hacer coincidir un carácter en la expresión de cadena con una lista de caracteres o ningún carácter  
   
-1.  Llame a la `Like` operador dos veces en la misma expresión de cadena y conecte las dos llamadas con cualquiera el [operador o](../../../../visual-basic/language-reference/operators/or-operator.md) o [OrElse (operador)](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
+1. Llame a la `Like` operador dos veces en la misma expresión de cadena y conecte las dos llamadas con cualquiera el [operador o](../../../../visual-basic/language-reference/operators/or-operator.md) o [OrElse (operador)](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
   
-2.  En la cadena de patrón para la primera `Like` cláusula, incluir la lista de caracteres entre corchetes (`[ ]`).  
+2. En la cadena de patrón para la primera `Like` cláusula, incluir la lista de caracteres entre corchetes (`[ ]`).  
   
-3.  En la cadena de patrón para el segundo `Like` cláusula, no coloque cualquier carácter en la posición en cuestión.  
+3. En la cadena de patrón para el segundo `Like` cláusula, no coloque cualquier carácter en la posición en cuestión.  
   
      El ejemplo siguiente comprueba el número de teléfono de siete dígitos `phoneNum` exactamente tres dígitos numéricos, seguida por un espacio, un guión (`–`), un período (`.`), o ningún carácter en absoluto, seguidos exactamente cuatro dígitos numéricos.  
   
@@ -82,5 +82,5 @@ Si desea averiguar si una expresión de la [tipo de datos String](../../../../vi
 
 - [Operadores de comparación](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [Operadores y expresiones](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Like (operador)](../../../../visual-basic/language-reference/operators/like-operator.md)
-- [String (tipo de datos)](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Like (Operador)](../../../../visual-basic/language-reference/operators/like-operator.md)
+- [String (Tipo de datos)](../../../../visual-basic/language-reference/data-types/string-data-type.md)

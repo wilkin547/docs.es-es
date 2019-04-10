@@ -10,29 +10,29 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: e7a05a5fb0b2053e92d9f947f197bdb2dcfa7ce0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832286"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312246"
 ---
 # <a name="overload-resolution-visual-basic"></a>Resolución de sobrecarga (Visual Basic)
 Cuando el compilador de Visual Basic encuentra una llamada a un procedimiento que se define en varias versiones sobrecargadas, el compilador debe decidir cuál de las sobrecargas para llamar a. Para ello, siga estos pasos:  
   
-1.  **Accesibilidad.** Elimina cualquier sobrecarga con un nivel de acceso que impide que el código de llamada de llamarlo.  
+1. **Accesibilidad.** Elimina cualquier sobrecarga con un nivel de acceso que impide que el código de llamada de llamarlo.  
   
-2.  **Número de parámetros.** Elimina cualquier sobrecarga que define un número diferente de parámetros que se suministran en la llamada.  
+2. **Número de parámetros.** Elimina cualquier sobrecarga que define un número diferente de parámetros que se suministran en la llamada.  
   
-3.  **Tipos de datos de parámetro.** El compilador da preferencia de los métodos de instancia a través de métodos de extensión. Si se encuentra ningún método de instancia que requiere solo las conversiones para que coincida con la llamada al procedimiento de ampliación, se quitan todos los métodos de extensión y el compilador sigue con solo los candidatos de método de instancia. Si no se encuentra ningún método de instancia como ese, continúa con la instancia y métodos de extensión.  
+3. **Tipos de datos de parámetro.** El compilador da preferencia de los métodos de instancia a través de métodos de extensión. Si se encuentra ningún método de instancia que requiere solo las conversiones para que coincida con la llamada al procedimiento de ampliación, se quitan todos los métodos de extensión y el compilador sigue con solo los candidatos de método de instancia. Si no se encuentra ningún método de instancia como ese, continúa con la instancia y métodos de extensión.  
   
      En este paso, elimina cualquier sobrecarga para el que no se puede convertir los tipos de datos de los argumentos de llamada a los tipos de parámetro definidos en la sobrecarga.  
   
-4.  **Conversiones de restricción.** Elimina cualquier sobrecarga que requiere una conversión de restricción de los tipos de argumento que realiza la llamada a los tipos de parámetro definidas. Esto es cierto si la comprobación de tipo modificador ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) es `On` o `Off`.  
+4. **Conversiones de restricción.** Elimina cualquier sobrecarga que requiere una conversión de restricción de los tipos de argumento que realiza la llamada a los tipos de parámetro definidas. Esto es cierto si la comprobación de tipo modificador ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) es `On` o `Off`.  
   
-5.  **Ampliación mínima.** El compilador considera las sobrecargas restantes en parejas. Para cada par, compara los tipos de datos de los parámetros definidos. Si los tipos en una de las sobrecargas todas se amplían a los tipos correspondientes en el otro, el compilador elimina la última. Es decir, conserva la sobrecarga que requiere la menor cantidad de ampliación.  
+5. **Ampliación mínima.** El compilador considera las sobrecargas restantes en parejas. Para cada par, compara los tipos de datos de los parámetros definidos. Si los tipos en una de las sobrecargas todas se amplían a los tipos correspondientes en el otro, el compilador elimina la última. Es decir, conserva la sobrecarga que requiere la menor cantidad de ampliación.  
   
-6.  **Candidato único.** Sigue considerando las sobrecargas en parejas hasta solo una sobrecarga permanece y resuelve la llamada a esa sobrecarga. Si el compilador no puede reducir las sobrecargas a un único candidato, genera un error.  
+6. **Candidato único.** Sigue considerando las sobrecargas en parejas hasta solo una sobrecarga permanece y resuelve la llamada a esa sobrecarga. Si el compilador no puede reducir las sobrecargas a un único candidato, genera un error.  
   
  La siguiente ilustración muestra el proceso que determina qué conjunto de versiones sobrecargadas para llamar a.  
   
@@ -64,10 +64,10 @@ Cuando el compilador de Visual Basic encuentra una llamada a un procedimiento qu
 - [Matrices de parámetros](./parameter-arrays.md)
 - [Sobrecarga de procedimientos](./procedure-overloading.md)
 - [Solución de problemas de procedimientos](./troubleshooting-procedures.md)
-- [Cómo: Definir varias versiones de un procedimiento](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Cómo: Llamar a un procedimiento sobrecargado](./how-to-call-an-overloaded-procedure.md)
-- [Cómo: Sobrecargar un procedimiento que toma parámetros opcionales](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Cómo: Sobrecargar un procedimiento que toma un número indefinido de parámetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Filtrar para definir varias versiones de un procedimiento](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Filtrar para llamar a un procedimiento sobrecargado](./how-to-call-an-overloaded-procedure.md)
+- [Filtrar para sobrecargar un procedimiento que toma parámetros opcionales](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Filtrar para sobrecargar un procedimiento que toma un número indefinido de parámetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Consideraciones sobre la sobrecarga de procedimientos](./considerations-in-overloading-procedures.md)
-- [Sobrecargas](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Métodos de extensión](./extension-methods.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Métodos de extensión.](./extension-methods.md)

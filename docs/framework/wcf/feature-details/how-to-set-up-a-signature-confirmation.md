@@ -8,12 +8,12 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 78ad6a88d5c123272e1796f1a75e2bd226bfc8f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176168"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315821"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Filtrar para establecer una confirmación de firma
 *Confirmación de firma* es un mecanismo para un iniciador de mensaje para asegurarse de que se generó una respuesta recibida en respuesta al mensaje original del remitente. La confirmación de la firma se define en la especificación WS-Security 1.1. Si un extremo admite WS-Security 1.0, no puede utilizar la confirmación de firma.  
@@ -22,29 +22,29 @@ ms.locfileid: "59176168"
   
 ### <a name="to-enable-signature-confirmation-in-code"></a>Para habilitar la confirmación de firma en código  
   
-1.  Cree una instancia de la clase <xref:System.ServiceModel.Channels.BindingElementCollection>.  
+1. Cree una instancia de la clase <xref:System.ServiceModel.Channels.BindingElementCollection>.  
   
-2.  Cree una instancia de la <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> clase.  
+2. Cree una instancia de la <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> clase.  
   
-3.  Establezca <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> en `true`.  
+3. Establezca <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> en `true`.  
   
-4.  Agregue el elemento de seguridad a la colección de enlaces.  
+4. Agregue el elemento de seguridad a la colección de enlaces.  
   
-5.  Crear un enlace personalizado, como se especifica en [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+5. Crear un enlace personalizado, como se especifica en [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
 ### <a name="to-enable-signature-confirmation-in-configuration"></a>Para habilitar la confirmación de firma en configuración  
   
-1.  Agregue un elemento `<customBinding>` a la sección`<bindings>` del archivo de configuración.  
+1. Agregue un elemento `<customBinding>` a la sección`<bindings>` del archivo de configuración.  
   
-2.  Agregue un elemento `<binding>` y establezca el atributo de nombre en un valor adecuado.  
+2. Agregue un elemento `<binding>` y establezca el atributo de nombre en un valor adecuado.  
   
-3.  Agregue un elemento de codificación adecuado. El siguiente ejemplo agrega un elemento `<TextMessageEncoding>`.  
+3. Agregue un elemento de codificación adecuado. El siguiente ejemplo agrega un elemento `<TextMessageEncoding>`.  
   
-4.  Agregue un elemento secundario `<security>` y establezca el atributo`requireSignatureConfirmation` en`true`.  
+4. Agregue un elemento secundario `<security>` y establezca el atributo`requireSignatureConfirmation` en`true`.  
   
-5.  Opcional. Para habilitar la confirmación de firma durante el arranque, agregue un [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento secundario y establezca el `equireSignatureConfirmation` atributo `true`.  
+5. Opcional. Para habilitar la confirmación de firma durante el arranque, agregue un [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento secundario y establezca el `equireSignatureConfirmation` atributo `true`.  
   
-6.  Agregue un elemento de transporte adecuado. En el ejemplo siguiente se agrega un [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
+6. Agregue un elemento de transporte adecuado. En el ejemplo siguiente se agrega un [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
   
     ```xml  
     <bindings>  

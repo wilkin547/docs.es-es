@@ -2,12 +2,12 @@
 title: Proceso de contratación
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223226"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313156"
 ---
 # <a name="hiring-process"></a>Proceso de contratación
 Este ejemplo muestra cómo implementar un proceso de negocio mediante actividades de mensajería y dos flujos de trabajo hospedados como servicios de flujo de trabajo. Estos flujos de trabajo son parte de la infraestructura de TI de una compañía ficticia denominada Contoso, Inc.  
@@ -18,7 +18,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
  Este ejemplo muestra las siguientes características de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]:  
   
--   Los flujos de trabajo <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Sequence> para modelar los procesos de negocio.  
+-   <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Sequence> flujos de trabajo para el modelado de procesos empresariales.  
   
 -   Servicios de flujo de trabajo.  
   
@@ -38,9 +38,9 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 -   Composición de actividades.  
   
--   Actividades <xref:System.Activities.Statements.Parallel>.  
+-   <xref:System.Activities.Statements.Parallel> actividades.  
   
--   Actividad <xref:System.Activities.Statements.CancellationScope>.  
+-   <xref:System.Activities.Statements.CancellationScope> actividad.  
   
 -   Temporizadores duraderos (actividad<xref:System.Activities.Statements.Delay>).  
   
@@ -60,9 +60,9 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
 ## <a name="description-of-the-process"></a>Descripción del proceso  
  Contoso, Inc. desea llevar un control detallado del número de personas de cada uno de sus departamentos. Por consiguiente, siempre que un empleado desea iniciar un nuevo proceso de contratación, debe someterse a la aprobación del proceso de solicitud de contratación antes de que la contratación suceda realmente. Este proceso se llama solicitud de proceso de contratación (se define en el proyecto HiringRequestService) y consiste de los siguientes pasos:  
   
-1.  Un empleado (el solicitante) inicia la solicitud del proceso de contratación.  
+1. Un empleado (el solicitante) inicia la solicitud del proceso de contratación.  
   
-2.  El jefe del solicitante debe aprobar la solicitud:  
+2. El jefe del solicitante debe aprobar la solicitud:  
   
     1.  El jefe puede rechazar la solicitud.  
   
@@ -72,13 +72,13 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
     3.  El jefe puede dar su aprobación.  
   
-3.  Después de que el jefe del solicitante da su aprobación, el propietario del departamento debe aprobar la solicitud:  
+3. Después de que el jefe del solicitante da su aprobación, el propietario del departamento debe aprobar la solicitud:  
   
     1.  El propietario del departamento puede rechazarla.  
   
     2.  El propietario del departamento puede aprobarla.  
   
-4.  Después de que el propietario del departamento da su aprobación, el proceso requiere la aprobación de dos responsables de Recursos Humanos o el CEO:  
+4. Después de que el propietario del departamento da su aprobación, el proceso requiere la aprobación de dos responsables de Recursos Humanos o el CEO:  
   
     1.  El proceso puede pasar al estado de aceptado o rechazado.  
   
@@ -86,16 +86,16 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
  Cuando los responsables aprueban la contratación de un nuevo empleado, Recursos Humanos debe encontrar el candidato adecuado. El segundo flujo de trabajo (`ResumeRequest`, definido en ResumeRequestService.csproj) realiza este proceso. Este flujo de trabajo define el proceso para enviar una publicación de vacante con una oferta de trabajo al sitio web de ofertas de trabajo de Contoso, recibe currículos de los solicitantes y supervisa el estado de la publicación de vacante. Las vacantes están disponibles durante un período de tiempo fijo (hasta que expire) o hasta que un empleado en Contoso decida quitarla. El flujo de trabajo `ResumeRequest` se compone de los siguientes pasos:  
   
-1.  Un empleado de Contoso escribe la información sobre la vacante y una duración de tiempo de espera. Una vez que el empleado escribe esta información, la vacante se publica en el sitio web de ofertas de trabajo.  
+1. Un empleado de Contoso escribe la información sobre la vacante y una duración de tiempo de espera. Una vez que el empleado escribe esta información, la vacante se publica en el sitio web de ofertas de trabajo.  
   
-2.  Una vez publicada la información, las partes interesadas pueden enviar sus currículos. Cuando se envía un curriculum, se almacena en un registro vinculado al puesto vacante.  
+2. Una vez publicada la información, las partes interesadas pueden enviar sus currículos. Cuando se envía un curriculum, se almacena en un registro vinculado al puesto vacante.  
   
-3.  Los solicitantes pueden enviar los currículos hasta que expire el tiempo de espera o alguien del departamento de Recursos Humanos de Contoso decida quitar la vacante deteniendo el proceso.  
+3. Los solicitantes pueden enviar los currículos hasta que expire el tiempo de espera o alguien del departamento de Recursos Humanos de Contoso decida quitar la vacante deteniendo el proceso.  
   
 ## <a name="projects-in-the-sample"></a>Proyectos del ejemplo  
  En la siguiente tabla se muestran los proyectos de la solución de ejemplo.  
   
-|Project|Descripción|  
+|Proyecto|Descripción|  
 |-------------|-----------------|  
 |ContosoHR|Contiene contratos de datos, objetos de negocios y clases de repositorio.|  
 |HiringRequestService|Contiene la definición del flujo de trabajo del proceso de solicitud de contratación.<br /><br /> Este proyecto se implementa como una aplicación de consola que autohospeda el flujo de trabajo (archivo xaml) como servicio.|  
@@ -108,23 +108,23 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
 ## <a name="feature-summary"></a>Resumen de características  
  La siguiente tabla describe cómo se usa cada característica en este ejemplo.  
   
-|Característica|Descripción|Project|  
+|Característica|Descripción|Proyecto|  
 |-------------|-----------------|-------------|  
 |Diagrama de flujo|El proceso de negocio se representa como un diagrama de flujo. Esta descripción de diagrama de flujo representa el proceso de la misma manera en la que una empresa lo habría dibujado en una pizarra.|HiringRequestService|  
-|Servicios de flujo de trabajo|El diagrama de flujo con la definición del proceso se hospeda en un servicio (en este ejemplo, el servicio se hospeda en una aplicación de consola).|HiringRequestService|  
+|Servicios de flujo de trabajo|El diagrama de flujo con la definición de proceso se hospeda en un servicio (en este ejemplo, el servicio se hospeda en una aplicación de consola).|HiringRequestService|  
 |Actividades de mensajería|El diagrama de flujo utiliza actividades de mensajería de dos maneras:<br /><br /> -Para obtener información del usuario (para recibir las decisiones e información relacionada en cada paso de aprobación).<br />-Para interactuar con otros servicios existentes (InboxService y OrgDataService, que se usan a través de referencias de servicio).|HiringRequestService|  
 |Correlación basada en contenido|Los mensajes de aprobación se correlacionan por la propiedad ID de la solicitud de contratación:<br /><br /> -Cuando se inicia un proceso, el identificador de correlación se inicializa con el identificador de la solicitud.<br />-Los mensajes de aprobación entrantes se correlacionan por su identificador (el primer parámetro de cada mensaje de aprobación es el identificador de la solicitud).|HiringRequestService / ResumeRequestService|  
 |Actividades personalizadas (declarativas y basadas en código).|Hay varias actividades personalizadas en este ejemplo:<br /><br /> -   `SaveActionTracking`: Esta actividad emite un personalizado <xref:System.Activities.Tracking.TrackingRecord> (mediante <xref:System.Activities.NativeActivityContext.Track%2A>). Esta actividad se ha creado utilizando código imperativo que extiende <xref:System.Activities.NativeActivity>.<br />-   `GetEmployeesByPositionTypes`: Esta actividad recibe una lista de identificadores de tipo de posición y devuelve una lista de personas que ocupan ese puesto en Contoso. Esta actividad se ha creado de forma declarativa (con el diseñador de actividades).<br />-   `SaveHiringRequestInfo`: Esta actividad guarda la información de un `HiringRequest` (mediante `HiringRequestRepository.Save`). Esta actividad se ha creado utilizando código imperativo que extiende <xref:System.Activities.CodeActivity>.|HiringRequestService|  
-|Persistencia de SQL Server proporcionada por el sistema.|La instancia de <xref:System.ServiceModel.Activities.WorkflowServiceHost> que hospeda la definición del proceso de Diagrama de flujo se configura para utilizar la persistencia de SQL Server proporcionada por el sistema.|HiringRequestService / ResumeRequestService|  
+|Persistencia de SQL Server proporcionada por el sistema.|La instancia de <xref:System.ServiceModel.Activities.WorkflowServiceHost> que hospeda la definición de proceso de Diagrama de flujo se configura para utilizar la persistencia de SQL Server proporcionada por el sistema.|HiringRequestService / ResumeRequestService|  
 |Seguimiento personalizado|En el ejemplo se incluye un participante de seguimiento personalizado que guarda el historial de `HiringRequestProcess` (registra qué acción se ha realizado, quién la ha realizado y cuándo se ha realizado). El código fuente está en la carpeta Tracking de HiringRequestService.|HiringRequestService|  
 |Seguimiento ETW|El seguimiento de ETW proporcionado por el sistema se configura en el archivo App.config en el servicio HiringRequestService.|HiringRequestService|  
 |Composición de actividades|La definición del proceso utiliza la composición libre de <xref:System.Activities.Activity>. El Diagrama de flujo contiene varias actividades Sequence y Parallel que al mismo tiempo contienen otras actividades (y así sucesivamente).|HiringRequestService|  
 |Actividades paralelas|-   <xref:System.Activities.Statements.ParallelForEach%601> se usa para registrar en la Bandeja de entrada del CEO y responsables de recursos humanos en paralelo (en espera para el paso de aprobación de los directores de recursos humanos dos).<br />-   <xref:System.Activities.Statements.Parallel> se usa para realizar algunas tareas de limpieza en los pasos Completed y Rejected.|HiringRequestService|  
 |Cancelación de modelo|El Diagrama de flujo utiliza <xref:System.Activities.Statements.CancellationScope> para crear el comportamiento de cancelación (en este caso, se lleva a cabo alguna limpieza).|HiringRequestService|  
-|Participante de persistencia del cliente|`HiringRequestPersistenceParticipant` guarda los datos de una variable de flujo de trabajo en una tabla almacenada en la base de datos de Recursos Humanos de Contoso.|HiringRequestService|  
-|Servicios de flujo de trabajo|`ResumeRequestService` se implementa utilizando los servicios de flujo de trabajo. La definición del Flujo de trabajo y la información del servicio se encuentran en ResumeRequestService.xamlx. El servicio se configura para utilizar la persistencia y el seguimiento.|ResumeRequestService|  
-|Temporizadores duraderos|`ResumeRequestService` utiliza temporizadores duraderos para definir la duración de la publicación de vacante (una vez que expira el tiempo de espera, se cierra la publicación de vacante).|ResumeRequestService|  
-|Transacciones|<xref:System.Activities.Statements.TransactionScope> se utiliza para garantizar la coherencia de los datos dentro de la ejecución de varias actividades (cuando se recibe un nuevo curriculum vitae).|ResumeRequestService|  
+|Participante de persistencia del cliente|`HiringRequestPersistenceParticipant` guarda los datos de una variable de flujo de trabajo a una tabla almacenada en la base de datos de recursos humanos de Contoso.|HiringRequestService|  
+|Servicios de flujo de trabajo|`ResumeRequestService` se implementa mediante los servicios de flujo de trabajo. La definición del Flujo de trabajo y la información del servicio se encuentran en ResumeRequestService.xamlx. El servicio se configura para utilizar la persistencia y el seguimiento.|ResumeRequestService|  
+|Temporizadores duraderos|`ResumeRequestService` utiliza temporizadores duraderos para definir la duración de una publicación de vacante (es la publicación de vacante cierra una vez que expire el tiempo de espera,).|ResumeRequestService|  
+|Transacciones|<xref:System.Activities.Statements.TransactionScope> se utiliza para garantizar la coherencia de datos dentro de la ejecución de varias actividades (cuando se recibe un nuevo curriculum vitae).|ResumeRequestService|  
 |Transacciones|El participante de persistencia personalizado (`HiringRequestPersistenceParticipant`) y el participante de seguimiento personalizado (`HistoryFileTrackingParticipant`) usan la misma transacción.|HiringRequestService|  
 |Utilizar [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en aplicaciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].|Los flujos de trabajo están accesibles desde dos aplicaciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].|InternalClient / CareersWebSite|  
   
@@ -137,87 +137,87 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 #### <a name="to-create-the-databases"></a>Para crear las bases de datos  
   
-1.  Abra un símbolo del sistema para desarrolladores de Visual Studio.  
+1. Abra un símbolo del sistema para desarrolladores de Visual Studio.  
   
-2.  Navegue hasta la carpeta del ejemplo.  
+2. Navegue hasta la carpeta del ejemplo.  
   
-3.  Ejecute Setup.cmd.  
+3. Ejecute Setup.cmd.  
   
-4.  Compruebe que las dos bases de datos, `ContosoHR` e `InstanceStore`, se crearon en SQL Express.  
+4. Compruebe que las dos bases de datos, `ContosoHR` e `InstanceStore`, se crearon en SQL Express.  
   
 #### <a name="to-set-up-the-solution-for-execution"></a>Para configurar la solución para su ejecución  
   
-1.  Ejecute Visual Studio como administrador. Abra HiringRequest.sln.  
+1. Ejecute Visual Studio como administrador. Abra HiringRequest.sln.  
   
-2.  Haga clic en la solución en **el Explorador de soluciones** y seleccione **propiedades**.  
+2. Haga clic en la solución en **el Explorador de soluciones** y seleccione **propiedades**.  
   
-3.  Seleccione la opción **varios proyectos de inicio** y establezca el **CareersWebSite**, **InternalClient**, **HiringRequestService**, y **ResumeRequestService** a **iniciar**. Deje **ContosoHR**, **InboxService**, y **OrgService** como ninguno.  
+3. Seleccione la opción **varios proyectos de inicio** y establezca el **CareersWebSite**, **InternalClient**, **HiringRequestService**, y **ResumeRequestService** a **iniciar**. Deje **ContosoHR**, **InboxService**, y **OrgService** como ninguno.  
   
-4.  Compile la solución presionando CTRL+MAYÚS+B. Compruebe que la compilación se ha realizado correctamente.  
+4. Compile la solución presionando CTRL+MAYÚS+B. Compruebe que la compilación se ha realizado correctamente.  
   
 #### <a name="to-run-the-solution"></a>Para ejecutar la solución  
   
-1.  Cuando se compile la solución, presione CTRL+F5 para ejecutarla sin depuración. Compruebe que todos los servicios se han iniciado.  
+1. Cuando se compile la solución, presione CTRL+F5 para ejecutarla sin depuración. Compruebe que todos los servicios se han iniciado.  
   
-2.  Haga clic en **InternalClient** en la solución y, a continuación, seleccione **ver en el explorador**. Se muestra la página predeterminada para `InternalClient`. Asegúrese de que los servicios se están ejecutando y haga clic en el vínculo.  
+2. Haga clic en **InternalClient** en la solución y, a continuación, seleccione **ver en el explorador**. Se muestra la página predeterminada para `InternalClient`. Asegúrese de que los servicios se están ejecutando y haga clic en el vínculo.  
   
-3.  El **HiringRequest** se muestra el módulo. Puede seguir el escenario que aquí se detalla.  
+3. El **HiringRequest** se muestra el módulo. Puede seguir el escenario que aquí se detalla.  
   
-4.  Cuando `HiringRequest` se haya completado, puede iniciar `ResumeRequest`. Puede seguir el escenario que aquí se detalla.  
+4. Cuando `HiringRequest` se haya completado, puede iniciar `ResumeRequest`. Puede seguir el escenario que aquí se detalla.  
   
-5.  Cuando se expone `ResumeRequest`, está disponible en el sitio web público (sitio web de ofertas de trabajo de Contoso). Para ver la publicación de vacante (y solicitar el puesto), navegue hasta el sitio web de ofertas de trabajo (Careers).  
+5. Cuando se expone `ResumeRequest`, está disponible en el sitio web público (sitio web de ofertas de trabajo de Contoso). Para ver la publicación de vacante (y solicitar el puesto), navegue hasta el sitio web de ofertas de trabajo (Careers).  
   
-6.  Haga clic en **CareersWebSite** en la solución y seleccione **ver en el explorador**.  
+6. Haga clic en **CareersWebSite** en la solución y seleccione **ver en el explorador**.  
   
-7.  Vuelva a la `InternalClient` haciendo **InternalClient** en la solución y seleccionando **ver en el explorador**.  
+7. Vuelva a la `InternalClient` haciendo **InternalClient** en la solución y seleccionando **ver en el explorador**.  
   
-8.  Vaya a la **JobPostings** sección haciendo clic en el **Job Postings** vínculo en el menú superior de la Bandeja de entrada. Puede seguir el escenario que aquí se detalla.  
+8. Vaya a la **JobPostings** sección haciendo clic en el **Job Postings** vínculo en el menú superior de la Bandeja de entrada. Puede seguir el escenario que aquí se detalla.  
   
 ## <a name="scenarios"></a>Escenarios  
   
 ### <a name="hiring-request"></a>Solicitud de contratación  
   
-1.  Michael Alejandro (Ingeniero de software) desea solicitar una nueva vacante para contratar a un ingeniero de software en Pruebas (SDET), en el departamento de Ingeniería, que tenga 3 años de experiencia en C# por lo menos.  
+1. Michael Alejandro (Ingeniero de software) desea solicitar una nueva vacante para contratar a un ingeniero de software en Pruebas (SDET), en el departamento de Ingeniería, que tenga 3 años de experiencia en C# por lo menos.  
   
-2.  Después de crearla, la solicitud aparece en la Bandeja de entrada de Michael (haga clic en **actualizar** si no ve la solicitud) en espera de aprobación de Peter Brehm, que es el jefe de Michael.  
+2. Después de crearla, la solicitud aparece en la Bandeja de entrada de Michael (haga clic en **actualizar** si no ve la solicitud) en espera de aprobación de Peter Brehm, que es el jefe de Michael.  
   
-3.  Peter desea actuar sobre la solicitud de Michael. Piensa que el puesto exige 5 años de experiencia en C# en lugar de 3, de modo que devuelve sus comentarios para su revisión.  
+3. Peter desea actuar sobre la solicitud de Michael. Piensa que el puesto exige 5 años de experiencia en C# en lugar de 3, de modo que devuelve sus comentarios para su revisión.  
   
-4.  Michael ve un mensaje de su jefe en la bandeja de entrada y desea tomar parte. Michael ve el historial de la solicitud de vacante y está de acuerdo con Peter. Michael modifica la descripción para exigir 5 años de experiencia en C# y acepta la modificación.  
+4. Michael ve un mensaje de su jefe en la bandeja de entrada y desea tomar parte. Michael ve el historial de la solicitud de vacante y está de acuerdo con Peter. Michael modifica la descripción para exigir 5 años de experiencia en C# y acepta la modificación.  
   
-5.  Peter actúa sobre la solicitud modificada de Michael y la acepta. Ahora, el director de Ingeniería, Tsvi Reiter, debe aprobar la solicitud.  
+5. Peter actúa sobre la solicitud modificada de Michael y la acepta. Ahora, el director de Ingeniería, Tsvi Reiter, debe aprobar la solicitud.  
   
-6.  Tsvi Reiter desea agilizar la solicitud, de modo que incluye un comentario para decir que la solicitud es urgente y la acepta.  
+6. Tsvi Reiter desea agilizar la solicitud, de modo que incluye un comentario para decir que la solicitud es urgente y la acepta.  
   
-7.  Ahora, la solicitud tiene que ser aprobada por dos responsables de Recursos Humanos o el CEO. El CEO, Brian Richard Goldstein, ve la solicitud urgente de Tsvi. Actúa sobre la solicitud, aceptándola, evitando así la aprobación de los dos responsables de Recursos Humanos.  
+7. Ahora, la solicitud tiene que ser aprobada por dos responsables de Recursos Humanos o el CEO. El CEO, Brian Richard Goldstein, ve la solicitud urgente de Tsvi. Actúa sobre la solicitud, aceptándola, evitando así la aprobación de los dos responsables de Recursos Humanos.  
   
-8.  La solicitud se quita de la bandeja de entrada de Michael y comienza ahora el proceso de contratación de un SDET.  
+8. La solicitud se quita de la bandeja de entrada de Michael y comienza ahora el proceso de contratación de un SDET.  
   
 ### <a name="start-resume-request"></a>Iniciar la solicitud de curriculum vitae  
   
-1.  Ahora, el puesto de trabajo está esperando que se publicará en un sitio Web externo donde las personas puedan solicitarlo (puede verlo haciendo clic en el **Job Postings** vínculo). Actualmente, el puesto de trabajo está en manos de un representante de Recursos Humanos, que es el responsable de terminarlo y publicarlo.  
+1. Ahora, el puesto de trabajo está esperando que se publicará en un sitio Web externo donde las personas puedan solicitarlo (puede verlo haciendo clic en el **Job Postings** vínculo). Actualmente, el puesto de trabajo está en manos de un representante de Recursos Humanos, que es el responsable de terminarlo y publicarlo.  
   
-2.  Recursos humanos desea modificar este puesto de trabajo (haciendo clic en el **editar** vínculo) al establecer un tiempo de espera de 60 minutos (en la vida real, esto podría ser días o semanas). El tiempo de espera permite retirar el puesto de trabajo del sitio web externo según el tiempo especificado.  
+2. Recursos humanos desea modificar este puesto de trabajo (haciendo clic en el **editar** vínculo) al establecer un tiempo de espera de 60 minutos (en la vida real, esto podría ser días o semanas). El tiempo de espera permite retirar el puesto de trabajo del sitio web externo según el tiempo especificado.  
   
-3.  Después de guardar el puesto de trabajo editado, aparece en el **Receiving Resumes** ficha (actualice la página Web para ver el nuevo puesto de trabajo).  
+3. Después de guardar el puesto de trabajo editado, aparece en el **Receiving Resumes** ficha (actualice la página Web para ver el nuevo puesto de trabajo).  
   
 ### <a name="collecting-resumes"></a>Recopilar currículos  
   
-1.  El puesto de trabajo debería aparecer en el sitio web externo. Si una persona está interesada en solicitar el puesto, puede hacerlo y enviar su curriculum vitae.  
+1. El puesto de trabajo debería aparecer en el sitio web externo. Si una persona está interesada en solicitar el puesto, puede hacerlo y enviar su curriculum vitae.  
   
-2.  Si vuelve al servicio Job Postings List, puede "ver los currículos" que se han recopilado hasta ahora.  
+2. Si vuelve al servicio Job Postings List, puede "ver los currículos" que se han recopilado hasta ahora.  
   
-3.  Recursos humanos también puede dejar de recopilar currículos (una vez que se ha identificado el candidato correcto).  
+3. Recursos humanos también puede dejar de recopilar currículos (una vez que se ha identificado el candidato correcto).  
   
 ## <a name="troubleshooting"></a>Solución de problemas  
   
-1.  Asegúrese de que se está ejecutando Visual Studio con privilegios de administrador.  
+1. Asegúrese de que se está ejecutando Visual Studio con privilegios de administrador.  
   
-2.  Si la solución no se compila, compruebe lo siguiente:  
+2. Si la solución no se compila, compruebe lo siguiente:  
   
     -   La referencia a `ContosoHR` no no se encuentra en la `InternalClient` o `CareersWebSite` proyectos.  
   
-3.  Si la solución no se ejecuta, compruebe lo siguiente:  
+3. Si la solución no se ejecuta, compruebe lo siguiente:  
   
     1.  Todos los servicios se están ejecutando.  
   
@@ -231,6 +231,6 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 ## <a name="uninstalling"></a>Desinstalación  
   
-1.  Para eliminar el almacén de instancias de SQL Server, ejecute el archivo Cleanup.bat, situado en la carpeta DbSetup.  
+1. Para eliminar el almacén de instancias de SQL Server, ejecute el archivo Cleanup.bat, situado en la carpeta DbSetup.  
   
-2.  Elimine el código fuente de su disco duro.
+2. Elimine el código fuente de su disco duro.

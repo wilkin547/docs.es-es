@@ -2,12 +2,12 @@
 title: Integración de almacenamiento en caché de ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197453"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309477"
 ---
 # <a name="aspnet-caching-integration"></a>Integración de almacenamiento en caché de ASP.NET
 En este ejemplo se muestra cómo utilizar la memoria caché de resultados de ASP.NET con el modelo de programación HTTP wEB de WCF. Este tema se centra en la característica de integración de la memoria caché de resultados de ASP.NET.  
@@ -24,7 +24,7 @@ En este ejemplo se muestra cómo utilizar la memoria caché de resultados de ASP
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`  
   
-## <a name="discussion"></a>Explicación  
+## <a name="discussion"></a>Discusión  
  El ejemplo usa el <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> utilizar ASP.NET de salida de almacenamiento en caché con el servicio de Windows Communication Foundation (WCF). <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> se aplica a las operaciones de servicio y proporciona el nombre de un perfil de la memoria caché en un archivo de configuración que se debería aplicar a las respuestas de la operación dada.  
   
  En el archivo Service.cs del proyecto de servicio de ejemplo, tanto el `GetCustomer` y `GetCustomers` operaciones se marcan con el <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, que proporciona el nombre de perfil de caché "CacheFor60Seconds". En el archivo Web.config del proyecto de servicio, el perfil de caché "CacheFor60Seconds" se proporciona bajo el <`caching`> elemento de <`system.web`>. Para este perfil de caché, el valor de la `duration` atributo es "60", por lo que las respuestas asociadas a este perfil se almacenan en caché en la caché de resultados ASP.NET durante 60 segundos. Además, para este perfil de caché, el `varmByParam` está establecido en "format" de modo que las solicitudes con valores diferentes para el `format` consulta al parámetro de cadena tienen sus respuestas en caché por separado. Por último, el perfil de caché `varyByHeader` atributo está establecido en "Accept", por lo que las solicitudes con diferentes valores de encabezado Accept tienen sus respuestas en caché por separado.  
@@ -34,31 +34,31 @@ En este ejemplo se muestra cómo utilizar la memoria caché de resultados de ASP
 ## <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
  El ejemplo consta de tres proyectos:  
   
--   **Servicio**: proyecto de aplicación Web que incluye un servicio HTTP WCF hospedado en ASP.NET.  
+-   **Servicio**: Un proyecto de aplicación Web que incluye un servicio HTTP WCF hospedado en ASP.NET.  
   
--   **Cliente**: un proyecto de aplicación de consola que realiza las llamadas al servicio.  
+-   **Cliente**: Proyecto de aplicación de consola que realiza las llamadas al servicio.  
   
--   **Common**: una biblioteca compartida que contiene el tipo de cliente utilizado por el cliente y el servicio.  
+-   **Common**: Una biblioteca compartida que contiene el tipo de cliente utilizado por el cliente y el servicio.  
   
  Cuando se ejecuta la aplicación de consola Cliente, el cliente realiza las solicitudes al servicio y escribe la información pertinente de las respuestas en la ventana de la consola.  
   
 #### <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
   
-1.  Abra la solución para obtener el ejemplo de integración del almacenamiento en caché de ASP.NET.  
+1. Abra la solución para obtener el ejemplo de integración del almacenamiento en caché de ASP.NET.  
   
-2.  Presione Ctrl+MAYÚS+B para compilar la solución.  
+2. Presione Ctrl+MAYÚS+B para compilar la solución.  
   
-3.  Si el **el Explorador de soluciones** ventana ya no está abierta, presione CTRL + W + S.  
+3. Si el **el Explorador de soluciones** ventana ya no está abierta, presione CTRL + W + S.  
   
-4.  Desde el **el Explorador de soluciones** ventana, haga clic derecho la **servicio** del proyecto y seleccione **Iniciar nueva instancia**. De esta forma se inicia el servidor de desarrollo de ASP.NET, que hospeda el servicio.  
+4. Desde el **el Explorador de soluciones** ventana, haga clic derecho la **servicio** del proyecto y seleccione **Iniciar nueva instancia**. De esta forma se inicia el servidor de desarrollo de ASP.NET, que hospeda el servicio.  
   
-5.  Desde el **el Explorador de soluciones** ventana, haga clic derecho la **cliente** del proyecto y seleccione **Iniciar nueva instancia**.  
+5. Desde el **el Explorador de soluciones** ventana, haga clic derecho la **cliente** del proyecto y seleccione **Iniciar nueva instancia**.  
   
-6.  La ventana de la consola del cliente aparece y proporciona el URI del servicio en ejecución y el URI de la página de Ayuda HTML para este. Puede ver la página de Ayuda HTML en cualquier momento escribiendo su URI en un explorador.  
+6. La ventana de la consola del cliente aparece y proporciona el URI del servicio en ejecución y el URI de la página de Ayuda HTML para este. Puede ver la página de Ayuda HTML en cualquier momento escribiendo su URI en un explorador.  
   
-7.  A medida que el ejemplo se ejecuta, el cliente escribe el estado de la actividad actual.  
+7. A medida que el ejemplo se ejecuta, el cliente escribe el estado de la actividad actual.  
   
-8.  Presione cualquier tecla para terminar la aplicación de consola del cliente.  
+8. Presione cualquier tecla para terminar la aplicación de consola del cliente.  
   
 9. Presione MAYÚS+F5 para dejar de depurar el servicio.  
   

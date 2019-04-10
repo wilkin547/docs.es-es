@@ -9,20 +9,19 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825383"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318941"
 ---
 # <a name="decision-structures-visual-basic"></a>Estructuras de decisión (Visual Basic)
 Visual Basic le permite probar condiciones y realizar diferentes operaciones en función de los resultados de la prueba. Se puede comprobar una condición es true o false para distintos valores de una expresión, o varias excepciones que se genera cuando se ejecuta una serie de instrucciones.  
   
  La siguiente ilustración muestra una estructura de decisión que comprueba una condición es true y realiza acciones diferentes dependiendo de si es true o false.  
   
- ![Diagrama de flujo de If... Entonces... Otra construcción](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "IfThenElse")  
-Emprender acciones diferentes cuando una condición es true y cuando es false  
+ ![Un diagrama de flujo de If... Entonces... Otra construcción.](./media/decision-structures/if-then-else-construction.gif)  
   
 ## <a name="ifthenelse-construction"></a>If... Entonces... Construcción else  
  `If...Then...Else` construcciones le permiten probar uno o más condiciones y ejecutar una o varias instrucciones según cada condición. Puede probar condiciones y realizar acciones de las maneras siguientes:  

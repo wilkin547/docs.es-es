@@ -2,12 +2,12 @@
 title: 'Codificador de mensajes personalizado: codificador de compresión'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 9dd1e2eb25b2f400ba42b6cee75f8563c4d52c31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140691"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310504"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Codificador de mensajes personalizado: codificador de compresión
 Este ejemplo muestra cómo implementar un codificador personalizado mediante la plataforma de Windows Communication Foundation (WCF).  
@@ -39,9 +39,9 @@ Este ejemplo muestra cómo implementar un codificador personalizado mediante la 
   
  Tal y como se ha indicado previamente, hay varios niveles que se implementan en un codificador personalizado. Para mostrar mejor la relación entre cada uno de estos niveles, hay un orden simplificado de eventos para el inicio del servicio en la lista siguiente:  
   
-1.  El servidor se inicia.  
+1. El servidor se inicia.  
   
-2.  Se lee la información de configuración.  
+2. Se lee la información de configuración.  
   
     1.  La configuración de servicio registra el controlador de configuración personalizado.  
   
@@ -51,11 +51,11 @@ Este ejemplo muestra cómo implementar un codificador personalizado mediante la 
   
     4.  El elemento de enlace personalizado crea y devuelve el generador de codificadores de mensajes.  
   
-3.  Se recibe un mensaje.  
+3. Se recibe un mensaje.  
   
-4.  El generador de codificadores de mensajes devuelve un codificador de mensaje para leer en el mensaje y escribir la respuesta.  
+4. El generador de codificadores de mensajes devuelve un codificador de mensaje para leer en el mensaje y escribir la respuesta.  
   
-5.  El nivel del codificador se implementa como un generador de clases. Sólo se debe exponer públicamente el generador de clases del codificador para el codificador personalizado. El elemento de enlace devuelve el objeto del generador cuando se crea el objeto <xref:System.ServiceModel.ServiceHost> o <xref:System.ServiceModel.ChannelFactory%601>. Los codificadores de mensaje pueden funcionar en un modo almacenado en búfer o en un modo de transmisión por secuencias. Este ejemplo muestra ambos modos.  
+5. El nivel del codificador se implementa como un generador de clases. Sólo se debe exponer públicamente el generador de clases del codificador para el codificador personalizado. El elemento de enlace devuelve el objeto del generador cuando se crea el objeto <xref:System.ServiceModel.ServiceHost> o <xref:System.ServiceModel.ChannelFactory%601>. Los codificadores de mensaje pueden funcionar en un modo almacenado en búfer o en un modo de transmisión por secuencias. Este ejemplo muestra ambos modos.  
   
  Para cada modo hay un método `ReadMessage` y `WriteMessage` acompañante en la clase `MessageEncoder` abstracta. Una mayoría del trabajo de codificación tiene lugar en estos métodos. El ejemplo ajusta el texto existente y los codificadores de mensaje binarios. Esto permite al ejemplo delegar la lectura y escritura de la representación de la conexión de mensajes en el codificador interno y permite al codificador de compresión comprimir o descomprimir los resultados. Dado que no hay ningún conductor para la codificación de mensajes, este es el único modelo para utilizar varios codificadores en WCF. Una vez descomprimido el mensaje, el mensaje resultante se pasa a la pila para que lo gestione la pila de canales. Durante la compresión, el mensaje comprimido resultante se escribe directamente en la secuencia proporcionada.  
   
@@ -334,17 +334,17 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Instale [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 mediante el siguiente comando:  
+1. Instale [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 mediante el siguiente comando:  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

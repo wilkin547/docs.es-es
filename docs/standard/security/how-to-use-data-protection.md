@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Usar protección de datos
+title: Filtrar para usar la protección de datos
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698404"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314467"
 ---
-# <a name="how-to-use-data-protection"></a>Procedimiento Usar protección de datos
+# <a name="how-to-use-data-protection"></a>Filtrar para usar la protección de datos
 .NET Framework proporciona acceso a la API de protección de datos (DPAPI), que permite cifrar datos usando la información del equipo o la cuenta del usuario actual.  Cuando se usa la DPAPI, se alivia el difícil problema de generar y almacenar explícitamente una clave criptográfica.  
   
  Use la clase <xref:System.Security.Cryptography.ProtectedMemory> para cifrar una matriz de bytes en memoria.  Esta funcionalidad está disponible en Microsoft Windows XP y en los sistemas operativos posteriores.  Puede especificar que la memoria cifrada por el proceso actual pueda ser descifrada solo por el proceso actual, por todos los procesos o desde el mismo contexto de usuario.  Consulte la enumeración <xref:System.Security.Cryptography.MemoryProtectionScope> para obtener una descripción detallada de las opciones de <xref:System.Security.Cryptography.ProtectedMemory>.  
@@ -34,25 +34,25 @@ ms.locfileid: "54698404"
   
 ### <a name="to-encrypt-in-memory-data-using-data-protection"></a>Para cifrar los datos en memoria mediante la protección de datos  
   
-1.  Llame al método <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> estático mientras pasa la matriz de bytes que se vaya a cifrar, la entropía y el ámbito de la protección de memoria.  
+1. Llame al método <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> estático mientras pasa la matriz de bytes que se vaya a cifrar, la entropía y el ámbito de la protección de memoria.  
   
 ### <a name="to-decrypt-in-memory-data-using-data-protection"></a>Para descifrar los datos en memoria mediante la protección de datos  
   
-1.  Llame al método <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> estático mientras pasa la matriz de bytes que se vaya a descifrar y el ámbito de la protección de memoria.  
+1. Llame al método <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> estático mientras pasa la matriz de bytes que se vaya a descifrar y el ámbito de la protección de memoria.  
   
 ### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>Para cifrar datos en un archivo o una secuencia usando la protección de datos  
   
-1.  Cree una entropía aleatoria.  
+1. Cree una entropía aleatoria.  
   
-2.  Llame al método <xref:System.Security.Cryptography.ProtectedData.Protect%2A> estático mientras pasa la matriz de bytes que se vaya a cifrar, la entropía y el ámbito de la protección de datos.  
+2. Llame al método <xref:System.Security.Cryptography.ProtectedData.Protect%2A> estático mientras pasa la matriz de bytes que se vaya a cifrar, la entropía y el ámbito de la protección de datos.  
   
-3.  Escriba los datos cifrados en un archivo o en una secuencia.  
+3. Escriba los datos cifrados en un archivo o en una secuencia.  
   
 ### <a name="to-decrypt-data-from-a-file-or-stream-using-data-protection"></a>Para descifrar los datos de un archivo o secuencia usando la protección de datos  
   
-1.  Lea los datos cifrados desde un archivo o una secuencia.  
+1. Lea los datos cifrados desde un archivo o una secuencia.  
   
-2.  Llame al método <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> estático mientras pasa la matriz de bytes que se vaya a descifrar y el ámbito de la protección de datos.  
+2. Llame al método <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> estático mientras pasa la matriz de bytes que se vaya a descifrar y el ámbito de la protección de datos.  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo de código se muestran dos formas de cifrado y descifrado.  En primer lugar, el ejemplo de código cifra y luego descifra la matriz de bytes en memoria.  A continuación, el ejemplo de código cifra una copia de una matriz de bytes, la guarda en un archivo, vuelve a cargar los datos del archivo y, a continuación, descifra los datos.  El ejemplo muestra los datos originales, los datos cifrados y los datos descifrados.  

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 52c33239524e76bc26b9b2375578aa46bff51bf6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 152706cee511e4bca1dd324a652e8077b1f8548a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142563"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312662"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Filtrar para mostrar barras de desplazamiento en el control RichTextBox de formularios Windows Forms
 De forma predeterminada, los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control muestra las barras de desplazamiento horizontales y verticales según sea necesario. Hay siete valores posibles para el <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> propiedad de la <xref:System.Windows.Forms.RichTextBox> control, que se describen en la tabla siguiente.  
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Para mostrar las barras de desplazamiento en un control RichTextBox  
   
-1.  Establezca la propiedad <xref:System.Windows.Forms.RichTextBox.Multiline%2A> en `true`. Se mostrará ningún tipo de barra de desplazamiento, como horizontal, si la <xref:System.Windows.Forms.RichTextBox.Multiline%2A> propiedad está establecida en `false`.  
+1. Establezca la propiedad <xref:System.Windows.Forms.RichTextBox.Multiline%2A> en `true`. Se mostrará ningún tipo de barra de desplazamiento, como horizontal, si la <xref:System.Windows.Forms.RichTextBox.Multiline%2A> propiedad está establecida en `false`.  
   
-2.  Establecer el <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> propiedad en un valor adecuado de la <xref:System.Windows.Forms.RichTextBoxScrollBars> enumeración.  
+2. Establecer el <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> propiedad en un valor adecuado de la <xref:System.Windows.Forms.RichTextBoxScrollBars> enumeración.  
   
     |Valor|Descripción|  
     |-----------|-----------------|  
@@ -32,7 +32,7 @@ De forma predeterminada, los formularios de Windows <xref:System.Windows.Forms.R
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|Muestra siempre una barra de desplazamiento vertical. La barra de desplazamiento aparece atenuada cuando el texto no supera la longitud del control.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|Muestra siempre una barra de desplazamiento vertical. Muestra cuándo la barra de desplazamiento horizontal del <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> propiedad está establecida en `false`. Las barras de desplazamiento aparecen en gris cuando el texto no superar el ancho o la longitud del control.|  
   
-3.  Establezca la propiedad <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> en un valor apropiado.  
+3. Establezca la propiedad <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> en un valor apropiado.  
   
     |Valor|Descripción|  
     |-----------|-----------------|  

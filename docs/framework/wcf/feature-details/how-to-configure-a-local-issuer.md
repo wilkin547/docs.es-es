@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: cb4a2bcc6f62fac5d0dde82ab32ed6e04e8a9b7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095560"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306994"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Filtrar para configurar un emisor local
 En este tema se describe cómo configurar un cliente para utilizar un emisor local para los tokens emitidos.  
@@ -27,14 +27,14 @@ En este tema se describe cómo configurar un cliente para utilizar un emisor loc
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Para configurar el emisor local en código  
   
-1.  Cree una variable de tipo <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
+1. Cree una variable de tipo <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
   
-2.  Establezca la variable en la instancia devuelta de la propiedad <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> de la clase `ClientCredentials`. Esa instancia es devuelta por la propiedad <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> del cliente (heredada de <xref:System.ServiceModel.ClientBase%601>) o la propiedad <xref:System.ServiceModel.ChannelFactory.Credentials%2A> de <xref:System.ServiceModel.ChannelFactory>:  
+2. Establezca la variable en la instancia devuelta de la propiedad <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> de la clase `ClientCredentials`. Esa instancia es devuelta por la propiedad <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> del cliente (heredada de <xref:System.ServiceModel.ClientBase%601>) o la propiedad <xref:System.ServiceModel.ChannelFactory.Credentials%2A> de <xref:System.ServiceModel.ChannelFactory>:  
   
      [!code-csharp[c_CreateSTS#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#9)]
      [!code-vb[c_CreateSTS#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#9)]  
   
-3.  Establezca la propiedad <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> en una nueva instancia de <xref:System.ServiceModel.EndpointAddress>, con la dirección del emisor local como un argumento para el constructor.  
+3. Establezca la propiedad <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> en una nueva instancia de <xref:System.ServiceModel.EndpointAddress>, con la dirección del emisor local como un argumento para el constructor.  
   
      [!code-csharp[c_CreateSTS#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#10)]
      [!code-vb[c_CreateSTS#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#10)]  
@@ -49,27 +49,27 @@ En este tema se describe cómo configurar un cliente para utilizar un emisor loc
      [!code-csharp[c_CreateSTS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#12)]
      [!code-vb[c_CreateSTS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#12)]  
   
-4.  Establecer el enlace del emisor local utilizando la <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> propiedad.  
+4. Establecer el enlace del emisor local utilizando la <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> propiedad.  
   
      [!code-csharp[c_CreateSTS#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#13)]
      [!code-vb[c_CreateSTS#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#13)]  
   
-5.  Opcional. Agregue los comportamientos del punto de conexión configurados para el emisor local agregando tales comportamientos a la colección devuelta por la propiedad <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A>.  
+5. Opcional. Agregue los comportamientos del punto de conexión configurados para el emisor local agregando tales comportamientos a la colección devuelta por la propiedad <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A>.  
   
      [!code-csharp[c_CreateSTS#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#14)]
      [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]  
   
 ### <a name="to-configure-the-local-issuer-in-configuration"></a>Para configurar el emisor local en la configuración  
   
-1.  Crear un [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) como elemento secundario de la [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) elemento que es un elemento secundario de la [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento en un comportamiento del punto de conexión.  
+1. Crear un [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) como elemento secundario de la [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) elemento que es un elemento secundario de la [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento en un comportamiento del punto de conexión.  
   
-2.  Establezca el atributo `address` en la dirección del emisor local que aceptará las solicitudes del token.  
+2. Establezca el atributo `address` en la dirección del emisor local que aceptará las solicitudes del token.  
   
-3.  Establezca los atributos `binding` y `bindingConfiguration` en valores que hacen referencia al enlace adecuado que se debe usar cuando se comunica con el extremo del emisor local.  
+3. Establezca los atributos `binding` y `bindingConfiguration` en valores que hacen referencia al enlace adecuado que se debe usar cuando se comunica con el extremo del emisor local.  
   
-4.  Opcional. Establecer el [ \<identidad >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) como elemento secundario de la <`localIssuer`> elemento y especifique la información de identidad para el emisor local.  
+4. Opcional. Establecer el [ \<identidad >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) como elemento secundario de la <`localIssuer`> elemento y especifique la información de identidad para el emisor local.  
   
-5.  Opcional. Establecer el [ \<encabezados >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) como elemento secundario de la <`localIssuer`> elemento y especifique los encabezados adicionales que son necesarios para poder direccionar el emisor local correctamente.  
+5. Opcional. Establecer el [ \<encabezados >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) como elemento secundario de la <`localIssuer`> elemento y especifique los encabezados adicionales que son necesarios para poder direccionar el emisor local correctamente.  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Tenga en cuenta que si se especifica una dirección y un enlace del emisor para un enlace determinado, el emisor local no se utiliza para los puntos de conexión que utilizan ese enlace. Los clientes que siempre esperan utilizar el emisor local deberían asegurarse de que no utilizan este enlace o que modifican el enlace de manera que la dirección del emisor sea `null`.  

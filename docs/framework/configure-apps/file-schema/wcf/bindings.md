@@ -2,12 +2,12 @@
 title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: 7cafd8c1ba96a4fa1014f3570413b4bb83f69766
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 479941593b1abefe637525703140b02917c6692b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474730"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316796"
 ---
 # <a name="bindings"></a>\<bindings>
 
@@ -29,15 +29,15 @@ Puede usar el `bindings` para configurar una colección de enlaces estándar y p
   
  El orden de aparición de los elementos en la pila es importante, porque es el orden en el que las operaciones se aplican al mensaje. El orden requerido de elementos de pila es el siguiente:  
   
-1.  Transacciones (opcional)  
+1. Transacciones (opcional)  
   
-2.  Mensajería confiable (opcional)  
+2. Mensajería confiable (opcional)  
   
-3.  Seguridad (opcional)  
+3. Seguridad (opcional)  
   
-4.  Codificador  
+4. Codificador  
   
-5.  Transporte  
+5. Transporte  
   
  Los enlaces personalizados se identifican mediante su atributo `name`. Para obtener más información sobre los enlaces personalizados, consulte [enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

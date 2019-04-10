@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: b0b189db8f51e0cccb6ee0516fc4cc53556ccf51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174127"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310530"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Mensajes por lotes en una transacción
 Las aplicaciones en cola utilizan las transacciones para garantizar la exactitud y la entrega fiable de mensajes. Las transacciones, sin embargo, son operaciones caras y pueden reducir dramáticamente el rendimiento de los mensajes. Una manera de mejorar el rendimiento de los mensajes consiste en hacer que una aplicación lea y procese varios mensajes dentro de una transacción única. La balanza está entre el rendimiento y la recuperación: a medida que el número de mensajes de un lote aumenta, lo hace la cantidad de trabajo de recuperación requerida si se deshacen las transacciones. Es importante tener en cuenta la diferencia entre los mensajes por lotes en una transacción y en sesiones. Un *sesión* es una agrupación de mensajes relacionados que se procesan una sola aplicación y se confirman como una sola unidad. Las sesiones se utilizan generalmente cuando se debe procesar conjuntamente un grupo de mensajes relacionados. Un ejemplo de esto es el sitio web de una tienda en línea. *Lotes* se utilizan para procesar múltiples, no está relacionado con los mensajes de una manera que aumenta el rendimiento de mensajes. Para obtener más información acerca de las sesiones, vea [agrupar mensajes en cola en una sesión](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Los mensajes de un lote también se procesan mediante una aplicación única y se confirman como una sola unidad, pero no puede haber ninguna relación entre los mensajes del lote. Los mensajes por lotes en una transacción son una optimización que no cambia cómo se ejecuta la aplicación.  
@@ -31,11 +31,11 @@ Las aplicaciones en cola utilizan las transacciones para garantizar la exactitud
 ## <a name="leaving-batching-mode"></a>Salir del modo de procesamiento por lotes  
  Si un mensaje en un lote hace que la transacción se anule, se producen los pasos siguientes:  
   
-1.  Se deshace el lote completo de mensajes.  
+1. Se deshace el lote completo de mensajes.  
   
-2.  Los mensajes se leen de uno en uno hasta que el número de mensajes leídos supera el doble del tamaño del lote máximo.  
+2. Los mensajes se leen de uno en uno hasta que el número de mensajes leídos supera el doble del tamaño del lote máximo.  
   
-3.  Se vuelve a entrar en el modo de procesamiento por lotes.  
+3. Se vuelve a entrar en el modo de procesamiento por lotes.  
   
 ## <a name="choosing-the-batch-size"></a>Elección del tamaño del lote  
  El tamaño de un lote depende de la aplicación. El método empírico es la mejor manera de llegar a un tamaño de lote óptimo para la aplicación. Es importante recordar al elegir un tamaño de lote para elegir el tamaño según el modelo de implementación real de su aplicación. Por ejemplo, al implementar la aplicación, si necesita un servidor SQL en un equipo remoto y una transacción que abarque la cola y el servidor SQL, el tamaño del lote se determina mejor ejecutando esta configuración exacta.  

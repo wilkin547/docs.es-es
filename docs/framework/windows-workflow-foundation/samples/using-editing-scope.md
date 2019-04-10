@@ -2,12 +2,12 @@
 title: Usar el ámbito de edición
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: 268849c584c235a21a0818baa60f119cf8e49305
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749053"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308632"
 ---
 # <a name="using-editing-scope"></a>Usar el ámbito de edición
 Este ejemplo muestra cómo procesar un conjunto de cambios por lotes para que se puedan deshacer en una unidad atómica única. De forma predeterminada, las acciones realizadas por un autor del diseñador de actividades se integran automáticamente en el sistema Deshacer/rehacer.  
@@ -15,7 +15,7 @@ Este ejemplo muestra cómo procesar un conjunto de cambios por lotes para que se
 ## <a name="demonstrates"></a>Demostraciones  
  Editar el ámbito y Deshacer/Rehacer.  
   
-## <a name="discussion"></a>Explicación  
+## <a name="discussion"></a>Discusión  
  En este ejemplo se muestra cómo procesar por lotes un conjunto de cambios en el árbol de <xref:System.Activities.Presentation.Model.ModelItem> dentro de una unidad única de trabajo. Tenga en cuenta que al enlazar directamente con los valores <xref:System.Activities.Presentation.Model.ModelItem> desde un diseñador de WPF, los cambios se aplican automáticamente. En este ejemplo se muestra lo que se debe hacer cuando se realizan mediante código imperativo varias modificaciones que se van a procesar por lotes, en lugar de un único cambio.  
   
  En este ejemplo, se agregan tres actividades. Cuando comienza la edición, se llama a <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> en una instancia de <xref:System.Activities.Presentation.Model.ModelItem>. Los cambios realizados en el árbol de <xref:System.Activities.Presentation.Model.ModelItem> dentro de este ámbito de edición se procesan por lotes. El comando <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> devuelve una clase <xref:System.Activities.Presentation.Model.EditingScope>, que se puede utilizar para controlar esta instancia. Se puede llamar a los métodos <xref:System.Activities.Presentation.Model.EditingScope.OnComplete%2A> o <xref:System.Activities.Presentation.Model.EditingScope.OnRevert%2A> para confirmar o revertir el ámbito de edición.  
@@ -24,15 +24,15 @@ Este ejemplo muestra cómo procesar un conjunto de cambios por lotes para que se
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Compile y ejecute el ejemplo y, a continuación, utilice los botones de la izquierda para modificar el flujo de trabajo.  
+1. Compile y ejecute el ejemplo y, a continuación, utilice los botones de la izquierda para modificar el flujo de trabajo.  
   
-2.  Haga clic en **abrir el ámbito de edición**.  
+2. Haga clic en **abrir el ámbito de edición**.  
   
     1.  Este comando llama al método <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, que crea un ámbito de edición y lo inserta en la pila de edición.  
   
     2.  A continuación, se agregan tres actividades a la clase <xref:System.Activities.Presentation.Model.ModelItem> seleccionada. Tenga en cuenta que si el ámbito de edición no se hubiera abierto con <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, las tres actividades aparecerían en el lienzo del diseñador. Dado que esta operación todavía está pendiente dentro de la clase <xref:System.Activities.Presentation.Model.EditingScope>, el diseñador todavía no se actualiza.  
   
-3.  Presione **Close Editing Scope** para confirmar el ámbito de edición. Las tres actividades aparecen en el diseñador.  
+3. Presione **Close Editing Scope** para confirmar el ámbito de edición. Las tres actividades aparecen en el diseñador.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

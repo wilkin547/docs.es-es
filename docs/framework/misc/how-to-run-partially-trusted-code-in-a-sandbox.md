@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74a897c1fca51c92e8290f6362d947730349344c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104863"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316536"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Filtrar Ejecutar código de confianza parcial en un espacio aislado
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -48,7 +48,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 ### <a name="to-run-an-application-in-a-sandbox"></a>Para ejecutar una aplicación en un espacio aislado  
   
-1.  Cree el conjunto de permisos que se concederán a la aplicación no confiable. El permiso mínimo que se puede conceder es <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. También puede conceder permisos adicionales si piensa que son seguros para el código no seguro, por ejemplo, <xref:System.Security.Permissions.IsolatedStorageFilePermission>. El siguiente código crea un nuevo conjunto de permisos que contiene únicamente el permiso <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>.  
+1. Cree el conjunto de permisos que se concederán a la aplicación no confiable. El permiso mínimo que se puede conceder es <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. También puede conceder permisos adicionales si piensa que son seguros para el código no seguro, por ejemplo, <xref:System.Security.Permissions.IsolatedStorageFilePermission>. El siguiente código crea un nuevo conjunto de permisos que contiene únicamente el permiso <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>.  
   
     ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
@@ -65,7 +65,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      El método <xref:System.Security.SecurityManager.GetStandardSandbox%2A> devolverá un conjunto de permisos `Internet` o un conjunto de permisos `LocalIntranet` según la zona de la evidencia. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> también construye permisos de identidad para algunos de los objetos de evidencia que se pasan como referencias.  
   
-2.  Firme el ensamblado que contiene la clase host (denominada `Sandboxer` en este ejemplo) que llama al código de confianza. Agregue el <xref:System.Security.Policy.StrongName> usado para firmar el ensamblado a la matriz <xref:System.Security.Policy.StrongName> del parámetro `fullTrustAssemblies` de la llamada <xref:System.AppDomain.CreateDomain%2A>. La clase host debe ejecutarse como de plena confianza para habilitar la ejecución del código de confianza parcial u ofrecer servicios a la aplicación de confianza parcial. Así es como se lee el <xref:System.Security.Policy.StrongName> de un ensamblado:  
+2. Firme el ensamblado que contiene la clase host (denominada `Sandboxer` en este ejemplo) que llama al código de confianza. Agregue el <xref:System.Security.Policy.StrongName> usado para firmar el ensamblado a la matriz <xref:System.Security.Policy.StrongName> del parámetro `fullTrustAssemblies` de la llamada <xref:System.AppDomain.CreateDomain%2A>. La clase host debe ejecutarse como de plena confianza para habilitar la ejecución del código de confianza parcial u ofrecer servicios a la aplicación de confianza parcial. Así es como se lee el <xref:System.Security.Policy.StrongName> de un ensamblado:  
   
     ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
@@ -73,14 +73,14 @@ AppDomain.CreateDomain( string friendlyName,
   
      Los ensamblados de .NET Framework como mscorlib y System.dll no tienen que agregarse a la lista de plena confianza porque se cargan como de plena confianza desde la caché de ensamblados global.  
   
-3.  Inicialice el parámetro <xref:System.AppDomainSetup> del método <xref:System.AppDomain.CreateDomain%2A>. Con este parámetro, puede controlar muchas de las opciones del nuevo <xref:System.AppDomain>. La propiedad <xref:System.AppDomainSetup.ApplicationBase%2A> es un valor importante y debe ser diferente de la propiedad <xref:System.AppDomainSetup.ApplicationBase%2A> para el <xref:System.AppDomain> de la aplicación host. Si los valores de <xref:System.AppDomainSetup.ApplicationBase%2A> son iguales, la aplicación de confianza parcial puede hacer que la aplicación host cargue (como de plena confianza) una excepción que define y, por tanto, aprovecharse de ella. Este es otro motivo por el que no se recomienda un bloque catch (excepción). El riesgo de ataques se reduce si la base de la aplicación del host y la base de la aplicación de la aplicación en espacio aislado se configuran de forma diferente.  
+3. Inicialice el parámetro <xref:System.AppDomainSetup> del método <xref:System.AppDomain.CreateDomain%2A>. Con este parámetro, puede controlar muchas de las opciones del nuevo <xref:System.AppDomain>. La propiedad <xref:System.AppDomainSetup.ApplicationBase%2A> es un valor importante y debe ser diferente de la propiedad <xref:System.AppDomainSetup.ApplicationBase%2A> para el <xref:System.AppDomain> de la aplicación host. Si los valores de <xref:System.AppDomainSetup.ApplicationBase%2A> son iguales, la aplicación de confianza parcial puede hacer que la aplicación host cargue (como de plena confianza) una excepción que define y, por tanto, aprovecharse de ella. Este es otro motivo por el que no se recomienda un bloque catch (excepción). El riesgo de ataques se reduce si la base de la aplicación del host y la base de la aplicación de la aplicación en espacio aislado se configuran de forma diferente.  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
   
-4.  Llame a la sobrecarga del método <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> para crear el dominio de aplicación usando los parámetros especificados.  
+4. Llame a la sobrecarga del método <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> para crear el dominio de aplicación usando los parámetros especificados.  
   
      La firma de este método es:  
   
@@ -106,7 +106,7 @@ AppDomain.CreateDomain( string friendlyName,
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
-5.  Cargar el código en el espacio aislado <xref:System.AppDomain> que creó. Esto se puede hacer de dos maneras:  
+5. Cargar el código en el espacio aislado <xref:System.AppDomain> que creó. Esto se puede hacer de dos maneras:  
   
     -   Llame al método <xref:System.AppDomain.ExecuteAssembly%2A> para el ensamblado.  
   
@@ -130,13 +130,13 @@ AppDomain.CreateDomain( string friendlyName,
     class Sandboxer:MarshalByRefObject  
     ```  
   
-6.  Desempaquete la nueva instancia del dominio en una referencia en este dominio. Esta referencia se usa para ejecutar el código no confiable.  
+6. Desempaquete la nueva instancia del dominio en una referencia en este dominio. Esta referencia se usa para ejecutar el código no confiable.  
   
     ```csharp
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
-7.  Llame al método `ExecuteUntrustedCode` en la instancia de la clase `Sandboxer` que acaba de crear.  
+7. Llame al método `ExecuteUntrustedCode` en la instancia de la clase `Sandboxer` que acaba de crear.  
   
     ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  

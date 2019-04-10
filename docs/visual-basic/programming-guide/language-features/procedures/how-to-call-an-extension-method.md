@@ -5,12 +5,12 @@ helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 2543694e6bf8da5b67ecaccc92633a8448154063
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837141"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313806"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Filtrar Llamar a un método de extensión (Visual Basic)
 Métodos de extensión permiten agregar métodos a una clase existente. Después de un método de extensión se declaran y se incluyen en el ámbito, puede llamarlo como un método de instancia del tipo que extiende. Para obtener más información sobre cómo escribir un método de extensión, vea [Cómo: Escribir un método de extensión](./how-to-write-an-extension-method.md).  
@@ -34,13 +34,13 @@ End Module
   
 ### <a name="to-call-an-extension-method"></a>Para llamar a un método de extensión  
   
-1.  Declare una variable que tiene el tipo de datos del primer parámetro del método de extensión. Para `PrintAndPunctuate`, necesita un <xref:System.String> variable:  
+1. Declare una variable que tiene el tipo de datos del primer parámetro del método de extensión. Para `PrintAndPunctuate`, necesita un <xref:System.String> variable:  
   
     ```  
     Dim example = "Ready"  
     ```  
   
-2.  Que variable invocará el método de extensión y su valor está enlazado al primer parámetro, `aString`. Se mostrará la siguiente instrucción de llamada `Ready?`.  
+2. Que variable invocará el método de extensión y su valor está enlazado al primer parámetro, `aString`. Se mostrará la siguiente instrucción de llamada `Ready?`.  
   
     ```  
     example.PrintAndPunctuate("?")  
@@ -53,7 +53,7 @@ End Module
     example.IndexOf("R")  
     ```  
   
-3.  Declare otra variable de cadena y llame al método nuevo para comprobar que funciona con cualquier cadena.  
+3. Declare otra variable de cadena y llame al método nuevo para comprobar que funciona con cualquier cadena.  
   
     ```  
     Dim example2 = " or not"  
@@ -96,6 +96,6 @@ End Module
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Escribir un método de extensión](./how-to-write-an-extension-method.md)
-- [Métodos de extensión](./extension-methods.md)
+- [Filtrar para escribir un método de extensión](./how-to-write-an-extension-method.md)
+- [Métodos de extensión.](./extension-methods.md)
 - [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

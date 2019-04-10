@@ -2,12 +2,12 @@
 title: Proceso de compra corporativa
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313338"
 ---
 # <a name="corporate-purchase-process"></a>Proceso de compra corporativa
 En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básicas en función del proceso de compra con selección automática de la mejor propuesta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> y una actividad personalizada <xref:System.Activities.Statements.ForEach%601> para crear un flujo de trabajo que representa el proceso.
@@ -50,27 +50,27 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 ## <a name="description-of-the-process"></a>Descripción del proceso  
  En este ejemplo se muestra una implementación de un programa de Windows Workflow Foundation (WF) para recopilar las propuestas de los proveedores para una compañía genérica.  
   
-1.  Un empleado de la compañía X crea una solicitud de propuestas (RFP).  
+1. Un empleado de la compañía X crea una solicitud de propuestas (RFP).  
   
     1.  El empleado escribe el título de la solicitud de propuestas y una descripción.  
   
     2.  El empleado selecciona los proveedores que desea invitar a que envíen sus propuestas.  
   
-2.  El empleado envía la propuesta.  
+2. El empleado envía la propuesta.  
   
     1.  Se crea una instancia del flujo de trabajo.  
   
     2.  El flujo de trabajo espera a que todos los proveedores envíen sus propuestas.  
   
-3.  Una vez recibidas todas las propuestas, el flujo de trabajo recorre en iteración todas las propuestas recibidas y selecciona la mejor.  
+3. Una vez recibidas todas las propuestas, el flujo de trabajo recorre en iteración todas las propuestas recibidas y selecciona la mejor.  
   
     1.  Cada proveedor tiene una reputación (en este ejemplo la lista de reputaciones se almacena en VendorRepository.cs).  
   
     2.  El valor total de la propuesta se determina por (El valor escrito por el proveedor) * (La reputación grabada del proveedor) / 100.  
   
-4.  El solicitante original puede ver todas las propuestas enviadas. La mejor propuesta se presenta en una sección especial del informe.  
+4. El solicitante original puede ver todas las propuestas enviadas. La mejor propuesta se presenta en una sección especial del informe.  
   
-## <a name="process-definition"></a>Definición del proceso  
+## <a name="process-definition"></a>Definición de proceso  
  La lógica básica del ejemplo utiliza una actividad <xref:System.Activities.Statements.ParallelForEach%601> que espera las ofertas de cada proveedor (utilizando una actividad personalizada que crea un marcador) y registra la propuesta del proveedor como una solicitud de propuesta (mediante una actividad <xref:System.Activities.Statements.InvokeMethod>).  
   
  A continuación, el ejemplo recorre en iteración todas las propuestas recibidas almacenadas en `RfpRepository`, calculando el valor ajustado (mediante una actividad <xref:System.Activities.Statements.Assign> y las actividades <xref:System.Activities.Expressions>), y si el valor ajustado es mejor que la mejor oferta anterior, asigna el nuevo valor como la mejor oferta (utilizando actividades <xref:System.Activities.Statements.If> y <xref:System.Activities.Statements.Assign>).  
@@ -78,7 +78,7 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 ## <a name="projects-in-this-sample"></a>Proyectos en este ejemplo  
  Este ejemplo contiene los siguientes proyectos.  
   
-|Project|Descripción|  
+|Proyecto|Descripción|  
 |-------------|-----------------|  
 |Común|Los objetos entidad utilizados dentro del proceso (solicitud de propuesta, proveedor y propuesta del proveedor).|  
 |WfDefinition|La definición del proceso (como un programa [!INCLUDE[wf1](../../../../includes/wf1-md.md)]) y el host (`PurchaseProcessHost`) utilizado por las aplicaciones cliente para crear y utilizar instancias del flujo de trabajo del proceso de compra.|  
@@ -93,11 +93,11 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 |IPurchaseProcessHost.cs|Interfaz del host del flujo de trabajo.|  
 |PurchaseProcessHost.cs|Implementación de un host para el flujo de trabajo. El host resume los detalles del tiempo de ejecución del flujo de trabajo y se utiliza en todas las aplicaciones cliente para cargar, ejecutar e interactuar con instancias de flujo de trabajo `PurchaseProcess`.|  
 |PurchaseProcessWorkflow.cs|Una actividad que contiene la definición del flujo de trabajo del proceso de compra (se deriva de <xref:System.Activities.Activity>).<br /><br /> Las actividades que se derivan de <xref:System.Activities.Activity> crean la funcionalidad ensamblando actividades personalizadas existentes y actividades procedentes de la biblioteca de actividades de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Ensamblar estas actividades es la manera más básica de crear la funcionalidad personalizada.|  
-|WaitForVendorProposal.cs|Esta actividad personalizada se deriva de <xref:System.Activities.NativeActivity> y crea un marcador con nombre que debe reanudar posteriormente un proveedor al enviar la propuesta.<br /><br /> Las actividades que deriven de <xref:System.Activities.NativeActivity>, como aquéllas que derivan de <xref:System.Activities.CodeActivity>, crean la funcionalidad imperativa invalidando <xref:System.Activities.NativeActivity.Execute%2A>, pero también tienen acceso a toda la funcionalidad del tiempo de ejecución del flujo de trabajo a través de <xref:System.Activities.ActivityContext> que se transfiere al método `Execute`. Este contexto tiene soporte técnico para programar y cancelar actividades secundarias, configurando zonas sin persistencia (bloques de ejecución durante los cuales el tiempo de ejecución no conserva los datos del flujo de trabajo, como dentro de las transacciones atómicas) y los objetos <xref:System.Activities.Bookmark> (controladores para reanudar los flujos de trabajo en pausa).|  
+|WaitForVendorProposal.cs|Esta actividad personalizada se deriva de <xref:System.Activities.NativeActivity> y crea un marcador con nombre que debe reanudar posteriormente un proveedor al enviar la propuesta.<br /><br /> Las actividades que deriven de <xref:System.Activities.NativeActivity>, como aquéllas que derivan de <xref:System.Activities.CodeActivity>, crean la funcionalidad imperativa invalidando <xref:System.Activities.NativeActivity.Execute%2A>, pero también tienen acceso a toda la funcionalidad del tiempo de ejecución del flujo de trabajo a través de <xref:System.Activities.ActivityContext> que se transfiere al método `Execute`. Este contexto tiene soporte técnico para programar y cancelar actividades secundarias, configurando zonas sin persistencia (bloques de ejecución durante los cuales el runtime no conserva los datos del flujo de trabajo, como dentro de las transacciones atómicas) y los objetos <xref:System.Activities.Bookmark> (controladores para reanudar los flujos de trabajo en pausa).|  
 |TrackingParticipant.cs|<xref:System.Activities.Tracking.TrackingParticipant> que recibe todos los eventos de seguimiento y los guarda en un archivo de texto.<br /><br /> Los participantes de seguimiento se agregan a la instancia de flujo de trabajo como extensiones.|  
 |XmlWorkflowInstanceStore.cs|Un objeto <xref:System.Runtime.DurableInstancing.InstanceStore> personalizado que guarda las aplicaciones de flujo de trabajo en archivos XML.|  
 |XmlPersistenceParticipant.cs|Un objeto <xref:System.Activities.Persistence.PersistenceParticipant> personalizado que guarda una instancia de solicitud de propuesta en un archivo XML.|  
-|AsyncResult.cs / CompletedAsyncResult.cs|Clases de aplicación auxiliar para implementar el patrón asincrónico en los componentes de persistencia.|  
+|AsyncResult.cs / CompletedAsyncResult.cs|Clases del asistente para implementar el patrón asincrónico en los componentes de persistencia.|  
   
 ### <a name="common"></a>Común  
  La siguiente tabla contiene una descripción de las clases más importantes dentro del proyecto Común.  
@@ -143,15 +143,15 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
-1.  Con Visual Studio 2010, abra el archivo de solución PurchaseProcess.sln.  
+1. Con Visual Studio 2010, abra el archivo de solución PurchaseProcess.sln.  
   
-2.  Para ejecutar el proyecto de cliente Web, abra **el Explorador de soluciones** y haga clic en el **Web cliente** proyecto. Seleccione **establecer como proyecto de inicio**.  
+2. Para ejecutar el proyecto de cliente Web, abra **el Explorador de soluciones** y haga clic en el **Web cliente** proyecto. Seleccione **establecer como proyecto de inicio**.  
   
-3.  Para ejecutar el proyecto de cliente de WinForms, abra **el Explorador de soluciones** y haga clic en el **cliente de WinForms** proyecto. Seleccione **establecer como proyecto de inicio**.  
+3. Para ejecutar el proyecto de cliente de WinForms, abra **el Explorador de soluciones** y haga clic en el **cliente de WinForms** proyecto. Seleccione **establecer como proyecto de inicio**.  
   
-4.  Para compilar la solución, presione Ctrl+MAYÚS+B.  
+4. Para compilar la solución, presione Ctrl+MAYÚS+B.  
   
-5.  Para ejecutar la solución, presione CTRL+F5.  
+5. Para ejecutar la solución, presione CTRL+F5.  
   
 ### <a name="web-client-options"></a>Opciones del cliente web  
   

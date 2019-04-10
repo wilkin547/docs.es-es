@@ -2,12 +2,12 @@
 title: Utilización del instrumental de administración de Windows (WMI) para diagnósticos
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: a5dae1479c9be7954b9eec1eed197f358eb48e4f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239519"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308593"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Utilización del instrumental de administración de Windows (WMI) para diagnósticos
 Windows Communication Foundation (WCF) expone los datos de inspección de un servicio en tiempo de ejecución a través de un proveedor de Instrumental de administración de Windows (WMI) de WCF.  
@@ -56,26 +56,26 @@ Windows Communication Foundation (WCF) expone los datos de inspección de un ser
   
  Para modificar los niveles de privilegio del usuario, siga los pasos siguientes.  
   
-1.  Haga clic en Inicio y, a continuación, ejecutar y escriba **compmgmt.msc**.  
+1. Haga clic en Inicio y, a continuación, ejecutar y escriba **compmgmt.msc**.  
   
-2.  Haga clic en **servicios y controles de aplicación/WMI** seleccionar **propiedades**.  
+2. Haga clic en **servicios y controles de aplicación/WMI** seleccionar **propiedades**.  
   
-3.  Seleccione el **seguridad** ficha y navegue hasta la **Root/ServiceModel** espacio de nombres. Haga clic en el **seguridad** botón.  
+3. Seleccione el **seguridad** ficha y navegue hasta la **Root/ServiceModel** espacio de nombres. Haga clic en el **seguridad** botón.  
   
-4.  Seleccione el grupo o usuario específico que desea controlar el acceso y utilizar el **permitir** o **Deny** casilla de verificación para configurar los permisos.  
+4. Seleccione el grupo o usuario específico que desea controlar el acceso y utilizar el **permitir** o **Deny** casilla de verificación para configurar los permisos.  
   
 ## <a name="granting-wcf-wmi-registration-permissions-to-additional-users"></a>Conceder permisos de registro de WCF WMI a usuarios adicionales  
  WCF expone datos de administración a WMI. Lo hace mediante el hospedaje de un proveedor WMI en proceso, a veces denominado "proveedor desacoplado". La cuenta que registra este proveedor debe tener los permisos apropiados para poder exponer los datos de administración. En Windows, solo un pequeño conjunto de cuentas privilegiadas pueden registrar proveedores desacoplados de forma predeterminada. Esto supone un problema, ya que los usuarios normalmente desean exponer los datos WMI de un servicio WCF que se está ejecutando bajo una cuenta que no se encuentra en el conjunto predeterminado.  
   
  Para proporcionar este acceso, el administrador debe conceder los permisos siguientes a la cuenta adicional en el orden siguiente:  
   
-1.  Permiso para tener acceso al espacio de nombres de WMI de WCF.  
+1. Permiso para tener acceso al espacio de nombres de WMI de WCF.  
   
-2.  Permiso para registrar el proveedor desacoplado WMI de WCF.  
+2. Permiso para registrar el proveedor desacoplado WMI de WCF.  
   
 #### <a name="to-grant-wmi-namespace-access-permission"></a>Para conceder permiso de acceso al espacio de nombres WMI  
   
-1.  Ejecute el siguiente script de PowerShell.  
+1. Ejecute el siguiente script de PowerShell.  
   
     ```powershell  
     write-host ""  
@@ -122,7 +122,7 @@ Windows Communication Foundation (WCF) expone los datos de inspección de un ser
   
 #### <a name="to-grant-provider-registration-access"></a>Para conceder acceso de registro de proveedores  
   
-1.  Ejecute el siguiente script de PowerShell.  
+1. Ejecute el siguiente script de PowerShell.  
   
     ```powershell  
     write-host ""  
@@ -157,16 +157,16 @@ Whoami /user
   
  **Herramientas de Files\WMI %Windir%\Program\\**  
   
-1.  En el **conectar con el espacio de nombres:** ventana, escriba **root\ServiceModel** y haga clic en **Aceptar.**  
+1. En el **conectar con el espacio de nombres:** ventana, escriba **root\ServiceModel** y haga clic en **Aceptar.**  
   
-2.  En el **el inicio de sesión de WMI CIM Studio** ventana, haga clic en el **Opciones >>** botón para expandir la ventana. Seleccione **privacidad de paquete** para **nivel de autenticación**y haga clic en **Aceptar**.  
+2. En el **el inicio de sesión de WMI CIM Studio** ventana, haga clic en el **Opciones >>** botón para expandir la ventana. Seleccione **privacidad de paquete** para **nivel de autenticación**y haga clic en **Aceptar**.  
   
 ### <a name="windows-management-instrumentation-tester"></a>Herramienta de comprobación del instrumental de administración de Windows  
  Windows instala esta herramienta. Para ejecutarlo, inicie una consola de comandos escribiendo **cmd.exe** en el **iniciar/ejecutar** cuadro de diálogo y haga clic en **Aceptar**. A continuación, escriba **wbemtest.exe** en la ventana de comandos. Se inicia la Herramienta de comprobación del instrumental de administración de Windows.  
   
-1.  Haga clic en el **Connect** botón en la esquina superior derecha de la ventana.  
+1. Haga clic en el **Connect** botón en la esquina superior derecha de la ventana.  
   
-2.  En la ventana nueva, escriba **root\ServiceModel** para el **Namespace** campo y, a continuación, seleccione **privacidad de paquete** para **nivel de autenticación**. Haga clic en **Conectar**.  
+2. En la ventana nueva, escriba **root\ServiceModel** para el **Namespace** campo y, a continuación, seleccione **privacidad de paquete** para **nivel de autenticación**. Haga clic en **Conectar**.  
   
 ### <a name="using-managed-code"></a>Utilización del código administrado  
  También puede obtener acceso a instancias WMI remotas mediante programación utilizando las clases proporcionadas por el espacio de nombres <xref:System.Management>. En el ejemplo de código siguiente se muestra cómo utilizar este recurso.  

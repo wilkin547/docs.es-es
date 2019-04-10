@@ -3,12 +3,12 @@ title: Crear mi primera aplicación web de ASP.NET para notificaciones
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: b6be3d84a292e5f14e1cdc70a181e8fd2c065a68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5a24a2117a031bfe49d0c27dbcefae6db00e6045
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151377"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314560"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Crear mi primera aplicación web de ASP.NET para notificaciones
 ## <a name="applies-to"></a>Se aplica a  
@@ -21,13 +21,13 @@ ms.locfileid: "59151377"
   
  ![Diagrama que muestra los componentes de una aplicación Web básica de WIF.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
-1.  La aplicación para notificaciones usa WIF para identificar las solicitudes no autenticadas y redirigirlas al STS.  
+1. La aplicación para notificaciones usa WIF para identificar las solicitudes no autenticadas y redirigirlas al STS.  
   
-2.  El usuario final proporciona las credenciales al STS y, tras su correcta autenticación, el STS emite un token para el usuario.  
+2. El usuario final proporciona las credenciales al STS y, tras su correcta autenticación, el STS emite un token para el usuario.  
   
-3.  Se redirige al usuario del STS a la aplicación para notificaciones con el token emitido por el STS en la solicitud.  
+3. Se redirige al usuario del STS a la aplicación para notificaciones con el token emitido por el STS en la solicitud.  
   
-4.  La aplicación para notificaciones se configura para confiar en el STS y en los token que emite. Asimismo, dicha aplicación usa WIF para validar el token y analizarlo. Los desarrolladores usan la API y los tipos de WIF adecuados, por ejemplo, **ClaimsPrincpal**, para las necesidades de la aplicación, como la implementación de autorización correspondiente.  
+4. La aplicación para notificaciones se configura para confiar en el STS y en los token que emite. Asimismo, dicha aplicación usa WIF para validar el token y analizarlo. Los desarrolladores usan la API y los tipos de WIF adecuados, por ejemplo, **ClaimsPrincpal**, para las necesidades de la aplicación, como la implementación de autorización correspondiente.  
   
  A partir de .NET 4.5, WIF forma parte del paquete de .NET Framework. Poder disponer de las clases de WIF directamente en el marco de trabajo permite una integración mucho más profunda de la identidad basada en notificaciones en .NET, lo que facilita el uso de notificaciones. Con WIF 4.5, no es necesario instalar ningún componente fuera de banda para comenzar a desarrollar aplicaciones web compatibles con notificaciones. Las clases de WIF se extienden ahora por diversos ensamblados; los principales son System.Security.Claims, System.IdentityModel y System.IdentityModel.Services.  
   

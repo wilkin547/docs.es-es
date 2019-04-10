@@ -2,12 +2,12 @@
 title: 'Tutorial: Modelo de objetos simple y consultas (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: c84666bbf509a071e536faad1c3d647ff74d179a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155134"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309464"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Tutorial: Modelo de objetos simple y consultas (C#)
 Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] básico, con las mínimas dificultades. Creará una clase de entidad que modela la tabla Customers de la base de datos de ejemplo Northwind. Después creará una consulta simple para enumerar los clientes que se encuentran en Londres.  
@@ -44,30 +44,30 @@ Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../.
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Para crear una solución LINQ to SQL  
   
-1.  En Visual Studio **archivo** menú, elija **New**y, a continuación, haga clic en **proyecto**.  
+1. En Visual Studio **archivo** menú, elija **New**y, a continuación, haga clic en **proyecto**.  
   
-2.  En el **tipos de proyecto** panel de la **nuevo proyecto** cuadro de diálogo, haga clic en **Visual C#** .  
+2. En el **tipos de proyecto** panel de la **nuevo proyecto** cuadro de diálogo, haga clic en **Visual C#** .  
   
-3.  En el panel **Plantillas**, haga clic en **Aplicación de consola**.  
+3. En el panel **Plantillas**, haga clic en **Aplicación de consola**.  
   
-4.  En el **nombre** , escriba **LinqConsoleApp**.  
+4. En el **nombre** , escriba **LinqConsoleApp**.  
   
-5.  En el **ubicación** Compruebe dónde desea almacenar los archivos de proyecto.  
+5. En el **ubicación** Compruebe dónde desea almacenar los archivos de proyecto.  
   
-6.  Haga clic en **Aceptar**.  
+6. Haga clic en **Aceptar**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Agregar referencias y directivas LINQ  
  En este tutorial se usan ensamblados que podrían no estar instalados en el proyecto de forma predeterminada. Si System.Data.Linq no se incluye como referencia en el proyecto (expanda el **referencias** nodo **el Explorador de soluciones**), agréguelo, como se explica en los pasos siguientes.  
   
 #### <a name="to-add-systemdatalinq"></a>Para agregar System.Data.Linq  
   
-1.  En **el Explorador de soluciones**, haga clic en **referencias**y, a continuación, haga clic en **Agregar referencia**.  
+1. En **el Explorador de soluciones**, haga clic en **referencias**y, a continuación, haga clic en **Agregar referencia**.  
   
-2.  En el **Agregar referencia** cuadro de diálogo, haga clic en **.NET**, haga clic en el ensamblado System.Data.Linq y, a continuación, haga clic en **Aceptar**.  
+2. En el **Agregar referencia** cuadro de diálogo, haga clic en **.NET**, haga clic en el ensamblado System.Data.Linq y, a continuación, haga clic en **Aceptar**.  
   
      El ensamblado se agrega al proyecto.  
   
-3.  Agregue las siguientes directivas en la parte superior de **Program.cs**:  
+3. Agregue las siguientes directivas en la parte superior de **Program.cs**:  
   
      [!code-csharp[DLinqWalk1CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#1)]  
   
@@ -124,11 +124,11 @@ Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../.
   
 #### <a name="to-execute-the-query"></a>Para ejecutar la consulta  
   
-1.  Escriba o pegue el código siguiente al final del método `Main` (después de la descripción de la consulta).  
+1. Escriba o pegue el código siguiente al final del método `Main` (después de la descripción de la consulta).  
   
      [!code-csharp[DLinqWalk1ACS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#6)]  
   
-2.  Presione F5 para depurar la aplicación.  
+2. Presione F5 para depurar la aplicación.  
   
     > [!NOTE]
     >  Si la aplicación genera un error en tiempo de ejecución, vea la sección de solución de problemas de [aprender con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
@@ -147,7 +147,7 @@ Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../.
   
      `ID=SEVES, City=London`  
   
-3.  Presione Entrar en la ventana de la consola para cerrar la aplicación.  
+3. Presione Entrar en la ventana de la consola para cerrar la aplicación.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  El [Tutorial: Realizar consultas en varias relaciones (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) tema continúa donde finaliza este tutorial. El tutorial de consultas en varias relaciones muestra cómo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] puede realizar consultas entre tablas, similar a *combinaciones* en una base de datos relacional.  

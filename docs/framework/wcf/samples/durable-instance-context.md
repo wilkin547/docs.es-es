@@ -2,12 +2,12 @@
 title: Contexto de instancia duradera
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 74b2d42900b032936734884ceb19472d70b56b43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160971"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316939"
 ---
 # <a name="durable-instance-context"></a>Contexto de instancia duradera
 Este ejemplo muestra cómo personalizar el tiempo de ejecución de Windows Communication Foundation (WCF) para habilitar los contextos de instancia duraderos. Utiliza SQL Server 2005 como su memoria auxiliar (SQL Server 2005 Express en este caso). Sin embargo, también proporciona una manera de tener acceso a los mecanismos de almacenamiento personalizados.  
@@ -23,9 +23,9 @@ Este ejemplo muestra cómo personalizar el tiempo de ejecución de Windows Commu
   
  Por la descripción anterior, se pueden distinguir con facilidad dos pasos para lograr el objetivo:  
   
-1.  Cambiar el mensaje en la conexión para llevar el id. de contexto.  
+1. Cambiar el mensaje en la conexión para llevar el id. de contexto.  
   
-2.  Cambiar el comportamiento local del servicio para implementar la lógica de creación de instancias personalizada.  
+2. Cambiar el comportamiento local del servicio para implementar la lógica de creación de instancias personalizada.  
   
  Dado que la primera en la lista afecta a los mensajes en la conexión, se debería implementar como un canal personalizado y enlazarse hasta la capa del canal. El último solo afecta al comportamiento local del servicio y por consiguiente se puede implementar extendiendo varios puntos de extensibilidad de servicio. Cada una de estas extensiones se trata en las siguientes secciones.  
   
@@ -442,11 +442,11 @@ Press ENTER to shut down client
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
 >  Debe estar ejecutando SQL Server 2005 o SQL Express 2005 para ejecutar este ejemplo. Si está ejecutando SQL Server 2005, debe modificar la configuración de la cadena de conexión del servicio. Al ejecutar un equipo cruzado, SQL Server sólo se requiere en el equipo del servidor.  

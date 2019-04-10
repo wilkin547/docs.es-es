@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108711"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314703"
 ---
 # <a name="framework-property-metadata"></a>Metadatos de las propiedades de marco de trabajo
 Las opciones de metadatos de propiedad de marco de trabajo se notifican para las propiedades de los elementos de objeto que se consideran presentes en el nivel de marco de trabajo de WPF en la arquitectura de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En general, la designación de nivel de marco de trabajo de WPF implica que las características, como la representación, el enlace de datos y los refinamientos del sistema de propiedades se controlen mediante las [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] y los ejecutables de presentación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Estos sistemas consultan los metadatos de las propiedades de marco de trabajo para determinar las particularidades específicas de las características de las propiedades de un elemento en particular.  
@@ -48,9 +48,9 @@ Las opciones de metadatos de propiedad de marco de trabajo se notifican para las
   
  Si está creando un <xref:System.Windows.FrameworkPropertyMetadata> de la instancia, hay dos maneras de rellenar esos metadatos con los valores de las propiedades específicas que se comunican las características de la propiedad de marco de trabajo:  
   
-1.  Use la <xref:System.Windows.FrameworkPropertyMetadata> firma del constructor que permite un `flags` parámetro. Este parámetro debe rellenarse con deseado todos los valores combinados de la <xref:System.Windows.FrameworkPropertyMetadataOptions> marcas de enumeración.  
+1. Use la <xref:System.Windows.FrameworkPropertyMetadata> firma del constructor que permite un `flags` parámetro. Este parámetro debe rellenarse con deseado todos los valores combinados de la <xref:System.Windows.FrameworkPropertyMetadataOptions> marcas de enumeración.  
   
-2.  Use una de las firmas sin un `flags` parámetro y, a continuación, establezca cada propiedad booleana de comunicación en <xref:System.Windows.FrameworkPropertyMetadata> a `true` para cada cambio de característica que desee. Si lo hace, debe establecer estas propiedades antes de que se construya cualquier elemento con esta propiedad de dependencia; las propiedades booleanas son de lectura y escritura para permitir este comportamiento de evitar el parámetro `flags` y, aun así, rellenar los metadatos, pero los metadatos deben sellarse herméticamente antes del uso de la propiedad. Por lo tanto, intentar establecer las propiedades después de haber solicitado los metadatos será una operación no válida.  
+2. Use una de las firmas sin un `flags` parámetro y, a continuación, establezca cada propiedad booleana de comunicación en <xref:System.Windows.FrameworkPropertyMetadata> a `true` para cada cambio de característica que desee. Si lo hace, debe establecer estas propiedades antes de que se construya cualquier elemento con esta propiedad de dependencia; las propiedades booleanas son de lectura y escritura para permitir este comportamiento de evitar el parámetro `flags` y, aun así, rellenar los metadatos, pero los metadatos deben sellarse herméticamente antes del uso de la propiedad. Por lo tanto, intentar establecer las propiedades después de haber solicitado los metadatos será una operación no válida.  
   
 <a name="Framework_Property_Metadata_Merge_Behavior"></a>   
 ## <a name="framework-property-metadata-merge-behavior"></a>Comportamiento de combinación de los metadatos de las propiedades de marco de trabajo  

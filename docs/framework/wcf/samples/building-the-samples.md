@@ -2,12 +2,12 @@
 title: Compilación de los ejemplos de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: b6b541b93661f3da656e36d65ef3f94d76cae0c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1f1005e32687d2683f757d847d9fa19e098f290
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658876"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317862"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Compilación de los ejemplos de Windows Communication Foundation
 
@@ -18,9 +18,9 @@ Los ejemplos de Windows Communication Foundation (WCF) pueden crearse mediante e
 
 ## <a name="to-build-the-sample-using-a-command-prompt"></a>Para compilar el ejemplo desde un símbolo del sistema
 
-1.  Abra el símbolo del sistema para desarrolladores de Visual Studio y navegue hasta el subdirectorio específico del lenguaje bajo la ubicación del directorio donde instaló el ejemplo.
+1. Abra el símbolo del sistema para desarrolladores de Visual Studio y navegue hasta el subdirectorio específico del lenguaje bajo la ubicación del directorio donde instaló el ejemplo.
 
-2.  Tipo `msbuild` en la línea de comandos. Los archivos de programa cliente se compilan para *client\bin* y los archivos de programa de servicio se crean a *service\bin*. Si el servicio está hospedado por Internet Information Services (IIS), también se copian los archivos de programa de servicio para el *servicemodelsamples* directorio y su *\bin* subdirectorio.
+2. Tipo `msbuild` en la línea de comandos. Los archivos de programa cliente se compilan para *client\bin* y los archivos de programa de servicio se crean a *service\bin*. Si el servicio está hospedado por Internet Information Services (IIS), también se copian los archivos de programa de servicio para el *servicemodelsamples* directorio y su *\bin* subdirectorio.
 
 > [!NOTE]
 > Debe establecer las ACL en *%systemdrive%\inetpub\wwwroot* conceder modificar los permisos de la cuenta bajo la que se ejecuta. De lo contrario, se producirán errores en eventos posteriores a la compilación. Como alternativa, puede dejar las ACL tal como están y ejecutar el símbolo del sistema del SDK como administrador.
@@ -40,7 +40,7 @@ Los ejemplos de Windows Communication Foundation (WCF) pueden crearse mediante e
  Scripts y archivos por lotes Setup.exe y Cleanup.exe se deben ejecutar en línea de comandos para desarrolladores para Visual Studio. Hay varios archivos de limpieza e instalación que realizan tareas que requieren privilegios administrativos y deberían iniciarse con privilegios de administrador.
 
 ## <a name="important-security-information-about-metadata-endpoints"></a>Información de seguridad importante sobre los puntos de conexión de metadatos
- Para evitar la divulgación involuntaria de metadatos de servicio potencialmente confidenciales, la configuración predeterminada para servicios Windows Communication Foundation (WCF) deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración. Para que los experimentos con los ejemplos sean más sencillos, casi todos los ejemplos exponen un punto de conexión de publicación de metadatos no seguro. Tales puntos de conexión pueden estar disponibles para los consumidores anónimos no autenticados y se debe tener cuidado antes de implementar tales puntos de conexión para garantizar que la revelación pública de un metadato del servicio sea la adecuada. Para obtener más información acerca de la publicación de metadatos servicio, consulte el [comportamiento de publicación de metadatos](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) ejemplo. Consulte la [extremo de metadatos personalizada Secure](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) ejemplo para obtener un ejemplo de protección de un extremo de metadatos.
+ Para evitar la divulgación involuntaria de metadatos de servicio potencialmente confidenciales, la configuración predeterminada para servicios Windows Communication Foundation (WCF) deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración. Para que los experimentos con los ejemplos sean más sencillos, casi todos los ejemplos exponen un punto de conexión de publicación de metadatos no seguro. Tales extremos pueden estar disponibles para los consumidores anónimos no autenticados y se debe tener cuidado antes de implementar tales extremos para garantizar que la revelación pública de un metadato del servicio sea la adecuada. Para obtener más información acerca de la publicación de metadatos servicio, consulte el [comportamiento de publicación de metadatos](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) ejemplo. Consulte la [extremo de metadatos personalizada Secure](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) ejemplo para obtener un ejemplo de protección de un extremo de metadatos.
 
 ## <a name="exception-handling"></a>Control de excepciones
  En general, estos ejemplos no incluyen el control de excepciones para mantener el código centrado en el asunto del ejemplo. Para obtener más información sobre el control de excepciones, vea el [espera excepciones](../../../../docs/framework/wcf/samples/expected-exceptions.md) ejemplo.
@@ -50,9 +50,9 @@ Los ejemplos de Windows Communication Foundation (WCF) pueden crearse mediante e
 
 ### <a name="to-regenerate-the-client-and-configuration-files"></a>Para regenerar los archivos de configuración y cliente
 
-1.  Abra un símbolo del sistema de SDK y desplácese hasta el subdirectorio específico del idioma debajo de la ubicación del directorio donde haya instalado el ejemplo.
+1. Abra un símbolo del sistema de SDK y desplácese hasta el subdirectorio específico del idioma debajo de la ubicación del directorio donde haya instalado el ejemplo.
 
-2.  Si el servicio es un tipo hospedado en web, utilice el comando siguiente.
+2. Si el servicio es un tipo hospedado en web, utilice el comando siguiente.
 
     ```
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs

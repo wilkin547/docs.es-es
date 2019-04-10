@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315159"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Filtrar para crear una interfaz de usuario de varios paneles con formularios Windows Forms
 En el siguiente procedimiento, creará una interfaz de usuario de varios paneles similar al usado en Microsoft Outlook, con un **carpeta** lista, un **mensajes** panel y un **devistaprevia** panel. Esta disposición se logra principalmente mediante el acoplamiento de controles con el formulario.  
@@ -30,7 +30,7 @@ En el siguiente procedimiento, creará una interfaz de usuario de varios paneles
   
 ### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>Para crear una interfaz de usuario de estilo de Outlook mediante programación  
   
-1.  Dentro de un formulario, declare cada control que compone la interfaz de usuario. En este ejemplo, utilice el <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, y <xref:System.Windows.Forms.RichTextBox> controles para imitar la interfaz de usuario de Microsoft Outlook.  
+1. Dentro de un formulario, declare cada control que compone la interfaz de usuario. En este ejemplo, utilice el <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, y <xref:System.Windows.Forms.RichTextBox> controles para imitar la interfaz de usuario de Microsoft Outlook.  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ En el siguiente procedimiento, creará una interfaz de usuario de varios paneles
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2.  Crear un procedimiento que define la interfaz de usuario. El código siguiente establece las propiedades para que el formulario será similar a la interfaz de usuario en Microsoft Outlook. Sin embargo, mediante otros controles o acopla de forma diferente, es fácil crear otras interfaces de usuario que son igualmente flexibles.  
+2. Crear un procedimiento que define la interfaz de usuario. El código siguiente establece las propiedades para que el formulario será similar a la interfaz de usuario en Microsoft Outlook. Sin embargo, mediante otros controles o acopla de forma diferente, es fácil crear otras interfaces de usuario que son igualmente flexibles.  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ En el siguiente procedimiento, creará una interfaz de usuario de varios paneles
     }  
     ```  
   
-3.  En Visual Basic, agregue una llamada al procedimiento que acaba de crear el `New()` procedimiento. En Visual C#, agregue esta línea de código al constructor para la clase de formulario.  
+3. En Visual Basic, agregue una llamada al procedimiento que acaba de crear el `New()` procedimiento. En Visual C#, agregue esta línea de código al constructor para la clase de formulario.  
   
     ```vb  
     ' Add this to the New procedure.  

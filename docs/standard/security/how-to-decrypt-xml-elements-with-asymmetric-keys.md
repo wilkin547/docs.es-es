@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Descifrar elementos XML con claves asimétricas
+title: Filtrar para descifrar elementos XML con claves asimétricas
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,50 +14,50 @@ helpviewer_keywords:
 ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 647ac3898924810eb16cbeb8c67f00e6465c8d80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 303c7db984b682d24a8f0e00160eb2d0827a84e6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547776"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314430"
 ---
-# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Procedimiento Descifrar elementos XML con claves asimétricas
+# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Filtrar para descifrar elementos XML con claves asimétricas
 Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar y descifrar un elemento dentro de un documento XML.  El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.  Para obtener más información sobre el estándar de cifrado XML, vea la recomendación de World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
   
- El ejemplo de este procedimiento descifra un elemento XML que se cifró mediante los métodos descritos en [Cómo: Cifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  Busca un elemento <`EncryptedData`>, lo descifra y lo reemplaza por el elemento XML de texto sin formato original.  
+ El ejemplo de este procedimiento descifra un elemento XML que se cifró mediante los métodos descritos en [Cómo: Cifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  Encuentre un <`EncryptedData`> elemento, se descifra el elemento y, a continuación, reemplaza el elemento con el elemento XML de texto simple original.  
   
- En este ejemplo se descifra un elemento XML mediante dos claves.  Recupera de un contenedor de claves una clave privada RSA generada previamente y la usa para descifrar una clave de sesión almacenada en el elemento <`EncryptedKey`> del elemento <`EncryptedData`>.  Luego, el ejemplo usa la clave de sesión para descifrar el elemento XML.  
+ En este ejemplo se descifra un elemento XML mediante dos claves.  Recupera una clave privada de RSA generada previamente desde un contenedor de claves y, a continuación, usa la clave RSA para descifrar una clave de sesión almacenadas en el <`EncryptedKey`> elemento de la <`EncryptedData`> elemento.  Luego, el ejemplo usa la clave de sesión para descifrar el elemento XML.  
   
  Este ejemplo resulta adecuado en aquellas situaciones en las que varias aplicaciones tienen que compartir datos cifrados o en las que una aplicación tiene que guardar datos cifrados entre los intervalos en los que se ejecuta.  
   
 ### <a name="to-decrypt-an-xml-element-with-an-asymmetric-key"></a>Para descifrar un elemento XML con una clave asimétrica  
   
-1.  Cree un objeto <xref:System.Security.Cryptography.CspParameters> y especifique el nombre del contenedor de claves.  
+1. Cree un objeto <xref:System.Security.Cryptography.CspParameters> y especifique el nombre del contenedor de claves.  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#2)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#2)]  
   
-2.  Recupere una clave asimétrica previamente generada desde el contenedor mediante el objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  La clave se recupera automáticamente del contenedor de claves al pasar el objeto <xref:System.Security.Cryptography.CspParameters> al constructor <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  
+2. Recupere una clave asimétrica previamente generada desde el contenedor mediante el objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  La clave se recupera automáticamente del contenedor de claves al pasar el objeto <xref:System.Security.Cryptography.CspParameters> al constructor <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#3)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#3)]  
   
-3.  Cree un objeto <xref:System.Security.Cryptography.Xml.EncryptedXml> nuevo para descifrar el documento.  
+3. Cree un objeto <xref:System.Security.Cryptography.Xml.EncryptedXml> nuevo para descifrar el documento.  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#5)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#5)]  
   
-4.  Agregue una asignación de clave/nombre para asociar la clave RSA al elemento del documento que se debe descifrar.  Debe usar el mismo nombre para la clave que usó al cifrar el documento.  Tenga en cuenta que este nombre es independiente del que haya usado para identificar la clave en el contenedor de claves especificado en el paso 1.  
+4. Agregue una asignación de clave/nombre para asociar la clave RSA al elemento del documento que se debe descifrar.  Debe usar el mismo nombre para la clave que usó al cifrar el documento.  Tenga en cuenta que este nombre es independiente del que haya usado para identificar la clave en el contenedor de claves especificado en el paso 1.  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#6)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#6)]  
   
-5.  Llame al método <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> para descifrar el elemento <`EncryptedData`>.  Este método usa la clave RSA para descifrar la clave de sesión y la usa automáticamente para descifrar el elemento XML.  También reemplaza automáticamente el elemento <`EncryptedData`> por el texto sin formato original.  
+5. Llame a la <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> método para descifrar el <`EncryptedData`> elemento.  Este método usa la clave RSA para descifrar la clave de sesión y la usa automáticamente para descifrar el elemento XML.  También reemplaza automáticamente el <`EncryptedData`> elemento con el texto sin formato original.  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#7)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#7)]  
   
-6.  Guarde el documento XML.  
+6. Guarde el documento XML.  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#8)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#8)]  
@@ -84,4 +84,4 @@ Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptograph
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Security.Cryptography.Xml>
-- [Cómo: Cifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)
+- [Filtrar para cifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 049db16875b14bc095e293d2a923917a9ec1d99b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 42f31df7f4bc849374d8beb09e17394c3cdd5ec4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814463"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318206"
 ---
 # <a name="unable-to-load-information-for-class-classname"></a>No se puede cargar la información de la clase\<classname >'
 Se realizó una referencia a una clase que no está disponible.  
@@ -21,9 +21,9 @@ Se realizó una referencia a una clase que no está disponible.
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Compruebe que la clase está definida y que ha escrito correctamente el nombre.  
+1. Compruebe que la clase está definida y que ha escrito correctamente el nombre.  
   
-2.  Intente obtener acceso a uno de los miembros declarados en el módulo. En algunos casos, el entorno de depuración no encuentra los miembros porque los módulos donde se declaran no se han cargado todavía.  
+2. Intente obtener acceso a uno de los miembros declarados en el módulo. En algunos casos, el entorno de depuración no encuentra los miembros porque los módulos donde se declaran no se han cargado todavía.  
   
 ## <a name="see-also"></a>Vea también
 

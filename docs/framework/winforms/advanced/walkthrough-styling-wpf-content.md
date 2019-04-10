@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 9cf5d1c2e08f18c08273d6c7b34446a3827743b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 887a157494c2992c1ae5868229c442f31fafb276
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079363"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312155"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Tutorial: Aplicar estilos a contenido de WPF
 En este tutorial se muestra cómo aplicar un estilo a un control de Windows Presentation Foundation (WPF) hospedado en un Windows Form.
@@ -47,34 +47,34 @@ En este tutorial se muestra cómo aplicar un estilo a un control de Windows Pres
   
 #### <a name="to-create-wpf-control-types"></a>Para crear tipos de control WPF  
   
-1.  Agregue un nuevo proyecto de <xref:System.Windows.Controls.UserControl> de WPF a la solución. Use el nombre predeterminado del tipo de control, `UserControl1.xaml`. Para obtener más información, vea [Tutorial: Crear nuevo contenido WPF en Windows Forms en tiempo de diseño](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1. Agregue un nuevo proyecto de <xref:System.Windows.Controls.UserControl> de WPF a la solución. Use el nombre predeterminado del tipo de control, `UserControl1.xaml`. Para obtener más información, vea [Tutorial: Crear nuevo contenido WPF en Windows Forms en tiempo de diseño](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
-2.  En la vista Diseño, asegúrese de que `UserControl1` está seleccionado. Para obtener más información, vea [Cómo: Seleccionar y mover elementos en la superficie de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).  
+2. En la vista Diseño, asegúrese de que `UserControl1` está seleccionado. Para obtener más información, vea [Cómo: Seleccionar y mover elementos en la superficie de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).  
   
-3.  En el **propiedades** ventana, establezca el valor de la <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> propiedades a `200`.  
+3. En el **propiedades** ventana, establezca el valor de la <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> propiedades a `200`.  
   
-4.  Agregar un <xref:System.Windows.Controls.Button?displayProperty=nameWithType> el control a la <xref:System.Windows.Controls.UserControl> y establezca el valor de la <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad **cancelar**.  
+4. Agregar un <xref:System.Windows.Controls.Button?displayProperty=nameWithType> el control a la <xref:System.Windows.Controls.UserControl> y establezca el valor de la <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad **cancelar**.  
   
-5.  Agregue un segundo <xref:System.Windows.Controls.Button?displayProperty=nameWithType> el control a la <xref:System.Windows.Controls.UserControl> y establezca el valor de la <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad **Aceptar**.  
+5. Agregue un segundo <xref:System.Windows.Controls.Button?displayProperty=nameWithType> el control a la <xref:System.Windows.Controls.UserControl> y establezca el valor de la <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad **Aceptar**.  
   
-6.  Compile el proyecto.  
+6. Compile el proyecto.  
   
 ## <a name="applying-a-style-to-a-wpf-control"></a>Aplicar un estilo a un control WPF  
  Puede aplicar diferentes estilos a un control WPF para cambiar su apariencia y comportamiento.  
   
 #### <a name="to-apply-a-style-to-a-wpf-control"></a>Para aplicar un estilo a un control WPF  
   
-1.  Abra `Form1` en el Diseñador de Windows Forms.  
+1. Abra `Form1` en el Diseñador de Windows Forms.  
   
-2.  En el **cuadro de herramientas**, haga doble clic en `UserControl1` para crear una instancia de `UserControl1` en el formulario.  
+2. En el **cuadro de herramientas**, haga doble clic en `UserControl1` para crear una instancia de `UserControl1` en el formulario.  
   
      La instancia de `UserControl1` se hospeda en un nuevo control <xref:System.Windows.Forms.Integration.ElementHost> llamado `elementHost1`.  
   
-3.  En el panel de etiquetas inteligentes para `elementHost1`, haga clic en **editar contenido hospedado** en la lista desplegable.  
+3. En el panel de etiquetas inteligentes para `elementHost1`, haga clic en **editar contenido hospedado** en la lista desplegable.  
   
      `UserControl1` se abre en el [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
-4.  En la vista XAML, inserte el código XAML siguiente después de la etiqueta de apertura `<UserControl>`.  
+4. En la vista XAML, inserte el código XAML siguiente después de la etiqueta de apertura `<UserControl>`.  
   
      Este código XAML crea un degradado con un borde de degradado en contraste. Al hacer clic en el control, los degradados cambian para generar el aspecto de un botón presionado. Para obtener más información, consulte [Aplicar estilos y plantillas](../../wpf/controls/styling-and-templating.md).  
   
@@ -126,7 +126,7 @@ En este tutorial se muestra cómo aplicar un estilo a un control de Windows Pres
 </UserControl.Resources>  
 ```  
   
-1.  Aplique el estilo `SimpleButton` definido en el paso anterior al botón Cancelar insertando el código XAML siguiente en la etiqueta `<Button>` del botón Cancelar.  
+1. Aplique el estilo `SimpleButton` definido en el paso anterior al botón Cancelar insertando el código XAML siguiente en la etiqueta `<Button>` del botón Cancelar.  
   
     ```  
     Style="{StaticResource SimpleButton}  
@@ -139,15 +139,15 @@ En este tutorial se muestra cómo aplicar un estilo a un control de Windows Pres
                 Style="{StaticResource SimpleButton}">Cancel</Button>  
 ```  
   
-1.  Compile el proyecto.  
+1. Compile el proyecto.  
   
-2.  Abra `Form1` en el Diseñador de Windows Forms.  
+2. Abra `Form1` en el Diseñador de Windows Forms.  
   
-3.  El nuevo estilo se aplica al control de botón.  
+3. El nuevo estilo se aplica al control de botón.  
   
-4.  Desde el **depurar** menú, seleccione **Iniciar depuración** para ejecutar la aplicación.  
+4. Desde el **depurar** menú, seleccione **Iniciar depuración** para ejecutar la aplicación.  
   
-5.  Haga clic en los botones Aceptar y Cancelar y vea las diferencias.  
+5. Haga clic en los botones Aceptar y Cancelar y vea las diferencias.  
   
 ## <a name="see-also"></a>Vea también
 

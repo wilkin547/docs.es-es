@@ -2,12 +2,12 @@
 title: Ejemplo de seguridad de la detección
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: b0999b51d5e371c4167bf4712781b3a229119fd0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e956b9f8162d55891233a3ab664b05658d50eeab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160769"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318408"
 ---
 # <a name="discovery-security-sample"></a>Ejemplo de seguridad de la detección
 La especificación de la detección no requiere que los puntos de conexión que participan en el proceso de detección sean seguros. Al mejorar los mensajes de detección gracias a la seguridad, se mitigan varios tipos de ataques (alteración del mensaje, denegación de servicio, repetición y suplantación). Este ejemplo implementa canales personalizados que calculan y comprueban las firmas de mensaje utilizando el formato de firma compacto (descrito en la sección 8.2 de la especificación de detección WS). El ejemplo admiten tanto el [especificación de detección 2005](https://go.microsoft.com/fwlink/?LinkId=177912) y [versión 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -60,11 +60,11 @@ La especificación de la detección no requiere que los puntos de conexión que 
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
-1.  Ejecute el script Setup.bat desde un símbolo del sistema de desarrollador para Visual Studio. El ejemplo usa los certificados para firmar y comprobar los mensajes. El script crea los certificados mediante Makecert.exe y, a continuación, los instala utilizando Certmgr.exe. El script se debe ejecutar con privilegios de administrador.  
+1. Ejecute el script Setup.bat desde un símbolo del sistema de desarrollador para Visual Studio. El ejemplo usa los certificados para firmar y comprobar los mensajes. El script crea los certificados mediante Makecert.exe y, a continuación, los instala utilizando Certmgr.exe. El script se debe ejecutar con privilegios de administrador.  
   
-2.  Para compilar y ejecutar el ejemplo, abra el archivo Security.sln en Visual Studio y elija **volver a generar todo**. Actualizar las propiedades de la solución para iniciar varios proyectos: seleccione **iniciar** para todos los proyectos excepto DiscoverySecureChannels. Ejecute la solución normalmente.  
+2. Para compilar y ejecutar el ejemplo, abra el archivo Security.sln en Visual Studio y elija **volver a generar todo**. Actualizar las propiedades de la solución para iniciar varios proyectos: seleccione **iniciar** para todos los proyectos excepto DiscoverySecureChannels. Ejecute la solución normalmente.  
   
-3.  Una vez haya terminado con el ejemplo, ejecute el script Cleanup.bat que quita los certificados creados para este ejemplo.  
+3. Una vez haya terminado con el ejemplo, ejecute el script Cleanup.bat que quita los certificados creados para este ejemplo.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

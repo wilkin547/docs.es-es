@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Almacenamiento en caché datos de la aplicación en una aplicación WPF'
+title: 'Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 886a436f845aa4ba9662e75cbc9e534e915a4cfa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1d00c222dabf446c7c102307c3b904d3f1ff4bca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361179"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314404"
 ---
-# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Tutorial: Almacenamiento en caché datos de la aplicación en una aplicación WPF
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF
 El almacenamiento en caché permite almacenar datos en memoria para un acceso rápido. Cuando se vuelve a acceder a los datos, las aplicaciones pueden obtenerlos de la memoria caché en lugar de recuperarlos de la fuente original. Esto puede mejorar el rendimiento y la escalabilidad. Además, el almacenamiento en caché permite que los datos estén disponibles cuando el origen de datos no está disponible temporalmente.
 
  El [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporciona clases que le permiten usar el almacenamiento en caché en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicaciones. Estas clases se encuentran en el <xref:System.Runtime.Caching> espacio de nombres.
@@ -56,24 +56,24 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 #### <a name="to-create-a-wpf-application"></a>Para crear una aplicación WPF
 
-1.  Inicie Visual Studio.
+1. Inicie Visual Studio.
 
-2.  En el **archivo** menú, haga clic en **New**y, a continuación, haga clic en **nuevo proyecto**.
+2. En el **archivo** menú, haga clic en **New**y, a continuación, haga clic en **nuevo proyecto**.
 
      Aparecerá el cuadro de diálogo **Nuevo proyecto**.
 
-3.  En **plantillas instaladas**, seleccione el lenguaje de programación que desea utilizar (**Visual Basic** o **Visual C#**).
+3. En **plantillas instaladas**, seleccione el lenguaje de programación que desea utilizar (**Visual Basic** o **Visual C#**).
 
-4.  En el **nuevo proyecto** cuadro de diálogo, seleccione **aplicación WPF**.
+4. En el **nuevo proyecto** cuadro de diálogo, seleccione **aplicación WPF**.
 
     > [!NOTE]
     >  Si no ve el **aplicación WPF** plantilla, asegúrese de que se usa como destino una versión de la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] que es compatible con WPF. En el **nuevo proyecto** cuadro de diálogo, seleccione [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] en la lista.
 
-5.  En el **nombre** texto, escriba un nombre para el proyecto. Por ejemplo, puede escribir **WPFCaching**.
+5. En el **nombre** texto, escriba un nombre para el proyecto. Por ejemplo, puede escribir **WPFCaching**.
 
-6.  Active la casilla **Crear directorio para la solución**.
+6. Active la casilla **Crear directorio para la solución**.
 
-7.  Haga clic en **Aceptar**.
+7. Haga clic en **Aceptar**.
 
      Se abre el Diseñador de WPF en **diseño** ver y muestra el archivo MainWindow.xaml. Visual Studio crea el **mi proyecto** carpeta, el archivo Application.xaml y el archivo MainWindow.xaml.
 
@@ -87,27 +87,27 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 #### <a name="to-change-the-target-net-framework-in-visual-basic"></a>Para cambiar el destino de .NET Framework en Visual Basic
 
-1.  En **el Explorador de soluciones**, haga clic en el nombre del proyecto y, a continuación, haga clic en **propiedades**.
+1. En **el Explorador de soluciones**, haga clic en el nombre del proyecto y, a continuación, haga clic en **propiedades**.
 
      Se muestra la ventana Propiedades de la aplicación.
 
-2.  Haga clic en la pestaña **Compilar**.
+2. Haga clic en la pestaña **Compilar**.
 
-3.  En la parte inferior de la ventana, haga clic en **opciones de compilación avanzadas...** .
+3. En la parte inferior de la ventana, haga clic en **opciones de compilación avanzadas...** .
 
      El **configuración de compilador avanzada** se muestra el cuadro de diálogo.
 
-4.  En el **.NET framework de destino (todas las configuraciones)** lista, seleccione [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (No seleccione [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
+4. En el **.NET framework de destino (todas las configuraciones)** lista, seleccione [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (No seleccione [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
 
-5.  Haga clic en **Aceptar**.
+5. Haga clic en **Aceptar**.
 
      Aparecerá el cuadro de diálogo **Cambio de plataforma de destino**.
 
-6.  En el **cambio de plataforma de destino** cuadro de diálogo, haga clic en **Sí**.
+6. En el **cambio de plataforma de destino** cuadro de diálogo, haga clic en **Sí**.
 
      El proyecto se cierra y, a continuación, se vuelve a abrir.
 
-7.  Agregue una referencia al ensamblado de almacenamiento en caché siguiendo estos pasos:
+7. Agregue una referencia al ensamblado de almacenamiento en caché siguiendo estos pasos:
 
     1.  En **el Explorador de soluciones**, haga clic en el nombre del proyecto y, a continuación, haga clic en **Agregar referencia**.
 
@@ -115,15 +115,15 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>Para cambiar el destino de .NET Framework en un proyecto de Visual C#
 
-1.  En **el Explorador de soluciones**, haga clic en el nombre del proyecto y, a continuación, haga clic en **propiedades**.
+1. En **el Explorador de soluciones**, haga clic en el nombre del proyecto y, a continuación, haga clic en **propiedades**.
 
      Se muestra la ventana Propiedades de la aplicación.
 
-2.  Haga clic en la pestaña **Aplicación** .
+2. Haga clic en la pestaña **Aplicación** .
 
-3.  En el **.NET framework de destino** lista, seleccione [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (No seleccione **.NET Framework 4 Client Profile**.)
+3. En el **.NET framework de destino** lista, seleccione [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (No seleccione **.NET Framework 4 Client Profile**.)
 
-4.  Agregue una referencia al ensamblado de almacenamiento en caché siguiendo estos pasos:
+4. Agregue una referencia al ensamblado de almacenamiento en caché siguiendo estos pasos:
 
     1.  Haga clic en el **referencias** carpeta y, a continuación, haga clic en **Agregar referencia**.
 
@@ -134,11 +134,11 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 #### <a name="to-add-a-button-control"></a>Para agregar un control de botón
 
-1.  En **el Explorador de soluciones**, haga doble clic en el archivo MainWindow.xaml para abrirlo.
+1. En **el Explorador de soluciones**, haga doble clic en el archivo MainWindow.xaml para abrirlo.
 
-2.  Desde el **cuadro de herramientas**, en **controles WPF comunes**, arrastre un `Button` el control a la `MainWindow` ventana.
+2. Desde el **cuadro de herramientas**, en **controles WPF comunes**, arrastre un `Button` el control a la `MainWindow` ventana.
 
-3.  En el **propiedades** ventana, establezca el `Content` propiedad de la `Button` el control a **obtener caché**.
+3. En el **propiedades** ventana, establezca el `Content` propiedad de la `Button` el control a **obtener caché**.
 
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>Inicializar la memoria caché y almacenamiento en caché una entrada
  A continuación, agregará el código para llevar a cabo las siguientes tareas:
@@ -153,9 +153,9 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 #### <a name="to-create-the-cache-object"></a>Para crear el objeto de caché
 
-1.  Haga doble clic en el botón que acaba de agregar para crear un controlador de eventos en el archivo MainWindow.xaml.cs o MainWindow.Xaml.vb.
+1. Haga doble clic en el botón que acaba de agregar para crear un controlador de eventos en el archivo MainWindow.xaml.cs o MainWindow.Xaml.vb.
 
-2.  En la parte superior del archivo (antes de la declaración de clase), agregue el siguiente `Imports` (Visual Basic) o `using` instrucciones (C#):
+2. En la parte superior del archivo (antes de la declaración de clase), agregue el siguiente `Imports` (Visual Basic) o `using` instrucciones (C#):
 
     ```csharp
     using System.Runtime.Caching;
@@ -167,7 +167,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
     Imports System.IO
     ```
 
-3.  En el controlador de eventos, agregue el código siguiente para crear una instancia del objeto de caché:
+3. En el controlador de eventos, agregue el código siguiente para crear una instancia del objeto de caché:
 
     ```csharp
     ObjectCache cache = MemoryCache.Default;
@@ -179,7 +179,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
      El <xref:System.Runtime.Caching.ObjectCache> es una clase integrada que proporciona una caché de objetos en memoria.
 
-4.  Agregue el código siguiente para leer el contenido de una entrada de caché denominada `filecontents`:
+4. Agregue el código siguiente para leer el contenido de una entrada de caché denominada `filecontents`:
 
     ```vb
     Dim fileContents As String = TryCast(cache("filecontents"), String)
@@ -189,7 +189,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
     string fileContents = cache["filecontents"] as string;
     ```
 
-5.  Agregue el código siguiente para comprobar si la entrada de caché denominada `filecontents` existe:
+5. Agregue el código siguiente para comprobar si la entrada de caché denominada `filecontents` existe:
 
     ```vb
     If fileContents Is Nothing Then
@@ -206,7 +206,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
      Si la entrada de caché especificado no existe, debe leer el archivo de texto y agregarlo como una entrada de caché a la memoria caché.
 
-6.  En el `if/then` en bloques, agregue el código siguiente para crear un nuevo <xref:System.Runtime.Caching.CacheItemPolicy> objeto que especifica que la entrada de caché expira transcurridos 10 segundos.
+6. En el `if/then` en bloques, agregue el código siguiente para crear un nuevo <xref:System.Runtime.Caching.CacheItemPolicy> objeto que especifica que la entrada de caché expira transcurridos 10 segundos.
 
     ```vb
     Dim policy As New CacheItemPolicy()
@@ -220,7 +220,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
      Si se proporciona ninguna información de expulsión o expiración, el valor predeterminado es <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, lo que significa que las entradas de caché no expiren nunca basándose solo en un tiempo absoluto. En su lugar, las entradas de caché expiran solo cuando hay presión de memoria. Como práctica recomendada, debe proporcionar siempre explícitamente absoluta o una expiración variable.
 
-7.  Dentro de la `if/then` bloquear y después del código que agregó en el paso anterior, agregue el código siguiente para crear una colección para las rutas de acceso de archivo que desea supervisar y para agregar la ruta de acceso del archivo de texto a la colección:
+7. Dentro de la `if/then` bloquear y después del código que agregó en el paso anterior, agregue el código siguiente para crear una colección para las rutas de acceso de archivo que desea supervisar y para agregar la ruta de acceso del archivo de texto a la colección:
 
     ```vb
     Dim filePaths As New List(Of String)()
@@ -235,7 +235,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
     > [!NOTE]
     >  Si el archivo de texto que desea usar no es `c:\cache\cacheText.txt`, especifique la ruta de acceso donde está el archivo de texto que desea usar.
 
-8.  Siguiendo el código que agregó en el paso anterior, agregue el código siguiente para agregar un nuevo <xref:System.Runtime.Caching.HostFileChangeMonitor> supervisa el objeto a la colección de cambios para la entrada de caché:
+8. Siguiendo el código que agregó en el paso anterior, agregue el código siguiente para agregar un nuevo <xref:System.Runtime.Caching.HostFileChangeMonitor> supervisa el objeto a la colección de cambios para la entrada de caché:
 
     ```vb
     policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))
@@ -288,31 +288,31 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>Para probar el almacenamiento en caché en la aplicación de WPF
 
-1.  Presione CTRL+F5 para ejecutar la aplicación.
+1. Presione CTRL+F5 para ejecutar la aplicación.
 
      El `MainWindow` se muestra la ventana.
 
-2.  Haga clic en **obtener memoria caché**.
+2. Haga clic en **obtener memoria caché**.
 
      Se muestra el contenido almacenado en caché del archivo de texto en un cuadro de mensaje. Tenga en cuenta la marca de tiempo en el archivo.
 
-3.  Cierre el cuadro de mensaje y, a continuación, haga clic en **obtener caché** nuevo.
+3. Cierre el cuadro de mensaje y, a continuación, haga clic en **obtener caché** nuevo.
 
      Se ha modificado la marca de tiempo. Esto indica que se muestra el contenido almacenado en caché.
 
-4.  Espere 10 segundos o más y, a continuación, haga clic en **obtener caché** nuevo.
+4. Espere 10 segundos o más y, a continuación, haga clic en **obtener caché** nuevo.
 
      Este tiempo se muestra una marca de tiempo nueva. Esto indica que la directiva que permite la entrada de caché expiran y que se muestra el nuevo contenido en caché.
 
-5.  En un editor de texto, abra el archivo de texto que ha creado. No realice los cambios todavía.
+5. En un editor de texto, abra el archivo de texto que ha creado. No realice los cambios todavía.
 
-6.  Cierre el cuadro de mensaje y, a continuación, haga clic en **obtener caché** nuevo.
+6. Cierre el cuadro de mensaje y, a continuación, haga clic en **obtener caché** nuevo.
 
      Observe nuevamente la marca de tiempo.
 
-7.  Realice un cambio en el archivo de texto y, a continuación, guarde el archivo.
+7. Realice un cambio en el archivo de texto y, a continuación, guarde el archivo.
 
-8.  Cierre el cuadro de mensaje y, a continuación, haga clic en **obtener caché** nuevo.
+8. Cierre el cuadro de mensaje y, a continuación, haga clic en **obtener caché** nuevo.
 
      Este cuadro de mensaje contiene el contenido actualizado desde el archivo de texto y una marca de tiempo nueva. Esto indica que la supervisión de cambios de archivos host expulsa la entrada de caché inmediatamente cuando cambia el archivo, incluso si no ha expirado el período de tiempo de espera absoluta.
 

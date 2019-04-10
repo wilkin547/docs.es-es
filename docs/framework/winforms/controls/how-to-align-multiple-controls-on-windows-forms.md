@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: d07da72e238ef21237ca60e4d9b47240507948e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209546"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307748"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Filtrar para alinear varios controles en formularios Windows Forms
 Para estandarizar el diseño de la interfaz de usuario (UI) de la aplicación basada en Windows, puede colocar grupos de controles con un solo comando.  
@@ -22,11 +22,11 @@ Para estandarizar el diseño de la interfaz de usuario (UI) de la aplicación ba
   
 ### <a name="to-align-multiple-controls-on-a-form"></a>Para alinear varios controles en un formulario  
   
-1.  Abra el formulario que contiene los controles que desee colocar en el **Diseñador de Windows Forms**.  
+1. Abra el formulario que contiene los controles que desee colocar en el **Diseñador de Windows Forms**.  
   
-2.  Seleccione los controles que desee alinear para que el primer control seleccionado es el control principal a la que se deben alinear los demás.  
+2. Seleccione los controles que desee alinear para que el primer control seleccionado es el control principal a la que se deben alinear los demás.  
   
-3.  En el **formato** menú, elija **alinear**y, a continuación, haga clic en una de las siete opciones disponibles.  
+3. En el **formato** menú, elija **alinear**y, a continuación, haga clic en una de las siete opciones disponibles.  
   
 ## <a name="see-also"></a>Vea también
 

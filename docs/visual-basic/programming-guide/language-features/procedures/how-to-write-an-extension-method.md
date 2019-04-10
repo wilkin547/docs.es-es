@@ -6,33 +6,33 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d6f8b85945bd400d1f4b54a50260d72c750add8b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819124"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313767"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Filtrar Escribir un método de extensión (Visual Basic)
 Métodos de extensión permiten agregar métodos a una clase existente. El método de extensión puede llamarse como si fuera una instancia de esa clase.  
   
 ### <a name="to-define-an-extension-method"></a>Para definir un método de extensión  
   
-1.  Abra una aplicación nueva o existente de Visual Basic en Visual Studio.  
+1. Abra una aplicación nueva o existente de Visual Basic en Visual Studio.  
   
-2.  En la parte superior del archivo en el que desea definir un método de extensión, incluya la siguiente instrucción import:  
+2. En la parte superior del archivo en el que desea definir un método de extensión, incluya la siguiente instrucción import:  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3.  Dentro de un módulo en la aplicación nueva o existente, comience la definición de método con el atributo de extensión:  
+3. Dentro de un módulo en la aplicación nueva o existente, comience la definición de método con el atributo de extensión:  
   
     ```  
     <Extension()>  
     ```  
   
-4.  Declare el método de la manera normal, excepto que el tipo del primer parámetro debe ser el tipo de datos que desea extender.  
+4. Declare el método de la manera normal, excepto que el tipo del primer parámetro debe ser el tipo de datos que desea extender.  
   
     ```  
     <Extension()>   
@@ -84,7 +84,7 @@ End Module
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
-- [Métodos de extensión](./extension-methods.md)
-- [Module (instrucción)](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [Métodos de extensión.](./extension-methods.md)
+- [Module (Instrucción)](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

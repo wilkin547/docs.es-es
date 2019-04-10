@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 27608a7fbce5e9aa815b43e1d7202fa11e52ee1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175609"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315860"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Filtrar para cambiar los datos mostrados en tiempo de ejecución en el control DataGrid de formularios Windows Forms
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59175609"
   
 ### <a name="to-change-data-programmatically"></a>Para cambiar datos mediante programación  
   
-1.  Especifique la tabla deseada desde la <xref:System.Data.DataSet> objeto y la fila y el campo de la tabla y establece la celda igual que el nuevo valor deseado.  
+1. Especifique la tabla deseada desde la <xref:System.Data.DataSet> objeto y la fila y el campo de la tabla y establece la celda igual que el nuevo valor deseado.  
   
     > [!NOTE]
     >  Para especificar la primera tabla de la <xref:System.Data.DataSet> o la primera fila de la tabla, utilice 0.  
@@ -68,7 +68,7 @@ ms.locfileid: "59175609"
   
 ### <a name="to-change-the-datasource-programmatically"></a>Para cambiar el origen de datos mediante programación  
   
-1.  Establecer el <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método en el nombre del origen de datos y la tabla que desea enlazar a.  
+1. Establecer el <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método en el nombre del origen de datos y la tabla que desea enlazar a.  
   
      El ejemplo siguiente muestra cómo cambiar el origen de fecha mediante el <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método a un [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] control de datos (adoPubsAuthors) que está conectado a la tabla Authors de la base de datos Pubs.  
   

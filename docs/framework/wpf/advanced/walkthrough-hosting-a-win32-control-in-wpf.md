@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160698"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307709"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Tutorial: Hospedar control Win32 en WPF
 Windows Presentation Foundation (WPF) proporciona un entorno rico para crear aplicaciones. Sin embargo, cuando tiene una inversión sustancial en código Win32, puede ser más efectivo reutilizar al menos parte de ese código en la aplicación de WPF en lugar de volver a escribir por completo. WPF proporciona un mecanismo sencillo para hospedar una ventana de Win32 en una página WPF.  
@@ -35,25 +35,25 @@ Windows Presentation Foundation (WPF) proporciona un entorno rico para crear apl
   
  El procedimiento de hospedaje básico es el siguiente:  
   
-1.  Implemente una página de WPF para hospedar la ventana. Una técnica consiste en crear un <xref:System.Windows.Controls.Border> elemento que se va a reservar una sección de la página de la ventana hospedada.  
+1. Implemente una página de WPF para hospedar la ventana. Una técnica consiste en crear un <xref:System.Windows.Controls.Border> elemento que se va a reservar una sección de la página de la ventana hospedada.  
   
-2.  Implementar una clase para hospedar el control que hereda de <xref:System.Windows.Interop.HwndHost>.  
+2. Implementar una clase para hospedar el control que hereda de <xref:System.Windows.Interop.HwndHost>.  
   
-3.  En esa clase, invalide el <xref:System.Windows.Interop.HwndHost> miembro de clase <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
+3. En esa clase, invalide el <xref:System.Windows.Interop.HwndHost> miembro de clase <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
   
-4.  Crear la ventana hospedada como un elemento secundario de la ventana que contiene la página WPF. Aunque la programación convencional de WPF no es necesario crear explícitamente de él, la página de hospedaje es una ventana con un controlador (HWND). Recibirá el HWND de la página a través de la `hwndParent` parámetro de la <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> método. La ventana hospedada debe crearse como un elemento secundario del HWND.  
+4. Crear la ventana hospedada como un elemento secundario de la ventana que contiene la página WPF. Aunque la programación convencional de WPF no es necesario crear explícitamente de él, la página de hospedaje es una ventana con un controlador (HWND). Recibirá el HWND de la página a través de la `hwndParent` parámetro de la <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> método. La ventana hospedada debe crearse como un elemento secundario del HWND.  
   
-5.  Una vez que haya creado la ventana host, devuelva el HWND de la ventana hospedada. Si desea hospedar uno o más controles de Win32, normalmente crea una ventana host como elemento secundario del HWND y lo convierte los elementos secundarios de los controles de esa ventana host. Ajuste los controles en una ventana host proporciona una manera sencilla de la página WPF recibir notificaciones de los controles, que trata sobre algunos problemas específicos de Win32 con las notificaciones a través de los límites de HWND.  
+5. Una vez que haya creado la ventana host, devuelva el HWND de la ventana hospedada. Si desea hospedar uno o más controles de Win32, normalmente crea una ventana host como elemento secundario del HWND y lo convierte los elementos secundarios de los controles de esa ventana host. Ajuste los controles en una ventana host proporciona una manera sencilla de la página WPF recibir notificaciones de los controles, que trata sobre algunos problemas específicos de Win32 con las notificaciones a través de los límites de HWND.  
   
-6.  Controle los mensajes seleccionados que se envían a la ventana host, como las notificaciones de los controles secundarios. Hay dos formas de hacerlo.  
+6. Controle los mensajes seleccionados que se envían a la ventana host, como las notificaciones de los controles secundarios. Hay dos formas de hacerlo.  
   
     -   Si prefiere controlar los mensajes en la clase de hospedaje, invalide el <xref:System.Windows.Interop.HwndHost.WndProc%2A> método de la <xref:System.Windows.Interop.HwndHost> clase.  
   
     -   Si prefiere tener WPF controle los mensajes, controlar el <xref:System.Windows.Interop.HwndHost> clase <xref:System.Windows.Interop.HwndHost.MessageHook> eventos en el código subyacente. Este evento se produce para cada mensaje recibido por la ventana hospedada. Si elige esta opción, debe invalidar igualmente <xref:System.Windows.Interop.HwndHost.WndProc%2A>, pero solo necesita una implementación mínima.  
   
-7.  Invalidar el <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> y <xref:System.Windows.Interop.HwndHost.WndProc%2A> métodos de <xref:System.Windows.Interop.HwndHost>. Debe invalidar estos métodos para satisfacer el <xref:System.Windows.Interop.HwndHost> contrato, pero solo puede necesitar proporcionar una implementación mínima.  
+7. Invalidar el <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> y <xref:System.Windows.Interop.HwndHost.WndProc%2A> métodos de <xref:System.Windows.Interop.HwndHost>. Debe invalidar estos métodos para satisfacer el <xref:System.Windows.Interop.HwndHost> contrato, pero solo puede necesitar proporcionar una implementación mínima.  
   
-8.  En el archivo de código subyacente, cree una instancia de la clase que hospeda los controles y convertirlo en un elemento secundario de la <xref:System.Windows.Controls.Border> elemento que se va a hospedar la ventana.  
+8. En el archivo de código subyacente, cree una instancia de la clase que hospeda los controles y convertirlo en un elemento secundario de la <xref:System.Windows.Controls.Border> elemento que se va a hospedar la ventana.  
   
 9. Comunicarse con la ventana hospedada mediante el envío de [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] mensajes y controle los mensajes de sus ventanas secundarias, como las notificaciones enviadas por los controles.  
   

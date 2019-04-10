@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139261"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316172"
 ---
 # <a name="weak-event-patterns"></a>Modelos de evento débil
 En las aplicaciones, es posible que los controladores que están conectados a orígenes de eventos no se destruirán en coordinación con el objeto de agente de escucha que adjuntó el controlador para el origen. Esta situación puede provocar pérdidas de memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] presenta un patrón de diseño que se puede usar para resolver este problema, que proporciona una clase de administrador dedicada para eventos concretos e implementando una interfaz en los agentes de escucha para ese evento. Este patrón de diseño se conoce como el *modelo de evento débil*.  
@@ -50,11 +50,11 @@ En las aplicaciones, es posible que los controladores que están conectados a or
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>Uso de una clase de administrador de eventos débiles existente  
   
-1.  Encuentre un evento existente débil manager.  
+1. Encuentre un evento existente débil manager.  
   
      Para obtener una lista de administradores de evento débil que se incluyen con WPF, vea la jerarquía de herencia en el <xref:System.Windows.WeakEventManager> clase.  
   
-2.  Use el nuevo administrador de evento débil en lugar de los enlaces de eventos normales.  
+2. Use el nuevo administrador de evento débil en lugar de los enlaces de eventos normales.  
   
      Por ejemplo, si el código usa el patrón siguiente para suscribirse a un evento:  
   
@@ -82,7 +82,7 @@ En las aplicaciones, es posible que los controladores que están conectados a or
   
 ### <a name="using-the-generic-weak-event-manager-class"></a>Uso de la clase de administrador de eventos genéricos débil  
   
-1.  Utilice el tipo genérico <xref:System.Windows.WeakEventManager%602> clase en lugar de los enlaces de eventos normales.  
+1. Utilice el tipo genérico <xref:System.Windows.WeakEventManager%602> clase en lugar de los enlaces de eventos normales.  
   
      Cuando usas <xref:System.Windows.WeakEventManager%602> para registrar los agentes de escucha de eventos, proporciona el origen del evento y <xref:System.EventArgs> tipo como parámetros de tipo para la clase y llamar a <xref:System.Windows.WeakEventManager%602.AddHandler%2A> tal como se muestra en el código siguiente:  
   
@@ -92,19 +92,19 @@ En las aplicaciones, es posible que los controladores que están conectados a or
   
 ### <a name="creating-a-custom-weak-event-manager-class"></a>Creación de una clase personalizada de administrador de evento débil  
   
-1.  Copie la siguiente plantilla de clase al proyecto.  
+1. Copie la siguiente plantilla de clase al proyecto.  
   
      Esta clase hereda de la <xref:System.Windows.WeakEventManager> clase.  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  Reemplace el `SomeEventWeakEventManager` nombre con su propio nombre.  
+2. Reemplace el `SomeEventWeakEventManager` nombre con su propio nombre.  
   
-3.  Reemplace los tres nombres que se ha descrito anteriormente con los nombres correspondientes para el evento. (`SomeEvent`, `EventSource`, y `SomeEventEventArgs`)  
+3. Reemplace los tres nombres que se ha descrito anteriormente con los nombres correspondientes para el evento. (`SomeEvent`, `EventSource`, y `SomeEventEventArgs`)  
   
-4.  Establecer la visibilidad (pública o interna o privada) de la clase de evento débil manager en la misma visibilidad que administra el evento.  
+4. Establecer la visibilidad (pública o interna o privada) de la clase de evento débil manager en la misma visibilidad que administra el evento.  
   
-5.  Use el nuevo administrador de evento débil en lugar de los enlaces de eventos normales.  
+5. Use el nuevo administrador de evento débil en lugar de los enlaces de eventos normales.  
   
      Por ejemplo, si el código usa el patrón siguiente para suscribirse a un evento:  
   

@@ -2,12 +2,12 @@
 title: Firmar procedimientos almacenados en SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094624"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313923"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Firmar procedimientos almacenados en SQL Server
  Una firma digital es un resumen de datos cifrados con una clave privada del firmante. La clave privada garantiza que la firma digital sea única para su portador o propietario. Puede firmar los ensamblados, las funciones (excepto funciones con valores de tabla alineados), procedimientos almacenados y desencadenadores.  
@@ -23,25 +23,25 @@ ms.locfileid: "59094624"
   
  Hay dos pasos implicados en la firma de un módulo:  
   
-1.  Crear un certificado mediante la instrucción Transact-SQL `CREATE CERTIFICATE [certificateName]`. Esta instrucción tiene varias opciones para establecer una fecha de inicio y finalización, así como una contraseña. La fecha de expiración predeterminada es un año.  
+1. Crear un certificado mediante la instrucción Transact-SQL `CREATE CERTIFICATE [certificateName]`. Esta instrucción tiene varias opciones para establecer una fecha de inicio y finalización, así como una contraseña. La fecha de expiración predeterminada es un año.  
   
-1.  Firmar el procedimiento con el certificado utilizando la instrucción Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`.  
+1. Firmar el procedimiento con el certificado utilizando la instrucción Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`.  
 
 Una vez que se ha firmado el módulo, debe crearse con el fin de mantener los permisos adicionales que se deben asociados con el certificado de una o más entidades.  
 
 Si el módulo necesita permisos de nivel de base de datos adicionales:  
   
-1.  Crear una base de datos asociada a un certificado utilizando la instrucción Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]`. Este usuario existe en la base de datos solo y no está asociado con un inicio de sesión a menos que también se creó un inicio de sesión desde ese mismo certificado.  
+1. Crear una base de datos asociada a un certificado utilizando la instrucción Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]`. Este usuario existe en la base de datos solo y no está asociado con un inicio de sesión a menos que también se creó un inicio de sesión desde ese mismo certificado.  
   
-1.  Conceder los permisos necesarios de nivel de base de datos de usuario del certificado.  
+1. Conceder los permisos necesarios de nivel de base de datos de usuario del certificado.  
   
 Si el módulo necesita permisos de nivel de servidor adicionales:  
   
-1.  Copie el certificado para el `master` base de datos.  
+1. Copie el certificado para el `master` base de datos.  
  
-1.  Crear un inicio de sesión asociado con ese certificado mediante la instrucción Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` instrucción.  
+1. Crear un inicio de sesión asociado con ese certificado mediante la instrucción Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` instrucción.  
   
-1.  Conceder el inicio de sesión de certificado los permisos de nivel de servidor necesarios.  
+1. Conceder el inicio de sesión de certificado los permisos de nivel de servidor necesarios.  
   
 > [!NOTE]  
 >  Un certificado no puede conceder permisos a un usuario que tiene permisos revocados con la instrucción DENY. DENY siempre tiene prioridad sobre GRANT, lo que evita que el llamador herede permisos concedidos al usuario del certificado.  

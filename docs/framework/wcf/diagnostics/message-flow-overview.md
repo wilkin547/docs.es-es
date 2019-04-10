@@ -2,35 +2,35 @@
 title: Información general del flujo de mensajes
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 54ffd8ec2349b2dd54ca61615b2fb1b997d02932
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372790"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312649"
 ---
 # <a name="message-flow-overview"></a>Información general del flujo de mensajes
 En un sistema distribuido que contiene servicios interconectados es necesario determinar las relaciones causales entre los servicios. Es importante conocer los distintos componentes que formaron parte de un flujo de solicitud para admitir escenarios críticos, como los de supervisión de estado, solución de problemas y análisis de la causa raíz. Para habilitar la correlación de seguimientos entre varios servicios, en .NET Framework 4 agregamos compatibilidad a través de las siguientes características:
 
--   Seguimiento analítico: característica de seguimiento de alto rendimiento y bajo nivel de detalle que usa el Seguimiento de eventos para Windows (ETW).
+-   Traza analítica: Un alto rendimiento y la característica de seguimiento de bajo nivel de detalle con el seguimiento de eventos para Windows (ETW).
 
--   Modelo de actividad de un extremo a otro para servicios de WCF/WF: esta característica admite la correlación de seguimientos que generan los espacios de nombres <xref:System.ServiceModel> y <xref:System.Workflow.ComponentModel>.
+-   Modelo de actividad de extremo a otro para los servicios WCF/WF: Esta característica admite la correlación de seguimientos generados mediante la <xref:System.ServiceModel> y <xref:System.Workflow.ComponentModel> espacios de nombres.
 
--   Seguimiento de ETW para WF: esta característica utiliza los registros de seguimiento generados por los servicios WF para proporcionar visibilidad del progreso y estado actual del flujo de trabajo.
+-   Seguimiento de ETW para WF: Esta característica utiliza los registros de seguimiento generados por los servicios WF para proporcionar visibilidad sobre el progreso y el estado actual del flujo de trabajo.
 
  Los errores que figuran en un registro de seguimiento se pueden utilizar para encontrar defectos en el código o mensajes con formato incorrecto. La propiedad ActivityId del nodo Correlation en el encabezado del mensaje del evento se puede utilizar para determinar la actividad con errores. Para habilitar el seguimiento del flujo de mensajes por Id. de actividad, consulte [Configuring Message Flow Tracing](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). En este tema se muestra cómo habilitar el seguimiento del flujo de mensajes en el proyecto creado en el tutorial de introducción.
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>Para habilitar el seguimiento del flujo de mensajes en el tutorial de introducción
 
-1.  Abra el Visor de eventos, haga clic en **iniciar**, **ejecutar**y escriba `eventvwr.exe`.
+1. Abra el Visor de eventos, haga clic en **iniciar**, **ejecutar**y escriba `eventvwr.exe`.
 
-2.  Si no ha habilitado la traza analítica, expanda **registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **aplicaciones de servidor de aplicaciones** . Seleccione **vista**, **mostrar analítico y depurar registros**. Haga clic en **analítico** y seleccione **Habilitar registro**. Deje el Visor de eventos abierto para que se puedan ver los seguimientos.
+2. Si no ha habilitado la traza analítica, expanda **registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **aplicaciones de servidor de aplicaciones** . Seleccione **vista**, **mostrar analítico y depurar registros**. Haga clic en **analítico** y seleccione **Habilitar registro**. Deje el Visor de eventos abierto para que se puedan ver los seguimientos.
 
-3.  Abra el ejemplo creado en el [Tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md) en Visual Studio 2012. Tenga en cuenta que debe ejecutar Visual Studio 2012 como administrador para que se puede crear el servicio. Si ha instalado los ejemplos de WCF, puede abrir el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), que contiene el proyecto completado creado en el tutorial.
+3. Abra el ejemplo creado en el [Tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md) en Visual Studio 2012. Tenga en cuenta que debe ejecutar Visual Studio 2012 como administrador para que se puede crear el servicio. Si ha instalado los ejemplos de WCF, puede abrir el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), que contiene el proyecto completado creado en el tutorial.
 
-4.  Haga clic en el **servicio** del proyecto y seleccione **agregar**, **nuevo elemento**. Seleccione **archivo de configuración de aplicación** y haga clic en **Aceptar**.
+4. Haga clic en el **servicio** del proyecto y seleccione **agregar**, **nuevo elemento**. Seleccione **archivo de configuración de aplicación** y haga clic en **Aceptar**.
 
-5.  Agregue el siguiente código al archivo App.Config creado en el paso anterior.
+5. Agregue el siguiente código al archivo App.Config creado en el paso anterior.
 
     ```xml
     <system.serviceModel>
@@ -40,9 +40,9 @@ En un sistema distribuido que contiene servicios interconectados es necesario de
     </system.serviceModel>
     ```
 
-6.  Ejecute la aplicación de servidor sin depurar presionando CTRL+F5. Ejecutar el proyecto cliente haciendo clic con el **cliente** proyecto y seleccionaremos **depurar**, **Iniciar nueva instancia**.
+6. Ejecute la aplicación de servidor sin depurar presionando CTRL+F5. Ejecutar el proyecto cliente haciendo clic con el **cliente** proyecto y seleccionaremos **depurar**, **Iniciar nueva instancia**.
 
-7.  Para realizar el seguimiento de los eventos del cliente al servidor, agregue lo siguiente al archivo de configuración de la aplicación en el proyecto Cliente.
+7. Para realizar el seguimiento de los eventos del cliente al servidor, agregue lo siguiente al archivo de configuración de la aplicación en el proyecto Cliente.
 
     ```xml
     <diagnostics>
@@ -50,7 +50,7 @@ En un sistema distribuido que contiene servicios interconectados es necesario de
     </diagnostics>
     ```
 
-8.  En Program.cs, en el cliente, agregue la siguiente instrucción Using.
+8. En Program.cs, en el cliente, agregue la siguiente instrucción Using.
 
     ```csharp
     using System.Diagnostics;

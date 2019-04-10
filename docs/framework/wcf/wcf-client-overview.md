@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 34abe6b07cebc446324785bde1061c7aa2b04e4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115926"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312337"
 ---
 # <a name="wcf-client-overview"></a>Introducción a un cliente WCF
 Esta sección describe cómo proteger las aplicaciones cliente, cómo configurar, crear y usar a un cliente de Windows Communication Foundation (WCF) y qué hacer las aplicaciones cliente.  
@@ -20,13 +20,13 @@ Esta sección describe cómo proteger las aplicaciones cliente, cómo configurar
 ## <a name="using-wcf-client-objects"></a>Utilización de objetos cliente WCF  
  Una aplicación cliente es una aplicación administrada que utiliza a un cliente de WCF para comunicarse con otra aplicación. Para crear a un cliente de aplicación para un servicio WCF requiere los siguientes pasos:  
   
-1.  Obtenga la información del contrato de servicio, el enlace y la dirección del extremo del servicio.  
+1. Obtenga la información del contrato de servicio, el enlace y la dirección del extremo del servicio.  
   
-2.  Crear a un cliente WCF mediante esa información.  
+2. Crear a un cliente WCF mediante esa información.  
   
-3.  Llame a las operaciones.  
+3. Llame a las operaciones.  
   
-4.  Cierre el objeto de cliente WCF.  
+4. Cierre el objeto de cliente WCF.  
   
  Las siguientes secciones explican estos pasos y proporcionan una breve introducción a las siguientes cuestiones:  
   

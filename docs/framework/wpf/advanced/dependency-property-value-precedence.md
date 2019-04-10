@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117765"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315691"
 ---
 # <a name="dependency-property-value-precedence"></a>Prioridad de los valores de propiedades de dependencia
 <a name="introduction"></a> En este tema se explica cómo puede afectar el trabajo del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] al valor de una propiedad de dependencia y se describe la precedencia de aplicación de los aspectos del sistema de propiedades al valor efectivo de una propiedad.  
@@ -39,25 +39,25 @@ ms.locfileid: "59117765"
 ## <a name="dependency-property-setting-precedence-list"></a>Lista de precedencia de configuración de propiedades de dependencia  
  El siguiente es el orden definitivo que usa el sistema de propiedades al asignar los valores de tiempo de ejecución de las propiedades de dependencia. La precedencia más alta aparece primero. Esta lista desarrolla algunas de las generalizaciones realizadas en la [Información general sobre las propiedades de dependencia](dependency-properties-overview.md).  
   
-1.  **Conversión del sistema de propiedades.** Para obtener más información sobre la coerción, consulte [Coerción, animación y valor base](#animations) más adelante en este tema.  
+1. **Conversión del sistema de propiedades.** Para obtener más información sobre la coerción, consulte [Coerción, animación y valor base](#animations) más adelante en este tema.  
   
-2.  **Animaciones activas o animaciones con un comportamiento de bloqueo.** Para tener cualquier efecto práctico, una animación de una propiedad debe poder tener precedencia sobre el valor base (inanimado), aunque dicho valor se estableciera localmente. Para obtener más información, consulte [Coerción, animación y valor base](#animations) más adelante en este tema.  
+2. **Animaciones activas o animaciones con un comportamiento de bloqueo.** Para tener cualquier efecto práctico, una animación de una propiedad debe poder tener precedencia sobre el valor base (inanimado), aunque dicho valor se estableciera localmente. Para obtener más información, consulte [Coerción, animación y valor base](#animations) más adelante en este tema.  
   
-3.  **Valor local.** Un valor local se puede establecer a través de la comodidad de la propiedad "contenedor", que también equivale a establecerlo como un atributo o elemento de propiedad en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], o mediante una llamada a la <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] utilizando una propiedad de una instancia específica. Si establece un valor local mediante un enlace o un recurso, cada uno de estos actuará con la precedencia como si se hubiese establecido un valor directo.  
+3. **Valor local.** Un valor local se puede establecer a través de la comodidad de la propiedad "contenedor", que también equivale a establecerlo como un atributo o elemento de propiedad en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], o mediante una llamada a la <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] utilizando una propiedad de una instancia específica. Si establece un valor local mediante un enlace o un recurso, cada uno de estos actuará con la precedencia como si se hubiese establecido un valor directo.  
   
-4.  **Propiedades de la plantilla TemplatedParent.** Un elemento tiene un <xref:System.Windows.FrameworkElement.TemplatedParent%2A> si se ha creado como parte de una plantilla (una <xref:System.Windows.Controls.ControlTemplate> o <xref:System.Windows.DataTemplate>). Para obtener más información sobre cuándo se aplica el caso anterior, consulte [TemplatedParent](#templatedparent) más adelante en este tema. En la plantilla, se aplica la siguiente precedencia:  
+4. **Propiedades de la plantilla TemplatedParent.** Un elemento tiene un <xref:System.Windows.FrameworkElement.TemplatedParent%2A> si se ha creado como parte de una plantilla (una <xref:System.Windows.Controls.ControlTemplate> o <xref:System.Windows.DataTemplate>). Para obtener más información sobre cuándo se aplica el caso anterior, consulte [TemplatedParent](#templatedparent) más adelante en este tema. En la plantilla, se aplica la siguiente precedencia:  
   
     1.  Se desencadena a partir del <xref:System.Windows.FrameworkElement.TemplatedParent%2A> plantilla.  
   
     2.  Conjuntos de propiedades (normalmente a través [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atributos) en el <xref:System.Windows.FrameworkElement.TemplatedParent%2A> plantilla.  
   
-5.  **Estilo implícito.** Solo se aplica a la propiedad `Style`. La propiedad `Style` se rellena con cualquier recurso de estilo que tenga una clave que coincida con el tipo de ese elemento. Ese recurso de estilo debe existir en la página o la aplicación; la búsqueda de un recurso de estilo implícito no continúa en los temas.  
+5. **Estilo implícito.** Solo se aplica a la propiedad `Style`. La propiedad `Style` se rellena con cualquier recurso de estilo que tenga una clave que coincida con el tipo de ese elemento. Ese recurso de estilo debe existir en la página o la aplicación; la búsqueda de un recurso de estilo implícito no continúa en los temas.  
   
-6.  **Desencadenadores de estilo.** Desencadenadores dentro de los estilos de una página o aplicación (estos estilos pueden ser explícitos o implícitos, pero no pueden ser predeterminados, con una precedencia más baja).  
+6. **Desencadenadores de estilo.** Desencadenadores dentro de los estilos de una página o aplicación (estos estilos pueden ser explícitos o implícitos, pero no pueden ser predeterminados, con una precedencia más baja).  
   
-7.  **Desencadenadores de la plantilla.** Cualquier desencadenador de una plantilla dentro de un estilo o una plantilla aplicada directamente.  
+7. **Desencadenadores de la plantilla.** Cualquier desencadenador de una plantilla dentro de un estilo o una plantilla aplicada directamente.  
   
-8.  **Establecedores de estilo.** Los valores de un <xref:System.Windows.Setter> dentro de estilos de página o aplicación.  
+8. **Establecedores de estilo.** Los valores de un <xref:System.Windows.Setter> dentro de estilos de página o aplicación.  
   
 9. **Estilo predeterminado (tema).** Para obtener más información sobre cuándo se aplica y cómo se relacionan los estilos de tema con las plantillas dentro de los estilos de tema, consulte [Estilos (temas) predeterminados](#themestyles) más adelante en este tema. Dentro de un estilo predeterminado, se aplica el orden de precedencia siguiente:  
   

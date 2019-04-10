@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
-ms.openlocfilehash: aac53960cf22737cab0f48a51bccdfcba9f9f459
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f801337c07d6b3829aa6e0c535c434d8bd672b2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836342"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307670"
 ---
 # <a name="constant-expression-not-representable-in-type-typename"></a>Expresión constante no se puede representar en el tipo '\<typename >'
 Está intentando evaluar una constante que no encaja en el tipo de destino, normalmente porque desborda el intervalo.  
@@ -21,7 +21,7 @@ Está intentando evaluar una constante que no encaja en el tipo de destino, norm
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Cambiar el tipo de destino para que pueda controlar la constante.  
+1. Cambiar el tipo de destino para que pueda controlar la constante.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 0cfb34d058486c44ffb01e6c105134e3ca4c2175
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 10793053934dce0bb83113004a79f1c265f5f267
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184683"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316575"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Filtrar para determinar los elementos activados en el control CheckedListBox de formularios Windows Forms
 Cuando se presentan datos en un formulario Windows Forms <xref:System.Windows.Forms.CheckedListBox> control, puede iterar a través de la colección almacenada en el <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> propiedad o paso a través de la lista mediante el <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> método para determinar qué elementos están activados. El <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> método toma un número de índice del elemento como argumento y devuelve `true` o `false`. Al contrario de lo que cabría esperar, el <xref:System.Windows.Forms.ListBox.SelectedItems%2A> y <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> propiedades no determinan qué elementos están activados, determinan qué elementos se resaltan.  
   
 ### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>Para determinar los elementos activados en un control CheckedListBox  
   
-1.  Recorrer en iteración el <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> colección, empezando en 0, dado que la colección está basado en cero. Tenga en cuenta que este método le dará el número de elemento en la lista de elementos activados, no en la lista global. Por lo que si no se comprueba el primer elemento en la lista y el segundo elemento está activado, el código siguiente mostrará texto como "elemento activado 1 = MyListItem2".  
+1. Recorrer en iteración el <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> colección, empezando en 0, dado que la colección está basado en cero. Tenga en cuenta que este método le dará el número de elemento en la lista de elementos activados, no en la lista global. Por lo que si no se comprueba el primer elemento en la lista y el segundo elemento está activado, el código siguiente mostrará texto como "elemento activado 1 = MyListItem2".  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -68,7 +68,7 @@ Cuando se presentan datos en un formulario Windows Forms <xref:System.Windows.Fo
   
      - O  
   
-2.  Recorrer paso a paso el <xref:System.Windows.Forms.CheckedListBox.Items%2A> colección, empezando en 0, ya que está basado en cero, la colección y llamar a la <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> método para cada elemento. Tenga en cuenta que este método le dará el número de elemento en la lista global, por lo que si el primer elemento de la lista no está activada y el segundo elemento está activado, mostrará algo parecido a "elemento 2 = MyListItem2".  
+2. Recorrer paso a paso el <xref:System.Windows.Forms.CheckedListBox.Items%2A> colección, empezando en 0, ya que está basado en cero, la colección y llamar a la <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> método para cada elemento. Tenga en cuenta que este método le dará el número de elemento en la lista global, por lo que si el primer elemento de la lista no está activada y el segundo elemento está activado, mostrará algo parecido a "elemento 2 = MyListItem2".  
   
     ```vb  
     Dim i As Integer  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: 56e4a3f95c7449ae5693172728c9d777113679bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a11334abc83db20bec06fd2459d7b8598f672f2f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101306"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317485"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Filtrar Interceptar mensajes de servicio de datos (WCF Data Services)
 Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede interceptar mensajes de solicitud, lo que le permitirá agregar lógica personalizada a una operación. Para interceptar un mensaje, utilice los métodos con atributos especiales en el servicio de datos. Para obtener más información, consulte [interceptores](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  
@@ -22,23 +22,23 @@ Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede intercept
   
 ### <a name="to-define-a-query-interceptor-for-the-orders-entity-set"></a>Para definir un interceptor de consultas para el conjunto de entidades Orders  
   
-1.  En el proyecto del servicio de datos Northwind, abra el archivo Northwind.svc.  
+1. En el proyecto del servicio de datos Northwind, abra el archivo Northwind.svc.  
   
-2.  En la página de codigos de la clase `Northwind`, agregue la instrucción `using` siguiente (`Imports` en Visual Basic).  
+2. En la página de codigos de la clase `Northwind`, agregue la instrucción `using` siguiente (`Imports` en Visual Basic).  
   
      [!code-csharp[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#usinglinqexpressions)]
      [!code-vb[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#usinglinqexpressions)]  
   
-3.  En la clase `Northwind`, defina un método de operación de servicio denominado `OnQueryOrders` como sigue:  
+3. En la clase `Northwind`, defina un método de operación de servicio denominado `OnQueryOrders` como sigue:  
   
      [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
      [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
 ### <a name="to-define-a-change-interceptor-for-the-products-entity-set"></a>Para definir un interceptor de cambios para el conjunto de entidades Products  
   
-1.  En el proyecto del servicio de datos Northwind, abra el archivo Northwind.svc.  
+1. En el proyecto del servicio de datos Northwind, abra el archivo Northwind.svc.  
   
-2.  En la clase `Northwind`, defina un método de operación de servicio denominado `OnChangeProducts` como sigue:  
+2. En la clase `Northwind`, defina un método de operación de servicio denominado `OnChangeProducts` como sigue:  
   
      [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
      [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  

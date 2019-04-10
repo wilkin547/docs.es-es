@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: e8e5ef299ca7b5555a02e86e4422ca9f5b8a584f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199718"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314235"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Filtrar para iterar todos los nodos del control TreeView de formularios Windows Forms
 A veces es útil examinar todos los nodos en un formulario Windows Forms <xref:System.Windows.Forms.TreeView> control con el fin de realizar algún cálculo en los valores de nodo. Esta operación puede realizarse mediante un procedimiento recursivo (un método recursivo en C# y C++) que recorre en iteración los nodos de cada colección del árbol.  
@@ -24,9 +24,9 @@ A veces es útil examinar todos los nodos en un formulario Windows Forms <xref:S
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Para recorrer en iteración todos los nodos del control TreeView  
   
-1.  Cree un procedimiento recursivo (un método recursivo en C# y C++) que compruebe cada nodo.  
+1. Cree un procedimiento recursivo (un método recursivo en C# y C++) que compruebe cada nodo.  
   
-2.  Llame al procedimiento.  
+2. Llame al procedimiento.  
   
      El ejemplo siguiente muestra cómo imprimir cada <xref:System.Windows.Forms.TreeNode> del objeto <xref:System.Windows.Forms.TreeNode.Text%2A> propiedad:  
   

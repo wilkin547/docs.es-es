@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID387
 ms.assetid: 809f6768-7dd7-4632-b4dd-83856edfdb48
-ms.openlocfilehash: ca6887dfe6f168399ea1a06fec3e569406ed24a2
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 231dd322fd0eadb6fa13d58b527c0b047cc0e3f0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58024916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315288"
 ---
 # <a name="set-not-permitted"></a>No se permite establecer
 Intentó cambiar una propiedad cuya configuración no se puede establecer en tiempo de ejecución o solo puede establecerse en determinadas condiciones. Por ejemplo, quizás intentó cambiar la configuración de la propiedad `Appearance`, `ControlBox`,`MinButton`o `MaxButton` del formato en tiempo de ejecución, o intentó establecer la propiedad `Visible` en `False` del último submenú visible restante en un menú primario.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Compruebe la propiedad y determine en qué condiciones se puede establecer.  
+1. Compruebe la propiedad y determine en qué condiciones se puede establecer.  
   
 ## <a name="see-also"></a>Vea también
 

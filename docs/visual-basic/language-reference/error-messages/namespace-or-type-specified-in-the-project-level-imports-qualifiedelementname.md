@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 554300f87dbfca351ebcd2d544051968e84880ab
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 105fa8da838938d13022c210c1f65cdafd251003
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816833"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308489"
 ---
 # <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace o tipo especificado en el nivel de proyecto Imports'\<nombrecompletoelemento >' no contiene ningún miembro público o no se encuentra
 Namespace o tipo especificado en el nivel de proyecto Imports'\<nombrecompletoelemento >' no contiene ningún miembro público o no se encuentra. Asegúrese de que el espacio de nombres o el tipo se define y contiene a al menos un miembro público. Asegúrese de que el nombre de alias no contiene otros alias.  
@@ -31,11 +31,11 @@ Namespace o tipo especificado en el nivel de proyecto Imports'\<nombrecompletoel
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Abra el **Diseñador de proyectos** y cambie a la **referencia** página.  
+1. Abra el **Diseñador de proyectos** y cambie a la **referencia** página.  
   
-2.  En el **espacios de nombres importados** sección, compruebe que el elemento contenedor es accesible desde el proyecto.  
+2. En el **espacios de nombres importados** sección, compruebe que el elemento contenedor es accesible desde el proyecto.  
   
-3.  Compruebe que el elemento contenedor expone al menos una `Public` miembro.  
+3. Compruebe que el elemento contenedor expone al menos una `Public` miembro.  
   
 ## <a name="see-also"></a>Vea también
 
@@ -43,4 +43,4 @@ Namespace o tipo especificado en el nivel de proyecto Imports'\<nombrecompletoel
 - [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Espacios de nombres en Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Referencias a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

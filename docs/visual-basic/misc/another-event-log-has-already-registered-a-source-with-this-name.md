@@ -2,12 +2,12 @@
 title: Otro registro de eventos ya ha registrado un origen con este nombre.
 ms.date: 07/20/2015
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
-ms.openlocfilehash: b32169b79521ec7d0c429e1dce641aca9d747bb1
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d932869504b2d8a5f3a948b190e5528bfcfa664f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58032148"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314677"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>Otro registro de eventos ya ha registrado un origen con este nombre.
 Se ha intentado escribir una entrada en un registro de eventos donde el origen especificado está registrado con otro registro de eventos.  
@@ -16,9 +16,9 @@ Se ha intentado escribir una entrada en un registro de eventos donde el origen e
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Elimine la asociación del origen con el primer registro mediante el método <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> o <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> .  
+1. Elimine la asociación del origen con el primer registro mediante el método <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> o <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> .  
   
-2.  Registre el origen con el nuevo registro.  
+2. Registre el origen con el nuevo registro.  
   
 ## <a name="see-also"></a>Vea también
 

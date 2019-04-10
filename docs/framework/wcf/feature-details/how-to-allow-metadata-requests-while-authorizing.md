@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: 4d549bb953ecdcbddd0ea4730a766538b2205d0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bea4f7e90df29678697fe6708bdc6a73145522db
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082677"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317706"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>Cómo permitir las solicitudes de metadatos durante la autorización
 Durante la autorización personalizada, puede ser necesario permitir una solicitud para que se procesen los metadatos. El tema siguientes describe los pasos para validar este tipo de solicitud.  
@@ -21,13 +21,13 @@ Durante la autorización personalizada, puede ser necesario permitir una solicit
   
 ### <a name="to-allow-metadata-requests-during-authorization"></a>Para permitir las solicitudes de los metadatos durante la autorización  
   
-1.  Cree una extensión de la clase <xref:System.ServiceModel.ServiceAuthorizationManager>.  
+1. Cree una extensión de la clase <xref:System.ServiceModel.ServiceAuthorizationManager>.  
   
-2.  Invalide el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> . El método devuelve `true` o `false` dependiendo de si se permite la autorización. La información sobre el procedimiento actual se encuentra en <xref:System.ServiceModel.OperationContext> que se pasa como un parámetro al método.  
+2. Invalide el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> . El método devuelve `true` o `false` dependiendo de si se permite la autorización. La información sobre el procedimiento actual se encuentra en <xref:System.ServiceModel.OperationContext> que se pasa como un parámetro al método.  
   
-3.  En la invalidación, compruebe el nombre del contrato, espacio de nombres y la acción tal como se muestra en el ejemplo siguiente. Si las condiciones son válidas, a continuación, devolver `true.`  
+3. En la invalidación, compruebe el nombre del contrato, espacio de nombres y la acción tal como se muestra en el ejemplo siguiente. Si las condiciones son válidas, a continuación, devolver `true.`  
   
-4.  Utilice el punto de extensibilidad para emplear la clase. Para obtener más información, vea [Cómo: Crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
+4. Utilice el punto de extensibilidad para emplear la clase. Para obtener más información, vea [Cómo: Crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo de código se muestra una invalidación del método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>.  

@@ -2,23 +2,23 @@
 title: Filtrar para usar Svcutil.exe para validar el código del servicio compilado
 ms.date: 03/30/2017
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
-ms.openlocfilehash: 1e90d71d5831ccf262315ebf9c1deb99b386e224
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 599f5624b7eb0c32cbcc0a78e6c7f989ce470b58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196416"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312428"
 ---
 # <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>Filtrar para usar Svcutil.exe para validar el código del servicio compilado
 Puede usar el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para detectar errores en las implementaciones de servicio y configuraciones sin hospedar el servicio.  
   
 ### <a name="to-validate-a-service"></a>Validar un servicio  
   
-1.  Compile su servicio en un archivo ejecutable y uno o más ensamblados dependientes.  
+1. Compile su servicio en un archivo ejecutable y uno o más ensamblados dependientes.  
   
-2.  Abra un símbolo del sistema de SDK.  
+2. Abra un símbolo del sistema de SDK.  
   
-3.  En el símbolo del sistema, inicie la herramienta Svcutil.exe mediante el formato siguiente. Para obtener más información sobre los distintos parámetros, vea la sección de validación del servicio la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tema.  
+3. En el símbolo del sistema, inicie la herramienta Svcutil.exe mediante el formato siguiente. Para obtener más información sobre los distintos parámetros, vea la sección de validación del servicio la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tema.  
   
     ```  
     svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*  

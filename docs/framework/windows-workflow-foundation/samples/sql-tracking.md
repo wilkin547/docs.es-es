@@ -2,40 +2,40 @@
 title: Seguimiento de SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 6d3974cbf181734f2a3cab0fbc7d8f32c16699bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146346"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308931"
 ---
 # <a name="sql-tracking"></a>Seguimiento de SQL
 Este ejemplo muestra cómo escribir un participante de seguimiento SQL personalizado, que escribe registros de seguimiento en una base de datos SQL. Windows Workflow Foundation (WF) proporciona el flujo de trabajo de seguimiento para ganar visibilidad en la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. Para obtener más información acerca del seguimiento de flujo de trabajo, consulte [seguimiento y traza del flujo de trabajo](../workflow-tracking-and-tracing.md).
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1.  Compruebe que tiene instalado SQL Server 2008, SQL Server 2008 Express o una versión más reciente. Los scripts empaquetados con el ejemplo dan por supuesto el uso de una instancia de SQL Express en su equipo local. Si tiene una instancia diferente, modifique los scripts de base de datos antes de ejecutar el ejemplo.
+1. Compruebe que tiene instalado SQL Server 2008, SQL Server 2008 Express o una versión más reciente. Los scripts empaquetados con el ejemplo dan por supuesto el uso de una instancia de SQL Express en su equipo local. Si tiene una instancia diferente, modifique los scripts de base de datos antes de ejecutar el ejemplo.
 
-2.  Cree la base de datos de seguimiento de SQL Server ejecutando Trackingsetup.cmd en el directorio de scripts (\WF\Basic\Tracking\SqlTracking\CS\Scripts). De esta forma, se creará una base de datos denominada TrackingSample.
+2. Cree la base de datos de seguimiento de SQL Server ejecutando Trackingsetup.cmd en el directorio de scripts (\WF\Basic\Tracking\SqlTracking\CS\Scripts). De esta forma, se creará una base de datos denominada TrackingSample.
 
     > [!NOTE]
     >  El script crea la base de datos en la instancia predeterminada de SQL Express. Si desea realizar la instalación en una instancia de base de datos diferente, modifique el script Trackingsetup.cmd.  
   
-3.  Abra SqlTrackingSample.sln en Visual Studio 2010.  
+3. Abra SqlTrackingSample.sln en Visual Studio 2010.  
   
-4.  Presione Ctrl+MAYÚS+B para compilar la solución.  
+4. Presione Ctrl+MAYÚS+B para compilar la solución.  
   
-5.  Presione F5 para ejecutar la aplicación.  
+5. Presione F5 para ejecutar la aplicación.  
   
      La ventana del explorador se abre y muestra la lista de directorios de la aplicación.  
   
-6.  En el explorador, haga clic en StockPriceService.xamlx.  
+6. En el explorador, haga clic en StockPriceService.xamlx.  
   
-7.  El explorador muestra la página StockPriceService, que contiene la dirección WSDL de servicio local. Copie esta dirección.  
+7. El explorador muestra la página StockPriceService, que contiene la dirección WSDL de servicio local. Copie esta dirección.  
   
      Un ejemplo de la dirección WSDL de servicio local es `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
-8.  Al usar [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], ejecute el cliente de prueba de WCF (WcfTestClient.exe). Se encuentra en el directorio Microsoft Visual Studio 10.0\Common7\IDE.  
+8. Al usar [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], ejecute el cliente de prueba de WCF (WcfTestClient.exe). Se encuentra en el directorio Microsoft Visual Studio 10.0\Common7\IDE.  
   
 9. En el cliente de prueba WCF, haga clic en el **archivo** menú y seleccione **Agregar servicio**. Pegue la dirección del servicio local en el cuadro de texto. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
@@ -45,7 +45,7 @@ Este ejemplo muestra cómo escribir un participante de seguimiento SQL personali
   
 #### <a name="to-uninstall-the-sample"></a>Para desinstalar el ejemplo  
   
-1.  Ejecute el script Trackingcleanup.cmd script en el directorio de ejemplo (\WF\Basic\Tracking\SqlTracking).  
+1. Ejecute el script Trackingcleanup.cmd script en el directorio de ejemplo (\WF\Basic\Tracking\SqlTracking).  
   
     > [!NOTE]
     >  Trackingcleanup.cmd intenta eliminar la base de datos en el SQL Express del equipo local. Si está utilizando otra instancia del servidor SQL, modifique Trackingcleanup.cmd.

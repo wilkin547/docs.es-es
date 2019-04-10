@@ -9,12 +9,12 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 190b53a248a77f03dd5d8cb13cb59a439fa9960d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15fbf4a3cebef1485f0c54ace36ab88f3d4289e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157630"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310452"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Filtrar para ver errores de un conjunto de datos con el componente ErrorProvider de formularios Windows Forms
 Puede usar los formularios de Windows <xref:System.Windows.Forms.ErrorProvider> componente para ver los errores de la columna dentro de un conjunto de datos o de otro origen de datos. Para un <xref:System.Windows.Forms.ErrorProvider> componente para mostrar los errores de datos en un formulario, no tiene que estar directamente asociado a un control. Una vez que está enlazado a un origen de datos, puede mostrar un icono de error junto a cualquier control que está enlazado al mismo origen de datos.  
@@ -24,7 +24,7 @@ Puede usar los formularios de Windows <xref:System.Windows.Forms.ErrorProvider> 
   
 ### <a name="to-display-data-errors"></a>Para mostrar los errores de datos  
   
-1.  Enlazar el componente a una columna específica dentro de una tabla de datos.  
+1. Enlazar el componente a una columna específica dentro de una tabla de datos.  
   
     ```vb  
     ' Assumes existence of DataSet1, DataTable1  
@@ -40,7 +40,7 @@ Puede usar los formularios de Windows <xref:System.Windows.Forms.ErrorProvider> 
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2.  Establecer el <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> propiedad al formulario.  
+2. Establecer el <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> propiedad al formulario.  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -50,7 +50,7 @@ Puede usar los formularios de Windows <xref:System.Windows.Forms.ErrorProvider> 
     errorProvider1.ContainerControl = this;  
     ```  
   
-3.  Establezca la posición del registro actual en una fila que contiene un error de la columna.  
+3. Establezca la posición del registro actual en una fila que contiene un error de la columna.  
   
     ```vb  
     DataTable1.Rows(5).SetColumnError("Name", "Bad data in this row.")  
