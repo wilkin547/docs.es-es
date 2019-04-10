@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: f1acfab747c2309a2860870f8bcec9c0cf3b7bf0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302418"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Filtrar para crear listas maestro y detalle con el control DataGrid de formularios Windows Forms
 > [!NOTE]
@@ -25,17 +25,17 @@ ms.locfileid: "59094988"
   
 ### <a name="to-set-a-masterdetail-relationship-programmatically"></a>Para establecer una relación principal-detalle mediante programación  
   
-1.  Cree dos nuevos <xref:System.Windows.Forms.DataGrid> controla y establecer sus propiedades.  
+1. Cree dos nuevos <xref:System.Windows.Forms.DataGrid> controla y establecer sus propiedades.  
   
-2.  Agregar tablas al conjunto de datos.  
+2. Agregar tablas al conjunto de datos.  
   
-3.  Declarar una variable de tipo <xref:System.Data.DataRelation> para representar la relación que desea crear.  
+3. Declarar una variable de tipo <xref:System.Data.DataRelation> para representar la relación que desea crear.  
   
-4.  Crear una instancia de la relación especificando un nombre para la relación y especificando la tabla, la columna y el elemento que se asociará a las dos tablas.  
+4. Crear una instancia de la relación especificando un nombre para la relación y especificando la tabla, la columna y el elemento que se asociará a las dos tablas.  
   
-5.  Agregar la relación con el <xref:System.Data.DataSet> del objeto <xref:System.Data.DataSet.Relations%2A> colección.  
+5. Agregar la relación con el <xref:System.Data.DataSet> del objeto <xref:System.Data.DataSet.Relations%2A> colección.  
   
-6.  Use la <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método de la <xref:System.Windows.Forms.DataGrid> para cada una de las cuadrículas para enlazar la <xref:System.Data.DataSet>.  
+6. Use la <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método de la <xref:System.Windows.Forms.DataGrid> para cada una de las cuadrículas para enlazar la <xref:System.Data.DataSet>.  
   
      El ejemplo siguiente muestra cómo establecer una relación principal-detalle entre las tablas Customers y Orders en generado anteriormente <xref:System.Data.DataSet> (`ds`).  
   

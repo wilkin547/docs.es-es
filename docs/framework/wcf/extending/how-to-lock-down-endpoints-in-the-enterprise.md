@@ -2,12 +2,12 @@
 title: Filtrar para bloquear puntos de conexión en la empresa
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 9bfd077abf0956f014c78a7c398670822724f7e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181368"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305973"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Filtrar para bloquear puntos de conexión en la empresa
 Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conforme a las directivas de seguridad de la empresa. El siguiente tema describe cómo desarrollar e instalar un validador de punto de conexión de cliente que puede usarse para validar todas las aplicaciones cliente de Windows Communication Foundation (WCF) instaladas en los equipos.  
@@ -25,23 +25,23 @@ Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conf
   
 ### <a name="to-create-the-endpoint-validator"></a>Para crear el validador de punto de conexión  
   
-1.  Cree un <xref:System.ServiceModel.Description.IEndpointBehavior> con los pasos de validación que desee en el método <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A>. El siguiente código proporciona un ejemplo. (El `InternetClientValidatorBehavior` procede de la [validación de seguridad](../../../../docs/framework/wcf/samples/security-validation.md) ejemplo.)  
+1. Cree un <xref:System.ServiceModel.Description.IEndpointBehavior> con los pasos de validación que desee en el método <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A>. El siguiente código proporciona un ejemplo. (El `InternetClientValidatorBehavior` procede de la [validación de seguridad](../../../../docs/framework/wcf/samples/security-validation.md) ejemplo.)  
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2.  Cree un nuevo <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> que registre el validador de punto de conexión creado en el paso 1. El ejemplo de código siguiente muestra cómo hacerlo. (El código original para este ejemplo está en el [validación de seguridad](../../../../docs/framework/wcf/samples/security-validation.md) ejemplo.)  
+2. Cree un nuevo <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> que registre el validador de punto de conexión creado en el paso 1. El ejemplo de código siguiente muestra cómo hacerlo. (El código original para este ejemplo está en el [validación de seguridad](../../../../docs/framework/wcf/samples/security-validation.md) ejemplo.)  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  Asegúrese de que el ensamblado compilado se firma con un nombre seguro. Para obtener más información, consulte el [Strong Name Tool (SN. (EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) y los comandos del compilador para su idioma.  
+3. Asegúrese de que el ensamblado compilado se firma con un nombre seguro. Para obtener más información, consulte el [Strong Name Tool (SN. (EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) y los comandos del compilador para su idioma.  
   
 ### <a name="to-install-the-validator-into-the-target-computer"></a>Para instalar el validador en el equipo de destino  
   
-1.  Instale el validador del punto de conexión mediante el mecanismo adecuado. En una empresa, esto puede hacerse utilizando la directiva de grupo y Systems Management Server (SMS).  
+1. Instale el validador del punto de conexión mediante el mecanismo adecuado. En una empresa, esto puede hacerse utilizando la directiva de grupo y Systems Management Server (SMS).  
   
-2.  Instalar el ensamblado con nombre seguro en la caché global de ensamblados mediante la [Gacutil.exe (Global Assembly Cache Tool)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+2. Instalar el ensamblado con nombre seguro en la caché global de ensamblados mediante la [Gacutil.exe (Global Assembly Cache Tool)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
-3.  Utilice los tipos de espacio de nombres de <xref:System.Configuration?displayProperty=nameWithType> para:  
+3. Utilice los tipos de espacio de nombres de <xref:System.Configuration?displayProperty=nameWithType> para:  
   
     1.  Agregue la extensión a la [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) sección con un nombre de tipo completo y bloquee el elemento.  
   

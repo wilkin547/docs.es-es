@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829335"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295645"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Filtrar Declarar y llamar a una propiedad predeterminada en Visual Basic
 Un *propiedad predeterminada* es una propiedad de clase o estructura que el código puede tener acceso sin especificarlo. Al llamar a los nombres de código de una clase o estructura, pero no una propiedad y el contexto permite el acceso a una propiedad, Visual Basic resuelve el acceso a esa clase o propiedad de la estructura predeterminada si existe alguno.  
@@ -26,37 +26,37 @@ Un *propiedad predeterminada* es una propiedad de clase o estructura que el cód
   
 ### <a name="to-declare-a-default-property"></a>Para declarar una propiedad predeterminada  
   
-1.  Declare la propiedad de la manera normal. No se especifica la `Shared` o `Private` palabra clave.  
+1. Declare la propiedad de la manera normal. No se especifica la `Shared` o `Private` palabra clave.  
   
-2.  Incluir el `Default` palabra clave en la declaración de propiedad.  
+2. Incluir el `Default` palabra clave en la declaración de propiedad.  
   
-3.  Especifique al menos un parámetro para la propiedad. No se puede definir una propiedad predeterminada que no tiene al menos un argumento.  
+3. Especifique al menos un parámetro para la propiedad. No se puede definir una propiedad predeterminada que no tiene al menos un argumento.  
   
      [!code-vb[VbVbcnProcedures#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#17)]  
   
 ### <a name="to-call-a-default-property"></a>Para llamar a una propiedad predeterminada  
   
-1.  Declare una variable del tipo de clase o estructura contenedora.  
+1. Declare una variable del tipo de clase o estructura contenedora.  
   
      [!code-vb[VbVbcnProcedures#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#16)]  
   
-2.  Utilice el nombre de variable solo en una expresión donde normalmente incluiría el nombre de propiedad.  
+2. Utilice el nombre de variable solo en una expresión donde normalmente incluiría el nombre de propiedad.  
   
      [!code-vb[VbVbcnProcedures#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#21)]  
   
-3.  Siga el nombre de variable con una lista de argumentos entre paréntesis. Una propiedad predeterminada debe tener al menos un argumento.  
+3. Siga el nombre de variable con una lista de argumentos entre paréntesis. Una propiedad predeterminada debe tener al menos un argumento.  
   
      [!code-vb[VbVbcnProcedures#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#20)]  
   
-4.  Para recuperar el valor de propiedad predeterminado, use el nombre de variable con una lista de argumentos en una expresión o siguiendo la igual (`=`) inicie sesión en una instrucción de asignación.  
+4. Para recuperar el valor de propiedad predeterminado, use el nombre de variable con una lista de argumentos en una expresión o siguiendo la igual (`=`) inicie sesión en una instrucción de asignación.  
   
      [!code-vb[VbVbcnProcedures#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#15)]  
   
-5.  Para establecer el valor de propiedad predeterminado, use el nombre de variable con una lista de argumentos, en el lado izquierdo de una instrucción de asignación.  
+5. Para establecer el valor de propiedad predeterminado, use el nombre de variable con una lista de argumentos, en el lado izquierdo de una instrucción de asignación.  
   
      [!code-vb[VbVbcnProcedures#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#14)]  
   
-6.  Siempre puede especificar el nombre de propiedad predeterminado junto con el nombre de variable, justo como lo haría para tener acceso a cualquier otra propiedad.  
+6. Siempre puede especificar el nombre de propiedad predeterminado junto con el nombre de variable, justo como lo haría para tener acceso a cualquier otra propiedad.  
   
      [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
@@ -83,13 +83,13 @@ Un *propiedad predeterminada* es una propiedad de clase o estructura que el cód
   
 ## <a name="see-also"></a>Vea también
 
-- [Procedimientos de propiedades](./property-procedures.md)
+- [Procedimientos de propiedad](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
-- [Property (instrucción)](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Predetermiado](../../../../visual-basic/language-reference/modifiers/default.md)
-- [Diferencias entre propiedades y Variables en Visual Basic](./differences-between-properties-and-variables.md)
-- [Cómo: Crear una propiedad](./how-to-create-a-property.md)
-- [Cómo: Declarar una propiedad con niveles de acceso mixtos](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Cómo: Llamar a un procedimiento de propiedad](./how-to-call-a-property-procedure.md)
-- [Cómo: Establecer un valor en una propiedad](./how-to-put-a-value-in-a-property.md)
-- [Cómo: Obtener un valor de una propiedad](./how-to-get-a-value-from-a-property.md)
+- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Default](../../../../visual-basic/language-reference/modifiers/default.md)
+- [Diferencias entre propiedades y variables en Visual Basic](./differences-between-properties-and-variables.md)
+- [Filtrar para crear una propiedad](./how-to-create-a-property.md)
+- [Filtrar para declarar una propiedad con niveles de acceso mixtos](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Filtrar para llamar a un procedimiento de propiedad](./how-to-call-a-property-procedure.md)
+- [Filtrar para establecer un valor en una propiedad](./how-to-put-a-value-in-a-property.md)
+- [Filtrar para obtener un valor de una propiedad](./how-to-get-a-value-from-a-property.md)

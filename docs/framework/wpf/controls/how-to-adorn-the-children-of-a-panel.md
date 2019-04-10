@@ -8,12 +8,12 @@ helpviewer_keywords:
 - adorners [WPF], binding to children of Panels
 - Panel control [WPF], binding adorners to children
 ms.assetid: 4cc9b972-b472-4e5c-bdf3-3702d7fbb1f5
-ms.openlocfilehash: e96e1772794a1594d97e1a0109d944d23515468d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 746f197a5132934f94a678dc3b5e2a1f65eb93bd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100891"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299824"
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>Filtrar Agregar adornos a elementos secundarios de un panel
 En este ejemplo se muestra cómo enlazar mediante programación un adorno a los elementos secundarios de un determinado <xref:System.Windows.Controls.Panel>.  
@@ -21,9 +21,9 @@ En este ejemplo se muestra cómo enlazar mediante programación un adorno a los 
 ## <a name="example"></a>Ejemplo  
  Para enlazar un adorno a los elementos secundarios de un <xref:System.Windows.Controls.Panel>, siga estos pasos:  
   
-1.  Declarar un nuevo <xref:System.Windows.Documents.AdornerLayer> objeto y llamar a la `static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> método para buscar una capa de adornos para el elemento cuyos elementos secundarios desea adornar.  
+1. Declarar un nuevo <xref:System.Windows.Documents.AdornerLayer> objeto y llamar a la `static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> método para buscar una capa de adornos para el elemento cuyos elementos secundarios desea adornar.  
   
-2.  Enumere los elementos secundarios del elemento primario y llamada la <xref:System.Windows.Documents.AdornerLayer.Add%2A> método para enlazar un adorno a cada elemento secundario.  
+2. Enumere los elementos secundarios del elemento primario y llamada la <xref:System.Windows.Documents.AdornerLayer.Add%2A> método para enlazar un adorno a cada elemento secundario.  
   
  El ejemplo siguiente enlaza el adorno SimpleCircleAdorner (mostrado anteriormente) a los elementos secundarios de un <xref:System.Windows.Controls.StackPanel> denominado *myStackPanel*.  
   

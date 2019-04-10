@@ -2,12 +2,12 @@
 title: Publicación de servicio WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 04912d94568cf144e874513395e6a6f31375fb7c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441442"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299727"
 ---
 # <a name="wcf-service-publishing"></a>Publicación de servicio WCF
 
@@ -35,13 +35,13 @@ El servicio se puede publicar en las ubicaciones de destino siguientes.
 
 Para llevar a cabo una implementación de servicio, realice los siguientes pasos:
 
-1.  Abra Visual Studio con privilegios elevados (haga clic en el archivo ejecutable y elija **ejecutar como administrador** para abrirlo).  Si está utilizando IIS 7.0 o versiones posteriores, asegúrese de que ha instalado el componente "IIS compatibilidad con la Metabase y IIS6 Configuration" con "Windows activar o desactivar las características" en el Panel de Control.
+1. Abra Visual Studio con privilegios elevados (haga clic en el archivo ejecutable y elija **ejecutar como administrador** para abrirlo).  Si está utilizando IIS 7.0 o versiones posteriores, asegúrese de que ha instalado el componente "IIS compatibilidad con la Metabase y IIS6 Configuration" con "Windows activar o desactivar las características" en el Panel de Control.
 
-2.  Abra un proyecto de servicio, seleccione **compilar** > **publicar \<nombre del proyecto >** en el menú principal, o haga clic en el proyecto en **el Explorador de soluciones**y haga clic en **publicar**.
+2. Abra un proyecto de servicio, seleccione **compilar** > **publicar \<nombre del proyecto >** en el menú principal, o haga clic en el proyecto en **el Explorador de soluciones**y haga clic en **publicar**.
 
-3.  El **publicar** aparecerá la ventana. Haga clic en el **...** . para especificar la ubicación de destino en la que se debe implementar el servicio. Puede seleccionar para implementar la aplicación en IIS local, sistema de archivos o sitio FTP. Si implementa la aplicación en IIS local, puede seleccionar el sitio Web y crear la aplicación web en ella, haciendo clic en el **crear nueva aplicación Web** situado en la esquina superior derecha.
+3. El **publicar** aparecerá la ventana. Haga clic en el **...** . para especificar la ubicación de destino en la que se debe implementar el servicio. Puede seleccionar para implementar la aplicación en IIS local, sistema de archivos o sitio FTP. Si implementa la aplicación en IIS local, puede seleccionar el sitio Web y crear la aplicación web en ella, haciendo clic en el **crear nueva aplicación Web** situado en la esquina superior derecha.
 
-4.  Tras hacer clic en **publicar** en la ventana principal, Visual Studio implementa la aplicación en la ubicación de destino especificado y copia los archivos Web.config, .svc y de ensamblado en el directorio de destino. . El nombre de .svc será "ProjectName.ServiceName.svc". Una vez publicado el servicio correctamente, puede encontrar un vínculo rápido en la ventana de salida de Visual Studio, que es similar a "conectarse a `http://localhost/WebApplicationFolderName...`". Puede presionar CTRL y hacer clic el vínculo para abrir una página del explorador dentro de Visual Studio y ver la estructura de directorios del servicio.
+4. Tras hacer clic en **publicar** en la ventana principal, Visual Studio implementa la aplicación en la ubicación de destino especificado y copia los archivos Web.config, .svc y de ensamblado en el directorio de destino. . El nombre de .svc será "ProjectName.ServiceName.svc". Una vez publicado el servicio correctamente, puede encontrar un vínculo rápido en la ventana de salida de Visual Studio, que es similar a "conectarse a `http://localhost/WebApplicationFolderName...`". Puede presionar CTRL y hacer clic el vínculo para abrir una página del explorador dentro de Visual Studio y ver la estructura de directorios del servicio.
 
      Si no puede ir al sitio, puede que sea porque el explorador de directorios no está habilitado en IIS. Siga las sugerencias en la sección "Cosas que puede probar" para habilitarla. Como alternativa, puede escribir directamente `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` para ver su página de servicio.
 

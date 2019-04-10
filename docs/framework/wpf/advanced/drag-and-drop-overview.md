@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139222"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301404"
 ---
 # <a name="drag-and-drop-overview"></a>Información general sobre la función de arrastrar y colocar
 Este tema proporciona información general sobre la compatibilidad con arrastrar y colocar en aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Arrastrar y colocar se refiere normalmente a un método de transferencia de datos que implica el uso de un mouse (o cualquier otro dispositivo señalador) para seleccionar uno o más objetos, arrastrar estos objetos sobre un destino deseado en la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] y soltarlos.  
@@ -181,11 +181,11 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
   
  Para especificar que un elemento es un destino de colocación, su propiedad <xref:System.Windows.UIElement.AllowDrop%2A> se establece en `true`. A continuación, se generarán los eventos del destino de colocación en el elemento para que pueda controlarlos. Durante una operación de arrastrar y colocar, se produce la siguiente secuencia de eventos en el destino de colocación:  
   
-1.  <xref:System.Windows.DragDrop.DragEnter>  
+1. <xref:System.Windows.DragDrop.DragEnter>  
   
-2.  <xref:System.Windows.DragDrop.DragOver>  
+2. <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave> o <xref:System.Windows.DragDrop.Drop>  
+3. <xref:System.Windows.DragDrop.DragLeave> o <xref:System.Windows.DragDrop.Drop>  
   
  El evento <xref:System.Windows.DragDrop.DragEnter> se produce cuando se arrastran los datos dentro de los límites del destino de colocación. Normalmente, este evento se controla para que proporcione una vista previa de los efectos de la operación de arrastrar y colocar, si es adecuado para la aplicación. No establezca la propiedad <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> en el evento <xref:System.Windows.DragDrop.DragEnter>, ya que se sobrescribirá en el evento <xref:System.Windows.DragDrop.DragOver>.  
   

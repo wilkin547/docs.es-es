@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081494"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298479"
 ---
 # <a name="getting-started-with-net-native"></a>Introducción a .NET Native
 El conjunto de procedimientos que se debe seguir es el mismo, independientemente de si está creando una nueva aplicación de Windows para Windows 10 o si está migrando una aplicación que ya existe en la Tienda Windows. Siga estos pasos para crear una aplicación de [!INCLUDE[net_native](../../../includes/net-native-md.md)] :  
   
-1.  [Desarrolle una aplicación de plataforma universal de Windows (UWP) destinada a Windows 10](#Step1)y pruebe la aplicación para asegurarse de que funciona correctamente.  
+1. [Desarrolle una aplicación de plataforma universal de Windows (UWP) destinada a Windows 10](#Step1)y pruebe la aplicación para asegurarse de que funciona correctamente.  
   
-2.  [Administre el uso de reflexión y serialización adicionales](#Step2).  
+2. [Administre el uso de reflexión y serialización adicionales](#Step2).  
   
-3.  [Implemente y pruebe las compilaciones de lanzamiento de la aplicación](#Step3).  
+3. [Implemente y pruebe las compilaciones de lanzamiento de la aplicación](#Step3).  
   
-4.  [Resuelva manualmente los metadatos que faltan](#Step4)y repita el [paso 3](#Step3) hasta que todos los problemas estén solucionados.  
+4. [Resuelva manualmente los metadatos que faltan](#Step4)y repita el [paso 3](#Step3) hasta que todos los problemas estén solucionados.  
   
 > [!NOTE]
 >  Si va a migrar una aplicación existente de la Tienda Windows a [!INCLUDE[net_native](../../../includes/net-native-md.md)], no olvide repasar el tema [Migrar la aplicación de la Tienda Windows a .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
@@ -29,9 +29,9 @@ El conjunto de procedimientos que se debe seguir es el mismo, independientemente
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Paso 1: Desarrollar y probar las compilaciones de depuración de la aplicación para UWP  
  Tanto si va a desarrollar una nueva aplicación o migrar una ya existente, el procedimiento es el mismo para cualquier aplicación de Windows.  
   
-1.  Crear un nuevo proyecto de UWP en Visual Studio mediante la plantilla de aplicación universal de Windows para Visual C# o Visual Basic. De forma predeterminada, todas las aplicaciones de UWP tienen como destino CoreCLR y sus versiones de lanzamiento se compilan con la cadena de herramientas de .NET Native.  
+1. Crear un nuevo proyecto de UWP en Visual Studio mediante la plantilla de aplicación universal de Windows para Visual C# o Visual Basic. De forma predeterminada, todas las aplicaciones de UWP tienen como destino CoreCLR y sus versiones de lanzamiento se compilan con la cadena de herramientas de .NET Native.  
   
-2.  Tenga en cuenta que existen algunos problemas de compatibilidad conocidos entre la compilación de proyectos de aplicaciones de UWP con la cadena de herramientas de .NET Native y sin ella. Consulte la [guía de migración](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) para más información.  
+2. Tenga en cuenta que existen algunos problemas de compatibilidad conocidos entre la compilación de proyectos de aplicaciones de UWP con la cadena de herramientas de .NET Native y sin ella. Consulte la [guía de migración](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) para más información.  
   
  Ahora puede escribir el código C# o Visual Basic en el área expuesta de [!INCLUDE[net_native](../../../includes/net-native-md.md)] que se ejecuta en un sistema local (o en el simulador).  
   

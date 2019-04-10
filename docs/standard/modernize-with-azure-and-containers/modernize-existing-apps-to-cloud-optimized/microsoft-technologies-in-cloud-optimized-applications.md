@@ -4,12 +4,12 @@ description: Modernizar aplicaciones .NET existentes con contenedores de Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2f1d624365c168d14e98ed175d369f6aef18e42e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 45eeee165a1dcbfc7b6dbc5146ce2c4b2be2e643
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153883"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296256"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Tecnologías de Microsoft en aplicaciones optimizadas para la nube
 
@@ -25,9 +25,9 @@ En la lista siguiente describe las herramientas, tecnologías y soluciones que s
 
 -   **Supervisión, telemetría, registro y auditoría**: La capacidad de las aplicaciones supervise y audite y contenedores que se ejecutan en la nube es fundamental para cualquier aplicación optimizada para la nube. [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) y [Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) son las principales herramientas de Microsoft que proporcionan la supervisión y auditoría para las aplicaciones optimizadas para la nube.
 
--   **Aprovisionamiento**: Herramientas de automatización de ayudan a aprovisionar la infraestructura e implementar una aplicación en varios entornos (producción, pruebas, almacenamiento provisional). Puede usar herramientas como Chef y Puppet para administrar el entorno y la configuración de una aplicación. Este nivel también puede implementarse mediante los enfoques más sencillas y directos. Por ejemplo, puede implementar directamente mediante Azure interfaz de línea de comandos (CLI de Azure), herramientas y, a continuación, usar la implementación continua y liberar las canalizaciones de administración en [servicios de Azure DevOps](https://visualstudio.microsoft.com/team-services/).
+-   **Aprovisionamiento**: Herramientas de automatización de ayudan a aprovisionar la infraestructura e implementar una aplicación en varios entornos (producción, pruebas, almacenamiento provisional). Puede usar herramientas como Chef y Puppet para administrar el entorno y la configuración de una aplicación. Este nivel también puede implementarse mediante los enfoques más sencillas y directos. Por ejemplo, puede implementar directamente mediante Azure interfaz de línea de comandos (CLI de Azure), herramientas y, a continuación, usar la implementación continua y liberar las canalizaciones de administración en [servicios de Azure DevOps](https://azure.microsoft.com/services/devops/).
 
--   **Ciclo de vida de aplicación**: [Servicios de Azure DevOps](https://visualstudio.microsoft.com/team-services/) y otras herramientas como Jenkins, son servidores de automatización integradas que le ayudarán a implementar canalizaciones de CI/CD, incluida la administración de versión.
+-   **Ciclo de vida de aplicación**: [Servicios de Azure DevOps](https://azure.microsoft.com/services/devops/) y otras herramientas como Jenkins, son servidores de automatización integradas que le ayudarán a implementar canalizaciones de CI/CD, incluida la administración de versión.
 
 Las secciones siguientes de este capítulo y los tutoriales relacionados, se centran específicamente en los detalles acerca de la capa en tiempo de ejecución (contenedores de Windows). La guía describe los modos de implementación de máquinas virtuales de los contenedores de Windows en Windows Server 2016 (y versiones posteriores) y Azure Container Instances. También se tratan más avanzadas plataformas PaaS como Azure App Service y orchestrator como Azure Service Fabric y Azure Kubernetes Service.
 

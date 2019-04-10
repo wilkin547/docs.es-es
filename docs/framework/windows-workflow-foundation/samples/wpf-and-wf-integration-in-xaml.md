@@ -2,18 +2,18 @@
 title: Integración de WPF y WF en XAML
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-ms.openlocfilehash: ce6fc259b4e8743abd71e979825545183eef136a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 188702cfc13d7e353238e108066cc3d5f1c8bda9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840880"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298648"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>Integración de WPF y WF en XAML
 Este ejemplo muestra cómo crear una aplicación que usa las características de Windows Presentation Foundation (WPF) y Windows Workflow Foundation (WF) en un documento XAML único. Para lograr esto, el ejemplo utiliza la extensibilidad de Windows Workflow Foundation (WF) y XAML.
 
 ## <a name="sample-details"></a>Detalles del ejemplo
- El archivo ShowWindow.xaml se deserializa en una actividad <xref:System.Activities.Statements.Sequence> con dos variables de cadena que son manipuladas por las actividades de la secuencia: `ShowWindow` y `WriteLine`. La actividad <xref:System.Activities.Statements.WriteLine> genera en la ventana de la consola la expresión que asigna a la propiedad <xref:System.Activities.Statements.WriteLine.Text%2A>. La actividad `ShowWindow` muestra una ventana de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] como parte de su lógica de ejecución. El objeto <xref:System.Activities.ActivityContext.DataContext%2A> de la ventana incluye las variables declaradas en la secuencia. Los controles de la ventana declarados en la actividad `ShowWindow` usan el enlace de datos para manipular esas variables. Por último, la ventana contiene un control de botón. El evento `Click` para el botón se controla mediante un <xref:System.Activities.ActivityDelegate> denominado `MarkupExtension` que contiene una actividad `CloseWindow`. `MarkUpExtension` invoca la actividad contenida que proporciona, como contexto, cualquier objeto identificado por `x:Name`, así como el <xref:System.Activities.ActivityContext.DataContext%2A> de la ventana contenedora. Por lo tanto, `CloseWindow.InArgument<Window>` se puede enlazar utilizando una expresión que haga referencia al nombre de la ventana.
+ El archivo ShowWindow.xaml se deserializa en una actividad <xref:System.Activities.Statements.Sequence> con dos variables de cadena que son manipuladas por las actividades de la secuencia: `ShowWindow` y `WriteLine`. La actividad <xref:System.Activities.Statements.WriteLine> genera en la ventana de la consola la expresión que asigna a la propiedad <xref:System.Activities.Statements.WriteLine.Text%2A>. La actividad `ShowWindow` muestra una ventana de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] como parte de su lógica de ejecución. El objeto <xref:System.Activities.ActivityContext.DataContext%2A> de la ventana incluye las variables declaradas en la secuencia. Los controles de la ventana declarados en la actividad `ShowWindow` usan el enlace de datos para manipular esas variables. Por último, la ventana contiene un control de botón. El evento `Click` para el botón se controla mediante un <xref:System.Activities.ActivityDelegate> denominado `MarkupExtension` que contiene una actividad `CloseWindow`. `MarkUpExtension` invoca la actividad contenida que proporciona, como contexto, cualquier objeto identificado por un `x:Name`, así como el <xref:System.Activities.ActivityContext.DataContext%2A> de la ventana contenedora. Por lo tanto, `CloseWindow.InArgument<Window>` se puede enlazar utilizando una expresión que haga referencia al nombre de la ventana.
 
  La actividad `ShowWindow` deriva de la clase <xref:System.Activities.AsyncCodeActivity%601> para mostrar una ventana de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] y se completa cuando se cierra la ventana. La propiedad `Window` es de tipo `Func<Window>` que permite crear la ventana a petición para cada ejecución de la actividad. La propiedad `Window` utiliza <xref:System.Xaml.XamlDeferringLoader> para habilitar este modelo de evaluación diferida. `FuncFactoryDeferringLoader` permite capturar un `XamlReader` durante la serialización y, a continuación, leerlo durante la ejecución de la actividad.
 
@@ -26,15 +26,15 @@ Este ejemplo muestra cómo crear una aplicación que usa las características de
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1.  Con Visual Studio 2010, abra el archivo de solución de WPFWFIntegration.sln.
+1. Con Visual Studio 2010, abra el archivo de solución de WPFWFIntegration.sln.
 
-2.  Para compilar la solución, presione Ctrl+MAYÚS+B.
+2. Para compilar la solución, presione Ctrl+MAYÚS+B.
 
-3.  Presione F5 para ejecutar la solución.
+3. Presione F5 para ejecutar la solución.
 
-4.  Escriba su nombre y apellido en el diálogo.
+4. Escriba su nombre y apellido en el diálogo.
 
-5.  Cierre el diálogo y la consola repetirá su nombre.
+5. Cierre el diálogo y la consola repetirá su nombre.
 
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

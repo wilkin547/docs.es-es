@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 0246f059079b2024dd1bd16ae6afc4950d08e0a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 37f0874ea99ee928e49a54a3e6a05ea4ef06f84e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115276"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294670"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Agrupación de los mensajes en cola de una sesión
 Windows Communication Foundation (WCF) proporciona una sesión que le permite agrupar un conjunto de mensajes relacionados para el procesamiento por una aplicación receptora única. Los mensajes que forman parte de una sesión deben formar parte de la misma transacción. Dado que todos los mensajes forman parte de la misma transacción, si se producir un error al procesar un mensaje, se deshace la sesión completa. Las sesiones tienen comportamientos similares con respecto a las colas de mensajes no enviados y a las colas de mensajes dudosos. El conjunto de propiedades Time to Live (TTL) establecido en un enlace de cola configurado para las sesiones se aplica a la sesión como un conjunto. Si solo se envían algunos de los mensajes en la sesión antes de que el TTL expire, la sesión completa se coloca en la cola de mensajes no enviados. De manera similar, cuando se produce un error al enviar, en una sesión, los mensajes a una aplicación desde la cola de la aplicación, la sesión completa se coloca en la cola de mensajes dudosos (si está disponible).  
@@ -24,49 +24,49 @@ Windows Communication Foundation (WCF) proporciona una sesión que le permite ag
   
 #### <a name="to-set-up-a-service-contract-to-use-sessions"></a>Para preparar un contrato de servicios para utilizar sesiones  
   
-1.  Defina un contrato de servicios que requiera una sesión. Hágalo mediante el atributo <xref:System.ServiceModel.OperationContractAttribute> y especificando:  
+1. Defina un contrato de servicios que requiera una sesión. Hágalo mediante el atributo <xref:System.ServiceModel.OperationContractAttribute> y especificando:  
   
     ```  
     SessionMode=SessionMode.Required  
     ```  
   
-2.  Marque las operaciones en el contrato como unidireccionales, porque estos métodos no devuelven nada. Esto se realiza mediante el atributo <xref:System.ServiceModel.OperationContractAttribute> y especificando:  
+2. Marque las operaciones en el contrato como unidireccionales, porque estos métodos no devuelven nada. Esto se realiza mediante el atributo <xref:System.ServiceModel.OperationContractAttribute> y especificando:  
   
     ```  
     [OperationContract(IsOneWay = true)]  
     ```  
   
-3.  Implemente el contrato de servicios y especifique un `InstanceContextMode` de `PerSession`. Esto solo instancia el servicio una vez por sesión.  
+3. Implemente el contrato de servicios y especifique un `InstanceContextMode` de `PerSession`. Esto solo instancia el servicio una vez por sesión.  
   
     ```  
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4.  Cada operación del servicio requiere una transacción. Especifique esto con el atributo <xref:System.ServiceModel.OperationBehaviorAttribute>. La operación que completa la transacción también debería establecer `TransactionAutoComplete` en `true`.  
+4. Cada operación del servicio requiere una transacción. Especifique esto con el atributo <xref:System.ServiceModel.OperationBehaviorAttribute>. La operación que completa la transacción también debería establecer `TransactionAutoComplete` en `true`.  
   
     ```  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
     ```  
   
-5.  Configure un extremo que utilice el enlace `NetMsmqBinding` proporcionado por el sistema.  
+5. Configure un extremo que utilice el enlace `NetMsmqBinding` proporcionado por el sistema.  
   
-6.  Cree una cola transaccional utilizando <xref:System.Messaging>. También puede crear la cola utilizando Message Queuing (MSMQ) o MMC. Si lo hace, cree una cola transaccional.  
+6. Cree una cola transaccional utilizando <xref:System.Messaging>. También puede crear la cola utilizando Message Queuing (MSMQ) o MMC. Si lo hace, cree una cola transaccional.  
   
-7.  Cree un host del servicio para el servicio mediante el uso de <xref:System.ServiceModel.ServiceHost>.  
+7. Cree un host del servicio para el servicio mediante el uso de <xref:System.ServiceModel.ServiceHost>.  
   
-8.  Abra el host de servicio para hacer que el servicio esté disponible.  
+8. Abra el host de servicio para hacer que el servicio esté disponible.  
   
 9. Cierre el host de servicio.  
   
 #### <a name="to-set-up-a-client"></a>Para configurar un cliente  
   
-1.  Cree un ámbito de la transacción para escribir en la cola transaccional.  
+1. Cree un ámbito de la transacción para escribir en la cola transaccional.  
   
-2.  Crear el cliente WCF mediante el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta.  
+2. Crear el cliente WCF mediante el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta.  
   
-3.  Realice el pedido.  
+3. Realice el pedido.  
   
-4.  Cierre al cliente WCF.  
+4. Cierre al cliente WCF.  
   
 ## <a name="example"></a>Ejemplo  
   

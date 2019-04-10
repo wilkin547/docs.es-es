@@ -2,12 +2,12 @@
 title: Realizar el seguimiento visual del flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: c89a63ac80b4705fff5c7714e7f40646c5b5d26d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6e87b0ef5a0d6fa97c87c99a63fe0e23c389140c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703587"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296464"
 ---
 # <a name="visual-workflow-tracking"></a>Realizar el seguimiento visual del flujo de trabajo
 En este ejemplo se muestra cómo escribir una aplicación de seguimiento de flujo de trabajo visual mediante la funcionalidad de depuración disponible en [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].
@@ -19,17 +19,17 @@ En este ejemplo se muestra cómo escribir una aplicación de seguimiento de fluj
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1.  Abra el archivo WorkflowSimulator.sln del directorio de ejemplo en Visual Studio 2010.
+1. Abra el archivo WorkflowSimulator.sln del directorio de ejemplo en Visual Studio 2010.
 
-2.  Presione Ctrl+MAYÚS+B para compilar la solución.
+2. Presione Ctrl+MAYÚS+B para compilar la solución.
 
-3.  Presione CTRL + F5 para ejecutar el ejemplo. Así se muestra el archivo Workflow.xaml en una ventana de diseñador de flujo de trabajo hospedada en otro host.
+3. Presione CTRL + F5 para ejecutar el ejemplo. Así se muestra el archivo Workflow.xaml en una ventana de diseñador de flujo de trabajo hospedada en otro host.
 
-4.  Haga clic en el **archivo** menú y seleccione **ejecutar flujo de trabajo...** .
+4. Haga clic en el **archivo** menú y seleccione **ejecutar flujo de trabajo...** .
 
-5.  Observe que la actividad actualmente en ejecución se resalta tal como se ha descrito previamente y que en el lado derecho de la ventana de la aplicación se muestran los registros de seguimiento.
+5. Observe que la actividad actualmente en ejecución se resalta tal como se ha descrito previamente y que en el lado derecho de la ventana de la aplicación se muestran los registros de seguimiento.
 
-6.  Cuando el flujo de trabajo se ha completado, puede hacer clic en cualquier registro de seguimiento para inspeccionar qué actividad corresponde.
+6. Cuando el flujo de trabajo se ha completado, puede hacer clic en cualquier registro de seguimiento para inspeccionar qué actividad corresponde.
 
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

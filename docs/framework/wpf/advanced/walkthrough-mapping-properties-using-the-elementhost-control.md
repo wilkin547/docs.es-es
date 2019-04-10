@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Asignar propiedades mediante el uso del Control ElementHost'
+title: 'Tutorial: Asignar propiedades mediante el uso del control ElementHost'
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 3fe3f00950fdfdf92c3f95dc42b27cc9110e0c95
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371689"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300923"
 ---
-# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Tutorial: Asignar propiedades mediante el uso del Control ElementHost
+# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Tutorial: Asignar propiedades mediante el uso del control ElementHost
 
 En este tutorial se muestra cómo usar el <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> propiedad para la asignación [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] propiedades a las propiedades correspondientes en una hospedada [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elemento.
 
@@ -43,9 +43,9 @@ Necesita los componentes siguientes para completar este tutorial:
 
 ### <a name="to-create-the-project"></a>Para crear el proyecto
 
-1.  Crear un **aplicación de Windows Forms** proyecto denominado `PropertyMappingWithElementHost`.
+1. Crear un **aplicación de Windows Forms** proyecto denominado `PropertyMappingWithElementHost`.
 
-2.  En **el Explorador de soluciones**, agregue referencias a los siguientes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ensamblados.
+2. En **el Explorador de soluciones**, agregue referencias a los siguientes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ensamblados.
 
     -   PresentationCore
 
@@ -55,16 +55,16 @@ Necesita los componentes siguientes para completar este tutorial:
 
     -   WindowsFormsIntegration
 
-3.  Copie el código siguiente en la parte superior de la `Form1` archivo de código.
+3. Copie el código siguiente en la parte superior de la `Form1` archivo de código.
 
      [!code-csharp[PropertyMappingWithElementHost#10](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#10)]
      [!code-vb[PropertyMappingWithElementHost#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#10)]
 
-4.  Abra `Form1` en el Diseñador de Windows Forms. Haga doble clic en el formulario para agregar un controlador de eventos para el <xref:System.Windows.Forms.Form.Load> eventos.
+4. Abra `Form1` en el Diseñador de Windows Forms. Haga doble clic en el formulario para agregar un controlador de eventos para el <xref:System.Windows.Forms.Form.Load> eventos.
 
-5.  Vuelva al diseñador de Windows Forms y agregue un controlador de eventos para el formulario <xref:System.Windows.Forms.Control.Resize> eventos. Para obtener más información, vea [Cómo: Crear controladores de eventos mediante el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).
+5. Vuelva al diseñador de Windows Forms y agregue un controlador de eventos para el formulario <xref:System.Windows.Forms.Control.Resize> eventos. Para obtener más información, vea [Cómo: Crear controladores de eventos mediante el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).
 
-6.  Declarar un <xref:System.Windows.Forms.Integration.ElementHost> campo el `Form1` clase.
+6. Declarar un <xref:System.Windows.Forms.Integration.ElementHost> campo el `Form1` clase.
 
      [!code-csharp[PropertyMappingWithElementHost#16](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#16)]
      [!code-vb[PropertyMappingWithElementHost#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#16)]
@@ -75,7 +75,7 @@ El <xref:System.Windows.Forms.Integration.ElementHost> control proporciona prede
 
 ### <a name="to-define-new-property-mappings"></a>Para definir nuevas asignaciones de propiedad
 
-1.  Copie el código siguiente en la definición para el `Form1` clase.
+1. Copie el código siguiente en la definición para el `Form1` clase.
 
      [!code-csharp[PropertyMappingWithElementHost#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#12)]
      [!code-vb[PropertyMappingWithElementHost#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#12)]
@@ -84,7 +84,7 @@ El <xref:System.Windows.Forms.Integration.ElementHost> control proporciona prede
 
      El `OnMarginChange` método traduce el <xref:System.Windows.Forms.Control.Margin%2A> propiedad a la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A> propiedad.
 
-2.  Copie el código siguiente en la definición para el `Form1` clase.
+2. Copie el código siguiente en la definición para el `Form1` clase.
 
      [!code-csharp[PropertyMappingWithElementHost#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#14)]
      [!code-vb[PropertyMappingWithElementHost#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#14)]
@@ -125,7 +125,7 @@ Puede usar una asignación de propiedades predeterminada y extenderla con su pro
 
 ## <a name="initialize-your-property-mappings"></a>Inicializar las asignaciones de propiedades
 
-1.  Copie el código siguiente en la definición para el `Form1` clase.
+1. Copie el código siguiente en la definición para el `Form1` clase.
 
      [!code-csharp[PropertyMappingWithElementHost#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#11)]
      [!code-vb[PropertyMappingWithElementHost#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#11)]
@@ -138,7 +138,7 @@ Puede usar una asignación de propiedades predeterminada y extenderla con su pro
 
     -   Asigna los valores iniciales a las propiedades asignadas.
 
-2.  Presione F5 para compilar y ejecutar la aplicación.
+2. Presione F5 para compilar y ejecutar la aplicación.
 
 ## <a name="see-also"></a>Vea también
 
@@ -147,4 +147,4 @@ Puede usar una asignación de propiedades predeterminada y extenderla con su pro
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Asignación de propiedades en formularios Windows Forms y WPF](windows-forms-and-wpf-property-mapping.md)
 - [Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Tutorial: Hospedar un Control compuesto de WPF en Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Tutorial: Hospedar un control compuesto de WPF en formularios Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

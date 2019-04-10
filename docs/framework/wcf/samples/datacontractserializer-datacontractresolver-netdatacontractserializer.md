@@ -2,12 +2,12 @@
 title: Utilizar DataContractSerializer y DataContractResolver para proporcionar la funcionalidad de NetDataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: 455ffe936373525f574d4401412c099d41d45f66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0378f8d6e21f44eb1f39e9ebf51ef0dfaf8d8e8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167224"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295151"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>Utilizar DataContractSerializer y DataContractResolver para proporcionar la funcionalidad de NetDataContractSerializer
 En este ejemplo se muestra el modo en que el uso de un <xref:System.Runtime.Serialization.DataContractSerializer> con un <xref:System.Runtime.Serialization.DataContractResolver> adecuado proporciona la misma funcionalidad que <xref:System.Runtime.Serialization.NetDataContractSerializer>. En este ejemplo se muestra cómo crear el <xref:System.Runtime.Serialization.DataContractResolver> adecuado y cómo agregarlo a <xref:System.Runtime.Serialization.DataContractSerializer>.
@@ -57,21 +57,21 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1.  Con Visual Studio 2012, abra el archivo de Cdrsample.sln.
+1. Con Visual Studio 2012, abra el archivo de Cdrsample.sln.
 
-2.  Haga clic en el archivo de solución y elija **propiedades**.
+2. Haga clic en el archivo de solución y elija **propiedades**.
 
-3.  En el **páginas de propiedades de la solución** cuadro de diálogo, en **propiedades comunes**, **proyecto de inicio**, seleccione **varios proyectos de inicio:**.
+3. En el **páginas de propiedades de la solución** cuadro de diálogo, en **propiedades comunes**, **proyecto de inicio**, seleccione **varios proyectos de inicio:**.
 
-4.  Junto a la **DCSwithDCR** proyecto, seleccione **iniciar** desde el **acción** lista desplegable.
+4. Junto a la **DCSwithDCR** proyecto, seleccione **iniciar** desde el **acción** lista desplegable.
 
-5.  Junto a la **NetDCS** proyecto, seleccione **iniciar** desde el **acción** lista desplegable.
+5. Junto a la **NetDCS** proyecto, seleccione **iniciar** desde el **acción** lista desplegable.
 
-6.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.
+6. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.
 
-7.  Para compilar la solución, presione Ctrl+MAYÚS+B.
+7. Para compilar la solución, presione Ctrl+MAYÚS+B.
 
-8.  Para ejecutar la solución, presione CTRL+F5.
+8. Para ejecutar la solución, presione CTRL+F5.
 
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

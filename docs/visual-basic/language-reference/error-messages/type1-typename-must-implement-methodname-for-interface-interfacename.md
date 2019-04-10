@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-ms.openlocfilehash: b8bcb16798284a09608ba6942226ef07c6859d4f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 432f089bc77928308820d7456d930fba8dc513f7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824210"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304914"
 ---
 # <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<tipo1 >'\<typename >' debe implementar '\<methodname >' para la interfaz '\<interfacename >'
 Una clase o estructura intenta implementar una interfaz, pero no implementa un procedimiento definido por la interfaz. Se deben implementar todos los miembros de la interfaz.  
@@ -21,9 +21,9 @@ Una clase o estructura intenta implementar una interfaz, pero no implementa un p
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Declare un procedimiento con el mismo nombre y firma, tal como se define en la interfaz. No olvide incluir al menos el `End Function` o `End Sub` instrucción.  
+1. Declare un procedimiento con el mismo nombre y firma, tal como se define en la interfaz. No olvide incluir al menos el `End Function` o `End Sub` instrucción.  
   
-2.  Agregar un `Implements` cláusula al final de la `Function` o `Sub` instrucción. Por ejemplo:  
+2. Agregar un `Implements` cláusula al final de la `Function` o `Sub` instrucción. Por ejemplo:  
   
     ```  
     Public Sub DoSomething() Implements IBaseInterface.DoSomething  
@@ -31,5 +31,5 @@ Una clase o estructura intenta implementar una interfaz, pero no implementa un p
   
 ## <a name="see-also"></a>Vea también
 
-- [Implements (instrucción)](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [Implements (Instrucción)](../../../visual-basic/language-reference/statements/implements-statement.md)
 - [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

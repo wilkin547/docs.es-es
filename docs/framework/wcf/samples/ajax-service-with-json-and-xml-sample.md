@@ -2,12 +2,12 @@
 title: Servicio AJAX con ejemplo JSON y XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: e5f2838575b212f6b95fd01b469d771017ef534c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a93e7bdf8cda88a1e86b59e5c3d37f049bdfcf28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304797"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Servicio AJAX con ejemplo JSON y XML
 Este ejemplo muestra cómo usar Windows Communication Foundation (WCF) para crear un servicio JavaScript asincrónico y XML (AJAX) que devuelve datos JavaScript Object Notation (JSON) o XML. Puede tener acceso a un servicio de AJAX utilizando el código JavaScript de un cliente del explorador web. En este ejemplo se basa en el [servicio AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) ejemplo.  
@@ -105,11 +105,11 @@ xmlHttp.onreadystatechange=function(){
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Compile la solución Postajaxservice.sln tal como se describe en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Compile la solución Postajaxservice.sln tal como se describe en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Vaya a `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` (no abra Xmlajaxclientpage.aspx en el explorador desde el directorio del proyecto).  
+3. Vaya a `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` (no abra Xmlajaxclientpage.aspx en el explorador desde el directorio del proyecto).  
   
 ## <a name="see-also"></a>Vea también
 

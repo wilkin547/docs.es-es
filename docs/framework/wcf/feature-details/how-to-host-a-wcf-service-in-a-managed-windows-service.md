@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Hospedar un servicio WCF en un servicio administrado de Windows
+title: Filtrar para hospedar un servicio WCF en un servicio administrado de Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c63b249cf16100f0b18d622fdecd7cd375df83d8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613836"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297764"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Procedimiento Hospedar un servicio WCF en un servicio administrado de Windows
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Filtrar para hospedar un servicio WCF en un servicio administrado de Windows
 
 En este tema se describe los pasos básicos necesarios para crear un servicio de Windows Communication Foundation (WCF) que se hospeda en un servicio de Windows. El escenario se habilita mediante el servicio de Windows administrado, opción que es un servicio WCF de ejecución prolongada hospedado fuera de Internet Information Services (IIS) en un entorno seguro que no está activado el mensaje de hospedaje. En su lugar, el sistema operativo controla la duración del servicio. Esta opción de hospedaje está disponible en todas las versiones de Windows.
 
@@ -22,13 +22,13 @@ El código del servicio incluye una implementación del contrato de servicios, u
 
 ## <a name="construct-the-service-and-provide-the-hosting-code"></a>Construya el servicio y proporcione el código del hospedaje
 
-1.  Crear un nuevo Visual Studio **aplicación de consola** proyecto denominado **servicio**.
+1. Crear un nuevo Visual Studio **aplicación de consola** proyecto denominado **servicio**.
 
-2.  Cambie el nombre del archivo Program.cs a Service.cs.
+2. Cambie el nombre del archivo Program.cs a Service.cs.
 
-3.  Cambiar el espacio de nombres `Microsoft.ServiceModel.Samples`.
+3. Cambiar el espacio de nombres `Microsoft.ServiceModel.Samples`.
 
-4.  Agregue referencias a los siguientes ensamblados:
+4. Agregue referencias a los siguientes ensamblados:
 
     - System.ServiceModel.dll
 
@@ -36,22 +36,22 @@ El código del servicio incluye una implementación del contrato de servicios, u
 
     - System.Configuration.Install.dll
 
-5.  Agregue las siguientes instrucciones Using a Service.cs.
+5. Agregue las siguientes instrucciones Using a Service.cs.
 
      [!code-csharp[c_HowTo_HostInNTService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#0)]
      [!code-vb[c_HowTo_HostInNTService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#0)]
 
-6.  Defina el contrato de servicio `ICalculator`, tal y como se muestra en el código siguiente.
+6. Defina el contrato de servicio `ICalculator`, tal y como se muestra en el código siguiente.
 
      [!code-csharp[c_HowTo_HostInNTService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#1)]
      [!code-vb[c_HowTo_HostInNTService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#1)]
 
-7.  Implemente el contrato de servicio en una clase denominada `CalculatorService`, tal como se muestra en el código siguiente.
+7. Implemente el contrato de servicio en una clase denominada `CalculatorService`, tal como se muestra en el código siguiente.
 
      [!code-csharp[c_HowTo_HostInNTService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#2)]
      [!code-vb[c_HowTo_HostInNTService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#2)]
 
-8.  Cree una nueva clase denominada `CalculatorWindowsService` que herede de la clase <xref:System.ServiceProcess.ServiceBase>. Agregue una variable local denominada `serviceHost` para hacer referencia a la instancia de <xref:System.ServiceModel.ServiceHost>. Defina el método `Main` que llama a `ServiceBase.Run(new CalculatorWindowsService)`.
+8. Cree una nueva clase denominada `CalculatorWindowsService` que herede de la clase <xref:System.ServiceProcess.ServiceBase>. Agregue una variable local denominada `serviceHost` para hacer referencia a la instancia de <xref:System.ServiceModel.ServiceHost>. Definir la `Main` método que llama `ServiceBase.Run(new CalculatorWindowsService)`
 
      [!code-csharp[c_HowTo_HostInNTService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#3)]
      [!code-vb[c_HowTo_HostInNTService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#3)]
@@ -112,17 +112,17 @@ El código del servicio incluye una implementación del contrato de servicios, u
 
      A la derecha, haga clic en el archivo App.config en el **el Explorador de soluciones** y seleccione **propiedades**. En **Copy to Output Directory** seleccione **copiar si es posterior**.
 
-     Este ejemplo especifica puntos de conexión explícitamente en el archivo de configuración. Si no agrega ningún extremo al servicio, el tiempo de ejecución agregará los extremos predeterminados. En este ejemplo, dado que el servicio tiene un <xref:System.ServiceModel.Description.ServiceMetadataBehavior> establecido en `true`, el servicio también tiene habilitada la publicación de metadatos. Para obtener más información sobre los puntos de conexión, enlaces y comportamientos predeterminados, vea [Configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+     Este ejemplo especifica puntos de conexión explícitamente en el archivo de configuración. Si no agrega ningún punto de conexión al servicio, el tiempo de ejecución agregará los puntos de conexión predeterminados. En este ejemplo, dado que el servicio tiene un <xref:System.ServiceModel.Description.ServiceMetadataBehavior> establecido en `true`, el servicio también tiene habilitada la publicación de metadatos. Para obtener más información sobre los puntos de conexión, enlaces y comportamientos predeterminados, vea [Configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
 
 ## <a name="install-and-run-the-service"></a>Instale y ejecute el servicio.
 
-1.  Compile la solución para crear el ejecutable `Service.exe`.
+1. Compile la solución para crear el ejecutable `Service.exe`.
 
-2.  Abra el símbolo del sistema para desarrolladores de Visual Studio y navegue al directorio del proyecto. Escriba `installutil bin\service.exe` en el símbolo del sistema para instalar el servicio de Windows.
+2. Abra el símbolo del sistema para desarrolladores de Visual Studio y navegue al directorio del proyecto. Escriba `installutil bin\service.exe` en el símbolo del sistema para instalar el servicio de Windows.
 
      Escriba `services.msc` en el símbolo del sistema para tener acceso al Administrador de control de servicios (SCM). El servicio de Windows debería aparecer en Servicios como "WCFWindowsServiceSample". El servicio de WCF solo puede responder a los clientes si se está ejecutando el servicio de Windows. Para iniciar el servicio, haga clic en él en el SCM y seleccione "Start" o escriba **net start WCFWindowsServiceSample** en el símbolo del sistema.
 
-3.  Si realiza cambios en el servicio, debe detenerlo primero y desinstalarlo. Para detener el servicio, haga clic en el servicio en el SCM y seleccione "Stop" o **net stop de tipo WCFWindowsServiceSample** en el símbolo del sistema. Tenga en cuenta que si detiene el servicio de Windows y, a continuación, ejecuta un cliente, se produce una excepción <xref:System.ServiceModel.EndpointNotFoundException> cuando un cliente intenta tener acceso al servicio. Para desinstalar el tipo de servicio de Windows **installutil /u bin\service.exe** en el símbolo del sistema.
+3. Si realiza cambios en el servicio, debe detenerlo primero y desinstalarlo. Para detener el servicio, haga clic en el servicio en el SCM y seleccione "Stop" o **net stop de tipo WCFWindowsServiceSample** en el símbolo del sistema. Tenga en cuenta que si detiene el servicio de Windows y, a continuación, ejecuta un cliente, se produce una excepción <xref:System.ServiceModel.EndpointNotFoundException> cuando un cliente intenta tener acceso al servicio. Para desinstalar el tipo de servicio de Windows **installutil /u bin\service.exe** en el símbolo del sistema.
 
 ## <a name="example"></a>Ejemplo
 

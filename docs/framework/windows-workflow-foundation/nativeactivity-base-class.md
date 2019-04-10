@@ -2,12 +2,12 @@
 title: Clase base NativeActivity
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: 40eff2e597763fd492b3051df1a91622e7a60672
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842040"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296594"
 ---
 # <a name="nativeactivity-base-class"></a>Clase base NativeActivity
 
@@ -34,28 +34,28 @@ ms.locfileid: "48842040"
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>Para crear una actividad personalizada que herede de NativeActivity
 
-1.  Abra Visual Studio 2010.
+1. OpenVisual Studio 2010.
 
-2.  Seleccione **archivo**, **nueva**y, a continuación, **proyecto**. Seleccione **Workflow 4.0** en **Visual C#** en el **tipos de proyecto** ventana y seleccione el **v2010** nodo. Seleccione **biblioteca de actividades** en el **plantillas** ventana. Dé al nuevo proyecto el nombre "HelloActivity".
+2. Seleccione **archivo**, **nueva**y, a continuación, **proyecto**. Seleccione **Workflow 4.0** en **Visual C#** en el **tipos de proyecto** ventana y seleccione el **v2010** nodo. Seleccione **biblioteca de actividades** en el **plantillas** ventana. Dé al nuevo proyecto el nombre "HelloActivity".
 
-3.  Haga clic en Activity1.xaml en el proyecto HelloActivity y seleccione **eliminar**.
+3. Haga clic en Activity1.xaml en el proyecto HelloActivity y seleccione **eliminar**.
 
-4.  Haga clic en el proyecto HelloActivity y seleccione **agregar**y, a continuación, **clase**. Dé a la nueva clase el nombre "HelloActivity.cs".
+4. Haga clic en el proyecto HelloActivity y seleccione **agregar**y, a continuación, **clase**. Dé a la nueva clase el nombre "HelloActivity.cs".
 
-5.  En el archivo HelloActivity.cs, agregue las siguientes directivas `using`.
+5. En el archivo HelloActivity.cs, agregue las siguientes directivas `using`.
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6.  Haga que la nueva clase herede de <xref:System.Activities.NativeActivity> al agregar una clase base a la declaración de clase.
+6. Haga que la nueva clase herede de <xref:System.Activities.NativeActivity> al agregar una clase base a la declaración de clase.
 
     ```csharp
     class HelloActivity : NativeActivity
     ```
 
-7.  Agregue la funcionalidad a la clase agregando un método <xref:System.Activities.NativeActivity.Execute%2A>.
+7. Agregue la funcionalidad a la clase agregando un método <xref:System.Activities.NativeActivity.Execute%2A>.
 
     ```csharp
     protected override void Execute(NativeActivityContext context)
@@ -64,7 +64,7 @@ ms.locfileid: "48842040"
     }
     ```
 
-8.  Invalide el método <xref:System.Activities.NativeActivity.CacheMetadata%2A> y llame al método Add adecuado para que el tiempo de ejecución del flujo de trabajo conozca las variables, los argumentos, los elementos secundarios y los delegados personalizados de la actividad. Para obtener más información, vea la clase <xref:System.Activities.NativeActivityMetadata>.
+8. Invalide el método <xref:System.Activities.NativeActivity.CacheMetadata%2A> y llame al método Add adecuado para que el tiempo de ejecución del flujo de trabajo conozca las variables, los argumentos, los elementos secundarios y los delegados personalizados de la actividad. Para obtener más información, vea la clase <xref:System.Activities.NativeActivityMetadata>.
 
 9. Utilice el objeto <xref:System.Activities.NativeActivityContext> para programar un marcador. Vea <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A> para obtener detalles sobre cómo crear, programar y reanudar un marcador.
 

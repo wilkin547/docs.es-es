@@ -6,29 +6,29 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: b2b10b443581a261a753c9f9d940a774159dc9d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b298efb0494994659673f9bf9893b667f7eb0f8c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202305"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304219"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Filtrar para enlazar un control de formularios Windows Forms a un tipo mediante el diseñador
 Al crear controles que interactúan con datos, a veces necesita enlazar un control a un tipo, en lugar de a un objeto. Normalmente necesita enlazar un control a un tipo en tiempo de diseño, cuando quizá no estén disponibles los datos, pero aún desea que los controles enlazados a datos muestren datos de una interfaz pública del tipo. Los procedimientos siguientes muestran cómo crear un nuevo <xref:System.Windows.Forms.BindingSource> decir enlazado a un tipo y, a continuación, cómo enlazar una de las propiedades del tipo para el <xref:System.Windows.Forms.TextBox.Text%2A> propiedad de un <xref:System.Windows.Forms.TextBox>.  
   
 ### <a name="to-bind-the-bindingsource-to-a-type"></a>Para enlazar BindingSource a un tipo  
   
-1.  Crear un proyecto de Windows Forms (**archivo** > **New** > **proyecto** > **Visual C#** o **Visual Basic** > **escritorio clásico de** > **aplicación de Windows Forms**).  
+1. Crear un proyecto de Windows Forms (**archivo** > **New** > **proyecto** > **Visual C#** o **Visual Basic** > **escritorio clásico de** > **aplicación de Windows Forms**).  
   
-2.  En **diseño** ver, arrastre un <xref:System.Windows.Forms.BindingSource> componente al formulario.  
+2. En **diseño** ver, arrastre un <xref:System.Windows.Forms.BindingSource> componente al formulario.  
   
-3.  En el **propiedades** ventana, haga clic en la flecha de la <xref:System.Windows.Forms.BindingSource.DataSource%2A> propiedad.  
+3. En el **propiedades** ventana, haga clic en la flecha de la <xref:System.Windows.Forms.BindingSource.DataSource%2A> propiedad.  
   
-4.  En el **Editor de tipos de la interfaz de usuario de orígenes de datos**, haga clic en **Agregar origen de datos del proyecto**.  
+4. En el **Editor de tipos de la interfaz de usuario de orígenes de datos**, haga clic en **Agregar origen de datos del proyecto**.  
   
-5.  En la página **Elegir un tipo de origen de datos**, seleccione **Objeto** y haga clic en **Siguiente**.  
+5. En la página **Elegir un tipo de origen de datos**, seleccione **Objeto** y haga clic en **Siguiente**.  
   
-6.  Seleccione el tipo al que desea enlazarlo:  
+6. Seleccione el tipo al que desea enlazarlo:  
   
     -   Si el tipo al que desea enlazarlo se encuentra en el proyecto actual o el ensamblado que contiene el tipo ya se ha agregado como una referencia, expanda los nodos para encontrar el tipo que desee y a continuación selecciónelo.  
   
@@ -39,17 +39,17 @@ Al crear controles que interactúan con datos, a veces necesita enlazar un contr
         > [!NOTE]
         >  Si desea enlazar a un tipo de un marco o un ensamblado de Microsoft, desactive la casilla **Ocultar los ensamblados que empiecen por Microsoft o sistema**.  
   
-7.  Haga clic en **Siguiente** y después haga clic en **Finalizar**.  
+7. Haga clic en **Siguiente** y después haga clic en **Finalizar**.  
   
 ### <a name="to-bind-the-control-to-the-bindingsource"></a>Para enlazar el control a BindingSource  
   
-1.  Agregue un control <xref:System.Windows.Forms.TextBox> al formulario.  
+1. Agregue un control <xref:System.Windows.Forms.TextBox> al formulario.  
   
-2.  En la ventana **Propiedades**, expanda el nodo **(DataBindings)**.  
+2. En la ventana **Propiedades**, expanda el nodo **(DataBindings)**.  
   
-3.  Haga clic en la flecha situada junto a la <xref:System.Windows.Forms.TextBox.Text%2A> propiedad.  
+3. Haga clic en la flecha situada junto a la <xref:System.Windows.Forms.TextBox.Text%2A> propiedad.  
   
-4.  En el **Editor de tipos de interfaz de usuario de origen de datos**, expanda el nodo de la <xref:System.Windows.Forms.BindingSource> agregado previamente y seleccione la propiedad del tipo enlazado que desea enlazar el <xref:System.Windows.Forms.TextBox.Text%2A> propiedad de la <xref:System.Windows.Forms.TextBox>.  
+4. En el **Editor de tipos de interfaz de usuario de origen de datos**, expanda el nodo de la <xref:System.Windows.Forms.BindingSource> agregado previamente y seleccione la propiedad del tipo enlazado que desea enlazar el <xref:System.Windows.Forms.TextBox.Text%2A> propiedad de la <xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="see-also"></a>Vea también
 

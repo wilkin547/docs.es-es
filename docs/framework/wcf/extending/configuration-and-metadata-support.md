@@ -2,12 +2,12 @@
 title: Compatibilidad con metadatos y configuración
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 65c826c909496a9efeb99801142eb49e4f92d3bc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183495"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298310"
 ---
 # <a name="configuration-and-metadata-support"></a>Compatibilidad con metadatos y configuración
 En este tema se describe cómo habilitar la compatibilidad con configuración y metadatos para los enlaces y elementos de enlaces.  
@@ -163,9 +163,9 @@ if (soapBinding != null)
   
  Al ejecutar Svcutil.exe, hay dos opciones para conseguir que Svcutil.exe cargue las extensiones de importación de WSDL:  
   
-1.  Señale Svcutil.exe al archivo de configuración utilizando el/svcutilconfig:\<archivo >.  
+1. Señale Svcutil.exe al archivo de configuración utilizando el/svcutilconfig:\<archivo >.  
   
-2.  Agregue la sección de configuración a Svcutil.exe.config en el mismo directorio como Svcutil.exe.  
+2. Agregue la sección de configuración a Svcutil.exe.config en el mismo directorio como Svcutil.exe.  
   
  El tipo `UdpBindingElementImporter` implementa la interfaz <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>. El método `ImportEndpoint` importa la dirección del puerto del WSDL:  
   
@@ -179,7 +179,7 @@ if (transportBindingElement is UdpTransportBindingElement)
 ```  
   
 ### <a name="adding-policy-support"></a>Agregación de compatibilidad de directiva  
- El elemento de enlace personalizado puede exportar aserciones de directiva en el enlace de WSDL para que un punto de conexión de servicio exprese las funciones de ese elemento de enlace. Ejemplo de código siguiente se toma de la [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo.  
+ El elemento de enlace personalizado puede exportar aserciones de directiva en el enlace de WSDL para que un extremo de servicio exprese las funciones de ese elemento de enlace. Ejemplo de código siguiente se toma de la [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo.  
   
 #### <a name="policy-export"></a>Exportación de directivas  
  El `UdpTransportBindingElement` escriba implementa <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> para agregar compatibilidad para exportar la directiva. Como resultado, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> incluye `UdpTransportBindingElement` en la generación de directiva para cualquier enlace que la incluya.  
@@ -223,9 +223,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  A continuación, implementamos <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> desde nuestra clase registrada (`UdpBindingElementImporter`). En <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType>, examine las aserciones en el espacio de nombres adecuado y procese las que se encargan de la generación del transporte y de la comprobación de si es multidifusión. Además, elimine las aserciones que el importador administra desde la lista de aserciones de enlaces. De nuevo, al ejecutar Svcutil.exe, hay dos opciones para la integración:  
   
-1.  Señale Svcutil.exe a nuestro archivo de configuración utilizando el/svcutilconfig:\<archivo >.  
+1. Señale Svcutil.exe a nuestro archivo de configuración utilizando el/svcutilconfig:\<archivo >.  
   
-2.  Agregue la sección de configuración a Svcutil.exe.config en el mismo directorio como Svcutil.exe.  
+2. Agregue la sección de configuración a Svcutil.exe.config en el mismo directorio como Svcutil.exe.  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>Agregación de un importador de enlace estándar personalizado  
  Svcutil.exe y el tipo <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>, de forma predeterminada, reconocen e importan los enlaces proporcionados por el sistema. De lo contrario, el enlace se importa como una instancia <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>. Para permitir que Svcutil.exe y <xref:System.ServiceModel.Description.WsdlImporter> importen el `SampleProfileUdpBinding`, el `UdpBindingElementImporter` actúa también como un importador de enlaces estándar personalizado.  

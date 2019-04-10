@@ -2,12 +2,12 @@
 title: Control de mensajes dudosos
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146528"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305031"
 ---
 # <a name="poison-message-handling"></a>Control de mensajes dudosos
 Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos de entrega a la aplicación. Esta situación se puede presentar cuando una aplicación basada en cola no puede procesar un mensaje debido a los errores. Para satisfacer la confiabilidad que exige, una aplicación en cola recibe los mensajes bajo una transacción. Anular la transacción en la que un mensaje en cola se recibió deja el mensaje en la cola para que el mensaje se vuelva a intentar con una nueva transacción. Si no se corrige el problema que produjo la anulación de la transacción, la aplicación receptora se puede atascar en una recepción de bucle y anulando el mismo mensaje hasta que supere el número máximo de intentos de entrega, y se produzca un mensaje dudoso.  
@@ -66,17 +66,17 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
   
  La aplicación puede requerir algún tipo de control automatizado de mensajes dudosos que los aparte a una cola específica de manera que el servicio pueda tener acceso al resto de los mensajes de la cola. El único escenario para utilizar el mecanismo del controlador de errores para realizar escuchas para las excepciones de mensajes dudosos es cuando <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> está establecido en <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. El ejemplo de mensaje dudoso para Message Queuing 3.0 demuestra este comportamiento. A continuación se dibujan los pasos a realizar para controlar los mensajes dudosos, incluyendo los procedimientos recomendados:  
   
-1.  Asegúrese de que la configuración de mensajes dudosos refleja los requisitos de la aplicación. Al trabajar con los valores, asegúrese de que entienda las diferencias entre las funciones de Message Queuing en [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+1. Asegúrese de que la configuración de mensajes dudosos refleja los requisitos de la aplicación. Al trabajar con los valores, asegúrese de que entienda las diferencias entre las funciones de Message Queuing en [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
-2.  Si se requiere, implemente `IErrorHandler` para controlar los errores de los mensajes dudosos. Dado que al establecer `ReceiveErrorHandling` en `Fault` se requiere un mecanismo manual para quitar el mensaje dudoso de la cola o corregir un problema derivado externo, lo normal es implementar `IErrorHandler` cuando `ReceiveErrorHandling` se establece en `Fault`, como se muestra en el código siguiente.  
+2. Si se requiere, implemente `IErrorHandler` para controlar los errores de los mensajes dudosos. Dado que al establecer `ReceiveErrorHandling` en `Fault` se requiere un mecanismo manual para quitar el mensaje dudoso de la cola o corregir un problema derivado externo, lo normal es implementar `IErrorHandler` cuando `ReceiveErrorHandling` se establece en `Fault`, como se muestra en el código siguiente.  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
-3.  Cree un `PoisonBehaviorAttribute` que pueda usar el comportamiento del servicio. El comportamiento instala `IErrorHandler` en el distribuidor. Vea el ejemplo de código siguiente.  
+3. Cree un `PoisonBehaviorAttribute` que pueda usar el comportamiento del servicio. El comportamiento instala `IErrorHandler` en el distribuidor. Vea el ejemplo de código siguiente.  
   
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
-4.  Asegúrese de que su servicio se anote con el atributo de comportamiento de mensajes venenosos.  
+4. Asegúrese de que su servicio se anote con el atributo de comportamiento de mensajes venenosos.  
 
  Además, si `ReceiveErrorHandling` se establece en `Fault`, `ServiceHost` genera un error al encontrar el mensaje dudoso. Puede enlazarlo con el evento que ha generado el error y cerrar el servicio, tomar medidas correctivas y reiniciarlo. Por ejemplo, puede tomar nota del `LookupId` de la <xref:System.ServiceModel.MsmqPoisonMessageException> propagada a `IErrorHandler` y, cuando el host de servicio genere el error, puede utilizar la API `System.Messaging` para recibir el mensaje de la cola, utilizando el `LookupId` para quitarlo de la cola y almacenarlo en algún almacén externo u otra cola. Puede reiniciar a continuación `ServiceHost` para reanudar el procesamiento normal. El [control de mensajes dudosos en MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md) demuestra este comportamiento.  
   

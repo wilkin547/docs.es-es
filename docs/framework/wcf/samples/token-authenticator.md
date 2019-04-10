@@ -2,12 +2,12 @@
 title: Autenticador de tokens
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 027f6c55cb0390084f1a7926a5c79d8591090df6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 501f1801c1cb475a87c586f8bbc14146b9141047
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193413"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306253"
 ---
 # <a name="token-authenticator"></a>Autenticador de tokens
 Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. Un autenticador de tokens de Windows Communication Foundation (WCF) se utiliza para validar el token utilizado con el mensaje, comprobando que es coherente y autenticar la identidad asociada al token.
@@ -121,7 +121,7 @@ static void Main()
 ## <a name="custom-token-authenticator"></a>autenticador de tokens personalizado
  Siga los siguientes pasos para crear un autenticador de tokens personalizado:
 
-1.  Escriba un autenticador de tokens personalizado.
+1. Escriba un autenticador de tokens personalizado.
 
      El ejemplo implementa un autenticador de tokens personalizado que valida que el nombre de usuario tiene un formato de correo electrónico válido. Deriva <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>. El método más importante en esta clase es <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>. En este método, el autenticador valida el formato del nombre de usuario y también que el nombre de host no es de un dominio no autorizado. Si se cumplen ambas condiciones, a continuación, devuelve una colección de solo lectura de instancias <xref:System.IdentityModel.Policy.IAuthorizationPolicy> que se utiliza a continuación para proporcionar indicaciones que representan la información almacenada dentro del token del nombre de usuario.
 
@@ -140,7 +140,7 @@ static void Main()
     }
     ```
 
-2.  Proporcione una directiva de autorización que es devuelta por un autenticador de tokens personalizado.
+2. Proporcione una directiva de autorización que es devuelta por un autenticador de tokens personalizado.
 
      Este ejemplo proporciona su propia implementación de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> llamada `UnconditionalPolicy` que devuelve un conjunto de indicaciones e identidades que se pasaron a él en su constructor.
 
@@ -210,7 +210,7 @@ static void Main()
     }
     ```
 
-3.  Escribir un administrador de tokens de seguridad personalizado.
+3. Escribir un administrador de tokens de seguridad personalizado.
 
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> se utiliza para crear <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> para objetos <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> concretos que se pasan en el método `CreateSecurityTokenAuthenticator`. El administrador de tokens de seguridad también se utiliza para crear proveedores de tokens y serializadores de tokens, aunque en este ejemplo no se explica. En este ejemplo, el administrador de tokens de seguridad personalizado hereda de la clase <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> e invalida el método `CreateSecurityTokenAuthenticator` para devolver el autenticador de tokens de nombre de usuario personalizado cuando los requisitos de token pasados indican que se solicita el autenticador de nombre de usuario.
 
@@ -240,7 +240,7 @@ static void Main()
     }
     ```
 
-4.  Escribir una credencial de servicio personalizada.
+4. Escribir una credencial de servicio personalizada.
 
      Se usa una clase de credenciales de servicio para representar las credenciales que se configuran para el servicio y crear el administrador de tokens de seguridad que se utiliza para obtener autenticadores, proveedores y serializadores de tokens.
 
@@ -266,7 +266,7 @@ static void Main()
     }
     ```
 
-5.  Configurar el servicio para utilizar la credencial de servicio personalizada.
+5. Configurar el servicio para utilizar la credencial de servicio personalizada.
 
      Para que el servicio utilice la credencial de servicio personalizada, eliminamos la clase de credencial de servicio predeterminada después de capturar el certificado del servicio que ya está preconfigurado en la credencial del servicio predeterminada y configuramos la nueva instancia de credencial de servicio para utilizar los certificados del servicio preconfigurados y agregar esta nueva instancia de credencial de servicio a los comportamientos del servicio.
 
@@ -324,40 +324,40 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-set-up-and-build-the-sample"></a>Para configurar y compilar el ejemplo
 
-1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo
 
-1.  Ejecute Setup.bat desde la carpeta de instalación de ejemplo en un símbolo del sistema de Visual Studio 2012 abierto con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
+1. Ejecute Setup.bat desde la carpeta de instalación de ejemplo en un símbolo del sistema de Visual Studio 2012 abierto con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!NOTE]
     >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. El conjunto de variables de entorno de ruta de acceso en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables que requiere el script Setup.bat.  
   
-2.  Inicie service.exe desde \service\bin.  
+2. Inicie service.exe desde \service\bin.  
   
-3.  Inicie client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
+3. Inicie client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4.  Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
-1.  Cree un directorio en el equipo del servicio para los binarios del servicio.  
+1. Cree un directorio en el equipo del servicio para los binarios del servicio.  
   
-2.  Copie los archivos de programa del servicio en el directorio del servicio en el equipo de servicio. Copie también los archivos Setup.bat y Cleanup.bat en el equipo del servicio.  
+2. Copie los archivos de programa del servicio en el directorio del servicio en el equipo de servicio. Copie también los archivos Setup.bat y Cleanup.bat en el equipo del servicio.  
   
-3.  Debe tener un certificado de servidor con el nombre del sujeto que contiene el nombre de dominio completo del equipo. El archivo App.config del servicio debe actualizarse para reflejar este nuevo nombre de certificado. Puede crear uno utilizando el archivo Setup.bat si establece la variable `%SERVER_NAME%` en el nombre de host completo del equipo en el que se ejecutará el servicio. Tenga en cuenta que el archivo setup.bat se debe ejecutar desde un símbolo del sistema de desarrollador para Visual Studio abierto con privilegios de administrador.  
+3. Debe tener un certificado de servidor con el nombre del sujeto que contiene el nombre de dominio completo del equipo. El archivo App.config del servicio debe actualizarse para reflejar este nuevo nombre de certificado. Puede crear uno utilizando el archivo Setup.bat si establece la variable `%SERVER_NAME%` en el nombre de host completo del equipo en el que se ejecutará el servicio. Tenga en cuenta que el archivo setup.bat se debe ejecutar desde un símbolo del sistema de desarrollador para Visual Studio abierto con privilegios de administrador.  
   
-4.  Copie el certificado de servidor en el almacén CurrentUser-TrustedPeople del cliente. No necesita hacerlo excepto cuando un emisor de confianza del cliente emite el certificado de servidor.  
+4. Copie el certificado de servidor en el almacén CurrentUser-TrustedPeople del cliente. No necesita hacerlo excepto cuando un emisor de confianza del cliente emite el certificado de servidor.  
   
-5.  En el archivo App.config situado en el equipo del servicio, cambie el valor de la dirección base para especificar un nombre de equipo completo en lugar del host local.  
+5. En el archivo App.config situado en el equipo del servicio, cambie el valor de la dirección base para especificar un nombre de equipo completo en lugar del host local.  
   
-6.  En el equipo del servicio, ejecute service.exe desde un símbolo del sistema.  
+6. En el equipo del servicio, ejecute service.exe desde un símbolo del sistema.  
   
-7.  Copie los archivos de programa del cliente de la carpeta \client\bin\, bajo la carpeta específica del lenguaje, al equipo cliente.  
+7. Copie los archivos de programa del cliente de la carpeta \client\bin\, bajo la carpeta específica del lenguaje, al equipo cliente.  
   
-8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio.  
+8. En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio.  
   
 9. En el equipo cliente, inicie Client.exe desde un símbolo del sistema.  
   
@@ -365,4 +365,4 @@ static void DisplayIdentityInformation()
   
 #### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
-1.  Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
+1. Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  

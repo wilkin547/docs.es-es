@@ -2,19 +2,19 @@
 title: Filtrar para crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157488"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303926"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Filtrar para crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF
 A veces los programadores deben tener un control absoluto de la forma en que se devuelven los datos desde una operación de un servicio. Esto sucede cuando una operación de servicio debe devolver datos en un formato no compatible con WCF. En este tema describe el uso del modelo de programación de WEB HTTP de WCF para crear este tipo de servicio. Este servicio tiene una operación que devuelve una secuencia.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar el contrato de servicios  
   
-1.  Definir el contrato de servicios. El contrato se llama `IImageServer` y tiene un método denominado `GetImage` que devuelve <xref:System.IO.Stream>.  
+1. Definir el contrato de servicios. El contrato se llama `IImageServer` y tiene un método denominado `GetImage` que devuelve <xref:System.IO.Stream>.  
   
     ```  
     [ServiceContract]  
@@ -27,7 +27,7 @@ A veces los programadores deben tener un control absoluto de la forma en que se 
   
      Dado que el método devuelve un <xref:System.IO.Stream>, WCF supone que la operación tiene control completo sobre los bytes que se devuelven desde la operación de servicio y no aplica ningún formato a los datos que se devuelven.  
   
-2.  Implemente el contrato de servicios. El contrato tiene una sola operación (`GetImage`). Este método genera un mapa de bits y, a continuación, lo guarda en <xref:System.IO.MemoryStream> en formato .jpg. A continuación, la operación devuelve esa secuencia al llamador.  
+2. Implemente el contrato de servicios. El contrato tiene una sola operación (`GetImage`). Este método genera un mapa de bits y, a continuación, lo guarda en <xref:System.IO.MemoryStream> en formato .jpg. A continuación, la operación devuelve esa secuencia al llamador.  
   
     ```  
     public class Service : IImageServer  
@@ -57,7 +57,7 @@ A veces los programadores deben tener un control absoluto de la forma en que se 
   
 ### <a name="to-host-the-service"></a>Para hospedar el servicio  
   
-1.  Cree una aplicación de consola para hospedar el servicio.  
+1. Cree una aplicación de consola para hospedar el servicio.  
   
     ```  
     class Program  
@@ -68,31 +68,31 @@ A veces los programadores deben tener un control absoluto de la forma en que se 
     }  
     ```  
   
-2.  Cree una variable para contener la dirección base del servicio dentro del método `Main`.  
+2. Cree una variable para contener la dirección base del servicio dentro del método `Main`.  
   
     ```  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  Cree una instancia de <xref:System.ServiceModel.ServiceHost> para el servicio, especificando la clase y la dirección base del servicio.  
+3. Cree una instancia de <xref:System.ServiceModel.ServiceHost> para el servicio, especificando la clase y la dirección base del servicio.  
   
     ```  
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
     ```  
   
-4.  Agregue un punto final mediante <xref:System.ServiceModel.WebHttpBinding> y <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+4. Agregue un punto final mediante <xref:System.ServiceModel.WebHttpBinding> y <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
     ```  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5.  Abrir el host del servicio.  
+5. Abrir el host del servicio.  
   
     ```  
     host.Open()  
     ```  
   
-6.  Espere hasta que el usuario presione ENTRAR para terminar el servicio.  
+6. Espere hasta que el usuario presione ENTRAR para terminar el servicio.  
   
     ```  
     Console.WriteLine("Service is running");  
@@ -103,9 +103,9 @@ A veces los programadores deben tener un control absoluto de la forma en que se 
   
 ### <a name="to-call-the-raw-service-using-internet-explorer"></a>Para llamar al servicio tal cual mediante Internet Explorer  
   
-1.  Ejecute el servicio. Debería aparecer el resultado siguiente. `Service is running Press ENTER to close the host`  
+1. Ejecute el servicio. Debería aparecer el resultado siguiente. `Service is running Press ENTER to close the host`  
   
-2.  Abra Internet Explorer y escriba `http://localhost:8000/Service/GetImage?width=50&height=40`. Debería ver un rectángulo amarillo atravesado por una línea diagonal azul.  
+2. Abra Internet Explorer y escriba `http://localhost:8000/Service/GetImage?width=50&height=40`. Debería ver un rectángulo amarillo atravesado por una línea diagonal azul.  
   
 ## <a name="example"></a>Ejemplo  
  A continuación, se muestra la lista completa del código de este tema.  

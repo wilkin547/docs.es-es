@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 8340d05b18c4fb19e9ba8f8ecffa5657b7febd79
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: da4aabbd0529ee239dacd2dff7c7825d41110b44
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201760"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835172"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Conversión boxing y unboxing (Guía de programación de C#)
 La conversión boxing es el proceso de convertir un [tipo de valor](../../../csharp/language-reference/keywords/value-types.md) en el tipo `object` o en cualquier tipo de interfaz implementado por este tipo de valor. Cuando CLR aplica la conversión boxing a un tipo de valor, ajusta el valor dentro de una clase System.Object y lo almacena en el montón administrado. La conversión unboxing extrae el tipo de valor del objeto. La conversión boxing es implícita y la conversión unboxing es explícita. El concepto de conversión boxing y unboxing es la base de la vista unificada del sistema de tipos de C#, en el que un valor de cualquier tipo se puede tratar como objeto.  
@@ -46,10 +46,9 @@ La conversión boxing es el proceso de convertir un [tipo de valor](../../../csh
   
  [!code-csharp[csProgGuideTypes#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#18)]  
   
- El resultado de esta instrucción es crear una referencia de objeto `o` en la pila que hace referencia a un valor del tipo `int` en el montón. Este valor es una copia del tipo de valor asignado a la variable `i`. La diferencia entre las dos variables, `i` y `o`, se muestra en la figura siguiente.  
+ El resultado de esta instrucción es crear una referencia de objeto `o` en la pila que hace referencia a un valor del tipo `int` en el montón. Este valor es una copia del tipo de valor asignado a la variable `i`. La diferencia entre las dos variables, `i` y `o`, se muestra en la imagen siguiente de la conversión boxing:  
   
- ![Gráfico BoxingConversion](../../../csharp/programming-guide/types/media/vcboxingconversion.gif "vcBoxingConversion")  
-Conversión boxing  
+ ![Gráfico en el que se muestra la diferencia entre las variables i y o.](./media/boxing-and-unboxing/boxing-operation-i-o-variables.gif)    
   
  También es posible realizar la conversión boxing de manera explícita, tal como se muestra en el ejemplo siguiente, pero esta nunca es necesaria:  
   
@@ -72,10 +71,9 @@ Conversión boxing
   
  [!code-csharp[csProgGuideTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#21)]  
   
- En la figura siguiente se muestra el resultado de las instrucciones anteriores.  
+ En la figura siguiente se muestra el resultado de las instrucciones anteriores: 
   
- ![Gráfico de conversión unboxing](../../../csharp/programming-guide/types/media/vcunboxingconversion.gif "vcUnBoxingConversion")  
-Conversión unboxing  
+ ![Gráfico en el que se muestra una conversión unboxing.](./media/boxing-and-unboxing/unboxing-conversion-operation.gif)
   
  Para que la conversión unboxing de tipos de valor sea correcta en tiempo de ejecución, el elemento al que se aplica debe ser una referencia a un objeto creado previamente mediante la conversión boxing de una instancia de ese tipo de valor. Si se intenta aplicar la conversión unboxing a `null`, se producirá una excepción <xref:System.NullReferenceException>. Si se intenta aplicar la conversión unboxing a una referencia de un tipo de valor incompatible, se producirá una excepción <xref:System.InvalidCastException>.  
   

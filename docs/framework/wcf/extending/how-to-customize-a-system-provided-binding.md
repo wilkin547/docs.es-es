@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: cee570bdc9d7bf6debfc4ec226e91f3fd79a01dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0c5474a65bee7d3d290372e79f8423ea9986235f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095157"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301183"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Filtrar para personalizar un enlace proporcionado por el sistema
 Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por el sistema que le permiten configurar algunas de las propiedades de los elementos de enlace subyacente, pero no todas las propiedades. En este tema se muestra cómo establecer las propiedades en los elementos de enlace para crear un enlace personalizado.  
@@ -25,27 +25,27 @@ Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por
   
  La clase <xref:System.ServiceModel.BasicHttpBinding> contiene tres elementos de enlace:  
   
-1.  Un elemento de enlace de seguridad opcional, la clase <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> utilizada con el transporte HTTP (seguridad de mensajes) o la clase <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, que se utiliza cuando el nivel de transporte proporciona seguridad, en cuyo caso se utiliza el transporte de HTTPS.  
+1. Un elemento de enlace de seguridad opcional, la clase <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> utilizada con el transporte HTTP (seguridad de mensajes) o la clase <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, que se utiliza cuando el nivel de transporte proporciona seguridad, en cuyo caso se utiliza el transporte de HTTPS.  
   
-2.  Un elemento de enlace del codificador de mensajes requerido, <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> o <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>.  
+2. Un elemento de enlace del codificador de mensajes requerido, <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> o <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>.  
   
-3.  Un elemento de enlace del transporte requerido, o <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, o <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>.  
+3. Un elemento de enlace del transporte requerido, o <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, o <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>.  
   
  En este ejemplo se crea una instancia del enlace, genere un *enlace personalizado* , examine los elementos de enlace en el enlace personalizado, y cuando encontramos el elemento de enlace de HTTP, establecemos su `KeepAliveEnabled` propiedad `false`. La propiedad `KeepAliveEnabled` no se expone directamente en `BasicHttpBinding`, por lo que debemos crear un enlace personalizado para explorar hacia abajo hasta el elemento de enlace y establecer esta propiedad.  
   
 ### <a name="to-modify-a-system-provided-binding"></a>Modificación de un enlace proporcionado por el sistema  
   
-1.  Cree una instancia de la clase <xref:System.ServiceModel.BasicHttpBinding> y establezca su modo de seguridad en el nivel de mensaje.  
+1. Cree una instancia de la clase <xref:System.ServiceModel.BasicHttpBinding> y establezca su modo de seguridad en el nivel de mensaje.  
   
      [!code-csharp[C_HowTo_ChangeStandardBinding#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_changestandardbinding/cs/program.cs#1)]
      [!code-vb[C_HowTo_ChangeStandardBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#1)]  
   
-2.  Cree un enlace personalizado a partir del enlace y cree una clase <xref:System.ServiceModel.Channels.BindingElementCollection> a partir de una de las propiedades del enlace personalizado.  
+2. Cree un enlace personalizado a partir del enlace y cree una clase <xref:System.ServiceModel.Channels.BindingElementCollection> a partir de una de las propiedades del enlace personalizado.  
   
      [!code-csharp[C_HowTo_ChangeStandardBinding#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_changestandardbinding/cs/program.cs#2)]
      [!code-vb[C_HowTo_ChangeStandardBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#2)]  
   
-3.  Recorra a través de la clase <xref:System.ServiceModel.Channels.BindingElementCollection> y cuando encuentre la clase <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, establezca su propiedad <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> en `false`.  
+3. Recorra a través de la clase <xref:System.ServiceModel.Channels.BindingElementCollection> y cuando encuentre la clase <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, establezca su propiedad <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> en `false`.  
   
      [!code-csharp[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_changestandardbinding/cs/program.cs#3)]
      [!code-vb[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#3)]  

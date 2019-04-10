@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: eb0c34f259220a0326238b27ab43efd3078b0bcc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207089"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295715"
 ---
 # <a name="xstatic-markup-extension"></a>Extensiones de marcado x:Static
 Hace referencia a cualquier entidad de código por valor estático que se define en un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]: método compatible. La propiedad estática que se hace referencia puede usarse para proporcionar el valor de una propiedad en XAML.  
@@ -55,13 +55,13 @@ La sintaxis de atributo es la que se usa normalmente con esta extensión de marc
 
 Hay dos otros usos XAML que son técnicamente posibles. Sin embargo, estos usos son menos comunes porque son innecesariamente detallados:  
 
-1.  Sintaxis de elemento de objeto.
+1. Sintaxis de elemento de objeto.
 
     ```xaml
     <x:Static Member="prefix:typeName.staticMemberName" ... />
     ```
 
-2.  Sintaxis de atributo con propiedad de miembro explícito para la cadena de inicialización.
+2. Sintaxis de atributo con propiedad de miembro explícito para la cadena de inicialización.
 
     ```xaml
     <object property="{x:Static Member=prefix:typeName.staticMemberName}" ... />

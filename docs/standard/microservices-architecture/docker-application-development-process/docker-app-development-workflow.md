@@ -4,12 +4,12 @@ description: Comprenda los detalles del flujo de trabajo para desarrollar aplica
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: a8016b2b55313cb6e1d84bfb2c50a62347858de9
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464364"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921096"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo para aplicaciones de Docker
 
@@ -31,7 +31,7 @@ Una aplicación se compone de sus propios servicios, además de bibliotecas adic
 
 ![Proceso de desarrollo de aplicaciones de Docker: 1. Programar la aplicación, 2. Escribir Dockerfiles, 3. Crear imágenes definidas en Dockerfiles, 4. (Opcional) Crear servicios en el archivo docker-compose.yml, 5. Ejecutar contenedor o aplicación docker-compose, 6. Probar la aplicación o los microservicios, 7. Insertar en el repositorio y repetir. ](./media/image1.png)
 
-**Figura 5-1**. Flujo de trabajo paso a paso para el desarrollo de aplicaciones en contenedor de Docker
+**Figura 5-1.** Flujo de trabajo paso a paso para el desarrollo de aplicaciones en contenedor de Docker
 
 En esta sección se detalla el proceso completo y se explica cada paso importante centrándose en un entorno de Visual Studio.
 
@@ -51,7 +51,7 @@ El desarrollo de una aplicación de Docker es similar al desarrollo de una aplic
 
 Para empezar, asegúrese de que tiene instalado [Docker Community Edition (CE)](https://docs.docker.com/docker-for-windows/) para Windows, como se explica en estas instrucciones:
 
-[Get started with Docker CE for Windows (Introducción a Docker CE para Windows)](https://docs.docker.com/docker-for-windows/)
+[Introducción a Docker CE para Windows](https://docs.docker.com/docker-for-windows/)
 
 Además, se necesita Visual Studio 2017 versión 15.7 o posterior con la carga de trabajo **Desarrollo multiplataforma de .NET Core** instalada, como se muestra en la figura 5-2.
 
@@ -97,14 +97,14 @@ De forma similar, Visual Studio también puede agregar un archivo docker-compose
 
 Normalmente se compila una imagen personalizada para el contenedor además de una imagen base que se obtiene de un repositorio oficial como el registro [Docker Hub](https://hub.docker.com/). Eso es precisamente lo que sucede en segundo plano cuando se habilita la compatibilidad con Docker en Visual Studio. El Dockerfile usa una imagen `aspnetcore` existente.
 
-Anteriormente se ha explicado qué imágenes y repositorios de Docker se pueden usar según el marco de trabajo y el sistema operativo elegidos. Por ejemplo, si quiere usar ASP.NET Core (Linux o Windows), la imagen que se debe usar es `microsoft/dotnet:2.2-aspnetcore-runtime`. Por lo tanto, debe especificar qué imagen base de Docker va a usar para el contenedor. Se hace mediante la incorporación de `FROM microsoft/dotnet:2.2-aspnetcore-runtime` al Dockerfile. Visual Studio lo hace de forma automática, pero si va a actualizar la versión, actualice este valor.
+Anteriormente se ha explicado qué imágenes y repositorios de Docker se pueden usar según el marco de trabajo y el sistema operativo elegidos. Por ejemplo, si quiere usar ASP.NET Core (Linux o Windows), la imagen que se debe usar es `mcr.microsoft.com/dotnet/core/aspnet:2.2`. Por lo tanto, debe especificar qué imagen base de Docker va a usar para el contenedor. Se hace mediante la incorporación de `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2` al Dockerfile. Visual Studio lo hace de forma automática, pero si va a actualizar la versión, actualice este valor.
 
 El uso de un repositorio de imágenes de .NET oficial de Docker Hub con un número de versión garantiza que haya las mismas características de lenguaje disponibles en todos los equipos (incluido el desarrollo, las pruebas y la producción).
 
 En el ejemplo siguiente se muestra un Dockerfile de ejemplo para un contenedor de ASP.NET Core.
 
 ```Dockerfile
-FROM microsoft/dotnet:2.2-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,7 +112,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-En este caso, la imagen se basa en la versión 2.2 de la imagen de Docker de ASP.NET Core oficial (multiarquitectura para Linux y Windows). Es el valor `FROM microsoft/dotnet:2.2-aspnetcore-runtime`. [Para obtener más información sobre esta imagen base, consulte la página [.NET Core Docker Image](https://hub.docker.com/r/microsoft/dotnet/) (Imagen de Docker de .NET Core)]. En el Dockerfile, también debe indicar a Docker que escuche en el puerto TCP que se vaya a usar en tiempo de ejecución (en este caso, el puerto 80, como se ha configurado con el valor EXPOSE).
+En este caso, la imagen se basa en la versión 2.2 de la imagen de Docker de ASP.NET Core oficial (multiarquitectura para Linux y Windows). Es el valor `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`. [Para obtener más información sobre esta imagen base, consulte la página [.NET Core Docker Image](https://hub.docker.com/_/microsoft-dotnet-core/) (Imagen de Docker de .NET Core)]. En el Dockerfile, también debe indicar a Docker que escuche en el puerto TCP que se vaya a usar en tiempo de ejecución (en este caso, el puerto 80, como se ha configurado con el valor EXPOSE).
 
 Puede especificar otros valores de configuración en el Dockerfile, según el lenguaje y el marco que use. Por ejemplo, la línea ENTRYPOINT con `["dotnet", "MySingleContainerWebApp.dll"]` indica a Docker que ejecute una aplicación .NET Core. Si usa el SDK y la CLI de .NET Core (dotnet CLI) para compilar y ejecutar la aplicación .NET, este valor sería diferente. La conclusión es que la línea ENTRYPOINT y otros valores pueden variar según el lenguaje y la plataforma que se elijan para la aplicación.
 
@@ -132,7 +132,7 @@ Puede especificar otros valores de configuración en el Dockerfile, según el le
 
 ### <a name="using-multi-arch-image-repositories"></a>Uso de repositorios de imágenes multiarquitectura
 
-Un solo repositorio puede contener variantes de plataforma, como una imagen de Linux y una imagen de Windows. Esta característica permite a los proveedores como Microsoft (creadores de imágenes base) crear un único repositorio que cubra varias plataformas (es decir, Linux y Windows). Por ejemplo, el repositorio [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) disponible en el registro Docker Hub proporciona compatibilidad con Linux y Windows Nano Server mediante el mismo nombre de repositorio.
+Un solo repositorio puede contener variantes de plataforma, como una imagen de Linux y una imagen de Windows. Esta característica permite a los proveedores como Microsoft (creadores de imágenes base) crear un único repositorio que cubra varias plataformas (es decir, Linux y Windows). Por ejemplo, el repositorio [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) disponible en el registro Docker Hub proporciona compatibilidad con Linux y Windows Nano Server mediante el mismo nombre de repositorio.
 
 Si especifica una etiqueta, se toma como destino una plataforma explícita, como en los casos siguientes:
 
@@ -174,11 +174,11 @@ Probablemente la mejor manera de comprender las fases es analizar un archivo Doc
 El Dockerfile inicial podría ser algo parecido a esto:
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+ 1  FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.2-sdk AS build
+ 5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
@@ -255,7 +255,7 @@ Pero `dotnet restore` únicamente se ejecuta si hay un solo archivo de proyecto 
 
 1) Agregue las líneas siguientes a **.dockerignore**:
 
-   - `*.sln`, para omitir todos los archivos de solución del árbol de la carpeta principal
+   - `*.sln`, para omitir todos los archivos de solución del árbol de la carpeta principal.
 
    - `!eShopOnContainers-ServicesAndWebApps.sln`, para incluir solo este archivo de solución.
 
@@ -266,11 +266,11 @@ Para la optimización final, resulta que la línea 20 es redundante, ya que la l
 El archivo resultante es entonces:
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+ 1  FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.2-sdk AS publish
+ 5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
@@ -321,7 +321,7 @@ Puede encontrar las imágenes existentes en el repositorio local mediante el com
 
 ![Vista de pantalla de lista de imágenes a partir del comando docker images](./media/image9.png)
 
-**Figura 5-6**. Visualización de imágenes existentes mediante el comando docker images
+**Figura 5-6.** Visualización de imágenes existentes mediante el comando docker images
 
 ### <a name="creating-docker-images-with-visual-studio"></a>Creación de imágenes de Docker con Visual Studio
 

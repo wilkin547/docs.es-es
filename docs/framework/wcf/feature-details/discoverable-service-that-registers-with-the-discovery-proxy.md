@@ -2,36 +2,36 @@
 title: Filtrar para implementar un servicio reconocible que se registra con el proxy de detección
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177832"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302202"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Filtrar para implementar un servicio reconocible que se registra con el proxy de detección
 Este tema es el segundo de cuatro temas que describe cómo implementar un proxy de detección. En el tema anterior, [Cómo: Implementar un Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), implementa un proxy de detección. En este tema, creará un servicio WCF que envía mensajes de anuncio (`Hello` y `Bye`) al proxy de detección, provocando que registrar y anular el registro de sí mismo con el proxy de detección.
 
 ### <a name="to-define-the-service-contract"></a>Para definir el contrato de servicio
 
-1.  Agregue un nuevo proyecto de aplicación de consola a la solución `DiscoveryProxyExample` denominada `Service`.
+1. Agregue un nuevo proyecto de aplicación de consola a la solución `DiscoveryProxyExample` denominada `Service`.
 
-2.  Agregue referencias a los siguientes ensamblados:
+2. Agregue referencias a los siguientes ensamblados:
 
     1.  System.ServiceModel
 
     2.  System.ServiceModel.Discovery
 
-3.  Agregue una nueva clase al proyecto `CalculatorService`.
+3. Agregue una nueva clase al proyecto `CalculatorService`.
 
-4.  Agregue las siguientes instrucciones de uso.
+4. Agregue las siguientes instrucciones de uso.
 
     ```csharp
     using System;
     using System.ServiceModel;
     ```
 
-5.  Dentro de CalculatorService.cs, defina el contrato de servicios.
+5. Dentro de CalculatorService.cs, defina el contrato de servicios.
 
     ```csharp
     // Define a service contract.
@@ -49,7 +49,7 @@ Este tema es el segundo de cuatro temas que describe cómo implementar un proxy 
     }
     ```
 
-6.  También dentro de CalculatorService.cs, implemente el contrato de servicios.
+6. También dentro de CalculatorService.cs, implemente el contrato de servicios.
 
     ```csharp
     // Service class which implements the service contract.
@@ -91,9 +91,9 @@ Este tema es el segundo de cuatro temas que describe cómo implementar un proxy 
 
 ### <a name="to-host-the-service"></a>Para hospedar el servicio
 
-1.  Abra el archivo Program.cs que se generó cuando creó el proyecto.
+1. Abra el archivo Program.cs que se generó cuando creó el proyecto.
 
-2.  Agregue las siguientes instrucciones de uso.
+2. Agregue las siguientes instrucciones de uso.
 
     ```csharp
     using System;
@@ -102,7 +102,7 @@ Este tema es el segundo de cuatro temas que describe cómo implementar un proxy 
     using System.ServiceModel.Discovery;
     ```
 
-3.  Agregue el código siguiente en el método `Main()`:
+3. Agregue el código siguiente en el método `Main()`:
 
     ```csharp
     // Define the base address of the service

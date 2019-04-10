@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 362d241d1da01ea935ab3bb3dcdfcba30cb8c67e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6f6968713fdb1c0ec0ee9f9da3b199a649938de5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975152"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295879"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Escribir la primera consulta con LINQ (Visual Basic)
 Una *consulta* es una expresión que recupera datos de un origen de datos. Las consultas se expresan en un lenguaje de consulta dedicado. Con el tiempo, distintos idiomas se han desarrollado para diferentes tipos de orígenes de datos, por ejemplo, SQL para bases de datos relacionales y XQuery para XML. Esto hace que sea necesario para el desarrollador de aplicaciones obtener información sobre un nuevo lenguaje de consulta para cada tipo de origen de datos o formato de datos que se admite.  
@@ -21,11 +21,11 @@ Una *consulta* es una expresión que recupera datos de un origen de datos. Las c
 ## <a name="three-stages-of-a-query-operation"></a>Tres fases de una operación de consulta  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] las operaciones de consulta se componen de tres acciones:  
   
-1.  Obtener el origen de datos o los orígenes.  
+1. Obtener el origen de datos o los orígenes.  
   
-2.  Crear la consulta.  
+2. Crear la consulta.  
   
-3.  Ejecutar la consulta.  
+3. Ejecutar la consulta.  
   
  En [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], la ejecución de una consulta es distinta de la creación de la consulta. No recuperar los datos mediante la creación de una consulta. Este punto se analiza con más detalle más adelante en este tema.  
   

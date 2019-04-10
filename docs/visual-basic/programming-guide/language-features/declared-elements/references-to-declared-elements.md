@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 5aea43c2dab4eb44ab40449ee6e970a28fdc4abb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821457"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296711"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Referencias a elementos declarados (Visual Basic)
 Cuando el código hace referencia a un elemento declarado, el compilador de Visual Basic coincide con el nombre de la referencia a la declaración adecuada de ese nombre. Si se declara más de un elemento con el mismo nombre, puede controlar cuál de estos elementos es hacer referencia a *calificación* su nombre.  
@@ -50,7 +50,7 @@ End Module
   
 #### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>Para obtener acceso a un elemento declarado por su nombre  
   
-1.  Determinar la ubicación en la que se ha definido el elemento. Esto podría incluir un espacio de nombres o incluso una jerarquía de espacios de nombres. En el espacio de nombres de nivel más bajo, el elemento debe incluirse en un módulo, clase o estructura.  
+1. Determinar la ubicación en la que se ha definido el elemento. Esto podría incluir un espacio de nombres o incluso una jerarquía de espacios de nombres. En el espacio de nombres de nivel más bajo, el elemento debe incluirse en un módulo, clase o estructura.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2.  Determinar una ruta de acceso de calificación según la ubicación del elemento de destino. Comience con el espacio de nombres de nivel superior, continúe con el espacio de nombres de nivel inferior y terminar con el módulo, clase o estructura que contiene el elemento de destino. Cada elemento de la ruta de acceso debe incluir el elemento que le sigue.  
+2. Determinar una ruta de acceso de calificación según la ubicación del elemento de destino. Comience con el espacio de nombres de nivel superior, continúe con el espacio de nombres de nivel inferior y terminar con el módulo, clase o estructura que contiene el elemento de destino. Cada elemento de la ruta de acceso debe incluir el elemento que le sigue.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3.  Prepare la cadena de calificación para el elemento de destino. Escriba un punto (`.`) después de todos los elementos de la ruta de acceso. La aplicación debe tener acceso a todos los elementos de la cadena de calificación.  
+3. Prepare la cadena de calificación para el elemento de destino. Escriba un punto (`.`) después de todos los elementos de la ruta de acceso. La aplicación debe tener acceso a todos los elementos de la cadena de calificación.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4.  Escribir la expresión o instrucción de asignación que hace referencia al elemento de destino de la manera normal.  
+4. Escribir la expresión o instrucción de asignación que hace referencia al elemento de destino de la manera normal.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5.  Delante del nombre de elemento de destino con la cadena de calificación. El nombre debe seguir inmediatamente el período (`.`) que sigue el módulo, clase o estructura que contiene el elemento.  
+5. Delante del nombre de elemento de destino con la cadena de calificación. El nombre debe seguir inmediatamente el período (`.`) que sigue el módulo, clase o estructura que contiene el elemento.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,7 +93,7 @@ End Module
     End Module  
     ```  
   
-6.  El compilador usa la cadena de calificación para encontrar una declaración, inequívoca a la que puede coincidir con la referencia de elemento de destino.  
+6. El compilador usa la cadena de calificación para encontrar una declaración, inequívoca a la que puede coincidir con la referencia de elemento de destino.  
   
  También es posible que deba calificar una referencia de nombre si la aplicación tiene acceso a más de un elemento de programación que tiene el mismo nombre. Por ejemplo, el <xref:System.Windows.Forms> y <xref:System.Web.UI.WebControls> espacios de nombres ambos contienen una `Label` clase (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> y <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). Si la aplicación utiliza los dos, o bien, si define su propio `Label` (clase), se deben distinguir los diferentes `Label` objetos. Incluir el alias de espacio de nombres o importar en la declaración de variable. El ejemplo siguiente usa el alias de importación.  
   
@@ -195,10 +195,10 @@ Dim xDoc As xD.XmlDocument
   
 ## <a name="see-also"></a>Vea también
 
-- [Nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Características de los elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
 - [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Imports (instrucción), espacio de nombres y tipo .NET](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [New (operador)](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [New (Operador)](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Public](../../../../visual-basic/language-reference/modifiers/public.md)

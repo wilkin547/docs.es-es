@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086813"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305963"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Filtrar para implementar la validación con el control DataGrid
 El <xref:System.Windows.Controls.DataGrid> control le permite realizar la validación en el nivel de la celda y la fila. Con la validación de nivel de celda, validar propiedades individuales de un objeto de datos enlazados cuando un usuario actualiza un valor. Con la validación de nivel de fila, validar los objetos de datos completo cuando un usuario confirma los cambios realizados en una fila. También puede proporcionar comentarios visuales personalizados para los errores de validación, o usar los comentarios visuales predeterminados que el <xref:System.Windows.Controls.DataGrid> proporciona el control.  
@@ -42,14 +42,14 @@ El <xref:System.Windows.Controls.DataGrid> control le permite realizar la valida
   
 ### <a name="to-validate-multiple-values-in-a-single-row"></a>Para validar varios valores en una sola fila  
   
-1.  Implemente un <xref:System.Windows.Controls.ValidationRule> subclase que comprueba varias propiedades del objeto de datos enlazado. En su <xref:System.Windows.Controls.ValidationRule.Validate%2A> implementación del método, puede convertir el `value` valor de parámetro para un <xref:System.Windows.Data.BindingGroup> instancia. A continuación, puede tener acceso a un objeto de datos a través de la <xref:System.Windows.Data.BindingGroup.Items%2A> propiedad.  
+1. Implemente un <xref:System.Windows.Controls.ValidationRule> subclase que comprueba varias propiedades del objeto de datos enlazado. En su <xref:System.Windows.Controls.ValidationRule.Validate%2A> implementación del método, puede convertir el `value` valor de parámetro para un <xref:System.Windows.Data.BindingGroup> instancia. A continuación, puede tener acceso a un objeto de datos a través de la <xref:System.Windows.Data.BindingGroup.Items%2A> propiedad.  
   
      En el ejemplo siguiente se muestra este proceso para validar si la `StartDate` valor de propiedad para un `Course` objeto es anterior a su `EndDate` valor de propiedad.  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2.  Agregar la regla de validación para el <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> colección. El <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> propiedad proporciona acceso directo a la <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> propiedad de un <xref:System.Windows.Data.BindingGroup> instancia que agrupa todos los enlaces utilizados por el control.  
+2. Agregar la regla de validación para el <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> colección. El <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> propiedad proporciona acceso directo a la <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> propiedad de un <xref:System.Windows.Data.BindingGroup> instancia que agrupa todos los enlaces utilizados por el control.  
   
      El ejemplo siguiente se establece la <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> propiedad en XAML. El <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> propiedad está establecida en <xref:System.Windows.Controls.ValidationStep.UpdatedValue> para que la validación se produce después de que el objeto de datos enlazado se actualiza.  
   

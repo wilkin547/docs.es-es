@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 2b3e25187d2865a8e754c553f8057c3c8e3cff37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151234"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304836"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Filtrar para llamar a funciones definidas por el modelo como métodos de objeto
 En este tema se describe cómo llamar a una función definida por el modelo como un método en un objeto <xref:System.Data.Objects.ObjectContext> o como un método estático en una clase personalizada. Un *función definida por modelo* es una función que se define en el modelo conceptual. Los procedimientos de este tema describen cómo llamar directamente a estas funciones en lugar de hacerlo desde consultas LINQ to Entities. Para obtener información sobre cómo llamar a funciones definidas por el modelo de LINQ a consultas de entidades, vea [Cómo: Llamar a funciones definidas por el modelo en consultas](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
@@ -21,19 +21,19 @@ En este tema se describe cómo llamar a una función definida por el modelo como
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>Para llamar a una función definida por el modelo como un método en un objeto ObjectContext  
   
-1.  Agregue un archivo de código fuente para extender la clase parcial derivada de la clase <xref:System.Data.Objects.ObjectContext>, generada automáticamente por las herramientas de Entity Framework. La definición del código auxiliar de CLR en un archivo de código fuente independiente evitará que se pierdan los cambios cuando se regenere el archivo.  
+1. Agregue un archivo de código fuente para extender la clase parcial derivada de la clase <xref:System.Data.Objects.ObjectContext>, generada automáticamente por las herramientas de Entity Framework. La definición del código auxiliar de CLR en un archivo de código fuente independiente evitará que se pierdan los cambios cuando se regenere el archivo.  
   
-2.  Agregue un método de Common Language Runtime (CLR) a la clase <xref:System.Data.Objects.ObjectContext> que haga lo siguiente:  
+2. Agregue un método de Common Language Runtime (CLR) a la clase <xref:System.Data.Objects.ObjectContext> que haga lo siguiente:  
   
     -   Se asigne a la función definida en el modelo conceptual. Para asignar el método, debe aplicarle un atributo <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Tenga en cuenta que los parámetros <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> y <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> del atributo son el nombre del espacio de nombres del modelo conceptual y el nombre de la función en el modelo conceptual, respectivamente. La resolución del nombre de la función para LINQ distingue entre mayúsculas y minúsculas.  
   
     -   Devuelva los resultados del método <xref:System.Linq.IQueryProvider.Execute%2A> devuelto por la propiedad <xref:System.Data.Objects.ObjectContext.QueryProvider%2A>.  
   
-3.  Llame al método como un miembro de una instancia de la clase <xref:System.Data.Objects.ObjectContext>.  
+3. Llame al método como un miembro de una instancia de la clase <xref:System.Data.Objects.ObjectContext>.  
   
 ### <a name="to-call-a-model-defined-function-as-static-method-on-a-custom-class"></a>Para llamar a una función definida por el modelo como un método estático en una clase personalizada  
   
-1.  Agregue una clase a la aplicación con un método estático que haga lo siguiente:  
+1. Agregue una clase a la aplicación con un método estático que haga lo siguiente:  
   
     -   Se asigne a la función definida en el modelo conceptual. Para asignar el método, debe aplicarle un atributo <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Tenga en cuenta que los parámetros <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> y <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> del atributo son el nombre del espacio de nombres del modelo conceptual y el nombre de la función en el modelo conceptual, respectivamente.  
   
@@ -41,7 +41,7 @@ En este tema se describe cómo llamar a una función definida por el modelo como
   
     -   Devuelva los resultados del método <xref:System.Linq.IQueryProvider.Execute%2A> devuelto por la propiedad <xref:System.Linq.IQueryable.Provider%2A>.  
   
-2.  Llame al método como un miembro de un método estático en la clase personalizada  
+2. Llame al método como un miembro de un método estático en la clase personalizada  
   
 ## <a name="example"></a>Ejemplo  
  **Llamar a una función definida por el modelo como un método en un objeto ObjectContext**  

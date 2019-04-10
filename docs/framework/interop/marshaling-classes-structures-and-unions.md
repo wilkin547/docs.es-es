@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a4461d14299264a35f36133480cb11709c346ce
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c481b6889c1f10124465a4e851adfb25a1ba2eff
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221282"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890298"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Calcular las referencias de clases, estructuras y uniones
 Las clases y las estructuras son similares en .NET Framework. Ambas pueden tener campos, propiedades y eventos, además de métodos estáticos y no estáticos. Una diferencia importante entre ellas es que las estructuras son tipos de valor y las clases son tipos de referencia.  
@@ -68,7 +68,7 @@ Las clases y las estructuras son similares en .NET Framework. Ambas pueden tener
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) es una biblioteca personalizada y no administrada que contiene implementaciones para las funciones enumeradas anteriormente y cuatro estructuras: **MYPERSON**, **MYPERSON2**, **MYPERSON3** y **MYARRAYSTRUCT**. Estas estructuras contienen los siguientes elementos:  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) es una biblioteca personalizada y no administrada que contiene implementaciones para las funciones enumeradas anteriormente y cuatro estructuras: **MYPERSON**, **MYPERSON2**, **MYPERSON3** y **MYARRAYSTRUCT**. Estas estructuras contienen los siguientes elementos:  
   
 ```  
 typedef struct _MYPERSON  
@@ -182,7 +182,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) es una biblioteca personalizada no administrada que contiene una implementación para la función enumerada anteriormente y dos uniones, **MYUNION** y **MYUNION2**. Las uniones contienen los siguientes elementos:  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) es una biblioteca personalizada no administrada que contiene una implementación para la función enumerada anteriormente y dos uniones, **MYUNION** y **MYUNION2**. Las uniones contienen los siguientes elementos:  
   
 ```  
 union MYUNION  
@@ -254,7 +254,7 @@ typedef struct _SYSTEMTIME {
   
  En el ejemplo se muestra cómo llamar a una función nativa mediante la clase <xref:System.Runtime.InteropServices.Marshal> y código no seguro.  
   
- En este ejemplo se usan funciones de contenedor e invocaciones de plataforma definidas en [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)), que también se proporciona en los archivos de origen. Se usa la función `TestOutArrayOfStructs` y la estructura `MYSTRSTRUCT2`. La estructura contiene los siguientes elementos:  
+ En este ejemplo se usan funciones de contenedor e invocaciones de plataforma definidas en [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll), que también se proporciona en los archivos de origen. Se usa la función `TestOutArrayOfStructs` y la estructura `MYSTRSTRUCT2`. La estructura contiene los siguientes elementos:  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -264,13 +264,13 @@ typedef struct _MYSTRSTRUCT2
 } MYSTRSTRUCT2;  
 ```  
   
- La clase `MyStruct` contiene un objeto de cadena de caracteres ANSI. El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> especifica el formato ANSI. `MyUnsafeStruct` es una estructura que contiene un tipo <xref:System.IntPtr> en lugar de una cadena.  
+ La clase `MyStruct` contiene un objeto de cadena de caracteres ANSI. El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> especifica el formato ANSI. `MyUnsafeStruct`es una estructura que contiene un tipo <xref:System.IntPtr> en lugar de una cadena.  
   
  La clase `LibWrap` contiene el método de prototipo `TestOutArrayOfStructs` sobrecargado. Si un método declara un puntero como parámetro, la clase se debe marcar con la palabra clave `unsafe`. Dado que [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] no puede usar código no seguro, el método sobrecargado, el modificador unsafe y la estructura `MyUnsafeStruct` son innecesarios.  
   
  La clase `App` implementa el método `UsingMarshaling`, que realiza todas las tareas necesarias para pasar la matriz. La matriz se marca con la palabra clave `out` (`ByRef` en Visual Basic) para indicar que los datos se pasan del destinatario al llamador. La implementación usa los siguientes métodos de la clase <xref:System.Runtime.InteropServices.Marshal>:  
   
--   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> para calcular las referencias de datos desde el búfer no administrado a un objeto administrado.  
+-   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> para serializar los datos desde el búfer no administrado en un objeto administrado.  
   
 -   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> para liberar la memoria reservada para las cadenas en la estructura.  
   
@@ -291,4 +291,4 @@ typedef struct _MYSTRSTRUCT2
 ## <a name="see-also"></a>Vea también
 - [Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md)
 - [Serialización de cadenas](marshaling-strings.md)
-- [Serialización de tipos diferentes de matrices](marshaling-different-types-of-arrays.md)
+- [Cálculo de referencias de tipos diferentes de matrices](marshaling-different-types-of-arrays.md)

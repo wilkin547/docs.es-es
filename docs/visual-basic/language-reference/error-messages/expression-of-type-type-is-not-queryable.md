@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: 7f74d56b47629ff76f9b935d26278ace8df4c353
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 121c0a95a3a6bb695d9c73347c733cba215a0de4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842335"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304160"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>Expresión de tipo \<tipo > no es consultable
 Expresión de tipo \<tipo > no es consultable. Asegúrese de que no falta una importación de espacio de nombres o de referencia de ensamblado para el proveedor LINQ.  
@@ -29,9 +29,9 @@ Expresión de tipo \<tipo > no es consultable. Asegúrese de que no falta una im
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Agregar un `Import` instrucción para el <xref:System.Linq>, <xref:System.Data.Linq>, o <xref:System.Xml.Linq> espacio de nombres al archivo de código. También puede importar los espacios de nombres para el proyecto mediante el **referencias** página del Diseñador de proyectos (**mi proyecto**).  
+1. Agregar un `Import` instrucción para el <xref:System.Linq>, <xref:System.Data.Linq>, o <xref:System.Xml.Linq> espacio de nombres al archivo de código. También puede importar los espacios de nombres para el proyecto mediante el **referencias** página del Diseñador de proyectos (**mi proyecto**).  
   
-2.  Asegúrese de que el tipo que se ha identificado como el origen de la consulta es un tipo consultable. Es decir, un tipo que implementa <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601>.  
+2. Asegúrese de que el tipo que se ha identificado como el origen de la consulta es un tipo consultable. Es decir, un tipo que implementa <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601>.  
   
 ## <a name="see-also"></a>Vea también
 
@@ -42,5 +42,5 @@ Expresión de tipo \<tipo > no es consultable. Asegúrese de que no falta una im
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [Referencias y la instrucción Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
-- [Imports (instrucción), espacio de nombres y tipo .NET](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Página Referencias, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)

@@ -2,12 +2,12 @@
 title: Ejemplo de integración de SystemWebRouting
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 244a7b7b73217086864b16945bc1521a3383aeac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f4f9772583bbd66d19cc59f453489965aabf74b2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147815"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302249"
 ---
 # <a name="systemwebrouting-integration-sample"></a>Ejemplo de integración de SystemWebRouting
 Este ejemplo muestra la integración de nivel de hospedaje con las clases en el espacio de nombres <xref:System.Web.Routing>. Las clases en el espacio de nombres <xref:System.Web.Routing> permiten a una aplicación utilizar direcciones URL que no se corresponden directamente con un recurso físico. Uso de enrutamiento Web permite al desarrollador crear direcciones virtuales para HTTO que, a continuación, se asignan a los servicios WCF reales. Esto es útil cuando un servicio WCF se debe hospedar sin requerir un archivo físico ni un recurso, o cuando se debe tener acceso a los servicios con direcciones URL que no contienen archivos como .html o .aspx. En este ejemplo se muestra cómo utilizar la clase <xref:System.Web.Routing.RouteTable> para crear URI virtuales que se asignan a servicios en ejecución definidos en global.asax. 
@@ -32,31 +32,31 @@ En este ejemplo ya puede instalarse en el equipo. Compruebe el siguiente directo
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
-1.  Con Visual Studio, abra el archivo WebRoutingIntegration.sln.  
+1. Con Visual Studio, abra el archivo WebRoutingIntegration.sln.  
   
-2.  Para ejecutar la solución e iniciar el servidor de desarrollo web, presione F5.  
+2. Para ejecutar la solución e iniciar el servidor de desarrollo web, presione F5.  
   
      Aparece una lista de directorios para el ejemplo. Observe que no hay ningún archivo con la extensión de archivo .svc.  
   
-3.  En la barra de direcciones, agregue `movies` a la dirección URL, así que indique `http://localhost:[port]/movies` y presione ENTRAR.  
+3. En la barra de direcciones, agregue `movies` a la dirección URL, así que indique `http://localhost:[port]/movies` y presione ENTRAR.  
   
      Las fuentes de películas aparecen en el explorador.  
   
-4.  En la barra de direcciones, agregue `channels` a la dirección URL, por lo que eso es lecturas `http://localhost:[port]/channels` y presione ENTRAR.  
+4. En la barra de direcciones, agregue `channels` a la dirección URL, por lo que eso es lecturas `http://localhost:[port]/channels` y presione ENTRAR.  
   
      La fuente de canales aparece en el explorador.  
   
-5.  Presione ALT+F4 para cerrar el explorador web.  
+5. Presione ALT+F4 para cerrar el explorador web.  
   
      Si no se ha cerrado el servidor de desarrollo, haga clic en el icono del área de notificación y seleccione **detener**.  
   
 #### <a name="to-use-this-sample-when-hosted-in-iis"></a>Para utilizar este ejemplo cuando se hospeda en IIS  
   
-1.  Con Visual Studio, abra el archivo WebRoutingIntegration.sln.  
+1. Con Visual Studio, abra el archivo WebRoutingIntegration.sln.  
   
-2.  Compile el proyecto presionando CTRL+MAYÚS+B.  
+2. Compile el proyecto presionando CTRL+MAYÚS+B.  
   
-3.  Cree una aplicación web en el Administrador de Internet Information Services (IIS).  
+3. Cree una aplicación web en el Administrador de Internet Information Services (IIS).  
   
     1.  Haga clic en el Administrador de IIS, el **sitio Web predeterminado** y seleccione **agregar una aplicación**.  
   
@@ -66,17 +66,17 @@ En este ejemplo ya puede instalarse en el equipo. Compruebe el siguiente directo
   
     4.  Haga clic en **Aceptar**.  
   
-4.  Iniciar la aplicación, haciendo clic en la aplicación Web y seleccione **administrar aplicación** y, a continuación, **examinar**.  
+4. Iniciar la aplicación, haciendo clic en la aplicación Web y seleccione **administrar aplicación** y, a continuación, **examinar**.  
   
-5.  En la barra de direcciones, agregue `movies` a la dirección URL, por lo que eso es lecturas `http://localhost:[port]/movies` y presione ENTRAR.  
+5. En la barra de direcciones, agregue `movies` a la dirección URL, por lo que eso es lecturas `http://localhost:[port]/movies` y presione ENTRAR.  
   
      Las fuentes de películas aparecen en el explorador.  
   
-6.  En la barra de direcciones, agregue `channels` a la dirección URL, por lo que eso es lecturas `http://localhost:[port]/channels` y presione ENTRAR.  
+6. En la barra de direcciones, agregue `channels` a la dirección URL, por lo que eso es lecturas `http://localhost:[port]/channels` y presione ENTRAR.  
   
      La fuente de canales aparece en el explorador.  
   
-7.  Presione ALT+F4 para cerrar el explorador web.  
+7. Presione ALT+F4 para cerrar el explorador web.  
   
  En este ejemplo se muestra que el nivel de hospedaje es capaz de crear las clases en el espacio de nombres <xref:System.Web.Routing> para enrutar las solicitudes de servicios hospedados a través de HTTP.  
   

@@ -2,12 +2,12 @@
 title: 'Tarea 3: Crear los paneles de Cuadro de herramientas y PropertyGrid'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175050"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306028"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarea 3: Crear los paneles de Cuadro de herramientas y PropertyGrid
 En esta tarea, creará el **cuadro de herramientas** y **PropertyGrid** paneles y agregarlos a rehospedado [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
@@ -16,11 +16,11 @@ En esta tarea, creará el **cuadro de herramientas** y **PropertyGrid** paneles 
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Para crear el Cuadro de herramientas y agregarlo a la cuadrícula  
   
-1.  Abra el proyecto HostingApplication que obtuvo siguiendo el procedimiento descrito en [tarea 2: Hospedar el Diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md).  
+1. Abra el proyecto HostingApplication que obtuvo siguiendo el procedimiento descrito en [tarea 2: Hospedar el Diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md).  
   
-2.  En el **el Explorador de soluciones** panel, haga clic en el archivo MainWindow.xaml y seleccione **ver código**.  
+2. En el **el Explorador de soluciones** panel, haga clic en el archivo MainWindow.xaml y seleccione **ver código**.  
   
-3.  Agregar un `GetToolboxControl` método a la `MainWindow` clase que crea un <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, agrega un nuevo **cuadro de herramientas** categoría a la **cuadro de herramientas**y asigna el <xref:System.Activities.Statements.Assign> y <xref:System.Activities.Statements.Sequence> tipos de actividad en esa categoría.  
+3. Agregar un `GetToolboxControl` método a la `MainWindow` clase que crea un <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, agrega un nuevo **cuadro de herramientas** categoría a la **cuadro de herramientas**y asigna el <xref:System.Activities.Statements.Assign> y <xref:System.Activities.Statements.Sequence> tipos de actividad en esa categoría.  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ En esta tarea, creará el **cuadro de herramientas** y **PropertyGrid** paneles 
     }  
     ```  
   
-4.  Agregar una privada `AddToolbox` método a la `MainWindow` clase que coloca el **cuadro de herramientas** en la columna izquierda de la cuadrícula.  
+4. Agregar una privada `AddToolbox` método a la `MainWindow` clase que coloca el **cuadro de herramientas** en la columna izquierda de la cuadrícula.  
   
     ```csharp  
     private void AddToolBox()  
@@ -60,7 +60,7 @@ En esta tarea, creará el **cuadro de herramientas** y **PropertyGrid** paneles 
     }  
     ```  
   
-5.  Agregue una llamada al método `AddToolBox` en el constructor de clase `MainWindow()` tal y como se muestra en el siguiente código.  
+5. Agregue una llamada al método `AddToolBox` en el constructor de clase `MainWindow()` tal y como se muestra en el siguiente código.  
   
     ```csharp  
     public MainWindow()  
@@ -73,13 +73,13 @@ En esta tarea, creará el **cuadro de herramientas** y **PropertyGrid** paneles 
     }  
     ```  
   
-6.  Presione F5 para compilar y ejecutar la solución. El **cuadro de herramientas** que contiene el <xref:System.Activities.Statements.Assign> y <xref:System.Activities.Statements.Sequence> se deben mostrar las actividades.  
+6. Presione F5 para compilar y ejecutar la solución. El **cuadro de herramientas** que contiene el <xref:System.Activities.Statements.Assign> y <xref:System.Activities.Statements.Sequence> se deben mostrar las actividades.  
   
 ### <a name="to-create-the-propertygrid"></a>Para crear PropertyGrid  
   
-1.  En el **el Explorador de soluciones** panel, haga clic en el archivo MainWindow.xaml y seleccione **ver código**.  
+1. En el **el Explorador de soluciones** panel, haga clic en el archivo MainWindow.xaml y seleccione **ver código**.  
   
-2.  Agregar el `AddPropertyInspector` método a la `MainWindow` clase para colocar el **PropertyGrid** panel en la columna situada en la cuadrícula.  
+2. Agregar el `AddPropertyInspector` método a la `MainWindow` clase para colocar el **PropertyGrid** panel en la columna situada en la cuadrícula.  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -89,7 +89,7 @@ En esta tarea, creará el **cuadro de herramientas** y **PropertyGrid** paneles 
     }  
     ```  
   
-3.  Agregue una llamada al método `AddPropertyInspector` en el constructor de clase `MainWindow()` tal y como se muestra en el siguiente código.  
+3. Agregue una llamada al método `AddPropertyInspector` en el constructor de clase `MainWindow()` tal y como se muestra en el siguiente código.  
   
     ```csharp  
     public MainWindow()  
@@ -103,7 +103,7 @@ En esta tarea, creará el **cuadro de herramientas** y **PropertyGrid** paneles 
     }  
     ```  
   
-4.  Presione F5 para compilar y ejecutar la solución. El **cuadro de herramientas**, lienzo de diseño de flujo de trabajo, y **PropertyGrid** paneles todos se deben mostrar y, cuando se arrastra un <xref:System.Activities.Statements.Assign> actividad o un <xref:System.Activities.Statements.Sequence> actividades al lienzo del diseño, el cuadrícula de propiedades debe actualizarse dependiendo de la actividad resaltada.  
+4. Presione F5 para compilar y ejecutar la solución. El **cuadro de herramientas**, lienzo de diseño de flujo de trabajo, y **PropertyGrid** paneles todos se deben mostrar y, cuando se arrastra un <xref:System.Activities.Statements.Assign> actividad o un <xref:System.Activities.Statements.Sequence> actividades al lienzo del diseño, el cuadrícula de propiedades debe actualizarse dependiendo de la actividad resaltada.  
   
 ## <a name="example"></a>Ejemplo  
  El archivo MainWindow.xaml.cs debe contener ahora el siguiente código.  

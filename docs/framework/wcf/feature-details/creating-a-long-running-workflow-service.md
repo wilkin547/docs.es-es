@@ -2,12 +2,12 @@
 title: Crear un servicio de flujo de trabajo de larga ejecución
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 37d3accae017b6725eab5ebb3d7df6e1bc15a56a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109660"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301352"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Crear un servicio de flujo de trabajo de larga ejecución
 En este tema se describe cómo crear un servicio de flujo de trabajo de larga ejecución. Los servicios de flujo de trabajo de larga ejecución se pueden ejecutar durante períodos de tiempo prolongados. En algún momento, el flujo de trabajo se puede inactivar a la espera de recibir información adicional. En este caso, el flujo de trabajo se conserva en una base de datos SQL y se quita de la memoria. Cuando esté disponible la información adicional, la instancia de flujo de trabajo se vuelve a cargar en la memoria y continua ejecutándose.  En este escenario, el usuario implementa un sistema de pedidos muy simplificado.  El cliente envía un mensaje inicial al servicio de flujo de trabajo para que inicie el pedido. Devuelve un identificador de pedido al cliente. En este momento el servicio de flujo de trabajo espera otro mensaje del cliente y pasa al estado inactivo, y se conserva en una base de datos SQL Server.  Cuando el cliente envía el siguiente mensaje para pedir un elemento, el servicio de flujo de trabajo se vuelve a cargar en memoria y finaliza el procesamiento del pedido. En el ejemplo de código devuelve una cadena que indica que el elemento se ha agregado al pedido. No se pretende que el ejemplo de código sea una aplicación real de la tecnología, sino más bien un ejemplo sencillo que ilustre servicios de flujo de trabajo de ejecución prolongada. En este tema se supone que sabe cómo crear soluciones y proyectos de Visual Studio 2012.
@@ -15,33 +15,33 @@ En este tema se describe cómo crear un servicio de flujo de trabajo de larga ej
 ## <a name="prerequisites"></a>Requisitos previos
  Debe tener instalado el siguiente software para usar este tutorial:
 
-1.  Microsoft SQL Server 2008
+1. Microsoft SQL Server 2008
 
-2.  Visual Studio 2012
+2. Visual Studio 2012
 
-3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3. Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
-4.  Está familiarizado con WCF y Visual Studio 2012 y sabe cómo crear proyectos y soluciones.
+4. Está familiarizado con WCF y Visual Studio 2012 y sabe cómo crear proyectos y soluciones.
 
 ### <a name="to-setup-the-sql-database"></a>Para configurar la base de datos SQL
 
-1.  Para conservar las instancias del servicio de flujo de trabajo debe tener instalado Microsoft SQL Server y configurar una base de datos con el fin de almacenar las instancias de flujo de trabajo persistentes. Ejecute Microsoft SQL Management Studio, haga clic en el **iniciar** button, seleccionar **todos los programas**, **Microsoft SQL Server 2008**, y **Microsoft SQL Management Studio**.
+1. Para conservar las instancias del servicio de flujo de trabajo debe tener instalado Microsoft SQL Server y configurar una base de datos con el fin de almacenar las instancias de flujo de trabajo persistentes. Ejecute Microsoft SQL Management Studio, haga clic en el **iniciar** button, seleccionar **todos los programas**, **Microsoft SQL Server 2008**, y **Microsoft SQL Management Studio**.
 
-2.  Haga clic en el **Connect** botón para iniciar sesión en la instancia de SQL Server
+2. Haga clic en el **Connect** botón para iniciar sesión en la instancia de SQL Server
 
-3.  Haga clic en **bases de datos** en la vista de árbol y seleccione **nueva base de datos...** Para crear una base de datos nueva denominada `SQLPersistenceStore`.
+3. Haga clic en **bases de datos** en la vista de árbol y seleccione **nueva base de datos...** Para crear una base de datos nueva denominada `SQLPersistenceStore`.
 
-4.  Ejecute el archivo de script SqlWorkflowInstanceStoreSchema.sql ubicado en el directorio C:\Windows\Microsoft.NET\Framework\v4.0\SQL\es en la base de datos SQLPersistenceStore para configurar los esquemas de base de datos necesarios.
+4. Ejecute el archivo de script SqlWorkflowInstanceStoreSchema.sql ubicado en el directorio C:\Windows\Microsoft.NET\Framework\v4.0\SQL\es en la base de datos SQLPersistenceStore para configurar los esquemas de base de datos necesarios.
 
-5.  Ejecute el archivo de script SqlWorkflowInstanceStoreLogic.sql ubicado en el directorio C:\Windows\Microsoft.NET\Framework\v4.0\SQL\es en la base de datos SQLPersistenceStore para configurar la lógica de base de datos necesaria.
+5. Ejecute el archivo de script SqlWorkflowInstanceStoreLogic.sql ubicado en el directorio C:\Windows\Microsoft.NET\Framework\v4.0\SQL\es en la base de datos SQLPersistenceStore para configurar la lógica de base de datos necesaria.
 
 ### <a name="to-create-the-web-hosted-workflow-service"></a>Para crear el servicio de flujo de trabajo hospedado en web
 
-1.  Crear una solución de Visual Studio 2012 vacía, asígnele el nombre `OrderProcessing`.
+1. Crear una solución de Visual Studio 2012 vacía, asígnele el nombre `OrderProcessing`.
 
-2.  Agregue un nuevo proyecto de aplicación de servicio de flujo de trabajo WCF denominado `OrderService` a la solución.
+2. Agregue un nuevo proyecto de aplicación de servicio de flujo de trabajo WCF denominado `OrderService` a la solución.
 
-3.  En el cuadro de diálogo de propiedades de proyecto, seleccione el **Web** ficha.
+3. En el cuadro de diálogo de propiedades de proyecto, seleccione el **Web** ficha.
 
     1.  En **acción de inicio** seleccione **página específica** y especifique `Service1.xamlx`.
 
@@ -56,16 +56,16 @@ En este tema se describe cómo crear un servicio de flujo de trabajo de larga ej
 
          Estos dos pasos configuran el proyecto de servicio de flujo de trabajo que IIS va a hospedar.
 
-4.  Abra `Service1.xamlx` si está abierto aún no y eliminar las existentes **ReceiveRequest** y **SendResponse** actividades.
+4. Abra `Service1.xamlx` si está abierto aún no y eliminar las existentes **ReceiveRequest** y **SendResponse** actividades.
 
-5.  Seleccione el **servicio secuencial** actividad y haga clic en el **Variables** vincular y agregue las variables que se muestra en la siguiente ilustración. De esta forma, se agregan algunas variables que se usarán posteriormente en el servicio de flujo de trabajo.
+5. Seleccione el **servicio secuencial** actividad y haga clic en el **Variables** vincular y agregue las variables que se muestra en la siguiente ilustración. De esta forma, se agregan algunas variables que se usarán posteriormente en el servicio de flujo de trabajo.
 
     > [!NOTE]
     >  Si CorrelationHandle no está en la lista desplegable Tipo de Variable, seleccione **buscar tipos** en la lista desplegable. Escriba CorrelationHandle en el **nombre de tipo** , seleccione CorrelationHandle en el cuadro de lista y haga clic en **Aceptar**.
 
      ![Agregue Variables](./media/creating-a-long-running-workflow-service/add-variables-sequential-service-activity.gif "agregar variables a la actividad de servicio secuencial.")
 
-6.  Arrastre y coloque un **ReceiveAndSendReply** plantilla de actividad en el **servicio secuencial** actividad. Este conjunto de actividades recibirá un mensaje de un cliente y devolverá un respuesta.
+6. Arrastre y coloque un **ReceiveAndSendReply** plantilla de actividad en el **servicio secuencial** actividad. Este conjunto de actividades recibirá un mensaje de un cliente y devolverá un respuesta.
 
     1.  Seleccione el **recepción** actividad y establezca las propiedades resaltadas en la siguiente ilustración.
 
@@ -95,7 +95,7 @@ En este tema se describe cómo crear un servicio de flujo de trabajo de larga ej
 
          ![Agregar un inicializador de correlación](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "agregar un inicializador de correlación.")
 
-7.  Arrastre y coloque otra **ReceiveAndSendReply** actividad al final del flujo de trabajo (fuera de la **secuencia** que contiene la primera **recepción** y  **SendReply** actividades). De esta forma, se recibirá el segundo mensaje enviado por el cliente y se responderá al mismo.
+7. Arrastre y coloque otra **ReceiveAndSendReply** actividad al final del flujo de trabajo (fuera de la **secuencia** que contiene la primera **recepción** y  **SendReply** actividades). De esta forma, se recibirá el segundo mensaje enviado por el cliente y se responderá al mismo.
 
     1.  Seleccione el **secuencia** que contiene el recién agregado **recepción** y **SendReply** actividades y haga clic en el **Variables** botón. Agregue la variable resaltada en la siguiente ilustración:
 
@@ -131,7 +131,7 @@ En este tema se describe cómo crear un servicio de flujo de trabajo de larga ej
 
              ![Establecer el enlace de datos para la actividad SendReply](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "establecer la propiedad de actividad SendReplyToAddItem.")
 
-8.  Abra el archivo web.config y agregue los siguientes elementos en la \<comportamiento > sección para habilitar la persistencia de flujo de trabajo.
+8. Abra el archivo web.config y agregue los siguientes elementos en la \<comportamiento > sección para habilitar la persistencia de flujo de trabajo.
 
     ```xml
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />
@@ -145,17 +145,17 @@ En este tema se describe cómo crear un servicio de flujo de trabajo de larga ej
 
 ### <a name="to-create-a-client-application-to-call-the-workflow-service"></a>Para crear una aplicación cliente que llame al servicio de flujo de trabajo
 
-1.  Agregue un nuevo proyecto de aplicación de consola denominado `OrderClient` a la solución.
+1. Agregue un nuevo proyecto de aplicación de consola denominado `OrderClient` a la solución.
 
-2.  Agregue referencias a los siguientes ensamblados al proyecto `OrderClient`
+2. Agregue referencias a los siguientes ensamblados al proyecto `OrderClient`
 
     1.  System.ServiceModel.dll
 
     2.  System.ServiceModel.Activities.dll
 
-3.  Agregue una referencia de servicio al servicio de flujo de trabajo y especifique `OrderService` como el espacio de nombres.
+3. Agregue una referencia de servicio al servicio de flujo de trabajo y especifique `OrderService` como el espacio de nombres.
 
-4.  En el método `Main()` del proyecto de cliente, agregue el siguiente código:
+4. En el método `Main()` del proyecto de cliente, agregue el siguiente código:
 
     ```
     static void Main(string[] args)
@@ -182,17 +182,17 @@ En este tema se describe cómo crear un servicio de flujo de trabajo de larga ej
     }
     ```
 
-5.  Compile la solución y ejecute la aplicación `OrderClient`. El cliente mostrará un texto similar al siguiente:
+5. Compile la solución y ejecute la aplicación `OrderClient`. El cliente mostrará un texto similar al siguiente:
 
     ```Output
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
-6.  Para comprobar que el servicio de flujo de trabajo se ha guardado, inicie SQL Server Management Studio, vaya a la **iniciar** menú, cuando se selecciona **todos los programas**, **deMicrosoftSQLServer2008**, **SQL Server Management Studio**.
+6. Para comprobar que el servicio de flujo de trabajo se ha guardado, inicie SQL Server Management Studio, vaya a la **iniciar** menú, cuando se selecciona **todos los programas**, **deMicrosoftSQLServer2008**, **SQL Server Management Studio**.
 
     1.  En el panel izquierdo, expanda, **bases de datos**, **SQLPersistenceStore**, **vistas** y haga clic en **System.Activities.DurableInstancing.Instances**  y seleccione **seleccionar 1000 filas superiores**. En el **resultados** panel Compruebe que aparece al menos una instancia que aparece. Puede que haya otras instancia de ejecuciones previas si se produjo una excepción durante la ejecución. Puede eliminar las filas existentes haciendo clic **System.Activities.DurableInstancing.Instances** y seleccionando **editar las primeras 200 filas**, presiona el **Execute** botón, Seleccione todas las filas en el panel de resultados y seleccione **eliminar**.  Para comprobar que la instancia que se muestra en la base de datos es la instancia de la aplicación creada, compruebe que la vista de instancias esté vacía antes de ejecutar el cliente. Una vez que se ejecute el cliente, vuelva a ejecutar la consulta (Seleccionar las primeras 1000 filas) y compruebe que se haya agregado una nueva instancia.
 
-7.  Presione Entrar para enviar y agregar un mensaje de elemento al servicio de flujo de trabajo. El cliente mostrará un texto similar al siguiente:
+7. Presione Entrar para enviar y agregar un mensaje de elemento al servicio de flujo de trabajo. El cliente mostrará un texto similar al siguiente:
 
     ```Output
     Sending add item messageService returned: Item added to orderPress any key to continue . . .

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Windows Forms controls, NumericUpDown
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
-ms.openlocfilehash: 281fbbd4459230056fcac2e6c684422c91dc0817
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c73200eb1c373f1d723ba82f2e6be5b625496b59
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119891"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300507"
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Filtrar para establecer y devolver valores numéricos con el control NumericUpDown de formularios Windows Forms
 El valor numérico de los formularios de Windows <xref:System.Windows.Forms.NumericUpDown> control viene determinada por su <xref:System.Windows.Forms.NumericUpDown.Value%2A> propiedad. Puede escribir pruebas condicionales para el valor del control al igual que con cualquier otra propiedad. Una vez el <xref:System.Windows.Forms.NumericUpDown.Value%2A> propiedad está establecida, se puede ajustar directamente al escribir código para realizar operaciones en él o puede llamar a la <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> y <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> métodos.  
   
 ### <a name="to-set-the-numeric-value"></a>Para establecer el valor numérico  
   
-1.  Asignar un valor a la <xref:System.Windows.Forms.NumericUpDown.Value%2A> propiedad en el código o en la ventana Propiedades.  
+1. Asignar un valor a la <xref:System.Windows.Forms.NumericUpDown.Value%2A> propiedad en el código o en la ventana Propiedades.  
   
     ```vb  
     NumericUpDown1.Value = 55  
@@ -39,7 +39,7 @@ El valor numérico de los formularios de Windows <xref:System.Windows.Forms.Nume
   
      -o bien-  
   
-2.  Llame a la <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> o <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> método para aumentar o disminuir el valor en la cantidad especificada en el <xref:System.Windows.Forms.NumericUpDown.Increment%2A> propiedad.  
+2. Llame a la <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> o <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> método para aumentar o disminuir el valor en la cantidad especificada en el <xref:System.Windows.Forms.NumericUpDown.Increment%2A> propiedad.  
   
     ```vb  
     NumericUpDown1.UpButton()  

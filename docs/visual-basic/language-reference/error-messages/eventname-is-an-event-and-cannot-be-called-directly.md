@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32022
 ms.assetid: 4dcfcb8d-a9fa-46a7-a034-29d9ff3a59b3
-ms.openlocfilehash: eb0b40a80d37788bcab32791d7ed701a77505371
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bf900566bdb4ecf8d8961a12b5dd67ba426caf27
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831449"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305603"
 ---
 # <a name="eventname-is-an-event-and-cannot-be-called-directly"></a>'\<eventname >' es un evento y no se puede llamar directamente
 ' <`eventname`>' es un evento y no se puede llamar directamente. Use un `RaiseEvent` instrucción para generar un evento.  
@@ -23,8 +23,8 @@ ms.locfileid: "58831449"
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Use un `RaiseEvent` instrucción para señalar un evento e invocar el procedimiento o procedimientos que lo procesan.  
+1. Use un `RaiseEvent` instrucción para señalar un evento e invocar el procedimiento o procedimientos que lo procesan.  
   
 ## <a name="see-also"></a>Vea también
 
-- [RaiseEvent (instrucción)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [RaiseEvent (Instrucción)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)

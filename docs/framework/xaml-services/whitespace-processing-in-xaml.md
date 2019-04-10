@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: ca628a366b000b23a2abe38b1c8b7272299bff16
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102237"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294930"
 ---
 # <a name="white-space-processing-in-xaml"></a>Procesamiento de espacios en blanco en XAML
 Las reglas de lenguaje de XAML indican que espacio en blanco significativo debe ser procesada por una [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementación del procesador. En este tema se documentan estas reglas del lenguaje XAML. También se documenta el control de espacio en blanco adicional definida por el [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementación del procesador XAML y el escritor XAML para la serialización.  
@@ -25,15 +25,15 @@ Las reglas de lenguaje de XAML indican que espacio en blanco significativo debe 
 ## <a name="white-space-normalization"></a>Normalización del espacio en blanco  
  De forma predeterminada la normalización del espacio en blanco siguiente se produce cuando un [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] procesos procesador un [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] archivo:  
   
-1.  Se quitan los caracteres de avance de línea entre los caracteres de Asia oriental. Consulte la sección "Caracteres de Asia oriental" más adelante en este tema para obtener una definición de este término.  
+1. Se quitan los caracteres de avance de línea entre los caracteres de Asia oriental. Consulte la sección "Caracteres de Asia oriental" más adelante en este tema para obtener una definición de este término.  
   
-2.  Todos los caracteres de espacio en blanco (espacio, avance de línea, pestaña) se convierten en espacios.  
+2. Todos los caracteres de espacio en blanco (espacio, avance de línea, pestaña) se convierten en espacios.  
   
-3.  Todos los espacios consecutivos se eliminan y reemplazan por un espacio.  
+3. Todos los espacios consecutivos se eliminan y reemplazan por un espacio.  
   
-4.  Se elimina el espacio que sigue inmediatamente a la etiqueta inicial.  
+4. Se elimina el espacio que sigue inmediatamente a la etiqueta inicial.  
   
-5.  Se elimina el espacio situado inmediatamente antes de la etiqueta de cierre.  
+5. Se elimina el espacio situado inmediatamente antes de la etiqueta de cierre.  
   
  El "valor predeterminado" corresponde al estado indicado por el valor predeterminado del atributo [xml:space](xml-space-handling-in-xaml.md) .  
   

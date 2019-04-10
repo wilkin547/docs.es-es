@@ -2,12 +2,12 @@
 title: Objetos BFILE de Oracle
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 07a7f28e08ed43672e94151cd9de88301069e1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142394"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304472"
 ---
 # <a name="oracle-bfiles"></a>Objetos BFILE de Oracle
 El proveedor de datos .NET Framework para Oracle incluye la clase <xref:System.Data.OracleClient.OracleBFile>, que se utiliza para trabajar con el tipo de datos <xref:System.Data.OracleClient.OracleType.BFile> de Oracle.  
@@ -26,9 +26,9 @@ El proveedor de datos .NET Framework para Oracle incluye la clase <xref:System.D
   
  Cada distinto de NULL **OracleBFile** objeto está asociado con dos entidades que definen la ubicación del archivo físico subyacente:  
   
-1.  Un objeto DIRECTORY de Oracle, que es un alias de base de datos de un directorio del sistema de archivos, y  
+1. Un objeto DIRECTORY de Oracle, que es un alias de base de datos de un directorio del sistema de archivos, y  
   
-2.  el nombre de archivo del archivo físico subyacente, que se encuentra en el directorio asociado con el objeto DIRECTORY.  
+2. el nombre de archivo del archivo físico subyacente, que se encuentra en el directorio asociado con el objeto DIRECTORY.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de C# siguiente se muestra cómo puede crear un **BFILE** en Oracle, tabla y, a continuación, recuperarlo en forma de un **OracleBFile** objeto. En el ejemplo se muestra cómo utilizar el <xref:System.Data.OracleClient.OracleDataReader> objeto y el **OracleBFile** **Seek** y **lectura** métodos. Tenga en cuenta que para usar este ejemplo, primero debe crear un directorio denominado "c:\\\bfiles" y el archivo llamado "MyFile.jpg" en el servidor de Oracle.  

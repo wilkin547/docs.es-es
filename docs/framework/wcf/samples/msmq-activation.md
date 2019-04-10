@@ -2,12 +2,12 @@
 title: Activación MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 80ce76d5cee8bb55bebdaeaea065aa41a0264bac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d83759f321abe7fa7e39202daadd4ceda82d8f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162833"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295684"
 ---
 # <a name="msmq-activation"></a>Activación MSMQ
 Este ejemplo muestra cómo hospedar aplicaciones en el servicio de activación del proceso de Windows (WAS) que se lee en una cola de mensajes. Este ejemplo se utiliza el `netMsmqBinding` y se basa en el [comunicación bidireccional](../../../../docs/framework/wcf/samples/two-way-communication.md) ejemplo. El servicio en este caso es una aplicación hospedada en web y el cliente es autohospedado y proporciona resultados a la consola para observar el estado de pedidos de compra enviados.  
@@ -215,9 +215,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de que está instalado [!INCLUDE[iisver](../../../../includes/iisver-md.md)], según se requiere para la activación WAS.  
+1. Asegúrese de que está instalado [!INCLUDE[iisver](../../../../includes/iisver-md.md)], según se requiere para la activación WAS.  
   
-2.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Además, debe instalar los componentes de activación no HTTP de WCF:  
+2. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Además, debe instalar los componentes de activación no HTTP de WCF:  
   
     1.  En el menú **Inicio**, elija **Panel de control**.  
   
@@ -229,11 +229,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     5.  Expanda el **Microsoft .NET Framework 3.0** nodo y compruebe el **activación no HTTP de Windows Communication Foundation** característica.  
   
-3.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Ejecute el cliente ejecutando client.exe de una ventana de comandos. Esto crea la cola y envía un mensaje a la misma. Deje que el cliente se ejecute para ver el resultado del servicio que lee el mensaje  
+4. Ejecute el cliente ejecutando client.exe de una ventana de comandos. Esto crea la cola y envía un mensaje a la misma. Deje que el cliente se ejecute para ver el resultado del servicio que lee el mensaje  
   
-5.  El servicio de activación MSMQ se ejecuta como servicio de red de manera predeterminada. Por consiguiente, la cola que se utiliza para activar la aplicación debe tener permisos de recepción y lectura para el Servicio de la Red. Esto se puede agregar utilizando el MMC de Message Queuing:  
+5. El servicio de activación MSMQ se ejecuta como servicio de red de manera predeterminada. Por consiguiente, la cola que se utiliza para activar la aplicación debe tener permisos de recepción y lectura para el Servicio de la Red. Esto se puede agregar utilizando el MMC de Message Queuing:  
   
     1.  Desde el **iniciar** menú, haga clic en **ejecutar**, a continuación, escriba `Compmgmt.msc` y presione ENTRAR.  
   
@@ -245,7 +245,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     5.  En el **seguridad** , haga clic **agregar** y proporcionan inspección y recibir permisos al servicio de red.  
   
-6.  Configure el Windows Process Activation Service (WAS) para admitir la activación de MSMQ.  
+6. Configure el Windows Process Activation Service (WAS) para admitir la activación de MSMQ.  
   
      Para su comodidad, los dos pasos siguientes se implementan en un archivo por lotes denominado AddMsmqSiteBinding.cmd que se encuentra en el directorio de ejemplo.  
   
@@ -272,9 +272,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
          Este comando habilita la aplicación /servicemodelsamples tener acceso utilizando `http://localhost/servicemodelsamples` y `net.msmq://localhost/servicemodelsamples`.
   
-7.  Si no lo ha hecho previamente, asegúrese de que el servicio de activación MSMQ está habilitado. Desde el **iniciar** menú, haga clic en **ejecutar**y el tipo `Services.msc`. Buscar en la lista de servicios para la **Net.Msmq Listener Adapter**. Haga clic en y seleccione **propiedades**. Establecer el **tipo de inicio** a **automática**, haga clic en **aplicar** y haga clic en el **iniciar** botón. Este paso solo debe realizarse una vez antes del primer uso del servicio de Adaptador de escucha Net.Msmq.  
+7. Si no lo ha hecho previamente, asegúrese de que el servicio de activación MSMQ está habilitado. Desde el **iniciar** menú, haga clic en **ejecutar**y el tipo `Services.msc`. Buscar en la lista de servicios para la **Net.Msmq Listener Adapter**. Haga clic en y seleccione **propiedades**. Establecer el **tipo de inicio** a **automática**, haga clic en **aplicar** y haga clic en el **iniciar** botón. Este paso solo debe realizarse una vez antes del primer uso del servicio de Adaptador de escucha Net.Msmq.  
   
-8.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Además, cambie el código en el cliente que envía el pedido de compra para reflejar el nombre de equipo en el URI de la cola al enviar el pedido de compra. Utilice el código siguiente:  
+8. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Además, cambie el código en el cliente que envía el pedido de compra para reflejar el nombre de equipo en el URI de la cola al enviar el pedido de compra. Utilice el código siguiente:  
   
     ```csharp  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
@@ -309,7 +309,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Para ejecutar el ejemplo en un equipo unido a un grupo de trabajo  
   
-1.  Si su equipo no forma parte de un dominio, desactive la seguridad de transporte estableciendo el modo de autenticación y el nivel de protección en cero, tal y como se muestra en la configuración de ejemplo siguiente.  
+1. Si su equipo no forma parte de un dominio, desactive la seguridad de transporte estableciendo el modo de autenticación y el nivel de protección en cero, tal y como se muestra en la configuración de ejemplo siguiente.  
   
     ```xml  
     <bindings>  
@@ -321,12 +321,12 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     </bindings>  
     ```  
   
-2.  Cambie la configuración en el servidor y el cliente antes de ejecutar el ejemplo.  
+2. Cambie la configuración en el servidor y el cliente antes de ejecutar el ejemplo.  
   
     > [!NOTE]
     >  Establecer `security mode` en `None` es equivalente a definir `MsmqAuthenticationMode`, `MsmqProtectionLevel` y la seguridad de `Message` en `None`.  
   
-3.  Para habilitar la activación en un equipo combinado a un grupo de trabajo, el servicio de activación y el proceso de trabajador se deben ejecutar con una cuenta de usuario concreta (debe ser la misma para ambos) y la cola debe tener ACL para la cuenta de usuario concreta.  
+3. Para habilitar la activación en un equipo combinado a un grupo de trabajo, el servicio de activación y el proceso de trabajador se deben ejecutar con una cuenta de usuario concreta (debe ser la misma para ambos) y la cola debe tener ACL para la cuenta de usuario concreta.  
   
      Para cambiar la identidad bajo la que el proceso de trabajador se ejecuta:  
   
@@ -342,9 +342,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     2.  Haga clic en el **Net.MsmqListener Adapter**y elija **propiedades**.  
   
-4.  Cambiar la cuenta en el **inicio de sesión** ficha.  
+4. Cambiar la cuenta en el **inicio de sesión** ficha.  
   
-5.  En un grupo de trabajo, el servicio se debe ejecutar también utilizando un token sin restricciones. Para ello, ejecute lo siguiente en una ventana de comandos:  
+5. En un grupo de trabajo, el servicio se debe ejecutar también utilizando un token sin restricciones. Para ello, ejecute lo siguiente en una ventana de comandos:  
   
     ```console  
     sc sidtype netmsmqactivator unrestricted  

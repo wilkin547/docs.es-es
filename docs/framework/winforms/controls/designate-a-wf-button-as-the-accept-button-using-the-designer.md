@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: a1da0590-755f-49f2-aca7-609fac6351bf
-ms.openlocfilehash: ae7efdce1384b0089b41da155981d1aebbaa55a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0eaa90c8450888ea325470db5d4adae555f8d82
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201512"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304173"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button-using-the-designer"></a>Filtrar para designar un botón de formularios Windows Forms como botón para aceptar mediante el diseñador
 En cualquier formulario de Windows, se puede designar un <xref:System.Windows.Forms.Button> que sea el botón Aceptar, también conocido como el botón predeterminado del control. Cada vez que el usuario presiona la tecla ENTRAR, se hace clic en el botón predeterminado, independientemente de que otro control en el formulario tiene el foco. Las excepciones a esto son cuando el control tiene el foco es otro botón, en ese caso, se hace clic en el botón con el foco, o un cuadro de texto multilínea o un control personalizado que intercepta la tecla ENTRAR.  
@@ -22,9 +22,9 @@ En cualquier formulario de Windows, se puede designar un <xref:System.Windows.Fo
   
 ### <a name="to-designate-the-accept-button"></a>Para designar el botón Aceptar  
   
-1.  Seleccione el formulario en el que reside el botón.  
+1. Seleccione el formulario en el que reside el botón.  
   
-2.  En el **propiedades** ventana, establezca el formulario <xref:System.Windows.Forms.Form.AcceptButton%2A> propiedad a la <xref:System.Windows.Forms.Button> nombre del control.  
+2. En el **propiedades** ventana, establezca el formulario <xref:System.Windows.Forms.Form.AcceptButton%2A> propiedad a la <xref:System.Windows.Forms.Button> nombre del control.  
   
 ## <a name="see-also"></a>Vea también
 

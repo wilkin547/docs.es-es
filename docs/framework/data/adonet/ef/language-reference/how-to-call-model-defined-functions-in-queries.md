@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: abab705c7ea83318949cf0d75e491905da7896e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2fe0360a0548bddb0ebba566eca0d121c9ec9160
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099734"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300624"
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a>Filtrar para llamar a funciones definidas por el modelo en consultas
 En este tema se describe cómo llamar a las funciones definidas en el modelo conceptual desde consultas [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
@@ -19,9 +19,9 @@ En este tema se describe cómo llamar a las funciones definidas en el modelo con
   
 ### <a name="to-call-a-function-defined-in-the-conceptual-model"></a>Para llamar a una función definida en el modelo conceptual  
   
-1.  Agregue un método de Common Language Runtime (CLR) a su aplicación que se corresponda con la función definida en el modelo conceptual. Para asignar el método, debe aplicarle un atributo <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Tenga en cuenta que los parámetros <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> y <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> del atributo son el nombre del espacio de nombres del modelo conceptual y el nombre de la función en el modelo conceptual, respectivamente. La resolución del nombre de la función para LINQ distingue entre mayúsculas y minúsculas.  
+1. Agregue un método de Common Language Runtime (CLR) a su aplicación que se corresponda con la función definida en el modelo conceptual. Para asignar el método, debe aplicarle un atributo <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Tenga en cuenta que los parámetros <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> y <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> del atributo son el nombre del espacio de nombres del modelo conceptual y el nombre de la función en el modelo conceptual, respectivamente. La resolución del nombre de la función para LINQ distingue entre mayúsculas y minúsculas.  
   
-2.  Llame a la función en una consulta [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
+2. Llame a la función en una consulta [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se muestra cómo llamar a una función que se define en el modelo conceptual desde una consulta [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. En el ejemplo se usa el modelo School. Para obtener información sobre el modelo School, vea [crear la base de datos de ejemplo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) y [generar el archivo .edmx de School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  

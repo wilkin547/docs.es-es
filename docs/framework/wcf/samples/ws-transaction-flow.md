@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 35af3090c0f898578a5f8dfb81d02d22a0074ad2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108503"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296100"
 ---
 # <a name="ws-transaction-flow"></a>Flujo de la transacción WS
 Este ejemplo muestra el uso de una transacción coordinada por cliente y las opciones de servidor y cliente para el flujo de la transacción utilizando la Transacción atómica del WS o el protocolo OleTransactions. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora, pero las operaciones se atribuyen para demostrar el uso de la `TransactionFlowAttribute` con el **TransactionFlowOption** enumeración para determinar a qué grado de transacción está habilitado el flujo. Dentro del ámbito de la transacción fluida, un registro de las operaciones solicitadas se escribe a una base de datos y se conserva hasta que la transacción coordinada por el cliente se ha completado - si la transacción del cliente no se completa, la transacción del Servicio Web se asegura de que no se confirmen las actualizaciones adecuadas a la base de datos.  
@@ -188,7 +188,7 @@ Console.WriteLine("Transaction committed");
   
 -   La segunda solicitud `Subtract` se realiza dentro de un nuevo ámbito de la transacción declarado con la opción `TransactionScopeOption.Suppress`. Esto suprime la transacción exterior inicial del cliente y la solicitud no fluye hasta una transacción al servicio. Este enfoque permite a un cliente cancelar explícitamente una suscripción y protegerse contra el fluir de una transacción a un servicio cuando no es necesario. Las acciones del servicio se producen dentro del ámbito de una transacción nueva y no conectada.  
   
--   El `Multiply` solicitud no fluye una transacción al servicio porque el cliente generada por la definición de la `ICalculator` interfaz incluye un <xref:System.ServiceModel.TransactionFlowAttribute> establecido en <xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`.  
+-   El `Multiply` solicitud no fluye una transacción al servicio porque el cliente generada por la definición de la `ICalculator` interfaz incluye un <xref:System.ServiceModel.TransactionFlowAttribute> establecido en <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
   
 -   La solicitud `Divide` no fluye una transacción al servicio porque, de nuevo, la definición de la interfaz `ICalculator` generada del cliente, no incluye un `TransactionFlowAttribute`. Las acciones del servicio se producen de nuevo dentro del ámbito de otra transacción nueva y no conectada.  
   
@@ -223,11 +223,11 @@ Press <ENTER> to terminate the service.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Para compilar la versión de C# o Visual Basic .NET de la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+1. Para compilar la versión de C# o Visual Basic .NET de la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2.  Asegúrese de que se ha instalado SQL Server Express Edition o SQL Server, y que la cadena de conexión se ha establecido correctamente en el archivo de configuración de la aplicación del servicio. Para ejecutar el ejemplo sin utilizar una base de datos, establezca el valor `usingSql` en el archivo de configuración de la aplicación del servicio en `false`  
+2. Asegúrese de que se ha instalado SQL Server Express Edition o SQL Server, y que la cadena de conexión se ha establecido correctamente en el archivo de configuración de la aplicación del servicio. Para ejecutar el ejemplo sin usar una base de datos, establezca la `usingSql` valor en el archivo de configuración del servicio para `false`  
   
-3.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
     >  Para una configuración de varios equipos, habilite el Coordinador de transacciones distribuidas mediante las instrucciones siguientes, y utilice la herramienta WsatConfig.exe de Windows SDK con el fin de habilitar la compatibilidad para red de las transacciones WCF. Consulte [configurar WS-Atomic Transaction Support](https://go.microsoft.com/fwlink/?LinkId=190370) para obtener información sobre cómo configurar WsatConfig.exe.  
@@ -236,7 +236,7 @@ Press <ENTER> to terminate the service.
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>Para configurar el Coordinador de transacciones distribuidas (MSDTC) con el fin de permitir la ejecución del ejemplo  
   
-1.  En un equipo de servicio que ejecute Windows Server 2003 o Windows XP, configure MSDTC para permitir las transacciones de red de entrada según estas instrucciones.  
+1. En un equipo de servicio que ejecute Windows Server 2003 o Windows XP, configure MSDTC para permitir las transacciones de red de entrada según estas instrucciones.  
   
     1.  Desde el **iniciar** menú, vaya a **Panel de Control**, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.  
   
@@ -252,7 +252,7 @@ Press <ENTER> to terminate the service.
   
     7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
-2.  En un equipo de servicio que ejecute Windows Server 2008 o Windows Vista, configure MSDTC para permitir las transacciones de red de entrada según estas instrucciones.  
+2. En un equipo de servicio que ejecute Windows Server 2008 o Windows Vista, configure MSDTC para permitir las transacciones de red de entrada según estas instrucciones.  
   
     1.  Desde el **iniciar** menú, vaya a **Panel de Control**, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.  
   
@@ -266,7 +266,7 @@ Press <ENTER> to terminate the service.
   
     6.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
-3.  En el equipo cliente, configure MSDTC para permitir las transacciones de red salientes:  
+3. En el equipo cliente, configure MSDTC para permitir las transacciones de red salientes:  
   
     1.  Desde el **iniciar** menú, vaya a `Control Panel`, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.  
   

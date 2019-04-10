@@ -6,12 +6,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: bd9a708b99d11b90e47c3413bb0003ce2def13a1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 15fe62457ed11ffcd08a1db3aa8be57080f22869
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833727"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300803"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identifica un archivo de manifiesto de la aplicación Win32 definido por el usuario que se va a insertar en un archivo ejecutable portable (PE) del proyecto.  
@@ -38,9 +38,9 @@ Identifica un archivo de manifiesto de la aplicación Win32 definido por el usua
   
  La aplicación estará sujeta a virtualización si se cumple alguna de las condiciones siguientes:  
   
-1.  Usa el `-nowin32manifest` opción y no se proporciona un manifiesto en un paso de compilación posterior o como parte de un archivo de recursos de Windows (. res) mediante el uso de la `-win32resource` opción.  
+1. Usa el `-nowin32manifest` opción y no se proporciona un manifiesto en un paso de compilación posterior o como parte de un archivo de recursos de Windows (. res) mediante el uso de la `-win32resource` opción.  
   
-2.  Se proporciona un manifiesto personalizado que no especifica un nivel de ejecución solicitado.  
+2. Se proporciona un manifiesto personalizado que no especifica un nivel de ejecución solicitado.  
   
  Visual Studio crea un archivo de manifiesto predeterminado y lo almacena en los directorios de depuración y versión junto con el archivo ejecutable. Puede ver o editar el archivo app.manifest predeterminado haciendo clic en **ver configuración de UAC** en el **aplicación** ficha del Diseñador de proyectos. Para obtener más información, consulte [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   

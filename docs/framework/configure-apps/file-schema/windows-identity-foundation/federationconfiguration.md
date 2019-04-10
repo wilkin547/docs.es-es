@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: e1e92fccfad792fc1b9df86a582f0406a87f34e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195298"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297492"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Configura el <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) y la <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) cuando se usa federados de autenticación a través del protocolo WS-Federation. Configura el <xref:System.Security.Claims.ClaimsAuthorizationManager> cuando se usa el <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> clase para proporcionar control de acceso basado en notificaciones.  
@@ -58,13 +58,13 @@ Configura el <xref:System.IdentityModel.Services.WSFederationAuthenticationModul
   
  Independientemente del escenario, el tiempo de ejecución carga la configuración de federación de forma predeterminada. El comportamiento se define como sigue:  
   
-1.  Si no hay ningún `<federationConfiguration>` elemento está presente, el tiempo de ejecución crea una configuración de federación y rellenarla con los valores predeterminados. Esta configuración de federación predeterminada hará referencia a la configuración de la identidad predeterminada.  
+1. Si no hay ningún `<federationConfiguration>` elemento está presente, el tiempo de ejecución crea una configuración de federación y rellenarla con los valores predeterminados. Esta configuración de federación predeterminada hará referencia a la configuración de la identidad predeterminada.  
   
-2.  Si una sola `<federationConfiguration>` elemento está presente, es la configuración predeterminada de la federación independientemente de si se denominado o sin nombre. Si su `identityConfiguration` atributo se especifica, se hace referencia a la configuración de identidad con nombre; en caso contrario, se hace referencia a la configuración de la identidad predeterminada.  
+2. Si una sola `<federationConfiguration>` elemento está presente, es la configuración predeterminada de la federación independientemente de si se denominado o sin nombre. Si su `identityConfiguration` atributo se especifica, se hace referencia a la configuración de identidad con nombre; en caso contrario, se hace referencia a la configuración de la identidad predeterminada.  
   
-3.  Si una sin nombre `<federationConfiguration>` elemento está presente, es la configuración predeterminada de la federación. Si su `identityConfiguration` atributo se especifica, se hace referencia a la configuración de identidad con nombre; en caso contrario, se hace referencia a la configuración de la identidad predeterminada.  
+3. Si una sin nombre `<federationConfiguration>` elemento está presente, es la configuración predeterminada de la federación. Si su `identityConfiguration` atributo se especifica, se hace referencia a la configuración de identidad con nombre; en caso contrario, se hace referencia a la configuración de la identidad predeterminada.  
   
-4.  Si el nombre de varios `<federationConfiguration>` elementos están presentes y sin nombre no `<federationConfiguration>` elemento está presente, se produce una excepción.  
+4. Si el nombre de varios `<federationConfiguration>` elementos están presentes y sin nombre no `<federationConfiguration>` elemento está presente, se produce una excepción.  
   
  Normalmente, una sola `<federationConfiguration>` sección se define. En esta sección es la configuración de federación de forma predeterminada. Puede especificar varios, un nombre único `<federationConfiguration>` elementos; sin embargo, en este caso, si desea cargar una configuración de federación que no sea el sin nombre, debe proporcionar un controlador para el. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> evento y establecer el <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> propiedad dentro del controlador para un <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto inicializado con los valores con la correspondiente `<federationConfiguration>` elemento en el archivo de configuración.  
   

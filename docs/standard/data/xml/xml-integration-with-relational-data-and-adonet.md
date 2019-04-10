@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d86c590f2d5fe6bc970c2f8ac6de43d3e8485650
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44183150"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831987"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Integración de XML con datos relacionales y ADO.NET
 La clase **XmlDataDocument** se deriva de **XmlDocument**, y contiene datos XML. La ventaja que aporta la clase **XmlDataDocument** es que proporciona un puente entre los datos relacionales y jerárquicos. Se trata de una clase **XmlDocument** que puede enlazarse con otra **DataSet** para sincronizar cambios realizados en los datos incluidos en las dos clases. Una clase **XmlDocument** que está enlazada con otra **DataSet** permite a XML integrarse con datos relacionales, sin necesidad de que los datos estén representados ni en formato XML ni relacional. Se pueden hacer ambas cosas sin necesidad de restringirse a una única representación de los datos.  
@@ -29,9 +29,9 @@ La clase **XmlDataDocument** se deriva de **XmlDocument**, y contiene datos XML.
   
  Como **XmlDataDocument** se hereda de **XmlDocument**, proporciona una implementación de DOM del consorcio W3C. El hecho de que **XmlDataDocument** se asocie con una clase **DataSet** y almacene en su interior un subconjunto de sus datos, no restringe o altera en absoluto su uso como **XmlDocument**. El código escrito para consumir una clase **XmlDocument** funciona sin alteraciones en **XmlDataDocument**. **DataSet** proporciona la vista relacional de los mismos datos definiendo tablas, columnas, relaciones y restricciones, y constituye un almacén independiente y en memoria de datos de usuario.  
   
- En la siguiente ilustración se muestran las distintas asociaciones que los datos XML tienen con **DataSet** y **XmlDataDocument**.  
+ En la siguiente ilustración se muestran las distintas asociaciones que los datos XML tienen con **DataSet** y **XmlDataDocument**: 
   
- ![Conjunto de datos XML](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")  
+ ![Diagrama que muestra las distintas asociaciones con el conjunto de datos XML.](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   
  En la ilustración se muestra que los datos XML pueden cargarse directamente en una clase **DataSet**, lo que permite la manipulación directa con XML en la forma relacional. O bien, el código XML se puede cargar en una clase derivada de DOM, que es **XmlDataDocument**, y posteriormente cargarlo y sincronizarlo con la clase **DataSet**. Como **DataSet** y **XmlDataDocument** están sincronizados sobre un solo conjunto de datos, los cambios realizados en los datos en un almacén se reflejan automáticamente en el otro almacén.  
   

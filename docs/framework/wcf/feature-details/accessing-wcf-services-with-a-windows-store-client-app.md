@@ -2,12 +2,12 @@
 title: Obtener acceso a los servicios WCF con una aplicación cliente de la Tienda Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 6617a8cd207b68505396db7fdb4c9d08fd759d06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a7d87e6014f26842c35b0d1bf5028682a4cf69e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167653"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294865"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Obtener acceso a los servicios WCF con una aplicación cliente de la Tienda Windows
 Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la Tienda Windows. Estas aplicaciones están diseñadas para una interfaz de pantalla táctil. .NET Framework 4.5 permite que las aplicaciones de la Tienda Windows llamen a servicios WCF.  
@@ -24,31 +24,31 @@ Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la 
 ### <a name="supported-bindings"></a>Enlaces admitidos  
  Los siguientes enlaces de WCF se admiten en aplicaciones de la Tienda Windows:  
   
-1.  <xref:System.ServiceModel.BasicHttpBinding>  
+1. <xref:System.ServiceModel.BasicHttpBinding>  
   
-2.  <xref:System.ServiceModel.NetTcpBinding>  
+2. <xref:System.ServiceModel.NetTcpBinding>  
   
-3.  <xref:System.ServiceModel.NetHttpBinding>  
+3. <xref:System.ServiceModel.NetHttpBinding>  
   
-4.  <xref:System.ServiceModel.Channels.CustomBinding>
+4. <xref:System.ServiceModel.Channels.CustomBinding>
   
  Los elementos de enlace siguientes se admiten en aplicaciones de la Tienda Windows  
   
-1.  <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+1. <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
-2.  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+2. <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
-3.  <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
+3. <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
   
-4.  <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+4. <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
-5.  <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+5. <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
-6.  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+6. <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
-7.  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+7. <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
-8.  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+8. <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
 9. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
@@ -97,11 +97,11 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 ### <a name="serialization"></a>Serialización  
  Los siguientes serializadores se admiten en aplicaciones de la Tienda Windows:  
   
-1.  DataContractSerializer  
+1. DataContractSerializer  
   
-2.  DataContractJsonSerializer  
+2. DataContractJsonSerializer  
   
-3.  XmlSerializer  
+3. XmlSerializer  
   
 > [!WARNING]
 >  XmlDictionaryWriter.Write(DateTime) ahora escribe el objeto DateTime como una cadena.  
@@ -120,21 +120,21 @@ Se admiten los siguientes modos de seguridad en las aplicaciones de Windows Stor
   
 Se admiten los siguientes tipos de credencial de cliente en aplicaciones de Windows Store:
   
-1.  Ninguna  
+1. Ninguna  
   
-2.  Básico  
+2. Básico  
   
-3.  Implícita  
+3. Implícita  
   
-4.  Negociar  
+4. Negociar  
   
-5.  NTLM  
+5. NTLM  
   
-6.  Windows  
+6. Windows  
   
-7.  Nombre de usuario (seguridad de mensaje)  
+7. Nombre de usuario (seguridad de mensaje)  
   
-8.  Windows (seguridad de transporte)  
+8. Windows (seguridad de transporte)  
   
  Para que las aplicaciones de la Tienda Windows tengan acceso y envíen las credenciales de Windows predeterminadas, debe habilitar esta funcionalidad en el archivo Package.appmanifest. Abra este archivo y seleccione la pestaña capacidades y seleccione "Credenciales de Windows predeterminadas". Esto permite que la aplicación se conecte a recursos de la intranet que necesitan credenciales de dominio.  
   
@@ -144,11 +144,11 @@ Se admiten los siguientes tipos de credencial de cliente en aplicaciones de Wind
 ### <a name="misc"></a>Varios  
  El uso de las clases siguientes se admite para las aplicaciones de la Tienda Windows:  
   
-1.  <xref:System.ServiceModel.ChannelFactory>  
+1. <xref:System.ServiceModel.ChannelFactory>  
   
-2.  <xref:System.ServiceModel.DuplexChannelFactory%601>
+2. <xref:System.ServiceModel.DuplexChannelFactory%601>
   
-3.  <xref:System.ServiceModel.CallbackBehaviorAttribute>  
+3. <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
 ### <a name="defining-service-contracts"></a>Definir contratos de servicio  
  Se recomienda definir solo operaciones de servicio asincrónicas mediante el patrón asincrónico basado en tareas. Esto garantiza que las aplicaciones de la Tienda Windows sigan respondiendo mientras se llama a una operación de servicio.  

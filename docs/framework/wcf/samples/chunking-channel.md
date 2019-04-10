@@ -2,12 +2,12 @@
 title: Canal de fragmentación
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: fafaef5f9e255adc9d8ff50748c7c82a7888c4cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073824"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302704"
 ---
 # <a name="chunking-channel"></a>Canal de fragmentación
 Al enviar mensajes de gran tamaño mediante Windows Communication Foundation (WCF), suele ser deseable para limitar la cantidad de memoria utilizada para almacenar en búfer esos mensajes. Una posible solución es transmitir en secuencias el cuerpo del mensaje (suponiendo que la mayor parte de los datos se encuentra en el cuerpo). Sin embargo, algunos protocolos requieren almacenado en búfer del mensaje completo. La mensajería de confianza y la seguridad son dos ejemplos de lo anterior. Otra posible solución es dividir el mensaje grande en mensajes menores llamados fragmentos, enviar uno por uno esos fragmentos y reconstituir el mensaje entero en el lado receptor. La propia aplicación podría hacer esta fragmentación y desfragmentación, o podría utilizar un canal personalizado para hacerlo. El canal de fragmentación muestra cómo un protocolo personalizado o un canal en capas se pueden utilizar para la fragmentación y desfragmentación de mensajes arbitrariamente grandes.  
@@ -203,11 +203,11 @@ as the ChunkingStart message.
   
  En el siguiente nivel inferior, `ChunkingChannel` confia en varios componentes para implementar el protocolo de fragmentación. En el lado emisor, el canal usa un <xref:System.Xml.XmlDictionaryWriter> personalizado denominado `ChunkingWriter` que realiza la fragmentación real. `ChunkingWriter` usa el canal interno directamente para enviar fragmentos. Utilizar un `XmlDictionaryWriter` personalizado nos permite mandar fragmentos mientras se escribe el cuerpo grande del mensaje original. Esto significa que no almacenamos en búfer el mensaje original completo.  
   
- ![Canal de fragmentación](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
+ ![Diagrama que muestra el canal de fragmentación de arquitectura de envío.](./media/chunking-channel/chunking-channel-send.gif)  
   
  En el lado receptor, `ChunkingChannel` extrae mensajes del canal interno y los ofrece a un <xref:System.Xml.XmlDictionaryReader> personalizado denominado `ChunkingReader`, que reconstituye el mensaje original a partir de los fragmentos de entrada. `ChunkingChannel` ajusta este `ChunkingReader` en personalizada `Message` implementación denominada `ChunkingMessage` y devuelve este mensaje en la capa anterior. Esta combinación de `ChunkingReader` y `ChunkingMessage` nos permite al anular la fragmentación del cuerpo del mensaje original mientras la lee el nivel anterior en lugar de tener que almacenar en búfer todo el cuerpo del mensaje original. `ChunkingReader` tiene una cola donde almacena en búfer fragmentos de entrada hasta un número configurable máximo de fragmentos almacenados en búfer. Cuando se alcanza este límite máximo, el lector espera que la capa superior recoja los mensajes de la cola (es decir, simplemente leyendo el cuerpo del mensaje original) o hasta que se alcance el tiempo de espera máximo de recepción.  
   
- ![Canal de fragmentación](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
+ ![Diagrama que muestra el canal de fragmentación de arquitectura de recepción.](./media/chunking-channel/chunking-channel-receive.gif)  
   
 ## <a name="chunking-programming-model"></a>Modelo de programación de fragmentación  
  Los programadores del servicio pueden especificar qué mensajes deben ser fragmentados, aplicando el atributo `ChunkingBehavior` a las operaciones dentro del contrato. El atributo expone una propiedad `AppliesTo` que permite al desarrollador especificar si la desfragmentación se aplica al mensaje de entrada, el mensaje de salida o ambos. En el ejemplo siguiente se muestra el uso del atributo `ChunkingBehavior`:  
@@ -309,19 +309,19 @@ interface ITestService
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Instale [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 mediante el siguiente comando.  
+1. Instale [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 mediante el siguiente comando.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Ejecute primero Service.exe, a continuación, ejecute Client.exe e inspeccione ambas ventanas de la consola para ver el resultado.  
+5. Ejecute primero Service.exe, a continuación, ejecute Client.exe e inspeccione ambas ventanas de la consola para ver el resultado.  
   
  Al ejecutar el ejemplo, se espera el resultado siguiente.  
   

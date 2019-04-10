@@ -1,16 +1,16 @@
 ---
-title: 'Cómo: crear aplicaciones de formularios Web de ASP.NET para notificaciones mediante WIF'
+title: Cómo compilar aplicaciones de formularios Web Forms de ASP.NET con reconocimiento de notificaciones mediante WIF
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 83b5808ced1bc6243294b23d9784ec7993e3ba4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 74f15c3ac6e5192ce3565579d515198d3b7e39f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207159"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302275"
 ---
-# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Cómo: crear aplicaciones de formularios Web de ASP.NET para notificaciones mediante WIF
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Cómo compilar aplicaciones de formularios Web Forms de ASP.NET con reconocimiento de notificaciones mediante WIF
 ## <a name="applies-to"></a>Se aplica a  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -51,18 +51,18 @@ ms.locfileid: "47207159"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Para crear una aplicación de ASP.NET sencilla  
   
-1.  Inicie Visual Studio y haga clic en **Archivo**, **Nuevo** y, luego, en **Proyecto**.  
+1. Inicie Visual Studio y haga clic en **Archivo**, **Nuevo** y, luego, en **Proyecto**.  
   
-2.  En la ventana **Nuevo proyecto**, haga clic en **Aplicación de formularios Web Forms ASP.NET**.  
+2. En la ventana **Nuevo proyecto**, haga clic en **Aplicación de formularios Web Forms ASP.NET**.  
   
-3.  En **Nombre**, escriba `TestApp` y haga clic en **Aceptar**.  
+3. En **Nombre**, escriba `TestApp` y haga clic en **Aceptar**.  
   
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>Paso 2: Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
  En este paso agregará entradas de configuración al archivo de configuración *Web.config* de su aplicación de formularios Web Forms ASP.NET para notificaciones.  
   
 #### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>Para configurar la aplicación ASP.NET para la autenticación basada en notificaciones  
   
-1.  Agregue las siguientes entradas de la sección de configuración al archivo de configuración *Web.config* inmediatamente después del elemento de apertura **\<configuration>**:  
+1. Agregue las siguientes entradas de la sección de configuración al archivo de configuración *Web.config* inmediatamente después del elemento de apertura **\<configuration>**:  
   
     ```xml  
     <configSections>  
@@ -71,7 +71,7 @@ ms.locfileid: "47207159"
     </configSections>  
     ```  
   
-2.  Agregue un elemento **\<location>** que permita el acceso a los metadatos de federación de la aplicación:  
+2. Agregue un elemento **\<location>** que permita el acceso a los metadatos de federación de la aplicación:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -83,7 +83,7 @@ ms.locfileid: "47207159"
     </location>  
     ```  
   
-3.  Agregue las siguientes entradas de configuración dentro de los elementos **\<system.web>** para denegar usuarios, deshabilitar la autenticación nativa y habilitar WIF para administrar la autenticación.  
+3. Agregue las siguientes entradas de configuración dentro de los elementos **\<system.web>** para denegar usuarios, deshabilitar la autenticación nativa y habilitar WIF para administrar la autenticación.  
   
     ```xml  
     <authorization>  
@@ -92,7 +92,7 @@ ms.locfileid: "47207159"
     <authentication mode="None" />  
     ```  
   
-4.  Agregue un elemento **\<system.webServer>** que defina los módulos para la autenticación federada. Tenga en cuenta que el atributo *PublicKeyToken* debe ser el mismo que el atributo *PublicKeyToken* para las entradas **\<configSections>** que se han agregado anteriormente:  
+4. Agregue un elemento **\<system.webServer>** que defina los módulos para la autenticación federada. Tenga en cuenta que el atributo *PublicKeyToken* debe ser el mismo que el atributo *PublicKeyToken* para las entradas **\<configSections>** que se han agregado anteriormente:  
   
     ```xml  
     <system.webServer>  
@@ -103,7 +103,7 @@ ms.locfileid: "47207159"
     </system.webServer>  
     ```  
   
-5.  Agregue las siguientes entradas de configuración relacionadas con Windows Identity Foundation y asegúrese de que su URL de la aplicación ASP.NET y el número de puerto coinciden con los valores de la entrada **\<audienceUris>**, el atributo **realm** del elemento **\<wsFederation>** y el atributo **reply** del elemento **\<wsFederation>**. También asegúrese de que el valor **issuer** se adapta a su URL del servicio de token de seguridad (STS).  
+5. Agregue las siguientes entradas de configuración relacionadas con Windows Identity Foundation y asegúrese de que su URL de la aplicación ASP.NET y el número de puerto coinciden con los valores de la entrada **\<audienceUris>**, el atributo **realm** del elemento **\<wsFederation>** y el atributo **reply** del elemento **\<wsFederation>**. También asegúrese de que el valor **issuer** se adapta a su URL del servicio de token de seguridad (STS).  
   
     ```xml  
     <system.identityModel>  
@@ -127,16 +127,16 @@ ms.locfileid: "47207159"
     </system.identityModel.services>  
     ```  
   
-6.  Agregue una referencia al ensamblado <xref:System.IdentityModel>.  
+6. Agregue una referencia al ensamblado <xref:System.IdentityModel>.  
   
-7.  Compile la solución y asegúrese de que no existan errores.  
+7. Compile la solución y asegúrese de que no existan errores.  
   
 ## <a name="step-3--test-your-solution"></a>Paso 3: Probar la solución  
  En este paso probará la aplicación de formularios Web Forms ASP.NET configurada para la autenticación basada en notificaciones. Para realizar una prueba básica, agregará código que muestra notificaciones en el token emitido mediante el servicio de token de seguridad (STS).  
   
 #### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a>Para probar su aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
   
-1.  Abra el archivo **Default.aspx** en el proyecto **TestApp** y reemplace su marcado existente por el marcado siguiente:  
+1. Abra el archivo **Default.aspx** en el proyecto **TestApp** y reemplace su marcado existente por el marcado siguiente:  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -158,12 +158,12 @@ ms.locfileid: "47207159"
     </html>  
     ```  
   
-2.  Guarde **Default.aspx** y abra su archivo de código subyacente denominado **Default.aspx.cs**.  
+2. Guarde **Default.aspx** y abra su archivo de código subyacente denominado **Default.aspx.cs**.  
   
     > [!NOTE]
     >  **Default.aspx.cs** puede estar oculto bajo **Default.aspx** en el Explorador de soluciones. Si **Default.aspx.cs** no está visible, expanda **Default.aspx** haciendo clic en el triángulo que se encuentra al lado.  
   
-3.  Reemplace el código existente en el método **Page_Load** de **Default.aspx.cs** por el código siguiente:  
+3. Reemplace el código existente en el método **Page_Load** de **Default.aspx.cs** por el código siguiente:  
   
     ```csharp  
     using System;  
@@ -202,8 +202,8 @@ ms.locfileid: "47207159"
     }  
     ```  
   
-4.  Guarde **Default.aspx.cs** y compile la solución.  
+4. Guarde **Default.aspx.cs** y compile la solución.  
   
-5.  Presione la tecla **F5** para ejecutar la solución.  
+5. Presione la tecla **F5** para ejecutar la solución.  
   
-6.  Debe estar presente en la página que muestra las notificaciones del token que ha emitido mediante el servicio de token de seguridad.
+6. Debe estar presente en la página que muestra las notificaciones del token que ha emitido mediante el servicio de token de seguridad.

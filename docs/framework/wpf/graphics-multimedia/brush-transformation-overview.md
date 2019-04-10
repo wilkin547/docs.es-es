@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 0b55d2000b8a70bc42373cb976a84ff54ebc4245
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169577"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298336"
 ---
 # <a name="brush-transformation-overview"></a>Información general sobre la transformación de pinceles
 La clase Brush proporciona dos propiedades de transformación: <xref:System.Windows.Media.Brush.Transform%2A> y <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Las propiedades permiten girar, escalar, sesgar y trasladar el contenido de un pincel. En este tema se describen las diferencias entre estas dos propiedades y proporciona ejemplos de su uso.  
@@ -29,15 +29,15 @@ La clase Brush proporciona dos propiedades de transformación: <xref:System.Wind
   
  Al aplicar una transformación a un pincel <xref:System.Windows.Media.Brush.RelativeTransform%2A> propiedad, esa transformación se aplica al pincel antes de su salida se asigne al área pintada. En la lista siguiente se describe el orden en el que se procesan y transforman los contenidos de un pincel.  
   
-1.  Procese el contenido del pincel. Para un <xref:System.Windows.Media.GradientBrush>, esto significa determinar el área de degradado. Para un <xref:System.Windows.Media.TileBrush>, <xref:System.Windows.Media.TileBrush.Viewbox%2A> se asigna a la <xref:System.Windows.Media.TileBrush.Viewport%2A>. Esto se convierte en la salida del pincel.  
+1. Procese el contenido del pincel. Para un <xref:System.Windows.Media.GradientBrush>, esto significa determinar el área de degradado. Para un <xref:System.Windows.Media.TileBrush>, <xref:System.Windows.Media.TileBrush.Viewbox%2A> se asigna a la <xref:System.Windows.Media.TileBrush.Viewport%2A>. Esto se convierte en la salida del pincel.  
   
-2.  Proyecte la salida del pincel en el rectángulo de transformación de 1 x 1.  
+2. Proyecte la salida del pincel en el rectángulo de transformación de 1 x 1.  
   
-3.  Aplicar el pincel <xref:System.Windows.Media.Brush.RelativeTransform%2A>, si tiene uno.  
+3. Aplicar el pincel <xref:System.Windows.Media.Brush.RelativeTransform%2A>, si tiene uno.  
   
-4.  Proyecte la salida transformada en el área que se va a pintar.  
+4. Proyecte la salida transformada en el área que se va a pintar.  
   
-5.  Aplicar el pincel <xref:System.Windows.Media.Transform>, si tiene uno.  
+5. Aplicar el pincel <xref:System.Windows.Media.Transform>, si tiene uno.  
   
  Dado que el <xref:System.Windows.Media.Brush.RelativeTransform%2A> se aplica mientras la salida del pincel se asigna a un rectángulo de 1 x 1, el centro de transformación y valores de desplazamiento parecen ser relativos. Por ejemplo, si ha usado un <xref:System.Windows.Media.RotateTransform> girar el pincel de salida de 45 grados sobre su centro, dará a la <xref:System.Windows.Media.RotateTransform> un <xref:System.Windows.Media.RotateTransform.CenterX%2A> de 0,5 y un <xref:System.Windows.Media.RotateTransform.CenterY%2A> de 0,5.  
   
@@ -61,19 +61,19 @@ La clase Brush proporciona dos propiedades de transformación: <xref:System.Wind
   
  Tenga en cuenta que la imagen se distorsiona, aunque el pincel <xref:System.Windows.Media.TileBrush.Stretch%2A> se estableció en <xref:System.Windows.Media.Stretch.UniformToFill>. Eso es porque la transformación relativa se aplica después del pincel <xref:System.Windows.Media.TileBrush.Viewbox%2A> está asignado a su <xref:System.Windows.Media.TileBrush.Viewport%2A>. La lista siguiente describe cada paso del proceso:  
   
-1.  El contenido del pincel de proyecto (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) en su mosaico base (<xref:System.Windows.Media.TileBrush.Viewport%2A>) con el pincel <xref:System.Windows.Media.TileBrush.Stretch%2A> configuración.  
+1. El contenido del pincel de proyecto (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) en su mosaico base (<xref:System.Windows.Media.TileBrush.Viewport%2A>) con el pincel <xref:System.Windows.Media.TileBrush.Stretch%2A> configuración.  
   
      ![Expandir Viewbox para que se ajuste a Viewport](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
   
-2.  Proyecte el icono base del rectángulo de transformación de 1 x 1.  
+2. Proyecte el icono base del rectángulo de transformación de 1 x 1.  
   
      ![Asignar Viewport al rectángulo de transformación](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
   
-3.  Aplicar el <xref:System.Windows.Media.RotateTransform>.  
+3. Aplicar el <xref:System.Windows.Media.RotateTransform>.  
   
      ![Aplicar la transformación relativa](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
   
-4.  Proyecte el icono base transformado en el área que se va a pintar.  
+4. Proyecte el icono base transformado en el área que se va a pintar.  
   
      ![Proyectar el pincel transformado en el área de resultados](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   

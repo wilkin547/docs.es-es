@@ -2,12 +2,12 @@
 title: Seguimiento de eventos en Seguimiento de eventos para Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166535"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300650"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Seguimiento de eventos en Seguimiento de eventos para Windows
 Este ejemplo muestra cómo habilitar el seguimiento en un servicio de flujo de trabajo de Windows Workflow Foundation (WF) y emitir los eventos de seguimiento en seguimiento de eventos para Windows (ETW). Para emitir registros de seguimiento de flujo de trabajo en ETW, el ejemplo utiliza el participante de seguimiento de ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
@@ -39,33 +39,33 @@ Este ejemplo muestra cómo habilitar el seguimiento en un servicio de flujo de t
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1.  Con Visual Studio 2010, abra el archivo de solución EtwTrackingParticipantSample.sln.
+1. Con Visual Studio 2010, abra el archivo de solución EtwTrackingParticipantSample.sln.
 
-2.  Para compilar la solución, presione Ctrl+MAYÚS+B.
+2. Para compilar la solución, presione Ctrl+MAYÚS+B.
 
-3.  Presione F5 para ejecutar la solución.
+3. Presione F5 para ejecutar la solución.
 
      De forma predeterminada, el servicio está escuchando en el puerto 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
 
-4.  Mediante [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], abra el cliente de prueba de WCF.
+4. Mediante [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], abra el cliente de prueba de WCF.
 
      El cliente de prueba WCF (WcfTestClient.exe) se encuentra en la \<carpeta de instalación de Visual Studio 2010 > \Common7\IDE\ carpeta.
 
      La carpeta de instalación de Visual Studio 2010 de forma predeterminada es C:\Program Files\Microsoft Visual Studio 10.0.
 
-5.  En el cliente de prueba WCF, seleccione **Agregar servicio** desde el **archivo** menú.
+5. En el cliente de prueba WCF, seleccione **Agregar servicio** desde el **archivo** menú.
 
      Agregue la dirección del punto de conexión en el cuadro de entrada. De manera predeterminada, es `http://localhost:53797/SampleWorkflowService.xamlx`.
 
-6.  Abra la aplicación Visor de eventos.
+6. Abra la aplicación Visor de eventos.
 
      Antes de invocar el servicio, inicie el Visor de eventos desde el **iniciar** menú, seleccione **ejecutar** y escriba en `eventvwr.exe`. Asegúrese de que el registro de eventos escucha eventos de seguimiento emitidos desde el servicio de flujo de trabajo.
 
-7.  En la vista de árbol del Visor de eventos, vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, y **Microsoft**. Haga clic en **Microsoft** y seleccione **vista** y, a continuación, **mostrar registros analíticos y depuración** para habilitar el análisis y registros de depuración
+7. En la vista de árbol del Visor de eventos, vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, y **Microsoft**. Haga clic en **Microsoft** y seleccione **vista** y, a continuación, **mostrar registros analíticos y depuración** para habilitar el análisis y registros de depuración
 
      Asegúrese de que el **mostrar registros analíticos y depuración** opción está activada.
 
-8.  En la vista de árbol en el Visor de eventos, vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**,  **Servidor de aplicaciones-aplicaciones**. Haga clic en **analítico** y seleccione **Habilitar registro** para habilitar la **analítico** registro.
+8. En la vista de árbol en el Visor de eventos, vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**,  **Servidor de aplicaciones-aplicaciones**. Haga clic en **analítico** y seleccione **Habilitar registro** para habilitar la **analítico** registro.
 
 9. Pruebe el servicio utilizando el cliente de pruebas de WCF haciendo doble clic en `GetData`.
 
@@ -123,13 +123,13 @@ Este ejemplo muestra cómo habilitar el seguimiento en un servicio de flujo de t
 
 #### <a name="to-clean-up-optional"></a>Para realizar la limpieza (Opcional)
 
-1.  Abra el Visor de eventos.
+1. Abra el Visor de eventos.
 
-2.  Vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **aplicación Aplicaciones de servidor**. Haga clic en **analítico** y seleccione **Deshabilitar registro**.
+2. Vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **aplicación Aplicaciones de servidor**. Haga clic en **analítico** y seleccione **Deshabilitar registro**.
 
-3.  Vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **aplicación Aplicaciones de servidor**. Haga clic en **analítico** y seleccione **Vaciar registro**.
+3. Vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **aplicación Aplicaciones de servidor**. Haga clic en **analítico** y seleccione **Vaciar registro**.
 
-4.  Elija la **borrar** opción para borrar los eventos.
+4. Elija la **borrar** opción para borrar los eventos.
 
 ## <a name="known-issue"></a>Problema conocido
 

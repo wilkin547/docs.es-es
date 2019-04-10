@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 625ddb8fc153708a80e8cf475f48d595efbe4df2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842634"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302717"
 ---
 # <a name="determining-object-type-visual-basic"></a>Determinar tipos de objeto (Visual Basic)
 Variables de objeto genéricas (es decir, las variables se declaran como `Object`) puede contener objetos de cualquier clase. Al usar las variables de tipo `Object`, es posible que deba realizar diferentes acciones basadas en la clase del objeto; por ejemplo, algunos objetos podrían no admitir un método o propiedad concreta. Visual Basic ofrece dos maneras de determinar qué tipo de objeto se almacena en una variable de objeto: el `TypeName` función y el `TypeOf...Is` operador.  
@@ -36,19 +36,19 @@ Variables de objeto genéricas (es decir, las variables se declaran como `Object
   
 #### <a name="to-run-the-example"></a>Para ejecutar el ejemplo  
   
-1.  Cree un nuevo proyecto de aplicación de Windows y agregue un <xref:System.Windows.Forms.Button> (control), un <xref:System.Windows.Forms.CheckBox> control y un <xref:System.Windows.Forms.RadioButton> control al formulario.  
+1. Cree un nuevo proyecto de aplicación de Windows y agregue un <xref:System.Windows.Forms.Button> (control), un <xref:System.Windows.Forms.CheckBox> control y un <xref:System.Windows.Forms.RadioButton> control al formulario.  
   
-2.  En el botón en el formulario, llame a la `TestObject` procedimiento.  
+2. En el botón en el formulario, llame a la `TestObject` procedimiento.  
   
-3.  Agregue el código siguiente al formulario:  
+3. Agregue el código siguiente al formulario:  
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
-- [Llamada a una propiedad o método mediante un nombre de cadena](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [If...Then...Else (instrucción)](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [String (tipo de datos)](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [Integer (tipo de datos)](../../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Llamar a una propiedad o método mediante un nombre de cadena](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [If...Then...Else (Instrucción)](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [String (Tipo de datos)](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Integer (Tipo de datos)](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

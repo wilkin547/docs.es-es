@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: 5c17f5c399335a2c7cbcc6f4474982de591dd453
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 870142724321629d6dbeccd4118b814283901776
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098008"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297972"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Filtrar para publicar metadatos para un servicio mediante código
 Esta es una de dos temas que tratan sobre la publicación de metadatos para un servicio de Windows Communication Foundation (WCF). Hay dos maneras de especificar cómo debería publicar metadatos un servicio: mediante un archivo de configuración y mediante código. En este tema se muestra cómo publicar metadatos para un servicio mediante código.  
@@ -25,12 +25,12 @@ Esta es una de dos temas que tratan sobre la publicación de metadatos para un s
   
 ### <a name="to-publish-metadata-in-code"></a>Publicación de metadatos mediante código  
   
-1.  Dentro del método principal de una aplicación de consola, cree instancias de un objeto <xref:System.ServiceModel.ServiceHost> pasando el tipo de servicio y la dirección base.  
+1. Dentro del método principal de una aplicación de consola, cree instancias de un objeto <xref:System.ServiceModel.ServiceHost> pasando el tipo de servicio y la dirección base.  
   
      [!code-csharp[htPublishMetadataCode#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#1)]
      [!code-vb[htPublishMetadataCode#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#1)]  
   
-2.  Cree un bloque try justo debajo del código del paso 1, esto detecta cualquier excepción que se produzca mientras se está ejecutando el servicio.  
+2. Cree un bloque try justo debajo del código del paso 1, esto detecta cualquier excepción que se produzca mientras se está ejecutando el servicio.  
   
      [!code-csharp[htPublishMetadataCode#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#2)]
      [!code-vb[htPublishMetadataCode#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#2)]  
@@ -38,32 +38,32 @@ Esta es una de dos temas que tratan sobre la publicación de metadatos para un s
      [!code-csharp[htPublishMetadataCode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#3)]
      [!code-vb[htPublishMetadataCode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#3)]  
   
-3.  Compruebe si el host del servicio ya contiene un <xref:System.ServiceModel.Description.ServiceMetadataBehavior>, si no, cree una nueva instancia de <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
+3. Compruebe si el host del servicio ya contiene un <xref:System.ServiceModel.Description.ServiceMetadataBehavior>, si no, cree una nueva instancia de <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
   
      [!code-csharp[htPublishMetadataCode#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#4)]
      [!code-vb[htPublishMetadataCode#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#4)]  
   
-4.  Establecer el <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> propiedad `true.`  
+4. Establecer el <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> propiedad `true.`  
   
      [!code-csharp[htPublishMetadataCode#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#5)]
      [!code-vb[htPublishMetadataCode#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#5)]  
   
-5.  El <xref:System.ServiceModel.Description.ServiceMetadataBehavior> contiene una propiedad <xref:System.ServiceModel.Description.MetadataExporter>. El <xref:System.ServiceModel.Description.MetadataExporter> contiene una propiedad <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A>. Establezca el valor de la propiedad <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> en <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A>. La propiedad <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> también se puede establecer en <xref:System.ServiceModel.Description.PolicyVersion.Policy12%2A>. Cuando se establece en <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A> el exportador de metadatos genera información de la directiva con los metadatos que "se ajusta a WS-Policy 1.5. Cuando se establece en <xref:System.ServiceModel.Description.PolicyVersion.Policy12%2A>, el exportador de metadatos genera información de directivas conforme a la especificación WS-Policy 1.2.  
+5. El <xref:System.ServiceModel.Description.ServiceMetadataBehavior> contiene una propiedad <xref:System.ServiceModel.Description.MetadataExporter>. El <xref:System.ServiceModel.Description.MetadataExporter> contiene una propiedad <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A>. Establezca el valor de la propiedad <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> en <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A>. La propiedad <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> también se puede establecer en <xref:System.ServiceModel.Description.PolicyVersion.Policy12%2A>. Cuando se establece en <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A> el exportador de metadatos genera información de la directiva con los metadatos que "se ajusta a WS-Policy 1.5. Cuando se establece en <xref:System.ServiceModel.Description.PolicyVersion.Policy12%2A>, el exportador de metadatos genera información de directivas conforme a la especificación WS-Policy 1.2.  
   
      [!code-csharp[htPublishMetadataCode#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#6)]
      [!code-vb[htPublishMetadataCode#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#6)]  
   
-6.  Agregue la instancia de <xref:System.ServiceModel.Description.ServiceMetadataBehavior> a la colección de comportamientos del host del servicio.  
+6. Agregue la instancia de <xref:System.ServiceModel.Description.ServiceMetadataBehavior> a la colección de comportamientos del host del servicio.  
   
      [!code-csharp[htPublishMetadataCode#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#7)]
      [!code-vb[htPublishMetadataCode#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#7)]  
   
-7.  Agregue el punto de conexión de intercambio de metadatos al host de servicio.  
+7. Agregue el punto de conexión de intercambio de metadatos al host de servicio.  
   
      [!code-csharp[htPublishMetadataCode#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#8)]
      [!code-vb[htPublishMetadataCode#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#8)]  
   
-8.  Agregue un extremo de la aplicación al host de servicio.  
+8. Agregue un extremo de la aplicación al host de servicio.  
   
      [!code-csharp[htPublishMetadataCode#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#9)]
      [!code-vb[htPublishMetadataCode#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#9)]  

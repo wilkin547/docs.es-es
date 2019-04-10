@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: 5c8767db154c79d9e3b37a22410ac1e4705b7a44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609804"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304238"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Como esta llamada no es "awaited", la ejecución del método actual continuará antes de que se complete la llamada.
 Dado que no se esperaba esta llamada, la ejecución del método actual continuará antes de que se complete la llamada. Considere la posibilidad de aplicar el operador "Await" al resultado de la llamada.  
@@ -95,13 +95,13 @@ Dado que no se esperaba esta llamada, la ejecución del método actual continuar
 ## <a name="example"></a>Ejemplo  
  La siguiente aplicación de Windows Presentation Foundation (WPF) contiene los métodos del ejemplo anterior. Los siguientes pasos sirven para configurar la aplicación.  
   
-1.  Cree una aplicación WPF y asígnele el nombre `AsyncWarning`.  
+1. Cree una aplicación WPF y asígnele el nombre `AsyncWarning`.  
   
-2.  En el Editor de código de Visual Studio, elija la pestaña **MainWindow.xaml** .  
+2. En el Editor de código de Visual Studio, elija la pestaña **MainWindow.xaml** .  
   
      Si la pestaña no está visible, abra el menú contextual de MainWindow.xaml en el **Explorador de soluciones**y elija **Ver código**.  
   
-3.  Reemplace el código de la vista **XAML** de MainWindow.xaml por el código siguiente.  
+3. Reemplace el código de la vista **XAML** de MainWindow.xaml por el código siguiente.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -117,9 +117,9 @@ Dado que no se esperaba esta llamada, la ejecución del método actual continuar
   
      En la vista **Diseño** de MainWindow.xaml aparece una ventana simple que contiene un botón y un cuadro de texto.  
   
-     Para obtener más información sobre el Diseñador XAML, vea [Tutorial: Crear una IU usando el Diseñador XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Para obtener información acerca de cómo crear su propia interfaz de usuario simple, vea el "para crear una aplicación de WPF" y "para diseñar una ventana MainWindow simple de WPF" secciones de [Tutorial: Acceso a web usando Async y Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+     Para obtener más información sobre el Diseñador XAML, vea [Tutorial: Crear una IU usando el Diseñador XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Para obtener información sobre cómo crear una interfaz de usuario simple propia, vea las secciones "Para crear una aplicación para WPF" y "Para diseñar una ventana MainWindow simple de WPF" de [Tutorial: Acceso a web usando Async y Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-4.  Reemplace el código en el archivo MainWindow.xaml.vb por el código siguiente.  
+4. Reemplace el código en el archivo MainWindow.xaml.vb por el código siguiente.  
   
     ```vb  
     Class MainWindow   
@@ -199,11 +199,11 @@ Dado que no se esperaba esta llamada, la ejecución del método actual continuar
     ' Exiting the Click event handler.  
     ```  
   
-5.  Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio** .  
+5. Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio** .  
   
      La salida esperada aparece al final del código.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Await (operador)](../../../visual-basic/language-reference/operators/await-operator.md)
-- [Programación asincrónica con Async y Await](../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Await (Operador)](../../../visual-basic/language-reference/operators/await-operator.md)
+- [Programación asincrónica con async y await](../../../visual-basic/programming-guide/concepts/async/index.md)

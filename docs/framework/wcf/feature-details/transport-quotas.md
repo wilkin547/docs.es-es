@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174634"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299311"
 ---
 # <a name="transport-quotas"></a>Cuotas de transporte
 Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una conexión está utilizando recursos excesivos. Una cuota es un límite que evita una vez el uso de recursos adicionales una vez que se supera el valor de cuota. Las cuotas de transporte evitan los ataques de denegación de servicio (DoS) malintencionados o involuntarios.  
@@ -100,9 +100,9 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
 |`ReceiveTimeout`|X|X|X|  
 |`SendTimeout`|X|X|X|  
   
-1.  La cuota de transporte `MaxBufferSize` solo está disponible en el enlace `BasicHttp`. Los enlaces `WSHttp` son para escenarios que no admitan modos de transporte de transmisión por secuencias.  
+1. La cuota de transporte `MaxBufferSize` solo está disponible en el enlace `BasicHttp`. Los enlaces `WSHttp` son para escenarios que no admitan modos de transporte de transmisión por secuencias.  
   
-2.  Las cuotas de transporte `MaxPendingConnections` y `MaxOutboundConnectionsPerEndpoint` se combinan en una cuota de transporte única llamada `MaxConnections`.  
+2. Las cuotas de transporte `MaxPendingConnections` y `MaxOutboundConnectionsPerEndpoint` se combinan en una cuota de transporte única llamada `MaxConnections`.  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>Control de las cuotas de transporte a partir de la configuración  
  La configuración de la aplicación puede establecer las mismas cuotas de transporte como obtener acceso directamente a las propiedades en un enlace. En archivos de configuración, el nombre de una cuota de transporte se inicia siempre con una minúscula. Por ejemplo, la propiedad `CloseTimeout` en un enlace corresponde al valor `closeTimeout` en la configuración y la propiedad `MaxConnections` en un enlace corresponde al valor `maxConnections` en la configuración.  

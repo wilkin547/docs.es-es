@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 2b2c43811cbb3a06ed1e8c092ca42e50a4d037c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816088"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295047"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Filtrar Determinar si dos objetos son idénticos (Visual Basic)
 En Visual Basic, dos referencias de variables se consideran idénticas si sus punteros son iguales, es decir, si ambas variables señalan a la misma instancia de clase en la memoria. Por ejemplo, en una aplicación Windows Forms, es posible que desee realizar una comparación para determinar si la instancia actual (`Me`) es el mismo que una instancia concreta, como `Form2`.  
@@ -22,9 +22,9 @@ En Visual Basic, dos referencias de variables se consideran idénticas si sus pu
   
 #### <a name="to-determine-if-two-objects-are-identical"></a>Para determinar si dos objetos son idénticos  
   
-1.  Configurar un `Boolean` expresión para probar los dos objetos.  
+1. Configurar un `Boolean` expresión para probar los dos objetos.  
   
-2.  En la expresión de prueba, use el `Is` operador con los dos objetos como operandos.  
+2. En la expresión de prueba, use el `Is` operador con los dos objetos como operandos.  
   
      `Is` Devuelve `True` si los objetos de punto a la misma instancia de clase.  
   
@@ -33,9 +33,9 @@ En Visual Basic, dos referencias de variables se consideran idénticas si sus pu
   
 #### <a name="to-determine-if-two-objects-are-not-identical"></a>Para determinar si dos objetos no son idénticos  
   
-1.  Configurar un `Boolean` expresión para probar los dos objetos.  
+1. Configurar un `Boolean` expresión para probar los dos objetos.  
   
-2.  En la expresión de prueba, use el `IsNot` operador con los dos objetos como operandos.  
+2. En la expresión de prueba, use el `IsNot` operador con los dos objetos como operandos.  
   
      `IsNot` Devuelve `True` si los objetos no señalan a la misma instancia de clase.  
   
@@ -52,10 +52,10 @@ En Visual Basic, dos referencias de variables se consideran idénticas si sus pu
   
 ## <a name="see-also"></a>Vea también
 
-- [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Valores de las variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Is (operador)](../../../../visual-basic/language-reference/operators/is-operator.md)
-- [IsNot (operador)](../../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Cómo: Determinar si dos objetos están relacionados](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Is (Operador)](../../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot (Operador)](../../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Filtrar para determinar si dos objetos están relacionados](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
 - [Me, My, MyBase y MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

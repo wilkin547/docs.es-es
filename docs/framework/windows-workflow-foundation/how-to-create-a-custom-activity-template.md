@@ -1,15 +1,15 @@
 ---
-title: Filtrar Crear una plantilla de actividad personalizado
+title: Filtrar para crear una plantilla de actividad personalizada
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: f9594f799e1b6a176e7bbf28cdea77c9cdfb70ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ee6f249092c5cf8643e3c9bfd15d32e77791d8bb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703470"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295853"
 ---
-# <a name="how-to-create-a-custom-activity-template"></a>Filtrar Crear una plantilla de actividad personalizado
+# <a name="how-to-create-a-custom-activity-template"></a>Filtrar para crear una plantilla de actividad personalizada
 
 Las plantillas de actividad personalizadas se utilizan para personalizar la configuración de actividades, incluidas las actividades compuestas personalizadas, para que los usuarios no tengan que crear cada actividad de forma individual y configurar propiedades y otros valores manualmente. Estas plantillas personalizadas pueden estar disponibles en el **cuadro de herramientas** en el [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] o desde un diseñador rehospedado, desde el que los usuarios pueden arrastrarlas a la superficie de diseño preconfigurada. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] se suministra con buenos ejemplos de esas plantillas: el [Diseñador de plantillas SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) y [Diseñador de plantillas ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) en el [diseñadores de actividades de mensajería](/visualstudio/workflow-designer/messaging-activity-designers) categoría.
 
@@ -19,23 +19,23 @@ Las plantillas de actividad personalizadas se utilizan para personalizar la conf
 
 ## <a name="to-create-a-template-for-the-delay-activity"></a>Para crear una plantilla para la actividad Delay
 
-1.  Inicie Visual Studio 2010.
+1. Inicie Visual Studio 2010.
 
-2.  En el menú **Archivo**, elija **Nuevo** y después seleccione **Proyecto**.
+2. En el menú **Archivo**, elija **Nuevo** y después seleccione **Proyecto**.
 
      Aparece el cuadro de diálogo **Nuevo proyecto** .
 
-3.  En el **tipos de proyecto** panel, seleccione **flujo de trabajo** desde el **Visual C#** proyectos o **Visual Basic** agrupaciones en función de su preferencia de idioma.
+3. En el **tipos de proyecto** panel, seleccione **flujo de trabajo** desde el **Visual C#** proyectos o **Visual Basic** agrupaciones en función de su preferencia de idioma.
 
-4.  En el **plantillas** panel, seleccione **biblioteca de actividades**.
+4. En el **plantillas** panel, seleccione **biblioteca de actividades**.
 
-5.  En el **nombre** , escriba `DelayActivityTemplate`.
+5. En el **nombre** , escriba `DelayActivityTemplate`.
 
-6.  Acepte los valores predeterminados en el **ubicación** y **nombre de la solución** cuadros de texto y, a continuación, haga clic en **Aceptar**.
+6. Acepte los valores predeterminados en el **ubicación** y **nombre de la solución** cuadros de texto y, a continuación, haga clic en **Aceptar**.
 
-7.  Haga clic en el directorio referencias del proyecto DelayActivityTemplate en **el Explorador de soluciones** y elija **Agregar referencia** para abrir el **Agregar referencia** cuadro de diálogo.
+7. Haga clic en el directorio referencias del proyecto DelayActivityTemplate en **el Explorador de soluciones** y elija **Agregar referencia** para abrir el **Agregar referencia** cuadro de diálogo.
 
-8.  Vaya a la **.NET** pestaña y seleccione **PresentationFramework** desde el **nombre del componente** columna a la izquierda y haga clic en **Aceptar** para agregar una referencia en el archivo PresentationFramework.dll.
+8. Vaya a la **.NET** pestaña y seleccione **PresentationFramework** desde el **nombre del componente** columna a la izquierda y haga clic en **Aceptar** para agregar una referencia en el archivo PresentationFramework.dll.
 
 9. Repita este procedimiento para agregar referencias a los archivos System.Activities.Presentation.dll y WindowsBase.dll.
 
@@ -74,21 +74,21 @@ Las plantillas de actividad personalizadas se utilizan para personalizar la conf
 
 ### <a name="to-make-the-template-available-in-a-workflow-designer"></a>Para que la plantilla esté disponible en un Diseñador de flujo de trabajo
 
-1.  Haga clic en la solución DelayActivityTemplate en **el Explorador de soluciones** y elija **agregar** y, a continuación, **nuevo proyecto** para abrir el **Agregar nuevo proyecto** cuadro de diálogo.
+1. Haga clic en la solución DelayActivityTemplate en **el Explorador de soluciones** y elija **agregar** y, a continuación, **nuevo proyecto** para abrir el **Agregar nuevo proyecto** cuadro de diálogo.
 
-2.  Seleccione el **aplicación de consola de flujos de trabajo** plantilla, asígnele el nombre `CustomActivityTemplateApp`y, a continuación, haga clic en **Aceptar**.
+2. Seleccione el **aplicación de consola de flujos de trabajo** plantilla, asígnele el nombre `CustomActivityTemplateApp`y, a continuación, haga clic en **Aceptar**.
 
-3.  Haga clic en el directorio referencias del proyecto CustomActivityTemplateApp en **el Explorador de soluciones** y elija **Agregar referencia** para abrir el **Agregar referencia** cuadro de diálogo cuadro.
+3. Haga clic en el directorio referencias del proyecto CustomActivityTemplateApp en **el Explorador de soluciones** y elija **Agregar referencia** para abrir el **Agregar referencia** cuadro de diálogo cuadro.
 
-4.  Vaya a la **proyectos** pestaña y seleccione **DelayActivityTemplate** desde el **nombre del proyecto** columna a la izquierda y haga clic en **Aceptar** para agregar un hacer referencia al archivo DelayActivityTemplate.dll que creó en el primer procedimiento.
+4. Vaya a la **proyectos** pestaña y seleccione **DelayActivityTemplate** desde el **nombre del proyecto** columna a la izquierda y haga clic en **Aceptar** para agregar un hacer referencia al archivo DelayActivityTemplate.dll que creó en el primer procedimiento.
 
-5.  Haga clic en el proyecto CustomActivityTemplateApp en **el Explorador de soluciones** y elija **compilación** para compilar la aplicación.
+5. Haga clic en el proyecto CustomActivityTemplateApp en **el Explorador de soluciones** y elija **compilación** para compilar la aplicación.
 
-6.  Haga clic en el proyecto CustomActivityTemplateApp en **el Explorador de soluciones** y elija **establecer como proyecto de inicio**.
+6. Haga clic en el proyecto CustomActivityTemplateApp en **el Explorador de soluciones** y elija **establecer como proyecto de inicio**.
 
-7.  Seleccione **iniciar sin depurar** desde el **depurar** menú y presione cualquier tecla para continuar cuando se le pida en la ventana de cmd.exe.
+7. Seleccione **iniciar sin depurar** desde el **depurar** menú y presione cualquier tecla para continuar cuando se le pida en la ventana de cmd.exe.
 
-8.  Abra el archivo Workflow1.xaml y abra el **cuadro de herramientas**.
+8. Abra el archivo Workflow1.xaml y abra el **cuadro de herramientas**.
 
 9. Busque el **MyDelayActivity** plantilla en el **DelayActivityTemplate** categoría. Arrástrela a la superficie de diseño. Confirmar en el **propiedades** ventana que el `Duration` propiedad se estableció en 10 segundos.
 
@@ -127,4 +127,4 @@ namespace DelayActivityTemplate
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Activities.Presentation.IActivityTemplateFactory>
-- [Personalización de la experiencia de diseño del flujo de trabajo](customizing-the-workflow-design-experience.md)
+- [Personalizar la experiencia de diseño del flujo de trabajo](customizing-the-workflow-design-experience.md)

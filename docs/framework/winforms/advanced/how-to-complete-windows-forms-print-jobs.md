@@ -9,12 +9,12 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: f8d0f1f067efbae6e2b667328e75996179b91737
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 256b9a3d8842aaa4b032e67ebac9ca6a9e1ef34a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159827"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293760"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>Filtrar para completar trabajos de impresión de formularios Windows Forms
 Con frecuencia, los procesadores de textos y otras aplicaciones que implican impresión proporcionará la opción para mostrar un mensaje a los usuarios que un trabajo de impresión está completado. Puede proporcionar esta funcionalidad en los formularios Windows Forms controlando el <xref:System.Drawing.Printing.PrintDocument.EndPrint> eventos de la <xref:System.Drawing.Printing.PrintDocument> componente.  
@@ -23,7 +23,7 @@ Con frecuencia, los procesadores de textos y otras aplicaciones que implican imp
   
 ### <a name="to-complete-a-print-job"></a>Para completar un trabajo de impresión  
   
-1.  Establecer el <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> propiedad de la <xref:System.Drawing.Printing.PrintDocument> componente.  
+1. Establecer el <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> propiedad de la <xref:System.Drawing.Printing.PrintDocument> componente.  
   
     ```vb  
     PrintDocument1.DocumentName = "MyTextFile"  
@@ -37,7 +37,7 @@ Con frecuencia, los procesadores de textos y otras aplicaciones que implican imp
     printDocument1->DocumentName = "MyTextFile";  
     ```  
   
-2.  Escriba código para controlar el evento <xref:System.Drawing.Printing.PrintDocument.EndPrint> .  
+2. Escriba código para controlar el evento <xref:System.Drawing.Printing.PrintDocument.EndPrint> .  
   
      En el ejemplo de código siguiente se muestra un cuadro de mensaje que indica que ha terminado de imprimir el documento.  
   

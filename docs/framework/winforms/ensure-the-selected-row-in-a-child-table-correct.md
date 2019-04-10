@@ -16,12 +16,12 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149115"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303146"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Filtrar para garantizar que la fila seleccionada de una tabla secundaria conserve la posición correcta
 A menudo, cuando se trabaja con enlace de datos en Windows Forms, los datos se muestran en lo que se denomina una vista primaria/secundaria o una vista maestra/detalles. Esto hace referencia a un escenario de enlace de datos donde los datos del mismo origen se muestran en dos controles. Al cambiar la selección en un control, los datos mostrados en el segundo control cambiarán. Por ejemplo, el primer control puede contener una lista de clientes y el segundo de una lista de pedidos relacionados con el cliente seleccionado en el primer control.  
@@ -30,28 +30,28 @@ A menudo, cuando se trabaja con enlace de datos en Windows Forms, los datos se m
   
 ### <a name="to-cache-the-current-child-position"></a>Para almacenar en caché la posición secundaria actual  
   
-1.  Declare una variable entera para almacenar la posición de lista secundaria y una variable booleana para almacenar en caché la posición secundaria.  
+1. Declare una variable entera para almacenar la posición de lista secundaria y una variable booleana para almacenar en caché la posición secundaria.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
   
-2.  Controle el evento <xref:System.Windows.Forms.CurrencyManager.ListChanged> del <xref:System.Windows.Forms.CurrencyManager> del enlace y busque un <xref:System.ComponentModel.ListChangedType> de <xref:System.ComponentModel.ListChangedType.Reset>.  
+2. Controle el evento <xref:System.Windows.Forms.CurrencyManager.ListChanged> del <xref:System.Windows.Forms.CurrencyManager> del enlace y busque un <xref:System.ComponentModel.ListChangedType> de <xref:System.ComponentModel.ListChangedType.Reset>.  
   
-3.  Compruebe la posición actual del <xref:System.Windows.Forms.CurrencyManager>. Si es mayor que la primera entrada de la lista (normalmente 0), guárdela en una variable.  
+3. Compruebe la posición actual del <xref:System.Windows.Forms.CurrencyManager>. Si es mayor que la primera entrada de la lista (normalmente 0), guárdela en una variable.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
   
-4.  Controle el evento <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> de la lista primaria para el administrador de moneda principal. En el controlador, establezca el valor booleano para indicar que no es un escenario de almacenamiento en caché. Si se produce <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged>, el cambio en el elemento primario es un cambio de posición de lista y no un cambio de valor del elemento.  
+4. Controle el evento <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> de la lista primaria para el administrador de moneda principal. En el controlador, establezca el valor booleano para indicar que no es un escenario de almacenamiento en caché. Si se produce <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged>, el cambio en el elemento primario es un cambio de posición de lista y no un cambio de valor del elemento.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
   
 ### <a name="to-reset-the-child-position"></a>Para restablecer la posición secundaria  
   
-1.  Controle el evento <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> del <xref:System.Windows.Forms.CurrencyManager> del enlace secundario.  
+1. Controle el evento <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> del <xref:System.Windows.Forms.CurrencyManager> del enlace secundario.  
   
-2.  Restablezca la posición de la tabla secundaria a la posición almacenada en caché que se guardó en el procedimiento anterior.  
+2. Restablezca la posición de la tabla secundaria a la posición almacenada en caché que se guardó en el procedimiento anterior.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#3)]  
@@ -64,17 +64,17 @@ A menudo, cuando se trabaja con enlace de datos en Windows Forms, los datos se m
   
  Para probar el ejemplo de código, realice los pasos siguientes:  
   
-1.  Ejecute el ejemplo.  
+1. Ejecute el ejemplo.  
   
-2.  Asegúrese de que la casilla **Cache and reset position** está activada.  
+2. Asegúrese de que la casilla **Cache and reset position** está activada.  
   
-3.  Haga clic en el botón **Clear parent field** para producir un cambio en un campo de la tabla primaria. Observe que la fila seleccionada en la tabla secundaria no cambia.  
+3. Haga clic en el botón **Clear parent field** para producir un cambio en un campo de la tabla primaria. Observe que la fila seleccionada en la tabla secundaria no cambia.  
   
-4.  Cierre y vuelva a ejecutar el ejemplo. Deberá hacerlo porque el restablecimiento solo se produce en el primer cambio de la fila primaria.  
+4. Cierre y vuelva a ejecutar el ejemplo. Deberá hacerlo porque el restablecimiento solo se produce en el primer cambio de la fila primaria.  
   
-5.  Desactive la casilla **Cache and reset position**.  
+5. Desactive la casilla **Cache and reset position**.  
   
-6.  Haga clic en el botón **Clear parent field**. Observe que la fila seleccionada en la tabla secundaria cambia a la primera fila.  
+6. Haga clic en el botón **Clear parent field**. Observe que la fila seleccionada en la tabla secundaria cambia a la primera fila.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  

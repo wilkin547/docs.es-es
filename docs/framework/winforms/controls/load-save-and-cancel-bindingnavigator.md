@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: 52d4fc32836a5d20bd99d8ebfd3119c761376e30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098720"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304784"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Filtrar para agregar los botones Cargar, Guardar y Cancelar al control BindingNavigator de formularios Windows Forms
 El <xref:System.Windows.Forms.BindingNavigator> control es un propósito especial <xref:System.Windows.Forms.ToolStrip> control que está pensado para explorar y manipular los controles de formulario que están enlazados a datos.  
@@ -24,21 +24,21 @@ El <xref:System.Windows.Forms.BindingNavigator> control es un propósito especia
   
 ### <a name="to-add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>Para agregar la carga, guardar y cancelar los botones para el componente de BindingNavigator  
   
-1.  Agregue un control <xref:System.Windows.Forms.TextBox> al formulario.  
+1. Agregue un control <xref:System.Windows.Forms.TextBox> al formulario.  
   
-2.  Enlazar a un <xref:System.Windows.Forms.BindingSource>, que está enlazado a un origen de datos. En este ejemplo, el <xref:System.Windows.Forms.BindingSource> está enlazado a una base de datos.  
+2. Enlazar a un <xref:System.Windows.Forms.BindingSource>, que está enlazado a un origen de datos. En este ejemplo, el <xref:System.Windows.Forms.BindingSource> está enlazado a una base de datos.  
   
-3.  Después de generar el adaptador de conjunto de datos y tabla, arrastre un <xref:System.Windows.Forms.BindingNavigator> control al formulario.  
+3. Después de generar el adaptador de conjunto de datos y tabla, arrastre un <xref:System.Windows.Forms.BindingNavigator> control al formulario.  
   
-4.  Establecer el <xref:System.Windows.Forms.BindingNavigator> del control <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> propiedad a la <xref:System.Windows.Forms.BindingSource> en el formulario que está enlazado a los controles.  
+4. Establecer el <xref:System.Windows.Forms.BindingNavigator> del control <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> propiedad a la <xref:System.Windows.Forms.BindingSource> en el formulario que está enlazado a los controles.  
   
-5.  Seleccione el control <xref:System.Windows.Forms.BindingNavigator>.  
+5. Seleccione el control <xref:System.Windows.Forms.BindingNavigator>.  
   
-6.  Haga clic en el glifo de etiqueta inteligente (![glifo de etiqueta inteligente](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) por lo que la **BindingNavigator tareas** cuadro de diálogo aparece y seleccione **editar elementos**.  
+6. Haga clic en el glifo de etiqueta inteligente (![glifo de etiqueta inteligente](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) por lo que la **BindingNavigator tareas** cuadro de diálogo aparece y seleccione **editar elementos**.  
   
      El **Editor de la colección de elementos** aparece.  
   
-7.  En el **Editor de la colección de elementos**, realice los pasos siguientes:  
+7. En el **Editor de la colección de elementos**, realice los pasos siguientes:  
   
     1.  Agregar un <xref:System.Windows.Forms.ToolStripSeparator> y tres <xref:System.Windows.Forms.ToolStripButton> elementos seleccionando el tipo adecuado de <xref:System.Windows.Forms.ToolStripItem> y haga clic en el **agregar** botón.  
   
@@ -50,7 +50,7 @@ El <xref:System.Windows.Forms.BindingNavigator> control es un propósito especia
   
     5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo. Los botones se agregan a la <xref:System.Windows.Forms.ToolStrip>.  
   
-8.  Haga clic en el formulario y elija **ver código**.  
+8. Haga clic en el formulario y elija **ver código**.  
   
 9. En el Editor de código, busque la línea de código que carga datos en el adaptador de tabla. Este código fue generado al configurar el enlace de datos en el paso 2. El código debe ser similar al siguiente: `TableAdapterName.Fill(DataSetName.TableName)`. Lo hará más probablemente estará en el formulario <xref:System.Windows.Forms.Form.Load> eventos.  
   

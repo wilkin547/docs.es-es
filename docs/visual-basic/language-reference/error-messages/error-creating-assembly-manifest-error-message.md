@@ -1,5 +1,5 @@
 ---
-title: 'Error al crear manifiesto del ensamblado: <error message>'
+title: 'Error al crear el manifiesto de ensamblado: <error message>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30140
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: f9d7867157b65d746809d9b2f50797285d7fcd9c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0f67b772bab3104c00510954d01b200aadfa9e8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831973"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296295"
 ---
 # <a name="error-creating-assembly-manifest-error-message"></a>Error al crear el manifiesto del ensamblado: \<mensaje de error >
 El compilador de Visual Basic llama a la herramienta Assembly Linker (Al.exe, también denominado Alink) para generar un ensamblado con un manifiesto. El vinculador ha informado de un error en una fase previa a la emisión de la creación del ensamblado.  
@@ -23,13 +23,13 @@ El compilador de Visual Basic llama a la herramienta Assembly Linker (Al.exe, ta
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Examine el mensaje de error citado y consulte el tema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). para el error AL1019 explicación más detallada y consejos  
+1. Examine el mensaje de error citado y consulte el tema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). para el error AL1019 explicación más detallada y consejos  
   
-2.  Si el error persiste, reúna información sobre las circunstancias y notifíquelo a los Servicios de soporte técnico de Microsoft.  
+2. Si el error persiste, reúna información sobre las circunstancias y notifíquelo a los Servicios de soporte técnico de Microsoft.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Firma de un ensamblado con un nombre seguro](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Filtrar Firma de un ensamblado con un nombre seguro](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [Página Firma, Diseñador de proyectos](/visualstudio/ide/reference/signing-page-project-designer)
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Hable con nosotros](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

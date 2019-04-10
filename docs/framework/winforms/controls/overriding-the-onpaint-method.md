@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: baf4e6cb3b2a40b1b792ae12e78cb9f878a738ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b1eb24aaa9ed3bfede41fc5a9a80fcbdc9f749a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124311"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302210"
 ---
 # <a name="overriding-the-onpaint-method"></a>Reemplazar el método OnPaint
 Los pasos básicos para reemplazar un evento definido en el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] son idénticos y se resumen en la lista siguiente.  
   
 #### <a name="to-override-an-inherited-event"></a>Para reemplazar un evento heredado  
   
-1.  Invalidar protegido `On` *EventName* método.  
+1. Invalidar protegido `On` *EventName* método.  
   
-2.  Llame a la `On` *EventName* método de la clase base desde invalidado `On` *EventName* método, por lo que los delegados registrados reciban el evento.  
+2. Llame a la `On` *EventName* método de la clase base desde invalidado `On` *EventName* método, por lo que los delegados registrados reciban el evento.  
   
  El <xref:System.Windows.Forms.Control.Paint> evento se explica en detalle aquí porque cada control de Windows Forms debe reemplazar el <xref:System.Windows.Forms.Control.Paint> eventos que hereda de <xref:System.Windows.Forms.Control>. La base de <xref:System.Windows.Forms.Control> no sabe cómo debe dibujarse un control derivado de clase y no proporciona ninguna lógica de dibujo en el <xref:System.Windows.Forms.Control.OnPaint%2A> método. El <xref:System.Windows.Forms.Control.OnPaint%2A> método <xref:System.Windows.Forms.Control> simplemente envía el <xref:System.Windows.Forms.Control.Paint> eventos a los receptores de eventos registrado.  
   

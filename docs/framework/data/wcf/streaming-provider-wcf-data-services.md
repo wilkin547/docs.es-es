@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087903"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298882"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Proveedores de transmisión por secuencias (WCF Data Services)
 Un servicio de datos puede exponer datos binarios de objetos grandes. Estos datos binarios pueden representar secuencias de vídeo y audio, imágenes, archivos de documento u otros tipos de medios binarios. Cuando una entidad del modelo de datos incluye una o más propiedades binarias, el servicio de datos devuelve estos datos binarios codificados en base 64 en la entrada de la fuente de respuesta. Dado que carga y la serialización de datos binarios grandes de esta manera pueden afectar al rendimiento, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define un mecanismo para recuperar datos binarios independientemente de la entidad a la que pertenece. Para ello, se separan los datos binarios de la entidad en uno o varios flujos de datos.  
@@ -28,15 +28,15 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
   
  La configuración de un servicio de datos para que admita la transmisión por secuencias de datos binarios requiere los siguientes pasos:  
   
-1.  Atribuya una o más entidades del modelo de datos como una entrada de vínculo multimedia. Estas entidades no deben incluir los datos binarios que se van a transmitir por secuencias. Las propiedades binarias de una entidad siempre se devuelven en la entrada como datos binarios codificados en base 64.  
+1. Atribuya una o más entidades del modelo de datos como una entrada de vínculo multimedia. Estas entidades no deben incluir los datos binarios que se van a transmitir por secuencias. Las propiedades binarias de una entidad siempre se devuelven en la entrada como datos binarios codificados en base 64.  
   
-2.  Implemente la interfaz T:System.Data.Services.Providers.IDataServiceStreamProvider.  
+2. Implemente la interfaz T:System.Data.Services.Providers.IDataServiceStreamProvider.  
   
-3.  Defina un servicio de datos que implemente la interfaz <xref:System.IServiceProvider>. El servicio de datos usa la implementación del método <xref:System.IServiceProvider.GetService%2A> para acceder a la implementación del proveedor de transmisión de datos por secuencias. Este método devuelve la implementación del proveedor de transmisión por secuencias adecuado.  
+3. Defina un servicio de datos que implemente la interfaz <xref:System.IServiceProvider>. El servicio de datos usa la implementación del método <xref:System.IServiceProvider.GetService%2A> para acceder a la implementación del proveedor de transmisión de datos por secuencias. Este método devuelve la implementación del proveedor de transmisión por secuencias adecuado.  
   
-4.  Habilite flujos de mensajes grandes en la configuración de la aplicación web.  
+4. Habilite flujos de mensajes grandes en la configuración de la aplicación web.  
   
-5.  Habilite el acceso a los recursos binarios en el servidor o en un origen de datos.  
+5. Habilite el acceso a los recursos binarios en el servidor o en un origen de datos.  
   
  Los ejemplos de este tema se basan en un ejemplo de servicio de fotografías, que se explica con más detalle en la entrada de transmisión por secuencias [serie de proveedor de transmisión por secuencias de servicios de datos: Implementar un proveedor de transmisión por secuencias (parte 1)](https://go.microsoft.com/fwlink/?LinkID=198989). El código fuente para este servicio de ejemplo está disponible en el [página de ejemplo de servicio de datos de fotografía de transmisión por secuencias](https://go.microsoft.com/fwlink/?LinkID=198988) en la Galería de código de MSDN.  
   

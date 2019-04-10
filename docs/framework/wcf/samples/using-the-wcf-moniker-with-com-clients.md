@@ -2,12 +2,12 @@
 title: Uso del moniker de WCF con clientes COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 3cb610f85c929c371299bc505646cdf924ecdaea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098135"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294852"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Uso del moniker de WCF con clientes COM
 Este ejemplo muestra cómo utilizar el moniker de servicio de Windows Communication Foundation (WCF) para integrar servicios Web en entornos de desarrollo basado en COM, como Microsoft Office Visual Basic para aplicaciones (Office VBA) o Visual Basic 6.0. El ejemplo está compuesto por un cliente de Windows Script Host (.vbs), una biblioteca de cliente auxiliar (.dll) y una biblioteca de servicios (.dll) hospedados en Internet Information Services (IIS). El servicio es un servicio de calculadora y el cliente COM llama operaciones matemáticas: Sumar, Restar, Multiplicar y Dividir, en el servicio. La actividad Client está visible en las ventanas de cuadro de mensaje.  
@@ -184,46 +184,46 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### <a name="to-set-up-and-build-the-sample"></a>Para configurar y compilar el ejemplo  
   
-1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Desde un símbolo para Visual Studio, abra la carpeta \client\bin\, en la carpeta específica del lenguaje.  
+3. Desde un símbolo para Visual Studio, abra la carpeta \client\bin\, en la carpeta específica del lenguaje.  
   
     > [!NOTE]
     >  Si usa [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 o Windows Server 2008 R2, asegúrese de que ejecuta el símbolo del sistema con privilegios de administrador.  
   
-4.  Escriba en `tlbexp.exe client.dll /out:CalcProxy.tlb` para exportar el archivo dll en un archivo tlb. Es posible que se produzca una "Advertencia de exportador de biblioteca de tipos", pero no es un problema, porque no se requiere el tipo genérico.  
+4. Escriba en `tlbexp.exe client.dll /out:CalcProxy.tlb` para exportar el archivo dll en un archivo tlb. Es posible que se produzca una "Advertencia de exportador de biblioteca de tipos", pero no es un problema, porque no se requiere el tipo genérico.  
   
-5.  Escriba en `regasm.exe /tlb:CalcProxy.tlb client.dll` para registrar los tipos con COM. Es posible que se produzca una "Advertencia de exportador de biblioteca de tipos", pero no es un problema, porque no se requiere el tipo genérico.  
+5. Escriba en `regasm.exe /tlb:CalcProxy.tlb client.dll` para registrar los tipos con COM. Es posible que se produzca una "Advertencia de exportador de biblioteca de tipos", pero no es un problema, porque no se requiere el tipo genérico.  
   
-6.  Escriba en `gacutil.exe /i client.dll` para agregar el ensamblado a la caché Global de ensamblados.  
+6. Escriba en `gacutil.exe /i client.dll` para agregar el ensamblado a la caché Global de ensamblados.  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo  
   
-1.  Prueba que puede tener acceso al servicio utilizando un explorador escribiendo en la siguiente dirección: `http://localhost/servicemodelsamples/service.svc`. Como respuesta se debe mostrar una página de confirmación.  
+1. Prueba que puede tener acceso al servicio utilizando un explorador escribiendo en la siguiente dirección: `http://localhost/servicemodelsamples/service.svc`. Como respuesta se debe mostrar una página de confirmación.  
   
-2.  Ejecute ComCalcClient.vbs desde \client, en la carpeta específica del lenguaje. La actividad del cliente se muestra en ventanas de cuadro de mensaje.  
+2. Ejecute ComCalcClient.vbs desde \client, en la carpeta específica del lenguaje. La actividad del cliente se muestra en ventanas de cuadro de mensaje.  
   
-3.  Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+3. Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
-1.  En el equipo del servicio, cree un directorio virtual denominado ServiceModelSamples. El script Setupvroot.bat incluido con el ejemplo se puede utilizar para crear el directorio de disco y el directorio virtual.  
+1. En el equipo del servicio, cree un directorio virtual denominado ServiceModelSamples. El script Setupvroot.bat incluido con el ejemplo se puede utilizar para crear el directorio de disco y el directorio virtual.  
   
-2.  Copie los archivos de programa del servicio del directorio %SystemDrive%\Inetpub\wwwroot\servicemodelsamples al directorio virtual ServiceModelSamples del equipo de servicio. Asegúrese de incluir los archivos en el directorio \bin.  
+2. Copie los archivos de programa del servicio del directorio %SystemDrive%\Inetpub\wwwroot\servicemodelsamples al directorio virtual ServiceModelSamples del equipo de servicio. Asegúrese de incluir los archivos en el directorio \bin.  
   
-3.  Copie el archivo de script de cliente de la carpeta \client, en la carpeta específica del lenguaje, al equipo cliente.  
+3. Copie el archivo de script de cliente de la carpeta \client, en la carpeta específica del lenguaje, al equipo cliente.  
   
-4.  En el archivo de script, cambie el valor de la dirección de la definición del punto de conexión para que coincida con la nueva dirección de su servicio. Reemplace cualquier referencia a "localhost" con un nombre de dominio completo en la dirección.  
+4. En el archivo de script, cambie el valor de la dirección de la definición del punto de conexión para que coincida con la nueva dirección de su servicio. Reemplace cualquier referencia a "localhost" con un nombre de dominio completo en la dirección.  
   
-5.  Copie el archivo WSDL al equipo cliente. En el archivo WSDL, serviceWsdl.xml, reemplace cualquier referencia al "host local" con un nombre de dominio completo en la dirección.  
+5. Copie el archivo WSDL al equipo cliente. En el archivo WSDL, serviceWsdl.xml, reemplace cualquier referencia al "host local" con un nombre de dominio completo en la dirección.  
   
-6.  Copie la biblioteca Client.dll de la carpeta \client\bin\, en la carpeta específica del lenguaje, a un directorio en el equipo cliente.  
+6. Copie la biblioteca Client.dll de la carpeta \client\bin\, en la carpeta específica del lenguaje, a un directorio en el equipo cliente.  
   
-7.  Desde un símbolo del sistema, navegue a ese directorio de destino en el equipo cliente. Si usa [!INCLUDE[wv](../../../../includes/wv-md.md)] o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], asegúrese de que ejecuta el símbolo del sistema como Administrador.  
+7. Desde un símbolo del sistema, navegue a ese directorio de destino en el equipo cliente. Si usa [!INCLUDE[wv](../../../../includes/wv-md.md)] o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], asegúrese de que ejecuta el símbolo del sistema como Administrador.  
   
-8.  Escriba en `tlbexp.exe client.dll /out:CalcProxy.tlb` para exportar el archivo dll en un archivo tlb. Es posible que se produzca una "Advertencia de exportador de biblioteca de tipos", pero no es un problema, porque no se requiere el tipo genérico.  
+8. Escriba en `tlbexp.exe client.dll /out:CalcProxy.tlb` para exportar el archivo dll en un archivo tlb. Es posible que se produzca una "Advertencia de exportador de biblioteca de tipos", pero no es un problema, porque no se requiere el tipo genérico.  
   
 9. Escriba en `regasm.exe /tlb:CalcProxy.tlb client.dll` para registrar los tipos con COM. Asegúrese de que se ha establecido esa ruta de acceso en la carpeta que contiene `regasm.exe` antes de ejecutar el comando.  
   

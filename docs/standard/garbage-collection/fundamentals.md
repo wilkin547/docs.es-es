@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712479"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826605"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Fundamentos de la recolección de elementos no utilizados
 <a name="top"></a> En el Common Language Runtime (CLR), el recolector de elementos no utilizados actúa como administrador de memoria automático. Proporciona las siguientes ventajas:  
@@ -261,21 +261,19 @@ Recolección de elementos no utilizados simultánea
   
  La recolección de elementos no utilizados en segundo plano quita las restricciones de asignación impuestas por la recolección simultánea de elementos no utilizados, porque se pueden producir recolecciones de elementos no utilizados efímeras durante una recolección en segundo plano. Esto significa que la recolección de elementos no utilizados en segundo plano puede quitar objetos muertos de las generaciones efímeras y también expandir el montón si es preciso durante una recolección de elementos no utilizados en la generación 1.  
   
- En la siguiente ilustración se muestra la recolección de elementos no utilizados en segundo plano realizada en un subproceso dedicado independiente en una estación de trabajo.  
+En la siguiente ilustración se muestra la recolección de elementos no utilizados en segundo plano realizada en un subproceso dedicado independiente en una estación de trabajo:
   
- ![Recolección de elementos no utilizados de estación de trabajo en segundo plano](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
-Recolección de elementos no utilizados de estación de trabajo en segundo plano  
-  
+ ![Diagrama que muestra la recolección de elementos no utilizados de estación de trabajo en segundo plano.](./media/fundamentals/background-workstation-garbage-collection.png)
+   
  [Volver al principio](#top)  
   
 <a name="background_server_garbage_collection"></a>   
 ## <a name="background-server-garbage-collection"></a>Recolección de elementos no utilizados de servidor en segundo plano  
  A partir de .NET Framework 4.5, la recolección de elementos no utilizados de servidor en segundo plano es el modo predeterminado. Para elegir este modo, establezca el atributo `enabled` del [elemento \<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) en `true` en el esquema de configuración del tiempo de ejecución. Este modo funciona de forma similar a la recolección de elementos no utilizados de estación de trabajo en segundo plano, descrita en la sección anterior, pero hay algunas diferencias. La recolección de elementos no utilizados de estación de trabajo en segundo plano usa un subproceso dedicado de recolección de elementos no utilizados en segundo plano, mientras que la recolección de elementos no utilizados de servidor en segundo plano utiliza varios subprocesos, normalmente un subproceso dedicado para cada procesador lógico. A diferencia del subproceso de recolección de elementos no utilizados en segundo plano de la estación de trabajo, no se agota el tiempo de espera de estos subprocesos.  
   
- En la siguiente ilustración se muestra la recolección de elementos no utilizados en segundo plano realizada en un subproceso dedicado independiente en un servidor.  
+ En la siguiente ilustración se muestra la recolección de elementos no utilizados en segundo plano realizada en un subproceso dedicado independiente en un servidor:  
   
- ![Recolección de elementos no utilizados de servidor en segundo plano](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
-Recolección de elementos no utilizados de servidor en segundo plano  
+ ![Diagrama que muestra la recolección de elementos no utilizados de servidor en segundo plano.](./media/fundamentals/background-server-garbage-collection.png)  
   
 ## <a name="see-also"></a>Vea también
 

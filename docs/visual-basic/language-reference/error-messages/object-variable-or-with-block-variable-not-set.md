@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 1b24bec6dd7c4b5af10349cf523d9a7e93b385fe
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b2c0c47b359e218111c1629ea574303a6d663046
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831662"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297933"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Variable de objeto o de bloque With no establecida
 Se hace referencia a una variable de objeto no válido.   Este error puede producirse por varias razones:  
@@ -36,7 +36,7 @@ Se hace referencia a una variable de objeto no válido.   Este error puede produ
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Establecer `Option Strict` a `On` agregando el código siguiente al principio del archivo:  
+1. Establecer `Option Strict` a `On` agregando el código siguiente al principio del archivo:  
   
 ```vb  
 Option Strict On  
@@ -44,16 +44,16 @@ Option Strict On
 
      When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.  
   
-2.  Si no desea habilitar `Option Strict`, busque el código para las variables que se especificaron sin tipo (`Dim x` en lugar de `Dim x As String`) y agregue el tipo deseado a la declaración.  
+2. Si no desea habilitar `Option Strict`, busque el código para las variables que se especificaron sin tipo (`Dim x` en lugar de `Dim x As String`) y agregue el tipo deseado a la declaración.  
   
-3.  Asegúrese de que no está haciendo referencia a una variable de objeto que se ha establecido en `Nothing`.  Busque el código para la palabra clave `Nothing`y revise el código para que el objeto no está establecido en `Nothing` hasta que una vez haya hecho referencia.  
+3. Asegúrese de que no está haciendo referencia a una variable de objeto que se ha establecido en `Nothing`.  Busque el código para la palabra clave `Nothing`y revise el código para que el objeto no está establecido en `Nothing` hasta que una vez haya hecho referencia.  
   
-4.  Asegúrese de que las variables de matriz están influenciadas antes de tener acceso a ellos. Se puede asignar una dimensión cuando se crea la matriz (`Dim x(5) As String` en lugar de `Dim x() As String`), o usar el `ReDim` palabra clave para establecer las dimensiones de la matriz antes de que se acceda por primera vez.  
+4. Asegúrese de que las variables de matriz están influenciadas antes de tener acceso a ellos. Se puede asignar una dimensión cuando se crea la matriz (`Dim x(5) As String` en lugar de `Dim x() As String`), o usar el `ReDim` palabra clave para establecer las dimensiones de la matriz antes de que se acceda por primera vez.  
   
-5.  Asegúrese de que su `With` bloque se inicializa mediante la ejecución de la `With` punto de entrada de la instrucción.  
+5. Asegúrese de que su `With` bloque se inicializa mediante la ejecución de la `With` punto de entrada de la instrucción.  
   
 ## <a name="see-also"></a>Vea también
 
 - [Declaración de variables de objeto](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [ReDim (instrucción)](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [With...End With (instrucción)](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [ReDim (Instrucción)](../../../visual-basic/language-reference/statements/redim-statement.md)
+- [With...End With (Instrucción)](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

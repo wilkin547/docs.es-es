@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176922"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301040"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Espacios de nombres y asignación de espacios de nombres XAML para WPF
 En este tema se explica con mayor detalle la presencia y el propósito de las dos asignaciones de espacio de nombres XAML que se encuentran a menudo en la etiqueta raíz de cada archivo XAML de WPF. También se describe cómo generar asignaciones similares para usar elementos definidos en su propio código y/o dentro de ensamblados independientes.  
@@ -119,15 +119,15 @@ End Namespace
 ## <a name="wpf-and-assembly-loading"></a>WPF y carga de ensamblados  
  El contexto de esquema XAML para WPF se integra con el modelo de aplicación de WPF, que a su vez usa el concepto definido por el CLR de <xref:System.AppDomain>. La secuencia siguiente describe cómo el contexto de esquema XAML interpreta cómo cargar ensamblados o buscar tipos en tiempo de ejecución o en tiempo de diseño, según el uso WPF de <xref:System.AppDomain> y otros factores.  
   
-1.  Recorrer en iteración el <xref:System.AppDomain>, busca un ensamblado ya cargado que coincida con todos los aspectos del nombre, empezando desde el último ensamblado cargado.  
+1. Recorrer en iteración el <xref:System.AppDomain>, busca un ensamblado ya cargado que coincida con todos los aspectos del nombre, empezando desde el último ensamblado cargado.  
   
-2.  Si el nombre está calificado, llame a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> en el nombre completo.  
+2. Si el nombre está calificado, llame a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> en el nombre completo.  
   
-3.  Si el nombre corto + el token de clave pública de un nombre completo coinciden con el ensamblado desde el que se ha cargado el marcado, devuelva dicho ensamblado.  
+3. Si el nombre corto + el token de clave pública de un nombre completo coinciden con el ensamblado desde el que se ha cargado el marcado, devuelva dicho ensamblado.  
   
-4.  Usar el nombre corto + el token de clave pública para llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+4. Usar el nombre corto + el token de clave pública para llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-5.  Si el nombre es incompleto, llame a <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+5. Si el nombre es incompleto, llame a <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
  El XAML dinámico no usa el Paso 3; no hay ensamblado desde el que cargar.  
   

@@ -3,12 +3,12 @@ title: 'Ramas y bucles: tutorial de introducción a C#'
 description: En este tutorial sobre ramas y bucles, escribirá código de C# para explorar la sintaxis del lenguaje que admite ramas y bucles condicionales para ejecutar instrucciones de forma repetida.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677791"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920953"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Obtenga información sobre la lógica condicional con instrucciones de rama y bucle
 
@@ -249,7 +249,7 @@ Pruébelo usted mismo. Después, revise cómo lo ha hecho. Debe obtener 63 como 
 
 Ha completado el tutorial "Bifurcaciones y bucles".
 
-Puede continuar con el tutorial de [interpolación de cadenas](interpolated-strings-local.md) en su propio entorno de desarrollo.
+Puede continuar con el tutorial [Matrices y colecciones](arrays-and-collections.md) en su propio entorno de desarrollo.
 
 Puede obtener más información sobre estos conceptos en los temas siguientes:
 

@@ -1,6 +1,6 @@
 ---
 title: Procedimiento para determinar qué versiones de .NET Framework están instaladas
-ms.date: 03/18/2019
+ms.date: 04/02/2019
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c4ad3ca5694457637a82a36c8db4534df43a9d7
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 570cbd49fd8a8ea42d1c43ebe067a0d2d3f9dc27
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504436"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055240"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedimiento para determinar qué versiones de .NET Framework están instaladas
 
@@ -41,12 +41,12 @@ Los usuarios pueden [instalar](https://docs.microsoft.com/dotnet/framework/insta
 Para obtener una lista de las versiones de .NET Framework instaladas en un equipo, debe tener acceso al Registro. Puede usar el Editor del Registro para ver el Registro o usar código para consultarlo:
  
 - Búsqueda de versiones más recientes de .NET Framework (4.5 y versiones posteriores): 
-     - [Uso del Editor del Registro para buscar versiones de .NET Framework](#net_b)  
-     - [Uso de código para consultar en el Registro las versiones de .NET Framework](#net_d)  
-     - [Uso de PowerShell para consultar en el Registro las versiones de .NET Framework](#ps_a)
+     - [Uso del Editor del Registro para buscar versiones de .NET Framework](#net_b)  
+     - [Uso de código para consultar en el Registro las versiones de .NET Framework](#net_d)  
+     - [Uso de PowerShell para consultar en el Registro las versiones de .NET Framework](#ps_a)
 - Búsqueda de versiones más antiguas de .NET Framework (1&#8211;4):
-     - [Uso del Editor del Registro para buscar versiones de .NET Framework](#net_a)
-     - [Uso de código para consultar en el Registro las versiones de .NET Framework](#net_c)   
+     - [Uso del Editor del Registro para buscar versiones de .NET Framework](#net_a)
+     - [Uso de código para consultar en el Registro las versiones de .NET Framework](#net_c)   
 
 Para obtener una lista de las versiones de CLR instaladas en un equipo, use una herramienta o código:  
   
@@ -68,17 +68,13 @@ Para obtener información sobre cómo detectar las actualizaciones instaladas de
 2. En el Editor del Registro, abra la subclave siguiente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full**. Si la subclave **Full** no está presente, significa que .NET Framework 4.5 (o una versión posterior) no está instalado.
 
     > [!NOTE]
-    > La carpeta **NET Framework Setup** del Registro no comienza con un punto.
+    > La carpeta **NET Framework Setup** del Registro *no* comienza con un punto.
 
 3. Busque una entrada DWORD denominada **Release**. Si existe, significa que tiene instalado .NET Framework 4.5 o una versión posterior. Su valor es una clave de versión que corresponde a una versión concreta de .NET Framework. En la ilustración siguiente, por ejemplo, el valor de la entrada **Release** es *378389*, que es la clave de versión de .NET Framework 4.5. 
 
      ![Entrada del Registro para .NET Framework 4.5](media/clr-installdir.png "Registry entry for the .NET Framework 4.5")
 
-En la tabla siguiente se muestra el valor mínimo del valor de la entrada **Release** para cada versión de .NET Framework. Puede usar estos valores de la manera siguiente:
-
-- Para determinar si existe una versión mínima de .NET Framework, pruebe si el valor DWORD **Release** que se encuentra en el Registro es *mayor o igual* que el valor que aparece en la tabla. Por ejemplo, si la aplicación requiere .NET Framework 4.7 o versiones posteriores, debe probar si el valor de versión mínimo es *460798*.
-
-- Para probar varias versiones, comience con la versión más reciente de .NET Framework y, luego, pruebe las versiones anteriores sucesivas.
+En la tabla siguiente se muestra el valor de DWORD **Release** de sistemas operativos individuales para .NET Framework 4.5 y versiones posteriores.
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
@@ -86,18 +82,23 @@ En la tabla siguiente se muestra el valor mínimo del valor de la entrada **Rele
 
 |Versión de .NET Framework|Valor DWORD de la versión|
 |--------------------------------|-------------|
-|.NET Framework 4.5|378389|
-|.NET Framework 4.5.1|378675|
-|.NET Framework 4.5.2|379893|
-|.NET Framework 4.6|393295|
-|.NET Framework 4.6.1|394254|
-|.NET Framework 4.6.2|394802|
-|.NET Framework 4.7|460798|
-|.NET Framework 4.7.1|461308|
-|.NET Framework 4.7.2|461808|
+|.NET Framework 4.5|Todos los sistemas operativos Windows: 378389|
+|.NET Framework 4.5.1|En Windows 8.1 y Windows Server 2012 R2: 378675<br />En todos los demás sistemas operativos Windows: 378758|
+|.NET Framework 4.5.2|Todos los sistemas operativos Windows: 379893|
+|.NET Framework 4.6|En Windows 10: 393295<br />En todos los demás sistemas operativos Windows: 393297|
+|.NET Framework 4.6.1|En sistemas con la actualización de noviembre de Windows 10: 394254<br />En todos los demás sistemas operativos Windows (incluido Windows 10): 394271|
+|.NET Framework 4.6.2|En la Actualización de aniversario de Windows 10 y Windows Server 2016: 394802<br />En todos los demás sistemas operativos Windows (incluidos otros sistemas operativos Windows 10): 394806|
+|.NET Framework 4.7|En Windows 10 Creators Update: 460798<br />En todos los demás sistemas operativos Windows (incluidos otros sistemas operativos Windows 10): 460805| 
+|.NET Framework 4.7.1|En Windows 10 Fall Creators Update y Windows Server, versión 1709: 461308<br/>En todos los demás sistemas operativos Windows (incluidos otros sistemas operativos Windows 10): 461310|
+|.NET Framework 4.7.2|En la actualización de Windows 10 de abril de 2018 y Windows Server, versión 1803: 461808<br/>En todos los sistemas operativos diferentes de la Actualización de abril de 2018 de Windows 10 y Windows Server, versión 1803: 461814|  
 
-Para obtener una tabla completa de claves de versión de .NET Framework para versiones específicas del sistema operativo Windows, consulte [.NET Framework release keys and Windows operating system versions](release-keys-and-os-versions.md) (Claves de versión de .NET Framework y versiones del sistema operativo Windows).
+Puede usar estos valores de la manera siguiente:
 
+- Para determinar si una versión específica de .NET Framework está instalada en una versión concreta del sistema operativo Windows, pruebe si el valor de DWORD **Release** es *igual al* valor que aparece en la tabla. Por ejemplo, para determinar si .NET Framework 4.6 está presente en un sistema Windows 10, pruebe un valor de **Release** que sea *igual a* 393295.
+
+- Para determinar si existe una versión mínima de .NET Framework, utilice el valor más bajo de DWORD **Release** para dicha versión. Por ejemplo, si la aplicación se ejecuta en .NET Framework 4.6 o una versión posterior, pruebe un valor de DWORD **RELEASE** que sea *mayor o igual que* 393295. Para una tabla que muestra solo el valor mínimo de DWORD **RELEASE** para cada versión de .NET Framework, vea [Valores mínimos de DWORD Release para .NET Framework 4.5 y versiones posteriores](minimum-release-dword.md).
+
+- Para probar varias versiones, empiece por probar un valor que sea *mayor o igual que* el valor más bajo de DWORD para la última versión de .NET Framework y, después, compare el valor con el valor más bajo de DWORD para cada versión anterior sucesiva. Por ejemplo, si la aplicación requiere .NET Framework 4.7 o versiones posteriores y quiere determinar cuál es la versión específica de .NET Framework existente, empiece por probar un valor de DWORD **RELEASE** que sea *mayor o igual que* 461808 (el valor de DWORD más pequeño para .NET Framework 4.7.2). Después, compare el valor de DWORD **RELEASE** con el valor más bajo de cada versión posterior de .NET Framework. Para una tabla que muestra solo el valor mínimo de DWORD **RELEASE** para cada versión de .NET Framework, vea [Valores mínimos de DWORD Release para .NET Framework 4.5 y versiones posteriores](minimum-release-dword.md).
 
 <a name="net_d"></a> 
 ### <a name="find-net-framework-versions-45-and-later-with-code"></a>Búsqueda de versiones de .NET Framework 4.5 y versiones posteriores con código
@@ -217,6 +218,6 @@ En el ejemplo siguiente se usa la propiedad <xref:System.Environment.Version%2A?
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Determinar las actualizaciones de .NET Framework que están instaladas](how-to-determine-which-net-framework-updates-are-installed.md)
+- [Procedimiento para determinar qué actualizaciones de .NET Framework están instaladas](how-to-determine-which-net-framework-updates-are-installed.md)
 - [Instalación de .NET Framework para desarrolladores](../install/guide-for-developers.md)
 - [Versiones y dependencias de .NET Framework](versions-and-dependencies.md)

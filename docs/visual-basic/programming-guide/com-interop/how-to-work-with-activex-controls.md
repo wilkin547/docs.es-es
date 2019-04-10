@@ -1,29 +1,29 @@
 ---
-title: Procedimiento Trabajar con controles ActiveX (Visual Basic)
+title: Filtrar Trabajar con controles ActiveX (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: 400f361f1eaaa78a7b9481e3b876c54847df4cb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5950779e1f0d1e76b933b83135a8bf516161aced
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557700"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295086"
 ---
-# <a name="how-to-work-with-activex-controls-visual-basic"></a>Procedimiento Trabajar con controles ActiveX (Visual Basic)
+# <a name="how-to-work-with-activex-controls-visual-basic"></a>Filtrar Trabajar con controles ActiveX (Visual Basic)
 Controles ActiveX son componentes COM o los objetos que se puede insertar en una página Web u otra aplicación para reutilizar la funcionalidad de empaquetado que otra persona ha programado. Puede usar controles ActiveX desarrollados para que Visual Basic 6.0 y versiones anteriores para agregar características a la **cuadro de herramientas** de Visual Studio.  
   
 ### <a name="to-add-activex-controls-to-the-toolbox"></a>Para agregar controles ActiveX al cuadro de herramientas  
   
-1.  En el **herramientas** menú, haga clic en **elegir elementos del cuadro de herramientas**.  
+1. En el **herramientas** menú, haga clic en **elegir elementos del cuadro de herramientas**.  
   
      El **cuadro de herramientas elija** aparece el cuadro de diálogo.  
   
-2.  Haga clic en el **componentes COM** ficha.  
+2. Haga clic en el **componentes COM** ficha.  
   
-3.  Active la casilla situada junto al control ActiveX que desea usar y, a continuación, haga clic en **Aceptar**.  
+3. Active la casilla situada junto al control ActiveX que desea usar y, a continuación, haga clic en **Aceptar**.  
   
      El nuevo control aparece con las demás herramientas de la **cuadro de herramientas**.  
   
@@ -33,7 +33,7 @@ Controles ActiveX son componentes COM o los objetos que se puede insertar en una
 ## <a name="see-also"></a>Vea también
 
 - [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Cómo: Agregar controles ActiveX a formularios de Windows](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [Filtrar para agregar controles ActiveX a formularios Windows Forms](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
 - [Aximp.exe (Importador de controles ActiveX de Windows Forms)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
-- [Consideraciones al hospedar un control ActiveX en Windows Forms](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
+- [Consideraciones al alojar un control ActiveX en Windows Forms](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
 - [Solución de problemas de interoperabilidad](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

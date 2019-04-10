@@ -2,12 +2,12 @@
 title: Contexto de esquema XAML predeterminado y contexto de esquema XAML de WPF
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 1312541321e74668e6527c6c54e712342fbb3a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124701"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295606"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Contexto de esquema XAML predeterminado y contexto de esquema XAML de WPF
 Un contexto de esquema XAML es una entidad conceptual que califica cómo interactúa una producción de XAML que usa un vocabulario XAML concreto con el objeto de escritura de comportamiento, incluido cómo resuelve la asignación de tipos, cómo se cargan los ensamblados, cómo ciertos lector y escritor se interpreta la configuración. En este tema se describe las características de los servicios XAML de .NET Framework y el contexto de esquema XAML predeterminado asociado, que se basa en el sistema de tipos CLR. En este tema también se describe el contexto de esquema XAML que se usa para WPF.  
@@ -46,9 +46,9 @@ Un contexto de esquema XAML es una entidad conceptual que califica cómo interac
   
 #### <a name="xaml-reader-input-loose-xaml"></a>Entrada de lector XAML (XAML flexible)  
   
-1.  El contexto de esquema XAML recorre la <xref:System.AppDomain> de la aplicación, busca un ensamblado ya cargado que coincida con todos los aspectos del nombre, empezando desde el más recientemente ensamblado cargado. Si se encuentra una coincidencia, se usa dicho ensamblado para la resolución.  
+1. El contexto de esquema XAML recorre la <xref:System.AppDomain> de la aplicación, busca un ensamblado ya cargado que coincida con todos los aspectos del nombre, empezando desde el más recientemente ensamblado cargado. Si se encuentra una coincidencia, se usa dicho ensamblado para la resolución.  
   
-2.  En caso contrario, una de las técnicas siguientes en función de CLR <xref:System.Reflection.Assembly> API se usan para cargar un ensamblado:  
+2. En caso contrario, una de las técnicas siguientes en función de CLR <xref:System.Reflection.Assembly> API se usan para cargar un ensamblado:  
   
     -   Si está calificado el nombre de la asignación, llame a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> en el nombre completo.  
   
@@ -61,9 +61,9 @@ Un contexto de esquema XAML es una entidad conceptual que califica cómo interac
   
  Tenga en cuenta que las referencias de ensamblado a través de `XamlBuildTask` siempre son nombres completos.  
   
-1.  Llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> en el nombre completo.  
+1. Llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> en el nombre completo.  
   
-2.  Si se produce un error en el paso anterior, use el nombre corto (y el token de clave pública si está presente) para llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+2. Si se produce un error en el paso anterior, use el nombre corto (y el token de clave pública si está presente) para llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 #### <a name="baml-presentationbuildtask"></a>BAML (PresentationBuildTask)  
  Hay dos aspectos a la carga de ensamblados para BAML: cargar el ensamblado inicial que contiene el BAML como un componente y carga los ensamblados de respaldo de tipo para cualquier tipo al que hace referencia la producción de BAML.  
@@ -71,16 +71,16 @@ Un contexto de esquema XAML es una entidad conceptual que califica cómo interac
 ##### <a name="assembly-load-for-initial-markup"></a>Carga de ensamblado para el marcado inicial:  
  La referencia al ensamblado para cargar el marcado de siempre está incompleta.  
   
-1.  El contexto de esquema de WPF XAML recorre la <xref:System.AppDomain> de la aplicación de WPF, busca un ensamblado ya cargado que coincida con todos los aspectos del nombre, empezando desde el más recientemente ensamblado cargado. Si se encuentra una coincidencia, se usa dicho ensamblado para la resolución.  
+1. El contexto de esquema de WPF XAML recorre la <xref:System.AppDomain> de la aplicación de WPF, busca un ensamblado ya cargado que coincida con todos los aspectos del nombre, empezando desde el más recientemente ensamblado cargado. Si se encuentra una coincidencia, se usa dicho ensamblado para la resolución.  
   
-2.  Si se produce un error en el paso anterior, use el nombre corto (y el token de clave pública si está presente) para llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+2. Si se produce un error en el paso anterior, use el nombre corto (y el token de clave pública si está presente) para llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ##### <a name="assembly-references-by-baml-types"></a>Referencias de ensamblado por tipos BAML:  
  Referencias de ensamblado para tipos que se usan en la producción de BAML siempre se completa, como una salida de la tarea de compilación.  
   
-1.  El contexto de esquema de WPF XAML recorre la <xref:System.AppDomain> de la aplicación de WPF, busca un ensamblado ya cargado que coincida con todos los aspectos del nombre, empezando desde el más recientemente ensamblado cargado. Si se encuentra una coincidencia, se usa dicho ensamblado para la resolución.  
+1. El contexto de esquema de WPF XAML recorre la <xref:System.AppDomain> de la aplicación de WPF, busca un ensamblado ya cargado que coincida con todos los aspectos del nombre, empezando desde el más recientemente ensamblado cargado. Si se encuentra una coincidencia, se usa dicho ensamblado para la resolución.  
   
-2.  En caso contrario, una de las técnicas siguientes se usa para cargar un ensamblado:  
+2. En caso contrario, una de las técnicas siguientes se usa para cargar un ensamblado:  
   
     -   Llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> en el nombre completo.  
   

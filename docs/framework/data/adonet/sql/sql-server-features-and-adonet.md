@@ -2,12 +2,12 @@
 title: Características de SQL Server y ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: b07f5e1e62744e4301acd64034481cf391100af8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4f2d93ca2abc15e4c7af8489d5b875c0a46d7185
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107528"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294904"
 ---
 # <a name="sql-server-features-and-adonet"></a>Características de SQL Server y ADO.NET
 En los temas de esta sección se describen las características de SQL Server orientadas al desarrollo de aplicaciones de base de datos con ADO.NET.  
@@ -16,7 +16,7 @@ En los temas de esta sección se describen las características de SQL Server or
   
  **Libros en pantalla de SQL Server**  
   
-1.  [Desarrollo (Motor de base de datos)](https://go.microsoft.com/fwlink/?LinkId=115245)  
+1. [Desarrollo (Motor de base de datos)](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Enumerar instancias de SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  

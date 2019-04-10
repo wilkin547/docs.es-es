@@ -3,12 +3,12 @@ title: Trabajar con LINQ
 description: En este tutorial se enseña cómo generar secuencias con LINQ, escribir métodos para su uso en consultas LINQ y distinguir entre la evaluación diligente y diferida.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679663"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815593"
 ---
 # <a name="working-with-linq"></a>Trabajar con LINQ
 
@@ -115,7 +115,7 @@ El compilador convierte las instrucciones LINQ escritas en la sintaxis de consul
 
 Continúe y ejecute el ejemplo que se ha creado en este punto. Mostrará todas las 52 cartas de la baraja. Puede ser muy útil ejecutar este ejemplo en un depurador para observar cómo se ejecutan los métodos `Suits()` y `Ranks()`. Puede ver claramente que cada cadena de cada secuencia se genera solo según sea necesario.
 
-![Ventana de la consola que muestra la aplicación escribiendo 52 cartas](./media/working-with-linq/console.png)
+![Una ventana de la consola que muestra la aplicación escribiendo 52 tarjetas.](./media/working-with-linq/console-52-card-application.png)
 
 ## <a name="manipulating-the-order"></a>Manipulación del orden
 

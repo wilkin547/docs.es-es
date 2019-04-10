@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091621"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304810"
 ---
 # <a name="wpf-add-ins-overview"></a>Información general sobre los complementos de WPF
 <a name="Introduction"></a> .NET Framework incluye un modelo de complemento que los desarrolladores pueden usar para crear aplicaciones que admiten la extensibilidad de complemento. Dicho modelo permite la creación de complementos que se integran con las aplicaciones y amplían su funcionalidad. En algunos escenarios, las aplicaciones también necesitan mostrar interfaces de usuario que se proporcionan los complementos. En este tema se muestra cómo WPF amplía el modelo de complemento de .NET Framework para habilitar estos escenarios, la arquitectura subyacente, sus ventajas y sus limitaciones.  
@@ -73,7 +73,7 @@ ms.locfileid: "59091621"
 ## <a name="wpf-add-ins"></a>Complementos WPF  
  WPF, junto con el modelo de complemento de .NET Framework, le permite abordar una amplia variedad de escenarios que requieren las aplicaciones host muestren las interfaces de usuario de complementos. En concreto, estos escenarios se tratan por WPF con los dos modelos de programación siguientes:  
   
-1.  **El complemento devuelve una interfaz de usuario**. Un complemento devuelve una interfaz de usuario a la aplicación host mediante una llamada de método, tal como se define el contrato. Este escenario se utiliza en los casos siguientes:  
+1. **El complemento devuelve una interfaz de usuario**. Un complemento devuelve una interfaz de usuario a la aplicación host mediante una llamada de método, tal como se define el contrato. Este escenario se utiliza en los casos siguientes:  
   
     -   La apariencia de una interfaz de usuario devuelto por un complemento es dependiente de datos o condiciones que existen en tiempo de ejecución, como dinámicamente los informes generan.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "59091621"
   
     -   El complemento principalmente realiza un servicio para la aplicación host y notifica el estado a la aplicación host con una interfaz de usuario.  
   
-2.  **El complemento es una interfaz de usuario**. Un complemento es una interfaz de usuario, como se define en el contrato. Este escenario se utiliza en los casos siguientes:  
+2. **El complemento es una interfaz de usuario**. Un complemento es una interfaz de usuario, como se define en el contrato. Este escenario se utiliza en los casos siguientes:  
   
     -   Los complementos solo muestran los servicios que se muestran, como un anuncio.  
   
@@ -102,13 +102,13 @@ ms.locfileid: "59091621"
   
  Los tipos de UI de WPF no son utilizables de forma remota. Para solucionar el problema, WPF amplía el modelo de complemento de .NET Framework para habilitar la UI de WPF crea los complementos que se muestran desde las aplicaciones host. Esta compatibilidad se proporciona por WPF en dos tipos: el <xref:System.AddIn.Contract.INativeHandleContract> interfaz y dos métodos estáticos implementados por el <xref:System.AddIn.Pipeline.FrameworkElementAdapters> clase: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> y <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. A un nivel alto, estos tipos y métodos se utilizan como se indica a continuación:  
   
-1.  WPF requiere que las interfaces de usuario proporcionadas por complementos sean clases que derivan directa o indirectamente de <xref:System.Windows.FrameworkElement>, como formas, controles, controles de usuario, paneles de diseño y las páginas.  
+1. WPF requiere que las interfaces de usuario proporcionadas por complementos sean clases que derivan directa o indirectamente de <xref:System.Windows.FrameworkElement>, como formas, controles, controles de usuario, paneles de diseño y las páginas.  
   
-2.  Siempre que el contrato declare que se pasará una interfaz de usuario entre el complemento y la aplicación host, debe declararse como un <xref:System.AddIn.Contract.INativeHandleContract> (no un <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> es una representación utilizable de forma remota de la IU del complemento que se puede pasar entre los límites de aislamiento.  
+2. Siempre que el contrato declare que se pasará una interfaz de usuario entre el complemento y la aplicación host, debe declararse como un <xref:System.AddIn.Contract.INativeHandleContract> (no un <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> es una representación utilizable de forma remota de la IU del complemento que se puede pasar entre los límites de aislamiento.  
   
-3.  Antes de que se pasa desde dominio de aplicación del complemento, un <xref:System.Windows.FrameworkElement> se empaqueta como un <xref:System.AddIn.Contract.INativeHandleContract> mediante una llamada a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+3. Antes de que se pasa desde dominio de aplicación del complemento, un <xref:System.Windows.FrameworkElement> se empaqueta como un <xref:System.AddIn.Contract.INativeHandleContract> mediante una llamada a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-4.  Después de que se pasa al dominio de aplicación de la aplicación host, el <xref:System.AddIn.Contract.INativeHandleContract> se debe volver a empaquetar como un <xref:System.Windows.FrameworkElement> mediante una llamada a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.  
+4. Después de que se pasa al dominio de aplicación de la aplicación host, el <xref:System.AddIn.Contract.INativeHandleContract> se debe volver a empaquetar como un <xref:System.Windows.FrameworkElement> mediante una llamada a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.  
   
  Cómo <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, y <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> se usan depende del escenario específico. En las siguientes secciones se proporciona información acerca de cada modelo de programación.  
   
@@ -116,17 +116,17 @@ ms.locfileid: "59091621"
 ## <a name="add-in-returns-a-user-interface"></a>El complemento devuelve una interfaz de usuario  
  Para que un complemento devolver una interfaz de usuario a una aplicación host, se requiere lo siguiente:  
   
-1.  La aplicación host y la canalización deben crearse, como se describe en .NET Framework [complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentación.  
+1. La aplicación host y la canalización deben crearse, como se describe en .NET Framework [complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentación.  
   
-2.  El contrato debe implementar <xref:System.AddIn.Contract.IContract> y, para devolver una interfaz de usuario, el contrato debe declarar un método con un valor devuelto de tipo <xref:System.AddIn.Contract.INativeHandleContract>.  
+2. El contrato debe implementar <xref:System.AddIn.Contract.IContract> y, para devolver una interfaz de usuario, el contrato debe declarar un método con un valor devuelto de tipo <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  La interfaz de usuario que se pasa entre el complemento y la aplicación host debe derivar directa o indirectamente de <xref:System.Windows.FrameworkElement>.  
+3. La interfaz de usuario que se pasa entre el complemento y la aplicación host debe derivar directa o indirectamente de <xref:System.Windows.FrameworkElement>.  
   
-4.  La interfaz de usuario devuelto por el complemento se debe convertir de un <xref:System.Windows.FrameworkElement> a un <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar el límite de aislamiento.  
+4. La interfaz de usuario devuelto por el complemento se debe convertir de un <xref:System.Windows.FrameworkElement> a un <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar el límite de aislamiento.  
   
-5.  La interfaz de usuario devuelto debe convertirse de un <xref:System.AddIn.Contract.INativeHandleContract> a un <xref:System.Windows.FrameworkElement> después de cruzar el límite de aislamiento.  
+5. La interfaz de usuario devuelto debe convertirse de un <xref:System.AddIn.Contract.INativeHandleContract> a un <xref:System.Windows.FrameworkElement> después de cruzar el límite de aislamiento.  
   
-6.  La aplicación host muestra el valor devuelto <xref:System.Windows.FrameworkElement>.  
+6. La aplicación host muestra el valor devuelto <xref:System.Windows.FrameworkElement>.  
   
  Para obtener un ejemplo que muestra cómo implementar un complemento que devuelva una interfaz de usuario, consulte [crear un complemento que devuelva una interfaz de usuario](how-to-create-an-add-in-that-returns-a-ui.md).  
   
@@ -134,17 +134,17 @@ ms.locfileid: "59091621"
 ## <a name="add-in-is-a-user-interface"></a>El complemento es una interfaz de usuario  
  Cuando un complemento es una interfaz de usuario, se requiere lo siguiente:  
   
-1.  La aplicación host y la canalización deben crearse, como se describe en .NET Framework [complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentación.  
+1. La aplicación host y la canalización deben crearse, como se describe en .NET Framework [complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentación.  
   
-2.  Debe implementar la interfaz de contrato para el complemento <xref:System.AddIn.Contract.INativeHandleContract>.  
+2. Debe implementar la interfaz de contrato para el complemento <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  El complemento que se pasa a la aplicación host debe derivar directa o indirectamente de <xref:System.Windows.FrameworkElement>.  
+3. El complemento que se pasa a la aplicación host debe derivar directa o indirectamente de <xref:System.Windows.FrameworkElement>.  
   
-4.  El complemento se debe convertir de un <xref:System.Windows.FrameworkElement> a un <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar el límite de aislamiento.  
+4. El complemento se debe convertir de un <xref:System.Windows.FrameworkElement> a un <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar el límite de aislamiento.  
   
-5.  El complemento se debe convertir de un <xref:System.AddIn.Contract.INativeHandleContract> a un <xref:System.Windows.FrameworkElement> después de cruzar el límite de aislamiento.  
+5. El complemento se debe convertir de un <xref:System.AddIn.Contract.INativeHandleContract> a un <xref:System.Windows.FrameworkElement> después de cruzar el límite de aislamiento.  
   
-6.  La aplicación host muestra el valor devuelto <xref:System.Windows.FrameworkElement>.  
+6. La aplicación host muestra el valor devuelto <xref:System.Windows.FrameworkElement>.  
   
  Para obtener un ejemplo que muestra cómo implementar un complemento es una interfaz de usuario, consulte [crear un complemento, que es una interfaz de usuario](how-to-create-an-add-in-that-is-a-ui.md).  
   
@@ -181,15 +181,15 @@ ms.locfileid: "59091621"
   
  El siguiente paso es especificar los ensamblados de canalización y el ensamblado del complemento como archivos de contenido de las [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] en [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] haciendo lo siguiente:  
   
-1.  Incluir Incluso el ensamblado de la canalización y del complemento en el proyecto haciendo clic con el botón derecho en cada carpeta de la canalización en el Explorador de soluciones y elegir **Incluir en el proyecto**.  
+1. Incluir Incluso el ensamblado de la canalización y del complemento en el proyecto haciendo clic con el botón derecho en cada carpeta de la canalización en el Explorador de soluciones y elegir **Incluir en el proyecto**.  
   
-2.  Establecer el **acción de compilación** de cada ensamblado de canalización y ensamblado de complemento en **Contenido** desde la ventana **Propiedades**.  
+2. Establecer el **acción de compilación** de cada ensamblado de canalización y ensamblado de complemento en **Contenido** desde la ventana **Propiedades**.  
   
  El paso final es configurar el manifiesto de aplicación para incluir los archivos del ensamblado de la canalización como el archivo del ensamblado del complemento en la descarga. Los archivos deben encontrarse en las carpetas de la raíz de la carpeta de la caché de [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] que ocupa la aplicación de [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. En [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], para lograr esta configuración es preciso realizar las siguientes acciones:  
   
-1.  Haga clic con el botón derecho en el proyecto de [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], haga clic en **Propiedades**, **Publicar** y, después, haga clic en el botón **Archivos de aplicación**.  
+1. Haga clic con el botón derecho en el proyecto de [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], haga clic en **Propiedades**, **Publicar** y, después, haga clic en el botón **Archivos de aplicación**.  
   
-2.  En el cuadro de diálogo **Archivos de aplicación**, establezca el **estado de la publicación** de la DLL de cada canalización y complemento en **Incluir (automático)** y establezca el **grupo de descarga** de la DLL de cada canalización y complemento en **(Requerido)**.  
+2. En el cuadro de diálogo **Archivos de aplicación**, establezca el **estado de la publicación** de la DLL de cada canalización y complemento en **Incluir (automático)** y establezca el **grupo de descarga** de la DLL de cada canalización y complemento en **(Requerido)**.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Uso de la canalización y del complemento de la base de aplicación  
  Cuando la canalización y el complemento están configurados para la implementación de [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], se descargan en la misma carpeta de caché de [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] que la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para usar la canalización y el complemento de la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], el código de la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] debe obtenerlos de la base de la aplicación. Los distintos tipos y miembros del modelo de complemento de .NET Framework para el uso de canalizaciones y complementos proporcionan una compatibilidad especial para este escenario. En primer lugar, la ruta de acceso se identifica mediante el <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> valor de enumeración. Este valor se utiliza en las sobrecargas de los miembros del complemento pertinentes para usar canalizaciones que incluyan los siguientes:  

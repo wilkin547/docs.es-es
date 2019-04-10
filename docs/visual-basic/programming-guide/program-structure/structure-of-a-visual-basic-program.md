@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828126"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295775"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Estructura de un programa de Visual Basic
 Un programa de Visual Basic se componen de bloques de creación estándar. Un *solución* consta de uno o varios proyectos. Un *proyecto* a su vez puede contener uno o más ensamblados. Cada *ensamblado* está compilada a partir de uno o varios archivos de origen. Un *archivo de código fuente* proporciona la definición e implementación de clases, estructuras, módulos e interfaces, que en última instancia contienen todo el código.  
@@ -22,11 +22,11 @@ Un programa de Visual Basic se componen de bloques de creación estándar. Un *s
 ## <a name="file-level-programming-elements"></a>Elementos de programación de nivel de archivo  
  Al iniciar un proyecto o archivo y abrir el editor de código, verá algo de código ya está en su lugar y en el orden correcto. Cualquier código que escriba debe seguir la secuencia siguiente:  
   
-1.  `Option` Instrucciones  
+1. `Option` instrucciones  
   
-2.  `Imports` Instrucciones  
+2. `Imports` instrucciones  
   
-3.  `Namespace` instrucciones y los elementos de nivel de espacio de nombres  
+3. `Namespace` instrucciones y los elementos de nivel de espacio de nombres  
   
  Si escribe instrucciones en un orden diferente, pueden dar lugar a errores de compilación.  
   
@@ -47,30 +47,30 @@ Un programa de Visual Basic se componen de bloques de creación estándar. Un *s
 ## <a name="namespace-level-programming-elements"></a>Elementos de programación de nivel de Namespace  
  Las clases, estructuras y los módulos contienen todo el código en el archivo de origen. Son *nivel de espacio de nombres* elementos, que pueden aparecer dentro de un espacio de nombres o en el nivel de archivos de origen. Contienen las declaraciones de todos los demás elementos de programación. Las interfaces, que definen las firmas de elemento pero no proporcionan ninguna implementación, también aparecen en el nivel de módulo. Para obtener más información sobre los elementos de nivel de módulo, vea lo siguiente:  
   
--   [Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md)  
+-   [Class (Instrucción)](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md)  
+-   [Structure (Instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module (instrucción)](../../../visual-basic/language-reference/statements/module-statement.md)  
+-   [Module (Instrucción)](../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface (instrucción)](../../../visual-basic/language-reference/statements/interface-statement.md)  
+-   [Interface (Instrucción)](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
  Elementos de datos en el nivel de espacio de nombres son las enumeraciones y delegados.  
   
 ## <a name="module-level-programming-elements"></a>Elementos de programación de nivel de módulo  
  Los procedimientos, operadores, propiedades y eventos son los únicos elementos de programación que pueden contener código ejecutable (instrucciones que realizan acciones en tiempo de ejecución). Son el *nivel de módulo* elementos del programa. Para obtener más información sobre los elementos de nivel de procedimiento, vea lo siguiente:  
   
--   [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)  
+-   [Function (Instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
+-   [Sub (Instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)  
+-   [Event (Instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)  
   
  Elementos de datos en el nivel de módulo son variables, constantes, enumeraciones y delegados.  
   

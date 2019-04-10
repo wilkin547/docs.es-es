@@ -2,12 +2,12 @@
 title: Cómo Particionar datos de servicio
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: c5cfd56943c97b70ef12276f1bae47fa870366a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 17cb80bf253491eb563d6fd45b5997e452f542e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150103"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300390"
 ---
 # <a name="how-to-service-data-partitioning"></a>Cómo Particionar datos de servicio
 Este tema describe los pasos básicos necesarios para realizar particiones de los mensajes en múltiples instancias de un mismo servicio de destino. La partición de datos de servicio se suele utilizar cuando hay que ajustar un servicio para proporcionar una mayor calidad del servicio, o cuando hay que administrar solicitudes de diversos clientes de una manera determinada. Por ejemplo, los mensajes de gran importancia o clientes "Oro" que deba procesarse con una prioridad más alta que los mensajes de un cliente estándar.  
@@ -21,7 +21,7 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
   
 ### <a name="implement-service-data-partitioning"></a>Implementación de partición de datos de servicio  
   
-1.  Cree la configuración de servicio de enrutamiento básica especificando los extremos de servicio expuestos por el servicio. En el siguiente ejemplo, se definen dos puntos de conexión que se utilizarán para recibir mensajes. También se definen los puntos de conexión del cliente, que se utilizan para enviar mensajes a las instancias de servicio de regularCalc.  
+1. Cree la configuración de servicio de enrutamiento básica especificando los extremos de servicio expuestos por el servicio. En el siguiente ejemplo, se definen dos puntos de conexión que se utilizarán para recibir mensajes. También se definen los puntos de conexión del cliente, que se utilizan para enviar mensajes a las instancias de servicio de regularCalc.  
   
     ```xml  
     <services>  
@@ -58,7 +58,7 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
      </client>  
     ```  
   
-2.  Defina los filtros usados para enrutar mensajes a los extremos del destino.  En este ejemplo, se usa el filtro EndpointName para determinar qué punto de conexión de servicio recibe el mensaje. En el siguiente ejemplo, se definen los filtros y la sección de enrutamiento necesarios.  
+2. Defina los filtros usados para enrutar mensajes a los extremos del destino.  En este ejemplo, se usa el filtro EndpointName para determinar qué punto de conexión de servicio recibe el mensaje. En el siguiente ejemplo, se definen los filtros y la sección de enrutamiento necesarios.  
   
     ```xml  
     <filters>  
@@ -71,7 +71,7 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
     </filters>  
     ```  
   
-3.  Defina la tabla de filtro, que asocia cada filtro a un punto de conexión del cliente. En este ejemplo, el mensaje se enrutará según el punto de conexión concreto en el que se recibió. Como el mensaje solo puede coincidir con uno de los dos posibles filtros, no hay necesidad de utilizar la prioridad del filtro para controlar el orden en el que se evalúan los filtros.  
+3. Defina la tabla de filtro, que asocia cada filtro a un punto de conexión del cliente. En este ejemplo, el mensaje se enrutará según el punto de conexión concreto en el que se recibió. Como el mensaje solo puede coincidir con uno de los dos posibles filtros, no hay necesidad de utilizar la prioridad del filtro para controlar el orden en el que se evalúan los filtros.  
   
      El procedimiento siguiente define la tabla de filtros y agrega los filtros definidos anteriormente.  
   
@@ -85,7 +85,7 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
     </filterTables>  
     ```  
   
-4.  Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla, debe asociar la tabla de filtros a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. El ejemplo siguiente se muestra cómo asociar "filterTable1" a los puntos de conexión de servicio:  
+4. Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla, debe asociar la tabla de filtros a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. El ejemplo siguiente se muestra cómo asociar "filterTable1" a los puntos de conexión de servicio:  
   
     ```xml  
     <behaviors>  

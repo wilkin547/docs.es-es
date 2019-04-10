@@ -2,25 +2,25 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129693"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304589"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities proporciona la capacidad de realizar consultas integradas en lenguajes (LINQ) que permite a los desarrolladores de software escribir consultas contra el modelo conceptual de Entity Framework mediante Visual Basic o Visual C#. Las consultas con Entity Framework se representan mediante consultas de árboles de comandos, que se ejecutan en el contexto del objeto. LINQ to Entities convierte las consultas de Language-Integrated Queries (LINQ) en consultas de árboles de comandos, ejecuta las consultas en Entity Framework y devuelve objetos que se pueden usar tanto en Entity Framework como en LINQ. A continuación se muestra el proceso para crear y ejecutar una consulta de LINQ to Entities.  
   
-1.  Cree una instancia de <xref:System.Data.Objects.ObjectQuery%601> en <xref:System.Data.Objects.ObjectContext>.  
+1. Cree una instancia de <xref:System.Data.Objects.ObjectQuery%601> en <xref:System.Data.Objects.ObjectContext>.  
   
-2.  Cree una consulta de LINQ to Entities en C# o Visual Basic con la instancia de <xref:System.Data.Objects.ObjectQuery%601>.  
+2. Cree una consulta de LINQ to Entities en C# o Visual Basic con la instancia de <xref:System.Data.Objects.ObjectQuery%601>.  
   
-3.  Convierta los operadores y expresiones de consulta estándar de LINQ en árboles de comandos.  
+3. Convierta los operadores y expresiones de consulta estándar de LINQ en árboles de comandos.  
   
-4.  Ejecute la consulta, con representación de un árbol de comandos, en el origen de datos. Las excepciones producidas en el origen de datos durante la ejecución se pasan directamente al cliente.  
+4. Ejecute la consulta, con representación de un árbol de comandos, en el origen de datos. Las excepciones producidas en el origen de datos durante la ejecución se pasan directamente al cliente.  
   
-5.  Devuelva los resultados de la consulta al cliente.  
+5. Devuelva los resultados de la consulta al cliente.  
   
 ## <a name="constructing-an-objectquery-instance"></a>Crear una instancia de ObjectQuery  
  La clase <xref:System.Data.Objects.ObjectQuery%601> genérica representa una consulta que devuelve una colección de cero o más entidades con tipo. Una consulta de objetos se suele crear a partir de un contexto del objeto existente, en lugar de crearse de forma manual, y siempre pertenece a dicho contexto. Este contexto proporciona la información de metadatos y de conexión necesaria para crear y ejecutar la consulta. La clase genérica <xref:System.Data.Objects.ObjectQuery%601> implementa la interfaz genérica <xref:System.Linq.IQueryable%601>, cuyos métodos de generador permiten que las consultas de LINQ se generen de forma gradual. También puede dejar que el compilador deduzca el tipo de entidades utilizando la palabra clave `var` de C# (`Dim` en Visual Basic, con la inferencia de tipos locales habilitada).  

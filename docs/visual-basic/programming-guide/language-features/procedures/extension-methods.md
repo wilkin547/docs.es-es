@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822081"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296243"
 ---
 # <a name="extension-methods-visual-basic"></a>Métodos de extensión (Visual Basic)
 Métodos de extensión permiten a los desarrolladores agregar funcionalidad personalizada a los tipos de datos que ya están definidos sin crear un nuevo tipo derivado. Métodos de extensión permiten escribir un método que se pueda llamar como si fuera un método de instancia del tipo existente.  
@@ -160,17 +160,17 @@ End Module
 ## <a name="extension-method-precedence"></a>Prioridad del método de extensión  
  Cuando dos métodos de extensión que tienen firmas idénticas están en ámbito y accesible, se invocará el uno con prioridad más alta. Prioridad de un método de extensión se basa en el mecanismo utilizado para poner el método en el ámbito. En la lista siguiente se muestra la jerarquía de precedencia, de mayor a menor.  
   
-1.  Métodos de extensión definidos dentro del módulo actual.  
+1. Métodos de extensión definidos dentro del módulo actual.  
   
-2.  Métodos de extensión tipos definidos por el dentro de datos en el espacio de nombres actual o cualquiera de sus elementos primarios, con espacios de nombres secundarios tienen mayor prioridad que los espacios de nombres primario.  
+2. Métodos de extensión tipos definidos por el dentro de datos en el espacio de nombres actual o cualquiera de sus elementos primarios, con espacios de nombres secundarios tienen mayor prioridad que los espacios de nombres primario.  
   
-3.  Métodos de extensión definidos dentro de cualquier tipo de importaciones en el archivo actual.  
+3. Métodos de extensión definidos dentro de cualquier tipo de importaciones en el archivo actual.  
   
-4.  Métodos de extensión definidos dentro de cualquier importación de espacio de nombres en el archivo actual.  
+4. Métodos de extensión definidos dentro de cualquier importación de espacio de nombres en el archivo actual.  
   
-5.  Métodos de extensión definidos dentro de cualquier tipo de nivel de proyecto de importación.  
+5. Métodos de extensión definidos dentro de cualquier tipo de nivel de proyecto de importación.  
   
-6.  Métodos de extensión definidos dentro de cualquier importación de espacio de nombres de nivel de proyecto.  
+6. Métodos de extensión definidos dentro de cualquier importación de espacio de nombres de nivel de proyecto.  
   
  Si la prioridad no resuelve la ambigüedad, puede usar el nombre completo para especificar el método que está llamando. Si el `Print` método en el ejemplo anterior se define en un módulo denominado `StringExtensions`, el nombre completo es `StringExtensions.Print(example)` en lugar de `example.Print()`.  
   
@@ -178,8 +178,8 @@ End Module
 
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
-- [Métodos de extensión](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-- [Module (instrucción)](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [Métodos de extensión.](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Module (Instrucción)](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Parámetros opcionales](./optional-parameters.md)
 - [Matrices de parámetros](./parameter-arrays.md)

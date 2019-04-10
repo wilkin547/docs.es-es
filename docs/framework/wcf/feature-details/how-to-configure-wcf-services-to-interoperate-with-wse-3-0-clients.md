@@ -2,19 +2,19 @@
 title: Filtrar para configurar los servicios WCF para interoperar con clientes de WSE 3.0
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 24c44f415eff8518bcd73696c5cd9302371ad0c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177299"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303900"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Filtrar para configurar los servicios WCF para interoperar con clientes de WSE 3.0
 Servicios de Windows Communication Foundation (WCF) son compatibles con el nivel de conexión con Web Services Enhancements 3.0 para los clientes de Microsoft .NET (WSE) cuando se configuran los servicios de WCF para usar la versión de agosto de 2004 de la especificación WS-Addressing.  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>Para permitir a un servicio de WCF interoperar con clientes de WSE 3.0  
   
-1.  Definir un enlace personalizado para el servicio WCF.  
+1. Definir un enlace personalizado para el servicio WCF.  
   
      Para especificar que la versión de agosto de 2004 de la especificación WS-Addressing se utiliza para la codificación de mensajes, se deberá crear un enlace personalizado.  
   
@@ -44,7 +44,7 @@ Servicios de Windows Communication Foundation (WCF) son compatibles con el nivel
         > [!NOTE]
         >  Cuando utilice SOAP 1.2, establezca el atributo `messageVersion` en <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>.  
   
-2.  Especifique que el servicio utiliza el enlace personalizado.  
+2. Especifique que el servicio utiliza el enlace personalizado.  
   
     1.  Establecer el `binding` atributo de la [ \<punto de conexión >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento `customBinding`.  
   

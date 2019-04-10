@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-ms.openlocfilehash: 186b921f508b1a4b05e766c4f1a3c9e65de04722
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 38550b3b7d6fd7c6808db174017499ec71685140
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089294"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299857"
 ---
 # <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Filtrar Personalizar fuentes con el proveedor de Entity Framework (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite personalizar la serialización Atom en una respuesta del servicio de datos para que las propiedades de una entidad pueden asignarse a los elementos no usados que se definen en el protocolo AtomPub. En este tema se explica cómo definir los atributos de asignación para los tipos de entidad en un modelo de datos definido en un archivo .edmx utilizando el proveedor de Entity Framework. Para obtener más información, consulte [personalización de fuente](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
@@ -19,21 +19,21 @@ ms.locfileid: "59089294"
   
 ### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a>Para modificar manualmente el archivo Northwind.edmx para agregar los atributos de personalización de fuente  
   
-1.  En **el Explorador de soluciones**, haga clic en el `Northwind.edmx` de archivo y, a continuación, haga clic en **abrir con**.  
+1. En **el Explorador de soluciones**, haga clic en el `Northwind.edmx` de archivo y, a continuación, haga clic en **abrir con**.  
   
-2.  En el **abrir con - Northwind.edmx** cuadro de diálogo, seleccione **Editor XML**y, a continuación, haga clic en **Aceptar**.  
+2. En el **abrir con - Northwind.edmx** cuadro de diálogo, seleccione **Editor XML**y, a continuación, haga clic en **Aceptar**.  
   
-3.  Busque el elemento `ConceptualModels` y reemplace el tipo de entidad `Customers` existente con el siguiente elemento que contiene los atributos de asignación de personalización de la fuente:  
+3. Busque el elemento `ConceptualModels` y reemplace el tipo de entidad `Customers` existente con el siguiente elemento que contiene los atributos de asignación de personalización de la fuente:  
   
      [!code-xml[Astoria Custom Feeds#EdmFeedCustomers](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedcustomers)]  
   
-4.  Guarde los cambios y cierre el archivo Northwind.edmx.  
+4. Guarde los cambios y cierre el archivo Northwind.edmx.  
   
-5.  (Opcional) Haga clic en el archivo Northwind.edmx y, a continuación, haga clic en **ejecutar herramienta personalizada**.  
+5. (Opcional) Haga clic en el archivo Northwind.edmx y, a continuación, haga clic en **ejecutar herramienta personalizada**.  
   
      Esto regenera el archivo de capa de objeto, que puede ser necesario.  
   
-6.  Compile de nuevo el proyecto.  
+6. Compile de nuevo el proyecto.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo anterior se devuelve el resultado siguiente para el identificador URI `http://myservice/Northwind.svc/Customers('ALFKI')`.  

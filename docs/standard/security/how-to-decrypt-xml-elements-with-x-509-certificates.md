@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Descifrar elementos XML con certificados X.509
+title: Filtrar para descifrar elementos XML con certificados X.509
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e58a463c38dc41e669cf554961124b893fb7406
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72e5f1e72d3ce7ec954d61216bbac2e0e1b5a428
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682143"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301209"
 ---
-# <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Procedimiento Descifrar elementos XML con certificados X.509
+# <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Filtrar para descifrar elementos XML con certificados X.509
 Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar y descifrar un elemento dentro de un documento XML.  El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.  Para obtener más información sobre el estándar de cifrado XML, vea la especificación de World Wide Web Consortium (W3C) para cifrado XML ubicado en <https://www.w3.org/TR/xmldsig-core/>.  
   
- Este ejemplo descifra un elemento XML que se cifró mediante los métodos descritos en: [Cómo: Cifrar elementos XML con certificados X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Busca un elemento <`EncryptedData`>, lo descifra y lo reemplaza por el elemento XML de texto sin formato original.  
+ Este ejemplo descifra un elemento XML que se cifró mediante los métodos descritos en: [Cómo: Cifrar elementos XML con certificados X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Encuentre un <`EncryptedData`> elemento, se descifra el elemento y, a continuación, reemplaza el elemento con el elemento XML de texto simple original.  
   
- El ejemplo de código de este procedimiento descifra un elemento XML mediante un certificado X.509 del almacén de certificados local de la cuenta de usuario actual.  El ejemplo usa el método <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> para recuperar de forma automática el certificado X.509 y descifrar una clave de sesión almacenada en el elemento <`EncryptedKey`> del elemento <`EncryptedData`>.  Luego, el método <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> usa automáticamente la clave de sesión para descifrar el elemento XML.  
+ El ejemplo de código de este procedimiento descifra un elemento XML mediante un certificado X.509 del almacén de certificados local de la cuenta de usuario actual.  El ejemplo se usa el <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> método automáticamente recuperar el certificado X.509 y descifrar una clave de sesión almacenada en el <`EncryptedKey`> elemento de la <`EncryptedData`> elemento.  Luego, el método <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> usa automáticamente la clave de sesión para descifrar el elemento XML.  
   
  Este ejemplo resulta adecuado en aquellas situaciones en las que varias aplicaciones tienen que compartir datos cifrados o en las que una aplicación tiene que guardar datos cifrados entre los intervalos en los que se ejecuta.  
   
 ### <a name="to-decrypt-an-xml-element-with-an-x509-certificate"></a>Para descifrar un elemento XML con un certificado X.509  
   
-1.  Cree un objeto <xref:System.Xml.XmlDocument> cargando un archivo XML del disco.  El objeto <xref:System.Xml.XmlDocument> contiene el elemento XML que se va a descifrar.  
+1. Cree un objeto <xref:System.Xml.XmlDocument> cargando un archivo XML del disco.  El objeto <xref:System.Xml.XmlDocument> contiene el elemento XML que se va a descifrar.  
   
      [!code-csharp[HowToDecryptXMLElementX509#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#2)]
      [!code-vb[HowToDecryptXMLElementX509#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#2)]  
   
-2.  Cree un objeto <xref:System.Security.Cryptography.Xml.EncryptedXml> nuevo pasando el objeto <xref:System.Xml.XmlDocument> al constructor.  
+2. Cree un objeto <xref:System.Security.Cryptography.Xml.EncryptedXml> nuevo pasando el objeto <xref:System.Xml.XmlDocument> al constructor.  
   
      [!code-csharp[HowToDecryptXMLElementX509#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#3)]
      [!code-vb[HowToDecryptXMLElementX509#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#3)]  
   
-3.  Descifre el documento XML mediante el método <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A>.  
+3. Descifre el documento XML mediante el método <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A>.  
   
      [!code-csharp[HowToDecryptXMLElementX509#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#4)]
      [!code-vb[HowToDecryptXMLElementX509#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#4)]  
   
-4.  Guarde el objeto <xref:System.Xml.XmlDocument>.  
+4. Guarde el objeto <xref:System.Xml.XmlDocument>.  
   
      [!code-csharp[HowToDecryptXMLElementX509#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#5)]
      [!code-vb[HowToDecryptXMLElementX509#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#5)]  
@@ -80,4 +80,4 @@ Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptograph
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Security.Cryptography.Xml>
-- [Cómo: Cifrar elementos XML con certificados X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)
+- [Filtrar para cifrar elementos XML con certificados X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)

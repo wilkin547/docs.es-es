@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: 063d9e334575170c632eb49aef527b14a6d164b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c6c36641463a45b79d437ae3910bbe7474d425cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207115"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305109"
 ---
 # <a name="how-to-examine-the-security-context"></a>Filtrar para examinar el contexto de seguridad
 Al programar servicios Windows Communication Foundation (WCF), el contexto de seguridad de servicio le permite determinar los detalles sobre las credenciales de cliente y las notificaciones que se usa para autenticarse con el servicio. Esto se hace utilizando las propiedades de la clase <xref:System.ServiceModel.ServiceSecurityContext>.  
@@ -29,13 +29,13 @@ Al programar servicios Windows Communication Foundation (WCF), el contexto de se
   
 ### <a name="to-determine-the-identity-of-the-caller"></a>Determinación de la identidad del llamador  
   
-1.  Imprima el valor de las propiedades <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> y <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>.  
+1. Imprima el valor de las propiedades <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> y <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>.  
   
 ### <a name="to-parse-the-claims-of-a-caller"></a>Análisis de las demandas de un llamador  
   
-1.  Devuelva la clase <xref:System.IdentityModel.Policy.AuthorizationContext> actual. Utilice la propiedad <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> para devolver el contexto de seguridad de servicio actual, a continuación, devuelva el `AuthorizationContext` mediante la propiedad <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A>.  
+1. Devuelva la clase <xref:System.IdentityModel.Policy.AuthorizationContext> actual. Utilice la propiedad <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> para devolver el contexto de seguridad de servicio actual, a continuación, devuelva el `AuthorizationContext` mediante la propiedad <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A>.  
   
-2.  Analice la colección de objetos de vueltos de <xref:System.IdentityModel.Claims.ClaimSet> mediante la propiedad <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> de la clase <xref:System.IdentityModel.Policy.AuthorizationContext>.  
+2. Analice la colección de objetos de vueltos de <xref:System.IdentityModel.Claims.ClaimSet> mediante la propiedad <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> de la clase <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente imprime los valores de las propiedades <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> y <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> del contexto de seguridad actual y la propiedad <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>, el valor de recurso de la demanda, y la propiedad <xref:System.IdentityModel.Claims.Claim.Right%2A> de cada demanda en el contexto de seguridad actual.  

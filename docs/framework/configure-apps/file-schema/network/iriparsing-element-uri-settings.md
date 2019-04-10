@@ -2,12 +2,12 @@
 title: <iriParsing> Elemento (configuración de Uri)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: 710d82b70eb16e88404d4d8bbf38d2d030693103
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7033f4dcda7d2fe73310ae0d36d9b05c090d13d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092505"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299675"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<iriParsing > elemento (configuración de Uri)
 Especifica si se aplica el análisis de identificadores de recursos internacionales (IRI) a un <xref:System.Uri> y si se deben aplicar reglas de análisis de IRI.  
@@ -50,13 +50,13 @@ Especifica si se aplica el análisis de identificadores de recursos internaciona
   
  Para habilitar la compatibilidad con IRI, se requieren los siguientes dos cambios:  
   
-1.  Agregue la siguiente línea al archivo machine.config en el directorio de .NET Framework 2.0  
+1. Agregue la siguiente línea al archivo machine.config en el directorio de .NET Framework 2.0  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Especifique si se debe aplicar las reglas de análisis de IRI. Esto puede hacerse en el archivo machine.config o app.config.  
+2. Especifique si se debe aplicar las reglas de análisis de IRI. Esto puede hacerse en el archivo machine.config o app.config.  
   
  Habilitar análisis de IRI (iriParsing habilitado = `true`) llevará a cabo normalización y reglas de carácter de comprobación en función de la última IRI en RFC 3987. El valor predeterminado es `false` y se la normalización y comprobación de acuerdo con RFC 2396 y RFC 3986 (para literales de IPv6) de caracteres.  
   

@@ -2,22 +2,22 @@
 title: Uso de extremos estándar
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 5502d42d6a576509c826e05c8781662d374fbff4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584291"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304615"
 ---
 # <a name="usage-of-standard-endpoints"></a>Uso de extremos estándar
 
-Este ejemplo muestra cómo utilizar los puntos de conexión estándar en archivos de configuración de servicio. Un extremo estándar permite al usuario simplificar las definiciones de extremo utilizando una sola propiedad para describir una dirección, enlace y combinación de contratos con propiedades adicionales asocias. En este ejemplo se muestra cómo definir e implementar un extremo estándar personalizado y cómo definir propiedades concretas en él.
+Este ejemplo muestra cómo utilizar los puntos de conexión estándar en archivos de configuración de servicio. Un punto de conexión estándar permite al usuario simplificar las definiciones de punto de conexión utilizando una sola propiedad para describir una dirección, enlace y combinación de contratos con propiedades adicionales asocias. En este ejemplo se muestra cómo definir e implementar un punto de conexión estándar personalizado y cómo definir propiedades concretas en él.
 
 ## <a name="sample-details"></a>Detalles del ejemplo
 
-Los extremos de servicio se pueden especificar proporcionando tres parámetros: dirección, enlace y contrato. Otros parámetros que se pueden proporcionar son la configuración de comportamiento, los encabezados, el URI de escucha, etc. En algunos casos, con una dirección o con todas, los enlaces y contratos tienen valores que no pueden cambiar. Por esta razón, es posible utilizar extremos estándar. Algunos ejemplos de tales extremos incluyen los de intercambio de metadatos y los de detección. Los extremos estándar también mejoran la capacidad de uso al permitir la configuración de los extremos de servicio sin tener que proporcionar información de naturaleza fija o crear sus propios extremos estándar, por ejemplo proporcionando un conjunto razonable de valores predeterminados y, por tanto, reduciendo el nivel de detalle de los archivos de configuración.
+Los puntos de conexión de servicio se pueden especificar proporcionando tres parámetros: dirección, enlace y contrato. Otros parámetros que se pueden proporcionar son la configuración de comportamiento, los encabezados, el URI de escucha, etc. En algunos casos, con una dirección o con todas, los enlaces y contratos tienen valores que no pueden cambiar. Por esta razón, es posible utilizar puntos de conexión estándar. Algunos ejemplos de tales puntos de conexión incluyen los de intercambio de metadatos y los de detección. Los extremos estándar también mejoran la capacidad de uso al permitir la configuración de los extremos de servicio sin tener que proporcionar información de naturaleza fija o crear sus propios extremos estándar, por ejemplo proporcionando un conjunto razonable de valores predeterminados y, por tanto, reduciendo el nivel de detalle de los archivos de configuración.
 
-Este ejemplo está compuesto de dos proyectos: el servicio que define dos extremos estándar y el cliente que comunica con el servicio. La manera en que los extremos estándar se definen para el servicio en el archivo de configuración se muestra en el siguiente ejemplo.
+Este ejemplo está compuesto de dos proyectos: el servicio que define dos extremos estándar y el cliente que comunica con el servicio. La manera en que los puntos de conexión estándar se definen para el servicio en el archivo de configuración se muestra en el siguiente ejemplo.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -50,9 +50,9 @@ Este ejemplo está compuesto de dos proyectos: el servicio que define dos extrem
 </configuration>
 ```
 
-El primer extremo definido para el servicio es de tipo `customEndpoint`, cuya definición se puede ver en la sección `<standardEndpoints>`, en la que la propiedad `property` recibe el valor `true`. Este es el caso de un extremo personalizado con una nueva propiedad. El segundo extremo corresponde a un extremo de metadatos en el que los valores de la dirección, el enlace y el contrato son fijos.
+El primer punto de conexión definido para el servicio es de tipo `customEndpoint`, cuya definición se puede ver en la sección `<standardEndpoints>`, en la que la propiedad `property` recibe el valor `true`. Este es el caso de un extremo personalizado con una nueva propiedad. El segundo punto de conexión corresponde a un punto de conexión de metadatos en el que los valores de la dirección, el enlace y el contrato son fijos.
 
-Para definir el elemento de extremo estándar, se debe crear una clase que se derive de `StandardEndpointElement`. En el caso de este ejemplo, la clase `CustomEndpointElement` se ha definido como se muestra en el siguiente ejemplo.
+Para definir el elemento de punto de conexión estándar, se debe crear una clase que se derive de `StandardEndpointElement`. En el caso de este ejemplo, la clase `CustomEndpointElement` se ha definido como se muestra en el siguiente ejemplo.
 
 ```csharp
 public class CustomEndpointElement : StandardEndpointElement
@@ -139,9 +139,9 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1.  Con Visual Studio 2012, abra el archivo StandardEndpoints.sln.
+1. Con Visual Studio 2012, abra el archivo StandardEndpoints.sln.
 
-2.  Habilite varios proyectos para iniciarse.
+2. Habilite varios proyectos para iniciarse.
 
     1.  En **el Explorador de soluciones**, haga clic en la solución de puntos de conexión estándar y, a continuación, seleccione **propiedades**.
 
@@ -153,7 +153,7 @@ public class CustomEndpoint : ServiceEndpoint
 
          De esta forma se especifica que el proyecto Cliente se ejecute después del proyecto Servicio.
 
-3.  Presione F5 para ejecutar la solución.
+3. Presione F5 para ejecutar la solución.
 
 > [!NOTE]
 > Si estos pasos no funcionan, asegúrese de que el entorno ha se ha establecido correctamente, mediante los siguientes pasos:

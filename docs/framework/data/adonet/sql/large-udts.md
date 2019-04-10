@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 8b2f195b2cb4c365693dc0f250a577a93cf25eee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 015ce896e49b3a6a932c36db867271b4ac4c64c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181537"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303484"
 ---
 # <a name="large-udts"></a>UDT grandes
 Los tipos definidos por el usuario (UDT) permiten que el desarrollador amplíe el sistema de tipos escalares del servidor mediante el almacenamiento de objetos Common Language Runtime (CLR) en una base de datos de SQL Server. Los UDT pueden contener varios elementos y presentar diversos comportamientos, a diferencia de los tipos de datos de alias tradicionales, que constan de un solo tipo de datos del sistema SQL Server.  
@@ -24,7 +24,7 @@ Los tipos definidos por el usuario (UDT) permiten que el desarrollador amplíe e
   
  **Libros en pantalla de SQL Server**  
   
-1.  [Tipos CLR definidos por el usuario](https://go.microsoft.com/fwlink/?LinkId=98366)  
+1. [Tipos CLR definidos por el usuario](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Recuperar los esquemas UDT mediante GetSchema  
  El método <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> de <xref:System.Data.SqlClient.SqlConnection> devuelve la información de un esquema de base de datos de un elemento <xref:System.Data.DataTable>. Para obtener más información, consulte [colecciones de esquemas de SQL Server](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  

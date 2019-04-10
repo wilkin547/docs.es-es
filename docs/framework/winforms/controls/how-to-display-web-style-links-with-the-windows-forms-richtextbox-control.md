@@ -10,25 +10,25 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 1902557e5dbdcee3c1facc18b6f5c3037c266a8e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: faaa48051c80b6dfd330f15f72a38297ff2d1b9f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148244"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301885"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Filtrar para mostrar vínculos de estilo web con el control RichTextBox de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control puede mostrar vínculos Web en color y subrayados. Puede escribir código que se abre una ventana del explorador que muestra el sitio Web especificado en el texto del vínculo cuando se hace clic en el vínculo.  
   
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>Para vincular a una página Web con el control RichTextBox  
   
-1.  Establecer el <xref:System.Windows.Forms.RichTextBox.Text%2A> propiedad en una cadena que incluye una dirección URL válida (por ejemplo, "http://www.microsoft.com/").  
+1. Establecer el <xref:System.Windows.Forms.RichTextBox.Text%2A> propiedad en una cadena que incluye una dirección URL válida (por ejemplo, "http://www.microsoft.com/").  
   
-2.  Asegúrese de que el <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> propiedad está establecida en `true` (valor predeterminado).  
+2. Asegúrese de que el <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> propiedad está establecida en `true` (valor predeterminado).  
   
-3.  Crear una nueva instancia global de la <xref:System.Diagnostics.Process> objeto.  
+3. Crear una nueva instancia global de la <xref:System.Diagnostics.Process> objeto.  
   
-4.  Escribir un controlador de eventos para el <xref:System.Windows.Forms.RichTextBox.LinkClicked> eventos que envía al explorador el texto deseado.  
+4. Escribir un controlador de eventos para el <xref:System.Windows.Forms.RichTextBox.LinkClicked> eventos que envía al explorador el texto deseado.  
   
      En el ejemplo siguiente, la <xref:System.Windows.Forms.RichTextBox.LinkClicked> evento abre una instancia de Internet Explorer a la dirección URL especificada en el <xref:System.Windows.Forms.RichTextBox.Text%2A> propiedad de la <xref:System.Windows.Forms.RichTextBox> control. En este ejemplo se supone un formulario con un <xref:System.Windows.Forms.RichTextBox> control.  
   

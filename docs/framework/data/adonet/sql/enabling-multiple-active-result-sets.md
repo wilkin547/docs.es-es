@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147555"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304407"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Habilitar conjuntos de resultados activos múltiples
 MARS (Multiple Active Result Sets, conjuntos de resultados activos múltiples) es una característica que funciona con SQL Server y que permite la ejecución de varios lotes en una sola conexión. Cuando MARS está habilitado para su uso con SQL Server, cada objeto de comando usado agrega una sesión a la conexión.  
@@ -102,11 +102,11 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Hay tres opciones para solucionar esta situación:  
   
-1.  Iniciar la transacción una vez creado el lector y, así, no forma parte de la transacción. Cada actualización se convierte entonces en su propia transacción.  
+1. Iniciar la transacción una vez creado el lector y, así, no forma parte de la transacción. Cada actualización se convierte entonces en su propia transacción.  
   
-2.  Confirmar todo el trabajo una vez cerrado el lector. Esto puede traer como consecuencia un lote considerable de actualizaciones.  
+2. Confirmar todo el trabajo una vez cerrado el lector. Esto puede traer como consecuencia un lote considerable de actualizaciones.  
   
-3.  No utilizar MARS, sino una conexión distinta para cada objeto de comando que tendría antes de MARS.  
+3. No utilizar MARS, sino una conexión distinta para cada objeto de comando que tendría antes de MARS.  
   
 ### <a name="detecting-mars-support"></a>Detección de compatibilidad con MARS  
  Para comprobar la compatibilidad con MARS, una aplicación puede leer el valor `SqlConnection.ServerVersion`. El número principal debe ser 9 para SQL Server 2005 y 10 para SQL Server 2008.  

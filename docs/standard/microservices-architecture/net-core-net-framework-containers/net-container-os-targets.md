@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 9e1d07e48d88376efb5fbdbdadc999c8dcd5082d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14a0fb7cd9ecb8dfd5369da6f6bd5b47b4aea37a
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374913"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921304"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Selección del sistema operativo de destino con contenedores de .NET
 
@@ -38,20 +38,20 @@ Al agregar el nombre de imagen al archivo Dockerfile, puede seleccionar el siste
 </thead>
 <tbody>
 <tr>
-<td>microsoft/dotnet:2.2-runtime</td>
+<td>mcr.microsoft.com/dotnet/core/runtime:2.2</td>
 <td>Arquitectura múltiple de .NET Core 2.2: es compatible con Linux y Windows Nano Server en función del host de Docker.</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.2-aspnetcore-runtime</td>
+<td>mcr.microsoft.com/dotnet/core/aspnet:2.2</td>
 <td><p>Arquitectura múltiple de .NET Core 2.2: es compatible con Linux y Windows Nano Server en función del host de Docker.</p>
 <p>La imagen de aspnetcore tiene algunas optimizaciones para ASP.NET Core.</p></td>
 </tr>
 <tr class="even">
-<td>microsoft/dotnet:2.2-aspnetcore-runtime-alpine</td>
+<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine</td>
 <td>.NET Core 2.2 solo en tiempo de ejecución en una distribución de Alpine Linux</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1803</td>
+<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803</td>
 <td>.NET Core 2.2 solo en tiempo de ejecución en Windows Nano Server (Windows Server 1803)</td>
 </tr>
 </tbody>

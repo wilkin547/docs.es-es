@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: aca110339c94afd5442aed5a2481964b456154f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e8f77a4fd1047598d51c2e0932d9c1309a305a86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201616"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295515"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Filtrar para recuperar datos del Portapapeles
 La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede usar para interactuar con la función de Portapapeles del sistema operativo Windows. Muchas aplicaciones utilizan el Portapapeles como un repositorio temporal para los datos. Por ejemplo, procesadores de textos utilizan el Portapapeles durante las operaciones de cortar y pegar. El Portapapeles también es útil para transferir información desde una aplicación a otra.  
@@ -31,14 +31,14 @@ La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede us
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>Para recuperar datos del Portapapeles en un solo formato común  
   
-1.  Use la <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, o <xref:System.Windows.Forms.Clipboard.GetText%2A> método. Opcionalmente, use el correspondiente `Contains` *formato* métodos primero para determinar si los datos están disponibles en un formato determinado. Estos métodos solo están disponibles en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Use la <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, o <xref:System.Windows.Forms.Clipboard.GetText%2A> método. Opcionalmente, use el correspondiente `Contains` *formato* métodos primero para determinar si los datos están disponibles en un formato determinado. Estos métodos solo están disponibles en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>Para recuperar datos del Portapapeles en un formato personalizado  
   
-1.  Use el <xref:System.Windows.Forms.Clipboard.GetData%2A> método con un nombre de formato personalizado. Este método solo está disponible en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Use el <xref:System.Windows.Forms.Clipboard.GetData%2A> método con un nombre de formato personalizado. Este método solo está disponible en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      También puede usar nombres de formato predefinidos con el <xref:System.Windows.Forms.Clipboard.SetData%2A> método. Para obtener más información, consulta <xref:System.Windows.Forms.DataFormats>.  
   
@@ -49,7 +49,7 @@ La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede us
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Para recuperar datos del Portapapeles en varios formatos  
   
-1.  Utilice el método <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Debe usar este método para recuperar datos del Portapapeles en las versiones anteriores a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1. Utilice el método <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Debe usar este método para recuperar datos del Portapapeles en las versiones anteriores a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

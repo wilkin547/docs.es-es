@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 97340f8583ef0900645f6db5c453475e85549c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620205"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297257"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Acceso a los servicios mediante un cliente WCF
 
@@ -20,11 +20,11 @@ Después de crear un servicio, el siguiente paso es crear a un proxy de cliente 
 
  Los pasos básicos para crear a un cliente de WCF incluyen lo siguiente:
 
-1.  Compilar el código del servicio.
+1. Compilar el código del servicio.
 
-2.  Generar al proxy de cliente WCF.
+2. Generar al proxy de cliente WCF.
 
-3.  Cree una instancia del proxy de cliente de WCF.
+3. Cree una instancia del proxy de cliente de WCF.
 
 El proxy de cliente WCF puede generarse manualmente mediante el uso de Service Model Metadata Utility Tool (SvcUtil.exe) para obtener más información, vea [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). También se puede generar el proxy de cliente WCF dentro de Visual Studio mediante el **Add Service Reference** característica. Para generar el proxy de cliente de WCF usando cualquier método, el servicio debe estar en ejecución. Si el servicio se autohospeda, debe ejecutar el host. Si el servicio se hospeda en IIS/WAS no necesita hacer nada más.
 
@@ -188,12 +188,12 @@ Cuando se producen estos tipos de excepciones, la mejor manera de resolver el pr
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Cómo: Servicios de Access con un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Cómo: Llamar a las operaciones de servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Cómo: Obtener acceso a servicios con unidireccional y contratos de solicitud-respuesta](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Cómo: Obtener acceso a un WSE 3.0 servicio](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [Información sobre códigos de cliente generado](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Cómo: Mejorar el inicio de tiempo de las aplicaciones cliente WCF mediante XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Filtrar Crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Filtrar para obtener acceso a los servicios con un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Filtrar para llamar a operaciones de servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Filtrar para obtener acceso a los servicios con contratos unidireccionales y de solicitud-respuesta](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Filtrar para obtener acceso a un servicio WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Comprender códigos de cliente generado](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
+- [Filtrar para mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
 - [Especificación del comportamiento de tiempo de ejecución del cliente](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [Configuración de los comportamientos del cliente](../../../docs/framework/wcf/configuring-client-behaviors.md)

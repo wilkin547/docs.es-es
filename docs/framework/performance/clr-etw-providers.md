@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188609"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302626"
 ---
 # <a name="clr-etw-providers"></a>Proveedores ETW de CLR
 El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime y el proveedor del informe detallado.  
@@ -58,7 +58,7 @@ El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime 
 ## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>Recolección de datos ETW mediante los proveedores en tiempo de ejecución y de informe detallado  
  En el siguiente ejemplo se muestra cómo utilizar el proveedor de informe detallado de CLR de una manera que permita la resolución de símbolos de procesos administrados con un impacto mínimo, sin tener en cuenta si los procesos se inician o finalizan dentro o fuera de la ventana de generación de perfiles.  
   
-1.  Active el registro ETW mediante el proveedor en tiempo de ejecución de CLR:  
+1. Active el registro ETW mediante el proveedor en tiempo de ejecución de CLR:  
   
     ```  
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
@@ -66,7 +66,7 @@ El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime 
   
      El registro se guardará en el archivo clr1.etl.  
   
-2.  Para detener la generación de perfiles mientras continúa ejecutándose el proceso, inicie el proveedor de informe detallado para capturar los eventos `DCEnd`:  
+2. Para detener la generación de perfiles mientras continúa ejecutándose el proceso, inicie el proveedor de informe detallado para capturar los eventos `DCEnd`:  
   
     ```  
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
@@ -74,14 +74,14 @@ El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime 
   
      Esto permite a la colección de eventos `DCEnd` iniciar una sesión de informe detallado. Es posible que deba esperar entre 30 y 60 segundos para recopilar todos los eventos. El registro se guardará en el archivo clr1.et2.  
   
-3.  Desactive toda la generación de perfiles ETW:  
+3. Desactive toda la generación de perfiles ETW:  
   
     ```  
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
-4.  Fusione mediante combinación los perfiles para crear un archivo de registro:  
+4. Fusione mediante combinación los perfiles para crear un archivo de registro:  
   
     ```  
     xperf -merge clr1.etl clr2.etl merged.etl  

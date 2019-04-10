@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear y depurar su primera aplicac
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8df26651a7b35e5b6c9bdcb54d09c97525e12426
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788341"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890558"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introducción a C# y Visual Studio Code
 
@@ -91,14 +91,14 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 ## <a name="add-a-class"></a>Agregar una clase
 
 1. Para agregar una nueva clase, haga clic con el botón derecho en el Explorador de Visual Studio Code y seleccione **Nuevo archivo**. Asé se agrega un nuevo archivo a la carpeta abierta en Visual Studio Code.
-2. Asigne un nombre al archivo `Class1.cs`. Debe guardarlo con una extensión `.cs` al final para que se reconozca como archivo csharp.
+2. Asigne un nombre al archivo `MyClass.cs`. Debe guardarlo con una extensión `.cs` al final para que se reconozca como archivo csharp.
 3. Agregue el código siguiente para crear la primera clase. Asegúrese de incluir el espacio de nombres correcto para poder hacer referencia a él desde el archivo `Program.cs`.
 ``` csharp
 using System;
 
 namespace HelloWorld
 {
-    public class Class1
+    public class MyClass
     {
         public string ReturnMessage()
         {
@@ -119,7 +119,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Class1 c1 = new Class1();
+            MyClass c1 = new MyClass();
             Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
         }
     }
@@ -140,5 +140,5 @@ La extensión C# de Visual Studio Code puede generar recursos para compilar y de
 
 ## <a name="see-also"></a>Vea también
 
-- [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) (Configuración de Visual Studio Code)
-- [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Depuración en Visual Studio Code)
+- [Setting up Visual Studio Code (Configuración de Visual Studio Code)](https://code.visualstudio.com/docs/setup/setup-overview)
+- [Debugging in Visual Studio Code (Depuración en Visual Studio Code)](https://code.visualstudio.com/Docs/editor/debugging)

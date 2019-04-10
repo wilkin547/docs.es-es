@@ -2,12 +2,12 @@
 title: Control de errores
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136440"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300286"
 ---
 # <a name="error-handling"></a>Control de errores
 ## <a name="error-handling-in-windows-communication-foundation"></a>Error de control en Windows Communication Foundation  
@@ -34,15 +34,15 @@ ms.locfileid: "59136440"
   
  Con un IErrorHandler, puede controlar explícitamente el comportamiento de la aplicación cuando se produce una excepción. Puede:  
   
-1.  Decida si enviar o no un error al cliente  
+1. Decida si enviar o no un error al cliente  
   
-2.  Reemplazar una excepción con un error  
+2. Reemplazar una excepción con un error  
   
-3.  Reemplazar un error con otro error  
+3. Reemplazar un error con otro error  
   
-4.  Realizar el registro o el seguimiento  
+4. Realizar el registro o el seguimiento  
   
-5.  Realizar otras actividades personalizadas  
+5. Realizar otras actividades personalizadas  
   
  Se puede instalar en un controlador de errores personalizado agregándolo a la propiedad ErrorHandlers de distribuidores de canal para el servicio.  Es posible tener varias llamadas a un controlador de errores y se les llama en el orden en que se agregan a esta colección.  
   

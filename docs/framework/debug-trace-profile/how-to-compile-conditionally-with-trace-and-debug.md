@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298583"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Filtrar para compilar con Trace y Debug de forma condicional
 Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de depuración aparecen en la ventana Salida de Visual Studio. Pero para incluir características de seguimiento en una aplicación implementada, tendrá que compilar las aplicaciones instrumentadas con la directiva de compilador **TRACE** habilitada. Esto permite que el código de seguimiento se compile en la versión de lanzamiento de la aplicación. Si no habilita la directiva **TRACE**, se ignorará todo el código de seguimiento durante la compilación y no se incluirá en el código ejecutable que se va a implementar.  
@@ -36,9 +36,9 @@ Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de 
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>Para cambiar la configuración de compilación desde el cuadro de diálogo de páginas de propiedades  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo del proyecto.  
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo del proyecto.  
   
-2.  Seleccione **Propiedades** en el menú contextual.  
+2. Seleccione **Propiedades** en el menú contextual.  
   
     -   En Visual Basic, haga clic en la pestaña **Compilar** en el panel izquierdo de la página de propiedades. Después, haga clic en el botón **Opciones de compilación avanzadas** para mostrar el cuadro de diálogo **Configuración de compilador avanzada**. Seleccione las casillas correspondientes a los valores de configuración del compilador que desee habilitar. Desactive las casillas de los valores de configuración que desee deshabilitar.  
   
@@ -46,7 +46,7 @@ Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de 
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>Para compilar código instrumentado desde la línea de comandos  
   
-1.  Establezca un modificador de compilación condicional en la línea de comandos. El compilador incluirá código de seguimiento o depuración en el archivo ejecutable.  
+1. Establezca un modificador de compilación condicional en la línea de comandos. El compilador incluirá código de seguimiento o depuración en el archivo ejecutable.  
   
      Por ejemplo, la siguiente instrucción del compilador especificada en la línea de comandos incluiría el código de seguimiento en un ejecutable compilado:  
   
@@ -71,7 +71,7 @@ Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de 
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>Para realizar compilación condicional mediante #CONST o #define  
   
-1.  Escriba la instrucción apropiada para su lenguaje de programación en la parte superior del archivo de código fuente.  
+1. Escriba la instrucción apropiada para su lenguaje de programación en la parte superior del archivo de código fuente.  
   
     |Lenguaje|Instrucción|Resultado|  
     |--------------|---------------|------------|  

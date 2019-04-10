@@ -2,12 +2,12 @@
 title: Proveedor de tokens SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 386e8f81d35d820809ee51355dfb0274be2278cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e662d9b84bbc43178946fdadc8ddbec6f6b6e042
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084230"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304602"
 ---
 # <a name="saml-token-provider"></a>Proveedor de tokens SAML
 Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente personalizado. Un proveedor de tokens de Windows Communication Foundation (WCF) se usa para proporcionar las credenciales a la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con el Administrador de credenciales de Token de proveedor predeterminado. WCF también incluye un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] proveedor de tokens. Los proveedores de tokens personalizados son útiles en los casos siguientes:
@@ -113,7 +113,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 
  Los pasos siguientes muestran cómo desarrollar un proveedor de tokens SAML personalizado e integrarlo con WCF: marco de seguridad:
 
-1.  Escriba un proveedor de tokens personalizado SAML.
+1. Escriba un proveedor de tokens personalizado SAML.
 
      El ejemplo implementa un proveedor de tokens de SAML personalizado que devuelve un token de seguridad basado en una aserción de SAML que se proporciona en el momento de la construcción.
 
@@ -156,7 +156,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
     }
     ```
 
-2.  Escribir el administrador de tokens de seguridad personalizado.
+2. Escribir el administrador de tokens de seguridad personalizado.
 
      La clase <xref:System.IdentityModel.Selectors.SecurityTokenManager> se utiliza para crear <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para el <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> concreto que se pasa en el método `CreateSecurityTokenProvider`. Un administrador de tokens de seguridad también se utiliza para crear autenticadores de tokens y serializadores de tokens, aunque en este ejemplo no se explica. En este ejemplo, el administrador de tokens de seguridad personalizado hereda de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> e invalida el método `CreateSecurityTokenProvider` para devolver el proveedor de tokens personalizado SAML cuando los requisitos de tokens pasados indican que se solicita el token SAML. Si la clase (vea el paso 3) de credenciales del cliente no ha especificado una aserción, el administrador de tokens de seguridad crea una instancia adecuada.
 
@@ -228,7 +228,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
     }
     ```
 
-3.  Escribir una credencial de cliente personalizada.
+3. Escribir una credencial de cliente personalizada.
 
      Se usa una clase de credenciales de cliente para representar las credenciales que se configuran para el proxy de cliente y crear un administrador de tokens de seguridad que se utiliza para obtener autenticadores, proveedores y un serializador de tokens.
 
@@ -271,7 +271,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
     }
     ```
 
-4.  Configure el cliente para utilizar la credencial del cliente personalizada.
+4. Configure el cliente para utilizar la credencial del cliente personalizada.
 
      Para que el cliente pueda utilizar la credencial de cliente personalizada, el ejemplo elimina la clase de credencial de cliente predeterminada y proporciona la nueva.
 
@@ -353,43 +353,43 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 
 #### <a name="to-set-up-and-build-the-sample"></a>Para configurar y compilar el ejemplo
 
-1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 > [!NOTE]
 >  Si usa Svcutil.exe para regenerar la configuración de este ejemplo, asegúrese de que modifica el nombre del extremo en la configuración del cliente para que coincida con el código de cliente.
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo
 
-1.  Ejecute Setup.bat desde la carpeta de instalación de ejemplo en un símbolo del sistema de Visual Studio 2012 se ejecute con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
+1. Ejecute Setup.bat desde la carpeta de instalación de ejemplo en un símbolo del sistema de Visual Studio 2012 se ejecute con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!NOTE]
     >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. El conjunto de variables de entorno de ruta de acceso en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables que requiere el script Setup.bat.  
   
-2.  Inicie Service.exe desde \service\bin.  
+2. Inicie Service.exe desde \service\bin.  
   
-3.  Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
+3. Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4.  Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
-1.  Cree un directorio en el equipo del servicio para los binarios del servicio.  
+1. Cree un directorio en el equipo del servicio para los binarios del servicio.  
   
-2.  Copie los archivos de programa del servicio en el directorio del servicio en el equipo de servicio. Copie también los archivos Setup.bat y Cleanup.bat en el equipo del servicio.  
+2. Copie los archivos de programa del servicio en el directorio del servicio en el equipo de servicio. Copie también los archivos Setup.bat y Cleanup.bat en el equipo del servicio.  
   
-3.  Debe tener un certificado de servidor con el nombre del sujeto que contiene el nombre de dominio completo del equipo. El archivo Service.exe.config debe actualizarse para reflejar este nuevo nombre de certificado. Puede crear el certificado de servidor modificando el archivo por lotes Setup.bat. Tenga en cuenta que el archivo setup.bat se debe ejecutar en un símbolo de la ventana de Visual Studio abierto con privilegios de administrador. Debe establecer la variable `%SERVER_NAME%` en el nombre de host completo del equipo que se utiliza para hospedar el servicio.  
+3. Debe tener un certificado de servidor con el nombre del sujeto que contiene el nombre de dominio completo del equipo. El archivo Service.exe.config debe actualizarse para reflejar este nuevo nombre de certificado. Puede crear el certificado de servidor modificando el archivo por lotes Setup.bat. Tenga en cuenta que el archivo setup.bat se debe ejecutar en un símbolo de la ventana de Visual Studio abierto con privilegios de administrador. Debe establecer la variable `%SERVER_NAME%` en el nombre de host completo del equipo que se utiliza para hospedar el servicio.  
   
-4.  Copie el certificado de servidor en el almacén CurrentUser-TrustedPeople del cliente. Este paso no es necesario cuando el certificado de servidor procede de un emisor de confianza para el cliente.  
+4. Copie el certificado de servidor en el almacén CurrentUser-TrustedPeople del cliente. Este paso no es necesario cuando el certificado de servidor procede de un emisor de confianza para el cliente.  
   
-5.  En el archivo Service.exe.config situado en el equipo del servicio, cambie el valor de la dirección base para especificar un nombre de equipo completo en lugar del host local.  
+5. En el archivo Service.exe.config situado en el equipo del servicio, cambie el valor de la dirección base para especificar un nombre de equipo completo en lugar del host local.  
   
-6.  En el equipo del servicio, ejecute Service.exe desde un símbolo del sistema.  
+6. En el equipo del servicio, ejecute Service.exe desde un símbolo del sistema.  
   
-7.  Copie los archivos de programa del cliente de la carpeta \client\bin\, bajo la carpeta específica del lenguaje, al equipo cliente.  
+7. Copie los archivos de programa del cliente de la carpeta \client\bin\, bajo la carpeta específica del lenguaje, al equipo cliente.  
   
-8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio.  
+8. En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio.  
   
 9. En el equipo cliente, inicie `Client.exe` desde una ventana de símbolo del sistema.  
   
@@ -397,4 +397,4 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
   
 #### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
-1.  Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
+1. Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  

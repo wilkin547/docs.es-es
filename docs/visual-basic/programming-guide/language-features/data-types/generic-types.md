@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 343c5c8e2625a1bd4279e0c97b7079482af0e8c6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831441"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301235"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipos genéricos en Visual Basic (Visual Basic)
 Un *tipo genérico* es un elemento de programación único que se adapta para ejecutar la misma funcionalidad para distintos tipos de datos. Cuando se define una clase o un procedimiento genérico, no es necesario definir una versión independiente para cada tipo de datos para el que quiera ejecutar esa funcionalidad.  
@@ -83,15 +83,15 @@ Un *tipo genérico* es un elemento de programación único que se adapta para ej
 ## <a name="advantages-of-generic-types"></a>Ventajas de los tipos genéricos  
  Un tipo genérico sirve como base para declarar varios elementos de programación diferentes, cada uno de los cuales actúa en un tipo de datos específico. Las alternativas a un tipo genérico son:  
   
-1.  Un tipo único que actúe en el tipo de datos `Object` .  
+1. Un tipo único que actúe en el tipo de datos `Object` .  
   
-2.  Un conjunto de versiones del tipo *específicas del tipo* , cada una de las cuales esté codificada por separado y actúe en un tipo de datos concreto, como `String`, `Integer`o un tipo definido por el usuario, como `customer`.  
+2. Un conjunto de versiones del tipo *específicas del tipo* , cada una de las cuales esté codificada por separado y actúe en un tipo de datos concreto, como `String`, `Integer`o un tipo definido por el usuario, como `customer`.  
   
  Un tipo genérico tiene las ventajas siguientes sobre estas alternativas:  
   
 -   **Seguridad de tipos.** Los tipos genéricos fuerzan la comprobación de tipos en tiempo de compilación. Los tipos basados en `Object` aceptan cualquier tipo de datos; debe escribir código para comprobar si un tipo de datos de entrada es aceptable. Con los tipos genéricos, el compilador puede detectar errores de coincidencia de tipo antes del tiempo de ejecución.  
   
--   **Rendimiento.** No es necesario que los tipos genéricos apliquen la conversión *boxing* y *unboxing* a los datos, ya que cada uno está diseñado para un tipo de datos. Las operaciones basadas en `Object` deben aplicar la conversión boxing a los tipos de datos de entrada para convertirlos a `Object` y aplicar la conversión unboxing a los datos destinados a la salida. La conversión boxing y la conversión unboxing reducen el rendimiento.  
+-   **Rendimiento.** No es necesario que los tipos genéricos apliquen la conversión *boxing* y *unboxinging* a los datos, ya que cada uno está diseñado para un tipo de datos. Las operaciones basadas en `Object` deben aplicar la conversión boxing a los tipos de datos de entrada para convertirlos a `Object` y aplicar la conversión unboxing a los datos destinados a la salida. La conversión boxing y la conversión unboxing reducen el rendimiento.  
   
      Los tipos basados en `Object` también se enlazan en tiempo de ejecución, lo que significa que el acceso a sus miembros requiere código adicional en tiempo de ejecución. Esto también reduce el rendimiento.  
   
@@ -150,12 +150,12 @@ Un *tipo genérico* es un elemento de programación único que se adapta para ej
 
 - [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Conversiones de tipos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Solución de problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Solucionar problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Covarianza y contravarianza](../../concepts/covariance-contravariance/index.md)
-- [Iteradores](../../../../visual-basic/programming-guide/concepts/iterators.md)
+- [Iterators](../../../../visual-basic/programming-guide/concepts/iterators.md)

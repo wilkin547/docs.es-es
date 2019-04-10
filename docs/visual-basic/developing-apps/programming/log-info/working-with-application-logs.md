@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: afd35b67fc11cb556159ed0d37130cd86d72c30f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00c54a59ccfe2a49dcf35b322ca077a10a48ae7d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354835"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839644"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Trabajar con registros de aplicaciones en Visual Basic
 
@@ -23,11 +23,11 @@ En primer lugar, se comprueba la gravedad del mensaje con la propiedad <xref:Sys
 
 En el siguiente diagrama se muestra cómo un mensaje escrito en el método `WriteEntry` se pasa a los métodos `WriteLine` de lo agentes de escucha de seguimiento del registro:
 
-![Llamada My Log](../../../../visual-basic/developing-apps/programming/log-info/media/mylogcall.png "MyLogCall")
+![Diagrama que muestra la llamada My log.](./media/working-with-application-logs/my-log-call-messages.png)
 
 Puede cambiar el archivo de configuración de la aplicación para modificar el comportamiento de los agentes de escucha de registro y de seguimiento. En el diagrama siguiente se muestra la correspondencia entre las partes del registro y el archivo de configuración.
 
-![Configuración de My Log](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")
+![Diagrama que muestra la configuración de My log.](./media/working-with-application-logs/my-log-configuration.png)
 
 ## <a name="where-messages-are-logged"></a>Dónde se registran los mensajes
 

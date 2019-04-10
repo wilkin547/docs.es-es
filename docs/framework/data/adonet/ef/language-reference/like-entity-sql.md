@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197716"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302262"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 Determina si un elemento `String` de caracteres específico coincide con un patrón especificado.  
@@ -68,9 +68,9 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>Ejemplo  
  Las dos siguientes [!INCLUDE[esql](../../../../../../includes/esql-md.md)] las consultas usen similares y operadores ESCAPE para determinar si una cadena de caracteres específica coincide con un patrón especificado. La primera consulta busca el `Name` que comienza con los caracteres `Down_`. Esta consulta utiliza la opción ESCAPE porque el carácter de subrayado (`_`) es un carácter comodín. Sin especificar la opción ESCAPE, la consulta buscaría valores de `Name` que empezasen con la palabra `Down` seguida de cualquier carácter individual diferente del carácter de subrayado. Las consultas se basan en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1.  Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
+2. Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   

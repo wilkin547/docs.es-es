@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 90008b00c95906ba43364c5a4ae3f85d9fdf0e22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 788addee7c024577d029626da4aeb86d0ca9076a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300533"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Filtrar para heredar de controles de formularios Windows Forms existentes
 Si desea ampliar la funcionalidad de un control existente, puede crear un control derivado a partir de un control existente a través de la herencia. Al heredar a partir de un control existente, hereda toda la funcionalidad y las propiedades visuales del control. Por ejemplo, si estuviera creando un control que hereda de <xref:System.Windows.Forms.Button>, el nuevo control tendría el aspecto y actúan como exactamente un estándar <xref:System.Windows.Forms.Button> control. A continuación, podría extender o modificar la funcionalidad del nuevo control mediante la implementación de métodos y propiedades personalizados. En algunos controles, también puede cambiar la apariencia visual del control heredado reemplazando su <xref:System.Windows.Forms.Control.OnPaint%2A> método.  
@@ -23,23 +23,23 @@ Si desea ampliar la funcionalidad de un control existente, puede crear un contro
   
 ### <a name="to-create-an-inherited-control"></a>Para crear un control heredado  
   
-1.  Cree un nuevo proyecto de  **aplicación de Windows Forms**.  
+1. Cree un nuevo proyecto de  **aplicación de Windows Forms**.  
   
-2.  En el menú **Proyecto** , elija **Agregar nuevo elemento**.  
+2. En el menú **Proyecto** , elija **Agregar nuevo elemento**.  
   
      Aparecerá el cuadro de diálogo **Agregar nuevo elemento**.  
   
-3.  En el cuadro de diálogo **Agregar nuevo elemento**, haga doble clic en **Control personalizado**.  
+3. En el cuadro de diálogo **Agregar nuevo elemento**, haga doble clic en **Control personalizado**.  
   
      Se agrega un nuevo control personalizado al proyecto.  
   
-4.  Si usa Visual Basic, en la parte superior del **Explorador de soluciones**, haga clic en **Mostrar todos los archivos**. Expanda CustomControl1.vb y, a continuación, abra CustomControl1.Designer.vb en el Editor de código.  
+4. Si usa Visual Basic, en la parte superior del **Explorador de soluciones**, haga clic en **Mostrar todos los archivos**. Expanda CustomControl1.vb y, a continuación, abra CustomControl1.Designer.vb en el Editor de código.  
   
-5.  Si está utilizando C#, abra CustomControl1.cs en el Editor de código.  
+5. Si está utilizando C#, abra CustomControl1.cs en el Editor de código.  
   
-6.  Busque la declaración de clase que hereda de <xref:System.Windows.Forms.Control>.  
+6. Busque la declaración de clase que hereda de <xref:System.Windows.Forms.Control>.  
   
-7.  Cambie la clase base para el control a partir del que desee heredar.  
+7. Cambie la clase base para el control a partir del que desee heredar.  
   
      Por ejemplo, si desea heredar <xref:System.Windows.Forms.Button>, cambie la declaración de clase a lo siguiente:  
   
@@ -52,7 +52,7 @@ Si desea ampliar la funcionalidad de un control existente, puede crear un contro
     public partial class CustomControl1 : System.Windows.Forms.Button  
     ```  
   
-8.  Si está utilizando Visual Basic, guarde y cierre CustomControl1.Designer.vb. Abra CustomControl1.vb en el Editor de código.  
+8. Si está utilizando Visual Basic, guarde y cierre CustomControl1.Designer.vb. Abra CustomControl1.vb en el Editor de código.  
   
 9. Implemente los métodos o propiedades personalizados que vaya a incorporar el control.  
   

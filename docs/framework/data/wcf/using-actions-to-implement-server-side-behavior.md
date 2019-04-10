@@ -2,12 +2,12 @@
 title: Usar acciones para implementar el comportamiento del servidor
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144123"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294943"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Usar acciones para implementar el comportamiento del servidor
 
@@ -40,11 +40,11 @@ Las acciones OData proporcionan una manera de implementar un comportamiento que 
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable  
  Esta interfaz proporciona una forma de ejecutar una acción de un Servicio de datos de WCF. A la hora de implementar IDataServiceInvokable, es responsable de 3 cosas:  
   
-1.  Capturar y posiblemente calcular las referencias de los parámetros  
+1. Capturar y posiblemente calcular las referencias de los parámetros  
   
-2.  Enviar los parámetros al código que implementa realmente la acción cuando se llama a Invoke()  
+2. Enviar los parámetros al código que implementa realmente la acción cuando se llama a Invoke()  
   
-3.  Almacenar los resultados de Invoke() para que se puedan recuperar mediante GetResult()  
+3. Almacenar los resultados de Invoke() para que se puedan recuperar mediante GetResult()  
   
  Los parámetros se pueden pasar como tokens. Esto se debe a que es posible escribir un proveedor de servicios de datos que funcione con tokens que representan recursos; en este caso, quizás necesite convertir (serializar) estos tokens en recursos reales antes de enviarlos a la acción real. Una vez calculadas las referencias del parámetro, este debe estar en un estado editable para que se guarde y se escriba en disco cualquier cambio realizado en el recurso cuando se invoque la acción.  
   

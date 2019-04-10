@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 1337dac083ad9d52a4cfd99bddee80baebf474de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202149"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295957"
 ---
 # <a name="animation-tips-and-tricks"></a>Sugerencias y trucos para animaciones
 Cuando se trabaja con animaciones en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], hay una serie de sugerencias y trucos que pueden mejorar las animaciones un mejor rendimiento y evitar muchas frustraciones.  
@@ -71,9 +71,9 @@ Cuando se trabaja con animaciones en [!INCLUDE[TLA2#tla_wpf](../../../../include
   
  Si hace clic en el segundo botón mientras la primera <xref:System.Windows.Media.Animation.Storyboard> está reproduciendo, cabría esperar el comportamiento siguiente:  
   
-1.  El primer guion gráfico finaliza y envía el rectángulo a su posición original, ya que la animación un <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> de <xref:System.Windows.Media.Animation.FillBehavior.Stop>.  
+1. El primer guion gráfico finaliza y envía el rectángulo a su posición original, ya que la animación un <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> de <xref:System.Windows.Media.Animation.FillBehavior.Stop>.  
   
-2.  El segundo guion gráfico se lleva a efecto y anima el objeto a partir de la posición actual, que ahora es 0, hasta 500.  
+2. El segundo guion gráfico se lleva a efecto y anima el objeto a partir de la posición actual, que ahora es 0, hasta 500.  
   
  **Pero no es lo que sucede.** En lugar de ello, el rectángulo no salta a su posición original, sino que continúa moviéndose a la derecha. Esto se debe a que la segunda animación utiliza el valor actual de la primera animación como su valor inicial y anima desde ese valor hasta 500. Cuando la segunda animación reemplaza a la primera porque el <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior> se usa, la <xref:System.Windows.Media.Animation.FillBehavior> de la primera animación no importa.  
   
