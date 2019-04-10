@@ -2,12 +2,12 @@
 title: Controlar la reentrada en aplicaciones asincrónicas (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 151cdcb841a7a67ba0bf8f5560d3f6baf999c365
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374898"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324791"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Controlar la reentrada en aplicaciones asincrónicas (Visual Basic)
 Cuando se incluye código asincrónico en una aplicación, hay que tener en cuenta (y posiblemente evitar) la reentrada, que significa volver a especificar una operación asincrónica antes de que finalice. Si no se identifican ni controlan las posibilidades de reentrada, pueden producirse resultados inesperados.  
@@ -18,13 +18,13 @@ Cuando se incluye código asincrónico en una aplicación, hay que tener en cuen
   
 -   [Controlar la reentrada](#BKMK_HandlingReentrancy)  
   
-    -   [Deshabilitar el botón de inicio](#BKMK_DisableTheStartButton)  
+    -   [Deshabilitar el botón Iniciar](#BKMK_DisableTheStartButton)  
   
     -   [Cancelar y reiniciar la operación](#BKMK_CancelAndRestart)  
   
-    -   [Ejecutar varias operaciones y poner en cola la salida](#BKMK_RunMultipleOperations)  
+    -   [Ejecutar varias operaciones y poner en cola el resultado](#BKMK_RunMultipleOperations)  
   
--   [Revisión y ejecución de la aplicación de ejemplo](#BKMD_SettingUpTheExample)  
+-   [Revisar y ejecutar la aplicación de ejemplo](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  Para ejecutar el ejemplo, debe tener instalado en el equipo Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior.  
@@ -89,7 +89,7 @@ TOTAL bytes returned:  890591
 ## <a name="BKMK_HandlingReentrancy"></a> Controlar la reentrada  
  La reentrada se puede controlar de varias maneras en función de lo que se desee de la aplicación. Este tema presenta los siguientes ejemplos:  
   
--   [Deshabilitar el botón de inicio](#BKMK_DisableTheStartButton)  
+-   [Deshabilitar el botón Iniciar](#BKMK_DisableTheStartButton)  
   
      Deshabilite el botón **Start** (Iniciar) mientras se ejecuta la operación de modo que el usuario no pueda interrumpirla.  
   
@@ -97,7 +97,7 @@ TOTAL bytes returned:  890591
   
      Cancele cualquier operación que se esté ejecutando cuando el usuario haga clic de nuevo en el botón **Start** y, después, deje que continúe la última operación solicitada.  
   
--   [Ejecutar varias operaciones y poner en cola la salida](#BKMK_RunMultipleOperations)  
+-   [Ejecutar varias operaciones y poner en cola el resultado](#BKMK_RunMultipleOperations)  
   
      Permita que todas las operaciones solicitadas se ejecuten de forma asincrónica, pero coordine la presentación de salida para que los resultados de cada operación aparecen juntos y en orden.  
   
@@ -136,7 +136,7 @@ End Sub
   
  Para configurar este escenario, haga los cambios siguientes en el código básico que se proporciona en [Revisión y ejecución de la aplicación de ejemplo](#BKMD_SettingUpTheExample). También puede descargar la aplicación finalizada de [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET). El nombre de este proyecto es CancelAndRestart.  
   
-1.  Declare una variable de <xref:System.Threading.CancellationTokenSource>, `cts`, que esté en el ámbito de todos los métodos.  
+1. Declare una variable de <xref:System.Threading.CancellationTokenSource>, `cts`, que esté en el ámbito de todos los métodos.  
   
     ```vb  
     Class MainWindow // Or Class MainPage  
@@ -145,7 +145,7 @@ End Sub
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  En `StartButton_Click`, determine si una operación ya está en curso. Si el valor de `cts` es `Nothing`, no hay ninguna operación ya está activa. Si el valor no es `Nothing`, se cancela la operación que ya se está ejecutando.  
+2. En `StartButton_Click`, determine si una operación ya está en curso. Si el valor de `cts` es `Nothing`, no hay ninguna operación ya está activa. Si el valor no es `Nothing`, se cancela la operación que ya se está ejecutando.  
   
     ```vb  
     ' *** If a download process is already underway, cancel it.  
@@ -154,7 +154,7 @@ End Sub
     End If  
     ```  
   
-3.  Establezca `cts` en un valor diferente que represente el proceso actual.  
+3. Establezca `cts` en un valor diferente que represente el proceso actual.  
   
     ```vb  
     ' *** Now set cts to cancel the current process if the button is chosen again.  
@@ -162,7 +162,7 @@ End Sub
     cts = newCTS  
     ```  
   
-4.  Al final de `StartButton_Click`, el proceso actual está completo, así que establezca el valor de `cts` a `Nothing`.  
+4. Al final de `StartButton_Click`, el proceso actual está completo, así que establezca el valor de `cts` a `Nothing`.  
   
     ```vb  
     ' *** When the process completes, signal that another process can proceed.  
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>El método AccessTheWebAsync  
  En este ejemplo se divide `AccessTheWebAsync` en dos métodos. El primer método, `AccessTheWebAsync`, inicia todas las tareas de descarga de un grupo y configura `pendingWork` para controlar el proceso de visualización. El método usa una consulta de Language Integrated Query (consulta LINQ) y <xref:System.Linq.Enumerable.ToArray%2A> para iniciar todas las tareas de descarga al mismo tiempo.  
   
- A continuación, `AccessTheWebAsync` llama a `FinishOneGroupAsync` para esperar la finalización de todas las descargas y mostrar su duración.  
+ `AccessTheWebAsync` a continuación, llama a `FinishOneGroupAsync` para esperar la finalización de todas las descargas y mostrar su duración.  
   
- `FinishOneGroupAsync` devuelve una tarea que se asigna a `pendingWork` en `AccessTheWebAsync`. Ese valor evita que otra operación interrumpa la tarea antes de que finalice.  
+ `FinishOneGroupAsync` Devuelve una tarea que se asigna a `pendingWork` en `AccessTheWebAsync`. Ese valor evita que otra operación interrumpa la tarea antes de que finalice.  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  
@@ -535,42 +535,42 @@ End Function
   
 ### <a name="BKMK_DownloadingTheApp"></a> Descargar la aplicación  
   
-1.  Descargue el archivo comprimido de [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET).  
+1. Descargue el archivo comprimido de [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET).  
   
-2.  Descomprima el archivo descargado y, a continuación, inicie Visual Studio.  
+2. Descomprima el archivo descargado y, a continuación, inicie Visual Studio.  
   
-3.  En la barra de menús, elija **Archivo**, **Abrir**, **Proyecto o solución**.  
+3. En la barra de menús, elija **Archivo**, **Abrir**, **Proyecto o solución**.  
   
-4.  Navegue hasta la carpeta que contiene el código de ejemplo descomprimido y, a continuación, abra el archivo de solución (.sln).  
+4. Navegue hasta la carpeta que contiene el código de ejemplo descomprimido y, a continuación, abra el archivo de solución (.sln).  
   
-5.  En el **Explorador de soluciones**, abra el menú contextual del proyecto que quiere ejecutar y, después, elija **Establecer como proyecto de inicio**.  
+5. En el **Explorador de soluciones**, abra el menú contextual del proyecto que quiere ejecutar y, después, elija **Establecer como proyecto de inicio**.  
   
-6.  Elija las teclas CTRL+F5 para compilar y ejecutar el proyecto.  
+6. Elija las teclas CTRL+F5 para compilar y ejecutar el proyecto.  
   
 ### <a name="BKMK_BuildingTheApp"></a> Compilar la aplicación  
  La sección siguiente proporciona el código para compilar el ejemplo como una aplicación de WPF.  
   
 ##### <a name="to-build-a-wpf-app"></a>Para compilar una aplicación WPF  
   
-1.  Inicie Visual Studio.  
+1. Inicie Visual Studio.  
   
-2.  En la barra de menús, elija **Archivo**, **Nuevo**, **Proyecto**.  
+2. En la barra de menús, elija **Archivo**, **Nuevo**, **Proyecto**.  
   
      Aparece el cuadro de diálogo **Nuevo proyecto** .  
   
-3.  En el **plantillas instaladas** panel, expanda **Visual Basic**y, a continuación, expanda **Windows**.  
+3. En el **plantillas instaladas** panel, expanda **Visual Basic**y, a continuación, expanda **Windows**.  
   
-4.  En la lista de tipos de proyecto, seleccione **Aplicación WPF**.  
+4. En la lista de tipos de proyecto, seleccione **Aplicación WPF**.  
   
-5.  Asigne el nombre `WebsiteDownloadWPF` al proyecto y después haga clic en el botón **Aceptar**.  
+5. Asigne el nombre `WebsiteDownloadWPF` al proyecto y después haga clic en el botón **Aceptar**.  
   
      El proyecto nuevo aparece en el **Explorador de soluciones**.  
   
-6.  En el Editor de código de Visual Studio, elija la pestaña **MainWindow.xaml** .  
+6. En el Editor de código de Visual Studio, elija la pestaña **MainWindow.xaml** .  
   
      Si la pestaña no está visible, abra el menú contextual de MainWindow.xaml en el **Explorador de soluciones** y elija **Ver código**.  
   
-7.  En la vista **XAML** de MainWindow.xaml, reemplace el código por el código siguiente.  
+7. En la vista **XAML** de MainWindow.xaml, reemplace el código por el código siguiente.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -590,7 +590,7 @@ End Function
   
      En la vista **Diseño** de MainWindow.xaml aparece una ventana simple que contiene un cuadro de texto y un botón.  
   
-8.  Agregue una referencia para <xref:System.Net.Http>.  
+8. Agregue una referencia para <xref:System.Net.Http>.  
   
 9. En **el Explorador de soluciones**, abra el menú contextual de MainWindow.xaml.vb y, a continuación, elija **ver código**.  
   

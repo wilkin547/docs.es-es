@@ -7,17 +7,15 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: dee1df1e122e47ea67618da5a1e4349e28d90447
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377370"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084172"
 ---
 # <a name="globalization-for-wpf"></a>Globalización de WPF
 En este tema se presenta cuestiones que debe tener en cuenta al escribir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones para el mercado global. Los elementos de programación de globalización se definen en [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] en `System.Globalization`.
-
-
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>Globalización XAML
@@ -133,7 +131,7 @@ El ejemplo siguiente muestra una referencia de carácter hexadecimal. Tenga en c
 
 <a name="intl_layout"></a>
 ### <a name="international-layout"></a>Diseño internacional
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona una manera muy cómoda de admitir diseños horizontales, bidireccionales y verticales. En el marco de presentación del <xref:System.Windows.FrameworkElement.FlowDirection%2A> propiedad puede usarse para definir el diseño. Los patrones de dirección de flujo son:
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Proporciona una manera muy cómoda para admitir horizontales, bidireccionales y diseños verticales. En el marco de presentación del <xref:System.Windows.FrameworkElement.FlowDirection%2A> propiedad puede usarse para definir el diseño. Los patrones de dirección de flujo son:
 
 -   *LeftToRight*: diseño horizontal para latín, Asia Oriental y demás.
 
@@ -154,7 +152,7 @@ El ejemplo siguiente muestra una referencia de carácter hexadecimal. Tenga en c
  Desde un punto de vista de recursos, un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] diseñado para describir un dependiente del idioma del archivo [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] es un elemento de recurso y, por tanto, su formato de distribución final debe ser localizable para admitir idiomas internacionales. Dado que [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] no se puede controlar eventos, muchas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplicaciones contienen bloques de código para hacerlo. Para obtener más información, consulte [información general sobre XAML (WPF)](xaml-overview-wpf.md). Código se secciona y compila en archivos binarios diferentes cuando un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivo se convierte en el formulario BAML de XAML. Los archivos, imágenes y otros tipos de objetos de recursos administrados con formato BAML de XAML se insertan en el ensamblado de recursos satélite, que se puede localizar a otros idiomas, o en el ensamblado principal, cuando no se requiere la localización.
 
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones admiten todas las [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] recursos incluidos en las tablas de cadenas, imágenes y así sucesivamente.
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones admiten todas las [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)][!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] recursos incluidos en las tablas de cadenas, imágenes y así sucesivamente.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Compilar aplicaciones localizables
@@ -181,4 +179,5 @@ El ejemplo siguiente muestra una referencia de carácter hexadecimal. Tenga en c
 ```
 
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre la globalización y la localización de WPF](wpf-globalization-and-localization-overview.md)

@@ -2,12 +2,12 @@
 title: Programar el árbol de elementos de modelo
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f3def07ecbc60362b2a8c1d38689dc686cd5bbd5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086473"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321138"
 ---
 # <a name="programming-model-item-tree"></a>Programar el árbol de elementos de modelo
 Este ejemplo muestra cómo navegar por la <xref:System.Activities.Presentation.Model.ModelItem> árbol mediante enlace de datos declarativo de la vista de árbol de Windows Presentation Foundation (WPF).
@@ -29,15 +29,15 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1.  Abra la solución ProgrammingModelItemTree.sln en Visual Studio 2010.
+1. Abra la solución ProgrammingModelItemTree.sln en Visual Studio 2010.
 
-2.  Compile la solución seleccionando **compilar solución** desde el **compilar** menú.
+2. Compile la solución seleccionando **compilar solución** desde el **compilar** menú.
 
-3.  Presione F5 para ejecutar la aplicación. A continuación se muestra el formulario de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)].
+3. Presione F5 para ejecutar la aplicación. A continuación se muestra el formulario de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)].
 
-4.  Haga clic en el **cargar WF** botón para cargar el <xref:System.Activities.Presentation.Model.ModelItem> y enlazarlo a la vista de árbol.
+4. Haga clic en el **cargar WF** botón para cargar el <xref:System.Activities.Presentation.Model.ModelItem> y enlazarlo a la vista de árbol.
 
-5.  Al hacer clic en el **Change Model Item Tree** botón ejecuta el código anterior para agregar un elemento en el árbol y establecer una propiedad.
+5. Al hacer clic en el **Change Model Item Tree** botón ejecuta el código anterior para agregar un elemento en el árbol y establecer una propiedad.
 
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

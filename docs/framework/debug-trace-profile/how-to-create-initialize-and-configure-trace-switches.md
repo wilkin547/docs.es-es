@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7b8551c8b82ca880d989a1b58411f9555a9feb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079141"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325714"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Filtrar para crear, inicializar y configurar modificadores de seguimiento
 Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la salida del seguimiento.  
@@ -31,9 +31,9 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>Para crear e inicializar modificadores de seguimiento  
   
-1.  Defina un modificador de tipo <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> o tipo <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> y establezca el nombre y la descripción del modificador.  
+1. Defina un modificador de tipo <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> o tipo <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> y establezca el nombre y la descripción del modificador.  
   
-2.  Configure el modificador de seguimiento. Para más información, vea [Configuración de modificadores de seguimiento](#configure).  
+2. Configure el modificador de seguimiento. Para más información, vea [Configuración de modificadores de seguimiento](#configure).  
   
      El siguiente código crea dos modificadores, uno de cada tipo:  
   
@@ -71,9 +71,9 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
   
 #### <a name="to-configure-trace-switches"></a>Para configurar modificadores de seguimiento  
   
-1.  Para usar modificadores de seguimiento, primero debe crearlos y colocarlos en el código como se describe en la sección [Crear e inicializar modificadores de seguimiento](#create).  
+1. Para usar modificadores de seguimiento, primero debe crearlos y colocarlos en el código como se describe en la sección [Crear e inicializar modificadores de seguimiento](#create).  
   
-2.  Si el proyecto no contiene un archivo de configuración (app.config o Web.config), en el menú **Proyecto** seleccione **Agregar nuevo elemento**.  
+2. Si el proyecto no contiene un archivo de configuración (app.config o Web.config), en el menú **Proyecto** seleccione **Agregar nuevo elemento**.  
   
     -   **Visual Basic:** En el **Agregar nuevo elemento** diálogo cuadro, elija **archivo de configuración de aplicación**.  
   
@@ -88,7 +88,7 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
   
          Cuando se compila el proyecto, el archivo app.config se copia en la carpeta de salida del proyecto y se cambia su nombre a *nombreDeLaAplicación*.exe.config.  
   
-3.  Después de la etiqueta `<configuration>`, pero antes de la etiqueta `</configuration>`, agregue el código XML adecuado para configurar los modificadores. En los ejemplos siguientes se muestra un **BooleanSwitch** con una propiedad **DisplayName** de `DataMessageSwitch` y un **TraceSwitch** con una propiedad **DisplayName** de `TraceLevelSwitch`.  
+3. Después de la etiqueta `<configuration>`, pero antes de la etiqueta `</configuration>`, agregue el código XML adecuado para configurar los modificadores. En los ejemplos siguientes se muestra un **BooleanSwitch** con una propiedad **DisplayName** de `DataMessageSwitch` y un **TraceSwitch** con una propiedad **DisplayName** de `TraceLevelSwitch`.  
   
     ```xml  
     <system.diagnostics>  
@@ -101,11 +101,11 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
   
      En esta configuración, ambos modificadores están desactivados.  
   
-4.  Si necesita activar **BooleanSwitch**, como `DataMessagesSwitch` mostrado en el ejemplo anterior, cambie **Value** por cualquier entero distinto de 0.  
+4. Si necesita activar **BooleanSwitch**, como `DataMessagesSwitch` mostrado en el ejemplo anterior, cambie **Value** por cualquier entero distinto de 0.  
   
-5.  Si necesita activar **TraceSwitch**, como `TraceLevelSwitch` mostrado en el ejemplo anterior, cambie **Value** por el ajuste del nivel adecuado (del 1 al 4).  
+5. Si necesita activar **TraceSwitch**, como `TraceLevelSwitch` mostrado en el ejemplo anterior, cambie **Value** por el ajuste del nivel adecuado (del 1 al 4).  
   
-6.  Agregue comentarios al archivo .config para que el usuario final entienda claramente qué valores debe cambiar para configurar los modificadores de la manera correcta.  
+6. Agregue comentarios al archivo .config para que el usuario final entienda claramente qué valores debe cambiar para configurar los modificadores de la manera correcta.  
   
      En el ejemplo siguiente se muestra cómo podría quedar el código final, incluidos los comentarios:  
   

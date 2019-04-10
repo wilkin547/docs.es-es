@@ -2,12 +2,12 @@
 title: Tipos de datos de SQL Server y ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 90589f54728ad5e887b96f37f96ff31928c680ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9e81e54f223d35a3db9c943edf6f9f9b24110faa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168420"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326312"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Tipos de datos de SQL Server y ADO.NET
 SQL Server y .NET Framework están basados en sistemas de tipos distintos, lo que puede dar lugar a posibles pérdidas de datos. Para conservar la integridad de los datos, el proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlClient>) proporciona métodos de descriptor de acceso con tipo para trabajar con datos de SQL Server. Puede usar las enumeraciones de las clases <xref:System.Data.SqlDbType> para especificar los tipos de datos <xref:System.Data.SqlClient.SqlParameter>.  
@@ -20,7 +20,7 @@ SQL Server y .NET Framework están basados en sistemas de tipos distintos, lo qu
   
  **Libros en pantalla de SQL Server**  
   
-1.  [Tipos de datos (motor de base de datos)](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1. [Tipos de datos (motor de base de datos)](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>En esta sección  
  [SqlTypes y DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  

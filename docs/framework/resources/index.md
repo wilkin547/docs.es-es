@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 889158aebb70de20b4e64044b5fa61dc3494ed73
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 86efc3a9d9eab5c1529804769af413dd88e71f1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220492"
 ---
 # <a name="resources-in-net-apps"></a>Recursos en aplicaciones .NET
 Casi todas las aplicaciones de calidad de producción tienen que utilizar recursos. Un recurso es cualquier dato no ejecutable que se implemente lógicamente con una aplicación. Los recursos pueden mostrarse en una aplicación como mensajes de error o como parte de la interfaz de usuario. Los recursos pueden contener datos con varios formatos, como objetos almacenados, cadenas e imágenes. (Para poder escribir objetos almacenados en un archivo de recursos, los objetos deben ser serializables). Si los datos se almacenan en un archivo de recursos, es posible modificarlos sin volver a compilar toda la aplicación. Esto también permite almacenar los datos en una sola ubicación y elimina la necesidad de confiar en los datos codificados de forma rígida almacenados en varias ubicaciones.  
@@ -62,6 +62,7 @@ También puede localizar los recursos de una aplicación para determinadas refer
 -   La clase <xref:System.Resources.ResXResourceSet>, que permite cargar en la memoria todos los elementos de un archivo de recursos XML.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
 - [Elementos esenciales de aplicaciones](../../../docs/standard/application-essentials.md)

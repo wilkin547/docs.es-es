@@ -2,15 +2,21 @@
 title: Implementar .NET Framework y aplicaciones
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], packaging'
-  - 'deploying applications [.NET Framework]'
-  - 'deploying applications [.NET Framework], features'
-  - 'deploying applications [.NET Framework], distribution'
-  - '.NET Framework, deploying'
-  - .NET Framework application deployment
+- deploying applications [.NET Framework], packaging
+- deploying applications [.NET Framework]
+- deploying applications [.NET Framework], features
+- deploying applications [.NET Framework], distribution
+- .NET Framework, deploying
+- .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: 0ff426f051b37830b0161cd0e0e4368a5750c664
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124780"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implementar .NET Framework y aplicaciones
 Este artículo le ayuda a empezar a implementar .NET Framework con la aplicación. La mayoría de la información está destinada a desarrolladores, OEM y administradores de empresa. Los usuarios que deseen instalar .NET Framework en sus equipos deben leer [Instalar .NET Framework](~/docs/framework/install/index.md).  
@@ -24,9 +30,9 @@ Este artículo le ayuda a empezar a implementar .NET Framework con la aplicació
   
     -   Opciones del instalador:  
   
-        -   [Instalador web](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)  
+        -   [instalador web](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)  
   
-        -   [Instalador sin conexión](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)  
+        -   [instalador sin conexión](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)  
   
     -   Modos de instalación:  
   
@@ -158,7 +164,8 @@ Este artículo le ayuda a empezar a implementar .NET Framework con la aplicació
 |[Publicar aplicaciones ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Describe cómo empaquetar una aplicación de Windows Forms e implementarla con ClickOnce en los equipos cliente en una red.|  
 |[Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|Describe el modelo de concentrador y de radio que .NET Framework usa para empaquetar e implementar los recursos; aborda las convenciones de nomenclatura de los recursos, el proceso de reserva y las alternativas de empaquetado.|  
 |[Implementar una aplicación interoperativa](../../../docs/framework/interop/deploying-an-interop-application.md)|Explica cómo distribuir e instalar aplicaciones de interoperabilidad, que suelen incluir un ensamblado de cliente de .NET Framework, uno o varios ensamblados de interoperabilidad que representan diferentes bibliotecas de tipos COM, y uno o varios componentes COM registrados.|  
-|[Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Describe cómo iniciar y seguir en modo silencioso el proceso de instalación de .NET Framework, mientras se muestra la vista del progreso de la instalación.|  
+|[Procedimiento para obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Describe cómo iniciar y seguir en modo silencioso el proceso de instalación de .NET Framework, mientras se muestra la vista del progreso de la instalación.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Guía de desarrollo](../../../docs/framework/development-guide.md)

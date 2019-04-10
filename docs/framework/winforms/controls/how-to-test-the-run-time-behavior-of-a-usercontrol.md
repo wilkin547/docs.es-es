@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 1719d0461fbb582a1486dcc0726253ec97a07ac6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15b37c71e6643b588c0378510965a9a3e7cb56e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116498"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321775"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Filtrar para comprobar el comportamiento de UserControl en tiempo de ejecución
 Al desarrollar un <xref:System.Windows.Forms.UserControl>, debe probar su comportamiento en tiempo de ejecución. Puede crear un proyecto de aplicación basada en Windows independiente y colocar el control en un formulario de prueba, pero este procedimiento es un problema. Una forma más rápida y sencilla es usar el **UserControl Test Container** proporcionadas por Visual Studio. Este contenedor de prueba se inicia directamente desde un proyecto de biblioteca de control de Windows.  
@@ -29,21 +29,21 @@ Al desarrollar un <xref:System.Windows.Forms.UserControl>, debe probar su compor
   
 ### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>Para probar el comportamiento de tiempo de ejecución de una clase UserControl  
   
-1.  Crear un proyecto de biblioteca de controles de Windows denominado **TestContainerExample**. Para obtener más información, consulte [plantilla Biblioteca de controles de Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
+1. Crear un proyecto de biblioteca de controles de Windows denominado **TestContainerExample**. Para obtener más información, consulte [plantilla Biblioteca de controles de Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
-2.  En el **Diseñador de Windows Forms**, arrastre un <xref:System.Windows.Forms.Label> controlar desde la **cuadro de herramientas** hasta la superficie de diseño del control.  
+2. En el **Diseñador de Windows Forms**, arrastre un <xref:System.Windows.Forms.Label> controlar desde la **cuadro de herramientas** hasta la superficie de diseño del control.  
   
-3.  Presione F5 para compilar el proyecto y ejecutar el **UserControl Test Container**. El contenedor de prueba aparece con su <xref:System.Windows.Forms.UserControl> en el **Preview** panel.  
+3. Presione F5 para compilar el proyecto y ejecutar el **UserControl Test Container**. El contenedor de prueba aparece con su <xref:System.Windows.Forms.UserControl> en el **Preview** panel.  
   
-4.  Seleccione el <xref:System.Windows.Forms.Control.BackColor%2A> las propiedades mostradas en la <xref:System.Windows.Forms.PropertyGrid> control a la derecha de la **Preview** panel. Cambie su valor a `ControlDark`. Observe que el control cambia a un color más oscuro. Pruebe a cambiar otros valores de propiedad y observar el efecto en el control.  
+4. Seleccione el <xref:System.Windows.Forms.Control.BackColor%2A> las propiedades mostradas en la <xref:System.Windows.Forms.PropertyGrid> control a la derecha de la **Preview** panel. Cambie su valor a `ControlDark`. Observe que el control cambia a un color más oscuro. Pruebe a cambiar otros valores de propiedad y observar el efecto en el control.  
   
-5.  Haga clic en el **Control de usuario Dock Fill** casilla de verificación siguiente el **Preview** panel. Observe que el control cambia de tamaño para rellenar el panel. Cambiar el tamaño del contenedor de prueba y observe que el control cambia de tamaño con el panel.  
+5. Haga clic en el **Control de usuario Dock Fill** casilla de verificación siguiente el **Preview** panel. Observe que el control cambia de tamaño para rellenar el panel. Cambiar el tamaño del contenedor de prueba y observe que el control cambia de tamaño con el panel.  
   
-6.  Cierre el contenedor de prueba.  
+6. Cierre el contenedor de prueba.  
   
-7.  Agregue otro control de usuario para el **TestContainerExample** proyecto. Para obtener más detalles, vea [Cómo: Agregar elementos existentes a un proyecto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100)).  
+7. Agregue otro control de usuario para el **TestContainerExample** proyecto. Para obtener más detalles, vea [Cómo: Agregar elementos existentes a un proyecto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100)).  
   
-8.  En el **Diseñador de Windows Forms**, arrastre un <xref:System.Windows.Forms.Button> controlar desde la **cuadro de herramientas** hasta la superficie de diseño del control.  
+8. En el **Diseñador de Windows Forms**, arrastre un <xref:System.Windows.Forms.Button> controlar desde la **cuadro de herramientas** hasta la superficie de diseño del control.  
   
 9. Presione F5 para compilar el proyecto y ejecutar el contenedor de prueba.  
   
@@ -54,17 +54,17 @@ Al desarrollar un <xref:System.Windows.Forms.UserControl>, debe probar su compor
   
 #### <a name="to-test-user-controls-from-another-project"></a>Para probar los controles de usuario desde otro proyecto  
   
-1.  Crear un proyecto de biblioteca de controles de Windows denominado **TestContainerExample2**. Para obtener más información, consulte [plantilla Biblioteca de controles de Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
+1. Crear un proyecto de biblioteca de controles de Windows denominado **TestContainerExample2**. Para obtener más información, consulte [plantilla Biblioteca de controles de Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
-2.  En el **Diseñador de Windows Forms**, arrastre un <xref:System.Windows.Forms.RadioButton> controlar desde la **cuadro de herramientas** hasta la superficie de diseño del control.  
+2. En el **Diseñador de Windows Forms**, arrastre un <xref:System.Windows.Forms.RadioButton> controlar desde la **cuadro de herramientas** hasta la superficie de diseño del control.  
   
-3.  Presione F5 para compilar el proyecto y ejecutar el contenedor de prueba. El contenedor de prueba aparece con su <xref:System.Windows.Forms.UserControl> en el **Preview** panel.  
+3. Presione F5 para compilar el proyecto y ejecutar el contenedor de prueba. El contenedor de prueba aparece con su <xref:System.Windows.Forms.UserControl> en el **Preview** panel.  
   
-4.  Haga clic en el **carga** botón.  
+4. Haga clic en el **carga** botón.  
   
-5.  En el **abierto** diálogo cuadro, vaya a **TestContainerExample**.dll, que basa en el procedimiento anterior. Seleccione **TestContainerExample**.dll y haga clic en el **abierto** botón para cargar los controles de usuario  
+5. En el **abierto** diálogo cuadro, vaya a **TestContainerExample**.dll, que basa en el procedimiento anterior. Seleccione **TestContainerExample**.dll y haga clic en el **abierto** botón para cargar los controles de usuario  
   
-6.  Use la **seleccionar Control de usuario** <xref:System.Windows.Forms.ComboBox> para cambiar entre los dos controles de usuario desde el **TestContainerExample** proyecto.  
+6. Use la **seleccionar Control de usuario** <xref:System.Windows.Forms.ComboBox> para cambiar entre los dos controles de usuario desde el **TestContainerExample** proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

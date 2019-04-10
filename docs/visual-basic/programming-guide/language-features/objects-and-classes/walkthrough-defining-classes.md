@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: c41d3b2c8d905395f1249b15709da8dbdf5d4632
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3129824f6e4047420c422503cc366a1c8d28b7e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640438"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326221"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>Tutorial: Definición de clases (Visual Basic)
 
@@ -30,32 +30,32 @@ Este tutorial muestra cómo definir las clases, que, a continuación, puede usar
   
 ## <a name="to-define-a-class"></a>Para definir una clase
   
-1.  Cree un proyecto haciendo **nuevo proyecto** en el **archivo** menú. Aparecerá el cuadro de diálogo **Nuevo proyecto** .  
+1. Cree un proyecto haciendo **nuevo proyecto** en el **archivo** menú. Aparecerá el cuadro de diálogo **Nuevo proyecto** .  
   
-2.  Seleccione la aplicación de Windows en la lista de plantillas de proyecto de Visual Basic para mostrar el nuevo proyecto.  
+2. Seleccione la aplicación de Windows en la lista de plantillas de proyecto de Visual Basic para mostrar el nuevo proyecto.  
   
-3.  Agregue una nueva clase al proyecto haciendo clic en **Agregar clase** en el **proyecto** menú. Aparecerá el cuadro de diálogo **Agregar nuevo elemento**.  
+3. Agregue una nueva clase al proyecto haciendo clic en **Agregar clase** en el **proyecto** menú. Aparecerá el cuadro de diálogo **Agregar nuevo elemento**.  
   
-4.  Seleccione el **clase** plantilla.  
+4. Seleccione el **clase** plantilla.  
   
-5.  Nombre de la nueva clase `UserNameInfo.vb`y, a continuación, haga clic en **agregar** para mostrar el código para la nueva clase.  
+5. Nombre de la nueva clase `UserNameInfo.vb`y, a continuación, haga clic en **agregar** para mostrar el código para la nueva clase.  
   
      [!code-vb[VbVbalrOOP#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#5)]
   
     > [!NOTE]
     >  Puede usar Visual Basic **Editor de código** para agregar una clase al formulario de inicio escribiendo el `Class` palabra clave seguido del nombre de la nueva clase. El **Editor de código** proporciona correspondiente `End Class` instrucción para usted.  
   
-6.  Defina un campo privado para la clase agregando el siguiente código entre el `Class` y `End Class` instrucciones:  
+6. Defina un campo privado para la clase agregando el siguiente código entre el `Class` y `End Class` instrucciones:  
   
      [!code-vb[VbVbalrOOP#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#7)]
   
      Declara el campo como `Private` significa que se puede usar solo dentro de la clase. Puede hacer que los campos disponibles desde fuera de una clase mediante el uso de modificadores de acceso como `Public` que proporcionan un acceso más. Para obtener más información, consulte [tener acceso a los niveles en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-7.  Defina una propiedad para la clase agregando el código siguiente:  
+7. Defina una propiedad para la clase agregando el código siguiente:  
   
      [!code-vb[VbVbalrOOP#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#8)]
   
-8.  Defina un método para la clase agregando el código siguiente:  
+8. Defina un método para la clase agregando el código siguiente:  
   
      [!code-vb[VbVbalrOOP#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#9)]
   
@@ -67,17 +67,17 @@ Este tutorial muestra cómo definir las clases, que, a continuación, puede usar
   
 ## <a name="to-create-a-button-to-test-the-class"></a>Para crear un botón para probar la clase
   
-1.  Cambiar el formulario de inicio al modo de diseño haciendo clic en su nombre de **el Explorador de soluciones** y, a continuación, haga clic en **Diseñador de vistas**. De forma predeterminada, el formulario de inicio para los proyectos de aplicación de Windows se denomina Form1.vb. A continuación, aparecerá el formulario principal.  
+1. Cambiar el formulario de inicio al modo de diseño haciendo clic en su nombre de **el Explorador de soluciones** y, a continuación, haga clic en **Diseñador de vistas**. De forma predeterminada, el formulario de inicio para los proyectos de aplicación de Windows se denomina Form1.vb. A continuación, aparecerá el formulario principal.  
   
-2.  Agregue un botón al formulario principal y haga doble clic para mostrar el código de la `Button1_Click` controlador de eventos. Agregue el siguiente código para llamar al procedimiento de prueba:  
+2. Agregue un botón al formulario principal y haga doble clic para mostrar el código de la `Button1_Click` controlador de eventos. Agregue el siguiente código para llamar al procedimiento de prueba:  
   
      [!code-vb[VbVbalrOOP#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#12)]
   
 ## <a name="to-run-your-application"></a>Para ejecutar la aplicación
   
-1.  Ejecute la aplicación presionando F5. Haga clic en el botón del formulario para llamar al procedimiento de prueba. Muestra un mensaje que indica que el original `UserName` es "MOORE, BOBBY", porque se llama al procedimiento el `Capitalize` método del objeto.  
+1. Ejecute la aplicación presionando F5. Haga clic en el botón del formulario para llamar al procedimiento de prueba. Muestra un mensaje que indica que el original `UserName` es "MOORE, BOBBY", porque se llama al procedimiento el `Capitalize` método del objeto.  
   
-2.  Haga clic en **Aceptar** para descartar el cuadro de mensaje. El `Button1 Click` procedimiento cambia el valor de la `UserName` propiedad y se muestra un mensaje que indica que el nuevo valor de `UserName` es "Worden, Joe".  
+2. Haga clic en **Aceptar** para descartar el cuadro de mensaje. El `Button1 Click` procedimiento cambia el valor de la `UserName` propiedad y se muestra un mensaje que indica que el nuevo valor de `UserName` es "Worden, Joe".  
   
 ## <a name="see-also"></a>Vea también
 

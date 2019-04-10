@@ -9,28 +9,28 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 598d3a6ea7f7cf6dc19cae5f55f49243d5d3ba31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 17ce930a91d2eb3626e92898e00e67be4741cf56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091751"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321606"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Filtrar para cambiar el tamaño de los controles en formularios Windows Forms
 Puede cambiar el tamaño de los controles individuales, y puede cambiar el tamaño de varios controles del tipo iguales o distintos, como <xref:System.Windows.Forms.Button> y <xref:System.Windows.Forms.GroupBox> controles.  
   
 ### <a name="to-resize-a-control"></a>Para cambiar el tamaño de un control  
   
-1.  Haga clic en el control para cambiar de tamaño y arrastrar uno de los controladores de tamaño de ocho.  
+1. Haga clic en el control para cambiar de tamaño y arrastrar uno de los controladores de tamaño de ocho.  
   
     > [!NOTE]
     >  Seleccione el control y presione las teclas de dirección mientras mantiene presionada la tecla MAYÚS para cambiar el tamaño del control un píxel a la vez. Presione las teclas de flecha abajo o hacia la derecha mientras mantiene presionadas las teclas MAYÚS y CTRL para cambiar el tamaño del control en incrementos grandes.  
   
 ### <a name="to-resize-multiple-controls-on-a-form"></a>Para cambiar el tamaño de varios controles en un formulario  
   
-1.  Mantenga presionada la tecla CTRL o MAYÚS y seleccione los controles que desee cambiar el tamaño. El tamaño del primer control que seleccione se usa para otros controles.  
+1. Mantenga presionada la tecla CTRL o MAYÚS y seleccione los controles que desee cambiar el tamaño. El tamaño del primer control que seleccione se usa para otros controles.  
   
-2.  En el **formato** menú, elija **Igualar tamaño**y seleccione una de las cuatro opciones. Los tres primeros comandos cambian las dimensiones de los controles para que coincida con el primer control seleccionado.  
+2. En el **formato** menú, elija **Igualar tamaño**y seleccione una de las cuatro opciones. Los tres primeros comandos cambian las dimensiones de los controles para que coincida con el primer control seleccionado.  
   
 ## <a name="see-also"></a>Vea también
 

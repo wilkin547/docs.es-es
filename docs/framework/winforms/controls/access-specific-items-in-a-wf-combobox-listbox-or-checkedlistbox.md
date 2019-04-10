@@ -13,19 +13,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: 3d61a9b38f809d16e95b485893acaadcf04d826f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fbdd9168fe286823db7cf066ae0f821b8db88ecb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077217"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324531"
 ---
 # <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Filtrar para obtener acceso a elementos específicos de un control ComboBox, ListBox o CheckedListBox de formularios Windows Forms
 Obtener acceso a elementos específicos en un cuadro combinado de Windows Forms, cuadro de lista o cuadro de lista activado es una tarea esencial. Permite determinar mediante programación qué hay en una lista, en cualquier posición dada.  
   
 ### <a name="to-access-a-specific-item"></a>Para obtener acceso a un elemento específico  
   
-1.  Consulta el `Items` colección utilizando el índice del elemento específico:  
+1. Consulta el `Items` colección utilizando el índice del elemento específico:  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  

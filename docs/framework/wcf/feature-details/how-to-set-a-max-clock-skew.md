@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: e487da6316ec381c2009ee33575848dd80df8ab2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1a8d99e5d2bd21a74318718f43b5d1c091ed073e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59076633"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322152"
 ---
 # <a name="how-to-set-a-max-clock-skew"></a>Filtrar para establecer un sesgo de reloj máximo
 Las funciones críticas en el tiempo se pueden desbaratar si los ajustes del reloj en dos equipos son diferentes. Para mitigar esta posibilidad, puede establecer la propiedad `MaxClockSkew` en <xref:System.TimeSpan>. Esta propiedad está disponible en dos clases:  
@@ -29,41 +29,41 @@ Las funciones críticas en el tiempo se pueden desbaratar si los ajustes del rel
   
 ### <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a>Para crear un enlace personalizado con un nuevo valor de sesgo de reloj en código  
   
-1.  > [!WARNING]
+1. > [!WARNING]
     >  Nota: agregue referencias a los siguientes espacios de nombres en el código: <xref:System.ServiceModel.Channels>, <xref:System.ServiceModel.Description>, <xref:System.Security.Permissions>, y <xref:System.ServiceModel.Security.Tokens>.  
   
      Cree una instancia de una clase <xref:System.ServiceModel.WSHttpBinding> y establezca su modo de seguridad en <xref:System.ServiceModel.SecurityMode.Message>.  
   
-2.  Cree una nueva instancia de la clase <xref:System.ServiceModel.Channels.BindingElementCollection> llamando al método <xref:System.ServiceModel.WSHttpBinding.CreateBindingElements%2A>.  
+2. Cree una nueva instancia de la clase <xref:System.ServiceModel.Channels.BindingElementCollection> llamando al método <xref:System.ServiceModel.WSHttpBinding.CreateBindingElements%2A>.  
   
-3.  Utilice el método <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> de la clase <xref:System.ServiceModel.Channels.BindingElementCollection> para encontrar el elemento del enlace de seguridad.  
+3. Utilice el método <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> de la clase <xref:System.ServiceModel.Channels.BindingElementCollection> para encontrar el elemento del enlace de seguridad.  
   
-4.  Al utilizar el método <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A>, convierta al tipo real. El ejemplo siguiente convierte al tipo <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+4. Al utilizar el método <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A>, convierta al tipo real. El ejemplo siguiente convierte al tipo <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
-5.  Establezca la propiedad <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> en el elemento del enlace de seguridad.  
+5. Establezca la propiedad <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> en el elemento del enlace de seguridad.  
   
-6.  Cree un <xref:System.ServiceModel.ServiceHost> con un tipo de servicio y dirección base adecuados.  
+6. Cree un <xref:System.ServiceModel.ServiceHost> con un tipo de servicio y dirección base adecuados.  
   
-7.  Utilice el método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> para agregar un extremo e incluir el <xref:System.ServiceModel.Channels.CustomBinding>.  
+7. Utilice el método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> para agregar un extremo e incluir el <xref:System.ServiceModel.Channels.CustomBinding>.  
   
      [!code-csharp[c_MaxClockSkew#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_maxclockskew/cs/source.cs#1)]
      [!code-vb[c_MaxClockSkew#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_maxclockskew/vb/source.vb#1)]  
   
 ### <a name="to-set-the-maxclockskew-in-configuration"></a>Para establecer MaxClockSkew en la configuración  
   
-1.  Crear un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) en el [ \<enlaces >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sección del elemento.  
+1. Crear un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) en el [ \<enlaces >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sección del elemento.  
   
-2.  Crear un [ \<enlace >](../../../../docs/framework/misc/binding.md) y establezca el `name` atributo en un valor adecuado. El siguiente ejemplo lo define en `MaxClockSkewBinding`.  
+2. Crear un [ \<enlace >](../../../../docs/framework/misc/binding.md) y establezca el `name` atributo en un valor adecuado. El siguiente ejemplo lo define en `MaxClockSkewBinding`.  
   
-3.  Agregue un elemento de codificación. El ejemplo siguiente se agrega un [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
+3. Agregue un elemento de codificación. El ejemplo siguiente se agrega un [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
   
-4.  Agregar un [ \<seguridad >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) y establezca el `authenticationMode` atributo en un valor adecuado. El siguiente ejemplo establece el atributo en `Kerberos` para especificar que el servicio usa autenticación de Windows.  
+4. Agregar un [ \<seguridad >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) y establezca el `authenticationMode` atributo en un valor adecuado. El siguiente ejemplo establece el atributo en `Kerberos` para especificar que el servicio usa autenticación de Windows.  
   
-5.  Agregar un [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) y establezca el `maxClockSkew` en un valor en forma de `"##:##:##"`. El siguiente ejemplo lo establece en 7 minutos. Opcionalmente, agregue un [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) y establezca el `maxClockSkew` atributo en un valor adecuado.  
+5. Agregar un [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) y establezca el `maxClockSkew` en un valor en forma de `"##:##:##"`. El siguiente ejemplo lo establece en 7 minutos. Opcionalmente, agregue un [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) y establezca el `maxClockSkew` atributo en un valor adecuado.  
   
-6.  Agregue un elemento de transporte. En el ejemplo siguiente se usa un [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
+6. Agregue un elemento de transporte. En el ejemplo siguiente se usa un [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
   
-7.  Para una conversación segura, la configuración de seguridad debe producir en el arranque en el [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento.  
+7. Para una conversación segura, la configuración de seguridad debe producir en el arranque en el [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento.  
   
     ```xml  
     <bindings>  

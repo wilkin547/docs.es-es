@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 85b19c43441650789eed6b92a771d2f2433c6a10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094086"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322178"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Filtrar para crear un control con enlace simple en formularios Windows Forms
 Con *enlace simple*, puede mostrar un elemento de datos único, como un valor de columna de una tabla de conjunto de datos en un control. Puede enlazar cualquier propiedad de un control de forma sencilla en un valor de datos.  
@@ -20,25 +20,25 @@ Con *enlace simple*, puede mostrar un elemento de datos único, como un valor de
   
 ### <a name="to-simple-bind-a-control"></a>Para enlazar un control simple  
   
-1.  Conéctese a un origen de datos. Para obtener más información, consulte [conectarse a un origen de datos](../data/adonet/connecting-to-a-data-source.md).  
+1. Conéctese a un origen de datos. Para obtener más información, consulte [conectarse a un origen de datos](../data/adonet/connecting-to-a-data-source.md).  
   
-2.  En el formulario, seleccione el control y mostrar el **propiedades** ventana.  
+2. En el formulario, seleccione el control y mostrar el **propiedades** ventana.  
   
-3.  Expanda el **(DataBindings)** propiedad.  
+3. Expanda el **(DataBindings)** propiedad.  
   
      Las propiedades enlazadas con más frecuencia se muestran bajo el **(DataBindings)** propiedad. Por ejemplo, en la mayoría de los controles, el **texto** propiedad está enlazada con más frecuencia.  
   
-4.  Si la propiedad que desea enlazar no es una de las propiedades enlazadas con frecuencia, haga clic en el **puntos suspensivos** botón (![de pantalla de VisualStudioEllipsesButton](./media/vbellipsesbutton.png "vbEllipsesButton") ) en el **(avanzado)** cuadro para mostrar el **formato y enlace de datos avanzado** cuadro de diálogo con una lista completa de propiedades para ese control.  
+4. Si la propiedad que desea enlazar no es una de las propiedades enlazadas con frecuencia, haga clic en el **puntos suspensivos** botón (![de pantalla de VisualStudioEllipsesButton](./media/vbellipsesbutton.png "vbEllipsesButton") ) en el **(avanzado)** cuadro para mostrar el **formato y enlace de datos avanzado** cuadro de diálogo con una lista completa de propiedades para ese control.  
   
-5.  Seleccione la propiedad que desea enlazar y haga clic en la flecha desplegable situada debajo **enlace**.  
+5. Seleccione la propiedad que desea enlazar y haga clic en la flecha desplegable situada debajo **enlace**.  
   
      Se muestra una lista de los orígenes de datos disponibles.  
   
-6.  Expanda el origen de datos al que desea enlazar hasta que encuentre el elemento de datos que desea. Por ejemplo, si va a enlazar a un valor de columna en la tabla de un conjunto de datos, expanda el nombre del conjunto de datos y, después, expanda el nombre de la tabla para mostrar los nombres de columna.  
+6. Expanda el origen de datos al que desea enlazar hasta que encuentre el elemento de datos que desea. Por ejemplo, si va a enlazar a un valor de columna en la tabla de un conjunto de datos, expanda el nombre del conjunto de datos y, después, expanda el nombre de la tabla para mostrar los nombres de columna.  
   
-7.  Haga clic en el nombre del elemento al que se va a enlazar.  
+7. Haga clic en el nombre del elemento al que se va a enlazar.  
   
-8.  Si estuviera trabajando la **formato y enlace de datos avanzado** cuadro de diálogo, haga clic en **Aceptar** para volver a la **propiedades** ventana.  
+8. Si estuviera trabajando la **formato y enlace de datos avanzado** cuadro de diálogo, haga clic en **Aceptar** para volver a la **propiedades** ventana.  
   
 9. Si desea enlazar propiedades adicionales del control, repita los pasos del 3 al 7.  
   

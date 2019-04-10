@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: ef20f74055a07071ef9634973c6852ac58c3143c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824725"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324388"
 ---
 # <a name="constructor-name-cannot-call-itself"></a>Constructor '\<nombre >' no se puede llamar a sí mismo
 Un `Sub New` procedimiento en una clase o estructura se llama a sí mismo.  
@@ -23,10 +23,10 @@ Un `Sub New` procedimiento en una clase o estructura se llama a sí mismo.
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Compruebe la lista de parámetros del constructor que se llama. Debe ser diferente de la que realiza la llamada de constructor.  
+1. Compruebe la lista de parámetros del constructor que se llama. Debe ser diferente de la que realiza la llamada de constructor.  
   
-2.  Si no piensa llamar a un constructor diferente, quite el `Sub New` llamar por completo.  
+2. Si no piensa llamar a un constructor diferente, quite el `Sub New` llamar por completo.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Duración del objeto: ¿Cómo se crean y destruyen objetos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Duración de los objetos: cómo se crean y destruyen](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

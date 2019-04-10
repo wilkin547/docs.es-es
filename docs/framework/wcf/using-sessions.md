@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095872"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320930"
 ---
 # <a name="using-sessions"></a>Uso de sesiones
 En las aplicaciones de Windows Communication Foundation (WCF), un *sesión* correlaciona un grupo de mensajes en una conversación. Las sesiones WCF son diferentes del objeto de sesión disponible en [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] admiten comportamientos diferentes aplicaciones y se controlan de maneras diferentes. En este tema se describe las características que habilitan las sesiones en WCF aplicaciones y cómo usarlas.  
@@ -53,9 +53,9 @@ En las aplicaciones de Windows Communication Foundation (WCF), un *sesión* corr
   
  Cuando un servicio WCF acepta una sesión de cliente, las siguientes características están habilitadas de forma predeterminada:  
   
-1.  Todas las llamadas entre un objeto de cliente WCF se controlan mediante la misma instancia de servicio.  
+1. Todas las llamadas entre un objeto de cliente WCF se controlan mediante la misma instancia de servicio.  
   
-2.  Los distintos enlaces basados en sesión proporcionan características adicionales.  
+2. Los distintos enlaces basados en sesión proporcionan características adicionales.  
   
 ## <a name="system-provided-session-types"></a>Tipos de sesión proporcionados por el sistema  
  Un enlace basado en sesión admite la asociación predeterminada de una instancia de servicio con una sesión determinada. Sin embargo, diferentes enlaces basados en sesión admiten distintas características además de habilitar el control de creación de instancias basadas en sesión descrito anteriormente.  

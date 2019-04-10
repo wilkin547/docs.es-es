@@ -2,12 +2,12 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: a42bf12e6ee8275814898a0158348f56bfb2688e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 981b70011979e1e0fbd8fc6b22ba54774c824342
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112871"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325181"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
 Este ejemplo muestra cómo se pueden personalizar los procesos de deserialización y serialización utilizando la clase <xref:System.Runtime.Serialization.DataContractResolver>. En este ejemplo muestra cómo usar DataContractResolver para asignar los tipos CLR entre una representación xsi:type durante la serialización y la deserialización.
@@ -152,9 +152,9 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1.  Con Visual Studio 2012, abra el archivo de Cdrsample.sln.
+1. Con Visual Studio 2012, abra el archivo de Cdrsample.sln.
 
-2.  Presione F5 para ejecutar la solución.
+2. Presione F5 para ejecutar la solución.
 
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

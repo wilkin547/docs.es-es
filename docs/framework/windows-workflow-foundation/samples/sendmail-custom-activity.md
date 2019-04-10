@@ -2,12 +2,12 @@
 title: Actividad personalizada SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4cd2ed8c80bd5ab4c4e784f4c5c86a58ecceda2f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181295"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321866"
 ---
 # <a name="sendmail-custom-activity"></a>Actividad personalizada SendMail
 En este ejemplo se muestra cómo crear una actividad personalizada que deriva de <xref:System.Activities.AsyncCodeActivity> para enviar correo utilizando SMTP para el uso dentro de una aplicación de flujo de trabajo. La actividad personalizada utiliza las capacidades de <xref:System.Net.Mail.SmtpClient> para enviar correo electrónico de forma asincrónica y enviar correo electrónico con la autenticación. También proporciona algunas características de usuario final como el modo de prueba, reemplazo del token, plantillas de archivo y ruta de colocación para dejar la prueba.  
@@ -16,14 +16,14 @@ En este ejemplo se muestra cómo crear una actividad personalizada que deriva de
   
 |Name|Tipo|Descripción|  
 |-|-|-|  
-|Host|String|Dirección del host del servidor SMTP.|  
+|administrador de flujos de trabajo|String|Dirección del host del servidor SMTP.|  
 |Puerto|String|El puerto del servicio SMTP en el host.|  
 |EnableSsl|bool|Especifica si el objeto <xref:System.Net.Mail.SmtpClient> utiliza SSL (Secure Sockets Layer) para cifrar la conexión.|  
 |UserName|String|Nombre de usuario para preparar las credenciales para autenticar la propiedad <xref:System.Net.Mail.SmtpClient.Credentials%2A> del remitente.|  
 |Contraseña|String|Contraseña para preparar las credenciales para autenticar la propiedad <xref:System.Net.Mail.SmtpClient.Credentials%2A> del remitente.|  
-|Contenido|<xref:System.Activities.InArgument%601>\<cadena >|Asunto del mensaje.|  
-|Cuerpo|<xref:System.Activities.InArgument%601>\<cadena >|Cuerpo del mensaje.|  
-|Datos adjuntos|<xref:System.Activities.InArgument%601>\<cadena >|Colección de datos adjuntos que se usa para almacenar los datos adjuntados a este mensaje de correo electrónico.|  
+|Contenido|<xref:System.Activities.InArgument%601>\<string>|Asunto del mensaje.|  
+|Cuerpo|<xref:System.Activities.InArgument%601>\<string>|Cuerpo del mensaje.|  
+|Datos adjuntos|<xref:System.Activities.InArgument%601>\<string>|Colección de datos adjuntos que se usa para almacenar los datos adjuntados a este mensaje de correo electrónico.|  
 |De|<xref:System.Net.Mail.MailAddress>|Desde la dirección de este mensaje de correo electrónico.|  
 |En|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene a los destinatarios de este mensaje de correo electrónico.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene a los destinatarios de copia carbón (CC) de este mensaje de correo electrónico.|  
@@ -36,7 +36,7 @@ En este ejemplo se muestra cómo crear una actividad personalizada que deriva de
 ## <a name="solution-contents"></a>Contenido de la solución  
  La solución contiene dos proyectos.  
   
-|Project|Descripción|Archivos importantes|  
+|Proyecto|Descripción|Archivos importantes|  
 |-------------|-----------------|---------------------|  
 |SendMail|La actividad SendMail|1.  SendMail.cs: implementación para la actividad principal<br />2.  SendMailDesigner.xaml y SendMailDesigner.xaml.cs: diseñador para la actividad SendMail<br />3.  MailTemplateBody.htm: la plantilla para el correo electrónico que se va a enviar.|  
 |SendMailTestClient|Cliente para probar la actividad SendMail.  Este proyecto muestra dos maneras de invocar la actividad SendMail: mediante declaración y mediante programación.|1.  Sequence1.xaml: flujo de trabajo que invoca la actividad SendMail.<br />2.  Program.cs: invoca Sequence1 y también crea un flujo de trabajo mediante programación que utiliza SendMail.|  
@@ -119,17 +119,17 @@ new SendMail
   
 ##### <a name="to-run-this-sample"></a>Para ejecutar este ejemplo  
   
-1.  Con Visual Studio 2010, abra el archivo de solución SendMail.sln.  
+1. Con Visual Studio 2010, abra el archivo de solución SendMail.sln.  
   
-2.  Asegúrese de que tiene acceso a un servidor SMTP válido. Vea las instrucciones de configuración.  
+2. Asegúrese de que tiene acceso a un servidor SMTP válido. Vea las instrucciones de configuración.  
   
-3.  Configure el programa con la dirección del servidor y desde y a las direcciones de correo electrónico.  
+3. Configure el programa con la dirección del servidor y desde y a las direcciones de correo electrónico.  
   
      Para ejecutar correctamente este ejemplo, debe configurar el valor de desde y hacia las direcciones de correo electrónico y la dirección del servidor SMTP en Program.cs y en Sequence.xaml. Necesitará cambiar la dirección en ambas ubicaciones, dado que el programa envía el correo de dos maneras diferentes  
   
-4.  Para compilar la solución, presione Ctrl+MAYÚS+B.  
+4. Para compilar la solución, presione Ctrl+MAYÚS+B.  
   
-5.  Para ejecutar la solución, presione CTRL+F5.  
+5. Para ejecutar la solución, presione CTRL+F5.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

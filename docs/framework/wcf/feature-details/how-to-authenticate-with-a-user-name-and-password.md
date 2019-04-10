@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 11a146e387171d6af95a7710fe96d6f35f6c611f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174140"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321047"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Filtrar para autenticar con un nombre de usuario y contraseña
 
@@ -21,7 +21,7 @@ En este tema se muestra cómo habilitar un servicio de Windows Communication Fou
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Para configurar un servicio WCF para autenticarse con contraseña y nombre de usuario de dominio de Windows
   
-1.  Cree una instancia de <xref:System.ServiceModel.WSHttpBinding>, establezca el modo de seguridad del enlace en <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>, establezca el `ClientCredentialType` del enlace en <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType> y agregue un extremo de servicio usando el enlace configurado al host del servicio tal y como se muestra en el código siguiente:  
+1. Cree una instancia de <xref:System.ServiceModel.WSHttpBinding>, establezca el modo de seguridad del enlace en <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>, establezca el `ClientCredentialType` del enlace en <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType> y agregue un extremo de servicio usando el enlace configurado al host del servicio tal y como se muestra en el código siguiente:  
   
     ```  
     // ...  
@@ -32,7 +32,7 @@ En este tema se muestra cómo habilitar un servicio de Windows Communication Fou
     // ...  
     ```  
   
-2.  Especifique el certificado de servidor usado para cifrar la información de nombre de usuario y contraseña enviada a través de la conexión. Este código debe seguir inmediatamente al código anterior. En el ejemplo siguiente se usa el certificado que se crea el archivo setup.bat desde la [nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md) ejemplo:  
+2. Especifique el certificado de servidor usado para cifrar la información de nombre de usuario y contraseña enviada a través de la conexión. Este código debe seguir inmediatamente al código anterior. En el ejemplo siguiente se usa el certificado que se crea el archivo setup.bat desde la [nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md) ejemplo:  
   
     ```  
     // ...  
@@ -44,7 +44,7 @@ En este tema se muestra cómo habilitar un servicio de Windows Communication Fou
   
 ## <a name="to-call-the-service-passing-username-and-password"></a>Para llamar al servicio pasando el nombre de usuario y la contraseña  
   
-1.  La aplicación cliente debe pedir al usuario su nombre de usuario y contraseña. El siguiente código pide al usuario el nombre de usuario y la contraseña.  
+1. La aplicación cliente debe pedir al usuario su nombre de usuario y contraseña. El siguiente código pide al usuario el nombre de usuario y la contraseña.  
   
     > [!WARNING]
     >  Este código no se debe usar en producción porque se muestra la contraseña mientras se está escribiendo.  
@@ -61,7 +61,7 @@ En este tema se muestra cómo habilitar un servicio de Windows Communication Fou
             }  
     ```  
   
-2.  Cree una instancia del proxy de cliente que especifique las credenciales del cliente tal y como se muestra en el código siguiente:  
+2. Cree una instancia del proxy de cliente que especifique las credenciales del cliente tal y como se muestra en el código siguiente:  
   
     ```  
     string username;  

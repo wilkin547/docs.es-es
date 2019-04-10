@@ -2,16 +2,16 @@
 title: Language-Integrated Query (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 108dc60285e51ab4cd703e668127a4ffd5fc1c74
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: c7dbe1bdef85de6028d37f8005dc5edea6c07925
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347817"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186633"
 ---
 # <a name="language-integrated-query-linq"></a>Language-Integrated Query (LINQ)
 
-Language-Integrated Query (LINQ) es el nombre de un conjunto de tecnologías basadas en la integración de capacidades de consulta directamente en el lenguaje C#. Tradicionalmente, las consultas con datos se expresaban como cadenas simples sin comprobación de tipos en tiempo de compilación ni compatibilidad con IntelliSense. Además, tiene que aprender un lenguaje de consultas diferente para cada tipo de origen de datos: bases de datos SQL, documentos XML y varios servicios web, entre otros. Con LINQ, una consulta es una construcción de lenguaje de primera clase, como clases, métodos y eventos.
+Language-Integrated Query (LINQ) es el nombre de un conjunto de tecnologías basadas en la integración de capacidades de consulta directamente en el lenguaje C#. Tradicionalmente, las consultas con datos se expresaban como cadenas simples sin comprobación de tipos en tiempo de compilación ni compatibilidad con IntelliSense. Además, tendrá que aprender un lenguaje de consulta diferente para cada tipo de origen de datos: bases de datos SQL, documentos XML, varios servicios web y así sucesivamente. Con LINQ, una consulta es una construcción de lenguaje de primera clase, como clases, métodos y eventos.
 
 Para un desarrollador que escribe consultas, la parte más visible de "lenguaje integrado" de LINQ es la expresión de consulta. Las expresiones de consulta se escriben con una *sintaxis de consulta* declarativa. Con la sintaxis de consulta, puede realizar operaciones de filtrado, ordenación y agrupamiento en orígenes de datos con el mínimo código. Utilice los mismos patrones de expresión de consulta básica para consultar y transformar datos de bases de datos SQL, conjuntos de datos de ADO .NET, secuencias y documentos XML y colecciones. NET.
 
@@ -35,20 +35,17 @@ En el ejemplo siguiente se muestra la operación de consulta completa. La operac
   
 -   Algunas operaciones de consulta, como <xref:System.Linq.Enumerable.Count%2A> o <xref:System.Linq.Enumerable.Max%2A>, no tienen ninguna cláusula de expresión de consulta equivalente, de modo que deben expresarse como una llamada de método. La sintaxis de método se puede combinar con la sintaxis de consulta de varias maneras. Para más información, vea [Query syntax and method syntax in LINQ](query-syntax-and-method-syntax-in-linq.md) (Sintaxis de consulta y sintaxis de método en LINQ).  
   
--   Las expresiones de consulta pueden compilarse en árboles de expresión o en delegados, en función del tipo al que se aplica la consulta. Las consultas <xref:System.Collections.Generic.IEnumerable%601> se compilan en delegados. Las consultas <xref:System.Linq.IQueryable> y <xref:System.Linq.IQueryable%601> se compilan en árboles de expresión. Para más información, vea [Expression trees](../../../expression-trees.md) (Árboles de expresión).  
+-   Las expresiones de consulta pueden compilarse en árboles de expresión o en delegados, en función del tipo al que se aplica la consulta. <xref:System.Collections.Generic.IEnumerable%601> Las consultas IEnumerable<T> se compilan en delegados. <xref:System.Linq.IQueryable> Las consultas IQueryable y <xref:System.Linq.IQueryable%601> se compilan en árboles de expresión. Para más información, vea [Expression trees](../../../expression-trees.md) (Árboles de expresión).  
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 Para obtener más información sobre LINQ, empiece a familiarizarse con algunos conceptos básicos en [Conceptos básicos de las expresiones de consultas](../../../linq/query-expression-basics.md) y, después, lea la documentación de la tecnología de LINQ en la que esté interesado:   
--   Documentos XML: [LINQ to XML](linq-to-xml.md) (LINQ para XML)  
+-   Documentos XML: [LINQ to XML](linq-to-xml.md)  
   
--   ADO.NET Entity Framework: [LINQ to entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md) (LINQ para entidades)  
+-   ADO.NET Entity Framework: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
--   Colecciones .NET, archivos y cadenas, entre otros: [LINQ to objects](linq-to-objects.md) (LINQ para objetos)
+-   Colecciones .NET, archivos y cadenas, entre otros: [LINQ to Objects](linq-to-objects.md)
 
 Para comprender mejor los aspectos generales de LINQ, vea [LINQ in C#](../../../linq/linq-in-csharp.md) (LINQ en C#).
 
 Para empezar a trabajar con LINQ en C#, vea el tutorial [Working with LINQ](../../../tutorials/working-with-linq.md) (Trabajar con LINQ).
-
-
-

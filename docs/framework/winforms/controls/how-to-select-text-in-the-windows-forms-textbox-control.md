@@ -10,27 +10,27 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: f96ac69f16eefb5bf4a0625ff83e207c289a105b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3bb1245cd47084935d632ff345a32058db6074e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111441"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321722"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Filtrar para seleccionar texto en el control TextBox de formularios Windows Forms
 Puede seleccionar texto mediante programación en los formularios de Windows <xref:System.Windows.Forms.TextBox> control. Por ejemplo, si crea una función que se busca el texto de una cadena concreta, puede seleccionar el texto para alertar visualmente al usuario de la posición de la cadena encontrada.  
   
 ### <a name="to-select-text-programmatically"></a>Para seleccionar texto mediante programación  
   
-1.  Establecer el <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> propiedad al principio del texto que desea seleccionar.  
+1. Establecer el <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> propiedad al principio del texto que desea seleccionar.  
   
      El <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> propiedad es un número que indica el punto de inserción en la cadena de texto, siendo 0 la posición más a la izquierda. Si el <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> propiedad se establece en un valor igual o mayor que el número de caracteres en el cuadro de texto, el punto de inserción se coloca después del último carácter.  
   
-2.  Establecer el <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> propiedad a la longitud del texto que desea seleccionar.  
+2. Establecer el <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> propiedad a la longitud del texto que desea seleccionar.  
   
      El <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> propiedad es un valor numérico que establece el ancho del punto de inserción. Establecer el <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> en un número mayor que 0, ese número de caracteres que se seleccionarán, comenzando desde el punto de inserción actual.  
   
-3.  (Opcional) Tener acceso al texto seleccionado a través de la <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> propiedad.  
+3. (Opcional) Tener acceso al texto seleccionado a través de la <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> propiedad.  
   
      El código siguiente selecciona el contenido de texto de un cuadro cuando el control <xref:System.Windows.Forms.Control.Enter> se produce el evento. Este ejemplo se comprueba si el cuadro de texto tiene un valor para el <xref:System.Windows.Forms.TextBox.Text%2A> propiedad que no es `null` o una cadena vacía. Cuando el cuadro de texto recibe el foco, se selecciona el texto actual en el cuadro de texto. El `TextBox1_Enter` controlador de eventos debe enlazarse al control; para obtener más información, consulte [Cómo: Crear controladores de eventos en tiempo de ejecución para Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   

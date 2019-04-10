@@ -2,12 +2,12 @@
 title: Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: bed49e4a62e597c9cffd113b24551872ee1053d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714949"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324167"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado
 Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] presentó muchas características nuevas, incluidas varias mejoras en la experiencia de diseñador de flujo de trabajo. En este tema se detallan las características admitidas en el diseñador rehospedado y las que no se admiten.
@@ -124,13 +124,13 @@ Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45
 ### <a name="state-machine-workflows"></a>Flujos de trabajo de máquina de estados  
  Los flujos de trabajo de máquina de estados se incluyeron como parte de .NET Framework 4.0.1 en la [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). Esta actualización incluía varias clases y actividades nuevas que permitían a los desarrolladores crear flujos de trabajo de máquina de estados. Estas clases y actividades se han actualizado para [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Las actualizaciones incluyen:  
   
-1.  Capacidad de establecer puntos de interrupción en estados  
+1. Capacidad de establecer puntos de interrupción en estados  
   
-2.  Capacidad de copiar y pegar transiciones en el diseñador de flujo de trabajo  
+2. Capacidad de copiar y pegar transiciones en el diseñador de flujo de trabajo  
   
-3.  Compatibilidad del diseñador para la creación de transiciones de desencadenador compartidas  
+3. Compatibilidad del diseñador para la creación de transiciones de desencadenador compartidas  
   
-4.  Actividades usadas para crear flujos de trabajo de máquina de estados, incluidas: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> y <xref:System.Activities.Statements.Transition>  
+4. Actividades usadas para crear flujos de trabajo de máquina de Estados, incluidas: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, y <xref:System.Activities.Statements.Transition>  
   
  Captura de pantalla siguiente muestra el flujo de trabajo de máquina de estado completado de la [Tutorial de introducción](getting-started-tutorial.md) paso [Cómo: Crear un flujo de trabajo de máquina de estados](how-to-create-a-state-machine-workflow.md).  
   

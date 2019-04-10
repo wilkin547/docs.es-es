@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196897"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322594"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Filtrar para usar la herramienta configuración de modelos de servicio COM+
 Cuando ha seleccionado un modo de hospedaje adecuado, utilice la herramienta de línea de comandos de configuración de modelos de servicio COM+ (ComSvcConfig.exe) para configurar las interfaces de aplicaciones que se expondrán como servicios web.  
@@ -19,11 +19,11 @@ Cuando ha seleccionado un modo de hospedaje adecuado, utilice la herramienta de 
   
  Al usar ComSvcConfig.exe en un equipo con Windows 7 para configurar un servicio web con la finalidad de usar la última versión de modelo de servicio (actualmente, la versión 4.5), lleve a cabo los siguientes pasos:  
   
-1.  Establezca la clave del registro `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` a un valor DWORD de 0 x 00000001  
+1. Establezca la clave del registro `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` a un valor DWORD de 0 x 00000001  
   
-2.  Ejecute comsvcconfig.exe  
+2. Ejecute comsvcconfig.exe  
   
-3.  Revierta la clave del Registro agregada en el paso 1 a su valor original, o elimínela si no existía.  
+3. Revierta la clave del Registro agregada en el paso 1 a su valor original, o elimínela si no existía.  
   
 > [!IMPORTANT]
 >  Es importante revertir esta clave del Registro. Se trata de una clave de compatibilidad. Si no se revierte este cambio, se pueden producir problemas con otras aplicaciones .NET activas en el equipo.  

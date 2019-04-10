@@ -2,21 +2,21 @@
 title: Filtrar Crear ensamblados de confianza firmados (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 28cbd0c538441978464033df896d69f80a8396a6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836745"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324674"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Filtrar Crear ensamblados de confianza firmados (Visual Basic)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Para crear un ensamblado con signo y un ensamblado de confianza  
   
-1.  Abra un símbolo del sistema.  
+1. Abra un símbolo del sistema.  
   
-2.  Use la siguiente secuencia de comandos con la herramienta de nombre seguro para generar un archivo de claves y mostrar su clave pública. Para obtener más información, consulte [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
+2. Use la siguiente secuencia de comandos con la herramienta de nombre seguro para generar un archivo de claves y mostrar su clave pública. Para obtener más información, consulte [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
     1.  Genere una clave de nombre seguro para este ejemplo y almacénela en el archivo FriendAssemblies.snk:  
   
@@ -30,7 +30,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Cree un archivo de Visual Basic llamado `friend_signed_A` que contiene el código siguiente. El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como un ensamblado de confianza.  
+3. Cree un archivo de Visual Basic llamado `friend_signed_A` que contiene el código siguiente. El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como un ensamblado de confianza.  
   
      La herramienta de nombre seguro genera una nueva clave pública cada vez que se ejecuta. Por tanto, debe reemplazar la clave pública en el código siguiente con la clave pública que acaba de generar, como se muestra en el ejemplo siguiente.  
   
@@ -49,13 +49,13 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
     End Class  
     ```  
   
-4.  Compile y firme friend_signed_A mediante el siguiente comando.  
+4. Compile y firme friend_signed_A mediante el siguiente comando.  
   
     ```console  
     Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
-5.  Crear un archivo de Visual Basic que se denomina `friend_signed_B` y contiene el código siguiente. Dado que friend_signed_A especifica que friend_signed_B es un ensamblado de confianza, el código de friend_signed_B puede tener acceso a tipos `Friend` y miembros de friend_signed_A. El archivo contiene el código siguiente.  
+5. Crear un archivo de Visual Basic que se denomina `friend_signed_B` y contiene el código siguiente. Dado que friend_signed_A especifica que friend_signed_B es un ensamblado de confianza, el código de friend_signed_B puede tener acceso a tipos `Friend` y miembros de friend_signed_A. El archivo contiene el código siguiente.  
   
     ```vb  
     ' friend_signed_B.vb  
@@ -69,7 +69,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
     End Module  
     ```  
   
-6.  Compile y firme friend_signed_B mediante el siguiente comando.  
+6. Compile y firme friend_signed_B mediante el siguiente comando.  
   
     ```console  
     vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
@@ -77,7 +77,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
   
      El nombre del ensamblado generado por el compilador debe coincidir con el nombre del ensamblado de confianza que se ha pasado al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Puede establecer explícitamente el ensamblado utilizando el `-out` opción del compilador. Para obtener más información, consulte [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
   
-7.  Ejecute el archivo friend_signed_B.exe.  
+7. Ejecute el archivo friend_signed_B.exe.  
   
      El programa muestra la cadena "Class1.Test".  
   
@@ -89,7 +89,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Ensamblados de .NET](../../../../standard/assembly/index.md)
 - [Ensamblados de confianza](../../../../standard/assembly/friend-assemblies.md)
-- [Cómo: Crear ensamblados de confianza sin firmar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [Filtrar Crear ensamblados de confianza sin firmar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe (herramienta de nombre seguro)](../../../../framework/tools/sn-exe-strong-name-tool.md))
 - [Crear y utilizar ensamblados con nombre seguro](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)

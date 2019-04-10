@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 90d0c578c6797342c667f16afdb523b1b4ad6685
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 07cfa5bed6e5af131a60a303f0702f18413043e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145917"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320241"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Tutorial: Hospedar contenido Direct3D9 en WPF
 En este tutorial se muestra cómo hospedar contenido Direct3D9 en una aplicación de Windows Presentation Foundation (WPF).  
@@ -48,9 +48,9 @@ En este tutorial se muestra cómo hospedar contenido Direct3D9 en una aplicació
   
 #### <a name="to-import-direct3d9-content"></a>Para importar contenido Direct3D9  
   
-1.  Abra MainWindow.xaml.cs en el Editor de código.  
+1. Abra MainWindow.xaml.cs en el Editor de código.  
   
-2.  Reemplace el código generado automáticamente por el código siguiente.  
+2. Reemplace el código generado automáticamente por el código siguiente.  
   
      [!code-csharp[System.Windows.Interop.D3DImage#1](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml.cs#1)]  
   
@@ -59,15 +59,15 @@ En este tutorial se muestra cómo hospedar contenido Direct3D9 en una aplicació
   
 #### <a name="to-host-the-direct3d9-content"></a>Para hospedar contenido Direct3D9  
   
-1.  En MainWindow.xaml, reemplace el XAML generado automáticamente por el XAML siguiente.  
+1. En MainWindow.xaml, reemplace el XAML generado automáticamente por el XAML siguiente.  
   
      [!code-xaml[System.Windows.Interop.D3DImage#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]  
   
-2.  Compile el proyecto.  
+2. Compile el proyecto.  
   
-3.  Copie el archivo DLL que contiene el contenido Direct3D9 en la carpeta bin/Debug.  
+3. Copie el archivo DLL que contiene el contenido Direct3D9 en la carpeta bin/Debug.  
   
-4.  Presione F5 para ejecutar el proyecto.  
+4. Presione F5 para ejecutar el proyecto.  
   
      El contenido Direct3D9 aparece dentro de la aplicación de WPF.  
   

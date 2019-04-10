@@ -2,27 +2,27 @@
 title: Utilizar extensiones de actividad
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: 420bd25a94f67169d299bbac64dae06e15c5b0b2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845526"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321294"
 ---
 # <a name="using-activity-extensions"></a>Utilizar extensiones de actividad
 Las actividades pueden interactuar con extensiones de aplicación de flujo de trabajo que permiten al host proporcionar función adicional que no se modela explícitamente en el flujo de trabajo.  En este tema se describe cómo crear y utilizar una extensión para contar el número de veces que la actividad se ejecuta.
 
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>Utilizar una extensión de actividad para contar las ejecuciones
 
-1.  Abra Visual Studio 2010. Seleccione **nueva**, **proyecto**. En el **Visual C#** nodo, seleccione **flujo de trabajo**.  Seleccione **aplicación de consola de flujos de trabajo** desde la lista de plantillas. Dé un nombre al proyecto `Extensions`. Haga clic en **Aceptar** para crear el proyecto.
+1. Abra Visual Studio 2010. Seleccione **nueva**, **proyecto**. En el **Visual C#** nodo, seleccione **flujo de trabajo**.  Seleccione **aplicación de consola de flujos de trabajo** desde la lista de plantillas. Dé un nombre al proyecto `Extensions`. Haga clic en **Aceptar** para crear el proyecto.
 
-2.  Agregar un `using` instrucción en el archivo Program.cs para el **System.Collections.Generic** espacio de nombres.
+2. Agregar un `using` instrucción en el archivo Program.cs para el **System.Collections.Generic** espacio de nombres.
 
     ```
     using System.Collections.Generic;
     ```
 
-3.  En el archivo Program.cs, cree una nueva clase denominada **ExecutionCountExtension**. El código siguiente crea una extensión de flujo de trabajo que realiza el seguimiento de los identificadores de instancia cuando su **registrar** se llama al método.
+3. En el archivo Program.cs, cree una nueva clase denominada **ExecutionCountExtension**. El código siguiente crea una extensión de flujo de trabajo que realiza el seguimiento de los identificadores de instancia cuando su **registrar** se llama al método.
 
     ```
     // This extension collects a list of workflow Ids
@@ -56,7 +56,7 @@ Las actividades pueden interactuar con extensiones de aplicación de flujo de tr
     }
     ```
 
-4.  Crear una actividad que consume el **ExecutionCountExtension**. El código siguiente define una actividad que recupera el **ExecutionCountExtension** objeto desde el tiempo de ejecución y llama a su **registrar** método cuando se ejecuta la actividad.
+4. Crear una actividad que consume el **ExecutionCountExtension**. El código siguiente define una actividad que recupera el **ExecutionCountExtension** objeto desde el tiempo de ejecución y llama a su **registrar** método cuando se ejecuta la actividad.
 
     ```
     // Activity that consumes an extension provided by the host. If the extension is available
@@ -75,7 +75,7 @@ Las actividades pueden interactuar con extensiones de aplicación de flujo de tr
     }
     ```
 
-5.  Implemente la actividad en el **Main** método del archivo program.cs. El siguiente código contiene los métodos para generar dos flujos de trabajo diferentes, ejecuta cada flujo de trabajo varias veces y muestra los datos resultantes que se contienen en la extensión.
+5. Implemente la actividad en el **Main** método del archivo program.cs. El siguiente código contiene los métodos para generar dos flujos de trabajo diferentes, ejecuta cada flujo de trabajo varias veces y muestra los datos resultantes que se contienen en la extensión.
 
     ```
     class Program

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: ca8471f6a25c9ef5295af0edaabcefe58114aac6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3b3e69d1c52b98822a4cf3b75de74466e1dc68f0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077295"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320064"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementación del proveedor de UI Automation en el servidor
 > [!NOTE]
@@ -148,13 +148,13 @@ ms.locfileid: "59077295"
   
  Para reorganizar de forma dinámica la relación jerárquica de una ventana emergente:  
   
-1.  Cree un proveedor para la ventana emergente. Para ello, se debe conocer por adelantado la clase de la ventana emergente.  
+1. Cree un proveedor para la ventana emergente. Para ello, se debe conocer por adelantado la clase de la ventana emergente.  
   
-2.  Implemente todas las propiedades y los patrones con el proceso habitual para los elementos emergentes, como si se tratase de un control por derecho propio.  
+2. Implemente todas las propiedades y los patrones con el proceso habitual para los elementos emergentes, como si se tratase de un control por derecho propio.  
   
-3.  Implemente la propiedad <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> para que devuelva el valor obtenido de <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, donde el parámetro es el identificador de ventana de la ventana emergente.  
+3. Implemente la propiedad <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> para que devuelva el valor obtenido de <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, donde el parámetro es el identificador de ventana de la ventana emergente.  
   
-4.  Implemente <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> para la ventana emergente y su elemento primario, de modo que la navegación pueda controlarse correctamente desde el elemento primario lógico hacia los elementos secundarios lógicos, y entre los elementos secundarios del mismo nivel.  
+4. Implemente <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> para la ventana emergente y su elemento primario, de modo que la navegación pueda controlarse correctamente desde el elemento primario lógico hacia los elementos secundarios lógicos, y entre los elementos secundarios del mismo nivel.  
   
  Cuando [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] encuentra la ventana emergente, reconoce que se está reemplazando la configuración predeterminada de la navegación y omite esta ventana cuando se encuentra como elemento secundario del escritorio. En su lugar, solo podrá accederse al nodo a través del fragmento.  
   

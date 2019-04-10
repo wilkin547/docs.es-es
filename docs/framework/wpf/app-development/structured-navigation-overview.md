@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161517"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320076"
 ---
 # <a name="structured-navigation-overview"></a>Información general sobre la navegación estructurada
 Contenido que puede hospedarse en una [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], un <xref:System.Windows.Controls.Frame>, o un <xref:System.Windows.Navigation.NavigationWindow> se compone de páginas que se pueden identificar por módulo [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] y navegar mediante hipervínculos. La estructura de páginas y las formas en que se puede navegar por ellas, tal como se define mediante hipervínculos, se conoce como topología de navegación. Esta topología se adapta a diversos tipos de aplicaciones, especialmente a aquéllas que navegan por documentos. Con estas aplicaciones, el usuario puede navegar de una página a otra sin necesidad de saber nada sobre la otra.  
@@ -134,9 +134,9 @@ Contenido que puede hospedarse en una [!INCLUDE[TLA#tla_xbap](../../../../includ
 ### <a name="returning-task-result-and-task-data-from-a-task-to-a-calling-page"></a>Devolución de los resultados y los datos de la tarea de una tarea a una página que llama  
  Una vez que el usuario ha terminado de utilizar la página llamada, en este ejemplo indicado al presionar los botones Aceptar o Cancelar, la página llamada debe volver. Puesto que la página que llama utilizó la página llamada para recopilar datos del usuario, la página que llama requiere dos tipos de información:  
   
-1.  Si el usuario canceló la página llamada (presionando el botón Aceptar o el botón Cancelar en este ejemplo). Esto permite que la página que llama determine si se procesan los datos que recopiló del usuario.  
+1. Si el usuario canceló la página llamada (presionando el botón Aceptar o el botón Cancelar en este ejemplo). Esto permite que la página que llama determine si se procesan los datos que recopiló del usuario.  
   
-2.  Los datos proporcionados por el usuario.  
+2. Los datos proporcionados por el usuario.  
   
  Para devolver información, <xref:System.Windows.Navigation.PageFunction%601> implementa el <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> método. El siguiente código muestra cómo llamarlo.  
   

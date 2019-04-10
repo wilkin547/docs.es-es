@@ -5,40 +5,40 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-ms.openlocfilehash: ff399a2f3a4b86404695502fb002ee6920bea758
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea56c99d7d122dd20fc217f8ecb2937bcf81bec3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486510"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324140"
 ---
 # <a name="client-channel-level-programming"></a>Programación a nivel de canal de cliente
-Este tema describe cómo escribir una aplicación de cliente de Windows Communication Foundation (WCF) sin utilizar la <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> clase y su modelo de objetos asociado.  
+En este tema se describe cómo escribir una aplicación de cliente de Windows Communication Foundation (WCF) sin utilizar el <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> clase y su modelo de objetos asociado.  
   
 ## <a name="sending-messages"></a>Envío de mensajes  
  Para estar listo para enviar mensajes y recibir y procesar las respuestas, se han de realizar los pasos siguientes:  
   
-1.  Cree un enlace.  
+1. Cree un enlace.  
   
-2.  Crear un generador de canales.  
+2. Crear un generador de canales.  
   
-3.  Crear un canal.  
+3. Crear un canal.  
   
-4.  Enviar una solicitud y leer la respuesta.  
+4. Enviar una solicitud y leer la respuesta.  
   
-5.  Cerrar todos los objetos de canal.  
+5. Cerrar todos los objetos de canal.  
   
 #### <a name="creating-a-binding"></a>Crear un enlace  
- Similar al caso de recepción (consulte [nivel de canal del servicio de programación](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)), enviar mensajes comienza creando un enlace. Este ejemplo crea un nuevo <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> y agrega un <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> a su colección Elements.  
+ Similar al caso de recepción (consulte [a nivel de canal de servicio de programación](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)), envío de mensajes se inicia mediante la creación de un enlace. Este ejemplo crea un nuevo <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> y agrega un <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> a su colección Elements.  
   
 #### <a name="building-a-channelfactory"></a>Creación de un ChannelFactory  
  En lugar de crear un <xref:System.ServiceModel.Channels.IChannelListener?displayProperty=nameWithType>, en esta ocasión creamos un <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> llamando a <xref:System.ServiceModel.ChannelFactory.CreateFactory%2A?displayProperty=nameWithType> en el enlace donde está el parámetro de tipo <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>. Aunque el lado que espera mensajes entrantes usa los agentes de escuchas de canales, el lado que inicia la comunicación para crear un canal emplea los generadores de canales. Al igual que los agentes de escuchas de canales, los generadores de canales se han de abrir primero antes de que puedan utilizarse.  
   
 #### <a name="creating-a-channel"></a>Creación de un canal  
- A continuación llamamos a <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType> para crear un <xref:System.ServiceModel.Channels.IRequestChannel>. Esta llamada toma la dirección del extremo con el que deseamos comunicarnos utilizando el nuevo canal que se crea. Una vez que tenemos un canal, llamamos a Open para dejarlo listo para la comunicación. Dependiendo de la naturaleza del transporte, esta llamada a Open puede iniciar una conexión con el punto de conexión de destino o puede que no haga nada en absoluto en la red.  
+ A continuación llamamos a <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType> para crear un <xref:System.ServiceModel.Channels.IRequestChannel>. Esta llamada toma la dirección del punto de conexión con el que deseamos comunicarnos utilizando el nuevo canal que se crea. Una vez que tenemos un canal, llamamos a Open para dejarlo listo para la comunicación. Dependiendo de la naturaleza del transporte, esta llamada a Open puede iniciar una conexión con el punto de conexión de destino o puede que no haga nada en absoluto en la red.  
   
 #### <a name="sending-a-request-and-reading-the-reply"></a>Envío de una solicitud y lectura de la respuesta  
- Una vez que tenemos un canal abierto, podemos crear un mensaje y utilizar el método Request del canal para enviar la solicitud y esperar a que la respuesta regrese. Cuando este método devuelve, tenemos un mensaje de respuesta que podemos leer para averiguar cuál fue la respuesta del extremo.  
+ Una vez que tenemos un canal abierto, podemos crear un mensaje y utilizar el método Request del canal para enviar la solicitud y esperar a que la respuesta regrese. Cuando este método devuelve, tenemos un mensaje de respuesta que podemos leer para averiguar cuál fue la respuesta del punto de conexión.  
   
 #### <a name="closing-objects"></a>Cerrar objetos  
  Para evitar la pérdida de recursos, cerramos los objetos utilizados en las comunicaciones cuando ya no se necesiten.  

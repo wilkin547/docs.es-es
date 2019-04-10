@@ -2,12 +2,12 @@
 title: Solución de problemas de la mensajería en cola
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: b2193755beddd6c0d0eef4f95ca311b8e2b75b3c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463116"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322048"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Solución de problemas de la mensajería en cola
 Esta sección contiene preguntas comunes y solución de problemas para utilizar las colas en Windows Communication Foundation (WCF).  
@@ -96,9 +96,9 @@ Esta sección contiene preguntas comunes y solución de problemas para utilizar 
   
  **R:** La razón más común es que los permisos.  
   
-1.  Asegúrese de que el proceso `NetMsmqActivator` se esté ejecutando y la identidad del proceso `NetMsmqActivator` se lea y busque el permiso en la cola.  
+1. Asegúrese de que el proceso `NetMsmqActivator` se esté ejecutando y la identidad del proceso `NetMsmqActivator` se lea y busque el permiso en la cola.  
   
-2.  Si `NetMsmqActivator` está supervisando las colas en un equipo remoto, asegúrese de que `NetMsmqActivator` no se ejecute con un token restringido. Para ejecutar `NetMsmqActivator` con un token sin restricciones:  
+2. Si `NetMsmqActivator` está supervisando las colas en un equipo remoto, asegúrese de que `NetMsmqActivator` no se ejecute con un token restringido. Para ejecutar `NetMsmqActivator` con un token sin restricciones:  
   
     ```  
     sc sidtype NetMsmqActivator unrestricted  
@@ -157,19 +157,19 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **R:** No se puede usar un almacén de certificados equipo local con el modo de certificado. Tiene que copiar el certificado del almacén de certificados del equipo al almacén del usuario actual utilizando el complemento del certificado. Para obtener el complemento del certificado:  
   
-1.  Haga clic en **iniciar**, seleccione **ejecutar**, tipo `mmc`y haga clic en **Aceptar**.  
+1. Haga clic en **iniciar**, seleccione **ejecutar**, tipo `mmc`y haga clic en **Aceptar**.  
   
-2.  En el **Microsoft Management Console**, abra el **archivo** menú y seleccione **agregar o quitar complemento**.  
+2. En el **Microsoft Management Console**, abra el **archivo** menú y seleccione **agregar o quitar complemento**.  
   
-3.  En el **agregar o quitar complemento** cuadro de diálogo, haga clic en el **agregar** botón.  
+3. En el **agregar o quitar complemento** cuadro de diálogo, haga clic en el **agregar** botón.  
   
-4.  En el **Add Standalone Snap-in** cuadro de diálogo, seleccione certificados y haga clic en **agregar**.  
+4. En el **Add Standalone Snap-in** cuadro de diálogo, seleccione certificados y haga clic en **agregar**.  
   
-5.  En el **certificados** cuadro de diálogo complemento, seleccione **mi cuenta de usuario,** y haga clic en **finalizar**.  
+5. En el **certificados** cuadro de diálogo complemento, seleccione **mi cuenta de usuario,** y haga clic en **finalizar**.  
   
-6.  A continuación, agregue un segundo complemento certificados siguiendo los pasos anteriores, pero esta vez seleccione **cuenta de equipo** y haga clic en **siguiente**.  
+6. A continuación, agregue un segundo complemento certificados siguiendo los pasos anteriores, pero esta vez seleccione **cuenta de equipo** y haga clic en **siguiente**.  
   
-7.  Seleccione **ordenador** y haga clic en **finalizar**. Ahora puede arrastrar y colocar certificados del almacén de certificados del equipo al almacén del usuario actual.  
+7. Seleccione **ordenador** y haga clic en **finalizar**. Ahora puede arrastrar y colocar certificados del almacén de certificados del equipo al almacén del usuario actual.  
   
  **P: ¿** Cuando mi servicio lee en una cola en otro equipo en modo de grupo de trabajo, obtengo una excepción "acceso denegado".  
   

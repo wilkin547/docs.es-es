@@ -2,12 +2,12 @@
 title: Actividades de acceso a bases de datos
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066095"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322607"
 ---
 # <a name="database-access-activities"></a>Actividades de acceso a bases de datos
 Las actividades de acceso a bases de datos permiten tener acceso a una base de datos dentro de un flujo de trabajo. Estas actividades permiten tener acceso a las bases de datos para recuperar o modificar información y usar [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) para tener acceso a la base de datos.  
@@ -242,7 +242,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |CommandType|Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.|
 |Sql|El comando SQL que se va a ejecutar.|
 |Parámetros|Colección de los parámetros de la consulta SQL.|
-|Resultado|<xref:System.Data.DataSet> que se obtiene una vez ejecutada la consulta.|
+|Resultado|<xref:System.Data.DataSet> que se obtiene una vez que se ejecuta la consulta.|
 
 ## <a name="configuring-connection-information"></a>Configurar información de conexión
  Todas las actividades de base de datos comparten los mismos parámetros de configuración. Se pueden configurar de dos maneras:
@@ -299,26 +299,26 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 ##### <a name="to-run-setupcmd"></a>Para ejecutar Setup.cmd
 
-1.  Abra un símbolo del sistema.
+1. Abra un símbolo del sistema.
 
-2.  Vaya a la carpeta de ejemplo DbActivities.
+2. Vaya a la carpeta de ejemplo DbActivities.
 
-3.  Escriba "setup.cmd" y presione ENTRAR.
+3. Escriba "setup.cmd" y presione ENTRAR.
 
     > [!NOTE]
     >  Setup.cmd intenta instalar el ejemplo en la instancia de SqlExpress del equipo local. Si desea instalarlo en otra instancia de SQL Server, modifique Setup.cmd con el nombre de la nueva instancia.
 
 ##### <a name="to-uninstall-the-sample-database"></a>Para desinstalar la base de datos de ejemplo
 
-1.  Ejecute Cleanup.cmd desde la carpeta de ejemplo en un símbolo del sistema.
+1. Ejecute Cleanup.cmd desde la carpeta de ejemplo en un símbolo del sistema.
 
 ##### <a name="to-run-the-sample"></a>Para ejecutar el ejemplo
 
-1.  Abra la solución en Visual Studio 2010
+1. Abra la solución en Visual Studio 2010
 
-2.  Para compilar la solución, presione Ctrl+MAYÚS+B.
+2. Para compilar la solución, presione Ctrl+MAYÚS+B.
 
-3.  Para ejecutar el ejemplo sin depurar, presione CTRL+F5.
+3. Para ejecutar el ejemplo sin depurar, presione CTRL+F5.
 
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

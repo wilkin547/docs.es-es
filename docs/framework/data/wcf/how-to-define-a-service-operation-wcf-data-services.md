@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: 75691a49624c179166d18225fac9fdc6c17a2308
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 88e9b20f3ecefbd39789dfbc942af3938a9a2117
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138104"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326403"
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>Filtrar Definir una operación de servicio (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] expone métodos que se definen en el servidor como operaciones de servicio. Las operaciones de servicio permiten que un servicio de datos proporcionar acceso a través de un URI a un método que se define en el servidor. Para definir una operación de servicio, se aplican los [`WebGet]` o `[WebInvoke]` al método. Para admitir los operadores de consulta, la operación de servicio debe devolver un <xref:System.Linq.IQueryable%601> instancia. Las operaciones del servicio pueden tener acceso al origen de datos subyacente por medio de la propiedad <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> en <xref:System.Data.Services.DataService%601>. Para obtener más información, consulte [las operaciones de servicio](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
@@ -22,14 +22,14 @@ ms.locfileid: "59138104"
   
 ### <a name="to-define-a-service-operation-in-the-northwind-data-service"></a>Para definir una operación del servicio en el servicio de datos Northwind  
   
-1.  En el proyecto del servicio de datos Northwind, abra el archivo Northwind.svc.  
+1. En el proyecto del servicio de datos Northwind, abra el archivo Northwind.svc.  
   
-2.  En la clase `Northwind`, defina un método de operación de servicio denominado `GetOrdersByCity` como sigue:  
+2. En la clase `Northwind`, defina un método de operación de servicio denominado `GetOrdersByCity` como sigue:  
   
      [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
      [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
-3.  En el método `InitializeService` de la clase `Northwind`, agregue el siguiente código para permitir el acceso a la operación del servicio:  
+3. En el método `InitializeService` de la clase `Northwind`, agregue el siguiente código para permitir el acceso a la operación del servicio:  
   
      [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationconfig)]
      [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationconfig)]  

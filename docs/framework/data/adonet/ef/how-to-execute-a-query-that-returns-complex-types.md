@@ -1,32 +1,32 @@
 ---
-title: Filtrar Ejecutar una consulta que devuelve tipos complejos
+title: Filtrar para ejecutar una consulta que devuelve tipos complejos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2209fdb-70ef-4dea-8bb8-097fe96f5563
-ms.openlocfilehash: 6c063c9ef6bfde868c773d941ba2107dbaa9ee73
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a428f54c3834ccdf6a0c7a5bfce8307172724524
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827128"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322893"
 ---
-# <a name="how-to-execute-a-query-that-returns-complex-types"></a>Filtrar Ejecutar una consulta que devuelve tipos complejos
+# <a name="how-to-execute-a-query-that-returns-complex-types"></a>Filtrar para ejecutar una consulta que devuelve tipos complejos
 En este tema se muestra cómo ejecutar una consulta [!INCLUDE[esql](../../../../../includes/esql-md.md)] que devuelve objetos de tipo entidad que contienen una propiedad de un tipo complejo.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  
   
-1.  Agregar el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) al proyecto y configurar el proyecto para usar el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Para obtener más información, vea [Cómo: Utilice el Asistente para Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
+1. Agregar el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) al proyecto y configurar el proyecto para usar el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Para obtener más información, vea [Cómo: Utilice el Asistente para Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
-2.  En la página de código de la aplicación, agregue las instrucciones `using` siguientes (`Imports` en Visual Basic):  
+2. En la página de código de la aplicación, agregue las instrucciones `using` siguientes (`Imports` en Visual Basic):  
   
      [!code-csharp[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#namespaces)]
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
-3.  Haga doble clic en el archivo .edmx para mostrar el modelo en el [ventana Explorador de modelos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738483(v=vs.100)) de Entity Designer. En la superficie de Entity Designer, seleccione el `Email` y `Phone` propiedades de la `Contact` tipo de entidad, a continuación, secundario y seleccione **refactorizar en nuevo tipo complejo**.  
+3. Haga doble clic en el archivo .edmx para mostrar el modelo en el [ventana Explorador de modelos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738483(v=vs.100)) de Entity Designer. En la superficie de Entity Designer, seleccione el `Email` y `Phone` propiedades de la `Contact` tipo de entidad, a continuación, secundario y seleccione **refactorizar en nuevo tipo complejo**.  
   
-4.  Un nuevo tipo complejo con seleccionado `Email` y `Phone` propiedades se agrega a la **Explorador de modelos**. El tipo complejo se asigna un nombre predeterminado: cambie el tipo a `EmailPhone` en el **propiedades** ventana. También se agrega una nueva propiedad `ComplexProperty` al tipo de entidad `Contact`. Cambie el nombre de la propiedad a `EmailPhoneComplexType.`.  
+4. Un nuevo tipo complejo con seleccionado `Email` y `Phone` propiedades se agrega a la **Explorador de modelos**. El tipo complejo se asigna un nombre predeterminado: cambie el tipo a `EmailPhone` en el **propiedades** ventana. También se agrega una nueva propiedad `ComplexProperty` al tipo de entidad `Contact`. Cambiar el nombre de la propiedad en `EmailPhoneComplexType.`  
   
      Para obtener información sobre cómo crear y modificar tipos complejos mediante el Asistente para Entity Data Model, vea [Cómo: Refactorizar propiedades existentes en una propiedad de tipo complejo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456814(v=vs.100)) y [Cómo: Crear y modificar tipos complejos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
   

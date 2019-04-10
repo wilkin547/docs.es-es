@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 4ab2ca5530c87775e28951de8c1c3ebd056291dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195688"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321892"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Tutorial: Organizar controles en formularios Windows Forms mediante FlowLayoutPanel
 Algunas aplicaciones requieren un formulario con un diseño que se organice de manera adecuada y automática a medida que el formulario o el contenido cambien de tamaño. Si necesita un diseño dinámico y no desea controlar los eventos <xref:System.Windows.Forms.Control.Layout> de forma explícita en el código, considere la posibilidad de usar un panel de diseño.  
@@ -51,9 +51,9 @@ Algunas aplicaciones requieren un formulario con un diseño que se organice de m
   
 #### <a name="to-create-the-project"></a>Para crear el proyecto  
   
-1.  Crear un proyecto de aplicación basada en Windows llamado "FlowLayoutPanelExample" (**archivo** > **New** > **proyecto**  >  **Visual C#** o **Visual Basic** > **escritorio clásico de** > **Windows Forms Application**).  
+1. Crear un proyecto de aplicación basada en Windows llamado "FlowLayoutPanelExample" (**archivo** > **New** > **proyecto**  >  **Visual C#** o **Visual Basic** > **escritorio clásico de** > **Windows Forms Application**).  
   
-2.  Seleccione el formulario en el **Diseñador de Windows Forms**.  
+2. Seleccione el formulario en el **Diseñador de Windows Forms**.  
   
 ## <a name="arranging-controls-horizontally-and-vertically"></a>Organizar los controles horizontal y verticalmente  
  El control <xref:System.Windows.Forms.FlowLayoutPanel> permite colocar controles en filas o columnas sin necesidad de especificar con precisión la posición de cada control individual.  
@@ -62,56 +62,56 @@ Algunas aplicaciones requieren un formulario con un diseño que se organice de m
   
 #### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>Para organizar controles horizontal y verticalmente mediante un control FlowLayoutPanel  
   
-1.  Arrastre un control <xref:System.Windows.Forms.FlowLayoutPanel> del **cuadro de herramientas** al formulario.  
+1. Arrastre un control <xref:System.Windows.Forms.FlowLayoutPanel> del **cuadro de herramientas** al formulario.  
   
-2.  Arrastre un control <xref:System.Windows.Forms.Button> del **cuadro de herramientas** al control <xref:System.Windows.Forms.FlowLayoutPanel>. Tenga en cuenta que se mueve automáticamente a la esquina superior izquierda del control <xref:System.Windows.Forms.FlowLayoutPanel> .  
+2. Arrastre un control <xref:System.Windows.Forms.Button> del **cuadro de herramientas** al control <xref:System.Windows.Forms.FlowLayoutPanel>. Tenga en cuenta que se mueve automáticamente a la esquina superior izquierda del control <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
-3.  Arrastre otro control <xref:System.Windows.Forms.Button> del **cuadro de herramientas** al control <xref:System.Windows.Forms.FlowLayoutPanel>. Tenga en cuenta que el control <xref:System.Windows.Forms.Button> se mueve automáticamente a una posición junto al primer control <xref:System.Windows.Forms.Button> . Si el control <xref:System.Windows.Forms.FlowLayoutPanel> es demasiado estrecho para ajustar los dos controles en la misma fila, el nuevo control <xref:System.Windows.Forms.Button> se mueve automáticamente a la fila siguiente.  
+3. Arrastre otro control <xref:System.Windows.Forms.Button> del **cuadro de herramientas** al control <xref:System.Windows.Forms.FlowLayoutPanel>. Tenga en cuenta que el control <xref:System.Windows.Forms.Button> se mueve automáticamente a una posición junto al primer control <xref:System.Windows.Forms.Button> . Si el control <xref:System.Windows.Forms.FlowLayoutPanel> es demasiado estrecho para ajustar los dos controles en la misma fila, el nuevo control <xref:System.Windows.Forms.Button> se mueve automáticamente a la fila siguiente.  
   
-4.  Arrastre algunos controles <xref:System.Windows.Forms.Button> más del **cuadro de herramientas** al control <xref:System.Windows.Forms.FlowLayoutPanel>. Siga colocando controles <xref:System.Windows.Forms.Button> hasta que uno se ajuste a la fila siguiente.  
+4. Arrastre algunos controles <xref:System.Windows.Forms.Button> más del **cuadro de herramientas** al control <xref:System.Windows.Forms.FlowLayoutPanel>. Siga colocando controles <xref:System.Windows.Forms.Button> hasta que uno se ajuste a la fila siguiente.  
   
-5.  Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> a `false`. Tenga en cuenta que los controles secundarios ya no fluyen a la fila siguiente. En su lugar, se mueven a la primera fila y se recortan.  
+5. Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> a `false`. Tenga en cuenta que los controles secundarios ya no fluyen a la fila siguiente. En su lugar, se mueven a la primera fila y se recortan.  
   
-6.  Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> a `true`. Tenga en cuenta que los controles secundarios se ajustan de nuevo a la fila siguiente.  
+6. Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> a `true`. Tenga en cuenta que los controles secundarios se ajustan de nuevo a la fila siguiente.  
   
-7.  Reduzca el ancho del control <xref:System.Windows.Forms.FlowLayoutPanel> hasta que todos los controles <xref:System.Windows.Forms.Button> se muevan a la primera columna.  
+7. Reduzca el ancho del control <xref:System.Windows.Forms.FlowLayoutPanel> hasta que todos los controles <xref:System.Windows.Forms.Button> se muevan a la primera columna.  
   
-8.  Aumente el ancho del control <xref:System.Windows.Forms.FlowLayoutPanel> hasta que todos los controles <xref:System.Windows.Forms.Button> se muevan a la primera fila. Es posible que deba cambiar el tamaño del formulario para alojar el ancho mayor.  
+8. Aumente el ancho del control <xref:System.Windows.Forms.FlowLayoutPanel> hasta que todos los controles <xref:System.Windows.Forms.Button> se muevan a la primera fila. Es posible que deba cambiar el tamaño del formulario para alojar el ancho mayor.  
   
 ## <a name="changing-flow-direction"></a>Cambiar la dirección del flujo  
  La propiedad <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> permite cambiar la dirección en la que se organizan los controles. Puede organizar los controles secundarios de izquierda a derecha, de derecha a izquierda, de arriba abajo o de abajo arriba.  
   
 #### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>Para cambiar la dirección del flujo en un control FlowLayoutPanel  
   
-1.  Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> a <xref:System.Windows.Forms.FlowDirection.TopDown>. Tenga en cuenta que los controles secundarios se reorganizan en una o más columnas, según el alto del control.  
+1. Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> a <xref:System.Windows.Forms.FlowDirection.TopDown>. Tenga en cuenta que los controles secundarios se reorganizan en una o más columnas, según el alto del control.  
   
-2.  Cambie el tamaño del control <xref:System.Windows.Forms.FlowLayoutPanel> de modo que el alto sea menor que la columna de controles <xref:System.Windows.Forms.Button> . Tenga en cuenta que el control <xref:System.Windows.Forms.FlowLayoutPanel> reorganiza los controles secundarios para que fluyan a la columna siguiente. Siga disminuyendo el alto y observe que los controles secundarios fluyen a las columnas consecutivas. Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> a <xref:System.Windows.Forms.FlowDirection.RightToLeft>. Observe que las posiciones de los controles secundarios están invertidas. Observe el diseño al cambiar el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> a <xref:System.Windows.Forms.FlowDirection.BottomUp>.  
+2. Cambie el tamaño del control <xref:System.Windows.Forms.FlowLayoutPanel> de modo que el alto sea menor que la columna de controles <xref:System.Windows.Forms.Button> . Tenga en cuenta que el control <xref:System.Windows.Forms.FlowLayoutPanel> reorganiza los controles secundarios para que fluyan a la columna siguiente. Siga disminuyendo el alto y observe que los controles secundarios fluyen a las columnas consecutivas. Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> a <xref:System.Windows.Forms.FlowDirection.RightToLeft>. Observe que las posiciones de los controles secundarios están invertidas. Observe el diseño al cambiar el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> a <xref:System.Windows.Forms.FlowDirection.BottomUp>.  
   
 ## <a name="inserting-flow-breaks"></a>Insertar saltos de flujo  
  El control <xref:System.Windows.Forms.FlowLayoutPanel> proporciona una propiedad FlowBreak a sus controles secundarios. Al establecer el valor de la propiedad FlowBreak en `true` , el control <xref:System.Windows.Forms.FlowLayoutPanel> deja de distribuir los controles en la dirección del flujo actual y ajusta a la siguiente fila o columna.  
   
 #### <a name="to-insert-flow-breaks"></a>Para insertar saltos de flujo  
   
-1.  Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> a <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+1. Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> a <xref:System.Windows.Forms.FlowDirection.TopDown>.  
   
-2.  Seleccione uno de los controles <xref:System.Windows.Forms.Button> en el centro de la primera columna de la izquierda.  
+2. Seleccione uno de los controles <xref:System.Windows.Forms.Button> en el centro de la primera columna de la izquierda.  
   
-3.  Establezca el valor de la propiedad FlowBreak del control <xref:System.Windows.Forms.Button> en `true`. Observe que la columna está rota y que los controles que siguen al control <xref:System.Windows.Forms.Button> seleccionado fluyen a la columna siguiente. Establezca el valor de la propiedad FlowBreak del control <xref:System.Windows.Forms.Button> en `false` para volver al comportamiento original.  
+3. Establezca el valor de la propiedad FlowBreak del control <xref:System.Windows.Forms.Button> en `true`. Observe que la columna está rota y que los controles que siguen al control <xref:System.Windows.Forms.Button> seleccionado fluyen a la columna siguiente. Establezca el valor de la propiedad FlowBreak del control <xref:System.Windows.Forms.Button> en `false` para volver al comportamiento original.  
   
 ## <a name="positioning-controls-using-docking-and-anchoring"></a>Colocar controles mediante el acoplamiento y la delimitación  
  Los comportamientos de acoplamiento y delimitación de los controles secundarios difieren de los comportamientos de otros controles contenedor. El acoplamiento y la delimitación están relacionados con el control mayor en la dirección del flujo.  
   
 #### <a name="to-position-controls-using-docking-and-anchoring"></a>Para colocar controles mediante el acoplamiento y la delimitación  
   
-1.  Aumente el tamaño del control <xref:System.Windows.Forms.FlowLayoutPanel> hasta que los controles <xref:System.Windows.Forms.Button> estén organizados en una columna.  
+1. Aumente el tamaño del control <xref:System.Windows.Forms.FlowLayoutPanel> hasta que los controles <xref:System.Windows.Forms.Button> estén organizados en una columna.  
   
-2.  Seleccione el control <xref:System.Windows.Forms.Button> superior. Aumente su ancho hasta que doble el ancho de los demás controles <xref:System.Windows.Forms.Button> .  
+2. Seleccione el control <xref:System.Windows.Forms.Button> superior. Aumente su ancho hasta que doble el ancho de los demás controles <xref:System.Windows.Forms.Button> .  
   
-3.  Seleccione el segundo control <xref:System.Windows.Forms.Button> . Cambie el valor de su propiedad <xref:System.Windows.Forms.Control.Anchor%2A> a <xref:System.Windows.Forms.AnchorStyles.Right>. Observe que se mueve hasta que el borde derecho queda alineado con el borde derecho del primer control <xref:System.Windows.Forms.Button> .  
+3. Seleccione el segundo control <xref:System.Windows.Forms.Button> . Cambie el valor de su propiedad <xref:System.Windows.Forms.Control.Anchor%2A> a <xref:System.Windows.Forms.AnchorStyles.Right>. Observe que se mueve hasta que el borde derecho queda alineado con el borde derecho del primer control <xref:System.Windows.Forms.Button> .  
   
-4.  Cambie el valor de su propiedad <xref:System.Windows.Forms.Control.Anchor%2A> a <xref:System.Windows.Forms.AnchorStyles.Right> y <xref:System.Windows.Forms.AnchorStyles.Left>. Observe que su tamaño se ajusta al ancho del primer control <xref:System.Windows.Forms.Button> .  
+4. Cambie el valor de su propiedad <xref:System.Windows.Forms.Control.Anchor%2A> a <xref:System.Windows.Forms.AnchorStyles.Right> y <xref:System.Windows.Forms.AnchorStyles.Left>. Observe que su tamaño se ajusta al ancho del primer control <xref:System.Windows.Forms.Button> .  
   
-5.  Seleccione el tercer control <xref:System.Windows.Forms.Button> . Cambie el valor de su propiedad <xref:System.Windows.Forms.Control.Dock%2A> a <xref:System.Windows.Forms.DockStyle.Fill>. Observe que su tamaño se ajusta al ancho del primer control <xref:System.Windows.Forms.Button> .  
+5. Seleccione el tercer control <xref:System.Windows.Forms.Button> . Cambie el valor de su propiedad <xref:System.Windows.Forms.Control.Dock%2A> a <xref:System.Windows.Forms.DockStyle.Fill>. Observe que su tamaño se ajusta al ancho del primer control <xref:System.Windows.Forms.Button> .  
   
 ## <a name="arranging-controls-using-padding-and-margins"></a>Organizar los controles mediante Padding y Margin  
  También puede organizar los controles del control <xref:System.Windows.Forms.FlowLayoutPanel> cambiando las propiedades <xref:System.Windows.Forms.Control.Padding%2A> y <xref:System.Windows.Forms.Control.Margin%2A> .  
@@ -122,59 +122,59 @@ Algunas aplicaciones requieren un formulario con un diseño que se organice de m
   
 #### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>Para organizar los controles mediante las propiedades Padding y Margin  
   
-1.  Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.Control.Dock%2A> a <xref:System.Windows.Forms.DockStyle.Fill>. Si el formulario es suficientemente grande, los controles <xref:System.Windows.Forms.Button> se moverán a la primera columna del control <xref:System.Windows.Forms.FlowLayoutPanel> .  
+1. Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.Control.Dock%2A> a <xref:System.Windows.Forms.DockStyle.Fill>. Si el formulario es suficientemente grande, los controles <xref:System.Windows.Forms.Button> se moverán a la primera columna del control <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
-2.  Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.Control.Padding%2A> mediante la expansión de la entrada <xref:System.Windows.Forms.Control.Padding%2A> en la ventana **Propiedades** y la configuración de la propiedad <xref:System.Windows.Forms.Padding.All%2A> en **20**. Para obtener más información, vea [Tutorial: Diseño de Windows Forms con relleno, márgenes y la propiedad AutoSize los controles](windows-forms-controls-padding-autosize.md). Tenga en cuenta que los controles secundarios se mueven hacia el centro del control <xref:System.Windows.Forms.FlowLayoutPanel> . El valor aumentado de la propiedad <xref:System.Windows.Forms.Control.Padding%2A> inserta los controles secundarios fuera de los bordes del control <xref:System.Windows.Forms.FlowLayoutPanel> .  
+2. Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.Control.Padding%2A> mediante la expansión de la entrada <xref:System.Windows.Forms.Control.Padding%2A> en la ventana **Propiedades** y la configuración de la propiedad <xref:System.Windows.Forms.Padding.All%2A> en **20**. Para obtener más información, vea [Tutorial: Diseño de Windows Forms con relleno, márgenes y la propiedad AutoSize los controles](windows-forms-controls-padding-autosize.md). Tenga en cuenta que los controles secundarios se mueven hacia el centro del control <xref:System.Windows.Forms.FlowLayoutPanel> . El valor aumentado de la propiedad <xref:System.Windows.Forms.Control.Padding%2A> inserta los controles secundarios fuera de los bordes del control <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
-3.  Seleccione todos los controles <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.FlowLayoutPanel> y establezca el valor de la propiedad <xref:System.Windows.Forms.Control.Margin%2A> en **20**. Observe que el espaciado entre los controles <xref:System.Windows.Forms.Button> aumenta, por lo que se separan más. Puede que necesite cambiar el tamaño del control <xref:System.Windows.Forms.FlowLayoutPanel> para aumentarlo y ver todos los controles secundarios.  
+3. Seleccione todos los controles <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.FlowLayoutPanel> y establezca el valor de la propiedad <xref:System.Windows.Forms.Control.Margin%2A> en **20**. Observe que el espaciado entre los controles <xref:System.Windows.Forms.Button> aumenta, por lo que se separan más. Puede que necesite cambiar el tamaño del control <xref:System.Windows.Forms.FlowLayoutPanel> para aumentarlo y ver todos los controles secundarios.  
   
 ## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>Insertar controles mediante un doble clic en estos en el cuadro de herramientas  
  Para rellenar el control <xref:System.Windows.Forms.FlowLayoutPanel> puede hacer doble clic en los controles del **cuadro de herramientas**.  
   
 #### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>Para insertar controles mediante un doble clic en el cuadro de herramientas  
   
-1.  Haga doble clic en el icono del control <xref:System.Windows.Forms.Button> en el **Cuadro de herramientas**. Observe que aparece un nuevo control <xref:System.Windows.Forms.Button> en el control <xref:System.Windows.Forms.FlowLayoutPanel> .  
+1. Haga doble clic en el icono del control <xref:System.Windows.Forms.Button> en el **Cuadro de herramientas**. Observe que aparece un nuevo control <xref:System.Windows.Forms.Button> en el control <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
-2.  Haga doble clic en algunos controles más en el **cuadro de herramientas**. Observe que los nuevos controles aparecen de manera consecutiva en el control <xref:System.Windows.Forms.FlowLayoutPanel> .  
+2. Haga doble clic en algunos controles más en el **cuadro de herramientas**. Observe que los nuevos controles aparecen de manera consecutiva en el control <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>Insertar un control dibujando su contorno  
  Puede insertar un control en un control <xref:System.Windows.Forms.FlowLayoutPanel> y dibujar su contorno en una celda para especificar el tamaño.  
   
 #### <a name="to-insert-a-control-by-drawing-its-outline"></a>Para insertar un control dibujando su contorno  
   
-1.  En el **cuadro de herramientas**, haga clic en el icono del control <xref:System.Windows.Forms.Button> . No lo arrastre hasta el formulario.  
+1. En el **cuadro de herramientas**, haga clic en el icono del control <xref:System.Windows.Forms.Button> . No lo arrastre hasta el formulario.  
   
-2.  Mueva el puntero del mouse sobre el control <xref:System.Windows.Forms.FlowLayoutPanel> . Observe que el puntero cambia a una cruz con el icono del control <xref:System.Windows.Forms.Button> agregado.  
+2. Mueva el puntero del mouse sobre el control <xref:System.Windows.Forms.FlowLayoutPanel> . Observe que el puntero cambia a una cruz con el icono del control <xref:System.Windows.Forms.Button> agregado.  
   
-3.  Haga clic y mantenga presionado el botón del mouse.  
+3. Haga clic y mantenga presionado el botón del mouse.  
   
-4.  Arrastre el puntero del mouse para dibujar el contorno del control <xref:System.Windows.Forms.Button> . Cuando esté satisfecho con el tamaño, suelte el botón del mouse. Tenga en cuenta que el control <xref:System.Windows.Forms.Button> se crea en la siguiente ubicación abierta del control <xref:System.Windows.Forms.FlowLayoutPanel> .  
+4. Arrastre el puntero del mouse para dibujar el contorno del control <xref:System.Windows.Forms.Button> . Cuando esté satisfecho con el tamaño, suelte el botón del mouse. Tenga en cuenta que el control <xref:System.Windows.Forms.Button> se crea en la siguiente ubicación abierta del control <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
 ## <a name="inserting-controls-using-the-insertion-bar"></a>Insertar controles mediante la barra de inserción  
  Puede insertar controles en una posición específica de un control <xref:System.Windows.Forms.FlowLayoutPanel> . Cuando se arrastra un control en el área de cliente del control <xref:System.Windows.Forms.FlowLayoutPanel> , aparece una barra de inserción para indicar la ubicación donde se insertará el control.  
   
 #### <a name="to-insert-a-control-using-the-caret"></a>Para insertar un control mediante el símbolo de intercalación  
   
-1.  Arrastre un control <xref:System.Windows.Forms.Button> desde el **cuadro de herramientas** al control <xref:System.Windows.Forms.FlowLayoutPanel> y señale el espacio entre los dos controles <xref:System.Windows.Forms.Button> . Tenga en cuenta que se dibuja una barra de inserción, que indica dónde el <xref:System.Windows.Forms.Button> se colocarán cuando se coloca en el <xref:System.Windows.Forms.FlowLayoutPanel> control. Antes de colocar el nuevo control <xref:System.Windows.Forms.Button> en el control <xref:System.Windows.Forms.FlowLayoutPanel> , mueva el puntero del mouse para observar cómo se mueve la barra de inserción.  
+1. Arrastre un control <xref:System.Windows.Forms.Button> desde el **cuadro de herramientas** al control <xref:System.Windows.Forms.FlowLayoutPanel> y señale el espacio entre los dos controles <xref:System.Windows.Forms.Button> . Tenga en cuenta que se dibuja una barra de inserción, que indica dónde el <xref:System.Windows.Forms.Button> se colocarán cuando se coloca en el <xref:System.Windows.Forms.FlowLayoutPanel> control. Antes de colocar el nuevo control <xref:System.Windows.Forms.Button> en el control <xref:System.Windows.Forms.FlowLayoutPanel> , mueva el puntero del mouse para observar cómo se mueve la barra de inserción.  
   
-2.  Coloque el nuevo control <xref:System.Windows.Forms.Button> en el control <xref:System.Windows.Forms.FlowLayoutPanel> . Tenga en cuenta que el nuevo control <xref:System.Windows.Forms.Button> no está alineado con los demás, porque su propiedad <xref:System.Windows.Forms.Control.Margin%2A> tiene un valor diferente.  
+2. Coloque el nuevo control <xref:System.Windows.Forms.Button> en el control <xref:System.Windows.Forms.FlowLayoutPanel> . Tenga en cuenta que el nuevo control <xref:System.Windows.Forms.Button> no está alineado con los demás, porque su propiedad <xref:System.Windows.Forms.Control.Margin%2A> tiene un valor diferente.  
   
 ## <a name="reassigning-existing-controls-to-a-different-parent"></a>Reasignar controles existentes en un elemento primario diferente  
  Puede asignar controles que existen en el formulario a un nuevo control <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
 #### <a name="to-reparent-existing-controls"></a>Para cambiar el primario de los controles existentes  
   
-1.  Arrastre tres controles <xref:System.Windows.Forms.Button> del **cuadro de herramientas** al formulario. Colóquelos cerca entre sí, pero sin alinearlos.  
+1. Arrastre tres controles <xref:System.Windows.Forms.Button> del **cuadro de herramientas** al formulario. Colóquelos cerca entre sí, pero sin alinearlos.  
   
-2.  En el **cuadro de herramientas**, haga clic en el icono del control <xref:System.Windows.Forms.FlowLayoutPanel> . No lo arrastre hasta el formulario.  
+2. En el **cuadro de herramientas**, haga clic en el icono del control <xref:System.Windows.Forms.FlowLayoutPanel> . No lo arrastre hasta el formulario.  
   
-3.  Mueva el puntero del mouse cerca de los tres controles <xref:System.Windows.Forms.Button> . Observe que el puntero cambia a una cruz con el icono del control <xref:System.Windows.Forms.FlowLayoutPanel> agregado.  
+3. Mueva el puntero del mouse cerca de los tres controles <xref:System.Windows.Forms.Button> . Observe que el puntero cambia a una cruz con el icono del control <xref:System.Windows.Forms.FlowLayoutPanel> agregado.  
   
-4.  Haga clic y mantenga presionado el botón del mouse.  
+4. Haga clic y mantenga presionado el botón del mouse.  
   
-5.  Arrastre el puntero del mouse para dibujar el contorno del control <xref:System.Windows.Forms.FlowLayoutPanel> . Dibuje el contorno alrededor de los tres controles <xref:System.Windows.Forms.Button> .  
+5. Arrastre el puntero del mouse para dibujar el contorno del control <xref:System.Windows.Forms.FlowLayoutPanel> . Dibuje el contorno alrededor de los tres controles <xref:System.Windows.Forms.Button> .  
   
-6.  Suelte el botón del mouse. Observe que los tres controles <xref:System.Windows.Forms.Button> se insertan en el control <xref:System.Windows.Forms.FlowLayoutPanel> .  
+6. Suelte el botón del mouse. Observe que los tres controles <xref:System.Windows.Forms.Button> se insertan en el control <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  Puede lograr un diseño complejo mediante una combinación de controles y paneles de diseño. Estas son otras sugerencias para seguir con la exploración:  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f45259623d4a481e635ac1b54ecb9a17497ab5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204099"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325597"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Filtrar para agregar instrucciones de seguimiento al código de una aplicación
 Los métodos que se usan con mayor frecuencia para traza son los métodos para escribir los resultados en agentes de escucha: **Escribir**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, y **producirá un error en**. Estos métodos pueden dividirse en dos categorías: **Escribir**, **WriteLine**, y **producirá un error en** emiten resultados de forma incondicional, mientras que **WriteIf**, **WriteLineIf**y  **Assert** comprueban una condición booleana y escriben o no escriben en función del valor de la condición. **WriteIf** y **WriteLineIf** emiten resultados si la condición es `true` y **Assert** emite resultados si la condición es `false`.  
@@ -29,7 +29,7 @@ Los métodos que se usan con mayor frecuencia para traza son los métodos para e
   
 ### <a name="to-write-a-complete-line"></a>Para escribir una línea completa  
   
-1.  Llame al método <xref:System.Diagnostics.Trace.WriteLine%2A> o <xref:System.Diagnostics.Trace.WriteLineIf%2A>.  
+1. Llame al método <xref:System.Diagnostics.Trace.WriteLine%2A> o <xref:System.Diagnostics.Trace.WriteLineIf%2A>.  
   
      Se agrega un retorno de carro al final del mensaje que devuelve este método, para que el siguiente mensaje devuelto por **Write**, **WriteIf**, **WriteLine** o **WriteLineIf** comience en la línea siguiente:  
   
@@ -48,7 +48,7 @@ Los métodos que se usan con mayor frecuencia para traza son los métodos para e
   
 ### <a name="to-write-a-partial-line"></a>Para escribir una línea parcial  
   
-1.  Llame al método <xref:System.Diagnostics.Trace.Write%2A> o <xref:System.Diagnostics.Trace.WriteIf%2A>.  
+1. Llame al método <xref:System.Diagnostics.Trace.Write%2A> o <xref:System.Diagnostics.Trace.WriteIf%2A>.  
   
      El siguiente mensaje generado por **Write**, **WriteIf**, **WriteLine** o **WriteLineIf** empezará en la misma línea que el mensaje generado por la instrucción **Write** o **WriteIf**:  
   
@@ -69,7 +69,7 @@ Los métodos que se usan con mayor frecuencia para traza son los métodos para e
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Para comprobar que se cumplen ciertas condiciones antes o después de ejecutar un método  
   
-1.  Llame al método <xref:System.Diagnostics.Trace.Assert%2A>.  
+1. Llame al método <xref:System.Diagnostics.Trace.Assert%2A>.  
   
     ```vb  
     Dim i As Integer = 4  

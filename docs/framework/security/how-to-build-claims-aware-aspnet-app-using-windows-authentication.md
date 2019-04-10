@@ -1,16 +1,16 @@
 ---
-title: 'Cómo: crear aplicaciones ASP.NET para notificaciones mediante la autenticación de Windows'
+title: Cómo compilar aplicaciones ASP.NET con reconocimiento de notificaciones mediante la autenticación de Windows
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 2c7877c452c729b30029cad1a8e17600f3dc9661
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198533"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323673"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Cómo: crear aplicaciones ASP.NET para notificaciones mediante la autenticación de Windows
+# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Cómo compilar aplicaciones ASP.NET con reconocimiento de notificaciones mediante la autenticación de Windows
 ## <a name="applies-to"></a>Se aplica a  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -58,13 +58,13 @@ ms.locfileid: "47198533"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Para crear una aplicación de ASP.NET sencilla  
   
-1.  Inicie Visual Studio y, después, haga clic en **Archivo**, **Nuevo** y en **Proyecto**.  
+1. Inicie Visual Studio y, después, haga clic en **Archivo**, **Nuevo** y en **Proyecto**.  
   
-2.  En la ventana **Nuevo proyecto**, haga clic en **Aplicación de formularios Web Forms ASP.NET**.  
+2. En la ventana **Nuevo proyecto**, haga clic en **Aplicación de formularios Web Forms ASP.NET**.  
   
-3.  En **Nombre**, escriba `TestApp` y haga clic en **Aceptar**.  
+3. En **Nombre**, escriba `TestApp` y haga clic en **Aceptar**.  
   
-4.  Después de que se haya creado el proyecto **TestApp**, haga clic en él en el **Explorador de soluciones**. Las propiedades del proyecto aparecerán en el panel **Propiedades** debajo del **Explorador de soluciones**. Establezca la propiedad **Autenticación de Windows** en **Habilitado**.  
+4. Después de que se haya creado el proyecto **TestApp**, haga clic en él en el **Explorador de soluciones**. Las propiedades del proyecto aparecerán en el panel **Propiedades** debajo del **Explorador de soluciones**. Establezca la propiedad **Autenticación de Windows** en **Habilitado**.  
   
     > [!WARNING]
     >  La autenticación de Windows está deshabilitada de manera predeterminada en las nuevas aplicaciones ASP.NET, por lo que debe habilitarla manualmente.  
@@ -74,7 +74,7 @@ ms.locfileid: "47198533"
   
 #### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Para configurar la aplicación ASP.NET para notificaciones mediante la autenticación de Windows  
   
-1.  En el archivo *Default.aspx* del proyecto **TestApp**, reemplace el marcado existente por el siguiente:  
+1. En el archivo *Default.aspx* del proyecto **TestApp**, reemplace el marcado existente por el siguiente:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -96,7 +96,7 @@ ms.locfileid: "47198533"
   
      Este paso agrega un control GridView a la página *Default.aspx* que se va a rellenar con las notificaciones recuperadas de la autenticación de Windows.  
   
-2.  Guarde el archivo *Default.aspx* y abra su archivo de código subyacente denominado *Default.aspx.cs*. Reemplace el código existente por el siguiente:  
+2. Guarde el archivo *Default.aspx* y abra su archivo de código subyacente denominado *Default.aspx.cs*. Reemplace el código existente por el siguiente:  
   
     ```csharp  
     using System;  
@@ -119,13 +119,13 @@ ms.locfileid: "47198533"
   
      El código anterior mostrará las notificaciones sobre un usuario autenticado.  
   
-3.  Para cambiar el tipo de autenticación de la aplicación, modifique el bloque **\<authentication>** en la sección **\<system.web>** del archivo *Web.config* de la raíz del proyecto, de manera que solo incluya la siguiente entrada de configuración:  
+3. Para cambiar el tipo de autenticación de la aplicación, modifique el bloque **\<authentication>** en la sección **\<system.web>** del archivo *Web.config* de la raíz del proyecto, de manera que solo incluya la siguiente entrada de configuración:  
   
     ```xml  
     <authentication mode="Windows" />  
     ```  
   
-4.  Por último, modifique el bloque **\<authorization>** en la sección **\<system.web>** del mismo archivo *Web.config* para forzar la autenticación:  
+4. Por último, modifique el bloque **\<authorization>** en la sección **\<system.web>** del mismo archivo *Web.config* para forzar la autenticación:  
   
     ```xml  
     <authorization>  
@@ -138,4 +138,4 @@ ms.locfileid: "47198533"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Para probar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de Windows  
   
-1.  Presione **F5** para compilar y ejecutar la aplicación. Debe aparecer con *Default.aspx*, y su nombre de cuenta Windows (incluido el nombre de dominio) ya debe aparecer como el usuario autenticado en la parte superior derecha de la página. El contenido de la página debe incluir una tabla en la que aparecen las notificaciones que se han recuperado de su cuenta Windows.
+1. Presione **F5** para compilar y ejecutar la aplicación. Debe aparecer con *Default.aspx*, y su nombre de cuenta Windows (incluido el nombre de dominio) ya debe aparecer como el usuario autenticado en la parte superior derecha de la página. El contenido de la página debe incluir una tabla en la que aparecen las notificaciones que se han recuperado de su cuenta Windows.

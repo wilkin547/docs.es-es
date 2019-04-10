@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 62564823338ee071f09036929a3a11cd5f3bbbe1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a5a8d4d0d41efb7a255080994c8e18302d302447
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676569"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321697"
 ---
 # <a name="workflow-security"></a>Seguridad del flujo de trabajo
 Windows Workflow Foundation (WF) se integra con varias tecnologías diferentes, como Microsoft SQL Server y Windows Communication Foundation (WCF). Al interactuar con estas tecnologías, se pueden introducir problemas de seguridad en su flujo de trabajo si no se hace de manera correcta.
 
 ## <a name="persistence-security-concerns"></a>Problemas de seguridad de persistencia
 
-1.  Los flujos de trabajo que usan una actividad <xref:System.Activities.Statements.Delay> y persistencia se deben reactivar mediante un servicio. Windows AppFabric usa el Servicio de administración de flujos de trabajo (WMS) para reactivar flujos de trabajo con temporizadores expirados. WMS crea un <xref:System.ServiceModel.WorkflowServiceHost> para hospedar el flujo de trabajo reactivado. Si se detiene el servicio de WMS, los flujos de trabajo conservados no se reactivarán cuando sus temporizadores expiren.
+1. Los flujos de trabajo que usan una actividad <xref:System.Activities.Statements.Delay> y persistencia se deben reactivar mediante un servicio. Windows AppFabric usa el Servicio de administración de flujos de trabajo (WMS) para reactivar flujos de trabajo con temporizadores expirados. WMS crea un <xref:System.ServiceModel.WorkflowServiceHost> para hospedar el flujo de trabajo reactivado. Si se detiene el servicio de WMS, los flujos de trabajo conservados no se reactivarán cuando sus temporizadores expiren.
 
-2.  El acceso a la creación de instancias duraderas debe protegerse contra entidades malintencionadas externas al dominio de aplicación. Además, los desarrolladores deben asegurarse de que el código malintencionado no se pueda ejecutar en el mismo dominio de aplicación que el código de creación de instancias duraderas.
+2. El acceso a la creación de instancias duraderas debe protegerse contra entidades malintencionadas externas al dominio de aplicación. Además, los desarrolladores deben asegurarse de que el código malintencionado no se pueda ejecutar en el mismo dominio de aplicación que el código de creación de instancias duraderas.
 
-3.  La creación de instancias duraderas no se debe ejecutar con permisos elevados (administrador).
+3. La creación de instancias duraderas no se debe ejecutar con permisos elevados (administrador).
 
-4.  Los datos que se procesan fuera del dominio de aplicación deben ser protegidos.
+4. Los datos que se procesan fuera del dominio de aplicación deben ser protegidos.
 
-5.  Las aplicaciones que necesitan aislamiento de seguridad no deben compartir la misma instancia de abstracción de esquema. Dichas aplicaciones deben usar proveedores de almacén diferentes o proveedores de almacén configurados usar diferentes instancias de almacén.
+5. Las aplicaciones que necesitan aislamiento de seguridad no deben compartir la misma instancia de abstracción de esquema. Dichas aplicaciones deben usar proveedores de almacén diferentes o proveedores de almacén configurados usar diferentes instancias de almacén.
 
 ## <a name="sql-server-security-concerns"></a>Problemas de seguridad de SQL Server
 
@@ -47,12 +47,12 @@ Windows Workflow Foundation (WF) se integra con varias tecnologías diferentes, 
 ## <a name="wf-security-pack-ctp"></a>CTP del paquete de seguridad de WF
  El CTP 1 del paquete de seguridad de Microsoft WF es la primera versión de community technology preview (CTP) de un conjunto de actividades y su implementación basada en [Windows Workflow Foundation](index.md) en [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF (4) y el [Windows Identity Foundation (WIF)](../security/index.md).  El CTP 1 del paquete de seguridad de Microsoft WF contiene ambas actividades y sus diseñadores que muestran cómo habilitar fácilmente diferentes escenarios relacionados con la seguridad usando el flujo de trabajo, incluidas:
 
-1.  Suplantar una identidad del cliente en el flujo de trabajo
+1. Suplantar una identidad del cliente en el flujo de trabajo
 
-2.  Autorización en el flujo de trabajo, como PrincipalPermission y validación de notificaciones
+2. Autorización en el flujo de trabajo, como PrincipalPermission y validación de notificaciones
 
-3.  Mensajería autenticada mediante ClientCredentials especificadas en el flujo de trabajo, como nombre de usuario/contraseña o un token recuperado de un Servicio de token de seguridad (STS)
+3. Mensajería autenticada mediante ClientCredentials especificadas en el flujo de trabajo, como nombre de usuario/contraseña o un token recuperado de un Servicio de token de seguridad (STS)
 
-4.  Llevar un token de seguridad de cliente a un servicio de fondo (delegación basada en notificaciones) mediante ActAs de WS-Trust
+4. Llevar un token de seguridad de cliente a un servicio de fondo (delegación basada en notificaciones) mediante ActAs de WS-Trust
 
 Para obtener más información y descargar el CTP del paquete de seguridad de WF, vea: [CTP del paquete de seguridad WF](https://archive.codeplex.com/?p=wf)

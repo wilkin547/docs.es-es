@@ -2,12 +2,12 @@
 title: Consideraciones sobre el rendimiento (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: d0ee92b96a22b0ecb59ee76fb2f2e9d64442ce22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087955"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324050"
 ---
 # <a name="performance-considerations-entity-framework"></a>Consideraciones sobre el rendimiento (Entity Framework)
 En este tema se describen las características de rendimiento de ADO.NET Entity Framework y se facilitan algunas consideraciones para ayudar a mejorar el rendimiento de las aplicaciones de Entity Framework.  
@@ -82,11 +82,11 @@ En este tema se describen las características de rendimiento de ADO.NET Entity 
 ### <a name="query-paths"></a>Rutas de la consulta  
  De forma predeterminada, al ejecutar una consulta <xref:System.Data.Objects.ObjectQuery%601>, no se devuelven los objetos relacionados (aunque los propios objetos que representan las relaciones lo son). Puede cargar objetos relacionados de una de las tres maneras siguientes:  
   
-1.  Establezca la ruta de acceso de la consulta antes de que se ejecute <xref:System.Data.Objects.ObjectQuery%601>.  
+1. Establezca la ruta de acceso de la consulta antes de que se ejecute <xref:System.Data.Objects.ObjectQuery%601>.  
   
-2.  Llame al método `Load` sobre la propiedad de navegación expuesta por el objeto.  
+2. Llame al método `Load` sobre la propiedad de navegación expuesta por el objeto.  
   
-3.  Establezca la opción <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> del <xref:System.Data.Objects.ObjectContext> en `true`. Tenga en cuenta que esto se realiza automáticamente al generar código de nivel de objeto con el [Entity Data Model Designer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)). Para obtener más información, consulte [información general del código generado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100)).  
+3. Establezca la opción <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> del <xref:System.Data.Objects.ObjectContext> en `true`. Tenga en cuenta que esto se realiza automáticamente al generar código de nivel de objeto con el [Entity Data Model Designer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)). Para obtener más información, consulte [información general del código generado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100)).  
   
  Cuando considere qué opción se debe usar, sea consciente de que hay una correlación entre el número de solicitudes a la base de datos y la cantidad de datos devueltos en una sola consulta. Para obtener más información, consulte [cargar objetos relacionados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100)).  
   

@@ -6,12 +6,12 @@ title: Documentación de .NET
 description: Obtenga información sobre cómo usar .NET para crear una variedad de aplicaciones en cualquier plataforma mediante C#, Visual Basic y F#. Examine referencias de API, código de ejemplo, tutoriales y mucho más.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 31e810246528c99a665128d3535b92dbfcb4352d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 132cab6f7c196f88fdc02259e55d0fcb5fbbfd10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464520"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297274"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -77,10 +77,10 @@ ms.locfileid: "58464520"
         <h1>Documentación de .NET</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Documentos</a>
+                <a data-default="true" href="#docs">Docs</a>
                 <ul id="docs">
                     <li>
-                        <a href="#getstarted">Introducción</a>
+                        <a href="#getstarted">Primeros pasos</a>
                         <ul id="getstarted" class="cardsF">
                             <li>
                                 <div class="cardSize">
@@ -175,7 +175,7 @@ ms.locfileid: "58464520"
                                                 <h3><a href="/dotnet/csharp">Guía de C#</a></h3>
                                                 <p><a href="/dotnet/csharp/getting-started">Primeros pasos</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Paseo por C#</a></p>
-                                                <p><a href="/dotnet/csharp/whats-new">What's New in C# (Novedades de C#)</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new">Novedades de C#</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">Referencia del lenguaje C#</a></p>
                                             </div>
                                         </div>
@@ -194,7 +194,7 @@ ms.locfileid: "58464520"
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/fsharp">Guía de F#</a></h3>
                                                 <p><a href="/dotnet/fsharp/tutorials/getting-started">Primeros pasos</a></p>
-                                                <p><a href="/dotnet/fsharp/tour">Paseo por F</a></p>
+                                                <p><a href="/dotnet/fsharp/tour">Paseo por F#</a></p>
                                                 <p><a href="/dotnet/fsharp/language-reference">Referencia del lenguaje F#</a></p>
                                             </div>
                                         </div>
@@ -231,8 +231,8 @@ ms.locfileid: "58464520"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning">Guía de ML.NET</a></h3>
-                                                <p><a href="/dotnet/machine-learning/tutorials">Tutoriales</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources">Recursos</a></p>
+                                                <p><a href="/dotnet/machine-learning/index#tutorials">Tutoriales</a></p>
+                                                <p><a href="/dotnet/machine-learning/index#resources">Recursos</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Glosario</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">Referencia de API de ML.NET</a></p>
                                             </div>
@@ -582,7 +582,7 @@ ms.locfileid: "58464520"
                         <a href="#gaming">Juegos</a>
                         <ul id="gaming" class="cardsC">
                             <li>
-                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/">
+                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

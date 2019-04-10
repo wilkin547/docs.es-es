@@ -2,12 +2,12 @@
 title: Cómo actualización dinámica
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 3ae446da5e19b0c4c0c121d44892e4a13ec70dd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7e2fbd6c179444ef4c6e1df5e5068dbd1c5d29fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190995"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320761"
 ---
 # <a name="how-to-dynamic-update"></a>Cómo actualización dinámica
 Este tema describe los pasos básicos necesarios para crear y actualizar dinámicamente la configuración de enrutamiento. En este ejemplo, la configuración de enrutamiento inicial se obtiene del archivo de configuración y enruta todos los mensajes al servicio de calculadora de regularCalc; sin embargo, se actualiza posteriormente mediante programación para cambiar el punto de conexión de destino del servicio de roundingCalc.  
@@ -22,7 +22,7 @@ Este tema describe los pasos básicos necesarios para crear y actualizar dinámi
   
 ### <a name="implement-initial-configuration"></a>Implementación de la configuración inicial  
   
-1.  Cree la configuración de servicio de enrutamiento básica especificando los extremos de servicio expuestos por el servicio. En el siguiente ejemplo, se define un punto de conexión de servicio único que se utilizará para recibir mensajes. También se define un extremo de cliente que se usará para enviar mensajes a regularCalc.  
+1. Cree la configuración de servicio de enrutamiento básica especificando los extremos de servicio expuestos por el servicio. En el siguiente ejemplo, se define un punto de conexión de servicio único que se utilizará para recibir mensajes. También se define un extremo de cliente que se usará para enviar mensajes a regularCalc.  
   
     ```xml  
     <services>  
@@ -49,7 +49,7 @@ Este tema describe los pasos básicos necesarios para crear y actualizar dinámi
     </client>  
     ```  
   
-2.  Defina el filtro usado para enrutar mensajes a los puntos de conexión del destino. En este ejemplo, se usa el filtro de MatchAll para enrutar todos los mensajes a regularCalcEndpoint definido previamente. En el siguiente ejemplo, se define el filtro y la tabla de filtros.  
+2. Defina el filtro usado para enrutar mensajes a los puntos de conexión del destino. En este ejemplo, se usa el filtro de MatchAll para enrutar todos los mensajes a regularCalcEndpoint definido previamente. En el siguiente ejemplo, se define el filtro y la tabla de filtros.  
   
     ```xml  
     <filters>  
@@ -64,7 +64,7 @@ Este tema describe los pasos básicos necesarios para crear y actualizar dinámi
     </filterTables>  
     ```  
   
-3.  Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. El ejemplo siguiente se muestra cómo asociar "filterTable1" con el punto de conexión de servicio.  
+3. Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. El ejemplo siguiente se muestra cómo asociar "filterTable1" con el punto de conexión de servicio.  
   
     ```xml  
     <behaviors>  
@@ -80,7 +80,7 @@ Este tema describe los pasos básicos necesarios para crear y actualizar dinámi
 ## <a name="implement-dynamic-configuration"></a>Implementación de la configuración dinámica  
  La configuración dinámica del servicio de enrutamiento solo se puede realizar en código creando un nuevo <xref:System.ServiceModel.Routing.RoutingConfiguration> y usando <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> para reemplazar la configuración actual.  En este ejemplo, el servicio de enrutamiento se auto-hospeda dentro de una aplicación de consola. Después de que la aplicación se haya iniciado, puede modificar la configuración de enrutamiento escribiendo 'regular' (normal) o 'rounding' (redondeo) en la ventana de la consola para configurar el extremo de destino al que se enrutan los mensajes: regularCalc al escribir 'regular'; de lo contrario, roundingCalc al introducir 'rounding'.  
   
-1.  Deben agregarse las siguientes instrucciones de uso para admitir el servicio de enrutamiento.  
+1. Deben agregarse las siguientes instrucciones de uso para admitir el servicio de enrutamiento.  
   
     ```csharp  
     using System;  
@@ -92,7 +92,7 @@ Este tema describe los pasos básicos necesarios para crear y actualizar dinámi
     using System.ServiceModel.Routing;  
     ```  
   
-2.  El siguiente código se usa para probar internamente el servicio de enrutamiento como una aplicación de consola. Esto inicializa el servicio de enrutamiento mediante la configuración descrita en el paso anterior, que se incluye en el archivo de configuración de la aplicación. El bucle while contiene el código usado para cambiar la configuración de enrutamiento.  
+2. El siguiente código se usa para probar internamente el servicio de enrutamiento como una aplicación de consola. Esto inicializa el servicio de enrutamiento mediante la configuración descrita en el paso anterior, que se incluye en el archivo de configuración de la aplicación. El bucle while contiene el código usado para cambiar la configuración de enrutamiento.  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -117,7 +117,7 @@ Este tema describe los pasos básicos necesarios para crear y actualizar dinámi
     }  
     ```  
   
-3.  Para actualizar la configuración de enrutamiento dinámicamente, debe crearse una nueva configuración de enrutamiento. Esto debe contener todos los puntos de conexión, filtros y tablas de filtros necesarios para la nueva configuración de enrutamiento, ya que reemplazará por completo la configuración de enrutamiento existente. Para usar la nueva configuración de enrutamiento, debe invocar <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> y pasar la nueva configuración.  
+3. Para actualizar la configuración de enrutamiento dinámicamente, debe crearse una nueva configuración de enrutamiento. Esto debe contener todos los puntos de conexión, filtros y tablas de filtros necesarios para la nueva configuración de enrutamiento, ya que reemplazará por completo la configuración de enrutamiento existente. Para usar la nueva configuración de enrutamiento, debe invocar <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> y pasar la nueva configuración.  
   
      Agregue el siguiente código al bucle while definido previamente para permitir que el servicio se reconfigure en función de los datos proporcionados por el usuario.  
   

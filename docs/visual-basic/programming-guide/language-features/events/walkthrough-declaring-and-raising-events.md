@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 0f48c90232c00f53007e7d2f8f08e2107406ecad
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841009"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320696"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Tutorial: Declarar y provocar eventos (Visual Basic)
 Este tutorial muestra cómo declarar y provocar eventos para una clase denominada `Widget`. Después de completar los pasos, que es posible que desee leer el tema complementario, [Tutorial: Control de eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), que muestra cómo utilizar eventos de `Widget` objetos que se va a proporcionar información de estado en una aplicación.  
@@ -28,19 +28,19 @@ Este tutorial muestra cómo declarar y provocar eventos para una clase denominad
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>Para compilar el ejemplo de código de este tema  
   
-1.  Abra un nuevo proyecto de aplicación de Windows de Visual Basic y cree un formulario denominado `Form1`.  
+1. Abra un nuevo proyecto de aplicación de Windows de Visual Basic y cree un formulario denominado `Form1`.  
   
-2.  Agregue dos botones y una etiqueta para `Form1`.  
+2. Agregue dos botones y una etiqueta para `Form1`.  
   
-3.  Asigne nombre a los objetos tal y como se muestra en la tabla siguiente.  
+3. Asigne nombre a los objetos tal y como se muestra en la tabla siguiente.  
   
-    |Objeto|Property|Parámetro|  
+    |Objeto|Propiedad|Parámetro|  
     |------------|--------------|-------------|  
     |`Button1`|`Text`|Tarea de inicio|  
     |`Button2`|`Text`|Cancelar|  
     |`Label`|`(Name)`, `Text`|lblPercentDone, 0|  
   
-4.  En el **proyecto** menú, elija **Agregar clase** para agregar una clase denominada `Widget.vb` al proyecto.  
+4. En el **proyecto** menú, elija **Agregar clase** para agregar una clase denominada `Widget.vb` al proyecto.  
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>Para declarar un evento para la clase de Widget  
   
@@ -57,11 +57,11 @@ Este tutorial muestra cómo declarar y provocar eventos para una clase denominad
   
 #### <a name="to-raise-the-percentdone-event"></a>Para generar el evento PercentDone  
   
-1.  Para simplificar el acceso a la `Timer` propiedad utilizada por esta clase, agregue un `Imports` instrucción a la parte superior de la sección de declaraciones de módulo de la clase, por encima el `Class Widget` instrucción.  
+1. Para simplificar el acceso a la `Timer` propiedad utilizada por esta clase, agregue un `Imports` instrucción a la parte superior de la sección de declaraciones de módulo de la clase, por encima el `Class Widget` instrucción.  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
-2.  Agregue el código siguiente a la clase `Widget`:  
+2. Agregue el código siguiente a la clase `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
@@ -77,5 +77,5 @@ Este tutorial muestra cómo declarar y provocar eventos para una clase denominad
 
 - <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>
 - <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>
-- [Tutorial: Control de eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)
+- [Tutorial: Controlar eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)
 - [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 2017e7ed1df18ea0b469207cd06396c74125cb19
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 92156bcd05ba1eb559714a71a23efacfdd29fc52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465508"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219517"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guía de programación de C#)
 ## <a name="types-variables-and-values"></a>Tipos, variables y valores  
@@ -75,8 +75,7 @@ ms.locfileid: "58465508"
  En la ilustración siguiente se muestra la relación entre los tipos de valor y los tipos de referencia en CTS.
 
  En la imagen siguiente se muestran tipos de valores y tipos de referencias en CTS: 
-  
-  
+
  ![Captura de pantalla en la que se muestran tipos de valores y tipos de referencias en CTS.](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]

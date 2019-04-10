@@ -1,14 +1,14 @@
 ---
 title: Guía de contenido de ML.NET
 description: Obtenga información sobre cómo compilar soluciones de IA personalizadas e integrarlas en las aplicaciones .NET mediante ML.NET.
-ms.date: 01/18/2019
+ms.date: 04/05/2019
 ms.custom: seodec18
-ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: de681daea5a29a121d350271ced4ccc2c0b1b533
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231336"
 ---
 # <a name="mlnet-content-guide"></a>Guía de contenido de ML.NET
 
@@ -33,7 +33,11 @@ En la [clasificación de problemas de GitHub mediante un modelo de clasificació
 
 En [Tutorial: Predicción de las tarifas de taxi de Nueva York mediante un aprendiz de regresión con ML.NET](./tutorials/taxi-fare.md) se muestra cómo compilar una aplicación predictiva que utiliza muchos factores de los datos históricos para determinar la respuesta.
 
-En [Clasificar flores de iris mediante características](./tutorials/iris-clustering.md) se muestra cómo usar un modelo de agrupación en clústeres para analizar el conjunto de datos de iris. 
+En [Clasificar flores de iris mediante características](./tutorials/iris-clustering.md) se muestra cómo usar un modelo de agrupación en clústeres para analizar el conjunto de datos de iris.
+
+[Creación de un recomendador de películas con ML.NET](./tutorials/movie-recommmendation.md) muestra cómo crear una aplicación de recomendación para recomendar películas a los usuarios en función de su historial.
+
+[Build an ML.NET custom image classifier with TensorFlow](./tutorials/image-classification.md) (Creación de un clasificador de imágenes personalizado de ML.NET con TensorFlow): muestra cómo volver a entrenar un modelo de TensorFlow para crear un clasificador de imágenes personalizado mediante ML.NET.
 
 ## <a name="how-to-guide"></a>Guía de procedimientos
 
@@ -46,7 +50,6 @@ En el [Glosario de aprendizaje automático](./resources/glossary.md) se define l
 En [Tareas de aprendizaje automático](./resources/tasks.md) se describen tareas, como la clasificación y detección de anomalías. 
 
 En [Transformaciones de datos](./resources/transforms.md) se describen las funcionalidades de preparación de datos en ML.NET.
-
 
 ## <a name="api-reference"></a>referencia de API
 

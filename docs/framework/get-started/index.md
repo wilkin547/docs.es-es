@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad380b5e411a61db648495875a5b697df54e2849
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314976"
 ---
 # <a name="get-started-with-the-net-framework"></a>Introducción a .NET Framework
 
@@ -71,7 +71,7 @@ Para desarrollar aplicaciones o componentes de .NET Framework, haga lo siguiente
 
 2. Seleccione el lenguaje o los lenguajes compatibles con .NET Framework que quiera usar para desarrollar aplicaciones. Hay varios lenguajes disponibles, como [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) y [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp), de Microsoft. (Un lenguaje de programación que permita desarrollar aplicaciones de .NET Framework cumple las [especificaciones de Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)).
 
-3. Seleccione e instale el entorno de desarrollo que usará para crear aplicaciones y que admita el lenguaje o los lenguajes de programación elegidos. El entorno de desarrollo integrado de Microsoft (IDE) para las aplicaciones de .NET Framework es [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Está disponible en una gran variedad de ediciones.
+3. Seleccione e instale el entorno de desarrollo que usará para crear aplicaciones y que admita el lenguaje o los lenguajes de programación elegidos. El entorno de desarrollo integrado de Microsoft (IDE) para las aplicaciones de .NET Framework es [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Está disponible en una gran variedad de ediciones.
 
 Para obtener más información sobre el desarrollo de aplicaciones destinadas a .NET Framework, consulte la [Guía de desarrollo](../development-guide.md).
 

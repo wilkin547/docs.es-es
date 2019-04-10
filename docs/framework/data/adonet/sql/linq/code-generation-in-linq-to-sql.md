@@ -2,21 +2,21 @@
 title: Generación de código en LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 48035b0f7b4a8c9a37fade5dfc2e2c45ea779dba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174894"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321593"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Generación de código en LINQ to SQL
 Puede generar código para representar una base de datos utilizando el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o la herramienta de línea de comandos SQLMetal. En cualquier caso, la generación de código de un extremo a otro se produce en tres etapas:  
   
-1.  El *Extractor de DBML* extrae información de esquema de la base de datos y vuelve a ensamblar la información en un archivo DBML con formato XML.  
+1. El *Extractor de DBML* extrae información de esquema de la base de datos y vuelve a ensamblar la información en un archivo DBML con formato XML.  
   
-2.  Examina el archivo DBML el *validador de DBML* errores.  
+2. Examina el archivo DBML el *validador de DBML* errores.  
   
-3.  Si no aparece ningún error de validación, el archivo se pasa al Generador de código.  
+3. Si no aparece ningún error de validación, el archivo se pasa al Generador de código.  
   
  Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Los desarrolladores que usan Visual Studio también pueden usar el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para generar el código. Consulte [LINQ to SQL Tools en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   

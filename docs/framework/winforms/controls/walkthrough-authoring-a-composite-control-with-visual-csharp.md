@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 2f8c295e961fdf62a14b7e63ab990e8f99379cfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 67fecb95ea373e88e5428251151cc30bfeb580a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177388"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321044"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Tutorial: Crear un Control compuesto con Visual c#\#
 Los controles compuestos proporcionan una forma de crear y reutilizar interfaces gráficas personalizadas. Un control compuesto es esencialmente un componente con una representación visual. Como tal, puede constar de uno o varios controles de Windows Forms, componentes o bloques de código que pueden extender funcionalidad al validar la entrada del usuario, modificar propiedades de presentación o realizar otras tareas requeridas por el autor. Los controles compuestos se pueden colocar en Windows Forms de la misma manera que otros controles. En la primera parte de este tutorial, creará un control compuesto simple denominado `ctlClock`. En la segunda parte, extenderá la funcionalidad de `ctlClock` mediante herencia.  
@@ -26,31 +26,31 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 #### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a>Para crear la biblioteca de controles ctlClockLib y el control ctlClock  
   
-1.  En el menú **Archivo**, elija **Nuevo** y haga clic en **Proyecto** para abrir el cuadro de diálogo **Nuevo proyecto**.  
+1. En el menú **Archivo**, elija **Nuevo** y haga clic en **Proyecto** para abrir el cuadro de diálogo **Nuevo proyecto**.  
   
-2.  En la lista de proyectos de Visual C#, seleccione el **biblioteca de controles de Windows Forms** plantilla de proyecto, escriba `ctlClockLib` en el **nombre** cuadro y, a continuación, haga clic en **Aceptar**.  
+2. En la lista de proyectos de Visual C#, seleccione el **biblioteca de controles de Windows Forms** plantilla de proyecto, escriba `ctlClockLib` en el **nombre** cuadro y, a continuación, haga clic en **Aceptar**.  
   
      El nombre del proyecto, `ctlClockLib` también se asigna de forma predeterminada al espacio de nombres raíz. El espacio de nombres raíz se utiliza para calificar los nombres de los componentes del ensamblado. Por ejemplo, si dos ensamblados proporcionan componentes denominados `ctlClock`, puede especificar su `ctlClock` componente mediante `ctlClockLib.ctlClock.`  
   
-3.  En el Explorador de soluciones, haga clic con el botón derecho en **UserControl1.cs** y haga clic en **Cambiar nombre**. Cambie el nombre del archivo a `ctlClock.cs`. Haga clic en el botón **Sí** cuando se le pregunte si desea cambiar el nombre de todas las referencias al elemento de código "UserControl1".  
+3. En el Explorador de soluciones, haga clic con el botón derecho en **UserControl1.cs** y haga clic en **Cambiar nombre**. Cambie el nombre del archivo a `ctlClock.cs`. Haga clic en el botón **Sí** cuando se le pregunte si desea cambiar el nombre de todas las referencias al elemento de código "UserControl1".  
   
     > [!NOTE]
     >  De forma predeterminada, un control compuesto hereda el <xref:System.Windows.Forms.UserControl> clase proporcionada por el sistema. La <xref:System.Windows.Forms.UserControl> clase proporciona la funcionalidad requerida por todos los controles compuestos e implementa los métodos y propiedades estándar.  
   
-4.  En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.  
+4. En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.  
   
 ## <a name="adding-windows-controls-and-components-to-the-composite-control"></a>Agregar componentes y controles de Windows al control compuesto  
  Una interfaz visual es una parte esencial de su control compuesto. Esta interfaz visual se implementa agregando uno o más controles de Windows a la superficie del diseñador. En la demostración siguiente, incorporará controles de Windows al control compuesto y escribirá código para implementar funcionalidad.  
   
 #### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a>Para agregar una etiqueta y un temporizador al control compuesto  
   
-1.  En el Explorador de soluciones, haga clic con el botón derecho en **ctlClock.cs** y haga clic en **Ver diseñador**.  
+1. En el Explorador de soluciones, haga clic con el botón derecho en **ctlClock.cs** y haga clic en **Ver diseñador**.  
   
-2.  En el **cuadro de herramientas**, expanda el nodo **Controles comunes** y haga doble clic en **Label**.  
+2. En el **cuadro de herramientas**, expanda el nodo **Controles comunes** y haga doble clic en **Label**.  
   
      Un <xref:System.Windows.Forms.Label> control denominado `label1` se agrega al control en la superficie del diseñador.  
   
-3.  En el diseñador, haga clic en **label1**. En la ventana Propiedades, establezca las propiedades siguientes.  
+3. En el diseñador, haga clic en **label1**. En la ventana Propiedades, establezca las propiedades siguientes.  
   
     |Property|Cambiar a|  
     |--------------|---------------|  
@@ -59,17 +59,17 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
-4.  En el **cuadro de herramientas**, expanda el nodo **Componentes** y haga doble clic en **Temporizador**.  
+4. En el **cuadro de herramientas**, expanda el nodo **Componentes** y haga doble clic en **Temporizador**.  
   
      Dado que un <xref:System.Windows.Forms.Timer> es un componente, no tiene representación visual en tiempo de ejecución. Por lo tanto, no aparece con los controles en la superficie del diseñador, sino en el **Diseñador de componentes** (una bandeja en la parte inferior de la superficie del diseñador).  
   
-5.  En el **Component Designer**, haga clic en **timer1**y, a continuación, establezca el <xref:System.Windows.Forms.Timer.Interval%2A> propiedad `1000` y el <xref:System.Windows.Forms.Timer.Enabled%2A> propiedad `true`.  
+5. En el **Component Designer**, haga clic en **timer1**y, a continuación, establezca el <xref:System.Windows.Forms.Timer.Interval%2A> propiedad `1000` y el <xref:System.Windows.Forms.Timer.Enabled%2A> propiedad `true`.  
   
      El <xref:System.Windows.Forms.Timer.Interval%2A> propiedad controla la frecuencia con que el <xref:System.Windows.Forms.Timer> tics del componente. Cada vez que `timer1` hace tic, se ejecuta el código en el evento `timer1_Tick`. El intervalo representa el número de milisegundos entre tics.  
   
-6.  En el **Diseñador de componentes**, haga doble clic en **timer1** para ir al evento `timer1_Tick` para `ctlClock`.  
+6. En el **Diseñador de componentes**, haga doble clic en **timer1** para ir al evento `timer1_Tick` para `ctlClock`.  
   
-7.  Modifique el código para que se parezca al siguiente ejemplo. Asegúrese de cambiar el modificador de acceso de `private` a `protected`.  
+7. Modifique el código para que se parezca al siguiente ejemplo. Asegúrese de cambiar el modificador de acceso de `private` a `protected`.  
   
     ```csharp  
     protected void timer1_Tick(object sender, System.EventArgs e)  
@@ -81,7 +81,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
      Este código hará que la hora actual se muestre en `lblDisplay`. Como el intervalo de `timer1` se estableció en `1000`, este evento se producirá cada mil milisegundos, lo que actualiza la hora actual cada segundo.  
   
-8.  Modifique el método para que se pueda reemplazar con la palabra clave `virtual`. Para más información, consulte la sección "Heredar de un control compuesto".  
+8. Modifique el método para que se pueda reemplazar con la palabra clave `virtual`. Para más información, consulte la sección "Heredar de un control compuesto".  
   
     ```csharp  
     protected virtual void timer1_Tick(object sender, System.EventArgs e)  
@@ -94,11 +94,11 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 #### <a name="to-add-a-property-to-your-composite-control"></a>Para agregar una propiedad al control compuesto  
   
-1.  En el Explorador de soluciones, haga clic con el botón derecho en **ctlClock.cs** y haga clic en **Ver código**.  
+1. En el Explorador de soluciones, haga clic con el botón derecho en **ctlClock.cs** y haga clic en **Ver código**.  
   
      Se abre el **Editor de código** para el control.  
   
-2.  Busque la instrucción `public partial class ctlClock`. Bajo la llave de apertura (`{)`, escriba el código siguiente.  
+2. Busque la instrucción `public partial class ctlClock`. Bajo la llave de apertura (`{)`, escriba el código siguiente.  
   
     ```csharp  
     private Color colFColor;  
@@ -107,7 +107,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
      Estas instrucciones crean las variables privadas que usará para almacenar los valores de las propiedades que va a crear.  
   
-3.  Escriba el código siguiente bajo las declaraciones de variable del paso 2.  
+3. Escriba el código siguiente bajo las declaraciones de variable del paso 2.  
   
     ```csharp  
     // Declares the name and type of the property.  
@@ -143,22 +143,22 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
      El código anterior crea dos propiedades personalizadas, `ClockForeColor` y `ClockBackColor`, que estarán disponibles para posteriores usuarios de este control. Las instrucciones `get` y `set` permiten almacenar y recuperar el valor de propiedad, además de proporcionar código para implementar funcionalidad adecuada para la propiedad.  
   
-4.  En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.  
+4. En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.  
   
 ## <a name="testing-the-control"></a>Probar el control  
  Los controles no son aplicaciones independientes; deben hospedarse en un contenedor. Pruebe el comportamiento en tiempo de ejecución del control y sus propiedades con **UserControl Test Container**. Para obtener más información, vea [Cómo: Probar el comportamiento de tiempo de ejecución de una clase UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 #### <a name="to-test-your-control"></a>Para probar el control  
   
-1.  Presione F5 para compilar el proyecto y ejecutar el control en **UserControl Test Container**.  
+1. Presione F5 para compilar el proyecto y ejecutar el control en **UserControl Test Container**.  
   
-2.  En la cuadrícula de propiedades del contenedor de prueba, busque la propiedad `ClockBackColor` y selecciónela para mostrar la paleta de colores.  
+2. En la cuadrícula de propiedades del contenedor de prueba, busque la propiedad `ClockBackColor` y selecciónela para mostrar la paleta de colores.  
   
-3.  Haga clic en un color para elegirlo.  
+3. Haga clic en un color para elegirlo.  
   
      El color de fondo del control cambia al color seleccionado.  
   
-4.  Use una secuencia similar de eventos para comprobar que la propiedad `ClockForeColor` funcione según lo esperado.  
+4. Use una secuencia similar de eventos para comprobar que la propiedad `ClockForeColor` funcione según lo esperado.  
   
      En esta sección y en las anteriores, ha visto cómo se pueden combinar componentes y controles de Windows con código y empaquetado para ofrecer funcionalidad personalizada en forma de control compuesto. Ha aprendido a exponer propiedades en el control compuesto y a probar el control una vez completado. En la siguiente sección, aprenderá a crear un control compuesto heredado utilizando `ctlClock` como base.  
   
@@ -169,19 +169,19 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 #### <a name="to-create-the-inherited-control"></a>Para crear el control heredado  
   
-1.  En el Explorador de soluciones, haga clic con el botón derecho en **ctlClockLib**, elija **Agregar** y haga clic en **Control de usuario**.  
+1. En el Explorador de soluciones, haga clic con el botón derecho en **ctlClockLib**, elija **Agregar** y haga clic en **Control de usuario**.  
   
      Se abre el cuadro de diálogo **Agregar nuevo elemento**.  
   
-2.  Seleccione la plantilla **Control de usuario heredado**.  
+2. Seleccione la plantilla **Control de usuario heredado**.  
   
-3.  En el cuadro **Nombre**, escriba `ctlAlarmClock.cs` y haga clic en **Agregar**.  
+3. En el cuadro **Nombre**, escriba `ctlAlarmClock.cs` y haga clic en **Agregar**.  
   
      Aparece el cuadro de diálogo **Selector de herencia**.  
   
-4.  En **Nombre de componente**, haga doble clic en **ctlClock**.  
+4. En **Nombre de componente**, haga doble clic en **ctlClock**.  
   
-5.  En el Explorador de soluciones, examine los proyectos actuales.  
+5. En el Explorador de soluciones, examine los proyectos actuales.  
   
     > [!NOTE]
     >  Se ha agregado un archivo denominado **ctlAlarmClock.cs** al proyecto actual.  
@@ -191,9 +191,9 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 ##### <a name="to-add-properties-to-your-composite-control"></a>Para agregar propiedades al control compuesto  
   
-1.  En el Explorador de soluciones, haga clic con el botón derecho en **ctlAlarmClock** y haga clic en **Ver código**.  
+1. En el Explorador de soluciones, haga clic con el botón derecho en **ctlAlarmClock** y haga clic en **Ver código**.  
   
-2.  Busque la instrucción `public class`. Tenga en cuenta que el control hereda de `ctlClockLib.ctlClock`. Bajo la instrucción con la llave de apertura (`{)`, escriba el código siguiente.  
+2. Busque la instrucción `public class`. Tenga en cuenta que el control hereda de `ctlClockLib.ctlClock`. Bajo la instrucción con la llave de apertura (`{)`, escriba el código siguiente.  
   
     ```csharp  
     private DateTime dteAlarmTime;  
@@ -229,11 +229,11 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 ##### <a name="to-add-the-label-control"></a>Para agregar el control de etiqueta  
   
-1.  En el Explorador de soluciones, haga clic con el botón derecho en **ctlAlarmClock** y haga clic en **Ver diseñador**.  
+1. En el Explorador de soluciones, haga clic con el botón derecho en **ctlAlarmClock** y haga clic en **Ver diseñador**.  
   
      Se abre el diseñador para `ctlAlarmClock` en la ventana principal.  
   
-2.  Haga clic en la parte de presentación del control y observe la ventana Propiedades.  
+2. Haga clic en la parte de presentación del control y observe la ventana Propiedades.  
   
     > [!NOTE]
     >  Aunque se muestran todas las propiedades, están atenuadas. Esto indica que estas propiedades son nativas de `lblDisplay` y no se pueden modificar ni se puede acceder a ellas en la ventana Propiedades. De forma predeterminada, los controles contenidos en un control compuesto son `private`, y sus propiedades no son accesibles por ningún medio.  
@@ -241,9 +241,9 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
     > [!NOTE]
     >  Si desea que los posteriores usuarios de su control compuesto tengan acceso a sus controles internos, declárelos como `public` o `protected`. Esto le permitirá establecer y modificar las propiedades de los controles contenidos en el control compuesto mediante el código adecuado.  
   
-3.  Agregar un <xref:System.Windows.Forms.Label> control al control compuesto.  
+3. Agregar un <xref:System.Windows.Forms.Label> control al control compuesto.  
   
-4.  Con el mouse, arrastre el <xref:System.Windows.Forms.Label> control inmediatamente debajo del cuadro de visualización. En la ventana Propiedades, establezca las propiedades siguientes.  
+4. Con el mouse, arrastre el <xref:System.Windows.Forms.Label> control inmediatamente debajo del cuadro de visualización. En la ventana Propiedades, establezca las propiedades siguientes.  
   
     |Property|Parámetro|  
     |--------------|-------------|  
@@ -257,13 +257,13 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 ##### <a name="to-override-the-timer1tick-method-of-ctlclock"></a>Para reemplazar el método timer1_Tick de ctlClock  
   
-1.  En el **Editor de código**, busque la instrucción `private bool blnAlarmSet;`. Justo debajo de ella, agregue la siguiente instrucción.  
+1. En el **Editor de código**, busque la instrucción `private bool blnAlarmSet;`. Justo debajo de ella, agregue la siguiente instrucción.  
   
     ```csharp  
     private bool blnColorTicker;  
     ```  
   
-2.  En el **Editor de código**, busque la llave de cierre (`})` al final de la clase. Justo antes de la llave, agregue el código siguiente.  
+2. En el **Editor de código**, busque la llave de cierre (`})` al final de la clase. Justo antes de la llave, agregue el código siguiente.  
   
     ```csharp  
     protected override void timer1_Tick(object sender, System.EventArgs e)  
@@ -311,22 +311,22 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 ##### <a name="to-implement-the-shutoff-method"></a>Para implementar el método de apagado  
   
-1.  En el Explorador de soluciones, haga clic con el botón derecho en **ctlAlarmClock.cs** y haga clic en **Ver diseñador**.  
+1. En el Explorador de soluciones, haga clic con el botón derecho en **ctlAlarmClock.cs** y haga clic en **Ver diseñador**.  
   
      Se abre el diseñador.  
   
-2.  Agregue un botón al control. Establezca las propiedades del botón de la manera siguiente.  
+2. Agregue un botón al control. Establezca las propiedades del botón de la manera siguiente.  
   
     |Property|Valor|  
     |--------------|-----------|  
     |**Name**|`btnAlarmOff`|  
     |**Texto**|**Deshabilitar alarma**|  
   
-3.  En el diseñador, haga doble clic en **btnAlarmOff**.  
+3. En el diseñador, haga doble clic en **btnAlarmOff**.  
   
      Se abre el **Editor de código** en la línea `private void btnAlarmOff_Click`.  
   
-4.  Modifique este método para que se parezca al siguiente código.  
+4. Modifique este método para que se parezca al siguiente código.  
   
     ```csharp  
     private void btnAlarmOff_Click(object sender, System.EventArgs e)  
@@ -338,7 +338,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
     }  
     ```  
   
-5.  En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.  
+5. En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.  
   
 ### <a name="using-the-inherited-control-on-a-form"></a>Usar el control heredado en un formulario  
  Puede probar el control heredado de la misma manera que se ha probado el control de la clase base, `ctlClock`: Presione F5 para compilar el proyecto y ejecutar el control en **UserControl Test Container**. Para obtener más información, vea [Cómo: Probar el comportamiento de tiempo de ejecución de una clase UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
@@ -347,21 +347,21 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 ##### <a name="to-build-and-add-your-control-to-a-test-form"></a>Para compilar y agregar el control a un formulario de prueba  
   
-1.  En el Explorador de soluciones, haga clic con el botón derecho en **ctlClockLib** y haga clic en **Compilar**.  
+1. En el Explorador de soluciones, haga clic con el botón derecho en **ctlClockLib** y haga clic en **Compilar**.  
   
-2.  Agregue un nuevo proyecto **Aplicación Windows** a la solución y asígnele el nombre `Test`.  
+2. Agregue un nuevo proyecto **Aplicación Windows** a la solución y asígnele el nombre `Test`.  
   
-3.  En el Explorador de soluciones, haga clic con el botón derecho en el nodo **Referencias** de su proyecto de prueba. Haga clic en **Agregar referencia** para mostrar el cuadro de diálogo **Agregar referencia**. Haga clic en la pestaña etiquetada como **Proyectos**. El proyecto `ctlClockLib` aparecerá bajo **Nombre de proyecto**. Haga doble clic en el proyecto para agregar la referencia al proyecto de prueba.  
+3. En el Explorador de soluciones, haga clic con el botón derecho en el nodo **Referencias** de su proyecto de prueba. Haga clic en **Agregar referencia** para mostrar el cuadro de diálogo **Agregar referencia**. Haga clic en la pestaña etiquetada como **Proyectos**. El proyecto `ctlClockLib` aparecerá bajo **Nombre de proyecto**. Haga doble clic en el proyecto para agregar la referencia al proyecto de prueba.  
   
-4.  En el Explorador de soluciones, haga clic con el botón derecho en **Probar** y haga clic en **Compilar**.  
+4. En el Explorador de soluciones, haga clic con el botón derecho en **Probar** y haga clic en **Compilar**.  
   
-5.  En el **cuadro de herramientas**, expanda el nodo **Componentes de ctlClockLib**.  
+5. En el **cuadro de herramientas**, expanda el nodo **Componentes de ctlClockLib**.  
   
-6.  Haga doble clic en **ctlAlarmClock** para agregar una copia de `ctlAlarmClock` al formulario.  
+6. Haga doble clic en **ctlAlarmClock** para agregar una copia de `ctlAlarmClock` al formulario.  
   
-7.  En el **cuadro de herramientas**, busque y haga doble clic en **DateTimePicker** para agregar un <xref:System.Windows.Forms.DateTimePicker> control al formulario y, a continuación, agregue un <xref:System.Windows.Forms.Label> control haciendo doble clic en **etiqueta**.  
+7. En el **cuadro de herramientas**, busque y haga doble clic en **DateTimePicker** para agregar un <xref:System.Windows.Forms.DateTimePicker> control al formulario y, a continuación, agregue un <xref:System.Windows.Forms.Label> control haciendo doble clic en **etiqueta**.  
   
-8.  Use el mouse para colocar los controles en un lugar adecuado en el formulario.  
+8. Use el mouse para colocar los controles en un lugar adecuado en el formulario.  
   
 9. Establezca las propiedades de estos controles de la manera siguiente.  
   

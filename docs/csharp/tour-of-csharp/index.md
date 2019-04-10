@@ -1,18 +1,18 @@
 ---
 title: Un paseo por C# - Guía de C#
 description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
-ms.date: 08/10/2016
-ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.date: 04/05/2019
+ms.custom: seoapril2019
+ms.openlocfilehash: d1373b65d6cb821871c68574662360c1431d79cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152066"
 ---
 # <a name="a-tour-of-the-c-language"></a>Un paseo por el lenguaje C#
 
-C# (pronunciado "si sharp" en inglés) es un lenguaje de programación sencillo, moderno, orientado a objetos y con seguridad de tipos. C# tiene sus raíces en la familia de lenguajes C, y a los programadores de C, C++, Java y JavaScript les resultará familiar inmediatamente.
+C# (pronunciado "si sharp" en inglés) es un lenguaje de programación sencillo, moderno, orientado a objetos y con seguridad de tipos. C# tiene sus raíces en la familia de lenguajes C, y a los programadores de C, C++, Java y JavaScript les resultará familiar inmediatamente. Este paseo proporciona información general de los principales componentes del lenguaje. Si desea explorar el lenguaje a través de ejemplos interactivos, prueba nuestros tutoriales de [introducción a C#](../tutorials/intro-to-csharp/index.md).
 
 C# es un lenguaje orientado a objetos, pero también incluye compatibilidad para programación ***orientada a componentes***. El diseño de software contemporáneo se basa cada vez más en componentes de software en forma de paquetes independientes y autodescriptivos de funcionalidad. La clave de estos componentes es que presentan un modelo de programación con propiedades, métodos y eventos; tienen atributos que proporcionan información declarativa sobre el componente; e incorporan su propia documentación. C# proporciona construcciones de lenguaje para admitir directamente estos conceptos, por lo que se trata de un lenguaje muy natural en el que crear y usar componentes de software.
 
@@ -43,7 +43,6 @@ Hello, World
 > [!IMPORTANT]
 > El comando `csc` compila el marco de trabajo completo y puede no estar disponible en todas las plataformas.
 
-
 El programa "Hola mundo" empieza con una directiva `using` que hace referencia al espacio de nombres `System`. Los espacios de nombres proporcionan un método jerárquico para organizar las bibliotecas y los programas de C#. Los espacios de nombres contienen tipos y otros espacios de nombres; por ejemplo, el espacio de nombres `System` contiene varios tipos, como la clase `Console` a la que se hace referencia en el programa, y otros espacios de nombres, como `IO` y `Collections`. Una directiva `using` que hace referencia a un espacio de nombres determinado permite el uso no calificado de los tipos que son miembros de ese espacio de nombres. Debido a la directiva `using`, puede utilizar el programa `Console.WriteLine` como abreviatura de `System.Console.WriteLine`.
 
 La clase `Hello` declarada por el programa "Hola mundo" tiene un miembro único, el método llamado `Main`. El método `Main` se declara con el modificador static. Mientras que los métodos de instancia pueden hacer referencia a una instancia de objeto envolvente determinada utilizando la palabra clave `this`, los métodos estáticos funcionan sin referencia a un objeto determinado. Por convención, un método estático denominado `Main` sirve como punto de entrada de un programa.
@@ -62,7 +61,7 @@ Hay mucha más información sobre C#.  Los temas siguientes proporcionan introdu
     - Use ***instrucciones*** para expresar las acciones de un programa.
 * [Clases y objetos](classes-and-objects.md)
     - Las ***clases*** son los tipos más fundamentales de C#. Los ***objetos*** son instancias de una clase. Las clases se generan mediante ***miembros***, que también se tratan en este tema.
-* [Structs](structs.md)
+* [Estructuras](structs.md)
     - Las ***estructuras*** son estructuras de datos que, a diferencia de las clases, son tipos de valor.
 * [Matrices](arrays.md)
     - Una ***matriz*** es una estructura de datos que contiene un número de variables a las que se accede mediante índices calculados.

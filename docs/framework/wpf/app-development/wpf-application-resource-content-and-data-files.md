@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: f9fd936c15454a81058d42825800a388c5c90a40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211932"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Archivos de recursos, contenido y datos de aplicaciones de WPF
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] las aplicaciones a menudo dependen de los archivos que contienen datos no ejecutable, como [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], imágenes, vídeo y audio. Windows Presentation Foundation (WPF) ofrece una compatibilidad especial para configurar, identificar y usar estos tipos de archivos de datos, que se denominan archivos de datos de aplicación. Esta compatibilidad gira en torno a un conjunto específico de tipos de archivo de datos de aplicación, entre los que se incluyen:  
@@ -38,8 +38,7 @@ ms.locfileid: "57379203"
  Para hacer referencia a archivos de datos de aplicación, Windows Presentation Foundation (WPF) usa el módulo [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] esquema, que se describe detalladamente en [Pack URI en WPF](pack-uris-in-wpf.md)).  
   
  En este tema se describe cómo configurar y usar archivos de datos de aplicaciones.  
-  
-  
+
 <a name="Resource_Files"></a>   
 ## <a name="resource-files"></a>Archivos de recursos  
  Si un archivo de datos de la aplicación debe estar siempre disponible para una aplicación, la única forma de garantizar la disponibilidad es compilarlo en el ensamblado ejecutable principal de una aplicación o en uno de sus ensamblados referenciados. Este tipo de archivo de datos de aplicación se conoce como un *archivo de recursos*.  
@@ -124,7 +123,7 @@ ms.locfileid: "57379203"
  Los archivos de contenido se deben usar cuando la aplicación requiere un conjunto específico de archivos de datos de aplicación que desee poder actualizar sin volver a compilar el ensamblado que los consume.  
   
 ### <a name="configuring-content-files"></a>Configuración de archivos de contenido  
- Para agregar un archivo de contenido a un proyecto, se debe incluir como un archivo de datos de la aplicación un `Content` elemento. Además, dado que no se compila un archivo de contenido directamente en el ensamblado, debe establecer el [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` metadatos de elemento para especificar que el archivo de contenido se copia en una ubicación que es relativa al ensamblado generado. Si desea que el recurso que se va a copiar en la carpeta de salida de compilación cada vez se compila un proyecto, establecer el `CopyToOutputDirectory` elemento de metadatos con el `Always` valor. En caso contrario, puede asegurarse de que solo la versión más reciente del recurso se copia en la carpeta de salida de compilación mediante la `PreserveNewest` valor.  
+ Para agregar un archivo de contenido a un proyecto, se debe incluir como un archivo de datos de la aplicación un `Content` elemento. Además, dado que no se compila un archivo de contenido directamente en el ensamblado, debe establecer el [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` metadatos de elemento para especificar que el archivo de contenido se copia en una ubicación que es relativa al ensamblado generado. Si desea que el recurso que se va a copiar en la carpeta de salida de compilación cada vez se compila un proyecto, establecer el `CopyToOutputDirectory` elemento de metadatos con el `Always` valor. En caso contrario, puede asegurarse de que solo la versión más reciente del recurso se copia en la carpeta de salida de compilación mediante la `PreserveNewest` valor.  
   
  A continuación muestra un archivo que se configura como un archivo de contenido que se copia en la carpeta de salida de compilación solo cuando se agrega al proyecto una nueva versión del recurso.  
   
@@ -198,7 +197,7 @@ ms.locfileid: "57379203"
 ### <a name="configuring-site-of-origin-files"></a>Configuración de archivos de sitio de origen  
  Si su sitio de archivos de origen es inexistentes o desconocido en tiempo de compilación, deberá usar la implementación tradicional mecanismos para garantizar los archivos necesarios están disponibles en tiempo de ejecución, incluido el uso de cualquiera el `XCopy` programa de línea de comandos o el [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- Si conoce en tiempo de compilación de los archivos que lo haría que se encuentren en el sitio de origen, pero todavía desea evitar una dependencia explícita, puede agregar dichos archivos a un [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] como `None` elemento. Como en los archivos de contenido, debe establecer el [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` atributo para especificar que el archivo de sitio de origen se copia en una ubicación que es relativa al ensamblado generado, especificando el `Always` valor o el `PreserveNewest` valor.  
+ Si conoce en tiempo de compilación de los archivos que lo haría que se encuentren en el sitio de origen, pero todavía desea evitar una dependencia explícita, puede agregar dichos archivos a un [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] como `None` elemento. Como en los archivos de contenido, debe establecer el [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` atributo para especificar que el archivo de sitio de origen se copia en una ubicación que es relativa al ensamblado generado, especificando el `Always` valor o el `PreserveNewest` valor.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -239,4 +238,5 @@ ms.locfileid: "57379203"
  Después de cambiar el tipo de compilación de un archivo de datos de aplicación, es preciso volver a compilar toda la aplicación para asegurarse de que se aplican los cambios. Si solo compila la aplicación, no se aplican los cambios.  
   
 ## <a name="see-also"></a>Vea también
-- [Identificadores URI de paquete en WPF](pack-uris-in-wpf.md)
+
+- [Pack URI en WPF](pack-uris-in-wpf.md)

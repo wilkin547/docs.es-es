@@ -2,12 +2,12 @@
 title: Filtrar para usar EdmGen.exe para generar los archivos de asignación y de modelo
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 72f4f84fc8651f3117eae637eb75300801e5000f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 915a9f3c53dba355480a3869602f963b195d53fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125336"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323803"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Filtrar para usar EdmGen.exe para generar los archivos de asignación y de modelo
 En este tema se muestra cómo usar la herramienta EDM Generator (EdmGen.exe) para generar los siguientes archivos basados en la base de datos School:  
@@ -31,9 +31,9 @@ En este tema se muestra cómo usar la herramienta EDM Generator (EdmGen.exe) par
   
 ### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a>Para generar el modelo School para un proyecto de Visual Basic con EdmGen.exe  
   
-1.  Cree la base de datos School. Para obtener más información, consulte [crear la base de datos de ejemplo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).  
+1. Cree la base de datos School. Para obtener más información, consulte [crear la base de datos de ejemplo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).  
   
-2.  En el símbolo del sistema, ejecute el comando siguiente sin los saltos de línea:  
+2. En el símbolo del sistema, ejecute el comando siguiente sin los saltos de línea:  
   
     ```  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration   
@@ -43,9 +43,9 @@ En este tema se muestra cómo usar la herramienta EDM Generator (EdmGen.exe) par
   
 ### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a>Para generar el modelo School para un proyecto de C# con EdmGen.exe  
   
-1.  Cree la base de datos School. Para obtener más información, consulte [crear la base de datos de ejemplo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).  
+1. Cree la base de datos School. Para obtener más información, consulte [crear la base de datos de ejemplo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).  
   
-2.  En el símbolo del sistema, ejecute el comando siguiente sin los saltos de línea:  
+2. En el símbolo del sistema, ejecute el comando siguiente sin los saltos de línea:  
   
     ```  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration   

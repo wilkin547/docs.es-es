@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11525c2a98ceee3115fe789dbb106347c0201ecd
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220117"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311960"
 ---
 # <a name="net-framework-tools"></a>Herramientas de .NET Framework
 Las herramientas de .NET Framework facilitan la creación, implementación y administración de aplicaciones y componentes dirigidos a .NET Framework.  
   
-La mayoría de las herramientas de .NET Framework que se describen en esta sección se instalan automáticamente con Visual Studio. Para descargar Visual Studio, visite la página [Descargas de Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
+La mayoría de las herramientas de .NET Framework que se describen en esta sección se instalan automáticamente con Visual Studio. Para descargar Visual Studio, visite la página [Descargas de Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019).
   
  Puede ejecutar todas las herramientas desde la línea de comandos excepto Visor de la memoria caché de ensamblados (Shfusion.dll). Debe obtener acceso a Shfusion.dll desde el Explorador de archivos.  
   
@@ -95,7 +95,7 @@ La mayoría de las herramientas de .NET Framework que se describen en esta secci
  [Regsvcs.exe (Herramienta de instalación de servicios de .NET)](../../../docs/framework/tools/regsvcs-exe-net-services-installation-tool.md)  
  Carga y registra un ensamblado, genera e instala una biblioteca de tipos en una aplicación especificada de la versión de COM+ 1.0 y configura servicios que ha agregado a una clase mediante programación.  
   
- [Resgen.exe (generador de archivos de recursos)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
+ [Resgen.exe (Generador de archivos de recursos)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
  Convierte archivos de texto (.txt o .restext) y archivos de formato de recursos basado en XML (.resx) en archivos binarios de Common Language Runtime (.resources) que se pueden incrustar en un archivo ejecutable binario en tiempo de ejecución o compilar en ensamblados satélite.  
   
  [SecAnnotate.exe (Herramienta Anotador de seguridad de .NET)](../../../docs/framework/tools/secannotate-exe-net-security-annotator-tool.md)  

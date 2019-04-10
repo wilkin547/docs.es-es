@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bed202d927cc026b903cb006220620210893056e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836156"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083847"
 ---
 # <a name="collections-and-data-structures"></a>Colecciones y estructuras de datos
 A menudo, los datos similares pueden controlarse de forma más eficaz si se almacenan y manipulan como si fuesen una colección. Puede usar la clase <xref:System.Array?displayProperty=nameWithType> o las clases de los espacios de nombres <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> y System.Collections.Immutable para agregar, quitar y modificar elementos individuales o intervalos de elementos de una colección.  
@@ -25,8 +25,7 @@ A menudo, los datos similares pueden controlarse de forma más eficaz si se alma
  Hay dos tipos principales de colecciones: las colecciones genéricas y las colecciones no genéricas. Las colecciones genéricas se agregaron en la versión 2.0 de.NET Framework y son colecciones con seguridad de tipos en tiempo de compilación. Debido a esto, las colecciones genéricas normalmente ofrecen un mejor rendimiento. Las colecciones genéricas aceptan un parámetro de tipo cuando se construyen y no requieren conversiones con el tipo <xref:System.Object> al agregar o quitar elementos de la colección.  Además, la mayoría de colecciones genéricas son compatibles con aplicaciones de la [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Las colecciones no genéricas almacenan elementos como <xref:System.Object>, requieren conversión y la mayoría no son compatibles con el desarrollo de aplicaciones de la [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Sin embargo, puede que vea colecciones no genéricas en código antiguo.  
   
  A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], las colecciones del espacio de nombres <xref:System.Collections.Concurrent> proporcionan operaciones eficaces y seguras para subprocesos con el fin de obtener acceso a los elementos de la colección desde varios subprocesos. Las clases de colección inmutables en el espacio de nombres System.Collections.Immutable ([NuGet package](https://www.nuget.org/packages/System.Collections.Immutable)) son intrínsecamente seguras para los subprocesos, ya que las operaciones se realizan en una copia de la colección original, mientras que la colección original no se puede modificar.  
-  
-  
+
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>Características comunes de las colecciones  
  Todas las colecciones ofrecen métodos para agregar, quitar o buscar elementos en la colección. Además, todas las colecciones que implementan directa o indirectamente las interfaces <xref:System.Collections.ICollection> o <xref:System.Collections.Generic.ICollection%601> comparten estas características:  
@@ -51,7 +50,7 @@ A menudo, los datos similares pueden controlarse de forma más eficaz si se alma
   
 -   **Límite inferior coherente**  
   
-     El límite inferior de una colección es el índice de su primer elemento. Todas las colecciones indizadas en el espacio de nombres <xref:System.Collections> tienen un límite inferior de cero, lo que significa que están indizadas en 0. De forma predeterminada, <xref:System.Array> tiene un límite inferior de cero, pero se puede definir un límite inferior diferente mediante la creación de una instancia de la clase **Array** con <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>.  
+     El límite inferior de una colección es el índice de su primer elemento. Todas las colecciones indizadas en el espacio de nombres <xref:System.Collections> tienen un límite inferior de cero, lo que significa que están indizadas en 0. <xref:System.Array> Array tiene un límite inferior de cero de forma predeterminada, pero se puede definir un límite inferior diferente mediante la creación de una instancia de la clase **Array** con <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>.  
   
 -   **Sincronización para el acceso de varios subprocesos** (solo clases <xref:System.Collections>).  
   

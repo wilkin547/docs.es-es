@@ -2,12 +2,12 @@
 title: Filtrar para crear una credencial de apoyo
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 3ae2b59abf59b0256741ef4e908305d9f4350b4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7c6c4ea777f62541f8ca8fa79fdd024e5f5cf2ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093714"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326052"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Filtrar para crear una credencial de apoyo
 Es posible tener un esquema de seguridad personalizado que requiera más de una credencial. Por ejemplo, un servicio puede solicitar del cliente un nombre de usuario y contraseña, pero también una credencial que demuestre que el cliente tiene más de 18 años. La segunda credencial es un *credencial de apoyo*. En este tema se explica cómo implementar dichos credenciales en un cliente de Windows Communication Foundation (WCF).  
@@ -68,9 +68,9 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
   
 #### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a>Para crear un enlace personalizado que incluye credenciales de aprobación  
   
-1.  Crear un elemento de enlace de seguridad. El ejemplo siguiente crea <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> con el modo de autenticación `UserNameForCertificate`. Utilice el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>.  
+1. Crear un elemento de enlace de seguridad. El ejemplo siguiente crea <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> con el modo de autenticación `UserNameForCertificate`. Utilice el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>.  
   
-2.  Agregue el parámetro de aprobación a la colección de tipos devuelta por la propiedad adecuada (`Endorsing`, `Signed`, `SignedEncrypted`o `SignedEndorsed`). Los tipos en el espacio de nombres <xref:System.ServiceModel.Security.Tokens> incluyen tipos utilizados normalmente, como <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
+2. Agregue el parámetro de aprobación a la colección de tipos devuelta por la propiedad adecuada (`Endorsing`, `Signed`, `SignedEncrypted`o `SignedEndorsed`). Los tipos en el espacio de nombres <xref:System.ServiceModel.Security.Tokens> incluyen tipos utilizados normalmente, como <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
   
 ## <a name="example"></a>Ejemplo  
   

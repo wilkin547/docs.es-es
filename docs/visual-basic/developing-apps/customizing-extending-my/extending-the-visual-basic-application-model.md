@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: aceb63d3cb9af75fa4eb32ed5bca5d65825704e8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834717"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320150"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Ampliar el modelo de la aplicación de Visual Basic
 Puede agregar funcionalidad al modelo de aplicación invalidando el `Overridable` los miembros de la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> clase. Esta técnica permite personalizar el comportamiento del modelo de aplicación y agregar llamadas a sus propios métodos como la aplicación se inicia y se cierra.  
@@ -32,7 +32,7 @@ Puede agregar funcionalidad al modelo de aplicación invalidando el `Overridable
   
  Si la aplicación es una aplicación normal (aplicación de varias instancias) o la primera instancia de una aplicación de instancia única, el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> método se ejecuta el `Overridable` métodos en el orden siguiente:  
   
-1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. De forma predeterminada, este método establece los estilos visuales, los estilos de presentación de texto y una entidad de seguridad actual para el subproceso principal de la aplicación (si la aplicación utiliza la autenticación de Windows) y las llamadas `ShowSplashScreen` si no `/nosplash` ni `-nosplash` se utiliza como un argumento de línea de comandos.  
+1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. De forma predeterminada, este método establece los estilos visuales, los estilos de presentación de texto y una entidad de seguridad actual para el subproceso principal de la aplicación (si la aplicación utiliza la autenticación de Windows) y las llamadas `ShowSplashScreen` si no `/nosplash` ni `-nosplash` se utiliza como un argumento de línea de comandos.  
   
      La secuencia de inicio de la aplicación se cancela si esta función devuelve `False`. Esto puede ser útil si hay circunstancias en las que no debe ejecutar la aplicación.  
   
@@ -46,11 +46,11 @@ Puede agregar funcionalidad al modelo de aplicación invalidando el `Overridable
   
          De forma predeterminada, este método no hace nada. Si selecciona una pantalla de presentación para su aplicación en Visual Basic **Diseñador de proyectos**, invalida el diseñador la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> método con un método que establece el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> propiedad a una nueva instancia de la forma de pantalla de presentación .  
   
-2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Proporciona un punto de extensibilidad para generar el `Startup` eventos. La secuencia de inicio de la aplicación se detiene si esta función devuelve `False`.  
+2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Proporciona un punto de extensibilidad para generar el `Startup` eventos. La secuencia de inicio de la aplicación se detiene si esta función devuelve `False`.  
   
      De forma predeterminada, este método provoca la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> eventos. Si establece el controlador de eventos el <xref:System.ComponentModel.CancelEventArgs.Cancel> propiedad del argumento de evento `True`, el método devuelve `False` para cancelar el inicio de la aplicación.  
   
-3.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Proporciona el punto de partida cuando está lista para empezar a ejecutar después de realiza la inicialización de la aplicación principal.  
+3. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Proporciona el punto de partida cuando está lista para empezar a ejecutar después de realiza la inicialización de la aplicación principal.  
   
      De forma predeterminada, antes de entrar en el bucle de mensajes de Windows Forms, este método llama a la `OnCreateMainForm` (para crear el formulario principal de la aplicación) y `HideSplashScreen` (para cerrar la pantalla de presentación) métodos:  
   
@@ -62,15 +62,15 @@ Puede agregar funcionalidad al modelo de aplicación invalidando el `Overridable
   
          De forma predeterminada, este método cierra la pantalla de presentación.  
   
-4.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Proporciona una manera de personalizar el comportamiento de una aplicación de instancia única cuando se inicia otra instancia de la aplicación.  
+4. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Proporciona una manera de personalizar el comportamiento de una aplicación de instancia única cuando se inicia otra instancia de la aplicación.  
   
      De forma predeterminada, este método provoca la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> eventos.  
   
-5.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Proporciona un punto de extensibilidad para generar el `Shutdown` eventos. Este método no se ejecuta si se produce una excepción no controlada en la aplicación principal.  
+5. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Proporciona un punto de extensibilidad para generar el `Shutdown` eventos. Este método no se ejecuta si se produce una excepción no controlada en la aplicación principal.  
   
      De forma predeterminada, este método provoca la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> eventos.  
   
-6.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Se ejecuta si se produce una excepción no controlada en cualquiera de los métodos enumerados anteriormente.  
+6. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Se ejecuta si se produce una excepción no controlada en cualquiera de los métodos enumerados anteriormente.  
   
      De forma predeterminada, este método provoca la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> eventos siempre y cuando no se adjunta un depurador y la aplicación está controlando el `UnhandledException` eventos.  
   
@@ -83,7 +83,7 @@ Puede agregar funcionalidad al modelo de aplicación invalidando el `Overridable
   
  En un proyecto de Windows Forms de forma predeterminada, el **Diseñador de proyectos** crea código para establecer las propiedades con la configuración del diseñador. Las propiedades se utilizan solo cuando se inicia la aplicación; establecerlas tras iniciar la aplicación no tiene ningún efecto.  
   
-|Property|Determina|Configuración en el panel aplicación del Diseñador de proyectos|  
+|Propiedad|Determina|Configuración en el panel aplicación del Diseñador de proyectos|  
 |---|---|---|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.IsSingleInstance%2A>|Si la aplicación se ejecuta como una aplicación de instancia única o varias instancias.|**Crear aplicación de instancia única** casilla de verificación|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.EnableVisualStyles%2A>|Si la aplicación va a usar los estilos visuales que coinciden con Windows XP.|**Habilitar estilos visuales de XP** casilla de verificación|  
@@ -100,4 +100,4 @@ Puede agregar funcionalidad al modelo de aplicación invalidando el `Overridable
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - [Información general sobre el modelo de aplicaciones de Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
-- [Página de aplicación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

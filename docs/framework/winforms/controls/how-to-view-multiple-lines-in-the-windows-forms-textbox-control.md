@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: f7a0e3a14d14f0629bd9995dbecd3f0b98bea1d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190917"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324193"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Filtrar para ver varias líneas en el control TextBox de formularios Windows Forms
 De forma predeterminada, los formularios de Windows <xref:System.Windows.Forms.TextBox> control muestra una sola línea de texto y no muestra barras de desplazamiento. Si el texto es mayor que el espacio disponible, sólo una parte del texto es visible. Puede cambiar este comportamiento predeterminado estableciendo la <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, y <xref:System.Windows.Forms.TextBox.ScrollBars%2A> propiedades en los valores adecuados.  
@@ -29,9 +29,9 @@ De forma predeterminada, los formularios de Windows <xref:System.Windows.Forms.T
   
 ### <a name="to-view-multiple-lines-in-the-textbox-control"></a>Para ver varias líneas en el control TextBox  
   
-1.  Establezca la propiedad <xref:System.Windows.Forms.TextBox.Multiline%2A> en `true`. Si <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> es `true` (valor predeterminado), a continuación, el texto en el control se mostrará como uno o varios párrafos; en caso contrario, aparecerá como una lista, en el que algunas líneas pueden quedar cortadas en el borde del control.  
+1. Establezca la propiedad <xref:System.Windows.Forms.TextBox.Multiline%2A> en `true`. Si <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> es `true` (valor predeterminado), a continuación, el texto en el control se mostrará como uno o varios párrafos; en caso contrario, aparecerá como una lista, en el que algunas líneas pueden quedar cortadas en el borde del control.  
   
-2.  Establezca la propiedad <xref:System.Windows.Forms.TextBox.ScrollBars%2A> en un valor apropiado.  
+2. Establezca la propiedad <xref:System.Windows.Forms.TextBox.ScrollBars%2A> en un valor apropiado.  
   
     |Valor|Descripción|  
     |-----------|-----------------|  
@@ -39,7 +39,7 @@ De forma predeterminada, los formularios de Windows <xref:System.Windows.Forms.T
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|Use este valor si desea mostrar una lista de líneas, algunos de los cuales pueden ser mayor que el ancho de la <xref:System.Windows.Forms.TextBox> control.|  
     |<xref:System.Windows.Forms.ScrollBars.Both>|Use este valor si la lista puede ser mayor que el alto del control.|  
   
-3.  Establezca la propiedad <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> en un valor apropiado.  
+3. Establezca la propiedad <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> en un valor apropiado.  
   
     |Valor|Descripción|  
     |-----------|-----------------|  

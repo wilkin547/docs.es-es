@@ -2,12 +2,12 @@
 title: Comunicación asincrónica
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: e85f7efb0de1326ceb5091c305b20f34809eab57
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a9da04e2c6d3c131603211f53c54fd25dde8d338
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593912"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323660"
 ---
 # <a name="asynchronous-communication"></a>Comunicación asincrónica
 Este ejemplo muestra cómo se realiza asincrónicamente la comunicación entre dos servicios diferentes de Windows Workflow Foundation (WF) de forma predeterminada.  
@@ -15,7 +15,7 @@ Este ejemplo muestra cómo se realiza asincrónicamente la comunicación entre d
 ## <a name="demonstrates"></a>Demostraciones  
  Comunicación asincrónica entre servicios de [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  
   
-## <a name="discussion"></a>Explicación  
+## <a name="discussion"></a>Discusión  
  En este ejemplo se muestra cómo la comunicación entre aplicaciones de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] se realiza de forma asincrónica utilizando las actividades de mensajería proporcionadas por .NET Framework.  
   
  Este ejemplo consta de los tres proyectos siguientes.  
@@ -31,13 +31,13 @@ Este ejemplo muestra cómo se realiza asincrónicamente la comunicación entre d
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Haga clic en el **AsynchronousCommunication** solución y seleccione **propiedades**.  
+1. Haga clic en el **AsynchronousCommunication** solución y seleccione **propiedades**.  
   
-2.  En **propiedades comunes**, seleccione **proyecto de inicio**y seleccione **varios proyectos de inicio**.  
+2. En **propiedades comunes**, seleccione **proyecto de inicio**y seleccione **varios proyectos de inicio**.  
   
-3.  Mover **RentalApprovalService** a la primera posición en la lista, seguido por **CreditCheckService**, seguido de **cliente**. Establecer el **iniciar** acción en los tres proyectos.  
+3. Mover **RentalApprovalService** a la primera posición en la lista, seguido por **CreditCheckService**, seguido de **cliente**. Establecer el **iniciar** acción en los tres proyectos.  
   
-4.  Haga clic en **Aceptar**, y presione F5 para ejecutar el ejemplo.  
+4. Haga clic en **Aceptar**, y presione F5 para ejecutar el ejemplo.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

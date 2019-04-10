@@ -1,18 +1,18 @@
 ---
-title: Filtrar Ejecutar un flujo de trabajo
+title: Filtrar para ejecutar un flujo de trabajo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: a5866bae5217b8c8ea22ba66a344b464694583ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720985"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319929"
 ---
-# <a name="how-to-run-a-workflow"></a>Filtrar Ejecutar un flujo de trabajo
+# <a name="how-to-run-a-workflow"></a>Filtrar para ejecutar un flujo de trabajo
 En este tema es una continuación de Windows Workflow Foundation tutorial de introducción y se explica cómo crear un host de flujo de trabajo y ejecutar el flujo de trabajo definido en el anterior [Cómo: Crear un flujo de trabajo](how-to-create-a-workflow.md) tema.
 
 > [!NOTE]
@@ -23,27 +23,27 @@ En este tema es una continuación de Windows Workflow Foundation tutorial de int
   
 ### <a name="to-create-the-workflow-host-project"></a>Para crear el proyecto de host de flujo de trabajo  
   
-1.  Abra la solución del anterior [Cómo: Crear una actividad](how-to-create-an-activity.md) tema mediante el uso de Visual Studio 2012.  
+1. Abra la solución del anterior [Cómo: Crear una actividad](how-to-create-an-activity.md) tema mediante el uso de Visual Studio 2012.  
   
-2.  Haga clic con el botón secundario en la solución **WF45GettingStartedTutorial** en el **Explorador de soluciones** y seleccione **Agregar**, **Nuevo proyecto**.  
+2. Haga clic con el botón secundario en la solución **WF45GettingStartedTutorial** en el **Explorador de soluciones** y seleccione **Agregar**, **Nuevo proyecto**.  
   
     > [!TIP]
     >  Si la ventana **Explorador de soluciones** no se muestra, seleccione **Explorador de soluciones** en el menú **Ver** .
 
-3.  En el nodo **Instalado** , seleccione **Visual C#**, **Flujo de trabajo** (o **Visual Basic**, **Flujo de trabajo**).
+3. En el nodo **Instalado** , seleccione **Visual C#**, **Flujo de trabajo** (o **Visual Basic**, **Flujo de trabajo**).
 
     > [!NOTE]
     >  En función del lenguaje de programación que se configure como lenguaje principal en Visual Studio, el nodo **Visual C#** o **Visual Basic** puede estar bajo el nodo **Otros lenguajes** en el nodo **Instalado** .
 
      Asegúrese de que se haya seleccionado **.NET Framework 4.5** en la lista desplegable correspondiente a la versión de .NET Framework. Seleccione **Aplicación de consola de flujos de trabajo** en la lista **Flujo de trabajo** . Escriba `NumberGuessWorkflowHost` en el cuadro **Nombre** y haga clic en **Aceptar**. Así se crea una aplicación de flujo de trabajo de inicio con soporte básico de hospedaje de flujo de trabajo. Este código de hospedaje básico se modifica y se usa para ejecutar la aplicación de flujo de trabajo.
 
-4.  Haga clic con el botón secundario en el proyecto **NumberGuessWorkflowHost** recién agregado en el **Explorador de soluciones** y seleccione **Agregar referencia**. Seleccione **Solución** en la lista **Agregar referencia** , marque la casilla junto **NumberGuessWorkflowActivities**y, a continuación, haga clic en **Aceptar**.
+4. Haga clic con el botón secundario en el proyecto **NumberGuessWorkflowHost** recién agregado en el **Explorador de soluciones** y seleccione **Agregar referencia**. Seleccione **Solución** en la lista **Agregar referencia** , marque la casilla junto **NumberGuessWorkflowActivities**y, a continuación, haga clic en **Aceptar**.
 
-5.  Haga clic con el botón secundario en **Workflow1.xaml** en el **Explorador de soluciones** y elija **Eliminar**. Haga clic en **Aceptar** para confirmar.
+5. Haga clic con el botón secundario en **Workflow1.xaml** en el **Explorador de soluciones** y elija **Eliminar**. Haga clic en **Aceptar** para confirmar.
 
 ### <a name="to-modify-the-workflow-hosting-code"></a>Para modificar el código de hospedaje de flujo de trabajo
 
-1.  Haga doble clic en **Program.cs** o en **Module1.vb** en el **Explorador de soluciones** para mostrar el código.
+1. Haga doble clic en **Program.cs** o en **Module1.vb** en el **Explorador de soluciones** para mostrar el código.
 
     > [!TIP]
     >  Si la ventana **Explorador de soluciones** no se muestra, seleccione **Explorador de soluciones** en el menú **Ver** .
@@ -62,7 +62,7 @@ En este tema es una continuación de Windows Workflow Foundation tutorial de int
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     Este código de hospedaje generado usa <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> proporciona una manera sencilla de invocar un flujo de trabajo como si fuera una llamada al método y se puede usar solo para los flujos de trabajo que no usan la persistencia. <xref:System.Activities.WorkflowApplication> proporciona un modelo más enriquecido para ejecutar flujos de trabajo que incluye notificación de eventos de ciclo de vida, control de ejecución, reanudación de marcadores y persistencia. Este ejemplo usa marcadores y <xref:System.Activities.WorkflowApplication> se usa para hospedar el flujo de trabajo. Agregue la siguiente instrucción `using` o **Imports** al principio de **Program.cs** o **Module1.vb** debajo de las instrucciones **using** o **Imports** existentes.
+     Este código de hospedaje generado usa <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> Proporciona una manera sencilla de invocar un flujo de trabajo como si fuera una llamada al método y se puede usar solo para los flujos de trabajo que no usan la persistencia. <xref:System.Activities.WorkflowApplication> Proporciona un modelo más enriquecido para ejecutar flujos de trabajo que incluye notificación de eventos de ciclo de vida, control de ejecución, reanudación de marcadores y persistencia. Este ejemplo usa marcadores y <xref:System.Activities.WorkflowApplication> se usa para hospedar el flujo de trabajo. Agregue la siguiente instrucción `using` o **Imports** al principio de **Program.cs** o **Module1.vb** debajo de las instrucciones **using** o **Imports** existentes.
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -86,12 +86,12 @@ En este tema es una continuación de Windows Workflow Foundation tutorial de int
 
 ### <a name="to-set-input-arguments-of-a-workflow"></a>Para definir argumentos de entrada de un flujo de trabajo
 
-1.  Agregue la siguiente instrucción al principio de **Program.cs** o **Module1.vb** debajo de las instrucciones `using` o `Imports` existentes.
+1. Agregue la siguiente instrucción al principio de **Program.cs** o **Module1.vb** debajo de las instrucciones `using` o `Imports` existentes.
 
      [!code-csharp[CFX_WF_GettingStarted#5](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#5)]
      [!code-vb[CFX_WF_GettingStarted#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#5)]
 
-2.  Reemplace la línea de código que crea el nuevo <xref:System.Activities.WorkflowApplication> con el siguiente código que crea y pasa un diccionario de parámetros al flujo de trabajo cuando se crea.
+2. Reemplace la línea de código que crea el nuevo <xref:System.Activities.WorkflowApplication> con el siguiente código que crea y pasa un diccionario de parámetros al flujo de trabajo cuando se crea.
 
     > [!NOTE]
     >  Reemplace `Workflow1` en estos ejemplos con `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, o `StateMachineNumberGuessWorkflow`, en función de flujo de trabajo completara en el anterior [Cómo: Crear un flujo de trabajo](how-to-create-a-workflow.md) paso. Si no reemplaza `Workflow1` , se producirán errores de compilación cuando intente compilar o ejecutar el flujo de trabajo.
@@ -99,23 +99,23 @@ En este tema es una continuación de Windows Workflow Foundation tutorial de int
      [!code-csharp[CFX_WF_GettingStarted#6](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
 
-     Este diccionario contiene un elemento con una clave de `MaxNumber`. Las claves del diccionario de entrada corresponden a argumentos de entrada en la actividad raíz del flujo de trabajo. El flujo de trabajo usa`MaxNumber` para determinar el límite superior para el número generado aleatoriamente.
+     Este diccionario contiene un elemento con una clave de `MaxNumber`. Las claves del diccionario de entrada corresponden a argumentos de entrada en la actividad raíz del flujo de trabajo. `MaxNumber` para determinar el límite superior para el número generado aleatoriamente.
 
 ### <a name="to-retrieve-output-arguments-of-a-workflow"></a>Para recuperar parámetros de salida de un flujo de trabajo
 
-1.  Modifique el controlador <xref:System.Activities.WorkflowApplication.Completed%2A> para recuperar y mostrar el número de intentos que usó el flujo de trabajo.
+1. Modifique el controlador <xref:System.Activities.WorkflowApplication.Completed%2A> para recuperar y mostrar el número de intentos que usó el flujo de trabajo.
 
      [!code-csharp[CFX_WF_GettingStarted#7](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#7)]
      [!code-vb[CFX_WF_GettingStarted#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#7)]
 
 ### <a name="to-resume-a-bookmark"></a>Para reanudar un marcador
 
-1.  Agregue el siguiente código en la parte superior del método `Main` justo después de la declaración <xref:System.Threading.AutoResetEvent> existente.
+1. Agregue el siguiente código en la parte superior del método `Main` justo después de la declaración <xref:System.Threading.AutoResetEvent> existente.
 
      [!code-csharp[CFX_WF_GettingStarted#8](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#8)]
      [!code-vb[CFX_WF_GettingStarted#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#8)]
 
-2.  Agregue el siguiente controlador <xref:System.Activities.WorkflowApplication.Idle%2A> justo después de los tres controladores de ciclo de vida de flujo de trabajo existentes en `Main`.
+2. Agregue el siguiente controlador <xref:System.Activities.WorkflowApplication.Idle%2A> justo después de los tres controladores de ciclo de vida de flujo de trabajo existentes en `Main`.
 
      [!code-csharp[CFX_WF_GettingStarted#9](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#9)]
      [!code-vb[CFX_WF_GettingStarted#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#9)]
@@ -125,7 +125,7 @@ En este tema es una continuación de Windows Workflow Foundation tutorial de int
     > [!NOTE]
     >  En este ejemplo, la aplicación host usa eventos de restablecimiento automático en los controladores <xref:System.Activities.WorkflowApplication.Completed%2A> y <xref:System.Activities.WorkflowApplication.Idle%2A> para sincronizar la aplicación host con el progreso del flujo de trabajo. No es necesario bloquear y esperar a que el flujo de trabajo se vuelva inactivo para reanudar un marcador, aunque en este ejemplo los eventos de sincronización resultan necesarios para que el host sepa si se ha completado el flujo de trabajo o si está esperando más entradas de usuario mediante <xref:System.Activities.Bookmark>. Para obtener más información, consulte [marcadores](bookmarks.md).
 
-3.  Quite la llamada a `WaitOne`y reemplácela con código para recopilar la entrada del usuario y reanudar el marcador <xref:System.Activities.Bookmark>.
+3. Quite la llamada a `WaitOne`y reemplácela con código para recopilar la entrada del usuario y reanudar el marcador <xref:System.Activities.Bookmark>.
 
      Quite la siguiente línea de código.
 
@@ -139,9 +139,9 @@ En este tema es una continuación de Windows Workflow Foundation tutorial de int
 
 ## <a name="BKMK_ToRunTheApplication"></a> Para compilar y ejecutar la aplicación
 
-1.  Haga clic con el botón secundario en **NumberGuessWorkflowHost** en el **Explorador de soluciones** y seleccione **Establecer como proyecto de inicio**.
+1. Haga clic con el botón secundario en **NumberGuessWorkflowHost** en el **Explorador de soluciones** y seleccione **Establecer como proyecto de inicio**.
 
-2.  Presione CTRL+F5 para compilar y ejecutar la aplicación. Intente adivinar el número en los menos intentos posibles.
+2. Presione CTRL+F5 para compilar y ejecutar la aplicación. Intente adivinar el número en los menos intentos posibles.
 
      Para probar la aplicación con uno de los demás estilos de flujo de trabajo, reemplace `Workflow1` en el código que crea <xref:System.Activities.WorkflowApplication> por `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`o `StateMachineNumberGuessWorkflow`, en función del estilo de flujo de trabajo que desee.
 
@@ -165,7 +165,7 @@ En este tema es una continuación de Windows Workflow Foundation tutorial de int
 - <xref:System.Activities.Bookmark>
 - [Programación de Windows Workflow Foundation](programming.md)
 - [Tutorial de introducción](getting-started-tutorial.md)
-- [Cómo: Crear un flujo de trabajo](how-to-create-a-workflow.md)
-- [Cómo: Crear y ejecutar una larga ejecución de flujo de trabajo](how-to-create-and-run-a-long-running-workflow.md)
-- [Espera de la entrada en un flujo de trabajo](waiting-for-input-in-a-workflow.md)
-- [Hospedaje de flujos de trabajo](hosting-workflows.md)
+- [Filtrar para crear un flujo de trabajo](how-to-create-a-workflow.md)
+- [Filtrar para crear y ejecutar un flujo de trabajo de larga duración](how-to-create-and-run-a-long-running-workflow.md)
+- [Esperar entrada en un flujo de trabajo](waiting-for-input-in-a-workflow.md)
+- [Hospedar flujos de trabajo](hosting-workflows.md)

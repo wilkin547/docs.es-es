@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 4fdd578f1537e3521093fd12655a452feaa5a38d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b2783779965505d09f73c7203770c19ccaa78d26
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112078"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323374"
 ---
 # <a name="single-bulk-copy-operations"></a>Operaciones de copia masiva únicas
 La manera más sencilla de realizar una operación de copia masiva de SQL Server es ejecutar una sola operación con respecto a una base de datos. De forma predeterminada, las operaciones de copia masiva se realizan como una operación aislada: la operación de copia tiene lugar sin transacción, sin la oportunidad de revertirla.  
@@ -22,19 +22,19 @@ La manera más sencilla de realizar una operación de copia masiva de SQL Server
   
  Los pasos generales para realizar una operación de copia masiva son los siguientes:  
   
-1.  conéctese al servidor de origen y obtenga los datos que se van a copiar. Los datos también pueden proceder de otros orígenes, si se pueden recuperar de un objeto <xref:System.Data.IDataReader> o <xref:System.Data.DataTable>.  
+1. conéctese al servidor de origen y obtenga los datos que se van a copiar. Los datos también pueden proceder de otros orígenes, si se pueden recuperar de un objeto <xref:System.Data.IDataReader> o <xref:System.Data.DataTable>.  
   
-2.  Conectarse al servidor de destino (a menos que desee **SqlBulkCopy** para establecer una conexión automáticamente).  
+2. Conectarse al servidor de destino (a menos que desee **SqlBulkCopy** para establecer una conexión automáticamente).  
   
-3.  Cree un objeto <xref:System.Data.SqlClient.SqlBulkCopy> y configure las propiedades necesarias.  
+3. Cree un objeto <xref:System.Data.SqlClient.SqlBulkCopy> y configure las propiedades necesarias.  
   
-4.  Establecer el **DestinationTableName** propiedad para indicar la tabla de destino para la masiva de la operación de inserción.  
+4. Establecer el **DestinationTableName** propiedad para indicar la tabla de destino para la masiva de la operación de inserción.  
   
-5.  Llame a uno de los **WriteToServer** métodos.  
+5. Llame a uno de los **WriteToServer** métodos.  
   
-6.  Opcionalmente, actualice las propiedades y llame **WriteToServer** nuevo según sea necesario.  
+6. Opcionalmente, actualice las propiedades y llame **WriteToServer** nuevo según sea necesario.  
   
-7.  Llame a <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>, o incluya las operaciones de copia masiva en una instrucción `Using`.  
+7. Llame a <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>, o incluya las operaciones de copia masiva en una instrucción `Using`.  
   
 > [!CAUTION]
 >  Es recomendable que los tipos de datos de las columnas de origen y destino coincidan. Si no coinciden los tipos de datos, **SqlBulkCopy** intenta convertir cada valor de origen en el tipo de datos de destino, utilizando las reglas empleadas por <xref:System.Data.SqlClient.SqlParameter.Value%2A>. Las conversiones pueden afectar al rendimiento y también dar lugar a errores inesperados. Por ejemplo, un tipo de datos `Double` se puede convertir a un tipo de datos `Decimal` la mayoría de las veces, pero no siempre.  

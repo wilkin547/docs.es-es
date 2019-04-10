@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: a7b03ab5417eacf7962f2a05b674ceb45c7d558c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fe54c650e1d19f36d681053c7da47e12527c5827
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115737"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320891"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Filtrar para enlazar el control DataGrid de formularios Windows Forms a un origen de datos mediante el diseñador
 
@@ -37,11 +37,11 @@ ms.locfileid: "59115737"
   
 ### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>Para enlazar el control DataGrid a una única tabla en el diseñador  
   
-1.  Establecer el control <xref:System.Windows.Forms.DataGrid.DataSource%2A> propiedad para el objeto que contiene los elementos de datos que desea enlazar.  
+1. Establecer el control <xref:System.Windows.Forms.DataGrid.DataSource%2A> propiedad para el objeto que contiene los elementos de datos que desea enlazar.  
   
-2.  Si el origen de datos es un conjunto de datos, establezca el <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedad en el nombre de la tabla para enlazar a.  
+2. Si el origen de datos es un conjunto de datos, establezca el <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedad en el nombre de la tabla para enlazar a.  
   
-3.  Si el origen de datos es un conjunto de datos o una vista de datos basado en una tabla de conjunto de datos, agregue código al formulario para rellenar el conjunto de datos.  
+3. Si el origen de datos es un conjunto de datos o una vista de datos basado en una tabla de conjunto de datos, agregue código al formulario para rellenar el conjunto de datos.  
   
      El código exacto que utilice depende de donde obtiene datos del conjunto de datos. Si el conjunto de datos se rellena directamente desde una base de datos, normalmente se invoca el `Fill` método de un adaptador de datos, como se muestra en el ejemplo de código siguiente, que rellena un conjunto de datos denominado `DsCategories1`:  
   
@@ -57,17 +57,17 @@ ms.locfileid: "59115737"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  (Opcional) Agregar los estilos de tabla adecuada y estilos de columna a la cuadrícula.  
+4. (Opcional) Agregar los estilos de tabla adecuada y estilos de columna a la cuadrícula.  
   
      Si no hay ningún estilo de tabla, verá la tabla, pero con un formato mínimo y con todas las columnas visibles.  
   
 ### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>Para enlazar el control DataGrid a varias tablas en un conjunto de datos en el diseñador  
   
-1.  Establecer el control <xref:System.Windows.Forms.DataGrid.DataSource%2A> propiedad para el objeto que contiene los elementos de datos que desea enlazar.  
+1. Establecer el control <xref:System.Windows.Forms.DataGrid.DataSource%2A> propiedad para el objeto que contiene los elementos de datos que desea enlazar.  
   
-2.  Si el conjunto de datos contiene tablas relacionadas (es decir, si contiene un objeto relation), establezca el <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedad en el nombre de la tabla primaria.  
+2. Si el conjunto de datos contiene tablas relacionadas (es decir, si contiene un objeto relation), establezca el <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedad en el nombre de la tabla primaria.  
   
-3.  Escribir código para llenar el conjunto de datos.  
+3. Escribir código para llenar el conjunto de datos.  
   
 ## <a name="see-also"></a>Vea también
 

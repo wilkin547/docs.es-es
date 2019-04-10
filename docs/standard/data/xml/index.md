@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1edd267ed388f630cc332caa278d5c47a40d77d5
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2e96515240cdbc1cb05c4d58aee6eb2500e0e313
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835127"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171176"
 ---
 # <a name="xml-documents-and-data"></a>Documentos y datos XML
 .NET Framework proporciona un conjunto de clases completo e integrado que permiten crear, de forma sencilla, aplicaciones preparadas para XML. Las clases de los espacios de nombres siguientes admiten análisis y escritura XML, edición de datos XML en memoria, validación de datos y transformación XSLT.  
@@ -85,4 +85,3 @@ ms.locfileid: "56835127"
   
  [Seguridad](../../../../docs/standard/security/index.md)  
  Ofrece información general sobre todo el sistema de seguridad de .NET Framework.  
-  

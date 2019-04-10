@@ -2,19 +2,19 @@
 title: Ámbito y visibilidad de la definición de actividad
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 27c43323a176c841f3d90cb9c52f25599bc0686d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723847"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325220"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Ámbito y visibilidad de la definición de actividad
 El ámbito y visibilidad de la definición de actividad,  como el ámbito y la visibilidad de un objeto, es la capacidad de otros objetos o actividades de obtener acceso a los miembros de la actividad. Las siguientes implementaciones realizan la definición de actividad:  
   
-1.  Al determinar los miembros (<xref:System.Activities.Argument>, objetos <xref:System.Activities.Variable> y <xref:System.Activities.ActivityDelegate>, y actividades secundarias) una actividad se expone a sus usuarios.  
+1. Al determinar los miembros (<xref:System.Activities.Argument>, objetos <xref:System.Activities.Variable> y <xref:System.Activities.ActivityDelegate>, y actividades secundarias) una actividad se expone a sus usuarios.  
   
-2.  Implementar la lógica de ejecución de la actividad.  
+2. Implementar la lógica de ejecución de la actividad.  
   
  La implementación puede implicar a miembros que no se exponen a los usuarios de la actividad, pero se trata más bien de detalles de la implementación.  Similar a la definición de tipo, el modelo de actividad permite a un autor calificar la visibilidad de un miembro de la actividad con respecto a la definición de la actividad que es definida.  Esta visibilidad rige aspectos de uso de los miembros, como el ámbito de los datos.  
   
@@ -27,9 +27,9 @@ El ámbito y visibilidad de la definición de actividad,  como el ámbito y la v
 ### <a name="activity-members"></a>Miembros de actividad  
  El modelo de actividad define los argumentos, variables, delegados y actividades secundarias que la actividad pone a disposición de los usuarios. Cada uno de estos miembros se puede declarar como `public` o `private`. El usuario de la actividad configura los miembros públicos, mientras que los miembros `private` utilizan una implementación corregida por el autor de actividad. Las reglas de visibilidad del ámbito de datos son las siguientes:  
   
-1.  Los miembros públicos y los miembros públicos de actividades secundarias públicas pueden hacer referencia a las variables públicas.  
+1. Los miembros públicos y los miembros públicos de actividades secundarias públicas pueden hacer referencia a las variables públicas.  
   
-2.  Los miembros privados y los miembros públicos de actividades de  secundarias públicas pueden hacer referencia a argumentos y variables privadas.  
+2. Los miembros privados y los miembros públicos de actividades de  secundarias públicas pueden hacer referencia a argumentos y variables privadas.  
   
  Un miembro que puede ser establecido por el usuario de una actividad nunca se debería hacer privado.  
   

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Firmar documentos XML con firmas digitales
+title: Filtrar para firmar documentos XML con firmas digitales
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,58 +16,58 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49999ae8b66b01ca71c0027bdf43c13272fbe8a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39e053ea9ca0b2fdc548a4b9447d34e852816a61
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622629"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324505"
 ---
-# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Procedimiento Firmar documentos XML con firmas digitales
+# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Filtrar para firmar documentos XML con firmas digitales
 Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.Xml> para firmar un documento XML o parte de un documento XML con una firma digital.  Las firmas XML digitales (XMLDSIG) permiten comprobar que los datos no se modificaron después de firmarlos.  Para obtener más información sobre el estándar XMLDSIG, consulte la recomendación de World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
   
- El ejemplo de código de este procedimiento muestra cómo firmar digitalmente un documento XML completo y adjuntar la firma al documento en un elemento <`Signature`>.  En el ejemplo se crea una clave de firma RSA, se agrega la clave a un contenedor de claves seguro y, a continuación, se usa la clave para firmar digitalmente un documento XML.  La clave se puede recuperar para comprobar la firma digital XML, o bien se puede usar para firmar otro documento XML.  
+ El ejemplo de código en este procedimiento muestra cómo firmar un documento XML completo y adjuntar la firma al documento en un <`Signature`> elemento.  En el ejemplo se crea una clave de firma RSA, se agrega la clave a un contenedor de claves seguro y, a continuación, se usa la clave para firmar digitalmente un documento XML.  La clave se puede recuperar para comprobar la firma digital XML, o bien se puede usar para firmar otro documento XML.  
   
  Para obtener información acerca de cómo comprobar una firma digital XML creada mediante este procedimiento, vea [Cómo: Comprobar las firmas digitales de documentos XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>Para firmar digitalmente un documento XML  
   
-1.  Cree un objeto <xref:System.Security.Cryptography.CspParameters> y especifique el nombre del contenedor de claves.  
+1. Cree un objeto <xref:System.Security.Cryptography.CspParameters> y especifique el nombre del contenedor de claves.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#2)]
      [!code-vb[HowToSignXMLDocumentRSA#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#2)]  
   
-2.  Genere una clave asimétrica mediante la clase <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  La clave se guarda automáticamente en el contenedor de claves al pasar el objeto <xref:System.Security.Cryptography.CspParameters> al constructor de la clase <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  Esta clave se usará para firmar el documento XML.  
+2. Genere una clave asimétrica mediante la clase <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  La clave se guarda automáticamente en el contenedor de claves al pasar el objeto <xref:System.Security.Cryptography.CspParameters> al constructor de la clase <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  Esta clave se usará para firmar el documento XML.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#3)]
      [!code-vb[HowToSignXMLDocumentRSA#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#3)]  
   
-3.  Cree un objeto <xref:System.Xml.XmlDocument> cargando un archivo XML del disco.  El objeto <xref:System.Xml.XmlDocument> contiene el elemento XML que se va a cifrar.  
+3. Cree un objeto <xref:System.Xml.XmlDocument> cargando un archivo XML del disco.  El objeto <xref:System.Xml.XmlDocument> contiene el elemento XML que se va a cifrar.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#4)]
      [!code-vb[HowToSignXMLDocumentRSA#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#4)]  
   
-4.  Cree un nuevo objeto <xref:System.Security.Cryptography.Xml.SignedXml> y pásele el objeto <xref:System.Xml.XmlDocument>.  
+4. Cree un nuevo objeto <xref:System.Security.Cryptography.Xml.SignedXml> y pásele el objeto <xref:System.Xml.XmlDocument>.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#5)]
      [!code-vb[HowToSignXMLDocumentRSA#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#5)]  
   
-5.  Agregue la clave RSA de firma al objeto <xref:System.Security.Cryptography.Xml.SignedXml>.  
+5. Agregue la clave RSA de firma al objeto <xref:System.Security.Cryptography.Xml.SignedXml>.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#6)]
      [!code-vb[HowToSignXMLDocumentRSA#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#6)]  
   
-6.  Cree un objeto <xref:System.Security.Cryptography.Xml.Reference> que describa qué se va a firmar.  Para firmar el documento completo, establezca la propiedad <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> en `""`.  
+6. Cree un objeto <xref:System.Security.Cryptography.Xml.Reference> que describa qué se va a firmar.  Para firmar el documento completo, establezca la propiedad <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> en `""`.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#7)]
      [!code-vb[HowToSignXMLDocumentRSA#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#7)]  
   
-7.  Agregue un objeto <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> al objeto <xref:System.Security.Cryptography.Xml.Reference>.  Una transformación permite al comprobador representar los datos XML de un modo idéntico al que usó el firmante.  Los datos XML se pueden representar de maneras diferentes, por lo que este paso es vital para la comprobación.  
+7. Agregue un objeto <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> al objeto <xref:System.Security.Cryptography.Xml.Reference>.  Una transformación permite al comprobador representar los datos XML de un modo idéntico al que usó el firmante.  Los datos XML se pueden representar de maneras diferentes, por lo que este paso es vital para la comprobación.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#8)]
      [!code-vb[HowToSignXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#8)]  
   
-8.  Agregue el objeto <xref:System.Security.Cryptography.Xml.Reference> al objeto <xref:System.Security.Cryptography.Xml.SignedXml>.  
+8. Agregue el objeto <xref:System.Security.Cryptography.Xml.Reference> al objeto <xref:System.Security.Cryptography.Xml.SignedXml>.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#9)]
      [!code-vb[HowToSignXMLDocumentRSA#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#9)]  
@@ -77,7 +77,7 @@ Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.
      [!code-csharp[HowToSignXMLDocumentRSA#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#10)]
      [!code-vb[HowToSignXMLDocumentRSA#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#10)]  
   
-10. Recupere la representación XML de la firma (un elemento <`Signature`>) y guárdela en un nuevo objeto <xref:System.Xml.XmlElement>.  
+10. Recuperar la representación XML de la firma (un <`Signature`> elemento) y guárdelo en un nuevo <xref:System.Xml.XmlElement> objeto.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#11)]
      [!code-vb[HowToSignXMLDocumentRSA#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#11)]  
@@ -121,4 +121,4 @@ Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Security.Cryptography.Xml>
-- [Cómo: Comprobar las firmas digitales de documentos XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+- [Filtrar para comprobar las firmas digitales de documentos XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

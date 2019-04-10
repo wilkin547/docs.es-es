@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818728"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324323"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Filtrar Controlar el ámbito de una Variable (Visual Basic)
 Normalmente, es una variable en *ámbito*, o visible como referencia, a lo largo de la región en la que se declara. En del algunos casos, la variable *nivel de acceso* puede influir en su ámbito.  
@@ -43,19 +43,19 @@ Normalmente, es una variable en *ámbito*, o visible como referencia, a lo largo
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>Para hacer visible a lo largo de un módulo, clase o estructura de una variable  
   
-1.  Colocar el `Dim` instrucción para la variable dentro del módulo, clase o estructura, pero fuera de cualquier procedimiento.  
+1. Colocar el `Dim` instrucción para la variable dentro del módulo, clase o estructura, pero fuera de cualquier procedimiento.  
   
-2.  Incluir el [privada](../../../../visual-basic/language-reference/modifiers/private.md) palabra clave en el `Dim` instrucción.  
+2. Incluir el [privada](../../../../visual-basic/language-reference/modifiers/private.md) palabra clave en el `Dim` instrucción.  
   
-3.  Puede hacer referencia a la variable desde cualquier lugar dentro del módulo, clase o estructura, pero no desde fuera de él.  
+3. Puede hacer referencia a la variable desde cualquier lugar dentro del módulo, clase o estructura, pero no desde fuera de él.  
   
 #### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>Para hacer visible a lo largo de un espacio de nombres de variable  
   
-1.  Colocar el `Dim` instrucción para la variable dentro del módulo, clase o estructura, pero fuera de cualquier procedimiento.  
+1. Colocar el `Dim` instrucción para la variable dentro del módulo, clase o estructura, pero fuera de cualquier procedimiento.  
   
-2.  Incluir el [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) o [pública](../../../../visual-basic/language-reference/modifiers/public.md) palabra clave en el `Dim` instrucción.  
+2. Incluir el [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) o [pública](../../../../visual-basic/language-reference/modifiers/public.md) palabra clave en el `Dim` instrucción.  
   
-3.  Puede hacer referencia a la variable desde cualquier lugar dentro del espacio de nombres que contiene el módulo, clase o estructura.  
+3. Puede hacer referencia a la variable desde cualquier lugar dentro del espacio de nombres que contiene el módulo, clase o estructura.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente declara una variable en el nivel de módulo y limita la visibilidad para el código dentro del módulo.  
@@ -89,8 +89,8 @@ Public strMsg As String
 ## <a name="see-also"></a>Vea también
 
 - [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Período de duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Niveles de acceso en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Dim (Instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: ab6a4a0e6736e2af9c1fa0dd170b6aa4c42d9e4a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1ce5c793a09df34ac17e70e3253e98108bf76fb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817159"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321486"
 ---
 # <a name="end-of-statement-expected"></a>Se esperaba el fin de instrucción
 La instrucción es sintácticamente completa, pero un elemento de programación adicional sigue al elemento que se complete la instrucción. Falta un terminador de línea al final de cada instrucción.
@@ -23,11 +23,11 @@ La instrucción es sintácticamente completa, pero un elemento de programación 
   
 ## <a name="to-correct-this-error"></a>Para corregir este error
   
-1.  Comprueba si dos instrucciones diferentes se colocaron en la misma línea.
+1. Comprueba si dos instrucciones diferentes se colocaron en la misma línea.
   
-2.  Insertar un terminador de línea después del elemento que se complete la instrucción.
+2. Insertar un terminador de línea después del elemento que se complete la instrucción.
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Interrumpir y combinar instrucciones en código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [Filtrar Interrumpir y combinar instrucciones en código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
 - [Instrucciones](../../../visual-basic/programming-guide/language-features/statements.md)

@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 7b5484ee7b8d98ce3ac449fb9d23029f27c8932a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d6ed22790f5abc01b44accc05e09e75d105df429
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196871"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325779"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 Este ejemplo muestra cómo se pueden personalizar los procesos de deserialización y serialización utilizando la clase <xref:System.Runtime.Serialization.DataContractResolver>. En este ejemplo se muestra cómo agregar dinámicamente los tipos conocidos durante la serialización y deserialización.  
@@ -346,21 +346,21 @@ Lists combined:
   
 #### <a name="to-set-up-run-and-build-the-sample"></a>Para configurar, compilar y ejecutar el ejemplo  
   
-1.  Haga clic en la solución **KnownAssemblyAttribute** y seleccione **propiedades**.  
+1. Haga clic en la solución **KnownAssemblyAttribute** y seleccione **propiedades**.  
   
-2.  En **propiedades comunes**, seleccione **proyecto de inicio**y, a continuación, haga clic en **varios proyectos de inicio**.  
+2. En **propiedades comunes**, seleccione **proyecto de inicio**y, a continuación, haga clic en **varios proyectos de inicio**.  
   
-3.  Agregar el **iniciar** acción a la **servicio** y **cliente** proyectos.  
+3. Agregar el **iniciar** acción a la **servicio** y **cliente** proyectos.  
   
-4.  Haga clic en **Aceptar**y presione **F5** para ejecutar el ejemplo.  
+4. Haga clic en **Aceptar**y presione **F5** para ejecutar el ejemplo.  
   
-5.  Si la aplicación no se ejecuta correctamente, siga estos pasos para asegurarse de que el entorno se ha configurado correctamente:  
+5. Si la aplicación no se ejecuta correctamente, siga estos pasos para asegurarse de que el entorno se ha configurado correctamente:  
   
-6.  Asegúrese de que ha realizado la [procedimiento para los ejemplos de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150774).  
+6. Asegúrese de que ha realizado la [procedimiento para los ejemplos de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150774).  
   
-7.  Para compilar la solución, siga las instrucciones de [compilando el ejemplo de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150775).  
+7. Para compilar la solución, siga las instrucciones de [compilando el ejemplo de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150775).  
   
-8.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).  
+8. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

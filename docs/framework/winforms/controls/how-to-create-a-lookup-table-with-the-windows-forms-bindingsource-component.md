@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: b2b588a8529983699e49531f51aae8e4225e9608
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181485"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321905"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Filtrar para crear una tabla de búsqueda con el componente BindingSource de formularios Windows Forms
 Una tabla de búsqueda es una tabla de datos con una columna que muestra los datos de los registros de una tabla relacionada. En los procedimientos siguientes se usa un control <xref:System.Windows.Forms.ComboBox> para mostrar el campo con la relación de clave externa desde la tabla primaria a la tabla secundaria.  
@@ -49,21 +49,21 @@ Una tabla de búsqueda es una tabla de datos con una columna que muestra los dat
   
 ### <a name="to-create-the-user-interface"></a>Para crear la interfaz de usuario  
   
-1.  Desde el **cuadro de herramientas**, arrastre un <xref:System.Windows.Forms.ComboBox> al formulario.  
+1. Desde el **cuadro de herramientas**, arrastre un <xref:System.Windows.Forms.ComboBox> al formulario.  
   
      Este control mostrará la columna de la tabla primaria.  
   
-2.  Arrastre otros controles para mostrar detalles de la tabla secundaria. El formato de los datos en la tabla debe determinar qué controles elegirá. Para más información, consulte [Controles de Windows Forms por función](windows-forms-controls-by-function.md).  
+2. Arrastre otros controles para mostrar detalles de la tabla secundaria. El formato de los datos en la tabla debe determinar qué controles elegirá. Para más información, consulte [Controles de Windows Forms por función](windows-forms-controls-by-function.md).  
   
-3.  Arrastre un control <xref:System.Windows.Forms.BindingNavigator> al formulario; esto le permitirá navegar por los datos de la tabla secundaria.  
+3. Arrastre un control <xref:System.Windows.Forms.BindingNavigator> al formulario; esto le permitirá navegar por los datos de la tabla secundaria.  
   
 ### <a name="to-connect-to-the-data-and-bind-it-to-controls"></a>Para conectar con los datos y enlazarlos a controles  
   
-1.  Seleccione el <xref:System.Windows.Forms.ComboBox> y haga clic en el glifo Tarea inteligente para mostrar el cuadro de diálogo Tarea inteligente.  
+1. Seleccione el <xref:System.Windows.Forms.ComboBox> y haga clic en el glifo Tarea inteligente para mostrar el cuadro de diálogo Tarea inteligente.  
   
-2.  Seleccione **Usar elementos enlazados a datos**.  
+2. Seleccione **Usar elementos enlazados a datos**.  
   
-3.  Haga clic en la flecha junto al cuadro desplegable **Origen de datos**. Si ya se ha configurado un origen de datos para el proyecto o formulario, aparecerá; de lo contrario, realice los pasos siguientes. (En este ejemplo se usan las tablas Customers y Orders de la base de datos de muestra Northwind y se hace referencia a ellas entre paréntesis).  
+3. Haga clic en la flecha junto al cuadro desplegable **Origen de datos**. Si ya se ha configurado un origen de datos para el proyecto o formulario, aparecerá; de lo contrario, realice los pasos siguientes. (En este ejemplo se usan las tablas Customers y Orders de la base de datos de muestra Northwind y se hace referencia a ellas entre paréntesis).  
   
     1.  Haga clic en **Agregar origen de datos del proyecto** para conectar con los datos y crear un origen de datos.  
   
@@ -81,15 +81,15 @@ Una tabla de búsqueda es una tabla de datos con una columna que muestra los dat
   
     8.  Haga clic en **Finalizar**.  
   
-4.  En el cuadro desplegable **Mostrar miembro**, seleccione el nombre de la columna (por ejemplo, ContactName) que se mostrará en el cuadro combinado.  
+4. En el cuadro desplegable **Mostrar miembro**, seleccione el nombre de la columna (por ejemplo, ContactName) que se mostrará en el cuadro combinado.  
   
-5.  En el cuadro desplegable **Miembro de valor**, seleccione la columna (por ejemplo, CustomerID) para realizar la operación de búsqueda en la tabla secundaria.  
+5. En el cuadro desplegable **Miembro de valor**, seleccione la columna (por ejemplo, CustomerID) para realizar la operación de búsqueda en la tabla secundaria.  
   
-6.  En el cuadro desplegable **Valor seleccionado**, navegue a **Orígenes de datos del proyecto** y al conjunto de datos recién creado que contiene las tablas primaria y secundaria. Seleccione la misma propiedad de la tabla secundaria que sea el Miembro de valor de la tabla primaria (por ejemplo, Orders.CustomerID). Se crearán el <xref:System.Windows.Forms.BindingSource>, el conjunto de datos y los componentes de adaptador de tabla correspondientes, y se agregarán al formulario.  
+6. En el cuadro desplegable **Valor seleccionado**, navegue a **Orígenes de datos del proyecto** y al conjunto de datos recién creado que contiene las tablas primaria y secundaria. Seleccione la misma propiedad de la tabla secundaria que sea el Miembro de valor de la tabla primaria (por ejemplo, Orders.CustomerID). Se crearán el <xref:System.Windows.Forms.BindingSource>, el conjunto de datos y los componentes de adaptador de tabla correspondientes, y se agregarán al formulario.  
   
-7.  Enlace el control <xref:System.Windows.Forms.BindingNavigator> al <xref:System.Windows.Forms.BindingSource> de la tabla secundaria (por ejemplo, `OrdersBindingSource`).  
+7. Enlace el control <xref:System.Windows.Forms.BindingNavigator> al <xref:System.Windows.Forms.BindingSource> de la tabla secundaria (por ejemplo, `OrdersBindingSource`).  
   
-8.  Enlace otros controles, aparte de <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.BindingNavigator>, a los campos de detalles del <xref:System.Windows.Forms.BindingSource> de la tabla secundaria (por ejemplo, `OrdersBindingSource`) que quiera mostrar.  
+8. Enlace otros controles, aparte de <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.BindingNavigator>, a los campos de detalles del <xref:System.Windows.Forms.BindingSource> de la tabla secundaria (por ejemplo, `OrdersBindingSource`) que quiera mostrar.  
   
 ## <a name="see-also"></a>Vea también
 
