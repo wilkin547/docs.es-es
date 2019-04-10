@@ -7,29 +7,28 @@ helpviewer_keywords:
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5607d6b1583063663bcac46aeec563408348621
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: a190e238992313e498e28217587029041f386040
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226526"
 ---
-# <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="78932-102">Programación dinámica en .NET Framework</span><span class="sxs-lookup"><span data-stu-id="78932-102">Dynamic Programming in the .NET Framework</span></span>
-<span data-ttu-id="78932-103">Esta sección de la documentación proporciona información acerca de la programación dinámica en .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="78932-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  
+# <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="c46fa-102">Programación dinámica en .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c46fa-102">Dynamic Programming in the .NET Framework</span></span>
+<span data-ttu-id="c46fa-103">Esta sección de la documentación proporciona información acerca de la programación dinámica en .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c46fa-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="78932-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="78932-104">In This Section</span></span>  
- [<span data-ttu-id="78932-105">Reflexión</span><span class="sxs-lookup"><span data-stu-id="78932-105">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
- <span data-ttu-id="78932-106">Describe cómo utilizar la reflexión para trabajar con objetos en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="78932-106">Describes how to use reflection to work with objects at run time.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="c46fa-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="c46fa-104">In This Section</span></span>  
+ [<span data-ttu-id="c46fa-105">Reflexión</span><span class="sxs-lookup"><span data-stu-id="c46fa-105">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ <span data-ttu-id="c46fa-106">Describe cómo utilizar la reflexión para trabajar con objetos en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="c46fa-106">Describes how to use reflection to work with objects at run time.</span></span>  
   
- [<span data-ttu-id="78932-107">Emitir métodos y ensamblados dinámicos</span><span class="sxs-lookup"><span data-stu-id="78932-107">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
- <span data-ttu-id="78932-108">Describe cómo crear métodos y ensamblados en tiempo de ejecución mediante Reflection.Emit.</span><span class="sxs-lookup"><span data-stu-id="78932-108">Describes how to create methods and assemblies at run time by using Reflection.Emit.</span></span>  
+ [<span data-ttu-id="c46fa-107">Emitir métodos y ensamblados dinámicos</span><span class="sxs-lookup"><span data-stu-id="c46fa-107">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
+ <span data-ttu-id="c46fa-108">Describe cómo crear métodos y ensamblados en tiempo de ejecución mediante Reflection.Emit.</span><span class="sxs-lookup"><span data-stu-id="c46fa-108">Describes how to create methods and assemblies at run time by using Reflection.Emit.</span></span>  
   
- [<span data-ttu-id="78932-109">Información general sobre Dynamic Language Runtime</span><span class="sxs-lookup"><span data-stu-id="78932-109">Dynamic Language Runtime Overview</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- <span data-ttu-id="78932-110">Describe las características de Dynamic Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="78932-110">Describes the features of the dynamic language runtime.</span></span>  
+ [<span data-ttu-id="c46fa-109">Información general acerca de Dynamic Language Runtime</span><span class="sxs-lookup"><span data-stu-id="c46fa-109">Dynamic Language Runtime Overview</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+ <span data-ttu-id="c46fa-110">Describe las características de Dynamic Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="c46fa-110">Describes the features of the dynamic language runtime.</span></span>  
   
- [<span data-ttu-id="78932-111">Generación y compilación dinámicas de código fuente</span><span class="sxs-lookup"><span data-stu-id="78932-111">Dynamic Source Code Generation and Compilation</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
- <span data-ttu-id="78932-112">Describe cómo generar y compilar código fuente dinámico.</span><span class="sxs-lookup"><span data-stu-id="78932-112">Describes how to generate and compile dynamic source code.</span></span>  
+ [<span data-ttu-id="c46fa-111">Generación y compilación dinámicas de código fuente</span><span class="sxs-lookup"><span data-stu-id="c46fa-111">Dynamic Source Code Generation and Compilation</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
+ <span data-ttu-id="c46fa-112">Describe cómo generar y compilar código fuente dinámico.</span><span class="sxs-lookup"><span data-stu-id="c46fa-112">Describes how to generate and compile dynamic source code.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="78932-113">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="78932-113">Related Sections</span></span>  
- [<span data-ttu-id="78932-114">Guía de desarrollo</span><span class="sxs-lookup"><span data-stu-id="78932-114">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
-  
+## <a name="related-sections"></a><span data-ttu-id="c46fa-113">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="c46fa-113">Related Sections</span></span>  
+ [<span data-ttu-id="c46fa-114">Guía de desarrollo</span><span class="sxs-lookup"><span data-stu-id="c46fa-114">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
