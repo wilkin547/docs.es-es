@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 1a8666124c09d27d9d2ef936d36e7739d473a996
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ad4384f8cc2a1d0c15f8c7681e6e5d8bf75e4451
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085992"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343693"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>Filtrar para agregar botones a un control de la barra de herramientas
 > [!NOTE]
@@ -29,9 +29,9 @@ ms.locfileid: "59085992"
   
 ### <a name="to-add-buttons-programmatically"></a>Para agregar botones mediante programación  
   
-1.  En un procedimiento, creará los botones de barra de herramientas agregándolos a la <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> colección.  
+1. En un procedimiento, creará los botones de barra de herramientas agregándolos a la <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> colección.  
   
-2.  Especificar valores de propiedades de un botón individual pasando el índice del botón a través de la <xref:System.Windows.Forms.ToolBar.Buttons%2A> propiedad.  
+2. Especificar valores de propiedades de un botón individual pasando el índice del botón a través de la <xref:System.Windows.Forms.ToolBar.Buttons%2A> propiedad.  
   
      El ejemplo siguiente se da por supuesto un formulario con un <xref:System.Windows.Forms.ToolBar> control ya se ha agregado.  
   

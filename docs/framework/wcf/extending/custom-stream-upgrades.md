@@ -2,12 +2,12 @@
 title: Actualizaciones personalizadas de secuencias
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: cd8385194e1f24d246e6fc398462b45bacbe15d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127366"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345253"
 ---
 # <a name="custom-stream-upgrades"></a>Actualizaciones personalizadas de secuencias
 Los transportes orientados a secuencia como TCP y las canalizaciones con nombre funcionan en una secuencia continua de bytes entre el cliente y servidor. Esta secuencia la realiza un objeto <xref:System.IO.Stream>. En una actualización de secuencia, el cliente desea agregar una capa de protocolo opcional a la pila del canal y pide al otro lado del canal de comunicación que lo haga. La actualización de secuencia consiste en reemplazar el objeto <xref:System.IO.Stream> original con uno actualizado.  
@@ -19,13 +19,13 @@ Los transportes orientados a secuencia como TCP y las canalizaciones con nombre 
 ## <a name="how-stream-upgrades-work"></a>Cómo funcionan las actualizaciones de secuencia  
  Hay cuatro componentes en el proceso de actualización de secuencia.  
   
-1.  Una secuencia de actualización *iniciador* comienza el proceso: tiempo de ejecución puede iniciar una solicitud al otro extremo de la conexión para actualizar el nivel de transporte de canal.  
+1. Una secuencia de actualización *iniciador* comienza el proceso: tiempo de ejecución puede iniciar una solicitud al otro extremo de la conexión para actualizar el nivel de transporte de canal.  
   
-2.  Una secuencia de actualización *aceptador* lleva a cabo la actualización: en tiempo de ejecución recibe la solicitud de actualización de la otra máquina y, si es posible, acepta la actualización.  
+2. Una secuencia de actualización *aceptador* lleva a cabo la actualización: en tiempo de ejecución recibe la solicitud de actualización de la otra máquina y, si es posible, acepta la actualización.  
   
-3.  Una actualización *proveedor* crea el *iniciador* en el cliente y el *aceptador* en el servidor.  
+3. Una actualización *proveedor* crea el *iniciador* en el cliente y el *aceptador* en el servidor.  
   
-4.  Una actualización de secuencia *elemento de enlace* se agrega a los enlaces en el servicio y el cliente y crea el proveedor en tiempo de ejecución.  
+4. Una actualización de secuencia *elemento de enlace* se agrega a los enlaces en el servicio y el cliente y crea el proveedor en tiempo de ejecución.  
   
  Observe que en el caso de varias actualizaciones, el iniciador y aceptador encapsulan las máquinas de estado para exigir qué transiciones de actualización son válidas para cada iniciación.  
   
@@ -42,27 +42,27 @@ Los transportes orientados a secuencia como TCP y las canalizaciones con nombre 
   
  Para implementar una actualización de secuencia personalizada, haga lo siguiente. Este procedimiento implementa un proceso de actualización de secuencia mínimo en los equipos del servidor y del cliente.  
   
-1.  Cree una clase que implemente <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
+1. Cree una clase que implemente <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
   
     1.  Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> para tomar la secuencia que se va a actualizar y devuelva la secuencia actualizada. Este método funciona sincrónicamente; hay métodos análogos para iniciar de forma asincrónica la actualización.  
   
     2.  Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> para comprobar las actualizaciones adicionales.  
   
-2.  Cree una clase que implemente <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
+2. Cree una clase que implemente <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
   
     1.  Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> para tomar la secuencia que se va a actualizar y devuelva la secuencia actualizada. Este método funciona sincrónicamente; hay métodos análogos para aceptar de forma asincrónica la actualización.  
   
     2.  Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> para determinar si este aceptador de actualización admite la actualización solicitada en el proceso de actualización.  
   
-3.  Cree una clase que implemente <xref:System.ServiceModel.Channels.StreamUpgradeProvider>. Invalide los métodos <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> y <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> para devolver las instancias del aceptador e iniciador definidas en los pasos 2 y 1.  
+3. Cree una clase que implemente <xref:System.ServiceModel.Channels.StreamUpgradeProvider>. Invalide los métodos <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> y <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> para devolver las instancias del aceptador e iniciador definidas en los pasos 2 y 1.  
   
-4.  Cree una clase que implemente <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
+4. Cree una clase que implemente <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
   
     1.  Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> en el cliente y el método <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> en el servicio.  
   
     2.  Invalide el método <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> en el cliente y el método <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> en el servicio para agregar la actualización Elemento de enlace a <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.  
   
-5.  Agregue el nuevo elemento de enlace de actualización de secuencia a los enlaces en los equipos del cliente y del servidor.  
+5. Agregue el nuevo elemento de enlace de actualización de secuencia a los enlaces en los equipos del cliente y del servidor.  
   
 ## <a name="security-upgrades"></a>Actualizaciones de seguridad  
  Agregar una actualización de seguridad es una versión especializada del proceso de actualización de secuencia general.  
@@ -71,11 +71,11 @@ Los transportes orientados a secuencia como TCP y las canalizaciones con nombre 
   
  Para los escenarios de seguridad que no se incluyan en los dos elementos de enlace anteriores, tres clases `abstract` relacionadas con seguridad se derivan de las clases base de iniciador, aceptador y proveedor anteriores:  
   
-1.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator?displayProperty=nameWithType>  
+1. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator?displayProperty=nameWithType>  
   
-2.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor?displayProperty=nameWithType>  
+2. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor?displayProperty=nameWithType>  
   
-3.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider?displayProperty=nameWithType>  
+3. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider?displayProperty=nameWithType>  
   
  El proceso de implementar una actualización de secuencia de seguridad es igual que antes, con la diferencia de que derivaría de estas tres clases. Invalide las propiedades adicionales en estas clases para proporcionar información de seguridad al tiempo de ejecución.  
   
@@ -84,13 +84,13 @@ Los transportes orientados a secuencia como TCP y las canalizaciones con nombre 
   
  Alternativamente, un proveedor de actualización puede admitir varias actualizaciones. Por ejemplo, podría desear implementar un proveedor de actualización de secuencia personalizado que admita seguridad y compresión. Realice las acciones siguientes:  
   
-1.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> subclase para escribir la clase de proveedor que crea el iniciador y el aceptador.  
+1. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> subclase para escribir la clase de proveedor que crea el iniciador y el aceptador.  
   
-2.  Cree subclase de <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator> asegurándose de invalidar el método <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> para devolver los tipos de contenido para la secuencia de compresión y la secuencia segura en orden.  
+2. Cree subclase de <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator> asegurándose de invalidar el método <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> para devolver los tipos de contenido para la secuencia de compresión y la secuencia segura en orden.  
   
-3.  Cree subclase de <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor> que entienda los tipos de contenido personalizados en su método <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
+3. Cree subclase de <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor> que entienda los tipos de contenido personalizados en su método <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
   
-4.  La secuencia se actualizará después de cada llamada a <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> y <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
+4. La secuencia se actualizará después de cada llamada a <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> y <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
   
 ## <a name="see-also"></a>Vea también
 

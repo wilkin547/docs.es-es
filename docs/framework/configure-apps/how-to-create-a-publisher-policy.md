@@ -7,23 +7,23 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227397"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344668"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Filtrar para crear una directiva de publicador
 Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar una versión más reciente de un ensamblado mediante la inclusión de un archivo de directiva de publicador con el ensamblado actualizado. El archivo de directiva de publicador especifica redirección de ensamblado y la configuración de base de código y usa el mismo formato que un archivo de configuración de la aplicación. El archivo de directiva de publicador se compila en un ensamblado y colocar en la caché global de ensamblados.  
   
  Hay tres pasos implicados en la creación de una directiva de publicador:  
   
-1.  Cree un archivo de directiva de publicador.  
+1. Cree un archivo de directiva de publicador.  
   
-2.  Crear un ensamblado de directivas de publicador.  
+2. Crear un ensamblado de directivas de publicador.  
   
-3.  Agregue el ensamblado a la caché global de ensamblados.  
+3. Agregue el ensamblado a la caché global de ensamblados.  
   
  Se describe el esquema de directiva de publicador en [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md). El ejemplo siguiente muestra un editor de archivo de directiva que redirige una versión de `myAssembly` a otro.  
   
@@ -51,7 +51,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
 #### <a name="to-create-a-publisher-policy-assembly"></a>Para crear un ensamblado de directivas de publicador  
   
-1.  En el símbolo del sistema, escriba el siguiente comando:  
+1. En el símbolo del sistema, escriba el siguiente comando:  
   
      **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
@@ -87,7 +87,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
 #### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Para agregar el ensamblado de directivas de publicador a la caché global de ensamblados  
   
-1.  En el símbolo del sistema, escriba el siguiente comando:  
+1. En el símbolo del sistema, escriba el siguiente comando:  
   
      **gacutil /i***publisherPolicyAssemblyFile*  
   

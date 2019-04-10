@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825102"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343563"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Filtrar Declarar una estructura (Visual Basic)
 Comenzar una declaración structure con la [Structure (instrucción)](../../../../visual-basic/language-reference/statements/structure-statement.md), y finaliza con el `End Structure` instrucción. Entre estas dos instrucciones debe declarar al menos una *elemento*. Los elementos pueden ser de cualquier tipo de datos, pero al menos uno debe ser una variable no compartida o un evento no compartido, no personalizado.  
@@ -25,7 +25,7 @@ Comenzar una declaración structure con la [Structure (instrucción)](../../../.
   
 ### <a name="to-declare-a-structure"></a>Para declarar una estructura  
   
-1.  Cree el comienzo y finalización de instrucciones para la estructura.  
+1. Cree el comienzo y finalización de instrucciones para la estructura.  
   
      Puede especificar el nivel de acceso de una estructura mediante la [pública](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), o [privada](../../../../visual-basic/language-reference/modifiers/private.md) palabra clave, o puede dejar de forma predeterminada `Public`.  
   
@@ -34,7 +34,7 @@ Comenzar una declaración structure con la [Structure (instrucción)](../../../.
     End Structure  
     ```  
   
-2.  Agregar elementos al cuerpo de la estructura.  
+2. Agregar elementos al cuerpo de la estructura.  
   
      Una estructura debe tener al menos un elemento. Debe declarar todos los elementos y especificar un nivel de acceso para él. Si usas el [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) sin palabras clave, valores predeterminados de la accesibilidad a `Public`.  
   
@@ -58,11 +58,11 @@ Comenzar una declaración structure con la [Structure (instrucción)](../../../.
 ## <a name="see-also"></a>Vea también
 
 - [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Tipos de datos básicos](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Tipos de datos elementales](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Solución de problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Solucionar problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Variables de estructura](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
 - [Estructuras y otros elementos de programación](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
 - [Estructuras y clases](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

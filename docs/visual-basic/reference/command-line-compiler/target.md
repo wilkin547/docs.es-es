@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: 69312ca3512c5407185df11e66d95ce9f5cdddff
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c91e69e3d9f17f758990b8385f6b8d0a1c03bef6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412297"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344746"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 Especifica el formato de salida del compilador.  
@@ -42,11 +42,11 @@ Especifica el formato de salida del compilador.
   
 ### <a name="to-set--target-in-the-visual-studio-ide"></a>Para establecer - tener como destino en el IDE de Visual Studio  
   
-1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.   
+1. Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.   
   
-2.  Haga clic en la pestaña **Aplicación** .  
+2. Haga clic en la pestaña **Aplicación** .  
   
-3.  Modifique el valor en el **tipo de aplicación** cuadro.  
+3. Modifique el valor en el **tipo de aplicación** cuadro.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `in.vb`, creando `in.dll`:  

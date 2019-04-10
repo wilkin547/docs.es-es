@@ -2,12 +2,12 @@
 title: Cómo Control de versiones del servicio
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: dc81fcde3c4f731257bf759cbd3f31542483618d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085381"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346293"
 ---
 # <a name="how-to-service-versioning"></a>Cómo Control de versiones del servicio
 Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que enrute mensajes a las diferentes versiones del mismo servicio. En este ejemplo, los mensajes se enrutan a dos versiones diferentes de un servicio de la calculadora, `roundingCalc` (v1) y `regularCalc` (v2). Ambas implementaciones admiten las mismas operaciones; sin embargo, el servicio más antiguo, `roundingCalc`, redondea todos los cálculos al valor entero más cercano antes de devolverlos. Una aplicación cliente debe poder indicar cuándo se debe usar el servicio `regularCalc` más reciente.  
@@ -37,7 +37,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
   
 ### <a name="implement-service-versioning"></a>Implementación de versiones del servicio  
   
-1.  Cree la configuración de servicio de enrutamiento básica especificando el extremo de servicio expuesto por el servicio. En el siguiente ejemplo, se define un punto de conexión de servicio único que se utilizará para recibir mensajes. También se definen los puntos de conexión del cliente que se utilizarán para enviar mensajes a los servicios `roundingCalc` (v1) y `regularCalc` (v2).  
+1. Cree la configuración de servicio de enrutamiento básica especificando el extremo de servicio expuesto por el servicio. En el siguiente ejemplo, se define un punto de conexión de servicio único que se utilizará para recibir mensajes. También se definen los puntos de conexión del cliente que se utilizarán para enviar mensajes a los servicios `roundingCalc` (v1) y `regularCalc` (v2).  
   
     ```xml  
     <services>  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2.  Defina los filtros usados para enrutar mensajes a los extremos del destino.  En este ejemplo, el filtro de XPath se utiliza para detectar el valor del encabezado personalizado "CalcVer" para determinar qué versión debe enrutarse el mensaje a. También se utiliza un filtro de XPath para detectar mensajes que no contienen el encabezado "CalcVer". En el siguiente ejemplo, se definen los filtros necesarios y la tabla de espacio de nombres.  
+2. Defina los filtros usados para enrutar mensajes a los extremos del destino.  En este ejemplo, el filtro de XPath se utiliza para detectar el valor del encabezado personalizado "CalcVer" para determinar qué versión debe enrutarse el mensaje a. También se utiliza un filtro de XPath para detectar mensajes que no contienen el encabezado "CalcVer". En el siguiente ejemplo, se definen los filtros necesarios y la tabla de espacio de nombres.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -96,7 +96,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     > [!NOTE]
     > El prefijo de espacio de nombres s12 se define de forma predeterminada en la tabla de espacio de nombres y representa el espacio de nombres `http://www.w3.org/2003/05/soap-envelope`.
   
-3.  Defina la tabla de filtro, que asocia cada filtro a un punto de conexión del cliente. Si el mensaje contiene el encabezado "CalcVer" con un valor de 1, se enviará al servicio de regularCalc. Si el encabezado contiene un valor de 2, se enviará al servicio de roundingCalc. Si no hay ningún encabezado, el mensaje se enrutará a regularCalc.  
+3. Defina la tabla de filtro, que asocia cada filtro a un punto de conexión del cliente. Si el mensaje contiene el encabezado "CalcVer" con un valor de 1, se enviará al servicio de regularCalc. Si el encabezado contiene un valor de 2, se enviará al servicio de roundingCalc. Si no hay ningún encabezado, el mensaje se enrutará a regularCalc.  
   
      El procedimiento siguiente define la tabla de filtros y agrega los filtros definidos anteriormente.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. El ejemplo siguiente se muestra cómo asociar `filterTable1` con los puntos de conexión de servicio:  
+4. Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. El ejemplo siguiente se muestra cómo asociar `filterTable1` con los puntos de conexión de servicio:  
   
     ```xml  
     <behaviors>  

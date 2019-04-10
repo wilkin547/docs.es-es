@@ -3,12 +3,12 @@ title: Modelo de identidad basado en notificaciones
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 21ed5b7616b51109ef21ee91bdf93b2808e00715
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411739"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345877"
 ---
 # <a name="claims-based-identity-model"></a>Modelo de identidad basado en notificaciones
 Al compilar aplicaciones para notificaciones, la identidad del usuario se representa en la aplicación como un conjunto de notificaciones. Una notificación podría ser el nombre del usuario, otra podría ser una dirección de correo electrónico. La idea es que se configure un sistema de identidad externo para proporcionar a la aplicación la información que necesita sobre el usuario con cada solicitud realizada, junto con la garantía criptográfica de que los datos de identidad recibidos proceden de una fuente de confianza.  
@@ -73,10 +73,10 @@ Al compilar aplicaciones para notificaciones, la identidad del usuario se repres
   
  En este diagrama se muestra un sitio web (la aplicación de usuario de confianza, RP) que se ha configurado para usar WIF para la autenticación y un cliente, un explorador web, que desea usar ese sitio.  
   
-1.  Cuando un usuario no autenticado solicita una página, el explorador se redirige a las páginas de identidades (IdP) del proveedor.  
+1. Cuando un usuario no autenticado solicita una página, el explorador se redirige a las páginas de identidades (IdP) del proveedor.  
   
-2.  El proveedor de identidades requiere que el usuario presentar sus credenciales, como el nombre de usuario/contraseña o la autenticación Kerberos.  
+2. El proveedor de identidades requiere que el usuario presentar sus credenciales, como el nombre de usuario/contraseña o la autenticación Kerberos.  
   
-3.  Los problemas de IdP un token que se devuelve al explorador.  
+3. Los problemas de IdP un token que se devuelve al explorador.  
   
-4.  A continuación, el explorador se redirige a la página solicitada originalmente, donde WIF determina si el token cumple los requisitos para tener acceso a la misma. En ese caso, se emite una cookie para establecer una sesión de modo que la autenticación solo tenga que realizarse una vez y el control se pase a la aplicación.
+4. A continuación, el explorador se redirige a la página solicitada originalmente, donde WIF determina si el token cumple los requisitos para tener acceso a la misma. En ese caso, se emite una cookie para establecer una sesión de modo que la autenticación solo tenga que realizarse una vez y el control se pase a la aplicación.

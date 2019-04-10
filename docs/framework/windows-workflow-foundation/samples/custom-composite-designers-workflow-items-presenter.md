@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118110"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344876"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> es un tipo clave en el modelo de programación de diseñador de WF que permite la edición de una colección de elementos incluidos. En este ejemplo se muestra cómo compilar un diseñador de actividad que muestra este tipo de colección modificable.
@@ -25,9 +25,9 @@ ms.locfileid: "59118110"
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
-1.  Abra el **UsingWorkflowItemsPresenter.sln** solución de ejemplo para C# o VB en Visual Studio 2010.
+1. Abra el **UsingWorkflowItemsPresenter.sln** solución de ejemplo para C# o VB en Visual Studio 2010.
 
-2.  Compile y ejecute la solución. Se debe abrir una aplicación de diseñador de flujo de trabajo hospedada en otro host; puede arrastrar actividades al lienzo.
+2. Compile y ejecute la solución. Se debe abrir una aplicación de diseñador de flujo de trabajo hospedada en otro host; puede arrastrar actividades al lienzo.
 
 ## <a name="sample-highlights"></a>Aspectos que se deben destacar del ejemplo
  El código de este ejemplo muestra lo siguiente:

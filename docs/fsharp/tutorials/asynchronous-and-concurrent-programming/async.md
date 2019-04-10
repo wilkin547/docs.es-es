@@ -2,12 +2,12 @@
 title: Programación asincrónica
 description: Obtenga información sobre cómo F# programación asincrónica se logra a través de un modelo de programación de nivel de lenguaje que sea fácil de usar y el lenguaje natural.
 ms.date: 06/20/2016
-ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980092"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343459"
 ---
 # <a name="async-programming-in-f"></a>Programación asincrónica en F\#
 
@@ -57,7 +57,7 @@ Además, normal `let`, `use`, y `do` palabras clave pueden utilizarse junto con 
 
 Como se mencionó anteriormente, el código asincrónico es una especificación de trabajo se realice en otro contexto que se debe iniciar explícitamente. Existen dos formas principales para lograr esto:
 
-1.  `Async.RunSynchronously` iniciará un flujo de trabajo asincrónico en otro subproceso y espera su resultado.
+1. `Async.RunSynchronously` iniciará un flujo de trabajo asincrónico en otro subproceso y espera su resultado.
 
 ```fsharp
 open System
@@ -78,7 +78,7 @@ let fetchHtmlAsync url =
  printfn "%s" html
  ```
 
-2.  `Async.Start` iniciar un flujo de trabajo de async en otro subproceso y, le **no** espera su resultado.
+2. `Async.Start` iniciar un flujo de trabajo de async en otro subproceso y, le **no** espera su resultado.
 
 ```fsharp
 open System
@@ -184,9 +184,9 @@ Hay algunos otros las similitudes y diferencias cabe destacar.
 
 En cambio, F# flujos de trabajo asincrónicos son cancelables de manera más natural. La cancelación es un proceso sencillo de tres pasos.
 
-1.  Cree un nuevo objeto `CancellationTokenSource`.
-2.  Pasarlo a una función inicial.
-3.  Llamar a `Cancel` en el token.
+1. Cree un nuevo objeto `CancellationTokenSource`.
+2. Pasarlo a una función inicial.
+3. Llamar a `Cancel` en el token.
 
 Ejemplo:
 

@@ -5,46 +5,46 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: bd6543e1e22b7a2cb0b870fe2fdb34011f0d2a4f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6bf2eb3d295f9cbf6a7e13a612d5846ceaa75ab4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162794"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345513"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>Filtrar para exportar metadatos desde puntos de conexión de servicio
 En este tema se explica cómo exportar los metadatos desde los extremos de servicio.  
   
 ### <a name="to-export-metadata-from-service-endpoints"></a>Exportar metadatos desde puntos de conexión de servicio  
   
-1.  Cree un nuevo Proyecto App de Consola de Visual Studio. Agregue el código que se muestra en los pasos siguientes en el archivo Program.cs generado dentro del método main().  
+1. Cree un nuevo Proyecto App de Consola de Visual Studio. Agregue el código que se muestra en los pasos siguientes en el archivo Program.cs generado dentro del método main().  
   
-2.  Creará un control <xref:System.ServiceModel.Description.WsdlExporter>.  
+2. Creará un control <xref:System.ServiceModel.Description.WsdlExporter>.  
   
      [!code-csharp[S_UEWsdlExporter#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#1)]
      [!code-vb[S_UEWsdlExporter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#1)]  
   
-3.  Establezca la propiedad <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> en uno de los valores de enumeración desde <xref:System.ServiceModel.Description.PolicyVersion>. Este ejemplo establece el valor en <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A> que corresponde a WS-Policy 1.5.  
+3. Establezca la propiedad <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> en uno de los valores de enumeración desde <xref:System.ServiceModel.Description.PolicyVersion>. Este ejemplo establece el valor en <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A> que corresponde a WS-Policy 1.5.  
   
      [!code-csharp[S_UEWsdlExporter#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#2)]
      [!code-vb[S_UEWsdlExporter#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#2)]  
   
-4.  Cree una matriz de objetos <xref:System.ServiceModel.Description.ServiceEndpoint>.  
+4. Cree una matriz de objetos <xref:System.ServiceModel.Description.ServiceEndpoint>.  
   
      [!code-csharp[S_UEWsdlExporter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#3)]
      [!code-vb[S_UEWsdlExporter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#3)]  
   
-5.  Exporte los metadatos para cada punto de conexión de servicio.  
+5. Exporte los metadatos para cada punto de conexión de servicio.  
   
      [!code-csharp[S_UEWsdlExporter#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#4)]
      [!code-vb[S_UEWsdlExporter#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#4)]  
   
-6.  Compruebe para asegurarse de que no se produjo ningún error durante el proceso de exportación y recupere los metadatos.  
+6. Compruebe para asegurarse de que no se produjo ningún error durante el proceso de exportación y recupere los metadatos.  
   
      [!code-csharp[S_UEWsdlExporter#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#5)]
      [!code-vb[S_UEWsdlExporter#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#5)]  
   
-7.  Ahora puede utilizar los metadatos, de manera que puede escribirlos en un archivo llamando al método <xref:System.ServiceModel.Description.MetadataSet.WriteTo%28System.Xml.XmlWriter%29>.  
+7. Ahora puede utilizar los metadatos, de manera que puede escribirlos en un archivo llamando al método <xref:System.ServiceModel.Description.MetadataSet.WriteTo%28System.Xml.XmlWriter%29>.  
   
 ## <a name="example"></a>Ejemplo  
  A continuación, se muestra una lista de código completa para este ejemplo.  

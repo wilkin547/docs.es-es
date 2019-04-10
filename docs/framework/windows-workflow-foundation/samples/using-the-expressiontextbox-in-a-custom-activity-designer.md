@@ -2,12 +2,12 @@
 title: Uso de la ExpressionTextBox en un diseñador de actividad personalizado
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: 7c1ba262046a665b8d63157fe3cdb4b1a41c37bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229386"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344980"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Uso de la ExpressionTextBox en un diseñador de actividad personalizado
 En este ejemplo se muestra cómo utilizar el objeto <xref:System.Activities.Presentation.View.ExpressionTextBox> en un diseñador de actividad personalizado. La actividad personalizada, `MultiAssign`, asigna dos valores de cadena a dos variables de cadena. Algunos controles de <xref:System.Activities.Presentation.View.ExpressionTextBox> se enlazan a argumentos <xref:System.Activities.InArgument> y otros a argumentos <xref:System.Activities.OutArgument>.
@@ -23,19 +23,19 @@ En este ejemplo se muestra cómo utilizar el objeto <xref:System.Activities.Pres
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1.  Con Visual Studio 2010, abra el archivo ExpressionTextBoxSample.sln.
+1. Con Visual Studio 2010, abra el archivo ExpressionTextBoxSample.sln.
 
-2.  Para compilar la solución, presione Ctrl+MAYÚS+B.
+2. Para compilar la solución, presione Ctrl+MAYÚS+B.
 
 #### <a name="to-run-this-sample"></a>Para ejecutar este ejemplo
 
-1.  Agregue a la solución una aplicación de consola de flujos de trabajo.
+1. Agregue a la solución una aplicación de consola de flujos de trabajo.
 
-2.  Agregue una referencia a la **ExpressionTextBoxSample** proyecto desde el nuevo proyecto de aplicación de consola de flujos de trabajo.
+2. Agregue una referencia a la **ExpressionTextBoxSample** proyecto desde el nuevo proyecto de aplicación de consola de flujos de trabajo.
 
-3.  Compile la solución.
+3. Compile la solución.
 
-4.  Arrastre el **MultiAssign** actividad desde el cuadro de herramientas y colóquelo en el flujo de trabajo.
+4. Arrastre el **MultiAssign** actividad desde el cuadro de herramientas y colóquelo en el flujo de trabajo.
 
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

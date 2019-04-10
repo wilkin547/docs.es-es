@@ -2,12 +2,12 @@
 title: Validador de contraseña de nombre de usuario
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: d15a3753bbea023cd992ed50549ef2c7b0dad74f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 52c22660e56d63121181bdcb618e0bed598ca585
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162755"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345019"
 ---
 # <a name="user-name-password-validator"></a>Validador de contraseña de nombre de usuario
 Este ejemplo muestra cómo implementar un validador UserNamePassword personalizado. Esto es útil en casos donde ninguno de los modos de validación UserNamePassword integrados es apropiado para los requisitos de la aplicación; por ejemplo, cuando los pares nombre de usuario/contraseña se almacenan en un almacén externo, como una base de datos. Este ejemplo muestra un servicio que tiene un validador personalizado que comprueba dos pares de nombre de usuario y contraseña determinados. El cliente usa un par de nombre de usuario y contraseña para autenticar en el servicio.
@@ -278,40 +278,40 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>Para configurar y compilar el ejemplo
 
-1.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-2.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, utilice las instrucciones siguientes.
+2. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, utilice las instrucciones siguientes.
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>Para ejecutar el ejemplo en el mismo equipo
 
-1.  Ejecute Setup.bat desde la carpeta de instalación de ejemplo en un símbolo del sistema de Visual Studio 2012. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
+1. Ejecute Setup.bat desde la carpeta de instalación de ejemplo en un símbolo del sistema de Visual Studio 2012. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!NOTE]
     >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. El conjunto de variables de entorno de ruta de acceso en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables que requiere el script Setup.bat.  
   
-2.  Inicie Service.exe desde \service\bin.  
+2. Inicie Service.exe desde \service\bin.  
   
-3.  Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
+3. Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4.  Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-machines"></a>Para ejecutar el ejemplo en los equipos  
   
-1.  Cree un directorio en el equipo del servicio para los binarios del servicio.  
+1. Cree un directorio en el equipo del servicio para los binarios del servicio.  
   
-2.  Copie los archivos del programa de servicio en el directorio de servicio situado en el equipo del servicio. Copie también los archivos Setup.bat y Cleanup.bat en el equipo del servicio.  
+2. Copie los archivos del programa de servicio en el directorio de servicio situado en el equipo del servicio. Copie también los archivos Setup.bat y Cleanup.bat en el equipo del servicio.  
   
-3.  Necesita un certificado de servidor con el nombre del sujeto que contiene el nombre de dominio completo del equipo. El archivo de configuración para el servidor debe estar actualizado para reflejar este nuevo nombre del certificado.  
+3. Necesita un certificado de servidor con el nombre del sujeto que contiene el nombre de dominio completo del equipo. El archivo de configuración para el servidor debe estar actualizado para reflejar este nuevo nombre del certificado.  
   
-4.  Copie el certificado de servidor en el almacén CurrentUser-TrustedPeople del cliente. Solo necesita hacerlo si el certificado del servidor no está emitido por el emisor de confianza.  
+4. Copie el certificado de servidor en el almacén CurrentUser-TrustedPeople del cliente. Solo necesita hacerlo si el certificado del servidor no está emitido por el emisor de confianza.  
   
-5.  En el archivo App.config situado en el equipo de servicio, cambie el valor de la dirección base para especificar un nombre de equipo completo en lugar del host local.  
+5. En el archivo App.config situado en el equipo de servicio, cambie el valor de la dirección base para especificar un nombre de equipo completo en lugar del host local.  
   
-6.  En el equipo de servicio, inicie Service.exe desde una ventana de símbolo del sistema.  
+6. En el equipo de servicio, inicie Service.exe desde una ventana de símbolo del sistema.  
   
-7.  Copie los archivos de programa del cliente de la carpeta \client\bin\, en la carpeta específica del lenguaje, al equipo del cliente.  
+7. Copie los archivos de programa del cliente de la carpeta \client\bin\, en la carpeta específica del lenguaje, al equipo del cliente.  
   
-8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio.  
+8. En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio.  
   
 9. En el equipo cliente, inicie Client.exe desde la ventana de símbolo del sistema.  
   
@@ -319,4 +319,4 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 #### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
-1.  Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo. Así se elimina el certificado del servidor del almacén de certificados.  
+1. Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo. Así se elimina el certificado del servidor del almacén de certificados.  

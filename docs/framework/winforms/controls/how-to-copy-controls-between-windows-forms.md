@@ -5,19 +5,19 @@ helpviewer_keywords:
 - Windows Forms controls, copying
 - controls [Windows Forms], copying
 ms.assetid: 106c1eb2-1fba-4f69-b2ec-9ea3fa182f1e
-ms.openlocfilehash: 7aa858e7c7215c589d9e39412ef20ec81a1a4239
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8a60dd4c5fc80af46b1552e99abbba37a8a390af
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075788"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345617"
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a>Filtrar para copiar controles entre formularios Windows Forms
 Un control puede copiarse en la misma forma, en otro formulario dentro del proyecto o en el Portapapeles para su uso en otras soluciones.  
   
 ### <a name="to-copy-a-control"></a>Para copiar un control  
   
-1.  Seleccione el control y desde el **editar** menú elija **copia**.  
+1. Seleccione el control y desde el **editar** menú elija **copia**.  
   
  Ahora se puede pegar este control a cualquier formulario que acepte este tipo de control. Además, el control se ha agregado en el Portapapeles.  
   

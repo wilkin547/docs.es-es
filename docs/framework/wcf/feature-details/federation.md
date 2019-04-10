@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114047"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427310"
 ---
 # <a name="federation"></a>Federación
 En este tema se proporciona una información general breve sobre el concepto de seguridad federada. También se describe la compatibilidad de Windows Communication Foundation (WCF) para implementar una arquitectura de seguridad federada. Para una aplicación de ejemplo que demuestre la federación, consulte [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -33,9 +33,9 @@ En este tema se proporciona una información general breve sobre el concepto de 
 |Servicio de tokens de seguridad (STS)|Un servicio web que emite tokens de seguridad; es decir, realiza aserciones basadas en la prueba en la que confía, a quienquiera que confíe en ella. Esto forma la base de la negociación de confianza entre dominios.|  
   
 ### <a name="example-scenario"></a>Escenarios de ejemplo  
- La siguiente ilustración muestra un ejemplo de seguridad federada.  
+ La siguiente ilustración muestra un ejemplo de seguridad federada:  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
+ ![Diagrama que muestra un escenario típico de seguridad federada.](./media/federation/typical-federated-security-scenario.gif)  
   
  Este escenario incluye dos organizaciones: A y B. la organización B tiene un recurso Web (un servicio Web) que algunos usuarios de la organización A encuentran valiosos.  
   
@@ -90,12 +90,12 @@ En este tema se proporciona una información general breve sobre el concepto de 
 ## <a name="sample-implementation-using-wcf"></a>Ejemplo de implementación mediante WCF  
  La siguiente ilustración muestra una implementación de ejemplo para una arquitectura de seguridad federada utilizando la compatibilidad nativa de WCF.  
   
- ![Seguridad de la federación en WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
+ ![Diagrama que muestra un ejemplo de implementación de seguridad de la federación.](./media/federation/federated-security-implementation.gif)  
   
 ### <a name="example-myservice"></a>Ejemplo de MyService  
  El servicio `MyService` expone un punto de conexión único a través de `MyServiceEndpoint`. La siguiente ilustración muestra la dirección, enlace y contrato asociados al extremo.  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
+ ![Diagrama que muestra los detalles de MyServiceEndpoint.](./media/federation/myserviceendpoint-details.gif)  
   
  El punto de conexión de servicio `MyServiceEndpoint` usa el [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) y requiere un token de lenguaje de marcado de aserción de seguridad (SAML) válido con un `accessAuthorized` notificación emitida por STS B. Esto se especifica mediante declaración en la configuración del servicio.  
   
@@ -160,7 +160,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 #### <a name="sts-b"></a>STS de B  
  La siguiente ilustración muestra el STS de B. Como se mencionó anteriormente, un servicio de tokens de seguridad (STS) es también un servicio web y puede tener sus extremos asociados, directiva, etc.  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
+ ![Diagrama que muestra el servicio de token de seguridad B.](./media/federation/myservice-security-token-service-b.gif)  
   
  El STS de B expone un extremo único, denominado `STSEndpoint`, que puede ser de uso para solicitar tokens de seguridad. Específicamente, el STS de B emite tokens SAML con la demanda `accessAuthorized`, que puede presentarse en el sitio del servicio `MyService` para obtener acceso al servicio. Sin embargo, el STS de B requiere que los usuarios presenten un token SAML válido emitido por el STS de A que contiene la demanda `userAuthenticated`. Esto se especifica mediante declaración en la configuración del STS.  
   
@@ -284,7 +284,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>Cliente en la organización A  
  La siguiente ilustración muestra el cliente en la organización A, junto con los pasos implicados para realizar una llamada de servicio `MyService`. Los otros componentes funcionales también se incluyen para ofrecer totalidad.  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
+ ![Diagrama showwing los pasos de una llamada de servicio MyService.](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>Resumen  
  La seguridad federada proporciona una división limpia de responsabilidad y ayuda a crear arquitecturas de servicios seguras y escalables. Como una plataforma para compilar e implementar aplicaciones distribuidas, WCF proporciona compatibilidad nativa para implementar la seguridad federada.  

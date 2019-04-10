@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Utilice la herramienta de definición de esquemas XML para generar clases y documentos de esquema XML
+title: Filtrar para usar la herramienta de definición de esquema XML para generar clases y documentos de esquema XML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 645d6290ec16a772d8c188e8781097e1d67b14ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77bb567d2b7b8fff2b1b8de43b2d5fa36fffb3b3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501556"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346137"
 ---
-# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Procedimiento Utilice la herramienta de definición de esquemas XML para generar clases y documentos de esquema XML
+# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Filtrar para usar la herramienta de definición de esquema XML para generar clases y documentos de esquema XML
 La herramienta XML Schema Definition (Xsd.exe) le permite generar un esquema XML que describe una clase o generar la clase definida por un esquema XML. Los procedimientos siguientes muestran cómo realizar estas operaciones.  
   
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>Para generar clases que cumplen con un esquema concreto  
   
-1.  Abra un símbolo del sistema.  
+1. Abra un símbolo del sistema.  
   
-2.  Pasar el esquema XML como un argumento a la herramienta XML Schema Definition, que crea un conjunto de clases con las que precisamente coinciden el Esquema XML, por ejemplo:  
+2. Pasar el esquema XML como un argumento a la herramienta XML Schema Definition, que crea un conjunto de clases con las que precisamente coinciden el Esquema XML, por ejemplo:  
   
     ```  
     xsd mySchema.xsd  
@@ -34,17 +34,17 @@ La herramienta XML Schema Definition (Xsd.exe) le permite generar un esquema XML
     <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     ```  
   
-3.  Modifique las clases con métodos, propiedades o campos, como sea necesario. Para más información sobre cómo modificar una clase con atributos, vea [Controlar la serialización XML mediante atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) y [Atributos que controlan la serialización SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+3. Modifique las clases con métodos, propiedades o campos, como sea necesario. Para más información sobre cómo modificar una clase con atributos, vea [Controlar la serialización XML mediante atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) y [Atributos que controlan la serialización SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
   
  Es a menudo útil para examinar el esquema de la secuencia XML que se genera cuando se serializan las instancias de una clase (o clases). Por ejemplo, podría publicar su esquema para que otros lo utilicen o podría compararlo con un esquema con el que está intentando lograr la conformidad.  
   
 #### <a name="to-generate-an-xml-schema-document-from-a-set-of-classes"></a>Para generar un documento de esquema XML de un conjunto de clases  
   
-1.  Compile la clase o clases en un archivo DLL.  
+1. Compile la clase o clases en un archivo DLL.  
   
-2.  Abra un símbolo del sistema.  
+2. Abra un símbolo del sistema.  
   
-3.  Pasar el archivo DLL como un argumento a Xsd.exe, por ejemplo:  
+3. Pasar el archivo DLL como un argumento a Xsd.exe, por ejemplo:  
   
     ```  
     xsd MyFile.dll  
@@ -56,8 +56,8 @@ La herramienta XML Schema Definition (Xsd.exe) le permite generar un esquema XML
 
 - <xref:System.Data.DataSet>
 - [Herramienta de definición de esquema XML y serialización XML](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
-- [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Herramienta de definición de esquema XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [Introducir la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Filtrar para serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Filtrar para deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

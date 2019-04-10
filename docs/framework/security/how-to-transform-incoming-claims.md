@@ -1,16 +1,16 @@
 ---
-title: 'Cómo: transformar las notificaciones entrantes'
+title: Cómo transformar las notificaciones entrantes
 ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
-ms.openlocfilehash: 83c6f650580a673d308c7ffd580c785cdb2ab9f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181636"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344642"
 ---
-# <a name="how-to-transform-incoming-claims"></a>Cómo: transformar las notificaciones entrantes
+# <a name="how-to-transform-incoming-claims"></a>Cómo transformar las notificaciones entrantes
 ## <a name="applies-to"></a>Se aplica a  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -58,19 +58,19 @@ ms.locfileid: "50181636"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Para crear una aplicación de ASP.NET sencilla  
   
-1.  Inicie Visual Studio como administrador con permisos elevados.  
+1. Inicie Visual Studio como administrador con permisos elevados.  
   
-2.  En Visual Studio, haga clic en **Archivo**, en **Nuevo** y, después, en **Proyecto**.  
+2. En Visual Studio, haga clic en **Archivo**, en **Nuevo** y, después, en **Proyecto**.  
   
-3.  En la ventana **Nuevo proyecto**, haga clic en **Aplicación de formularios Web Forms ASP.NET**.  
+3. En la ventana **Nuevo proyecto**, haga clic en **Aplicación de formularios Web Forms ASP.NET**.  
   
-4.  En **Nombre**, escriba `TestApp` y haga clic en **Aceptar**.  
+4. En **Nombre**, escriba `TestApp` y haga clic en **Aceptar**.  
   
-5.  Haga clic con el botón derecho en el proyecto **TestApp** en el **Explorador de soluciones** y seleccione **Identity and Access**.  
+5. Haga clic con el botón derecho en el proyecto **TestApp** en el **Explorador de soluciones** y seleccione **Identity and Access**.  
   
-6.  Aparecerá la ventana **Identity and Access**. En **Proveedores**, seleccione **Test your application with the Local Development STS** (Probar la aplicación con el STS de desarrollo local) y haga clic en **Aplicar**.  
+6. Aparecerá la ventana **Identity and Access**. En **Proveedores**, seleccione **Test your application with the Local Development STS** (Probar la aplicación con el STS de desarrollo local) y haga clic en **Aplicar**.  
   
-7.  En el archivo *Default.aspx*, reemplace el marcado existente por el siguiente, después guarde el archivo:  
+7. En el archivo *Default.aspx*, reemplace el marcado existente por el siguiente, después guarde el archivo:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -87,7 +87,7 @@ ms.locfileid: "50181636"
     </asp:Content>  
     ```  
   
-8.  Abra el archivo de código subyacente denominado *Default.aspx.cs*. Reemplace el código existente por el siguiente y, después, guarde el archivo:  
+8. Abra el archivo de código subyacente denominado *Default.aspx.cs*. Reemplace el código existente por el siguiente y, después, guarde el archivo:  
   
     ```csharp  
     using System;  
@@ -113,24 +113,24 @@ ms.locfileid: "50181636"
   
 #### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>Para implementar la transformación de notificaciones con un elemento ClaimsAuthenticationManager personalizado  
   
-1.  En Visual Studio, haga clic con el botón derecho en la solución, haga clic en **Agregar** y, después, en **Nuevo proyecto**.  
+1. En Visual Studio, haga clic con el botón derecho en la solución, haga clic en **Agregar** y, después, en **Nuevo proyecto**.  
   
-2.  En la ventana **Agregar nuevo proyecto**, seleccione **Biblioteca de clases** en la lista de plantillas de **Visual C#**, escriba `ClaimsTransformation` y pulse **Aceptar**. El nuevo proyecto se creará en la carpeta de la solución.  
+2. En la ventana **Agregar nuevo proyecto**, seleccione **Biblioteca de clases** en la lista de plantillas de **Visual C#**, escriba `ClaimsTransformation` y pulse **Aceptar**. El nuevo proyecto se creará en la carpeta de la solución.  
   
-3.  Haga clic con el botón derecho en **Referencias** debajo del proyecto **ClaimsTransformation** y, después, haga clic en **Agregar referencia**.  
+3. Haga clic con el botón derecho en **Referencias** debajo del proyecto **ClaimsTransformation** y, después, haga clic en **Agregar referencia**.  
   
-4.  En la ventana **Administrador de referencias**, seleccione **System.IdentityModel** y, después, haga clic en **Aceptar**.  
+4. En la ventana **Administrador de referencias**, seleccione **System.IdentityModel** y, después, haga clic en **Aceptar**.  
   
-5.  Abra **Class1.cs**, o si no existe, haga clic con el botón derecho en **ClaimsTransformation**, en **Agregar** y, después, en **Clase...**  
+5. Abra **Class1.cs**, o si no existe, haga clic con el botón derecho en **ClaimsTransformation**, en **Agregar** y, después, en **Clase...**  
   
-6.  Agregue lo siguiente mediante las directivas al archivo de código:  
+6. Agregue lo siguiente mediante las directivas al archivo de código:  
   
     ```csharp  
     using System.Security.Claims;  
     using System.Security.Principal;  
     ```  
   
-7.  Agregue la siguiente clase y método en el archivo de código.  
+7. Agregue la siguiente clase y método en el archivo de código.  
   
     > [!WARNING]
     >  El código siguiente se muestra solo con fines demostrativos; asegúrese de que comprueba sus permisos previstos en el código de producción.  
@@ -150,7 +150,7 @@ ms.locfileid: "50181636"
     }  
     ```  
   
-8.  Guarde el archivo y compile el proyecto **ClaimsTransformation**.  
+8. Guarde el archivo y compile el proyecto **ClaimsTransformation**.  
   
 9. En su proyecto de ASP.NET **TestApp**, haga clic con el botón derecho en Referencias y, después, haga clic en **Agregar referencias**.  
   
@@ -167,10 +167,10 @@ ms.locfileid: "50181636"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Para probar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios  
   
-1.  Presione **F5** para compilar y ejecutar la aplicación. Debe estar presente con *Default.aspx*.  
+1. Presione **F5** para compilar y ejecutar la aplicación. Debe estar presente con *Default.aspx*.  
   
-2.  En la página *Default.aspx*, debería ver una tabla debajo del título **Sus notificaciones** con la información de notificaciones **Emisor**, **OriginalIssuer**, **Tipo**, **Valor** y **ValueType** sobre la cuenta. La última fila debe estar presente de la manera siguiente:  
+2. En la página *Default.aspx*, debería ver una tabla debajo del título **Sus notificaciones** con la información de notificaciones **Emisor**, **OriginalIssuer**, **Tipo**, **Valor** y **ValueType** sobre la cuenta. La última fila debe estar presente de la manera siguiente:  
   
     ||||||  
     |-|-|-|-|-|  
-    |LOCAL AUTHORITY|LOCAL AUTHORITY|`http://schemas.microsoft.com/ws/2008/06/identity/claims/role`|Admin|<https://www.w3.org/2001/XMLSchema#string>|
+    |LOCAL AUTHORITY|LOCAL AUTHORITY|`http://schemas.microsoft.com/ws/2008/06/identity/claims/role`|Administrador|<https://www.w3.org/2001/XMLSchema#string>|

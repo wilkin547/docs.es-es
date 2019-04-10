@@ -2,19 +2,19 @@
 title: Filtrar para crear un servicio WCF que se comunique a través de WebSockets
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 28a200b3e531f524e246c3d2fa1961573ec4e014
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223191"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346371"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Filtrar para crear un servicio WCF que se comunique a través de WebSockets
 Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  WebSockets se usará cuando <xref:System.ServiceModel.NetHttpBinding> determine que el contrato de servicio define un contrato de devolución de llamada. En este tema se describe cómo implementar un servicio de WCF y un cliente que use <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  
   
 ### <a name="define-the-service"></a>Definir el servicio  
   
-1.  Definir un contrato de devolución de llamada  
+1. Definir un contrato de devolución de llamada  
   
     ```csharp  
     [ServiceContract]  
@@ -27,7 +27,7 @@ Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceMo
   
      La aplicación cliente implementará este contrato para permitir que el servicio devuelva mensajes al cliente.  
   
-2.  Defina el contrato de servicio y especifique la interfaz `IStockQuoteCallback` como contrato de devolución de llamada.  
+2. Defina el contrato de servicio y especifique la interfaz `IStockQuoteCallback` como contrato de devolución de llamada.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,7 +38,7 @@ Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceMo
         }  
     ```  
   
-3.  Implemente el contrato de servicios.  
+3. Implemente el contrato de servicios.  
   
     ```  
     public class StockQuoteService : IStockQuoteService  
@@ -61,7 +61,7 @@ Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceMo
   
      La operación de servicio `StartSendingQuotes` se implementa como una llamada asincrónica. Recuperamos el canal de devolución de llamada mediante `OperationContext` y si el canal está abierto, hacemos una llamada asincrónica en el canal de devolución de llamada.  
   
-4.  Configure el servicio  
+4. Configure el servicio  
   
     ```xml  
     <configuration>  
@@ -94,7 +94,7 @@ Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceMo
   
 ### <a name="define-the-client"></a>Definir el cliente  
   
-1.  Implemente el contrato de devolución de llamada.  
+1. Implemente el contrato de devolución de llamada.  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  

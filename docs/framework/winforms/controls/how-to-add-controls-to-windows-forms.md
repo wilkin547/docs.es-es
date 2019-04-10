@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 72b5931a79284a93a4e0fdf3cb2cc3b03157f5f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 04597283a8ff2e21a0f227268671d3605eac6356
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106488"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343595"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Filtrar para agregar controles a formularios Windows Forms
 Mayoría de los formularios está diseñada agregando controles a la superficie del formulario para definir una interfaz de usuario (UI). Un *control* es un componente en un formulario que se usa para mostrar información o Aceptar la entrada del usuario. Para obtener más información acerca de los controles, vea [controles de formularios Windows Forms](index.md).  
@@ -24,11 +24,11 @@ Mayoría de los formularios está diseñada agregando controles a la superficie 
   
 ### <a name="to-draw-a-control-on-a-form"></a>Para dibujar un control en un formulario  
   
-1.  Abra el formulario. Para obtener más información, vea [Cómo: Mostrar Windows Forms en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Abra el formulario. Para obtener más información, vea [Cómo: Mostrar Windows Forms en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  En el **cuadro de herramientas**, haga clic en el control que desea agregar al formulario.  
+2. En el **cuadro de herramientas**, haga clic en el control que desea agregar al formulario.  
   
-3.  En el formulario, haga clic donde desee que la esquina superior izquierda del control que se ubiquen y arrastre hasta donde desee que la esquina inferior derecha del control que se encuentra.  
+3. En el formulario, haga clic donde desee que la esquina superior izquierda del control que se ubiquen y arrastre hasta donde desee que la esquina inferior derecha del control que se encuentra.  
   
      El control se agrega al formulario con el tamaño y la ubicación especificada.  
   
@@ -37,9 +37,9 @@ Mayoría de los formularios está diseñada agregando controles a la superficie 
   
 ### <a name="to-drag-a-control-to-a-form"></a>Para arrastrar un control a un formulario  
   
-1.  Abra el formulario. Para obtener más información, vea [Cómo: Mostrar Windows Forms en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Abra el formulario. Para obtener más información, vea [Cómo: Mostrar Windows Forms en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  En el **cuadro de herramientas**, haga clic en el control que desee y arrástrelo al formulario.  
+2. En el **cuadro de herramientas**, haga clic en el control que desee y arrástrelo al formulario.  
   
      El control se agrega al formulario en la ubicación especificada en su tamaño predeterminado.  
   
@@ -53,7 +53,7 @@ Mayoría de los formularios está diseñada agregando controles a la superficie 
   
 ### <a name="to-add-a-control-to-a-form-programmatically"></a>Para agregar un control a un formulario mediante programación  
   
-1.  En el método que controla el botón `Click` evento dentro de la clase del formulario, insertar código similar al siguiente para agregar una referencia a la variable de control, establezca el control `Location`y agregar el control.  
+1. En el método que controla el botón `Click` evento dentro de la clase del formulario, insertar código similar al siguiente para agregar una referencia a la variable de control, establezca el control `Location`y agregar el control.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

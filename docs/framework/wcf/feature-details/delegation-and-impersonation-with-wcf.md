@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122244"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345526"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegación y suplantación con WCF
 La*suplantación* es una técnica habitual que utilizan los servicios para restringir el acceso de los clientes a los recursos de un dominio de servicio. Los recursos de dominio de servicio pueden ser recursos de equipo, como archivos locales (suplantación), o un recurso en otro equipo, como un recurso compartido de archivos (delegación). Para obtener una aplicación de ejemplo, consulte [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obtener un ejemplo de cómo utilizar la suplantación, vea [Cómo: Suplantar un cliente en un servicio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -191,13 +191,13 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>Cómo: Configurar una aplicación para utilizar la delegación restringida  
  Antes de poder utilizar la delegación restringida, debe configurarse el emisor, el receptor y el controlador de dominio para poder utilizarla. La siguiente lista de procedimiento enumera los pasos para habilitar la delegación restringida. Para obtener más información sobre las diferencias entre la delegación y la delegación restringida, consulte la parte de [Windows Server 2003 Kerberos Extensions (Extensiones Kerberos de Windows Server 2003)](https://go.microsoft.com/fwlink/?LinkId=100194) en la que se explica la delegación restringida.  
   
-1.  En el controlador de dominio, desactive la casilla **La cuenta es importante y no se puede delegar** de la cuenta con la que se está ejecutando la aplicación cliente.  
+1. En el controlador de dominio, desactive la casilla **La cuenta es importante y no se puede delegar** de la cuenta con la que se está ejecutando la aplicación cliente.  
   
-2.  En el controlador de dominio, active la casilla **La cuenta es de confianza para la delegación** para la cuenta con la que se está ejecutando la aplicación cliente.  
+2. En el controlador de dominio, active la casilla **La cuenta es de confianza para la delegación** para la cuenta con la que se está ejecutando la aplicación cliente.  
   
-3.  En el controlador de domino, configure el equipo de nivel medio de modo que sea de confianza para la delegación haciendo clic en la opción **Equipo de confianza para la delegación** .  
+3. En el controlador de domino, configure el equipo de nivel medio de modo que sea de confianza para la delegación haciendo clic en la opción **Equipo de confianza para la delegación** .  
   
-4.  En el controlador de domino, configure el equipo de nivel medio para utilizar la delegación restringida haciendo clic en la opción **Confiar en este equipo solo para delegación en servicios especificados** .  
+4. En el controlador de domino, configure el equipo de nivel medio para utilizar la delegación restringida haciendo clic en la opción **Confiar en este equipo solo para delegación en servicios especificados** .  
   
  Para obtener instrucciones detalladas acerca de la configuración de la delegación restringida, vea los siguientes temas en MSDN:  
   

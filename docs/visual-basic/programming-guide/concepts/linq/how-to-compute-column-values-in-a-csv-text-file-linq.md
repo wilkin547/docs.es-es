@@ -2,19 +2,19 @@
 title: Filtrar Calcular valores de columna en un archivo de texto CSV (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 1249b5555c9ef7074410682ad9b26e5b003aea9c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b226d981dd0cd61789e88ab06e602dd619f3f6c9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829005"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344226"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Filtrar Calcular valores de columna en un archivo de texto CSV (LINQ) (Visual Basic)
 En este ejemplo se muestra cómo efectuar cálculos agregados (como sumas, promedios, mínimos y máximos) en las columnas de un archivo .csv. Los principios de ejemplo que se muestran aquí se pueden aplicar a otros tipos de textos estructurados.  
   
 ### <a name="to-create-the-source-file"></a>Para crear el archivo de origen  
   
-1.  Copie las líneas siguientes en un archivo llamado scores.csv y guárdelo en la carpeta del proyecto. Imagínese que la primera columna representa un identificador de estudiante y que las columnas siguientes representan las notas de cuatro exámenes.  
+1. Copie las líneas siguientes en un archivo llamado scores.csv y guárdelo en la carpeta del proyecto. Imagínese que la primera columna representa un identificador de estudiante y que las columnas siguientes representan las notas de cuatro exámenes.  
   
     ```  
     111, 97, 92, 81, 60  

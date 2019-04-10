@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343719"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Filtrar para enviar datos al formulario secundario MDI activo
 A menudo, en el contexto de [aplicaciones de interfaz de múltiples documentos (MDI)](multiple-document-interface-mdi-applications.md), deberá enviar datos a la ventana secundaria activa, por ejemplo, cuando el usuario pega datos desde el Portapapeles en una aplicación MDI.  
@@ -25,7 +25,7 @@ A menudo, en el contexto de [aplicaciones de interfaz de múltiples documentos (
   
 ### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Para enviar datos a la ventana secundaria MDI activa desde el Portapapeles  
   
-1.  Dentro de un método, copie el texto del Portapapeles en el control activo del formulario secundario activo.  
+1. Dentro de un método, copie el texto del Portapapeles en el control activo del formulario secundario activo.  
   
     > [!NOTE]
     >  En este ejemplo se da por supuesto que hay un formulario primario MDI (`Form1`) que tiene una o varias ventanas secundarias MDI que contiene un <xref:System.Windows.Forms.RichTextBox> control. Para obtener más información, consulte [crear los formularios MDI primario](how-to-create-mdi-parent-forms.md).  

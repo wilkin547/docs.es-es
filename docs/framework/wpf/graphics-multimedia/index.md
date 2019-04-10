@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 1416b07818ecaeb75e8389c053344b8a367ea69d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c9ddc1a1060b7d70ee7a6c9050971709a433961a
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190657"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427206"
 ---
 # <a name="graphics-and-multimedia"></a>Gráficos y multimedia
 <a name="introduction"></a>
@@ -55,7 +55,7 @@ ms.locfileid: "59190657"
 ### <a name="2-d-shapes"></a>Formas 2D  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Proporciona una biblioteca de uso común, dibujadas mediante vectores [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] formas, como rectángulos y elipses que se muestra en la siguiente ilustración.  
   
- ![Elipses y rectángulos](./media/wpfintrofigure4.PNG "WPFIntroFigure4")  
+ ![Diagrama que muestra elipses y rectángulos.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)  
   
  Estas formas intrínsecas de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] no son solo formas: son elementos programables que implementan muchas de las características que se esperan de los controles más comunes, entre los que se incluyen la entrada por mouse y teclado. El ejemplo siguiente muestra cómo controlar el <xref:System.Windows.UIElement.MouseUp> eventos accionados al hacer clic una <xref:System.Windows.Shapes.Ellipse> elemento.  
   
@@ -89,21 +89,21 @@ End Class
   
  En la ilustración siguiente se muestra el resultado del anterior marcado y código [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] subyacente.  
   
- ![Ventana con el texto "ha hecho clic en la elipse"](./media/wpfintrofigure12.png "WPFIntroFigure12")  
+ ![Un cuadro de mensaje que dice "¡You clicked la elipse!"](./media/index/messagebox-text-output.png)  
   
  Para obtener más información, consulte [Información general sobre formas y dibujo básico en WPF](shapes-and-basic-drawing-in-wpf-overview.md). Para obtener un ejemplo introductorio, vea [Shape Elements Sample](https://go.microsoft.com/fwlink/?LinkID=160037) (Ejemplo de elementos de forma).  
   
 ### <a name="2-d-geometries"></a>Geometrías 2D  
  Cuando las formas [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ofrece no sean suficientes, puede usar la compatibilidad con geometrías y trazados de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para crear sus propias formas. En la ilustración siguiente se muestra cómo se pueden usar geometrías para crear formas, por ejemplo, un pincel de dibujo, y para recortar otros elementos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
- ![Diversos usos de un trayecto](./media/wpfintrofigure5.PNG "WPFIntroFigure5")  
+ ![Captura de pantalla que muestra cómo puede usar geometrías para crear formas.](./media/index/use-geometries-create-shapes.png)  
   
  Para más información, consulte [Información general sobre geometría](geometry-overview.md). Para obtener un ejemplo introductorio, vea [Ejemplo de geometrías](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ### <a name="2-d-effects"></a>Efectos 2D  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Proporciona una biblioteca de [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] clases que puede usar para crear una variedad de efectos. La funcionalidad de representación [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ofrece la posibilidad de pintar elementos de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que tengan degradados, mapas de bits, dibujos y vídeos; así como para manipularlos mediante rotación, escalado y sesgado. En la ilustración siguiente se ofrece un ejemplo de los muchos efectos que puede lograr mediante pinceles de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
- ![Ilustración de diferentes pinceles](./media/wpfintrofigure6.PNG "WPFIntroFigure6")  
+ ![Ilustración que muestra los elementos de pintura y diferentes pinceles WPF.](./media/index/brushes-paint-elements.png)  
   
  Para obtener más información, consulte [Información general sobre pinceles de WPF](wpf-brushes-overview.md). Para obtener un ejemplo introductorio, vea [Ejemplo de pinceles](https://go.microsoft.com/fwlink/?LinkID=159973).  
   
@@ -111,7 +111,8 @@ End Class
 ## <a name="3-d-rendering"></a>Representación 3D  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Proporciona un conjunto de [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] capacidades de representación que se integran con [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] compatibilidad con gráficos en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en orden para crear el diseño más emocionante, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]y visualización de datos. En un extremo del espectro, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] le permite representar imágenes [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] en las superficies de formas [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)], lo que se muestra en la siguiente ilustración.  
   
- ![Captura de pantalla de ejemplo Visual3D](./media/wpfintrofigure13.png "WPFIntroFigure13")  
+
+ ![Captura de pantalla de un ejemplo que muestra las formas 3D con texturas diferentes.](./media/index/visual-three-dimensional-shape.png)  
   
  Para obtener más información, consulte [Información general sobre gráficos 3D](3-d-graphics-overview.md). Para obtener un ejemplo introductorio, vea [3-D Solids Sample](https://go.microsoft.com/fwlink/?LinkID=159964) (Ejemplo de sólidos 3D).  
   
@@ -119,7 +120,7 @@ End Class
 ## <a name="animation"></a>Animación  
  Use la animación para hacer que los controles y elementos crezcan, vibren, giren o se desvanezcan, crear atractivas transiciones de página y mucho más. Dado que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] le permite animar la mayoría de las propiedades, no solo podrá animar la mayoría de los objetos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], también podrá usar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para animar objetos personalizados que haya creado.  
   
- ![Imágenes de un cubo animado](./media/wpfintrofigure7.png "WPFIntroFigure7")  
+ ![Captura de pantalla de un cubo animado.](./media/index/animate-custom-objects.png)  
   
  Para obtener más información, consulte [Información general sobre animaciones](animation-overview.md). Para obtener un ejemplo introductorio, vea [Animation Example Gallery](https://go.microsoft.com/fwlink/?LinkID=159969) (Galería de ejemplos de animación).  
   

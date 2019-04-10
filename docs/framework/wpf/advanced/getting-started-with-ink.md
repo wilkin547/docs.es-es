@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365573"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343602"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Empezar a trabajar con entradas manuscritas en WPF
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) tiene una característica de tinta que fac
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para usar los ejemplos siguientes, primero [instalar Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). También ayuda a saber cómo escribir aplicaciones básicas de WPF. Para obtener ayuda de introducción a WPF, consulte [Tutorial: Mi primera aplicación de escritorio de WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Para usar los ejemplos siguientes, en primer lugar instale [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). También ayuda a saber cómo escribir aplicaciones básicas de WPF. Para obtener ayuda de introducción a WPF, consulte [Tutorial: Mi primera aplicación de escritorio de WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Guía de inicio rápido
 
@@ -110,7 +110,7 @@ Puede tener acceso a todas las características WPF del código de procedimiento
 
 ## <a name="see-also"></a>Vea también
 
-- [Entrada de lápiz digital](digital-ink.md)
-- [Recopilación de entradas de lápiz](collecting-ink.md)
-- [Reconocimiento de escritura a mano](handwriting-recognition.md)
-- [Almacenamiento de entradas de lápiz](storing-ink.md)
+- [Entrada manuscrita digital](digital-ink.md)
+- [Recopilación de entradas manuscritas](collecting-ink.md)
+- [Reconocimiento de entradas manuscritas](handwriting-recognition.md)
+- [Almacenar entradas manuscritas](storing-ink.md)

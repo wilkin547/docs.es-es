@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: d736d80a05469dafecbdaf196701c14528ee7d26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230023"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344928"
 ---
 # <a name="xaml-resources"></a>Recursos XAML
 Un recurso es un objeto que se puede volver a usar en diferentes sitios de la aplicación. Pinceles y estilos son ejemplos de recursos. Esta introducción describe cómo usar los recursos de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. También puede crear y tener acceso a recursos mediante código o indistintamente entre código y [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Para obtener más información, consulte [recursos y código](resources-and-code.md).  
@@ -69,11 +69,11 @@ Un recurso es un objeto que se puede volver a usar en diferentes sitios de la ap
   
 #### <a name="static-resource-lookup-behavior"></a>Comportamiento de búsqueda de recursos estáticos  
   
-1.  El proceso de búsqueda comprueba la clave solicitada en el diccionario de recursos que ha definido el elemento que establece la propiedad.  
+1. El proceso de búsqueda comprueba la clave solicitada en el diccionario de recursos que ha definido el elemento que establece la propiedad.  
   
-2.  Después, el proceso de búsqueda recorre el árbol lógico hacia arriba, hasta el elemento primario y su diccionario de recursos. Esto continúa hasta que se alcanza el elemento raíz.  
+2. Después, el proceso de búsqueda recorre el árbol lógico hacia arriba, hasta el elemento primario y su diccionario de recursos. Esto continúa hasta que se alcanza el elemento raíz.  
   
-3.  Después, se comprueban los recursos de la aplicación. Recursos de la aplicación son aquellos recursos dentro del diccionario de recursos definido por el <xref:System.Windows.Application> objeto para su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación.  
+3. Después, se comprueban los recursos de la aplicación. Recursos de la aplicación son aquellos recursos dentro del diccionario de recursos definido por el <xref:System.Windows.Application> objeto para su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación.  
   
  Las referencias de recursos estáticos del interior de un diccionario de recursos deben hacer referencia a un recurso que ya se haya definido léxicamente antes que la referencia de recurso. No se pueden resolver las referencias adelantadas mediante una referencia de recursos estáticos. Por este motivo, si usa referencias de recursos estáticos, debe diseñar la estructura del diccionario de recursos de manera que los recursos previstos para su uso mediante recurso se definan en o cerca del principio de cada diccionario de recursos respectivo.  
   
@@ -101,19 +101,19 @@ Un recurso es un objeto que se puede volver a usar en diferentes sitios de la ap
 #### <a name="dynamic-resource-lookup-behavior"></a>Comportamiento de búsqueda de recursos dinámicos  
  Comportamiento de búsqueda de recursos de una referencia de recurso dinámico es similar al comportamiento de búsqueda en el código si llama a <xref:System.Windows.FrameworkElement.FindResource%2A> o <xref:System.Windows.FrameworkElement.SetResourceReference%2A>.  
   
-1.  El proceso de búsqueda comprueba la clave solicitada en el diccionario de recursos que ha definido el elemento que establece la propiedad.  
+1. El proceso de búsqueda comprueba la clave solicitada en el diccionario de recursos que ha definido el elemento que establece la propiedad.  
   
     -   Si el elemento define un <xref:System.Windows.FrameworkElement.Style%2A> propiedad, el <xref:System.Windows.Style.Resources%2A> diccionario dentro de la <xref:System.Windows.Style> está activada.  
   
     -   Si el elemento define un <xref:System.Windows.Controls.Control.Template%2A> propiedad, el <xref:System.Windows.FrameworkTemplate.Resources%2A> diccionario dentro de la <xref:System.Windows.FrameworkTemplate> está activada.  
   
-2.  Después, el proceso de búsqueda recorre el árbol lógico hacia arriba, hasta el elemento primario y su diccionario de recursos. Esto continúa hasta que se alcanza el elemento raíz.  
+2. Después, el proceso de búsqueda recorre el árbol lógico hacia arriba, hasta el elemento primario y su diccionario de recursos. Esto continúa hasta que se alcanza el elemento raíz.  
   
-3.  Después, se comprueban los recursos de la aplicación. Recursos de la aplicación son aquellos recursos dentro del diccionario de recursos definido por el <xref:System.Windows.Application> objeto para su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación.  
+3. Después, se comprueban los recursos de la aplicación. Recursos de la aplicación son aquellos recursos dentro del diccionario de recursos definido por el <xref:System.Windows.Application> objeto para su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación.  
   
-4.  Se comprueba el diccionario de recursos de temas para el tema activo actualmente. Si el tema cambia en tiempo de ejecución, el valor se vuelve a evaluar.  
+4. Se comprueba el diccionario de recursos de temas para el tema activo actualmente. Si el tema cambia en tiempo de ejecución, el valor se vuelve a evaluar.  
   
-5.  Se comprueban los recursos del sistema.  
+5. Se comprueban los recursos del sistema.  
   
  El comportamiento de excepción (si existe) varía:  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e39e9b3cf83be03d9bb3a55e3741915588e755a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a60f03d85997d20b54366360f104519c9c75f5e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499582"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343875"
 ---
 # <a name="net-framework-cryptography-model"></a>Modelo de criptografía de .NET Framework
 .NET Framework proporciona implementaciones de numerosos algoritmos criptográficos estándar. Estos algoritmos son fáciles de usar y tienen las propiedades predeterminadas más seguras. Además, el modelo de criptografía de .NET Framework de herencia de objetos, diseño de secuencias y configuración es muy extensible.  
@@ -32,17 +32,17 @@ ms.locfileid: "54499582"
 ## <a name="how-algorithms-are-implemented-in-the-net-framework"></a>Cómo se implementan los algoritmos en .NET Framework  
  Como ejemplo de las distintas implementaciones disponibles de un algoritmo, considere los algoritmos simétricos. La base de todos los algoritmos simétricos es <xref:System.Security.Cryptography.SymmetricAlgorithm>, que heredan los siguientes algoritmos:  
   
-1.  <xref:System.Security.Cryptography.Aes>  
+1. <xref:System.Security.Cryptography.Aes>  
   
-2.  <xref:System.Security.Cryptography.DES>  
+2. <xref:System.Security.Cryptography.DES>  
   
-3.  <xref:System.Security.Cryptography.RC2>  
+3. <xref:System.Security.Cryptography.RC2>  
   
-4.  <xref:System.Security.Cryptography.Rijndael>  
+4. <xref:System.Security.Cryptography.Rijndael>  
   
-5.  <xref:System.Security.Cryptography.TripleDES>  
+5. <xref:System.Security.Cryptography.TripleDES>  
   
- Dos clases heredan <xref:System.Security.Cryptography.Aes>: <xref:System.Security.Cryptography.AesCryptoServiceProvider> y <xref:System.Security.Cryptography.AesManaged>. La clase <xref:System.Security.Cryptography.AesCryptoServiceProvider> es un contenedor que envuelve la implementación de Aes de la API de criptografía de Windows (CAPI), mientras que la clase <xref:System.Security.Cryptography.AesManaged> está escrita completamente en código administrado. También hay un tercer tipo de implementación, Cryptography Next Generation (CNG), además de las implementaciones administradas y de CAPI. Un ejemplo de un algoritmo CNG es <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Los algoritmos CNG se encuentran disponibles en Windows Vista y versiones posteriores.  
+ <xref:System.Security.Cryptography.Aes> es heredado por dos clases: <xref:System.Security.Cryptography.AesCryptoServiceProvider> y <xref:System.Security.Cryptography.AesManaged>. La clase <xref:System.Security.Cryptography.AesCryptoServiceProvider> es un contenedor que envuelve la implementación de Aes de la API de criptografía de Windows (CAPI), mientras que la clase <xref:System.Security.Cryptography.AesManaged> está escrita completamente en código administrado. También hay un tercer tipo de implementación, Cryptography Next Generation (CNG), además de las implementaciones administradas y de CAPI. Un ejemplo de un algoritmo CNG es <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Los algoritmos CNG se encuentran disponibles en Windows Vista y versiones posteriores.  
   
  Puede elegir qué implementación es mejor para usted.  Las implementaciones administradas están disponibles en todas las plataformas compatibles con .NET Framework.  Las implementaciones de CAPI están disponibles en sistemas operativos anteriores y ya no se desarrollan. CNG es la última implementación, donde se lleva cabo el nuevo desarrollo. Sin embargo, las implementaciones administradas no disponen del certificado de Estándares de procesamiento de información federal (FIPS) y pueden ser más lentas que las clases contenedoras.  
   
@@ -89,4 +89,4 @@ ms.locfileid: "54499582"
   
 ## <a name="see-also"></a>Vea también
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [servicios criptográficos](../../../docs/standard/security/cryptographic-services.md)

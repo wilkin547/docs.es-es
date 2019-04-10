@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
-ms.openlocfilehash: 7509e2f5035cb05c20af379f9f6a141177d540d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127054"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344330"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Tutorial: Implementar el modo virtual en el control DataGridView de formularios Windows Forms
 Cuando desea mostrar grandes cantidades de datos tabulares en una <xref:System.Windows.Forms.DataGridView> control, puede establecer el <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> propiedad `true` y administrar explícitamente la interacción del control con su almacén de datos. Esto le permite ajustar el rendimiento del control en esta situación.  
@@ -30,7 +30,7 @@ Cuando desea mostrar grandes cantidades de datos tabulares en una <xref:System.W
   
 #### <a name="to-implement-virtual-mode"></a>Para implementar el modo virtual  
   
-1.  Cree una clase que deriva de <xref:System.Windows.Forms.Form> y contiene un <xref:System.Windows.Forms.DataGridView> control.  
+1. Cree una clase que deriva de <xref:System.Windows.Forms.Form> y contiene un <xref:System.Windows.Forms.DataGridView> control.  
   
      El siguiente código contiene alguna inicialización básica. Declara algunas variables que se usará en pasos posteriores, se proporciona un `Main` método y proporciona un diseño de forma sencilla en el constructor de clase.  
   
@@ -41,13 +41,13 @@ Cuando desea mostrar grandes cantidades de datos tabulares en una <xref:System.W
     [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#002](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#002)]
     [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#002](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#002)]  
   
-2.  Implementar un controlador para el formulario <xref:System.Windows.Forms.Form.Load> eventos que inicializa el <xref:System.Windows.Forms.DataGridView> controlar y rellena el almacén de datos con valores de ejemplo.  
+2. Implementar un controlador para el formulario <xref:System.Windows.Forms.Form.Load> eventos que inicializa el <xref:System.Windows.Forms.DataGridView> controlar y rellena el almacén de datos con valores de ejemplo.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#110)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#110)]  
   
-3.  Implementar un controlador para el <xref:System.Windows.Forms.DataGridView.CellValueNeeded> eventos que recupera el valor de celda solicitado desde el almacén de datos o el `Customer` objeto actualmente en la edición.  
+3. Implementar un controlador para el <xref:System.Windows.Forms.DataGridView.CellValueNeeded> eventos que recupera el valor de celda solicitado desde el almacén de datos o el `Customer` objeto actualmente en la edición.  
   
      Este evento se produce siempre que el <xref:System.Windows.Forms.DataGridView> control necesita dibujar una celda.  
   
@@ -55,13 +55,13 @@ Cuando desea mostrar grandes cantidades de datos tabulares en una <xref:System.W
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#120)]  
   
-4.  Implementar un controlador para el <xref:System.Windows.Forms.DataGridView.CellValuePushed> eventos que almacena un valor de celda modificada en el `Customer` objeto que representa la fila editada. Este evento se produce cada vez que el usuario confirma un cambio del valor de celda.  
+4. Implementar un controlador para el <xref:System.Windows.Forms.DataGridView.CellValuePushed> eventos que almacena un valor de celda modificada en el `Customer` objeto que representa la fila editada. Este evento se produce cada vez que el usuario confirma un cambio del valor de celda.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#130)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#130)]  
   
-5.  Implementar un controlador para el <xref:System.Windows.Forms.DataGridView.NewRowNeeded> eventos que crea un nuevo `Customer` objeto que representa una fila recién creada.  
+5. Implementar un controlador para el <xref:System.Windows.Forms.DataGridView.NewRowNeeded> eventos que crea un nuevo `Customer` objeto que representa una fila recién creada.  
   
      Este evento se produce cada vez que el usuario escribe la fila para los nuevos registros.  
   
@@ -69,7 +69,7 @@ Cuando desea mostrar grandes cantidades de datos tabulares en una <xref:System.W
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#140](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#140)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#140)]  
   
-6.  Implementar un controlador para el <xref:System.Windows.Forms.DataGridView.RowValidated> eventos que guarda filas nuevas o modificadas en el almacén de datos.  
+6. Implementar un controlador para el <xref:System.Windows.Forms.DataGridView.RowValidated> eventos que guarda filas nuevas o modificadas en el almacén de datos.  
   
      Este evento se produce cuando el usuario cambia la fila actual.  
   
@@ -77,7 +77,7 @@ Cuando desea mostrar grandes cantidades de datos tabulares en una <xref:System.W
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#150](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#150)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#150](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#150)]  
   
-7.  Implementar un controlador para el <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> evento que indica si el <xref:System.Windows.Forms.DataGridView.CancelRowEdit> se producirá un evento cuando el usuario señala la reversión de la fila, presione ESC dos veces en modo de edición o una vez fuera del modo de edición.  
+7. Implementar un controlador para el <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> evento que indica si el <xref:System.Windows.Forms.DataGridView.CancelRowEdit> se producirá un evento cuando el usuario señala la reversión de la fila, presione ESC dos veces en modo de edición o una vez fuera del modo de edición.  
   
      De forma predeterminada, <xref:System.Windows.Forms.DataGridView.CancelRowEdit> se produce al crear una nueva versión de fila cuando se han modificado las celdas de la fila actual a menos que el <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> propiedad está establecida en `true` en el <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> controlador de eventos. Este evento es útil cuando el ámbito de confirmación se determina en tiempo de ejecución.  
   
@@ -85,7 +85,7 @@ Cuando desea mostrar grandes cantidades de datos tabulares en una <xref:System.W
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#160)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#160)]  
   
-8.  Implementar un controlador para el <xref:System.Windows.Forms.DataGridView.CancelRowEdit> eventos que descartan los valores de la `Customer` objeto que representa la fila actual.  
+8. Implementar un controlador para el <xref:System.Windows.Forms.DataGridView.CancelRowEdit> eventos que descartan los valores de la `Customer` objeto que representa la fila actual.  
   
      Este evento se produce cuando el usuario señala la reversión de la fila, presione ESC dos veces en modo de edición o una vez fuera del modo de edición. Este evento no se produce si no hay ninguna celda en la fila actual se han modificado o si el valor de la <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> se ha establecido la propiedad en `false` en un <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> controlador de eventos.  
   
