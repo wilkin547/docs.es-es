@@ -2,12 +2,12 @@
 title: <udpTransportSettings>
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: f0f58b9c93d00d300d4a81b443b7013203484136
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f5be9681dc69fd68dfdfa90f4eb305dc4aa4514b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258193"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218503"
 ---
 # <a name="udptransportsettings"></a>\<udpTransportSettings>
 Este elemento de configuración expone la configuración de transporte UDP para [ \<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md).  
@@ -62,7 +62,8 @@ Este elemento de configuración expone la configuración de transporte UDP para 
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<udpDiscoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|punto de conexión estándar que tiene un contrato de detección fijo y enlace de transporte UDP.|  
+|[\<udpDiscoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|Punto de conexión estándar que tiene un contrato de detección fijo y enlace de transporte UDP.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Discovery.UdpTransportSettings>

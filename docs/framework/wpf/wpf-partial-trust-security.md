@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: c0391099d02933cb8a32a2e134dad949034138ad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218386"
 ---
 # <a name="wpf-partial-trust-security"></a>Seguridad de confianza parcial de WPF
 <a name="introduction"></a> En general, deben restringirse las aplicaciones de Internet para que no tengan acceso directo a recursos críticos del sistema y así evitar daños malintencionados. De forma predeterminada, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] y lenguajes de scripting del lado cliente no tienen acceso a recursos críticos del sistema. Dado que las aplicaciones hospedadas en Explorador de Windows Presentation Foundation (WPF) se pueden iniciar desde el explorador, deben cumplir un conjunto similar de restricciones. Para aplicar estas restricciones, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se basa en [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] y [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (consulte [estrategia de seguridad de WPF: seguridad de la plataforma](wpf-security-strategy-platform-security.md)). De forma predeterminada, las aplicaciones hospedadas en explorador solicitan la zona de Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] conjunto de permisos, independientemente de si se inician desde Internet, la intranet local o el equipo local. Las aplicaciones que se ejecutan con menos permisos que el conjunto completo de permisos se dice que se ejecutan con confianza parcial.  
@@ -33,7 +33,7 @@ ms.locfileid: "57371637"
   
 -   [Programación de confianza parcial](#Partial_Trust_Programming)  
   
--   [Administrar permisos](#Managing_Permissions)  
+-   [Gestión de permisos](#Managing_Permissions)  
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>Compatibilidad de confianza parcial de las características de WPF  
@@ -164,6 +164,7 @@ ms.locfileid: "57371637"
  Como alternativa, puede usar el modelo de implementación de confianza de ClickOnce para realizar una implementación de plena confianza desde cualquier zona de seguridad. Para obtener más información, consulte [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) y [seguridad](security-wpf.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Seguridad](security-wpf.md)
 - [Estrategia de seguridad de WPF: Seguridad de plataforma](wpf-security-strategy-platform-security.md)
 - [Estrategia de seguridad de WPF: Ingeniería de seguridad](wpf-security-strategy-security-engineering.md)

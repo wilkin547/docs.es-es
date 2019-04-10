@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Obtener la vista predeterminada de una recolección de datos
+title: Filtrar Obtener la vista predeterminada de una colección de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data collections [WPF], creating views of
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
-ms.openlocfilehash: 28a21aae7f8a08efebfd16bacd2a2d82b04de0c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222112"
 ---
-# <a name="how-to-get-the-default-view-of-a-data-collection"></a>Filtrar Obtener la vista predeterminada de una recolección de datos
+# <a name="how-to-get-the-default-view-of-a-data-collection"></a>Filtrar Obtener la vista predeterminada de una colección de datos
 Las vistas permiten la misma colección de datos a verse de maneras diferentes, dependiendo de la ordenación, filtrado o criterio de agrupación. Cada colección tiene una vista compartida de forma predeterminada, que se usa como origen de enlace real cuando un enlace especifica una colección como origen. En este ejemplo se muestra cómo obtener la vista predeterminada de una colección.  
   
 ## <a name="example"></a>Ejemplo  
@@ -33,5 +33,6 @@ Las vistas permiten la misma colección de datos a verse de maneras diferentes, 
  Para obtener ejemplos de la funcionalidad proporcionada por una vista de colección, consulte [ordenar datos en una vista](how-to-sort-data-in-a-view.md), [filtrar los datos en una vista](how-to-filter-data-in-a-view.md), y [navegar por los objetos de una colección de datos mediante CollectionView](how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Ordenar y agrupar datos mediante una vista en XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

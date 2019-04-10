@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 22af8cd6a8bdce590736ee14705f73bef1dc4d16
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261107"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220440"
 ---
 # <a name="endpoint-addresses"></a>Direcciones de extremo
 Cada punto de conexión tiene una dirección asociada a él, que se utiliza para ubicar e identificar el punto de conexión. Esta dirección está compuesta principalmente de un Identificador uniforme de recursos (URI), que especifica la ubicación del punto de conexión. La dirección de punto de conexión se representa en el modelo de programación de Windows Communication Foundation (WCF) mediante el <xref:System.ServiceModel.EndpointAddress> (clase), que contiene un elemento opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propiedad que habilita la autenticación del punto de conexión por otros extremos que intercambiar mensajes con él y un conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propiedades, que definen cualquier otro encabezado SOAP requerido para alcanzar el servicio. Los encabezados opcionales proporcionan información de direccionamiento adicional y más detallada para identificar o interactuar con el punto de conexión de servicio. La dirección de un punto de conexión se representa en la conexión como una referencia de punto de conexión (EPR) WS-Addressing.  
@@ -138,5 +138,6 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
  En algunos escenarios, un extremo recibe todos los mensajes que llegan en el transporte subyacente y no solo aquéllos con el encabezado `To` adecuado. Para habilitar esto, el usuario puede utilizar la clase <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Especificación de una dirección de punto de conexión](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
 - [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

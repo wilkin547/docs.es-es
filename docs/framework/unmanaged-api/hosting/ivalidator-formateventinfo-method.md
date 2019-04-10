@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 084b80e90ea3950245606c56de7ed3e18fd27662
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ecbecec86d81357000679ab50e12f06d91c9f50d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217086"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo (Método)
 Obtiene el mensaje de error correspondiente al error de validación especificado.  
@@ -63,6 +63,3 @@ HRESULT FormatEventInfo(
  **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
-## <a name="see-also"></a>Vea también
-

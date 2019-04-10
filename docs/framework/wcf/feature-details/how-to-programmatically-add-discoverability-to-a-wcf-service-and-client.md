@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Agregar detectabilidad mediante programación a un cliente y servicio WCF
+title: Filtrar para agregar detectabilidad mediante programación a un cliente y un servicio de WCF
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: a0240d09c07a23c2c578008885e5bca00169acdd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 821e45d41a1a91b6884a73abcbdf3ea04e938e25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224213"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedimiento Agregar detectabilidad mediante programación a un cliente y servicio WCF
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Filtrar para agregar detectabilidad mediante programación a un cliente y un servicio de WCF
 En este tema se explica cómo hacer que un servicio de Windows Communication Foundation (WCF) que pueda detectar. Se basa en el [autohospedar](https://go.microsoft.com/fwlink/?LinkId=145523) ejemplo.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Para configurar el ejemplo de servicio de host automático existente repara para la detección  
@@ -58,7 +58,7 @@ En este tema se explica cómo hacer que un servicio de Windows Communication Fou
   
 1.  Agregue a la solución una aplicación de consola nueva denominada `DiscoveryClientApp`.  
   
-2.  Agregue una referencia a `System.ServiceModel.dll` y `System.ServiceModel.Discovery.dll`.  
+2.  Agregue una referencia a `System.ServiceModel.dll` y `System.ServiceModel.Discovery.dll`  
   
 3.  Copie los archivos GeneratedClient.cs y App.config del proyecto de cliente existente en el nuevo proyecto DiscoveryClientApp. Para ello, haga clic en los archivos en el **el Explorador de soluciones**, seleccione **copia**y, a continuación, seleccione el **DiscoveryClientApp** del proyecto, haga clic en y seleccione **Pegar**.  
   
@@ -122,7 +122,7 @@ En este tema se explica cómo hacer que un servicio de Windows Communication Fou
     }  
     ```  
   
-     Este método utiliza la dirección del punto de conexión devuelta de `FindCalculatorServiceAddress` para llamar al servicio de calculadora.  
+     Este método utiliza la dirección del extremo devuelta de `FindCalculatorServiceAddress` para llamar al servicio de calculadora.  
   
 11. Dentro del método `InvokeCalculatorService`, cree una instancia de la clase `CalculatorServiceClient`. Esta clase se define mediante el [autohospedar](https://go.microsoft.com/fwlink/?LinkId=145523) ejemplo. Se ha generado mediante Svcutil.exe.  
   
@@ -341,5 +341,6 @@ namespace DiscoveryClientApp
 ```  
 
 ## <a name="see-also"></a>Vea también
+
 - [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Modelo de objetos de detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+- [Modelo de objetos de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

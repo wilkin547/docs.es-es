@@ -1,5 +1,5 @@
 ---
-title: Cargar contenido diferido (Data Services de WCF)
+title: Cargar contenido diferido (Servicios de datos de WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: 3c522cd9f360430bde8a008c4c9702f01887d948
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 905cf9933b726ba570c16719c8d1883a8588254d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555003"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227176"
 ---
-# <a name="loading-deferred-content-wcf-data-services"></a>Cargar contenido diferido (Data Services de WCF)
+# <a name="loading-deferred-content-wcf-data-services"></a>Cargar contenido diferido (Servicios de datos de WCF)
 De forma predeterminada, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita la cantidad de datos que devuelve una consulta. Sin embargo, es posible cargar explícitamente datos adicionales, incluidos los datos de la respuesta paginados, las entidades relacionadas y los flujos de datos binarios, del servicio de datos cuando sea necesario. En este tema se describe cómo cargar dicho contenido aplazado en una aplicación.  
   
 ## <a name="related-entities"></a>Entidades relacionadas  
@@ -27,7 +27,7 @@ De forma predeterminada, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetailsspecific)]  
   
-     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita a 12 el número de conjuntos de entidades que se pueden incluir en una única consulta utilizando la opción de consulta `$expand`.  
+     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita a 12 el número de conjuntos de entidades que pueden incluirse en una sola consulta utilizando el `$expand` opción de consulta.  
   
 -   **Carga explícita**: Puede llamar a la <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> método en el <xref:System.Data.Services.Client.DataServiceContext> instancia para cargar explícitamente entidades relacionadas. Cada llamada al método <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> crea una solicitud independiente al servicio de datos. En el ejemplo siguiente se carga explícitamente `Order_Details` para una entidad `Orders`:  
   
@@ -55,8 +55,9 @@ De forma predeterminada, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.
  Para obtener más información, vea [Cómo: Cargar resultados paginados](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md).  
   
 ## <a name="binary-data-streams"></a>Flujos de datos binarios  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite tener acceso a datos de objetos binarios grandes (BLOB) en forma de flujo de datos. La transmisión por secuencias aplaza la carga de datos binarios hasta que se necesita, y el cliente puede procesar estos datos más eficazmente. Para aprovecharse de esta funcionalidad, el servicio de datos debe implementar el proveedor <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Para obtener más información, consulte [proveedor de transmisión](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md). Cuando está habilitada la transmisión por secuencias, los tipos de entidad se devuelven sin los datos binarios relacionados. En este caso, debe usar el <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> método de la <xref:System.Data.Services.Client.DataServiceContext> clase para tener acceso a la secuencia de datos para los datos binarios del servicio. De igual forma, use el método <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> para agregar o cambiar los datos binarios de una entidad como un flujo. Para obtener más información, consulte [trabajar con datos binarios](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite obtener acceso a datos de objeto binario grande (BLOB) como un flujo de datos. La transmisión por secuencias aplaza la carga de datos binarios hasta que se necesita, y el cliente puede procesar estos datos más eficazmente. Para aprovecharse de esta funcionalidad, el servicio de datos debe implementar el proveedor <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Para obtener más información, consulte [proveedor de transmisión](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md). Cuando está habilitada la transmisión por secuencias, los tipos de entidad se devuelven sin los datos binarios relacionados. En este caso, debe usar el <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> método de la <xref:System.Data.Services.Client.DataServiceContext> clase para tener acceso a la secuencia de datos para los datos binarios del servicio. De igual forma, use el método <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> para agregar o cambiar los datos binarios de una entidad como un flujo. Para obtener más información, consulte [trabajar con datos binarios](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+- [Biblioteca cliente de Data Services de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Consultar el servicio de datos](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

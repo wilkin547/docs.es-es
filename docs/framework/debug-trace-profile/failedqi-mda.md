@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a3338595e8b541fcda93b091eeddf17919a483c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217632"
 ---
 # <a name="failedqi-mda"></a>MDA de failedQI
 El asistente para la depuración administrada (MDA) `failedQI` se activa cuando Runtime llama a `QueryInterface` en un puntero de interfaz COM en nombre de un contenedor al que se puede llamar en tiempo de ejecución (RCW) y la llamada `QueryInterface` falla.  
@@ -37,7 +37,7 @@ El asistente para la depuración administrada (MDA) `failedQI` se activa cuando 
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Si no se puede realizar la llamada `QueryInterface`, el contexto cambia y es necesario volver a intentar realizar la llamada `QueryInterface` para ver si el motivo del error era un contexto incorrecto.  
   
-## <a name="output"></a>Resultado  
+## <a name="output"></a>Salida  
  El nombre administrado de la interfaz, el GUID de la interfaz y el valor HRESULT del error.   
   
 ## <a name="configuration"></a>Configuración  
@@ -51,6 +51,7 @@ El asistente para la depuración administrada (MDA) `failedQI` se activa cuando 
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

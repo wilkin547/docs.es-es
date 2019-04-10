@@ -2,12 +2,12 @@
 title: System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation
 ms.date: 03/30/2017
 ms.assetid: fc7a8357-4993-4488-9e4a-e544fbd45e3d
-ms.openlocfilehash: e565a34030ce6a494f38d540341103aaae4a68af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2d3f6c7f4ec4b4e7d087dffc1c5cd2c893cdfaf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225071"
 ---
 # <a name="systemservicemodelsecurityissuancetokenproviderbeginsecuritynegotiation"></a>System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation
 System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation  
@@ -16,6 +16,7 @@ System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation
  IssuanceTokenProvider ha iniciado una nueva negociación de seguridad.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

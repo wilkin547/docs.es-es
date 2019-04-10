@@ -2,12 +2,12 @@
 title: <add> de <services>
 ms.date: 03/30/2017
 ms.assetid: 6bdc4590-aa9c-4ec8-9345-879d780cd141
-ms.openlocfilehash: 4e1a9c67fa82262ab49be196b2e4fd31a69e688f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c07b3377db4f5b434fd021b09de510c1d43ec832
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219192"
 ---
 # <a name="add-of-services"></a>\<Agregar > de \<services >
 Especifica la configuración de una instancia de <xref:System.Workflow.Runtime.WorkflowRuntime> para hospedar servicios de Windows Communication Foundation (WCF) basados en flujo de trabajo. Este elemento es del tipo <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  
@@ -36,7 +36,7 @@ Especifica la configuración de una instancia de <xref:System.Workflow.Runtime.W
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|tipo|Una cadena que especifica el nombre de tipo calificado con el nombre de ensamblado del servicio que se va a inicializar. El servicio especificado debe seguir ciertas reglas sobre las firmas de sus constructores. Vea <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> para obtener más información.|  
+|type|Una cadena que especifica el nombre de tipo calificado con el nombre de ensamblado del servicio que se va a inicializar. El servicio especificado debe seguir ciertas reglas sobre las firmas de sus constructores. Vea <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> para obtener más información.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -67,7 +67,8 @@ Especifica la configuración de una instancia de <xref:System.Workflow.Runtime.W
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
 - <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
 - <xref:System.Workflow.Runtime.WorkflowRuntime>
-- [Archivos de configuración de flujo de trabajo](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
+- [Archivos de configuración del flujo de trabajo](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))

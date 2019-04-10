@@ -7,12 +7,12 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 5ee0f8a6cd40e6293062b62b8bc81bd4c54903c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6b4f5de92f19223a6692236fb3496a1dbbddef5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226435"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>Temas "Cómo..." de animaciones de fotogramas clave
 Los temas de esta sección muestran cómo usar animaciones de fotogramas clave para animar a más de dos valores de propiedad y controlar la interpolación.  
@@ -38,6 +38,7 @@ Los temas de esta sección muestran cómo usar animaciones de fotogramas clave p
  <xref:System.Windows.Media.Animation.KeyTime>  
   
 ## <a name="see-also"></a>Vea también
+
 - [Gráficos y multimedia](index.md)
 - [Información general sobre animaciones](animation-overview.md)
 - [Información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md)

@@ -2,12 +2,12 @@
 title: <issuerMetadata> de <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
-ms.openlocfilehash: 2697d24a731dbf8de3d68bcce7fd52c55ff6dc68
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e46e56c6285af24941a550b2c4f7dec3b441db69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214811"
 ---
 # <a name="issuermetadata-of-issuedtokenparameters"></a>\<issuerMetadata > de \<issuedTokenParameters >
 \<system.serviceModel>  
@@ -31,7 +31,7 @@ ms.locfileid: "55276983"
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|address|Requerido. Cadena que especifica la dirección del extremo. La dirección debe ser un URI absoluto. El valor predeterminado es una cadena vacía.|  
+|dirección|Obligatorio. Cadena que especifica la dirección del punto de conexión. La dirección debe ser un URI absoluto. El valor predeterminado es una cadena vacía.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -47,16 +47,17 @@ ms.locfileid: "55276983"
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Especifica los parámetros para un símbolo (token) de seguridad emitido en un escenario de seguridad aliado.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Federación y tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Funcionalidades de seguridad con enlaces personalizados](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Capacidades de seguridad con enlaces personalizados](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Federación y tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Enlaces](../../../../../docs/framework/wcf/bindings.md)
 - [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Filtrar para crear un enlace personalizado mediante SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Seguridad de enlace personalizado](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

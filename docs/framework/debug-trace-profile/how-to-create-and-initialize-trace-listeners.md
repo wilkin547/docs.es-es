@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear e inicializar agentes de escucha de seguimiento
+title: Filtrar para crear e inicializar agentes de escucha de seguimiento
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee0ad6b34e30b03ec42ff793e37d0e13b448cbfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583108"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222723"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>Procedimiento Crear e inicializar agentes de escucha de seguimiento
+# <a name="how-to-create-and-initialize-trace-listeners"></a>Filtrar para crear e inicializar agentes de escucha de seguimiento
 Las clases <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:System.Diagnostics.Trace?displayProperty=nameWithType> envían mensajes a objetos denominados agentes de escucha que reciben y procesan estos mensajes. Un agente de escucha de este tipo, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, se crea y se inicializa automáticamente si la traza o la depuración está habilitada. Si desea que los resultados de <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.Debug> se envíen a otros destinos adicionales, deberá crear e inicializar agentes de escucha adicionales.  
   
  Los agentes de escucha que cree deben reflejar las necesidades de la aplicación. Por ejemplo, si desea un registro de texto de todo el resultado de traza, cree un agente de escucha <xref:System.Diagnostics.TextWriterTraceListener>, que escribe todo el resultado en un nuevo archivo de texto cuando se habilita. Por otra parte, si desea ver el resultado solo durante la ejecución de la aplicación, cree un agente de escucha <xref:System.Diagnostics.ConsoleTraceListener>, que envía todo el resultado a una ventana de consola. <xref:System.Diagnostics.EventLogTraceListener> puede dirigir el resultado de traza a un registro de eventos. Para más información, vea [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
@@ -78,7 +78,7 @@ Las clases <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:
   
      - O  
   
--   Si no desea que el agente de escucha reciba el resultado de la traza, no lo agregue a la colección <xref:System.Diagnostics.Trace.Listeners%2A>. Puede emitir la salida a través de un agente de escucha independientemente de la colección <xref:System.Diagnostics.Trace.Listeners%2A>, llamando a los propios métodos de salida del agente de escucha.  El siguiente ejemplo muestra cómo escribir una línea a un agente de escucha que no se encuentra en la colección <xref:System.Diagnostics.Trace.Listeners%2A>:   
+-   Si no desea que el agente de escucha reciba el resultado de la traza, no lo agregue a la colección <xref:System.Diagnostics.Trace.Listeners%2A>. Puede emitir la salida a través de un agente de escucha independientemente de la colección <xref:System.Diagnostics.Trace.Listeners%2A>, llamando a los propios métodos de salida del agente de escucha. El siguiente ejemplo muestra cómo escribir una línea a un agente de escucha que no se encuentra en la colección <xref:System.Diagnostics.Trace.Listeners%2A>:   
   
     ```vb  
     Dim myListener As New TextWriterTraceListener("TextWriterOutput.log", "myListener")  
@@ -95,7 +95,8 @@ Las clases <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Cómo: Agregar instrucciones de seguimiento al código de aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Filtrar para agregar instrucciones de seguimiento al código de una aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

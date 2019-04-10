@@ -6,12 +6,12 @@ helpviewer_keywords:
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-ms.openlocfilehash: 38cd29720a885f10d093bdb4617c503c16402e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d100fb17b1ee3e652985a637d333d9f65e20d36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672193"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219205"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Opciones de ajuste de tamaño en el control DataGrid
 Diversas opciones están disponibles para controlar cómo el <xref:System.Windows.Controls.DataGrid> ajusta su tamaño. El <xref:System.Windows.Controls.DataGrid>y filas y columnas individuales en el <xref:System.Windows.Controls.DataGrid>, se pueden establecer para cambiar el tamaño automáticamente a su contenido o se puede establecer en valores específicos. De forma predeterminada, el <xref:System.Windows.Controls.DataGrid> aumentará y reducirá para ajustarse al tamaño de su contenido.  
@@ -32,7 +32,7 @@ Diversas opciones están disponibles para controlar cómo el <xref:System.Window
 ### <a name="setting-the-datagrid-size"></a>Establecer el tamaño de DataGrid  
  El <xref:System.Windows.Controls.DataGrid> puede establecerse automáticamente de tamaño dentro de los límites especificados, o el <xref:System.Windows.Controls.DataGrid> se puede establecer en un tamaño específico. En la tabla siguiente se muestra las propiedades que se pueden establecer para controlar el <xref:System.Windows.Controls.DataGrid> tamaño.  
   
-|Property|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |<xref:System.Windows.FrameworkElement.Height%2A>|Establece un alto específico para el <xref:System.Windows.Controls.DataGrid>.|  
 |<xref:System.Windows.FrameworkElement.MaxHeight%2A>|Establece el límite superior para el alto de la <xref:System.Windows.Controls.DataGrid>. El <xref:System.Windows.Controls.DataGrid> crecerá verticalmente hasta que alcanza este alto.|  
@@ -56,7 +56,7 @@ Diversas opciones están disponibles para controlar cómo el <xref:System.Window
   
  La siguiente tabla muestra los valores proporcionados por el <xref:System.Windows.Controls.DataGridLengthUnitType> estructura.  
   
-|nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |<xref:System.Windows.Controls.DataGridLengthUnitType.Auto>|El valor predeterminado de los tamaños de modo de ajuste automático de <xref:System.Windows.Controls.DataGrid> columnas según el contenido de celdas y encabezados de columna.|  
 |<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToCells>|Automático basado en celdas tamaños del modo de ajuste de tamaño <xref:System.Windows.Controls.DataGrid> columnas según el contenido de las celdas de la columna, sin incluir los encabezados de columna.|  
@@ -70,7 +70,7 @@ Diversas opciones están disponibles para controlar cómo el <xref:System.Window
   
  Las columnas de la <xref:System.Windows.Controls.DataGrid> también se puede establecer automáticamente el tamaño solo dentro de los límites especificados, o las columnas se pueden establecer en un tamaño específico. En la tabla siguiente muestra las propiedades que se pueden establecer para controlar el tamaño de las columnas.  
   
-|Property|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |<xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>|Establece el límite superior para todas las columnas de la <xref:System.Windows.Controls.DataGrid>.|  
 |<xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A?displayProperty=nameWithType>|Establece el límite superior para una columna individual. Invalida <xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>.|  
@@ -86,6 +86,7 @@ Diversas opciones están disponibles para controlar cómo el <xref:System.Window
  Pueden cambiar el tamaño de los usuarios <xref:System.Windows.Controls.DataGrid> filas y columnas arrastrando los divisores de encabezado de fila o columna. El <xref:System.Windows.Controls.DataGrid> también admite el cambio de tamaño automático de filas y columnas haciendo doble clic en el divisor de encabezado de fila o columna. Para evitar que un usuario cambiar el tamaño de columnas específicas, establezca el <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> propiedad `false` para columnas individuales. Para evitar que los usuarios cambien el tamaño de todas las columnas, establezca el <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> propiedad `false`. Para evitar que los usuarios cambien el tamaño de todas las filas, establezca el <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=nameWithType> propiedad `false`.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGridColumn>
 - <xref:System.Windows.Controls.DataGridLength>

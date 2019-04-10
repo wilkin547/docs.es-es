@@ -1,5 +1,5 @@
 ---
-title: Filtrar Agregar tablas y columnas al Control DataGrid de formularios Windows Forms
+title: Filtrar para agregar tablas y columnas al control DataGrid de Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: e222227d6283555fa4ec25fe1e5d8e661296034f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 55a8d28d04dd05d4dba7ab2b1edbcfbcce97cecb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222047"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Procedimiento Agregar tablas y columnas al Control DataGrid de formularios Windows Forms
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Filtrar para agregar tablas y columnas al control DataGrid de Windows Forms
 > [!NOTE]
 >  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
@@ -96,5 +96,6 @@ ms.locfileid: "57709164"
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [DataGrid (control)](datagrid-control-windows-forms.md)
-- [Cómo: Eliminar u ocultar columnas en el Control DataGrid de Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+
+- [Control DataGrid](datagrid-control-windows-forms.md)
+- [Filtrar para eliminar u ocultar columnas del control DataGrid de formularios Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

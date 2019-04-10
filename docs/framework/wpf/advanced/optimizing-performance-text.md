@@ -11,15 +11,15 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409411"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225968"
 ---
 # <a name="optimizing-performance-text"></a>Optimizar el rendimiento: Texto
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluye compatibilidad para la presentación de contenido de texto mediante el uso de controles [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] completos. En general, puede dividir la representación de texto en tres capas:  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluye compatibilidad para la presentación del contenido de texto mediante el uso de características enriquecidas [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] controles. En general, puede dividir la representación de texto en tres capas:  
   
 1.  Mediante el <xref:System.Windows.Documents.Glyphs> y <xref:System.Windows.Media.GlyphRun> objetos directamente.  
   
@@ -28,8 +28,7 @@ ms.locfileid: "58409411"
 3.  Con los controles de alto nivel, como el <xref:System.Windows.Controls.TextBlock> y <xref:System.Windows.Documents.FlowDocument> objetos.  
   
  En este tema se proporcionan recomendaciones de rendimiento para la representación de texto.  
-  
-  
+
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>Representación de texto en el nivel de glifos  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona compatibilidad con texto avanzado, incluido el marcado de nivel de glifos con acceso directo a <xref:System.Windows.Documents.Glyphs> para los clientes que quieran interceptar y conservar el texto después de darle formato. Estas características ofrecen una compatibilidad fundamental para los distintos requisitos de representación de texto en cada uno de los siguientes escenarios.  
@@ -98,7 +97,7 @@ ms.locfileid: "58409411"
   
  En la tabla siguiente se muestra el costo de mostrar 1000 <xref:System.Windows.Controls.TextBlock> objetos con y sin explícita <xref:System.Windows.Documents.Run>.  
   
-|**Tipo TextBlock**|**Tiempo de creación (ms)**|**Tiempo de representación (ms)**|  
+|**Tipo TextBlock**|**Hora de creación (ms)**|**Representar el tiempo (ms)**|  
 |------------------------|------------------------------|----------------------------|  
 |Propiedades de texto de configuración de ejecución|146|540|  
 |Propiedades de texto de configuración de TextBlock|43|453|  
@@ -108,7 +107,7 @@ ms.locfileid: "58409411"
   
  La solución a este problema es sencilla. Si el <xref:System.Windows.Controls.Label> no está establecido en personalizado <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> valor, reemplace el <xref:System.Windows.Controls.Label> con un <xref:System.Windows.Controls.TextBlock> y enlazar los datos su <xref:System.Windows.Controls.TextBlock.Text%2A> propiedad a la cadena de origen.  
   
-|**Propiedad enlazada a datos**|**Tiempo de actualización (ms)**|  
+|**Propiedad enlazada a datos**|**Hora de actualización (ms)**|  
 |-----------------------------|----------------------------|  
 |Label.Content|835|  
 |TextBlock.Text|242|  
@@ -143,14 +142,14 @@ ms.locfileid: "58409411"
   
  En la tabla siguiente se muestra el costo de rendimiento de mostrar 1000 <xref:System.Windows.Documents.Hyperlink> elementos con y sin subrayado.  
   
-|**Hyperlink**|**Tiempo de creación (ms)**|**Tiempo de representación (ms)**|  
+|**Hipervínculo**|**Hora de creación (ms)**|**Representar el tiempo (ms)**|  
 |-------------------|------------------------------|----------------------------|  
 |Con subrayado|289|1130|  
 |Sin subrayado|299|776|  
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>Características de formato de texto  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona servicios de formato de texto enriquecido, como la división de palabras automática. Estos servicios pueden afectar al rendimiento de la aplicación y solo deben usarse cuando sea necesario.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona servicios, como la división de palabras automática de formato de texto enriquecido. Estos servicios pueden afectar al rendimiento de la aplicación y solo deben usarse cuando sea necesario.  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>Evitar el uso innecesario de la división de palabras  
  División de palabras automática busca los puntos de interrupción de guion para las líneas de texto y permite las posiciones de salto adicional para las líneas en <xref:System.Windows.Controls.TextBlock> y <xref:System.Windows.Documents.FlowDocument> objetos. De forma predeterminada, la característica de división de palabras automática está deshabilitada en estos objetos. Puede habilitarla si establece la propiedad IsHyphenationEnabled del objeto en `true`. Sin embargo, si se habilita esta característica, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inicia la interoperabilidad de [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)], lo que puede afectar el rendimiento de la aplicación. Se recomienda que no se la división de palabras automática a menos que lo necesite.  
@@ -162,6 +161,7 @@ ms.locfileid: "58409411"
  La característica de párrafo óptimo de la <xref:System.Windows.Documents.FlowDocument> objeto dispone los párrafos para que el espacio en blanco se distribuya lo más uniformemente posible. De forma predeterminada, la característica de párrafo óptimo está deshabilitada. Puede habilitar esta característica estableciendo el objeto <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> propiedad `true`. Sin embargo, habilitar esta característica afecta al rendimiento de la aplicación. Se recomienda que no use la característica de párrafo óptimo a menos que la necesite.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Optimizar WPF: Rendimiento de aplicaciones](optimizing-wpf-application-performance.md)
 - [Planear para mejorar el rendimiento de aplicaciones](planning-for-application-performance.md)
 - [Aprovechar el hardware](optimizing-performance-taking-advantage-of-hardware.md)

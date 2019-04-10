@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff026ddd9f9dc7c1556c55b285958dad7139e8eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbb33d2cddab22ad2072354ba543d2cd6a60a668
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699316"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218282"
 ---
 # <a name="invalidfunctionpointerindelegate-mda"></a>MDA de invalidFunctionPointerInDelegate
 El asistente para la depuración administrada (MDA, por sus siglas en inglés) `invalidFunctionPointerInDelegate` se activa cuando un puntero de función no válido se pasa para construir un delegado sobre un puntero de función nativo.  
@@ -29,7 +29,7 @@ El asistente para la depuración administrada (MDA, por sus siglas en inglés) `
 ## <a name="cause"></a>Motivo  
  El puntero de función que se especificó no es válido.  
   
-## <a name="resolution"></a>Solución  
+## <a name="resolution"></a>Resolución  
  Especifique un puntero de función válido.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
@@ -49,6 +49,7 @@ El asistente para la depuración administrada (MDA, por sus siglas en inglés) `
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

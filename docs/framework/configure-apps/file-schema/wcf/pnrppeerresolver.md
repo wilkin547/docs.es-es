@@ -2,12 +2,12 @@
 title: <pnrpPeerResolver>
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: f98c358cc9891e9d7223d280fc8e50c19aad9759
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2404f00b2a3ba03e89c1e21fb25e13cabb8feed3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260661"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214058"
 ---
 # <a name="pnrppeerresolver"></a>\<pnrpPeerResolver>
 Especifica que la resolución de PNRP (Protocolo de resolución de nombres de mismo nivel) será utilizada como resolución. Este elemento es opcional porque PNRP es la resolución predeterminada.  
@@ -49,6 +49,7 @@ Especifica que la resolución de PNRP (Protocolo de resolución de nombres de mi
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>
 - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

@@ -2,12 +2,12 @@
 title: = (Igual que) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
-ms.openlocfilehash: 2791bc0940bad92208c5bdce3659534f237bd6e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ad9eda5a3544ea157d06c57876b1b0454a25dba1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551883"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215688"
 ---
 # <a name="-equals-entity-sql"></a>= (Igual que) (Entity SQL)
 Compara la igualdad de dos expresiones.  
@@ -25,7 +25,7 @@ expression == expression
  Cualquier expresión válida. Ambas expresiones deben tener tipos de datos convertibles implícitamente.  
   
 ## <a name="result-types"></a>Tipos de resultado  
- `true` si la expresión izquierda es igual a la expresión derecha; de lo contrario, `false`.  
+ `true` Si la expresión izquierda es igual a la expresión derecha; en caso contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
  El operador == es equivalente a =.  
@@ -40,4 +40,5 @@ expression == expression
  [!code-csharp[DP EntityServices Concepts 2#EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#equals)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

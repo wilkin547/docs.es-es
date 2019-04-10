@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IEnumRAWINPUTDEVICE interface [WPF]
 ms.assetid: 88c8b389-a48b-46b9-b895-8ed7b1e26fea
-ms.openlocfilehash: e7bc6f2c96413f3898a17b541733eeecd6a260f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 04caca0c580d26fde7fc9a3e3a11b7a8fed26d65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375069"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225526"
 ---
 # <a name="ienumrawinputdevice"></a>IEnumRAWINPUTDEVICE
 Esta interfaz enumera los dispositivos de entrada sin formato y solo la utiliza PresentationHost.exe.  
@@ -27,4 +27,5 @@ Esta interfaz enumera los dispositivos de entrada sin formato y solo la utiliza 
 |[IEnumRAWINPUTDEVIC:Clone](ienumrawinputdevic-clone.md)|Crea otro enumerador de dispositivo de entrada sin formato con el mismo estado que el enumerador actual para crear una iteración por la misma lista.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Acerca de la entrada sin formato](/windows/desktop/inputdev/about-raw-input)

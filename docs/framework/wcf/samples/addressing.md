@@ -2,12 +2,12 @@
 title: Direccionamiento
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 3de6c3556ce2a11e1ebcfba179c08a45d87bea6b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 62d1d4206bd0595ac84cb5ec6942f914a89fbaae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221331"
 ---
 # <a name="addressing"></a>Direccionamiento
 El ejemplo de direccionamiento muestra varios aspectos y características de direcciones del extremo. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). En este ejemplo, el servicio es hospedado por sí mismo. El cliente y el servicio son aplicaciones de consola. El servicio define varios puntos de conexión mediante una combinación de direcciones del punto de conexión absolutas y relativas.  
@@ -135,4 +135,3 @@ Press <ENTER> to terminate client.
 >  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
-  

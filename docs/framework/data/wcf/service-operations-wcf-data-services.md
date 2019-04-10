@@ -1,5 +1,5 @@
 ---
-title: Operaciones de servicio (Data Services de WCF)
+title: Operaciones de servicio (Servicios de datos de WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 38e9553d77612635f0403a8dc34c368379116e8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b63c6d8f3a5a949299a925a321ca8f01c67b1d8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211977"
 ---
-# <a name="service-operations-wcf-data-services"></a>Operaciones de servicio (Data Services de WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite definir operaciones de servicio en un servicio de datos para exponer métodos del servidor. Las operaciones de servicio se direccionan como los demás recursos del servicio de datos, mediante los URI. Las operaciones de servicio le permiten exponer la lógica de negocios de un servicio de datos; por ejemplo, implementar la lógica de validación, aplicar la seguridad basada en roles o exponer capacidades de consulta especializadas. Estas operaciones son métodos agregados a la clase del servicio de datos derivada de <xref:System.Data.Services.DataService%601>. Como el resto de los recursos del servicio de datos, puede proporcionar parámetros al método de operación de servicio. Por ejemplo, el siguiente URI de operación del servicio (según la [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) servicio de datos) pasa el valor `London` a la `city` parámetro:  
+# <a name="service-operations-wcf-data-services"></a>Operaciones de servicio (Servicios de datos de WCF)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite definir operaciones de servicio en un servicio de datos para exponer métodos en el servidor. Las operaciones de servicio se direccionan como los demás recursos del servicio de datos, mediante los URI. Las operaciones de servicio le permiten exponer la lógica de negocios de un servicio de datos; por ejemplo, implementar la lógica de validación, aplicar la seguridad basada en roles o exponer capacidades de consulta especializadas. Estas operaciones son métodos agregados a la clase del servicio de datos derivada de <xref:System.Data.Services.DataService%601>. Como el resto de los recursos del servicio de datos, puede proporcionar parámetros al método de operación de servicio. Por ejemplo, el siguiente URI de operación del servicio (según la [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) servicio de datos) pasa el valor `London` a la `city` parámetro:  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -58,9 +58,9 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   El método se debe anotar con el atributo `[WebGet]` o `[WebInvoke]`.  
   
-    -   `[WebGet]` permite invocar el método usando una solicitud GET.  
+    -   `[WebGet]` permite el método se invoca mediante el uso de una solicitud GET.  
   
-    -   `[WebInvoke(Method = "POST")]` permite invocar el método usando una solicitud POST. No se admiten otros métodos <xref:System.ServiceModel.Web.WebInvokeAttribute>.  
+    -   `[WebInvoke(Method = "POST")]` permite el método se invoca mediante una solicitud POST. No se admiten otros métodos <xref:System.ServiceModel.Web.WebInvokeAttribute>.  
   
 -   Una operación de servicio se puede anotar con el elemento <xref:System.Data.Services.SingleResultAttribute> que especifica que el valor devuelto desde el método es una sola entidad en vez de una colección de entidades. Esta distinción dicta la serialización resultante de la respuesta y la manera en que se representan en el URI los recorridos de las propiedades de navegación adicionales. Por ejemplo, cuando use la serialización AtomPub, una sola instancia de tipo de recurso se representa como elemento de entrada y un conjunto de instancias como elemento feed.  
   
@@ -77,7 +77,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
   
 |Tipos de valor devueltos válidos|Reglas que deben cumplir los URI|  
 |------------------------|---------------|  
-|`void` (`Nothing` en Visual Basic)<br /><br /> o bien<br /><br /> Tipos de entidad<br /><br /> o bien<br /><br /> Tipos primitivos|El URI debe ser un solo segmento de ruta de acceso que sea el nombre de la operación de servicio. No se permiten las opciones de consulta.|  
+|`void` (`Nothing` en Visual Basic)<br /><br /> -o bien-<br /><br /> Tipos de entidad<br /><br /> -o bien-<br /><br /> Tipos primitivos|El URI debe ser un solo segmento de ruta de acceso que sea el nombre de la operación de servicio. No se permiten las opciones de consulta.|  
 |<xref:System.Collections.Generic.IEnumerable%601>|El URI debe ser un solo segmento de ruta de acceso que sea el nombre de la operación de servicio. Puesto que el tipo de resultado no es un tipo <xref:System.Linq.IQueryable%601>, no se permiten las opciones de consulta.|  
 |<xref:System.Linq.IQueryable%601>|Se permiten segmentos de ruta de acceso de la consulta además de la ruta de acceso que es el nombre de la operación de servicio. También se permiten las opciones de consulta.|  
   
@@ -105,4 +105,5 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
  [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Interceptores](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)

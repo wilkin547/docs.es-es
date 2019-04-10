@@ -2,12 +2,12 @@
 title: Objetos DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: bcf370e30c50bf5d992279c7abe02bfc6262ea40
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215916"
 ---
 # <a name="dataviews"></a>Objetos DataView
 Una <xref:System.Data.DataView> le permite crear diferentes vistas de los datos almacenados en una <xref:System.Data.DataTable>, una capacidad que suele utilizarse en aplicaciones de enlace a datos. Mediante un **DataView**, puede exponer los datos en una tabla con distintos criterios de ordenación y puede filtrar los datos por estado de fila o basándose en una expresión de filtro.  
@@ -19,35 +19,35 @@ Una <xref:System.Data.DataView> le permite crear diferentes vistas de los datos 
  Puede usar un <xref:System.Data.DataView.DataViewManager%2A> para administrar la configuración de vista para todas las tablas en un **DataSet**. El **DataViewManager** le proporciona una manera cómoda de administrar la configuración de la vista predeterminada para cada tabla. Al enlazar un control a más de una tabla de una **DataSet**, el enlace a un **DataViewManager** es la elección ideal.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Creación de un objeto DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
+ [Crear un objeto DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
  Describe cómo crear un **DataView** para un **DataTable**.  
   
- [Ordenación y filtrado de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
+ [Ordenar y filtrar datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
  Describe cómo establecer las propiedades de un **DataView** para devolver subconjuntos de filas de datos que reúnan determinados criterios, o para devolver datos en un orden determinado.  
   
- [DataRow y DataRowView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
+ [Objetos DataRow y DataRowView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
  Describe cómo tener acceso a los datos expuestos por el **DataView**.  
   
- [Búsqueda de filas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)  
+ [Buscar filas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)  
  Describe cómo buscar una fila determinada en un **DataView**.  
   
- [ChildView y Relation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
+ [Objetos ChildView y Relation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
  Describe cómo crear vistas de datos de una relación de elementos primarios y secundarios con un **DataView**.  
   
- [Modificación de objetos DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
+ [Modificar objetos DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
  Describe cómo modificar los datos en subyacente **DataTable** a través de la **DataView**, como habilitar o deshabilitar las actualizaciones.  
   
- [Control de eventos de DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
+ [Controlar eventos de DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
  Describe cómo utilizar el **ListChanged** eventos para recibir una notificación cuando el contenido o el orden de un **DataView** se está actualizando.  
   
- [Administración de objetos DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
+ [Administrar objetos DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
  Describe cómo utilizar un **DataViewManager** para administrar **DataView** configuración para cada tabla en un **DataSet**.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Aplicaciones web de ASP.NET](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
+ [Aplicaciones Web ASP.NET](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
  Proporciona información general y procedimientos detallados paso a paso sobre la creación de aplicaciones ASP.NET, Web Forms y servicios Web.  
   
- [Aplicaciones de Windows](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
+ [Aplicaciones para Windows](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
  Proporciona información detallada sobre el uso de Windows Forms y aplicaciones de consola.  
   
  [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
@@ -60,4 +60,5 @@ Una <xref:System.Data.DataView> le permite crear diferentes vistas de los datos 
  Describe la arquitectura y los componentes de ADO.NET así como su uso para obtener acceso a orígenes de datos existentes y administrar los datos de las aplicaciones.  
   
 ## <a name="see-also"></a>Vea también
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

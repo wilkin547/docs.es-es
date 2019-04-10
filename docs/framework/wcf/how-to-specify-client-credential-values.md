@@ -1,23 +1,23 @@
 ---
-title: Procedimiento Especificar los valores de credencial de cliente
+title: Filtrar para especificar valores de credenciales de cliente
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: 110b8ffe2fb3e00d7a6787e32d066f62126ebf9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a1b2627c8e9899a122f27dc652f8c91230fed0b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225136"
 ---
-# <a name="how-to-specify-client-credential-values"></a>Procedimiento Especificar los valores de credencial de cliente
+# <a name="how-to-specify-client-credential-values"></a>Filtrar para especificar valores de credenciales de cliente
 Con Windows Communication Foundation (WCF), el servicio puede especificar cómo un cliente se autentica al servicio. Por ejemplo, un servicio puede estipular que el cliente se autentique mediante un certificado.  
   
 ### <a name="to-determine-the-client-credential-type"></a>Para determinar el tipo de credencial de cliente  
   
-1.  Recupere los metadatos del extremo de metadatos del servicio. Normalmente, los metadatos constan de dos archivos: el código de cliente en el lenguaje de programación elegido (el predeterminado es Visual C#), y un archivo de configuración XML. Una manera de recuperar los metadatos consiste en usar la herramienta Svcutil.exe para devolver el código y la configuración de cliente. Para obtener más información, consulte [recuperación de metadatos](../../../docs/framework/wcf/feature-details/retrieving-metadata.md) y [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+1.  Recupere los metadatos del punto de conexión de metadatos del servicio. Normalmente, los metadatos constan de dos archivos: el código de cliente en el lenguaje de programación elegido (el predeterminado es Visual C#), y un archivo de configuración XML. Una manera de recuperar los metadatos consiste en usar la herramienta Svcutil.exe para devolver el código y la configuración de cliente. Para obtener más información, consulte [recuperación de metadatos](../../../docs/framework/wcf/feature-details/retrieving-metadata.md) y [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 2.  Abra el archivo de configuración XML. Si usa la herramienta Svcutil.exe, el nombre predeterminado del archivo es Output.config.  
   
@@ -92,6 +92,7 @@ Con Windows Communication Foundation (WCF), el servicio puede especificar cómo 
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
@@ -100,12 +101,12 @@ Con Windows Communication Foundation (WCF), el servicio puede especificar cómo 
 - [Programación de la seguridad de WCF](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Selección de tipos de credenciales](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Trabajo con certificados](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Cómo: Crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Trabajar con certificados](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Filtrar Crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
 - [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
 - [\<message>](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)
-- [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
-- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [\<comportamiento >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
+- [\<comportamientos >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
 - [\<clientCertificate>](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)
 - [\<clientCredentials>](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)

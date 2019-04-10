@@ -2,12 +2,12 @@
 title: Interoperabilidad con servicios web ASMX
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: bef5239a52787629986eada60341cc121b22ba34
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 71bc7f0828e7ab1fbf97bc3b009418c1a763cbf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843531"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214980"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>Interoperabilidad con servicios web ASMX
 Este ejemplo muestra cómo integrar una aplicación de cliente de Windows Communication Foundation (WCF) con un servicio Web de ASMX existente.  
@@ -130,4 +130,3 @@ Press <ENTER> to terminate client.
 >  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  
-  

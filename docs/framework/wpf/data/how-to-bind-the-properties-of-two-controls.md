@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding properties of two controls [WPF]
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-ms.openlocfilehash: f3355969d0f12f0f3ed9b49bdb7efa6913c5e4c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0dd7b817b632758cfca8b5c45d88e333510485f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372105"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222073"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>Filtrar Enlazar las propiedades de dos controles
 En este ejemplo se muestra cómo enlazar la propiedad de un control con instancias a la de otra mediante el <xref:System.Windows.Data.Binding.ElementName%2A> propiedad.  
@@ -28,5 +28,6 @@ En este ejemplo se muestra cómo enlazar la propiedad de un control con instanci
  **Tenga en cuenta** la propiedad de destino de enlace (en este ejemplo, el <xref:System.Windows.Controls.Panel.Background%2A> propiedad) debe ser una propiedad de dependencia. Para obtener más información, consulte [Información general sobre el enlace de datos](data-binding-overview.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Especificación del origen de enlace](how-to-specify-the-binding-source.md)
+
+- [Especificar el origen de enlace](how-to-specify-the-binding-source.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

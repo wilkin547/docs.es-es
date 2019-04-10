@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Implementar una propiedad de dependencia
+title: Filtrar Implementar una propiedad de dependencia
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dependency properties [WPF], backing properties with
 - properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
-ms.openlocfilehash: 8ee944c521b7e4ec75394c821e8bd509dd4eca74
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e2f18cb3941be2ebf4315a844c05b91ff49c6aa2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374419"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223806"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>Filtrar Implementar una propiedad de dependencia
 En este ejemplo se muestra cómo realizar una copia de un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] propiedad con un <xref:System.Windows.DependencyProperty> campo, definiendo así una propiedad de dependencia. Si define sus propias propiedades y quiere que admitan muchos aspectos de la funcionalidad de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], incluidos los estilos, el enlace de datos, la herencia, la animación y los valores predeterminados, debe implementarlas como una propiedad de dependencia.  
@@ -33,5 +33,6 @@ En este ejemplo se muestra cómo realizar una copia de un [!INCLUDE[TLA#tla_clr]
  Para obtener más información acerca de cómo y por qué se debe implementar una propiedad de dependencia, en lugar de respaldar simplemente una propiedad [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con un campo privado, consulte [Información general sobre las propiedades de dependencia](dependency-properties-overview.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
 - [Temas "Cómo..."](properties-how-to-topics.md)

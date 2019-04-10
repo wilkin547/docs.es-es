@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Especificar un enlace de cliente en el código
+title: Filtrar para especificar un enlace de cliente en el código
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
-ms.openlocfilehash: c04febff886dda57ed86d8410c952926d192026b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6d8683108ebe87b8533551d212296b13630b4e19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632847"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218607"
 ---
-# <a name="how-to-specify-a-client-binding-in-code"></a>Procedimiento Especificar un enlace de cliente en el código
+# <a name="how-to-specify-a-client-binding-in-code"></a>Filtrar para especificar un enlace de cliente en el código
 En este ejemplo, se crea un cliente para utilizar un servicio de la calculadora y el enlace para ese cliente se especifica en código de manera imperativa. El cliente obtiene acceso al `CalculatorService`, que implementa la interfaz `ICalculator`, y el servicio y el cliente utilizan la clase <xref:System.ServiceModel.BasicHttpBinding>.  
   
  Este procedimiento asume que el servicio de la calculadora se está ejecutando. Para obtener información acerca de cómo crear el servicio, vea [Cómo: Especificar un enlace de servicio en la configuración](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). También usa el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)Windows Communication Foundation (WCF) proporciona para generar automáticamente los componentes de cliente. La herramienta genera el código de cliente para tener acceso al servicio.  
@@ -47,4 +47,5 @@ En este ejemplo, se crea un cliente para utilizar un servicio de la calculadora 
 5.  Compile y ejecute el cliente.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilización de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

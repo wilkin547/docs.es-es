@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a9e423a35ba8c592bbfd806f9087a88ee251e76
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4bd993eb26f26818117a20d376c3331f88c46b26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214356"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next (Método)
 Obtiene el número especificado de [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) instancias que contienen información acerca de los objetos del montón administrado.  
@@ -59,5 +59,6 @@ HRESULT Next(
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICorDebugHeapEnum (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebugHeapEnum (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

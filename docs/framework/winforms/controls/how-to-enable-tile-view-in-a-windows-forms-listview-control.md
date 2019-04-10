@@ -1,5 +1,5 @@
 ---
-title: Filtrar Habilitar la vista en mosaico en un Control ListView de formularios de Windows
+title: Filtrar para habilitar la vista en mosaico en un control ListView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: ad0a925601d3cfaebcd21a2082e3d208d82151bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0d47eddbc1d9a4efc7f1e4644136ac6621088396
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215032"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Procedimiento Habilitar la vista en mosaico en un Control ListView de formularios de Windows
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Filtrar para habilitar la vista en mosaico en un control ListView de formularios Windows Forms
 Con la característica de vista de mosaico del control <xref:System.Windows.Forms.ListView>, puede proporcionar equilibrio visual entre la información gráfica y de texto. La información de texto que se muestra para un elemento en la vista de mosaico es igual que la información de columna definida para la vista de detalles. La vista de mosaico funciona en combinación con las características de marca de inserción o agrupación del control <xref:System.Windows.Forms.ListView>.  
   
  La vista de mosaico usa un icono de 32 x 32 píxeles y varias líneas de texto, tal y como se muestra en las siguientes imágenes.  
@@ -28,7 +28,7 @@ Con la característica de vista de mosaico del control <xref:System.Windows.Form
  Para habilitar la vista de mosaico, establezca la propiedad <xref:System.Windows.Forms.ListView.View%2A> en <xref:System.Windows.Forms.View.Tile>. Puede ajustar el tamaño de los mosaicos estableciendo la propiedad <xref:System.Windows.Forms.ListView.TileSize%2A>, y el número de líneas de texto que se muestran en el mosaico ajustando la colección <xref:System.Windows.Forms.ListView.Columns%2A>.  
   
 > [!NOTE]
->  La vista de mosaico solo está disponible en [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] cuando la aplicación llama al método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>. En sistemas operativos anteriores, el código relacionado con la vista de mosaico no tiene ningún efecto y el control <xref:System.Windows.Forms.ListView> se muestra en la vista de iconos grandes. Para obtener más información, vea <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType>.  
+>  La vista de mosaico solo está disponible en [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] cuando la aplicación llama al método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>. En sistemas operativos anteriores, el código relacionado con la vista de mosaico no tiene ningún efecto y el control <xref:System.Windows.Forms.ListView> se muestra en la vista de iconos grandes. Para obtener más información, consulta <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType>.  
   
 ### <a name="to-set-tile-view-programmatically"></a>Para establecer la vista de mosaico mediante programación  
   
@@ -59,7 +59,8 @@ Con la característica de vista de mosaico del control <xref:System.Windows.Form
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
-- [ListView (Control)](listview-control-windows-forms.md)
-- [Información general del control ListView](listview-control-overview-windows-forms.md)
+- [Control ListView](listview-control-windows-forms.md)
+- [Información general sobre el control ListView](listview-control-overview-windows-forms.md)

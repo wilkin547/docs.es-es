@@ -1,5 +1,5 @@
 ---
-title: <appDomainResourceMonitoring> (Elemento)
+title: <appDomainResourceMonitoring> Elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - appDomainResourceMonitoring element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d085fe8b9cf11e2f195468a93b3fa9b3f0817503
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 71cc69eba17de8465cc7999f334c724e4ec14e7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224382"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > elemento
 Indica el runtime para recopilar estadísticas de todos los dominios de aplicación en el proceso mientras dura este.  
@@ -73,6 +73,7 @@ Indica el runtime para recopilar estadísticas de todos los dominios de aplicaci
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
 - [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)

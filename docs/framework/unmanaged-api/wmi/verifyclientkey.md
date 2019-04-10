@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94d601125049f0c215b3b03bf8b13d2959872c3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47fee26a0c4c25e4bff5bca94e5e26daaf98cccd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214720"
 ---
 # <a name="verifyclientkey-function"></a>Función VerifyClientKey
 Garantiza que la clave de cliente cuenta con la seguridad adecuada.  
@@ -48,4 +48,5 @@ Si se produce un error en la función, el valor devuelto es un código de error 
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

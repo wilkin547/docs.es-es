@@ -2,12 +2,12 @@
 title: Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213394"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ayuda a analizar seguimientos del diagnóstico generados por WCF. Service Trace Viewer proporciona una manera de combinar fácilmente, ver y filtrar los mensajes de seguimiento en el registro de modo que puede diagnosticar, reparar y comprobar los problemas de servicio WCF.  
@@ -456,6 +456,7 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
  Si se abre un registro de seguimiento creado utilizando un sistema operativo árabe, puede observar que el filtro horario no funciona. Por ejemplo, el año 2005 corresponde al año 1427 en el calendario árabe. Sin embargo, el intervalo temporal admitido por el filtro de la herramienta del visor de seguimiento de servicio no admite una fecha anterior a 1752. Esto puede hacer que no pueda seleccionar una fecha correcta en el filtro. Para resolver este problema, puede crear un filtro personalizado (**ver/filtros personalizados**) mediante una expresión XPath para incluir un intervalo de tiempo específico.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Configuración de la traza](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Traza de un extremo a otro](./diagnostics/tracing/end-to-end-tracing.md)
+- [Configurar seguimiento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Seguimiento de traza de un extremo a otro](./diagnostics/tracing/end-to-end-tracing.md)

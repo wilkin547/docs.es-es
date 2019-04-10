@@ -1,5 +1,5 @@
 ---
-title: Filtrar Cambiar el borde y los estilos de línea de cuadrícula en el Control DataGridView de Windows Forms
+title: Filtrar para cambiar los estilos de borde y línea de la cuadrícula en el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-ms.openlocfilehash: b4984dca6fb7dc8575b00758f0d61d9ff011e1ca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d24adb98c339f911d6bea0312bce4d4b4f198a61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703378"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224999"
 ---
-# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Filtrar Cambiar el borde y los estilos de línea de cuadrícula en el Control DataGridView de Windows Forms
+# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Filtrar para cambiar los estilos de borde y línea de la cuadrícula en el control DataGridView de formularios Windows Forms
 Con el <xref:System.Windows.Forms.DataGridView> control, puede personalizar la apariencia de borde del control y de las líneas de cuadrícula para mejorar la experiencia del usuario. Puede modificar el color de línea de cuadrícula y el estilo de borde del control además de los estilos de borde para las celdas del control. También puede aplicar estilos de borde de celda diferentes para las celdas normales, las celdas de encabezado de fila y las celdas de encabezado de columna.  
   
 > [!NOTE]
@@ -52,11 +52,12 @@ Con el <xref:System.Windows.Forms.DataGridView> control, puede personalizar la a
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Un control <xref:System.Windows.Forms.DataGridView> llamado `dataGridView1`.  
+-   Control <xref:System.Windows.Forms.DataGridView> denominado `dataGridView1`.  
   
 -   Referencias a los ensamblados <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType> y <xref:System.Drawing?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.BorderStyle>
 - <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=nameWithType>

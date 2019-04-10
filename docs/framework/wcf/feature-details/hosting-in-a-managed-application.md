@@ -2,12 +2,12 @@
 title: Hospedaje en una aplicación administrada
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: 0210f608be8ef7ff8b2af4b0cc36b308cd3ddbe8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218802"
 ---
 # <a name="hosting-in-a-managed-application"></a>Hospedaje en una aplicación administrada
 Servicios de Windows Communication Foundation (WCF) se pueden hospedar en cualquier [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicación. Los servicios autohospedados constituyen la opción de hospedaje más flexible porque es la que requiere una menor infraestructura para su implementación. Sin embargo, también es la opción de hospedaje menos robusta, porque las aplicaciones administradas no proporcionan hospedaje avanzado y características de administración de otras opciones de hospedaje de WCF, como los servicios de Internet Information Services (IIS) y Windows.  
@@ -25,5 +25,6 @@ Servicios de Windows Communication Foundation (WCF) se pueden hospedar en cualqu
  Otros escenarios comunes que habilita el autohospedaje es aplicaciones cliente enriquecidas, como las basadas en Windows Presentation Foundation (WPF) o Windows Forms (WinForms). Esta opción de hospedaje también facilita la comunicación de aplicaciones de cliente completas, como [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] y aplicaciones Winforms, con el mundo externo. Por ejemplo, un cliente de colaboración de punto a punto utiliza [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] para su interfaz de usuario y también hospeda un servicio WCF que permite a otros clientes para conectarse a él y compartir información.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md)
 - [Tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md)

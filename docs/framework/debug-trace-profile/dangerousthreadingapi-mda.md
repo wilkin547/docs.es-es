@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3cfbc1439be457987c058ee6d0298e93aa37f5d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46b0add67fc6bc139ef02e09190670870749d4c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218308"
 ---
 # <a name="dangerousthreadingapi-mda"></a>MDA de dangerousThreadingAPI
 El Asistente para la depuración administrada (MDA) de `dangerousThreadingAPI` se activa cuando se llama al método <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> en un subproceso diferente al subproceso actual.  
@@ -68,6 +68,7 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Threading.Thread>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [lock (instrucción)](~/docs/csharp/language-reference/keywords/lock-statement.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Instrucción lock](~/docs/csharp/language-reference/keywords/lock-statement.md)

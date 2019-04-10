@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: ca74650428c4536cd21694a49b74370b07c77667
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708940"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214941"
 ---
 # <a name="data-contract-equivalence"></a>Equivalencia del contrato de datos
 Para que un cliente envíe correctamente datos de un cierto tipo a un servicio, o para que un servicio envíe correctamente datos a un cliente, el tipo enviado no tiene que existir necesariamente en el extremo receptor. El único requisito es que los contratos de datos de ambos tipos sean equivalentes. (A veces, la equivalencia estricta no es necesario, como se describe en [versiones de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -54,13 +54,14 @@ Para que un cliente envíe correctamente datos de un cierto tipo a un servicio, 
  [!code-csharp[C_DataContractNames#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#8)]
  [!code-vb[C_DataContractNames#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#8)]  
   
- Cuando se pasan parámetros y valores devueltos entre un cliente y un servicio, no se puede enviar un contrato de datos de una clase base si el extremo receptor espera un contrato de datos de una clase derivada. Esto es conforme con los principios de la programación orientada a objetos. En el ejemplo anterior, un objeto de tipo `Person` no se puede enviar cuando un `Employee` se espera.  
+ Cuando se pasan parámetros y valores devueltos entre un cliente y un servicio, no se puede enviar un contrato de datos de una clase base si el punto de conexión receptor espera un contrato de datos de una clase derivada. Esto es conforme con los principios de la programación orientada a objetos. En el ejemplo anterior, un objeto de tipo `Person` no se puede enviar cuando un `Employee` se espera.  
   
  Se puede enviar un contrato de datos de una clase derivada si se espera un contrato de datos de una clase base, pero solo si el punto de conexión receptor "conoce" el tipo derivado mediante <xref:System.Runtime.Serialization.KnownTypeAttribute>. Para obtener más información, consulte [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). En el ejemplo anterior, se puede enviar un objeto de tipo `Employee` si se espera un `Person`, aunque solo si el código del receptor utiliza <xref:System.Runtime.Serialization.KnownTypeAttribute> para incluirlo en la lista de tipos conocidos.  
   
  Al pasar parámetros y valores devueltos entre las aplicaciones, si el tipo esperado es una interfaz, es equivalente a cuando el tipo esperado es <xref:System.Object>. Dado que, en última instancia, cada tipo deriva de <xref:System.Object>, todos los contratos de datos derivan, a la larga, del contrato de datos para <xref:System.Object>. De este modo, se puede pasar cualquier tipo de contrato de datos cuando se espera una interfaz. Se requieren pasos adicionales para funcionar correctamente con interfaces; Para obtener más información, consulte [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Orden de los miembros de datos](../../../../docs/framework/wcf/feature-details/data-member-order.md)

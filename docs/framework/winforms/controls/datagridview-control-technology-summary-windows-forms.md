@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: 9a1738e8be0471e24744a440fee10e5b1152ab10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717640"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217424"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Resumen de tecnologías para el control DataGridView (formularios Windows Forms)
 En este tema se resume la información sobre el control `DataGridView` y las clases que admiten su uso.  
@@ -61,6 +61,7 @@ En este tema se resume la información sobre el control `DataGridView` y las cla
  El <xref:System.Windows.Forms.DataGridView> control puede funcionar en estrecha junto con el <xref:System.Windows.Forms.BindingSource> componente. Este componente está diseñado para ser el origen de datos principal de un formulario. Puede administrar la interacción entre un <xref:System.Windows.Forms.DataGridView> control y su origen de datos, independientemente de los datos de tipo de origen.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general del control DataGridView](datagridview-control-overview-windows-forms.md)
 - [Arquitectura del control DataGridView](datagridview-control-architecture-windows-forms.md)
 - [Proteger la información de conexión](../../data/adonet/protecting-connection-information.md)

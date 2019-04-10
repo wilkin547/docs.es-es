@@ -1,5 +1,5 @@
 ---
-title: Filtrar Utilizar SystemFonts
+title: Filtrar Usar SystemFonts
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 5ed44da316ddee5ea3a83262f913da571bf75276
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5976bc0cb8b34e68d5e89dd70a608d7e52ded332
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216787"
 ---
-# <a name="how-to-use-systemfonts"></a>Procedimiento Utilizar SystemFonts
+# <a name="how-to-use-systemfonts"></a>Filtrar Usar SystemFonts
 En este ejemplo se muestra cómo usar los recursos estáticos de la <xref:System.Windows.SystemFonts> clase con el fin de estilo de un botón o personalizarlo.  
   
 ## <a name="example"></a>Ejemplo  
@@ -37,6 +37,7 @@ En este ejemplo se muestra cómo usar los recursos estáticos de la <xref:System
  [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.SystemFonts>
 - [Pintar un área con un pincel del sistema](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [Usar SystemParameters](how-to-use-systemparameters.md)
@@ -44,4 +45,4 @@ En este ejemplo se muestra cómo usar los recursos estáticos de la <xref:System
 - [Temas "Cómo..."](resources-how-to-topics.md)
 - [Extensiones de marcado x:Static](../../xaml-services/x-static-markup-extension.md)
 - [Recursos XAML](xaml-resources.md)
-- [DynamicResource (extensión de marcado)](dynamicresource-markup-extension.md)
+- [Extensión de marcado DynamicResource](dynamicresource-markup-extension.md)

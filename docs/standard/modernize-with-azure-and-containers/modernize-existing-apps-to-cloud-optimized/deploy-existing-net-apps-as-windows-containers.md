@@ -1,17 +1,17 @@
 ---
-title: Implementar aplicaciones .NET existentes como contenedores de Windows
+title: Implementación de aplicaciones .NET existentes como contenedores de Windows
 description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | Implementar aplicaciones .NET existentes como contenedores de Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 646acc6fd14c1ff85593dbf6074f0d03d86f04bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216670"
 ---
-# <a name="deploy-existing-net-apps-as-windows-containers"></a>Implementar aplicaciones .NET existentes como contenedores de Windows
+# <a name="deploy-existing-net-apps-as-windows-containers"></a>Implementación de aplicaciones .NET existentes como contenedores de Windows
 
 Las implementaciones basadas en contenedores de Windows son aplicables a las aplicaciones optimizadas para la nube y aplicaciones nativas de nube.
 
@@ -102,8 +102,8 @@ Para .NET Core (multiplataforma para Linux y Windows), las etiquetas tendrá un 
 
 > | **Etiqueta** | **Versión del sistema y**
 > |---|---|
-> | **Microsoft/dotnet:2.0.0-Runtime** | .NET core 2.0 en tiempo de ejecución solo en Linux |
-> | **Microsoft/dotnet:2.0.0-Runtime-nanoserver** | .NET core 2.0 en tiempo de ejecución solo en Windows Nano Server |
+> | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 en tiempo de ejecución solo en Linux |
+> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 en tiempo de ejecución solo en Windows Nano Server |
 
 ### <a name="multi-arch-images"></a>Imágenes multiarquitectura
 
@@ -134,7 +134,6 @@ Ejecutar un contenedor en Windows con o sin aislamiento de Hyper-V es una decisi
 -   **Infografía: Microsoft y contenedores**
 
     [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
-
 
 ## <a name="the-container-ecosystem-in-azure"></a>El ecosistema de contenedor en Azure
 

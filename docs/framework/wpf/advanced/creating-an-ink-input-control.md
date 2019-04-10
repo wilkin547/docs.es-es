@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: 329bad9d5e0fa24f66fbd63def4936cb047e62e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 80385b904f4ff5de86bf7e011f6a883b957d0ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219673"
 ---
 # <a name="creating-an-ink-input-control"></a>Creación de un control de entrada manuscrita
 Puede crear un control personalizado dinámicamente y estáticamente representa la entrada de lápiz. Es decir, represente la tinta mientras el usuario dibuja un trazo, causando parece "fluir" del lápiz de tablet PC y mostrar tinta después de se agrega al control, mediante el lápiz de tablet PC, pegado desde el Portapapeles, o cargar desde un archivo. Para representar dinámicamente la tinta, el control debe usar un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Para representar estáticamente tinta, debe invalidar los métodos de evento de lápiz (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, y <xref:System.Windows.UIElement.OnStylusUp%2A>) para recopilar <xref:System.Windows.Input.StylusPoint> datos, crear los trazos y agregarlos a un <xref:System.Windows.Controls.InkPresenter> (que representa la entrada de lápiz en el control).  
   
  Este tema contiene las siguientes subsecciones:  
   
--   [Cómo: Recopilar datos de puntos de lápiz y crear trazos de tinta](#CollectingStylusPointDataAndCreatingInkStrokes)  
+-   [Filtrar Recopilar datos de puntos de lápiz y crear trazos de tinta](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Cómo: Habilitar el Control y aceptar la entrada del mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
+-   [Filtrar Habilitar el Control y aceptar la entrada del mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
   
 -   [Incorporación de todos](#PuttingItTogether)  
   
@@ -99,5 +99,6 @@ Puede crear un control personalizado dinámicamente y estáticamente representa 
  Puede crear un control que recopila y representa la entrada de lápiz invalidando los métodos de eventos de lápiz óptico. Al crear su propio control, derive su propia <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> clases e insertándolos el en <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, puede implementar prácticamente cualquier comportamiento imaginable con entrada de lápiz digital. Tener acceso a la <xref:System.Windows.Input.StylusPoint> datos a medida que se generan, lo que le ofrece la oportunidad de personalizar <xref:System.Windows.Input.Stylus> de entrada y para representarlo en la pantalla según corresponda para su aplicación. Dado que tienen ese acceso de bajo nivel para el <xref:System.Windows.Input.StylusPoint> datos, puede implementar la recopilación de tinta y representarlo con un rendimiento óptimo para su aplicación.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Control avanzado de entrada manuscrita](advanced-ink-handling.md)
 - [Obtener acceso y manipular la entrada manuscrita](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

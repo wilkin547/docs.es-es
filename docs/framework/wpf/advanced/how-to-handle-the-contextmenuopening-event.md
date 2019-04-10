@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 077a28f345b886fd9ec183b5828c0535ce688cb4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a6ac0158c4fb9d766fd56ee50d0b1b6cc91e5de3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219634"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Filtrar Controlar el evento ContextMenuOpening
 El <xref:System.Windows.FrameworkElement.ContextMenuOpening> se pueden controlar eventos en una aplicación para ajustar un menú contextual existente antes para mostrar o suprimir el menú que se mostraría en caso contrario, estableciendo el <xref:System.Windows.RoutedEventArgs.Handled%2A> propiedad `true` en los datos del evento. La razón típica para la configuración de <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true` en el evento son reemplazar el menú completamente con un nuevo datos <xref:System.Windows.Controls.ContextMenu> objeto, que a veces requiere cancelar la operación e iniciar una nuevo abrir. Al escribir controladores para la <xref:System.Windows.FrameworkElement.ContextMenuOpening> eventos, debe ser consciente de los problemas de sincronización entre un <xref:System.Windows.Controls.ContextMenu> control y el servicio que se encarga de abrir y posicionamiento de los menús contextuales para los controles en general. En este tema se muestra algunas de las técnicas de código para el menú contextual de varios escenarios de apertura y muestra un caso donde el problema de sincronización entra en juego.  
@@ -56,6 +56,7 @@ El <xref:System.Windows.FrameworkElement.ContextMenuOpening> se pueden controlar
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceReopen](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacereopen)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>
 - [Información general sobre elementos base](base-elements-overview.md)

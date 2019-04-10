@@ -1,5 +1,5 @@
 ---
-title: <oidEntry> (Elemento)
+title: <oidEntry> Elemento
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: b1dc4c788576fd3cab55db5255617cc55e68594b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c686d2b99ad66aec753a356b09fa3c7151193808
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219348"
 ---
 # <a name="oidentry-element"></a>\<oidEntry > elemento
 Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.  
@@ -79,8 +79,9 @@ Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Esquema de la configuración de criptografía](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [servicios criptográficos](../../../../../docs/standard/security/cryptographic-services.md)
 - [Configurar clases de criptografía](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [Asignar identificadores de objeto a algoritmos de criptografía](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

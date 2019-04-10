@@ -11,18 +11,16 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 95a40b4a357b1a601eced6c8e5214871b95fcbd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219816"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Devoluciones de llamada y validación de las propiedades de dependencia
 En este tema se describe cómo crear propiedades de dependencia mediante implementaciones personalizadas alternativas de características relacionadas con las propiedades, como la determinación de la validación, las devoluciones de llamada que se invocan cuando cambia el valor efectivo de la propiedad y la invalidación de posibles influencias externas en la determinación del valor. En este tema también se describen los escenarios donde es apropiado expandir los comportamientos predeterminados del sistema de propiedades mediante estas técnicas.  
-  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
  En este tema se supone que entiende los escenarios básicos de la implementación de una propiedad de dependencia y cómo se aplican los metadatos a una propiedad de dependencia personalizada. Consulte [Propiedades de dependencia personalizadas](custom-dependency-properties.md) y [Metadatos de las propiedades de dependencia](dependency-property-metadata.md) para obtener contexto.  
@@ -81,6 +79,7 @@ En este tema se describe cómo crear propiedades de dependencia mediante impleme
  El sistema de propiedades tratará cualquier <xref:System.Windows.CoerceValueCallback> que devuelve el valor <xref:System.Windows.DependencyProperty.UnsetValue> como un caso especial. En este caso especial significa que el cambio de propiedad que dan como resultado la <xref:System.Windows.CoerceValueCallback> se debe rechazar que se llama por el sistema de propiedades, y que el sistema de propiedades en su lugar debe notificar el valor anterior que tenía la propiedad. Este mecanismo puede ser útil para comprobar que los cambios en una propiedad iniciados de manera asincrónica siguen siendo válidos para el estado actual del objeto y suprimirlos si no lo son. Otro escenario posible es la posibilidad de suprimir de manera selectiva un valor según el componente de determinación del valor propiedad que sea responsable del valor comunicado. Para ello, puede usar el <xref:System.Windows.DependencyProperty> pasa la devolución de llamada y el identificador de propiedad como entrada para <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>y, a continuación, procesar el <xref:System.Windows.ValueSource>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
 - [Metadatos de las propiedades de dependencia](dependency-property-metadata.md)
 - [Propiedades de dependencia personalizadas](custom-dependency-properties.md)

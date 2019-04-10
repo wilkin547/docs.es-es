@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Crear controles de Windows Forms
+title: Filtrar para crear controles de formularios Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 38416f28546f2aebc04d9ecf2c6995282b4720b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5240b9aaaf4d73cb2899a9003f9658dbd8958f3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713424"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224343"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>Procedimiento Crear controles de Windows Forms
+# <a name="how-to-author-controls-for-windows-forms"></a>Filtrar para crear controles de formularios Windows Forms
 Un control representa un vínculo gráfico entre el usuario y el programa. Un control puede proporcionar o procesar datos, aceptar datos proporcionados por el usuario, responder a eventos o ejecutar cualquier otra función que conecte al usuario con la aplicación. Dado que los controles son básicamente componentes con una interfaz gráfica, pueden ejecutar las mismas funciones que realizan los componentes, así como proporcionar interacción con los usuarios. Los controles se crean con un propósito específico; la creación de controles no es más que una tarea de programación como otra cualquiera. Teniendo esto en cuenta, los pasos siguientes representan información general sobre el proceso de creación de controles. Los vínculos proporcionan información adicional sobre cada paso.  
   
 > [!NOTE]
@@ -52,10 +52,11 @@ Un control representa un vínculo gráfico entre el usuario y el programa. Un co
 10. Empaquete e implemente el control. Para obtener más información, consulte [primer vistazo a la implementación en Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components).  
   
 ## <a name="see-also"></a>Vea también
-- [Tutorial: Crear un Control compuesto con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Tutorial: Heredar de un Control de Windows Forms con Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Cómo: Heredar de la clase UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Cómo: Heredar de la clase de Control](how-to-inherit-from-the-control-class.md)
-- [Cómo: Heredar de Windows existente controles de formularios](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Cómo: Probar el comportamiento de tiempo de ejecución de una clase UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+
+- [Tutorial: Crear un control compuesto con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Tutorial: Heredar de un control de formularios Windows Forms con Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Filtrar para heredar de la clase UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Filtrar para heredar de la clase Control](how-to-inherit-from-the-control-class.md)
+- [Filtrar para heredar de controles de formularios Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Filtrar para comprobar el comportamiento de UserControl en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)

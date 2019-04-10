@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 3ad76899f86013e3395b5b7859538c4c59c9b1ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 61fb68a43132b350b62f073ca8683fada3be52d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225773"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>Tutorial: Actualizar la información de la barra de estado en tiempo de ejecución
 > [!IMPORTANT]
@@ -85,8 +85,9 @@ ms.locfileid: "57716470"
     >  El reloj tardará aproximadamente 30 segundos en aparecer en la barra de estado. El objetivo es obtener la hora más precisa posible. A la inversa, para que el reloj aparezca antes, puede reducir el valor de la <xref:System.Windows.Forms.Timer.Interval%2A> propiedad establecidos en el paso 7 del procedimiento anterior.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Cómo: Agregar paneles a un Control StatusBar](how-to-add-panels-to-a-statusbar-control.md)
-- [Cómo: Determinar qué Panel de Control StatusBar de formularios Windows Forms se hizo clic](determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [Información general sobre StatusBar (Control)](statusbar-control-overview-windows-forms.md)
+- [Filtrar para agregar paneles a un control StatusBar](how-to-add-panels-to-a-statusbar-control.md)
+- [Filtrar para determinar en qué panel del control StatusBar de formularios Windows Forms se hizo clic](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Información general sobre el control StatusBar](statusbar-control-overview-windows-forms.md)

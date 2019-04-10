@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Modificar las entradas de teclado en un Control estándar
+title: Filtrar para modificar la entrada de teclado en un control estándar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: 41071efad50d42c873410420c850a7800b41008d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81d33234670fb8ae5445cc86a79f5c3b6a647a03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225786"
 ---
-# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Filtrar Modificar las entradas de teclado en un Control estándar
+# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Filtrar para modificar la entrada de teclado en un control estándar
 Windows Forms permite consumir y modificar la entrada de teclado. Consumir una tecla es controlar una tecla dentro de un método o controlador de eventos para que otros métodos y eventos más abajo en la cola de mensajes no reciban el valor de la tecla. Modificar una tecla es modificar el valor de una tecla para que los métodos y controladores de eventos más abajo en la cola de mensajes reciban un valor de tecla diferente. En este tema se muestra cómo realizar estas tareas.  
   
 ### <a name="to-consume-a-key"></a>Para consumir una tecla  
   
 -   En un controlador de eventos <xref:System.Windows.Forms.Control.KeyPress>, establezca la propiedad <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> de la clase <xref:System.Windows.Forms.KeyPressEventArgs> en `true`.  
   
-     O bien  
+     -o bien-  
   
      En un controlador de eventos <xref:System.Windows.Forms.Control.KeyDown>, establezca la propiedad <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> de la clase <xref:System.Windows.Forms.KeyEventArgs> en `true`.  
   
@@ -68,6 +68,7 @@ Windows Forms permite consumir y modificar la entrada de teclado. Consumir una t
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Entradas mediante teclado en una aplicación de Windows Forms](keyboard-input-in-a-windows-forms-application.md)
-- [Datos introducidos por el usuario en una aplicación de Windows Forms](user-input-in-a-windows-forms-application.md)
+- [Datos introducidos por el usuario en una aplicación de formularios Windows Forms](user-input-in-a-windows-forms-application.md)
 - [Funcionamiento de las entradas mediante teclado](how-keyboard-input-works.md)

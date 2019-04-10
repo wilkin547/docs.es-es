@@ -9,12 +9,12 @@ helpviewer_keywords:
 - task_core_add_class_handling_routed_properties [WPF]
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
-ms.openlocfilehash: 8c973871336c3389161ce25ae52d2dfaef9c53a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224278"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Filtrar Agregar control de clases a un evento enrutado
 Los eventos enrutados se pueden controlar mediante controladores de clase o de instancia en cualquier nodo determinado en la ruta. Los controladores de clase se invocan en primer lugar y pueden usarse por implementaciones de la clase para suprimir los eventos del control de instancias o introducir otros comportamientos específicos de eventos en los eventos que pertenecen a las clases base. En este ejemplo se muestra dos técnicas estrechamente relacionadas para implementar los controladores de clase.  
@@ -33,6 +33,7 @@ Los eventos enrutados se pueden controlar mediante controladores de clase o de i
  [!code-vb[ClassHandling#StaticAndRegisterClassHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.EventManager>
 - [Marcar eventos enrutados como controlados y control de clases](marking-routed-events-as-handled-and-class-handling.md)
 - [Controlar un evento enrutado](how-to-handle-a-routed-event.md)

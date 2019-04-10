@@ -1,21 +1,21 @@
 ---
-title: Procedimiento Configurar el servicio WCF para interoperar con clientes de servicios Web de ASP.NET
+title: Filtrar para configurar servicios WCF para interoperar con clientes de servicios web ASP.NET
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 8f7fe8c3dea700743def739de216633c8a26329b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8955018124f4e60b0a7c74ad70210b4369676ef5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214707"
 ---
-# <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Procedimiento Configurar el servicio WCF para interoperar con clientes de servicios Web de ASP.NET
+# <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Filtrar para configurar servicios WCF para interoperar con clientes de servicios web ASP.NET
 Para configurar un punto de conexión de servicio de Windows Communication Foundation (WCF) para poder interoperar con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] clientes de servicios Web, use la <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> tipo como tipo de enlace para el punto de conexión de servicio.  
   
- Puede habilitar opcionalmente el soporte para HTTPS y la autenticación del cliente del nivel de transporte en el enlace. Los clientes de servicios web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] no admiten la codificación de mensajes del MTOM, por lo que la propiedad <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> debería quedar dejarse en su valor predeterminado, que es <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. Los clientes de servicios web de ASP.NET no admiten WS-Security, por lo que la <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> debería estar establecida en <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
+ Puede habilitar opcionalmente el soporte para HTTPS y la autenticación del cliente del nivel de transporte en el enlace. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Clientes de servicios Web no admiten la codificación de mensajes MTOM, por lo que la <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> propiedad debe dejarse como su valor predeterminado, que es <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. Los clientes de servicios web de ASP.NET no admiten WS-Security, por lo que la <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> debería estar establecida en <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
   
  Para que esté disponible para los metadatos para un servicio WCF [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] herramientas de generación de proxy de servicio Web (es decir, [Web Services Description Language Tool (Wsdl.exe)](https://go.microsoft.com/fwlink/?LinkId=73833), [herramienta descubrimiento de servicios Web (Disco.exe)](https://go.microsoft.com/fwlink/?LinkId=73834)y la característica Agregar referencia Web en Visual Studio), debe exponer un extremo de metadatos HTTP/GET.  
   
@@ -25,15 +25,15 @@ Para configurar un punto de conexión de servicio de Windows Communication Found
   
 2.  De manera opcional, habilite la seguridad de transporte para este enlace de punto de conexión de servicio estableciendo el modo de seguridad para el enlace en <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>. Para obtener más información, consulte [seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md).  
   
-3.  Agregue un nuevo punto de conexión de la aplicación a su host de servicio mediante la instancia de enlace que acaba de crear. Para obtener más información sobre cómo agregar un extremo de servicio en el código, vea el [Cómo: Crear un punto de conexión de servicio en código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
+3.  Agregue un nuevo extremo de la aplicación a su host de servicio mediante la instancia de enlace que acaba de crear. Para obtener más información sobre cómo agregar un extremo de servicio en el código, vea el [Cómo: Crear un punto de conexión de servicio en código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
   
 4.  Habilite un punto de conexión de metadatos HTTP/GET para su servicio. Para obtener información detallada, consulte [Cómo: Publicación de metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
-### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-a-configuration-file"></a>Para agregar un punto de conexión WCF que sea compatible con clientes de servicio web de ASP.NET en un archivo de configuración  
+### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-a-configuration-file"></a>Para agregar un extremo WCF que sea compatible con clientes de servicio web de ASP.NET en un archivo de configuración  
   
 1.  Cree una nueva configuración de enlace <xref:System.ServiceModel.BasicHttpBinding>. Para obtener más información, consulte el [Cómo: Especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
-2.  De manera opcional, habilite la seguridad de transporte para esta configuración de enlace de punto de conexión de servicio estableciendo el modo de seguridad para el enlace en <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>. Para obtener más información, consulte [seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md).  
+2.  De manera opcional, habilite la seguridad de transporte para esta configuración de enlace de extremo de servicio estableciendo el modo de seguridad para el enlace en <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>. Para obtener más información, consulte [seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md).  
   
 3.  Configure un nuevo punto de conexión de la aplicación para su servicio utilizando la configuración de enlace que acaba de crear. Para obtener más información sobre cómo agregar un extremo de servicio en un archivo de configuración, consulte el [Cómo: Crear un punto de conexión de servicio en la configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
   
@@ -47,10 +47,11 @@ Para configurar un punto de conexión de servicio de Windows Communication Found
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]     
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Crear un punto de conexión de servicio en código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
-- [Cómo: Publicación de metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
-- [Cómo: Especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Cómo: Crear un punto de conexión de servicio en la configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [Cómo: Publicar metadatos para un servicio mediante un archivo de configuración](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+
+- [Filtrar para crear un punto de conexión de servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
+- [Filtrar para publicar metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [Filtrar para especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [Filtrar para crear un punto de conexión de servicio en la configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Filtrar para publicar metadatos para un servicio mediante un archivo de configuración](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [Utilización de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)

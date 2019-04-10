@@ -2,12 +2,12 @@
 title: Traza del flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: f8b454437631b4711360ddf0c1196cafca13b5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 92497768e7e8d720cdcc7c8f2c7c04b4dfcc47b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224941"
 ---
 # <a name="workflow-tracing"></a>Traza del flujo de trabajo
 La traza del flujo de trabajo ofrece una forma de capturar la información de diagnóstico con los agentes de escucha de seguimiento de .NET Framework. Se puede habilitar la traza si se detecta un problema con la aplicación y se deshabilita de nuevo una vez resuelto el problema. Hay dos maneras de poder habilitar la traza de depuración para los flujos de trabajo. Puede configurarlo con el visor del seguimiento de eventos o puede usar <xref:System.Diagnostics> para enviar los eventos de seguimiento a un archivo.  
@@ -23,7 +23,7 @@ La traza del flujo de trabajo ofrece una forma de capturar la información de di
   
 4.  El tamaño predeterminado del búfer de traza analítica es solo de 4 kilobytes (KB); se recomienda aumentar el tamaño a 32 KB. Para ello, realice los pasos siguientes.  
   
-    1.  Ejecute el siguiente comando en el directorio de .NET Framework actual (por ejemplo, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1.  Ejecute el siguiente comando en el directorio del marco de trabajo actual (por ejemplo, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
     2.  Cambiar el \<bufferSize > valor en el archivo Windows.ApplicationServer.Applications.man a 32.  
   
@@ -35,7 +35,7 @@ La traza del flujo de trabajo ofrece una forma de capturar la información de di
                   </channel>  
         ```  
   
-    3.  Ejecute el siguiente comando en el directorio de .NET Framework actual (por ejemplo, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3.  Ejecute el siguiente comando en el directorio del marco de trabajo actual (por ejemplo, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
 >  Si usa .NET Framework 4 Client Profile, primero debe registrar el manifiesto ETW ejecutando el siguiente comando desde el directorio de .NET Framework 4: `ServiceModelReg.exe –i –c:etw`  
@@ -70,5 +70,6 @@ La traza del flujo de trabajo ofrece una forma de capturar la información de di
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

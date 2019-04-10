@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224291"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optimizar el rendimiento: Otras recomendaciones
 <a name="introduction"></a> En este tema se proporcionan recomendaciones de rendimiento, además de las que se incluyen en los temas de la sección [Optimizar WPF: Rendimiento de aplicaciones](optimizing-wpf-application-performance.md).  
@@ -73,6 +73,7 @@ ms.locfileid: "57358943"
  El servicio de caché de fuente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] comparte los datos de fuente entre aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. La primera aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que ejecuta inicia este servicio, si este no se está ejecutando. Si usas [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], puede establecer el servicio "Windows Presentation Foundation (WPF) Font Cache 3.0.0.0" de "Manual" (predeterminado) en "Automático (Inicio retrasado)" para reducir el tiempo de arranque inicial [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Planear para mejorar el rendimiento de aplicaciones](planning-for-application-performance.md)
 - [Aprovechar el hardware](optimizing-performance-taking-advantage-of-hardware.md)
 - [Presentación y diseño](optimizing-performance-layout-and-design.md)

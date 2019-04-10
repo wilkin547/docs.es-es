@@ -1,5 +1,5 @@
 ---
-title: Filtrar Rellenar una forma con un Color sólido
+title: Filtrar para rellenar una forma con un color sólido
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - colors [Windows Forms], adding to shapes
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
-ms.openlocfilehash: 8bc782f9496a9c1562bad2df1ba196fb39572e68
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d6fe7a252029ff80f21d99f7342fabb1d29fbe24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211678"
 ---
-# <a name="how-to-fill-a-shape-with-a-solid-color"></a>Procedimiento Rellenar una forma con un Color sólido
+# <a name="how-to-fill-a-shape-with-a-solid-color"></a>Filtrar para rellenar una forma con un color sólido
 Para rellenar una forma con un color sólido, cree un <xref:System.Drawing.SolidBrush> objeto y, a continuación, pasar ese <xref:System.Drawing.SolidBrush> objeto como argumento para uno de los métodos de relleno de la <xref:System.Drawing.Graphics> clase. El ejemplo siguiente muestra cómo rellenar una elipse con el color rojo.  
   
 ## <a name="example"></a>Ejemplo  
@@ -27,7 +27,8 @@ Para rellenar una forma con un color sólido, cree un <xref:System.Drawing.Solid
  [!code-vb[System.Drawing.UsingABrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>.  
+ El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilizar un pincel para rellenar formas](using-a-brush-to-fill-shapes.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: ab72fe5a22ca88b33a93d94d4b5e16bbc470a4da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17ef057fccbea48da698e0ecfa5c789e125adbb0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733225"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226890"
 ---
 # <a name="connection-string-builders"></a>Generadores de cadenas de conexión
 En versiones anteriores de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], comprobación de las cadenas de conexión con la cadena concatenada valores no se produjeron, por lo que en tiempo de ejecución genera una palabra clave incorrecta en el tiempo de compilación un <xref:System.ArgumentException>. Cada uno de los proveedores de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] admitía una sintaxis diferente para las palabras claves de cadenas de conexión, lo que dificultaba la construcción de cadenas de conexión válidas de forma manual. Para solucionar este problema, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 incorporó nuevos compiladores de cadenas de conexión para cada proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Cada uno de los proveedores de datos incluye una clase creadora de cadenas de conexión fuertemente tipadas que hereda de <xref:System.Data.Common.DbConnectionStringBuilder>. En la tabla siguiente se indican los proveedores de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] y sus clases compiladoras de cadenas de conexión asociadas.  
@@ -80,6 +80,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Cadenas de conexión](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Privacidad y seguridad de datos](../../../../docs/framework/data/adonet/privacy-and-data-security.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

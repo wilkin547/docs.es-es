@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un visor de documentos HTML en una aplicación de Windows Forms
+title: Filtrar para crear un visor de documentos HTML en una aplicación de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - document viewers
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-ms.openlocfilehash: a25d8bf413614ae71676335c0c8e672caadbf885
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0eecefd961aed5408e7d02769056dc551e604b02
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214577"
 ---
-# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Filtrar Crear un visor de documentos HTML en una aplicación de Windows Forms
+# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Filtrar para crear un visor de documentos HTML en una aplicación de formularios Windows Forms
 Puede usar el <xref:System.Windows.Forms.WebBrowser> control para mostrar e imprimir documentos HTML sin proporcionar la funcionalidad completa de un explorador Web de Internet. Esto es útil cuando desea aprovechar las ventajas de las funciones de formato de HTML, pero no desea que los usuarios para cargar páginas Web arbitrarias que pueden contener controles Web que no se confía o código de script potencialmente malintencionado. Es posible que desee restringir la capacidad de la <xref:System.Windows.Forms.WebBrowser> de control de esta manera, por ejemplo, para usarlo como un visor de correo electrónico HTML o para proporcionar ayuda con formato HTML en la aplicación.  
   
 ### <a name="to-create-an-html-document-viewer"></a>Para crear un visor de documentos HTML  
@@ -39,10 +39,11 @@ Puede usar el <xref:System.Windows.Forms.WebBrowser> control para mostrar e impr
 -   Referencias a los ensamblados `System` y `System.Windows.Forms`.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
 - [Información general sobre el control WebBrowser](webbrowser-control-overview.md)
 - [Seguridad de WebBrowser](webbrowser-security.md)
-- [Cómo: Navegue a una dirección URL con el Control WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Cómo: Imprimir con un Control WebBrowser](how-to-print-with-a-webbrowser-control.md)
+- [Filtrar para desplazarse a una dirección URL con el control WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Filtrar para imprimir con un control WebBrowser](how-to-print-with-a-webbrowser-control.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
-ms.openlocfilehash: 9b32ee4c7745fda482561311dc116e0e38b49ab7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1f7a7da1ab2ce0ad7d7908ecd1f896d229b8e1a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223308"
 ---
 # <a name="formulate-projections"></a>Formular proyecciones
 Los ejemplos siguientes muestran cómo el `select` instrucción C# y `Select` instrucción en Visual Basic se puede combinar con otras características para formar proyecciones de consulta.  
@@ -76,4 +76,5 @@ Los ejemplos siguientes muestran cómo el `select` instrucción C# y `Select` in
  [!code-vb[DLinqQueryExamples#65](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#65)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Ejemplos de consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

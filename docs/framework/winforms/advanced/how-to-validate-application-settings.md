@@ -1,5 +1,5 @@
 ---
-title: Filtrar Validar la configuración de la aplicación
+title: Filtrar para validar la configuración de la aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212094"
 ---
-# <a name="how-to-validate-application-settings"></a>Procedimiento Validar la configuración de la aplicación
+# <a name="how-to-validate-application-settings"></a>Filtrar para validar la configuración de la aplicación
 En este tema se muestra cómo validar la configuración de la aplicación antes de conservarla.  
   
  Como la configuración de la aplicación está fuertemente tipada, tiene cierta confianza en que los usuarios no puedan asignar los datos de un tipo incorrecto a una configuración especificada. Sin embargo, aún es posible que un usuario intente asignar un valor a una configuración que se encuentre fuera de los límites aceptables (por ejemplo, proporcionar una fecha de nacimiento perteneciente al futuro). <xref:System.Configuration.ApplicationSettingsBase>, la clase primaria de todas las clases de configuración de la aplicación, expone cuatro eventos para habilitar la comprobación de esos límites. Al controlarse estos eventos, se incluye todo el código de validación en una sola ubicación, en lugar de dispersarse por todo el proyecto.  
@@ -58,11 +58,11 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
         MySettings.Default   
         ```  
   
-         O bien  
+         -o bien-  
   
     -   Si es desarrollador de Visual Basic y ha creado la configuración de la aplicación mediante el Diseñador de proyectos, puede recuperar la configuración con [My.Settings (Objeto)](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
-         O bien  
+         -o bien-  
   
     -   Si ha creado la configuración mediante la derivación de <xref:System.Configuration.ApplicationSettingsBase> directamente, deberá crear manualmente una instancia de la clase.  
   
@@ -80,7 +80,7 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
   
 1.  Si es un C# developer, en el formulario o un control `Load` evento, agregue un controlador de eventos para el <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> eventos.  
   
-     O bien  
+     -o bien-  
   
      Si es desarrollador de Visual Basic, debe declarar la variable `Settings` mediante la palabra clave `WithEvents`.  
   
@@ -161,5 +161,6 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [Crear controladores de eventos en Windows Forms](../creating-event-handlers-in-windows-forms.md)
-- [Cómo: Crear configuración de la aplicación](how-to-create-application-settings.md)
+
+- [Crear controladores de eventos en formularios Windows Forms](../creating-event-handlers-in-windows-forms.md)
+- [Filtrar para crear la configuración de la aplicación](how-to-create-application-settings.md)

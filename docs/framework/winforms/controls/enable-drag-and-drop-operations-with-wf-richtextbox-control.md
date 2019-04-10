@@ -1,5 +1,5 @@
 ---
-title: Filtrar Habilitar las operaciones de arrastrar y colocar con el Control RichTextBox de formularios de Windows
+title: Filtrar para habilitar operaciones de arrastrar y colocar con el control RichTextBox de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: ead61b4b889119b47675e49bc95e9631a8ad664e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e61f7743d984d99b1c6811cb1980b97705c304a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711010"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223966"
 ---
-# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Filtrar Habilitar las operaciones de arrastrar y colocar con el Control RichTextBox de formularios de Windows
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Filtrar para habilitar operaciones de arrastrar y colocar con el control RichTextBox de formularios Windows Forms
 Las operaciones de arrastrar y colocar con el control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms se realizan mediante el control de los eventos <xref:System.Windows.Forms.RichTextBox.DragEnter> y <xref:System.Windows.Forms.RichTextBox.DragDrop> . Por lo tanto, las operaciones de arrastrar y colocar son extremadamente sencillas con el control <xref:System.Windows.Forms.RichTextBox> .  
   
 ### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>Para habilitar las operaciones de arrastre en un control RichTextBox  
@@ -165,7 +165,8 @@ Las operaciones de arrastrar y colocar con el control <xref:System.Windows.Forms
      Al soltar el botón del mouse, se quita el texto seleccionado (es decir, se genera el evento <xref:System.Windows.Forms.RichTextBox.DragDrop> ) y se inserta en el control <xref:System.Windows.Forms.RichTextBox> .  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.RichTextBox>
-- [Cómo: Realizar operaciones de arrastrar y colocar entre aplicaciones](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
-- [RichTextBox (control)](richtextbox-control-windows-forms.md)
+- [Filtrar para llevar a cabo operaciones de arrastrar y colocar entre aplicaciones](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [Control RichTextBox](richtextbox-control-windows-forms.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

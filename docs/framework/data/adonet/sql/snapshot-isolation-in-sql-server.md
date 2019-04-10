@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 873ec2cfdf7e4b0c743a3bcf607abe8500ec4d3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c06ecd8626b148c4f2143efdfa1e143d6ab3d6bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643057"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215942"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Aislamiento de instantáneas en SQL Server
 El aislamiento de instantánea mejora la simultaneidad para las aplicaciones OLTP.  
@@ -142,6 +142,7 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
  Si la aplicación tiene muchos conflictos, el aislamiento de instantáneas podría no ser la mejor elección. Las sugerencias únicamente deben utilizarse cuando sea necesario. La aplicación no debería estar diseñada para que dependa constantemente de las sugerencias de bloqueo para su funcionamiento.  
   
 ## <a name="see-also"></a>Vea también
+
 - [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
 - [Guía de versiones de fila y bloqueo de transacciones](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

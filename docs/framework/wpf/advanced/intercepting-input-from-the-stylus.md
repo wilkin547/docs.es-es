@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 0568e72e6d686ce08e6bd802f273e45dd623524b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218776"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Interceptar entradas del lápiz óptico
 El <xref:System.Windows.Input.StylusPlugIns> arquitectura proporciona un mecanismo para implementar el control de bajo nivel a través de <xref:System.Windows.Input.Stylus> de entrada y la creación de la entrada de lápiz digital <xref:System.Windows.Ink.Stroke> objetos. La <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> clase proporciona un mecanismo para implementar un comportamiento personalizado y aplicarlo a la secuencia de datos procedente del dispositivo de lápiz para un rendimiento óptimo.  
@@ -71,5 +71,6 @@ El <xref:System.Windows.Input.StylusPlugIns> arquitectura proporciona un mecanis
  Al derivar sus propias <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> clases e insertándolos en <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> colecciones, puede mejorar considerablemente el comportamiento de la entrada de lápiz digital. Tener acceso a la <xref:System.Windows.Input.StylusPoint> datos a medida que se generan, lo que le ofrece la oportunidad de personalizar el <xref:System.Windows.Input.Stylus> entrada. Dado que tienen ese acceso de bajo nivel para el <xref:System.Windows.Input.StylusPoint> datos, puede implementar la recopilación de tinta y la representación con un rendimiento óptimo de la aplicación.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Control avanzado de entrada manuscrita](advanced-ink-handling.md)
 - [Obtener acceso y manipular la entrada manuscrita](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

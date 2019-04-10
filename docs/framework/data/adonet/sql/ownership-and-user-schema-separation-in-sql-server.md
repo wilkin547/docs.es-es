@@ -2,12 +2,12 @@
 title: Propiedad y separación de esquemas de usuario en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 68a65cb950c54be9a4f9354a6ca20cbeeaafb938
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b56a2c6f1211a11d2aa55de0cc101f6b90f7f83d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092610"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221865"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Propiedad y separación de esquemas de usuario en SQL Server
 Un concepto básico en la seguridad de SQL Server es que los propietarios de los objetos disponen de permisos irrevocables para administrarlos. No puede quitar privilegios de un propietario del objeto y no puede eliminar usuarios de una base de datos si en ella existen objetos que les pertenezcan.  
@@ -27,7 +27,7 @@ Server.Database.DatabaseSchema.DatabaseObject
  De forma predeterminada, cuando los programadores crean objetos en un esquema, éstos pertenecen a la entidad de seguridad a la que pertenece el esquema y no al programador. La propiedad del objeto se puede transferir con la instrucción ALTER AUTHORIZATION de Transact-SQL. Un esquema también puede contener objetos que pertenecen a diferentes usuarios y disponer de más permisos granulares que los asignados al esquema, si bien esto no resulta recomendable ya que agrega complejidad a la administración de permisos. Los objetos se pueden mover entre los esquemas y la propiedad del esquema se puede transferir entre entidades de seguridad. Se pueden quitar usuarios de base de datos sin que esto afecte a los esquemas.  
   
 ### <a name="built-in-schemas"></a>Esquemas integrados  
- SQL Server incluye diez esquemas predefinidos que usan el mismo nombre que los usuarios y los roles de base de datos integrados. Estos esquemas se han creado principalmente por compatibilidad con versiones anteriores. No puede quitar los esquemas con el mismo nombre que las funciones fijas de base de datos, aunque no los necesite. No puede quitar los siguientes esquemas:  
+ SQL Server incluye diez esquemas predefinidos que usan el mismo nombre que los usuarios y los roles de base de datos integrados. Estos esquemas se han creado principalmente por compatibilidad con versiones anteriores. No puede quitar los esquemas con el mismo nombre que las funciones fijas de base de datos, aunque no los necesite. No puede colocar los siguientes esquemas:  
   
 -   `dbo`  
   
@@ -58,9 +58,10 @@ Server.Database.DatabaseSchema.DatabaseObject
 |[Separación usuario-esquema](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Describe los cambios que introduce la separación usuario-esquema. Incluye el nuevo comportamiento, así como su impacto en la propiedad, las vistas de catálogo y los permisos.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Autenticación en SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [Roles de servidor y base de datos en SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
 - [Autorización y permisos en SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: f2a261b72fe3205c9a03292f1f6bbcebdcf8649b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226974"
 ---
 # <a name="textbox"></a>TextBox
 El <xref:System.Windows.Controls.TextBox> control proporciona compatibilidad para la entrada de texto básico en las aplicaciones de WPF.  
@@ -31,5 +31,6 @@ El <xref:System.Windows.Controls.TextBox> control proporciona compatibilidad par
  <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="see-also"></a>Vea también
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053) (Ejemplo de galería de controles de WPF)
-- [TextBox Styles and Templates](textbox-styles-and-templates.md) (Estilos y plantillas de TextBox Styles)
+
+- [Ejemplo de la Galería de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Estilos y plantillas de TextBox](textbox-styles-and-templates.md)

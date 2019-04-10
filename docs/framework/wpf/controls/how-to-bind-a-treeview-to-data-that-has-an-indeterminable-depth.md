@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-ms.openlocfilehash: 6c0361674c4f6f740784a7657e018d5257c6edac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7da0a121cdb854c787c105c92cec70b7c4b3244e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214863"
 ---
-# <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Procedimiento Enlazar un objeto TreeView a datos que tienen una profundidad indeterminable
+# <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Filtrar Enlazar un objeto TreeView a datos que tienen una profundidad indeterminable
 Puede haber ocasiones en que desee enlazar un <xref:System.Windows.Controls.TreeView> a un origen de datos cuya profundidad no se conoce.  Esto puede ocurrir cuando los datos están recursiva por naturaleza, por ejemplo, un sistema de archivos, donde las carpetas pueden contener carpetas, o la estructura organizativa de la empresa, donde los empleados tienen otros empleados como subordinados directos.  
   
  El origen de datos debe tener un modelo de objetos jerárquico. Por ejemplo, un `Employee` clase podría contener una colección de objetos de empleados que son los subordinados directos de un empleado. Si los datos se representan de forma que no es jerárquica, debe generar una representación jerárquica de los datos.  
@@ -26,5 +26,6 @@ Puede haber ocasiones en que desee enlazar un <xref:System.Windows.Controls.Tree
  [!code-xaml[TreeViewWithUnknownDepth#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre el enlace de datos](../data/data-binding-overview.md)
 - [Información general sobre plantillas de datos](../data/data-templating-overview.md)

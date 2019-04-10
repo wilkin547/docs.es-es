@@ -1,5 +1,5 @@
 ---
-title: <webProxyScript> (Elemento, Configuración de red)
+title: <webProxyScript> Elemento (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#webProxyScript
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e823d6065ea23f3a47dad6853a1b9e1237a616c9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218672"
 ---
 # <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > elemento (configuración de red)
 Configura las características de la secuencia de comandos que se usa para detectar a servidores proxy Web.  
@@ -47,7 +47,7 @@ Configura las características de la secuencia de comandos que se usa para detec
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
+|[configuración](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -55,4 +55,5 @@ Configura las características de la secuencia de comandos que se usa para detec
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

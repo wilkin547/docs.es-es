@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Crear un servicio WCF que se comunica a través de WebSockets
+title: Filtrar para crear un servicio WCF que se comunique a través de WebSockets
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: d578b58f6613fb48f1bfceb8929ec51b8e025de1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 28a200b3e531f524e246c3d2fa1961573ec4e014
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689161"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223191"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Procedimiento Crear un servicio WCF que se comunica a través de WebSockets
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Filtrar para crear un servicio WCF que se comunique a través de WebSockets
 Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  WebSockets se usará cuando <xref:System.ServiceModel.NetHttpBinding> determine que el contrato de servicio define un contrato de devolución de llamada. En este tema se describe cómo implementar un servicio de WCF y un cliente que use <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  
   
 ### <a name="define-the-service"></a>Definir el servicio  
@@ -90,7 +90,7 @@ Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceMo
     </configuration>  
     ```  
   
-     El archivo de configuración del servicio se basa en los extremos predeterminados de WCF. La sección `<protocolMapping>` se usa para especificar que `NetHttpBinding` se debe usar para los extremos predeterminados creados.  
+     El archivo de configuración del servicio se basa en los puntos de conexión predeterminados de WCF. La sección `<protocolMapping>` se usa para especificar que `NetHttpBinding` se debe usar para los puntos de conexión predeterminados creados.  
   
 ### <a name="define-the-client"></a>Definir el cliente  
   
@@ -158,7 +158,7 @@ Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceMo
         </configuration>  
         ```  
   
-         No es necesario hacer nada especial en la configuración de cliente, simplemente especificar el punto de conexión del lado cliente mediante `NetHttpBinding`.  
+         No es necesario hacer nada especial en la configuración de cliente, simplemente especificar el extremo del lado cliente mediante `NetHttpBinding`.  
   
 ## <a name="example"></a>Ejemplo  
  A continuación, se muestra el código completo que se emplea en este tema.  
@@ -319,5 +319,6 @@ namespace Client
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Operaciones sincrónicas y asincrónicas](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
-- [Uso de NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)
+- [Usar NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

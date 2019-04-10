@@ -1,5 +1,5 @@
 ---
-title: Filtrar Responder a Windows Forms clics en casillas
+title: Filtrar para responder a clics en casillas de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: fff08bebf4e0eeea7dff8146ed8805e9d71247da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 77f93dae2a91f282c6746c3fec3fb5f567cae2e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211990"
 ---
-# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Filtrar Responder a Windows Forms clics en casillas
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Filtrar para responder a clics en casillas de formularios Windows Forms
 Cada vez que un usuario hace clic en un formulario Windows Forms <xref:System.Windows.Forms.CheckBox> (control), el <xref:System.Windows.Forms.Control.Click> se produce el evento. Puede programar la aplicación para realizar alguna acción según el estado de la casilla de verificación.  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>Para responder a clics en casillas  
@@ -136,7 +136,8 @@ Cada vez que un usuario hace clic en un formulario Windows Forms <xref:System.Wi
     >  Cuando el <xref:System.Windows.Forms.CheckBox.ThreeState%2A> propiedad está establecida en `true`, <xref:System.Windows.Forms.CheckBox.Checked%2A> propiedad devuelve `true` para ambos <xref:System.Windows.Forms.CheckState.Checked> y <xref:System.Windows.Forms.CheckState.Indeterminate>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.CheckBox>
 - [Información general sobre el control CheckBox](checkbox-control-overview-windows-forms.md)
-- [Cómo: Establecer opciones con controles CheckBox de formularios de Windows](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [CheckBox (control)](checkbox-control-windows-forms.md)
+- [Filtrar para establecer opciones con los controles CheckBox de formularios Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Control CheckBox](checkbox-control-windows-forms.md)

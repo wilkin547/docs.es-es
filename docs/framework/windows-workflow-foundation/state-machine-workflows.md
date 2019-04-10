@@ -2,12 +2,12 @@
 title: Flujos de trabajo de máquina de estados
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 78ce1124137e3b97978f3522a59ad1febd23135d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724965"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222996"
 ---
 # <a name="state-machine-workflows"></a>Flujos de trabajo de máquina de estados
 Una máquina de estados es un paradigma conocido para el desarrollo de programas. La actividad <xref:System.Activities.Statements.StateMachine> , junto con <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, y otras actividades se pueden usar para compilar programas de flujo de trabajo de máquina de estados. Este tema proporciona información general sobre cómo crear flujos de trabajo de máquina de estados.  
@@ -101,8 +101,9 @@ Una máquina de estados es un paradigma conocido para el desarrollo de programas
  Estado que representa la finalización de la máquina de estados.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Crear un flujo de trabajo de equipo de estado](how-to-create-a-state-machine-workflow.md)
-- [Diseñador de actividad StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
+
+- [Filtrar para crear un flujo de trabajo de máquina de estados](how-to-create-a-state-machine-workflow.md)
+- [Diseñador de actividades StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [Diseñador de actividad State](/visualstudio/workflow-designer/state-activity-designer)
 - [Diseñador de actividad FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)
-- [Diseñador de actividad Transition](/visualstudio/workflow-designer/transition-activity-designer)
+- [Diseñadores de actividad de transición](/visualstudio/workflow-designer/transition-activity-designer)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Establecer las propiedades de alto de un elemento
+title: Filtrar Establecer las propiedades de alto de un elemento
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - height properties [WPF]
 - Panel control [WPF], height properties of elements
 ms.assetid: 5ab9e781-dbb8-469a-a3c8-cf38ce312647
-ms.openlocfilehash: 608f74afd95ce03b3ecf71819c2181a9728b25af
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fb655630336c3b69afdc726a2e3c5a2cb8838667
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221592"
 ---
 # <a name="how-to-set-the-height-properties-of-an-element"></a>Filtrar Establecer las propiedades de alto de un elemento
 ## <a name="example"></a>Ejemplo  
@@ -34,6 +34,7 @@ ms.locfileid: "57356301"
  Para obtener un ejemplo completo, vea [alto propiedades ejemplo](https://go.microsoft.com/fwlink/?LinkID=159993).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.FrameworkElement.ActualHeight%2A>

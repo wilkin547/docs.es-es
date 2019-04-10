@@ -1,5 +1,5 @@
 ---
-title: Filtrar Convertir una imagen BMP en una imagen PNG
+title: Filtrar para convertir una imagen BMP en una imagen PNG
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - BMP images [Windows Forms], converting to PNG
 - image formats [Windows Forms], converting between
 ms.assetid: 9d4a692d-73ac-4ce3-9e05-9ec321e8fbd6
-ms.openlocfilehash: f8636bea120aee86c795b4196415145a484e5772
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3072c07781a8e8e57b64b48e5b4c304c2a0a0efb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217021"
 ---
-# <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>Filtrar Convertir una imagen BMP en una imagen PNG
+# <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>Filtrar para convertir una imagen BMP en una imagen PNG
 A menudo, deseará convertir de un formato a otro. Puede hacer esta conversión fácilmente llamando al método <xref:System.Drawing.Image.Save%2A> de la clase <xref:System.Drawing.Image> y especificando <xref:System.Drawing.Imaging.ImageFormat> para el formato de archivo de imagen deseado.  
   
 ## <a name="example"></a>Ejemplo  
@@ -32,6 +32,7 @@ A menudo, deseará convertir de un formato a otro. Puede hacer esta conversión 
 -   Una referencia al espacio de nombres `System.Drawing.Imaging`.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Enumerar los codificadores instalados](how-to-list-installed-encoders.md)
+
+- [Filtrar para enumerar los codificadores instalados](how-to-list-installed-encoders.md)
 - [Usar codificadores y descodificadores de imagen en la interfaz GDI+ administrada](using-image-encoders-and-decoders-in-managed-gdi.md)
 - [Tipos de mapas de bits](types-of-bitmaps.md)

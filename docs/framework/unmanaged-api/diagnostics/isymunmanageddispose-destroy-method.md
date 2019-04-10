@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedDispose::Destruir (Método)
+title: ISymUnmanagedDispose::Destroy (Método)
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedDispose.Destroy
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a4a0bac056c7c88a491ac05a17b662ace833df1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51d2f0aedffdd88974a8184954ecbb9a231b70c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213684"
 ---
-# <a name="isymunmanageddisposedestroy-method"></a>ISymUnmanagedDispose::Destruir (Método)
+# <a name="isymunmanageddisposedestroy-method"></a>ISymUnmanagedDispose::Destroy (Método)
 Hace que el objeto subyacente liberar todas las referencias internas y devuelva un error en las llamadas de método subsiguientes.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,4 +40,5 @@ HRESULT Destroy();
  **Encabezado**: CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
-- [ISymUnmanagedDispose (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)
+
+- [ISymUnmanagedDispose (Interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)

@@ -2,12 +2,12 @@
 title: <transport> de <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: de1f87d8074bbf3d85f6092a4ac316f5fd20052c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 97139b6bea21e4d908c06f5210e54756865d3c46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217801"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<transporte > de \<netTcpBinding >
 Define el tipo de requisitos de seguridad de nivel de mensaje para un extremo configurado con el [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -80,6 +80,7 @@ Define el tipo de requisitos de seguridad de nivel de mensaje para un extremo co
  Utilice la seguridad de transporte para la integridad y confidencialidad del mensaje SOAP y para la autenticación mutua. Si este modo de seguridad está seleccionado en un enlace, la pila del canal se configura utilizando un transporte seguro y los mensajes SOAP se protegen utilizando la seguridad de transporte, como Windows (Negotiate) o SSL sobre TCP.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.TcpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>

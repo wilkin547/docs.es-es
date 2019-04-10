@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 8e845df7eb83f01adb2086025cf47e7fdc896ba6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9dd4c2aabe1517b66d8e499de3cf2671bb94e0d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213621"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Atributos en controles de formularios Windows Forms
 .NET Framework proporciona una variedad de atributos que puede aplicar a los miembros de sus controles y componentes personalizados. Algunos de estos atributos afectan al comportamiento en tiempo de ejecución de una clase y otros afectan al comportamiento en tiempo de diseño.  
@@ -61,7 +61,8 @@ ms.locfileid: "57724406"
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|Especifica la cadena del filtro y el tipo de filtro que se va a utilizar para un elemento del cuadro de herramientas.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Attribute>
-- [Cómo: Aplicar atributos en controles de formularios Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)
+- [Filtrar para aplicar atributos en controles de formularios Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)
 - [Ampliar compatibilidad en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)
+- [Desarrollar controles personalizados de formularios Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)

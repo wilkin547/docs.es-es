@@ -2,12 +2,12 @@
 title: Colecciones de esquemas de SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224577"
 ---
 # <a name="sql-server-schema-collections"></a>Colecciones de esquemas de SQL Server
 El proveedor de datos .NET Framework para SQL Server de Microsoft admite colecciones de esquemas adicionales, además de las colecciones de esquemas comunes. Las colecciones de esquemas varían ligeramente respecto de la versión de SQL Server que está utilizando. Para determinar la lista de colecciones de esquemas admitidas, llame a la **GetSchema** método sin argumentos o con el nombre de la colección de esquemas "MetaDataCollections". Esto devolverá una <xref:System.Data.DataTable> con una lista de colecciones de esquemas admitidas, el número de restricciones que admite cada una y el número de partes de identificador que emplean.  
@@ -244,10 +244,10 @@ El proveedor de datos .NET Framework para SQL Server de Microsoft admite colecci
 |----------------|--------------|-----------------|  
 |assembly_name|String|Nombre de archivo del ensamblado.|  
 |udt_name|String|Nombre de clase del ensamblado.|  
-|version_major|Objeto|Número de versión principal.|  
-|version_minor|Objeto|Número de versión secundaria.|  
-|version_build|Objeto|Número de compilación.|  
-|version_revision|Objeto|Número de revisión.|  
+|version_major|Object|Número de versión principal.|  
+|version_minor|Object|Número de versión secundaria.|  
+|version_build|Object|Número de compilación.|  
+|version_revision|Object|Número de revisión.|  
 |culture_info|Object|La referencia cultural asociada con este tipo definido por el usuario.|  
 |public_key|Object|La clave pública que utiliza este ensamblado.|  
 |is_fixed_length|Booleano|Especifica si la longitud del tipo es siempre igual que max_length.|  
@@ -256,5 +256,6 @@ El proveedor de datos .NET Framework para SQL Server de Microsoft admite colecci
 |Permission_set_desc|String|Nombre descriptivo del conjunto de permisos y nivel de seguridad del ensamblado.|  
   
 ## <a name="see-also"></a>Vea también
-- [Recuperación de información del esquema de la base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [Recuperar información del esquema de la base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

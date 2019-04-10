@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Enumerar un subconjunto de colas de impresión
+title: Filtrar Enumerar un subconjunto de colas de impresión
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: 7cdd0ebeb03d078a952dd9ffe4d2ed7590417054
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: adcfff0196bd0430ec1ae563fbd5489062de11f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217190"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>Filtrar Enumerar un subconjunto de colas de impresión
 Es una situación común que se enfrentan los profesionales de tecnologías (TI) de información que administra un conjunto de toda la compañía de impresoras generar una lista de impresoras que tienen ciertas características. Esta funcionalidad se proporciona mediante el <xref:System.Printing.PrintServer.GetPrintQueues%2A> método de un <xref:System.Printing.PrintServer> objeto y el <xref:System.Printing.EnumeratedPrintQueueTypes> enumeración.  
@@ -35,6 +35,7 @@ Es una situación común que se enfrentan los profesionales de tecnologías (TI)
  Puede extender este ejemplo haciendo que el `foreach` bucle que recorre cada cola de impresión se realizan más de filtrado. Por ejemplo, podría dejar fuera las impresoras que no admiten la impresión a dos caras haciendo que la llamada de bucle cada cola de impresión <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> método y prueba el valor devuelto para la presencia de dúplex.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.LocalPrintServer>

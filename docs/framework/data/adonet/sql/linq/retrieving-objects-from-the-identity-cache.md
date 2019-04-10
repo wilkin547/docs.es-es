@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211236"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Recuperar objetos de la memoria caché de identidades
 En este tema se describen los tipos de consultas LINQ to SQL que devuelven un objeto desde la memoria caché de identidad que está administrado por el <xref:System.Data.Linq.DataContext>.  
@@ -30,7 +30,7 @@ En este tema se describen los tipos de consultas LINQ to SQL que devuelven un ob
   
  En estos formatos generales, `Function1`, `Function2` y `predicate` se definen como se indica a continuación.  
   
- `Function1` puede ser de cualquiera de las funciones siguientes:  
+ `Function1` puede ser cualquiera de las siguientes acciones:  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -42,7 +42,7 @@ En este tema se describen los tipos de consultas LINQ to SQL que devuelven un ob
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `Function2` puede ser de cualquiera de las funciones siguientes:  
+ `Function2` puede ser cualquiera de las siguientes acciones:  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -52,7 +52,7 @@ En este tema se describen los tipos de consultas LINQ to SQL que devuelven un ob
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate` debe ser una expresión en la que la propiedad de la clave principal del objeto está establecida en un valor constante. Si un objeto tiene una clave principal definida mediante más de una propiedad, cada una de estas propiedades debe estar establecida en un valor constante. A continuación, se ofrecen ejemplos del formato que debe tener `predicate`:  
+ `predicate` debe ser una expresión en el que se establece la propiedad de clave principal del objeto en un valor constante. Si un objeto tiene una clave principal definida mediante más de una propiedad, cada una de estas propiedades debe estar establecida en un valor constante. A continuación, se ofrecen ejemplos del formato que debe tener `predicate`:  
   
 -   `c => c.PK == constant_value`  
   
@@ -65,6 +65,7 @@ En este tema se describen los tipos de consultas LINQ to SQL que devuelven un ob
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Identidad de objetos](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
 - [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

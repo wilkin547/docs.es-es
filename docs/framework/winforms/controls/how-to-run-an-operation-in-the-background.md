@@ -1,5 +1,5 @@
 ---
-title: Filtrar Ejecutar una operación en segundo plano
+title: Filtrar para ejecutar una operación en segundo plano
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 5b56e2aa-dc05-444f-930c-2d7b23f9ad5b
-ms.openlocfilehash: 83be9440eb566740566025c659c0a4909e634b73
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5ccbb6e4c09f5417f6c2766824ec7ed9722eed52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217996"
 ---
-# <a name="how-to-run-an-operation-in-the-background"></a>Filtrar Ejecutar una operación en segundo plano
+# <a name="how-to-run-an-operation-in-the-background"></a>Filtrar para ejecutar una operación en segundo plano
 Si tiene una operación que tarda mucho tiempo en completarse y no desea causar retrasos en la interfaz de usuario, puede utilizar la clase <xref:System.ComponentModel.BackgroundWorker> para ejecutar la operación en otro subproceso.  
   
  El ejemplo de código siguiente muestra cómo ejecutar en segundo plano una operación que consume mucho tiempo. El formulario cuenta con los botones **Iniciar** y **Cancelar**. Haga clic en el botón **Iniciar** para ejecutar una operación asincrónica. Haga clic en el botón **Cancelar** para detener una operación asincrónica. El resultado de cada operación se muestra en un elemento <xref:System.Windows.Forms.MessageBox>.  
@@ -41,7 +41,8 @@ Si tiene una operación que tarda mucho tiempo en completarse y no desea causar 
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [Cómo: Implementar un formulario que usa una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Componente BackgroundWorker](backgroundworker-component.md)
+- [Filtrar para implementar un formulario que usa una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [BackgroundWorker (Componente)](backgroundworker-component.md)

@@ -2,12 +2,12 @@
 title: Instrucciones de configuración del directorio virtual
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 0f32fd6d65db529ba1015dedd98f99efd7f408c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7999a040dc14d75a34b75f320982dd3118eae670
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225591"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instrucciones de configuración del directorio virtual
 Los ejemplos de Windows Communication Foundation (WCF) están diseñados para compartir un directorio virtual común denominado servicemodelsamples que está asignado a la carpeta %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
@@ -59,9 +59,9 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
 7.  De forma predeterminada, las casillas siguientes están activadas:  
   
-    -   **Read**  
+    -   **Leer**  
   
-    -   **Ejecutar secuencias de comandos (por ejemplo, ASP)**  
+    -   **Ejecutar scripts (como ASP)**  
   
 8.  Haga clic en **siguiente**y, a continuación, haga clic en **finalizar** para completar el asistente.  
   
@@ -84,7 +84,7 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
 2.  De forma predeterminada, las casillas siguientes están activadas:  
   
-    -   **Read**  
+    -   **Leer**  
   
     -   **Registrar visitas**  
   
@@ -191,4 +191,5 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
     3.  En el **grupo** columna, compruebe que el valor de **ASPNET** es "Users".  
   
 ## <a name="see-also"></a>Vea también
-- [Instrucciones de hospedaje de Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+
+- [Instrucciones de hospedaje Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

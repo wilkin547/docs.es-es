@@ -2,12 +2,12 @@
 title: <serviceSecurityAudit>
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 05579f1c2a0d0c0637530c524c37b141a9d37b5b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 384a1cdb6d39f4d6ecd2353a15c0da7c6d2e82bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224148"
 ---
 # <a name="servicesecurityaudit"></a>\<serviceSecurityAudit>
 Especifica valores que habilitan la auditoría de eventos de seguridad durante las operaciones del servicio.  
@@ -46,18 +46,18 @@ Especifica valores que habilitan la auditoría de eventos de seguridad durante l
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
+|[\<comportamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
 ## <a name="remarks"></a>Comentarios  
  Este elemento de configuración se utiliza para auditar los eventos de autenticación de Windows Communication Foundation (WCF). Cuando la auditoría está habilitada, se pueden auditar intentos de autenticación correctos (o ambos) o fallidos. Los eventos se escriben en uno de tres registros de eventos: aplicación, seguridad o registro predeterminado para la versión de sistema operativo. Los registros de eventos  se pueden ver utilizando el Visor de eventos de Windows.  
   
  Para obtener un ejemplo detallado del uso de este elemento de configuración, consulte [comportamiento de auditoría de servicio](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md).  
   
- De forma predeterminada, en Windows XP los eventos de auditoría se pueden ver en el registro de aplicaciones, mientras que en Windows Server 2003 y Windows Vista, los eventos de auditoría se pueden ver en el registro de seguridad. Se puede especificar la ubicación de los eventos de auditoría estableciendo el atributo `auditLogLocation` en 'Aplicación' o 'Seguridad'. Para obtener más información, vea [Cómo: Auditar eventos de seguridad](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md). Si los eventos se escriben el registro de seguridad, LocalSecurityPolicy -> Habilitar el acceso de objetos debería estar configurado en "Éxito" y "Error."  
+ De forma predeterminada, en Windows XP los eventos de auditoría se pueden ver en el registro de aplicaciones, mientras que en Windows Server 2003 y Windows Vista, los eventos de auditoría se pueden ver en el registro de seguridad. Se puede especificar la ubicación de los eventos de auditoría estableciendo el atributo `auditLogLocation` en 'Aplicación' o 'Seguridad'. Para obtener más información, vea [Cómo: Auditar eventos de seguridad](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md). Si los eventos se escriben en el registro de seguridad, LocalSecurityPolicy -> habilitar el acceso a objetos debe establecerse para "Success" y "Failure".  
   
  Al examinar el registro de eventos, el origen de los eventos de auditoría es "ServiceModel Audit 3.0.0.0". Los registros de auditoría de autenticación de mensajes tienen una categoría de "MessageAuthentication" mientras que los registros de auditoría de autorización tienen una categoría de 'ServiceAuthorization'.  
   
- Los eventos de auditoría de autenticación de mensajes incluyen si el mensaje se manipuló, si el mensaje ha expirado y si el cliente puede autenticar el servicio. Proporcionan información sobre si la autenticación fue correcta o no con la identidad del cliente y el extremo al que se envió el mensaje, junto con la acción asociada al mensaje.  
+ Los eventos de auditoría de autenticación de mensajes incluyen si el mensaje se manipuló, si el mensaje ha expirado y si el cliente puede autenticar el servicio. Proporcionan información sobre si la autenticación fue correcta o no con la identidad del cliente y el punto de conexión al que se envió el mensaje, junto con la acción asociada al mensaje.  
   
  Los eventos de auditoría de autorización de servicio incluyen la decisión de la autorización realizada por un administrador de autorización del servicio. Proporcionan información acerca de si la autorización fue correcta o no con la identidad del cliente, el punto de conexión, el mensaje se envió a la acción asociada con el mensaje, el identificador del contexto de autorización que se generó a partir de la mensaje entrante y el tipo del Administrador de autorización que tomó la decisión de acceso.  
   
@@ -79,9 +79,10 @@ Especifica valores que habilitan la auditoría de eventos de seguridad durante l
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.ServiceSecurityAuditElement>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Auditoría](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Cómo: Auditar eventos de seguridad](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Filtrar para auditar eventos de seguridad](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [Comportamiento de auditoría de servicio](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)

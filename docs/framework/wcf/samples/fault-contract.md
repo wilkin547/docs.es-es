@@ -2,12 +2,12 @@
 title: Contrato de error
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 64d02ae6b45cd0e538509d2c7186ac63b9844c14
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 0729bae4e8630687a0df10ed4be49261225cd663
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218269"
 ---
 # <a name="fault-contract"></a>Contrato de error
 El ejemplo de Contrato de error muestra cómo comunicar información de error de un servicio a un cliente. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), con algún código adicional agregado al servicio para convertir una excepción interna en un error. El cliente intenta realizar la división por cero para forzar una condición de error en el servicio.  
@@ -98,7 +98,7 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- De forma predeterminada, los detalles de excepciones inesperadas no se envían al cliente para evitar que los detalles de la implementación de servicio escapen al límite seguro del servicio. `FaultContract` proporciona una manera de describir errores en un contrato y de marcar determinados tipos de excepciones como adecuados para la transmisión al cliente. `FaultException<T>` proporciona el mecanismo en tiempo de ejecución para enviar errores a los consumidores.  
+ De forma predeterminada, los detalles de excepciones inesperadas no se envían al cliente para evitar que los detalles de la implementación de servicio escapen al límite seguro del servicio. `FaultContract` Proporciona una manera de describir los errores en un contrato y marcar determinados tipos de excepciones como adecuados para la transmisión al cliente. `FaultException<T>` proporciona el mecanismo de tiempo de ejecución para enviar errores a los consumidores.  
   
  Sin embargo, es útil para ver los detalles internos de un error del servicio al depurar. Para desactivar el comportamiento seguro previamente descrito, puede indicar que los detalles de cada excepción no controlada en el servidor deberían estar incluidos en el error que se envía al cliente. Esto se logra estableciendo <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> en `true`. Puede establecerlo en el código en la configuración, tal y como se muestra en el ejemplo siguiente.  
   
@@ -135,4 +135,3 @@ catch (FaultException<MathFault> e)
 >  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  
-  

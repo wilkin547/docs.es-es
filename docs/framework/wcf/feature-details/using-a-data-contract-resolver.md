@@ -2,12 +2,12 @@
 title: Utilizar una resolución del contrato de datos
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: 844c4e0861c2cf4e6acb2b128ff1f5cefa0f7fa0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b1c545d84db68f4b13925dd9088cc9d81050b5e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279154"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222450"
 ---
 # <a name="using-a-data-contract-resolver"></a>Utilizar una resolución del contrato de datos
 Una resolución del contrato de datos le permite configurar los tipos conocidos dinámicamente. Se necesitan tipos conocidos al serializar o deserializar un tipo no esperado por un contrato de datos. Para obtener más información sobre los tipos conocidos, consulte [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Los tipos conocidos se suelen especificar de modo estático. Esto significa que tendría que conocer todos los tipos posibles que puede recibir una operación mientras la implementa. Hay escenarios en los que no esto no se cumple y es importante saber especificar los tipos conocidos de forma dinámica.  
@@ -88,6 +88,7 @@ SerializerBehavior.DataContractResolver = new MyCustomerResolver();
  Puede especificar mediante declaración una resolución de contrato de datos implementando un atributo que pueda aplicarse a un servicio.  Para obtener más información, consulte el [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) ejemplo. Este ejemplo implementa un atributo denominado "KnownAssembly" que agrega una resolución del contrato de datos personalizados para el comportamiento del servicio.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Tipos conocidos de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [Ejemplo de DataContractSerializer](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)
 - [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)

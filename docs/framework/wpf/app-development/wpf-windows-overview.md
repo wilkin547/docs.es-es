@@ -28,20 +28,19 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: c3bd76c893c2055f94e321e9c888848d344efa15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466223"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166938"
 ---
 # <a name="wpf-windows-overview"></a>Información general sobre ventanas de WPF
 Los usuarios interactúan con las aplicaciones independientes de Windows Presentation Foundation (WPF) a través de windows. El propósito principal de una ventana es hospedar contenido que permita visualizar datos y que permita a los usuarios interactuar con estos. Independiente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones proporcionan sus propias ventanas mediante el uso de la <xref:System.Windows.Window> clase. Este tema se presentan <xref:System.Windows.Window> antes de tratar los aspectos básicos de creación y administración de windows en las aplicaciones independientes.  
   
 > [!NOTE]
 >  Hospedadas en explorador [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones, incluidas [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] y flexible [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] páginas, no proporcionan sus propias ventanas. En su lugar, se hospedan en ventanas proporcionadas por [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Consulte [Introducción a las aplicaciones de explorador XAML de WPF](wpf-xaml-browser-applications-overview.md).  
-  
-  
+
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Clase de la ventana  
  La ilustración siguiente muestra las partes constituyentes de una ventana:  
@@ -109,9 +108,9 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Configuración de una definición de ventana para MSBuild  
  Cómo implementar la ventana determina cómo se configura para [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Para una ventana que se define mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcado y código subyacente:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivos de marcado se configuran como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementos.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivos de marcado se configuran como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` elementos.  
   
--   Archivos de código subyacente se configuran como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` elementos.  
+-   Archivos de código subyacente se configuran como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` elementos.  
   
  Esto se muestra en la siguiente [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] archivo de proyecto.  
   
@@ -130,8 +129,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Duración de ventana  
  Como cualquier clase, una ventana tiene una vigencia que comienza cuando se crea una instancia por primera vez, después de lo cual se abre, activa y desactiva y, finalmente, se cierra.  
-  
-  
+
 <a name="Opening_a_Window"></a>   
 ### <a name="opening-a-window"></a>Abrir una ventana  
  Para abrir una ventana, primero hay que crear una instancia de esta, como se muestra en el ejemplo siguiente.  
@@ -258,9 +256,8 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
- 
-  
- El <xref:System.Windows.Window.Closing> controlador de eventos se pasa un <xref:System.ComponentModel.CancelEventArgs>, que implementa el `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propiedad que se establece en `true` para impedir que se cierre una ventana.  
+
+ El <xref:System.Windows.Window.Closing> controlador de eventos se pasa un <xref:System.ComponentModel.CancelEventArgs>, que implementa el `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propiedad que se establece en `true` para impedir que se cierre una ventana.  
   
  Si <xref:System.Windows.Window.Closing> no está controlado, o se administra pero no se cancela, se cerrará la ventana. Antes de una ventana se cierre realmente, <xref:System.Windows.Window.Closed> se genera. En este momento, ya no se puede impedir el cierre de la ventana.  
   
@@ -275,7 +272,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
 -   Se cierra la ventana principal de la aplicación y <xref:System.Windows.Application.ShutdownMode%2A> es <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
--   Se llama a <xref:System.Windows.Application.Shutdown%2A>.  
+-   <xref:System.Windows.Application.Shutdown%2A> se llama.  
   
 > [!NOTE]
 >  No se puede volver a abrir una ventana cuando se ha cerrado.  
@@ -296,7 +293,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
  También puede especificar la ubicación inicial de un <xref:System.Windows.Window> cuando aparece por primera vez estableciendo la <xref:System.Windows.Window.WindowStartupLocation%2A> propiedad con uno de los siguientes <xref:System.Windows.WindowStartupLocation> valores de enumeración:  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner> (valor predeterminado)  
+-   <xref:System.Windows.WindowStartupLocation.CenterOwner> (predeterminado)  
   
 -   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -349,7 +346,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
 ## <a name="order-of-precedence-for-sizing-properties"></a>Orden de prioridad de las propiedades de tamaño  
  Esencialmente, las diversas propiedades de tamaño de una ventana se combinan para definir el intervalo de anchura y altura de una ventana de tamaño ajustable. Para asegurarse de que se mantiene un intervalo válido, <xref:System.Windows.Window> evalúa los valores de las propiedades de tamaño mediante los siguientes órdenes de prioridad.  
   
- **Para las propiedades de altura:**  
+ **Para las propiedades de alto:**  
   
 1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
@@ -359,7 +356,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
 4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
- **Para las propiedades de anchura:**  
+ **Para las propiedades de ancho:**  
   
 1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
@@ -384,7 +381,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
  El estado de una ventana se puede configurar estableciendo su <xref:System.Windows.Window.WindowState%2A> propiedad, que puede tener uno de los siguientes <xref:System.Windows.WindowState> valores de enumeración:  
   
--   <xref:System.Windows.WindowState.Normal> (valor predeterminado)  
+-   <xref:System.Windows.WindowState.Normal> (predeterminado)  
   
 -   <xref:System.Windows.WindowState.Maximized>  
   
@@ -401,8 +398,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
  Puede cambiar el aspecto del área cliente de una ventana mediante la adición de contenido específico, como botones, etiquetas y cuadros de texto. Para configurar el área no cliente, <xref:System.Windows.Window> proporciona varias propiedades, que incluyen <xref:System.Windows.Window.Icon%2A> para establecer el icono de una ventana y <xref:System.Windows.Window.Title%2A> para establecer su título.  
   
  También puede cambiar el aspecto y comportamiento del borde del área distinta del cliente configurando el modo de cambio de tamaño de la ventana, el estilo de esta y si aparece como un botón en la barra de tareas del escritorio.  
-  
-  
+
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>Modo de cambio de tamaño  
  En función de la <xref:System.Windows.Window.WindowStyle%2A> propiedad, puede controlar cómo (y si) los usuarios pueden cambiar el tamaño de la ventana. La elección del estilo de ventana determina si un usuario puede cambiar el tamaño de la ventana arrastrando su borde con el mouse, si la **minimizar**, **maximizar**, y **cambiar el tamaño de** botones aparecen en el área no cliente, y, si es así, si están habilitadas.  
@@ -413,7 +409,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
 -   <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize> (valor predeterminado)  
+-   <xref:System.Windows.ResizeMode.CanResize> (predeterminado)  
   
 -   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -431,7 +427,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
 -   <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow> (valor predeterminado)  
+-   <xref:System.Windows.WindowStyle.SingleBorderWindow> (predeterminado)  
   
 -   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
@@ -484,6 +480,7 @@ La apariencia predeterminada de una ventana incluye un botón de barra de tareas
  Los cuadros de diálogo son ventanas que se suelen utilizar para recopilar información de un usuario para completar una función. Por ejemplo, cuando un usuario desea abrir un archivo, el **abrir archivo** cuadro de diálogo se muestra normalmente una aplicación para obtener el nombre de archivo del usuario. Para obtener más información, vea [Información general sobre cuadros de diálogo](dialog-boxes-overview.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>

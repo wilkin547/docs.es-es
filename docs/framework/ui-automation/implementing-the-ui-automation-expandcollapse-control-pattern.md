@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: ddc2219b0ef6593b6bfa9ab40936cc7b0fff120b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211665"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implementar el patrón de control ExpandCollapse de UI Automation
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "57678406"
   
 -   Si el <xref:System.Windows.Automation.ExpandCollapseState> de un control se establece en <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, toda funcionalidad <xref:System.Windows.Automation.ExpandCollapsePattern> está actualmente inactiva para el control y la única información que se puede obtener mediante este patrón de control es <xref:System.Windows.Automation.ExpandCollapseState>. Si posteriormente se agrega cualquier objeto secundario, <xref:System.Windows.Automation.ExpandCollapseState> cambia y se activa la funcionalidad <xref:System.Windows.Automation.ExpandCollapsePattern> .  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> hace referencia únicamente a la visibilidad de los objetos secundarios inmediatos, no a la visibilidad de todos los objetos descendientes.  
+-   <xref:System.Windows.Automation.ExpandCollapseState> hace referencia a la visibilidad de objetos secundarios inmediatos. no hace referencia a la visibilidad de todos los objetos descendientes.  
   
 -   La funcionalidad de expandir y contraer es específica del control. A continuación se muestran ejemplos de este comportamiento.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "57678406"
   
 |Miembros requeridos|Tipo de miembro|Notas|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Property|Ninguna|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Propiedad|Ninguna|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Método|Ninguna|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Método|Ninguna|  
 |<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|evento|Este control no tiene ningún evento asociado; use este delegado genérico.|  
@@ -64,9 +64,10 @@ ms.locfileid: "57678406"
 |<xref:System.InvalidOperationException>|Ya sea <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> se llama cuando el <xref:System.Windows.Automation.ExpandCollapseState>  =  <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.|  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Navegar entre elementos de Automatización de la interfaz de usuario con TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+
+- [Información general acerca de los patrones de control de UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Patrones de control compatibles en un proveedor de UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Patrones de controles de UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Navegar entre elementos de UI Automation con TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
+- [Información general sobre el árbol de la UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Utilizar el almacenamiento en caché en la UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

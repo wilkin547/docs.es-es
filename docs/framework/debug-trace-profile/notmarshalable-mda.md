@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cec3fd0c3b20c70b6ddf3e875c481e829dd5eb28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30db07ddf935b5ce13b1fe4212f7f6a40270ae93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695496"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226110"
 ---
 # <a name="notmarshalable-mda"></a>MDA de notMarshalable
 El asistente para la depuración administrada (MDA) `notMarshalable` se activa cuando Common Language Runtime (CLR) encuentra un puntero a interfaz COM sin un servidor proxy/código auxiliar válido registrado o una implementación de interfaz `IMarshal` incorrecta al intentar serializar la interfaz entre contextos.  
@@ -27,7 +27,7 @@ El asistente para la depuración administrada (MDA) `notMarshalable` se activa c
  No se da servicio a las llamadas o las llamadas se producen en un contexto incorrecto para los punteros a interfaz COM.  
   
 ## <a name="cause"></a>Motivo  
- No hay ningún servidor proxy/código auxiliar registrado válido o `IMarshal` incorrecta intentando calcular las referencias de la interfaz entre los contextos.  
+ No hay ningún servidor proxy/código auxiliar registrado válido o `IMarshal` incorrecta intentando serializar la interfaz entre los contextos.  
   
 ## <a name="resolution"></a>Resolución  
  Asegúrese de que tiene registrado un código auxiliar de servidor proxy y de que la implementación de `IMarshal` es válida.  
@@ -35,7 +35,7 @@ El asistente para la depuración administrada (MDA) `notMarshalable` se activa c
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el tiempo de ejecución.  
   
-## <a name="output"></a>Resultado  
+## <a name="output"></a>Salida  
  Un mensaje que describe el problema.  
   
 ## <a name="configuration"></a>Configuración  
@@ -49,6 +49,7 @@ El asistente para la depuración administrada (MDA) `notMarshalable` se activa c
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

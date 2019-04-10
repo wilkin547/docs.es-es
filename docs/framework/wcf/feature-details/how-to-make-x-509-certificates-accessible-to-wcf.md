@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Hacer que los certificados X.509 accesibles para WCF
+title: Filtrar para hacer los certificados X.509 accesibles para WCF
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 7c90d5b0541edfc11145d9373c2554ee4595a7b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 85f572f021f1613e0a2bb70cc090f58d2833182e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219920"
 ---
-# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Procedimiento Hacer que los certificados X.509 accesibles para WCF
+# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Filtrar para hacer los certificados X.509 accesibles para WCF
 Para hacer que un certificado X.509 accesible a Windows Communication Foundation (WCF), el código de la aplicación debe especificar el nombre del almacén de certificados y la ubicación. En ciertas circunstancias, la identidad del proceso debe tener el acceso al archivo que contiene la clave privada asociada al certificado X.509. Para obtener la clave privada asociada con un certificado X.509 en un almacén de certificados, WCF debe tener permiso para hacerlo. De forma predeterminada, solo el propietario y la cuenta del sistema pueden tener acceso a la clave privada de un certificado.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>Para hacer los certificados X.509 accesibles para WCF  
@@ -71,6 +71,7 @@ Para hacer que un certificado X.509 accesible a Windows Communication Foundation
         ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
-- [Cómo: Recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
-- [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Filtrar para recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

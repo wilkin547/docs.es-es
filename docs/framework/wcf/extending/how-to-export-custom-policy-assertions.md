@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Exportar aserciones de directivas personalizadas
+title: Filtrar para exportar aserciones de directivas personalizadas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 0fe97e381bea19458df50e1eb94f2027a6a95d4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e3835b0d699d58eb55e06ed3ade1328ec30b2ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721277"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213634"
 ---
-# <a name="how-to-export-custom-policy-assertions"></a>Procedimiento Exportar aserciones de directivas personalizadas
-Las aserciones de directivas describen las funciones y requisitos de un punto de conexión de servicio. Las aplicaciones de servicio pueden utilizar las aserciones de directivas personalizadas en metadatos del servicio para comunicarse el punto de conexión, enlace o información de personalización de contrato a la aplicación cliente. Puede usar Windows Communication Foundation (WCF) para exportar las aserciones en expresiones de directivas adjuntas a enlaces de WSDL en el punto de conexión, operación o asuntos del mensaje, dependiendo de las capacidades o requisitos que se está comunicando.  
+# <a name="how-to-export-custom-policy-assertions"></a>Filtrar para exportar aserciones de directivas personalizadas
+Las aserciones de directivas describen las funciones y requisitos de un extremo de servicio. Las aplicaciones de servicio pueden utilizar las aserciones de directivas personalizadas en metadatos del servicio para comunicarse el extremo, enlace o información de personalización de contrato a la aplicación cliente. Puede usar Windows Communication Foundation (WCF) para exportar las aserciones en expresiones de directivas adjuntas a enlaces de WSDL en el punto de conexión, operación o asuntos del mensaje, dependiendo de las capacidades o requisitos que se está comunicando.  
   
  Las aserciones de directivas personalizadas se exportan implementando la interfaz <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> en <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> e insertando directamente el elemento de enlace en el enlace del punto de conexión de servicio o registrando el elemento de enlace en su archivo de configuración de la aplicación. Su implementación de exportación de directivas debería agregar su aserción de directivas personalizada como una instancia <xref:System.Xml.XmlElement?displayProperty=nameWithType> al <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> adecuado en <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> que se pasa al método <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A>.  
   
@@ -38,11 +38,11 @@ Las aserciones de directivas describen las funciones y requisitos de un punto de
   
 3.  Cree un enlace personalizado mediante <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
   
-### <a name="to-insert-a-binding-element-programmatically"></a>Para insertar un elemento de enlace mediante programación   
+### <a name="to-insert-a-binding-element-programmatically"></a>Para insertar un elemento de enlace mediante programación  
   
 1.  Cree un nuevo <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> y agréguelo a <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
   
-2.  Agregue el enlace personalizado del paso 1. a un nuevo extremo y agregue ese nuevo extremo de servicio a <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> llamando al método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
+2.  Agregue el enlace personalizado del paso 1. a un nuevo punto de conexión y agregue ese nuevo punto de conexión de servicio a <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> llamando al método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
   
 3.  Abra <xref:System.ServiceModel.ServiceHost>. El ejemplo de código siguiente muestra la creación de un enlace personalizado y la inserción mediante programación de elementos de enlace.  
   
@@ -50,6 +50,7 @@ Las aserciones de directivas describen las funciones y requisitos de un punto de
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [Cómo: Importar aserciones de directivas personalizadas](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Filtrar para importar aserciones de directivas personalizadas](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

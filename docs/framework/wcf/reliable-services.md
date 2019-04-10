@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-ms.openlocfilehash: a3a53cb26ffb0e5934982c1c9f367115177b9b59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a617100e46d4bcafb9325efa99c255f2f8ee5981
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216774"
 ---
 # <a name="reliable-services"></a>Servicios de confianza
 Las colas y sesiones confiables son las características de Windows Communication Foundation (WCF) que implementan la mensajería de confianza. En este tema se explica las características de mensajería confiables de WCF.  
@@ -33,7 +33,7 @@ Las colas y sesiones confiables son las características de Windows Communicatio
 -   [Las colas en WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md), que proporciona transferencias de confianza y separación entre el origen y el destino.  
   
 ## <a name="reliable-sessions"></a>Sesiones de confianza  
- Las sesiones de confianza proporcionan transferencia confiable de un extremo a otro de mensajes entre un origen y un destino mediante el protocolo de mensajería de confianza WS, sin tener en cuenta el número o tipo de intermediarios que separan los extremos de la mensajería (origen y destino). Esto incluye a cualquier intermediario de transporte que no utilice SOAP (por ejemplo, los servidores proxy HTTP) o los intermediarios que utilicen SOAP (por ejemplo, los puentes o enrutadores basados en SOAP) que son necesarios para que los mensajes fluyan entre los extremos. Las sesiones confiables utilizan una ventana de transferencia en memoria para enmascarar errores de nivel de mensaje de SOAP y restablecer las conexiones en el caso de errores de transporte.  
+ Las sesiones de confianza proporcionan transferencia confiable de un punto de conexión a otro de mensajes entre un origen y un destino mediante el protocolo de mensajería de confianza WS, sin tener en cuenta el número o tipo de intermediarios que separan los puntos de conexión de la mensajería (origen y destino). Esto incluye a cualquier intermediario de transporte que no utilice SOAP (por ejemplo, los servidores proxy HTTP) o los intermediarios que utilicen SOAP (por ejemplo, los puentes o enrutadores basados en SOAP) que son necesarios para que los mensajes fluyan entre los extremos. Las sesiones confiables utilizan una ventana de transferencia en memoria para enmascarar errores de nivel de mensaje de SOAP y restablecer las conexiones en el caso de errores de transporte.  
   
  Las sesiones de confianza proporcionan transferencias de mensajes de confianza de latencia baja. Los proporcionan para los mensajes SOAP sobre cualquier proxy o intermediario, el equivalente a lo que TCP proporciona para los paquetes sobre puentes de IP. Para obtener más información acerca de las sesiones confiables, vea [sesiones confiables](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
@@ -45,5 +45,6 @@ Las colas y sesiones confiables son las características de Windows Communicatio
  La separación, acoplada con las transferencias de mensaje de confianza entre colas, permite que las aplicaciones que están acopladas se comuniquen de forma fiable. A diferencia de las sesiones de confianza, el origen y el destino no tienen que ejecutarse a la vez. Esto habilita escenarios de forma implícita allí donde se usan las colas como un mecanismo de nivelación de carga cuando la tasa de origen de la producción de mensajes y la tasa de destino de consumo de mensajes no coinciden. Para obtener más información acerca de las colas, consulte [colas en WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Información general de sesiones de confianza](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
-- [Colas en WCF](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+
+- [Información general de sesiones confiables](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+- [Las colas en WCF](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

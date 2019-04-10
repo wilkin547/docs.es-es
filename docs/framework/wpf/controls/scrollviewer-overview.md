@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: 2685be197d6b47cf174c5fbd062bd3c37a19f5eb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3302d9c360b0918a1fce956af3e3aa14f29361b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212432"
 ---
 # <a name="scrollviewer-overview"></a>Información general sobre ScrollViewer
 El contenido en una interfaz de usuario suele ser mayor que el área de presentación de la pantalla del equipo. El <xref:System.Windows.Controls.ScrollViewer> control proporciona una manera cómoda para habilitar el desplazamiento del contenido en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones. Este tema se presentan los <xref:System.Windows.Controls.ScrollViewer> elemento y se proporcionan varios ejemplos de uso.  
@@ -29,7 +29,7 @@ El contenido en una interfaz de usuario suele ser mayor que el área de presenta
   
 <a name="scrollviewer_physical_vs_logical"></a>   
 ## <a name="physical-vs-logical-scrolling"></a>Desplazamiento físico y lógico  
- El desplazamiento físico se utiliza para desplazar el contenido mediante incrementos físicos predeterminados, normalmente por un valor que se declara en píxeles. El desplazamiento lógico se utiliza para desplazarse al elemento siguiente del árbol lógico. El desplazamiento físico es el comportamiento de desplazamiento predeterminado para la mayoría <xref:System.Windows.Controls.Panel> elementos. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] admite ambos tipos de desplazamiento.  
+ El desplazamiento físico se utiliza para desplazar el contenido mediante incrementos físicos predeterminados, normalmente por un valor que se declara en píxeles. El desplazamiento lógico se utiliza para desplazarse al elemento siguiente del árbol lógico. El desplazamiento físico es el comportamiento de desplazamiento predeterminado para la mayoría <xref:System.Windows.Controls.Panel> elementos. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] es compatible con ambos tipos de desplazamiento.  
   
 #### <a name="the-iscrollinfo-interface"></a>Interfaz IScrollInfo  
  El <xref:System.Windows.Controls.Primitives.IScrollInfo> interfaz representa la región desplazable principal dentro de un <xref:System.Windows.Controls.ScrollViewer> o control derivado. La interfaz define el desplazamiento de las propiedades y métodos que pueden ser implementados por <xref:System.Windows.Controls.Panel> elementos que requieren el desplazamiento por unidad lógica, en lugar de un incremento físico. Convertir una instancia de <xref:System.Windows.Controls.Primitives.IScrollInfo> a una derivada <xref:System.Windows.Controls.Panel> y, a continuación, utilizar sus métodos de desplazamiento proporciona una manera útil para desplazarse a la siguiente unidad lógica en una colección secundaria, en lugar de hacerlo por incrementos en píxeles. De forma predeterminada, el <xref:System.Windows.Controls.ScrollViewer> control admite el desplazamiento por unidades físicas.  
@@ -61,10 +61,11 @@ El contenido en una interfaz de usuario suele ser mayor que el área de presenta
  Para más información sobre los formatos de documentos y opciones de presentación, consulte [Documents in WPF](../advanced/documents-in-wpf.md) (Documentos en WPF).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
-- [Cómo: Crear un visor de desplazamiento](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
+- [Filtrar Crear un visor de desplazamiento](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
 - [Documentos en WPF](../advanced/documents-in-wpf.md)
-- [ScrollBar Styles and Templates](scrollbar-styles-and-templates.md) (Estilos y plantillas de ScrollBar)
+- [Estilos y plantillas de ScrollBar](scrollbar-styles-and-templates.md)
 - [Controles](../advanced/optimizing-performance-controls.md)

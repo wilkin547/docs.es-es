@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: 2246ad1f9f36af2f8f4383647ccb97ee7be3b64b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213355"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Tutorial: Realizar consultas en varias relaciones (Visual Basic)
 Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *asociaciones* para representar relaciones de clave externa en la base de datos.  
@@ -92,4 +92,5 @@ Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes
  El tutorial siguiente ([Tutorial: Manipular datos (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) se muestra cómo manipular los datos. Este tutorial no requiere que guarde los dos tutoriales ya completados de esta serie.  
   
 ## <a name="see-also"></a>Vea también
-- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+
+- [Aprender con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

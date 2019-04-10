@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55f1c0da651d786dfdcfda6a54ee1b29db35f3d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: faf1be65d308b223490f3ae67eed3d8a2b1688b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587744"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223074"
 ---
 # <a name="corsegment-structure"></a>COR_SEGMENT (Estructura)
 Contiene información sobre una región de memoria en el montón administrado.  
@@ -47,7 +47,7 @@ typedef struct _COR_SEGMENT {
 |`heap`|El número de montón en el que reside la región de memoria. Vea la sección Comentarios para obtener más información.|  
   
 ## <a name="remarks"></a>Comentarios  
- La estructura `COR_SEGMENTS` representa una región de memoria en el montón administrado.  Los objetos `COR_SEGMENTS` son miembros del objeto de colección [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md), que se rellena mediante una llamada al método [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md).  
+ La estructura `COR_SEGMENTS` representa una región de memoria en el montón administrado.  `COR_SEGMENTS` los objetos son miembros de la [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) objeto de colección, que se rellena mediante una llamada a la [Icordebugprocess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) método.  
   
  El campo `heap` es el número de procesador, que se corresponde con el montón que se va a notificar. Para los recolectores de elementos no utilizados de la estación de trabajo, su valor siempre es cero, porque las estaciones de trabajo tienen solo un montón de recolección de elementos no utilizados. Para los recolectores de elementos no utilizados de servidor, su valor se corresponde con el procesador al que está vinculado el montón. Tenga en cuenta que podría haber más o menos montones de recolección de elementos no utilizados que procesadores reales debido a los detalles de implementación del recolector de elementos no utilizados.  
   
@@ -61,5 +61,6 @@ typedef struct _COR_SEGMENT {
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

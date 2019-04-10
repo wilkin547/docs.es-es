@@ -1,15 +1,15 @@
 ---
-title: 'Tarea 2: Hospedar el Diseñador de flujo de trabajo'
+title: 'Tarea 2: Hospedar el diseñador de flujo de trabajo'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708644"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218711"
 ---
-# <a name="task-2-host-the-workflow-designer"></a>Tarea 2: Hospedar el Diseñador de flujo de trabajo
+# <a name="task-2-host-the-workflow-designer"></a>Tarea 2: Hospedar el diseñador de flujo de trabajo
 Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] en una aplicación de Windows Presentation Foundation (WPF).  
   
  El procedimiento se configura el **cuadrícula** control que contiene el diseñador, se crea mediante programación una instancia de la <xref:System.Activities.Presentation.WorkflowDesigner> que contiene el valor predeterminado es <xref:System.Activities.Statements.Sequence> actividad, registra los metadatos del diseñador para proporcionar compatibilidad con el diseñador para las actividades integradas en todos los hosts y el [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] en el [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] aplicación.  
@@ -122,6 +122,7 @@ Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[
 10. Consulte [tarea 3: Crear el cuadro de herramientas y PropertyGrid paneles](task-3-create-the-toolbox-and-propertygrid-panes.md) para obtener información sobre cómo agregar **cuadro de herramientas** y **PropertyGrid** soporte técnico para el Diseñador de flujo de trabajo rehospedado.  
   
 ## <a name="see-also"></a>Vea también
-- [Rehospedaje del Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
-- [Tarea 1: Crear una nueva aplicación de Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
-- [Tarea 3: Crear el cuadro de herramientas y PropertyGrid paneles](task-3-create-the-toolbox-and-propertygrid-panes.md)
+
+- [Rehospedar el Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
+- [Tarea 1: Crear una aplicación de Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Tarea 3: Crear los paneles de Cuadro de herramientas y PropertyGrid](task-3-create-the-toolbox-and-propertygrid-panes.md)

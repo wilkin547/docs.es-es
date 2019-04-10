@@ -2,12 +2,12 @@
 title: Filtrado
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 735fd4252bb1740c149659f6c6fe81f18285914a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 667cc1cc95208c5c653ec4088d69ae105a2f8889
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626113"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214603"
 ---
 # <a name="filtering"></a>Filtrado
 Windows Communication Foundation (WCF) del sistema de filtrado puede usar los filtros declarativos para igualar mensajes y tomar decisiones operativas. Puede utilizar filtros para determinar qué hacer con un mensaje examinando parte del mensaje. Un proceso de cola, por ejemplo, puede utilizar una consulta de XPath 1.0 para comprobar el elemento de prioridad de un encabezado conocido para determinar si poner un mensaje al principio de la cola.  
@@ -34,7 +34,7 @@ Windows Communication Foundation (WCF) del sistema de filtrado puede usar los fi
  El <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> contiene una lista de cadenas de acción. Si cualquiera de las acciones en lista de filtros coincide con el encabezado Action en el mensaje o búfer del mensaje, el método `Match` devuelve `true`. Si la lista está vacía, el filtro se considera como un filtro que coincide con todo y cualquier mensaje o búfer del mensaje coincide y `Match` devuelve `true`. Si ninguna de las acciones de lista de filtros coincide con el encabezado Action en el mensaje o búfer del mensaje, el método `Match` devuelve `false`. Si no hay ninguna acción en el mensaje y la lista de filtros no está vacía, `Match` devuelve `false`.  
   
 ### <a name="endpoint-address-filters"></a>Filtros de dirección de punto de conexión  
- El <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtra los mensajes y búferes de mensajes basándose en una dirección de punto de conexión, tal y como se representa en su colección de encabezados. Para que un mensaje pase un filtro de este tipo, se deben cumplir las condiciones siguientes:  
+ El <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtra los mensajes y búferes de mensajes basándose en una dirección de extremo, tal y como se representa en su colección de encabezados. Para que un mensaje pase un filtro de este tipo, se deben cumplir las condiciones siguientes:  
   
 -   El Identificador uniforme de recursos (URI) de la dirección del filtro debe ser la misma que la del mensaje del encabezado To.  
   
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF) del sistema de filtrado puede usar los fi
 ### <a name="xpath-message-filters"></a>Filtros de mensajes XPath  
  Un <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> utiliza una expresión XPath para determinar si un documento XML contiene elementos concretos, atributos, texto u otras construcciones sintácticas de XML. El filtro se optimiza para ser extremadamente eficaz para un subconjunto estricto de XPath. El lenguaje XML Path Language se describe en el [W3C XML Path Language 1.0 specification](https://go.microsoft.com/fwlink/?LinkId=94779).  
   
- Normalmente, una aplicación usa un <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> en un punto de conexión para consultar el contenido de un mensaje SOAP y, a continuación, realiza las acciones apropiadas en función de los resultados de esa consulta. Un proceso de cola, por ejemplo, puede utilizar una consulta de XPath para inspeccionar el elemento de prioridad de un encabezado conocido para decidir si poner un mensaje al principio de la cola.  
+ Normalmente, una aplicación usa un <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> en un extremo para consultar el contenido de un mensaje SOAP y, a continuación, realiza las acciones apropiadas en función de los resultados de esa consulta. Un proceso de cola, por ejemplo, puede utilizar una consulta de XPath para inspeccionar el elemento de prioridad de un encabezado conocido para decidir si poner un mensaje al principio de la cola.  
   
 ## <a name="filter-tables"></a>Tablas de filtros  
  Las tablas de filtros se utilizan para almacenar los pares clave-valor, donde un filtro es la clave y algunos datos asociados son el valor. Los datos de filtros se pueden usar para indicar qué acciones emprender si un mensaje coincide con el filtro y el tipo de los datos de filtro es el parámetro genérico para la clase de la tabla de filtros. Los datos del filtro pueden estar compuestos de reglas de enrutamiento, estado de seguridad de la sesión, agentes de escucha en un canal, etc. Se pueden utilizar los datos donde es necesario el control de flujo de datos.  
@@ -71,17 +71,18 @@ Windows Communication Foundation (WCF) del sistema de filtrado puede usar los fi
  Esta tabla tiene varios métodos `Match` especializados que funcionan sobre un <xref:System.Xml.XPath.XPathNavigator> y un <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. Un <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> extiende la clase <xref:System.Xml.XPath.XPathNavigator> agregando una propiedad <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A>. Esta propiedad permite guardar las posiciones del documento XML y cargarlas rápidamente sin tener que clonar el explorador, una asignación de gran consumo de memoria que <xref:System.Xml.XPath.XPathNavigator> requiere para este tipo de operación. El motor de WCF XPath debe grabar con frecuencia la posición del cursor mientras ejecuta las consultas en documentos XML, por lo que el <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> proporciona una optimización importante para procesar los mensajes.  
   
 ## <a name="customer-scenarios"></a>Escenarios de cliente  
- Puede utilizar el filtrado siempre que desee enviar un mensaje a módulos de procesamiento diferentes en función de los datos contenidos en el mensaje. Dos escenarios típicos enrutan un mensaje en función de su código de acción y demultiplexan una secuencia de mensajes en función de la dirección del punto de conexión de los mensajes.  
+ Puede utilizar el filtrado siempre que desee enviar un mensaje a módulos de procesamiento diferentes en función de los datos contenidos en el mensaje. Dos escenarios típicos enrutan un mensaje en función de su código de acción y demultiplexan una secuencia de mensajes en función de la dirección del extremo de los mensajes.  
   
 ### <a name="routing"></a>Enrutamiento  
- El agente de escuchas de un extremo realiza escuchas para los mensajes que tienen un o más códigos de acción en el encabezado SOAP del mensaje. Esto se implementa mediante la creación de un <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> pasando una matriz que contenga los códigos de acción a su constructor. Utiliza ese filtro para registrarse con el `ListenerFactory`, de modo que solo los mensajes cuya acción coincida con uno de aquéllos en el filtro lleguen a ese punto de conexión concreto.  
+ El agente de escuchas de un extremo realiza escuchas para los mensajes que tienen un o más códigos de acción en el encabezado SOAP del mensaje. Esto se implementa mediante la creación de un <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> pasando una matriz que contenga los códigos de acción a su constructor. Utiliza ese filtro para registrarse con el `ListenerFactory`, de modo que solo los mensajes cuya acción coincida con uno de aquéllos en el filtro lleguen a ese extremo concreto.  
   
 ### <a name="de-multiplexing"></a>Demultiplexación  
  Cuando varios puntos de conexión abanican se extienden fuera del mismo `ServiceListener` fuera de la conexión, la única manera de demultiplexar los mensajes y saber si pertenecen a una cierta dirección del punto de conexión, consiste en utilizar <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>s que seleccionen mensajes hacia los puntos de conexión registrados mediante una búsqueda en la información almacenada en los encabezados. En estos filtros, solo aquellos mensajes que pasan tienen todos los encabezados necesarios que corresponden a ambos:  
   
 -   El URI en la `EndpointAddress`.  
   
--   El resto de los parámetros de punto de conexión en la `EndpointAddress` tal y como se especifica en el <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
+-   El resto de los parámetros de extremo en la `EndpointAddress` tal y como se especifica en el <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Transferencia y serialización de datos](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

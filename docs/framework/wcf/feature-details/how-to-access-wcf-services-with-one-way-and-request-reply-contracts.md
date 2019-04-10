@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Obtener acceso a los servicios WCF con unidireccional y contratos de solicitud-respuesta
+title: Filtrar Obtener acceso a los servicios WCF con unidireccional y contratos de solicitud-respuesta
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: f74f874d43698955cce0ae14791a9d6b748ef919
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 84b8f7c44c8124c1a150304dea0f08a0087752bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217034"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Procedimiento Obtener acceso a los servicios WCF con unidireccional y contratos de solicitud-respuesta
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Filtrar Obtener acceso a los servicios WCF con unidireccional y contratos de solicitud-respuesta
 Los procedimientos siguientes describen cómo tener acceso a un servicio de Windows Communication Foundation (WCF) que define un contrato unidireccional y un contrato de solicitud-respuesta y no usa el patrón de comunicación dúplex.  
   
 ### <a name="to-define-the-service"></a>Para definir el servicio  
@@ -401,4 +401,5 @@ namespace Microsoft.ServiceModel.Samples
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Servicios unidireccionales](../../../../docs/framework/wcf/feature-details/one-way-services.md)

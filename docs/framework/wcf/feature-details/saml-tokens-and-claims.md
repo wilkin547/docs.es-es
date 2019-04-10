@@ -10,12 +10,12 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: 2fbb1f520a1497ef5aa3227d038b3759b8327eda
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f1f7a15d1457390bf77f5e53c7fd657304725df6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218217"
 ---
 # <a name="saml-tokens-and-claims"></a>Tokens y notificaciones SAML
 Lenguaje de marcado de aserción de seguridad (SAML) *tokens* son representaciones XML de notificaciones. De forma predeterminada, los tokens SAML que Windows Communication Foundation (WCF) se usa en escenarios de seguridad federada son *tokens emitidos*.  
@@ -43,13 +43,14 @@ Lenguaje de marcado de aserción de seguridad (SAML) *tokens* son representacion
  Cuando los tokens SAML se reciben en mensajes, las diversas instrucciones en el token SAML se convierten en objetos <xref:System.IdentityModel.Policy.IAuthorizationPolicy> que se colocan en <xref:System.IdentityModel.Policy.AuthorizationContext>. La propiedad <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> de <xref:System.IdentityModel.Policy.AuthorizationContext> devuelve las notificaciones de cada instrucción SAML y se pueden examinar para determinar si autenticar y autorizar al usuario.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - [Federación](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Cómo: Crear a un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Cómo: Configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Filtrar para crear un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Filtrar para configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Notificaciones y tokens](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
 - [Creación de notificaciones y valores de recursos](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [Cómo: Crear una demanda personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Filtrar para crear una notificación personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

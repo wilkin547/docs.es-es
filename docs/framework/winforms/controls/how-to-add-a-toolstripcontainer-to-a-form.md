@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar un ToolStripContainer a un formulario
+title: Filtrar para agregar un control ToolStripContainer a un formulario
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], adding to Windows Forms
 ms.assetid: d0f55095-a833-453e-be5a-644906d75d54
-ms.openlocfilehash: 35d35c9cf9bca2720cb6d02d602d2d7bc6740f25
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d70c5b8f548cf325083782d6ea185c18fd2fa003
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216215"
 ---
-# <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Filtrar Agregar un ToolStripContainer a un formulario
+# <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Filtrar para agregar un control ToolStripContainer a un formulario
 Puede agregar mediante programación un <xref:System.Windows.Forms.ToolStripContainer> a Windows Forms y rellenarlo con controles.  
   
 ## <a name="example"></a>Ejemplo  
@@ -33,6 +33,7 @@ Puede agregar mediante programación un <xref:System.Windows.Forms.ToolStripCont
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ToolStripContainer>
-- [ToolStripContainer (control)](toolstripcontainer-control.md)
-- [Control ToolStrip](toolstrip-control-windows-forms.md)
+- [ToolStripContainer (Control)](toolstripcontainer-control.md)
+- [ToolStrip](toolstrip-control-windows-forms.md)

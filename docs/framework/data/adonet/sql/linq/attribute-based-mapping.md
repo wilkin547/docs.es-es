@@ -2,12 +2,12 @@
 title: Asignación basada en atributos
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: bd16731684a04ca7a92dbb6560b5c008558896cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713907"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223568"
 ---
 # <a name="attribute-based-mapping"></a>Asignación basada en atributos
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] asigna una base de datos de SQL Server a un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelo de objetos aplicando atributos o mediante un archivo de asignación externa. En este tema se describe el enfoque basado en atributos.  
@@ -52,11 +52,11 @@ ms.locfileid: "54713907"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Booleano|`true`|Indica que una columna puede contener valores nulos.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|String|Tipo de columna de base de datos deducido|Utiliza tipos de base de datos y modificadores para especificar el tipo de la columna de base de datos.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|String|Empty|Define una columna calculada en una base de datos.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Boolean|`false`|Indica que una columna contiene valores que la base de datos genera automáticamente.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolean|`false`|Indica que la columna contiene un valor de discriminador para una jerarquía de herencia de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolean|`false`|Especifica que este miembro de clase representa una columna que es o forma parte de las claves principales de la tabla.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|Identifica el tipo de columna del miembro como una marca de tiempo o número de versión de la base de datos.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, a menos que <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> sea `true` para un miembro|Especifica cómo se plantea [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la detección de conflictos de simultaneidad optimista.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Booleano|`false`|Indica que una columna contiene valores que la base de datos genera automáticamente.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Booleano|`false`|Indica que la columna contiene un valor de discriminador para una jerarquía de herencia de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Booleano|`false`|Especifica que este miembro de clase representa una columna que es o forma parte de las claves principales de la tabla.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Booleano|`false`|Identifica el tipo de columna del miembro como una marca de tiempo o número de versión de la base de datos.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, a menos que <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> es `true` para un miembro|Especifica cómo se plantea [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la detección de conflictos de simultaneidad optimista.|  
   
  Para obtener más información, consulta <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
@@ -70,10 +70,10 @@ ms.locfileid: "54713907"
   
 |Propiedad|Tipo|Default|Descripción|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boolean|`false`|Cuando se coloca en una asociación cuyos miembros de clave externa no aceptan valores Null, elimina el objeto cuando la asociación está establecida en null.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Booleano|`false`|Cuando se coloca en una asociación cuyos miembros de clave externa no aceptan valores Null, elimina el objeto cuando la asociación está establecida en null.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|Ninguna|Agrega comportamiento de eliminación a una asociación.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boolean|`false`|Si es verdadero, designa el miembro como la clave externa de una asociación que representa una relación de base de datos.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boolean|`false`|Si es verdadero, indica una restricción de unicidad en la clave externa.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Booleano|`false`|Si es verdadero, designa el miembro como la clave externa de una asociación que representa una relación de base de datos.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Booleano|`false`|Si es verdadero, indica una restricción de unicidad en la clave externa.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|String|Identificador de la clase relacionada|Designa uno o más miembros de la clase de entidad de destino como valores de clave en el otro lado de la asociación.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.ThisKey%2A>|String|Identificador de la clase contenedora|Designa miembros de esta clase de entidad para que representen los valores de clave en este lado de la asociación.|  
   
@@ -90,7 +90,7 @@ ms.locfileid: "54713907"
 |Propiedad|Tipo|Default|Descripción|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|String|Ninguno. El valor debe suministrarse.|Especifica el valor de código del discriminador.|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Boolean|`false`|Si es verdadero, crea instancias de un objeto de este tipo cuando ningún valor de discriminador del almacén coincide con ninguno de los valores especificados.|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Booleano|`false`|Si es verdadero, crea instancias de un objeto de este tipo cuando ningún valor de discriminador del almacén coincide con ninguno de los valores especificados.|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|Tipo|Ninguno. El valor debe suministrarse.|Especifica el tipo de la clase en la jerarquía.|  
   
  Para obtener más información, consulta <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>.  
@@ -102,7 +102,7 @@ ms.locfileid: "54713907"
   
 |Propiedad|Tipo|Default|Descripción|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boolean|`false`|Si es falso, indica la asignación a un procedimiento almacenado. Si es verdadero, indica la asignación a una función definida por el usuario.|  
+|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Booleano|`false`|Si es falso, indica la asignación a un procedimiento almacenado. Si es verdadero, indica la asignación a una función definida por el usuario.|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|String|La misma cadena que el nombre en la base de datos|Especifica el nombre del procedimiento almacenado o la función definida por el usuario.|  
   
  Para obtener más información, consulta <xref:System.Data.Linq.Mapping.FunctionAttribute>.  
@@ -143,4 +143,5 @@ ms.locfileid: "54713907"
  Para obtener más información, consulta <xref:System.Data.Linq.Mapping.DataAttribute>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

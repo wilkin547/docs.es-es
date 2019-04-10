@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Crear un Control enlazado y dar formato a los datos mostrados
+title: Filtrar para crear un control enlazado y aplicar formato a los datos mostrados
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8b1256c1389c6a55f405f0be0d137a8ad170dbec
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0f56fc5fa345cbe4584b61ae2622dfb0dfb35be8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710503"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225539"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Filtrar Crear un Control enlazado y dar formato a los datos mostrados
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Filtrar para crear un control enlazado y aplicar formato a los datos mostrados
 Con el enlace de datos de Windows Forms, puede dar formato a los datos mostrados en un control enlazado a datos mediante el uso de la **formato y enlace avanzada** cuadro de diálogo.  
   
 > [!NOTE]
@@ -55,6 +55,7 @@ Con el enlace de datos de Windows Forms, puede dar formato a los datos mostrados
 8.  Haga clic en **Aceptar** para cerrar el **formato y enlace de datos avanzado** cuadro de diálogo y volver a la ventana Propiedades.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Crear un Control con enlace Simple en un formulario de Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Validación de los datos proporcionados por el usuario Windows Forms](user-input-validation-in-windows-forms.md)
+
+- [Filtrar para crear un control con enlace simple en formularios Windows Forms](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Validación de los datos proporcionados por el usuario en formularios Windows Forms](user-input-validation-in-windows-forms.md)
 - [Enlace de datos en Windows Forms](windows-forms-data-binding.md)

@@ -3,12 +3,12 @@ title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: 752b1188fccb6f09cdcab6a50653abf26e8e2a53
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0129c63fe17b63889a77ea1a56c0d7e657def859
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224056"
 ---
 # <a name="customcookiehandler"></a>\<customCookieHandler>
 Establece el tipo de controlador de cookies personalizado. Este elemento solo puede estar presente si el `mode` atributo de la `<cookieHandler>` elemento es "Custom". El tipo personalizado debe derivarse de la <xref:System.IdentityModel.Services.CookieHandler> clase.  
@@ -64,4 +64,5 @@ Establece el tipo de controlador de cookies personalizado. Este elemento solo pu
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.IdentityModel.Services.CookieHandler>

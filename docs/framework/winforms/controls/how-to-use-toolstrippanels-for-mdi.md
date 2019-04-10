@@ -1,5 +1,5 @@
 ---
-title: Filtrar Utilizar controles ToolStripPanel para MDI
+title: Filtrar para usar controles ToolStripPanel para MDI
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], using for MDI
 - toolbars [Windows Forms], using for MDI
 ms.assetid: d6b884fc-0846-465f-83c3-5dc0fe93b00f
-ms.openlocfilehash: a543b9e292f29e54b45327ae77a81676c992f103
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 42d4ed23f477f545c4ff2be53c36d8ea86d3b4f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219881"
 ---
-# <a name="how-to-use-toolstrippanels-for-mdi"></a>Filtrar Utilizar controles ToolStripPanel para MDI
+# <a name="how-to-use-toolstrippanels-for-mdi"></a>Filtrar para usar controles ToolStripPanel para MDI
 <xref:System.Windows.Forms.ToolStripPanel> proporciona flexibilidad para las aplicaciones de interfaz de múltiples documentos (MDI) mediante el método <xref:System.Windows.Forms.ToolStripPanel.Join%2A>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -33,5 +33,6 @@ ms.locfileid: "57722066"
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ToolStripPanel>
-- [Cómo: Unir ToolStripPanels](how-to-join-toolstrippanels.md)
+- [Filtrar para unir controles ToolStripPanel](how-to-join-toolstrippanels.md)

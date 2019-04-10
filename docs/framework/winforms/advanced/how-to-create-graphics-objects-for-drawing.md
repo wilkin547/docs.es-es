@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear objetos Graphics para dibujar
+title: Filtrar para crear objetos gráficos para dibujar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709060"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223633"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>Filtrar Crear objetos Graphics para dibujar
+# <a name="how-to-create-graphics-objects-for-drawing"></a>Filtrar para crear objetos gráficos para dibujar
 Antes de poder dibujar líneas y formas, representar texto o mostrar y manipular imágenes con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], deberá crear un <xref:System.Drawing.Graphics> objeto. El <xref:System.Drawing.Graphics> objeto representa un [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superficie de dibujo, y es el objeto que se usa para crear imágenes gráficas.  
   
  Trabajar con gráficos, hay dos pasos:  
@@ -33,11 +33,11 @@ Antes de poder dibujar líneas y formas, representar texto o mostrar y manipular
   
 -   Reciba una referencia a un objeto graphics como parte de la <xref:System.Windows.Forms.PaintEventArgs> en el <xref:System.Windows.Forms.Control.Paint> eventos de un formulario o control. Normalmente, esto es cómo obtener una referencia a un objeto graphics al crear el código de dibujo de un control. De forma similar, también se puede obtener un objeto graphics como una propiedad de la <xref:System.Drawing.Printing.PrintPageEventArgs> al controlar la <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos para un <xref:System.Drawing.Printing.PrintDocument>.  
   
-     O bien  
+     -o bien-  
   
 -   Llame a la <xref:System.Windows.Forms.Control.CreateGraphics%2A> método de un control o formulario para obtener una referencia a un <xref:System.Drawing.Graphics> objeto que representa la superficie de dibujo de dicho control o formulario. Utilice este método si desea que se va a dibujar en un formulario o control que ya existe.  
   
-     O bien  
+     -o bien-  
   
 -   Crear un <xref:System.Drawing.Graphics> objeto de cualquier objeto que hereda de <xref:System.Drawing.Image>. Este enfoque es útil cuando desea modificar una imagen ya existente.  
   
@@ -165,13 +165,14 @@ Antes de poder dibujar líneas y formas, representar texto o mostrar y manipular
   
     |Para representar|Vea|  
     |---------------|---------|  
-    |Líneas|[Cómo: Dibujar una línea en un formulario de Windows](how-to-draw-a-line-on-a-windows-form.md)|  
-    |Formas|[Cómo: Dibujar una forma con contorno](how-to-draw-an-outlined-shape.md)|  
-    |Texto|[Cómo: Dibujar texto en un formulario de Windows](how-to-draw-text-on-a-windows-form.md)|  
-    |Imágenes|[Cómo: Representar imágenes con GDI +](how-to-render-images-with-gdi.md)|  
+    |Líneas|[Filtrar para dibujar una línea en un formulario Windows Forms](how-to-draw-a-line-on-a-windows-form.md)|  
+    |Formas|[Filtrar para dibujar una forma con contorno](how-to-draw-an-outlined-shape.md)|  
+    |Texto|[Filtrar para dibujar texto en un formulario Windows Forms](how-to-draw-text-on-a-windows-form.md)|  
+    |Imágenes|[Filtrar para representar imágenes con GDI+](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Introducción a la programación de gráficos](getting-started-with-graphics-programming.md)
 - [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Líneas, curvas y formas](lines-curves-and-shapes.md)
-- [Cómo: Representar imágenes con GDI +](how-to-render-images-with-gdi.md)
+- [Filtrar para representar imágenes con GDI+](how-to-render-images-with-gdi.md)

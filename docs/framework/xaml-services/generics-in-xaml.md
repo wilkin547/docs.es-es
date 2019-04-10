@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: 219c710e8552ae3291c2b144c6048f4ff6710540
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048905"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221605"
 ---
 # <a name="generics-in-xaml"></a>Elementos genéricos en XAML
 Los servicios de XAML de .NET Framework implementados en System.Xaml proporciona compatibilidad para utilizar tipos genéricos de CLR. Esta compatibilidad incluye especificar las restricciones de los genéricos como un argumento de tipo y exigir la restricción llamando adecuado `Add` método para casos de colección genéricos. En este tema se describe aspectos del uso y que hacen referencia a tipos genéricos en XAML.  
@@ -43,6 +43,7 @@ Los servicios de XAML de .NET Framework implementados en System.Xaml proporciona
  Flujos de trabajo personalizados en Windows Workflow Foundation para [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] no admiten el uso XAML genérico.  
   
 ## <a name="see-also"></a>Vea también
+
 - [x:TypeArguments (Directiva)](x-typearguments-directive.md)
 - [x:Class (Directiva)](x-class-directive.md)
 - [Tipos integrados para primitivas comunes en el lenguaje XAML](built-in-types-for-common-xaml-language-primitives.md)

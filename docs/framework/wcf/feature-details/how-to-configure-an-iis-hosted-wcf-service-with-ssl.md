@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Configurar un servicio WCF hospedado en IIS con SSL
+title: Filtrar para configurar un servicio WCF hospedado en IIS con SSL
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: ca7343f14215d89b29636776437f5e4a6a8089a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 336c3800fc033cc12bd9c3fe168ae219b72cab91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214123"
 ---
-# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Procedimiento Configurar un servicio WCF hospedado en IIS con SSL
+# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Filtrar para configurar un servicio WCF hospedado en IIS con SSL
 En este tema se describe cómo configurar un servicio de WCF hospedado en IIS para usar la seguridad de transporte HTTP. La seguridad de transporte HTTP necesita registrar un certificado SSL con IIS. Si no tiene un certificado SSL puede usar IIS para generar un certificado de prueba. Después debe agregar un enlace SSL al sitio web y configurar las propiedades de autenticación del sitio web. Finalmente se debe configurar el servicio de WCF para usar HTTPS.  
   
 ### <a name="creating-a-self-signed-certificate"></a>Crear un certificado autofirmado  
@@ -145,7 +145,8 @@ En este tema se describe cómo configurar un servicio de WCF hospedado en IIS pa
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Hospedaje en Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
-- [Instrucciones de hospedaje de Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+- [Instrucciones de hospedaje Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
 - [Procedimientos recomendados de hospedaje de Internet Information Services](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
-- [Hospedaje de IIS mediante código en línea](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+- [Hospedaje de IIS utilizando código en línea](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

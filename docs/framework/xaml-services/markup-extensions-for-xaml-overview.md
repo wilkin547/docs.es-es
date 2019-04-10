@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 81e142a6989ad2c2c365def4ad43e1bad505c411
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58019156"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224928"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Información general sobre las extensiones de marcado para el lenguaje XAML
 Las extensiones de marcado son una técnica XAML para obtener un valor que no es un tipo primitivo ni específico de XAML. Para el uso de atributos, las extensiones de marcado usan la secuencia de caracteres conocida de una llave de apertura `{` para entrar en el ámbito de la extensión de marcado y una llave de cierre `}` para salir. Al usar los servicios XAML de .NET Framework, puede usar algunas de las extensiones de marcado del lenguaje XAML predefinidas del ensamblado System.Xaml. También puede crear subclases de la clase <xref:System.Windows.Markup.MarkupExtension> , definida en System.Xaml, y definir sus propias extensiones de marcado. Asimismo, puede usar las extensiones de marcado definidas por un marco determinado si ya se hace referencia a dicho marco.  
@@ -25,19 +25,19 @@ Las extensiones de marcado son una técnica XAML para obtener un valor que no es
 >  El prefijo `x:` se usa para la asignación de espacio de nombres típica de XAML para el espacio de nombres del lenguaje XAML, en el elemento raíz de una producción de XAML. Por ejemplo, las plantillas de proyecto y una página de Visual Studio para diversos marcos concretos inician un archivo XAML usando esta `x:` asignación. Puede elegir un token de prefijo diferente en su propia asignación de espacio de nombres XAML, pero en esta documentación se presupone la asignación `x:` predeterminada como manera de identificar las entidades que forman una parte definida del espacio de nombres XAML del lenguaje XAML, en lugar de un espacio de nombres XAML predeterminado de un marco concreto o de otros espacios de nombres XML o CLR arbitrarios.  
   
 ### <a name="xtype"></a>x:Type  
- `x:Type` proporciona el objeto <xref:System.Type> para el tipo con nombre. Esta funcionalidad se usa con más frecuencia en los mecanismos de aplazamiento que usan el tipo CLR subyacente y la derivación de tipos como identificador o moniker de agrupación. Los estilos y plantillas WPF y su uso de las propiedades `TargetType` son un ejemplo concreto. Para obtener más información, consulta [x:Type Markup Extension](x-type-markup-extension.md).  
+ `x:Type` proporciona el <xref:System.Type> objeto para el tipo con nombre. Esta funcionalidad se usa con más frecuencia en los mecanismos de aplazamiento que usan el tipo CLR subyacente y la derivación de tipos como identificador o moniker de agrupación. Los estilos y plantillas WPF y su uso de las propiedades `TargetType` son un ejemplo concreto. Para obtener más información, consulta [x:Type Markup Extension](x-type-markup-extension.md).  
   
 ### <a name="xstatic"></a>x:Static  
- `x:Static` genera valores estáticos a partir de entidades de código de tipo de valor que no son directamente el tipo del valor de una propiedad, pero que se pueden evaluar como ese tipo. Esto es útil para especificar valores que ya existen, como constantes conocidas en una definición de tipo. Para obtener más información, consulta [x:Static Markup Extension](x-static-markup-extension.md).  
+ `x:Static` genera valores estáticos de las entidades de código de tipo de valor que no son directamente el tipo de valor de una propiedad, pero se pueden evaluar como ese tipo. Esto es útil para especificar valores que ya existen, como constantes conocidas en una definición de tipo. Para obtener más información, consulta [x:Static Markup Extension](x-static-markup-extension.md).  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` especifica `null` como valor para un miembro XAML. En función del diseño de tipos específicos o de conceptos de marco más amplios, `null` no es siempre un valor predeterminado para una propiedad o el valor implícito de un atributo de cadena vacía. Para obtener más información, consulta [x:Null Markup Extension](x-null-markup-extension.md).  
+ `x:Null` Especifica `null` como un valor para un miembro XAML. En función del diseño de tipos específicos o de conceptos de marco más amplios, `null` no es siempre un valor predeterminado para una propiedad o el valor implícito de un atributo de cadena vacía. Para obtener más información, consulta [x:Null Markup Extension](x-null-markup-extension.md).  
   
 ### <a name="xarray"></a>x:Array  
- `x:Array` admite la creación de matrices generales en sintaxis XAML en los casos en que no se use deliberadamente el soporte de colección que proporcionan los elementos base y los modelos de control. Para obtener más información, consulta [x:Array Markup Extension](x-array-markup-extension.md). En concreto en XAML 2009, se accede a las matrices como primitivas del lenguaje, en lugar de como una extensión. Para obtener más información, consulta [XAML 2009 Language Features](xaml-2009-language-features.md).  
+ `x:Array` admite la creación de matrices generales en sintaxis XAML en casos donde el soporte de colección proporcionado por los elementos base y los modelos de control no se use deliberadamente. Para obtener más información, consulta [x:Array Markup Extension](x-array-markup-extension.md). En concreto en XAML 2009, se accede a las matrices como primitivas del lenguaje, en lugar de como una extensión. Para obtener más información, consulta [XAML 2009 Language Features](xaml-2009-language-features.md).  
   
 ### <a name="xreference"></a>x:Reference  
- `x:Reference` forma parte de XAML 2009, una extensión del lenguaje original (2006). `x:Reference` representa una referencia a otro objeto existente en un gráfico de objetos. Dicho objeto se identifica por su `x:Name`. Para obtener más información, consulta [x:Reference Markup Extension](x-reference-markup-extension.md).  
+ `x:Reference` forma parte de XAML 2009, una extensión del lenguaje (2006) original. `x:Reference` Representa una referencia a otro objeto existente en un gráfico de objetos. Dicho objeto se identifica por su `x:Name`. Para obtener más información, consulta [x:Reference Markup Extension](x-reference-markup-extension.md).  
   
 ### <a name="other-x-constructs"></a>Otros x: Construcciones  
  Existen otras construcciones `x:` que admiten características del lenguaje XAML, pero no se implementan como extensiones de marcado. Para obtener más información, consulte [XAML Namespace (x:) Características del lenguaje](xaml-namespace-x-language-features.md).  
@@ -122,7 +122,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="attributing-for-a-custom-markup-extension"></a>Atribución para una extensión de marcado personalizada  
  Para admitir entornos de diseño y ciertos escenarios del escritor de objetos XAML, debe atribuir varios atributos CLR a un tipo de compatibilidad de la extensión de marcado. Estos atributos notifican el uso previsto de la extensión de marcado.  
   
- <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> notifica información <xref:System.Type> del tipo de objeto que <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> devuelve. Por su firma pura, <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> devuelve <xref:System.Object>. Sin embargo, algunos consumidores podrían desear información más precisa sobre el tipo de valor devuelto. Esto incluye:  
+ <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> los informes el <xref:System.Type> tipo de información para el objeto que <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> devuelve. Por su firma pura, <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> devuelve <xref:System.Object>. Sin embargo, algunos consumidores podrían desear información más precisa sobre el tipo de valor devuelto. Esto incluye:  
   
 -   Diseñadores e IDE, que pueden proporcionar compatibilidad con reconocimiento del tipo para los usos de la extensión de marcado.  
   
@@ -138,11 +138,11 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  Si el uso de la extensión de marcado usa argumentos posicionales, se representa como un objeto de inicio con un valor de inicialización. Como representación de texto aproximada, el flujo de nodo se parece a lo siguiente:  
   
- `StartObject` (<xref:System.Xaml.XamlType> es el tipo de definición de la extensión de marcado, no el tipo de valor devuelto)  
+ `StartObject` (<xref:System.Xaml.XamlType> es de tipo de definición de la extensión de marcado, no su tipo de valor devuelto)  
   
- `StartMember` (el nombre de <xref:System.Xaml.XamlMember> es `_InitializationText`)  
+ `StartMember` (nombre de la <xref:System.Xaml.XamlMember> es `_InitializationText`)  
   
- `Value` (el valor son los argumentos posicionales como cadena, incluidos los delimitadores que intervengan)  
+ `Value` (valor es los argumentos posicionales como cadena, incluidos los delimitadores que intervengan)  
   
  `EndMember`  
   
@@ -155,6 +155,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
  Si está trabajando con un flujo de nodo XAML en la ruta de acceso de guardado, no suele haber nada en una representación del gráfico de objetos que informe de que el objeto que se va a serializar se proporcionó originalmente mediante el uso de una extensión de marcado y un resultado `ProvideValue` . Los escenarios que necesitan conservar los usos de la extensión de marcado para realizar un recorrido de ida y vuelta y, al mismo tiempo, capturar otros cambios en el gráfico de objetos deben diseñar sus propias técnicas para conservar el conocimiento del uso de una extensión de marcado a partir de la entrada XAML original. Por ejemplo, para restaurar los usos de la extensión de marcado, puede que necesite trabajar con el flujo de nodo en la ruta de acceso de guardado para restaurar los usos de la extensión de marcado, o bien realizar algún tipo de combinación entre el XAML original y el XAML de ida y vuelta. Algunos marcos que implementan XAML, como WPF, usan tipos intermedios (expresiones) para ayudar a representar casos cuando los usos de la extensión de marcado proporcionaron los valores.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Markup.MarkupExtension>
 - [Convertidores de tipos y extensiones de marcado para XAML](type-converters-and-markup-extensions-for-xaml.md)
 - [Extensiones de marcado y XAML de WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Aplicar el modelo PropertyNameChanged
+title: Filtrar para aplicar el patrón PropertyNameChanged
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], custom controls
 - PropertyNameChanged pattern [Windows Forms], applying
 ms.assetid: aa47ddf6-5223-40c4-833f-a78992194836
-ms.openlocfilehash: 889a7f5f7a84db378acaa88b717b6011f1a3dfdc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 36670eee6235277a7fe98770192df9ae05d3dd03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213030"
 ---
-# <a name="how-to-apply-the-propertynamechanged-pattern"></a>Procedimiento Aplicar el modelo PropertyNameChanged
+# <a name="how-to-apply-the-propertynamechanged-pattern"></a>Filtrar para aplicar el patrón PropertyNameChanged
 En el ejemplo de código siguiente se muestra cómo aplicar el *PropertyName*patrón ha cambiado a un control personalizado. Este patrón se aplican al implementar controles personalizados que se usan con el motor de enlace de datos de Windows Forms.  
   
 ## <a name="example"></a>Ejemplo  
@@ -29,6 +29,7 @@ En el ejemplo de código siguiente se muestra cómo aplicar el *PropertyName*pat
 -   Pegue el código en un archivo de código vacío. Debe usar el control personalizado en un formulario de Windows que contenga un `Main` método.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Implementar la interfaz INotifyPropertyChanged](how-to-implement-the-inotifypropertychanged-interface.md)
+
+- [Filtrar para implementar la interfaz INotifyPropertyChanged](how-to-implement-the-inotifypropertychanged-interface.md)
 - [Notificación de cambios en el enlace de datos de Windows Forms](change-notification-in-windows-forms-data-binding.md)
 - [Enlace de datos en Windows Forms](windows-forms-data-binding.md)

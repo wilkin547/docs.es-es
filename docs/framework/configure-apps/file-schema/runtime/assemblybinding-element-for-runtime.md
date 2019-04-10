@@ -1,5 +1,5 @@
 ---
-title: <assemblyBinding> (Elemento para <runtime>)
+title: <assemblyBinding> (elemento) para <runtime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e75f8e0561711fea8646c9da84f1b7553b3f7553
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: eec77d4dd42a7b95d1e2cd0e353e2e54746676b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225253"
 ---
 # <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding > (elemento) para \<en tiempo de ejecución >
 Contiene información sobre la redirección de versiones de ensamblado y las ubicaciones de ensamblados.  
@@ -93,6 +93,7 @@ Contiene información sobre la redirección de versiones de ensamblado y las ubi
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Redirigir versiones de ensamblado](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

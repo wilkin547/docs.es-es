@@ -7,12 +7,12 @@ helpviewer_keywords:
 - events [WPF], Preview
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-ms.openlocfilehash: 95514cfce88764d92d690fb9c0a51c667a49683b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211404"
 ---
 # <a name="preview-events"></a>Eventos de vista previa
 Eventos de vista previa, también conocidos como eventos de túnel, son eventos enrutados donde la dirección de la ruta se desplaza desde la raíz de la aplicación hacia el elemento que provocó el evento y se notifica como el origen de datos del evento. No todos los escenarios de evento admiten o requieran eventos de vista previa; en este tema describe las situaciones donde existen eventos de vista previa, cómo las aplicaciones o componentes deberían mostrarlos, y los casos donde crear eventos de vista previa en componentes personalizados o clases podría ser adecuado.  
@@ -30,5 +30,6 @@ Eventos de vista previa, también conocidos como eventos de túnel, son eventos 
  Cada una de estas técnicas tiene efectos secundarios o limitaciones. El efecto de controlar el evento de vista previa es que controle el evento en ese momento podría deshabilitar los controladores que esperan controlar el evento de propagación, y por lo tanto, la limitación es que normalmente no resulta una buena idea para marcar el evento como controlado mientras está todavía en el Previ Novedades de la parte la ruta. La limitación de la `handledEventsToo` técnica es que no se puede especificar un `handledEventsToo` controlador en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] como un atributo, debe registrar el controlador de eventos en el código después de obtener una referencia de objeto para el elemento donde es el controlador que se adjuntará.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Marcar eventos enrutados como controlados y control de clases](marking-routed-events-as-handled-and-class-handling.md)
 - [Información general sobre eventos enrutados](routed-events-overview.md)

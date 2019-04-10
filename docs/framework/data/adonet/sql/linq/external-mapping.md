@@ -2,12 +2,12 @@
 title: Asignación externa
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 5cc72c360a2dfbb7446a5157cde898be93d29171
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218685"
 ---
 # <a name="external-mapping"></a>Asignación externa
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite *asignación externa*, un proceso por el que utiliza un archivo XML independiente para especificar la asignación entre el modelo de datos de la base de datos y su modelo de objetos. Las ventajas de utilizar una archivo de asignación externa son las siguientes:  
@@ -27,7 +27,7 @@ ms.locfileid: "54614647"
   
 -   La asignación externa invalida la asignación basada en atributos. En otras palabras, al utilizar un origen de asignación externo para crear un <xref:System.Data.Linq.DataContext>, el <xref:System.Data.Linq.DataContext> omite todos los atributos de asignación que se han creado en las clases. Este comportamiento es cierto si la clase está incluida en el archivo de asignación externo.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite el uso híbrido de los dos enfoques de asignación (basado en atributos y externo).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no se admite el uso híbrido de los dos enfoques de asignación (basado en atributos y externos).  
   
 ## <a name="xml-schema-definition-file"></a>Archivo de definición de esquema XML  
  La asignación externa en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] debe ser válida según la siguiente definición de esquema XML.  
@@ -142,6 +142,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Cómo: Generar el modelo de objetos como un archivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Filtrar para generar el modelo de objetos como un archivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear una independiente de Windows Forms DataGridView Control'
+title: 'Tutorial: Crear un control DataGridView sin enlazar en formularios Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: ebbfeaa2d6a7734aa0f2b214be65e64111d28ac0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 375ac3bd3a178cc059239cf84209ebbf5d6aca11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220583"
 ---
-# <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Tutorial: Crear una independiente de Windows Forms DataGridView Control
+# <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Tutorial: Crear un control DataGridView sin enlazar en formularios Windows Forms
 Con frecuencia es posible que desee mostrar datos tabulares que no proceden de una base de datos. Por ejemplo, desea mostrar el contenido de una matriz bidimensional de cadenas. La <xref:System.Windows.Forms.DataGridView> clase proporciona una manera fácil y altamente personalizable para mostrar datos sin enlace a un origen de datos. En este tutorial se muestra cómo rellenar un <xref:System.Windows.Forms.DataGridView> controlar y administrar la agregación o eliminación de filas en modo "independiente". De forma predeterminada, el usuario puede agregar nuevas filas. Para impedir la adición de la fila, establezca el <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> propiedad es `false`.  
   
  Para copiar el código de este tema como una sola lista, vea [Cómo: Crear un Control DataGridView de formularios de Windows independiente](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
@@ -93,7 +93,8 @@ Con frecuencia es posible que desee mostrar datos tabulares que no proceden de u
 -   Personalizar la apariencia de celdas. Para obtener más información, vea [Cómo: Personalizar la apariencia de celdas en el Control DataGridView de formularios de Windows](customize-the-appearance-of-cells-in-the-datagrid.md) y [Cómo: Establecer estilos de celda predeterminados para los Windows Forms DataGridView Control](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
-- [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Cómo: Crear un Control DataGridView de formularios de Windows independiente](how-to-create-an-unbound-windows-forms-datagridview-control.md)
-- [Modos de presentación de datos en el control DataGridView de Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Mostrar datos en el control DataGridView de formularios Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Filtrar para crear un control DataGridView sin enlazar en formularios Windows Forms](how-to-create-an-unbound-windows-forms-datagridview-control.md)
+- [Modos de presentación de datos en el control DataGridView de formularios Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
