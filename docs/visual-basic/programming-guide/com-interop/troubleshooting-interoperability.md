@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 197361020ad8c6a88a5fc8617b8e24f420799e14
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377321"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341197"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Solucionar problemas de interoperabilidad (Visual Basic)
 Cuando se interoperar entre COM y el código administrado de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], puede encontrar uno o varios de los siguientes problemas comunes.  
@@ -42,9 +42,9 @@ Cuando se interoperar entre COM y el código administrado de la [!INCLUDE[dnprdn
   
  El cambio de nombre puede producir dos problemas para los consumidores del objeto COM.  
   
-1.  Los clientes no podrían esperar que los nombres de método generado.  
+1. Los clientes no podrían esperar que los nombres de método generado.  
   
-2.  Pueden cambiar los nombres de método generado en la clase que se expone como un objeto COM cuando se agregan nuevas sobrecargas a la clase o su clase base. Esto puede causar problemas de control de versiones.  
+2. Pueden cambiar los nombres de método generado en la clase que se expone como un objeto COM cuando se agregan nuevas sobrecargas a la clase o su clase base. Esto puede causar problemas de control de versiones.  
   
  Para solucionar dos problemas, dele a cada método un nombre único, en lugar de usar la sobrecarga, al desarrollar los objetos que se expondrán como objetos COM.  
   
@@ -133,5 +133,5 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 - [TlbImp.exe (Importador de la biblioteca de tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (Exportador de la biblioteca de tipos)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [Tutorial: Implementar la herencia mediante objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [Inherits (instrucción)](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Caché global de ensamblados](../../../framework/app-domains/gac.md)
