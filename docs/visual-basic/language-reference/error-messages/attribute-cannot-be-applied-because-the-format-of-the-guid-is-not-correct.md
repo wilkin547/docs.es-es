@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: ab821db45ae834e82aa134b6f20ded14d43709ef
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d27c326b6a88271ba4abf0144e71027f6671b17e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832273"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330680"
 ---
 # <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'\<atributo >' no se puede aplicar porque el formato del GUID '\<número >' no es correcto
 Un `COMClassAttribute` bloque de atributos especifica un identificador único global (GUID) que no se ajusta al formato apropiado para un GUID. `COMClassAttribute` usa los GUID para identificar de forma exclusiva la clase, la interfaz y el evento de creación.  
@@ -23,9 +23,9 @@ Un `COMClassAttribute` bloque de atributos especifica un identificador único gl
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Determinar el GUID o el GUID es necesarios para identificar el objeto COM correcto.  
+1. Determinar el GUID o el GUID es necesarios para identificar el objeto COM correcto.  
   
-2.  Asegúrese de que las cadenas del GUID presentadas en el bloque de atributos `COMClassAttribute` se copian correctamente.  
+2. Asegúrese de que las cadenas del GUID presentadas en el bloque de atributos `COMClassAttribute` se copian correctamente.  
   
 ## <a name="see-also"></a>Vea también
 

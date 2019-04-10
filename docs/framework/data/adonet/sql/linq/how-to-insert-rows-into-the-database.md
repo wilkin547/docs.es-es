@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: cc9f276cc278d4a9c376d72f1ab38d89ea6dd5b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cb2319d51e0518114a04eea2fc7ab6b5a836b7ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328600"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a>Filtrar para insertar filas en la base de datos
 Insertar filas en una base de datos agregando objetos al asociado [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> colección y, a continuación, enviar los cambios a la base de datos. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Convierte los cambios en el código SQL apropiado `INSERT` comandos.  
@@ -24,11 +24,11 @@ Insertar filas en una base de datos agregando objetos al asociado [!INCLUDE[vbte
   
 ### <a name="to-insert-a-row-into-the-database"></a>Para insertar una fila en la base de datos  
   
-1.  Cree un nuevo objeto que incluya los datos de la columna que se van a enviar.  
+1. Cree un nuevo objeto que incluya los datos de la columna que se van a enviar.  
   
-2.  Agregar el nuevo objeto a la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` colección asociada con la tabla de destino en la base de datos.  
+2. Agregar el nuevo objeto a la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` colección asociada con la tabla de destino en la base de datos.  
   
-3.  Envíe el cambio a la base de datos.  
+3. Envíe el cambio a la base de datos.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se crea un nuevo objeto de tipo `Order` y se llena con los valores adecuados. Después, se agrega el nuevo objeto a la colección `Order`. Finalmente, se envía el cambio a la base de datos, como una nueva fila de la tabla `Orders`.  

@@ -2,12 +2,12 @@
 title: Ejemplo básico
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 22d5428da57b2fc8f9b97d4553b86ac2a918f0e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1ceee6dd11b59ab9b43797ca8b1fd80c232fc8ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083028"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327976"
 ---
 # <a name="basic-sample"></a>Ejemplo básico
 En este ejemplo se muestra cómo hacer que un servicio se pueda detectar y cómo buscar y llamar a un servicio detectable. Este ejemplo se compone de dos proyectos: servicio y cliente.
@@ -82,15 +82,15 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
-1.  Este ejemplo utiliza los extremos HTTP y para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas. Para obtener más información, consulte [configurar HTTP y HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Este ejemplo utiliza los extremos HTTP y para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas. Para obtener más información, consulte [configurar HTTP y HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Con Visual Studio 2012, abra Basic.sln y compile el ejemplo.  
+2. Con Visual Studio 2012, abra Basic.sln y compile el ejemplo.  
   
-3.  Ejecute la aplicación service.exe.  
+3. Ejecute la aplicación service.exe.  
   
-4.  Después de que se inicie el servicio, ejecute la aplicación client.exe.  
+4. Después de que se inicie el servicio, ejecute la aplicación client.exe.  
   
-5.  Observe que el cliente pudo encontrar el servicio sin conocer su dirección.  
+5. Observe que el cliente pudo encontrar el servicio sin conocer su dirección.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

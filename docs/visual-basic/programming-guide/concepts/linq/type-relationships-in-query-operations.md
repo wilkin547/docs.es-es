@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14f17e89e2a4143580b4a2ca7f9d30013ded58f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822341"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327638"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relaciones entre tipos en operaciones de consulta (Visual Basic)
 Las variables utilizadas en [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] consulta operaciones están fuertemente tipadas y deben ser compatibles entre sí. Establecimiento inflexible de tipos se usa en el origen de datos, en la propia consulta y en la ejecución de consultas. La ilustración siguiente identifica los términos usados para describir un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta. Para obtener más información acerca de los elementos de una consulta, vea [operaciones básicas de consulta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -49,11 +49,11 @@ Las variables utilizadas en [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.m
   
  Las siguientes relaciones existen en ambos ejemplos de código anteriores, si se determinan los tipos de forma implícita o explícita.  
   
-1.  El tipo de los elementos del origen de datos, `names`, es el tipo de la variable de rango, `name`, en la consulta.  
+1. El tipo de los elementos del origen de datos, `names`, es el tipo de la variable de rango, `name`, en la consulta.  
   
-2.  El tipo del objeto que está seleccionado, `name`, determina el tipo de la variable de consulta, `mNames`. Aquí `name` es una cadena, por lo que la variable de consulta es IEnumerable (Of String) en Visual Basic.  
+2. El tipo del objeto que está seleccionado, `name`, determina el tipo de la variable de consulta, `mNames`. Aquí `name` es una cadena, por lo que la variable de consulta es IEnumerable (Of String) en Visual Basic.  
   
-3.  La consulta definida en `mNames` se ejecuta en el `For Each` bucle. El bucle recorre en iteración el resultado de ejecutar la consulta. Dado que `mNames`, cuando se ejecuta, devuelve una secuencia de cadenas, la variable de iteración del bucle, `nm`, también es una cadena.  
+3. La consulta definida en `mNames` se ejecuta en el `For Each` bucle. El bucle recorre en iteración el resultado de ejecutar la consulta. Dado que `mNames`, cuando se ejecuta, devuelve una secuencia de cadenas, la variable de iteración del bucle, `nm`, también es una cadena.  
   
 ## <a name="queries-that-return-one-field-from-selected-elements"></a>Consultas que devuelven un campo de los elementos seleccionados  
  El ejemplo siguiente se muestra un [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] operación que devuelve una secuencia que contiene solo una parte de cada elemento seleccionado del origen de datos de consulta. La consulta toma una colección de `Customer` objetos como origen de datos y solo para proyectos de la `Name` propiedad en el resultado. Dado que el nombre del cliente es una cadena, la consulta genera una secuencia de cadenas como salida.  
@@ -72,11 +72,11 @@ Next
   
  Las relaciones entre las variables son como los del ejemplo más sencillo.  
   
-1.  El tipo de los elementos del origen de datos, `customers`, es el tipo de la variable de rango, `cust`, en la consulta. En este ejemplo, que es de tipo `Customer`.  
+1. El tipo de los elementos del origen de datos, `customers`, es el tipo de la variable de rango, `cust`, en la consulta. En este ejemplo, que es de tipo `Customer`.  
   
-2.  El `Select` instrucción devuelve el `Name` propiedad de cada uno `Customer` objeto en lugar de todo el objeto. Dado que `Name` es una cadena, la variable de consulta, `custNames`, volverá a estar IEnumerable (Of String), no de `Customer`.  
+2. El `Select` instrucción devuelve el `Name` propiedad de cada uno `Customer` objeto en lugar de todo el objeto. Dado que `Name` es una cadena, la variable de consulta, `custNames`, volverá a estar IEnumerable (Of String), no de `Customer`.  
   
-3.  Dado que `custNames` representa una secuencia de cadenas, la `For Each` variable de iteración del bucle, `custName`, debe ser una cadena.  
+3. Dado que `custNames` representa una secuencia de cadenas, la `For Each` variable de iteración del bucle, `custName`, debe ser una cadena.  
   
  Sin la inferencia de tipo local, el ejemplo anterior sería más difícil de escribir y comprender, como se muestra en el ejemplo siguiente.  
   
@@ -110,11 +110,11 @@ Next
   
  Aunque no es posible especificar los tipos de todas las variables en el ejemplo anterior, las relaciones siguen siendo los mismos.  
   
-1.  El tipo de los elementos del origen de datos nuevo es el tipo de la variable de rango en la consulta. En este ejemplo, `cust` es una instancia de `Customer`.  
+1. El tipo de los elementos del origen de datos nuevo es el tipo de la variable de rango en la consulta. En este ejemplo, `cust` es una instancia de `Customer`.  
   
-2.  Dado que el `Select` instrucción genera un tipo anónimo, la variable de consulta, `nameCityQuery`, debe tener tipo implícito como un tipo anónimo. Un tipo anónimo no tiene ningún nombre utilizable y, por lo tanto, no puede especificarse explícitamente.  
+2. Dado que el `Select` instrucción genera un tipo anónimo, la variable de consulta, `nameCityQuery`, debe tener tipo implícito como un tipo anónimo. Un tipo anónimo no tiene ningún nombre utilizable y, por lo tanto, no puede especificarse explícitamente.  
   
-3.  El tipo de la variable de iteración en la `For Each` bucle es el tipo anónimo creado en el paso 2. Dado que el tipo no tiene ningún nombre utilizable, debe determinarse implícitamente el tipo de la variable de iteración del bucle.  
+3. El tipo de la variable de iteración en la `For Each` bucle es el tipo anónimo creado en el paso 2. Dado que el tipo no tiene ningún nombre utilizable, debe determinarse implícitamente el tipo de la variable de iteración del bucle.  
   
 ## <a name="see-also"></a>Vea también
 

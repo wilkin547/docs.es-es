@@ -2,12 +2,12 @@
 title: Control de errores en una actividad de diagrama de flujo utilizando TryCatch
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: e515248594088f9888c3488d83d8079ce5d13089
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81bfeb911658a6f363a9f0f95ecc7db68a02dbe2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119813"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331265"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Control de errores en una actividad de diagrama de flujo utilizando TryCatch
 En este ejemplo se muestra cómo se puede usar la actividad <xref:System.Activities.Statements.TryCatch> dentro de una actividad de flujo de control compleja.
@@ -31,11 +31,11 @@ En este ejemplo se muestra cómo se puede usar la actividad <xref:System.Activit
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1.  Con Visual Studio 2010, abra el archivo de solución FlowchartWithFaultHandling.sln.
+1. Con Visual Studio 2010, abra el archivo de solución FlowchartWithFaultHandling.sln.
 
-2.  Para compilar la solución, presione Ctrl+MAYÚS+B.
+2. Para compilar la solución, presione Ctrl+MAYÚS+B.
 
-3.  Presione F5 para ejecutar la solución.
+3. Presione F5 para ejecutar la solución.
 
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

@@ -2,12 +2,12 @@
 title: '* (Multiplicar) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 508ce246-4e86-47dd-a605-4af4bebb9891
-ms.openlocfilehash: cddcaa61c6241b5f5a37bac96ef08c3322367823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 308df758d59a7e12a8b5a19ae72fcbee2f168490
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146424"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329731"
 ---
 # <a name="-multiply-entity-sql"></a>* (Multiplicar) (Entity SQL)
 Multiplica dos expresiones.  
@@ -28,9 +28,9 @@ expression * expression
 ## <a name="example"></a>Ejemplo  
  La siguiente consulta de Entity SQL usa el operador aritmético * para multiplicar dos números. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1.  Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
+2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#MULTIPLY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#multiply)]  
   

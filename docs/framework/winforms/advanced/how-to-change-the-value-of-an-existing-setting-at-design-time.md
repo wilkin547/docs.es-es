@@ -5,31 +5,31 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
-ms.openlocfilehash: 00c1a58bd58b67f35d6e5782f53eb15693485ca5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6421171072f72764927b1a449c0257a29e8e82d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194245"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326559"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Cómo cambiar el valor de una opción de configuración existente en tiempo de diseño
 Puede usar Visual Studio para editar los valores de configuración existente en el proyecto.  
   
 ### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-c"></a>Para cambiar el valor de una configuración existente en tiempo de diseño en C\#
   
-1.  En **el Explorador de soluciones**, expanda el **propiedades** nodo del proyecto.  
+1. En **el Explorador de soluciones**, expanda el **propiedades** nodo del proyecto.  
   
-2.  Haga doble clic en el archivo .settings en el que desea agregar una nueva configuración. El nombre predeterminado para este archivo es Settings.settings.  
+2. Haga doble clic en el archivo .settings en el que desea agregar una nueva configuración. El nombre predeterminado para este archivo es Settings.settings.  
   
-3.  En el Diseñador de configuración, busque la configuración para el que desea cambiar el valor y escriba el nuevo valor en la columna valor.  
+3. En el Diseñador de configuración, busque la configuración para el que desea cambiar el valor y escriba el nuevo valor en la columna valor.  
   
 ### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-visual-basic"></a>Para cambiar el valor de una configuración existente en tiempo de diseño en Visual Basic  
   
-1.  En **el Explorador de soluciones**, haga clic en el nodo del proyecto y elija **propiedades**.  
+1. En **el Explorador de soluciones**, haga clic en el nodo del proyecto y elija **propiedades**.  
   
-2.  En el **propiedades** página, seleccione el **configuración** ficha.  
+2. En el **propiedades** página, seleccione el **configuración** ficha.  
   
-3.  En el Diseñador de configuración, busque la configuración para el que desea cambiar el valor y escriba el nuevo valor en la columna valor.  
+3. En el Diseñador de configuración, busque la configuración para el que desea cambiar el valor y escriba el nuevo valor en la columna valor.  
   
 ## <a name="see-also"></a>Vea también
 

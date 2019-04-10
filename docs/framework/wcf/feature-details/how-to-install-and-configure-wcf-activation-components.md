@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: bcd725963986d8a70584409e1ef15c42f04f0033
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2677c57c825675c884d057827e065f05d7c8bf30
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199224"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327989"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Filtrar para instalar y configurar los componentes de activación de WFC
 En este tema se describe los pasos necesarios para configurar Windows Process Activation Service (también conocido como WAS) en [!INCLUDE[wv](../../../../includes/wv-md.md)] para hospedar servicios de Windows Communication Foundation (WCF) protocolos de red de servicios que no se comunican a través de HTTP. Las siguientes secciones describen los pasos para realizar esta configuración:  
@@ -22,19 +22,19 @@ En este tema se describe los pasos necesarios para configurar Windows Process Ac
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>Instalación de los componentes de activación que no son HTTP de WCF  
   
-1.  Haga clic en el **iniciar** botón y, a continuación, haga clic en **Panel de Control**.  
+1. Haga clic en el **iniciar** botón y, a continuación, haga clic en **Panel de Control**.  
   
-2.  Haga clic en **programas**y, a continuación, haga clic en **programas y características**.  
+2. Haga clic en **programas**y, a continuación, haga clic en **programas y características**.  
   
-3.  En el **tareas** menú, haga clic en **o desactivar las características de Windows Active**.  
+3. En el **tareas** menú, haga clic en **o desactivar las características de Windows Active**.  
   
-4.  Encuentre el nodo [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], selecciónelo y, a continuación, expándalo.  
+4. Encuentre el nodo [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], selecciónelo y, a continuación, expándalo.  
   
-5.  Seleccione el **componentes de activación no Http de WCF** cuadro y guardar la configuración.  
+5. Seleccione el **componentes de activación no Http de WCF** cuadro y guardar la configuración.  
   
 ### <a name="to-configure-the-was-to-support-tcp-activation"></a>Configuración de WAS para admitir la activación TCP  
   
-1.  Para admitir la activación del net.tcp, el sitio web predeterminado debe enlazarse primero a un puerto net.tcp. Puede hacer esto utilizando Appcmd.exe, que está instalado con el conjunto de herramientas de administración [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. En una ventana de símbolo de sistema para administradores, ejecute el siguiente comando.  
+1. Para admitir la activación del net.tcp, el sitio web predeterminado debe enlazarse primero a un puerto net.tcp. Puede hacer esto utilizando Appcmd.exe, que está instalado con el conjunto de herramientas de administración [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. En una ventana de símbolo de sistema para administradores, ejecute el siguiente comando.  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
@@ -43,7 +43,7 @@ En este tema se describe los pasos necesarios para configurar Windows Process Ac
     > [!NOTE]
     >  Este comando es una sola línea de texto. Este comando agrega un enlace del sitio net.tcp al sitio web predeterminado que realiza escuchas en el puerto TCP 808 con cualquier nombre de host.  
   
-2.  Aunque todas las aplicaciones dentro de un sitio comparten un enlace net. tcp común, cada aplicación puede habilitar la compatibilidad net. tcp individualmente. Para habilitar net.tcp para la aplicación, ejecute el siguiente comando desde un símbolo del sistema del nivel del administrador:  
+2. Aunque todas las aplicaciones dentro de un sitio comparten un enlace net. tcp común, cada aplicación puede habilitar la compatibilidad net. tcp individualmente. Para habilitar net.tcp para la aplicación, ejecute el siguiente comando desde un símbolo del sistema del nivel del administrador:  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set app   
@@ -79,7 +79,7 @@ En este tema se describe los pasos necesarios para configurar Windows Process Ac
   
 ### <a name="to-remove-nettcp-from-the-list-of-enabled-protocols"></a>Quitar el net.tcp de la lista de protocolos habilitados  
   
-1.  Para quitar el net.tcp de la lista de protocolos habilitados, ejecute el siguiente comando en una ventana de símbolo del sistema del nivel del administrador:  
+1. Para quitar el net.tcp de la lista de protocolos habilitados, ejecute el siguiente comando en una ventana de símbolo del sistema del nivel del administrador:  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples<WCF Application>" " /enabledProtocols:http  
@@ -90,7 +90,7 @@ En este tema se describe los pasos necesarios para configurar Windows Process Ac
   
 ### <a name="to-remove-the-nettcp-site-binding"></a>Quitar el enlace de sitio de net.tcp  
   
-1.  Para quitar el enlace del sitio net.tcp ejecute el siguiente comando desde una ventana de símbolo del sistema en el nivel de administrador:  
+1. Para quitar el enlace del sitio net.tcp ejecute el siguiente comando desde una ventana de símbolo del sistema en el nivel de administrador:  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   

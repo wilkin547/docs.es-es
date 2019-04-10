@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, resizing
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-ms.openlocfilehash: 28cee4e1aa989ef4df902907c09645a1a0400475
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b5550aef220ece09d5486421275b19a37bfe9011
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073004"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329783"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Filtrar para delimitar controles en formularios Windows Forms
 Si está diseñando un formulario que el usuario puede cambiar el tamaño en tiempo de ejecución, deben cambiar el tamaño de los controles en el formulario y la posición de correctamente. Para cambiar el tamaño de controles dinámicamente con el formulario, puede usar el <xref:System.Windows.Forms.Control.Anchor%2A> propiedades de controles de Windows Forms. El <xref:System.Windows.Forms.Control.Anchor%2A> propiedad define una posición de delimitación para el control. Cuando un control se acopla a un formulario y se cambia el tamaño del formulario, el control mantiene la distancia entre el control y las posiciones de anclaje. Por ejemplo, si tiene un <xref:System.Windows.Forms.TextBox> control que está anclada a la izquierda, derecha y los bordes de la parte inferior del formulario, como el tamaño del formulario, el <xref:System.Windows.Forms.TextBox> control cambia automáticamente de tamaño horizontalmente para que mantiene la misma distancia desde los lados derecho e izquierdos del formulario. Además, el control se coloca verticalmente para que su ubicación es siempre la misma distancia desde el borde inferior del formulario. Si no se encuentra delimitado respecto de un control y se cambia el tamaño del formulario, se cambia la posición del control en relación con los bordes del formulario.  
@@ -29,22 +29,22 @@ Si está diseñando un formulario que el usuario puede cambiar el tamaño en tie
   
 ### <a name="to-anchor-a-control-on-a-form"></a>Para anclar un control en un formulario  
   
-1.  Seleccione el control que desee anclar.  
+1. Seleccione el control que desee anclar.  
   
     > [!NOTE]
     >  Puede delimitar varios controles simultáneamente al presionar la tecla CTRL, haciendo clic en cada control para seleccionarlo y, a continuación, siga el resto de este procedimiento.  
   
-2.  En el **propiedades** ventana, haga clic en la flecha situada a la derecha de la <xref:System.Windows.Forms.Control.Anchor%2A> propiedad.  
+2. En el **propiedades** ventana, haga clic en la flecha situada a la derecha de la <xref:System.Windows.Forms.Control.Anchor%2A> propiedad.  
   
      Se muestra un editor que se muestra una cruz.  
   
-3.  Para establecer un delimitador, haga clic en la parte superior, izquierda, derecha o la sección inferior de la cruz.  
+3. Para establecer un delimitador, haga clic en la parte superior, izquierda, derecha o la sección inferior de la cruz.  
   
      Los controles se fija con respecto a la parte superior y deja de forma predeterminada.  
   
-4.  Para borrar un lado del control delimitado, haga clic en esa rama de la cruz.  
+4. Para borrar un lado del control delimitado, haga clic en esa rama de la cruz.  
   
-5.  Para cerrar el <xref:System.Windows.Forms.Control.Anchor%2A> editor de propiedades, haga clic en el <xref:System.Windows.Forms.Control.Anchor%2A> nuevo nombre de propiedad.  
+5. Para cerrar el <xref:System.Windows.Forms.Control.Anchor%2A> editor de propiedades, haga clic en el <xref:System.Windows.Forms.Control.Anchor%2A> nuevo nombre de propiedad.  
   
  Cuando se muestre el formulario en tiempo de ejecución, el control cambia de tamaño para permanecer ubicado a la misma distancia desde el borde del formulario. La distancia desde el borde delimitado siempre permanece igual la distancia definida cuando se coloca el control en el Diseñador de Windows Forms.  
   

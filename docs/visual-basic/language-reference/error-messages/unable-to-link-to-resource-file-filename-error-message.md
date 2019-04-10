@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
-ms.openlocfilehash: a4e53cd2d330fd3ee78d2de4246e5c51e77ed713
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: cae65e1637c29ecfdec07d6a5df27e71b6460c01
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759423"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327820"
 ---
 # <a name="unable-to-link-to-resource-file-filename-error-message"></a>No se puede vincular al archivo de recursos '\<filename >': \<mensaje de error >
 El compilador de Visual Basic llama a la herramienta Assembly Linker (Al.exe, también denominado Alink) para generar un ensamblado con un manifiesto. El vinculador ha informado de un error al vincular a un archivo de recursos COM+ nativo desde el ensamblado.  
@@ -21,11 +21,11 @@ El compilador de Visual Basic llama a la herramienta Assembly Linker (Al.exe, ta
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Examine el mensaje de error citado y consulte el tema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Para obtener más información y consejos.  
+1. Examine el mensaje de error citado y consulte el tema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Para obtener más información y consejos.  
   
-2.  Si el error persiste, reúna información sobre las circunstancias y notifíquelo a los Servicios de soporte técnico de Microsoft.  
+2. Si el error persiste, reúna información sobre las circunstancias y notifíquelo a los Servicios de soporte técnico de Microsoft.  
   
 ## <a name="see-also"></a>Vea también
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Hable con nosotros](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

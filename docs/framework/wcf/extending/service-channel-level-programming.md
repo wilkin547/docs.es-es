@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329135"
 ---
 # <a name="service-channel-level-programming"></a>Programación de servicios a nivel de canal
 Este tema describe cómo escribir una aplicación de servicio de Windows Communication Foundation (WCF) sin utilizar el <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> y su modelo de objetos asociado.  
@@ -18,15 +18,15 @@ Este tema describe cómo escribir una aplicación de servicio de Windows Communi
 ## <a name="receiving-messages"></a>Recibir mensajes  
  Se exigen los pasos siguientes para estar listo para recibir y procesar mensajes:  
   
-1.  Cree un enlace.  
+1. Cree un enlace.  
   
-2.  Crear una escucha del canal.  
+2. Crear una escucha del canal.  
   
-3.  Abrir la escucha del canal.  
+3. Abrir la escucha del canal.  
   
-4.  Leer la solicitud y enviar una respuesta.  
+4. Leer la solicitud y enviar una respuesta.  
   
-5.  Cerrar todos los objetos de canal.  
+5. Cerrar todos los objetos de canal.  
   
 #### <a name="creating-a-binding"></a>Crear un enlace  
  El primer paso para escuchar y recibir mensajes es crear un enlace. WCF incluye varios enlaces integrados o proporcionados por el sistema que se pueden usar directamente creando instancias de uno de ellos. Además, también puede crear su propio enlace personalizado creando instancias de una clase CustomBinding que es lo que hace el código en la lista 1.  
@@ -36,7 +36,7 @@ Este tema describe cómo escribir una aplicación de servicio de Windows Communi
 #### <a name="building-a-channellistener"></a>Crear un ChannelListener  
  Después de crear un enlace, llamamos a <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> para crear la escucha del canal donde el parámetro de tipo es la forma del canal a crear. En este ejemplo estamos utilizando <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> porque deseamos realizar escuchas para los mensajes entrantes en un patrón de intercambio de solicitud/mensaje de respuesta.  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> se utiliza para recibir los mensajes de solicitud y devolver los mensajes de respuesta. Al llamar a <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType>, se devuelve <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, que se puede utilizar para recibir el mensaje de solicitud y devolver un mensaje de respuesta.  
+ <xref:System.ServiceModel.Channels.IReplyChannel> se utiliza para recibir mensajes y devolviendo los mensajes de respuesta de solicitud. Al llamar a <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType>, se devuelve <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, que se puede utilizar para recibir el mensaje de solicitud y devolver un mensaje de respuesta.  
   
  Al crear el agente de escucha, pasamos la dirección de red en la que se realizan las escuchas, en este caso `http://localhost:8080/channelapp`. En general, cada canal de transporte admite uno o posiblemente varios esquemas de direcciones, por ejemplo, el transporte HTTP admite http y esquemas http.  
   

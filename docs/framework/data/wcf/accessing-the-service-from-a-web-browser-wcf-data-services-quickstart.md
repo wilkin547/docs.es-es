@@ -2,12 +2,12 @@
 title: Acceder al servicio desde un explorador web (Inicio rápido de Data Services de WCF)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: 15a74e47774c532e75eca8a60a1af3a3e4f03f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebeda2805f3393b298e43aa4dcc601298ce176f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591648"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330329"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Acceder al servicio desde un explorador web (Inicio rápido de Data Services de WCF)
 
@@ -18,16 +18,16 @@ Se trata de la segunda tarea del tutorial rápido de WCF Data Services. En esta 
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Para solicitar el documento de servicio predeterminado utilizando Internet Explorer
 
-1.  En Internet Explorer, desde el **herramientas** menú, seleccione **opciones de Internet**, haga clic en el **contenido** , haga clic **configuración**y desactive  **Activar la visualización de fuente**.
+1. En Internet Explorer, desde el **herramientas** menú, seleccione **opciones de Internet**, haga clic en el **contenido** , haga clic **configuración**y desactive  **Activar la visualización de fuente**.
 
      De este modo, se garantiza que la lectura de fuentes queda deshabilitada. Si no deshabilita esta funcionalidad, el explorador web tratará el documento codificado como AtomPub devuelto como si fuera una fuente XML en lugar de mostrar los datos XML sin formato.
 
     > [!NOTE]
     > Si el explorador no puede mostrar la fuente como datos XML sin formato, todavía debería poder ver la fuente como el código fuente de la página.
 
-2.  En Visual Studio, presione el **F5** tecla para iniciar la depuración de la aplicación.
+2. En Visual Studio, presione el **F5** tecla para iniciar la depuración de la aplicación.
 
-3.  Abra un explorador web en el equipo local. En la barra de direcciones, escriba el siguiente URI:
+3. Abra un explorador web en el equipo local. En la barra de direcciones, escriba el siguiente URI:
 
     ```
     http://localhost:12345/northwind.svc
@@ -37,7 +37,7 @@ Se trata de la segunda tarea del tutorial rápido de WCF Data Services. En esta 
 
 ## <a name="to-access-entity-set-resources-from-a-web-browser"></a>Para tener acceso a los recursos del conjunto de entidades desde un explorador web
 
-1.  En el campo de la barra de direcciones del explorador web, escriba el URI siguiente:
+1. En el campo de la barra de direcciones del explorador web, escriba el URI siguiente:
 
     ```
     http://localhost:12345/northwind.svc/Customers
@@ -45,7 +45,7 @@ Se trata de la segunda tarea del tutorial rápido de WCF Data Services. En esta 
 
      Esto devuelve un conjunto de todos los clientes de la base de datos de ejemplo Northwind.
 
-2.  En el campo de la barra de direcciones del explorador web, escriba el URI siguiente:
+2. En el campo de la barra de direcciones del explorador web, escriba el URI siguiente:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')
@@ -53,7 +53,7 @@ Se trata de la segunda tarea del tutorial rápido de WCF Data Services. En esta 
 
      De esta forma, se devuelve una instancia de la entidad para un cliente concreto, `ALFKI`.
 
-3.  En el campo de la barra de direcciones del explorador web, escriba el URI siguiente:
+3. En el campo de la barra de direcciones del explorador web, escriba el URI siguiente:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
@@ -61,7 +61,7 @@ Se trata de la segunda tarea del tutorial rápido de WCF Data Services. En esta 
 
      De esta forma, se recorre la relación entre clientes y pedidos para devolver un conjunto de todos los pedidos para ese cliente, `ALFKI`.
 
-4.  En el campo de la barra de direcciones del explorador web, escriba el URI siguiente:
+4. En el campo de la barra de direcciones del explorador web, escriba el URI siguiente:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643

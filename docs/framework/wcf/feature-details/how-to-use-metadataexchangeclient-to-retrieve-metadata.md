@@ -2,12 +2,12 @@
 title: Filtrar para usar MetadataExchangeClient para recuperar metadatos
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: ec4177e71c7d46dc5c908f01a051dc5a0df6baa4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 32acef65ee30d7b80b37c11bdd024e3c09a935ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168628"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327885"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Filtrar para usar MetadataExchangeClient para recuperar metadatos
 Utilice la clase <xref:System.ServiceModel.Description.MetadataExchangeClient> para descargar metadatos mediante el protocolo WS-MetadataExchange (MEX). Los archivos de metadatos recuperados se devuelven como un objeto <xref:System.ServiceModel.Description.MetadataSet>. El objeto <xref:System.ServiceModel.Description.MetadataSet> devuelto contiene una colección de objetos <xref:System.ServiceModel.Description.MetadataSection>, cada uno de los cuales contiene un dialecto de metadatos concreto y un identificador. Puede escribir los metadatos devueltos en los archivos o, si éstos contienen los documentos del Lenguaje de descripción de servicios Web (WSDL), podrá importar los metadatos mediante <xref:System.ServiceModel.Description.WsdlImporter>.  
@@ -21,11 +21,11 @@ Utilice la clase <xref:System.ServiceModel.Description.MetadataExchangeClient> p
   
 ### <a name="to-use-metadataexchangeclient-to-obtain-metadata"></a>Para utilizar MetadataExchangeClient para obtener metadatos  
   
-1.  Cree un nuevo objeto <xref:System.ServiceModel.Description.MetadataExchangeClient> especificando explícitamente un enlace, un nombre de configuración de punto de conexión o la dirección de los metadatos.  
+1. Cree un nuevo objeto <xref:System.ServiceModel.Description.MetadataExchangeClient> especificando explícitamente un enlace, un nombre de configuración de punto de conexión o la dirección de los metadatos.  
   
-2.  Configure <xref:System.ServiceModel.Description.MetadataExchangeClient> para ajustarlo a sus necesidades. Por ejemplo, puede especificar las credenciales que se van a usar cuando se solicitan metadatos, controlar cómo se resuelven las referencias a metadatos y definir la propiedad <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> para controlar cuánto tiempo tiene la solicitud de los metadatos para volver antes de caducar.  
+2. Configure <xref:System.ServiceModel.Description.MetadataExchangeClient> para ajustarlo a sus necesidades. Por ejemplo, puede especificar las credenciales que se van a usar cuando se solicitan metadatos, controlar cómo se resuelven las referencias a metadatos y definir la propiedad <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> para controlar cuánto tiempo tiene la solicitud de los metadatos para volver antes de caducar.  
   
-3.  Obtenga el objeto <xref:System.ServiceModel.Description.MetadataSet> que contiene los metadatos recuperados llamando a uno de los métodos <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>. Observe que solo puede utilizar la sobrecarga <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> que no toma ningún argumento si especificó explícitamente una dirección al construir <xref:System.ServiceModel.Description.MetadataExchangeClient>.  
+3. Obtenga el objeto <xref:System.ServiceModel.Description.MetadataSet> que contiene los metadatos recuperados llamando a uno de los métodos <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>. Observe que solo puede utilizar la sobrecarga <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> que no toma ningún argumento si especificó explícitamente una dirección al construir <xref:System.ServiceModel.Description.MetadataExchangeClient>.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo de código siguiente muestra cómo utilizar <xref:System.ServiceModel.Description.MetadataExchangeClient> para descargar y enumerar los archivos de metadatos.  

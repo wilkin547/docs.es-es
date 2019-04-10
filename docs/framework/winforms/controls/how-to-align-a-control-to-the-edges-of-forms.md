@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-ms.openlocfilehash: 990fc996cfb5ecf4d9fde255ad026e3f46a24718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: beb8881dbd2aedaefe66510c2942ce6c082b9729
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185788"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329978"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms"></a>Filtrar para alinear un control con los bordes de los formularios
 Puede alinear el control con el borde de los formularios estableciendo la propiedad <xref:System.Windows.Forms.Control.Dock%2A>. Esta propiedad designa el lugar en el que se encuentra el control en el formulario. La propiedad <xref:System.Windows.Forms.Control.Dock%2A> puede establecerse en los valores siguientes:  
@@ -33,7 +33,7 @@ Puede alinear el control con el borde de los formularios estableciendo la propie
   
 ### <a name="to-set-the-dock-property-for-your-control-at-run-time"></a>Para establecer la propiedad Dock en su control en tiempo de ejecución  
   
-1.  Establezca un valor adecuado en el código para la propiedad <xref:System.Windows.Forms.Control.Dock%2A>.  
+1. Establezca un valor adecuado en el código para la propiedad <xref:System.Windows.Forms.Control.Dock%2A>.  
   
     ```vb  
     ' To set the Dock property internally.  

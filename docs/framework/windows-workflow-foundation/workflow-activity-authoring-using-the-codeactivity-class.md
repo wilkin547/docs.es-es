@@ -2,12 +2,12 @@
 title: Crear actividad de flujo de trabajo mediante la clase CodeActivity
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-ms.openlocfilehash: 4954dfa5dba03823d119a456149f0f16cf5ed410
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127100"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331291"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>Crear actividad de flujo de trabajo mediante la clase CodeActivity
 Las actividades creadas al heredar de <xref:System.Activities.CodeActivity> pueden implementar el comportamiento imperativo básico al invalidar el método <xref:System.Activities.CodeActivity.Execute%2A>.
@@ -23,28 +23,28 @@ Las actividades creadas al heredar de <xref:System.Activities.CodeActivity> pued
 
 #### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>Para crear una actividad personalizada que herede de CodeActivity
 
-1.  Abra Visual Studio 2010.
+1. Abra Visual Studio 2010.
 
-2.  Seleccione **archivo**, **nueva**y, a continuación, **proyecto**. Seleccione **Workflow 4.0** en **Visual C#** en el **tipos de proyecto** ventana y seleccione el **v2010** nodo. Seleccione **biblioteca de actividades** en el **plantillas** ventana. Dé al nuevo proyecto el nombre "HelloActivity".
+2. Seleccione **archivo**, **nueva**y, a continuación, **proyecto**. Seleccione **Workflow 4.0** en **Visual C#** en el **tipos de proyecto** ventana y seleccione el **v2010** nodo. Seleccione **biblioteca de actividades** en el **plantillas** ventana. Dé al nuevo proyecto el nombre "HelloActivity".
 
-3.  Haga clic en Activity1.xaml en el proyecto HelloActivity y seleccione **eliminar**.
+3. Haga clic en Activity1.xaml en el proyecto HelloActivity y seleccione **eliminar**.
 
-4.  Haga clic en el proyecto HelloActivity y seleccione **agregar** y, a continuación, **clase**. Dé a la nueva clase el nombre "HelloActivity.cs".
+4. Haga clic en el proyecto HelloActivity y seleccione **agregar** y, a continuación, **clase**. Dé a la nueva clase el nombre "HelloActivity.cs".
 
-5.  En el archivo HelloActivity.cs, agregue las siguientes directivas `using`.
+5. En el archivo HelloActivity.cs, agregue las siguientes directivas `using`.
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6.  Haga que la nueva clase herede de <xref:System.Activities.CodeActivity> al agregar una clase base a la declaración de clase.
+6. Haga que la nueva clase herede de <xref:System.Activities.CodeActivity> al agregar una clase base a la declaración de clase.
 
     ```csharp
     class HelloActivity : CodeActivity
     ```
 
-7.  Agregue la funcionalidad a la clase agregando un método <xref:System.Activities.CodeActivity.Execute%2A>.
+7. Agregue la funcionalidad a la clase agregando un método <xref:System.Activities.CodeActivity.Execute%2A>.
 
     ```csharp
     protected override void Execute(CodeActivityContext context)
@@ -53,7 +53,7 @@ Las actividades creadas al heredar de <xref:System.Activities.CodeActivity> pued
     }
     ```
 
-8.  Use <xref:System.Activities.CodeActivityContext> para crear un registro de seguimiento.
+8. Use <xref:System.Activities.CodeActivityContext> para crear un registro de seguimiento.
 
     ```csharp
     protected override void Execute(CodeActivityContext context)

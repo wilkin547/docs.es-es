@@ -2,12 +2,12 @@
 title: Filtrar para hacer que los archivos de asignación y de modelo sean recursos incrustados
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: b00ccdd0a1fc1cb22cf7cc0d0a3177dcc0e8017f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: eae3681664ab1fd095487a7b7ed395302faf2588
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329536"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Filtrar para hacer que los archivos de asignación y de modelo sean recursos incrustados
 El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] le permite implementar los archivos de asignación y modelo como recursos incrustados de una aplicación. El ensamblado con los archivos de asignación y de modelo incrustados se debe cargar en el mismo dominio de aplicación que la conexión de entidad. Para más información, consulte [Cadenas de conexión](../../../../../docs/framework/data/adonet/ef/connection-strings.md). De forma predeterminada, las herramientas de [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] incrustan los archivos de asignación y de modelo. Cuando defina los archivos de asignación y de modelo manualmente, use este procedimiento para asegurarse de que dichos archivos se implementan como recursos incrustados junto con una aplicación de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
@@ -17,13 +17,13 @@ El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] le permite imp
   
 ### <a name="to-embed-model-and-mapping-files"></a>Para incrustar los archivos de asignación y de modelo  
   
-1.  En **el Explorador de soluciones**, seleccione el archivo conceptual (.csdl).  
+1. En **el Explorador de soluciones**, seleccione el archivo conceptual (.csdl).  
   
-2.  En el **propiedades** panel, establezca **acción de compilación** a **recurso incrustado**.  
+2. En el **propiedades** panel, establezca **acción de compilación** a **recurso incrustado**.  
   
-3.  Repita los pasos 1 y 2 para el archivo de almacenamiento (.ssdl) y el archivo de asignación (.msl).  
+3. Repita los pasos 1 y 2 para el archivo de almacenamiento (.ssdl) y el archivo de asignación (.msl).  
   
-4.  En **el Explorador de soluciones**, haga doble clic en el archivo App.config y, a continuación, modifique la `Metadata` parámetro en el `connectionString` atributo basado en uno de los siguientes formatos:  
+4. En **el Explorador de soluciones**, haga doble clic en el archivo App.config y, a continuación, modifique la `Metadata` parámetro en el `connectionString` atributo basado en uno de los siguientes formatos:  
   
     -   `Metadata=` `res://<assemblyFullName>/<resourceName>;`  
   

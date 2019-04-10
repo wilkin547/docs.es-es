@@ -2,12 +2,12 @@
 title: Aprender con tutoriales
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: fdcc2db1507d8ee2c6d1b07a79c531267fbb5714
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189011"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329315"
 ---
 # <a name="learning-by-walkthroughs"></a>Aprender con tutoriales
 El [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentación proporciona varios tutoriales. En este tema se resuelven algunos de los problemas generales que plantean los tutoriales y se proporcionan vínculos a varios tutoriales de iniciación a través de los cuales conocerá [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -53,13 +53,13 @@ El [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>Para comprobar o cambiar el inicio de sesión de base de datos  
   
-1.  En el Windows **iniciar** menú, elija **todos los programas**, **Microsoft SQL Server 2005**, apunte a **herramientas de configuración**y, a continuación, haga clic en **Administrador de configuración de SQL Server**.  
+1. En el Windows **iniciar** menú, elija **todos los programas**, **Microsoft SQL Server 2005**, apunte a **herramientas de configuración**y, a continuación, haga clic en **Administrador de configuración de SQL Server**.  
   
-2.  En el panel izquierdo de la **Administrador de configuración de SQL Server**, haga clic en **servicios de SQL Server 2005**.  
+2. En el panel izquierdo de la **Administrador de configuración de SQL Server**, haga clic en **servicios de SQL Server 2005**.  
   
-3.  En el panel derecho, haga clic en **SQL Server (SQLEXPRESS)** y, a continuación, haga clic en **propiedades**.  
+3. En el panel derecho, haga clic en **SQL Server (SQLEXPRESS)** y, a continuación, haga clic en **propiedades**.  
   
-4.  Haga clic en el **iniciar sesión** ficha y compruebe cómo está intentando iniciar sesión en el servidor.  
+4. Haga clic en el **iniciar sesión** ficha y compruebe cómo está intentando iniciar sesión en el servidor.  
   
      En la mayoría de los casos, **sistema Local** funciona.  
   
@@ -70,9 +70,9 @@ El [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>Para habilitar el protocolo Canalizaciones con nombre  
   
-1.  En el panel izquierdo de la **Administrador de configuración de SQL Server**, expanda **configuración de red de SQL Server 2005**y, a continuación, haga clic en **protocolos para SQLEXPRESS**.  
+1. En el panel izquierdo de la **Administrador de configuración de SQL Server**, expanda **configuración de red de SQL Server 2005**y, a continuación, haga clic en **protocolos para SQLEXPRESS**.  
   
-2.  En el panel derecho, asegúrese de que el **canalizaciones con nombre** protocolo está habilitado. Si no es así, haga clic en **canalizaciones con nombre** y, a continuación, haga clic en **habilitar**.  
+2. En el panel derecho, asegúrese de que el **canalizaciones con nombre** protocolo está habilitado. Si no es así, haga clic en **canalizaciones con nombre** y, a continuación, haga clic en **habilitar**.  
   
      Tendrá que detener y reiniciar el servicio. Siga los pasos de la sección siguiente.  
   
@@ -81,11 +81,11 @@ El [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 ##### <a name="to-stop-and-restart-the-service"></a>Para detener y reiniciar el servicio  
   
-1.  En el panel izquierdo de la **Administrador de configuración de SQL Server**, haga clic en **servicios de SQL Server 2005**.  
+1. En el panel izquierdo de la **Administrador de configuración de SQL Server**, haga clic en **servicios de SQL Server 2005**.  
   
-2.  En el panel derecho, haga clic en **SQL Server (SQLEXPRESS)** y, a continuación, haga clic en **detener**.  
+2. En el panel derecho, haga clic en **SQL Server (SQLEXPRESS)** y, a continuación, haga clic en **detener**.  
   
-3.  Haga clic en **SQL Server (SQLEXPRESS)** y, a continuación, haga clic en **reiniciar**.  
+3. Haga clic en **SQL Server (SQLEXPRESS)** y, a continuación, haga clic en **reiniciar**.  
   
 ## <a name="see-also"></a>Vea también
 

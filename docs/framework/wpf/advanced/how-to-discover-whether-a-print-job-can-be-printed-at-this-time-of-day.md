@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099864"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326871"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Filtrar Detectar si un trabajo de impresión se puede imprimir en esta hora del día
 Las colas de impresión no están siempre disponibles durante 24 horas al día. Tienen propiedades de tiempo de inicio y finalización que se pueden establecer para que no esté disponible en determinados momentos del día. Esta característica, por ejemplo, puede usarse para reservar una impresora para uso exclusivo de un determinado departamento después de las 5 P.M.. Ese departamento tendría una cola diferente, mantenimiento de la impresora que otros departamentos usar. La cola para los otros departamentos se establecería en estar disponible después de 5 P.M., mientras que la cola del departamento favorecido podría establecerse como disponible en todo momento.  
@@ -29,9 +29,9 @@ Las colas de impresión no están siempre disponibles durante 24 horas al día. 
   
  Hay dos pasos principales para este tipo de función como se indica a continuación.  
   
-1.  Leer el <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> y <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> propiedades de la <xref:System.Printing.PrintQueue> para determinar si la hora actual es entre ellos.  
+1. Leer el <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> y <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> propiedades de la <xref:System.Printing.PrintQueue> para determinar si la hora actual es entre ellos.  
   
-2.  Leer el <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> y <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> propiedades de la <xref:System.Printing.PrintSystemJobInfo> para determinar si la hora actual es entre ellos.  
+2. Leer el <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> y <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> propiedades de la <xref:System.Printing.PrintSystemJobInfo> para determinar si la hora actual es entre ellos.  
   
  Pero las complicaciones surgen del hecho de que estas propiedades no son <xref:System.DateTime> objetos. En su lugar, son <xref:System.Int32> objetos que expresan la hora del día como el número de minutos desde la medianoche. Además, esto no es medianoche en la zona horaria actual, pero la medianoche UTC (Coordinated Universal Time).  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: 113afc642ca313f10062a496d2f170e3666d5043
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2639322707c1c7e378f6d389a1dec80fd619841c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162251"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328223"
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Filtrar para reasignar los controles existentes en un elemento primario diferente
 Puede asignar controles que existen en el formulario a un nuevo control contenedor.  
@@ -21,25 +21,25 @@ Puede asignar controles que existen en el formulario a un nuevo control contened
   
 ### <a name="to-reassign-existing-controls-to-a-different-parent"></a>Para reasignar los controles existentes en un elemento primario diferente  
   
-1.  Arrastre tres controles <xref:System.Windows.Forms.Button> del **cuadro de herramientas** al formulario.  
+1. Arrastre tres controles <xref:System.Windows.Forms.Button> del **cuadro de herramientas** al formulario.  
   
      Colóquelos cerca entre sí, pero sin alinearlos.  
   
-2.  En el **cuadro de herramientas**, haga clic en el icono del control <xref:System.Windows.Forms.FlowLayoutPanel> .  
+2. En el **cuadro de herramientas**, haga clic en el icono del control <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
      No arrastre el icono hasta el formulario.  
   
-3.  Mueva el puntero del mouse cerca de los tres controles <xref:System.Windows.Forms.Button> .  
+3. Mueva el puntero del mouse cerca de los tres controles <xref:System.Windows.Forms.Button> .  
   
      Observe que el puntero cambia a una cruz con el icono del control <xref:System.Windows.Forms.FlowLayoutPanel> agregado.  
   
-4.  Haga clic y mantenga presionado el botón del mouse.  
+4. Haga clic y mantenga presionado el botón del mouse.  
   
-5.  Arrastre el puntero del mouse para dibujar el contorno del control <xref:System.Windows.Forms.FlowLayoutPanel> .  
+5. Arrastre el puntero del mouse para dibujar el contorno del control <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
-6.  Dibuje el contorno alrededor de los tres controles <xref:System.Windows.Forms.Button> .  
+6. Dibuje el contorno alrededor de los tres controles <xref:System.Windows.Forms.Button> .  
   
-7.  Suelte el botón del mouse.  
+7. Suelte el botón del mouse.  
   
      Observe que los tres controles <xref:System.Windows.Forms.Button> se insertan en el control <xref:System.Windows.Forms.FlowLayoutPanel> .  
   

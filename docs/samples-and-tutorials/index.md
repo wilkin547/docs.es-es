@@ -4,12 +4,12 @@ description: Información sobre ejemplos y tutoriales de .NET Core, ASP.NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "57558953"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330823"
 ---
 # <a name="net-samples-and-tutorials"></a>Ejemplos y tutoriales de .NET
 
@@ -41,11 +41,11 @@ Vea los [Tutoriales de ASP.NET Core](/aspnet/core/tutorials/). Muchos artículos
 
 ### <a name="samples"></a>Muestras
 
-**[Iteradores](../csharp/iterators.md)**
+**[Iterators](../csharp/iterators.md)**
 
 Este ejemplo muestra la sintaxis y las características para crear y consumir iteradores de C#. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/csharp/iterators) está disponible en el repositorio dotnet/samples de GitHub.
 
-**[Indexadores](../csharp/indexers.md)**
+**[Indizadores](../csharp/indexers.md)**
 
 En este ejemplo se muestran la sintaxis y las características de indizadores de C#. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/csharp/indexers) está disponible en el repositorio dotnet/samples de GitHub.
 
@@ -79,7 +79,7 @@ En este tutorial se muestran las comunicaciones web, la serialización de JSON y
 
 Este tutorial muestra muchas de las características de LINQ y los elementos del lenguaje compatibles. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) está disponible en el repositorio dotnet/samples de GitHub.
 
-**[Introducción a .NET Core en macOS con Visual Studio para Mac ](../core/tutorials/using-on-mac-vs.md)**
+**[Introducción a .NET Core en macOS con Visual Studio para Mac](../core/tutorials/using-on-mac-vs.md)**
 
 En este tutorial se muestra cómo crear una sencilla aplicación de consola de .NET Core con Visual Studio para Mac.
 
@@ -112,6 +112,6 @@ Muchos temas muestran el código fuente y los ejemplos que están disponibles pa
 1. Navegue por las carpetas del repositorio hasta la ubicación del ejemplo. La ruta de acceso relativa a la ubicación del ejemplo aparece en la barra de direcciones del explorador si sigue el vínculo al ejemplo.
 1. Para ejecutar un ejemplo, cuenta con varias opciones:
    * Use las [herramientas de la CLI de dotnet](../core/tools/index.md): en una ventana de consola, vaya hasta la carpeta del ejemplo y use los comandos de la CLI de dotnet.
-   * Use [Visual Studio](https://visualstudio.microsoft.com/) o [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/): abra el ejemplo; para ello, seleccione **Archivo > Abrir > Proyecto/Solución** en la barra de menús, vaya hasta la carpeta del proyecto de ejemplo y seleccione el archivo del proyecto (*.csproj* o *.fsproj*).
+   * Use [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): abra el ejemplo; para ello, seleccione **Archivo > Abrir > Proyecto/Solución** en la barra de menús, vaya hasta la carpeta del proyecto de ejemplo y seleccione el archivo del proyecto (*.csproj* o *.fsproj*).
    * Use [Visual Studio Code](https://code.visualstudio.com/): abra el ejemplo; para ello, seleccione **Archivo > Abrir carpeta** en la barra de menús y seleccione la carpeta del proyecto del ejemplo.
    * Use un IDE distinto que admita proyectos de .NET Core.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e6ce15c344ecd6e5f8d73cb98a06c8ccb40c9e7
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 22f6c6827b2574ba887839f749df8fc7ae6605ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466444"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328639"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
 
@@ -180,7 +180,7 @@ Para obtener más información y ejemplos de código, vea "Programmatic creation
 
 **Nuevos miembros SignerInfo**
 
-A partir de .NET Framework 4.7.2, la clase <xref:System.Security.Cryptography.Pkcs.SignerInfo> expone más información sobre la firma. Se puede recuperar el valor de la propiedad <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignatureAlgorithm?displayProperty=fullName> para determinar el algoritmo de firma que usa el firmante. Se puede llamar a <xref:System.Security.Cryptography.Pkcs.SignerInfo.GetSignature%2A?displayProperty=nameWithType> para obtener una copia de la firma criptográfica para este firmante.
+A partir de .NET Framework 4.7.2, la clase <xref:System.Security.Cryptography.Pkcs.SignerInfo> expone más información sobre la firma. Se puede recuperar el valor de la propiedad <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignatureAlgorithm?displayProperty=fullName> para determinar el algoritmo de firma que usa el firmante. <xref:System.Security.Cryptography.Pkcs.SignerInfo.GetSignature%2A?displayProperty=nameWithType> Se puede llamar a SignerInfo.GetSignature para obtener una copia de la firma criptográfica para este firmante.
 
 **Mantener abierta una secuencia ajustada después de eliminar CryptoStream**
 
@@ -208,12 +208,12 @@ La compatibilidad para la descompresión mediante las API de Windows está habil
 
 En .NET Framework 4.7.2 se agregan varias API nuevas a los tipos <xref:System.Collections.Generic.SortedSet%601> y <xref:System.Collections.Generic.HashSet%601>. Se incluyen los siguientes:
 
-- Los métodos `TryGetValue`, que amplían el patrón de try que se usa en otros tipos de colección a estos dos tipos. Los métodos son:
+- `TryGetValue` Los métodos TryGetValue, que amplían el patrón de try que se usa en otros tipos de colección a estos dos tipos. Los métodos son:
 
    - [public bool HashSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
    - [public bool SortedSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
 
-- Los métodos de extensión `Enumerable.To*`, que convierten una colección en un <xref:System.Collections.Generic.HashSet%601>:
+- `Enumerable.To*` Los métodos de extensión Enumerable.To*, que convierten una colección en un <xref:System.Collections.Generic.HashSet%601>:
 
    - [public static HashSet\<TSource> ToHashSet\<TSource>(this IEnumerable\<TSource> source)](xref:System.Linq.Enumerable.ToHashSet%2A)
    - [public static HashSet\<TSource> ToHashSet\<TSource>(this IEnumerable\<TSource> source, IEqualityComparer\<TSource> comparer)](xref:System.Linq.Enumerable.ToHashSet%2A)
@@ -313,13 +313,13 @@ Para obtener más información y un ejemplo, vea "SQL -- Azure AD Universal and 
 
 En .NET Framework 4.7.2 se agrega compatibilidad con Always Encrypted basada en enclave. La versión original de Always Encrypted es una tecnología de cifrado del lado cliente en la que las claves de cifrado nunca salen del cliente. En Always Encrypted basada en enclave, el cliente puede enviar opcionalmente las claves de cifrado a un enclave seguro, que es una entidad de cálculo segura que se puede considerar parte de SQL Server pero que el código de SQL Server no puede alterar. Para admitir Always Encrypted basada en enclave, en .NET Framework 4.7.2 se agregan los tipos y miembros siguientes al espacio de nombres <xref:System.Data.SqlClient>:
 
-- <xref:System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl?displayProperty=nameWithType>, que especifica el URI para Always Encrypted basada en enclave.
+- <xref:System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl?displayProperty=nameWithType>SqlConnectionStringBuilder.EnclaveAttestationUrl, que especifica el URI para Always Encrypted basada en enclave.
 
-- <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider>, que es una clase abstracta de la que se derivan todos los proveedores de enclaves.
+- <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider>SqlColumnEncryptionEnclaveProvider, que es una clase abstracta de la que se derivan todos los proveedores de enclaves.
 
-- <xref:System.Data.SqlClient.SqlEnclaveSession>, que encapsula el estado de una sesión de enclave determinada.
+- <xref:System.Data.SqlClient.SqlEnclaveSession>SqlEnclaveSession, que encapsula el estado de una sesión de enclave determinada.
 
-- <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>, que proporciona los parámetros de atestación que usa SQL Server para obtener la información necesaria para ejecutar un protocolo de atestación específico.
+- <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>SqlEnclaveAttestationParameters, que proporciona los parámetros de atestación que usa SQL Server para obtener la información necesaria para ejecutar un protocolo de atestación específico.
 
 Después, el archivo de configuración de la aplicación especifica una implementación concreta de la clase abstracta <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> en la que se proporciona la funcionalidad para el proveedor de enclaves. Por ejemplo:
 
@@ -657,13 +657,13 @@ En [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ASP.NET incluye las s
 
 Los validadores de anotación de datos permiten realizar la validación agregando uno o varios atributos a una propiedad de clase. El elemento <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> del atributo define el texto del mensaje de error si se produce un error de validación. A partir de [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ASP.NET facilita la tarea de localizar mensajes de error. Los mensajes de error se localizarán si:
 
-1.  Se proporciona <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> en el atributo de validación.
+1. Se proporciona <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> en el atributo de validación.
 
-2.  El archivo de recursos está almacenado en la carpeta App_LocalResources.
+2. El archivo de recursos está almacenado en la carpeta App_LocalResources.
 
-3.  El nombre del archivo de recursos localizados tiene la forma `DataAnnotation.Localization.{`*nombre*`}.resx`, donde *nombre* es un nombre de referencia cultural en el formato *códigoDeIdioma*`-`*códigoDePaís/Región* o *códigoDeIdioma*.
+3. El nombre del archivo de recursos localizados tiene la forma `DataAnnotation.Localization.{`*nombre*`}.resx`, donde *nombre* es un nombre de referencia cultural en el formato *códigoDeIdioma*`-`*códigoDePaís/Región* o *códigoDeIdioma*.
 
-4.  El nombre de clave del recurso es la cadena asignada al atributo <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> y su valor es el mensaje de error localizado.
+4. El nombre de clave del recurso es la cadena asignada al atributo <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> y su valor es el mensaje de error localizado.
 
 Por ejemplo, el siguiente atributo de anotación de datos define el mensaje de error de la referencia cultural predeterminada para una clasificación no válida.
 
@@ -865,7 +865,7 @@ Todas las constantes URI se exponen en <xref:System.Security.Cryptography.Xml.Si
 
 El proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) incluye las siguientes características nuevas en [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]:
 
-**Agrupación de conexiones y tiempos de espera con bases de datos SQL de Azure**
+**Agrupación de conexiones y tiempos de espera con bases de datos de Azure SQL**
 
 Cuando se habilita la agrupación de conexiones y se produce un error de tiempo de espera u otro tipo de error de inicio de sesión, se almacena en caché una excepción que se produce en todos los intentos de conexión posteriores que se realicen en un plazo de entre 5 segundos y 1 minuto.  Para obtener más información, vea [Agrupación de conexiones en SQL Server (ADO.NET)](../data/adonet/sql-server-connection-pooling.md).
 
@@ -941,7 +941,7 @@ Los clientes pueden usar una opción de configuración de la aplicación para de
 </runtime>
 ```
 
-Cuando se habilita esta característica, un objeto <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> usa el tipo <xref:System.TimeZoneInfo> en lugar del tipo <xref:System.TimeZone> para deserializar los datos de fecha y hora. <xref:System.TimeZoneInfo> admite varias reglas de ajuste, lo que permite trabajar con datos históricos de zona horaria, mientras que <xref:System.TimeZone> no las admite.
+Cuando se habilita esta característica, un objeto <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> usa el tipo <xref:System.TimeZoneInfo> en lugar del tipo <xref:System.TimeZone> para deserializar los datos de fecha y hora. <xref:System.TimeZoneInfo> TimeZoneInfo admite varias reglas de ajuste, lo que permite trabajar con datos históricos de zona horaria, mientras que <xref:System.TimeZone> no las admite.
 
 Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y los ajustes de zona horaria, consulte [Información general sobre zonas horarias](../../standard/datetime/time-zone-overview.md).
 
@@ -1036,7 +1036,8 @@ En [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Workflow Foun
 
 A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF admite expresiones de C# en el diseñador de Visual Studio y en los flujos de trabajo de código. El Diseñador de flujo de trabajo rehospedado es una característica clave de WF que permite que el Diseñador de flujo de trabajo esté en una aplicación fuera de Visual Studio (por ejemplo, en WPF).  Windows Workflow Foundation permite admitir expresiones de C# e IntelliSense en el Diseñador de flujo de trabajo rehospedado. Para obtener más información, consulte el [blog de Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` En las versiones de .NET Framework anteriores a [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], IntelliSense del Diseñador de WF se interrumpe cuando un cliente vuelve a compilar un proyecto de flujo de trabajo desde Visual Studio. Aunque la compilación del proyecto es correcta, los tipos de flujo de trabajo no se encuentran en el diseñador y en la ventana **Lista de errores** aparecen advertencias de IntelliSense que indican los tipos de flujo de trabajo que faltan. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] soluciona este problema y hace que IntelliSense esté disponible.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`
+En las versiones de .NET Framework anteriores a [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], IntelliSense del Diseñador de WF se interrumpe cuando un cliente vuelve a compilar un proyecto de flujo de trabajo desde Visual Studio. Aunque la compilación del proyecto es correcta, los tipos de flujo de trabajo no se encuentran en el diseñador y en la ventana **Lista de errores** aparecen advertencias de IntelliSense que indican los tipos de flujo de trabajo que faltan. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] soluciona este problema y hace que IntelliSense esté disponible.
 
 **Las aplicaciones V1 de flujo de trabajo con seguimiento del flujo de trabajo ahora se ejecutan en modo FIPS**
 
@@ -1156,7 +1157,7 @@ El corrector ortográfico en WPF se ha actualizado en Windows 8.1 y en versiones
 
 Como en versiones anteriores de .NET Framework, el idioma de un control <xref:System.Windows.Controls.TextBox> o un bloque <xref:System.Windows.Controls.RichTextBox> se detecta mediante la búsqueda de información en el orden siguiente:
 
-- `xml:lang`, si está presente.
+- `xml:lang`xml:lang, si está presente.
 
 - Idioma de entrada actual.
 
@@ -1352,7 +1353,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
              [!code-csharp[WhatsNew.Casting#2](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
              [!code-vb[WhatsNew.Casting#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
 
-    - **Compatibilidad con la conversión de fechas y horas a o desde la hora de Unix**
+    - **Compatibilidad de conversión de fechas y horas a o desde la hora de Unix**
 
          Se han agregado los siguientes métodos nuevos a la estructura <xref:System.DateTimeOffset> para admitir la conversión de valores de fecha y hora a o desde la hora de Unix:
 
@@ -1547,7 +1548,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
          Se ha agregado una nueva propiedad, <xref:System.Uri.IdnHost%2A>, a la clase <xref:System.Uri> para ofrecer una mejor compatibilidad con los nombres de dominio internacionales y PunyCode.
 
-- **Cambio de tamaño en controles de Windows Forms**
+- **Cambio de tamaño en controles de Windows Forms.**
 
      Esta característica se amplió en [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] para incluir los tipos <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> y <xref:System.Windows.Forms.ToolStripSplitButton> y el rectángulo especificado por la propiedad <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> que se usa al dibujar un <xref:System.Drawing.Design.UITypeEditor>.
 
@@ -1561,7 +1562,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 - **Compatibilidad para codificaciones de páginas de códigos**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] admite principalmente las codificaciones Unicode y, de forma predeterminada, proporciona compatibilidad limitada para las codificaciones de páginas de códigos. Puede agregar compatibilidad para codificaciones de páginas de códigos disponibles en .NET Framework pero no admitidas en [!INCLUDE[net_core](../../../includes/net-core-md.md)] registrando codificaciones de páginas de códigos con el método <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Para obtener más información, vea <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+     [!INCLUDE[net_core](../../../includes/net-core-md.md)] .NET Core admite principalmente las codificaciones Unicode y, de forma predeterminada, proporciona compatibilidad limitada para las codificaciones de páginas de códigos. Puede agregar compatibilidad para codificaciones de páginas de códigos disponibles en .NET Framework pero no admitidas en [!INCLUDE[net_core](../../../includes/net-core-md.md)] registrando codificaciones de páginas de códigos con el método <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Para obtener más información, vea <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 
@@ -1585,7 +1586,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
      Las nuevas propiedades <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=nameWithType> y <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=nameWithType> devuelven valores booleanos que indican si los encabezados de respuesta se han escrito. Puede usar estas propiedades para comprobar si se realizan correctamente las llamadas a las API como <xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=nameWithType> (que producen excepciones si se han escrito los encabezados).
 
-- **Cambio de tamaño en controles de Windows Forms** Esta característica se ha ampliado. Ahora se puede usar el valor de PPP del sistema para cambiar el tamaño de componentes de los siguientes controles adicionales (por ejemplo, la flecha desplegable en cuadros combinados):
+- **Cambio de tamaño en controles de Windows Forms.** Esta característica se ha ampliado. Ahora se puede usar el valor de PPP del sistema para cambiar el tamaño de componentes de los siguientes controles adicionales (por ejemplo, la flecha desplegable en cuadros combinados):
 
     - <xref:System.Windows.Forms.ComboBox>
     - <xref:System.Windows.Forms.ToolStripComboBox>
@@ -1612,29 +1613,29 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 - **Mejoras de generación de perfiles.** Las siguientes API de generación de perfiles no administradas proporcionan una generación de perfiles más sólida:
 
-    - [COR_PRF_ASSEMBLY_REFERENCE_INFO (estructura)](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
-    - [COR_PRF_HIGH_MONITOR (enumeración)](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
-    - [GetAssemblyReferences (método)](../unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
-    - [GetEventMask2 (método)](../unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)
-    - [SetEventMask2 (método)](../unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
+    - [COR_PRF_ASSEMBLY_REFERENCE_INFO (Estructura)](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
+    - [COR_PRF_HIGH_MONITOR (Enumeración)](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
+    - [Método GetAssemblyReferences](../unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
+    - [Método GetEventMask2](../unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)
+    - [Método SetEventMask2](../unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
     - [Método AddAssemblyReference](../unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)
 
      Las implementaciones de `ICorProfiler` anteriores eran compatibles con la carga diferida de ensamblados dependientes. Las nuevas API de generación de perfiles requieren que los ensamblados dependientes insertados por el generador de perfiles se carguen inmediatamente, en lugar de cargarse cuando la aplicación se haya inicializado por completo. Este cambio no afecta a los usuarios de las API de `ICorProfiler` existentes.
 
 - **Mejoras en la depuración.** Las API de depuración no administradas proporcionan una mejor integración con un generador de perfiles. Ahora se puede acceder a metadatos insertados por el generador de perfiles, así como a variables locales y código producidos por solicitudes de ReJIT del compilador en la depuración de volcados.
 
-    - [SetWriteableMetadataUpdateMode (método)](../unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)
-    - [EnumerateLocalVariablesEx (método)](../unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)
-    - [GetLocalVariableEx (método)](../unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)
-    - [GetCodeEx (método)](../unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)
-    - [GetActiveReJitRequestILCode (método)](../unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)
+    - [Método SetWriteableMetadataUpdateMode](../unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)
+    - [Método EnumerateLocalVariablesEx](../unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)
+    - [Método GetLocalVariableEx](../unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)
+    - [Método GetCodeEx](../unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)
+    - [Método GetActiveReJitRequestILCode](../unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)
     - [Método GetInstrumentedILMap](../unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
 
 - **Cambios en el seguimiento de eventos.** .NET Framework 4.5.2 permite realizar el seguimiento de actividades fuera del proceso, basado en Seguimiento de eventos para Windows (ETW), para una mayor área expuesta. Esto permite a los proveedores de Administración avanzada de energía (APM) proporcionar herramientas sencillas que realicen un seguimiento preciso de solicitudes y actividades individuales en distintos subprocesos.  Estos eventos solo se desencadenan cuando son habilitados por los controladores de ETW; por lo tanto, los cambios no afectan a código de ETW escrito anteriormente o a código que se ejecute cuando ETW esté deshabilitado.
 
 - **Promover una transacción y convertirla en una inscripción duradera**
 
-     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> es una API nueva que se ha agregado a .NET Framework 4.5.2 y 4.6:
+     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> Transaction.PromoteAndEnlistDurable es una API nueva que se ha agregado a .NET Framework 4.5.2 y 4.6:
 
     ```csharp
     [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]
@@ -1664,7 +1665,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
      Para obtener más información sobre estos cambios, vea [Biblioteca de clases portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
-- El conjunto de contenido de .NET Framework ahora incluye documentación para [!INCLUDE[net_native](../../../includes/net-native-md.md)], que es una tecnología de precompilación para crear e implementar aplicaciones de Windows. [!INCLUDE[net_native](../../../includes/net-native-md.md)] compila aplicaciones directamente en código nativo, en lugar de hacerlo en un lenguaje intermedio (IL), lo que mejora el rendimiento. Para obtener información detallada, vea [Compilar aplicaciones con .NET Native](../net-native/index.md).
+- El conjunto de contenido de .NET Framework ahora incluye documentación para [!INCLUDE[net_native](../../../includes/net-native-md.md)], que es una tecnología de precompilación para crear e implementar aplicaciones de Windows. [!INCLUDE[net_native](../../../includes/net-native-md.md)] .NET Native compila aplicaciones directamente en código nativo, en lugar de hacerlo en un lenguaje intermedio (IL), lo que mejora el rendimiento. Para obtener información detallada, vea [Compilar aplicaciones con .NET Native](../net-native/index.md).
 
 - [.NET Framework Reference Source](https://referencesource.microsoft.com/) proporciona una nueva experiencia de navegación y mejores funciones. Ahora puede navegar en línea por el código fuente de .NET Framework, [descargar la referencia](https://referencesource.microsoft.com/download.html) para visualizarlo sin conexión y examinar los orígenes (incluidas revisiones y actualizaciones) durante la depuración. Para obtener más información, vea la entrada de blog [A new look for .NET Reference Source](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/) (Un nuevo aspecto para el origen de referencia de .NET).
 
@@ -1858,7 +1859,7 @@ En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], se han agregado las car
 
 - Información sobre herramientas del editor XML.
 
-- Compatibilidad con el almacenamiento en caché de <xref:System.ServiceModel.ChannelFactory>.
+- <xref:System.ServiceModel.ChannelFactory> Compatibilidad con el almacenamiento en caché de ChannelFactory.
 
 - Compatibilidad con la compresión de codificadores binarios.
 
@@ -1928,7 +1929,7 @@ Se han agregado varias características nuevas a Windows Workflow Foundation (WF
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-Las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o 4.5.1 está disponible para compilar aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para Windows mediante C# o Visual Basic. Este subconjunto se denomina [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y se explica en una [introducción](https://go.microsoft.com/fwlink/?LinkId=228491) del Centro de desarrollo de Windows.
+[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Las aplicaciones de la están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o 4.5.1 está disponible para compilar aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para Windows mediante C# o Visual Basic. Este subconjunto se denomina [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y se explica en una [introducción](https://go.microsoft.com/fwlink/?LinkId=228491) del Centro de desarrollo de Windows.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Bibliotecas de clases portables <a name="portable" />
 
@@ -1940,4 +1941,4 @@ El proyecto de Biblioteca de clases portable de Visual Studio 2012 (y versiones 
 - [Novedades de accesibilidad en .NET Framework](whats-new-in-accessibility.md)
 - [Novedades de Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)
 - [ASP.NET](/aspnet)
-- [What's New in Visual C++](/cpp/what-s-new-for-visual-cpp-in-visual-studio) (Novedades de Visual C++)
+- [Novedades de Visual C++](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

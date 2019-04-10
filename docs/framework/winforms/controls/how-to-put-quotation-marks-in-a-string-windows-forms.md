@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 7e48e948b52cd512dba81d643fb6a42a2d90723f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113209"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328067"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Filtrar Insertar comillas en una cadena (formularios Windows Forms)
 A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:  
@@ -26,7 +26,7 @@ A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Para colocar comillas en una cadena en el código  
   
-1.  En Visual Basic, inserte dos comillas en una fila como una comilla incrustada. En Visual C# y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], inserte la secuencia de escape \\"como una comilla incrustada. Por ejemplo, para crear la cadena anterior, utilice el código siguiente.  
+1. En Visual Basic, inserte dos comillas en una fila como una comilla incrustada. En Visual C# y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], inserte la secuencia de escape \\"como una comilla incrustada. Por ejemplo, para crear la cadena anterior, utilice el código siguiente.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:
   
      -o bien-  
   
-2.  Inserte el carácter ASCII o Unicode de una comilla. En Visual Basic, utilice el carácter ASCII (34). En Visual C#, use el carácter Unicode (\u0022).  
+2. Inserte el carácter ASCII o Unicode de una comilla. En Visual Basic, utilice el carácter ASCII (34). En Visual C#, use el carácter Unicode (\u0022).  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -69,7 +69,7 @@ A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:
   
      -o bien-  
   
-3.  También puede definir una constante para el carácter y utilizarla donde sea necesario.  
+3. También puede definir una constante para el carácter y utilizarla donde sea necesario.  
   
     ```vb  
     Const quote As String = """"  

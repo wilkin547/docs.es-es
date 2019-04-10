@@ -2,12 +2,12 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 0e284ee6cce4ab513c03e7be402cc9c0f0c4ee1a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581919"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329666"
 ---
 # <a name="jsonp"></a>JSONP
 En este ejemplo se muestra cómo admitir JSON con relleno (JSONP) en los servicios REST de WCF. JSONP es una convención usada para invocar scripts entre dominios generando las etiquetas de scripts en el documento actual. El resultado se devuelve en una función de devolución de llamada especificada. JSONP se basa en la idea de que etiquetas como `<script src="http://..." >` pueden evaluar scripts desde cualquier dominio y la secuencia de comandos que recuperan dichas etiquetas se evalúa dentro de un ámbito en el que ya se pueden definir otras funciones.
@@ -15,7 +15,7 @@ En este ejemplo se muestra cómo admitir JSON con relleno (JSONP) en los servici
 ## <a name="demonstrates"></a>Demostraciones
  Scripting a través de dominios con JSONP.
 
-## <a name="discussion"></a>Explicación
+## <a name="discussion"></a>Discusión
  El ejemplo incluye una página web que agrega dinámicamente un bloque de script una vez representada la página en el explorador. Este bloque de script llama a un servicio REST de WCF que tiene una sola operación: `GetCustomer`. El servicio REST de WCF devuelve el nombre y la dirección de un cliente ajustados en un nombre de función de devolución de llamada. Cuando el servicio REST de WCF responde, se invoca la función de devolución de llamada en la página web con los datos del cliente y la función muestra los datos en la página web. El control ScriptManager de ASP.NET AJAX administra automáticamente la inyección de la etiqueta de script y la ejecución de la función de devolución de llamada. El patrón de uso es igual que el de todos los servidores proxy AJAX de ASP.NET, aunque incorpora una línea para habilitar JSONP, como se muestra en el siguiente código:
 
 ```csharp
@@ -64,8 +64,8 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 #### <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
   
-1.  Abra la solución para obtener el ejemplo de JSONP.  
+1. Abra la solución para obtener el ejemplo de JSONP.  
   
-2.  Presione F5 para iniciar `http://localhost:26648/JSONPClientPage.aspx` en el explorador.  
+2. Presione F5 para iniciar `http://localhost:26648/JSONPClientPage.aspx` en el explorador.  
   
-3.  Tenga en cuenta que una vez cargada la página, las entradas de texto para "Name" y "Dirección" están rellenas con valores.  Estos valores se proporcionaron en una llamada al servicio WCF después de que el explorador terminó de representar la página.
+3. Tenga en cuenta que una vez cargada la página, las entradas de texto para "Name" y "Dirección" están rellenas con valores.  Estos valores se proporcionaron en una llamada al servicio WCF después de que el explorador terminó de representar la página.

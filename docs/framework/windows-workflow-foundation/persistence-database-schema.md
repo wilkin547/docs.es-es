@@ -2,12 +2,12 @@
 title: Esquema de base de datos de persistencia
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 2c8d74413be64cdf88f7f1821c3678b2bcd2e2b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 38df4b3d629840f1b5def2eafa0d074a2b2397a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515263"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331070"
 ---
 # <a name="persistence-database-schema"></a>Esquema de base de datos de persistencia
 En este tema se describen las vistas públicas admitidas por el almacén de instancias de flujo de trabajo de SQL.  
@@ -30,7 +30,7 @@ En este tema se describen las vistas públicas admitidas por el almacén de inst
 |ExecutionStatus|Nvarchar(450)|Indica el estado de ejecución actual del flujo de trabajo. Los Estados posibles son **Executing**, **Idle**, **cerrado**.|  
 |IsInitialized|Bit|Indica si se ha inicializado la instancia de flujo de trabajo. Una instancia de flujo de trabajo inicializada es una instancia de flujo de trabajo que se ha guardado al menos una vez.|  
 |IsSuspended|Bit|Indica si se ha suspendido la instancia de flujo de trabajo.|  
-|IsCompleted|Bit|Indica si la instancia de flujo de trabajo ha completado la ejecución. **Nota:** Iif el **InstanceCompletionAction** propiedad está establecida en **DeleteAll**, se quitan las instancias de la vista de la finalización.|  
+|IsCompleted|Bit|Indica si la instancia de flujo de trabajo ha completado la ejecución. **Nota:**  IIf el **InstanceCompletionAction** propiedad está establecida en **DeleteAll**, se quitan las instancias de la vista de la finalización.|  
 |EncodingOption|TinyInt|Describe la codificación utilizada para serializar las propiedades de datos.<br /><br /> -0: sin codificación<br />-1 – GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary(max)|Contiene propiedades de datos de instancia serializada que se proporcionarán al motor en tiempo de ejecución de flujo de trabajo cuando se cargue la instancia.<br /><br /> Cada propiedad primitiva es un tipo CLR nativo, lo que significa que no se necesita ningún ensamblado especial para deserializar el objeto binario.|  
 |WriteOnlyPrimitiveDataProperties|Varbinary(max)|Contiene propiedades de datos de instancia serializada que no se proporcionarán al motor en tiempo de ejecución de flujo de trabajo cuando se cargue la instancia.<br /><br /> Cada propiedad primitiva es un tipo CLR nativo, lo que significa que no se necesita ningún ensamblado especial para deserializar el objeto binario.|  
@@ -40,11 +40,11 @@ En este tema se describen las vistas públicas admitidas por el almacén de inst
 |IdentityPackage|Nvarchar(max)|Información de paquete indicada cuando se creó el flujo de trabajo (como el nombre del ensamblado).|  
 |Compilar|BigInt|Número de compilación de la versión de flujo de trabajo.|  
 |Major|BigInt|Número principal de la versión de flujo de trabajo.|  
-|Minor|BigInt|Número secundario de la versión de flujo de trabajo.|  
+|Secundaria|BigInt|Número secundario de la versión de flujo de trabajo.|  
 |Revisión|BigInt|Número de revisión de la versión de flujo de trabajo.|  
   
 > [!CAUTION]
->  El **instancias** vista también contiene un desencadenador Delete. Los usuarios con los permisos adecuados pueden ejecutar instrucciones de eliminación en esta vista que eliminarán de forma obligatoria las instancias de flujo de trabajo de la base de datos. Recomendamos eliminar directamente en la vista únicamente como último recurso, ya que la eliminación de una instancia bajo el motor el tiempo de ejecución de flujo de trabajo puede producir consecuencias imprevistas. En su lugar, utilice el extremo de administración de instancias de flujo de trabajo para hacer que el motor en tiempo de ejecución de flujo de trabajo complete la instancia. Si desea eliminar un gran número de Instancias de la vista, asegúrese de que no existe ningún motor en tiempo de ejecución activo que pueda estar trabajando en estas instancias.  
+>  El **instancias** vista también contiene un desencadenador Delete. Los usuarios con los permisos adecuados pueden ejecutar instrucciones de eliminación en esta vista que eliminarán de forma obligatoria las instancias de flujo de trabajo de la base de datos. Recomendamos eliminar directamente en la vista únicamente como último recurso, ya que la eliminación de una instancia bajo el motor el tiempo de ejecución de flujo de trabajo puede producir consecuencias imprevistas. En su lugar, utilice el punto de conexión de administración de instancias de flujo de trabajo para hacer que el motor en tiempo de ejecución de flujo de trabajo complete la instancia. Si desea eliminar un gran número de Instancias de la vista, asegúrese de que no existe ningún motor en tiempo de ejecución activo que pueda estar trabajando en estas instancias.  
   
 ## <a name="servicedeployments-view"></a>Vista ServiceDeployments  
  El **ServiceDeployments** vista contiene información de implementación para todas las aplicaciones Web (IIS / WAS) servicios de flujo de trabajo hospedados. Cada instancia de flujo de trabajo que está hospedado en Web contendrá un **ServiceDeploymentId** que hace referencia a una fila en esta vista.  
@@ -58,11 +58,11 @@ En este tema se describen las vistas públicas admitidas por el almacén de inst
 |ServiceName|Nvarchar(max)|Representa el nombre del servicio de flujo de trabajo. (por ejemplo, **PurchaseOrderService**).|  
 |ServiceNamespace|Nvarchar(max)|Representa el espacio de nombres del servicio de flujo de trabajo. (por ejemplo, **MyCompany**).|  
   
- La vista ServiceDeployments también contiene un desencadenador Delete. Los usuarios con los permisos adecuados pueden ejecutar instrucciones de eliminación en esta vista para quitar las entradas de ServiceDeployment de la base de datos. Tenga en cuenta lo siguiente:  
+ La vista ServiceDeployments también contiene un desencadenador Delete. Los usuarios con los permisos adecuados pueden ejecutar instrucciones de eliminación en esta vista para quitar las entradas de ServiceDeployment de la base de datos. Ten en cuenta lo siguiente:  
   
-1.  La eliminación de las entradas de esta vista es costoso, ya que toda la base de datos debe estar bloqueada antes de realizar esta operación. Esto es necesario para evitar la situación en la que una instancia de flujo de trabajo puede hacer referencia a una entrada de ServiceDeployment no existente. Elimine elementos de esta vista únicamente durante tiempos de inactividad o periodos de mantenimiento.  
+1. La eliminación de las entradas de esta vista es costoso, ya que toda la base de datos debe estar bloqueada antes de realizar esta operación. Esto es necesario para evitar la situación en la que una instancia de flujo de trabajo puede hacer referencia a una entrada de ServiceDeployment no existente. Elimine elementos de esta vista únicamente durante tiempos de inactividad o periodos de mantenimiento.  
   
-2.  Cualquier intento de eliminar una fila de ServiceDeployment que hace referencia a las entradas de la **instancias** vista dará como resultado una operación inefectiva. Solo puede eliminar las filas de ServiceDeployment con cero referencias.  
+2. Cualquier intento de eliminar una fila de ServiceDeployment que hace referencia a las entradas de la **instancias** vista dará como resultado una operación inefectiva. Solo puede eliminar las filas de ServiceDeployment con cero referencias.  
   
 ## <a name="instancepromotedproperties-view"></a>Vista InstancePromotedProperties  
  El **InstancePromotedProperties** vista contiene información para todas las propiedades promocionadas especificadas por el usuario. Una propiedad promovida funciona como una propiedad de primera clase, que un usuario puede utilizar en consultas para recuperar instancias.  Por ejemplo, un usuario podría agregar una promoción de PurchaseOrder que siempre almacena el costo de un pedido en el **Value1** columna. Esto permitiría a un usuario consultar todos los pedidos cuyo costo supera un determinado valor.  

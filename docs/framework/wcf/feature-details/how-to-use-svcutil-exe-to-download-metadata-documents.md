@@ -2,12 +2,12 @@
 title: Filtrar para usar Svcutil.exe para descargar documentos de metadatos
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 01a27c21948e3030059ddd1416d8c7727ac6435c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cc9fc4acaeafe4583b1e85a24cab97af1689c638
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194466"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328353"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Filtrar para usar Svcutil.exe para descargar documentos de metadatos
 Puede utilizar Svcutil.exe para descargar metadatos de los servicios en ejecución y para guardar los metadatos en archivos locales. Para esquemas de URL de HTTP y HTTPS, Svcutil.exe intenta recuperar metadatos mediante WS-MetadataExchange y [descubrimiento de servicios Web XML](https://go.microsoft.com/fwlink/?LinkId=94950). Para todos los otros esquemas de URL, Svcutil.exe utiliza sólo WS-MetadataExchange.  
@@ -23,11 +23,11 @@ Puede utilizar Svcutil.exe para descargar metadatos de los servicios en ejecuci�
   
 ## <a name="to-download-metadata-using-svcutilexe"></a>Para descargar metadatos mediante Svcutil.exe  
   
-1.  Busque la herramienta Svcutil.exe en la ubicación siguiente:  
+1. Busque la herramienta Svcutil.exe en la ubicación siguiente:  
   
      C:\Archivos de programa\Microsoft SDKs\Windows\v1.0.\bin  
   
-2.  En el símbolo del sistema, inicie la herramienta mediante el formato siguiente.  
+2. En el símbolo del sistema, inicie la herramienta mediante el formato siguiente.  
   
     ```  
     svcutil.exe /t:metadata  <url>* | <epr>  
@@ -35,7 +35,7 @@ Puede utilizar Svcutil.exe para descargar metadatos de los servicios en ejecuci�
   
      Debe especificar la opción `/t:metadata` para descargar los metadatos. De lo contrario, se generan el código de cliente y la configuración.  
   
-3.  El <`url`> argumento especifica la dirección URL a un punto de conexión de servicio que proporciona metadatos o a un documento de metadatos hospedado en línea. El <`epr`> argumento especifica la ruta de acceso a un archivo XML que contiene un WS-Addressing `EndpointAddress` para un extremo de servicio que admite WS-MetadataExchange.  
+3. El <`url`> argumento especifica la dirección URL a un punto de conexión de servicio que proporciona metadatos o a un documento de metadatos hospedado en línea. El <`epr`> argumento especifica la ruta de acceso a un archivo XML que contiene un WS-Addressing `EndpointAddress` para un extremo de servicio que admite WS-MetadataExchange.  
   
  Para obtener más opciones sobre cómo usar esta herramienta para su descarga de metadatos, vea [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   

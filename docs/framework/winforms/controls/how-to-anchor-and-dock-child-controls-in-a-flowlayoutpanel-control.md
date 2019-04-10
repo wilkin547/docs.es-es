@@ -7,34 +7,34 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 679333186d9f9b791e5ad9c2e1cb74f69e051a62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 255ac50ae79d6931c9b82b50677c450c0834fdea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168551"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329042"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Filtrar para delimitar y acoplar controles secundarios en un control FlowLayoutPanel
 El control <xref:System.Windows.Forms.FlowLayoutPanel> admite las propiedades <xref:System.Windows.Forms.Control.Anchor%2A> y <xref:System.Windows.Forms.Control.Dock%2A> en sus controles secundarios.  
   
 ### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Para delimitar y acoplar controles secundarios en un control FlowLayoutPanel  
   
-1.  Cree un control <xref:System.Windows.Forms.FlowLayoutPanel> en el formulario.  
+1. Cree un control <xref:System.Windows.Forms.FlowLayoutPanel> en el formulario.  
   
-2.  Establecer el <xref:System.Windows.Forms.Control.Width%2A> de la <xref:System.Windows.Forms.FlowLayoutPanel> el control a **300**y establezca su <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> a <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+2. Establecer el <xref:System.Windows.Forms.Control.Width%2A> de la <xref:System.Windows.Forms.FlowLayoutPanel> el control a **300**y establezca su <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> a <xref:System.Windows.Forms.FlowDirection.TopDown>.  
   
-3.  Cree dos controles <xref:System.Windows.Forms.Button> y colóquelos en el control <xref:System.Windows.Forms.FlowLayoutPanel>.  
+3. Cree dos controles <xref:System.Windows.Forms.Button> y colóquelos en el control <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
-4.  Establecer el <xref:System.Windows.Forms.Control.Width%2A> del primer botón en **200**.  
+4. Establecer el <xref:System.Windows.Forms.Control.Width%2A> del primer botón en **200**.  
   
-5.  Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> del segundo botón en <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> del segundo botón en <xref:System.Windows.Forms.DockStyle.Fill>.  
   
     > [!NOTE]
     >  El segundo botón toma el mismo ancho que el primer botón. No se ajusta a lo ancho del control <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
-6.  Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> del segundo botón en `None`. Esto hace que el botón tome su ancho original.  
+6. Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> del segundo botón en `None`. Esto hace que el botón tome su ancho original.  
   
-7.  Establezca la propiedad <xref:System.Windows.Forms.Control.Anchor%2A> del segundo botón en `Left, Right`.  
+7. Establezca la propiedad <xref:System.Windows.Forms.Control.Anchor%2A> del segundo botón en `Left, Right`.  
   
     > [!IMPORTANT]
     >  El segundo botón toma el mismo ancho que el primer botón. No se ajusta a lo ancho del control <xref:System.Windows.Forms.FlowLayoutPanel>. Esta es la regla general para delimitar y acoplar en el control <xref:System.Windows.Forms.FlowLayoutPanel>: para direcciones de flujo verticales, el control <xref:System.Windows.Forms.FlowLayoutPanel> calcula el ancho de una columna implícita a partir del control secundario más ancho de la columna. Todos los demás controles de esta columna con propiedades <xref:System.Windows.Forms.Control.Anchor%2A> o <xref:System.Windows.Forms.Control.Dock%2A> se alinean o cambian de tamaño para ajustarse a esta columna implícita. El comportamiento funciona de forma similar para las direcciones de flujo horizontales. El control <xref:System.Windows.Forms.FlowLayoutPanel> calcula el alto de una fila implícita a partir del control secundario más alto de la fila, y todos los controles secundarios delimitados o acoplados de esta fila se alinean o cambian de tamaño para ajustarse a la fila implícita.  

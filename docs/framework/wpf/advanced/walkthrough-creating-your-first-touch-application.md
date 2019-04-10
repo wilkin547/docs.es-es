@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear su primera aplicación táctil'
+title: 'Tutorial: Crear la primera aplicación táctil'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-ms.openlocfilehash: 2ebf22775ab9308bc896829be0b4e8cc147a3b4c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374159"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326988"
 ---
-# <a name="walkthrough-creating-your-first-touch-application"></a>Tutorial: Crear su primera aplicación táctil
+# <a name="walkthrough-creating-your-first-touch-application"></a>Tutorial: Crear la primera aplicación táctil
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite que las aplicaciones responder a la entrada táctil. Por ejemplo, puede interactuar con una aplicación mediante el uso de uno o más dedos en un dispositivo táctil, como una pantalla táctil en este tutorial se crea una aplicación que permite al usuario mover, cambiar el tamaño o girar un solo objeto mediante el uso de interacción.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
@@ -33,24 +33,24 @@ ms.locfileid: "57374159"
   
 #### <a name="to-create-the-application"></a>Para crear la aplicación  
   
-1.  Cree un proyecto de aplicación de WPF en Visual Basic o Visual C# denominado `BasicManipulation`. Para obtener más información, vea [Tutorial: Mi primera aplicación de escritorio de WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+1. Cree un proyecto de aplicación de WPF en Visual Basic o Visual C# denominado `BasicManipulation`. Para obtener más información, vea [Tutorial: Mi primera aplicación de escritorio de WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-2.  Reemplace el contenido de MainWindow.xaml por el XAML siguiente.  
+2. Reemplace el contenido de MainWindow.xaml por el XAML siguiente.  
   
      Este marcado crea una aplicación simple que contiene una roja <xref:System.Windows.Shapes.Rectangle> en un <xref:System.Windows.Controls.Canvas>. El <xref:System.Windows.UIElement.IsManipulationEnabled%2A> propiedad de la <xref:System.Windows.Shapes.Rectangle> se establece en true para que se va a recibir eventos de manipulación. La aplicación se suscribe a la <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta>, y <xref:System.Windows.UIElement.ManipulationInertiaStarting> eventos. Estos eventos contienen la lógica para mover el <xref:System.Windows.Shapes.Rectangle> cuando el usuario manipula.  
   
      [!code-xaml[BasicManipulation#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
   
-3.  Si utiliza Visual Basic, en la primera línea de MainWindow.xaml, reemplace `x:Class="BasicManipulation.MainWindow"` con `x:Class="MainWindow"`.  
+3. Si utiliza Visual Basic, en la primera línea de MainWindow.xaml, reemplace `x:Class="BasicManipulation.MainWindow"` con `x:Class="MainWindow"`.  
   
-4.  En el `MainWindow` clase, agregue las siguientes <xref:System.Windows.UIElement.ManipulationStarting> controlador de eventos.  
+4. En el `MainWindow` clase, agregue las siguientes <xref:System.Windows.UIElement.ManipulationStarting> controlador de eventos.  
   
      El <xref:System.Windows.UIElement.ManipulationStarting> evento tiene lugar cuando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] detecta ese toque entrada comienza a manipular un objeto. El código especifica que la posición de la manipulación debe ser relativa a la <xref:System.Windows.Window> estableciendo el <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> propiedad.  
   
      [!code-csharp[BasicManipulation#ManipulationStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
      [!code-vb[BasicManipulation#ManipulationStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]
 
-5.  En el `MainWindow` clase, agregue las siguientes <xref:System.Windows.Input.ManipulationDelta> controlador de eventos.
+5. En el `MainWindow` clase, agregue las siguientes <xref:System.Windows.Input.ManipulationDelta> controlador de eventos.
 
      El <xref:System.Windows.Input.ManipulationDelta> evento se produce cuando cambia la posición de entrada de la entrada táctil y puede aparecer varias veces durante una manipulación. También puede producirse el evento después de que se genera un dedo. Por ejemplo, si el usuario arrastra un dedo en una pantalla, el <xref:System.Windows.Input.ManipulationDelta> evento tiene lugar varias veces como se mueve el dedo. Cuando el usuario levanta un dedo en la pantalla, el <xref:System.Windows.Input.ManipulationDelta> evento sigue produciéndose para simular la inercia.
 
@@ -59,14 +59,14 @@ ms.locfileid: "57374159"
      [!code-csharp[BasicManipulation#ManipulationDelta](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
      [!code-vb[BasicManipulation#ManipulationDelta](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]
 
-6.  En el `MainWindow` clase, agregue las siguientes <xref:System.Windows.UIElement.ManipulationInertiaStarting> controlador de eventos.
+6. En el `MainWindow` clase, agregue las siguientes <xref:System.Windows.UIElement.ManipulationInertiaStarting> controlador de eventos.
 
      El <xref:System.Windows.UIElement.ManipulationInertiaStarting> evento se produce cuando el usuario todos los dedos de la pantalla. El código establece la velocidad inicial y la desaceleración para el movimiento, expansión y rotación del rectángulo.
 
      [!code-csharp[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
      [!code-vb[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]
 
-7.  Compile y ejecute el proyecto.
+7. Compile y ejecute el proyecto.
 
      Debería ver un cuadrado rojo en la ventana.
 

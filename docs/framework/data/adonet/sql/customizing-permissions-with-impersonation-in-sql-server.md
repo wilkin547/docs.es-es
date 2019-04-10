@@ -2,12 +2,12 @@
 title: Personalizar permisos con suplantación en SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 9c3e84e8a432a54cdcd2cbe4e01dada870cd1366
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202799"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326975"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personalizar permisos con suplantación en SQL Server
 Muchas aplicaciones utilizan procedimientos almacenados para obtener acceso a los datos, sirviéndose del encadenamiento de propiedad para restringir el acceso a tablas base. Se pueden conceder permisos EXECUTE en procedimientos almacenados revocando o denegando permisos en las tablas base. SQL Server no comprueba los permisos del llamador si el procedimiento almacenado y las tablas tienen el mismo propietario. No obstante, el encadenamiento de propiedad no funciona si los objetos tienen distintos propietarios o en el caso de SQL dinámico.  
@@ -34,15 +34,15 @@ EXECUTE AS USER = 'userName';
   
  Son tres los pasos que implica el uso de la cláusula EXECUTE AS en un procedimiento.  
   
-1.  Crear un usuario proxy en la base de datos que no esté asignado a un inicio de sesión. Este no es un requisito, pero ayuda a la hora de asignar permisos.  
+1. Crear un usuario proxy en la base de datos que no esté asignado a un inicio de sesión. Este no es un requisito, pero ayuda a la hora de asignar permisos.  
   
 ```  
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
-1.  Conceder al usuario proxy los permisos necesarios.  
+1. Conceder al usuario proxy los permisos necesarios.  
   
-2.  Agregar la cláusula EXECUTE AS al procedimiento almacenado o a la función definida por el usuario.  
+2. Agregar la cláusula EXECUTE AS al procedimiento almacenado o a la función definida por el usuario.  
   
 ```  
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  

@@ -2,12 +2,12 @@
 title: Filtrar para hospedar un servicio WCF en WAS
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 9c60248342c9cfa0e1b70d86df47a478dd34a60f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 157c18d1640ccf1a61f871e5e3e9fef70b6a7e79
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195454"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326507"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Filtrar para hospedar un servicio WCF en WAS
 Servicio de Windows Communication Foundation (WCF) hospedado en este tema se describen los pasos básicos necesarios para crear un Windows Process Activation Services (también conocido como WAS). WAS es el nuevo servicio de activación de procesos que es una generalización de las características de Internet Information Services (IIS) que funcionan con protocolos de transporte no HTTP. WCF usa la interfaz de adaptador de escucha para comunicar las solicitudes de activación que se reciben a través de protocolos no HTTP admitidos por WCF, como TCP, canalizaciones con nombre y Message Queue Server.  
@@ -39,15 +39,15 @@ Servicio de Windows Communication Foundation (WCF) hospedado en este tema se des
   
 ### <a name="to-create-a-basic-service-hosted-by-was"></a>Creación de un servicio básico hospedado por WAS  
   
-1.  Defina un contrato de servicios para el tipo de servicio.  
+1. Defina un contrato de servicios para el tipo de servicio.  
   
      [!code-csharp[C_HowTo_HostInWAS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1121)]  
   
-2.  Implemente el contrato de servicios en una clase de servicio. Observe que la información de enlace o dirección no se especifica en ninguna parte de la implementación del servicio. Además, el código tiene que escribirse para recuperar esa información del archivo de configuración.  
+2. Implemente el contrato de servicios en una clase de servicio. Observe que la información de enlace o dirección no se especifica en ninguna parte de la implementación del servicio. Además, el código tiene que escribirse para recuperar esa información del archivo de configuración.  
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3.  Cree un archivo Web.config para definir el enlace <xref:System.ServiceModel.NetTcpBinding> que van a usar los extremos `CalculatorService`.  
+3. Cree un archivo Web.config para definir el enlace <xref:System.ServiceModel.NetTcpBinding> que van a usar los extremos `CalculatorService`.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -64,39 +64,39 @@ Servicio de Windows Communication Foundation (WCF) hospedado en este tema se des
     </configuration>  
     ```  
   
-4.  Cree un archivo Service.svc que contenga el código siguiente.  
+4. Cree un archivo Service.svc que contenga el código siguiente.  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-5.  Coloque el archivo Service.svc en su directorio virtual de IIS.  
+5. Coloque el archivo Service.svc en su directorio virtual de IIS.  
   
 ### <a name="to-create-a-client-to-use-the-service"></a>Creación de un cliente para que utilice el servicio  
   
-1.  Use [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) desde la línea de comandos para generar código a partir de los metadatos del servicio.  
+1. Use [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) desde la línea de comandos para generar código a partir de los metadatos del servicio.  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   
-2.  El cliente que se genera contiene la interfaz `ICalculator` que define el contrato de servicios que la implementación del cliente debe cumplir.  
+2. El cliente que se genera contiene la interfaz `ICalculator` que define el contrato de servicios que la implementación del cliente debe cumplir.  
   
      [!code-csharp[C_HowTo_HostInWAS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1221)]  
   
-3.  La aplicación de cliente generada también contiene la implementación de `ClientCalculator`. Observe que la información de enlace y dirección no se especifica en ninguna parte de la implementación del servicio. Además, el código tiene que escribirse para recuperar esa información del archivo de configuración.  
+3. La aplicación de cliente generada también contiene la implementación de `ClientCalculator`. Observe que la información de enlace y dirección no se especifica en ninguna parte de la implementación del servicio. Además, el código tiene que escribirse para recuperar esa información del archivo de configuración.  
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4.  Svcutil.exe también genera la configuración del cliente que utiliza el <xref:System.ServiceModel.NetTcpBinding>. Este archivo se debería nombrar en el archivo App.config al utilizar Visual Studio.  
+4. Svcutil.exe también genera la configuración del cliente que utiliza el <xref:System.ServiceModel.NetTcpBinding>. Este archivo se debería nombrar en el archivo App.config al utilizar Visual Studio.  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
   
-5.  Cree una instancia de `ClientCalculator` en una aplicación y, a continuación, llame a las operaciones del servicio.  
+5. Cree una instancia de `ClientCalculator` en una aplicación y, a continuación, llame a las operaciones del servicio.  
   
      [!code-csharp[C_HowTo_HostInWAS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1223)]  
   
-6.  Compile y ejecute el cliente.  
+6. Compile y ejecute el cliente.  
   
 ## <a name="see-also"></a>Vea también
 

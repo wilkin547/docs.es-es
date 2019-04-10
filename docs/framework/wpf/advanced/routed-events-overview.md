@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171163"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330459"
 ---
 # <a name="routed-events-overview"></a>Información general sobre eventos enrutados
 En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En el tema se define la terminología de los eventos enrutados, se describe cómo se enrutan a través de un árbol de elementos, se resume cómo controlar los eventos enrutados y se explica cómo crear sus propios eventos enrutados personalizados.
@@ -204,17 +204,17 @@ Propagación y tunelización de eventos de entrada
   
  El orden de procesamiento de los eventos es el siguiente:  
   
-1.  `PreviewMouseDown` (túnel) en el elemento raíz.  
+1. `PreviewMouseDown` (túnel) en el elemento raíz.  
   
-2.  `PreviewMouseDown` (túnel) en el elemento intermedio #1.  
+2. `PreviewMouseDown` (túnel) en el elemento intermedio #1.  
   
-3.  `PreviewMouseDown` (túnel) en el elemento de origen #2.  
+3. `PreviewMouseDown` (túnel) en el elemento de origen #2.  
   
-4.  `MouseDown` (propagación) en el elemento de origen #2.  
+4. `MouseDown` (propagación) en el elemento de origen #2.  
   
-5.  `MouseDown` (propagación) en el elemento intermedio #1.  
+5. `MouseDown` (propagación) en el elemento intermedio #1.  
   
-6.  `MouseDown` (propagación) en el elemento raíz.  
+6. `MouseDown` (propagación) en el elemento raíz.  
   
  Un delegado de controlador de eventos enrutados proporciona referencias a dos objetos: el objeto que ha desencadenado el evento y el objeto en el que se ha invocado el controlador. El objeto en el que se ha invocado el controlador es el objeto sobre el que informa el parámetro `sender`. El objeto donde primero se generó el evento se notifica mediante el <xref:System.Windows.RoutedEventArgs.Source%2A> propiedad en los datos del evento. Un evento enrutado todavía se provoca y controlado por el mismo objeto, en cuyo caso `sender` y <xref:System.Windows.RoutedEventArgs.Source%2A> son idénticos (Esto es el caso con los pasos 3 y 4 lista del ejemplo de procesamiento de eventos).  
   

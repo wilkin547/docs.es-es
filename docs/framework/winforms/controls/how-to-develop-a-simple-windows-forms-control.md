@@ -9,19 +9,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 845e550d0e784568723acbe098fabb2a555ce9b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 457069cd7ac5af62e08115d84060c9c7fb25beee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089377"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328145"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Filtrar para desarrollar un control sencillo de formularios Windows Forms
 Esta sección le guiará a través de los pasos clave para crear un control de Windows Forms personalizado. El control sencillo desarrollado en este tutorial permite la alineación de su <xref:System.Windows.Forms.Control.Text%2A> propiedad que debe cambiarse. No genera ni controla eventos.  
   
 ### <a name="to-create-a-simple-custom-control"></a>Para crear un control personalizado simple  
   
-1.  Defina una clase que se derive de <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+1. Defina una clase que se derive de <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
     ```vb  
     Public Class FirstControl  
@@ -34,26 +34,26 @@ Esta sección le guiará a través de los pasos clave para crear un control de W
     public class FirstControl:Control {}  
     ```  
   
-2.  Defina las propiedades. (No es necesario definir propiedades, ya que un control hereda muchas propiedades de la <xref:System.Windows.Forms.Control> clase, pero la mayoría de los controles personalizada suelen definir propiedades adicionales.) El fragmento de código siguiente define una propiedad denominada `TextAlignment` que `FirstControl` utiliza para dar formato a la presentación de la <xref:System.Windows.Forms.Control.Text%2A> hereda la propiedad <xref:System.Windows.Forms.Control>. Para información sobre la definición de propiedades, vea [Introducción a las propiedades](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).  
+2. Defina las propiedades. (No es necesario definir propiedades, ya que un control hereda muchas propiedades de la <xref:System.Windows.Forms.Control> clase, pero la mayoría de los controles personalizada suelen definir propiedades adicionales.) El fragmento de código siguiente define una propiedad denominada `TextAlignment` que `FirstControl` utiliza para dar formato a la presentación de la <xref:System.Windows.Forms.Control.Text%2A> hereda la propiedad <xref:System.Windows.Forms.Control>. Para información sobre la definición de propiedades, vea [Introducción a las propiedades](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
      Cuando se establece una propiedad que cambia la apariencia visual del control, se debe invocar el <xref:System.Windows.Forms.Control.Invalidate%2A> método para dibujar el control. <xref:System.Windows.Forms.Control.Invalidate%2A> se define en la clase base <xref:System.Windows.Forms.Control>.  
   
-3.  Invalidar protegido <xref:System.Windows.Forms.Control.OnPaint%2A> método hereda <xref:System.Windows.Forms.Control> para proporcionar lógica de representación al control. Si no invalida <xref:System.Windows.Forms.Control.OnPaint%2A>, el control no podrá dibujarse a sí mismo. En el siguiente fragmento de código, el <xref:System.Windows.Forms.Control.OnPaint%2A> método muestra el <xref:System.Windows.Forms.Control.Text%2A> propiedad heredada de <xref:System.Windows.Forms.Control> con la alineación especificada por el `alignmentValue` campo.  
+3. Invalidar protegido <xref:System.Windows.Forms.Control.OnPaint%2A> método hereda <xref:System.Windows.Forms.Control> para proporcionar lógica de representación al control. Si no invalida <xref:System.Windows.Forms.Control.OnPaint%2A>, el control no podrá dibujarse a sí mismo. En el siguiente fragmento de código, el <xref:System.Windows.Forms.Control.OnPaint%2A> método muestra el <xref:System.Windows.Forms.Control.Text%2A> propiedad heredada de <xref:System.Windows.Forms.Control> con la alineación especificada por el `alignmentValue` campo.  
   
      [!code-csharp[System.Windows.Forms.FirstControl#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  Proporcione atributos para el control. Los atributos permiten que un diseñador visual muestre el control y sus propiedades y eventos de forma adecuada en el momento del diseño. El siguiente fragmento aplica los atributos a la propiedad `TextAlignment`. En un diseñador como Visual Studio, el <xref:System.ComponentModel.CategoryAttribute.Category%2A> atributo (que se muestra en el fragmento de código) hace que la propiedad que se mostrará en una categoría lógica. El <xref:System.ComponentModel.DescriptionAttribute.Description%2A> atributo hace que una cadena descriptiva que se mostrará en la parte inferior de la **propiedades** ventana cuando el `TextAlignment` propiedad está seleccionada. Para información sobre los atributos, vea [Atributos en tiempo de diseño para componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
+4. Proporcione atributos para el control. Los atributos permiten que un diseñador visual muestre el control y sus propiedades y eventos de forma adecuada en el momento del diseño. El siguiente fragmento aplica los atributos a la propiedad `TextAlignment`. En un diseñador como Visual Studio, el <xref:System.ComponentModel.CategoryAttribute.Category%2A> atributo (que se muestra en el fragmento de código) hace que la propiedad que se mostrará en una categoría lógica. El <xref:System.ComponentModel.DescriptionAttribute.Description%2A> atributo hace que una cadena descriptiva que se mostrará en la parte inferior de la **propiedades** ventana cuando el `TextAlignment` propiedad está seleccionada. Para información sobre los atributos, vea [Atributos en tiempo de diseño para componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
   
-5.  (opcional) Proporcione recursos para el control. Puede proporcionar un recurso, como un mapa de bits, para el control mediante una opción de compilador (`/res` para C#) para empaquetar recursos con el control. En tiempo de ejecución, el recurso puede recuperarse utilizando los métodos de la <xref:System.Resources.ResourceManager> clase. Para más información sobre la creación y uso de recursos, vea [Recursos de aplicaciones de escritorio](../../resources/index.md).  
+5. (opcional) Proporcione recursos para el control. Puede proporcionar un recurso, como un mapa de bits, para el control mediante una opción de compilador (`/res` para C#) para empaquetar recursos con el control. En tiempo de ejecución, el recurso puede recuperarse utilizando los métodos de la <xref:System.Resources.ResourceManager> clase. Para más información sobre la creación y uso de recursos, vea [Recursos de aplicaciones de escritorio](../../resources/index.md).  
   
-6.  Compile e implemente el control. Para compilar e implementar `FirstControl,`, realice los siguientes pasos:  
+6. Compile e implemente el control. Para compilar e implementar `FirstControl,`, realice los siguientes pasos:  
   
     1.  Guarde el código del siguiente ejemplo en un archivo de origen (como FirstControl.cs o FirstControl.vb).  
   
@@ -79,9 +79,9 @@ Esta sección le guiará a través de los pasos clave para crear un control de W
   
 #### <a name="to-compile-and-run-this-sample"></a>Para compilar y ejecutar este ejemplo  
   
-1.  Guarde el código en el ejemplo siguiente en un archivo de código fuente (SimpleForm.cs o SimpleForms.vb).  
+1. Guarde el código en el ejemplo siguiente en un archivo de código fuente (SimpleForm.cs o SimpleForms.vb).  
   
-2.  Compile el código fuente en un ensamblado ejecutable ejecutando el siguiente comando desde el directorio que contiene el archivo de origen.  
+2. Compile el código fuente en un ensamblado ejecutable ejecutando el siguiente comando desde el directorio que contiene el archivo de origen.  
   
     ```console  
     vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb  
@@ -93,7 +93,7 @@ Esta sección le guiará a través de los pasos clave para crear un control de W
   
      CustomWinControls.dll es el ensamblado que contiene la clase `FirstControl`. Este ensamblado debe estar en el mismo directorio que el archivo de origen para el formulario que tiene acceso a él (SimpleForm.cs o SimpleForms.vb).  
   
-3.  Ejecute SimpleForm.exe con el siguiente comando.  
+3. Ejecute SimpleForm.exe con el siguiente comando.  
   
     ```console
     SimpleForm  
