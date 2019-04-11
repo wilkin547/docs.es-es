@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: feccd6978d0a3cf8db60bbd505826433c93e3276
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 826cfc0ea7f681e1f7cbe858008c24a4941f0e11
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335087"
 ---
 # <a name="navigation-overview"></a>Información general sobre navegación
 Windows Presentation Foundation (WPF) admite la navegación de tipo de explorador que se puede usar en dos tipos de aplicaciones: las aplicaciones independientes y [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Empaquetar el contenido para la navegación, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proporciona el <xref:System.Windows.Controls.Page> clase. Puede navegar desde una <xref:System.Windows.Controls.Page> a otra mediante declaración, mediante un <xref:System.Windows.Documents.Hyperlink>, o mediante programación, usando la <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] utiliza el diario para recordar las páginas que se ha navegado desde y a volver a ellas.  
@@ -353,13 +353,13 @@ Windows Presentation Foundation (WPF) admite la navegación de tipo de explorado
   
  De forma predeterminada, el texto para cada <xref:System.Windows.Controls.Page> que aparece en el **páginas recientes** lista de [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] es el [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] para el <xref:System.Windows.Controls.Page>. En muchos casos, esto no es especialmente significativo para el usuario. Afortunadamente, puede cambiar el texto mediante una de las siguientes opciones:  
   
-1.  El archivo adjunto `JournalEntry.Name` valor del atributo.  
+1. El archivo adjunto `JournalEntry.Name` valor del atributo.  
   
-2.  El `Page.Title` valor del atributo.  
+2. El `Page.Title` valor del atributo.  
   
-3.  El `Page.WindowTitle` valor del atributo y el [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] actual <xref:System.Windows.Controls.Page>.  
+3. El `Page.WindowTitle` valor del atributo y el [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] actual <xref:System.Windows.Controls.Page>.  
   
-4.  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] de la <xref:System.Windows.Controls.Page> actual. (Predeterminado)  
+4. [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] de la <xref:System.Windows.Controls.Page> actual. (Predeterminado)  
   
  El orden en que se enumeran las opciones coincide con el orden de prioridad para buscar el texto. Por ejemplo, si `JournalEntry.Name` está establecido, se omiten los demás valores.  
   
@@ -429,19 +429,19 @@ Windows Presentation Foundation (WPF) admite la navegación de tipo de explorado
   
  Afortunadamente, el diario proporciona compatibilidad para recordar los datos a través de <xref:System.Windows.Controls.Page> navegaciones, incluidos los datos de control. En concreto, la entrada de diario para cada <xref:System.Windows.Controls.Page> actúa como contenedor temporal asociado <xref:System.Windows.Controls.Page> estado. Los siguientes pasos describen cómo se usa esta compatibilidad cuando un <xref:System.Windows.Controls.Page> se navega desde:  
   
-1.  Una entrada para el actual <xref:System.Windows.Controls.Page> se agrega al diario.  
+1. Una entrada para el actual <xref:System.Windows.Controls.Page> se agrega al diario.  
   
-2.  El estado de la <xref:System.Windows.Controls.Page> se almacena con la entrada del diario para esa página, que se agrega a la pila de retroceso.  
+2. El estado de la <xref:System.Windows.Controls.Page> se almacena con la entrada del diario para esa página, que se agrega a la pila de retroceso.  
   
-3.  El nuevo <xref:System.Windows.Controls.Page> se navega.  
+3. El nuevo <xref:System.Windows.Controls.Page> se navega.  
   
  Cuando la página <xref:System.Windows.Controls.Page> es vuelve a navegar a con el diario, los realizan los siguientes pasos:  
   
-1.  El <xref:System.Windows.Controls.Page> se crea una instancia (la entrada superior del diario en la pila de retroceso).  
+1. El <xref:System.Windows.Controls.Page> se crea una instancia (la entrada superior del diario en la pila de retroceso).  
   
-2.  El <xref:System.Windows.Controls.Page> se actualiza con el estado que se almacenaron con la entrada de diario para el <xref:System.Windows.Controls.Page>.  
+2. El <xref:System.Windows.Controls.Page> se actualiza con el estado que se almacenaron con la entrada de diario para el <xref:System.Windows.Controls.Page>.  
   
-3.  El <xref:System.Windows.Controls.Page> vuelve a navegar a.  
+3. El <xref:System.Windows.Controls.Page> vuelve a navegar a.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usa automáticamente esta compatibilidad cuando se usan los siguientes controles en un <xref:System.Windows.Controls.Page>:  
   
