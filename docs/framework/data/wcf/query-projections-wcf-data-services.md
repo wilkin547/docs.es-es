@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: a05b2ce89d17b8de61ba78f925370aa22f463655
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2e4c40d6c71a254d5f40ea42788608e10c5872a7
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365157"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517179"
 ---
 # <a name="query-projections-wcf-data-services"></a>Proyecciones de consultas (Data Services de WCF)
 
@@ -52,8 +52,8 @@ Cuando una o varias propiedades de un tipo de entidad definido en el servicio de
 
 En el siguiente ejemplo se usa una consulta LINQ anónima que proyecta propiedades de relacionadas con la dirección del tipo `Customers` en un nuevo tipo `CustomerAddress`, que se define en el cliente y al que se le puede dar el atributo de tipo de entidad:
 
-[!code-csharp[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#selectcustomeraddressspecific)]
-[!code-vb[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#selectcustomeraddressspecific)]
+[!code-csharp[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#selectcustomeraddressspecific)]
+[!code-vb[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#selectcustomeraddressspecific)]
 
 En este ejemplo, se usa el patrón de inicializador de objeto para crear una nueva instancia del tipo `CustomerAddress` en vez de llamar a un constructor. No se admiten constructores cuando se realizan proyecciones en tipos de entidad, pero se pueden usar al realizar proyecciones en tipos sin entidad y anónimos. Puesto que `CustomerAddress` es un tipo de entidad, los cambios se pueden efectuar en el servicio de datos y devolvérselos a él.
 
@@ -67,8 +67,8 @@ A continuación describen los comportamientos al proyectar resultados en tipos d
 
 - Ejemplo:
 
-   [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithinitializer)]
-   [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithinitializer)]
+   [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithinitializer)]
+   [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithinitializer)]
 
 - Tipo de entidad: Compatible
 
@@ -78,8 +78,8 @@ A continuación describen los comportamientos al proyectar resultados en tipos d
 
 - Ejemplo:
 
-   [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithconstructor)]
-   [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithconstructor)]
+   [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithconstructor)]
+   [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithconstructor)]
 
 - Tipo de entidad: Se inicia una clase <xref:System.NotSupportedException>.
 
@@ -89,8 +89,8 @@ A continuación describen los comportamientos al proyectar resultados en tipos d
 
 - Ejemplo:
 
-   [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithtransform)]
-   [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithtransform)]
+   [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithtransform)]
+   [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithtransform)]
 
 - Tipo de entidad: Esta transformación no la admiten los tipos de entidad porque puede confundir y posiblemente sobrescribir los datos en el origen de datos que pertenece a otra entidad. Se inicia una clase <xref:System.NotSupportedException>.
 

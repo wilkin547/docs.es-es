@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: f02c551c4382c9db03be2f4a0adbb9061fd4fe65
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e1111077a407dc32475976b15ff71170978e3184
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332513"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517075"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Filtrar Enlazar datos mediante un origen de datos del proyecto (WCF Data Services)
 
@@ -49,12 +49,12 @@ Puede crear orígenes de datos que se basan en los objetos de datos generados en
 
 6. Abra la página de códigos del formulario y agregue las instrucciones `using` siguientes (`Imports` en Visual Basic):
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
 
 7. En la clase parcial que define el formulario, agregue el código siguiente que crea una instancia de <xref:System.Data.Objects.ObjectContext> y define la constante `customerID`.
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
 
 8. En el diseñador, seleccione la ventana.
 
@@ -69,8 +69,8 @@ Puede crear orígenes de datos que se basan en los objetos de datos generados en
 
 11. En el controlador de eventos <xref:System.Windows.FrameworkElement.Loaded> que se acaba de crear, copie y pegue el código siguiente.
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdatabindingwpf)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdatabindingwpf)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersdatabindingwpf)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf2.xaml.vb#customersordersdatabindingwpf)]
 
 12. Este código crea una instancia de <xref:System.Data.Services.Client.DataServiceCollection%601> para el tipo `Customers` basándose en la ejecución de una consulta LINQ que devuelve una interfaz <xref:System.Collections.Generic.IEnumerable%601> de `Customers` junto con los objetos `Orders` relacionados desde el servicio de datos de Northwind y la enlaza con el elemento `customersViewSource`.
 
@@ -98,13 +98,13 @@ Puede crear orígenes de datos que se basan en los objetos de datos generados en
 
 6. Abra la página de códigos del formulario y agregue las instrucciones `using` siguientes (`Imports` en Visual Basic):
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersusing)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersusing)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersusing)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersusing)]
 
 7. En la clase parcial que define el formulario, agregue el código siguiente que crea una instancia de <xref:System.Data.Objects.ObjectContext> y define la constante `customerID`.
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdefinition)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdefinition)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdefinition)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdefinition)]
 
 8. En el diseñador de formularios, haga doble clic en el formulario.
 
@@ -112,12 +112,12 @@ Puede crear orígenes de datos que se basan en los objetos de datos generados en
 
 9. En el controlador de eventos `Load`, copie y pegue el siguiente código.
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdatabinding)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdatabinding)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdatabinding)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdatabinding)]
 
 10. Este código crea una instancia de <xref:System.Data.Services.Client.DataServiceCollection%601> para el tipo `Customers` basándose en la ejecución de una instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> que devuelve una interfaz <xref:System.Collections.Generic.IEnumerable%601> de `Customers` desde el servicio de datos de Northwind y la enlaza con el elemento `customersBindingSource`.
 
 ## <a name="see-also"></a>Vea también
 
-- [Biblioteca cliente de Data Services de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Filtrar para enlazar datos a elementos de Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Cómo: Enlazar datos a elementos de Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

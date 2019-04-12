@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: efea92fa5176641ac64265dfffd44a088115bb61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: dfc08d4623f124a41412907f5a118e8d9ee7833d
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59305941"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517777"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Crear la aplicación cliente de .NET Framework (Inicio rápido de Data Services de WCF)
 
@@ -29,7 +29,7 @@ Se trata de la tarea final de la Guía de inicio rápido de WCF Data Services. E
 
 4. Abra el archivo MainWindow.xaml y reemplace el código XAML con el código siguiente:
 
-     [!code-xaml[Astoria Quickstart Client#Window1Xaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml#window1xaml)]
+     [!code-xaml[Astoria Quickstart Client#Window1Xaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml#window1xaml)]
 
 ## <a name="to-add-a-data-service-reference-to-the-project"></a>Para agregar al proyecto una referencia al servicio de datos
 
@@ -49,21 +49,21 @@ Se trata de la tarea final de la Guía de inicio rápido de WCF Data Services. E
 
 3. En **el Explorador de soluciones** en **NorthwindClient**, abra la página de códigos para el archivo MainWindow.xaml y agregue las siguientes `using` instrucción (`Imports` en Visual Basic).
 
-     [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#using)]
-     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#using)]
+     [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#using)]
+     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#using)]
 
 3. Inserte el código siguiente que consulta al servicio de datos y enlaza el resultado a una instancia de <xref:System.Data.Services.Client.DataServiceCollection%601> en la clase `MainWindow`:
 
     > [!NOTE]
     > Debe reemplazar el nombre de host `localhost:12345` por el servidor y el puerto en que se hospeda la instancia del servicio de datos de Northwind.
 
-     [!code-csharp[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#querycode)]
-     [!code-vb[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#querycode)]
+     [!code-csharp[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#querycode)]
+     [!code-vb[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#querycode)]
 
 4. Inserte el código siguiente que guarda los cambios en la clase `MainWindow`:
 
-     [!code-csharp[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#savechanges)]
-     [!code-vb[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#savechanges)]
+     [!code-csharp[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#savechanges)]
+     [!code-vb[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#savechanges)]
 
 ## <a name="to-build-and-run-the-northwindclient-application"></a>Para compilar y ejecutar la aplicación NorthwindClient
 

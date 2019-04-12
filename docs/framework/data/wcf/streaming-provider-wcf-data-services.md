@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 615443bee67d7ca69d25193404055b7299a58507
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298882"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517595"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Proveedores de transmisión por secuencias (WCF Data Services)
 Un servicio de datos puede exponer datos binarios de objetos grandes. Estos datos binarios pueden representar secuencias de vídeo y audio, imágenes, archivos de documento u otros tipos de medios binarios. Cuando una entidad del modelo de datos incluye una o más propiedades binarias, el servicio de datos devuelve estos datos binarios codificados en base 64 en la entrada de la fuente de respuesta. Dado que carga y la serialización de datos binarios grandes de esta manera pueden afectar al rendimiento, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define un mecanismo para recuperar datos binarios independientemente de la entidad a la que pertenece. Para ello, se separan los datos binarios de la entidad en uno o varios flujos de datos.  
@@ -46,7 +46,7 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
  **Proveedor de Entity Framework**  
  Para indicar que una entidad es una entrada de vínculo multimedia, agregue el atributo `HasStream` a la definición del tipo de entidad en el modelo conceptual, como en el siguiente ejemplo:  
   
- [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
+ [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]  
   
  También debe agregar el espacio de nombres `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` a la entidad o a la raíz del archivo .edmx o del archivo .csdl que definen el modelo de datos.  
   
@@ -74,8 +74,8 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
 ## <a name="creating-the-streaming-data-service"></a>Crear el servicio de transmisión de datos por secuencias  
  Para proporcionar al motor de tiempo de ejecución de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] acceso a la implementación de la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, el servicio de datos que cree también debe implementar la interfaz <xref:System.IServiceProvider>. En el siguiente ejemplo se muestra cómo implementar el método <xref:System.IServiceProvider.GetService%2A> para devolver una instancia de la clase `PhotoServiceStreamProvider` que implemente la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  
   
- [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming service/cs/photodata.svc.cs#photoservicestreamingprovider)]
- [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
+ [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
+ [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
   
  Para obtener información general sobre cómo crear un servicio de datos, vea [configurando el servicio de datos](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
@@ -129,4 +129,4 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
 
 - [Proveedores de Data Services](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Proveedores de servicios de datos personalizados](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
-- [Trabajar con datos binarios](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+- [Trabajo con datos binarios](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

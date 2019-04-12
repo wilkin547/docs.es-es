@@ -8,20 +8,20 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 35554c8d5e1dd33ab942cecb80075ec2fb1e131c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 17926e144fae206d702c2bcb4f88dd2093442ed5
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59326260"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517907"
 ---
 # <a name="interceptors-wcf-data-services"></a>Interceptores (Servicios de datos de WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que una aplicación interceptar los mensajes de solicitud, lo que puede agregar lógica personalizada a una operación. Puede usar esta lógica personalizada para validar los datos en los mensajes entrantes. También puede utilizarla como restricción adicional del ámbito de una solicitud de consulta, por ejemplo, para insertar una directiva de autorización personalizada por solicitud.  
   
  Métodos con atributos especiales realizan la interceptación en el servicio de datos. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] llama a estos métodos en el punto adecuado del procesamiento de mensajes. Los interceptores se definen según el conjunto por entidad, y los métodos de interceptor no pueden aceptar parámetros de la solicitud, como las operaciones de servicio pueden. Los métodos de interceptor de consulta, que se llama al procesar una solicitud GET de HTTP, deben devolver los resultados de consulta debe devolver una expresión lambda que determina si se establece una instancia de entidad del interceptor. El servicio de datos utiliza esta expresión para perfeccionar más la operación solicitada. El ejemplo siguiente muestra una definición de un interceptor de consulta.  
   
- [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
- [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
+ [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#queryinterceptordef)]
+ [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
  Para obtener más información, vea [Cómo: Interceptar mensajes de servicio de datos](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   
@@ -33,8 +33,8 @@ ms.locfileid: "59326260"
   
  El ejemplo siguiente muestra una definición de un interceptor de cambio.  
   
- [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
- [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  
+ [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#changeinterceptordef)]
+ [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
  Para obtener más información, vea [Cómo: Interceptar mensajes de servicio de datos](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   

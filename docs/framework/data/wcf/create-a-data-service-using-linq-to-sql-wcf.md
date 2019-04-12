@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear un servicio de datos mediante LINQ al origen de datos SQL (WCF Data Services)
+title: Filtrar Crear un servicio de datos mediante LINQ al origen de datos SQL (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: 7447a9f2ab0b2a9cca396ee947a0eb5fe2cc8715
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b33eb8f470fc8ce3851c7843de992b39e86ce018
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608578"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518225"
 ---
-# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Procedimiento Crear un servicio de datos mediante LINQ al origen de datos SQL (WCF Data Services)
+# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Filtrar Crear un servicio de datos mediante LINQ al origen de datos SQL (WCF Data Services)
 
 WCF Data Services expone los datos de entidad como un servicio de datos. El proveedor de reflexión le permite definir un modelo de datos que se basa en cualquier clase que expone miembros que devuelven un <xref:System.Linq.IQueryable%601> implementación. Para poder realizar actualizaciones en los datos del origen de datos, estas clases también deben implementar la interfaz <xref:System.Data.Services.IUpdatable>. Para obtener más información, consulte [proveedores de servicios de datos](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md). En este tema se muestra cómo crear clases LINQ to SQL que tienen acceso a la base de datos de ejemplo Northwind usando el proveedor de reflexión, así como el modo de crear el servicio de datos que está basado en estas clases de datos.
 
@@ -43,8 +43,8 @@ WCF Data Services expone los datos de entidad como un servicio de datos. El prov
 
 8. Reemplace el contenido del archivo de código Northwind.cs por el código siguiente. Este código implementa el proveedor de reflexión extendiendo la clase <xref:System.Data.Linq.DataContext> y las clases de datos generadas por LINQ to SQL:
 
-     [!code-csharp[Astoria Linq Provider#Linq2SqlProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria linq provider/cs/northwind.cs#linq2sqlprovider)]
-     [!code-vb[Astoria Linq Provider#Linq2SqlProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria linq provider/vb/northwind.vb#linq2sqlprovider)]
+     [!code-csharp[Astoria Linq Provider#Linq2SqlProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_linq_provider/cs/northwind.cs#linq2sqlprovider)]
+     [!code-vb[Astoria Linq Provider#Linq2SqlProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_linq_provider/vb/northwind.vb#linq2sqlprovider)]
 
 ### <a name="to-create-a-data-service-by-using-a-linq-to-sql-based-data-model"></a>Para crear un servicio de datos usando un modelo de datos basado en LINQ to SQL
 
@@ -65,8 +65,8 @@ WCF Data Services expone los datos de entidad como un servicio de datos. El prov
 
 5. En el código del servicio de datos, reemplace el código de marcador de posición de la función `InitializeService` por el siguiente:
 
-     [!code-csharp[Astoria Linq Provider#EnableAccess](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria linq provider/cs/northwind.svc.cs#enableaccess)]
-     [!code-vb[Astoria Linq Provider#EnableAccess](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria linq provider/vb/northwind.svc.vb#enableaccess)]
+     [!code-csharp[Astoria Linq Provider#EnableAccess](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_linq_provider/cs/northwind.svc.cs#enableaccess)]
+     [!code-vb[Astoria Linq Provider#EnableAccess](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_linq_provider/vb/northwind.svc.vb#enableaccess)]
 
      Esto permite a los clientes autorizados tener acceso a los recursos para los tres conjuntos de entidades especificados.
 
