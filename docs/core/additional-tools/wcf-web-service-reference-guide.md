@@ -4,12 +4,12 @@ description: Información general sobre la herramienta Microsoft WCF Web Service
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3566a92e05c03cc77e59a14e3b2521a1d6d0758a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3452a6a598e255dd9a32629d8ef0589b88f9c00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197079"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Uso de la herramienta WCF Web Service Reference Provider
 
@@ -54,7 +54,6 @@ Aparece la página **Servicios conectados**, como se muestra en esta imagen:
     
     3c. Haga clic en el botón **Siguiente** para abrir las páginas **Opciones de tipo de datos** y **Opciones de cliente**. O bien, haga clic en el botón **Finalizar** para usar las opciones predeterminadas.
 
-
 4. El formulario **Opciones de tipo de datos** permite ajustar los valores de configuración de la referencia de servicio generada:
 
 ![Pestaña Tipo de datos de Visual Studio para .NET Core](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
@@ -65,7 +64,6 @@ Aparece la página **Servicios conectados**, como se muestra en esta imagen:
 Puede haber un retraso mientras se carga la información de tipo, en función del número de dependencias del proyecto y otros factores de rendimiento del sistema. El botón **Finalizar** está deshabilitado durante la carga, a menos que la casilla **Reutilizar tipos en los ensamblados a los que se hace referencia** esté desactivada.
 
 5. Haga clic en **Finalizar** cuando haya terminado.
-
 
 Mientras muestra el progreso, la herramienta:
 

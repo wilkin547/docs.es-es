@@ -4,12 +4,12 @@ description: Aprenda la terminología sobre paquetes, metapaquetes y marcos de t
 author: richlander
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 25247972346fb181279414a762d73d2f3218f0e0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: a03a4961b116b05468ac6c6ce5e648c07a77b7f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090503"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Paquetes, metapaquetes y marcos de trabajo
 
@@ -97,7 +97,6 @@ El marco de trabajo `.NETStandard,Version=1.3` está basado en paquete. Se basa 
 Existe una relación recíproca entre los marcos de trabajo y los paquetes. La primera parte es definir las API disponibles para un marco de trabajo determinado, por ejemplo, `netstandard1.3`. Los paquetes que tienen como destino `netstandard1.3` (o marcos de trabajo compatibles, como `netstandard1.0`) definen las API disponibles para `netstandard1.3`. Esto puede parecer una definición circular, pero no lo es. En virtud de estar "basada en paquete", la definición de API del marco de trabajo proviene de los paquetes. El marco de trabajo mismo no define a ninguna API.
 
 La segunda parte de la relación es la selección de recursos. Los paquetes pueden incluir recursos para varios marcos de trabajo. Dada una referencia a un conjunto de paquetes o metapaquetes, el marco de trabajo es necesario para determinar el recurso que se debe seleccionar, por ejemplo `net46` o `netstandard1.3`. Es importante seleccionar el recurso correcto. Por ejemplo, es poco probable que un recurso de `net46` sea compatible con .NET Framework 4.0 o .NET Core 1.0.
-
 
 Puede ver esta relación en la imagen siguiente. La *API* tiene como destino el *marco de trabajo* y lo define. El *marco de trabajo* se usa para la *selección de recursos*. El *recurso* le brinda la API.
 
