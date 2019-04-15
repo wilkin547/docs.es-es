@@ -1,5 +1,5 @@
 ---
-title: Filtrar para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
+title: Procedimiento para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1136dd3220b189d60b4972410ce0ce6657d07cd
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: a944cf87783c59c21bffc9c48a18237c9fe6cdec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295502"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Filtrar para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Procedimiento para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
 Hay dos maneras de generar un ensamblado de interoperabilidad primario:  
   
 -   Mediante el [importador de la biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) proporcionado por [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
@@ -36,7 +36,7 @@ Hay dos maneras de generar un ensamblado de interoperabilidad primario:
   
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>Para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe  
   
-1.  En el símbolo del sistema, escriba:  
+1. En el símbolo del sistema, escriba:  
   
      **tlbimp** *archivo_tlb*  **/primary /keyfile:** *nombre_de_archivo* **/out:** *nombre_de_ensamblado*  
   
@@ -68,4 +68,5 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Registrar ensamblados de interoperabilidad primarios](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+
+- [Procedimiento para registrar ensamblados de interoperabilidad primarios](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)

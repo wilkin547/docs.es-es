@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08e5712db60fb09b48d6be9f35737c9a884d1ce8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642836"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324481"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Procedimiento para cancelar una tarea y sus elementos secundarios
 En estos ejemplos se muestra cómo realizar las tareas siguientes:  
   
-1.  Crear e iniciar una tarea cancelable.  
+1. Crear e iniciar una tarea cancelable.  
   
-2.  Pasar un token de cancelación a un delegado de usuario y, opcionalmente, a la instancia de la tarea.  
+2. Pasar un token de cancelación a un delegado de usuario y, opcionalmente, a la instancia de la tarea.  
   
-3.  Observar y responder a la solicitud de cancelación en el delegado de usuario.  
+3. Observar y responder a la solicitud de cancelación en el delegado de usuario.  
   
-4.  Opcionalmente, observar en el subproceso que realiza la llamada que la tarea se canceló.  
+4. Opcionalmente, observar en el subproceso que realiza la llamada que la tarea se canceló.  
   
  El subproceso que realiza la llamada no finaliza la tarea forzosamente, sino que solo señala que se solicita la cancelación. Si la tarea ya se está ejecutando, es el delegado de usuario el que debe observar la solicitud y responder según corresponda. Si la cancelación se solicita antes de ejecutarse la tarea, el delegado de usuario nunca se ejecuta y el objeto de tarea pasa al estado Cancelado.  
   

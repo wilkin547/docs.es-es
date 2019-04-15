@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 4d06899303110d0b06729f2a02c47b9096bec724
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981808"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306604"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procedimiento Suscribir y cancelar la suscripción a eventos (Guía de programación de C#)
 La suscripción a un evento publicado por otra clase se realiza cuando quiere escribir código personalizado al que se llama cuando se produce ese evento. Por ejemplo, puede suscribirse al evento `click` de un botón para que la aplicación realice alguna operación cuando el usuario haga clic en el botón.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Para suscribirse a eventos mediante el IDE de Visual Studio  
   
-1.  Si no puede ver la ventana **Propiedades**, en la vista **Diseño** haga clic con el botón derecho en el formulario o control para el que quiere crear un controlador de eventos y seleccione **Propiedades**.  
+1. Si no puede ver la ventana **Propiedades**, en la vista **Diseño** haga clic con el botón derecho en el formulario o control para el que quiere crear un controlador de eventos y seleccione **Propiedades**.  
   
-2.  En la parte superior de la ventana **Propiedades**, haga clic en el icono **Eventos**.  
+2. En la parte superior de la ventana **Propiedades**, haga clic en el icono **Eventos**.  
   
-3.  Haga doble clic en el evento que quiera crear, por ejemplo, el evento `Load`.  
+3. Haga doble clic en el evento que quiera crear, por ejemplo, el evento `Load`.  
   
      Visual C# crea un método de controlador de eventos vacío y lo agrega al código. También puede agregar manualmente el código en la vista **Código**. Por ejemplo, las líneas siguientes de código declaran un método de controlador de eventos al que se llamará cuando la clase `Form` genere el evento `Load`.  
   
@@ -37,7 +37,7 @@ La suscripción a un evento publicado por otra clase se realiza cuando quiere es
   
 ### <a name="to-subscribe-to-events-programmatically"></a>Para suscribirse a eventos mediante programación  
   
-1.  Defina un método de controlador de eventos cuya firma coincida con la firma de delegado del evento. Por ejemplo, si el evento se basa en el tipo de delegado <xref:System.EventHandler>, el siguiente código representa el código auxiliar del método:  
+1. Defina un método de controlador de eventos cuya firma coincida con la firma de delegado del evento. Por ejemplo, si el evento se basa en el tipo de delegado <xref:System.EventHandler>, el siguiente código representa el código auxiliar del método:  
   
     ```csharp
     void HandleCustomEvent(object sender, CustomEventArgs a)  
@@ -46,7 +46,7 @@ La suscripción a un evento publicado por otra clase se realiza cuando quiere es
     }  
     ```  
   
-2.  Use el operador de suma y asignación (`+=`) para asociar el controlador de eventos al evento. En el ejemplo siguiente, se asume que un objeto denominado `publisher` tiene un evento denominado `RaiseCustomEvent`. Observe que la clase de suscriptor necesita una referencia a la clase de editor para suscribirse a sus eventos.  
+2. Use el operador de suma y asignación (`+=`) para asociar el controlador de eventos al evento. En el ejemplo siguiente, se asume que un objeto denominado `publisher` tiene un evento denominado `RaiseCustomEvent`. Observe que la clase de suscriptor necesita una referencia a la clase de editor para suscribirse a sus eventos.  
   
     ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  
@@ -102,7 +102,7 @@ La suscripción a un evento publicado por otra clase se realiza cuando quiere es
 ## <a name="see-also"></a>Vea también
 
 - [Eventos](../../../csharp/programming-guide/events/index.md)
-- [event](../../../csharp/language-reference/keywords/event.md)
-- [Cómo: Publicar eventos que cumplan las directrices de .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-- [Operador -= (Referencia de C#)](../../language-reference/operators/subtraction-assignment-operator.md)
+- [evento](../../../csharp/language-reference/keywords/event.md)
+- [Procedimiento para publicar eventos que cumplan las directrices de .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [-= Operador (Referencia de C#)](../../language-reference/operators/subtraction-assignment-operator.md)
 - [Operador +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)

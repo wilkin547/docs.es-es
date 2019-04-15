@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604306"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305343"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Procedimiento para cancelar una consulta PLINQ
 En los siguientes ejemplos se muestran dos formas de cancelar una consulta PLINQ. El primer ejemplo muestra cómo cancelar una consulta que se compone principalmente de un cruce seguro de datos. El segundo ejemplo muestra cómo cancelar una consulta que contiene una función de usuario que es cara desde el punto de vista computacional.  
@@ -34,9 +34,9 @@ En los siguientes ejemplos se muestran dos formas de cancelar una consulta PLINQ
   
  Las instrucciones generales sobre la cancelación son las siguientes:  
   
-1.  Si realiza la cancelación de un delegado de usuario, debe informar a PLINQ sobre la clase externa <xref:System.Threading.CancellationToken> e iniciar <xref:System.OperationCanceledException>(externalCT).  
+1. Si realiza la cancelación de un delegado de usuario, debe informar a PLINQ sobre la clase externa <xref:System.Threading.CancellationToken> e iniciar <xref:System.OperationCanceledException>(externalCT).  
   
-2.  Si se produce la cancelación y no se produce ninguna otra excepción, a continuación, debe controlar una excepción <xref:System.OperationCanceledException> en lugar de una excepción <xref:System.AggregateException>.  
+2. Si se produce la cancelación y no se produce ninguna otra excepción, a continuación, debe controlar una excepción <xref:System.OperationCanceledException> en lugar de una excepción <xref:System.AggregateException>.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo controlar la cancelación cuando se tiene una función cara desde el punto de vista computacional en el código de usuario.  

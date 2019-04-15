@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0825233c0dae131fa9d00565348fac6fdf0be063
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: ac7a56dc654ef4fd966077dd25012f0c50b0fc8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760699"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236096"
 ---
 ### <a name="horizontal-scrolling-and-virtualization"></a>Desplazamiento horizontal y virtualización
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760699"
 |Versión|4.6.2|
 |Tipo|Tiempo de ejecución|
 |API afectadas|<ul><li><xref:System.Windows.Controls.Primitives.IScrollInfo?displayProperty=nameWithType></li></ul>|
-

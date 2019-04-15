@@ -18,12 +18,12 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-ms.openlocfilehash: e212b2c77a8b0b016e03bfe08f350a0b86ba6ee1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45ec7b83824777c594b966a38d2b7fcd4f63b596
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221194"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Traza de la red en .NET Framework
 El seguimiento de red de .NET Framework proporciona acceso a información sobre las invocaciones de métodos y el tráfico de red generado por una aplicación administrada. Esta característica es útil para depurar las aplicaciones en desarrollo y para analizar las aplicaciones implementadas. El resultado proporcionado por la traza de la red se puede personalizar para admitir diferentes escenarios de uso en tiempo de desarrollo y en un entorno de producción.  
@@ -36,7 +36,8 @@ El seguimiento de red de .NET Framework proporciona acceso a información sobre 
 >  Este miembro genera información de seguimiento cuando se habilita el seguimiento de red en la aplicación. Para obtener más información, vea Seguimiento de red.  
   
 ## <a name="see-also"></a>Vea también
-- [Habilitar el seguimiento de red](../../../docs/framework/network-programming/enabling-network-tracing.md)
-- [Cómo: Configurar el seguimiento de red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
-- [Interpretación del seguimiento de red](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+
+- [Habilitación del seguimiento de red](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [Procedimiento para configurar el seguimiento de la red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
+- [Interpretar el seguimiento de red](../../../docs/framework/network-programming/interpreting-network-tracing.md)
 - [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: ee5c7cbea09c6183b48fe1b0acd051d65bdd1875
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819039"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312725"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Procedimiento para escribir información de eventos en un archivo de texto (Visual Basic)
 Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre los eventos que se producen en su aplicación. En este ejemplo se muestra cómo usar el método `My.Application.Log.WriteEntry` para registrar información de seguimiento en un archivo de registro.  
   
 ### <a name="to-add-and-configure-the-file-log-listener"></a>Para agregar y configurar el agente de escucha de registro de archivos  
   
-1.  Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
+1. Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
   
      \- o -  
   
@@ -30,19 +30,19 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
     3.  Haga clic en **Agregar**.  
   
-2.  Ubique la sección `<listeners>` en el archivo de configuración de la aplicación.  
+2. Ubique la sección `<listeners>` en el archivo de configuración de la aplicación.  
   
      Encontrará la sección \<listeners> en la sección \<source> con el atributo de nombre "DefaultSource", que está anidada bajo la sección \<system.diagnostics>, anidada bajo la sección de nivel superior \<configuration>.  
   
-3.  Agregue este elemento a dicha sección `<listeners>` :  
+3. Agregue este elemento a dicha sección `<listeners>` :  
   
     ```xml  
     <add name="FileLogListener" />  
     ```  
   
-4.  Busque la sección `<sharedListeners>`, en la sección `<system.diagnostics>`, anidada en la sección de nivel superior `<configuration>`.  
+4. Busque la sección `<sharedListeners>`, en la sección `<system.diagnostics>`, anidada en la sección de nivel superior `<configuration>`.  
   
-5.  Agregue este elemento a dicha sección `<sharedListeners>` :  
+5. Agregue este elemento a dicha sección `<sharedListeners>` :  
   
     ```xml  
     <add name="FileLogListener"   
@@ -71,4 +71,4 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Cómo: Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Procedimiento para registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)

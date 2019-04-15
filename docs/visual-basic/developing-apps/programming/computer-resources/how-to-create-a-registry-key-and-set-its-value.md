@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 6d9790d37812ff0ed4ac76049b6949901f7b5c58
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835458"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312624"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Procedimiento para crear una clave del Registro y establecer su valor en Visual Basic
 El método `CreateSubKey` del objeto `My.Computer.Registry` se puede usar para crear una clave del Registro.  
@@ -31,11 +31,11 @@ El método `CreateSubKey` del objeto `My.Computer.Registry` se puede usar para c
   
 #### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>Para crear una clave del Registro y establecer un valor en él  
   
-1.  Use el método `CreateSubkey`, especificando en qué subárbol se va a colocar la clave, así como el nombre de la clave. En este ejemplo se crea la clave del Registro `MyTestKey` en HKEY_CURRENT_USER.  
+1. Use el método `CreateSubkey`, especificando en qué subárbol se va a colocar la clave, así como el nombre de la clave. En este ejemplo se crea la clave del Registro `MyTestKey` en HKEY_CURRENT_USER.  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
-2.  Establezca el valor con el método `SetValue`. Este ejemplo establece el valor de la cadena. "MyTestKeyValue" en "This is a test value".  
+2. Establezca el valor con el método `SetValue`. Este ejemplo establece el valor de la cadena. "MyTestKeyValue" en "This is a test value".  
   
      [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]  
   
@@ -76,4 +76,4 @@ El método `CreateSubKey` del objeto `My.Computer.Registry` se puede usar para c
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
 - <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>
 - [Leer y escribir en el Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-- [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Conceptos básicos sobre la seguridad de acceso del código)
+- [Conceptos básicos sobre la seguridad de acceso del código](../../../../framework/misc/code-access-security-basics.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 522d80ce6be277c048fa62cc1a7b077d8bb08bfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4026fcbd7dc2ef29c1e7ee01a0f37b3ff471b187
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544710"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322387"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (Opciones del compilador de C#)
 La opción **-win32res** inserta un recurso de Win32 en el archivo de salida.  
@@ -38,11 +38,11 @@ La opción **-win32res** inserta un recurso de Win32 en el archivo de salida.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra la página **Propiedades** del proyecto.  
+1. Abra la página **Propiedades** del proyecto.  
   
-2.  Haga clic en la página de propiedades **Aplicación**.  
+2. Haga clic en la página de propiedades **Aplicación**.  
   
-3.  Haga clic en el botón **Archivo de recursos** y seleccione un archivo mediante el cuadro combinado.  
+3. Haga clic en el botón **Archivo de recursos** y seleccione un archivo mediante el cuadro combinado.  
   
 ## <a name="example"></a>Ejemplo  
  Compile `in.cs` y adjunte un archivo de recursos de Win32 `rf.res` para producir `in.exe`:  

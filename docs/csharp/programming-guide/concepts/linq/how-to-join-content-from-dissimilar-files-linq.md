@@ -2,12 +2,12 @@
 title: Procedimiento para combinar contenido de archivos no similares (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 5fb954bee6433d28ffb47f789b41492349f7ab42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698419"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328821"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Procedimiento para combinar contenido de archivos no similares (LINQ) (C#)
 
@@ -15,7 +15,7 @@ En este ejemplo se muestra cómo combinar datos de dos archivos delimitados por 
   
 ## <a name="to-create-the-data-files"></a>Para crear los archivos de datos
   
-1.  Copie las líneas siguientes en un archivo llamado *scores.csv* y guárdelo en la carpeta del proyecto. El archivo representa datos de una hoja de cálculo. La columna 1 es el identificador del estudiante y las columnas comprendidas entre la 2 y la 5 son las notas de las pruebas.  
+1. Copie las líneas siguientes en un archivo llamado *scores.csv* y guárdelo en la carpeta del proyecto. El archivo representa datos de una hoja de cálculo. La columna 1 es el identificador del estudiante y las columnas comprendidas entre la 2 y la 5 son las notas de las pruebas.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ En este ejemplo se muestra cómo combinar datos de dos archivos delimitados por 
     122, 94, 92, 91, 91  
     ```  
   
-2.  Copie las líneas siguientes en un archivo llamado *names.csv* y guárdelo en la carpeta del proyecto. El archivo representa una hoja de cálculo que contiene el nombre, los apellidos y el identificador de los estudiantes.  
+2. Copie las líneas siguientes en un archivo llamado *names.csv* y guárdelo en la carpeta del proyecto. El archivo representa una hoja de cálculo que contiene el nombre, los apellidos y el identificador de los estudiantes.  
   
     ```  
     Omelchenko,Svetlana,111  

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 19c613bf48479cb1e52531a4d6594db8ad89b8f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234869"
+---
 ### <a name="workflowdesignerload-doesnt-remove-symbol-property"></a>El método WorkflowDesigner.Load no elimina una propiedad de símbolo
 
 |   |   |
@@ -8,4 +16,3 @@
 |Versión|4.5|
 |Tipo|Redestinación|
 |API afectadas|<ul><li><xref:System.Activities.Presentation.WorkflowDesigner.Load?displayProperty=nameWithType></li></ul>|
-

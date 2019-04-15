@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 158313bcecc8e4bd89f358aecf92324c10789b43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8d68770fe60f4d9fb3d9982cf426376d54b229e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592226"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330121"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Procedimiento para controlar varios eventos mediante las propiedades de evento
 Para poder utilizar propiedades de evento, hay que definirlas en la clase que provoca los eventos y, a continuación, establecer los delegados de las propiedades de evento en las clases que controlan los eventos. Para implementar varias propiedades de evento en una clase, esta clase deberá almacenar internamente y mantener el delegado definido para cada evento. Para hacerlo, uno de los enfoques típicos consiste en implementar una colección de delegados que se indice por medio de una clave de evento.  
@@ -30,15 +30,15 @@ Para poder utilizar propiedades de evento, hay que definirlas en la clase que pr
   
 ### <a name="to-handle-multiple-events-using-event-properties"></a>Para controlar varios eventos mediante las propiedades de evento  
   
-1.  Defina una colección de delegados dentro de la clase que provoca los eventos.  
+1. Defina una colección de delegados dentro de la clase que provoca los eventos.  
   
-2.  Defina una clave para cada evento.  
+2. Defina una clave para cada evento.  
   
-3.  Defina las propiedades de evento de la clase que provoca los eventos.  
+3. Defina las propiedades de evento de la clase que provoca los eventos.  
   
-4.  Utilice la colección de delegados para implementar los métodos de descriptor de acceso add y remove de las propiedades de evento.  
+4. Utilice la colección de delegados para implementar los métodos de descriptor de acceso add y remove de las propiedades de evento.  
   
-5.  Utilice las propiedades de evento públicas para agregar y quitar delegados de controlador de eventos en las clases que controlan los eventos.  
+5. Utilice las propiedades de evento públicas para agregar y quitar delegados de controlador de eventos en las clases que controlan los eventos.  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo de C#, se implementan las propiedades de evento `MouseDown` y `MouseUp` mediante el uso de <xref:System.ComponentModel.EventHandlerList> para almacenar el delegado de cada evento. Las palabras clave de las construcciones de propiedades de evento están en negrita.  
@@ -55,4 +55,4 @@ Para poder utilizar propiedades de evento, hay que definirlas en la clase que pr
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [Eventos](../../../docs/standard/events/index.md)
 - <xref:System.Web.UI.Control.Events%2A>
-- [Cómo: Declarar eventos personalizados para conservar memoria](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Procedimiento para declarar eventos personalizados para conservar memoria](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

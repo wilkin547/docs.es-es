@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 439a4976482639cd2e4e17315ec1a53ca54aa477
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235834"
+---
 ### <a name="profiling-aspnet-mvc4-apps-can-lead-to-fatal-execution-engine-error"></a>Las aplicaciones de MVC4 de generación de perfiles de ASP.NET pueden provocar el error irrecuperable de motor de ejecución
 
 |   |   |
@@ -7,4 +15,3 @@
 |Ámbito|Borde|
 |Versión|4.5|
 |Tipo|Tiempo de ejecución|
-

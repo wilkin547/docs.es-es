@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5c0b5dc2e001121ab54447bae4a5eed3290a580
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a73b2d8948c9a046fd77c02f1bcc87f5738105d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597845"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304004"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Procedimiento para compilar un ensamblado de un solo archivo
 
@@ -33,7 +33,7 @@ En los procedimientos siguientes se muestra cómo crear ensamblados de único ar
 
 ## <a name="to-create-an-assembly-with-an-exe-extension"></a>Para crear un ensamblado con una extensión .exe
 
-1.  En el símbolo del sistema, escriba el siguiente comando:
+1. En el símbolo del sistema, escriba el siguiente comando:
 
      \<*comando del compilador*> \<*nombre del módulo*>
 
@@ -51,7 +51,7 @@ vbc myCode.vb
 
 ### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>Para crear un ensamblado con la extensión .exe y especificar el nombre de archivo de salida
 
-1.  En el símbolo del sistema, escriba el siguiente comando:
+1. En el símbolo del sistema, escriba el siguiente comando:
 
      \<*comando del compilador*> **/out:**\<*nombre del archivo*> \<*nombre del módulo*>
 
@@ -72,7 +72,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 ### <a name="to-create-a-library-assembly"></a>Para crear un ensamblado de biblioteca
 
-1.  En el símbolo del sistema, escriba el siguiente comando:
+1. En el símbolo del sistema, escriba el siguiente comando:
 
      \<*comando del compilador*> **-t:library** \<*nombre del módulo*>
 
@@ -90,7 +90,7 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 ## <a name="see-also"></a>Vea también
 
-- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
-- [Ensamblados de múltiples archivos](../../../docs/framework/app-domains/multifile-assemblies.md)
-- [Cómo: Compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Crear ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
+- [Ensamblados de varios archivos](../../../docs/framework/app-domains/multifile-assemblies.md)
+- [Procedimiento para compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)

@@ -15,33 +15,33 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722366"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296165"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Procedimiento para convertir en números datos numéricos proporcionados por el usuario en controles web
 Dado que una página web puede mostrarse en cualquier lugar del mundo, los usuarios pueden proporcionar datos numéricos en un control <xref:System.Web.UI.WebControls.TextBox> en un número casi ilimitado de formatos. Como resultado, es muy importante determinar la configuración regional y la referencia cultural del usuario de la página web. Al analizar las entradas del usuario, puede aplicar las convenciones de formato definidas por la configuración regional y la referencia cultural del usuario.  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Para convertir la entrada numérica de un control de cuadro de texto web en un número  
   
-1.  Determine si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> se rellena. Si no es así, vaya al paso 6.  
+1. Determine si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> se rellena. Si no es así, vaya al paso 6.  
   
-2.  Si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A> se rellena, recupere el primer elemento. El primer elemento indica la región y el idioma preferidos o predeterminados del usuario.  
+2. Si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A> se rellena, recupere el primer elemento. El primer elemento indica la región y el idioma preferidos o predeterminados del usuario.  
   
-3.  Cree una instancia de un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural preferida del usuario con una llamada al constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+3. Cree una instancia de un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural preferida del usuario con una llamada al constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
-4.  Llame al método `TryParse` o `Parse` del tipo numérico en que desea convertir la entrada del usuario. Use una sobrecarga del método `TryParse` o `Parse` con un parámetro `provider` y pásela con lo siguiente:  
+4. Llame al método `TryParse` o `Parse` del tipo numérico en que desea convertir la entrada del usuario. Use una sobrecarga del método `TryParse` o `Parse` con un parámetro `provider` y pásela con lo siguiente:  
   
     -   El objeto <xref:System.Globalization.CultureInfo> creado en el paso 3.  
   
     -   El objeto <xref:System.Globalization.NumberFormatInfo> devuelto por la propiedad <xref:System.Globalization.CultureInfo.NumberFormat%2A> del objeto <xref:System.Globalization.CultureInfo> creado en el paso 3.  
   
-5.  Si se produce un error en la conversión, repita los pasos 2 a 4 para cada elemento restante de la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A>.  
+5. Si se produce un error en la conversión, repita los pasos 2 a 4 para cada elemento restante de la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A>.  
   
-6.  Si todavía existen errores de conversión o si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A> está vacía, analice la cadena con la referencia cultural invariable devuelta por la propiedad <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
+6. Si todavía existen errores de conversión o si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A> está vacía, analice la cadena con la referencia cultural invariable devuelta por la propiedad <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente es la página de código subyacente completa de un formulario web que solicita al usuario que escriba un valor numérico en un control <xref:System.Web.UI.WebControls.TextBox> y lo convierte en un número. Ese número se duplica y se muestra con el uso de las mismas reglas de formato que la entrada original.  

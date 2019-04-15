@@ -2,12 +2,12 @@
 title: Compatibilidad de identificadores de recursos internacionales en System.Uri
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 56d31b13b94b68719c355335a0598ab8b11d1ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 589c49859592cba55cb5110fe65fdc49e451f478
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651076"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230790"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>Compatibilidad de identificadores de recursos internacionales en System.Uri
 La clase <xref:System.Uri?displayProperty=nameWithType> se ha ampliado con la compatibilidad con Identificadores de recursos internacionales (IRI) y Nombres de dominio internacionalizados (IDN). Estas mejoras están disponibles en .NET Framework 3.5, 3.0 SP1 y 2.0 SP1.  
@@ -44,6 +44,7 @@ La clase <xref:System.Uri?displayProperty=nameWithType> se ha ampliado con la co
  El valor de configuración para las clases de configuración <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> y <xref:System.Configuration.IdnElement?displayProperty=nameWithType> se leerá una vez cuando se construya la primera clase <xref:System.Uri?displayProperty=nameWithType>. Después, se omitirán los cambios realizados en los valores de configuración.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>

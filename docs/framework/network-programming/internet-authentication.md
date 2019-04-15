@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 9ec1a003d981db99bec20778790fa4a3507ad0b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b17f5a7167eb539e04a19db797bc1b0cc6c5eaa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587965"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295463"
 ---
 # <a name="internet-authentication"></a>Autenticación de Internet
 Las clases <xref:System.Net> admiten diversos mecanismos de autenticación de cliente, incluidos los métodos de autenticación de Internet estándares básico, implícito, negociado, NTLM y autenticación Kerberos, así como métodos personalizados que puede crear.  
@@ -33,13 +33,14 @@ Las clases <xref:System.Net> admiten diversos mecanismos de autenticación de cl
   
  Cuando un recurso de Internet solicita autenticación, el método <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> envía la <xref:System.Net.WebRequest> a **AuthenticationManager** junto con la solicitud de credenciales. La solicitud se autentica según el proceso siguiente:  
   
-1.  **AuthenticationManager** llama al método <xref:System.Net.IAuthenticationModule.Authenticate%2A> en cada uno de los módulos de autenticación registrados en el orden en el que se han registrado. **AuthenticationManager** usa el primer módulo que no devuelve **null** para llevar a cabo el proceso de autenticación. Los detalles del proceso varían según el tipo de módulo de autenticación implicado.  
+1. **AuthenticationManager** llama al método <xref:System.Net.IAuthenticationModule.Authenticate%2A> en cada uno de los módulos de autenticación registrados en el orden en el que se han registrado. **AuthenticationManager** usa el primer módulo que no devuelve **null** para llevar a cabo el proceso de autenticación. Los detalles del proceso varían según el tipo de módulo de autenticación implicado.  
   
-2.  Una vez completado el proceso de autenticación, el módulo de autenticación devuelve una <xref:System.Net.Authorization> a la **WebRequest** que contiene la información necesaria para tener acceso al recurso de Internet.  
+2. Una vez completado el proceso de autenticación, el módulo de autenticación devuelve una <xref:System.Net.Authorization> a la **WebRequest** que contiene la información necesaria para tener acceso al recurso de Internet.  
   
  Algunos esquemas de autenticación pueden autenticar a un usuario sin realizar primero una solicitud para un recurso. Una aplicación puede ahorrar tiempo si autentica previamente al usuario con el recurso, lo que elimina al menos un recorrido de ida y vuelta al servidor. O bien, puede realizar la autenticación durante el inicio del programa para que responda mejor al usuario más adelante. Los esquemas de autenticación que pueden usar la autenticación previa establecen la propiedad <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> en **true**.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Autenticación básica e implícita](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
-- [Autenticación NTLM y Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
+- [Autenticación de NTLM y Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
 - [Seguridad en la programación para redes](../../../docs/framework/network-programming/security-in-network-programming.md)

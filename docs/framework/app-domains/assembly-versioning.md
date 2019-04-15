@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbb681567090cb26d20a31e8645c0b651bef9244
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675957"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305200"
 ---
 # <a name="assembly-versioning"></a>Versiones de los ensamblados
 La creación de versiones de ensamblados mediante Common Language Runtime se realiza en el nivel de ensamblado. La versión específica de un ensamblado y las versiones de los ensamblados dependientes se guardan en el manifiesto del ensamblado. La directiva de versiones predeterminada para el motor en tiempo de ejecución es que las aplicaciones se ejecuten sólo en las versiones con las que se compilaron y comprobaron, a menos que se reemplace con una directiva de versiones explícita en los archivos de configuración (el archivo de configuración de la aplicación, el archivo de directivas de la compañía de software y el archivo de configuración del administrador del equipo).  
@@ -25,13 +25,13 @@ La creación de versiones de ensamblados mediante Common Language Runtime se rea
   
  El motor en tiempo de ejecución ejecuta varios pasos para resolver la solicitud de enlace de un ensamblado:  
   
-1.  Comprueba la referencia del ensamblado original para determinar la versión del ensamblado que se va a enlazar.  
+1. Comprueba la referencia del ensamblado original para determinar la versión del ensamblado que se va a enlazar.  
   
-2.  Comprueba todos los archivos de configuración correspondientes para aplicar la directiva de versiones.  
+2. Comprueba todos los archivos de configuración correspondientes para aplicar la directiva de versiones.  
   
-3.  Determina el ensamblado correcto a partir de la referencia del ensamblado original y las posibles redirecciones especificadas en los archivos de configuración, y determina la versión que debería enlazarse al ensamblado que realiza la llamada.  
+3. Determina el ensamblado correcto a partir de la referencia del ensamblado original y las posibles redirecciones especificadas en los archivos de configuración, y determina la versión que debería enlazarse al ensamblado que realiza la llamada.  
   
-4.  Comprueba la caché global de ensamblados, el código base especificado en los archivos de configuración y, después, el directorio y los subdirectorios de la aplicación mediante las reglas de búsqueda que se describen en [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) (Cómo el tiempo de ejecución ubica ensamblados).  
+4. Comprueba la caché global de ensamblados, el código base especificado en los archivos de configuración y, después, el directorio y los subdirectorios de la aplicación mediante las reglas de búsqueda que se describen en [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) (Cómo el tiempo de ejecución ubica ensamblados).  
   
  En la ilustración siguiente se muestran estos pasos:  
   
@@ -70,6 +70,7 @@ La creación de versiones de ensamblados mediante Common Language Runtime se rea
  La versión informativa se representa utilizando el atributo personalizado <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>. Para obtener más información sobre el atributo de versión informativa, vea [Setting Assembly Attributes](../../../docs/framework/app-domains/set-assembly-attributes.md) (Establecer atributos de ensamblado).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Configurar aplicaciones](../../../docs/framework/configure-apps/index.md)
 - [Configurar atributos de ensamblados](../../../docs/framework/app-domains/set-assembly-attributes.md)

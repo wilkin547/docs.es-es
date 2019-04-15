@@ -2,23 +2,23 @@
 title: Procedimiento para modificar árboles de expresión (C#)
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: 1cdc6eb4017495fc7486025dd868352eb9d04892
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26c00f3acc7ab44e74a81e346ab1c017d95d53b5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735615"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308645"
 ---
 # <a name="how-to-modify-expression-trees-c"></a>Procedimiento para modificar árboles de expresión (C#)
 En este tema se muestra cómo modificar un árbol de expresión. Los árboles de expresiones son inmutables, lo que significa que no pueden modificarse directamente. Para cambiar un árbol de expresión, debe crear una copia de un árbol de expresión existente y, una vez creada la copia, realizar los cambios necesarios. Puede usar la clase <xref:System.Linq.Expressions.ExpressionVisitor> para recorrer un árbol de expresión existente y copiar cada nodo que visita.  
   
 ### <a name="to-modify-an-expression-tree"></a>Para modificar un árbol de expresión  
   
-1.  Cree un nuevo proyecto de **aplicación de consola**.  
+1. Cree un nuevo proyecto de **aplicación de consola**.  
   
-2.  Agregue una directiva `using` al archivo para el espacio de nombres `System.Linq.Expressions`.  
+2. Agregue una directiva `using` al archivo para el espacio de nombres `System.Linq.Expressions`.  
   
-3.  Agregue la clase `AndAlsoModifier` al proyecto.  
+3. Agregue la clase `AndAlsoModifier` al proyecto.  
   
     ```csharp  
     public class AndAlsoModifier : ExpressionVisitor  
@@ -46,9 +46,9 @@ En este tema se muestra cómo modificar un árbol de expresión. Los árboles de
   
      Esta clase hereda la clase <xref:System.Linq.Expressions.ExpressionVisitor> y está especializada en la modificación de expresiones que representan operaciones `AND` condicionales. Cambia estas operaciones de una expresión `AND` condicional a una expresión `OR` condicional. Para ello, la clase invalida el método <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> del tipo base, porque las expresiones `AND` condicionales se representan como expresiones binarias. En el método `VisitBinary`, si la expresión que se pasa representa una operación `AND` condicional, el código construye una nueva expresión que contiene el operador `OR` condicional en lugar del operador `AND` condicional. Si la expresión que se pasa a `VisitBinary` no representa una operación `AND` condicional, el método defiere a la implementación de la case base. Los métodos de clase base construyen nodos que son como los árboles de expresiones que se pasan, pero los subárboles de los nodos se reemplazan por los árboles de expresiones que genera de forma recursiva el visitante.  
   
-4.  Agregue una directiva `using` al archivo para el espacio de nombres `System.Linq.Expressions`.  
+4. Agregue una directiva `using` al archivo para el espacio de nombres `System.Linq.Expressions`.  
   
-5.  Agregue código al método `Main` en el archivo Program.cs para crear un árbol de expresión y pasarlo al método que lo modificará.  
+5. Agregue código al método `Main` en el archivo Program.cs para crear un árbol de expresión y pasarlo al método que lo modificará.  
   
     ```csharp  
     Expression<Func<string, bool>> expr = name => name.Length > 10 && name.StartsWith("G");  
@@ -68,9 +68,9 @@ En este tema se muestra cómo modificar un árbol de expresión. Los árboles de
   
      El código crea una expresión que contiene una operación `AND` condicional. Luego crea una instancia de la clase `AndAlsoModifier` y pasa la expresión al método `Modify` de esta clase. Se generan los árboles de expresiones tanto originales como modificados para mostrar el cambio.  
   
-6.  Compile y ejecute la aplicación.  
+6. Compile y ejecute la aplicación.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Ejecutar árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Procedimiento para ejecutar árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [Árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)

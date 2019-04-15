@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6309cead46dff44ff6360bac9b31666f875be210
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235806"
+---
 ### <a name="marshalsizeof-and-marshalptrtostructure-overloads-break-dynamic-code"></a>Las sobrecargas de Marshal.SizeOf y Marshal.PtrToStructure interrumpen el código dinámico
 
 |   |   |
@@ -7,4 +15,3 @@
 |Ámbito|Secundaria|
 |Versión|4.5.1|
 |Tipo|Tiempo de ejecución|
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f52b34e6fb99b52e5775482dec3c59ed6738b31
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: ff1bc6f0aa29742f61129ff9acb9980658f118a4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920563"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327872"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalación de .NET Framework para desarrolladores
 
@@ -107,7 +107,7 @@ Hay disponibles dos tipos de instaladores de paquete redistribuible:
 
 Los instaladores web y sin conexión están diseñados para equipos con sistemas x86 y x64 (vea los [requisitos del sistema](~/docs/framework/get-started/system-requirements.md)), pero no son compatibles con equipos Itanium.
 
-1.  Abra la página de descarga de la versión de .NET Framework que desee instalar:
+1. Abra la página de descarga de la versión de .NET Framework que desee instalar:
 
     - .NET Framework 4.7.2 ([instalador web](https://go.microsoft.com/fwlink/?LinkId=863262) o [instalador sin conexión](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
@@ -163,7 +163,7 @@ Los paquetes de idioma son archivos ejecutables que contienen recursos localizad
 > [!IMPORTANT]
 > Los paquetes de idioma no contienen los componentes de .NET Framework necesarios para ejecutar una aplicación, por lo que debe ejecutar el instalador web o sin conexión antes de instalar un paquete de idioma. Si ya ha instalado un paquete de idioma, desinstálelo, instale .NET Framework y, después, vuelva a instalar el paquete de idioma.
 
-1.  Abra la página de descarga de paquetes de idioma que se corresponda con la versión de .NET Framework instalada:
+1. Abra la página de descarga de paquetes de idioma que se corresponda con la versión de .NET Framework instalada:
 
     - [Paquetes de idioma de .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863258)
 
@@ -183,9 +183,9 @@ Los paquetes de idioma son archivos ejecutables que contienen recursos localizad
 
     - [Paquetes de idioma de .NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
-2.  En la lista de idiomas, elija el idioma que desea descargar y espere unos segundos hasta que se recargue la página en ese idioma.
+2. En la lista de idiomas, elija el idioma que desea descargar y espere unos segundos hasta que se recargue la página en ese idioma.
 
-3.  Elija **Descargar**.
+3. Elija **Descargar**.
 
 En la siguiente tabla se indican los idiomas compatibles.
 

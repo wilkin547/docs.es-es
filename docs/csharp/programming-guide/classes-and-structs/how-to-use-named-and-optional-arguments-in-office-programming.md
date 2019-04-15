@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: aecac583e509d2a08fae55d911a26134330c74c7
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 3ecea9d55ef61d2158da0dabeca22a58460b3bea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760084"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313975"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Procedimiento Usar argumentos nombrados y opcionales en la programación de Office (Guía de programación de C#)
 Los argumentos con nombre y los argumentos opcionales, introducidos en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], mejoran la comodidad, la flexibilidad y la legibilidad en la programación de C#. Además, estas características facilitan enormemente el acceso a interfaces COM, como las API de automatización de Microsoft Office.  
@@ -25,59 +25,59 @@ Los argumentos con nombre y los argumentos opcionales, introducidos en [!INCLUDE
   
 ### <a name="to-create-a-new-console-application"></a>Para crear una aplicación de consola nueva  
   
-1.  Inicie Visual Studio.  
+1. Inicie Visual Studio.  
   
-2.  En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**.  
+2. En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**.  
   
-3.  En el panel **Templates Categories** (Categorías de plantillas), expanda **Visual C#** y haga clic en **Windows**.  
+3. En el panel **Templates Categories** (Categorías de plantillas), expanda **Visual C#** y haga clic en **Windows**.  
   
-4.  En la parte superior del panel **Plantillas**, asegúrese de que **.NET Framework 4** aparece en el cuadro **Plataforma de destino**.  
+4. En la parte superior del panel **Plantillas**, asegúrese de que **.NET Framework 4** aparece en el cuadro **Plataforma de destino**.  
   
-5.  En el panel **Plantillas**, haga clic en **Aplicación de consola**.  
+5. En el panel **Plantillas**, haga clic en **Aplicación de consola**.  
   
-6.  Escriba un nombre para el proyecto en el campo **Nombre**.  
+6. Escriba un nombre para el proyecto en el campo **Nombre**.  
   
-7.  Haga clic en **Aceptar**.  
+7. Haga clic en **Aceptar**.  
   
      El proyecto nuevo aparece en el **Explorador de soluciones**.  
   
 ### <a name="to-add-a-reference"></a>Para agregar una referencia  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.  
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.  
   
-2.  En la página **.NET**, seleccione **Microsoft.Office.Interop.Word** en la lista **Nombre de componente**.  
+2. En la página **.NET**, seleccione **Microsoft.Office.Interop.Word** en la lista **Nombre de componente**.  
   
-3.  Haga clic en **Aceptar**.  
+3. Haga clic en **Aceptar**.  
   
 ### <a name="to-add-necessary-using-directives"></a>Para agregar las directivas using necesarias  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo **Program.cs** y, después, haga clic en **Ver código**.  
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo **Program.cs** y, después, haga clic en **Ver código**.  
   
-2.  Agregue las directivas `using` siguientes a la parte superior del archivo de código.  
+2. Agregue las directivas `using` siguientes a la parte superior del archivo de código.  
   
      [!code-csharp[csProgGuideNamedAndOptional#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#4)]  
   
 ### <a name="to-display-text-in-a-word-document"></a>Para mostrar texto en un documento de Word  
   
-1.  En la clase `Program` en Program.cs, agregue el método siguiente para crear una aplicación de Word y un documento de Word. El método [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) tiene cuatro parámetros opcionales. En este ejemplo se usan los valores predeterminados. Por lo tanto, no se necesitan argumentos en la instrucción de llamada.  
+1. En la clase `Program` en Program.cs, agregue el método siguiente para crear una aplicación de Word y un documento de Word. El método [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) tiene cuatro parámetros opcionales. En este ejemplo se usan los valores predeterminados. Por lo tanto, no se necesitan argumentos en la instrucción de llamada.  
   
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]  
   
-2.  Agregue el código siguiente al final del método para definir dónde se muestra texto en el documento y qué texto se muestra.  
+2. Agregue el código siguiente al final del método para definir dónde se muestra texto en el documento y qué texto se muestra.  
   
      [!code-csharp[csProgGuideNamedAndOptional#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#7)]  
   
 ### <a name="to-run-the-application"></a>Para ejecutar la aplicación  
   
-1.  Agregue la instrucción siguiente a Main.  
+1. Agregue la instrucción siguiente a Main.  
   
      [!code-csharp[csProgGuideNamedAndOptional#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#8)]  
   
-2.  Presione CTRL+F5 para ejecutar el proyecto. Aparecerá un documento de Word con el texto especificado.  
+2. Presione CTRL+F5 para ejecutar el proyecto. Aparecerá un documento de Word con el texto especificado.  
   
 ### <a name="to-change-the-text-to-a-table"></a>Para convertir el texto en tabla  
   
-1.  Use el método `ConvertToTable` para incluir el texto en una tabla. El método tiene 16 parámetros opcionales. IntelliSense coloca los parámetros opcionales entre corchetes, tal como se muestra en la ilustración siguiente.  
+1. Use el método `ConvertToTable` para incluir el texto en una tabla. El método tiene 16 parámetros opcionales. IntelliSense coloca los parámetros opcionales entre corchetes, tal como se muestra en la ilustración siguiente.  
   
      ![Lista de parámetros para el método ConvertToTable](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)  
   
@@ -89,15 +89,15 @@ Los argumentos con nombre y los argumentos opcionales, introducidos en [!INCLUDE
   
      [!code-csharp[csProgGuideNamedAndOptional#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#14)]  
   
-2.  Presione CTRL+F5 para ejecutar el proyecto.  
+2. Presione CTRL+F5 para ejecutar el proyecto.  
   
 ### <a name="to-experiment-with-other-parameters"></a>Para experimentar con otros parámetros  
   
-1.  Para cambiar la tabla de modo que tenga una columna y tres filas, reemplace la última línea de `DisplayInWord` por la instrucción siguiente y escriba CTRL+F5.  
+1. Para cambiar la tabla de modo que tenga una columna y tres filas, reemplace la última línea de `DisplayInWord` por la instrucción siguiente y escriba CTRL+F5.  
   
      [!code-csharp[csProgGuideNamedAndOptional#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#10)]  
   
-2.  Para especificar un formato predefinido para la tabla, reemplace la última línea de `DisplayInWord` por la instrucción siguiente y escriba CTRL+F5. El formato puede ser cualquiera de las constantes [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>).  
+2. Para especificar un formato predefinido para la tabla, reemplace la última línea de `DisplayInWord` por la instrucción siguiente y escriba CTRL+F5. El formato puede ser cualquiera de las constantes [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>).  
   
      [!code-csharp[csProgGuideNamedAndOptional#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#11)]  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58b7ca910f8f8c751f03b25459bc83efb8086923
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540980"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324139"
 ---
 # <a name="how-to-create-com-wrappers"></a>Procedimiento para crear contenedores COM
 
@@ -28,13 +28,13 @@ En Visual Studio 2005, puede agregar el contenedor COM como una referencia al pr
 
 ### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Para crear un contenedor RCW con Visual Studio
 
-1.  Abra el proyecto de la aplicación administrada.
+1. Abra el proyecto de la aplicación administrada.
 
-2.  En el menú **Proyecto**, haga clic en **Mostrar todos los archivos**.
+2. En el menú **Proyecto**, haga clic en **Mostrar todos los archivos**.
 
-3.  En el menú **Proyecto**, haga clic en **Agregar referencia**.
+3. En el menú **Proyecto**, haga clic en **Agregar referencia**.
 
-4.  En el cuadro de diálogo Agregar referencia, haga clic en la pestaña **COM**, seleccione el componente que quiera usar y haga clic en **Aceptar**.
+4. En el cuadro de diálogo Agregar referencia, haga clic en la pestaña **COM**, seleccione el componente que quiera usar y haga clic en **Aceptar**.
 
      En el **Explorador de soluciones**, tenga en cuenta que el componente COM se agrega a la carpeta Referencias del proyecto.
 
@@ -53,15 +53,15 @@ Ahora puede escribir código para tener acceso al objeto COM. Puede comenzar dec
   
 ### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Para crear un contenedor CCW con Visual Studio  
   
-1.  Cree un proyecto de biblioteca de clases para la clase administrada que quiera ejecutar en código nativo. La clase debe tener un constructor predeterminado.  
+1. Cree un proyecto de biblioteca de clases para la clase administrada que quiera ejecutar en código nativo. La clase debe tener un constructor predeterminado.  
   
      Compruebe que dispone de un número de versión de cuatro partes completo para el ensamblado en el archivo AssemblyInfo. Este número es necesario para mantener el control de versiones en el Registro de Windows. Para más información sobre los números de versión, vea [Versiones de los ensamblados](../../../docs/framework/app-domains/assembly-versioning.md).  
   
-2.  En el menú **Proyecto**, haga clic en **Propiedades**.  
+2. En el menú **Proyecto**, haga clic en **Propiedades**.  
   
-3.  Haga clic en la pestaña **Compilar**.  
+3. Haga clic en la pestaña **Compilar**.  
   
-4.  Active la casilla **Registrar para interoperabilidad COM**.  
+4. Active la casilla **Registrar para interoperabilidad COM**.  
   
  Al compilar el proyecto, el ensamblado se registra automáticamente para la interoperabilidad COM. Si va a compilar una aplicación nativa en Visual Studio 2005, puede usar el ensamblado haciendo clic en **Agregar referencia** en el menú **Proyecto**.  
   
@@ -76,4 +76,4 @@ Puede ejecutar Regasm.exe en un ensamblado que se encuentre en cualquier directo
 ## <a name="see-also"></a>Vea también
 
 - [Contenedor al que se puede llamar en tiempo de ejecución](../../../docs/framework/interop/runtime-callable-wrapper.md)
-- [Contenedor CCW (COM callable wrapper)](../../../docs/framework/interop/com-callable-wrapper.md)
+- [Contenedor CCW](../../../docs/framework/interop/com-callable-wrapper.md)

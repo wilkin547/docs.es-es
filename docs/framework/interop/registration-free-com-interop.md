@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1e4dacf66cc17182265e8ea9f132938017a54e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698432"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301001"
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilidad COM sin registro
 La interoperabilidad COM sin registrar activa un componente sin usar el Registro de Windows para almacenar la información de los ensamblados. En vez de registrar un componente en un equipo durante la implementación, se crean archivos de manifiesto del estilo de Win32 en tiempo de diseño, con información sobre enlace y activación. En lugar de las claves del Registro, estos archivos de manifiesto dirigen la activación de un objeto.  
@@ -32,7 +32,7 @@ La interoperabilidad COM sin registrar activa un componente sin usar el Registro
   
 ### <a name="requirements-for-registration-free-com-interop"></a>Requisitos para interoperabilidad COM sin registro  
   
-1.  La compatibilidad para la interoperabilidad COM sin registro varía ligeramente según el tipo de ensamblado de biblioteca; en concreto, si el ensamblado es no administrado (COM en paralelo) o administrado (basado en .NET). En la tabla siguiente se muestra los requisitos de sistema operativo y de versión de .NET Framework para cada tipo de ensamblado.  
+1. La compatibilidad para la interoperabilidad COM sin registro varía ligeramente según el tipo de ensamblado de biblioteca; en concreto, si el ensamblado es no administrado (COM en paralelo) o administrado (basado en .NET). En la tabla siguiente se muestra los requisitos de sistema operativo y de versión de .NET Framework para cada tipo de ensamblado.  
   
     |Tipo de ensamblado|Sistema operativo|Versión de .NET Framework|  
     |-------------------|----------------------|----------------------------|  
@@ -45,7 +45,7 @@ La interoperabilidad COM sin registrar activa un componente sin usar el Registro
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>Configurar componentes COM para la activación sin registro  
   
-1.  Para que un componente COM participe en la activación sin registro, debe implementarse como un ensamblado en paralelo. Los ensamblados en paralelo son ensamblados no administrados.  Para más información, consulte el tema sobre [cómo usar ensamblados en paralelo](/windows/desktop/SbsCs/using-side-by-side-assemblies).  
+1. Para que un componente COM participe en la activación sin registro, debe implementarse como un ensamblado en paralelo. Los ensamblados en paralelo son ensamblados no administrados.  Para más información, consulte el tema sobre [cómo usar ensamblados en paralelo](/windows/desktop/SbsCs/using-side-by-side-assemblies).  
   
      Para usar ensamblados COM en paralelo, un desarrollador de aplicaciones basadas en .NET debe proporcionar un manifiesto de aplicación con información sobre enlace y activación. La compatibilidad con los ensamblados en paralelo no administrados está integrada en el sistema operativo Windows XP. El tiempo de ejecución COM, admitido por el sistema operativo, busca un manifiesto de aplicación para obtener información de activación cuando el componente que se va a activar no está en el Registro.  
   
@@ -55,4 +55,5 @@ La interoperabilidad COM sin registrar activa un componente sin usar el Registro
     >  La ejecución en paralelo es una característica de .NET Framework que permite ejecutar varias versiones del tiempo de ejecución y varias versiones de las aplicaciones y los componentes que usan una versión del tiempo de ejecución, en el mismo equipo y al mismo tiempo. La ejecución en paralelo y los ensamblados en paralelo son mecanismos diferentes para proporcionar una funcionalidad en paralelo.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Configurar componentes COM basados en .NET Framework para la activación sin registro](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
+
+- [Procedimiento para configurar componentes COM basados en .NET Framework para la activación sin registro](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: ed7f88b20e4d519e67c8ef7b9f74909a38ea9c14
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829322"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327651"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Tutorial: Cambiar el lugar en el que My.Application.Log escribe la información (Visual Basic)
 Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre los eventos que se producen en su aplicación. Este tutorial muestra cómo reemplazar la configuración predeterminada y hacer que el objeto `Log` escriba en otros agentes de escucha de registro.  
@@ -22,7 +22,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
 ### <a name="to-add-listeners"></a>Para agregar agentes de escucha  
   
-1.  Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
+1. Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
   
      \- o -  
   
@@ -34,9 +34,9 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
     3.  Haga clic en **Agregar**.  
   
-2.  Busque la sección `<listeners>` , bajo la sección `<source>` con el atributo `name` el "DefaultSource", en la sección `<sources>` . La sección `<sources>` está en la sección `<system.diagnostics>` , en la sección de nivel superior `<configuration>` .  
+2. Busque la sección `<listeners>` , bajo la sección `<source>` con el atributo `name` el "DefaultSource", en la sección `<sources>` . La sección `<sources>` está en la sección `<system.diagnostics>` , en la sección de nivel superior `<configuration>` .  
   
-3.  Agregue estos elementos a la sección `<listeners>` .  
+3. Agregue estos elementos a la sección `<listeners>` .  
   
     ```xml  
     <!-- Uncomment to connect the application file log. -->  
@@ -51,11 +51,11 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
     <!-- <add name="Console" /> -->  
     ```  
   
-4.  Quite la marca de comentario de los agentes de escucha de registro que desee que reciban mensajes de `Log` .  
+4. Quite la marca de comentario de los agentes de escucha de registro que desee que reciban mensajes de `Log` .  
   
-5.  Busque la sección `<sharedListeners>` , en la sección `<system.diagnostics>` , en la sección de nivel superior `<configuration>` .  
+5. Busque la sección `<sharedListeners>` , en la sección `<system.diagnostics>` , en la sección de nivel superior `<configuration>` .  
   
-6.  Agregue estos elementos a la sección `<sharedListeners>` .  
+6. Agregue estos elementos a la sección `<sharedListeners>` .  
   
     ```xml  
     <add name="FileLog"  
@@ -86,7 +86,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
          initializeData="true" />  
     ```  
   
-7.  El contenido del archivo app.config debe ser similar al código XML siguiente:  
+7. El contenido del archivo app.config debe ser similar al código XML siguiente:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -147,9 +147,9 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
 ### <a name="to-reconfigure-a-listener"></a>Para volver a configurar un agente de escucha  
   
-1.  Busque el elemento `<add>` del agente de escucha de la sección `<sharedListeners>` .  
+1. Busque el elemento `<add>` del agente de escucha de la sección `<sharedListeners>` .  
   
-2.  El atributo `type` proporciona el nombre del tipo de agente de escucha. Este tipo debe heredar de la clase <xref:System.Diagnostics.TraceListener> . Use el nombre de tipo con nombre seguro para asegurarse de que se use el tipo correcto. Para obtener más información, consulte la sección "Para hacer referencia a un tipo con nombre seguro" a continuación.  
+2. El atributo `type` proporciona el nombre del tipo de agente de escucha. Este tipo debe heredar de la clase <xref:System.Diagnostics.TraceListener> . Use el nombre de tipo con nombre seguro para asegurarse de que se use el tipo correcto. Para obtener más información, consulte la sección "Para hacer referencia a un tipo con nombre seguro" a continuación.  
   
      Algunos tipos válidos que puede usar son:  
   
@@ -163,17 +163,17 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
      Para obtener información sobre dónde escriben información otros tipos de agentes de escucha de registro, consulte la documentación de ese tipo.  
   
-3.  Cuando la aplicación crea el objeto de agente de escucha de registro, pasa el atributo `initializeData` como el parámetro de constructor. El significado del atributo `initializeData` depende del agente de escucha de seguimiento.  
+3. Cuando la aplicación crea el objeto de agente de escucha de registro, pasa el atributo `initializeData` como el parámetro de constructor. El significado del atributo `initializeData` depende del agente de escucha de seguimiento.  
   
-4.  Después de crear el agente de escucha de registro, la aplicación establece las propiedades del agente de escucha. Estas propiedades se definen mediante los demás atributos del elemento `<add>` . Para obtener más información sobre las propiedades de un agente de escucha determinado, consulte la documentación de este tipo de agente de escucha.  
+4. Después de crear el agente de escucha de registro, la aplicación establece las propiedades del agente de escucha. Estas propiedades se definen mediante los demás atributos del elemento `<add>` . Para obtener más información sobre las propiedades de un agente de escucha determinado, consulte la documentación de este tipo de agente de escucha.  
   
 ### <a name="to-reference-a-strongly-named-type"></a>Para hacer referencia a un tipo con nombre seguro  
   
-1.  Para asegurarse de que se usa el tipo correcto para el agente de escucha de registro, asegúrese de usar el nombre completo del tipo y el nombre de ensamblado con nombre seguro. La sintaxis de un tipo con nombre seguro es la siguiente:  
+1. Para asegurarse de que se usa el tipo correcto para el agente de escucha de registro, asegúrese de usar el nombre completo del tipo y el nombre de ensamblado con nombre seguro. La sintaxis de un tipo con nombre seguro es la siguiente:  
   
      \<*nombre de tipo*>, \<*nombre de ensamblado*>, \<*número de versión*>, \<*referencia cultural*>, \<*nombre seguro*>  
   
-2.  Este ejemplo de código muestra cómo determinar el nombre de tipo con nombre seguro para un tipo completo (en este caso, "System.Diagnostics.FileLogTraceListener").  
+2. Este ejemplo de código muestra cómo determinar el nombre de tipo con nombre seguro para un tipo completo (en este caso, "System.Diagnostics.FileLogTraceListener").  
   
      [!code-vb[VbVbalrMyApplicationLog#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#15)]  
   
@@ -187,5 +187,5 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
 - <xref:System.Diagnostics.TraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>
 - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>
-- [Cómo: Escribir información de eventos en un archivo de texto](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
-- [Cómo: Escribir el registro de eventos de una aplicación](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+- [Procedimiento para escribir información de eventos en un archivo de texto](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
+- [Procedimiento para escribir en el registro de eventos de una aplicación](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)

@@ -2,12 +2,12 @@
 title: -target:winmdobj (Opciones del compilador de C#)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 4000394a35c8990d3c5793c1313fc768a61c3271
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cc85bf582d737114bc0e621a9568bbb9acb791b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608971"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319305"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (Opciones del compilador de C#)
 Si usa la opción del compilador **-target:winmdobj**, el compilador crea un archivo .winmdobj intermedio que se puede convertir en un archivo binario de Windows Runtime (.winmd). A continuación, pueden usar el archivo .winmd programas de JavaScript y C++, además de los programas de lenguajes administrados.  
@@ -29,11 +29,11 @@ Si usa la opción del compilador **-target:winmdobj**, el compilador crea un arc
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Para establecer esta opción del compilador en el IDE de Visual Studio para una aplicación de la Tienda Windows  
   
-1.  En el **Explorador de soluciones**, abra el menú contextual del proyecto y, después, pulse **Propiedades**.  
+1. En el **Explorador de soluciones**, abra el menú contextual del proyecto y, después, pulse **Propiedades**.  
   
-2.  Pulse la pestaña **Aplicación**.  
+2. Pulse la pestaña **Aplicación**.  
   
-3.  En la lista **Tipo de resultado**, pulse **Archivo WinMD**.  
+3. En la lista **Tipo de resultado**, pulse **Archivo WinMD**.  
   
      La opción **Archivo WinMD** solo está disponible para las plantillas de aplicación de [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
   

@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3678c687817c4c93508d95c3d4b7453eadee32e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3950b7a8cf107fc06240f56e5f95eca4e6882251
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643772"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314937"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Procedimiento para mostrar milisegundos en los valores de fecha y hora
 Los métodos de formato de fecha y hora predeterminados, como <xref:System.DateTime.ToString?displayProperty=nameWithType>, incluyen las horas, minutos y segundos de un valor de tiempo, pero excluyen el componente correspondiente a los milisegundos. En este tema se muestra cómo se incluye un componente de milisegundos de un valor de fecha y hora en cadenas de fecha y hora con formato.  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>Para mostrar el componente de milisegundos de un valor DateTime  
   
-1.  Cuando trabaje con la representación de cadena de una fecha, conviértala en un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> mediante el método estático <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType>.  
+1. Cuando trabaje con la representación de cadena de una fecha, conviértala en un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> mediante el método estático <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType>.  
   
-2.  Para extraer la representación de cadena del componente de milisegundos de una hora, llame al método <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%2A> del valor de fecha y hora y pase el modelo de formato personalizado `fff` o `FFF` en solitario o junto a otros especificadores de formato personalizado como el parámetro `format`.  
+2. Para extraer la representación de cadena del componente de milisegundos de una hora, llame al método <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%2A> del valor de fecha y hora y pase el modelo de formato personalizado `fff` o `FFF` en solitario o junto a otros especificadores de formato personalizado como el parámetro `format`.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo se muestra el componente de milisegundos de un valor <xref:System.DateTime> y <xref:System.DateTimeOffset> en la consola en su presentación en solitario e incluido en una cadena de fecha y hora más larga.  
@@ -57,4 +57,4 @@ Los métodos de formato de fecha y hora predeterminados, como <xref:System.DateT
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

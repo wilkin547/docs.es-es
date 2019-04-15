@@ -5,35 +5,35 @@ helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: bdbe9b1d05acdc0f67f0264ed1583dff922e527b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 53bf93a326123ddb1e26ef5964fa057148505116
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307228"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>Procedimiento para registrar excepciones en Visual Basic
 Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre excepciones que se producen en la aplicación. Estos ejemplos muestran cómo usar el método `My.Application.Log.WriteException` para registrar excepciones que detecta explícitamente y excepciones que no se controlan.  
   
- Para registrar información de seguimiento, use el método `My.Application.Log.WriteEntry`. Para obtener más información, vea <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
+ Para registrar información de seguimiento, use el método `My.Application.Log.WriteEntry`. Para obtener más información, consulte <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
   
 ### <a name="to-log-a-handled-exception"></a>Para registrar una excepción controlada  
   
-1.  Cree el método que generará la información de excepción.  
+1. Cree el método que generará la información de excepción.  
   
      [!code-vb[VbVbalrMyApplicationLog#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#9)]  
   
-2.  Use un bloque `Try...Catch` para detectar la excepción.  
+2. Use un bloque `Try...Catch` para detectar la excepción.  
   
      [!code-vb[VbVbalrMyApplicationLog#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#6)]  
   
-3.  Coloque el código que podría generar una excepción en el bloque `Try`.  
+3. Coloque el código que podría generar una excepción en el bloque `Try`.  
   
      Quite la marca de comentario de las líneas `Dim` y `MsgBox` para generar una excepción <xref:System.NullReferenceException>.  
   
      [!code-vb[VbVbalrMyApplicationLog#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#7)]  
   
-4.  En el bloque `Catch`, use el método `My.Application.Log.WriteException` para escribir la información de excepción.  
+4. En el bloque `Catch`, use el método `My.Application.Log.WriteException` para escribir la información de excepción.  
   
      [!code-vb[VbVbalrMyApplicationLog#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#8)]  
   
@@ -43,21 +43,21 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
 ### <a name="to-log-an-unhandled-exception"></a>Para registrar una excepción no controlada  
   
-1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto** , elija **Propiedades**.  
+1. Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto** , elija **Propiedades**.  
   
-2.  Haga clic en la pestaña **Aplicación** .  
+2. Haga clic en la pestaña **Aplicación** .  
   
-3.  Haga clic en el botón **Ver eventos de aplicaciones** para abrir el Editor de código.  
+3. Haga clic en el botón **Ver eventos de aplicaciones** para abrir el Editor de código.  
   
      Se abre el archivo ApplicationEvents.vb.  
   
-4.  Tenga el archivo ApplicationEvents.vb abierto en el Editor de código. En el menú **General** , elija **Eventos MyApplication**.  
+4. Tenga el archivo ApplicationEvents.vb abierto en el Editor de código. En el menú **General** , elija **Eventos MyApplication**.  
   
-5.  En el menú **Declaraciones**, pulse **UnhandledException**.  
+5. En el menú **Declaraciones**, pulse **UnhandledException**.  
   
      La aplicación genera el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> antes de que se ejecute la aplicación principal.  
   
-6.  Agregue el método `My.Application.Log.WriteException` al controlador de eventos `UnhandledException` .  
+6. Agregue el método `My.Application.Log.WriteException` al controlador de eventos `UnhandledException` .  
   
      [!code-vb[VbVbalrMyApplicationLog#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#4)]  
   
@@ -71,6 +71,6 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Cómo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Procedimiento para escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
 - [Tutorial: Cambiar el lugar en el que My.Application.Log escribe la información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

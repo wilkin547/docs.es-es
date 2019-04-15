@@ -12,12 +12,12 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 5a4ecd1fbe5bb79a67d9df07d8f1a93830b03880
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17dd992edbec5ce444b53ed42b2b486282618672
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499874"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315808"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (Opciones del compilador de C#)
 La opción **-warn** especifica el nivel de advertencia que debe mostrar el compilador.  
@@ -49,11 +49,11 @@ La opción **-warn** especifica el nivel de advertencia que debe mostrar el comp
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra la página **Propiedades** del proyecto.  
+1. Abra la página **Propiedades** del proyecto.  
   
-2.  Haga clic en la página de propiedades de **Compilar**.  
+2. Haga clic en la página de propiedades de **Compilar**.  
   
-3.  Modifique la propiedad de **Nivel de advertencia**.  
+3. Modifique la propiedad de **Nivel de advertencia**.  
   
  Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.  
   

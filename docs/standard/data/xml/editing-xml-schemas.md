@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2cf9e1b4349d83a378f6b17e8740c95546bbe4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573974"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308723"
 ---
 # <a name="editing-xml-schemas"></a>Edición de esquemas XML
 La edición de un esquema XML es una de las características más importantes del Modelo de objetos de esquema (SOM). Se pueden utilizar todas las propiedades previas a la compilación de esquemas del SOM para cambiar los valores existentes de un esquema XML. Luego, el esquema XML se puede recompilar para reflejar los cambios.  
@@ -27,19 +27,19 @@ La edición de un esquema XML es una de las características más importantes de
 ### <a name="phonenumber-element-example"></a>Ejemplo del elemento PhoneNumber  
  En el primer ejemplo de código se agrega un nuevo elemento `PhoneNumber` al elemento `Customer` del esquema del cliente. El ejemplo de código edita el esquema del cliente en los siguientes pasos.  
   
-1.  Agrega el esquema del cliente a un objeto <xref:System.Xml.Schema.XmlSchemaSet> nuevo y luego lo compila. Cualquier error o advertencia de validación de esquemas que se encuentre durante la lectura o compilación del esquema se controla por medio del delegado <xref:System.Xml.Schema.ValidationEventHandler>.  
+1. Agrega el esquema del cliente a un objeto <xref:System.Xml.Schema.XmlSchemaSet> nuevo y luego lo compila. Cualquier error o advertencia de validación de esquemas que se encuentre durante la lectura o compilación del esquema se controla por medio del delegado <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2.  Recupera el objeto <xref:System.Xml.Schema.XmlSchema> compilado desde <xref:System.Xml.Schema.XmlSchemaSet> iterando por la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Puesto que el esquema se compila, las propiedades del conjunto de información posterior a la compilación del esquema son accesibles.  
+2. Recupera el objeto <xref:System.Xml.Schema.XmlSchema> compilado desde <xref:System.Xml.Schema.XmlSchemaSet> iterando por la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Puesto que el esquema se compila, las propiedades del conjunto de información posterior a la compilación del esquema son accesibles.  
   
-3.  Crea el elemento `PhoneNumber` utilizando la clase <xref:System.Xml.Schema.XmlSchemaElement>, la restricción de tipos simples `xs:string` utilizando las clases <xref:System.Xml.Schema.XmlSchemaSimpleType> y <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction>, agrega una faceta de patrón a la propiedad <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> de la restricción, y agrega la restricción a la propiedad <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> del tipo simple y el tipo simple al <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> del elemento `PhoneNumber`.  
+3. Crea el elemento `PhoneNumber` utilizando la clase <xref:System.Xml.Schema.XmlSchemaElement>, la restricción de tipos simples `xs:string` utilizando las clases <xref:System.Xml.Schema.XmlSchemaSimpleType> y <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction>, agrega una faceta de patrón a la propiedad <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> de la restricción, y agrega la restricción a la propiedad <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> del tipo simple y el tipo simple al <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> del elemento `PhoneNumber`.  
   
-4.  Itera por cada <xref:System.Xml.Schema.XmlSchemaElement> de la colección <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> de la colección <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> posterior a la compilación de esquemas.  
+4. Itera por cada <xref:System.Xml.Schema.XmlSchemaElement> de la colección <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> de la colección <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> posterior a la compilación de esquemas.  
   
-5.  Si el <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> del elemento es `"Customer"`, se obtiene el tipo complejo del elemento `Customer` utilizando la clase <xref:System.Xml.Schema.XmlSchemaComplexType> y la partícula de secuencia del tipo complejo utilizando la clase <xref:System.Xml.Schema.XmlSchemaSequence>.  
+5. Si el <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> del elemento es `"Customer"`, se obtiene el tipo complejo del elemento `Customer` utilizando la clase <xref:System.Xml.Schema.XmlSchemaComplexType> y la partícula de secuencia del tipo complejo utilizando la clase <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-6.  Agrega el nuevo elemento `PhoneNumber` a la secuencia que contiene los elementos `FirstName` y `LastName` existentes utilizando la colección <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> previa a la compilación de esquemas de la secuencia.  
+6. Agrega el nuevo elemento `PhoneNumber` a la secuencia que contiene los elementos `FirstName` y `LastName` existentes utilizando la colección <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> previa a la compilación de esquemas de la secuencia.  
   
-7.  Por último, vuelve a procesar y compilar el objeto <xref:System.Xml.Schema.XmlSchema> modificado utilizando los métodos <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> y <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de la clase <xref:System.Xml.Schema.XmlSchemaSet> y lo escribe en la consola.  
+7. Por último, vuelve a procesar y compilar el objeto <xref:System.Xml.Schema.XmlSchema> modificado utilizando los métodos <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> y <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de la clase <xref:System.Xml.Schema.XmlSchemaSet> y lo escribe en la consola.  
   
  Éste es el ejemplo de código completo.  
   
@@ -76,34 +76,34 @@ La edición de un esquema XML es una de las características más importantes de
   
  El ejemplo de código edita el esquema del cliente en los siguientes pasos.  
   
-1.  Agrega el esquema del cliente a un objeto <xref:System.Xml.Schema.XmlSchemaSet> nuevo y luego lo compila. Cualquier error o advertencia de validación de esquemas que se encuentre durante la lectura o compilación del esquema se controla por medio del delegado <xref:System.Xml.Schema.ValidationEventHandler>.  
+1. Agrega el esquema del cliente a un objeto <xref:System.Xml.Schema.XmlSchemaSet> nuevo y luego lo compila. Cualquier error o advertencia de validación de esquemas que se encuentre durante la lectura o compilación del esquema se controla por medio del delegado <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2.  Recupera el objeto <xref:System.Xml.Schema.XmlSchema> compilado desde <xref:System.Xml.Schema.XmlSchemaSet> iterando por la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Puesto que el esquema se compila, las propiedades del conjunto de información posterior a la compilación del esquema son accesibles.  
+2. Recupera el objeto <xref:System.Xml.Schema.XmlSchema> compilado desde <xref:System.Xml.Schema.XmlSchemaSet> iterando por la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Puesto que el esquema se compila, las propiedades del conjunto de información posterior a la compilación del esquema son accesibles.  
   
-3.  Crea un nuevo tipo complejo del elemento `FirstName` utilizando la clase <xref:System.Xml.Schema.XmlSchemaComplexType>.  
+3. Crea un nuevo tipo complejo del elemento `FirstName` utilizando la clase <xref:System.Xml.Schema.XmlSchemaComplexType>.  
   
-4.  Crea una nueva extensión de contenido simple con un tipo base de `xs:string` utilizando las clases <xref:System.Xml.Schema.XmlSchemaSimpleContent> y <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension>.  
+4. Crea una nueva extensión de contenido simple con un tipo base de `xs:string` utilizando las clases <xref:System.Xml.Schema.XmlSchemaSimpleContent> y <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension>.  
   
-5.  Crea el nuevo atributo `Title` utilizando la clase <xref:System.Xml.Schema.XmlSchemaAttribute> con un <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> de `xs:string` y agrega el atributo a la extensión de contenido simple.  
+5. Crea el nuevo atributo `Title` utilizando la clase <xref:System.Xml.Schema.XmlSchemaAttribute> con un <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> de `xs:string` y agrega el atributo a la extensión de contenido simple.  
   
-6.  Establece el modelo de contenido del contenido simple en la extensión de contenido simple y el modelo de contenido del tipo simple en el contenido simple.  
+6. Establece el modelo de contenido del contenido simple en la extensión de contenido simple y el modelo de contenido del tipo simple en el contenido simple.  
   
-7.  Agrega el nuevo tipo complejo a la colección <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> previa a la compilación de esquemas.  
+7. Agrega el nuevo tipo complejo a la colección <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> previa a la compilación de esquemas.  
   
-8.  Itera por cada <xref:System.Xml.Schema.XmlSchemaObject> de la colección <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> previa a la compilación de esquemas.  
+8. Itera por cada <xref:System.Xml.Schema.XmlSchemaObject> de la colección <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> previa a la compilación de esquemas.  
   
 > [!NOTE]
 >  Puesto que el elemento `FirstName` no es un elemento global del esquema, no está disponible en las colecciones <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> o <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>. El ejemplo de código localiza el elemento `FirstName`, localizando primero el elemento `Customer`.  
 >   
 >  El primer ejemplo de código atravesó el esquema utilizando la colección <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> posterior a la compilación de esquemas. En este ejemplo se utiliza la colección <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> previa a la compilación de esquemas para atravesar el esquema. Aunque ambas colecciones proporcionan acceso a los elementos globales del esquema, la iteración por la colección <xref:System.Xml.Schema.XmlSchema.Items%2A> tarda más tiempo porque hay que iterar por todos los elementos globales del esquema y no tiene ninguna propiedad PSCI. Las colecciones PSCI (<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType>, etc.) proporcionan acceso directo a sus elementos, atributos y tipos globales y a sus propiedades PSCI.  
   
-1.  Si <xref:System.Xml.Schema.XmlSchemaObject> es un elemento, cuyo <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> es `"Customer"`, se obtiene el tipo complejo del elemento `Customer` utilizando la clase <xref:System.Xml.Schema.XmlSchemaComplexType> y la partícula de secuencia del tipo complejo utilizando la clase <xref:System.Xml.Schema.XmlSchemaSequence>.  
+1. Si <xref:System.Xml.Schema.XmlSchemaObject> es un elemento, cuyo <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> es `"Customer"`, se obtiene el tipo complejo del elemento `Customer` utilizando la clase <xref:System.Xml.Schema.XmlSchemaComplexType> y la partícula de secuencia del tipo complejo utilizando la clase <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-2.  Itera por cada <xref:System.Xml.Schema.XmlSchemaParticle> de la colección <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> previa a la compilación de esquemas.  
+2. Itera por cada <xref:System.Xml.Schema.XmlSchemaParticle> de la colección <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> previa a la compilación de esquemas.  
   
-3.  Si <xref:System.Xml.Schema.XmlSchemaParticle> es un elemento, cuyo <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> es `"FirstName"`, establece el <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> del elemento `FirstName` en el nuevo tipo complejo `FirstName`.  
+3. Si <xref:System.Xml.Schema.XmlSchemaParticle> es un elemento, cuyo <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> es `"FirstName"`, establece el <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> del elemento `FirstName` en el nuevo tipo complejo `FirstName`.  
   
-4.  Por último, vuelve a procesar y compilar el objeto <xref:System.Xml.Schema.XmlSchema> modificado utilizando los métodos <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> y <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de la clase <xref:System.Xml.Schema.XmlSchemaSet> y lo escribe en la consola.  
+4. Por último, vuelve a procesar y compilar el objeto <xref:System.Xml.Schema.XmlSchema> modificado utilizando los métodos <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> y <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de la clase <xref:System.Xml.Schema.XmlSchemaSet> y lo escribe en la consola.  
   
  Éste es el ejemplo de código completo.  
   
@@ -139,8 +139,8 @@ La edición de un esquema XML es una de las características más importantes de
 
 - [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lectura y escritura de esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Recorrido de esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Cómo atravesar esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [Inclusión o importación de esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
 - [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [Conjunto de información posterior a la compilación de esquemas](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

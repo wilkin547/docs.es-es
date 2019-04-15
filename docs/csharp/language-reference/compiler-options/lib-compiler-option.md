@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: f3ea4a323fa57a49499c4fa6dea43aa22c3475df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677880"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319409"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (Opciones del compilador de C#)
 La opción **-lib** especifica la ubicación de los ensamblados a los que se hace referencia mediante la opción [-reference (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
@@ -34,13 +34,13 @@ La opción **-lib** especifica la ubicación de los ensamblados a los que se hac
 ## <a name="remarks"></a>Comentarios  
  El compilador busca referencias a ensamblados que no presentan la ruta completa en el siguiente orden:  
   
-1.  Directorio de trabajo actual. Es el directorio desde donde se invoca al compilador.  
+1. Directorio de trabajo actual. Es el directorio desde donde se invoca al compilador.  
   
-2.  El directorio del sistema de Common Language Runtime.  
+2. El directorio del sistema de Common Language Runtime.  
   
-3.  Directorios especificados por **-lib**.  
+3. Directorios especificados por **-lib**.  
   
-4.  Directorios especificados por la variable de entorno LIB.  
+4. Directorios especificados por la variable de entorno LIB.  
   
  Use **-reference** para especificar una referencia a un ensamblado.  
   
@@ -52,11 +52,11 @@ La opción **-lib** especifica la ubicación de los ensamblados a los que se hac
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  
   
-2.  Haga clic en la página de propiedades **Ruta de acceso de referencias**.  
+2. Haga clic en la página de propiedades **Ruta de acceso de referencias**.  
   
-3.  Modifique el contenido del cuadro de lista.  
+3. Modifique el contenido del cuadro de lista.  
   
  Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
   

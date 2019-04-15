@@ -16,12 +16,12 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: 3437b0f90593eed2900829212866cf689ff54e8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ce1bb864c4cb0b1c330de7d96649f9870231e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660182"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328704"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (Opciones del compilador de C#)
 La opción **-filealign** permite especificar el tamaño de las secciones en el archivo de salida.  
@@ -45,13 +45,13 @@ La opción **-filealign** permite especificar el tamaño de las secciones en el 
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra la página **Propiedades** del proyecto.  
+1. Abra la página **Propiedades** del proyecto.  
   
-2.  Haga clic en la página de propiedades de **Compilar**.  
+2. Haga clic en la página de propiedades de **Compilar**.  
   
-3.  Haga clic en el botón **Avanzada** .  
+3. Haga clic en el botón **Avanzada** .  
   
-4.  Modifique la propiedad **Alineación de archivo**.  
+4. Modifique la propiedad **Alineación de archivo**.  
   
  Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
   

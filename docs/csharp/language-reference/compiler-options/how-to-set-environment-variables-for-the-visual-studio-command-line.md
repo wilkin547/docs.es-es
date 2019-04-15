@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: ffc75a01230df078073f163c97a8c77229d3b2a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c906a2274f57f5a89fb16198c8f6ed2e3a335e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590882"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322126"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Procedimiento Establecer variables de entorno para la línea de comandos de Visual Studio
 
@@ -33,11 +33,11 @@ Si se instala la versión actual de Visual Studio en un equipo que también tien
   
 ### <a name="to-run-vsdevcmdbat"></a>Para ejecutar VsDevCmd.BAT:  
   
-1.  En el menú **Inicio**, abra **Símbolo del sistema para desarrolladores de VS 2017**.  Se encuentra en la carpeta **Visual Studio 2017**.
+1. En el menú **Inicio**, abra **Símbolo del sistema para desarrolladores de VS 2017**.  Se encuentra en la carpeta **Visual Studio 2017**.
   
-2.  Cambie al subdirectorio \Archivos de programa\Microsoft Visual Studio\\*Versión*\\*Oferta*\Common7\Tools o Archivos de programa (x86)\Microsoft Visual Studio\\*Versión*\\*Oferta*\Common7\Tools de la instalación.  (*Versión* es *2017* para la versión actual. *Oferta* es una de las opciones siguientes: *Enterprise*, *Professional* o *Community*.)
+2. Cambie al subdirectorio \Archivos de programa\Microsoft Visual Studio\\*Versión*\\*Oferta*\Common7\Tools o Archivos de programa (x86)\Microsoft Visual Studio\\*Versión*\\*Oferta*\Common7\Tools de la instalación.  (*Versión* es *2017* para la versión actual. *Oferta* es una de las opciones siguientes: *Enterprise*, *Professional* o *Community*.)
   
-3.  Ejecute VsDevCmd.bat escribiendo **VsDevCmd**.  
+3. Ejecute VsDevCmd.bat escribiendo **VsDevCmd**.  
   
     > [!CAUTION]
     >  VsDevCmd.bat puede ser diferente en equipos distintos. No debe reemplazar un archivo VsDevCmd.bat dañado o inexistente por el archivo VsDevCmd.bat de otro equipo. En su lugar, vuelva a ejecutar el programa de instalación para reemplazar el archivo que falta.  

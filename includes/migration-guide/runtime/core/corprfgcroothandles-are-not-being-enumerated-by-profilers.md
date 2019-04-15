@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8433899058c6f569e380999800557dbe8ed0a169
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235809"
+---
 ### <a name="corprfgcroothandles-are-not-being-enumerated-by-profilers"></a>Los generadores de perfiles no enumeran COR_PRF_GC_ROOT_HANDLE
 
 |   |   |
@@ -7,4 +15,3 @@
 |Ámbito|Secundaria|
 |Versión|4.5.1|
 |Tipo|Tiempo de ejecución|
-

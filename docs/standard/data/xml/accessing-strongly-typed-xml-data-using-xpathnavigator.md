@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd0719fbc84159fdf751b136c2a65b0ce40b42ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1905e9f1d80931bd15cff5f3d0a92ceee29435ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665193"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319890"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Acceso a datos XML fuertemente tipados utilizando XPathNavigator
 Como instancia del modelo de datos XPath 2.0, la clase <xref:System.Xml.XPath.XPathNavigator> puede contener datos fuertemente tipados que se asignen a tipos de Common Language Runtime (CLR). De acuerdo con el modelo de datos XPath 2.0, solo los elementos y los atributos pueden contener datos fuertemente tipados. La clase <xref:System.Xml.XPath.XPathNavigator> proporciona mecanismos para tener acceso a los datos en un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> como datos fuertemente tipados, así como mecanismos para convertir un tipo de datos en otro.  
@@ -52,11 +52,11 @@ Como instancia del modelo de datos XPath 2.0, la clase <xref:System.Xml.XPath.XP
 ## <a name="the-post-schema-validation-infoset-psvi"></a>El conjunto de información posterior a la validación de esquemas (PSVI)  
  Un procesador de esquemas XML acepta un conjunto de información XML como entrada y lo convierte en un conjunto de información posterior a la validación de esquemas. Un conjunto de información posterior a la validación de esquemas es el conjunto de información XML original en el que se han agregado nuevos elementos de información y nuevas propiedades a elementos de información existentes. Existen tres clases de información muy amplias que se agregan al conjunto de información XML del conjunto de información posterior a la validación de esquemas que proporciona el <xref:System.Xml.XPath.XPathNavigator>.  
   
-1.  Resultados de la validación: información referente a si un elemento o atributo se ha validado correctamente o no. Esta información la proporciona la propiedad <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> de la propiedad <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> de la clase <xref:System.Xml.XPath.XPathNavigator>.  
+1. Resultados de la validación: información referente a si un elemento o atributo se ha validado correctamente o no. Esta información la proporciona la propiedad <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> de la propiedad <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> de la clase <xref:System.Xml.XPath.XPathNavigator>.  
   
-2.  Información predeterminada: indicaciones referentes a si el valor del elemento o atributo se ha obtenido o no a través de los valores predeterminados especificados en el esquema. Esta información la proporciona la propiedad <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> de la propiedad <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> de la clase <xref:System.Xml.XPath.XPathNavigator>.  
+2. Información predeterminada: indicaciones referentes a si el valor del elemento o atributo se ha obtenido o no a través de los valores predeterminados especificados en el esquema. Esta información la proporciona la propiedad <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> de la propiedad <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> de la clase <xref:System.Xml.XPath.XPathNavigator>.  
   
-3.  Anotaciones de tipo: referencias a componentes del esquema que pueden ser definiciones de tipo o declaraciones de atributos o elementos. La propiedad <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> de <xref:System.Xml.XPath.XPathNavigator> contiene la información de tipo específica del nodo si es válido. Si la validez del nodo es desconocida como, por ejemplo, cuándo se validó y posteriormente se editó, la propiedad <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> se establece en `null` pero la información de tipo sigue estando disponible en varias propiedades de la propiedad <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> de la clase <xref:System.Xml.XPath.XPathNavigator>.  
+3. Anotaciones de tipo: referencias a componentes del esquema que pueden ser definiciones de tipo o declaraciones de atributos o elementos. La propiedad <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> de <xref:System.Xml.XPath.XPathNavigator> contiene la información de tipo específica del nodo si es válido. Si la validez del nodo es desconocida como, por ejemplo, cuándo se validó y posteriormente se editó, la propiedad <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> se establece en `null` pero la información de tipo sigue estando disponible en varias propiedades de la propiedad <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> de la clase <xref:System.Xml.XPath.XPathNavigator>.  
   
  Los siguientes ejemplos ilustran el uso de información en el conjunto de información posterior a la validación de esquemas que proporciona <xref:System.Xml.XPath.XPathNavigator>.  
   
@@ -194,4 +194,4 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
 - [Procesamiento de datos XML con el modelo de datos XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
 - [Navegación por un conjunto de nodos con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)
 - [Navegación por nodos de espacios de nombres y atributos con XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)
-- [Extracción de datos XML con XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)
+- [Extraer datos XML con XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1805c26f1eff46719f30de8a14ca6d35f01948a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234854"
+---
 ### <a name="foreach-iterator-variable-is-now-scoped-within-the-iteration-so-closure-capturing-semantics-are-different-in-c5"></a>La variable de iterador Foreach ahora tiene como ámbito la iteración, por lo que la semántica de captura de clausura es diferente (en C#5)
 
 |   |   |
@@ -7,4 +15,3 @@
 |Ámbito|Major|
 |Versión|4.5|
 |Tipo|Redestinación|
-

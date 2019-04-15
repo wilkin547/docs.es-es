@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57f62f6d03a95860e06e0a457884dd30d186643a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574162"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329523"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visor de registro de enlaces de ensamblados)
 El Visor de registro de enlaces de ensamblados es una herramienta que muestra los detalles de los enlaces de ensamblados. Esta información ayuda a diagnosticar la causa por la que .NET Framework no puede encontrar un ensamblado en tiempo de ejecución. Normalmente, estos errores se deben a que el ensamblado se ha implementado en una ubicación incorrecta, a que una imagen nativa ha dejado de ser válida o a que los números de versiones o referencias culturales no coinciden. Normalmente, el error de Common Language Runtime al localizar un ensamblado se muestra como <xref:System.TypeLoadException> en la aplicación.  
@@ -36,18 +36,18 @@ fuslogvw
   
 ### <a name="to-change-the-log-location-view"></a>Para cambiar la vista de la ubicación del registro  
   
-1.  Seleccione el botón de opción **Predeterminado** para ver los errores de enlaces de todos los tipos de aplicaciones. De forma predeterminada, las entradas del registro se almacenan por directorios de usuario en la memoria caché wininet del disco.  
+1. Seleccione el botón de opción **Predeterminado** para ver los errores de enlaces de todos los tipos de aplicaciones. De forma predeterminada, las entradas del registro se almacenan por directorios de usuario en la memoria caché wininet del disco.  
   
-2.  Seleccione el botón de opción **Personalizar** para ver los errores de enlaces en un directorio determinado. Debe especificar la ubicación personalizada en la que quiere que el tiempo de ejecución almacene los registros; para ello, establezca la ubicación del registro predeterminada en un nombre de directorio válido en el cuadro de diálogo **Configuración de registro**. Este directorio debe estar limpio y solo debe contener los archivos que genere el runtime. Si contiene un ejecutable que genera un error que se deba registrar, este no se registrará porque la herramienta intenta crear un directorio con el mismo nombre que el ejecutable. Además, los intentos de ejecutar archivos ejecutables desde la ubicación del registro generarán un error.  
+2. Seleccione el botón de opción **Personalizar** para ver los errores de enlaces en un directorio determinado. Debe especificar la ubicación personalizada en la que quiere que el tiempo de ejecución almacene los registros; para ello, establezca la ubicación del registro predeterminada en un nombre de directorio válido en el cuadro de diálogo **Configuración de registro**. Este directorio debe estar limpio y solo debe contener los archivos que genere el runtime. Si contiene un ejecutable que genera un error que se deba registrar, este no se registrará porque la herramienta intenta crear un directorio con el mismo nombre que el ejecutable. Además, los intentos de ejecutar archivos ejecutables desde la ubicación del registro generarán un error.  
   
     > [!NOTE]
     >  Es preferible usar la ubicación de enlace predeterminada en lugar de la ubicación de enlace personalizada. El runtime almacena la ubicación de enlace predeterminada en la memoria caché wininet que, de esta forma, se limpia automáticamente. Si especifica una ubicación de enlace personalizada, es responsabilidad suya limpiarla.  
   
 ### <a name="to-view-details-about-a-specific-failure"></a>Para ver los detalles de un error específico  
   
-1.  Seleccione en el visor el nombre de la aplicación de la entrada que desea ver.  
+1. Seleccione en el visor el nombre de la aplicación de la entrada que desea ver.  
   
-2.  Haga clic en el botón **Ver registro**. Otra posibilidad es hacer doble clic en la entrada seleccionada.  
+2. Haga clic en el botón **Ver registro**. Otra posibilidad es hacer doble clic en la entrada seleccionada.  
   
      La herramienta muestra los siguientes detalles sobre el error de enlace seleccionado:  
   
@@ -99,9 +99,9 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-a-single-entry-from-the-log"></a>Para eliminar una entrada del registro  
   
-1.  Seleccione la entrada en el visor.  
+1. Seleccione la entrada en el visor.  
   
-2.  Haga clic en el botón **Eliminar entrada**.  
+2. Haga clic en el botón **Eliminar entrada**.  
   
 ### <a name="to-delete-all-entries-from-the-log"></a>Para eliminar todas las entradas del registro  
   
@@ -210,9 +210,9 @@ Discarding native image.
   
 #### <a name="to-enable-a-custom-log-path"></a>Para habilitar una ruta de acceso de registro personalizada  
   
-1.  Seleccione el botón de opción **Habilitar ruta de acceso de registro personalizada**.  
+1. Seleccione el botón de opción **Habilitar ruta de acceso de registro personalizada**.  
   
-2.  Escriba la ruta de acceso en el cuadro de texto **Ruta de acceso de registro personalizada**.  
+2. Escriba la ruta de acceso en el cuadro de texto **Ruta de acceso de registro personalizada**.  
   
 > [!NOTE]
 >  El [Visor de registro de enlaces de ensamblados (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) usa la memoria caché de Internet Explorer (IE) para almacenar el registro de enlaces. Debido a daños ocasionales en la memoria caché de IE, a veces el [Visor de registro de enlaces de ensamblados (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) deja de mostrar los nuevos registros de enlaces en la ventana de visualización. Como consecuencia de estos daños, la infraestructura de enlaces (Fusion) de .NET no puede escribir en el registro de enlaces ni leerlo. (Este problema no aparece si se usa una ruta de acceso de registro personalizada).  Para corregir los daños y permitir que Fusion vuelva a mostrar los registros de enlaces, borre la memoria caché de IE; para ello, elimine los archivos temporales de Internet en el cuadro de diálogo Opciones de Internet de Internet Explorer.  
@@ -221,14 +221,15 @@ Discarding native image.
   
 #### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>Para habilitar el registro para las aplicaciones que se ejecutan en el contenedor de la aplicación de Windows  
   
-1.  Habilite una ruta de acceso de registro personalizada, tal y como se describe en el procedimiento anterior. De forma predeterminada, las aplicaciones que se ejecutan en el contenedor de la aplicación de Windows tienen acceso limitado al disco duro. El directorio especificado tendrá acceso de lectura y escritura para todas las aplicaciones del contenedor de la aplicación.  
+1. Habilite una ruta de acceso de registro personalizada, tal y como se describe en el procedimiento anterior. De forma predeterminada, las aplicaciones que se ejecutan en el contenedor de la aplicación de Windows tienen acceso limitado al disco duro. El directorio especificado tendrá acceso de lectura y escritura para todas las aplicaciones del contenedor de la aplicación.  
   
-2.  Seleccione la casilla **Habilitar registro envolvente**.  
+2. Seleccione la casilla **Habilitar registro envolvente**.  
   
     > [!NOTE]
     >  Este cuadro solo está habilitada en Windows 8 o posterior.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.TypeLoadException>
 - [Herramientas](../../../docs/framework/tools/index.md)
 - [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)

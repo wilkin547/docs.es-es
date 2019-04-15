@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0778285ef1b5702bd79743038a1bd21ba04612d6
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 3cd5052dffcb059c240a310e0b89384f28409264
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761141"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234547"
 ---
 ### <a name="calls-to-systemwindowsinputpencontextdisable-on-touch-enabled-systems-may-throw-an-argumentexception"></a>Las llamadas a System.Windows.Input.PenContext.Disable en sistemas táctiles pueden iniciar una excepción ArgumentException
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761141"
 |Ámbito|Borde|
 |Versión|4.6.1|
 |Tipo|Redestinación|
-

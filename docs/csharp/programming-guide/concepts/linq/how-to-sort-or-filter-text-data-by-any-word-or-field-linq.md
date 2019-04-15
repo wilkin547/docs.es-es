@@ -2,19 +2,19 @@
 title: Procedimiento para ordenar o filtrar datos de texto por palabra o campo (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: 1b2378a3f9d589640d50ca3cc80d5e82ba386bd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 243ff37e38b2e88b55962980e91a1ab6dcebab3c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304875"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Procedimiento para ordenar o filtrar datos de texto por palabra o campo (LINQ) (C#)
 En el ejemplo siguiente se muestra cómo ordenar líneas de texto estructurado, como valores separados por comas, por cualquier campo de la línea. El campo se puede especificar dinámicamente en tiempo de ejecución. Supongamos que los campos de scores.csv representan el número de identificación de un alumno, seguido de una serie de cuatro calificaciones.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Para crear un archivo que contenga datos  
   
-1.  Copie los datos de scores.csv desde el tema [Cómo: Combinar contenido de archivos no similares (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) y guárdelos en la carpeta de la solución.  
+1. Copie los datos de scores.csv desde el tema [Cómo: Combinar contenido de archivos no similares (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) y guárdelos en la carpeta de la solución.  
   
 ## <a name="example"></a>Ejemplo  
   

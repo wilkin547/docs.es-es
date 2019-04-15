@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 056207185f89aa219faf1b721598d372394e1061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302574"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (Opciones del compilador de C#)
 Inserta el recurso especificado en el archivo de salida.  
@@ -50,13 +50,13 @@ Inserta el recurso especificado en el archivo de salida.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Agregue un archivo de recursos al proyecto.  
+1. Agregue un archivo de recursos al proyecto.  
   
-2.  Seleccione el archivo que quiere insertar en el **Explorador de soluciones**.  
+2. Seleccione el archivo que quiere insertar en el **Explorador de soluciones**.  
   
-3.  Seleccione **Acción de compilación** para el archivo en la ventana **Propiedades**.  
+3. Seleccione **Acción de compilación** para el archivo en la ventana **Propiedades**.  
   
-4.  Establezca **Acción de compilación** en **Recurso incrustado**.  
+4. Establezca **Acción de compilación** en **Recurso incrustado**.  
   
  Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.FileProperties2.BuildAction%2A>.  
   

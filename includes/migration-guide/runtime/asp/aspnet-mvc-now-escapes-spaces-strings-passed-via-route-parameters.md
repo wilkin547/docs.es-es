@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2278d82d5362fe217ca4bce02a052d4b440843c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236676"
+---
 ### <a name="aspnet-mvc-now-escapes-spaces-in-strings-passed-in-via-route-parameters"></a>ASP.NET MVC ahora aplica caracteres de escape a los espacios de las cadenas que se pasan a través de parámetros de ruta
 
 |   |   |
@@ -8,4 +16,3 @@
 |Versión|4.5.2|
 |Tipo|Tiempo de ejecución|
 |API afectadas|<ul><li><xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)?displayProperty=nameWithType></li></ul>|
-

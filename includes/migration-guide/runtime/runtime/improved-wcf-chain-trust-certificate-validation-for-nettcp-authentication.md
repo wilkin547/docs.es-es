@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e12ba8eb53e6725ebc2e1d87edff3a6a3ce2116b
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 05116d80fcd6b75f366a2542ad2eadd5f434991c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "58467484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236169"
 ---
 ### <a name="improved-wcf-chain-trust-certificate-validation-for-nettcp-certificate-authentication"></a>Mejora de la validación de certificados de confianza de cadena de WCF para la autenticación de certificados de Net.Tcp
 
@@ -15,4 +15,3 @@ ms.locfileid: "58467484"
 |Ámbito|Secundaria|
 |Versión|4.7.2|
 |Tipo|Tiempo de ejecución|
-

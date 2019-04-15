@@ -2,12 +2,12 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 19dd15fdd7e818e0619647205f2369a55f3bc2b0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: b82d21a7de4f596afb5e41487221498dd5ca9f98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45528544"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326637"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 El término "LINQ to Objects" se refiere al uso de consultas LINQ con cualquier colección <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601> directamente, sin usar un proveedor o una API de LINQ intermedios como [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) o [LINQ to XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md). Puede usar LINQ para consultar cualquier colección enumerable, como <xref:System.Collections.Generic.List%601>, <xref:System.Array> o <xref:System.Collections.Generic.Dictionary%602>. La colección puede ser definida por el usuario o haber sido devuelta por una API de .NET Framework.  
@@ -16,11 +16,11 @@ El término "LINQ to Objects" se refiere al uso de consultas LINQ con cualquier 
   
  Además, las consultas LINQ ofrecen tres ventajas principales respecto a los bucles `foreach` tradicionales:  
   
-1.  Son más concisas y legibles, especialmente cuando se filtran varias condiciones.  
+1. Son más concisas y legibles, especialmente cuando se filtran varias condiciones.  
   
-2.  Proporcionan funcionalidades eficaces para filtrar, ordenar y agrupar con un código de aplicación mínimo.  
+2. Proporcionan funcionalidades eficaces para filtrar, ordenar y agrupar con un código de aplicación mínimo.  
   
-3.  Se pueden migrar a otros orígenes de datos con muy poca o ninguna modificación.  
+3. Se pueden migrar a otros orígenes de datos con muy poca o ninguna modificación.  
   
  Por lo general, cuanto más compleja sea la operación que quiere realizar en los datos, más ventajas obtendrá al usar LINQ en lugar de las técnicas de iteración tradicionales.  
   
@@ -36,10 +36,10 @@ El término "LINQ to Objects" se refiere al uso de consultas LINQ con cualquier 
  [LINQ y directorios de archivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
  Explica cómo se puede usar LINQ para interactuar con sistemas de archivos. También incluye vínculos a temas que muestran estos conceptos.  
   
- [Consultar un objeto ArrayList con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
+ [Procedimiento para consultar un objeto ArrayList con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
  Muestra cómo consultar un objeto ArrayList en C#.  
   
- [Agregar métodos personalizados para las consultas LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ [Procedimiento para agregar métodos personalizados para las consultas LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
  Explica cómo extender el conjunto de métodos que puede usar para consultas LINQ agregando métodos de extensión a la interfaz <xref:System.Collections.Generic.IEnumerable%601>.  
   
  [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  

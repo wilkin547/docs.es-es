@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: e4558084357c8ce07004a8ed71aef586a707f1a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bc7da8121ec1190908d9b94fc7c987f9888c020
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591752"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317459"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (Opciones del compilador de C#)
 La opción **-win32icon** inserta un archivo .ico en el archivo de salida, lo que proporciona al archivo de salida la apariencia esperada en el Explorador de archivos.  
@@ -35,11 +35,11 @@ La opción **-win32icon** inserta un archivo .ico en el archivo de salida, lo qu
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra las páginas **Propiedades** del proyecto.  
+1. Abra las páginas **Propiedades** del proyecto.  
   
-2.  Haga clic en la página de propiedades **Aplicación**.  
+2. Haga clic en la página de propiedades **Aplicación**.  
   
-3.  Modifique la propiedad **Icono de aplicación**.  
+3. Modifique la propiedad **Icono de aplicación**.  
   
  Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>.  
   

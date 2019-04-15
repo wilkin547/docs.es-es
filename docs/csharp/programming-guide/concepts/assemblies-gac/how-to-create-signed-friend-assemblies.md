@@ -2,21 +2,21 @@
 title: Procedimiento para crear ensamblados de confianza firmados (C#)
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 13b99cd1118071e7c403828260003c80b9417792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354497"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325207"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Procedimiento para crear ensamblados de confianza firmados (C#)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Para crear un ensamblado con signo y un ensamblado de confianza  
   
-1.  Abra un símbolo del sistema.  
+1. Abra un símbolo del sistema.  
   
-2.  Use la siguiente secuencia de comandos con la herramienta de nombre seguro para generar un archivo de claves y mostrar su clave pública. Para obtener más información, vea [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
+2. Use la siguiente secuencia de comandos con la herramienta de nombre seguro para generar un archivo de claves y mostrar su clave pública. Para obtener más información, vea [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
   
     1.  Genere una clave de nombre seguro para este ejemplo y almacénela en el archivo FriendAssemblies.snk:  
   
@@ -30,7 +30,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Cree un archivo de C# denominado `friend_signed_A` que incluya el siguiente código. El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como un ensamblado de confianza.  
+3. Cree un archivo de C# denominado `friend_signed_A` que incluya el siguiente código. El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como un ensamblado de confianza.  
   
      La herramienta de nombre seguro genera una nueva clave pública cada vez que se ejecuta. Por tanto, debe reemplazar la clave pública en el código siguiente con la clave pública que acaba de generar, como se muestra en el ejemplo siguiente.  
   
@@ -51,13 +51,13 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
     }  
     ```  
   
-4.  Compile y firme friend_signed_A mediante el siguiente comando.  
+4. Compile y firme friend_signed_A mediante el siguiente comando.  
   
     ```csharp  
     csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
     ```  
   
-5.  Cree un archivo de C# con el nombre `friend_signed_B` y que incluya el siguiente código. Dado que friend_signed_A especifica que friend_signed_B es un ensamblado de confianza, el código de friend_signed_B puede tener acceso a tipos `internal` y miembros de friend_signed_A. El archivo contiene el código siguiente.  
+5. Cree un archivo de C# con el nombre `friend_signed_B` y que incluya el siguiente código. Dado que friend_signed_A especifica que friend_signed_B es un ensamblado de confianza, el código de friend_signed_B puede tener acceso a tipos `internal` y miembros de friend_signed_A. El archivo contiene el código siguiente.  
   
     ```csharp  
     // friend_signed_B.cs  
@@ -73,7 +73,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
     }  
     ```  
   
-6.  Compile y firme friend_signed_B mediante el siguiente comando.  
+6. Compile y firme friend_signed_B mediante el siguiente comando.  
   
     ```csharp  
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
@@ -81,7 +81,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
   
      El nombre del ensamblado generado por el compilador debe coincidir con el nombre del ensamblado de confianza que se ha pasado al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Debe especificar explícitamente el nombre del ensamblado de salida (.exe o .dll) mediante la opción `/out` del compilador.  Para obtener más información, consulte [/out (Opciones del compilador de C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-7.  Ejecute el archivo friend_signed_B.exe.  
+7. Ejecute el archivo friend_signed_B.exe.  
   
      El programa imprime la cadena "Class1.Test".  
   
@@ -93,7 +93,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Ensamblados de .NET](../../../../standard/assembly/index.md)
 - [Ensamblados de confianza](../../../../standard/assembly/friend-assemblies.md)
-- [Cómo: Crear ensamblados de confianza sin firmar (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [Procedimiento Crear ensamblados de confianza sin firmar (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [Sn.exe (Herramienta de nombre seguro)](../../../../framework/tools/sn-exe-strong-name-tool.md)
 - [Crear y utilizar ensamblados con nombre seguro](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

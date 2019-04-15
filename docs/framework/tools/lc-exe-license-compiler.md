@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 527a0bc6591dc4146ec94b2a46777d6ca533ec74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601707"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298973"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilador de licencias)
 El Compilador de licencias lee archivos de texto que contienen información sobre licencias y crea un archivo binario que se puede incrustar como recurso en un archivo ejecutable de Common Language Runtime.  
@@ -52,19 +52,19 @@ El Compilador de licencias lee archivos de texto que contienen información sobr
   
 ## <a name="example"></a>Ejemplo  
   
-1.  Si usa un control con licencia `MyCompany.Samples.LicControl1` dentro de `Samples.DLL` en una aplicación denominada `HostApp.exe`*,*  puede crear un archivo `HostAppLic.txt` que contenga lo siguiente.  
+1. Si usa un control con licencia `MyCompany.Samples.LicControl1` dentro de `Samples.DLL` en una aplicación denominada `HostApp.exe`*,*  puede crear un archivo `HostAppLic.txt` que contenga lo siguiente.  
   
     ```  
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2.  Se puede crear el archivo .licenses denominado `HostApp.exe.licenses` utilizando el comando siguiente.  
+2. Se puede crear el archivo .licenses denominado `HostApp.exe.licenses` utilizando el comando siguiente.  
   
     ```  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3.  Se puede compilar el archivo `HostApp.exe` que incluya el archivo .licenses como un recurso. Si está compilando una aplicación en C#, debe utilizar el comando siguiente para compilarla.  
+3. Se puede compilar el archivo `HostApp.exe` que incluya el archivo .licenses como un recurso. Si está compilando una aplicación en C#, debe utilizar el comando siguiente para compilarla.  
   
     ```  
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
@@ -93,6 +93,7 @@ lc @response.rsp
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Herramientas](../../../docs/framework/tools/index.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

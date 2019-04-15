@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 520bce0dbc9f3e9ade9d9fbcb1529a5433b0d87c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 281cfa6507d293658e436a95a5ded0174154a13c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596077"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301027"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Procedimiento para hacer referencia a un ensamblado con nombre seguro
 El proceso para hacer referencia a tipos o recursos en un ensamblado con nombre seguro suele ser transparente. Puede hacer referencia en tiempo de compilación (enlace anticipado) o en tiempo de ejecución.  
@@ -30,7 +30,7 @@ El proceso para hacer referencia a tipos o recursos en un ensamblado con nombre 
   
 ### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>Para hacer referencia en tiempo de compilación a un ensamblado con nombre seguro  
   
-1.  En el símbolo del sistema, escriba el siguiente comando:  
+1. En el símbolo del sistema, escriba el siguiente comando:  
   
      \<*compiler command*> **/reference:**\<*assembly name*>  
   
@@ -44,7 +44,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 ### <a name="to-make-a-run-time-reference-to-a-strong-named-assembly"></a>Para hacer referencia en tiempo de ejecución a un ensamblado con nombre seguro  
   
-1.  Cuando se hace referencia en tiempo de ejecución a un ensamblado con nombre seguro (por ejemplo, mediante el método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>), debe usar el nombre para mostrar del ensamblado con nombre seguro al que se hace referencia. La sintaxis de un nombre para mostrar es la siguiente:  
+1. Cuando se hace referencia en tiempo de ejecución a un ensamblado con nombre seguro (por ejemplo, mediante el método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>), debe usar el nombre para mostrar del ensamblado con nombre seguro al que se hace referencia. La sintaxis de un nombre para mostrar es la siguiente:  
   
      \<*assembly name*>**,** \<*version number*>**,** \<*culture*>**,** \<*public key token*>  
   
@@ -71,4 +71,5 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
  **sn -tp \<** *archivo de clave pública* **>**  
   
 ## <a name="see-also"></a>Vea también
+
 - [Crear y utilizar ensamblados con nombre seguro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

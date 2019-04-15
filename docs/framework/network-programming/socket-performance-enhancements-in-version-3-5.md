@@ -2,12 +2,12 @@
 title: Mejoras de rendimiento de socket en la versión 3.5
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 590caba9080119386454671e2cab597a22e4d49b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28f2543d1f8c81efd32ffbb644265fb5709a9bb3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587770"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333293"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Mejoras de rendimiento de socket en la versión 3.5
 En la versión 3.5 se ha mejorado la clase <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> para su uso por parte de aplicaciones que usan la E/S de red asincrónica para lograr el máximo rendimiento. Se han agregado una serie de clases como parte de un conjunto de mejoras de la clase <xref:System.Net.Sockets.Socket> que proporcionan un patrón asincrónico alternativo que pueden usar las aplicaciones de socket de alto rendimiento especializadas. Estas mejoras se han diseñado específicamente para las aplicaciones de servidor de red que necesitan un alto rendimiento. Una aplicación puede usar el patrón asincrónico mejorado exclusivamente o solo en áreas activas de destino de su aplicación (al recibir grandes cantidades de datos, por ejemplo).  
@@ -19,24 +19,25 @@ En la versión 3.5 se ha mejorado la clase <xref:System.Net.Sockets.Socket?displ
   
  El patrón para realizar una operación de socket asincrónico con esta clase consta de los pasos siguientes:  
   
-1.  Asigne un nuevo objeto de contexto <xref:System.Net.Sockets.SocketAsyncEventArgs> u obtenga uno libre de un grupo de aplicaciones.  
+1. Asigne un nuevo objeto de contexto <xref:System.Net.Sockets.SocketAsyncEventArgs> u obtenga uno libre de un grupo de aplicaciones.  
   
-2.  Establezca propiedades en el objeto de contexto para la operación que se va a realizar (el método delegado de devolución de llamada y el búfer de datos, por ejemplo).  
+2. Establezca propiedades en el objeto de contexto para la operación que se va a realizar (el método delegado de devolución de llamada y el búfer de datos, por ejemplo).  
   
-3.  Llame al método de socket adecuado (xxxAsync) para iniciar la operación asincrónica.  
+3. Llame al método de socket adecuado (xxxAsync) para iniciar la operación asincrónica.  
   
-4.  Si el método de socket asincrónico (xxxAsync) devuelve true en la devolución de llamada, consulte el estado de finalización en las propiedades de contexto.  
+4. Si el método de socket asincrónico (xxxAsync) devuelve true en la devolución de llamada, consulte el estado de finalización en las propiedades de contexto.  
   
-5.  Si el método de socket asincrónico (xxxAsync) devuelve false en la devolución de llamada, la operación se ha completado de forma sincrónica. Para ver el resultado de la operación se pueden consultar las propiedades de contexto.  
+5. Si el método de socket asincrónico (xxxAsync) devuelve false en la devolución de llamada, la operación se ha completado de forma sincrónica. Para ver el resultado de la operación se pueden consultar las propiedades de contexto.  
   
-6.  Vuelva a usar el contexto para otra operación, vuelva a colocarlo en el grupo o descártelo.  
+6. Vuelva a usar el contexto para otra operación, vuelva a colocarlo en el grupo o descártelo.  
   
  La duración del nuevo objeto de contexto de operación de socket asincrónico está determinada por las referencias en el código de aplicación y las referencias de E/S asincrónicas. No es necesario que la aplicación conserve una referencia a un objeto de contexto de operación de socket asincrónico una vez que se ha enviado como parámetro a uno de los métodos de operación de socket asincrónico. La referencia se conserva hasta que se devuelve la devolución de llamada de finalización. Pero para la aplicación supone una ventaja conservar la referencia al objeto de contexto para poderla reutilizar para una operación de socket asincrónico futura.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>
-- [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Ejemplos de programación de red](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Ejemplos de código de socket](socket-code-examples.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Consumir eventos en una aplicación de formularios Web Forms'
+title: Procedimiento para consumir eventos en una aplicación de formularios Web Forms
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c03ab0e1d493d9669f1e3821393d41d1c1b89867
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: dc1dee9377200e4c9fd575b8dcd00982db45f249
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227550"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317823"
 ---
-# <a name="how-to-consume-events-in-a-web-forms-application"></a>Cómo: Consumir eventos en una aplicación de formularios Web Forms
+# <a name="how-to-consume-events-in-a-web-forms-application"></a>Procedimiento para consumir eventos en una aplicación de formularios Web Forms
 Un escenario común de las aplicaciones de Web Forms de ASP.NET es rellenar una página web que controla y realiza una acción específica basada en qué control hace clic el usuario. Por ejemplo, un control <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> genera un evento cuando el usuario hace clic en él en la página web. Mediante el control del evento, la aplicación puede ejecutar la lógica de aplicación apropiada para ese clic de botón.  
   
 ### <a name="to-handle-a-button-click-event-on-a-webpage"></a>Para controlar un evento de clic de botón en una página web  
   
-1.  Cree una página (página web) de Web Forms de ASP.NET que tenga un control <xref:System.Web.UI.WebControls.Button> con el valor `OnClick` establecido en el nombre del método que va a definir en el paso siguiente.  
+1. Cree una página (página web) de Web Forms de ASP.NET que tenga un control <xref:System.Web.UI.WebControls.Button> con el valor `OnClick` establecido en el nombre del método que va a definir en el paso siguiente.  
   
     ```xml  
     <asp:Button ID="Button1" runat="server" Text="Click Me" OnClick="Button1_Click" />  
     ```  
   
-2.  Defina un controlador de eventos que coincida con la firma de delegado de eventos <xref:System.Web.UI.WebControls.Button.Click> y que tenga el nombre definido para el valor `OnClick`.  
+2. Defina un controlador de eventos que coincida con la firma de delegado de eventos <xref:System.Web.UI.WebControls.Button.Click> y que tenga el nombre definido para el valor `OnClick`.  
   
     ```csharp  
     protected void Button1_Click(object sender, EventArgs e)  
@@ -49,7 +49,7 @@ Un escenario común de las aplicaciones de Web Forms de ASP.NET es rellenar una 
   
      El evento <xref:System.Web.UI.WebControls.Button.Click> usa la clase <xref:System.EventHandler> para el tipo delegado y la clase <xref:System.EventArgs> para los datos del evento. El marco de trabajo de la página de ASP.NET genera automáticamente el código que crea una instancia de <xref:System.EventHandler> y agrega esta instancia de delegado al evento <xref:System.Web.UI.WebControls.Button.Click> de la instancia <xref:System.Web.UI.WebControls.Button>.  
   
-3.  En el método del controlador de eventos definido en el paso 2, agregue código para realizar las acciones necesarias cuando se produce el evento.  
+3. En el método del controlador de eventos definido en el paso 2, agregue código para realizar las acciones necesarias cuando se produce el evento.  
   
 ## <a name="see-also"></a>Vea también
 

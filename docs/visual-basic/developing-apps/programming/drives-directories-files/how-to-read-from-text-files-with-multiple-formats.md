@@ -11,19 +11,19 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: d6326bb44d6a84c455c972fcbd191dc957844b74
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3ad34864e162f8f62fed3754bdbcd39c75f7b3f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830102"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334307"
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Procedimiento para leer archivos de texto con varios formatos en Visual Basic
 El objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> proporciona una manera fácil y eficaz de analizar archivos de texto estructurados, como registros. Puede procesar un archivo con varios formatos usando el método `PeekChars` para determinar el formato de cada línea a medida que va analizando el archivo.  
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>Para analizar un archivo de texto con varios formatos  
   
-1.  Agregue un archivo de texto denominado testfile.txt al proyecto. Agregue el contenido siguiente al archivo de texto.  
+1. Agregue un archivo de texto denominado testfile.txt al proyecto. Agregue el contenido siguiente al archivo de texto.  
   
     ```  
     Err  1001 Cannot access resource.  
@@ -34,19 +34,19 @@ El objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> proporciona una ma
     Acc  10/04/2009User2      Standard user.  
     ```  
   
-2.  Defina el formato esperado y el formato usado cuando se cree un informe un error. La última entrada en cada matriz es -1, por consiguiente se presupone que el último campo es de ancho variable. Esto se produce cuando la última entrada en la matriz es menor o igual que 0.  
+2. Defina el formato esperado y el formato usado cuando se cree un informe un error. La última entrada en cada matriz es -1, por consiguiente se presupone que el último campo es de ancho variable. Esto se produce cuando la última entrada en la matriz es menor o igual que 0.  
   
      [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]  
   
-3.  Cree un objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> que defina el ancho y el formato.  
+3. Cree un objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> que defina el ancho y el formato.  
   
      [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]  
   
-4.  Recorra en iteración las filas, probando el formato antes de leerlas.  
+4. Recorra en iteración las filas, probando el formato antes de leerlas.  
   
      [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]  
   
-5.  Escriba los errores en la consola.  
+5. Escriba los errores en la consola.  
   
      [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]  
   
@@ -76,6 +76,6 @@ El objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> proporciona una ma
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>
-- [Cómo: Leer archivos de texto delimitado por comas](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [Cómo: Leer archivos de texto de ancho fijo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
-- [Análisis de archivos de texto con el objeto TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+- [Procedimiento para leer archivos de texto delimitado por comas](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
+- [Procedimiento para leer archivos de texto de ancho fijo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
+- [Analizar archivos de texto con el objeto TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

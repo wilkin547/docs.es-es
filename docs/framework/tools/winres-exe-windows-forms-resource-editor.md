@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221100"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296659"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Editor de recursos para localización de Windows)
 
@@ -106,9 +106,9 @@ Debe utilizar la versión de Winres.exe que se comercializó con la versión de 
 
 ### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>Cómo adaptar un archivo .resx o .resources asociado a un formulario
 
-1.  Escriba `winres` en el símbolo del sistema para desarrolladores para ejecutar Winres.exe.
+1. Escriba `winres` en el símbolo del sistema para desarrolladores para ejecutar Winres.exe.
 
-2.  Para abrir los recursos predeterminados de un formulario que quiera adaptar, haga clic en el comando **Abrir** del menú **Archivo** y navegue hasta el archivo que quiera abrir.
+2. Para abrir los recursos predeterminados de un formulario que quiera adaptar, haga clic en el comando **Abrir** del menú **Archivo** y navegue hasta el archivo que quiera abrir.
 
      o bien
 
@@ -129,11 +129,11 @@ Debe utilizar la versión de Winres.exe que se comercializó con la versión de 
     > [!NOTE]
     > Si el formulario cuyos recursos va a editar es un formulario heredado, tanto el ensamblado que contiene el formulario heredado como el que contiene el formulario que hereda (derivado) deben estar registrados en la caché global de ensamblados (GAC), o deben residir en el mismo directorio que WinRes.exe. Para obtener más información sobre cómo instalar componentes de .NET Framework en la caché global de ensamblados, vea [Global Assembly Cache](../../../docs/framework/app-domains/gac.md) (Caché global de ensamblados).
 
-3.  Seleccione los controles en el formulario y cambie la propiedad <xref:System.Windows.Forms.Control.Text%2A> y otras propiedades para reflejar la referencia cultural adaptada y su lenguaje. Desplace o cambie el tamaño de los controles según sea necesario para que quepa el texto adaptado.
+3. Seleccione los controles en el formulario y cambie la propiedad <xref:System.Windows.Forms.Control.Text%2A> y otras propiedades para reflejar la referencia cultural adaptada y su lenguaje. Desplace o cambie el tamaño de los controles según sea necesario para que quepa el texto adaptado.
 
-4.  Para guardar la versión adaptada del archivo .resx o .resources, haga clic en el icono **Guardar** o en el mismo comando en el menú **Archivo**. En la herramienta se mostrará la ventana **Seleccionar referencia cultural**.
+4. Para guardar la versión adaptada del archivo .resx o .resources, haga clic en el icono **Guardar** o en el mismo comando en el menú **Archivo**. En la herramienta se mostrará la ventana **Seleccionar referencia cultural**.
 
-5.  Seleccione la referencia cultural adecuada y el modo de archivo y haga clic en **Aceptar**.
+5. Seleccione la referencia cultural adecuada y el modo de archivo y haga clic en **Aceptar**.
 
    La herramienta guardará el archivo con la convención de nomenclatura que el motor en tiempo de ejecución espera para los archivos de recursos adaptados. Por ejemplo, si adapta `TestApp.resources` para alemán de Alemania, la herramienta guardará el archivo como `TestApp.de-DE.resources`. Si adapta `TestApp.resx` para alemán de Alemania, la herramienta guardará el archivo como `TestApp.de-DE.resx`. Para obtener más información sobre las convenciones de nomenclatura de recursos, vea [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) (Empaquetar e implementar recursos). Para obtener una lista de los nombres de referencias culturales predefinidos que usa el tiempo de ejecución, vea la clase <xref:System.Globalization.CultureInfo>.
 

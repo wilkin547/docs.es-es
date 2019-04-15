@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a42a568e7c3f3a1a5c84d2ceae49c262f77d275d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: d96e223b85178c7f2784a523e5609057d1432488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442495"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310543"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Prácticas recomendadas para desarrollar aplicaciones de uso internacional
 
@@ -71,7 +71,7 @@ En esta sección se describen las procedimientos recomendados que hay que seguir
 
 8. Utilice la clase <xref:System.Resources.ResourceManager?displayProperty=nameWithType> para recuperar recursos en función de la referencia cultural.
 
-9. Use [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) para crear cuadros de diálogo de Windows Forms, de manera que se puedan localizar mediante el [Editor de recursos de Windows Forms (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). No programe los cuadros de diálogo de Windows Forms manualmente.
+9. Use [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) para crear cuadros de diálogo de Windows Forms, de manera que se puedan localizar mediante el [Editor de recursos de Windows Forms (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). No programe los cuadros de diálogo de Windows Forms manualmente.
 
 10. Organice una localización profesional (traducción).
 

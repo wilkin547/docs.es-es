@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c70382b0d74e830610d1cd7746fd14244b829a0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 6bf92e118d2ef02c0dc3a550c084e2a0a8e0e3d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654567"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330449"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework y versiones fuera de banda
 
@@ -23,26 +23,26 @@ ms.locfileid: "58654567"
 ## <a name="how-oob-packages-are-distributed"></a>Cómo se distribuyen los paquetes OOB
 Las versiones OOB para componentes básicos de Common Language Runtime (CLR) se entregan a través de [NuGet](https://www.nuget.org/), que es un administrador de paquetes para .NET. NuGet permite examinar y agregar bibliotecas a los proyectos de .NET Framework con facilidad desde el Explorador de soluciones de Visual Studio. NuGet se incluye con todas las ediciones de Visual Studio a partir de Visual Studio 2012. Para saber si NuGet está instalado, busque **Administrador de paquetes NuGet** en el menú **Herramientas** de Visual Studio. Si no está instalado:
 
-1.  En la barra de menús de Visual Studio, elija **Herramientas**, **Extensiones y actualizaciones** (en Visual Studio 2010, elija **Administrador de extensiones**).
+1. En la barra de menús de Visual Studio, elija **Herramientas**, **Extensiones y actualizaciones** (en Visual Studio 2010, elija **Administrador de extensiones**).
 
      Se abre el cuadro de diálogo **Extensiones y actualizaciones**.
 
-2.  Elija **En línea**, **Administrador de paquetes NuGet** y, a continuación, elija **Descargar**.
+2. Elija **En línea**, **Administrador de paquetes NuGet** y, a continuación, elija **Descargar**.
 
-3.  Una vez finalizada la descarga, reinicie Visual Studio.
+3. Una vez finalizada la descarga, reinicie Visual Studio.
 
  Para obtener instrucciones de instalación detalladas, consulte [Instalación de NuGet](/nuget/install-nuget-client-tools) en el sitio web de documentos de NuGet. Para más información sobre NuGet, consulte la [documentación correspondiente](/nuget).
 
 ## <a name="using-a-nuget-oob-package"></a>Usar un paquete OOB de NuGet
  Después de instalar NuGet, puede buscar y agregar referencias a paquetes de NuGet utilizando el Explorador de soluciones de Visual Studio:
 
-1.  Abra el menú contextual para su proyecto en Visual Studio y, después, elija **Administrar paquetes NuGet**. (Esta opción también está disponible en el menú **Proyecto**).
+1. Abra el menú contextual para su proyecto en Visual Studio y, después, elija **Administrar paquetes NuGet**. (Esta opción también está disponible en el menú **Proyecto**).
 
-2.  En el panel de la izquierda, elija **En línea**.
+2. En el panel de la izquierda, elija **En línea**.
 
-3.  Si desea utilizar los paquetes de versión preliminar, en el cuadro de lista desplegable del panel central, elija **Incluir versión preliminar** en lugar de **Solo estable**.
+3. Si desea utilizar los paquetes de versión preliminar, en el cuadro de lista desplegable del panel central, elija **Incluir versión preliminar** en lugar de **Solo estable**.
 
-4.  En el panel derecho, utilice el cuadro **Buscar** para buscar el paquete que desee usar. Algunos paquetes de Microsoft se identifican mediante el logotipo de Microsoft .NET Framework, y en todos ellos se identifica Microsoft como el editor.
+4. En el panel derecho, utilice el cuadro **Buscar** para buscar el paquete que desee usar. Algunos paquetes de Microsoft se identifican mediante el logotipo de Microsoft .NET Framework, y en todos ellos se identifica Microsoft como el editor.
 
  ![Captura de pantalla en la que se muestra el Administrador de paquetes NuGet.](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 

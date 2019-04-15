@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545473"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307480"
 ---
 # <a name="operators-c-programming-guide"></a>Operadores (Guía de programación de C#)
 
@@ -63,13 +63,13 @@ En C#, un *operador* es un elemento de programa que se aplica a uno o varios *op
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|identidad|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Negación|  
-|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Negación lógica|  
+|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|Negación lógica|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Negación bit a bit|  
 |[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Preincremento|  
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Predecremento|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Convertir x explícitamente en tipo T|  
   
- **Operadores de multiplicación**  
+ **Operadores multiplicativos**  
   
 |Expresión|Descripción|  
 |----------------|-----------------|  
@@ -116,8 +116,8 @@ En C#, un *operador* es un elemento de programa que se aplica a uno o varios *op
 |AND lógico|x [&](../../../csharp/language-reference/operators/and-operator.md) y|AND bit a bit entero, AND lógico booleano|  
 |XOR lógico|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|XOR bit a bit entero, XOR lógico boolean|  
 |OR lógico|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|OR bit a bit entero, OR lógico booleano|  
-|AND condicional|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Evalúa y solo si x es true|  
-|OR condicional|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Evalúa y solo si x es false|  
+|AND condicional|x [&&](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|Evalúa y solo si x es true|  
+|OR condicional|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|Evalúa y solo si x es false|  
 |Uso combinado de NULL|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) s|Se evalúa como y si x es NULL; de lo contrario, se evalúa como x|  
 |Condicional|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Se evalúa como y si x es true y como z si x es false|  
   

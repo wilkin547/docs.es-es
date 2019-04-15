@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cddb7985c8763e5c18ecca0255f4f3556e03719e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 18a8748c3175ec7e251116f478069d313ab28d7c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441455"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299246"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Trabajar con archivos .resx mediante programación
 Como los archivos de recursos (.resx) XML deben constar de código XML bien definido e incluir un encabezado según un esquema concreto, seguido de datos en pares nombre/valor, es posible que la creación manual de estos archivos sea propensa a errores. Como alternativa, puede crear archivos .resx mediante programación con tipos y miembros de la biblioteca de clases .NET Framework. También puede usar la biblioteca de clases .NET Framework para recuperar los recursos almacenados en archivos .resx. En este tema se explica cómo se pueden utilizar los tipos y miembros del espacio de nombres <xref:System.Resources> para trabajar con archivos .resx.
@@ -23,17 +23,17 @@ Como los archivos de recursos (.resx) XML deben constar de código XML bien defi
  Tenga en cuenta que este artículo explica cómo trabajar con archivos XML (.resx) que contienen recursos. Para obtener información sobre cómo trabajar con archivos de recursos binario que se han insertado en ensamblados, consulte el tema <xref:System.Resources.ResourceManager> .
 
 > [!WARNING]
-> También hay formas distintas para trabajar con archivos .resx que no son mediante programación. Cuando se agrega un archivo de recursos a un proyecto de [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017), Visual Studio proporciona una interfaz para crear y mantener un archivo .resx y lo convierte automáticamente en un archivo .resources en tiempo de compilación. También puede utilizar un editor de texto para manipular un archivo .resx directamente. Sin embargo, para evitar que se dañe el archivo, tenga cuidado de no modificar la información binaria almacenada en el archivo.
+> También hay formas distintas para trabajar con archivos .resx que no son mediante programación. Cuando se agrega un archivo de recursos a un proyecto de [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), Visual Studio proporciona una interfaz para crear y mantener un archivo .resx y lo convierte automáticamente en un archivo .resources en tiempo de compilación. También puede utilizar un editor de texto para manipular un archivo .resx directamente. Sin embargo, para evitar que se dañe el archivo, tenga cuidado de no modificar la información binaria almacenada en el archivo.
 
 ## <a name="create-a-resx-file"></a>Creación de un archivo .resx
 
 Puede utilizar la clase <xref:System.Resources.ResXResourceWriter?displayProperty=nameWithType> para crear un archivo .resx mediante programación, siga estos pasos:
 
-1.  Cree una instancia de un objeto <xref:System.Resources.ResXResourceWriter> mediante una llamada al método <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=nameWithType> y facilite el nombre del archivo .resx. El nombre de archivo debe incluir la extensión .resx. Si crea una instancia del objeto <xref:System.Resources.ResXResourceWriter> en un bloque `using` , no es necesario que llame explícitamente al método <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> en el paso 3.
+1. Cree una instancia de un objeto <xref:System.Resources.ResXResourceWriter> mediante una llamada al método <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=nameWithType> y facilite el nombre del archivo .resx. El nombre de archivo debe incluir la extensión .resx. Si crea una instancia del objeto <xref:System.Resources.ResXResourceWriter> en un bloque `using` , no es necesario que llame explícitamente al método <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> en el paso 3.
 
-2.  Llame al método <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> para cada recurso que quiera agregar al archivo. Utilice las sobrecargas de este método para agregar datos binarios (matriz de bytes), de objeto y de cadena. Si el recurso es un objeto, debe ser serializable.
+2. Llame al método <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> para cada recurso que quiera agregar al archivo. Utilice las sobrecargas de este método para agregar datos binarios (matriz de bytes), de objeto y de cadena. Si el recurso es un objeto, debe ser serializable.
 
-3.  Llame al método <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> para generar el archivo de recursos y liberar todos los recursos. Si el objeto <xref:System.Resources.ResXResourceWriter> se creó dentro de un bloque `using` , los recursos se escriben en el archivo .resx y los que utiliza el objeto <xref:System.Resources.ResXResourceWriter> se liberan al final del bloque `using` .
+3. Llame al método <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> para generar el archivo de recursos y liberar todos los recursos. Si el objeto <xref:System.Resources.ResXResourceWriter> se creó dentro de un bloque `using` , los recursos se escriben en el archivo .resx y los que utiliza el objeto <xref:System.Resources.ResXResourceWriter> se liberan al final del bloque `using` .
 
 El archivo .resx resultante tiene el encabezado adecuado y una etiqueta `data` por cada recurso que agregó el método <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> .
 
@@ -46,7 +46,7 @@ En el ejemplo siguiente se crea un archivo .resx denominado CarResources.resx qu
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
 
 > [!TIP]
-> También puede usar [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) para crear archivos .resx. En tiempo de compilación, Visual Studio utiliza el [generador de archivos de recursos (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para convertir el archivo .resx en un archivo de recursos binario (.resources) y también lo inserta en un ensamblado de aplicación o un ensamblado satélite.
+> También puede usar [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) para crear archivos .resx. En tiempo de compilación, Visual Studio utiliza el [generador de archivos de recursos (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para convertir el archivo .resx en un archivo de recursos binario (.resources) y también lo inserta en un ensamblado de aplicación o un ensamblado satélite.
 
 No se puede insertar un archivo .resx en un archivo ejecutable en tiempo de ejecución ni compilarlo en un ensamblado satélite. Debe convertir el archivo .resx en un archivo de recursos binario (.resources) con el [generador de archivos de recursos (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md). El archivo .resources resultante puede entonces insertarse en un ensamblado de aplicación o un ensamblado satélite. Para obtener más información, consulta [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).
 
@@ -86,6 +86,7 @@ No se puede insertar un archivo .resx en un archivo ejecutable en tiempo de ejec
  **al** *nombreArchivoRecursos* **-out:** *nombreArchivoEnsamblado*
 
 ## <a name="see-also"></a>Vea también
+
 - [Crear archivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [Resgen.exe (generador de archivos de recursos)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Resgen.exe (Generador de archivos de recursos)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)

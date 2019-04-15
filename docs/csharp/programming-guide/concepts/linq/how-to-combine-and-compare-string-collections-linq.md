@@ -2,19 +2,19 @@
 title: Procedimiento para combinar y comparar colecciones de cadenas (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 9788973df42b91aa2da690c5bf1b0f6b4d41b127
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f8d734738606ada2db6db7f3c8e6c08ca57a543
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514782"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323751"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Procedimiento para combinar y comparar colecciones de cadenas (LINQ) (C#)
 En este ejemplo se muestra cómo combinar archivos que contienen líneas de texto y después ordenar los resultados. En concreto, se muestra cómo realizar una concatenación simple, una unión y una intersección en los dos conjuntos de líneas de texto.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Para configurar el proyecto y los archivos de texto  
   
-1.  Copie estos nombres en un archivo de texto denominado names1.txt y guárdelo en la carpeta del proyecto:  
+1. Copie estos nombres en un archivo de texto denominado names1.txt y guárdelo en la carpeta del proyecto:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ En este ejemplo se muestra cómo combinar archivos que contienen líneas de text
     Garcia, Debra  
     ```  
   
-2.  Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto. Tenga en cuenta que los dos archivos tienen algunos nombres en común.  
+2. Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto. Tenga en cuenta que los dos archivos tienen algunos nombres en común.  
   
     ```  
     Liu, Jinghao  

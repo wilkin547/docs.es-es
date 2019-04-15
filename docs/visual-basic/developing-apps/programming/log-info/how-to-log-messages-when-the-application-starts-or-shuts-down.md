@@ -9,47 +9,47 @@ helpviewer_keywords:
 - Shutdown event [Visual Basic]
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
-ms.openlocfilehash: 19cfc4d8104ce3575bf9355f750bdb4616450743
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8fc7b441c6e19d70ceefa3422cf9823007280b64
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835781"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330576"
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Procedimiento para registrar mensajes cuando se inicia o se cierra la aplicación (Visual Basic)
 Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre los eventos que se producen en su aplicación. En este ejemplo se muestra cómo usar el método `My.Application.Log.WriteEntry` con los eventos `Startup` y `Shutdown` para escribir información de seguimiento.  
   
 ### <a name="to-access-the-applications-event-handler-code"></a>Para acceder a código de controlador de eventos de la aplicación  
   
-1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto** , elija **Propiedades**.  
+1. Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto** , elija **Propiedades**.  
   
-2.  Haga clic en la pestaña **Aplicación** .  
+2. Haga clic en la pestaña **Aplicación** .  
   
-3.  Haga clic en el botón **Ver eventos de aplicaciones** para abrir el Editor de código.  
+3. Haga clic en el botón **Ver eventos de aplicaciones** para abrir el Editor de código.  
   
      Se abre el archivo ApplicationEvents.vb.  
   
 ### <a name="to-log-messages-when-the-application-starts"></a>Para registrar mensajes cuando se inicia la aplicación  
   
-1.  Tenga el archivo ApplicationEvents.vb abierto en el Editor de código. En el menú **General** , elija **Eventos MyApplication**.  
+1. Tenga el archivo ApplicationEvents.vb abierto en el Editor de código. En el menú **General** , elija **Eventos MyApplication**.  
   
-2.  En el menú **Declaraciones** , elija **Inicio**.  
+2. En el menú **Declaraciones** , elija **Inicio**.  
   
      La aplicación genera el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> antes de que se ejecute la aplicación principal.  
   
-3.  Agregue el método `My.Application.Log.WriteEntry` al controlador de eventos `Startup` .  
+3. Agregue el método `My.Application.Log.WriteEntry` al controlador de eventos `Startup` .  
   
      [!code-vb[VbVbalrMyApplicationLog#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#1)]  
   
 ### <a name="to-log-messages-when-the-application-shuts-down"></a>Para registrar mensajes cuando se cierra la aplicación  
   
-1.  Tenga el archivo ApplicationEvents.vb abierto en el Editor de código. En el menú **General** , elija **Eventos MyApplication**.  
+1. Tenga el archivo ApplicationEvents.vb abierto en el Editor de código. En el menú **General** , elija **Eventos MyApplication**.  
   
-2.  En el **declaraciones** menú, elija **Apagar**.  
+2. En el **declaraciones** menú, elija **Apagar**.  
   
      La aplicación genera el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> después de la ejecución de la aplicación principal, pero antes del cierre.  
   
-3.  Agregue el método `My.Application.Log.WriteEntry` al controlador de eventos `Shutdown` .  
+3. Agregue el método `My.Application.Log.WriteEntry` al controlador de eventos `Shutdown` .  
   
      [!code-vb[VbVbalrMyApplicationLog#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#2)]  
   
@@ -63,5 +63,5 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [Página de aplicación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)

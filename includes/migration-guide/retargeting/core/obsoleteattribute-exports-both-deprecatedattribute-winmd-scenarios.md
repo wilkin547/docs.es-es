@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e8c48c4b1031813ce62f576e5bf1f94c082dfe4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234793"
+---
 ### <a name="obsoleteattribute-exports-as-both-obsoleteattribute-and-deprecatedattribute-in-winmd-scenarios"></a>ObsoleteAttribute se exporta como ObsoleteAttribute y DeprecatedAttribute en escenarios de WinMD
 
 |   |   |
@@ -7,4 +15,3 @@
 |Ámbito|Borde|
 |Versión|4.5.1|
 |Tipo|Redestinación|
-

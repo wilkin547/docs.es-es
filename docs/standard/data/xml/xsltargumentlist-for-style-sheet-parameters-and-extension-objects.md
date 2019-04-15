@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fb973dcde1ca31a57fbc3022d3eb1c92a2a9d0f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988093"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322414"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList para parámetros Stylesheet y objetos de extensión
 La clase <xref:System.Xml.Xsl.XsltArgumentList> contiene parámetros Extensible Stylesheet Language for Transformations (XSLT) y objetos de extensión XSLT. Cuando se pasan al método <xref:System.Xml.Xsl.XslTransform.Transform%2A> se puede invocar a estos parámetros y objetos de extensión desde hojas de estilos.  
@@ -50,11 +50,11 @@ La clase <xref:System.Xml.Xsl.XsltArgumentList> contiene parámetros Extensible 
   
 #### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>Para utilizar el parámetro XSLT, el usuario debe seguir los pasos siguientes:  
   
-1.  Crear <xref:System.Xml.Xsl.XsltArgumentList> y añadir los objetos mediante <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
+1. Crear <xref:System.Xml.Xsl.XsltArgumentList> y añadir los objetos mediante <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
   
-2.  Llamar a los parámetros desde la hoja de estilos.  
+2. Llamar a los parámetros desde la hoja de estilos.  
   
-3.  Pasar <xref:System.Xml.Xsl.XsltArgumentList> al método <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
+3. Pasar <xref:System.Xml.Xsl.XsltArgumentList> al método <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se utiliza el método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> para crear un parámetro que almacena la fecha de descuento calculada. Para calcular la fecha de descuento se deben sumar 20 días a partir de la fecha del pedido.  
@@ -191,11 +191,11 @@ public class Sample
   
 #### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>Para utilizar objetos de extensión de XSLT, el usuario debe seguir los pasos siguientes:  
   
-1.  Crear <xref:System.Xml.Xsl.XsltArgumentList> y añadir el objeto de extensión mediante <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
+1. Crear <xref:System.Xml.Xsl.XsltArgumentList> y añadir el objeto de extensión mediante <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
   
-2.  Invocar al objeto de extensión desde la hoja de estilos.  
+2. Invocar al objeto de extensión desde la hoja de estilos.  
   
-3.  Pasar <xref:System.Xml.Xsl.XsltArgumentList> al método <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
+3. Pasar <xref:System.Xml.Xsl.XsltArgumentList> al método <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se calcula la longitud de una circunferencia dado su radio.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: fd73deb4682ec12b982740f6e9e9c1e38a5688a3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 18734627e299c696e23bb0ec9bc63ed37fe3e601
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202436"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294982"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Procedimiento Invalidar el método ToString (Guía de programación de C#)
 Cada clase o struct de C# hereda implícitamente la clase <xref:System.Object>. Por consiguiente, cada objeto de C# obtiene el método <xref:System.Object.ToString%2A>, que devuelve una representación de cadena de ese objeto. Por ejemplo, todas las variables de tipo `int` tienen un método `ToString`, que las habilita para devolver su contenido como cadena:  
@@ -27,13 +27,13 @@ Cada clase o struct de C# hereda implícitamente la clase <xref:System.Object>. 
   
 ### <a name="to-override-the-tostring-method-in-your-class-or-struct"></a>Para reemplazar el método ToString en una clase o struct  
   
-1.  Declare un método `ToString` con los modificadores y el tipo de valor devuelto siguientes:  
+1. Declare un método `ToString` con los modificadores y el tipo de valor devuelto siguientes:  
   
     ```csharp  
     public override string ToString(){}  
     ```  
   
-2.  Implemente el método para que devuelva una cadena.  
+2. Implemente el método para que devuelva una cadena.  
   
      En el ejemplo siguiente, se devuelve el nombre de la clase, además de los datos específicos de una instancia concreta de la clase.  
   
@@ -49,7 +49,7 @@ Cada clase o struct de C# hereda implícitamente la clase <xref:System.Object>. 
 - [Guía de programación de C#](../../../csharp/programming-guide/index.md)
 - [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)
 - [Cadenas](../../../csharp/programming-guide/strings/index.md)
-- [string](../../../csharp/language-reference/keywords/string.md)
+- [cadena](../../../csharp/language-reference/keywords/string.md)
 - [new](../../../csharp/language-reference/keywords/new.md)
 - [override](../../../csharp/language-reference/keywords/override.md)
 - [virtual](../../../csharp/language-reference/keywords/virtual.md)

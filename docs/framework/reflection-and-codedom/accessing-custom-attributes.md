@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb537950ce240d77282551f847b637a77792a264
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 764b0d535413fc1e5e23a2e47221789aa807ff38
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645241"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321736"
 ---
 # <a name="accessing-custom-attributes"></a>Acceso a atributos personalizados
 Después de asociar atributos a elementos de un programa, puede usar la reflexión para consultar su existencia y sus valores. En .NET Framework versión 1.0 y 1.1, los atributos personalizados se examinan en el contexto de ejecución. .NET Framework versión 2.0 proporciona un nuevo contexto de carga, el contexto de solo reflexión, que puede usarse para examinar el código que no se puede cargar para su ejecución.  
@@ -56,13 +56,13 @@ public class LocalizationExtenderProvider
   
  Si el tiempo de ejecución intenta recuperar los atributos personalizados para el tipo de atributo personalizado público <xref:System.ComponentModel.DescriptionAttribute> asociado al método **GetLanguage**, realiza las acciones siguientes:  
   
-1.  El tiempo de ejecución comprueba que el argumento de tipo **DescriptionAttribute** de **Type.GetCustomAttributes**(Type *type*) es público y, por tanto, es visible y accesible.  
+1. El tiempo de ejecución comprueba que el argumento de tipo **DescriptionAttribute** de **Type.GetCustomAttributes**(Type *type*) es público y, por tanto, es visible y accesible.  
   
-2.  El tiempo de ejecución comprueba que el tipo definido por el usuario **MyDescriptionAttribute** que se deriva de **DescriptionAttribute** es visible y accesible en el ensamblado **System.Web.DLL**, donde está asociado al método **GetLanguage**().  
+2. El tiempo de ejecución comprueba que el tipo definido por el usuario **MyDescriptionAttribute** que se deriva de **DescriptionAttribute** es visible y accesible en el ensamblado **System.Web.DLL**, donde está asociado al método **GetLanguage**().  
   
-3.  El tiempo de ejecución comprueba que el constructor de **MyDescriptionAttribute** es visible y accesible dentro del ensamblado **System.Web.DLL**.  
+3. El tiempo de ejecución comprueba que el constructor de **MyDescriptionAttribute** es visible y accesible dentro del ensamblado **System.Web.DLL**.  
   
-4.  El tiempo de ejecución llama al constructor de **MyDescriptionAttribute** con los parámetros de atributo personalizados y devuelve el nuevo objeto al llamador.  
+4. El tiempo de ejecución llama al constructor de **MyDescriptionAttribute** con los parámetros de atributo personalizados y devuelve el nuevo objeto al llamador.  
   
  En el modelo de reflexión de atributos personalizados, pueden producirse pérdidas de instancias de tipos definidos por el usuario fuera del ensamblado donde está definido el tipo. Esto no es diferente de los miembros de la biblioteca del sistema en tiempo de ejecución que devuelven instancias de tipos definidos por el usuario, como cuando <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> devuelve una matriz de objetos **RuntimeMethodInfo**. Para evitar que a un cliente detecte información sobre un tipo de atributo personalizado definido por el usuario, defina los miembros del tipo como no públicos.  
   
@@ -73,7 +73,8 @@ public class LocalizationExtenderProvider
  [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
-- [Viewing Type Information](../../../docs/framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)
+- [Ver información de tipos](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
 - [Consideraciones de seguridad sobre la reflexión](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)

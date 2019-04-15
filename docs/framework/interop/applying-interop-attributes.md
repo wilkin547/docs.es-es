@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 590fed6a2a4e59f438dc73057973aff4539cb1aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83afabf58048620b3b9936560f2b3fdf1e2039d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226942"
 ---
 # <a name="applying-interop-attributes"></a>Aplicar atributos de interoperabilidad
 El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres categorías de atributos específicos de interoperabilidad: los que se aplican por parte del usuario en tiempo de diseño, los que se aplican mediante herramientas de interoperabilidad COM y durante el proceso de conversión, y los que se aplican por parte del usuario o interoperabilidad COM.  
@@ -68,6 +68,7 @@ El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres cat
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Contiene los **VARFLAGS** que se importaron originalmente para esta variable desde la biblioteca de tipos COM.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.InteropServices>
 - [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [Atributos](../../../docs/standard/attributes/index.md)

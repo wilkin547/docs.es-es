@@ -8,12 +8,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 36e5f10a61711e3245fa4b69dc583f4bb78e55e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 133aa22f16285f94f58722cb18c83b96f1ff885c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558593"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302795"
 ---
 # <a name="-main-c-compiler-options"></a>-main (Opciones del compilador de C#)
 Esta opción especifica la clase que contiene el punto de entrada al programa si hay más de una clase que contenga un método **Main**.  
@@ -36,11 +36,11 @@ Esta opción especifica la clase que contiene el punto de entrada al programa si
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra la página **Propiedades** del proyecto.  
+1. Abra la página **Propiedades** del proyecto.  
   
-2.  Haga clic en la página de propiedades **Aplicación**.  
+2. Haga clic en la página de propiedades **Aplicación**.  
   
-3.  Modifique la propiedad **Objeto de inicio**.  
+3. Modifique la propiedad **Objeto de inicio**.  
   
      Para establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.  
   

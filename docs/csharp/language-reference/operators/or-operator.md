@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '| operator [C#]'
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
-ms.openlocfilehash: 185ea3aabff4794ec08cca541773dbec3574ab4b
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 38f8e21dbd07868441e0c4fbb6074f9897905222
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333517"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312883"
 ---
 # <a name="-operator-c-reference"></a>Operador| (Referencia de C#)
 
@@ -22,7 +22,7 @@ Los operadores binarios `|` están predefinidos para los tipos enteros y `bool`.
 
 ## <a name="remarks"></a>Comentarios
 
-El operador `|` binario evalúa ambos operandos con independencia del valor del primero, a diferencia del [operador OR condicional](conditional-or-operator.md) `||`.
+El operador `|` binario evalúa ambos operandos con independencia del valor del primero, a diferencia del [operador OR condicional](boolean-logical-operators.md#conditional-logical-or-operator-) `||`.
 
 Los tipos definidos por el usuario pueden sobrecargar el operador `|` (vea [operator](../keywords/operator.md)).
 

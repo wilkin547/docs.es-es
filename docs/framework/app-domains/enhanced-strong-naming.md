@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a0b63e27a3eceb80d42d43eea321b0dc757ad69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cbda9c160b99bf5648c670a67d39b245f031645
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688875"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319877"
 ---
 # <a name="enhanced-strong-naming"></a>Nombres seguros mejorados
 Una firma de nombre seguro es un mecanismo de identidad de .NET Framework para identificar ensamblados. Es una firma digital de clave pública que se suele usar para comprobar la integridad de los datos que se pasan de un remitente (firmante) a un destinatario (comprobador). Esta firma se usa como identidad única para un ensamblado y garantiza que las referencias al ensamblado no son ambiguas. El ensamblado se firma como parte del proceso de compilación y, después, se comprueba cuando se carga.  
@@ -41,25 +41,25 @@ Una firma de nombre seguro es un mecanismo de identidad de .NET Framework para i
 ### <a name="signing-with-sha-2-without-key-migration"></a>Firmar con SHA-2 (sin migración de clave)  
  Ejecute los comandos siguientes desde una ventana del símbolo del sistema para firmar un ensamblado sin migrar una firma de nombre seguro:  
   
-1.  Genere la nueva clave de identidad (si es necesario).  
+1. Genere la nueva clave de identidad (si es necesario).  
   
     ```  
     sn -k IdentityKey.snk  
     ```  
   
-2.  Extraiga la clave pública de identidad y especifique que se debe usar un algoritmo SHA-2 al firmar con esta clave.  
+2. Extraiga la clave pública de identidad y especifique que se debe usar un algoritmo SHA-2 al firmar con esta clave.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
-3.  Retrase la firma del ensamblado con el archivo de clave pública de identidad.  
+3. Retrase la firma del ensamblado con el archivo de clave pública de identidad.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-4.  Vuelva a firmar el ensamblado con el par de claves de identidad completa.  
+4. Vuelva a firmar el ensamblado con el par de claves de identidad completa.  
   
     ```  
     sn -Ra MyAssembly.exe IdentityKey.snk  
@@ -68,26 +68,26 @@ Una firma de nombre seguro es un mecanismo de identidad de .NET Framework para i
 ### <a name="signing-with-sha-2-with-key-migration"></a>Firmar con SHA-2 (con migración de clave)  
  Ejecute los comandos siguientes desde una ventana del símbolo del sistema para firmar un ensamblado con una firma de nombre seguro migrada.  
   
-1.  Genere un par de claves de identidad y firma (si es necesario).  
+1. Genere un par de claves de identidad y firma (si es necesario).  
   
     ```  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
-2.  Extraiga la clave pública de firma y especifique que se debe usar un algoritmo SHA-2 al firmar con esta clave.  
+2. Extraiga la clave pública de firma y especifique que se debe usar un algoritmo SHA-2 al firmar con esta clave.  
   
     ```  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
-3.  Extraiga la clave pública de identidad, que determina el algoritmo hash que genera una contrafirma.  
+3. Extraiga la clave pública de identidad, que determina el algoritmo hash que genera una contrafirma.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4.  Genere los parámetros para un atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> y adjunte el atributo al ensamblado.  
+4. Genere los parámetros para un atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> y adjunte el atributo al ensamblado.  
   
     ```  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
@@ -121,17 +121,18 @@ Una firma de nombre seguro es un mecanismo de identidad de .NET Framework para i
     )]
     ```
   
-5.  Retrase la firma del ensamblado con la clave pública de identidad.  
+5. Retrase la firma del ensamblado con la clave pública de identidad.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-6.  Firme por completo el ensamblado con el par de claves de firma.  
+6. Firme por completo el ensamblado con el par de claves de firma.  
   
     ```  
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Crear y utilizar ensamblados con nombre seguro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

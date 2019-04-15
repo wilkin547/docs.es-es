@@ -15,51 +15,51 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320163"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procedimiento para mostrar información localizada de fecha y hora a usuarios web
 Dado que una página web puede mostrarse en cualquier lugar del mundo, las operaciones que analizarán y darán formato a valores de fecha y hora no deben basarse en un formato predeterminado (que suele ser el formato de referencia cultural local del servidor web) al interactuar con el usuario. En su lugar, los formularios Web Forms que controlan las entradas del usuario de cadenas de fecha y hora deben analizar estas cadenas usando la referencia cultural preferida del usuario. De forma similar, los datos de fecha y hora deben mostrarse al usuario en un formato que se ajuste a la referencia cultural del usuario. En este tema se explica cómo hacerlo.  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Para analizar las entradas del usuario de cadenas de fecha y hora  
   
-1.  Determine si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> se rellena. Si no es así, vaya al paso 6.  
+1. Determine si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> se rellena. Si no es así, vaya al paso 6.  
   
-2.  Si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A> se rellena, recupere el primer elemento. El primer elemento indica la región y el idioma preferidos o predeterminados del usuario.  
+2. Si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A> se rellena, recupere el primer elemento. El primer elemento indica la región y el idioma preferidos o predeterminados del usuario.  
   
-3.  Cree una instancia de un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural preferida del usuario con una llamada al constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+3. Cree una instancia de un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural preferida del usuario con una llamada al constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
-4.  Llame al método `TryParse` o `Parse` del tipo <xref:System.DateTime> o <xref:System.DateTimeOffset> para intentar la conversión. Use una sobrecarga del método `TryParse` o `Parse` con un parámetro `provider` y pásela con lo siguiente:  
+4. Llame al método `TryParse` o `Parse` del tipo <xref:System.DateTime> o <xref:System.DateTimeOffset> para intentar la conversión. Use una sobrecarga del método `TryParse` o `Parse` con un parámetro `provider` y pásela con lo siguiente:  
   
     -   El objeto <xref:System.Globalization.CultureInfo> creado en el paso 3.  
   
     -   El objeto <xref:System.Globalization.DateTimeFormatInfo> devuelto por la propiedad <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> del objeto <xref:System.Globalization.CultureInfo> creado en el paso 3.  
   
-5.  Si se produce un error en la conversión, repita los pasos 2 a 4 para cada elemento restante de la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A>.  
+5. Si se produce un error en la conversión, repita los pasos 2 a 4 para cada elemento restante de la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A>.  
   
-6.  Si todavía existen errores de conversión o si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A> está vacía, analice la cadena con la referencia cultural invariable devuelta por la propiedad <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
+6. Si todavía existen errores de conversión o si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A> está vacía, analice la cadena con la referencia cultural invariable devuelta por la propiedad <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
 ## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Para analizar la fecha y hora locales de la solicitud del usuario  
   
-1.  Agregue un control <xref:System.Web.UI.WebControls.HiddenField> al formulario web.  
+1. Agregue un control <xref:System.Web.UI.WebControls.HiddenField> al formulario web.  
   
-2.  Cree una función de JavaScript que controle el evento `onClick` de un botón `Submit` escribiendo la fecha y hora actuales y la diferencia horaria de la zona horaria local con respecto a la hora universal coordinada (UTC) para la propiedad <xref:System.Web.UI.WebControls.HiddenField.Value%2A>. Use un delimitador (por ejemplo, un punto y coma) para separar los dos componentes de la cadena.  
+2. Cree una función de JavaScript que controle el evento `onClick` de un botón `Submit` escribiendo la fecha y hora actuales y la diferencia horaria de la zona horaria local con respecto a la hora universal coordinada (UTC) para la propiedad <xref:System.Web.UI.WebControls.HiddenField.Value%2A>. Use un delimitador (por ejemplo, un punto y coma) para separar los dos componentes de la cadena.  
   
-3.  Use el evento <xref:System.Web.UI.Control.PreRender> del formulario web para insertar la función en el flujo de salida HTML pasando el texto del script al método <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+3. Use el evento <xref:System.Web.UI.Control.PreRender> del formulario web para insertar la función en el flujo de salida HTML pasando el texto del script al método <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
-4.  Conecte el controlador de eventos al evento `onClick` del botón `Submit` proporcionando el nombre de la función JavaScript al atributo `OnClientClick` del botón `Submit`.  
+4. Conecte el controlador de eventos al evento `onClick` del botón `Submit` proporcionando el nombre de la función JavaScript al atributo `OnClientClick` del botón `Submit`.  
   
-5.  Cree un controlador para el evento <xref:System.Web.UI.WebControls.Button.Click> del botón `Submit`.  
+5. Cree un controlador para el evento <xref:System.Web.UI.WebControls.Button.Click> del botón `Submit`.  
   
-6.  En el controlador de eventos, determine si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> se rellena. Si no es así, vaya al paso 14.  
+6. En el controlador de eventos, determine si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> se rellena. Si no es así, vaya al paso 14.  
   
-7.  Si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A> se rellena, recupere el primer elemento. El primer elemento indica la región y el idioma preferidos o predeterminados del usuario.  
+7. Si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A> se rellena, recupere el primer elemento. El primer elemento indica la región y el idioma preferidos o predeterminados del usuario.  
   
-8.  Cree una instancia de un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural preferida del usuario con una llamada al constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+8. Cree una instancia de un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural preferida del usuario con una llamada al constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
 9. Pase la cadena asignada a la propiedad <xref:System.Web.UI.WebControls.HiddenField.Value%2A> al método <xref:System.String.Split%2A> para almacenar la representación de cadena de la fecha y hora locales del usuario y la representación de cadena de la diferencia de la zona horaria local del usuario en elementos de matriz independientes.  
   
@@ -114,6 +114,6 @@ Dado que una página web puede mostrarse en cualquier lugar del mundo, las opera
 ## <a name="see-also"></a>Vea también
 
 - [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Análisis de cadenas de fecha y hora](../../../docs/standard/base-types/parsing-datetime.md)

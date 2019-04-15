@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 4bb5a8134bb9cbcdb70830628895338ec83b28a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55716a9955d12ef3a926efe352a0078044de9990
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614125"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326806"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenciones de código de C# (Guía de programación de C#)
  Las convenciones de codificación tienen los objetivos siguientes:  
@@ -135,7 +135,7 @@ ms.locfileid: "54614125"
   
 ### <a name="-and-124124-operators"></a>Operadores && y &#124;&#124;  
   
--   Para evitar excepciones y aumentar el rendimiento omitiendo las comparaciones innecesarias, use [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) en lugar de [&](../../../csharp/language-reference/operators/and-operator.md) y [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) en lugar de [&#124;](../../../csharp/language-reference/operators/or-operator.md) cuando realice comparaciones, como se muestra en el ejemplo siguiente.  
+-   Para evitar excepciones y aumentar el rendimiento omitiendo las comparaciones innecesarias, use [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) en lugar de [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) y [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) en lugar de [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) cuando realice comparaciones, como se muestra en el ejemplo siguiente.  
   
      [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   

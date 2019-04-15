@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: 20c475fd7bd4b2cec6c6e10182a88a43fa7c56f1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5f4b962762aeecea65748c5456bc4a2d75595d4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843051"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311622"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Procedimiento para crear cuadrículas de propiedades para la configuración del usuario en Visual Basic
 Una cuadrícula de propiedades para la configuración del usuario se crea rellenando un control <xref:System.Windows.Forms.PropertyGrid> con las propiedades de configuración de usuario del objeto `My.Settings`.  
@@ -29,17 +29,17 @@ Una cuadrícula de propiedades para la configuración del usuario se crea rellen
   
 ### <a name="to-add-a-user-setting-property-grid"></a>Para agregar una cuadrícula de propiedades de configuración de usuario  
   
-1.  Agregue el control **PropertyGrid** desde el **Cuadro de herramientas** a la superficie de diseño de la aplicación, que aquí se da por supuesto que es `Form1`.  
+1. Agregue el control **PropertyGrid** desde el **Cuadro de herramientas** a la superficie de diseño de la aplicación, que aquí se da por supuesto que es `Form1`.  
   
      El nombre predeterminado del control de cuadrícula de propiedades es `PropertyGrid1`.  
   
-2.  Haga doble clic en la superficie de diseño de `Form1` para abrir el código del controlador de eventos de carga del formulario.  
+2. Haga doble clic en la superficie de diseño de `Form1` para abrir el código del controlador de eventos de carga del formulario.  
   
-3.  Establezca el objeto `My.Settings` como el objeto seleccionado para la cuadrícula de propiedades.  
+3. Establezca el objeto `My.Settings` como el objeto seleccionado para la cuadrícula de propiedades.  
   
      [!code-vb[VbVbalrMyResources#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#11)]  
   
-4.  Configure la cuadrícula de propiedades para que solo muestre la configuración de usuario.  
+4. Configure la cuadrícula de propiedades para que solo muestre la configuración de usuario.  
   
      [!code-vb[VbVbalrMyResources#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#12)]  
   
@@ -51,8 +51,8 @@ Una cuadrícula de propiedades para la configuración del usuario se crea rellen
   
 ## <a name="see-also"></a>Vea también
 
-- [My.Settings (objeto)](../../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [Cómo: Leer la configuración de la aplicación en Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
-- [Cómo: Cambiar la configuración del usuario en Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [Cómo: Conservar la configuración del usuario en Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [My.Settings (Objeto)](../../../../visual-basic/language-reference/objects/my-settings-object.md)
+- [Procedimiento para leer la configuración de la aplicación en Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [Procedimiento para cambiar la configuración del usuario en Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [Procedimiento para conservar la configuración del usuario en Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
 - [Administrar la configuración de la aplicación (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
