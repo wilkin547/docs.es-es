@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 1023d7213c665619f5417eb1016aa50c73def2c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b812db3259cbd2313cdf172950f51ab34679b460
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208571"
 ---
 # <a name="making-asynchronous-requests"></a>Realizar solicitudes asincrónicas
 Las clases <xref:System.Net> usan el modelo de programación asincrónica estándar de .NET Framework para obtener acceso asincrónico a recursos de Internet. Los métodos <xref:System.Net.WebRequest.BeginGetResponse%2A> y <xref:System.Net.WebRequest.EndGetResponse%2A> de la clase <xref:System.Net.WebRequest> inician y completan las solicitudes asincrónicas para un recurso de Internet.  
@@ -335,4 +335,5 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Solicitud de datos](../../../docs/framework/network-programming/requesting-data.md)

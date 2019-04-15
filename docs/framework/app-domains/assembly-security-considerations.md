@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862488a157c1030335c5f8e3d02f9f411be6d9a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218075"
 ---
 # <a name="assembly-security-considerations"></a>Consideraciones de seguridad sobre ensamblados
 <a name="top"></a> Cuando se compila un ensamblado, se puede especificar el conjunto de permisos que son necesarios para la ejecución del mismo. La concesión de permisos específicos para un ensamblado se basa en la evidencia.  
@@ -63,6 +63,7 @@ ms.locfileid: "54589576"
  Debido a que los nombres seguros y las firmas que utilizan [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md) garantizan la integridad, se puede basar la directiva de seguridad de acceso del código en estas dos formas de evidencia de ensamblado. Los nombres seguros y las firmas que utilizan [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md) garantizan la integridad mediante firmas digitales y certificados. Todas las tecnologías mencionadas (comprobación de código hash, nombres seguros y firmas que utilizan [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md)) se combinan para garantizar que el ensamblado no ha sufrido ninguna alteración.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)
 - [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [SignTool.exe (Herramienta de firma)](../../../docs/framework/tools/signtool-exe.md)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68f525244f2238ebdc44116fc91c3ddcb0a79bfd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975061"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187803"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Procedimiento para compilar un ensamblado de varios archivos
 En este artículo se explica cómo crear un ensamblado de múltiples archivos e incluye código que muestra cada paso del procedimiento.
@@ -98,7 +98,8 @@ En este artículo se explica cómo crear un ensamblado de múltiples archivos e 
     Se puede usar el [Desensamblador de MSIL (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar el contenido de un ensamblado o determinar si un archivo es un ensamblado o un módulo.
 
 ## <a name="see-also"></a>Vea también
-- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
-- [Cómo: Ver el contenido de un ensamblado](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
+
+- [Crear ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
+- [Procedimiento para ver el contenido de un ensamblado](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Ensamblados de múltiples archivos](../../../docs/framework/app-domains/multifile-assemblies.md)
+- [Ensamblados de varios archivos](../../../docs/framework/app-domains/multifile-assemblies.md)

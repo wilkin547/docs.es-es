@@ -1,5 +1,5 @@
 ---
-title: Filtrar para cargar ensamblados en un dominio de aplicación
+title: Procedimiento para cargar ensamblados en un dominio de aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df3fa60c4fcacc84be36e49e40933d195a9e43e5
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188531"
 ---
-# <a name="how-to-load-assemblies-into-an-application-domain"></a>Filtrar para cargar ensamblados en un dominio de aplicación
+# <a name="how-to-load-assemblies-into-an-application-domain"></a>Procedimiento para cargar ensamblados en un dominio de aplicación
 Existen numerosas formas de cargar un ensamblado en un dominio de aplicación. El método recomendado consiste en usar el método <xref:System.Reflection.Assembly.Load%2A> `static` (`Shared` en Visual Basic) de la clase <xref:System.Reflection.Assembly?displayProperty=nameWithType>. A continuación se indican otras formas de cargar los ensamblados:  
   
 -   El método <xref:System.Reflection.Assembly.LoadFrom%2A> de la clase <xref:System.Reflection.Assembly> carga un ensamblado a partir de la ubicación del archivo correspondiente. La carga de ensamblados mediante este método usa un contexto de carga distinto.  
@@ -47,9 +47,10 @@ Existen numerosas formas de cargar un ensamblado en un dominio de aplicación. E
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - [Programar con dominios de aplicación](application-domains.md#programming-with-application-domains)
 - [Reflexión](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [Utilizar dominios de aplicación](../../../docs/framework/app-domains/use.md)
-- [Cómo: Cargar ensamblados en el contexto de solo reflexión](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [Procedimiento para cargar ensamblados en el contexto de solo reflexión](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Dominios de aplicación y ensamblados](application-domains.md#application-domains-and-assemblies)

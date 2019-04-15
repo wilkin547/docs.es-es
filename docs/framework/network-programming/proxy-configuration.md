@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 30b61a662170b87a557a1a2ea094301ba6401742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6b3808a2d73070cc07b31eb0fca7ca9d6af8cdb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200550"
 ---
 # <a name="proxy-configuration"></a>Configuración de proxy
 Un servidor proxy controla las solicitudes de cliente de recursos. Un proxy puede devolver un recurso solicitado de su caché o reenviar la solicitud al servidor donde reside el recurso. Los servidores proxy pueden mejorar el rendimiento de la red al reducir el número de solicitudes enviadas a servidores remotos. Los servidores proxy también pueden usarse para restringir el acceso a los recursos.  
@@ -76,6 +76,7 @@ Un servidor proxy controla las solicitudes de cliente de recursos. Un proxy pued
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
 - [Detección automática de proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)

@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 562d85d47791ca253655dd05a1c9a268767ba949
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197659"
 ---
 # <a name="the-net-framework-analyzer"></a>Analizador de .NET Framework
 
@@ -114,7 +114,6 @@ Si usa instancias de <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> no seg
 
 Información adicional: [A3075: Procesamiento de DTD no seguro en XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-
 ### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: No usar algoritmos criptográficos no seguros
 
 Los algoritmos criptográficos se degradan con el paso del tiempo, ya que los ataques aumentan. En función del tipo y la aplicación de este algoritmo criptográfico, una mayor degradación de su intensidad de cifrado puede permitir a los atacantes leer mensajes cifrados, manipular mensajes cifrados, falsificar firmas digitales, manipular contenido con hash o poner en peligro los sistemas de cifrado basados en este algoritmo. Para el cifrado, use un algoritmo AES (AES-256, AES-192 y AES-128 son aceptables) con una longitud de clave mayor o igual que 128 bits. Para el hash, use una función hash de la familia SHA-2, como SHA-2 512, SHA-2 384 o SHA-2 256.
@@ -134,5 +133,3 @@ Existe un ataque que, a nivel computacional, puede interrumpir este algoritmo. D
 **Gravedad**: Advertencia
 
 Información adicional: [CA5351: No usar algoritmos criptográficos dañados](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
-
-

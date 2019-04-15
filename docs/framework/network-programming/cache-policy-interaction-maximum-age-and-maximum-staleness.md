@@ -9,12 +9,12 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-ms.openlocfilehash: bb44aca802f6a0323e69fb33f64d8238406f8b48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18a73a46bc4b463d0a5f5690afe6d1109e06171c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207141"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Interacción de la directiva de caché, antigüedad máxima y obsolencia máxima
 Para garantizar que se devuelva a la aplicación cliente el contenido más actualizado, la interacción de la directiva de caché de cliente y los requisitos de revalidación de servidor siempre da como resultado la directiva de caché más conservadora. Todos los ejemplos de este tema muestran la directiva de caché de un recurso que se ha almacenado en caché el 1 de enero y expira el 4 de enero.  
@@ -36,9 +36,10 @@ Para garantizar que se devuelva a la aplicación cliente el contenido más actua
 -   Si la directiva de caché establece `maxAge` = 1 día y `maxStale` = 1 día, el contenido se vuelve a validar el 2 de enero.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Administración de la memoria caché para aplicaciones de red](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Directiva de caché](../../../docs/framework/network-programming/cache-policy.md)
-- [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md) (Directivas de caché de duración definida)
+- [directivas de caché basadas en la ubicación](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [directivas de caché de duración definida](../../../docs/framework/network-programming/time-based-cache-policies.md)
 - [Configurar el almacenamiento en caché de las aplicaciones de red](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
 - [Interacción de la directiva de caché, antigüedad máxima y actualización mínima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4affda0abdf46d298e6f1dac87b6a17a7a2e857
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b7e8a4d92661b974fba7c88989891b30e54e94d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218457"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5
 El instalador de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa el [Administrador de reinicio](https://go.microsoft.com/fwlink/?LinkId=231425) para evitar reinicios del sistema durante la instalación, siempre que sea posible. Si el programa de instalación de la aplicación instala .NET Framework, este puede comunicarse con el Administrador de reinicio para aprovechar esta característica. Para obtener más información, vea [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
@@ -35,6 +35,7 @@ Mensaje para cerrar las aplicaciones .NET Framework que estén en uso
  Si usa un instalador encadenado, pero no desea proporcionar su propio cuadro de mensaje para cerrar las aplicaciones, puede usar las opciones `/showrmui` y `/passive` en la línea de comandos al encadenar el proceso de instalación de .NET Framework. Cuando usa ambas opciones, el programa de instalación muestra el cuadro de mensaje de cierre de aplicaciones, en el caso de que puedan cerrarse para evitar reiniciar el sistema. Este cuadro de mensaje se comporta igual en modo pasivo que con la interfaz de usuario completa. Vea [Deployment Guide for Developers](../../../docs/framework/deployment/deployment-guide-for-developers.md) (Guía de implementación para desarrolladores) para conocer el conjunto completo de opciones de línea de comandos para el paquete redistribuible de .NET Framework.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Implementación](../../../docs/framework/deployment/index.md)
 - [Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Procedimiento para obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

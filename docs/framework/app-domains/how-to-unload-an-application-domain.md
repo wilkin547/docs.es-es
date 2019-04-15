@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42356348ba454ffe0c3778e23dc9a0ff272c9f64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3011bd0327440cd04d5eccf5f88c036ddd76267
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727747"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212185"
 ---
 # <a name="how-to-unload-an-application-domain"></a>Procedimiento para descargar un dominio de aplicación
 Cuando haya terminado de usar un dominio de aplicación, descárguelo con el método <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>. El método **Unload** cierra discretamente el dominio de aplicación especificado. Durante el proceso de descarga, ningún subproceso nuevo puede obtener acceso al dominio de aplicación. Además, se liberan todas las estructuras de datos específicas del dominio de aplicación.  
@@ -32,6 +32,7 @@ Cuando haya terminado de usar un dominio de aplicación, descárguelo con el mé
  [!code-vb[System.AppDomain.Load#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source3.vb#3)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Programar con dominios de aplicación](application-domains.md#programming-with-application-domains)
-- [Cómo: Crear un dominio de aplicación](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
+- [Procedimiento para crear un dominio de aplicación](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
 - [Utilizar dominios de aplicación](../../../docs/framework/app-domains/use.md)

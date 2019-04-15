@@ -4,12 +4,12 @@ description: Procedimientos recomendados para el empaquetado con NuGet para bibl
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198184"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -119,7 +119,6 @@ La desventaja de los archivos de símbolos insertados es que aumentan el tamaño
 > Los paquetes de símbolos (`*.snupkg`) ofrecen a los desarrolladores una buena experiencia de depuración a petición sin incrementar el tamaño del paquete principal ni afectar al rendimiento de restauración para los que no tengan pensado depurar el paquete NuGet.
 >
 > La salvedad es que tendrán que localizar y configurar el servidor de símbolos de NuGet en su IDE (como una instalación única) para obtener los archivos de símbolos. En Visual Studio 2019 se pretende proporcionar el servidor de símbolos de NuGet.org como una de las opciones preconfiguradas. 
-
 
 >[!div class="step-by-step"]
 >[Anterior](strong-naming.md)
