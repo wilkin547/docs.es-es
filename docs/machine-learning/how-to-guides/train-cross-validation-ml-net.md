@@ -3,25 +3,25 @@ title: 'Entrenamiento de un modelo de Machine Learning con validación cruzada: 
 description: Descubra cómo entrenar un modelo de Machine Learning mediante la validación cruzada con ML.NET para tener un mayor nivel de precisión de las predicciones del modelo.
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9508835e613cf4f78d7f95a25cc98c3c3aade7ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231323"
 ---
-# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="aa5b9-103">Entrenamiento de un modelo de Machine Learning con validación cruzada: ML.NET</span><span class="sxs-lookup"><span data-stu-id="aa5b9-103">Train a machine learning model using cross-validation - ML.NET</span></span>
+# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="c9a08-103">Entrenamiento de un modelo de Machine Learning con validación cruzada: ML.NET</span><span class="sxs-lookup"><span data-stu-id="c9a08-103">Train a machine learning model using cross-validation - ML.NET</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="aa5b9-104">Este tema hace referencia a ML.NET, que se encuentra actualmente en versión preliminar, por lo que el material está sujeto a cambios.</span><span class="sxs-lookup"><span data-stu-id="aa5b9-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="aa5b9-105">Para obtener más información, visite [la introducción de ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="aa5b9-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
+> <span data-ttu-id="c9a08-104">Este tema hace referencia a ML.NET, que se encuentra actualmente en versión preliminar, por lo que el material está sujeto a cambios.</span><span class="sxs-lookup"><span data-stu-id="c9a08-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="c9a08-105">Para obtener más información, visite [la introducción de ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="c9a08-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="aa5b9-106">Este tutorial y el ejemplo relacionado usan actualmente **ML.NET en su versión 0.10**.</span><span class="sxs-lookup"><span data-stu-id="aa5b9-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="aa5b9-107">Para obtener más información, consulte las notas de la versión en el [repositorio de GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="aa5b9-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
+<span data-ttu-id="c9a08-106">Este tutorial y el ejemplo relacionado usan actualmente **ML.NET en su versión 0.10**.</span><span class="sxs-lookup"><span data-stu-id="c9a08-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="c9a08-107">Para obtener más información, consulte las notas de la versión en el [repositorio de GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="c9a08-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="aa5b9-108">La [validación cruzada](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) es una técnica útil para las aplicaciones de ML.</span><span class="sxs-lookup"><span data-stu-id="aa5b9-108">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="aa5b9-109">Ayuda a calcular la varianza de la calidad del modelo de una ejecución a otra y también elimina la necesidad de extraer un conjunto de pruebas independientes para la evaluación.</span><span class="sxs-lookup"><span data-stu-id="aa5b9-109">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
+<span data-ttu-id="c9a08-108">La [validación cruzada](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) es una técnica útil para las aplicaciones de ML.</span><span class="sxs-lookup"><span data-stu-id="c9a08-108">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="c9a08-109">Ayuda a calcular la varianza de la calidad del modelo de una ejecución a otra y también elimina la necesidad de extraer un conjunto de pruebas independientes para la evaluación.</span><span class="sxs-lookup"><span data-stu-id="c9a08-109">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
 
-<span data-ttu-id="aa5b9-110">ML.NET aplica correctamente las características de forma automática (siempre y cuando todo el preprocesamiento resida en una canalización de aprendizaje) y, después, se usa el concepto de "columna de estratificación" para asegurarse de que los ejemplos relacionados no se separen.</span><span class="sxs-lookup"><span data-stu-id="aa5b9-110">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
+<span data-ttu-id="c9a08-110">ML.NET aplica correctamente las características de forma automática (siempre y cuando todo el preprocesamiento resida en una canalización de aprendizaje) y, después, se usa el concepto de "columna de estratificación" para asegurarse de que los ejemplos relacionados no se separen.</span><span class="sxs-lookup"><span data-stu-id="c9a08-110">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
 
-<span data-ttu-id="aa5b9-111">A continuación tiene un ejemplo de entrenamiento en un conjunto de datos Iris mediante una división de pruebas de aprendizaje 90/10 aleatoria y una validación cruzada de cinco subconjuntos:</span><span class="sxs-lookup"><span data-stu-id="aa5b9-111">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
+<span data-ttu-id="c9a08-111">A continuación tiene un ejemplo de entrenamiento en un conjunto de datos Iris mediante una división de pruebas de aprendizaje 90/10 aleatoria y una validación cruzada de cinco subconjuntos:</span><span class="sxs-lookup"><span data-stu-id="c9a08-111">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
@@ -46,7 +46,6 @@ var reader = mlContext.Data.CreateTextLoader(
     // First line of the file is a header, not a data row.
     hasHeader: true
 );
-
 
 // Read the data.
 var data = reader.Read(dataPath);

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: 3d1e2c24cbbdcecd9daefab4312076099816ba70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef8669e9e78f65451ffb250283a1f14c89d61270
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219751"
 ---
-# <a name="synchronous-client-socket-example"></a><span data-ttu-id="924f8-102">Ejemplo de sockets de cliente sincrónicos</span><span class="sxs-lookup"><span data-stu-id="924f8-102">Synchronous Client Socket Example</span></span>
-<span data-ttu-id="924f8-103">El programa de ejemplo siguiente crea un cliente que se conecta a un servidor.</span><span class="sxs-lookup"><span data-stu-id="924f8-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="924f8-104">El cliente se ha creado con un socket sincrónico, por lo que se suspende la ejecución de la aplicación cliente hasta que el servidor devuelva una respuesta.</span><span class="sxs-lookup"><span data-stu-id="924f8-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="924f8-105">La aplicación envía una cadena al servidor y luego muestra la cadena devuelta por el servidor en la consola.</span><span class="sxs-lookup"><span data-stu-id="924f8-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="synchronous-client-socket-example"></a><span data-ttu-id="eab7c-102">Ejemplo de sockets de cliente sincrónicos</span><span class="sxs-lookup"><span data-stu-id="eab7c-102">Synchronous Client Socket Example</span></span>
+<span data-ttu-id="eab7c-103">El programa de ejemplo siguiente crea un cliente que se conecta a un servidor.</span><span class="sxs-lookup"><span data-stu-id="eab7c-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="eab7c-104">El cliente se ha creado con un socket sincrónico, por lo que se suspende la ejecución de la aplicación cliente hasta que el servidor devuelva una respuesta.</span><span class="sxs-lookup"><span data-stu-id="eab7c-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="eab7c-105">La aplicación envía una cadena al servidor y luego muestra la cadena devuelta por el servidor en la consola.</span><span class="sxs-lookup"><span data-stu-id="eab7c-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -135,7 +135,8 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="924f8-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="924f8-106">See also</span></span>
-- [<span data-ttu-id="924f8-107">Ejemplo de sockets de servidor sincrónicos</span><span class="sxs-lookup"><span data-stu-id="924f8-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
-- [<span data-ttu-id="924f8-108">Uso de un socket de cliente sincrónico</span><span class="sxs-lookup"><span data-stu-id="924f8-108">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [<span data-ttu-id="924f8-109">Ejemplos de código de socket</span><span class="sxs-lookup"><span data-stu-id="924f8-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="eab7c-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="eab7c-106">See also</span></span>
+
+- [<span data-ttu-id="eab7c-107">Ejemplo de sockets de servidor sincrónicos</span><span class="sxs-lookup"><span data-stu-id="eab7c-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
+- [<span data-ttu-id="eab7c-108">Usar un Socket de cliente sincrónico</span><span class="sxs-lookup"><span data-stu-id="eab7c-108">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
+- [<span data-ttu-id="eab7c-109">Ejemplos de código de socket</span><span class="sxs-lookup"><span data-stu-id="eab7c-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
