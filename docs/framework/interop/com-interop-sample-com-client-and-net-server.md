@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc2cd6b59fe7d05e4973d8a9ece13d9ae7f91e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a928dde8615589cbc8e502a9b5dd033beded4c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086759"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>Ejemplo de interoperabilidad COM: Cliente COM y servidor .NET
 En este ejemplo se muestra la interoperación de un [cliente COM](#cpconcominteropsamplecomclientnetserveranchor1) y un [servidor .NET](#cpconcominteropsamplecomclientnetserveranchor2) que realiza cálculos de hipotecas. En este ejemplo, el cliente crea y llama a una instancia de la clase administrada `Loan`, pasa cuatro argumentos (uno de ellos igual a cero) a la instancia y muestra los cálculos. A lo largo de esta sección aparecen ejemplos de código de este ejemplo.  
@@ -390,4 +390,5 @@ namespace LoanLib {
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

@@ -2,12 +2,12 @@
 title: NAT Traversal mediante IPv6 y Teredo
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
-ms.openlocfilehash: 896c3f9036e76c37f5f6bf2950d3d2d2864b3f37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170779"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>NAT Traversal mediante IPv6 y Teredo
 Se han realizado mejoras que proporcionan compatibilidad con la traducción de direcciones de red (NAT) transversal. Estos cambios están diseñados para su uso con IPv6 y Teredo, pero también son aplicables a otras tecnologías de túnel IP. Estas mejoras afectan a las clases del espacio de nombres <xref:System.Net> y de otros espacios de nombres relacionados.  
@@ -45,6 +45,7 @@ Se han realizado mejoras que proporcionan compatibilidad con la traducción de d
  Para las aplicaciones que usan <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> y clases relacionadas, se pueden usar los métodos <xref:System.Net.Sockets.Socket.GetSocketOption%2A> y <xref:System.Net.Sockets.Socket.SetSocketOption%2A> con la opción de socket <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType> para consultar, habilitar o deshabilitar NAT transversal.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType>
 - <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=nameWithType>
 - <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A?displayProperty=nameWithType>

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: 468d8afc290d8e725deb13ba57dd990181ae4e19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a1b18f2c31bf8dad8cf32e2e5205cf3008e7b18
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680499"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136050"
 ---
 # <a name="sockets"></a>sockets
 El espacio de nombres <xref:System.Net.Sockets> contiene una implementación administrada de la interfaz de Windows Sockets. Las demás clases de acceso a la red del espacio de nombres <xref:System.Net> se basan en esta implementación de sockets.  
@@ -30,6 +30,7 @@ El espacio de nombres <xref:System.Net.Sockets> contiene una implementación adm
  La clase **Socket** admite dos modos básicos, el modo sincrónico y el modo asincrónico. En el modo sincrónico, las llamadas a funciones que efectúan operaciones de red (como <xref:System.Net.Sockets.Socket.Send%2A> y <xref:System.Net.Sockets.Socket.Receive%2A>) esperan a que finalice la operación antes de devolver el control al programa que realiza la llamada. En el modo asincrónico, estas llamadas vuelven inmediatamente.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Crear un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+
+- [Procedimiento para crear un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)
 
 - [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)

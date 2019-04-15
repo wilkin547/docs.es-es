@@ -2,12 +2,12 @@
 title: Acerca del espacio de nombres System.Net.PeerToPeer.Collaboration
 ms.date: 03/30/2017
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-ms.openlocfilehash: 5bb96e11cf51e7e5b37d895310fa9a113899f34c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a62b659472f6d05e61672fa603e8663d9946977e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570869"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127912"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>Acerca del espacio de nombres System.Net.PeerToPeer.Collaboration
 El espacio de nombres <xref:System.Net.PeerToPeer.Collaboration> proporciona clases y API que se usan para implementar actividades de colaboración de punto a punto mediante la infraestructura de colaboración de punto a punto.  
@@ -40,4 +40,5 @@ El espacio de nombres <xref:System.Net.PeerToPeer.Collaboration> proporciona cla
  Aplicaciones P2P típicas: teleconferencias de colaboración con pizarra o para tomar notas, aplicaciones de chat sin servidor, anuncios interactivos y sesiones de juegos en línea.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Net.PeerToPeer.Collaboration>

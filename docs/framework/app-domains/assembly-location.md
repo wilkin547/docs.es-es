@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0b065fe488031329815f6ec38da9661fd19700d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c638531bd54f14c7e4b04a093deaec729db404ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129641"
 ---
 # <a name="assembly-location"></a>Ubicación del ensamblado
 La ubicación de un ensamblado determina si Common Language Runtime lo encontrará cuando se haga referencia a él y también puede determinar si el ensamblado se puede compartir con otros ensamblados. Puede implementar un ensamblado en las ubicaciones siguientes:  
@@ -30,7 +30,8 @@ La ubicación de un ensamblado determina si Common Language Runtime lo encontrar
      Un ensamblado implementado en un servidor HTTP debe tener un nombre seguro. Debe apuntar al ensamblado en la sección de código base del archivo de configuración de la aplicación.  
   
 ## <a name="see-also"></a>Vea también
-- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
+
+- [Crear ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
 - [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)

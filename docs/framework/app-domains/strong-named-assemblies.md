@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 681938b4893e9fe68caa142898db9b867b481bf0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72e9e698e510153073515aa891f1ed3b4d7b9886
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657303"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081442"
 ---
 # <a name="strong-named-assemblies"></a>Ensamblados con nombre seguro
 Al asignar un nombre seguro a un ensamblado, se crea una identidad única para este, lo que puede evitar conflictos de ensamblado.  
@@ -43,7 +43,8 @@ Al asignar un nombre seguro a un ensamblado, se crea una identidad única para e
  Si es un desarrollador de código abierto y quiere obtener las ventajas de identidad de un ensamblado con nombre seguro, proteja la clave privada asociada con un ensamblado en el sistema de control de código fuente.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)
-- [Cómo: Firma de un ensamblado con un nombre seguro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Procedimiento Firma de un ensamblado con un nombre seguro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [Sn.exe (Herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Crear y utilizar ensamblados con nombre seguro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

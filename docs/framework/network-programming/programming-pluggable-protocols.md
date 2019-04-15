@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 1becdc227995064a3f34d712834ab358cc41754b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072346"
 ---
 # <a name="programming-pluggable-protocols"></a>programar protocolos acoplables
 Las clases abstractas <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> proporcionan la base para los protocolos conectables. Al derivar clases específicas del protocolo de <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse>, una aplicación puede solicitar datos desde un recurso de Internet y leer la respuesta sin especificar el protocolo que se está usando.  
@@ -32,7 +32,8 @@ Las clases abstractas <xref:System.Net.WebRequest> y <xref:System.Net.WebRespons
  Para aprovechar las ventajas de los protocolos conectables, los descendientes de <xref:System.Net.WebRequest> deben proporcionar una transacción predeterminada de solicitud y respuesta que no requiera establecer propiedades específicas del protocolo. Por ejemplo, la clase <xref:System.Net.HttpWebRequest>, que implementa la clase <xref:System.Net.WebRequest> para HTTP, proporciona una solicitud `GET` de forma predeterminada y devuelve una <xref:System.Net.HttpWebResponse> que contiene la secuencia devuelta desde el servidor web.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Derivar de WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
 - [Derivar de WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
 - [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Cómo: Convertir un elemento WebRequest a propiedades específicas del protocolo de acceso](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [Procedimiento para convertir un elemento WebRequest a propiedades específicas del protocolo de acceso](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

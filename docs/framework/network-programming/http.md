@@ -13,12 +13,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: c0c8bcca55dc54b2dd89be2e45dade4d09a67362
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abbb02b7bd22c4b301c5565037f55aa1019fc3ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170604"
 ---
 # <a name="http"></a>HTTP
 .NET Framework proporciona compatibilidad completa para el protocolo HTTP, que constituye la mayor parte de todo el tráfico de Internet, con las clases <xref:System.Net.HttpWebRequest> y <xref:System.Net.HttpWebResponse>. Estas clases, derivadas de <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse>, se devuelven de manera predeterminada siempre que el método estático <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> detecte un URI que comience por "http" o "https". En la mayoría de los casos, las clases **WebRequest** y **WebResponse** proporcionan todo lo necesario para realizar la solicitud, pero si necesita tener acceso a las características específicas de HTTP expuestas como propiedades, puede convertir estas clases en **HttpWebRequest** o **HttpWebResponse**.  
@@ -32,6 +32,7 @@ ms.locfileid: "54574136"
  Las aplicaciones reciben errores de protocolo HTTP capturando <xref:System.Net.WebException> con <xref:System.Net.WebException.Status%2A> establecido en <xref:System.Net.WebExceptionStatus>. La propiedad <xref:System.Net.WebException.Response%2A> contiene la **WebResponse** que ha enviado el servidor e indica el error HTTP actual que se ha detectado.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Acceso a Internet a través de un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
 - [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Cómo: Acceder a propiedades específicas de HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+- [Procedimiento para acceder a propiedades específicas de HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)

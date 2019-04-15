@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8acf811b835d5afd8686701fe269b16d4b766458
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58676074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087539"
 ---
 # <a name="assembly-manifest"></a>Manifiesto del ensamblado
 Todos los ensamblados, ya sean estáticos o dinámicos, contienen una colección de datos que describen cómo se relacionan entre sí los elementos del ensamblado. El manifiesto contiene estos metadatos del ensamblado. Un manifiesto del ensamblado contiene todos los metadatos necesarios para especificar los requisitos de versión y la identidad de seguridad del ensamblado, y todos los metadatos necesarios para definir el ámbito del ensamblado y resolver las referencias a los recursos y las clases. El manifiesto del ensamblado se puede almacenar en un archivo PE (.exe o .dll) con código de lenguaje intermedio de Microsoft (MSIL) o en un archivo PE independiente que contenga sólo la información sobre el manifiesto del ensamblado.  
@@ -54,6 +54,7 @@ Todos los ensamblados, ya sean estáticos o dinámicos, contienen una colección
  Si desea agregar o modificar información en el manifiesto del ensamblado, puede utilizar atributos de ensamblado en su código. Se puede cambiar la información de versión y los atributos informativos, como Trademark, Copyright, Product, Company e Informational Version. Para obtener una lista completa de los atributos de ensamblado, vea [Setting Assembly Attributes](../../../docs/framework/app-domains/set-assembly-attributes.md) (Establecer atributos de ensamblado).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Contenido de los ensamblados](../../../docs/framework/app-domains/assembly-contents.md)
 - [Versiones de los ensamblados](../../../docs/framework/app-domains/assembly-versioning.md)
 - [Crear ensamblados satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

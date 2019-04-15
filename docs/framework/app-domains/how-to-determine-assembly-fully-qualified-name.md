@@ -1,5 +1,5 @@
 ---
-title: Filtrar Determinar el nombre completo de un ensamblado
+title: Procedimiento Determinar el nombre completo de un ensamblado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32beb648bed37281e798f51e6b4a316197c23845
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 60a4ef1f5bde121d5773925437307b2749aa7282
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097543"
 ---
-# <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Filtrar Determinar el nombre completo de un ensamblado
+# <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Procedimiento Determinar el nombre completo de un ensamblado
 Para conocer el nombre completo de un ensamblado de la caché global de ensamblados, use la herramienta Caché global de ensamblados ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Vea [Cómo: Consultar el contenido de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
  En el caso de los ensamblados que no están en la caché global de ensamblados, puede obtener el nombre completo del ensamblado de varias formas: puede usar código para enviar la información a la consola o a una variable, o puede usar [Ildasm.exe (Desensamblador de MSIL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar los metadatos del ensamblado, que contienen el nombre completo.  
@@ -43,8 +43,9 @@ Para conocer el nombre completo de un ensamblado de la caché global de ensambla
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Nombres de ensamblado](../../../docs/framework/app-domains/assembly-names.md)
-- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
+- [Crear ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
 - [Crear y utilizar ensamblados con nombre seguro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

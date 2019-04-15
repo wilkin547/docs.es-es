@@ -10,12 +10,12 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: fd0321debc4aeee782c782b7e31fb8518aae2e96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33043652e11beb374843d43c9683ff4b7928eb3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740897"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112806"
 ---
 # <a name="cache-policy"></a>Directiva de caché
 Una directiva de caché define reglas que se usan para determinar si se puede satisfacer una solicitud mediante una copia almacenada en caché del recurso solicitado. Las aplicaciones especifican requisitos de caché de cliente de actualización, pero la directiva de caché en vigor viene determinada por los requisitos de caché de cliente, los requisitos de expiración del contenido del servidor y los requisitos de revalidación del servidor. La interacción de la directiva de caché de cliente y los requisitos de servidor siempre da como resultado la directiva de caché más conservadora para ayudar a garantizar que el contenido actualizado se devuelva a la aplicación cliente.  
@@ -39,7 +39,8 @@ Una directiva de caché define reglas que se usan para determinar si se puede sa
  Para obtener ejemplos de código que muestran cómo crear y usar directivas de caché, vea [Configurar el almacenamiento en caché de las aplicaciones de red](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Administración de la memoria caché para aplicaciones de red](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md) (Directivas de caché de duración definida)
+- [directivas de caché basadas en la ubicación](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [directivas de caché de duración definida](../../../docs/framework/network-programming/time-based-cache-policies.md)
 - [Configurar el almacenamiento en caché de las aplicaciones de red](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)

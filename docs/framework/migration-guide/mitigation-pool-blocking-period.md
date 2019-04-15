@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4c90a75ebbb9e4bc6248aadd709be8b5285ecd6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: f97650099aed0be7e1983f759cd0f38fc568f857
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082768"
 ---
 # <a name="mitigation-pool-blocking-period"></a>Mitigación: período de bloqueo del grupo
 El período de bloqueo del grupo de conexiones se quito de las conexiones a bases de datos SQL de Azure.  
@@ -34,4 +34,5 @@ El período de bloqueo del grupo de conexiones se quito de las conexiones a base
  El comportamiento anterior se puede restaurar al establecer la propiedad <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> en <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
-- [Cambios en el runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6-2.md)
+
+- [Cambios en tiempo de ejecución](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6-2.md)

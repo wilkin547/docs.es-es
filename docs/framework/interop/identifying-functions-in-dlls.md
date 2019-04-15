@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfe2be8784fd4baf6ce9e603da1c6e2388126b5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132046"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identificar funciones en archivos DLL
 La identidad de una función DLL consta de los siguientes elementos:  
@@ -46,8 +46,9 @@ La identidad de una función DLL consta de los siguientes elementos:
  Para obtener la documentación completa sobre la API de Windows, vea el SDK de la plataforma. Para obtener ejemplos que muestran cómo construir declaraciones basadas en .NET para usarse con la invocación de plataforma, vea [Serialización de datos con invocación de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consumir funciones DLL no administradas](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
 - [Especificar un punto de entrada](../../../docs/framework/interop/specifying-an-entry-point.md)
-- [Creación de una clase para contener funciones de archivos DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
+- [Crear una clase para contener funciones de archivos DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
 - [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
 - [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md)

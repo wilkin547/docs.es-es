@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ff1ba3563249cda786a12894c5e4b37442ed9d21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722683"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096269"
 ---
 # <a name="common-type-system"></a>Sistema de tipos comunes
 Common Type System define cómo se declaran, usan y administran los tipos en Common Language Runtime. Es también una parte importante de la compatibilidad en tiempo de ejecución con la integración entre lenguajes. El sistema de tipos común realiza las funciones siguientes:  
@@ -41,7 +41,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
   
 -   [Tipos de .NET](#types_in_the_net_framework)  
   
--   [Definiciones de tipo](#type_definitions)  
+-   [Definiciones de tipos](#type_definitions)  
   
 -   [Miembros de tipos](#type_members)  
   
@@ -165,9 +165,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
   
 > [!NOTE]
 >  No es preciso usar estos métodos para los delegados de controladores de eventos en C#, C++ ni Visual Basic, ya que estos lenguajes proporcionan sintaxis para agregar y quitar controladores de eventos.  
-  
- 
-  
+
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>Definiciones de tipos  
  Una definición de tipo incluye lo siguiente:  
@@ -226,9 +224,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
  Un tipo puede heredar valores y comportamientos de otro. El sistema de tipos común no permite que los tipos hereden de más de un tipo base.  
   
  Un tipo puede implementar cualquier número de interfaces. Para implementar una interfaz, un tipo debe implementar todos los miembros virtuales de la interfaz. Un tipo derivado puede implementar un método virtual, que se puede invocar estática o dinámicamente.  
-  
-  
-  
+
 <a name="type_members"></a>   
 ## <a name="type-members"></a>Miembros de tipos  
  El motor en tiempo de ejecución permite definir miembros de tipos, que especifican el comportamiento y el estado de los tipos. Los miembros de tipos incluyen lo siguiente:  
@@ -290,9 +286,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
  Un tipo anidado es un tipo que es un miembro de algún otro tipo. Los tipos anidados deben estar estrechamente acoplados a su tipo contenedor y no deben ser útiles como tipos de uso general. Los tipos anidados son útiles cuando el tipo declarativo utiliza y crea instancias del tipo anidado y el uso de dicho tipo anidado no se expone en miembros públicos.  
   
  Los tipos anidados resultan confusos para algunos desarrolladores y no deben estar públicamente visibles a menos que haya una razón de peso. En una biblioteca bien diseñada, los desarrolladores rara vez deberían tener que utilizar tipos anidados para crear instancias de objetos o declarar variables.  
-  
-  
-  
+
 <a name="characteristics_of_type_members"></a>   
 ## <a name="characteristics-of-type-members"></a>Características de los miembros de tipos  
  Common Type System permite que los miembros de tipos tengan diversas características; sin embargo, no es necesario que los lenguajes admitan todas estas características. En la siguiente tabla se describen las características de los miembros.  

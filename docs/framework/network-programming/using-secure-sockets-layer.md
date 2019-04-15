@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: 5d095d4cd6d8ee204b6d05a7674dee67c35e46c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0af2fa8bbe2efb2dc4fb3d1177c4950dcec87cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135811"
 ---
 # <a name="using-secure-sockets-layer"></a>Usar la capa de sockets seguros
 Las clases <xref:System.Net> usan la Capa de sockets seguros (SSL) para cifrar la conexión de varios protocolos de red.  
@@ -63,6 +63,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 -   Referencias al espacio de nombres **System.Net**.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Seguridad en la programación para redes](../../../docs/framework/network-programming/security-in-network-programming.md)
 - [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Selección y validación de certificados](../../../docs/framework/network-programming/certificate-selection-and-validation.md)

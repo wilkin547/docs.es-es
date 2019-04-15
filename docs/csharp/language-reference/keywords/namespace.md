@@ -1,6 +1,6 @@
 ---
 title: 'Palabra clave namespace: Referencia de C#'
-ms.custom: seodec18
+ms.custom: seoapril2019
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: b5c6b8081c188d5b184930222d54ad8f4b5d7a71
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148764"
 ---
 # <a name="namespace-c-reference"></a>espacio de nombres (Referencia de C#)
 
@@ -28,15 +28,15 @@ En un espacio de nombres, se pueden declarar cero o más de los siguientes tipos
 
 - otro espacio de nombres
 
-- [class](class.md)
+- [clase](class.md)
 
-- [interface](interface.md)
+- [interfaz](interface.md)
 
 - [struct](struct.md)
 
 - [enum](enum.md)
 
-- [delegate](delegate.md)
+- [delegado](delegate.md)
 
 Tanto si se declara explícitamente un espacio de nombres en un archivo de código fuente de C# como si no, el compilador agrega un espacio de nombres predeterminado. Este espacio de nombres sin nombre, que a veces se denomina espacio de nombres global, está presente en todos los archivos. Todos los identificadores del espacio de nombres global están disponibles para su uso en un espacio de nombres con nombre.
 
@@ -58,9 +58,9 @@ Para obtener más información sobre el uso de los espacios de nombres, vea los 
 
 - [Espacios de nombres](../../programming-guide/namespaces/index.md)
 
-- [Utilizar espacios de nombres](../../programming-guide/namespaces/using-namespaces.md)
+- [Uso de espacios de nombres](../../programming-guide/namespaces/using-namespaces.md)
 
-- [Cómo: Utilizar el alias del espacio de nombres global](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
+- [Procedimiento para usar el alias del espacio de nombres global](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
@@ -72,4 +72,5 @@ Para obtener más información sobre el uso de los espacios de nombres, vea los 
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](index.md)
 - [Palabras clave del espacio de nombres](namespace-keywords.md)
-- [using](using.md)
+- [utilizar](using-directive.md)
+- [uso de versión estática](using-static.md)

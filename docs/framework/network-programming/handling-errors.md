@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 4e3bcf279ae3de066d1d1306a574c76fc95b2840
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26e2a25855485bdd19d30e8497d0f75b7d4432e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599791"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097166"
 ---
 # <a name="handling-errors"></a>Control de errores
 Las clases <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> generan excepciones de sistema (como <xref:System.ArgumentException>) y excepciones específicas de web (que son <xref:System.Net.WebException> generadas mediante el método <xref:System.Net.WebRequest.GetResponse%2A>).  
@@ -45,7 +45,7 @@ Las clases <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> generan 
   
  En la tabla siguiente se describen los valores posibles de la propiedad **Status**.  
   
-|Estado|Descripción|  
+|Situación|Descripción|  
 |------------|-----------------|  
 |ConnectFailure|No se ha podido contactar con el servicio remoto en el nivel de transporte.|  
 |ConnectionClosed|La conexión ha terminado antes de tiempo.|  
@@ -58,7 +58,7 @@ Las clases <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> generan 
 |SendFailure|No se pudo enviar una solicitud completa al servidor remoto.|  
 |ServerProtocolViolation|La respuesta del servidor no era una respuesta HTTP válida.|  
 |Correcto|No se ha detectado ningún error.|  
-|Timeout|No se ha recibido ninguna respuesta en el tiempo de espera establecido para la solicitud.|  
+|Tiempo de espera|No se ha recibido ninguna respuesta en el tiempo de espera establecido para la solicitud.|  
 |TrustFailure|No se pudo validar un certificado de servidor.|  
 |MessageLengthLimitExceeded|Se ha recibido un mensaje que ha superado el límite especificado al enviar una solicitud o recibir una respuesta del servidor.|  
 |Pendiente|Una solicitud asincrónica interna está pendiente.|  
@@ -168,5 +168,6 @@ End Try
  Cuando se genera **SocketException**, la clase **SocketException** establece la propiedad <xref:System.Net.Sockets.SocketException.ErrorCode%2A> en el último error de socket que se ha producido en el sistema operativo. Para obtener más información sobre los códigos de error de socket, vea la documentación de códigos de error de la API de Winsock 2.0 en MSDN.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Fundamentos del control de excepciones](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
 - [Solicitud de datos](../../../docs/framework/network-programming/requesting-data.md)

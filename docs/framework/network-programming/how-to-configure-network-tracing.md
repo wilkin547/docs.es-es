@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 3930453e2ba3594e19d8eb7c3dfbceb49c3a1e80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540538"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151559"
 ---
 # <a name="how-to-configure-network-tracing"></a>Procedimiento para configurar el seguimiento de la red
 El archivo de configuración de la aplicación o equipo contiene la configuración que determina el formato y el contenido del seguimiento de red. Antes de realizar este procedimiento, asegúrese de que el seguimiento está habilitado. Para obtener información sobre cómo habilitar el seguimiento de red, vea [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md) (Habilitar el seguimiento de red).  
@@ -98,7 +98,8 @@ El archivo de configuración de la aplicación o equipo contiene la configuraci�
 |`Tracemode`|Atributo <xref:System.String> opcional. Establezca este atributo en `includehex` para mostrar el seguimiento del protocolo en formato hexadecimal y de texto. Establezca este atributo en `protocolonly` para mostrar solo texto. El valor predeterminado es `includehex`.<br /><br /> Este atributo debe establecerse en el elemento \<switches> como se muestra en el ejemplo. Se produce una excepción si este atributo se establece en un elemento bajo el elemento \<source>.|  
   
 ## <a name="see-also"></a>Vea también
-- [Interpretación del seguimiento de red](../../../docs/framework/network-programming/interpreting-network-tracing.md)
-- [Network Tracing in the .NET Framework (Seguimiento de red en .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)
-- [Habilitar el seguimiento de red](../../../docs/framework/network-programming/enabling-network-tracing.md)
+
+- [Interpretar el seguimiento de red](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [Traza de la red en .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+- [Habilitación del seguimiento de red](../../../docs/framework/network-programming/enabling-network-tracing.md)
 - [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
