@@ -5,47 +5,48 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: b70a4ac99b90e5112c64d25ab517ae6ba819542f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d87ea1ff18c4697a2c04f22cbf67720f21cbf459
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118136"
 ---
-# <a name="access-modifiers-c-reference"></a><span data-ttu-id="829b1-102">Modificadores de acceso (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="829b1-102">Access Modifiers (C# Reference)</span></span>
-<span data-ttu-id="829b1-103">Los modificadores de acceso son palabras clave que se usan para especificar la accesibilidad declarada de un miembro o un tipo.</span><span class="sxs-lookup"><span data-stu-id="829b1-103">Access modifiers are keywords used to specify the declared accessibility of a member or a type.</span></span> <span data-ttu-id="829b1-104">En esta sección se presentan los cuatro modificadores de acceso:</span><span class="sxs-lookup"><span data-stu-id="829b1-104">This section introduces the four access modifiers:</span></span>  
+# <a name="access-modifiers-c-reference"></a><span data-ttu-id="af5e6-102">Modificadores de acceso (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="af5e6-102">Access Modifiers (C# Reference)</span></span>
+<span data-ttu-id="af5e6-103">Los modificadores de acceso son palabras clave que se usan para especificar la accesibilidad declarada de un miembro o un tipo.</span><span class="sxs-lookup"><span data-stu-id="af5e6-103">Access modifiers are keywords used to specify the declared accessibility of a member or a type.</span></span> <span data-ttu-id="af5e6-104">En esta sección se presentan los cuatro modificadores de acceso:</span><span class="sxs-lookup"><span data-stu-id="af5e6-104">This section introduces the four access modifiers:</span></span>  
   
 -   `public`
 -   `protected`
 -   `internal`
 -   `private`
   
- <span data-ttu-id="829b1-105">Pueden especificarse los siguientes seis niveles de accesibilidad con los modificadores de acceso:</span><span class="sxs-lookup"><span data-stu-id="829b1-105">The following six accessibility levels can be specified using the access modifiers:</span></span>  
+ <span data-ttu-id="af5e6-105">Pueden especificarse los siguientes seis niveles de accesibilidad con los modificadores de acceso:</span><span class="sxs-lookup"><span data-stu-id="af5e6-105">The following six accessibility levels can be specified using the access modifiers:</span></span>  
   
-- <span data-ttu-id="829b1-106">[`public`](public.md): El acceso no está restringido.</span><span class="sxs-lookup"><span data-stu-id="829b1-106">[`public`](public.md): Access is not restricted.</span></span>  
+- <span data-ttu-id="af5e6-106">[`public`](public.md): El acceso no está restringido.</span><span class="sxs-lookup"><span data-stu-id="af5e6-106">[`public`](public.md): Access is not restricted.</span></span>  
   
-- <span data-ttu-id="829b1-107">[`protected`](protected.md): El acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora.</span><span class="sxs-lookup"><span data-stu-id="829b1-107">[`protected`](protected.md): Access is limited to the containing class or types derived from the containing class.</span></span>  
+- <span data-ttu-id="af5e6-107">[`protected`](protected.md): El acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora.</span><span class="sxs-lookup"><span data-stu-id="af5e6-107">[`protected`](protected.md): Access is limited to the containing class or types derived from the containing class.</span></span>  
   
-- <span data-ttu-id="829b1-108">[`internal`](internal.md): El acceso está limitado al ensamblado actual.</span><span class="sxs-lookup"><span data-stu-id="829b1-108">[`internal`](internal.md): Access is limited to the current assembly.</span></span>  
+- <span data-ttu-id="af5e6-108">[`internal`](internal.md): El acceso está limitado al ensamblado actual.</span><span class="sxs-lookup"><span data-stu-id="af5e6-108">[`internal`](internal.md): Access is limited to the current assembly.</span></span>  
   
-- <span data-ttu-id="829b1-109">[`protected internal`](protected-internal.md): El acceso está limitado al ensamblado actual o a los tipos derivados de la clase contenedora.</span><span class="sxs-lookup"><span data-stu-id="829b1-109">[`protected internal`](protected-internal.md): Access is limited to the current assembly or types derived from the containing class.</span></span>  
+- <span data-ttu-id="af5e6-109">[`protected internal`](protected-internal.md): El acceso está limitado al ensamblado actual o a los tipos derivados de la clase contenedora.</span><span class="sxs-lookup"><span data-stu-id="af5e6-109">[`protected internal`](protected-internal.md): Access is limited to the current assembly or types derived from the containing class.</span></span>  
   
-- <span data-ttu-id="829b1-110">[`private`](private.md): El acceso está limitado al tipo contenedor.</span><span class="sxs-lookup"><span data-stu-id="829b1-110">[`private`](private.md): Access is limited to the containing type.</span></span>  
+- <span data-ttu-id="af5e6-110">[`private`](private.md): El acceso está limitado al tipo contenedor.</span><span class="sxs-lookup"><span data-stu-id="af5e6-110">[`private`](private.md): Access is limited to the containing type.</span></span>  
 
-- <span data-ttu-id="829b1-111">[`private protected`](private-protected.md): El acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora que hay en el ensamblado actual.</span><span class="sxs-lookup"><span data-stu-id="829b1-111">[`private protected`](private-protected.md): Access is limited to the containing class or types derived from the containing class within the current assembly.</span></span>  
+- <span data-ttu-id="af5e6-111">[`private protected`](private-protected.md): El acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora que hay en el ensamblado actual.</span><span class="sxs-lookup"><span data-stu-id="af5e6-111">[`private protected`](private-protected.md): Access is limited to the containing class or types derived from the containing class within the current assembly.</span></span>  
   
- <span data-ttu-id="829b1-112">En esta sección también se presenta lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="829b1-112">This section also introduces the following:</span></span>  
+ <span data-ttu-id="af5e6-112">En esta sección también se presenta lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="af5e6-112">This section also introduces the following:</span></span>  
   
--   <span data-ttu-id="829b1-113">[Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md): Usar los cuatro modificadores de acceso para declarar seis niveles de accesibilidad.</span><span class="sxs-lookup"><span data-stu-id="829b1-113">[Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md): Using the four access modifiers to declare six levels of accessibility.</span></span>  
+-   <span data-ttu-id="af5e6-113">[Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md): Usar los cuatro modificadores de acceso para declarar seis niveles de accesibilidad.</span><span class="sxs-lookup"><span data-stu-id="af5e6-113">[Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md): Using the four access modifiers to declare six levels of accessibility.</span></span>  
   
--   <span data-ttu-id="829b1-114">[Dominio de accesibilidad](../../../csharp/language-reference/keywords/accessibility-domain.md): especifica en qué secciones del programa se puede hacer referencia a dicho miembro.</span><span class="sxs-lookup"><span data-stu-id="829b1-114">[Accessibility Domain](../../../csharp/language-reference/keywords/accessibility-domain.md): Specifies where, in the program sections, a member can be referenced.</span></span>  
+-   <span data-ttu-id="af5e6-114">[Dominio de accesibilidad](../../../csharp/language-reference/keywords/accessibility-domain.md): especifica en qué secciones del programa se puede hacer referencia a dicho miembro.</span><span class="sxs-lookup"><span data-stu-id="af5e6-114">[Accessibility Domain](../../../csharp/language-reference/keywords/accessibility-domain.md): Specifies where, in the program sections, a member can be referenced.</span></span>  
   
--   <span data-ttu-id="829b1-115">[Restricciones en el uso de los niveles de accesibilidad](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): un resumen de las restricciones sobre usar niveles de accesibilidad declarados.</span><span class="sxs-lookup"><span data-stu-id="829b1-115">[Restrictions on Using Accessibility Levels](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): A summary of the restrictions on using declared accessibility levels.</span></span>  
+-   <span data-ttu-id="af5e6-115">[Restricciones en el uso de los niveles de accesibilidad](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): un resumen de las restricciones sobre usar niveles de accesibilidad declarados.</span><span class="sxs-lookup"><span data-stu-id="af5e6-115">[Restrictions on Using Accessibility Levels](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): A summary of the restrictions on using declared accessibility levels.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="829b1-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="829b1-116">See also</span></span>
-- [<span data-ttu-id="829b1-117">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="829b1-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="829b1-118">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="829b1-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="829b1-119">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="829b1-119">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
-- [<span data-ttu-id="829b1-120">Modificadores de acceso</span><span class="sxs-lookup"><span data-stu-id="829b1-120">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [<span data-ttu-id="829b1-121">Palabras clave de acceso</span><span class="sxs-lookup"><span data-stu-id="829b1-121">Access Keywords</span></span>](../../../csharp/language-reference/keywords/access-keywords.md)
-- [<span data-ttu-id="829b1-122">Modificadores</span><span class="sxs-lookup"><span data-stu-id="829b1-122">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)
+## <a name="see-also"></a><span data-ttu-id="af5e6-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="af5e6-116">See also</span></span>
+
+- [<span data-ttu-id="af5e6-117">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="af5e6-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="af5e6-118">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="af5e6-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="af5e6-119">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="af5e6-119">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="af5e6-120">Modificadores de acceso</span><span class="sxs-lookup"><span data-stu-id="af5e6-120">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+- [<span data-ttu-id="af5e6-121">Palabras clave de acceso</span><span class="sxs-lookup"><span data-stu-id="af5e6-121">Access Keywords</span></span>](../../../csharp/language-reference/keywords/access-keywords.md)
+- [<span data-ttu-id="af5e6-122">Modificadores</span><span class="sxs-lookup"><span data-stu-id="af5e6-122">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)
