@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 979b9ea58f69f83829c364966a9edeb9e0644309
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494390"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336842"
 ---
 # <a name="how-to-start-services"></a>Procedimiento para iniciar servicios
 Después de instalar un servicio, debe iniciarse. Al iniciarse, llama al método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> en la clase de servicio. Normalmente, el método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> define el trabajo útil que realizará el servicio. Después de que se inicia un servicio, este permanece activo hasta que se pausa o se detiene manualmente.  
@@ -27,11 +27,11 @@ Después de instalar un servicio, debe iniciarse. Al iniciarse, llama al método
   
 ### <a name="to-specify-how-a-service-should-start"></a>Para especificar cómo debe iniciarse un servicio  
   
-1.  Después de crear su servicio, agregue los instaladores necesarios para ello. Para obtener más información, vea [Cómo: Agregar instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1. Después de crear su servicio, agregue los instaladores necesarios para ello. Para obtener más información, vea [Cómo: Agregar instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-2.  En el diseñador, haga clic en el instalador del servicio para el servicio con el que está trabajando.  
+2. En el diseñador, haga clic en el instalador del servicio para el servicio con el que está trabajando.  
   
-3.  En la ventana **Propiedades**, establezca la propiedad <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> en blanco:  
+3. En la ventana **Propiedades**, establezca la propiedad <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> en blanco:  
   
     |Para que el servicio se instale|Establezca ese valor|  
     |----------------------------------|--------------------|  
@@ -48,15 +48,15 @@ Después de instalar un servicio, debe iniciarse. Al iniciarse, llama al método
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>Para iniciar manualmente un servicio desde el Explorador de servidores  
   
-1.  En el **Explorador de servidores**, agregue el servidor que desea si no aparece en la lista. Para obtener más información, vea el artículo sobre cómo acceder al Explorador de servidores y al Explorador de bases de datos e inicializarlos.  
+1. En el **Explorador de servidores**, agregue el servidor que desea si no aparece en la lista. Para obtener más información, vea el artículo sobre cómo acceder al Explorador de servidores y al Explorador de bases de datos e inicializarlos.  
   
-2.  Expanda el nodo **Servicios** y, después, busque el servicio que desea iniciar.  
+2. Expanda el nodo **Servicios** y, después, busque el servicio que desea iniciar.  
   
-3.  Haga clic con el botón derecho en el servicio y, después, haga clic en **Detener**.  
+3. Haga clic con el botón derecho en el servicio y, después, haga clic en **Detener**.  
   
 ### <a name="to-manually-start-a-service-from-services-control-manager"></a>Para iniciar manualmente un servicio desde el Administrador de control de servicios  
   
-1.  Abra el **Administrador de control de servicios** llevando a cabo una de las siguientes acciones:  
+1. Abra el **Administrador de control de servicios** llevando a cabo una de las siguientes acciones:  
   
     -   En Windows XP y 2000 Professional, haga clic en **Mi PC** en el escritorio y, después, haga clic en **Administrar**. En el cuadro de diálogo que aparece, expanda el nodo **Servicios y aplicaciones**.  
   
@@ -69,15 +69,16 @@ Después de instalar un servicio, debe iniciarse. Al iniciarse, llama al método
   
      Podrá ver su servicio en la lista de la sección **Servicios** de la ventana.  
   
-2.  Seleccione su servicio en la lista, haga clic en él con el botón secundario y luego haga clic en **Iniciar**.  
+2. Seleccione su servicio en la lista, haga clic en él con el botón secundario y luego haga clic en **Iniciar**.  
   
 ### <a name="to-manually-start-a-service-from-code"></a>Para iniciar manualmente un servicio desde el código  
   
-1.  Cree una instancia de la clase <xref:System.ServiceProcess.ServiceController> y configúrela para que interactúe con el servicio que desea administrar.  
+1. Cree una instancia de la clase <xref:System.ServiceProcess.ServiceController> y configúrela para que interactúe con el servicio que desea administrar.  
   
-2.  Llame al método <xref:System.ServiceProcess.ServiceController.Start%2A> para iniciar el servicio.  
+2. Llame al método <xref:System.ServiceProcess.ServiceController.Start%2A> para iniciar el servicio.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Cómo: Creación de servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Cómo: Adición de instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Procedimiento para crear servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Procedimiento para agregar instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

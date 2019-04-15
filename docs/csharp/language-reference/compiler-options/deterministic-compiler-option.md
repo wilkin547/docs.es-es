@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 819e0c44d933b491091c05d1c28b30827ead85ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c6d0c7128becb154955664cfdcf96d020de9369
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499858"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480669"
 ---
 # <a name="-deterministic"></a>-deterministic
 
-Hace que el compilador genere un ensamblado cuya salida byte a byte es idéntica en todas las compilaciones para las entradas idénticas. 
+Hace que el compilador genere un ensamblado cuya salida byte a byte es idéntica en todas las compilaciones para las entradas idénticas.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,22 +37,22 @@ El compilador tiene en cuenta las entradas siguientes con el fin de garantizar e
 - La versión exacta del compilador que se usa y los ensamblados a los que se hace referencia.
 - La ruta de acceso del directorio actual.
 - El contenido binario de todos los archivos pasados explícitamente al compilador, ya sea de manera directa o indirecta, incluidos los siguientes:
-    - Archivos de código fuente
-    - Ensamblados a los que se hace referencia
-    - Módulos a los que se hace referencia
-    - Recursos
-    - Archivo de clave de nombre seguro
-    - Archivos de respuesta @
-    - Analizadores
-    - Conjuntos de reglas
-    - Archivos adicionales que podrían usar los analizadores
+  - Archivos de código fuente
+  - Ensamblados a los que se hace referencia
+  - Módulos a los que se hace referencia
+  - Recursos
+  - Archivo de clave de nombre seguro
+  - Archivos de respuesta @
+  - Analizadores
+  - Conjuntos de reglas
+  - Archivos adicionales que podrían usar los analizadores
 - La referencia cultural actual (para el idioma en el que se producen los diagnósticos y los mensajes de excepción).
 - La codificación predeterminada (o página de códigos actual) si no se especifica la codificación.
 - La existencia (o la inexistencia) de archivos y su contenido en las rutas de búsqueda del compilador (especificada, por ejemplo, mediante `/lib` o `/recurse`).
 - La plataforma CLR en la que se ejecuta el compilador.
 - El valor de `%LIBPATH%`, que pueden afectar a la carga de dependencias del analizador.
 
-Cuando los orígenes están disponibles públicamente, se puede usar la compilación determinista para establecer si un archivo binario se compila a partir de una fuente de confianza. También puede ser útil en un sistema de compilación continua para determinar si es necesario ejecutar pasos de compilación que dependen de los cambios realizados en un archivo binario. 
+Cuando los orígenes están disponibles públicamente, se puede usar la compilación determinista para establecer si un archivo binario se compila a partir de una fuente de confianza. También puede ser útil en un sistema de compilación continua para determinar si es necesario ejecutar pasos de compilación que dependen de los cambios realizados en un archivo binario.
 
 ## <a name="see-also"></a>Vea también
 

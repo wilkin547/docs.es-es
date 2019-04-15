@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: c38b6d227859a962c320a0fb2f059294ccacfcfb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831932"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342467"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Tutorial: Crear agentes de escucha de registro personalizados (Visual Basic)
 En este tutorial se muestra cómo crear un agente de escucha de registro personalizado y configurarlo para escuchar la salida del objeto `My.Application.Log`.  
@@ -37,23 +37,23 @@ En este tutorial se muestra cómo crear un agente de escucha de registro persona
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Para asignar un nombre seguro al ensamblado de agente de escucha de registro  
   
-1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto** , elija **Propiedades**.   
+1. Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto** , elija **Propiedades**.   
   
-2.  Haga clic en la pestaña **Firma**.  
+2. Haga clic en la pestaña **Firma**.  
   
-3.  Active la casilla **Firmar el ensamblado**.  
+3. Active la casilla **Firmar el ensamblado**.  
   
-4.  Seleccione **\<Nuevo>** en la lista desplegable **Elija un archivo de clave de nombre seguro**.  
+4. Seleccione **\<Nuevo>** en la lista desplegable **Elija un archivo de clave de nombre seguro**.  
   
      Se abre el cuadro de diálogo **Crear clave de nombre seguro**.  
   
-5.  Especifique un nombre para el archivo de clave en el cuadro **Nombre del archivo de clave**.  
+5. Especifique un nombre para el archivo de clave en el cuadro **Nombre del archivo de clave**.  
   
-6.  Escriba una contraseña en los cuadros **Escribir contraseña** y **Confirmar contraseña**.  
+6. Escriba una contraseña en los cuadros **Escribir contraseña** y **Confirmar contraseña**.  
   
-7.  Haga clic en **Aceptar**.  
+7. Haga clic en **Aceptar**.  
   
-8.  Vuelva a compilar la aplicación.  
+8. Vuelva a compilar la aplicación.  
   
 ## <a name="adding-the-listener"></a>Agregar el agente de escucha  
  Ahora que el ensamblado tiene un nombre seguro, debe determinar el nombre seguro del agente de escucha para que `My.Application.Log` use el agente de escucha de registro.  
@@ -74,7 +74,7 @@ En este tutorial se muestra cómo crear un agente de escucha de registro persona
   
 #### <a name="to-add-the-listener-to-myapplicationlog"></a>Para agregar el agente de escucha a My.Application.Log  
   
-1.  Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
+1. Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
   
      o bien  
   
@@ -86,17 +86,17 @@ En este tutorial se muestra cómo crear un agente de escucha de registro persona
   
     3.  Haga clic en **Agregar**.  
   
-2.  Busque la sección `<listeners>` , en la sección `<source>` con el atributo `name` el "DefaultSource", ubicada en la sección `<sources>` . La sección `<sources>` se encuentra en la sección `<system.diagnostics>` , en la sección de nivel superior `<configuration>` .  
+2. Busque la sección `<listeners>` , en la sección `<source>` con el atributo `name` el "DefaultSource", ubicada en la sección `<sources>` . La sección `<sources>` se encuentra en la sección `<system.diagnostics>` , en la sección de nivel superior `<configuration>` .  
   
-3.  Agregue este elemento a la sección `<listeners>`:  
+3. Agregue este elemento a la sección `<listeners>`:  
   
     ```xml  
     <add name="SimpleLog" />  
     ```  
   
-4.  Busque la sección `<sharedListeners>` , en la sección `<system.diagnostics>` , en la sección de nivel superior `<configuration>` .  
+4. Busque la sección `<sharedListeners>` , en la sección `<system.diagnostics>` , en la sección de nivel superior `<configuration>` .  
   
-5.  Agregue este elemento a dicha sección `<sharedListeners>` :  
+5. Agregue este elemento a dicha sección `<sharedListeners>` :  
   
     ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
@@ -108,6 +108,6 @@ En este tutorial se muestra cómo crear un agente de escucha de registro persona
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Cómo: Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Cómo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Procedimiento para registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Procedimiento para escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [Tutorial: Cambiar el lugar en el que My.Application.Log escribe la información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

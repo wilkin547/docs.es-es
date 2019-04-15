@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50bfcf5c27236ca704a24f49128becfbee716c21
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463090"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340040"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consumir funciones DLL no administradas
 La invocación de plataforma es un servicio que permite al código administrado llamar a funciones no administradas implementadas en bibliotecas de vínculos dinámicos (DLL), como los de la API de Windows. Busca y llama a una función exportada y calcula las referencias de sus argumentos (enteros, cadenas, matrices, estructuras etc.) a través de los límites de interoperación según sea necesario.  
@@ -29,15 +29,15 @@ La invocación de plataforma es un servicio que permite al código administrado 
   
 #### <a name="to-consume-exported-dll-functions"></a>Para consumir funciones DLL exportadas  
   
-1.  [Identificar funciones en archivos DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
+1. [Identificar funciones en archivos DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
   
      Como mínimo, debe especificar el nombre de la función y el nombre del archivo DLL que la contiene.  
   
-2.  [Crear una clase para contener funciones de archivos DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
+2. [Crear una clase para contener funciones de archivos DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
   
      Puede usar una clase existente, crear una clase individual para cada función no administrada o crear una clase que contiene un conjunto de funciones no administradas relacionadas.  
   
-3.  [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+3. [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
   
      [Visual Basic] Use la instrucción **Declare** con las palabras clave **Function** y **Lib**. En algunos casos excepcionales, puede usar **DllImportAttribute** con las palabras clave **Shared Function**. Estos casos se explican más adelante en esta sección.  
   
@@ -45,7 +45,7 @@ La invocación de plataforma es un servicio que permite al código administrado 
   
      [C++] Use **DllImportAttribute** para identificar el archivo DLL y la función. Marque la función o el método contenedor con **extern "C"**.  
   
-4.  [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md).  
+4. [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md).  
   
      Llame al método de la clase administrada como haría con cualquier otro método administrado. [Pasar estructuras](../../../docs/framework/interop/passing-structures.md) e [implementar funciones de devolución de llamada](../../../docs/framework/interop/callback-functions.md) son casos especiales.  
   
@@ -58,20 +58,21 @@ La invocación de plataforma es un servicio que permite al código administrado 
   
  Cuando la invocación de plataforma llama a una función no administrada, realiza la siguiente secuencia de acciones:  
   
-1.  Busca el archivo DLL que contiene la función.  
+1. Busca el archivo DLL que contiene la función.  
   
-2.  Carga el archivo DLL en la memoria.  
+2. Carga el archivo DLL en la memoria.  
   
-3.  Busca la dirección de la función en la memoria, inserta sus argumentos en la pila y calcula las referencias de los datos si es necesario.  
+3. Busca la dirección de la función en la memoria, inserta sus argumentos en la pila y calcula las referencias de los datos si es necesario.  
   
     > [!NOTE]
     >  La búsqueda y carga del archivo DLL y la búsqueda de la dirección de la función en memoria solo se realiza en la primera llamada a la función.  
   
-4.  Transfiere el control a la función no administrada.  
+4. Transfiere el control a la función no administrada.  
   
  La invocación de plataforma devuelve las excepciones generadas por la función no administrada al llamador administrado.
 
 ## <a name="see-also"></a>Vea también
-- [Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md) (Interoperar con código no administrado)
+
+- [Interoperar con código no administrado](../../../docs/framework/interop/index.md)
 - [Ejemplos de invocación de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)
 - [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

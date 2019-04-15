@@ -5,19 +5,19 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0e38ad777112e5e88fe40c530da6107d0de0e3ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835186"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336140"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Cómo quitar atributos de un nodo de elementos en el DOM
 Existen muchas formas de quitar atributos. Una de estas técnicas consiste en quitarlos de la colección de atributos. Para ello, hay que realizar los siguientes pasos:  
   
-1.  Obtenga la colección de atributos del elemento utilizando `XmlAttributeCollection attrs = elem.Attributes;`.  
+1. Obtenga la colección de atributos del elemento utilizando `XmlAttributeCollection attrs = elem.Attributes;`.  
   
-2.  Quite el atributo de la colección de atributos utilizando uno de estos tres métodos:  
+2. Quite el atributo de la colección de atributos utilizando uno de estos tres métodos:  
   
     -   Utilice <xref:System.Xml.XmlAttributeCollection.Remove%2A> para quitar un atributo específico.  
   
@@ -41,4 +41,4 @@ Existen muchas formas de quitar atributos. Una de estas técnicas consiste en qu
   
 ## <a name="see-also"></a>Vea también
 
-- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [Modelo de objetos de documento (DOM) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

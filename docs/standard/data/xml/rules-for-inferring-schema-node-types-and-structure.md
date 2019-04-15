@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4153638e570bfdb7fe65e5c9cd285f56644fea3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683669"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338714"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Reglas para deducir los tipos de nodo de esquema y estructura
 Este tema describe cómo el proceso de deducción del esquema traduce los tipos de nodo de un documento XML a una estructura de lenguaje de definición de esquema XML (XSD).  
@@ -18,21 +18,21 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
 ## <a name="element-inference-rules"></a>Reglas de deducción de elemento  
  Esta sección describe las reglas de interferencia para las declaraciones de elemento. Existen ocho estructuras de declaraciones de elementos que serán deducidas:  
   
-1.  Elemento de tipo simple  
+1. Elemento de tipo simple  
   
-2.  Elemento vacío  
+2. Elemento vacío  
   
-3.  Elemento vacío con atributos  
+3. Elemento vacío con atributos  
   
-4.  Elemento con atributos y contenido simple  
+4. Elemento con atributos y contenido simple  
   
-5.  Elemento con una secuencia de elementos secundarios  
+5. Elemento con una secuencia de elementos secundarios  
   
-6.  Elemento con una secuencia de elementos secundarios y atributos  
+6. Elemento con una secuencia de elementos secundarios y atributos  
   
-7.  Elemento con una secuencia de opciones de elementos secundarios  
+7. Elemento con una secuencia de opciones de elementos secundarios  
   
-8.  Elemento con una secuencia de opciones de elementos secundarios y atributos  
+8. Elemento con una secuencia de opciones de elementos secundarios y atributos  
   
 > [!NOTE]
 >  Todas las declaraciones `complexType` se deducen como tipos anónimos. El único elemento global deducido es el elemento raíz; todos los demás elementos son locales.  

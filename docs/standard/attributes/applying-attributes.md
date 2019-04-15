@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836479"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337700"
 ---
 # <a name="applying-attributes"></a>Aplicar atributos
 Para aplicar un atributo a un elemento del código se puede utilizar el proceso siguiente:  
   
-1.  Definir un atributo nuevo o utilizar uno existente importando su espacio de nombres de .NET Framework.  
+1. Definir un atributo nuevo o utilizar uno existente importando su espacio de nombres de .NET Framework.  
   
-2.  Aplique el atributo al elemento de código colocándolo inmediatamente antes del elemento.  
+2. Aplique el atributo al elemento de código colocándolo inmediatamente antes del elemento.  
   
      Cada lenguaje tiene su propia sintaxis de atributo. En C++ y C#, el atributo está incluido entre corchetes y separado del elemento por un espacio en blanco, que puede incluir un salto de línea. En Visual Basic, el atributo está incluido entre corchetes angulares y debe estar en la misma línea lógica; se puede utilizar el carácter de continuación de línea si se desea un salto de línea.
   
-3.  Especifique parámetros posicionales y parámetros con nombre para el atributo.  
+3. Especifique parámetros posicionales y parámetros con nombre para el atributo.  
   
      Los parámetros posicionales son obligatorios y preceden a cualquier parámetro con nombre; corresponden a los parámetros de uno de los constructores del atributo. Los parámetros con nombre son opcionales y corresponden a las propiedades de lectura y escritura del atributo. En C++ y C#, especifique `name`=`value` para cada parámetro opcional, donde `name` es el nombre de la propiedad. En Visual Basic, especifique `name`:=`value`.  
   
@@ -55,7 +55,7 @@ Para aplicar un atributo a un elemento del código se puede utilizar el proceso 
 ## <a name="see-also"></a>Vea también
 
 - [Atributos](../../../docs/standard/attributes/index.md)
-- [Retrieving Information Stored in Attributes](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)
+- [Recuperar información almacenada en atributos](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
 - [Conceptos](/cpp/windows/attributed-programming-concepts)
 - [Atributos (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
 - [Información general sobre los atributos (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

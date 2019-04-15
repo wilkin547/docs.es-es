@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Transformar un fragmento de nodo'
+title: Procedimiento para transformar un fragmento de nodo
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,27 +8,27 @@ dev_langs:
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb258b61664e1fdbf6604afdf69074c48cf5bda4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fabf7983a1887fb318bfb8d111b3911f4d90c545
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45597303"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345175"
 ---
-# <a name="how-to-transform-a-node-fragment"></a>Cómo: Transformar un fragmento de nodo
+# <a name="how-to-transform-a-node-fragment"></a>Procedimiento para transformar un fragmento de nodo
 Cuando se transforman los datos contenidos en un objeto <xref:System.Xml.XmlDocument> o <xref:System.Xml.XPath.XPathDocument>, las transformaciones XSLT se aplican a un documento completo. En otras palabras, si se pasa un nodo distinto del nodo raíz del documento, esto no evita que el proceso de transformación pueda obtener acceso a todos los nodos del documento cargado. Para transformar un fragmento del nodo, debe crear un objeto diferente que contenga el fragmento del nodo y pasar ese objeto al método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="procedures"></a>Procedimientos  
   
 #### <a name="to-transform-a-node-fragment"></a>Para transformar un fragmento de nodo  
   
-1.  Cree un objeto que contenga el documento de origen.  
+1. Cree un objeto que contenga el documento de origen.  
   
-2.  Localice el fragmento del nodo que desee transformar.  
+2. Localice el fragmento del nodo que desee transformar.  
   
-3.  Cree un objeto diferente solo con el fragmento del nodo.  
+3. Cree un objeto diferente solo con el fragmento del nodo.  
   
-4.  Pase el fragmento del nodo al método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
+4. Pase el fragmento del nodo al método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se transforma un fragmento de nodo y los resultados se envían a la consola.  

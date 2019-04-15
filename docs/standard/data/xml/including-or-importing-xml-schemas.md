@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dff5dca159b3e714a027bd2d2ebe86d2b414dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626009"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343576"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusión o importación de esquemas XML
 Un esquema XML puede contener elementos `<xs:import />`, `<xs:include />` y `<xs:redefine />`. Estos elementos de esquema hacen referencia a otros esquemas XML que se pueden utilizar para complementar la estructura del esquema que los incluye o importa. Las clases <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> y <xref:System.Xml.Schema.XmlSchemaRedefine> se asignan estos elementos en la API del modelo de objetos de esquema (SOM).  
@@ -26,15 +26,15 @@ Un esquema XML puede contener elementos `<xs:import />`, `<xs:include />` y `<xs
   
  El código de ejemplo incluye el esquema de direcciones en los siguientes pasos.  
   
-1.  Agrega el esquema del cliente y el esquema de direcciones a un objeto <xref:System.Xml.Schema.XmlSchemaSet> nuevo y luego los compila. Cualquier error y advertencia de validación de esquemas que se encuentre durante la lectura o compilación de los esquemas se controla por medio del delegado <xref:System.Xml.Schema.ValidationEventHandler>.  
+1. Agrega el esquema del cliente y el esquema de direcciones a un objeto <xref:System.Xml.Schema.XmlSchemaSet> nuevo y luego los compila. Cualquier error y advertencia de validación de esquemas que se encuentre durante la lectura o compilación de los esquemas se controla por medio del delegado <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2.  Recupera los objetos <xref:System.Xml.Schema.XmlSchema> compilados para los esquemas del cliente y de direcciones desde <xref:System.Xml.Schema.XmlSchemaSet> iterando por la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Puesto que los esquemas se compilan, las propiedades del conjunto de información posterior a la compilación del esquema son accesibles.  
+2. Recupera los objetos <xref:System.Xml.Schema.XmlSchema> compilados para los esquemas del cliente y de direcciones desde <xref:System.Xml.Schema.XmlSchemaSet> iterando por la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Puesto que los esquemas se compilan, las propiedades del conjunto de información posterior a la compilación del esquema son accesibles.  
   
-3.  Crea un objeto <xref:System.Xml.Schema.XmlSchemaImport>, establece la propiedad <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> de la importación en el espacio de nombres del esquema de direcciones, establece la propiedad <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> de la importación en el objeto <xref:System.Xml.Schema.XmlSchema> del esquema de direcciones y agrega la importación a la propiedad <xref:System.Xml.Schema.XmlSchema.Includes%2A> del esquema del cliente.  
+3. Crea un objeto <xref:System.Xml.Schema.XmlSchemaImport>, establece la propiedad <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> de la importación en el espacio de nombres del esquema de direcciones, establece la propiedad <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> de la importación en el objeto <xref:System.Xml.Schema.XmlSchema> del esquema de direcciones y agrega la importación a la propiedad <xref:System.Xml.Schema.XmlSchema.Includes%2A> del esquema del cliente.  
   
-4.  Vuelve a procesar y compilar el objeto <xref:System.Xml.Schema.XmlSchema> modificado del esquema del cliente utilizando los métodos <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> y <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de la clase <xref:System.Xml.Schema.XmlSchemaSet> y lo escribe en la consola.  
+4. Vuelve a procesar y compilar el objeto <xref:System.Xml.Schema.XmlSchema> modificado del esquema del cliente utilizando los métodos <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> y <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de la clase <xref:System.Xml.Schema.XmlSchemaSet> y lo escribe en la consola.  
   
-5.  Por último, escribe de forma recursiva en la consola todos los esquemas importados al esquema del cliente utilizando la propiedad <xref:System.Xml.Schema.XmlSchema.Includes%2A> del esquema del cliente. La propiedad <xref:System.Xml.Schema.XmlSchema.Includes%2A> proporciona acceso a todas las inclusiones, importaciones o redefiniciones agregadas a un esquema.  
+5. Por último, escribe de forma recursiva en la consola todos los esquemas importados al esquema del cliente utilizando la propiedad <xref:System.Xml.Schema.XmlSchema.Includes%2A> del esquema del cliente. La propiedad <xref:System.Xml.Schema.XmlSchema.Includes%2A> proporciona acceso a todas las inclusiones, importaciones o redefiniciones agregadas a un esquema.  
   
  A continuación se ofrece el código de ejemplo completo y los esquemas de direcciones y del cliente escritos en la consola.  
   
@@ -103,7 +103,7 @@ Un esquema XML puede contener elementos `<xs:import />`, `<xs:include />` y `<xs
 
 - [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lectura y escritura de esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Recorrido de esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Cómo atravesar esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [Edición de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

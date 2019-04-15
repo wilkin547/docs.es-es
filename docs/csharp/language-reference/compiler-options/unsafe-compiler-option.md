@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: 4a8f7d099b2cd3c1b4331c87f853b617fef505ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cfd7c82bc2cbf816164b235642c0647eeb7e5b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726538"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337336"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (Opciones del compilador de C#)
 La opción del compilador **-unsafe** permite la compilación de código en el que se usa la palabra clave [unsafe](../../../csharp/language-reference/keywords/unsafe.md).  
@@ -28,11 +28,11 @@ La opción del compilador **-unsafe** permite la compilación de código en el q
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra la página **Propiedades** del proyecto.  
+1. Abra la página **Propiedades** del proyecto.  
   
-2.  Haga clic en la página de propiedades de **Compilar**.  
+2. Haga clic en la página de propiedades de **Compilar**.  
   
-3.  Active la casilla **Permitir código no seguro**.  
+3. Active la casilla **Permitir código no seguro**.  
   
 ### <a name="to-add-this-option-in-a-csproj-file"></a>Para agregar esta opción en un archivo csproj
 
