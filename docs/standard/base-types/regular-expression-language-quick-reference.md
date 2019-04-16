@@ -61,10 +61,10 @@ ms.locfileid: "58410529"
 |---------------------|-----------------|-------------|-------------|  
 |`[` *grupo_caracteres* `]`|Coincide con cualquier carácter individual de *grupo_caracteres*. De forma predeterminada, la coincidencia distingue entre mayúsculas y minúsculas.|`[ae]`|`"a"` en `"gray"`<br /><br /> `"a"`, `"e"` en `"lane"`|  
 |`[^` *grupo_caracteres* `]`|Negativo: coincide con cualquier carácter individual que no esté en *grupo_caracteres*. De forma predeterminada, los caracteres de *grupo_caracteres* distinguen entre mayúsculas y minúsculas.|`[^aei]`|`"r"`, `"g"`, `"n"` en `"reign"`|  
-|`[` *first* `-` *last* `]`|Rango de caracteres: coincide con cualquier carácter individual en el intervalo de *primero* to *último*.|`[A-Z]`|`"A"`, `"B"` en `"AB123"`|  
+|`[` *primero* `-` *último* `]`|Rango de caracteres: coincide con cualquier carácter individual en el intervalo de *primero* a *último*.|`[A-Z]`|`"A"`, `"B"` en `"AB123"`|  
 |`.`|Carácter comodín: coincide con cualquier carácter excepto con \n.<br /><br /> Para coincidir con un carácter de punto literal (. o `\u002E`), debe anteponerle el carácter de escape (`\.`).|`a.e`|`"ave"` en `"nave"`<br /><br /> `"ate"` en `"water"`|  
-|`\p{` *name* `}`|Coincide con cualquier carácter individual que pertenezca a la categoría general Unicode o al bloque con nombre especificado por *name*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|`"C"`, `"L"` en `"City Lights"`<br /><br /> `"Д"`, `"Ж"` en `"ДЖem"`|  
-|`\P{` *name* `}`|Coincide con cualquier carácter individual que no pertenezca a la categoría general Unicode o al bloque con nombre especificado por *name*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|`"i"`, `"t"`, `"y"` en `"City"`<br /><br /> `"e"`, `"m"` en `"ДЖem"`|  
+|`\p{` *nombre* `}`|Coincide con cualquier carácter individual que pertenezca a la categoría general Unicode o al bloque con nombre especificado por *nombre*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|`"C"`, `"L"` en `"City Lights"`<br /><br /> `"Д"`, `"Ж"` en `"ДЖem"`|  
+|`\P{` *nombre* `}`|Coincide con cualquier carácter individual que no pertenezca a la categoría general Unicode o al bloque con nombre especificado por *nombre*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|`"i"`, `"t"`, `"y"` en `"City"`<br /><br /> `"e"`, `"m"` en `"ДЖem"`|  
 |`\w`|Coincide con cualquier carácter de una palabra.|`\w`|`"I"`, `"D"`, `"A"`, `"1"`, `"3"` en `"ID A1.3"`|  
 |`\W`|Coincide con cualquier carácter que no pertenezca a una palabra.|`\W`|`" "`, `"."` en `"ID A1.3"`|  
 |`\s`|Coincide con cualquier carácter que sea un espacio en blanco.|`\w\s`|`"D "` en `"ID A1.3"`|  
@@ -75,7 +75,7 @@ ms.locfileid: "58410529"
  [Volver al principio](#top)  
   
 ## <a name="anchors"></a>Delimitadores  
- Los delimitadores, o aserciones atómicas de ancho cero, hacen que una coincidencia tenga éxito o no dependiendo de la posición actual en la cadena, pero no hacen que el motor avance por la cadena ni consuma caracteres. Los metacaracteres enumerados en la tabla siguiente son delimitadores. Para obtener más información, consulta [Delimitadores](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
+ Los delimitadores, o aserciones atómicas de ancho cero, hacen que una coincidencia tenga éxito o no dependiendo de la posición actual en la cadena, pero no hacen que el motor avance por la cadena ni consuma caracteres. Los metacaracteres enumerados en la tabla siguiente son delimitadores. Para obtener más información, consulte [Delimitadores](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
 |Aserción|Descripción|Modelo|Coincidencias|  
 |---------------|-----------------|-------------|-------------|  
@@ -86,20 +86,20 @@ ms.locfileid: "58410529"
 |`\z`|La coincidencia se debe producir al final de la cadena.|`-\d{3}\z`|`"-333"` en `"-901-333"`|  
 |`\G`|La coincidencia se debe producir en el punto en el que finalizó la coincidencia anterior.|`\G\(\d\)`|`"(1)"`, `"(3)"`, `"(5)"` en `"(1)(3)(5)[7](9)"`|  
 |`\b`|La coincidencia se debe producir en un límite entre un carácter `\w` (alfanumérico) y un carácter `\W` (no alfanumérico).|`\b\w+\s\w+\b`|`"them theme"`, `"them them"` en `"them theme them them"`|  
-|`\B`|La coincidencia no se debe producir en un límite `\b` .|`\Bend\w*\b`|`"ends"`, `"ender"` en `"end sends endure lender"`|  
+|`\B`|La coincidencia no se debe producir en un límite `\b`.|`\Bend\w*\b`|`"ends"`, `"ender"` en `"end sends endure lender"`|  
   
  [Volver al principio](#top)  
   
 ## <a name="grouping-constructs"></a>Construcciones de agrupamiento  
- Las construcciones de agrupamiento definen subexpresiones de una expresión regular y, normalmente, capturan subcadenas de una cadena de entrada. Las construcciones de agrupamiento incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).  
+ Las construcciones de agrupamiento definen subexpresiones de una expresión regular y, normalmente, capturan subcadenas de una cadena de entrada. Las construcciones de agrupamiento incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulte [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).  
   
 |Construcción de agrupamiento|Descripción|Modelo|Coincidencias|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *subexpresión* `)`|Captura la subexpresión coincidente y le asigna un número ordinal basado en uno.|`(\w)\1`|`"ee"` en `"deep"`|  
-|`(?<` *name* `>` *subexpresión* `)`|Captura la subexpresión coincidente en un grupo con nombre.|`(?<double>\w)\k<double>`|`"ee"` en `"deep"`|  
+|`(?<` *nombre* `>` *subexpresión* `)`|Captura la subexpresión coincidente en un grupo con nombre.|`(?<double>\w)\k<double>`|`"ee"` en `"deep"`|  
 |`(?<` *nombre1* `-` *nombre2* `>` *subexpresión* `)`|Define una definición de grupo de equilibrio. Para obtener más información, consulte la sección "Definiciones de grupos de equilibrio" en [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"((1-3)*(3-1))"` en `"3+2^((1-3)*(3-1))"`|  
 |`(?:` *subexpresión* `)`|Define un grupo sin captura.|`Write(?:Line)?`|`"WriteLine"` en `"Console.WriteLine()"`<br /><br /> `"Write"` en `"Console.Write(value)"`|  
-|`(?imnsx-imnsx:` *subexpresión* `)`|Aplica o deshabilita las opciones especificadas dentro de *subexpresión*. Para obtener más información, consulta [Opciones de expresiones regulares](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"`, `"A12XL"` en `"A12xl A12XL a12xl"`|  
+|`(?imnsx-imnsx:` *subexpresión* `)`|Aplica o deshabilita las opciones especificadas dentro de *subexpresión*. Para obtener más información, consulte [Opciones de expresiones regulares](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"`, `"A12XL"` en `"A12xl A12XL a12xl"`|  
 |`(?=` *subexpresión* `)`|Aserción de búsqueda anticipada positiva de ancho cero.|`\w+(?=\.)`|`"is"`, `"ran"` y `"out"` en `"He is. The dog ran. The sun is out."`|  
 |`(?!` *subexpresión* `)`|Aserción de búsqueda anticipada negativa de ancho cero.|`\b(?!un)\w+\b`|`"sure"`, `"used"` en `"unsure sure unity used"`|  
 |`(?<=` *subexpresión* `)`|Aserción de búsqueda tardía positiva de ancho cero.|`(?<=19)\d{2}\b`|`"99"`, `"50"`, `"05"` en `"1851 1999 1950 1905 2003"`|  
@@ -109,7 +109,7 @@ ms.locfileid: "58410529"
  [Volver al principio](#top)  
   
 ## <a name="quantifiers"></a>Cuantificadores  
- Un cuantificador especifica cuántas instancias del elemento anterior (que puede ser un carácter, un grupo o una clase de caracteres) debe haber en la cadena de entrada para que se encuentre una coincidencia. Los cuantificadores incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Cuantificadores](quantifiers-in-regular-expressions.md).  
+ Un cuantificador especifica cuántas instancias del elemento anterior (que puede ser un carácter, un grupo o una clase de caracteres) debe haber en la cadena de entrada para que se encuentre una coincidencia. Los cuantificadores incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulte [Cuantificadores](quantifiers-in-regular-expressions.md).  
   
 |Cuantificador|Descripción|Modelo|Coincidencias|  
 |----------------|-----------------|-------------|-------------|  
@@ -129,33 +129,33 @@ ms.locfileid: "58410529"
  [Volver al principio](#top)  
   
 ## <a name="backreference-constructs"></a>Construcciones de referencia inversa  
- Una referencia inversa permite identificar una subexpresión coincidente previamente más adelante en la misma expresión regular. En la tabla siguiente se enumeran las construcciones de referencia inversa admitidas en las expresiones regulares de .NET. Para obtener más información, consulta [Construcciones de referencia inversa](backreference-constructs-in-regular-expressions.md).  
+ Una referencia inversa permite identificar una subexpresión coincidente previamente más adelante en la misma expresión regular. En la tabla siguiente se enumeran las construcciones de referencia inversa admitidas en las expresiones regulares de .NET. Para obtener más información, consulte [Construcciones de referencia inversa](backreference-constructs-in-regular-expressions.md).  
   
 |Construcción de referencias inversas|Descripción|Modelo|Coincidencias|  
 |-----------------------------|-----------------|-------------|-------------|  
-|`\` *número*|Referencia inversa. Coincide con el valor de una subexpresión numerada.|`(\w)\1`|`"ee"` en `"seek"`|  
-|`\k<` *name* `>`|Referencia inversa con nombre Coincide con el valor de una expresión con nombre.|`(?<char>\w)\k<char>`|`"ee"` en `"seek"`|  
+|`\` *número*|Referencia inversa Coincide con el valor de una subexpresión numerada.|`(\w)\1`|`"ee"` en `"seek"`|  
+|`\k<` *nombre* `>`|Referencia inversa con nombre Coincide con el valor de una expresión con nombre.|`(?<char>\w)\k<char>`|`"ee"` en `"seek"`|  
   
  [Volver al principio](#top)  
   
 ## <a name="alternation-constructs"></a>Construcciones de alternancia  
- Las estructuras de alternancia modifican una expresión regular para habilitar o no la coincidencia. Estas construcciones incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Construcciones de alternancia](alternation-constructs-in-regular-expressions.md).  
+ Las estructuras de alternancia modifican una expresión regular para habilitar o no la coincidencia. Estas construcciones incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulte [Construcciones de alternancia](alternation-constructs-in-regular-expressions.md).  
   
 |Construcciones de alternancia|Descripción|Modelo|Coincidencias|  
 |---------------------------|-----------------|-------------|-------------|  
 |<code>&#124;</code>|Coincide con cualquier elemento separado por el carácter de barra vertical (<code>&#124;</code>).|<code>th(e&#124;is&#124;at)</code>|`"the"`, `"this"` en `"this is the day."`|  
-|`(?(` *expresión* `)` *sí* <code>&#124;</code> *no* `)`|Coincide con *sí* si el patrón de expresión regular designado por *expresión* coincide; de lo contrario, coincide con la parte opcional *no* . *expresión* se interpreta como una aserción de ancho cero.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10"`, `"910"` en `"A10 C103 910"`|  
-|`(?(` *name* `)` *sí* <code>&#124;</code> *no* `)`|Coincide con *sí* si *nombre*, un grupo de captura con nombre o numerado, tiene una coincidencia; de lo contrario, coincide con la parte opcional *no*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg "`, `"\"Yiska playing.jpg\""` en `"Dogs.jpg \"Yiska playing.jpg\""`|  
+|`(?(` *expresión* `)` *sí* <code>&#124;</code> *no* `)`|Coincide con *sí* si el patrón de expresión regular designado por *expresión* coincide; de lo contrario, coincide con la parte opcional *no*. *expresión* se interpreta como una aserción de ancho cero.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10"`, `"910"` en `"A10 C103 910"`|  
+|`(?(` *nombre* `)` *sí* <code>&#124;</code> *no* `)`|Coincide con *sí* si *nombre*, un grupo de captura con nombre o numerado, tiene una coincidencia; de lo contrario, coincide con la parte opcional *no*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg "`, `"\"Yiska playing.jpg\""` en `"Dogs.jpg \"Yiska playing.jpg\""`|  
   
  [Volver al principio](#top)  
   
 ## <a name="substitutions"></a>Sustituciones  
- Las sustituciones son elementos del lenguaje de expresiones regulares que se admiten en modelos de reemplazo. Para obtener más información, consulta [Substituciones](substitutions-in-regular-expressions.md). Los metacaracteres enumerados en la tabla siguiente son aserciones atómicas de ancho cero.  
+ Las sustituciones son elementos del lenguaje de expresiones regulares que se admiten en modelos de reemplazo. Para obtener más información, consulte [Substituciones](substitutions-in-regular-expressions.md). Los metacaracteres enumerados en la tabla siguiente son aserciones atómicas de ancho cero.  
   
 |Carácter|Descripción|Modelo|Modelo de reemplazo|Cadena de entrada|Cadena de resultado|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
 |`$` *número*|Sustituye la subcadena que coincide con el grupo *número*.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|  
-|`${` *name* `}`|Sustituye la subcadena que coincide con el grupo con nombre *nombre*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|  
+|`${` *nombre* `}`|Sustituye la subcadena que coincide con el grupo con nombre *nombre*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|  
 |`$$`|Sustituye un "$" literal.|`\b(\d+)\s?USD`|`$$$1`|`"103 USD"`|`"$103"`|  
 |`$&`|Sustituye una copia de toda la coincidencia.|`\$?\d*\.?\d+`|`**$&**`|`"$1.30"`|`"**$1.30**"`|  
 |``$` ``|Sustituye todo el texto de la cadena de entrada delante de la coincidencia.|`B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|  
@@ -166,7 +166,7 @@ ms.locfileid: "58410529"
  [Volver al principio](#top)  
   
 ## <a name="regular-expression-options"></a>Opciones de expresiones regulares  
- Puede especificar opciones que controlen cómo debe interpretar el motor de expresiones regulares un patrón de expresión regular. Muchas de estas opciones pueden especificarse alineadas (en el patrón de expresión regular) o como una o más constantes de <xref:System.Text.RegularExpressions.RegexOptions> . Esta referencia rápida solo muestra las opciones alineadas. Para obtener más información sobre las opciones alineadas y <xref:System.Text.RegularExpressions.RegexOptions> , consulte el artículo [Opciones de expresiones regulares](regular-expression-options.md).  
+ Puede especificar opciones que controlen cómo debe interpretar el motor de expresiones regulares un patrón de expresión regular. Muchas de estas opciones pueden especificarse alineadas (en el patrón de expresión regular) o como una o más constantes de <xref:System.Text.RegularExpressions.RegexOptions>. Esta referencia rápida solo muestra las opciones alineadas. Para obtener más información sobre las opciones alineadas y <xref:System.Text.RegularExpressions.RegexOptions>, consulte el artículo [Opciones de expresiones regulares](regular-expression-options.md).  
   
  Puede especificar una opción alineada de dos formas:  
   
@@ -187,13 +187,13 @@ ms.locfileid: "58410529"
  [Volver al principio](#top)  
   
 ## <a name="miscellaneous-constructs"></a>Construcciones misceláneas  
- Las estructuras misceláneas modifican un modelo de expresión regular o proporcionan información sobre él. En la tabla siguiente se enumeran las construcciones misceláneas admitidas por .NET. Para obtener más información, consulta [Construcciones misceláneas](miscellaneous-constructs-in-regular-expressions.md).  
+ Las estructuras misceláneas modifican un modelo de expresión regular o proporcionan información sobre él. En la tabla siguiente se enumeran las construcciones misceláneas admitidas por .NET. Para obtener más información, consulte [Construcciones misceláneas](miscellaneous-constructs-in-regular-expressions.md).  
   
-|Construcción|de esquema JSON|Ejemplo|  
+|Construcción|Definición|Ejemplo|  
 |---------------|----------------|-------------|  
 |`(?imnsx-imnsx)`|Establece o deshabilita opciones como la no distinción entre mayúsculas y minúsculas en medio de un patrón. Para más información, consulte [Opciones de expresiones regulares](regular-expression-options.md).|`\bA(?i)b\w+\b` coincide con `"ABA"`, `"Able"` en `"ABA Able Act"`|  
-|`(?#` *comentario* `)`|Comentario alineado. El comentario termina en el primer paréntesis de cierre.|`\bA(?#Matches words starting with A)\w+\b`|  
-|`#` [hasta el final de la línea]|Comentario en modo X. El comentario comienza en un carácter `#` sin escape y continúa hasta el final de la línea.|`(?x)\bA\w+\b#Matches words starting with A`|  
+|`(?#` *comentario* `)`|Comentario alineado El comentario termina en el primer paréntesis de cierre.|`\bA(?#Matches words starting with A)\w+\b`|  
+|`#` [hasta el final de la línea]|Comentario en modo X El comentario comienza en un carácter `#` sin escape y continúa hasta el final de la línea.|`(?x)\bA\w+\b#Matches words starting with A`|  
   
 ## <a name="see-also"></a>Vea también
 

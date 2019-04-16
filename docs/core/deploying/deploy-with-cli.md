@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410269"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306071"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publicación de aplicaciones .NET Core con la CLI
 
@@ -33,8 +33,7 @@ Para obtener información general sobre estos modos de publicación, vea [Implem
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
-> [!IMPORTANT]
-> \*Si se usa el archivo ejecutable dependiente de la plataforma de la versión 3.0 del SDK, este es el modo de publicación predeterminado cuando se ejecuta el comando `dotnet publish`básico. Esto solo se aplica a los proyectos que tienen como destino **.NET Core 2.1** o **.NET Core 3.0**.
+\* Si se usa el archivo ejecutable dependiente del marco de la versión 3.0 del SDK, se trata del modo de publicación predeterminado cuando se ejecuta el comando `dotnet publish` básico. Esto solo se aplica cuando el proyecto tiene como destino **.NET Core 2.1** o **.NET Core 3.0**.
 
 ## <a name="publishing-basics"></a>Conceptos básicos de publicación
 
@@ -129,7 +128,8 @@ Al publicar un FDE se crea una aplicación que realiza la puesta al día automá
 
 Excepto para .NET Core 3.x cuando el destino es la plataforma actual, se deben usar los siguientes modificadores con el comando `dotnet publish` para publicar un FDE:
 
-- `-r <RID>` Este modificador usa un identificador (RID) para especificar la plataforma de destino. Para obtener una lista de identificadores de tiempo de ejecución, vea [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md).
+- `-r <RID>`
+  Este modificador usa un identificador (RID) para especificar la plataforma de destino. Para obtener una lista de identificadores de tiempo de ejecución, vea [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md).
 
 - `--self-contained false` Este modificador indica al SDK de .NET Core que cree un archivo ejecutable como un FDE.
 
@@ -148,15 +148,15 @@ Al publicar una SCD, se crea una aplicación que no se pone al día a la revisi�
 
 Debe usar los modificadores siguientes con el comando `dotnet publish` para publicar una SCD:
 
-- `-r <RID>` Este modificador usa un identificador (RID) para especificar la plataforma de destino. Para obtener una lista de identificadores de tiempo de ejecución, vea [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md).
+- `-r <RID>`
+  Este modificador usa un identificador (RID) para especificar la plataforma de destino. Para obtener una lista de identificadores de tiempo de ejecución, vea [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md).
 
 - `--self-contained true` Este modificador indica al SDK de .NET Core que cree un archivo ejecutable como una SCD.
 
 > [!NOTE]
 > Puede reducir el tamaño total de la implementación si habilita el **modo de globalización invariable**. Este modo es útil para las aplicaciones que no son globales y que pueden usar las convenciones de formato, las de mayúsculas y minúsculas, y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture). Para más información sobre el **modo de globalización invariable** y cómo habilitarlo, vea [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) (Modo de globalización invariable de .NET Core).
 
-
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre la implementación de aplicaciones .NET Core](index.md)
+- [Información general sobre la implementación de aplicaciones .NET Core](index.md)
 - [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)

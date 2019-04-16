@@ -3,12 +3,12 @@ title: Introducción a Docker
 description: En este artículo se proporciona una introducción e información general para Docker en el contexto de una aplicación de .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 725d8301a27f1109c85a89945f0fb8403e255ab4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: acf1307c241d9462278bc0fce5cf59fdde0750a3
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817260"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480734"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introducción a .NET y Docker
 
@@ -58,7 +58,10 @@ Escale y organice contenedores de Linux mediante Kubernetes.
 * [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
 Implemente aplicaciones web o API con contenedores de Linux en un entorno PaaS.
 
-* [Azure Batch](https://azure.microsoft.com/services/batch/)\
+* [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
+Hospede el contenedor en la nube sin ningún servicio de administración de nivel superior.
+
+* [Azure Batch](https://azure.microsoft.com/services/batch/)\
 Ejecute trabajos de proceso repetitivos mediante contenedores.
 
 * [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
@@ -69,5 +72,5 @@ Almacene y administre imágenes de contenedor en todos los tipos de implementaci
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-* [Obtenga información sobre cómo incluir una aplicación de .NET Core en contenedores](build-docker-netcore-container.md).
-* [Consulte el tutorial de ASP.NET Core para los microservicios](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro).
+* [Obtenga información sobre cómo incluir una aplicación de .NET Core en contenedores.](build-docker-netcore-container.md)
+* [Consulte el tutorial de ASP.NET Core para los microservicios.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)

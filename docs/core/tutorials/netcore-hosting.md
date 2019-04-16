@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo hospedar el entorno de tiempo de e
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 27717cd68d2ef7c19289a9e06f99bb8767f2f582
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 53cdc13d5a356a2975182c58374a0e9c6639ec17
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654060"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481150"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escritura de un host personalizado de .NET Core para controlar el entorno de tiempo de ejecución de .NET desde el código nativo
 
@@ -68,8 +68,10 @@ Antes de iniciar el entorno de ejecución, es necesario preparar algunas propied
 
 Algunas propiedades comunes incluyen:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES` Esta es una lista de rutas de acceso de ensamblado (delimitadas por ";" en Windows y ":" en Linux) que el entorno de ejecución puede resolver de forma predeterminada. Algunos hosts tienen manifiestos codificados de forma rígida que enumeran los ensamblados que pueden cargar. Otros colocan cualquier biblioteca en determinadas ubicaciones (junto a *coreclr.dll*, por ejemplo) en esta lista.
-* `APP_PATHS` Esta es una lista de rutas de acceso para explorar un ensamblado si este no puede encontrarse en la lista de ensamblados de plataforma de confianza (TPA). Dado que el host tiene más control sobre los ensamblados que se cargan mediante la lista TPA, es recomendable que los hosts determinen qué ensamblados esperan cargar y los muestren de forma explícita. Pero si es necesario sondear en tiempo de ejecución, esta propiedad puede habilitar ese escenario.
+* `TRUSTED_PLATFORM_ASSEMBLIES`
+  Esta es una lista de rutas de acceso de ensamblado (delimitadas por ";" en Windows y ":" en Linux) que el entorno de ejecución puede resolver de forma predeterminada. Algunos hosts tienen manifiestos codificados de forma rígida que enumeran los ensamblados que pueden cargar. Otros colocan cualquier biblioteca en determinadas ubicaciones (junto a *coreclr.dll*, por ejemplo) en esta lista.
+* `APP_PATHS`
+  Esta es una lista de rutas de acceso para explorar un ensamblado si este no puede encontrarse en la lista de ensamblados de plataforma de confianza (TPA). Dado que el host tiene más control sobre los ensamblados que se cargan mediante la lista TPA, es recomendable que los hosts determinen qué ensamblados esperan cargar y los muestren de forma explícita. Pero si es necesario sondear en tiempo de ejecución, esta propiedad puede habilitar ese escenario.
 *  `APP_NI_PATHS` Esta lista es similar a APP_PATHS, excepto que son las rutas de acceso las que se sondean en busca de imágenes nativas.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` Esta propiedad es una lista de rutas de acceso que el cargador debe sondear cuando busca bibliotecas nativas llamadas mediante p/invoke.
 *  `PLATFORM_RESOURCE_ROOTS` Esta lista incluye rutas de acceso que se van a explorar para ensamblados satélite de recursos (en subdirectorios específicos de la referencia cultural).
@@ -114,7 +116,7 @@ Por último, cuando el host termina de ejecutar el código administrado, el ento
 
 [!code-cpp[CoreClrHost#6](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#6)]
 
-No olvide descargar la biblioteca de CoreCLR con `FreeLibrary` (en Windows) o `dlclose` (en Linux o Mac).
+CoreCLR no admite la reinicialización ni la descarga. No vuelva a llamar a `coreclr_initialize` ni descargue la biblioteca de CoreCLR.
 
 ## <a name="create-a-host-using-mscoreeh"></a>Creación de un host con Mscoree.h
 
@@ -164,8 +166,10 @@ Después de decidir qué marcas de AppDomain se van a usar, deben definirse sus 
 
 Las propiedades comunes de AppDomain incluyen:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES` Esta es una lista de rutas de acceso de ensamblado (delimitada por `;` en Windows y `:` en Linux o Mac) cuya carga debe priorizar AppDomain y a las que debe otorgar plena confianza (incluso en dominios de confianza parcial). Esta lista está diseñada para contener ensamblados de "Framework" y otros módulos de confianza, similares a los GAC en escenarios de .NET Framework. Algunos hosts colocarán una biblioteca junto a *coreclr.dll* en esta lista, otros tienen manifiestos codificados de forma rígida que enumeran ensamblados de confianza para sus fines.
-* `APP_PATHS` Esta es una lista de rutas de acceso para explorar un ensamblado si este no puede encontrarse en la lista de ensamblados de plataforma de confianza (TPA). Dado que el host tiene más control sobre los ensamblados que se cargan mediante la lista TPA, es recomendable que los hosts determinen qué ensamblados esperan cargar y los muestren de forma explícita. Pero si es necesario sondear en tiempo de ejecución, esta propiedad puede habilitar ese escenario.
+* `TRUSTED_PLATFORM_ASSEMBLIES`
+  Esta es una lista de rutas de acceso de ensamblado (delimitada por `;` en Windows y `:` en Linux o Mac) cuya carga debe priorizar AppDomain y a las que debe otorgar plena confianza (incluso en dominios de confianza parcial). Esta lista está diseñada para contener ensamblados de "Framework" y otros módulos de confianza, similares a los GAC en escenarios de .NET Framework. Algunos hosts colocarán una biblioteca junto a *coreclr.dll* en esta lista, otros tienen manifiestos codificados de forma rígida que enumeran ensamblados de confianza para sus fines.
+* `APP_PATHS`
+  Esta es una lista de rutas de acceso para explorar un ensamblado si este no puede encontrarse en la lista de ensamblados de plataforma de confianza (TPA). Dado que el host tiene más control sobre los ensamblados que se cargan mediante la lista TPA, es recomendable que los hosts determinen qué ensamblados esperan cargar y los muestren de forma explícita. Pero si es necesario sondear en tiempo de ejecución, esta propiedad puede habilitar ese escenario.
 *  `APP_NI_PATHS` Esta lista es muy similar a APP_PATHS excepto que está diseñada para ser rutas de acceso que se explorarán para imágenes nativas.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` Esta propiedad es una lista de rutas de acceso que el cargador debe explorar cuando busca archivos DLL nativos que se han llamado mediante p/invoke.
 *  `PLATFORM_RESOURCE_ROOTS` Esta lista incluye rutas de acceso que se van a explorar para ensamblados satélite de recursos (en subdirectorios específicos de la referencia cultural).
@@ -202,6 +206,8 @@ hr = runtimeHost->CreateDelegate(
 Por último, el host debe limpiarse después descargando AppDomains, deteniendo el runtime y lanzando la referencia `ICLRRuntimeHost4`.
 
 [!code-cpp[NetCoreHost#9](~/samples/core/hosting/HostWithMscoree/host.cpp#9)]
+
+CoreCLR no admite la descarga. No descargue la biblioteca de CoreCLR.
 
 ## <a name="conclusion"></a>Conclusión
 Una vez que se ha compilado el host, este puede probarse si se ejecuta desde la línea de comandos y se pasa cualquier argumento que espere el host (como la aplicación administrada que se va a ejecutar para el host de ejemplo mscoree). Al especificar la aplicación de .NET Core para el host que se va a ejecutar, asegúrese de usar el archivo .dll que ha generado `dotnet build`. Los archivos ejecutables (archivos .exe) que ha generado `dotnet publish` para las aplicaciones autocontenidas son realmente el host de .NET Core predeterminado (de manera que la aplicación pueda iniciarse directamente desde la línea de comandos en escenarios principales); el código de usuario se compila en un archivo .dll del mismo nombre.
