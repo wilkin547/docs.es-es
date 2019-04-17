@@ -1,17 +1,17 @@
 ---
-title: Administrar entornos de producción de Docker
+title: Administración de entornos de Docker en producción
 description: Familiarícese con los puntos clave para administrar un entorno de producción basadas en contenedores.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: f3cf9bc281e94f342cecb1083d886daba03c019d
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3f8c51b95f52a655de470ac237c51dd4ee9c13eb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836622"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672105"
 ---
-# <a name="manage-production-docker-environments"></a>Administrar entornos de producción de Docker
+# <a name="manage-production-docker-environments"></a>Administración de entornos de Docker en producción
 
 Administración del clúster y la orquestación es el proceso de control de un grupo de hosts. Esto puede implicar la adición y eliminación de hosts de un clúster, obtener información sobre el estado actual de hosts y contenedores e iniciar y detener los procesos. Orquestación y administración del clúster están estrechamente relacionadas con la programación porque el programador debe tener acceso a cada host del clúster con el fin de programar servicios. Por este motivo, la misma herramienta que se usa a menudo para ambos fines.
 
@@ -30,7 +30,7 @@ Tabla 6-1 se enumeran las herramientas de administración comunes relacionados c
 | [Azure Monitor para contenedores](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Herramienta de administración de Kubernetes Azure dedicado | Azure Kubernetes Service (AKS) |
 | [Kubernetes Web UI (panel)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Herramienta de administración de Kubernetes, puede supervisar y administrar un clúster local de Kubernetes | Azure Kubernetes Service (AKS)<br/>Kubernetes local |
 | [Portal de Azure para Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Explorador de Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Versión de escritorio y en línea para administrar clústeres de Service Fabric en Azure, en el entorno local, el desarrollo local y otras nubes | Azure Service Fabric |
-| [Contenedor de supervisión (Log Analytics)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Administración de contenedor general y solución de supervisión. Puede administrar clústeres de Kubernetes mediante [Azure Monitor para contenedores](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS y otros. |
+| [Contenedor de supervisión (Monitor de Azure)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Administración de contenedor general y solución de supervisión. Puede administrar clústeres de Kubernetes mediante [Azure Monitor para contenedores](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS y otros. |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 

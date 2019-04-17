@@ -4,20 +4,20 @@ description: En contenedores ciclo de vida de aplicaciones de Docker con el fluj
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a2fa1dddd68a54b7aab2ac44bf6109626689b36b
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 80acd58d08900da8e79f6b7388da3b10f9e4e566
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663930"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672308"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Flujo de trabajo de DevOps para aplicaciones de Docker con herramientas de Microsoft
 
-*Microsoft Visual Studio, servicios de Azure DevOps, Team Foundation Server y Application Insights proporcionan un ecosistema completo para el desarrollo y operaciones de TI que proporcione a su equipo las herramientas para administrar proyectos y compilar, probar e implementar rápidamente aplicaciones en contenedores.*
+*Microsoft Visual Studio, servicios de Azure DevOps, Team Foundation Server y Azure Monitor proporcionan que un ecosistema completo de desarrollo y las operaciones de TI que proporcione a su equipo las herramientas para administrar proyectos y crear rápidamente, probar e implementar en contenedores aplicaciones.*
 
 Con Visual Studio y servicios de Azure DevOps en la nube, junto con Team Foundation Server local, los equipos de desarrollo productiva pueden compilar, probar y publicar aplicaciones en contenedor que tienen como destino Windows o Linux.
 
-Herramientas de Microsoft pueden automatizar la canalización para implementaciones específicas de aplicaciones en contenedores, Docker, .NET Core o cualquier combinación con otras plataformas, desde compilaciones globales y la integración continua (CI) y pruebas con Azure DevOps Services o Team Foundation Server, para implementación continua (CD) para entornos de Docker (desarrollo, ensayo, producción) y para transmitir información de análisis sobre los servicios al equipo de desarrollo a través de Application Insights. Cada confirmación de código puede iniciar una compilación (CI) e implementar automáticamente los servicios en entornos en contenedores específicos (CD).
+Herramientas de Microsoft pueden automatizar la canalización para implementaciones específicas de aplicaciones en contenedores, Docker, .NET Core o cualquier combinación con otras plataformas, desde compilaciones globales y la integración continua (CI) y pruebas con Azure DevOps Services o Team Foundation Server, para implementación continua (CD) para entornos de Docker (desarrollo, ensayo, producción) y para transmitir información de análisis sobre los servicios al equipo de desarrollo a través de Azure Monitor. Cada confirmación de código puede iniciar una compilación (CI) e implementar automáticamente los servicios en entornos en contenedores específicos (CD).
 
 Los desarrolladores y evaluadores pueden aprovisionar con facilidad y rapidez entornos de prueba y desarrollo tipo producción basados en Docker con el uso de plantillas de Microsoft Azure.
 
