@@ -4,12 +4,12 @@ description: Aprenda a elevación y desplazamiento y modernizar aplicaciones exi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 8484bf554df2de47121b99272355181e3842517d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7e56238e129cadd128240d51f03a5926e6de3e6b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324700"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613101"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizar aplicaciones .NET existentes con la nube de Azure y contenedores de Windows (2nd edition)
 
@@ -91,9 +91,9 @@ El tercer nivel de madurez es el objetivo final de la nube, pero es opcional par
 
 En la tabla 1-1 se describen las principales ventajas y motivos para elegir cada enfoque de migración o modernización.
 
-| **En la nube de infraestructura listos** <br /> *Migración mediante lift- and -shift* | **Optimizada para la nube** <br /> *Modernizar* | **En la nube nativas** <br /> *Modernizar, rediseñar y volver a escribir* |
+| **Infraestructura preparada para la nube** <br /> *Elevación y desplazamiento* | **Optimizada para la nube** <br /> *Modernizar* | **Cloud-Native** <br /> *Modernizar, rediseñar y volver a escribir* |
 |---|---|---|
-| **Destino de proceso de la aplicación** |
+| **Destino de cálculo de la aplicación** |
 | Aplicaciones implementadas en las máquinas virtuales de Azure | Monolítica o las aplicaciones de N niveles implementado en Azure App Service, instancia de contenedor de Azure (ACI), las máquinas virtuales con contenedores, Azure Service Fabric o AKS (Azure Kubernetes Service) | Microservicios en contenedores en Azure Kubernetes Service (AKS), Service Fabric o microservicios sin servidor basadas en funciones de Azure. |
 | **Destino de datos** |
 | SQL o cualquier base de datos relacional en una máquina virtual | Instancia administrada de Azure SQL Database o en otra base de datos administrado en la nube. | Bases de datos de grano multas por microservicio, en función de otra base de datos administrado en la nube, Azure Cosmos DB o Azure SQL Database |
@@ -170,13 +170,13 @@ Esta guía no muestra cómo crear aplicaciones nativas de la nube, por ejemplo, 
 ### <a name="additional-resources"></a>Recursos adicionales
 
 - **En el contenedor de ciclo de vida de aplicaciones de Docker con la plataforma de Microsoft y herramientas** (libro electrónico descargable) \
-  [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
+  <https://aka.ms/dockerlifecycleebook>
 
 - **Microservicios de .NET. Arquitectura para aplicaciones .NET en contenedor** (libro electrónico descargable) \
-  [https://aka.ms/microservicesebook](https://aka.ms/microservicesebook)
+  <https://aka.ms/microservicesebook>
 
 - **Arquitectura de aplicaciones web modernas con ASP.NET Core y Azure** (libro electrónico descargable) \
-  [https://aka.ms/webappebook](https://aka.ms/webappebook)
+  <https://aka.ms/webappebook>
 
 ## <a name="who-should-use-this-guide"></a>Destinatarios de esta guía
 

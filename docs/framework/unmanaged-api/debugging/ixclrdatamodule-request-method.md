@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: a02a60668ae6caaad1940395822758331b93f550
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 755063ca6da29a2e4733dd653306192ac0434ec0
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119800"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610605"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>Método IXCLRDataModule::Request
 
@@ -29,7 +29,8 @@ Solicitudes para llenar el búfer especificado con los datos del módulo.
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
 ## <a name="syntax"></a>Sintaxis
-```
+
+```cpp
 HRESULT Request([in] ULONG32 reqCode,
     [in] ULONG32 inBufferSize,
     [in, size_is(inBufferSize)] BYTE* inBuffer,
@@ -60,10 +61,8 @@ El método proporcionado forma parte de la `IXCLRDataModule` interfaz y correspo
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado**: Ninguna   
-**Biblioteca:** Ninguna  
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Encabezado**: Ninguno **biblioteca:** Ninguno **versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Vea también
 

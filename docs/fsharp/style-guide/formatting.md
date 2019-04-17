@@ -2,12 +2,12 @@
 title: F#instrucciones de formato de código
 description: Obtenga información sobre las directrices para dar formato a F# código.
 ms.date: 02/08/2019
-ms.openlocfilehash: 0a72f96119181650837657afea6ca9d555ce9e5a
-ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
+ms.openlocfilehash: 259d4bb2147d1fc8bc5d35d7ff2e3c34ec2185d0
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59553867"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613829"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#instrucciones de formato de código
 
@@ -285,6 +285,7 @@ let update model msg =
     | 1 -> model + 1, []
     | _ -> model, [ msg ]
 ```
+
 En resumen, prefiere creaciones de instancias de tupla entre paréntesis, pero al usar tuplas para la coincidencia de patrones o un valor devuelto, se considera bien evitar los paréntesis.
 
 ## <a name="formatting-discriminated-union-declarations"></a>Formato discriminadas declaraciones de unión
@@ -344,10 +345,10 @@ type PostalAddress =
     City: string
     Zip: string }
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
-    
+
 // Unusual in F#
 type PostalAddress =
-    { 
+    {
         Address: string
         City: string
         Zip: string
@@ -359,13 +360,13 @@ Al colocar el símbolo (token) de apertura en una nueva línea y el token de cie
 ```fsharp
 // Declaring additional members on PostalAddress
 type PostalAddress =
-    { 
+    {
         Address: string
         City: string
         Zip: string
     } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
-    
+
 type MyRecord =
     {
         SomeField: int
@@ -407,7 +408,7 @@ let rainbow =
         Boss8 = "Jeffrey"
         Lackeys = ["Zippy"; "George"; "Bungle"]
     }
-    
+
 type MyRecord =
     {
         SomeField: int
@@ -445,12 +446,12 @@ let rainbow2 =
 
 Y como con las instrucciones de registro, es posible que desea dedicar líneas separadas para las llaves y aplicar sangría a un ámbito a la derecha con la expresión. Tenga en cuenta que en algunos casos especiales, como el ajuste de un valor con un elemento opcional sin paréntesis, es posible que deberá mantener una llave en una sola línea:
 
-```fsharp    
+```fsharp
 type S = { F1: int; F2: string }
 type State = { F:  S option }
 
 let state = { F = Some { F1 = 1; F2 = "Hello" } }
-let newState = 
+let newState =
     {
         state with
             F = Some {

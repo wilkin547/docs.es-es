@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff9ea8cdc8aea66b1dd1f54c8be881882f6e27f7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214876"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611541"
 ---
 # <a name="connectserverwmi-function"></a>Función ConnectServerWmi
+
 Crea una conexión a un espacio de nombres de WMI a través de DCOM en un equipo especificado.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 HRESULT ConnectServerWmi (
    [in] BSTR               strNetworkResource,
    [in] BSTR               strUser,
@@ -40,10 +41,11 @@ HRESULT ConnectServerWmi (
    [in] BSTR               strAuthority,
    [in] IWbemContext*      pCtx,
    [out] IWbemServices**   ppNamespace,
-   [in] DWORD              impLevel, 
+   [in] DWORD              impLevel,
    [in] DWORD              authLevel
 );
 ```
+
 ## <a name="parameters"></a>Parámetros
 
 `strNetworkResource`\
@@ -56,8 +58,8 @@ HRESULT ConnectServerWmi (
 [in] Un puntero a una `BSTR` que contiene la contraseña. Un `null` indica el contexto de seguridad actual. Una cadena vacía ("") indica que una contraseña válida de longitud cero.
 
 `strLocale`\
-[in] Un puntero a una `BSTR` que indica la configuración regional correcta para la recuperación de información. Para los identificadores de configuración regional de Microsoft, el formato de la cadena es "MS\_*xxx*", donde *xxx* es una cadena en formato hexadecimal que indica el identificador de configuración regional (LCID). Si se especifica una configuración regional no válido, el método devuelve `WBEM_E_INVALID_PARAMETER` excepto en Windows 7, donde la configuración regional predeterminada del servidor se usa en su lugar. Si ' se usa null1, la configuración regional actual. 
- 
+[in] Un puntero a una `BSTR` que indica la configuración regional correcta para la recuperación de información. Para los identificadores de configuración regional de Microsoft, el formato de la cadena es "MS\_*xxx*", donde *xxx* es una cadena en formato hexadecimal que indica el identificador de configuración regional (LCID). Si se especifica una configuración regional no válido, el método devuelve `WBEM_E_INVALID_PARAMETER` excepto en Windows 7, donde la configuración regional predeterminada del servidor se usa en su lugar. Si ' se usa null1, la configuración regional actual.
+
 `lSecurityFlags`\
 [in] Marcas para pasar a la `ConnectServerWmi` método. Da como resultado un valor de cero (0) para este parámetro en la llamada a `ConnectServerWmi` devolver solo una vez establecida una conexión al servidor. Esto podría dar lugar a una aplicación no responde indefinidamente si el servidor se interrumpe. Los otros valores válidos son:
 
@@ -76,7 +78,7 @@ HRESULT ConnectServerWmi (
 | NTLMDOMAIN:*nombre de dominio* | Se utiliza la autenticación NT LAN Manager y este parámetro contiene un nombre de dominio NTLM. |
 
 `pCtx`\
-[in] Normalmente, este parámetro es `null`. En caso contrario, es un puntero a un [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) objeto requerido por uno o varios proveedores de la clase dinámica. 
+[in] Normalmente, este parámetro es `null`. En caso contrario, es un puntero a un [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) objeto requerido por uno o varios proveedores de la clase dinámica.
 
 `ppNamespace`\
 [out] Devuelve la función recibe un puntero a un [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) objeto enlazado al espacio de nombres especificado. Se establece para que apunte a `null` cuando se produce un error.

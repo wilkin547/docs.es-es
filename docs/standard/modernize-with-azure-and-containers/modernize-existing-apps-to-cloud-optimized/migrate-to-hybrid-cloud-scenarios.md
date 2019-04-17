@@ -1,17 +1,17 @@
 ---
-title: Migrar a escenarios de nube híbrida
+title: Migración a escenarios de nube híbrida
 description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | Migrar a escenarios de nube híbrida
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 3d6fc272854654d890559d5db032b05667627d94
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b04c6edecf5b63f191cb2e0f808fb1d0f801d0a3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147351"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612581"
 ---
-# <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrar a escenarios de nube híbrida
+# <a name="migrate-to-hybrid-cloud-scenarios"></a>Migración a escenarios de nube híbrida
 
 Algunas organizaciones y empresas no pueden migrar algunos de sus aplicaciones a nubes públicas, como Microsoft Azure o cualquier otra nube pública debido a las regulaciones o sus propias directivas. Sin embargo, es probable que cualquier organización puede beneficiarse de tener algunas de sus aplicaciones en la nube pública y otras aplicaciones locales. Pero un entorno mixto puede dar lugar a una complejidad excesiva en los entornos debido a distintas plataformas y tecnologías utilizadas en las nubes públicas frente a entornos locales.
 
@@ -49,23 +49,23 @@ Kit de desarrollo de Microsoft Azure Stack es una implementación de nodo único
 
 -   **Nube híbrida de Azure**
 
-    [https://www.microsoft.com/cloud-platform/hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
+    <https://azure.microsoft.com/overview/hybrid-cloud/>
 
 -   **Azure Stack**
 
-    [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
+    <https://azure.microsoft.com/overview/azure-stack/>
 
 -   **Cuentas de servicio de Active Directory para contenedores de Windows**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
+    <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
 -   **Crear un contenedor con compatibilidad con Active Directory**
 
-    [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
+    <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
 -   **Licencias de ventaja híbrida de Azure**
 
-    [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
+    <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
 >[Anterior](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)

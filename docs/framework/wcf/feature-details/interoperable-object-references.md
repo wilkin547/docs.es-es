@@ -1,21 +1,21 @@
 ---
 title: Referencias a objetos interoperables
-ms.date: 03/30/2017
+ms.date: 04/15/2019
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-ms.openlocfilehash: 9cbbd5a34269a7c4a5c33d72487a02df21f2f0fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ada9084f6ac3c97dc641571c0cb8379a2fac68a8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222710"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610644"
 ---
 # <a name="interoperable-object-references"></a>Referencias a objetos interoperables
-De forma predeterminada, <xref:System.Runtime.Serialization.DataContractSerializer> serializa los objetos por valor. Puede usar la propiedad <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> para indicar al serializador del contrato de datos que debe conservar las referencias a objeto al serializar los objetos del tipo.  
+De forma predeterminada, <xref:System.Runtime.Serialization.DataContractSerializer> serializa los objetos por valor. Puede usar el <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> propiedad para indicar el serializador de contratos de datos para conservar las referencias a objetos al serializar objetos.  
   
 ## <a name="generated-xml"></a>XML generado  
  A modo de ejemplo, considere el objeto siguiente:  
   
-```  
+```csharp  
 [DataContract]  
 public class X  
 {  
@@ -45,58 +45,47 @@ public class SomeClass
 ```xml  
 <X>  
    <A id="1">contents of someInstance</A>  
-   <B ref="1" />  
+   <B ref="1"></B>  
 </X>  
 ```  
   
- Sin embargo, <xref:System.Runtime.Serialization.XsdDataContractExporter> no describe los atributos `id` e `ref` en su esquema, incluso cuando la propiedad `preserveObjectReferences` se establece en `true`.  
+ Sin embargo, <xref:System.Runtime.Serialization.XsdDataContractExporter> no describe la `id` y `ref` atributos en su esquema, incluso cuando el `preserveObjectReferences` propiedad está establecida en `true`.  
   
 ## <a name="using-isreference"></a>Uso de IsReference  
- Para generar información de referencia a objetos válida según el esquema que la describe, aplique el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a un tipo y establezca la marca <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> en `true`. Uso de `IsReference` en la clase `X` del ejemplo anterior:  
+ Para generar información de referencia de objeto es válido según el esquema que lo describe, aplique el <xref:System.Runtime.Serialization.DataContractAttribute> a un tipo de atributo y establecer el <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> marca `true`. El ejemplo siguiente modifica la clase `X` en el ejemplo anterior mediante la adición de `IsReference`:  
   
- `[DataContract(IsReference=true)] public class X`  
+```csharp
+[DataContract(IsReference=true)]
+public class X   
+{  
+     SomeClass someInstance = new SomeClass(); 
+     [DataMember]
+     public SomeClass A = someInstance;
+     [DataMember] 
+     public SomeClass B = someInstance;
+}
   
- `{`  
-  
- `SomeClass someInstance = new SomeClass();`  
-  
- `[DataMember]`  
-  
- `public SomeClass A = someInstance;`  
-  
- `[DataMember]`  
-  
- `public SomeClass B = someInstance;`  
-  
- `}`  
-  
- `public class SomeClass`  
-  
- `{`  
-  
- `}`  
-  
+public class SomeClass 
+{   
+}  
+````
+
  El código XML generado es el siguiente:  
+
+```xml
+<X>  
+    <A id="1">
+        <Value>contents of A</Value>  
+    </A> 
+    <B ref="1"></B>  
+</X>
+```  
   
- `<X>`  
-  
- `<A id="1">`  
-  
- `<Value>contents of A</Value>`  
-  
- `</A>`  
-  
- `<B ref="1">`  
-  
- `</B>`  
-  
- `</X>`  
-  
- El uso de `IsReference` garantiza la compatibilidad en los viajes de ida y vuelta (round trip) de los mensajes. Si no está presente, cuando se genera un tipo desde el esquema, lo que se devuelve como XML para ese tipo no es necesariamente compatible con el esquema supuesto inicialmente. En otras palabras, aunque se serializasen los atributos `id` e `ref`, el esquema original podría haber excluido estos atributos (o todos los atributos) en el código XML. Cuando se aplica `IsReference` a un miembro de datos, el miembro continúa siendo reconocido como "referenciable" en los viajes de ida y vuelta (round trip).  
+ El uso de `IsReference` garantiza la compatibilidad en los viajes de ida y vuelta (round trip) de los mensajes. Sin él, cuando se genera un tipo de esquema, la salida XML para que el tipo no es necesariamente compatible con el esquema supuesto inicialmente. En otras palabras, aunque se serializasen los atributos `id` e `ref`, el esquema original podría haber excluido estos atributos (o todos los atributos) en el código XML. Con `IsReference` aplicado a un miembro de datos, el miembro continúa siendo reconocido como *referenceable* cuando ida y vuelta.  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
-- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
-- <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference?displayProperty=nameWithType>
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference?displayProperty=nameWithType>

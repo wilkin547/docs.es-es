@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122153"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611920"
 ---
 # <a name="bindings-and-security"></a>Enlaces y seguridad
 Los enlaces proporcionados por el sistema incluidos con Windows Communication Foundation (WCF) ofrecen una forma rápida de programar aplicaciones de WCF. Con una excepción, todos los enlaces tienen un esquema de seguridad predeterminado habilitó. Este tema le ayuda a seleccionar el enlace adecuado a sus necesidades de seguridad.  
@@ -39,7 +39,7 @@ Los enlaces proporcionados por el sistema incluidos con Windows Communication Fo
   
 -   Aplicaciones de mejoras de servicios Web (WSE).  
   
--   Perfil básico tal como se define en la interoperabilidad de servicios Web (WS-I) especificación ([https://go.microsoft.com/fwlink/?LinkId=38955](https://go.microsoft.com/fwlink/?LinkId=38955)).  
+-   Perfil básico tal como se define en la interoperabilidad de servicios Web (WS-I) especificación (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
   
 -   Perfil de seguridad básico tal y como se define en WS-I.  
   
@@ -205,8 +205,8 @@ Los enlaces proporcionados por el sistema incluidos con Windows Communication Fo
 |Tipo|Descripción|  
 |----------|-----------------|  
 |Ninguna|Especifica que el cliente no necesita presentar ningún credencial. Realiza una conversión a un cliente anónimo.|  
-|Básico|Autenticación básica. Para obtener más información, consulte RFC 2617 – HTTP Authentication: Basic and Digest Authentication, disponible en [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Implícita|Autenticación implícita. Para obtener más información, consulte RFC 2617 – HTTP Authentication: Basic and Digest Authentication, disponible en [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Básico|Autenticación básica. Para obtener más información, consulte RFC 2617 – HTTP Authentication: Basic and Digest Authentication, disponible en <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
+|Implícita|Autenticación implícita. Para obtener más información, consulte RFC 2617 – HTTP Authentication: Basic and Digest Authentication, disponible en <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
 |NTLM|Autenticación NT LAN Manager (NTLM).|  
 |Windows|Autenticación de Windows.|  
 |Certificado|Autenticación realizada utilizando un certificado.|  
@@ -228,6 +228,6 @@ Los enlaces proporcionados por el sistema incluidos con Windows Communication Fo
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Selección de tipos de credenciales](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Capacidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Funcionalidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Comportamientos de seguridad](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

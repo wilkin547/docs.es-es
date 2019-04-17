@@ -2,12 +2,12 @@
 title: Matrices
 description: Obtenga información sobre cómo crear y usar matrices en la F# lenguaje de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9670f2a61ed5c254493806501120552be9caecdf
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4a81a0994479ecd92b8556c4901fea23c3c0507b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614563"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610943"
 ---
 # <a name="arrays"></a>Matrices
 
@@ -109,6 +109,7 @@ El resultado muestra que la submatriz comienza en el elemento 5 y contiene 10 el
 ```
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
+
 [`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) crea una nueva matriz combinando dos matrices existentes.
 
 El siguiente código muestra **Array.append**.
@@ -164,7 +165,7 @@ La salida del código anterior es como sigue.
 
 [`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) genera una nueva matriz invirtiendo el orden de una matriz existente. El siguiente código muestra `Array.rev`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]  
+[!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]
 
 La salida del código anterior es como sigue.
 
@@ -205,7 +206,7 @@ Solo un subconjunto de las funciones disponibles para las matrices unidimensiona
 En una matriz bidimensional (una matriz), puede extraer una matriz más especificando intervalos y utilizando un carácter comodín (`*`) para especificar filas o columnas completas.
 
 ```fsharp
-/ Get rows 1 to N from an NxM matrix (returns a matrix):
+// Get rows 1 to N from an NxM matrix (returns a matrix):
 matrix.[1.., *]
 
 // Get rows 1 to 3 from a matrix (returns a matrix):
@@ -239,7 +240,7 @@ type Matrix<'T>(N: int, M: int) =
         and set(a: int, b: int) (value:'T) = internalArray.[a, b] <- value
 
     member this.GetSlice(rowStart: int option, rowFinish : int option, colStart: int option, colFinish : int option) =
-        let rowStart = 
+        let rowStart =
             match rowStart with
             | Some(v) -> v
             | None -> 0
@@ -247,33 +248,33 @@ type Matrix<'T>(N: int, M: int) =
             match rowFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(0) - 1
-        let colStart = 
+        let colStart =
             match colStart with
             | Some(v) -> v
             | None -> 0
-        let colFinish = 
+        let colFinish =
             match colFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(1) - 1
         internalArray.[rowStart..rowFinish, colStart..colFinish]
 
     member this.GetSlice(row: int, colStart: int option, colFinish: int option) =
-        let colStart = 
+        let colStart =
             match colStart with
             | Some(v) -> v
             | None -> 0
-        let colFinish = 
+        let colFinish =
             match colFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(1) - 1
         internalArray.[row, colStart..colFinish]
 
     member this.GetSlice(rowStart: int option, rowFinish: int option, col: int) =
-        let rowStart = 
+        let rowStart =
             match rowStart with
             | Some(v) -> v
             | None -> 0
-        let rowFinish = 
+        let rowFinish =
             match rowFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(0) - 1

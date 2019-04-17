@@ -12,15 +12,15 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 8f0b5109dd569791ca8f45dbe969b1c9e2f6407b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7b7b0fcc9612994803bb23e985f44c483e708857
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140860"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613595"
 ---
 # <a name="attached-events-overview"></a>Información general sobre eventos adjuntos
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] define un componente de lenguaje y tipo de evento denominado un *evento adjunto*. El concepto de un evento adjunto permite agregar un controlador de un evento determinado a un elemento arbitrario, en lugar de agregarlo a un elemento que realmente define o hereda el evento. En este caso, ni el objeto que genera potencialmente el evento ni la instancia de control del destino definen ni "poseen" de otro modo el evento.  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] define un componente de lenguaje y un tipo de evento denominado *evento adjunto*. El concepto de un evento adjunto permite agregar un controlador de un evento determinado a un elemento arbitrario, en lugar de agregarlo a un elemento que realmente define o hereda el evento. En este caso, ni el objeto que genera potencialmente el evento ni la instancia de control del destino definen ni "poseen" de otro modo el evento.  
 
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
@@ -64,9 +64,9 @@ ms.locfileid: "59140860"
   
  El patrón es el siguiente:  
   
--   Un método **agregar*EventName*controlador** con dos parámetros. El primer parámetro debe identificar el evento y el evento identificado debe coincidir con los nombres con el ***EventName*** en el nombre del método. El segundo parámetro es el controlador que se va a agregar. El método debe ser `public` y `static`, sin ningún valor devuelto.  
+-   Un método **agregar*EventName*controlador** con dos parámetros. El primer parámetro es la instancia a la que se agrega el controlador de eventos. El segundo parámetro es el controlador de eventos para agregar. El método debe ser `public` y `static`, sin ningún valor devuelto.  
   
--   Un método **quitar*EventName*controlador** con dos parámetros. El primer parámetro debe identificar el evento y el evento identificado debe coincidir con los nombres con el ***EventName*** en el nombre del método. El segundo parámetro es el controlador que se va a quitar. El método debe ser `public` y `static`, sin ningún valor devuelto.  
+-   Un método **quitar*EventName*controlador** con dos parámetros. El primer parámetro es la instancia desde la que se quita el controlador de eventos. El segundo parámetro es el controlador de eventos para quitar. El método debe ser `public` y `static`, sin ningún valor devuelto.  
   
  El **agregar*EventName*controlador** facilita el método de descriptor de acceso del [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesos cuando adjunta el controlador de eventos, los atributos se declaran en un elemento. El **agregar*EventName*controlador** y **quitar*EventName*controlador** métodos también habilitar el acceso de código para el almacén del controlador de eventos para el evento adjunto.  
   

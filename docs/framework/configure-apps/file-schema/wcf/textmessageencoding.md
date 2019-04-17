@@ -2,12 +2,12 @@
 title: <textMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: e9942ce3ccbec949160ee70dd103d3c1799bd44d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e6e6d1907d89a09a72594a836f2192e9ad9c4290
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186308"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59614121"
 ---
 # <a name="textmessageencoding"></a>\<textMessageEncoding>
 Especifica la codificación de caracteres y la versión del mensaje utilizadas para los mensajes XML basados en texto.  
@@ -36,7 +36,7 @@ Especifica la codificación de caracteres y la versión del mensaje utilizadas p
 |---------------|-----------------|  
 |maxReadPoolSize|Un entero que especifica cuántos mensajes pueden leerse simultáneamente sin asignar nuevos lectores. Los tamaños de grupo más grandes hacen que el sistema sea más tolerante a picos de actividad a costa de un espacio de trabajo mayor. El valor predeterminado es 64.|  
 |maxWritePoolSize|Un entero que especifica cuántos mensajes pueden enviarse simultáneamente sin asignar nuevos escritores. Los tamaños de grupo más grandes hacen que el sistema sea más tolerante a picos de actividad a costa de un espacio de trabajo mayor. El valor predeterminado es 16.|  
-|messageVersion|Especifica la versión SOAP de los mensajes enviados utilizando el enlace. Los valores válidos son<br /><br /> -   Soap11Addressing10<br />-Soap12Addressing10<br /><br /> El valor predeterminado es Soap12Addressing10. Este atributo es del tipo <xref:System.ServiceModel.Channels.MessageVersion>.|  
+|messageVersion|Especifica la versión SOAP de los mensajes enviados utilizando el enlace. Los valores válidos son<br /><br /> -   Soap11Addressing10<br />-Soap12Addressing10<br />-Soap11<br />-Soap12<br /><br />El valor predeterminado es Soap12Addressing10. Este atributo es del tipo <xref:System.ServiceModel.Channels.MessageVersion>.|  
 |writeEncoding|Especifica el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace. Los valores válidos son<br /><br /> -   UnicodeFffeTextEncoding: Codificación Unicode BigEndian<br />-Utf16TextEncoding: Codificación Unicode<br />-Utf8TextEncoding: codificación de 8 bits<br /><br /> El valor predeterminado es Utf8TextEncoding. Este atributo es del tipo <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  

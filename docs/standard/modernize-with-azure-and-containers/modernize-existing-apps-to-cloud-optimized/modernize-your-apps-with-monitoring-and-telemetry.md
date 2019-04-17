@@ -1,17 +1,17 @@
 ---
-title: Modernice sus aplicaciones con supervisión y telemetría
+title: Modernización de aplicaciones con supervisión y telemetría
 description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | Modernice sus aplicaciones con supervisión y telemetría
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7776edd91f73aa6ca74b82ae4d144635bb6c36a4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147481"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613881"
 ---
-# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernice sus aplicaciones con supervisión y telemetría
+# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernización de aplicaciones con supervisión y telemetría
 
 Al ejecutar una aplicación en producción, es fundamental que dispone de información detallada sobre el rendimiento de la aplicación. ¿Se ejecuta en un nivel alto? ¿Los usuarios reciben errores o es la aplicación estable y confiable? Se necesitan la supervisión de alto rendimiento, alertas y muy eficaces, paneles para ayudar a garantizar que la aplicación está disponible y funciona según lo previsto. También deberá ser capaz de ver rápidamente si hay un problema, determine cuántos clientes se ven afectados y realizan un análisis de causa raíz para buscar y corregir el problema.
 
@@ -69,31 +69,31 @@ Puede usar la solución de supervisión de contenedores de Log Analytics para:
 
 -   **Información general de supervisión en Microsoft Azure**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **¿Qué es Application Insights?**
 
-[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+<https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
 -   **¿Qué es Log Analytics?**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+<https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Solución de supervisión de contenedores de Log Analytics**
+-   **Solución de supervisión de contenedores en Azure Monitor**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+<https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
 -   **Información general sobre Azure Monitor**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **¿Qué es Operations Management Suite (OMS)?**
 
-[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
+<https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
 -   **Supervisión de contenedores de Windows Server en Service Fabric con OMS**
 
-[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+<https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 
 >[!div class="step-by-step"]
 >[Anterior](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

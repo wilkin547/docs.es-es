@@ -95,8 +95,7 @@ TAP usa un solo método para representar el inicio y la finalización de una ope
  Si las implementaciones de TAP proporcionan sobrecargas que aceptan un parámetro `progress`, deben permitir que el argumento sea `null`, en cuyo caso no se notifica ningún progreso. Las implementaciones de TAP deben notificar el progreso al objeto <xref:System.Progress%601> sincrónicamente, lo cual permite al método asincrónico proporcionar rápidamente el progreso y hacer que el consumidor de este determine cómo y dónde es mejor controlar la información. Por ejemplo, la instancia de progreso puede optar por hacerse con las devoluciones de llamada y generar eventos en un contexto capturado de sincronización.  
   
 ## <a name="iprogresst-implementations"></a>Implementaciones de IProgress\<T>  
- 
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] proporciona una única implementación de <xref:System.IProgress%601>: <xref:System.Progress%601>. La clase <xref:System.Progress%601> se declara de la forma siguiente:  
+ [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] proporciona una única implementación de <xref:System.IProgress%601>: <xref:System.Progress%601>. La clase <xref:System.Progress%601> se declara de la forma siguiente:  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  
