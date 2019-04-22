@@ -1,19 +1,19 @@
 ---
-title: Filtrar Serializar utilizando XmlSerializer (Visual Basic)
+title: Procedimiento Serializar utilizando XmlSerializer (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
 ms.openlocfilehash: 1799ef4a0d0f20cddc4514c9dc901047c631b158
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821470"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a><span data-ttu-id="9d733-102">Filtrar Serializar utilizando XmlSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9d733-102">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>
-<span data-ttu-id="9d733-103">Este tema presenta un ejemplo que serializa y deserializa información mediante <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="9d733-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a><span data-ttu-id="a0972-102">Procedimiento Serializar utilizando XmlSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0972-102">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>
+<span data-ttu-id="a0972-103">Este tema presenta un ejemplo que serializa y deserializa información mediante <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="a0972-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9d733-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9d733-104">Example</span></span>  
- <span data-ttu-id="9d733-105">El siguiente ejemplo crea una serie de objetos que contienen a su vez objetos <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="9d733-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="9d733-106">A continuación, los serializa en una secuencia de memoria y los deserializa de ésta.</span><span class="sxs-lookup"><span data-stu-id="9d733-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
+## <a name="example"></a><span data-ttu-id="a0972-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a0972-104">Example</span></span>  
+ <span data-ttu-id="a0972-105">El siguiente ejemplo crea una serie de objetos que contienen a su vez objetos <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="a0972-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="a0972-106">A continuación, los serializa en una secuencia de memoria y los deserializa de ésta.</span><span class="sxs-lookup"><span data-stu-id="a0972-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
   
 ```vb  
 Imports System  
@@ -69,7 +69,7 @@ Public Class XLinqTest
 End Class  
 ```  
   
- <span data-ttu-id="9d733-107">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="9d733-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="a0972-107">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="a0972-107">This example produces the following output:</span></span>  
   
 ```  
 Testing for type: XElementNullContainer  
@@ -80,6 +80,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9d733-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="9d733-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0972-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="a0972-108">See also</span></span>
 
-- [<span data-ttu-id="9d733-109">Serializar gráficos de objetos que contienen objetos XElement (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9d733-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [<span data-ttu-id="a0972-109">Serializar gráficos de objetos que contienen objetos XElement (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0972-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

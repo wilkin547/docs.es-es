@@ -6,34 +6,34 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
 ms.openlocfilehash: 856927baa06019f7827bf9751352069f0fc37829
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821080"
 ---
-# <a name="strings-in-visual-basic"></a><span data-ttu-id="ada3e-102">Cadenas en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ada3e-102">Strings in Visual Basic</span></span>
-<span data-ttu-id="ada3e-103">Esta sección describen los conceptos básicos de uso de cadenas en Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ada3e-103">This section describes the basic concepts behind using strings in Visual Basic.</span></span>  
+# <a name="strings-in-visual-basic"></a><span data-ttu-id="16064-102">Cadenas en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="16064-102">Strings in Visual Basic</span></span>
+<span data-ttu-id="16064-103">Esta sección describen los conceptos básicos de uso de cadenas en Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="16064-103">This section describes the basic concepts behind using strings in Visual Basic.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ada3e-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="ada3e-104">In This Section</span></span>  
- [<span data-ttu-id="ada3e-105">Introducción a las cadenas en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ada3e-105">Introduction to Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- <span data-ttu-id="ada3e-106">Enumera temas que describen los conceptos básicos de uso de cadenas en Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ada3e-106">Lists topics that describe the basic concepts behind using strings in Visual Basic.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="16064-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="16064-104">In This Section</span></span>  
+ [<span data-ttu-id="16064-105">Introducción a las cadenas en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="16064-105">Introduction to Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
+ <span data-ttu-id="16064-106">Enumera temas que describen los conceptos básicos de uso de cadenas en Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="16064-106">Lists topics that describe the basic concepts behind using strings in Visual Basic.</span></span>  
   
- [<span data-ttu-id="ada3e-107">Cómo: Crear cadenas mediante un objeto StringBuilder en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ada3e-107">How to: Create Strings Using a StringBuilder in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
- <span data-ttu-id="ada3e-108">Muestra cómo crear eficazmente una cadena larga a partir de varias cadenas más pequeñas.</span><span class="sxs-lookup"><span data-stu-id="ada3e-108">Demonstrates how to efficiently create a long string from many smaller strings.</span></span>  
+ [<span data-ttu-id="16064-107">Cómo: Crear cadenas mediante un objeto StringBuilder en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="16064-107">How to: Create Strings Using a StringBuilder in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
+ <span data-ttu-id="16064-108">Muestra cómo crear eficazmente una cadena larga a partir de varias cadenas más pequeñas.</span><span class="sxs-lookup"><span data-stu-id="16064-108">Demonstrates how to efficiently create a long string from many smaller strings.</span></span>  
   
- [<span data-ttu-id="ada3e-109">Cómo: Buscar en una cadena</span><span class="sxs-lookup"><span data-stu-id="ada3e-109">How to: Search Within a String</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-search-within-a-string.md)  
- <span data-ttu-id="ada3e-110">Muestra cómo se determina el índice de la primera aparición de una subcadena.</span><span class="sxs-lookup"><span data-stu-id="ada3e-110">Demonstrates how to determine the index of the first occurrence of a substring.</span></span>  
+ [<span data-ttu-id="16064-109">Cómo: Buscar en una cadena</span><span class="sxs-lookup"><span data-stu-id="16064-109">How to: Search Within a String</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-search-within-a-string.md)  
+ <span data-ttu-id="16064-110">Muestra cómo se determina el índice de la primera aparición de una subcadena.</span><span class="sxs-lookup"><span data-stu-id="16064-110">Demonstrates how to determine the index of the first occurrence of a substring.</span></span>  
   
- [<span data-ttu-id="ada3e-111">Conversión entre cadenas y otros tipos de datos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ada3e-111">Converting Between Strings and Other Data Types in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
- <span data-ttu-id="ada3e-112">Enumera temas en los que se describe cómo convertir cadenas en otros tipos de datos.</span><span class="sxs-lookup"><span data-stu-id="ada3e-112">Lists topics that describe how to convert strings into other data types.</span></span>  
+ [<span data-ttu-id="16064-111">Conversión entre cadenas y otros tipos de datos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="16064-111">Converting Between Strings and Other Data Types in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
+ <span data-ttu-id="16064-112">Enumera temas en los que se describe cómo convertir cadenas en otros tipos de datos.</span><span class="sxs-lookup"><span data-stu-id="16064-112">Lists topics that describe how to convert strings into other data types.</span></span>  
   
- [<span data-ttu-id="ada3e-113">Validar cadenas en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ada3e-113">Validating Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
- <span data-ttu-id="ada3e-114">Enumera temas en los que se explica cómo validar cadenas.</span><span class="sxs-lookup"><span data-stu-id="ada3e-114">Lists topics that discuss how to validate strings.</span></span>  
+ [<span data-ttu-id="16064-113">Validar cadenas en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="16064-113">Validating Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
+ <span data-ttu-id="16064-114">Enumera temas en los que se explica cómo validar cadenas.</span><span class="sxs-lookup"><span data-stu-id="16064-114">Lists topics that discuss how to validate strings.</span></span>  
   
- [<span data-ttu-id="ada3e-115">Tutorial: Cifrar y descifrar cadenas en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ada3e-115">Walkthrough: Encrypting and Decrypting Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
- <span data-ttu-id="ada3e-116">Muestra cómo cifrar y descifrar cadenas mediante la versión del proveedor de servicios criptográficos del algoritmo 3DES (Triple Data Encryption Standard).</span><span class="sxs-lookup"><span data-stu-id="ada3e-116">Demonstrates how to encrypt and decrypt strings by using the cryptographic service provider version of the Triple Data Encryption Standard algorithm.</span></span>  
+ [<span data-ttu-id="16064-115">Tutorial: Cifrar y descifrar cadenas en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="16064-115">Walkthrough: Encrypting and Decrypting Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
+ <span data-ttu-id="16064-116">Muestra cómo cifrar y descifrar cadenas mediante la versión del proveedor de servicios criptográficos del algoritmo 3DES (Triple Data Encryption Standard).</span><span class="sxs-lookup"><span data-stu-id="16064-116">Demonstrates how to encrypt and decrypt strings by using the cryptographic service provider version of the Triple Data Encryption Standard algorithm.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ada3e-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="ada3e-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16064-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="16064-117">See also</span></span>
 
-- [<span data-ttu-id="ada3e-118">Características del lenguaje Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ada3e-118">Visual Basic Language Features</span></span>](../../../../visual-basic/programming-guide/language-features/index.md)
+- [<span data-ttu-id="16064-118">Características del lenguaje Visual Basic</span><span class="sxs-lookup"><span data-stu-id="16064-118">Visual Basic Language Features</span></span>](../../../../visual-basic/programming-guide/language-features/index.md)
