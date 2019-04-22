@@ -6,37 +6,37 @@ helpviewer_keywords:
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
 ms.openlocfilehash: 08be345557d10a528aa03234883eba1b3a31beaa
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58832765"
 ---
-# <a name="white-space-in-xml-literals-visual-basic"></a><span data-ttu-id="53b19-102">Espacio en blanco en literales XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="53b19-102">White Space in XML Literals (Visual Basic)</span></span>
-<span data-ttu-id="53b19-103">El compilador de Visual Basic incorpore solo los caracteres de espacio en blanco significativo de un literal XML cuando crea un [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objeto.</span><span class="sxs-lookup"><span data-stu-id="53b19-103">The Visual Basic compiler incorporates only the significant white space characters from an XML literal when it creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object.</span></span> <span data-ttu-id="53b19-104">No se incorporan los caracteres de espacios en blanco insignificantes.</span><span class="sxs-lookup"><span data-stu-id="53b19-104">The insignificant white space characters are not incorporated.</span></span>  
+# <a name="white-space-in-xml-literals-visual-basic"></a><span data-ttu-id="97a2d-102">Espacio en blanco en literales XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97a2d-102">White Space in XML Literals (Visual Basic)</span></span>
+<span data-ttu-id="97a2d-103">El compilador de Visual Basic incorpore solo los caracteres de espacio en blanco significativo de un literal XML cuando crea un [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objeto.</span><span class="sxs-lookup"><span data-stu-id="97a2d-103">The Visual Basic compiler incorporates only the significant white space characters from an XML literal when it creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object.</span></span> <span data-ttu-id="97a2d-104">No se incorporan los caracteres de espacios en blanco insignificantes.</span><span class="sxs-lookup"><span data-stu-id="97a2d-104">The insignificant white space characters are not incorporated.</span></span>  
   
-## <a name="significant-and-insignificant-white-space"></a><span data-ttu-id="53b19-105">Espacio en blanco significativo y no significativo</span><span class="sxs-lookup"><span data-stu-id="53b19-105">Significant and Insignificant White Space</span></span>  
- <span data-ttu-id="53b19-106">Caracteres de espacio en blanco en literales XML son significativos en sólo tres áreas:</span><span class="sxs-lookup"><span data-stu-id="53b19-106">White space characters in XML literals are significant in only three areas:</span></span>  
+## <a name="significant-and-insignificant-white-space"></a><span data-ttu-id="97a2d-105">Espacio en blanco significativo y no significativo</span><span class="sxs-lookup"><span data-stu-id="97a2d-105">Significant and Insignificant White Space</span></span>  
+ <span data-ttu-id="97a2d-106">Caracteres de espacio en blanco en literales XML son significativos en sólo tres áreas:</span><span class="sxs-lookup"><span data-stu-id="97a2d-106">White space characters in XML literals are significant in only three areas:</span></span>  
   
--   <span data-ttu-id="53b19-107">Cuando se encuentran en un valor de atributo.</span><span class="sxs-lookup"><span data-stu-id="53b19-107">When they are in an attribute value.</span></span>  
+-   <span data-ttu-id="97a2d-107">Cuando se encuentran en un valor de atributo.</span><span class="sxs-lookup"><span data-stu-id="97a2d-107">When they are in an attribute value.</span></span>  
   
--   <span data-ttu-id="53b19-108">Cuando forman parte de un elemento contenido de texto y el texto también contiene otros caracteres.</span><span class="sxs-lookup"><span data-stu-id="53b19-108">When they are part of an element's text content and the text also contains other characters.</span></span>  
+-   <span data-ttu-id="97a2d-108">Cuando forman parte de un elemento contenido de texto y el texto también contiene otros caracteres.</span><span class="sxs-lookup"><span data-stu-id="97a2d-108">When they are part of an element's text content and the text also contains other characters.</span></span>  
   
--   <span data-ttu-id="53b19-109">Cuando se encuentran en una expresión incrustada para el contenido de texto de un elemento.</span><span class="sxs-lookup"><span data-stu-id="53b19-109">When they are in an embedded expression for an element's text content.</span></span>  
+-   <span data-ttu-id="97a2d-109">Cuando se encuentran en una expresión incrustada para el contenido de texto de un elemento.</span><span class="sxs-lookup"><span data-stu-id="97a2d-109">When they are in an embedded expression for an element's text content.</span></span>  
   
- <span data-ttu-id="53b19-110">En caso contrario, el compilador trata los caracteres de espacio en blanco como insignificantes y no se incluye a continuación, en el [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objeto para el literal.</span><span class="sxs-lookup"><span data-stu-id="53b19-110">Otherwise, the compiler treats white space characters as insignificant and does not include then in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object for the literal.</span></span>  
+ <span data-ttu-id="97a2d-110">En caso contrario, el compilador trata los caracteres de espacio en blanco como insignificantes y no se incluye a continuación, en el [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objeto para el literal.</span><span class="sxs-lookup"><span data-stu-id="97a2d-110">Otherwise, the compiler treats white space characters as insignificant and does not include then in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object for the literal.</span></span>  
   
- <span data-ttu-id="53b19-111">Para incluir espacios en blanco insignificantes en un literal XML, use una expresión incrustada que contiene una cadena literal con el espacio en blanco.</span><span class="sxs-lookup"><span data-stu-id="53b19-111">To include insignificant white space in an XML literal, use an embedded expression that contains a string literal with the white space.</span></span>  
+ <span data-ttu-id="97a2d-111">Para incluir espacios en blanco insignificantes en un literal XML, use una expresión incrustada que contiene una cadena literal con el espacio en blanco.</span><span class="sxs-lookup"><span data-stu-id="97a2d-111">To include insignificant white space in an XML literal, use an embedded expression that contains a string literal with the white space.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="53b19-112">Si el `xml:space` atributo aparece en un literal de elemento XML, el compilador de Visual Basic incluye el atributo en el <xref:System.Xml.Linq.XElement> objeto, pero agregar este atributo no cambia el modo en que el compilador trata los espacios en blanco.</span><span class="sxs-lookup"><span data-stu-id="53b19-112">If the `xml:space` attribute appears in an XML element literal, the Visual Basic compiler includes the attribute in the <xref:System.Xml.Linq.XElement> object, but adding this attribute does not change how the compiler treats white space.</span></span>  
+>  <span data-ttu-id="97a2d-112">Si el `xml:space` atributo aparece en un literal de elemento XML, el compilador de Visual Basic incluye el atributo en el <xref:System.Xml.Linq.XElement> objeto, pero agregar este atributo no cambia el modo en que el compilador trata los espacios en blanco.</span><span class="sxs-lookup"><span data-stu-id="97a2d-112">If the `xml:space` attribute appears in an XML element literal, the Visual Basic compiler includes the attribute in the <xref:System.Xml.Linq.XElement> object, but adding this attribute does not change how the compiler treats white space.</span></span>  
   
-## <a name="examples"></a><span data-ttu-id="53b19-113">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="53b19-113">Examples</span></span>  
- <span data-ttu-id="53b19-114">En el siguiente ejemplo contiene dos elementos XML, externos e internos.</span><span class="sxs-lookup"><span data-stu-id="53b19-114">The following example contains two XML elements, outer and inner.</span></span> <span data-ttu-id="53b19-115">Ambos elementos contienen espacios en blanco en su contenido de texto.</span><span class="sxs-lookup"><span data-stu-id="53b19-115">Both elements contain white space in their text content.</span></span> <span data-ttu-id="53b19-116">El espacio en blanco en el elemento exterior es insignificante, ya que contiene solo espacios en blanco y un elemento XML.</span><span class="sxs-lookup"><span data-stu-id="53b19-116">The white space in the outer element is insignificant because it contains only white space and an XML element.</span></span> <span data-ttu-id="53b19-117">El espacio en blanco en el elemento interno es significativo porque contiene espacios en blanco y texto.</span><span class="sxs-lookup"><span data-stu-id="53b19-117">The white space in the inner element is significant because it contains white space and text.</span></span>  
+## <a name="examples"></a><span data-ttu-id="97a2d-113">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="97a2d-113">Examples</span></span>  
+ <span data-ttu-id="97a2d-114">En el siguiente ejemplo contiene dos elementos XML, externos e internos.</span><span class="sxs-lookup"><span data-stu-id="97a2d-114">The following example contains two XML elements, outer and inner.</span></span> <span data-ttu-id="97a2d-115">Ambos elementos contienen espacios en blanco en su contenido de texto.</span><span class="sxs-lookup"><span data-stu-id="97a2d-115">Both elements contain white space in their text content.</span></span> <span data-ttu-id="97a2d-116">El espacio en blanco en el elemento exterior es insignificante, ya que contiene solo espacios en blanco y un elemento XML.</span><span class="sxs-lookup"><span data-stu-id="97a2d-116">The white space in the outer element is insignificant because it contains only white space and an XML element.</span></span> <span data-ttu-id="97a2d-117">El espacio en blanco en el elemento interno es significativo porque contiene espacios en blanco y texto.</span><span class="sxs-lookup"><span data-stu-id="97a2d-117">The white space in the inner element is significant because it contains white space and text.</span></span>  
   
  [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   
- <span data-ttu-id="53b19-118">Cuando se ejecuta, este código muestra el texto siguiente.</span><span class="sxs-lookup"><span data-stu-id="53b19-118">When run, this code displays the following text.</span></span>  
+ <span data-ttu-id="97a2d-118">Cuando se ejecuta, este código muestra el texto siguiente.</span><span class="sxs-lookup"><span data-stu-id="97a2d-118">When run, this code displays the following text.</span></span>  
   
 ```xml  
 <outer>  
@@ -46,6 +46,6 @@ ms.locfileid: "58832765"
 </outer>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="53b19-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="53b19-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97a2d-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="97a2d-119">See also</span></span>
 
-- [<span data-ttu-id="53b19-120">Crear XML en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="53b19-120">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [<span data-ttu-id="97a2d-120">Crear XML en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="97a2d-120">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
