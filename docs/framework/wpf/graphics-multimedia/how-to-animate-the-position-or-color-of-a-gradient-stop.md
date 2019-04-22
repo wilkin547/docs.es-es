@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar la posición o color de un delimitador de degradado
+title: Procedimiento Animar la posición o color de un delimitador de degradado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
 ms.openlocfilehash: eeaea4732855155bf711912644f2f5b3f5a4f8d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134815"
 ---
-# <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>Filtrar Animar la posición o color de un delimitador de degradado
+# <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>Procedimiento Animar la posición o color de un delimitador de degradado
 En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.GradientStop.Color%2A> y <xref:System.Windows.Media.GradientStop.Offset%2A> de <xref:System.Windows.Media.GradientStop> objetos.  
   
 ## <a name="example"></a>Ejemplo  
@@ -43,4 +43,4 @@ En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.GradientSt
 
 - <xref:System.Windows.Media.GradientStop>
 - [Información general sobre animaciones](animation-overview.md)
-- [Información general sobre objetos Storyboard](storyboards-overview.md)
+- [Información general sobre objetos Storyboard ](storyboards-overview.md)

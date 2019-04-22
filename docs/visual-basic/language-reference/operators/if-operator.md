@@ -12,10 +12,10 @@ helpviewer_keywords:
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
 ms.openlocfilehash: 9ab01755d75c91ce87acf83e7f406b26c466aef6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834640"
 ---
 # <a name="if-operator-visual-basic"></a>If (Operador) (Visual Basic)
@@ -32,7 +32,7 @@ If( [argument1,] argument2, argument3 )
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`argument1`|Obligatorio. `Boolean`. Determina cuál de los otros argumentos para evaluar y devolver.|  
 |`argument2`|Obligatorio. `Object`. Evaluada y devuelto si `argument1` se evalúa como `True`.|  
@@ -51,7 +51,7 @@ If( [argument1,] argument2, argument3 )
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`argument2`|Obligatorio. `Object`. Debe ser una referencia o tipo que acepta valores NULL. Evalúa y se devuelve cuando se evalúa en algo distinto `Nothing`.|  
 |`argument3`|Obligatorio. `Object`. Evaluada y devuelto si `argument2` se evalúa como `Nothing`.|  

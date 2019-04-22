@@ -4,10 +4,10 @@ description: Guía de uso con los servicios de AzureF#
 author: sylvanc
 ms.date: 09/22/2016
 ms.openlocfilehash: 92b453b680a5f8c55f35458e9020f15444e90035
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211743"
 ---
 # <a name="using-f-on-azure"></a>Uso de F# en Azure
@@ -33,18 +33,18 @@ Azure Functions admite F# como lenguaje de primera clase con ejecución reactiva
 
 Otros recursos para usar Azure Functions y F#:
 
-* [Escalar Azure Functions en F# utilizando Suave](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
-* [Cómo crear en función de AzureF#](https://mnie.github.io/2016-09-08-AzureFunctions/)
+* [Scale Up Azure Functions in F# Using Suave](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/) (Escalar Azure Functions en F# con Suave)
+* [How to create Azure function in F#](https://mnie.github.io/2016-09-08-AzureFunctions/) (Cómo crear Azure Functions en F#)
 * [Mediante el proveedor de tipo de Azure con Azure Functions](https://compositional-it.com/blog/2017/08-30-using-the-azure-type-provider-with-azure-functions/index.html)
 
 ## <a name="using-azure-storage-with-f"></a>Uso de almacenamiento de Azure con F\#
 
 Azure Storage es una capa base de servicios de almacenamiento para aquellas aplicaciones modernas que necesitan durabilidad, disponibilidad y escalabilidad para satisfacer las necesidades de los clientes. F#programas pueden interactuar directamente con los servicios de almacenamiento de Azure, mediante las técnicas descritas en los siguientes artículos.
 
-* [Introducción a Azure Blob storage medianteF#](blob-storage.md)
-* [Empezar a trabajar con Azure File storageF#](file-storage.md)
-* [Introducción a Azure Queue storage medianteF#](queue-storage.md)
-* [Empezar a trabajar con Azure Table storageF#](table-storage.md)
+* [Introducción a Azure Blob Storage mediante F#](blob-storage.md)
+* [Introducción a Azure File Storage mediante F#](file-storage.md)
+* [Introducción a Azure Queue Storage mediante F#](queue-storage.md)
+* [Introducción a Azure Table Storage mediante F#](table-storage.md)
 
 Azure Storage también puede usarse junto con Azure Functions a través de configuración declarativa en lugar de llamadas de API explícitas. Vea [Desencadenadores y enlaces de Azure Functions para Azure Storage](/azure/azure-functions/functions-bindings-storage) que incluye ejemplos de F#.
 
@@ -52,15 +52,15 @@ Azure Storage también puede usarse junto con Azure Functions a través de confi
 
 [Azure App Service](https://azure.microsoft.com/services/app-service/) es una plataforma en la nube para crear aplicaciones web y móviles eficaces que se conectan a los datos en cualquier lugar, en la nube o de forma local.
 
-* [F#Ejemplo de API Web de Azure](https://github.com/fsprojects/azure-webapi-example)
-* [Hospedaje F# en una aplicación web en Azure](https://github.com/isaacabraham/fsharp-demonstrator)
+* [Ejemplo de API web de Azure de F#](https://github.com/fsprojects/azure-webapi-example)
+* [Hospedaje de F# en una aplicación web en Azure](https://github.com/isaacabraham/fsharp-demonstrator)
 
 ## <a name="using-apache-spark-with-f-with-azure-hdinsight"></a>Uso de Apache Spark con F# con Azure HDInsight
 
 [Apache Spark para Azure HDInsight](https://azure.microsoft.com/services/hdinsight/apache-spark/) es una plataforma de procesamiento de código abierto que ejecuta aplicaciones de análisis de datos a gran escala. Azure hace que Apache Spark sea fácil y rentable de implementar. Desarrolle su aplicación de Spark en F# con [Mobius](https://github.com/Microsoft/Mobius), una API de .NET para Spark.
 
-* [Implementación de aplicaciones de Spark en F# con Mobius](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
-* [Ejemplo F# aplicaciones de Spark con Mobius](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
+* [Implementing Spark Apps in F# using Mobius](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md) (Implementar aplicaciones de Spark en F# con Mobius)
+* [Aplicaciones de Spark de F# de ejemplo con Mobius](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
 
 ## <a name="using-azure-cosmos-db-with-f"></a>Uso de Azure Cosmos DB con F\#
 
@@ -99,7 +99,7 @@ Los Webhooks pueden implementarse en F# y hospedarse en Azure a través de [Azur
 
 [Webjobs](/azure/app-service-web/web-sites-create-web-jobs) son programas que se pueden ejecutar en la aplicación web de servicio de aplicaciones de tres maneras: bajo demanda, de forma continua o según una programación.
 
-[Ejemplo F# Webjob](https://github.com/jrr/webjob-project-examples)
+[Ejemplo de Webjob de F#](https://github.com/jrr/webjob-project-examples)
 
 ## <a name="implementing-timers-on-azure-with-f"></a>Implementación de temporizadores en Azure con F\#
 

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para mostrar cuadros de diálogo de formularios Windows Forms
+title: Procedimiento para mostrar cuadros de diálogo de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
 ms.openlocfilehash: b99f2273dae88faf86448da6e1d2986a83803abf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311089"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773823"
 ---
-# <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Filtrar para mostrar cuadros de diálogo de formularios Windows Forms
+# <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Procedimiento para mostrar cuadros de diálogo de formularios Windows Forms
 Mostrar un cuadro de diálogo de la misma manera que muestre cualquier otra forma en una aplicación. El formulario de inicio se carga automáticamente cuando se ejecuta la aplicación. Para crear un segundo formulario o cuadro de diálogo que aparecen en la aplicación, escribir código para cargar y mostrarla. De forma similar, para que el formulario o cuadro de diálogo cuadro desaparecen, escribir código para descargar u ocultarla.  
   
 ### <a name="to-display-a-dialog-box"></a>Para mostrar un cuadro de diálogo  

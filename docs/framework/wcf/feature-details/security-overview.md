@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136960"
 ---
 # <a name="security-overview"></a>Información general sobre seguridad
@@ -111,6 +111,6 @@ Windows Communication Foundation (WCF) es una plataforma de programación distri
 - [Orientación de seguridad y procedimientos recomendados](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
 - [Configuración de servicios mediante archivos de configuración](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Información general acerca de la creación de puntos finales](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Información general sobre la creación de puntos finales](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Extensión de la seguridad](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

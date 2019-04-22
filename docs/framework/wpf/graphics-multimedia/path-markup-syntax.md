@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082495"
 ---
 # <a name="path-markup-syntax"></a>Sintaxis de marcado de trazados
@@ -57,7 +57,7 @@ Las rutas de acceso se tratan en [formas y dibujo básico en WPF Overview](shape
   
 |Término|Descripción|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Especifica si el <xref:System.Windows.Media.StreamGeometry> usa el <xref:System.Windows.Media.FillRule.EvenOdd> o <xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Especifica el <xref:System.Windows.Media.FillRule.EvenOdd> regla de relleno.<br />-   `F1` Especifica el <xref:System.Windows.Media.FillRule.Nonzero> regla de relleno.<br /><br /> Si se omite este comando, el subtrazado usa el comportamiento predeterminado, que es <xref:System.Windows.Media.FillRule.EvenOdd>. Si especifica el comando, debe colocarlo primero.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Especifica si el <xref:System.Windows.Media.StreamGeometry> usa el <xref:System.Windows.Media.FillRule.EvenOdd> o <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Especifica el <xref:System.Windows.Media.FillRule.EvenOdd> regla de relleno.<br />-   `F1` Especifica el <xref:System.Windows.Media.FillRule.Nonzero> regla de relleno.<br /><br /> Si se omite este comando, el subtrazado usa el comportamiento predeterminado, que es <xref:System.Windows.Media.FillRule.EvenOdd>. Si especifica el comando, debe colocarlo primero.|  
 |*figureDescription*|Figura compuesta de un comando de movimiento, comandos de dibujo y un comando de cierre opcional.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Comando de movimiento que especifica el punto inicial de la figura. Consulte la [comando Move](#themovecommand) sección.|  
 |*drawCommands*|Uno o más comandos de dibujo que describe el contenido de la figura. Consulte la [comandos de dibujo](#drawcommands) sección.|  
@@ -110,7 +110,7 @@ En mayúscula `L` indica que `endPoint` es un valor absoluto; una minúscula `l`
 En mayúscula `H` indica que `x` es un valor absoluto; una minúscula `h` indica que `x` es un desplazamiento hasta el punto anterior, o bien (0,0) si no existe ninguno.
   
 ### <a name="vertical-line-command"></a>Comando de línea vertical  
- Crea una línea vertical entre el punto actual y la coordenada y especificada. `v 90` es un ejemplo de un comando de línea vertical válido.
+ Crea una línea vertical entre el punto actual y la coordenada y especificada. `v 90` es un ejemplo de comando de línea vertical válido.
 
 |Sintaxis|  
 |------------|  
@@ -136,7 +136,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punto en el que se dibuja la curva.|  
   
 ### <a name="quadratic-bezier-curve-command"></a>Comando de curva Bézier cuadrática  
- Crea una curva Bézier cuadrática entre el punto actual y el punto final especificado utilizando el punto de control especificado (`controlPoint`). `q 100,200 300,200` es un ejemplo de un comando de curva Bézier cuadrático válido.  
+ Crea una curva Bézier cuadrática entre el punto actual y el punto final especificado utilizando el punto de control especificado (`controlPoint`). `q 100,200 300,200` es un ejemplo de un comando de curva Bézier cuadrática válido.  
   
 |Sintaxis|  
 |------------|  

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Almacenar varios formatos de datos en un objeto de datos
+title: Procedimiento Almacenar varios formatos de datos en un objeto de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - drag-and-drop [WPF], storing multiple formats
 ms.assetid: 941ace29-29c4-4c26-b75b-ea7d06aa0d69
 ms.openlocfilehash: 3f8e7233e1d28fec1f7dac114b04287aa3aff49f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085056"
 ---
-# <a name="how-to-store-multiple-data-formats-in-a-data-object"></a>Filtrar Almacenar varios formatos de datos en un objeto de datos
+# <a name="how-to-store-multiple-data-formats-in-a-data-object"></a>Procedimiento Almacenar varios formatos de datos en un objeto de datos
 El ejemplo siguiente muestra cómo usar el <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> para agregar datos a un objeto de datos en varios formatos.  
   
 ## <a name="example"></a>Ejemplo  

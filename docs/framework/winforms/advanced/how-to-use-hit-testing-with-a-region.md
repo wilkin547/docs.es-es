@@ -1,5 +1,5 @@
 ---
-title: Filtrar para usar la comprobación de visitas en una región
+title: Procedimiento para usar la comprobación de visitas en una región
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - regions [Windows Forms], hit testing
 ms.assetid: 3a4c07cb-a40a-4d14-ad35-008f531910a8
 ms.openlocfilehash: 136f15f1364fb2aed791b4a61d0f11411b055967
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150506"
 ---
-# <a name="how-to-use-hit-testing-with-a-region"></a>Filtrar para usar la comprobación de visitas en una región
+# <a name="how-to-use-hit-testing-with-a-region"></a>Procedimiento para usar la comprobación de visitas en una región
 Es el propósito de la prueba de posicionamiento determinar si el cursor está sobre un objeto determinado, como un icono o un botón.  
   
 ## <a name="example"></a>Ejemplo  
@@ -31,4 +31,4 @@ Es el propósito de la prueba de posicionamiento determinar si el cursor está s
 
 - <xref:System.Drawing.Region>
 - [Regiones de GDI+](regions-in-gdi.md)
-- [Filtrar para usar el recorte en una región](how-to-use-clipping-with-a-region.md)
+- [Cómo: Utilizar el recorte en una región](how-to-use-clipping-with-a-region.md)

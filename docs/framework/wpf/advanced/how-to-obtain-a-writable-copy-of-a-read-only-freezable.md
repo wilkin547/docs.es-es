@@ -1,5 +1,5 @@
 ---
-title: Filtrar Obtener una copia modificable de un elemento Freezable de solo lectura
+title: Procedimiento Obtener una copia modificable de un elemento Freezable de solo lectura
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Freezable objects [WPF], modifiable clones
 ms.assetid: d028de61-bbe9-4d62-b656-8fe3b1b2ca24
 ms.openlocfilehash: 910c5dada6ca82f68992722e4df6b35f9f7497c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206478"
 ---
-# <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a>Filtrar Obtener una copia modificable de un elemento Freezable de solo lectura
+# <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a>Procedimiento Obtener una copia modificable de un elemento Freezable de solo lectura
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Freezable.Clone%2A> método para crear una copia modificable de solo lectura <xref:System.Windows.Freezable>.  
   
  Después de un <xref:System.Windows.Freezable> objeto está marcado como de solo lectura ("inmovilizado"), no se puede modificar. Sin embargo, puede usar el <xref:System.Windows.Freezable.Clone%2A> método para crear un clon modificable del objeto inmovilizado.  

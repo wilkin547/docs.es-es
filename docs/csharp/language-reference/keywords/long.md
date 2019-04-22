@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
-ms.openlocfilehash: a3c2dc725d5747c638acba9311ae78272cf63de0
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 997ce7399dc9742076932b213811abd1f847e60b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186018"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613296"
 ---
 # <a name="long-c-reference"></a>long (Referencia de C#)
 
@@ -66,6 +66,7 @@ El sufijo `L` garantiza que se llame a la sobrecarga correcta:
 SampleMethod(5);    // Calls the method with the int parameter
 SampleMethod(5L);   // Calls the method with the long parameter
 ```
+
 Si un literal entero no tiene sufijo, su tipo es el primero de los siguientes tipos en el que se puede representar su valor:
 
 1. [int](int.md)

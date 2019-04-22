@@ -1,17 +1,17 @@
 ---
-title: Filtrar Crear un estilo para un encabezado de columna de GridView arrastrado
+title: Procedimiento Crear un estilo para un encabezado de columna de GridView arrastrado
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 0b999645-0313-4b33-80b9-19ece08b5459
 ms.openlocfilehash: dbcdd38e0397b8e637aff962420a2959f33203df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090100"
 ---
-# <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>Filtrar Crear un estilo para un encabezado de columna de GridView arrastrado
+# <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>Procedimiento Crear un estilo para un encabezado de columna de GridView arrastrado
 En este ejemplo se muestra cómo cambiar la apariencia de un arrastrado <xref:System.Windows.Controls.GridViewColumnHeader> cuando el usuario cambia la posición de una columna.  
   
 ## <a name="example"></a>Ejemplo  

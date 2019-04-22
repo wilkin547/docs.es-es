@@ -17,10 +17,10 @@ helpviewer_keywords:
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
 ms.openlocfilehash: 4574bab62ca6d095ab66c17bf186da5f3d79bfb7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826527"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Instrucción Imports (Tipo y espacio de nombres de .NET)
@@ -36,7 +36,7 @@ Imports [ aliasname = ] namespace.element
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`aliasname`|Opcional. Un *alias de importación* o el nombre por el que puede hacer referencia a código `namespace` en lugar de la cadena de calificación completa. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`namespace`|Obligatorio. El nombre completo del espacio de nombres que se va a importar. Puede ser una cadena de espacios de nombres anidada a cualquier nivel.|  

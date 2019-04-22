@@ -1,15 +1,15 @@
 ---
-title: Filtrar Ejecutar árboles de expresión (Visual Basic)
+title: Procedimiento Ejecutar árboles de expresión (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
 ms.openlocfilehash: cccb0b301e1da6d82c616d56604ad46dfde83e2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58837525"
 ---
-# <a name="how-to-execute-expression-trees-visual-basic"></a>Filtrar Ejecutar árboles de expresión (Visual Basic)
+# <a name="how-to-execute-expression-trees-visual-basic"></a>Procedimiento Ejecutar árboles de expresión (Visual Basic)
 En este tema se muestra cómo ejecutar un árbol de expresión. La ejecución de un árbol de expresión puede devolver un valor o simplemente realizar una acción, como llamar a un método.  
   
  Solo se pueden ejecutar los árboles de expresiones que representan expresiones lambda. Los árboles de expresiones que representan expresiones lambda son de tipo <xref:System.Linq.Expressions.LambdaExpression> o <xref:System.Linq.Expressions.Expression%601>. Para ejecutar estos árboles de expresiones, llame al método <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> para crear un delegado ejecutable y, después, invoque el delegado.  

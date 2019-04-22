@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
 ms.openlocfilehash: 1818718d3ca9e8f56da99d6e504b41b217bfd980
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203553"
 ---
 # <a name="contextmenu-overview"></a>Información general sobre ContextMenu
@@ -67,5 +67,5 @@ El <xref:System.Windows.Controls.ContextMenu> clase representa el elemento que e
 - <xref:System.Windows.Controls.Menu>
 - <xref:System.Windows.Controls.MenuItem>
 - [ContextMenu](contextmenu.md)
-- [Estilos y plantillas de ContextMenu](contextmenu-styles-and-templates.md)
-- [Ejemplo de la Galería de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [ContextMenu Styles and Templates](contextmenu-styles-and-templates.md) (Estilos y plantillas de ContextMenu)
+- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053) (Ejemplo de galería de controles de WPF)

@@ -1,15 +1,15 @@
 ---
-title: Filtrar Leer datos de objetos de un archivo XML (Visual Basic)
+title: Procedimiento Leer datos de objetos de un archivo XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
 ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834899"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Filtrar Leer datos de objetos de un archivo XML (Visual Basic)
+# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Procedimiento Leer datos de objetos de un archivo XML (Visual Basic)
 En este ejemplo se leen los datos de objetos que se han escrito anteriormente en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Ejemplo  

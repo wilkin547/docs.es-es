@@ -1,15 +1,15 @@
 ---
-title: Filtrar Generar XML a partir de archivos CSV (Visual Basic)
+title: Procedimiento Generar XML a partir de archivos CSV (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
 ms.openlocfilehash: 056cb1545ac296f0b0861155c5ec5c08b19dd5b8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58835411"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Filtrar Generar XML a partir de archivos CSV (Visual Basic)
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Procedimiento Generar XML a partir de archivos CSV (Visual Basic)
 Este ejemplo muestra el uso de [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para generar un archivo XML a partir de un archivo de valores separados por comas (CSV).  
   
 ## <a name="example"></a>Ejemplo  

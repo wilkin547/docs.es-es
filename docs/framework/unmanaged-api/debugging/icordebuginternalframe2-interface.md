@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2cf75de6a71cfbe25cbde281f837060b88e93753
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087240"
 ---
 # <a name="icordebuginternalframe2-interface"></a>ICorDebugInternalFrame2 (Interfaz)
@@ -30,8 +30,8 @@ Proporciona información sobre los marcos internos, incluyendo la dirección de 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetFrameAddress](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-getframeaddress-method.md)|Devuelve la dirección de pila del marco interno.|  
-|[Método IsCloserToLeaf](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-isclosertoleaf-method.md)|Comprueba si el `this` marco interno está más cerca de la hoja que el objeto ICorDebugFrame especificado.|  
+|[GetFrameAddress (método)](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-getframeaddress-method.md)|Devuelve la dirección de pila del marco interno.|  
+|[IsCloserToLeaf (método)](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-isclosertoleaf-method.md)|Comprueba si el `this` marco interno está más cerca de la hoja que el objeto ICorDebugFrame especificado.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esta interfaz extiende ICorDebugInternalFrame (interfaz).  
@@ -50,5 +50,5 @@ Proporciona información sobre los marcos internos, incluyendo la dirección de 
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

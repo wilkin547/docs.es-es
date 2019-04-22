@@ -3,10 +3,10 @@ title: Definiciones de tipo (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
 ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096028"
 ---
 # <a name="type-definitions-entity-sql"></a>Definiciones de tipo (Entity SQL)
@@ -33,11 +33,11 @@ Las definiciones de tipo se usan en la instrucción de declaración de una funci
   
 -   `IdentifierName supported_type`, o  
   
--   `IdentifierName` COLECCIÓN (`type_definition`), o  
+-   `IdentifierName` COLLECTION(`type_definition`) o  
   
--   `IdentifierName` FILA (`property_definition`), o  
+-   `IdentifierName` ROW(`property_definition`) o  
   
--   `IdentifierName` REF (`supported_entity_type`)  
+-   `IdentifierName` REF(`supported_entity_type`)  
   
  La opción de definición de propiedad es `IdentifierName type_definition`.  
   

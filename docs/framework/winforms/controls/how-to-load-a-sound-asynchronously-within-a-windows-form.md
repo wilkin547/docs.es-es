@@ -1,5 +1,5 @@
 ---
-title: Filtrar para cargar un sonido de forma asincrónica en un formulario Windows Forms
+title: Procedimiento para cargar un sonido de forma asincrónica en un formulario Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
 ms.openlocfilehash: 1d710f1e6d3b208365d5b1eb2524fbeeaa673c2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185762"
 ---
-# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Filtrar para cargar un sonido de forma asincrónica en un formulario Windows Forms
+# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Procedimiento para cargar un sonido de forma asincrónica en un formulario Windows Forms
 En el ejemplo de código siguiente, se carga un sonido de forma asincrónica desde una dirección URL y, a continuación, se reproduce en un nuevo subproceso.  
   
 ## <a name="example"></a>Ejemplo  
@@ -57,4 +57,4 @@ En el ejemplo de código siguiente, se carga un sonido de forma asincrónica des
 - <xref:System.Media.SoundPlayer.LoadAsync%2A>
 - <xref:System.Media.SoundPlayer.LoadCompleted>
 - <xref:System.Media.SoundPlayer.Play%2A>
-- [Filtrar para reproducir un sonido desde un formulario Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Cómo: Reproducir un sonido desde Windows Forms](how-to-play-a-sound-from-a-windows-form.md)

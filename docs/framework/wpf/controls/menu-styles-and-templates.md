@@ -10,10 +10,10 @@ helpviewer_keywords:
 - parts [WPF], Menu
 ms.assetid: b89da183-9b87-42c6-ac53-731a42c7b09e
 ms.openlocfilehash: 6818be4ac92dbdd7de0c6c6fa65109e21eadc2f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094208"
 ---
 # <a name="menu-styles-and-templates"></a>Estilos y plantillas de menú
@@ -75,6 +75,6 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
-- [Personalización de controles](control-customization.md)
+- [Control Customization](control-customization.md) (Personalización de controles)
 - [Aplicar estilos y plantillas](styling-and-templating.md)
-- [Personalizar la apariencia de un control existente creando una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

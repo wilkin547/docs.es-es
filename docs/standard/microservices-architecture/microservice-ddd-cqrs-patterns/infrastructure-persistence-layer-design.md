@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: c173d0049558ec0a752bc2aead9de9692ea28cf9
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3e9c2ce0a332351f136dcd4dcb6d3da4f794a1eb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463064"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611021"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Diseño del nivel de persistencia de infraestructura
 
@@ -111,24 +111,24 @@ Los repositorios pueden ser útiles, pero no esenciales para el diseño de DDD, 
 ### <a name="repository-pattern"></a>Modelo de repositorio
 
 - **The Repository Pattern** \ (El modelo de repositorio)
-  [https://deviq.com/repository-pattern/](https://deviq.com/repository-pattern/)
+  <https://deviq.com/repository-pattern/>
 
 - **Edward Hieatt y Rob Mee. Modelo de repositorio.** \
-  [https://martinfowler.com/eaaCatalog/repository.html](https://martinfowler.com/eaaCatalog/repository.html)
+  <https://martinfowler.com/eaaCatalog/repository.html>
 
 - **The Repository Pattern** \ (El modelo de repositorio)
-  [https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10))
+  <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
 - **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Diseño orientado al dominio: abordar la complejidad en el corazón del software) (Libro; incluye un debate sobre el patrón de repositorio) \
-  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+  <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>Patrón de unidades de trabajo
 
 - **Martin Fowler. Unit of Work pattern** (Patrón de unidades de trabajo). \
-  [https://martinfowler.com/eaaCatalog/unitOfWork.html](https://martinfowler.com/eaaCatalog/unitOfWork.html)
+  <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
 - **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application** \ (Implementación de los patrones de repositorio y unidad de trabajo en una aplicación ASP.NET MVC)
-  [https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+  <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
 >[Anterior](domain-events-design-implementation.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Personalizar fuentes con el proveedor de reflexión (WCF Data Services)
+title: Procedimiento Personalizar fuentes con el proveedor de reflexión (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 00c23dcf-9bb8-459a-a012-6c4d9bcad7e9
 ms.openlocfilehash: f09c9827498dfd6b85a8476e824d06bfb481d1f8
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517205"
 ---
-# <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a>Filtrar Personalizar fuentes con el proveedor de reflexión (WCF Data Services)
+# <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a>Procedimiento Personalizar fuentes con el proveedor de reflexión (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite personalizar la serialización Atom en una respuesta del servicio de datos para que las propiedades de una entidad se puedan asignar a los elementos no usados que se definen en el protocolo AtomPub. En este tema se muestra cómo definir los atributos de asignación para los tipos de entidad de un modelo de datos que se define usando el proveedor de reflexión. Para obtener más información, consulte [personalización de fuente](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
   
  El modelo de datos en este ejemplo se define en el tema [Cómo: Crear un servicio de datos mediante el proveedor de reflexión](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  

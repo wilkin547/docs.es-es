@@ -3,12 +3,12 @@ title: Introducción al análisis semántico
 description: En este tutorial, se proporciona una introducción sobre cómo trabajar con el análisis semántico mediante el SDK de .NET Compiler.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: dac733cba1d60a1bd24f5308717f4933cd620319
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 188104c3430b4ca32578cd35d3e161a6eb0e0e1a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760058"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611749"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Introducción al análisis semántico
 
@@ -56,7 +56,7 @@ A continuación, compile una <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilati
 
 [!code-csharp[Create the compilation](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
 
-El método <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> agrega referencias a la compilación. El método <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType> carga un ensamblado como referencia. 
+El método <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> agrega referencias a la compilación. El método <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType> carga un ensamblado como referencia.
 
 ## <a name="querying-the-semantic-model"></a>Consultar el modelo semántico
 
@@ -159,4 +159,5 @@ Intern
 IsInterned
 Press any key to continue . . .
 ```
+
 Ha usado la API semántica para buscar y mostrar información sobre los símbolos que forman parte de este programa.

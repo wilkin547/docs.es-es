@@ -1,5 +1,5 @@
 ---
-title: Filtrar Acceso a elementos descendientes de XML (Visual Basic)
+title: Procedimiento Acceso a elementos descendientes de XML (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML descendent axis property [Visual Basic]
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: aabfa258-4112-4e7e-bab9-403f96072ef7
 ms.openlocfilehash: bfbf849bd296f639f03580346e4a9c52ce000abd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58832221"
 ---
-# <a name="how-to-access-xml-descendant-elements-visual-basic"></a>Filtrar Acceso a elementos descendientes de XML (Visual Basic)
+# <a name="how-to-access-xml-descendant-elements-visual-basic"></a>Procedimiento Acceso a elementos descendientes de XML (Visual Basic)
 En este ejemplo se muestra cómo usar una propiedad de eje descendiente para tener acceso a todos los elementos XML que tiene un nombre especificado y que se incluyen en un elemento XML. En concreto, usa el `Value` propiedad para obtener el valor del primer elemento de la colección que la `name` devuelve de la propiedad de eje descendiente. El `name` propiedad de eje descendiente Obtiene todos los elementos llamados `name` que están contenidas en el `contacts` objeto. En este ejemplo también usa el `phone` propiedad de eje descendiente para tener acceso a todos los descendientes denominados `phone` que están contenidas en el `contacts` objeto.  
   
 ## <a name="example"></a>Ejemplo  

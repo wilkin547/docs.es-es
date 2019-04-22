@@ -3,12 +3,12 @@ title: Administración de dependencias en las herramientas de .NET Core
 description: Explica cómo administrar las dependencias con las herramientas de .NET Core.
 ms.date: 03/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: 701100476b8b08aa4b0229bd0de30d02c54ddce9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ef2de666ee3e6a06ab62f45afe3c624bbbb44ac4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673878"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611932"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>Administración de dependencias con el SDK 1.0 de .NET Core
 
@@ -46,6 +46,7 @@ En este ejemplo utilizaremos la plantilla predeterminada que se ha descartado me
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
+
 Después de esto, guardamos el proyecto y ejecutamos el comando `dotnet restore` para instalar la dependencia. 
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

@@ -9,10 +9,10 @@ api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
 ms.openlocfilehash: a4480d54390aea2771e2939b0a0825f6c49c3564
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084984"
 ---
 # <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a>LoadFromHistory (función) (referencia de API no administrada de WPF)
@@ -39,7 +39,7 @@ HRESULT LoadFromHistory_export(
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [requisitos del sistema de .NET Framework](../../get-started/system-requirements.md).  
   
- **DLL:**  
+ **ARCHIVO DLL:**  
   
  En .NET Framework 3.0 y 3.5: PresentationHostDLL.dll  
   

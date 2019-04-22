@@ -1,12 +1,12 @@
 ---
-title: <httpDigest> Elemento
+title: <httpDigest> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
 ms.openlocfilehash: 914711e4d6c3dbb1ccc741af1b3abd6b8de716a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165326"
 ---
 # <a name="httpdigest-element"></a>\<httpDigest > elemento
@@ -58,5 +58,5 @@ Especifica una credencial de tipo de resumen utilizada al autenticar el cliente 
 - <xref:System.ServiceModel.Security.HttpDigestClientCredential>
 - [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)
-- [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

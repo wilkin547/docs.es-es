@@ -1,5 +1,5 @@
 ---
-title: Filtrar para reproducir un sonido del sistema desde un formulario Windows Forms
+title: Procedimiento para reproducir un sonido del sistema desde un formulario Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: afb206ff-4824-4804-a8d4-185bf5ad8e7c
 ms.openlocfilehash: d85d8cd40ff2b32cb3f2a79cf9a8221964f186c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153236"
 ---
-# <a name="how-to-play-a-system-sound-from-a-windows-form"></a>Filtrar para reproducir un sonido del sistema desde un formulario Windows Forms
+# <a name="how-to-play-a-system-sound-from-a-windows-form"></a>Procedimiento para reproducir un sonido del sistema desde un formulario Windows Forms
 El siguiente código de ejemplo reproduce el sonido del sistema `Exclamation` en tiempo de ejecución. Para obtener más información sobre los sonidos del sistema, consulte <xref:System.Media.SystemSounds>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -47,5 +47,5 @@ public void playExclamation()
 
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>
-- [Filtrar para emitir un bip desde un formulario Windows Forms](how-to-play-a-beep-from-a-windows-form.md)
-- [Filtrar para reproducir un sonido desde un formulario Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Cómo: Reproducir un sonido desde Windows Forms](how-to-play-a-beep-from-a-windows-form.md)
+- [Cómo: Reproducir un sonido desde Windows Forms](how-to-play-a-sound-from-a-windows-form.md)

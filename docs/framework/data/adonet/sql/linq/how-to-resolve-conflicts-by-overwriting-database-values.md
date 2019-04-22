@@ -1,18 +1,18 @@
 ---
-title: Filtrar para resolver conflictos sobrescribiendo valores de base de datos
+title: Procedimiento para resolver conflictos sobrescribiendo valores de base de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
 ms.openlocfilehash: 7b8d7cf8ab2335c064062ed3ab4072d81e8042fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189123"
 ---
-# <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Filtrar para resolver conflictos sobrescribiendo valores de base de datos
+# <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Procedimiento para resolver conflictos sobrescribiendo valores de base de datos
 Para conciliar las diferencias existentes entre los valores de base de datos esperados y reales antes de intentar reenviar los cambios, puede utilizar <xref:System.Data.Linq.RefreshMode.KeepCurrentValues> para sobrescribir los valores de base de datos. Para obtener más información, consulte [simultaneidad optimista: Información general sobre](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
@@ -42,4 +42,4 @@ Para conciliar las diferencias existentes entre los valores de base de datos esp
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Cómo: Administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

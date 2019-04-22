@@ -1,5 +1,5 @@
 ---
-title: Filtrar para manipular bandas en el control DataGridView de formularios Windows Forms
+title: Procedimiento para manipular bandas en el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], manipulating bands
 ms.assetid: 1ea3470e-480f-4edc-bcbd-51373eca3856
 ms.openlocfilehash: 848ae7c88e2531806bf97b05cc0fe6d2388977fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162376"
 ---
-# <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Filtrar para manipular bandas en el control DataGridView de formularios Windows Forms
+# <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Procedimiento para manipular bandas en el control DataGridView de formularios Windows Forms
 En el ejemplo de código siguiente, se muestran varias maneras de manipular filas y columnas <xref:System.Windows.Forms.DataGridView> mediante las propiedades de la clase <xref:System.Windows.Forms.DataGridViewBand> de la que derivan las clases <xref:System.Windows.Forms.DataGridViewRow> y <xref:System.Windows.Forms.DataGridViewColumn>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -38,4 +38,4 @@ En el ejemplo de código siguiente, se muestran varias maneras de manipular fila
 - <xref:System.Windows.Forms.DataGridViewBand>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewColumn>
-- [Programar con celdas, filas y columnas en el control DataGridView de formularios Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [Programar con celdas, filas y columnas en el control DataGridView de Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)

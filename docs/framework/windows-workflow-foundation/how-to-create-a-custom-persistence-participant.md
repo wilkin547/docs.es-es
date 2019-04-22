@@ -1,15 +1,15 @@
 ---
-title: Filtrar para crear un participante de persistencia personalizado
+title: Procedimiento para crear un participante de persistencia personalizado
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
 ms.openlocfilehash: 1de2abb8ababd794cd644733b6e4ab0ed42b1810
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59321463"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770014"
 ---
-# <a name="how-to-create-a-custom-persistence-participant"></a>Filtrar para crear un participante de persistencia personalizado
+# <a name="how-to-create-a-custom-persistence-participant"></a>Procedimiento para crear un participante de persistencia personalizado
 El siguiente procedimiento describe los pasos para crear un participante de persistencia. Consulte la [que participan en la persistencia](https://go.microsoft.com/fwlink/?LinkID=177735) ejemplo y [Store extensibilidad](store-extensibility.md) tema para las implementaciones de ejemplo de participantes de persistencia.  
   
 1. Cree una clase que derive de la clase <xref:System.Activities.Persistence.PersistenceParticipant> o <xref:System.Activities.Persistence.PersistenceIOParticipant>. La clase PersistenceIOParticipant proporciona los mismos puntos de extensibilidad que la clase PersistenceParticipant además de poder participar en operaciones de E/S. Siga uno o varios de los pasos siguientes:  

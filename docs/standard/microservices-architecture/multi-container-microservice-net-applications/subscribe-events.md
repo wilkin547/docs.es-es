@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: afd3148f77dc4222a077f7ce020260ee889e92cb
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 962d12c054bed3b2623283e17f83b8466ab2811b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466145"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613283"
 ---
 # <a name="subscribing-to-events"></a>Suscripción a eventos
 
@@ -325,16 +325,16 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
 ### <a name="additional-resources"></a>Recursos adicionales
 
 - **Forked eShopOnContainers using NServiceBus (Particular Software)** \ (Bifurcación de eShopOnContainers mediante NServiceBus [Particular Software])
-    [https://go.particular.net/eShopOnContainers](https://go.particular.net/eShopOnContainers)
+    <https://go.particular.net/eShopOnContainers>
 
 - **Event Driven Messaging** \ (Mensajería controlada por eventos)
     [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 - **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** \ (Refactorización hacia la resiliencia: evaluación del acoplamiento)
-    [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+    <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 - **Publish-Subscribe channel** \ (Canal de publicación y suscripción)
-    [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+    <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Communicating Between Bounded Contexts** \ (Comunicación entre contextos delimitados)
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
@@ -343,19 +343,19 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
     [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 - **Philip Brown. Strategies for Integrating Bounded Contexts** \ (Estrategias para la integración de contextos delimitados)
-    [https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
+    <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
 - **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2** \ (Desarrollo de microservicios transaccionales mediante agregados, orígenes de eventos y CQRS: parte 2)
-    [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
+    <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
 - **Chris Richardson. Event Sourcing pattern** \ (Patrón de orígenes de eventos)
-    [https://microservices.io/patterns/data/event-sourcing.html](https://microservices.io/patterns/data/event-sourcing.html)
+    <https://microservices.io/patterns/data/event-sourcing.html>
 
 - **Introducing Event Sourcing** \ (Introducción a los orígenes de eventos)
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 - **Base de datos Event Store**. Sitio oficial. \
-    [https://geteventstore.com/](https://geteventstore.com/)
+    <https://geteventstore.com/>
 
 - **Patrick Nommensen. Event-Driven Data Management for Microservices** \ (Administración de datos orientada a eventos para microservicios)
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
@@ -364,25 +364,25 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
     [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
 - **What is CAP Theorem?** (¿Qué es el teorema CAP?) \
-    [https://www.quora.com/What-Is-CAP-Theorem-1](https://www.quora.com/What-Is-CAP-Theorem-1)
+    <https://www.quora.com/What-Is-CAP-Theorem-1>
 
 - **Data Consistency Primer** \ (Manual de coherencia de datos)
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Rick Saling. The CAP Theorem: Why "Everything is Different" with the Cloud and Internet** \ (Teorema CAP: por qué "todo es diferente" con la nube e Internet)
-    [https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
+    <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
 - **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed** \ (CAP doce años más tarde: ¿cómo han cambiado las "normas"?)
-    [https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
+    <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
 - **Azure Service Bus. Mensajería asincrónica: Detección de duplicados**  \
-    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **Reliability Guide** (RabbitMQ documentation) \ (Guía de confiabilidad [documentación de RabbitMQ])
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
 
 - **Azure Service Bus. Mensajería asincrónica: Detección de duplicados** \
-    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **Reliability Guide** (RabbitMQ documentation) \ (Guía de confiabilidad [documentación de RabbitMQ])
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)

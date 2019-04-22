@@ -6,10 +6,10 @@ helpviewer_keywords:
 - raising UI Automation events
 ms.assetid: 9fe2f01b-f7d8-49a8-a185-d4472b9976c0
 ms.openlocfilehash: 3deb4c6716d83af4b05e15b5b8a4b89e28317406
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138702"
 ---
 # <a name="raise-events-from-a-ui-automation-provider"></a>Provocar eventos desde un proveedor de UI Automation
@@ -27,4 +27,4 @@ ms.locfileid: "59138702"
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre proveedores de UI Automation](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [Información general sobre proveedores de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)

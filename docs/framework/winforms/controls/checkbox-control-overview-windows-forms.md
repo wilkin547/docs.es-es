@@ -9,10 +9,10 @@ helpviewer_keywords:
 - check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
 ms.openlocfilehash: 2a18327d9836d1dbbcd5d5d6e73f217637736d20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121802"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>Información general sobre el control CheckBox (formularios Windows Forms)
@@ -27,6 +27,6 @@ El control de Windows Forms <xref:System.Windows.Forms.CheckBox> indica si una c
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.CheckBox>
-- [Filtrar para establecer opciones con los controles CheckBox de formularios Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [Filtrar para responder a clics en casillas de formularios Windows Forms](how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [Control CheckBox](checkbox-control-windows-forms.md)
+- [Cómo: Establecer opciones con controles CheckBox de formularios de Windows](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Cómo: Responder a Windows Forms clics en casillas](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [CheckBox (control)](checkbox-control-windows-forms.md)

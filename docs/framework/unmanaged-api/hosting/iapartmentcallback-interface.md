@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db933716cc0602ecda5da8a72726408ae4910179
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129810"
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback (Interfaz)
@@ -30,7 +30,7 @@ Proporciona métodos para hacer que las devoluciones de llamada dentro de un apa
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método DoCallback](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|Ejecuta la función especificada dentro de un apartamento.|  
+|[DoCallback (método)](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|Ejecuta la función especificada dentro de un apartamento.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

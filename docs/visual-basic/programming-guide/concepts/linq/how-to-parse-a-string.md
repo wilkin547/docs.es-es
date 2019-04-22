@@ -1,15 +1,15 @@
 ---
-title: Filtrar Analizar una cadena (Visual Basic)
+title: Procedimiento Analizar una cadena (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
 ms.openlocfilehash: 815e94b3b41c2c0cc1d18d598307ab292919bea4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827307"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>Filtrar Analizar una cadena (Visual Basic)
+# <a name="how-to-parse-a-string-visual-basic"></a>Procedimiento Analizar una cadena (Visual Basic)
 En este tema se muestra cómo crear un árbol XML en C#.  
   
 ## <a name="example"></a>Ejemplo  

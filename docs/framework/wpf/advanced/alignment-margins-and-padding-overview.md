@@ -11,10 +11,10 @@ helpviewer_keywords:
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
 ms.openlocfilehash: 58af8848a6b8a5e4ded453831f5a7ef985548492
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209169"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Información general sobre alineación, márgenes y relleno
@@ -55,7 +55,7 @@ La <xref:System.Windows.FrameworkElement> clase expone varias propiedades que se
 |<xref:System.Windows.HorizontalAlignment.Left>|Los elementos secundarios se alinean a la izquierda del espacio de diseño asignado del elemento primario.|  
 |<xref:System.Windows.HorizontalAlignment.Center>|Los elementos secundarios se alinean en el centro del espacio de diseño asignado del elemento primario.|  
 |<xref:System.Windows.HorizontalAlignment.Right>|Los elementos secundarios se alinean a la derecha del espacio de diseño asignado del elemento primario.|  
-|<xref:System.Windows.HorizontalAlignment.Stretch> (Predeterminado)|Los elementos secundarios se ajustan para rellenar el espacio de diseño asignado del elemento primario. Explícita <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> valores tienen prioridad.|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> (Valor predeterminado)|Los elementos secundarios se ajustan para rellenar el espacio de diseño asignado del elemento primario. Explícita <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> valores tienen prioridad.|  
   
  El ejemplo siguiente muestra cómo aplicar el <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> propiedad <xref:System.Windows.Controls.Button> elementos. Se muestran todos los valores de atributo para ilustrar mejor los distintos comportamientos de representación.  
   
@@ -75,7 +75,7 @@ La <xref:System.Windows.FrameworkElement> clase expone varias propiedades que se
 |<xref:System.Windows.VerticalAlignment.Top>|Los elementos secundarios se alinean en la parte superior del espacio de diseño asignado del elemento primario.|  
 |<xref:System.Windows.VerticalAlignment.Center>|Los elementos secundarios se alinean en el centro del espacio de diseño asignado del elemento primario.|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|Los elementos secundarios se alinean en la parte inferior del espacio de diseño asignado del elemento primario.|  
-|<xref:System.Windows.VerticalAlignment.Stretch> (Predeterminado)|Los elementos secundarios se ajustan para rellenar el espacio de diseño asignado del elemento primario. Explícita <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> valores tienen prioridad.|  
+|<xref:System.Windows.VerticalAlignment.Stretch> (Valor predeterminado)|Los elementos secundarios se ajustan para rellenar el espacio de diseño asignado del elemento primario. Explícita <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> valores tienen prioridad.|  
   
  El ejemplo siguiente muestra cómo aplicar el <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propiedad <xref:System.Windows.Controls.Button> elementos. Se muestran todos los valores de atributo para ilustrar mejor los distintos comportamientos de representación. Para fines de este ejemplo, un <xref:System.Windows.Controls.Grid> elemento con las líneas de cuadrícula visibles se usa como el elemento primario, para ilustrar mejor el comportamiento de diseño de cada valor de propiedad.  
   

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
 ms.openlocfilehash: c06326a250fba0de2f63e13672b4fffbfa8a07f0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58835068"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
@@ -24,7 +24,7 @@ Causa que el compilador trate como un error la primera ocurrencia de una adverte
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |+ &#124; -|Opcional. De forma predeterminada, se aplica `-warnaserror-`; las advertencias no impiden que el compilador genere un archivo de salida. La opción `-warnaserror`, que es la misma que `-warnaserror+`, causa que las advertencias se traten como errores.|  
 |`numberList`|Opcional. Lista delimitada por comas de los números de identificadores de advertencia a los que se aplica la opción `-warnaserror`. Si no se especifica ningún identificador de advertencia, la opción `-warnaserror` se aplica a todas las advertencias.|  

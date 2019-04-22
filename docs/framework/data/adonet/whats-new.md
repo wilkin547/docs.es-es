@@ -3,10 +3,10 @@ title: Novedades de ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
 ms.openlocfilehash: 90352d3e3d52430d515460cdcc9b6d177976c0b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191468"
 ---
 # <a name="whats-new-in-adonet"></a>Novedades de ADO.NET
@@ -41,7 +41,7 @@ Las siguientes características son nuevas en [!INCLUDE[vstecado](../../../../in
   
 -   SqlClient admite conexiones a bases de datos LocalDB. Para obtener más información, consulte [compatibilidad de SqlClient para LocalDB](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md).  
   
--   `Type System Version=SQL Server 2012;` es el nuevo valor para pasar a la `Type System Version` propiedad de conexión. El valor `Type System Version=Latest;` ahora está obsoleto y se ha hecho equivalente a `Type System Version=SQL Server 2008;`. Para obtener más información, consulta <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+-   `Type System Version=SQL Server 2012;` es el nuevo valor para pasar a la propiedad de conexión `Type System Version`. El valor `Type System Version=Latest;` ahora está obsoleto y se ha hecho equivalente a `Type System Version=SQL Server 2008;`. Para obtener más información, consulta <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
 -   SqlClient proporciona compatibilidad adicional para columnas dispersas, una característica que se agregó en SQL Server 2008. Si su aplicación ya tiene acceso a datos de una tabla que usa columnas dispersas, debería ver un aumento del rendimiento. La columna IsColumnSet de <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica si una columna es una columna dispersa que es miembro de un conjunto de columnas. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> indica si una columna es una columna dispersa (vea [colecciones de esquemas de SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) para obtener más información). Para obtener más información sobre las columnas dispersas, vea [usar columnas dispersas](https://go.microsoft.com/fwlink/?LinkId=224244).  
   
@@ -56,4 +56,4 @@ Las siguientes características son nuevas en [!INCLUDE[vstecado](../../../../in
 - [Información general sobre ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [SQL Server y ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [Novedades en WCF Data Services 5.0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

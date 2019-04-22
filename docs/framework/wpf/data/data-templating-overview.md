@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
 ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097556"
 ---
 # <a name="data-templating-overview"></a>Información general sobre plantillas de datos
@@ -196,7 +196,7 @@ Con esto concluye la explicación de este ejemplo. Para obtener el ejemplo compl
 ## <a name="see-also"></a>Vea también
 
 - [Enlace de datos](../advanced/optimizing-performance-data-binding.md)
-- [Buscar elementos generados por una clase DataTemplate](how-to-find-datatemplate-generated-elements.md)
+- [Find DataTemplate-Generated Elements](how-to-find-datatemplate-generated-elements.md) (Cómo buscar elementos generados por una clase DataTemplate)
 - [Aplicar estilos y plantillas](../controls/styling-and-templating.md)
 - [Información general sobre el enlace de datos](data-binding-overview.md)
-- [Información general sobre plantillas y estilos de encabezado de columna en modo GridView](../controls/gridview-column-header-styles-and-templates-overview.md)
+- [GridView Column Header Styles and Templates Overview](../controls/gridview-column-header-styles-and-templates-overview.md) (Información general sobre plantillas y estilos de encabezado de columna en modo GridView)

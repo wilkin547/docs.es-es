@@ -6,10 +6,10 @@ helpviewer_keywords:
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
 ms.openlocfilehash: 1b0d374c9dc3e24302a8acfbc56cd9468f41def5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159841"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Patrones de controles de UI Automation para clientes
@@ -46,11 +46,11 @@ ms.locfileid: "59159841"
   
 ## <a name="see-also"></a>Vea también
 
-- [Patrones de control de UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
-- [Modelo de texto de UI Automation](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)
-- [Llamar a un control utilizando la UI Automation](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
-- [Obtener el estado de alternancia de una casilla mediante UI Automation](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
-- [Asignación de patrones de controles para clientes de UI Automation](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
+- [Patrones de control de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
+- [Patrón de texto de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)
+- [Invocación de un control mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
+- [Obtención del estado de alternancia de una casilla mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
+- [Asignación de patrones de control para clientes de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
 - [Ejemplo de TextPattern Insert Text](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
 - [Ejemplo de selección y búsqueda de TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
 - [InvokePattern, ExpandCollapsePattern y TogglePattern de muestra](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

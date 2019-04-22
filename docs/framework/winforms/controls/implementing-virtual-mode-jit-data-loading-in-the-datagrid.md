@@ -13,10 +13,10 @@ helpviewer_keywords:
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
 ms.openlocfilehash: 641db19cc6493a20c9f9a34622f466e3623c32ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088657"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Implementar el modo virtual mediante la carga de datos Just-In-Time en el control DataGridView de formularios Windows Forms
@@ -74,8 +74,8 @@ Una razón para implementar el modo virtual en el <xref:System.Windows.Forms.Dat
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Ajuste del rendimiento del control DataGridView en formularios Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Ajuste del rendimiento del control DataGridView en Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Procedimientos recomendados para ajustar la escala del control DataGridView en formularios Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Modo virtual del control DataGridView de formularios Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Tutorial: Implementar el modo virtual en el control DataGridView de formularios Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
-- [Filtrar para implementar el modo virtual con la carga de datos Just-In-Time en el control DataGridView de formularios Windows Forms](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [Modo virtual del control DataGridView de Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Tutorial: Implementar el modo Virtual en el Control DataGridView de formularios de Windows](implementing-virtual-mode-wf-datagridview-control.md)
+- [Cómo: Implementar el modo Virtual con la carga de datos Just-In-Time en el Control DataGridView de Windows Forms](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

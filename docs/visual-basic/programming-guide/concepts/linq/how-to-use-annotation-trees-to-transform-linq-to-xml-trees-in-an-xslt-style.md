@@ -1,15 +1,15 @@
 ---
-title: Filtrar Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (Visual Basic)
+title: Procedimiento Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
 ms.openlocfilehash: a8db5f9dc29b4053321c81c9da58e12610ef63c7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824876"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Filtrar Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Procedimiento Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (Visual Basic)
 Se puede usar anotaciones para facilitar transformaciones de un árbol XML.  
   
  Algunos documentos XML están "basados en el documento con contenido mixto". Con estos documentos no se conoce necesariamente la forma de los nodos secundarios de un elemento. Por ejemplo, un nodo que contiene texto puede tener el siguiente aspecto:  

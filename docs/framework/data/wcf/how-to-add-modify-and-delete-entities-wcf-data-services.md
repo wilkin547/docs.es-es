@@ -1,5 +1,5 @@
 ---
-title: Filtrar Agregar, modificar y eliminar entidades (WCF Data Services)
+title: Procedimiento Agregar, modificar y eliminar entidades (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
 ms.openlocfilehash: 66f115bf3bf51b4b5612240c4e34eaf9e08bec0d
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59518089"
 ---
-# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Filtrar Agregar, modificar y eliminar entidades (WCF Data Services)
+# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Procedimiento Agregar, modificar y eliminar entidades (WCF Data Services)
 Con el [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotecas de cliente, se puede crear, actualizar y eliminar datos de entidad en un servicio de datos realizando las acciones equivalentes en los objetos de la <xref:System.Data.Services.Client.DataServiceContext>. Para obtener más información, consulte [actualizar el servicio de datos](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean cuando se completa la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  

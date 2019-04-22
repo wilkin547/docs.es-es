@@ -3,10 +3,10 @@ title: Controlar errores de web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
 ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152703"
 ---
 # <a name="wcf-web-http-error-handling"></a>Controlar errores de web HTTP de WCF
@@ -23,7 +23,7 @@ Public string Operation1()
 }  
 ```  
   
- En el ejemplo siguiente se muestra cómo devolver un código de estado HTTP e información adicional en un tipo definido por el usuario. `MyErrorDetail` es un tipo definido por el usuario que contiene información adicional sobre el error que se ha producido.  
+ En el ejemplo siguiente se muestra cómo devolver un código de estado HTTP e información adicional en un tipo definido por el usuario. `MyErrorDetail` es un tipo definido por el usuario que contiene información adicional sobre el error que se produjo.  
   
 ```  
 Public string Operation2()  
@@ -47,7 +47,7 @@ Public string Operation2()
   
  Para obtener más información acerca de cómo afectan estos valores al formato de la operación, vea [WCF Web HTTP formato](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
   
- <xref:System.ServiceModel.Web.WebFaultException> es un <xref:System.ServiceModel.FaultException> y, por tanto, se puede usar como el modelo de programación de excepción de error para los servicios que exponen extremos de SOAP, así como extremos web HTTP.  
+ <xref:System.ServiceModel.Web.WebFaultException> es una clase <xref:System.ServiceModel.FaultException> y, por lo tanto, se puede usar como modelo de programación de excepción de errores para los servicios que exponen extremos de SOAP y extremos web HTTP.  
   
 ## <a name="see-also"></a>Vea también
 

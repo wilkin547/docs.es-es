@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 870de1d3db1e415792437e9763dc13bf8066913f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159645"
 ---
 # <a name="icordebugheapvalue2-interface"></a>Interfaz ICorDebugHeapValue2
@@ -31,7 +31,7 @@ Una extensión del ICorDebugHeapValue que proporciona la compatibilidad con comm
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método CreateHandle](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|Crea un identificador del tipo especificado para este `ICorDebugHeapValue2` objeto.|  
+|[CreateHandle (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|Crea un identificador del tipo especificado para este `ICorDebugHeapValue2` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -49,4 +49,4 @@ Una extensión del ICorDebugHeapValue que proporciona la compatibilidad con comm
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
