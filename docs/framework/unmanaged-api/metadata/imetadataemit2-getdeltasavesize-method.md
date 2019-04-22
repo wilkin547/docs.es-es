@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 69897a7b646eb9f58e6b38588e302287b4241779
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139898"
 ---
-# <a name="imetadataemit2getdeltasavesize-method"></a><span data-ttu-id="dd5cf-102">IMetaDataEmit2::GetDeltaSaveSize (Método)</span><span class="sxs-lookup"><span data-stu-id="dd5cf-102">IMetaDataEmit2::GetDeltaSaveSize Method</span></span>
-<span data-ttu-id="dd5cf-103">Obtiene un valor que indica cualquier cambio en el tamaño de los metadatos que da como resultado de la sesión actual de editar y continuar.</span><span class="sxs-lookup"><span data-stu-id="dd5cf-103">Gets a value indicating any change in metadata size that results from the current edit-and-continue session.</span></span>  
+# <a name="imetadataemit2getdeltasavesize-method"></a><span data-ttu-id="152c3-102">IMetaDataEmit2::GetDeltaSaveSize (Método)</span><span class="sxs-lookup"><span data-stu-id="152c3-102">IMetaDataEmit2::GetDeltaSaveSize Method</span></span>
+<span data-ttu-id="152c3-103">Obtiene un valor que indica cualquier cambio en el tamaño de los metadatos que da como resultado de la sesión actual de editar y continuar.</span><span class="sxs-lookup"><span data-stu-id="152c3-103">Gets a value indicating any change in metadata size that results from the current edit-and-continue session.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd5cf-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="dd5cf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="152c3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="152c3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDeltaSaveSize (  
@@ -36,23 +36,23 @@ HRESULT GetDeltaSaveSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dd5cf-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="dd5cf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="152c3-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="152c3-105">Parameters</span></span>  
  `fSave`  
- <span data-ttu-id="dd5cf-106">[in] Uno de los [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) valores, que indica el nivel de precisión deseado.</span><span class="sxs-lookup"><span data-stu-id="dd5cf-106">[in] One of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) values, indicating the level of precision desired.</span></span> <span data-ttu-id="dd5cf-107">Para la versión 2.0 de .NET Framework, se omite este parámetro.</span><span class="sxs-lookup"><span data-stu-id="dd5cf-107">For the .NET Framework version 2.0, this parameter is ignored.</span></span>  
+ <span data-ttu-id="152c3-106">[in] Uno de los [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) valores, que indica el nivel de precisión deseado.</span><span class="sxs-lookup"><span data-stu-id="152c3-106">[in] One of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) values, indicating the level of precision desired.</span></span> <span data-ttu-id="152c3-107">Para la versión 2.0 de .NET Framework, se omite este parámetro.</span><span class="sxs-lookup"><span data-stu-id="152c3-107">For the .NET Framework version 2.0, this parameter is ignored.</span></span>  
   
  `pdwSaveSize`  
- <span data-ttu-id="dd5cf-108">[out] El cambio en el tamaño de los metadatos.</span><span class="sxs-lookup"><span data-stu-id="dd5cf-108">[out] The change in the size of the metadata.</span></span>  
+ <span data-ttu-id="152c3-108">[out] El cambio en el tamaño de los metadatos.</span><span class="sxs-lookup"><span data-stu-id="152c3-108">[out] The change in the size of the metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dd5cf-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="dd5cf-109">Requirements</span></span>  
- <span data-ttu-id="dd5cf-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dd5cf-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="152c3-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="152c3-109">Requirements</span></span>  
+ <span data-ttu-id="152c3-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="152c3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dd5cf-111">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="dd5cf-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="152c3-111">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="152c3-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="dd5cf-112">**Biblioteca:** Usar como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="dd5cf-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="152c3-112">**Biblioteca:** Usar como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="152c3-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="dd5cf-113">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="dd5cf-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="152c3-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="152c3-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd5cf-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="dd5cf-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="152c3-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="152c3-114">See also</span></span>
 
-- [<span data-ttu-id="dd5cf-115">IMetaDataEmit2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="dd5cf-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="dd5cf-116">IMetaDataEmit (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="dd5cf-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="152c3-115">IMetaDataEmit2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="152c3-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="152c3-116">IMetaDataEmit (interfaz)</span><span class="sxs-lookup"><span data-stu-id="152c3-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

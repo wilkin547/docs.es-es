@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 628ca1b555d80319312450d784981cfed1bda947
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160451"
 ---
-# <a name="corerrorifemitoutoforder-enumeration"></a><span data-ttu-id="7be3e-102">CorErrorIfEmitOutOfOrder (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="7be3e-102">CorErrorIfEmitOutOfOrder Enumeration</span></span>
-<span data-ttu-id="7be3e-103">Contiene valores de marca que indican las condiciones en las que se debe generar un mensaje de error cuando los metadatos se emiten sin orden.</span><span class="sxs-lookup"><span data-stu-id="7be3e-103">Contains flag values that indicate the conditions under which an error message should be generated when metadata is emitted out of order.</span></span>  
+# <a name="corerrorifemitoutoforder-enumeration"></a><span data-ttu-id="8b25d-102">CorErrorIfEmitOutOfOrder (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="8b25d-102">CorErrorIfEmitOutOfOrder Enumeration</span></span>
+<span data-ttu-id="8b25d-103">Contiene valores de marca que indican las condiciones en las que se debe generar un mensaje de error cuando los metadatos se emiten sin orden.</span><span class="sxs-lookup"><span data-stu-id="8b25d-103">Contains flag values that indicate the conditions under which an error message should be generated when metadata is emitted out of order.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7be3e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7be3e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8b25d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8b25d-104">Syntax</span></span>  
   
 ```  
 typedef enum CorErrorIfEmitOutOfOrder {  
@@ -43,26 +43,26 @@ typedef enum CorErrorIfEmitOutOfOrder {
 } CorErrorIfEmitOutOfOrder;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="7be3e-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="7be3e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8b25d-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="8b25d-105">Members</span></span>  
   
-|<span data-ttu-id="7be3e-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="7be3e-106">Member</span></span>|<span data-ttu-id="7be3e-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="7be3e-107">Description</span></span>|  
+|<span data-ttu-id="8b25d-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="8b25d-106">Member</span></span>|<span data-ttu-id="8b25d-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="8b25d-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|<span data-ttu-id="7be3e-108">Indica el comportamiento predeterminado, que no generan mensajes de error.</span><span class="sxs-lookup"><span data-stu-id="7be3e-108">Indicates the default behavior, which does not generate error messages.</span></span>|  
-|`MDErrorOutOfOrderNone`|<span data-ttu-id="7be3e-109">Indica que el compilador no debe generar mensajes de error.</span><span class="sxs-lookup"><span data-stu-id="7be3e-109">Indicates that the compiler should not generate error messages.</span></span>|  
-|`MDErrorOutOfOrderAll`|<span data-ttu-id="7be3e-110">Indica que el compilador debe generar un mensaje de error cuando un campo, propiedad, evento, método o parámetro que se emite sin orden.</span><span class="sxs-lookup"><span data-stu-id="7be3e-110">Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.</span></span>|  
-|`MDMethodOutOfOrder`|<span data-ttu-id="7be3e-111">Indica que el compilador debe generar un mensaje de error cuando un método que se emite sin orden.</span><span class="sxs-lookup"><span data-stu-id="7be3e-111">Indicates that the compiler should generate an error message when a method is emitted out of order.</span></span>|  
-|`MDFieldOutOfOrder`|<span data-ttu-id="7be3e-112">Indica que el compilador debe generar un mensaje de error cuando un campo se emite sin orden.</span><span class="sxs-lookup"><span data-stu-id="7be3e-112">Indicates that the compiler should generate an error message when a field is emitted out of order.</span></span>|  
-|`MDParamOutOfOrder`|<span data-ttu-id="7be3e-113">Indica que el compilador debe generar un mensaje de error cuando un parámetro que se emite sin orden.</span><span class="sxs-lookup"><span data-stu-id="7be3e-113">Indicates that the compiler should generate an error message when a parameter is emitted out of order.</span></span>|  
-|`MDPropertyOutOfOrder`|<span data-ttu-id="7be3e-114">Indica que el compilador debe generar un mensaje de error cuando una propiedad se emite sin orden.</span><span class="sxs-lookup"><span data-stu-id="7be3e-114">Indicates that the compiler should generate an error message when a property is emitted out of order.</span></span>|  
-|`MDEventOutOfOrder`|<span data-ttu-id="7be3e-115">Indica que el compilador debe generar un mensaje de error cuando se emite un evento en el orden correcto.</span><span class="sxs-lookup"><span data-stu-id="7be3e-115">Indicates that the compiler should generate an error message when an event is emitted out of order.</span></span>|  
+|`MDErrorOutOfOrderDefault`|<span data-ttu-id="8b25d-108">Indica el comportamiento predeterminado, que no generan mensajes de error.</span><span class="sxs-lookup"><span data-stu-id="8b25d-108">Indicates the default behavior, which does not generate error messages.</span></span>|  
+|`MDErrorOutOfOrderNone`|<span data-ttu-id="8b25d-109">Indica que el compilador no debe generar mensajes de error.</span><span class="sxs-lookup"><span data-stu-id="8b25d-109">Indicates that the compiler should not generate error messages.</span></span>|  
+|`MDErrorOutOfOrderAll`|<span data-ttu-id="8b25d-110">Indica que el compilador debe generar un mensaje de error cuando un campo, propiedad, evento, método o parámetro que se emite sin orden.</span><span class="sxs-lookup"><span data-stu-id="8b25d-110">Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.</span></span>|  
+|`MDMethodOutOfOrder`|<span data-ttu-id="8b25d-111">Indica que el compilador debe generar un mensaje de error cuando un método que se emite sin orden.</span><span class="sxs-lookup"><span data-stu-id="8b25d-111">Indicates that the compiler should generate an error message when a method is emitted out of order.</span></span>|  
+|`MDFieldOutOfOrder`|<span data-ttu-id="8b25d-112">Indica que el compilador debe generar un mensaje de error cuando un campo se emite sin orden.</span><span class="sxs-lookup"><span data-stu-id="8b25d-112">Indicates that the compiler should generate an error message when a field is emitted out of order.</span></span>|  
+|`MDParamOutOfOrder`|<span data-ttu-id="8b25d-113">Indica que el compilador debe generar un mensaje de error cuando un parámetro que se emite sin orden.</span><span class="sxs-lookup"><span data-stu-id="8b25d-113">Indicates that the compiler should generate an error message when a parameter is emitted out of order.</span></span>|  
+|`MDPropertyOutOfOrder`|<span data-ttu-id="8b25d-114">Indica que el compilador debe generar un mensaje de error cuando una propiedad se emite sin orden.</span><span class="sxs-lookup"><span data-stu-id="8b25d-114">Indicates that the compiler should generate an error message when a property is emitted out of order.</span></span>|  
+|`MDEventOutOfOrder`|<span data-ttu-id="8b25d-115">Indica que el compilador debe generar un mensaje de error cuando se emite un evento en el orden correcto.</span><span class="sxs-lookup"><span data-stu-id="8b25d-115">Indicates that the compiler should generate an error message when an event is emitted out of order.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7be3e-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7be3e-116">Requirements</span></span>  
- <span data-ttu-id="7be3e-117">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7be3e-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b25d-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8b25d-116">Requirements</span></span>  
+ <span data-ttu-id="8b25d-117">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8b25d-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7be3e-118">**Encabezado**: CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="7be3e-118">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="8b25d-118">**Encabezado**: CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="8b25d-118">**Header:** CorHdr.h</span></span>  
   
- **<span data-ttu-id="7be3e-119">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="7be3e-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="8b25d-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b25d-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7be3e-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="7be3e-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b25d-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="8b25d-120">See also</span></span>
 
-- [<span data-ttu-id="7be3e-121">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="7be3e-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="8b25d-121">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="8b25d-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

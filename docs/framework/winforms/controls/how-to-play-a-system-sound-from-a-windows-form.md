@@ -1,5 +1,5 @@
 ---
-title: Filtrar para reproducir un sonido del sistema desde un formulario Windows Forms
+title: Procedimiento para reproducir un sonido del sistema desde un formulario Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: afb206ff-4824-4804-a8d4-185bf5ad8e7c
 ms.openlocfilehash: d85d8cd40ff2b32cb3f2a79cf9a8221964f186c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153236"
 ---
-# <a name="how-to-play-a-system-sound-from-a-windows-form"></a><span data-ttu-id="7811c-102">Filtrar para reproducir un sonido del sistema desde un formulario Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7811c-102">How to: Play a System Sound from a Windows Form</span></span>
-<span data-ttu-id="7811c-103">El siguiente código de ejemplo reproduce el sonido del sistema `Exclamation` en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="7811c-103">The following code example plays the `Exclamation` system sound at run time.</span></span> <span data-ttu-id="7811c-104">Para obtener más información sobre los sonidos del sistema, consulte <xref:System.Media.SystemSounds>.</span><span class="sxs-lookup"><span data-stu-id="7811c-104">For more information about system sounds, see <xref:System.Media.SystemSounds>.</span></span>  
+# <a name="how-to-play-a-system-sound-from-a-windows-form"></a><span data-ttu-id="1e33b-102">Procedimiento para reproducir un sonido del sistema desde un formulario Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1e33b-102">How to: Play a System Sound from a Windows Form</span></span>
+<span data-ttu-id="1e33b-103">El siguiente código de ejemplo reproduce el sonido del sistema `Exclamation` en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="1e33b-103">The following code example plays the `Exclamation` system sound at run time.</span></span> <span data-ttu-id="1e33b-104">Para obtener más información sobre los sonidos del sistema, consulte <xref:System.Media.SystemSounds>.</span><span class="sxs-lookup"><span data-stu-id="1e33b-104">For more information about system sounds, see <xref:System.Media.SystemSounds>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7811c-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7811c-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1e33b-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1e33b-105">Example</span></span>  
   
 ```vb  
 Public Sub PlayExclamation()  
@@ -38,14 +38,14 @@ public void playExclamation()
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="7811c-106">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="7811c-106">Compiling the Code</span></span>  
- <span data-ttu-id="7811c-107">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="7811c-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="1e33b-106">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="1e33b-106">Compiling the Code</span></span>  
+ <span data-ttu-id="1e33b-107">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="1e33b-107">This example requires:</span></span>  
   
--   <span data-ttu-id="7811c-108">Una referencia al espacio de nombres <xref:System.Media?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7811c-108">A reference to the <xref:System.Media?displayProperty=nameWithType> namespace.</span></span>  
+-   <span data-ttu-id="1e33b-108">Una referencia al espacio de nombres <xref:System.Media?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1e33b-108">A reference to the <xref:System.Media?displayProperty=nameWithType> namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7811c-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="7811c-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e33b-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="1e33b-109">See also</span></span>
 
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>
-- [<span data-ttu-id="7811c-110">Filtrar para emitir un bip desde un formulario Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7811c-110">How to: Play a Beep from a Windows Form</span></span>](how-to-play-a-beep-from-a-windows-form.md)
-- [<span data-ttu-id="7811c-111">Filtrar para reproducir un sonido desde un formulario Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7811c-111">How to: Play a Sound from a Windows Form</span></span>](how-to-play-a-sound-from-a-windows-form.md)
+- [<span data-ttu-id="1e33b-110">Cómo: Reproducir un sonido desde Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1e33b-110">How to: Play a Beep from a Windows Form</span></span>](how-to-play-a-beep-from-a-windows-form.md)
+- [<span data-ttu-id="1e33b-111">Cómo: Reproducir un sonido desde Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1e33b-111">How to: Play a Sound from a Windows Form</span></span>](how-to-play-a-sound-from-a-windows-form.md)

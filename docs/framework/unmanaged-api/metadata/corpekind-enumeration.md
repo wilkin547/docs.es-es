@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d8f830ca7e273b65dc9ec77566a02df6c32cd464
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202396"
 ---
-# <a name="corpekind-enumeration"></a><span data-ttu-id="05cd5-102">CorPEKind (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="05cd5-102">CorPEKind Enumeration</span></span>
-<span data-ttu-id="05cd5-103">Contiene valores que describen un archivo ejecutable portable (PE), tal como lo devuelve una llamada a [IMetaDataImport2:: GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span><span class="sxs-lookup"><span data-stu-id="05cd5-103">Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span></span>  
+# <a name="corpekind-enumeration"></a><span data-ttu-id="025c3-102">CorPEKind (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="025c3-102">CorPEKind Enumeration</span></span>
+<span data-ttu-id="025c3-103">Contiene valores que describen un archivo ejecutable portable (PE), tal como lo devuelve una llamada a [IMetaDataImport2:: GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span><span class="sxs-lookup"><span data-stu-id="025c3-103">Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05cd5-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="05cd5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="025c3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="025c3-104">Syntax</span></span>  
   
 ```  
 typedef enum CorPEKind {  
@@ -41,27 +41,27 @@ typedef enum CorPEKind {
 } CorPEKind;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="05cd5-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="05cd5-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="025c3-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="025c3-105">Members</span></span>  
   
-|<span data-ttu-id="05cd5-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="05cd5-106">Member</span></span>|<span data-ttu-id="05cd5-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="05cd5-107">Description</span></span>|  
+|<span data-ttu-id="025c3-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="025c3-106">Member</span></span>|<span data-ttu-id="025c3-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="025c3-107">Description</span></span>|  
 |------------|-----------------|  
-|`peNot`|<span data-ttu-id="05cd5-108">Indica que no es un archivo PE.</span><span class="sxs-lookup"><span data-stu-id="05cd5-108">Indicates that this is not a PE file.</span></span>|  
-|`peILOnly`|<span data-ttu-id="05cd5-109">Indica que este archivo PE contiene sólo código administrado.</span><span class="sxs-lookup"><span data-stu-id="05cd5-109">Indicates that this PE file contains only managed code.</span></span>|  
-|`pe32BitRequired`|<span data-ttu-id="05cd5-110">Indica que este archivo PE efectúa llamadas a Win32.</span><span class="sxs-lookup"><span data-stu-id="05cd5-110">Indicates that this PE file makes Win32 calls.</span></span>|  
-|`pe32Plus`|<span data-ttu-id="05cd5-111">Indica que este archivo PE se ejecuta en una plataforma de 64 bits.</span><span class="sxs-lookup"><span data-stu-id="05cd5-111">Indicates that this PE file runs on a 64-bit platform.</span></span>|  
-|`pe32Unmanaged`|<span data-ttu-id="05cd5-112">Indica que este archivo PE es código nativo.</span><span class="sxs-lookup"><span data-stu-id="05cd5-112">Indicates that this PE file is native code.</span></span>|  
-|<span data-ttu-id="05cd5-113">pe32BitPreferred</span><span class="sxs-lookup"><span data-stu-id="05cd5-113">pe32BitPreferred</span></span>|<span data-ttu-id="05cd5-114">Indica que este archivo PE es independiente de la plataforma y prefiere que se cargue en un entorno de 32 bits.</span><span class="sxs-lookup"><span data-stu-id="05cd5-114">Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.</span></span>|  
+|`peNot`|<span data-ttu-id="025c3-108">Indica que no es un archivo PE.</span><span class="sxs-lookup"><span data-stu-id="025c3-108">Indicates that this is not a PE file.</span></span>|  
+|`peILOnly`|<span data-ttu-id="025c3-109">Indica que este archivo PE contiene sólo código administrado.</span><span class="sxs-lookup"><span data-stu-id="025c3-109">Indicates that this PE file contains only managed code.</span></span>|  
+|`pe32BitRequired`|<span data-ttu-id="025c3-110">Indica que este archivo PE efectúa llamadas a Win32.</span><span class="sxs-lookup"><span data-stu-id="025c3-110">Indicates that this PE file makes Win32 calls.</span></span>|  
+|`pe32Plus`|<span data-ttu-id="025c3-111">Indica que este archivo PE se ejecuta en una plataforma de 64 bits.</span><span class="sxs-lookup"><span data-stu-id="025c3-111">Indicates that this PE file runs on a 64-bit platform.</span></span>|  
+|`pe32Unmanaged`|<span data-ttu-id="025c3-112">Indica que este archivo PE es código nativo.</span><span class="sxs-lookup"><span data-stu-id="025c3-112">Indicates that this PE file is native code.</span></span>|  
+|<span data-ttu-id="025c3-113">pe32BitPreferred</span><span class="sxs-lookup"><span data-stu-id="025c3-113">pe32BitPreferred</span></span>|<span data-ttu-id="025c3-114">Indica que este archivo PE es independiente de la plataforma y prefiere que se cargue en un entorno de 32 bits.</span><span class="sxs-lookup"><span data-stu-id="025c3-114">Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="05cd5-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="05cd5-115">Remarks</span></span>  
- <span data-ttu-id="05cd5-116">Estos valores se pueden usar en combinaciones bit a bit.</span><span class="sxs-lookup"><span data-stu-id="05cd5-116">These values can be used in bitwise combinations.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="025c3-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="025c3-115">Remarks</span></span>  
+ <span data-ttu-id="025c3-116">Estos valores se pueden usar en combinaciones bit a bit.</span><span class="sxs-lookup"><span data-stu-id="025c3-116">These values can be used in bitwise combinations.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05cd5-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="05cd5-117">Requirements</span></span>  
- <span data-ttu-id="05cd5-118">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05cd5-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="025c3-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="025c3-117">Requirements</span></span>  
+ <span data-ttu-id="025c3-118">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="025c3-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05cd5-119">**Encabezado**: CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="05cd5-119">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="025c3-119">**Encabezado**: CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="025c3-119">**Header:** CorHdr.h</span></span>  
   
- **<span data-ttu-id="05cd5-120">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="05cd5-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="025c3-120">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="025c3-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05cd5-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="05cd5-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="025c3-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="025c3-121">See also</span></span>
 
-- [<span data-ttu-id="05cd5-122">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="05cd5-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="025c3-122">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="025c3-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

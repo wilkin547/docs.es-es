@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 567e6533a9a9ac718f8b5acac769295c104f7f3c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144331"
 ---
-# <a name="getcorsystemdirectory-function"></a><span data-ttu-id="1244f-102">GetCORSystemDirectory (Función)</span><span class="sxs-lookup"><span data-stu-id="1244f-102">GetCORSystemDirectory Function</span></span>
-<span data-ttu-id="1244f-103">Devuelve el directorio de instalación de common language runtime (CLR) que se carga en el proceso.</span><span class="sxs-lookup"><span data-stu-id="1244f-103">Returns the installation directory of the common language runtime (CLR) that is loaded into the process.</span></span> <span data-ttu-id="1244f-104">El directorio de instalación se completa, por ejemplo, "c:\windows\microsoft.net\framework\v1.0.3705".</span><span class="sxs-lookup"><span data-stu-id="1244f-104">The installation directory is fully qualified, for example, "c:\windows\microsoft.net\framework\v1.0.3705".</span></span>  
+# <a name="getcorsystemdirectory-function"></a><span data-ttu-id="3b1c9-102">GetCORSystemDirectory (Función)</span><span class="sxs-lookup"><span data-stu-id="3b1c9-102">GetCORSystemDirectory Function</span></span>
+<span data-ttu-id="3b1c9-103">Devuelve el directorio de instalación de common language runtime (CLR) que se carga en el proceso.</span><span class="sxs-lookup"><span data-stu-id="3b1c9-103">Returns the installation directory of the common language runtime (CLR) that is loaded into the process.</span></span> <span data-ttu-id="3b1c9-104">El directorio de instalación se completa, por ejemplo, "c:\windows\microsoft.net\framework\v1.0.3705".</span><span class="sxs-lookup"><span data-stu-id="3b1c9-104">The installation directory is fully qualified, for example, "c:\windows\microsoft.net\framework\v1.0.3705".</span></span>  
   
- <span data-ttu-id="1244f-105">Esta función está en desuso.</span><span class="sxs-lookup"><span data-stu-id="1244f-105">This function is deprecated.</span></span> <span data-ttu-id="1244f-106">Sustituida por la [GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) método proporcionado en el [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1244f-106">It is superseded by the [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) method provided in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="3b1c9-105">Esta función está en desuso.</span><span class="sxs-lookup"><span data-stu-id="3b1c9-105">This function is deprecated.</span></span> <span data-ttu-id="3b1c9-106">Sustituida por la [GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) método proporcionado en el [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3b1c9-106">It is superseded by the [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) method provided in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1244f-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1244f-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b1c9-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="3b1c9-107">Syntax</span></span>  
   
 ```  
 HRESULT GetCORSystemDirectory (   
@@ -39,30 +39,30 @@ HRESULT GetCORSystemDirectory (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1244f-108">Parámetros</span><span class="sxs-lookup"><span data-stu-id="1244f-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3b1c9-108">Parámetros</span><span class="sxs-lookup"><span data-stu-id="3b1c9-108">Parameters</span></span>  
  `pbuffer`  
- <span data-ttu-id="1244f-109">[out] Un búfer en el que el tiempo de ejecución devuelve una cadena que contiene el nombre completo del directorio de instalación para el tiempo de ejecución que se carga en el proceso.</span><span class="sxs-lookup"><span data-stu-id="1244f-109">[out] A buffer in which the runtime returns a string that contains the fully qualified name of the installation directory for the runtime that is loaded into the process.</span></span> <span data-ttu-id="1244f-110">Si el tiempo de ejecución aún no se han cargado en el proceso, la función devuelve la información de directorio adecuado para la versión más reciente del runtime instalada en el equipo.</span><span class="sxs-lookup"><span data-stu-id="1244f-110">If the runtime has not yet been loaded into the process, the function returns the appropriate directory information for the latest version of the runtime installed on the computer.</span></span>  
+ <span data-ttu-id="3b1c9-109">[out] Un búfer en el que el tiempo de ejecución devuelve una cadena que contiene el nombre completo del directorio de instalación para el tiempo de ejecución que se carga en el proceso.</span><span class="sxs-lookup"><span data-stu-id="3b1c9-109">[out] A buffer in which the runtime returns a string that contains the fully qualified name of the installation directory for the runtime that is loaded into the process.</span></span> <span data-ttu-id="3b1c9-110">Si el tiempo de ejecución aún no se han cargado en el proceso, la función devuelve la información de directorio adecuado para la versión más reciente del runtime instalada en el equipo.</span><span class="sxs-lookup"><span data-stu-id="3b1c9-110">If the runtime has not yet been loaded into the process, the function returns the appropriate directory information for the latest version of the runtime installed on the computer.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="1244f-111">[in] El tamaño, en bytes, de `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="1244f-111">[in] The size, in bytes, of `pbuffer`.</span></span>  
+ <span data-ttu-id="3b1c9-111">[in] El tamaño, en bytes, de `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="3b1c9-111">[in] The size, in bytes, of `pbuffer`.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="1244f-112">[out] El número de caracteres devuelto en `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="1244f-112">[out] The number of characters returned in `pbuffer`.</span></span>  
+ <span data-ttu-id="3b1c9-112">[out] El número de caracteres devuelto en `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="3b1c9-112">[out] The number of characters returned in `pbuffer`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1244f-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="1244f-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3b1c9-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="3b1c9-113">Remarks</span></span>  
   
 > [!CAUTION]
->  <span data-ttu-id="1244f-114">No use esta función en procesos que se ejecutan la versión 4 de CLR.</span><span class="sxs-lookup"><span data-stu-id="1244f-114">Do not use this function in processes that are running version 4 of the CLR.</span></span> <span data-ttu-id="1244f-115">Si está instalada una versión anterior de CLR en el equipo, esta función devuelve el directorio de instalación de esa versión.</span><span class="sxs-lookup"><span data-stu-id="1244f-115">If an earlier version of the CLR is installed on the computer, this function returns the installation directory for that version.</span></span>  
+>  <span data-ttu-id="3b1c9-114">No use esta función en procesos que se ejecutan la versión 4 de CLR.</span><span class="sxs-lookup"><span data-stu-id="3b1c9-114">Do not use this function in processes that are running version 4 of the CLR.</span></span> <span data-ttu-id="3b1c9-115">Si está instalada una versión anterior de CLR en el equipo, esta función devuelve el directorio de instalación de esa versión.</span><span class="sxs-lookup"><span data-stu-id="3b1c9-115">If an earlier version of the CLR is installed on the computer, this function returns the installation directory for that version.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1244f-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1244f-116">Requirements</span></span>  
- <span data-ttu-id="1244f-117">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1244f-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b1c9-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3b1c9-116">Requirements</span></span>  
+ <span data-ttu-id="3b1c9-117">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b1c9-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1244f-118">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1244f-118">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3b1c9-118">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3b1c9-118">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1244f-119">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1244f-119">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="3b1c9-119">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3b1c9-119">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="1244f-120">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="1244f-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="3b1c9-120">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b1c9-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1244f-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="1244f-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3b1c9-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="3b1c9-121">See also</span></span>
 
-- [<span data-ttu-id="1244f-122">Funciones de hospedaje de CLR en desuso</span><span class="sxs-lookup"><span data-stu-id="1244f-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="3b1c9-122">Funciones de hospedaje de CLR en desuso</span><span class="sxs-lookup"><span data-stu-id="3b1c9-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
