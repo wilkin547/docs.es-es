@@ -6,10 +6,10 @@ helpviewer_keywords:
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
 ms.openlocfilehash: c0b47521c6a62071466ae4193cd8553bdfb3dcde
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890376"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Personalizar los objetos que están disponibles en My (Visual Basic)
@@ -81,7 +81,7 @@ El `_MYTYPE` constante de compilación condicional, a su vez, controla los valor
 - [Cómo My depende del tipo de proyecto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 - [Compilación condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
 - [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
-- [My.Forms (Objeto)](../../../visual-basic/language-reference/objects/my-forms-object.md)
-- [My.Request (Objeto)](../../../visual-basic/language-reference/objects/my-request-object.md)
-- [My.Response (Objeto)](../../../visual-basic/language-reference/objects/my-response-object.md)
-- [My.WebServices (Objeto)](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [My.Forms (objeto)](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [My.Request (objeto)](../../../visual-basic/language-reference/objects/my-request-object.md)
+- [My.Response (objeto)](../../../visual-basic/language-reference/objects/my-response-object.md)
+- [My.WebServices (objeto)](../../../visual-basic/language-reference/objects/my-webservices-object.md)

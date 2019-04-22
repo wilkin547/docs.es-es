@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar una clase que define operadores (Visual Basic)
+title: Procedimiento Usar una clase que define operadores (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
 ms.openlocfilehash: bd512adf2f06ed0fbd3d36ed3175a0928bf1c57c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829413"
 ---
-# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Filtrar Usar una clase que define operadores (Visual Basic)
+# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Procedimiento Usar una clase que define operadores (Visual Basic)
 Si utiliza una clase o estructura que define sus propios operadores, puede tener acceso a esos operadores desde Visual Basic.  
   
  Definir un operador en una clase o estructura también se denomina *sobrecarga* el operador.  

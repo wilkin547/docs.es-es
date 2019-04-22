@@ -1,15 +1,15 @@
 ---
-title: Filtrar Buscar un atributo del elemento primario (XPath-LINQ to XML) (Visual Basic)
+title: Procedimiento Buscar un atributo del elemento primario (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
 ms.openlocfilehash: ded20c173063492d260aee5ba55f3c4c585bd961
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58828659"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>Filtrar Buscar un atributo del elemento primario (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>Procedimiento Buscar un atributo del elemento primario (XPath-LINQ to XML) (Visual Basic)
 En este tema se muestra cómo desplazarse hasta el elemento primario y buscar un atributo en él.  
   
  La expresión XPath es:  

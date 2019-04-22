@@ -11,10 +11,10 @@ helpviewer_keywords:
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
 ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58839618"
 ---
 # <a name="from-clause-visual-basic"></a>From (Cláusula, Visual Basic)
@@ -29,7 +29,7 @@ From element [ As type ] In collection [ _ ]
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`element`|Obligatorio. Un *variable de rango* utiliza para recorrer en iteración los elementos de la colección. Una variable de rango se usa para referirse a cada miembro de la `collection` como la consulta se recorre el `collection`. Debe ser un tipo enumerable.|  
 |`type`|Opcional. Tipo de `element`. Si no hay ningún `type` se especifica, el tipo de `element` se deduce del `collection`.|  

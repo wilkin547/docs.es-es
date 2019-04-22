@@ -7,10 +7,10 @@ helpviewer_keywords:
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
 ms.openlocfilehash: 075eeccc7d80943d2757a97b9a355bbea3ef9d4e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58833616"
 ---
 # <a name="-imports-visual-basic"></a>-imports (Visual Basic)
@@ -24,7 +24,7 @@ Importa los espacios de nombres desde un ensamblado especificado.
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`namespaceList`|Obligatorio. Lista delimitada por comas de los espacios de nombres que desea importar.|  
   

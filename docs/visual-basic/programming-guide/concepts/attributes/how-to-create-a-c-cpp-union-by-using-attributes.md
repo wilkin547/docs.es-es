@@ -1,15 +1,15 @@
 ---
-title: Filtrar Crear una unión de C/C ++ mediante atributos (Visual Basic)
+title: Procedimiento Crear una unión de C/C ++ mediante atributos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 ms.openlocfilehash: 0c3ebf248f5d2f20e2fff25fb8326a294b51d153
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829309"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Filtrar Crear una unión de C/c ++ mediante atributos (Visual Basic)
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Procedimiento Crear una unión de C/c ++ mediante atributos (Visual Basic)
 Mediante el uso de atributos, puede personalizar la manera en que los structs se disponen en la memoria. Por ejemplo, puede crear lo que se conoce como una unión en C/ C++ mediante los atributos `StructLayout(LayoutKind.Explicit)` y `FieldOffset`.  
   
 ## <a name="example"></a>Ejemplo  

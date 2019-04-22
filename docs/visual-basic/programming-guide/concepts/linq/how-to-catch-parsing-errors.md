@@ -1,15 +1,15 @@
 ---
-title: Filtrar Detectar errores (Visual Basic) de análisis
+title: Procedimiento Detectar errores (Visual Basic) de análisis
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
 ms.openlocfilehash: 1a5d01d4853a9fd0cc7f0a0e5071b394ab3f218b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829397"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a>Filtrar Detectar errores (Visual Basic) de análisis
+# <a name="how-to-catch-parsing-errors-visual-basic"></a>Procedimiento Detectar errores (Visual Basic) de análisis
 En este tema se describe cómo detectar XML no válido o mal formado.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] se implementa con <xref:System.Xml.XmlReader>. Si se pasa XML no válido o mal formado a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], la clase <xref:System.Xml.XmlReader> subyacente iniciará una excepción. Los diferentes métodos que analizan XML, como <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType> no detectan la excepción; la excepción se propaga de forma que la aplicación pueda detectarla.  

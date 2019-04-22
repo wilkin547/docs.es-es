@@ -1,5 +1,5 @@
 ---
-title: Filtrar Elementos secundarios XML Access (Visual Basic)
+title: Procedimiento Elementos secundarios XML Access (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML axis [Visual Basic], child
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: 6689eb36-c471-469f-a82d-099ab8197b25
 ms.openlocfilehash: cd1b0db5305c7879d89cfdfff6cd458d6dea14f4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836823"
 ---
-# <a name="how-to-access-xml-child-elements-visual-basic"></a>Filtrar Elementos secundarios XML Access (Visual Basic)
+# <a name="how-to-access-xml-child-elements-visual-basic"></a>Procedimiento Elementos secundarios XML Access (Visual Basic)
 Este ejemplo muestra cómo usar a un elemento secundario de la propiedad de eje para tener acceso a todos los elementos secundarios XML que tienen un nombre especificado en un elemento XML. En concreto, usa el <xref:System.Xml.Linq.XElement.Value%2A> propiedad para obtener el valor del primer elemento de la colección que la `name` devuelve de propiedad de eje secundario. El `name` propiedad de eje secundario obtiene todos los elementos secundarios denominados `phone` en el `contact` objeto. En este ejemplo también usa el `phone` propiedad de eje secundario para tener acceso a todos los elementos secundarios denominados `phone` que están contenidas en el `contact` objeto.  
   
 ## <a name="example"></a>Ejemplo  

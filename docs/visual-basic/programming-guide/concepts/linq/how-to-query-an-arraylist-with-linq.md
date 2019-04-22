@@ -1,15 +1,15 @@
 ---
-title: Filtrar Consultar un objeto ArrayList con LINQ (Visual Basic)
+title: Procedimiento Consultar un objeto ArrayList con LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
 ms.openlocfilehash: ed440a7970d0ef1a49af36fa56b1c7ca74715e5f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58837161"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Filtrar Consultar un objeto ArrayList con LINQ (Visual Basic)
+# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Procedimiento Consultar un objeto ArrayList con LINQ (Visual Basic)
 Cuando use LINQ para consultar colecciones no genéricas <xref:System.Collections.IEnumerable> como <xref:System.Collections.ArrayList>, debe declarar explícitamente el tipo de variable de rango para reflejar el tipo específico de los objetos de la colección. Por ejemplo, si tiene un <xref:System.Collections.ArrayList> de `Student` objetos, su [la cláusula From](../../../../visual-basic/language-reference/queries/from-clause.md) tendrá un aspecto similar al siguiente:  
   
 ```  

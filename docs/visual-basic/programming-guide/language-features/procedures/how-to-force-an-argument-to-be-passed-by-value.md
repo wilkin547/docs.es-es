@@ -1,5 +1,5 @@
 ---
-title: Filtrar Forzar un argumento para pasar por valor (Visual Basic)
+title: Procedimiento Forzar un argumento para pasar por valor (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
 ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58842051"
 ---
-# <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Filtrar Forzar un argumento para pasar por valor (Visual Basic)
+# <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Procedimiento Forzar un argumento para pasar por valor (Visual Basic)
 La declaración de procedimiento determina el mecanismo de paso. Si se declara un parámetro [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), espera que Visual Basic pasar el argumento correspondiente por referencia. Esto permite que el procedimiento cambiar el valor del elemento de programación subyacente del argumento en el código de llamada. Si desea proteger el elemento subyacente frente a estos cambios, puede invalidar el `ByRef` llame al mecanismo de paso en el procedimiento, incluya entre paréntesis el nombre del argumento. Los paréntesis son además de los paréntesis para delimitar la lista de argumentos en la llamada.  
   
  El código de llamada no se puede invalidar un [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) mecanismo.  

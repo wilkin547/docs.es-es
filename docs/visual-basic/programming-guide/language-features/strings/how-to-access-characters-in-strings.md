@@ -1,18 +1,18 @@
 ---
-title: Filtrar Acceso a caracteres en cadenas en Visual Basic
+title: Procedimiento Acceso a caracteres en cadenas en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
 ms.openlocfilehash: 840a769b0bb322ef7b878a312437c5ec200ab074
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834496"
 ---
-# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Filtrar Acceso a caracteres en cadenas en Visual Basic
+# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Procedimiento Acceso a caracteres en cadenas en Visual Basic
 Este ejemplo muestra cómo usar el <xref:System.String.Chars%2A> propiedad para tener acceso el carácter que ocupa la posición especificada en una cadena.  
   
 ## <a name="example"></a>Ejemplo  

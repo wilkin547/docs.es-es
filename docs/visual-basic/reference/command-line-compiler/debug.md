@@ -8,10 +8,10 @@ helpviewer_keywords:
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
 ms.openlocfilehash: 9bf7170cee31f92481b15fb1227f21895cd3734d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827983"
 ---
 # <a name="-debug-visual-basic"></a>-debug (Visual Basic)
@@ -27,7 +27,7 @@ Hace que el compilador genere información de depuración y colocarla en los arc
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`+` &#124; `-`|Opcional. Especificar `+` o `/debug` hace que el compilador genere información de depuración y lo coloca en un archivo. pdb. Especificar `-` tiene el mismo efecto que si no se especifica `/debug`.|  
 |`full` &#124; `pdbonly`|Opcional. Especifica el tipo de información de depuración generado por el compilador. Si no especifica `/debug:pdbonly`, el valor predeterminado es `full`, lo que permite adjuntar un depurador al programa en ejecución. El `pdbonly` argumento permite depurar el código fuente cuando se inicia el programa en el depurador, pero muestra código de lenguaje ensamblador solo cuando el programa que se ejecuta está asociado al depurador.|  

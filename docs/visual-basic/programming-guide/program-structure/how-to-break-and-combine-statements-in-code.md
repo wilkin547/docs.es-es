@@ -1,5 +1,5 @@
 ---
-title: Filtrar Interrumpir y combinar instrucciones en código (Visual Basic)
+title: Procedimiento Interrumpir y combinar instrucciones en código (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb._
@@ -22,13 +22,13 @@ helpviewer_keywords:
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
 ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58837746"
 ---
-# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Filtrar Interrumpir y combinar instrucciones en código (Visual Basic)
+# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Procedimiento Interrumpir y combinar instrucciones en código (Visual Basic)
 Al escribir el código, a veces puede crear instrucciones largas que requieren un desplazamiento horizontal en el Editor de código. Aunque esto no afecta a la forma se ejecuta el código, resulta difícil para que usted u otra persona leer el código tal y como aparece en el monitor. En tales casos, considere la posibilidad de dividir la única instrucción larga en varias líneas.  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>Para dividir una única instrucción en varias líneas  

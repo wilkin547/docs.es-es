@@ -23,10 +23,10 @@ helpviewer_keywords:
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
 ms.openlocfilehash: 0a5a5261e6b71178adce02a5635c1f91a1469f3d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834275"
 ---
 # <a name="on-error-statement-visual-basic"></a>Instrucción On Error (Visual Basic)
@@ -47,7 +47,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`GoTo` `line`|Habilita la rutina de control de errores que comienza en la línea especificada en la sección necesario `line` argumento. El `line` argumento es cualquier etiqueta de línea o el número de línea. Si se produce un error en tiempo de ejecución, el control se transfiere a la línea especificada, que hace el controlador de errores activos. La línea especificada debe estar en el mismo procedimiento que la `On Error` se producirá la instrucción o un error en tiempo de compilación.|  
 |`GoTo` 0|Deshabilita el controlador de errores habilitado en el procedimiento actual y la restablece a `Nothing`.|  

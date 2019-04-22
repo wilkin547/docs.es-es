@@ -5,10 +5,10 @@ helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
 ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58841306"
 ---
 # <a name="constants-overview-visual-basic"></a>Información general sobre las constantes (Visual Basic)
@@ -29,7 +29,7 @@ Una constante es un nombre descriptivo que ocupa el lugar de un número o una ca
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|de esquema JSON|Término|  
+|Definición|Término|  
 |---|---|  
 |[Cómo: Declarar una constante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Explica cómo utilizar el `Const` instrucción para declarar una constante y establecer su valor; al declarar una constante, asigne un nombre descriptivo para el valor.|  
 |[Constantes definidas por el usuario](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Describe cómo crear sus propias constantes, incluida la información sobre el ámbito y cómo evitar referencias circulares.|  
@@ -38,7 +38,7 @@ Una constante es un nombre descriptivo que ocupa el lugar de un número o una ca
   
 ## <a name="reference"></a>Referencia  
   
-|de esquema JSON|Término|  
+|Definición|Término|  
 |---|---|  
 |[Constantes y enumeraciones](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Muestra las constantes predefinidas por Visual Basic.|  
 |[Const (instrucción)](../../../../visual-basic/language-reference/statements/const-statement.md)|Describe el `Const` instrucción y su uso.|  

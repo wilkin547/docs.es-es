@@ -11,10 +11,10 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
 ms.openlocfilehash: 09b95585325b05c0b7925c4c1c9e123f45791e10
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58828958"
 ---
 # <a name="-operator-visual-basic"></a>* (Operador, Visual Basic)
@@ -28,7 +28,7 @@ number1 * number2
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`number1`|Obligatorio. Cualquier expresión numérica.|  
 |`number2`|Obligatorio. Cualquier expresión numérica.|  

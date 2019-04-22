@@ -1,5 +1,5 @@
 ---
-title: Filtrar Determinar la cadena asociada con un valor de enumeración (Visual Basic)
+title: Procedimiento Determinar la cadena asociada con un valor de enumeración (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - values [Visual Basic], enumeration members
 ms.assetid: 9253e7c8-579c-49a2-8f26-392b20ea99eb
 ms.openlocfilehash: 4fa04fa621347ae961975bfb636734e6c9df39fc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829218"
 ---
-# <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a>Filtrar Determinar la cadena asociada con un valor de enumeración (Visual Basic)
+# <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a>Procedimiento Determinar la cadena asociada con un valor de enumeración (Visual Basic)
 El <xref:System.Enum.GetValues%2A> y <xref:System.Enum.GetNames%2A> métodos permiten determinar las cadenas y valores asociados a los miembros de enumeración.  
   
 ### <a name="to-determine-the-string-associated-with-an-enumeration"></a>Para determinar la cadena asociada a una enumeración  

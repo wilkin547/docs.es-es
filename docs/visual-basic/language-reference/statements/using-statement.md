@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
 ms.openlocfilehash: fe53ea58dc98a4de793fe9dad1c3ceeac71622fc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58843206"
 ---
 # <a name="using-statement-visual-basic"></a>Using (Instrucción, Visual Basic)
@@ -29,7 +29,7 @@ End Using
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`resourcelist`|Obligatorio si no se proporciona `resourceexpression`. Lista de uno o más recursos del sistema que este `Using` Bloquear controles, separados por comas.|  
 |`resourceexpression`|Obligatorio si no se proporciona `resourcelist`. Variable de referencia o una expresión que hace referencia a un recurso del sistema que estén controladas por esto `Using` bloque.|  
@@ -46,7 +46,7 @@ End Using
   
 ## <a name="resourcelist-parts"></a>Partes de resourceList  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`resourcename`|Obligatorio. Variable de referencia que hace referencia a un recurso del sistema que la `Using` Bloquear controles.|  
 |`New`|Es necesario si la `Using` instrucción adquiere el recurso. Si ya ha adquirido el recurso, use la segunda alternativa de sintaxis.|  

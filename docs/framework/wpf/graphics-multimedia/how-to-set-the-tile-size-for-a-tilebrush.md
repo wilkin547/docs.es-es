@@ -1,18 +1,18 @@
 ---
-title: Filtrar Establecer el tamaño del mosaico de un TileBrush
+title: Procedimiento Establecer el tamaño del mosaico de un TileBrush
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TileBrush [WPF], size of tile properties
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
 ms.openlocfilehash: 80b5dfc668464df829db593668bea8a9a4ec09e4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58839702"
 ---
-# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Filtrar Establecer el tamaño del mosaico de un TileBrush
+# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Procedimiento Establecer el tamaño del mosaico de un TileBrush
 
 En este ejemplo se muestra cómo establecer el tamaño del mosaico para un <xref:System.Windows.Media.TileBrush>. De forma predeterminada, un <xref:System.Windows.Media.TileBrush> genera un mosaico único que rellena completamente el área que se está pintando. Puede invalidar este comportamiento estableciendo el <xref:System.Windows.Media.TileBrush.Viewport%2A> y <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propiedades.
 

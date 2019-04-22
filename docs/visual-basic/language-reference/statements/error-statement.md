@@ -11,10 +11,10 @@ helpviewer_keywords:
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
 ms.openlocfilehash: 8ac7cee2f9959bc75df165d00d3a0a67e1dd9af0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58837538"
 ---
 # <a name="error-statement"></a>Error (Instrucción)
@@ -35,7 +35,7 @@ Error errornumber
   
  Si `errornumber` está definido, el `Error` instrucción llama al controlador de errores después de las propiedades de la `Err` objeto se asignan los valores predeterminados siguientes:  
   
-|Property|Valor|  
+|Propiedad|Valor|  
 |--------------|-----------|  
 |`Number`|Valor especificado como argumento para `Error` instrucción. Puede ser cualquier número de error válido.|  
 |`Source`|Nombre del proyecto actual de Visual Basic.|  

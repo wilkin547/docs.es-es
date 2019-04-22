@@ -1,15 +1,15 @@
 ---
-title: Filtrar Buscar el número Total de Bytes en un conjunto de carpetas (LINQ) (Visual Basic)
+title: Procedimiento Buscar el número Total de Bytes en un conjunto de carpetas (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
 ms.openlocfilehash: 9aa098ddca2e3ad300913b207c9db5a4976eded7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58831675"
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Filtrar Buscar el número Total de Bytes en un conjunto de carpetas (LINQ) (Visual Basic)
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Procedimiento Buscar el número Total de Bytes en un conjunto de carpetas (LINQ) (Visual Basic)
 En este ejemplo se muestra cómo recuperar el número total de bytes usados por todos los archivos en una carpeta especificada y en todas sus subcarpetas.  
   
 ## <a name="example"></a>Ejemplo  

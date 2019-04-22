@@ -1,5 +1,5 @@
 ---
-title: Filtrar Obtener acceso a una Variable que oculta una clase derivada (Visual Basic)
+title: Procedimiento Obtener acceso a una Variable que oculta una clase derivada (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
 ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58832182"
 ---
-# <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Filtrar Obtener acceso a una Variable que oculta una clase derivada (Visual Basic)
+# <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Procedimiento Obtener acceso a una Variable que oculta una clase derivada (Visual Basic)
 Cuando el código en una clase derivada tiene acceso a una variable, el compilador resuelve normalmente la referencia a la versión accesible más cercana, es decir, la versión accesible los mínimos pasos de derivación en sentido con versiones anteriores de la clase que tiene acceso. Si la variable se define en la clase derivada, el código tiene acceso normalmente a esa definición.  
   
  Si la variable de clase derivada oculta una variable en la clase base, oculta la versión de la clase base. Sin embargo, puede acceder a la variable de clase base mediante su calificación con la `MyBase` palabra clave.  

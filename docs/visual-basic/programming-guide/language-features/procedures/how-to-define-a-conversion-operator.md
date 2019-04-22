@@ -1,5 +1,5 @@
 ---
-title: Filtrar Definir un operador de conversión (Visual Basic)
+title: Procedimiento Definir un operador de conversión (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
 ms.openlocfilehash: cf7bfdd09c7f3429f9c730a7aec34b24af3f2e9f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829231"
 ---
-# <a name="how-to-define-a-conversion-operator-visual-basic"></a>Filtrar Definir un operador de conversión (Visual Basic)
+# <a name="how-to-define-a-conversion-operator-visual-basic"></a>Procedimiento Definir un operador de conversión (Visual Basic)
 Si ha definido una clase o estructura, puede definir un operador de conversión de tipos entre el tipo de la clase o estructura y otro tipo de datos (como `Integer`, `Double`, o `String`).  
   
  Definir la conversión de tipos como un [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) procedimiento dentro de la clase o estructura. Todos los procedimientos de conversión deben ser `Public Shared`, y cada uno debe especificar [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) o [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).  

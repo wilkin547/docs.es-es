@@ -1,5 +1,5 @@
 ---
-title: Filtrar Declare una constante (Visual Basic)
+title: Procedimiento Declare una constante (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.constant
@@ -24,13 +24,13 @@ helpviewer_keywords:
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
 ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58843414"
 ---
-# <a name="how-to-declare-a-constant-visual-basic"></a>Filtrar Declare una constante (Visual Basic)
+# <a name="how-to-declare-a-constant-visual-basic"></a>Procedimiento Declare una constante (Visual Basic)
 Usa el `Const` instrucción declare una constante y establezca su valor. Al declarar una constante, asigna un nombre descriptivo a un valor. Una vez que se declara una constante, no se puede modificar o asignar un nuevo valor.  
   
  Declare una constante dentro de un procedimiento o en la sección de declaraciones de un módulo, clase o estructura. Constantes de nivel de la estructura o clase son `Private` de forma predeterminada, pero también pueden declararse como `Public`, `Friend`, `Protected`, o `Protected Friend` para el nivel adecuado de acceso al código.  

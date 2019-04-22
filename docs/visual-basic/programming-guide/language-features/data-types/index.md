@@ -9,10 +9,10 @@ helpviewer_keywords:
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
 ms.openlocfilehash: 192ced1da400372f877cb54aaa29d60fcd0bbcad
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829205"
 ---
 # <a name="data-types-in-visual-basic"></a>Tipos de datos en Visual Basic
@@ -27,7 +27,7 @@ El *tipo de datos* de un elemento de programación hace referencia al tipo de da
 |Literal|Con un carácter de tipo literal; consulte "Caracteres de tipo literal" en [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)<br /><br /> `Dim searchChar As Char = "."`  `C`|  
 |Constante|En una [instrucción Const](../../../../visual-basic/language-reference/statements/const-statement.md)<br /><br /> `Const`   `modulus As Single = 4.17825F`|  
 |Enumeración|En una [instrucción Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)<br /><br /> `Public`   `Enum`   `colors`|  
-|Property|En una [instrucción Property](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
+|Propiedad|En una [instrucción Property](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
 |Parámetro de procedimiento|En una [instrucción Sub](../../../../visual-basic/language-reference/statements/sub-statement.md), [instrucción Function](../../../../visual-basic/language-reference/statements/function-statement.md) o una [instrucción Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Sub addSale(ByVal`   `amount`   `As Double)`|  
 |Argumento de procedimiento|En el código de llamada; cada argumento es un elemento de programación que ya se declaró, o bien una expresión que contiene los elementos declarados<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
 |Valor devuelto de un procedimiento|En una [instrucción Function](../../../../visual-basic/language-reference/statements/function-statement.md) o una [instrucción Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  

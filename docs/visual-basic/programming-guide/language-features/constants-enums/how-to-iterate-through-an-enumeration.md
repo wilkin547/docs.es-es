@@ -1,5 +1,5 @@
 ---
-title: Filtrar Recorrer en iteración una enumeración en Visual Basic
+title: Procedimiento Recorrer en iteración una enumeración en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [Visual Basic], iterating
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
 ms.openlocfilehash: 63597145e96b04affc5f0e80e05a56b3fdf27278
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58833365"
 ---
-# <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>Filtrar Recorrer en iteración una enumeración en Visual Basic
+# <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>Procedimiento Recorrer en iteración una enumeración en Visual Basic
 Las enumeraciones proporcionan una forma cómoda de trabajar con conjuntos de constantes relacionadas y asociar valores constantes con nombres. Para recorrer en iteración una enumeración, puede moverla a una matriz mediante la <xref:System.Enum.GetValues%2A> método. También puede recorrer en iteración a través de una enumeración mediante un `For...Each` instrucción, utilizando el <xref:System.Enum.GetNames%2A> o <xref:System.Enum.GetValues%2A> método para extraer el valor de cadena o numérica.  
   
 ### <a name="to-iterate-through-an-enumeration"></a>Para recorrer en iteración una enumeración  

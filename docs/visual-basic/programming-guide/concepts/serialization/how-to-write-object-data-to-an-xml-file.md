@@ -1,15 +1,15 @@
 ---
-title: Filtrar Escribir datos de objetos en un archivo XML (Visual Basic)
+title: Procedimiento Escribir datos de objetos en un archivo XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
 ms.openlocfilehash: 52b896b0191f29f68cc31e02fc325638ca6341b4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58843739"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Filtrar Escribir datos de objetos en un archivo XML (Visual Basic)
+# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Procedimiento Escribir datos de objetos en un archivo XML (Visual Basic)
 En este ejemplo se escribe el objeto de una clase en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Ejemplo  

@@ -25,10 +25,10 @@ helpviewer_keywords:
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
 ms.openlocfilehash: d071e59d94e51ca55167983d0ee3098bd5c7dd8f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58843635"
 ---
 # <a name="type-list-visual-basic"></a>Lista de tipos (Visual Basic)
@@ -42,7 +42,7 @@ Especifica el *parámetros de tipo* para un *genérico* elemento de programació
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`genericmodifier`|Opcional. Puede usarse solo en interfaces y delegados genéricos. Puede declarar un tipo covariante mediante el [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) palabra clave o contravariante mediante la [en](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) palabra clave. Vea [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md).|  
 |`typename`|Obligatorio. Nombre del parámetro de tipo. Se trata de un marcador de posición, reemplazarse por un tipo definido proporcionado por el argumento de tipo correspondiente.|  

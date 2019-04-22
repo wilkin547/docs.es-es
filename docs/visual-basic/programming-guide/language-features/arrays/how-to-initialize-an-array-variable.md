@@ -1,5 +1,5 @@
 ---
-title: Filtrar Inicializar una Variable de matriz en Visual Basic
+title: Procedimiento Inicializar una Variable de matriz en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], initializing
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
 ms.openlocfilehash: 4aa783d6179c72760a12d0259d587b5b38bb9140
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58832247"
 ---
-# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Filtrar Inicializar una Variable de matriz en Visual Basic
+# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Procedimiento Inicializar una Variable de matriz en Visual Basic
 Inicializar una variable de matriz mediante la inclusión de un literal de matriz en un `New` cláusula y especifique los valores iniciales de la matriz. Puede especificar el tipo o permitir que se deduzca de los valores del literal de matriz. Para obtener más información acerca de cómo se deduce el tipo, vea "Rellenar una matriz con valores iniciales" en [matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>Para inicializar una variable de matriz mediante un literal de matriz  
