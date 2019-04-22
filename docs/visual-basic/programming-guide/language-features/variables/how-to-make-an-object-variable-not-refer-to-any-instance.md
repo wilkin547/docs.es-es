@@ -1,18 +1,18 @@
 ---
-title: Filtrar Crea un objeto de Variable no hacen referencia a cualquier instancia (Visual Basic)
+title: Procedimiento Crea un objeto de Variable no hacen referencia a cualquier instancia (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Nothing keyword [Visual Basic], variable assignment
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
 ms.openlocfilehash: 373d4ae84c44b212ad02b0b4266af75921e40423
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58818695"
 ---
-# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Filtrar Crea un objeto de Variable no hacen referencia a cualquier instancia (Visual Basic)
+# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Procedimiento Crea un objeto de Variable no hacen referencia a cualquier instancia (Visual Basic)
 Puede desasociar una variable de objeto de cualquier instancia de objeto si se establece en [nada](../../../../visual-basic/language-reference/nothing.md).  
   
 ### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>Para desasociar una variable de objeto de cualquier instancia de objeto  

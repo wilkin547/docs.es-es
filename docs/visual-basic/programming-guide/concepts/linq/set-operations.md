@@ -3,10 +3,10 @@ title: Operaciones Set (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
 ms.openlocfilehash: 59ab09607462c762758e6a246ec218a92e01f5de
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825789"
 ---
 # <a name="set-operations-visual-basic"></a>Operaciones Set (Visual Basic)
@@ -28,7 +28,7 @@ Las operaciones set de LINQ se refieren a operaciones de consulta que generan un
 ### <a name="distinct"></a>Distinct  
  En la siguiente ilustración se muestra el comportamiento del método <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> en una secuencia de caracteres. La secuencia devuelta contiene los elementos únicos de la secuencia de entrada.  
   
- ![Gráfico que muestra el comportamiento de Distinct&#40;&#41;.](./media/set-operations/distinct-method-behavior.png)  
+ ![Gráfico en el que se muestra el comportamiento de Distinct&#40;&#41;.](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>Except  
  En la siguiente ilustración se muestra el comportamiento de <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. La secuencia devuelta solo contiene los elementos de la primera secuencia de entrada que no están en la segunda secuencia de entrada.  
@@ -38,11 +38,11 @@ Las operaciones set de LINQ se refieren a operaciones de consulta que generan un
 ### <a name="intersect"></a>Formar intersección  
  En la siguiente ilustración se muestra el comportamiento de <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. La secuencia devuelta contiene los elementos que son comunes a las dos secuencias de entrada.  
   
- ![Gráfico mostrando la intersección de dos secuencias.](./media/set-operations/intersection-two-sequences.png)    
+ ![Gráfico en el que se muestra la intersección de dos secuencias.](./media/set-operations/intersection-two-sequences.png)    
 ### <a name="union"></a>Unión  
  En la siguiente ilustración se muestra una operación de unión en dos secuencias de caracteres. La secuencia devuelta contiene los elementos únicos de las dos secuencias de entrada.  
   
- ![Gráfico mostrando la unión de dos secuencias.](./media/set-operations/union-operation-two-sequences.png)    
+ ![Gráfico en el que se muestra la unión de dos secuencias.](./media/set-operations/union-operation-two-sequences.png)    
 ## <a name="query-expression-syntax-example"></a>Ejemplo de sintaxis de expresiones de consulta  
  En el ejemplo siguiente se usa el `Distinct` cláusula en una consulta LINQ para devolver los números únicos de una lista de enteros.  
   

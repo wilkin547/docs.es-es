@@ -1,5 +1,5 @@
 ---
-title: Filtrar Convertir cadenas en una matriz de Bytes en Visual Basic
+title: Procedimiento Convertir cadenas en una matriz de Bytes en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string conversion [Visual Basic], arrays
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - arrays [Visual Basic], byte arrays
 ms.assetid: f477d35c-a3fc-4a30-b1d4-cd0d353aae1d
 ms.openlocfilehash: 2fa0b86459e6191d3bd5f884d92b071218b4063a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58823277"
 ---
-# <a name="how-to-convert-strings-into-an-array-of-bytes-in-visual-basic"></a>Filtrar Convertir cadenas en una matriz de Bytes en Visual Basic
+# <a name="how-to-convert-strings-into-an-array-of-bytes-in-visual-basic"></a>Procedimiento Convertir cadenas en una matriz de Bytes en Visual Basic
 En este tema se muestra cómo convertir una cadena en una matriz de bytes.  
   
 ## <a name="example"></a>Ejemplo  

@@ -3,10 +3,10 @@ title: Operaciones de proyección (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
 ms.openlocfilehash: e2af45f9cbbed9eb88095a30e2b77a7730740898
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820989"
 ---
 # <a name="projection-operations-visual-basic"></a>Operaciones de proyección (Visual Basic)
@@ -85,11 +85,11 @@ MsgBox(sb.ToString())
   
  En esta ilustración se muestra cómo `Select()` devuelve una colección que tiene el mismo número de elementos que la colección de origen.  
   
- ![Gráfico que muestra la acción de Select&#40;&#41;](./media/projection-operations/select-action-graphic.png)  
+ ![Gráfico en el que se muestra la acción Select&#40;&#41;](./media/projection-operations/select-action-graphic.png)  
   
  En esta ilustración se muestra cómo `SelectMany()` concatena la secuencia intermedia de matrices en un valor de resultado final que contiene cada uno de los valores de todas las matrices intermedias.  
   
- ![Gráfico mostrando la acción de SelectMany&#40;&#41;.](./media/projection-operations/select-many-action-graphic.png )  
+ ![Gráfico en el que se muestra la acción SelectMany&#40;&#41;.](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>Ejemplo de código  
  En el ejemplo siguiente se compara el comportamiento de `Select()` y `SelectMany()`. El código crea un "ramo" de flores tomando los dos primeros elementos de cada lista de nombres de flores de la colección de origen. En este ejemplo, el "valor único" que la función de transformación <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> usa es una colección de valores. Para ello, se requiere el bucle adicional `For Each` a fin de enumerar cada una de las cadenas de cada subsecuencia.  

@@ -1,15 +1,15 @@
 ---
-title: Filtrar Buscar todos los nodos en un Namespace (Visual Basic)
+title: Procedimiento Buscar todos los nodos en un Namespace (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
 ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58813853"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Filtrar Buscar todos los nodos en un Namespace (Visual Basic)
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Procedimiento Buscar todos los nodos en un Namespace (Visual Basic)
 Puede filtrar en el espacio de nombres de cada elemento o atributo para buscar todos los nodos de ese espacio de nombres particular.  
   
 ## <a name="example"></a>Ejemplo  

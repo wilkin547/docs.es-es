@@ -1,18 +1,18 @@
 ---
-title: Filtrar Validar cadenas que representan fechas u horas (Visual Basic)
+title: Procedimiento Validar cadenas que representan fechas u horas (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], validating
 - String data type [Visual Basic], validation
 ms.assetid: ae7d4b29-3436-4032-bdbf-4650eb1c8e19
 ms.openlocfilehash: f24ff05e48327c21c02eb92b07db17266f743a80
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58815235"
 ---
-# <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Filtrar Validar cadenas que representan fechas u horas (Visual Basic)
+# <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Procedimiento Validar cadenas que representan fechas u horas (Visual Basic)
 El siguiente ejemplo de código establece un `Boolean` valor que indica si una cadena representa una fecha u hora válida.  
   
 ## <a name="example"></a>Ejemplo  

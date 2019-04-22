@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
 ms.openlocfilehash: 880b4cf75d518506d2bcf788ad8460274dcccefc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821320"
 ---
 # <a name="delegate-statement"></a>Delegate (Instrucción)
@@ -26,7 +26,7 @@ Se utiliza para declarar a un delegado. Un delegado es un tipo de referencia que
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`attrlist`|Opcional. Lista de atributos que se aplican a este delegado. Los diversos atributos se separan con comas. Debe incluir el [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) en corchetes angulares ("`<`"y"`>`").|  
 |`accessmodifier`|Opcional. Especifica qué código puede tener acceso al delegado. Puede ser uno de los siguientes:<br /><br /> - [Public](../../../visual-basic/language-reference/modifiers/public.md). Cualquier código que puede tener acceso al elemento que declara al delegado puede acceder a él.<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md). Sólo el código de la clase del delegado o una clase derivada puede acceder a él.<br />-   [Amigo](../../../visual-basic/language-reference/modifiers/friend.md). Sólo el código dentro del mismo ensamblado puede tener acceso al delegado.<br />- [Privada](../../../visual-basic/language-reference/modifiers/private.md). Sólo el código dentro del elemento que se declara al delegado puede acceder a él.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) solo código dentro de la clase del delegado, una clase derivada o el mismo ensamblado puede tener acceso el delegado. <br />- [Private Protected](../../language-reference/modifiers/private-protected.md) solo código dentro de la clase del delegado o en una clase derivada en el mismo ensamblado puede tener acceso el delegado. |  

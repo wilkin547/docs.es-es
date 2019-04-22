@@ -10,10 +10,10 @@ helpviewer_keywords:
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 ms.openlocfilehash: 21efca701eb16898dd291d73bf0431641ba75d12
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826124"
 ---
 # <a name="-reference-visual-basic"></a>-referencia (Visual Basic)
@@ -29,7 +29,7 @@ Hace que el compilador para que estén disponibles para el proyecto que se está
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`fileList`|Obligatorio. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
   

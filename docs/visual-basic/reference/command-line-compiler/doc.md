@@ -7,10 +7,10 @@ helpviewer_keywords:
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 ms.openlocfilehash: 13005eb55b430f6ff9b3a6408582a02e53838742
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824590"
 ---
 # <a name="-doc"></a>-doc
@@ -26,7 +26,7 @@ Procesa los comentarios de documentación generando un archivo XML.
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`+` &#124; `-`|Opcional. Si se especifica + o solo `-doc`, el compilador genera información de documentación y la coloca en un archivo XML. Especificar `-` es el equivalente a no especificar `-doc`, lo que causa que no se cree ninguna información de documentación.|  
 |`file`|Es necesario si se usa `-doc:`. Especifica el archivo XML de salida, que se rellena con los comentarios de los archivos de código fuente de la compilación. Si el nombre de archivo contiene un espacio, escríbalo entre comillas (" ").|  

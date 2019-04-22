@@ -1,5 +1,5 @@
 ---
-title: Filtrar Declarar eventos personalizados para evitar bloqueos (Visual Basic)
+title: Procedimiento Declarar eventos personalizados para evitar bloqueos (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring events [Visual Basic], custom
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
 ms.openlocfilehash: 6eea47ea2c8aee697eb34ca904dad22ca88e6ce4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821262"
 ---
-# <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>Filtrar Declarar eventos personalizados para evitar bloqueos (Visual Basic)
+# <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>Procedimiento Declarar eventos personalizados para evitar bloqueos (Visual Basic)
 Hay varias circunstancias cuando es importante que un controlador de eventos no bloquear los controladores de eventos posteriores. Eventos personalizados permiten el evento llame a sus controladores de eventos de forma asincrónica.  
   
  De forma predeterminada, el campo de almacén de respaldo para una declaración de evento es un delegado de multidifusión que combina todos los controladores de eventos de forma consecutiva. Esto significa que si un controlador tarda mucho tiempo en completarse, bloquea los otros controladores hasta que se complete. (Los controladores de eventos exhiben nunca deben realizar las operaciones largas o puede producir bloqueos.)  

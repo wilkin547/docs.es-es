@@ -3,10 +3,10 @@ title: Operaciones de agregación (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
 ms.openlocfilehash: 72268e27fdf6d573279e98438fd884a076e0c8a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58817245"
 ---
 # <a name="aggregation-operations-visual-basic"></a>Operaciones de agregación (Visual Basic)
@@ -14,7 +14,7 @@ Una operación de agregación calcula un valor único a partir de una colección
   
  En la siguiente ilustración se muestran los resultados de dos operaciones de agregación diferentes en una secuencia de números. La primera operación suma los números. La segunda operación devuelve el valor máximo de la secuencia.  
   
- ![Ilustración que muestra las operaciones de agregación en LINQ.](./media/aggregation-operations/linq-aggregation-operations.png)  
+ ![Ilustración en la que se muestran operaciones de agregación en LINQ.](./media/aggregation-operations/linq-aggregation-operations.png)  
   
  Los métodos del operador de consulta estándar que realizan operaciones de agregación se indican en la sección siguiente.  
   

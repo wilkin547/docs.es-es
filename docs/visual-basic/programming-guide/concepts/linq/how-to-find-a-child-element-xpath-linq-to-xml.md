@@ -1,15 +1,15 @@
 ---
-title: Filtrar Buscar un elemento secundario (XPath-LINQ to XML) (Visual Basic)
+title: Procedimiento Buscar un elemento secundario (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
 ms.openlocfilehash: 96ad54d6f89aefd004a7803baef855d656b8a82d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821535"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Filtrar Buscar un elemento secundario (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Procedimiento Buscar un elemento secundario (XPath-LINQ to XML) (Visual Basic)
 En este tema se compara el eje del elemento secundario XPath con el método [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A>.  
   
  La expresión XPath es `DeliveryNotes`.  

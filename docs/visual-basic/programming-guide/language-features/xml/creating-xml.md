@@ -7,10 +7,10 @@ helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 8ae29ec5-e5fb-4137-9df5-60a288df7045
 ms.openlocfilehash: d847f589bc47f8ab3d6691666bbd879e795db0c6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58813046"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Crear XML en Visual Basic
@@ -18,7 +18,7 @@ Visual Basic le permite usar *literales XML* directamente en el código. La sint
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |[Introducción a literales XML](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|Introducción a los literales XML y cómo se relacionan con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Expresiones incrustadas en XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|Describe cómo utilizar expresiones incrustadas en los literales XML.|  

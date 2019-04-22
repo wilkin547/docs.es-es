@@ -16,10 +16,10 @@ helpviewer_keywords:
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
 ms.openlocfilehash: de2edc6b16689673c3be6703ff1a201febe73526
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825367"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With (Instrucción, Visual Basic)
@@ -35,7 +35,7 @@ End With
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`objectExpression`|Obligatorio. Una expresión que se evalúa como un objeto. La expresión puede ser arbitrariamente compleja y se evalúa solo una vez. La expresión se puede evaluar como cualquier tipo de datos, incluidos los tipos elementales.|  
 |`statements`|Opcional. Una o varias instrucciones entre `With` y `End With` que pueden hacer referencia a los miembros de un objeto generado por la evaluación de `objectExpression`.|  

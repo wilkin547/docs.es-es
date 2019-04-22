@@ -14,10 +14,10 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
 ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821302"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Características de los elementos declarados (Visual Basic)
@@ -40,7 +40,7 @@ Un *característica* de un elemento declarado es un aspecto del elemento que afe
 |Constante|Sí|No|Sí|Sí|  
 |Enumeración|Sí|No|Sí|Sí|  
 |Estructura|No|No|Sí|Sí|  
-|Property|Sí|Sí|Sí|Sí|  
+|Propiedad|Sí|Sí|Sí|Sí|  
 |Método|No|Sí|Sí|Sí|  
 |Procedimiento (`Sub` o `Function`)|No|Sí|Sí|Sí|  
 |Parámetro de procedimiento|Sí|Sí|Sí|No|  

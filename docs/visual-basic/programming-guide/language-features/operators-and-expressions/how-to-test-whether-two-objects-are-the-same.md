@@ -1,5 +1,5 @@
 ---
-title: Filtrar Comprobar si dos objetos son el mismo (Visual Basic)
+title: Procedimiento Comprobar si dos objetos son el mismo (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], reference
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
 ms.openlocfilehash: dbb268175d197e7b931af45a98f3a273c593e5a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58819132"
 ---
-# <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>Filtrar Comprobar si dos objetos son el mismo (Visual Basic)
+# <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>Procedimiento Comprobar si dos objetos son el mismo (Visual Basic)
 Si tiene dos variables que hacen referencia a objetos, puede usar el `Is` o `IsNot` operador o ambos, para determinar si hacen referencia a la misma instancia.  
   
 ### <a name="to-test-whether-two-objects-are-the-same"></a>Para comprobar si dos objetos son iguales  

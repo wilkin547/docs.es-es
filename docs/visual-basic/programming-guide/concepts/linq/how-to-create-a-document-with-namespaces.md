@@ -1,15 +1,15 @@
 ---
-title: Filtrar Crear un documento con espacios de nombres (LINQ to XML) (Visual Basic)
+title: Procedimiento Crear un documento con espacios de nombres (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
 ms.openlocfilehash: b65d22451d900f7b20226f25b61bb235241dd84f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58816867"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Filtrar Crear un documento con espacios de nombres (LINQ to XML) (Visual Basic)
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Procedimiento Crear un documento con espacios de nombres (LINQ to XML) (Visual Basic)
 En este tema se muestra cómo crear un documento con espacios de nombres en Visual Basic.  
   
  Cuando se utilizan literales XML en Visual Basic, los usuarios pueden definir un espacio de nombres XML predeterminado que sea global. Este espacio de nombres será el predeterminado tanto para los literales XML como para las propiedades XML. Es posible definir el espacio de nombres XML predeterminado tanto en el nivel de proyecto como en el nivel de archivo. En caso de definirlo a nivel de archivo, éste reemplazará al espacio de nombres predeterminado que se definió a nivel del proyecto.  

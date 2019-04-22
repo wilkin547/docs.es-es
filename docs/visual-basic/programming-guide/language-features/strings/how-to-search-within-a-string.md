@@ -1,5 +1,5 @@
 ---
-title: Filtrar Buscar en una cadena (Visual Basic)
+title: Procedimiento Buscar en una cadena (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], finding
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
 ms.openlocfilehash: b690aa78a2cf07b0db5bdd28d7d71ed4a79fbf61
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58823303"
 ---
-# <a name="how-to-search-within-a-string-visual-basic"></a>Filtrar Buscar en una cadena (Visual Basic)
+# <a name="how-to-search-within-a-string-visual-basic"></a>Procedimiento Buscar en una cadena (Visual Basic)
 Este ejemplo llama a la <xref:System.String.IndexOf%2A> método en un <xref:System.String> objeto para informar del índice de la primera aparición de una subcadena.  
   
 ## <a name="example"></a>Ejemplo  

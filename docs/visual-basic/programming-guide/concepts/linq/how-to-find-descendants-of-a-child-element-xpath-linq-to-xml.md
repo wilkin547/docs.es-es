@@ -1,15 +1,15 @@
 ---
-title: Filtrar Buscar descendientes de un elemento secundario (XPath-LINQ to XML) (Visual Basic)
+title: Procedimiento Buscar descendientes de un elemento secundario (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
 ms.openlocfilehash: 178729640898556244657e6e2917373825a4e51e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58819013"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>Filtrar Buscar descendientes de un elemento secundario (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>Procedimiento Buscar descendientes de un elemento secundario (XPath-LINQ to XML) (Visual Basic)
 En este tema se muestra cómo obtener los elementos descendientes de un elemento secundario con un nombre particular.  
   
  La expresión XPath es:  

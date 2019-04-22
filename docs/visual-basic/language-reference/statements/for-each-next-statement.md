@@ -23,10 +23,10 @@ helpviewer_keywords:
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824354"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Instrucción For Each...Next (Visual Basic)
@@ -46,7 +46,7 @@ Next [ element ]
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`element`|Necesario en el `For Each` instrucción. Opcional en el `Next` instrucción. Variable. Se utiliza para recorrer en iteración los elementos de la colección.|  
 |`datatype`|Es necesario si `element` ya no está declarado. Tipo de datos de `element`.|  

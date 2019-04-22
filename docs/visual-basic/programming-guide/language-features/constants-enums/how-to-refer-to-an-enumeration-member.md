@@ -1,5 +1,5 @@
 ---
-title: Filtrar Hacer referencia a un miembro de enumeración (Visual Basic)
+title: Procedimiento Hacer referencia a un miembro de enumeración (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic], referring to
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
 ms.openlocfilehash: e9ea359d58dfa11f7bba7fec3d31955e18d24953
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58813982"
 ---
-# <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>Filtrar Hacer referencia a un miembro de enumeración (Visual Basic)
+# <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>Procedimiento Hacer referencia a un miembro de enumeración (Visual Basic)
 Las enumeraciones proporcionan una forma cómoda para trabajar con conjuntos de constantes relacionadas y asociar valores constantes con nombres. Por ejemplo, puede declarar una enumeración para un conjunto de constantes de tipo entero asociadas con los días de la semana y, después, usar los nombres de los días en lugar de sus valores enteros en el código.  
   
  Se puede evitar usar nombres completos con el `Imports` instrucción. Para obtener más información, consulte [enumeraciones y calificación de nombres](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  

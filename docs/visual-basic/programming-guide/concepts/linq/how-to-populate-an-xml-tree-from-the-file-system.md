@@ -1,15 +1,15 @@
 ---
-title: Filtrar Rellenar un árbol XML desde el sistema de archivos (Visual Basic)
+title: Procedimiento Rellenar un árbol XML desde el sistema de archivos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
 ms.openlocfilehash: 55c182134e0cc1a7472cfaa6bb4355e9457a6977
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820846"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Filtrar Rellenar un árbol XML desde el sistema de archivos (Visual Basic)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Procedimiento Rellenar un árbol XML desde el sistema de archivos (Visual Basic)
 Una aplicación habitual y útil de los árboles XML es un almacén de datos de nombres y valores jerárquicos. Puede rellenar un árbol XML con datos jerárquicos y, a continuación, consultarlo, transformarlo y, si es necesario, serializarlo. En este escenario de uso, gran parte de la semántica específica XML (por ejemplo, el comportamiento de los espacios en blanco y los espacios de nombres) no es importante. En su lugar, usará el árbol XML como una base de datos jerárquica, pequeña y en memoria, de usuario único.  
   
 ## <a name="example"></a>Ejemplo  

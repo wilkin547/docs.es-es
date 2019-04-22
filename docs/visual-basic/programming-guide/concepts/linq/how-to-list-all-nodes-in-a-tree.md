@@ -1,15 +1,15 @@
 ---
-title: Filtrar Mostrar todos los nodos en un árbol (Visual Basic)
+title: Procedimiento Mostrar todos los nodos en un árbol (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
 ms.openlocfilehash: 6576beaaed00905ce7a09f338251934ea375cb7e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824850"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Filtrar Mostrar todos los nodos en un árbol (Visual Basic)
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Procedimiento Mostrar todos los nodos en un árbol (Visual Basic)
 A veces resulta útil enumerar todos los nodos de un árbol. Puede resultar útil cuando se aprende exactamente cómo afecta al árbol un método o propiedad. Un enfoque para enumerar todos los nodos en formato de texto consiste en generar una expresión XPath que identifique de forma exacta y específica cualquier nodo del árbol.  
   
  No resulta particularmente útil ejecutar expresiones XPath mediante [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Las expresiones XPath tienen un rendimiento menor que las consultas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] y las consultas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] son mucho más eficaces. No obstante, como forma de identificar nodos en el árbol XML, XPath funciona bien.  

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Declarar eventos personalizados para conservar memoria (Visual Basic)
+title: Procedimiento Declarar eventos personalizados para conservar memoria (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring events [Visual Basic], custom
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - custom events [Visual Basic]
 ms.assetid: 87ebee87-260c-462f-979c-407874debd19
 ms.openlocfilehash: e4132f51f4dd85ad964042d05f7c5bc0a2e6e3cd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826631"
 ---
-# <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Filtrar Declarar eventos personalizados para conservar memoria (Visual Basic)
+# <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Procedimiento Declarar eventos personalizados para conservar memoria (Visual Basic)
 Hay varias circunstancias cuando es importante que una aplicación mantener el uso de memoria baja. Eventos personalizados que la aplicación utilice solo para los eventos que controla la memoria.  
   
  De forma predeterminada, cuando una clase declara un evento, el compilador asigna memoria para un campo almacenar la información del evento. Si una clase tiene muchos eventos no usados, innecesariamente a tomar la memoria.  

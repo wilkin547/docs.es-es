@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827372"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opciones del compilador de Visual Basic, por categoría
@@ -72,7 +72,7 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
 |[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|Promueve las advertencias a errores.|  
 |`-ruleset:<file>`|Especifica un archivo de conjunto de reglas que deshabilita diagnósticos específicos.|  
   
-## <a name="help"></a>Ayuda  
+## <a name="help"></a>Help  
   
 |Opción|Finalidad|  
 |---|---|  

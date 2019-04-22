@@ -1,15 +1,15 @@
 ---
-title: Filtrar Depurar conjuntos de resultados de consulta vacíos (Visual Basic)
+title: Procedimiento Depurar conjuntos de resultados de consulta vacíos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
 ms.openlocfilehash: 80e505be03a26f80bbba9d3673732505b27e9598
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58822801"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Filtrar Depurar conjuntos de resultados de consulta vacíos (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Procedimiento Depurar conjuntos de resultados de consulta vacíos (Visual Basic)
 Uno de los problemas más habituales al consultar árboles XML es que si el árbol XML tiene un espacio de nombres predeterminado, el desarrollador a veces escribe la consulta como si el código XML no estuviera en un espacio de nombres.  
   
  El primer conjunto de ejemplos de este tema muestra una forma habitual de cargar XML en un espacio de nombres predeterminado con una consulta incorrecta.  

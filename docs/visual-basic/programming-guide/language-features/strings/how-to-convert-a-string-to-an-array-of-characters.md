@@ -1,5 +1,5 @@
 ---
-title: Filtrar Convertir una cadena en una matriz de caracteres en Visual Basic
+title: Procedimiento Convertir una cadena en una matriz de caracteres en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - character arrays [Visual Basic], converting strings
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - string conversion [Visual Basic], arrays
 ms.assetid: 1b54b686-ab29-413b-adce-6bd5422376eb
 ms.openlocfilehash: 921d7ad62545d3a29870aee6c6b354fdadeb0500
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58823316"
 ---
-# <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Filtrar Convertir una cadena en una matriz de caracteres en Visual Basic
+# <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Procedimiento Convertir una cadena en una matriz de caracteres en Visual Basic
 A veces resulta útil tener información sobre los caracteres de la cadena y las posiciones de los caracteres dentro de la cadena, como cuando se está analizando una cadena. En este ejemplo muestra cómo puede obtener una matriz de los caracteres en una cadena mediante una llamada a la cadena <xref:System.String.ToCharArray%2A> método.  
   
 ## <a name="example"></a>Ejemplo  

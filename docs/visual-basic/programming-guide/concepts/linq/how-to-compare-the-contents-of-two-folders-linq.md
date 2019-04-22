@@ -1,15 +1,15 @@
 ---
-title: Filtrar Comparar el contenido de dos carpetas (LINQ) (Visual Basic)
+title: Procedimiento Comparar el contenido de dos carpetas (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
 ms.openlocfilehash: 668f72e2a891a9332093b97ebc927c156ad2087c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820300"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Filtrar Comparar el contenido de dos carpetas (LINQ) (Visual Basic)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Procedimiento Comparar el contenido de dos carpetas (LINQ) (Visual Basic)
 En este ejemplo se muestran tres maneras de comparar dos listados de archivos:  
   
 -   Mediante la consulta de un valor booleano que especifica si las dos listas de archivos son idénticas.  

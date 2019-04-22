@@ -1,5 +1,5 @@
 ---
-title: Filtrar Convertir una matriz de Bytes en una cadena en Visual Basic
+title: Procedimiento Convertir una matriz de Bytes en una cadena en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string conversion [Visual Basic], arrays
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - arrays [Visual Basic], converting to strings
 ms.assetid: d0dc8317-9ab3-4324-99f7-3f5788c0e72a
 ms.openlocfilehash: f0676548bea2d4037f66fb15498c175b2d110d8b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826750"
 ---
-# <a name="how-to-convert-an-array-of-bytes-into-a-string-in-visual-basic"></a>Filtrar Convertir una matriz de Bytes en una cadena en Visual Basic
+# <a name="how-to-convert-an-array-of-bytes-into-a-string-in-visual-basic"></a>Procedimiento Convertir una matriz de Bytes en una cadena en Visual Basic
 En este tema se muestra cómo convertir los bytes de una matriz de bytes en una cadena.  
   
 ## <a name="example"></a>Ejemplo  
