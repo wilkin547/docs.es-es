@@ -3,10 +3,10 @@ title: = (Igual que) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
 ms.openlocfilehash: d50ede1964f6d6b9025a7214efe90e878aa55a0c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333163"
 ---
 # <a name="-equals-entity-sql"></a>= (Igual que) (Entity SQL)
@@ -25,7 +25,7 @@ expression == expression
  Cualquier expresión válida. Ambas expresiones deben tener tipos de datos convertibles implícitamente.  
   
 ## <a name="result-types"></a>Tipos de resultado  
- `true` Si la expresión izquierda es igual a la expresión derecha; en caso contrario, `false`.  
+ `true` si la expresión izquierda es igual a la expresión derecha; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
  El operador == es equivalente a =.  

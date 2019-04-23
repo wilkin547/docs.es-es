@@ -1,5 +1,5 @@
 ---
-title: Filtrar Pasar argumentos a un procedimiento (Visual Basic)
+title: Procedimiento Pasar argumentos a un procedimiento (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
 ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333917"
 ---
-# <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Filtrar Pasar argumentos a un procedimiento (Visual Basic)
+# <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Procedimiento Pasar argumentos a un procedimiento (Visual Basic)
 Cuando se llama a un procedimiento, siga el nombre del procedimiento con una lista de argumentos entre paréntesis. Se proporciona un argumento correspondiente a cada parámetro necesario que se define el procedimiento y, opcionalmente, puede proporcionar argumentos a la `Optional` parámetros. Si no se suministra un `Optional` parámetro de la llamada, debe incluir una coma para marcar su lugar en la lista de argumentos si está proporcionando los argumentos subsiguientes.  
   
  Si va a pasar un argumento de tipo de datos diferente del parámetro correspondiente, como `Byte` a `String`, puede establecer el modificador de comprobación de tipos ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) a `Off`. Si `Option Strict` es `On`, se deben usar conversiones de ampliación o palabras clave de conversión explícita. Para obtener más información, consulte [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) y [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
@@ -47,12 +47,12 @@ Cuando se llama a un procedimiento, siga el nombre del procedimiento con una lis
   
 ## <a name="see-also"></a>Vea también
 
-- [Procedimientos Sub](./sub-procedures.md)
+- [Subprocedimientos](./sub-procedures.md)
 - [Procedimientos de función](./function-procedures.md)
-- [Procedimientos de propiedad](./property-procedures.md)
-- [Procedimientos de operador](./operator-procedures.md)
-- [Filtrar para definir un parámetro para un procedimiento](./how-to-define-a-parameter-for-a-procedure.md)
-- [Pasar argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)
+- [Procedimientos de propiedades](./property-procedures.md)
+- [Procedimientos de operadores](./operator-procedures.md)
+- [Cómo: Definir un parámetro para un procedimiento](./how-to-define-a-parameter-for-a-procedure.md)
+- [Paso de argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)
 - [Procedimientos recursivos](./recursive-procedures.md)
 - [Sobrecarga de procedimientos](./procedure-overloading.md)
 - [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

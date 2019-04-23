@@ -1,18 +1,18 @@
 ---
-title: Filtrar para especificar valores de credenciales de cliente
+title: Procedimiento para especificar valores de credenciales de cliente
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
 ms.openlocfilehash: ecb8f7ef74f1f0625454eb2d6cebf9d282a5ece3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327105"
 ---
-# <a name="how-to-specify-client-credential-values"></a>Filtrar para especificar valores de credenciales de cliente
+# <a name="how-to-specify-client-credential-values"></a>Procedimiento para especificar valores de credenciales de cliente
 Con Windows Communication Foundation (WCF), el servicio puede especificar cómo un cliente se autentica al servicio. Por ejemplo, un servicio puede estipular que el cliente se autentique mediante un certificado.  
   
 ### <a name="to-determine-the-client-credential-type"></a>Para determinar el tipo de credencial de cliente  
@@ -101,12 +101,12 @@ Con Windows Communication Foundation (WCF), el servicio puede especificar cómo 
 - [Programación de la seguridad de WCF](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Selección de tipos de credenciales](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Trabajar con certificados](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Filtrar Crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Trabajo con certificados](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Cómo: Crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
 - [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
 - [\<message>](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)
-- [\<comportamiento >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
-- [\<comportamientos >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
+- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
 - [\<clientCertificate>](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)
 - [\<clientCredentials>](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)

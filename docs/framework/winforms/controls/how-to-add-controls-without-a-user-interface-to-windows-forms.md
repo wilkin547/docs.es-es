@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agregar controles sin una interfaz de usuario a formularios Windows Forms
+title: Procedimiento para agregar controles sin una interfaz de usuario a formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
 ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330108"
 ---
-# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Filtrar para agregar controles sin una interfaz de usuario a formularios Windows Forms
+# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Procedimiento para agregar controles sin una interfaz de usuario a formularios Windows Forms
 Un control no Visual (o componente) proporciona funcionalidad para la aplicación. A diferencia de otros controles, componentes no proporcionan una interfaz de usuario para el usuario y, por tanto, no es necesario que se mostrará en la superficie del Diseñador de formularios de Windows. Cuando se agrega un componente a un formulario, el Diseñador de Windows Forms muestra una bandeja de tamaño variable en la parte inferior del formulario donde se muestran todos los componentes. Una vez que un control se ha agregado a la Bandeja de componentes, puede seleccionar el componente y establezca sus propiedades como lo haría con cualquier otro control en el formulario.  
   
 > [!NOTE]
@@ -81,11 +81,11 @@ Un control no Visual (o componente) proporciona funcionalidad para la aplicació
   
 ## <a name="see-also"></a>Vea también
 
-- [Controles de Windows Forms](index.md)
-- [Filtrar para agregar controles a formularios Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Filtrar para agregar controles ActiveX a formularios Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
-- [Filtrar para copiar controles entre formularios Windows Forms](how-to-copy-controls-between-windows-forms.md)
-- [Insertar controles en formularios Windows Forms](putting-controls-on-windows-forms.md)
+- [Controles de formularios Windows Forms](index.md)
+- [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Cómo: Agregar controles ActiveX a formularios de Windows](how-to-add-activex-controls-to-windows-forms.md)
+- [Cómo: Copiar controles entre formularios de Windows](how-to-copy-controls-between-windows-forms.md)
+- [Insertar controles en Windows Forms](putting-controls-on-windows-forms.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)

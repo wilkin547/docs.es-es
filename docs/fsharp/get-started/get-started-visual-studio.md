@@ -3,10 +3,10 @@ title: Introducción a F# en Visual Studio
 description: Aprenda a usar F# con Visual Studio.
 ms.date: 07/03/2018
 ms.openlocfilehash: 020e5d32b3aa5d5a2195c19d70d8fe684fbd56ef
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331915"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Introducción a F# en Visual Studio
@@ -63,7 +63,7 @@ Si no lo ha hecho ya, consulte el [paseo F# ](../tour.md), donde abordan algunas
 
 ## <a name="see-also"></a>Vea también
 
-- [Paseo por F#](../tour.md)
+- [Paseo por F](../tour.md)
 - [F#referencia del lenguaje](../language-reference/index.md)
 - [Inferencia de tipos](../language-reference/type-inference.md)
 - [Referencia de símbolos y el operador](../language-reference/symbol-and-operator-reference/index.md)

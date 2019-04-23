@@ -1,17 +1,17 @@
 ---
-title: Filtrar para llevar a cabo operaciones de arrastrar y colocar entre aplicaciones
+title: Procedimiento para llevar a cabo operaciones de arrastrar y colocar entre aplicaciones
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
 ms.openlocfilehash: 9aac3a0efd6359c25a6972f0e0b52dd489ec31db
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327534"
 ---
-# <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Filtrar para llevar a cabo operaciones de arrastrar y colocar entre aplicaciones
+# <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Procedimiento para llevar a cabo operaciones de arrastrar y colocar entre aplicaciones
 Realizar operaciones de arrastrar y colocar entre aplicaciones es similar a habilitar esta acción dentro de una aplicación, siempre que ambas aplicaciones implicadas se comporten según el "contrato" establecido entre las propiedades <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> y <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
  En el siguiente procedimiento, usará una aplicación basada en Windows que cree y el procesador de textos WordPad que se incluye con el sistema operativo Windows para realizar operaciones de arrastrar y colocar entre aplicaciones. WordPad tiene un determinado conjunto de efectos permitidos para el texto que se va a arrastrar y colocar; la aplicación basada en Windows para la que escribirá el código trabajará con estos efectos para que las operaciones de arrastrar y colocar puedan completarse correctamente.  
@@ -40,6 +40,6 @@ Realizar operaciones de arrastrar y colocar entre aplicaciones es similar a habi
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para agregar datos al Portapapeles](how-to-add-data-to-the-clipboard.md)
-- [Filtrar para recuperar datos del Portapapeles](how-to-retrieve-data-from-the-clipboard.md)
+- [Cómo: Agregar datos al Portapapeles](how-to-add-data-to-the-clipboard.md)
+- [Cómo: Recuperar datos del Portapapeles](how-to-retrieve-data-from-the-clipboard.md)
 - [Compatibilidad con las operaciones de arrastrar y colocar y con el Portapapeles](drag-and-drop-operations-and-clipboard-support.md)

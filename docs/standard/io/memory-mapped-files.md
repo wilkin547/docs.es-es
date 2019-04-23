@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654359"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59328314"
 ---
 # <a name="memory-mapped-files"></a>Archivos asignados a memoria
 Un archivo asignado a memoria incluye el contenido de un archivo en la memoria virtual. Esta asignación entre un archivo y el espacio de memoria permite a una aplicación, incluidos varios procesos, modificar el archivo leyendo y escribiendo directamente en la memoria. A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], se puede usar código administrado para tener acceso a los archivos asignados a memoria del mismo modo que las funciones nativas de Windows tienen acceso a los archivos asignados a memoria, tal como se describe en [Administración de archivos asignados a memoria](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
@@ -96,29 +96,29 @@ Un archivo asignado a memoria incluye el contenido de un archivo en la memoria v
   
  El ejemplo siguiente consta de tres procesos independientes (aplicaciones de consola) que escriben valores booleanos en un archivo asignado a memoria. Se produce la siguiente secuencia de acciones:  
   
-1.  `Process A` crea el archivo asignado a memoria y escribe un valor en él.  
+1. `Process A` crea el archivo asignado a memoria y escribe un valor en él.  
   
-2.  `Process B` abre el archivo asignado a memoria y escribe un valor en él.  
+2. `Process B` abre el archivo asignado a memoria y escribe un valor en él.  
   
-3.  `Process C` abre el archivo asignado a memoria y escribe un valor en él.  
+3. `Process C` abre el archivo asignado a memoria y escribe un valor en él.  
   
-4.  `Process A` lee y muestra los valores del archivo asignado a memoria.  
+4. `Process A` lee y muestra los valores del archivo asignado a memoria.  
   
-5.  Una vez que `Process A` termina con el archivo asignado a memoria, la recolección de elementos no utilizados recupera el archivo inmediatamente.  
+5. Una vez que `Process A` termina con el archivo asignado a memoria, la recolección de elementos no utilizados recupera el archivo inmediatamente.  
   
  Para ejecutar este ejemplo, haga lo siguiente:  
   
-1.  Compile las aplicaciones y abra tres ventanas de símbolo del sistema.  
+1. Compile las aplicaciones y abra tres ventanas de símbolo del sistema.  
   
-2.  En la primera ventana de símbolo del sistema, ejecute `Process A`.  
+2. En la primera ventana de símbolo del sistema, ejecute `Process A`.  
   
-3.  En la segunda ventana de símbolo del sistema, ejecute `Process B`.  
+3. En la segunda ventana de símbolo del sistema, ejecute `Process B`.  
   
-4.  Vuelva a `Process A` y presione ENTRAR.  
+4. Vuelva a `Process A` y presione ENTRAR.  
   
-5.  En la tercera ventana de símbolo del sistema, ejecute `Process C`.  
+5. En la tercera ventana de símbolo del sistema, ejecute `Process C`.  
   
-6.  Vuelva a `Process A` y presione ENTRAR.  
+6. Vuelva a `Process A` y presione ENTRAR.  
   
  La salida de `Process A` es la siguiente:  
   

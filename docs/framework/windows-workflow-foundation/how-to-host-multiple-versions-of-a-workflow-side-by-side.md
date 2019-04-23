@@ -1,19 +1,19 @@
 ---
-title: Filtrar para hospedar varias versiones de un flujo de trabajo en paralelo
+title: Procedimiento para hospedar varias versiones de un flujo de trabajo en paralelo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
 ms.openlocfilehash: 4fc4565db58d008f52bc047d26118fc849648770
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329458"
 ---
-# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Filtrar para hospedar varias versiones de un flujo de trabajo en paralelo
-`WorkflowIdentity` Proporciona una manera para los desarrolladores de aplicaciones de flujo de trabajo asociar un nombre y una versión con una definición de flujo de trabajo y esta información va a asociar a una instancia de flujo de trabajo persistente. Los desarrolladores de aplicaciones de flujo de trabajo pueden usar esta información de identidad para habilitar escenarios como la ejecución en paralelo de varias versiones de una definición de flujo de trabajo; además esta información proporciona la piedra angular para otras funcionalidades como la actualización dinámica. Este paso del tutorial demuestra cómo usar `WorkflowIdentity` para hospedar varias versiones de un flujo de trabajo simultáneamente.
+# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Procedimiento para hospedar varias versiones de un flujo de trabajo en paralelo
+`WorkflowIdentity` proporciona una manera para que los desarrolladores de aplicaciones de flujo de trabajo asocien un nombre y una versión con una definición de flujo de trabajo, y para que esta información se asocie a una instancia de flujo de trabajo persistente. Los desarrolladores de aplicaciones de flujo de trabajo pueden usar esta información de identidad para habilitar escenarios como la ejecución en paralelo de varias versiones de una definición de flujo de trabajo; además esta información proporciona la piedra angular para otras funcionalidades como la actualización dinámica. Este paso del tutorial demuestra cómo usar `WorkflowIdentity` para hospedar varias versiones de un flujo de trabajo simultáneamente.
 
 > [!NOTE]
 >  Para descargar una versión completada o ver un tutorial en vídeo del tutorial, vea [Windows Workflow Foundation (WF45): Tutorial de introducción](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -23,15 +23,15 @@ ms.locfileid: "59329458"
   
 -   [Para realizar una copia del proyecto NumberGuessWorkflowActivities](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
   
--   [Para actualizar el flujo de trabajo](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+-   [Para actualizar los flujos de trabajo](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
     -   [Para actualizar el flujo de trabajo StateMachine](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [Para actualizar el flujo de trabajo Diagrama de flujo](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [Para actualizar el flujo de trabajo de diagrama de flujo](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
-    -   [Para actualizar el flujo de trabajo Secuencial](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+    -   [Para actualizar el flujo de trabajo secuencial](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [Para actualizar WorkflowVersionMap a fin de incluir las versiones de flujo de trabajo anteriores](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [Para actualizar WorkflowVersionMap para incluir las versiones anteriores del flujo de trabajo](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
 -   [Para compilar y ejecutar la aplicación](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
@@ -555,13 +555,13 @@ ms.locfileid: "59329458"
 
 2. Haga clic en iniciar un nuevo flujo de trabajo **nuevo juego**. La versión del flujo de trabajo se muestra debajo de la ventana de estado y refleja la versión actualizada del `WorkflowIdentity` asociado. Anote el valor de `InstanceId` para poder ver el archivo de seguimiento del flujo de trabajo cuando se complete y, a continuación, escriba números hasta que se termine el juego. Observe cómo el intento del usuario aparece en la información que se muestra en la ventana de estado en función de las actualizaciones de las actividades `WriteLine`.
 
- **Escriba un número entre el 1 y el 10**  
+ **Escriba un número entre 1 y 10**  
 **5 es demasiado alto.**  
-**Escriba un número entre el 1 y el 10**  
+**Escriba un número entre 1 y 10**  
 **3 es demasiado alto.**  
-**Escriba un número entre el 1 y el 10**  
+**Escriba un número entre 1 y 10**  
 **1 es demasiado bajo.**  
-**Escriba un número entre el 1 y el 10**  
+**Escriba un número entre 1 y 10**  
 **Enhorabuena, acertó el número en 4 intentos.**  
 
     > [!NOTE]

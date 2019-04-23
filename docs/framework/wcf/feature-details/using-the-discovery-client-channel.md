@@ -3,10 +3,10 @@ title: Usar el canal del cliente de detección
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
 ms.openlocfilehash: 298cafe34b20a3644f967acf15f831be5b0b90ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329940"
 ---
 # <a name="using-the-discovery-client-channel"></a>Usar el canal del cliente de detección
@@ -20,7 +20,7 @@ Al escribir una aplicación cliente de WCF, debe conocer la dirección del extre
   
  La clase <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> contiene dos propiedades públicas:  
   
-1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, que se usa para describir el servicio que desea llamar.  
+1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, que se utiliza para describir el servicio al que desea llamar.  
   
 2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> que especifica el extremo de detección para enviar los mensajes de detección.  
   

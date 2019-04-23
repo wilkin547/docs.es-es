@@ -10,10 +10,10 @@ helpviewer_keywords:
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
 ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327859"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Consideraciones sobre el diseño del elemento WindowsFormsHost
@@ -40,7 +40,7 @@ Este tema se describe cómo el <xref:System.Windows.Forms.Integration.WindowsFor
   
 -   En algunos casos no se puede cambiar el tamaño de los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] (o solo se pueden fijar unas dimensiones específicas). Por ejemplo, un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> control admite sólo un alto, que se define según el tamaño de fuente del control. En un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diseño dinámico donde los elementos pueden ajustar verticalmente, hospedados <xref:System.Windows.Forms.ComboBox> control no se ajustará según lo previsto.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] los controles no se gira ni ha sesgado. El <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento provoca el <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> eventos si aplica una transformación de sesgo o una rotación. Si no controla el <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> evento, un <xref:System.InvalidOperationException> se genera.  
+-   Los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] no se pueden girar ni sesgar. El <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento provoca el <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> eventos si aplica una transformación de sesgo o una rotación. Si no controla el <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> evento, un <xref:System.InvalidOperationException> se genera.  
   
 -   En la mayoría de los casos, los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] no admiten el escalado proporcional. Aunque las dimensiones generales del control se escalarán, los controles secundarios y los elementos de los componentes del control podrían no cambiar de tamaño según lo previsto. Esta limitación depende del grado de compatibilidad del escalado de cada control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Además, no es posible escalar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles hasta un tamaño de 0 píxeles.  
   
@@ -102,7 +102,7 @@ Este tema se describe cómo el <xref:System.Windows.Forms.Integration.WindowsFor
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Tutorial: Organizar controles de formularios Windows Forms en WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [Tutorial: Organización de Windows Forms en WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [Organización de Windows Forms en WPF ejemplo](https://go.microsoft.com/fwlink/?LinkID=159971)
 - [Asignación de propiedades en formularios Windows Forms y WPF](windows-forms-and-wpf-property-mapping.md)
 - [Migración e interoperabilidad](migration-and-interoperability.md)

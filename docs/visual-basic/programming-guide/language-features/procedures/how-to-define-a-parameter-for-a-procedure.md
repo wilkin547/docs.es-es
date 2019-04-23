@@ -1,5 +1,5 @@
 ---
-title: Filtrar Definir un parámetro para un procedimiento (Visual Basic)
+title: Procedimiento Definir un parámetro para un procedimiento (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure parameters [Visual Basic], defining data types for
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333839"
 ---
-# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Filtrar Definir un parámetro para un procedimiento (Visual Basic)
+# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Procedimiento Definir un parámetro para un procedimiento (Visual Basic)
 Un *parámetro* permite pasar un valor al procedimiento cuando lo llama el código de llamada. Declarar cada parámetro para un procedimiento de la misma manera que se declara una variable, especificando su nombre y tipo de datos. También especifica el mecanismo de paso, y si el parámetro es opcional.  
   
  Para obtener más información, consulte [argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md).  
@@ -55,10 +55,10 @@ Un *parámetro* permite pasar un valor al procedimiento cuando lo llama el códi
 ## <a name="see-also"></a>Vea también
 
 - [Procedimientos](./index.md)
-- [Procedimientos Sub](./sub-procedures.md)
+- [Subprocedimientos](./sub-procedures.md)
 - [Procedimientos de función](./function-procedures.md)
-- [Filtrar para pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)
-- [Pasar argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)
+- [Cómo: Pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)
+- [Paso de argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)
 - [Procedimientos recursivos](./recursive-procedures.md)
 - [Sobrecarga de procedimientos](./procedure-overloading.md)
 - [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

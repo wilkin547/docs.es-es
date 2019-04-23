@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 2c1416566ca59a44b36457c710955de863013417
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 05978c5604e7aa359b016bd6e3f3196178f706ec
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980736"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59332214"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de la línea de comandos (Guía de programación de C#)
 Puede enviar argumentos al método `Main` definiéndolo de una de las siguientes maneras:  
@@ -51,23 +51,23 @@ long num = Convert.ToInt64(s);
   
  Para compilar y ejecutar la aplicación desde un símbolo del sistema, siga estos pasos:  
   
-1.  Pegue el siguiente código en cualquier editor de texto y guarde el archivo como archivo de texto con el nombre `Factorial.cs`.  
+1. Pegue el siguiente código en cualquier editor de texto y guarde el archivo como archivo de texto con el nombre `Factorial.cs`.  
   
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
-2.  En la pantalla **Inicio** o en el menú **Inicio**, abra una ventana del **símbolo del sistema para desarrolladores** de Visual Studio y navegue hasta la carpeta que contiene el archivo que acaba de crear.  
+2. En la pantalla **Inicio** o en el menú **Inicio**, abra una ventana del **símbolo del sistema para desarrolladores** de Visual Studio y navegue hasta la carpeta que contiene el archivo que acaba de crear.  
   
-3.  Escriba el siguiente comando para compilar la aplicación.  
+3. Escriba el siguiente comando para compilar la aplicación.  
   
      `csc Factorial.cs`  
   
      Si la aplicación no tiene ningún error de compilación, se creará un archivo ejecutable denominado `Factorial.exe`.  
   
-4.  Escriba el siguiente comando para calcular el factorial de 3:  
+4. Escriba el siguiente comando para calcular el factorial de 3:  
   
      `Factorial 3`  
   
-5.  El comando genera este resultado: `The factorial of 3 is 6.`  
+5. El comando genera este resultado: `The factorial of 3 is 6.`  
   
 > [!NOTE]
 >  Al ejecutar una aplicación en Visual Studio, puede especificar argumentos de la línea de comandos en la [Página Depuración, Diseñador de proyectos](/visualstudio/ide/reference/debug-page-project-designer).  

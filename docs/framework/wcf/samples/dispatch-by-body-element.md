@@ -3,10 +3,10 @@ title: Distribución mediante el elemento del cuerpo
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
 ms.openlocfilehash: ff82ab027ff66b1c4c7433ea77efa6c34ccae088
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330205"
 ---
 # <a name="dispatch-by-body-element"></a>Distribución mediante el elemento del cuerpo
@@ -34,7 +34,7 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
 }
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> las implementaciones son muy sencillas porque hay solo un método en la interfaz de la compilación: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. El trabajo de este método es inspeccionar un mensaje entrante y devolver una cadena que iguala el nombre de un método en el contrato de servicios para el extremo actual.  
+ Las implementaciones de <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> son muy sencillas de generar ya que solo existe un método en la interfaz: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. El trabajo de este método es inspeccionar un mensaje entrante y devolver una cadena que iguala el nombre de un método en el contrato de servicios para el extremo actual.  
   
  En este ejemplo, el selector de la operación adquiere <xref:System.Xml.XmlDictionaryReader> para el cuerpo del mensaje entrante utilizando <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. Este método ya coloca al lector en el primer elemento secundario del cuerpo del mensaje para que sea suficiente obtener el nombre del elemento vigente y el espacio de nombres URI y combinarlos en `XmlQualifiedName` que se utiliza a continuación para buscar la operación correspondiente del diccionario contenida por el selector de la operación.  
   

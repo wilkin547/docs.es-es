@@ -1,18 +1,18 @@
 ---
-title: Filtrar para crear un flujo de trabajo secuencial
+title: Procedimiento para crear un flujo de trabajo secuencial
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
 ms.openlocfilehash: c8a16dc0269fbd768a73e99f15f53e38c207a8d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326845"
 ---
-# <a name="how-to-create-a-sequential-workflow"></a>Filtrar para crear un flujo de trabajo secuencial
+# <a name="how-to-create-a-sequential-workflow"></a>Procedimiento para crear un flujo de trabajo secuencial
 Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En este tema le ayudará a crear un flujo de trabajo que usa tanto las actividades integradas, como el <xref:System.Activities.Statements.Sequence> actividad y las actividades personalizadas del anterior [Cómo: Crear una actividad](how-to-create-an-activity.md) tema. El flujo de trabajo modela un juego de adivinanzas de números.  
   
 > [!NOTE]
@@ -162,7 +162,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programación de Windows Workflow Foundation](programming.md)
-- [Diseñar flujos de trabajo](designing-workflows.md)
+- [Diseño de flujos de trabajo](designing-workflows.md)
 - [Tutorial de introducción](getting-started-tutorial.md)
-- [Filtrar para crear una actividad](how-to-create-an-activity.md)
-- [Filtrar para ejecutar un flujo de trabajo](how-to-run-a-workflow.md)
+- [Cómo: Crear una actividad](how-to-create-an-activity.md)
+- [Cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)

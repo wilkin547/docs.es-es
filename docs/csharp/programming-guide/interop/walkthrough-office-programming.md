@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 3dce7e4bce0b056437445b92f52f6c6360844289
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1f46d6594c249db394a5493ad9cdbbb1937a5d45
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966143"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59328457"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Tutorial: Programación de Office (C# y Visual Basic)
 Visual Studio presenta características en C# y Visual Basic que mejoran la programación de Microsoft Office. Las características útiles de C# incluyen argumentos opcionales y con nombre, y devuelven valores de tipo `dynamic`. En la programación COM, puede omitir la palabra clave `ref` y obtener acceso a las propiedades indexadas. Las nuevas características de Visual Basic incluyen propiedades implementadas automáticamente, instrucciones de expresiones lambda e inicializadores de colección.
@@ -33,35 +33,35 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
   
 ### <a name="to-set-up-an-excel-add-in-application"></a>Para configurar una aplicación complemento de Excel  
   
-1.  Inicie Visual Studio.  
+1. Inicie Visual Studio.  
   
-2.  En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**.  
+2. En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**.  
   
-3.  En el panel **Plantillas instaladas**, expanda **Visual Basic** o **Visual C#**, expanda **Office** y, después, haga clic en el año de la versión del producto de Office.  
+3. En el panel **Plantillas instaladas**, expanda **Visual Basic** o **Visual C#**, expanda **Office** y, después, haga clic en el año de la versión del producto de Office.  
   
-4.  En el panel **Plantillas**, haga clic en **versión de \<Excel > Complemento**.  
+4. En el panel **Plantillas**, haga clic en **versión de \<Excel > Complemento**.  
   
-5.  En la parte superior del panel **Plantillas**, asegúrese de que **.NET Framework 4** o una versión posterior aparece en el cuadro **Plataforma de destino**.  
+5. En la parte superior del panel **Plantillas**, asegúrese de que **.NET Framework 4** o una versión posterior aparece en el cuadro **Plataforma de destino**.  
   
-6.  Si quiere, escriba un nombre para el proyecto en el cuadro **Nombre**.  
+6. Si quiere, escriba un nombre para el proyecto en el cuadro **Nombre**.  
   
-7.  Haga clic en **Aceptar**.  
+7. Haga clic en **Aceptar**.  
   
-8.  El proyecto nuevo aparece en el **Explorador de soluciones**.  
+8. El proyecto nuevo aparece en el **Explorador de soluciones**.  
   
 ### <a name="to-add-references"></a>Para agregar referencias  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y luego haga clic en **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.  
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y luego haga clic en **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.  
   
-2.  En la pestaña **Ensamblados**, seleccione **Microsoft.Office.Interop.Excel**, versión `<version>.0.0.0` (para obtener una clave de los números de versión de productos de Office, vea [Versiones de Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), en la lista **Nombre de componente** y, después, mantenga presionada la tecla CTRL y seleccione **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Si no ve los ensamblados, asegúrese de que están instalados y que se muestran (vea [Cómo: Instalación de ensamblados de interoperabilidad primarios de Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
+2. En la pestaña **Ensamblados**, seleccione **Microsoft.Office.Interop.Excel**, versión `<version>.0.0.0` (para obtener una clave de los números de versión de productos de Office, vea [Versiones de Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), en la lista **Nombre de componente** y, después, mantenga presionada la tecla CTRL y seleccione **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Si no ve los ensamblados, asegúrese de que están instalados y que se muestran (vea [Cómo: Instalación de ensamblados de interoperabilidad primarios de Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
   
-3.  Haga clic en **Aceptar**.  
+3. Haga clic en **Aceptar**.  
   
 ### <a name="to-add-necessary-imports-statements-or-using-directives"></a>Para agregar las instrucciones Imports necesarias o las directivas using  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo **ThisAddIn.vb** o **ThisAddIn.cs** y luego haga clic en **Ver código**.  
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo **ThisAddIn.vb** o **ThisAddIn.cs** y luego haga clic en **Ver código**.  
   
-2.  Agregue las siguientes instrucciones `Imports` (Visual Basic) o directivas `using` (C#) en la parte superior del archivo de código si no están presentes.  
+2. Agregue las siguientes instrucciones `Imports` (Visual Basic) o directivas `using` (C#) en la parte superior del archivo de código si no están presentes.  
   
      [!code-csharp[csOfficeWalkthrough#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#1)]
 
@@ -69,15 +69,15 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
   
 ### <a name="to-create-a-list-of-bank-accounts"></a>Para crear una lista de las cuentas bancarias  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto, haga clic en **Agregar** y luego, en **Clase**. Denomine la clase Account.vb si está utilizando Visual Basic o Account.cs si está utilizando C#. Haga clic en **Agregar**.  
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto, haga clic en **Agregar** y luego, en **Clase**. Denomine la clase Account.vb si está utilizando Visual Basic o Account.cs si está utilizando C#. Haga clic en **Agregar**.  
   
-2.  Reemplace la definición de la clase `Account` por el código siguiente. Las definiciones de clase usan *propiedades implementadas automáticamente*. Para obtener más información, vea [Propiedades implementadas automáticamente](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
+2. Reemplace la definición de la clase `Account` por el código siguiente. Las definiciones de clase usan *propiedades implementadas automáticamente*. Para obtener más información, vea [Propiedades implementadas automáticamente](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
   
      [!code-csharp[csOfficeWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/account.cs#2)]
 
      [!code-vb[csOfficeWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/account.vb#2)]  
   
-3.  Para crear una lista `bankAccounts` que contenga dos cuentas, agregue el código siguiente al método `ThisAddIn_Startup` en *ThisAddIn.vb* o *ThisAddIn.cs*. Las declaraciones de lista usan *inicializadores de colección*. Para obtener más información, vea [Inicializadores de colección](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
+3. Para crear una lista `bankAccounts` que contenga dos cuentas, agregue el código siguiente al método `ThisAddIn_Startup` en *ThisAddIn.vb* o *ThisAddIn.cs*. Las declaraciones de lista usan *inicializadores de colección*. Para obtener más información, vea [Inicializadores de colección](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
   
      [!code-csharp[csOfficeWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#3)]
 
@@ -85,7 +85,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
   
 ### <a name="to-export-data-to-excel"></a>Para exportar datos a Excel  
   
-1.  En el mismo archivo, agregue el siguiente método a la clase `ThisAddIn`. El método configura un libro de Excel, a donde exporta los datos.  
+1. En el mismo archivo, agregue el siguiente método a la clase `ThisAddIn`. El método configura un libro de Excel, a donde exporta los datos.  
   
      [!code-csharp[csOfficeWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#4)]
 
@@ -109,7 +109,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
   
          Para obtener más información, vea [Cómo: Uso de propiedades indexadas en la programación de interoperabilidad COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md).  
   
-2.  Agregue el código siguiente al final de `DisplayInExcel` para ajustar los anchos de columna a fin de adaptarlos al contenido.  
+2. Agregue el código siguiente al final de `DisplayInExcel` para ajustar los anchos de columna a fin de adaptarlos al contenido.  
   
      [!code-csharp[csOfficeWalkthrough#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#7)]
 
@@ -125,17 +125,17 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
   
 ### <a name="to-invoke-displayinexcel"></a>Para invocar DisplayInExcel  
   
-1.  Agregue el código siguiente al final del método `ThisAddIn_StartUp`. La llamada a `DisplayInExcel` contiene dos argumentos. El primer argumento es el nombre de la lista de cuentas que se va a procesar. El segundo argumento es una expresión lambda de varias líneas que define cómo se procesarán los datos. Los valores `ID` y `balance` de cada cuenta se muestran en las celdas adyacentes y la fila se muestra en rojo si el saldo es inferior a cero. Para obtener más información, vea [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+1. Agregue el código siguiente al final del método `ThisAddIn_StartUp`. La llamada a `DisplayInExcel` contiene dos argumentos. El primer argumento es el nombre de la lista de cuentas que se va a procesar. El segundo argumento es una expresión lambda de varias líneas que define cómo se procesarán los datos. Los valores `ID` y `balance` de cada cuenta se muestran en las celdas adyacentes y la fila se muestra en rojo si el saldo es inferior a cero. Para obtener más información, vea [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
      [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
      [!code-vb[csOfficeWalkthrough#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#9)]  
   
-2.  Presione F5 para ejecutar el programa. Aparece una hoja de cálculo de Excel que contiene los datos de las cuentas.  
+2. Presione F5 para ejecutar el programa. Aparece una hoja de cálculo de Excel que contiene los datos de las cuentas.  
   
 ### <a name="to-add-a-word-document"></a>Para agregar un documento de Word  
   
-1.  Agregue el código siguiente al final del método `ThisAddIn_StartUp` para crear un documento de Word que contenga un vínculo al libro de Excel.  
+1. Agregue el código siguiente al final del método `ThisAddIn_StartUp` para crear un documento de Word que contenga un vínculo al libro de Excel.  
   
      [!code-csharp[csOfficeWalkthrough#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#10)]
 
@@ -145,50 +145,50 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
   
 ### <a name="to-run-the-application"></a>Para ejecutar la aplicación  
   
-1.  Presione F5 para ejecutar la aplicación. Excel se abre y muestra una tabla que contiene la información de las dos cuentas de `bankAccounts`. Entonces aparece un documento de Word que contiene un vínculo a la tabla de Excel.  
+1. Presione F5 para ejecutar la aplicación. Excel se abre y muestra una tabla que contiene la información de las dos cuentas de `bankAccounts`. Entonces aparece un documento de Word que contiene un vínculo a la tabla de Excel.  
   
 ### <a name="to-clean-up-the-completed-project"></a>Para limpiar el proyecto completado  
   
-1.  En Visual Studio, haga clic en **Limpiar solución** en el menú **Compilación**. De lo contrario, el complemento se ejecutará cada vez que abra Excel en el equipo.  
+1. En Visual Studio, haga clic en **Limpiar solución** en el menú **Compilación**. De lo contrario, el complemento se ejecutará cada vez que abra Excel en el equipo.  
   
 ### <a name="to-find-the-pia-reference"></a>Para buscar la referencia a un PIA  
   
-1.  Ejecute de nuevo la aplicación, pero no haga clic en **Limpiar solución**.  
+1. Ejecute de nuevo la aplicación, pero no haga clic en **Limpiar solución**.  
   
-2.  Seleccione **Iniciar**. Busque **Microsoft Visual Studio \<versión>** y abra un símbolo del sistema del desarrollador.  
+2. Seleccione **Iniciar**. Busque **Microsoft Visual Studio \<versión>** y abra un símbolo del sistema del desarrollador.  
   
-3.  Escriba `ildasm` en la ventana Símbolo del sistema para desarrolladores de Visual Studio y, luego, presione ENTRAR. Aparecerá la ventana IL DASM.  
+3. Escriba `ildasm` en la ventana Símbolo del sistema para desarrolladores de Visual Studio y, luego, presione ENTRAR. Aparecerá la ventana IL DASM.  
   
-4.  En el menú **Archivo** de la ventana de IL DASM, seleccione **Archivo** > **Abrir**. Haga doble clic en **Visual Studio \<versión>** y, después, haga doble clic en **Proyectos**. Abra la carpeta de su proyecto y, en la carpeta bin/Debug, busque *su_proyecto*.dll. Haga doble clic en *su_proyecto*.dll. Una nueva ventana muestra los atributos del proyecto, además de las referencias a otros módulos y ensamblados. Tenga en cuenta que los espacios de nombres `Microsoft.Office.Interop.Excel` y `Microsoft.Office.Interop.Word` se incluyen en el ensamblado. De manera predeterminada en Visual Studio, el compilador importa los tipos necesarios desde un PIA con referencia a su ensamblado.  
+4. En el menú **Archivo** de la ventana de IL DASM, seleccione **Archivo** > **Abrir**. Haga doble clic en **Visual Studio \<versión>** y, después, haga doble clic en **Proyectos**. Abra la carpeta de su proyecto y, en la carpeta bin/Debug, busque *su_proyecto*.dll. Haga doble clic en *su_proyecto*.dll. Una nueva ventana muestra los atributos del proyecto, además de las referencias a otros módulos y ensamblados. Tenga en cuenta que los espacios de nombres `Microsoft.Office.Interop.Excel` y `Microsoft.Office.Interop.Word` se incluyen en el ensamblado. De manera predeterminada en Visual Studio, el compilador importa los tipos necesarios desde un PIA con referencia a su ensamblado.  
   
      Para obtener más información, vea [Cómo: Consulta del contenido de un ensamblado](../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
-5.  Haga doble clic en el icono **MANIFIESTO**. Aparecerá una ventana con una lista de ensamblados que contienen los elementos a los que hace referencia el proyecto. `Microsoft.Office.Interop.Excel` y `Microsoft.Office.Interop.Word` no están incluidos en la lista. Dado que los tipos que su proyecto necesita se han importado en el ensamblado, las referencias a un PIA no son necesarias. Esto facilita la implementación. Los PIA no tienen que estar presentes en el equipo del usuario y, puesto que una aplicación no requiere la implementación de una versión concreta de un PIA, se pueden diseñar aplicaciones que trabajen con varias versiones de Office, siempre que las API necesarias existan en todas las versiones.  
+5. Haga doble clic en el icono **MANIFIESTO**. Aparecerá una ventana con una lista de ensamblados que contienen los elementos a los que hace referencia el proyecto. `Microsoft.Office.Interop.Excel` y `Microsoft.Office.Interop.Word` no están incluidos en la lista. Dado que los tipos que su proyecto necesita se han importado en el ensamblado, las referencias a un PIA no son necesarias. Esto facilita la implementación. Los PIA no tienen que estar presentes en el equipo del usuario y, puesto que una aplicación no requiere la implementación de una versión concreta de un PIA, se pueden diseñar aplicaciones que trabajen con varias versiones de Office, siempre que las API necesarias existan en todas las versiones.  
   
      Dado que la implementación de los PIA ya no es necesaria, puede crear una aplicación en escenarios avanzados que funcione con varias versiones de Office, incluidas versiones anteriores. Sin embargo, esto solo funciona si el código no utiliza ninguna API que no esté disponible en la versión de Office con la que está trabajando. No siempre está claro si una API concreta estaba disponible en una versión anterior y por ese motivo no recomendamos trabajar con versiones anteriores de Office.  
   
     > [!NOTE]
     > Office no publicó ensamblados PIA antes de Office 2003. Por lo tanto, la única manera de generar un ensamblado de interoperabilidad para Office 2002 o versiones anteriores es mediante la importación de la referencia COM.  
   
-6.  Cierre la ventana del manifiesto y la del ensamblado.  
+6. Cierre la ventana del manifiesto y la del ensamblado.  
   
 ### <a name="to-restore-the-pia-dependency"></a>Para restaurar la dependencia de un PIA  
   
-1.  En el **Explorador de soluciones**, haga clic en el botón **Mostrar todos los archivos**. Expanda la carpeta **Referencias** y seleccione **Microsoft.Office.Interop.Excel**. Pulse F4 para abrir la ventana **Propiedades**.  
+1. En el **Explorador de soluciones**, haga clic en el botón **Mostrar todos los archivos**. Expanda la carpeta **Referencias** y seleccione **Microsoft.Office.Interop.Excel**. Pulse F4 para abrir la ventana **Propiedades**.  
   
-2.  En la ventana **Propiedades**, cambie la propiedad **Incrustar tipos de interoperabilidad** de **True** a **False**.  
+2. En la ventana **Propiedades**, cambie la propiedad **Incrustar tipos de interoperabilidad** de **True** a **False**.  
   
-3.  Repita los pasos 1 y 2 de este procedimiento para `Microsoft.Office.Interop.Word`.  
+3. Repita los pasos 1 y 2 de este procedimiento para `Microsoft.Office.Interop.Word`.  
   
-4.  En C#, marque como comentario las dos llamadas a `Autofit` al final del método `DisplayInExcel`.  
+4. En C#, marque como comentario las dos llamadas a `Autofit` al final del método `DisplayInExcel`.  
   
-5.  Presione F5 para comprobar que el proyecto sigue ejecutándose correctamente.  
+5. Presione F5 para comprobar que el proyecto sigue ejecutándose correctamente.  
   
-6.  Repita los pasos 1 a 3 del procedimiento anterior para abrir la ventana de ensamblado. Observe que `Microsoft.Office.Interop.Word` y `Microsoft.Office.Interop.Excel` ya no están en la lista de ensamblados insertados.  
+6. Repita los pasos 1 a 3 del procedimiento anterior para abrir la ventana de ensamblado. Observe que `Microsoft.Office.Interop.Word` y `Microsoft.Office.Interop.Excel` ya no están en la lista de ensamblados insertados.  
   
-7.  Haga doble clic en el icono **MANIFIESTO** y desplácese por la lista de ensamblados de referencia. Tanto `Microsoft.Office.Interop.Word` como `Microsoft.Office.Interop.Excel` están en la lista. Dado que la aplicación hace referencia a los PIA de Excel y Word y la propiedad **Incrustar tipos de interoperabilidad** se establece en **False**, ambos ensamblados deben existir en el equipo del usuario final.  
+7. Haga doble clic en el icono **MANIFIESTO** y desplácese por la lista de ensamblados de referencia. Tanto `Microsoft.Office.Interop.Word` como `Microsoft.Office.Interop.Excel` están en la lista. Dado que la aplicación hace referencia a los PIA de Excel y Word y la propiedad **Incrustar tipos de interoperabilidad** se establece en **False**, ambos ensamblados deben existir en el equipo del usuario final.  
   
-8.  En Visual Studio, haga clic en **Limpiar solución** en el menú **Compilación** para limpiar el proyecto completado.  
+8. En Visual Studio, haga clic en **Limpiar solución** en el menú **Compilación** para limpiar el proyecto completado.  
   
 ## <a name="see-also"></a>Vea también
 

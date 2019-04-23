@@ -1,5 +1,5 @@
 ---
-title: Filtrar para cambiar los estilos de un elemento en Document Object Model HTML administrado
+title: Procedimiento para cambiar los estilos de un elemento en Document Object Model HTML administrado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
 ms.openlocfilehash: 804041991199dd2722e3a0f38800bafd8933bbab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333670"
 ---
-# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Filtrar para cambiar los estilos de un elemento en Document Object Model HTML administrado
+# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Procedimiento para cambiar los estilos de un elemento en Document Object Model HTML administrado
 
 Puede usar los estilos en HTML para controlar la apariencia de un documento y sus elementos. <xref:System.Windows.Forms.HtmlDocument> y <xref:System.Windows.Forms.HtmlElement> admite <xref:System.Windows.Forms.HtmlElement.Style%2A> propiedades que toman cadenas de estilo del formato siguiente:
 

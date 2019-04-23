@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer atributos de fuente para el control RichTextBox de formularios Windows Forms
+title: Procedimiento para establecer atributos de fuente para el control RichTextBox de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
 ms.openlocfilehash: a6fe5b30c457fae2d53c946092b214f492fe5e9b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331213"
 ---
-# <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Filtrar para establecer atributos de fuente para el control RichTextBox de formularios Windows Forms
+# <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Procedimiento para establecer atributos de fuente para el control RichTextBox de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control tiene numerosas opciones para dar formato al texto que muestra. Puede realizar los caracteres seleccionados en negrita, subrayado o cursiva, utilizando el <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> propiedad. También puede usar esta propiedad para cambiar el tamaño y el tipo de letra de los caracteres seleccionados. El <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> propiedad le permite cambiar el color de los caracteres seleccionados.  
   
 ### <a name="to-change-the-appearance-of-characters"></a>Para cambiar la apariencia de los caracteres  
@@ -56,5 +56,5 @@ Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control tiene
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.RichTextBox>
-- [Control RichTextBox](richtextbox-control-windows-forms.md)
+- [RichTextBox (control)](richtextbox-control-windows-forms.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

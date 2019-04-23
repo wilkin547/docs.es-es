@@ -1,5 +1,5 @@
 ---
-title: Filtrar para usar diferentes certificados X.509 para la firma y el cifrado
+title: Procedimiento para usar diferentes certificados X.509 para la firma y el cifrado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
 ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332565"
 ---
-# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Filtrar para usar diferentes certificados X.509 para la firma y el cifrado
+# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Procedimiento para usar diferentes certificados X.509 para la firma y el cifrado
 En este tema se muestra cómo configurar Windows Communication Foundation (WCF) para usar certificados diferentes para firmar los mensajes y el cifrado en el cliente y el servicio.  
   
  Para habilitar certificados independientes que se usará para la firma y cifrado, un cliente personalizado o servicio credenciales (o ambos) deben crearse porque WCF no proporciona una API para establecer varios certificados de cliente o servicio. Además, se debe proporcionar un administrador de tokens de seguridad para sacar el máximo partido a la información de varios certificados y crear un proveedor de tokens de seguridad adecuado para el uso de claves especificado y la dirección del mensaje.  
@@ -96,4 +96,4 @@ En este tema se muestra cómo configurar Windows Communication Foundation (WCF) 
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [Tutorial: Crear credenciales de cliente y servicio personalizadas](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Tutorial: Creación de cliente personalizada y las credenciales de servicio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

@@ -5,10 +5,10 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
 ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330823"
 ---
 # <a name="net-samples-and-tutorials"></a>Ejemplos y tutoriales de .NET
@@ -41,11 +41,11 @@ Vea los [Tutoriales de ASP.NET Core](/aspnet/core/tutorials/). Muchos artículos
 
 ### <a name="samples"></a>Muestras
 
-**[Iterators](../csharp/iterators.md)**
+**[Iteradores](../csharp/iterators.md)**
 
 Este ejemplo muestra la sintaxis y las características para crear y consumir iteradores de C#. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/csharp/iterators) está disponible en el repositorio dotnet/samples de GitHub.
 
-**[Indizadores](../csharp/indexers.md)**
+**[Indexadores](../csharp/indexers.md)**
 
 En este ejemplo se muestran la sintaxis y las características de indizadores de C#. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/csharp/indexers) está disponible en el repositorio dotnet/samples de GitHub.
 
@@ -79,7 +79,7 @@ En este tutorial se muestran las comunicaciones web, la serialización de JSON y
 
 Este tutorial muestra muchas de las características de LINQ y los elementos del lenguaje compatibles. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) está disponible en el repositorio dotnet/samples de GitHub.
 
-**[Introducción a .NET Core en macOS con Visual Studio para Mac](../core/tutorials/using-on-mac-vs.md)**
+**[Introducción a .NET Core en macOS con Visual Studio para Mac ](../core/tutorials/using-on-mac-vs.md)**
 
 En este tutorial se muestra cómo crear una sencilla aplicación de consola de .NET Core con Visual Studio para Mac.
 

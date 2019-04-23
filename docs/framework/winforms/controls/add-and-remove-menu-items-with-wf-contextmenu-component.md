@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agregar y quitar elementos de menú con el componente ContextMenu de formularios Windows Forms
+title: Procedimiento para agregar y quitar elementos de menú con el componente ContextMenu de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
 ms.openlocfilehash: cf70a5cc426b6c6075d1deb11aa2685c39a065c0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332188"
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Filtrar para agregar y quitar elementos de menú con el componente ContextMenu de formularios Windows Forms
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Procedimiento para agregar y quitar elementos de menú con el componente ContextMenu de formularios Windows Forms
 Explica cómo agregar y quitar elementos del menú contextual en Windows Forms.  
   
  Los formularios de Windows <xref:System.Windows.Forms.ContextMenu> componente proporciona un menú de comandos usados frecuentemente que son relevantes para el objeto seleccionado. Puede agregar elementos al menú contextual mediante la adición de <xref:System.Windows.Forms.MenuItem> objetos a la <xref:System.Windows.Forms.Menu.MenuItems%2A> colección.  
@@ -77,5 +77,5 @@ Explica cómo agregar y quitar elementos del menú contextual en Windows Forms.
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.ContextMenu>
-- [Componente ContextMenu](contextmenu-component-windows-forms.md)
-- [Información general sobre el componente ContextMenu](contextmenu-component-overview-windows-forms.md)
+- [ContextMenu (componente)](contextmenu-component-windows-forms.md)
+- [Información general sobre ContextMenu](contextmenu-component-overview-windows-forms.md)

@@ -3,10 +3,10 @@ title: Colas con problemas de entrega
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334099"
 ---
 # <a name="dead-letter-queues"></a>Colas con problemas de entrega
@@ -24,7 +24,7 @@ Este ejemplo muestra cómo administrar y procesar mensajes que han producido err
 
  La cola de mensajes no enviados en el enlace `NetMsmqBinding` se expresa en las propiedades siguientes:
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> propiedad que se expresa el tipo de cola de mensajes no enviados requerido por el cliente. Esta enumeración tiene los valores siguientes:
+-   La propiedad <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> expresa el tipo de cola de mensajes no enviados requerido por el cliente. Esta enumeración tiene los valores siguientes:
 
 -   `None`: No se requiere ninguna cola de mensajes enviados por el cliente.
 
@@ -32,7 +32,7 @@ Este ejemplo muestra cómo administrar y procesar mensajes que han producido err
 
 -   `Custom`: Una cola de mensajes no enviados personalizada especificada mediante el <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propiedad se utiliza para almacenar los mensajes no enviados. Esta característica solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. Se utiliza cuando la aplicación debe utilizar su propia cola de mensajes no enviados en lugar de compartirla con otras aplicaciones que se ejecutan en el mismo equipo.
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propiedad para expresar la cola específica para usarla como una cola de mensajes no enviados. Esto solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
+-   La propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> expresa la cola concreta que se debe utilizar como cola de mensajes no enviados. Esto solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  En este ejemplo, el cliente envía un lote de mensajes al servicio desde dentro del ámbito de una transacción y especifica un valor arbitrariamente bajo para el "período de vida" para estos mensajes (aproximadamente 2 segundos). El cliente también especifica una cola de mensajes no enviados personalizada utilizada para poner en cola los mensajes que han expirado.
 

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear teclas de acceso para controles de Windows Forms
+title: Procedimiento para crear teclas de acceso para controles de Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
 ms.openlocfilehash: e6c829553163359301bad2cd896fc43562ee8069
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334463"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Filtrar para crear teclas de acceso para controles de Windows Forms
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Procedimiento para crear teclas de acceso para controles de Windows Forms
 Un *clave de acceso* es un carácter subrayado en el texto de un menú, elemento de menú o la etiqueta de un control como un botón. Con una clave de acceso, el usuario puede "haga clic en" un botón presionando la tecla ALT en combinación con la clave de acceso predefinidas. Por ejemplo, si un botón ejecuta un procedimiento para imprimir un formulario y por lo tanto, su `Text` propiedad está establecida en "Print", agregar una y comercial antes de la letra "P" hace que la letra "P" para subrayada en el texto del botón en tiempo de ejecución. El usuario puede ejecutar el comando asociado con el botón presionando ALT + P. No puede tener una clave de acceso para un control que no se puede recibir el foco.  
   
 ### <a name="to-create-an-access-key-for-a-control"></a>Para crear una clave de acceso para un control  
@@ -55,6 +55,6 @@ Un *clave de acceso* es un carácter subrayado en el texto de un menú, elemento
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.Button>
-- [Filtrar para responder a clics de botones en formularios Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
-- [Filtrar para establecer el texto mostrado por un control de formularios Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Cómo: Responder a clics de botón de Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Cómo: Establecer el texto mostrado por un Windows Forms Control](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

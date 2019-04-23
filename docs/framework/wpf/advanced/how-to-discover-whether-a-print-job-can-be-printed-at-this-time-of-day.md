@@ -1,5 +1,5 @@
 ---
-title: Filtrar Detectar si un trabajo de impresión se puede imprimir en esta hora del día
+title: Procedimiento Detectar si un trabajo de impresión se puede imprimir en esta hora del día
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
 ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326871"
 ---
-# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Filtrar Detectar si un trabajo de impresión se puede imprimir en esta hora del día
+# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Procedimiento Detectar si un trabajo de impresión se puede imprimir en esta hora del día
 Las colas de impresión no están siempre disponibles durante 24 horas al día. Tienen propiedades de tiempo de inicio y finalización que se pueden establecer para que no esté disponible en determinados momentos del día. Esta característica, por ejemplo, puede usarse para reservar una impresora para uso exclusivo de un determinado departamento después de las 5 P.M.. Ese departamento tendría una cola diferente, mantenimiento de la impresora que otros departamentos usar. La cola para los otros departamentos se establecería en estar disponible después de 5 P.M., mientras que la cola del departamento favorecido podría establecerse como disponible en todo momento.  
   
  Además, los propios trabajos de impresión se pueden establecer en ser imprimible solo dentro de un intervalo de tiempo especificado.  

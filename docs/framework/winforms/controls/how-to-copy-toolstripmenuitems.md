@@ -1,5 +1,5 @@
 ---
-title: Filtrar para copiar ToolStripMenuItems
+title: Procedimiento para copiar ToolStripMenuItems
 ms.date: 03/30/2017
 helpviewer_keywords:
 - menu items [Windows Forms], copying and pasting
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
 ms.openlocfilehash: c59af175a6ee23395e19247efd8fa15e6d19ae66
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334346"
 ---
-# <a name="how-to-copy-toolstripmenuitems"></a>Filtrar para copiar ToolStripMenuItems
+# <a name="how-to-copy-toolstripmenuitems"></a>Procedimiento para copiar ToolStripMenuItems
 Durante el diseño, puede copiar menús de nivel superior completos y sus elementos de submenú en un lugar diferente en la <xref:System.Windows.Forms.MenuStrip>. También puede copiar elementos de menú individuales entre los menús de nivel superior o cambiar la posición de los elementos de menú dentro de un menú.  
   
 ### <a name="to-copy-a-top-level-menu-and-its-submenu-items-to-another-top-level-location"></a>Para copiar un menú de nivel superior y sus elementos de submenú en otra ubicación de nivel superior  

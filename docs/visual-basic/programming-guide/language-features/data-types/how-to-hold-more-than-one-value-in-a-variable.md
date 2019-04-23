@@ -1,5 +1,5 @@
 ---
-title: Filtrar Contener más de un valor en una Variable (Visual Basic)
+title: Procedimiento Contener más de un valor en una Variable (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
 ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332266"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Filtrar Contener más de un valor en una Variable (Visual Basic)
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Procedimiento Contener más de un valor en una Variable (Visual Basic)
 Una variable contiene más de un valor si se declara de un *tipo de datos compuesto*.  
   
  [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) incluyen clases, matrices y estructuras. Una variable de un tipo de datos compuesto puede contener una combinación de tipos de datos básicos y otros tipos compuestos. Estructuras y clases pueden contener código, así como los datos.  
@@ -49,4 +49,4 @@ Una variable contiene más de un valor si se declara de un *tipo de datos compue
 - [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

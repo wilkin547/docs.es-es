@@ -1,18 +1,18 @@
 ---
-title: Filtrar Crear una nueva Variable (Visual Basic)
+title: Procedimiento Crear una nueva Variable (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Dim statement [Visual Basic]
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
 ms.openlocfilehash: ee1e93b4e9819992f17738eb024004a4d66210d1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332591"
 ---
-# <a name="how-to-create-a-new-variable-visual-basic"></a>Filtrar Crear una nueva Variable (Visual Basic)
+# <a name="how-to-create-a-new-variable-visual-basic"></a>Procedimiento Crear una nueva Variable (Visual Basic)
 Crear una variable con un [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).  
   
 ### <a name="to-create-a-new-variable"></a>Para crear una nueva variable  
@@ -59,9 +59,9 @@ Crear una variable con un [instrucción Dim](../../../../visual-basic/language-r
 
 - [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Características de los elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [Tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Instrucciones](../../../../visual-basic/language-reference/statements/index.md)
 - [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Option Infer (instrucción)](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

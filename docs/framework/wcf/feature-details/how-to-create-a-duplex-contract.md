@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear un contrato dúplex
+title: Procedimiento para crear un contrato dúplex
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
 ms.openlocfilehash: c00e5d8e50de89d3d4d346ccddc50282f24735b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332136"
 ---
-# <a name="how-to-create-a-duplex-contract"></a>Filtrar para crear un contrato dúplex
+# <a name="how-to-create-a-duplex-contract"></a>Procedimiento para crear un contrato dúplex
 En este tema se muestran los pasos básicos para crear métodos que utilicen un contrato dúplex (bidireccional). Un contrato dúplex permite a los clientes y servidores comunicarse entre sí independientemente de manera que cada uno puede iniciar llamadas al otro. El contrato dúplex es uno de los tres patrones de mensajes disponibles para los servicios de Windows Communication Foundation (WCF). Los otros dos patrones de mensaje son unidireccionales y de solicitud-respuesta. Un contrato dúplex consta de dos contratos unidireccionales entre el cliente y el servidor y no requiere que se pongan en correlación las llamadas al método. Use este tipo de contrato cuando el servicio debe consultar al cliente para obtener más información o provocar explícitamente eventos en el cliente. Para obtener más información acerca de cómo crear una aplicación cliente para un contrato dúplex, vea [Cómo: Obtener acceso a servicios con un contrato dúplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Para obtener un ejemplo funcional, vea el [dúplex](../../../../docs/framework/wcf/samples/duplex.md) ejemplo.  
   
 ### <a name="to-create-a-duplex-contract"></a>Creación de un contrato dúplex  
@@ -71,8 +71,8 @@ En este tema se muestran los pasos básicos para crear métodos que utilicen un 
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [Filtrar para obtener acceso a los servicios con un contrato dúplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Cómo: Servicios de Access con un contrato dúplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [Dúplex](../../../../docs/framework/wcf/samples/duplex.md)
 - [Diseño e implementación de servicios](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Filtrar Definir un contrato de servicio](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Cómo: Definir un contrato de servicio](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
 - [Sesión](../../../../docs/framework/wcf/samples/session.md)

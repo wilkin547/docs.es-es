@@ -1,5 +1,5 @@
 ---
-title: Filtrar para reasignar los controles existentes en un elemento primario diferente
+title: Procedimiento para reasignar los controles existentes en un elemento primario diferente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - container controls [Windows Forms], Windows Forms
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
 ms.openlocfilehash: 2639322707c1c7e378f6d389a1dec80fd619841c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328223"
 ---
-# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Filtrar para reasignar los controles existentes en un elemento primario diferente
+# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Procedimiento para reasignar los controles existentes en un elemento primario diferente
 Puede asignar controles que existen en el formulario a un nuevo control contenedor.  
   
 > [!NOTE]
@@ -48,5 +48,5 @@ Puede asignar controles que existen en el formulario a un nuevo control contened
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
-- [Tutorial: Organizar controles en formularios Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Tutorial: Organizar controles en formularios Windows Forms mediante guías de alineación](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Tutorial: Organizar controles en formularios de Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Tutorial: Organizar controles en formularios de Windows Forms mediante líneas de ajuste](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

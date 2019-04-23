@@ -1,5 +1,5 @@
 ---
-title: Filtrar para imprimir un archivo de texto de varias páginas en formularios Windows Forms
+title: Procedimiento para imprimir un archivo de texto de varias páginas en formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
 ms.openlocfilehash: b17ddcb22f3e1b7dc181e977a0227db5490b66fa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330212"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Filtrar para imprimir un archivo de texto de varias páginas en formularios Windows Forms
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Procedimiento para imprimir un archivo de texto de varias páginas en formularios Windows Forms
 Es muy común que las aplicaciones basadas en Windows impriman texto. La clase <xref:System.Drawing.Graphics> proporciona métodos para dibujar objetos (gráficos o texto) en un dispositivo, como una pantalla o una impresora.  
   
 > [!NOTE]
@@ -64,4 +64,4 @@ Es muy común que las aplicaciones basadas en Windows impriman texto. La clase <
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Funcionalidad para imprimir en formularios Windows Forms](windows-forms-print-support.md)
+- [Windows Forms Print Support](windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)

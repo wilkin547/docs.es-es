@@ -3,10 +3,10 @@ title: (Módulo) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
 ms.openlocfilehash: e2d2c4cd6fd62cf5785d6b69aa399a74f8d04d30
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326741"
 ---
 # <a name="modulo-entity-sql"></a>(Módulo) (Entity SQL)
@@ -20,10 +20,10 @@ dividend % divisor
   
 ## <a name="arguments"></a>Argumentos  
  `dividend`  
- Expresión numérica que se va a dividir. `dividend` es cualquier expresión válida de cualquiera de los tipos de datos numéricos.  
+ Expresión numérica que se va a dividir. `dividend` es una expresión válida de cualquier tipo de datos numérico.  
   
  `divisor`  
- Expresión numérica entre la que se divide el dividendo. `divisor` es cualquier expresión válida de cualquiera de los tipos de datos numéricos.  
+ Expresión numérica entre la que se divide el dividendo. `divisor` es una expresión válida de cualquier tipo de datos numérico.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  Edm.Int32  

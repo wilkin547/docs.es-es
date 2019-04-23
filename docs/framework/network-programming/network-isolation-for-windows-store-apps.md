@@ -2,12 +2,12 @@
 title: Aislamiento de red para aplicaciones de la Tienda Windows
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 0209bd57bfa98fec8a3057490502081c4c20554f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d08b09f4ed0314d4f235f10b69bbf1343935841
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594270"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59333267"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Aislamiento de red para aplicaciones de la Tienda Windows
 Es posible usar las clases de los espacios de nombres <xref:System.Net>, <xref:System.Net.Http> y <xref:System.Net.Http.Headers> para desarrollar aplicaciones de la Tienda Windows o aplicaciones de escritorio. Cuando se usan en una aplicación de la Tienda Windows, las clases de estos espacios de nombres se ven afectadas por el aislamiento de red, que forma parte del modelo de seguridad para las aplicaciones usado por [!INCLUDE[win8](../../../includes/win8-md.md)]. Las funcionalidades de red correspondientes deben estar habilitadas en el manifiesto de la aplicación de la Tienda Windows para que el sistema permita el acceso a la red.  
@@ -15,17 +15,18 @@ Es posible usar las clases de los espacios de nombres <xref:System.Net>, <xref:S
 ## <a name="checklist-for-network-isolation"></a>Lista de comprobación para el aislamiento de red  
  Use esta lista de comprobación para asegurarse de que el aislamiento de red está configurado para la aplicación de la Tienda Windows.  
   
-1.  Determine la dirección de las solicitudes de acceso a la red que necesita la aplicación. Puede tratarse de solicitudes salientes iniciadas por el cliente, solicitudes entrantes no solicitadas o una combinación de ambos tipos de solicitudes de red.  
+1. Determine la dirección de las solicitudes de acceso a la red que necesita la aplicación. Puede tratarse de solicitudes salientes iniciadas por el cliente, solicitudes entrantes no solicitadas o una combinación de ambos tipos de solicitudes de red.  
   
-2.  Determine el tipo de recursos de red con los que se comunicará la aplicación. Una aplicación podría tener que comunicarse con recursos de confianza en una red doméstica o de trabajo. Una aplicación podría tener que comunicarse con recursos de Internet. Una aplicación podría necesitar tener acceso a ambos tipos de recursos de red.  
+2. Determine el tipo de recursos de red con los que se comunicará la aplicación. Una aplicación podría tener que comunicarse con recursos de confianza en una red doméstica o de trabajo. Una aplicación podría tener que comunicarse con recursos de Internet. Una aplicación podría necesitar tener acceso a ambos tipos de recursos de red.  
   
-3.  Configure las funcionalidades mínimas necesarias de aislamiento de red en el manifiesto de la aplicación.  
+3. Configure las funcionalidades mínimas necesarias de aislamiento de red en el manifiesto de la aplicación.  
   
-4.  Implemente y ejecute la aplicación para probarla mediante las herramientas de aislamiento de red proporcionadas para la solución de problemas.  
+4. Implemente y ejecute la aplicación para probarla mediante las herramientas de aislamiento de red proporcionadas para la solución de problemas.  
   
  Para obtener más información sobre cómo configurar las funcionalidades de red y las herramientas de aislamiento que se usan para la solución de problemas de aislamiento de red, vea [Cómo configurar las funcionalidades de aislamiento de red](https://go.microsoft.com/fwlink/?LinkID=228265) en la documentación para desarrolladores de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
 ## <a name="see-also"></a>Vea también
+
 - [Conectar con un servicio web](https://go.microsoft.com/fwlink/?LinkID=245696)
 - [Directrices y lista de comprobación para el aislamiento de red](https://go.microsoft.com/fwlink/?LinkID=228265)
 - [Inicio rápido: conectarse mediante HttpClient](https://go.microsoft.com/fwlink/?LinkId=245697)

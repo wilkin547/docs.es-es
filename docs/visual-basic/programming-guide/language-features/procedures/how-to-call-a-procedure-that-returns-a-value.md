@@ -1,5 +1,5 @@
 ---
-title: Filtrar Llamar a un procedimiento que devuelve un valor (Visual Basic)
+title: Procedimiento Llamar a un procedimiento que devuelve un valor (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
 ms.openlocfilehash: 6f45f01489ee84b6addb1f7c7c8dc584332f38dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333891"
 ---
-# <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Filtrar Llamar a un procedimiento que devuelve un valor (Visual Basic)
+# <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Procedimiento Llamar a un procedimiento que devuelve un valor (Visual Basic)
 Un `Function` procedimiento devuelve un valor al código de llamada. Llamarlo mediante la inclusión de su nombre y argumentos en el lado derecho de una instrucción de asignación o en una expresión.  
   
 ### <a name="to-call-a-function-procedure-within-an-expression"></a>Para llamar a un procedimiento Function dentro de una expresión  
@@ -48,7 +48,7 @@ Un `Function` procedimiento devuelve un valor al código de llamada. Llamarlo me
 
 - [Procedimientos de función](./function-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
-- [Function (Instrucción)](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Filtrar para crear un procedimiento que devuelve un valor](./how-to-create-a-procedure-that-returns-a-value.md)
-- [Filtrar para devolver un valor de un procedimiento](./how-to-return-a-value-from-a-procedure.md)
-- [Filtrar apara llamar a un procedimiento que no devuelve un valor](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+- [Function (instrucción)](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Cómo: Crear un procedimiento que devuelve un valor](./how-to-create-a-procedure-that-returns-a-value.md)
+- [Cómo: Devolver un valor de un procedimiento](./how-to-return-a-value-from-a-procedure.md)
+- [Cómo: Llamar a un procedimiento que no devuelve un valor](./how-to-call-a-procedure-that-does-not-return-a-value.md)

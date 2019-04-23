@@ -11,10 +11,10 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ff1bc6f0aa29742f61129ff9acb9980658f118a4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327872"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalación de .NET Framework para desarrolladores
@@ -144,7 +144,7 @@ Los instaladores web y sin conexión están diseñados para equipos con sistemas
 > [!NOTE]
 > Si encuentra algún problema durante la instalación, vea [Solución de problemas](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md).
 
-**Notas sobre la instalación:**
+**Notas sobre la instalación**:
 
 - [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] y 4.5.2, así como [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2, 4.7, 4.7.1 y 4.7.2, son actualizaciones en contexto de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
 

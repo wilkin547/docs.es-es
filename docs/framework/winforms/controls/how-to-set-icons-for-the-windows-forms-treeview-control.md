@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer iconos del control TreeView de formularios Windows Forms
+title: Procedimiento para establecer iconos del control TreeView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
 ms.openlocfilehash: 1a857aade86d2366bb68ce14d716b3ce532ecb05
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328418"
 ---
-# <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Filtrar para establecer iconos del control TreeView de formularios Windows Forms
+# <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Procedimiento para establecer iconos del control TreeView de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.TreeView> control puede mostrar iconos junto a cada nodo. Los iconos se sitúan inmediatamente a la izquierda del texto del nodo. Para mostrar estos iconos, debe asociar la vista de árbol con un <xref:System.Windows.Forms.ImageList> control. Para obtener más información acerca de las listas de imágenes, consulte [componente ImageList](imagelist-component-windows-forms.md) y [Cómo: Agregar o quitar imágenes con el Windows Forms ImageList (componente)](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
   
 > [!NOTE]
@@ -70,8 +70,8 @@ Los formularios de Windows <xref:System.Windows.Forms.TreeView> control puede mo
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre el control TreeView](treeview-control-overview-windows-forms.md)
-- [Filtrar para agregar y quitar nodos con el control TreeView de formularios Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Filtrar para iterar todos los nodos del control TreeView de formularios Windows Forms](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [Filtrar para determinar en qué nodo de TreeView se hizo clic](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [Filtrar para agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Información general del control TreeView](treeview-control-overview-windows-forms.md)
+- [Cómo: Agregar y quitar nodos con el Control TreeView de formularios Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Cómo: Recorrer en iteración todos los nodos de un Control TreeView de formularios Windows Forms](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [Cómo: Determinar qué nodo de TreeView se hizo clic](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [Cómo: Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

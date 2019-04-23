@@ -1,18 +1,18 @@
 ---
-title: Filtrar para ejecutar un procedimiento almacenado parametrizado mediante EntityCommand
+title: Procedimiento para ejecutar un procedimiento almacenado parametrizado mediante EntityCommand
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4f5639bf-bb7f-4982-bb1d-c7caa4348888
 ms.openlocfilehash: deb1877397053ceab8c284a537a861ba56ffb729
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326663"
 ---
-# <a name="how-to-execute-a-parameterized-stored-procedure-using-entitycommand"></a>Filtrar para ejecutar un procedimiento almacenado parametrizado mediante EntityCommand
+# <a name="how-to-execute-a-parameterized-stored-procedure-using-entitycommand"></a>Procedimiento para ejecutar un procedimiento almacenado parametrizado mediante EntityCommand
 En este tema se muestra cómo ejecutar un procedimiento almacenado parametrizado usando la clase <xref:System.Data.EntityClient.EntityCommand>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  

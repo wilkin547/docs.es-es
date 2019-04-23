@@ -1,5 +1,5 @@
 ---
-title: Filtrar para desarrollar un control sencillo de formularios Windows Forms
+title: Procedimiento para desarrollar un control sencillo de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
 ms.openlocfilehash: 457069cd7ac5af62e08115d84060c9c7fb25beee
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328145"
 ---
-# <a name="how-to-develop-a-simple-windows-forms-control"></a>Filtrar para desarrollar un control sencillo de formularios Windows Forms
+# <a name="how-to-develop-a-simple-windows-forms-control"></a>Procedimiento para desarrollar un control sencillo de formularios Windows Forms
 Esta sección le guiará a través de los pasos clave para crear un control de Windows Forms personalizado. El control sencillo desarrollado en este tutorial permite la alineación de su <xref:System.Windows.Forms.Control.Text%2A> propiedad que debe cambiarse. No genera ni controla eventos.  
   
 ### <a name="to-create-a-simple-custom-control"></a>Para crear un control personalizado simple  
@@ -104,5 +104,5 @@ Esta sección le guiará a través de los pasos clave para crear un control de W
   
 ## <a name="see-also"></a>Vea también
 
-- [Propiedades de los controles de formularios Windows Forms](properties-in-windows-forms-controls.md)
-- [Eventos de los controles de formularios Windows Forms](events-in-windows-forms-controls.md)
+- [Propiedades de los controles de Windows Forms](properties-in-windows-forms-controls.md)
+- [Eventos de los controles de Windows Forms](events-in-windows-forms-controls.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 2c95b903ae03ea261674885262b24a33efa9e2db
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 76c7b9fa9ef103fc5fc62830932cc724ba50baca
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973748"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59333377"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementar el modelo asincrónico basado en eventos
 Si está escribiendo una clase con algunas operaciones que pueden dar lugar a retrasos evidentes, considere la posibilidad de darle funcionalidad asincrónica implementando [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) (Información general sobre el modelo asincrónico basado en eventos).  
@@ -75,7 +75,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
   
  Para cada signatura del método _MethodName_**Async** independiente:  
   
-1.  Defina el siguiente evento en la misma clase que el método:  
+1. Defina el siguiente evento en la misma clase que el método:  
   
     ```vb  
     Public Event MethodNameCompleted As MethodNameCompletedEventHandler  
@@ -85,7 +85,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
     public event MethodNameCompletedEventHandler MethodNameCompleted;  
     ```  
   
-2.  Defina el delegado siguiente y <xref:System.ComponentModel.AsyncCompletedEventArgs>. Es probable que estos se definan fuera de la propia clase, pero en el mismo espacio de nombres.  
+2. Defina el delegado siguiente y <xref:System.ComponentModel.AsyncCompletedEventArgs>. Es probable que estos se definan fuera de la propia clase, pero en el mismo espacio de nombres.  
   
     ```vb  
     Public Delegate Sub MethodNameCompletedEventHandler( _  

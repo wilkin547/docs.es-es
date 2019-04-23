@@ -1,5 +1,5 @@
 ---
-title: Filtrar para mostrar ayuda emergente
+title: Procedimiento para mostrar ayuda emergente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pop-up Help
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
 ms.openlocfilehash: f805840ea3b1a8aef6a289dba064c468a4da0cb0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331486"
 ---
-# <a name="how-to-display-pop-up-help"></a>Filtrar para mostrar ayuda emergente
+# <a name="how-to-display-pop-up-help"></a>Procedimiento para mostrar ayuda emergente
 Es una manera de mostrar la Ayuda en Windows Forms a través de la **ayuda** situado en el lado derecho de la barra de título, accesible a través de la <xref:System.Windows.Forms.Form.HelpButton%2A> propiedad. Este tipo de visualización de la Ayuda está indicado para cuadros de diálogo. Los cuadros de diálogo que se muestran de forma modal (con el método <xref:System.Windows.Forms.Form.ShowDialog%2A>) tienen problemas para abrir los sistemas de Ayuda externos porque los cuadros de diálogo modales deben cerrarse antes de poder pasar el foco a otra ventana. Además, el uso de la **ayuda** botón requiere que no hay ningún **minimizar** botón o **maximizar** botón se muestra en la barra de título. Esta es una convención de cuadro de diálogo estándar, mientras que los formularios normalmente tienen **minimizar** y **maximizar** botones.  
   
  Tenga en cuenta que también puede usar el componente <xref:System.Windows.Forms.HelpProvider> para vincular controles a archivos en un sistema de Ayuda, aunque haya implementado ayuda emergente. Para obtener más información, consulte [proporcionar ayuda en una aplicación de Windows](how-to-provide-help-in-a-windows-application.md).  
@@ -44,6 +44,6 @@ Es una manera de mostrar la Ayuda en Windows Forms a través de la **ayuda** sit
   
 ## <a name="see-also"></a>Vea también
 
-- [Controlar la ayuda mediante información sobre herramientas](control-help-using-tooltips.md)
-- [Integrar la Ayuda de usuario en formularios Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Controlar la ayuda mediante componentes Tooltip](control-help-using-tooltips.md)
+- [Integrar la Ayuda de usuario en Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

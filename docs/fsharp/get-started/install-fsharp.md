@@ -3,10 +3,10 @@ title: InstalarF#
 description: Obtenga información sobre cómo instalar F# basándose en su entorno.
 ms.date: 08/28/2018
 ms.openlocfilehash: 792c61c0522cd4d0c68a64572f2892ce33f71ea6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331980"
 ---
 # <a name="install-f"></a>Instalar F\#
@@ -31,7 +31,7 @@ Una vez finalizada la instalación, elija "Iniciar Visual Studio". También pued
 
 Debe tener [git instalado](https://git-scm.com/download) y está disponible en la ruta de acceso para hacer uso de plantillas de proyecto. Puede comprobar que está instalado correctamente escribiendo `git --version` en un símbolo del sistema y presione **ENTRAR**.
 
-### [<a name="macos"></a>macOS](#tab/macos)
+### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 [Mono](https://www.mono-project.com) se usa para [ F# interactivo](../tutorials/fsharp-interactive/index.md) admite. La manera más fácil para instalar Mono en macOS es a través de Homebrew. Basta con escribir lo siguiente en el terminal:
 
@@ -41,7 +41,7 @@ brew install mono
 
 Instale también la [SDK de .NET Core](https://www.microsoft.com/net/download).
 
-### [<a name="linux"></a>Linux](#tab/linux)
+### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 [Mono](https://www.mono-project.com) se usa para [ F# interactivo](../tutorials/fsharp-interactive/index.md) admite. Si se encuentra en Debian o Ubuntu, puede utilizar lo siguiente:
 
@@ -52,7 +52,7 @@ sudo apt-get install mono-complete fsharp
 
 Instale también la [SDK de .NET Core](https://www.microsoft.com/net/download).
 
-### [<a name="windows"></a>Windows](#tab/windows)
+### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 Instalar [Visual Studio con F# admite](#install-f-with-visual-studio). Esto instala todos los componentes necesarios para escribir, compilar y ejecutar F# código.
 

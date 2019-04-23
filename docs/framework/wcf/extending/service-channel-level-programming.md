@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
 ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329135"
 ---
 # <a name="service-channel-level-programming"></a>Programación de servicios a nivel de canal
@@ -36,7 +36,7 @@ Este tema describe cómo escribir una aplicación de servicio de Windows Communi
 #### <a name="building-a-channellistener"></a>Crear un ChannelListener  
  Después de crear un enlace, llamamos a <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> para crear la escucha del canal donde el parámetro de tipo es la forma del canal a crear. En este ejemplo estamos utilizando <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> porque deseamos realizar escuchas para los mensajes entrantes en un patrón de intercambio de solicitud/mensaje de respuesta.  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> se utiliza para recibir mensajes y devolviendo los mensajes de respuesta de solicitud. Al llamar a <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType>, se devuelve <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, que se puede utilizar para recibir el mensaje de solicitud y devolver un mensaje de respuesta.  
+ <xref:System.ServiceModel.Channels.IReplyChannel> se utiliza para recibir los mensajes de solicitud y devolver los mensajes de respuesta. Al llamar a <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType>, se devuelve <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, que se puede utilizar para recibir el mensaje de solicitud y devolver un mensaje de respuesta.  
   
  Al crear el agente de escucha, pasamos la dirección de red en la que se realizan las escuchas, en este caso `http://localhost:8080/channelapp`. En general, cada canal de transporte admite uno o posiblemente varios esquemas de direcciones, por ejemplo, el transporte HTTP admite http y esquemas http.  
   
