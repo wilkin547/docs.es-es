@@ -3,10 +3,10 @@ title: UriTemplate y UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
 ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130252"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate y UriTemplateTable
@@ -25,22 +25,22 @@ Los desarrolladores web necesitan poder describir la forma y el diseño de los U
  Esta tabla describe un conjunto de URI estructuralmente similares. Cada entrada es una plantilla URI. Los segmentos entre llaves describen las variables. Los segmentos que no están entre llaves describen cadenas literales. Las clases de plantilla WCF permiten a un desarrollador tomar un URI de entrada, por ejemplo, "/ tiempo/wa/seattle/ciclismo", y hacerla coincidir con una plantilla que describe, "/ tiempo / {estado} / {ciudad} / {actividad}".  
   
 ## <a name="uritemplate"></a>UriTemplate  
- <xref:System.UriTemplate> es una clase que encapsula una plantilla de URI. El constructor toma un parámetro de cadena que define la plantilla. Esta cadena contiene la plantilla en el formato descrito en la sección siguiente. La clase <xref:System.UriTemplate> proporciona métodos que le permiten igualar un URI de entrada a una plantilla, generar un URI a partir de una plantilla, recuperar una colección de nombres de variables usadas en la plantilla, determinar si dos plantillas son equivalentes, y devolver la cadena de la plantilla.  
+ <xref:System.UriTemplate> es una clase que encapsula una plantilla URI. El constructor toma un parámetro de cadena que define la plantilla. Esta cadena contiene la plantilla en el formato descrito en la sección siguiente. La clase <xref:System.UriTemplate> proporciona métodos que le permiten igualar un URI de entrada a una plantilla, generar un URI a partir de una plantilla, recuperar una colección de nombres de variables usadas en la plantilla, determinar si dos plantillas son equivalentes, y devolver la cadena de la plantilla.  
   
- <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> toma una dirección base y un candidato URI e intenta asociar el URI para la plantilla. Si la coincidencia se realiza correctamente, se devuelve una instancia <xref:System.UriTemplateMatch>. El objeto <xref:System.UriTemplateMatch> contiene una dirección URI base, el URI candidato, una colección de nombres/valores de los parámetros de consulta, una matriz de segmentos de ruta de acceso relativa, una colección de nombres/valores de variables comparadas, la instancia de <xref:System.UriTemplate> utilizada para la comparación, una cadena que contiene cualquier parte no coincidente del URI candidato (se usa cuando la plantilla tiene un carácter comodín) y un objeto que está asociado a la plantilla.  
+ <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> toma una dirección base y un candidato a identificador URI e intenta asociar el URI a la plantilla. Si la coincidencia se realiza correctamente, se devuelve una instancia <xref:System.UriTemplateMatch>. El objeto <xref:System.UriTemplateMatch> contiene una dirección URI base, el URI candidato, una colección de nombres/valores de los parámetros de consulta, una matriz de segmentos de ruta de acceso relativa, una colección de nombres/valores de variables comparadas, la instancia de <xref:System.UriTemplate> utilizada para la comparación, una cadena que contiene cualquier parte no coincidente del URI candidato (se usa cuando la plantilla tiene un carácter comodín) y un objeto que está asociado a la plantilla.  
   
 > [!NOTE]
 >  La clase <xref:System.UriTemplate> omite el esquema y número de puerto al comparar un URI candidato con una plantilla.  
   
- Hay dos métodos que le permiten generar un URI a partir de una plantilla: <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> y <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> toma una dirección base y una colección nombre-valor de parámetros. Estos parámetros se sustituyen por variables cuando se enlaza la plantilla. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> toma los pares nombre/valor y los sustituye de izquierda a derecha.  
+ Hay dos métodos que le permiten generar un URI a partir de una plantilla: <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> y <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> toma una dirección base y una colección de nombre y valor de parámetros. Estos parámetros se sustituyen por variables cuando se enlaza la plantilla. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> toma los pares de nombre/valor y los sustituye de izquierda a derecha.  
   
- <xref:System.UriTemplate.ToString> Devuelve la cadena de plantilla.  
+ <xref:System.UriTemplate.ToString> devuelve la cadena de la plantilla.  
   
  La propiedad <xref:System.UriTemplate.PathSegmentVariableNames%2A> contiene una colección de los nombres de las variables usadas dentro de segmentos de ruta de acceso en la cadena de la plantilla.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> toma un <xref:System.UriTemplate> como un parámetro y devuelve un valor booleano que especifica si las dos plantillas son equivalentes. Para obtener más información, consulte la sección equivalencia de plantillas más adelante en este tema.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> toma <xref:System.UriTemplate> como parámetro y devuelve un valor booleano que especifica si las dos plantillas son equivalentes. Para obtener más información, consulte la sección equivalencia de plantillas más adelante en este tema.  
   
- <xref:System.UriTemplate> está diseñado para funcionar con cualquier esquema URI que cumpla la gramática de URI de HTTP. A continuación se ofrecen ejemplos de esquemas de URI compatibles.  
+ <xref:System.UriTemplate> está diseñado para funcionar con cualquier esquema de URI que cumpla la gramática de URI de HTTP. A continuación se ofrecen ejemplos de esquemas de URI compatibles.  
   
 - http://  
   
