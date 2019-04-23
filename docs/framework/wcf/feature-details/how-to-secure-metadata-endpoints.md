@@ -1,18 +1,18 @@
 ---
-title: Filtrar para proteger puntos de conexión de metadatos
+title: Procedimiento para proteger puntos de conexión de metadatos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 ms.openlocfilehash: 8481048dd31652a69f9284a44145bd4abfed89bc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307534"
 ---
-# <a name="how-to-secure-metadata-endpoints"></a>Filtrar para proteger puntos de conexión de metadatos
+# <a name="how-to-secure-metadata-endpoints"></a>Procedimiento para proteger puntos de conexión de metadatos
 Los metadatos para un servicio pueden contener información confidencial sobre su aplicación que un usuario malintencionado puede aprovechar. Los consumidores de su servicio también pueden requerir un mecanismo seguro para obtener los metadatos sobre su servicio. Por consiguiente, a veces es necesario publicar sus metadatos utilizando un extremo seguro.  
   
  Los extremos de metadatos generalmente se protegen utilizando los mecanismos de seguridad estándar definidos en Windows Communication Foundation (WCF) para la protección de extremos de la aplicación. (Para obtener más información, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
@@ -97,7 +97,7 @@ Los metadatos para un servicio pueden contener información confidencial sobre s
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [Filtrar para configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Cómo: Configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
 - [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

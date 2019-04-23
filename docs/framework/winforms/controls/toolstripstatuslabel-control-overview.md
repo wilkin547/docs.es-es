@@ -8,11 +8,11 @@ helpviewer_keywords:
 - status bars
 ms.assetid: 0b9c991e-a9fa-4609-9e1b-caadaef93821
 ms.openlocfilehash: cf4c23f385ba624befdc17c42145d20e184792b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195116"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975915"
 ---
 # <a name="toolstripstatuslabel-control-overview"></a>Resumen del control ToolStripStatusLabel
 El <xref:System.Windows.Forms.ToolStripStatusLabel> es una etiqueta para un <xref:System.Windows.Forms.StatusStrip>. Al igual que el <xref:System.Windows.Forms.Label> o <xref:System.Windows.Forms.ToolStripLabel>, el <xref:System.Windows.Forms.ToolStripStatusLabel> proporciona un área de presentación no seleccionable para texto, imágenes o ambos. El <xref:System.Windows.Forms.ToolStripStatusLabel> está hospedado por un <xref:System.Windows.Forms.StatusStrip>.  

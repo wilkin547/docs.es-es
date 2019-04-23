@@ -1,18 +1,18 @@
 ---
-title: Filtrar para exportar aserciones de directivas personalizadas
+title: Procedimiento para exportar aserciones de directivas personalizadas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
 ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306227"
 ---
-# <a name="how-to-export-custom-policy-assertions"></a>Filtrar para exportar aserciones de directivas personalizadas
+# <a name="how-to-export-custom-policy-assertions"></a>Procedimiento para exportar aserciones de directivas personalizadas
 Las aserciones de directivas describen las funciones y requisitos de un extremo de servicio. Las aplicaciones de servicio pueden utilizar las aserciones de directivas personalizadas en metadatos del servicio para comunicarse el extremo, enlace o información de personalización de contrato a la aplicación cliente. Puede usar Windows Communication Foundation (WCF) para exportar las aserciones en expresiones de directivas adjuntas a enlaces de WSDL en el punto de conexión, operación o asuntos del mensaje, dependiendo de las capacidades o requisitos que se está comunicando.  
   
  Las aserciones de directivas personalizadas se exportan implementando la interfaz <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> en <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> e insertando directamente el elemento de enlace en el enlace del punto de conexión de servicio o registrando el elemento de enlace en su archivo de configuración de la aplicación. Su implementación de exportación de directivas debería agregar su aserción de directivas personalizada como una instancia <xref:System.Xml.XmlElement?displayProperty=nameWithType> al <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> adecuado en <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> que se pasa al método <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A>.  
@@ -53,4 +53,4 @@ Las aserciones de directivas describen las funciones y requisitos de un extremo 
 
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [Filtrar para importar aserciones de directivas personalizadas](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Cómo: Importar aserciones de directivas personalizadas](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

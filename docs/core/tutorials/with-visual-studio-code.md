@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear y depurar su primera aplicac
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: d23f095454a24d67c2b9fb7a0f090fb08ff9e8bb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890558"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613452"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introducción a C# y Visual Studio Code
 
@@ -93,6 +93,7 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 1. Para agregar una nueva clase, haga clic con el botón derecho en el Explorador de Visual Studio Code y seleccione **Nuevo archivo**. Asé se agrega un nuevo archivo a la carpeta abierta en Visual Studio Code.
 2. Asigne un nombre al archivo `MyClass.cs`. Debe guardarlo con una extensión `.cs` al final para que se reconozca como archivo csharp.
 3. Agregue el código siguiente para crear la primera clase. Asegúrese de incluir el espacio de nombres correcto para poder hacer referencia a él desde el archivo `Program.cs`.
+
 ``` csharp
 using System;
 
@@ -127,6 +128,7 @@ namespace HelloWorld
 ```
 
 5. Guarde los cambios y vuelva a ejecutar el programa. El nuevo mensaje debe aparecer con la cadena anexada.
+
 ```console
 > dotnet run
 Hello World! Happy coding!
@@ -140,5 +142,5 @@ La extensión C# de Visual Studio Code puede generar recursos para compilar y de
 
 ## <a name="see-also"></a>Vea también
 
-- [Setting up Visual Studio Code (Configuración de Visual Studio Code)](https://code.visualstudio.com/docs/setup/setup-overview)
-- [Debugging in Visual Studio Code (Depuración en Visual Studio Code)](https://code.visualstudio.com/Docs/editor/debugging)
+- [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) (Configuración de Visual Studio Code)
+- [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Depuración en Visual Studio Code)

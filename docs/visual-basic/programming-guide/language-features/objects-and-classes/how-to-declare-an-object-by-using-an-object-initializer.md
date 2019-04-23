@@ -1,5 +1,5 @@
 ---
-title: Filtrar Declarar un objeto usando un inicializador de objeto (Visual Basic)
+title: Procedimiento Declarar un objeto usando un inicializador de objeto (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring objects using object initializer
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
 ms.openlocfilehash: 775c40cbb62272f913297d5a58914a0c82c5a7d7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305317"
 ---
-# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Filtrar Declarar un objeto usando un inicializador de objeto (Visual Basic)
+# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Procedimiento Declarar un objeto usando un inicializador de objeto (Visual Basic)
 Los inicializadores de objeto permiten declarar y crear una instancia de una clase en una sola instrucción. Además, puede inicializar a uno o varios miembros de la instancia al mismo tiempo, sin invocar un constructor parametrizado.  
   
  Cuando se usa un inicializador de objeto para crear una instancia de un tipo con nombre, el constructor predeterminado para la clase se llama, seguido de la inicialización de los miembros designados en el orden que especifique.  
@@ -62,6 +62,6 @@ Los inicializadores de objeto permiten declarar y crear una instancia de una cla
 ## <a name="see-also"></a>Vea también
 
 - [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Filtrar para crear una lista de elementos](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
-- [Inicializadores de objeto: tipos con nombre y anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Cómo: Crear una lista de elementos](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [Inicializadores de objeto: Tipos con nombre y anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

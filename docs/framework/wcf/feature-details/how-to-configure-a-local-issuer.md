@@ -1,5 +1,5 @@
 ---
-title: Filtrar para configurar un emisor local
+title: Procedimiento para configurar un emisor local
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
 ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306994"
 ---
-# <a name="how-to-configure-a-local-issuer"></a>Filtrar para configurar un emisor local
+# <a name="how-to-configure-a-local-issuer"></a>Procedimiento para configurar un emisor local
 En este tema se describe cómo configurar un cliente para utilizar un emisor local para los tokens emitidos.  
   
  A menudo, cuando un cliente se comunica con un servicio federado, el servicio especifica la dirección del servicio de token de seguridad que se espera que emita el token y que el cliente utilizará para autenticarse con el servicio federado. En determinadas situaciones, el cliente puede configurarse para usar un *emisor local*.  
@@ -76,6 +76,6 @@ En este tema se describe cómo configurar un cliente para utilizar un emisor loc
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Filtrar para crear un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Filtrar para crear un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Cómo: Configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Cómo: Crear a un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Cómo: Create a WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

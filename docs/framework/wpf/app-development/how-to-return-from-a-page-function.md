@@ -1,5 +1,5 @@
 ---
-title: Filtrar Devolver resultados de una función de página
+title: Procedimiento Devolver resultados de una función de página
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - functions [WPF], returning from
 ms.assetid: 87804905-7e8f-417b-b0e3-5622da686396
 ms.openlocfilehash: 8539395625ead3b71e8e50b36567c098eb13da01
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198015"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767869"
 ---
-# <a name="how-to-return-from-a-page-function"></a>Filtrar Devolver resultados de una función de página
+# <a name="how-to-return-from-a-page-function"></a>Procedimiento Devolver resultados de una función de página
 En este ejemplo se muestra cómo devolver un resultado de una función de página.  
   
 ## <a name="example"></a>Ejemplo  

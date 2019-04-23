@@ -3,11 +3,11 @@ title: Generador de canales de configuración
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
 ms.openlocfilehash: 5bee4c7cc2c2e64c6e0d8d0ec2634f9500cd9d51
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59328080"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975876"
 ---
 # <a name="configuration-channel-factory"></a>Generador de canales de configuración
 En este ejemplo se explica el uso de <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. El <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> permite la administración central de configuración de cliente WCF. Esto también puede ser útil en escenarios en los que la configuración se selecciona o se cambia después de la carga del dominio de aplicación.

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para enlazar un control ComboBox o ListBox de formularios Windows Forms a datos
+title: Procedimiento para enlazar un control ComboBox o ListBox de formularios Windows Forms a datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
 ms.openlocfilehash: b869898a20008343b6c6cbe4bc7e399fc86fb232
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306058"
 ---
-# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Filtrar para enlazar un control ComboBox o ListBox de formularios Windows Forms a datos
+# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Procedimiento para enlazar un control ComboBox o ListBox de formularios Windows Forms a datos
 Puede enlazar el <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.ListBox> a datos para realizar tareas como la exploración de datos en una base de datos, escribir nuevos datos o modificar datos existentes.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>Para enlazar un control ComboBox o ListBox  
@@ -58,5 +58,5 @@ Puede enlazar el <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.For
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - [Enlace de datos en Windows Forms](../windows-forms-data-binding.md)
-- [Enlace de datos y formularios Windows Forms](../data-binding-and-windows-forms.md)
+- [Enlace de datos y Windows Forms](../data-binding-and-windows-forms.md)
 - [Controles de formularios Windows Forms usados para mostrar opciones](windows-forms-controls-used-to-list-options.md)

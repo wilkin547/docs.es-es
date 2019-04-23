@@ -3,12 +3,12 @@ title: Uso de las características de coincidencia de patrones para ampliar los 
 description: En este tutorial avanzado se muestra cómo usar técnicas de coincidencia de patrones para crear una funcionalidad con datos y algoritmos creados por separado.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 5fdd65fdb96cce05f15872969bbdd401095b59e5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262520"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769247"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Uso de las características de coincidencia de patrones para ampliar los tipos de datos
 
@@ -23,7 +23,7 @@ En este tutorial aprenderá lo siguiente:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de versión preliminar de C# 8.0. El compilador de versión preliminar de C# 8 está disponible con la [versión preliminar de Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) más reciente o la [versión preliminar de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) más reciente.
+Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de versión preliminar de C# 8.0. El compilador de versión preliminar de C# 8 está disponible con la versión de [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) más reciente o la [versión preliminar de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) más reciente.
 
 En este tutorial se da por supuesto que está familiarizado con C# y. NET, incluidos Visual Studio o la CLI de .NET Core.
 

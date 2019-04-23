@@ -4,12 +4,12 @@ description: Descubra las opciones para orquestar microservicios y aplicaciones 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 6fa25c1d35e276473f4fcac344efbc5cafbc4b3f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1452f25f96a5e277d8cfcd53f03e90675e9f9372
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465443"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613270"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 
@@ -148,13 +148,13 @@ Para obtener más información, vea el artículo sobre [Desarrollo en equipo con
 ## <a name="additional-resources"></a>Recursos adicionales
 
 - **Guía de inicio rápido: Implementación de un clúster de Azure Kubernetes Service (AKS)** \
-  [https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
+  <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \
-  [https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
+  <https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces>
 
 - **Kubernetes** El sitio oficial. \
-  [https://kubernetes.io/](https://kubernetes.io/)
+  <https://kubernetes.io/>
 
 >[!div class="step-by-step"]
 >[Anterior](resilient-high-availability-microservices.md)

@@ -4,12 +4,12 @@ description: Arquitectura de Microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4285c37c90b01424de70a2ac4dd75d5d9c63dac0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 105daed3bca03571caea92fdbd1d6c6f56b24fef
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465573"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59614082"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicación asincrónica basada en mensajes
 
@@ -86,25 +86,25 @@ Temas adicionales que se deben tener en cuenta al usar la comunicación asincró
 ## <a name="additional-resources"></a>Recursos adicionales
 
 - **Event Driven Messaging** \ (Mensajería controlada por eventos)
-  [http://soapatterns.org/design_patterns/event_driven_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+  <http://soapatterns.org/design_patterns/event_driven_messaging>
 
 - **Publish/Subscribe Channel** \ (Canal de publicación y suscripción)
-  [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+  <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Udi Dahan. Clarified CQRS** \ (CQRS aclarado)
-  [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
+  <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **Patrón Command and Query Responsibility Segregation (CQRS)** \
-  [https://docs.microsoft.com/azure/architecture/patterns/cqrs](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+  <https://docs.microsoft.com/azure/architecture/patterns/cqrs>
 
 - **Communicating Between Bounded Contexts** \ (Comunicación entre contextos delimitados)
-  [https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10))
+  <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **Eventual Consistency** \ (Coherencia de los eventos)
-  [https://en.wikipedia.org/wiki/Eventual_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+  <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** \ (Refactorización hacia la resiliencia: evaluación del acoplamiento)
-  [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+  <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]
 > [Anterior](communication-in-microservice-architecture.md)

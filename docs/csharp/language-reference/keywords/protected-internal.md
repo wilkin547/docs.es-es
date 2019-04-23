@@ -3,12 +3,12 @@ title: 'protected internal: Referencia de C#'
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 09685e38e879de787b0f6bab8c189a8815433904
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 090baae7fe0e49289059e060d5dcba7b037ae47a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238655"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613309"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (Referencia de C#)
 
@@ -55,6 +55,7 @@ class DerivedClass : BaseClass
     }
 }
 ```
+
 Este ejemplo contiene dos archivos, `Assembly1.cs` y `Assembly2.cs`.
 El primer archivo contiene una clase base interna, `BaseClass`, y otra clase, `TestAccess`. `BaseClass` posee un miembro protected internal (`myValue`), al que se obtiene acceso por medio del tipo `TestAccess`.
 En el segundo archivo, un intento de tener acceso a `myValue` a través de una instancia de `BaseClass` generará un error, mientras que un acceso a este miembro a través de una instancia de una clase derivada (`DerivedClass`) se realizará correctamente.

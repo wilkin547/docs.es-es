@@ -1,5 +1,5 @@
 ---
-title: Filtrar para enlazar controles de formularios Windows Forms con el componente BindingSource mediante el diseñador
+title: Procedimiento para enlazar controles de formularios Windows Forms con el componente BindingSource mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
 ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304563"
 ---
-# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Filtrar para enlazar controles de formularios Windows Forms con el componente BindingSource mediante el diseñador
+# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Procedimiento para enlazar controles de formularios Windows Forms con el componente BindingSource mediante el diseñador
 Una vez que haya agregado los controles al formulario y determina la interfaz de usuario para la aplicación, puede enlazar los controles a un origen de datos, por lo que, en tiempo de ejecución, los usuarios pueden modificar y guardar los datos relacionados con la aplicación.  
   
  Enlazar un control o una serie de controles en Windows Forms se consigue más fácilmente mediante el <xref:System.Windows.Forms.BindingSource> control como un puente entre los controles del formulario y el origen de datos.  

@@ -3,10 +3,10 @@ title: Seguimiento personalizado
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
 ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307643"
 ---
 # <a name="custom-tracking"></a>Seguimiento personalizado
@@ -18,7 +18,7 @@ En este ejemplo se muestra cómo crear un participante de seguimiento personaliz
 |Componente|Descripción|
 |---------------|-----------------|
 |Tiempo de ejecución de seguimiento|Proporciona la infraestructura para emitir registros de seguimiento.|
-|Participantes de seguimiento|Usa los registros de seguimiento. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] se distribuye con un participante de seguimiento que escribe registros de seguimiento como eventos de seguimiento de eventos para Windows (ETW).|
+|Participantes de seguimiento|Usa los registros de seguimiento. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] se distribuye con un participante de seguimiento que escribe los eventos de seguimiento como eventos de Seguimiento de eventos para Windows (ETW).|
 |Perfil de seguimiento|Un mecanismo de filtrado que permite a un participante de seguimiento suscribirse a un subconjunto de los registros de seguimiento emitidos desde una instancia de flujo de trabajo.|
 
  En la siguiente tabla se detallan los registros de seguimiento que emite el tiempo de ejecución del flujo de trabajo.

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306604"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procedimiento Suscribir y cancelar la suscripción a eventos (Guía de programación de C#)
@@ -102,7 +102,7 @@ La suscripción a un evento publicado por otra clase se realiza cuando quiere es
 ## <a name="see-also"></a>Vea también
 
 - [Eventos](../../../csharp/programming-guide/events/index.md)
-- [evento](../../../csharp/language-reference/keywords/event.md)
-- [Procedimiento para publicar eventos que cumplan las directrices de .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-- [-= Operador (Referencia de C#)](../../language-reference/operators/subtraction-assignment-operator.md)
+- [event](../../../csharp/language-reference/keywords/event.md)
+- [Cómo: Publicar eventos que cumplan las directrices de .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [Operador -= (Referencia de C#)](../../language-reference/operators/subtraction-assignment-operator.md)
 - [Operador +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)

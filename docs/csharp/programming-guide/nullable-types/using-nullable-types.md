@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658252"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306656"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Uso de tipos que aceptan valores NULL (Guía de programación de C#)
 
@@ -66,6 +66,9 @@ Un tipo de valor que no acepta valores NULL se convierte implícitamente al tipo
 Los tipos que aceptan valores NULL también pueden hacer uso de los operadores predefinidos unario y binario, así como de cualquier operador definido por el usuario que exista para los tipos de valor. Estos operadores generan un valor NULL si uno o los dos operandos son NULL; si no, el operador usa los valores contenidos para calcular el resultado. Por ejemplo:  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
+
+> [!NOTE]
+> Para el tipo `bool?`, los operadores predefinidos `&` y `|` no siguen las regas descritas en esta sección: el resultado de una evaluación de operador puede ser distinto de NULL incluso si uno de los operandos es NULL. Para más información, consulte la sección [Operadores lógicos booleanos que aceptan valores NULL](../../language-reference/operators/boolean-logical-operators.md#nullable-boolean-logical-operators) del artículo [Operadores lógicos booleanos](../../language-reference/operators/boolean-logical-operators.md).
   
 Para los operadores relacionales (`<`, `>`, `<=`, `>=`), si uno o ambos operandos son NULL, el resultado es `false`. No asuma que, como una comparación determinada (por ejemplo, `<=`) devuelve `false`, la comparación contraria (`>`) devolverá `true`. En el ejemplo siguiente se muestra que 10 no es
 
@@ -75,6 +78,8 @@ Para los operadores relacionales (`<`, `>`, `<=`, `>=`), si uno o ambos operando
 [!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
 En el ejemplo anterior también se muestra que una comparación de igualdad entre dos tipos que aceptan valores NULL donde ambos son NULL se evalúa como `true`.
+
+Para más información, consulte la sección sobre [operadores de elevación](~/_csharplang/spec/expressions.md#lifted-operators) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="boxing-and-unboxing"></a>Conversión boxing y conversión unboxing
 
@@ -87,29 +92,6 @@ Se puede aplicar conversión unboxing al tipo de valor con conversión boxing al
 
 [!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
 
-## <a name="the-bool-type"></a>Tipo bool?
-
-El tipo que acepta valores NULL `bool?` puede contener tres valores distintos: [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) y [NULL](../../language-reference/keywords/null.md). El tipo `bool?` es como el tipo de variable booleano que se usa en SQL. Para asegurarse de que los resultados generados por los operadores `&` y `|` sean coherentes con el tipo booleano de tres valores en SQL, se proporcionan los siguientes operadores predefinidos:
-
-- `bool? operator &(bool? x, bool? y)`  
-- `bool? operator |(bool? x, bool? y)`  
-  
-La semántica de estos operadores se define en la tabla siguiente:  
-  
-|x|y|x e y|x&#124;y|  
-|-------|-------|---------|--------------|  
-|true|true|true|true|  
-|true|False|false|true|  
-|true|nulo|nulo|true|  
-|False|true|False|true|  
-|False|False|False|False|  
-|False|nulo|False|nulo|  
-|nulo|true|nulo|true|  
-|nulo|False|False|nulo|  
-|nulo|nulo|nulo|nulo|  
-
-Tenga en cuenta que estos dos operadores no siguen las reglas descritas en la sección [Operadores](#operators): el resultado de un operador de evaluación puede ser distinto de NULL, incluso si uno de los operandos es NULL.
-  
 ## <a name="see-also"></a>Vea también
 
 - [Nullable types](index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])

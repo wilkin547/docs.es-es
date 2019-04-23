@@ -1,5 +1,5 @@
 ---
-title: Filtrar Enlazar a un servicio web
+title: Procedimiento Enlazar a un servicio web
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
 ms.openlocfilehash: 2c3bc1f2142f07aba3df2da6c46117d3907443a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304992"
 ---
-# <a name="how-to-bind-to-a-web-service"></a>Filtrar Enlazar a un servicio web
+# <a name="how-to-bind-to-a-web-service"></a>Procedimiento Enlazar a un servicio web
 En este ejemplo se muestra cómo enlazar a los objetos devueltos por llamadas al método de servicios Web.  
   
 ## <a name="example"></a>Ejemplo  

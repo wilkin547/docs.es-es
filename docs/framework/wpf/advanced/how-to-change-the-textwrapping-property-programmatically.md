@@ -1,5 +1,5 @@
 ---
-title: Filtrar Cambiar la propiedad TextWrapping mediante programación
+title: Procedimiento Cambiar la propiedad TextWrapping mediante programación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - TextWrapping property [WPF], changing programmatically
 ms.assetid: 30d25554-4c82-4df9-a8d6-35683a4a13bb
 ms.openlocfilehash: 21ca31d24121492fe6927cd533d5b3c0785b5a28
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095846"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975005"
 ---
-# <a name="how-to-change-the-textwrapping-property-programmatically"></a>Filtrar Cambiar la propiedad TextWrapping mediante programación
+# <a name="how-to-change-the-textwrapping-property-programmatically"></a>Procedimiento Cambiar la propiedad TextWrapping mediante programación
 ## <a name="example"></a>Ejemplo  
  El ejemplo de código siguiente muestra cómo cambiar el valor de la <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> propiedad mediante programación.  
   

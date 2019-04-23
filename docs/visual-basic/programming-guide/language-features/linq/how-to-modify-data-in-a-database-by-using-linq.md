@@ -1,5 +1,5 @@
 ---
-title: Filtrar Modificar datos en una base de datos usando LINQ (Visual Basic)
+title: Procedimiento Modificar datos en una base de datos usando LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
 ms.openlocfilehash: 8770a8761af4b55394d9280b21d2a6a5b71b6ed5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304901"
 ---
-# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Filtrar Modificar datos en una base de datos usando LINQ (Visual Basic)
+# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Procedimiento Modificar datos en una base de datos usando LINQ (Visual Basic)
 Language Integrated Query de Query (LINQ) facilitan el acceso a la información de la base de datos y modificar los valores de la base de datos.  
   
  El ejemplo siguiente muestra cómo crear una nueva aplicación que recupera y actualiza la información en una base de datos de SQL Server.  
@@ -165,5 +165,5 @@ Language Integrated Query de Query (LINQ) facilitan el acceso a la información 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
-- [DataContext (Métodos) (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
-- [Filtrar Asignación de procedimientos almacenados para realizar actualizaciones, inserciones y eliminaciones (Object Relational Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
+- [Métodos DataContext (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [Cómo: Asignar procedimientos almacenados para realizar actualizaciones, inserciones y eliminaciones (Object Relational Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)

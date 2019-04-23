@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c680c1a4671b38c9b2c35945ddecaf9d92d0f477
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729241"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306552"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Procedimiento para asignar resultados HRESULT y excepciones
 Los métodos COM informan de errores devolviendo valores HRESULT; los métodos de .NET informan de ellos iniciando excepciones. El tiempo de ejecución controla la transición entre los dos. Cada clase de excepción de .NET Framework se asigna a un valor HRESULT.  
@@ -31,7 +31,7 @@ Los métodos COM informan de errores devolviendo valores HRESULT; los métodos d
   
 ### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Para crear una nueva clase de excepción y asignarla a un valor HRESULT  
   
-1.  Use el código siguiente para crear una nueva clase de excepción denominada `NoAccessException` y asignarla al valor HRESULT `E_ACCESSDENIED`.  
+1. Use el código siguiente para crear una nueva clase de excepción denominada `NoAccessException` y asignarla al valor HRESULT `E_ACCESSDENIED`.  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  
@@ -143,5 +143,6 @@ CMyClass::MethodThatThrows
  Los campos de excepción, como **Message**, **Source** y **StackTrace** no están disponibles para la excepción **StackOverflowException**.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Interoperabilidad COM avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Excepciones](../../standard/exceptions/index.md)

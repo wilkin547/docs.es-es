@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
 ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312116"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975681"
 ---
 # <a name="custom-token-handlers"></a>Controladores de token personalizados
 En este tema, se describen los controladores de token en WIF y cómo se usan para procesar tokens. El tema también trata la necesidad de crear controladores personalizados de token para los tipos de token que no se admiten de manera predeterminada en WIF.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My Documents directory
 ms.assetid: 26560d01-7dda-4457-8e95-21db23d71aea
 ms.openlocfilehash: fe98d3e92726dc6c4ed576ef989d968852c846d6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821834"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770300"
 ---
 # <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a>Procedimiento para recuperar el contenido del directorio Mis documentos en Visual Basic
 El objeto <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> se puede usar para leer en muchos de los directorios de **Todos los usuarios**, como **Mis documentos** o **Escritorio**.  

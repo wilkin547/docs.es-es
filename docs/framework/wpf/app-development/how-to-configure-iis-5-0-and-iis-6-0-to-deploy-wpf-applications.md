@@ -1,5 +1,5 @@
 ---
-title: Filtrar Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF
+title: Procedimiento Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MIME types [WPF], registering
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
 ms.openlocfilehash: 6fa00c4ced8c05d056703560e5740689c6dcfe39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096295"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973673"
 ---
-# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Filtrar Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF
+# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Procedimiento Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF
 
 Puede implementar una aplicación de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] desde la mayoría de los servidores web, siempre que estén configurados con los tipos [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] adecuados. De manera predeterminada, [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] se configura con estos tipos [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)], pero [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] y [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] no.
 

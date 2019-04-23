@@ -1,5 +1,5 @@
 ---
-title: Filtrar para implementar la validación con el control DataGrid
+title: Procedimiento para implementar la validación con el control DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
 ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305963"
 ---
-# <a name="how-to-implement-validation-with-the-datagrid-control"></a>Filtrar para implementar la validación con el control DataGrid
+# <a name="how-to-implement-validation-with-the-datagrid-control"></a>Procedimiento para implementar la validación con el control DataGrid
 El <xref:System.Windows.Controls.DataGrid> control le permite realizar la validación en el nivel de la celda y la fila. Con la validación de nivel de celda, validar propiedades individuales de un objeto de datos enlazados cuando un usuario actualiza un valor. Con la validación de nivel de fila, validar los objetos de datos completo cuando un usuario confirma los cambios realizados en una fila. También puede proporcionar comentarios visuales personalizados para los errores de validación, o usar los comentarios visuales predeterminados que el <xref:System.Windows.Controls.DataGrid> proporciona el control.  
   
  Los procedimientos siguientes describen cómo se aplican las reglas de validación <xref:System.Windows.Controls.DataGrid> enlaces y personalizar los comentarios visuales.  

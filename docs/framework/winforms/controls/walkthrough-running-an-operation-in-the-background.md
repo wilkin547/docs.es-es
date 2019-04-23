@@ -14,10 +14,10 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308450"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Tutorial: Ejecutar una operación en segundo plano
@@ -104,6 +104,6 @@ Si tiene una operación que tarda mucho tiempo en completarse y no desea causar 
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [Filtrar para implementar un formulario que usa una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Filtrar para ejecutar una operación en segundo plano](how-to-run-an-operation-in-the-background.md)
-- [BackgroundWorker (Componente)](backgroundworker-component.md)
+- [Cómo: Implementar un formulario que usa una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Cómo: Ejecutar una operación en segundo plano](how-to-run-an-operation-in-the-background.md)
+- [Componente BackgroundWorker](backgroundworker-component.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar un objeto Double mediante fotogramas clave
+title: Procedimiento Animar un objeto Double mediante fotogramas clave
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
 ms.openlocfilehash: 73cbeab8aee566313bad8e8a18a5500374287de0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305590"
 ---
-# <a name="how-to-animate-a-double-by-using-key-frames"></a>Filtrar Animar un objeto Double mediante fotogramas clave
+# <a name="how-to-animate-a-double-by-using-key-frames"></a>Procedimiento Animar un objeto Double mediante fotogramas clave
 En este ejemplo se muestra cómo animar el valor de una propiedad que toma un <xref:System.Double> mediante fotogramas clave.  
   
 ## <a name="example"></a>Ejemplo  

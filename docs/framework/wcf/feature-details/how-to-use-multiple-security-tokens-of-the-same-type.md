@@ -1,15 +1,15 @@
 ---
-title: Filtrar para usar varios tokens de seguridad del mismo tipo
+title: Procedimiento para usar varios tokens de seguridad del mismo tipo
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
 ms.openlocfilehash: 7de5d52587e1796ecfa05048024f8847a555655c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309282"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976448"
 ---
-# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Filtrar para usar varios tokens de seguridad del mismo tipo
+# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Procedimiento para usar varios tokens de seguridad del mismo tipo
 -   En [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, un mensaje de cliente solo contenía un token de un tipo dado. Ahora, los mensajes de cliente pueden contener múltiples tokens de un tipo. En este tema se muestra cómo incluir múltiples tokens del mismo tipo en un mensaje de cliente.  
   
 -   Tenga en cuenta que no se puede configurar un servicio de esta manera: un servicio puede contener sólo un token auxiliar.  

@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo implementar puertas de enlace de A
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b7ef0e7a172337f32f625bd65261b6577decd223
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5d4f2a3b2551f8da83359b26578d45559721f7df
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464546"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613725"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementación de puertas de enlace de API con Ocelot
 
@@ -85,6 +85,7 @@ public async Task<IActionResult> GetItemById(int id)
     return NotFound();
 }
 ```
+
 La solicitud HTTP terminará ejecutando ese tipo de código de C# que accede a la base de datos de microservicios además de cualquier otra acción requerida.
 
 En lo que respecta a la dirección URL del microservicio, cuando los contenedores se implementan en el equipo de desarrollo local (el host de Docker local), el contenedor de cada microservicio siempre tiene un puerto interno (normalmente el puerto 80) que se especifica en su Dockerfile, como se muestra en el Dockerfile siguiente:
@@ -564,16 +565,16 @@ En los archivos de código fuente de eShopOnContainers, los archivos "configurat
 Cuando se usa una puerta de enlace de API de Ocelot hay otras características importantes para investigar y utilizar, como se describe en los vínculos siguientes.
 
 - **Service discovery in the client side integrating Ocelot with Consul or Eureka** \ (Detección de servicios en el lado cliente mediante la integración de Ocelot con Consul o Eureka)
-  [https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+  <https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html>
 
 - **Caching at the API Gateway tier** \ (Almacenamiento en caché en el nivel de puerta de enlace de API)
-  [https://ocelot.readthedocs.io/en/latest/features/caching.html](https://ocelot.readthedocs.io/en/latest/features/caching.html)
+  <https://ocelot.readthedocs.io/en/latest/features/caching.html>
 
 - **Logging at the API Gateway tier** \ (Registro en el nivel de puerta de enlace de API)
-  [https://ocelot.readthedocs.io/en/latest/features/logging.html](https://ocelot.readthedocs.io/en/latest/features/logging.html)
+  <https://ocelot.readthedocs.io/en/latest/features/logging.html>
 
 - **Quality of Service (Retries and Circuit breakers) at the API Gateway tier** \ (Calidad de servicio (reintentos e interruptores) en el nivel de puerta de enlace de API)
-  [https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+  <https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html>
 
 - **Rate limiting** \ (Limitación de velocidad)
   [https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )

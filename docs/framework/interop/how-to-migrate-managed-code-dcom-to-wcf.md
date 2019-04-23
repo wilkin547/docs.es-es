@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734521"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59307722"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Procedimiento Migrar código administrado DCOM a WCF
 Windows Communication Foundation (WCF) es la opción recomendada y segura para reemplazar al modelo de objetos de componentes distribuidos (DCOM) en las llamadas de código administrado entre servidores y clientes en un entorno distribuido. En este artículo se muestra cómo migrar el código de DCOM a WCF en los escenarios siguientes.  
@@ -239,7 +239,7 @@ customerManager.StoreCustomer(customer);
   
  El comportamiento del objeto por referencia de WCF que se muestra en este escenario es diferente al de DCOM.  En DCOM, el servidor puede devolver directamente un objeto por referencia al cliente y el cliente puede llamar a métodos del objeto, que se ejecutan en el servidor.  En WCF, sin embargo, el objeto devuelto es siempre por valor.  El cliente debe tomar ese objeto por valor, representado por <xref:System.ServiceModel.EndpointAddress10>, y usarlo para crear su propio objeto por referencia con sesión.  Las llamadas de método de cliente en el objeto con sesión se ejecutan en el servidor. En otras palabras, este objeto por referencia en WCF es un servicio WCF normal que se configura para ser con sesión.  
   
- En WCF, una sesión es una manera de asociar varios mensajes enviados entre dos extremos.  Esto significa que cuando un cliente obtiene una conexión a este servicio, se establecerá una sesión entre el cliente y el servidor.  El cliente usará una única instancia del objeto de servidor para todas sus interacciones dentro de esta sesión única. Los contratos de WCF con sesión son similares a los patrones de solicitud/respuesta de red orientados a conexiones.  
+ En WCF, una sesión es una manera de asociar varios mensajes enviados entre dos puntos de conexión.  Esto significa que cuando un cliente obtiene una conexión a este servicio, se establecerá una sesión entre el cliente y el servidor.  El cliente usará una única instancia del objeto del lado servidor para todas las interacciones dentro de esta sesión única. Los contratos de WCF con sesión son similares a los patrones de solicitud/respuesta de red orientados a conexiones.  
   
  Este escenario se representa mediante el siguiente método DCOM.  
   
@@ -291,7 +291,7 @@ public interface ISessionBoundObject
 ```  
   
 ### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a>Paso 2: Definir el servicio del generador WCF para el objeto con sesión  
- El servicio que crea el objeto con sesión debe definirse e implementarse. El código siguiente muestra cómo hacerlo. Este código crea otro servicio WCF que devuelve un objeto <xref:System.ServiceModel.EndpointAddress10>.  Se trata de una forma serializable de un extremo que puede usarse para crear el objeto con sesión.  
+ El servicio que crea el objeto con sesión debe definirse e implementarse. El código siguiente muestra cómo hacerlo. Este código crea otro servicio WCF que devuelve un objeto <xref:System.ServiceModel.EndpointAddress10>.  Se trata de una forma serializable de un punto de conexión que puede usarse para crear el objeto con sesión.  
   
 ```csharp  
 [ServiceContract]  
@@ -325,9 +325,9 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>Paso 3: Configurar e iniciar los servicios WCF  
  Para hospedar estos servicios, deberá agregar lo siguiente al archivo de configuración del servidor (web.config).  
   
-1.  Agregue una sección `<client>` que describa el extremo para el objeto con sesión.  En este escenario, el servidor también actúa como un cliente y debe configurarse para habilitar esta opción.  
+1. Agregue una sección `<client>` que describa el extremo para el objeto con sesión.  En este escenario, el servidor también actúa como un cliente y debe configurarse para habilitar esta opción.  
   
-2.  En la sección `<services>`, declare los extremos de servicio para el generador y el objeto con sesión.  Esto permite al cliente comunicarse con los extremos de servicio, adquirir el <xref:System.ServiceModel.EndpointAddress10> y crear el canal con sesión.  
+2. En la sección `<services>`, declare los extremos de servicio para el generador y el objeto con sesión.  Esto permite al cliente comunicarse con los puntos de conexión de servicio, adquirir el <xref:System.ServiceModel.EndpointAddress10> y crear el canal con sesión.  
   
  A continuación se muestra un ejemplo de archivo de configuración con estos valores:  
   
@@ -357,7 +357,7 @@ public class SessionBoundFactory : ISessionBoundFactory
 </configuration>  
 ```  
   
- Agregue las siguientes líneas a una aplicación de consola para probar internamente el servicio e inicie la aplicación.  
+ Agregue las siguientes líneas a una aplicación de consola para hospedar el servicio e inicie la aplicación.  
   
 ```csharp  
 ServiceHost factoryHost = new ServiceHost(typeof(SessionBoundFactory));  
@@ -390,13 +390,13 @@ sessionBoundServiceHost.Open();
   
  Para llamar al servicio, agregue el código al cliente para hacer lo siguiente:  
   
-1.  Cree un canal para el servicio `ISessionBoundFactory`.  
+1. Cree un canal para el servicio `ISessionBoundFactory`.  
   
-2.  Use el canal para invocar el servicio `ISessionBoundFactory` y obtener un objeto <xref:System.ServiceModel.EndpointAddress10>.  
+2. Use el canal para invocar el servicio `ISessionBoundFactory` y obtener un objeto <xref:System.ServiceModel.EndpointAddress10>.  
   
-3.  Use <xref:System.ServiceModel.EndpointAddress10> para crear un canal para obtener un objeto con sesión.  
+3. Use <xref:System.ServiceModel.EndpointAddress10> para crear un canal para obtener un objeto con sesión.  
   
-4.  Llame a los métodos `SetCurrentValue` y `GetCurrentValue` para mostrar que sigue siendo la misma instancia de objeto que se usa en varias llamadas.  
+4. Llame a los métodos `SetCurrentValue` y `GetCurrentValue` para mostrar que sigue siendo la misma instancia de objeto que se usa en varias llamadas.  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
@@ -422,6 +422,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Diseño e implementación de servicios](../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [Creación de clientes](../../../docs/framework/wcf/building-clients.md)

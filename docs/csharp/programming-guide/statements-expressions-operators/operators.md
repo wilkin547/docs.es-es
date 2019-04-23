@@ -8,10 +8,10 @@ helpviewer_keywords:
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
 ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307480"
 ---
 # <a name="operators-c-programming-guide"></a>Operadores (Guía de programación de C#)
@@ -69,7 +69,7 @@ En C#, un *operador* es un elemento de programa que se aplica a uno o varios *op
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Predecremento|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Convertir x explícitamente en tipo T|  
   
- **Operadores multiplicativos**  
+ **Operadores de multiplicación**  
   
 |Expresión|Descripción|  
 |----------------|-----------------|  

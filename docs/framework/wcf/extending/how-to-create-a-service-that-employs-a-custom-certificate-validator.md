@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear un servicio que emplee un validador de certificado personalizado
+title: Procedimiento para crear un servicio que emplee un validador de certificado personalizado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
 ms.openlocfilehash: b7e8e4a750aadd8a84a57cdf22c01f6b91e6256c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296555"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767739"
 ---
-# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Filtrar para crear un servicio que emplee un validador de certificado personalizado
+# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Procedimiento para crear un servicio que emplee un validador de certificado personalizado
 En este tema se muestra cómo implementar un validador del certificado personalizado y cómo configurar el cliente o credenciales del servicio para reemplazar la lógica de validación de certificado predeterminada por el validador del certificado personalizado.  
   
  Si se utiliza el certificado X.509 para autenticar un cliente o servicio, Windows Communication Foundation (WCF) de forma predeterminada usa el almacén de certificados de Windows y Crypto API para validar el certificado y para asegurarse de que es de confianza. La funcionalidad integrada de validación del certificado no es suficiente y a veces se debe cambiar. WCF ofrece una manera fácil de cambiar la lógica de validación permitiendo a los usuarios agregar un validador de certificado personalizado. Si se especifica un validador de certificado personalizado, WCF no utiliza la lógica de validación de certificado integrada, pero se basa en el validador personalizado en su lugar.  

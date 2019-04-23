@@ -1,5 +1,5 @@
 ---
-title: Filtrar para ajustar un control de formularios Windows Forms con ToolStripControlHost
+title: Procedimiento para ajustar un control de formularios Windows Forms con ToolStripControlHost
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
 ms.openlocfilehash: ccf82b2ea767d69797af1ffa38381a7cc0fd3b67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308008"
 ---
-# <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Filtrar para ajustar un control de formularios Windows Forms con ToolStripControlHost
-<xref:System.Windows.Forms.ToolStripControlHost> está diseñado para habilitar el hospedaje de controles de Windows Forms arbitrarios mediante el uso de la <xref:System.Windows.Forms.ToolStripControlHost> constructor o mediante la extensión <xref:System.Windows.Forms.ToolStripControlHost> propio. Es más sencillo ajustar el control extendiendo <xref:System.Windows.Forms.ToolStripControlHost> e implementando las propiedades y los métodos que exponen las propiedades y los métodos del control que se usan con frecuencia. También puede exponer los eventos del control en el nivel de <xref:System.Windows.Forms.ToolStripControlHost>.  
+# <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Procedimiento para ajustar un control de formularios Windows Forms con ToolStripControlHost
+<xref:System.Windows.Forms.ToolStripControlHost> está diseñado para habilitar el hospedaje de controles de Windows Forms arbitrarios mediante el constructor <xref:System.Windows.Forms.ToolStripControlHost> o extendiendo el propio <xref:System.Windows.Forms.ToolStripControlHost>. Es más sencillo ajustar el control extendiendo <xref:System.Windows.Forms.ToolStripControlHost> e implementando las propiedades y los métodos que exponen las propiedades y los métodos del control que se usan con frecuencia. También puede exponer los eventos del control en el nivel de <xref:System.Windows.Forms.ToolStripControlHost>.  
   
 ### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a>Para hospedar un control en un ToolStripControlHost por derivación  
   

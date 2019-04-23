@@ -3,11 +3,11 @@ title: Ejemplo de identidad de servicio
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
 ms.openlocfilehash: 72068002572ff82d2f166ffdd79e455cec7a2961
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336400"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977865"
 ---
 # <a name="service-identity-sample"></a>Ejemplo de identidad de servicio
 Este ejemplo de identidad de servicio muestra cómo establecer la identidad para un servicio. En el momento del diseño, un cliente puede recuperar la identidad mediante los metadatos del servicio y, en el tiempo de ejecución, el cliente puede autenticar la identidad del servicio. El concepto de identidad del servicio es permitir a un cliente autenticar un servicio antes de llamar a cualquiera de sus operaciones, protegiendo por lo tanto al cliente de llamadas no autenticadas. En una conexión segura, el servicio autentica también las credenciales de un cliente antes de permitirle acceso, pero éste no es el objetivo de este ejemplo. Consulte los ejemplos en [cliente](../../../../docs/framework/wcf/samples/client.md) que muestran la autenticación de servidor.

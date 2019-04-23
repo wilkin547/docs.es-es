@@ -3,11 +3,11 @@ title: Seguridad de enlace personalizado
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
 ms.openlocfilehash: 1ff83d95dae06b787f8bc7ec8e1bf0f45c226532
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339455"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973621"
 ---
 # <a name="custom-binding-security"></a>Seguridad de enlace personalizado
 Este ejemplo muestra cómo configurar la seguridad mediante un enlace personalizado. Muestra cómo utilizar un enlace personalizado para habilitar la seguridad de nivel de mensaje junto con un transporte seguro. Esto es útil cuando se exige un transporte seguro que transmita los mensajes entre el cliente y servicio y simultáneamente los mensajes deben ser seguros en el nivel de mensaje. Los enlaces proporcionados por el sistema no admiten esta configuración.

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c587f4248205251824be851c135d93784e86c2f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646638"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59305044"
 ---
 # <a name="traversing-xml-schemas"></a>Cómo atravesar esquemas XML
 Al atravesar un esquema XML con la API del Modelo de objetos de esquema (SOM), se obtiene acceso a los elementos, atributos y tipos almacenados en el SOM. Atravesar un esquema XML cargado en el SOM es también el primer paso para editar un esquema XML utilizando la API del SOM.  
@@ -43,19 +43,19 @@ Al atravesar un esquema XML con la API del Modelo de objetos de esquema (SOM), s
   
  El ejemplo atraviesa el esquema del cliente en los siguientes pasos.  
   
-1.  Agrega el esquema del cliente a un objeto <xref:System.Xml.Schema.XmlSchemaSet> nuevo y luego lo compila. Cualquier error o advertencia de validación de esquemas que se encuentre durante la lectura o compilación del esquema se controla por medio del delegado <xref:System.Xml.Schema.ValidationEventHandler>.  
+1. Agrega el esquema del cliente a un objeto <xref:System.Xml.Schema.XmlSchemaSet> nuevo y luego lo compila. Cualquier error o advertencia de validación de esquemas que se encuentre durante la lectura o compilación del esquema se controla por medio del delegado <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2.  Recupera el objeto <xref:System.Xml.Schema.XmlSchema> compilado desde <xref:System.Xml.Schema.XmlSchemaSet> iterando por la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Puesto que el esquema se compila, las propiedades del conjunto de información posterior a la compilación del esquema son accesibles.  
+2. Recupera el objeto <xref:System.Xml.Schema.XmlSchema> compilado desde <xref:System.Xml.Schema.XmlSchemaSet> iterando por la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Puesto que el esquema se compila, las propiedades del conjunto de información posterior a la compilación del esquema son accesibles.  
   
-3.  Itera por cada <xref:System.Xml.Schema.XmlSchemaElement> en la colección <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> de la colección <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> posterior a la compilación del esquema escribiendo el nombre de cada elemento en la consola.  
+3. Itera por cada <xref:System.Xml.Schema.XmlSchemaElement> en la colección <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> de la colección <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> posterior a la compilación del esquema escribiendo el nombre de cada elemento en la consola.  
   
-4.  Obtiene el tipo complejo del elemento `Customer` utilizando la clase <xref:System.Xml.Schema.XmlSchemaComplexType>.  
+4. Obtiene el tipo complejo del elemento `Customer` utilizando la clase <xref:System.Xml.Schema.XmlSchemaComplexType>.  
   
-5.  Si el tipo complejo tiene algún atributo, obtiene un <xref:System.Collections.IDictionaryEnumerator> para realizar la enumeración por cada <xref:System.Xml.Schema.XmlSchemaAttribute> y escribe su nombre en la consola.  
+5. Si el tipo complejo tiene algún atributo, obtiene un <xref:System.Collections.IDictionaryEnumerator> para realizar la enumeración por cada <xref:System.Xml.Schema.XmlSchemaAttribute> y escribe su nombre en la consola.  
   
-6.  Obtiene la partícula de secuencia del tipo complejo utilizando la clase <xref:System.Xml.Schema.XmlSchemaSequence>.  
+6. Obtiene la partícula de secuencia del tipo complejo utilizando la clase <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-7.  Itera por cada <xref:System.Xml.Schema.XmlSchemaElement> de la colección <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> escribiendo el nombre de cada elemento secundario en la consola.  
+7. Itera por cada <xref:System.Xml.Schema.XmlSchemaElement> de la colección <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> escribiendo el nombre de cada elemento secundario en la consola.  
   
  Éste es el ejemplo de código completo.  
   

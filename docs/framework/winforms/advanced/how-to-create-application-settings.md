@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear la configuración de la aplicación
+title: Procedimiento para crear la configuración de la aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
 ms.openlocfilehash: 5cf109aec8b55650f43f07f5b303c6373df4efc7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305980"
 ---
-# <a name="how-to-create-application-settings"></a>Filtrar para crear la configuración de la aplicación
+# <a name="how-to-create-application-settings"></a>Procedimiento para crear la configuración de la aplicación
 Usando código administrado, puede crear una nueva opción de configuración de la aplicación y enlazarla a las propiedades o a los controles del formulario para que esta opción de configuración se cargue y se guarde automáticamente en tiempo de ejecución.  
   
  En el siguiente procedimiento, creará manualmente una clase contenedora que deriva de <xref:System.Configuration.ApplicationSettingsBase>. A esta clase se agrega una propiedad públicamente accesible para cada opción de configuración de la aplicación que desee exponer.  
@@ -51,4 +51,4 @@ Usando código administrado, puede crear una nueva opción de configuración de 
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [Introducción a la configuración de la aplicación](application-settings-overview.md)
-- [Filtrar para validar la configuración de la aplicación](how-to-validate-application-settings.md)
+- [Cómo: Validar la configuración de la aplicación](how-to-validate-application-settings.md)

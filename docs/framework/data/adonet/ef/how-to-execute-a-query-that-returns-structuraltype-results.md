@@ -1,18 +1,18 @@
 ---
-title: Filtrar para ejecutar una consulta que devuelve resultados StructuralType
+title: Procedimiento para ejecutar una consulta que devuelve resultados StructuralType
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2314f2a2-b1c3-40c4-95bb-cdf9b21a7b53
 ms.openlocfilehash: b306eaace09eda2c9bb3b88b793c48a6961b93e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304742"
 ---
-# <a name="how-to-execute-a-query-that-returns-structuraltype-results"></a>Filtrar para ejecutar una consulta que devuelve resultados StructuralType
+# <a name="how-to-execute-a-query-that-returns-structuraltype-results"></a>Procedimiento para ejecutar una consulta que devuelve resultados StructuralType
 En este tema se muestra cómo ejecutar un comando contra un modelo conceptual usando un objeto <xref:System.Data.EntityClient.EntityCommand>, y cómo recuperar los resultados de <xref:System.Data.Metadata.Edm.StructuralType> usando un <xref:System.Data.EntityClient.EntityDataReader>. Las clases <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.RowType> y <xref:System.Data.Metadata.Edm.ComplexType> se derivan de la clase <xref:System.Data.Metadata.Edm.StructuralType>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  

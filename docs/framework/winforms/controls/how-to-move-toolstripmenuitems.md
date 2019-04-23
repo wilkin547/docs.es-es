@@ -1,5 +1,5 @@
 ---
-title: Filtrar para mover elementos ToolStripMenuItems
+title: Procedimiento para mover elementos ToolStripMenuItems
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], moving
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
 ms.openlocfilehash: 2203511e91254c270c59b5d298dd87a5b3737109
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308365"
 ---
-# <a name="how-to-move-toolstripmenuitems"></a>Filtrar para mover elementos ToolStripMenuItems
+# <a name="how-to-move-toolstripmenuitems"></a>Procedimiento para mover elementos ToolStripMenuItems
 En tiempo de diseño, puede mover los menús de nivel superior completos y sus elementos de menú a un lugar diferente el <xref:System.Windows.Forms.MenuStrip>. También puede mover elementos de menú individuales entre los menús de nivel superior o cambiar la posición de los elementos de menú dentro de un menú.  
   
 > [!NOTE]

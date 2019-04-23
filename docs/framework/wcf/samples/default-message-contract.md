@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
 ms.openlocfilehash: 267cdffdc532aaa2b31de835c31d23e93aca8c54
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315522"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975941"
 ---
 # <a name="default-message-contract"></a>Contrato de mensaje predeterminado
 El ejemplo de contrato de mensaje predeterminado muestra un servicio donde un mensaje personalizado definido por el usuario se pasa a las operaciones de servicio y desde ellas. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa una interfaz de calculadora como un servicio con tipo. En lugar de las operaciones de servicio individuales de suma, resta, multiplicación y división utilizadas en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), este ejemplo pasa un mensaje personalizado que contiene los operandos y el operador y devuelve el resultado del cálculo aritmético.  

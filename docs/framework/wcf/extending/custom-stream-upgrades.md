@@ -3,11 +3,11 @@ title: Actualizaciones personalizadas de secuencias
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
 ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345253"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977774"
 ---
 # <a name="custom-stream-upgrades"></a>Actualizaciones personalizadas de secuencias
 Los transportes orientados a secuencia como TCP y las canalizaciones con nombre funcionan en una secuencia continua de bytes entre el cliente y servidor. Esta secuencia la realiza un objeto <xref:System.IO.Stream>. En una actualización de secuencia, el cliente desea agregar una capa de protocolo opcional a la pila del canal y pide al otro lado del canal de comunicación que lo haga. La actualización de secuencia consiste en reemplazar el objeto <xref:System.IO.Stream> original con uno actualizado.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - status bars [Windows Forms], about status bars
 ms.assetid: c0d9bcbb-f8b8-46ef-bae2-4146b8c8ce99
 ms.openlocfilehash: f6f2d4b19b7ec91c964c72e3aca85e0253c7cc22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129719"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977033"
 ---
 # <a name="statusstrip-control-overview"></a>Información general del control StatusStrip
 Un control <xref:System.Windows.Forms.StatusStrip> muestra información sobre un objeto que se visualiza en <xref:System.Windows.Forms.Form>, componentes del objeto o información contextual relativa a esa operación del objeto en la aplicación. Normalmente, un control <xref:System.Windows.Forms.StatusStrip> está formado por objetos <xref:System.Windows.Forms.ToolStripStatusLabel>, cada uno de los cuales muestra texto, un icono o ambos. El control <xref:System.Windows.Forms.StatusStrip> también puede contener los controles <xref:System.Windows.Forms.ToolStripDropDownButton>, <xref:System.Windows.Forms.ToolStripSplitButton> y <xref:System.Windows.Forms.ToolStripProgressBar>.  

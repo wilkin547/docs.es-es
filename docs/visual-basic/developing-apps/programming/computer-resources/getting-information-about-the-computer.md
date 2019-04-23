@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Info object [Visual Basic], tasks
 ms.assetid: 13c145bc-5c85-4fea-a5dd-2ca8681a0252
 ms.openlocfilehash: 00e6acd7cdbb41d8d763ae2a948bf9c108d54d59
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823459"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768883"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>Obtener información sobre el equipo (Visual Basic)
 El objeto `My.Computer.Info` proporciona propiedades para obtener información sobre la memoria, los ensamblados cargados, el nombre y el sistema operativo del equipo.  

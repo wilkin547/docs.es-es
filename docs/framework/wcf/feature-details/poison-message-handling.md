@@ -3,10 +3,10 @@ title: Control de mensajes dudosos
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305031"
 ---
 # <a name="poison-message-handling"></a>Control de mensajes dudosos
@@ -23,7 +23,7 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
   
 -   `MaxRetryCycles`. Un valor entero que indica el número máximo de ciclos de reintento. Un ciclo de reintento consiste en transferir un mensaje de la cola de la aplicación a una subcola de intento y, después de un retraso configurable, de la subcola de intento de vuelta a la cola de la aplicación para reintentar la entrega. El valor predeterminado es 2. En [!INCLUDE[wv](../../../../includes/wv-md.md)], el mensaje se intenta un máximo de (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) veces. `MaxRetryCycles` se omite en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   `RetryCycleDelay`. El tiempo de retardo entre los ciclos de reintento. El valor predeterminado es de 30 minutos. `MaxRetryCycles` y `RetryCycleDelay` juntos proporcionan un mecanismo para resolver el problema donde un reintento después de un retraso periódico corrige el problema. Por ejemplo, esto controla un conjunto de filas bloqueado en confirmación de la transacción pendiente de SQL Server.  
+-   `RetryCycleDelay`. El tiempo de retardo entre los ciclos de reintento. El valor predeterminado es de 30 minutos. `MaxRetryCycles` y `RetryCycleDelay` proporcionan juntos un mecanismo para resolver el problema donde un reintento después de un retraso periódico corrige el problema. Por ejemplo, esto controla un conjunto de filas bloqueado en confirmación de la transacción pendiente de SQL Server.  
   
 -   `ReceiveErrorHandling`. Una enumeración que indica la acción a realizar para un mensaje en el que se ha producido un error tras intentar el número máximo de reintentos. Los valores pueden ser Fault, Drop, Reject, y Move. La opción de unidad predeterminada es Fault.  
   
@@ -92,7 +92,7 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
  Si un mensaje se vuelve un mensaje dudoso y es parte de un lote, se deshace el lote completo y el canal vuelve a leer un mensaje cada vez. Para obtener más información sobre el procesamiento por lotes, vea [mensajes por lotes en una transacción](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Control de mensajes dudosos para mensajes en una cola de mensajes dudosos  
- El control de mensajes dudosos no finaliza cuando un mensaje se coloca en la cola de mensajes dudosos. Los mensajes de la cola de mensajes dudosos también se deben leer y controlar. Puede utilizar un subconjunto de los valores de control de mensajes dudosos al leer mensajes de la subcola final de mensajes dudosos. La configuración aplicable es `ReceiveRetryCount` y `ReceiveErrorHandling`. Puede establecer `ReceiveErrorHandling` en Drop, Reject o Fault. `MaxRetryCycles` se omite y se produce una excepción si `ReceiveErrorHandling` se establece en Move.  
+ El control de mensajes dudosos no finaliza cuando un mensaje se coloca en la cola de mensajes dudosos. Los mensajes de la cola de mensajes dudosos también se deben leer y controlar. Puede utilizar un subconjunto de los valores de control de mensajes dudosos al leer mensajes de la subcola final de mensajes dudosos. La configuración aplicable es `ReceiveRetryCount` y `ReceiveErrorHandling`. Puede establecer `ReceiveErrorHandling` en Drop, Reject o Fault. Se omite `MaxRetryCycles` y se produce una excepción si `ReceiveErrorHandling` se establece en Move.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Diferencias entre Windows Vista, Windows Server 2003, y Windows XP  
  Como se ha apuntado anteriormente, no todos los valores de control de mensajes dudosos son aplicables a [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Las siguientes diferencias clave entre Message Queuing (MSMQ) en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y [!INCLUDE[wv](../../../../includes/wv-md.md)] son pertinentes para el control de mensajes dudosos:  
@@ -107,4 +107,4 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
 
 - [Información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
-- [Especificación y administración de errores en contratos y servicios](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Especificación y gestión de errores en contratos y servicios](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

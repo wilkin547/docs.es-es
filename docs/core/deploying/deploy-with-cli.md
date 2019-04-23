@@ -9,10 +9,10 @@ dev_langs:
 - vb
 ms.custom: seodec18
 ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306071"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publicación de aplicaciones .NET Core con la CLI
@@ -128,8 +128,7 @@ Al publicar un FDE se crea una aplicación que realiza la puesta al día automá
 
 Excepto para .NET Core 3.x cuando el destino es la plataforma actual, se deben usar los siguientes modificadores con el comando `dotnet publish` para publicar un FDE:
 
-- `-r <RID>`
-  Este modificador usa un identificador (RID) para especificar la plataforma de destino. Para obtener una lista de identificadores de tiempo de ejecución, vea [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md).
+- `-r <RID>` Este modificador usa un identificador (RID) para especificar la plataforma de destino. Para obtener una lista de identificadores de tiempo de ejecución, vea [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md).
 
 - `--self-contained false` Este modificador indica al SDK de .NET Core que cree un archivo ejecutable como un FDE.
 
@@ -148,8 +147,7 @@ Al publicar una SCD, se crea una aplicación que no se pone al día a la revisi�
 
 Debe usar los modificadores siguientes con el comando `dotnet publish` para publicar una SCD:
 
-- `-r <RID>`
-  Este modificador usa un identificador (RID) para especificar la plataforma de destino. Para obtener una lista de identificadores de tiempo de ejecución, vea [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md).
+- `-r <RID>` Este modificador usa un identificador (RID) para especificar la plataforma de destino. Para obtener una lista de identificadores de tiempo de ejecución, vea [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md).
 
 - `--self-contained true` Este modificador indica al SDK de .NET Core que cree un archivo ejecutable como una SCD.
 
@@ -158,5 +156,5 @@ Debe usar los modificadores siguientes con el comando `dotnet publish` para publ
 
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre la implementación de aplicaciones .NET Core](index.md)
+- [Información general sobre la implementación de aplicaciones .NET Core](index.md)
 - [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)

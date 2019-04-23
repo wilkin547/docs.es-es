@@ -1,5 +1,5 @@
 ---
-title: Filtrar Habilitar AutoComplete en los controles ToolStrip de Windows Forms
+title: Procedimiento Habilitar AutoComplete en los controles ToolStrip de Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
 ms.openlocfilehash: d7919bf87444ef6c4a64ee236356e762da14853f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307904"
 ---
-# <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>Filtrar Habilitar AutoComplete en los controles ToolStrip de Windows Forms
+# <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>Procedimiento Habilitar AutoComplete en los controles ToolStrip de Windows Forms
 El procedimiento siguiente combina una <xref:System.Windows.Forms.ToolStripLabel> con un <xref:System.Windows.Forms.ToolStripComboBox> que se puede desplegar hacia abajo mostrar una lista de elementos, tales como recientemente de los sitios Web visitados. Si el usuario escribe un carácter que coincide con el primer carácter de uno de los elementos de la lista, el elemento se muestra inmediatamente.  
   
 > [!NOTE]

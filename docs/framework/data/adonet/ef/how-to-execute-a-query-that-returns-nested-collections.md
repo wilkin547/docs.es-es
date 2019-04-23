@@ -1,18 +1,18 @@
 ---
-title: Filtrar para ejecutar una consulta que devuelve colecciones anidadas
+title: Procedimiento para ejecutar una consulta que devuelve colecciones anidadas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f7f385f3-ffcf-4f3b-af35-de8818938e5f
 ms.openlocfilehash: c923ffb6e2653c148b9523b99c4717d42ea57427
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308411"
 ---
-# <a name="how-to-execute-a-query-that-returns-nested-collections"></a>Filtrar para ejecutar una consulta que devuelve colecciones anidadas
+# <a name="how-to-execute-a-query-that-returns-nested-collections"></a>Procedimiento para ejecutar una consulta que devuelve colecciones anidadas
 Aquí se explica cómo ejecutar un comando en un modelo conceptual utilizando un objeto <xref:System.Data.EntityClient.EntityCommand> y cómo recuperar los  resultados de la colección anidados utilizando <xref:System.Data.EntityClient.EntityDataReader>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  

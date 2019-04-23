@@ -3,11 +3,11 @@ title: Enlace HTTP de federación de WS 2007
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
 ms.openlocfilehash: 550a88552658864e3eedb70463e676ad6f9a2511
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324947"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769533"
 ---
 # <a name="ws-2007-federation-http-binding"></a>Enlace HTTP de federación de WS 2007
 Este ejemplo muestra el uso de <xref:System.ServiceModel.WS2007FederationHttpBinding>, un enlace estándar que puede utilizar para generar escenarios federados que admiten la versión 1.3 de la especificación WS-Trust.  

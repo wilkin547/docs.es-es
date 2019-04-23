@@ -1,5 +1,5 @@
 ---
-title: Filtrar Mostrar los botones de opción en un control MenuStrip (formularios Windows Forms)
+title: Procedimiento Mostrar los botones de opción en un control MenuStrip (formularios Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
 ms.openlocfilehash: e764c7e181870d8faf6157cacc13164977ce2e3b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306240"
 ---
-# <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Filtrar Mostrar los botones de opción en un control MenuStrip (formularios Windows Forms)
+# <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Procedimiento Mostrar los botones de opción en un control MenuStrip (formularios Windows Forms)
 Botones de opción, también conocido como botones de radio, son similares a las casillas excepto en que los usuarios pueden seleccionar solo uno en uno. Aunque de forma predeterminada el <xref:System.Windows.Forms.ToolStripMenuItem> clase no proporciona el comportamiento del botón de opción, la clase proporciona el comportamiento de la casilla de verificación que se puede personalizar para implementar el comportamiento del botón de opción para los elementos de menú en un <xref:System.Windows.Forms.MenuStrip> control.  
   
  Cuando el <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> es propiedad de un elemento de menú `true`, los usuarios hacer clic en el elemento para alternar la presentación de una marca de verificación. El <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> propiedad indica el estado actual del elemento. Para implementar el comportamiento del botón de opción básico, debe asegurarse de que cuando se selecciona un elemento, establecen el <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> propiedad del elemento seleccionado anteriormente para `false`.  
@@ -91,4 +91,4 @@ Botones de opción, también conocido como botones de radio, son similares a las
 - <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RadioButtonRenderer>
 - [Control MenuStrip](menustrip-control-windows-forms.md)
-- [Filtrar para implementar un control ToolStripRenderer personalizado](how-to-implement-a-custom-toolstriprenderer.md)
+- [Cómo: Implementar un control ToolStripRenderer personalizado](how-to-implement-a-custom-toolstriprenderer.md)

@@ -1,18 +1,18 @@
 ---
-title: Filtrar Pasar procedimientos a otro procedimiento en Visual Basic
+title: Procedimiento Pasar procedimientos a otro procedimiento en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
 ms.openlocfilehash: 312c0e0f100e85256ad4ca856ccf7f35dbaa36dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305252"
 ---
-# <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Filtrar Pasar procedimientos a otro procedimiento en Visual Basic
+# <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Procedimiento Pasar procedimientos a otro procedimiento en Visual Basic
 En este ejemplo se muestra cómo utilizar a delegados para pasar un procedimiento a otro procedimiento.  
   
  Un delegado es un tipo que puede usar como cualquier otro tipo en Visual Basic. El `AddressOf` operador devuelve un objeto de delegado cuando se aplica a un nombre de procedimiento.  
@@ -48,6 +48,6 @@ En este ejemplo se muestra cómo utilizar a delegados para pasar un procedimient
 ## <a name="see-also"></a>Vea también
 
 - [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [AddressOf (Operador)](../../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Delegate (Instrucción)](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Filtrar para invocar un método delegado](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [AddressOf (operador)](../../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Delegate (instrucción)](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Cómo: Invocar un método delegado](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

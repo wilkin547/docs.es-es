@@ -3,11 +3,11 @@ title: 'Modelos de diseño: suscripción-publicación basada en la lista'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
 ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312051"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768441"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Modelos de diseño: suscripción-publicación basada en la lista
 Este ejemplo muestra el patrón basado en lista suscripción-publicación implementado como un programa de Windows Communication Foundation (WCF).  

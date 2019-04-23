@@ -1,18 +1,18 @@
 ---
-title: Filtrar para llamar a funciones definidas por el modelo como métodos de objeto
+title: Procedimiento para llamar a funciones definidas por el modelo como métodos de objeto
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
 ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304836"
 ---
-# <a name="how-to-call-model-defined-functions-as-object-methods"></a>Filtrar para llamar a funciones definidas por el modelo como métodos de objeto
+# <a name="how-to-call-model-defined-functions-as-object-methods"></a>Procedimiento para llamar a funciones definidas por el modelo como métodos de objeto
 En este tema se describe cómo llamar a una función definida por el modelo como un método en un objeto <xref:System.Data.Objects.ObjectContext> o como un método estático en una clase personalizada. Un *función definida por modelo* es una función que se define en el modelo conceptual. Los procedimientos de este tema describen cómo llamar directamente a estas funciones en lugar de hacerlo desde consultas LINQ to Entities. Para obtener información sobre cómo llamar a funciones definidas por el modelo de LINQ a consultas de entidades, vea [Cómo: Llamar a funciones definidas por el modelo en consultas](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
   
  Tanto si se llama a una función definida por el modelo como un método <xref:System.Data.Objects.ObjectContext> o como un método estático en una clase personalizada, primero se deberá asignar el método a dicha función con un atributo <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Sin embargo, si se define un método en la clase <xref:System.Data.Objects.ObjectContext>, se debe usar la propiedad <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> para exponer el proveedor LINQ, mientras que si se define un método estático en una clase personalizada, se debe usar la propiedad <xref:System.Linq.IQueryable.Provider%2A> para exponer dicho proveedor. Para obtener más información, vea los ejemplos que aparecen a continuación de los procedimientos siguientes.  
@@ -107,6 +107,6 @@ En este tema se describe cómo llamar a una función definida por el modelo como
   
 ## <a name="see-also"></a>Vea también
 
-- [.edmx, Información general sobre el archivo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Introducción al archivo .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Consultas en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
-- [Llamar a funciones en consultas de LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
+- [Llamada a funciones en consultas de LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Controlar el evento ScrollChanged
+title: Procedimiento Controlar el evento ScrollChanged
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - ScrollChanged events [WPF]
 ms.assetid: 42c695d8-ee28-49d4-80fd-fc71e9be7f29
 ms.openlocfilehash: 54f20a4b8c6e6fcc190257fcf5de4374415d68b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206153"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974167"
 ---
-# <a name="how-to-handle-the-scrollchanged-event"></a>Filtrar Controlar el evento ScrollChanged
+# <a name="how-to-handle-the-scrollchanged-event"></a>Procedimiento Controlar el evento ScrollChanged
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo controlar el <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> eventos de un <xref:System.Windows.Controls.ScrollViewer>.  
   

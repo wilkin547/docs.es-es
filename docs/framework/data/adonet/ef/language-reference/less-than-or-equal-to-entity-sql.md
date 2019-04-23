@@ -3,10 +3,10 @@ title: < = (menor o igual que) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 7c46da5c-fa09-4d90-adcc-c7e1b769d8e6
 ms.openlocfilehash: 7a65984da22d125bdbdd5cfadb5a2051fa3dafdc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304771"
 ---
 # <a name="-less-than-or-equal-to-entity-sql"></a>\<= (Menor o igual que) (Entity SQL)
@@ -23,7 +23,7 @@ expression <= expression
  Cualquier expresión válida. Ambas expresiones deben tener tipos de datos convertibles implícitamente.  
   
 ## <a name="result-types"></a>Tipos de resultado  
- `true` Si la expresión izquierda tiene un valor menor o igual a la expresión derecha; en caso contrario, `false`.  
+ `true` si la expresión izquierda tiene un valor igual o menor que el de la expresión derecha; de lo contrario, `false`.  
   
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza el operador de comparación <= para comparar dos expresiones con el fin de determinar si la expresión izquierda tiene un valor igual o menor que el de la expresión derecha. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  

@@ -1,18 +1,18 @@
 ---
-title: Filtrar para declarar errores en contratos de servicios
+title: Procedimiento para declarar errores en contratos de servicios
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
 ms.openlocfilehash: 0e173f71201d5f98a04d2ad922469e4ff6666681
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327079"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768597"
 ---
-# <a name="how-to-declare-faults-in-service-contracts"></a>Filtrar para declarar errores en contratos de servicios
+# <a name="how-to-declare-faults-in-service-contracts"></a>Procedimiento para declarar errores en contratos de servicios
 En código administrado, las excepciones se inician al producirse condiciones de error. Sin embargo, en las aplicaciones de Windows Communication Foundation (WCF), los contratos de servicio especifican qué información de error se devuelve a los clientes mediante la declaración de los errores de SOAP en el contrato de servicio. Para obtener información general de la relación entre las excepciones y errores, vea [especificar y controlar errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>Crear un contrato de servicio que especifica un error de SOAP  

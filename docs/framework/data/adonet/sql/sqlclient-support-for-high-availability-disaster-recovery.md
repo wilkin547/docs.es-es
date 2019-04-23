@@ -3,10 +3,10 @@ title: Compatibilidad de SqlClient para alta disponibilidad y recuperación ante
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307625"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SqlClient para alta disponibilidad y recuperación ante desastres
@@ -79,7 +79,7 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
   
  La palabra clave `ApplicationIntent` no funciona con bases de datos heredadas de solo lectura.  
   
- Una base de datos puede permitir o denegar cargas de trabajo de lectura en la base de datos de destino de AlwaysOn. (Esto se realiza con el `ALLOW_CONNECTIONS` cláusula de la `PRIMARY_ROLE` y `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrucciones.)  
+ Una base de datos puede permitir o denegar cargas de trabajo de lectura en la base de datos de destino de AlwaysOn. (Esto se hace con la cláusula `ALLOW_CONNECTIONS` de las instrucciones `PRIMARY_ROLE` y `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)].)  
   
  La palabra clave `ApplicationIntent` se usa para habilitar el enrutamiento de solo lectura.  
   
@@ -99,4 +99,4 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
 ## <a name="see-also"></a>Vea también
 
 - [Características de SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

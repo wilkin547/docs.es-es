@@ -3,11 +3,11 @@ title: Usar una actividad personalizada
 ms.date: 03/30/2017
 ms.assetid: 8f356419-681a-4175-ae93-878eee970249
 ms.openlocfilehash: 47ddd42168445aa23eaaded6fd19ffe4698e4117
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309620"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973361"
 ---
 # <a name="using-a-custom-activity"></a>Usar una actividad personalizada
 Las actividades que se derivan de <xref:System.Activities.Activity> o sus subclases pueden componerse en flujos de trabajo de mayor tamaño o crearse directamente en el código. En este tema se describe cómo usar las actividades personalizadas en flujos de trabajo creados en el código o en el diseñador.  

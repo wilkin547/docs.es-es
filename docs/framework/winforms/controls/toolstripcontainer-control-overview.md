@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms], about ToolStripContainer control
 ms.assetid: c7d63bff-64e2-4a63-bd89-d31bc96dacb8
 ms.openlocfilehash: c279316c2a372a1498707b27ec8658813306304b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191268"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768337"
 ---
 # <a name="toolstripcontainer-control-overview"></a>Información general del control ToolStripContainer
 Un <xref:System.Windows.Forms.ToolStripContainer> tiene paneles a su izquierda, derecha, superior y lados de la parte inferior para colocar y compartir el espacio <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, y <xref:System.Windows.Forms.StatusStrip> controles. Los diferentes controles <xref:System.Windows.Forms.ToolStrip> se apilan verticalmente si los coloca en el <xref:System.Windows.Forms.ToolStripContainer> izquierdo o derecho. Se apilan horizontalmente si los coloca en el <xref:System.Windows.Forms.ToolStripContainer> superior o inferior. Puede usar el <xref:System.Windows.Forms.ToolStripContentPanel> central del <xref:System.Windows.Forms.ToolStripContainer> para colocar controles tradicionales en el formulario.  

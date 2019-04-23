@@ -1,5 +1,5 @@
 ---
-title: Filtrar para ordenar y filtrar datos ADO.NET con el componente BindingSource de formularios Windows Forms
+title: Procedimiento para ordenar y filtrar datos ADO.NET con el componente BindingSource de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
 ms.openlocfilehash: 8904eff39b7278b2a185cc5e2f738ece1e8e88e4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306513"
 ---
-# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Filtrar para ordenar y filtrar datos ADO.NET con el componente BindingSource de formularios Windows Forms
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Procedimiento para ordenar y filtrar datos ADO.NET con el componente BindingSource de formularios Windows Forms
 Puede exponer la ordenación y filtrado de capacidad de <xref:System.Windows.Forms.BindingSource> controlar a través de la <xref:System.Windows.Forms.BindingSource.Sort%2A> y <xref:System.Windows.Forms.BindingSource.Filter%2A> propiedades. Puede aplicar la ordenación simple si el origen de datos subyacente es un <xref:System.ComponentModel.IBindingList>, y puede aplicar el filtrado y ordenación cuando el origen de datos es avanzada un <xref:System.ComponentModel.IBindingListView>. El <xref:System.Windows.Forms.BindingSource.Sort%2A> propiedad requiere estándar [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] sintaxis: una cadena que representa el nombre de una columna de datos del origen de datos seguida `ASC` o `DESC` para indicar si la lista debe ordenarse en orden ascendente o descendente. Puede establecer la ordenación avanzada o varias columnas de ordenación separando cada columna con un separador de coma. El <xref:System.Windows.Forms.BindingSource.Filter%2A> propiedad toma una expresión de cadena.  
   
 > [!NOTE]
@@ -57,5 +57,5 @@ Puede exponer la ordenación y filtrado de capacidad de <xref:System.Windows.For
 
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>
-- [Filtrar Instalar bases de datos de ejemplo](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/8b6y4c7s(v=vs.120))
+- [Cómo: Instalar bases de datos de ejemplo](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/8b6y4c7s(v=vs.120))
 - [Componente BindingSource](bindingsource-component.md)

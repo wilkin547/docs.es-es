@@ -1,15 +1,15 @@
 ---
-title: Filtrar para crear un servicio transaccional
+title: Procedimiento para crear un servicio transaccional
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
 ms.openlocfilehash: 7f7f060db5a4ffd66524e220e3e3291debd8a3fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329497"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769663"
 ---
-# <a name="how-to-create-a-transactional-service"></a>Filtrar para crear un servicio transaccional
+# <a name="how-to-create-a-transactional-service"></a>Procedimiento para crear un servicio transaccional
 Este ejemplo muestra varios aspectos sobre la creación de un servicio transaccional y el uso de una transacción iniciada por el cliente para coordinar las operaciones de servicio.  
   
 ### <a name="creating-a-transactional-service"></a>Creación de un servicio transaccional  

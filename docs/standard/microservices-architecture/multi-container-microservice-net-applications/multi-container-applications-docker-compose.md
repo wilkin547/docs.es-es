@@ -4,12 +4,12 @@ description: Cómo se especifica la composición de microservicios para una apli
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 4f4918a6f26a617fad38c7955415c4ff559a9187
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: f40559ef7c41febb5e17d583ef2d0eb64addc0a8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920784"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613192"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definir una aplicación de varios contenedores con docker-compose.yml
 
@@ -423,7 +423,7 @@ Tenga en cuenta que los valores establecidos en el entorno en tiempo de ejecuci�
 #### <a name="additional-resources"></a>Recursos adicionales
 
 - **Introducción a Docker Compose** \
-    [https://docs.docker.com/compose/overview/](https://docs.docker.com/compose/overview/)
+    <https://docs.docker.com/compose/overview/>
 
 - **Varios archivos de Compose** \
     [https://docs.docker.com/compose/extends/\#multiple-compose-files](https://docs.docker.com/compose/extends/#multiple-compose-files)
@@ -466,7 +466,7 @@ Para un inicio más rápido, las imágenes en tiempo de ejecución también conf
 #### <a name="additional-resources"></a>Recursos adicionales
 
 - **Compilación de imágenes de Docker optimizadas con ASP.NET Core** \
-    [https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
+    <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
 
 - **Compilación de imágenes de Docker para aplicaciones .NET Core** \
     [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)

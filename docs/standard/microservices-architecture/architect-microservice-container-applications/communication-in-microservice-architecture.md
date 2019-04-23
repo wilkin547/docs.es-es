@@ -4,12 +4,12 @@ description: Explore distintas formas de comunicación entre microservicios, y c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4b57607897e42ff68ff7566120bc3c932040a2a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 364bd4eb82907fcf0fbcc850eca839f676a2dbf8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466197"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613244"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Comunicación en una arquitectura de microservicio
 
@@ -90,10 +90,10 @@ El uso de servicios REST de HTTP como lenguaje de definición de interfaz ofrece
 ### <a name="additional-resources"></a>Recursos adicionales
 
 - **Martin Fowler. Richardson Maturity Model** A description of the REST model (Modelo de madurez Richardson. Una descripción del modelo REST). \
-  [https://martinfowler.com/articles/richardsonMaturityModel.html](https://martinfowler.com/articles/richardsonMaturityModel.html)
+  <https://martinfowler.com/articles/richardsonMaturityModel.html>
 
 - **Swagger** Sitio oficial. \
-  [https://swagger.io/](https://swagger.io/)
+  <https://swagger.io/>
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>Comunicación de inserción y en tiempo real basada en HTTP
 

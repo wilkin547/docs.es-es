@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear un token personalizado
+title: Procedimiento para crear un token personalizado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
 ms.openlocfilehash: 9fae195247dea4cbd049f7157f04e87bb97d6f4d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304667"
 ---
-# <a name="how-to-create-a-custom-token"></a>Filtrar para crear un token personalizado
+# <a name="how-to-create-a-custom-token"></a>Procedimiento para crear un token personalizado
 Este tema muestra cómo crear un token de seguridad personalizado mediante la clase <xref:System.IdentityModel.Tokens.SecurityToken> y cómo integrarlo en un autenticador y en un proveedor de token de seguridad personalizado. Para obtener un ejemplo de código completo, vea el [personalizado Token](../../../../docs/framework/wcf/samples/custom-token.md) ejemplo.  
   
  Un *token de seguridad* es esencialmente un elemento XML que se usa el marco de seguridad de Windows Communication Foundation (WCF) para representar demandas sobre un remitente dentro del mensaje SOAP. Seguridad de WCF proporciona varios tokens para los modos de autenticación proporcionado por el sistema. En los ejemplos se incluye un token de seguridad de certificado X.509 representado por la clase <xref:System.IdentityModel.Tokens.X509SecurityToken> o un token de seguridad Username representado por la clase <xref:System.IdentityModel.Tokens.UserNameSecurityToken>.  
@@ -161,6 +161,6 @@ Este tema muestra cómo crear un token de seguridad personalizado mediante la cl
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [Tutorial: Crear credenciales de cliente y servicio personalizadas](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Filtrar para crear un autenticador de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Filtrar para crear un proveedor de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Tutorial: Creación de cliente personalizada y las credenciales de servicio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Cómo: Crear un autenticador de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Cómo: Crear un proveedor de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)

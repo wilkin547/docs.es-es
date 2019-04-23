@@ -3,12 +3,12 @@ title: Árboles de expresiones en detalle
 description: Obtenga información sobre los árboles de expresión y cómo son útiles en la traducción de algoritmos para la ejecución externa y la inspección de código antes de ejecutarlo.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 97cba9e5ec388729d23fb2689dfc1842a42af9b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216874"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613426"
 ---
 # <a name="expression-trees-explained"></a>Árboles de expresiones en detalle
 
@@ -16,31 +16,34 @@ ms.locfileid: "33216874"
 
 Los árboles de expresiones son estructuras de datos que definen código. Se basan en las mismas estructuras que usa un compilador para analizar el código y generar el resultado compilado. A medida que vaya leyendo este tutorial, observará cierta similitud entre los árboles de expresiones y los tipos usados en las API de Roslyn para compilar [analizadores y correcciones de código](https://github.com/dotnet/roslyn-analyzers).
 (Los analizadores y las correcciones de código son paquetes de NuGet que realizan un análisis estático en código y pueden sugerir posibles correcciones para un desarrollador). Los conceptos son similares y el resultado final es una estructura de datos que permite examinar el código fuente de forma significativa. En cambio, los árboles de expresiones se basan en un conjunto de clases y API totalmente diferente a las API de Roslyn.
-    
+
 Veamos un ejemplo sencillo.
 Aquí tiene una línea de código:
+
 ```csharp
 var sum = 1 + 2;
 ```
+
 Si fuera a analizarlo como un árbol de expresión, el árbol contiene varios nodos.
 El nodo más externo es una instrucción de declaración de variable con asignación (`var sum = 1 + 2;`). Ese nodo exterior contiene varios nodos secundarios: una declaración de variable, un operador de asignación y una expresión que representa el lado derecho del signo igual. Esa expresión se subdivide aún más en expresiones que representan la operación de suma, y los operandos izquierdo y derecho de la suma.
 
 Vamos a profundizar un poco más en las expresiones que constituyen el lado derecho del signo igual.
-La expresión es `1 + 2`. Se trata de una expresión binaria. Concretamente, es una expresión binaria de suma. Una expresión binaria de suma tiene dos elementos secundarios, que representan los nodos izquierdo y derecho de la expresión de suma. En este caso, ambos nodos son expresiones constantes: el operando izquierdo es el valor `1` y el operando derecho es el valor `2`.
+La expresión es `1 + 2`. Se trata de una expresión binaria. Concretamente, es una expresión binaria de suma. Una expresión binaria de suma tiene dos elementos secundarios, que representan los nodos izquierdo y derecho de la expresión de suma. Aquí, ambos nodos son expresiones constantes: El operador izquierdo es el valor `1` y el operador derecho, el valor `2`.
 
 Visualmente, toda la instrucción es un árbol: puede empezar en el nodo raíz y desplazarse a cada uno de los nodos del árbol para ver el código que compone la instrucción:
 
 - Instrucción de declaración de variable con asignación (`var sum = 1 + 2;`)
-    * Declaración de tipo de variable implícita (`var sum`)
-        - Palabra clave var implícita (`var`)
-        - Declaración de nombre de variable (`sum`)
-    * Operador de asignación (`=`)
-    * Expresión binaria de suma (`1 + 2`)
-        - Operando izquierdo (`1`)
-        - Operador de suma (`+`)
-        - Operando derecho (`2`)
+  * Declaración de tipo de variable implícita (`var sum`)
+    - Palabra clave var implícita (`var`)
+    - Declaración de nombre de variable (`sum`)
+  * Operador de asignación (`=`)
+  * Expresión binaria de suma (`1 + 2`)
+    - Operando izquierdo (`1`)
+    - Operador de suma (`+`)
+    - Operando derecho (`2`)
 
 Esto puede parecer complicado, pero resulta muy eficaz. Siguiendo el mismo proceso, puede descomponer expresiones mucho más complicadas. Tomemos esta expresión como ejemplo:
+
 ```csharp
 var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
@@ -64,6 +67,6 @@ También puede convertir un árbol de expresión en un delegado ejecutable y eje
 
 Las API de los árboles de expresiones permiten crear árboles que representan casi cualquier construcción de código válida. En cambio, para que todo resulte lo más sencillo posible, algunas expresiones de C# no se pueden crear en un árbol de expresión. Un ejemplo son las expresiones asincrónicas (mediante las palabras clave `async` y `await`). Si necesita algoritmos asincrónicos, tendría que manipular los objetos `Task` directamente, en lugar de confiar en la compatibilidad del compilador. Otro ejemplo es en la creación de bucles. Normalmente, puede crearlos usando bucles `for`, `foreach`, `while` o `do`. Como verá [más adelante en esta serie](expression-trees-building.md), las API de los árboles de expresiones admiten una expresión de bucle individual, con expresiones `break` y `continue` que controlan la repetición del bucle.
 
-Lo único lo que no se puede hacer es modificar un árbol de expresión.  Los árboles de expresiones son estructuras de datos inmutables. Si quiere mutar (cambiar) un árbol de expresión, debe crear un nuevo árbol que sea una copia del original, pero con los cambios que quiera. 
+Lo único lo que no se puede hacer es modificar un árbol de expresión.  Los árboles de expresiones son estructuras de datos inmutables. Si quiere mutar (cambiar) un árbol de expresión, debe crear un nuevo árbol que sea una copia del original, pero con los cambios que quiera.
 
 [Siguiente: Tipos de marco que admiten árboles de expresión](expression-classes.md)

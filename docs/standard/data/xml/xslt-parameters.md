@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63a394bd30b3586f084dc1a2320fa9133da19b64
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191891"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306321"
 ---
 # <a name="xslt-parameters"></a>Parámetros XSLT
 Los parámetros XSLT se agregan a <xref:System.Xml.Xsl.XsltArgumentList> mediante el método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. En ese momento se asocia al objeto de parámetro un nombre completo y un identificador URI de espacio de nombres.  
   
 ### <a name="to-use-an-xslt-parameter"></a>Para utilizar un parámetro XSLT  
   
-1.  Cree un objeto <xref:System.Xml.Xsl.XsltArgumentList> y agregue el parámetro utilizando el método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
+1. Cree un objeto <xref:System.Xml.Xsl.XsltArgumentList> y agregue el parámetro utilizando el método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
   
-2.  Llame al parámetro desde la hoja de estilos.  
+2. Llame al parámetro desde la hoja de estilos.  
   
-3.  Pase el objeto <xref:System.Xml.Xsl.XsltArgumentList> al método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
+3. Pase el objeto <xref:System.Xml.Xsl.XsltArgumentList> al método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="parameter-types"></a>Tipos de parámetros  
  El objeto de parámetro se debería corresponder a un tipo del W3C. En la siguiente tabla se muestran los tipos correspondientes del W3C, las clases de Microsoft .NET Framework equivalentes (tipo) y si el tipo del W3C es un tipo XPath o un tipo XSLT.  

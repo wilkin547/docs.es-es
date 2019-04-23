@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
 ms.openlocfilehash: cd7e97559458a4415399488b0fdb96a850033c44
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59294839"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769338"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 El ejemplo muestra el enlace `netNamedPipeBinding`, que proporciona la comunicación entre procesos del mismo equipo. Las canalizaciones con nombre no funcionan entre equipos. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) servicio de calculadora.  

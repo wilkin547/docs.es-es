@@ -1,5 +1,5 @@
 ---
-title: Filtrar para elegir carpetas con el componente FolderBrowserDialog de formularios Windows Forms
+title: Procedimiento para elegir carpetas con el componente FolderBrowserDialog de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
 ms.openlocfilehash: 050af6d10faec3dd09998349dcf96e96ea0f9201
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306194"
 ---
-# <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Filtrar para elegir carpetas con el componente FolderBrowserDialog de formularios Windows Forms
+# <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Procedimiento para elegir carpetas con el componente FolderBrowserDialog de formularios Windows Forms
 A menudo, en las aplicaciones para Windows que cree, tendrá que pedir a los usuarios que seleccionen una carpeta y, con más frecuencia, que guarden un conjunto de archivos. Los formularios de Windows <xref:System.Windows.Forms.FolderBrowserDialog> componente le permite realizar esta tarea con facilidad.  
   
 ### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>Elegir carpetas con el componente FolderBrowserDialog  
@@ -69,5 +69,5 @@ A menudo, en las aplicaciones para Windows que cree, tendrá que pedir a los usu
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [Información general del componente FolderBrowserDialog (formularios Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)
-- [Componente FolderBrowserDialog](folderbrowserdialog-component-windows-forms.md)
+- [Información general del componente FolderBrowserDialog (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)
+- [FolderBrowserDialog (componente)](folderbrowserdialog-component-windows-forms.md)

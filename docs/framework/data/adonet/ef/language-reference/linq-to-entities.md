@@ -3,10 +3,10 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304589"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
@@ -72,7 +72,7 @@ LINQ to Entities proporciona la capacidad de realizar consultas integradas en le
   
  [Expresiones en consultas de LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)  
   
- [Llamar a funciones en consultas de LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
+ [Llamada a funciones en consultas de LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
   
  [Consultas compiladas (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)  
   
@@ -82,7 +82,7 @@ LINQ to Entities proporciona la capacidad de realizar consultas integradas en le
   
  [Operadores de consulta estándar en consultas de LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
   
- [Asignar un método CLR a una función canónica](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
+ [Asignación de un método CLR a una función canónica](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
   
  [Métodos de LINQ compatibles y no compatibles (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
   
@@ -91,7 +91,7 @@ LINQ to Entities proporciona la capacidad de realizar consultas integradas en le
 ## <a name="see-also"></a>Vea también
 
 - [Problemas conocidos y consideraciones en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
-- [Language-Integrated Query (LINQ):C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
-- [Language-Integrated Query (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Language Integrated Query (LINQ) (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [Language Integrated Query (LINQ) (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ y ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

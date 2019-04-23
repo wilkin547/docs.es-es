@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
 ms.openlocfilehash: c682db98ac72019d434e06ae79d87b69c85c275e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310296"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767414"
 ---
 # <a name="ws-reliable-session"></a>Sesión de confianza de WS
 Este ejemplo muestra el uso de la sesión de confianza.  Las sesiones de confianza proporcionan compatibilidad para la mensajería y las sesiones de confianza. La mensajería de confianza reintenta la comunicación en caso de error y permite especificar garantías de entrega, como la llegada en orden de los mensajes. Las sesiones mantienen el estado de los clientes entre llamadas. El ejemplo implementa las sesiones para mantener el estado del cliente y especifica las convicciones de la entrega en orden.  

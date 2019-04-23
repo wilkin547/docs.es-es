@@ -3,10 +3,10 @@ title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
 ms.openlocfilehash: d6250871b8e22b73b49a94ee7ae7835f53a7c7cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306435"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
@@ -39,7 +39,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `aliasedExpr`  
  Expresión del tipo:  
   
- `expr` as `identifier` &#124; `expr`  
+ `expr` como `identifier`&#124; `expr`  
   
  `expr`  
  Literal o expresión.  

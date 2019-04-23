@@ -3,10 +3,10 @@ title: FLATTEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1a670c63-0a29-4738-80e6-101f66af05c3
 ms.openlocfilehash: 4f9a6315fc9cc2f295c21cc5fb7e1007e47796b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304582"
 ---
 # <a name="flatten-entity-sql"></a>FLATTEN (Entity SQL)
@@ -23,7 +23,7 @@ FLATTEN ( collection )
  Cualquier expresión válida que devuelva una colección de colecciones de valores para convertir en una sola colección.  
   
 ## <a name="remarks"></a>Comentarios  
- `FLATTEN` es uno de los [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores de conjuntos. Todos los operadores de conjuntos de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se evalúan de izquierda a derecha. Consulte [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) para obtener información de prioridad para la [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores de conjuntos.  
+ `FLATTEN` es uno de los operadores de conjuntos de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Todos los operadores de conjuntos de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se evalúan de izquierda a derecha. Consulte [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) para obtener información de prioridad para la [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores de conjuntos.  
   
 ## <a name="example"></a>Ejemplo  
  La siguiente consulta de Entity SQL usa el operador `FLATTEN` para convertir una colección de colecciones en una colección plana. Para compilar y ejecutar esta consulta, siga estos pasos:  

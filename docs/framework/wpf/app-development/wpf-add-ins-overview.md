@@ -13,10 +13,10 @@ helpviewer_keywords:
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
 ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304810"
 ---
 # <a name="wpf-add-ins-overview"></a>Información general sobre los complementos de WPF
@@ -165,7 +165,7 @@ ms.locfileid: "59304810"
  Estas tareas se describen con detalle en las subsecciones siguientes.  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Configuración de la canalización y el complemento para la implementación de ClickOnce  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se descargan a y ejecutar desde una carpeta segura de la [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] memoria caché de implementación. Para que una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] hospede un complemento, la canalización y el ensamblado del complemento también se debe descargar en la carpeta segura. Para lograrlo, es preciso que configure el manifiesto de aplicación para incluir tanto la canalización como el ensamblado del complemento en la descarga. Esto se hace más fácilmente en [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], aunque el ensamblado de la canalización y del ensamblado debe estar la carpeta raíz del proyecto de [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] del host en orden para que [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] detecte los ensamblados de canalización.  
+ Las [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se descargan en una carpeta segura de la caché de implementación de [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] y se ejecutan desde ella. Para que una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] hospede un complemento, la canalización y el ensamblado del complemento también se debe descargar en la carpeta segura. Para lograrlo, es preciso que configure el manifiesto de aplicación para incluir tanto la canalización como el ensamblado del complemento en la descarga. Esto se hace más fácilmente en [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], aunque el ensamblado de la canalización y del ensamblado debe estar la carpeta raíz del proyecto de [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] del host en orden para que [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] detecte los ensamblados de canalización.  
   
  Por consiguiente, el primer paso es crear el ensamblado de la canalización y del complemento para la raíz del proyecto [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] estableciendo la salida de la compilación de cada proyecto de ensamblado de canalización y ensamblado de complemento. La siguiente tabla muestra las rutas de la salida de la compilación de los proyectos de ensamblado de canalización el proyecto de ensamblado de complemento que se encuentran en la misma carpeta de solución y raíz que el proyecto de [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] del host.  
   
@@ -285,6 +285,6 @@ ms.locfileid: "59304810"
 - <xref:System.LoaderOptimizationAttribute>
 - [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Dominios de aplicación](../../app-domains/application-domains.md)
-- [Información general de servicios remotos de .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Información general de .NET framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Hacer que los objetos sean remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [Temas "Cómo..."](how-to-topics.md)

@@ -2,12 +2,12 @@
 title: Conceder permisos de nivel de fila en SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: acd4a8962e0c4cd3504b9912a4de66d2a461805a
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 891b5114551c5784b11504f2463525087125131f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844774"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973088"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Conceder permisos de nivel de fila en SQL Server
 
@@ -23,35 +23,35 @@ En el siguiente ejemplo se describe cómo configurar el filtrado por filas basá
 
 - Habilite el filtrado por filas:
 
-    - Si usa SQL Server 2016 o posterior, o la [Base de datos SQL de Azure](https://docs.microsoft.com/azure/sql-database/), cree una directiva de seguridad que agregue un predicado en la tabla restringiendo las filas devueltas a aquellas que coinciden con el usuario de base de datos actual (mediante la función integrada CURRENT_USER()) o el nombre de inicio de sesión actual (mediante la función integrada de SUSER_SNAME()):
+  - Si usa SQL Server 2016 o posterior, o la [Base de datos SQL de Azure](https://docs.microsoft.com/azure/sql-database/), cree una directiva de seguridad que agregue un predicado en la tabla restringiendo las filas devueltas a aquellas que coinciden con el usuario de base de datos actual (mediante la función integrada CURRENT_USER()) o el nombre de inicio de sesión actual (mediante la función integrada de SUSER_SNAME()):
 
-        ```sql
-        CREATE SCHEMA Security
-        GO
+      ```sql
+      CREATE SCHEMA Security
+      GO
 
-        CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
-            RETURNS TABLE
-            WITH SCHEMABINDING
-        AS
-            RETURN SELECT 1 AS accessResult
-            WHERE @UserName = SUSER_SNAME()
-        GO
+      CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
+          RETURNS TABLE
+          WITH SCHEMABINDING
+      AS
+          RETURN SELECT 1 AS accessResult
+          WHERE @UserName = SUSER_SNAME()
+      GO
 
-        CREATE SECURITY POLICY Security.userAccessPolicy
-            ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
-            ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
-        GO
-        ```
+      CREATE SECURITY POLICY Security.userAccessPolicy
+          ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
+          ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
+      GO
+      ```
 
-    - Si usa una versión de SQL Server anterior a 2016, puede lograr una funcionalidad similar con una vista:
+  - Si usa una versión de SQL Server anterior a 2016, puede lograr una funcionalidad similar con una vista:
 
-        ```sql
-        CREATE VIEW vw_MyTable
-        AS
-            RETURN SELECT * FROM MyTable
-            WHERE UserName = SUSER_SNAME()
-        GO
-        ```
+      ```sql
+      CREATE VIEW vw_MyTable
+      AS
+          RETURN SELECT * FROM MyTable
+          WHERE UserName = SUSER_SNAME()
+      GO
+      ```
 
 - Cree procedimientos almacenados para seleccionar, insertar, actualizar y eliminar datos. Si el filtrado está aplicado por una directiva de seguridad, los procedimientos almacenados deben llevar a cabo estas operaciones en la tabla base directamente; de lo contrario, si el filtrado está aplicado por una vista, los procedimientos almacenados deben funcionar en su lugar con la vista. La directiva de seguridad o la vista filtrarán automáticamente las filas devueltas o modificadas por las consultas de usuario, y el procedimiento almacenado ofrecerá un mayor límite de seguridad para impedir que los usuarios con acceso directo a consultas ejecuten correctamente las consultas que pueden inferir la existencia de datos filtrados.
 

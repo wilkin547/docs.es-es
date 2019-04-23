@@ -3,11 +3,11 @@ title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
 ms.openlocfilehash: d6ed22790f5abc01b44accc05e09e75d105df429
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59325779"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973127"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 Este ejemplo muestra cómo se pueden personalizar los procesos de deserialización y serialización utilizando la clase <xref:System.Runtime.Serialization.DataContractResolver>. En este ejemplo se muestra cómo agregar dinámicamente los tipos conocidos durante la serialización y deserialización.  

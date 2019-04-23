@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer opciones con los controles CheckBox de formularios Windows Forms
+title: Procedimiento para establecer opciones con los controles CheckBox de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
 ms.openlocfilehash: 881996563acef36a1981ca6236c155b8fc56ef0a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307327"
 ---
-# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Filtrar para establecer opciones con los controles CheckBox de formularios Windows Forms
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Procedimiento para establecer opciones con los controles CheckBox de formularios Windows Forms
 Un formulario Windows Forms <xref:System.Windows.Forms.CheckBox> control se usa para proporcionar a los usuarios True/False o Sí/No (opciones). El control muestra una marca de verificación cuando está seleccionado.  
   
 ### <a name="to-set-options-with-checkbox-controls"></a>Para establecer las opciones con controles CheckBox  
@@ -69,5 +69,5 @@ Un formulario Windows Forms <xref:System.Windows.Forms.CheckBox> control se usa 
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Información general sobre el control CheckBox](checkbox-control-overview-windows-forms.md)
-- [Filtrar para responder a clics en casillas de formularios Windows Forms](how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [Control CheckBox](checkbox-control-windows-forms.md)
+- [Cómo: Responder a Windows Forms clics en casillas](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [CheckBox (control)](checkbox-control-windows-forms.md)

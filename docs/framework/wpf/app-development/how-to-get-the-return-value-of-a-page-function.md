@@ -1,5 +1,5 @@
 ---
-title: Filtrar Obtener el valor devuelto por una función de página
+title: Procedimiento Obtener el valor devuelto por una función de página
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - getting [WPF], return values of page functions
 ms.assetid: 75470af6-256c-4c46-87e7-705080723a1c
 ms.openlocfilehash: 054ffe16690425e118fcac481b2a5ff63f9450f2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125073"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973309"
 ---
-# <a name="how-to-get-the-return-value-of-a-page-function"></a>Filtrar Obtener el valor devuelto por una función de página
+# <a name="how-to-get-the-return-value-of-a-page-function"></a>Procedimiento Obtener el valor devuelto por una función de página
 En este ejemplo se muestra cómo obtener el resultado devuelto por una función de página.  
   
 ## <a name="example"></a>Ejemplo  

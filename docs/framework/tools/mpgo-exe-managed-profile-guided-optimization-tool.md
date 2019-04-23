@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 20b4df2a663bdc584b5f350c95c8c533f1cc7c8e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496825"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306345"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Herramienta de optimización guiada por perfiles administrados)
 
@@ -79,23 +79,23 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 ## <a name="to-use-mpgoexe"></a>Para usar Mpgo.exe  
   
-1.  Use un equipo que tenga instalados Visual Studio Ultimate 2012 y la aplicación.  
+1. Use un equipo que tenga instalados Visual Studio Ultimate 2012 y la aplicación.  
   
-2.  Ejecute Mpgo.exe como administrador con los parámetros necesarios.  En la sección siguiente hallará comandos de ejemplo.  
+2. Ejecute Mpgo.exe como administrador con los parámetros necesarios.  En la sección siguiente hallará comandos de ejemplo.  
   
      Se crean los ensamblados optimizados de lenguaje intermedio (IL) en la carpeta especificada en el parámetro `–OutDir` (en los ejemplos, esta es la carpeta `C:\Optimized`).  
   
-3.  Reemplace los ensamblados de IL que usó para Ngen.exe por los nuevos ensamblados de IL que contienen información de perfil procedente del directorio especificado en `–OutDir`.  
+3. Reemplace los ensamblados de IL que usó para Ngen.exe por los nuevos ensamblados de IL que contienen información de perfil procedente del directorio especificado en `–OutDir`.  
   
-4.  Al instalar la aplicación (con las imágenes proporcionadas por Mpgo.exe) se instalan las imágenes nativas optimizadas.  
+4. Al instalar la aplicación (con las imágenes proporcionadas por Mpgo.exe) se instalan las imágenes nativas optimizadas.  
   
 ## <a name="suggested-workflow"></a>Flujo de trabajo sugerido  
   
-1.  Cree un conjunto de ensamblados optimizados de IL usando Mpgo.exe con el parámetro `–Scenario`.  
+1. Cree un conjunto de ensamblados optimizados de IL usando Mpgo.exe con el parámetro `–Scenario`.  
   
-2.  Proteja los ensamblados optimizados de IL en el control de código fuente.  
+2. Proteja los ensamblados optimizados de IL en el control de código fuente.  
   
-3.  Durante el proceso de compilación, llame a Mpgo.exe con el parámetro `–Import` como paso posterior a la compilación para generar las imágenes de IL optimizadas que se pasarán a Ngen.exe.  
+3. Durante el proceso de compilación, llame a Mpgo.exe con el parámetro `–Import` como paso posterior a la compilación para generar las imágenes de IL optimizadas que se pasarán a Ngen.exe.  
   
  Este proceso garantiza que todos los ensamblados dispongan de datos de optimización. Si protege los ensamblados optimizados actualizados (pasos 1 y 2) con más frecuencia, las cifras de rendimiento serán más coherentes durante el desarrollo del producto.  
   
@@ -127,6 +127,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Ngen.exe (Generador de imágenes nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
 - [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [Improving Launch Performance for your Desktop Applications (Mejorar el rendimiento de inicio de las aplicaciones de escritorio)](https://go.microsoft.com/fwlink/p/?LinkId=248943)

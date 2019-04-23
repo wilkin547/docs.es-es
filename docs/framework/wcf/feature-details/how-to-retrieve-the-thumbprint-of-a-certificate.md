@@ -1,17 +1,17 @@
 ---
-title: Filtrar para recuperar la huella digital de un certificado
+title: Procedimiento para recuperar la huella digital de un certificado
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
 ms.openlocfilehash: 51debbbcfec2fd5b82460e1dd1d6ece8e77bfc13
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307761"
 ---
-# <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Filtrar para recuperar la huella digital de un certificado
+# <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Procedimiento para recuperar la huella digital de un certificado
 Al escribir una aplicación de Windows Communication Foundation (WCF) que usa un certificado X.509 para la autenticación, a menudo es necesario especificar demandas se encuentran en el certificado. Por ejemplo, debe proporcionar una demanda de huella digital al utilizar la enumeración <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> en el método <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> . Se requieren dos pasos a la hora de buscar un valor de demanda. Primero, abra el complemento de Microsoft Management Console (MMC) para certificados. Vea [Cómo: Ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Segundo, como se describe aquí, busque un certificado adecuado y copie su huella digital (u otros valores de demanda).  
   
  Si usa un certificado para la autenticación del servicio, es importante apuntar el valor de la columna **Emitido para** (la primera columna en la consola). Al utilizar Capa de sockets seguros (SSL) como seguridad de transporte, una de las primeras comprobaciones es la comparación de la dirección base Identificador uniforme de recursos (URI) de un servicio con el valor **Emitido para** . Los valores deben coincidir o se detiene el proceso de autenticación.  
@@ -42,6 +42,6 @@ Al escribir una aplicación de Windows Communication Foundation (WCF) que usa un
 
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>
-- [Filtrar para configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Filtrar para ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)
-- [Filtrar para crear certificados temporales que puedan usarse durante las operaciones de desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+- [Cómo: Configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Cómo: Ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Cómo: Crear certificados temporales para su uso durante el desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

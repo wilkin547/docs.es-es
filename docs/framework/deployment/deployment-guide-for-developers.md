@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9298bb758c205c1ef577942aca6b107828e8e139
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: f71cebc164e7b324dc847c67d3e0e49e856c11c7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675918"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306539"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guía de implementación de .NET Framework para desarrolladores
 En este tema se proporciona información a los desarrolladores que quieren instalar cualquier versión de NET Framework a partir de .NET Framework 4.5 en [!INCLUDE[net_current](../../../includes/net-current-version.md)] con sus aplicaciones.
@@ -117,23 +117,23 @@ Si utiliza ClickOnce, InstallAware, InstallShield o WiX para implementar la apli
 
  En Visual Studio, elija la implementación de ClickOnce y agregue una dependencia en .NET Framework:
 
-1.  Abra el proyecto de aplicación que desea publicar.
+1. Abra el proyecto de aplicación que desea publicar.
 
-2.  En el Explorador de soluciones, abra el menú contextual del proyecto y, a continuación, elija **Propiedades**.
+2. En el Explorador de soluciones, abra el menú contextual del proyecto y, a continuación, elija **Propiedades**.
 
-3.  Elija el panel **Publicar** .
+3. Elija el panel **Publicar** .
 
-4.  Elija el botón **Requisitos previos** .
+4. Elija el botón **Requisitos previos** .
 
-5.  En el cuadro de diálogo **Requisitos previos** , asegúrese de que está activada la casilla **Crear programa de instalación para instalar los componentes necesarios** .
+5. En el cuadro de diálogo **Requisitos previos** , asegúrese de que está activada la casilla **Crear programa de instalación para instalar los componentes necesarios** .
 
-6.  En la lista de requisitos previos, busque y seleccione la versión de .NET Framework que haya usado para compilar el proyecto.
+6. En la lista de requisitos previos, busque y seleccione la versión de .NET Framework que haya usado para compilar el proyecto.
 
-7.  Elija una opción para especificar la ubicación de origen de los requisitos previos y, a continuación, elija **Aceptar**.
+7. Elija una opción para especificar la ubicación de origen de los requisitos previos y, a continuación, elija **Aceptar**.
 
      Si proporciona una dirección URL para la ubicación de descarga de .NET Framework, puede especificar el sitio Centro de descarga de Microsoft o un sitio propio. Si va a colocar el paquete redistribuible en su propio servidor, debe usar el instalador sin conexión, no el instalador web. Solo puede vincular al instalador web en el Centro de descarga de Microsoft. La dirección URL también puede ser un disco en el que se distribuye su propia aplicación.
 
-8.  En el cuadro de diálogo **Páginas de propiedades** , elija **Aceptar**.
+8. En el cuadro de diálogo **Páginas de propiedades** , elija **Aceptar**.
 
 <a name="installaware"></a> 
 ### <a name="installaware-deployment"></a>Implementación de InstallAware
@@ -142,19 +142,19 @@ InstallAware compila paquetes de aplicación de Windows (APPX), Windows Installe
 ### <a name="installshield-deployment"></a>Implementación de InstallShield
  En Visual Studio, para elegir la implementación de InstallShield y agregar una dependencia en .NET Framework:
 
-1.  En la barra de menús de Visual Studio, elija **Archivo**, **Nuevo**, **Proyecto**.
+1. En la barra de menús de Visual Studio, elija **Archivo**, **Nuevo**, **Proyecto**.
 
-2.  En el panel izquierdo del cuadro de diálogo **Nuevo proyecto** , elija **Otros tipos de proyectos**, **Instalación e implementación**, **InstallShield LE**.
+2. En el panel izquierdo del cuadro de diálogo **Nuevo proyecto** , elija **Otros tipos de proyectos**, **Instalación e implementación**, **InstallShield LE**.
 
-3.  En el cuadro **Nombre** , escriba un nombre para el proyecto y, a continuación, elija **Aceptar**.
+3. En el cuadro **Nombre** , escriba un nombre para el proyecto y, a continuación, elija **Aceptar**.
 
-4.  Si va a crear un proyecto de instalación e implementación por primera vez, elija **Ir a InstallShield** o **Habilitar InstallShield Limited Edition** a fin de descargar InstallShield Limited Edition para su versión de Microsoft Visual Studio. Reinicie Visual Studio.
+4. Si va a crear un proyecto de instalación e implementación por primera vez, elija **Ir a InstallShield** o **Habilitar InstallShield Limited Edition** a fin de descargar InstallShield Limited Edition para su versión de Microsoft Visual Studio. Reinicie Visual Studio.
 
-5.  Vaya al **Asistente para proyectos** y elija **Archivos de aplicación** para agregar la salida del proyecto. Puede configurar otros atributos del proyecto mediante este asistente.
+5. Vaya al **Asistente para proyectos** y elija **Archivos de aplicación** para agregar la salida del proyecto. Puede configurar otros atributos del proyecto mediante este asistente.
 
-6.  Vaya a **Requisitos de Instalación** y seleccione los sistemas operativos y la versión de .NET Framework que desea instalar.
+6. Vaya a **Requisitos de Instalación** y seleccione los sistemas operativos y la versión de .NET Framework que desea instalar.
 
-7.  Abra el menú contextual para el proyecto de instalación y elija **Compilar**.
+7. Abra el menú contextual para el proyecto de instalación y elija **Compilar**.
  
 <a name="wix"></a> 
 ### <a name="windows-installer-xml-wix-deployment"></a>Implementación de Windows Installer XML (WiX)
@@ -403,6 +403,7 @@ En la tabla siguiente se enumeran los paquetes de idioma de .NET Framework que e
 |3082|Español - España (alfab. internacional)|es|
 
 ## <a name="see-also"></a>Vea también
+
 - [Guía de implementación para administradores](../../../docs/framework/deployment/guide-for-administrators.md)
 - [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md)
 - [Instalación de .NET Framework para desarrolladores](../../../docs/framework/install/guide-for-developers.md)

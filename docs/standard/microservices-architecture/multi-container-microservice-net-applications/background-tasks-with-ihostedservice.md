@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 7af65077eccfaddeaf25b5f403f1b9824ed4ea17
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: b262f5352f62e74ec184e2e00e8cff3aeecc2f64
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465183"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613803"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementar tareas en segundo plano en microservicios con IHostedService y la clase BackgroundService
 
@@ -23,35 +23,35 @@ Desde la versión 2.0 de .NET Core, el marco proporciona una nueva interfaz deno
 
 **Figura 6-26**. Uso de IHostedService en un WebHost frente a un Host
 
-Observe la diferencia entre `WebHost` y `Host`. 
+Observe la diferencia entre `WebHost` y `Host`.
 
 `WebHost` (clase base que implementa `IWebHost`) en ASP.NET Core 2.0 es el artefacto de infraestructura que se utiliza para proporcionar características de servidor HTTP al proceso, por ejemplo, si se va a implementar una aplicación web MVC o un servicio de API Web. Proporciona todas las ventajas de la nueva infraestructura de ASP.NET Core, lo que le permite usar la inserción de dependencias, insertar middleware en la canalización de solicitudes, etc., además de utilizar de manera precisa `IHostedServices` para tareas en segundo plano.
 
 Un `Host` (clase base que implementa `IHost`) se presentó en .NET Core 2.1. Básicamente, `Host` permite disponer de una infraestructura similar a la que se tiene con `WebHost` (inserción de dependencias, servicios hospedados, etc.), pero en este caso tan solo quiere tener un proceso sencillo y más ligero como host, sin ninguna relación con las características de servidor HTTP, MVC o API Web.
 
-Por lo tanto, puede elegir y crear un proceso de host especializado con IHost para controlar los servicios hospedados y nada más, como por ejemplo un microservicio hecho solo para hospedar `IHostedServices`, o bien puede ampliar un `WebHost` de ASP.NET Core existente, como por ejemplo una aplicación MVC o API Web de ASP.NET Core. 
+Por lo tanto, puede elegir y crear un proceso de host especializado con IHost para controlar los servicios hospedados y nada más, como por ejemplo un microservicio hecho solo para hospedar `IHostedServices`, o bien puede ampliar un `WebHost` de ASP.NET Core existente, como por ejemplo una aplicación MVC o API Web de ASP.NET Core.
 
 Cada enfoque tiene ventajas e inconvenientes dependiendo de sus necesidades empresariales y de escalabilidad. La conclusión es básicamente que, si las tareas en segundo plano no tienen nada que ver con HTTP (IWebHost), debe usar IHost.
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>Registro de servicios hospedados en Host o WebHost
 
-Vamos a profundizar más en la interfaz `IHostedService` puesto que su uso es muy similar en un `WebHost` o en un `Host`. 
+Vamos a profundizar más en la interfaz `IHostedService` puesto que su uso es muy similar en un `WebHost` o en un `Host`.
 
 SignalR es un ejemplo de un artefacto con servicios hospedados, pero también puede utilizarlo para cosas mucho más sencillas como las siguientes:
 
--   Una tarea en segundo plano que sondea una base de datos en busca de cambios.
--   Una tarea programada que actualiza una caché periódicamente.
--   Una implementación de QueueBackgroundWorkItem que permite que una tarea se ejecute en un subproceso en segundo plano.
--   Procesar los mensajes de una cola de mensajes en el segundo plano de una aplicación web mientras se comparten servicios comunes como `ILogger`.
--   Una tarea en segundo plano iniciada con `Task.Run()`.
+- Una tarea en segundo plano que sondea una base de datos en busca de cambios.
+- Una tarea programada que actualiza una caché periódicamente.
+- Una implementación de QueueBackgroundWorkItem que permite que una tarea se ejecute en un subproceso en segundo plano.
+- Procesar los mensajes de una cola de mensajes en el segundo plano de una aplicación web mientras se comparten servicios comunes como `ILogger`.
+- Una tarea en segundo plano iniciada con `Task.Run()`.
 
 Básicamente, puede descargar cualquiera de esas acciones a una tarea en segundo plano basada en IHostedService.
 
-La manera de agregar uno o varios `IHostedServices` en su `WebHost` o `Host` es registrándolos mediante DI estándar (inserción de dependencias) en `WebHost` de ASP.NET Core (o en `Host` en .NET Core 2.1 y superior). Básicamente, tiene que registrar los servicios hospedados dentro del conocido método `ConfigureServices()` de la clase `Startup`, como se muestra en el código siguiente de un WebHost de ASP.NET típico. 
+La manera de agregar uno o varios `IHostedServices` en su `WebHost` o `Host` es registrándolos mediante DI estándar (inserción de dependencias) en `WebHost` de ASP.NET Core (o en `Host` en .NET Core 2.1 y superior). Básicamente, tiene que registrar los servicios hospedados dentro del conocido método `ConfigureServices()` de la clase `Startup`, como se muestra en el código siguiente de un WebHost de ASP.NET típico.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
-{            
+{
     //Other DI registrations;
 
     // Register Hosted Services
@@ -93,13 +93,14 @@ namespace Microsoft.Extensions.Hosting
     }
 }
 ```
+
 Como puede imaginarse, es posible crear varias implementaciones de IHostedService y registrarlas en el método `ConfigureService()` en el contenedor de DI, tal y como se ha mostrado anteriormente. Todos los servicios hospedados se iniciarán y detendrán junto con la aplicación o microservicio.
 
 Los desarrolladores son responsables de controlar la acción de detención o los servicios cuando el host activa el método `StopAsync()`.
 
 ## <a name="implementing-ihostedservice-with-a-custom-hosted-service-class-deriving-from-the-backgroundservice-base-class"></a>Implementación de IHostedService con una clase de servicio hospedado personalizado que se deriva de la clase base BackgroundService
 
-Puede seguir adelante y crear una clase de servicio hospedado personalizado desde cero e implementar `IHostedService`, tal y como se debe hacer cuando se usa .NET Core 2.0. 
+Puede seguir adelante y crear una clase de servicio hospedado personalizado desde cero e implementar `IHostedService`, tal y como se debe hacer cuando se usa .NET Core 2.0.
 
 Pero como la mayoría de las tareas en segundo plano tienen necesidades similares en relación con la administración de tokens de cancelación y otras operaciones habituales, hay una clase base abstracta práctica denominada `BackgroundService` de la que puede derivar (disponible desde .NET Core 2.1).
 
@@ -108,14 +109,14 @@ Esta clase proporciona el trabajo principal necesario para configurar la tarea e
 El código siguiente es la clase base abstracta de BackgroundService tal y como se implementa en .NET Core.
 
 ```csharp
-// Copyright (c) .NET Foundation. Licensed under the Apache License, Version 2.0. 
+// Copyright (c) .NET Foundation. Licensed under the Apache License, Version 2.0.
 /// <summary>
 /// Base class for implementing a long running <see cref="IHostedService"/>.
 /// </summary>
 public abstract class BackgroundService : IHostedService, IDisposable
 {
     private Task _executingTask;
-    private readonly CancellationTokenSource _stoppingCts = 
+    private readonly CancellationTokenSource _stoppingCts =
                                                    new CancellationTokenSource();
 
     protected abstract Task ExecuteAsync(CancellationToken stoppingToken);
@@ -125,7 +126,7 @@ public abstract class BackgroundService : IHostedService, IDisposable
         // Store the task we're executing
         _executingTask = ExecuteAsync(_stoppingCts.Token);
 
-        // If the task is completed then return it, 
+        // If the task is completed then return it,
         // this will bubble cancellation and failure to the caller
         if (_executingTask.IsCompleted)
         {
@@ -135,7 +136,7 @@ public abstract class BackgroundService : IHostedService, IDisposable
         // Otherwise it's running
         return Task.CompletedTask;
     }
-    
+
     public virtual async Task StopAsync(CancellationToken cancellationToken)
     {
         // Stop called without start
@@ -169,7 +170,7 @@ Al derivar de la clase base abstracta anterior, y gracias a la implementación h
 
 ```csharp
 public class GracePeriodManagerService : BackgroundService
-{        
+{
     private readonly ILogger<GracePeriodManagerService> _logger;
     private readonly OrderingBackgroundSettings _settings;
 
@@ -179,27 +180,27 @@ public class GracePeriodManagerService : BackgroundService
                                      IEventBus eventBus,
                                      ILogger<GracePeriodManagerService> logger)
     {
-        //Constructor’s parameters validations...       
+        //Constructor’s parameters validations...
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         _logger.LogDebug($"GracePeriodManagerService is starting.");
 
-        stoppingToken.Register(() => 
+        stoppingToken.Register(() =>
             _logger.LogDebug($" GracePeriod background task is stopping."));
 
         while (!stoppingToken.IsCancellationRequested)
         {
             _logger.LogDebug($"GracePeriod task doing background work.");
 
-            // This eShopOnContainers method is querying a database table 
+            // This eShopOnContainers method is querying a database table
             // and publishing events into the Event Bus (RabbitMS / ServiceBus)
             CheckConfirmedGracePeriodOrders();
 
             await Task.Delay(_settings.CheckUpdateTime, stoppingToken);
         }
-            
+
         _logger.LogDebug($"GracePeriod background task is stopping.");
     }
 
@@ -224,7 +225,7 @@ WebHost.CreateDefaultBuilder(args)
 ### <a name="summary-class-diagram"></a>Diagrama de clases de resumen
 
 En la siguiente ilustración se muestra un resumen visual de las clases y las interfaces implicadas al implementar IHostedServices.
- 
+
 ![Diagrama de clases: IWebHost y IHost pueden hospedar muchos servicios, que heredan de BackgroundService, que implementa IHostedService.](./media/image27.png)
 
 **Figura 6-27**. Diagrama de clases que muestra las distintas clases e interfaces relacionadas con IHostedService
@@ -239,14 +240,14 @@ La interfaz `IHostedService` proporciona una manera cómoda de iniciar tareas en
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **Building a scheduled task in ASP.NET Core/Standard 2.0** (Creación de una tarea programada en ASP.NET Core/Standard 2.0) <br/>
-    [https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html](https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html)
+- **Building a scheduled task in ASP.NET Core/Standard 2.0** (Creación de una tarea programada en ASP.NET Core/Standard 2.0) <br/>
+    <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
--   **Implementing IHostedService in ASP.NET Core 2.0** (Implementación de IHostedService en ASP.NET Core 2.0) <br/>
-    [https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice](https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice)
+- **Implementing IHostedService in ASP.NET Core 2.0** (Implementación de IHostedService en ASP.NET Core 2.0) <br/>
+    <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
--   **Ejemplo de GenericHost mediante ASP.NET Core 2.1** <br/>
-    [https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample](https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample)
+- **Ejemplo de GenericHost mediante ASP.NET Core 2.1** <br/>
+    <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]
 >[Anterior](test-aspnet-core-services-web-apps.md)
