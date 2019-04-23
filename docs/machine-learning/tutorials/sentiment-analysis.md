@@ -4,12 +4,12 @@ description: Descubra cómo usar ML.NET en un escenario de clasificación binari
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 202edc5127388df2397053d5703d33a39046374f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e88a85b96c1e5d33d748332991cb9480222a9c66
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303120"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612100"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutorial: Uso de ML.NET en un escenario de clasificación binaria de análisis de sentimiento
 
@@ -33,7 +33,7 @@ En este tutorial aprenderá a:
 
 ## <a name="sentiment-analysis-sample-overview"></a>Información general del ejemplo de análisis de sentimiento
 
-El ejemplo es una aplicación de consola que utiliza ML.NET para entrenar un modelo que clasifica y predice un sentimiento como positivo o negativo. El conjunto de datos de opinión de Yelp proviene de la Universidad de California, Irvine (UCI), y se divide en un conjunto de datos de entrenamiento y un conjunto de datos de prueba. El ejemplo evalúa el modelo con un el conjunto de datos de prueba para analizar la calidad. 
+El ejemplo es una aplicación de consola que utiliza ML.NET para entrenar un modelo que clasifica y predice un sentimiento como positivo o negativo. El conjunto de datos de opinión de Yelp proviene de la Universidad de California, Irvine (UCI), y se divide en un conjunto de datos de entrenamiento y un conjunto de datos de prueba. El ejemplo evalúa el modelo con un el conjunto de datos de prueba para analizar la calidad.
 
 Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis).
 
@@ -41,7 +41,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 * [Visual Studio 2017 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
 
-* [El archivo ZIP del conjunto de datos UCI Sentiment Labeled Sentences](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)
+* [El archivo zip del conjunto de datos UCI Sentiment Labeled Sentences](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)
 
 ## <a name="machine-learning-workflow"></a>Flujo de trabajo del aprendizaje automático
 
@@ -51,9 +51,9 @@ Las fases del flujo de trabajo son las siguientes:
 
 1. **Entender el problema**
 2. **Preparar los datos**
-   * **Carga de los datos**
+   * **Cargar los datos**
    * **Extraer características (transformar los datos)**
-3. **Compilar y entrenar** 
+3. **Compilar y entrenar**
    * **Entrenar el modelo**
    * **Evaluar el modelo**
 4. **Implementar el modelo**
@@ -96,7 +96,7 @@ Los algoritmos de clasificación suelen ser de uno de los tipos siguientes:
 * Binario: A o B.
 * Multiclase: varias categorías que se pueden predecir mediante el uso de un único modelo.
 
-Dado que los comentarios del sitio web deben clasificarse como positivos o negativos, use el algoritmo de clasificación binaria. 
+Dado que los comentarios del sitio web deben clasificarse como positivos o negativos, use el algoritmo de clasificación binaria.
 
 ## <a name="create-a-console-application"></a>Creación de una aplicación de consola
 
@@ -178,21 +178,22 @@ public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
 
 }
 ```
+
 ## <a name="load-the-data"></a>Carga de los datos
 
-Puesto que el tipo de modelo de datos `SentimentData` que ha creado anteriormente coincide con el esquema del conjunto de datos, puede combinar la inicialización, la asignación y la carga del conjunto de datos en una línea de código con el encapsulador `MLContext.Data.LoadFromTextFile` para el [método LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Devuelve <xref:Microsoft.Data.DataView.IDataView>. 
+Puesto que el tipo de modelo de datos `SentimentData` que ha creado anteriormente coincide con el esquema del conjunto de datos, puede combinar la inicialización, la asignación y la carga del conjunto de datos en una línea de código con el encapsulador `MLContext.Data.LoadFromTextFile` para el [método LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Devuelve <xref:Microsoft.Data.DataView.IDataView>.
 
- Como la entrada y salida de `Transforms`, `DataView` es el tipo de canalización de datos fundamentales, comparable con `IEnumerable` para `LINQ`.
+Como la entrada y salida de `Transforms`, `DataView` es el tipo de canalización de datos fundamentales, comparable con `IEnumerable` para `LINQ`.
 
 En ML.NET, los datos son similares a una vista SQL. Se evalúan lentamente, se esquematizan y son heterogéneos. El objeto es la primera parte de la canalización y carga los datos. Para este tutorial, carga un conjunto de datos con comentarios y opiniones tóxicas o no tóxicas correspondiente. Esto se usa para crear el modelo y entrenarlo.
 
- Agregue el código siguiente a la primera línea del método `LoadData`:
+Agregue el código siguiente a la primera línea del método `LoadData`:
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadData "loading dataset")]
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>División del conjunto de datos para el entrenamiento y la prueba del modelo
 
-A continuación, se necesita un conjunto de datos de entrenamiento para entrenar el modelo y un conjunto de datos de prueba para evaluar el modelo. Use `MLContext.BinaryClassification.TrainTestSplit` que encapsula <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A> para dividir el conjunto de datos cargado en conjuntos de datos de entrenamiento y prueba y los devuelve dentro de <xref:Microsoft.ML.TrainCatalogBase.TrainTestData>. Puede especificar la fracción de los datos para la prueba establecida con el parámetro `testFraction`. El valor predeterminado es 10 %, pero use 20 % en este caso para usar más datos para la evaluación.  
+A continuación, se necesita un conjunto de datos de entrenamiento para entrenar el modelo y un conjunto de datos de prueba para evaluar el modelo. Use `MLContext.BinaryClassification.TrainTestSplit` que encapsula <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A> para dividir el conjunto de datos cargado en conjuntos de datos de entrenamiento y prueba y los devuelve dentro de <xref:Microsoft.ML.TrainCatalogBase.TrainTestData>. Puede especificar la fracción de los datos para la prueba establecida con el parámetro `testFraction`. El valor predeterminado es 10 %, pero use 20 % en este caso para usar más datos para la evaluación.
 
 Para dividir los datos cargados en los conjuntos de datos necesarios, agregue el código siguiente como la siguiente línea en el método `LoadData`:
 
@@ -224,7 +225,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView spl
 }
 ```
 
-Tenga en cuenta que se pasan dos parámetros al método Train: `MLContext` para el contexto (`mlContext`) y `IDataView` para el conjunto de datos de entrenamiento (`splitTrainSet`). 
+Tenga en cuenta que se pasan dos parámetros al método Train: `MLContext` para el contexto (`mlContext`) y `IDataView` para el conjunto de datos de entrenamiento (`splitTrainSet`).
 
 ## <a name="extract-and-transform-the-data"></a>Extraer y transformar los datos
 
@@ -251,7 +252,7 @@ Agregue el código siguiente al método `BuildAndTrainModel`:
 
 ## <a name="train-the-model"></a>Entrenar el modelo
 
-Se entrena el modelo, <xref:Microsoft.ML.Data.TransformerChain%601>, en función del conjunto de datos que se haya cargado y transformado. Una vez que se ha definido el estimador, entrenará el modelo mediante el método <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> proporcionando al mismo tiempo los datos de entrenamiento ya cargados. Esto devuelve un modelo que se usa para las predicciones. `pipeline.Fit()` entrena la canalización y devuelve `Transformer` según el elemento `DataView` que se pasa. El experimento no se ejecuta hasta que se ejecute el método `.Fit()`.
+Se entrena el modelo, <xref:Microsoft.ML.Data.TransformerChain%601>, en función del conjunto de datos que se haya cargado y transformado. Una vez que se ha definido el estimador, entrenará el modelo mediante el método <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> proporcionando al mismo tiempo los datos de entrenamiento ya cargados. Esto devuelve un modelo que se usa para las predicciones. `pipeline.Fit()` entrena la canalización y devuelve `Transformer` según la `DataView` que se pasa. El experimento no se ejecuta hasta que se ejecute el método `.Fit()`.
 
 Agregue el código siguiente al método `BuildAndTrainModel`:
 
@@ -353,7 +354,7 @@ Agregue una llamada al método nuevo desde el método `Main`, justo debajo de la
 Mientras `model` es `transformer` que opera en muchas filas de datos, un escenario muy común de producción es necesario para las predicciones con los ejemplos individuales. <xref:Microsoft.ML.PredictionEngine%602> es un contenedor que se devuelve del método `CreatePredictionEngine`. Vamos a agregar el código siguiente para crear `PredictionEngine` como la primera línea en el método `Predict`:
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
-  
+
 Agregue un comentario para probar la predicción del modelo entrenado en el método `Predict` mediante la creación de una instancia de `SentimentData`:
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
@@ -450,7 +451,7 @@ Press any key to continue . . .
 
 ```
 
-¡Enhorabuena! Ya ha creado correctamente un modelo de aprendizaje automático para clasificar y predecir los sentimientos de los mensajes. 
+¡Enhorabuena! Ya ha creado correctamente un modelo de aprendizaje automático para clasificar y predecir los sentimientos de los mensajes.
 
 La creación de modelos correctos es un proceso iterativo. Este modelo tiene una calidad inicial más baja, ya que el tutorial utiliza pequeños conjuntos de datos para proporcionar un entrenamiento rápido del modelo. Si no está satisfecho con la calidad del modelo, puede intentar mejorarlo proporcionando conjuntos de datos de entrenamiento más grandes o eligiendo algoritmos de entrenamiento distintos con diferentes hiperparámetros para cada algoritmo.
 
@@ -459,6 +460,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 ## <a name="next-steps"></a>Pasos siguientes
 
 En este tutorial ha aprendido a:
+
 > [!div class="checklist"]
 > * Entender el problema
 > * Seleccionar el algoritmo de aprendizaje automático adecuado
@@ -470,5 +472,6 @@ En este tutorial ha aprendido a:
 > * Implementar y predecir con un modelo cargado
 
 Siga con el siguiente tutorial para obtener más información
+
 > [!div class="nextstepaction"]
 > [Clasificación de problemas](github-issue-classification.md)

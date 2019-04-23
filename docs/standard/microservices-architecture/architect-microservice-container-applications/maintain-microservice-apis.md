@@ -4,12 +4,12 @@ description: Cree las API de microservicio y contratos teniendo en cuenta la evo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 6580418ea04d64650cefe2f4c91f03e3f40a058f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f42de3895f7f9affe09891fd89621fbb414313e9
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466054"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612113"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Creación, desarrollo y control de versiones de los contratos y las API de microservicio
 
@@ -28,13 +28,13 @@ Por último, si utiliza una arquitectura REST, [Hypermedia](https://www.infoq.co
 ## <a name="additional-resources"></a>Recursos adicionales
 
 - **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy** \ (Control de versiones simplificado de API web RESTful de ASP.NET Core)
-  [https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+  <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **Control de versiones de una API web RESTful** \
-  [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+  <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
 - **Roy Fielding. Versioning, Hypermedia, and REST** \ (Control de versiones, hipermedios y REST)
-  [https://www.infoq.com/articles/roy-fielding-on-versioning](https://www.infoq.com/articles/roy-fielding-on-versioning)
+  <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 >[!div class="step-by-step"]
 >[Anterior](asynchronous-message-based-communication.md)

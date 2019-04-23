@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 79b8abd0fb01062900b2ae4e14c02d8844bb6ef9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 49770672ebcff98d8779a888372b5c9f40a55b1d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295983"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611814"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Tutorial: Predicción de precios mediante un aprendiz de regresión con ML.NET
 
@@ -148,7 +148,7 @@ Pasamos dos parámetros al método `Train`; `MLContext` para el contexto (`mlCon
 
 ## <a name="load-and-transform-data"></a>Cargar y transformar datos
 
-Cargue los datos mediante el contenedor `MLContext.Data.LoadFromTextFile` para el [método LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Devuelve <xref:Microsoft.Data.DataView.IDataView>. 
+Cargue los datos mediante el contenedor `MLContext.Data.LoadFromTextFile` para el [método LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Devuelve <xref:Microsoft.Data.DataView.IDataView>.
 
 Como la entrada y salida de `Transforms`, `DataView` es el tipo de canalización de datos fundamentales, comparable con `IEnumerable` para `LINQ`.
 
@@ -184,7 +184,7 @@ Agregue el código siguiente al método `Train` para agregar `FastTreeRegression
 
 ## <a name="train-the-model"></a>Entrenar el modelo
 
-El último paso es entrenar el modelo. Se entrena el modelo, <xref:Microsoft.ML.Data.TransformerChain>, en función del conjunto de datos que se haya cargado y transformado. Una vez que se ha definido el estimador, se entrena el modelo mediante <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> y, al mismo tiempo, se proporcionan los datos de entrenamiento ya cargados. Esto devuelve un modelo que se usa para las predicciones. `pipeline.Fit()` entrena la canalización y devuelve `Transformer` según el elemento `DataView` que se pasa. El experimento no se ejecuta hasta que esto suceda.
+El último paso es entrenar el modelo. Se entrena el modelo, <xref:Microsoft.ML.Data.TransformerChain>, en función del conjunto de datos que se haya cargado y transformado. Una vez que se ha definido el estimador, se entrena el modelo mediante <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> y, al mismo tiempo, se proporcionan los datos de entrenamiento ya cargados. Esto devuelve un modelo que se usa para las predicciones. `pipeline.Fit()` entrena la canalización y devuelve `Transformer` según la `DataView` que se pasa. El experimento no se ejecuta hasta que esto suceda.
 
 [!code-csharp[TrainModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
 
@@ -231,6 +231,7 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 
 }
 ```
+
 El método `Evaluate` ejecuta las tareas siguientes:
 
 * Carga el conjunto de datos de prueba.
@@ -302,12 +303,12 @@ Como queremos cargar el modelo desde el archivo ZIP que guardamos, crearemos `Fi
 Mientras `model` es `transformer` que opera en muchas filas de datos, un escenario muy común de producción es necesario para las predicciones con los ejemplos individuales. <xref:Microsoft.ML.PredictionEngine%602> es un contenedor que se devuelve del método `CreatePredictionEngine`. Vamos a agregar el código siguiente para crear `PredictionEngine` como la línea siguiente en el método `TestSinglePrediction`:
 
 [!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
-  
+
 En este tutorial se utiliza un viaje de prueba en esta clase. Más adelante, puede agregar otros escenarios para experimentar con el modelo. Agregue un viaje para probar la predicción de costo del modelo entrenado en el método `TestSinglePrediction` mediante la creación de una instancia de `TaxiTrip`:
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
- Podemos usarlo para predecir la tarifa en función de una instancia única de los datos del viaje en taxi. Para obtener una predicción, use <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> en los datos. Tenga en cuenta que los datos de entrada son una cadena y el modelo incluye la caracterización. La canalización está sincronizada durante el entrenamiento y la predicción. No fue necesario escribir el código de preprocesamiento o caracterización específicamente para las predicciones, y la misma API se encarga de las predicciones por lotes y puntuales.
+Podemos usarlo para predecir la tarifa en función de una instancia única de los datos del viaje en taxi. Para obtener una predicción, use <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> en los datos. Tenga en cuenta que los datos de entrada son una cadena y el modelo incluye la caracterización. La canalización está sincronizada durante el entrenamiento y la predicción. No fue necesario escribir el código de preprocesamiento o caracterización específicamente para las predicciones, y la misma API se encarga de las predicciones por lotes y puntuales.
 
 [!code-csharp[Predict](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 
@@ -322,6 +323,7 @@ Ejecute el programa para ver la tarifa de taxi predicha para su caso de prueba.
 ## <a name="next-steps"></a>Pasos siguientes
 
 En este tutorial ha aprendido a:
+
 > [!div class="checklist"]
 > * Entender el problema
 > * Seleccionar la tarea de aprendizaje automático adecuada
@@ -334,5 +336,6 @@ En este tutorial ha aprendido a:
 > * Usar el modelo para las predicciones
 
 Siga con el siguiente tutorial para obtener más información.
+
 > [!div class="nextstepaction"]
-> [Agrupación en clústeres de Iris](iris-clustering.md)
+> [Agrupación en clústeres de iris](iris-clustering.md)

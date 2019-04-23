@@ -3,12 +3,12 @@ title: Depuración de la aplicación Hola mundo de .NET Core con Visual Studio 2
 description: Obtenga información sobre cómo depurar una aplicación Hola mundo, escrita en C# o Visual Basic, con Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463428"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610722"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Depuración de la aplicación Hola mundo de .NET Core en C# o Visual Basic con Visual Studio 2017
 
@@ -154,6 +154,7 @@ Para establecer un punto de interrupción condicional y probar lo que sucede cua
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
+
   ![Ventana Inmediato en la que se devuelve un valor de True después de que se ejecute la instrucción: Visual Basic](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. Seleccione el botón **Continuar** en la barra de herramientas para continuar la ejecución del programa.

@@ -16,14 +16,15 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 6c792c8d819d17d1fc32fedeeacdacbbb1624d95
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d9b3c9975c4d10649bdecd6f63cf362a2b2a2738
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125624"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611957"
 ---
 # <a name="using-tcp-services"></a>Usar Servicios TCP
+
 La clase <xref:System.Net.Sockets.TcpClient> solicita datos de un recurso de Internet mediante TCP. Los métodos y propiedades de **TcpClient** abstraen los detalles para crear un <xref:System.Net.Sockets.Socket> a fin de solicitar y recibir datos mediante TCP. Dado que la conexión al dispositivo remoto se representa como una secuencia, los datos se pueden leer y escribir empleando técnicas de control de secuencias de .NET Framework.  
   
  El protocolo TCP establece una conexión con un punto de conexión remoto y luego usa esa conexión para enviar y recibir paquetes de datos. El protocolo TCP es responsable de garantizar que los paquetes de datos se envíen al punto de conexión y que se monten en el orden correcto cuando lleguen.  
@@ -192,6 +193,4 @@ public class TcpTimeServer {
     }  
   
 }  
-```  
-  
-## <a name="see-also"></a>Vea también
+```

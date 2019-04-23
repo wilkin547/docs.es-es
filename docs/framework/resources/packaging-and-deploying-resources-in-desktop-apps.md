@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9edc54b5b7d86f0ecb58a6910cde82d088b2c663
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 19f1d3d1d94db885938a5da3f3b66c8e554205b5
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357864"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611398"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empaquetado e implementación de recursos en aplicaciones .NET
 
@@ -226,6 +226,7 @@ Cuando se ejecute el ejemplo desde un sistema cuyo idioma sea distinto del ruso,
 ```
 Bon jour!
 ```
+
 ## <a name="suggested-packaging-alternative"></a>Alternativa de empaquetado sugerida
 
 Las restricciones de tiempo o de presupuesto podrían impedir la creación de un conjunto de recursos para cada una de las referencias culturales secundarias que admite la aplicación. En su lugar, puede crear un único ensamblado satélite para la referencia cultural principal que todas las referencias culturales secundarias relacionadas puedan usar. Por ejemplo, puede proporcionar un único ensamblado satélite en inglés (en) para que lo recuperen los usuarios que soliciten recursos en inglés específicos de una región y un único ensamblado satélite en alemán (de) para los usuarios que soliciten recursos en alemán específicos de una región. Por ejemplo, las solicitudes de alemán de Alemania (de-DE), Austria (de-AT) y Suiza (de-CH) recurrirán al ensamblado satélite en alemán (de). Los recursos predeterminados constituyen la reserva final y, por tanto, deben ser los recursos que solicitará la mayoría de los usuarios de la aplicación, por lo que debe elegir cuidadosamente estos recursos. Este método implementa recursos menos específicos de la referencia cultural, pero puede reducir considerablemente los costos de localización de la aplicación.
