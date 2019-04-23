@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: af2512800b7903d3142a48ae17d22a2e19683e5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222242"
 ---
-# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="7ec17-102">ICorDebugEditAndContinueErrorInfo::GetString (Método)</span><span class="sxs-lookup"><span data-stu-id="7ec17-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
-`GetString` <span data-ttu-id="7ec17-103">está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="7ec17-103">is obsolete.</span></span> <span data-ttu-id="7ec17-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="7ec17-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="05a7a-102">ICorDebugEditAndContinueErrorInfo::GetString (Método)</span><span class="sxs-lookup"><span data-stu-id="05a7a-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
+<span data-ttu-id="05a7a-103">`GetString` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="05a7a-103">`GetString` is obsolete.</span></span> <span data-ttu-id="05a7a-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="05a7a-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7ec17-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="7ec17-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05a7a-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="05a7a-105">See also</span></span>
 
-- [<span data-ttu-id="7ec17-106">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="7ec17-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="05a7a-106">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="05a7a-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

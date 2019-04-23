@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a5eae9e14bcd0ca430f03a873818246896438463
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227098"
 ---
-# <a name="icordebugcontrollerisrunning-method"></a><span data-ttu-id="98398-102">ICorDebugController::IsRunning (Método)</span><span class="sxs-lookup"><span data-stu-id="98398-102">ICorDebugController::IsRunning Method</span></span>
-<span data-ttu-id="98398-103">Obtiene un valor que indica si los subprocesos del proceso se están ejecutando libremente.</span><span class="sxs-lookup"><span data-stu-id="98398-103">Gets a value that indicates whether the threads in the process are currently running freely.</span></span>  
+# <a name="icordebugcontrollerisrunning-method"></a><span data-ttu-id="d4ca7-102">ICorDebugController::IsRunning (Método)</span><span class="sxs-lookup"><span data-stu-id="d4ca7-102">ICorDebugController::IsRunning Method</span></span>
+<span data-ttu-id="d4ca7-103">Obtiene un valor que indica si los subprocesos del proceso se están ejecutando libremente.</span><span class="sxs-lookup"><span data-stu-id="d4ca7-103">Gets a value that indicates whether the threads in the process are currently running freely.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="98398-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="98398-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d4ca7-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d4ca7-104">Syntax</span></span>  
   
 ```  
 HRESULT IsRunning (  
@@ -35,17 +35,17 @@ HRESULT IsRunning (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="98398-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="98398-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d4ca7-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="d4ca7-105">Parameters</span></span>  
  `pbRunning`  
- <span data-ttu-id="98398-106">[out] Un puntero a un valor que es `true` si se ejecutan los subprocesos del proceso libremente; en caso contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="98398-106">[out] A pointer to a value that is `true` if the threads in the process are running freely; otherwise, `false`.</span></span>  
+ <span data-ttu-id="d4ca7-106">[out] Un puntero a un valor que es `true` si se ejecutan los subprocesos del proceso libremente; en caso contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="d4ca7-106">[out] A pointer to a value that is `true` if the threads in the process are running freely; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="98398-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="98398-107">Requirements</span></span>  
- <span data-ttu-id="98398-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="98398-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d4ca7-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d4ca7-107">Requirements</span></span>  
+ <span data-ttu-id="d4ca7-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4ca7-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="98398-109">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="98398-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d4ca7-109">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d4ca7-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="98398-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="98398-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d4ca7-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4ca7-110">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="98398-111">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="98398-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="d4ca7-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4ca7-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98398-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="98398-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d4ca7-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="d4ca7-112">See also</span></span>
