@@ -1,5 +1,5 @@
 ---
-title: Filtrar Manipular un objeto FlowDocument mediante la propiedad Blocks
+title: Procedimiento Manipular un objeto FlowDocument mediante la propiedad Blocks
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,47 +9,47 @@ helpviewer_keywords:
 - ', '
 ms.assetid: cbb7291e-3f1b-433e-9e16-f4d93ced14e8
 ms.openlocfilehash: c307d85bf24e2d8a20226856181e0758758d40c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130889"
 ---
-# <a name="how-to-manipulate-a-flowdocument-through-the-blocks-property"></a><span data-ttu-id="ad001-102">Filtrar Manipular un objeto FlowDocument mediante la propiedad Blocks</span><span class="sxs-lookup"><span data-stu-id="ad001-102">How to: Manipulate a FlowDocument through the Blocks Property</span></span>
-<span data-ttu-id="ad001-103">Estos ejemplos muestran algunas de las operaciones más comunes que pueden realizarse en un <xref:System.Windows.Documents.FlowDocument> a través de la <xref:System.Windows.Documents.FlowDocument.Blocks%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="ad001-103">These examples demonstrate some of the more common operations that can be performed on a <xref:System.Windows.Documents.FlowDocument> through the <xref:System.Windows.Documents.FlowDocument.Blocks%2A> property.</span></span>  
+# <a name="how-to-manipulate-a-flowdocument-through-the-blocks-property"></a><span data-ttu-id="53ff2-102">Procedimiento Manipular un objeto FlowDocument mediante la propiedad Blocks</span><span class="sxs-lookup"><span data-stu-id="53ff2-102">How to: Manipulate a FlowDocument through the Blocks Property</span></span>
+<span data-ttu-id="53ff2-103">Estos ejemplos muestran algunas de las operaciones más comunes que pueden realizarse en un <xref:System.Windows.Documents.FlowDocument> a través de la <xref:System.Windows.Documents.FlowDocument.Blocks%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="53ff2-103">These examples demonstrate some of the more common operations that can be performed on a <xref:System.Windows.Documents.FlowDocument> through the <xref:System.Windows.Documents.FlowDocument.Blocks%2A> property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ad001-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ad001-104">Example</span></span>  
- <span data-ttu-id="ad001-105">En el ejemplo siguiente se crea un nuevo <xref:System.Windows.Documents.FlowDocument> y, a continuación, se anexa un nuevo <xref:System.Windows.Documents.Paragraph> elemento a la <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="ad001-105">The following example creates a new <xref:System.Windows.Documents.FlowDocument> and then appends a new <xref:System.Windows.Documents.Paragraph> element to the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+## <a name="example"></a><span data-ttu-id="53ff2-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="53ff2-104">Example</span></span>  
+ <span data-ttu-id="53ff2-105">En el ejemplo siguiente se crea un nuevo <xref:System.Windows.Documents.FlowDocument> y, a continuación, se anexa un nuevo <xref:System.Windows.Documents.Paragraph> elemento a la <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="53ff2-105">The following example creates a new <xref:System.Windows.Documents.FlowDocument> and then appends a new <xref:System.Windows.Documents.Paragraph> element to the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_FlowDocumentBlocksAdd](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentblocksadd)]
  [!code-vb[FlowDocumentSnippets#_FlowDocumentBlocksAdd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentblocksadd)]  
   
-## <a name="example"></a><span data-ttu-id="ad001-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ad001-106">Example</span></span>  
- <span data-ttu-id="ad001-107">En el ejemplo siguiente se crea un nuevo <xref:System.Windows.Documents.Paragraph> elemento y lo inserta al principio de la <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="ad001-107">The following example creates a new <xref:System.Windows.Documents.Paragraph> element and inserts it at the beginning of the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+## <a name="example"></a><span data-ttu-id="53ff2-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="53ff2-106">Example</span></span>  
+ <span data-ttu-id="53ff2-107">En el ejemplo siguiente se crea un nuevo <xref:System.Windows.Documents.Paragraph> elemento y lo inserta al principio de la <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="53ff2-107">The following example creates a new <xref:System.Windows.Documents.Paragraph> element and inserts it at the beginning of the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_FlowDocumentBlocksInsert](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentblocksinsert)]
  [!code-vb[FlowDocumentSnippets#_FlowDocumentBlocksInsert](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentblocksinsert)]  
   
-## <a name="example"></a><span data-ttu-id="ad001-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ad001-108">Example</span></span>  
- <span data-ttu-id="ad001-109">En el ejemplo siguiente se obtiene el número de nivel superior <xref:System.Windows.Documents.Block> elementos contenidos en el <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="ad001-109">The following example gets the number of top-level <xref:System.Windows.Documents.Block> elements contained in the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+## <a name="example"></a><span data-ttu-id="53ff2-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="53ff2-108">Example</span></span>  
+ <span data-ttu-id="53ff2-109">En el ejemplo siguiente se obtiene el número de nivel superior <xref:System.Windows.Documents.Block> elementos contenidos en el <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="53ff2-109">The following example gets the number of top-level <xref:System.Windows.Documents.Block> elements contained in the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_FlowDocumentBlocksCount](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentblockscount)]
  [!code-vb[FlowDocumentSnippets#_FlowDocumentBlocksCount](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentblockscount)]  
   
-## <a name="example"></a><span data-ttu-id="ad001-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ad001-110">Example</span></span>  
- <span data-ttu-id="ad001-111">En el ejemplo siguiente se elimina la última <xref:System.Windows.Documents.Block> elemento en el <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="ad001-111">The following example deletes the last <xref:System.Windows.Documents.Block> element in the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+## <a name="example"></a><span data-ttu-id="53ff2-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="53ff2-110">Example</span></span>  
+ <span data-ttu-id="53ff2-111">En el ejemplo siguiente se elimina la última <xref:System.Windows.Documents.Block> elemento en el <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="53ff2-111">The following example deletes the last <xref:System.Windows.Documents.Block> element in the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_FlowDocumentBlocksRemoveLast](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentblocksremovelast)]
  [!code-vb[FlowDocumentSnippets#_FlowDocumentBlocksRemoveLast](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentblocksremovelast)]  
   
-## <a name="example"></a><span data-ttu-id="ad001-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ad001-112">Example</span></span>  
- <span data-ttu-id="ad001-113">El siguiente ejemplo borra todo el contenido (<xref:System.Windows.Documents.Block> elementos) desde el <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="ad001-113">The following example clears all of the contents (<xref:System.Windows.Documents.Block> elements) from the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+## <a name="example"></a><span data-ttu-id="53ff2-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="53ff2-112">Example</span></span>  
+ <span data-ttu-id="53ff2-113">El siguiente ejemplo borra todo el contenido (<xref:System.Windows.Documents.Block> elementos) desde el <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="53ff2-113">The following example clears all of the contents (<xref:System.Windows.Documents.Block> elements) from the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_FlowDocumentBlocksClear](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentblocksclear)]
  [!code-vb[FlowDocumentSnippets#_FlowDocumentBlocksClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentblocksclear)]  
   
-## <a name="see-also"></a><span data-ttu-id="ad001-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="ad001-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="53ff2-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="53ff2-114">See also</span></span>
 
-- [<span data-ttu-id="ad001-115">Manipular grupos de filas de una tabla mediante la propiedad RowGroups</span><span class="sxs-lookup"><span data-stu-id="ad001-115">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
-- [<span data-ttu-id="ad001-116">Manipular las columnas de una tabla mediante la propiedad Columns</span><span class="sxs-lookup"><span data-stu-id="ad001-116">Manipulate a Table's Columns through the Columns Property</span></span>](how-to-manipulate-table-columns-through-the-columns-property.md)
-- [<span data-ttu-id="ad001-117">Manipular grupos de filas de una tabla mediante la propiedad RowGroups</span><span class="sxs-lookup"><span data-stu-id="ad001-117">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [<span data-ttu-id="53ff2-115">Manipular grupos de filas de una tabla mediante la propiedad RowGroups</span><span class="sxs-lookup"><span data-stu-id="53ff2-115">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [<span data-ttu-id="53ff2-116">Manipular las columnas de una tabla mediante la propiedad Columns</span><span class="sxs-lookup"><span data-stu-id="53ff2-116">Manipulate a Table's Columns through the Columns Property</span></span>](how-to-manipulate-table-columns-through-the-columns-property.md)
+- [<span data-ttu-id="53ff2-117">Manipular grupos de filas de una tabla mediante la propiedad RowGroups</span><span class="sxs-lookup"><span data-stu-id="53ff2-117">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
