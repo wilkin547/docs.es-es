@@ -1,5 +1,5 @@
 ---
-title: Filtrar Definir una duración para una animación
+title: Procedimiento Definir una duración para una animación
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], duration
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
 ms.openlocfilehash: bdae1689ffeb8c54d756b9debbd26d57a052892d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59198795"
 ---
-# <a name="how-to-set-a-duration-for-an-animation"></a>Filtrar Definir una duración para una animación
+# <a name="how-to-set-a-duration-for-an-animation"></a>Procedimiento Definir una duración para una animación
 Un <xref:System.Windows.Media.Animation.Timeline> representa un segmento de tiempo y la longitud de ese segmento viene determinada por la escala de tiempo <xref:System.Windows.Duration>. Cuando un <xref:System.Windows.Media.Animation.Timeline> llega al final de su duración, detiene la reproducción. Si el <xref:System.Windows.Media.Animation.Timeline> tiene objetos Timeline secundarios, detener la reproducción. En el caso de una animación, la <xref:System.Windows.Duration> especifica cuánto tiempo tarda la animación en la transición desde su valor inicial hasta su valor final.  
   
  Puede especificar un <xref:System.Windows.Duration> con una hora específica y finita o los valores especiales <xref:System.Windows.Duration.Automatic%2A> o <xref:System.Windows.Duration.Forever%2A>. Duración de una animación siempre debe ser un valor de tiempo, porque una animación siempre debe tener una longitud definida, finita, de lo contrario, la animación no sabría cómo realizar la transición entre sus valores de destino. Escalas de tiempo contenedoras (<xref:System.Windows.Media.Animation.TimelineGroup> objetos), como <xref:System.Windows.Media.Animation.Storyboard> y <xref:System.Windows.Media.Animation.ParallelTimeline>, tienen una duración predeterminada de <xref:System.Windows.Duration.Automatic%2A>, lo que significa que finalizan automáticamente cuando detiene la reproducción de su último miembro secundario.  

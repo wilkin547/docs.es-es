@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer posiciones de tabulación en texto dibujado
+title: Procedimiento para establecer posiciones de tabulación en texto dibujado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
 ms.openlocfilehash: 68dbebfc4fab773fe749f9443d0c61883099d2ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197495"
 ---
-# <a name="how-to-set-tab-stops-in-drawn-text"></a>Filtrar para establecer posiciones de tabulación en texto dibujado
+# <a name="how-to-set-tab-stops-in-drawn-text"></a>Procedimiento para establecer posiciones de tabulación en texto dibujado
 Puede establecer posiciones de tabulación para el texto mediante una llamada a la <xref:System.Drawing.StringFormat.SetTabStops%2A> método de un <xref:System.Drawing.StringFormat> objeto y, a continuación, pasando que <xref:System.Drawing.StringFormat> de objeto para el <xref:System.Drawing.Graphics.DrawString%2A> método de la <xref:System.Drawing.Graphics> clase.  
   
 > [!NOTE]
@@ -40,4 +40,4 @@ Puede establecer posiciones de tabulación para el texto mediante una llamada a 
 ## <a name="see-also"></a>Vea también
 
 - [Utilizar fuentes y texto](using-fonts-and-text.md)
-- [Filtrar para dibujar texto con GDI](how-to-draw-text-with-gdi.md)
+- [Cómo: Dibujar texto con GDI](how-to-draw-text-with-gdi.md)

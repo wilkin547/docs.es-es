@@ -18,10 +18,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211932"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Archivos de recursos, contenido y datos de aplicaciones de WPF
@@ -123,7 +123,7 @@ ms.locfileid: "59211932"
  Los archivos de contenido se deben usar cuando la aplicación requiere un conjunto específico de archivos de datos de aplicación que desee poder actualizar sin volver a compilar el ensamblado que los consume.  
   
 ### <a name="configuring-content-files"></a>Configuración de archivos de contenido  
- Para agregar un archivo de contenido a un proyecto, se debe incluir como un archivo de datos de la aplicación un `Content` elemento. Además, dado que no se compila un archivo de contenido directamente en el ensamblado, debe establecer el [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` metadatos de elemento para especificar que el archivo de contenido se copia en una ubicación que es relativa al ensamblado generado. Si desea que el recurso que se va a copiar en la carpeta de salida de compilación cada vez se compila un proyecto, establecer el `CopyToOutputDirectory` elemento de metadatos con el `Always` valor. En caso contrario, puede asegurarse de que solo la versión más reciente del recurso se copia en la carpeta de salida de compilación mediante la `PreserveNewest` valor.  
+ Para agregar un archivo de contenido a un proyecto, se debe incluir como un archivo de datos de la aplicación un `Content` elemento. Además, dado que no se compila un archivo de contenido directamente en el ensamblado, debe establecer el [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` metadatos de elemento para especificar que el archivo de contenido se copia en una ubicación que es relativa al ensamblado generado. Si desea que el recurso que se va a copiar en la carpeta de salida de compilación cada vez se compila un proyecto, establecer el `CopyToOutputDirectory` elemento de metadatos con el `Always` valor. En caso contrario, puede asegurarse de que solo la versión más reciente del recurso se copia en la carpeta de salida de compilación mediante la `PreserveNewest` valor.  
   
  A continuación muestra un archivo que se configura como un archivo de contenido que se copia en la carpeta de salida de compilación solo cuando se agrega al proyecto una nueva versión del recurso.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "59211932"
 ### <a name="configuring-site-of-origin-files"></a>Configuración de archivos de sitio de origen  
  Si su sitio de archivos de origen es inexistentes o desconocido en tiempo de compilación, deberá usar la implementación tradicional mecanismos para garantizar los archivos necesarios están disponibles en tiempo de ejecución, incluido el uso de cualquiera el `XCopy` programa de línea de comandos o el [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- Si conoce en tiempo de compilación de los archivos que lo haría que se encuentren en el sitio de origen, pero todavía desea evitar una dependencia explícita, puede agregar dichos archivos a un [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] como `None` elemento. Como en los archivos de contenido, debe establecer el [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` atributo para especificar que el archivo de sitio de origen se copia en una ubicación que es relativa al ensamblado generado, especificando el `Always` valor o el `PreserveNewest` valor.  
+ Si conoce en tiempo de compilación de los archivos que lo haría que se encuentren en el sitio de origen, pero todavía desea evitar una dependencia explícita, puede agregar dichos archivos a un [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] como `None` elemento. Como en los archivos de contenido, debe establecer el [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` atributo para especificar que el archivo de sitio de origen se copia en una ubicación que es relativa al ensamblado generado, especificando el `Always` valor o el `PreserveNewest` valor.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -239,4 +239,4 @@ ms.locfileid: "59211932"
   
 ## <a name="see-also"></a>Vea también
 
-- [Pack URI en WPF](pack-uris-in-wpf.md)
+- [Identificadores URI de paquete en WPF](pack-uris-in-wpf.md)

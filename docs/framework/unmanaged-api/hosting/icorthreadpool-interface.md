@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a30f10e322961d52c1fa726d5fd81e4c710a5835
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211769"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool (Interfaz)
@@ -33,17 +33,17 @@ Proporciona métodos para acceder al grupo de subprocesos.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método CorRegisterWaitForSingleObject](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corregisterwaitforsingleobject-method.md)|Reservado para uso interno.|  
-|[Método CorUnregisterWait](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corunregisterwait-method.md)|Reservado para uso interno.|  
-|[Método CorQueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md)|Reservado para uso interno.|  
-|[Método CorCreateTimer](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcreatetimer-method.md)|Reservado para uso interno.|  
-|[Método CorChangeTimer](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corchangetimer-method.md)|Reservado para uso interno.|  
-|[Método CorDeleteTimer](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-cordeletetimer-method.md)|Reservado para uso interno.|  
-|[Método CorBindIoCompletionCallback](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corbindiocompletioncallback-method.md)|Reservado para uso interno.|  
-|[Método CorCallOrQueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcallorqueueuserworkitem-method.md)|Reservado para uso interno.|  
-|[Método CorSetMaxThreads](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md)|Reservado para uso interno.|  
-|[Método CorGetMaxThreads](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetmaxthreads-method.md)|Reservado para uso interno.|  
-|[Método CorGetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|Reservado para uso interno.|  
+|[CorRegisterWaitForSingleObject (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corregisterwaitforsingleobject-method.md)|Reservado para uso interno.|  
+|[CorUnregisterWait (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corunregisterwait-method.md)|Reservado para uso interno.|  
+|[CorQueueUserWorkItem (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md)|Reservado para uso interno.|  
+|[CorCreateTimer (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcreatetimer-method.md)|Reservado para uso interno.|  
+|[CorChangeTimer (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corchangetimer-method.md)|Reservado para uso interno.|  
+|[CorDeleteTimer (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-cordeletetimer-method.md)|Reservado para uso interno.|  
+|[CorBindIoCompletionCallback (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corbindiocompletioncallback-method.md)|Reservado para uso interno.|  
+|[CorCallOrQueueUserWorkItem (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcallorqueueuserworkitem-method.md)|Reservado para uso interno.|  
+|[CorSetMaxThreads (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md)|Reservado para uso interno.|  
+|[CorGetMaxThreads (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetmaxthreads-method.md)|Reservado para uso interno.|  
+|[CorGetAvailableThreads (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|Reservado para uso interno.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

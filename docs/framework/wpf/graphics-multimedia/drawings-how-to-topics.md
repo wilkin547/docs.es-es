@@ -12,10 +12,10 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
 ms.openlocfilehash: 6be388292ce2c73b9ef555ea6b00c986c99dc11a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197742"
 ---
 # <a name="drawings-how-to-topics"></a>Temas "Cómo..." de dibujo
@@ -25,7 +25,7 @@ Los temas de esta sección describen cómo usar <xref:System.Windows.Media.Drawi
  [Aplicar un objeto GuidelineSet a un dibujo](how-to-apply-a-guidelineset-to-a-drawing.md)  
   [Crear un dibujo compuesto](how-to-create-a-composite-drawing.md)  
   [Crear un objeto GeometryDrawing](how-to-create-a-geometrydrawing.md)  
-  [Dibujar una imagen mediante un objeto ImageDrawing](how-to-draw-an-image-using-imagedrawing.md)  
+  [Dibujar una imagen usando un objeto ImageDrawing](how-to-draw-an-image-using-imagedrawing.md)  
   [Reproducir elementos multimedia con un objeto VideoDrawing](how-to-play-media-using-a-videodrawing.md)  
   [Usar un dibujo como el origen de una imagen](how-to-use-a-drawing-as-an-image-source.md)  
   

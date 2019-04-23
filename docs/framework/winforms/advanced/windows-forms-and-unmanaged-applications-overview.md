@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
 ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195649"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Información general sobre formularios Windows Forms y aplicaciones no administradas
@@ -57,7 +57,7 @@ Los controles y aplicaciones de Windows Forms pueden interoperar con aplicacione
   
 ## <a name="see-also"></a>Vea también
 
-- [Aplicaciones de Windows Forms y aplicaciones no administradas](windows-forms-and-unmanaged-applications.md)
+- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
 - [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Interoperabilidad COM en aplicaciones .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Ejemplos de interoperabilidad COM](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
@@ -65,5 +65,5 @@ Los controles y aplicaciones de Windows Forms pueden interoperar con aplicacione
 - [Exponer componentes de .NET Framework en COM](../../interop/exposing-dotnet-components-to-com.md)
 - [Empaquetar un ensamblado para COM](../../interop/packaging-an-assembly-for-com.md)
 - [Registrar ensamblados con COM](../../interop/registering-assemblies-with-com.md)
-- [Filtrar para admitir la interoperabilidad COM mostrando un formulario Windows Forms con el método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
-- [Filtrar para admitir la interoperabilidad COM al mostrar formularios Windows Forms en sus propios subprocesos](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms con el método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

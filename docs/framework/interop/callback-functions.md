@@ -8,10 +8,10 @@ ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65f5e11a8fb40527387c14cdd8dec7f0bfc5c697
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197001"
 ---
 # <a name="callback-functions"></a>Funciones de devolución de llamada
@@ -29,5 +29,5 @@ Una función de devolución de llamada es código dentro de una aplicación admi
   
 ## <a name="see-also"></a>Vea también
 
-- [Procedimiento para implementar funciones de devolución de llamada](../../../docs/framework/interop/how-to-implement-callback-functions.md)
+- [Cómo: Implementar funciones de devolución de llamada](../../../docs/framework/interop/how-to-implement-callback-functions.md)
 - [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md)

@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ccc45482f691d9950c641ef126a657052a280e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213643"
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3 (Interfaz)
@@ -30,7 +30,7 @@ Controla las notificaciones del depurador personalizadas.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Habilita y deshabilita las notificaciones del depurador personalizados del tipo especificado.|  
+|[SetEnableCustomNotification (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Habilita y deshabilita las notificaciones del depurador personalizados del tipo especificado.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esta interfaz extiende lógicamente las interfaces ICorDebugProcess y ICorDebugProcess2.  
@@ -49,5 +49,5 @@ Controla las notificaciones del depurador personalizadas.
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

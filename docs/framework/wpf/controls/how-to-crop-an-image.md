@@ -1,5 +1,5 @@
 ---
-title: Filtrar Recortar una imagen
+title: Procedimiento Recortar una imagen
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - cropping images [WPF]
 ms.assetid: c6bba109-c6e7-4cf8-bfe6-9cf8d01bb4fc
 ms.openlocfilehash: e672c7e24ec4db2d6424fa0b611cb1c135cf8eec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195558"
 ---
-# <a name="how-to-crop-an-image"></a>Filtrar Recortar una imagen
+# <a name="how-to-crop-an-image"></a>Procedimiento Recortar una imagen
 En este ejemplo se muestra cómo recortar una imagen mediante <xref:System.Windows.Media.Imaging.CroppedBitmap>.  
   
  <xref:System.Windows.Media.Imaging.CroppedBitmap> se utiliza principalmente al codificar una versión recortada de una imagen para guardarla en un archivo. Para recortar una imagen para fines de presentación, vea el [Cómo: Creación de una región de recorte](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms746710(v=vs.90)) tema.  
@@ -41,4 +41,4 @@ En este ejemplo se muestra cómo recortar una imagen mediante <xref:System.Windo
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar Creación de una región de recorte](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms746710(v=vs.90))
+- [Cómo: Creación de una región de recorte](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms746710(v=vs.90))

@@ -4,12 +4,12 @@ description: Conozca los procedimientos recomendados para interactuar con compon
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412063"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59196663"
 ---
 # <a name="native-interoperability-best-practices"></a>Procedimientos recomendados de interoperabilidad nativa
 
@@ -187,7 +187,6 @@ Los siguientes tipos tienen el mismo tamaño en Windows 32 bits y 64 bits, a p
 | 64    | `ULARGE_INTEGER` | `unsigned long long` | `ulong`  |                                      |
 | 32    | `HRESULT`        | `long`               | `int`    |                                      |
 | 32    | `NTSTATUS`       | `long`               | `int`    |                                      |
-
 
 Los siguientes tipos, que son punteros, siguen el ancho de la plataforma. Use `IntPtr`/`UIntPtr` para estos.
 

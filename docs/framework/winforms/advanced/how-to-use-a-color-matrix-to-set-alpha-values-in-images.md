@@ -1,5 +1,5 @@
 ---
-title: Filtrar para usar una matriz de colores para establecer valores alfa en imágenes
+title: Procedimiento para usar una matriz de colores para establecer valores alfa en imágenes
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
 ms.openlocfilehash: 79937f0801a790d4ff1ab327aaaf45ef1b881827
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199549"
 ---
-# <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Filtrar para usar una matriz de colores para establecer valores alfa en imágenes
+# <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Procedimiento para usar una matriz de colores para establecer valores alfa en imágenes
 El <xref:System.Drawing.Bitmap> clase (que hereda de la <xref:System.Drawing.Image> clase) y la <xref:System.Drawing.Imaging.ImageAttributes> clase proporcionan funcionalidad para obtener y establecer valores de píxel. Puede usar el <xref:System.Drawing.Imaging.ImageAttributes> clase para modificar la versión alfa de los valores de una imagen completa, o bien puede llamar el <xref:System.Drawing.Bitmap.SetPixel%2A> método de la <xref:System.Drawing.Bitmap> clase para modificar valores de píxeles individuales.  
   
 ## <a name="example"></a>Ejemplo  
@@ -38,4 +38,4 @@ El <xref:System.Drawing.Bitmap> clase (que hereda de la <xref:System.Drawing.Ima
 ## <a name="see-also"></a>Vea también
 
 - [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Líneas y rellenos con mezcla alfa](alpha-blending-lines-and-fills.md)
+- [Líneas y rellenos con combinación alfa](alpha-blending-lines-and-fills.md)

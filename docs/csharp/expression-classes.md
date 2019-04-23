@@ -3,12 +3,12 @@ title: Tipos de marco que admiten árboles de expresión
 description: Obtenga información sobre los tipos de marco que admiten árboles de expresión, la creación de árboles de expresión y las técnicas para trabajar con las API de árboles de expresión.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972564"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59198470"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Tipos de marco que admiten árboles de expresión
 
@@ -65,4 +65,3 @@ Hay tipos de nodos de expresión que se asignan a casi todos los elementos de si
 Encontrará más información a medida que observe cada una de esas tres áreas. Siempre encontrará lo que necesita empezando con uno de esos tres pasos.
  
  [Siguiente: Ejecutar árboles de expresión](expression-trees-execution.md)
- 

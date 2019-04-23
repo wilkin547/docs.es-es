@@ -1,18 +1,18 @@
 ---
-title: Filtrar para mostrar comandos de LINQ to SQL
+title: Procedimiento para mostrar comandos de LINQ to SQL
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
 ms.openlocfilehash: d71eaf834ebf36d462f8581f0074b2f6a90bae17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211613"
 ---
-# <a name="how-to-display-linq-to-sql-commands"></a>Filtrar para mostrar comandos de LINQ to SQL
+# <a name="how-to-display-linq-to-sql-commands"></a>Procedimiento para mostrar comandos de LINQ to SQL
 Utilice <xref:System.Data.Linq.DataContext.GetCommand%2A> para mostrar comandos SQL y otra información.  
   
 ## <a name="example"></a>Ejemplo  
