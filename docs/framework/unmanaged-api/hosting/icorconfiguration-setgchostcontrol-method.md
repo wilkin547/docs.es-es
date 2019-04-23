@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50a92058e8a394b95c690d19f1bafdddbed8246a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135998"
 ---
-# <a name="icorconfigurationsetgchostcontrol-method"></a><span data-ttu-id="406e0-102">ICorConfiguration::SetGCHostControl (Método)</span><span class="sxs-lookup"><span data-stu-id="406e0-102">ICorConfiguration::SetGCHostControl Method</span></span>
-<span data-ttu-id="406e0-103">Establece la interfaz de devolución de llamada que se usará por el recolector de elementos no utilizados para solicitar al host que cambie los límites de memoria virtual.</span><span class="sxs-lookup"><span data-stu-id="406e0-103">Sets the callback interface to be used by the garbage collector to request the host to change the limits of virtual memory.</span></span>  
+# <a name="icorconfigurationsetgchostcontrol-method"></a><span data-ttu-id="377b4-102">ICorConfiguration::SetGCHostControl (Método)</span><span class="sxs-lookup"><span data-stu-id="377b4-102">ICorConfiguration::SetGCHostControl Method</span></span>
+<span data-ttu-id="377b4-103">Establece la interfaz de devolución de llamada que se usará por el recolector de elementos no utilizados para solicitar al host que cambie los límites de memoria virtual.</span><span class="sxs-lookup"><span data-stu-id="377b4-103">Sets the callback interface to be used by the garbage collector to request the host to change the limits of virtual memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="406e0-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="406e0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="377b4-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="377b4-104">Syntax</span></span>  
   
 ```  
 HRESULT SetGCHostControl (  
@@ -35,19 +35,19 @@ HRESULT SetGCHostControl (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="406e0-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="406e0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="377b4-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="377b4-105">Parameters</span></span>  
  `pGCHostControl`  
- <span data-ttu-id="406e0-106">[in] Un puntero a un [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) objeto que permite que el recolector de elementos no utilizados solicitar el host para cambiar los límites de memoria virtual.</span><span class="sxs-lookup"><span data-stu-id="406e0-106">[in] A pointer to an [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) object that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  
+ <span data-ttu-id="377b4-106">[in] Un puntero a un [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) objeto que permite que el recolector de elementos no utilizados solicitar el host para cambiar los límites de memoria virtual.</span><span class="sxs-lookup"><span data-stu-id="377b4-106">[in] A pointer to an [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) object that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="406e0-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="406e0-107">Requirements</span></span>  
- <span data-ttu-id="406e0-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="406e0-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="377b4-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="377b4-107">Requirements</span></span>  
+ <span data-ttu-id="377b4-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="377b4-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="406e0-109">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="406e0-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="377b4-109">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="377b4-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="406e0-110">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="406e0-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="377b4-110">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="377b4-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="406e0-111">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="406e0-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="377b4-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="377b4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="406e0-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="406e0-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="377b4-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="377b4-112">See also</span></span>
 
-- [<span data-ttu-id="406e0-113">ICorConfiguration (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="406e0-113">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+- [<span data-ttu-id="377b4-113">ICorConfiguration (interfaz)</span><span class="sxs-lookup"><span data-stu-id="377b4-113">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
