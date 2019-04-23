@@ -1,5 +1,5 @@
 ---
-title: Filtrar Detectar si está instalado .NET Framework 3.5
+title: Procedimiento Detectar si está instalado .NET Framework 3.5
 ms.date: 03/30/2017
 helpviewer_keywords:
 - verifying whether.NET Framework 3.5 is installed [WPF]
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
 ms.openlocfilehash: af2428ece79803953b8c90431d905824dd18fec8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074643"
 ---
-# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Filtrar Detectar si está instalado .NET Framework 3.5
+# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Procedimiento Detectar si está instalado .NET Framework 3.5
 Antes de que los administradores pueden implementar aplicaciones de Windows Presentation Foundation (WPF) en un sistema que tiene como destino el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], primero debe confirmar que el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] está presente en tiempo de ejecución. En este tema se proporciona un script escrito en HTML/JavaScript que los administradores pueden usar para determinar si el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] está presente en un sistema.  
   
 > [!NOTE]
@@ -130,4 +130,4 @@ Antes de que los administradores pueden implementar aplicaciones de Windows Pres
   
 ## <a name="see-also"></a>Vea también
 
-- [Detectar si está instalado .NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [Detectar si .NET Framework 3.0 está instalado](how-to-detect-whether-the-net-framework-3-0-is-installed.md)

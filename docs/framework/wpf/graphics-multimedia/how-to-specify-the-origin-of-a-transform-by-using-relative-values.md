@@ -1,5 +1,5 @@
 ---
-title: Filtrar Especificar el origen de una transformación mediante valores relativos
+title: Procedimiento Especificar el origen de una transformación mediante valores relativos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - origins of Transforms [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
 ms.openlocfilehash: 48b3b0df8dab8516873495a996074eae57ffe00f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082963"
 ---
-# <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Filtrar Especificar el origen de una transformación mediante valores relativos
+# <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Procedimiento Especificar el origen de una transformación mediante valores relativos
 En este ejemplo se muestra cómo utilizar valores relativos para especificar el origen de un <xref:System.Windows.UIElement.RenderTransform%2A> que se aplica a un <xref:System.Windows.FrameworkElement>.  
   
  Al girar, escalar o sesgar un <xref:System.Windows.FrameworkElement> utilizando el <xref:System.Windows.UIElement.RenderTransform%2A> propiedad, el valor predeterminado aplica la transformación a la esquina superior izquierda del elemento. Si desea girar, escalar o sesgar desde el centro del elemento, puede realizar la compensación estableciendo el centro de la transformación en el centro del elemento. Sin embargo, esa solución requiere que conozca el tamaño del elemento. Una manera más fácil de aplicar una transformación al centro de un elemento es establecer su <xref:System.Windows.UIElement.RenderTransformOrigin%2A> propiedad en (0,5, 0,5), en lugar de establecer un valor central en la propia transformación.  

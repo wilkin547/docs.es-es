@@ -16,10 +16,10 @@ ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055318"
 ---
 # <a name="working-with-calendars"></a>Trabajar con calendarios
@@ -56,7 +56,7 @@ Todos los calendarios de .NET derivan de la <xref:System.Globalization.Calendar?
 
 * <xref:System.Globalization.ThaiBuddhistCalendar>, que representa el calendario budista tailandés.
 
-* <xref:System.Globalization.UmAlQuraCalendar>, que representa el calendario Um Al Qura.
+* <xref:System.Globalization.UmAlQuraCalendar>, que representa el calendario Um-Al-Qura.
 
 Un calendario se puede usar de dos maneras:
 
@@ -362,6 +362,6 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar Mostrar fechas en calendarios no gregorianos](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
+- [Cómo: Mostrar fechas en calendarios no gregorianos](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
 - [Ejemplo: Utilidad de rango de semana de calendario](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
 - [Clase de calendario](xref:System.Globalization.Calendar)

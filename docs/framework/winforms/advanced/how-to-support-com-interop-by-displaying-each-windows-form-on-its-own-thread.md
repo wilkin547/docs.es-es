@@ -1,5 +1,5 @@
 ---
-title: Filtrar para admitir la interoperabilidad COM al mostrar formularios Windows Forms en sus propios subprocesos
+title: Procedimiento para admitir la interoperabilidad COM al mostrar formularios Windows Forms en sus propios subprocesos
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
 ms.openlocfilehash: 39a9793f3046960032da32795e60314ea05a00fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072680"
 ---
-# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Filtrar para admitir la interoperabilidad COM al mostrar formularios Windows Forms en sus propios subprocesos
+# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Procedimiento para admitir la interoperabilidad COM al mostrar formularios Windows Forms en sus propios subprocesos
 Puede resolver problemas de interoperabilidad COM mostrando el formulario en un bucle de mensajes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , que puede crear con el método <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> .  
   
  Para que un Windows Form funcione correctamente con una aplicación cliente COM, debe ejecutar el formulario en un bucle de mensajes de Windows Forms. Para ello, siga uno de estos procedimientos:  
@@ -50,5 +50,5 @@ Puede resolver problemas de interoperabilidad COM mostrando el formulario en un 
 - [Exponer componentes de .NET Framework en COM](../../interop/exposing-dotnet-components-to-com.md)
 - [Empaquetar un ensamblado para COM](../../interop/packaging-an-assembly-for-com.md)
 - [Registrar ensamblados con COM](../../interop/registering-assemblies-with-com.md)
-- [Filtrar para admitir la interoperabilidad COM mostrando un formulario Windows Forms con el método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms con el método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
 - [Información general sobre formularios Windows Forms y aplicaciones no administradas](windows-forms-and-unmanaged-applications-overview.md)

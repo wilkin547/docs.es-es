@@ -3,10 +3,10 @@ title: Enlace de datos y LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
 ms.openlocfilehash: b081a648023aa21eea3a20ec409600d3bcbe9878
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073564"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Enlace de datos y LINQ to DataSet
@@ -26,13 +26,13 @@ ms.locfileid: "59073564"
  [Ordenación con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
  Describe cómo ordenar con <xref:System.Data.DataView>.  
   
- [Consultar la colección de DataRowView en un objeto DataView](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
+ [Consulta de la colección de DataRowView en un objeto DataView](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
  Proporciona información sobre cómo consultar la colección <xref:System.Data.DataRowView> expuesta por <xref:System.Data.DataView>.  
   
  [Rendimiento de DataView](../../../../docs/framework/data/adonet/dataview-performance.md)  
  Proporciona información sobre <xref:System.Data.DataView> y rendimiento.  
   
- [Filtrar para enlazar un objeto DataView a un control DataGridView de formularios Windows Forms](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
+ [Cómo: Enlazar un objeto DataView a un Control DataGridView de formularios Windows Forms](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
  Describe cómo enlazar un objeto <xref:System.Data.DataView> a <xref:System.Windows.Forms.DataGridView>.  
   
 ## <a name="see-also"></a>Vea también

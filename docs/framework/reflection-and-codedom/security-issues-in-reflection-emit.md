@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40db78b8b09b90ab5e11dcc61dc042af1981e827
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701409"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59074526"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de seguridad en la emisión de la reflexión
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona tres maneras para emitir Lenguaje Intermedio de Microsoft (MSIL), cada una con sus propios problemas de seguridad:  
@@ -154,5 +154,6 @@ ms.locfileid: "54701409"
  A partir de [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], no se requieren permisos para obtener información sobre tipos y miembros no públicos. A fin de obtener la información necesaria para emitir métodos dinámicos, se usa la reflexión. Por ejemplo, los objetos <xref:System.Reflection.MethodInfo> se usan para emitir llamadas a métodos. Las versiones anteriores de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] requieren <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Para obtener más información, vea el artículo sobre [consideraciones de seguridad sobre la reflexión](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consideraciones de seguridad sobre la reflexión](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
 - [Emitir métodos y ensamblados dinámicos](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

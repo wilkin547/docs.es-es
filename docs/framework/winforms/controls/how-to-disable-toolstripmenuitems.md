@@ -1,5 +1,5 @@
 ---
-title: Filtrar para deshabilitar ToolStripMenuItems
+title: Procedimiento para deshabilitar ToolStripMenuItems
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
 ms.openlocfilehash: a480cd29eef1a79a69f702eed7cd02c28d7ea3de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082729"
 ---
-# <a name="how-to-disable-toolstripmenuitems"></a>Filtrar para deshabilitar ToolStripMenuItems
+# <a name="how-to-disable-toolstripmenuitems"></a>Procedimiento para deshabilitar ToolStripMenuItems
 Puede limitar o ampliar los comandos que un usuario puede realizar mediante la habilitación y deshabilitación de los elementos de menú en respuesta a las actividades del usuario. Los elementos de menú están habilitados de forma predeterminada cuando se crean, pero esto se puede ajustar mediante el <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> propiedad. Puede manipular esta propiedad en tiempo de diseño en el **propiedades** ventana o mediante programación si se establece en el código.  
   
 ### <a name="to-disable-a-menu-item-programmatically"></a>Para deshabilitar un elemento de menú mediante programación  
@@ -46,5 +46,5 @@ Puede limitar o ampliar los comandos que un usuario puede realizar mediante la h
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Filtrar para ocultar ToolStripMenuItems](how-to-hide-toolstripmenuitems.md)
+- [Cómo: Ocultar ToolStripMenuItems](how-to-hide-toolstripmenuitems.md)
 - [Información general sobre el control MenuStrip](menustrip-control-overview-windows-forms.md)

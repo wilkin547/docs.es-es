@@ -1,5 +1,5 @@
 ---
-title: Filtrar Mostrar los formatos de datos en un objeto de datos
+title: Procedimiento Mostrar los formatos de datos en un objeto de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - data formats [WPF], listing
 ms.assetid: 18e7ba4b-ccef-4815-ae2d-3a32891010c0
 ms.openlocfilehash: f8230eac33a18a0d99cc757d54c2b901c1afe977
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077750"
 ---
-# <a name="how-to-list-the-data-formats-in-a-data-object"></a>Filtrar Mostrar los formatos de datos en un objeto de datos
+# <a name="how-to-list-the-data-formats-in-a-data-object"></a>Procedimiento Mostrar los formatos de datos en un objeto de datos
 Los ejemplos siguientes muestran cómo usar el <xref:System.Windows.DataObject.GetFormats%2A> sobrecargas del método obtención una matriz de cadenas que denotan cada formato de datos que está disponible en un objeto de datos.  
   
 ## <a name="example"></a>Ejemplo  

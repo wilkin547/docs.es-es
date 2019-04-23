@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074240"
 ---
 # <a name="accessibility-best-practices"></a>Procedimientos de accesibilidad recomendados
@@ -24,7 +24,7 @@ ms.locfileid: "59074240"
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Habilitar el acceso mediante programación a todos los elementos de la interfaz de usuario y el texto  
- [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] elementos deben habilitar el acceso mediante programación. Si [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] es un control [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] estándar, el acceso mediante programación se incluirá en el control. Si el control es un control personalizado, un control derivado de un control común o un control derivado de Control, debe comprobar la implementación de <xref:System.Windows.Automation.Peers.AutomationPeer> en las áreas que puedan necesitar modificaciones.  
+ Los elementos[!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] deben habilitar el acceso mediante programación. Si [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] es un control [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] estándar, el acceso mediante programación se incluirá en el control. Si el control es un control personalizado, un control derivado de un control común o un control derivado de Control, debe comprobar la implementación de <xref:System.Windows.Automation.Peers.AutomationPeer> en las áreas que puedan necesitar modificaciones.  
   
  Seguir esta práctica recomendada permite a los proveedores de [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] identificar y manipular los elementos del [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]de su producto.  
   

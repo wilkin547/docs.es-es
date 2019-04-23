@@ -1,5 +1,5 @@
 ---
-title: Filtrar para dibujar un rectángulo con relleno en un formulario Windows Forms
+title: Procedimiento para dibujar un rectángulo con relleno en un formulario Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - drawing rectangles
 ms.assetid: d656a93c-987d-4809-aafd-493fe17450f0
 ms.openlocfilehash: e551eacf0924c9bffa802fb5d2ba8bae7c1c3a98
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072032"
 ---
-# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Filtrar para dibujar un rectángulo con relleno en un formulario Windows Forms
+# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Procedimiento para dibujar un rectángulo con relleno en un formulario Windows Forms
 En este ejemplo se dibuja un rectángulo relleno en un formulario.  
   
 ## <a name="example"></a>Ejemplo  

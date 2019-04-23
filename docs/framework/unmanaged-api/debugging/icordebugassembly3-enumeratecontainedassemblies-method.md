@@ -5,10 +5,10 @@ ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 54ccb52468a530280527252e0e0c43cc9edbb2c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080961"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>Método ICorDebugAssembly3::EnumerateContainedAssemblies
@@ -27,7 +27,7 @@ HRESULT EnumerateContainedAssemblies(
  [out] Un puntero a la dirección de un objeto de interfaz ICorDebugAssemblyEnum que es el enumerador.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si este `ICorDebugAssembly3` objeto es un contenedor; de lo contrario, `S_FALSE`, y la enumeración está vacía.  
+ `S_OK` si el objeto `ICorDebugAssembly3` es un contenedor; de lo contrario, `S_FALSE` y la enumeración está vacía.  
   
 ## <a name="remarks"></a>Comentarios  
  Se necesitan símbolos para enumerar los ensamblados contenidos. Si no existen, el método devuelve `S_FALSE` y no se proporciona un enumerador válido.  
@@ -46,5 +46,5 @@ HRESULT EnumerateContainedAssemblies(
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaz ICorDebugAssembly3](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugAssembly3 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

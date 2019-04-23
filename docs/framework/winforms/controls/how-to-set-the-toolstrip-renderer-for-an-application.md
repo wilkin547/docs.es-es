@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer el representador de ToolStrip para una aplicación
+title: Procedimiento para establecer el representador de ToolStrip para una aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - toolbars [Windows Forms], customizing
 ms.assetid: 46acef3e-9844-4ae8-9a2e-3006fe99cadf
 ms.openlocfilehash: 857d5ea3771b098d4edcbd7b24f1e6feaf3ec2cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083081"
 ---
-# <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>Filtrar para establecer el representador de ToolStrip para una aplicación
+# <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>Procedimiento para establecer el representador de ToolStrip para una aplicación
 Puede personalizar la apariencia de sus controles <xref:System.Windows.Forms.ToolStrip> de forma individual o para todos los controles <xref:System.Windows.Forms.ToolStrip> de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
@@ -50,4 +50,4 @@ Puede personalizar la apariencia de sus controles <xref:System.Windows.Forms.Too
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
-- [ToolStrip](toolstrip-control-windows-forms.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)

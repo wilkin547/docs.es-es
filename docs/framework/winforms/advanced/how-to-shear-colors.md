@@ -1,5 +1,5 @@
 ---
-title: Filtrar para sesgar colores
+title: Procedimiento para sesgar colores
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
 ms.openlocfilehash: bf645cf88c4905cd5cf47c2a6c7af088fa428c8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076255"
 ---
-# <a name="how-to-shear-colors"></a>Filtrar para sesgar colores
+# <a name="how-to-shear-colors"></a>Procedimiento para sesgar colores
 Distorsión aumenta o disminuye un componente de color en una cantidad proporcional a otro componente de color. Por ejemplo, considere la posibilidad de la transformación donde el componente rojo se incrementa por la mitad del valor del componente azul. En este tipo de transformación, el color (0.2, 0.5, 1) se convertiría en (0,7, 0,5, 1). El nuevo componente rojo es 0,2 + (1/2)(1) = 0,7.  
   
 ## <a name="example"></a>Ejemplo  
@@ -38,7 +38,7 @@ Distorsión aumenta o disminuye un componente de color en una cantidad proporcio
  [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos. Reemplace `ColorBars.bmp` con un nombre de la imagen y la ruta de acceso válida en su sistema.  
+ El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>. Reemplace `ColorBars.bmp` con un nombre de la imagen y la ruta de acceso válida en su sistema.  
   
 ## <a name="see-also"></a>Vea también
 

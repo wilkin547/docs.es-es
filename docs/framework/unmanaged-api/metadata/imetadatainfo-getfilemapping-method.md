@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4c6a9473a698e4635c8b5cc9fb58963334dfd65e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59081799"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping (Método)
@@ -75,5 +75,5 @@ HRESULT GetFileMapping (
   
 ## <a name="see-also"></a>Vea también
 
-- [IMetaDataInfo (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)
-- [CorFileMapping (Enumeración)](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)
+- [IMetaDataInfo (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)
+- [CorFileMapping (enumeración)](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

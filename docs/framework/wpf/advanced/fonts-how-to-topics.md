@@ -7,10 +7,10 @@ helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: b4a97c97-7f88-4a89-b1d1-cf2c0d087955
 ms.openlocfilehash: b0f5ebdd6884c541c5d4c96cfeea33d378eeeca3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078516"
 ---
 # <a name="fonts-how-to-topics"></a>Temas "Cómo..." sobre fuentes
@@ -18,7 +18,7 @@ Los temas de esta sección muestran cómo usar las características de fuente in
   
 ## <a name="in-this-section"></a>En esta sección  
  [Enumerar fuentes del sistema](how-to-enumerate-system-fonts.md)  
- [Usar la clase FontSizeConverter](how-to-use-the-fontsizeconverter-class.md)  
+ [Utilizar la clase FontSizeConverter](how-to-use-the-fontsizeconverter-class.md)  
   
 ## <a name="see-also"></a>Vea también
 

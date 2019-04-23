@@ -3,10 +3,10 @@ title: Métodos de LINQ compatibles y no compatibles (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
 ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077080"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Métodos de LINQ compatibles y no compatibles (LINQ to Entities)
@@ -150,7 +150,7 @@ En esta sección se proporciona información sobre los operadores de consulta es
 |Método|Soporte técnico|Firma de funciones de Visual Basic|Firma de métodos de C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Cast%2A>|Se admite para los tipos primitivos de EDM|`Function Cast(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Cast<TResult>( this IQueryable source )`|  
-|<xref:System.Linq.Queryable.OfType%2A>|Compatible con <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
+|<xref:System.Linq.Queryable.OfType%2A>|Se admite para <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>Métodos de paginación  
  Algunos métodos de paginación de LINQ no se admiten en las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). La tabla siguiente enumera los métodos de paginación admitidos y no admitidos.  

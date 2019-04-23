@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
 ms.openlocfilehash: d17d2ad3fd99c6d563c21ddd646396ccb1c1ca48
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921317"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Tipos que admiten valores null (Visual Basic)
@@ -111,10 +111,10 @@ Una base de datos es uno de los lugares más importantes para utilizar tipos que
 - <xref:System.Nullable%601.HasValue%2A>
 - [Utilizar tipos que aceptan valores NULL](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Tipos de datos](index.md)
-- [Tipos de valor y tipos de referencia](value-types-and-reference-types.md)
-- [Solucionar problemas de tipos de datos](troubleshooting-data-types.md)
-- [Rellenar conjuntos de datos mediante TableAdapters](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
+- [Solución de problemas de tipos de datos](troubleshooting-data-types.md)
+- [Llenar conjuntos de datos mediante TableAdapters](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
 - [If (operador)](../../../language-reference/operators/if-operator.md)
 - [Inferencia de tipo de variable local](../variables/local-type-inference.md)
-- [Is (Operador)](../../../language-reference/operators/is-operator.md)
-- [IsNot (Operador)](../../../language-reference/operators/isnot-operator.md)
+- [Is (operador)](../../../language-reference/operators/is-operator.md)
+- [IsNot (operador)](../../../language-reference/operators/isnot-operator.md)

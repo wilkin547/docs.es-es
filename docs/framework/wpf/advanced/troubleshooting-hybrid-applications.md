@@ -10,10 +10,10 @@ helpviewer_keywords:
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
 ms.openlocfilehash: 707e77ac69878c1c7fb8e975c1f90ad657228d1a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079680"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Solución de problemas de aplicaciones híbridas
@@ -33,7 +33,7 @@ ms.locfileid: "59079680"
   
 <a name="scaling"></a>   
 ## <a name="scaling"></a>Cambiar escala  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] tienen distintos modelos de escalado. Algunas transformaciones de escala de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] resultan lógicas para los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], pero otras no. Por ejemplo, ajustar la escala de un control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] a 0 funcionará, pero si se intenta ajustar la escala del mismo control a un valor distinto de cero, el tamaño del control sigue siendo 0. Para más información, vea [Consideraciones sobre el diseño del elemento WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] tienen modelos diferentes de escala. Algunas transformaciones de escala de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] resultan lógicas para los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], pero otras no. Por ejemplo, ajustar la escala de un control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] a 0 funcionará, pero si se intenta ajustar la escala del mismo control a un valor distinto de cero, el tamaño del control sigue siendo 0. Para más información, vea [Consideraciones sobre el diseño del elemento WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="adapter"></a>   
 ## <a name="adapter"></a>Adaptador  
@@ -86,7 +86,7 @@ ms.locfileid: "59079680"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Habilitar los estilos visuales  
- [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] los estilos visuales en un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control no puede estar habilitado. El <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> se llama al método en la plantilla para un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplicación. Aunque este método no se llama de forma predeterminada, si usa [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] para crear un proyecto, obtendrá los elementos visuales de [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] para los controles, si está disponible la versión 6.0 de Comctl32.dll. Debe llamar a la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método antes de que se creen los controladores en el subproceso. Para obtener más información, vea [Cómo: Habilitar estilos visuales en una aplicación híbrida](how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ Es posible que los elementos visuales de [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] no estén habilitados en un control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. El <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> se llama al método en la plantilla para un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplicación. Aunque este método no se llama de forma predeterminada, si usa [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] para crear un proyecto, obtendrá los elementos visuales de [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] para los controles, si está disponible la versión 6.0 de Comctl32.dll. Debe llamar a la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método antes de que se creen los controladores en el subproceso. Para obtener más información, vea [Cómo: Habilitar estilos visuales en una aplicación híbrida](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Controles con licencia  
@@ -118,7 +118,7 @@ ms.locfileid: "59079680"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Interoperabilidad en WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
 - [Arquitectura de entrada de interoperabilidad entre formularios Windows Forms y WPF](windows-forms-and-wpf-interoperability-input-architecture.md)
-- [Filtrar para habilitar estilos visuales en una aplicación híbrida](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [Cómo: Habilitar estilos visuales en una aplicación híbrida](how-to-enable-visual-styles-in-a-hybrid-application.md)
 - [Consideraciones sobre el diseño del elemento WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
 - [Asignación de propiedades en formularios Windows Forms y WPF](windows-forms-and-wpf-property-mapping.md)
 - [Errores en tiempo de diseño en el Diseñador de Windows Forms](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para especificar el modo de edición del control DataGridView de formularios Windows Forms
+title: Procedimiento para especificar el modo de edición del control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
 ms.openlocfilehash: 7cb9278cd311d211ef95df238b930970ae472d05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080402"
 ---
-# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Filtrar para especificar el modo de edición del control DataGridView de formularios Windows Forms
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Procedimiento para especificar el modo de edición del control DataGridView de formularios Windows Forms
 De forma predeterminada, los usuarios pueden editar el contenido del elemento actual <xref:System.Windows.Forms.DataGridView> celda de cuadro de texto al escribir en él o presione F2. Esto coloca la celda en modo de edición si se cumplen todas las condiciones siguientes:  
   
 -   El origen de datos subyacente admite la edición.  
@@ -48,4 +48,4 @@ De forma predeterminada, los usuarios pueden editar el contenido del elemento ac
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>
-- [Entrada de datos en el control DataGridView de formularios Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Entrada de datos en el control DataGridView de Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)

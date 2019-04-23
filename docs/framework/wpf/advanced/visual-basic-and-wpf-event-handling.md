@@ -6,10 +6,10 @@ helpviewer_keywords:
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
 ms.openlocfilehash: c6e1863850ebf04408c7ffc7b784e9ca3ca12cf5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078029"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Control de eventos en Visual Basic y WPF
@@ -27,11 +27,11 @@ Para el idioma de Microsoft Visual Basic .NET en concreto, puede usar específic
  Puede usar `Handles` para asociar controladores para eventos enrutados, siempre y cuando asocie los controladores a instancias que definen el evento que se está controlando en sus tablas de miembros. Los eventos enrutados, los controladores asociados con `Handles` siguen las mismas reglas de enrutamientos como hacen los controladores asociados como [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atributos, o con la firma común de <xref:System.Windows.UIElement.AddHandler%2A>. Esto significa que si el evento ya está marcado como controlado (la <xref:System.Windows.RoutedEventArgs.Handled%2A> es propiedad de los datos del evento `True`), los controladores asociados con `Handles` no se invocan en respuesta a esa instancia de evento. El evento lo pueden marcar como controlado los controladores de instancia de otro elemento de la ruta o la clase que controla en el elemento actual o en elementos anteriores de la ruta. En el caso de los eventos de entrada que admiten eventos emparejados de túnel/propagación, la ruta de tunelización puede haber marcado como controlado el par de eventos. Para obtener más información sobre los eventos enrutados, vea [Información general sobre eventos enrutados](routed-events-overview.md).  
   
 ## <a name="limitations-of-handles-for-adding-handlers"></a>Limitaciones de "Handles" para agregar controladores  
- `Handles` no se puede hacer referencia a controladores para eventos adjuntos. Debe usar el método de descriptor de acceso `add` para ese evento adjunto o atributos de evento *nombreDeTipo.nombreDeEvento* en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Para obtener más información, vea [Información general sobre eventos enrutados](routed-events-overview.md).  
+ `Handles` no puede hacer referencia a controladores para eventos adjuntos. Debe usar el método de descriptor de acceso `add` para ese evento adjunto o atributos de evento *nombreDeTipo.nombreDeEvento* en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Para obtener más información, vea [Información general sobre eventos enrutados](routed-events-overview.md).  
   
  En el caso de los eventos enrutados, solo se puede usar `Handles` para asignar controladores a las instancias en las que ese evento existe en la tabla de miembros de instancia. Pero, en los eventos enrutados en general, un elemento primario puede ser un agente de escucha de un evento de elementos secundarios, incluso si el elemento primario no contiene ese evento en su tabla de miembros. En la sintaxis de atributo, puede especificar esto mediante un formato de atributo *nombreDeTipo.nombreDeMiembro* que califica el tipo que realmente define el evento que quiere controlar. Por ejemplo, un elemento primario `Page` (sin ningún `Click` evento definido) puede escuchar eventos de clic de botón, se asigna un controlador de atributo en el formulario `Button.Click`. Pero `Handles` no es compatible con el formato *nombreDeTipo.nombreDeMiembro*, porque debe admitir un formato *Instancia.Evento* que entra en conflicto. Para obtener más información, vea [Información general sobre eventos enrutados](routed-events-overview.md).  
   
- `Handles` no se puede adjuntar los controladores que se invocan para eventos que ya se ha marcado como controlados. En su lugar, debe usar código y llamar a la `handledEventsToo` sobrecarga de <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>.  
+ `Handles` no puede adjuntar los controladores que se invocan para eventos que ya están marcados como controlados. En su lugar, debe usar código y llamar a la `handledEventsToo` sobrecarga de <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>.  
   
 > [!NOTE]
 >  No utilice el `Handles` sintaxis en el código de Visual Basic cuando se especifica un controlador de eventos para el mismo evento en XAML. En ese caso, se llama al controlador de eventos dos veces.  

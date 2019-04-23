@@ -1,18 +1,18 @@
 ---
-title: Filtrar para crear certificados temporales que puedan usarse durante las operaciones de desarrollo
+title: Procedimiento para crear certificados temporales que puedan usarse durante las operaciones de desarrollo
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
 ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921330"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Filtrar para crear certificados temporales que puedan usarse durante las operaciones de desarrollo
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procedimiento para crear certificados temporales que puedan usarse durante las operaciones de desarrollo
 
 Al desarrollar un servicio seguro o cliente mediante Windows Communication Foundation (WCF), a menudo es necesario proporcionar un certificado X.509 que se usará como una credencial. El certificado forma normalmente parte de una cadena de certificados con una entidad emisora raíz situada en el almacén de las Entidades emisoras de certificados raíz de confianza del equipo. Tener una cadena de certificados le permite establecer un conjunto de certificados donde normalmente la entidad emisora raíz pertenece a su organización o unidad del negocio. Para emularlo en el momento de desarrollo, puede crear dos certificados para satisfacer los requisitos de seguridad. El primero es un certificado con firma automática que se coloca en el almacén de las Entidades emisoras de certificados raíz de confianza y el segundo certificado se crea a partir del primero y se coloca en el almacén personal de la ubicación del equipo local o en el almacén personal de la ubicación del usuario actual. En este tema se describe los pasos para crear estos dos certificados mediante el Powershell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet.
 
@@ -114,6 +114,6 @@ Asegúrese de eliminar cualquier los certificados temporales de entidad emisora 
 
 ## <a name="see-also"></a>Vea también
 
-- [Trabajar con certificados](working-with-certificates.md)
-- [Filtrar para ver certificados con el complemento de MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Trabajo con certificados](working-with-certificates.md)
+- [Cómo: Ver certificados con el complemento de MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Protección de servicios y clientes](securing-services-and-clients.md)

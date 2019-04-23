@@ -1,5 +1,5 @@
 ---
-title: Filtrar para dibujar texto vertical en un formulario Windows Forms
+title: Procedimiento para dibujar texto vertical en un formulario Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - text [Windows Forms], vertical text
 ms.assetid: 717a6131-00f6-4373-b574-9894e8317799
 ms.openlocfilehash: eb00928205a318b068d49ea3f6f71c398f77bbcd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072498"
 ---
-# <a name="how-to-draw-vertical-text-on-a-windows-form"></a>Filtrar para dibujar texto vertical en un formulario Windows Forms
+# <a name="how-to-draw-vertical-text-on-a-windows-form"></a>Procedimiento para dibujar texto vertical en un formulario Windows Forms
 El ejemplo de código siguiente muestra cómo dibujar texto vertical en un formulario mediante el uso de la <xref:System.Drawing.Graphics.DrawString%2A> método <xref:System.Drawing.Graphics>.  
   
 ## <a name="example"></a>Ejemplo  

@@ -1,15 +1,15 @@
 ---
-title: Filtrar para usar el proveedor de roles del administrador de autorización de ASP.NET con un servicio
+title: Procedimiento para usar el proveedor de roles del administrador de autorización de ASP.NET con un servicio
 ms.date: 03/30/2017
 ms.assetid: f21deb81-91ef-49ef-94d6-494785143271
 ms.openlocfilehash: ebdfa8bd7d222c4f9a33b6718b215d327d589c6d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073577"
 ---
-# <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a>Filtrar para usar el proveedor de roles del administrador de autorización de ASP.NET con un servicio
+# <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a>Procedimiento para usar el proveedor de roles del administrador de autorización de ASP.NET con un servicio
 Cuando [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hospeda un servicio web, se puede integrar el administrador de autorización en la aplicación para autorizar el servicio. El administrador de autorización permite a los desarrolladores de aplicaciones definir operaciones individuales que, a su vez, pueden agruparse para formar tareas. Un administrador puede autorizar funciones que realicen tareas específicas u operaciones individuales. El administrador de autorización proporciona una herramienta de administración, como complemento de Microsoft Management Console (MMC), para administrar funciones, tareas, operaciones y usuarios. Los administradores configuran un almacén de directivas del administrador de autorización en un archivo XML, en Active Directory, o en un almacén de Active Directory Application Mode (ADAM).  
   
  El administrador de autorización se integra en la aplicación mediante la configuración del [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proveedor de funciones del administrador de autorización de la aplicación [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que hospeda el servicio web. Al igual que otros [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proveedores de roles, el Administrador de autorización [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proveedor de roles se configura mediante el <`providers`> elemento.  
@@ -33,4 +33,4 @@ Cuando [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hospeda un serv
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para usar el proveedor de roles ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Cómo: Usar el proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)

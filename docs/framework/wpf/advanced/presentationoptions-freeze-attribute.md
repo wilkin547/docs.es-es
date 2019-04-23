@@ -7,10 +7,10 @@ helpviewer_keywords:
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
 ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074669"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze (Atributo)
@@ -45,4 +45,4 @@ Establece el <xref:System.Windows.Freezable.IsFrozen%2A> estado `true` en el que
 
 - <xref:System.Windows.Freezable>
 - [Información general sobre objetos Freezable](freezable-objects-overview.md)
-- [Atributo mc:Ignorable](mc-ignorable-attribute.md)
+- [mc:Ignorable (atributo)](mc-ignorable-attribute.md)

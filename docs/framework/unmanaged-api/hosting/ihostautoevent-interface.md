@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb5fea403f8210ea93d240aa3aabd4325524b987
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080948"
 ---
 # <a name="ihostautoevent-interface"></a>IHostAutoEvent (Interfaz)
@@ -30,8 +30,8 @@ Proporciona una representación de la implementación del host de un evento de r
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método Set](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Establece el actual `IHostAutoEvent` instancia en un estado señalado.|  
-|[Método Wait](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Hace que el actual `IHostAutoEvent` instancia debe esperar hasta que es propiedad de evento o una determinada cantidad de tiempo determinado.|  
+|[Set (método)](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Establece el actual `IHostAutoEvent` instancia en un estado señalado.|  
+|[Wait (método)](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Hace que el actual `IHostAutoEvent` instancia debe esperar hasta que es propiedad de evento o una determinada cantidad de tiempo determinado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,7 +44,7 @@ Proporciona una representación de la implementación del host de un evento de r
   
 ## <a name="see-also"></a>Vea también
 
-- [ICLRSyncManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostManualEvent (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [IHostSyncManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [ICLRSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [IHostManualEvent (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [IHostSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
 - [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

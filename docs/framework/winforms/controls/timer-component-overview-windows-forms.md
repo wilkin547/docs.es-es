@@ -8,10 +8,10 @@ helpviewer_keywords:
 - timers [Windows Forms], about timers
 ms.assetid: e672c05b-a8b6-4b26-9e4d-9223aa9e3873
 ms.openlocfilehash: 5bef0ba87d6a496acf7575965128be2b20b437ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074214"
 ---
 # <a name="timer-component-overview-windows-forms"></a>Información general sobre el componente Timer (formularios Windows Forms)
@@ -23,5 +23,5 @@ El componente <xref:System.Windows.Forms.Timer> de Windows Forms produce un even
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.Timer>
-- [Componente Timer](timer-component-windows-forms.md)
+- [Timer (componente)](timer-component-windows-forms.md)
 - [Limitaciones de la propiedad Interval del componente Timer de formularios Windows Forms](limitations-of-the-timer-component-interval-property.md)

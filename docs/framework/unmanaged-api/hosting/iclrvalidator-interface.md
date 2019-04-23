@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05287d3674e55a87cfe359fc08f74fa46000d79f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075852"
 ---
 # <a name="iclrvalidator-interface"></a>ICLRValidator (Interfaz)
@@ -30,8 +30,8 @@ Proporciona métodos para validar imágenes portables de ejecutable (PE) e infor
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método FormatEventInfo](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Obtiene un mensaje detallado sobre el error de validación especificado.|  
-|[Método Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Valida el archivo ejecutable portable o lenguaje intermedio de Microsoft (MSIL) en el archivo especificado.|  
+|[FormatEventInfo (método)](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Obtiene un mensaje detallado sobre el error de validación especificado.|  
+|[Validate (método)](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Valida el archivo ejecutable portable o lenguaje intermedio de Microsoft (MSIL) en el archivo especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,6 +44,6 @@ Proporciona métodos para validar imágenes portables de ejecutable (PE) e infor
   
 ## <a name="see-also"></a>Vea también
 
-- [ICLRErrorReportingManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [ICLRErrorReportingManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
 - [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [CLRRuntimeHost (Coclase)](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)
+- [CLRRuntimeHost (coclase)](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)

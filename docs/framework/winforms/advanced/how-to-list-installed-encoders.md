@@ -1,5 +1,5 @@
 ---
-title: Filtrar para enumerar los codificadores instalados
+title: Procedimiento para enumerar los codificadores instalados
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - image encoders [Windows Forms], listing
 ms.assetid: 49e8e4e9-7a67-42d9-86bf-08821cdc282e
 ms.openlocfilehash: ce297cb6d183bc63c8b276e30100aa4e864cd90d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078816"
 ---
-# <a name="how-to-list-installed-encoders"></a>Filtrar para enumerar los codificadores instalados
+# <a name="how-to-list-installed-encoders"></a>Procedimiento para enumerar los codificadores instalados
 Es posible que desee enumerar los codificadores de imagen disponibles en un equipo, para determinar si la aplicación puede guardar en un formato de archivo de imagen determinado. El <xref:System.Drawing.Imaging.ImageCodecInfo> clase proporciona el <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> métodos estáticos para que pueda determinar los codificadores de imagen que están disponibles. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> Devuelve una matriz de <xref:System.Drawing.Imaging.ImageCodecInfo> objetos.  
   
 ## <a name="example"></a>Ejemplo  
@@ -33,5 +33,5 @@ Es posible que desee enumerar los codificadores de imagen disponibles en un equi
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para enumerar los descodificadores instalados](how-to-list-installed-decoders.md)
+- [Cómo: Enumerar los descodificadores instalados](how-to-list-installed-decoders.md)
 - [Usar codificadores y descodificadores de imagen en la interfaz GDI+ administrada](using-image-encoders-and-decoders-in-managed-gdi.md)

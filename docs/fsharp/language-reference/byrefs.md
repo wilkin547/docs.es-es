@@ -3,10 +3,10 @@ title: Byrefs
 description: Obtenga información sobre byref y tipos byref en F#, que se usan para la programación de bajo nivel.
 ms.date: 09/02/2018
 ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055370"
 ---
 # <a name="byrefs"></a>Byrefs
@@ -106,25 +106,25 @@ Todas estas reglas juntas significan que el titular de un `inref` puntero no pue
 
 El propósito de `outref<'T>` consiste en indicar que el puntero solo se debe leer desde. De forma inesperada, `outref<'T>` valor permite leer subyacente a pesar de su nombre. Esto es para fines de compatibilidad. Semánticamente, `outref<'T>` no es diferente a `byref<'T>`.
 
-### <a name="interop-with-c"></a>Interoperabilidad con C#\#
+### <a name="interop-with-c"></a>Interoperabilidad con c#\#
 
 C# admite la `in ref` y `out ref` palabras clave, además de `ref` devuelve. La tabla siguiente muestra cómo F# lo interpreta C# emite:
 
 |Construcción de C#|F#deduce|
 |------------|---------|
-|`ref` valor devuelto|`outref<'T>`|
-|`ref readonly` valor devuelto|`inref<'T>`|
-|`in ref` parámetro|`inref<'T>`|
-|`out ref` parámetro|`outref<'T>`|
+|`ref` Valor devuelto|`outref<'T>`|
+|`ref readonly` Valor devuelto|`inref<'T>`|
+|`in ref` Parámetro|`inref<'T>`|
+|`out ref` Parámetro|`outref<'T>`|
 
 La siguiente tabla muestra qué F# emite:
 
 |F#construcción|Construcción emitido|
 |------------|-----------------|
-|`inref<'T>` argument|`[In]` atributo de argumento|
-|`inref<'T>` return|`modreq` atributo de valor|
+|`inref<'T>` argumento|`[In]` atributo de argumento|
+|`inref<'T>` devolver|`modreq` atributo de valor|
 |`inref<'T>` en la ranura abstracta o la implementación|`modreq` en el valor devuelto o argumento|
-|`outref<'T>` argument|`[Out]` atributo de argumento|
+|`outref<'T>` argumento|`[Out]` atributo de argumento|
 
 ### <a name="type-inference-and-overloading-rules"></a>Inferencia de tipos y las reglas de sobrecarga
 

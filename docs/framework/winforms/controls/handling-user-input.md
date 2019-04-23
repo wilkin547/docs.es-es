@@ -10,10 +10,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
 ms.openlocfilehash: 3ebe82fc18deba52fafe76da7ff85fb247446e46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074961"
 ---
 # <a name="handling-user-input"></a>Controlar la introducción de datos por el usuario
@@ -65,7 +65,7 @@ En este tema se describe los principales eventos de teclado y mouse proporcionad
   
 ## <a name="see-also"></a>Vea también
 
-- [Eventos de los controles de formularios Windows Forms](events-in-windows-forms-controls.md)
-- [Definir un evento](defining-an-event-in-windows-forms-controls.md)
+- [Eventos de los controles de Windows Forms](events-in-windows-forms-controls.md)
+- [Definir un evento en los controles de Windows Forms](defining-an-event-in-windows-forms-controls.md)
 - [Eventos](../../../standard/events/index.md)
-- [Datos proporcionados por el usuario en formularios Windows Forms](../user-input-in-windows-forms.md)
+- [Datos proporcionados por el usuario en Windows Forms](../user-input-in-windows-forms.md)

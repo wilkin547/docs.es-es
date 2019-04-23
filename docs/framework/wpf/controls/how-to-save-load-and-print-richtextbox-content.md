@@ -1,5 +1,5 @@
 ---
-title: Filtrar Guardar, cargar e imprimir contenido de un control RichTextBox
+title: Procedimiento Guardar, cargar e imprimir contenido de un control RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - RichTextBox control [WPF], loading
 ms.assetid: ffb113d3-c68a-47ca-8ac0-882283f38326
 ms.openlocfilehash: 90581bee7815dafd44c3cae18a8af7394fee1e9a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072471"
 ---
-# <a name="how-to-save-load-and-print-richtextbox-content"></a>Filtrar Guardar, cargar e imprimir contenido de un control RichTextBox
+# <a name="how-to-save-load-and-print-richtextbox-content"></a>Procedimiento Guardar, cargar e imprimir contenido de un control RichTextBox
 El ejemplo siguiente muestra cómo guardar el contenido de un <xref:System.Windows.Controls.RichTextBox> en un archivo, cargar ese contenido de nuevo en el <xref:System.Windows.Controls.RichTextBox>e imprimir el contenido.  
   
 ## <a name="example"></a>Ejemplo  
@@ -35,5 +35,5 @@ El ejemplo siguiente muestra cómo guardar el contenido de un <xref:System.Windo
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre el control RichTextBox](richtextbox-overview.md)
+- [RichTextBox Overview](richtextbox-overview.md) (Introducción a RichTextBox)
 - [Información general sobre TextBox](textbox-overview.md)

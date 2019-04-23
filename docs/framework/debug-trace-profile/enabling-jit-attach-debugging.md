@@ -8,10 +8,10 @@ ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1696f9054d44a5f80a1f67cc38e315a8627d295
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078789"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Habilitar la depuración de adjuntos JIT
@@ -21,15 +21,15 @@ La depuración de adjuntos JIT es la frase usada para describir el hecho de adju
   
 -   Excepciones no controladas (el código nativo y administrado).  
   
--   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> método o [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) función (familia Windows 7).  
+-   Método <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> o función [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) (familia Windows 7).  
   
 -   Errores irrecuperables de runtime.  
   
  La depuración de adjuntos JIT también se desencadena mediante llamadas a los métodos y las funciones siguientes:  
   
--   <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> .  
+-   Método <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>.  
   
--   <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> .  
+-   Método <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>.  
   
 -   [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) (función) (Win32).  
   

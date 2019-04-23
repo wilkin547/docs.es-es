@@ -1,5 +1,5 @@
 ---
-title: Filtrar Controlar una animación mediante From, To y By
+title: Procedimiento Controlar una animación mediante From, To y By
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], From/to/by
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
 ms.openlocfilehash: 56522ee5bd4391e43c261558b2fa622234c9ea3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073277"
 ---
-# <a name="how-to-control-an-animation-using-from-to-and-by"></a>Filtrar Controlar una animación mediante From, To y By
+# <a name="how-to-control-an-animation-using-from-to-and-by"></a>Procedimiento Controlar una animación mediante From, To y By
 Un "From/To/By" o "animación básica" crea una transición entre dos valores de destino (consulte [información general sobre animaciones](animation-overview.md) para obtener una introducción a distintos tipos de animaciones). Para establecer los valores de destino de una animación básica, use su <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, y <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propiedades.  La tabla siguiente resume cómo el <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, y <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propiedades pueden usarse conjuntamente o por separado los valores determinar el destino de una animación.  
   
 |Propiedades especificadas|Comportamiento resultante|  
@@ -41,4 +41,4 @@ Un "From/To/By" o "animación básica" crea una transición entre dos valores de
 
 - [Información general sobre animaciones](animation-overview.md)
 - [Información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md)
-- [FROM, To y por el ejemplo de valores de destino de animación](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Ejemplo de valores de destino de animación From, To y By](https://go.microsoft.com/fwlink/?LinkID=159988)

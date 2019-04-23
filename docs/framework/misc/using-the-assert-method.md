@@ -19,16 +19,16 @@ ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073733"
 ---
 # <a name="using-the-assert-method"></a>Utilizar el método Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- <xref:System.Security.CodeAccessPermission.Assert%2A> es un método que se puede llamar en las clases de permiso de acceso de código y en el <xref:System.Security.PermissionSet> clase. Puede usar **Assert** habilitar el código (y los llamadores indirectos) realizar las acciones que el código tiene permiso para hacerlo, pero sus llamadores que no tenga permiso para realizar. Una aserción o validación de seguridad cambia el proceso normal que realiza el runtime durante una comprobación de seguridad. Al validar un permiso, se indica al sistema de seguridad que no compruebe los llamadores de su código para el permiso validado.  
+ <xref:System.Security.CodeAccessPermission.Assert%2A> es un método al que se puede llamar en las clases de permiso de acceso a código y en la clase <xref:System.Security.PermissionSet>. Puede usar **Assert** habilitar el código (y los llamadores indirectos) realizar las acciones que el código tiene permiso para hacerlo, pero sus llamadores que no tenga permiso para realizar. Una aserción o validación de seguridad cambia el proceso normal que realiza el runtime durante una comprobación de seguridad. Al validar un permiso, se indica al sistema de seguridad que no compruebe los llamadores de su código para el permiso validado.  
   
 > [!CAUTION]
 >  Use las aserciones con cuidado, ya que crean vulnerabilidades de seguridad y minan el mecanismo de runtime para imponer las restricciones de seguridad.  

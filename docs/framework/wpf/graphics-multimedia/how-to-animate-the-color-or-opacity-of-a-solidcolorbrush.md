@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar el color o la opacidad de un objeto SolidColorBrush
+title: Procedimiento Animar el color o la opacidad de un objeto SolidColorBrush
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SolidColorBrush [WPF], animating color of
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - SolidColorBrush [WPF], animating opacity of
 ms.assetid: d9154354-843f-4713-bad1-35bb0ba6eaeb
 ms.openlocfilehash: e440cf49b8b16051361650f9659dc6006c2e7b56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072164"
 ---
-# <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>Filtrar Animar el color o la opacidad de un objeto SolidColorBrush
+# <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>Procedimiento Animar el color o la opacidad de un objeto SolidColorBrush
 En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.SolidColorBrush.Color%2A> y <xref:System.Windows.Media.Brush.Opacity%2A> de un <xref:System.Windows.Media.SolidColorBrush>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -37,5 +37,5 @@ En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.SolidColor
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre animaciones](animation-overview.md)
-- [Información general sobre objetos Storyboard](storyboards-overview.md)
+- [Información general sobre objetos Storyboard ](storyboards-overview.md)
 - [Ejemplo de pinceles](https://go.microsoft.com/fwlink/?LinkID=159973)

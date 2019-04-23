@@ -1,5 +1,5 @@
 ---
-title: Filtrar para aplicar corrección gamma a un degradado
+title: Procedimiento para aplicar corrección gamma a un degradado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - gradients [Windows Forms], gamma correction
 ms.assetid: da4690e7-5fac-4fd2-b3f0-5cb35c165b92
 ms.openlocfilehash: 7290b7901714e9b71bda3f85f930f5331b8fd4ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077334"
 ---
-# <a name="how-to-apply-gamma-correction-to-a-gradient"></a>Filtrar para aplicar corrección gamma a un degradado
+# <a name="how-to-apply-gamma-correction-to-a-gradient"></a>Procedimiento para aplicar corrección gamma a un degradado
 Puede habilitar la corrección gamma de un pincel de degradado lineal estableciendo el pincel <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> propiedad `true`. Corrección gamma se puede deshabilitar estableciendo la <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> propiedad `false`. La corrección gamma está deshabilitada de forma predeterminada.  
   
 ## <a name="example"></a>Ejemplo  

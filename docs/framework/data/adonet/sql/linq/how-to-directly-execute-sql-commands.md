@@ -1,18 +1,18 @@
 ---
-title: Filtrar para ejecutar directamente comandos SQL
+title: Procedimiento para ejecutar directamente comandos SQL
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 04671bb0-40c0-4465-86e5-77986f454661
 ms.openlocfilehash: eeac6272f176ac8e780b72b0076d032ad9e8f108
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078907"
 ---
-# <a name="how-to-directly-execute-sql-commands"></a>Filtrar para ejecutar directamente comandos SQL
+# <a name="how-to-directly-execute-sql-commands"></a>Procedimiento para ejecutar directamente comandos SQL
 En el supuesto de que tuviese una conexión <xref:System.Data.Linq.DataContext>, podría utilizar <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> para ejecutar comandos SQL que no devuelven objetos.  
   
 ## <a name="example"></a>Ejemplo  
@@ -23,5 +23,5 @@ En el supuesto de que tuviese una conexión <xref:System.Data.Linq.DataContext>,
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para ejecutar directamente consultas SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)
-- [Comunicarse con la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)
+- [Cómo: Ejecutar directamente consultas SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)
+- [Comunicación con la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)

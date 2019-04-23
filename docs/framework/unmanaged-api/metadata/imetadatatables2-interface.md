@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b886bf16e5465d3faac5286457784712ac1b72e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59081689"
 ---
 # <a name="imetadatatables2-interface"></a>IMetaDataTables2 (Interfaz)
@@ -30,8 +30,8 @@ Extiende [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/ime
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetMetaDataStorage](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|Obtiene el tamaño y el contenido de los metadatos almacenados en la sección especificada.|  
-|[Método GetMetaDataStreamInfo](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Obtiene el nombre, el tamaño y el contenido de la secuencia de metadatos en el índice especificado.|  
+|[GetMetaDataStorage (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|Obtiene el tamaño y el contenido de los metadatos almacenados en la sección especificada.|  
+|[GetMetaDataStreamInfo (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Obtiene el nombre, el tamaño y el contenido de la secuencia de metadatos en el índice especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,5 +44,5 @@ Extiende [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/ime
   
 ## <a name="see-also"></a>Vea también
 
-- [IMetaDataTables (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [Interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

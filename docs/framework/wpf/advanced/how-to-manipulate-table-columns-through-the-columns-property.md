@@ -1,5 +1,5 @@
 ---
-title: Filtrar Manipular las columnas de una tabla mediante la propiedad Columns
+title: Procedimiento Manipular las columnas de una tabla mediante la propiedad Columns
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Columns property [WPF]
 ms.assetid: 3f8884f4-7e1f-456b-be06-fbd3cf469bf3
 ms.openlocfilehash: d379d1a98bff614ff9e16cdd340bb69644988743
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078426"
 ---
-# <a name="how-to-manipulate-a-tables-columns-through-the-columns-property"></a>Filtrar Manipular las columnas de una tabla mediante la propiedad Columns
+# <a name="how-to-manipulate-a-tables-columns-through-the-columns-property"></a>Procedimiento Manipular las columnas de una tabla mediante la propiedad Columns
 En este ejemplo muestra algunas de las operaciones más comunes que pueden realizarse en las columnas de una tabla mediante el <xref:System.Windows.Documents.Table.Columns%2A> propiedad.  
   
 ## <a name="example"></a>Ejemplo  

@@ -18,10 +18,10 @@ helpviewer_keywords:
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
 ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078231"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Lápices, líneas y rectángulos en GDI+
@@ -72,6 +72,6 @@ Para dibujar líneas con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdi
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
-- [Filtrar para crear un lápiz](how-to-create-a-pen.md)
-- [Filtrar para dibujar una línea en un formulario Windows Forms](how-to-draw-a-line-on-a-windows-form.md)
-- [Filtrar para dibujar una forma con contorno](how-to-draw-an-outlined-shape.md)
+- [Cómo: Crear un lápiz](how-to-create-a-pen.md)
+- [Cómo: Dibujar una línea en un formulario de Windows](how-to-draw-a-line-on-a-windows-form.md)
+- [Cómo: Dibujar una forma con contorno](how-to-draw-an-outlined-shape.md)

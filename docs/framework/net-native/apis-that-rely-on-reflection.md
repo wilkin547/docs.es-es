@@ -5,10 +5,10 @@ ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076866"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API basada en la reflexión
@@ -51,9 +51,9 @@ App1.AppClass`1<System.Int32>.
   
  Para ejecutarse correctamente, este código requiere varios elementos de metadatos:  
   
--   `Browse` metadatos para el tipo cuyo método desea llamar.  
+-   Metadatos de `Browse` para el tipo cuyo método se quiere llamar.  
   
--   `Browse` metadatos para el método que desea llamar.  Si se trata de un método público, la adición de metadatos de `Browse` públicos para el tipo contenedor incluye también el método.  
+-   Metadatos de `Browse` para el método que se quiere llamar.  Si se trata de un método público, la adición de metadatos de `Browse` públicos para el tipo contenedor incluye también el método.  
   
 -   Metadatos dinámicos para el método que se quiere llamar, de modo que la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)] no quite al delegado de la invocación de reflexión. Si no hay metadatos dinámicos para el método, se generará la siguiente excepción cuando se llame al método <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>:  
   
@@ -86,7 +86,7 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- `Browse` metadatos para el tipo de matriz es necesario para crear dinámicamente instancias de él.  La siguiente directiva en tiempo de ejecución permite la creación dinámica instancias de `Class1[]`.  
+ Se necesitan metadatos de `Browse` para el tipo de matriz para poder crear instancia de esta dinámicamente.  La siguiente directiva en tiempo de ejecución permite la creación dinámica instancias de `Class1[]`.  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  
@@ -95,4 +95,4 @@ Unfortunately, no further information is available.
 ## <a name="see-also"></a>Vea también
 
 - [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

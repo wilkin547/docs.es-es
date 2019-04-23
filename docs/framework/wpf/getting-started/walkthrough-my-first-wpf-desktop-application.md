@@ -12,10 +12,10 @@ author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
 ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055253"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Tutorial: Mi primera aplicación de escritorio WPF
@@ -484,7 +484,7 @@ La ilustración siguiente muestra ambas páginas de la `ExpenseIt` aplicación c
 >
 > - [Seguridad](../security-wpf.md)
 >
-> - [Localización y globalización de WPF](../advanced/wpf-globalization-and-localization-overview.md)
+> - [Globalización y localización de WPF](../advanced/wpf-globalization-and-localization-overview.md)
 >
 > - [WPF: rendimiento](../advanced/optimizing-wpf-application-performance.md)
 
@@ -493,7 +493,7 @@ La ilustración siguiente muestra ambas páginas de la `ExpenseIt` aplicación c
 En este tutorial ha aprendido varias técnicas para crear una interfaz de usuario mediante Windows Presentation Foundation (WPF). Ahora debería tener un conocimiento básico de los bloques de creación de una aplicación de .NET Framework, enlazado a datos. Para más información sobre los modelos de programación y arquitectura de WPF, vea los temas siguientes:
 
 - [Arquitectura de WPF](../advanced/wpf-architecture.md)
-- [Información general XAML (WPF)](../advanced/xaml-overview-wpf.md)
+- [Información general sobre XAML (WPF)](../advanced/xaml-overview-wpf.md)
 - [Información general sobre las propiedades de dependencia](../advanced/dependency-properties-overview.md)
 - [Diseño](../advanced/layout.md)
 

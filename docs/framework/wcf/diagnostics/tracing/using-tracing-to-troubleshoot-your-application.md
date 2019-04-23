@@ -3,10 +3,10 @@ title: Uso del seguimiento para solucionar problemas de su aplicación
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
 ms.openlocfilehash: a173596b5b4bfbc97a1d013251d654d8073a5c10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072758"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Uso del seguimiento para solucionar problemas de su aplicación
@@ -25,7 +25,7 @@ Esta sección contiene varios temas que describen cómo puede utilizar el seguim
  [Depuración del cliente](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  
  Permite a los clientes depurar su aplicación.  
   
- [Escenarios de seguimiento de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [Escenarios de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
  Describe los seguimientos que se utiliza para escenarios de E2E WCF, por ejemplo, solicitud-respuestas wsHttp sincrónicas y solicitudes unidireccionales de TCP asincrónicas.  
   
  [Emisión de trazas del código de usuario](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
@@ -35,4 +35,4 @@ Esta sección contiene varios temas que describen cómo puede utilizar el seguim
 
 - [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Seguimiento de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+- [Traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - parts [WPF], RadioButton
 ms.assetid: 9acf93f7-dd2f-4010-8ce0-1edd81c52ae2
 ms.openlocfilehash: f11a8338c96d14c3c518713865061e4095ff23b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078725"
 ---
 # <a name="radiobutton-styles-and-templates"></a>Estilos y plantillas de RadioButton
@@ -33,8 +33,8 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 |Deshabilitado|CommonStates|El control está deshabilitado.|  
 |Con foco|FocusStates|El control tiene el foco.|  
 |Sin foco|FocusStates|El control no tiene el foco.|  
-|Activado|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> es `true`.|  
-|desactivada|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> es `false`.|  
+|Activado|CheckStates|El valor de <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> es `true`.|  
+|desactivada|CheckStates|El valor de <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> es `false`.|  
 |Indeterminado|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> es `true`, y <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> es `null`.|  
 |Válido|ValidationStates|El control utiliza el <xref:System.Windows.Controls.Validation> clase y el <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `false`.|  
 |InvalidFocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control tiene el foco.|  
@@ -56,6 +56,6 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
-- [Personalización de controles](control-customization.md)
+- [Control Customization](control-customization.md) (Personalización de controles)
 - [Aplicar estilos y plantillas](styling-and-templating.md)
-- [Personalizar la apariencia de un control existente creando una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
