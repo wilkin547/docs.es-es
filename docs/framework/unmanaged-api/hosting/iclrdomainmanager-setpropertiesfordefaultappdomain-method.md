@@ -16,10 +16,10 @@ ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4c42297e848844617ffdc6c85c81846b5805eb4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181358"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain (Método)
@@ -67,5 +67,5 @@ HRESULT SetPropertiesForDefaultAppDomain(
   
 ## <a name="see-also"></a>Vea también
 
-- [Hospedaje](../../../../docs/framework/unmanaged-api/hosting/index.md)
-- [ICLRDomainManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)
+- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRDomainManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)

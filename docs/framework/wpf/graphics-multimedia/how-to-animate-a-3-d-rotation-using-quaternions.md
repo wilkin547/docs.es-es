@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar un giro 3D mediante cuaterniones
+title: Procedimiento Animar un giro 3D mediante cuaterniones
 ms.date: 03/30/2017
 helpviewer_keywords:
 - quaternions [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - 3-D translations [WPF], animating [WPF], with quaternions
 ms.assetid: adca9cb1-066b-4de8-abbb-6b4007579ee7
 ms.openlocfilehash: d994ac2ae67fd366f27f123d5bd15f14d5ac7abe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183227"
 ---
-# <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a>Filtrar Animar un giro 3D mediante cuaterniones
+# <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a>Procedimiento Animar un giro 3D mediante cuaterniones
 En este ejemplo se muestra cómo animar un giro de un objeto 3D mediante cuaterniones.  
   
  El código siguiente muestra un <xref:System.Windows.Media.Media3D.QuaternionRotation3D> utilizar como el valor de la <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> propiedad de un <xref:System.Windows.Media.Media3D.RotateTransform3D>.  

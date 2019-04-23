@@ -3,10 +3,10 @@ title: ServiceDescription y referencias WSDL
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
 ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182889"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription y referencias WSDL
@@ -50,7 +50,7 @@ Este tema describe cómo Windows Communication Foundation (WCF) asigna los docum
 |----------------|------------------|  
 |`Name`|Se utiliza en el nombre predeterminado de un extremo, que es el nombre del enlace al que se anexa el nombre del contrato separado por un guión bajo.|  
 |`Namespace`|`targetNamespace` para la definición `wsdl:binding`.<br /><br /> En importación, si una directiva está adjunta al puerto WSDL, el espacio de nombres del enlace importado se asigna a `targetNamespace` para la definición `wsdl:port`.|  
-|`BindingElementCollection`, tal como lo devuelve el `CreateBindingElements`(método))|Varias extensiones específicas del dominio para la definición `wsdl:binding`, normalmente, las aserciones de directiva.|  
+|`BindingElementCollection`, como lo devuelve el método `CreateBindingElements`().|Varias extensiones específicas del dominio para la definición `wsdl:binding`, normalmente, las aserciones de directiva.|  
 |`MessageVersion`|`EnvelopeVersion` y `AddressingVersion` para el extremo.<br /><br /> Cuando se especifica `MessageVersion.None`, el enlace de WSDL no contiene un enlace SOAP y el puerto WSDL no incluye contenido de WS-Addressing. Este valor se utiliza normalmente para puntos de conexión “XML sin formato” (POX).|  
   
 #### <a name="bindingelements"></a>BindingElements  

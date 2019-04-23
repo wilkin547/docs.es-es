@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
 ms.openlocfilehash: cd14a20920b11cb198cfc91fd9be6ef83ca05c17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182161"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>Implementar el patrón de control Toggle de UI Automation
@@ -29,7 +29,7 @@ ms.locfileid: "59182161"
   
 -   Un control debe recorrer su <xref:System.Windows.Automation.ToggleState> en el siguiente orden: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> y, si se admite, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
   
--   <xref:System.Windows.Automation.TogglePattern> no proporciona un método SetState (NewState) debido a problemas relacionados con la configuración directa de una casilla de tres estados sin recorrer su adecuado <xref:System.Windows.Automation.ToggleState> secuencia.  
+-   <xref:System.Windows.Automation.TogglePattern> no ofrece un método SetState(newState) debido a problemas relacionados con la configuración directa de una CheckBox de tres estados sin recorrer su secuencia <xref:System.Windows.Automation.ToggleState> correspondiente.  
   
 -   El control RadioButton no implementa <xref:System.Windows.Automation.Provider.IToggleProvider>, ya que no es capaz de recorrer sus estados válidos.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "59182161"
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general acerca de los patrones de control de UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Patrones de control compatibles en un proveedor de UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Patrones de controles de UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Obtener el estado de alternancia de una casilla mediante UI Automation](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
-- [Información general sobre el árbol de la UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Utilizar el almacenamiento en caché en la UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Obtención del estado de alternancia de una casilla mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
+- [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

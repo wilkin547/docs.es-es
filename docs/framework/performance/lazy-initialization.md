@@ -10,10 +10,10 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182304"
 ---
 # <a name="lazy-initialization"></a>Inicialización diferida
@@ -23,7 +23,7 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
   
 -   Cuando hay un objeto costoso de crear y quiere diferir su creación hasta después de que se hayan completado otras operaciones costosas. Por ejemplo, supongamos que el programa carga varias instancias de objeto cuando se inicia, pero solo se necesitan de inmediato algunas de ellas. Puede mejorar el rendimiento de inicio del programa si difiere la inicialización de los objetos que no son necesarios hasta que se hayan creado los objetos necesarios.  
   
- Aunque puede escribir su propio código para llevar a cabo la inicialización diferida, recomendamos que use <xref:System.Lazy%601> en su lugar. <xref:System.Lazy%601> y sus tipos relacionados también admiten la seguridad para subprocesos y proporcionan una directiva de propagación de excepciones coherente.  
+ Aunque puede escribir su propio código para llevar a cabo la inicialización diferida, recomendamos que use <xref:System.Lazy%601> en su lugar. <xref:System.Lazy%601> y sus tipos relacionados también admiten la seguridad para subprocesos y ofrecen una directiva coherente de propagación de excepciones.  
   
  En la tabla siguiente se muestran los tipos que .NET Framework versión 4 proporciona para habilitar la inicialización diferida en distintos escenarios.  
   
@@ -75,7 +75,7 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
   
  Algunos constructores <xref:System.Lazy%601> tienen un parámetro <xref:System.Threading.LazyThreadSafetyMode> denominado `mode`. Estos constructores proporcionan un modo adicional de seguridad para subprocesos. En la tabla siguiente se muestra la manera en que la seguridad para subprocesos de un objeto <xref:System.Lazy%601> se ve afectada por los parámetros del constructor que especifican la seguridad para subprocesos. Cada constructor tiene como máximo un parámetro de este tipo.  
   
-|Seguridad para subprocesos del objeto|`LazyThreadSafetyMode` `mode` parámetro|Parámetro booleano `isThreadSafe`|Sin parámetros de seguridad para subprocesos|  
+|Seguridad para subprocesos del objeto|Parámetro `mode` de `LazyThreadSafetyMode`|Parámetro booleano `isThreadSafe`|Sin parámetros de seguridad para subprocesos|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Totalmente seguro para subprocesos; solo intenta inicializar el valor un subproceso de cada vez.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Sí.|  
 |No es seguro para subprocesos.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|No es aplicable.|  
@@ -126,7 +126,7 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> encapsula el objeto de la misma manera que <xref:System.Lazy%601>, con estas diferencias básicas:  
+ <xref:System.Threading.ThreadLocal%601> encapsula el objeto de la misma manera que <xref:System.Lazy%601>, pero con estas diferencias básicas:  
   
 -   Cada subproceso inicializa la variable local de subproceso mediante sus propios datos privados, que no son accesibles desde otros subprocesos.  
   
@@ -156,5 +156,5 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
 
 - [Principios básicos del subprocesamiento administrado](../../../docs/standard/threading/managed-threading-basics.md)
 - [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)
-- [Biblioteca de procesamiento paralelo basado en tareas (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Filtrar para realizar la inicialización diferida de objetos](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Cómo: Realizar la inicialización diferida de objetos](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

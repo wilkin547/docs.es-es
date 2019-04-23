@@ -1,5 +1,5 @@
 ---
-title: Filtrar Habilitar un comando
+title: Procedimiento Habilitar un comando
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
 ms.openlocfilehash: bf01066a35672e1996f193abc6d76153e5e9dd46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181706"
 ---
-# <a name="how-to-enable-a-command"></a>Filtrar Habilitar un comando
+# <a name="how-to-enable-a-command"></a>Procedimiento Habilitar un comando
 En el ejemplo siguiente se muestra cómo usar los comandos en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  El ejemplo muestra cómo asociar un <xref:System.Windows.Input.RoutedCommand> a un <xref:System.Windows.Controls.Button>, cree un <xref:System.Windows.Input.CommandBinding>y crear los controladores de eventos que implementan el <xref:System.Windows.Input.RoutedCommand>.  Para obtener más información sobre los comandos, consulte el [información general sobre comandos](commanding-overview.md).  
   
 ## <a name="example"></a>Ejemplo  

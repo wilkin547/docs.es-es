@@ -1,19 +1,19 @@
 ---
-title: <iriParsing> Elemento (configuración de Uri)
+title: Elemento <iriParsing> (configuración de URI)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
 ms.openlocfilehash: 7033f4dcda7d2fe73310ae0d36d9b05c090d13d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299675"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<iriParsing > elemento (configuración de Uri)
 Especifica si se aplica el análisis de identificadores de recursos internacionales (IRI) a un <xref:System.Uri> y si se deben aplicar reglas de análisis de IRI.  
   
 ## <a name="schema-hierarchy"></a>Jerarquía del esquema  
- [\<Configuración > elemento](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<URI > elemento (configuración de Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -32,7 +32,7 @@ Especifica si se aplica el análisis de identificadores de recursos internaciona
   
 ### <a name="attributes"></a>Atributos  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
 |`enabled`|Especifica si está habilitado el análisis de IRI. El valor predeterminado es `false`.|  
   
@@ -41,7 +41,7 @@ Especifica si se aplica el análisis de identificadores de recursos internaciona
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
 |[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Contiene valores que especifican cómo .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI).|  
   

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
 ms.openlocfilehash: 00a2dae818091c20649deae79c093a61b6e93732
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183760"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implementación del patrón de control SelectionItem de UI Automation
@@ -50,10 +50,10 @@ ms.locfileid: "59183760"
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general acerca de los patrones de control de UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Patrones de control compatibles en un proveedor de UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Patrones de controles de UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Implementar el patrón de control Selection de UI Automation](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)
-- [Información general sobre el árbol de la UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Utilizar el almacenamiento en caché en la UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Implementación del patrón de control Selection de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)
+- [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
 - [Ejemplo de proveedor de fragmento](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))

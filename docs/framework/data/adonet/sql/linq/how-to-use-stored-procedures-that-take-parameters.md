@@ -1,19 +1,19 @@
 ---
-title: Filtrar para usar procedimientos almacenados que toman parámetros
+title: Procedimiento para usar procedimientos almacenados que toman parámetros
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
 ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181771"
 ---
-# <a name="how-to-use-stored-procedures-that-take-parameters"></a>Filtrar para usar procedimientos almacenados que toman parámetros
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] asigna los parámetros de salida a parámetros de referencia y tipos de valor declara el parámetro como que acepta valores NULL.  
+# <a name="how-to-use-stored-procedures-that-take-parameters"></a>Procedimiento para usar procedimientos almacenados que toman parámetros
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] asigna los parámetros de salida a parámetros de referencia y, para los tipos de valor, declara el parámetro como que acepta valores NULL.  
   
  Para obtener un ejemplo de cómo usar un parámetro de entrada en una consulta que devuelve un conjunto de filas, vea [Cómo: Devolver conjuntos de filas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
   

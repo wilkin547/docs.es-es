@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183981"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Utilizar la UI Automation para pruebas automatizadas
@@ -19,9 +19,9 @@ ms.locfileid: "59183981"
   
  En esta introducción se describe cómo [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] puede ser de utilidad como marco de trabajo para el acceso mediante programación en escenarios de pruebas automatizadas.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Proporciona un modelo de objetos unificado que permite los [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] marcos para exponer funcionalidades complejas y enriquecidas de una manera accesible y fácil de automatizar.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ofrece un modelo de objetos unificado que permite a todos los marcos de trabajo [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] exponer funcionalidades complejas y enriquecidas de una manera accesible y fácil de automatizar.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se desarrolló como sucesor [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] es un marco de trabajo existente diseñado para proporcionar una solución para hacer que los controles y las aplicaciones sean accesibles. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] no se diseñó con la automatización de prueba en mente incluso cuando evolucionó hacia ese rol debido a los requisitos de accesibilidad y automatización muy similares. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], además de proporcionar soluciones más refinadas para mejorar la accesibilidad, está diseñado específicamente para proporcionar una sólida funcionalidad para las pruebas automatizadas. Por ejemplo, [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] se basa en una única interfaz tanto para exponer información sobre la interfaz de usuario como para recopilar la información necesaria para los productos de AT; [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] separa los dos modelos.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se desarrolló como sucesor de [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] es un marco de trabajo existente diseñado para ofrecer una solución para hacer que los controles y las aplicaciones sean accesibles. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] no se diseñó teniendo en cuenta la automatización de pruebas incluso cuando evolucionó hacia ese rol debido a los requisitos de accesibilidad y automatización muy similares. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], además de proporcionar soluciones más refinadas para mejorar la accesibilidad, de ha diseñado de manera específica para ofrecer una sólida funcionalidad para pruebas automatizadas. Por ejemplo, [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] se basa en una única interfaz tanto para exponer información sobre la interfaz de usuario como para recopilar la información necesaria para los productos de AT; [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] separa los dos modelos.  
   
  Se requieren tanto un proveedor como un cliente para implementar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para que sea útil como herramienta de pruebas automatizadas. Los proveedores de automatización de la interfaz de usuario son aplicaciones como Microsoft Word, Excel y otras aplicaciones de terceros o controles basados en el sistema operativo [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] . Los clientes de automatización de interfaz de usuario incluyen scripts de pruebas y aplicaciones de tecnología de asistencia.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59183981"
  Identifica de manera única un elemento de automatización de sus elementos del mismo nivel. <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> no se localiza, a diferencia de una propiedad como <xref:System.Windows.Automation.AutomationElement.NameProperty> que suele localizarse si un producto se distribuye en varios idiomas. Vea [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> no garantiza una identidad única para todo el árbol de automatización. Por ejemplo, una aplicación puede contener un control de menú con varios elementos de menú de nivel superior que, a su vez, tienen varios elementos de menú secundarios. Estos elementos de menú secundarios pueden identificarse mediante un esquema genérico como "Elemento1, elemento 2, Item3, etc.", lo que permite identificadores duplicados para elementos secundarios en los elementos del menú de nivel superior.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> no garantiza una identidad única en todo el árbol de automatización. Por ejemplo, una aplicación puede contener un control de menú con varios elementos de menú de nivel superior que, a su vez, tienen varios elementos de menú secundarios. Estos elementos de menú secundarios pueden identificarse mediante un esquema genérico como "Elemento1, elemento 2, Item3, etc.", lo que permite identificadores duplicados para elementos secundarios en los elementos del menú de nivel superior.  
   
 #### <a name="controltype"></a>ControlType  
  Identifica el tipo de control representado por un elemento de automatización. Se puede deducir información significativa del conocimiento del tipo de control. Vea [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  
@@ -113,4 +113,4 @@ ms.locfileid: "59183981"
   
 ## <a name="see-also"></a>Vea también
 
-- [Fundamentos de UI Automation](../../../docs/framework/ui-automation/index.md)
+- [Aspectos básicos de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/index.md)

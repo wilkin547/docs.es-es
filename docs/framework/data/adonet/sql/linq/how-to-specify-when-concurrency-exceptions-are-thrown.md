@@ -1,18 +1,18 @@
 ---
-title: Filtrar para especificar cuándo se inician las excepciones de simultaneidad
+title: Procedimiento para especificar cuándo se inician las excepciones de simultaneidad
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 344ae068-ff63-4a2e-8b00-af22e143675f
 ms.openlocfilehash: 30dd83c68472ecd3244cfc87b6df97b948b9a84f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182993"
 ---
-# <a name="how-to-specify-when-concurrency-exceptions-are-thrown"></a>Filtrar para especificar cuándo se inician las excepciones de simultaneidad
+# <a name="how-to-specify-when-concurrency-exceptions-are-thrown"></a>Procedimiento para especificar cuándo se inician las excepciones de simultaneidad
 En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], se inicia una excepción <xref:System.Data.Linq.ChangeConflictException> cuando los objetos no se actualizan debido a conflictos de simultaneidad optimista. Para obtener más información, consulte [simultaneidad optimista: Información general sobre](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
  Antes de enviar cambios a la base de datos, puede especificar cuándo se deberían iniciar excepciones de simultaneidad:  
@@ -31,5 +31,5 @@ En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], se inici
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [Realizar y enviar cambios de datos](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Cómo: Administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Realización y envío de cambios de datos](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

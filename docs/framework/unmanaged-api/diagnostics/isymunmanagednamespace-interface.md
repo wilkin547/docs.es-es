@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87dd6db9624c2216ab13e77b04cfa63f95aee7e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183318"
 ---
 # <a name="isymunmanagednamespace-interface"></a>ISymUnmanagedNamespace (Interfaz)
@@ -30,9 +30,9 @@ Representa un espacio de nombres.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetName](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|Obtiene el nombre de este espacio de nombres.|  
-|[Método GetNamespaces](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|Obtiene a los elementos secundarios de este espacio de nombres.|  
-|[Método GetVariables](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|Devuelve todas las variables definidas en el ámbito global dentro de este espacio de nombres.|  
+|[GetName (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|Obtiene el nombre de este espacio de nombres.|  
+|[GetNamespaces (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|Obtiene a los elementos secundarios de este espacio de nombres.|  
+|[GetVariables (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|Devuelve todas las variables definidas en el ámbito global dentro de este espacio de nombres.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado**: CorSym.idl, CorSym.h  

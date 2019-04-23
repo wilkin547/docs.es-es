@@ -19,10 +19,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2972b87b2d0136f182f8e8223988953e1896f2bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183344"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget (Interfaz)
@@ -53,9 +53,9 @@ class ICoreClrDebugTarget {
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[ICoreClrDebugTarget::EnumProcesses (Método)](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|Enumera los procesos que se ejecutan en un equipo remoto.|  
-|[ICoreClrDebugTarget::EnumRuntimes (Método)](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|Enumera los common language Runtime (CLR) en el proceso especificado en un equipo remoto.|  
-|[ICoreClrDebugTarget::FreeMemory (Método)](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|Libera la memoria asignada por los métodos de enumeración de esta clase.|  
+|[ICoreClrDebugTarget::EnumProcesses (método)](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|Enumera los procesos que se ejecutan en un equipo remoto.|  
+|[ICoreClrDebugTarget::EnumRuntimes (método)](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|Enumera los common language Runtime (CLR) en el proceso especificado en un equipo remoto.|  
+|[ICoreClrDebugTarget::FreeMemory (método)](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|Libera la memoria asignada por los métodos de enumeración de esta clase.|  
   
 ## <a name="remarks"></a>Comentarios  
  Actualmente, esta funcionalidad solo se admite para la depuración de un destino de la aplicación basada en Silverlight que se ejecuta en un equipo remoto de Macintosh.  
@@ -71,7 +71,7 @@ class ICoreClrDebugTarget {
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugRemoteTarget (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [ICorDebug (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemoteTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

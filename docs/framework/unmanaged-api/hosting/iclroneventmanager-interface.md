@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7486a094deab16ebbc05f19f1b652126479ce11c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183006"
 ---
 # <a name="iclroneventmanager-interface"></a>ICLROnEventManager (Interfaz)
@@ -30,8 +30,8 @@ Proporciona métodos que permiten al host registrar y anular el registro de devo
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md)|Registra un puntero de devolución de llamada para el evento especificado.|  
-|[Método UnregisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-unregisteractiononevent-method.md)|Anula el registro de un puntero de devolución de llamada registrada anteriormente para el evento especificado.|  
+|[RegisterActionOnEvent (método)](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md)|Registra un puntero de devolución de llamada para el evento especificado.|  
+|[UnregisterActionOnEvent (método)](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-unregisteractiononevent-method.md)|Anula el registro de un puntero de devolución de llamada registrada anteriormente para el evento especificado.|  
   
 ## <a name="remarks"></a>Comentarios  
  Para registrar y anular el registro de las devoluciones de llamada de evento, el host obtiene una referencia a `ICLROnEventManager` mediante una llamada a la [ICLRControl:: GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) método.  
@@ -50,7 +50,7 @@ Proporciona métodos que permiten al host registrar y anular el registro de devo
   
 ## <a name="see-also"></a>Vea también
 
-- [EClrEvent (Enumeración)](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
-- [IActionOnCLREvent (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
-- [ICLRControl (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [EClrEvent (enumeración)](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
+- [IActionOnCLREvent (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
+- [ICLRControl (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

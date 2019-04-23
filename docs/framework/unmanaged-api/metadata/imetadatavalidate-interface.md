@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 804c8c9434983b12b0647395c49197bf5026239b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180991"
 ---
 # <a name="imetadatavalidate-interface"></a>IMetaDataValidate (Interfaz)
@@ -30,8 +30,8 @@ Proporciona métodos para validar las firmas de metadatos.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método ValidateMetaData](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatemetadata-method.md)|Valida las firmas de metadatos de los objetos en el ámbito de metadatos actual.|  
-|[Método ValidatorInit](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|Establece una marca que especifica el tipo del módulo en el ámbito de metadatos actual y registra el método de devolución de llamada especificado para los errores de validación.|  
+|[ValidateMetaData (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatemetadata-method.md)|Valida las firmas de metadatos de los objetos en el ámbito de metadatos actual.|  
+|[ValidatorInit (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|Establece una marca que especifica el tipo del módulo en el ámbito de metadatos actual y registra el método de devolución de llamada especificado para los errores de validación.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
