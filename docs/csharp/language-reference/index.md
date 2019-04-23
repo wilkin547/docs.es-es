@@ -9,11 +9,11 @@ helpviewer_keywords:
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
 ms.openlocfilehash: 6862ae72b235653d4576915605f14c9e4de92bce
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662197"
 ---
 # <a name="c-reference"></a>Referencia de C#
 En esta sección se proporciona material de referencia sobre palabras clave, operadores, caracteres especiales, directivas de preprocesador, opciones del compilador y errores y advertencias del compilador de C#.  

@@ -10,11 +10,11 @@ ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e78da65eb8ef7db6dd01c1c1d3d313ac8946431a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051200"
 ---
 # <a name="working-with-base-types-in-net"></a>Trabajar con tipos base en .NET
 Esta sección describe las operaciones de tipo base .NET, incluidas operaciones comunes, de conversión y formato.  

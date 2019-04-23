@@ -1,21 +1,14 @@
-items:
 - name: Esquema de configuración de compilador y proveedor de lenguaje
   href: index.md
   items:
-  - name: Elemento <system.codedom>
-    href: system-codedom-element.md
-    items:
-    - name: <compilers> (Elemento)
-      href: compilers-element.md
+    - name: Elemento <system.codedom>
+      href: system-codedom-element.md
       items:
-      - name: <compiler> (Elemento)
-        href: compiler-element.md
-        items:
-        - name: <providerOption> (Elemento)
-          href: provideroption-element.md
-ms.openlocfilehash: 9d49c036cf0bb5279ff014c962c31a8d0ae04ff2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471032"
+        - name: <compilers> (Elemento)
+          href: compilers-element.md
+          items:
+            - name: <compiler> (Elemento)
+              href: compiler-element.md
+              items:
+                - name: <providerOption> (Elemento)
+                  href: provideroption-element.md

@@ -1,19 +1,12 @@
-items:
 - name: Novedades
   href: index.md
   items:
-  - name: Novedades de accesibilidad
-    href: whats-new-in-accessibility.md
-  - name: Lo obsoleto en la biblioteca de clases
-    href: whats-obsolete.md
-    items:
-    - name: Tipos obsoletos
-      href: obsolete-types.md
-    - name: Miembros obsoletos
-      href: obsolete-members.md
-ms.openlocfilehash: 2c01bcec7ed118bc8d32338a04686d158770d140
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469822"
+    - name: Novedades de accesibilidad
+      href: whats-new-in-accessibility.md
+    - name: Lo obsoleto en la biblioteca de clases
+      href: whats-obsolete.md
+      items:
+        - name: Tipos obsoletos
+          href: obsolete-types.md
+        - name: Miembros obsoletos
+          href: obsolete-members.md
