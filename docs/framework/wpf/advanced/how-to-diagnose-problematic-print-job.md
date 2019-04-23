@@ -1,5 +1,5 @@
 ---
-title: Filtrar Diagnosticar trabajos de impresión problemáticos
+title: Procedimiento Diagnosticar trabajos de impresión problemáticos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
 ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338480"
 ---
-# <a name="how-to-diagnose-problematic-print-job"></a>Filtrar Diagnosticar trabajos de impresión problemáticos
+# <a name="how-to-diagnose-problematic-print-job"></a>Procedimiento Diagnosticar trabajos de impresión problemáticos
 A menudo, los administradores de red reciben quejas de los usuarios sobre trabajos de impresión que no se imprimen o que se imprimen lentamente. El amplio conjunto de propiedades del trabajo de impresión expuesto en el [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] de Microsoft .NET Framework proporciona un medio para realizar un diagnóstico remoto rápido de trabajos de impresión.  
   
 ## <a name="example"></a>Ejemplo  
@@ -87,6 +87,6 @@ A menudo, los administradores de red reciben quejas de los usuarios sobre trabaj
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [Operador & (Referencia de C#)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& (Operador) (C# referencia)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [Documentos en WPF](documents-in-wpf.md)
 - [Información general sobre impresión](printing-overview.md)

@@ -1,15 +1,15 @@
 ---
-title: Filtrar para generar código personalizado mediante la modificación de un archivo DBML
+title: Procedimiento para generar código personalizado mediante la modificación de un archivo DBML
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
 ms.openlocfilehash: c3fa4d9db4076309ab7d6066cc7072797eaead54
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338428"
 ---
-# <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Filtrar para generar código personalizado mediante la modificación de un archivo DBML
+# <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Procedimiento para generar código personalizado mediante la modificación de un archivo DBML
 Puede generar Visual Basic o C# código fuente a partir de un archivo de metadatos base de datos (.dbml) de lenguaje de marcado. Este enfoque proporciona una oportunidad de personalizar el archivo .dbml predeterminado antes de generar el código de asignación de la aplicación. Ésta es una característica avanzada.  
   
  Los pasos de este proceso son los siguientes.  
@@ -42,4 +42,4 @@ sqlmetal /namespace:nwind /code:nwind.cs /language:csharp DBMLFile.dbml
 
 - [Generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
-- [Crear el modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [Creación del modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)

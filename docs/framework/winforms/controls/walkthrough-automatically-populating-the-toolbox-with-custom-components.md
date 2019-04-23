@@ -7,10 +7,10 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338103"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados
@@ -95,7 +95,7 @@ Si los componentes están definidos por un proyecto en la solución actualmente 
   
 ## <a name="see-also"></a>Vea también
 
-- [General, Diseñador de Windows Forms, Opciones (Cuadro de diálogo)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [Filtrar Manipular las fichas del cuadro de herramientas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
-- [Elija el cuadro de diálogo de elementos de cuadro de herramientas (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
-- [Insertar controles en formularios Windows Forms](putting-controls-on-windows-forms.md)
+- [General, Diseñador de formularios de Windows, cuadro de diálogo Opciones](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [Cómo: Manipular las fichas del cuadro de herramientas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
+- [Elegir elementos del cuadro de herramientas (Cuadro de diálogo): Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
+- [Insertar controles en Windows Forms](putting-controls-on-windows-forms.md)

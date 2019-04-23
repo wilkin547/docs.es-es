@@ -1,5 +1,5 @@
 ---
-title: Filtrar para deshabilitar ToolStripMenuItems mediante el diseñador
+title: Procedimiento para deshabilitar ToolStripMenuItems mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], disabling in designer
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - menus [Windows Forms], disabling items
 ms.assetid: 985e311e-7d67-4205-b5a3-d045b68a4a03
 ms.openlocfilehash: 9965825458afcd50b29699c3b89ed506078e04d9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338064"
 ---
-# <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>Filtrar para deshabilitar ToolStripMenuItems mediante el diseñador
+# <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>Procedimiento para deshabilitar ToolStripMenuItems mediante el diseñador
 Puede limitar o ampliar los comandos que un usuario puede realizar mediante la habilitación y deshabilitación de los elementos de menú en respuesta a las actividades del usuario. Los elementos de menú están habilitados de forma predeterminada cuando se crean, pero esto se puede ajustar mediante el <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> propiedad. Puede manipular esta propiedad en tiempo de diseño en el **propiedades** ventana o mediante programación si se establece en el código. Para obtener más información, vea [Cómo: Deshabilitar ToolStripMenuItems](how-to-disable-toolstripmenuitems.md).  
   
 > [!NOTE]
@@ -31,5 +31,5 @@ Puede limitar o ampliar los comandos que un usuario puede realizar mediante la h
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Filtrar para ocultar ToolStripMenuItems](how-to-hide-toolstripmenuitems.md)
+- [Cómo: Ocultar ToolStripMenuItems](how-to-hide-toolstripmenuitems.md)
 - [Información general sobre el control MenuStrip](menustrip-control-overview-windows-forms.md)

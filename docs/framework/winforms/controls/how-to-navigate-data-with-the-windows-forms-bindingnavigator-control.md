@@ -1,5 +1,5 @@
 ---
-title: Filtrar para explorar datos con el control BindingNavigator de formularios Windows Forms
+title: Procedimiento para explorar datos con el control BindingNavigator de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
 ms.openlocfilehash: 0c2fdf820b9b42a592c422cf77362598c5e5eed7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338896"
 ---
-# <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Filtrar para explorar datos con el control BindingNavigator de formularios Windows Forms
+# <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Procedimiento para explorar datos con el control BindingNavigator de formularios Windows Forms
 La incorporación del control <xref:System.Windows.Forms.BindingNavigator> de Windows Forms permite a los desarrolladores proporcionar a los usuarios finales una sencilla interfaz de usuario de navegación y manipulación de datos en los formularios que creen.  
   
  El control <xref:System.Windows.Forms.BindingNavigator> es un control <xref:System.Windows.Forms.ToolStrip> con botones preconfigurados para navegar al registro primero, último, anterior y siguiente en un conjunto de datos, así como botones para agregar y eliminar registros. Agregar botones al control <xref:System.Windows.Forms.BindingNavigator> es fácil porque es un control <xref:System.Windows.Forms.ToolStrip>. Para obtener ejemplos, vea [Cómo: Agregar una carga, guardar y cancelar botones a la Windows Forms Control BindingNavigator](load-save-and-cancel-bindingnavigator.md).  
@@ -56,5 +56,5 @@ La incorporación del control <xref:System.Windows.Forms.BindingNavigator> de Wi
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.BindingNavigator>
-- [Control BindingNavigator](bindingnavigator-control-windows-forms.md)
-- [ToolStrip](toolstrip-control-windows-forms.md)
+- [BindingNavigator (control)](bindingnavigator-control-windows-forms.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)

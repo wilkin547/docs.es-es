@@ -1,5 +1,5 @@
 ---
-title: Filtrar para abarcar filas y columnas en un control TableLayoutPanel
+title: Procedimiento para abarcar filas y columnas en un control TableLayoutPanel
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor.TLP.SpanRowsColumns
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
 ms.openlocfilehash: 02db78b07930676235e55e535fb24f6ff618d823
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339026"
 ---
-# <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>Filtrar para abarcar filas y columnas en un control TableLayoutPanel
+# <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>Procedimiento para abarcar filas y columnas en un control TableLayoutPanel
 Los controles en un <xref:System.Windows.Forms.TableLayoutPanel> control puede abarcar filas y columnas adyacentes.  
   
 > [!NOTE]

@@ -1,18 +1,18 @@
 ---
-title: Filtrar para crear un comprobador de identidad de cliente personalizado
+title: Procedimiento para crear un comprobador de identidad de cliente personalizado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
 ms.openlocfilehash: d8529929870b14611c136221f1eefe3eb4ba3d42
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339000"
 ---
-# <a name="how-to-create-a-custom-client-identity-verifier"></a>Filtrar para crear un comprobador de identidad de cliente personalizado
+# <a name="how-to-create-a-custom-client-identity-verifier"></a>Procedimiento para crear un comprobador de identidad de cliente personalizado
 El *identidad* característica de Windows Communication Foundation (WCF) permite a un cliente especificar de antemano la identidad esperada del servicio. Siempre que un servidor se autentica al cliente, se comprueba la identidad frente a la identidad prevista. (Para obtener una explicación de la identidad y cómo funciona, consulte [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
   
  En caso necesario, la comprobación puede personalizarse mediante un comprobador de identidad personalizado. Por ejemplo, puede realizar controles adicionales de comprobación de identidad del servicio. En este ejemplo, el comprobador de identidad personalizado controla las notificaciones adicionales del certificado X.509 devueltas desde el servidor. Para una aplicación de ejemplo, vea [ejemplo de identidad de servicio](../../../../docs/framework/wcf/samples/service-identity-sample.md).  

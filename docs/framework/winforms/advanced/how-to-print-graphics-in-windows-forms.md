@@ -1,5 +1,5 @@
 ---
-title: Filtrar para imprimir gráficos en formularios Windows Forms
+title: Procedimiento para imprimir gráficos en formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
 ms.openlocfilehash: 55459482d0994c581164128b17c08a7ca90d0717
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339104"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a>Filtrar para imprimir gráficos en formularios Windows Forms
+# <a name="how-to-print-graphics-in-windows-forms"></a>Procedimiento para imprimir gráficos en formularios Windows Forms
 Con frecuencia, deseará imprimir gráficos en su aplicación basada en Windows. La <xref:System.Drawing.Graphics> clase proporciona métodos para dibujar objetos en un dispositivo, como una pantalla o impresora.  
   
 ### <a name="to-print-graphics"></a>Para imprimir gráficos  
@@ -70,4 +70,4 @@ Con frecuencia, deseará imprimir gráficos en su aplicación basada en Windows.
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Funcionalidad para imprimir en formularios Windows Forms](windows-forms-print-support.md)
+- [Windows Forms Print Support](windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
 ms.openlocfilehash: ed988547e0be3ef934c46d725c41646c3a75e626
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339065"
 ---
 # <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<nombre1 >' es ambiguo y se ha importado de los espacios de nombres o tipos\<nombre2 >'
@@ -27,6 +27,6 @@ Se proporcionó un nombre que es ambiguo y, por tanto, entra en conflicto con ot
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Imports (instrucción), espacio de nombres y tipo .NET](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Espacios de nombres en Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Namespace (Instrucción)](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Namespace (instrucción)](../../../visual-basic/language-reference/statements/namespace-statement.md)
