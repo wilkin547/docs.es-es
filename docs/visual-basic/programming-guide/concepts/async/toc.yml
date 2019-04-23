@@ -1,35 +1,28 @@
-items:
 - name: Programación asincrónica con async y await
   href: index.md
   items:
-  - name: 'Tutorial: Acceso a web mediante async y await'
-    href: walkthrough-accessing-the-web-by-using-async-and-await.md
-  - name: Procedimiento para ampliar el tutorial de async mediante Task.WhenAll
-    href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-  - name: Procedimiento para realizar varias solicitudes web en paralelo con async y await
-    href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
-  - name: Tipos de valor devueltos de async
-    href: async-return-types.md
-  - name: Flujo de control en programas asincrónicos
-    href: control-flow-in-async-programs.md
-  - name: Ajustar una aplicación asincrónica
-    href: fine-tuning-your-async-application.md
-    items:
-    - name: Cancelar una tarea asincrónica o una lista de tareas
-      href: cancel-an-async-task-or-a-list-of-tasks.md
-    - name: Cancelar tareas asincrónicas tras un período de tiempo
-      href: cancel-async-tasks-after-a-period-of-time.md
-    - name: Cancelar las tareas asincrónicas restantes cuando se completa una
-      href: cancel-remaining-async-tasks-after-one-is-complete.md
-    - name: Iniciar varias tareas asincrónicas y procesarlas a medida que se completan
-      href: start-multiple-async-tasks-and-process-them-as-they-complete.md
-  - name: Controlar la reentrada en aplicaciones asincrónicas
-    href: handling-reentrancy-in-async-apps.md
-  - name: Uso de async en acceso a archivos
-    href: using-async-for-file-access.md
-ms.openlocfilehash: d6b4558a935d019090ccf0e4258d10e4a4f881b4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470687"
+    - name: 'Tutorial: Acceso a web mediante async y await'
+      href: walkthrough-accessing-the-web-by-using-async-and-await.md
+    - name: Procedimiento para ampliar el tutorial de async mediante Task.WhenAll
+      href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
+    - name: Procedimiento para realizar varias solicitudes web en paralelo con async y await
+      href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
+    - name: Tipos de valor devueltos de async
+      href: async-return-types.md
+    - name: Flujo de control en programas asincrónicos
+      href: control-flow-in-async-programs.md
+    - name: Ajustar una aplicación asincrónica
+      href: fine-tuning-your-async-application.md
+      items:
+        - name: Cancelar una tarea asincrónica o una lista de tareas
+          href: cancel-an-async-task-or-a-list-of-tasks.md
+        - name: Cancelar tareas asincrónicas tras un período de tiempo
+          href: cancel-async-tasks-after-a-period-of-time.md
+        - name: Cancelar las tareas asincrónicas restantes cuando se completa una
+          href: cancel-remaining-async-tasks-after-one-is-complete.md
+        - name: Iniciar varias tareas asincrónicas y procesarlas a medida que se completan
+          href: start-multiple-async-tasks-and-process-them-as-they-complete.md
+    - name: Controlar la reentrada en aplicaciones asincrónicas
+      href: handling-reentrancy-in-async-apps.md
+    - name: Uso de async en acceso a archivos
+      href: using-async-for-file-access.md

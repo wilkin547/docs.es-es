@@ -1,49 +1,42 @@
-items:
 - name: XML en Visual Basic
   href: index.md
   items:
-  - name: Introducción a LINQ to XML
-    href: overview-of-linq-to-xml.md
-  - name: Creación de XML
-    href: creating-xml.md
-    items:
-    - name: Introducción a literales XML
-      href: xml-literals-overview.md
-    - name: Expresiones insertadas en XML
-      href: embedded-expressions-in-xml.md
-    - name: Nombres de atributos y elementos XML declarados
-      href: names-of-declared-xml-elements-and-attributes.md
-    - name: Literales XML y la especificación XML 1.0
-      href: xml-literals-and-the-xml-1-0-specification.md
-    - name: Espacio en blanco en literales XML
-      href: white-space-in-xml-literals.md
-    - name: Procedimiento para crear literales XML
-      href: how-to-create-xml-literals.md
-    - name: Procedimiento para insertar expresiones en literales XML
-      href: how-to-embed-expressions-in-xml-literals.md
-  - name: Manipulación de XML
-    href: manipulating-xml.md
-    items:
-    - name: Procedimiento para cargar XML desde un archivo, cadena o secuencia
-      href: how-to-load-xml-from-a-file-string-or-stream.md
-    - name: Procedimiento para transformar XML mediante LINQ
-      href: how-to-transform-xml-by-using-linq.md
-    - name: Procedimiento para modificar literales XML
-      href: how-to-modify-xml-literals.md
-  - name: Acceso a XML
-    href: accessing-xml.md
-    items:
-    - name: Procedimiento para obtener acceso a elementos descendientes XML
-      href: how-to-access-xml-descendant-elements.md
-    - name: Procedimiento para obtener acceso a elementos secundarios XML
-      href: how-to-access-xml-child-elements.md
-    - name: Procedimiento para obtener acceso a atributos XML
-      href: how-to-access-xml-attributes.md
-    - name: Procedimiento para declarar y usar prefijos de espacio de nombres XML
-      href: how-to-declare-and-use-xml-namespace-prefixes.md
-ms.openlocfilehash: 7d2d931b5f88e9af9a2cdef92168d907e3fd6ce6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470351"
+    - name: Introducción a LINQ to XML
+      href: overview-of-linq-to-xml.md
+    - name: Creación de XML
+      href: creating-xml.md
+      items:
+        - name: Introducción a literales XML
+          href: xml-literals-overview.md
+        - name: Expresiones insertadas en XML
+          href: embedded-expressions-in-xml.md
+        - name: Nombres de atributos y elementos XML declarados
+          href: names-of-declared-xml-elements-and-attributes.md
+        - name: "Literales XML y la especificación XML\_1.0"
+          href: xml-literals-and-the-xml-1-0-specification.md
+        - name: Espacio en blanco en literales XML
+          href: white-space-in-xml-literals.md
+        - name: Procedimiento para crear literales XML
+          href: how-to-create-xml-literals.md
+        - name: Procedimiento para insertar expresiones en literales XML
+          href: how-to-embed-expressions-in-xml-literals.md
+    - name: Manipulación de XML
+      href: manipulating-xml.md
+      items:
+        - name: 'Procedimiento para cargar XML desde un archivo, cadena o secuencia'
+          href: how-to-load-xml-from-a-file-string-or-stream.md
+        - name: Procedimiento para transformar XML mediante LINQ
+          href: how-to-transform-xml-by-using-linq.md
+        - name: Procedimiento para modificar literales XML
+          href: how-to-modify-xml-literals.md
+    - name: Acceso a XML
+      href: accessing-xml.md
+      items:
+        - name: Procedimiento para obtener acceso a elementos descendientes XML
+          href: how-to-access-xml-descendant-elements.md
+        - name: Procedimiento para obtener acceso a elementos secundarios XML
+          href: how-to-access-xml-child-elements.md
+        - name: Procedimiento para obtener acceso a atributos XML
+          href: how-to-access-xml-attributes.md
+        - name: Procedimiento para declarar y usar prefijos de espacio de nombres XML
+          href: how-to-declare-and-use-xml-namespace-prefixes.md

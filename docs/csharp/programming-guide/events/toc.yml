@@ -1,22 +1,15 @@
-items:
 - name: Eventos
   href: index.md
   items:
-  - name: Procedimiento para suscribirse a eventos y cancelar la suscripción a estos
-    href: how-to-subscribe-to-and-unsubscribe-from-events.md
-  - name: Procedimiento para publicar eventos que cumplan las directrices de .NET Framework
-    href: how-to-publish-events-that-conform-to-net-framework-guidelines.md
-  - name: Procedimiento para producir eventos de una clase base en clases derivadas
-    href: how-to-raise-base-class-events-in-derived-classes.md
-  - name: Procedimiento para implementar eventos de interfaz
-    href: how-to-implement-interface-events.md
-  - name: Procedimiento para usar un diccionario para almacenar instancias de eventos
-    href: how-to-use-a-dictionary-to-store-event-instances.md
-  - name: Procedimiento para implementar descriptores de acceso de eventos personalizados
-    href: how-to-implement-custom-event-accessors.md
-ms.openlocfilehash: ad3adc4026915e1173dacd33dde9746cfb0adcdd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471042"
+    - name: Procedimiento para suscribirse a eventos y cancelar la suscripción a estos
+      href: how-to-subscribe-to-and-unsubscribe-from-events.md
+    - name: Procedimiento para publicar eventos que cumplan las directrices de .NET Framework
+      href: how-to-publish-events-that-conform-to-net-framework-guidelines.md
+    - name: Procedimiento para producir eventos de una clase base en clases derivadas
+      href: how-to-raise-base-class-events-in-derived-classes.md
+    - name: Procedimiento para implementar eventos de interfaz
+      href: how-to-implement-interface-events.md
+    - name: Procedimiento para usar un diccionario para almacenar instancias de eventos
+      href: how-to-use-a-dictionary-to-store-event-instances.md
+    - name: Procedimiento para implementar descriptores de acceso de eventos personalizados
+      href: how-to-implement-custom-event-accessors.md

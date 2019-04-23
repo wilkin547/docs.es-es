@@ -1,39 +1,32 @@
-items:
 - name: Código no seguro y punteros
   href: index.md
   items:
-  - name: Búferes de tamaño fijo
-    href: fixed-size-buffers.md
-  - name: Tipos de puntero
-    href: pointer-types.md
-    items:
-    - name: Conversiones de puntero
-      href: pointer-conversions.md
-    - name: Expresiones de puntero
-      href: pointer-expressions.md
+    - name: Búferes de tamaño fijo
+      href: fixed-size-buffers.md
+    - name: Tipos de puntero
+      href: pointer-types.md
       items:
-      - name: Procedimiento para obtener el valor de una variable de puntero
-        href: how-to-obtain-the-value-of-a-pointer-variable.md
-      - name: Procedimiento para obtener la dirección de una variable
-        href: how-to-obtain-the-address-of-a-variable.md
-      - name: Procedimiento para obtener acceso a un miembro con un puntero
-        href: how-to-access-a-member-with-a-pointer.md
-      - name: Procedimiento para obtener acceso a un elemento de matriz con un puntero
-        href: how-to-access-an-array-element-with-a-pointer.md
-      - name: Manipulación de punteros
-        href: manipulating-pointers.md
-        items:
-        - name: Procedimiento para aumentar y disminuir punteros
-          href: how-to-increment-and-decrement-pointers.md
-        - name: Operaciones aritméticas en punteros
-          href: arithmetic-operations-on-pointers.md
-        - name: Comparación de punteros
-          href: pointer-comparison.md
-    - name: Procedimiento para usar punteros para copiar una matriz de bytes
-      href: how-to-use-pointers-to-copy-an-array-of-bytes.md
-ms.openlocfilehash: 094fa68222bcb4d92ab19a57373789a8234d2606
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470343"
+        - name: Conversiones de puntero
+          href: pointer-conversions.md
+        - name: Expresiones de puntero
+          href: pointer-expressions.md
+          items:
+            - name: Procedimiento para obtener el valor de una variable de puntero
+              href: how-to-obtain-the-value-of-a-pointer-variable.md
+            - name: Procedimiento para obtener la dirección de una variable
+              href: how-to-obtain-the-address-of-a-variable.md
+            - name: Procedimiento para obtener acceso a un miembro con un puntero
+              href: how-to-access-a-member-with-a-pointer.md
+            - name: Procedimiento para obtener acceso a un elemento de matriz con un puntero
+              href: how-to-access-an-array-element-with-a-pointer.md
+            - name: Manipulación de punteros
+              href: manipulating-pointers.md
+              items:
+                - name: Procedimiento para aumentar y disminuir punteros
+                  href: how-to-increment-and-decrement-pointers.md
+                - name: Operaciones aritméticas en punteros
+                  href: arithmetic-operations-on-pointers.md
+                - name: Comparación de punteros
+                  href: pointer-comparison.md
+        - name: Procedimiento para usar punteros para copiar una matriz de bytes
+          href: how-to-use-pointers-to-copy-an-array-of-bytes.md

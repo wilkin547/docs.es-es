@@ -1,48 +1,41 @@
-items:
-- name: Fechas, horas y zonas horarias
+- name: 'Fechas, horas y zonas horarias'
   href: index.md
   items:
-  - name: Información general sobre zonas horarias
-    href: time-zone-overview.md
-  - name: Elegir entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo
-    href: choosing-between-datetime.md
-  - name: Buscar las zonas horarias definidas en un sistema local
-    href: finding-the-time-zones-on-local-system.md
-  - name: Procedimiento para enumerar zonas horarias presentes en un equipo
-    href: enumerate-time-zones.md
-  - name: Procedimiento para obtener acceso a los objetos de zona horaria local y UTC predefinidos
-    href: access-utc-and-local.md
-  - name: Procedimiento para crear una instancia de un objeto TimeZoneInfo
-    href: instantiate-time-zone-info.md
-  - name: Crear instancias de un objeto DateTimeOffset
-    href: instantiating-a-datetimeoffset-object.md
-  - name: Procedimiento para crear zonas horarias sin reglas de ajuste
-    href: create-time-zones-without-adjustment-rules.md
-  - name: Procedimiento para crear zonas horarias con reglas de ajuste
-    href: create-time-zones-with-adjustment-rules.md
-  - name: Guardado y restauración de zonas horarias
-    href: saving-and-restoring-time-zones.md
-  - name: Procedimiento para guardar zonas horarias en un recurso incrustado
-    href: save-time-zones-to-an-embedded-resource.md
-  - name: Procedimiento para restaurar zonas horarias de un recurso incrustado
-    href: restore-time-zones-from-an-embedded-resource.md
-  - name: Trabajar con calendarios
-    href: working-with-calendars.md
-  - name: Efectuar operaciones aritméticas con fechas y horas
-    href: performing-arithmetic-operations.md
-  - name: Procedimiento para usar zonas horarias en operaciones aritméticas de fecha y hora
-    href: use-time-zones-in-arithmetic.md
-  - name: Conversión entre DateTime y DateTimeOffset
-    href: converting-between-datetime-and-offset.md
-  - name: Conversión de horas entre zonas horarias
-    href: converting-between-time-zones.md
-  - name: Procedimiento para resolver horas ambiguas
-    href: resolve-ambiguous-times.md
-  - name: Procedimiento para permitir que los usuarios resuelvan horas ambiguas
-    href: let-users-resolve-ambiguous-times.md
-ms.openlocfilehash: 302dc3e44cacb3148ae0e246220721ccfda44d98
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470294"
+    - name: Información general sobre zonas horarias
+      href: time-zone-overview.md
+    - name: 'Elegir entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo'
+      href: choosing-between-datetime.md
+    - name: Buscar las zonas horarias definidas en un sistema local
+      href: finding-the-time-zones-on-local-system.md
+    - name: Procedimiento para enumerar zonas horarias presentes en un equipo
+      href: enumerate-time-zones.md
+    - name: Procedimiento para obtener acceso a los objetos de zona horaria local y UTC predefinidos
+      href: access-utc-and-local.md
+    - name: Procedimiento para crear una instancia de un objeto TimeZoneInfo
+      href: instantiate-time-zone-info.md
+    - name: Crear instancias de un objeto DateTimeOffset
+      href: instantiating-a-datetimeoffset-object.md
+    - name: Procedimiento para crear zonas horarias sin reglas de ajuste
+      href: create-time-zones-without-adjustment-rules.md
+    - name: Procedimiento para crear zonas horarias con reglas de ajuste
+      href: create-time-zones-with-adjustment-rules.md
+    - name: Guardado y restauración de zonas horarias
+      href: saving-and-restoring-time-zones.md
+    - name: Procedimiento para guardar zonas horarias en un recurso incrustado
+      href: save-time-zones-to-an-embedded-resource.md
+    - name: Procedimiento para restaurar zonas horarias de un recurso incrustado
+      href: restore-time-zones-from-an-embedded-resource.md
+    - name: Trabajar con calendarios
+      href: working-with-calendars.md
+    - name: Efectuar operaciones aritméticas con fechas y horas
+      href: performing-arithmetic-operations.md
+    - name: Procedimiento para usar zonas horarias en operaciones aritméticas de fecha y hora
+      href: use-time-zones-in-arithmetic.md
+    - name: Conversión entre DateTime y DateTimeOffset
+      href: converting-between-datetime-and-offset.md
+    - name: Conversión de horas entre zonas horarias
+      href: converting-between-time-zones.md
+    - name: Procedimiento para resolver horas ambiguas
+      href: resolve-ambiguous-times.md
+    - name: Procedimiento para permitir que los usuarios resuelvan horas ambiguas
+      href: let-users-resolve-ambiguous-times.md

@@ -1,20 +1,13 @@
-items:
 - name: Introducción
   href: index.md
   items:
-  - name: Introducción a WPF en Visual Studio
-    href: introduction-to-wpf-in-vs.md
-  - name: Novedades de WPF versión 4.5
-    href: whats-new.md
-  - name: 'Tutorial: Mi primera aplicación de escritorio WPF'
-    href: walkthrough-my-first-wpf-desktop-application.md
-  - name: Tutoriales de WPF
-    href: wpf-walkthroughs.md
-  - name: Comentarios de la comunidad de WPF
-    href: community-feedback.md
-ms.openlocfilehash: bebf111d94212c0a337602a7921f7ec5e639eed6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470879"
+    - name: Introducción a WPF en Visual Studio
+      href: introduction-to-wpf-in-vs.md
+    - name: Novedades de WPF versión 4.5
+      href: whats-new.md
+    - name: 'Tutorial: Mi primera aplicación de escritorio WPF'
+      href: walkthrough-my-first-wpf-desktop-application.md
+    - name: Tutoriales de WPF
+      href: wpf-walkthroughs.md
+    - name: Comentarios de la comunidad de WPF
+      href: community-feedback.md

@@ -1,32 +1,25 @@
-items:
 - name: Globalización y localización
   href: index.md
   items:
-  - name: Globalización
-    href: globalization.md
-  - name: Revisión de localizabilidad
-    href: localizability-review.md
-  - name: Localización
-    href: localization.md
-  - name: Operaciones de cadenas que no distinguen entre referencias culturales
-    href: culture-insensitive-string-operations.md
-    items:
-    - name: Realizar operaciones de cadena que no distinguen entre referencias culturales
-      href: performing-culture-insensitive-string-operations.md
+    - name: Globalización
+      href: globalization.md
+    - name: Revisión de localizabilidad
+      href: localizability-review.md
+    - name: Localización
+      href: localization.md
+    - name: Operaciones de cadenas que no distinguen entre referencias culturales
+      href: culture-insensitive-string-operations.md
       items:
-      - name: Comparaciones de cadenas
-        href: performing-culture-insensitive-string-comparisons.md
-      - name: Cambios de mayúsculas y minúsculas
-        href: performing-culture-insensitive-case-changes.md
-      - name: Operaciones de cadenas en colecciones
-        href: performing-culture-insensitive-string-operations-in-collections.md
-      - name: Operaciones de cadena en matrices
-        href: performing-culture-insensitive-string-operations-in-arrays.md
-  - name: Procedimientos recomendados para desarrollar aplicaciones de uso internacional
-    href: best-practices-for-developing-world-ready-apps.md
-ms.openlocfilehash: afbb7d141dd544f0fd36f02f9dd9f4523df94840
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470423"
+        - name: Realizar operaciones de cadena que no distinguen entre referencias culturales
+          href: performing-culture-insensitive-string-operations.md
+          items:
+            - name: Comparaciones de cadenas
+              href: performing-culture-insensitive-string-comparisons.md
+            - name: Cambios de mayúsculas y minúsculas
+              href: performing-culture-insensitive-case-changes.md
+            - name: Operaciones de cadenas en colecciones
+              href: performing-culture-insensitive-string-operations-in-collections.md
+            - name: Operaciones de cadena en matrices
+              href: performing-culture-insensitive-string-operations-in-arrays.md
+    - name: Procedimientos recomendados para desarrollar aplicaciones de uso internacional
+      href: best-practices-for-developing-world-ready-apps.md

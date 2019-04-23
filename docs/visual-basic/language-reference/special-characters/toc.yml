@@ -1,12 +1,5 @@
-items:
 - name: Caracteres especiales
   href: index.md
   items:
-  - name: $ -- interpolación de cadenas
-    href: interpolated.md
-ms.openlocfilehash: 2a396b48ad4443e29e809a1b86646838bf998706
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469686"
+    - name: $ -- interpolación de cadenas
+      href: interpolated.md

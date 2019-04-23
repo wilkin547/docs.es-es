@@ -1,52 +1,45 @@
-items:
-- name: Guía de programación de C#
+- name: 'Guía de programación de C#'
   href: index.md
   items:
-  - name: Dentro de un programa de C#
-    href: inside-a-program/
-  - name: Main() y argumentos de la línea de comandos
-    href: main-and-command-args/
-  - name: Conceptos de programación
-    href: concepts/
-  - name: Instrucciones, expresiones y operadores
-    href: statements-expressions-operators/
-  - name: Tipos
-    href: types/
-  - name: Clases y structs
-    href: classes-and-structs/
-  - name: Interfaces
-    href: interfaces/
-  - name: Tipos de enumeración
-    href: enumeration-types.md
-  - name: Delegados
-    href: delegates/index.md
-  - name: Matrices
-    href: arrays/
-  - name: Cadenas
-    href: strings/
-  - name: Indizadores
-    href: indexers/
-  - name: Eventos
-    href: events/
-  - name: Genéricos
-    href: generics/
-  - name: Espacios de nombres
-    href: namespaces/
-  - name: Tipos que aceptan valores NULL
-    href: nullable-types/
-  - name: Código no seguro y punteros
-    href: unsafe-code-pointers/
-  - name: Comentarios de la documentación XML
-    href: xmldoc/
-  - name: Excepciones y control de excepciones
-    href: exceptions/
-  - name: Registro y sistema de archivos
-    href: file-system/
-  - name: Interoperabilidad
-    href: interop/
-ms.openlocfilehash: 735c939dd903ff7e713fc9870afeda99786f8e77
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471052"
+    - name: 'Dentro de un programa de C#'
+      href: inside-a-program/
+    - name: Main() y argumentos de la línea de comandos
+      href: main-and-command-args/
+    - name: Conceptos de programación
+      href: concepts/
+    - name: 'Instrucciones, expresiones y operadores'
+      href: statements-expressions-operators/
+    - name: Tipos
+      href: types/
+    - name: Clases y structs
+      href: classes-and-structs/
+    - name: Interfaces
+      href: interfaces/
+    - name: Tipos de enumeración
+      href: enumeration-types.md
+    - name: Delegados
+      href: delegates/index.md
+    - name: Matrices
+      href: arrays/
+    - name: Cadenas
+      href: strings/
+    - name: Indizadores
+      href: indexers/
+    - name: Eventos
+      href: events/
+    - name: Genéricos
+      href: generics/
+    - name: Espacios de nombres
+      href: namespaces/
+    - name: Tipos que aceptan valores NULL
+      href: nullable-types/
+    - name: Código no seguro y punteros
+      href: unsafe-code-pointers/
+    - name: Comentarios de la documentación XML
+      href: xmldoc/
+    - name: Excepciones y control de excepciones
+      href: exceptions/
+    - name: Registro y sistema de archivos
+      href: file-system/
+    - name: Interoperabilidad
+      href: interop/

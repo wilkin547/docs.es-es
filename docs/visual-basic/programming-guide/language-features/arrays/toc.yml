@@ -1,20 +1,13 @@
-items:
 - name: Matrices en Visual Basic
   href: index.md
   items:
-  - name: Dimensiones de matriz
-    href: array-dimensions.md
-  - name: Procedimiento para inicializar una variable de matriz
-    href: how-to-initialize-an-array-variable.md
-  - name: Procedimiento para ordenar una matriz
-    href: how-to-sort-an-array.md
-  - name: Procedimiento para asignar una matriz a otra
-    href: how-to-assign-one-array-to-another-array.md
-  - name: Solución de problemas de matrices
-    href: troubleshooting-arrays.md
-ms.openlocfilehash: cec0bed9cd5de72b0b48d6e8392715bb792e0836
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469758"
+    - name: Dimensiones de matriz
+      href: array-dimensions.md
+    - name: Procedimiento para inicializar una variable de matriz
+      href: how-to-initialize-an-array-variable.md
+    - name: Procedimiento para ordenar una matriz
+      href: how-to-sort-an-array.md
+    - name: Procedimiento para asignar una matriz a otra
+      href: how-to-assign-one-array-to-another-array.md
+    - name: Solución de problemas de matrices
+      href: troubleshooting-arrays.md
