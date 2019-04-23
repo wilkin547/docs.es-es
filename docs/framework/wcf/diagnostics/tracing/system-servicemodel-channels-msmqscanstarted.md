@@ -3,20 +3,20 @@ title: System.ServiceModel.Channels.MsmqScanStarted
 ms.date: 03/30/2017
 ms.assetid: 56046431-94fc-4b04-a0fb-4b3f3e31a26f
 ms.openlocfilehash: 927302b808cc1d7082d2e37946274adfa6948e8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199614"
 ---
-# <a name="systemservicemodelchannelsmsmqscanstarted"></a><span data-ttu-id="215db-102">System.ServiceModel.Channels.MsmqScanStarted</span><span class="sxs-lookup"><span data-stu-id="215db-102">System.ServiceModel.Channels.MsmqScanStarted</span></span>
-<span data-ttu-id="215db-103">System.ServiceModel.Channels.MsmqScanStarted</span><span class="sxs-lookup"><span data-stu-id="215db-103">System.ServiceModel.Channels.MsmqScanStarted</span></span>  
+# <a name="systemservicemodelchannelsmsmqscanstarted"></a><span data-ttu-id="35c6d-102">System.ServiceModel.Channels.MsmqScanStarted</span><span class="sxs-lookup"><span data-stu-id="35c6d-102">System.ServiceModel.Channels.MsmqScanStarted</span></span>
+<span data-ttu-id="35c6d-103">System.ServiceModel.Channels.MsmqScanStarted</span><span class="sxs-lookup"><span data-stu-id="35c6d-103">System.ServiceModel.Channels.MsmqScanStarted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="215db-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="215db-104">Description</span></span>  
- <span data-ttu-id="215db-105">El servicio de activación MSMQ empezó a analizar colas.</span><span class="sxs-lookup"><span data-stu-id="215db-105">MSMQ activation service started to scan for queues.</span></span>  
+## <a name="description"></a><span data-ttu-id="35c6d-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="35c6d-104">Description</span></span>  
+ <span data-ttu-id="35c6d-105">El servicio de activación MSMQ empezó a analizar colas.</span><span class="sxs-lookup"><span data-stu-id="35c6d-105">MSMQ activation service started to scan for queues.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="215db-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="215db-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35c6d-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="35c6d-106">See also</span></span>
 
-- [<span data-ttu-id="215db-107">Traza</span><span class="sxs-lookup"><span data-stu-id="215db-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="215db-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="215db-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="215db-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="215db-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="35c6d-107">Traza</span><span class="sxs-lookup"><span data-stu-id="35c6d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="35c6d-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="35c6d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="35c6d-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="35c6d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
