@@ -1,5 +1,5 @@
 ---
-title: Filtrar para usar la protección de datos
+title: Procedimiento para usar la protección de datos
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,13 +19,13 @@ ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59314467"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771847"
 ---
-# <a name="how-to-use-data-protection"></a>Filtrar para usar la protección de datos
+# <a name="how-to-use-data-protection"></a>Procedimiento para usar la protección de datos
 .NET Framework proporciona acceso a la API de protección de datos (DPAPI), que permite cifrar datos usando la información del equipo o la cuenta del usuario actual.  Cuando se usa la DPAPI, se alivia el difícil problema de generar y almacenar explícitamente una clave criptográfica.  
   
  Use la clase <xref:System.Security.Cryptography.ProtectedMemory> para cifrar una matriz de bytes en memoria.  Esta funcionalidad está disponible en Microsoft Windows XP y en los sistemas operativos posteriores.  Puede especificar que la memoria cifrada por el proceso actual pueda ser descifrada solo por el proceso actual, por todos los procesos o desde el mismo contexto de usuario.  Consulte la enumeración <xref:System.Security.Cryptography.MemoryProtectionScope> para obtener una descripción detallada de las opciones de <xref:System.Security.Cryptography.ProtectedMemory>.  

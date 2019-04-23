@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar un objeto ResourceDictionary a fin de administrar los recursos de cadenas localizables
+title: Procedimiento Usar un objeto ResourceDictionary a fin de administrar los recursos de cadenas localizables
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - localization [WPF], packaging string resources
 ms.assetid: 19e7d9a5-20df-4ad3-b157-fe6515902e5e
 ms.openlocfilehash: b56a307ed31fc8f7573215eac70350ac5e4b9de1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311323"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772120"
 ---
-# <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a>Filtrar Usar un objeto ResourceDictionary a fin de administrar los recursos de cadenas localizables
+# <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a>Procedimiento Usar un objeto ResourceDictionary a fin de administrar los recursos de cadenas localizables
 En este ejemplo se muestra cómo usar un <xref:System.Windows.ResourceDictionary> para empaquetar recursos de cadenas localizables para aplicaciones Windows Presentation Foundation (WPF).  
   
 ### <a name="to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a>Usar ResourceDictionary para administrar recursos de cadenas localizables  

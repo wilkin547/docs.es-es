@@ -1,5 +1,5 @@
 ---
-title: Filtrar Anexar un elemento MenuStrip a una ventana primaria MDI (formularios Windows Forms)
+title: Procedimiento Anexar un elemento MenuStrip a una ventana primaria MDI (formularios Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
 ms.openlocfilehash: a335531b090983de4e2b3daccc9f956930cbad6e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298947"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771704"
 ---
-# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Filtrar Anexar un elemento MenuStrip a una ventana primaria MDI (formularios Windows Forms)
+# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Procedimiento Anexar un elemento MenuStrip a una ventana primaria MDI (formularios Windows Forms)
 En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múltiples documentos (MDI) puede ser diferente de la ventana primaria MDI. Por ejemplo, el elemento primario MDI podría ser una hoja de cálculo y el elemento secundario MDI podría ser un gráfico. En ese caso, querrá actualizar el contenido del menú del elemento primario MDI con el contenido del menú del elemento secundario MDI cuando se activan ventanas secundarias MDI de diferentes tipos.  
   
  El siguiente procedimiento usa las propiedades <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction> y <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> para anexar el menú secundario MDI al menú primario MDI. Al cerrar la ventana secundaria MDI se quita el menú anexado del elemento primario MDI.  
@@ -29,21 +29,21 @@ En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múlti
   
 2. Agregue una <xref:System.Windows.Forms.MenuStrip> a `Form1` y establezca la propiedad <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> de la <xref:System.Windows.Forms.MenuStrip> en `true`.  
   
-3. Establecer el <xref:System.Windows.Forms.ToolStripItem.Visible%2A> propiedad de la `Form1`<xref:System.Windows.Forms.MenuStrip> a `false`.  
+3. Establezca la propiedad <xref:System.Windows.Forms.ToolStripItem.Visible%2A> de la `Form1`<xref:System.Windows.Forms.MenuStrip> en `false`.  
   
-4. Agregue un elemento de menú de nivel superior a la `Form1`<xref:System.Windows.Forms.MenuStrip> y establezca su <xref:System.Windows.Forms.Control.Text%2A> propiedad `&File`.  
+4. Agregue un elemento de menú de nivel superior a la `Form1`<xref:System.Windows.Forms.MenuStrip> y establezca su propiedad <xref:System.Windows.Forms.Control.Text%2A> en `&File`.  
   
 5. Agregue un elemento de submenú al elemento de menú `&File` y establezca su propiedad <xref:System.Windows.Forms.Form.Text%2A> en `&Open`.  
   
-6. Agregue un formulario al proyecto, agregue un <xref:System.Windows.Forms.MenuStrip> al formulario y establezca el <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> propiedad de la `Form2`<xref:System.Windows.Forms.MenuStrip> a `true`.  
+6. Agregue un formulario al proyecto, agregue una <xref:System.Windows.Forms.MenuStrip> al formulario y establezca la propiedad <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> de la `Form2`<xref:System.Windows.Forms.MenuStrip> en `true`.  
   
-7. Agregue un elemento de menú de nivel superior a la `Form2`<xref:System.Windows.Forms.MenuStrip> y establezca su <xref:System.Windows.Forms.Form.Text%2A> propiedad `&Special`.  
+7. Agregue un elemento de menú de nivel superior a la `Form2`<xref:System.Windows.Forms.MenuStrip> y establezca su propiedad <xref:System.Windows.Forms.Form.Text%2A> en `&Special`.  
   
 8. Agregue dos elementos de submenú al elemento de menú `&Special` y establezca sus propiedades <xref:System.Windows.Forms.Form.Text%2A> en `Command&1` y `Command&2`, respectivamente.  
   
 9. Establezca la propiedad <xref:System.Windows.Forms.MergeAction> de los elementos de menú `&Special`, `Command&1` y `Command&2` en <xref:System.Windows.Forms.MergeAction.Append>.  
   
-10. Crear un controlador de eventos para el <xref:System.Windows.Forms.Control.Click> eventos de la `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. Cree un controlador para el evento <xref:System.Windows.Forms.Control.Click> del <xref:System.Windows.Forms.ToolStripMenuItem>`&New`.  
   
 11. En el controlador de eventos, inserte código similar al ejemplo de código siguiente para crear y mostrar nuevas instancias de `Form2` como elementos secundarios MDI de `Form1`.  
   
@@ -68,7 +68,7 @@ En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múlti
     }  
     ```  
   
-12. Incluya código similar al siguiente ejemplo de código en el `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> para registrar el controlador de eventos.  
+12. Incluya código similar al ejemplo de código siguiente en el `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> para registrar el controlador de eventos.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  
