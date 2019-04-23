@@ -1,5 +1,5 @@
 ---
-title: Filtrar Dibujar una Polilínea mediante el uso del elemento Polyline
+title: Procedimiento Dibujar una Polilínea mediante el uso del elemento Polyline
 ms.date: 03/30/2017
 helpviewer_keywords:
 - connected lines [WPF]
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
 ms.openlocfilehash: 4f55ecc206be0ef4947923047e796c36131c70ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59114851"
 ---
-# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Filtrar Dibujar una Polilínea mediante el uso del elemento Polyline
+# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Procedimiento Dibujar una Polilínea mediante el uso del elemento Polyline
 En este ejemplo se muestra cómo dibujar una polilínea, que es una serie de líneas conectadas, mediante el <xref:System.Windows.Shapes.Polyline> elemento.  
   
  Para dibujar una polilínea, cree un <xref:System.Windows.Shapes.Polyline> elemento y utilice su <xref:System.Windows.Shapes.Polyline.Points%2A> propiedad para especificar los vértices de la forma. Por último, use el <xref:System.Windows.Shapes.Shape.Stroke%2A> y <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> propiedades para describir la polyline de esquema porque una línea sin un trazo es invisible.  

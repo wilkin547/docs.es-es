@@ -1,5 +1,5 @@
 ---
-title: Filtrar para dibujar una línea discontinua personalizada
+title: Procedimiento para dibujar una línea discontinua personalizada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
 ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109192"
 ---
-# <a name="how-to-draw-a-custom-dashed-line"></a>Filtrar para dibujar una línea discontinua personalizada
+# <a name="how-to-draw-a-custom-dashed-line"></a>Procedimiento para dibujar una línea discontinua personalizada
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona varios estilos de guión que aparecen en la <xref:System.Drawing.Drawing2D.DashStyle> enumeración. Si los estilos de guión estándar no satisface sus necesidades, puede crear un modelo de guión personalizado.  
   
 ## <a name="example"></a>Ejemplo  

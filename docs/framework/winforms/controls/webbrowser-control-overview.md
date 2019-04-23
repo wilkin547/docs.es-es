@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
 ms.openlocfilehash: c75d0b348a2f3dd678f2bfb235bce2e4e227c4b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109440"
 ---
 # <a name="webbrowser-control-overview"></a>Información general sobre el control WebBrowser
@@ -26,19 +26,19 @@ El <xref:System.Windows.Forms.WebBrowser> control proporciona un contenedor admi
   
 |Name|Descripción|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.WebBrowser.Document%2A> propiedad|Obtiene un objeto que proporciona acceso administrado para el modelo de objetos de documento (DOM) HTML de la página Web actual.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> evento|Se produce cuando finaliza la carga de una página Web.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentText%2A> propiedad|Obtiene o establece el contenido de la página Web actual HTML.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> propiedad|Obtiene el título de la página Web actual.|  
-|<xref:System.Windows.Forms.WebBrowser.GoBack%2A> método|Navega a la página anterior del historial.|  
-|<xref:System.Windows.Forms.WebBrowser.GoForward%2A> método|Navega a la página siguiente del historial.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigate%2A> método|Navega a la dirección URL especificada.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigating> evento|Se produce antes de que comience la exploración, lo que permite cancelar la acción.|  
-|<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> propiedad|Obtiene o establece un objeto que puede usar código de scripting de páginas Web para comunicarse con la aplicación.|  
-|<xref:System.Windows.Forms.WebBrowser.Print%2A> método|Imprime la página Web actual.|  
-|<xref:System.Windows.Forms.WebBrowser.Refresh%2A> método|Vuelve a cargar la página Web actual.|  
-|<xref:System.Windows.Forms.WebBrowser.Stop%2A> método|Detiene la exploración actual y detiene los elementos de página dinámica como sonidos y animación.|  
-|<xref:System.Windows.Forms.WebBrowser.Url%2A> propiedad|Obtiene o establece la dirección URL de la página Web actual. Al establecer esta propiedad, desplaza el control a la nueva dirección URL.|  
+|Propiedad <xref:System.Windows.Forms.WebBrowser.Document%2A>|Obtiene un objeto que proporciona acceso administrado para el modelo de objetos de documento (DOM) HTML de la página Web actual.|  
+|Evento<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> |Se produce cuando finaliza la carga de una página Web.|  
+|Propiedad <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>|Obtiene o establece el contenido de la página Web actual HTML.|  
+|Propiedad <xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A>|Obtiene el título de la página Web actual.|  
+|Método <xref:System.Windows.Forms.WebBrowser.GoBack%2A>|Navega a la página anterior del historial.|  
+|Método <xref:System.Windows.Forms.WebBrowser.GoForward%2A>|Navega a la página siguiente del historial.|  
+|Método <xref:System.Windows.Forms.WebBrowser.Navigate%2A>|Navega a la dirección URL especificada.|  
+|Evento<xref:System.Windows.Forms.WebBrowser.Navigating> |Se produce antes de que comience la exploración, lo que permite cancelar la acción.|  
+|Propiedad <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A>|Obtiene o establece un objeto que puede usar código de scripting de páginas Web para comunicarse con la aplicación.|  
+|Método <xref:System.Windows.Forms.WebBrowser.Print%2A>|Imprime la página Web actual.|  
+|Método <xref:System.Windows.Forms.WebBrowser.Refresh%2A>|Vuelve a cargar la página Web actual.|  
+|Método <xref:System.Windows.Forms.WebBrowser.Stop%2A>|Detiene la exploración actual y detiene los elementos de página dinámica como sonidos y animación.|  
+|Propiedad <xref:System.Windows.Forms.WebBrowser.Url%2A>|Obtiene o establece la dirección URL de la página Web actual. Al establecer esta propiedad, desplaza el control a la nueva dirección URL.|  
   
 ## <a name="see-also"></a>Vea también
 
@@ -53,9 +53,9 @@ El <xref:System.Windows.Forms.WebBrowser> control proporciona un contenedor admi
 - <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
-- [Filtrar para desplazarse a una dirección URL con el control WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Filtrar para imprimir con un control WebBrowser](how-to-print-with-a-webbrowser-control.md)
-- [Filtrar para agregar funcionalidades de explorador web a una aplicación de formularios Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [Filtrar para crear un visor de documentos HTML en una aplicación de formularios Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
-- [Filtrar para implementar la comunicación bidireccional entre código DHTML y código de la aplicación cliente](implement-two-way-com-between-dhtml-and-client.md)
+- [Cómo: Navegue a una dirección URL con el Control WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Cómo: Imprimir con un Control WebBrowser](how-to-print-with-a-webbrowser-control.md)
+- [Cómo: Agregar funciones de explorador Web a una aplicación de Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [Cómo: Crear un visor de documentos HTML en una aplicación de Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [Cómo: Implementar la comunicación bidireccional entre código DHTML y código de la aplicación cliente](implement-two-way-com-between-dhtml-and-client.md)
 - [Seguridad de WebBrowser](webbrowser-security.md)

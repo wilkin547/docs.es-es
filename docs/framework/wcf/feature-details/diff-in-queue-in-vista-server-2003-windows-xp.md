@@ -5,10 +5,10 @@ helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
 ms.openlocfilehash: d13cb3e732d0276902def5de6ca7c007f61b0ec9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115991"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP
@@ -19,7 +19,7 @@ En este tema se resume las diferencias en la característica de colas de Windows
   
  Normalmente, existe una cola de mensajes no enviados única para todo el sistema para todas las aplicaciones en cola que comparten un administrador de cola. Una cola de mensajes no enviados para cada aplicación permite un mejor aislamiento entre las aplicaciones en cola que comparten un administrador de cola, de modo que permiten que estas aplicaciones especifiquen su propia cola de mensajes no enviados específica de la aplicación. Una aplicación que comparte una cola de mensajes no enviados con otras aplicaciones tiene que examinar la cola para encontrar mensajes que son aplicables. Con una cola de mensajes con problemas de entrega específica de la aplicación, la aplicación puede estar segura de que todos los mensajes de su cola de mensajes con problemas de entrega le corresponden.  
   
- [!INCLUDE[wv](../../../../includes/wv-md.md)] se proporciona para las colas de mensajes no enviados específica de la aplicación. Las colas de mensajes no enviados específicas de la aplicación no están disponibles en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]y las aplicaciones deben utilizar la cola de mensajes no enviados para todo el sistema.  
+ [!INCLUDE[wv](../../../../includes/wv-md.md)] proporciona colas de mensajes con problemas de entrega específicas de la aplicación. Las colas de mensajes no enviados específicas de la aplicación no están disponibles en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]y las aplicaciones deben utilizar la cola de mensajes no enviados para todo el sistema.  
   
 ## <a name="poison-message-handling"></a>Administración de mensajes dudosos  
  Un mensaje dudoso es un mensaje que ha superado el número máximo de intentos de entrega a la aplicación receptora. Esta situación se puede presentar cuando una aplicación que lee un mensaje de una cola transaccional no puede procesar inmediatamente el mensaje debido a los errores. Si la aplicación anula la transacción en la que se recibió el mensaje en cola, devuelve el mensaje a la cola. La aplicación intenta a continuación recuperar de nuevo el mensaje en una nueva transacción. Si no se corrige el problema que produce el error, la aplicación receptora puede entrar en un bucle recibiendo y anulando el mismo mensaje hasta que supere el número máximo de intentos de entrega, y ello provoca un mensaje dudoso.  

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
 ms.openlocfilehash: 9dfffe8ea3f76d89823dfe2ef6bd0e4f3accf8f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106787"
 ---
 # <a name="structure-of-the-graphics-interface"></a>Estructura de la interfaz gráfica
@@ -24,6 +24,6 @@ La interfaz de clase administrada para [!INCLUDE[ndptecgdiplus](../../../../incl
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre gráficos](graphics-overview-windows-forms.md)
-- [Código administrado de GDI+](about-gdi-managed-code.md)
-- [Utilizar clases gráficas administradas](using-managed-graphics-classes.md)
+- [Graphics Overview](graphics-overview-windows-forms.md) (Información general sobre gráficos [Windows Forms])
+- [About GDI+ Managed Code](about-gdi-managed-code.md) (Acerca del código administrado de GDI+)
+- [Using Managed Graphics Classes](using-managed-graphics-classes.md) (Usar clases gráficas administradas)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - spin button control [Windows Forms], Windows Forms
 ms.assetid: cff3cf30-4d46-4381-87df-37bfe83c71c5
 ms.openlocfilehash: 218eb685e546acac76a18450612a1601ab87276b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109881"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>Información general sobre el control NumericUpDown (formularios Windows Forms)
@@ -26,6 +26,6 @@ El <xref:System.Windows.Forms.NumericUpDown> control es similar a una combinaci�
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.NumericUpDown>
-- [Control NumericUpDown](numericupdown-control-windows-forms.md)
-- [Filtrar para establecer el formato del control NumericUpDown de formularios Windows Forms](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)
+- [NumericUpDown (control)](numericupdown-control-windows-forms.md)
+- [Cómo: Establecer el formato del control NumericUpDown de formularios de Windows](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)
 - [Control TextBox](textbox-control-windows-forms.md)

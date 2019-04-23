@@ -1,5 +1,5 @@
 ---
-title: Filtrar para usar la propiedad Spring de manera interactiva en un control StatusStrip
+title: Procedimiento para usar la propiedad Spring de manera interactiva en un control StatusStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Spring property [Windows Forms]
 ms.assetid: 18bde842-a93c-48dd-9db3-15738a1775ce
 ms.openlocfilehash: 7d79a885f49168c3883259826e7b8ae62eec1dab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108191"
 ---
-# <a name="how-to-use-the-spring-property-interactively-in-a-statusstrip"></a>Filtrar para usar la propiedad Spring de manera interactiva en un control StatusStrip
+# <a name="how-to-use-the-spring-property-interactively-in-a-statusstrip"></a>Procedimiento para usar la propiedad Spring de manera interactiva en un control StatusStrip
 Puede utilizar la propiedad <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> para colocar un control <xref:System.Windows.Forms.ToolStripStatusLabel> en un control <xref:System.Windows.Forms.StatusStrip>. La propiedad <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> determina si el control <xref:System.Windows.Forms.ToolStripStatusLabel> rellena automáticamente el espacio disponible en el control <xref:System.Windows.Forms.StatusStrip>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -44,4 +44,4 @@ Puede utilizar la propiedad <xref:System.Windows.Forms.ToolStripStatusLabel.Spri
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripItem>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [ToolStrip](toolstrip-control-windows-forms.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)

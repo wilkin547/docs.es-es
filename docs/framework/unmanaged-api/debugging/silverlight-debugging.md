@@ -8,17 +8,17 @@ ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1d20bc002e52c3c6a42b45c0d1c5d559e65dc52c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113703"
 ---
 # <a name="silverlight-debugging"></a>Depuración en Silverlight
 En los temas de esta sección describen el entorno y las interfaces que Common Language Runtime (CLR) proporciona para admitir la depuración de aplicaciones basadas en Silverlight que se ejecutan en el sistema operativo Windows, o en la plataforma Macintosh.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [EnumerateCLRs (Función)](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)  
+ [EnumerateCLRs (función)](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)  
  Proporciona un mecanismo para enumerar los CLR de un proceso.  
   
  [CloseCLREnumeration (Función)](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)  
@@ -36,16 +36,16 @@ En los temas de esta sección describen el entorno y las interfaces que Common L
  [CreateDebuggingInterfaceFromVersion (Función)](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)  
  Acepta una cadena de versión CLR devuelto desde [CreateVersionStringFromModule (función)](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)de función y devuelve una interfaz de depurador correspondiente.  
   
- [CoreClrDebugProcInfo (Estructura)](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)  
+ [CoreClrDebugProcInfo (estructura)](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)  
  Representa un proceso que se ejecuta en un equipo remoto.  
   
- [CoreClrDebugRuntimeInfo (Estructura)](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md)  
+ [CoreClrDebugRuntimeInfo (estructura)](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md)  
  Representa una instancia de CLR que se carga en un proceso en un equipo remoto.  
   
  [GetStartupNotificationEvent (Función)](../../../../docs/framework/unmanaged-api/debugging/getstartupnotificationevent-function.md)  
  Crea o abre un identificador de evento al que apuntará cualquier Common Language Runtime (CLR) que se cargue en el proceso de destino especificado.  
   
- [ICoreClrDebugTarget (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)  
+ [ICoreClrDebugTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)  
  Crea una conexión a un destino remoto para la enumeración de procesos y tiempos de ejecución.  
   
  [InitDbgTransportManager (Función)](../../../../docs/framework/unmanaged-api/debugging/initdbgtransportmanager-function.md)  
@@ -57,7 +57,7 @@ En los temas de esta sección describen el entorno y las interfaces que Common L
 ## <a name="see-also"></a>Vea también
 
 - [Coclases para la depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Funciones estáticas globales para la depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Funciones estáticas globales de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
 - [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

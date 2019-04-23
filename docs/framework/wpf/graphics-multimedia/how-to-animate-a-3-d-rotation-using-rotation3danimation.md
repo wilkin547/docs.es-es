@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar un giro 3D mediante Rotation3DAnimation
+title: Procedimiento Animar un giro 3D mediante Rotation3DAnimation
 ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D translations [WPF], animating [WPF], with Rotation3DAnimation
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - animation [WPF], 3-D translations [WPF], with Rotation3DAnimation
 ms.assetid: a92223ec-b634-4f5e-8e79-d33bc43ecfb3
 ms.openlocfilehash: dd804fefc174e28fc5211a0222ab13f38c6b6e5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59114405"
 ---
-# <a name="how-to-animate-a-3-d-rotation-using-rotation3danimation"></a>Filtrar Animar un giro 3D mediante Rotation3DAnimation
+# <a name="how-to-animate-a-3-d-rotation-using-rotation3danimation"></a>Procedimiento Animar un giro 3D mediante Rotation3DAnimation
 El ejemplo siguiente muestra cómo hacer girar mientras se "tambalea" mediante el uso de un objeto 3D <xref:System.Windows.Media.Animation.Rotation3DAnimation> para animar la <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> propiedad de la <xref:System.Windows.Media.Media3D.RotateTransform3D> objeto aplicado al objeto 3D.  
   
 ## <a name="example"></a>Ejemplo  

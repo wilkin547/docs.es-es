@@ -3,10 +3,10 @@ title: 'Simultaneidad optimista: Información general'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
 ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106553"
 ---
 # <a name="optimistic-concurrency-overview"></a>Simultaneidad optimista: Información general
@@ -18,7 +18,7 @@ ms.locfileid: "59106553"
 |Conflicto de simultaneidad|Situación en la cual dos o más usuarios intentan enviar valores incompatibles a una o más columnas de una fila al mismo tiempo.|  
 |control de simultaneidad|Técnica utilizada para resolver los conflictos de simultaneidad.|  
 |control de simultaneidad optimista|Técnica que primero investiga si otras transacciones han cambiado los valores de una fila antes de permitir que se envíen los cambios.<br /><br /> Compare con *control de simultaneidad pesimista*, lo que bloquea el registro para evitar conflictos de simultaneidad.<br /><br /> *Optimista* control se denomina así porque considera que las posibilidades de una transacción interfiera con otra.|  
-|Resolución de conflictos|Proceso mediante el cual un elemento en conflicto se actualiza volviendo a consultar la base de datos y resolviendo las diferencias.<br /><br /> Cuando un objeto se actualiza, el seguimiento de cambios de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] conserva los datos siguientes:<br /><br /> -Comprobación los valores procedentes de la base de datos originalmente y utilizado para la actualización.<br />-Los nuevos valores de base de datos de la consulta subsiguiente.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] a continuación, determina si el objeto está en conflicto (es decir, si uno o varios de sus valores de miembro ha cambiado). Si el objeto está en conflicto, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] siguiente determina cuál de sus miembros están en conflicto.<br /><br /> Cualquier conflicto de miembro que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] detecta se agrega a una lista de conflictos.|  
+|Resolución de conflictos|Proceso mediante el cual un elemento en conflicto se actualiza volviendo a consultar la base de datos y resolviendo las diferencias.<br /><br /> Cuando un objeto se actualiza, el seguimiento de cambios de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] conserva los datos siguientes:<br /><br /> -Comprobación los valores procedentes de la base de datos originalmente y utilizado para la actualización.<br />-Los nuevos valores de base de datos de la consulta subsiguiente.<br /><br /> Después, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] determina si el objeto está en conflicto (es decir, si uno o más de sus valores de miembro ha cambiado). Si el objeto está en conflicto, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] siguiente determina cuál de sus miembros están en conflicto.<br /><br /> Cualquier conflicto de miembro que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] detecta se agrega a una lista de conflictos.|  
   
  En el [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelo de objetos, un *conflicto de simultaneidad optimista* se produce cuando se cumplen las condiciones siguientes:  
   
@@ -90,4 +90,4 @@ ms.locfileid: "59106553"
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Cómo: Administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
 ms.openlocfilehash: c3d5a7d6040038eb6d768815b1ae9e8ad45c5810
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109959"
 ---
 # <a name="listening-with-sockets"></a>escuchas con sockets
@@ -61,8 +61,8 @@ listener.Listen(100);
   
 ## <a name="see-also"></a>Vea también
 
-- [Usar un socket de servidor sincrónico](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [Usar un socket de servidor asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Usar sockets de cliente](../../../docs/framework/network-programming/using-client-sockets.md)
-- [Procedimiento para crear un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [sockets](../../../docs/framework/network-programming/sockets.md)
+- [Uso de un socket de servidor sincrónico](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
+- [Uso de un socket de servidor asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
+- [Uso de sockets de cliente](../../../docs/framework/network-programming/using-client-sockets.md)
+- [Cómo: Crear un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [Sockets](../../../docs/framework/network-programming/sockets.md)

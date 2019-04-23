@@ -21,10 +21,10 @@ ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113729"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Calcular las referencias de clases, estructuras y uniones
@@ -264,13 +264,13 @@ typedef struct _MYSTRSTRUCT2
 } MYSTRSTRUCT2;  
 ```  
   
- La clase `MyStruct` contiene un objeto de cadena de caracteres ANSI. El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> especifica el formato ANSI. `MyUnsafeStruct`es una estructura que contiene un tipo <xref:System.IntPtr> en lugar de una cadena.  
+ La clase `MyStruct` contiene un objeto de cadena de caracteres ANSI. El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> especifica el formato ANSI. `MyUnsafeStruct` es una estructura que contiene un tipo <xref:System.IntPtr> en lugar de una cadena.  
   
  La clase `LibWrap` contiene el método de prototipo `TestOutArrayOfStructs` sobrecargado. Si un método declara un puntero como parámetro, la clase se debe marcar con la palabra clave `unsafe`. Dado que [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] no puede usar código no seguro, el método sobrecargado, el modificador unsafe y la estructura `MyUnsafeStruct` son innecesarios.  
   
  La clase `App` implementa el método `UsingMarshaling`, que realiza todas las tareas necesarias para pasar la matriz. La matriz se marca con la palabra clave `out` (`ByRef` en Visual Basic) para indicar que los datos se pasan del destinatario al llamador. La implementación usa los siguientes métodos de la clase <xref:System.Runtime.InteropServices.Marshal>:  
   
--   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> para serializar los datos desde el búfer no administrado en un objeto administrado.  
+-   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> para calcular las referencias de datos desde el búfer no administrado a un objeto administrado.  
   
 -   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> para liberar la memoria reservada para las cadenas en la estructura.  
   
@@ -292,4 +292,4 @@ typedef struct _MYSTRSTRUCT2
 
 - [Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md)
 - [Serialización de cadenas](marshaling-strings.md)
-- [Cálculo de referencias de tipos diferentes de matrices](marshaling-different-types-of-arrays.md)
+- [Serialización de tipos diferentes de matrices](marshaling-different-types-of-arrays.md)

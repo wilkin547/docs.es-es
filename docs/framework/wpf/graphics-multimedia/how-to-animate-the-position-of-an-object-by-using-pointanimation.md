@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar la posición de un objeto mediante PointAnimation
+title: Procedimiento Animar la posición de un objeto mediante PointAnimation
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - animation [WPF], PointAnimation
 ms.assetid: 42310977-cc90-438a-8a47-0345898e01be
 ms.openlocfilehash: 1ef3f77e551affaa7e61d2aabf95f10c29275417
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111311"
 ---
-# <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>Filtrar Animar la posición de un objeto mediante PointAnimation
+# <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>Procedimiento Animar la posición de un objeto mediante PointAnimation
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.PointAnimation> clase para animar un objeto a lo largo de un <xref:System.Windows.Shapes.Path>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -32,5 +32,5 @@ En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.Po
 - <xref:System.Windows.Media.EllipseGeometry.Center%2A>
 - [Información general sobre animaciones](animation-overview.md)
 - [Gráficos y multimedia](index.md)
-- [Temas "Cómo..." de gráficos](graphics-how-to-topics.md)
-- [Temas "Cómo..." de animación y control de tiempo](animation-and-timing-how-to-topics.md)
+- [Temas de procedimientos de gráficos](graphics-how-to-topics.md)
+- [Temas de procedimientos de temporización y animación](animation-and-timing-how-to-topics.md)

@@ -14,10 +14,10 @@ helpviewer_keywords:
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
 ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115315"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pinceles y formas rellenas en GDI+
@@ -83,5 +83,5 @@ Una forma cerrada, como un rectángulo o una elipse, consta de un esquema y un i
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
 - [Líneas, curvas y formas](lines-curves-and-shapes.md)
-- [Filtrar para dibujar un rectángulo con relleno en un formulario Windows Forms](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
-- [Filtrar para dibujar una elipse con relleno en un formulario Windows Forms](how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+- [Cómo: Dibujar un rectángulo relleno en un formulario de Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [Cómo: Dibujar una elipse con relleno en un formulario de Windows](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

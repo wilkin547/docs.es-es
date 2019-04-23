@@ -5,10 +5,10 @@ helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
 ms.openlocfilehash: 4d5fe4c92f0d456942219bc3f7014f09a005aa5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107853"
 ---
 # <a name="choosing-a-transport"></a>Elección del transporte
@@ -53,7 +53,7 @@ En este tema se describe los criterios para elegir entre los tres transportes pr
 |Atributo|Descripción|Transportes favorables|  
 |---------------|-----------------|------------------------|  
 |Diagnóstico|Los diagnósticos le permiten detectar automáticamente los problemas de conectividad de transporte. Todos los transportes admiten la capacidad de devolver la información del error que describe la conectividad. Sin embargo, WCF incluye herramientas de diagnóstico para investigar los problemas de red.|Ninguna|  
-|Hospedaje|Todos los extremos WCF se deben hospedar dentro de una aplicación. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] y versiones anteriores admiten aplicaciones de hospedaje que utilizan el transporte HTTP. En [!INCLUDE[wv](../../../../includes/wv-md.md)], soporte técnico se agrega para hospedar todos los transportes WCF, incluido TCP y canalizaciones con nombre. Para obtener más información, consulte [hospedaje en Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) y [hospedaje en Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
+|Hospedaje|Todos los extremos WCF se deben hospedar dentro de una aplicación. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] y las versiones anteriores solo admiten hospedar aplicaciones que usan el transporte HTTP. En [!INCLUDE[wv](../../../../includes/wv-md.md)], soporte técnico se agrega para hospedar todos los transportes WCF, incluido TCP y canalizaciones con nombre. Para obtener más información, consulte [hospedaje en Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) y [hospedaje en Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
 |Inspección|La inspección es la capacidad de extraer y procesar la información de los mensajes durante la transmisión. El protocolo HTTP separa el enrutamiento e información de control de los datos, de modo que facilita la creación de herramientas que inspeccionan y analizan los mensajes. Los transportes que son fáciles de inspeccionar también pueden requerir menos potencia de procesamiento en dispositivos de red. El nivel de seguridad utilizado afecta a la posibilidad de inspeccionar los mensajes.|HTTP|  
 |Latency|La latencia es el período de tiempo mínimo exigido para completar un intercambio de mensajes. Todas las operaciones de red tienen más o menos latencia, según la elección de transporte. El uso de dúplex o comunicación unidireccional con un transporte cuyo patrón de intercambio de mensajes nativo es la respuesta de la solicitud, como HTTP, puede producir la latencia adicional debido a la correlación forzada de mensajes. En esta situación, considere utilizar un transporte cuyo patrón de intercambio de mensajes nativo sea dúplex, como TCP.|TCP, con nombre<br /><br /> Canalización (|).|  
 |Reach|El alcance de un transporte refleja cómo es de capaz el transporte al conectar con otros sistemas. El transporte de canalización con nombre tiene un alcance muy pequeño; solo puede conectar a los servicios que se ejecutan en el mismo equipo. Los transportes HTTP y TCP tienen un alcance excelente y pueden penetrar algunas configuraciones de firewall y NAT. Para obtener más información, consulte [trabajar con NAT y Firewalls](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md).|HTTP, TCP|  

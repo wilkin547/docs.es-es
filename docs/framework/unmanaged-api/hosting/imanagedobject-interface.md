@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c90df6a8b6f25a93835981b1593a4b3d123cd168
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116381"
 ---
 # <a name="imanagedobject-interface"></a>IManagedObject (Interfaz)
@@ -30,8 +30,8 @@ Proporciona métodos para controlar un objeto administrado.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetObjectIdentity](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|Obtiene la identidad de este objeto administrado.|  
-|[Método GetSerializedBuffer](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|Obtiene la representación de cadena de este objeto administrado.|  
+|[GetObjectIdentity (método)](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|Obtiene la identidad de este objeto administrado.|  
+|[GetSerializedBuffer (método)](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|Obtiene la representación de cadena de este objeto administrado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

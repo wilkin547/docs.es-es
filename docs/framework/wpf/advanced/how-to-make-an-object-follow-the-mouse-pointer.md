@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un objeto que siga el puntero del mouse
+title: Procedimiento Crear un objeto que siga el puntero del mouse
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - cursor (mouse pointer), making objects follow
 ms.assetid: 50b20415-14bc-405c-baf3-2fb254fffde3
 ms.openlocfilehash: b9b13b4eec3e42744ba2be6031ec841fb5f215e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107320"
 ---
-# <a name="how-to-make-an-object-follow-the-mouse-pointer"></a>Filtrar Crear un objeto que siga el puntero del mouse
+# <a name="how-to-make-an-object-follow-the-mouse-pointer"></a>Procedimiento Crear un objeto que siga el puntero del mouse
 En este ejemplo se muestra cómo cambiar las dimensiones de un objeto cuando el puntero del mouse se mueve en la pantalla.  
   
  El ejemplo incluye un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivo que crea el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] y un archivo de código subyacente que crea el controlador de eventos.  

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
 ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107333"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;en GDI + curvas spline de Bézier
@@ -43,5 +43,5 @@ Una curva spline de Bézier es una curva especificada por cuatro puntos: dos pun
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Líneas, curvas y formas](lines-curves-and-shapes.md)
 - [Crear y dibujar curvas](constructing-and-drawing-curves.md)
-- [Filtrar para crear objetos gráficos para dibujar](how-to-create-graphics-objects-for-drawing.md)
-- [Filtrar para crear un lápiz](how-to-create-a-pen.md)
+- [Cómo: Crear objetos Graphics para dibujar](how-to-create-graphics-objects-for-drawing.md)
+- [Cómo: Crear un lápiz](how-to-create-a-pen.md)

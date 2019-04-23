@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear una forma mediante un objeto StreamGeometry
+title: Procedimiento Crear una forma mediante un objeto StreamGeometry
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - shapes [WPF], creating with StreamGeometry class
 ms.assetid: 08f7c8ce-074b-49cd-9aba-cc9592d4ee51
 ms.openlocfilehash: fd191e4cfdfa33c144389d4871a9641e9c811ed3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108607"
 ---
-# <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Filtrar Crear una forma mediante un objeto StreamGeometry
+# <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Procedimiento Crear una forma mediante un objeto StreamGeometry
 <xref:System.Windows.Media.StreamGeometry> es la alternativa ligera a <xref:System.Windows.Media.PathGeometry> para crear formas geométricas. Use un <xref:System.Windows.Media.StreamGeometry> cuando necesite describir una geometría compleja pero no desea la sobrecarga de admitir el enlace de datos, animaciones ni modificaciones. Por ejemplo, debido a su eficacia, la <xref:System.Windows.Media.StreamGeometry> clase es una buena elección para describir adornos.  
   
 ## <a name="example"></a>Ejemplo  

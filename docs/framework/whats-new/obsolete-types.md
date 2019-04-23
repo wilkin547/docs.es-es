@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412349"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59114700"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos en .NET Framework
 <a name="introduction"></a> En las tablas de este artículo se muestran los tipos que están obsoletos en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] organizados por ensamblados. Utilice los vínculos siguientes para ver una lista de tipos obsoletos y las alternativas recomendadas en cada ensamblado. Dado que estos tipos están en desuso, todos sus miembros también lo están. Para obtener una lista de miembros obsoletos adicionales de la biblioteca de clases de .NET Framework, vea [Miembros obsoletos](obsolete-members.md).
@@ -779,5 +779,6 @@ Para más información sobre la migración desde Visual Basic 6, vea [Centro de 
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll es un ensamblado obsoleto y solamente existe por compatibilidad con versiones anteriores.|
 
 ## <a name="see-also"></a>Vea también
+
 - [Lo obsoleto en la biblioteca de clases](whats-obsolete.md)
 - [Miembros obsoletos](obsolete-members.md)

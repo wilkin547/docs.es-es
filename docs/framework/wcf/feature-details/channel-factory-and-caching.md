@@ -3,10 +3,10 @@ title: Generador de canales y almacenamiento en memoria caché
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106462"
 ---
 # <a name="channel-factory-and-caching"></a>Generador de canales y almacenamiento en memoria caché
@@ -25,7 +25,7 @@ Las aplicaciones cliente de WCF usan la clase <xref:System.ServiceModel.ChannelF
 > [!TIP]
 >  Tiene el control directo sobre la creación del generador de canales cuando usa la clase <xref:System.ServiceModel.ChannelFactory%601> directamente.  
   
- Proxy de cliente WCF generados con [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) se derivan de <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> define una variable static <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> propiedad que define el comportamiento de almacenamiento en caché de fábrica de canales. Los valores de la memoria caché se crean para un tipo específico. Por ejemplo, si se establece `ClientBase<ITest>.CacheSettings` a uno de los valores definidos debajo afectará solo proxy/ClientBase de tipo `ITest`. La configuración de almacenamiento en memoria caché para un <xref:System.ServiceModel.ClientBase%601> determinado es inmutable en cuanto se crea la primera instancia de proxy/ClientBase.  
+ Proxy de cliente WCF generados con [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) se derivan de <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> define una propiedad <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> estática que define el comportamiento de almacenamiento en memoria caché del generador de canales. Los valores de la memoria caché se crean para un tipo específico. Por ejemplo, si se establece `ClientBase<ITest>.CacheSettings` a uno de los valores definidos debajo afectará solo proxy/ClientBase de tipo `ITest`. La configuración de almacenamiento en memoria caché para un <xref:System.ServiceModel.ClientBase%601> determinado es inmutable en cuanto se crea la primera instancia de proxy/ClientBase.  
   
 ## <a name="specifying-caching-behavior"></a>Especificar el comportamiento de almacenamiento en memoria caché  
  El comportamiento de almacenamiento en memoria caché se especifica estableciendo la propiedad <xref:System.ServiceModel.ClientBase%601.CacheSetting> en uno de los siguientes valores.  
@@ -117,4 +117,4 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
 - [Creación de clientes](../../../../docs/framework/wcf/building-clients.md)
 - [Clientes](../../../../docs/framework/wcf/feature-details/clients.md)
 - [Acceso a los servicios mediante un cliente WCF](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [Filtrar para usar ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Cómo: Uso de ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

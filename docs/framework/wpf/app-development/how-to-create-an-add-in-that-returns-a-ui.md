@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un complemento que devuelva una interfaz de usuario
+title: Procedimiento Crear un complemento que devuelva una interfaz de usuario
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
 ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115757"
 ---
-# <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Filtrar Crear un complemento que devuelva una interfaz de usuario
+# <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Procedimiento Crear un complemento que devuelva una interfaz de usuario
 En este ejemplo se muestra cómo crear un complemento que devuelve Windows Presentation Foundation (WPF) a un host de aplicación independiente de WPF.  
   
  El complemento devuelve una interfaz de usuario que es un control de usuario WPF. El contenido del control de usuario es un botón único que muestra un cuadro de mensaje cuando se hace clic en él. La aplicación de WPF independiente hospeda el complemento y muestra el control de usuario (devuelto por el complemento) como el contenido de la ventana principal de la aplicación.  

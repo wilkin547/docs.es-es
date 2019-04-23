@@ -1,5 +1,5 @@
 ---
-title: Filtrar para organizar controles con las guías de alineación y la cuadrícula en formularios Windows Forms
+title: Procedimiento para organizar controles con las guías de alineación y la cuadrícula en formularios Windows Forms
 ms.date: 03/30/2017
 f1_keywords:
 - GridSize
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
 ms.openlocfilehash: 122c20e7c3e48eaa4b4986ce2cb45411dae00723
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115748"
 ---
-# <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Filtrar para organizar controles con las guías de alineación y la cuadrícula en formularios Windows Forms
+# <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Procedimiento para organizar controles con las guías de alineación y la cuadrícula en formularios Windows Forms
 Uso de las características de diseño de Visual Studio, puede dirigir con precisión donde se colocan los controles en un formulario. Los controles que se agrega a un formulario o se desplaza en un formulario se pueden alinear automáticamente a las filas y columnas de cuadrícula del Diseñador de Windows Forms o alinear los controles mediante la característica de las guías de alineación.  
   
 > [!NOTE]
@@ -37,10 +37,10 @@ Uso de las características de diseño de Visual Studio, puede dirigir con preci
   
 ## <a name="see-also"></a>Vea también
 
-- [General, Diseñador de Windows Forms, Opciones (Cuadro de diálogo)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [Tutorial: Organizar controles en formularios Windows Forms mediante guías de alineación](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Controles de Windows Forms](index.md)
-- [Filtrar para agregar controles a formularios Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [General, Diseñador de formularios de Windows, cuadro de diálogo Opciones](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [Tutorial: Organizar controles en formularios de Windows Forms mediante líneas de ajuste](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Controles de formularios Windows Forms](index.md)
+- [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

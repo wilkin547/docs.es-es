@@ -5,10 +5,10 @@ ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f7b435c6050cbb73abab3cb5980632be55dd08d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118019"
 ---
 # <a name="mitigation-product-versioning"></a>Mitigación: control de versiones de producto
@@ -41,4 +41,4 @@ En [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] y versiones posteriores,
   
 ## <a name="see-also"></a>Vea también
 
-- [Cambios en tiempo de ejecución](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [Cambios en el runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

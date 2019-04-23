@@ -3,10 +3,10 @@ title: N niveles de LINQ to SQL con servicios Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
 ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107411"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N niveles de LINQ to SQL con servicios Web
@@ -30,7 +30,7 @@ ms.locfileid: "59107411"
  Al insertar datos, el nivel de presentación puede construir un nuevo objeto y enviarlo al nivel intermedio, o puede hacer que el nivel intermedio construya el objeto en función de los valores que proporciona. En general, la recuperación e inserción de datos en aplicaciones de n niveles no difiere mucho del proceso para aplicaciones de 2 niveles. Para obtener más información, consulte [consultar la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md) y [realización y envío de cambios de datos](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md).  
   
 ## <a name="tracking-changes-for-updates-and-deletes"></a>Seguimiento de cambios para actualizaciones y eliminaciones  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite simultaneidad optimista basada en marcas de tiempo (también denominadas RowVersions) y en los valores originales. Si las tablas de base de datos tienen marcas de tiempo, entonces las actualizaciones y eliminaciones requieren poco trabajo adicional en el nivel intermedio o en el nivel de presentación. Sin embargo, si debe utilizar valores originales para las comprobaciones de simultaneidad optimista, entonces el nivel de presentación es el responsable de realizar el seguimiento de esos valores y devolverlos cuando realiza las actualizaciones. Esto es debido a que en el nivel intermedio no se hace un seguimiento de los cambios que se realizan en entidades en el nivel de presentación. De hecho, la recuperación original de una entidad y su posible actualización se realizan generalmente mediante dos instancias completamente independientes de <xref:System.Data.Linq.DataContext>.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite simultaneidad optimista basada en marcas de tiempo (también denominadas RowVersions) y en valores originales. Si las tablas de base de datos tienen marcas de tiempo, entonces las actualizaciones y eliminaciones requieren poco trabajo adicional en el nivel intermedio o en el nivel de presentación. Sin embargo, si debe utilizar valores originales para las comprobaciones de simultaneidad optimista, entonces el nivel de presentación es el responsable de realizar el seguimiento de esos valores y devolverlos cuando realiza las actualizaciones. Esto es debido a que en el nivel intermedio no se hace un seguimiento de los cambios que se realizan en entidades en el nivel de presentación. De hecho, la recuperación original de una entidad y su posible actualización se realizan generalmente mediante dos instancias completamente independientes de <xref:System.Data.Linq.DataContext>.  
   
  Cuanto mayor es el número de cambios que realiza el nivel de presentación, más complejo se hace realizar el seguimiento de esos cambios y empaquetarlos de vuelta hacia el nivel intermedio. La implementación de un mecanismo para comunicar los cambios depende completamente de la aplicación. El único requisito es que se deben dar a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aquellos valores originales que se requieren para las comprobaciones de la simultaneidad optimista.  
   

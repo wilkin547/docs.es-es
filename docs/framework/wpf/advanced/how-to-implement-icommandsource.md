@@ -1,5 +1,5 @@
 ---
-title: Filtrar Implementar ICommandSource
+title: Procedimiento Implementar ICommandSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
 ms.openlocfilehash: 218a17f221598ac29213bd28a0f04adb16bc933b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107372"
 ---
-# <a name="how-to-implement-icommandsource"></a>Filtrar Implementar ICommandSource
+# <a name="how-to-implement-icommandsource"></a>Procedimiento Implementar ICommandSource
 En este ejemplo se muestra cómo crear un origen de comando implementando <xref:System.Windows.Input.ICommandSource>.  Un origen de comando es un objeto que sabe cómo invocar un comando.  El <xref:System.Windows.Input.ICommandSource> interfaz expone tres miembros: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, y <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> es el comando que se va a invocar. El <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> es un tipo de datos definido por el usuario que se pasa desde el origen del comando al método que controla el comando. El <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> es el objeto que se ejecuta el comando.  
   
  En este ejemplo, se crea una clase cuyas subclases el <xref:System.Windows.Controls.Slider> control e implementa <xref:System.Windows.Input.ICommandSource>.  

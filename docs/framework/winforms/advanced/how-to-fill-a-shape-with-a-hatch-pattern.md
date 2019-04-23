@@ -1,5 +1,5 @@
 ---
-title: Filtrar para rellenar una forma con un patrón de sombreado
+title: Procedimiento para rellenar una forma con un patrón de sombreado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
 ms.openlocfilehash: f5399c4151b335090f4b93be041375b8c2781afa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118123"
 ---
-# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Filtrar para rellenar una forma con un patrón de sombreado
+# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Procedimiento para rellenar una forma con un patrón de sombreado
 Un patrón de trama está formado por dos colores: uno para el fondo y otro para las líneas que forman el modelo sobre el fondo. Para rellenar una forma cerrada con un patrón de trama, utilice un <xref:System.Drawing.Drawing2D.HatchBrush> objeto. El ejemplo siguiente muestra cómo rellenar una elipse con un patrón de trama:  
   
 ## <a name="example"></a>Ejemplo  
@@ -42,7 +42,7 @@ Un patrón de trama está formado por dos colores: uno para el fondo y otro para
  [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
+ El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>.  
   
 ## <a name="see-also"></a>Vea también
 

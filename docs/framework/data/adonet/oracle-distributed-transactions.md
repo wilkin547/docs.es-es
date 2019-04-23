@@ -3,10 +3,10 @@ title: Transacciones distribuidas de Oracle
 ms.date: 03/30/2017
 ms.assetid: c340ca81-ef79-402f-b204-c5156b890fe5
 ms.openlocfilehash: 4af1c98818f1929850c5ae78892c64993a93d4d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116222"
 ---
 # <a name="oracle-distributed-transactions"></a>Transacciones distribuidas de Oracle
@@ -21,4 +21,4 @@ Enlist=false
 ## <a name="see-also"></a>Vea también
 
 - [Oracle y ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

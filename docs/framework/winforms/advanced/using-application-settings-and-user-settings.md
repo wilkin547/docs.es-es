@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
 ms.openlocfilehash: ea6994e653b3a06239634f5a0fddea84a07086e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107268"
 ---
 # <a name="using-application-settings-and-user-settings"></a>Utilizar valores de configuración de aplicación y de usuario
@@ -18,27 +18,27 @@ A partir de .NET Framework 2.0, puede crear y tener acceso a los valores que se 
  Los temas de esta sección describen cómo usar la configuración en tiempo de diseño y tiempo de ejecución.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo crear un valor de configuración en tiempo de diseño](how-to-create-a-new-setting-at-design-time.md)  
+ [Cómo: Crear una nueva configuración en tiempo de diseño](how-to-create-a-new-setting-at-design-time.md)  
   
  Explica cómo utilizar Visual Studio para crear una nueva configuración para una aplicación.  
   
- [Cómo cambiar el valor de una opción de configuración existente en tiempo de diseño](how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
+ [Cómo: Cambie el valor de una configuración existente en tiempo de diseño](how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
   
  Describe cómo usar Visual Studio para cambiar el valor de una configuración existente.  
   
- [Cómo cambiar el valor de una opción de configuración entre sesiones de aplicación](how-to-change-the-value-of-a-setting-between-application-sessions.md)  
+ [Cómo: Cambie el valor de una configuración entre sesiones de aplicación](how-to-change-the-value-of-a-setting-between-application-sessions.md)  
   
  Detalla cómo cambiar el valor de una configuración en una aplicación compilada entre sesiones de aplicación.  
   
- [Cómo leer valores de configuración en tiempo de ejecución con C#](how-to-read-settings-at-run-time-with-csharp.md)  
+ [Cómo: Leer la configuración en tiempo de ejecución conC#](how-to-read-settings-at-run-time-with-csharp.md)  
   
  Describe cómo usar código para leer la configuración con C#.  
   
- [Cómo escribir valores de configuración de usuario en tiempo de ejecución con C#](how-to-write-user-settings-at-run-time-with-csharp.md)  
+ [Cómo: Escribir la configuración de usuario en tiempo de ejecución conC#](how-to-write-user-settings-at-run-time-with-csharp.md)  
   
  Se explica cómo usar código para escribir y guardar los valores de configuración de usuario con C#.  
   
- [Cómo agregar varios conjuntos de valores de configuración a una aplicación en C#](how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
+ [Cómo: Agregar varios conjuntos de configuración a la aplicación enC#](how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
   
  Detalla cómo agregar varios conjuntos de configuración a una aplicación con C#.  
   

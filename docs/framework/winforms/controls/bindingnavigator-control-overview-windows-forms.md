@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
 ms.openlocfilehash: ad63f622aae55cb4175eddc93ab5e086965a8fe8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109114"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>Información general sobre el control BindingNavigator (formularios Windows Forms)
@@ -29,14 +29,14 @@ Puede usar el control <xref:System.Windows.Forms.BindingNavigator> para crear un
   
 |Control|Función|  
 |-------------|--------------|  
-|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> botón|Inserta una nueva fila en el origen de datos subyacente.|  
-|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> botón|Elimina la fila actual del origen de datos subyacente.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> botón|Se desplaza al primer elemento del origen de datos subyacente.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> botón|Se desplaza al último elemento del origen de datos subyacente.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> botón|Se desplaza al siguiente elemento del origen de datos subyacente.|  
-|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> botón|Se desplaza al elemento anterior del origen de datos subyacente.|  
-|<xref:System.Windows.Forms.BindingNavigator.PositionItem%2A> Cuadro de texto|Devuelve la posición actual dentro del origen de datos subyacente.|  
-|<xref:System.Windows.Forms.BindingNavigator.CountItem%2A> Cuadro de texto|Devuelve el número total de elementos en el origen de datos subyacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> Botón|Inserta una nueva fila en el origen de datos subyacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> Botón|Elimina la fila actual del origen de datos subyacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> Botón|Se desplaza al primer elemento del origen de datos subyacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> Botón|Se desplaza al último elemento del origen de datos subyacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> Botón|Se desplaza al siguiente elemento del origen de datos subyacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> Botón|Se desplaza al elemento anterior del origen de datos subyacente.|  
+|Cuadro de texto <xref:System.Windows.Forms.BindingNavigator.PositionItem%2A>|Devuelve la posición actual dentro del origen de datos subyacente.|  
+|Cuadro de texto <xref:System.Windows.Forms.BindingNavigator.CountItem%2A>|Devuelve el número total de elementos en el origen de datos subyacente.|  
   
  Para cada control de esta colección, hay un miembro correspondiente del componente <xref:System.Windows.Forms.BindingSource> que proporciona la misma funcionalidad de mediante programación. Por ejemplo, el botón <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> corresponde al método <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> del componente <xref:System.Windows.Forms.BindingSource>, el botón <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> corresponde al método <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>, y así sucesivamente.  
   
@@ -46,4 +46,4 @@ Puede usar el control <xref:System.Windows.Forms.BindingNavigator> para crear un
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
-- [Control BindingNavigator](bindingnavigator-control-windows-forms.md)
+- [BindingNavigator (control)](bindingnavigator-control-windows-forms.md)

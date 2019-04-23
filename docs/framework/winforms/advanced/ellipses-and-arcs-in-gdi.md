@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
 ms.openlocfilehash: 8bbc2eda6450128eac55576259880e83f07099ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117461"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>Elipses y arcos en GDI+
@@ -52,6 +52,6 @@ Dibujar elipses y arcos utilizando el <xref:System.Drawing.Graphics.DrawEllipse%
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Líneas, curvas y formas](lines-curves-and-shapes.md)
-- [Filtrar para crear objetos gráficos para dibujar](how-to-create-graphics-objects-for-drawing.md)
-- [Filtrar para crear un lápiz](how-to-create-a-pen.md)
-- [Filtrar para dibujar una forma con contorno](how-to-draw-an-outlined-shape.md)
+- [Cómo: Crear objetos Graphics para dibujar](how-to-create-graphics-objects-for-drawing.md)
+- [Cómo: Crear un lápiz](how-to-create-a-pen.md)
+- [Cómo: Dibujar una forma con contorno](how-to-draw-an-outlined-shape.md)

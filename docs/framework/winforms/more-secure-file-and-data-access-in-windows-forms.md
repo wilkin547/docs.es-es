@@ -14,10 +14,10 @@ helpviewer_keywords:
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
 ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115770"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Acceso más seguro a archivos y datos en formularios Windows Forms
@@ -133,7 +133,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  En Visual C#, asegúrese de agregar código para habilitar al controlador de eventos. Con el código del ejemplo anterior, el código siguiente muestra cómo habilitar al controlador de eventos.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  En Visual C#, asegúrese de agregar código para habilitar al controlador de eventos. Con el código del ejemplo anterior, el código siguiente muestra cómo habilitar el controlador de eventos.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Otros archivos  
  A veces, necesitará leer o escribir en archivos que no especifique el usuario, por ejemplo, para conservar la configuración de la aplicación. En las zonas de Internet y de la intranet local, la aplicación no tendrá permiso para almacenar datos en un archivo local. Sin embargo, la aplicación podrá almacenar datos en un almacenamiento aislado. El almacenamiento aislado es un compartimiento de datos abstracto (no una ubicación de almacenamiento concreta) que contiene uno o varios archivos de almacenamiento aislado, denominados “almacenes”, que contienen las ubicaciones reales de los directorios donde están almacenados los datos. No son necesarios los permisos de acceso de los archivos como <xref:System.Security.Permissions.FileIOPermission>, sino que la clase <xref:System.Security.Permissions.IsolatedStoragePermission> controla los permisos del almacenamiento aislado. De forma predeterminada, las aplicaciones que se ejecutan en las zonas de Internet y de la intranet local pueden almacenar datos con el almacenamiento aislado. Sin embargo, ciertas configuraciones, como la cuota de disco, pueden variar. Para obtener más información acerca del almacenamiento aislado, consulte [almacenamiento aislado](../../standard/io/isolated-storage.md).  
@@ -354,15 +354,15 @@ public void Write()
  Si no puede acceder directamente a una base de datos porque quiere que la aplicación se ejecute en confianza parcial, puede utilizar un servicio Web como un medio alternativo para acceder a los datos. Un servicio Web es un componente de software al que se puede acceder mediante programación a través de una red. Con los servicios Web, las aplicaciones pueden compartir datos entre las zonas del grupo de código. De forma predeterminada, a las aplicaciones de las zonas de Internet y de la intranet local se les concede el derecho de acceso a sus sitios de origen, lo que les permite llamar a un servicio Web hospedado en el mismo servidor. Para obtener más información, consulte [servicios Web en AJAX de ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) o [Windows Communication Foundation](../wcf/index.md).  
   
 ## <a name="registry-access"></a>Acceso al Registro  
- La clase <xref:System.Security.Permissions.RegistryPermission> controla el acceso al Registro del sistema operativo. De forma predeterminada, solo las aplicaciones que se ejecutan localmente pueden acceder al Registro.  <xref:System.Security.Permissions.RegistryPermission> solo concede el derecho de acceso al registro; a una aplicación no garantiza que se realizará correctamente el acceso, porque el sistema operativo impondrá la seguridad del registro.  
+ La clase <xref:System.Security.Permissions.RegistryPermission> controla el acceso al Registro del sistema operativo. De forma predeterminada, solo las aplicaciones que se ejecutan localmente pueden acceder al Registro.  <xref:System.Security.Permissions.RegistryPermission> solamente concede a una aplicación el derecho a probar el acceso al Registro. No garantiza que logre acceder porque, en cualquier caso, el sistema operativo impondrá la seguridad del Registro.  
   
  Dado que no puede acceder al Registro con confianza parcial, puede que tenga que dar con otros métodos para almacenar los datos. Al almacenar la configuración de la aplicación, utilice almacenamiento aislado en lugar del Registro. El almacenamiento aislado también puede utilizarse para almacenar otros archivos específicos de la aplicación. También puede almacenar información global de la aplicación sobre el servidor o el sitio de origen porque, de forma predeterminada, a las aplicaciones se les concede el derecho a acceder a su sitio de origen.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Impresión más segura en formularios Windows Forms](more-secure-printing-in-windows-forms.md)
-- [Consideraciones de seguridad adicionales en formularios Windows Forms](additional-security-considerations-in-windows-forms.md)
-- [Información general sobre la seguridad en formularios Windows Forms](security-in-windows-forms-overview.md)
-- [Seguridad en los formularios Windows Forms](windows-forms-security.md)
+- [Impresión más segura en Windows Forms](more-secure-printing-in-windows-forms.md)
+- [Consideraciones de seguridad adicionales en Windows Forms](additional-security-considerations-in-windows-forms.md)
+- [Información general sobre la seguridad en Windows Forms](security-in-windows-forms-overview.md)
+- [Windows Forms Security](windows-forms-security.md)
 - [Mage.exe (Herramienta de generación y edición de manifiestos)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
 - [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

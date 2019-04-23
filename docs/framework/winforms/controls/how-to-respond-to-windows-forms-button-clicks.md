@@ -1,5 +1,5 @@
 ---
-title: Filtrar para responder a clics de botones en formularios Windows Forms
+title: Procedimiento para responder a clics de botones en formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
 ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110076"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Filtrar para responder a clics de botones en formularios Windows Forms
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Procedimiento para responder a clics de botones en formularios Windows Forms
 El uso más básico de un formulario Windows Forms <xref:System.Windows.Forms.Button> control consiste en ejecutar código cuando se hace clic en el botón.  
   
  Al hacer clic en un <xref:System.Windows.Forms.Button> control también genera un número de otros eventos, como el <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, y <xref:System.Windows.Forms.Control.MouseUp> eventos. Si desea adjuntar controladores de eventos para estos eventos relacionados, asegúrese de que sus acciones no entren en conflicto. Por ejemplo, si hace clic en el botón se borra la información que el usuario ha escrito en un cuadro de texto, el pausando el puntero del mouse por encima del botón debe mostrar no herramientas con esa información ahora inexistente.  
@@ -59,4 +59,4 @@ El uso más básico de un formulario Windows Forms <xref:System.Windows.Forms.Bu
 
 - [Información general sobre el control Button](button-control-overview-windows-forms.md)
 - [Maneras de seleccionar un control Button de formularios Windows Forms](ways-to-select-a-windows-forms-button-control.md)
-- [Control Button](button-control-windows-forms.md)
+- [Botón (control)](button-control-windows-forms.md)

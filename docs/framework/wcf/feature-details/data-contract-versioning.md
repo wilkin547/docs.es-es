@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
 ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118032"
 ---
 # <a name="data-contract-versioning"></a>Versiones de contratos de datos
@@ -128,5 +128,5 @@ Naturalmente, cambiar el contrato de datos del contenido de una colección (por 
 - [Devoluciones de llamadas en la serialización tolerante a versiones](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
 - [Procedimientos recomendados: Versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
 - [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Equivalencia del contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Equivalencia de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Contratos de datos compatibles con el reenvío](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

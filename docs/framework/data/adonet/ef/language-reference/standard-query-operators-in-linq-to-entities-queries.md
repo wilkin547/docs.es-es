@@ -3,10 +3,10 @@ title: Operadores de consulta estándar en consultas de LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
 ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118149"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Operadores de consulta estándar en consultas de LINQ to Entities
@@ -69,7 +69,7 @@ En una consulta, se especifica la información que se desea recuperar del origen
 ## <a name="type-methods"></a>Métodos de tipos  
  Los dos métodos LINQ que se encargan de conversión de tipos y las pruebas se admiten en el contexto de Entity Framework. Esto significa que los únicos tipos admitidos son tipos que se asignan al tipo adecuado de Entity Framework. Para obtener una lista de estos tipos, vea [tipos de modelos conceptuales (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). Los métodos de tipos son `Convert` y `OfType`.  
   
- `OfType` se admite para tipos de entidad. `Convert` se admite para tipos primitivos del modelo conceptual.  Los métodos de C# `is` y `as` también se admiten.  
+ `OfType` se admite para los tipos de entidad. `Convert` se admite para los tipos primitivos de modelo conceptual.  Los métodos de C# `is` y `as` también se admiten.  
   
 ## <a name="paging-methods"></a>Métodos de paginación  
  Las operaciones de paginación devuelven un único elemento o varios elementos de una secuencia. Los métodos de paginación admitidos son `First`, `FirstOrDefault`, `Single`, `SingleOrDefault`, `Skip`, y `Take`.  

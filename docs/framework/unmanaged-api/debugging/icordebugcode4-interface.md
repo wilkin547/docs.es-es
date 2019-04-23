@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d23f588b46eb452b7670085249938f7d10cea1ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108184"
 ---
 # <a name="icordebugcode4-interface"></a>Interfaz ICorDebugCode4
@@ -30,7 +30,7 @@ Proporciona un método que permite a un depurador enumerar las variables locales
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método EnumerateVariableHomes](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md)|Obtiene un enumerador para los argumentos y variables locales en una función.|  
+|[EnumerateVariableHomes (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md)|Obtiene un enumerador para los argumentos y variables locales en una función.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -48,5 +48,5 @@ Proporciona un método que permite a un depurador enumerar las variables locales
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugCode3 (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugCode3 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

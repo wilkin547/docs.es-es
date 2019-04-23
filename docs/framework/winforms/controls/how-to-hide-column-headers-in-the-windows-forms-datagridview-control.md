@@ -1,5 +1,5 @@
 ---
-title: Filtrar para ocultar encabezados de columnas en el control DataGridView de formularios Windows Forms
+title: Procedimiento para ocultar encabezados de columnas en el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column headers
 ms.assetid: e4ad5f68-50d2-4b9e-93ee-9d622423a8ab
 ms.openlocfilehash: 85332bfdbb80e4c49bab1ff208228a88337fbb43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115250"
 ---
-# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Filtrar para ocultar encabezados de columnas en el control DataGridView de formularios Windows Forms
+# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Procedimiento para ocultar encabezados de columnas en el control DataGridView de formularios Windows Forms
 A veces querrá mostrar un <xref:System.Windows.Forms.DataGridView> sin encabezados de columna. En el <xref:System.Windows.Forms.DataGridView> (control), el <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> valor de propiedad determina si se muestran los encabezados de columna.  
   
 ### <a name="to-hide-the-column-headers"></a>Para ocultar los encabezados de columna  
@@ -37,4 +37,4 @@ A veces querrá mostrar un <xref:System.Windows.Forms.DataGridView> sin encabeza
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType>
-- [Características básicas de columnas, filas y celdas en el control DataGridView de formularios Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)

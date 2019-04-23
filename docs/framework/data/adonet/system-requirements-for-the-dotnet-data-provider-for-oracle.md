@@ -3,10 +3,10 @@ title: Requisitos del sistema para el proveedor de datos .NET Framework para Ora
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
 ms.openlocfilehash: 61f8509cce248f6cc0a56900227f9758eb27c4e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111052"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Requisitos del sistema para el proveedor de datos .NET Framework para Oracle
@@ -40,4 +40,4 @@ Unicode=True
 ## <a name="see-also"></a>Vea también
 
 - [Oracle y ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
 ms.openlocfilehash: a33cf4cd865921c04ef10c7fccf3a67c3d22de73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115679"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Tipos de columnas en el control DataGridView de formularios Windows Forms
@@ -90,7 +90,7 @@ El <xref:System.Windows.Forms.DataGridView> control usa varios tipos de columna 
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
-- [Control DataGridView](datagridview-control-windows-forms.md)
-- [Filtrar para mostrar imágenes en celdas del control DataGridView de formularios Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [Filtrar para trabajar con columnas de imágenes en el control DataGridView de formularios Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
-- [Personalizar el control DataGridView de formularios Windows Forms](customizing-the-windows-forms-datagridview-control.md)
+- [DataGridView (control)](datagridview-control-windows-forms.md)
+- [Cómo: Mostrar imágenes en celdas del Control DataGridView de formularios Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Cómo: Trabajar con columnas de imagen en el Control DataGridView de Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [Personalizar el control DataGridView de Windows Forms](customizing-the-windows-forms-datagridview-control.md)

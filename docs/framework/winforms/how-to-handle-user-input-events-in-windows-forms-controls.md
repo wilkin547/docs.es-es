@@ -1,5 +1,5 @@
 ---
-title: Filtrar para controlar eventos de entrada del usuario en controles de formularios Windows Forms
+title: Procedimiento para controlar eventos de entrada del usuario en controles de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - user input [Windows Forms], Windows Forms controls
 ms.assetid: 3de74dcf-fae3-42d0-92b5-bc04a61a6888
 ms.openlocfilehash: 5dc1997dffc53632ce8b36bc5fe89e768871fd0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108672"
 ---
-# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Filtrar para controlar eventos de entrada del usuario en controles de formularios Windows Forms
+# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Procedimiento para controlar eventos de entrada del usuario en controles de formularios Windows Forms
 En este ejemplo, se muestra cómo controlar la mayoría de los eventos de teclado, mouse, foco y validación que pueden producirse en un control de Windows Forms. El cuadro de texto denominado `TextBoxInput` recibe los eventos cuando tiene foco y la información sobre cada evento se escribe en el cuadro de texto denominado `TextBoxOutput` en el orden en que se producen los eventos. La aplicación también incluye un conjunto de casillas que puede utilizarse para filtrar los eventos de los que se quiere dar parte.  
   
 ## <a name="example"></a>Ejemplo  
@@ -33,4 +33,4 @@ En este ejemplo, se muestra cómo controlar la mayoría de los eventos de teclad
   
 ## <a name="see-also"></a>Vea también
 
-- [Datos proporcionados por el usuario en formularios Windows Forms](user-input-in-windows-forms.md)
+- [Datos proporcionados por el usuario en Windows Forms](user-input-in-windows-forms.md)

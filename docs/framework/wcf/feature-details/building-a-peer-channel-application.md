@@ -3,10 +3,10 @@ title: Creación de una aplicación de canal del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: a69a1b8f-8e15-45c5-87b8-bdb71e1c7ab8
 ms.openlocfilehash: b6f856eed1aa011bd21bcf01172e9322df70925b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108542"
 ---
 # <a name="building-a-peer-channel-application"></a>Creación de una aplicación de canal del mismo nivel
@@ -19,7 +19,7 @@ En las secciones siguientes se proporciona información orientativa para desarro
  [Limitación de la distribución de mensajes](../../../../docs/framework/wcf/feature-details/limiting-message-distribution.md)  
  Analiza el uso del número de saltos, de un filtro de propagación de mensajes, de un filtro local o de una conexión directa para controlar la forma en que los mensajes se reenvían a lo largo de la malla, y se proporcionan instrucciones de carácter general para elegir un enfoque.  
   
- [Cómo agregar el estado en línea y sin conexión](../../../../docs/framework/wcf/feature-details/adding-online-and-offline-status.md)  
+ [Adición del estado en línea y sin conexión](../../../../docs/framework/wcf/feature-details/adding-online-and-offline-status.md)  
  Describe cómo usar la interfaz <xref:System.ServiceModel.IOnlineStatus> para supervisar los detalles concretos sobre el estado en línea y sin conexión de una conexión de canal del mismo nivel.  
   
  [Protección de las aplicaciones de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  

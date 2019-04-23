@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
 ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110798"
 ---
 # <a name="the-linq-to-sql-object-model"></a>El modelo de objetos de LINQ to SQL
@@ -65,11 +65,11 @@ En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], un model
  Para obtener más información, vea la sección de atributo de asociación de [asignación basada en atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>Métodos y procedimientos almacenados de base de datos en LINQ to SQL  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite procedimientos almacenados y funciones definidas por el usuario. En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], asignar estas abstracciones definidas en la base de datos a los objetos de cliente para que se pueden acceder a ellas de manera fuertemente tipada desde código de cliente. Las firmas de método guardan la máxima similitud con las firmas de los procedimientos y funciones que se definen en la base de datos. Puede utilizar IntelliSense para detectar estos métodos.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite los procedimientos almacenados y las funciones definidas por el usuario. En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], asignar estas abstracciones definidas en la base de datos a los objetos de cliente para que se pueden acceder a ellas de manera fuertemente tipada desde código de cliente. Las firmas de método guardan la máxima similitud con las firmas de los procedimientos y funciones que se definen en la base de datos. Puede utilizar IntelliSense para detectar estos métodos.  
   
  Un conjunto de resultados devuelto por una llamada a un procedimiento asignado es una colección fuertemente tipada.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procedimientos almacenados y funciones se asigna a métodos mediante el uso de la <xref:System.Data.Linq.Mapping.FunctionAttribute> y <xref:System.Data.Linq.Mapping.ParameterAttribute> atributos. Los métodos que representan procedimientos almacenados se distinguen de los que representan funciones definidas por el usuario mediante la propiedad <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>. Si esta propiedad se establece en `false` (valor predeterminado), el método representa un procedimiento almacenado. Si se establece en `true`, el método representa una función de base de datos.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] asigna los procedimientos almacenados y las funciones a los métodos utilizando los atributos <xref:System.Data.Linq.Mapping.FunctionAttribute> y <xref:System.Data.Linq.Mapping.ParameterAttribute>. Los métodos que representan procedimientos almacenados se distinguen de los que representan funciones definidas por el usuario mediante la propiedad <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>. Si esta propiedad se establece en `false` (valor predeterminado), el método representa un procedimiento almacenado. Si se establece en `true`, el método representa una función de base de datos.  
   
 > [!NOTE]
 >  Si utiliza Visual Studio, puede usar el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para crear métodos asignados a procedimientos almacenados y funciones definidas por el usuario.  

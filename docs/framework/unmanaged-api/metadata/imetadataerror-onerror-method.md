@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 68fe41afa1999295a32b930b779991e2bbddb19a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117331"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError (Método)
@@ -54,4 +54,4 @@ HRESULT OnError (
   
 ## <a name="see-also"></a>Vea también
 
-- [IMetaDataError (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)
+- [IMetaDataError (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 509d75e1e94a82e6a91cd235ab079603c267c70f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113339"
 ---
 # <a name="inotifysource2-interface"></a>INotifySource2 (Interfaz)
@@ -30,13 +30,13 @@ Declara un método para establecer filtros de notificación.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|Asigna un filtro de notificación para su uso con este origen.|  
+|[SetNotifyFilter (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|Asigna un filtro de notificación para su uso con este origen.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado**: ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Vea también
 
-- [INotifyConnection2 (Interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [INotifySink2 (Interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [INotifyConnection2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [INotifySink2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [Interfaces de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

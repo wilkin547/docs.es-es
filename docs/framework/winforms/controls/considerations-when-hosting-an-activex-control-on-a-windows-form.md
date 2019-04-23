@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
 ms.openlocfilehash: babae31a3be9775d07ca84c54e1177d297cab5cf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108763"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Consideraciones al alojar un control ActiveX en Windows Forms
@@ -30,8 +30,8 @@ Aunque Windows Forms se han optimizado para hospedar controles de Windows Forms,
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para agregar controles ActiveX a formularios Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
+- [Cómo: Agregar controles ActiveX a formularios de Windows](how-to-add-activex-controls-to-windows-forms.md)
 - [Seguridad de acceso del código](../../misc/code-access-security.md)
 - [Comparación de los controles y objetos programables de distintos lenguajes y bibliotecas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
-- [Insertar controles en formularios Windows Forms](putting-controls-on-windows-forms.md)
-- [Controles de Windows Forms](index.md)
+- [Insertar controles en Windows Forms](putting-controls-on-windows-forms.md)
+- [Controles de formularios Windows Forms](index.md)

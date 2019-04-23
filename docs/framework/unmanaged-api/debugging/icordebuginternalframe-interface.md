@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f16b4628215bee2410708edeb337b41fbdc0311
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109829"
 ---
 # <a name="icordebuginternalframe-interface"></a>Interfaz ICorDebugInternalFrame
@@ -31,7 +31,7 @@ Representa un marco en la pila interna del tiempo de ejecución. Esta interfaz e
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|Obtiene el tipo de este marco interno.|  
+|[GetFrameType (método)](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|Obtiene el tipo de este marco interno.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -49,4 +49,4 @@ Representa un marco en la pila interna del tiempo de ejecución. Esta interfaz e
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

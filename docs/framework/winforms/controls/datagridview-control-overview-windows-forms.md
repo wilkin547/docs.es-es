@@ -20,10 +20,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
 ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112884"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>Información general del control DataGridView (Formularios Windows Forms)
@@ -66,22 +66,22 @@ ms.locfileid: "59112884"
  Proporciona vínculos a ejemplos de código en la documentación para distintos <xref:System.Windows.Forms.DataGridView> tareas. Estos ejemplos se dividen por categorías de tipo de tarea.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Tipos de columnas en el control DataGridView de formularios Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)  
+ [Tipos de columnas en el control DataGridView de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)  
  Describe los tipos de columna en los formularios de Windows <xref:System.Windows.Forms.DataGridView> control utilizado para mostrar información y permitir a los usuarios modificar o agregar información.  
   
- [Mostrar datos en el control DataGridView de formularios Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen cómo rellenar el control con datos manualmente o desde un origen de datos externo.  
   
- [Personalizar el control DataGridView de formularios Windows Forms](customizing-the-windows-forms-datagridview-control.md)  
+ [Personalizar el control DataGridView de Windows Forms](customizing-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen el dibujo personalizado de celdas y filas de <xref:System.Windows.Forms.DataGridView>, y la creación de tipos derivados de celda, columna y fila.  
   
- [Ajuste del rendimiento del control DataGridView en formularios Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Ajuste del rendimiento del control DataGridView en Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen cómo usar eficazmente el control para evitar problemas de rendimiento cuando se trabaja con grandes cantidades de datos.  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Control DataGridView](datagridview-control-windows-forms.md)
-- [Funcionalidad predeterminada en el control DataGridView de formularios Windows Forms](default-functionality-in-the-windows-forms-datagridview-control.md)
+- [DataGridView (control)](datagridview-control-windows-forms.md)
+- [Funcionalidad predeterminada en el control DataGridView de Windows Forms](default-functionality-in-the-windows-forms-datagridview-control.md)
 - [Control predeterminado de teclado y mouse en el control DataGridView de Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
