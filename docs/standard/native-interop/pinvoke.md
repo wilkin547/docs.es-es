@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo llamar a funciones nativas a trav�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1a5f2f9d13429f84d5b5bb58d36f015004fb746b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409242"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59517868"
 ---
 # <a name="platform-invoke-pinvoke"></a>Invocación de plataforma (P/Invoke)
 
@@ -24,7 +24,7 @@ public class Program {
 
     // Import user32.dll (containing the function we need) and define
     // the method corresponding to the native function.
-    [DllImport("user32.dll")]
+    [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern int MessageBox(IntPtr hWnd, String text, String caption, int options);
 
     public static void Main(string[] args) {
@@ -37,7 +37,7 @@ public class Program {
 El ejemplo anterior es simple, pero resalta lo que es necesario para invocar las funciones no administradas desde código administrado. Veamos en detalle el ejemplo:
 
 *   En la línea 1 se muestra el uso de la instrucción para el espacio de nombres `System.Runtime.InteropServices`, que es el espacio de nombres que contiene todos los elementos que necesitamos.
-*   En la línea 7 se introduce el atributo `DllImport`. Este atributo es fundamental, ya que le indica al tiempo de ejecución que debe cargar la DLL no administrada. La cadena que se pasa es la DLL en la que está nuestra función de destino.
+*   En la línea 7 se introduce el atributo `DllImport`. Este atributo es fundamental, ya que le indica al tiempo de ejecución que debe cargar la DLL no administrada. La cadena que se pasa es la DLL en la que está nuestra función de destino. Además, especifica qué [juego de caracteres](./charset.md) se usará para serializar las cadenas. Por último, especifica que esta función llama a [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) y que el runtime debe capturar ese código de error para que el usuario pueda recuperarlo a través de <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>.
 *   La línea 8 es la esencia del trabajo de P/Invoke. Define un método administrado que tiene **exactamente la misma firma** que el no administrado. Como puede ver, la declaración tiene una nueva palabra clave (`extern`) que le indica al tiempo de ejecución que esto es un método externo y que, cuando se invoca, el tiempo de ejecución debe buscarlo en el archivo DLL especificado en el atributo `DllImport`.
 
 El resto del ejemplo simplemente invoca el método como si se tratara de cualquier otro método administrado.
@@ -237,7 +237,6 @@ namespace PInvokeSamples {
 ```
 
 Los dos ejemplos anteriores dependen de parámetros y, en ambos casos, los parámetros se proporcionan como tipos administrados. El tiempo de ejecución hace "lo correcto" y los procesa en sus equivalentes en el otro lado. Obtenga información sobre cómo los tipos se serializan al código nativo en nuestra página en [Serialización de tipos](type-marshalling.md).
-
 
 ## <a name="more-resources"></a>Más recursos
 

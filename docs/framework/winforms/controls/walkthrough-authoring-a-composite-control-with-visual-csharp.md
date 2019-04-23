@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
 ms.openlocfilehash: 67fecb95ea373e88e5428251151cc30bfeb580a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321044"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Tutorial: Crear un Control compuesto con Visual c#\#
@@ -30,7 +30,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 2. En la lista de proyectos de Visual C#, seleccione el **biblioteca de controles de Windows Forms** plantilla de proyecto, escriba `ctlClockLib` en el **nombre** cuadro y, a continuación, haga clic en **Aceptar**.  
   
-     El nombre del proyecto, `ctlClockLib` también se asigna de forma predeterminada al espacio de nombres raíz. El espacio de nombres raíz se utiliza para calificar los nombres de los componentes del ensamblado. Por ejemplo, si dos ensamblados proporcionan componentes denominados `ctlClock`, puede especificar su `ctlClock` componente mediante `ctlClockLib.ctlClock.`  
+     El nombre del proyecto, `ctlClockLib` también se asigna de forma predeterminada al espacio de nombres raíz. El espacio de nombres raíz se utiliza para calificar los nombres de los componentes del ensamblado. Por ejemplo, si dos ensamblados proporcionan componentes denominados `ctlClock`, puede especificar su componente `ctlClock` mediante `ctlClockLib.ctlClock.`  
   
 3. En el Explorador de soluciones, haga clic con el botón derecho en **UserControl1.cs** y haga clic en **Cambiar nombre**. Cambie el nombre del archivo a `ctlClock.cs`. Haga clic en el botón **Sí** cuando se le pregunte si desea cambiar el nombre de todas las referencias al elemento de código "UserControl1".  
   
@@ -370,7 +370,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
     |`label1`|**Texto**|`(blank space)`|  
     ||**Name**|`lblTest`|  
     |`dateTimePicker1`|**Name**|`dtpTest`|  
-    ||**Formato**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
+    ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 10. En el diseñador, haga doble clic en **dtpTest**.  
   
@@ -407,5 +407,5 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
 ## <a name="see-also"></a>Vea también
 
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
-- [Filtrar para mostrar un control en el cuadro de diálogo Elegir elementos del cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Tutorial: Heredar de un control de formularios Windows Forms con Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Cómo: Mostrar un Control en la elija el cuadro de diálogo de elementos de cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Tutorial: Heredar de un Control de Windows Forms con VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Consultar una base de datos usando LINQ (Visual Basic)
+title: Procedimiento Consultar una base de datos usando LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query samples [LINQ]
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 ms.assetid: bcf5e9c3-a236-4399-9a7f-3991eca7cf56
 ms.openlocfilehash: 3fa4434ed43e41959d6ebd3521bb1eecd041c9ab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326117"
 ---
-# <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>Filtrar Consultar una base de datos usando LINQ (Visual Basic)
+# <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>Procedimiento Consultar una base de datos usando LINQ (Visual Basic)
 Language-Integrated Query (LINQ) facilita el acceso a la información de la base de datos y ejecutar consultas.  
   
  El ejemplo siguiente muestra cómo crear una nueva aplicación que realiza consultas en una base de datos de SQL Server.  
@@ -81,4 +81,4 @@ Language-Integrated Query (LINQ) facilita el acceso a la información de la base
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
-- [DataContext (Métodos) (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [Métodos DataContext (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

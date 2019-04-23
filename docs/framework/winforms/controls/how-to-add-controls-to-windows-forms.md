@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agregar controles a formularios Windows Forms
+title: Procedimiento para agregar controles a formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
 ms.openlocfilehash: 04597283a8ff2e21a0f227268671d3605eac6356
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343595"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>Filtrar para agregar controles a formularios Windows Forms
+# <a name="how-to-add-controls-to-windows-forms"></a>Procedimiento para agregar controles a formularios Windows Forms
 Mayoría de los formularios está diseñada agregando controles a la superficie del formulario para definir una interfaz de usuario (UI). Un *control* es un componente en un formulario que se usa para mostrar información o Aceptar la entrada del usuario. Para obtener más información acerca de los controles, vea [controles de formularios Windows Forms](index.md).  
   
 > [!NOTE]
@@ -91,8 +91,8 @@ Mayoría de los formularios está diseñada agregando controles a la superficie 
   
 ## <a name="see-also"></a>Vea también
 
-- [Controles de Windows Forms](index.md)
+- [Controles de formularios Windows Forms](index.md)
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
-- [Filtrar para cambiar el tamaño de los controles en formularios Windows Forms](how-to-resize-controls-on-windows-forms.md)
-- [Filtrar para establecer el texto mostrado por un control de formularios Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Cómo: Cambiar el tamaño de los controles de Windows Forms](how-to-resize-controls-on-windows-forms.md)
+- [Cómo: Establecer el texto mostrado por un Windows Forms Control](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

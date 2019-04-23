@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar los cambios de tamaño mediante fotogramas clave
+title: Procedimiento Animar los cambios de tamaño mediante fotogramas clave
 ms.date: 03/30/2017
 helpviewer_keywords:
 - key frames [WPF], animating size changes with
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
 ms.openlocfilehash: 0629b6600444bd172af451fd7e970bff894d8047
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342373"
 ---
-# <a name="how-to-animate-size-changes-by-using-key-frames"></a>Filtrar Animar los cambios de tamaño mediante fotogramas clave
+# <a name="how-to-animate-size-changes-by-using-key-frames"></a>Procedimiento Animar los cambios de tamaño mediante fotogramas clave
 En este ejemplo se muestra cómo animar los cambios del tamaño mediante fotogramas clave.  
   
 ## <a name="example"></a>Ejemplo  

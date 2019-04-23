@@ -1,5 +1,5 @@
 ---
-title: Filtrar Adjuntar una entidad existente a DataServiceContext (WCF Data Services)
+title: Procedimiento Adjuntar una entidad existente a DataServiceContext (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: e3f2d71d-434c-4e98-91c3-95adae4702b6
 ms.openlocfilehash: 511a9bc5352e208697460364e463330fc0ef611a
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517478"
 ---
-# <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>Filtrar Adjuntar una entidad existente a DataServiceContext (WCF Data Services)
+# <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>Procedimiento Adjuntar una entidad existente a DataServiceContext (WCF Data Services)
 Cuando una entidad ya existe en un servicio de datos, el [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente le permite adjuntar un objeto que representa la entidad directamente en el <xref:System.Data.Services.Client.DataServiceContext> sin ejecutar primero una consulta. Para obtener más información, consulte [actualizar el servicio de datos](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean cuando se completa la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
 ms.openlocfilehash: ff9a0edb44a95f5853edf711e0a1559e3b2e3b15
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342475"
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>Tutorial: Trabajar con el control MaskedTextBox
@@ -127,4 +127,4 @@ Las tareas ilustradas en este tutorial incluyen:
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.MaskedTextBox>
-- [Control MaskedTextBox](maskedtextbox-control-windows-forms.md)
+- [MaskedTextBox (control)](maskedtextbox-control-windows-forms.md)

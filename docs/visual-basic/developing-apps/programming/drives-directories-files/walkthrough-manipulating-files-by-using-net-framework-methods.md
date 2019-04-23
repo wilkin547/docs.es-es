@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 2361a42ececbe12b5f61833e5a40607c8215a65d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f3fecf521ca4a9397bacffbb084c4107af97f5b2
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821067"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59345279"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Tutorial: Manipular archivos utilizando métodos de .NET Framework (Visual Basic)
 En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xref:System.IO.StreamReader>, comprobar si se ha tenido acceso a un archivo, buscar una cadena dentro de un archivo leído con una instancia de la clase <xref:System.IO.StreamReader> y escribir en un archivo mediante la clase <xref:System.IO.StreamWriter>.  
@@ -32,15 +32,15 @@ En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xre
   
 #### <a name="to-create-the-project"></a>Para crear el proyecto  
   
-1.  En el menú **Archivo**, seleccione **Nuevo proyecto**.  
+1. En el menú **Archivo**, seleccione **Nuevo proyecto**.  
   
-2.  En el panel **Nuevo proyecto**, haga clic en **Aplicación Windows**.  
+2. En el panel **Nuevo proyecto**, haga clic en **Aplicación Windows**.  
   
-3.  En el cuadro **Nombre**, escriba `MyDiary` y haga clic en **Aceptar**.  
+3. En el cuadro **Nombre**, escriba `MyDiary` y haga clic en **Aceptar**.  
   
      Visual Studio agrega el proyecto al **Explorador de soluciones** y se abre el **Diseñador de Windows Forms**.  
   
-4.  Agregue los controles de la siguiente tabla al formulario y establezca los valores correspondientes para sus propiedades.  
+4. Agregue los controles de la siguiente tabla al formulario y establezca los valores correspondientes para sus propiedades.  
   
 |**Objeto**|**Propiedades**|**Valor**|  
 |---|---|---|   
@@ -53,34 +53,34 @@ En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xre
   
 #### <a name="to-add-writing-functionality"></a>Para agregar funcionalidad de escritura  
   
-1.  En el menú **Vista**, seleccione **Código** para abrir el Editor de código.  
+1. En el menú **Vista**, seleccione **Código** para abrir el Editor de código.  
   
-2.  Dado que la aplicación hace referencia al espacio de nombres <xref:System.IO>, agregue las instrucciones siguientes al principio del código, antes de la declaración de clase del formulario, que empieza con `Public Class Form1`.  
+2. Dado que la aplicación hace referencia al espacio de nombres <xref:System.IO>, agregue las instrucciones siguientes al principio del código, antes de la declaración de clase del formulario, que empieza con `Public Class Form1`.  
   
      [!code-vb[VbVbcnMyFileSystem#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#35)]  
   
      Antes de escribir en el archivo, debe crear una instancia de una clase <xref:System.IO.StreamWriter>.  
   
-3.  En el menú **Vista**, seleccione **Diseñador** para volver al **Diseñador de Windows Forms**. Haga doble clic en el botón `Submit` para crear un controlador de eventos <xref:System.Windows.Forms.Control.Click> para el botón y, después, agregue el código siguiente.  
+3. En el menú **Vista**, seleccione **Diseñador** para volver al **Diseñador de Windows Forms**. Haga doble clic en el botón `Submit` para crear un controlador de eventos <xref:System.Windows.Forms.Control.Click> para el botón y, después, agregue el código siguiente.  
   
      [!code-vb[VbVbcnMyFileSystem#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#36)]  
   
 > [!NOTE]
 >  El entorno de desarrollo integrado (IDE) de Visual Studio volverá al Editor de código y colocará el punto de inserción en el controlador de eventos donde debe agregar el código.  
   
-1.  Para escribir en el archivo, use el método <xref:System.IO.StreamWriter.Write%2A> de la clase <xref:System.IO.StreamWriter>. Agregue el código siguiente justo después de `Dim fw As StreamWriter`. No se preocupe si se produce una excepción porque no se encuentra el archivo, ya que se creará en caso de que todavía no exista.  
+1. Para escribir en el archivo, use el método <xref:System.IO.StreamWriter.Write%2A> de la clase <xref:System.IO.StreamWriter>. Agregue el código siguiente justo después de `Dim fw As StreamWriter`. No se preocupe si se produce una excepción porque no se encuentra el archivo, ya que se creará en caso de que todavía no exista.  
   
      [!code-vb[VbVbcnMyFileSystem#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#37)]  
   
-2.  Asegúrese de que el usuario no puede enviar una entrada en blanco mediante la adición del código siguiente justo después de `Dim ReadString As String`.  
+2. Asegúrese de que el usuario no puede enviar una entrada en blanco mediante la adición del código siguiente justo después de `Dim ReadString As String`.  
   
      [!code-vb[VbVbcnMyFileSystem#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#38)]  
   
-3.  Como se trata de una agenda, el usuario querrá asignar una fecha a cada entrada. Inserte el siguiente código después de `fw = New StreamWriter("C:\MyDiary.txt", True)` para establecer la variable `Today` en la fecha actual.  
+3. Como se trata de una agenda, el usuario querrá asignar una fecha a cada entrada. Inserte el siguiente código después de `fw = New StreamWriter("C:\MyDiary.txt", True)` para establecer la variable `Today` en la fecha actual.  
   
      [!code-vb[VbVbcnMyFileSystem#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#39)]  
   
-4.  Por último, adjunte el código para borrar <xref:System.Windows.Forms.TextBox>. Agregue el código siguiente al evento <xref:System.Windows.Forms.Control.Click> del botón `Clear`.  
+4. Por último, adjunte el código para borrar <xref:System.Windows.Forms.TextBox>. Agregue el código siguiente al evento <xref:System.Windows.Forms.Control.Click> del botón `Clear`.  
   
      [!code-vb[VbVbcnMyFileSystem#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#40)]  
   
@@ -98,19 +98,19 @@ En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xre
   
 #### <a name="to-populate-the-combo-box"></a>Para rellenar el cuadro combinado  
   
-1.  El control `PickEntries`<xref:System.Windows.Forms.ComboBox> se usa para mostrar las fechas en las que el usuario envía cada entrada, de modo que el usuario pueda seleccionar una entrada de una fecha concreta. Cree un controlador de eventos <xref:System.Windows.Forms.Control.Click> para el botón `GetEntries` y agréguele el siguiente código.  
+1. El control `PickEntries`<xref:System.Windows.Forms.ComboBox> se usa para mostrar las fechas en las que el usuario envía cada entrada, de modo que el usuario pueda seleccionar una entrada de una fecha concreta. Cree un controlador de eventos <xref:System.Windows.Forms.Control.Click> para el botón `GetEntries` y agréguele el siguiente código.  
   
      [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]  
   
-2.  Para probar el código, presione F5 para compilar la aplicación y, después, haga clic en **Obtener entradas**. Haga clic en la flecha desplegable en <xref:System.Windows.Forms.ComboBox> para mostrar las flechas de entrada.  
+2. Para probar el código, presione F5 para compilar la aplicación y, después, haga clic en **Obtener entradas**. Haga clic en la flecha desplegable en <xref:System.Windows.Forms.ComboBox> para mostrar las flechas de entrada.  
   
 #### <a name="to-choose-and-display-individual-entries"></a>Para seleccionar y mostrar entradas individuales  
   
-1.  Cree un controlador de eventos <xref:System.Windows.Forms.Control.Click> para el botón `Display` y agregue el código siguiente.  
+1. Cree un controlador de eventos <xref:System.Windows.Forms.Control.Click> para el botón `Display` y agregue el código siguiente.  
   
      [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]  
   
-2.  Para probar el código, pulse F5 para compilar la aplicación y, después, envíe una entrada. Haga clic en **Obtener entradas**, seleccione una entrada de <xref:System.Windows.Forms.ComboBox> y, después, haga clic en **Mostrar**. El contenido de la entrada seleccionada aparece en `DisplayEntry`<xref:System.Windows.Forms.TextBox>.  
+2. Para probar el código, pulse F5 para compilar la aplicación y, después, envíe una entrada. Haga clic en **Obtener entradas**, seleccione una entrada de <xref:System.Windows.Forms.ComboBox> y, después, haga clic en **Mostrar**. El contenido de la entrada seleccionada aparece en `DisplayEntry`<xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="enabling-users-to-delete-or-modify-entries"></a>Permitir que los usuarios eliminen o modifiquen entradas  
  Por último, puede incluir funcionalidad adicional para permitir que los usuarios eliminen o modifiquen una entrada mediante los botones `DeleteEntry` y `EditEntry`. Ambos botones permanecen deshabilitados a menos que se muestre una entrada.  
@@ -125,23 +125,23 @@ En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xre
   
 #### <a name="to-enable-deletion-and-modification-of-entries"></a>Para habilitar la eliminación y la modificación de entradas  
   
-1.  Agregue el código siguiente al evento <xref:System.Windows.Forms.Control.Click> del botón `Display`, después de `DisplayEntry.Text = ReadString`.  
+1. Agregue el código siguiente al evento <xref:System.Windows.Forms.Control.Click> del botón `Display`, después de `DisplayEntry.Text = ReadString`.  
   
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]  
   
-2.  Cree un controlador de eventos <xref:System.Windows.Forms.Control.Click> para el botón `DeleteEntry` y agregue el código siguiente.  
+2. Cree un controlador de eventos <xref:System.Windows.Forms.Control.Click> para el botón `DeleteEntry` y agregue el código siguiente.  
   
      [!code-vb[VbVbcnMyFileSystem#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#44)]  
   
-3.  Cuando un usuario muestra una entrada, se habilita el botón `EditEntry`. Agregue el código siguiente al evento <xref:System.Windows.Forms.Control.Click> del botón `Display` después de `DisplayEntry.Text = ReadString`.  
+3. Cuando un usuario muestra una entrada, se habilita el botón `EditEntry`. Agregue el código siguiente al evento <xref:System.Windows.Forms.Control.Click> del botón `Display` después de `DisplayEntry.Text = ReadString`.  
   
      [!code-vb[VbVbcnMyFileSystem#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#45)]  
   
-4.  Cree un controlador de eventos <xref:System.Windows.Forms.Control.Click> para el botón `EditEntry` y agregue el código siguiente.  
+4. Cree un controlador de eventos <xref:System.Windows.Forms.Control.Click> para el botón `EditEntry` y agregue el código siguiente.  
   
      [!code-vb[VbVbcnMyFileSystem#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#46)]  
   
-5.  Cree un controlador de eventos <xref:System.Windows.Forms.Control.Click> para el botón `SubmitEdit` y agregue el código siguiente.  
+5. Cree un controlador de eventos <xref:System.Windows.Forms.Control.Click> para el botón `SubmitEdit` y agregue el código siguiente.  
   
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]  
   

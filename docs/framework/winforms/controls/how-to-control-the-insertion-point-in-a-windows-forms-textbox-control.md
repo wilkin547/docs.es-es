@@ -1,5 +1,5 @@
 ---
-title: Filtrar para controlar el punto de inserción en un control TextBox de formularios Windows Forms
+title: Procedimiento para controlar el punto de inserción en un control TextBox de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
 ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341327"
 ---
-# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Filtrar para controlar el punto de inserción en un control TextBox de formularios Windows Forms
+# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Procedimiento para controlar el punto de inserción en un control TextBox de formularios Windows Forms
 Cuando un formulario Windows Forms <xref:System.Windows.Forms.TextBox> control recibe el foco por primera vez, es el punto de inserción predeterminado del cuadro de texto a la izquierda del texto existente. El usuario puede mover el punto de inserción con el teclado o el mouse. Si el cuadro de texto pierde y, a continuación, vuelva a obtener el foco, el punto de inserción será siempre que el usuario dejó.  
   
  En algunos casos, este comportamiento puede resultar desconcertante para el usuario. Aplicación de procesamiento de una palabra, el usuario podría esperar que los caracteres aparecen después del texto existente. En una aplicación de entrada de datos, el usuario podría esperar que los caracteres para reemplazar cualquier entrada existente. El <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> y <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> propiedades le permiten modificar el comportamiento para adaptarlo a su propósito.  
@@ -65,9 +65,9 @@ Cuando un formulario Windows Forms <xref:System.Windows.Forms.TextBox> control r
 
 - <xref:System.Windows.Forms.TextBox>
 - [Información general sobre el control TextBox](textbox-control-overview-windows-forms.md)
-- [Filtrar para crear un cuadro de texto de contraseña con el control TextBox de formularios Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Filtrar para crear un cuadro de texto de solo lectura](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Filtrar para insertar comillas en una cadena](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Filtrar para seleccionar texto en el control TextBox de formularios Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Filtrar para ver varias líneas en el control TextBox de formularios Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Cómo: Crear un cuadro de texto de contraseña con el Control TextBox de Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Cómo: Crear un cuadro de texto de solo lectura](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Cómo: Insertar comillas en una cadena](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Cómo: Seleccionar texto en el Control TextBox de Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Cómo: Ver múltiples líneas en el Control TextBox de Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Control TextBox](textbox-control-windows-forms.md)

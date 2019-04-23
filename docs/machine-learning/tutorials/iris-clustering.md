@@ -3,22 +3,22 @@ title: 'Agrupación de flores de iris mediante un aprendiz de agrupación en cl�
 description: Obtenga información sobre cómo usar ML.NET en un escenario de agrupación en clústeres
 author: pkulikov
 ms.author: johalex
-ms.date: 03/18/2019
+ms.date: 04/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: be59760091767b7229d80693cd69434581a8b140
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 86eba0c7a3eaeed008d41ff950bf2fd7e0e5fb57
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634419"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481345"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutorial: Agrupación de flores de iris mediante un aprendiz de agrupación en clústeres con ML.NET
 
 > [!NOTE]
 > Este tema hace referencia a ML.NET, que se encuentra actualmente en versión preliminar, por lo que el material está sujeto a cambios. Para obtener más información, vea [la introducción de ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Este tutorial y el ejemplo relacionado usan actualmente **ML.NET en su versión 0.11**. Para obtener más información, consulte las notas de la versión en el [repositorio de GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
+En este tutorial y en el ejemplo relacionado actualmente se usa **ML.NET 1.0 RC (versión candidata para lanzamiento) (versión `1.0.0-preview`)**. Para obtener más información, consulte las notas de la versión en el [repositorio de GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 En este tutorial se muestra cómo usar ML.NET para crear un [modelo de agrupación en clústeres](../resources/tasks.md#clustering) para el [conjunto de datos de flores de iris](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 
@@ -34,7 +34,7 @@ En este tutorial aprenderá a:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Visual Studio 2017 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
+- [Visual Studio 2017 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
 
 ## <a name="understand-the-problem"></a>Entender el problema
 
@@ -127,16 +127,16 @@ La clase <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> representa e
 
 Agregue el código siguiente al método `Main` para configurar la manera de cargar los datos:
 
-[!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
+[!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 
-Cargue los datos mediante el contenedor `MLContext.Data.LoadFromTextFile` genérico para el [método LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Devuelve un <xref:Microsoft.Data.DataView.IDataView>, que deduce el esquema del conjunto de datos a partir del tipo de modelo de datos `IrisData`, usa el encabezado del conjunto de datos y está separado mediante una coma.
+El [`MLContext.Data.LoadFromTextFile` método de extensión](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) genérico deduce el esquema del conjunto de datos del tipo `IrisData` proporcionado y devuelve <xref:Microsoft.ML.IDataView>, que se puede usar como entrada para los transformadores.
 
 ## <a name="create-a-learning-pipeline"></a>Crear una canalización de aprendizaje
 
 Para este tutorial, la canalización de aprendizaje de la tarea de agrupación en clústeres consta de los dos pasos siguientes:
 
 - concatenar las columnas cargadas en una columna **Características**, que usa un instructor de agrupación en clústeres;
-- usar un instructor <xref:Microsoft.ML.Trainers.KMeansPlusPlusTrainer> para entrenar el modelo mediante el algoritmo de agrupación en clústeres k-means++.
+- usar un instructor <xref:Microsoft.ML.Trainers.KMeansTrainer> para entrenar el modelo mediante el algoritmo de agrupación en clústeres k-means++.
 
 Agregue el código siguiente al método `Main`:
 
@@ -201,4 +201,4 @@ En este tutorial ha aprendido a:
 
 Visite nuestro repositorio de GitHub para obtener más información y encontrar más ejemplos.
 > [!div class="nextstepaction"]
-> [Repositorio de GitHub de dotnet/machinelearning](https://github.com/dotnet/machinelearning/)
+> [Repositorio dotnet/machinelearning de GitHub](https://github.com/dotnet/machinelearning/)

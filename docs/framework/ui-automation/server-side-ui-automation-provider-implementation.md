@@ -7,10 +7,10 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 ms.openlocfilehash: 3b3e69d1c52b98822a4cf3b75de74466e1dc68f0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320064"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementación del proveedor de UI Automation en el servidor
@@ -19,7 +19,7 @@ ms.locfileid: "59320064"
   
  En esta sección se describe cómo implementar un proveedor de automatización de la interfaz de usuario del lado servidor para un control personalizado.  
   
- La implementación para los elementos de Windows Presentation Foundation (WPF) y no-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elementos (como los diseñados para [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) es fundamentalmente diferente. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elementos proporcionan compatibilidad para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] a través de una clase derivada de <xref:System.Windows.Automation.Peers.AutomationPeer>. Los elementos que no son de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] lo consiguen a través de implementaciones de interfaces de proveedor.  
+ La implementación para los elementos de Windows Presentation Foundation (WPF) y no-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elementos (como los diseñados para [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) es fundamentalmente diferente. Los elementos de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] son compatibles con la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gracias a una clase derivada de <xref:System.Windows.Automation.Peers.AutomationPeer>. Los elementos que no son de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] lo consiguen a través de implementaciones de interfaces de proveedor.  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>Consideraciones de seguridad  
@@ -77,7 +77,7 @@ ms.locfileid: "59320064"
   
 <a name="Property_Values_in_Non_WPF_Providers"></a>   
 ### <a name="property-values-in-non-wpf-providers"></a>Valores de propiedad de los proveedores que no son de WPF  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] proveedores de controles personalizados deben admitir ciertas propiedades que se pueden usar el sistema de automatización, así como las aplicaciones cliente. Para los elementos que se hospedan en ventanas (HWND), [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] puede recuperar algunas propiedades del proveedor de ventana predeterminado, pero debe obtener otras del proveedor personalizado.  
+ En lo que respecta a los controles personalizados, los proveedores de[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] deben ofrecer compatibilidad con ciertas propiedades que pueden usar tanto el sistema de automatización como las aplicaciones cliente. Para los elementos que se hospedan en ventanas (HWND), [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] puede recuperar algunas propiedades del proveedor de ventana predeterminado, pero debe obtener otras del proveedor personalizado.  
   
  Por lo general, en lo que respecta a los controles basados en HWND, los proveedores no necesitan proporcionar las propiedades siguientes (identificadas por los valores de campo):  
   
@@ -112,7 +112,7 @@ ms.locfileid: "59320064"
   
 <a name="Events_in_Non_WPF_Providers"></a>   
 ### <a name="events-in-non-wpf-providers"></a>Eventos de proveedores que no son de WPF  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] los proveedores deben provocar eventos para notificar a las aplicaciones cliente los cambios en el estado de la interfaz de usuario. Para generar eventos, se usan los métodos siguientes:  
+ Los proveedores de[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] deben generar eventos para notificar a las aplicaciones cliente los cambios en el estado de la interfaz de usuario. Para generar eventos, se usan los métodos siguientes:  
   
 |Método|Descripción|  
 |------------|-----------------|  
@@ -144,7 +144,7 @@ ms.locfileid: "59320064"
   
 <a name="Non_WPF_Provider_Reparenting"></a>   
 ### <a name="non-wpf-provider-reparenting"></a>Reorganización dinámica de relación jerárquica de proveedores que no son de WPF  
- Las ventanas emergentes son en realidad ventanas de nivel superior. Por ello, aparecen de forma predeterminada en el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] como elementos secundarios del escritorio. No obstante, en muchos casos, las ventanas emergentes son, lógicamente, elementos secundarios de otros controles. Por ejemplo, la lista desplegable de un cuadro combinado es, lógicamente, un elemento secundario de dicho cuadro. De forma similar, una ventana emergente de menú es, lógicamente, un elemento secundario de un menú. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] proporciona compatibilidad para cambiar el valor primario de las ventanas emergentes para que aparezcan elementos secundarios del control asociado.  
+ Las ventanas emergentes son en realidad ventanas de nivel superior. Por ello, aparecen de forma predeterminada en el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] como elementos secundarios del escritorio. No obstante, en muchos casos, las ventanas emergentes son, lógicamente, elementos secundarios de otros controles. Por ejemplo, la lista desplegable de un cuadro combinado es, lógicamente, un elemento secundario de dicho cuadro. De forma similar, una ventana emergente de menú es, lógicamente, un elemento secundario de un menú. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permite reorganizar de forma dinámica la relación jerárquica de las ventanas emergentes para que parezcan elementos secundarios del control asociado.  
   
  Para reorganizar de forma dinámica la relación jerárquica de una ventana emergente:  
   
@@ -162,7 +162,7 @@ ms.locfileid: "59320064"
   
 <a name="Non_WPF_Provider_Repositioning"></a>   
 ### <a name="non-wpf-provider-repositioning"></a>Reordenación de proveedores que no son de WPF  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] los fragmentos pueden contener dos o más elementos contenidos en una ventana (HWND). Dado que cada HWND tiene su propio proveedor predeterminado que lo considera como elemento secundario de otro HWND contenedor, el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mostrará, de forma predeterminada, los HWND del fragmento como elementos secundarios de la ventana primaria. En la mayoría de los casos este sería el comportamiento deseable, pero a veces puede llevar a confusión porque no coincide con la estructura lógica de la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ Los fragmentos de[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pueden contener dos o más elementos, contenidos todos ellos en ventanas (HWND). Dado que cada HWND tiene su propio proveedor predeterminado que lo considera como elemento secundario de otro HWND contenedor, el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mostrará, de forma predeterminada, los HWND del fragmento como elementos secundarios de la ventana primaria. En la mayoría de los casos este sería el comportamiento deseable, pero a veces puede llevar a confusión porque no coincide con la estructura lógica de la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
  Un buen ejemplo de esto lo constituye un control rebar. Un rebar contiene bandas, cada una de las cuales puede incluir a su vez un control basado en HWND, como una barra de herramientas, un cuadro de edición o un cuadro combinado. El proveedor de ventana predeterminado del HWND de rebar considera los HWND del control de banda como elementos secundarios, y el proveedor de rebar considera las bandas como elementos secundarios. Dado que los proveedores de HWND y rebar trabajan en tándem y combinan sus elementos secundarios, tanto las bandas como los controles basados en HWND aparecen como elementos secundarios del rebar. Sin embargo, lógicamente, solo deberían aparecer las bandas como elementos secundarios del rebar, y cada proveedor de banda debería acoplarse con el proveedor de HWND predeterminado para el control que contiene.  
   
@@ -170,9 +170,9 @@ ms.locfileid: "59320064"
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre proveedores de UI Automation](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Exponer un proveedor de UI Automation en el servidor](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
-- [Devolución de propiedades por parte de un proveedor de UI Automation](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [Provocar eventos desde un proveedor de UI Automation](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
-- [Habilitar la navegación en un proveedor de fragmentos de UI Automation](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
-- [Patrones de control compatibles en un proveedor de UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Información general sobre proveedores de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [Exposición de un proveedor de Automatización de la interfaz de usuario en el servidor](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
+- [Devolución de propiedades de un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [Provocación de eventos desde un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [Habilitar la navegación en un proveedor de fragmentos de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)

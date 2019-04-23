@@ -10,10 +10,10 @@ ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343576"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusión o importación de esquemas XML
@@ -103,7 +103,7 @@ Un esquema XML puede contener elementos `<xs:import />`, `<xs:include />` y `<xs
 
 - [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lectura y escritura de esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Cómo atravesar esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Recorrido de esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [Edición de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

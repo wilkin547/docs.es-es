@@ -1,5 +1,5 @@
 ---
-title: Filtrar para definir un icono para un botón de la barra de herramientas mediante el diseñador
+title: Procedimiento para definir un icono para un botón de la barra de herramientas mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding icons to buttons
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
 ms.openlocfilehash: 19d0b284238ed662b25627d6077c1ebe6ecc6e86
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323712"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Filtrar para definir un icono para un botón de la barra de herramientas mediante el diseñador
+# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Procedimiento para definir un icono para un botón de la barra de herramientas mediante el diseñador
 > [!NOTE]
 >  El control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar>; sin embargo, el control <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.  
   
@@ -44,6 +44,6 @@ ms.locfileid: "59323712"
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Filtrar para desencadenar eventos de menú para los botones de la barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [Barra de herramientas (Control)](toolbar-control-windows-forms.md)
-- [Componente ImageList](imagelist-component-windows-forms.md)
+- [Cómo: Desencadenar eventos de menú para los botones de barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar (control)](toolbar-control-windows-forms.md)
+- [ImageList (componente)](imagelist-component-windows-forms.md)

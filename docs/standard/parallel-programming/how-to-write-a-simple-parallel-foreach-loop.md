@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bde7ebcc73c5e9e2d87074b78d78bb63cd441ad
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 599432af178031a85dea4155a8fd2923f879a600
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583646"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427362"
 ---
-# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Filtrar Escribir un bucle Parallel.ForEach sencillo
+# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Procedimiento Escribir un bucle Parallel.ForEach sencillo
 
 Este ejemplo muestra cómo utilizar un bucle <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para habilitar el paralelismo de datos sobre cualquier origen de datos <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.
 
@@ -51,7 +51,7 @@ En Visual Studio, hay plantillas de aplicación de consola de Visual Basic y C# 
 
 Desde la línea de comandos, puede usar .NET Core y sus herramientas CLI (por ejemplo, `dotnet new console` o `dotnet new console -lang vb`). También puede crear el archivo y usar el compilador de línea de comandos para una aplicación de .NET Framework.
 
-Para un proyecto de .NET Core, debe hacer referencia al paquete NuGet **System.Drawing.Common**. En Visual Studio, use el Administrador de paquetes de NuGet para instalar el paquete. Si lo prefiere, puede agregar una referencia al paquete en su archivo *.* csproj* o *.* vbproj*:
+Para un proyecto de .NET Core, debe hacer referencia al paquete NuGet **System.Drawing.Common**. En Visual Studio, use el Administrador de paquetes de NuGet para instalar el paquete. Si lo prefiere, puede agregar una referencia al paquete en su archivo \*.csproj o \*.vbproj:
  
 ```xml
 <ItemGroup>

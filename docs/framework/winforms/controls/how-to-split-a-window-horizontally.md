@@ -1,5 +1,5 @@
 ---
-title: Filtrar para dividir una ventana horizontalmente
+title: Procedimiento para dividir una ventana horizontalmente
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
 ms.openlocfilehash: a43d632a82678f362a1cdf6b3ee4486a8db5adde
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321086"
 ---
-# <a name="how-to-split-a-window-horizontally"></a>Filtrar para dividir una ventana horizontalmente
+# <a name="how-to-split-a-window-horizontally"></a>Procedimiento para dividir una ventana horizontalmente
 El ejemplo de código siguiente hace que el divisor que divide el <xref:System.Windows.Forms.SplitContainer> horizontal del control.  
   
 > [!NOTE]
@@ -58,4 +58,4 @@ El ejemplo de código siguiente hace que el divisor que divide el <xref:System.W
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Control SplitContainer](splitcontainer-control-windows-forms.md)
+- [SplitContainer (control)](splitcontainer-control-windows-forms.md)

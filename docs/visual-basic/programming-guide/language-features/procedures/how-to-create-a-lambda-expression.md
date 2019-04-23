@@ -1,18 +1,18 @@
 ---
-title: Filtrar Crear una expresión Lambda (Visual Basic)
+title: Procedimiento Crear una expresión Lambda (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
 ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344551"
 ---
-# <a name="how-to-create-a-lambda-expression-visual-basic"></a>Filtrar Crear una expresión Lambda (Visual Basic)
+# <a name="how-to-create-a-lambda-expression-visual-basic"></a>Procedimiento Crear una expresión Lambda (Visual Basic)
 Un *expresión lambda* es una función o subrutina que no tiene un nombre. Una expresión lambda puede usarse siempre que sea un tipo de delegado es válido.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>Para crear una función de la expresión lambda de línea  
@@ -108,9 +108,9 @@ Un *expresión lambda* es una función o subrutina que no tiene un nombre. Una e
 
 - <xref:System.Linq.Enumerable>
 - [Expresiones lambda](./lambda-expressions.md)
-- [Function (Instrucción)](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub (Instrucción)](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Function (instrucción)](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub (instrucción)](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Filtrar Pasar procedimientos a otro procedimiento en Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
-- [Delegate (Instrucción)](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Cómo: Pasar procedimientos a otro procedimiento en Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Delegate (instrucción)](../../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

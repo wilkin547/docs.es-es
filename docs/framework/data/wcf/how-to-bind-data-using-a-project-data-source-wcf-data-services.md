@@ -1,5 +1,5 @@
 ---
-title: Filtrar Enlazar datos mediante un origen de datos del proyecto (WCF Data Services)
+title: Procedimiento Enlazar datos mediante un origen de datos del proyecto (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 ms.openlocfilehash: e1111077a407dc32475976b15ff71170978e3184
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517075"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Filtrar Enlazar datos mediante un origen de datos del proyecto (WCF Data Services)
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Procedimiento Enlazar datos mediante un origen de datos del proyecto (WCF Data Services)
 
 Puede crear orígenes de datos que se basan en los objetos de datos generados en una aplicación de cliente de WCF Data Services. Cuando agrega una referencia a un servicio de datos mediante el uso de la **Add Service Reference** cuadro de diálogo, se crea un origen de datos del proyecto junto con las clases de datos de cliente generadas. Para cada conjunto de entidades expuesto por el servicio de datos se crea un origen de datos. Puede crear formularios que muestren los datos del servicio arrastrando estos elementos de origen de datos desde el **orígenes de datos** ventana hasta el diseñador. Estos elementos se convierten en controles enlazados al origen de datos. Durante la ejecución, este origen de datos se enlaza a una instancia de la <xref:System.Data.Services.Client.DataServiceCollection%601> (clase), que se rellena con los objetos devueltos por una consulta al servicio de datos. Para obtener más información, consulte [enlazar datos a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
 

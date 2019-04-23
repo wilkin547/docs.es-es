@@ -4,10 +4,10 @@ description: Obtenga información sobre cómo realizar tareas específicas para 
 ms.custom: seodec18
 ms.date: 03/01/2019
 ms.openlocfilehash: c8d1258629f777cd8bced47e4b956c9cf100a682
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427587"
 ---
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>Guías de procedimientos de aprendizaje automático de .NET: ML.NET
@@ -28,7 +28,7 @@ En la sección de procedimientos de la guía de ML.NET encontrará respuestas r�
 
 ## <a name="train-the-model"></a>Entrenar el modelo
 
-* [Entrenamiento de un modelo de Machine Learning con datos que no están en un archivo de texto](load-non-file-training-data-ml-net.md)
+* [Entrenamiento de un modelo de aprendizaje automático con datos que no están en un archivo de texto](load-non-file-training-data-ml-net.md)
 
 * [Entrenamiento de un modelo de Machine Learning con validación cruzada](train-cross-validation-ml-net.md)
 
@@ -54,7 +54,7 @@ En la sección de procedimientos de la guía de ML.NET encontrará respuestas r�
 
 * [Inspección de los valores de datos intermedios durante el procesamiento de canalizaciones de ML.NET](inspect-intermediate-data-ml-net.md)
 
-* [Operacionalización de un modelo de Machine Learning entrenado en aplicaciones](consuming-model-ml-net.md)
+* [Operacionalización de un modelo de aprendizaje automático entrenado en aplicaciones](consuming-model-ml-net.md)
 
 * [Uso de PredictionFunction para realizar una predicción cada vez](single-predict-model-ml-net.md)
 

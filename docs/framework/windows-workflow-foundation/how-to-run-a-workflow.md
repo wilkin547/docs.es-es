@@ -1,18 +1,18 @@
 ---
-title: Filtrar para ejecutar un flujo de trabajo
+title: Procedimiento para ejecutar un flujo de trabajo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319929"
 ---
-# <a name="how-to-run-a-workflow"></a>Filtrar para ejecutar un flujo de trabajo
+# <a name="how-to-run-a-workflow"></a>Procedimiento para ejecutar un flujo de trabajo
 En este tema es una continuación de Windows Workflow Foundation tutorial de introducción y se explica cómo crear un host de flujo de trabajo y ejecutar el flujo de trabajo definido en el anterior [Cómo: Crear un flujo de trabajo](how-to-create-a-workflow.md) tema.
 
 > [!NOTE]
@@ -62,7 +62,7 @@ En este tema es una continuación de Windows Workflow Foundation tutorial de int
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     Este código de hospedaje generado usa <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> Proporciona una manera sencilla de invocar un flujo de trabajo como si fuera una llamada al método y se puede usar solo para los flujos de trabajo que no usan la persistencia. <xref:System.Activities.WorkflowApplication> Proporciona un modelo más enriquecido para ejecutar flujos de trabajo que incluye notificación de eventos de ciclo de vida, control de ejecución, reanudación de marcadores y persistencia. Este ejemplo usa marcadores y <xref:System.Activities.WorkflowApplication> se usa para hospedar el flujo de trabajo. Agregue la siguiente instrucción `using` o **Imports** al principio de **Program.cs** o **Module1.vb** debajo de las instrucciones **using** o **Imports** existentes.
+     Este código de hospedaje generado usa <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> proporciona una manera sencilla de invocar un flujo de trabajo como si fuera una llamada al método y se puede usar solo para los flujos de trabajo que no usan la persistencia. <xref:System.Activities.WorkflowApplication> proporciona un modelo más enriquecido para ejecutar flujos de trabajo que incluye notificación de eventos de ciclo de vida, control de ejecución, reanudación de marcadores y persistencia. Este ejemplo usa marcadores y <xref:System.Activities.WorkflowApplication> se usa para hospedar el flujo de trabajo. Agregue la siguiente instrucción `using` o **Imports** al principio de **Program.cs** o **Module1.vb** debajo de las instrucciones **using** o **Imports** existentes.
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -99,7 +99,7 @@ En este tema es una continuación de Windows Workflow Foundation tutorial de int
      [!code-csharp[CFX_WF_GettingStarted#6](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
 
-     Este diccionario contiene un elemento con una clave de `MaxNumber`. Las claves del diccionario de entrada corresponden a argumentos de entrada en la actividad raíz del flujo de trabajo. `MaxNumber` para determinar el límite superior para el número generado aleatoriamente.
+     Este diccionario contiene un elemento con una clave de `MaxNumber`. Las claves del diccionario de entrada corresponden a argumentos de entrada en la actividad raíz del flujo de trabajo. El flujo de trabajo usa`MaxNumber` para determinar el límite superior para el número generado aleatoriamente.
 
 ### <a name="to-retrieve-output-arguments-of-a-workflow"></a>Para recuperar parámetros de salida de un flujo de trabajo
 
@@ -165,7 +165,7 @@ En este tema es una continuación de Windows Workflow Foundation tutorial de int
 - <xref:System.Activities.Bookmark>
 - [Programación de Windows Workflow Foundation](programming.md)
 - [Tutorial de introducción](getting-started-tutorial.md)
-- [Filtrar para crear un flujo de trabajo](how-to-create-a-workflow.md)
-- [Filtrar para crear y ejecutar un flujo de trabajo de larga duración](how-to-create-and-run-a-long-running-workflow.md)
-- [Esperar entrada en un flujo de trabajo](waiting-for-input-in-a-workflow.md)
-- [Hospedar flujos de trabajo](hosting-workflows.md)
+- [Cómo: Crear un flujo de trabajo](how-to-create-a-workflow.md)
+- [Cómo: Crear y ejecutar una larga ejecución de flujo de trabajo](how-to-create-and-run-a-long-running-workflow.md)
+- [Espera de la entrada en un flujo de trabajo](waiting-for-input-in-a-workflow.md)
+- [Hospedaje de flujos de trabajo](hosting-workflows.md)

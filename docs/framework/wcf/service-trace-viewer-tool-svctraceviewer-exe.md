@@ -3,10 +3,10 @@ title: Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
 ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341106"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
@@ -458,5 +458,5 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
 ## <a name="see-also"></a>Vea también
 
 - [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Configurar seguimiento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Seguimiento de traza de un extremo a otro](./diagnostics/tracing/end-to-end-tracing.md)
+- [Configuración de la traza](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Traza de un extremo a otro](./diagnostics/tracing/end-to-end-tracing.md)

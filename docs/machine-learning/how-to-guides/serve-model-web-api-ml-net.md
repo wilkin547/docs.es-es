@@ -3,12 +3,12 @@ title: Publicación de un modelo de Machine Learning en ASP.NET Core Web API
 description: Publicación del modelo de Machine Learning de Análisis de sentimiento de ML.NET en Internet mediante ASP.NET Core Web API
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 0cc13ec22b3a8805ec4aa17bf10560b2564ccd63
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: af51ccaac263202fc34d36e746722d2da46404f8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58307920"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59321241"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>Publicación de un modelo de Machine Learning a través de ASP.NET Core Web API
 
@@ -21,7 +21,7 @@ Este tutorial y el ejemplo relacionado usan actualmente **ML.NET en su versión 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Visual Studio 2017 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
+- [Visual Studio 2017 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
 - PowerShell.
 - Modelo previamente entrenado.
     - Use el [tutorial de Análisis de sentimiento de ML.NET](../tutorials/sentiment-analysis.md) para compilar su propio modelo.

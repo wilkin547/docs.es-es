@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654606"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59341080"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Ejecución en paralelo en .NET Framework
 La ejecución en paralelo es la capacidad de ejecutar múltiples versiones de una aplicación o componente en el mismo equipo. Se pueden tener varias versiones de Common Language Runtime y varias versiones de las aplicaciones y componentes que utilice una versión del motor en tiempo de ejecución, de forma simultánea y en el mismo equipo.  
@@ -75,11 +75,11 @@ La ejecución en paralelo es la capacidad de ejecutar múltiples versiones de un
   
  Si hay un archivo de configuración de la aplicación, Common Language Runtime determina la versión que debe cargar en función de los resultados del proceso siguiente:  
   
-1.  El tiempo de ejecución examina el [elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) en el archivo de configuración de la aplicación. Si hay una o varias de las versiones del tiempo de ejecución admitidas especificadas en el elemento **\<supportedRuntime>**, el tiempo de ejecución carga la versión del tiempo de ejecución especificada por el primer elemento **\<supportedRuntime>**. Si esta versión no está disponible, el tiempo de ejecución examina el siguiente elemento **\<supportedRuntime>** e intenta cargar la versión del tiempo de ejecución especificada. Si esta versión del tiempo de ejecución no está disponible, se examinan los siguientes elementos **\<supportedRuntime>**. Si ninguna de las versiones del tiempo de ejecución admitidas está disponible, Common Language Runtime no puede cargar una versión del tiempo de ejecución y muestra un mensaje al usuario (consulte el paso 3).  
+1. El tiempo de ejecución examina el [elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) en el archivo de configuración de la aplicación. Si hay una o varias de las versiones del tiempo de ejecución admitidas especificadas en el elemento **\<supportedRuntime>**, el tiempo de ejecución carga la versión del tiempo de ejecución especificada por el primer elemento **\<supportedRuntime>**. Si esta versión no está disponible, el tiempo de ejecución examina el siguiente elemento **\<supportedRuntime>** e intenta cargar la versión del tiempo de ejecución especificada. Si esta versión del tiempo de ejecución no está disponible, se examinan los siguientes elementos **\<supportedRuntime>**. Si ninguna de las versiones del tiempo de ejecución admitidas está disponible, Common Language Runtime no puede cargar una versión del tiempo de ejecución y muestra un mensaje al usuario (consulte el paso 3).  
   
-2.  Common Language Runtime lee el encabezado del archivo PE del archivo ejecutable de la aplicación. Si la versión del tiempo de ejecución especificada por el encabezado del archivo PE está disponible, Common Language Runtime carga esa versión. Si la versión del tiempo de ejecución especificada no está disponible, Common Language Runtime busca una versión del tiempo de ejecución que Microsoft determine que es compatible con la versión del tiempo de ejecución del encabezado PE. Si no se encuentra esa versión, el proceso continúa en el paso 3.  
+2. Common Language Runtime lee el encabezado del archivo PE del archivo ejecutable de la aplicación. Si la versión del tiempo de ejecución especificada por el encabezado del archivo PE está disponible, Common Language Runtime carga esa versión. Si la versión del tiempo de ejecución especificada no está disponible, Common Language Runtime busca una versión del tiempo de ejecución que Microsoft determine que es compatible con la versión del tiempo de ejecución del encabezado PE. Si no se encuentra esa versión, el proceso continúa en el paso 3.  
   
-3.  Common Language Runtime muestra un mensaje que indica que la versión del tiempo de ejecución admitida por la aplicación no está disponible. El tiempo de ejecución no se carga.  
+3. Common Language Runtime muestra un mensaje que indica que la versión del tiempo de ejecución admitida por la aplicación no está disponible. El tiempo de ejecución no se carga.  
   
     > [!NOTE]
     >  Para suprimir la presentación de este mensaje, use el valor NoGuiFromShim en la clave del Registro HKLM\Software\Microsoft\\.NETFramework o use la variable de entorno COMPLUS_NoGuiFromShim. Por ejemplo, puede suprimir el mensaje para las aplicaciones que normalmente no interactúan con el usuario, como las instalaciones desatendidas o los servicios de Windows. Cuando se suprime la presentación de este mensaje, el tiempo de ejecución escribe un mensaje en el registro de eventos.  Establezca el valor del Registro NoGuiFromShim en 1 para suprimir este mensaje para todas las aplicaciones en un equipo. También puede establecer la variable de entorno COMPLUS_NoGuiFromShim en 1 para suprimir el mensaje para las aplicaciones que se ejecutan en un contexto de usuario determinado.  

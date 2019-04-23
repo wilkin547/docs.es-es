@@ -1,5 +1,5 @@
 ---
-title: Filtrar para heredar formularios mediante el cuadro de diálogo Selector de herencia
+title: Procedimiento para heredar formularios mediante el cuadro de diálogo Selector de herencia
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
 ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342099"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Filtrar para heredar formularios mediante el cuadro de diálogo Selector de herencia
+# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procedimiento para heredar formularios mediante el cuadro de diálogo Selector de herencia
 La forma más sencilla de heredar un formulario u otro objeto es usar el cuadro de diálogo **Selector de herencia**. Con él, puede aprovechar el código o las interfaces de usuario (UI) que ya ha creado en otras soluciones.  
   
 > [!NOTE]
@@ -58,7 +58,7 @@ La forma más sencilla de heredar un formulario u otro objeto es usar el cuadro 
   
 ## <a name="see-also"></a>Vea también
 
-- [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [utilizar](~/docs/csharp/language-reference/keywords/using.md)
+- [Inherits (instrucción)](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
 - [Efectos de modificar la apariencia de un formulario base](effects-of-modifying-base-form-appearance.md)
-- [Herencia visual de formularios Windows Forms](windows-forms-visual-inheritance.md)
+- [Herencia visual de Windows Forms](windows-forms-visual-inheritance.md)

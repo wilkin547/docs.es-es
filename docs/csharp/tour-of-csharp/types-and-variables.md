@@ -3,12 +3,12 @@ title: 'Variables y tipos de C#: un paseo por el lenguaje C#'
 description: Obtenga información sobre cómo definir tipos y declarar variables de C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 5159d75c601bbcb8248a11993a4aaf39299734f0
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 552066ff8d17d49dc5cc0bbb60b05c9c3e5f8eda
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846615"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481085"
 ---
 # <a name="types-and-variables"></a>Tipos y variables
 
@@ -19,30 +19,30 @@ Los tipos de valor de C# se dividen en *tipos simples*, *tipos de enumeración*,
 A continuación se proporciona información general del sistema de tipos de C#.
 
 * Tipos de valor
-    - Tipos simples
-        * Entero con signo: `sbyte`, `short`, `int`,`long`
-        * Entero sin signo: `byte`, `ushort`, `uint`,`ulong`
-        * Caracteres Unicode: `char`
-        * Punto flotante de IEEE: `float`, `double`
-        * Decimal de alta precisión: `decimal`
-        * Booleano: `bool`
-    - Tipos de enumeración
-        * Tipos definidos por el usuario con el formato `enum E {...}`
-    - Tipos de estructura
-        * Tipos definidos por el usuario con el formato `struct S {...}`
-    - Tipos de valor que aceptan valores NULL
-        * Extensiones de todos los demás tipos de valor con un valor `null`
+  - Tipos simples
+    * Entero con signo: `sbyte`, `short`, `int`, `long`
+    * Entero sin signo: `byte`, `ushort`, `uint`, `ulong`
+    * Caracteres Unicode: `char`
+    * Punto flotante de IEEE: `float`, `double`
+    * Decimal de alta precisión: `decimal`
+    * Booleano: `bool`
+  - Tipos de enumeración
+    * Tipos definidos por el usuario con el formato `enum E {...}`
+  - Tipos de estructura
+    * Tipos definidos por el usuario con el formato `struct S {...}`
+  - Tipos de valor que aceptan valores NULL
+    * Extensiones de todos los demás tipos de valor con un valor `null`
 * Tipos de referencia
-    - Tipos de clase
-        * Clase base definitiva de todos los demás tipos: `object`
-        * Cadenas Unicode: `string`
-        * Tipos definidos por el usuario con el formato `class C {...}`
-    - Tipos de interfaz
-        * Tipos definidos por el usuario con el formato `interface I {...}`
-    - Tipos de matriz
-        * Unidimensional y multidimensional; por ejemplo, `int[]` y `int[,]`
-    - Tipos delegados
-        * Tipos definidos por el usuario con el formato `delegate int D(...)`
+  - Tipos de clase
+    * Clase base definitiva de todos los demás tipos: `object`
+    * Cadenas Unicode: `string`
+    * Tipos definidos por el usuario con el formato `class C {...}`
+  - Tipos de interfaz
+    * Tipos definidos por el usuario con el formato `interface I {...}`
+  - Tipos de matriz
+    * Unidimensional y multidimensional; por ejemplo, `int[]` y `int[,]`
+  - Tipos delegados
+    * Tipos definidos por el usuario con el formato `delegate int D(...)`
 
 Los ocho tipos enteros proporcionan compatibilidad con valores de 8, 16, 32 y 64 bits en formato con o sin signo.
 
@@ -57,20 +57,20 @@ El procesamiento de caracteres y cadenas en C# utiliza la codificación Unicode.
 Resume los tipos numéricos de C#.
 
 * Entero con signo
-    - `sbyte`:  8 bits, de -128 a 127
-    - `short`: 16 bits, de -32,768 a 32,767
-    - `int` : 32 bits, de -2,147,483,648 a 2,147,483,647
-    - `long`: 64 bits, de -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807
+  - `sbyte`:  8 bits, de -128 a 127
+  - `short`: 16 bits, de -32,768 a 32,767
+  - `int`  : 32 bits, de -2,147,483,648 a 2,147,483,647
+  - `long` : 64 bits, de -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807
 * Entero sin signo
-    - `byte`:  8 bits, de 0 a 255
-    - `ushort`: 16 bits, de -0 a 65,535
-    - `uint`: 32 bits, de -0 a 4,294,967,295
-    - `ulong`: 64 bits, de -0 a 18,446,744,073,709,551,615
+  - `byte`   :  8 bits, de 0 a 255
+  - `ushort` : 16 bits, de -0 a 65,535
+  - `uint`   : 32 bits, de -0 a 4,294,967,295
+  - `ulong`  : 64 bits, de -0 a 18,446,744,073,709,551,615
 * Punto flotante
-    - `float`: 32 bits, de 1.5 × 10<sup>-45</sup> a 3.4 × 10<sup>38</sup>, precisión de 7 dígitos
-    - `double`: 64 bits, de 5.0 × 10<sup>-324</sup> a 1.7 × 10<sup>308</sup>, precisión de 15 dígitos
+  - `float`  : 32 bits, de 1.5 × 10<sup>-45</sup> a 3.4 × 10<sup>38</sup>, precisión de 7 dígitos
+  - `double` : 64 bits, de 5.0 × 10<sup>-324</sup> a 1.7 × 10<sup>308</sup>, precisión de 15 dígitos
 * Decimal
-    - `decimal`: 128 bits, de al menos -7.9 × 10<sup>-28</sup> a 7.9 × 10<sup>28</sup>, con una precisión de al menos 28 dígitos
+  - `decimal` : 128 bits, de al menos -7.9 × 10<sup>-28</sup> a 7.9 × 10<sup>28</sup>, con una precisión de al menos 28 dígitos
 
 Los programas de C# utilizan *declaraciones de tipos* para crear nuevos tipos. Una declaración de tipos especifica el nombre y los miembros del nuevo tipo. Cinco de las categorías de tipos de C# las define el usuario: tipos de clase, tipos de estructura, tipos de interfaz, tipos de enumeración y tipos delegados.
 
@@ -101,19 +101,19 @@ El sistema de tipos unificado de C# conlleva efectivamente que los tipos de valo
 Hay varios tipos de *variables* en C#, entre otras, campos, elementos de matriz, variables locales y parámetros. Las variables representan ubicaciones de almacenamiento, y cada variable tiene un tipo que determina qué valores pueden almacenarse en la variable, como se muestra a continuación.
 
 * Tipo de valor distinto a NULL
-    - Un valor de ese tipo exacto
+  - Un valor de ese tipo exacto
 * Tipos de valor NULL
-    - Un valor `null` o un valor de ese tipo exacto
+  - Un valor `null` o un valor de ese tipo exacto
 * objeto
-    - Una referencia `null`, una referencia a un objeto de cualquier tipo de referencia o una referencia a un valor de conversión boxing de cualquier tipo de valor
+  - Una referencia `null`, una referencia a un objeto de cualquier tipo de referencia o una referencia a un valor de conversión boxing de cualquier tipo de valor
 * Tipo de clase
-    - Una referencia `null`, una referencia a una instancia de ese tipo de clase o una referencia a una instancia de una clase derivada de ese tipo de clase
+  - Una referencia `null`, una referencia a una instancia de ese tipo de clase o una referencia a una instancia de una clase derivada de ese tipo de clase
 * Tipo de interfaz
-    - Un referencia `null`, una referencia a una instancia de un tipo de clase que implementa dicho tipo de interfaz o una referencia a un valor de conversión boxing de un tipo de valor que implementa dicho tipo de interfaz
+  - Un referencia `null`, una referencia a una instancia de un tipo de clase que implementa dicho tipo de interfaz o una referencia a un valor de conversión boxing de un tipo de valor que implementa dicho tipo de interfaz
 * Tipo de matriz
-    - Una referencia `null`, una referencia a una instancia de ese tipo de matriz o una referencia a una instancia de un tipo de matriz compatible
+  - Una referencia `null`, una referencia a una instancia de ese tipo de matriz o una referencia a una instancia de un tipo de matriz compatible
 * Tipo delegado
-    - Una referencia `null` o una referencia a una instancia de un tipo delegado compatible
+  - Una referencia `null` o una referencia a una instancia de un tipo delegado compatible
 
 > [!div class="step-by-step"]
 > [Anterior](program-structure.md)

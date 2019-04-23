@@ -1,5 +1,5 @@
 ---
-title: Filtrar para desplazarse por los datos en formularios Windows Forms
+title: Procedimiento para desplazarse por los datos en formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
 ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345006"
 ---
-# <a name="how-to-navigate-data-in-windows-forms"></a>Filtrar para desplazarse por los datos en formularios Windows Forms
+# <a name="how-to-navigate-data-in-windows-forms"></a>Procedimiento para desplazarse por los datos en formularios Windows Forms
 En una aplicación de Windows, la manera más fácil de navegar por los registros de un origen de datos es enlazar un <xref:System.Windows.Forms.BindingSource> componente para el origen de datos y, a continuación, enlazar controles a la <xref:System.Windows.Forms.BindingSource>. A continuación, puede usar el método de exploración integrada en el <xref:System.Windows.Forms.BindingSource> tales un <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> y <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Uso de estos métodos se ajustará el <xref:System.Windows.Forms.BindingSource.Position%2A> y <xref:System.Windows.Forms.BindingSource.Current%2A> propiedades de la <xref:System.Windows.Forms.BindingSource> adecuadamente. También puede encontrar un elemento y establecerlo como el elemento actual estableciendo el <xref:System.Windows.Forms.BindingSource.Position%2A> propiedad.  
   
 ### <a name="to-increment-the-position-in-a-data-source"></a>Para incrementar la posición de un origen de datos  
@@ -52,7 +52,7 @@ En una aplicación de Windows, la manera más fácil de navegar por los registro
   
 ## <a name="see-also"></a>Vea también
 
-- [Orígenes de datos compatibles con formularios Windows Forms](data-sources-supported-by-windows-forms.md)
+- [Orígenes de datos compatibles con Windows Forms](data-sources-supported-by-windows-forms.md)
 - [Notificación de cambios en el enlace de datos de Windows Forms](change-notification-in-windows-forms-data-binding.md)
-- [Enlace de datos y formularios Windows Forms](data-binding-and-windows-forms.md)
+- [Enlace de datos y Windows Forms](data-binding-and-windows-forms.md)
 - [Enlace de datos en Windows Forms](windows-forms-data-binding.md)

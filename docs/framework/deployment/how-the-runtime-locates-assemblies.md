@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661872"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59342352"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
 Para implementar correctamente una aplicación de .NET Framework, debe entender la manera en que Common Language Runtime busca y enlaza los ensamblados que componen la aplicación. De forma predeterminada, runtime intenta enlazar con la versión exacta de un ensamblado con el que se creó la aplicación. Este comportamiento predeterminado puede reemplazarse con los valores del archivo de configuración.  
@@ -40,16 +40,16 @@ Para implementar correctamente una aplicación de .NET Framework, debe entender 
   
  El tiempo de ejecución sigue estos pasos para resolver una referencia de ensamblado:  
   
-1.  [Determina la versión correcta del ensamblado](#step1) examinando los archivos de configuración aplicables, incluido el archivo de configuración de la aplicación, el archivo de directiva de edición y el archivo de configuración del equipo. Si el archivo de configuración se encuentra en un equipo remoto, el tiempo de ejecución debe buscar y descargar el archivo de configuración de la aplicación en primer lugar.  
+1. [Determina la versión correcta del ensamblado](#step1) examinando los archivos de configuración aplicables, incluido el archivo de configuración de la aplicación, el archivo de directiva de edición y el archivo de configuración del equipo. Si el archivo de configuración se encuentra en un equipo remoto, el tiempo de ejecución debe buscar y descargar el archivo de configuración de la aplicación en primer lugar.  
   
-2.  [Comprueba si el nombre de ensamblado ya estuvo enlazado](#step2) y, si es así, usa el ensamblado cargado previamente. Si una solicitud anterior para cargar el ensamblado produjo un error, la solicitud produce un error inmediatamente sin intentar cargar el ensamblado.  
+2. [Comprueba si el nombre de ensamblado ya estuvo enlazado](#step2) y, si es así, usa el ensamblado cargado previamente. Si una solicitud anterior para cargar el ensamblado produjo un error, la solicitud produce un error inmediatamente sin intentar cargar el ensamblado.  
   
     > [!NOTE]
     >  El almacenamiento en caché de errores de enlace de ensamblados es nuevo en .NET Framework versión 2.0.  
   
-3.  [Comprueba la caché global de ensamblados](#step3). Si el ensamblado se encuentra allí, el tiempo de ejecución usa este ensamblado.  
+3. [Comprueba la caché global de ensamblados](#step3). Si el ensamblado se encuentra allí, el tiempo de ejecución usa este ensamblado.  
   
-4.  [Sondea el ensamblado](#step4) siguiendo estos siguientes pasos:  
+4. [Sondea el ensamblado](#step4) siguiendo estos siguientes pasos:  
   
     1.  Si la directiva de configuración y edición no afecta a la referencia original y si la solicitud de enlace se creó usando el método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> , el tiempo de ejecución comprueba las sugerencias de ubicación.  
   
@@ -154,9 +154,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Paso 4: Localización del ensamblado a través de códigos base o sondeos  
  Una vez determinada la versión correcta del ensamblado usando la información contenida en la referencia del ensamblado que realiza la llamada y en los archivos de configuración, y una vez protegida la caché global de ensamblados (solo para ensamblados con nombre seguro), Common Language Runtime intenta buscar el ensamblado. El proceso de buscar un ensamblado conlleva los pasos siguientes:  
   
-1.  Si se encuentra un elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) en el archivo de configuración de la aplicación, el tiempo de ejecución comprueba la ubicación especificada. Si se encuentra una coincidencia, se usa ese ensamblado y no se realiza ningún sondeo. Si no se encuentra ahí el ensamblado, se produce un error en la solicitud de enlace.  
+1. Si se encuentra un elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) en el archivo de configuración de la aplicación, el tiempo de ejecución comprueba la ubicación especificada. Si se encuentra una coincidencia, se usa ese ensamblado y no se realiza ningún sondeo. Si no se encuentra ahí el ensamblado, se produce un error en la solicitud de enlace.  
   
-2.  Entonces, el tiempo de ejecución sondea el ensamblado al que se hace referencia usando las reglas que se especifican más adelante en esta sección.  
+2. Entonces, el tiempo de ejecución sondea el ensamblado al que se hace referencia usando las reglas que se especifican más adelante en esta sección.  
   
 > [!NOTE]
 >  Si tiene varias versiones de un ensamblado en un directorio y desea hacer referencia a una versión concreta de dicho ensamblado, debe usar el elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) en lugar del atributo `privatePath` del elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md). Si usa el elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), el tiempo de ejecución detiene el sondeo la primera vez que encuentra un ensamblado que coincida con el nombre sencillo de ensamblado al que se hace referencia, tanto si es una coincidencia correcta como si no. Si es una coincidencia correcta, se usa dicho ensamblado. Si no es una coincidencia correcta, detiene el sondeo y el enlace produce un error.  
@@ -248,5 +248,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Por ejemplo, si Assembly1 hace referencia a Assembly2 y Assembly1 se descargó desde `http://www.code.microsoft.com/utils`, dicha ubicación se considera una pista sobre dónde buscar Assembly2.dll. Después, el runtime busca el ensamblado en `http://www.code.microsoft.com/utils/Assembly2.dll` y `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Si no se encuentra Assembly2 en ninguna de estas ubicaciones, el tiempo de ejecución consulta a Windows Installer.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Implementación](../../../docs/framework/deployment/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear controladores de eventos en tiempo de ejecución para formularios Windows Forms
+title: Procedimiento para crear controladores de eventos en tiempo de ejecución para formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
 ms.openlocfilehash: 09f090c6267093e3ad59266d8c77ea13b13b63d3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343275"
 ---
-# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Filtrar para crear controladores de eventos en tiempo de ejecución para formularios Windows Forms
+# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Procedimiento para crear controladores de eventos en tiempo de ejecución para formularios Windows Forms
 Además de crear eventos mediante Diseñador de Windows Forms, también puede crear un controlador de eventos en tiempo de ejecución. Esta acción le permite conectar controladores de eventos basándose en las condiciones del código en tiempo de ejecución en lugar de conectarlos cuando se inicia el programa.  
   
 ### <a name="to-create-an-event-handler-at-run-time"></a>Para crear un controlador de eventos en tiempo de ejecución  
@@ -74,6 +74,6 @@ Además de crear eventos mediante Diseñador de Windows Forms, también puede cr
   
 ## <a name="see-also"></a>Vea también
 
-- [Crear controladores de eventos en formularios Windows Forms](creating-event-handlers-in-windows-forms.md)
+- [Crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Información general sobre controladores de eventos](event-handlers-overview-windows-forms.md)
 - [Solucionar problemas de controladores de eventos heredados en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
 ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343602"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Empezar a trabajar con entradas manuscritas en WPF
@@ -110,7 +110,7 @@ Puede tener acceso a todas las características WPF del código de procedimiento
 
 ## <a name="see-also"></a>Vea también
 
-- [Entrada manuscrita digital](digital-ink.md)
-- [Recopilación de entradas manuscritas](collecting-ink.md)
-- [Reconocimiento de entradas manuscritas](handwriting-recognition.md)
-- [Almacenar entradas manuscritas](storing-ink.md)
+- [Entrada de lápiz digital](digital-ink.md)
+- [Recopilación de entradas de lápiz](collecting-ink.md)
+- [Reconocimiento de escritura a mano](handwriting-recognition.md)
+- [Almacenamiento de entradas de lápiz](storing-ink.md)

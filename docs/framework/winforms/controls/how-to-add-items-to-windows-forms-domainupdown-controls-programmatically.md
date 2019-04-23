@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agregar elementos a controles DomainUpDown de formularios Windows Forms mediante programación
+title: Procedimiento para agregar elementos a controles DomainUpDown de formularios Windows Forms mediante programación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], adding items to
 ms.assetid: fd31d314-33eb-4181-90f8-d32ed0c4e072
 ms.openlocfilehash: ef44a9e68b8007d57fc7442a178ae98322747c99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343680"
 ---
-# <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a>Filtrar para agregar elementos a controles DomainUpDown de formularios Windows Forms mediante programación
+# <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a>Procedimiento para agregar elementos a controles DomainUpDown de formularios Windows Forms mediante programación
 Puede agregar elementos a los formularios de Windows <xref:System.Windows.Forms.DomainUpDown> control en el código. Llame a la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> método de la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> clase para agregar elementos al control <xref:System.Windows.Forms.DomainUpDown.Items%2A> propiedad. El <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> método agrega un elemento al final de una colección, mientras que el <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> método agrega un elemento en una posición especificada.  
   
 ### <a name="to-add-a-new-item"></a>Para agregar un nuevo elemento  
@@ -59,5 +59,5 @@ Puede agregar elementos a los formularios de Windows <xref:System.Windows.Forms.
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A?displayProperty=nameWithType>
 - <xref:System.Collections.ArrayList.Insert%2A?displayProperty=nameWithType>
-- [Control DomainUpDown](domainupdown-control-windows-forms.md)
+- [DomainUpDown (control)](domainupdown-control-windows-forms.md)
 - [Información general sobre el control DomainUpDown](domainupdown-control-overview-windows-forms.md)

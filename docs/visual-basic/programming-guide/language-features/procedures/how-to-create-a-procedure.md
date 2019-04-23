@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un procedimiento (Visual Basic)
+title: Procedimiento Crear un procedimiento (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
 ms.openlocfilehash: 56099d334a03e85b816cf48983cbbead0784ef5b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320397"
 ---
-# <a name="how-to-create-a-procedure-visual-basic"></a>Filtrar Crear un procedimiento (Visual Basic)
+# <a name="how-to-create-a-procedure-visual-basic"></a>Procedimiento Crear un procedimiento (Visual Basic)
 Incluya un procedimiento entre una instrucción de declaración inicial (`Sub` o `Function`) y una instrucción de declaración final (`End Sub` o `End Function`). Todo el código de procedimiento está comprendida entre estas instrucciones.  
   
  Un procedimiento no puede contener otro procedimiento, por lo que sus instrucciones inicial y finales deben ser fuera de cualquier otro procedimiento.  
@@ -56,10 +56,10 @@ Incluya un procedimiento entre una instrucción de declaración inicial (`Sub` o
 ## <a name="see-also"></a>Vea también
 
 - [Procedimientos](./index.md)
-- [Procedimientos Sub](./sub-procedures.md)
+- [Subprocedimientos](./sub-procedures.md)
 - [Procedimientos de función](./function-procedures.md)
-- [Procedimientos de propiedad](./property-procedures.md)
-- [Procedimientos de operador](./operator-procedures.md)
+- [Procedimientos de propiedades](./property-procedures.md)
+- [Procedimientos de operadores](./operator-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Procedimientos recursivos](./recursive-procedures.md)
 - [Sobrecarga de procedimientos](./procedure-overloading.md)

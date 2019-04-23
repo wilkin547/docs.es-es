@@ -1,15 +1,15 @@
 ---
-title: Filtrar para implementar una aplicación de integración de COM+
+title: Procedimiento para implementar una aplicación de integración de COM+
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
 ms.openlocfilehash: fcf525943e6e453253c6f4d3bcfa8a1a08df6909
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343387"
 ---
-# <a name="how-to-deploy-a-com-integration-application"></a>Filtrar para implementar una aplicación de integración de COM+
+# <a name="how-to-deploy-a-com-integration-application"></a>Procedimiento para implementar una aplicación de integración de COM+
 Cuando ha escrito una aplicación de integración de COM+, puede que desee implementarla en otro equipo. En este tema se describe cómo mover una aplicación de integración de COM+ de un equipo a otro.  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>Mover una aplicación de integración alojada por COM+  
@@ -41,5 +41,5 @@ Cuando ha escrito una aplicación de integración de COM+, puede que desee imple
 ## <a name="see-also"></a>Vea también
 
 - [Integración en la información general de las aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
-- [Filtrar para configurar los parámetros de los servicios COM+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
-- [Filtrar para usar la herramienta configuración de modelos de servicio COM+](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [Cómo: Configurar el servicio COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Cómo: Use la herramienta de configuración del modelo de servicio COM +](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

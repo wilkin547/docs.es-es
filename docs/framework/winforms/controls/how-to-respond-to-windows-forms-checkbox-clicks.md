@@ -1,5 +1,5 @@
 ---
-title: Filtrar para responder a clics en casillas de formularios Windows Forms
+title: Procedimiento para responder a clics en casillas de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
 ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319903"
 ---
-# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Filtrar para responder a clics en casillas de formularios Windows Forms
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Procedimiento para responder a clics en casillas de formularios Windows Forms
 Cada vez que un usuario hace clic en un formulario Windows Forms <xref:System.Windows.Forms.CheckBox> (control), el <xref:System.Windows.Forms.Control.Click> se produce el evento. Puede programar la aplicación para realizar alguna acción según el estado de la casilla de verificación.  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>Para responder a clics en casillas  
@@ -139,5 +139,5 @@ Cada vez que un usuario hace clic en un formulario Windows Forms <xref:System.Wi
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Información general sobre el control CheckBox](checkbox-control-overview-windows-forms.md)
-- [Filtrar para establecer opciones con los controles CheckBox de formularios Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [Control CheckBox](checkbox-control-windows-forms.md)
+- [Cómo: Establecer opciones con controles CheckBox de formularios de Windows](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [CheckBox (control)](checkbox-control-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para alinear texto dibujado
+title: Procedimiento para alinear texto dibujado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
 ms.openlocfilehash: 0e77e4d8eeb9d7a07115b89525ac80074afeb6e8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323276"
 ---
-# <a name="how-to-align-drawn-text"></a>Filtrar para alinear texto dibujado
+# <a name="how-to-align-drawn-text"></a>Procedimiento para alinear texto dibujado
 Al realizar dibujos personalizados, a menudo es posible que desee centrar el texto dibujado en un formulario o control. Alinear texto dibujado con facilidad el <xref:System.Drawing.Graphics.DrawString%2A> o <xref:System.Windows.Forms.TextRenderer.DrawText%2A> métodos al crear el objeto de formato correcto y establecer las marcas de formato adecuado.  
   
 ### <a name="to-draw-centered-text-with-gdi-drawstring"></a>Para dibujar texto con GDI + (DrawString) centrado  
@@ -33,10 +33,10 @@ Al realizar dibujos personalizados, a menudo es posible que desee centrar el tex
      [!code-vb[System.Drawing.AlignDrawnText#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#20)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Los ejemplos de código anteriores están diseñados para su uso con Windows Forms y necesitan <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+ Los ejemplos de código anteriores están diseñados para su uso con Windows Forms y necesitan <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para dibujar texto con GDI](how-to-draw-text-with-gdi.md)
+- [Cómo: Dibujar texto con GDI](how-to-draw-text-with-gdi.md)
 - [Utilizar fuentes y texto](using-fonts-and-text.md)
-- [Filtrar para construir fuentes y familias de fuentes](how-to-construct-font-families-and-fonts.md)
+- [Cómo: Construir fuentes y familias de fuentes](how-to-construct-font-families-and-fonts.md)

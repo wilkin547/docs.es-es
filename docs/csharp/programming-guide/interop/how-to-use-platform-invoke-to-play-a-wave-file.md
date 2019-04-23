@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 209a0f03197e0f77e23be0dc1170789688f3e09a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967222"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59323816"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Procedimiento Utilizar la invocación de plataforma para reproducir un archivo de sonido (Guía de programación de C#)
 En el siguiente ejemplo de código de C# se muestra cómo se usan los servicios de invocación de plataforma para reproducir un archivo de sonido en el sistema operativo Windows.  
@@ -31,15 +31,15 @@ En el siguiente ejemplo de código de C# se muestra cómo se usan los servicios 
   
 ### <a name="to-compile-the-code"></a>Para compilar el código  
   
-1.  Cree un nuevo proyecto de aplicación para Windows C# en Visual Studio y asígnele el nombre **WinSound**.  
+1. Cree un nuevo proyecto de aplicación para Windows C# en Visual Studio y asígnele el nombre **WinSound**.  
   
-2.  Copie el código anterior y péguelo sobre el contenido del archivo `Form1.cs`.  
+2. Copie el código anterior y péguelo sobre el contenido del archivo `Form1.cs`.  
   
-3.  Copie el código siguiente y péguelo en el archivo `Form1.Designer.cs`, en el método `InitializeComponent()`, después de cualquier código existente.  
+3. Copie el código siguiente y péguelo en el archivo `Form1.Designer.cs`, en el método `InitializeComponent()`, después de cualquier código existente.  
   
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
-4.  Compile y ejecute el código.  
+4. Compile y ejecute el código.  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Para obtener más información, vea [Seguridad en .NET](../../../standard/security/index.md).  

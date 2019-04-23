@@ -1,5 +1,5 @@
 ---
-title: Filtrar para representar imágenes con GDI+
+title: Procedimiento para representar imágenes con GDI+
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
 ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342555"
 ---
-# <a name="how-to-render-images-with-gdi"></a>Filtrar para representar imágenes con GDI+
+# <a name="how-to-render-images-with-gdi"></a>Procedimiento para representar imágenes con GDI+
 Puede usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para representar imágenes que existan como archivos en las aplicaciones. Hacerlo mediante la creación de un nuevo objeto de un <xref:System.Drawing.Image> clase (como <xref:System.Drawing.Bitmap>), creando un <xref:System.Drawing.Graphics> objeto que hace referencia a la superficie de dibujo que desea usar y llamar a la <xref:System.Drawing.Graphics.DrawImage%2A> método de la <xref:System.Drawing.Graphics> objeto. La imagen se pintará sobre la superficie de dibujo representada por la clase graphics. Puede usar el Editor de imágenes para crear y editar archivos de imagen en tiempo de diseño y representarlos con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] en tiempo de ejecución. Para más información, consulte [Editor de imágenes para iconos](/cpp/windows/image-editor-for-icons).  
   
 ### <a name="to-render-an-image-with-gdi"></a>Para representar una imagen con GDI+  
@@ -84,9 +84,9 @@ Puede usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] p
 ## <a name="see-also"></a>Vea también
 
 - [Introducción a la programación de gráficos](getting-started-with-graphics-programming.md)
-- [Filtrar para crear objetos gráficos para dibujar](how-to-create-graphics-objects-for-drawing.md)
+- [Cómo: Crear objetos Graphics para dibujar](how-to-create-graphics-objects-for-drawing.md)
 - [Lápices, líneas y rectángulos en GDI+](pens-lines-and-rectangles-in-gdi.md)
-- [Filtrar para dibujar texto en un formulario Windows Forms](how-to-draw-text-on-a-windows-form.md)
+- [Cómo: Dibujar texto en un formulario de Windows](how-to-draw-text-on-a-windows-form.md)
 - [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Dibujar líneas o figuras cerradas](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
 - [Editor de imágenes para iconos](/cpp/windows/image-editor-for-icons)

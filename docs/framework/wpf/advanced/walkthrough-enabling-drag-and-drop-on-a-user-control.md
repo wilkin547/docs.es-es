@@ -9,10 +9,10 @@ helpviewer_keywords:
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
 ms.openlocfilehash: a628665ccfa0a423667344b1fe81f132d6691b12
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321684"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Tutorial: Habilitar la técnica de arrastrar y colocar en un control de usuario
@@ -114,7 +114,7 @@ Necesita Visual Studio para completar este tutorial.
 
     -   Llama a estático <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> método para iniciar la operación de arrastrar y colocar. Pasar los tres parámetros siguientes para el <xref:System.Windows.DragDrop.DoDragDrop%2A> método:
 
-        -   `dragSource` : Una referencia a este control.
+        -   `dragSource`: una referencia a este control.
 
         -   `data` – La <xref:System.Windows.DataObject> creado en el código anterior.
 

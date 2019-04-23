@@ -1,5 +1,5 @@
 ---
-title: Filtrar Controlar el ámbito de una Variable (Visual Basic)
+title: Procedimiento Controlar el ámbito de una Variable (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], scope
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
 ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324323"
 ---
-# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Filtrar Controlar el ámbito de una Variable (Visual Basic)
+# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Procedimiento Controlar el ámbito de una Variable (Visual Basic)
 Normalmente, es una variable en *ámbito*, o visible como referencia, a lo largo de la región en la que se declara. En del algunos casos, la variable *nivel de acceso* puede influir en su ámbito.  
   
  Para obtener más información, consulta [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
@@ -89,8 +89,8 @@ Public strMsg As String
 ## <a name="see-also"></a>Vea también
 
 - [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Período de duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Niveles de acceso en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Dim (Instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)

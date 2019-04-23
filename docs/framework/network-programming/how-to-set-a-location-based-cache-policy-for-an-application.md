@@ -11,21 +11,21 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 4ac0d6449fea4980154eef8c88d03d13230a6a62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06d458828c77f61e03d18f635ec00f6a7267bab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514054"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59341873"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Procedimiento para establecer en una aplicación una directiva de caché basada en la ubicación
 Las directivas de caché basadas en la ubicación permiten que una aplicación defina explícitamente el comportamiento de caché basándose en la ubicación del recurso solicitado. En este tema se muestra cómo establecer la directiva de caché mediante programación. Para obtener información sobre cómo establecer la directiva de una aplicación con los archivos de configuración, vea [Elemento \<requestCaching> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Para establecer en una aplicación una directiva de caché basada en la ubicación  
   
-1.  Cree un objeto <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>.  
+1. Cree un objeto <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>.  
   
-2.  Establezca el objeto de directiva como el valor predeterminado para el dominio de aplicación.  
+2. Establezca el objeto de directiva como el valor predeterminado para el dominio de aplicación.  
   
 ### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>Para establecer una directiva que toma recursos solicitados de una caché  
   
@@ -154,6 +154,7 @@ Las directivas de caché basadas en la ubicación permiten que una aplicación d
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Administración de la memoria caché para aplicaciones de red](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Directiva de caché](../../../docs/framework/network-programming/cache-policy.md)
 - [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](../../../docs/framework/network-programming/location-based-cache-policies.md)

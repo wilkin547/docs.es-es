@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un servicio de datos mediante el proveedor de reflexión (WCF Data Services)
+title: Procedimiento Crear un servicio de datos mediante el proveedor de reflexión (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 7315c6d8-f452-4fb2-a0c1-76ab0593c146
 ms.openlocfilehash: 233b17de17b7f50547b2f4fbf6a543d7258183cf
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517101"
 ---
-# <a name="how-to-create-a-data-service-using-the-reflection-provider-wcf-data-services"></a>Filtrar Crear un servicio de datos mediante el proveedor de reflexión (WCF Data Services)
+# <a name="how-to-create-a-data-service-using-the-reflection-provider-wcf-data-services"></a>Procedimiento Crear un servicio de datos mediante el proveedor de reflexión (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite definir un modelo de datos que está basado en clases arbitrarias siempre que dichas clases se expongan como objetos que implementan la interfaz <xref:System.Linq.IQueryable%601>. Para obtener más información, consulte [proveedores de servicios de datos](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
   
 ## <a name="example"></a>Ejemplo  

@@ -3,36 +3,36 @@ title: Novedades de C# 7.0 | Guía de C#
 description: Obtenga información general de las nuevas características de la versión 7.0 del lenguaje C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 81d06d2e2079e04948ad5e93eefadb1bc11d855a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654190"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59481306"
 ---
 # <a name="whats-new-in-c-70"></a>Novedades de C# 7.0
 
 C# 7.0 incorpora varias características nuevas al lenguaje C#:
 * [Variables de `out`](#out-variables)
-    - Puede declarar valores `out` insertados como argumentos en el método cuando se usen.
+  - Puede declarar valores `out` insertados como argumentos en el método cuando se usen.
 * [Tuplas](#tuples)
-    - Puede crear tipos ligeros sin nombre que contengan varios campos públicos. Los compiladores y las herramientas IDE comprenden la semántica de estos tipos.
+  - Puede crear tipos ligeros sin nombre que contengan varios campos públicos. Los compiladores y las herramientas IDE comprenden la semántica de estos tipos.
 * [Descartes](#discards)
-    - Los descartes son variables temporales y de solo escritura que se usan en argumentos cuando el valor asignado es indiferente. Son especialmente útiles al deconstruir tuplas y tipos definidos por el usuario, así como al realizar llamadas a métodos con parámetros `out`.
+  - Los descartes son variables temporales y de solo escritura que se usan en argumentos cuando el valor asignado es indiferente. Son especialmente útiles al deconstruir tuplas y tipos definidos por el usuario, así como al realizar llamadas a métodos con parámetros `out`.
 * [Coincidencia de patrones](#pattern-matching)
-    - Puede crear la lógica de bifurcación en función de tipos y valores arbitrarios de los miembros de esos tipos.
+  - Puede crear la lógica de bifurcación en función de tipos y valores arbitrarios de los miembros de esos tipos.
 * [Devoluciones y variables locales `ref`](#ref-locals-and-returns)
-    - Las variables locales de método y los valores devueltos pueden ser referencias a otro almacenamiento.
+  - Las variables locales de método y los valores devueltos pueden ser referencias a otro almacenamiento.
 * [Funciones locales](#local-functions)
-    - Puede anidar funciones en otras funciones para limitar su ámbito y visibilidad.
+  - Puede anidar funciones en otras funciones para limitar su ámbito y visibilidad.
 * [Más miembros con forma de expresión](#more-expression-bodied-members)
-    - La lista de miembros que se pueden crear con expresiones ha crecido.
+  - La lista de miembros que se pueden crear con expresiones ha crecido.
 * [Expresiones `throw`](#throw-expressions)
-    - Puede iniciar excepciones en construcciones de código que antes no se permitían porque `throw` era una instrucción. 
+  - Puede iniciar excepciones en construcciones de código que antes no se permitían porque `throw` era una instrucción.
 * [Tipos de valor devueltos de async generalizados](#generalized-async-return-types)
-    - Los métodos declarados con el modificador `async` pueden devolver otros tipos además de `Task` y `Task<T>`.
+  - Los métodos declarados con el modificador `async` pueden devolver otros tipos además de `Task` y `Task<T>`.
 * [Mejoras en la sintaxis de literales numéricos](#numeric-literal-syntax-improvements)
-    - Nuevos tokens mejoran la legibilidad de las constantes numéricas.
+  - Nuevos tokens mejoran la legibilidad de las constantes numéricas.
 
 En el resto de este artículo se proporciona información general sobre cada característica. Para cada característica, conocerá el razonamiento subyacente. Aprenderá la sintaxis. En nuestra [exploración interactiva](../tutorials/exploration/csharp-7.yml) de estas características puede obtener más información al respecto.
 
@@ -46,10 +46,10 @@ Para mayor claridad, puede que prefiera especificar el tipo de la variable `out`
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* El código es más fácil de leer. 
-    - Declare la variable out donde la use, no en otra línea anterior.
+* El código es más fácil de leer.
+  - Declare la variable out donde la use, no en otra línea anterior.
 * No es preciso asignar ningún valor inicial.
-    - Al declarar la variable `out` cuando se usa en una llamada de método, no podrá usarla accidentalmente antes de que se asigne.
+  - Al declarar la variable `out` cuando se usa en una llamada de método, no podrá usarla accidentalmente antes de que se asigne.
 
 ## <a name="tuples"></a>Tuplas
 
@@ -77,7 +77,7 @@ Puede que a veces quiera desempaquetar los miembros de una tupla devueltos de un
 También puede proporcionar una deconstrucción similar para cualquier tipo de .NET. Un método `Deconstruct` se escribe como un miembro de la clase. Ese método `Deconstruct` proporciona un conjunto de argumentos `out` para cada una de las propiedades que quiere extraer. Tenga en cuenta que esta clase `Point` proporciona un método deconstructor que extrae las coordenadas `X` e `Y`:
 
 [!code-csharp[PointWithDeconstruction](~/samples/snippets/csharp/new-in-7/point.cs#PointWithDeconstruction "Point with deconstruction method")]
- 
+
 Puede extraer los campos individuales asignando un `Point` a una tupla:
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
@@ -103,7 +103,8 @@ Para obtener más información, vea [Descartes](../discards.md).
 
 ## <a name="pattern-matching"></a>Detección de patrones
 
-La *coincidencia de patrones* es una característica que permite implementar la distribución de métodos en propiedades distintas al tipo de un objeto. Probablemente ya esté familiarizado con la distribución de métodos en función del tipo de un objeto. En la programación orientada a objetos, los métodos virtuales y de invalidación proporcionan la sintaxis del lenguaje para implementar la distribución de métodos en función del tipo de un objeto. Las clases base y derivadas proporcionan distintas implementaciones. Las expresiones de coincidencia de patrones extienden este concepto para que se puedan implementar fácilmente patrones de distribución similares para tipos y elementos de datos que no se relacionan mediante una jerarquía de herencia. 
+La *coincidencia de patrones* es una característica que permite implementar la distribución de métodos en propiedades distintas al tipo de un objeto. Probablemente ya esté familiarizado con la distribución de métodos en función del tipo de un objeto. En la programación orientada a objetos, los métodos virtuales y de invalidación proporcionan la sintaxis del lenguaje para implementar la distribución de métodos en función del tipo de un objeto. Las clases base y derivadas proporcionan distintas implementaciones.
+Las expresiones de coincidencia de patrones extienden este concepto para que se puedan implementar fácilmente patrones de distribución similares para tipos y elementos de datos que no se relacionan mediante una jerarquía de herencia.
 
 La coincidencia de patrones admite expresiones `is` y `switch`. Cada una de ellas habilita la inspección de un objeto y sus propiedades para determinar si el objeto cumple el patrón buscado. Use la palabra clave `when` para especificar reglas adicionales para el patrón.
 
@@ -133,7 +134,7 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
     {
         switch (i)
         {
-            case 0: 
+            case 0:
                 break;
             case IEnumerable<int> childSequence:
             {
@@ -141,10 +142,10 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
                     sum += (item > 0) ? item : 0;
                 break;
             }
-            case int n when n > 0: 
-                sum += n; 
+            case int n when n > 0:
+                sum += n;
                 break;
-            null:
+            case null:
                 throw new NullReferenceException("Null found in sequence");
             default:
                 throw new InvalidOperationException("Unrecognized type");
@@ -154,7 +155,7 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 }
 ```
 
-- `case 0:` es el patrón de constante conocido. 
+- `case 0:` es el patrón de constante conocido.
 - `case IEnumerable<int> childSequence:` es un patrón de tipo.
 - `case int n when n > 0:` es un patrón de tipo con una condición `when` adicional.
 - `case null:` es el patrón NULL.
@@ -170,20 +171,20 @@ Esta característica habilita algoritmos que usan y devuelven referencias a vari
 
 Puede declarar el valor devuelto como un elemento `ref` y modificar ese valor en la matriz, como se muestra en el código siguiente:
 
-[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/program.cs#AssignRefReturn "Assign ref return")]
+[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/Program.cs#AssignRefReturn "Assign ref return")]
 
 El lenguaje C# tiene varias reglas que impiden el uso incorrecto de las variables locales y devoluciones de `ref`:
 
 * Tendrá que agregar la palabra clave `ref` a la firma del método y a todas las instrucciones `return` de un método.
-    - Esto evidencia que el método se devuelve por referencia a lo largo del método.
+  - Esto evidencia que el método se devuelve por referencia a lo largo del método.
 * Se puede asignar `ref return` a una variable de valor, o bien a una variable `ref`.
-    - El autor de la llamada controla si se copia el valor devuelto o no. La omisión del modificador `ref` al asignar el valor devuelto indica que el autor de la llamada quiere una copia del valor, no una referencia al almacenamiento.
+  - El autor de la llamada controla si se copia el valor devuelto o no. La omisión del modificador `ref` al asignar el valor devuelto indica que el autor de la llamada quiere una copia del valor, no una referencia al almacenamiento.
 * No se puede asignar un valor devuelto de método estándar a una variable local `ref`.
-    - No permite instrucciones como `ref int i = sequence.Count();`
+  - No permite instrucciones como `ref int i = sequence.Count();`
 * No se puede devolver un elemento `ref` a una variable cuya duración se extiende más allá de la ejecución del método.
-    - Esto significa que no se puede devolver una referencia a una variable local o a una variable con un ámbito similar.
+  - Esto significa que no se puede devolver una referencia a una variable local o a una variable con un ámbito similar.
 * Las `ref` locales y las devoluciones no se pueden usar con métodos asíncronos.
-    - El compilador no puede identificar si una variable a la que se hace referencia se ha establecido en su valor final en la devolución del método asíncrono.
+  - El compilador no puede identificar si una variable a la que se hace referencia se ha establecido en su valor final en la devolución del método asíncrono.
 
 La incorporación de variables locales ref y devoluciones de ref permite usar algoritmos que resultan más eficientes si se evita copiar los valores o se realizan operaciones de desreferencia varias veces.
 
@@ -221,7 +222,7 @@ Cambiar un método a un miembro con cuerpo de expresión es un [cambio compatibl
 
 ## <a name="throw-expressions"></a>Expresiones throw
 
-En C#, `throw` siempre ha sido una instrucción. Como `throw` es una instrucción, no una expresión, había construcciones de C# en las que no se podía usar. Incluyen expresiones condicionales, expresiones de fusión nulas y algunas expresiones lambda. La incorporación de miembros con forma de expresión agrega más ubicaciones donde las expresiones `throw` resultarían útiles. Para que pueda escribir cualquiera de estas construcciones, C# 7.0 presenta las *expresiones throw*. 
+En C#, `throw` siempre ha sido una instrucción. Como `throw` es una instrucción, no una expresión, había construcciones de C# en las que no se podía usar. Incluyen expresiones condicionales, expresiones de fusión nulas y algunas expresiones lambda. La incorporación de miembros con forma de expresión agrega más ubicaciones donde las expresiones `throw` resultarían útiles. Para que pueda escribir cualquiera de estas construcciones, C# 7.0 presenta las *expresiones throw*.
 
 Esta adición facilita la escritura de código más basado en expresiones. No se necesitan instrucciones adicionales para la comprobación de errores.
 
@@ -229,7 +230,7 @@ Esta adición facilita la escritura de código más basado en expresiones. No se
 
 La devolución de un objeto `Task` desde métodos asincrónicos puede presentar cuellos de botella de rendimiento en determinadas rutas de acceso. `Task` es un tipo de referencia, por lo que su uso implica la asignación de un objeto. En los casos en los que un método declarado con el modificador `async` devuelva un resultado en caché o se complete sincrónicamente, las asignaciones adicionales pueden suponer un costo considerable de tiempo en secciones críticas para el rendimiento del código. Esas asignaciones pueden resultar costosas si se producen en bucles ajustados.
 
-La nueva característica de lenguaje implica que los tipos de valor devuelto de métodos asincrónicos no están limitados a `Task`, `Task<T>` y `void`. El tipo devuelto debe seguir cumpliendo con el patrón asincrónico, lo que significa que debe haber un método `GetAwaiter` accesible. Como ejemplo concreto, se ha agregado el tipo `ValueTask` a .NET Framework para sacar partido de esta nueva característica del lenguaje: 
+La nueva característica de lenguaje implica que los tipos de valor devuelto de métodos asincrónicos no están limitados a `Task`, `Task<T>` y `void`. El tipo devuelto debe seguir cumpliendo con el patrón asincrónico, lo que significa que debe haber un método `GetAwaiter` accesible. Como ejemplo concreto, se ha agregado el tipo `ValueTask` a .NET Framework para sacar partido de esta nueva característica del lenguaje:
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 

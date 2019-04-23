@@ -3,10 +3,10 @@ title: 'Tarea 1: Crear una aplicación de Windows Presentation Foundation'
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
 ms.openlocfilehash: 63b84e4fd2c88d98fbf417ee1f55ec203d295116
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320385"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Tarea 1: Crear una aplicación de Windows Presentation Foundation
@@ -44,5 +44,5 @@ En esta tarea, creará una aplicación vacía de Windows Presentation Foundation
   
 ## <a name="see-also"></a>Vea también
 
-- [Rehospedar el Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
-- [Tarea 2: Hospedar el diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md)
+- [Rehospedaje del Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
+- [Tarea 2: Hospedar el Diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md)

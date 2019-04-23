@@ -9,14 +9,14 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 15b790f4a4d3348e2bef3e7e929d72c09da8690c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 1abb64f7d76b772168ed97024f5f1381670c6882
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441884"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59321450"
 ---
-# <a name="how-to-debug-windows-service-applications"></a>Filtrar para depurar aplicaciones de servicios de Windows
+# <a name="how-to-debug-windows-service-applications"></a>Procedimiento para depurar aplicaciones de servicios de Windows
 Un servicio se debe ejecutar desde el contexto del Administrador de control de servicios en lugar de desde Visual Studio. Por este motivo, la depuración de un servicio no es tan simple como depurar otros tipos de aplicaciones de Visual Studio. Para depurar un servicio, debe iniciar el servicio y, a continuación, asociar un depurador al proceso en el que se ejecuta. Entonces puede depurar la aplicación mediante el uso de todas las funciones de depuración estándar de Visual Studio.  
   
 > [!CAUTION]
@@ -36,23 +36,23 @@ Un servicio se debe ejecutar desde el contexto del Administrador de control de s
   
 ### <a name="to-debug-a-service"></a>Para depurar un servicio  
   
-1.  Compile el servicio en la configuración de depuración.  
+1. Compile el servicio en la configuración de depuración.  
   
-2.  Instale el servicio. Para obtener más información, vea [Cómo: Instalar y desinstalar servicios](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+2. Instale el servicio. Para obtener más información, vea [Cómo: Instalar y desinstalar servicios](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
-3.  Inicie el servicio, desde el **Administrador de control de servicios**, desde el **Explorador de servidores** o desde el código. Para obtener más información, vea [Cómo: Iniciar servicios](../../../docs/framework/windows-services/how-to-start-services.md).  
+3. Inicie el servicio, desde el **Administrador de control de servicios**, desde el **Explorador de servidores** o desde el código. Para obtener más información, vea [Cómo: Iniciar servicios](../../../docs/framework/windows-services/how-to-start-services.md).  
   
-4.  Inicie Visual Studio con credenciales administrativas, para poder asociarse a los procesos del sistema.  
+4. Inicie Visual Studio con credenciales administrativas, para poder asociarse a los procesos del sistema.  
   
-5.  (Opcional) En la barra de menús de Visual Studio, elija **Herramientas**, **Opciones**. En el cuadro de diálogo **Opciones**, elija **Depuración**, **Símbolos**, active la casilla **Servidores de símbolos de Microsoft** y, a continuación, elija el botón **Aceptar**.  
+5. (Opcional) En la barra de menús de Visual Studio, elija **Herramientas**, **Opciones**. En el cuadro de diálogo **Opciones**, elija **Depuración**, **Símbolos**, active la casilla **Servidores de símbolos de Microsoft** y, a continuación, elija el botón **Aceptar**.  
   
-6.  En la barra de menús, elija **Asociar al proceso** en el menú **Depurar** o **Herramientas**. (Teclado: Ctrl+Alt+P)  
+6. En la barra de menús, elija **Asociar al proceso** en el menú **Depurar** o **Herramientas**. (Teclado: Ctrl+Alt+P)  
   
      Aparecerá el cuadro de diálogo **Procesos**.  
   
-7.  Active la casilla **Mostrar los procesos de todos los usuarios**.  
+7. Active la casilla **Mostrar los procesos de todos los usuarios**.  
   
-8.  En la sección **Procesos disponibles**, elija el proceso del servicio y, a continuación, seleccione **Asociar**.  
+8. En la sección **Procesos disponibles**, elija el proceso del servicio y, a continuación, seleccione **Asociar**.  
   
     > [!TIP]
     >  El proceso tendrá el mismo nombre que el archivo ejecutable para el servicio.  
@@ -75,9 +75,9 @@ Un servicio se debe ejecutar desde el contexto del Administrador de control de s
   
  Intente cambiar el programa a una aplicación de consola normal. Para ello, vuelva a escribir el método `Main` como se indica a continuación, de manera que se pueda ejecutar como un servicio de Windows y como una aplicación de consola, en función de cómo se inicie.  
   
-#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Filtrar para ejecutar un servicio de Windows como una aplicación de consola  
+#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Procedimiento para ejecutar un servicio de Windows como una aplicación de consola  
   
-1.  Agregue un método al servicio que ejecute los métodos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> y <xref:System.ServiceProcess.ServiceBase.OnStop%2A>:  
+1. Agregue un método al servicio que ejecute los métodos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> y <xref:System.ServiceProcess.ServiceBase.OnStop%2A>:  
   
     ```csharp  
     internal void TestStartupAndStop(string[] args)  
@@ -88,7 +88,7 @@ Un servicio se debe ejecutar desde el contexto del Administrador de control de s
     }  
     ```  
   
-2.  Vuelva a escribir el método `Main` como sigue:  
+2. Vuelva a escribir el método `Main` como sigue:  
   
     ```csharp  
     static void Main(string[] args)  
@@ -105,15 +105,16 @@ Un servicio se debe ejecutar desde el contexto del Administrador de control de s
     }
     ```  
   
-3.  En la pestaña **Aplicación** de las propiedades del proyecto, establezca el **Tipo de salida** en **Aplicación de consola**.  
+3. En la pestaña **Aplicación** de las propiedades del proyecto, establezca el **Tipo de salida** en **Aplicación de consola**.  
   
-4.  Elija **Iniciar depuración** (F5).  
+4. Elija **Iniciar depuración** (F5).  
   
-5.  Para volver a ejecutar el programa como un servicio de Windows, instálelo e inícielo de la manera habitual para un servicio de Windows. No es necesario invertir estos cambios.  
+5. Para volver a ejecutar el programa como un servicio de Windows, instálelo e inícielo de la manera habitual para un servicio de Windows. No es necesario invertir estos cambios.  
   
  En algunos casos, como cuando desea depurar un problema que se produce solo al iniciar el sistema, debe usar el depurador de Windows. [Descargue Windows Driver Kit (WDK)](/windows-hardware/drivers/download-the-wdk) y consulte [Cómo depurar los servicios de Windows](https://support.microsoft.com/kb/824344).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Cómo: Instalar y desinstalar servicios](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [Cómo: Iniciar servicios](../../../docs/framework/windows-services/how-to-start-services.md)

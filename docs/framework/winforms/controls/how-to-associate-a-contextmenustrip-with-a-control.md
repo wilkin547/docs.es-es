@@ -1,5 +1,5 @@
 ---
-title: Filtrar para asociar un objeto ContextMenuStrip con un control
+title: Procedimiento para asociar un objeto ContextMenuStrip con un control
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - ContextMenuStrips [Windows Forms], relating
 ms.assetid: 6fc40a42-5d69-427f-aa30-0a146193226b
 ms.openlocfilehash: 5fe880a44afdbd79116541809972d1456aefb9c6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323250"
 ---
-# <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>Filtrar para asociar un objeto ContextMenuStrip con un control
+# <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>Procedimiento para asociar un objeto ContextMenuStrip con un control
 Después de crear los controles y menús contextuales, utilice los procedimientos siguientes para mostrar un menú contextual determinado cuando el usuario hace clic con el botón secundario del mouse en el control. Estos procedimientos asocian un <xref:System.Windows.Forms.ContextMenuStrip> a un Windows Forms y a un control <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="to-associate-a-contextmenustrip-with-a-windows-form"></a>Para asociar un objeto ContextMenuStrip a Windows Forms  
@@ -46,5 +46,5 @@ Después de crear los controles y menús contextuales, utilice los procedimiento
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.Control.ContextMenuStrip%2A>
 - <xref:System.Windows.Forms.ToolStrip>
-- [Filtrar para agregar elementos de menú a un objeto ContextMenuStrip](how-to-add-menu-items-to-a-contextmenustrip.md)
+- [Cómo: Agregar elementos de menú a ContextMenuStrip](how-to-add-menu-items-to-a-contextmenustrip.md)
 - [ContextMenuStrip (Control)](contextmenustrip-control.md)

@@ -1,18 +1,18 @@
 ---
-title: Filtrar Crear una Variable que no cambia de valor (Visual Basic)
+title: Procedimiento Crear una Variable que no cambia de valor (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
 ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342939"
 ---
-# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Filtrar Crear una Variable que no cambia de valor (Visual Basic)
+# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Procedimiento Crear una Variable que no cambia de valor (Visual Basic)
 La noción de una variable que no cambia su valor podría parecer contradictorios. Pero existen situaciones en una constante no es factible y resulta útil disponer de una variable con un valor fijo. En este caso puede definir una variable miembro con el [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) palabra clave.  
   
  No puede usar el [instrucción Const](../../../../visual-basic/language-reference/statements/const-statement.md) para declarar y asignar un valor constante en las siguientes circunstancias:  
@@ -46,4 +46,4 @@ La noción de una variable que no cambia su valor podría parecer contradictorio
 ## <a name="see-also"></a>Vea también
 
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
-- [Const (Instrucción)](../../../../visual-basic/language-reference/statements/const-statement.md)
+- [Const (instrucción)](../../../../visual-basic/language-reference/statements/const-statement.md)

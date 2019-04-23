@@ -3,10 +3,10 @@ title: Actividad personalizada SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321866"
 ---
 # <a name="sendmail-custom-activity"></a>Actividad personalizada SendMail
@@ -28,7 +28,7 @@ En este ejemplo se muestra cómo crear una actividad personalizada que deriva de
 |En|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene a los destinatarios de este mensaje de correo electrónico.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene a los destinatarios de copia carbón (CC) de este mensaje de correo electrónico.|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene a los destinatarios de copia carbón oculta (CCO) de este mensaje de correo electrónico.|  
-|tokens|<xref:System.Activities.InArgument%601>< IDictionary\<cadena, cadena >>|Tokens para reemplazar en el cuerpo. Esta característica les permite a los usuarios especificar algunos valores del cuerpo que pueden ser reemplazados después por los tokens que proporcionó utilizando esta propiedad.|  
+|tokens|<xref:System.Activities.InArgument%601><IDictionary\<string, string>>|Tokens para reemplazar en el cuerpo. Esta característica les permite a los usuarios especificar algunos valores del cuerpo que pueden ser reemplazados después por los tokens que proporcionó utilizando esta propiedad.|  
 |BodyTemplateFilePath|String|Ruta de acceso de una plantilla para el cuerpo. La actividad `SendMail` copia el contenido de este archivo en su propiedad de cuerpo.<br /><br /> La plantilla puede contener tokens que son reemplazados por el contenido de la propiedad de tokens.|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|Cuando se establece esta propiedad, todos los correos electrónicos se envían a la dirección especificada en él.<br /><br /> Se pretende que esta propiedad sea utilizada al probar los flujos de trabajo. Por ejemplo, cuando desee asegurarse de que todos los correos electrónicos se envían sin enviarlos a los destinatarios reales.|  
 |TestDropPath|String|Cuando se establece esta propiedad, todos los correos electrónicos se guardan también en el archivo especificado.<br /><br /> Esta propiedad está pensada para utilizarse cuando se está probando o depurar flujos de trabajo, para asegurarse de que el formato y el contenido de los correos electrónicos salientes es adecuado.|  

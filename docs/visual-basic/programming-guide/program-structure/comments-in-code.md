@@ -15,10 +15,10 @@ helpviewer_keywords:
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
 ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343017"
 ---
 # <a name="comments-in-code-visual-basic"></a>Comentarios en el código (Visual Basic)
@@ -62,7 +62,7 @@ Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Est
 ## <a name="see-also"></a>Vea también
 
 - [Instintos básicos – documentar el código con comentarios XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
-- [Filtrar para crear documentación XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Cómo: Crear documentación XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)
 - [Convenciones de código y estructura de programas](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [REM (Instrucción)](../../../visual-basic/language-reference/statements/rem-statement.md)
+- [REM (instrucción)](../../../visual-basic/language-reference/statements/rem-statement.md)

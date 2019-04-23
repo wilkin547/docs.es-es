@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e96f86e516e7b741aa9fbf67efd1683d0845101
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488518"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59517543"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Desensamblador de IL)
 
@@ -69,7 +69,7 @@ Las opciones siguientes se pueden usar con archivos *.exe*, *.dll* y *.winmd* pa
 |**/classlist**|Incluye una lista de las clases definidas en el módulo.|
 |**/forward**|Usa la declaración de clase de envío.|
 |**/headers**|Incluye información de encabezados de archivos en la salida.|
-|**/item:** `class`[**::** `member`[`(sig`]]|Desensambla los elementos siguientes dependiendo del argumento proporcionado:<br /><br /> -   Desensambla el elemento `class` especificado.<br />-   Desensambla el elemento `member` de `class`.<br />-   Desensambla el elemento `member` de `class` con la firma especificada `sig`. El formato de `sig` es:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Nota** En las versiones 1.0 y 1.1 de .NET Framework, `sig` debe ir seguido de un paréntesis de cierre: `(sig)`. A partir de .NET Framework 2.0, el paréntesis de cierre se debe omitir: (`sig`.|
+|**/item:** `class`[**::** `member`[`(sig`]]|Desensambla los elementos siguientes dependiendo del argumento proporcionado:<br /><br /> -   Desensambla el elemento `class` especificado.<br />-   Desensambla el elemento `member` de `class`.<br />-   Desensambla el elemento `member` de `class` con la firma especificada `sig`. El formato de `sig` es:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Nota** En las versiones 1.0 y 1.1 de .NET Framework, `sig` debe ir seguido de un paréntesis de cierre: `(sig)`. A partir de .NET Framework 2.0, el paréntesis de cierre se debe omitir: `(sig`.|
 |**/noil**|Suprime la salida de código del ensamblado de IL.|
 |**/stats**|Incluye estadísticas en la imagen.|
 |**/typelist**|Genera la lista completa de tipos para mantener el orden de tipos en una acción de ida y vuelta.|

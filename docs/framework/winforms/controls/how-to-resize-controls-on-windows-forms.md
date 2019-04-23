@@ -1,5 +1,5 @@
 ---
-title: Filtrar para cambiar el tamaño de los controles en formularios Windows Forms
+title: Procedimiento para cambiar el tamaño de los controles en formularios Windows Forms
 ms.date: 03/30/2017
 f1_keywords:
 - Size.Height
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
 ms.openlocfilehash: 17ce930a91d2eb3626e92898e00e67be4741cf56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321606"
 ---
-# <a name="how-to-resize-controls-on-windows-forms"></a>Filtrar para cambiar el tamaño de los controles en formularios Windows Forms
+# <a name="how-to-resize-controls-on-windows-forms"></a>Procedimiento para cambiar el tamaño de los controles en formularios Windows Forms
 Puede cambiar el tamaño de los controles individuales, y puede cambiar el tamaño de varios controles del tipo iguales o distintos, como <xref:System.Windows.Forms.Button> y <xref:System.Windows.Forms.GroupBox> controles.  
   
 ### <a name="to-resize-a-control"></a>Para cambiar el tamaño de un control  
@@ -34,9 +34,9 @@ Puede cambiar el tamaño de los controles individuales, y puede cambiar el tama�
   
 ## <a name="see-also"></a>Vea también
 
-- [Controles de Windows Forms](index.md)
+- [Controles de formularios Windows Forms](index.md)
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)
-- [Filtrar Cambiar el tamaño mediante el Diseñador de formularios de Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))
+- [Cómo: Cambiar el tamaño mediante el Diseñador de formularios de Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

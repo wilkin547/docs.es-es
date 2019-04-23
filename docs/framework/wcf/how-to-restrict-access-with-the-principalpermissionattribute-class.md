@@ -1,5 +1,5 @@
 ---
-title: Filtrar para restringir el acceso con la clase PrincipalPermissionAttribute
+title: Procedimiento para restringir el acceso con la clase PrincipalPermissionAttribute
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
 ms.openlocfilehash: ae2aa4c5629096ee7d888e7c4e334c3b6696db3f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323322"
 ---
-# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Filtrar para restringir el acceso con la clase PrincipalPermissionAttribute
+# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Procedimiento para restringir el acceso con la clase PrincipalPermissionAttribute
 Controlar el acceso a los recursos en un equipo del dominio de Windows es una tarea de seguridad básica. Por ejemplo, solo ciertos usuarios deberían poder ver los datos confidenciales, como la información de la nómina. Este tema explica cómo restringir el acceso a un método exigiendo que el usuario pertenezca a un grupo predefinido. Para obtener un ejemplo funcional, consulte [autorizar el acceso a las operaciones de servicio](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
   
  La tarea está compuesta de dos procedimientos independientes. El primero crea el grupo y lo rellena con usuarios. El segundo aplica la clase <xref:System.Security.Permissions.PrincipalPermissionAttribute> para especificar el grupo.  

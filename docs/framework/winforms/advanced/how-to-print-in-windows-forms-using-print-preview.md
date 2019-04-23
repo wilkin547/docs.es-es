@@ -1,5 +1,5 @@
 ---
-title: Filtrar para imprimir en formularios Windows Forms a través de la vista previa de impresión
+title: Procedimiento para imprimir en formularios Windows Forms a través de la vista previa de impresión
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
 ms.openlocfilehash: db9269978f3a77920778ab120a6ace11d6dd111c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325766"
 ---
-# <a name="how-to-print-in-windows-forms-using-print-preview"></a>Filtrar para imprimir en formularios Windows Forms a través de la vista previa de impresión
+# <a name="how-to-print-in-windows-forms-using-print-preview"></a>Procedimiento para imprimir en formularios Windows Forms a través de la vista previa de impresión
 Es muy habitual en la programación de Windows Forms ofrecer una vista previa de impresión además de los servicios de impresión. Una forma sencilla de agregar servicios de vista previa de impresión a la aplicación es usar un control <xref:System.Windows.Forms.PrintPreviewDialog> en combinación con la lógica de control de eventos de <xref:System.Drawing.Printing.PrintDocument.PrintPage> para imprimir un archivo.  
   
 ### <a name="to-preview-a-text-document-with-a-printpreviewdialog-control"></a>Para mostrar una vista previa de un documento de texto con un control PrintPreviewDialog  
@@ -66,6 +66,6 @@ Es muy habitual en la programación de Windows Forms ofrecer una vista previa de
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para imprimir un archivo de texto de varias páginas en formularios Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Funcionalidad para imprimir en formularios Windows Forms](windows-forms-print-support.md)
-- [Impresión más segura en formularios Windows Forms](../more-secure-printing-in-windows-forms.md)
+- [Cómo: Imprimir un archivo de texto de varias páginas en Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Windows Forms Print Support](windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)
+- [Impresión más segura en Windows Forms](../more-secure-printing-in-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Eliminar un recurso de sistema (Visual Basic)
+title: Procedimiento Eliminar un recurso de sistema (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
 ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341912"
 ---
-# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Filtrar Eliminar un recurso de sistema (Visual Basic)
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Procedimiento Eliminar un recurso de sistema (Visual Basic)
 Puede usar un `Using` bloque para garantizar que el sistema elimina un recurso al que el código sale del bloque. Esto es útil si está utilizando un recurso del sistema que consume una gran cantidad de memoria o que otros componentes que desee utilizar.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Para eliminar una conexión de base de datos cuando lo esté utilizando el código  
@@ -52,4 +52,4 @@ Puede usar un `Using` bloque para garantizar que el sistema elimina un recurso a
 - [Estructuras de bucle](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Estructuras de control adicionales](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
 - [Estructuras de control anidadas](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [Using (Instrucción)](../../../../visual-basic/language-reference/statements/using-statement.md)
+- [Using (instrucción)](../../../../visual-basic/language-reference/statements/using-statement.md)

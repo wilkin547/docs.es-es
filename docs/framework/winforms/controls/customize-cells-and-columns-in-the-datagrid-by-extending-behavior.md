@@ -1,5 +1,5 @@
 ---
-title: Filtrar para personalizar celdas y columnas en el control DataGridView de formularios Windows Forms mediante la ampliación de su comportamiento y apariencia
+title: Procedimiento para personalizar celdas y columnas en el control DataGridView de formularios Windows Forms mediante la ampliación de su comportamiento y apariencia
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
 ms.openlocfilehash: 6b0773b4c41b77fe43a5b7fba994778ae18c16c1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325012"
 ---
-# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Filtrar para personalizar celdas y columnas en el control DataGridView de formularios Windows Forms mediante la ampliación de su comportamiento y apariencia
+# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Procedimiento para personalizar celdas y columnas en el control DataGridView de formularios Windows Forms mediante la ampliación de su comportamiento y apariencia
 El control <xref:System.Windows.Forms.DataGridView> ofrece varias maneras de personalizar su apariencia y comportamiento mediante propiedades, eventos y clases complementarias. Ocasionalmente podría tener requisitos para sus celdas que van más allá de lo que pueden proporcionar estas características. Puede crear su propia clase <xref:System.Windows.Forms.DataGridViewCell> personalizado para proporcionar una funcionalidad ampliada.  
   
  Puede crear una clase <xref:System.Windows.Forms.DataGridViewCell> derivando de la clase base <xref:System.Windows.Forms.DataGridViewCell> o de una de sus clases derivadas. Aunque puede mostrar cualquier tipo de celda en cualquier tipo de columna, normalmente también creará una clase <xref:System.Windows.Forms.DataGridViewColumn> personalizado especializada para mostrar el tipo de celda. Las clases de columna derivan de <xref:System.Windows.Forms.DataGridViewColumn> o de uno de sus tipos derivados.  
@@ -75,7 +75,7 @@ El control <xref:System.Windows.Forms.DataGridView> ofrece varias maneras de per
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCell>
 - <xref:System.Windows.Forms.DataGridViewColumn>
-- [Personalizar el control DataGridView de formularios Windows Forms](customizing-the-windows-forms-datagridview-control.md)
+- [Personalizar el control DataGridView de Windows Forms](customizing-the-windows-forms-datagridview-control.md)
 - [Arquitectura del control DataGridView](datagridview-control-architecture-windows-forms.md)
-- [Tipos de columnas en el control DataGridView de formularios Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
+- [Tipos de columnas en el control DataGridView de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
 - [Procedimientos recomendados para ajustar la escala del control DataGridView en formularios Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)

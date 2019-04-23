@@ -15,10 +15,10 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323855"
 ---
 # <a name="creating-an-ink-input-control"></a>Creación de un control de entrada manuscrita
@@ -26,9 +26,9 @@ Puede crear un control personalizado dinámicamente y estáticamente representa 
   
  Este tema contiene las siguientes subsecciones:  
   
--   [Filtrar Recopilar datos de puntos de lápiz y crear trazos de tinta](#CollectingStylusPointDataAndCreatingInkStrokes)  
+-   [Cómo: Recopilar datos de puntos de lápiz y crear trazos de tinta](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Filtrar Habilitar el Control y aceptar la entrada del mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
+-   [Cómo: Habilitar el Control y aceptar la entrada del mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
   
 -   [Incorporación de todos](#PuttingItTogether)  
   
@@ -37,7 +37,7 @@ Puede crear un control personalizado dinámicamente y estáticamente representa 
 -   [Conclusión](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
-## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Filtrar Recopilar datos de puntos de lápiz y crear trazos de tinta  
+## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Procedimiento Recopilar datos de puntos de lápiz y crear trazos de tinta  
  Para crear un control que recopila y administra la tinta trazos realice lo siguiente:  
   
 1. Derive una clase de <xref:System.Windows.Controls.Control> o una de las clases derivadas de <xref:System.Windows.Controls.Control>, tales como <xref:System.Windows.Controls.Label>.  
@@ -68,7 +68,7 @@ Puede crear un control personalizado dinámicamente y estáticamente representa 
      [!code-csharp[AdvancedInkTopicsSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#10)]  
   
 <a name="EnablingYourControlToAcceptInputTromTheMouse"></a>   
-## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a>Filtrar Habilitar el Control y aceptar la entrada del mouse  
+## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a>Procedimiento Habilitar el Control y aceptar la entrada del mouse  
  Si agrega el control anterior a la aplicación, ejecútelo y usar el mouse como un dispositivo de entrada, observará que no se conservan los trazos. Para conservar los trazos cuando el mouse se usa como el dispositivo de entrada realice lo siguiente:  
   
 1. Invalidar el <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> y cree un nuevo <xref:System.Windows.Input.StylusPointCollection> obtener la posición del mouse cuando se produjo el evento y crear un <xref:System.Windows.Input.StylusPoint> con el punto de datos y agregue el <xref:System.Windows.Input.StylusPoint> a la <xref:System.Windows.Input.StylusPointCollection>.  

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear, inicializar y configurar modificadores de seguimiento
+title: Procedimiento para crear, inicializar y configurar modificadores de seguimiento
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325714"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Filtrar para crear, inicializar y configurar modificadores de seguimiento
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procedimiento para crear, inicializar y configurar modificadores de seguimiento
 Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la salida del seguimiento.  
   
 <a name="create"></a>   
@@ -128,6 +128,6 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
 ## <a name="see-also"></a>Vea también
 
 - [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Filtrar para agregar instrucciones de seguimiento al código de una aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Cómo: Agregar instrucciones de seguimiento al código de aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Esquema de la configuración de seguimiento y depuración](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

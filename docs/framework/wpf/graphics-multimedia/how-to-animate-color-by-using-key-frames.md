@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar un color mediante fotogramas clave
+title: Procedimiento Animar un color mediante fotogramas clave
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - key frames [WPF], animating colors with
 ms.assetid: ab04ffa6-4de9-4d5b-a3b4-4e35d5b2ef35
 ms.openlocfilehash: e579c4beb757ccf58eb1b9ca1f3852a5b96cac1a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326091"
 ---
-# <a name="how-to-animate-color-by-using-key-frames"></a>Filtrar Animar un color mediante fotogramas clave
+# <a name="how-to-animate-color-by-using-key-frames"></a>Procedimiento Animar un color mediante fotogramas clave
 En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.SolidColorBrush.Color%2A> de un <xref:System.Windows.Media.SolidColorBrush> mediante fotogramas clave.  
   
 ## <a name="example"></a>Ejemplo  

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar la posición y la dirección de una cámara mediante fotogramas clave
+title: Procedimiento Animar la posición y la dirección de una cámara mediante fotogramas clave
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], camera direction with key frames
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - camera direction [WPF], animating with key frames
 ms.assetid: 5753024e-0057-454d-947f-43ea686879c7
 ms.openlocfilehash: 44464cc314d649516998338e36c1b523101ac4e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346085"
 ---
-# <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>Filtrar Animar la posición y la dirección de una cámara mediante fotogramas clave
+# <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>Procedimiento Animar la posición y la dirección de una cámara mediante fotogramas clave
 En el ejemplo siguiente, <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> sirve para animar la posición de un <xref:System.Windows.Media.Media3D.PerspectiveCamera> en una escena 3D. Además, <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> se usa para animar la dirección señala la cámara en la escena 3D. Ambas animaciones utilizan varios fotogramas clave que crean una serie de efectos de animación:  
   
 1. <xref:System.Windows.Media.Animation.LinearPoint3DKeyFrame> y <xref:System.Windows.Media.Animation.LinearVector3DKeyFrame> se utilizan para crear una interpolación lineal suave entre valores.  

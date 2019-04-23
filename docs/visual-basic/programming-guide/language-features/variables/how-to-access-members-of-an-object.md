@@ -1,18 +1,18 @@
 ---
-title: Filtrar Obtener acceso a miembros de un objeto (Visual Basic)
+title: Procedimiento Obtener acceso a miembros de un objeto (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
 ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322763"
 ---
-# <a name="how-to-access-members-of-an-object-visual-basic"></a>Filtrar Obtener acceso a miembros de un objeto (Visual Basic)
+# <a name="how-to-access-members-of-an-object-visual-basic"></a>Procedimiento Obtener acceso a miembros de un objeto (Visual Basic)
 Cuando haya una variable de objeto que hace referencia a un objeto, a menudo desea trabajar con los miembros de ese objeto, como sus métodos, propiedades, campos y eventos. Por ejemplo, una vez haya creado un nuevo <xref:System.Windows.Forms.Form> objeto que desea establecer su <xref:System.Windows.Forms.Control.Text%2A> propiedad o llamada a su <xref:System.Windows.Forms.Control.Focus%2A> método.  
   
 ## <a name="accessing-members"></a>Acceso a miembros  
@@ -77,5 +77,5 @@ Cuando haya una variable de objeto que hace referencia a un objeto, a menudo des
 - <xref:System.MemberAccessException>
 - [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Declaración de variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Option Strict (instrucción)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

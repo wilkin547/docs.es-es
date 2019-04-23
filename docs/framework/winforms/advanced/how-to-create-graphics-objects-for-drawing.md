@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear objetos gráficos para dibujar
+title: Procedimiento para crear objetos gráficos para dibujar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
 ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324206"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>Filtrar para crear objetos gráficos para dibujar
+# <a name="how-to-create-graphics-objects-for-drawing"></a>Procedimiento para crear objetos gráficos para dibujar
 Antes de poder dibujar líneas y formas, representar texto o mostrar y manipular imágenes con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], deberá crear un <xref:System.Drawing.Graphics> objeto. El <xref:System.Drawing.Graphics> objeto representa un [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superficie de dibujo, y es el objeto que se usa para crear imágenes gráficas.  
   
  Trabajar con gráficos, hay dos pasos:  
@@ -165,14 +165,14 @@ Antes de poder dibujar líneas y formas, representar texto o mostrar y manipular
   
     |Para representar|Vea|  
     |---------------|---------|  
-    |Líneas|[Filtrar para dibujar una línea en un formulario Windows Forms](how-to-draw-a-line-on-a-windows-form.md)|  
-    |Formas|[Filtrar para dibujar una forma con contorno](how-to-draw-an-outlined-shape.md)|  
-    |Texto|[Filtrar para dibujar texto en un formulario Windows Forms](how-to-draw-text-on-a-windows-form.md)|  
-    |Imágenes|[Filtrar para representar imágenes con GDI+](how-to-render-images-with-gdi.md)|  
+    |Líneas|[Cómo: Dibujar una línea en un formulario de Windows](how-to-draw-a-line-on-a-windows-form.md)|  
+    |Formas|[Cómo: Dibujar una forma con contorno](how-to-draw-an-outlined-shape.md)|  
+    |Texto|[Cómo: Dibujar texto en un formulario de Windows](how-to-draw-text-on-a-windows-form.md)|  
+    |Imágenes|[Cómo: Representar imágenes con GDI +](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Vea también
 
 - [Introducción a la programación de gráficos](getting-started-with-graphics-programming.md)
 - [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Líneas, curvas y formas](lines-curves-and-shapes.md)
-- [Filtrar para representar imágenes con GDI+](how-to-render-images-with-gdi.md)
+- [Cómo: Representar imágenes con GDI +](how-to-render-images-with-gdi.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para comparar notificaciones
+title: Procedimiento para comparar notificaciones
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
 ms.openlocfilehash: 932ad347730b35a936e040e116e5aa6af36cd3dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343316"
 ---
-# <a name="how-to-compare-claims"></a>Filtrar para comparar notificaciones
+# <a name="how-to-compare-claims"></a>Procedimiento para comparar notificaciones
 La infraestructura del modelo de identidad en Windows Communication Foundation (WCF) se usa para realizar la comprobación de autorización. Como tal, una tarea común es comparar las notificaciones en el contexto de autorización con las notificaciones necesarias para realizar la acción solicitada o tener acceso al recurso solicitado. En este tema se describe cómo comparar las notificaciones, incluidos los tipos de notificación integrados y personalizados. Para obtener más información acerca de la infraestructura del modelo de identidad, vea [Administrar notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
  La comparación de notificaciones implica la comparación de tres partes de una notificación (tipo, derecho y recurso) con las mismas partes en otra notificación para ver si son iguales. Vea el ejemplo siguiente.  
@@ -73,4 +73,4 @@ La infraestructura del modelo de identidad en Windows Communication Foundation (
 ## <a name="see-also"></a>Vea también
 
 - [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [Filtrar para crear una notificación personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Cómo: Crear una demanda personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

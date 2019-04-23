@@ -1,18 +1,18 @@
 ---
-title: Filtrar para crear y ejecutar un flujo de trabajo de larga duración
+title: Procedimiento para crear y ejecutar un flujo de trabajo de larga duración
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320057"
 ---
-# <a name="how-to-create-and-run-a-long-running-workflow"></a>Filtrar para crear y ejecutar un flujo de trabajo de larga duración
+# <a name="how-to-create-and-run-a-long-running-workflow"></a>Procedimiento para crear y ejecutar un flujo de trabajo de larga duración
 Una de las características principales de Windows Workflow Foundation (WF) es la capacidad del tiempo de ejecución para conservar y descargar flujos de trabajo inactivos a una base de datos. Los pasos descritos en [Cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md) muestra los aspectos básicos de hospedaje de flujo de trabajo mediante una aplicación de consola. Se mostraron ejemplos de cómo iniciar flujos de trabajo, de los controladores de ciclo de vida de los flujos de trabajo y de los marcadores de reanudación. Para demostrar la persistencia del flujo de trabajo con efectividad, es necesario un host de flujo de trabajo más complejo que admita el inicio y la reanudación de varias instancias de flujo de trabajo. En este paso del tutorial se muestra cómo crear una aplicación host de Windows Forms que admita iniciar y reanudar varias instancias de flujo de trabajo o la persistencia del flujo de trabajo, y que proporcione una base para características avanzadas como el seguimiento y el control de versiones mostrado en los siguientes pasos del tutorial.  
   
 > [!NOTE]
@@ -29,11 +29,11 @@ Una de las características principales de Windows Workflow Foundation (WF) es l
   
 -   [Para crear el formulario de host de flujo de trabajo](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [Para agregar las propiedades y métodos del asistente del formulario](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [Para agregar las propiedades y métodos auxiliares del formulario](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [Para configurar el almacén de instancias, los controladores de ciclo de vida del flujo de trabajo y las extensiones](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+-   [Para configurar el almacén de instancias, controladores de ciclo de vida de flujo de trabajo y extensiones](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [Para habilitar el inicio y la reanudación de varios tipos de flujo de trabajo](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [Para habilitar el inicio y reanudación de varios tipos de flujo de trabajo](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
 -   [Para iniciar un nuevo flujo de trabajo](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
@@ -50,7 +50,7 @@ Una de las características principales de Windows Workflow Foundation (WF) es l
     > [!NOTE]
     >  Asegúrese de que tiene **Create Database** permiso en el servidor local antes de crear la base de datos.  
   
-2. Elija **abierto**, **archivo** desde el **archivo** menú. Vaya a la carpeta siguiente: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
+2. Elija **abierto**, **archivo** desde el **archivo** menú. Busque la siguiente carpeta: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
   
      Seleccione los dos archivos siguientes y haga clic en **abierto**.  
   
@@ -94,12 +94,12 @@ Una de las características principales de Windows Workflow Foundation (WF) es l
   
     |Control|Propiedad: Valor|  
     |-------------|---------------------|  
-    |**Botón**|Nombre: NewGame<br /><br /> Ubicación: 13, 13<br /><br /> Tamaño: 75, 23<br /><br /> Texto: Nuevo juego|  
-    |**Etiqueta**|Ubicación: 94, 18<br /><br /> Texto: Adivine un número del 1 al|  
+    |**Button**|Nombre: NewGame<br /><br /> Ubicación: 13, 13<br /><br /> Tamaño: 75, 23<br /><br /> Texto: Nuevo juego|  
+    |**Label**|Ubicación: 94, 18<br /><br /> Texto: Adivine un número del 1 al|  
     |**ComboBox**|Nombre: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Elementos: 10, 100, 1000<br /><br /> Ubicación: 228, 12<br /><br /> Tamaño: 143, 21|  
-    |**Etiqueta**|Ubicación: 13, 43<br /><br /> Texto: Tipo de flujo de trabajo|  
+    |**Label**|Ubicación: 13, 43<br /><br /> Texto: Tipo de flujo de trabajo|  
     |**ComboBox**|Nombre: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> Elementos: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Ubicación: 94, 40<br /><br /> Tamaño: 277, 21|  
-    |**Etiqueta**|Nombre: WorkflowVersion<br /><br /> Ubicación: 13, 362<br /><br /> Texto: Versión del flujo de trabajo|  
+    |**Label**|Nombre: WorkflowVersion<br /><br /> Ubicación: 13, 362<br /><br /> Texto: Versión del flujo de trabajo|  
     |**GroupBox**|Ubicación: 13, 67<br /><br /> Tamaño: 358, 287<br /><br /> Texto: Juego|  
   
     > [!NOTE]
@@ -107,12 +107,12 @@ Una de las características principales de Windows Workflow Foundation (WF) es l
   
     |Control|Propiedad: Valor|  
     |-------------|---------------------|  
-    |**Etiqueta**|Ubicación: 7, 20<br /><br /> Texto: Identificador de instancia de flujo de trabajo |  
+    |**Label**|Ubicación: 7, 20<br /><br /> Texto: Identificador de instancia de flujo de trabajo |  
     |**ComboBox**|Nombre: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Ubicación: 121, 17<br /><br /> Tamaño: 227, 21|  
-    |**Etiqueta**|Ubicación: 7, 47<br /><br /> Texto: Adivinanza|  
+    |**Label**|Ubicación: 7, 47<br /><br /> Texto: Adivinanza|  
     |**TextBox**|Nombre: Adivinanza<br /><br /> Ubicación: 50, 44<br /><br /> Tamaño: 65, 20|  
-    |**Botón**|Nombre: EnterGuess<br /><br /> Ubicación: 121, 42<br /><br /> Tamaño: 75, 23<br /><br /> Texto: Escriba la adivinanza|  
-    |**Botón**|Nombre: QuitGame<br /><br /> Ubicación: 274, 42<br /><br /> Tamaño: 75, 23<br /><br /> Texto: Salir|  
+    |**Button**|Nombre: EnterGuess<br /><br /> Ubicación: 121, 42<br /><br /> Tamaño: 75, 23<br /><br /> Texto: Escriba la adivinanza|  
+    |**Button**|Nombre: QuitGame<br /><br /> Ubicación: 274, 42<br /><br /> Tamaño: 75, 23<br /><br /> Texto: Salir|  
     |**TextBox**|Nombre: WorkflowStatus<br /><br /> Ubicación: 10, 73<br /><br /> Multiline: True<br /><br /> ReadOnly: True<br /><br /> ScrollBars: Vertical<br /><br /> Tamaño: 338, 208|  
   
 5. Establecer el **AcceptButton** propiedad del formulario para **EnterGuess**.  
@@ -341,7 +341,7 @@ Una de las características principales de Windows Workflow Foundation (WF) es l
     }  
     ```  
   
-     `ListPersistedWorkflows` consulta el almacén de instancias para las instancias de flujo de trabajo persistentes y agrega los identificadores de instancia para el `cboInstanceId` cuadro combinado.  
+     `ListPersistedWorkflows` consulta el almacén de instancias con respecto a las instancias de flujo de trabajo persistentes y agrega los identificadores de instancia al cuadro combinado `cboInstanceId`.  
   
 10. Agregue el siguiente método `UpdateStatus` y el delegado correspondiente a la clase de formulario. Este método actualiza la ventana de estado en el formulario con el estado del flujo de trabajo en funcionamiento.  
   
@@ -574,7 +574,7 @@ Una de las características principales de Windows Workflow Foundation (WF) es l
     };  
     ```  
   
-     La enumeración <xref:System.Activities.PersistableIdleAction> tiene tres valores: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> y <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> hace que el flujo de trabajo sea persistente pero no hace que el flujo de trabajo descargar. <xref:System.Activities.PersistableIdleAction.Unload> hace que el flujo de trabajo persistente y se descargue.  
+     La enumeración <xref:System.Activities.PersistableIdleAction> tiene tres valores: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> y <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> hace que el flujo de trabajo sea persistente pero no hace que se descargue. <xref:System.Activities.PersistableIdleAction.Unload> hace que el flujo de trabajo sea persistente y se descargue.  
   
      El siguiente ejemplo es el método `ConfigureWorkflowApplication` completado.  
   
@@ -692,7 +692,7 @@ Una de las características principales de Windows Workflow Foundation (WF) es l
     ```  
   
 ### <a name="BKMK_WorkflowVersionMap"></a> Para habilitar el inicio y reanudación de varios tipos de flujo de trabajo  
- Para reanudar una instancia de flujo de trabajo, el host tiene que proporcionar la definición de flujo de trabajo. En este tutorial hay tres tipos de flujo de trabajo, y los pasos siguientes del tutorial presentan varias versiones de estos tipos. `WorkflowIdentity` Proporciona una forma de una aplicación host para asociar información de identificación de una instancia de flujo de trabajo persistente. Los pasos de esta sección muestran cómo crear una clase de utilidad para contribuir a la asignación de la identidad de flujo de trabajo desde una instancia de flujo de trabajo persistente a la definición de flujo de trabajo correspondiente. Para obtener más información acerca de `WorkflowIdentity` y control de versiones, consulte [utilizando WorkflowIdentity y el control de versiones](using-workflowidentity-and-versioning.md).  
+ Para reanudar una instancia de flujo de trabajo, el host tiene que proporcionar la definición de flujo de trabajo. En este tutorial hay tres tipos de flujo de trabajo, y los pasos siguientes del tutorial presentan varias versiones de estos tipos. `WorkflowIdentity` proporciona una manera para que una aplicación de host asocie información de identificación con una instancia de flujo de trabajo persistente. Los pasos de esta sección muestran cómo crear una clase de utilidad para contribuir a la asignación de la identidad de flujo de trabajo desde una instancia de flujo de trabajo persistente a la definición de flujo de trabajo correspondiente. Para obtener más información acerca de `WorkflowIdentity` y control de versiones, consulte [utilizando WorkflowIdentity y el control de versiones](using-workflowidentity-and-versioning.md).  
   
 1. Haga clic en **NumberGuessWorkflowHost** en **el Explorador de soluciones** y elija **agregar**, **clase**. Tipo `WorkflowVersionMap` en el **nombre** y haga clic en **agregar**.  
   
@@ -806,7 +806,7 @@ Una de las características principales de Windows Workflow Foundation (WF) es l
     }  
     ```  
   
-     `WorkflowVersionMap` contiene tres identidades de flujo de trabajo que se asignan a las tres definiciones de flujo de trabajo de este tutorial y se usa en las secciones siguientes cuando se inician y reanudar los flujos de trabajo.  
+     `WorkflowVersionMap` contiene tres identidades de flujo de trabajo que se asignan a las tres definiciones de flujo de trabajo de este tutorial y se usan en las secciones siguientes al iniciar o al reanudar los flujos de trabajo.  
   
 ### <a name="BKMK_StartWorkflow"></a> Para iniciar un nuevo flujo de trabajo  
   

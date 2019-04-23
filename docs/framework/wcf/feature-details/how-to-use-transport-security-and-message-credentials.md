@@ -1,5 +1,5 @@
 ---
-title: Filtrar para usar seguridad de transporte y credenciales de mensajes
+title: Procedimiento para usar seguridad de transporte y credenciales de mensajes
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
 ms.openlocfilehash: f9c90ac93a27f90479ee7225f62afb98a5000fe9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321489"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>Filtrar para usar seguridad de transporte y credenciales de mensajes
+# <a name="how-to-use-transport-security-and-message-credentials"></a>Procedimiento para usar seguridad de transporte y credenciales de mensajes
 Protección de un servicio con credenciales de mensajes y transporte usa lo mejor de los modos de seguridad de mensajes y transporte en Windows Communication Foundation (WCF). En suma, la seguridad de la capa de transporte proporciona integridad y confidencialidad, mientras que la seguridad de la capa de mensaje proporciona una variedad de credenciales que no son posibles con mecanismos de seguridad de transporte estrictos. En este tema se muestran los pasos básicos para implementar transporte con credenciales de mensaje usando los enlaces <xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.NetTcpBinding>. Para obtener más información acerca de cómo establecer el modo de seguridad, vea [Cómo: Establecer el modo de seguridad](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Al establecer el modo de seguridad en `TransportWithMessageCredential`, el transporte determina el mecanismo real que proporciona la seguridad de nivel de transporte. Para HTTP, el mecanismo es Secure Sockets Layer (SSL) sobre HTTP (HTTPS); para TCP, es SSL sobre TCP o Windows.  
@@ -162,6 +162,6 @@ Protección de un servicio con credenciales de mensajes y transporte usa lo mejo
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para establecer el modo de seguridad](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Cómo: Establecer el modo de seguridad](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
 - [Seguridad de servicios](../../../../docs/framework/wcf/securing-services.md)
 - [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

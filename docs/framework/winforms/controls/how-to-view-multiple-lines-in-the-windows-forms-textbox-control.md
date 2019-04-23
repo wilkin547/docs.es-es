@@ -1,5 +1,5 @@
 ---
-title: Filtrar para ver varias líneas en el control TextBox de formularios Windows Forms
+title: Procedimiento para ver varias líneas en el control TextBox de formularios Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - newline
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
 ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324193"
 ---
-# <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Filtrar para ver varias líneas en el control TextBox de formularios Windows Forms
+# <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Procedimiento para ver varias líneas en el control TextBox de formularios Windows Forms
 De forma predeterminada, los formularios de Windows <xref:System.Windows.Forms.TextBox> control muestra una sola línea de texto y no muestra barras de desplazamiento. Si el texto es mayor que el espacio disponible, sólo una parte del texto es visible. Puede cambiar este comportamiento predeterminado estableciendo la <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, y <xref:System.Windows.Forms.TextBox.ScrollBars%2A> propiedades en los valores adecuados.  
   
 ### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>Para mostrar un retorno de carro en el control TextBox  
@@ -44,15 +44,15 @@ De forma predeterminada, los formularios de Windows <xref:System.Windows.Forms.T
     |Valor|Descripción|  
     |-----------|-----------------|  
     |`false`|Texto del control no se ajustarán automáticamente, por lo que se desplazará a la derecha hasta que se alcanza un salto de línea. Use este valor si eligió <xref:System.Windows.Forms.ScrollBars.Horizontal> las barras de desplazamiento o <xref:System.Windows.Forms.ScrollBars.Both>, más arriba.|  
-    |`true` (predeterminado)|No aparecerá la barra de desplazamiento horizontal. Use este valor si eligió <xref:System.Windows.Forms.ScrollBars.Vertical> las barras de desplazamiento o <xref:System.Windows.Forms.ScrollBars.None>, anteriormente, para mostrar uno o varios párrafos.|  
+    |`true` (valor predeterminado)|No aparecerá la barra de desplazamiento horizontal. Use este valor si eligió <xref:System.Windows.Forms.ScrollBars.Vertical> las barras de desplazamiento o <xref:System.Windows.Forms.ScrollBars.None>, anteriormente, para mostrar uno o varios párrafos.|  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.TextBox>
 - [Información general sobre el control TextBox](textbox-control-overview-windows-forms.md)
-- [Filtrar para controlar el punto de inserción en un control TextBox de formularios Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Filtrar para crear un cuadro de texto de contraseña con el control TextBox de formularios Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Filtrar para crear un cuadro de texto de solo lectura](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Filtrar para insertar comillas en una cadena](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Filtrar para seleccionar texto en el control TextBox de formularios Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Cómo: Controlar el punto de inserción en un Control TextBox de formularios Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Cómo: Crear un cuadro de texto de contraseña con el Control TextBox de Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Cómo: Crear un cuadro de texto de solo lectura](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Cómo: Insertar comillas en una cadena](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Cómo: Seleccionar texto en el Control TextBox de Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
 - [Control TextBox](textbox-control-windows-forms.md)

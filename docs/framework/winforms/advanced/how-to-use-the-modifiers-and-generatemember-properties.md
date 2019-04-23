@@ -1,5 +1,5 @@
 ---
-title: Filtrar para usar las propiedades Modifiers y GenerateMember
+title: Procedimiento para usar las propiedades Modifiers y GenerateMember
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
 ms.openlocfilehash: 6194ef288bd43267c2b00fa6d7c6250e90b37c75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322646"
 ---
-# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Filtrar para usar las propiedades Modifiers y GenerateMember
+# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Procedimiento para usar las propiedades Modifiers y GenerateMember
 Cuando se coloca un componente en un formulario de Windows, el entorno de diseño proporciona dos propiedades: `GenerateMember` y `Modifiers`. El `GenerateMember` propiedad especifica que cuando el Diseñador de Windows Forms genera una variable miembro para un componente. El `Modifiers` propiedad es el modificador de acceso asignado a esa variable de miembro. Si el valor de la `GenerateMember` propiedad es `false`, el valor de la `Modifiers` propiedad no tiene ningún efecto.  
   
 > [!NOTE]
@@ -62,6 +62,6 @@ Cuando se coloca un componente en un formulario de Windows, el entorno de diseñ
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.Button>
-- [Herencia visual de formularios Windows Forms](windows-forms-visual-inheritance.md)
-- [Tutorial: Demostración de la herencia visual](walkthrough-demonstrating-visual-inheritance.md)
-- [Filtrar para heredar formularios Windows Forms](how-to-inherit-windows-forms.md)
+- [Herencia visual de Windows Forms](windows-forms-visual-inheritance.md)
+- [Tutorial: Demostración de la herencia Visual](walkthrough-demonstrating-visual-inheritance.md)
+- [Cómo: Heredar Windows Forms](how-to-inherit-windows-forms.md)

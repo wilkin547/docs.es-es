@@ -9,23 +9,21 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45ac26442adc78c5d1e6a2efe94fc2cefff86562
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219625"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59326286"
 ---
 # <a name="copying-and-pinning"></a>Copiar y fijar
 Al serializar datos, el serializador de interoperabilidad puede copiar o anclar los datos que se van a serializar. Copiar los datos coloca una copia de datos desde una ubicación de memoria en otra. En la siguiente ilustración se muestran las diferencias entre copiar un tipo de valor y copiar un tipo pasado por referencia de memoria administrada a memoria no administrada.  
   
- ![Tipos de valor pasados por valor y por referencia](./media/interopmarshalcopy.gif "interopmarshalcopy")  
-Tipos de valor pasados por valor y por referencia  
+ ![Diagrama que muestra cómo se copian los tipos de referencia y valor.](./media/copying-and-pinning/interop-marshal-copy.gif)  
   
- Los argumentos de método pasados por valor se serializan en código no administrado como valores de la pila. El proceso de copia es directo. Los argumentos que se pasan por referencia se pasan como punteros en la pila. Los tipos de referencia también se pasan por valor y por referencia. Como se muestra en la siguiente ilustración, los tipos de referencia pasados por valor se copian o se anclan.  
+ Los argumentos de método pasados por valor se serializan en código no administrado como valores de la pila. El proceso de copia es directo. Los argumentos que se pasan por referencia se pasan como punteros en la pila. Los tipos de referencia también se pasan por valor y por referencia. Como se muestra en la siguiente ilustración, los tipos de referencia pasados por valor se copian o se anclan: 
   
- ![Interoperabilidad COM](./media/interopmarshalpin.gif "interopmarshalpin")  
-Tipos de referencia pasados por valor y por referencia  
+ ![Diagrama que muestra los tipos de referencia pasados por valor y por referencia.](./media/copying-and-pinning/interop-marshal-reference-pin.gif)  
   
  Anclar bloquea temporalmente los datos en su ubicación de memoria actual, lo que evita que el recolector de elementos no utilizados de Common Language Runtime los reubique. El serializador ancla los datos para reducir la sobrecarga de la copia y mejorar el rendimiento. El tipo de los datos determina si se copian o se anclan durante el proceso de serialización.  El anclaje se realiza automáticamente durante la serialización para objetos como <xref:System.String>, pero también se puede anclar manualmente la memoria mediante la clase <xref:System.Runtime.InteropServices.GCHandle>.  
   
@@ -78,6 +76,7 @@ Tipos de referencia pasados por valor y por referencia
  Cuando se pasa <xref:System.Text.StringBuilder?displayProperty=nameWithType> por valor, el serializador pasa una referencia al búfer interno de **StringBuilder** directamente al autor de la llamada. El autor de la llamada y el destinatario deben acordar el tamaño del búfer. El autor de la llamada es responsable de crear un **StringBuilder** de la longitud adecuada. El destinatario debe tomar las precauciones necesarias para asegurarse de que el búfer no se desborda. **StringBuilder** es una excepción a la regla de que los tipos de referencia que se pasan por valor se pasan como parámetros In de forma predeterminada. Siempre se pasa como In/Out.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Comportamiento predeterminado del cálculo de referencias](default-marshaling-behavior.md)
 - [Atributos direccionales](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Serialización de interoperabilidad](interop-marshaling.md)

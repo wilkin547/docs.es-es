@@ -1,5 +1,5 @@
 ---
-title: Filtrar para almacenar claves asimétricas en un contenedor de claves
+title: Procedimiento para almacenar claves asimétricas en un contenedor de claves
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,13 +18,13 @@ ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326195"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Filtrar para almacenar claves asimétricas en un contenedor de claves
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Procedimiento para almacenar claves asimétricas en un contenedor de claves
 Las claves privadas asimétricas nunca deben almacenarse literalmente o en texto sin formato en el equipo local. Si debe almacenar una clave privada, utilice un contenedor de claves. Para más información sobre contenedores de claves, consulte [Descripción de los contenedores de claves RSA en el nivel de equipo y de usuario](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Para crear una clave asimétrica y guardarla en un contenedor de claves  
@@ -228,4 +228,4 @@ Key deleted.
 - [Generar claves para cifrado y descifrado](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [Cifrar datos](../../../docs/standard/security/encrypting-data.md)
 - [Descifrar datos](../../../docs/standard/security/decrypting-data.md)
-- [servicios criptográficos](../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

@@ -12,10 +12,10 @@ ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480955"
 ---
 # <a name="bindingfailure-mda"></a>MDA de bindingFailure
@@ -52,7 +52,7 @@ El primer paso es determinar por qué CLR no ha podido enlazar con el ensamblado
 
 - Resuelva la causa en función de la determinación anterior. Las opciones de resolución posibles son las siguientes:
 
-  - Instale el ensamblado solicitado en la caché global de ensamblados y llame al método <xref:System.Reflection.Assembly.Load%2A> método para cargar el ensamblado por identidad.
+  - Instale el ensamblado solicitado en la caché global de ensamblados y llame al método <xref:System.Reflection.Assembly.Load%2A> para cargar el ensamblado por identidad.
 
   - Copie el ensamblado solicitado en el directorio de la aplicación y llame al método <xref:System.Reflection.Assembly.Load%2A> para cargar el ensamblado por identidad.
 
@@ -107,4 +107,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>Vea también
 
-- [Diagnóstico de errores con asistentes de depuraciones administradas](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

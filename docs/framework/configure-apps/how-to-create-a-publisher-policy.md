@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear una directiva de publicador
+title: Procedimiento para crear una directiva de publicador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344668"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Filtrar para crear una directiva de publicador
+# <a name="how-to-create-a-publisher-policy"></a>Procedimiento para crear una directiva de publicador
 Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar una versión más reciente de un ensamblado mediante la inclusión de un archivo de directiva de publicador con el ensamblado actualizado. El archivo de directiva de publicador especifica redirección de ensamblado y la configuración de base de código y usa el mismo formato que un archivo de configuración de la aplicación. El archivo de directiva de publicador se compila en un ensamblado y colocar en la caché global de ensamblados.  
   
  Hay tres pasos implicados en la creación de una directiva de publicador:  
@@ -61,7 +61,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
     -   El *publisherPolicyAssemblyFile* argumento es el nombre del ensamblado de directiva de publicador que da como resultado de este comando. El nombre de archivo de ensamblado debe tener el formato:  
   
-         **Directiva.** *número principal* **.** *número secundario* **.** *mainAssemblyName* **.dll**  
+         **policy.** *número principal* **.** *número secundario* **.** *mainAssemblyName* **.dll**  
   
     -   El *keyPairFile* argumento es el nombre del archivo que contiene el par de claves. Debe firmar el ensamblado y el ensamblado de directivas del publicador con el mismo par de claves.  
   

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
 ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344967"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Cómo crear un valor de configuración en tiempo de diseño
@@ -35,4 +35,4 @@ Puede crear una nueva configuración en tiempo de diseño mediante el Diseñador
 
 - [Utilizar valores de configuración de aplicación y de usuario](using-application-settings-and-user-settings.md)
 - [Introducción a la configuración de la aplicación](application-settings-overview.md)
-- [Cómo cambiar el valor de una opción de configuración existente en tiempo de diseño](how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [Cómo: Cambie el valor de una configuración existente en tiempo de diseño](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

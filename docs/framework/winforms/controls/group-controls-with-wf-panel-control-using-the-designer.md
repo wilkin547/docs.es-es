@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agrupar controles con el control Panel de formularios Windows Forms mediante el diseñador
+title: Procedimiento para agrupar controles con el control Panel de formularios Windows Forms mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Panel control [Windows Forms], grouping controls
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
 ms.openlocfilehash: 662343af42f72816a5a673d2cd6d839a5dca9190
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341405"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Filtrar para agrupar controles con el control Panel de formularios Windows Forms mediante el diseñador
+# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Procedimiento para agrupar controles con el control Panel de formularios Windows Forms mediante el diseñador
 Windows Forms <xref:System.Windows.Forms.Panel> controles se usan para agrupar otros controles. Existen tres razones para agrupar controles. Para agrupar elementos de formulario relacionados para una interfaz de usuario clara; forma visual otra es mediante programación de agrupación, de botones de radio, por ejemplo; el último es para mover los controles como una unidad de tiempo de diseño.  
   
 > [!NOTE]
@@ -31,6 +31,6 @@ Windows Forms <xref:System.Windows.Forms.Panel> controles se usan para agrupar o
   
 ## <a name="see-also"></a>Vea también
 
-- [Control Panel](panel-control-windows-forms.md)
-- [Información general sobre el control Panel](panel-control-overview-windows-forms.md)
-- [Filtrar para establecer el fondo de un control Panel](how-to-set-the-background-of-a-windows-forms-panel.md)
+- [Panel (control)](panel-control-windows-forms.md)
+- [Información general del control Panel](panel-control-overview-windows-forms.md)
+- [Cómo: Establecer el fondo de un Panel](how-to-set-the-background-of-a-windows-forms-panel.md)

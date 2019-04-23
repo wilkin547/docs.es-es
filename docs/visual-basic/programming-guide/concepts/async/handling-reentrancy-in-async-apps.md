@@ -3,10 +3,10 @@ title: Controlar la reentrada en aplicaciones asincrónicas (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324791"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Controlar la reentrada en aplicaciones asincrónicas (Visual Basic)
@@ -18,13 +18,13 @@ Cuando se incluye código asincrónico en una aplicación, hay que tener en cuen
   
 -   [Controlar la reentrada](#BKMK_HandlingReentrancy)  
   
-    -   [Deshabilitar el botón Iniciar](#BKMK_DisableTheStartButton)  
+    -   [Deshabilitar el botón de inicio](#BKMK_DisableTheStartButton)  
   
     -   [Cancelar y reiniciar la operación](#BKMK_CancelAndRestart)  
   
-    -   [Ejecutar varias operaciones y poner en cola el resultado](#BKMK_RunMultipleOperations)  
+    -   [Ejecutar varias operaciones y poner en cola la salida](#BKMK_RunMultipleOperations)  
   
--   [Revisar y ejecutar la aplicación de ejemplo](#BKMD_SettingUpTheExample)  
+-   [Revisión y ejecución de la aplicación de ejemplo](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  Para ejecutar el ejemplo, debe tener instalado en el equipo Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior.  
@@ -89,7 +89,7 @@ TOTAL bytes returned:  890591
 ## <a name="BKMK_HandlingReentrancy"></a> Controlar la reentrada  
  La reentrada se puede controlar de varias maneras en función de lo que se desee de la aplicación. Este tema presenta los siguientes ejemplos:  
   
--   [Deshabilitar el botón Iniciar](#BKMK_DisableTheStartButton)  
+-   [Deshabilitar el botón de inicio](#BKMK_DisableTheStartButton)  
   
      Deshabilite el botón **Start** (Iniciar) mientras se ejecuta la operación de modo que el usuario no pueda interrumpirla.  
   
@@ -97,7 +97,7 @@ TOTAL bytes returned:  890591
   
      Cancele cualquier operación que se esté ejecutando cuando el usuario haga clic de nuevo en el botón **Start** y, después, deje que continúe la última operación solicitada.  
   
--   [Ejecutar varias operaciones y poner en cola el resultado](#BKMK_RunMultipleOperations)  
+-   [Ejecutar varias operaciones y poner en cola la salida](#BKMK_RunMultipleOperations)  
   
      Permita que todas las operaciones solicitadas se ejecuten de forma asincrónica, pero coordine la presentación de salida para que los resultados de cada operación aparecen juntos y en orden.  
   
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>El método AccessTheWebAsync  
  En este ejemplo se divide `AccessTheWebAsync` en dos métodos. El primer método, `AccessTheWebAsync`, inicia todas las tareas de descarga de un grupo y configura `pendingWork` para controlar el proceso de visualización. El método usa una consulta de Language Integrated Query (consulta LINQ) y <xref:System.Linq.Enumerable.ToArray%2A> para iniciar todas las tareas de descarga al mismo tiempo.  
   
- `AccessTheWebAsync` a continuación, llama a `FinishOneGroupAsync` para esperar la finalización de todas las descargas y mostrar su duración.  
+ A continuación, `AccessTheWebAsync` llama a `FinishOneGroupAsync` para esperar la finalización de todas las descargas y mostrar su duración.  
   
- `FinishOneGroupAsync` Devuelve una tarea que se asigna a `pendingWork` en `AccessTheWebAsync`. Ese valor evita que otra operación interrumpa la tarea antes de que finalice.  
+ `FinishOneGroupAsync` devuelve una tarea que se asigna a `pendingWork` en `AccessTheWebAsync`. Ese valor evita que otra operación interrumpa la tarea antes de que finalice.  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  

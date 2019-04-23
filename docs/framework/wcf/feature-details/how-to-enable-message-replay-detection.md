@@ -1,5 +1,5 @@
 ---
-title: Filtrar para habilitar la detección de repetición de mensajes
+title: Procedimiento para habilitar la detección de repetición de mensajes
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
 ms.openlocfilehash: a7bdfc244b0ff1c2ed625235df7e74ced026c542
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343615"
 ---
-# <a name="how-to-enable-message-replay-detection"></a>Filtrar para habilitar la detección de repetición de mensajes
+# <a name="how-to-enable-message-replay-detection"></a>Procedimiento para habilitar la detección de repetición de mensajes
 Un ataque de reproducción se produce cuando un atacante copia una secuencia de mensajes entre dos partes y reproduce la secuencia a una o más partes. A menos que se mitigue, los equipos sujetos al ataque procesarán el flujo como mensajes legítimos, generando un intervalo de consecuencias erróneas, como las órdenes redundantes de un elemento.  
   
  Para obtener más información acerca de la detección de reproducción de mensajes, vea [detección de reproducción de mensajes](https://go.microsoft.com/fwlink/?LinkId=88536).  
@@ -90,7 +90,7 @@ Un ataque de reproducción se produce cuando un atacante copia una secuencia de 
   
 -   <xref:System.ServiceModel.BasicHttpBinding>.  
   
--   <xref:System.ServiceModel.WSHttpBinding> con el <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> propiedad establecida en `false`.  
+-   <xref:System.ServiceModel.WSHttpBinding> con la propiedad <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> establecida en `false`.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
@@ -108,4 +108,4 @@ Un ataque de reproducción se produce cuando un atacante copia una secuencia de 
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - [Conversaciones y sesiones seguras](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
 - [\<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
-- [Filtrar para crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

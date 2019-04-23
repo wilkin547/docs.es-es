@@ -1,16 +1,16 @@
 ---
-title: Filtrar para crear un servicio de flujo de trabajo que consuma un contrato de servicio existente
+title: Procedimiento para crear un servicio de flujo de trabajo que consuma un contrato de servicio existente
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
 ms.openlocfilehash: c2ca9c349718c3939d74d052ff0ed448879cd045
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344720"
 ---
-# <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Filtrar para crear un servicio de flujo de trabajo que consuma un contrato de servicio existente
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] presenta una mejor integración entre los servicios web y flujos de trabajo en forma de desarrollo de flujo de trabajo de contrato primero. La herramienta de desarrollo de flujo de trabajo de contrato primero permite diseñar el contrato en Code First. La herramienta después genera automáticamente una plantilla de actividad en el cuadro de herramientas para las operaciones del contrato.  
+# <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Procedimiento para crear un servicio de flujo de trabajo que consuma un contrato de servicio existente
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] presenta una mejor integración entre los servicios web y los flujos de trabajo en forma de desarrollo de flujo de trabajo de contrato primero. La herramienta de desarrollo de flujo de trabajo de contrato primero permite diseñar el contrato en Code First. La herramienta después genera automáticamente una plantilla de actividad en el cuadro de herramientas para las operaciones del contrato.  
   
 > [!NOTE]
 >  Este tema proporciona instrucciones paso a paso sobre cómo crear un servicio de flujo de trabajo de contrato primero. Para obtener más información sobre el desarrollo de servicio de flujo de trabajo de contrato primero, consulte [desarrollo de servicio de flujo de trabajo de contrato primero](contract-first-workflow-service-development.md).  

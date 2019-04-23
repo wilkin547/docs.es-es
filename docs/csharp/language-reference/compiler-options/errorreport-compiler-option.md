@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 27c7500a3d33ec17680896f21f0e44d98fee94c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638475"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59345097"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (Opciones del compilador de C#)
 Esta opción proporciona una forma cómoda de notificar un error interno del compilador de C# a Microsoft.  
@@ -51,13 +51,13 @@ Esta opción proporciona una forma cómoda de notificar un error interno del com
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra la página **Propiedades** del proyecto. Para obtener más información, consulte [Compilar (Página, Diseñador de proyectos) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1. Abra la página **Propiedades** del proyecto. Para obtener más información, consulte [Compilar (Página, Diseñador de proyectos) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Haga clic en la página de propiedades de **Compilar**.  
+2. Haga clic en la página de propiedades de **Compilar**.  
   
-3.  Haga clic en el botón **Avanzada** .  
+3. Haga clic en el botón **Avanzada** .  
   
-4.  Modifique la propiedad **Informe de errores internos del compilador**.  
+4. Modifique la propiedad **Informe de errores internos del compilador**.  
   
  Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.  
   

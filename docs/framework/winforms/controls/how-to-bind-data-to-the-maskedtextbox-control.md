@@ -1,5 +1,5 @@
 ---
-title: Filtrar para enlazar datos al control MaskedTextBox
+title: Procedimiento para enlazar datos al control MaskedTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
 ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342237"
 ---
-# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Filtrar para enlazar datos al control MaskedTextBox
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Procedimiento para enlazar datos al control MaskedTextBox
 Puede enlazar datos a un <xref:System.Windows.Forms.MaskedTextBox> controlar igual que lo haría para cualquier otro control de Windows Forms. Sin embargo, si el formato de los datos en la base de datos no coincide con el formato esperado por la definición de máscara, deberá volver a formatear los datos. El siguiente procedimiento muestra cómo hacer esto mediante la <xref:System.Windows.Forms.Binding.Format> y <xref:System.Windows.Forms.Binding.Parse> eventos de la <xref:System.Windows.Forms.Binding> clase para mostrar el número de teléfono distinto y campos de la base de datos de extensión de teléfono como un único campo editable.  
   
  El procedimiento siguiente requiere que tienen acceso a una base de datos de SQL Server con la base de datos de ejemplo Northwind instalada.  
@@ -251,4 +251,4 @@ Puede enlazar datos a un <xref:System.Windows.Forms.MaskedTextBox> controlar igu
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Trabajar con el control MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)
+- [Tutorial: Trabajar con el Control MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

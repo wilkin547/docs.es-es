@@ -1,5 +1,5 @@
 ---
-title: Filtrar Definir varias versiones de un procedimiento (Visual Basic)
+title: Procedimiento Definir varias versiones de un procedimiento (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
 ms.openlocfilehash: fc7a8e18394b904f0c22a80f71dee091d4f786ab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324037"
 ---
-# <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Filtrar Definir varias versiones de un procedimiento (Visual Basic)
+# <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Procedimiento Definir varias versiones de un procedimiento (Visual Basic)
 Puede definir un procedimiento en varias versiones por *sobrecarga* que, con el mismo nombre pero con una lista de parámetros distinta para cada versión. El propósito de sobrecarga es definir varias versiones estrechamente relacionadas de un procedimiento sin tener que distinguirlas por su nombre.  
   
  Para obtener más información, consulta [Procedure Overloading](./procedure-overloading.md).  
@@ -47,7 +47,7 @@ Puede definir un procedimiento en varias versiones por *sobrecarga* que, con el 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Solución de problemas de procedimientos](./troubleshooting-procedures.md)
-- [Filtrar para sobrecargar un procedimiento que toma parámetros opcionales](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Filtrar para sobrecargar un procedimiento que toma un número indefinido de parámetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Cómo: Sobrecargar un procedimiento que toma parámetros opcionales](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Cómo: Sobrecargar un procedimiento que toma un número indefinido de parámetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Consideraciones sobre la sobrecarga de procedimientos](./considerations-in-overloading-procedures.md)
-- [Overload Resolution](./overload-resolution.md)
+- [Resolución de sobrecargas](./overload-resolution.md)

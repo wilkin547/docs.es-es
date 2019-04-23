@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
 ms.openlocfilehash: db137eb84108c6adbbf04a380934bb6da6936d61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343056"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Tutorial: Crear credenciales de cliente y servicio personalizadas
@@ -40,9 +40,9 @@ En este tema se muestra cómo implementar credenciales de cliente y servicio per
 ## <a name="first-in-a-series"></a>Primero en una serie  
  Creación de una clase de credenciales personalizadas es el primer paso, porque es la razón para personalizar las credenciales cambiar el comportamiento WCF con respecto al suministro de credenciales, serialización de tokens de seguridad o autenticación. Otros temas en esta sección describen cómo crear serializadores y autenticadores personalizados. En este aspecto, crear la clase de credenciales personalizada es el primer tema de la serie. Las acciones subsiguientes (crear serializadores y autenticadores personalizados) sólo se pueden hacer después de crear las credenciales personalizadas. Entre los temas adicionales que se generan a partir de este tema se incluyen:  
   
--   [Filtrar para crear un proveedor de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+-   [Cómo: Crear un proveedor de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
--   [Filtrar para crear un autenticador de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+-   [Cómo: Crear un autenticador de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
 -   [Cómo: Crear un Token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
@@ -186,6 +186,6 @@ En este tema se muestra cómo implementar credenciales de cliente y servicio per
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
-- [Filtrar para crear un proveedor de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Filtrar para crear un autenticador de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Filtrar para crear un token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [Cómo: Crear un proveedor de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Cómo: Crear un autenticador de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Cómo: Crear un Token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

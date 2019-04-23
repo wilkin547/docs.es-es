@@ -1,5 +1,5 @@
 ---
-title: Filtrar Determinar el número de entidades devueltas por una consulta (WCF Data Services)
+title: Procedimiento Determinar el número de entidades devueltas por una consulta (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - WCF Data Services, row count
 ms.assetid: 03d41a82-df95-40ac-8439-a6c327d37ba8
 ms.openlocfilehash: f723d91dd30817f6e15be11dd1bc1432a5939647
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517556"
 ---
-# <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Filtrar Determinar el número de entidades devueltas por una consulta (WCF Data Services)
+# <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Procedimiento Determinar el número de entidades devueltas por una consulta (WCF Data Services)
 Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede determinar el número de entidades que existen en el conjunto de entidades especificado por un URI de consulta. Este número se puede incluir junto con el resultado de la búsqueda o como valor entero. Para obtener más información, consulte [consultar el servicio de datos](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean cuando se completa la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  

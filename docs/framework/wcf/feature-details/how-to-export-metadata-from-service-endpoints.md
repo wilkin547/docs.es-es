@@ -1,18 +1,18 @@
 ---
-title: Filtrar para exportar metadatos desde puntos de conexión de servicio
+title: Procedimiento para exportar metadatos desde puntos de conexión de servicio
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
 ms.openlocfilehash: 6bf2eb3d295f9cbf6a7e13a612d5846ceaa75ab4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345513"
 ---
-# <a name="how-to-export-metadata-from-service-endpoints"></a>Filtrar para exportar metadatos desde puntos de conexión de servicio
+# <a name="how-to-export-metadata-from-service-endpoints"></a>Procedimiento para exportar metadatos desde puntos de conexión de servicio
 En este tema se explica cómo exportar los metadatos desde los extremos de servicio.  
   
 ### <a name="to-export-metadata-from-service-endpoints"></a>Exportar metadatos desde puntos de conexión de servicio  
@@ -59,4 +59,4 @@ En este tema se explica cómo exportar los metadatos desde los extremos de servi
 
 - [Información general de la arquitectura de metadatos](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Utilización de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Puntos de conexión: direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Puntos de conexión: Las direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

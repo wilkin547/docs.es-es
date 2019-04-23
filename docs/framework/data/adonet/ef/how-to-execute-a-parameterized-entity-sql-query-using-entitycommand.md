@@ -1,18 +1,18 @@
 ---
-title: Filtrar para ejecutar una consulta parametrizada de Entity SQL mediante EntityCommand
+title: Procedimiento para ejecutar una consulta parametrizada de Entity SQL mediante EntityCommand
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e93fea43-7e03-4d7d-9fee-2517b8b88cba
 ms.openlocfilehash: 9f87ff28c4da864df8004f3baa1a8339503fb351
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324752"
 ---
-# <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>Filtrar para ejecutar una consulta parametrizada de Entity SQL mediante EntityCommand
+# <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>Procedimiento para ejecutar una consulta parametrizada de Entity SQL mediante EntityCommand
 En este tema se muestra cómo ejecutar un [!INCLUDE[esql](../../../../../includes/esql-md.md)] consulta con parámetros mediante un <xref:System.Data.EntityClient.EntityCommand> objeto.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  
@@ -32,5 +32,5 @@ En este tema se muestra cómo ejecutar un [!INCLUDE[esql](../../../../../include
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar Ejecutar una consulta parametrizada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))
+- [Cómo: Ejecutar una consulta parametrizada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))
 - [Lenguaje Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

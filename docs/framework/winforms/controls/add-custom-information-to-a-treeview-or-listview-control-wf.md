@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)
+title: Procedimiento para agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
 ms.openlocfilehash: 302eb1b88d4e43b4e2bd6395e27a3a6489320085
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344161"
 ---
-# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Filtrar para agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Procedimiento para agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)
 Puede crear un nodo derivado en un formulario Windows Forms <xref:System.Windows.Forms.TreeView> control o un elemento derivado en un <xref:System.Windows.Forms.ListView> control. La derivación permite agregar cualquier campo que se necesite, así como métodos personalizados y constructores para controlarlos. Uno de los usos de esta característica consiste en adjuntar un objeto Customer a cada nodo de árbol o elemento de lista. Los ejemplos siguientes son para un <xref:System.Windows.Forms.TreeView> control, pero el mismo enfoque se puede usar para un <xref:System.Windows.Forms.ListView> control.  
   
 ### <a name="to-derive-a-tree-node"></a>Para derivar un nodo de árbol  
@@ -132,5 +132,5 @@ Puede crear un nodo derivado en un formulario Windows Forms <xref:System.Windows
   
 ## <a name="see-also"></a>Vea también
 
-- [TreeView (Control)](treeview-control-windows-forms.md)
-- [Control ListView](listview-control-windows-forms.md)
+- [TreeView (control)](treeview-control-windows-forms.md)
+- [ListView (Control)](listview-control-windows-forms.md)

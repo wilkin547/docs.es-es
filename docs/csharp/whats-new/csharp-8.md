@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0. Este artículo está actualizado con la versión preliminar 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545564"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427284"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -58,7 +58,7 @@ public enum Rainbow
 }
 ```
 
-Puede convertir un valor `Rainbow` a sus valores RGB mediante el método siguiente que contiene una expresión switch:
+Si la aplicación definió un tipo `RGBColor` construido a partir de los componentes `R`, `G` y `B`, podría convertir un valor `Rainbow` a sus valores RGB con el método siguiente que contiene una expresión switch:
 
 ```csharp
 public static RGBColor FromRainbow(Rainbow colorBand) =>
@@ -219,7 +219,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 ```
 
 En el ejemplo anterior, el archivo se elimina cuando se alcanza la llave de cierre del método. Ese es el final del ámbito en el que se declara `file`. El código anterior es equivalente al siguiente código que usa las [instrucciones using](../language-reference/keywords/using-statement.md) clásicas:
-
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)

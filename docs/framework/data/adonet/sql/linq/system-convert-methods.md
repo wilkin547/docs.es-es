@@ -3,15 +3,15 @@ title: System.Convert (Métodos)
 ms.date: 03/30/2017
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
 ms.openlocfilehash: 9836820f2c084a80fcc0a4856f20597716344dfd
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480656"
 ---
 # <a name="systemconvert-methods"></a>System.Convert (Métodos)
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite los siguientes <xref:System.Convert> métodos.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite los métodos <xref:System.Convert> siguientes.
 
 - Versiones con un parámetro <xref:System.IFormatProvider>.
 
@@ -29,7 +29,7 @@ ms.locfileid: "59480656"
 
   - `public static <Type2> To<Type2>(<Type1> value);` donde
 
-    `Type1` y `Type2` son cada uno de `sbyte`, `uint`, `ulong`, o `ushort`.
+    `Type1` y `Type2` son `sbyte`, `uint`, `ulong` o `ushort`.
 
   - C#:
 

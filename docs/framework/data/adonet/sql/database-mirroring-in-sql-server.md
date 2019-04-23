@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
 ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325701"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Creación de reflejo de la base de datos en SQL Server
@@ -61,8 +61,8 @@ string activeServer = connection.DataSource;
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[Creación de reflejo de la base de datos](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Describe cómo establecer y configurar la creación de reflejos en SQL Server.|  
+|[Creación de reflejo de base de datos](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Describe cómo establecer y configurar la creación de reflejos en SQL Server.|  
   
 ## <a name="see-also"></a>Vea también
 
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

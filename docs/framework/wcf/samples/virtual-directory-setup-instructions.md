@@ -3,10 +3,10 @@ title: Instrucciones de configuración del directorio virtual
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325350"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instrucciones de configuración del directorio virtual
@@ -59,9 +59,9 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
 7. De forma predeterminada, las casillas siguientes están activadas:  
   
-    -   **Leer**  
+    -   **Read**  
   
-    -   **Ejecutar scripts (como ASP)**  
+    -   **Ejecutar secuencias de comandos (por ejemplo, ASP)**  
   
 8. Haga clic en **siguiente**y, a continuación, haga clic en **finalizar** para completar el asistente.  
   
@@ -84,7 +84,7 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
 2. De forma predeterminada, las casillas siguientes están activadas:  
   
-    -   **Leer**  
+    -   **Read**  
   
     -   **Registrar visitas**  
   
@@ -192,4 +192,4 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de hospedaje Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+- [Instrucciones de hospedaje de Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

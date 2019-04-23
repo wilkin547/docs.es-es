@@ -3,10 +3,10 @@ title: Creación de instancias de inicialización
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
 ms.openlocfilehash: 1414908025416f4cdd6e5b51c052799631ab52cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322191"
 ---
 # <a name="instancing-initialization"></a>Creación de instancias de inicialización
@@ -154,7 +154,7 @@ if (activeObjectsCount == 0)
   
  Este ejemplo utiliza un atributo personalizado. Cuando se construye <xref:System.ServiceModel.ServiceHost>, examina los atributos utilizados en la definición de tipo del servicio y agrega los comportamientos disponibles a la colección de comportamientos de la descripción del servicio.  
   
- El <xref:System.ServiceModel.Description.IServiceBehavior> interfaz tiene tres métodos: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>`,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>`,` y <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Estos métodos son invocados por WCF cuando el <xref:System.ServiceModel.ServiceHost> se está inicializando. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> se llama primero; permite al servicio que se inspeccionarán para incoherencias. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> se llama a continuación. Este método solo es necesario en escenarios muy avanzados. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> se llama en último lugar y es responsable de configurar el tiempo de ejecución. Los parámetros siguientes se pasan a <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
+ El <xref:System.ServiceModel.Description.IServiceBehavior> interfaz tiene tres métodos: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` y <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Estos métodos son invocados por WCF cuando el <xref:System.ServiceModel.ServiceHost> se está inicializando. Primero se llama a <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>; permite inspeccionar el servicio para ver si hay incoherencias. Después se llama a <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>; este método solo se necesita en escenarios muy avanzados. En último lugar se llama a <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>, que es responsable de configurar el tiempo de ejecución. Los parámetros siguientes se pasan a <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
   
 -   `Description`: Este parámetro proporciona la descripción del servicio para el servicio completo. Esto se puede utilizar para inspeccionar los datos de la descripción sobre los extremos del servicio, los contratos, enlaces y otros datos asociados al servicio.  
   
@@ -203,7 +203,7 @@ public class PoolService : IPoolService
 ## <a name="hooking-activation-and-deactivation"></a>Activación y desactivación de enlace  
  El objetivo principal de la agrupación de objetos es optimizar los objetos de corta duración con una creación e inicialización relativamente cara. Por consiguiente, puede aumentar considerablemente el rendimiento de una aplicación si se utiliza correctamente. Dado que el objeto se devuelve desde el grupo, al constructor se llama solo una vez. Sin embargo, algunas aplicaciones requieren cierto nivel de control para que puedan inicializar y limpiar los recursos utilizados durante un contexto único. Por ejemplo, un objeto que está siendo utilizado por un conjunto de cálculos puede restablecer los campos privados antes de procesar el cálculo siguiente. Enterprise Services habilitó este tipo de inicialización específica del contexto permitiendo al desarrollador de objetos invalidar los métodos `Activate` y `Deactivate` de la clase base <xref:System.EnterpriseServices.ServicedComponent>.  
   
- El conjunto de objetos llama al método `Activate` justo antes de devolver el objeto. `Deactivate` se llama cuando el objeto se devuelve al grupo. La clase base <xref:System.EnterpriseServices.ServicedComponent> también tiene una propiedad `boolean` llamada `CanBePooled`, que se puede utilizar para notificar al grupo si el objeto puede agruparse más adelante.  
+ El conjunto de objetos llama al método `Activate` justo antes de devolver el objeto. Se llama a `Deactivate` cuando el objeto vuelve al conjunto. La clase base <xref:System.EnterpriseServices.ServicedComponent> también tiene una propiedad `boolean` llamada `CanBePooled`, que se puede utilizar para notificar al grupo si el objeto puede agruparse más adelante.  
   
  Para imitar esta funcionalidad, el ejemplo declara una interfaz pública (`IObjectControl`) que tiene los miembros mencionados anteriormente. Las clases de servicio implementan esta interfaz con objeto de proporcionar inicialización específica de contexto. Se debe modificar la implementación <xref:System.ServiceModel.Dispatcher.IInstanceProvider> para cumplir estos requisitos. Ahora, cada vez que obtenga un objeto mediante una llamada a la `GetInstance` método, debe comprobar si el objeto implementa `IObjectControl.` si es así, debe llamar a la `Activate` método correctamente.  
   

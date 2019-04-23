@@ -25,10 +25,10 @@ helpviewer_keywords:
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
 ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320020"
 ---
 # <a name="input-overview"></a>Información general sobre acciones del usuario
@@ -58,7 +58,7 @@ ms.locfileid: "59320020"
  El <xref:System.Windows.Input.Mouse> y <xref:System.Windows.Input.Keyboard> clases se tratan con más detalle a lo largo de esta introducción.
 
 ### <a name="stylus-input"></a>Entrada del lápiz
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tiene compatibilidad integrada para la <xref:System.Windows.Input.Stylus>.  El <xref:System.Windows.Input.Stylus> es una entrada de lápiz que popularizó la [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones pueden tratar el lápiz como un mouse con el mouse [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], pero [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también expone una abstracción del dispositivo de lápiz óptico que usan un modelo similar del teclado y mouse (ratón).  Todas las [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] relacionadas con el lápiz contienen la palabra "Stylus".
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tiene compatibilidad integrada para la <xref:System.Windows.Input.Stylus>.  El <xref:System.Windows.Input.Stylus> es una entrada de lápiz que popularizó la [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  Las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pueden tratar el lápiz como un mouse mediante la [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] de mouse, pero [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también cuenta con una abstracción del dispositivo de lápiz que usa un modelo similar al del teclado y el mouse.  Todas las [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] relacionadas con el lápiz contienen la palabra "Stylus".
 
  Dado que el lápiz puede actuar como un mouse, las aplicaciones que solo admiten la entrada de mouse pueden tener cierto nivel de compatibilidad con el lápiz automáticamente. Cuando se usa el lápiz de esta forma, la aplicación tiene la oportunidad de controlar el evento de lápiz adecuado y, a continuación, el evento de mouse correspondiente. Además, los servicios de nivel superior, como las entradas manuscritas, también están disponibles a través de la abstracción del dispositivo de lápiz.  Para obtener más información sobre la escritura con lápiz como entrada, consulte [Introducción a las entradas manuscritas](getting-started-with-ink.md).
 
@@ -68,7 +68,7 @@ ms.locfileid: "59320020"
 
  El enrutamiento de eventos es el proceso de reenviar eventos a varios elementos para que un objeto o elemento determinado de la ruta pueda elegir ofrecer una respuesta significativa (a través del control) a un evento que podría tener su origen en otro elemento.  Los eventos enrutados usan uno de los tres mecanismos de enrutamiento: directo, propagación y tunelización.  En el enrutamiento directo, el elemento de origen es el único elemento notificado y el evento no se redirige a ningún otro elemento. Sin embargo, el evento enrutado directo todavía ofrece algunas funcionalidades adicionales que solo están presentes para eventos enrutados, en lugar de para eventos de [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] estándares. La propagación prepara el árbol de elementos: en primer lugar, notifica al elemento que dio origen al evento; a continuación, al elemento primario, etc.  La tunelización comienza en la raíz del árbol de elementos y desciende para acabar con el elemento de origen original.  Para obtener más información sobre los eventos enrutados, consulte [Información general sobre eventos enrutados](routed-events-overview.md).
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] los eventos de entrada suelen encontrarse en parejas que consta de un evento de tunelización y un evento de propagación.  Los eventos de tunelización se distinguen de los eventos de propagación con el prefijo "Preview".  Por ejemplo, <xref:System.Windows.Input.Mouse.PreviewMouseMove> es la versión de tunelización de un evento de mover el mouse y <xref:System.Windows.Input.Mouse.MouseMove> es la versión de propagación de este evento. Este emparejamiento de eventos es una convención que se implementa en el nivel de elemento y no es una funcionalidad propia del sistema de eventos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para obtener más información, consulte la sección Eventos de entrada de WPF en [Información general sobre eventos enrutados](routed-events-overview.md).
+ Los eventos de entrada de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] suelen encontrarse en parejas formadas por un evento de tunelización y otro de propagación.  Los eventos de tunelización se distinguen de los eventos de propagación con el prefijo "Preview".  Por ejemplo, <xref:System.Windows.Input.Mouse.PreviewMouseMove> es la versión de tunelización de un evento de mover el mouse y <xref:System.Windows.Input.Mouse.MouseMove> es la versión de propagación de este evento. Este emparejamiento de eventos es una convención que se implementa en el nivel de elemento y no es una funcionalidad propia del sistema de eventos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para obtener más información, consulte la sección Eventos de entrada de WPF en [Información general sobre eventos enrutados](routed-events-overview.md).
 
 <a name="handling_input_events"></a>
 ## <a name="handling-input-events"></a>Control de eventos de entrada
@@ -137,9 +137,9 @@ ms.locfileid: "59320020"
 
 <a name="touch_and_manipulation"></a>
 ## <a name="touch-and-manipulation"></a>Funciones táctiles y manipulación
- El nuevo hardware y la API en el sistema operativo Windows 7 proporcionan a las aplicaciones la capacidad de recibir entradas de varios toques simultáneamente. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite que las aplicaciones detectar y responder a la entrada táctil de manera similar a otra entrada, como el mouse o teclado, provocando eventos cuando se produce táctil.
+ El nuevo hardware y la API en el sistema operativo Windows 7 proporcionan a las aplicaciones la capacidad de recibir entradas de varios toques simultáneamente. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite que las aplicaciones detecten las funciones táctiles y respondan a ellas del mismo modo que con otras entradas, como el mouse o el teclado, y que generen eventos cuando se detecta un toque.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expone dos tipos de eventos cuando se produce táctil: eventos de toque y eventos de manipulación. Los eventos de función táctil proporcionan datos sin procesar sobre cada dedo en una pantalla táctil y su movimiento. Los eventos de manipulación interpretan la entrada como determinadas acciones. Ambos tipos de eventos se describen en esta sección.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expone dos tipos de eventos cuando se usa una función táctil: eventos de función táctil y eventos de manipulación. Los eventos de función táctil proporcionan datos sin procesar sobre cada dedo en una pantalla táctil y su movimiento. Los eventos de manipulación interpretan la entrada como determinadas acciones. Ambos tipos de eventos se describen en esta sección.
 
 ### <a name="prerequisites"></a>Requisitos previos
  Para desarrollar una aplicación que responda a las funciones táctiles, necesitará los componentes siguientes.
@@ -240,7 +240,7 @@ ms.locfileid: "59320020"
 
  Se puede producir más de un tipo de manipulación al mismo tiempo.
 
- Cuando hace que los objetos respondan a manipulaciones, puede hacer que parezca que el objeto tenga inercia. Esto puede hacer que los objetos simulen el mundo físico. Por ejemplo, si empuja un libro encima de una mesa con suficiente fuerza, el libro seguirá moviéndose cuando lo suelte. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le permite simular este comportamiento generando eventos de manipulación cuando los dedos del usuario libera el objeto.
+ Cuando hace que los objetos respondan a manipulaciones, puede hacer que parezca que el objeto tenga inercia. Esto puede hacer que los objetos simulen el mundo físico. Por ejemplo, si empuja un libro encima de una mesa con suficiente fuerza, el libro seguirá moviéndose cuando lo suelte. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le permite simular este comportamiento, ya que puede generar eventos de manipulación cuando los dedos del usuario liberan el objeto.
 
  Para obtener información sobre cómo crear una aplicación que permite al usuario mover, cambiar el tamaño y girar un objeto, vea [Tutorial: Crear su primera aplicación táctil](walkthrough-creating-your-first-touch-application.md).
 

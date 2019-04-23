@@ -1,15 +1,15 @@
 ---
-title: Filtrar Crear ensamblados de confianza firmados (Visual Basic)
+title: Procedimiento Crear ensamblados de confianza firmados (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
 ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324674"
 ---
-# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Filtrar Crear ensamblados de confianza firmados (Visual Basic)
+# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Procedimiento Crear ensamblados de confianza firmados (Visual Basic)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Para crear un ensamblado con signo y un ensamblado de confianza  
@@ -89,7 +89,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Ensamblados de .NET](../../../../standard/assembly/index.md)
 - [Ensamblados de confianza](../../../../standard/assembly/friend-assemblies.md)
-- [Filtrar Crear ensamblados de confianza sin firmar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [Cómo: Crear ensamblados de confianza sin firmar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe (herramienta de nombre seguro)](../../../../framework/tools/sn-exe-strong-name-tool.md))
 - [Crear y utilizar ensamblados con nombre seguro](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)

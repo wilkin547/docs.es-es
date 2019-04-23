@@ -1,5 +1,5 @@
 ---
-title: Filtrar Determinar si dos objetos están relacionados (Visual Basic)
+title: Procedimiento Determinar si dos objetos están relacionados (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [Visual Basic], Visual Basic objects
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
 ms.openlocfilehash: f59e00d80d28fc4bf24874d25b5c12643649c834
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342107"
 ---
-# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Filtrar Determinar si dos objetos están relacionados (Visual Basic)
+# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Procedimiento Determinar si dos objetos están relacionados (Visual Basic)
 Puede comparar dos objetos para determinar la relación, si hay alguno, entre las clases desde el que se crean. El <xref:System.Type.IsInstanceOfType%2A> método de la <xref:System.Type?displayProperty=nameWithType> clase devuelve `True` si hereda de la clase especificada de la clase actual, o si el tipo actual es una interfaz compatible con la clase especificada.  
   
 ### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Para determinar si un objeto hereda de otro objeto clase o interfaz  
@@ -52,7 +52,7 @@ End Class
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Valores de las variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Filtrar para determinar si dos objetos son idénticos](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [Cómo: Determinar si dos objetos son idénticos](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

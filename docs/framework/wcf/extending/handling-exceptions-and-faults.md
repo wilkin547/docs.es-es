@@ -3,10 +3,10 @@ title: Administración de excepciones y errores
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343433"
 ---
 # <a name="handling-exceptions-and-faults"></a>Administración de excepciones y errores
@@ -302,14 +302,14 @@ public class MessageFault
 }  
 ```  
   
- `IsMustUnderstandFault` Devuelve `true` si el error es un `mustUnderstand` error. `WasHeaderNotUnderstood` Devuelve `true` si se incluye el encabezado con el nombre especificado y el espacio de nombres en el error como un encabezado NotUnderstood.  De lo contrario, devuelve `false`.  
+ `IsMustUnderstandFault` devuelve `true` si el error es un error `mustUnderstand`. `WasHeaderNotUnderstood` devuelve `true` si el encabezado con el nombre y el espacio de nombres especificados está incluido en el error como un encabezado NotUnderstood.  De lo contrario, devuelve `false`.  
   
  Si un canal emite un encabezado que está marcado como MustUnderstand = true, esa capa también debería implementar el patrón API de generación de excepción y convertir los errores `mustUnderstand` producidos por ese encabezado en una excepción más útil como se ha descrito previamente.  
   
 ## <a name="tracing"></a>Traza  
  .NET Framework proporciona un mecanismo para efectuar el seguimiento de la ejecución del programa como una manera de ayudar a diagnosticar aplicaciones de producción o los problemas intermitentes donde no es posible adjuntar simplemente un depurador y avanzar a través del código. Los componentes básicos de este mecanismo están en el espacio de nombres <xref:System.Diagnostics?displayProperty=nameWithType> y consisten en:  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, que es el origen de información de seguimiento se escriban, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, que es una clase base abstracta para escuchas concretas que reciben la información para realizar un seguimiento de la <xref:System.Diagnostics.TraceSource> y pasar los resultados a un destino específico de escucha. Por ejemplo, <xref:System.Diagnostics.XmlWriterTraceListener> genera información de seguimiento a un archivo XML. Finalmente, <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, que permite al usuario de la aplicación controlar el nivel de detalle del seguimiento y normalmente se especifica en configuración.  
+-   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, que es el origen de información de seguimiento que se va a escribir, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, que es una clase base abstracta para escuchas concretas que reciben la información a seguir de <xref:System.Diagnostics.TraceSource> y la entregan a un destino específico de escucha. Por ejemplo, <xref:System.Diagnostics.XmlWriterTraceListener> genera información de seguimiento a un archivo XML. Finalmente, <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, que permite al usuario de la aplicación controlar el nivel de detalle del seguimiento y normalmente se especifica en configuración.  
   
 -   Además de los componentes principales, puede usar el [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) para ver y buscar WCF seguimientos. La herramienta está diseñada específicamente para los archivos de seguimiento generado por WCF y escritos utilizando <xref:System.Diagnostics.XmlWriterTraceListener>. La figura siguiente muestra los diferentes componentes implicados en el seguimiento.  
   
@@ -368,7 +368,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 ```  
   
 #### <a name="tracing-structured-data"></a>Seguimiento de datos estructurados  
- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> tiene un <xref:System.Diagnostics.TraceSource.TraceData%2A> método que toma uno o más objetos que se van a incluirse en la entrada de seguimiento. En general, se llama al método <xref:System.Object.ToString%2A?displayProperty=nameWithType> en cada objeto y la cadena resultante se escribe como parte de la entrada de seguimiento. Al utilizar <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> para generar las trazas, puede pasar <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> como el objeto de datos a <xref:System.Diagnostics.TraceSource.TraceData%2A>. La entrada de seguimiento resultante incluye el XML proporcionado por <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>. A continuación un ejemplo con datos de la aplicación XML:  
+ <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> tiene un método <xref:System.Diagnostics.TraceSource.TraceData%2A> que toma uno o más objetos que deben incluirse en la entrada de seguimiento. En general, se llama al método <xref:System.Object.ToString%2A?displayProperty=nameWithType> en cada objeto y la cadena resultante se escribe como parte de la entrada de seguimiento. Al utilizar <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> para generar las trazas, puede pasar <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> como el objeto de datos a <xref:System.Diagnostics.TraceSource.TraceData%2A>. La entrada de seguimiento resultante incluye el XML proporcionado por <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>. A continuación un ejemplo con datos de la aplicación XML:  
   
 ```xml  
 <E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">  

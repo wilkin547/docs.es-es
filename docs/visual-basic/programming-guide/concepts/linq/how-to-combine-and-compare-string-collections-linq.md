@@ -1,15 +1,15 @@
 ---
-title: Filtrar Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)
+title: Procedimiento Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
 ms.openlocfilehash: a0083c49c344a45a977793254d8062f2a6aa155a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341275"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Filtrar Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Procedimiento Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)
 En este ejemplo se muestra cómo combinar archivos que contienen líneas de texto y después ordenar los resultados. En concreto, se muestra cómo realizar una concatenación simple, una unión y una intersección en los dos conjuntos de líneas de texto.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Para configurar el proyecto y los archivos de texto  

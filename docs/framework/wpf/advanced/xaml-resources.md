@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344928"
 ---
 # <a name="xaml-resources"></a>Recursos XAML
@@ -128,7 +128,7 @@ Un recurso es un objeto que se puede volver a usar en diferentes sitios de la ap
   
 -   La propiedad se establezca debe ser una propiedad en un <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>. Que la propiedad debe estar respaldada por un <xref:System.Windows.DependencyProperty>.  
   
--   La referencia es para un valor dentro de un <xref:System.Windows.Style><xref:System.Windows.Setter>.  
+-   La referencia es para un valor dentro de un <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
   
 -   La propiedad se establezca debe ser una propiedad en un <xref:System.Windows.Freezable> que se proporciona como un valor de uno de ellos un <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement> propiedad, o un <xref:System.Windows.Setter> valor.  
   
@@ -144,7 +144,7 @@ Un recurso es un objeto que se puede volver a usar en diferentes sitios de la ap
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- Que estilo realmente tiene una clave: la clave implícita `typeof(`<xref:System.Windows.Controls.Button>`)`. En el marcado, puede especificar un <xref:System.Windows.Style.TargetType%2A> directamente como el tipo de nombre (o también puede usar [{x: Type...}](../../xaml-services/x-type-markup-extension.md) para devolver un <xref:System.Type>.  
+ Que estilo realmente tiene una clave: la clave implícita `typeof(` <xref:System.Windows.Controls.Button> `)`. En el marcado, puede especificar un <xref:System.Windows.Style.TargetType%2A> directamente como el tipo de nombre (o también puede usar [{x: Type...}](../../xaml-services/x-type-markup-extension.md) para devolver un <xref:System.Type>.  
   
  Mediante los mecanismos de estilo de tema predeterminado utilizados por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], ese estilo se aplica como el estilo en tiempo de ejecución de un <xref:System.Windows.Controls.Button> en la página, incluso aunque el <xref:System.Windows.Controls.Button> propio no intenta especificar su <xref:System.Windows.FrameworkElement.Style%2A> propiedad o un recurso específico hacer referencia al estilo. Su estilo definido en la página se encuentra anteriormente en la secuencia de búsqueda que el estilo del diccionario de tema con la misma clave que tiene el estilo del diccionario de tema. Simplemente puede especificar `<Button>Hello</Button>` en cualquier parte de la página y el estilo definido con <xref:System.Windows.Style.TargetType%2A> de `Button` se aplicaría a ese botón. Si lo desea, puede clave explícitamente el estilo con el mismo valor de tipo como <xref:System.Windows.Style.TargetType%2A>, para mayor claridad en el marcado, pero que es opcional.  
   
@@ -159,6 +159,6 @@ Un recurso es un objeto que se puede volver a usar en diferentes sitios de la ap
 - [Recursos y código](resources-and-code.md)
 - [Definir y hacer referencia a un recurso](how-to-define-and-reference-a-resource.md)
 - [Información general sobre la administración de aplicaciones](../app-development/application-management-overview.md)
-- [x:Type (Extensión de marcado)](../../xaml-services/x-type-markup-extension.md)
-- [Extensión de marcado StaticResource](staticresource-markup-extension.md)
-- [Extensión de marcado DynamicResource](dynamicresource-markup-extension.md)
+- [x:Type (extensión de marcado)](../../xaml-services/x-type-markup-extension.md)
+- [StaticResource (extensión de marcado)](staticresource-markup-extension.md)
+- [DynamicResource (extensión de marcado)](dynamicresource-markup-extension.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para desarrollar un servicio de datos WCF que se ejecuta en IIS
+title: Procedimiento para desarrollar un servicio de datos WCF que se ejecuta en IIS
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
 ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517855"
 ---
-# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Filtrar Desarrollar un servicio de datos WCF que se ejecutan en IIS
+# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Procedimiento Desarrollar un servicio de datos WCF que se ejecutan en IIS
 
 En este tema se muestra cómo usar WCF Data Services para crear un servicio de datos que se basa en la base de datos de ejemplo Northwind que se hospeda en una aplicación Web ASP.NET que se ejecuta en Internet Information Services (IIS). Para obtener un ejemplo de cómo crear el mismo servicio de datos de Northwind que una aplicación Web ASP.NET que se ejecuta en el servidor de desarrollo de ASP.NET, vea el [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
 

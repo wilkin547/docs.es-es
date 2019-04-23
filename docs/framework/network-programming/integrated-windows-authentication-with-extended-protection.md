@@ -2,12 +2,12 @@
 title: Autenticación de Windows integrada con protección ampliada
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 93156ab346d97259030b001d3a4d8ca4612f48c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591622"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59325727"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticación de Windows integrada con protección ampliada
 Se han realizado mejoras que afectan al modo en que las clases <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> y clases relacionadas del espacio de nombres <xref:System.Net> y espacios de nombres relacionados controlan la autenticación integrada de Windows. Se ha agregado compatibilidad para que la protección ampliada mejore la seguridad.  
@@ -25,17 +25,17 @@ Se han realizado mejoras que afectan al modo en que las clases <xref:System.Net.
   
  Los objetivos generales son los siguientes:  
   
-1.  Si el cliente está actualizado para admitir la protección ampliada, las aplicaciones deben proporcionar información de enlace de canal y servicio a todos los protocolos de autenticación admitidos. La información de enlace de canal solo se puede proporcionar cuando hay un canal (TLS) con el que enlazar. Siempre se debe proporcionar información de enlace de servicio.  
+1. Si el cliente está actualizado para admitir la protección ampliada, las aplicaciones deben proporcionar información de enlace de canal y servicio a todos los protocolos de autenticación admitidos. La información de enlace de canal solo se puede proporcionar cuando hay un canal (TLS) con el que enlazar. Siempre se debe proporcionar información de enlace de servicio.  
   
-2.  Los servidores actualizados que están configurados correctamente podrían comprobar la información de enlace de canal y servicio presente en el token de autenticación de cliente y rechazar el intento de autenticación si los enlaces de canal no coinciden. En función del escenario de implementación, los servidores podrían comprobar el enlace de canal, el enlace de servicio o ambos.  
+2. Los servidores actualizados que están configurados correctamente podrían comprobar la información de enlace de canal y servicio presente en el token de autenticación de cliente y rechazar el intento de autenticación si los enlaces de canal no coinciden. En función del escenario de implementación, los servidores podrían comprobar el enlace de canal, el enlace de servicio o ambos.  
   
-3.  Los servidores actualizados tienen la capacidad de aceptar o rechazar solicitudes de cliente de nivel inferior que no contienen la información de enlace de canal basada en la directiva.  
+3. Los servidores actualizados tienen la capacidad de aceptar o rechazar solicitudes de cliente de nivel inferior que no contienen la información de enlace de canal basada en la directiva.  
   
  La información que usa la protección ampliada está formada por uno de los elementos siguientes o por ambos:  
   
-1.  Un token de enlace de canal o CBT.  
+1. Un token de enlace de canal o CBT.  
   
-2.  Información de enlace de servicio en forma de nombre de entidad de seguridad de servicio o SPN.  
+2. Información de enlace de servicio en forma de nombre de entidad de seguridad de servicio o SPN.  
   
  La información de enlace de servicio es una indicación de la intención del cliente de autenticarse en un punto de conexión de servicio determinado. Se comunica del cliente al servidor con las propiedades siguientes:  
   
@@ -122,11 +122,11 @@ Se han realizado mejoras que afectan al modo en que las clases <xref:System.Net.
   
  En esta configuración, cuando se realiza una solicitud al servidor a través de un canal seguro externo, se consulta el canal externo para un enlace de canal. Este enlace de canal se pasa a las llamadas SSPI de autenticación, que validan que el enlace de canal del blob de autenticación coincida. Existen tres resultados posibles:  
   
-1.  El sistema operativo subyacente del servidor no admite la protección ampliada. La solicitud no se expondrá a la aplicación y se devolverá al cliente una respuesta No autorizado (401). Se registrará un mensaje en el origen de seguimiento <xref:System.Net.HttpListener> con el motivo del error.  
+1. El sistema operativo subyacente del servidor no admite la protección ampliada. La solicitud no se expondrá a la aplicación y se devolverá al cliente una respuesta No autorizado (401). Se registrará un mensaje en el origen de seguimiento <xref:System.Net.HttpListener> con el motivo del error.  
   
-2.  Se produce un error en la llamada SSPI y se indica que el cliente ha especificado un enlace de canal que no coincidía con el valor esperado recuperado del canal externo o bien que el cliente no ha proporcionado un enlace de canal al configurar para <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> la directiva de protección ampliada en el servidor. En ambos casos, la solicitud no se expondrá a la aplicación y se devolverá al cliente una respuesta No autorizado (401). Se registrará un mensaje en el origen de seguimiento <xref:System.Net.HttpListener> con el motivo del error.  
+2. Se produce un error en la llamada SSPI y se indica que el cliente ha especificado un enlace de canal que no coincidía con el valor esperado recuperado del canal externo o bien que el cliente no ha proporcionado un enlace de canal al configurar para <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> la directiva de protección ampliada en el servidor. En ambos casos, la solicitud no se expondrá a la aplicación y se devolverá al cliente una respuesta No autorizado (401). Se registrará un mensaje en el origen de seguimiento <xref:System.Net.HttpListener> con el motivo del error.  
   
-3.  El cliente especifica el enlace de canal correcto o se le permite conectarse sin especificar un enlace de canal, puesto que la directiva de protección ampliada en el servidor está configurada con <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>. La solicitud se devuelve a la aplicación para su procesamiento. No se realiza automáticamente la comprobación del nombre del servicio. Una aplicación puede decidir realizar su propia validación del nombre del servicio mediante la propiedad <xref:System.Net.HttpListenerRequest.ServiceName%2A>, pero en estos casos es redundante.  
+3. El cliente especifica el enlace de canal correcto o se le permite conectarse sin especificar un enlace de canal, puesto que la directiva de protección ampliada en el servidor está configurada con <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>. La solicitud se devuelve a la aplicación para su procesamiento. No se realiza automáticamente la comprobación del nombre del servicio. Una aplicación puede decidir realizar su propia validación del nombre del servicio mediante la propiedad <xref:System.Net.HttpListenerRequest.ServiceName%2A>, pero en estos casos es redundante.  
   
  Si una aplicación realiza sus propias llamadas SSPI para realizar la autenticación basada en los blobs que se pasan dentro del cuerpo de una solicitud HTTP y quiere admitir el enlace de canal, deberá recuperar el enlace de canal esperado del canal seguro externo mediante <xref:System.Net.HttpListener> con el fin de pasarlo a la función nativa [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) de Win32. Para ello, use la propiedad <xref:System.Net.HttpListenerRequest.TransportContext%2A> y llame al método <xref:System.Net.TransportContext.GetChannelBinding%2A> para recuperar el CBT. Solo se admiten enlaces de punto de conexión. Si se especifica cualquier otro <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>, se iniciará una <xref:System.NotSupportedException>. Si el sistema operativo subyacente admite el enlace de canal, el método <xref:System.Net.TransportContext.GetChannelBinding%2A> devolverá un <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> que encapsula un puntero en un enlace de canal adecuado para pasar a una función [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) como miembro pvBuffer de una estructura SecBuffer pasada en el parámetro `pInput`. La propiedad <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> contiene la longitud, en bytes, del enlace de canal. Si el sistema operativo subyacente no admite enlaces de canal, la función devolverá `null`.  
   
@@ -136,18 +136,19 @@ Se han realizado mejoras que afectan al modo en que las clases <xref:System.Net.
   
  En esta configuración, cuando se realiza una solicitud al servidor sin un canal seguro externo, la autenticación se realiza normalmente sin llevar a cabo una comprobación del enlace de canal. Si la autenticación se realiza correctamente, se consulta el contexto para obtener el nombre de servicio que ha proporcionado el cliente y se valida con respecto a la lista de nombres de servicio aceptables. Existen cuatro resultados posibles:  
   
-1.  El sistema operativo subyacente del servidor no admite la protección ampliada. La solicitud no se expondrá a la aplicación y se devolverá al cliente una respuesta No autorizado (401). Se registrará un mensaje en el origen de seguimiento <xref:System.Net.HttpListener> con el motivo del error.  
+1. El sistema operativo subyacente del servidor no admite la protección ampliada. La solicitud no se expondrá a la aplicación y se devolverá al cliente una respuesta No autorizado (401). Se registrará un mensaje en el origen de seguimiento <xref:System.Net.HttpListener> con el motivo del error.  
   
-2.  El sistema operativo subyacente del cliente no admite la protección ampliada. En la configuración <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>, el intento de autenticación se realizará correctamente y la solicitud se devolverá a la aplicación. En la configuración <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>, se producirá un error en el intento de autenticación. La solicitud no se expondrá a la aplicación y se devolverá al cliente una respuesta No autorizado (401). Se registrará un mensaje en el origen de seguimiento <xref:System.Net.HttpListener> con el motivo del error.  
+2. El sistema operativo subyacente del cliente no admite la protección ampliada. En la configuración <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>, el intento de autenticación se realizará correctamente y la solicitud se devolverá a la aplicación. En la configuración <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>, se producirá un error en el intento de autenticación. La solicitud no se expondrá a la aplicación y se devolverá al cliente una respuesta No autorizado (401). Se registrará un mensaje en el origen de seguimiento <xref:System.Net.HttpListener> con el motivo del error.  
   
-3.  El sistema operativo subyacente del cliente admite la protección ampliada, pero la aplicación no ha especificado un enlace de servicio. La solicitud no se expondrá a la aplicación y se devolverá al cliente una respuesta No autorizado (401). Se registrará un mensaje en el origen de seguimiento <xref:System.Net.HttpListener> con el motivo del error.  
+3. El sistema operativo subyacente del cliente admite la protección ampliada, pero la aplicación no ha especificado un enlace de servicio. La solicitud no se expondrá a la aplicación y se devolverá al cliente una respuesta No autorizado (401). Se registrará un mensaje en el origen de seguimiento <xref:System.Net.HttpListener> con el motivo del error.  
   
-4.  El cliente ha especificado un enlace de servicio. El enlace de servicio se compara con la lista de enlaces de servicio permitidos. Si coincide, la solicitud se devuelve a la aplicación. En caso contrario, la solicitud no se expondrá a la aplicación y se devolverá automáticamente al cliente una respuesta No autorizado (401). Se registrará un mensaje en el origen de seguimiento <xref:System.Net.HttpListener> con el motivo del error.  
+4. El cliente ha especificado un enlace de servicio. El enlace de servicio se compara con la lista de enlaces de servicio permitidos. Si coincide, la solicitud se devuelve a la aplicación. En caso contrario, la solicitud no se expondrá a la aplicación y se devolverá automáticamente al cliente una respuesta No autorizado (401). Se registrará un mensaje en el origen de seguimiento <xref:System.Net.HttpListener> con el motivo del error.  
   
  Si este método simple en el que se usa una lista permitida de nombres de servicio válidos resulta insuficiente, la aplicación puede proporcionar su propia validación del nombre del servicio consultando la propiedad <xref:System.Net.HttpListenerRequest.ServiceName%2A>. En los casos 1 y 2 anteriores, la propiedad devolverá `null`. En el caso 3, devolverá una cadena vacía. En el caso 4, se devolverá el nombre del servicio especificado por el cliente.  
   
  Estas características de protección ampliada también las pueden usar las aplicaciones de servidor para la autenticación con otros tipos de solicitudes y cuando se usan servidores proxy de confianza.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Security.Authentication.ExtendedProtection>
 - <xref:System.Security.Authentication.ExtendedProtection.Configuration>

@@ -3,10 +3,10 @@ title: Variables y argumentos
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
 ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320748"
 ---
 # <a name="variables-and-arguments"></a>Variables y argumentos
@@ -67,7 +67,7 @@ Variable<string> var = new Variable<string>
   
 2. Cuando se llama a <xref:System.Activities.InOutArgument%601.Set%2A>, el tiempo de ejecución establece el valor inmediatamente.  
   
-3. Los argumentos pueden opcionalmente tener especificado su <xref:System.Activities.Argument.EvaluationOrder%2A>. <xref:System.Activities.Argument.EvaluationOrder%2A> es un valor basado en cero que especifica el orden en que se evalúa el argumento. De forma predeterminada, el orden de evaluación del argumento no está especificado y es igual al valor de <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Para especificar un orden de evaluación para este argumento, establezca la propiedad <xref:System.Activities.Argument.EvaluationOrder%2A> con un valor mayor o igual que cero. Windows Workflow Foundation evalúa argumentos con un orden de evaluación especificada en orden ascendente. Tenga en cuenta que los argumentos que no tienen orden de evaluación especificada se evalúan antes que los que tienen especificado un orden de evaluación.  
+3. Los argumentos pueden opcionalmente tener especificado su <xref:System.Activities.Argument.EvaluationOrder%2A>. <xref:System.Activities.Argument.EvaluationOrder%2A>es un valor basado en cero que especifica el orden en el que se evalúa el argumento. De forma predeterminada, el orden de evaluación del argumento no está especificado y es igual al valor de <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Para especificar un orden de evaluación para este argumento, establezca la propiedad <xref:System.Activities.Argument.EvaluationOrder%2A> con un valor mayor o igual que cero. Windows Workflow Foundation evalúa argumentos con un orden de evaluación especificada en orden ascendente. Tenga en cuenta que los argumentos que no tienen orden de evaluación especificada se evalúan antes que los que tienen especificado un orden de evaluación.  
   
  Un autor de actividad puede usar un mecanismo fuertemente tipado para exponer sus argumentos. Esto se logra declarando propiedades de tipo <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> y <xref:System.Activities.InOutArgument%601>. De esta forma se permite que un autor de actividad establezca un contrato concreto sobre la entrada y salida de datos de una actividad.  
   
@@ -87,7 +87,7 @@ public class Prompt : Activity
 >  Las actividades que devuelven un valor único pueden derivar de <xref:System.Activities.Activity%601>, <xref:System.Activities.NativeActivity%601> o <xref:System.Activities.CodeActivity%601>. Estas actividades tienen una clase <xref:System.Activities.OutArgument%601> bien definida denominada <xref:System.Activities.Activity%601.Result%2A> que contiene el valor devuelto de la actividad.  
   
 ### <a name="using-variables-and-arguments-in-workflows"></a>Usar variables y argumentos en flujos de trabajo  
- El siguiente ejemplo muestra cómo se usan las variables y argumentos en un flujo de trabajo. El flujo de trabajo es una secuencia que declara tres variables: `var1`, `var2` y `var3`. La primera actividad en el flujo de trabajo es una actividad `Assign` que asigna el valor de la variable `var1` a la variable `var2`. A esto le sigue una actividad `WriteLine` que imprime el valor de la variable `var2`. A continuación, verá otra actividad `Assign` que asigna el valor de la variable `var2` a la variable `var3`. Finalmente, hay otra actividad `WriteLine` que imprime el valor de la variable `var3`. La primera actividad `Assign` usa `InArgument<string>` y los objetos `OutArgument<string>` que explícitamente representan los enlaces para los argumentos de la actividad. `InArgument<string>` se utiliza para <xref:System.Activities.Statements.Assign.Value%2A> porque el valor está fluyendo hacia la <xref:System.Activities.Statements.Assign%601> actividad a través de su <xref:System.Activities.Statements.Assign.Value%2A> argumento, y `OutArgument<string>` se usa para <xref:System.Activities.Statements.Assign.To%2A> porque el valor está fluyendo del <xref:System.Activities.Statements.Assign.To%2A> argumento en la variable. La segunda actividad `Assign` consigue lo mismo gracias a una sintaxis más compacta, pero equivalente, que usa conversiones implícitas. Las actividades `WriteLine` también usan la sintaxis compacta.  
+ El siguiente ejemplo muestra cómo se usan las variables y argumentos en un flujo de trabajo. El flujo de trabajo es una secuencia que declara tres variables: `var1`, `var2` y `var3`. La primera actividad en el flujo de trabajo es una actividad `Assign` que asigna el valor de la variable `var1` a la variable `var2`. A esto le sigue una actividad `WriteLine` que imprime el valor de la variable `var2`. A continuación, verá otra actividad `Assign` que asigna el valor de la variable `var2` a la variable `var3`. Finalmente, hay otra actividad `WriteLine` que imprime el valor de la variable `var3`. La primera actividad `Assign` usa `InArgument<string>` y los objetos `OutArgument<string>` que explícitamente representan los enlaces para los argumentos de la actividad. `InArgument<string>` se usa para <xref:System.Activities.Statements.Assign.Value%2A> porque el valor está fluyendo en la actividad <xref:System.Activities.Statements.Assign%601> a través de su argumento <xref:System.Activities.Statements.Assign.Value%2A> y `OutArgument<string>` se usa para <xref:System.Activities.Statements.Assign.To%2A> porque el valor está fluyendo del argumento <xref:System.Activities.Statements.Assign.To%2A> hacia la variable. La segunda actividad `Assign` consigue lo mismo gracias a una sintaxis más compacta, pero equivalente, que usa conversiones implícitas. Las actividades `WriteLine` también usan la sintaxis compacta.  
   
 ```csharp  
 // Declare three variables; the first one is given an initial value.  

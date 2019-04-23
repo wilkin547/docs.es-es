@@ -3,12 +3,12 @@ title: Diseño con tipos de referencia que aceptan valores NULL
 description: En este tutorial avanzado se ofrece una introducción a los tipos de referencia que aceptan valores NULL. Sabrá expresar la intención de su diseño cuando los valores de referencia puedan ser NULL y hacer que el compilador aplique esas decisiones cuando no puedan ser NULL.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 57f738771a6f1d2cebe7af546d06ac7d7289a338
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443254"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427297"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migración del código existente con tipos de referencia que admiten valores NULL
 
@@ -24,7 +24,7 @@ En este tutorial aprenderá lo siguiente:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador beta de C# 8.0. El compilador beta de C# 8 está disponible con [la versión preliminar 2 de Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) o la [versión preliminar 2 de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador beta de C# 8.0. El compilador beta de C# 8 está disponible con [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o la [versión preliminar de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) más reciente.
 
 En este tutorial se da por supuesto que está familiarizado con C# y. NET, incluidos Visual Studio o la CLI de .NET Core.
 
@@ -81,7 +81,7 @@ Estas dos propiedades generan `CS8618`, "La propiedad que admite valores NULL no
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-Suceden algunas cosas en el bloque de código anterior. Esta aplicación usa el paquete NuGet [AutoMapper](http://automapper.org/) para construir un elemento de noticias a partir de `ISyndicationItem`. Ha detectado que los elementos de artículo de noticias se construyen y las propiedades se establecen en esa instrucción. Esto significa que el diseño de `NewsStoryViewModel` indica que estas propiedades nunca deben tener el valor `null`. Estas propiedades deben ser **tipos de referencia que no admiten valores NULL**. Eso expresa mejor la intención del diseño original. De hecho, para `NewsStoryViewModel`, *se* crean instancias correctamente con valores no NULL. Eso convierte al siguiente código de inicialización en una corrección válida:
+Suceden algunas cosas en el bloque de código anterior. Esta aplicación usa el paquete NuGet [AutoMapper](https://automapper.org/) para construir un elemento de noticias a partir de `ISyndicationItem`. Ha detectado que los elementos de artículo de noticias se construyen y las propiedades se establecen en esa instrucción. Esto significa que el diseño de `NewsStoryViewModel` indica que estas propiedades nunca deben tener el valor `null`. Estas propiedades deben ser **tipos de referencia que no admiten valores NULL**. Eso expresa mejor la intención del diseño original. De hecho, para `NewsStoryViewModel`, *se* crean instancias correctamente con valores no NULL. Eso convierte al siguiente código de inicialización en una corrección válida:
 
 ```csharp
 public class NewsStoryViewModel

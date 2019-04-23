@@ -8,10 +8,10 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: 8b709de728726b7695b987c48574d2a70a1bc27e
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481384"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desarrollar e implementar WCF Data Services
@@ -96,15 +96,15 @@ El servicio de datos de WCF proporciona flexibilidad al elegir el proceso que ho
 
   - **Tecnologías de implementación para aplicaciones web ASP.NET**
 
-    - [Filtrar Crear un paquete de implementación Web en Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
+    - [Cómo: Crear un paquete de implementación Web en Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
 
-    - [Filtrar Implementar un sitio Web publica el proyecto con un solo clic en Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
+    - [Cómo: Implementar un sitio Web publica el proyecto con un solo clic en Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
 
   - **Tecnologías de implementación para sitios web ASP.NET**
 
-    - [Filtrar Copiar archivos del sitio Web con la herramienta Copiar sitio Web](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
+    - [Cómo: Copiar archivos del sitio Web con la herramienta Copiar sitio Web](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
 
-    - [Filtrar Publicar sitios Web](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
+    - [Cómo: Publicar sitios Web](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
     - [Tutorial: Implementar una aplicación Web ASP.NET mediante XCOPY](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
@@ -113,7 +113,7 @@ El servicio de datos de WCF proporciona flexibilidad al elegir el proceso que ho
     > [!TIP]
     > Antes de intentar implementar el servicio de datos en IIS, asegúrese de haber probado la implementación en un servidor web que esté ejecutando IIS. Para obtener más información, vea [Cómo: Desarrollar un servicio de datos WCF que se ejecutan en IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
-- **Microsoft Azure**
+- **Windows Azure**
 
      Puede implementar un servicio de datos en Windows Azure mediante el uso de Windows Azure Tools para Visual Studio. Puede descargar Windows Azure Tools para Visual Studio desde el [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848). Para obtener más información sobre cómo implementar un servicio de datos en Windows Azure, vea la entrada [Deploying an OData Service implementación en Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
 
@@ -128,5 +128,5 @@ Debe plantearse lo siguiente cuando implemente un servicio de datos:
 ## <a name="see-also"></a>Vea también
 
 - [Hospedaje del servicio de datos](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
-- [Proteger WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
+- [Protección de WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
 - [Definir Servicios de datos de WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

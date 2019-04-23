@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agregar datos al Portapapeles
+title: Procedimiento para agregar datos al Portapapeles
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
 ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325688"
 ---
-# <a name="how-to-add-data-to-the-clipboard"></a>Filtrar para agregar datos al Portapapeles
+# <a name="how-to-add-data-to-the-clipboard"></a>Procedimiento para agregar datos al Portapapeles
 La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede usar para interactuar con la función de Portapapeles del sistema operativo Windows. Muchas aplicaciones utilizan el Portapapeles como un repositorio temporal para los datos. Por ejemplo, procesadores de textos utilizan el Portapapeles durante las operaciones de cortar y pegar. El Portapapeles también es útil para transferir datos desde una aplicación a otra.  
   
  Al agregar datos en el Portapapeles, puede indicar el formato de datos para que otras aplicaciones pueden reconocer los datos si puede usar ese formato. También puede agregar datos al Portapapeles en varios formatos diferentes para aumentar el número de otras aplicaciones que pueden utilizar potencialmente los datos.  
@@ -63,4 +63,4 @@ La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede us
 ## <a name="see-also"></a>Vea también
 
 - [Compatibilidad con las operaciones de arrastrar y colocar y con el Portapapeles](drag-and-drop-operations-and-clipboard-support.md)
-- [Filtrar para recuperar datos del Portapapeles](how-to-retrieve-data-from-the-clipboard.md)
+- [Cómo: Recuperar datos del Portapapeles](how-to-retrieve-data-from-the-clipboard.md)

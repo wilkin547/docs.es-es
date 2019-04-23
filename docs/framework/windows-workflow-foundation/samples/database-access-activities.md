@@ -3,10 +3,10 @@ title: Actividades de acceso a bases de datos
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
 ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322607"
 ---
 # <a name="database-access-activities"></a>Actividades de acceso a bases de datos
@@ -242,7 +242,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |CommandType|Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.|
 |Sql|El comando SQL que se va a ejecutar.|
 |Parámetros|Colección de los parámetros de la consulta SQL.|
-|Resultado|<xref:System.Data.DataSet> que se obtiene una vez que se ejecuta la consulta.|
+|Resultado|<xref:System.Data.DataSet> que se obtiene una vez ejecutada la consulta.|
 
 ## <a name="configuring-connection-information"></a>Configurar información de conexión
  Todas las actividades de base de datos comparten los mismos parámetros de configuración. Se pueden configurar de dos maneras:

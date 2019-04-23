@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 7eb50bcb-38d8-4afb-86aa-2573586697c2
 author: BrucePerlerMS
 ms.openlocfilehash: 36f7687f42c6e0d6f865a025f09c4ead6f79960c
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481410"
 ---
 # <a name="windows-identity-foundation"></a>Windows Identity Foundation
@@ -26,7 +26,7 @@ ms.locfileid: "59481410"
 
   - [Crear mi primera aplicación web de ASP.NET para notificaciones](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)
 
-  - [Compilación del primer servicio WCF para notificaciones](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)
+  - [Compilar mi primer servicio WCF con reconocimiento de notificaciones](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)
 
 - [Características de WIF](../../../docs/framework/security/wif-features.md)
 
@@ -38,29 +38,29 @@ ms.locfileid: "59481410"
 
   - [Información general sobre el módulo de autenticación WSFederation](../../../docs/framework/security/wsfederation-authentication-module-overview.md)
 
-  - [WSTrustChannelFactory y WSTrustChannel](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)
+  - [WSTrustChannelFactory and WSTrustChannel](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)
 
 - [Índice de instrucciones de WIF](../../../docs/framework/security/wif-how-tos-index.md)
 
-  - [Cómo compilar aplicaciones web MVC de ASP.NET con reconocimiento de notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)
+  - [Cómo: Compilar la aplicación Web de MVC de ASP.NET para notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)
 
-  - [Cómo compilar aplicaciones de formularios Web Forms de ASP.NET con reconocimiento de notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+  - [Cómo: Crear aplicaciones de formularios Web ASP.NET para notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
 
-  - [Cómo compilar aplicaciones ASP.NET con reconocimiento de mediante la autenticación basada en formularios](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)
+  - [Cómo: Crear aplicaciones ASP.NET para notificaciones mediante la autenticación basada en formularios](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)
 
-  - [Cómo compilar aplicaciones ASP.NET con reconocimiento de notificaciones mediante la autenticación de Windows](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)
+  - [Cómo: Crear aplicaciones ASP.NET para notificaciones mediante la autenticación de Windows](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)
 
-  - [Cómo depurar servicios y aplicaciones con reconocimiento de notificaciones mediante el seguimiento de WIF](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)
+  - [Cómo: Depurar aplicaciones para notificaciones y servicios con el seguimiento de WIF](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)
 
-  - [Cómo mostrar el estado "Firmado" mediante WIF](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)
+  - [Cómo: Para mostrar que inicien sesión en el estado mediante WIF](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)
 
-  - [Cómo habilitar la detección de reproducción de tokens](../../../docs/framework/security/how-to-enable-token-replay-detection.md)
+  - [Cómo: Habilitar la detección de reproducción de tokens](../../../docs/framework/security/how-to-enable-token-replay-detection.md)
 
-  - [Cómo habilitar el seguimiento de WIF](../../../docs/framework/security/how-to-enable-wif-tracing.md)
+  - [Cómo: Habilitar el seguimiento de WIF](../../../docs/framework/security/how-to-enable-wif-tracing.md)
 
-  - [Cómo habilitar WIF para una aplicación de servicio web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)
+  - [Cómo: Habilitar WIF para una aplicación de servicio Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)
 
-  - [Cómo transformar las notificaciones entrantes](../../../docs/framework/security/how-to-transform-incoming-claims.md)
+  - [Cómo: Transformar las notificaciones entrantes](../../../docs/framework/security/how-to-transform-incoming-claims.md)
 
 - [Instrucciones WIF](../../../docs/framework/security/wif-guidelines.md)
 
@@ -68,7 +68,7 @@ ms.locfileid: "59481410"
 
   - [Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
 
-- [índice de ejemplo de código WIF](../../../docs/framework/security/wif-code-sample-index.md)
+- [Índice de ejemplo de código WIF](../../../docs/framework/security/wif-code-sample-index.md)
 
 - [Extensiones WIF](../../../docs/framework/security/wif-extensions.md)
 

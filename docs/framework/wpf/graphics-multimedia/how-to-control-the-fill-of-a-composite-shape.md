@@ -1,5 +1,5 @@
 ---
-title: Filtrar Controlar el relleno de una forma compuesta
+title: Procedimiento Controlar el relleno de una forma compuesta
 ms.date: 03/30/2017
 helpviewer_keywords:
 - shapes [WPF], composite [WPF], controlling fill
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
 ms.openlocfilehash: 0ba07d8979a2910ce4ec775493e38c714240f642
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427479"
 ---
-# <a name="how-to-control-the-fill-of-a-composite-shape"></a>Filtrar Controlar el relleno de una forma compuesta
+# <a name="how-to-control-the-fill-of-a-composite-shape"></a>Procedimiento Controlar el relleno de una forma compuesta
 El <xref:System.Windows.Media.GeometryGroup.FillRule%2A> propiedad de un <xref:System.Windows.Media.GeometryGroup> o <xref:System.Windows.Media.PathGeometry>, especifica una "regla" que la forma compuesta utiliza para determinar si un punto determinado forma parte de la geometría. Hay dos valores posibles para <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> y <xref:System.Windows.Media.FillRule.Nonzero>. En las secciones siguientes se describe cómo usar estas dos reglas.  
   
  **EvenOdd:** Esta regla determina si un punto está en la región de relleno dibujando un rayo desde ese punto hasta el infinito en cualquier dirección y contando el número de segmentos de ruta de acceso dentro de la forma especificada que cruza el rayo. Si este número es impar, el punto está dentro; si es par, el punto está fuera.  

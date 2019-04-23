@@ -1,5 +1,5 @@
 ---
-title: Filtrar Declarar una estructura (Visual Basic)
+title: Procedimiento Declarar una estructura (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], structures
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
 ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343563"
 ---
-# <a name="how-to-declare-a-structure-visual-basic"></a>Filtrar Declarar una estructura (Visual Basic)
+# <a name="how-to-declare-a-structure-visual-basic"></a>Procedimiento Declarar una estructura (Visual Basic)
 Comenzar una declaración structure con la [Structure (instrucción)](../../../../visual-basic/language-reference/statements/structure-statement.md), y finaliza con el `End Structure` instrucción. Entre estas dos instrucciones debe declarar al menos una *elemento*. Los elementos pueden ser de cualquier tipo de datos, pero al menos uno debe ser una variable no compartida o un evento no compartido, no personalizado.  
   
  No se puede inicializar cualquiera de los elementos de estructura en la declaración de estructura. Cuando se declara una variable para que sea un tipo de estructura, asignar valores a los elementos mediante el acceso a ellos a través de la variable.  
@@ -58,11 +58,11 @@ Comenzar una declaración structure con la [Structure (instrucción)](../../../.
 ## <a name="see-also"></a>Vea también
 
 - [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Tipos de datos elementales](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Tipos de datos básicos](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Solucionar problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Solución de problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Variables de estructura](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
 - [Estructuras y otros elementos de programación](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
 - [Estructuras y clases](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

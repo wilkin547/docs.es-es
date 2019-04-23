@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agregar instrucciones de seguimiento al código de una aplicación
+title: Procedimiento para agregar instrucciones de seguimiento al código de una aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,13 +16,13 @@ ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325597"
 ---
-# <a name="how-to-add-trace-statements-to-application-code"></a>Filtrar para agregar instrucciones de seguimiento al código de una aplicación
+# <a name="how-to-add-trace-statements-to-application-code"></a>Procedimiento para agregar instrucciones de seguimiento al código de una aplicación
 Los métodos que se usan con mayor frecuencia para traza son los métodos para escribir los resultados en agentes de escucha: **Escribir**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, y **producirá un error en**. Estos métodos pueden dividirse en dos categorías: **Escribir**, **WriteLine**, y **producirá un error en** emiten resultados de forma incondicional, mientras que **WriteIf**, **WriteLineIf**y  **Assert** comprueban una condición booleana y escriben o no escriben en función del valor de la condición. **WriteIf** y **WriteLineIf** emiten resultados si la condición es `true` y **Assert** emite resultados si la condición es `false`.  
   
  Al diseñar la estrategia de depuración y traza, debe pensar cómo desea presentar los resultados. Varias instrucciones **Write** con información no relacionada crearán un registro difícil de leer. Por otro lado, usar **WriteLine** para colocar instrucciones relacionadas en líneas independientes puede hacer que sea difícil distinguir la información del mismo tipo. En general, use varias instrucciones **Write** cuando quiera combinar información de varios orígenes para crear un único mensaje informativo y use la instrucción **WriteLine** cuando quiera crear un único mensaje completo.  
@@ -91,6 +91,6 @@ Los métodos que se usan con mayor frecuencia para traza son los métodos para e
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
 - [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Filtrar para crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Cómo: Crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)

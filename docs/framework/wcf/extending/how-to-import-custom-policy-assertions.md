@@ -1,18 +1,18 @@
 ---
-title: Filtrar para importar aserciones de directivas personalizadas
+title: Procedimiento para importar aserciones de directivas personalizadas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
 ms.openlocfilehash: 64e639e5fd6200b525ef6face56f7df2e804d7ae
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320683"
 ---
-# <a name="how-to-import-custom-policy-assertions"></a>Filtrar para importar aserciones de directivas personalizadas
+# <a name="how-to-import-custom-policy-assertions"></a>Procedimiento para importar aserciones de directivas personalizadas
 Las aserciones de directivas describen las funciones y requisitos de un extremo de servicio.  Las aplicaciones cliente pueden utilizar aserciones de directivas en metadatos del servicio para configurar el enlace de cliente o para personalizar el contrato de servicio de un punto de conexión de servicio.  
   
  Las aserciones de directiva personalizadas se importan implementando la interfaz <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> y pasando ese objeto al sistema de los metadatos o registrando el tipo de implementación en su archivo de configuración de la aplicación.  Las implementaciones de la interfaz <xref:System.ServiceModel.Description.IPolicyImportExtension> deben proporcionar un constructor predeterminado.  

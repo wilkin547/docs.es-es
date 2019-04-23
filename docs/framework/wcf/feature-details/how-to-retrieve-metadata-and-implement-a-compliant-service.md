@@ -1,15 +1,15 @@
 ---
-title: Filtrar para recuperar metadatos e implementar un servicio conforme
+title: Procedimiento para recuperar metadatos e implementar un servicio conforme
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
 ms.openlocfilehash: edf8fe2f174202d19b075ec218f059ea9b988843
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322672"
 ---
-# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Filtrar para recuperar metadatos e implementar un servicio conforme
+# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Procedimiento para recuperar metadatos e implementar un servicio conforme
 A menudo, no es el mismo rol quien diseña e implementa los servicios. En entornos donde las aplicaciones que interoperan son importantes, los contratos pueden diseñarse o describirse en lenguaje de descripción de servicios Web (WSDL), y un desarrollador deberá implementar un servicio compatible con el contrato proporcionado. También puede migrar un servicio existente a Windows Communication Foundation (WCF), pero conservar el formato. Además, los contratos dúplex exigen a los autores de llamadas que también implementen un contrato de devolución de llamada.  
   
  En estos casos, debe usar el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (o una herramienta equivalente) para generar una interfaz de contrato de servicio en un lenguaje administrado que puede implementar para cumplir los requisitos de la contrato. Normalmente el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) se usa para adquirir un contrato de servicio que se usa con un generador de canales o un tipo de cliente WCF, así como con un archivo de configuración de cliente que configura el enlace correcto y la dirección. Para utilizar el archivo de configuración generado, debe cambiarlo a un archivo de configuración de servicio. También puede ser necesario modificar el contrato de servicios.  

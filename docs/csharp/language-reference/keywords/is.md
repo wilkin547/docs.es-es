@@ -1,19 +1,19 @@
 ---
 title: 'is: Referencia de C#'
 ms.custom: seodec18
-ms.date: 02/17/2017
+ms.date: 04/09/2019
 f1_keywords:
 - is_CSharpKeyword
 - is
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977063"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480838"
 ---
 # <a name="is-c-reference"></a>is (Referencia de C#)
 
@@ -47,11 +47,11 @@ En el ejemplo siguiente se muestra que la expresión `is` se evalúa como `true`
 
 [!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
-La palabra clave `is` genera una advertencia en tiempo de compilación si se sabe que la expresión es siempre `true` o `false`. Solo considera las conversiones de referencias, las conversiones boxing y las conversiones unboxing. No tiene en cuenta las conversiones definidas por el usuario o las conversiones definidas por los operadores [implicit](implicit.md) y [explicit](explicit.md) de un tipo. En el ejemplo siguiente se generan advertencias porque el resultado de la conversión se conoce en tiempo de compilación. Tenga en cuenta que la expresión `is` para conversiones de `int` en `long` y `double` devuelve false, ya que estas conversiones se controlan mediante el operador [implicit](implicit.md).
+La palabra clave `is` genera una advertencia en tiempo de compilación si se sabe que la expresión es siempre `true` o `false`. Solo considera las conversiones de referencias, las conversiones boxing y las conversiones unboxing. No tiene en cuenta las conversiones definidas por el usuario o las conversiones definidas por los operadores [implicit](implicit.md) y [explicit](explicit.md) de un tipo. En el ejemplo siguiente se generan advertencias porque el resultado de la conversión se conoce en tiempo de compilación. La expresión `is` para conversiones de `int` en `long` y `double` devuelve false, ya que estas conversiones se controlan mediante el operador [implicit](implicit.md).
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr` puede ser cualquier expresión que devuelva un valor, a excepción de métodos anónimos y expresiones lambda. En el ejemplo siguiente se usa `is` para evaluar el valor devuelto de una llamada de método.   
+`expr` no puede ser un método anónimo ni una expresión lambda. Puede ser cualquier otra expresión que devuelva un valor. En el ejemplo siguiente se usa `is` para evaluar el valor devuelto de una llamada de método.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 A partir de C# 7.0, puede usar la coincidencia de patrones con el [patrón de tipo](#type) para escribir código más conciso que use la instrucción `is`.
@@ -66,7 +66,7 @@ A partir de C# 7.0, las instrucciones `is` y [switch](../../../csharp/language-r
 
 - [Patrón var](#var), una coincidencia que siempre se realiza correctamente y enlaza el valor de una expresión a una variable local nueva. 
 
-### <a name="type" /> Patrón de tipo </a>
+### <a name="a-nametype-type-pattern"></a><a name="type" />Patrón de tipo
 
 Cuando se usa el patrón de tipo para realizar la coincidencia de patrones, `is` comprueba si una expresión se puede convertir en un tipo especificado y, en caso afirmativo, la convierte en una variable de ese tipo. Es una extensión sencilla de la instrucción `is` que habilita la evaluación y la conversión de tipos concisa. La forma general del patrón de tipos `is` es:
 
@@ -85,6 +85,8 @@ La expresión `is` es `true` si *expr* no es `null` y se cumple alguna de las si
 - *expr* tiene un tipo en tiempo de compilación que es una clase base de *type* y *expr* tiene un tipo en tiempo de ejecución que es *type* o se deriva de *type*. El *tipo en tiempo de compilación* de una variable es el tipo de la variable tal como se define en su declaración. El *tipo en tiempo de ejecución* de una variable es el tipo de la instancia que se asigna a esa variable.
 
 - *type* es una instancia de un tipo que implementa la interfaz *type*.
+
+A partir de C# 7.1, *expr* puede tener un tipo de tiempo de compilación definido por un parámetro y sus restricciones. 
 
 Si *expr* es `true` e `is` se usa con una instrucción `if`, *varname* se asigna y tiene ámbito local solo dentro de la instrucción `if`.
 
@@ -106,7 +108,7 @@ El código equivalente sin coincidencia de patrones requiere una asignación ind
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Patrón de constante
 
-Al realizar la coincidencia de patrones con el patrón constante, `is` comprueba si una expresión es igual a una constante especificada. En C# 6 y versiones anteriores, la instrucción [switch](switch.md) admite el patrón de constante. A partir de C# 7.0, la instrucción `is` también lo admite. Su sintaxis es:
+Al realizar la coincidencia de patrones con el patrón constante, `is` comprueba si una expresión es igual a una constante especificada. En C# 6 y versiones anteriores, la instrucción [switch](switch.md) admite el patrón de constante. A partir de C# 7.0, la instrucción `is` también lo admite. Su sintaxis es:
 
 ```csharp
    expr is constant
@@ -142,17 +144,15 @@ En el ejemplo siguiente se muestra una comparación de comprobaciones `null`:
  
 ### <a name="var" /> Patrón var </a>
 
-Una coincidencia de patrones con el patrón de var siempre se realiza correctamente. Su sintaxis es
+Una coincidencia de patrones con el patrón var siempre se realiza correctamente para las expresiones no nulas: si *expr* es `null`, la expresión `is` es `false`. El valor no nulo de *expr* siempre se asigna a una variable local del mismo tipo que el tipo de tiempo de ejecución de *expr*.  Su sintaxis es:
 
 ```csharp 
    expr is var varname
 ```
 
-donde el valor de *expr* siempre se asigna a una variable local denominada *varname*. *varname* es una variable estática del mismo tipo que *expr*. En el ejemplo siguiente se usa el patrón var para asignar una expresión a una variable denominada `obj`. Después, se muestra el valor y el tipo de `obj`.
+En el ejemplo siguiente se usa el patrón var para asignar una expresión a una variable denominada `obj`. Después, se muestra el valor y el tipo de `obj`.
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
-
-Observe que si *expr* es `null`, la expresión `is` sigue siendo true y asigna `null` a *varname*. 
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
   

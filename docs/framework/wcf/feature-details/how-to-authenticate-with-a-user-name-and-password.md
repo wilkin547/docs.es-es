@@ -1,17 +1,17 @@
 ---
-title: Filtrar para autenticar con un nombre de usuario y contraseña
+title: Procedimiento para autenticar con un nombre de usuario y contraseña
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
 ms.openlocfilehash: 11a146e387171d6af95a7710fe96d6f35f6c611f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321047"
 ---
-# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Filtrar para autenticar con un nombre de usuario y contraseña
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Procedimiento para autenticar con un nombre de usuario y contraseña
 
 En este tema se muestra cómo habilitar un servicio de Windows Communication Foundation (WCF) autenticar a un cliente con un nombre de usuario de dominio de Windows y una contraseña. Se supone que tiene un servicio WCF autohospedado que funciona. Para obtener un ejemplo de creación de un básica autohospedado WCF service, consulte [Tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md). En este tema se supone que el servicio se configura en código. Si desea ver un ejemplo de cómo configurar un servicio similar usando un archivo de configuración vea [nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
@@ -92,6 +92,6 @@ En este tema se muestra cómo habilitar un servicio de Windows Communication Fou
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>
 - <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>
-- [Seguridad de transporte con autenticación básica](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
+- [Seguridad del transporte con la autenticación básica](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
 - [Seguridad distribuida de aplicaciones](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
 - [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

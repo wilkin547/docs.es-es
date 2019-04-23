@@ -1,5 +1,5 @@
 ---
-title: Filtrar Personalizar comportamientos (WCF Data Services) de enlace de datos
+title: Procedimiento Personalizar comportamientos (WCF Data Services) de enlace de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
 ms.openlocfilehash: f55c9790b8300a1a3f26e031a17a0982638b562b
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517426"
 ---
-# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Filtrar Personalizar comportamientos (WCF Data Services) de enlace de datos
+# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Procedimiento Personalizar comportamientos (WCF Data Services) de enlace de datos
 Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede proporcionar lógica personalizada a la que <xref:System.Data.Services.Client.DataServiceCollection%601> llama cuando se agrega o se quita un objeto de la colección de enlaces o cuando se detecta un cambio en una propiedad. Esta lógica personalizada se proporciona como métodos, al que hace referencia como <xref:System.Func%602> delegados, que devuelven un valor de `false` cuando el comportamiento predeterminado debe todavía se realiza cuando se completa el método personalizado y `true` cuando su posterior procesamiento de la evento que se debe detener.  
   
  Los ejemplos de este tema proporcionan métodos personalizados para los parámetros `entityChanged` y `entityCollectionChanged` de la clase <xref:System.Data.Services.Client.DataServiceCollection%601>. En los ejemplos de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos del cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean cuando se completa la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  

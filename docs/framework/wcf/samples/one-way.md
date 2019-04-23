@@ -3,10 +3,10 @@ title: Unidireccional
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
 ms.openlocfilehash: e82034a79610ea7956b3ef07508295578461de1b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321001"
 ---
 # <a name="one-way"></a>Unidireccional
@@ -84,7 +84,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
->  HTTP es, por definición, un protocolo de solicitud/respuesta; cuando se realiza una solicitud, se devuelve una respuesta. Esto es verdad incluso para una operación de servicio unidireccional que se expone sobre HTTP. Cuando se llama a la operación, el servicio devuelve un código de estado HTTP de 202 antes de que se ejecute la operación de servicio. Este código de estado significa que se ha aceptado el procesamiento de la solicitud, pero no se ha completado aún. El cliente que llamó a la operación se bloquea hasta que recibe la respuesta 202 del servicio. Esto puede producir comportamientos inesperados cuando se envían mensajes unidireccionales usando un enlace que se configura para usar sesiones. El enlace `wsHttpBinding` que se usa en este ejemplo se configura para utilizar sesiones de forma predeterminada a fin de establecer un contexto de seguridad. De forma predeterminada, se garantiza que los mensajes en una sesión lleguen en el orden en el que se enviaron. Debido a esto, cuando se envía el segundo mensaje en una sesión, no se procesa hasta que se haya procesado el primero. El resultado es que el cliente no recibe la respuesta 202 para un mensaje hasta que el procesamiento del mensaje anterior se haya completado. Parece, por tanto, que el cliente se bloquea en cada llamada de operación subsiguiente. Para evitar este comportamiento, este ejemplo configura el tiempo de ejecución para enviar mensajes a la vez a distintas instancias para el procesamiento. El ejemplo establece <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> en `PerCall` para que otra instancia diferente pueda procesar cada mensaje. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> se establece en `Multiple` para permitir que más de un subproceso envíe mensajes a la vez.  
+>  HTTP es, por definición, un protocolo de solicitud/respuesta; cuando se realiza una solicitud, se devuelve una respuesta. Esto es verdad incluso para una operación de servicio unidireccional que se expone sobre HTTP. Cuando se llama a la operación, el servicio devuelve un código de estado HTTP de 202 antes de que se ejecute la operación de servicio. Este código de estado significa que se ha aceptado el procesamiento de la solicitud, pero no se ha completado aún. El cliente que llamó a la operación se bloquea hasta que recibe la respuesta 202 del servicio. Esto puede producir comportamientos inesperados cuando se envían mensajes unidireccionales usando un enlace que se configura para usar sesiones. El enlace `wsHttpBinding` que se usa en este ejemplo se configura para utilizar sesiones de forma predeterminada a fin de establecer un contexto de seguridad. De forma predeterminada, se garantiza que los mensajes en una sesión lleguen en el orden en el que se enviaron. Debido a esto, cuando se envía el segundo mensaje en una sesión, no se procesa hasta que se haya procesado el primero. El resultado es que el cliente no recibe la respuesta 202 para un mensaje hasta que el procesamiento del mensaje anterior se haya completado. Parece, por tanto, que el cliente se bloquea en cada llamada de operación subsiguiente. Para evitar este comportamiento, este ejemplo configura el tiempo de ejecución para enviar mensajes a la vez a distintas instancias para el procesamiento. El ejemplo establece <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> en `PerCall` para que otra instancia diferente pueda procesar cada mensaje. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> se establece en `Multiple` para permitir que más de un subproceso envíe mensajes al mismo tiempo.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   

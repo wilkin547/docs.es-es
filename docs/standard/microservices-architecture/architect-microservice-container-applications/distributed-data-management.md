@@ -4,12 +4,12 @@ description: Descubra cuáles son los desafíos y soluciones de la administraci�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: f92410f2742ec1cbcb08d13614700eab348aa646
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3e683044ea6a31116f1e7da6d690fc32ad87bd76
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463376"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613712"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafíos y soluciones de la administración de datos distribuidos
 
@@ -86,28 +86,28 @@ El uso de comunicación asincrónica se explica con más detalle más adelante e
 ## <a name="additional-resources"></a>Recursos adicionales
 
 - **Teorema CAP** \
-  [https://en.wikipedia.org/wiki/CAP_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+  <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **Eventual Consistency** \ (Coherencia de los eventos)
-  [https://en.wikipedia.org/wiki/Eventual_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+  <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Data Consistency Primer** \ (Manual de coherencia de datos)
-  [https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10))
+  <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Martin Fowler. CQRS (Command and Query Responsibility Segregation)** \ [CQRS (Segregación de responsabilidades de consultas y comandos)]
-  [https://martinfowler.com/bliki/CQRS.html](https://martinfowler.com/bliki/CQRS.html)
+  <https://martinfowler.com/bliki/CQRS.html>
 
 - **Patrón Materialized View** \
-  [https://docs.microsoft.com/azure/architecture/patterns/materialized-view](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
+  <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
 - **Charles Row. ACID vs. BASE: el cambio del pH del procesamiento de transacciones de bases de datos** \
-  [https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+  <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
 - **Patrón Compensating Transaction** \ (Transacción de compensación)
-  [https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+  <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
 - **Udi Dahan. Service Oriented Composition (Composición orientada a servicios)**  \
-  [http://udidahan.com/2014/07/30/service-oriented-composition-with-video/](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]
 >[Anterior](logical-versus-physical-architecture.md)

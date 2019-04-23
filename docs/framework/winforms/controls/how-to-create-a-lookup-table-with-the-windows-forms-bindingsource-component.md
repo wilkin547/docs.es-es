@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear una tabla de búsqueda con el componente BindingSource de formularios Windows Forms
+title: Procedimiento para crear una tabla de búsqueda con el componente BindingSource de formularios Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
 ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321905"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Filtrar para crear una tabla de búsqueda con el componente BindingSource de formularios Windows Forms
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procedimiento para crear una tabla de búsqueda con el componente BindingSource de formularios Windows Forms
 Una tabla de búsqueda es una tabla de datos con una columna que muestra los datos de los registros de una tabla relacionada. En los procedimientos siguientes se usa un control <xref:System.Windows.Forms.ComboBox> para mostrar el campo con la relación de clave externa desde la tabla primaria a la tabla secundaria.  
   
  Aquí se ofrece un ejemplo de una tabla primaria y una tabla secundaria para ayudar a visualizar estas dos tablas y su relación:  
@@ -95,5 +95,5 @@ Una tabla de búsqueda es una tabla de datos con una columna que muestra los dat
 
 - <xref:System.Windows.Forms.BindingSource>
 - [Componente BindingSource](bindingsource-component.md)
-- [Control ComboBox](combobox-control-windows-forms.md)
+- [ComboBox (control)](combobox-control-windows-forms.md)
 - [Enlazar controles a los datos en Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
