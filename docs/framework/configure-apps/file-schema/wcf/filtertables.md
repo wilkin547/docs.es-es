@@ -3,20 +3,20 @@ title: <filterTables>
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
 ms.openlocfilehash: c49c7cf3a196595556c2bf1b4ed4365bfe1e4cbf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075735"
 ---
-# <a name="filtertables"></a><span data-ttu-id="06679-101">\<filterTables></span><span class="sxs-lookup"><span data-stu-id="06679-101">\<filterTables></span></span>
-<span data-ttu-id="06679-102">Representa una sección de configuración para definir tablas de enrutamiento que contienen las asignaciones entre los filtros de enrutamiento y los extremos de destino a los que enviar mensajes cuando coincida el filtro.</span><span class="sxs-lookup"><span data-stu-id="06679-102">Represents a configuration section for defining routing tables that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  
+# <a name="filtertables"></a><span data-ttu-id="e422f-101">\<filterTables></span><span class="sxs-lookup"><span data-stu-id="e422f-101">\<filterTables></span></span>
+<span data-ttu-id="e422f-102">Representa una sección de configuración para definir tablas de enrutamiento que contienen las asignaciones entre los filtros de enrutamiento y los extremos de destino a los que enviar mensajes cuando coincida el filtro.</span><span class="sxs-lookup"><span data-stu-id="e422f-102">Represents a configuration section for defining routing tables that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  
   
- <span data-ttu-id="06679-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="06679-103">\<system.serviceModel></span></span>  
-<span data-ttu-id="06679-104">\<routing></span><span class="sxs-lookup"><span data-stu-id="06679-104">\<routing></span></span>  
-<span data-ttu-id="06679-105">\<routingTables></span><span class="sxs-lookup"><span data-stu-id="06679-105">\<routingTables></span></span>  
+ <span data-ttu-id="e422f-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="e422f-103">\<system.serviceModel></span></span>  
+<span data-ttu-id="e422f-104">\<routing></span><span class="sxs-lookup"><span data-stu-id="e422f-104">\<routing></span></span>  
+<span data-ttu-id="e422f-105">\<routingTables></span><span class="sxs-lookup"><span data-stu-id="e422f-105">\<routingTables></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="06679-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="06679-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e422f-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e422f-106">Syntax</span></span>  
   
 ```xml  
 <routing>
@@ -33,25 +33,25 @@ ms.locfileid: "59075735"
 </routing>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="06679-107">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="06679-107">Attributes and Elements</span></span>  
- <span data-ttu-id="06679-108">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="06679-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e422f-107">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="e422f-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="e422f-108">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="e422f-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="06679-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="06679-109">Attributes</span></span>  
- <span data-ttu-id="06679-110">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="06679-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e422f-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="e422f-109">Attributes</span></span>  
+ <span data-ttu-id="e422f-110">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="e422f-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="06679-111">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="06679-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e422f-111">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="e422f-111">Child Elements</span></span>  
   
-|<span data-ttu-id="06679-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="06679-112">Element</span></span>|<span data-ttu-id="06679-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="06679-113">Description</span></span>|  
+|<span data-ttu-id="e422f-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="e422f-112">Element</span></span>|<span data-ttu-id="e422f-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="e422f-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="06679-114">\<filters></span><span class="sxs-lookup"><span data-stu-id="06679-114">\<filters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|<span data-ttu-id="06679-115">Tabla de enrutamiento que contiene las asignaciones entre los filtros de enrutamiento y los puntos de conexión de destino a los que enviar mensajes cuando coincida el filtro.</span><span class="sxs-lookup"><span data-stu-id="06679-115">A routing table that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>|  
+|[<span data-ttu-id="e422f-114">\<filters></span><span class="sxs-lookup"><span data-stu-id="e422f-114">\<filters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|<span data-ttu-id="e422f-115">Tabla de enrutamiento que contiene las asignaciones entre los filtros de enrutamiento y los puntos de conexión de destino a los que enviar mensajes cuando coincida el filtro.</span><span class="sxs-lookup"><span data-stu-id="e422f-115">A routing table that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="06679-116">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="06679-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e422f-116">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="e422f-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="06679-117">Elemento</span><span class="sxs-lookup"><span data-stu-id="06679-117">Element</span></span>|<span data-ttu-id="06679-118">Descripción</span><span class="sxs-lookup"><span data-stu-id="06679-118">Description</span></span>|  
+|<span data-ttu-id="e422f-117">Elemento</span><span class="sxs-lookup"><span data-stu-id="e422f-117">Element</span></span>|<span data-ttu-id="e422f-118">Descripción</span><span class="sxs-lookup"><span data-stu-id="e422f-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="06679-119">\<routing></span><span class="sxs-lookup"><span data-stu-id="06679-119">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|<span data-ttu-id="06679-120">Sección de configuración que contiene filtros y tablas de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="06679-120">A configuration section that contains routing filters and routing tables.</span></span>|  
+|[<span data-ttu-id="e422f-119">\<routing></span><span class="sxs-lookup"><span data-stu-id="e422f-119">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|<span data-ttu-id="e422f-120">Sección de configuración que contiene filtros y tablas de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="e422f-120">A configuration section that contains routing filters and routing tables.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="06679-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="06679-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e422f-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="e422f-121">See also</span></span>
 
 - <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection?displayProperty=nameWithType>
