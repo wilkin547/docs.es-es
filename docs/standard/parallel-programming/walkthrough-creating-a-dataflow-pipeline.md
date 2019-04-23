@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear una canalización de flujos de datos'
+title: 'Tutorial: Creación de una canalización de flujos de datos'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b74e60daced88050413855070c880cd6c1cebfb1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 870f65fdbf263913134d0528c200d3c2990a498c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421247"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59299012"
 ---
-# <a name="walkthrough-creating-a-dataflow-pipeline"></a>Tutorial: Crear una canalización de flujos de datos
+# <a name="walkthrough-creating-a-dataflow-pipeline"></a>Tutorial: Creación de una canalización de flujos de datos
 Aunque puede usar los métodos <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> para recibir mensajes de los bloques de origen, también puede conectar los bloques de mensajes para formar una *canalización de flujo de datos*. Una canalización de flujo datos es una serie de componentes, o *bloques de flujo de datos*, de los que cada uno realiza una tarea concreta que contribuye a lograr un objetivo mayor. Cada bloque de flujo de datos de una canalización de flujo de datos realiza un determinado trabajo cuando recibe un mensaje de otro bloque de flujo de datos. Se podría establecer una analogía de esto con una cadena de montaje en la fabricación de automóviles. Mientras cada vehículo pasa a través de la línea de montaje, una estación monta el bastidor, la siguiente instala el motor y así sucesivamente. Dado que una cadena de montaje permite montar varios vehículos al mismo tiempo, proporciona un mejor rendimiento que montar de uno en uno los vehículos completos.
 
  En este documento se muestra una canalización de flujo de datos que descarga el libro *La Ilíada de Homero* desde un sitio web y explora el texto para encontrar coincidencias entre palabras individuales y palabras que revierten el orden de los caracteres de la primera palabra. La formación de la canalización de flujo de datos en este documento se compone de los siguientes pasos:  
   
-1.  Crear los bloques de flujo de datos que participan en la canalización.  
+1. Crear los bloques de flujo de datos que participan en la canalización.  
   
-2.  Conectar cada bloque de flujo de datos con el siguiente bloque de la canalización. Cada bloque recibe como entrada la salida del bloque anterior de la canalización.  
+2. Conectar cada bloque de flujo de datos con el siguiente bloque de la canalización. Cada bloque recibe como entrada la salida del bloque anterior de la canalización.  
   
-3.  Para cada bloque de flujo de datos, crear una tarea de continuación que establezca el siguiente bloque en estado completado después de que finalice el bloque anterior.  
+3. Para cada bloque de flujo de datos, crear una tarea de continuación que establezca el siguiente bloque en estado completado después de que finalice el bloque anterior.  
   
-4.  Publicar datos en el encabezado de la canalización.  
+4. Publicar datos en el encabezado de la canalización.  
   
-5.  Marcar el encabezado de la canalización como completado.  
+5. Marcar el encabezado de la canalización como completado.  
   
-6.  Esperar a que la canalización complete todo el trabajo.  
+6. Esperar a que la canalización complete todo el trabajo.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Lea [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) antes de empezar este tutorial.  
@@ -108,7 +108,7 @@ Aunque puede usar los métodos <xref:System.Threading.Tasks.Dataflow.DataflowBlo
   
  El paralelismo que se logra mediante el uso de canalizaciones de flujo de datos se conoce como *paralelismo general* porque normalmente consta de menos tareas y más grandes. También puede usar un *paralelismo específico* de tareas más pequeñas y breves en una canalización de flujo de datos. En este ejemplo, el miembro `findReversedWords` de la canalización usa [PLINQ](parallel-linq-plinq.md) para procesar en paralelo varios elementos de la lista de trabajo. El uso de paralelismo de grano fino en una canalización de grano grueso puede mejorar el rendimiento global.  
   
- También puede conectar un bloque de flujo de datos de origen a varios bloques de destino para crear una *red de flujo de datos*. La versión sobrecargada del método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> toma un objeto <xref:System.Predicate%601> que define si el bloque de destino acepta cada mensaje según su valor. La mayoría de los tipos de bloques de flujo de datos que actúan como orígenes ofrecen mensajes a todos los bloques de destino conectados, siguiendo el orden en que se conectaron, hasta que uno de los bloques acepta ese mensaje. Mediante este mecanismo de filtrado, puede crear sistemas de bloques de flujo de datos conectados que dirigen determinados datos a través de una ruta de acceso y otros datos a través de otra ruta de acceso. Para obtener un ejemplo que usa el filtrado para crear una red de flujo de datos, vea [Tutorial: Usar flujos de datos en aplicaciones de Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ También puede conectar un bloque de flujo de datos de origen a varios bloques de destino para crear una *red de flujo de datos*. La versión sobrecargada del método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> toma un objeto <xref:System.Predicate%601> que define si el bloque de destino acepta cada mensaje según su valor. La mayoría de los tipos de bloques de flujo de datos que actúan como orígenes ofrecen mensajes a todos los bloques de destino conectados, siguiendo el orden en que se conectaron, hasta que uno de los bloques acepta ese mensaje. Mediante este mecanismo de filtrado, puede crear sistemas de bloques de flujo de datos conectados que dirigen determinados datos a través de una ruta de acceso y otros datos a través de otra ruta de acceso. Para ver un ejemplo que usa el filtrado para crear una red de flujo de datos, consulte [Tutorial: Uso de flujos de datos en aplicaciones de Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="see-also"></a>Vea también
 

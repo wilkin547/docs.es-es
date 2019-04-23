@@ -1,5 +1,5 @@
 ---
-title: Filtrar Acelerar el acceso a un objeto con una ruta de acceso de calificación larga (Visual Basic)
+title: Procedimiento Acelerar el acceso a un objeto con una ruta de acceso de calificación larga (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], accessing
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
 ms.openlocfilehash: 94c838a69aab9fcae9dc0c79b6038ee90e2369e7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299142"
 ---
-# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Filtrar Acelerar el acceso a un objeto con una ruta de acceso de calificación larga (Visual Basic)
+# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Procedimiento Acelerar el acceso a un objeto con una ruta de acceso de calificación larga (Visual Basic)
 Si frecuentemente tiene acceso a un objeto que requiere una ruta de acceso de calificación de varios métodos y propiedades, puede acelerar su código no repite la ruta de acceso de calificación.  
   
  Hay dos maneras de evitar la repetición de la ruta de acceso de calificación. El objeto se puede asignar a una variable, o puede usarla en un `With`... `End With` bloque.  
@@ -56,4 +56,4 @@ Si frecuentemente tiene acceso a un objeto que requiere una ruta de acceso de ca
 ## <a name="see-also"></a>Vea también
 
 - [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [With...End With (Instrucción)](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [With...End With (instrucción)](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)

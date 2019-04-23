@@ -3,10 +3,10 @@ title: Registros de seguimiento
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
 ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298362"
 ---
 # <a name="tracking-records"></a>Registros de seguimiento
@@ -50,15 +50,15 @@ El tiempo de ejecución del flujo de trabajo sirve para emitir los registros de 
   
  Por ejemplo, podría haber una actividad <xref:System.Activities.Statements.Sequence> simple que contenga una operación <xref:System.Activities.Statements.WriteLine> con registros de seguimiento emitidos en el siguiente orden:  
   
-1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que se está iniciando el flujo de trabajo.  
+1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que está comenzando el flujo de trabajo.  
   
 2. <xref:System.Activities.Tracking.ActivityScheduledRecord> indica que se ha programado una actividad. En este caso se trata de una actividad <xref:System.Activities.Statements.Sequence>.  
   
-3. <xref:System.Activities.Tracking.ActivityScheduledRecord> representa la <xref:System.Activities.Statements.WriteLine> actividad.  
+3. <xref:System.Activities.Tracking.ActivityScheduledRecord> representa la actividad <xref:System.Activities.Statements.WriteLine>.  
   
 4. Hay dos registros <xref:System.Activities.Tracking.ActivityStateRecord> que representan las dos actividades que se están completando.  
   
-5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que se está completando el flujo de trabajo.  
+5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que el flujo de trabajo se está completando.  
   
 ## <a name="see-also"></a>Vea también
 

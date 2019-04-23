@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712579"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59299480"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Tutorial: Emisión de código en escenarios que no son de plena confianza
 La emisión de reflexión usa el mismo conjunto de API con confianza completa o parcial, pero algunas características requieren permisos especiales en entornos de confianza parcial. Además, la emisión de reflexión tiene una característica, los métodos dinámicos hospedados de forma anónima, diseñada para su uso en entornos de confianza parcial y por ensamblados transparentes en seguridad.  
@@ -59,12 +59,12 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
   
 ##### <a name="to-create-an-application-domain-with-partial-trust"></a>Para crear un dominio de aplicación con confianza parcial  
   
-1.  Cree un conjunto de permisos que se concedan a los ensamblados del dominio de aplicación en un espacio aislado. En este caso, se utiliza el conjunto de permisos de la zona de Internet.  
+1. Cree un conjunto de permisos que se concedan a los ensamblados del dominio de aplicación en un espacio aislado. En este caso, se utiliza el conjunto de permisos de la zona de Internet.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#2)]
      [!code-vb[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#2)]  
   
-2.  Cree un objeto <xref:System.AppDomainSetup> para inicializar el dominio de aplicación con una ruta de aplicación.  
+2. Cree un objeto <xref:System.AppDomainSetup> para inicializar el dominio de aplicación con una ruta de aplicación.  
   
     > [!IMPORTANT]
     >  Para simplificar, en este ejemplo de código se usa la carpeta actual. Para ejecutar código que procede de Internet, use una carpeta independiente para el código que no es de confianza, como se describe en [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
@@ -72,7 +72,7 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
   
-3.  Cree el dominio de aplicación, especificando la información sobre configuración del dominio de aplicación y el conjunto de permisos concedidos para todos los ensamblados que se ejecutan en el dominio de aplicación.  
+3. Cree el dominio de aplicación, especificando la información sobre configuración del dominio de aplicación y el conjunto de permisos concedidos para todos los ensamblados que se ejecutan en el dominio de aplicación.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
@@ -89,7 +89,7 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
   
 ##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Para crear un dominio de aplicación con confianza parcial más RMA  
   
-1.  Cree un nuevo objeto <xref:System.Security.Permissions.ReflectionPermission> con la marca (RMA) <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> y use el método <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> para agregar el permiso al conjunto de permisos concedidos.  
+1. Cree un nuevo objeto <xref:System.Security.Permissions.ReflectionPermission> con la marca (RMA) <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> y use el método <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> para agregar el permiso al conjunto de permisos concedidos.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#7)]
      [!code-vb[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#7)]  
@@ -99,7 +99,7 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
     > [!NOTE]
     >  RMA es una característica de los métodos dinámicos hospedados de forma anónima. Cuando los métodos dinámicos normales omiten las comprobaciones de visibilidad JIT, el código emitido requiere plena confianza.  
   
-2.  Cree el dominio de aplicación y especifique la información sobre configuración del dominio de aplicación y el conjunto de permisos concedidos.  
+2. Cree el dominio de aplicación y especifique la información sobre configuración del dominio de aplicación y el conjunto de permisos concedidos.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#8)]
      [!code-vb[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#8)]  
@@ -110,24 +110,24 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
   
 #### <a name="to-define-and-execute-a-method-in-an-application-domain"></a>Para definir y ejecutar un método en un dominio de aplicación  
   
-1.  Defina una clase que se derive de <xref:System.MarshalByRefObject>. Esto permite crear instancias de la clase en otros dominios de aplicación y realizar llamadas a métodos en los límites del dominio de aplicación. En este ejemplo, la clase se denomina `Worker`.  
+1. Defina una clase que se derive de <xref:System.MarshalByRefObject>. Esto permite crear instancias de la clase en otros dominios de aplicación y realizar llamadas a métodos en los límites del dominio de aplicación. En este ejemplo, la clase se denomina `Worker`.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#10)]
      [!code-vb[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#10)]  
   
-2.  Defina un método público que contenga el código que desea ejecutar. En este ejemplo, el código emite un método dinámico simple, crea un delegado para ejecutar el método e invoca al delegado.  
+2. Defina un método público que contenga el código que desea ejecutar. En este ejemplo, el código emite un método dinámico simple, crea un delegado para ejecutar el método e invoca al delegado.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#11)]
      [!code-vb[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#11)]  
   
-3.  En el programa principal, obtenga el nombre para mostrar del ensamblado. Este nombre se usa al crear instancias de la clase `Worker` en el dominio de aplicación en un espacio aislado.  
+3. En el programa principal, obtenga el nombre para mostrar del ensamblado. Este nombre se usa al crear instancias de la clase `Worker` en el dominio de aplicación en un espacio aislado.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#14)]
      [!code-vb[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#14)]  
   
-4.  En el programa principal, cree un dominio de aplicación en un espacio aislado, como se describe en [el primer procedimiento](#Setting_up) de este tutorial. No es necesario agregar ningún permiso al conjunto de permisos `Internet`, porque el método `SimpleEmitDemo` sólo usa métodos públicos.  
+4. En el programa principal, cree un dominio de aplicación en un espacio aislado, como se describe en [el primer procedimiento](#Setting_up) de este tutorial. No es necesario agregar ningún permiso al conjunto de permisos `Internet`, porque el método `SimpleEmitDemo` sólo usa métodos públicos.  
   
-5.  En el programa principal, cree una instancia de la clase `Worker` en el dominio de aplicación en un espacio aislado.  
+5. En el programa principal, cree una instancia de la clase `Worker` en el dominio de aplicación en un espacio aislado.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#12)]
      [!code-vb[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#12)]  
@@ -137,7 +137,7 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
     > [!NOTE]
     >  Si usa este código en Visual Studio, debe cambiar el nombre de la clase para que incluya el espacio de nombres. De forma predeterminada, el espacio de nombres es el nombre del proyecto. Por ejemplo, si el proyecto es "PartialTrust", el nombre de clase debe ser "PartialTrust.Worker".  
   
-6.  Agregue código para llamar al método `SimpleEmitDemo`. Se calculan las referencias de la llamada en el límite del dominio de aplicación y el código se ejecuta en el dominio de aplicación en un espacio aislado.  
+6. Agregue código para llamar al método `SimpleEmitDemo`. Se calculan las referencias de la llamada en el límite del dominio de aplicación y el código se ejecuta en el dominio de aplicación en un espacio aislado.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#13)]
      [!code-vb[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#13)]  
@@ -212,5 +212,6 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
 -   Si compila este código de ejemplo en Visual Studio, debe cambiar el nombre de la clase para que incluya el espacio de nombres al pasarla al método <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. De forma predeterminada, el espacio de nombres es el nombre del proyecto. Por ejemplo, si el proyecto es "PartialTrust", el nombre de clase debe ser "PartialTrust.Worker".  
   
 ## <a name="see-also"></a>Vea también
+
 - [Problemas de seguridad en la emisión de la reflexión](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

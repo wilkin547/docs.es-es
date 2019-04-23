@@ -1,5 +1,5 @@
 ---
-title: Filtrar Determinar qué nodo de TreeView se hizo clic (formularios Windows Forms)
+title: Procedimiento Determinar qué nodo de TreeView se hizo clic (formularios Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
 ms.openlocfilehash: 71f13c7b160822c92475d4d03e923b40d4f0454d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296737"
 ---
-# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Filtrar Determinar qué nodo de TreeView se hizo clic (formularios Windows Forms)
+# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Procedimiento Determinar qué nodo de TreeView se hizo clic (formularios Windows Forms)
 Cuando se trabaja con los formularios de Windows <xref:System.Windows.Forms.TreeView> control, es una tarea común determinar qué nodo se hizo clic y responder según corresponda.  
   
 ### <a name="to-determine-which-treeview-node-was-clicked"></a>Para determinar qué nodo de TreeView se hizo clic  
@@ -60,4 +60,4 @@ Cuando se trabaja con los formularios de Windows <xref:System.Windows.Forms.Tree
   
 ## <a name="see-also"></a>Vea también
 
-- [TreeView (Control)](treeview-control-windows-forms.md)
+- [TreeView (control)](treeview-control-windows-forms.md)

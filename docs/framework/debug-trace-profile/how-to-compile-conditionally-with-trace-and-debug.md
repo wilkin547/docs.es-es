@@ -1,5 +1,5 @@
 ---
-title: Filtrar para compilar con Trace y Debug de forma condicional
+title: Procedimiento para compilar con Trace y Debug de forma condicional
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -13,13 +13,13 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298583"
 ---
-# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Filtrar para compilar con Trace y Debug de forma condicional
+# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Procedimiento para compilar con Trace y Debug de forma condicional
 Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de depuración aparecen en la ventana Salida de Visual Studio. Pero para incluir características de seguimiento en una aplicación implementada, tendrá que compilar las aplicaciones instrumentadas con la directiva de compilador **TRACE** habilitada. Esto permite que el código de seguimiento se compile en la versión de lanzamiento de la aplicación. Si no habilita la directiva **TRACE**, se ignorará todo el código de seguimiento durante la compilación y no se incluirá en el código ejecutable que se va a implementar.  
   
  Los métodos de depuración y seguimiento tienen atributos condicionales asociados. Por ejemplo, si el atributo condicional para el seguimiento es **true**, todas las instrucciones de seguimiento se incluyen dentro de un ensamblado (un archivo .exe o .dll compilado); si el atributo condicional de **Trace** es **false**, no se incluyen las instrucciones de seguimiento.  
@@ -98,9 +98,9 @@ Convierta en comentario la directiva de compilador.
 ## <a name="see-also"></a>Vea también
 
 - [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Filtrar para crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Cómo: Crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Filtrar para agregar instrucciones de seguimiento al código de una aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Filtrar Establecer variables de entorno para la línea de comandos de Visual Studio](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [Filtrar Invocar el compilador de línea de comandos](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [Cómo: Agregar instrucciones de seguimiento al código de aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Cómo: Establecer variables de entorno para la línea de comandos de Visual Studio](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Cómo: Invocar al compilador de la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

@@ -3,10 +3,10 @@ title: 'Tarea 2: Hospedar el diseñador de flujo de trabajo'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
 ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299272"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tarea 2: Hospedar el diseñador de flujo de trabajo
@@ -123,6 +123,6 @@ Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[
   
 ## <a name="see-also"></a>Vea también
 
-- [Rehospedar el Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
-- [Tarea 1: Crear una aplicación de Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
-- [Tarea 3: Crear los paneles de Cuadro de herramientas y PropertyGrid](task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [Rehospedaje del Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
+- [Tarea 1: Crear una nueva aplicación de Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Tarea 3: Crear el cuadro de herramientas y PropertyGrid paneles](task-3-create-the-toolbox-and-propertygrid-panes.md)

@@ -14,10 +14,10 @@ helpviewer_keywords:
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
 ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298349"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Crear un control que tiene una apariencia personalizable
@@ -121,7 +121,7 @@ Un control NumericUpDown personalizado
 ### <a name="use-the-visualstatemanager-to-manage-states"></a>Usar VisualStateManager para administrar estados  
  El <xref:System.Windows.VisualStateManager> realiza un seguimiento de los Estados de un control y ejecuta la lógica necesaria para realizar la transición entre Estados. Al agregar <xref:System.Windows.VisualState> objetos a la <xref:System.Windows.Controls.ControlTemplate>, agregarlos a un <xref:System.Windows.VisualStateGroup> y agregue el <xref:System.Windows.VisualStateGroup> a la <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> propiedad adjunta para que el <xref:System.Windows.VisualStateManager> tiene acceso a ellos.  
   
- En el ejemplo siguiente se repite el ejemplo anterior que muestra la <xref:System.Windows.VisualState> objetos que se corresponde con el `Positive` y `Negative` Estados del control. El <xref:System.Windows.Media.Animation.Storyboard> en el `Negative`<xref:System.Windows.VisualState> activa el <xref:System.Windows.Controls.TextBlock.Foreground%2A> de la <xref:System.Windows.Controls.TextBlock> rojo.   Cuando el `NumericUpDown` control se encuentra en la `Negative` de estado, el guión gráfico en el `Negative` estado comienza.  El <xref:System.Windows.Media.Animation.Storyboard> en el `Negative` estado se detiene cuando el control vuelve a la `Positive` estado.  El `Positive`<xref:System.Windows.VisualState> no necesita contener un <xref:System.Windows.Media.Animation.Storyboard> porque cuando el <xref:System.Windows.Media.Animation.Storyboard> para el `Negative` se detiene, el <xref:System.Windows.Controls.TextBlock.Foreground%2A> vuelve a su color original.  
+ En el ejemplo siguiente se repite el ejemplo anterior que muestra la <xref:System.Windows.VisualState> objetos que se corresponde con el `Positive` y `Negative` Estados del control. El <xref:System.Windows.Media.Animation.Storyboard> en el `Negative` <xref:System.Windows.VisualState> activa el <xref:System.Windows.Controls.TextBlock.Foreground%2A> de la <xref:System.Windows.Controls.TextBlock> rojo.   Cuando el `NumericUpDown` control se encuentra en la `Negative` de estado, el guión gráfico en el `Negative` estado comienza.  El <xref:System.Windows.Media.Animation.Storyboard> en el `Negative` estado se detiene cuando el control vuelve a la `Positive` estado.  El `Positive` <xref:System.Windows.VisualState> no necesita contener un <xref:System.Windows.Media.Animation.Storyboard> porque cuando el <xref:System.Windows.Media.Animation.Storyboard> para el `Negative` se detiene, el <xref:System.Windows.Controls.TextBlock.Foreground%2A> vuelve a su color original.  
   
  [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]  
   
@@ -156,7 +156,7 @@ Un control NumericUpDown personalizado
   
  Si se pasa el nombre de un estado a <xref:System.Windows.VisualStateManager.GoToState%2A> cuando el control ya está en ese estado, <xref:System.Windows.VisualStateManager.GoToState%2A> no hace nada, por lo que no es necesario comprobar el estado del control actual.  Por ejemplo, si `Value` cambia de un número negativo a otro número negativo, el guión gráfico para el `Negative` no se interrumpe el estado y el usuario no verá un cambio en el control.  
   
- El <xref:System.Windows.VisualStateManager> usa <xref:System.Windows.VisualStateGroup> objetos para determinar qué estado salir cuando se llama a <xref:System.Windows.VisualStateManager.GoToState%2A>. El control siempre está en un estado para cada <xref:System.Windows.VisualStateGroup> que se define en su <xref:System.Windows.Controls.ControlTemplate> y deja sólo un estado cuando entra en otro estado de la misma <xref:System.Windows.VisualStateGroup>. Por ejemplo, el <xref:System.Windows.Controls.ControlTemplate> de la `NumericUpDown` control define la `Positive` y `Negative`<xref:System.Windows.VisualState> objetos en una <xref:System.Windows.VisualStateGroup> y `Focused` y `Unfocused`<xref:System.Windows.VisualState> objetos en otro. (Puede ver el `Focused` y `Unfocused`<xref:System.Windows.VisualState> definido en el [ejemplo completo](#complete_example) en este tema cuando el control pasa de la `Positive` estado el `Negative` estado, o viceversa, se mantiene en el control ya sea el `Focused` o `Unfocused` estado.  
+ El <xref:System.Windows.VisualStateManager> usa <xref:System.Windows.VisualStateGroup> objetos para determinar qué estado salir cuando se llama a <xref:System.Windows.VisualStateManager.GoToState%2A>. El control siempre está en un estado para cada <xref:System.Windows.VisualStateGroup> que se define en su <xref:System.Windows.Controls.ControlTemplate> y deja sólo un estado cuando entra en otro estado de la misma <xref:System.Windows.VisualStateGroup>. Por ejemplo, el <xref:System.Windows.Controls.ControlTemplate> de la `NumericUpDown` control define la `Positive` y `Negative` <xref:System.Windows.VisualState> objetos en una <xref:System.Windows.VisualStateGroup> y `Focused` y `Unfocused` <xref:System.Windows.VisualState> objetos en otro. (Puede ver el `Focused` y `Unfocused` <xref:System.Windows.VisualState> definido en el [ejemplo completo](#complete_example) en este tema cuando el control pasa de la `Positive` estado el `Negative` estado, o viceversa, el control permanece en uno el `Focused` o `Unfocused` estado.  
   
  Hay tres lugares típicas donde puede cambiar el estado de un control:  
   
@@ -205,13 +205,13 @@ Un control NumericUpDown personalizado
   
  El control puede estar en los siguientes estados:  
   
--   En el campo  `ValueStates`<xref:System.Windows.VisualStateGroup>  
+-   En `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Positive`  
   
     -   `Negative`  
   
--   En el campo  `FocusStates`<xref:System.Windows.VisualStateGroup>  
+-   En `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Focused`  
   
@@ -239,5 +239,5 @@ Un control NumericUpDown personalizado
   
 ## <a name="see-also"></a>Vea también
 
-- [Personalizar la apariencia de un control existente creando una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
-- [Personalización de controles](control-customization.md)
+- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Control Customization](control-customization.md) (Personalización de controles)

@@ -1,18 +1,18 @@
 ---
-title: Filtrar para hospedar un servicio WCF en un servicio administrado de Windows
+title: Procedimiento para hospedar un servicio WCF en un servicio administrado de Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
 ms.openlocfilehash: c63b249cf16100f0b18d622fdecd7cd375df83d8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297764"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Filtrar para hospedar un servicio WCF en un servicio administrado de Windows
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Procedimiento para hospedar un servicio WCF en un servicio administrado de Windows
 
 En este tema se describe los pasos básicos necesarios para crear un servicio de Windows Communication Foundation (WCF) que se hospeda en un servicio de Windows. El escenario se habilita mediante el servicio de Windows administrado, opción que es un servicio WCF de ejecución prolongada hospedado fuera de Internet Information Services (IIS) en un entorno seguro que no está activado el mensaje de hospedaje. En su lugar, el sistema operativo controla la duración del servicio. Esta opción de hospedaje está disponible en todas las versiones de Windows.
 
@@ -51,7 +51,7 @@ El código del servicio incluye una implementación del contrato de servicios, u
      [!code-csharp[c_HowTo_HostInNTService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#2)]
      [!code-vb[c_HowTo_HostInNTService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#2)]
 
-8. Cree una nueva clase denominada `CalculatorWindowsService` que herede de la clase <xref:System.ServiceProcess.ServiceBase>. Agregue una variable local denominada `serviceHost` para hacer referencia a la instancia de <xref:System.ServiceModel.ServiceHost>. Definir la `Main` método que llama `ServiceBase.Run(new CalculatorWindowsService)`
+8. Cree una nueva clase denominada `CalculatorWindowsService` que herede de la clase <xref:System.ServiceProcess.ServiceBase>. Agregue una variable local denominada `serviceHost` para hacer referencia a la instancia de <xref:System.ServiceModel.ServiceHost>. Defina el método `Main` que llama a `ServiceBase.Run(new CalculatorWindowsService)`.
 
      [!code-csharp[c_HowTo_HostInNTService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#3)]
      [!code-vb[c_HowTo_HostInNTService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#3)]

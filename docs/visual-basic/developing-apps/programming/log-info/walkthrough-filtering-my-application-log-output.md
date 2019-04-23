@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f38217a5385b9d736eaa744a73024f210eb8f553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829398"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59298401"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Tutorial: Filtrar el resultado de My.Application.Log (Visual Basic)
 En este tutorial se muestra cómo cambiar el filtrado del registro predeterminado para el objeto `My.Application.Log`, para controlar qué información se pasa desde el objeto `Log` a los agentes de escucha y qué información escriben estos. Puede cambiar el comportamiento del registro incluso después de generar la aplicación, porque la información de configuración se almacena en el archivo de configuración de la aplicación.  
@@ -21,17 +21,17 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
   
 #### <a name="to-build-the-sample-application"></a>Para crear la aplicación de ejemplo  
   
-1.  Abra un proyecto Aplicación Windows de Visual Basic nuevo.  
+1. Abra un proyecto Aplicación Windows de Visual Basic nuevo.  
   
-2.  Agregue un botón denominado Button1 a Form1.  
+2. Agregue un botón denominado Button1 a Form1.  
   
-3.  En el controlador de eventos <xref:System.Windows.Forms.Control.Click> para Button1, agregue el código siguiente:  
+3. En el controlador de eventos <xref:System.Windows.Forms.Control.Click> para Button1, agregue el código siguiente:  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
-4.  Ejecute la aplicación en el depurador.  
+4. Ejecute la aplicación en el depurador.  
   
-5.  Pulse **Button1**.  
+5. Pulse **Button1**.  
   
      La aplicación escribe la siguiente información en el archivo de registro y de salida de la depuración de la aplicación.  
   
@@ -39,7 +39,7 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  Cierre la aplicación.  
+6. Cierre la aplicación.  
   
      Para obtener información sobre cómo ver la ventana de salida de la depuración de la aplicación, vea [Resultados (Ventana)](/visualstudio/ide/reference/output-window). Para obtener información sobre la ubicación del archivo de registro de la aplicación, vea [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
@@ -71,7 +71,7 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
   
 #### <a name="to-log-only-activity-tracing-events"></a>Para registrar solo los eventos de seguimiento de la actividad  
   
-1.  Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
+1. Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
   
      o bien  
   
@@ -83,15 +83,15 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
   
     3.  Haga clic en **Agregar**.  
   
-2.  Busque la sección `<switches>`, en la sección `<system.diagnostics>`, que se encuentra en la sección de nivel superior `<configuration>`.  
+2. Busque la sección `<switches>`, en la sección `<system.diagnostics>`, que se encuentra en la sección de nivel superior `<configuration>`.  
   
-3.  Busque el elemento que agrega `DefaultSwitch` a la colección de modificadores. Este elemento debe ser similar a este:  
+3. Busque el elemento que agrega `DefaultSwitch` a la colección de modificadores. Este elemento debe ser similar a este:  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  Cambie el valor del atributo `value` a "ActivityTracing".  
+4. Cambie el valor del atributo `value` a "ActivityTracing".  
   
-5.  El contenido del archivo app.config debe ser similar al código XML siguiente:  
+5. El contenido del archivo app.config debe ser similar al código XML siguiente:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -120,9 +120,9 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
     </configuration>  
     ```  
   
-6.  Ejecute la aplicación en el depurador.  
+6. Ejecute la aplicación en el depurador.  
   
-7.  Pulse **Button1**.  
+7. Pulse **Button1**.  
   
      La aplicación escribe la siguiente información en el archivo de registro y de salida de la depuración de la aplicación:  
   
@@ -130,7 +130,7 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  Cierre la aplicación.  
+8. Cierre la aplicación.  
   
 9. Cambie el valor del atributo `value` de nuevo a "Information".  
   
@@ -146,7 +146,7 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
   
 #### <a name="to-log-only-activity-tracing-events"></a>Para registrar solo los eventos de seguimiento de la actividad  
   
-1.  Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
+1. Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
   
      o bien  
   
@@ -158,11 +158,11 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
   
     3.  Haga clic en **Agregar**.  
   
-2.  Haga clic con el botón derecho en app.config en el **Explorador de soluciones**. Pulse **Abrir**.  
+2. Haga clic con el botón derecho en app.config en el **Explorador de soluciones**. Pulse **Abrir**.  
   
-3.  Busque la sección `<listeners>`, en la sección `<source>` con el atributo `name` "DefaultSource", que está en la sección `<sources>`. La sección `<sources>` está en la sección `<system.diagnostics>`, en la sección de nivel superior `<configuration>`.  
+3. Busque la sección `<listeners>`, en la sección `<source>` con el atributo `name` "DefaultSource", que está en la sección `<sources>`. La sección `<sources>` está en la sección `<system.diagnostics>`, en la sección de nivel superior `<configuration>`.  
   
-4.  Agregue este elemento a la sección `<listeners>`:  
+4. Agregue este elemento a la sección `<listeners>`:  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -171,9 +171,9 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
     <add name="NewDefault"/>  
     ```  
   
-5.  Busque la sección `<sharedListeners>` , en la sección `<system.diagnostics>` , en la sección de nivel superior `<configuration>` .  
+5. Busque la sección `<sharedListeners>` , en la sección `<system.diagnostics>` , en la sección de nivel superior `<configuration>` .  
   
-6.  Agregue este elemento a dicha sección `<sharedListeners>` :  
+6. Agregue este elemento a dicha sección `<sharedListeners>` :  
   
     ```xml  
     <add name="NewDefault"   
@@ -188,7 +188,7 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
   
      El filtro <xref:System.Diagnostics.EventTypeFilter> toma uno de los valores de enumeración <xref:System.Diagnostics.SourceLevels> como su atributo `initializeData`.  
   
-7.  El contenido del archivo app.config debe ser similar al código XML siguiente:  
+7. El contenido del archivo app.config debe ser similar al código XML siguiente:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -229,7 +229,7 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
     </configuration>  
     ```  
   
-8.  Ejecute la aplicación en el depurador.  
+8. Ejecute la aplicación en el depurador.  
   
 9. Pulse **Button1**.  
   

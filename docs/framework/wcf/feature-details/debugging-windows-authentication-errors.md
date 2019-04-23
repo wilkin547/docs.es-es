@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
 ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299454"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Depuración de errores de autenticación de Windows
@@ -91,7 +91,7 @@ Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, l
   
 3. Es necesaria la negociación de SSPI para utilizar Kerberos al no permitir el uso de NTLM:  
   
-    1.  Puede hacerlo en código, con la siguiente instrucción: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1.  Realice esta acción en el código, con la siguiente instrucción: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
     2.  O bien puede hacerlo en el archivo de configuración estableciendo el atributo `allowNtlm` como `false`. Este atributo se encuentra en la [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
