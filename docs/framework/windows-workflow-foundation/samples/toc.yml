@@ -1,117 +1,110 @@
-items:
 - name: Ejemplos de Windows Workflow
   href: index.md
   items:
-  - name: Administración de
-    href: application.md
-    items:
-    - name: Proceso de aprobación de un documento
-      href: document-approval-process.md
-    - name: Proceso de compra corporativa
-      href: corporate-purchase-process.md
-    - name: Proceso de contratación
-      href: hiring-process.md
-    - name: Realizar el seguimiento visual del flujo de trabajo
-      href: visual-workflow-tracking.md
-    - name: Administración de instancias suspendidas
-      href: suspended-instance-management.md
-  - name: Básico
-    href: basic.md
-    items:
-    - name: Actividades integradas
-      href: built-in-activities.md
+    - name: Administración de
+      href: application.md
       items:
-      - name: Control de errores en una actividad de diagrama de flujo utilizando TryCatch
-        href: fault-handling-in-a-flowchart-activity-using-trycatch.md
-      - name: Cargar de XAML
-        href: load-from-xaml.md
-      - name: Uso de la actividad InvokeMethod
-        href: using-the-invokemethod-activity.md
-      - name: Uso de la actividad Pick
-        href: using-the-pick-activity.md
-    - name: Actividades personalizadas
-      href: custom-activities.md
+        - name: Proceso de aprobación de un documento
+          href: document-approval-process.md
+        - name: Proceso de compra corporativa
+          href: corporate-purchase-process.md
+        - name: Proceso de contratación
+          href: hiring-process.md
+        - name: Realizar el seguimiento visual del flujo de trabajo
+          href: visual-workflow-tracking.md
+        - name: Administración de instancias suspendidas
+          href: suspended-instance-management.md
+    - name: Básico
+      href: basic.md
       items:
-      - name: Código en el cuerpo
-        href: code-bodied.md
-        items:
-        - name: Compuesto personalizado utilizando la actividad Native
-          href: custom-composite-using-native-activity.md
-      - name: Diseñadores de actividad personalizados
-        href: custom-activity-designers.md
-        items:
-        - name: Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
-          href: custom-composite-designers-workflow-item-presenter.md
-        - name: Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
-          href: custom-composite-designers-workflow-items-presenter.md
-        - name: Uso de la ExpressionTextBox en un diseñador de actividad personalizado
-          href: using-the-expressiontextbox-in-a-custom-activity-designer.md
-        - name: Usar el ámbito de edición
-          href: using-editing-scope.md
-    - name: Diseñador
-      href: designer.md
+        - name: Actividades integradas
+          href: built-in-activities.md
+          items:
+            - name: Control de errores en una actividad de diagrama de flujo utilizando TryCatch
+              href: fault-handling-in-a-flowchart-activity-using-trycatch.md
+            - name: Cargar de XAML
+              href: load-from-xaml.md
+            - name: Uso de la actividad InvokeMethod
+              href: using-the-invokemethod-activity.md
+            - name: Uso de la actividad Pick
+              href: using-the-pick-activity.md
+        - name: Actividades personalizadas
+          href: custom-activities.md
+          items:
+            - name: Código en el cuerpo
+              href: code-bodied.md
+              items:
+                - name: Compuesto personalizado utilizando la actividad Native
+                  href: custom-composite-using-native-activity.md
+            - name: Diseñadores de actividad personalizados
+              href: custom-activity-designers.md
+              items:
+                - name: Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
+                  href: custom-composite-designers-workflow-item-presenter.md
+                - name: Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
+                  href: custom-composite-designers-workflow-items-presenter.md
+                - name: Uso de la ExpressionTextBox en un diseñador de actividad personalizado
+                  href: using-the-expressiontextbox-in-a-custom-activity-designer.md
+                - name: Usar el ámbito de edición
+                  href: using-editing-scope.md
+        - name: Diseñador
+          href: designer.md
+          items:
+            - name: Eliminación del estado de vista que el diseñador agrega a un archivo XAML
+              href: removing-the-view-state-the-designer-adds-to-an-xaml-file.md
+            - name: Programar el árbol de elementos de modelo
+              href: programming-model-item-tree.md
+            - name: Extensibilidad de la cuadrícula de propiedades
+              href: property-grid-extensibility.md
+        - name: Rehospedaje del diseñador
+          href: designer-rehosting.md
+        - name: Execution
+          href: execution.md
+          items:
+            - name: Crear y ejecutar una instancia de flujo de trabajo
+              href: creating-and-running-a-workflow-instance.md
+            - name: Reanudar marcador WorkflowHostingEndpoint
+              href: workflowhostingendpoint-resume-bookmark.md
+            - name: Resolución de marcadores para WorkflowHostingEndpoint
+              href: bookmark-resolver-for-workflowhostingendpoint.md
+        - name: Seguimiento
+          href: tracking.md
+          items:
+            - name: Seguimiento personalizado
+              href: custom-tracking.md
+            - name: Seguimiento de eventos en Seguimiento de eventos para Windows
+              href: tracking-events-into-event-tracing-in-windows.md
+            - name: Seguimiento de SQL
+              href: sql-tracking.md
+    - name: Escenario
+      href: scenario.md
       items:
-      - name: Eliminación del estado de vista que el diseñador agrega a un archivo XAML
-        href: removing-the-view-state-the-designer-adds-to-an-xaml-file.md
-      - name: Programar el árbol de elementos de modelo
-        href: programming-model-item-tree.md
-      - name: Extensibilidad de la cuadrícula de propiedades
-        href: property-grid-extensibility.md
-    - name: Rehospedaje del diseñador
-      href: designer-rehosting.md
-    - name: Execution
-      href: execution.md
-      items:
-      - name: Crear y ejecutar una instancia de flujo de trabajo
-        href: creating-and-running-a-workflow-instance.md
-      - name: Reanudar marcador WorkflowHostingEndpoint
-        href: workflowhostingendpoint-resume-bookmark.md
-      - name: Resolución de marcadores para WorkflowHostingEndpoint
-        href: bookmark-resolver-for-workflowhostingendpoint.md
-    - name: Seguimiento
-      href: tracking.md
-      items:
-      - name: Seguimiento personalizado
-        href: custom-tracking.md
-      - name: Seguimiento de eventos en Seguimiento de eventos para Windows
-        href: tracking-events-into-event-tracing-in-windows.md
-      - name: Seguimiento de SQL
-        href: sql-tracking.md
-  - name: Escenario
-    href: scenario.md
-    items:
-    - name: Biblioteca de actividades
-      href: activity-library.md
-      items:
-      - name: Actividad personalizada SendMail
-        href: sendmail-custom-activity.md
-      - name: Throttled Parallel ForEach
-        href: throttled-parallel-foreach.md
-      - name: Actividades de acceso a bases de datos
-        href: database-access-activities.md
-      - name: Actividad Externalized Policy en .NET Framework 4.5
-        href: externalized-policy-activity-in-net-framework-4-5.md
-      - name: ForEach no genérico
-        href: non-generic-foreach.md
-      - name: ParallelForEach no genérico
-        href: non-generic-parallelforeach.md
-      - name: Get WorkflowInstanceId
-        href: get-workflowinstanceid.md
-    - name: Servicios
-      items:
-      - name: Obtener acceso a OperationContext
-        href: accessing-operationcontext.md
-      - name: Correlación de consultas de mensajes LINQ
-        href: linq-message-query-correlation.md
-      - name: Comunicación asincrónica
-        href: asynchronous-communication.md
-    - name: Integración de WPF y WF en XAML
-      href: wpf-and-wf-integration-in-xaml.md
-    - name: Kit de herramientas de RuleSet externo
-      href: external-ruleset-toolkit.md
-ms.openlocfilehash: 19369f2096ca3e9a15d514d88faec40d861dc752
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470622"
+        - name: Biblioteca de actividades
+          href: activity-library.md
+          items:
+            - name: Actividad personalizada SendMail
+              href: sendmail-custom-activity.md
+            - name: Throttled Parallel ForEach
+              href: throttled-parallel-foreach.md
+            - name: Actividades de acceso a bases de datos
+              href: database-access-activities.md
+            - name: Actividad Externalized Policy en .NET Framework 4.5
+              href: externalized-policy-activity-in-net-framework-4-5.md
+            - name: ForEach no genérico
+              href: non-generic-foreach.md
+            - name: ParallelForEach no genérico
+              href: non-generic-parallelforeach.md
+            - name: Get WorkflowInstanceId
+              href: get-workflowinstanceid.md
+        - name: Servicios
+          items:
+            - name: Obtener acceso a OperationContext
+              href: accessing-operationcontext.md
+            - name: Correlación de consultas de mensajes LINQ
+              href: linq-message-query-correlation.md
+            - name: Comunicación asincrónica
+              href: asynchronous-communication.md
+        - name: Integración de WPF y WF en XAML
+          href: wpf-and-wf-integration-in-xaml.md
+        - name: Kit de herramientas de RuleSet externo
+          href: external-ruleset-toolkit.md

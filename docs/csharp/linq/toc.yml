@@ -1,48 +1,41 @@
-items:
 - name: Language-Integrated Query (LINQ)
   href: index.md
   items:
-  - name: Conceptos básicos de las expresiones de consultas
-    href: query-expression-basics.md
-  - name: LINQ en C#
-    href: linq-in-csharp.md
-  - name: Escribir consultas LINQ en C#
-    href: write-linq-queries.md
-  - name: Consultar una colección de objetos
-    href: query-a-collection-of-objects.md
-  - name: Devolver una consulta de un método
-    href: return-a-query-from-a-method.md
-  - name: Almacenar los resultados de una consulta en memoria
-    href: store-the-results-of-a-query-in-memory.md
-  - name: Agrupar los resultados de consultas
-    href: group-query-results.md
-  - name: Crear un grupo anidado
-    href: create-a-nested-group.md
-  - name: Realizar una subconsulta en una operación de agrupación
-    href: perform-a-subquery-on-a-grouping-operation.md
-  - name: Agrupar resultados por claves contiguas
-    href: group-results-by-contiguous-keys.md
-  - name: Especificar dinámicamente filtros con predicado en tiempo de ejecución
-    href: dynamically-specify-predicate-filters-at-runtime.md
-  - name: Realizar combinaciones internas
-    href: perform-inner-joins.md
-  - name: Realizar combinaciones agrupadas
-    href: perform-grouped-joins.md
-  - name: Realizar operaciones de combinación externa izquierda
-    href: perform-left-outer-joins.md
-  - name: Ordenar los resultados de una cláusula join
-    href: order-the-results-of-a-join-clause.md
-  - name: Realizar una unión usando claves compuestas
-    href: join-by-using-composite-keys.md
-  - name: Realizar operaciones de combinación personalizadas
-    href: perform-custom-join-operations.md
-  - name: Controlar valores nulos en expresiones de consulta
-    href: handle-null-values-in-query-expressions.md
-  - name: Controlar excepciones en expresiones de consulta
-    href: handle-exceptions-in-query-expressions.md
-ms.openlocfilehash: 1bc1fb625c7627abe63db2b69071df1ef1b7d11c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469735"
+    - name: Conceptos básicos de las expresiones de consultas
+      href: query-expression-basics.md
+    - name: 'LINQ en C#'
+      href: linq-in-csharp.md
+    - name: 'Escribir consultas LINQ en C#'
+      href: write-linq-queries.md
+    - name: Consultar una colección de objetos
+      href: query-a-collection-of-objects.md
+    - name: Devolver una consulta de un método
+      href: return-a-query-from-a-method.md
+    - name: Almacenar los resultados de una consulta en memoria
+      href: store-the-results-of-a-query-in-memory.md
+    - name: Agrupar los resultados de consultas
+      href: group-query-results.md
+    - name: Crear un grupo anidado
+      href: create-a-nested-group.md
+    - name: Realizar una subconsulta en una operación de agrupación
+      href: perform-a-subquery-on-a-grouping-operation.md
+    - name: Agrupar resultados por claves contiguas
+      href: group-results-by-contiguous-keys.md
+    - name: Especificar dinámicamente filtros con predicado en tiempo de ejecución
+      href: dynamically-specify-predicate-filters-at-runtime.md
+    - name: Realizar combinaciones internas
+      href: perform-inner-joins.md
+    - name: Realizar combinaciones agrupadas
+      href: perform-grouped-joins.md
+    - name: Realizar operaciones de combinación externa izquierda
+      href: perform-left-outer-joins.md
+    - name: Ordenar los resultados de una cláusula join
+      href: order-the-results-of-a-join-clause.md
+    - name: Realizar una unión usando claves compuestas
+      href: join-by-using-composite-keys.md
+    - name: Realizar operaciones de combinación personalizadas
+      href: perform-custom-join-operations.md
+    - name: Controlar valores nulos en expresiones de consulta
+      href: handle-null-values-in-query-expressions.md
+    - name: Controlar excepciones en expresiones de consulta
+      href: handle-exceptions-in-query-expressions.md

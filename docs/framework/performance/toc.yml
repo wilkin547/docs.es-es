@@ -1,71 +1,64 @@
-items:
 - name: Rendimiento
   href: index.md
   items:
-  - name: Escribir aplicaciones grandes de .NET Framework que respondan
-    href: writing-large-responsive-apps.md
-  - name: Almacenamiento en caché en aplicaciones .NET Framework
-    href: caching-in-net-framework-applications.md
-  - name: Inicialización diferida
-    href: lazy-initialization.md
-    items:
-    - name: Procedimiento para realizar la inicialización diferida de objetos
-      href: how-to-perform-lazy-initialization-of-objects.md
-  - name: Eventos de ETW en .NET Framework
-    href: etw-events.md
-    items:
-    - name: Eventos ETW en Task Parallel Library y PLINQ
-      href: etw-events-in-task-parallel-library-and-plinq.md
-    - name: Eventos ETW en Common Language Runtime
-      href: etw-events-in-the-common-language-runtime.md
+    - name: Escribir aplicaciones grandes de .NET Framework que respondan
+      href: writing-large-responsive-apps.md
+    - name: Almacenamiento en caché en aplicaciones .NET Framework
+      href: caching-in-net-framework-applications.md
+    - name: Inicialización diferida
+      href: lazy-initialization.md
       items:
-      - name: Controlar el registro de .NET Framework
-        href: controlling-logging.md
-      - name: Proveedores ETW de CLR
-        href: clr-etw-providers.md
-      - name: Palabras clave y niveles ETW de CLR
-        href: clr-etw-keywords-and-levels.md
-      - name: Eventos ETW de CLR
-        href: clr-etw-events.md
-        items:
-        - name: Eventos de información en tiempo de ejecución
-          href: runtime-information-etw-events.md
-        - name: Evento de excepción Thrown_V1
-          href: exception-thrown-v1-etw-event.md
-        - name: Eventos de contención
-          href: contention-etw-events.md
-        - name: Eventos de grupos de subprocesos
-          href: thread-pool-etw-events.md
-        - name: Eventos de cargador
-          href: loader-etw-events.md
-        - name: Eventos de método
-          href: method-etw-events.md
-        - name: Eventos de recolección de elementos no utilizados
-          href: garbage-collection-etw-events.md
-        - name: Eventos de traza JIT
-          href: jit-tracing-etw-events.md
-        - name: Eventos de interoperabilidad
-          href: interop-etw-events.md
-        - name: Eventos ARM
-          href: application-domain-resource-monitoring-arm-etw-events.md
-        - name: Eventos de seguridad
-          href: security-etw-events.md
-        - name: Evento de pila
-          href: stack-etw-event.md
-  - name: Confiabilidad
-    href: reliability.md
-    items:
-    - name: Programación en SQL Server y atributos de protección de host
-      href: sql-server-programming-and-host-protection-attributes.md
-    - name: Procedimientos recomendados para la confiabilidad
-      href: reliability-best-practices.md
-    - name: regiones de ejecución restringidas
-      href: constrained-execution-regions.md
-  - name: Sugerencias para mejorar el rendimiento
-    href: performance-tips.md
-ms.openlocfilehash: 9030bc17ebfe2cda3b6b1ebb15196a24ac992715
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470519"
+        - name: Procedimiento para realizar la inicialización diferida de objetos
+          href: how-to-perform-lazy-initialization-of-objects.md
+    - name: Eventos de ETW en .NET Framework
+      href: etw-events.md
+      items:
+        - name: Eventos ETW en Task Parallel Library y PLINQ
+          href: etw-events-in-task-parallel-library-and-plinq.md
+        - name: Eventos ETW en Common Language Runtime
+          href: etw-events-in-the-common-language-runtime.md
+          items:
+            - name: Controlar el registro de .NET Framework
+              href: controlling-logging.md
+            - name: Proveedores ETW de CLR
+              href: clr-etw-providers.md
+            - name: Palabras clave y niveles ETW de CLR
+              href: clr-etw-keywords-and-levels.md
+            - name: Eventos ETW de CLR
+              href: clr-etw-events.md
+              items:
+                - name: Eventos de información en tiempo de ejecución
+                  href: runtime-information-etw-events.md
+                - name: Evento de excepción Thrown_V1
+                  href: exception-thrown-v1-etw-event.md
+                - name: Eventos de contención
+                  href: contention-etw-events.md
+                - name: Eventos de grupos de subprocesos
+                  href: thread-pool-etw-events.md
+                - name: Eventos de cargador
+                  href: loader-etw-events.md
+                - name: Eventos de método
+                  href: method-etw-events.md
+                - name: Eventos de recolección de elementos no utilizados
+                  href: garbage-collection-etw-events.md
+                - name: Eventos de traza JIT
+                  href: jit-tracing-etw-events.md
+                - name: Eventos de interoperabilidad
+                  href: interop-etw-events.md
+                - name: Eventos ARM
+                  href: application-domain-resource-monitoring-arm-etw-events.md
+                - name: Eventos de seguridad
+                  href: security-etw-events.md
+                - name: Evento de pila
+                  href: stack-etw-event.md
+    - name: Confiabilidad
+      href: reliability.md
+      items:
+        - name: Programación en SQL Server y atributos de protección de host
+          href: sql-server-programming-and-host-protection-attributes.md
+        - name: Procedimientos recomendados para la confiabilidad
+          href: reliability-best-practices.md
+        - name: regiones de ejecución restringidas
+          href: constrained-execution-regions.md
+    - name: Sugerencias para mejorar el rendimiento
+      href: performance-tips.md

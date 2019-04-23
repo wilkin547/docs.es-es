@@ -1,51 +1,44 @@
-items:
 - name: Variables en Visual Basic
   href: index.md
   items:
-  - name: Declaración de variables
-    href: variable-declaration.md
-    items:
-    - name: Procedimiento para crear una variable
-      href: how-to-create-a-new-variable.md
-    - name: Procedimiento para crear una variable que no cambia de valor
-      href: how-to-create-a-variable-that-does-not-change-in-value.md
-    - name: Procedimiento para introducir y extraer los datos de una variable
-      href: how-to-move-data-into-and-out-of-a-variable.md
-  - name: Variables de objeto
-    href: object-variables.md
-    items:
-    - name: Procedimiento para acelerar el acceso a un objeto con una ruta de acceso de calificación larga
-      href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
-  - name: Declaración de variables de objeto
-    href: object-variable-declaration.md
-    items:
-    - name: Procedimiento para obtener acceso a los miembros de un objeto
-      href: how-to-access-members-of-an-object.md
-    - name: Asignación de variables de objeto
-      href: object-variable-assignment.md
+    - name: Declaración de variables
+      href: variable-declaration.md
       items:
-      - name: Procedimiento para declarar una variable de objeto y asignarle un objeto
-        href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
-      - name: Procedimiento para crear una variable de objeto que no haga referencia a ninguna instancia
-        href: how-to-make-an-object-variable-not-refer-to-any-instance.md
-    - name: Valores de las variables de objeto
-      href: object-variable-values.md
+        - name: Procedimiento para crear una variable
+          href: how-to-create-a-new-variable.md
+        - name: Procedimiento para crear una variable que no cambia de valor
+          href: how-to-create-a-variable-that-does-not-change-in-value.md
+        - name: Procedimiento para introducir y extraer los datos de una variable
+          href: how-to-move-data-into-and-out-of-a-variable.md
+    - name: Variables de objeto
+      href: object-variables.md
       items:
-      - name: Procedimiento para hacer referencia a la instancia actual de un objeto
-        href: how-to-refer-to-the-current-instance-of-an-object.md
-      - name: Procedimiento para determinar el tipo al que hace referencia una variable de objeto
-        href: how-to-determine-what-type-an-object-variable-refers-to.md
-      - name: Procedimiento para determinar si dos objetos están relacionados
-        href: how-to-determine-whether-two-objects-are-related.md
-      - name: Procedimiento para determinar si dos objetos son idénticos
-        href: how-to-determine-whether-two-objects-are-identical.md
-  - name: Inferencia de tipo de variable local
-    href: local-type-inference.md
-  - name: Solución de problemas de variables
-    href: troubleshooting-variables.md
-ms.openlocfilehash: b62af96e958cd45db593e3334075b432814b51d5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470574"
+        - name: Procedimiento para acelerar el acceso a un objeto con una ruta de acceso de calificación larga
+          href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
+    - name: Declaración de variables de objeto
+      href: object-variable-declaration.md
+      items:
+        - name: Procedimiento para obtener acceso a los miembros de un objeto
+          href: how-to-access-members-of-an-object.md
+        - name: Asignación de variables de objeto
+          href: object-variable-assignment.md
+          items:
+            - name: Procedimiento para declarar una variable de objeto y asignarle un objeto
+              href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
+            - name: Procedimiento para crear una variable de objeto que no haga referencia a ninguna instancia
+              href: how-to-make-an-object-variable-not-refer-to-any-instance.md
+        - name: Valores de las variables de objeto
+          href: object-variable-values.md
+          items:
+            - name: Procedimiento para hacer referencia a la instancia actual de un objeto
+              href: how-to-refer-to-the-current-instance-of-an-object.md
+            - name: Procedimiento para determinar el tipo al que hace referencia una variable de objeto
+              href: how-to-determine-what-type-an-object-variable-refers-to.md
+            - name: Procedimiento para determinar si dos objetos están relacionados
+              href: how-to-determine-whether-two-objects-are-related.md
+            - name: Procedimiento para determinar si dos objetos son idénticos
+              href: how-to-determine-whether-two-objects-are-identical.md
+    - name: Inferencia de tipo de variable local
+      href: local-type-inference.md
+    - name: Solución de problemas de variables
+      href: troubleshooting-variables.md
