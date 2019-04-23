@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear columnas de solo lectura en el control DataGridView de formularios Windows Forms
+title: Procedimiento para crear columnas de solo lectura en el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], read-only columns
 ms.assetid: 2bb73ebb-1a55-4362-9fda-e50574c087d5
 ms.openlocfilehash: 2a4ca0a718373c56f77e8f3c45a9d6ee6d76a081
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171930"
 ---
-# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>Filtrar para crear columnas de solo lectura en el control DataGridView de formularios Windows Forms
+# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>Procedimiento para crear columnas de solo lectura en el control DataGridView de formularios Windows Forms
 No todos los datos están diseñados para ser editados. En el control <xref:System.Windows.Forms.DataGridView>, el valor de propiedad <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> de la columna determina si los usuarios pueden editar las celdas de esa columna. Para obtener información acerca de cómo hacer que el control sea de sólo lectura, vea [Cómo: Impedir la adición de la fila y la eliminación en la Windows Forms DataGridView Control](prevent-row-addition-and-deletion-datagridview.md).  
   
  Visual Studio es compatible con esta tarea.  Consulte también [Cómo: Crear columnas de sólo lectura en la Windows Forms Control DataGridView de formularios mediante el diseñador](make-columns-read-only-in-the-datagrid-using-the-designer.md).  
@@ -39,5 +39,5 @@ No todos los datos están diseñados para ser editados. En el control <xref:Syst
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>
-- [Características básicas de columnas, filas y celdas en el control DataGridView de formularios Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Filtrar para impedir la adición y eliminación de filas en el control DataGridView de formularios Windows Forms](prevent-row-addition-and-deletion-datagridview.md)
+- [Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Cómo: Impedir la adición de fila y eliminación en el Control DataGridView de Windows Forms](prevent-row-addition-and-deletion-datagridview.md)

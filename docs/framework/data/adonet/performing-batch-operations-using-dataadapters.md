@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
 ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178131"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Realizar operaciones por lotes utilizando objetos DataAdapter
@@ -134,7 +134,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ### <a name="accessing-updated-rows"></a>Obtener acceso a filas actualizadas  
  Si se deshabilita el procesamiento por lotes, se puede obtener acceso a la fila que se está actualizando mediante la propiedad <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> de la clase <xref:System.Data.Common.RowUpdatedEventArgs>.  
   
- Cuando se habilita el procesamiento por lotes, se genera un único evento `RowUpdated` para varias filas. Por tanto, el valor de la propiedad `Row` para cada fila es nulo. `RowUpdating` todavía se generan eventos para cada fila. El método <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> de la clase <xref:System.Data.Common.RowUpdatedEventArgs> permite obtener acceso a las filas procesadas al copiar referencias a las mismas en una matriz. Si no se está procesando ninguna fila, `CopyToRows` inicia una <xref:System.ArgumentNullException>. Utilice la propiedad <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> para devolver el número de filas procesadas antes de llamar al método <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>.  
+ Cuando se habilita el procesamiento por lotes, se genera un único evento `RowUpdated` para varias filas. Por tanto, el valor de la propiedad `Row` para cada fila es nulo. Aún así, los eventos `RowUpdating` se generarán para cada fila. El método <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> de la clase <xref:System.Data.Common.RowUpdatedEventArgs> permite obtener acceso a las filas procesadas al copiar referencias a las mismas en una matriz. Si no se está procesando ninguna fila, `CopyToRows` inicia una <xref:System.ArgumentNullException>. Utilice la propiedad <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> para devolver el número de filas procesadas antes de llamar al método <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>.  
   
 ### <a name="handling-data-errors"></a>Controlar errores de datos  
  La ejecución por lotes tiene el mismo efecto que la ejecución de cada instrucción por separado. Las instrucciones se ejecutan en el mismo orden en el que se agregaron al lote. Los errores se controlan de la misma forma en el modo de procesamiento por lotes que cuando éste se encuentra deshabilitado. Cada fila se procesa por separado. Solo aquellas filas procesadas correctamente en la base de datos se actualizarán en la <xref:System.Data.DataRow> correspondiente dentro de la <xref:System.Data.DataTable>.  
@@ -145,5 +145,5 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 
 - [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Actualizar orígenes de datos con objetos DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [Controlar eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Control de eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

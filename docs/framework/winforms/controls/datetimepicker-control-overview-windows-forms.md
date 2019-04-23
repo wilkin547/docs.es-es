@@ -8,10 +8,10 @@ helpviewer_keywords:
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
 ms.openlocfilehash: 451172b51427e4932470c53737c7bc276920271c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173605"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>Información general sobre el control DateTimePicker (formularios Windows Forms)
@@ -26,5 +26,5 @@ Los formularios de Windows <xref:System.Windows.Forms.DateTimePicker> control pe
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para mostrar una fecha en un formato personalizado con el control DateTimePicker de formularios Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
-- [Filtrar para establecer y devolver fechas con el control DateTimePicker de formularios Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+- [Cómo: Mostrar una fecha en un formato personalizado con el Control DateTimePicker de formularios de Windows](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [Cómo: Establecer y devolver fechas con el Control DateTimePicker de formularios de Windows](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

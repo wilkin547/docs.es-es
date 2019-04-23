@@ -3,10 +3,10 @@ title: Referencia de F# Interactive (fsi.exe)
 description: Obtenga información sobre cómo F# Interactive (fsi.exe) se usa para ejecutar F# interactivamente en la consola o para ejecutar el código F# secuencias de comandos.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9ec780ca51eaa5ae0aa791eb509d8ad0865dc26f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172268"
 ---
 # <a name="interactive-programming-with-f"></a>Programación interactiva con F\#
@@ -58,7 +58,7 @@ Cuando se ejecutan scripts en F# Interactive, están disponibles algunas directi
 |**#load**|Lee un archivo de código fuente, lo compila y lo ejecuta.|
 |**#quit**|Termina una sesión de F# Interactive.|
 |**#r**|Hace referencia a un ensamblado.|
-|**#time ["activado"&#124;"desactivado"]**|Por sí solo, **#time** activa y desactiva la presentación de información sobre el rendimiento. Cuando está habilitado, F# Interactive mide el tiempo real, el tiempo de CPU y la información sobre recolección de elementos no utilizados que se interpreta y ejecuta.|
+|**#time ["on"&#124;"off"]**|Por sí solo, **#time** activa y desactiva la presentación de información sobre el rendimiento. Cuando está habilitado, F# Interactive mide el tiempo real, el tiempo de CPU y la información sobre recolección de elementos no utilizados que se interpreta y ejecuta.|
 
 Al especificar los archivos o rutas de acceso en F# Interactive, se espera un literal de cadena. Por tanto, los archivos y las rutas de acceso deben estar entre comillas y se aplicarán los caracteres de escape habituales. Asimismo, puede usar el carácter @ para hacer que F# Interactive interprete una cadena que contenga una ruta de acceso como una cadena textual. Esto hace que F# Interactive pase por alto cualquier carácter de escape.
 

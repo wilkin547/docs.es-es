@@ -1,5 +1,5 @@
 ---
-title: Filtrar para garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados
+title: Procedimiento para garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
 ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170344"
 ---
-# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Filtrar para garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados
+# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Procedimiento para garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados
 A menudo, cuando se trabaja con enlace de datos en Windows Forms, varios controles están enlazados al mismo origen de datos. En algunos casos, puede ser necesario realizar pasos adicionales para asegurarse de que permanezcan sincronizadas entre sí y el origen de datos con las propiedades de los controles enlazadas. Estos pasos son necesarios en dos situaciones:  
   
 -   Si el origen de datos no implementa <xref:System.ComponentModel.IBindingList>y por lo tanto, generar <xref:System.ComponentModel.IBindingList.ListChanged> eventos de tipo <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
@@ -42,7 +42,7 @@ A menudo, cuando se trabaja con enlace de datos en Windows Forms, varios control
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para compartir datos enlazados entre formularios mediante el componente BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Cómo: Compartir datos enlazados entre formularios mediante el componente BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
 - [Notificación de cambios en el enlace de datos de Windows Forms](change-notification-in-windows-forms-data-binding.md)
 - [Interfaces relacionadas con el enlace de datos](interfaces-related-to-data-binding.md)
 - [Enlace de datos en Windows Forms](windows-forms-data-binding.md)

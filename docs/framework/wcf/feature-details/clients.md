@@ -3,10 +3,10 @@ title: Clientes
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
 ms.openlocfilehash: aa6d415c0908845bedf7c95ed66281bc0f17eb2b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177507"
 ---
 # <a name="clients"></a>Clientes
@@ -19,7 +19,7 @@ Los temas de esta sección tratan la arquitectura de cliente, cómo tener acceso
  [Acceso a los servicios mediante un cliente WCF](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)  
  Describe cómo tener acceso a un servicio WCF.  
   
- [Configuración de cliente de WCF](../../../../docs/framework/wcf/feature-details/client-configuration.md)  
+ [Configuración del cliente de WCF](../../../../docs/framework/wcf/feature-details/client-configuration.md)  
  Describe cómo configurar a un cliente de WCF.  
   
  [Protección de clientes](../../../../docs/framework/wcf/securing-clients.md)  

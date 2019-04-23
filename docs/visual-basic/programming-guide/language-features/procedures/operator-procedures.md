@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175024"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedimientos de operador (Visual Basic)
@@ -68,7 +68,7 @@ Un procedimiento de operador es una serie de instrucciones de Visual Basic que d
   
  `Dim testStruct As`  *structurename*  
   
- `Dim testNewStruct As`  *structurename*`= testStruct`*operatorsymbol*   `10`  
+ `Dim testNewStruct As`  *structurename*`= testStruct`*operatorsymbol*  `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Ilustración de la declaración y llamada  
  La siguiente estructura almacena un valor entero de 128 bits con signo como las partes constituyentes de orden superior y orden inferior. Define el `+` operador para agregar dos `veryLong` valores y generar una resultante `veryLong` valor.  
@@ -82,12 +82,12 @@ Un procedimiento de operador es una serie de instrucciones de Visual Basic que d
 ## <a name="see-also"></a>Vea también
 
 - [Procedimientos](./index.md)
-- [Procedimientos Sub](./sub-procedures.md)
+- [Subprocedimientos](./sub-procedures.md)
 - [Procedimientos de función](./function-procedures.md)
-- [Procedimientos de propiedad](./property-procedures.md)
+- [Procedimientos de propiedades](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Filtrar para definir un operador](./how-to-define-an-operator.md)
-- [Filtrar para definir un operador de conversión](./how-to-define-a-conversion-operator.md)
-- [Filtrar para llamar a un procedimiento de operador](./how-to-call-an-operator-procedure.md)
-- [Filtrar para usar una clase que define operadores](./how-to-use-a-class-that-defines-operators.md)
+- [Operator (instrucción)](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Cómo: Definir un operador](./how-to-define-an-operator.md)
+- [Cómo: Definir un operador de conversión](./how-to-define-a-conversion-operator.md)
+- [Cómo: Llamar a un procedimiento de operador](./how-to-call-an-operator-procedure.md)
+- [Cómo: Usar una clase que define operadores](./how-to-use-a-class-that-defines-operators.md)

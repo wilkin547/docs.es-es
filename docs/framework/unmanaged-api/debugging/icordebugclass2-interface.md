@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 015085cff23028814937dfef9aea19af7438b4f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173815"
 ---
 # <a name="icordebugclass2-interface"></a>Interfaz ICorDebugClass2
@@ -31,8 +31,8 @@ Representa una clase genérica o una clase con un parámetro de método de tipo 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetParameterizedType](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|Obtiene la declaración de tipos para esta clase.|  
-|[Método SetJMCStatus](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|Para cada método de esta clase, establece un valor que indica si el método es código definido por el usuario.|  
+|[GetParameterizedType (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|Obtiene la declaración de tipos para esta clase.|  
+|[SetJMCStatus (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|Para cada método de esta clase, establece un valor que indica si el método es código definido por el usuario.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -50,5 +50,5 @@ Representa una clase genérica o una clase con un parámetro de método de tipo 
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaz ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugClass (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

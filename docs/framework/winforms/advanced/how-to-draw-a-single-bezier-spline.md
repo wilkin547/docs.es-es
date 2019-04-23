@@ -1,5 +1,5 @@
 ---
-title: Filtrar Dibujar un único B&#233;Spline de Bézier
+title: Procedimiento Dibujar un único B&#233;Spline de Bézier
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
 ms.openlocfilehash: ebb53e7df979a553ed4a44deba34345c9ecac772
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171683"
 ---
-# <a name="how-to-draw-a-single-b233zier-spline"></a>Filtrar Dibujar un único B&#233;Spline de Bézier
+# <a name="how-to-draw-a-single-b233zier-spline"></a>Procedimiento Dibujar un único B&#233;Spline de Bézier
 Una curva spline de Bézier queda definida por cuatro puntos: un punto inicial, dos puntos de control y un punto de conexión.  
   
 ## <a name="example"></a>Ejemplo  
@@ -35,4 +35,4 @@ Una curva spline de Bézier queda definida por cuatro puntos: un punto inicial, 
 
 - <xref:System.Drawing.Graphics.DrawBezier%2A>
 - [Curvas spline de Bézier en GDI+](bezier-splines-in-gdi.md)
-- [Filtrar para dibujar una secuencia de curvas spline de Bézier](how-to-draw-a-sequence-of-bezier-splines.md)
+- [Cómo: Dibujar una secuencia de curvas spline de Bézier](how-to-draw-a-sequence-of-bezier-splines.md)

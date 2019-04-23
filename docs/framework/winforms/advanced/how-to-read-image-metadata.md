@@ -1,5 +1,5 @@
 ---
-title: Filtrar para leer metadatos de imagen
+title: Procedimiento para leer metadatos de imagen
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
 ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173620"
 ---
-# <a name="how-to-read-image-metadata"></a>Filtrar para leer metadatos de imagen
+# <a name="how-to-read-image-metadata"></a>Procedimiento para leer metadatos de imagen
 Algunos archivos de imagen contienen metadatos que se pueden leer para determinar las características de la imagen. Por ejemplo, una fotografía digital podría contener metadatos que se pueden leer para determinar la marca y modelo de la cámara empleada para capturar la imagen. Con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], puede leer los metadatos existentes y también puede escribir los nuevos metadatos para archivos de imagen.  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] almacena un elemento individual de los metadatos en un <xref:System.Drawing.Imaging.PropertyItem> objeto. Puede leer el <xref:System.Drawing.Image.PropertyItems%2A> propiedad de un <xref:System.Drawing.Image> objeto para recuperar todos los metadatos de un archivo. El <xref:System.Drawing.Image.PropertyItems%2A> propiedad devuelve una matriz de <xref:System.Drawing.Imaging.PropertyItem> objetos.  
@@ -40,7 +40,7 @@ Algunos archivos de imagen contienen metadatos que se pueden leer para determina
   
 |Valor numérico|Descripción|  
 |-------------------|-----------------|  
-|1|A `Byte`|  
+|1|`Byte`.|  
 |2|Una matriz de `Byte` objetos codificada en ASCII|  
 |3|Un entero de 16 bits|  
 |4|Un entero de 32 bits|  

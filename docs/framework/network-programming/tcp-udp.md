@@ -17,10 +17,10 @@ helpviewer_keywords:
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
 ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172554"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
@@ -34,9 +34,9 @@ Las aplicaciones pueden usar servicios de Protocolo de control de transmisión (
   
 ## <a name="see-also"></a>Vea también
 
-- [Usar Servicios TCP](../../../docs/framework/network-programming/using-tcp-services.md)
-- [Usar servicios UDP](../../../docs/framework/network-programming/using-udp-services.md)
-- [Usar flujos en la red](../../../docs/framework/network-programming/using-streams-on-the-network.md)
-- [Usar un socket de servidor asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Usar un socket de cliente asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
+- [Uso de servicios TCP](../../../docs/framework/network-programming/using-tcp-services.md)
+- [Uso de servicios UDP](../../../docs/framework/network-programming/using-udp-services.md)
+- [Uso de secuencias en la red](../../../docs/framework/network-programming/using-streams-on-the-network.md)
+- [Uso de un socket de servidor asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
+- [Uso de un socket de cliente asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
 - [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)

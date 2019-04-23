@@ -12,10 +12,10 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 364d28d5df8e284445d825fbbeb963c54b7b9e27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176311"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedimiento para determinar qué versiones de .NET Framework están instaladas
@@ -40,12 +40,12 @@ Los usuarios pueden [instalar](https://docs.microsoft.com/dotnet/framework/insta
 Para obtener una lista de las versiones de .NET Framework instaladas en un equipo, debe tener acceso al Registro. Puede usar el Editor del Registro para ver el Registro o usar código para consultarlo:
  
 - Búsqueda de versiones más recientes de .NET Framework (4.5 y versiones posteriores): 
-     - [Uso del Editor del Registro para buscar versiones de .NET Framework](#net_b)  
-     - [Uso de código para consultar en el Registro las versiones de .NET Framework](#net_d)  
-     - [Uso de PowerShell para consultar en el Registro las versiones de .NET Framework](#ps_a)
+     - [Uso del Editor del Registro para buscar versiones de .NET Framework](#net_b)  
+     - [Uso de código para consultar en el Registro las versiones de .NET Framework](#net_d)  
+     - [Uso de PowerShell para consultar en el Registro las versiones de .NET Framework](#ps_a)
 - Búsqueda de versiones más antiguas de .NET Framework (1&#8211;4):
-     - [Uso del Editor del Registro para buscar versiones de .NET Framework](#net_a)
-     - [Uso de código para consultar en el Registro las versiones de .NET Framework](#net_c)   
+     - [Uso del Editor del Registro para buscar versiones de .NET Framework](#net_a)
+     - [Uso de código para consultar en el Registro las versiones de .NET Framework](#net_c)   
 
 Para obtener una lista de las versiones de CLR instaladas en un equipo, use una herramienta o código:  
   
@@ -213,6 +213,6 @@ En el ejemplo siguiente se usa la propiedad <xref:System.Environment.Version%2A?
 
 ## <a name="see-also"></a>Vea también
 
-- [Procedimiento para determinar qué actualizaciones de .NET Framework están instaladas](how-to-determine-which-net-framework-updates-are-installed.md)
+- [Cómo: Determinar las actualizaciones de .NET Framework que están instaladas](how-to-determine-which-net-framework-updates-are-installed.md)
 - [Instalación de .NET Framework para desarrolladores](../install/guide-for-developers.md)
 - [Versiones y dependencias de .NET Framework](versions-and-dependencies.md)

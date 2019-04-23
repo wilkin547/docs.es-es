@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agregar un control a un ToolStripContentPanel
+title: Procedimiento para agregar un control a un ToolStripContentPanel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
 ms.openlocfilehash: d228300e00a5c2be9cf530cd921865a01accab05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177884"
 ---
-# <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Filtrar para agregar un control a un ToolStripContentPanel
+# <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Procedimiento para agregar un control a un ToolStripContentPanel
 Puede agregar uno o más controles a <xref:System.Windows.Forms.ToolStripContentPanel> mediante programación.  
   
 ## <a name="example"></a>Ejemplo  
@@ -34,5 +34,5 @@ Puede agregar uno o más controles a <xref:System.Windows.Forms.ToolStripContent
 
 - <xref:System.Windows.Forms.ToolStripContentPanel>
 - <xref:System.Windows.Forms.ToolStripContainer>
-- [ToolStripContainer (Control)](toolstripcontainer-control.md)
-- [ToolStrip](toolstrip-control-windows-forms.md)
+- [ToolStripContainer (control)](toolstripcontainer-control.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)

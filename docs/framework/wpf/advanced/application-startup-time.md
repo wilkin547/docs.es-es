@@ -9,10 +9,10 @@ helpviewer_keywords:
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
 ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173035"
 ---
 # <a name="application-startup-time"></a>Tiempo de inicio de una aplicación
@@ -65,7 +65,7 @@ La cantidad de tiempo necesaria para iniciar una aplicación de WPF puede variar
  La presencia simultánea de módulos JIT y Ngen pueden ejercer el efecto más negativo. La causa es que hay que cargar mscorjit.dll y, cuando el compilador JIT está trabajando con el código, es preciso tener acceso a gran cantidad de páginas de las imágenes de Ngen mientras el compilador JIT lee los metadatos de los ensamblados.  
   
 ### <a name="ngen-and-clickonce"></a>Ngen y ClickOnce  
- La manera en que está previsto implementar la aplicación también puede marcar la diferencia en cuanto al tiempo de carga. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] implementación de la aplicación no admite Ngen. Si decide utilizar Ngen.exe para su aplicación, tendrá que utilizar otro mecanismo de implementación, como Windows Installer.  
+ La manera en que está previsto implementar la aplicación también puede marcar la diferencia en cuanto al tiempo de carga. La implementación de aplicaciones de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] no admite Ngen. Si decide utilizar Ngen.exe para su aplicación, tendrá que utilizar otro mecanismo de implementación, como Windows Installer.  
   
  Para obtener más información, vea el artículo sobre [Ngen.exe (generador de imágenes nativas)](../../tools/ngen-exe-native-image-generator.md).  
   
@@ -130,4 +130,4 @@ La cantidad de tiempo necesaria para iniciar una aplicación de WPF puede variar
 - <xref:System.Resources.ResourceManager>
 - [Agregar una pantalla de presentación a una aplicación WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
 - [Ngen.exe (Generador de imágenes nativas)](../../tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence > elemento](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [\<generatePublisherEvidence> (Elemento)](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

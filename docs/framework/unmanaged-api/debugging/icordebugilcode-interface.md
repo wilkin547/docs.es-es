@@ -13,10 +13,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 279a87039c4cbc12c7ec5f734928c851185280f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175726"
 ---
 # <a name="icordebugilcode-interface"></a>ICorDebugILCode (Interfaz)
@@ -28,7 +28,7 @@ ms.locfileid: "59175726"
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)|Devuelve un puntero a una lista de cláusulas de control de excepciones (EH) definidas para este IL.|  
+|[GetEHClauses (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)|Devuelve un puntero a una lista de cláusulas de control de excepciones (EH) definidas para este IL.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -41,5 +41,5 @@ ms.locfileid: "59175726"
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

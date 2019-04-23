@@ -3,10 +3,10 @@ title: Actividad
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
 ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170214"
 ---
 # <a name="activity"></a>Actividad
@@ -38,9 +38,9 @@ En este tema describe los seguimientos de actividad en el modelo de seguimiento 
 ## <a name="defining-the-scope-of-an-activity"></a>Definición del ámbito de una actividad  
  Una actividad se define durante el diseño y denota una unidad lógica de trabajo. Los seguimientos emitidos con el mismo identificador de actividad están directamente relacionados, forman parte de la misma actividad. Debido a que una actividad puede cruzar los límites de extremos (una solicitud), se definen dos ámbitos para una actividad.  
   
--   `Global` ámbito, por aplicación. En este ámbito, la actividad se identifica por su identificador de actividad único globalmente de 128 bits, el gAId. El gAId es lo que se propaga por los puntos de conexión.  
+-   Ámbito `Global`, por aplicación. En este ámbito, la actividad se identifica por su identificador de actividad único globalmente de 128 bits, el gAId. El gAId es lo que se propaga por los puntos de conexión.  
   
--   `Local` ámbito, cada punto de conexión. En este ámbito, GAId identifica la actividad, junto con el nombre del origen de seguimiento que emite los seguimientos de actividad y el identificador de proceso. Este triplete constituye el id. de actividad local, lAId. El lAId se utiliza para definir los límites (locales) de una actividad.  
+-   Ámbito `Local`, por extremo. En este ámbito, GAId identifica la actividad, junto con el nombre del origen de seguimiento que emite los seguimientos de actividad y el identificador de proceso. Este triplete constituye el id. de actividad local, lAId. El lAId se utiliza para definir los límites (locales) de una actividad.  
   
 ## <a name="trace-schema"></a>Esquema de seguimiento  
  Los seguimientos se pueden emitir utilizando cualquier esquema y entre plataformas de Microsoft. "e2e" (para "to End") es un esquema comúnmente utilizado. Este esquema incluye un identificador de 128 bits (gAId), el nombre del origen de seguimiento y el identificador de proceso. En código administrado, <xref:System.Diagnostics.XmlWriterTraceListener> emite seguimientos en el esquema E2E.  
@@ -99,8 +99,8 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 ## <a name="see-also"></a>Vea también
 
-- [Configurar seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Configuración de la traza](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Escenarios de seguimiento de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Escenarios de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Emisión de trazas del código de usuario](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

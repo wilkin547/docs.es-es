@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6709b14ce8e7bc131f9feb7a277fb41851ee4352
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173997"
 ---
 # <a name="icordebugstringvalue-interface"></a>Interfaz ICorDebugStringValue
@@ -30,8 +30,8 @@ Una subclase del ICorDebugHeapValue que se aplica a los valores de cadena.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetLength](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|Obtiene el número de caracteres de la cadena que hace referencia esta `ICorDebugStringValue`.|  
-|[Método GetString](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|Obtiene la cadena que hace referencia esta `ICorDebugStringValue`.|  
+|[GetLength (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|Obtiene el número de caracteres de la cadena que hace referencia esta `ICorDebugStringValue`.|  
+|[GetString (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|Obtiene la cadena que hace referencia esta `ICorDebugStringValue`.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -49,4 +49,4 @@ Una subclase del ICorDebugHeapValue que se aplica a los valores de cadena.
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -3,10 +3,10 @@ title: Almacenamiento en caché del plan de consulta [Entity SQL]
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178183"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Almacenamiento en caché del plan de consulta [Entity SQL]
@@ -36,7 +36,7 @@ Siempre que se intenta ejecutar una consulta, la canalización de la consulta ex
   
 -   El texto de la consulta debe ser un patrón constante, preferentemente una cadena o un recurso constante.  
   
--   <xref:System.Data.EntityClient.EntityParameter> o <xref:System.Data.Objects.ObjectParameter> debe usarse siempre que se debe pasar un valor proporcionado por el usuario.  
+-   Se debe utilizar <xref:System.Data.EntityClient.EntityParameter> o <xref:System.Data.Objects.ObjectParameter> siempre que se deba pasar un valor proporcionado por el usuario.  
   
  Se deben evitar los patrones de consulta siguientes, que consumen innecesariamente espacios en la memoria caché del plan de consulta:  
   

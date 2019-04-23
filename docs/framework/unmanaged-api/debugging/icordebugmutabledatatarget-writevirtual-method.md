@@ -5,10 +5,10 @@ ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2fba970de6e5882d3cbe9be17b5b49be5a3e81aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171657"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual (método)
@@ -34,7 +34,7 @@ HRESULT WriteVirtual(
  [in] Número de bytes en `pBuffer`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si funciona correctamente, o cualquier otro `HRESULT` en caso de error.  
+ `S_OK`, si la operación se realiza correctamente o cualquier otro `HRESULT`, en caso de error.  
   
 ## <a name="remarks"></a>Comentarios  
  Si no se puede escribir bytes, la llamada al método produce un error sin cambiar los bytes en el espacio de la dirección de destino (de lo contrario, el destino estaría en un estado incoherente que haría que las futuras depuraciones resultasen poco fiables).  
@@ -50,5 +50,5 @@ HRESULT WriteVirtual(
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaz ICorDebugMutableDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMutableDataTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

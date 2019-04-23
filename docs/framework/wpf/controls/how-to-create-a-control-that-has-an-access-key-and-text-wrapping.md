@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un control que tenga tecla de acceso y ajuste de texto
+title: Procedimiento Crear un control que tenga tecla de acceso y ajuste de texto
 ms.date: 03/30/2017
 helpviewer_keywords:
 - access keys [WPF], control for
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
 ms.openlocfilehash: 48e439719afa2426b5d8f822c621080cdc32514e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174049"
 ---
-# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Filtrar Crear un control que tenga tecla de acceso y ajuste de texto
+# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Procedimiento Crear un control que tenga tecla de acceso y ajuste de texto
 En este ejemplo se explica cómo crear un control que tenga una clave de acceso y que admita el ajuste de texto. El ejemplo se usa un <xref:System.Windows.Controls.Label> control para ilustrar estos conceptos.  
   
 ## <a name="example"></a>Ejemplo  
@@ -26,7 +26,7 @@ En este ejemplo se explica cómo crear un control que tenga una clave de acceso 
   
  [!code-xaml[LabelSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
- **Agregar una clave de acceso y ajuste de texto a la etiqueta**  
+ **Agregar una tecla de acceso y el ajuste de texto a la etiqueta**  
   
  Si necesita un <xref:System.Windows.Controls.Label> que tiene una clave de acceso (tecla de acceso), use el <xref:System.Windows.Controls.AccessText> elemento que está dentro de la <xref:System.Windows.Controls.Label>.  
   
@@ -38,4 +38,4 @@ En este ejemplo se explica cómo crear un control que tenga una clave de acceso 
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar Establezca la propiedad de destino de una etiqueta](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))
+- [Cómo: Establezca la propiedad de destino de una etiqueta](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))

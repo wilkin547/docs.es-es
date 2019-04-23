@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar un objeto Boolean mediante fotogramas clave
+title: Procedimiento Animar un objeto Boolean mediante fotogramas clave
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
 ms.openlocfilehash: 59a72916721cccbe66f704253f148828fa8cd418
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175037"
 ---
-# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Filtrar Animar un objeto Boolean mediante fotogramas clave
+# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Procedimiento Animar un objeto Boolean mediante fotogramas clave
 En este ejemplo se muestra cómo animar el valor de propiedad booleana de una <xref:System.Windows.Controls.Button> control mediante fotogramas clave.  
   
 ## <a name="example"></a>Ejemplo  

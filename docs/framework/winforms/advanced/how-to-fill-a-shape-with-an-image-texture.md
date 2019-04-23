@@ -1,5 +1,5 @@
 ---
-title: Filtrar para rellenar una forma con una textura de imagen
+title: Procedimiento para rellenar una forma con una textura de imagen
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with images
 ms.assetid: 508da5a6-2433-4d2b-9680-eaeae4e96e3b
 ms.openlocfilehash: 099bc9f5359f19439f308f28a6766d470956daea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177325"
 ---
-# <a name="how-to-fill-a-shape-with-an-image-texture"></a>Filtrar para rellenar una forma con una textura de imagen
+# <a name="how-to-fill-a-shape-with-an-image-texture"></a>Procedimiento para rellenar una forma con una textura de imagen
 Puede rellenar una forma cerrada con una textura utilizando la <xref:System.Drawing.Image> clase y el <xref:System.Drawing.TextureBrush> clase.  
   
 ## <a name="example"></a>Ejemplo  

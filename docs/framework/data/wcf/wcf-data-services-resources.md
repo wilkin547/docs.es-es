@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
 ms.openlocfilehash: d3562122ab578f5f622d439c17d86cdb64a1e573
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172125"
 ---
 # <a name="wcf-data-services-resources"></a>Recursos de Servicios de datos de WCF
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] temas introductorios pueden encontrarse en las siguientes ubicaciones. Muchos de estos temas también contienen vínculos a temas relacionados que contienen información más detallada.  
+Los temas de introducción de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] se pueden encontrar en las ubicaciones siguientes. Muchos de estos temas también contienen vínculos a temas relacionados que contienen información más detallada.  
   
  [Información general](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  Proporciona información general sobre las características y la funcionalidad disponibles en [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
@@ -32,25 +32,25 @@ ms.locfileid: "59172125"
  [Foro de WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=150512)  
  Soporte técnico de programación de datos para los programadores de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [Blog del equipo de WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=150511)  
+ [Blog del equipo de Servicios de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=150511)  
  Blog que contiene novedades, así como análisis de las características y funciones de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Sitio Web de OData](https://go.microsoft.com/fwlink/?LinkID=184554)  
  La principal fuente de información sobre [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
- [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)  
+ [SDK de OData](https://go.microsoft.com/fwlink/?LinkID=185248)  
  Contiene servicios de ejemplo, ejemplos y bibliotecas de programación que le permiten trabajar con [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes de distribución.  
   
  [OData Blog](https://go.microsoft.com/fwlink/?LinkId=185868)  
  Blog que contiene las discusiones sobre [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] de programación.  
   
- [Centro para programadores de acceso a datos y almacenamiento](https://go.microsoft.com/fwlink/?LinkId=91903)  
+ [Acceso a datos y el Centro para desarrolladores de almacenamiento](https://go.microsoft.com/fwlink/?LinkId=91903)  
  Ubicación central para buscar información y recursos para trabajar con datos.  
   
- [Cómo se usa la plataforma de datos Vídeos: Serie WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [¿Plataforma de datos de vídeos de procedimientos? Vídeos: Serie WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=124600)  
  Contiene un conjunto de conversiones de pantalla de vídeo que muestra cómo compilar y obtener acceso a los servicios de datos.  
   
- [Información general: Servicios de datos de WCF](https://go.microsoft.com/fwlink/?LinkID=131074)  
+ [Información general: Data Services de WCF](https://go.microsoft.com/fwlink/?LinkID=131074)  
  Notas del producto que proporcionan información general sobre las ventajas de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Usar Microsoft WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131075)  

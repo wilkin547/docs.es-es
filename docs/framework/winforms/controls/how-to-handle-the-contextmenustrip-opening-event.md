@@ -1,5 +1,5 @@
 ---
-title: Filtrar para controlar el evento Opening de ContextMenuStrip
+title: Procedimiento para controlar el evento Opening de ContextMenuStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], event handling
 ms.assetid: b661b3dd-7815-4cc2-a1aa-a9a391ab3427
 ms.openlocfilehash: 3001480959ef90cb31048cbcf70aeff1632979fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170723"
 ---
-# <a name="how-to-handle-the-contextmenustrip-opening-event"></a>Filtrar para controlar el evento Opening de ContextMenuStrip
+# <a name="how-to-handle-the-contextmenustrip-opening-event"></a>Procedimiento para controlar el evento Opening de ContextMenuStrip
 Puede personalizar el comportamiento de su <xref:System.Windows.Forms.ContextMenuStrip> control controlando el <xref:System.Windows.Forms.ToolStripDropDown.Opening> eventos.  
   
 ## <a name="example"></a>Ejemplo  
@@ -34,4 +34,4 @@ Puede personalizar el comportamiento de su <xref:System.Windows.Forms.ContextMen
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>
 - <xref:System.Windows.Forms.ToolStripDropDown>
-- [ToolStrip](toolstrip-control-windows-forms.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)
