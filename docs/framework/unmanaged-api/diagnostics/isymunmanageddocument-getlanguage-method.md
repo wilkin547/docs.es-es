@@ -18,29 +18,29 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 05ce47953358b7025e30080fbbaf288a6c0e879d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104603"
 ---
-# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="316e7-102">ISymUnmanagedDocument::GetLanguage (Método)</span><span class="sxs-lookup"><span data-stu-id="316e7-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
-<span data-ttu-id="316e7-103">Obtiene el identificador de idioma de este documento</span><span class="sxs-lookup"><span data-stu-id="316e7-103">Gets the language identifier of this document</span></span>  
+# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="ed4f1-102">ISymUnmanagedDocument::GetLanguage (Método)</span><span class="sxs-lookup"><span data-stu-id="ed4f1-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
+<span data-ttu-id="ed4f1-103">Obtiene el identificador de idioma de este documento</span><span class="sxs-lookup"><span data-stu-id="ed4f1-103">Gets the language identifier of this document</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="316e7-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="316e7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed4f1-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ed4f1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLanguage(  
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="316e7-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="316e7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ed4f1-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ed4f1-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="316e7-106">[out] Un puntero a una variable que recibe el identificador de idioma.</span><span class="sxs-lookup"><span data-stu-id="316e7-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
+ <span data-ttu-id="ed4f1-106">[out] Un puntero a una variable que recibe el identificador de idioma.</span><span class="sxs-lookup"><span data-stu-id="ed4f1-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="316e7-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="316e7-107">Return Value</span></span>  
- <span data-ttu-id="316e7-108">S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="316e7-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ed4f1-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="ed4f1-107">Return Value</span></span>  
+ <span data-ttu-id="ed4f1-108">S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="ed4f1-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="316e7-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="316e7-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ed4f1-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="ed4f1-109">See also</span></span>
 
-- [<span data-ttu-id="316e7-110">ISymUnmanagedDocument (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="316e7-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="ed4f1-110">ISymUnmanagedDocument (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ed4f1-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
