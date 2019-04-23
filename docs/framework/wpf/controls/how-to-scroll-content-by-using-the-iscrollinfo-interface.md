@@ -1,5 +1,5 @@
 ---
-title: Filtrar Desplazarse por contenido mediante la interfaz IScrollInfo
+title: Procedimiento Desplazarse por contenido mediante la interfaz IScrollInfo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - IScrollInfo interface [WPF]
 ms.assetid: d8700bef-a3f8-4c12-9de2-fc3b79f32cd3
 ms.openlocfilehash: 6ebd8268e1358b45709885c07e6b096d5f806ebb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098551"
 ---
-# <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a>Filtrar Desplazarse por contenido mediante la interfaz IScrollInfo
+# <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a>Procedimiento Desplazarse por contenido mediante la interfaz IScrollInfo
 En este ejemplo se muestra cómo desplazarse por contenido utilizando la <xref:System.Windows.Controls.Primitives.IScrollInfo> interfaz.  
   
 ## <a name="example"></a>Ejemplo  

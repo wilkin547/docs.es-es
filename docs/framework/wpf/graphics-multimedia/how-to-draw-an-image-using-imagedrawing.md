@@ -1,5 +1,5 @@
 ---
-title: Filtrar Dibujar una imagen mediante un objeto ImageDrawing
+title: Procedimiento Dibujar una imagen mediante un objeto ImageDrawing
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawing [WPF], images
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - images [WPF], drawing
 ms.assetid: df28ab41-25fb-4ab3-b51d-7f695b24f55e
 ms.openlocfilehash: f9459185bf81160b45222e7d6821e0f945ada381
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100163"
 ---
-# <a name="how-to-draw-an-image-using-imagedrawing"></a>Filtrar Dibujar una imagen mediante un objeto ImageDrawing
+# <a name="how-to-draw-an-image-using-imagedrawing"></a>Procedimiento Dibujar una imagen mediante un objeto ImageDrawing
 En este ejemplo se muestra cómo usar un <xref:System.Windows.Media.ImageDrawing> para dibujar una imagen. Un <xref:System.Windows.Media.ImageDrawing> permite mostrar un <xref:System.Windows.Media.ImageSource> con un <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.DrawingImage>, o <xref:System.Windows.Media.Visual>. Para dibujar una imagen, se crea un <xref:System.Windows.Media.ImageDrawing> y establezca su <xref:System.Windows.Media.ImageDrawing.ImageSource%2A?displayProperty=nameWithType> y <xref:System.Windows.Media.ImageDrawing.Rect%2A?displayProperty=nameWithType> propiedades. El <xref:System.Windows.Media.ImageDrawing.ImageSource%2A?displayProperty=nameWithType> propiedad especifica la imagen para dibujar y la <xref:System.Windows.Media.ImageDrawing.Rect%2A?displayProperty=nameWithType> propiedad especifica la posición y tamaño de cada imagen.  
   
 ## <a name="example"></a>Ejemplo  

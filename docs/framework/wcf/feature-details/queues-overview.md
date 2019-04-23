@@ -5,10 +5,10 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099773"
 ---
 # <a name="queues-overview"></a>Información general de colas
@@ -75,11 +75,11 @@ En esta sección se presentan los conceptos generales y básicos detrás de la c
   
 ## <a name="see-also"></a>Vea también
 
-- [Las colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Sesiones y colas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
-- [Colas con problemas de entrega](../../../../docs/framework/wcf/samples/dead-letter-queues.md)
+- [Colas de mensajes fallidos](../../../../docs/framework/wcf/samples/dead-letter-queues.md)
 - [Comunicación en cola volátil](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)
 - [Windows Communication Foundation a Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
-- [Instalar Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
+- [Instalación de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [Message Queuing a Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
 - [Seguridad de mensajes mediante Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

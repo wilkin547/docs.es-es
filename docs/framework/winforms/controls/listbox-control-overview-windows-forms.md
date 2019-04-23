@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
 ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104206"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>Información general sobre ListBox (Control, formularios Windows Forms)
@@ -25,10 +25,10 @@ Un formulario Windows Forms <xref:System.Windows.Forms.ListBox> control muestra 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.ListBox>
-- [Filtrar para agregar y quitar elementos de un control ComboBox, ListBox o CheckedListBox de formularios Windows Forms](add-and-remove-items-from-a-wf-combobox.md)
-- [Filtrar para ordenar el contenido de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Filtrar para enlazar un control ComboBox o ListBox de formularios Windows Forms a datos](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [Cómo: Agregar y quitar elementos de un Windows Forms control ComboBox, ListBox o CheckedListBox (Control)](add-and-remove-items-from-a-wf-combobox.md)
+- [Cómo: Ordenar el contenido de un Windows Forms control ComboBox, ListBox o CheckedListBox (Control)](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Cómo: Enlazar un Control de ListBox o ComboBox de formularios Windows Forms a datos](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
 - [Información general sobre el control ComboBox](combobox-control-overview-windows-forms.md)
-- [Información general sobre el control CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
+- [CheckedListBox Control Overview](checkedlistbox-control-overview-windows-forms.md)
 - [Controles de formularios Windows Forms usados para mostrar opciones](windows-forms-controls-used-to-list-options.md)
-- [Filtrar para crear una tabla de búsqueda para un control ComboBox, ListBox o CheckedListBox de formularios Windows Forms](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [Cómo: Crear una tabla de búsqueda para un Windows Forms control ComboBox, ListBox o CheckedListBox (Control)](create-a-lookup-table-for-a-wf-combobox-listbox.md)

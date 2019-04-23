@@ -8,10 +8,10 @@ helpviewer_keywords:
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
 ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103446"
 ---
 # <a name="double-buffered-graphics"></a>Gráficos de doble búfer
@@ -37,7 +37,7 @@ El parpadeo es un problema frecuente al programar gráficos. Las operaciones gr�
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [Filtrar para representar manualmente gráficos almacenados en búfer](how-to-manually-render-buffered-graphics.md)
-- [Filtrar para reducir el parpadeo de los gráficos con un búfer doble en formularios y controles](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [Filtrar para administrar manualmente gráficos almacenados en búfer](how-to-manually-manage-buffered-graphics.md)
+- [Cómo: Representar manualmente gráficos almacenados en búfer](how-to-manually-render-buffered-graphics.md)
+- [Cómo: Reducir el parpadeo de gráficos con un búfer doble en formularios y controles](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [Cómo: Administrar manualmente gráficos almacenados en búfer](how-to-manually-manage-buffered-graphics.md)
 - [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)

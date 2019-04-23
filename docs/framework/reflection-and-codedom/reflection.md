@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab4a31195a202929c8485349cbf43235faea8e2d
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 20dd6f9ab601277161079230effdaeeabd1bb13a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221243"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59101580"
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflexión en .NET Framework
 Las clases del espacio de nombres <xref:System.Reflection>, junto con <xref:System.Type?displayProperty=nameWithType>, permiten obtener información sobre los [ensamblados](../app-domains/assemblies-in-the-common-language-runtime.md) cargados y los tipos definidos dentro de ellos, como [clases](../../standard/base-types/common-type-system.md#classes), [interfaces](../../standard/base-types/common-type-system.md#interfaces) y [tipos de valor](../../csharp/language-reference/keywords/value-types.md). También puede usar la reflexión para crear instancias de tipos en tiempo de ejecución, para llamarlas y para acceder a ellas. Para consultar temas sobre aspectos específicos de la reflexión, vea los [Temas relacionados](#related_topics) al final de esta introducción.
@@ -89,4 +89,3 @@ Las clases del espacio de nombres <xref:System.Reflection>, junto con <xref:Syst
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
-  

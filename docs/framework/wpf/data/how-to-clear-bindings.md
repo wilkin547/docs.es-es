@@ -1,5 +1,5 @@
 ---
-title: Filtrar Borrar enlaces
+title: Procedimiento Borrar enlaces
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
 ms.openlocfilehash: 8140928d44555e399ddf4ebd73407a251ad3cffe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101424"
 ---
-# <a name="how-to-clear-bindings"></a>Filtrar Borrar enlaces
+# <a name="how-to-clear-bindings"></a>Procedimiento Borrar enlaces
 En este ejemplo se muestra cómo borrar los enlaces de un objeto.  
   
 ## <a name="example"></a>Ejemplo  

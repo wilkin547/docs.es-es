@@ -5,10 +5,10 @@ ms.assetid: c536b9dc-148e-4924-bde1-1daa98d49d90
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c6077f16f07c5f1fc76b6525ccb036aa1e4fa06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099305"
 ---
 # <a name="icordebugappdomain4-interface"></a>Interfaz de ICorDebugAppDomain4
@@ -18,7 +18,7 @@ Extiende lógicamente la ICorDebugAppDomain (interfaz) para obtener un objeto ad
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetObjectForCCW](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-getobjectforccw-method.md)|Obtiene un objeto administrado de un puntero de contenedor CCW (COM callable wrapper).|  
+|[GetObjectForCCW (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-getobjectforccw-method.md)|Obtiene un objeto administrado de un puntero de contenedor CCW (COM callable wrapper).|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -33,5 +33,5 @@ Extiende lógicamente la ICorDebugAppDomain (interfaz) para obtener un objeto ad
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

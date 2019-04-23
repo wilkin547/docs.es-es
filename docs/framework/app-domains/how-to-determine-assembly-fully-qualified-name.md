@@ -13,10 +13,10 @@ ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60a4ef1f5bde121d5773925437307b2749aa7282
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097543"
 ---
 # <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Procedimiento Determinar el nombre completo de un ensamblado
@@ -45,7 +45,7 @@ Para conocer el nombre completo de un ensamblado de la caché global de ensambla
 ## <a name="see-also"></a>Vea también
 
 - [Nombres de ensamblado](../../../docs/framework/app-domains/assembly-names.md)
-- [Crear ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
+- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
 - [Crear y utilizar ensamblados con nombre seguro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

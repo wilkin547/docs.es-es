@@ -5,10 +5,10 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101305"
 ---
 # <a name="auditing-security-events"></a>Auditoría de eventos de seguridad
@@ -32,7 +32,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
   
  Para escribir en el registro de seguridad es necesario el `SeAuditPrivilege`. De forma predeterminada, solo las cuentas de Sistema local y Servicio de red tienen este privilegio. Para administrar las funciones del registro de seguridad `read` y `delete` es necesario `SeSecurityPrivilege`. De forma predeterminada, solo los administradores tienen este privilegio.  
   
- En cambio, los usuarios autenticados pueden leer y escribir en el registro de aplicaciones. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Escribe los eventos en el registro de aplicación de auditoría de forma predeterminada. El registro también puede contener datos personales que son visibles para todos los usuarios autenticados.  
+ En cambio, los usuarios autenticados pueden leer y escribir en el registro de aplicaciones. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] escribe de forma predeterminada los eventos de auditoría en el registro de aplicaciones. El registro también puede contener datos personales que son visibles para todos los usuarios autenticados.  
   
 ## <a name="suppressing-audit-failures"></a>Suprimir los errores de la auditoría  
  Otra opción durante la auditoría es la de suprimir los errores de la auditoría. De forma predeterminada, un error de la auditoría no afecta a una aplicación. Si fuese necesario, sin embargo, puede establecer la opción en `false`, que hace que se produzca una excepción.  
@@ -88,7 +88,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
 |Sistema|Registro de aplicaciones|Registro de seguridad|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] o posterior|Compatible|No compatibles|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] y [!INCLUDE[wv](../../../../includes/wv-md.md)]|Compatible|Debe poseer el contexto del subproceso `SeAuditPrivilege`|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] y [!INCLUDE[wv](../../../../includes/wv-md.md)]|Compatible|El contexto del subproceso debe poseer `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Otros factores  
  Además del sistema operativo, la tabla siguiente describe otros valores que controlan la habilitación de los registros.  
@@ -104,7 +104,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
 - <xref:System.ServiceModel.AuditLogLocation>
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Filtrar para auditar eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Cómo: Auditar eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
-- [\<comportamientos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

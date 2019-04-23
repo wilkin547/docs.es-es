@@ -1,17 +1,17 @@
 ---
-title: Filtrar Agregar un valor de salida de animación a un valor inicial de animación
+title: Procedimiento Agregar un valor de salida de animación a un valor inicial de animación
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF]
 ms.assetid: b89a82be-b03d-481e-a8d3-cc513d09ca00
 ms.openlocfilehash: 945675d03a280e2394fdb0eab27c0978dc7cc320
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102614"
 ---
-# <a name="how-to-add-an-animation-output-value-to-an-animation-starting-value"></a>Filtrar Agregar un valor de salida de animación a un valor inicial de animación
+# <a name="how-to-add-an-animation-output-value-to-an-animation-starting-value"></a>Procedimiento Agregar un valor de salida de animación a un valor inicial de animación
 En este ejemplo se muestra cómo agregar un valor de salida de animación a un valor inicial de animación.  
   
 ## <a name="example"></a>Ejemplo  
@@ -26,4 +26,4 @@ En este ejemplo se muestra cómo agregar un valor de salida de animación a un v
 - [Acumular valores de animaciones durante la repetición de ciclos](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [Información general sobre animaciones](animation-overview.md)
 - [Información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md)
-- [Temas "Cómo..." de animación y control de tiempo](animation-and-timing-how-to-topics.md)
+- [Temas de procedimientos de temporización y animación](animation-and-timing-how-to-topics.md)

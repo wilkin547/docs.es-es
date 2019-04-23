@@ -1,5 +1,5 @@
 ---
-title: Filtrar Controlar un control MediaElement mediante un guión gráfico
+title: Procedimiento Controlar un control MediaElement mediante un guión gráfico
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - playback of media [WPF], controlling with Storyboards
 ms.assetid: 6128ca77-b826-4e36-b968-6f237157c543
 ms.openlocfilehash: ae785e11b1da0f2c408b24021ad46ab071419378
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100319"
 ---
-# <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Filtrar Controlar un control MediaElement mediante un guión gráfico
+# <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Procedimiento Controlar un control MediaElement mediante un guión gráfico
 En este ejemplo se muestra cómo controlar un <xref:System.Windows.Controls.MediaElement> mediante el uso de un <xref:System.Windows.Media.MediaTimeline> en un <xref:System.Windows.Media.Animation.Storyboard>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -40,8 +40,8 @@ En este ejemplo se muestra cómo controlar un <xref:System.Windows.Controls.Medi
 - <xref:System.Windows.Controls.MediaElement>
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
-- [Controlar un control MediaElement (Reproducir, Pausar, Detener, Volumen y Velocidad)](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)
-- [Información general sobre objetos Storyboard](storyboards-overview.md)
+- [Controlar un MediaElement (Reproducir, Pausar, Detener, Volumen y Velocidad)](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)
+- [Información general sobre objetos Storyboard ](storyboards-overview.md)
 - [Información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md)
 - [Información general sobre animaciones](animation-overview.md)
 - [Temas "Cómo..."](audio-and-video-how-to-topics.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
 ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105864"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Selección y uso del Portapapeles con el control DataGridView de formularios Windows Forms
@@ -23,13 +23,13 @@ El `DataGridView` control proporciona una variedad de opciones para configurar c
  [Modos de selección en el control DataGridView de formularios Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md)  
  Describe las opciones de usuario y la selección de programación en el control.  
   
- [Filtrar para establecer el modo de selección del control DataGridView de formularios Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+ [Cómo: Establecer el modo de selección del Control DataGridView de formularios Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
  Describe cómo configurar el control de selección de fila única cuando un usuario hace clic en una celda.  
   
- [Filtrar para obtener las celdas, filas y columnas seleccionadas en el control DataGridView de formularios Windows Forms](selected-cells-rows-and-columns-datagridview.md)  
+ [Cómo: Obtener las celdas seleccionadas, filas y columnas en el Control DataGridView de formularios de Windows](selected-cells-rows-and-columns-datagridview.md)  
  Describe cómo trabajar con las recopilaciones seleccionadas de la celda, fila y columna.  
   
- [Filtrar para permitir que los usuarios copien varias celdas en el Portapapeles desde el control DataGridView de formularios Windows Forms](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+ [Cómo: Permitir que los usuarios copien varias celdas en el Portapapeles desde el Control DataGridView de Windows Forms](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
  Describe cómo habilitar la compatibilidad con el Portapapeles en el control.  
   
 ## <a name="reference"></a>Referencia  
@@ -53,5 +53,5 @@ El `DataGridView` control proporciona una variedad de opciones para configurar c
   
 ## <a name="see-also"></a>Vea también
 
-- [Control DataGridView](datagridview-control-windows-forms.md)
+- [DataGridView (control)](datagridview-control-windows-forms.md)
 - [Control predeterminado de teclado y mouse en el control DataGridView de Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

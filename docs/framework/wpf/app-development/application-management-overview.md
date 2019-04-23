@@ -8,10 +8,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100085"
 ---
 # <a name="application-management-overview"></a>Información general sobre la administración de aplicaciones
@@ -105,7 +105,7 @@ Todas las aplicaciones suelen compartir un conjunto común de funciones que se a
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Obtener la aplicación actual  
- Dado que la funcionalidad de la <xref:System.Windows.Application> clase se comparten entre una aplicación, puede haber solo una instancia de la <xref:System.Windows.Application> clase por <xref:System.AppDomain>. Para exigir esto, el <xref:System.Windows.Application> clase se implementa como una clase singleton (vea [Implementing Singleton in C# ](https://go.microsoft.com/fwlink/?LinkId=100567)), que crea una única instancia de sí mismo y proporciona acceso comparten a ella con el `static`<xref:System.Windows.Application.Current%2A> propiedad.  
+ Dado que la funcionalidad de la <xref:System.Windows.Application> clase se comparten entre una aplicación, puede haber solo una instancia de la <xref:System.Windows.Application> clase por <xref:System.AppDomain>. Para exigir esto, el <xref:System.Windows.Application> clase se implementa como una clase singleton (vea [Implementing Singleton in C#](https://go.microsoft.com/fwlink/?LinkId=100567)), que crea una única instancia de sí mismo y proporciona acceso comparten a ella con el `static` <xref:System.Windows.Application.Current%2A> propiedad.  
   
  El código siguiente muestra cómo adquirir una referencia a la <xref:System.Windows.Application> objeto actual <xref:System.AppDomain>.  
   
@@ -360,6 +360,6 @@ Todas las aplicaciones suelen compartir un conjunto común de funciones que se a
 - [Información general sobre ventanas de WPF](wpf-windows-overview.md)
 - [Información general sobre navegación](navigation-overview.md)
 - [Archivos de recursos, contenido y datos de aplicaciones de WPF](wpf-application-resource-content-and-data-files.md)
-- [Pack URI en WPF](pack-uris-in-wpf.md)
-- [Modelo de aplicación: Temas "Cómo..."](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [Identificadores URI de paquete en WPF](pack-uris-in-wpf.md)
+- [Modelo de aplicación: Temas de procedimientos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
 - [Desarrollo de aplicaciones](index.md)

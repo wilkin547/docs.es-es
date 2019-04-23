@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
 ms.openlocfilehash: 26cb4fabedb7a4e17f3ee56e95c310e6483d59e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099695"
 ---
 # <a name="getting-started-wpf"></a>Introducción (WPF)
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) es un marco de interfaz de usuario que cre
 |-|-|  
 |Deseo comenzar de inmediato…|[Tutorial: Mi primera aplicación de escritorio WPF](walkthrough-my-first-wpf-desktop-application.md)|  
 |¿Cómo puedo diseñar la interfaz de usuario de la aplicación?|[Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)|  
-|Novedades de .NET|[Información general acerca de .NET Framework](../../get-started/overview.md)<br /><br /> [Elementos esenciales de aplicaciones .NET Framework](../../../standard/application-essentials.md)<br /><br /> [Introducción a Visual C# y Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
+|Novedades de .NET|[Información general acerca de .NET Framework](../../get-started/overview.md)<br /><br /> [.NET Framework Application Essentials](../../../standard/application-essentials.md) (Elementos esenciales de aplicaciones .NET Framework)<br /><br /> [Introducción a Visual C# y Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
 |Más información sobre WPF...|[Introducción a WPF en Visual Studio](introduction-to-wpf-in-vs.md)<br /><br /> [Información general sobre XAML (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Controles](../controls/index.md)<br /><br /> [Información general sobre el enlace de datos](../data/data-binding-overview.md)|  
 |¿Es un desarrollador de Windows Forms?|[Controles de Windows Forms y controles equivalentes de WPF](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [Interoperabilidad entre Windows Forms y WPF](../advanced/wpf-and-windows-forms-interoperation.md)|  
   
@@ -30,4 +30,4 @@ Windows Presentation Foundation (WPF) es un marco de interfaz de usuario que cre
 
 - [Biblioteca de clases](../class-library-wpf.md)
 - [Desarrollo de aplicaciones](../app-development/index.md)
-- [Centro para desarrolladores de .NET framework](https://www.microsoft.com/net)
+- [Centro para desarrolladores de .NET Framework](https://www.microsoft.com/net)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un complemento que sea una interfaz de usuario
+title: Procedimiento Crear un complemento que sea una interfaz de usuario
 ms.date: 03/30/2017
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100306"
 ---
-# <a name="how-to-create-an-add-in-that-is-a-ui"></a>Filtrar Crear un complemento que sea una interfaz de usuario
+# <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procedimiento Crear un complemento que sea una interfaz de usuario
 En este ejemplo se muestra cómo crear un complemento que es un Windows Presentation Foundation (WPF) que se hospeda en una aplicación independiente de WPF.  
   
  El complemento es una interfaz de usuario que es un control de usuario WPF. El contenido del control de usuario es un botón único que muestra un cuadro de mensaje cuando se hace clic en él. La aplicación de WPF independiente hospeda el complemento de la interfaz de usuario como el contenido de la ventana principal de la aplicación.  
@@ -87,7 +87,7 @@ En este ejemplo se muestra cómo crear un complemento que es un Windows Presenta
   
  El código para procesar las interacciones con el complemento de la interfaz de usuario se ejecuta en dominio de aplicación del complemento. Estas interacciones incluyen lo siguiente:  
   
--   Controlar la <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
+-   Controlar la <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
 -   Mostrando el <xref:System.Windows.MessageBox>.  
   

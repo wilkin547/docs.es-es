@@ -3,10 +3,10 @@ title: Diagnóstico de aplicaciones transaccionales
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101717"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnóstico de aplicaciones transaccionales
@@ -95,7 +95,7 @@ Este tema describe cómo usar la característica de diagnóstico y administraci�
   
      Seguimiento WS-AtomicTransaction puede habilitarse mediante la [WS-AtomicTransaction Configuration Utility (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Tal seguimiento proporciona una visión sobre el estado de las transacciones y participantes de un sistema. Para también permitir el seguimiento de Service Model, puede establecer la clave del Registro`HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` en un valor válido de la enumeración <xref:System.Diagnostics.SourceLevels>. Puede habilitar el registro de mensajes en la misma manera que otras aplicaciones WCF.  
   
--   `System.Transactions` traza  
+-   Seguimiento de `System.Transactions`  
   
      Si se usa el protocolo OleTransactions, no se pueden seguir los mensajes de protocolos. La compatibilidad de seguimiento que proporciona la infraestructura <xref:System.Transactions> (que utiliza OleTransactions) permite a los usuarios ver eventos que ocurrieron a las transacciones. Para habilitar el seguimiento para una aplicación <xref:System.Transactions>, incluya el siguiente código en el archivo de configuración `App.config`.  
   
@@ -123,5 +123,5 @@ Este tema describe cómo usar la característica de diagnóstico y administraci�
 ## <a name="see-also"></a>Vea también
 
 - [Administración y diagnóstico](../../../../docs/framework/wcf/diagnostics/index.md)
-- [Configurar seguimiento](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Configuración de la traza](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

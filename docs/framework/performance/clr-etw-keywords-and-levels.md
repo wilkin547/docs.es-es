@@ -10,10 +10,10 @@ ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105747"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Palabras clave y niveles ETW de CLR
@@ -95,12 +95,12 @@ ms.locfileid: "59105747"
   
 |Palabras clave y marcas|Dominio de aplicación, ensamblado, eventos DCStart/DCEnd de módulos|Eventos DCStart/DCEnd de método (incluidos los eventos de métodos dinámicos)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` eventos.|Ninguno.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` eventos.|Ninguno.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Ninguno.|`DCStart` eventos.|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Ninguno.|`DCEnd` eventos.|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Ninguno.|`DCStart` eventos.|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Ninguno.|`DCEnd` eventos.|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|Eventos`DCStart` .|Ninguno.|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|Eventos`DCEnd` .|Ninguno.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Ninguno.|Eventos`DCStart` .|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Ninguno.|Eventos`DCEnd` .|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Ninguno.|Eventos`DCStart` .|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Ninguno.|Eventos`DCEnd` .|  
   
  [Volver al principio](#top)  
   
@@ -125,5 +125,5 @@ ms.locfileid: "59105747"
 ## <a name="see-also"></a>Vea también
 
 - [Proveedores ETW de CLR](../../../docs/framework/performance/clr-etw-providers.md)
-- [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
 - [Eventos ETW en Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

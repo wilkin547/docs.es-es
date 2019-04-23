@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: b07851a0d26f5bfe7edc2115d7276a8e96ba0917
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675789"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59101333"
 ---
 # <a name="customizing-structure-marshalling"></a>Personalización de la serialización de estructuras
 
@@ -230,7 +230,6 @@ struct UnicodeString
 ```
 
 Si desea serializar las cadenas mediante la codificación UTF-8, puede usar el valor <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> en <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
-
 
 ```csharp
 public struct UTF8String

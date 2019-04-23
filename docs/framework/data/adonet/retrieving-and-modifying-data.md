@@ -3,17 +3,17 @@ title: Recuperar y modificar datos en ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097632"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recuperar y modificar datos en ADO.NET
 La principal función de cualquier aplicación de base de datos es conectarse a un origen de datos y recuperar los datos que contiene. Los proveedores de datos de .NET Framework de ADO.NET sirven como puente entre una aplicación y un origen de datos, permitiéndole ejecutar comandos y recuperar datos mediante un **DataReader** o un **DataAdapter** . Una función clave de cualquier aplicación de base de datos es la capacidad de actualizar los datos almacenados en la misma. En ADO.NET, actualización de datos implica el uso de la **DataAdapter** y <xref:System.Data.DataSet>, y **comando** objetos; y es posible que también implican el uso de transacciones.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Conectarse a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
+ [Conexión a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  Describe cómo se establece una conexión con un origen de datos y cómo trabajar con eventos de conexión.  
   
  [Cadenas de conexión](../../../../docs/framework/data/adonet/connection-strings.md)  
@@ -31,16 +31,16 @@ La principal función de cualquier aplicación de base de datos es conectarse a 
  [Transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  Contiene temas en los que se describe cómo realizar transacciones locales y transacciones distribuidas, y cómo trabajar con la simultaneidad optimista.  
   
- [Recuperar valores autonuméricos y de identidad](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
+ [Recuperación de valores autonuméricos y de identidad](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
  Proporciona un ejemplo de asignación de los valores generados para una **identidad** columna en una tabla de SQL Server o para un **Autonumérico** campo en una tabla de Microsoft Access, a una columna de una fila insertada en una tabla. Describe la combinación de valores de identidad en una `DataTable`.  
   
- [Recuperar datos binarios](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
+ [Recuperación de datos binarios](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  Describe cómo recuperar datos binarios o estructuras de datos de gran tamaño mediante `CommandBehavior`.`SequentialAccess` Para modificar el comportamiento predeterminado de un `DataReader`.  
   
- [Modificar datos con procedimientos almacenados](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ [Modificación de datos con procedimientos almacenados](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  Describe cómo utilizar parámetros de entrada y parámetros de salida de procedimientos almacenados para insertar una fila en una base de datos y devolver un nuevo valor de identidad.  
   
- [Recuperar información del esquema de la base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [Recuperación de información del esquema de la base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  Describe cómo obtener de un origen de dstos las bases de datos o catálogos disponibles, las tablas y vistas de una base de datos, las restricciones que existen para las tablas y otra información de esquema.  
   
  [Objetos DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
@@ -55,7 +55,7 @@ La principal función de cualquier aplicación de base de datos es conectarse a 
  [Programación asincrónica](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
  Describe la compatibilidad de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] con programación asincrónica.  
   
- [Compatibilidad de transmisión de datos de SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
+ [Compatibilidad de streaming de SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  Describe cómo escribir aplicaciones que transmitir datos desde SQL Server sin tener que totalmente cargada en memoria.  
   
 ## <a name="see-also"></a>Vea también
@@ -64,4 +64,4 @@ La principal función de cualquier aplicación de base de datos es conectarse a 
 - [Objetos DataSet, DataTable y DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server y ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

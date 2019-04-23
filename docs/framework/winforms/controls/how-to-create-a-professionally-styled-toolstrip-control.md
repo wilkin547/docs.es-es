@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear un control ToolStrip de estilo profesional
+title: Procedimiento para crear un control ToolStrip de estilo profesional
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: c208b2f6-8105-474b-9075-d582e1792870
 ms.openlocfilehash: 6da6e113867efed79dfcd02f3b89ee1f9ae13c4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104598"
 ---
-# <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>Filtrar para crear un control ToolStrip de estilo profesional
+# <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>Procedimiento para crear un control ToolStrip de estilo profesional
 Puede dar a los controles <xref:System.Windows.Forms.ToolStrip> de la aplicación un aspecto y comportamiento profesional escribiendo su propia clase derivada del tipo <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.  
   
  Hay una amplia compatibilidad para esta característica en Visual Studio.  
@@ -42,5 +42,5 @@ Puede dar a los controles <xref:System.Windows.Forms.ToolStrip> de la aplicació
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [ToolStrip](toolstrip-control-windows-forms.md)
-- [Filtrar para proporcionar elementos de menú estándar a un formulario](how-to-provide-standard-menu-items-to-a-form.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)
+- [Cómo: Proporcionar elementos de menú estándar a un formulario](how-to-provide-standard-menu-items-to-a-form.md)

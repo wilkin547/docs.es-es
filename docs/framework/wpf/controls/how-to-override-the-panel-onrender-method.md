@@ -1,5 +1,5 @@
 ---
-title: Filtrar Invalidar el método OnRender de un objeto Panel
+title: Procedimiento Invalidar el método OnRender de un objeto Panel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - Panel control [WPF], overriding OnRender method
 ms.assetid: 57397834-a085-4e36-90ab-416fad98f341
 ms.openlocfilehash: c4539847368c1a5789e99ec92106d17077ed5943
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102536"
 ---
-# <a name="how-to-override-the-panel-onrender-method"></a>Filtrar Invalidar el método OnRender de un objeto Panel
+# <a name="how-to-override-the-panel-onrender-method"></a>Procedimiento Invalidar el método OnRender de un objeto Panel
 En este ejemplo se muestra cómo invalidar el <xref:System.Windows.Controls.Panel.OnRender%2A> método <xref:System.Windows.Controls.Panel> con el fin de agregar efectos gráficos personalizados a un elemento de diseño.  
   
 ## <a name="example"></a>Ejemplo  

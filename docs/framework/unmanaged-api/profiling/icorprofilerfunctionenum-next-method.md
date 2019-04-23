@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 62e70a2fe421651aac9a4921ca885c53c864c4f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101808"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next (Método)
@@ -51,7 +51,7 @@ HRESULT Next([in]  ULONG      celt,
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`celt` se devolvieron los elementos.|  
+|S_OK|Se devolvieron `celt` elementos.|  
 |S_FALSE|Se devolvieron menos de `celt` elementos, lo que indica que la enumeración está completa.|  
   
 ## <a name="requirements"></a>Requisitos  
@@ -65,5 +65,5 @@ HRESULT Next([in]  ULONG      celt,
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerFunctionEnum (Interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [ICorProfilerFunctionEnum (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
 - [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

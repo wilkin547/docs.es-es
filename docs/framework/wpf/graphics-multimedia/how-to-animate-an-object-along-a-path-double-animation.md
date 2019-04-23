@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animación de un objeto a lo largo de un trazado (animación doble)
+title: Procedimiento Animación de un objeto a lo largo de un trazado (animación doble)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
 ms.openlocfilehash: 54f345bbe6b513e3593cbf45ba190d4a44228424
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101450"
 ---
-# <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Filtrar Animación de un objeto a lo largo de un trazado (animación doble)
+# <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Procedimiento Animación de un objeto a lo largo de un trazado (animación doble)
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> clase para mover un objeto a lo largo de un trazado definido por un <xref:System.Windows.Media.PathGeometry>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -37,4 +37,4 @@ En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.Do
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre animaciones](animation-overview.md)
-- [Temas "Cómo..." de animación de trazado](path-animation-how-to-topics.md)
+- [Temas de procedimientos de animación de trazado](path-animation-how-to-topics.md)

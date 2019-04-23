@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: b26186ccf4a773297db89026797e89f194db2aa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614425"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59103420"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Introducción a las aplicaciones de servicios de Windows
 Los servicios de Microsoft Windows, anteriormente conocidos como servicios NT, le permiten crear aplicaciones de larga ejecución que se ejecutan en sesiones propias de Windows. Estos servicios se pueden iniciar automáticamente al arrancar el equipo, se pueden pausar y reiniciar, y no muestran ninguna interfaz de usuario. Estas características hacen que los servicios sean idóneos para su uso en un servidor o siempre que necesite una funcionalidad de larga duración que no interfiera con otros usuarios que estén trabajando en el mismo equipo. También puede ejecutar servicios en el contexto de seguridad de una cuenta de usuario específica que sea diferente del usuario conectado o de la cuenta de equipo predeterminada. Para obtener más información acerca de los servicios y las sesiones de Windows, consulte la documentación de Windows SDK.  
@@ -81,6 +81,7 @@ Los servicios de Microsoft Windows, anteriormente conocidos como servicios NT, l
 -   Los proyectos que contengan servicios de Windows deben tener componentes de instalación para el proyecto y sus servicios. Esto se puede lograr fácilmente desde la ventana **Propiedades**. Para obtener más información, vea [Cómo: Agregar instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Aplicaciones de servicios de Windows](../../../docs/framework/windows-services/index.md)
 - [Arquitectura de programación de aplicaciones de servicio](../../../docs/framework/windows-services/service-application-programming-architecture.md)
 - [Cómo: Creación de servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)

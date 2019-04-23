@@ -8,10 +8,10 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102744"
 ---
 # <a name="designing-service-contracts"></a>Diseño de contratos de servicios
@@ -271,11 +271,11 @@ End Interface
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para crear un contrato de solicitud-respuesta](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
-- [Filtrar para crear un contrato unidireccional](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [Filtrar para crear un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [Especificación de transferencia de datos en contratos de servicio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
-- [Especificación y administración de errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Cómo: Crear un contrato de solicitud-respuesta](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+- [Cómo: Crear un contrato unidireccional](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
+- [Cómo: Crear un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Definición de transferencias de datos en contratos de servicio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Especificación y gestión de errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Uso de sesiones](../../../docs/framework/wcf/using-sessions.md)
 - [Operaciones sincrónicas y asincrónicas](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
 - [Servicios de confianza](../../../docs/framework/wcf/reliable-services.md)

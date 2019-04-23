@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
 ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098642"
 ---
 # <a name="bindingsource-component-overview"></a>Información general sobre el componente BindingSource
@@ -40,22 +40,22 @@ El componente <xref:System.Windows.Forms.BindingSource> está diseñado para sim
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Current%2A> propiedad|Obtiene el elemento actual del origen de datos.|  
-|<xref:System.Windows.Forms.BindingSource.Position%2A> propiedad|Obtiene o establece la posición actual en la lista subyacente.|  
-|<xref:System.Windows.Forms.BindingSource.List%2A> propiedad|Obtiene la lista que es la evaluación de <xref:System.Windows.Forms.BindingSource.DataSource%2A> y <xref:System.Windows.Forms.BindingSource.DataMember%2A>. Si <xref:System.Windows.Forms.BindingSource.DataMember%2A> no está establecido, devuelve la lista especificada por <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
-|<xref:System.Windows.Forms.BindingSource.Insert%2A> método|Inserta un elemento en el índice especificado de la lista.|  
-|<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> método|Quita el elemento actual de la lista.|  
-|<xref:System.Windows.Forms.BindingSource.EndEdit%2A> método|Aplica los cambios pendientes al origen de datos subyacente.|  
-|<xref:System.Windows.Forms.BindingSource.CancelEdit%2A> método|Cancela la operación de edición actual.|  
-|<xref:System.Windows.Forms.BindingSource.AddNew%2A> método|Agrega un nuevo elemento a la lista subyacente. Si el origen de datos implementa <xref:System.ComponentModel.IBindingList> y devuelve un elemento para el evento <xref:System.Windows.Forms.BindingSource.AddingNew>, agrega este elemento. De lo contrario, la solicitud se pasa al método <xref:System.ComponentModel.IBindingList.AddNew%2A> de la lista. Si la lista subyacente no es una <xref:System.ComponentModel.IBindingList>, el elemento se crea automáticamente mediante su constructor público predeterminado.|  
+|Propiedad <xref:System.Windows.Forms.BindingSource.Current%2A>|Obtiene el elemento actual del origen de datos.|  
+|Propiedad <xref:System.Windows.Forms.BindingSource.Position%2A>|Obtiene o establece la posición actual en la lista subyacente.|  
+|Propiedad <xref:System.Windows.Forms.BindingSource.List%2A>|Obtiene la lista que es la evaluación de <xref:System.Windows.Forms.BindingSource.DataSource%2A> y <xref:System.Windows.Forms.BindingSource.DataMember%2A>. Si <xref:System.Windows.Forms.BindingSource.DataMember%2A> no está establecido, devuelve la lista especificada por <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
+|Método <xref:System.Windows.Forms.BindingSource.Insert%2A>|Inserta un elemento en el índice especificado de la lista.|  
+|Método <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>|Quita el elemento actual de la lista.|  
+|Método <xref:System.Windows.Forms.BindingSource.EndEdit%2A>|Aplica los cambios pendientes al origen de datos subyacente.|  
+|Método <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>|Cancela la operación de edición actual.|  
+|Método <xref:System.Windows.Forms.BindingSource.AddNew%2A>|Agrega un nuevo elemento a la lista subyacente. Si el origen de datos implementa <xref:System.ComponentModel.IBindingList> y devuelve un elemento para el evento <xref:System.Windows.Forms.BindingSource.AddingNew>, agrega este elemento. De lo contrario, la solicitud se pasa al método <xref:System.ComponentModel.IBindingList.AddNew%2A> de la lista. Si la lista subyacente no es una <xref:System.ComponentModel.IBindingList>, el elemento se crea automáticamente mediante su constructor público predeterminado.|  
   
 ## <a name="sorting-and-filtering"></a>Ordenar y filtrar  
  Normalmente, debe trabajar con una vista filtrada u ordenada del origen de datos. En la tabla siguiente se muestran los miembros que el origen de datos del componente <xref:System.Windows.Forms.BindingSource> proporciona.  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A> propiedad|Si el origen de datos es una <xref:System.ComponentModel.IBindingList>, obtiene o establece el nombre de columna usado para ordenar y el criterio de ordenación. Si el origen de datos es una <xref:System.ComponentModel.IBindingListView> y admite la ordenación avanzada, obtiene varios nombres de columna usados para ordenar y el criterio de ordenación.|  
-|<xref:System.Windows.Forms.BindingSource.Filter%2A> propiedad|Si el origen de datos es una <xref:System.ComponentModel.IBindingListView>, obtiene o establece la expresión usada para filtrar qué filas se ven.|  
+|Propiedad <xref:System.Windows.Forms.BindingSource.Sort%2A>|Si el origen de datos es una <xref:System.ComponentModel.IBindingList>, obtiene o establece el nombre de columna usado para ordenar y el criterio de ordenación. Si el origen de datos es una <xref:System.ComponentModel.IBindingListView> y admite la ordenación avanzada, obtiene varios nombres de columna usados para ordenar y el criterio de ordenación.|  
+|Propiedad <xref:System.Windows.Forms.BindingSource.Filter%2A>|Si el origen de datos es una <xref:System.ComponentModel.IBindingListView>, obtiene o establece la expresión usada para filtrar qué filas se ven.|  
   
 ## <a name="see-also"></a>Vea también
 
@@ -63,6 +63,6 @@ El componente <xref:System.Windows.Forms.BindingSource> está diseñado para sim
 - <xref:System.Windows.Forms.BindingNavigator>
 - [Arquitectura del componente BindingSource](bindingsource-component-architecture.md)
 - [Componente BindingSource](bindingsource-component.md)
-- [Control BindingNavigator](bindingnavigator-control-windows-forms.md)
+- [BindingNavigator (control)](bindingnavigator-control-windows-forms.md)
 - [Enlace de datos en Windows Forms](../windows-forms-data-binding.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
