@@ -17,26 +17,26 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87dd6db9624c2216ab13e77b04cfa63f95aee7e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183318"
 ---
-# <a name="isymunmanagednamespace-interface"></a><span data-ttu-id="95ae6-102">ISymUnmanagedNamespace (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="95ae6-102">ISymUnmanagedNamespace Interface</span></span>
-<span data-ttu-id="95ae6-103">Representa un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="95ae6-103">Represents a namespace.</span></span>  
+# <a name="isymunmanagednamespace-interface"></a><span data-ttu-id="15faf-102">ISymUnmanagedNamespace (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="15faf-102">ISymUnmanagedNamespace Interface</span></span>
+<span data-ttu-id="15faf-103">Representa un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="15faf-103">Represents a namespace.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="95ae6-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="95ae6-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="15faf-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="15faf-104">Methods</span></span>  
   
-|<span data-ttu-id="95ae6-105">Método</span><span class="sxs-lookup"><span data-stu-id="95ae6-105">Method</span></span>|<span data-ttu-id="95ae6-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="95ae6-106">Description</span></span>|  
+|<span data-ttu-id="15faf-105">Método</span><span class="sxs-lookup"><span data-stu-id="15faf-105">Method</span></span>|<span data-ttu-id="15faf-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="15faf-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="95ae6-107">Método GetName</span><span class="sxs-lookup"><span data-stu-id="95ae6-107">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|<span data-ttu-id="95ae6-108">Obtiene el nombre de este espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="95ae6-108">Gets the name of this namespace.</span></span>|  
-|[<span data-ttu-id="95ae6-109">Método GetNamespaces</span><span class="sxs-lookup"><span data-stu-id="95ae6-109">GetNamespaces Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|<span data-ttu-id="95ae6-110">Obtiene a los elementos secundarios de este espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="95ae6-110">Gets the children of this namespace.</span></span>|  
-|[<span data-ttu-id="95ae6-111">Método GetVariables</span><span class="sxs-lookup"><span data-stu-id="95ae6-111">GetVariables Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|<span data-ttu-id="95ae6-112">Devuelve todas las variables definidas en el ámbito global dentro de este espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="95ae6-112">Returns all variables defined at global scope within this namespace.</span></span>|  
+|[<span data-ttu-id="15faf-107">GetName (método)</span><span class="sxs-lookup"><span data-stu-id="15faf-107">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|<span data-ttu-id="15faf-108">Obtiene el nombre de este espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="15faf-108">Gets the name of this namespace.</span></span>|  
+|[<span data-ttu-id="15faf-109">GetNamespaces (método)</span><span class="sxs-lookup"><span data-stu-id="15faf-109">GetNamespaces Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|<span data-ttu-id="15faf-110">Obtiene a los elementos secundarios de este espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="15faf-110">Gets the children of this namespace.</span></span>|  
+|[<span data-ttu-id="15faf-111">GetVariables (método)</span><span class="sxs-lookup"><span data-stu-id="15faf-111">GetVariables Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|<span data-ttu-id="15faf-112">Devuelve todas las variables definidas en el ámbito global dentro de este espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="15faf-112">Returns all variables defined at global scope within this namespace.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="95ae6-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="95ae6-113">Requirements</span></span>  
- <span data-ttu-id="95ae6-114">**Encabezado**: CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="95ae6-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15faf-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="15faf-113">Requirements</span></span>  
+ <span data-ttu-id="15faf-114">**Encabezado**: CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="15faf-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95ae6-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="95ae6-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="15faf-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="15faf-115">See also</span></span>
 
-- [<span data-ttu-id="95ae6-116">Interfaces de almacén de símbolos de diagnósticos</span><span class="sxs-lookup"><span data-stu-id="95ae6-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="15faf-116">Interfaces de almacén de símbolos de diagnósticos</span><span class="sxs-lookup"><span data-stu-id="15faf-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
