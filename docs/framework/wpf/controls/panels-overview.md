@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157877"
 ---
 # <a name="panels-overview"></a>Información general sobre elementos Panel
@@ -242,7 +242,7 @@ ms.locfileid: "59157877"
   
 <a name="Panels_global_localization"></a>   
 ## <a name="localizationglobalization-support"></a>Compatibilidad para la localización y globalización  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] admite varias características que facilitan la creación de localizable [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] admite diversas características que facilitan la creación de una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] localizable.  
   
  Todos los elementos panel admiten de forma nativa la <xref:System.Windows.FrameworkElement.FlowDirection%2A> propiedad, que se puede usar para alterar dinámicamente el flujo contenido basándose en la configuración de idioma o configuración regional del usuario. Para obtener más información, consulta <xref:System.Windows.FrameworkElement.FlowDirection%2A>.  
   
@@ -257,7 +257,7 @@ ms.locfileid: "59157877"
 - [Tutorial: Mi primera aplicación de escritorio WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [Ejemplo WPF Layout Gallery](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [Diseño](../advanced/layout.md)
-- [Ejemplo de la Galería de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053) (Ejemplo de galería de controles de WPF)
 - [Información general sobre alineación, márgenes y relleno](../advanced/alignment-margins-and-padding-overview.md)
 - [Crear un ejemplo de Panel de ajuste de contenido personalizado](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [Información general sobre propiedades asociadas](../advanced/attached-properties-overview.md)

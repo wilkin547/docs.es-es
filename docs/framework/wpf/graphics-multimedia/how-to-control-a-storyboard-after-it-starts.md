@@ -1,5 +1,5 @@
 ---
-title: Filtrar Controlar un guión gráfico después de iniciarse
+title: Procedimiento Controlar un guión gráfico después de iniciarse
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
 ms.openlocfilehash: 107391386dfbb718f9436d9a039b08439fbc3279
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161491"
 ---
-# <a name="how-to-control-a-storyboard-after-it-starts"></a>Filtrar Controlar un guión gráfico después de iniciarse
+# <a name="how-to-control-a-storyboard-after-it-starts"></a>Procedimiento Controlar un guión gráfico después de iniciarse
 En este ejemplo se muestra cómo usar código para controlar un <xref:System.Windows.Media.Animation.Storyboard> después de haberse iniciado. Para controlar un guión gráfico en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilice <xref:System.Windows.Trigger> y <xref:System.Windows.TriggerAction> objetos; por ejemplo, vea [usar desencadenadores de eventos para controlar un guión gráfico después de su inicio](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
   
  Para iniciar un guión gráfico, utilice su <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método, que distribuye las animaciones de guión gráfico a las propiedades que se animan y se inicia el guión gráfico.  
@@ -45,4 +45,4 @@ En este ejemplo se muestra cómo usar código para controlar un <xref:System.Win
   
 ## <a name="see-also"></a>Vea también
 
-- [Usar desencadenadores de eventos para controlar un guión gráfico después de su inicio](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)
+- [Utilizar desencadenadores de eventos para controlar un guión gráfico después de su inicio](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)

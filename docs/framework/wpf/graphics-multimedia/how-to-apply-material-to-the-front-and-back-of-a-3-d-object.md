@@ -1,5 +1,5 @@
 ---
-title: Filtrar Aplicar material a la parte anterior y posterior de un objeto 3D
+title: Procedimiento Aplicar material a la parte anterior y posterior de un objeto 3D
 ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D objects [WPF], applying Material class
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - classes [WPF], Material
 ms.assetid: d93c8ad6-4939-4d29-9544-4d16d98093c1
 ms.openlocfilehash: 1d3f6a0622b5e0ccccf14af99782bb78dfe87ccb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59168056"
 ---
-# <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>Filtrar Aplicar material a la parte anterior y posterior de un objeto 3D
+# <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>Procedimiento Aplicar material a la parte anterior y posterior de un objeto 3D
 El ejemplo siguiente muestra cómo aplicar un <xref:System.Windows.Media.Media3D.Material> objeto a la parte frontal y posterior de un 3D y animar el objeto para mostrar ambos lados del objeto. El <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> propiedad de un <xref:System.Windows.Media.Media3D.GeometryModel3D> se usa para aplicar un color rojo <xref:System.Windows.Media.Brush> a la parte frontal del objeto y el <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> propiedad de la <xref:System.Windows.Media.Media3D.GeometryModel3D> se usa para aplicar un azul <xref:System.Windows.Media.Brush> a la parte posterior del objeto. El código siguiente muestra la aplicación de los materiales en el objeto:  
   
  [!code-xaml[Animation3DGallery_snip#BackMaterialAnimationExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/BackMaterialAnimationExample.xaml#backmaterialanimationexampleinline1)]  
@@ -28,4 +28,4 @@ El ejemplo siguiente muestra cómo aplicar un <xref:System.Windows.Media.Media3D
 - [Crear una escena 3D](how-to-create-a-3-d-scene.md)
 - [Información general sobre gráficos 3D](3-d-graphics-overview.md)
 - [Animar propiedades de material en una escena 3D](how-to-animate-material-properties-in-a-3-d-scene.md)
-- [Aplicar material emisor a un objeto 3D](how-to-apply-emissive-material-to-a-3-d-object.md)
+- [Aplicar material emisor a un objeto tridimensional](how-to-apply-emissive-material-to-a-3-d-object.md)

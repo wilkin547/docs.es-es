@@ -9,10 +9,10 @@ helpviewer_keywords:
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
 ms.openlocfilehash: c004560a0b7ab367fbf4fbb48b0e8d8b63f3d8f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156005"
 ---
 # <a name="templatebinding-markup-extension"></a>Extensión de marcado TemplateBinding
@@ -34,7 +34,7 @@ Vincula el valor de una propiedad de una plantilla de control para que sea el va
   
 |||  
 |-|-|  
-|`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> de la propiedad que se va a establecer en la sintaxis del establecedor.|  
+|`propertyName`|Propiedad <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> que se va establecer en la sintaxis del establecedor.|  
 |`sourceProperty`|Otra propiedad de dependencia existente en el tipo con plantilla, especificada por el valor de <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>.<br /><br /> o bien<br /><br /> Nombre de propiedad "relacionada" que se define por un tipo diferente del tipo de destino que se va a convertir en un tipo con plantilla. En realidad, se trata de un objeto <xref:System.Windows.PropertyPath>. Consulte [sintaxis de PropertyPath XAML](propertypath-xaml-syntax.md).|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -46,9 +46,9 @@ Vincula el valor de una propiedad de una plantilla de control para que sea el va
   
  La sintaxis de atributo es la que se usa normalmente con esta extensión de marcado. El token de cadena que se proporciona después de la cadena de identificador `TemplateBinding` se asigna como valor de <xref:System.Windows.TemplateBindingExtension.Property%2A> de la clase de extensión <xref:System.Windows.TemplateBindingExtension> subyacente.  
   
- La sintaxis de elementos de objeto es posible, pero no se muestra porque no tiene ninguna aplicación en el mundo real. `TemplateBinding` se utiliza para rellenar los valores dentro de los establecedores, mediante evalúan expresiones y mediante la sintaxis de elemento de objeto para `TemplateBinding` para rellenar `<Setter.Property>` sintaxis de elemento de propiedad es innecesariamente detallado.  
+ La sintaxis de elementos de objeto es posible, pero no se muestra porque no tiene ninguna aplicación en el mundo real. `TemplateBinding` se emplea para rellenar los valores dentro de los establecedores, mediante expresiones evaluadas, y el uso de la sintaxis de elementos de objeto para que `TemplateBinding` rellene la sintaxis de elementos de propiedad de `<Setter.Property>` aplica un grado de detalle innecesario.  
   
- `TemplateBinding` También puede utilizarse en el uso de atributos detallado que especifica el <xref:System.Windows.TemplateBindingExtension.Property%2A> como propiedad = par de valor:  
+ `TemplateBinding` también se puede utilizar en el uso de atributos detallado que especifica la propiedad <xref:System.Windows.TemplateBindingExtension.Property%2A> como un par de propiedad=valor:  
   
 ```xml  
 <object property="{TemplateBinding Property=sourceProperty}" .../>  
@@ -67,5 +67,5 @@ Vincula el valor de una propiedad de una plantilla de control para que sea el va
 - [Aplicar estilos y plantillas](../controls/styling-and-templating.md)
 - [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
 - [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md)
-- [Extensión de marcado RelativeSource](relativesource-markupextension.md)
-- [Enlazar extensión de marcado](binding-markup-extension.md)
+- [RelativeSource (extensión de marcado)](relativesource-markupextension.md)
+- [Binding (extensión de marcado)](binding-markup-extension.md)

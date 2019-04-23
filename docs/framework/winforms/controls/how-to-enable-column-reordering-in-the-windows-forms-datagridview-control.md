@@ -1,5 +1,5 @@
 ---
-title: Filtrar para habilitar la reordenación de columnas en el control DataGridView de formularios Windows Forms
+title: Procedimiento para habilitar la reordenación de columnas en el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
 ms.openlocfilehash: 625c4987a45ed3749284e7abc7b6cde6d24821ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161478"
 ---
-# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Filtrar para habilitar la reordenación de columnas en el control DataGridView de formularios Windows Forms
+# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Procedimiento para habilitar la reordenación de columnas en el control DataGridView de formularios Windows Forms
 Al habilitar la reordenación de columnas en el control <xref:System.Windows.Forms.DataGridView>, los usuarios pueden mover una columna a una nueva posición arrastrando el encabezado de la columna con el mouse. En el control <xref:System.Windows.Forms.DataGridView>, el valor de la propiedad <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> determina si los usuarios pueden mover las columnas a otras posiciones.  
   
  Visual Studio es compatible con esta tarea.  Consulte también [Cómo: Habilitar reordenación de columnas en la Windows Forms mediante el Diseñador de Control de DataGridView](enable-column-reordering-in-the-datagrid-using-the-designer.md).  
@@ -39,5 +39,5 @@ Al habilitar la reordenación de columnas en el control <xref:System.Windows.For
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>
-- [Características básicas de columnas, filas y celdas en el control DataGridView de formularios Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Filtrar para inmovilizar columnas en el control DataGridView de formularios Windows Forms](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)
+- [Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Cómo: Inmovilizar columnas en el Control DataGridView de formularios de Windows](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)

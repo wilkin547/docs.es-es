@@ -1,5 +1,5 @@
 ---
-title: Filtrar para enumerar las fuentes instaladas
+title: Procedimiento para enumerar las fuentes instaladas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
 ms.openlocfilehash: 92f27399cce9e03a4679c8a34fbdafcf28c32252
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155017"
 ---
-# <a name="how-to-enumerate-installed-fonts"></a>Filtrar para enumerar las fuentes instaladas
+# <a name="how-to-enumerate-installed-fonts"></a>Procedimiento para enumerar las fuentes instaladas
 El <xref:System.Drawing.Text.InstalledFontCollection> clase hereda de la <xref:System.Drawing.Text.FontCollection> clase base abstracta. Puede usar un <xref:System.Drawing.Text.InstalledFontCollection> objeto para enumerar las fuentes instaladas en el equipo. El <xref:System.Drawing.Text.FontCollection.Families%2A> propiedad de un <xref:System.Drawing.Text.InstalledFontCollection> objeto es una matriz de <xref:System.Drawing.FontFamily> objetos.  
   
 ## <a name="example"></a>Ejemplo  

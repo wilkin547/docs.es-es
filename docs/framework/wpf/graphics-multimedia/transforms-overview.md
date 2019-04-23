@@ -13,10 +13,10 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162210"
 ---
 # <a name="transforms-overview"></a>Información general sobre transformaciones
@@ -59,7 +59,7 @@ Este tema describe cómo usar el [!INCLUDE[TLA#tla_2d](../../../../includes/tlas
 |Clase|Descripción|Ejemplo|  
 |-----------|-----------------|-------------|  
 |<xref:System.Windows.Media.TransformGroup>|Agrupa varias <xref:System.Windows.Media.TransformGroup> objetos en una sola <xref:System.Windows.Media.Transform> que, a continuación, puede aplicar las propiedades de transformación.|[Aplicar varias transformaciones a un objeto](how-to-apply-multiple-transforms-to-an-object.md)|  
-|<xref:System.Windows.Media.MatrixTransform>|Crea transformaciones personalizadas no proporcionadas por el otro <xref:System.Windows.Media.Transform> clases. Cuando se usa un <xref:System.Windows.Media.MatrixTransform>, se manipula una matriz directamente.|[Usar un objeto MatrixTransform para crear transformaciones personalizadas](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
+|<xref:System.Windows.Media.MatrixTransform>|Crea transformaciones personalizadas no proporcionadas por el otro <xref:System.Windows.Media.Transform> clases. Cuando se usa un <xref:System.Windows.Media.MatrixTransform>, se manipula una matriz directamente.|[Utilizar un objeto MatrixTransform para crear transformaciones personalizadas](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
  Windows Presentation Foundation (WPF) también proporciona [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] transformaciones. Para obtener más información, vea la clase <xref:System.Windows.Media.Media3D.Transform3D>.  
   

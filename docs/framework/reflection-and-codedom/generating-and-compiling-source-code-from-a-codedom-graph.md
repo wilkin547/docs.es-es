@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0218f74f5aa66921104fd36c085aaed04c9b435
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 7bfc915287e579374c69636135c4b049184ef6ce
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219532"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59164793"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generar y compilar código fuente a partir de un gráfico CodeDOM
 El espacio de nombres <xref:System.CodeDom.Compiler> proporciona interfaces para generar código fuente a partir de gráficos de objetos CodeDOM y para administrar la compilación con compiladores compatibles. Un proveedor de código puede generar código fuente en un lenguaje de programación determinado según un gráfico CodeDOM. Una clase que deriva de <xref:System.CodeDom.Compiler.CodeDomProvider> normalmente puede proporcionar métodos para generar y compilar código para el lenguaje admitido por el proveedor.  
@@ -94,6 +94,7 @@ El espacio de nombres <xref:System.CodeDom.Compiler> proporciona interfaces para
  .NET Framework proporciona compiladores y generadores de código para los lenguajes siguientes: C#, Visual Basic, C++ y JScript. La compatibilidad de CodeDOM se puede extender a otros lenguajes si se implementan generadores y compiladores de código específicos del lenguaje.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.CodeDom>
 - <xref:System.CodeDom.Compiler>
 - [Generación y compilación dinámicas de código fuente](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

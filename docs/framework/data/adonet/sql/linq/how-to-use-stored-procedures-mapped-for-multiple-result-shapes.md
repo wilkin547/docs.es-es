@@ -1,18 +1,18 @@
 ---
-title: Filtrar para usar procedimientos almacenados asignados en varias formas de resultados
+title: Procedimiento para usar procedimientos almacenados asignados en varias formas de resultados
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
 ms.openlocfilehash: 406e44a0ee3b086ceb47b25a80c4fd0ff5a92607
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164676"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Filtrar para usar procedimientos almacenados asignados en varias formas de resultados
+# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Procedimiento para usar procedimientos almacenados asignados en varias formas de resultados
 Cuando un procedimiento almacenado puede devolver varias formas de resultados, el tipo de valor devuelto no puede estar fuertemente tipado para una forma de proyección única. Aunque [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] puede generar todos los tipos de proyección posibles, no puede saber el orden en el que se devolverán.  
   
  Compare este escenario con los procedimientos almacenados que generan varias formas de resultados secuencialmente. Para obtener más información, vea [Cómo: Usar procedimientos almacenados asignados en formas de resultados secuenciales](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md).  

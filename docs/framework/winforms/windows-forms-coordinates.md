@@ -8,11 +8,11 @@ helpviewer_keywords:
 - coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
 ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116147"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980660"
 ---
 # <a name="windows-forms-coordinates"></a>Coordenadas de formularios Windows Forms
 El sistema de coordenadas de un formulario Windows Forms se basa en coordenadas de dispositivo y la unidad básica de medida cuando se dibuja en Windows Forms es la unidad del dispositivo (normalmente, el píxel). Puntos en la pantalla se describen mediante pares de coordenadas x e y, con las coordenadas x si se aumenta a la derecha y las coordenadas y aumento de arriba a abajo. La ubicación de origen, con respecto a la pantalla, variará dependiendo de si está especificando las coordenadas de pantalla o el cliente.  

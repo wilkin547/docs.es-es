@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
 ms.openlocfilehash: f52ff1b669f821d102a65888189d9bbf2c000da8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158488"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>Obtener detalles de atributos de texto diversos mediante UI Automation
@@ -28,9 +28,9 @@ ms.locfileid: "59158488"
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre el modelo de texto de UI Automation](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
-- [Agregar contenido a un cuadro de texto utilizando la UI Automation](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
-- [Buscar y resaltar texto mediante UI Automation](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
-- [Información general acerca de los patrones de control de UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Patrones de controles de UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Obtener atributos de texto mediante UI Automation](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)
+- [Información general sobre TextPattern en Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
+- [Adición de contenido a un cuadro de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
+- [Búsqueda y resaltado de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Obtención de atributos de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)

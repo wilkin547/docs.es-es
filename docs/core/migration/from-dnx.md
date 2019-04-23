@@ -4,10 +4,10 @@ description: Migre de las herramientas de DNX a las herramientas de la CLI de .N
 ms.date: 06/20/2016
 ms.custom: seodec18
 ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160841"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migración de DNX a CLI de .NET Core (project.json)
@@ -117,10 +117,10 @@ Una vez hecho esto, deberá decidir qué tipo de portabilidad desea para la apli
 
 Una vez que decide el tipo de portabilidad que desea, deberá cambiar las plataformas de destino. Si escribiera aplicaciones para .NET Core, es probable que use `dnxcore50` como la plataforma de destino. Con la CLI y los cambios que trajo la nueva especificación [.NET Standard](../../standard/net-standard.md), la plataforma debe ser una de las siguientes:
 
-1. `netcoreapp1.0` , si escribe aplicaciones en .NET Core (incluidas las aplicaciones de ASP.NET Core).
-2. `netstandard1.6` , si escribe las bibliotecas de clases para .NET Core.
+1. `netcoreapp1.0`, si escribe aplicaciones en .NET Core (incluidas las aplicaciones de ASP.NET Core).
+2. `netstandard1.6`, si escribe las bibliotecas de clases para .NET Core.
 
-Si usa otros destinos `dnx`, como `dnx451`, también deberá cambiarlos. `dnx451` se debe cambiar a `net451`.
+Si usa otros destinos `dnx`, como `dnx451`, también deberá cambiarlos. `dnx451`se debe cambiar a `net451`.
 Consulte el tema [Estándar .NET](../../standard/net-standard.md) para obtener más información.
 
 El archivo `project.json` está casi listo. Debe revisar la lista de dependencias y actualizarlas a sus versiones más recientes, especialmente si usa las dependencias de ASP.NET Core. Si usará los paquetes independientes para las API de BCL, puede usar el paquete del entorno de ejecución tal como se explica en el documento sobre los [tipos de portabilidad de aplicaciones](../deploying/index.md).

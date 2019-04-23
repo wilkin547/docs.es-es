@@ -1,5 +1,5 @@
 ---
-title: <appDomainManagerType> Elemento
+title: <appDomainManagerType> (Elemento)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - appDomainManagerType element
@@ -8,10 +8,10 @@ ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7aa13d26ac11ed624caa4c9704325f2d604418bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164221"
 ---
 # <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > elemento
@@ -80,4 +80,4 @@ Especifica el tipo que sirve de administrador de dominios de aplicación para el
 - [\<appDomainManagerAssembly > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)
 - [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Método SetAppDomainManagerType](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)
+- [SetAppDomainManagerType (método)](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

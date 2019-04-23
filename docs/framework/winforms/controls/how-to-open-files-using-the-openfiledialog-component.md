@@ -1,5 +1,5 @@
 ---
-title: Filtrar Abrir archivos con el componente OpenFileDialog
+title: Procedimiento Abrir archivos con el componente OpenFileDialog
 ms.date: 02/11/2019
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
 ms.openlocfilehash: 7f4e96f1714a182647665f12e29d38f2b8037478
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159112"
 ---
-# <a name="how-to-open-files-with-the-openfiledialog"></a>Filtrar Archivos abiertos con OpenFileDialog 
+# <a name="how-to-open-files-with-the-openfiledialog"></a>Procedimiento Archivos abiertos con OpenFileDialog 
 
 El <xref:System.Windows.Forms.OpenFileDialog?displayProperty=nameWithType> componente abre el cuadro de diálogo de Windows para examinar y seleccionar los archivos. Para abrir y leer los archivos seleccionados, puede usar el <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType> método, o cree una instancia de la <xref:System.IO.StreamReader?displayProperty=nameWithType> clase. Los ejemplos siguientes muestran ambos enfoques. 
 

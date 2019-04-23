@@ -3,10 +3,10 @@ title: Tipos serializables
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
 ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160854"
 ---
 # <a name="serializable-types"></a>Tipos serializables
@@ -27,7 +27,7 @@ De forma predeterminada, <xref:System.Runtime.Serialization.DataContractSerializ
   
 -   No se serializan los campos de solo lectura, las propiedades sin un método `get` o `set` y las propiedades con métodos `set` o `get` internos o privados. Tales propiedades se omiten y no se produce ninguna excepción, salvo en el caso de las colecciones "get-only".  
   
--   <xref:System.Xml.Serialization.XmlSerializer> atributos (como `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`, etc.) se omiten.  
+-   Se omiten los atributos <xref:System.Xml.Serialization.XmlSerializer> (como `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`, etc.).  
   
 -   Si no se aplica el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a un tipo determinado, el serializador omite cualquier miembro de ese tipo al que se aplique el atributo <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
@@ -44,4 +44,4 @@ De forma predeterminada, <xref:System.Runtime.Serialization.DataContractSerializ
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Tipos admitidos por el serializador de contrato de datos](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Tipos admitidos por el serializador de contratos de datos](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

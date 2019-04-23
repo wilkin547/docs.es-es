@@ -10,10 +10,10 @@ ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 62c25b14fa7b3867bbdbcb2f1e08cc16ce349e72
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156083"
 ---
 # <a name="security-transparent-code-level-2"></a>Código transparente en seguridad, nivel 2
@@ -50,7 +50,7 @@ ms.locfileid: "59156083"
   
 -   [Reglas de herencia](#inheritance)  
   
--   [Información y reglas adicionales](#additional)  
+-   [Información adicional y reglas](#additional)  
   
 <a name="examples"></a>   
 ## <a name="usage-examples-and-behaviors"></a>Ejemplos de uso y comportamientos  

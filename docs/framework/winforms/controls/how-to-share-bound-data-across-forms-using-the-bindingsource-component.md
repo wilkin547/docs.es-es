@@ -1,5 +1,5 @@
 ---
-title: Filtrar para compartir datos enlazados entre formularios mediante el componente BindingSource
+title: Procedimiento para compartir datos enlazados entre formularios mediante el componente BindingSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
 ms.openlocfilehash: 19505c690728147d2a67c26371e1cea4c281ab08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154875"
 ---
-# <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Filtrar para compartir datos enlazados entre formularios mediante el componente BindingSource
+# <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Procedimiento para compartir datos enlazados entre formularios mediante el componente BindingSource
 Puede compartir datos fácilmente entre formularios con el componente <xref:System.Windows.Forms.BindingSource>. Por ejemplo, quizás quiera mostrar un formulario de solo lectura que resume los datos del origen de datos y otro formulario editable que contiene información detallada sobre el elemento seleccionado actualmente en el origen de datos. Este ejemplo muestra este escenario.  
   
 ## <a name="example"></a>Ejemplo  
@@ -40,4 +40,4 @@ Puede compartir datos fácilmente entre formularios con el componente <xref:Syst
 
 - [Componente BindingSource](bindingsource-component.md)
 - [Enlace de datos en Windows Forms](../windows-forms-data-binding.md)
-- [Filtrar para controlar errores y excepciones que se producen con el enlace de datos](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Cómo: Controlar errores y excepciones que se producen con el enlace de datos](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)

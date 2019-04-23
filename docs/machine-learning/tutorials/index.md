@@ -3,16 +3,16 @@ title: 'Tutoriales de aprendizaje automático de . NET: ML.NET'
 description: Explore los tutoriales de ML.NET para obtener información sobre cómo compilar soluciones de IA personalizadas e integrarlas en las aplicaciones .NET.
 ms.custom: seodec18
 ms.date: 04/05/2019
-ms.openlocfilehash: 1f3824e409c21514bfb0c5743c6d9f36419ecb06
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 45534e196c2dc0cd1994445eeb482474b32aaa41
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427577"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980400"
 ---
 # <a name="net-machine-learning-tutorials---mlnet"></a>Tutoriales de aprendizaje automático de . NET: ML.NET
 
-Los tutoriales siguientes permiten obtener información sobre cómo usar [ML.NET](../index.md) para crear soluciones de Machine Learning personalizadas e integrarlas en las aplicaciones .NET:
+Los tutoriales siguientes permiten obtener información sobre cómo usar [ML.NET](../index.yml) para crear soluciones de Machine Learning personalizadas e integrarlas en las aplicaciones .NET:
 
 - [Análisis de sentimiento](sentiment-analysis.md): muestra cómo aplicar una tarea de **clasificación binaria** mediante ML.NET.
 - [Clasificación de problema de GitHub](github-issue-classification.md): muestra cómo aplicar una tarea de **clasificación multiclase** mediante ML.NET.

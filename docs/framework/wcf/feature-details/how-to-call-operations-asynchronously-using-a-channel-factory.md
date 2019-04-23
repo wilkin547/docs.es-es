@@ -1,18 +1,18 @@
 ---
-title: Filtrar para llamar a operaciones de manera asincrónica mediante un generador de canales
+title: Procedimiento para llamar a operaciones de manera asincrónica mediante un generador de canales
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
 ms.openlocfilehash: 17b6dd979f7554cd433cc1abcf2a4da8dd9b83cb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59338922"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772688"
 ---
-# <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Filtrar para llamar a operaciones de manera asincrónica mediante un generador de canales
+# <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Procedimiento para llamar a operaciones de manera asincrónica mediante un generador de canales
 En este tema se cubre cómo un cliente puede obtener acceso de forma asincrónica a una operación del servicio al utilizar una aplicación de cliente basada en <xref:System.ServiceModel.ChannelFactory%601>. (Al utilizar un objeto <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> para invocar un servicio, puede utilizar el modelo de llamada asincrónica orientado a eventos. Para obtener más información, vea [Cómo: Llamar a las operaciones de servicio de forma asincrónica](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Para obtener más información sobre el modelo de llamada asincrónica basado en eventos, vea [patrón asincrónico basado en eventos (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
   
  El servicio en este tema implementa la interfaz `ICalculator`. El cliente puede llamar a las operaciones en esta interfaz de forma asincrónica, lo que significa que las operaciones como `Add` se dividen en dos métodos, `BeginAdd` y `EndAdd`, de los cuales el primero inicia la llamada y el segundo recupera el resultado cuando la operación termina. Para obtener un ejemplo que muestra cómo implementar una operación asincrónica en un servicio, vea [Cómo: Implementar una operación de servicio asincrónico](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Para obtener más información acerca de las operaciones sincrónicas y asincrónicas, vea [sincrónica y operaciones asincrónicas](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  

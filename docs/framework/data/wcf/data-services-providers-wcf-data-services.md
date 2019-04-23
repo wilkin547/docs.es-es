@@ -5,10 +5,10 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
 ms.openlocfilehash: 7a870eb0c85fa6ed208341a3ac10dce8bb0724bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164429"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Proveedores de Data Services (Data Services de WCF)
@@ -21,7 +21,7 @@ ms.locfileid: "59164429"
 |--------------|-----------------|  
 |Proveedor de Entity Framework|Este proveedor utiliza ADO.NET Entity Framework para permitir el uso de datos relacionales con un servicio de datos definiendo un modelo de datos que se asigne a datos relacionales. Su origen de datos puede ser SQL Server o cualquier otro origen de datos con compatibilidad de otros proveedores para Entity Framework. Debería usar el proveedor de Entity Framework cuando tenga un origen de datos relacional, como una base de datos SQL Server. Para obtener más información, consulte [proveedor de Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md).|  
 |Proveedor de reflexión|Este proveedor utiliza la reflexión para permitir la definición de un modelo de datos basado en las clases de datos existente que se pueden exponer como instancias de la interfaz <xref:System.Linq.IQueryable%601>. Las actualizaciones se habilitan implementando la interfaz <xref:System.Data.Services.IUpdatable>. Debe usar este proveedor cuando tenga clases de datos estáticas que se definen en tiempo de ejecución, como aquellas generadas por LINQ para SQL o las definidas por un conjunto de datos con tipo. Para obtener más información, consulte [proveedor de reflexión](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md).|  
-|Proveedores de servicios de datos personalizados|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye un conjunto de proveedores que le permiten definir un modelo de datos basado en tipos de datos en tiempo de ejecución de forma dinámica. Debería implementar estas interfaces cuando no se conozcan los datos que se están exponiendo, cuando se esté diseñando la aplicación o cuando los proveedores de Entity Framework o de reflexión no sean suficientes. Para obtener más información, consulte [proveedores de servicios de datos personalizados](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).|  
+|Proveedores de servicios de datos personalizados|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye un conjunto de proveedores que le permiten definir de forma dinámica un modelo de datos basado en tipos de datos enlazados en tiempo de ejecución. Debería implementar estas interfaces cuando no se conozcan los datos que se están exponiendo, cuando se esté diseñando la aplicación o cuando los proveedores de Entity Framework o de reflexión no sean suficientes. Para obtener más información, consulte [proveedores de servicios de datos personalizados](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).|  
   
 ## <a name="other-data-service-providers"></a>Otros proveedores de servicios de datos  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] tiene el siguiente proveedor de servicios de datos adicionales que mejora el rendimiento de un origen de datos definido mediante uno de los otros proveedores.  

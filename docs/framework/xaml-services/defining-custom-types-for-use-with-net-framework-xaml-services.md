@@ -5,10 +5,10 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164442"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definir tipos personalizados para usarlos con los servicios XAML de .NET Framework
@@ -70,7 +70,7 @@ Al definir tipos personalizados que son objetos de negocios o son tipos que no t
 #### <a name="the-getpropertyname-accessor"></a>El descriptor de acceso GetPropertyName  
  La signatura del descriptor de acceso `Get`*NombreDePropiedad* debe ser:  
   
- `public static object Get` *PropertyName* `(object`  `target` `)`  
+ `public static object Get` *NombreDePropiedad* `(object`  `target` `)`  
   
 -   El objeto `target` puede especificarse como un tipo más específico en la implementación. Puede usar para definir el ámbito del uso del miembro adjuntable; los usos fuera del ámbito deseado producirán excepciones de conversión no válida que se exponen a través de un error de análisis XAML. El nombre del parámetro `target` no es un requisito, pero se denomina `target` por convención en la mayoría de las implementaciones.  
   
@@ -81,7 +81,7 @@ Al definir tipos personalizados que son objetos de negocios o son tipos que no t
 #### <a name="the-setpropertyname-accessor"></a>El descriptor de acceso SetPropertyName  
  La firma para el conjunto de*PropertyName* descriptor de acceso debe ser:  
   
- `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
+ `public static void Set` *NombreDePropiedad* `(object`  `target` `, object`  `value` `)`  
   
 -   La `target` objeto puede especificarse como un tipo más específico en su implementación, con la misma lógica y consecuencias tal como se describe en la sección anterior.  
   

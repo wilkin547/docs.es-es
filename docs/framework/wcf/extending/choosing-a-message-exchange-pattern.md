@@ -3,10 +3,10 @@ title: Elección de un patrón de intercambio de mensajes
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
 ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157800"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes

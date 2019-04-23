@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agregar controles ActiveX a formularios Windows Forms
+title: Procedimiento para agregar controles ActiveX a formularios Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, ActiveX controls
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
 ms.openlocfilehash: 780411949c543a2178de5e7c531bd2202703f27a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166055"
 ---
-# <a name="how-to-add-activex-controls-to-windows-forms"></a>Filtrar para agregar controles ActiveX a formularios Windows Forms
+# <a name="how-to-add-activex-controls-to-windows-forms"></a>Procedimiento para agregar controles ActiveX a formularios Windows Forms
 Aunque el Diseñador de Windows Forms está optimizado para hospedar controles de Windows Forms, también puede colocar controles ActiveX en Windows Forms.  
   
 > [!CAUTION]
@@ -35,9 +35,9 @@ Aunque el Diseñador de Windows Forms está optimizado para hospedar controles d
   
 ## <a name="see-also"></a>Vea también
 
-- [Controles de Windows Forms](index.md)
+- [Controles de formularios Windows Forms](index.md)
 - [Comparación de los controles y objetos programables de distintos lenguajes y bibliotecas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
-- [Filtrar para agregar controles a formularios Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

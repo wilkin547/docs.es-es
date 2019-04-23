@@ -9,10 +9,10 @@ helpviewer_keywords:
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
 ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167172"
 ---
 # <a name="timing-events-overview"></a>Información general sobre eventos de control de tiempo
@@ -56,7 +56,7 @@ Este tema describe cómo utilizar los cinco eventos de control de tiempo disponi
   
 |evento|Operación interactiva desencadenante|Otros desencadenadores|  
 |-----------|--------------------------------------|--------------------|  
-|**Completada**|Omitir hasta completar|El reloj se completa.|  
+|**Completed**|Omitir hasta completar|El reloj se completa.|  
 |**CurrentGlobalSpeedInvalidated**|Pausar, reanudar, buscar, establecer la relación de velocidad, omitir hasta completar, detener|El reloj se invierte, acelera, inicia o detiene.|  
 |**CurrentStateInvalidated**|Comenzar, omitir hasta completar, detener|El reloj se inicia, detiene o completa.|  
 |**CurrentTimeInvalidated**|Comenzar, buscar, omitir hasta completar, detener|El reloj progresa.|  
@@ -78,6 +78,6 @@ Este tema describe cómo utilizar los cinco eventos de control de tiempo disponi
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre sistemas de temporización y animación](animation-and-timing-system-overview.md)
+- [Información general sobre sistemas de control de tiempo y animación ](animation-and-timing-system-overview.md)
 - [Información general sobre animaciones](animation-overview.md)
 - [Información general sobre comportamientos de control de tiempo](timing-behaviors-overview.md)

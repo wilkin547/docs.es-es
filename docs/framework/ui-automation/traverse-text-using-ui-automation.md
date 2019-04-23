@@ -10,10 +10,10 @@ helpviewer_keywords:
 - traversing text
 ms.assetid: 3ddb3b7b-1d6b-4dba-8678-5a68e868aadb
 ms.openlocfilehash: d73ae4ca11d6f5417bb5cb768eae4e586538bd92
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154796"
 ---
 # <a name="traverse-text-using-ui-automation"></a>Recorrer texto mediante usando UI Automation
@@ -39,8 +39,8 @@ ms.locfileid: "59154796"
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre el modelo de texto de UI Automation](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
-- [Agregar contenido a un cuadro de texto utilizando la UI Automation](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
-- [Buscar y resaltar texto mediante UI Automation](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
-- [Información general acerca de los patrones de control de UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Patrones de controles de UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Información general sobre TextPattern en Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
+- [Adición de contenido a un cuadro de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
+- [Búsqueda y resaltado de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

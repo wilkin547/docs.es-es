@@ -5,10 +5,10 @@ ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c8befed8bc810344b2a3344212a6a4a854300e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164663"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>Método ICorDebugDataTarget2::CreateVirtualUnwinder
@@ -43,7 +43,7 @@ HRESULT CreateVirtualUnwinder(
  [out] Puntero a la dirección de un objeto de la interfaz ICorDebugVirtualUnwinder.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si se realiza correctamente. Cualquier otro `HRESULT` indica un error. Cualquier error `HRESULT` recibido por mscordbi es irrecuperable y hace que [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) métodos devuelvan `CORDBG_E_DATA_TARGET_ERROR`.  
+ `S_OK` si se realiza correctamente. Cualquier otro `HRESULT` indica un error. Cualquier error `HRESULT` recibido por mscordbi es irrecuperable y hace que [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) métodos devuelvan `CORDBG_E_DATA_TARGET_ERROR`.  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -61,5 +61,5 @@ HRESULT CreateVirtualUnwinder(
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaz ICorDebugDataTarget2](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDataTarget2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

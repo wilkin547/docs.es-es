@@ -5,10 +5,10 @@ ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167694"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>Método ICorDebugProcess6::EnableVirtualModuleSplitting
@@ -24,7 +24,7 @@ HRESULT EnableVirtualModuleSplitting(
   
 ## <a name="parameters"></a>Parámetros  
  `enableSplitting`  
- `true` Para habilitar la división de módulos virtuales; `false` para deshabilitarlo.  
+ `true` para habilitar la división de módulos virtuales; `false` para deshabilitarla.  
   
 ## <a name="remarks"></a>Comentarios  
  Causas de división de módulos virtuales [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) para reconocer los módulos que se combinaron durante la compilación, procesan y presentan como un grupo de módulos independientes en lugar de un único módulo de gran tamaño. Esto cambia el comportamiento de diversos [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) métodos se describen a continuación.  
@@ -114,5 +114,5 @@ HRESULT EnableVirtualModuleSplitting(
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaz ICorDebugProcess6](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess6 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

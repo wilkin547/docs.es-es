@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da1fc949109455cf50767191a99a8a727116f77c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155199"
 ---
 # <a name="icordebugappdomainenum-interface"></a>Interfaz ICorDebugAppDomainEnum
@@ -31,7 +31,7 @@ Proporciona el `Next` método, que devuelve un número especificado de `ICorDebu
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|Obtiene el número especificado de dominios de aplicación de la colección, empezando en la posición actual del cursor.|  
+|[Next (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|Obtiene el número especificado de dominios de aplicación de la colección, empezando en la posición actual del cursor.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -49,5 +49,5 @@ Proporciona el `Next` método, que devuelve un número especificado de `ICorDebu
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebug (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebug (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

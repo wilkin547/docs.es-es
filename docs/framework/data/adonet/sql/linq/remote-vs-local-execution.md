@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
 ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164520"
 ---
 # <a name="remote-vs-local-execution"></a>Ejecución remota o ejecución local
@@ -45,7 +45,7 @@ Puede decidir ejecutar las consultas de manera remota (es decir, el motor de bas
  Estas dos funciones proporcionan una combinación eficaz de opciones: ejecución remota para las colecciones grandes y ejecución local para las colecciones pequeñas o si se necesita la colección completa. La ejecución remota se implementa a través de <xref:System.Linq.IQueryable> y la ejecución local en una colección <xref:System.Collections.Generic.IEnumerable%601> en memoria. Para forzar la ejecución local (es decir, <xref:System.Collections.Generic.IEnumerable%601>), consulte [convertir un tipo en una interfaz IEnumerable genérica](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md).  
   
 ### <a name="queries-against-unordered-sets"></a>Consultas en conjuntos no ordenados  
- Tenga en cuenta la importante diferencia entre una colección local que implementa <xref:System.Collections.Generic.List%601> y una colección que proporciona consultas remotas ejecutadas en *desordenados conjuntos* en una base de datos relacional. <xref:System.Collections.Generic.List%601> métodos como los que se utilizan valores de índice requieren semántica de lista, que normalmente no se puede obtener a través de una consulta remota en un conjunto no ordenado. Por esta razón, tales métodos cargan implícitamente <xref:System.Data.Linq.EntitySet%601> para permitir la ejecución local.  
+ Tenga en cuenta la importante diferencia entre una colección local que implementa <xref:System.Collections.Generic.List%601> y una colección que proporciona consultas remotas ejecutadas en *desordenados conjuntos* en una base de datos relacional. Los métodos <xref:System.Collections.Generic.List%601>, como los que utilizan valores de índice, requieren semántica de lista, que normalmente no se puede obtener a través de una consulta remota en un conjunto no ordenado. Por esta razón, tales métodos cargan implícitamente <xref:System.Data.Linq.EntitySet%601> para permitir la ejecución local.  
   
 ## <a name="see-also"></a>Vea también
 

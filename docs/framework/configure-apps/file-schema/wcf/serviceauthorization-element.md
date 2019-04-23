@@ -1,12 +1,12 @@
 ---
-title: <serviceAuthorization> elemento
+title: Elemento <serviceAuthorization>
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
 ms.openlocfilehash: 7099c5eca9cf28624153a705e4e16136628214a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157352"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization > elemento
@@ -53,7 +53,7 @@ Especifica valores que autorizan que el acceso repare las operaciones
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<comportamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Contiene una colección de valores para el comportamiento de un servicio.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Contiene una colección de valores para el comportamiento de un servicio.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esta sección contiene elementos que afectan a la autorización, a los proveedores de roles personalizados y a la suplantación.  
@@ -101,6 +101,6 @@ Especifica valores que autorizan que el acceso repare las operaciones
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
 - [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Autorización de acceso a operaciones de servicio](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [Filtrar para crear un administrador de autorización personalizado para un servicio](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
-- [Filtrar para restringir el acceso con la clase PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Cómo: Crear un administrador de autorización personalizado para un servicio](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Cómo: Restringir el acceso con la clase PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
 - [Directiva de autorización](../../../../../docs/framework/wcf/samples/authorization-policy.md)

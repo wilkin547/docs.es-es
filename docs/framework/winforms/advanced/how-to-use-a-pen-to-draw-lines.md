@@ -1,5 +1,5 @@
 ---
-title: Filtrar para usar un lápiz para dibujar líneas
+title: Procedimiento para usar un lápiz para dibujar líneas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 ms.assetid: 0828c331-a438-4bdd-a4d6-3ef1e59e8795
 ms.openlocfilehash: 8b4eb7684e15ffd5b0b528771490ba66f3b7bb45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156525"
 ---
-# <a name="how-to-use-a-pen-to-draw-lines"></a>Filtrar para usar un lápiz para dibujar líneas
+# <a name="how-to-use-a-pen-to-draw-lines"></a>Procedimiento para usar un lápiz para dibujar líneas
 Para dibujar líneas, necesita un <xref:System.Drawing.Graphics> objeto y un <xref:System.Drawing.Pen> objeto. El <xref:System.Drawing.Graphics> objeto proporciona el <xref:System.Drawing.Graphics.DrawLine%2A> método y el <xref:System.Drawing.Pen> objeto almacena las características de la línea, como el color y ancho.  
   
 ## <a name="example"></a>Ejemplo  
@@ -25,7 +25,7 @@ Para dibujar líneas, necesita un <xref:System.Drawing.Graphics> objeto y un <xr
  [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
+ El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>.  
   
 ## <a name="see-also"></a>Vea también
 

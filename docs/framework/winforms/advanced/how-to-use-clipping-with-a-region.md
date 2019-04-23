@@ -1,5 +1,5 @@
 ---
-title: Filtrar para usar el recorte en una región
+title: Procedimiento para usar el recorte en una región
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - regions [Windows Forms], restricting drawing surface
 ms.assetid: 43d121b4-e14c-4901-b25c-2d6c25ba4e29
 ms.openlocfilehash: cf60b32df805a49f8da2760332dc32e34209f6dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163740"
 ---
-# <a name="how-to-use-clipping-with-a-region"></a>Filtrar para usar el recorte en una región
+# <a name="how-to-use-clipping-with-a-region"></a>Procedimiento para usar el recorte en una región
 Una de las propiedades de la <xref:System.Drawing.Graphics> clase es la región de recorte. Todos los dibujos realizados por un determinado <xref:System.Drawing.Graphics> está restringido a la región de recorte de dicho objeto <xref:System.Drawing.Graphics> objeto. Puede establecer la región de recorte mediante una llamada a la <xref:System.Drawing.Graphics.SetClip%2A> método.  
   
 ## <a name="example"></a>Ejemplo  

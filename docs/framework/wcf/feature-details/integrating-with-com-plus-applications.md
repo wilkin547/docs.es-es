@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
 ms.openlocfilehash: cd72265fe8e49c7def91ebbf05ad84618dd71d19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162508"
 ---
 # <a name="integrating-with-com-applications"></a>Integración en aplicaciones COM+
@@ -23,13 +23,13 @@ Windows Communication Foundation (WCF) proporciona un entorno rico para crear ap
  [Integración en la información general de las aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
  Proporciona una información general de cuándo y cómo integrar los componentes COM+.  
   
- [Filtrar para usar la herramienta configuración de modelos de servicio COM+](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
+ [Cómo: Use la herramienta de configuración del modelo de servicio COM +](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
  Explica cómo usar la herramienta de línea de comandos de COM + Service Model Configuration (ComSvcConfig.exe) para configurar las interfaces de aplicación que desea exponer como servicios WCF.  
   
- [Filtrar para configurar los parámetros de los servicios COM+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ [Cómo: Configurar el servicio COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
  Explica cómo configurar un objeto COM + como un servicio WCF.  
   
- [Filtrar para implementar una aplicación de integración de COM+](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
+ [Cómo: Implementar una aplicación de integración de COM +.](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
  Explica cómo mover una aplicación de integración de COM+.  
   
 ## <a name="reference"></a>Referencia  

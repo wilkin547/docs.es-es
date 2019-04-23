@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
 ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155940"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Usar un servicio de datos en una aplicación cliente (Data Services de WCF)
@@ -21,7 +21,7 @@ Puede tener acceso a un servicio que expone un [!INCLUDE[ssODataFull](../../../.
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ayuda a garantiza la interoperabilidad entre los servicios que exponen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes y las aplicaciones que consumen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes de distribución. Las aplicaciones obtener acceso y cambiar datos en un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-servicio basado en mediante el envío de mensajes de solicitud de una acción HTTP concreta y con un URI que direcciona un recurso de entidad en la que debe realizarse la acción. Cuando sea obligatorio proporcionar datos de la entidad, se proporcionan mediante una carga específicamente codificada en el cuerpo del mensaje.  
   
 ### <a name="http-actions"></a>Acciones HTTP  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] admite las siguientes acciones HTTP para realizar creación, leer, actualizar y elimina operaciones en los datos de entidad que el recurso direccionado representa:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] admite las siguientes acciones HTTP para realizar operaciones de creación, lectura, actualización y eliminación en los datos de la entidad que el recurso direccionado representa:  
   
 -   **HTTP GET** -esta es la acción predeterminada cuando se tiene acceso a un recurso desde un explorador. No se proporciona ninguna carga en el mensaje de solicitud y se devuelve un método de respuesta con una carga que contiene los datos solicitados.  
   

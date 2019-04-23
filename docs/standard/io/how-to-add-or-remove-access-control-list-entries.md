@@ -16,11 +16,11 @@ ms.assetid: 53758b39-bd9b-4640-bb04-cad5ed8d0abf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 351d8325cc0fc1a1b551b6d513cad02f1291daab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308021"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772952"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a>Procedimiento Agregar o quitar entradas de la lista de control de acceso (solo .NET Framework)
 Para agregar o quitar entradas de la lista de control de acceso (ACL) en un archivo o directorio o quitarlas de él, obtenga el objeto <xref:System.Security.AccessControl.FileSecurity> o <xref:System.Security.AccessControl.DirectorySecurity> a partir del archivo o directorio. Modifique el objeto y, a continuación, vuelva a aplicarlo al archivo o directorio.  

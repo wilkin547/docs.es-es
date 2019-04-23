@@ -1,18 +1,18 @@
 ---
-title: Filtrar Personalizar las marcas de paso en un control Slider
+title: Procedimiento Personalizar las marcas de paso en un control Slider
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TickBar [WPF]
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
 ms.openlocfilehash: 3b32bbedb5f654ce75e90a827eb0c4dba1d4d345
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164247"
 ---
-# <a name="how-to-customize-the-ticks-on-a-slider"></a>Filtrar Personalizar las marcas de paso en un control Slider
+# <a name="how-to-customize-the-ticks-on-a-slider"></a>Procedimiento Personalizar las marcas de paso en un control Slider
 En este ejemplo se muestra cómo crear un <xref:System.Windows.Controls.Slider> control que contiene las marcas de graduación.  
   
 ## <a name="example"></a>Ejemplo  
@@ -29,4 +29,4 @@ En este ejemplo se muestra cómo crear un <xref:System.Windows.Controls.Slider> 
 - <xref:System.Windows.Controls.Slider>
 - <xref:System.Windows.Controls.Primitives.TickBar>
 - <xref:System.Windows.Controls.Slider.TickPlacement%2A>
-- [Filtrar Enlazar un control deslizante con un valor de propiedad](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms788716(v=vs.90))
+- [Cómo: Enlazar un control deslizante con un valor de propiedad](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms788716(v=vs.90))

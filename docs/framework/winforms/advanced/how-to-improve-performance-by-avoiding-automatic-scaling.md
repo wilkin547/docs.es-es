@@ -1,5 +1,5 @@
 ---
-title: Filtrar para mejorar el rendimiento evitando el ajuste de tamaño automático
+title: Procedimiento para mejorar el rendimiento evitando el ajuste de tamaño automático
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
 ms.openlocfilehash: 49ec491308cc6a9fd81e74bff213029389137b88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163597"
 ---
-# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Filtrar para mejorar el rendimiento evitando el ajuste de tamaño automático
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Procedimiento para mejorar el rendimiento evitando el ajuste de tamaño automático
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] puede escalar automáticamente una imagen como dibujar, lo que reduciría el rendimiento. Como alternativa, puede controlar la escala de la imagen pasando las dimensiones del rectángulo de destino para el <xref:System.Drawing.Graphics.DrawImage%2A> método.  
   
  Por ejemplo, la llamada siguiente a la <xref:System.Drawing.Graphics.DrawImage%2A> método especifica una esquina superior izquierda de (50, 30) pero no especifica un rectángulo de destino.  

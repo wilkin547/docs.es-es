@@ -5,10 +5,10 @@ helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
 ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164996"
 ---
 # <a name="typeconverters-and-xaml"></a>Clases TypeConverter y XAML
@@ -71,7 +71,7 @@ En este tema se presenta el propósito de la conversión de tipos desde cadenas 
   
  El siguiente método más importante es <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>. Si una aplicación se convierte en una representación de marcado (por ejemplo, si se guarda en XAML como un archivo), <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> es responsable de producir una representación de marcado. En este caso, la ruta de acceso del código pertinente para XAML es cuando se pasa un `destinationType` de <xref:System.String> .  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> y <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> son métodos de compatibilidad que se usan cuando un servicio consulta las capacidades de la <xref:System.ComponentModel.TypeConverter> implementación. Estos métodos se tienen que implementar para obtener `true` en los casos específicos de tipo que los métodos de conversión equivalentes de su convertidor admiten. Para los propósitos de XAML, esto suele traducirse en el tipo <xref:System.String> .  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> y <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> son métodos de compatibilidad que se usan cuando un servicio consulta las capacidades de la implementación de <xref:System.ComponentModel.TypeConverter> . Estos métodos se tienen que implementar para obtener `true` en los casos específicos de tipo que los métodos de conversión equivalentes de su convertidor admiten. Para los propósitos de XAML, esto suele traducirse en el tipo <xref:System.String> .  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Información de referencia cultural y convertidores de tipos para XAML  
  Cada <xref:System.ComponentModel.TypeConverter> implementación puede tener su propia interpretación de lo que constituye una cadena válida para una conversión y también puede usar o ignorar la descripción de tipo pasada como parámetros. Existe una consideración importante con respecto a la referencia cultural y a la conversión de tipos de XAML. XAML admite plenamente el uso de cadenas traducibles como valores de atributo. Pero no se admite el uso de esa cadena traducible como entrada del convertidor de tipos con requisitos de referencia cultural concretos, porque los convertidores de tipos para los valores de atributo de XAML requieren necesariamente un comportamiento de análisis de lenguaje fijo mediante la referencia cultural `en-US`. Para más información sobre las razones de diseño que motivan esta restricción, vea la especificación del lenguaje XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)).  
@@ -87,7 +87,7 @@ En este tema se presenta el propósito de la conversión de tipos desde cadenas 
 >  No use los caracteres de llave, en concreto {, como elementos posibles del formato de cadena. Estos caracteres están reservados como entrada y salida de una secuencia de extensión de marcado.  
   
 ### <a name="implementing-convertto"></a>Implementación de ConvertTo  
- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> se usa potencialmente para admitir la serialización. La compatibilidad con la serialización a través de <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> para el tipo personalizado y su convertidor de tipos no es un requisito imprescindible. Pero, si implementa un control, o usa la serialización como parte de las características o del diseño de la clase, conviene implementar <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>.  
+ <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> se usa en teoría para admitir la serialización. La compatibilidad con la serialización a través de <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> para el tipo personalizado y su convertidor de tipos no es un requisito imprescindible. Pero, si implementa un control, o usa la serialización como parte de las características o del diseño de la clase, conviene implementar <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>.  
   
  Para poder usarlo como un <xref:System.ComponentModel.TypeConverter> implementación que admite XAML, el <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> método para ese convertidor debe aceptar una instancia del tipo (o un valor) que se admita como el `value` parámetro. Cuando el `destinationType` parámetro es el tipo <xref:System.String>, a continuación, el objeto devuelto debe poder convertirse en <xref:System.String>. La cadena devuelta debe representar un valor serializado de `value`. Idealmente, el formato de serialización elegido debería ser capaz de generar el mismo valor si esa cadena se pasara a la <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> implementación del mismo convertidor, sin ninguna pérdida significativa de información.  
   

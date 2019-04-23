@@ -13,10 +13,10 @@ helpviewer_keywords:
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
 ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165274"
 ---
 # <a name="binding-declarations-overview"></a>Información general sobre declaraciones de enlaces
@@ -79,7 +79,7 @@ En este tema se describen las distintas formas de declarar un enlace.
   
 -   Los indizadores de una propiedad pueden especificarse entre corchetes después del nombre de la propiedad donde se aplica el indizador. Por ejemplo, la cláusula `Path=ShoppingCart[0]` establece el enlace al índice que se corresponde a cómo la indización interna de la propiedad administra la cadena literal "0". También se admiten indizadores anidados.  
   
--   Los indizadores y las subpropiedades se pueden combinar en un `Path` cláusula; por ejemplo, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   Los indizadores y las subpropiedades se pueden combinar en una cláusula `Path`; por ejemplo, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`.  
   
 -   Dentro de los indizadores pueden tener varios parámetros de indizador separados por comas (,). El tipo de cada parámetro se puede especificar con paréntesis. Por ejemplo, puede tener `Path="[(sys:Int32)42,(sys:Int32)24]"`, donde `sys` se asigna a la `System` espacio de nombres.  
   

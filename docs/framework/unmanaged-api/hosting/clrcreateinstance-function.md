@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3571e2698b980b12b89a5b689efb868a34a3ef71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167666"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance (Función)
@@ -93,4 +93,4 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
   
 ## <a name="see-also"></a>Vea también
 
-- [Hospedaje](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para unir controles ToolStripPanel
+title: Procedimiento para unir controles ToolStripPanel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], joining together
 ms.assetid: 4eadda6d-e3b8-4151-aaf2-a8d564fbe6b3
 ms.openlocfilehash: f73c13c4aac1abef70a2ceb0a30c3e46d8664748
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161010"
 ---
-# <a name="how-to-join-toolstrippanels"></a>Filtrar para unir controles ToolStripPanel
+# <a name="how-to-join-toolstrippanels"></a>Procedimiento para unir controles ToolStripPanel
 Puede unir los controles <xref:System.Windows.Forms.ToolStrip> a un <xref:System.Windows.Forms.ToolStripPanel> en tiempo de ejecución que proporciona la flexibilidad de las aplicaciones de interfaz de múltiples documentos (MDI).  
   
 ## <a name="example"></a>Ejemplo  
@@ -35,4 +35,4 @@ Puede unir los controles <xref:System.Windows.Forms.ToolStrip> a un <xref:System
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripPanel>
-- [Filtrar para usar controles ToolStripPanel para MDI](how-to-use-toolstrippanels-for-mdi.md)
+- [Cómo: Utilizar controles ToolStripPanel para MDI](how-to-use-toolstrippanels-for-mdi.md)

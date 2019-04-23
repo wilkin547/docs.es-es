@@ -1,5 +1,5 @@
 ---
-title: Filtrar Enlazar datos al control DataGridView de formularios Windows Forms
+title: Procedimiento Enlazar datos al control DataGridView de formularios Windows Forms
 ms.date: 02/08/2019
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e147109a64687177f201ad1e312fab56ea61d604
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160075"
 ---
-# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Filtrar Enlazar datos al control DataGridView de formularios Windows Forms
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Procedimiento Enlazar datos al control DataGridView de formularios Windows Forms
 
 El <xref:System.Windows.Forms.DataGridView> control admite el modelo de enlace de datos de Windows Forms estándar, por lo que se puede enlazar a una variedad de orígenes de datos. Por lo general, enlaza a un <xref:System.Windows.Forms.BindingSource> que administra la interacción con el origen de datos. El <xref:System.Windows.Forms.BindingSource> puede ser cualquier origen de datos de Windows Forms, que proporciona gran flexibilidad al elegir o modificar la ubicación de sus datos. Para obtener más información acerca de los orígenes de datos la <xref:System.Windows.Forms.DataGridView> control admite, vea la [información general del control DataGridView](datagridview-control-overview-windows-forms.md).  
 

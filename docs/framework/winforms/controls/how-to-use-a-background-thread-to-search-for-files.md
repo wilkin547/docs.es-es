@@ -1,5 +1,5 @@
 ---
-title: Filtrar para usar un subproceso en segundo plano para buscar archivos
+title: Procedimiento para usar un subproceso en segundo plano para buscar archivos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
 ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157803"
 ---
-# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Filtrar para usar un subproceso en segundo plano para buscar archivos
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Procedimiento para usar un subproceso en segundo plano para buscar archivos
 El <xref:System.ComponentModel.BackgroundWorker> componente reemplaza y agrega funcionalidad a la <xref:System.Threading> espacio de nombres; sin embargo, el <xref:System.Threading> espacio de nombres se conserva por compatibilidad con versiones anteriores y uso futuro, si elige. Para obtener más información, consulte [general sobre el componente BackgroundWorker](backgroundworker-component-overview.md).  
   
  Windows Forms utiliza el modelo de contenedor uniproceso (STA) porque Windows Forms se basa en las ventanas de Win32 nativas que son inherentemente apartamento. El modelo STA implica que se puede crear una ventana en cualquier subproceso, pero no puede cambiar una vez creados los subprocesos, y todas las llamadas de función a la se deben producir en su subproceso de creación. Fuera de Windows Forms, las clases de .NET Framework utilizan el modelo de subprocesamiento libre. Para obtener información acerca de los subprocesos en .NET Framework, vea [subprocesamiento](../../../standard/threading/index.md).  
@@ -765,5 +765,5 @@ namespace SampleUsage
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Desarrollar controles personalizados de formularios Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)
+- [Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)
 - [Información general sobre el modelo asincrónico basado en eventos](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

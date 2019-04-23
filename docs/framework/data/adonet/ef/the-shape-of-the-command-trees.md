@@ -2,12 +2,12 @@
 title: Forma de los árboles de comandos
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: aba5511b8baa395714bde315d9542932e854c98b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378553"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980088"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Forma de los árboles de comandos
 
@@ -25,8 +25,7 @@ Los árboles de comandos de consulta admiten una semántica más enriquecida que
 
 La propiedad DBQueryCommandTree.Query es la raíz del árbol de expresiones que describe la lógica de la consulta. La propiedad DBQueryCommandTree.Parameters contiene una lista de parámetros que se utilizan en la consulta. El árbol de expresiones está compuesto por objetos DbExpression.
 
-Un objeto DbExpression representa algún cálculo. 
-  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] proporciona varios tipos de expresiones para crear expresiones de consulta, incluidos constantes, variables, funciones, constructores y operadores relacionales estándar como el filtro y la combinación. Cada objeto DbExpression tiene una propiedad ResultType que representa el tipo del resultado generado por la expresión. Este tipo se expresa como TypeUsage.
+Un objeto DbExpression representa algún cálculo. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] proporciona varios tipos de expresiones para crear expresiones de consulta, incluidos constantes, variables, funciones, constructores y operadores relacionales estándar como el filtro y la combinación. Cada objeto DbExpression tiene una propiedad ResultType que representa el tipo del resultado generado por la expresión. Este tipo se expresa como TypeUsage.
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>Formas del árbol de comandos de consulta de salida
 
@@ -86,9 +85,9 @@ DbNewInstanceExpression solo se puede producir en los dos casos siguientes:
 
 - Como la propiedad de proyección de DbProjectExpression.  Cuando se utiliza de esta forma, se aplican las siguientes restricciones:
 
-    - El tipo de resultado debe ser un tipo de fila.
+  - El tipo de resultado debe ser un tipo de fila.
 
-    - Cada uno de sus argumentos es una expresión que genera un resultado con un tipo primitivo. Normalmente, cada argumento es una expresión escalar, como PropertyExpression en DbVariableReferenceExpression, una invocación de función o un cálculo aritmético de DbPropertyExpression en DbVariableReferenceExpression o una invocación de función. Sin embargo, una expresión que representa una subconsulta escalar también se puede producir en la lista de argumentos para DbNewInstanceExpression. Una expresión que representa una subconsulta escalar es un árbol de expresión que representa una subconsulta que devuelve exactamente una fila y una columna de un tipo primitivo con una raíz del objeto DbElementExpression
+  - Cada uno de sus argumentos es una expresión que genera un resultado con un tipo primitivo. Normalmente, cada argumento es una expresión escalar, como PropertyExpression en DbVariableReferenceExpression, una invocación de función o un cálculo aritmético de DbPropertyExpression en DbVariableReferenceExpression o una invocación de función. Sin embargo, una expresión que representa una subconsulta escalar también se puede producir en la lista de argumentos para DbNewInstanceExpression. Una expresión que representa una subconsulta escalar es un árbol de expresión que representa una subconsulta que devuelve exactamente una fila y una columna de un tipo primitivo con una raíz del objeto DbElementExpression
 
 - Con un tipo de valor devuelto de colección, en cuyo caso define una nueva colección de las expresiones proporcionadas como argumentos.
 

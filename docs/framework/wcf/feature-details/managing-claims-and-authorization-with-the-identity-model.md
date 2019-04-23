@@ -9,10 +9,10 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155095"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Administración de notificaciones y autorización con el modelo de identidad
@@ -174,9 +174,9 @@ La autorización es el proceso de determinar qué entidades tienen permiso para 
 - [Notificaciones y tokens](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
 - [Notificaciones y denegación de acceso a los recursos](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
 - [Creación de notificaciones y valores de recursos](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [Filtrar para crear una notificación personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
-- [Filtrar para comparar notificaciones](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Filtrar para crear una directiva de autorización personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
-- [Filtrar para crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Cómo: Crear una demanda personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Cómo: Comparar las notificaciones](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Cómo: Crear una directiva de autorización personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [Cómo: Crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

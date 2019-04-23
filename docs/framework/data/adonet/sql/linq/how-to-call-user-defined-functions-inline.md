@@ -1,18 +1,18 @@
 ---
-title: Filtrar para llamar a funciones alineadas definidas por el usuario
+title: Procedimiento para llamar a funciones alineadas definidas por el usuario
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
 ms.openlocfilehash: ed8071352902b8f97445cbfa5ff0ebe8fead9bb9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163714"
 ---
-# <a name="how-to-call-user-defined-functions-inline"></a>Filtrar para llamar a funciones alineadas definidas por el usuario
+# <a name="how-to-call-user-defined-functions-inline"></a>Procedimiento para llamar a funciones alineadas definidas por el usuario
 Aunque se puede llamar a funciones alineadas definidas por el usuario, las funciones que se incluyen en una consulta cuya ejecución está diferida no se ejecutan hasta que se ejecute la consulta. Para obtener más información, vea [Introduction to LINQ queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) [Introducción a las consultas LINQ (C#)].  
   
  Al llamar a la misma función fuera de una consulta, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] crea una consulta simple a partir de la expresión de llamada al método. A continuación se muestra la sintaxis de SQL (el parámetro `@p0` se enlaza a la constante pasada):  

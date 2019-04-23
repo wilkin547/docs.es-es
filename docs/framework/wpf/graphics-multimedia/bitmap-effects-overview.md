@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 1866ba7a5419ea435a56daa63f94122d3b83473e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166899"
 ---
 # <a name="bitmap-effects-overview"></a>Información general sobre efectos de imagen
@@ -34,10 +34,10 @@ Los efectos de imagen permiten a los diseñadores y desarrolladores para aplicar
 -   <xref:System.Windows.Media.Effects.EmbossBitmapEffect> crea un mapa de rugosidad de un <xref:System.Windows.Media.Visual> para dar la impresión de profundidad y textura de una fuente de luz artificial.  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] los efectos de mapa de bits se representan en el modo de software. Cualquier objeto que aplique un efecto también se representará en software. El rendimiento disminuye al máximo al usar los efectos de imagen en objetos visuales grandes o al animar las propiedades de un efecto de imagen. Esto no quiere decir que no se deben usar efectos de imagen de esta manera en absoluto, pero hay que tener cuidado y probarlos exhaustivamente para asegurarse de que los usuarios obtengan la experiencia esperada.  
+>  Los efectos de imagen de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se representan en modo de software. Cualquier objeto que aplique un efecto también se representará en software. El rendimiento disminuye al máximo al usar los efectos de imagen en objetos visuales grandes o al animar las propiedades de un efecto de imagen. Esto no quiere decir que no se deben usar efectos de imagen de esta manera en absoluto, pero hay que tener cuidado y probarlos exhaustivamente para asegurarse de que los usuarios obtengan la experiencia esperada.  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Los efectos de imagen no admiten la ejecución de confianza parcial. Una aplicación debe tener permisos de plena confianza para usar efectos de imagen.  
+>  Los efectos de imagen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] no admiten la ejecución de confianza parcial. Una aplicación debe tener permisos de plena confianza para usar efectos de imagen.  
   
 <a name="applyeffects"></a>   
 ## <a name="how-to-apply-an-effect"></a>Cómo aplicar un efecto  
@@ -56,7 +56,7 @@ Los efectos de imagen permiten a los diseñadores y desarrolladores para aplicar
   
 <a name="customeffects"></a>   
 ## <a name="creating-custom-effects"></a>Crear efectos personalizados  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] También proporciona interfaces no administradas para crear efectos personalizados que pueden utilizarse en managed [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones. Para obtener material de referencia adicional para crear efectos de imagen personalizados, consulte la documentación de [Unmanaged WPF Bitmap Effect](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh) (Efecto de imagen de WPF no administrado).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] también proporciona interfaces no administradas para crear efectos personalizados que pueden utilizarse en aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] administradas. Para obtener material de referencia adicional para crear efectos de imagen personalizados, consulte la documentación de [Unmanaged WPF Bitmap Effect](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh) (Efecto de imagen de WPF no administrado).  
   
 ## <a name="see-also"></a>Vea también
 

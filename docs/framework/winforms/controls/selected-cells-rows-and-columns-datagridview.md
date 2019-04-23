@@ -1,5 +1,5 @@
 ---
-title: Filtrar para obtener las celdas, filas y columnas seleccionadas en el control DataGridView de formularios Windows Forms
+title: Procedimiento para obtener las celdas, filas y columnas seleccionadas en el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - getting selection [Windows Forms], DataGridView control [Windows Forms]
 ms.assetid: d93c4b5b-498e-49bc-982a-2229d61778e4
 ms.openlocfilehash: cd3e88b5b01b67f677fbe203a0db9c4de7fe67ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160555"
 ---
-# <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Filtrar para obtener las celdas, filas y columnas seleccionadas en el control DataGridView de formularios Windows Forms
+# <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Procedimiento para obtener las celdas, filas y columnas seleccionadas en el control DataGridView de formularios Windows Forms
 Puede obtener las celdas seleccionadas, filas o columnas de una <xref:System.Windows.Forms.DataGridView> control mediante el uso de las propiedades correspondientes: <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, y <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>. En los procedimientos siguientes, obtendrá las celdas seleccionadas y mostrar sus índices de fila y columna en un <xref:System.Windows.Forms.MessageBox>.  
   
 ### <a name="to-get-the-selected-cells-in-a-datagridview-control"></a>Para obtener las celdas seleccionadas en un control DataGridView  
@@ -63,4 +63,4 @@ Puede obtener las celdas seleccionadas, filas o columnas de una <xref:System.Win
 - <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>
-- [Selección y uso del Portapapeles con el control DataGridView de formularios Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [Selección y uso del Portapapeles con el control DataGridView de Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)

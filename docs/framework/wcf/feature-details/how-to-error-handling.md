@@ -3,11 +3,11 @@ title: Cómo Control de errores
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
 ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334996"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979399"
 ---
 # <a name="how-to-error-handling"></a>Cómo Control de errores
 Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que utiliza el control de errores. En este ejemplo, los mensajes se enrutan a un punto de conexión de destino. Si un mensaje no se puede entregar debido a un error de la red o relacionado con las comunicaciones (<xref:System.ServiceModel.CommunicationException>), el mensaje se reenvía a un punto de conexión alternativo.  

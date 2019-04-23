@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3ba81c208c4b49342c6a055e09ba898871db1851
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157617"
 ---
 # <a name="isymunmanagedsourceservermodule-interface"></a>ISymUnmanagedSourceServerModule (Interfaz)
@@ -30,7 +30,7 @@ Proporciona datos del servidor de origen para un módulo. Esta interfaz se obtie
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetSourceServerData](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-getsourceserverdata-method.md)|Devuelve los datos del servidor de origen para el módulo.|  
+|[GetSourceServerData (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-getsourceserverdata-method.md)|Devuelve los datos del servidor de origen para el módulo.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado**: CorSym.idl, CorSym.h  

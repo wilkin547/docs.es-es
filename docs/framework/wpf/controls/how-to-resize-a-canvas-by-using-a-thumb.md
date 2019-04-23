@@ -1,5 +1,5 @@
 ---
-title: Filtrar Cambiar el tamaño de un lienzo mediante un control Thumb
+title: Procedimiento Cambiar el tamaño de un lienzo mediante un control Thumb
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
 ms.openlocfilehash: 14942157429b029147d47e2f88428c56e66523d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146359"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979958"
 ---
-# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Filtrar Cambiar el tamaño de un lienzo mediante un control Thumb
+# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Procedimiento Cambiar el tamaño de un lienzo mediante un control Thumb
 En este ejemplo se muestra cómo usar un <xref:System.Windows.Controls.Primitives.Thumb> control para cambiar el tamaño de un <xref:System.Windows.Controls.Canvas> control.  
   
 ## <a name="example"></a>Ejemplo  
