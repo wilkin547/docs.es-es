@@ -8,10 +8,10 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195064"
 ---
 # <a name="sending-and-receiving-faults"></a>Envío y recepción de errores
@@ -51,15 +51,15 @@ Los errores de SOAP transportan información de condición de errores desde un s
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- <xref:System.TimeoutException> los objetos se producen cuando una operación supera el período de tiempo de espera especificado.  
+ Los objetos <xref:System.TimeoutException> se producen cuando una operación supera el período de tiempo de espera especificado.  
   
- <xref:System.ServiceModel.CommunicationException> los objetos se producen cuando hay alguna condición de error de comunicación recuperable en el servicio o el cliente.  
+ Los objetos <xref:System.ServiceModel.CommunicationException> se producen cuando hay alguna condición de error de comunicación recuperable en el servicio o el cliente.  
   
  La clase <xref:System.ServiceModel.CommunicationException> tiene dos tipos derivados importantes: <xref:System.ServiceModel.FaultException> y el tipo <xref:System.ServiceModel.FaultException%601> genérico  
   
- <xref:System.ServiceModel.FaultException> las excepciones se producen cuando un agente de escucha recibe un error que no se espera o especificado en el contrato de operación; Esto ocurre normalmente cuando se está depurando la aplicación y el servicio tiene la <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> propiedad establecida en `true`.  
+ Las excepciones <xref:System.ServiceModel.FaultException> se producen cuando un agente de escucha recibe un error que no se espera o especifica en el contrato de operación; normalmente esto sucede cuando se depura la aplicación y el servicio tiene la propiedad <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> establecida en `true`.  
   
- <xref:System.ServiceModel.FaultException%601> las excepciones se producen en el cliente cuando se recibe un error que se especifica en el contrato de operación en respuesta a una operación bidireccional (es decir, un método con un <xref:System.ServiceModel.OperationContractAttribute> con el atributo <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> establecido en `false`).  
+ Las excepciones <xref:System.ServiceModel.FaultException%601> se producen en el cliente cuando se recibe un error de SOAP especificado en el contrato de la operación en respuesta a una operación bidireccional (es decir, un método con un atributo <xref:System.ServiceModel.OperationContractAttribute> con <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> establecido en `false`).  
   
 > [!NOTE]
 >  Cuando un servicio WCF tiene el <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> propiedad establecida en `true` el cliente experimenta esto como un no declarado <xref:System.ServiceModel.FaultException%601> de tipo <xref:System.ServiceModel.ExceptionDetail>. Los clientes pueden detectar este error concreto o administrar el error en un bloque de detección de <xref:System.ServiceModel.FaultException>.  
@@ -110,4 +110,4 @@ Los errores de SOAP transportan información de condición de errores desde un s
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [Excepciones esperadas](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [Uso de Close y Abort para liberar los recursos del cliente WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [Utilizar cierre y anulación para liberar los recursos del cliente WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

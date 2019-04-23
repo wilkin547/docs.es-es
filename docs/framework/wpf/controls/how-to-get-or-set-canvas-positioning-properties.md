@@ -1,5 +1,5 @@
 ---
-title: Filtrar Obtener o establecer propiedades de situación de Canvas
+title: Procedimiento Obtener o establecer propiedades de situación de Canvas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - Canvas control [WPF], setting positioning properties
 ms.assetid: 1636b950-2b5a-4507-8a10-c5034cc58b1c
 ms.openlocfilehash: 06508e1198736ccb1cbda41641dff4bc634ef82b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194414"
 ---
-# <a name="how-to-get-or-set-canvas-positioning-properties"></a>Filtrar Obtener o establecer propiedades de situación de Canvas
+# <a name="how-to-get-or-set-canvas-positioning-properties"></a>Procedimiento Obtener o establecer propiedades de situación de Canvas
 En este ejemplo se muestra cómo usar los métodos de posición el <xref:System.Windows.Controls.Canvas> elemento que se va a colocar el contenido secundario. Este ejemplo usa el contenido de un <xref:System.Windows.Controls.ListBoxItem> para representar valores de posición y convierte los valores en las instancias de <xref:System.Double>, que es un argumento necesario para el posicionamiento. Los valores, a continuación, se convierten en cadenas y se muestran como texto en un <xref:System.Windows.Controls.TextBlock> elemento utilizando el <xref:System.Windows.Controls.Canvas.GetLeft%2A> método.  
   
 ## <a name="example"></a>Ejemplo  
