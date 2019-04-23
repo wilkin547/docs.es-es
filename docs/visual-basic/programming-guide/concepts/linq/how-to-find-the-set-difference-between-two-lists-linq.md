@@ -1,22 +1,22 @@
 ---
-title: Filtrar Buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)
+title: Procedimiento Buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
 ms.openlocfilehash: 3757a588ed37805d6dd2569e1d25b07bd166c2d5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324063"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a><span data-ttu-id="402e7-102">Filtrar Buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="402e7-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="402e7-103">En este ejemplo se muestra cómo usar LINQ para comparar dos listas de cadenas y generar estas líneas, que están en names1.txt pero no en names2.txt.</span><span class="sxs-lookup"><span data-stu-id="402e7-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a><span data-ttu-id="c8c75-102">Procedimiento Buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8c75-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="c8c75-103">En este ejemplo se muestra cómo usar LINQ para comparar dos listas de cadenas y generar estas líneas, que están en names1.txt pero no en names2.txt.</span><span class="sxs-lookup"><span data-stu-id="c8c75-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="402e7-104">Para crear los archivos de datos</span><span class="sxs-lookup"><span data-stu-id="402e7-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="c8c75-104">Para crear los archivos de datos</span><span class="sxs-lookup"><span data-stu-id="c8c75-104">To create the data files</span></span>  
   
-1. <span data-ttu-id="402e7-105">Copie names1.txt y names2.txt en la carpeta de la solución, como se muestra en [Cómo: Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="402e7-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
+1. <span data-ttu-id="c8c75-105">Copie names1.txt y names2.txt en la carpeta de la solución, como se muestra en [Cómo: Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="c8c75-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="402e7-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="402e7-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c8c75-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c8c75-106">Example</span></span>  
   
 ```vb  
 Class CompareLists  
@@ -51,11 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- <span data-ttu-id="402e7-107">Algunos tipos de operaciones de consulta en Visual Basic, como <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, y <xref:System.Linq.Enumerable.Concat%2A>, solo se puede expresar en sintaxis de método.</span><span class="sxs-lookup"><span data-stu-id="402e7-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
+ <span data-ttu-id="c8c75-107">Algunos tipos de operaciones de consulta en Visual Basic, como <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, y <xref:System.Linq.Enumerable.Concat%2A>, solo se puede expresar en sintaxis de método.</span><span class="sxs-lookup"><span data-stu-id="c8c75-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="402e7-108">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="402e7-108">Compiling the Code</span></span>  
- <span data-ttu-id="402e7-109">Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.</span><span class="sxs-lookup"><span data-stu-id="402e7-109">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c8c75-108">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="c8c75-108">Compiling the Code</span></span>  
+ <span data-ttu-id="c8c75-109">Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.</span><span class="sxs-lookup"><span data-stu-id="c8c75-109">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="402e7-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="402e7-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8c75-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="c8c75-110">See also</span></span>
 
-- [<span data-ttu-id="402e7-111">LINQ y cadenas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="402e7-111">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="c8c75-111">LINQ y cadenas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8c75-111">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

@@ -7,10 +7,10 @@ description: Obtenga información sobre cómo usar .NET para crear una variedad 
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
 ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427492"
 ---
 <!-- markdownlint-disable MD033 -->
@@ -77,10 +77,10 @@ ms.locfileid: "59427492"
         <h1>Documentación de .NET</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Docs</a>
+                <a data-default="true" href="#docs">Documentos</a>
                 <ul id="docs">
                     <li>
-                        <a href="#getstarted">Primeros pasos</a>
+                        <a href="#getstarted">Introducción</a>
                         <ul id="getstarted" class="cardsF">
                             <li>
                                 <div class="cardSize">
@@ -175,7 +175,7 @@ ms.locfileid: "59427492"
                                                 <h3><a href="/dotnet/csharp">Guía de C#</a></h3>
                                                 <p><a href="/dotnet/csharp/getting-started">Primeros pasos</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Paseo por C#</a></p>
-                                                <p><a href="/dotnet/csharp/whats-new">Novedades de C#</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new">What's New in C# (Novedades de C#)</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">Referencia del lenguaje C#</a></p>
                                             </div>
                                         </div>
@@ -194,7 +194,7 @@ ms.locfileid: "59427492"
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/fsharp">Guía de F#</a></h3>
                                                 <p><a href="/dotnet/fsharp/tutorials/getting-started">Primeros pasos</a></p>
-                                                <p><a href="/dotnet/fsharp/tour">Paseo por F#</a></p>
+                                                <p><a href="/dotnet/fsharp/tour">Paseo por F</a></p>
                                                 <p><a href="/dotnet/fsharp/language-reference">Referencia del lenguaje F#</a></p>
                                             </div>
                                         </div>
