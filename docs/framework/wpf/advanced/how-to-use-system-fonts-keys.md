@@ -1,31 +1,31 @@
 ---
-title: Filtrar Usar claves de fuentes del sistema
+title: Procedimiento Usar claves de fuentes del sistema
 ms.date: 03/30/2017
 helpviewer_keywords:
 - resource keys [WPF], SystemFonts class
 ms.assetid: 036ebea7-5677-4f60-8ba4-56c9f9d9b8bd
 ms.openlocfilehash: e924f4c14d98380d9f4c0defe27d9f98c3293114
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148933"
 ---
-# <a name="how-to-use-system-fonts-keys"></a><span data-ttu-id="2f0c7-102">Filtrar Usar claves de fuentes del sistema</span><span class="sxs-lookup"><span data-stu-id="2f0c7-102">How to: Use System Fonts Keys</span></span>
-<span data-ttu-id="2f0c7-103">Los recursos del sistema exponen varias métricas del sistema como recursos para ayudar a los desarrolladores a crear efectos visuales coherentes con la configuración del sistema.</span><span class="sxs-lookup"><span data-stu-id="2f0c7-103">System resources expose a number of system metrics as resources to help developers create visuals that are consistent with system settings.</span></span> <xref:System.Windows.SystemFonts> <span data-ttu-id="2f0c7-104">es una clase que contiene los valores de fuente del sistema y los recursos de fuentes del sistema que se enlazan a los valores, por ejemplo, <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> y <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>.</span><span class="sxs-lookup"><span data-stu-id="2f0c7-104">is a class that contains both system font values and system font resources that bind to the values—for example, <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> and <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>.</span></span>  
+# <a name="how-to-use-system-fonts-keys"></a><span data-ttu-id="3eecc-102">Procedimiento Usar claves de fuentes del sistema</span><span class="sxs-lookup"><span data-stu-id="3eecc-102">How to: Use System Fonts Keys</span></span>
+<span data-ttu-id="3eecc-103">Los recursos del sistema exponen varias métricas del sistema como recursos para ayudar a los desarrolladores a crear efectos visuales coherentes con la configuración del sistema.</span><span class="sxs-lookup"><span data-stu-id="3eecc-103">System resources expose a number of system metrics as resources to help developers create visuals that are consistent with system settings.</span></span> <span data-ttu-id="3eecc-104"><xref:System.Windows.SystemFonts> es una clase que contiene los valores de fuente del sistema y los recursos de fuentes del sistema que se enlazan a los valores, por ejemplo, <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> y <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>.</span><span class="sxs-lookup"><span data-stu-id="3eecc-104"><xref:System.Windows.SystemFonts> is a class that contains both system font values and system font resources that bind to the values—for example, <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> and <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>.</span></span>  
   
- <span data-ttu-id="2f0c7-105">La métricas de fuentes del sistema se pueden usar como recursos estáticos o dinámicos.</span><span class="sxs-lookup"><span data-stu-id="2f0c7-105">System font metrics can be used as either static or dynamic resources.</span></span> <span data-ttu-id="2f0c7-106">Use un recurso dinámico si quiere que la métrica de fuentes se actualice automáticamente mientras se ejecuta la aplicación. De lo contrario, use un recurso estático.</span><span class="sxs-lookup"><span data-stu-id="2f0c7-106">Use a dynamic resource if you want the font metric to update automatically while the application runs; otherwise use a static resource.</span></span>  
+ <span data-ttu-id="3eecc-105">La métricas de fuentes del sistema se pueden usar como recursos estáticos o dinámicos.</span><span class="sxs-lookup"><span data-stu-id="3eecc-105">System font metrics can be used as either static or dynamic resources.</span></span> <span data-ttu-id="3eecc-106">Use un recurso dinámico si quiere que la métrica de fuentes se actualice automáticamente mientras se ejecuta la aplicación. De lo contrario, use un recurso estático.</span><span class="sxs-lookup"><span data-stu-id="3eecc-106">Use a dynamic resource if you want the font metric to update automatically while the application runs; otherwise use a static resource.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2f0c7-107">Los recursos dinámicos tienen la palabra clave *clave* anexado al nombre de propiedad.</span><span class="sxs-lookup"><span data-stu-id="2f0c7-107">Dynamic resources have the keyword *Key* appended to the property name.</span></span>  
+>  <span data-ttu-id="3eecc-107">Los recursos dinámicos tienen la palabra clave *clave* anexado al nombre de propiedad.</span><span class="sxs-lookup"><span data-stu-id="3eecc-107">Dynamic resources have the keyword *Key* appended to the property name.</span></span>  
   
- <span data-ttu-id="2f0c7-108">En el ejemplo siguiente se muestra cómo obtener acceso y usar los recursos dinámicos de fuentes del sistema para aplicar estilo a un botón o personalizarlo.</span><span class="sxs-lookup"><span data-stu-id="2f0c7-108">The following example shows how to access and use system font dynamic resources to style or customize a button.</span></span> <span data-ttu-id="2f0c7-109">Esto [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] en el ejemplo se crea un estilo de botón que asigna <xref:System.Windows.SystemFonts> valores a un botón.</span><span class="sxs-lookup"><span data-stu-id="2f0c7-109">This [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example creates a button style that assigns <xref:System.Windows.SystemFonts> values to a button.</span></span>  
+ <span data-ttu-id="3eecc-108">En el ejemplo siguiente se muestra cómo obtener acceso y usar los recursos dinámicos de fuentes del sistema para aplicar estilo a un botón o personalizarlo.</span><span class="sxs-lookup"><span data-stu-id="3eecc-108">The following example shows how to access and use system font dynamic resources to style or customize a button.</span></span> <span data-ttu-id="3eecc-109">Esto [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] en el ejemplo se crea un estilo de botón que asigna <xref:System.Windows.SystemFonts> valores a un botón.</span><span class="sxs-lookup"><span data-stu-id="3eecc-109">This [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example creates a button style that assigns <xref:System.Windows.SystemFonts> values to a button.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2f0c7-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2f0c7-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3eecc-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3eecc-110">Example</span></span>  
  [!code-xaml[SystemRes_snip#FontDynamicResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#fontdynamicresources)]  
   
-## <a name="see-also"></a><span data-ttu-id="2f0c7-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="2f0c7-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3eecc-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="3eecc-111">See also</span></span>
 
-- [<span data-ttu-id="2f0c7-112">Pintar un área con un pincel del sistema</span><span class="sxs-lookup"><span data-stu-id="2f0c7-112">Paint an Area with a System Brush</span></span>](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [<span data-ttu-id="2f0c7-113">Usar SystemParameters</span><span class="sxs-lookup"><span data-stu-id="2f0c7-113">Use SystemParameters</span></span>](how-to-use-systemparameters.md)
-- [<span data-ttu-id="2f0c7-114">Usar SystemFonts</span><span class="sxs-lookup"><span data-stu-id="2f0c7-114">Use SystemFonts</span></span>](how-to-use-systemfonts.md)
+- [<span data-ttu-id="3eecc-112">Pintar un área con un pincel del sistema</span><span class="sxs-lookup"><span data-stu-id="3eecc-112">Paint an Area with a System Brush</span></span>](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [<span data-ttu-id="3eecc-113">Usar SystemParameters</span><span class="sxs-lookup"><span data-stu-id="3eecc-113">Use SystemParameters</span></span>](how-to-use-systemparameters.md)
+- [<span data-ttu-id="3eecc-114">Usar SystemFonts</span><span class="sxs-lookup"><span data-stu-id="3eecc-114">Use SystemFonts</span></span>](how-to-use-systemfonts.md)
