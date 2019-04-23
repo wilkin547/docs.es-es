@@ -17,36 +17,36 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8062ab151efc6175aa68cb0563cd2ad042ee9cd8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189058"
 ---
-# <a name="flockclrversioncallback-function-pointer"></a><span data-ttu-id="331f2-102">puntero a la función FLockClrVersionCallback</span><span class="sxs-lookup"><span data-stu-id="331f2-102">FLockClrVersionCallback Function Pointer</span></span>
-<span data-ttu-id="331f2-103">Señala una función que las llamadas de runtime (CLR) de lenguaje común para indicar que la inicialización se ha iniciado o completado.</span><span class="sxs-lookup"><span data-stu-id="331f2-103">Points to a function that the common language runtime (CLR) calls to indicate that initialization has either started or completed.</span></span>  
+# <a name="flockclrversioncallback-function-pointer"></a><span data-ttu-id="b0e61-102">puntero a la función FLockClrVersionCallback</span><span class="sxs-lookup"><span data-stu-id="b0e61-102">FLockClrVersionCallback Function Pointer</span></span>
+<span data-ttu-id="b0e61-103">Señala una función que las llamadas de runtime (CLR) de lenguaje común para indicar que la inicialización se ha iniciado o completado.</span><span class="sxs-lookup"><span data-stu-id="b0e61-103">Points to a function that the common language runtime (CLR) calls to indicate that initialization has either started or completed.</span></span>  
   
- <span data-ttu-id="331f2-104">Este puntero de función ha quedado obsoleto en la [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="331f2-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="b0e61-104">Este puntero de función ha quedado obsoleto en la [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b0e61-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="331f2-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="331f2-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0e61-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b0e61-105">Syntax</span></span>  
   
 ```  
 typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="331f2-106">Comentarios</span><span class="sxs-lookup"><span data-stu-id="331f2-106">Remarks</span></span>  
- <span data-ttu-id="331f2-107">Esta función se implementa el host.</span><span class="sxs-lookup"><span data-stu-id="331f2-107">This function is implemented by the host.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b0e61-106">Comentarios</span><span class="sxs-lookup"><span data-stu-id="b0e61-106">Remarks</span></span>  
+ <span data-ttu-id="b0e61-107">Esta función se implementa el host.</span><span class="sxs-lookup"><span data-stu-id="b0e61-107">This function is implemented by the host.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="331f2-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="331f2-108">Requirements</span></span>  
- <span data-ttu-id="331f2-109">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="331f2-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b0e61-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b0e61-108">Requirements</span></span>  
+ <span data-ttu-id="b0e61-109">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0e61-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="331f2-110">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="331f2-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b0e61-110">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b0e61-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="331f2-111">**Biblioteca:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="331f2-111">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="b0e61-111">**Biblioteca:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="b0e61-111">**Library:** MSCorWks.dll</span></span>  
   
- **<span data-ttu-id="331f2-112">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="331f2-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="b0e61-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0e61-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="331f2-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="331f2-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0e61-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="b0e61-113">See also</span></span>
 
-- [<span data-ttu-id="331f2-114">LockClrVersion (Función)</span><span class="sxs-lookup"><span data-stu-id="331f2-114">LockClrVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)
-- [<span data-ttu-id="331f2-115">Funciones de hospedaje de CLR en desuso</span><span class="sxs-lookup"><span data-stu-id="331f2-115">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="b0e61-114">LockClrVersion (Función)</span><span class="sxs-lookup"><span data-stu-id="b0e61-114">LockClrVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)
+- [<span data-ttu-id="b0e61-115">Funciones de hospedaje de CLR en desuso</span><span class="sxs-lookup"><span data-stu-id="b0e61-115">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -3,20 +3,20 @@ title: System.ServiceModel.PortSharing.RoutingTableLookup
 ms.date: 03/30/2017
 ms.assetid: 51788083-310c-4c36-a9a1-f1089a1e2687
 ms.openlocfilehash: 933eab76dcb785010ccca802b620fef5986fed99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184605"
 ---
-# <a name="systemservicemodelportsharingroutingtablelookup"></a><span data-ttu-id="cb86c-102">System.ServiceModel.PortSharing.RoutingTableLookup</span><span class="sxs-lookup"><span data-stu-id="cb86c-102">System.ServiceModel.PortSharing.RoutingTableLookup</span></span>
-<span data-ttu-id="cb86c-103">System.ServiceModel.PortSharing.RoutingTableLookup</span><span class="sxs-lookup"><span data-stu-id="cb86c-103">System.ServiceModel.PortSharing.RoutingTableLookup</span></span>  
+# <a name="systemservicemodelportsharingroutingtablelookup"></a><span data-ttu-id="509d8-102">System.ServiceModel.PortSharing.RoutingTableLookup</span><span class="sxs-lookup"><span data-stu-id="509d8-102">System.ServiceModel.PortSharing.RoutingTableLookup</span></span>
+<span data-ttu-id="509d8-103">System.ServiceModel.PortSharing.RoutingTableLookup</span><span class="sxs-lookup"><span data-stu-id="509d8-103">System.ServiceModel.PortSharing.RoutingTableLookup</span></span>  
   
-## <a name="description"></a><span data-ttu-id="cb86c-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="cb86c-104">Description</span></span>  
- <span data-ttu-id="cb86c-105">Se solicitó una operación de búsqueda.</span><span class="sxs-lookup"><span data-stu-id="cb86c-105">A lookup operation was requested.</span></span>  
+## <a name="description"></a><span data-ttu-id="509d8-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="509d8-104">Description</span></span>  
+ <span data-ttu-id="509d8-105">Se solicitó una operación de búsqueda.</span><span class="sxs-lookup"><span data-stu-id="509d8-105">A lookup operation was requested.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb86c-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="cb86c-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="509d8-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="509d8-106">See also</span></span>
 
-- [<span data-ttu-id="cb86c-107">Traza</span><span class="sxs-lookup"><span data-stu-id="cb86c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="cb86c-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="cb86c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="cb86c-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="cb86c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="509d8-107">Traza</span><span class="sxs-lookup"><span data-stu-id="509d8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="509d8-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="509d8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="509d8-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="509d8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

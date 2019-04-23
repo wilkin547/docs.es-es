@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d193f9aa4d051baa73944545d28a455495aeda40
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185775"
 ---
-# <a name="icordebugcodecreatebreakpoint-method"></a><span data-ttu-id="062ec-102">ICorDebugCode::CreateBreakpoint (Método)</span><span class="sxs-lookup"><span data-stu-id="062ec-102">ICorDebugCode::CreateBreakpoint Method</span></span>
-<span data-ttu-id="062ec-103">Crea un punto de interrupción en este segmento de código en el desplazamiento especificado.</span><span class="sxs-lookup"><span data-stu-id="062ec-103">Creates a breakpoint in this code segment at the specified offset.</span></span>  
+# <a name="icordebugcodecreatebreakpoint-method"></a><span data-ttu-id="cbaf5-102">ICorDebugCode::CreateBreakpoint (Método)</span><span class="sxs-lookup"><span data-stu-id="cbaf5-102">ICorDebugCode::CreateBreakpoint Method</span></span>
+<span data-ttu-id="cbaf5-103">Crea un punto de interrupción en este segmento de código en el desplazamiento especificado.</span><span class="sxs-lookup"><span data-stu-id="cbaf5-103">Creates a breakpoint in this code segment at the specified offset.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="062ec-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="062ec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cbaf5-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="cbaf5-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateBreakpoint (  
@@ -36,25 +36,25 @@ HRESULT CreateBreakpoint (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="062ec-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="062ec-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cbaf5-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="cbaf5-105">Parameters</span></span>  
  `offset`  
- <span data-ttu-id="062ec-106">[in] Desplazamiento en el que se va a crear el punto de interrupción.</span><span class="sxs-lookup"><span data-stu-id="062ec-106">[in] The offset at which to create the breakpoint.</span></span>  
+ <span data-ttu-id="cbaf5-106">[in] Desplazamiento en el que se va a crear el punto de interrupción.</span><span class="sxs-lookup"><span data-stu-id="cbaf5-106">[in] The offset at which to create the breakpoint.</span></span>  
   
  `ppBreakpoint`  
- <span data-ttu-id="062ec-107">[out] Un puntero a la dirección de un objeto "ICorDebugFunctionBreakpoint" que representa el punto de interrupción.</span><span class="sxs-lookup"><span data-stu-id="062ec-107">[out] A pointer to the address of an "ICorDebugFunctionBreakpoint" object that represents the breakpoint.</span></span>  
+ <span data-ttu-id="cbaf5-107">[out] Un puntero a la dirección de un objeto "ICorDebugFunctionBreakpoint" que representa el punto de interrupción.</span><span class="sxs-lookup"><span data-stu-id="cbaf5-107">[out] A pointer to the address of an "ICorDebugFunctionBreakpoint" object that represents the breakpoint.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="062ec-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="062ec-108">Remarks</span></span>  
- <span data-ttu-id="062ec-109">Antes de que el punto de interrupción está activo, se debe agregar al objeto del proceso.</span><span class="sxs-lookup"><span data-stu-id="062ec-109">Before the breakpoint is active, it must be added to the process object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cbaf5-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="cbaf5-108">Remarks</span></span>  
+ <span data-ttu-id="cbaf5-109">Antes de que el punto de interrupción está activo, se debe agregar al objeto del proceso.</span><span class="sxs-lookup"><span data-stu-id="cbaf5-109">Before the breakpoint is active, it must be added to the process object.</span></span>  
   
- <span data-ttu-id="062ec-110">Si este código es código de lenguaje intermedio (MSIL) de Microsoft, y hay un just-in-time (JIT)-se aplicará la versión nativa compilada del código, el punto de interrupción en el código compilado JIT.</span><span class="sxs-lookup"><span data-stu-id="062ec-110">If this code is Microsoft intermediate language (MSIL) code, and there is a just-in-time (JIT)-compiled, native version of the code, the breakpoint will be applied in the JIT-compiled code as well.</span></span> <span data-ttu-id="062ec-111">(El mismo es true si el código compilado JIT más adelante).</span><span class="sxs-lookup"><span data-stu-id="062ec-111">(The same is true if the code is JIT-compiled later.)</span></span>  
+ <span data-ttu-id="cbaf5-110">Si este código es código de lenguaje intermedio (MSIL) de Microsoft, y hay un just-in-time (JIT)-se aplicará la versión nativa compilada del código, el punto de interrupción en el código compilado JIT.</span><span class="sxs-lookup"><span data-stu-id="cbaf5-110">If this code is Microsoft intermediate language (MSIL) code, and there is a just-in-time (JIT)-compiled, native version of the code, the breakpoint will be applied in the JIT-compiled code as well.</span></span> <span data-ttu-id="cbaf5-111">(El mismo es true si el código compilado JIT más adelante).</span><span class="sxs-lookup"><span data-stu-id="cbaf5-111">(The same is true if the code is JIT-compiled later.)</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="062ec-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="062ec-112">Requirements</span></span>  
- <span data-ttu-id="062ec-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="062ec-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cbaf5-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cbaf5-112">Requirements</span></span>  
+ <span data-ttu-id="cbaf5-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cbaf5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="062ec-114">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="062ec-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cbaf5-114">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cbaf5-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="062ec-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="062ec-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cbaf5-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cbaf5-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="062ec-116">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="062ec-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="cbaf5-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cbaf5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="062ec-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="062ec-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cbaf5-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="cbaf5-117">See also</span></span>

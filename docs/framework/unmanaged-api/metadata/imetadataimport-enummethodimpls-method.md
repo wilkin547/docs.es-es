@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 09bd9f4029f5e4609ab1ef6f49a4364e83f1edfb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184581"
 ---
-# <a name="imetadataimportenummethodimpls-method"></a><span data-ttu-id="ffccc-102">IMetaDataImport::EnumMethodImpls (Método)</span><span class="sxs-lookup"><span data-stu-id="ffccc-102">IMetaDataImport::EnumMethodImpls Method</span></span>
-<span data-ttu-id="ffccc-103">Enumera los tokens MethodBody y MethodDeclaration que representan métodos del tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="ffccc-103">Enumerates MethodBody and MethodDeclaration tokens representing methods of the specified type.</span></span>  
+# <a name="imetadataimportenummethodimpls-method"></a><span data-ttu-id="ffc77-102">IMetaDataImport::EnumMethodImpls (Método)</span><span class="sxs-lookup"><span data-stu-id="ffc77-102">IMetaDataImport::EnumMethodImpls Method</span></span>
+<span data-ttu-id="ffc77-103">Enumera los tokens MethodBody y MethodDeclaration que representan métodos del tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="ffc77-103">Enumerates MethodBody and MethodDeclaration tokens representing methods of the specified type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ffccc-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ffccc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ffc77-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ffc77-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumMethodImpls (  
@@ -40,42 +40,42 @@ HRESULT EnumMethodImpls (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ffccc-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ffccc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ffc77-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ffc77-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="ffccc-106">[in, out] Un puntero en el enumerador.</span><span class="sxs-lookup"><span data-stu-id="ffccc-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="ffccc-107">Esto debe ser NULL para la primera llamada de este método.</span><span class="sxs-lookup"><span data-stu-id="ffccc-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="ffc77-106">[in, out] Un puntero en el enumerador.</span><span class="sxs-lookup"><span data-stu-id="ffc77-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="ffc77-107">Esto debe ser NULL para la primera llamada de este método.</span><span class="sxs-lookup"><span data-stu-id="ffc77-107">This must be NULL for the first call of this method.</span></span>  
   
  `td`  
- <span data-ttu-id="ffccc-108">[in] Una definición de tipo de token para el tipo cuyas implementaciones de método para enumerar.</span><span class="sxs-lookup"><span data-stu-id="ffccc-108">[in] A TypeDef token for the type whose method implementations to enumerate.</span></span>  
+ <span data-ttu-id="ffc77-108">[in] Una definición de tipo de token para el tipo cuyas implementaciones de método para enumerar.</span><span class="sxs-lookup"><span data-stu-id="ffc77-108">[in] A TypeDef token for the type whose method implementations to enumerate.</span></span>  
   
  `rMethodBody`  
- <span data-ttu-id="ffccc-109">[out] La matriz para almacenar los tokens MethodBody.</span><span class="sxs-lookup"><span data-stu-id="ffccc-109">[out] The array to store the MethodBody tokens.</span></span>  
+ <span data-ttu-id="ffc77-109">[out] La matriz para almacenar los tokens MethodBody.</span><span class="sxs-lookup"><span data-stu-id="ffc77-109">[out] The array to store the MethodBody tokens.</span></span>  
   
  `rMethodDecl`  
- <span data-ttu-id="ffccc-110">[out] La matriz para almacenar los tokens MethodDeclaration.</span><span class="sxs-lookup"><span data-stu-id="ffccc-110">[out] The array to store the MethodDeclaration tokens.</span></span>  
+ <span data-ttu-id="ffc77-110">[out] La matriz para almacenar los tokens MethodDeclaration.</span><span class="sxs-lookup"><span data-stu-id="ffc77-110">[out] The array to store the MethodDeclaration tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="ffccc-111">[in] El tamaño máximo de la `rMethodBody` y `rMethodDecl` matrices.</span><span class="sxs-lookup"><span data-stu-id="ffccc-111">[in] The maximum size of the `rMethodBody` and `rMethodDecl` arrays.</span></span>  
+ <span data-ttu-id="ffc77-111">[in] El tamaño máximo de la `rMethodBody` y `rMethodDecl` matrices.</span><span class="sxs-lookup"><span data-stu-id="ffc77-111">[in] The maximum size of the `rMethodBody` and `rMethodDecl` arrays.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="ffccc-112">[in] El número real de los métodos devueltos en `rMethodBody` y `rMethodDecl`.</span><span class="sxs-lookup"><span data-stu-id="ffccc-112">[in] The actual number of methods returned in `rMethodBody` and `rMethodDecl`.</span></span>  
+ <span data-ttu-id="ffc77-112">[in] El número real de los métodos devueltos en `rMethodBody` y `rMethodDecl`.</span><span class="sxs-lookup"><span data-stu-id="ffc77-112">[in] The actual number of methods returned in `rMethodBody` and `rMethodDecl`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ffccc-113">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="ffccc-113">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ffc77-113">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="ffc77-113">Return Value</span></span>  
   
-|<span data-ttu-id="ffccc-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ffccc-114">HRESULT</span></span>|<span data-ttu-id="ffccc-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="ffccc-115">Description</span></span>|  
+|<span data-ttu-id="ffc77-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ffc77-114">HRESULT</span></span>|<span data-ttu-id="ffc77-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="ffc77-115">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` <span data-ttu-id="ffccc-116">se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="ffccc-116">returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="ffccc-117">No hay ningún token de método para enumerar.</span><span class="sxs-lookup"><span data-stu-id="ffccc-117">There are no method tokens to enumerate.</span></span> <span data-ttu-id="ffccc-118">En ese caso, `pcTokens` es cero.</span><span class="sxs-lookup"><span data-stu-id="ffccc-118">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="ffc77-116">`EnumMethodImpls` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="ffc77-116">`EnumMethodImpls` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="ffc77-117">No hay ningún token de método para enumerar.</span><span class="sxs-lookup"><span data-stu-id="ffc77-117">There are no method tokens to enumerate.</span></span> <span data-ttu-id="ffc77-118">En ese caso, `pcTokens` es cero.</span><span class="sxs-lookup"><span data-stu-id="ffc77-118">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ffccc-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ffccc-119">Requirements</span></span>  
- <span data-ttu-id="ffccc-120">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ffccc-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ffc77-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ffc77-119">Requirements</span></span>  
+ <span data-ttu-id="ffc77-120">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ffc77-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ffccc-121">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="ffccc-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ffc77-121">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="ffc77-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ffccc-122">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ffccc-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ffc77-122">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ffc77-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="ffccc-123">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="ffccc-123">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="ffc77-123">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ffc77-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ffccc-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="ffccc-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ffc77-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="ffc77-124">See also</span></span>
 
-- [<span data-ttu-id="ffccc-125">IMetaDataImport (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="ffccc-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="ffccc-126">IMetaDataImport2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="ffccc-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="ffc77-125">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ffc77-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="ffc77-126">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ffc77-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
