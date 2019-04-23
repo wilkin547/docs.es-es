@@ -1,5 +1,5 @@
 ---
-title: Filtrar para obtener acceso a los dispositivos de cifrado de hardware
+title: Procedimiento para obtener acceso a los dispositivos de cifrado de hardware
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,13 +16,13 @@ ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334619"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773420"
 ---
-# <a name="how-to-access-hardware-encryption-devices"></a>Filtrar para obtener acceso a los dispositivos de cifrado de hardware
+# <a name="how-to-access-hardware-encryption-devices"></a>Procedimiento para obtener acceso a los dispositivos de cifrado de hardware
 Puede usar la clase <xref:System.Security.Cryptography.CspParameters> para obtener acceso a los dispositivos de cifrado de hardware. Por ejemplo, puede usar esta clase para integrar la aplicación con una tarjeta inteligente, un generador de números aleatorios de hardware o una implementación de hardware de un determinado algoritmo criptográfico.  
   
  La clase <xref:System.Security.Cryptography.CspParameters> crea un proveedor de servicios criptográficos (CSP) que tiene acceso a un dispositivo de cifrado de hardware correctamente instalado.  Puede comprobar la disponibilidad de un CSP inspeccionando la siguiente clave del registro mediante el Editor del registro (Regedit.exe):  HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  

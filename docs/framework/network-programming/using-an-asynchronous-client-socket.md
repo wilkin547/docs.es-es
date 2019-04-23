@@ -18,10 +18,10 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
 ms.openlocfilehash: 4d7020b6bc5049101ec08329d53d966771e38035
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59168901"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Usar un socket de cliente asincrónico
@@ -287,6 +287,6 @@ private static void ReceiveCallback( IAsyncResult ar ) {
   
 ## <a name="see-also"></a>Vea también
 
-- [Usar un Socket de cliente sincrónico](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [escuchas con sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Uso de un socket de cliente sincrónico](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
+- [Escuchas con sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
 - [Ejemplo de sockets de cliente asincrónicos](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)

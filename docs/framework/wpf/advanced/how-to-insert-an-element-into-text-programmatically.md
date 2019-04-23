@@ -1,5 +1,5 @@
 ---
-title: Filtrar Insertar un elemento en texto mediante programación
+title: Procedimiento Insertar un elemento en texto mediante programación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - text [WPF], inserting elements
 ms.assetid: 97bd950a-25ac-4e42-a311-94b6420d4136
 ms.openlocfilehash: ea9850c8490ec37032d4565c6b3375e3116d4313
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169590"
 ---
-# <a name="how-to-insert-an-element-into-text-programmatically"></a>Filtrar Insertar un elemento en texto mediante programación
+# <a name="how-to-insert-an-element-into-text-programmatically"></a>Procedimiento Insertar un elemento en texto mediante programación
 El ejemplo siguiente muestra cómo utilizar dos <xref:System.Windows.Documents.TextPointer> objetos para especificar un intervalo de texto que se aplicará un <xref:System.Windows.Documents.Span> elemento.  
   
 ## <a name="example"></a>Ejemplo  

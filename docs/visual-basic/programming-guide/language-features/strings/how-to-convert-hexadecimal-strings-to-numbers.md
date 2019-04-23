@@ -1,5 +1,5 @@
 ---
-title: Filtrar Convertir cadenas hexadecimales en números (Visual Basic)
+title: Procedimiento Convertir cadenas hexadecimales en números (Visual Basic)
 ms.date: 01/31/2018
 helpviewer_keywords:
 - numbers [Visual Basic], hexadecimals
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
 ms.openlocfilehash: ddb7b39f7a47234c003ca16e1d7ea013e113c108
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480890"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773693"
 ---
-# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Filtrar Convertir cadenas hexadecimales en números (Visual Basic)
+# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Procedimiento Convertir cadenas hexadecimales en números (Visual Basic)
 
 En este ejemplo convierte una cadena hexadecimal en un entero con el <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> método.
 

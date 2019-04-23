@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar SelectedValue, SelectedValuePath y SelectedItem
+title: Procedimiento Usar SelectedValue, SelectedValuePath y SelectedItem
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], SelectedValue properties
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - SelectedValue [WPF], SelectedItem properties
 ms.assetid: 2fc92ad4-f02c-4f89-bbe9-d4978a7af0db
 ms.openlocfilehash: d9f7a8f04f53b7d38a49dfef2c947dfa1c2d263d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169713"
 ---
-# <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>Filtrar Usar SelectedValue, SelectedValuePath y SelectedItem
+# <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>Procedimiento Usar SelectedValue, SelectedValuePath y SelectedItem
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Controls.TreeView.SelectedValue%2A> y <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> propiedades para especificar un valor para el <xref:System.Windows.Controls.TreeView.SelectedItem%2A> de un <xref:System.Windows.Controls.TreeView>.  
   
 ## <a name="example"></a>Ejemplo  

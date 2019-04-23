@@ -1,4 +1,12 @@
-### <a name="wf-serializes-expressionsliterallttgt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>WF ahora serializa el valor Expressions.Literal&lt;T&gt; DateTimes de forma diferente (interrumpe los analizadores de XAML personalizados)
+---
+ms.openlocfilehash: 335647f899c79eff22e313fa40b2e2a73e7cfff0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59805032"
+---
+### <a name="wf-serializes-expressionsliteralt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>WF ahora serializa el valor Expressions.Literal\<T> DateTimes de forma diferente (interrumpe los analizadores de XAML personalizados)
 
 |   |   |
 |---|---|
@@ -7,4 +15,3 @@
 |Ámbito|Borde|
 |Versión|4.5|
 |Tipo|Tiempo de ejecución|
-

@@ -1,5 +1,5 @@
 ---
-title: <httpWebRequest> Elemento (configuración de red)
+title: Elemento <httpWebRequest> (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
 ms.openlocfilehash: 722b2f726c9085f6dee6bad82044da3011b98702
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169304"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest > elemento (configuración de red)
@@ -39,7 +39,7 @@ Personaliza los parámetros de solicitud Web.
   
 ### <a name="attributes"></a>Atributos  
   
-|**Atributo**|**Descripción**|  
+|**Attribute**|**Descripción**|  
 |-------------------|---------------------|  
 |`maximumResponseHeadersLength`|Especifica la longitud máxima de un encabezado de respuesta, en kilobytes. El valor predeterminado es 64. El valor -1 indica que no se impondrá ningún límite de tamaño en los encabezados de respuesta.|  
 |`maximumErrorResponseLength`|Especifica la longitud máxima de una respuesta de error, en kilobytes. El valor predeterminado es 64. El valor -1 indica que no hay límite de tamaño se impondrá en la respuesta de error.|  
@@ -51,9 +51,9 @@ Personaliza los parámetros de solicitud Web.
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[configuración](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentarios  
  De forma predeterminada, .NET Framework aplica estrictamente RFC 2616 para analizar URI. Algunas respuestas del servidor pueden incluir caracteres de control en campos prohibidos, lo que hará que el <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> método inicie una <xref:System.Net.WebException>. Si **useUnsafeHeaderParsing** está establecido en **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> no iniciará ninguna en este caso; sin embargo, la aplicación será vulnerable a varias formas de ataques de análisis de URI. La mejor solución es cambiar el servidor de modo que la respuesta no incluya caracteres de control.  

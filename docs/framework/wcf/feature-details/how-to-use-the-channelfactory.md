@@ -1,18 +1,18 @@
 ---
-title: Filtrar para usar ChannelFactory
+title: Procedimiento para usar ChannelFactory
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d48f01b5-582b-4c8b-b547-8adddae7e371
 ms.openlocfilehash: 7d542a3dcae514e75194b49c23a8dec5dd7e8c3b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298856"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773732"
 ---
-# <a name="how-to-use-the-channelfactory"></a>Filtrar para usar ChannelFactory
+# <a name="how-to-use-the-channelfactory"></a>Procedimiento para usar ChannelFactory
 La clase <xref:System.ServiceModel.ChannelFactory%601> genérica se usa en escenarios avanzados que requieren la creación de un generador de canal que se puede utilizar para crear más de un canal.  
   
 ### <a name="to-create-and-use-the-channelfactory-class"></a>Crear y utilizar la clase ChannelFactory  

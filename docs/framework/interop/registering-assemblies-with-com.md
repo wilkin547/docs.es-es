@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e5d6c063fedf14559b20d1de49c1855d0fe1304
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219326"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59169031"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrar ensamblados con COM
 Puede ejecutar una herramienta de línea de comandos denominada [Registro de ensamblados (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) para registrar un ensamblado o anular su registro para su uso con COM. Regasm.exe agrega información sobre la clase al Registro del sistema, de modo que los clientes COM puedan usar la clase .NET Framework de forma transparente. La clase <xref:System.Runtime.InteropServices.RegistrationServices> proporciona la funcionalidad equivalente.  
@@ -44,6 +44,7 @@ Puede ejecutar una herramienta de línea de comandos denominada [Registro de ens
  Para la subclave `InprocServer32`, aparece una referencia a Mscoree.dll en lugar de una biblioteca de tipos COM tradicional para indicar que Common Language Runtime crea el objeto administrado.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Exponer componentes de .NET Framework en COM](exposing-dotnet-components-to-com.md)
 - [Cómo: Hacer referencia a tipos de .NET desde COM](how-to-reference-net-types-from-com.md)
 - [Llamada a un objeto de .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))

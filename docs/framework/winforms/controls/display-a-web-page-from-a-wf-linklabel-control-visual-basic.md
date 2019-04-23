@@ -1,5 +1,5 @@
 ---
-title: Filtrar para mostrar una página web desde un control LinkLabel de formularios Windows Forms (Visual Basic)
+title: Procedimiento para mostrar una página web desde un control LinkLabel de formularios Windows Forms (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
 ms.openlocfilehash: 1be9ff06e749d14b46946e899c6ffb6c3a950d65
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170032"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Filtrar para mostrar una página web desde un control LinkLabel de formularios Windows Forms (Visual Basic)
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Procedimiento para mostrar una página web desde un control LinkLabel de formularios Windows Forms (Visual Basic)
 En este ejemplo se muestra una página Web en el explorador predeterminado cuando un usuario hace clic en un formulario Windows Forms <xref:System.Windows.Forms.LinkLabel> control.  
   
 ## <a name="example"></a>Ejemplo  
@@ -52,4 +52,4 @@ End Sub
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.LinkLabel>
-- [Control LinkLabel](linklabel-control-windows-forms.md)
+- [LinkLabel (control)](linklabel-control-windows-forms.md)

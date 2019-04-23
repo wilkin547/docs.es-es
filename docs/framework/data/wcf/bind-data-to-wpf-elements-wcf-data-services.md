@@ -1,5 +1,5 @@
 ---
-title: Filtrar Enlazar datos a elementos de Windows Presentation Foundation (WCF Data Services)
+title: Procedimiento Enlazar datos a elementos de Windows Presentation Foundation (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: d6538ab0-0abe-426a-b9d9-e6f3a5ca2016
 ms.openlocfilehash: 1deb5bcc29e43720929951764d1fcfeee8e89f8c
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59517400"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773966"
 ---
-# <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>Filtrar Enlazar datos a elementos de Windows Presentation Foundation (WCF Data Services)
+# <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>Procedimiento Enlazar datos a elementos de Windows Presentation Foundation (WCF Data Services)
 Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede enlazar elementos Windows Presentation Foundation (WPF) como un <xref:System.Windows.Controls.ListBox> o <xref:System.Windows.Controls.ComboBox> a una instancia de <xref:System.Data.Services.Client.DataServiceCollection%601>, que controla los eventos generados por los controles para mantener la <xref:System.Data.Services.Client.DataServiceContext> sincronizada con los cambios realizados en los datos en los controles. Para obtener más información, consulte [enlazar datos a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  
   
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean cuando se completa la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  

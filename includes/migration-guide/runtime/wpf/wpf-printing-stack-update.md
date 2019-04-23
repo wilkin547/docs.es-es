@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 6fafb689af5d50b31b19f5d1fe7090a6c256ca45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236261"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59805044"
 ---
 ### <a name="wpf-printing-stack-update"></a>Actualización de la pila de impresión de WPF
 
