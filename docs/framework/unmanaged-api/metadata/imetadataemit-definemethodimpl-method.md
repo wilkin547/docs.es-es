@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 05b2530bde2f4532e94610a683e7bbc2f59540aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178391"
 ---
-# <a name="imetadataemitdefinemethodimpl-method"></a><span data-ttu-id="37bc0-102">IMetaDataEmit::DefineMethodImpl (Método)</span><span class="sxs-lookup"><span data-stu-id="37bc0-102">IMetaDataEmit::DefineMethodImpl Method</span></span>
-<span data-ttu-id="37bc0-103">Crea una definición para la implementación de un método heredado de una interfaz y devuelve un token para esa definición de implementación del método.</span><span class="sxs-lookup"><span data-stu-id="37bc0-103">Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.</span></span>  
+# <a name="imetadataemitdefinemethodimpl-method"></a><span data-ttu-id="80bd3-102">IMetaDataEmit::DefineMethodImpl (Método)</span><span class="sxs-lookup"><span data-stu-id="80bd3-102">IMetaDataEmit::DefineMethodImpl Method</span></span>
+<span data-ttu-id="80bd3-103">Crea una definición para la implementación de un método heredado de una interfaz y devuelve un token para esa definición de implementación del método.</span><span class="sxs-lookup"><span data-stu-id="80bd3-103">Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37bc0-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="37bc0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80bd3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="80bd3-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineMethodImpl (   
@@ -37,26 +37,26 @@ HRESULT DefineMethodImpl (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="37bc0-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="37bc0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="80bd3-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="80bd3-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="37bc0-106">[in] El `mdTypedef` símbolo (token) de la clase de implementación.</span><span class="sxs-lookup"><span data-stu-id="37bc0-106">[in] The `mdTypedef` token of the implementing class.</span></span>  
+ <span data-ttu-id="80bd3-106">[in] El `mdTypedef` símbolo (token) de la clase de implementación.</span><span class="sxs-lookup"><span data-stu-id="80bd3-106">[in] The `mdTypedef` token of the implementing class.</span></span>  
   
  `tkBody`  
- <span data-ttu-id="37bc0-107">[in] El `mdMethodDef` o `mdMethodRef` símbolo (token) del cuerpo del código.</span><span class="sxs-lookup"><span data-stu-id="37bc0-107">[in] The `mdMethodDef` or `mdMethodRef` token of the code body.</span></span>  
+ <span data-ttu-id="80bd3-107">[in] El `mdMethodDef` o `mdMethodRef` símbolo (token) del cuerpo del código.</span><span class="sxs-lookup"><span data-stu-id="80bd3-107">[in] The `mdMethodDef` or `mdMethodRef` token of the code body.</span></span>  
   
  `tkDecl`  
- <span data-ttu-id="37bc0-108">[in] El `mdMethodDef` o `mdMethodRef` token del método de interfaz que se implementan.</span><span class="sxs-lookup"><span data-stu-id="37bc0-108">[in] The `mdMethodDef` or `mdMethodRef` token of the interface method being implemented.</span></span>  
+ <span data-ttu-id="80bd3-108">[in] El `mdMethodDef` o `mdMethodRef` token del método de interfaz que se implementan.</span><span class="sxs-lookup"><span data-stu-id="80bd3-108">[in] The `mdMethodDef` or `mdMethodRef` token of the interface method being implemented.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="37bc0-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="37bc0-109">Requirements</span></span>  
- <span data-ttu-id="37bc0-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="37bc0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80bd3-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="80bd3-109">Requirements</span></span>  
+ <span data-ttu-id="80bd3-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80bd3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="37bc0-111">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="37bc0-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="80bd3-111">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="80bd3-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="37bc0-112">**Biblioteca:** Usar como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="37bc0-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="80bd3-112">**Biblioteca:** Usar como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="80bd3-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="37bc0-113">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="37bc0-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="80bd3-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80bd3-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37bc0-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="37bc0-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="80bd3-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="80bd3-114">See also</span></span>
 
-- [<span data-ttu-id="37bc0-115">IMetaDataEmit (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="37bc0-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="37bc0-116">IMetaDataEmit2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="37bc0-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="80bd3-115">IMetaDataEmit (interfaz)</span><span class="sxs-lookup"><span data-stu-id="80bd3-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="80bd3-116">IMetaDataEmit2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="80bd3-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

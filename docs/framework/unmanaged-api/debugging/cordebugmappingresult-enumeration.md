@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c2fecc7160cb41e31bf88f1a461265ad8fdce166
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170396"
 ---
-# <a name="cordebugmappingresult-enumeration"></a><span data-ttu-id="e808c-102">CorDebugMappingResult (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="e808c-102">CorDebugMappingResult Enumeration</span></span>
-<span data-ttu-id="e808c-103">Proporciona información detallada sobre cómo se obtuvo el valor del puntero de instrucción (IP).</span><span class="sxs-lookup"><span data-stu-id="e808c-103">Provides the details of how the value of the instruction pointer (IP) was obtained.</span></span>  
+# <a name="cordebugmappingresult-enumeration"></a><span data-ttu-id="0f7d1-102">CorDebugMappingResult (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="0f7d1-102">CorDebugMappingResult Enumeration</span></span>
+<span data-ttu-id="0f7d1-103">Proporciona información detallada sobre cómo se obtuvo el valor del puntero de instrucción (IP).</span><span class="sxs-lookup"><span data-stu-id="0f7d1-103">Provides the details of how the value of the instruction pointer (IP) was obtained.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e808c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e808c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0f7d1-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0f7d1-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugMappingResult {  
@@ -39,29 +39,29 @@ typedef enum CorDebugMappingResult {
 } CorDebugMappingResult;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e808c-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="e808c-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0f7d1-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="0f7d1-105">Members</span></span>  
   
-|<span data-ttu-id="e808c-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="e808c-106">Member</span></span>|<span data-ttu-id="e808c-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="e808c-107">Description</span></span>|  
+|<span data-ttu-id="0f7d1-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="0f7d1-106">Member</span></span>|<span data-ttu-id="0f7d1-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="0f7d1-107">Description</span></span>|  
 |------------|-----------------|  
-|`MAPPING_PROLOG`|<span data-ttu-id="e808c-108">El código nativo está en el prólogo, por lo que el valor de la dirección IP es 0.</span><span class="sxs-lookup"><span data-stu-id="e808c-108">The native code is in the prolog, so the value of the IP is 0.</span></span>|  
-|`MAPPING_EPILOG`|<span data-ttu-id="e808c-109">El código nativo está en un epílogo, por lo que el valor de la dirección IP es la dirección de la última instrucción del método.</span><span class="sxs-lookup"><span data-stu-id="e808c-109">The native code is in an epilog, so the value of the IP is the address of the last instruction of the method.</span></span>|  
-|`MAPPING_NO_INFO`|<span data-ttu-id="e808c-110">No hay información de asignación está disponible para el método, por lo que el valor de la dirección IP es 0.</span><span class="sxs-lookup"><span data-stu-id="e808c-110">No mapping information is available for the method, so the value of the IP is 0.</span></span>|  
-|`MAPPING_UNMAPPED_ADDRESS`|<span data-ttu-id="e808c-111">Aunque no hay información de asignación para el método, no se puede asignar la dirección actual al código de lenguaje intermedio (MSIL) de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="e808c-111">Although there is mapping information for the method, the current address cannot be mapped to Microsoft intermediate language (MSIL) code.</span></span> <span data-ttu-id="e808c-112">El valor de la dirección IP es 0.</span><span class="sxs-lookup"><span data-stu-id="e808c-112">The value of the IP is 0.</span></span>|  
-|`MAPPING_EXACT`|<span data-ttu-id="e808c-113">El método se asigna exactamente a código MSIL o interpreta el marco, por lo que el valor de la dirección IP es preciso.</span><span class="sxs-lookup"><span data-stu-id="e808c-113">Either the method maps exactly to MSIL code or the frame has been interpreted, so the value of the IP is accurate.</span></span>|  
-|`MAPPING_APPROXIMATE`|<span data-ttu-id="e808c-114">El método se ha asignado correctamente, pero el valor de la dirección IP puede ser aproximado.</span><span class="sxs-lookup"><span data-stu-id="e808c-114">The method was successfully mapped, but the value of the IP may be approximate.</span></span>|  
+|`MAPPING_PROLOG`|<span data-ttu-id="0f7d1-108">El código nativo está en el prólogo, por lo que el valor de la dirección IP es 0.</span><span class="sxs-lookup"><span data-stu-id="0f7d1-108">The native code is in the prolog, so the value of the IP is 0.</span></span>|  
+|`MAPPING_EPILOG`|<span data-ttu-id="0f7d1-109">El código nativo está en un epílogo, por lo que el valor de la dirección IP es la dirección de la última instrucción del método.</span><span class="sxs-lookup"><span data-stu-id="0f7d1-109">The native code is in an epilog, so the value of the IP is the address of the last instruction of the method.</span></span>|  
+|`MAPPING_NO_INFO`|<span data-ttu-id="0f7d1-110">No hay información de asignación está disponible para el método, por lo que el valor de la dirección IP es 0.</span><span class="sxs-lookup"><span data-stu-id="0f7d1-110">No mapping information is available for the method, so the value of the IP is 0.</span></span>|  
+|`MAPPING_UNMAPPED_ADDRESS`|<span data-ttu-id="0f7d1-111">Aunque no hay información de asignación para el método, no se puede asignar la dirección actual al código de lenguaje intermedio (MSIL) de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="0f7d1-111">Although there is mapping information for the method, the current address cannot be mapped to Microsoft intermediate language (MSIL) code.</span></span> <span data-ttu-id="0f7d1-112">El valor de la dirección IP es 0.</span><span class="sxs-lookup"><span data-stu-id="0f7d1-112">The value of the IP is 0.</span></span>|  
+|`MAPPING_EXACT`|<span data-ttu-id="0f7d1-113">El método se asigna exactamente a código MSIL o interpreta el marco, por lo que el valor de la dirección IP es preciso.</span><span class="sxs-lookup"><span data-stu-id="0f7d1-113">Either the method maps exactly to MSIL code or the frame has been interpreted, so the value of the IP is accurate.</span></span>|  
+|`MAPPING_APPROXIMATE`|<span data-ttu-id="0f7d1-114">El método se ha asignado correctamente, pero el valor de la dirección IP puede ser aproximado.</span><span class="sxs-lookup"><span data-stu-id="0f7d1-114">The method was successfully mapped, but the value of the IP may be approximate.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e808c-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e808c-115">Remarks</span></span>  
- <span data-ttu-id="e808c-116">Puede usar el [ICorDebugILFrame:: GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) método para obtener el valor del puntero de instrucción.</span><span class="sxs-lookup"><span data-stu-id="e808c-116">You can use the [ICorDebugILFrame::GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) method to obtain the value of the instruction pointer.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0f7d1-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="0f7d1-115">Remarks</span></span>  
+ <span data-ttu-id="0f7d1-116">Puede usar el [ICorDebugILFrame:: GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) método para obtener el valor del puntero de instrucción.</span><span class="sxs-lookup"><span data-stu-id="0f7d1-116">You can use the [ICorDebugILFrame::GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) method to obtain the value of the instruction pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e808c-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e808c-117">Requirements</span></span>  
- <span data-ttu-id="e808c-118">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e808c-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0f7d1-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0f7d1-117">Requirements</span></span>  
+ <span data-ttu-id="0f7d1-118">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0f7d1-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e808c-119">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e808c-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0f7d1-119">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0f7d1-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e808c-120">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e808c-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0f7d1-120">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0f7d1-120">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="e808c-121">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="e808c-121">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="0f7d1-121">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0f7d1-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e808c-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="e808c-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0f7d1-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="0f7d1-122">See also</span></span>
 
-- [<span data-ttu-id="e808c-123">Enumeraciones de depuración</span><span class="sxs-lookup"><span data-stu-id="e808c-123">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="0f7d1-123">Enumeraciones de depuración</span><span class="sxs-lookup"><span data-stu-id="0f7d1-123">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
