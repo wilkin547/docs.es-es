@@ -1,5 +1,5 @@
 ---
-title: Filtrar Obtener propiedades de un objeto de sistema de impresión sin reflexión
+title: Procedimiento Obtener propiedades de un objeto de sistema de impresión sin reflexión
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
 ms.openlocfilehash: bb906dafd98e75708764b5f0f009900719f6a475
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335204"
 ---
-# <a name="how-to-get-print-system-object-properties-without-reflection"></a>Filtrar Obtener propiedades de un objeto de sistema de impresión sin reflexión
+# <a name="how-to-get-print-system-object-properties-without-reflection"></a>Procedimiento Obtener propiedades de un objeto de sistema de impresión sin reflexión
 Usar la reflexión para detallar las propiedades (y los tipos de esas propiedades) en un objeto puede ralentizar el rendimiento de la aplicación. El <xref:System.Printing.IndexedProperties> espacio de nombres proporciona un medio para obtener esta información con el uso de reflexión.  
   
 ## <a name="example"></a>Ejemplo  

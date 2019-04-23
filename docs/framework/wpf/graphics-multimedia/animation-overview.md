@@ -9,10 +9,10 @@ helpviewer_keywords:
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
 ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337739"
 ---
 # <a name="animation-overview"></a>Información general sobre animaciones
@@ -35,9 +35,9 @@ ms.locfileid: "59337739"
   
 -   Después, el programa actualiza el rectángulo con el nuevo valor y lo redibuja.  
   
- Anteriores a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] los desarrolladores tenían que crear y administrar sus propios sistemas de temporización o utilizar bibliotecas personalizadas especiales. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluye un sistema de control de tiempo eficaz que se expone a través de código administrado y [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] y que está muy integrado en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animación facilita la animación de controles y otros objetos gráficos.  
+ Anteriores a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] los desarrolladores tenían que crear y administrar sus propios sistemas de temporización o utilizar bibliotecas personalizadas especiales. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluye un sistema de control de tiempo eficaz que se expone a través de código administrado y [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] y que está muy integrado en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. La animación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] facilita la animación de controles y otros objetos gráficos.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controla todo el trabajo en segundo plano de administración de un sistema de control de tiempo y volver a dibujar la pantalla de forma eficaz. Proporciona clases de control de tiempo que permiten centrarse en los efectos que se desea crear, en lugar de la mecánica para lograr esos efectos. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] También resulta fácil crear sus propias animaciones exponiendo clases base de animación desde el que se pueden heredar sus clases, para generar animaciones personalizadas. Estas animaciones personalizadas se benefician de la mayoría de las ventajas de rendimiento de las clases de animación estándar.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controla de forma eficiente todo el trabajo de administración del sistema de control de tiempo y de actualización de la pantalla que se produce en segundo plano. Proporciona clases de control de tiempo que permiten centrarse en los efectos que se desea crear, en lugar de la mecánica para lograr esos efectos. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también facilita la creación de sus propias animaciones exponiendo clases base de animación de las que se pueden heredar sus clases, para generar animaciones personalizadas. Estas animaciones personalizadas se benefician de la mayoría de las ventajas de rendimiento de las clases de animación estándar.  
   
 <a name="thewpftimingsystem"></a>   
 ## <a name="wpf-property-animation-system"></a>Sistema de animación de propiedades de WPF  
@@ -318,11 +318,11 @@ ms.locfileid: "59337739"
 ## <a name="animation-samples"></a>Ejemplos de animaciones  
  Los ejemplos siguientes pueden ayudarle a familiarizarse con la forma de agregar animaciones a sus aplicaciones.  
   
--   [FROM, To y por el ejemplo de valores de destino de animación](https://go.microsoft.com/fwlink/?LinkID=159988)  
+-   [Ejemplo de valores de destino de animación From, To y By](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      Muestra distintas configuraciones From/To/By.  
   
--   [Ejemplo de comportamiento de control de tiempo de animación](https://go.microsoft.com/fwlink/?LinkID=159970)  
+-   [Ejemplo del comportamiento del control de tiempo de la animación](https://go.microsoft.com/fwlink/?LinkID=159970)  
   
      Muestra las distintas maneras de controlar el comportamiento de control de tiempo de una animación. Este ejemplo también muestra cómo enlazar a datos el valor de destino de una animación.  
   
@@ -331,21 +331,21 @@ ms.locfileid: "59337739"
   
 |Título|Descripción|  
 |-----------|-----------------|  
-|[Información general sobre sistemas de temporización y animación](animation-and-timing-system-overview.md)|Describe cómo se utiliza el sistema de temporización el <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock> clases, que le permiten crear animaciones.|  
+|[Información general sobre sistemas de control de tiempo y animación ](animation-and-timing-system-overview.md)|Describe cómo se utiliza el sistema de temporización el <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock> clases, que le permiten crear animaciones.|  
 |[Sugerencias y trucos para animaciones](animation-tips-and-tricks.md)|Enumera las sugerencias útiles para solucionar problemas con animaciones, como el rendimiento.|  
-|[Información general sobre animaciones personalizadas](custom-animations-overview.md)|Describe cómo extender el sistema de animación con fotogramas clave, clases de animación o devoluciones de llamada por fotograma.|  
+|[Información general sobre animaciones personalizadas ](custom-animations-overview.md)|Describe cómo extender el sistema de animación con fotogramas clave, clases de animación o devoluciones de llamada por fotograma.|  
 |Información general sobre animaciones From/To/By|Describe cómo crear una animación que realiza la transición entre dos valores.|  
 |[Información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md)|Describe cómo crear una animación con varios valores de destino, incluida la capacidad de controlar el método de interpolación.|  
-|[Funciones de aceleración](easing-functions.md)|Explica cómo aplicar fórmulas matemáticas a las animaciones para obtener un comportamiento realista, como el rebote.|  
-|[Información general sobre animaciones en trazados](path-animations-overview.md)|Describe cómo mover o girar un objeto a lo largo de un trazado complejo.|  
+|[Funciones de aceleración ](easing-functions.md)|Explica cómo aplicar fórmulas matemáticas a las animaciones para obtener un comportamiento realista, como el rebote.|  
+|[Información general sobre animaciones en trazados ](path-animations-overview.md)|Describe cómo mover o girar un objeto a lo largo de un trazado complejo.|  
 |[Información general sobre técnicas de animación de propiedades](property-animation-techniques-overview.md)|Describe las animaciones de propiedades mediante guiones gráficos, animaciones locales, relojes y animaciones por fotograma.|  
-|[Información general sobre objetos Storyboard](storyboards-overview.md)|Describe cómo utilizar guiones gráficos con varias escalas de tiempo para crear animaciones complejas.|  
+|[Información general sobre objetos Storyboard ](storyboards-overview.md)|Describe cómo utilizar guiones gráficos con varias escalas de tiempo para crear animaciones complejas.|  
 |[Información general sobre comportamientos de control de tiempo](timing-behaviors-overview.md)|Describe el <xref:System.Windows.Media.Animation.Timeline> tipos y propiedades que se usan en animaciones.|  
 |[Información general sobre eventos de control de tiempo](timing-events-overview.md)|Describe los eventos disponibles en el <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock> objetos para ejecutar código en los puntos de la escala de tiempo, como iniciar, pausar, reanudar, omitir o detener.|  
 |[Temas "Cómo..."](animation-and-timing-how-to-topics.md)|Contiene ejemplos de código para usar animaciones y escalas de tiempo en una aplicación.|  
-|[Temas "Cómo..." de relojes](clocks-how-to-topics.md)|Contiene ejemplos de código para usar la <xref:System.Windows.Media.Animation.Clock> objeto en la aplicación.|  
+|[Temas de procedimientos de relojes](clocks-how-to-topics.md)|Contiene ejemplos de código para usar la <xref:System.Windows.Media.Animation.Clock> objeto en la aplicación.|  
 |[Temas de procedimientos de fotogramas clave](key-frame-animation-how-to-topics.md)|Contiene ejemplos de código para usar animaciones de fotogramas clave en una aplicación.|  
-|[Temas "Cómo..." de animación de trazado](path-animation-how-to-topics.md)|Contiene ejemplos de código para usar animaciones de trazado en una aplicación.|  
+|[Temas de procedimientos de animación de trazado](path-animation-how-to-topics.md)|Contiene ejemplos de código para usar animaciones de trazado en una aplicación.|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Referencia  

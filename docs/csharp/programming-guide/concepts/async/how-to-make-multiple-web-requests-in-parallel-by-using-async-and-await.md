@@ -2,12 +2,12 @@
 title: Procedimiento para realizar varias solicitudes web en paralelo con async y await (C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: c8f1c9a134af2139f3dd0d76614b1f719b4d453c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ea41c1fa0fce3a35635e069061f1953c6395406
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547649"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59335425"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Procedimiento para realizar varias solicitudes web en paralelo con async y await (C#)
 En un método asincrónico, las tareas se inician en el momento de crearse. El operador [await](../../../../csharp/language-reference/keywords/await.md) se aplica a la tarea en el momento del método en que no se puede continuar el procesamiento hasta que finalice la tarea. A menudo se espera una tarea en cuanto se crea, como se muestra en el ejemplo siguiente.  
@@ -43,7 +43,7 @@ var result = await myTask;
   
 ### <a name="to-set-up-the-project"></a>Para configurar el proyecto  
   
-1.  Para configurar una aplicación WPF, lleve a cabo los siguientes pasos. Puede encontrar instrucciones detalladas para realizar estos pasos en [Tutorial: Acceso a web usando Async y Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1. Para configurar una aplicación WPF, lleve a cabo los siguientes pasos. Puede encontrar instrucciones detalladas para realizar estos pasos en [Tutorial: Acceso a web usando Async y Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Cree una aplicación WPF que contenga un cuadro de texto y un botón. Asigne al botón el nombre `startButton` y, al cuadro de texto, `resultsTextBox`.  
   
@@ -53,9 +53,9 @@ var result = await myTask;
   
 ### <a name="to-add-the-code"></a>Para agregar el código  
   
-1.  En la ventana de diseño, MainWindow.xaml, haga doble clic en el botón para crear el controlador de eventos `startButton_Click` en MainWindow.xaml.cs.  
+1. En la ventana de diseño, MainWindow.xaml, haga doble clic en el botón para crear el controlador de eventos `startButton_Click` en MainWindow.xaml.cs.  
   
-2.  Copie el código siguiente y péguelo en el cuerpo de `startButton_Click` en MainWindow.xaml.cs.  
+2. Copie el código siguiente y péguelo en el cuerpo de `startButton_Click` en MainWindow.xaml.cs.  
   
     ```csharp  
     resultsTextBox.Clear();  
@@ -65,7 +65,7 @@ var result = await myTask;
   
      El código llama a un método asincrónico, `CreateMultipleTasksAsync`, que dirige la aplicación.  
   
-3.  Agregue los siguientes métodos de soporte técnico al proyecto:  
+3. Agregue los siguientes métodos de soporte técnico al proyecto:  
   
     -   `ProcessURLAsync` usa un método <xref:System.Net.Http.HttpClient> para descargar el contenido de un sitio web como una matriz de bytes. Luego, el método de soporte, `ProcessURLAsync`, muestra y devuelve la longitud de la matriz.  
   
@@ -93,7 +93,7 @@ var result = await myTask;
     }  
     ```  
   
-4.  Por último, defina el método `CreateMultipleTasksAsync`, que lleva a cabo los siguientes pasos.  
+4. Por último, defina el método `CreateMultipleTasksAsync`, que lleva a cabo los siguientes pasos.  
   
     -   El método declara un objeto `HttpClient`, que necesita para tener acceso al método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> en `ProcessURLAsync`.  
   
@@ -134,7 +134,7 @@ var result = await myTask;
     }  
     ```  
   
-5.  Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio** .  
+5. Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio** .  
   
      Ejecute el programa varias veces para comprobar que las tres tareas no finalizan siempre en el mismo orden y que el orden en el que finalizan no es necesariamente el orden en que se han creado y esperado.  
   

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para dar formato al control DataGrid de formularios Windows Forms
+title: Procedimiento para dar formato al control DataGrid de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
 ms.openlocfilehash: 8e5c41d6f146e6abef8d7670e6191b587ac86c92
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336127"
 ---
-# <a name="how-to-format-the-windows-forms-datagrid-control"></a>Filtrar para dar formato al control DataGrid de formularios Windows Forms
+# <a name="how-to-format-the-windows-forms-datagrid-control"></a>Procedimiento para dar formato al control DataGrid de formularios Windows Forms
 > [!NOTE]
 >  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
@@ -158,5 +158,5 @@ ms.locfileid: "59336127"
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [Filtrar para eliminar u ocultar columnas del control DataGrid de formularios Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [Control DataGrid](datagrid-control-windows-forms.md)
+- [Cómo: Eliminar u ocultar columnas en el Control DataGrid de Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [DataGrid (control)](datagrid-control-windows-forms.md)

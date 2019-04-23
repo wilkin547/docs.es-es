@@ -3,10 +3,10 @@ title: Inspectores de mensaje
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
 ms.openlocfilehash: c9d2c47a816e7fd8c5d219009128ed530564b81b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334957"
 ---
 # <a name="message-inspectors"></a>Inspectores de mensaje
@@ -41,7 +41,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  Todos los inspectores de mensaje de servicio (distribuidor) deben implementar los dos métodos <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector><xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> y <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>.  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> se invoca el distribuidor cuando se recibe un mensaje ha sido, procesado por la pila de canales y asignado a un servicio, pero antes de que sea deserializado y enviado a una operación. Si el mensaje entrante está cifrado, se descifra cuando llega al inspector de mensaje. El método obtiene el mensaje `request` pasado como un parámetro de referencia, que permite inspeccionar el mensaje, manipularlo o reemplazarlo como sea necesario. El valor devuelto puede ser cualquier objeto y se utiliza como un objeto de estado de correlación que se pasa a <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> cuando el servicio devuelve una respuesta al mensaje actual. En este ejemplo, <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> delega la inspección (validación) del mensaje al método `ValidateMessageBody` , privado y local, y no devuelve ningún objeto de estado de correlación. Este método asegura que ningún mensaje no válido pase al servicio.  
+ El distribuidor invoca <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> cuando se ha recibido un mensaje, la pila del canal lo ha procesado y se ha asignado a un servicio, pero antes de que sea deserializado y enviado a una operación. Si el mensaje entrante está cifrado, se descifra cuando llega al inspector de mensaje. El método obtiene el mensaje `request` pasado como un parámetro de referencia, que permite inspeccionar el mensaje, manipularlo o reemplazarlo como sea necesario. El valor devuelto puede ser cualquier objeto y se utiliza como un objeto de estado de correlación que se pasa a <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> cuando el servicio devuelve una respuesta al mensaje actual. En este ejemplo, <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> delega la inspección (validación) del mensaje al método `ValidateMessageBody` , privado y local, y no devuelve ningún objeto de estado de correlación. Este método asegura que ningún mensaje no válido pase al servicio.  
   
 ```  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
@@ -56,7 +56,7 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
 }  
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> se invoca siempre que sea una respuesta está lista para enviarse a un cliente o en el caso de mensajes unidireccionales, cuando se ha procesado el mensaje entrante. Esto permite a las extensiones contar con que se les llame simétricamente, sin tener en cuenta el MEP. Al igual que con <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, el mensaje se pasa como un parámetro de referencia y se puede inspeccionar, modificar o reemplazar. La validación del mensaje que se realiza en este ejemplo se delega de nuevo al método `ValidMessageBody`, pero el control de errores de validación es ligeramente diferente en este caso.  
+ Se invoca <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> siempre que una respuesta está lista para ser devuelta a un cliente o en el caso de mensajes unidireccionales, cuando se ha procesado el mensaje entrante. Esto permite a las extensiones contar con que se les llame simétricamente, sin tener en cuenta el MEP. Al igual que con <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, el mensaje se pasa como un parámetro de referencia y se puede inspeccionar, modificar o reemplazar. La validación del mensaje que se realiza en este ejemplo se delega de nuevo al método `ValidMessageBody`, pero el control de errores de validación es ligeramente diferente en este caso.  
   
  Si se produce un error de validación en el servicio, el método `ValidateMessageBody` inicia <xref:System.ServiceModel.FaultException>- excepciones derivadas. En <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, estas excepciones se pueden colocar en la infraestructura modelo del servicio, donde se transforman automáticamente en errores SOAP y se transmiten al cliente. En <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>, las excepciones <xref:System.ServiceModel.FaultException> no se deben colocar en la infraestructura, porque la transformación de excepciones de error iniciada por el servicio se produce antes de llamar al inspector de mensaje. Por consiguiente, la implementación siguiente detecta la excepción `ReplyValidationFault` conocida y reemplaza el mensaje de respuesta con un mensaje de error explícito. Este método asegura que la implementación del servicio no devuelve ningún mensaje no válido.  
   
@@ -82,7 +82,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
   
  El inspector de mensaje de cliente es muy similar. Los dos métodos que se deben implementar de <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> son <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.AfterReceiveReply%2A> y <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>.  
   
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> se invoca cuando el mensaje se ha creado la aplicación cliente o por el formateador de operación. Como con los inspectores de mensaje de distribuidor, el mensaje se puede simplemente inspeccionar o reemplazarlo por completo. En este ejemplo, el inspector delega al mismo método del asistente `ValidateMessageBody` local que también se utiliza para los inspectores de mensaje de envío.  
+ Se invoca <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> cuando el mensaje se ha creado o por la aplicación cliente o por el formateador de la operación. Como con los inspectores de mensaje de distribuidor, el mensaje se puede simplemente inspeccionar o reemplazarlo por completo. En este ejemplo, el inspector delega al mismo método del asistente `ValidateMessageBody` local que también se utiliza para los inspectores de mensaje de envío.  
   
  La diferencia en el comportamiento entre la validación del cliente y la del servicio (tal y como se especifica en el constructor) es que la validación del cliente produce excepciones locales que se colocan en el código de usuario porque suceden localmente y no debido a un error del servicio. Generalmente, la regla es que los inspectores de distribuidor de servicio inician errores y los inspectores del cliente inician excepciones.  
   

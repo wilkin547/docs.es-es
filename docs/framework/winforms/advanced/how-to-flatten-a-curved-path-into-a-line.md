@@ -1,5 +1,5 @@
 ---
-title: Filtrar para aplanar un trazado curvo en una línea
+title: Procedimiento para aplanar un trazado curvo en una línea
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [Windows Forms], flattening curves into lines
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - drawing [Windows Forms], flattening curves
 ms.assetid: e654b8de-25f4-4735-9208-42e4514a589c
 ms.openlocfilehash: a151b4244e14d3704fd5fa1c55de92211981232f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215162"
 ---
-# <a name="how-to-flatten-a-curved-path-into-a-line"></a>Filtrar para aplanar un trazado curvo en una línea
+# <a name="how-to-flatten-a-curved-path-into-a-line"></a>Procedimiento para aplanar un trazado curvo en una línea
 Un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto almacena una secuencia de líneas y curvas spline de Bézier. Puede agregar varios tipos de curvas (elipses, arcos, curvas spline cardinales) a una ruta de acceso, pero se convierte cada curva en una curva spline de Bézier antes de almacenarse en la ruta de acceso. Acoplamiento de una ruta de acceso consiste en convertir cada curva spline de Bézier en la ruta de acceso a una secuencia de líneas rectas. La siguiente ilustración muestra una ruta de acceso antes y después de hacerlo.  
   
  ![Líneas rectas y curvas](./media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")  

@@ -6,35 +6,35 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
 ms.openlocfilehash: 540765c09dceef583798ceaf1abf9f191f444697
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217437"
 ---
 # <a name="getting-started-tutorial"></a>Tutorial de introducción
 Esta sección contiene un conjunto de temas de tutoriales que presentan a la programación de aplicaciones de Windows Workflow Foundation (WF). Siguiendo los procedimientos incluidos en estos temas, compilará una aplicación que consiste en un juego de adivinanzas de números. El primer tema del tutorial le guía a través de los pasos necesarios para crear las actividades personalizadas que requiere el flujo de trabajo. En el segundo tema, estas actividades se ensamblan junto con actividades de flujo de trabajo integradas en un flujo de trabajo de diagrama de flujo. En el tercer tema, la aplicación host se configura para ejecutar el flujo de trabajo y en el último tema, se introduce la persistencia. Cada paso de este proceso depende de los pasos anteriores, por lo que le recomendamos completarlos en orden.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Filtrar para crear una actividad](how-to-create-an-activity.md)  
+ [Cómo: Crear una actividad](how-to-create-an-activity.md)  
  Describe cómo crear una actividad personalizada que deriva de <xref:System.Activities.NativeActivity%601> y cómo crear esta actividad junto con una actividad integrada en una actividad compuesta mediante el diseñador de actividad.  
   
- [Filtrar para crear un flujo de trabajo](how-to-create-a-workflow.md)  
+ [Cómo: Crear un flujo de trabajo](how-to-create-a-workflow.md)  
  Describe cómo crear flujos de trabajo de diagrama de flujo, secuenciales y de máquina de estados mediante actividades integradas y las actividades personalizadas del tutorial anterior.  
   
- [Filtrar para ejecutar un flujo de trabajo](how-to-run-a-workflow.md)  
+ [Cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)  
  Describe cómo invocar un flujo de trabajo de un entorno del host, cómo entran datos en un flujo de trabajo y salen de él, y cómo reanudar los marcadores.  
   
- [Filtrar para crear y ejecutar un flujo de trabajo de larga duración](how-to-create-and-run-a-long-running-workflow.md)  
+ [Cómo: Crear y ejecutar una larga ejecución de flujo de trabajo](how-to-create-and-run-a-long-running-workflow.md)  
  Describe cómo agregar la persistencia a una aplicación de flujo de trabajo.  
   
- [Filtrar para crear un participante de seguimiento personalizado](how-to-create-a-custom-tracking-participant.md)  
+ [Cómo: Crear un participante de seguimiento personalizados](how-to-create-a-custom-tracking-participant.md)  
  Describe cómo crear el participante de seguimiento personalizado y el perfil de seguimiento.  
   
- [Filtrar para hospedar varias versiones de un flujo de trabajo en paralelo](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
+ [Cómo: Hospedar varias versiones de un flujo de trabajo paralelo](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
  Describe cómo usar `WorkflowIdentity` para hospedar varias versiones de un flujo de trabajo en paralelo.  
   
- [Filtrar para actualizar la definición de una instancia de flujo de trabajo en ejecución](how-to-update-the-definition-of-a-running-workflow-instance.md)  
+ [Cómo: Actualizar la definición de una instancia de flujo de trabajo de ejecución](how-to-update-the-definition-of-a-running-workflow-instance.md)  
  Describe cómo usar la actualización dinámica para modificar las instancias de flujo de trabajo en ejecución.  
   
 ## <a name="see-also"></a>Vea también

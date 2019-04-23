@@ -3,10 +3,10 @@ title: <clientCertificate> de <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
 ms.openlocfilehash: 5abf0a99beff1b9fb3655cb82d74484f3b88237f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216462"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate > de \<clientCredentials > elemento
@@ -61,7 +61,7 @@ Define un certificado X.509 que se usa para autenticar un cliente en un servicio
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Filtrar para especificar valores de credenciales de cliente](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Cómo: Especificar los valores de credencial de cliente](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)
-- [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -1,15 +1,15 @@
 ---
-title: Filtrar para agregar detectabilidad mediante programación a un cliente y un servicio de WCF
+title: Procedimiento para agregar detectabilidad mediante programación a un cliente y un servicio de WCF
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
 ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336595"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Filtrar para agregar detectabilidad mediante programación a un cliente y un servicio de WCF
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedimiento para agregar detectabilidad mediante programación a un cliente y un servicio de WCF
 En este tema se explica cómo hacer que un servicio de Windows Communication Foundation (WCF) que pueda detectar. Se basa en el [autohospedar](https://go.microsoft.com/fwlink/?LinkId=145523) ejemplo.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Para configurar el ejemplo de servicio de host automático existente repara para la detección  
@@ -58,7 +58,7 @@ En este tema se explica cómo hacer que un servicio de Windows Communication Fou
   
 1. Agregue a la solución una aplicación de consola nueva denominada `DiscoveryClientApp`.  
   
-2. Agregue una referencia a `System.ServiceModel.dll` y `System.ServiceModel.Discovery.dll`  
+2. Agregue una referencia a `System.ServiceModel.dll` y `System.ServiceModel.Discovery.dll`.  
   
 3. Copie los archivos GeneratedClient.cs y App.config del proyecto de cliente existente en el nuevo proyecto DiscoveryClientApp. Para ello, haga clic en los archivos en el **el Explorador de soluciones**, seleccione **copia**y, a continuación, seleccione el **DiscoveryClientApp** del proyecto, haga clic en y seleccione **Pegar**.  
   
@@ -343,4 +343,4 @@ namespace DiscoveryClientApp
 ## <a name="see-also"></a>Vea también
 
 - [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Modelo de objetos de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+- [Modelo de objetos de detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

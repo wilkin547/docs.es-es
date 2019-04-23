@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer el color de un lápiz
+title: Procedimiento para establecer el color de un lápiz
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
 ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213420"
 ---
-# <a name="how-to-set-the-color-of-a-pen"></a>Filtrar para establecer el color de un lápiz
+# <a name="how-to-set-the-color-of-a-pen"></a>Procedimiento para establecer el color de un lápiz
 En este ejemplo se cambia el color de preexistente <xref:System.Drawing.Pen> objeto  
   
 ## <a name="example"></a>Ejemplo  
@@ -36,6 +36,6 @@ En este ejemplo se cambia el color de preexistente <xref:System.Drawing.Pen> obj
 
 - <xref:System.Drawing.Pen>
 - [Introducción a la programación de gráficos](getting-started-with-graphics-programming.md)
-- [Filtrar para crear un lápiz](how-to-create-a-pen.md)
+- [Cómo: Crear un lápiz](how-to-create-a-pen.md)
 - [Utilizar lápiz para dibujar líneas y formas](using-a-pen-to-draw-lines-and-shapes.md)
 - [Lápices, líneas y rectángulos en GDI+](pens-lines-and-rectangles-in-gdi.md)

@@ -13,10 +13,10 @@ ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337700"
 ---
 # <a name="applying-attributes"></a>Aplicar atributos
@@ -55,7 +55,7 @@ Para aplicar un atributo a un elemento del código se puede utilizar el proceso 
 ## <a name="see-also"></a>Vea también
 
 - [Atributos](../../../docs/standard/attributes/index.md)
-- [Recuperar información almacenada en atributos](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
+- [Retrieving Information Stored in Attributes](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)
 - [Conceptos](/cpp/windows/attributed-programming-concepts)
 - [Atributos (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
 - [Información general sobre los atributos (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

@@ -12,10 +12,10 @@ ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddddc746eb29c526adb8a15fc6ac40acc22954cf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337232"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Procedimiento para examinar y crear instancias de tipos genéricos mediante la reflexión
@@ -127,6 +127,6 @@ La información sobre los tipos genéricos se obtiene de la misma manera que la 
 
 - <xref:System.Type>
 - <xref:System.Reflection.MethodInfo>
-- [Reflexión y tipos genéricos](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
-- [Ver información de tipos](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Reflection and Generic Types](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) (Reflexión y tipos genéricos)
+- [Viewing Type Information](../../../docs/framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)
 - [Genéricos](../../../docs/standard/generics/index.md)

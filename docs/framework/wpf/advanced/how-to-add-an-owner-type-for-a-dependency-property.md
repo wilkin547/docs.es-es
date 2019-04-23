@@ -1,5 +1,5 @@
 ---
-title: Filtrar Agregar un tipo de propietario para una propiedad de dependencia
+title: Procedimiento Agregar un tipo de propietario para una propiedad de dependencia
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
 ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217099"
 ---
-# <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Filtrar Agregar un tipo de propietario para una propiedad de dependencia
+# <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Procedimiento Agregar un tipo de propietario para una propiedad de dependencia
 En este ejemplo se muestra cómo agregar una clase como un propietario de una propiedad de dependencia registrada para un tipo diferente. Al hacerlo, el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lector y el sistema de propiedades son ambos puede reconocer la clase como un propietario de la propiedad adicional. Agregar como propietario, opcionalmente, permite que la clase que se agrega proporcionar metadatos específicos del tipo.  
   
  En el ejemplo siguiente, `StateProperty` se registra una propiedad por la `MyStateControl` clase. La clase `UnrelatedStateControl` agrega como propietario de la `StateProperty` utilizando el <xref:System.Windows.DependencyProperty.AddOwner%2A> método, específicamente con la firma que permite nuevos metadatos para la propiedad de dependencia tal como existe en el tipo de adición. Tenga en cuenta que se debe proporcionar [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] descriptores de acceso para la propiedad similar del ejemplo se muestra en el [implementar una propiedad de dependencia](how-to-implement-a-dependency-property.md) ejemplo, así como volver a exponer el identificador de propiedad de dependencia en la clase que se va a agregar como propietario.  

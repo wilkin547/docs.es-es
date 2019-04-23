@@ -6,10 +6,10 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340495"
 ---
 # <a name="multimedia-overview"></a>Información general sobre multimedia
@@ -99,7 +99,7 @@ Las características multimedia de [!INCLUDE[TLA#tla_winclient](../../../../incl
 ### <a name="controlling-mediaplayer"></a>Control de MediaPlayer  
  Dado que <xref:System.Windows.Media.MediaPlayer> es sin estado, hay solo dos formas de controlar la reproducción multimedia.  
   
-1. Métodos de control interactivos. En su lugar en el modo independiente (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> propiedad).  
+1. Métodos de control interactivos. En su lugar en el modo independiente (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> propiedad).  
   
 2. <xref:System.Windows.Media.MediaClock>. Vigente cuando el elemento multimedia tiene un <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   

@@ -1,18 +1,18 @@
 ---
-title: Filtrar para establecer el texto mostrado por un control de formularios Windows Forms mediante el diseñador
+title: Procedimiento para establecer el texto mostrado por un control de formularios Windows Forms mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], setting caption
 - Windows Forms, setting the text displayed
 ms.assetid: 9d18e0e0-f17f-4074-837d-e67ceeeaa89d
 ms.openlocfilehash: a0f567befb1e0c323dd16fffedec279ff836cbf8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337960"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer"></a>Filtrar para establecer el texto mostrado por un control de formularios Windows Forms mediante el diseñador
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer"></a>Procedimiento para establecer el texto mostrado por un control de formularios Windows Forms mediante el diseñador
 Controles de formularios Windows Forms normalmente muestran algún texto relacionado con la función principal del control. Por ejemplo, un <xref:System.Windows.Forms.Button> control normalmente muestra un título que indica qué acción se realizará cuando se hace clic en el botón. Para todos los controles, puede establecer o devolver el texto usando la propiedad <xref:System.Windows.Forms.Control.Text%2A>. Puede cambiar la fuente usando la propiedad <xref:System.Windows.Forms.Control.Font%2A>.  
   
 ### <a name="to-set-the-text-and-font-with-the-designer"></a>Para establecer el texto y la fuente con el diseñador  
@@ -27,6 +27,6 @@ Controles de formularios Windows Forms normalmente muestran algún texto relacio
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para establecer el texto mostrado por un control de formularios Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Cómo: Establecer el texto mostrado por un Windows Forms Control](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Utilizar fuentes y texto](../advanced/using-fonts-and-text.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

@@ -1,18 +1,18 @@
 ---
-title: Filtrar para controlar la cantidad de datos relacionados que se recupera
+title: Procedimiento para controlar la cantidad de datos relacionados que se recupera
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
 ms.openlocfilehash: dd59c09185eab003274614dcc30393b060e6b7c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215448"
 ---
-# <a name="how-to-control-how-much-related-data-is-retrieved"></a>Filtrar para controlar la cantidad de datos relacionados que se recupera
+# <a name="how-to-control-how-much-related-data-is-retrieved"></a>Procedimiento para controlar la cantidad de datos relacionados que se recupera
 Utilice el método <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> para especificar qué datos relacionados con el destino principal deben recuperarse al mismo tiempo. Por ejemplo, si sabe que va a necesitar información sobre los pedidos de los clientes, puede utilizar <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> para asegurarse de que la información de los pedidos se va a recuperar al mismo tiempo que la información de los clientes. Con este enfoque, sólo se requiere un viaje a la base de datos para ambos conjuntos de información.  
   
 > [!NOTE]
@@ -26,4 +26,4 @@ Utilice el método <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> para espe
   
 ## <a name="see-also"></a>Vea también
 
-- [Consultar la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Consulta de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

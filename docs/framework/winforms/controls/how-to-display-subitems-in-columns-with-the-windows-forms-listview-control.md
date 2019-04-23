@@ -1,5 +1,5 @@
 ---
-title: Filtrar para mostrar subelementos en columnas con el control ListView de formularios Windows Forms
+title: Procedimiento para mostrar subelementos en columnas con el control ListView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - subitems
 ms.assetid: e465f044-cde7-4fd9-a687-788a73a0f554
 ms.openlocfilehash: 318521cc1377be89ef54706d80c8b2990a6ba1b8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339299"
 ---
-# <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>Filtrar para mostrar subelementos en columnas con el control ListView de formularios Windows Forms
+# <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>Procedimiento para mostrar subelementos en columnas con el control ListView de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.ListView> control puede mostrar texto adicional o subelementos, para cada elemento de la vista de detalles. La primera columna muestra el texto del elemento, por ejemplo un número de empleado. La segunda, terceros y posteriores columnas muestran el primero, segundo y siguientes subelementos asociados.  
   
 ### <a name="to-add-subitems-to-a-list-item"></a>Para agregar subelementos a un elemento de lista  
@@ -31,8 +31,8 @@ Los formularios de Windows <xref:System.Windows.Forms.ListView> control puede mo
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre el control ListView](listview-control-overview-windows-forms.md)
-- [Filtrar para agregar y quitar elementos con el control ListView de formularios Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Filtrar para agregar columnas al control ListView de formularios Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Filtrar para mostrar iconos del control ListView de formularios Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [Filtrar para agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Información general del control ListView](listview-control-overview-windows-forms.md)
+- [Cómo: Agregar y quitar elementos con el Control ListView de formularios de Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Cómo: Agregar columnas al Control de ListView de Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Cómo: Mostrar iconos para el Control ListView de formularios de Windows](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Cómo: Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

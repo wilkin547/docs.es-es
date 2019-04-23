@@ -5,10 +5,10 @@ ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 408219307015d5c39cb581b3884ed9810f4c0566
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216358"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (Referencia de la API no administrada)
@@ -21,7 +21,7 @@ Admite el módulo de creación y verificación de licencias Authenticode XrML.
  [_AxlPublicKeyBlobToPublicKeyToken (Función)](../../../../docs/framework/unmanaged-api/authenticode/axlpublickeyblobtopublickeytoken-function.md)  
  Calcula el token de clave pública del nombre seguro a partir de un formato CSP PUBLICKEYBLOB.  
   
- [Función _AxlRSAKeyValueToPublicKeyToken](../../../../docs/framework/unmanaged-api/authenticode/axlrsakeyvaluetopublickeytoken-function.md)  
+ [_AxlRSAKeyValueToPublicKeyToken (Función)](../../../../docs/framework/unmanaged-api/authenticode/axlrsakeyvaluetopublickeytoken-function.md)  
  Convierte un blob Modulus y Exponent en un token de clave pública de nombre seguro.  
   
  [CertFreeAuthenticodeSignerInfo (Función)](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md)  
@@ -36,12 +36,12 @@ Admite el módulo de creación y verificación de licencias Authenticode XrML.
  [CertVerifyAuthenticodeLicense (Función)](../../../../docs/framework/unmanaged-api/authenticode/certverifyauthenticodelicense-function.md)  
  Comprueba la validez de una licencia Authenticode XrML.  
   
- [AXL_AUTHENTICODE_SIGNER_INFO (Estructura)](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)  
+ [AXL_AUTHENTICODE_SIGNER_INFO (estructura)](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)  
  Define la información del firmante de Authenticode.  
   
- [AXL_AUTHENTICODE_TIMESTAMPER_INFO (Estructura)](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)  
+ [AXL_AUTHENTICODE_TIMESTAMPER_INFO (estructura)](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)  
  Define la información del autor de la marca de hora de Authenticode.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de la API no administrada](../../../../docs/framework/unmanaged-api/index.md)
+- [Referencia de API no administrada](../../../../docs/framework/unmanaged-api/index.md)

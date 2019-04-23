@@ -9,10 +9,10 @@ api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 6dd101a3-44ad-4143-b228-772156f9b8ff
 ms.openlocfilehash: 3f6413558ff1f259e497c6a1c31eb2664f70cc48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213721"
 ---
 # <a name="savetohistory-function-wpf-unmanaged-api-reference"></a>SaveToHistory (función) (referencia de API no administrada de WPF)
@@ -37,7 +37,7 @@ HRESULT SaveToHistory(
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [requisitos del sistema de .NET Framework](../../get-started/system-requirements.md).  
   
- **DLL:**  
+ **ARCHIVO DLL:**  
   
  En .NET Framework 3.0 y 3.5: PresentationHostDLL.dll  
   

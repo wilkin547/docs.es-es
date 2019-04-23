@@ -10,10 +10,10 @@ helpviewer_keywords:
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
 ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336192"
 ---
 # <a name="textelement-content-model-overview"></a>Información general sobre el modelo de contenido de TextElement
@@ -57,9 +57,9 @@ Esta introducción del modelo de contenido describe el contenido compatible con 
 ## <a name="working-with-textelement-content-programmatically"></a>Trabajar con contenido de TextElement mediante programación  
  El contenido de un <xref:System.Windows.Documents.TextElement> está formado por las colecciones de modo que manipular mediante programación el contenido de <xref:System.Windows.Documents.TextElement> objetos se realiza cuando se trabaja con estas colecciones. Hay tres colecciones diferentes usadas por <xref:System.Windows.Documents.TextElement> -las clases derivadas:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Representa una colección de elementos <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> define el contenido secundario permitido de la <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, y <xref:System.Windows.Controls.TextBlock> elementos.  
+-   <xref:System.Windows.Documents.InlineCollection>: Representa una colección de elementos <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> define el contenido secundario permitido de los elementos <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> y <xref:System.Windows.Controls.TextBlock>.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Representa una colección de elementos <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> define el contenido secundario permitido de la <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, y <xref:System.Windows.Documents.Figure> elementos.  
+-   <xref:System.Windows.Documents.BlockCollection>: Representa una colección de elementos <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> define el contenido secundario permitido de los elementos <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> y <xref:System.Windows.Documents.Figure>.  
   
 -   <xref:System.Windows.Documents.ListItemCollection>: Un elemento de contenido dinámico que representa un elemento de contenido determinado en un ordenada o desordenada <xref:System.Windows.Documents.List>.  
   

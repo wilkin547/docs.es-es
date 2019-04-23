@@ -7,10 +7,10 @@ helpviewer_keywords:
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
 ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336842"
 ---
 # <a name="how-to-start-services"></a>Procedimiento para iniciar servicios
@@ -80,5 +80,5 @@ Después de instalar un servicio, debe iniciarse. Al iniciarse, llama al método
 ## <a name="see-also"></a>Vea también
 
 - [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Procedimiento para crear servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Procedimiento para agregar instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Cómo: Creación de servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Cómo: Adición de instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

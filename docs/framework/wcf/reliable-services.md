@@ -9,10 +9,10 @@ helpviewer_keywords:
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
 ms.openlocfilehash: a617100e46d4bcafb9325efa99c255f2f8ee5981
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216774"
 ---
 # <a name="reliable-services"></a>Servicios de confianza
@@ -46,5 +46,5 @@ Las colas y sesiones confiables son las características de Windows Communicatio
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general de sesiones confiables](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
-- [Las colas en WCF](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Información general de sesiones de confianza](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+- [Colas en WCF](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

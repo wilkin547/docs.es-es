@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 9adcb39504cc2b5189f0c65cc5603c149d1483f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68fd5d705cb2f38e00e90c211111ff34d23f3b10
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572622"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59335815"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Procedimiento para especificar el contexto de seguridad de los servicios
 De forma predeterminada, los servicios se ejecutan en un contexto de seguridad diferente al del usuario que ha iniciado sesión. Los servicios se ejecutan en el contexto de la cuenta del sistema predeterminado, llamada `LocalSystem`, que les da diferentes privilegios de acceso a los recursos del sistema que el usuario. Puede cambiar este comportamiento para especificar una cuenta de usuario diferente bajo la cual se debe ejecutar el servicio.  
@@ -35,16 +35,17 @@ De forma predeterminada, los servicios se ejecutan en un contexto de seguridad d
   
 ### <a name="to-specify-the-security-context-for-a-service"></a>Para especificar el contexto de seguridad de un servicio  
   
-1.  Después de crear su servicio, agregue los instaladores necesarios para ello. Para obtener más información, vea [Cómo: Agregar instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1. Después de crear su servicio, agregue los instaladores necesarios para ello. Para obtener más información, vea [Cómo: Agregar instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-2.  En el diseñador, acceda a la clase `ProjectInstaller` y haga clic en el instalador del proceso de servicio para el servicio con el que está trabajando.  
+2. En el diseñador, acceda a la clase `ProjectInstaller` y haga clic en el instalador del proceso de servicio para el servicio con el que está trabajando.  
   
     > [!NOTE]
     >  Para cada aplicación de servicio, hay al menos dos componentes de instalación en la clase `ProjectInstaller`: uno que instala los procesos para todos los servicios del proyecto y un instalador para cada servicio que contiene la aplicación. En este caso, desea seleccionar <xref:System.ServiceProcess.ServiceProcessInstaller>.  
   
-3.  En la ventana **Propiedades**, establezca <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> al valor adecuado.  
+3. En la ventana **Propiedades**, establezca <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> al valor adecuado.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Cómo: Adición de instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
 - [Cómo: Creación de servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)

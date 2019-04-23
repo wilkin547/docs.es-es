@@ -1,15 +1,15 @@
 ---
-title: Filtrar para configurar el seguimiento con WorkflowServiceHost
+title: Procedimiento para configurar el seguimiento con WorkflowServiceHost
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
 ms.openlocfilehash: e0631cdb47bc88f7f588f4dfe6c44ea3d44f4e60
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336569"
 ---
-# <a name="how-to-configure-tracking-with-workflowservicehost"></a>Filtrar para configurar el seguimiento con WorkflowServiceHost
+# <a name="how-to-configure-tracking-with-workflowservicehost"></a>Procedimiento para configurar el seguimiento con WorkflowServiceHost
 En este tema, se explica cómo configurar el seguimiento para un flujo de trabajo [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] hospedado en <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Se configura a través de un archivo Web.config especificando un comportamiento de servicio.  
   
 ### <a name="configure-tracking-in-configuration"></a>Configurar el seguimiento en la configuración  
@@ -70,6 +70,6 @@ En este tema, se explica cómo configurar el seguimiento para un flujo de trabaj
   
 ## <a name="see-also"></a>Vea también
 
-- [Configuración simplificada de los servicios de WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
+- [Configuración simplificada de los servicios WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
 - [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Perfiles de seguimiento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

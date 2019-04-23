@@ -1,5 +1,5 @@
 ---
-title: Filtrar Llamar a un procedimiento que no devuelve un valor (Visual Basic)
+title: Procedimiento Llamar a un procedimiento que no devuelve un valor (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
 ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335477"
 ---
-# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Filtrar Llamar a un procedimiento que no devuelve un valor (Visual Basic)
+# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Procedimiento Llamar a un procedimiento que no devuelve un valor (Visual Basic)
 Un `Sub` procedimiento no devuelve un valor al código de llamada. Llama de forma explícita con una instrucción independiente que realiza la llamada. No se puede llamar a simplemente utilizando su nombre dentro de una expresión.  
   
 ### <a name="to-call-a-sub-procedure"></a>Para llamar a un procedimiento Sub  
@@ -33,9 +33,9 @@ Un `Sub` procedimiento no devuelve un valor al código de llamada. Llama de form
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
 - <xref:System.ArgumentException>
 - [Procedimientos](./index.md)
-- [Procedimientos Sub](./sub-procedures.md)
+- [Subprocedimientos](./sub-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
-- [Sub (Instrucción)](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Filtrar para crear un procedimiento](./how-to-create-a-procedure.md)
-- [Filtrar para llamar a un procedimiento que devuelve un valor](./how-to-call-a-procedure-that-returns-a-value.md)
-- [Filtrar Llamar a un controlador de eventos en Visual Basic](./how-to-call-an-event-handler.md)
+- [Sub (instrucción)](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Cómo: Crear un procedimiento](./how-to-create-a-procedure.md)
+- [Cómo: Llamar a un procedimiento que devuelve un valor](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Cómo: Llamar a un controlador de eventos en Visual Basic](./how-to-call-an-event-handler.md)

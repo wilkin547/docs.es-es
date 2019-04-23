@@ -1,18 +1,18 @@
 ---
-title: Filtrar para ejecutar una consulta que devuelve resultados PrimitiveType
+title: Procedimiento para ejecutar una consulta que devuelve resultados PrimitiveType
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
 ms.openlocfilehash: 78d6c9287c5c69c41bd2f50abd8d57dcd1cb4e06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337583"
 ---
-# <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>Filtrar para ejecutar una consulta que devuelve resultados PrimitiveType
+# <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>Procedimiento para ejecutar una consulta que devuelve resultados PrimitiveType
 En este tema se muestra cómo ejecutar un comando en un modelo conceptual usando un objeto <xref:System.Data.EntityClient.EntityCommand>, y cómo recuperar los resultados de <xref:System.Data.Metadata.Edm.PrimitiveType> usando un objeto <xref:System.Data.EntityClient.EntityDataReader>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  

@@ -3,10 +3,10 @@ title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
 ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334892"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
@@ -29,13 +29,13 @@ END
  Es un marcador de posición que indica que se pueden usar varias cláusulas WHEN `Boolean_expression` THEN `result_expression` .  
   
  THEN `result_expression`  
- Es la expresión devuelta cuando `Boolean_expression` se evalúa como `true`. `result expression` Es cualquier expresión válida.  
+ Es la expresión devuelta cuando `Boolean_expression` se evalúa como `true`. `result expression` es cualquier expresión válida.  
   
  ELSE `else_result_expression`  
- Expresión que se devuelve si ninguna operación de comparación se evalúa como `true`. Si se omite este argumento y ninguna comparación se evalúa como `true`, CASE devuelve NULL. `else_result_expression` Es cualquier expresión válida. Los tipos de datos de `else_result_expression` y cualquier `result_expression` deben ser iguales o deben ser una conversión implícita.  
+ Expresión que se devuelve si ninguna operación de comparación se evalúa como `true`. Si se omite este argumento y ninguna comparación se evalúa como `true`, CASE devuelve NULL. `else_result_expression` es cualquier expresión válida. Los tipos de datos de `else_result_expression` y cualquier `result_expression` deben ser iguales o deben ser una conversión implícita.  
   
  WHEN `Boolean_expression`  
- Es la expresión `Boolean` que se evalúa cuando se usa el formato CASE buscado. `Boolean_expression` se trata de cualquier `Boolean` expresión.  
+ Es la expresión `Boolean` que se evalúa cuando se usa el formato CASE buscado. `Boolean_expression` es cualquier expresión `Boolean` válida.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve el tipo de prioridad más alto del conjunto de tipos de `result_expression` y de la expresión `else_result_expression`opcional.  

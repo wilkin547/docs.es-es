@@ -3,10 +3,10 @@ title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
 ms.openlocfilehash: 24cf36aba81b5bb31eaac475361e2d07bc6f8b12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215994"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
@@ -96,5 +96,5 @@ Este elemento define el tipo en el que el entorno de hospedaje de servicio crea 
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [Hospedaje](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Hospedar aplicaciones de WPF](../../../../../docs/framework/wcf/feature-details/hosting.md)
 - [Servicios WCF y ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

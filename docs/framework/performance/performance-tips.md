@@ -10,10 +10,10 @@ ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216475"
 ---
 # <a name="net-performance-tips"></a>Sugerencias para mejorar el rendimiento de .NET
@@ -34,11 +34,11 @@ El término *rendimiento* suele hacer referencia a la velocidad de ejecución de
   
 -   [Aplicaciones administradas de alto rendimiento de escritura: Un manual](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [Conceptos básicos del recolector de elementos no utilizados y sugerencias de rendimiento](https://go.microsoft.com/fwlink/?LinkId=99296)  
+-   [Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=99296) (Conceptos básicos del recolector de elementos no utilizados y sugerencias de rendimiento)  
   
--   [Performance Tips and Tricks en aplicaciones .NET](https://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [Performance Tips and Tricks in .NET Applications](https://go.microsoft.com/fwlink/?LinkId=99297) (Sugerencias y trucos de rendimiento en aplicaciones .NET)  
 
--   [Alicientes de rendimiento de Mariani](https://go.microsoft.com/fwlink/?LinkId=115679)  
+-   [Rico Mariani's Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679) (Curiosidades sobre rendimiento de Rico Mariani)  
 
 -   [Blog de Vance Morrison](https://blogs.msdn.microsoft.com/vancem/)
   

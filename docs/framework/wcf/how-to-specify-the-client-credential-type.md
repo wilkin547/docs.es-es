@@ -1,5 +1,5 @@
 ---
-title: Filtrar para especificar el tipo de credencial de cliente
+title: Procedimiento para especificar el tipo de credencial de cliente
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
 ms.openlocfilehash: 775c6a297047c7a0e16db091f9a22686fdb01efb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339403"
 ---
-# <a name="how-to-specify-the-client-credential-type"></a>Filtrar para especificar el tipo de credencial de cliente
+# <a name="how-to-specify-the-client-credential-type"></a>Procedimiento para especificar el tipo de credencial de cliente
 Después de establecer un modo de seguridad (ya sea transporte o mensaje), tiene la opción de establecer el tipo de credencial de cliente. Esta propiedad especifica qué tipo de credencial debe proporcionar el cliente al servicio para la autenticación. Para obtener más información acerca de cómo establecer el modo de seguridad (un paso necesario antes de establecer tipo de credencial de cliente), consulte [Cómo: Establecer el modo de seguridad](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>Para establecer el tipo de credencial de cliente en el código  
@@ -60,4 +60,4 @@ Después de establecer un modo de seguridad (ya sea transporte o mensaje), tiene
 ## <a name="see-also"></a>Vea también
 
 - [Seguridad de servicios](../../../docs/framework/wcf/securing-services.md)
-- [Filtrar para establecer el modo de seguridad](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Cómo: Establecer el modo de seguridad](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

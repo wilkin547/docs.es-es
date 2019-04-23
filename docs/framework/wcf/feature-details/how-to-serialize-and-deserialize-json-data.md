@@ -1,15 +1,15 @@
 ---
-title: Filtrar para serializar y deserializar datos JSON
+title: Procedimiento para serializar y deserializar datos JSON
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
 ms.openlocfilehash: 7edce66a23021fa03a6f98b3b847a5b671c17124
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336959"
 ---
-# <a name="how-to-serialize-and-deserialize-json-data"></a>Filtrar Serializar y deserializar datos JSON
+# <a name="how-to-serialize-and-deserialize-json-data"></a>Procedimiento Serializar y deserializar datos JSON
 JSON (notación de objetos JavaScript) es un formato de codificación de datos eficaz que permite intercambios rápidos de cantidades pequeñas de datos entre los exploradores de cliente y servicios web con AJAX (JavaScript asincrónico y XML) habilitado.  
   
  Este artículo muestra cómo serializar objetos de tipo .NET en datos codificados por JSON y, a continuación, deserializar los datos en el formato JSON en instancias de tipos. NET. Este ejemplo utiliza un contrato de datos para mostrar la serialización y deserialización de definido por el usuario `Person` tipo y usa <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 9c84afced8c98530e6d6b02c1cde69e93bd8d7e9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58018747"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59337284"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Lo obsoleto en la biblioteca de clases de .NET Framework
 .NET Framework cambia con el tiempo. Cada nueva versión agrega nuevos tipos y miembros de tipos que proporcionan una nueva funcionalidad. Los tipos existentes y sus miembros también cambian con el tiempo. Por ejemplo, algunos tipos pierden importancia cuando la tecnología que admiten es reemplazada por una nueva y algunos métodos son sustituidos por métodos más nuevos que resultan más cómodos o están más completos.  
@@ -42,9 +42,9 @@ ms.locfileid: "58018747"
   
  Puede decidir no volver a compilar un código existente con una versión posterior de .NET Framework. En su lugar, puede especificar la versión de .NET Framework con la que se ejecuta el código compilado existente. Por ejemplo, suponga que tiene una aplicación denominada app1.exe que se compiló con [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], pero desea que la aplicación se ejecute con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Para ello, siga estos pasos:  
   
-1.  Cree un archivo de configuración para el ejecutable principal y denomínelo *appName*.exe.config, donde *appName* es el nombre del ejecutable de la aplicación. Para la aplicación denominada app1.exe en nuestro ejemplo, va a crear un archivo de configuración denominado app1.exe.config.  
+1. Cree un archivo de configuración para el ejecutable principal y denomínelo *appName*.exe.config, donde *appName* es el nombre del ejecutable de la aplicación. Para la aplicación denominada app1.exe en nuestro ejemplo, va a crear un archivo de configuración denominado app1.exe.config.  
   
-2.  Agregue lo siguiente al archivo de configuración.  
+2. Agregue lo siguiente al archivo de configuración.  
   
     ```xml  
     <configuration>  
@@ -82,4 +82,5 @@ ms.locfileid: "58018747"
  [Lista de API obsoletas en .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>Vea también
+
 - [\<supportedRuntime > Elemento](../configure-apps/file-schema/startup/supportedruntime-element.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Dibujar un rectángulo
+title: Procedimiento Dibujar un rectángulo
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawing [WPF], rectangles
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
 ms.openlocfilehash: 261026b994b432565928b38ff1657115ff7cbe4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217359"
 ---
-# <a name="how-to-draw-a-rectangle"></a>Filtrar Dibujar un rectángulo
+# <a name="how-to-draw-a-rectangle"></a>Procedimiento Dibujar un rectángulo
 En este ejemplo se muestra cómo dibujar un rectángulo con el <xref:System.Windows.Shapes.Rectangle> elemento.  
   
  Para dibujar un rectángulo, cree un <xref:System.Windows.Shapes.Rectangle> elemento y especifique su <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A>. Para pintar el interior del rectángulo, establezca su <xref:System.Windows.Shapes.Shape.Fill%2A>. Para dar un contorno de rectángulo, utilice su <xref:System.Windows.Shapes.Shape.Stroke%2A> y <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> propiedades.  

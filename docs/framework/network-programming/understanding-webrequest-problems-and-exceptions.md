@@ -2,12 +2,12 @@
 title: Información acerca de los problemas y excepciones del elemento WebRequest
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 55ef0b0f5260c986cad01d2854202dea3755ace7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a6dc06ed7abdbb6a28f9d6c09eda079157493d9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587533"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59215019"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Información acerca de los problemas y excepciones del elemento WebRequest
 <xref:System.Net.WebRequest> y sus clases derivadas (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> y <xref:System.Net.FileWebRequest>) generan excepciones para indicar una condición anormal. A veces, la resolución de estos problemas no es obvia.  
@@ -15,7 +15,7 @@ ms.locfileid: "54587533"
 ## <a name="solutions"></a>Soluciones  
  Examine la propiedad <xref:System.Net.WebException.Status%2A> de la <xref:System.Net.WebException> para determinar el problema. En la tabla siguiente se muestran varios valores de estado y algunas posibles soluciones.  
   
-|Estado|Detalles|Soluciones|  
+|Situación|Detalles|Soluciones|  
 |------------|-------------|--------------|  
 |<xref:System.Net.WebExceptionStatus.SendFailure><br /><br /> o bien<br /><br /> <xref:System.Net.WebExceptionStatus.ReceiveFailure>|Hay un problema con el socket subyacente. Es posible que se haya restablecido la conexión.|Vuelva a conectarse y vuelva a enviar la solicitud.<br /><br /> Asegúrese de que tiene instalado el Service Pack más reciente.<br /><br /> Aumente el valor de la propiedad <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A?displayProperty=nameWithType>.<br /><br /> Establezca <xref:System.Net.HttpWebRequest.KeepAlive%2A?displayProperty=nameWithType> en `false`.<br /><br /> Aumente el número de conexiones máximas con la propiedad <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Compruebe la configuración de proxy.<br /><br /> Si usa SSL, asegúrese de que el proceso de servidor tiene permiso para obtener acceso al almacén de certificados.<br /><br /> Si envía una gran cantidad de datos, establezca <xref:System.Net.HttpWebRequest.AllowWriteStreamBuffering%2A> en `false`.|  
 |<xref:System.Net.WebExceptionStatus.TrustFailure>|No se pudo validar el certificado de servidor.|Intente abrir el identificador URI con Internet Explorer. Resuelva todas las alertas de seguridad que muestre Internet Explorer. Si no puede resolver las alertas de seguridad, puede crear una clase de directiva de certificados que implemente <xref:System.Net.ICertificatePolicy> que devuelva `true` y luego pasarla a <xref:System.Net.ServicePointManager.CertificatePolicy%2A>.<br /><br /> Vea <https://support.microsoft.com/?id=823177>.<br /><br /> Asegúrese de que el certificado de la entidad de certificación que firmó el certificado de servidor se ha agregado a la lista de entidades de certificación de confianza de Internet Explorer.<br /><br /> Asegúrese de que el nombre de host de la dirección URL coincide con el nombre común del certificado de servidor.|  
@@ -29,6 +29,7 @@ ms.locfileid: "54587533"
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|La respuesta del servidor no es una respuesta HTTP válida. Este problema se produce cuando .NET Framework detecta que la respuesta del servidor no es compatible con la RFC de HTTP 1.1. Este problema puede producirse si la respuesta contiene encabezados o delimitadores de encabezado incorrectos. RFC 2616 define HTTP 1.1 y el formato válido para la respuesta del servidor. Para más información, consulte [RFC 2616 - Hypertext Transfer Protocol -- HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388) (RFC 2616 - Protocolo de transferencia de hipertexto -- HTTP/1.1) en el sitio web de [Internet Engineering Task Force (IETF)](https://www.ietf.org/).|Obtenga un seguimiento de red de la transacción y examine los encabezados de la respuesta.<br /><br /> Si la aplicación requiere la respuesta del servidor sin analizar (podría tratarse de un problema de seguridad), establezca `useUnsafeHeaderParsing` en `true` en el archivo de configuración. Vea [\<httpWebRequest> (Elemento, Configuración de red)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.Dns>

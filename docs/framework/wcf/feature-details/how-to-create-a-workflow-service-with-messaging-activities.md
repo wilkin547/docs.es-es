@@ -1,15 +1,15 @@
 ---
-title: Filtrar para crear un servicio de flujo de trabajo con actividades de mensajería
+title: Procedimiento para crear un servicio de flujo de trabajo con actividades de mensajería
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
 ms.openlocfilehash: f5bb8df5936be1890bf744300daa7ccb68e341e3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337778"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Filtrar para crear un servicio de flujo de trabajo con actividades de mensajería
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procedimiento para crear un servicio de flujo de trabajo con actividades de mensajería
 En este tema, se describe cómo crear un servicio de flujo de trabajo simple mediante actividades de mensajería. Este tema se centra en los sistemas de creación de un servicio de flujo de trabajo compuesto solo por actividades de mensajería. En un servicio real, el flujo de trabajo contiene muchas otras actividades. El servicio implementa una operación denominada Eco, que toma una cadena y la devuelve al autor de la llamada. Este tema es el primero en una serie de dos temas. El siguiente tema [How To: Obtener acceso a un servicio desde un flujo de trabajo de aplicación](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) describe cómo crear una aplicación de flujo de trabajo que se puede llamar al servicio creado en este tema.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Para crear un proyecto de servicio de flujo de trabajo  
@@ -92,5 +92,5 @@ En este tema, se describe cómo crear un servicio de flujo de trabajo simple med
 ## <a name="see-also"></a>Vea también
 
 - [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Hospedar información general de servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [Hospedaje de información general de servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
 - [Actividades de mensajería](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

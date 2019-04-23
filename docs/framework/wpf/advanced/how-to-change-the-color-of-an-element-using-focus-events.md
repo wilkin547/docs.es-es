@@ -1,5 +1,5 @@
 ---
-title: Filtrar Cambiar el color de un elemento mediante eventos de foco
+title: Procedimiento Cambiar el color de un elemento mediante eventos de foco
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - elements [WPF], changing color of
 ms.assetid: 7e246802-3625-47a7-ae9d-c8a2a40fd040
 ms.openlocfilehash: 744963cc543110121a777e1d4c3cdcb3cec40d9e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217645"
 ---
-# <a name="how-to-change-the-color-of-an-element-using-focus-events"></a>Filtrar Cambiar el color de un elemento mediante eventos de foco
+# <a name="how-to-change-the-color-of-an-element-using-focus-events"></a>Procedimiento Cambiar el color de un elemento mediante eventos de foco
 En este ejemplo se muestra cómo cambiar el color de un elemento cuando recibe y pierde el foco mediante el uso de la <xref:System.Windows.UIElement.GotFocus> y <xref:System.Windows.UIElement.LostFocus> eventos.  
   
  Este ejemplo consta de un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivo y un archivo de código subyacente.  

@@ -1,18 +1,18 @@
 ---
-title: Filtrar para compilar una cadena de conexión EntityConnection
+title: Procedimiento para compilar una cadena de conexión EntityConnection
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
 ms.openlocfilehash: 335c85d5234df4dd00d0ee65b2077996411081b3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335685"
 ---
-# <a name="how-to-build-an-entityconnection-connection-string"></a>Filtrar para compilar una cadena de conexión EntityConnection
+# <a name="how-to-build-an-entityconnection-connection-string"></a>Procedimiento para compilar una cadena de conexión EntityConnection
 En este tema se muestra un ejemplo para generar una <xref:System.Data.EntityClient.EntityConnection>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  
@@ -32,5 +32,5 @@ En este tema se muestra un ejemplo para generar una <xref:System.Data.EntityClie
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar Usar EntityConnection con un contexto del objeto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738461(v=vs.100))
+- [Cómo: Usar EntityConnection con un contexto del objeto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738461(v=vs.100))
 - [Proveedor de EntityClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

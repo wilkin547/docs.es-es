@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer opciones de cuadrícula para todos los formularios Windows Forms
+title: Procedimiento para establecer opciones de cuadrícula para todos los formularios Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - snap to grid [Windows Forms], Windows Forms Designer
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
 ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336062"
 ---
-# <a name="how-to-set-grid-options-for-all-windows-forms"></a>Filtrar para establecer opciones de cuadrícula para todos los formularios Windows Forms
+# <a name="how-to-set-grid-options-for-all-windows-forms"></a>Procedimiento para establecer opciones de cuadrícula para todos los formularios Windows Forms
 Como que se convierten en acostumbrado a trabajar en el entorno de desarrollo de Visual Studio, puede establecer preferencias para todos los formularios y trabajar con los proyectos en el Diseñador de Windows Forms.  
   
 > [!NOTE]
@@ -31,13 +31,13 @@ Como que se convierten en acostumbrado a trabajar en el entorno de desarrollo de
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Organizar controles en formularios Windows Forms mediante guías de alineación](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [General, Diseñador de Windows Forms, Opciones (Cuadro de diálogo)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [Controles de Windows Forms](index.md)
-- [Filtrar para agregar controles a formularios Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Tutorial: Organizar controles en formularios de Windows Forms mediante líneas de ajuste](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [General, Diseñador de formularios de Windows, cuadro de diálogo Opciones](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [Controles de formularios Windows Forms](index.md)
+- [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
-- [Filtrar para establecer el orden de tabulación en formularios Windows Forms](how-to-set-the-tab-order-on-windows-forms.md)
-- [Filtrar para establecer el texto mostrado por un control de formularios Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Insertar controles en formularios Windows Forms](putting-controls-on-windows-forms.md)
+- [Cómo: Establecer el orden de tabulación en formularios de Windows](how-to-set-the-tab-order-on-windows-forms.md)
+- [Cómo: Establecer el texto mostrado por un Windows Forms Control](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Insertar controles en Windows Forms](putting-controls-on-windows-forms.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)

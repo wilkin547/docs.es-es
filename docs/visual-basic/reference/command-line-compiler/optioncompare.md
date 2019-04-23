@@ -10,10 +10,10 @@ helpviewer_keywords:
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
 ms.openlocfilehash: b88cba4d16c5a770a72b47868d11b16cbba6cae8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340443"
 ---
 # <a name="-optioncompare"></a>-optioncompare
@@ -62,5 +62,5 @@ vbc -optioncompare:binary projFile.vb
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Compare (Instrucción)](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Option Compare (instrucción)](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Valores predeterminados de Visual Basic, Proyectos, Opciones (Cuadro de diálogo)](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

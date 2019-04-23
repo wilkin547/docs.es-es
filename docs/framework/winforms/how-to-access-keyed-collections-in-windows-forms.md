@@ -1,5 +1,5 @@
 ---
-title: Filtrar para obtener acceso a colecciones con claves en formularios Windows Forms
+title: Procedimiento para obtener acceso a colecciones con claves en formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
 ms.openlocfilehash: fdd3a56ab9a267990bb0e832c0d4cc2af9334034
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214045"
 ---
-# <a name="how-to-access-keyed-collections-in-windows-forms"></a>Filtrar para obtener acceso a colecciones con claves en formularios Windows Forms
+# <a name="how-to-access-keyed-collections-in-windows-forms"></a>Procedimiento para obtener acceso a colecciones con claves en formularios Windows Forms
 -   Puede tener acceso a elementos de colección individuales por clave. Esta funcionalidad se ha agregado a muchas clases de colección que se suelen usar las aplicaciones de Windows Forms. En la lista siguiente muestra algunas de las clases de colección que tienen colecciones con claves accesible:  
   
 -   <xref:System.Windows.Forms.ListView.ListViewItemCollection>  
@@ -54,4 +54,4 @@ ms.locfileid: "59214045"
 ## <a name="see-also"></a>Vea también
 
 - [Introducción a los formularios Windows Forms](getting-started-with-windows-forms.md)
-- [Filtrar para agregar o quitar imágenes con el componente ImageList de formularios Windows Forms](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [Cómo: Agregar o quitar imágenes con el componente ImageList de formularios Windows Forms](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar un giro 3D mediante fotogramas clave (QuaternionAnimationUsingKeyFrames)
+title: Procedimiento Animar un giro 3D mediante fotogramas clave (QuaternionAnimationUsingKeyFrames)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D translations [WPF], animating [WPF], with key frames (QuaternionAnimationUsingKeyFrames)
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - animation [WPF], 3-D translations [WPF], with key frames (QuaternionAnimationUsingKeyFrames)
 ms.assetid: 09e5707b-7523-4a08-9aa7-bb13cbedccdf
 ms.openlocfilehash: 87176df26405a69cb2c3d63620def0575b750b52
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338025"
 ---
-# <a name="how-to-animate-a-3-d-rotation-using-key-frames-quaternionanimationusingkeyframes"></a>Filtrar Animar un giro 3D mediante fotogramas clave (QuaternionAnimationUsingKeyFrames)
+# <a name="how-to-animate-a-3-d-rotation-using-key-frames-quaternionanimationusingkeyframes"></a>Procedimiento Animar un giro 3D mediante fotogramas clave (QuaternionAnimationUsingKeyFrames)
 En el ejemplo siguiente, <xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames> se usa para hacer girar un objeto 3D. Esta animación usa los fotogramas clave siguientes:  
   
 1. <xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame> se usa para crear una interpolación lineal suave entre valores.  

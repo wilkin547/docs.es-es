@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652025"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59336153"
 ---
 # <a name="managed-execution-process"></a>proceso de ejecución administrada
 <a name="introduction"></a> El proceso de ejecución administrada incluye los pasos siguientes, que se describen en detalle más adelante en este tema:  
   
-1.  [Elegir un compilador](#choosing_a_compiler).  
+1. [Elegir un compilador](#choosing_a_compiler).  
   
      Para obtener los beneficios que proporciona Common Language Runtime, se deben utilizar uno o más compiladores de lenguaje orientados al tiempo de ejecución.  
   
-2.  [Compilar código a MSIL](#compiling_to_msil).  
+2. [Compilar código a MSIL](#compiling_to_msil).  
   
      La compilación convierte el código fuente en lenguaje intermedio de Microsoft (MSIL) y genera los metadatos necesarios.  
   
-3.  [Compilar MSIL a código nativo](#compiling_msil_to_native_code).  
+3. [Compilar MSIL a código nativo](#compiling_msil_to_native_code).  
   
      En tiempo de ejecución, un compilador Just-In-Time (JIT) convierte MSIL en código nativo. Durante esta compilación, el código debe pasar un proceso de comprobación que examina el MSIL y los metadatos para averiguar si el código garantiza la seguridad de tipos.  
   
-4.  [Ejecutar código](#running_code).  
+4. [Ejecutar código](#running_code).  
   
      Common Language Runtime proporciona la infraestructura que permite que la ejecución tenga lugar y los servicios que se pueden usar durante la ejecución.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "54652025"
   
  En Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] y [!INCLUDE[windowsver](../../includes/windowsver-md.md)], el cargador del sistema operativo comprueba los módulos administrados examinando un bit del encabezado de COFF. El bit que se establece indica un módulo administrado. Si el cargador detecta módulos administrados, carga mscoree.dll, y `_CorValidateImage` y `_CorImageUnloading` notifican al cargador cuándo se cargan y descargan imágenes del módulo administrado. `_CorValidateImage` lleva a cabo las acciones siguientes:  
   
-1.  Garantiza que el código es código administrado válido.  
+1. Garantiza que el código es código administrado válido.  
   
-2.  Cambia el punto de entrada en la imagen a un punto de entrada en el motor en tiempo de ejecución.  
+2. Cambia el punto de entrada en la imagen a un punto de entrada en el motor en tiempo de ejecución.  
   
  En las versiones de 64 bits de Windows, `_CorValidateImage` modifica la imagen que está en la memoria transformando el formato PE32 en PE32+.  
   

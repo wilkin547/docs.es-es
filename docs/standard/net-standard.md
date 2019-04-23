@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 83b5498ac6f585a8d2554377748836d88ce592d1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970888"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59335022"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -113,7 +113,7 @@ Para obtener más información, consulte [Modo de compatibilidad de .NET Framewo
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>Bibliotecas de .NET standard y Visual Studio
 
-Para crear bibliotecas de .NET Standard en Visual Studio, asegúrese de tener la [versión 15.3 de Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) o una posterior instalada en Windows, o [la versión 7.1 de Visual Studio para Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/) o una posterior instalada en macOS.
+Para crear bibliotecas de .NET Standard en Visual Studio, asegúrese de tener la [versión 15.3 de Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) o una posterior instalada en Windows, o [la versión 7.1 de Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o una posterior instalada en macOS.
 
 Si solo necesita consumir bibliotecas de .NET Standard 2.0 en sus proyectos, también puede hacerlo en Visual Studio 2015. Sin embargo, necesitará tener el cliente 3.6 de NuGet o uno posterior instalado. Puede descargar el cliente de NuGet para Visual Studio 2015 desde la página de [descargas de NuGet](https://www.nuget.org/downloads).
 

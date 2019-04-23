@@ -1,5 +1,5 @@
 ---
-title: Filtrar para representar manualmente gráficos almacenados en búfer
+title: Procedimiento para representar manualmente gráficos almacenados en búfer
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
 ms.openlocfilehash: 48dd1d76a42661df6ba642c032c991be4d6a2900
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339936"
 ---
-# <a name="how-to-manually-render-buffered-graphics"></a>Filtrar para representar manualmente gráficos almacenados en búfer
+# <a name="how-to-manually-render-buffered-graphics"></a>Procedimiento para representar manualmente gráficos almacenados en búfer
 Si administra sus propios gráficos almacenados en búfer, deberá poder crear y representar búferes de gráficos. Puede crear instancias de la clase <xref:System.Drawing.BufferedGraphics> que está asociada con las superficies de dibujo en pantalla mediante llamadas al método <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>. Este método crea una instancia <xref:System.Drawing.BufferedGraphics> que está asociada a una superficie de representación determinada, como un formulario o un control. Después de crear una instancia de <xref:System.Drawing.BufferedGraphics>, puede dibujar gráficos en el búfer que se representan mediante la propiedad <xref:System.Drawing.BufferedGraphics.Graphics%2A>. Después de haber realizado todas las operaciones de gráficos, puede copiar el contenido del búfer en la pantalla llamando al método <xref:System.Drawing.BufferedGraphics.Render%2A>.  
   
 > [!NOTE]
@@ -50,4 +50,4 @@ Si administra sus propios gráficos almacenados en búfer, deberá poder crear y
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphics>
 - [Gráficos de doble búfer](double-buffered-graphics.md)
-- [Filtrar para administrar manualmente gráficos almacenados en búfer](how-to-manually-manage-buffered-graphics.md)
+- [Cómo: Administrar manualmente gráficos almacenados en búfer](how-to-manually-manage-buffered-graphics.md)

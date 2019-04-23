@@ -5,10 +5,10 @@ helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
 ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335035"
 ---
 # <a name="extending-dispatchers"></a>Extensión de distribuidores
@@ -86,15 +86,15 @@ Los distribuidores son los responsables de extraer los mensajes entrantes de los
   
     -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> indica donde se escriben los eventos de auditoría.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> Controla si el servicio intenta suplantar mediante las credenciales proporcionadas por el mensaje entrante.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> controla si el servicio intenta suplantar mediante las credenciales proporcionadas por el mensaje entrante.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> Controla si los eventos de autenticación de mensajes correctos se escriben en el registro de eventos especificado por <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> controla si los eventos de autenticación de mensajes correctos se escriben en el registro de eventos especificado por <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> controles cómo <xref:System.Threading.Thread.CurrentPrincipal%2A> propiedad está establecida.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> controla cómo se establece la propiedad <xref:System.Threading.Thread.CurrentPrincipal%2A>.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> Especifica cómo se realiza la auditoría de eventos de autorización.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> especifica cómo se realiza la auditoría de eventos de autorización.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> Especifica si se suprimen las excepciones no críticas que se producen durante el proceso de registro.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> especifica si suprimir excepciones no críticas que producen durante el proceso del registro.  
   
  Normalmente, un comportamiento de servicio (un objeto que implementa <xref:System.ServiceModel.Dispatcher.DispatchRuntime>), un comportamiento de contrato (un objeto que implementa <xref:System.ServiceModel.Description.IServiceBehavior>) o un comportamiento de extremo (un objeto que implementa <xref:System.ServiceModel.Description.IContractBehavior>) pueden asignar objetos de extensión a una propiedad <xref:System.ServiceModel.Description.IEndpointBehavior> o insertarlos en una colección. Entonces, el objeto de comportamiento de instalación se agrega a la colección adecuada de comportamientos mediante programación o implementando un objeto <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personalizado para permitir insertar el comportamiento con un archivo de configuración de la aplicación.  
   
@@ -131,6 +131,6 @@ Los distribuidores son los responsables de extraer los mensajes entrantes de los
 
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [Filtrar para inspeccionar y modificar mensajes en el servicio](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
-- [Filtrar para inspeccionar o modificar parámetros](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [Filtrar para bloquear puntos de conexión en la empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [Cómo: Inspeccionar y modificar los mensajes en el servicio](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
+- [Cómo: Inspeccionar o modificar parámetros](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [Cómo: Bloqueo de puntos de conexión de la empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

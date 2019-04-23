@@ -16,10 +16,10 @@ ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340040"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consumir funciones DLL no administradas
@@ -73,6 +73,6 @@ La invocación de plataforma es un servicio que permite al código administrado 
 
 ## <a name="see-also"></a>Vea también
 
-- [Interoperar con código no administrado](../../../docs/framework/interop/index.md)
+- [Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md) (Interoperar con código no administrado)
 - [Ejemplos de invocación de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)
 - [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

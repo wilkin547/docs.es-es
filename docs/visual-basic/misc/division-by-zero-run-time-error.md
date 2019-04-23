@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID11
 ms.assetid: 5b9bc5d6-792e-48bc-a974-012e07ad95f3
 ms.openlocfilehash: 194dcebe40b7f14ba4bf4ebce6f2b1294d3e6791
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336341"
 ---
 # <a name="division-by-zero-visual-basic-run-time-error"></a>División por cero (error en tiempo de ejecución de Visual Basic)
@@ -22,4 +22,4 @@ Una expresión que se está usando como divisor tiene un valor de cero.
   
 ## <a name="see-also"></a>Vea también
 
-- [Pasar argumentos por valor y por referencia](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Paso de argumentos por valor y por referencia](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

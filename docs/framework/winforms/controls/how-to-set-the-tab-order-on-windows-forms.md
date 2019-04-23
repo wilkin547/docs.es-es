@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer el orden de tabulación en formularios Windows Forms
+title: Procedimiento para establecer el orden de tabulación en formularios Windows Forms
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
 ms.openlocfilehash: 50f5f91a946aeebc4d82630b25d18d8f8d2ea4be
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339910"
 ---
-# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Filtrar para establecer el orden de tabulación en formularios Windows Forms
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Procedimiento para establecer el orden de tabulación en formularios Windows Forms
 El orden de tabulación es el orden en el que usuario mueve el foco de un control a otro, presione la tecla TAB. Cada formulario tiene su propio orden de tabulación. De forma predeterminada, el orden de tabulación es el mismo que el orden en el que se crearon los controles. Orden de tabulación la numeración empieza por cero.  
   
 > [!NOTE]
@@ -56,7 +56,7 @@ El orden de tabulación es el orden en el que usuario mueve el foco de un contro
   
 ## <a name="see-also"></a>Vea también
 
-- [Controles de Windows Forms](index.md)
+- [Controles de formularios Windows Forms](index.md)
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)

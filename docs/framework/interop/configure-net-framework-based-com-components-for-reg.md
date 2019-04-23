@@ -1,5 +1,5 @@
 ---
-title: Filtrar para configurar componentes COM basados en .NET Framework para la activación sin registro
+title: Procedimiento para configurar componentes COM basados en .NET Framework para la activación sin registro
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b66265a58dcbb6f795e1d207e0bb6f75252161e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093546"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59336582"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Filtrar para configurar componentes COM basados en .NET Framework para la activación sin registro
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedimiento para configurar componentes COM basados en .NET Framework para la activación sin registro
 La activación sin registro de los componentes de .NET Framework solo es un poco más complicada que la de los componentes COM. La configuración requiere dos manifiestos:  
   
 -   Las aplicaciones COM deben tener un manifiesto de aplicación de estilo Win32 para identificar el componente administrado.  
@@ -28,9 +28,9 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
   
 ### <a name="to-create-an-application-manifest"></a>Para crear un manifiesto de aplicación  
   
-1.  Mediante un editor XML, cree (o modifique) el manifiesto de aplicación propiedad de la aplicación COM que está interoperando con uno o más componentes administrados.  
+1. Mediante un editor XML, cree (o modifique) el manifiesto de aplicación propiedad de la aplicación COM que está interoperando con uno o más componentes administrados.  
   
-2.  Inserte el siguiente encabezado estándar al principio del archivo:  
+2. Inserte el siguiente encabezado estándar al principio del archivo:  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -39,7 +39,7 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
   
      Para obtener información sobre los elementos del manifiesto y sus atributos, consulte [Manifiestos de aplicación](/windows/desktop/SbsCs/application-manifests).  
   
-3.  Identifique al propietario del manifiesto. En el ejemplo siguiente, la versión 1 de `myComApp` es el propietario del archivo de manifiesto.  
+3. Identifique al propietario del manifiesto. En el ejemplo siguiente, la versión 1 de `myComApp` es el propietario del archivo de manifiesto.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -51,7 +51,7 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
       />  
     ```  
   
-4.  Identifique los ensamblados dependientes. En el ejemplo siguiente, `myComApp` depende de `myManagedComp`.  
+4. Identifique los ensamblados dependientes. En el ejemplo siguiente, `myComApp` depende de `myManagedComp`.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -75,22 +75,22 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
     </assembly>  
     ```  
   
-5.  Nombre el archivo de manifiesto y guárdelo. El nombre de un manifiesto de aplicación es el nombre del ensamblado ejecutable seguido de la extensión .manifest. Por ejemplo, el nombre del archivo de manifiesto de la aplicación de myComApp.exe es myComApp.exe.manifest.  
+5. Nombre el archivo de manifiesto y guárdelo. El nombre de un manifiesto de aplicación es el nombre del ensamblado ejecutable seguido de la extensión .manifest. Por ejemplo, el nombre del archivo de manifiesto de la aplicación de myComApp.exe es myComApp.exe.manifest.  
   
  El manifiesto de aplicación se puede instalar en el mismo directorio que la aplicación COM. Opcionalmente, se puede agregar como recurso al archivo .exe de la aplicación. Para más información, consulte el artículo sobre [los ensamblados en paralelo](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
 #### <a name="to-create-a-component-manifest"></a>Para crear un manifiesto de componente  
   
-1.  Mediante un editor XML, cree un manifiesto de componente para describir el ensamblado administrado.  
+1. Mediante un editor XML, cree un manifiesto de componente para describir el ensamblado administrado.  
   
-2.  Inserte el siguiente encabezado estándar al principio del archivo:  
+2. Inserte el siguiente encabezado estándar al principio del archivo:  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3.  Identifique al propietario del archivo. El elemento `<assemblyIdentity>` del elemento `<dependentAssembly>` del archivo del manifiesto de aplicación debe coincidir con el del manifiesto del componente. En el ejemplo siguiente, la versión 1.2.3.4 de `myManagedComp` es el propietario del archivo de manifiesto.  
+3. Identifique al propietario del archivo. El elemento `<assemblyIdentity>` del elemento `<dependentAssembly>` del archivo del manifiesto de aplicación debe coincidir con el del manifiesto del componente. En el ejemplo siguiente, la versión 1.2.3.4 de `myManagedComp` es el propietario del archivo de manifiesto.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -103,7 +103,7 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
            />  
     ```  
   
-4.  Identifique cada clase del ensamblado. Use el elemento `<clrClass>` para identificar cada clase del ensamblado administrado de manera única. El elemento, que es un subelemento del elemento `<assembly>`, tiene los atributos que se describen en la tabla siguiente.  
+4. Identifique cada clase del ensamblado. Use el elemento `<clrClass>` para identificar cada clase del ensamblado administrado de manera única. El elemento, que es un subelemento del elemento `<assembly>`, tiene los atributos que se describen en la tabla siguiente.  
   
     |Atributo|Descripción|Obligatorio|  
     |---------------|-----------------|--------------|  
@@ -146,25 +146,25 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
     </assembly>  
     ```  
   
-5.  Nombre el archivo de manifiesto y guárdelo. El nombre de un manifiesto de componente es el nombre de la biblioteca de ensamblados seguido de la extensión .manifest. Por ejemplo, myManagedComp.dll es myManagedComp.manifest.  
+5. Nombre el archivo de manifiesto y guárdelo. El nombre de un manifiesto de componente es el nombre de la biblioteca de ensamblados seguido de la extensión .manifest. Por ejemplo, myManagedComp.dll es myManagedComp.manifest.  
   
  Es necesario incrustar el manifiesto de componente como recurso en el ensamblado  
   
 #### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>Para incrustar un manifiesto de componente en un ensamblado administrado  
   
-1.  Cree un script de recursos que contenga la siguiente instrucción:  
+1. Cree un script de recursos que contenga la siguiente instrucción:  
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
      En esta instrucción, `myManagedComp.manifest` es el nombre del manifiesto de componente que se incrusta. En este ejemplo, el archivo de script se denomina `myresource.rc`.  
   
-2.  Compile el script mediante el compilador de recursos de Microsoft Windows (Rc.exe). En el símbolo del sistema, escriba el siguiente comando:  
+2. Compile el script mediante el compilador de recursos de Microsoft Windows (Rc.exe). En el símbolo del sistema, escriba el siguiente comando:  
   
      `rc myresource.rc`  
   
      Rc.exe produce el archivo de recursos `myresource.res`.  
   
-3.  Compile de nuevo el archivo de origen del ensamblado y especifique el archivo de recursos mediante la opción **/win32res**:  
+3. Compile de nuevo el archivo de origen del ensamblado y especifique el archivo de recursos mediante la opción **/win32res**:  
   
     ```  
     /win32res:myresource.res  
@@ -173,6 +173,7 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
      Una vez más, `myresource.res` es el nombre del archivo de recursos que contiene el recurso incrustado.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Interoperabilidad COM sin registro](registration-free-com-interop.md)
 - [Requisitos para interoperabilidad COM sin registro](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
 - [Configuración de componentes COM para la activación sin registro](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
