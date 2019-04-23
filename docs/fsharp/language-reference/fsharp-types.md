@@ -3,10 +3,10 @@ title: Tipos en F#
 description: Obtenga información sobre los tipos que se usan en F# y cómo F# se denominado y se describen los tipos.
 ms.date: 05/16/2016
 ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193595"
 ---
 # <a name="f-types"></a>Tipos en F#
@@ -54,7 +54,7 @@ En la tabla siguiente se muestra los aspectos de la sintaxis de tipo para F# tip
 |Tema|Descripción|
 |-----|-----------|
 |[Tipos primitivos](primitive-types.md)|Describe los tipos simples integrados como tipos enteros, el tipo booleano y tipos de caracteres.|
-|[Unit (Tipo)](unit-type.md)|Describe el `unit` tipo, un tipo que tiene un valor y que se indica mediante (); equivalente a `void` en C# y `Nothing` en Visual Basic.|
+|[Tipo unit](unit-type.md)|Describe el `unit` tipo, un tipo que tiene un valor y que se indica mediante (); equivalente a `void` en C# y `Nothing` en Visual Basic.|
 |[Tuplas](tuples.md)|Describe el tipo de tupla, que consta de los valores asociados de cualquier tipo que se agrupan en pares, triples, cuartetos y así sucesivamente.|
 |[Opciones](options.md)|Describe el tipo de opción, que puede tener un valor o estar vacío.|
 |[Listas](lists.md)|Describe las listas, que son una serie ordenada e inmutable de elementos del mismo tipo.|

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Controlar interactivamente un reloj
+title: Procedimiento Controlar interactivamente un reloj
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
 ms.openlocfilehash: 05989b6a03e03fb5723a70c9c36d5e32f9117049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186594"
 ---
-# <a name="how-to-interactively-control-a-clock"></a>Filtrar Controlar interactivamente un reloj
+# <a name="how-to-interactively-control-a-clock"></a>Procedimiento Controlar interactivamente un reloj
 Un <xref:System.Windows.Media.Animation.Clock> del objeto <xref:System.Windows.Media.Animation.ClockController> propiedad permite interactivamente iniciar, pausar, reanudar, buscar, pase el reloj a su período de relleno y detener el reloj. El reloj de raíz de un árbol de control de tiempo se puede controlar interactivamente.  
   
 > [!NOTE]
@@ -29,5 +29,5 @@ Un <xref:System.Windows.Media.Animation.Clock> del objeto <xref:System.Windows.M
   
 ## <a name="see-also"></a>Vea también
 
-- [Animar una propiedad mediante un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md)
+- [Animar una propiedad utilizando un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md)
 - [Información general sobre animaciones](animation-overview.md)

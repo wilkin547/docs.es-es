@@ -1,5 +1,5 @@
 ---
-title: Filtrar Manipular elementos de contenido dinámico mediante la propiedad Inlines
+title: Procedimiento Manipular elementos de contenido dinámico mediante la propiedad Inlines
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
 ms.openlocfilehash: cfff958bb4c87e6bfecf2d280224cda233c31806
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186074"
 ---
-# <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Filtrar Manipular elementos de contenido dinámico mediante la propiedad Inlines
+# <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Procedimiento Manipular elementos de contenido dinámico mediante la propiedad Inlines
 Estos ejemplos muestran algunas de las operaciones más comunes que se pueden realizar en elementos de contenido dinámico insertado (y los contenedores de tales elementos, tales como <xref:System.Windows.Controls.TextBlock>) a través de la **Inlines** propiedad. Esta propiedad se utiliza para agregar y quitar elementos de <xref:System.Windows.Documents.InlineCollection>. Flujo de contenido de elementos de esa característica un **Inlines** propiedad incluyen:  
   
 -   <xref:System.Windows.Documents.Bold>  

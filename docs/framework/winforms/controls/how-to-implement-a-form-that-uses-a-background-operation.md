@@ -1,5 +1,5 @@
 ---
-title: Filtrar para implementar un formulario que usa una operación en segundo plano
+title: Procedimiento para implementar un formulario que usa una operación en segundo plano
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
 ms.openlocfilehash: 98d51f9c6465186e77784aba080130110545f399
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192165"
 ---
-# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Filtrar para implementar un formulario que usa una operación en segundo plano
+# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Procedimiento para implementar un formulario que usa una operación en segundo plano
 El programa de ejemplo siguiente crea un formulario que calcula los números de Fibonacci. El cálculo se ejecuta en un subproceso independiente del subproceso de interfaz de usuario, por lo que la interfaz de usuario sigue ejecutándose sin retrasos mientras se realiza el cálculo.  
   
  Visual Studio es altamente compatible con esta tarea.  

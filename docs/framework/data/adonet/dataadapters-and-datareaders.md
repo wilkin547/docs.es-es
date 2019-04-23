@@ -3,10 +3,10 @@ title: Objetos DataAdapter y DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
 ms.openlocfilehash: af1d44b1e320557ab7906ce65dbeb5415b5c09dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189695"
 ---
 # <a name="dataadapters-and-datareaders"></a>Objetos DataAdapter y DataReader
@@ -17,7 +17,7 @@ Puede usar ADO.NET **DataReader** para recuperar una secuencia de sólo lectura,
  Cada proveedor de datos .NET Framework incluido con .NET Framework tiene un objeto <xref:System.Data.Common.DbDataReader> y un objeto <xref:System.Data.Common.DbDataAdapter>, el proveedor de datos .NET Framework para OLE DB incluye un objeto <xref:System.Data.OleDb.OleDbDataReader> y un objeto <xref:System.Data.OleDb.OleDbDataAdapter>, el proveedor de datos .NET Framework para SQL Server incluye un objeto <xref:System.Data.SqlClient.SqlDataReader> y un objeto <xref:System.Data.SqlClient.SqlDataAdapter>, el proveedor de datos .NET Framework para ODBC incluye un objeto <xref:System.Data.Odbc.OdbcDataReader> y un objeto <xref:System.Data.Odbc.OdbcDataAdapter>, y el proveedor de datos .NET Framework para Oracle incluyes un objeto <xref:System.Data.OracleClient.OracleDataReader> y un objeto <xref:System.Data.OracleClient.OracleDataAdapter>.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Recuperar datos utilizando un objeto DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
+ [Recuperación de datos utilizando un objeto DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
  Describe la versión de ADO.NET **DataReader** objeto y cómo utilizarlo para devolver una secuencia de resultados desde un origen de datos.  
   
  [Rellenar un conjunto de datos desde un objeto DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
@@ -32,22 +32,22 @@ Puede usar ADO.NET **DataReader** para recuperar una secuencia de sólo lectura,
  [Correspondencias de DataTable y DataColumn en un objeto DataAdapter](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
  Describe cómo configurar `DataTableMappings` y `ColumnMappings` para `DataAdapter`.  
   
- [Paginar un resultado de consulta](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
+ [Paginación de un resultado de consulta](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
  Proporciona un ejemplo de cómo ver los resultados de una consulta como páginas de datos.  
   
  [Actualizar orígenes de datos con objetos DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  Describe cómo se utiliza `DataAdapter` para resolver modificaciones en `DataSet` en la base de datos.  
   
- [Controlar eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
+ [Control de eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
  Describe los eventos de `DataAdapter` y cómo utilizarlos.  
   
- [Realizar operaciones por lotes utilizando objetos DataAdapter](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
+ [Realización de operaciones por lotes utilizando objetos DataAdapter](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
  Describe cómo mejorar el rendimiento de la aplicación mediante la reducción del número de viajes de ida y vuelta (round trip) al servidor SQL Server al aplicar las actualizaciones desde el `DataSet`.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Conectarse a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Conexión a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Objetos DataSet, DataTable y DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

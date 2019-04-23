@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bdb51d38109cf4c072a9841983e86a444e964b0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 24a8c7ce090b286db9d86e0fc6c54ae33e7e2d5e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492641"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59191892"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Herramienta de nombre seguro)
 La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres seguros](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe proporciona opciones para la administración de claves, así como para la generación y comprobación de firmas.  
@@ -125,6 +125,7 @@ sn -d MyContainer
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Herramientas](../../../docs/framework/tools/index.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)

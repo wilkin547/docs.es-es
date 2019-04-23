@@ -1,5 +1,5 @@
 ---
-title: Filtrar Aplicar varias transformaciones a un modelo 3D
+title: Procedimiento Aplicar varias transformaciones a un modelo 3D
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - 3-D models [WPF], applying multiple transformations to
 ms.assetid: cb72245a-5560-4c96-9f58-593c66296992
 ms.openlocfilehash: 7a6a0dd4942eb2430ff79ab5df4a171a4064ac1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186386"
 ---
-# <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>Filtrar Aplicar varias transformaciones a un modelo 3D
+# <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>Procedimiento Aplicar varias transformaciones a un modelo 3D
 En este ejemplo se muestra cómo usar un <xref:System.Windows.Media.Media3D.RotateTransform3D> y un <xref:System.Windows.Media.Media3D.ScaleTransform3D> girar y cambiar la escala de un modelo 3D. El código siguiente muestra cómo aplicar estas transformaciones a la <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> propiedad de un <xref:System.Windows.Media.Media3D.GeometryModel3D> en XAML.  
   
  [!code-xaml[3DGallery_snip#Multiple3DTransformationsExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/MultipleTransformationsExample.xaml#multiple3dtransformationsexampleinline1)]  

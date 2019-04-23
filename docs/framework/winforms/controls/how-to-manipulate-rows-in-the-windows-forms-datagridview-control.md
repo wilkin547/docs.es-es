@@ -1,5 +1,5 @@
 ---
-title: Filtrar para manipular filas en el control DataGridView de formularios Windows Forms
+title: Procedimiento para manipular filas en el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - rows [Windows Forms], manipulating on Windows Forms
 ms.assetid: 522d8944-e073-4488-9673-923f0a8d7214
 ms.openlocfilehash: 095efc7279a1dc6702aeeb5ec5d598dbdd8818b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193296"
 ---
-# <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a>Filtrar para manipular filas en el control DataGridView de formularios Windows Forms
+# <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a>Procedimiento para manipular filas en el control DataGridView de formularios Windows Forms
 En el ejemplo de código siguiente, se muestran las diversas maneras de manipular filas <xref:System.Windows.Forms.DataGridView> mediante las propiedades de la clase <xref:System.Windows.Forms.DataGridViewRow>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -38,4 +38,4 @@ En el ejemplo de código siguiente, se muestran las diversas maneras de manipula
 - <xref:System.Windows.Forms.DataGridViewBand>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewColumn>
-- [Programar con celdas, filas y columnas en el control DataGridView de formularios Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [Programar con celdas, filas y columnas en el control DataGridView de Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)

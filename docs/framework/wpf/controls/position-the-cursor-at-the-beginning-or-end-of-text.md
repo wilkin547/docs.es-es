@@ -1,5 +1,5 @@
 ---
-title: Filtrar Colocar el cursor al principio o al final del texto de un control TextBox
+title: Procedimiento Colocar el cursor al principio o al final del texto de un control TextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - cursor [WPF], positioning
 ms.assetid: c771a0b8-c6b4-4240-aecd-a21d0ba51a2e
 ms.openlocfilehash: 3d7da5daf09e06938b8366e0f5f98a599cae4571
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186230"
 ---
-# <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>Filtrar Colocar el cursor al principio o al final del texto de un control TextBox
+# <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>Procedimiento Colocar el cursor al principio o al final del texto de un control TextBox
 En este ejemplo se muestra cómo colocar el cursor al principio o al final del contenido de texto de un <xref:System.Windows.Controls.TextBox> control.  
   
 ## <a name="example"></a>Ejemplo  
@@ -39,4 +39,4 @@ En este ejemplo se muestra cómo colocar el cursor al principio o al final del c
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre TextBox](textbox-overview.md)
-- [Información general sobre el control RichTextBox](richtextbox-overview.md)
+- [RichTextBox Overview](richtextbox-overview.md) (Introducción a RichTextBox)

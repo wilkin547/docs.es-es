@@ -3,10 +3,10 @@ title: Inferir una estructura relacional de un conjunto de datos a partir de XML
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
 ms.openlocfilehash: 9a9dc7d94728ea797a8930d3f77068fdd3ebfb5c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191547"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>Inferir una estructura relacional de un conjunto de datos a partir de XML
@@ -22,16 +22,16 @@ La estructura relacional, o esquema, de un <xref:System.Data.DataSet> está comp
  [Resumen del proceso de inferencia del esquema de DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/summary-of-the-dataset-schema-inference-process.md)  
  Proporciona un resumen general de las reglas para deducir el esquema de un <xref:System.Data.DataSet> a partir de XML.  
   
- [Inferir tablas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md)  
+ [Inferencia de tablas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md)  
  Describe los elementos XML que se deducen como tablas en un <xref:System.Data.DataSet>.  
   
- [Inferir columnas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-columns.md)  
+ [Inferencia de columnas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-columns.md)  
  Describe los elementos y atributos XML que se deducen como columnas de tabla.  
   
- [Inferir relaciones](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-relationships.md)  
+ [Inferencia de relaciones](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-relationships.md)  
  Describe los objetos <xref:System.Data.DataRelation> y <xref:System.Data.ForeignKeyConstraint> creados para tablas deducidas y anidadas.  
   
- [Inferir texto de elemento](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-element-text.md)  
+ [Inferencia de texto de elemento](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-element-text.md)  
  Describe las columnas que se crean para texto en los elementos XML y explica cuándo se pasa por alto el texto de los elementos XML.  
   
  [Limitaciones de inferencia](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inference-limitations.md)  
@@ -41,7 +41,7 @@ La estructura relacional, o esquema, de un <xref:System.Data.DataSet> está comp
  [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Describe cómo interactúa el objeto <xref:System.Data.DataSet> con los datos XML.  
   
- [Derivar una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [Derivación de una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  Describe la estructura relacional o un esquema de un <xref:System.Data.DataSet> que se crea a partir del esquema del lenguaje de definición de esquemas XML (XSD).  
   
  [Información general sobre ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
@@ -49,4 +49,4 @@ La estructura relacional, o esquema, de un <xref:System.Data.DataSet> está comp
   
 ## <a name="see-also"></a>Vea también
 
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

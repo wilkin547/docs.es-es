@@ -5,10 +5,10 @@ helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
 ms.openlocfilehash: dbc5c0b51024c7b88b8c6cd9a052addd74e6f7e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191034"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Seguimiento y traza del flujo de trabajo
@@ -22,11 +22,11 @@ El seguimiento de Windows Workflow es una característica de [!INCLUDE[netfx_cur
   
  Para entender el modelo de programación, los componentes primarios de la infraestructura de seguimiento se tratan en este tema:  
   
--   <xref:System.Activities.Tracking.TrackingRecord> objetos que se emiten desde el tiempo de ejecución de flujo de trabajo. Para obtener más información, consulte [registros de seguimiento](tracking-records.md).  
+-   Los objetos <xref:System.Activities.Tracking.TrackingRecord> emitidos a partir del tiempo de ejecución del flujo de trabajo. Para obtener más información, consulte [registros de seguimiento](tracking-records.md).  
   
--   <xref:System.Activities.Tracking.TrackingParticipant> objetos de suscripción a <xref:System.Activities.Tracking.TrackingRecord> objetos. Los participantes de seguimiento contienen la lógica para procesar la carga de los objetos <xref:System.Activities.Tracking.TrackingRecord> (por ejemplo, podrían elegir escribir en un archivo). Para obtener más información, consulte [participantes de seguimiento](tracking-participants.md).  
+-   Los objetos <xref:System.Activities.Tracking.TrackingParticipant> se suscriben para los objetos <xref:System.Activities.Tracking.TrackingRecord>. Los participantes de seguimiento contienen la lógica para procesar la carga de los objetos <xref:System.Activities.Tracking.TrackingRecord> (por ejemplo, podrían elegir escribir en un archivo). Para obtener más información, consulte [participantes de seguimiento](tracking-participants.md).  
   
--   <xref:System.Activities.Tracking.TrackingProfile> objetos de filtrar los registros de seguimiento emitidos desde una instancia de flujo de trabajo. Para obtener más información, consulte [perfiles de seguimiento](tracking-profiles.md).  
+-   Los objetos <xref:System.Activities.Tracking.TrackingProfile> filtran los registros de seguimiento emitidos desde una instancia de flujo de trabajo. Para obtener más información, consulte [perfiles de seguimiento](tracking-profiles.md).  
   
 ## <a name="workflow-tracking-infrastructure"></a>Infraestructura de seguimiento de flujos de trabajo  
  La infraestructura de seguimiento del flujo de trabajo sigue un paradigma de publicación y suscripción. La instancia de flujo de trabajo es el publicador de registros de seguimiento mientras que los suscriptores de los registros de seguimiento se registran como extensiones para el flujo de trabajo. Estas extensiones que se suscriben a los objetos <xref:System.Activities.Tracking.TrackingRecord> se denominan "participantes del seguimiento". Los participantes se seguimiento son puntos de extensibilidad que tienen acceso a los objetos <xref:System.Activities.Tracking.TrackingRecord> y los procesan de la manera en que se haya especificado que lo hagan. La infraestructura de seguimiento permite la aplicación de un filtro en los registros de seguimiento saliente para permitir que un participante se suscriba a un subconjunto de registros. Este mecanismo de filtrado se logra a través de un archivo de perfil de seguimiento.  
@@ -45,10 +45,10 @@ El seguimiento de Windows Workflow es una característica de [!INCLUDE[netfx_cur
  [Participantes de seguimiento](tracking-participants.md)  
  Describe cómo usar el participante del seguimiento proporcionado por el sistema o cómo crear los participantes de seguimiento personalizados.  
   
- [Configurar seguimiento para un flujo de trabajo](configuring-tracking-for-a-workflow.md)  
+ [Configuración del seguimiento para un flujo de trabajo](configuring-tracking-for-a-workflow.md)  
  Describe cómo configurar el seguimiento para un flujo de trabajo.  
   
- [Traza del flujo de trabajo](workflow-tracing.md)  
+ [Traza de flujos de trabajo](workflow-tracing.md)  
  Describe las dos maneras de habilitar la traza de depuración para un flujo de trabajo.  
   
 ## <a name="see-also"></a>Vea también

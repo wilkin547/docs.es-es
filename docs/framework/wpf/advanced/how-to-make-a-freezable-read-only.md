@@ -1,5 +1,5 @@
 ---
-title: Filtrar Hacer que un elemento Freezable sea de solo lectura
+title: Procedimiento Hacer que un elemento Freezable sea de solo lectura
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
 ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191457"
 ---
-# <a name="how-to-make-a-freezable-read-only"></a>Filtrar Hacer que un elemento Freezable sea de solo lectura
+# <a name="how-to-make-a-freezable-read-only"></a>Procedimiento Hacer que un elemento Freezable sea de solo lectura
 En este ejemplo se muestra cómo realizar una <xref:System.Windows.Freezable> de solo lectura mediante una llamada a su <xref:System.Windows.Freezable.Freeze%2A> método.  
   
  No se puede inmovilizar un <xref:System.Windows.Freezable> objeto si alguna de las condiciones siguientes es `true` sobre el objeto:  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6c327aad129f685e44f7b456e4ceef8f99fe12b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712605"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59186568"
 ---
 # <a name="setting-assembly-attributes"></a>Configurar atributos de ensamblados
 Los atributos de ensamblado son valores que proporcionan información sobre un ensamblado. Los atributos se dividen en los siguientes conjuntos de información:  
@@ -87,5 +87,6 @@ Los atributos de ensamblado son valores que proporcionan información sobre un e
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
 - [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)

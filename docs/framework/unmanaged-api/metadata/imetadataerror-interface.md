@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 37f1f6055ec8fa68fe804780d2893d20c978e6bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188635"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError (Interfaz)
@@ -33,7 +33,7 @@ Proporciona un mecanismo de devolución de llamada para notificar errores durant
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método OnError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Proporciona notificación de errores que se producen durante la combinación de metadatos.|  
+|[OnError (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Proporciona notificación de errores que se producen durante la combinación de metadatos.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

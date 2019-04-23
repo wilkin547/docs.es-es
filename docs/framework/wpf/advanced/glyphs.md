@@ -11,10 +11,10 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
 ms.openlocfilehash: a887e83babd6126d298170c6aead45c5370c1916
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193153"
 ---
 # <a name="glyphs"></a>Glifos
@@ -22,7 +22,7 @@ Los glifos son una representación de bajo nivel de un carácter que se va a dib
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción al objeto GlyphRun y al elemento Glyphs](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [Filtrar Dibujar texto mediante glifos](draw-text-using-glyphs.md)  
+  [Cómo: Dibujar texto mediante glifos](draw-text-using-glyphs.md)  
   
 ## <a name="see-also"></a>Vea también
 

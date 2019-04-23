@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animación de un objeto a lo largo de un trazado (animación de matriz)
+title: Procedimiento Animación de un objeto a lo largo de un trazado (animación de matriz)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
 ms.openlocfilehash: ab15126680b7d8c6936246a7dae2f67c7541233b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190930"
 ---
-# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Filtrar Animación de un objeto a lo largo de un trazado (animación de matriz)
+# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Procedimiento Animación de un objeto a lo largo de un trazado (animación de matriz)
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> clase para animar un objeto a lo largo de una ruta de acceso que se define mediante un <xref:System.Windows.Media.PathGeometry>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -38,4 +38,4 @@ En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.Ma
 
 - [Información general sobre animaciones](animation-overview.md)
 - [Ejemplo de animación de trazado](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Temas "Cómo..." de animación de trazado](path-animation-how-to-topics.md)
+- [Temas de procedimientos de animación de trazado](path-animation-how-to-topics.md)

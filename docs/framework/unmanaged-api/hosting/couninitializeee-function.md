@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7b3712b4cb66facc105a03d7bfad235f09339056
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193010"
 ---
 # <a name="couninitializeee-function"></a>CoUninitializeEE (Función)
@@ -40,5 +40,5 @@ void CoUninitializeEE (
   
 ## <a name="see-also"></a>Vea también
 
-- [CoInitializeEE (Función)](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)
+- [CoInitializeEE (función)](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)
 - [Funciones estáticas globales para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

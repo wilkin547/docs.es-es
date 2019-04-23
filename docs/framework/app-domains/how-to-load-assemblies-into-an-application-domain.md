@@ -12,10 +12,10 @@ ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188531"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Procedimiento para cargar ensamblados en un dominio de aplicación
@@ -52,5 +52,5 @@ Existen numerosas formas de cargar un ensamblado en un dominio de aplicación. E
 - [Programar con dominios de aplicación](application-domains.md#programming-with-application-domains)
 - [Reflexión](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [Utilizar dominios de aplicación](../../../docs/framework/app-domains/use.md)
-- [Procedimiento para cargar ensamblados en el contexto de solo reflexión](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [Cómo: Cargar ensamblados en el contexto de solo reflexión](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Dominios de aplicación y ensamblados](application-domains.md#application-domains-and-assemblies)

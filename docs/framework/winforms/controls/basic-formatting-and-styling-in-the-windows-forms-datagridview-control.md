@@ -6,35 +6,35 @@ helpviewer_keywords:
 - data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
 ms.openlocfilehash: 5e967c1bbe54095cc11e48b014600158da7fe6a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189903"
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Estilo y formato básicos del control DataGridView en formularios Windows Forms
 El `DataGridView` control facilita la tarea definir la apariencia básica de celdas y el formato de presentación de valores de celda. Puede definir la apariencia y dar formato a los estilos de celdas individuales, para las celdas en filas y columnas específicas o para todas las celdas del control estableciendo las propiedades de la `DataGridViewCellStyle` objetos que se tiene acceso a través de diversos `DataGridView` propiedades del control. Además, puede modificar estos estilos de manera dinámica basándose en factores como el valor de celda controlando el `CellFormatting` eventos.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Filtrar para cambiar los estilos de borde y línea de la cuadrícula en el control DataGridView de formularios Windows Forms](change-the-border-and-gridline-styles-in-the-datagrid.md)  
+ [Cómo: Cambiar el borde y los estilos de línea de cuadrícula en el Control DataGridView de Windows Forms](change-the-border-and-gridline-styles-in-the-datagrid.md)  
  Describe cómo establecer `DataGridView` propiedades que definen la apariencia del borde del control y las líneas de límite entre las celdas.  
   
- [Estilos de celda en el control DataGridView de formularios Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)  
+ [Estilos de celda en el control DataGridView de Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)  
  Describe la `DataGridViewCellStyle` clase y cómo interactúan las propiedades de ese tipo para definir cómo se muestran las celdas del control.  
   
- [Filtrar para establecer estilos de celda predeterminados para el control DataGridView de formularios Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+ [Cómo: Establecer estilos de celda predeterminados para el Control DataGridView de Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
  Describe cómo utilizar `DataGridViewCellStyle` las propiedades para definir la apariencia predeterminada de las celdas en filas y columnas específicas y en todo el control.  
   
- [Filtrar para dar formato a datos en el control DataGridView de formularios Windows Forms](how-to-format-data-in-the-windows-forms-datagridview-control.md)  
+ [Cómo: Formato de datos en la Windows Forms DataGridView Control](how-to-format-data-in-the-windows-forms-datagridview-control.md)  
  Describe cómo dar formato a valores de celda para mostrar mediante `DataGridViewCellStyle` propiedades.  
   
- [Filtrar para establecer estilos de colores y fuentes en el control DataGridView de formularios Windows Forms](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
+ [Cómo: Establecer estilos de colores y fuentes en el Control DataGridView de Windows Forms](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
  Describe cómo utilizar el `DefaultCellStyle` propiedad para establecer básica mostrar características para todas las celdas del control.  
   
- [Filtrar para establecer estilos de fila alternos para el control DataGridView de formularios Windows Forms](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
+ [Cómo: Establecer estilos de fila alternos para el Control DataGridView de Windows Forms](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
  Describe cómo crear un efecto de carta en el control con filas alternativas que se muestran de forma diferente.  
   
- [Filtrar para usar la plantilla de filas para personalizar filas en el control DataGridView de formularios Windows Forms](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
+ [Cómo: Use la plantilla de filas para personalizar filas en el Control DataGridView de Windows Forms](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
  Describe cómo utilizar el `RowTemplate` propiedad para establecer las propiedades de la fila que se usará para todas las filas del control.  
   
 ## <a name="reference"></a>Referencia  
@@ -51,12 +51,12 @@ El `DataGridView` control facilita la tarea definir la apariencia básica de cel
  Proporciona documentación de referencia para el <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> propiedad.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Personalizar el control DataGridView de formularios Windows Forms](customizing-the-windows-forms-datagridview-control.md)  
+ [Personalizar el control DataGridView de Windows Forms](customizing-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen el dibujo personalizado de celdas y filas de <xref:System.Windows.Forms.DataGridView>, y la creación de tipos derivados de celda, columna y fila.  
   
- [Características básicas de columnas, filas y celdas en el control DataGridView de formularios Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)  
  Proporciona temas que describen normalmente usan las propiedades de celda, fila y columna.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Control DataGridView](datagridview-control-windows-forms.md)
+- [DataGridView (control)](datagridview-control-windows-forms.md)

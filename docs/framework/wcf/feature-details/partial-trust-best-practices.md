@@ -3,10 +3,10 @@ title: Procedimientos recomendados de confianza parcial
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
 ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184085"
 ---
 # <a name="partial-trust-best-practices"></a>Procedimientos recomendados de confianza parcial
@@ -29,7 +29,7 @@ Este tema describe los procedimientos recomendados al ejecutar Windows Communica
   
 -   Los métodos que administran eventos de serialización (como `OnSerializing`, `OnSerialized`, `OnDeserializing`y `OnDeserialized`) se deben declarar como públicos. Sin embargo, se admiten las implementaciones explícitas e implícitas de <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29>.  
   
--   `[DataContract]` los tipos que se implementan en ensamblados marcados con el <xref:System.Security.AllowPartiallyTrustedCallersAttribute> no debe realizar las acciones relacionadas con la seguridad en el constructor de tipo, como el <xref:System.Runtime.Serialization.DataContractSerializer> llama al constructor del objeto crea una instancia recién durante la deserialización. Particularmente, se han de evitar las siguientes técnicas de seguridad comunes en los tipos de `[DataContract]`:  
+-   Los tipos `[DataContract]` implementados en ensamblados marcados con el <xref:System.Security.AllowPartiallyTrustedCallersAttribute> no deben realizar acciones relacionadas con la seguridad en el constructor de tipos, puesto que el <xref:System.Runtime.Serialization.DataContractSerializer> no llama durante la deserialización al constructor del objeto del que se ha creado recientemente una instancia. Particularmente, se han de evitar las siguientes técnicas de seguridad comunes en los tipos de `[DataContract]`:  
   
 -   Intentar restringir el acceso de confianza parcial haciendo interno o privado el constructor del tipo.  
   

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer el formato del control NumericUpDown de formularios Windows Forms
+title: Procedimiento para establecer el formato del control NumericUpDown de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
 ms.openlocfilehash: 5957a44c7b07aa1b8d8df32667f023c0873ec1de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186156"
 ---
-# <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>Filtrar para establecer el formato del control NumericUpDown de formularios Windows Forms
+# <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>Procedimiento para establecer el formato del control NumericUpDown de formularios Windows Forms
 Puede configurar cómo se muestran los valores en los formularios de Windows <xref:System.Windows.Forms.NumericUpDown> control. El <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> propiedad determina cuántos números aparecen después del separador decimal; el valor predeterminado es 0. El <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> propiedad determina si se insertará un separador entre cada tres dígitos decimales; el valor predeterminado es `false`. El control puede mostrar valores en formato hexadecimal, en lugar de formato decimal, si la <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> propiedad está establecida en `true`; el valor predeterminado es `false`.  
   
 ### <a name="to-format-the-numeric-value"></a>Dar formato al valor numérico  
@@ -60,5 +60,5 @@ Puede configurar cómo se muestran los valores en los formularios de Windows <xr
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.NumericUpDown>
-- [Control NumericUpDown](numericupdown-control-windows-forms.md)
+- [NumericUpDown (control)](numericupdown-control-windows-forms.md)
 - [Información general sobre el control NumericUpDown](numericupdown-control-overview-windows-forms.md)

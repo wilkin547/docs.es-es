@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187355"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats (Método)
@@ -74,12 +74,12 @@ pCLRGCManager->GetStats(&GCStats);
   
 ## <a name="see-also"></a>Vea también
 
-- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
-- [COR_GC_STATS (Estructura)](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
+- [Administración automática de la memoria](../../../../docs/standard/automatic-memory-management.md)
+- [COR_GC_STATS (estructura)](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [COR_GC_STAT_TYPES (enumeración)](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
-- [recolección de elementos no utilizados](../../../../docs/standard/garbage-collection/index.md)
-- [ICLRControl (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [ICLRGCManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
+- [Recolección de elementos no utilizados](../../../../docs/standard/garbage-collection/index.md)
+- [ICLRControl (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [ICLRGCManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
 - [Interfaces de hospedaje de CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
 - [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hospedaje](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)

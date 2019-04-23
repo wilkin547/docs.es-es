@@ -6,10 +6,10 @@ helpviewer_keywords:
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
 ms.openlocfilehash: 89c9397ba579f04d81eee7af6363f8fee3abfe1d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191281"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Obtener elementos de UI Automation
@@ -34,9 +34,9 @@ ms.locfileid: "59191281"
 ## <a name="conditions"></a>Condiciones  
  Para la mayoría de técnicas que puede usar para recuperar elementos [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , debe especificar un elemento <xref:System.Windows.Automation.Condition>, que es un conjunto de criterios que definen los elementos que quiere recuperar.  
   
- La condición más simple es <xref:System.Windows.Automation.Condition.TrueCondition>, un objeto predefinido que especifica que se devolverán todos los elementos dentro del ámbito de búsqueda. <xref:System.Windows.Automation.Condition.FalseCondition>, el elemento opuesto de <xref:System.Windows.Automation.Condition.TrueCondition>, no es tan útil, ya que podría impedir que todos los elementos que se encuentra.  
+ La condición más simple es <xref:System.Windows.Automation.Condition.TrueCondition>, un objeto predefinido que especifica que se devolverán todos los elementos dentro del ámbito de búsqueda. <xref:System.Windows.Automation.Condition.FalseCondition>, que es el elemento opuesto de <xref:System.Windows.Automation.Condition.TrueCondition>, no es tan útil, ya que impediría que se encontraran elementos.  
   
- Hay otras tres condiciones predefinidas que se pueden utilizar por sí solas o en combinación con otras condiciones: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>y <xref:System.Windows.Automation.Automation.RawViewCondition>. <xref:System.Windows.Automation.Automation.RawViewCondition>, se usa por sí solo, equivale a <xref:System.Windows.Automation.Condition.TrueCondition>, porque no filtra los elementos por sus <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> o <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> propiedades.  
+ Hay otras tres condiciones predefinidas que se pueden utilizar por sí solas o en combinación con otras condiciones: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>y <xref:System.Windows.Automation.Automation.RawViewCondition>. <xref:System.Windows.Automation.Automation.RawViewCondition>, por sí sola, equivale a <xref:System.Windows.Automation.Condition.TrueCondition>, porque no filtra los elementos por sus propiedades <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> o <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> .  
   
  Otras condiciones se componen de uno o varios objetos <xref:System.Windows.Automation.PropertyCondition> , cada uno de los cuales especifica un valor de propiedad. Por ejemplo, un elemento <xref:System.Windows.Automation.PropertyCondition> podría especificar que el elemento está habilitado o que admite un patrón de control determinado.  
   
@@ -98,6 +98,6 @@ ms.locfileid: "59191281"
   
 ## <a name="see-also"></a>Vea también
 
-- [Buscar un elemento de UI Automation basándose en una condición de propiedad](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [Navegar entre elementos de UI Automation con TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [Información general sobre el árbol de la UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Búsqueda de un elemento de Automatización de la interfaz de usuario basada en una condición de propiedad](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Navegar entre elementos de Automatización de la interfaz de usuario con TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
+- [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para configurar los márgenes de comprobación y de imagen de ContextMenuStrip
+title: Procedimiento para configurar los márgenes de comprobación y de imagen de ContextMenuStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - margins [Windows Forms], setting check and image in Windows Forms ContextMenuStrips
 ms.assetid: 3391c4c2-0c9e-4aa4-9492-13ff7644bdf2
 ms.openlocfilehash: 0e78ed960904baaead8e8d23b51c97cf2edfd4ee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189653"
 ---
-# <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a>Filtrar para configurar los márgenes de comprobación y de imagen de ContextMenuStrip
+# <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a>Procedimiento para configurar los márgenes de comprobación y de imagen de ContextMenuStrip
 Puede personalizar un <xref:System.Windows.Forms.ContextMenuStrip> estableciendo las propiedades <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> y <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> en diversas combinaciones.  
   
 ## <a name="example"></a>Ejemplo  
@@ -38,5 +38,5 @@ Puede personalizar un <xref:System.Windows.Forms.ContextMenuStrip> estableciendo
 
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.ToolStripDropDown>
-- [ToolStrip](toolstrip-control-windows-forms.md)
-- [Filtrar para habilitar los márgenes de comprobación y de imagen en los controles ContextMenuStrip](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)
+- [Cómo: Habilitar los márgenes de comprobación y de imagen en los controles ContextMenuStrip](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)

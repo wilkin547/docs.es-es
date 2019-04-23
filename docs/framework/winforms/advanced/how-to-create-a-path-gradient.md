@@ -9,21 +9,19 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975759"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59186100"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Procedimiento para crear un degradado de trazado
 La <xref:System.Drawing.Drawing2D.PathGradientBrush> clase le permite personalizar el modo de rellenar una forma con colores que cambian gradualmente. Por ejemplo, puede especificar un color para el centro de una ruta de acceso y otro color para el límite de una ruta de acceso. También puede especificar colores independientes para cada uno de varios puntos a lo largo del límite de una ruta de acceso.  
   
 > [!NOTE]
->  En GDI +, una ruta de acceso es una secuencia de líneas y curvas mantenidas por un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. Para obtener más información sobre las rutas de GDI +, consulte [trazados de gráficos en GDI +](graphics-paths-in-gdi.md) y [Constructing y dibujar trazados](constructing-and-drawing-paths.md).  
-
-Los ejemplos de este artículo son métodos que se llaman desde un control <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
-
+>  En [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], una ruta de acceso es una secuencia de líneas y curvas mantenidas por un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. Para obtener más información acerca de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] rutas de acceso, consulte [trazados de gráficos en GDI +](graphics-paths-in-gdi.md) y [Constructing y dibujar trazados](constructing-and-drawing-paths.md).  
+  
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Para rellenar una elipse con un degradado de trazado  
   
 -   El ejemplo siguiente rellena una elipse con un pincel de degradado de la ruta de acceso. Se establece el color central en azul y el color del límite se establece a aguamarina. La siguiente ilustración muestra la elipse rellena.  
@@ -32,7 +30,7 @@ Los ejemplos de este artículo son métodos que se llaman desde un control <xref
   
      De forma predeterminada, un pincel de degradado de la ruta de acceso no se extiende fuera del límite de la ruta de acceso. Si usa el pincel de degradado de trazado para rellenar una figura que se extiende más allá del límite de la ruta de acceso, no se rellenará el área de la pantalla fuera de la ruta de acceso.  
   
-     La siguiente ilustración se muestra lo que sucede si cambia la <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> llamar en el código siguiente al `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     La siguiente ilustración se muestra lo que sucede si cambia la <xref:System.Drawing.Graphics.FillEllipse%2A> llamar en el código siguiente al `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
      ![Trayecto degradado extendida más allá del límite de la ruta de acceso.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   

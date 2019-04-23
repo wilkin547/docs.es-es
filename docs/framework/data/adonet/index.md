@@ -3,10 +3,10 @@ title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
 ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191918"
 ---
 # <a name="adonet"></a>ADO.NET
@@ -44,13 +44,13 @@ ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para pr
  Describe características y comportamientos específicos del proveedor de datos .NET Framework para Oracle.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Language-Integrated Query (LINQ):C#](../../../csharp/programming-guide/concepts/linq/index.md)  
+ [Language Integrated Query (LINQ) (C#)](../../../csharp/programming-guide/concepts/linq/index.md)  
  Proporciona vínculos a temas relacionados con LINQ y ejemplos de uso C#.  
   
- [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [Language Integrated Query (LINQ) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Proporciona vínculos a temas relacionados con LINQ y ejemplos de uso de Visual Basic.  
   
- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
+ [Servicios de datos de WCF 4.5](../../../../docs/framework/data/wcf/index.md)  
  Describe cómo usar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para implementar servicios de datos en web o en una intranet que implemente el Protocolo de datos abiertos (OData).  
   
  [Guía de desarrollo para .NET Framework](../../development-guide.md)  
@@ -61,5 +61,5 @@ ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para pr
   
 ## <a name="see-also"></a>Vea también
 
-- [Acceso a datos en Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Obtener acceso a los datos en Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

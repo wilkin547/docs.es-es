@@ -6,28 +6,28 @@ dev_langs:
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
 ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191333"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Problemas conocidos y consideraciones en LINQ to Entities
 En esta sección se ofrece información sobre los problemas conocidos relacionados con las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
   
--   [Consultas LINQ que no se pueden almacenar en memoria caché](#LINQQueriesThatAreNotCached)  
+-   [Consultas LINQ que no se puede almacenar en caché](#LINQQueriesThatAreNotCached)  
   
 -   [Pérdida de información de ordenación](#OrderingInfoLost)  
   
 -   [Enteros sin signo no admitidos](#UnsignedIntsUnsupported)  
   
--   [Errores de la conversión de tipos](#TypeConversionErrors)  
+-   [Errores de conversión de tipo](#TypeConversionErrors)  
   
--   [Referencia a variables no escalares no admitida](#RefNonScalarClosures)  
+-   [Hacer referencia a Variables no escalares no admitidas](#RefNonScalarClosures)  
   
--   [Se puede producir un error en consultas anidadas con SQL Server 2000](#NestedQueriesSQL2000)  
+-   [Pueden producir un error de las consultas anidadas con SQL Server 2000](#NestedQueriesSQL2000)  
   
--   [Proyectar a un tipo anónimo](#ProjectToAnonymousType)  
+-   [Proyectar un tipo anónimo](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>Consultas LINQ que no se pueden almacenar en memoria caché  

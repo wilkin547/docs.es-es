@@ -15,10 +15,10 @@ helpviewer_keywords:
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
 ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188648"
 ---
 # <a name="dependency-properties-overview"></a>Información general sobre las propiedades de dependencia
@@ -199,6 +199,6 @@ Por lo general, no querrá que los estilos siempre apliquen ni oculten siquiera 
 ## <a name="see-also"></a>Vea también
 
 - [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
-- [Propiedades de dependencia de sólo lectura](read-only-dependency-properties.md)
+- [Propiedades de dependencia de solo lectura](read-only-dependency-properties.md)
 - [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
 - [Arquitectura de WPF](wpf-architecture.md)

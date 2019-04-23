@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193101"
 ---
 # <a name="getqualifierset-function"></a>Función GetQualifierSet
@@ -47,7 +47,7 @@ HRESULT GetQualifierSet (
 [in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
 
 `ppQualSet`  
-[out] Recibe el puntero de interfaz que permite el acceso a los calificadores del objeto de clase. `ppQualSet` No puede ser `null`. Si se produce un error, no se devuelve un nuevo objeto y el puntero se deja sin modificar. 
+[out] Recibe el puntero de interfaz que permite el acceso a los calificadores del objeto de clase. El valor de `ppQualSet` no puede ser `null`. Si se produce un error, no se devuelve un nuevo objeto y el puntero se deja sin modificar. 
 
 ## <a name="return-value"></a>Valor devuelto
 

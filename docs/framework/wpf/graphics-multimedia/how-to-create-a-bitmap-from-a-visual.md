@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un mapa de bits desde un objeto visual
+title: Procedimiento Crear un mapa de bits desde un objeto visual
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - visuals [WPF], rendering to bitmaps
 ms.assetid: 103fc7f5-7306-4026-9d61-2005e79959f3
 ms.openlocfilehash: a622d99f7c477f8654526ed399f1eb37288682fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189899"
 ---
-# <a name="how-to-create-a-bitmap-from-a-visual"></a>Filtrar Crear un mapa de bits desde un objeto visual
+# <a name="how-to-create-a-bitmap-from-a-visual"></a>Procedimiento Crear un mapa de bits desde un objeto visual
 En este ejemplo se muestra cómo puede crear un mapa de bits desde un <xref:System.Windows.Media.Visual>. Un <xref:System.Windows.Media.DrawingVisual> se presenta con <xref:System.Windows.Media.FormattedText>. El <xref:System.Windows.Media.Visual> , a continuación, se representa en el <xref:System.Windows.Media.Imaging.RenderTargetBitmap> creación de un mapa de bits del texto dado.  
   
 ## <a name="example"></a>Ejemplo  

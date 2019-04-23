@@ -1,5 +1,5 @@
 ---
-title: Filtrar Establecer una propiedad después de animarla con un guión gráfico
+title: Procedimiento Establecer una propiedad después de animarla con un guión gráfico
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
 ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188323"
 ---
-# <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Filtrar Establecer una propiedad después de animarla con un guión gráfico
+# <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Procedimiento Establecer una propiedad después de animarla con un guión gráfico
 En algunos casos, es posible que parece que no se puede cambiar el valor de una propiedad después de que se ha animado.  
   
 ## <a name="example"></a>Ejemplo  

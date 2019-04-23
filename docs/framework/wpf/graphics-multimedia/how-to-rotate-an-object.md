@@ -1,5 +1,5 @@
 ---
-title: Filtrar Girar un objeto
+title: Procedimiento Girar un objeto
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
 ms.openlocfilehash: d1c4700a5dc8f6ed99043552999d8f014116da8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189677"
 ---
-# <a name="how-to-rotate-an-object"></a>Filtrar Girar un objeto
+# <a name="how-to-rotate-an-object"></a>Procedimiento Girar un objeto
 Este ejemplo muestra cómo girar un objeto. El ejemplo crea primero un <xref:System.Windows.Media.RotateTransform> y, a continuación, especifica su <xref:System.Windows.Media.RotateTransform.Angle%2A> en grados.  
   
  En el ejemplo siguiente se gira un <xref:System.Windows.Shapes.Polyline> objeto 45 grados sobre su esquina superior izquierda.  

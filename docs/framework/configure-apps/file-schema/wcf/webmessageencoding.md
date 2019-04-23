@@ -3,10 +3,10 @@ title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
 ms.openlocfilehash: 7221f19dd131dbd60ef1a61625633d54dfdbe85a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191749"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
@@ -58,7 +58,7 @@ Habilita XML de texto sin formato, codificaciones de mensajes de Notación de ob
   
  El elemento de enlace se puede configurar con una codificación de caracteres de escritura utilizando el atributo `writeEncoding`. El valor <xref:System.Text.Encoding> proporcionado especifica el comportamiento en escritura para los casos de texto XML y JSON. En lectura, cualquier codificación de mensajes válida y codificación de texto se entenderán.  
   
- `maxReadPoolSize` y `maxWritePoolSize` también puede utilizarse para establecer el número máximo de lectores y escritores que se va a asignar respectivamente. De forma predeterminada se asignan 64 lectores y 16 escritores.  
+ `maxReadPoolSize` y `maxWritePoolSize` también se pueden utilizar para establecer el número máximo de lectores y escritores que se van a asignar respectivamente. De forma predeterminada se asignan 64 lectores y 16 escritores.  
   
  Las restricciones de complejidad predeterminadas también se establecen mediante el [ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) ataques de elemento que se va a proteger contra una clase de denegación de servicio (DOS) que intentan utilizar la complejidad del mensaje para paralizar el procesamiento del punto de conexión recursos.  
   
