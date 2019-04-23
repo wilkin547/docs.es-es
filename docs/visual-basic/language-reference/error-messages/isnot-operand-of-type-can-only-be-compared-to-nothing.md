@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
 ms.openlocfilehash: f19b8cd5f80ba9fd6d1f5a9162b04ee409e24e28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311895"
 ---
-# <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a><span data-ttu-id="dde06-102">El operando 'IsNot' de tipo 'nombreDeTipo' solo se puede comparar con 'Nothing', porque 'nombreDeTipo' es un tipo que acepta valores NULL</span><span class="sxs-lookup"><span data-stu-id="dde06-102">'IsNot' operand of type 'typename' can only be compared to 'Nothing', because 'typename' is a nullable type</span></span>
-<span data-ttu-id="dde06-103">Una variable declarada como que acepta valores NULL se ha comparado con una expresión distinta `Nothing` utilizando el `IsNot` operador.</span><span class="sxs-lookup"><span data-stu-id="dde06-103">A variable declared as nullable has been compared to an expression other than `Nothing` using the `IsNot` operator.</span></span>  
+# <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a><span data-ttu-id="7d4b5-102">El operando 'IsNot' de tipo 'nombreDeTipo' solo se puede comparar con 'Nothing', porque 'nombreDeTipo' es un tipo que acepta valores NULL</span><span class="sxs-lookup"><span data-stu-id="7d4b5-102">'IsNot' operand of type 'typename' can only be compared to 'Nothing', because 'typename' is a nullable type</span></span>
+<span data-ttu-id="7d4b5-103">Una variable declarada como que acepta valores NULL se ha comparado con una expresión distinta `Nothing` utilizando el `IsNot` operador.</span><span class="sxs-lookup"><span data-stu-id="7d4b5-103">A variable declared as nullable has been compared to an expression other than `Nothing` using the `IsNot` operator.</span></span>  
   
- <span data-ttu-id="dde06-104">**Identificador de error:** BC32128</span><span class="sxs-lookup"><span data-stu-id="dde06-104">**Error ID:** BC32128</span></span>  
+ <span data-ttu-id="7d4b5-104">**Identificador de error:** BC32128</span><span class="sxs-lookup"><span data-stu-id="7d4b5-104">**Error ID:** BC32128</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="dde06-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="dde06-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7d4b5-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="7d4b5-105">To correct this error</span></span>  
   
-1. <span data-ttu-id="dde06-106">Para comparar un tipo que acepta valores NULL con una expresión distinta de `Nothing` con el operador `IsNot` , llame al método `GetType` en el tipo que acepta valores NULL y compare el resultado con la expresión, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="dde06-106">To compare a nullable type to an expression other than `Nothing` by using the `IsNot` operator, call the `GetType` method on the nullable type and compare the result to the expression, as shown in the following example.</span></span>  
+1. <span data-ttu-id="7d4b5-106">Para comparar un tipo que acepta valores NULL con una expresión distinta de `Nothing` con el operador `IsNot` , llame al método `GetType` en el tipo que acepta valores NULL y compare el resultado con la expresión, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="7d4b5-106">To compare a nullable type to an expression other than `Nothing` by using the `IsNot` operator, call the `GetType` method on the nullable type and compare the result to the expression, as shown in the following example.</span></span>  
   
 ```vb  
 Dim number? As Integer = 5  
@@ -33,7 +33,7 @@ If number IsNot Nothing Then
 End If  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dde06-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="dde06-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d4b5-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="7d4b5-107">See also</span></span>
 
-- [<span data-ttu-id="dde06-108">Tipos de valor que aceptan valores NULL</span><span class="sxs-lookup"><span data-stu-id="dde06-108">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [<span data-ttu-id="dde06-109">IsNot (Operador)</span><span class="sxs-lookup"><span data-stu-id="dde06-109">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [<span data-ttu-id="7d4b5-108">Tipos de valor que aceptan valores NULL</span><span class="sxs-lookup"><span data-stu-id="7d4b5-108">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [<span data-ttu-id="7d4b5-109">IsNot (operador)</span><span class="sxs-lookup"><span data-stu-id="7d4b5-109">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)

@@ -3,43 +3,43 @@ title: KEY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cbaa97a8-c89c-4460-8c74-00474695789f
 ms.openlocfilehash: 9cd3276583741f2b0261cb8a0e55f4185d20100e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319344"
 ---
-# <a name="key-entity-sql"></a><span data-ttu-id="9a17e-102">KEY (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="9a17e-102">KEY (Entity SQL)</span></span>
-<span data-ttu-id="9a17e-103">Extrae la clave de una referencia o de una expresión de entidad.</span><span class="sxs-lookup"><span data-stu-id="9a17e-103">Extracts the key of a reference or of an entity expression.</span></span>  
+# <a name="key-entity-sql"></a><span data-ttu-id="e9257-102">KEY (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e9257-102">KEY (Entity SQL)</span></span>
+<span data-ttu-id="e9257-103">Extrae la clave de una referencia o de una expresión de entidad.</span><span class="sxs-lookup"><span data-stu-id="e9257-103">Extracts the key of a reference or of an entity expression.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a17e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9a17e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e9257-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e9257-104">Syntax</span></span>  
   
 ```  
 KEY(createref_expression)  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="9a17e-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9a17e-105">Remarks</span></span>  
- <span data-ttu-id="9a17e-106">Una clave de entidad contiene los valores de clave en el orden correcto de la entidad especificada o referencia a entidad.</span><span class="sxs-lookup"><span data-stu-id="9a17e-106">An entity key contains the key values in the correct order of the specified entity or entity reference.</span></span> <span data-ttu-id="9a17e-107">Dado que varios conjuntos de entidades pueden estar basados en el mismo tipo, la misma clave podría aparecer en cada conjunto de entidades.</span><span class="sxs-lookup"><span data-stu-id="9a17e-107">Because multiple entity sets can be based on the same type, the same key might appear in each entity set.</span></span> <span data-ttu-id="9a17e-108">Para obtener una referencia única, utilice `REF`.</span><span class="sxs-lookup"><span data-stu-id="9a17e-108">To get a unique reference, use `REF`.</span></span> <span data-ttu-id="9a17e-109">El tipo de valor devuelto del operador KEY es un tipo de fila que incluye un campo para cada clave de la entidad, en el mismo orden.</span><span class="sxs-lookup"><span data-stu-id="9a17e-109">The return type of the KEY operator is a row type that includes one field for each key of the entity, in the same order.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e9257-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e9257-105">Remarks</span></span>  
+ <span data-ttu-id="e9257-106">Una clave de entidad contiene los valores de clave en el orden correcto de la entidad especificada o referencia a entidad.</span><span class="sxs-lookup"><span data-stu-id="e9257-106">An entity key contains the key values in the correct order of the specified entity or entity reference.</span></span> <span data-ttu-id="e9257-107">Dado que varios conjuntos de entidades pueden estar basados en el mismo tipo, la misma clave podría aparecer en cada conjunto de entidades.</span><span class="sxs-lookup"><span data-stu-id="e9257-107">Because multiple entity sets can be based on the same type, the same key might appear in each entity set.</span></span> <span data-ttu-id="e9257-108">Para obtener una referencia única, utilice `REF`.</span><span class="sxs-lookup"><span data-stu-id="e9257-108">To get a unique reference, use `REF`.</span></span> <span data-ttu-id="e9257-109">El tipo de valor devuelto del operador KEY es un tipo de fila que incluye un campo para cada clave de la entidad, en el mismo orden.</span><span class="sxs-lookup"><span data-stu-id="e9257-109">The return type of the KEY operator is a row type that includes one field for each key of the entity, in the same order.</span></span>  
   
- <span data-ttu-id="9a17e-110">En el ejemplo siguiente, al operador Key se le pasa una referencia a la entidad BadOrder y devuelve la parte de la clave de esa referencia.</span><span class="sxs-lookup"><span data-stu-id="9a17e-110">In the following example, the key operator is passed a reference to the BadOrder entity, and returns the key portion of that reference.</span></span> <span data-ttu-id="9a17e-111">En este caso, un tipo de registro con exactamente un campo que corresponde a la propiedad `Id` .</span><span class="sxs-lookup"><span data-stu-id="9a17e-111">In this case, a record type with exactly one field corresponding to the `Id` property.</span></span>  
+ <span data-ttu-id="e9257-110">En el ejemplo siguiente, al operador Key se le pasa una referencia a la entidad BadOrder y devuelve la parte de la clave de esa referencia.</span><span class="sxs-lookup"><span data-stu-id="e9257-110">In the following example, the key operator is passed a reference to the BadOrder entity, and returns the key portion of that reference.</span></span> <span data-ttu-id="e9257-111">En este caso, un tipo de registro con exactamente un campo que corresponde a la propiedad `Id` .</span><span class="sxs-lookup"><span data-stu-id="e9257-111">In this case, a record type with exactly one field corresponding to the `Id` property.</span></span>  
   
 ```  
 select Key( CreateRef(LOB.BadOrders, row(o.Id)) )   
 from LOB.Orders as o  
 ```  
   
-## <a name="example"></a><span data-ttu-id="9a17e-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9a17e-112">Example</span></span>  
- <span data-ttu-id="9a17e-113">La consulta de Entity SQL siguiente utiliza el operador KEY para extraer la parte de la clave de una expresión con referencia de tipo.</span><span class="sxs-lookup"><span data-stu-id="9a17e-113">The following Entity SQL query uses the KEY operator to extract the key portion of an expression with type reference.</span></span> <span data-ttu-id="9a17e-114">La consulta se basa en el modelo AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="9a17e-114">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="9a17e-115">Para compilar y ejecutar esta consulta, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="9a17e-115">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="e9257-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e9257-112">Example</span></span>  
+ <span data-ttu-id="e9257-113">La consulta de Entity SQL siguiente utiliza el operador KEY para extraer la parte de la clave de una expresión con referencia de tipo.</span><span class="sxs-lookup"><span data-stu-id="e9257-113">The following Entity SQL query uses the KEY operator to extract the key portion of an expression with type reference.</span></span> <span data-ttu-id="e9257-114">La consulta se basa en el modelo AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="e9257-114">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="e9257-115">Para compilar y ejecutar esta consulta, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="e9257-115">To compile and run this query, follow these steps:</span></span>  
   
-1. <span data-ttu-id="9a17e-116">Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="9a17e-116">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1. <span data-ttu-id="e9257-116">Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="e9257-116">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2. <span data-ttu-id="9a17e-117">Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="9a17e-117">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2. <span data-ttu-id="e9257-117">Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="e9257-117">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#KEY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#key)]  
   
-## <a name="see-also"></a><span data-ttu-id="9a17e-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="9a17e-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9257-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="e9257-118">See also</span></span>
 
-- [<span data-ttu-id="9a17e-119">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="9a17e-119">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [<span data-ttu-id="9a17e-120">CREATEREF</span><span class="sxs-lookup"><span data-stu-id="9a17e-120">CREATEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
-- [<span data-ttu-id="9a17e-121">REF</span><span class="sxs-lookup"><span data-stu-id="9a17e-121">REF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)
-- [<span data-ttu-id="9a17e-122">DEREF</span><span class="sxs-lookup"><span data-stu-id="9a17e-122">DEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
+- [<span data-ttu-id="e9257-119">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="e9257-119">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [<span data-ttu-id="e9257-120">CREATEREF</span><span class="sxs-lookup"><span data-stu-id="e9257-120">CREATEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
+- [<span data-ttu-id="e9257-121">REF</span><span class="sxs-lookup"><span data-stu-id="e9257-121">REF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)
+- [<span data-ttu-id="e9257-122">DEREF</span><span class="sxs-lookup"><span data-stu-id="e9257-122">DEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
