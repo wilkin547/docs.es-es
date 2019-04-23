@@ -3,10 +3,10 @@ title: Asignación basada en atributos
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
 ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223568"
 ---
 # <a name="attribute-based-mapping"></a>Asignación basada en atributos
@@ -26,7 +26,7 @@ ms.locfileid: "59223568"
   
 |Propiedad|Tipo|Default|Descripción|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|Vea <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Cuando se usa con su propiedad <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>, especifica el nombre de la base de datos.|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|Consulta <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.|Cuando se usa con su propiedad <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>, especifica el nombre de la base de datos.|  
   
  Para obtener más información, consulta <xref:System.Data.Linq.Mapping.DatabaseAttribute>.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "59223568"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Booleano|`false`|Indica que la columna contiene un valor de discriminador para una jerarquía de herencia de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Booleano|`false`|Especifica que este miembro de clase representa una columna que es o forma parte de las claves principales de la tabla.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Booleano|`false`|Identifica el tipo de columna del miembro como una marca de tiempo o número de versión de la base de datos.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, a menos que <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> es `true` para un miembro|Especifica cómo se plantea [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la detección de conflictos de simultaneidad optimista.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, a menos que <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> sea `true` para un miembro|Especifica cómo se plantea [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la detección de conflictos de simultaneidad optimista.|  
   
  Para obtener más información, consulta <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   

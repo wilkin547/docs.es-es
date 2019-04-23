@@ -1,15 +1,15 @@
 ---
-title: Filtrar para publicar metadatos para un servicio mediante un archivo de configuración
+title: Procedimiento para publicar metadatos para un servicio mediante un archivo de configuración
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295541"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Filtrar para publicar metadatos para un servicio mediante un archivo de configuración
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Procedimiento para publicar metadatos para un servicio mediante un archivo de configuración
 Esta es una de dos temas de procedimientos que muestran la publicación de metadatos para un servicio de Windows Communication Foundation (WCF). Hay dos maneras de especificar cómo debería publicar metadatos un servicio: mediante un archivo de configuración y mediante código. En este tema se muestra cómo publicar metadatos para un servicio mediante un archivo de configuración.  
   
 > [!CAUTION]
@@ -98,7 +98,7 @@ namespace Metadata.Samples
 
 3. Agregue un elemento `<behavior>` al elemento `<serviceBehaviors>` y especifique un valor para el atributo `name` del elemento `<behavior>`.  
 
-4. Agregue un elemento `<serviceMetadata>` al elemento `<behavior>`. Establezca el atributo `httpGetEnabled` en `true` y el atributo `policyVersion` en Policy15. `httpGetEnabled` permite al servicio responder a las solicitudes de metadatos realizadas por una solicitud HTTP GET. `policyVersion` indica al servicio que se ajustan a WS-Policy 1.5 al generar los metadatos.  
+4. Agregue un elemento `<serviceMetadata>` al elemento `<behavior>`. Establezca el atributo `httpGetEnabled` en `true` y el atributo `policyVersion` en Policy15. `httpGetEnabled` permite que el servicio responda a las solicitudes de metadatos realizadas por una solicitud HTTP GET. `policyVersion` indica al servicio que se ajuste a WS-Policy 1.5 al generar los metadatos.  
 
 5. Agregue un atributo `behaviorConfiguration` al elemento `<service>` y especifique el atributo `name` del elemento `<behavior>` agregado en el paso 1, como se muestra en el siguiente código de ejemplo.  
   
@@ -140,7 +140,7 @@ namespace Metadata.Samples
   
 7. Para los puntos de conexión de metadatos agregados en el paso anterior, establezca el atributo `binding` en uno de los siguientes valores:  
   
-    -   `mexHttpBinding` para la publicación de HTTP.  
+    -   `mexHttpBinding` para la publicación HTTP.  
   
     -   `mexHttpsBinding` para la publicación HTTPS.  
   
@@ -256,8 +256,8 @@ namespace Metadata.Samples
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [Filtrar para hospedar un servicio WCF en una aplicación administrada](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Cómo: Hospedar un servicio WCF en una aplicación administrada](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [Probar internamente](../../../../docs/framework/wcf/samples/self-host.md)
 - [Información general de la arquitectura de metadatos](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Utilización de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Filtrar para publicar metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [Cómo: Publicación de metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

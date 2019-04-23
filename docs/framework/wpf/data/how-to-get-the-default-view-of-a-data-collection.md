@@ -1,5 +1,5 @@
 ---
-title: Filtrar Obtener la vista predeterminada de una colección de datos
+title: Procedimiento Obtener la vista predeterminada de una colección de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
 ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222112"
 ---
-# <a name="how-to-get-the-default-view-of-a-data-collection"></a>Filtrar Obtener la vista predeterminada de una colección de datos
+# <a name="how-to-get-the-default-view-of-a-data-collection"></a>Procedimiento Obtener la vista predeterminada de una colección de datos
 Las vistas permiten la misma colección de datos a verse de maneras diferentes, dependiendo de la ordenación, filtrado o criterio de agrupación. Cada colección tiene una vista compartida de forma predeterminada, que se usa como origen de enlace real cuando un enlace especifica una colección como origen. En este ejemplo se muestra cómo obtener la vista predeterminada de una colección.  
   
 ## <a name="example"></a>Ejemplo  

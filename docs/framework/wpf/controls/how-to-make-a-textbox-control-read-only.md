@@ -1,18 +1,18 @@
 ---
-title: Filtrar Hacer que un control TextBox sea de solo lectura
+title: Procedimiento Hacer que un control TextBox sea de solo lectura
 ms.date: 03/30/2017
 helpviewer_keywords:
 - read-only TextBox controls [WPF]
 - TextBox control read-only
 ms.assetid: e707ec59-8b22-473e-b77c-3060a237517a
 ms.openlocfilehash: 7f24458eb98bd669d59f15c49d1d9e3beb6833b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229841"
 ---
-# <a name="how-to-make-a-textbox-control-read-only"></a>Filtrar Hacer que un control TextBox sea de solo lectura
+# <a name="how-to-make-a-textbox-control-read-only"></a>Procedimiento Hacer que un control TextBox sea de solo lectura
 En este ejemplo se muestra cómo configurar un <xref:System.Windows.Controls.TextBox> control no permitir la entrada del usuario o la modificación.  
   
 ## <a name="example"></a>Ejemplo  
@@ -27,4 +27,4 @@ En este ejemplo se muestra cómo configurar un <xref:System.Windows.Controls.Tex
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre TextBox](textbox-overview.md)
-- [Información general sobre el control RichTextBox](richtextbox-overview.md)
+- [RichTextBox Overview](richtextbox-overview.md) (Introducción a RichTextBox)

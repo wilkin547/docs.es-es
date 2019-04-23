@@ -6,10 +6,10 @@ helpviewer_keywords:
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
 ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296347"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabajar con NAT y firewalls
@@ -32,7 +32,7 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
  Una configuración común para un firewall del usuario doméstico consiste en prohibir las conexiones entrantes a menos que se haya realizado una conexión de salida previamente a ese equipo. Una configuración común para un firewall de usuario empresarial consiste en prohibir las conexiones entrantes en todos los puertos exceptuando un grupo identificado específicamente. Un ejemplo es un firewall que prohíbe las conexiones en todos los puertos salvo el puerto 80 y 443 para proporcionar servicio HTTP y HTTPS. Los firewalls administrados existen tanto para usuarios domésticos como para usuarios empresariales, y permiten a un usuario o proceso de confianza del equipo cambiar la configuración del firewall. Los firewalls administrados son más comunes para usuarios domésticos donde no hay ninguna directiva corporativa que controle el uso de la red.  
   
 ## <a name="using-teredo"></a>Uso de Teredo  
- Teredo es una tecnología de transición de IPv6 que habilita la direccionabilidad directa de equipos detrás de una NAT. Teredo se basa en el uso de un servidor que se puede enrutar de manera pública y global para anunciar conexiones potenciales. El servidor de Teredo da al servidor y cliente de la aplicación un punto de reunión común en el que pueden intercambiar información de conexión. Los equipos solicitan a continuación una dirección Teredo temporal y los paquetes se pasan mediante túneles a través de la red existente. Compatibilidad con Teredo en WCF requiere habilitar la compatibilidad con IPv6 y Teredo en el sistema operativo. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y los sistemas operativos posteriores admiten Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] y los sistemas operativos posteriores admiten IPv6 de forma predeterminada y solo requiere que el usuario habilitar Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] requieren que el usuario habilite IPv6 y Teredo. Para obtener más información, consulte el [información general sobre Teredo](https://go.microsoft.com/fwlink/?LinkId=87571).  
+ Teredo es una tecnología de transición de IPv6 que habilita la direccionabilidad directa de equipos detrás de una NAT. Teredo se basa en el uso de un servidor que se puede enrutar de manera pública y global para anunciar conexiones potenciales. El servidor de Teredo da al servidor y cliente de la aplicación un punto de reunión común en el que pueden intercambiar información de conexión. Los equipos solicitan a continuación una dirección Teredo temporal y los paquetes se pasan mediante túneles a través de la red existente. Compatibilidad con Teredo en WCF requiere habilitar la compatibilidad con IPv6 y Teredo en el sistema operativo. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y los sistemas operativos posteriores admiten Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] y los sistemas operativos posteriores admiten IPv6 de forma predeterminada y solo el usuario necesita habilitar Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] necesitan que el usuario habilite IPv6 y Teredo. Para obtener más información, consulte el [información general sobre Teredo](https://go.microsoft.com/fwlink/?LinkId=87571).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes y transporte  
  La selección de un transporte y MEP es un proceso de tres pasos:  
@@ -56,9 +56,9 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
 |Direccionabilidad|Servidor directo|Servidor directo con transversal NAT|Servidor NAT|Servidor NAT con transversal NAT|  
 |--------------------|-------------------|--------------------------------------|----------------|-----------------------------------|  
 |Cliente directo|Cualquier transporte y MEP.|Cualquier transporte y MEP.|No se admite.|No se admite.|  
-|Cliente directo con transversal NAT|Cualquier transporte y MEP.|Cualquier transporte y MEP.|No se admite.|TCP con Teredo y cualquier MEP. [!INCLUDE[wv](../../../../includes/wv-md.md)] tiene una opción de configuración del equipo para admitir HTTP con Teredo.|  
+|Cliente directo con transversal NAT|Cualquier transporte y MEP.|Cualquier transporte y MEP.|No se admite.|TCP con Teredo y cualquier MEP. [!INCLUDE[wv](../../../../includes/wv-md.md)] tiene una opción de configuración de equipo para admitir HTTP con Teredo.|  
 |NAT cliente|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|No se admite.|No se admite.|  
-|NAT cliente con transversal NAT|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|Todos menos HTTP dual y cualquier MEP. Un MEP dúplex requiere transporte TCP. El transporte TCP dual necesita Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] tiene una opción de configuración del equipo para admitir HTTP con Teredo.|No se admite.|TCP con Teredo y cualquier MEP. [!INCLUDE[wv](../../../../includes/wv-md.md)] tiene una opción de configuración del equipo para admitir HTTP con Teredo.|  
+|NAT cliente con transversal NAT|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|Todos menos HTTP dual y cualquier MEP. Un MEP dúplex requiere transporte TCP. El transporte TCP dual necesita Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] tiene una opción de configuración de equipo para admitir HTTP con Teredo.|No se admite.|TCP con Teredo y cualquier MEP. [!INCLUDE[wv](../../../../includes/wv-md.md)] tiene una opción de configuración de equipo para admitir HTTP con Teredo.|  
   
 |Restricciones del firewall|Servidor abierto|Servidor con firewall administrado|Servidor con firewall solo HTTP|Servidor con firewall solo de salida|  
 |---------------------------|-----------------|----------------------------------|-------------------------------------|-----------------------------------------|  

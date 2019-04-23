@@ -6,10 +6,10 @@ helpviewer_keywords:
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
 ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230101"
 ---
 # <a name="best-practices-for-queued-communication"></a>Procedimientos recomendados para la comunicación en cola
@@ -29,7 +29,7 @@ Este tema proporciona las prácticas recomendadas para la comunicación en cola 
  Para obtener una fiabilidad de un extremo a otro, establezca la propiedad <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> en `true` para asegurar la transferencia. La propiedad <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> puede establecerse en `true` o `false` en función de sus requisitos (el valor predeterminado es `true`). Generalmente, la propiedad <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> está establecida en `true` como parte de la fiabilidad de un extremo a otro. El compromiso es proporcionar un costo de rendimiento, pero hace el mensaje durable para que no se pierda el mensaje si un administrador de cola se bloquea.  
   
 ### <a name="use-of-transactions"></a>Uso de transacciones  
- Debe usar transacciones para garantizar la confiabilidad de un extremo a otro. `ExactlyOnce` las garantías sólo aseguran de que los mensajes se entregan a la cola de destino. Para garantizar que se reciba el mensaje, utilice transacciones. Sin transacciones, si el servicio se bloquea, pierde el mensaje que se entrega pero realmente se entrega a la aplicación.  
+ Debe usar transacciones para garantizar la confiabilidad de un extremo a otro. Las garantías de`ExactlyOnce` solo aseguran que los mensajes se entreguen a la cola de destino. Para garantizar que se reciba el mensaje, utilice transacciones. Sin transacciones, si el servicio se bloquea, pierde el mensaje que se entrega pero realmente se entrega a la aplicación.  
   
 ### <a name="use-of-dead-letter-queues"></a>Uso de colas de mensajes no enviados  
  Las colas de mensajes no enviados aseguran que reciba una notificación si no se pudo entregar un mensaje a la cola de destino. Puede utilizar la cola de mensajes no enviados proporcionada por el sistema o una cola de mensajes no enviados personalizada. En general, utilizar una cola de mensajes no enviados personalizada es mejor porque le permite enviar mensajes no enviados de una aplicación en una cola de mensajes no enviados única. De lo contrario, todos los mensajes no enviados que ocurran para todas las aplicaciones que se ejecuten en el sistema se entregan a una cola única. Cada aplicación debe buscar a continuación en la cola de mensajes no enviados para encontrar los mensajes no enviados pertinentes para esa aplicación. A veces, utilizar una cola de mensajes no enviados personalizada no es factible, como cuando se usa MSMQ 3.0.  
@@ -83,9 +83,9 @@ Este tema proporciona las prácticas recomendadas para la comunicación en cola 
   
 ## <a name="see-also"></a>Vea también
 
-- [Las colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Filtrar para intercambiar mensajes en cola con puntos de conexión de WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [Filtrar para intercambiar mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Cómo: Intercambiar los mensajes en cola con puntos de conexión WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Cómo: Intercambiar mensajes con puntos de conexión WCF y Message Queue Server de las aplicaciones](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Agrupación de los mensajes en cola de una sesión](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)
 - [Mensajes por lotes en una transacción](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
 - [Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)

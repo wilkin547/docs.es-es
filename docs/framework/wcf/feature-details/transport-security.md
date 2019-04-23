@@ -3,10 +3,10 @@ title: Seguridad de transporte
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218971"
 ---
 # <a name="transport-security"></a>Seguridad de transporte
@@ -25,7 +25,7 @@ Seguridad de transporte en Windows Communication Foundation (WCF) depende el enl
  [Utilización de la suplantación con la seguridad de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  Explica los cinco niveles de suplantación que son posibles con el modo de seguridad de transporte.  
   
- [Filtrar para configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Cómo: Configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  Describe los fundamentos para configurar un puerto en un equipo con un certificado X.509 para la seguridad de SSL (transporte).  
   
 ## <a name="reference"></a>Referencia  

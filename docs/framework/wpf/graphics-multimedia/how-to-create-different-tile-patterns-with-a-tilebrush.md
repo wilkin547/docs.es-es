@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear patrones de mosaico diferentes con un objeto TileBrush
+title: Procedimiento Crear patrones de mosaico diferentes con un objeto TileBrush
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - creating [WPF], tile patterns with TileBrush
 ms.assetid: 5aa46632-3527-4668-9d8d-0375c8af28aa
 ms.openlocfilehash: c1051b234961eee9ae740af2abac3d64c523656c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227410"
 ---
-# <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a>Filtrar Crear patrones de mosaico diferentes con un objeto TileBrush
+# <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a>Procedimiento Crear patrones de mosaico diferentes con un objeto TileBrush
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.TileBrush.TileMode%2A> propiedad de un <xref:System.Windows.Media.TileBrush> para crear un patrón.  
   
  El <xref:System.Windows.Media.TileBrush.TileMode%2A> propiedad le permite especificar cómo el contenido de un <xref:System.Windows.Media.TileBrush> se repite, es decir, en mosaico para rellenar un área de salida. Para crear un modelo, puede establecer el <xref:System.Windows.Media.TileBrush.TileMode%2A> a <xref:System.Windows.Media.TileMode.Tile>, <xref:System.Windows.Media.TileMode.FlipX>, <xref:System.Windows.Media.TileMode.FlipY>, o <xref:System.Windows.Media.TileMode.FlipXY>. También debe establecer el <xref:System.Windows.Media.TileBrush.Viewport%2A> de la <xref:System.Windows.Media.TileBrush> para que sea menor que el área que se está pintando; en caso contrario, solo un único mosaico está generado, independientemente que <xref:System.Windows.Media.TileBrush.TileMode%2A> configuración utilizada.  

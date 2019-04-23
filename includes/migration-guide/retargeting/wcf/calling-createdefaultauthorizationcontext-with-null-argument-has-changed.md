@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 9ec5fa379556dedeaa7a35e34f004340ab47a39c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59234513"
 ---
 ### <a name="calling-createdefaultauthorizationcontext-with-a-null-argument-has-changed"></a>La llamada a CreateDefaultAuthorizationContext con un argumento NULL ha cambiado
@@ -11,7 +11,7 @@ ms.locfileid: "59234513"
 |   |   |
 |---|---|
 |Detalles|La implementación del elemento <xref:System.IdentityModel.Policy.AuthorizationContext?displayProperty=name> devuelto por una llamada a <xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext(System.Collections.Generic.IList{System.IdentityModel.Policy.IAuthorizationPolicy})?displayProperty=name> con un argumento authorizationPolicies nulo ha cambiado su implementación en .NET Framework 4.6.|
-|Sugerencia|En raras ocasiones, las aplicaciones WCF que usan la autenticación personalizada pueden sufrir diferencias de comportamiento. En estos casos, es posible restaurar el comportamiento anterior de dos maneras:<ol><li>Vuelva a compilar la aplicación para que se dirija a una versión anterior a .NET Framework 4.6. Para los servicios hospedados en IIS, use el elemento &lt;httpRuntime plataformaDestino=&quot;x.x&quot; /&gt; para establecer como destino una versión anterior de .NET Framework.</li><li>Agregue la siguiente línea a la sección <code>&lt;appSettings&gt;</code> del archivo app.config: <code>&lt;add key=&quot;appContext.SetSwitch:Switch.System.IdentityModel.EnableCachedEmptyDefaultAuthorizationContext&quot; value=&quot;true&quot; /&gt;</code></li></ol>|
+|Sugerencia|En raras ocasiones, las aplicaciones WCF que usan la autenticación personalizada pueden sufrir diferencias de comportamiento. En estos casos, es posible restaurar el comportamiento anterior de dos maneras:<ol><li>Vuelva a compilar la aplicación para que se dirija a una versión anterior a .NET Framework 4.6. Para los servicios hospedados en IIS, use el elemento &lt;httpRuntime plataformaDestino=&quot;x.x&quot; /&gt; para establecer como destino una versión anterior de .NET Framework.</li><li>Agregue la siguiente línea a la sección <code>&lt;appSettings&gt;</code> del archivo app.config: <code>&lt;add key=&quot;appContext.SetSwitch:Switch.System.IdentityModel.EnableCachedEmptyDefaultAuthorizationContext&quot; value=&quot;true&quot; /&gt;</code>.</li></ol>|
 |Ámbito|Secundaria|
 |Versión|4.6|
 |Tipo|Redestinación|

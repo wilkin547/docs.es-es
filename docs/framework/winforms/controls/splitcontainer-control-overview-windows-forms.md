@@ -7,10 +7,10 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
 ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219426"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Información general sobre SplitContainer (Control, formularios Windows Forms)
@@ -40,17 +40,17 @@ El control <xref:System.Windows.Forms.SplitContainer> de Windows Forms puede con
   
 |Name|Descripción|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> propiedad|Determina qué panel seguirá siendo el mismo tamaño después de la <xref:System.Windows.Forms.SplitContainer> control cambia de tamaño.|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> propiedad|Determina si el divisor se puede mover con el teclado o mouse (ratón).|  
-|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> propiedad|Determina si el divisor se organiza verticalmente u horizontalmente.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> propiedad|Determina la distancia en píxeles desde el borde izquierdo o superior a la barra de división movible.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propiedad|Determina la distancia mínima en píxeles, que el usuario puede mover el divisor.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> propiedad|Determina el grosor, en píxeles, del divisor.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> evento|Se produce cuando se mueve el divisor.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> evento|Se produce cuando se ha movido el divisor.|  
+|Propiedad <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Determina qué panel seguirá siendo el mismo tamaño después de la <xref:System.Windows.Forms.SplitContainer> control cambia de tamaño.|  
+|Propiedad <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Determina si el divisor se puede mover con el teclado o mouse (ratón).|  
+|Propiedad <xref:System.Windows.Forms.SplitContainer.Orientation%2A>|Determina si el divisor se organiza verticalmente u horizontalmente.|  
+|Propiedad <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Determina la distancia en píxeles desde el borde izquierdo o superior a la barra de división movible.|  
+|Propiedad <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Determina la distancia mínima en píxeles, que el usuario puede mover el divisor.|  
+|Propiedad <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Determina el grosor, en píxeles, del divisor.|  
+|Evento<xref:System.Windows.Forms.SplitContainer.SplitterMoving> |Se produce cuando se mueve el divisor.|  
+|Evento<xref:System.Windows.Forms.SplitContainer.SplitterMoved> |Se produce cuando se ha movido el divisor.|  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Control SplitContainer](splitcontainer-control-windows-forms.md)
+- [SplitContainer (control)](splitcontainer-control-windows-forms.md)
 - [Ejemplo SplitContainer (Control)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/0ffz7d1b(v=vs.90))

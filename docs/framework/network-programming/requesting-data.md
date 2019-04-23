@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
 ms.openlocfilehash: 4e93b9395e92ff4c1c153f53e0f40ff18c12416a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228515"
 ---
 # <a name="requesting-data"></a>Solicitud de datos
@@ -55,5 +55,5 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
 ## <a name="see-also"></a>Vea también
 
 - [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Procedimiento para solicitar una página web y recuperar los resultados como una secuencia](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [Procedimiento para recuperar un elemento WebResponse específico del protocolo que coincida con un elemento WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [Cómo: Solicitar una página web y recuperar los resultados como una secuencia](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [Cómo: Recuperar una WebResponse específica de protocolo que coincida con una WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

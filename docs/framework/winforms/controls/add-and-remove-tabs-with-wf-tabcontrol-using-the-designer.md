@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agregar y quitar fichas con el control TabControl de formularios Windows Forms mediante el diseñador
+title: Procedimiento para agregar y quitar fichas con el control TabControl de formularios Windows Forms mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tabs [Windows Forms], removing from pages
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
 ms.openlocfilehash: 23fe9fa2b8405a6ebe66e8f0cee1d81d45f2395b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219764"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Filtrar para agregar y quitar fichas con el control TabControl de formularios Windows Forms mediante el diseñador
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Procedimiento para agregar y quitar fichas con el control TabControl de formularios Windows Forms mediante el diseñador
 Cuando coloca un <xref:System.Windows.Forms.TabControl> control en el formulario, contiene dos pestañas de forma predeterminada. Puede agregar o quitar fichas mediante el diseñador.  
   
  El procedimiento siguiente requiere una **aplicación Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.TabControl> control. Para obtener información acerca de cómo configurar un proyecto de este tipo, vea [Cómo: Cree un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) y [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md).  
@@ -33,8 +33,8 @@ Cuando coloca un <xref:System.Windows.Forms.TabControl> control en el formulario
   
 ## <a name="see-also"></a>Vea también
 
-- [TabControl (Control)](tabcontrol-control-windows-forms.md)
-- [Información general sobre el control TabControl](tabcontrol-control-overview-windows-forms.md)
-- [Filtrar para agregar un control a una ficha](how-to-add-a-control-to-a-tab-page.md)
-- [Filtrar para deshabilitar fichas](how-to-disable-tab-pages.md)
-- [Filtrar para cambiar el aspecto apariencia del control TabControl de formularios Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [TabControl (control)](tabcontrol-control-windows-forms.md)
+- [Información general del control TabControl](tabcontrol-control-overview-windows-forms.md)
+- [Cómo: Agregar un Control a una página de ficha](how-to-add-a-control-to-a-tab-page.md)
+- [Cómo: Deshabilitar páginas de fichas](how-to-disable-tab-pages.md)
+- [Cómo: Cambiar la apariencia del control TabControl de formularios de Windows](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

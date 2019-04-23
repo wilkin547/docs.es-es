@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 37d771305bb0a4a38eeac9713e8667d158962174
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 77d4978df76735d11f63c7118c1b4708b5b85502
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "57788934"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59236077"
 ---
 ### <a name="remove-ssl3-from-the-wcf-transportdefaults"></a>Se quita Ssl3 de TransportDefaults de WCF
 
@@ -16,4 +16,3 @@ ms.locfileid: "57788934"
 |Versión|4.6.2|
 |Tipo|Tiempo de ejecución|
 |API afectadas|<ul><li><xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols?displayProperty=nameWithType></li><li><xref:System.ServiceModel.TcpTransportSecurity.SslProtocols?displayProperty=nameWithType></li></ul>|
-

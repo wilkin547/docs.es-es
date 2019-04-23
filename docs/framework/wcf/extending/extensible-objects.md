@@ -5,10 +5,10 @@ helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
 ms.openlocfilehash: 1af44f2394bbf27f9219831612b4e73d7a1759e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220284"
 ---
 # <a name="extensible-objects"></a>Objetos extensibles
@@ -19,7 +19,7 @@ El patrón de objeto extensible se utiliza para extender clases de tiempo de eje
   
  Los tipos que permiten a los objetos <xref:System.ServiceModel.IExtensibleObject%601> personalizar su funcionalidad implementan la interfaz <xref:System.ServiceModel.IExtension%601>.  
   
- Los objetos extensibles permiten la agregación dinámica de objetos <xref:System.ServiceModel.IExtension%601>. <xref:System.ServiceModel.IExtension%601> la interfaz siguiente caracteriza los objetos:  
+ Los objetos extensibles permiten la agregación dinámica de objetos <xref:System.ServiceModel.IExtension%601>. Los objetos <xref:System.ServiceModel.IExtension%601> son caracterizados por la interfaz siguiente:  
   
 ```  
 public interface IExtension<T>  
@@ -30,11 +30,11 @@ where T : IExtensibleObject<T>
 }  
 ```  
   
- La restricción de tipo garantiza que las extensiones solo se pueden definir para las clases que son <xref:System.ServiceModel.IExtensibleObject%601>. <xref:System.ServiceModel.IExtension%601.Attach%2A> y <xref:System.ServiceModel.IExtension%601.Detach%2A> proporcionará una notificación de agregación o desagregación.  
+ La restricción de tipo garantiza que las extensiones solo se pueden definir para las clases que son <xref:System.ServiceModel.IExtensibleObject%601>. <xref:System.ServiceModel.IExtension%601.Attach%2A> y <xref:System.ServiceModel.IExtension%601.Detach%2A> proporcionan notificación de agregación o desagregación.  
   
  Es válido para que las implementaciones restrinjan cuando se pueden agregar y quitar de un propietario. Por ejemplo, puede impedir la eliminación por completo, impedir agregar o eliminar extensiones cuando el propietario o extensión están en un cierto estado, impedir agregar a varios propietarios simultáneamente o permitir solo una suma única seguida por una sola eliminación.  
   
- <xref:System.ServiceModel.IExtension%601> implica ninguna interacción con otras interfaces administradas estándar. En concreto, el método <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> en el objeto de propietario no desasocia normalmente sus extensiones.  
+ <xref:System.ServiceModel.IExtension%601> no implica ninguna interacción con otras interfaces administradas estándar. En concreto, el método <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> en el objeto de propietario no desasocia normalmente sus extensiones.  
   
  Cuando se agrega una extensión a la colección, se llama a <xref:System.ServiceModel.IExtension%601.Attach%2A> antes de que entre en la colección. Cuando se quita una extensión de la colección, se llama <xref:System.ServiceModel.IExtension%601.Detach%2A> después de quitarla. Esto significa (suponiendo que la sincronización sea correcta) que una excepción solo se puede encontrar en la colección mientras está entre <xref:System.ServiceModel.IExtension%601.Attach%2A> y <xref:System.ServiceModel.IExtension%601.Detach%2A>.  
   
@@ -46,16 +46,16 @@ where T : IExtensibleObject<T>
   
  El segundo escenario utiliza <xref:System.ServiceModel.IExtension%601.Attach%2A> y las propiedades <xref:System.ServiceModel.IExtension%601.Detach%2A> para permitir que un objeto participe en el comportamiento personalizado, como registrarse para los eventos, inspeccionar las transiciones de estado, etc.  
   
- La interfaz <xref:System.ServiceModel.IExtensionCollection%601> es una colección de objetos <xref:System.ServiceModel.IExtension%601> que permiten recuperar <xref:System.ServiceModel.IExtension%601> por su tipo. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> Devuelve el último objeto agregado que es un <xref:System.ServiceModel.IExtension%601> de ese tipo.  
+ La interfaz <xref:System.ServiceModel.IExtensionCollection%601> es una colección de objetos <xref:System.ServiceModel.IExtension%601> que permiten recuperar <xref:System.ServiceModel.IExtension%601> por su tipo. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> devuelve el objeto agregado más recientemente que es una <xref:System.ServiceModel.IExtension%601> de ese tipo.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Objetos extensibles en Windows Communication Foundation  
  Hay cuatro objetos extensibles en Windows Communication Foundation (WCF):  
   
--   <xref:System.ServiceModel.ServiceHostBase> : Es la clase base para el host del servicio.  Las extensiones de esta clase se pueden utilizar para extender el comportamiento del <xref:System.ServiceModel.ServiceHostBase> o almacenar el estado para cada servicio.  
+-   <xref:System.ServiceModel.ServiceHostBase>. Ésta es la clase base para el host del servicio.  Las extensiones de esta clase se pueden utilizar para extender el comportamiento del <xref:System.ServiceModel.ServiceHostBase> o almacenar el estado para cada servicio.  
   
--   <xref:System.ServiceModel.InstanceContext> : Esta clase conecta a una instancia de tipo de servicio con el tiempo de ejecución del servicio.  Contiene información sobre la instancia así como una referencia al <xref:System.ServiceModel.InstanceContext> que contiene <xref:System.ServiceModel.ServiceHostBase>. Las extensiones de esta clase se pueden utilizar para extender el comportamiento del <xref:System.ServiceModel.InstanceContext> o almacenar el estado para cada servicio.  
+-   <xref:System.ServiceModel.InstanceContext>. Esta clase conecta una instancia del tipo de servicio con el servicio en tiempo de ejecución.  Contiene información sobre la instancia así como una referencia al <xref:System.ServiceModel.InstanceContext> que contiene <xref:System.ServiceModel.ServiceHostBase>. Las extensiones de esta clase se pueden utilizar para extender el comportamiento del <xref:System.ServiceModel.InstanceContext> o almacenar el estado para cada servicio.  
   
--   <xref:System.ServiceModel.OperationContext> : Esta clase representa la información de la operación que recopila el tiempo de ejecución para cada operación.  Esto incluye información como los encabezados de los mensajes entrantes, las propiedades de los mensajes entrantes, la identidad de seguridad de entrada y otra información.  Las extensiones de esta clase pueden extender el comportamiento de <xref:System.ServiceModel.OperationContext> o almacenar el estado para cada operación.  
+-   <xref:System.ServiceModel.OperationContext>. Esta clase representa la información de la operación que el tiempo de ejecución reúne para cada operación.  Esto incluye información como los encabezados de los mensajes entrantes, las propiedades de los mensajes entrantes, la identidad de seguridad de entrada y otra información.  Las extensiones de esta clase pueden extender el comportamiento de <xref:System.ServiceModel.OperationContext> o almacenar el estado para cada operación.  
   
 -   <xref:System.ServiceModel.IContextChannel> : Esta interfaz permite la inspección de cada estado para los canales y servidores proxy generados por el tiempo de ejecución WCF.  Las extensiones de esta clase pueden extender el comportamiento de <xref:System.ServiceModel.IClientChannel> o utilizarlo para almacenar el estado de cada canal.  
   

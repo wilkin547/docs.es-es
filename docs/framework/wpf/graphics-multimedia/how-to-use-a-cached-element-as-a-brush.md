@@ -1,5 +1,5 @@
 ---
-title: Filtrar para usar un elemento almacenado en caché como pincel
+title: Procedimiento para usar un elemento almacenado en caché como pincel
 ms.date: 03/30/2017
 helpviewer_keywords:
 - BitmapCache [WPF], using
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
 ms.openlocfilehash: 78df242c7f00b69e36ea4ab6751f51509d9e2220
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229373"
 ---
-# <a name="how-to-use-a-cached-element-as-a-brush"></a>Filtrar para usar un elemento almacenado en caché como pincel
+# <a name="how-to-use-a-cached-element-as-a-brush"></a>Procedimiento para usar un elemento almacenado en caché como pincel
 Use la <xref:System.Windows.Media.BitmapCacheBrush> clase para reutilizar un elemento almacenado en caché eficazmente. Para almacenar en caché un elemento, crear una nueva instancia de la <xref:System.Windows.Media.BitmapCache> clase y se asigna a la propiedad del elemento <xref:System.Windows.UIElement.CacheMode%2A> propiedad.  
   
 ## <a name="example"></a>Ejemplo  
@@ -27,4 +27,4 @@ Use la <xref:System.Windows.Media.BitmapCacheBrush> clase para reutilizar un ele
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>
-- [Filtrar para mejorar el rendimiento de la representación mediante el almacenamiento en caché de un elemento](how-to-improve-rendering-performance-by-caching-an-element.md)
+- [Cómo: Mejorar el rendimiento al almacenar en caché un elemento de la representación](how-to-improve-rendering-performance-by-caching-an-element.md)

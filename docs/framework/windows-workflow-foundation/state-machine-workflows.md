@@ -3,10 +3,10 @@ title: Flujos de trabajo de máquina de estados
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222996"
 ---
 # <a name="state-machine-workflows"></a>Flujos de trabajo de máquina de estados
@@ -102,8 +102,8 @@ Una máquina de estados es un paradigma conocido para el desarrollo de programas
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para crear un flujo de trabajo de máquina de estados](how-to-create-a-state-machine-workflow.md)
-- [Diseñador de actividades StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
+- [Cómo: Crear un flujo de trabajo de equipo de estado](how-to-create-a-state-machine-workflow.md)
+- [Diseñador de actividad StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [Diseñador de actividad State](/visualstudio/workflow-designer/state-activity-designer)
 - [Diseñador de actividad FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)
-- [Diseñadores de actividad de transición](/visualstudio/workflow-designer/transition-activity-designer)
+- [Diseñador de actividad Transition](/visualstudio/workflow-designer/transition-activity-designer)

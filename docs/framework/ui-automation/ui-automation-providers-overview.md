@@ -6,10 +6,10 @@ helpviewer_keywords:
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
 ms.openlocfilehash: 9312f386198459d0d2dac110827cc6c0029eb247
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222749"
 ---
 # <a name="ui-automation-providers-overview"></a>Información general sobre proveedores de UI Automation
@@ -41,10 +41,10 @@ ms.locfileid: "59222749"
  En esta sección se ofrecen breves explicaciones de algunos de los conceptos clave que debe entender para implementar proveedores de automatización de la interfaz de usuario.  
   
 ### <a name="elements"></a>Elementos  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] los elementos son fragmentos de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] que son visibles para los clientes de automatización de interfaz de usuario. Entre los ejemplos se incluyen ventanas de aplicación, paneles, botones, información sobre herramientas, cuadros de lista y elementos de lista.  
+ Los elementos[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] son partes de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] que son visibles para los clientes de la automatización de la interfaz de usuario. Entre los ejemplos se incluyen ventanas de aplicación, paneles, botones, información sobre herramientas, cuadros de lista y elementos de lista.  
   
 ### <a name="navigation"></a>Navegación  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elementos que se exponen a los clientes como un [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árbol. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] construye el árbol navegando de un elemento a otro. Los proveedores habilitan la navegación para cada elemento y cada uno de ellos puede señalar a un elemento primario, elementos del mismo nivel y elementos secundarios.  
+ Los elementos[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se exponen a  clientes como un árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] construye el árbol navegando de un elemento a otro. Los proveedores habilitan la navegación para cada elemento y cada uno de ellos puede señalar a un elemento primario, elementos del mismo nivel y elementos secundarios.  
   
  Para más información sobre la vista del cliente del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "59222749"
 ### <a name="frameworks"></a>Marcos de trabajo  
  Un marco de trabajo es un componente que administra controles secundarios, pruebas de aciertos y representación en un área de la pantalla. Por ejemplo, una ventana [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] , que a menudo se conoce como HWND, puede actuar como un marco de trabajo que contiene varios elementos [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] como una barra de menús, una barra de estado y botones.  
   
- [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] contenedor de controles como cuadros de lista y vistas de árbol se consideran marcos de trabajo, porque contienen su propio código para representar elementos secundarios y realizar la prueba de posicionamiento en ellos. Por el contrario, un cuadro de lista [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] no es un marco de trabajo, porque la representación y las pruebas de aciertos se controlan mediante la ventana que lo contiene [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] .  
+ Los controles de contenedor[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] como cuadros de lista y vistas de árbol se consideran marcos de trabajo, porque contienen su propio código para representar elementos secundarios y realizar pruebas de aciertos en ellos. Por el contrario, un cuadro de lista [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] no es un marco de trabajo, porque la representación y las pruebas de aciertos se controlan mediante la ventana que lo contiene [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] .  
   
  La [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] de una aplicación se puede componer de diferentes marcos de trabajo. Por ejemplo, una ventana de aplicación HWND podría incluir [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)] que a su vez contiene un componente como un cuadro combinado en un HWND.  
   
@@ -78,4 +78,4 @@ ms.locfileid: "59222749"
   
 ## <a name="see-also"></a>Vea también
 
-- [Implementación del proveedor de UI Automation en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

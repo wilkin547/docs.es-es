@@ -1,5 +1,5 @@
 ---
-title: Filtrar Recuperar una selección de texto
+title: Procedimiento Recuperar una selección de texto
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - retrieving text [WPF]
 ms.assetid: d5793172-1e11-4a39-9be0-73f336ed858d
 ms.openlocfilehash: b7f0b9ee02a7ace717787fc8eeb6e15649829a49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224590"
 ---
-# <a name="how-to-retrieve-a-text-selection"></a>Filtrar Recuperar una selección de texto
+# <a name="how-to-retrieve-a-text-selection"></a>Procedimiento Recuperar una selección de texto
 En este ejemplo se muestra una forma de usar el <xref:System.Windows.Controls.TextBox.SelectedText%2A> propiedad para recuperar el texto que el usuario ha seleccionado en un <xref:System.Windows.Controls.TextBox> control.  
   
 ## <a name="example"></a>Ejemplo  
@@ -35,4 +35,4 @@ En este ejemplo se muestra una forma de usar el <xref:System.Windows.Controls.Te
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre TextBox](textbox-overview.md)
-- [Información general sobre el control RichTextBox](richtextbox-overview.md)
+- [RichTextBox Overview](richtextbox-overview.md) (Introducción a RichTextBox)

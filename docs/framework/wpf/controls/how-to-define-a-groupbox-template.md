@@ -1,18 +1,18 @@
 ---
-title: Filtrar Definir una plantilla de un control GroupBox
+title: Procedimiento Definir una plantilla de un control GroupBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF], creating templates
 ms.assetid: 85a4d1a7-4753-4f4a-b26d-14fa10c1ddb5
 ms.openlocfilehash: dd53af87ec2d12b2ed0dcf2b23374d76e8f631a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225721"
 ---
-# <a name="how-to-define-a-groupbox-template"></a>Filtrar Definir una plantilla de un control GroupBox
+# <a name="how-to-define-a-groupbox-template"></a>Procedimiento Definir una plantilla de un control GroupBox
 En este ejemplo se muestra cómo crear una plantilla para un <xref:System.Windows.Controls.GroupBox> control.  
   
 ## <a name="example"></a>Ejemplo  
@@ -23,4 +23,4 @@ En este ejemplo se muestra cómo crear una plantilla para un <xref:System.Window
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Controls.GroupBox>
-- [Filtrar Crear un control GroupBox](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms748321(v=vs.90))
+- [Cómo: Crear un control GroupBox](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms748321(v=vs.90))

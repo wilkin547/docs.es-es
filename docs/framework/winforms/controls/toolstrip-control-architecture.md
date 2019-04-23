@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
 ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296217"
 ---
 # <a name="toolstrip-control-architecture"></a>Arquitectura del control ToolStrip
@@ -64,7 +64,7 @@ El <xref:System.Windows.Forms.ToolStrip> y <xref:System.Windows.Forms.ToolStripI
 -   <xref:System.Windows.Forms.ToolStripProgressBar>  
   
 ### <a name="contextmenustrip"></a>ContextMenuStrip  
- <xref:System.Windows.Forms.ContextMenuStrip> reemplaza <xref:System.Windows.Forms.ContextMenu>. Puede asociar un <xref:System.Windows.Forms.ContextMenuStrip> con cualquier control y secundario del mouse haga clic en muestra automáticamente el menú contextual (o el menú contextual). Puede mostrar un <xref:System.Windows.Forms.ContextMenuStrip> mediante programación usando el <xref:System.Windows.Forms.ToolStripDropDown.Show%2A> método. <xref:System.Windows.Forms.ContextMenuStrip> admite cancelable <xref:System.Windows.Forms.ToolStripDropDown.Opening> y <xref:System.Windows.Forms.ToolStripDropDown.Closing> eventos para controlar el relleno dinámico y escenarios de varios clic. <xref:System.Windows.Forms.ContextMenuStrip> Comprobar estado de elemento de menú, admite imágenes, texto, las claves de acceso, accesos directos y menús en cascada.  
+ <xref:System.Windows.Forms.ContextMenuStrip> reemplaza a <xref:System.Windows.Forms.ContextMenu>. Puede asociar un <xref:System.Windows.Forms.ContextMenuStrip> con cualquier control y secundario del mouse haga clic en muestra automáticamente el menú contextual (o el menú contextual). Puede mostrar un <xref:System.Windows.Forms.ContextMenuStrip> mediante programación usando el <xref:System.Windows.Forms.ToolStripDropDown.Show%2A> método. <xref:System.Windows.Forms.ContextMenuStrip> admite cancelable <xref:System.Windows.Forms.ToolStripDropDown.Opening> y <xref:System.Windows.Forms.ToolStripDropDown.Closing> eventos para controlar el relleno dinámico y escenarios de varios clic. <xref:System.Windows.Forms.ContextMenuStrip> Comprobar estado de elemento de menú, admite imágenes, texto, las claves de acceso, accesos directos y menús en cascada.  
   
  Los siguientes elementos están específicamente diseñados para funcionar perfectamente con ambos <xref:System.Windows.Forms.ToolStripSystemRenderer> y <xref:System.Windows.Forms.ToolStripProfessionalRenderer> en todas las orientaciones. Están disponibles de forma predeterminada en tiempo de diseño para el <xref:System.Windows.Forms.ContextMenuStrip> control:  
   
@@ -316,7 +316,7 @@ El <xref:System.Windows.Forms.ToolStrip> y <xref:System.Windows.Forms.ToolStripI
  <xref:System.Windows.Forms.ToolStripMenuItem> es un <xref:System.Windows.Forms.ToolStripDropDownItem> que funciona con <xref:System.Windows.Forms.ToolStripDropDownMenu> y <xref:System.Windows.Forms.ContextMenuStrip> para controlar la disposición de resaltado, el diseño y la columna especial para los menús.  
   
 ### <a name="toolstripdropdownbutton"></a>ToolStripDropDownButton  
- <xref:System.Windows.Forms.ToolStripDropDownButton> similar a <xref:System.Windows.Forms.ToolStripButton>, pero muestra un área desplegable cuando el usuario hace clic en él. Mostrar u ocultar la flecha de lista desplegable estableciendo el <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> propiedad. <xref:System.Windows.Forms.ToolStripDropDownButton> Hosts de un <xref:System.Windows.Forms.ToolStripOverflowButton> que muestra los elementos que desbordan el <xref:System.Windows.Forms.ToolStrip>.  
+ <xref:System.Windows.Forms.ToolStripDropDownButton> similar a <xref:System.Windows.Forms.ToolStripButton>, pero muestra un área desplegable cuando el usuario hace clic en él. Mostrar u ocultar la flecha de lista desplegable estableciendo el <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> propiedad. <xref:System.Windows.Forms.ToolStripDropDownButton> hosts de un <xref:System.Windows.Forms.ToolStripOverflowButton> que muestra los elementos que desbordan el <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="toolstripsplitbutton"></a>ToolStripSplitButton  
  <xref:System.Windows.Forms.ToolStripSplitButton> combina el botón y la funcionalidad del botón de lista desplegable.  
@@ -380,8 +380,8 @@ El <xref:System.Windows.Forms.ToolStrip> y <xref:System.Windows.Forms.ToolStripI
 
 - [Información sobre el control ToolStrip](toolstrip-control-overview-windows-forms.md)
 - [Resumen de la tecnología ToolStrip](toolstrip-technology-summary.md)
-- [ToolStrip](toolstrip-control-windows-forms.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)
 - [Control MenuStrip](menustrip-control-windows-forms.md)
-- [StatusStrip (Control)](statusstrip-control.md)
+- [StatusStrip (control)](statusstrip-control.md)
 - [ContextMenuStrip (Control)](contextmenustrip-control.md)
-- [Control BindingNavigator](bindingnavigator-control-windows-forms.md)
+- [BindingNavigator (control)](bindingnavigator-control-windows-forms.md)

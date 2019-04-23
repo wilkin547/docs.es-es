@@ -29,10 +29,10 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296126"
 ---
 # <a name="wpf-windows-overview"></a>Información general sobre ventanas de WPF
@@ -108,9 +108,9 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Configuración de una definición de ventana para MSBuild  
  Cómo implementar la ventana determina cómo se configura para [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Para una ventana que se define mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcado y código subyacente:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivos de marcado se configuran como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` elementos.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivos de marcado se configuran como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementos.  
   
--   Archivos de código subyacente se configuran como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` elementos.  
+-   Archivos de código subyacente se configuran como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` elementos.  
   
  Esto se muestra en la siguiente [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] archivo de proyecto.  
   
@@ -257,7 +257,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
 
- El <xref:System.Windows.Window.Closing> controlador de eventos se pasa un <xref:System.ComponentModel.CancelEventArgs>, que implementa el `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propiedad que se establece en `true` para impedir que se cierre una ventana.  
+ El <xref:System.Windows.Window.Closing> controlador de eventos se pasa un <xref:System.ComponentModel.CancelEventArgs>, que implementa el `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propiedad que se establece en `true` para impedir que se cierre una ventana.  
   
  Si <xref:System.Windows.Window.Closing> no está controlado, o se administra pero no se cancela, se cerrará la ventana. Antes de una ventana se cierre realmente, <xref:System.Windows.Window.Closed> se genera. En este momento, ya no se puede impedir el cierre de la ventana.  
   
@@ -272,7 +272,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
 -   Se cierra la ventana principal de la aplicación y <xref:System.Windows.Application.ShutdownMode%2A> es <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
--   <xref:System.Windows.Application.Shutdown%2A> se llama.  
+-   Se llama a <xref:System.Windows.Application.Shutdown%2A>.  
   
 > [!NOTE]
 >  No se puede volver a abrir una ventana cuando se ha cerrado.  
@@ -293,7 +293,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
  También puede especificar la ubicación inicial de un <xref:System.Windows.Window> cuando aparece por primera vez estableciendo la <xref:System.Windows.Window.WindowStartupLocation%2A> propiedad con uno de los siguientes <xref:System.Windows.WindowStartupLocation> valores de enumeración:  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner> (predeterminado)  
+-   <xref:System.Windows.WindowStartupLocation.CenterOwner> (valor predeterminado)  
   
 -   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -346,7 +346,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
 ## <a name="order-of-precedence-for-sizing-properties"></a>Orden de prioridad de las propiedades de tamaño  
  Esencialmente, las diversas propiedades de tamaño de una ventana se combinan para definir el intervalo de anchura y altura de una ventana de tamaño ajustable. Para asegurarse de que se mantiene un intervalo válido, <xref:System.Windows.Window> evalúa los valores de las propiedades de tamaño mediante los siguientes órdenes de prioridad.  
   
- **Para las propiedades de alto:**  
+ **Para las propiedades de altura:**  
   
 1. <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
@@ -356,7 +356,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
 4. <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
- **Para las propiedades de ancho:**  
+ **Para las propiedades de anchura:**  
   
 1. <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
@@ -381,7 +381,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
  El estado de una ventana se puede configurar estableciendo su <xref:System.Windows.Window.WindowState%2A> propiedad, que puede tener uno de los siguientes <xref:System.Windows.WindowState> valores de enumeración:  
   
--   <xref:System.Windows.WindowState.Normal> (predeterminado)  
+-   <xref:System.Windows.WindowState.Normal> (valor predeterminado)  
   
 -   <xref:System.Windows.WindowState.Maximized>  
   
@@ -409,7 +409,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
 -   <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize> (predeterminado)  
+-   <xref:System.Windows.ResizeMode.CanResize> (valor predeterminado)  
   
 -   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -427,7 +427,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
 -   <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow> (predeterminado)  
+-   <xref:System.Windows.WindowStyle.SingleBorderWindow> (valor predeterminado)  
   
 -   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 380f662349a8dcd04e5bf445e1479d0a32d5861f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59235866"
+---
 ### <a name="netdatacontractserializer-fails-to-deserialize-a-concurrentdictionary-serialized-with-a-different-net-version"></a>NetDataContractSerializer no puede deserializar un elemento ConcurrentDictionary serializado con otra versión de .NET
 
 |   |   |
@@ -8,4 +16,3 @@
 |Versión|4.5.1|
 |Tipo|Tiempo de ejecución|
 |API afectadas|<ul><li><xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li></ul>|
-

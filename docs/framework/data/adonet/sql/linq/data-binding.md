@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: f07053c9fba194138467bbf8664e2f5fe1f667ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352830"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978931"
 ---
 # <a name="data-binding"></a>Enlace de datos
 
@@ -42,9 +42,9 @@ Las generaciones de colecciones se implementan mediante <xref:System.Data.Linq.T
 
 - El origen de datos es <xref:System.Linq.IQueryable%601>. Hay dos escenarios:
 
-    - Si [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] busca subyacente <xref:System.Data.Linq.Table%601> desde el <xref:System.Linq.IQueryable%601>, el origen permite la edición y la situación es igual que en el primer punto de viñeta.
+  - Si [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] busca subyacente <xref:System.Data.Linq.Table%601> desde el <xref:System.Linq.IQueryable%601>, el origen permite la edición y la situación es igual que en el primer punto de viñeta.
 
-    - Si [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no se puede encontrar subyacente <xref:System.Data.Linq.Table%601>, el origen no permite la edición (por ejemplo, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] examina la consulta para rellenar un elemento genérico `SortableBindingList`, que es una sencilla <xref:System.ComponentModel.BindingList%601> que implementa la característica de ordenación para las entidades T de una propiedad determinada.
+  - Si [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no se puede encontrar subyacente <xref:System.Data.Linq.Table%601>, el origen no permite la edición (por ejemplo, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] examina la consulta para rellenar un elemento genérico `SortableBindingList`, que es una sencilla <xref:System.ComponentModel.BindingList%601> que implementa la característica de ordenación para las entidades T de una propiedad determinada.
 
 ## <a name="specialized-collections"></a>Colecciones especializadas
 

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296100"
 ---
 # <a name="ws-transaction-flow"></a>Flujo de la transacción WS
@@ -188,7 +188,7 @@ Console.WriteLine("Transaction committed");
   
 -   La segunda solicitud `Subtract` se realiza dentro de un nuevo ámbito de la transacción declarado con la opción `TransactionScopeOption.Suppress`. Esto suprime la transacción exterior inicial del cliente y la solicitud no fluye hasta una transacción al servicio. Este enfoque permite a un cliente cancelar explícitamente una suscripción y protegerse contra el fluir de una transacción a un servicio cuando no es necesario. Las acciones del servicio se producen dentro del ámbito de una transacción nueva y no conectada.  
   
--   El `Multiply` solicitud no fluye una transacción al servicio porque el cliente generada por la definición de la `ICalculator` interfaz incluye un <xref:System.ServiceModel.TransactionFlowAttribute> establecido en <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
+-   La solicitud `Multiply` no fluye una transacción al servicio porque la definición generada del cliente de la interfaz `ICalculator` incluye un conjunto <xref:System.ServiceModel.TransactionFlowAttribute> establecido como <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
   
 -   La solicitud `Divide` no fluye una transacción al servicio porque, de nuevo, la definición de la interfaz `ICalculator` generada del cliente, no incluye un `TransactionFlowAttribute`. Las acciones del servicio se producen de nuevo dentro del ámbito de otra transacción nueva y no conectada.  
   
@@ -225,7 +225,7 @@ Press <ENTER> to terminate the service.
   
 1. Para compilar la versión de C# o Visual Basic .NET de la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2. Asegúrese de que se ha instalado SQL Server Express Edition o SQL Server, y que la cadena de conexión se ha establecido correctamente en el archivo de configuración de la aplicación del servicio. Para ejecutar el ejemplo sin usar una base de datos, establezca la `usingSql` valor en el archivo de configuración del servicio para `false`  
+2. Asegúrese de que se ha instalado SQL Server Express Edition o SQL Server, y que la cadena de conexión se ha establecido correctamente en el archivo de configuración de la aplicación del servicio. Para ejecutar el ejemplo sin utilizar una base de datos, establezca el valor `usingSql` en el archivo de configuración de la aplicación del servicio en `false`  
   
 3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

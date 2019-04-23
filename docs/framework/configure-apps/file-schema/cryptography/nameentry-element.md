@@ -1,5 +1,5 @@
 ---
-title: <nameEntry> Elemento
+title: <nameEntry> (Elemento)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225331"
 ---
 # <a name="nameentry-element"></a>\<nameEntry > elemento
@@ -38,7 +38,7 @@ Asigna un nombre de clase a un nombre de algoritmo descriptivo, que permite que 
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |**name**|Atributo necesario.<br /><br /> Especifica el nombre descriptivo del algoritmo que implementa la clase de criptografía.|  
-|**clase**|Atributo necesario.<br /><br /> Especifica el valor de la **nombre** atributo en el [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) elemento.|  
+|**class**|Atributo necesario.<br /><br /> Especifica el valor de la **nombre** atributo en el [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) elemento.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -79,5 +79,5 @@ Asigna un nombre de clase a un nombre de algoritmo descriptivo, que permite que 
 
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Esquema de la configuración de criptografía](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [servicios criptográficos](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [Configurar clases de criptografía](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

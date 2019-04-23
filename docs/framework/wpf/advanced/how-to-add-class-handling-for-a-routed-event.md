@@ -1,5 +1,5 @@
 ---
-title: Filtrar Agregar control de clases a un evento enrutado
+title: Procedimiento Agregar control de clases a un evento enrutado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
 ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224278"
 ---
-# <a name="how-to-add-class-handling-for-a-routed-event"></a>Filtrar Agregar control de clases a un evento enrutado
+# <a name="how-to-add-class-handling-for-a-routed-event"></a>Procedimiento Agregar control de clases a un evento enrutado
 Los eventos enrutados se pueden controlar mediante controladores de clase o de instancia en cualquier nodo determinado en la ruta. Los controladores de clase se invocan en primer lugar y pueden usarse por implementaciones de la clase para suprimir los eventos del control de instancias o introducir otros comportamientos específicos de eventos en los eventos que pertenecen a las clases base. En este ejemplo se muestra dos técnicas estrechamente relacionadas para implementar los controladores de clase.  
   
 ## <a name="example"></a>Ejemplo  

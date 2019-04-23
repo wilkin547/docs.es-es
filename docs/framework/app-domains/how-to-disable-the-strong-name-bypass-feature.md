@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4e5ea1907ec3de4536d09b3d76ca4956c8756d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86fc35ae20211bd32a21d60b7313074361aef671
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494307"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59296178"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Procedimiento para deshabilitar la característica de omisión de nombres seguros
 A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las firmas de nombre seguro no se validan cuando un ensamblado se carga en un objeto <xref:System.AppDomain> de plena confianza, como el objeto <xref:System.AppDomain> predeterminado para la zona `MyComputer`. Esta característica se denomina omisión de nombres seguros. En un entorno de plena confianza, las peticiones de <xref:System.Security.Permissions.StrongNameIdentityPermission> siempre se realizan correctamente para los ensamblados de plena confianza firmados, independientemente de su firma. La única restricción es que el ensamblado debe ser de plena confianza porque su zona es de plena confianza. Dado que el nombre seguro no es un factor determinante en estas condiciones, no hay ninguna razón para que se valide. La omisión de la validación de firmas de nombre seguro proporciona importantes mejoras en el rendimiento.  
@@ -34,11 +34,11 @@ A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las firmas de nomb
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>Para deshabilitar la característica de omisión de nombres seguros para una sola aplicación  
   
-1.  Abra o cree el archivo de configuración de la aplicación.  
+1. Abra o cree el archivo de configuración de la aplicación.  
   
      Para obtener más información sobre este archivo, vea la sección sobre archivos de configuración de la aplicación en [Configuring Apps](../../../docs/framework/configure-apps/index.md) (Configurar aplicaciones).  
   
-2.  Agregue la siguiente entrada:  
+2. Agregue la siguiente entrada:  
   
     ```xml  
     <configuration>  
@@ -54,6 +54,7 @@ A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las firmas de nomb
 >  Puede activar y desactivar la validación del nombre seguro de una aplicación únicamente si la característica de omisión está habilitada para el equipo. Si la característica de omisión se ha desactivado para el equipo, los nombres seguros se validan para todas las aplicaciones y no se puede omitir la validación de una sola aplicación.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Sn.exe (Herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Elemento \<bypassTrustedAppStrongNames>](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)
 - [Crear y utilizar ensamblados con nombre seguro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

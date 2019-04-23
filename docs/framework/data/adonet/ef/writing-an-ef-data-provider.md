@@ -3,10 +3,10 @@ title: Escribir un proveedor de datos de Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
 ms.openlocfilehash: 2aa27475c28bed521c636139b19454b0720960ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228749"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Escribir un proveedor de datos de Entity Framework
@@ -37,10 +37,10 @@ Esta sección describe cómo escribir un [!INCLUDE[adonet_ef](../../../../../inc
 ## <a name="in-this-section"></a>En esta sección  
  [Generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
   
- [Generar SQL de modificación](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
+ [Generación de SQL de modificación](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
   
  [Especificación del manifiesto del proveedor](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Trabajar con proveedores de datos](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [Trabajo con proveedores de datos](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

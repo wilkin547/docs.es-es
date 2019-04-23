@@ -7,10 +7,10 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295905"
 ---
 # <a name="document-serialization-and-storage"></a>Almacenamiento y serialización de documentos
@@ -39,7 +39,7 @@ Microsoft .NET Framework proporciona un potente entorno para crear y mostrar doc
     -   Compatibilidad de interfaz de usuario para opciones y configuración personalizadas en tiempo de ejecución.  
   
 ### <a name="xps-print-path"></a>Ruta de impresión XPS  
- Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ruta de impresión también proporciona un mecanismo extensible para escribir documentos a través de la salida impresa.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] actúa como un formato de archivo de documento y es el formato nativo de cola de impresión para [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] se pueden enviar directamente a documentos [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-impresoras compatibles sin necesidad de convertirlos a un formato intermedio.  Consulte la [Información general sobre impresión](printing-overview.md) para obtener información adicional sobre las capacidades y opciones de salida de la ruta de impresión.  
+ Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ruta de impresión también proporciona un mecanismo extensible para escribir documentos a través de la salida impresa.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] funciona como formato de archivo de documento y es el formato nativo de cola de impresión para [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Los documentos de [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] pueden enviarse directamente a impresoras compatibles con [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] sin necesidad de convertirlos a un formato intermedio.  Consulte la [Información general sobre impresión](printing-overview.md) para obtener información adicional sobre las capacidades y opciones de salida de la ruta de impresión.  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>Serializadores de complemento  
@@ -48,7 +48,7 @@ Microsoft .NET Framework proporciona un potente entorno para crear y mostrar doc
  Los serializadores de complemento ayudan a los desarrolladores de aplicaciones, al proporcionar extensibilidad a nuevos diseños de almacenamiento y formatos de archivo sin tener que programar directamente para cada formato potencial en tiempo de compilación.  Los serializadores de complemento también benefician a los desarrolladores externos, al proporcionar un medio estandarizado para implementar, instalar y actualizar complementos accesibles por el sistema para formatos de archivo personalizados o de propietario.  
   
 ### <a name="using-a-plug-in-serializer"></a>Usar un serializador de complemento  
- Los serializadores de complemento son fáciles de usar.  El <xref:System.Windows.Documents.Serialization.SerializerProvider> clase enumera un <xref:System.Windows.Documents.Serialization.SerializerDescriptor> de objeto para cada complemento instalado en el sistema.  El <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> propiedad filtra los complementos instalados según la configuración actual y comprueba que el serializador se puede cargar y utilizado por la aplicación.  El <xref:System.Windows.Documents.Serialization.SerializerDescriptor> también proporciona otras propiedades, como <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> y <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, que puede usar la aplicación para pedir al usuario en la selección de un serializador para un formato de salida disponible.  Un serializador de complemento predeterminado para [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] se proporciona con .NET Framework y siempre se enumera.  Después de que el usuario selecciona un formato de salida, el <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> método se usa para crear un <xref:System.Windows.Documents.Serialization.SerializerWriter> para el formato específico.  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> método, a continuación, se puede llamar para la secuencia de documentos al almacén de datos de salida.  
+ Los serializadores de complemento son fáciles de usar.  El <xref:System.Windows.Documents.Serialization.SerializerProvider> clase enumera un <xref:System.Windows.Documents.Serialization.SerializerDescriptor> de objeto para cada complemento instalado en el sistema.  El <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> propiedad filtra los complementos instalados según la configuración actual y comprueba que el serializador se puede cargar y utilizado por la aplicación.  El <xref:System.Windows.Documents.Serialization.SerializerDescriptor> también proporciona otras propiedades, como <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> y <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, que puede usar la aplicación para pedir al usuario en la selección de un serializador para un formato de salida disponible.  Un serializador de complemento predeterminado para [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] se proporciona con .NET Framework y siempre se enumera.  Después de que el usuario selecciona un formato de salida, el <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> método se usa para crear un <xref:System.Windows.Documents.Serialization.SerializerWriter> para el formato específico.  El elemento de lenguaje <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> método, a continuación, se puede llamar para la secuencia de documentos al almacén de datos de salida.  
   
  El ejemplo siguiente muestra una aplicación que utiliza el <xref:System.Windows.Documents.Serialization.SerializerProvider> método en una propiedad "PlugInFileFilter".  PlugInFileFilter enumera los complementos instalados y genera una cadena de filtro con las opciones de archivo disponibles para un <xref:Microsoft.Win32.SaveFileDialog>.  
   
@@ -78,4 +78,4 @@ Microsoft .NET Framework proporciona un potente entorno para crear y mostrar doc
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
 - [Documentos en WPF](documents-in-wpf.md)
 - [Información general sobre impresión](printing-overview.md)
-- [XML Paper Specification: Información general](https://go.microsoft.com/fwlink?LinkID=106246)
+- [XML Paper Specification: información general](https://go.microsoft.com/fwlink?LinkID=106246)

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 ms.openlocfilehash: 14e5a7f47c1c1f2cbaf0457be34019454ff041f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230569"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Acceso a Internet a través de un proxy
@@ -28,9 +28,9 @@ Si el sitio usa un proxy para proporcionar acceso a Internet, debe configurar un
   
 -   [Detección automática de proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
   
--   [Procedimiento para habilitar un elemento WebRequest para usar un proxy para comunicarse con Internet](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+-   [Cómo: Habilitar un elemento WebRequest para usar un proxy para comunicarse con Internet](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
--   [Procedimiento para reemplazar una selección del proxy global](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+-   [Cómo: Reemplazar una selección del proxy global](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>Vea también
 

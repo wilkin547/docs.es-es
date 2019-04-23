@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar el tamaño de un objeto ArcSegment
+title: Procedimiento Animar el tamaño de un objeto ArcSegment
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - ArcSegment [WPF], animating size
 ms.assetid: f93a1065-b00a-4d7e-9d4b-37023f98186a
 ms.openlocfilehash: de36010e44c2f926b5839f4ec120f90c288f7501
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227774"
 ---
-# <a name="how-to-animate-the-size-of-an-arcsegment"></a>Filtrar Animar el tamaño de un objeto ArcSegment
+# <a name="how-to-animate-the-size-of-an-arcsegment"></a>Procedimiento Animar el tamaño de un objeto ArcSegment
 En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.ArcSegment.Size%2A> propiedad de un <xref:System.Windows.Media.ArcSegment>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -33,5 +33,5 @@ En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.ArcSegment
 - <xref:System.Windows.Media.ArcSegment>
 - [Información general sobre animaciones](animation-overview.md)
 - [Información general sobre geometría](geometry-overview.md)
-- [Temas "Cómo..." de objetos de geometría](geometries-how-to-topics.md)
-- [Temas "Cómo..." de animación y control de tiempo](animation-and-timing-how-to-topics.md)
+- [Temas de procedimientos de geometrías](geometries-how-to-topics.md)
+- [Temas de procedimientos de temporización y animación](animation-and-timing-how-to-topics.md)
