@@ -17,36 +17,36 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 70eac63855f16205c3d5dbcb28305481b986484c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201174"
 ---
-# <a name="icordebugassembly2-interface"></a><span data-ttu-id="fa86e-102">Interfaz ICorDebugAssembly2</span><span class="sxs-lookup"><span data-stu-id="fa86e-102">ICorDebugAssembly2 Interface</span></span>
+# <a name="icordebugassembly2-interface"></a><span data-ttu-id="253b1-102">Interfaz ICorDebugAssembly2</span><span class="sxs-lookup"><span data-stu-id="253b1-102">ICorDebugAssembly2 Interface</span></span>
 
-<span data-ttu-id="fa86e-103">Representa un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="fa86e-103">Represents an assembly.</span></span> <span data-ttu-id="fa86e-104">Esta interfaz es una extensión de ICorDebugAssembly (interfaz).</span><span class="sxs-lookup"><span data-stu-id="fa86e-104">This interface is an extension of the ICorDebugAssembly interface.</span></span>  
+<span data-ttu-id="253b1-103">Representa un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="253b1-103">Represents an assembly.</span></span> <span data-ttu-id="253b1-104">Esta interfaz es una extensión de ICorDebugAssembly (interfaz).</span><span class="sxs-lookup"><span data-stu-id="253b1-104">This interface is an extension of the ICorDebugAssembly interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="fa86e-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="fa86e-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="253b1-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="253b1-105">Methods</span></span>  
   
-|<span data-ttu-id="fa86e-106">Método</span><span class="sxs-lookup"><span data-stu-id="fa86e-106">Method</span></span>|<span data-ttu-id="fa86e-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="fa86e-107">Description</span></span>|  
+|<span data-ttu-id="253b1-106">Método</span><span class="sxs-lookup"><span data-stu-id="253b1-106">Method</span></span>|<span data-ttu-id="253b1-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="253b1-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="fa86e-108">Método IsFullyTrusted</span><span class="sxs-lookup"><span data-stu-id="fa86e-108">IsFullyTrusted Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-isfullytrusted-method.md)|<span data-ttu-id="fa86e-109">Obtiene un valor que indica si el ensamblado se ha concedido confianza completa por el sistema de seguridad en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="fa86e-109">Gets a value that indicates whether the assembly has been granted full trust by the runtime security system.</span></span>|  
+|[<span data-ttu-id="253b1-108">IsFullyTrusted (método)</span><span class="sxs-lookup"><span data-stu-id="253b1-108">IsFullyTrusted Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-isfullytrusted-method.md)|<span data-ttu-id="253b1-109">Obtiene un valor que indica si el ensamblado se ha concedido confianza completa por el sistema de seguridad en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="253b1-109">Gets a value that indicates whether the assembly has been granted full trust by the runtime security system.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fa86e-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="fa86e-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="253b1-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="253b1-110">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="fa86e-111">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="fa86e-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="253b1-111">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="253b1-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fa86e-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fa86e-112">Requirements</span></span>  
- <span data-ttu-id="fa86e-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fa86e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="253b1-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="253b1-112">Requirements</span></span>  
+ <span data-ttu-id="253b1-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="253b1-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fa86e-114">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fa86e-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="253b1-114">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="253b1-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fa86e-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fa86e-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="253b1-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="253b1-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="fa86e-116">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="fa86e-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="253b1-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="253b1-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fa86e-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="fa86e-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="253b1-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="253b1-117">See also</span></span>
 
-- [<span data-ttu-id="fa86e-118">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="fa86e-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="253b1-118">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="253b1-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

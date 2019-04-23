@@ -17,19 +17,19 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 656f2498c7dd9ba165ab6759d8ca3b26e0d7c93f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207050"
 ---
-# <a name="functiontailcall-function"></a><span data-ttu-id="71875-102">FunctionTailcall (Función)</span><span class="sxs-lookup"><span data-stu-id="71875-102">FunctionTailcall Function</span></span>
-<span data-ttu-id="71875-103">Notifica al generador de perfiles que la función que se ejecuta actualmente está a punto de realizar una llamada de cola a otra función.</span><span class="sxs-lookup"><span data-stu-id="71875-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function.</span></span>  
+# <a name="functiontailcall-function"></a><span data-ttu-id="e5f7e-102">FunctionTailcall (Función)</span><span class="sxs-lookup"><span data-stu-id="e5f7e-102">FunctionTailcall Function</span></span>
+<span data-ttu-id="e5f7e-103">Notifica al generador de perfiles que la función que se ejecuta actualmente está a punto de realizar una llamada de cola a otra función.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="71875-104">El `FunctionTailcall` función está en desuso en la versión 2.0 de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="71875-104">The `FunctionTailcall` function is deprecated in the .NET Framework version 2.0.</span></span> <span data-ttu-id="71875-105">Seguirán funcionando, pero se incurrirá en una penalización de rendimiento.</span><span class="sxs-lookup"><span data-stu-id="71875-105">It will continue to work, but will incur a performance penalty.</span></span> <span data-ttu-id="71875-106">Use la [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) funcione en su lugar.</span><span class="sxs-lookup"><span data-stu-id="71875-106">Use the [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) function instead.</span></span>  
+>  <span data-ttu-id="e5f7e-104">El `FunctionTailcall` función está en desuso en la versión 2.0 de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-104">The `FunctionTailcall` function is deprecated in the .NET Framework version 2.0.</span></span> <span data-ttu-id="e5f7e-105">Seguirán funcionando, pero se incurrirá en una penalización de rendimiento.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-105">It will continue to work, but will incur a performance penalty.</span></span> <span data-ttu-id="e5f7e-106">Use la [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) funcione en su lugar.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-106">Use the [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) function instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="71875-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="71875-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e5f7e-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e5f7e-107">Syntax</span></span>  
   
 ```  
 void __stdcall FunctionTailcall (  
@@ -37,37 +37,37 @@ void __stdcall FunctionTailcall (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="71875-108">Parámetros</span><span class="sxs-lookup"><span data-stu-id="71875-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e5f7e-108">Parámetros</span><span class="sxs-lookup"><span data-stu-id="e5f7e-108">Parameters</span></span>  
  `funcID`  
- <span data-ttu-id="71875-109">[in] El identificador de la función que se ejecuta actualmente que se va a llamar a una cola.</span><span class="sxs-lookup"><span data-stu-id="71875-109">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
+ <span data-ttu-id="e5f7e-109">[in] El identificador de la función que se ejecuta actualmente que se va a llamar a una cola.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-109">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="71875-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="71875-110">Remarks</span></span>  
- <span data-ttu-id="71875-111">La función de destino de la llamada de cola usará el marco de pila actual y se devolverá directamente al llamador de la función que realizó la cola llamada.</span><span class="sxs-lookup"><span data-stu-id="71875-111">The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call.</span></span> <span data-ttu-id="71875-112">Esto significa que un [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) devolución de llamada no se emitirá para una función que es el destino de una llamada de cola.</span><span class="sxs-lookup"><span data-stu-id="71875-112">This means that a [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) callback will not be issued for a function that is the target of a tail call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e5f7e-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e5f7e-110">Remarks</span></span>  
+ <span data-ttu-id="e5f7e-111">La función de destino de la llamada de cola usará el marco de pila actual y se devolverá directamente al llamador de la función que realizó la cola llamada.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-111">The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call.</span></span> <span data-ttu-id="e5f7e-112">Esto significa que un [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) devolución de llamada no se emitirá para una función que es el destino de una llamada de cola.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-112">This means that a [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) callback will not be issued for a function that is the target of a tail call.</span></span>  
   
- <span data-ttu-id="71875-113">El `FunctionTailcall` función es una devolución de llamada; debe implementar.</span><span class="sxs-lookup"><span data-stu-id="71875-113">The `FunctionTailcall` function is a callback; you must implement it.</span></span> <span data-ttu-id="71875-114">La implementación debe usar el `__declspec`(`naked`) el atributo de clase de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="71875-114">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+ <span data-ttu-id="e5f7e-113">El `FunctionTailcall` función es una devolución de llamada; debe implementar.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-113">The `FunctionTailcall` function is a callback; you must implement it.</span></span> <span data-ttu-id="e5f7e-114">La implementación debe usar el `__declspec`(`naked`) el atributo de clase de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-114">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="71875-115">El motor de ejecución no guarda ningún registro antes de llamar a esta función.</span><span class="sxs-lookup"><span data-stu-id="71875-115">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="e5f7e-115">El motor de ejecución no guarda ningún registro antes de llamar a esta función.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-115">The execution engine does not save any registers before calling this function.</span></span>  
   
--   <span data-ttu-id="71875-116">En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).</span><span class="sxs-lookup"><span data-stu-id="71875-116">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+-   <span data-ttu-id="e5f7e-116">En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).</span><span class="sxs-lookup"><span data-stu-id="e5f7e-116">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
--   <span data-ttu-id="71875-117">En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.</span><span class="sxs-lookup"><span data-stu-id="71875-117">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+-   <span data-ttu-id="e5f7e-117">En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-117">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="71875-118">La implementación de `FunctionTailcall` no debe bloquearse porque retrasará la recolección de elementos.</span><span class="sxs-lookup"><span data-stu-id="71875-118">The implementation of `FunctionTailcall` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="71875-119">La implementación no debe intentar una recolección porque la pila no puede estar en un estado compatible con la colección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="71875-119">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="71875-120">Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionTailcall` devuelve.</span><span class="sxs-lookup"><span data-stu-id="71875-120">If a garbage collection is attempted, the runtime will block until `FunctionTailcall` returns.</span></span>  
+ <span data-ttu-id="e5f7e-118">La implementación de `FunctionTailcall` no debe bloquearse porque retrasará la recolección de elementos.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-118">The implementation of `FunctionTailcall` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="e5f7e-119">La implementación no debe intentar una recolección porque la pila no puede estar en un estado compatible con la colección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-119">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="e5f7e-120">Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionTailcall` devuelve.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-120">If a garbage collection is attempted, the runtime will block until `FunctionTailcall` returns.</span></span>  
   
- <span data-ttu-id="71875-121">Además, el `FunctionTailcall` función no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.</span><span class="sxs-lookup"><span data-stu-id="71875-121">Also, the `FunctionTailcall` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="e5f7e-121">Además, el `FunctionTailcall` función no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.</span><span class="sxs-lookup"><span data-stu-id="e5f7e-121">Also, the `FunctionTailcall` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="71875-122">Requisitos</span><span class="sxs-lookup"><span data-stu-id="71875-122">Requirements</span></span>  
- <span data-ttu-id="71875-123">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="71875-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e5f7e-122">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e5f7e-122">Requirements</span></span>  
+ <span data-ttu-id="e5f7e-123">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e5f7e-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="71875-124">**Encabezado**: CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="71875-124">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="e5f7e-124">**Encabezado**: CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="e5f7e-124">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="71875-125">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="71875-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e5f7e-125">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e5f7e-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="71875-126">**Versiones de .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="71875-126">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="e5f7e-126">**Versiones de .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="e5f7e-126">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="71875-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="71875-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e5f7e-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="e5f7e-127">See also</span></span>
 
-- [<span data-ttu-id="71875-128">FunctionEnter2 (Función)</span><span class="sxs-lookup"><span data-stu-id="71875-128">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="71875-129">FunctionLeave2 (Función)</span><span class="sxs-lookup"><span data-stu-id="71875-129">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [<span data-ttu-id="71875-130">Método SetEnterLeaveFunctionHooks2</span><span class="sxs-lookup"><span data-stu-id="71875-130">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="71875-131">Funciones estáticas globales para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="71875-131">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="e5f7e-128">FunctionEnter2 (Función)</span><span class="sxs-lookup"><span data-stu-id="e5f7e-128">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="e5f7e-129">FunctionLeave2 (Función)</span><span class="sxs-lookup"><span data-stu-id="e5f7e-129">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [<span data-ttu-id="e5f7e-130">SetEnterLeaveFunctionHooks2 (método)</span><span class="sxs-lookup"><span data-stu-id="e5f7e-130">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="e5f7e-131">Funciones estáticas globales para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="e5f7e-131">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
