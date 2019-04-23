@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear y usar un objeto GridLengthConverter
+title: Procedimiento Crear y usar un objeto GridLengthConverter
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - Grid control [WPF], creating [WPF], GridLengthConverter objects
 ms.assetid: 5ab75911-e36a-4825-80e4-081c57e8e182
 ms.openlocfilehash: 498d2b9c531f391f4cbeb1478469a99d381deec7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206790"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770780"
 ---
-# <a name="how-to-create-and-use-a-gridlengthconverter-object"></a>Filtrar Crear y usar un objeto GridLengthConverter
+# <a name="how-to-create-and-use-a-gridlengthconverter-object"></a>Procedimiento Crear y usar un objeto GridLengthConverter
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra cómo crear y usar una instancia de <xref:System.Windows.GridLengthConverter>. El ejemplo define un método personalizado llamado `changeCol`, que pasan el <xref:System.Windows.Controls.ListBoxItem> a un <xref:System.Windows.GridLengthConverter> que convierte el <xref:System.Windows.Controls.ContentControl.Content%2A> de un <xref:System.Windows.Controls.ListBoxItem> a una instancia de <xref:System.Windows.GridLength>. El valor convertido, a continuación, se pasa como el valor de la <xref:System.Windows.Controls.ColumnDefinition.Width%2A> propiedad de la <xref:System.Windows.Controls.ColumnDefinition> elemento.  
   
