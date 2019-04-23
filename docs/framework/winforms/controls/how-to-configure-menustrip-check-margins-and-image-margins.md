@@ -1,5 +1,5 @@
 ---
-title: Filtrar para configurar los márgenes de comprobación y de imagen de MenuStrip
+title: Procedimiento para configurar los márgenes de comprobación y de imagen de MenuStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], configuring check and image margins
 ms.assetid: 45a9075d-4bea-4ce2-9b2c-7619aa39f8ce
 ms.openlocfilehash: 09de1a9ca4be1c4ebfb0e13e800c09753bd04f11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134997"
 ---
-# <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>Filtrar para configurar los márgenes de comprobación y de imagen de MenuStrip
+# <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>Procedimiento para configurar los márgenes de comprobación y de imagen de MenuStrip
 Puede personalizar un <xref:System.Windows.Forms.MenuStrip> estableciendo las propiedades <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> y <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> en diversas combinaciones.  
   
 ## <a name="example"></a>Ejemplo  
@@ -37,5 +37,5 @@ Puede personalizar un <xref:System.Windows.Forms.MenuStrip> estableciendo las pr
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.ToolStripDropDown>
-- [ToolStrip](toolstrip-control-windows-forms.md)
-- [Filtrar para habilitar los márgenes de comprobación y de imagen en los controles ContextMenuStrip](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)
+- [Cómo: Habilitar los márgenes de comprobación y de imagen en los controles ContextMenuStrip](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)

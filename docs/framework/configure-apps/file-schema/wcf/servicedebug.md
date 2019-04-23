@@ -3,10 +3,10 @@ title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
 ms.openlocfilehash: 7b7526dbcbd1948d3d8a27d146efd0462fefaca5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142849"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
@@ -56,7 +56,7 @@ Especifica las características de información de depuración y de ayuda para u
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<comportamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
 ## <a name="remarks"></a>Comentarios  
  Establecer `includeExceptionDetailInFaults` a `true` permite al servicio devolver cualquier excepción producida por el código de la aplicación incluso si la excepción no está declarada con el <xref:System.ServiceModel.FaultContractAttribute>. Este valor es útil al depurar los casos donde el servidor produce una excepción inesperada. Al usar este atributo, se devuelve un formulario serializado de la excepción desconocida y usted puede examinar más detalles de la excepción.  
@@ -74,6 +74,6 @@ Especifica las características de información de depuración y de ayuda para u
 
 - <xref:System.ServiceModel.Configuration.ServiceDebugElement>
 - <xref:System.ServiceModel.Description.ServiceDebugBehavior>
-- [Especificación y administración de errores en contratos y servicios](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Especificación y gestión de errores en contratos y servicios](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Administración de excepciones y errores](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
 - [Comportamiento de depuración de servicio](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

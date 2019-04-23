@@ -3,10 +3,10 @@ title: Actividades de colección en WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
 ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133794"
 ---
 # <a name="collection-activities-in-wf"></a>Actividades de colección en WF
@@ -225,7 +225,7 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
- Los ejemplos de código anteriores también pueden crearse mediante <xref:Microsoft.CSharp.Activities.CSharpValue%601> en lugar de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
+ Los ejemplos de código anteriores también se pueden crear mediante <xref:Microsoft.CSharp.Activities.CSharpValue%601> en lugar de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
   
 ```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -427,4 +427,4 @@ Activity wf = new Sequence
   
 ## <a name="see-also"></a>Vea también
 
-- [Crear flujos de trabajo, actividades y expresiones mediante código imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [Creación de flujos de trabajo, actividades y expresiones mediante código imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Registrar una propiedad adjunta
+title: Procedimiento Registrar una propiedad adjunta
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - registering attached properties [WPF]
 ms.assetid: eb47bd94-0451-4f8d-8fb6-95f7812ac05b
 ms.openlocfilehash: 4c678a64b62b8f4db24cf39ffbafac52e56c9982
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137636"
 ---
-# <a name="how-to-register-an-attached-property"></a>Filtrar Registrar una propiedad adjunta
+# <a name="how-to-register-an-attached-property"></a>Procedimiento Registrar una propiedad adjunta
 En este ejemplo se muestra cómo registrar una propiedad adjunta y se proporcionan descriptores de acceso públicos para que pueda usar la propiedad en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] y en el código. Las propiedades adjuntas son un concepto de sintaxis que define [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. La mayoría de propiedades adjuntas para los tipos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también se implementan como propiedades de dependencia. Puede usar las propiedades de dependencia en cualquier <xref:System.Windows.DependencyObject> tipos.  
   
 ## <a name="example"></a>Ejemplo  

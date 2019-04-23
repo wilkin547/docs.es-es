@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 ms.openlocfilehash: 794a3d8e118cadd2a2752e1bbf85ef930deb2f27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138650"
 ---
 # <a name="message-security-with-a-windows-client"></a>Seguridad del mensaje con un cliente de Windows
@@ -119,4 +119,4 @@ Este escenario muestra un cliente de Windows Communication Foundation (WCF) y un
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

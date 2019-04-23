@@ -5,10 +5,10 @@ ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fdc4441a8a11df5427badfaea95edb0abe52bde
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131721"
 ---
 # <a name="method-element-net-native"></a>\<Método > elemento (.NET Native)
@@ -66,7 +66,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un constructor o mé
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -147,7 +147,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un constructor o mé
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementos de directivas en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Configuración de directiva de la directiva en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [\<MethodInstantiation > elemento](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
+- [Elemento \<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)

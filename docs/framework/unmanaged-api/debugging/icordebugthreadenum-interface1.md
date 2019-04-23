@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7edf103e397c6e3e1577b5ed4bc8fc0df264b843
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138000"
 ---
 # <a name="icordebugthreadenum-interface"></a>Interfaz ICorDebugThreadEnum
@@ -30,7 +30,7 @@ Implementa métodos ICorDebugEnum y enumera las matrices de ICorDebugThread.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Obtiene el número especificado de `ICorDebugThread` instancias de la enumeración, comenzando en la posición actual.|  
+|[Next (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Obtiene el número especificado de `ICorDebugThread` instancias de la enumeración, comenzando en la posición actual.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -48,4 +48,4 @@ Implementa métodos ICorDebugEnum y enumera las matrices de ICorDebugThread.
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

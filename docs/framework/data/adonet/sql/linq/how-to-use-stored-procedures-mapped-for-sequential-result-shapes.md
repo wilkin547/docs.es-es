@@ -1,18 +1,18 @@
 ---
-title: Filtrar para usar procedimientos almacenados asignados en formas de resultados secuenciales
+title: Procedimiento para usar procedimientos almacenados asignados en formas de resultados secuenciales
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a73530de-5a4e-4d9c-8d66-abb19c225b11
 ms.openlocfilehash: e51ebacb3f6be849f7b871f2d12db3ea7476b117
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134516"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Filtrar para usar procedimientos almacenados asignados en formas de resultados secuenciales
+# <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Procedimiento para usar procedimientos almacenados asignados en formas de resultados secuenciales
 Este tipo de procedimiento almacenado puede generar más de una forma de resultado, pero se sabe en qué orden se devuelven los resultados. Compare este escenario con el escenario donde no se sabe el orden de los resultados devueltos. Para obtener más información, vea [Cómo: Usar procedimientos almacenados asignados en varias formas de resultados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md).  
   
 ## <a name="example"></a>Ejemplo  

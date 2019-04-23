@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
 ms.openlocfilehash: 4511882aa4c7804e535f228dd150c26a8f7689f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140886"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>Información general del control TabControl (Formularios Windows Forms)
@@ -25,9 +25,9 @@ El control <xref:System.Windows.Forms.TabControl> de Windows Forms muestra múlt
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.TabControl>
-- [TabControl (Control)](tabcontrol-control-windows-forms.md)
-- [Filtrar para cambiar el aspecto apariencia del control TabControl de formularios Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [Filtrar para agregar un control a una ficha](how-to-add-a-control-to-a-tab-page.md)
-- [Filtrar para agregar y quitar fichas con el control TabControl de formularios Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [Filtrar para deshabilitar fichas](how-to-disable-tab-pages.md)
-- [Cuadros de diálogo en formularios Windows Forms](../dialog-boxes-in-windows-forms.md)
+- [TabControl (control)](tabcontrol-control-windows-forms.md)
+- [Cómo: Cambiar la apariencia del control TabControl de formularios de Windows](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Cómo: Agregar un Control a una página de ficha](how-to-add-a-control-to-a-tab-page.md)
+- [Cómo: Agregar y quitar fichas con el control TabControl de formularios de Windows](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Cómo: Deshabilitar páginas de fichas](how-to-disable-tab-pages.md)
+- [Cuadros de diálogo en Windows Forms](../dialog-boxes-in-windows-forms.md)

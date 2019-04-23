@@ -1,5 +1,5 @@
 ---
-title: Filtrar Cambiar el tipo de cursor
+title: Procedimiento Cambiar el tipo de cursor
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - cursor (mouse pointer)
 ms.assetid: 08c945a7-8ab0-4320-acf3-0b4955a344c2
 ms.openlocfilehash: 5c9e6931f6addb62a51e44b06a159d4e7b1e5f8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141211"
 ---
-# <a name="how-to-change-the-cursor-type"></a>Filtrar Cambiar el tipo de cursor
+# <a name="how-to-change-the-cursor-type"></a>Procedimiento Cambiar el tipo de cursor
 En este ejemplo se muestra cómo cambiar el <xref:System.Windows.Input.Cursor> del puntero del mouse para un elemento específico y para la aplicación.  
   
  Este ejemplo consta de un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivo y un archivo de código subyacente.  

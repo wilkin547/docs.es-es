@@ -5,31 +5,31 @@ ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bf692ff93a575858d1d1a89346611cb9c5957b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137818"
 ---
 # <a name="runtime-directive-elements"></a>Elementos de directivas en tiempo de ejecución
 El formato del archivo de directivas de tiempo de ejecución (rd.xml) es compatible con los siguientes elementos de directiva de tiempo de ejecución. Vea [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)) para obtener una representación jerárquica.  
   
- [\<Aplicación >](../../../docs/framework/net-native/application-element-net-native.md)  
+ [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)  
  Aplica la directiva de reflexión en tiempo de ejecución a todos los tipos utilizados por la aplicación y sirve como contenedor para los miembros de tipos y los tipos de toda la aplicación cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. Se trata de un elemento secundario del elemento [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md).  
   
- [\<Ensamblado >](../../../docs/framework/net-native/assembly-element-net-native.md)  
+ [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)  
  Aplica la directiva de tiempo de ejecución a todos los tipos de un ensamblado. Se trata de un elemento secundario de los elementos [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) y [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
  [\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)  
  Si la directiva [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) que contiene es un atributo, aplica la directiva en tiempo de ejecución a los elementos de código a los que se les aplica dicho atributo.  
   
- [\<Directivas >](../../../docs/framework/net-native/directives-element-net-native.md)  
+ [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)  
  Elemento raíz de cada archivo de directivas de tiempo de ejecución para [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Sus elementos secundarios son [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) y [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
  [\<Event>](../../../docs/framework/net-native/event-element-net-native.md)  
  Aplica la directiva de tiempo de ejecución a un evento. Se trata de un elemento secundario de los elementos [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) y [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
- [\<Campo >](../../../docs/framework/net-native/field-element-net-native.md)  
+ [\<Field>](../../../docs/framework/net-native/field-element-net-native.md)  
  Aplica la directiva de tiempo de ejecución a un campo. Se trata de un elemento secundario de los elementos [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) y [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
  [\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)  
@@ -38,28 +38,28 @@ El formato del archivo de directivas de tiempo de ejecución (rd.xml) es compati
  [\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)  
  Aplica la directiva de tiempo de ejecución a un tipo, si dicha directiva se ha aplicado al tipo contenedor o al método.  
   
- [\<Biblioteca >](../../../docs/framework/net-native/library-element-net-native.md)  
+ [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)  
  Aplica la directiva de tiempo de ejecución a todos los tipos de un ensamblado. Se trata de un elemento secundario de los elementos [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) y [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
- [\<Método >](../../../docs/framework/net-native/method-element-net-native.md)  
+ [\<Method>](../../../docs/framework/net-native/method-element-net-native.md)  
  Aplica la directiva de tiempo de ejecución a un método. Se trata de un elemento secundario de los elementos [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) y [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
- [\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)  
+ [\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)  
  Aplica la directiva de tiempo de ejecución a un método genérico construido. Se trata de un elemento secundario de los elementos [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) y [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
- [\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)  
+ [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)  
  Aplica la directiva de tiempo de ejecución a todos los tipos de un espacio de nombres.  
   
  [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)  
  Aplica la directiva de tiempo de ejecución al tipo del argumento que se pasa a un método.  
   
- [\<Propiedad >](../../../docs/framework/net-native/property-element-net-native.md)  
+ [\<Property>](../../../docs/framework/net-native/property-element-net-native.md)  
  Aplica la directiva de tiempo de ejecución a una propiedad. Se trata de un elemento secundario de los elementos [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) y [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
- [\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)  
+ [\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)  
  Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tipo contenedor.  
   
- [\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)  
+ [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)  
  Aplica la directiva de tiempo de ejecución a un tipo.  
   
  [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)  

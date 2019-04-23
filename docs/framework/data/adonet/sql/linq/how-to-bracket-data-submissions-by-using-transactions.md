@@ -1,18 +1,18 @@
 ---
-title: Filtrar para poner entre corchetes envíos de datos mediante el uso de transacciones
+title: Procedimiento para poner entre corchetes envíos de datos mediante el uso de transacciones
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 94044a31-de90-479b-935a-8159b4ae5c5a
 ms.openlocfilehash: 3e58c6f2849ed9714b3356662dae313ab9d11696
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134009"
 ---
-# <a name="how-to-bracket-data-submissions-by-using-transactions"></a>Filtrar para poner entre corchetes envíos de datos mediante el uso de transacciones
+# <a name="how-to-bracket-data-submissions-by-using-transactions"></a>Procedimiento para poner entre corchetes envíos de datos mediante el uso de transacciones
 Puede utilizar <xref:System.Transactions.TransactionScope> para catalogar sus envíos a la base de datos. Para obtener más información, consulte [compatibilidad con transacciones](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md).  
   
 ## <a name="example"></a>Ejemplo  
@@ -24,5 +24,5 @@ Puede utilizar <xref:System.Transactions.TransactionScope> para catalogar sus en
 ## <a name="see-also"></a>Vea también
 
 - [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Realizar y enviar cambios de datos](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Realización y envío de cambios de datos](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
 - [Compatibilidad con transacciones](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)

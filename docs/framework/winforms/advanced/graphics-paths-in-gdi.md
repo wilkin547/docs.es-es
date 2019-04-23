@@ -11,10 +11,10 @@ helpviewer_keywords:
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
 ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140509"
 ---
 # <a name="graphics-paths-in-gdi"></a>Trazados de gráficos en GDI+
@@ -71,5 +71,5 @@ Las rutas de acceso se crean mediante la combinación de líneas, rectángulos y
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
 - <xref:System.Drawing.Point?displayProperty=nameWithType>
 - [Líneas, curvas y formas](lines-curves-and-shapes.md)
-- [Filtrar para crear objetos gráficos para dibujar](how-to-create-graphics-objects-for-drawing.md)
+- [Cómo: Crear objetos Graphics para dibujar](how-to-create-graphics-objects-for-drawing.md)
 - [Crear y dibujar trazados](constructing-and-drawing-paths.md)

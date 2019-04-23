@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 79ef77e52e14fede9949121e7ec4575d10b820c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135855"
 ---
 # <a name="icordebugheapenum-interface"></a>ICorDebugHeapEnum (Interfaz)
@@ -30,7 +30,7 @@ Proporciona un enumerador para los objetos del montón administrado. Esta interf
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)|Obtiene el número especificado de [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) instancias que contienen información acerca de los objetos del montón administrado.|  
+|[Next (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)|Obtiene el número especificado de [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) instancias que contienen información acerca de los objetos del montón administrado.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `ICorDebugHeapEnum` interfaz implementa la interfaz ICorDebugEnum.  
@@ -48,4 +48,4 @@ Proporciona un enumerador para los objetos del montón administrado. Esta interf
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

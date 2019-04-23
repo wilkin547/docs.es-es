@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
 ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134789"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementar el patrón de control Invoke de UI Automation
@@ -29,7 +29,7 @@ ms.locfileid: "59134789"
   
 -   Generalmente, la invocación de un control se realiza con un clic, un doble clic, presionando la tecla ENTRAR, usando un método abreviado de teclado predefinido o alguna combinación alternativa de pulsaciones de teclas.  
   
--   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> se produce en un control que se ha activado (como respuesta a un control de llevar a cabo su acción asociada). Si es posible, se debe generar el evento después de que el control haya completado la acción y haya hecho la devolución sin bloquearse. El evento Invoked debe generarse antes de atender la solicitud Invoke en los escenarios siguientes:  
+-   Se genera<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> en un control que se ha activado (como respuesta a un control que lleva a cabo su acción asociada). Si es posible, se debe generar el evento después de que el control haya completado la acción y haya hecho la devolución sin bloquearse. El evento Invoked debe generarse antes de atender la solicitud Invoke en los escenarios siguientes:  
   
     -   No es posible ni práctico esperar hasta que se complete la acción.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59134789"
   
 -   Un elemento puede desaparecer del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] inmediatamente después de que se invoque. La solicitud de información del elemento que proporciona la devolución de llamada de evento puede producir un error como resultado. La solución recomendada es la captura previa de la información almacenada en caché.  
   
--   Los controles pueden implementar varios patrones de control. Por ejemplo, el control Fill Color de la barra de herramientas de [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] implementa los patrones de control <xref:System.Windows.Automation.InvokePattern> y <xref:System.Windows.Automation.ExpandCollapsePattern> . <xref:System.Windows.Automation.ExpandCollapsePattern> expone el menú y el <xref:System.Windows.Automation.InvokePattern> rellena la selección activa con el color elegido.  
+-   Los controles pueden implementar varios patrones de control. Por ejemplo, el control Fill Color de la barra de herramientas de [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] implementa los patrones de control <xref:System.Windows.Automation.InvokePattern> y <xref:System.Windows.Automation.ExpandCollapsePattern> . <xref:System.Windows.Automation.ExpandCollapsePattern> expone el menú y el elemento <xref:System.Windows.Automation.InvokePattern> rellena la selección activa con el color elegido.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>Miembros requeridos para IInvokeProvider  
@@ -68,9 +68,9 @@ ms.locfileid: "59134789"
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general acerca de los patrones de control de UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Patrones de control compatibles en un proveedor de UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Patrones de controles de UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Llamar a un control utilizando la UI Automation](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
-- [Información general sobre el árbol de la UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Utilizar el almacenamiento en caché en la UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Invocación de un control mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
+- [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

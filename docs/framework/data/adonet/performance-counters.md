@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
 ms.openlocfilehash: e7e7ba379f6f92f3ba8fba55f22c8eaec81ab1cf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133892"
 ---
 # <a name="performance-counters-in-adonet"></a>Contadores de rendimiento de ADO.NET
@@ -396,7 +396,7 @@ class Program
 
 ## <a name="see-also"></a>Vea también
 
-- [Conectarse a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Conexión a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Agrupación de conexiones de OLE DB, ODBC y Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
 - [Contadores de rendimiento de ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
 - [Generar perfiles en tiempo de ejecución](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)

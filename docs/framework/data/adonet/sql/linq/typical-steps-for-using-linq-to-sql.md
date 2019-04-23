@@ -3,10 +3,10 @@ title: Pasos habituales para usar LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
 ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132852"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Pasos habituales para usar LINQ to SQL
@@ -20,7 +20,7 @@ Para implementar una aplicación [!INCLUDE[vbtecdlinq](../../../../../../include
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Seleccionar una herramienta para crear el modelo  
  Tres herramientas están disponibles para crear el modelo.  
   
--   A la clase [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+-   El [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
      Este diseñador proporciona una interfaz de usuario completa para crear un modelo de objetos a partir de una base de datos existente. Esta herramienta forma parte del IDE de Visual Studio y se adapta mejor a las bases de datos medianas o pequeñas.  
   
@@ -84,5 +84,5 @@ Para implementar una aplicación [!INCLUDE[vbtecdlinq](../../../../../../include
 ## <a name="see-also"></a>Vea también
 
 - [Introducción](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
-- [Crear el modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [Creación del modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

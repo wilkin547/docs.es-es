@@ -9,10 +9,10 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
 ms.openlocfilehash: 50566422c5e28585e93171c991144cf12a6866eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131955"
 ---
 # <a name="systemweb-element-web-settings"></a>\<System.Web > elemento (configuración Web)
@@ -74,4 +74,4 @@ Contiene información sobre cómo administra el comportamiento de todo el proces
   
 ## <a name="see-also"></a>Vea también
 
-- [\<applicationPool > elemento (configuración Web)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+- [Elemento \<applicationPool> (configuración web)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)

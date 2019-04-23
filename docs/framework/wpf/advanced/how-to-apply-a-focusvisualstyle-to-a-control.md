@@ -1,18 +1,18 @@
 ---
-title: Filtrar Aplicar un FocusVisualStyle a un control
+title: Procedimiento Aplicar un FocusVisualStyle a un control
 ms.date: 03/30/2017
 helpviewer_keywords:
 - properties [WPF], FocusVisualStyle
 - FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
 ms.openlocfilehash: 53d4984946143c15c4a2b71095529fb5ee7de4b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133554"
 ---
-# <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Filtrar Aplicar un FocusVisualStyle a un control
+# <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Procedimiento Aplicar un FocusVisualStyle a un control
 En este ejemplo se muestra cómo crear un estilo visual de foco en recursos y aplicar el estilo a un control, mediante el <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propiedad.  
   
 ## <a name="example"></a>Ejemplo  

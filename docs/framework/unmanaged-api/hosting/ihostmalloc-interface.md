@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f2a7a29ef1dc85c2ad554995286e5137fcb104be
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136419"
 ---
 # <a name="ihostmalloc-interface"></a>IHostMalloc (Interfaz)
@@ -30,9 +30,9 @@ Proporciona métodos que permiten a common language runtime (CLR) para solicitar
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md)|Solicita que el host de asignar la cantidad de memoria del montón.|  
-|[Método DebugAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-debugalloc-method.md)|Solicita que el host de asignar la cantidad de memoria del montón y además realizar un seguimiento de dónde se ha asignado la memoria.|  
-|[Método Free](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-free-method.md)|Libera la memoria que se asignó utilizando el `Alloc` método.|  
+|[Alloc (método)](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md)|Solicita que el host de asignar la cantidad de memoria del montón.|  
+|[DebugAlloc (método)](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-debugalloc-method.md)|Solicita que el host de asignar la cantidad de memoria del montón y además realizar un seguimiento de dónde se ha asignado la memoria.|  
+|[Free (método)](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-free-method.md)|Libera la memoria que se asignó utilizando el `Alloc` método.|  
   
 ## <a name="remarks"></a>Comentarios  
  CLR Obtiene un puntero de interfaz a un `IHostMalloc` instancia mediante una llamada a la [IHostMemoryManager:: CreateMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) método.  
@@ -48,5 +48,5 @@ Proporciona métodos que permiten a common language runtime (CLR) para solicitar
   
 ## <a name="see-also"></a>Vea también
 
-- [IHostMemoryManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [IHostMemoryManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
 - [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

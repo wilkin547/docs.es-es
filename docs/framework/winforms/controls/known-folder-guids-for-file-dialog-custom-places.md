@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
 ms.openlocfilehash: 0f06ca2251ae1bf9bd5e199562eff116614e7117
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140236"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUIDs de carpeta conocidos para lugares comunes de cuadros de diálogo de archivos
@@ -289,4 +289,4 @@ Usa un <xref:System.Guid> para especificar un [!INCLUDE[wiprlhext](../../../../i
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [Cómo agregar una ubicación personalizada a un cuadro de diálogo de archivos](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [Cómo: Agregar un lugar común a un cuadro de diálogo de archivos](how-to-add-a-custom-place-to-a-file-dialog-box.md)

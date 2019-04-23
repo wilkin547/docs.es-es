@@ -21,12 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: 48794898eb1a3e13454a335a2335fac57d8faf3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc4717c873e65311a8502e66f3edaf39dd89ff9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561652"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59133807"
 ---
 # <a name="configuring-internet-applications"></a>Configuración de aplicaciones de Internet
 El elemento de configuración [Elemento \<system.Net> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) contiene información de configuración de red para las aplicaciones. Con el [Elemento \<system.Net> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md), puede establecer servidores proxy, establecer parámetros de administración de conexiones e incluir módulos personalizados de autenticación y solicitud en la aplicación.  
@@ -98,6 +98,7 @@ El elemento de configuración [Elemento \<system.Net> (configuración de red)](.
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Esquema de la configuración de red](../../../docs/framework/configure-apps/file-schema/network/index.md)
 - [Elemento \<system.Net> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

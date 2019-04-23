@@ -1,5 +1,5 @@
 ---
-title: Filtrar para convertir colores de imágenes
+title: Procedimiento para convertir colores de imágenes
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
 ms.openlocfilehash: 04e61383ef79b17ea6e1523588cd9593ec9b082c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132644"
 ---
-# <a name="how-to-translate-image-colors"></a>Filtrar para convertir colores de imágenes
+# <a name="how-to-translate-image-colors"></a>Procedimiento para convertir colores de imágenes
 Una traducción, agrega un valor a uno o varios de los cuatro componentes de color. En la siguiente tabla figuran las entradas de la matriz de color que representan las traducciones.  
   
 |Componente que se deben traducir|Entrada de matriz|  
@@ -46,7 +46,7 @@ Una traducción, agrega un valor a uno o varios de los cuatro componentes de col
  [!code-vb[System.Drawing.RecoloringImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos. Reemplace `ColorBars.bmp` con un nombre de archivo de imagen y la ruta de acceso que son válidos en el sistema.  
+ El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>. Reemplace `ColorBars.bmp` con un nombre de archivo de imagen y la ruta de acceso que son válidos en el sistema.  
   
 ## <a name="see-also"></a>Vea también
 

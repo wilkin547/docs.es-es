@@ -10,10 +10,10 @@ helpviewer_keywords:
 - states [WPF], Label
 ms.assetid: c1d5359a-8e4a-4925-ab3e-e92bf6694859
 ms.openlocfilehash: d2bb348fc9c0348fd8093452e022df7ab4e0b3f2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137090"
 ---
 # <a name="label-styles-and-templates"></a>Estilos y plantillas de etiquetas
@@ -47,6 +47,6 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
-- [Personalización de controles](control-customization.md)
+- [Control Customization](control-customization.md) (Personalización de controles)
 - [Aplicar estilos y plantillas](styling-and-templating.md)
-- [Personalizar la apariencia de un control existente creando una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

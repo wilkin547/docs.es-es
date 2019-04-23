@@ -1,5 +1,5 @@
 ---
-title: Filtrar para distinguir operaciones de clic y de doble clic
+title: Procedimiento para distinguir operaciones de clic y de doble clic
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
 ms.openlocfilehash: 26b3a64533747e80c7b9270918030da76d5e00c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139404"
 ---
-# <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Filtrar para distinguir operaciones de clic y de doble clic
+# <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Procedimiento para distinguir operaciones de clic y de doble clic
 Normalmente, un único *clic* inicia una acción de la interfaz de usuario (UI) y un *doble clic* extiende la acción. Por ejemplo, un clic normalmente selecciona un elemento y un doble clic edita el elemento seleccionado. Sin embargo, los eventos de clic de Windows Forms no se adaptan fácilmente un escenario en el que un clic y un doble clic realizan acciones incompatibles, ya que una acción asociada al evento <xref:System.Windows.Forms.Control.Click> o <xref:System.Windows.Forms.Control.MouseClick> se realiza antes de la acción asociada al evento <xref:System.Windows.Forms.Control.DoubleClick> o <xref:System.Windows.Forms.Control.MouseDoubleClick>. Este tema se muestran dos soluciones a este problema. Una solución es controlar el evento de doble clic y revertir las acciones en el control del evento de clic. En raras ocasiones, puede que necesite simular el comportamiento de clic y doble clic controlando el evento <xref:System.Windows.Forms.Control.MouseDown> y usando las propiedades <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> y <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> de la clase <xref:System.Windows.Forms.SystemInformation>. Mida el tiempo entre los clics y si se produce un segundo clic antes de alcanzar el valor de <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> y el clic en está dentro de un rectángulo definido por <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, realice la acción de doble clic; de lo contrario, realice la acción de clic.  
   
 ### <a name="to-roll-back-a-click-action"></a>Para revertir una acción de clic  
@@ -44,4 +44,4 @@ Normalmente, un único *clic* inicia una acción de la interfaz de usuario (UI) 
   
 ## <a name="see-also"></a>Vea también
 
-- [Entradas mediante el mouse (ratón) en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Entradas mediante el mouse en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)

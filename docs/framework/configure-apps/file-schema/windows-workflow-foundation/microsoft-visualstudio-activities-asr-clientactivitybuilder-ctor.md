@@ -11,7 +11,7 @@ api_type:
 ms.assetid: 6b44b13c-7a23-4df2-8f9f-45e2b1430002
 ms.openlocfilehash: 0ce9be30182f9181bcb6449529d9b9796aadbc2b
 ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133541"

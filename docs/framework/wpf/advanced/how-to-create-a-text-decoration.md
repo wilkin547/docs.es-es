@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear una decoración de texto
+title: Procedimiento Crear una decoración de texto
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
 ms.openlocfilehash: d586eef8d1308070da38a0a54c63c3ba64d30c8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133840"
 ---
-# <a name="how-to-create-a-text-decoration"></a>Filtrar Crear una decoración de texto
+# <a name="how-to-create-a-text-decoration"></a>Procedimiento Crear una decoración de texto
 Un <xref:System.Windows.TextDecoration> objeto es un adorno visual que se puede agregar al texto. Hay cuatro tipos de decoraciones de texto: subrayado, línea base, tachado y línea alta. El ejemplo siguiente muestra las ubicaciones de las decoraciones de texto en relación con el texto.  
   
  ![Diagrama de tipos de decoración de texto](./media/how-to-create-a-text-decoration/text-decoration-types.gif)  

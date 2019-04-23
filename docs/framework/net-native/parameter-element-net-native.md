@@ -5,10 +5,10 @@ ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d2dbff544f991712ad26f2cb12d638801b5a3fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137883"
 ---
 # <a name="parameter-element-net-native"></a>\<Parámetro > elemento (.NET Native)
@@ -68,14 +68,14 @@ Aplica la directiva de reflexión al tipo del argumento que se pasa a un método
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Método >](../../../docs/framework/net-native/method-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un constructor o método.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un constructor o método.|  
   
 ## <a name="remarks"></a>Comentarios  
  `<Parameter>` es un elemento secundario del elemento [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) y se usa para aplicar directivas a un parámetro de método concreto. El parámetro de método determinado se especifica mediante el nombre en lugar del tipo. Debe haber presente al menos un atributo que represente un tipo de directiva, como `Activate` o `Dynamic`.  
   
 ## <a name="see-also"></a>Vea también
 
-- [\<Método > elemento](../../../docs/framework/net-native/method-element-net-native.md)
-- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Configuración de directiva de la directiva en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Elementos de directivas en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
+- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)

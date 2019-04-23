@@ -7,10 +7,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
 ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138117"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Cambiar el tamaño de columnas y filas en el control DataGridView de formularios Windows Forms
@@ -27,13 +27,13 @@ El `DataGridView` ofrece numerosas opciones para personalizar el comportamiento 
  [Modo de relleno de columnas en el control DataGridView de formularios Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
  Describe el modo de relleno de columna en detalle y proporciona código de demostración que puede usar para experimentar con el modo de relleno de columna y otros modos.  
   
- [Filtrar para establecer modos de cambio de tamaño para el control DataGridView de formularios Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+ [Cómo: Establecer modos de ajuste de tamaño del Control DataGridView de formularios Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
  Describe cómo configurar los modos de ajuste de tamaño para los propósitos comunes.  
   
- [Filtrar para cambiar mediante programación el tamaño de las celdas para ajustar el contenido en el control DataGridView de formularios Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+ [Cómo: Cambiar el tamaño de las celdas para ajustar el contenido en el Control DataGridView de Windows Forms mediante programación](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
  Proporciona código de demostración que puede usar para experimentar con el cambio de tamaño mediante programación.  
   
- [Filtrar para cambiar automáticamente el tamaño de las celdas cuando se modifica el contenido en un control DataGridView de formularios Windows Forms](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+ [Cómo: Las celdas de tamaño automáticamente cuando cambia el contenido en el Control DataGridView de Windows Forms](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
  Proporciona código de demostración que puede usar para experimentar con los modos de ajuste de tamaño automático.  
   
 ## <a name="reference"></a>Referencia  
@@ -42,4 +42,4 @@ El `DataGridView` ofrece numerosas opciones para personalizar el comportamiento 
   
 ## <a name="see-also"></a>Vea también
 
-- [Control DataGridView](datagridview-control-windows-forms.md)
+- [DataGridView (control)](datagridview-control-windows-forms.md)

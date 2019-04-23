@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un dibujo compuesto
+title: Procedimiento Crear un dibujo compuesto
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawings [WPF], composite
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - graphics [WPF], composite drawings
 ms.assetid: 066eb0ab-5f0e-439d-85c6-dca60af269fc
 ms.openlocfilehash: 0af7fbca593627ebe8cd102a02617a27eac50aa5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132475"
 ---
-# <a name="how-to-create-a-composite-drawing"></a>Filtrar Crear un dibujo compuesto
+# <a name="how-to-create-a-composite-drawing"></a>Procedimiento Crear un dibujo compuesto
 En este ejemplo se muestra cómo usar un <xref:System.Windows.Media.DrawingGroup> para crear dibujos complejos combinando varias <xref:System.Windows.Media.Drawing> objetos en un solo dibujo compuesto.  
   
 ## <a name="example"></a>Ejemplo  

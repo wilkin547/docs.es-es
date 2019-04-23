@@ -1,18 +1,18 @@
 ---
-title: Filtrar para administrar claves compuestas en consultas
+title: Procedimiento para administrar claves compuestas en consultas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ce2f14fd-1038-458a-91e3-a078c61f0d10
 ms.openlocfilehash: 2621ab4db207d1b868fbe3778c30c744201b0506
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135257"
 ---
-# <a name="how-to-handle-composite-keys-in-queries"></a>Filtrar para administrar claves compuestas en consultas
+# <a name="how-to-handle-composite-keys-in-queries"></a>Procedimiento para administrar claves compuestas en consultas
 Algunos operadores sólo pueden aceptar un argumento. Si su argumento debe incluir más de una columna de la base de datos, debe crear un tipo anónimo para representar la combinación.  
   
 ## <a name="example"></a>Ejemplo  

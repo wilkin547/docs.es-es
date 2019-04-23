@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
 ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141458"
 ---
 # <a name="performing-catalog-operations"></a>Realizar operaciones de catálogo
@@ -47,6 +47,6 @@ command.ExecuteNonQuery();
   
 ## <a name="see-also"></a>Vea también
 
-- [Usar comandos para modificar datos](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
+- [Uso de comandos para modificar datos](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
 - [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

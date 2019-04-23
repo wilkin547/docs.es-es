@@ -10,10 +10,10 @@ ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e4d8497d17e1a82791f4dd6ca8f91c9a012db167
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132787"
 ---
 # <a name="securing-wrapper-code"></a>Insertar en el repositorio código de contenedor
@@ -71,7 +71,7 @@ ms.locfileid: "59132787"
   
  La seguridad declarativa ofrece las siguientes comprobaciones de seguridad:  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand> Especifica el recorrido de pila de seguridad de acceso de código. Todos los llamadores de la pila deben tener el permiso o la identidad especificados para pasar. **Demanda** se produce en cada llamada porque la pila puede contener distintos llamadores. Si llama a un método repetidas veces, esta comprobación de seguridad se realiza cada vez. **Demanda** es una buena protección contra los ataques; se detectará el código no autorizado al intentar obtener a través de él.  
+-   <xref:System.Security.Permissions.SecurityAction.Demand> especifica el recorrido de pila de seguridad de acceso del código. Todos los llamadores de la pila deben tener el permiso o la identidad especificados para pasar. **Demanda** se produce en cada llamada porque la pila puede contener distintos llamadores. Si llama a un método repetidas veces, esta comprobación de seguridad se realiza cada vez. **Demanda** es una buena protección contra los ataques; se detectará el código no autorizado al intentar obtener a través de él.  
   
 -   [LinkDemand](../../../docs/framework/misc/link-demands.md) se produce en tiempo de compilación just-in-time (JIT) y comprueba sólo el llamador inmediato. Esta comprobación de seguridad no comprueba el llamador del llamador. Una vez que se supera esta comprobación, no hay ninguna seguridad adicional posterior independientemente de las veces que el llamador pueda llamar. Sin embargo, tampoco hay protección contra los ataques por señuelo. Con **LinkDemand**, cualquier código que pasa la prueba y puede hacer referencia al código potencialmente puede romper la seguridad al permitir que el código malintencionado llamar mediante el código autorizado. Por lo tanto, no use **LinkDemand** a menos que se puedan evitar completamente todos los posibles puntos débiles.  
   

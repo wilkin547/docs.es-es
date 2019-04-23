@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 492a60d3c8d18bec4e99ae778686fec6e8724248
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140574"
 ---
 # <a name="icorruntimehostunloaddomain-method"></a>ICorRuntimeHost::UnloadDomain (Método)
@@ -61,4 +61,4 @@ HRESULT UnloadDomain (
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [ICorRuntimeHost (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

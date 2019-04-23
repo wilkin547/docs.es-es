@@ -8,10 +8,10 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141536"
 ---
 # <a name="loader-etw-events"></a>Eventos ETW de cargador
@@ -45,7 +45,7 @@ ms.locfileid: "59141536"
   
 |evento|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (se registra para todos los dominios de aplicación)|156|Se genera cuando se crea un dominio de aplicación durante un proceso.|  
+|`AppDomainLoad_V1` (registrado para todos los dominios de aplicación)|156|Se genera cuando se crea un dominio de aplicación durante un proceso.|  
 |`AppDomainUnLoad_V1`|157|Se genera cuando se destruye un dominio de aplicación durante un proceso.|  
 |`AppDomainDCStart_V1`|157|Enumera los dominios de aplicación durante una detención de inicio.|  
 |`AppDomainDCEnd_V1`|158|Enumera los dominios de aplicación durante una detención de finalización.|  
@@ -214,4 +214,4 @@ ms.locfileid: "59141536"
   
 ## <a name="see-also"></a>Vea también
 
-- [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)

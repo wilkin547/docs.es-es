@@ -8,10 +8,10 @@ ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2bb2b0dd95877fc6492f6d23a19c14688cd78f7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133827"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Eventos ETW de supervisión de recursos de dominio de aplicación (ARM)
@@ -37,7 +37,7 @@ ms.locfileid: "59133827"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
+|`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
@@ -65,7 +65,7 @@ ms.locfileid: "59133827"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
+|`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "59133827"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
+|`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "59133827"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
+|`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
@@ -139,7 +139,7 @@ ms.locfileid: "59133827"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
+|`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
@@ -158,4 +158,4 @@ ms.locfileid: "59133827"
   
 ## <a name="see-also"></a>Vea también
 
-- [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)

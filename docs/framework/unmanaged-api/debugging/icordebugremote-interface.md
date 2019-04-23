@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a50a799c625c647aa275994bc92738b8a4267eec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135582"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote (Interfaz)
@@ -62,8 +62,8 @@ interface ICorDebugRemote : IUnknown
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[ICorDebugRemote::CreateProcessEx (Método)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Crea un proceso en un equipo remoto para la depuración administrada.|  
-|[ICorDebugRemote::DebugActiveProcessEx (Método)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Inicia un proceso en un equipo remoto en el depurador.|  
+|[ICorDebugRemote::CreateProcessEx (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Crea un proceso en un equipo remoto para la depuración administrada.|  
+|[ICorDebugRemote::DebugActiveProcessEx (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Inicia un proceso en un equipo remoto en el depurador.|  
   
 ## <a name="remarks"></a>Comentarios  
  Actualmente, esta funcionalidad solo se admite para la depuración de un destino de la aplicación basada en Silverlight que se ejecuta en un equipo remoto de Macintosh.  
@@ -79,7 +79,7 @@ interface ICorDebugRemote : IUnknown
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugRemoteTarget (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [ICorDebug (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemoteTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

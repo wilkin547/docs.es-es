@@ -1,5 +1,5 @@
 ---
-title: Filtrar para administrar manualmente gráficos almacenados en búfer
+title: Procedimiento para administrar manualmente gráficos almacenados en búfer
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
 ms.openlocfilehash: 965e3225f8cf1af6d61b81434089ebacac8ad13a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138676"
 ---
-# <a name="how-to-manually-manage-buffered-graphics"></a>Filtrar para administrar manualmente gráficos almacenados en búfer
+# <a name="how-to-manually-manage-buffered-graphics"></a>Procedimiento para administrar manualmente gráficos almacenados en búfer
 Para escenarios más avanzados de almacenamiento en búfer doble, puede usar el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] clases para implementar su propia lógica de almacenamiento en búfer doble. La clase responsable de asignar y administrar búferes de gráficos individuales es el <xref:System.Drawing.BufferedGraphicsContext> clase. Cada aplicación tiene su propio valor predeterminado <xref:System.Drawing.BufferedGraphicsContext> que administra todo el doble búfer predeterminado para esa aplicación. Puede recuperar una referencia a esta instancia mediante una llamada a la <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  
   
 ### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a>Para obtener una referencia a la clase BufferedGraphicsContext predeterminada  
@@ -41,4 +41,4 @@ Para escenarios más avanzados de almacenamiento en búfer doble, puede usar el 
 
 - <xref:System.Drawing.BufferedGraphicsContext>
 - [Gráficos de doble búfer](double-buffered-graphics.md)
-- [Filtrar para representar manualmente gráficos almacenados en búfer](how-to-manually-render-buffered-graphics.md)
+- [Cómo: Representar manualmente gráficos almacenados en búfer](how-to-manually-render-buffered-graphics.md)

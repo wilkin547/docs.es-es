@@ -5,10 +5,10 @@ ms.assetid: cf37c462-73c5-412a-a7f8-bb26ca746313
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d8586031c5bcb0303a64b67ee601fe41b81ee3f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134870"
 ---
 # <a name="icorprofilerinfo7-interface"></a>Interfaz ICorProfilerInfo7
@@ -20,8 +20,8 @@ ms.locfileid: "59134870"
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método ApplyMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md)|Se aplica a los metadatos recién definido por el `IMetadataEmit::Define*` métodos a un módulo especificado.|  
-|[Método GetInMemorySymbolsLength](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md)|Devuelve la longitud de una secuencia de símbolos en memoria.|  
+|[ApplyMetaData (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md)|Se aplica a los metadatos recién definido por el `IMetadataEmit::Define*` métodos a un módulo especificado.|  
+|[GetInMemorySymbolsLength (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md)|Devuelve la longitud de una secuencia de símbolos en memoria.|  
 |[ReadInMemorySymbols](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md)|Lee los bytes de una secuencia de símbolos en memoria.|  
   
 ## <a name="requirements"></a>Requisitos  

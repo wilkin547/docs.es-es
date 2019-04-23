@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
 ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141562"
 ---
 # <a name="optimizing-wpf-application-performance"></a>Optimizar WPF: Rendimiento de aplicaciones
@@ -62,4 +62,4 @@ En esta sección sirve como referencia para [!INCLUDE[TLA#tla_winclient](../../.
 - [Información general sobre el enlace de datos](../data/data-binding-overview.md)
 - [Información general sobre navegación](../app-development/navigation-overview.md)
 - [Sugerencias y trucos para animaciones](../graphics-multimedia/animation-tips-and-tricks.md)
-- [Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Tutorial: Almacenamiento en caché datos de la aplicación en una aplicación WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

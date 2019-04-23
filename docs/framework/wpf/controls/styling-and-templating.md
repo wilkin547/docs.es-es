@@ -16,14 +16,14 @@ helpviewer_keywords:
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
 ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132305"
 ---
 # <a name="styling-and-templating"></a>Aplicar estilos y plantillas
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicar estilos y plantillas que hacen referencia a un conjunto de características (estilos, plantillas, desencadenadores y guiones gráficos) que permite a los desarrolladores y diseñadores crear efectos visualmente atractivos y para crear una apariencia coherente para su producto. Aunque los desarrolladores y los diseñadores pueden personalizar muchas apariencias aplicación por aplicación, es necesario un modelo de aplicación de estilos y plantillas para el mantenimiento y el uso compartido de la apariencia entre las distintas aplicaciones. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ofrece ese modelo.  
+La aplicación de estilos y plantillas de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] hace referencia a un conjunto de características (estilos, plantillas, desencadenadores y guiones gráficos) que permiten a los desarrolladores y diseñadores crear efectos visualmente atractivos y una apariencia coherente para su producto. Aunque los desarrolladores y los diseñadores pueden personalizar muchas apariencias aplicación por aplicación, es necesario un modelo de aplicación de estilos y plantillas para el mantenimiento y el uso compartido de la apariencia entre las distintas aplicaciones. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ofrece ese modelo.  
   
  Otra característica del modelo de aplicación de estilos y plantillas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] es la separación de la presentación y la lógica. Esto significa que los diseñadores pueden trabajar en la apariencia de una aplicación solo con usar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mientras los desarrolladores trabajan en la lógica de programación con C# o Visual Basic.  
   
@@ -198,6 +198,6 @@ ms.locfileid: "59132305"
   
 ## <a name="see-also"></a>Vea también
 
-- [Pack URI en WPF](../app-development/pack-uris-in-wpf.md)
-- [Filtrar para buscar elementos generados por un objeto ControlTemplate](how-to-find-controltemplate-generated-elements.md)
-- [Buscar elementos generados por una clase DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)
+- [Identificadores URI de paquete en WPF](../app-development/pack-uris-in-wpf.md)
+- [Cómo: Buscar elementos generados por el objeto ControlTemplate](how-to-find-controltemplate-generated-elements.md)
+- [Find DataTemplate-Generated Elements](../data/how-to-find-datatemplate-generated-elements.md) (Cómo buscar elementos generados por una clase DataTemplate)

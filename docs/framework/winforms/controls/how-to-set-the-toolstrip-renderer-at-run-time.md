@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer el representador de ToolStrip en tiempo de ejecución
+title: Procedimiento para establecer el representador de ToolStrip en tiempo de ejecución
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 ms.assetid: 525e2347-0804-49aa-b9a3-9b2cabbf1c35
 ms.openlocfilehash: f0e8668ef46de8cc073663786bcd43b740a1b2f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138591"
 ---
-# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>Filtrar para establecer el representador de ToolStrip en tiempo de ejecución
+# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>Procedimiento para establecer el representador de ToolStrip en tiempo de ejecución
 Puede personalizar la apariencia de su control <xref:System.Windows.Forms.ToolStrip> creando una clase `ProfessionalColorTable` personalizada.  
   
 ## <a name="example"></a>Ejemplo  
@@ -57,4 +57,4 @@ Puede personalizar la apariencia de su control <xref:System.Windows.Forms.ToolSt
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
-- [ToolStrip](toolstrip-control-windows-forms.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)

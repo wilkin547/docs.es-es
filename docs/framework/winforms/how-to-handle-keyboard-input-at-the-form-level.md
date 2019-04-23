@@ -1,5 +1,5 @@
 ---
-title: Filtrar para controlar la entrada de teclado en el formulario
+title: Procedimiento para controlar la entrada de teclado en el formulario
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
 ms.openlocfilehash: fbb6587dde53592a94887c1ea19562e06c15afe3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135176"
 ---
-# <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Filtrar para controlar la entrada de teclado en el formulario
+# <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Procedimiento para controlar la entrada de teclado en el formulario
 Windows Forms permite controlar los mensajes del teclado en el nivel de formulario, antes de que los mensajes lleguen a un control. En este tema se muestra cómo realizar esta tarea.  
   
 ### <a name="to-handle-a-keyboard-message-at-the-form-level"></a>Para controlar un mensaje de teclado en el nivel de formulario  

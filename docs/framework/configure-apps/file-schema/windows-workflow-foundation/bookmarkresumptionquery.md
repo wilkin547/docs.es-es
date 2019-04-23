@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 226de75d-d25c-48d5-b069-4b7d80a6852b
 ms.openlocfilehash: e43ba66e2c3ccfbb723b1eea8ef6774ad3f9f2aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140041"
 ---
 # <a name="bookmarkresumptionquery"></a>\<bookmarkResumptionQuery>
@@ -58,5 +58,5 @@ Representa una consulta que se usa para realizar el seguimiento de la reanudaci√
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
-- [Seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [Perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

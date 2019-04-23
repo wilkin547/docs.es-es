@@ -1,18 +1,18 @@
 ---
-title: Filtrar Ajustar la escala de un elemento
+title: Procedimiento Ajustar la escala de un elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
 ms.openlocfilehash: 607b3a11085f746503c1b82552f1740b49d9ef5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131708"
 ---
-# <a name="how-to-scale-an-element"></a>Filtrar Ajustar la escala de un elemento
+# <a name="how-to-scale-an-element"></a>Procedimiento Ajustar la escala de un elemento
 En este ejemplo se muestra cómo usar un <xref:System.Windows.Media.ScaleTransform> para escalar un elemento.  
   
  Use la <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> y <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> propiedades para cambiar el tamaño del elemento por el factor que especifique. Por ejemplo, un <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> valor de 1,5 ajusta el elemento al 150 por ciento de su ancho original. Un <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> valor de 0,5 reduce el alto de un elemento en un 50%.  

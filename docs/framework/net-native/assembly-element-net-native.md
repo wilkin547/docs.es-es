@@ -5,10 +5,10 @@ ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0788c05edace2142d348c679c73aa1b4404ce75
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137857"
 ---
 # <a name="assembly-element-net-native"></a>\<Ensamblado > elemento (.NET Native)
@@ -53,7 +53,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a todos los tipos en u
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|*assembly_name*|Nombre simple del ensamblado sin la extensión de archivo. Este atributo corresponde a la propiedad <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType>. Por ejemplo, el nombre de un ensamblado denominado Extensions.dll es "Extensions".<br /><br /> También puede especificar la cadena literal `*Application*` para aplicar la directiva a todos los ensamblados en el paquete de la aplicación, independientemente de si se han cargado o no. `*Application*` nunca aplica una directiva a los ensamblados de .NET Framework.|  
+|*assembly_name*|Nombre simple del ensamblado sin la extensión de archivo. Este atributo corresponde a la propiedad <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType>. Por ejemplo, el nombre de un ensamblado denominado Extensions.dll es "Extensions".<br /><br /> También puede especificar la cadena literal `*Application*` para aplicar la directiva a todos los ensamblados en el paquete de la aplicación, independientemente de si se han cargado o no. `*Application*` nunca aplica una directiva a ensamblados de .NET Framework.|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
@@ -65,16 +65,16 @@ Aplica la directiva de reflexión en tiempo de ejecución a todos los tipos en u
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Aplica la directiva de reflexión a todos los tipos en un espacio de nombres secundario.|  
-|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión a un tipo.|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Aplica la directiva de reflexión a todos los tipos en un espacio de nombres secundario.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión a un tipo.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Aplicación >](../../../docs/framework/net-native/application-element-net-native.md)|Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. El elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) puede tener cero, uno o más elementos `<Assembly>`.|  
-|[\<Biblioteca >](../../../docs/framework/net-native/library-element-net-native.md)|Define el ensamblado que contiene los tipos y miembros de tipo cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. El elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) puede tener cero o un elemento `<Assembly>`.|  
+|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. El elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) puede tener cero, uno o más elementos `<Assembly>`.|  
+|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Define el ensamblado que contiene los tipos y miembros de tipo cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. El elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) puede tener cero o un elemento `<Assembly>`.|  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento `<Assembly>` define la directiva en tiempo de ejecución para todos los tipos en un ensamblado. Difiere del elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md), que especifica una biblioteca pero depende de sus elementos secundarios para definir la directiva de reflexión en tiempo de ejecución. El elemento `<Assembly>` se aplica a todos los tipos en un ensamblado, a menos que un elemento secundario los haya invalidado.  
@@ -93,6 +93,6 @@ Aplica la directiva de reflexión en tiempo de ejecución a todos los tipos en u
   
 ## <a name="see-also"></a>Vea también
 
-- [Configuración de directiva de la directiva en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementos de directivas en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Navegar a una página
+title: Procedimiento Navegar a una página
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
 ms.openlocfilehash: c8e808180682bfd97f397d8cadd1e4deafd7eb06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141055"
 ---
-# <a name="how-to-navigate-to-a-page"></a>Filtrar Navegar a una página
+# <a name="how-to-navigate-to-a-page"></a>Procedimiento Navegar a una página
 En este ejemplo se muestra varias maneras en que una página se puede navegar desde un <xref:System.Windows.Navigation.NavigationWindow>.  
   
 ## <a name="example"></a>Ejemplo  

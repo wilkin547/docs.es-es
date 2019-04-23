@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2c3a3057003d0035bfcb096a94c84d610e3056f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134191"
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding (Interfaz)
@@ -30,7 +30,7 @@ Proporciona un método que se llama mediante common language runtime (CLR) para 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método OnAppDomain](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Lo llama common language runtime (CLR) para notificar al host que se ha creado un dominio de aplicación.|  
+|[OnAppDomain (método)](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Lo llama common language runtime (CLR) para notificar al host que se ha creado un dominio de aplicación.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

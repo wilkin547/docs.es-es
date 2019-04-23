@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
 ms.openlocfilehash: b4682d60e213ad57308143b2c7ea06d123daf61d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133736"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Sincronizar un objeto DataSet con un objeto XmlDataDocument
@@ -234,4 +234,4 @@ public class Sample
 ## <a name="see-also"></a>Vea también
 
 - [Sincronización de DataSet y XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

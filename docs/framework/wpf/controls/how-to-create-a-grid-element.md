@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un elemento Grid
+title: Procedimiento Crear un elemento Grid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - Grid control [WPF], creating [WPF], grid instance
 ms.assetid: b2f07626-9df8-43b8-8d36-492f3cb42837
 ms.openlocfilehash: ebb9369da73bd595338e5b6ef42bda639bde6ed4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134542"
 ---
-# <a name="how-to-create-a-grid-element"></a>Filtrar Crear un elemento Grid
+# <a name="how-to-create-a-grid-element"></a>Procedimiento Crear un elemento Grid
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra cómo crear y usar una instancia de <xref:System.Windows.Controls.Grid> utilizando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] o código. En este ejemplo usa tres <xref:System.Windows.Controls.ColumnDefinition> objetos y tres <xref:System.Windows.Controls.RowDefinition> objetos crear una cuadrícula que tiene nueve celdas, como se muestra en una hoja de cálculo. Cada celda contiene un <xref:System.Windows.Controls.TextBlock> elemento que representa los datos y la fila superior contiene un <xref:System.Windows.Controls.TextBlock> con el <xref:System.Windows.Controls.Grid.ColumnSpan%2A> propiedad aplicada. Para mostrar los límites de cada celda, el <xref:System.Windows.Controls.Grid.ShowGridLines%2A> propiedad está habilitada.  
   

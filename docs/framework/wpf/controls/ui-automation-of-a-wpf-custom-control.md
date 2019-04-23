@@ -11,14 +11,14 @@ helpviewer_keywords:
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
 ms.openlocfilehash: 0d663acc195b36fdc95c196f2233ae997fbd9195
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132774"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>Automatización de la interfaz de usuario de un control personalizado de WPF
-[!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] Proporciona una única interfaz generalizada que los clientes pueden usar para examinar o utilizar las interfaces de usuario de una variedad de plataformas y marcos de trabajo de automatización. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] permite que el código de control de calidad (prueba) y las aplicaciones de accesibilidad como lectores de pantalla para examinar los elementos de la interfaz de usuario y simular la interacción del usuario con ellos desde otro código. Para más información acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] en todas las plataformas, consulte Accesibilidad.  
+[!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] proporciona una única interfaz generalizada que los clientes de automatización pueden utilizar para examinar o utilizar las interfaces de usuario de una variedad de plataformas y entornos. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] permite al código de control de calidad (prueba) y a las aplicaciones de accesibilidad, tales como lectores de pantalla, examinar los elementos de la interfaz de usuario y simular la interacción del usuario con ellos desde otro código. Para más información acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] en todas las plataformas, consulte Accesibilidad.  
   
  En este tema se describe cómo implementar un proveedor de automatización de la interfaz de usuario del lado servidor para un control personalizado que se ejecuta en una aplicación de WPF. WPF admite [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] mediante un árbol de objetos de automatización del mismo nivel que se corresponde con el árbol de elementos de la interfaz de usuario. El código de prueba y las aplicaciones que proporcionan características de accesibilidad pueden usar objetos de automatización del mismo nivel directamente (para código en proceso) o mediante la interfaz generalizada proporcionada por [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)].  
 
@@ -154,6 +154,6 @@ End Class
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre UI Automation](../../ui-automation/ui-automation-overview.md)
+- [Información general sobre la Automatización de la interfaz de usuario](../../ui-automation/ui-automation-overview.md)
 - [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://go.microsoft.com/fwlink/?LinkID=160025)
-- [Implementación del proveedor de UI Automation en el servidor](../../ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../ui-automation/server-side-ui-automation-provider-implementation.md)
