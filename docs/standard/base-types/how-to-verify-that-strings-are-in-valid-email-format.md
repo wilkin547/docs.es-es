@@ -21,10 +21,10 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890506"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procedimiento para comprobar si las cadenas tienen un formato de correo electrónico válido
@@ -59,8 +59,8 @@ En el ejemplo siguiente se usa una expresión regular para comprobar que una cad
 |`(?("")("".+?(?<!\\)""@)`|Si el primer carácter es un signo de comillas, buscar unas comillas iniciales seguidas de al menos un carácter cualquiera, seguido a su vez de unas comillas finales. Las comillas finales no pueden ir precedidas de un carácter de barra diagonal inversa (\\). `(?<!` es el principio de una aserción de búsqueda anticipada negativa de ancho cero. La cadena debe concluir con una arroba (@).|  
 |<code>&#124;(([0-9a-z]</code>|Si el primer carácter no es un signo de comillas, buscar cualquier carácter alfabético de la a a la z o de la A a la Z (la comparación distingue entre mayúsculas y minúsculas) o cualquier carácter numérico del 0 al 9.|  
 |`(\.(?!\.))`|Si el carácter siguiente es un punto, determinar que coincide. Si no lo es, buscar más adelante en el siguiente carácter y probar si coincide. `(?!\.)` es una aserción de búsqueda anticipada negativa de ancho igual a cero que evita que aparezcan dos puntos consecutivos en la parte local de una dirección de correo electrónico.|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>Si el carácter siguiente no es un punto, buscar cualquier carácter de palabra coincidente o uno de los siguientes caracteres: -!#$%'*+=?^\`{}&#124;~.|  
-|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>|Buscar el modelo de alternancia (un punto seguido de algo que no sea un punto, o uno de varios caracteres) cero o más veces.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|Si el carácter siguiente no es un punto, busque la coincidencia de cualquier carácter de palabra o uno de los siguientes caracteres: -!#$%'*+=?^\`{}&#124;~.|  
+|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>|Busque la coincidencia con el modelo de alternancia (un punto seguido de algo que no sea un punto, o uno de varios caracteres) cero o más veces.|  
 |`@`|Buscar el carácter @.|  
 |`(?<=[0-9a-z])`|Continuar buscando si el carácter que precede al carácter @ es uno de la A a la Z, de la a a la z o del 0 al 9. La construcción `(?<=[0-9a-z])` define una aserción de búsqueda tardía positiva de ancho igual a cero.|  
 |`(?(\[)`|Comprobar si el carácter que va detrás de @ es un corchete de apertura.|  
