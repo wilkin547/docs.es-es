@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID63
 ms.assetid: 1fcc33f8-822a-4de9-a6e3-228ddb5824a6
 ms.openlocfilehash: abd0a1467c0991a40b93e74a1d7a7889367fb8ca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340807"
 ---
 # <a name="bad-record-number"></a>Número de registro incorrecto
@@ -20,4 +20,4 @@ El número de registro de la instrucción `a FileGet`, `FilePut`, `FileGetObject
   
 ## <a name="see-also"></a>Vea también
 
-- [Option Explicit (Instrucción)](../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Option Explicit (instrucción)](../../visual-basic/language-reference/statements/option-explicit-statement.md)

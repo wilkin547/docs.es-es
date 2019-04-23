@@ -9,10 +9,10 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
 ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340729"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Tutorial: Llevar a cabo una operación de arrastrar y colocar en formularios Windows Forms
@@ -108,6 +108,6 @@ Para realizar operaciones de arrastrar y colocar en aplicaciones basadas en Wind
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para agregar datos al Portapapeles](how-to-add-data-to-the-clipboard.md)
-- [Filtrar para recuperar datos del Portapapeles](how-to-retrieve-data-from-the-clipboard.md)
+- [Cómo: Agregar datos al Portapapeles](how-to-add-data-to-the-clipboard.md)
+- [Cómo: Recuperar datos del Portapapeles](how-to-retrieve-data-from-the-clipboard.md)
 - [Compatibilidad con las operaciones de arrastrar y colocar y con el Portapapeles](drag-and-drop-operations-and-clipboard-support.md)
