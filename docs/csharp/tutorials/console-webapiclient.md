@@ -3,12 +3,12 @@ title: Creación de un cliente de REST con .NET Core
 description: Este tutorial le enseña varias características de .NET Core y el lenguaje C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: a375215f2d31845333290c85f7701c1a7dfbe780
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 332e47d9a02f48c53bbad272477768fa4c0367f2
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412310"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612074"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -66,7 +66,7 @@ Una vez realizados estos cambios, debe ejecutar de nuevo `dotnet restore` ([vea 
 
 ## <a name="making-web-requests"></a>Realización de las solicitudes web
 
-Ahora está listo para comenzar a recuperar datos de la Web. En esta aplicación, leerá información de la [API de GitHub](https://developer.github.com/v3/). Vamos a leer información sobre los proyectos que aparecen en el paraguas [.NET Foundation](https://www.dotnetfoundation.org/). Para comenzar, realizará la solicitud a la API de GitHub para recuperar información sobre los proyectos. El punto de conexión que va a usar es: [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Quiere recuperar toda la información sobre estos proyectos, así que usará una solicitud HTTP GET.
+Ahora está listo para comenzar a recuperar datos de la Web. En esta aplicación, leerá información de la [API de GitHub](https://developer.github.com/v3/). Vamos a leer información sobre los proyectos que aparecen en el paraguas [.NET Foundation](https://www.dotnetfoundation.org/). Para comenzar, realizará la solicitud a la API de GitHub para recuperar información sobre los proyectos. El punto de conexión que usará es: <https://api.github.com/orgs/dotnet/repos>. Quiere recuperar toda la información sobre estos proyectos, así que usará una solicitud HTTP GET.
 El explorador también usa solicitudes HTTP GET, por lo que puede pegar esa dirección URL en él para ver la información que recibirá y procesará.
 
 Usará la clase <xref:System.Net.Http.HttpClient> para realizar solicitudes web. Al igual que las API de .NET modernas, <xref:System.Net.Http.HttpClient> admite solo métodos asincrónicos para sus API de ejecución prolongada.

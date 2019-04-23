@@ -4,12 +4,12 @@ description: 'Seguridad en microservicios de .NET y aplicaciones web: Azure Key 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 99049dca3d127f82ba5312c94d5246940bb71ba8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 63bf357c95b82a820b6dfb6a2d24a5d89f66de72
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466132"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672425"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Usar Azure Key Vault para proteger secretos en tiempo de producción
 
@@ -19,13 +19,13 @@ El paquete **Microsoft.Extensions.Configuration.AzureKeyVault** permite que una 
 
 1. Registre la aplicación como una aplicación de Azure AD. (el acceso a los almacenes de claves se administra mediante Azure AD). Puede hacerlo a través del portal de administración de Azure.\
 
-   Como alternativa, si quiere que la aplicación se autentique mediante un certificado en lugar de hacerlo con una contraseña o un secreto de cliente, puede usar el cmdlet de PowerShell [New-AzureRmADApplication](/powershell/module/azurerm.resources/new-azurermadapplication). El certificado que registre en Azure Key Vault solo necesita su clave pública (la aplicación usará la clave privada).
+   Como alternativa, si quiere que la aplicación se autentique mediante un certificado en lugar de hacerlo con una contraseña o un secreto de cliente, puede usar el cmdlet de PowerShell [New-AzADApplication](/powershell/module/az.resources/new-azadapplication). El certificado que registre en Azure Key Vault solo necesita su clave pública La aplicación usará la clave privada.
 
 2. Conceda a la aplicación registrada acceso al almacén de claves creando una entidad de servicio. Puede hacerlo usando los siguientes comandos de PowerShell:
 
    ```powershell
-   $sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
-   Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
+   $sp = New-AzADServicePrincipal -ApplicationId "<Application ID guid>"
+   Set-AzKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
    ```
 
 3. Incluya el almacén de claves como origen de configuración en la aplicación llamando al método de extensión <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> cuando cree una instancia de <xref:Microsoft.Extensions.Configuration.IConfigurationRoot>. Tenga en cuenta que, al llamar a `AddAzureKeyVault` necesitará el Id. de la aplicación registrada y a la que se concedió acceso al almacén de claves en los pasos anteriores.
@@ -50,7 +50,7 @@ El paquete **Microsoft.Extensions.Configuration.AzureKeyVault** permite que una 
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
 
 - Repositorio de GitHub **Microsoft.Extensions.Configuration.KeyPerFile**. \
-  [https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
+  <https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile>
 
 >[!div class="step-by-step"]
 >[Anterior](developer-app-secrets-storage.md)

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1b12e614c59785a066ad34e5320a205961f7dd49
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610813"
+---
 # <a name="contributing"></a>Contribución
 
 Le agradecemos el interés en colaborar con la documentación de .NET.
@@ -24,7 +32,7 @@ En esta sección se hace un seguimiento de las incidencias y las tareas de todos
 
 Necesita tener conocimientos básicos de [Git y GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**Paso 1:** Omita este paso para realizar pequeños cambios. Si está interesado en escribir nuevo contenido o en revisar exhaustivamente el contenido existente, abra una [incidencia ](https://github.com/dotnet/docs/issues) que describa lo que quiere hacer.
+**Paso 1:** En el caso de pequeños cambios, omita este paso (por ejemplo, si corrige un error de escritura o abre inmediatamente una solicitud de incorporación de cambios para resolver un problema que encuentre en los documentos). Si está interesado en escribir nuevo contenido o en revisar exhaustivamente el contenido existente, abra una [incidencia ](https://github.com/dotnet/docs/issues) que describa lo que quiere hacer.
 El contenido de la carpeta **docs** se organiza en secciones que se reflejan en la tabla de contenido (TOC). Defina dónde se ubicará el tema en la tabla de contenido. Recabe opiniones sobre su propuesta.
 
 o bien

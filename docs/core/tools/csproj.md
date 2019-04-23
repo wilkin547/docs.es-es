@@ -2,12 +2,12 @@
 title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 ms.date: 04/08/2019
-ms.openlocfilehash: f72ea279079b4cdb3a06a2ba64925e2a335e1ed2
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59517335"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611099"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -325,8 +325,10 @@ Una lista de etiquetas delimitada por punto y coma que designa el paquete.
 Determina la ruta de acceso de salida en la que se va a quitar el paquete empaquetado. El valor predeterminado es `$(OutputPath)`.
 
 ### <a name="includesymbols"></a>IncludeSymbols
+Este valor booleano indica si el paquete debe crear un paquete de símbolos adicionales cuando se empaqueta el proyecto. El formato del paquete de símbolos se controla mediante la propiedad `SymbolPackageFormat`.
 
-Este valor booleano indica si el paquete debe crear un paquete de símbolos adicionales cuando se empaqueta el proyecto. Este paquete tendrá una extensión *.symbols.nupkg* y copiará los archivos PDB junto con el archivo DLL y otros archivos de salida.
+### <a name="symbolpackageformat"></a>SymbolPackageFormat
+Especifica el formato del paquete de símbolos. Si es "symbols.nupkg", se crea un paquete de símbolos heredado con una extensión *.symbols.nupkg* que contiene archivos PDB, DLL y otros archivos de salida. Si es "snupkg", se crea un paquete de símbolos snupkg que contiene los archivos PDB portátiles. El valor predeterminado es "symbols.nupkg".
 
 ### <a name="includesource"></a>IncludeSource
 

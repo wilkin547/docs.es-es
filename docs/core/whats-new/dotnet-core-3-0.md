@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: e9a69c61df574ea391622ebb709c14948c71014d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 086be4649f4e7e27ff98df6f26d08856683865c8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341730"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611788"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>Novedades de .NET Core 3.0 (versión preliminar 2)
 
@@ -24,16 +24,16 @@ En este artículo se describen las novedades de .NET Core 3.0 (versión prelimin
 
 Para más información sobre lo que se ha publicado con cada versión, vea los anuncios siguientes:
 
-- [Anuncio de la versión preliminar 1 de .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-- [Anuncio de la versión preliminar 2 de .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
+- [Anuncio de la versión preliminar 1 de .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [Anuncio de la versión preliminar 2 de .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8
 
 .NET Core 3.0 admite C# 8 y, a partir de .NET Core 3.0 (versión preliminar 2), admite estas nuevas características. Para obtener más información sobre las características de C# 8.0, consulte las siguientes entradas de blog:
 
-- [Do more with patterns in C# 8.0 (Hacer más con patrones en C# 8.0)](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
-- [Take C# 8.0 for a spin (Probar C# 8.0)](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
-- [Building C# 8.0 (Compilación de C# 8.0)](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
+- [Do more with patterns in C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/) (Hacer más con patrones en C# 8.0)
+- [Take C# 8.0 for a spin](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/) (Probar C# 8.0)
+- [Building C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/) (Compilación de C# 8.0)
 
 ### <a name="ranges-and-indices"></a>Rangos e índices
 
@@ -63,7 +63,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result; 
+        if (result > 20) yield return result;
     }
 }
 ```
@@ -148,10 +148,10 @@ Se han agregado API que permiten el acceso a determinadas instrucciones CPU orie
 
 Las siguientes solicitudes de incorporación de cambios de CoreCLR muestran algunos de los objetos intrínsecos, a través de la implementación o el uso:
 
-* [Implement simple SSE2 hardware intrinsics (Implementar objetos intrínsecos de hardware SSE2 sencillos)](https://github.com/dotnet/coreclr/pull/15585)
-* [Implement the SSE hardware intrinsics (Implementar los objetos intrínsecos de hardware SSE)](https://github.com/dotnet/coreclr/pull/15538)
-* [Arm64 Base HW Intrinsics (Objetos intrínsecos de hardware base Arm64)](https://github.com/dotnet/coreclr/pull/16822)
-* [Use TZCNT and LZCNT for Locate{First|Last}Found{Byte|Char} (Usar TZCNT y LZCNT para Locate{First|Last}Found{Byte|Char})](https://github.com/dotnet/coreclr/pull/21073)
+* [Implement simple SSE2 hardware intrinsics](https://github.com/dotnet/coreclr/pull/15585) (Implementar objetos intrínsecos de hardware SSE2 sencillos)
+* [Implement the SSE hardware intrinsics](https://github.com/dotnet/coreclr/pull/15538) (Implementar los objetos intrínsecos de hardware SSE)
+* [Arm64 Base HW Intrinsics](https://github.com/dotnet/coreclr/pull/16822) (Objetos intrínsecos de hardware base Arm64)
+* [Use TZCNT and LZCNT for Locate{First|Last}Found{Byte|Char}](https://github.com/dotnet/coreclr/pull/21073) (Usar TZCNT y LZCNT para Locate{First|Last}Found{Byte|Char})
 
 Para obtener más información, consulte [Objetos intrínsecos dependientes de la plataforma .NET](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md), que define un enfoque de definición de esta infraestructura de hardware, permitiendo a Microsoft, a los proveedores de chips o a cualquier otra empresa o persona definir API de chip/hardware que deben exponerse a código .NET.
 
@@ -166,20 +166,20 @@ Durante `dotnet build` o `dotnet publish`, se crea un archivo ejecutable siempre
 
 ## <a name="build-copies-dependencies"></a>Compilación de dependencias de copias
 
-`dotnet build` ahora copia las dependencias de NuGet de la aplicación desde la caché de NuGet en la carpeta de salida de compilación. Anteriormente, las dependencias solo se copiaban como parte de `dotnet publish`. 
+`dotnet build` ahora copia las dependencias de NuGet de la aplicación desde la caché de NuGet en la carpeta de salida de compilación. Anteriormente, las dependencias solo se copiaban como parte de `dotnet publish`.
 
 Hay algunas operaciones, como la publicación de páginas Razor y la vinculación, que aún es necesario publicar.
 
 ## <a name="local-dotnet-tools"></a>Herramientas de dotnet locales
 
->[!WARNING]
->Se ha producido un cambio en las herramientas locales de .NET Core entre .NET Core 3.0 (versión preliminar 1) y .NET Core 3.0 (versión preliminar 2).  Si ha probado herramientas locales en la versión preliminar 1 ejecutando un comando como `dotnet tool restore` o `dotnet tool install`, debe eliminar su carpeta de la caché de las herramientas locales antes de que las herramientas locales funcionen correctamente en la versión preliminar 2. Esta carpeta se encuentra en:
+> [!WARNING]
+> Se ha producido un cambio en las herramientas locales de .NET Core entre .NET Core 3.0 (versión preliminar 1) y .NET Core 3.0 (versión preliminar 2).  Si ha probado herramientas locales en la versión preliminar 1 ejecutando un comando como `dotnet tool restore` o `dotnet tool install`, debe eliminar su carpeta de la caché de las herramientas locales antes de que las herramientas locales funcionen correctamente en la versión preliminar 2. Esta carpeta se encuentra en:
 >
->En Mac, Linux: `rm -r $HOME/.dotnet/toolResolverCache`
+> En Mac, Linux: `rm -r $HOME/.dotnet/toolResolverCache`
 >
->En Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+> En Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 >
->Si no elimina esta carpeta, recibirá un error.
+> Si no elimina esta carpeta, recibirá un error.
 
 Aunque .NET Core 2.1 admitía herramientas globales, .NET Core 3.0 ahora cuenta con herramientas locales. Las herramientas locales son similares a las globales, pero están asociadas a una ubicación concreta del disco. De este modo, se pueden usar herramientas por proyecto y por repositorio. Las herramientas instaladas de forma local no están disponibles de manera global. Las herramientas se distribuyen como paquetes NuGet.
 
@@ -309,10 +309,12 @@ Comparta sus comentarios en los repositorios [dotnet/winforms](https://github.co
 
 El [proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponible en Visual Studio 2019, le permite crear paquetes de MSIX con aplicaciones de .NET Core [independientes](../deploying/index.md#self-contained-deployments-scd).
 
->Nota: El archivo del proyecto de .NET Core debe especificar los tiempos de ejecución admitidos en la propiedad `<RuntimeIdentifiers>`:
-```xml
-<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
-```
+> [!NOTE]
+> El archivo del proyecto de .NET Core debe especificar los tiempos de ejecución admitidos en la propiedad `<RuntimeIdentifiers>`:
+>
+> ```xml
+> <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+> ```
 
 ## <a name="fast-built-in-json-support"></a>Compatibilidad con JSON integrada con rápido rendimiento
 
@@ -421,7 +423,7 @@ static int WriteJson(IBufferWriter<byte> output, long[] extraData)
 }
 ```
 
-El `Utf8JsonWriter` acepta `IBufferWriter<byte>` como la ubicación de resultados en la que se van a escribir de forma sincrónica los datos JSON y, usted, como autor de llamada, debe proporcionar una implementación concreta. La plataforma no incluye actualmente una implementación de esta interfaz. Se puede ver un ejemplo de `IBufferWriter<byte>` en [https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35](https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35)
+El `Utf8JsonWriter` acepta `IBufferWriter<byte>` como la ubicación de resultados en la que se van a escribir de forma sincrónica los datos JSON y, usted, como autor de llamada, debe proporcionar una implementación concreta. La plataforma no incluye actualmente una implementación de esta interfaz. Para ver un ejemplo de `IBufferWriter<byte>`, consulte <https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35>.
 
 ### <a name="jsondocument"></a>JsonDocument
 
@@ -466,7 +468,7 @@ La descargabilidad de ensamblado es una nueva funcionalidad de `AssemblyLoadCont
 
 Esta nueva funcionalidad se puede usar para escenarios similares a:
 
-* Escenarios de complemento donde se requiere la carga y descarga dinámica de complementos. 
+* Escenarios de complemento donde se requiere la carga y descarga dinámica de complementos.
 * Compilación, ejecución y posterior vaciado dinámicos de código. Útil para sitios web, motores de scripting, etc.
 * Carga de ensamblados para la introspección (como ReflectionOnlyLoad), aunque [MetadataLoadContext](#type-metadataloadcontext) (lanzado en la versión preliminar 1) será una mejor opción en muchos casos.
 
@@ -484,7 +486,7 @@ Puede ver un ejemplo de uso de COM con el [código fuente de demostración de Ex
 
 ## <a name="type-sequencereader"></a>Tipo: SequenceReader
 
-En .NET Core 3.0, se ha agregado `System.Buffers.SequenceReader`, que se puede usar como lector de `ReadOnlySequence<T>`. De este modo, se puede realizar un análisis de alto rendimiento y de asignación baja de los datos `System.IO.Pipelines` que pueden atravesar varios búferes de respaldo. 
+En .NET Core 3.0, se ha agregado `System.Buffers.SequenceReader`, que se puede usar como lector de `ReadOnlySequence<T>`. De este modo, se puede realizar un análisis de alto rendimiento y de asignación baja de los datos `System.IO.Pipelines` que pueden atravesar varios búferes de respaldo.
 
 En el ejemplo siguiente, se interrumpe una entrada `Sequence` en las líneas delimitadas `CR/LF` válidas:
 
@@ -517,11 +519,11 @@ public static void ReadLines(ReadOnlySequence<byte> sequence)
 
 ## <a name="type-metadataloadcontext"></a>Tipo: MetadataLoadContext
 
-Se ha agregado el tipo `MetadataLoadContext` que permite leer los metadatos de ensamblado sin que afecte al dominio de aplicación del llamador. Los ensamblados se leen como datos, incluidos los ensamblados compilados para arquitecturas y plataformas distintas al entorno en tiempo de ejecución actual. `MetadataLoadContext` se superpone con <xref:System.Reflection.Assembly.ReflectionOnlyLoad*>, que solo está disponible en .NET Framework.
+Se ha agregado el tipo `MetadataLoadContext` que permite leer los metadatos de ensamblado sin que afecte al dominio de aplicación del llamador. Los ensamblados se leen como datos, incluidos los ensamblados compilados para arquitecturas y plataformas distintas al entorno en tiempo de ejecución actual. `MetadataLoadContext` se superpone con <xref:System.Reflection.Assembly.ReflectionOnlyLoad*>, que solo está disponible en .NET Framework.
 
 `MetdataLoadContext` está disponible en el paquete [System.Reflection.MetadataLoadContext](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext). Se trata de un paquete de .NET Standard 2.0.
 
-`MetadataLoadContext`expone las API similares al tipo <xref:System.Runtime.Loader.AssemblyLoadContext>, pero no se basa en ese tipo. De forma similar a <xref:System.Runtime.Loader.AssemblyLoadContext>, `MetadataLoadContext` habilita la carga de ensamblados dentro del universo de carga de ensamblados aislados. `MetdataLoadContext` Las API devuelven objetos <xref:System.Reflection.Assembly>, lo que permite el uso de API de reflexión conocidas. Las API orientadas a la ejecución, como [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127), no se permiten y generan la excepción InvalidOperationException.
+`MetadataLoadContext`expone las API similares al tipo <xref:System.Runtime.Loader.AssemblyLoadContext>, pero no se basa en ese tipo. De forma similar a <xref:System.Runtime.Loader.AssemblyLoadContext>, `MetadataLoadContext` habilita la carga de ensamblados dentro del universo de carga de ensamblados aislados. Las API de `MetdataLoadContext` devuelven objetos <xref:System.Reflection.Assembly>, lo que permite el uso de API de reflexión conocidas. Las API orientadas a la ejecución, como [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127), no se permiten y generan la excepción InvalidOperationException.
 
 El ejemplo siguiente muestra cómo buscar tipos concretos en un ensamblado que implementa una interfaz determinada:
 
@@ -663,7 +665,7 @@ namespace rsakeyprint
             {
                 byte[] keyBytes = File.ReadAllBytes(args[0]);
                 rsa.ImportRSAPrivateKey(keyBytes, out int bytesRead);
- 
+
                 Console.WriteLine($"Read {bytesRead} bytes, {keyBytes.Length-bytesRead} extra byte(s) in file.");
                 RSAParameters rsaParameters = rsa.ExportParameters(true);
                 Console.WriteLine(BitConverter.ToString(rsaParameters.D));
@@ -709,7 +711,7 @@ Anteriormente, .NET Core solo admite el uso del tipo `SerialPort` en Windows.
 
 ## <a name="more-bcl-improvements"></a>Más mejoras de BCL
 
-`Span<T>`, `Memory<T>` y los tipos relacionados que se introdujeron en .NET Core 2.1 se han optimizado en .NET Core 3.0. Operaciones comunes, como la construcción de intervalos, la segmentación, el análisis y la aplicación de formato funcionan mejor ahora. 
+`Span<T>`, `Memory<T>` y los tipos relacionados que se introdujeron en .NET Core 2.1 se han optimizado en .NET Core 3.0. Operaciones comunes, como la construcción de intervalos, la segmentación, el análisis y la aplicación de formato funcionan mejor ahora.
 
 Además, los tipos como `String` se han mejorado para que sean más eficaces cuando se utilizan como claves con `Dictionary<TKey, TValue>` y otras colecciones. No se requiere ningún cambio de código para aprovechar estas mejoras.
 
@@ -751,7 +753,7 @@ Después de configurar Snap en su sistema, ejecute el comando siguiente para ins
 ```console
 sudo snap install dotnet-sdk --beta --classic
 ```
- 
+
 Cuando se instale .NET Core con el paquete Snap, el comando de .NET Core predeterminado será `dotnet-sdk.dotnet`, en lugar de solo `dotnet`. La ventaja del comando con espacio de nombres es que no entrará en conflicto con una versión de .NET Core instalada globalmente que pueda tener. A este comando se le puede llamar `dotnet` con:
 
 ```console

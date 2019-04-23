@@ -4,10 +4,10 @@ description: En este artículo se proporciona una introducción e información g
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
 ms.openlocfilehash: acf1307c241d9462278bc0fce5cf59fdde0750a3
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480734"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introducción a .NET y Docker
@@ -61,7 +61,7 @@ Implemente aplicaciones web o API con contenedores de Linux en un entorno PaaS.
 * [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
 Hospede el contenedor en la nube sin ningún servicio de administración de nivel superior.
 
-* [Azure Batch](https://azure.microsoft.com/services/batch/)\
+* [Azure Batch](https://azure.microsoft.com/services/batch/)\
 Ejecute trabajos de proceso repetitivos mediante contenedores.
 
 * [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
@@ -72,5 +72,5 @@ Almacene y administre imágenes de contenedor en todos los tipos de implementaci
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-* [Obtenga información sobre cómo incluir una aplicación de .NET Core en contenedores.](build-docker-netcore-container.md)
-* [Consulte el tutorial de ASP.NET Core para los microservicios.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+* [Obtenga información sobre cómo incluir una aplicación de .NET Core en contenedores](build-docker-netcore-container.md).
+* [Consulte el tutorial de ASP.NET Core para los microservicios](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro).
