@@ -6,10 +6,10 @@ helpviewer_keywords:
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
 ms.openlocfilehash: 53b20e7f11f5accd1436f29063817142681e4f74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213264"
 ---
 # <a name="access-control-mechanisms"></a>Mecanismos de control de acceso
@@ -42,7 +42,7 @@ Puede controlar el acceso de varias maneras con Windows Communication Foundation
  Para obtener más información sobre cómo usar la característica de proveedor de roles, consulte [Cómo: Usar el proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
 ## <a name="authorization-manager"></a>Administrador de autorización  
- Otra característica combina el Administrador de autorización (AzMan) con el proveedor de funciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] para autorizar a los clientes. Cuando [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hospeda un servicio web, AzMan se puede integrar en la aplicación de modo que la autorización para el servicio se realice mediante AzMan. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] el Administrador de funciones proporciona una API que permite administrar roles de aplicación, agregar y quitar usuarios de roles y comprobar la pertenencia al rol, pero no permite consultar si un usuario está autorizado para realizar una tarea con nombre o la operación. AzMan le permite definir operaciones individuales y combinarlas en tareas. Con AZMan, además de las comprobaciones de la función, también puede comprobar si un usuario puede realizar una tarea. La asignación de funciones y la autorización de tareas se pueden configurar fuera de la aplicación o se pueden realizar mediante programación dentro de la aplicación. El complemento Microsoft Management Console (MMC) de administración de AzMan permite a los administradores cambiar las tareas que una función puede realizar en tiempo de ejecución y administrar la pertenencia de funciones de cada usuario.  
+ Otra característica combina el Administrador de autorización (AzMan) con el proveedor de funciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] para autorizar a los clientes. Cuando [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hospeda un servicio web, AzMan se puede integrar en la aplicación de modo que la autorización para el servicio se realice mediante AzMan. El administrador de roles de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proporciona una API que permite administrar roles de aplicación, agregar y quitar usuarios de roles, y comprobar la pertenencia a roles, pero no permite consultar si un usuario está autorizado para realizar una tarea o una operación con nombre. AzMan le permite definir operaciones individuales y combinarlas en tareas. Con AZMan, además de las comprobaciones de la función, también puede comprobar si un usuario puede realizar una tarea. La asignación de funciones y la autorización de tareas se pueden configurar fuera de la aplicación o se pueden realizar mediante programación dentro de la aplicación. El complemento Microsoft Management Console (MMC) de administración de AzMan permite a los administradores cambiar las tareas que una función puede realizar en tiempo de ejecución y administrar la pertenencia de funciones de cada usuario.  
   
  También puede utilizar AzMan y el proveedor de roles de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] si ya tiene el acceso a una instalación AzMan existente y desea autorizar su servicio a los usuarios utilizando las características de la combinación de AzMan/proveedor de roles.  
   
@@ -60,8 +60,8 @@ Puede controlar el acceso de varias maneras con Windows Communication Foundation
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [Filtrar para restringir el acceso con la clase PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [Filtrar para usar el proveedor de roles ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
-- [Filtrar para usar el proveedor de roles del administrador de autorización de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
+- [Cómo: Restringir el acceso con la clase PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Cómo: Usar el proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Cómo: Usar el proveedor de roles de administrador de autorización de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
 - [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
