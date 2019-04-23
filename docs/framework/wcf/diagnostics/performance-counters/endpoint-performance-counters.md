@@ -3,24 +3,24 @@ title: Contadores de rendimiento del extremo
 ms.date: 03/30/2017
 ms.assetid: 7d44d576-bd4e-453b-8b76-a818ce90b806
 ms.openlocfilehash: f07e318e39a68e689ec484b09fa743623cfb51d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158398"
 ---
-# <a name="endpoint-performance-counters"></a><span data-ttu-id="7930b-102">Contadores de rendimiento del extremo</span><span class="sxs-lookup"><span data-stu-id="7930b-102">Endpoint Performance Counters</span></span>
-<span data-ttu-id="7930b-103">Los contadores de rendimiento del punto de conexión capturan datos que revelan cómo un punto de conexión está aceptando los mensajes.</span><span class="sxs-lookup"><span data-stu-id="7930b-103">Endpoint performance counters capture data that reveals how an endpoint is accepting messages.</span></span> <span data-ttu-id="7930b-104">Se pueden encontrar en el objeto de rendimiento `ServiceModelEndpoint 4.0.0.0` al verlo con el Monitor de rendimiento.</span><span class="sxs-lookup"><span data-stu-id="7930b-104">They can be found under the `ServiceModelEndpoint 4.0.0.0` performance object when viewing with the Performance Monitor.</span></span> <span data-ttu-id="7930b-105">Las instancias se denominan utilizando este patrón:</span><span class="sxs-lookup"><span data-stu-id="7930b-105">The instances are named using this pattern:</span></span>  
+# <a name="endpoint-performance-counters"></a><span data-ttu-id="7bbba-102">Contadores de rendimiento del extremo</span><span class="sxs-lookup"><span data-stu-id="7bbba-102">Endpoint Performance Counters</span></span>
+<span data-ttu-id="7bbba-103">Los contadores de rendimiento del punto de conexión capturan datos que revelan cómo un punto de conexión está aceptando los mensajes.</span><span class="sxs-lookup"><span data-stu-id="7bbba-103">Endpoint performance counters capture data that reveals how an endpoint is accepting messages.</span></span> <span data-ttu-id="7bbba-104">Se pueden encontrar en el objeto de rendimiento `ServiceModelEndpoint 4.0.0.0` al verlo con el Monitor de rendimiento.</span><span class="sxs-lookup"><span data-stu-id="7bbba-104">They can be found under the `ServiceModelEndpoint 4.0.0.0` performance object when viewing with the Performance Monitor.</span></span> <span data-ttu-id="7bbba-105">Las instancias se denominan utilizando este patrón:</span><span class="sxs-lookup"><span data-stu-id="7bbba-105">The instances are named using this pattern:</span></span>  
   
 ```  
 (ServiceName).(ContractName)@(endpoint listener address)  
 ```  
   
- <span data-ttu-id="7930b-106">Los datos son similares a los datos reunidos para las operaciones individuales, pero solo se agregan a lo largo del punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="7930b-106">The data is similar to that collected for individual operations, but is only aggregated across the endpoint.</span></span>  
+ <span data-ttu-id="7bbba-106">Los datos son similares a los datos reunidos para las operaciones individuales, pero solo se agregan a lo largo del punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="7bbba-106">The data is similar to that collected for individual operations, but is only aggregated across the endpoint.</span></span>  
   
 > [!CAUTION]
->  <span data-ttu-id="7930b-107">Hay un límite en la longitud del nombre de una instancia del contador de rendimiento.</span><span class="sxs-lookup"><span data-stu-id="7930b-107">There is a limit on the length of a performance counter instance's name.</span></span> <span data-ttu-id="7930b-108">Cuando un nombre de instancia del contador de Windows Communication Foundation (WCF) supera la longitud máxima, WCF reemplaza una parte del nombre de instancia con un valor hash.</span><span class="sxs-lookup"><span data-stu-id="7930b-108">When a Windows Communication Foundation (WCF) counter instance name exceeds the maximum length, WCF replaces a portion of the instance name with a hash value.</span></span>  
+>  <span data-ttu-id="7bbba-107">Hay un límite en la longitud del nombre de una instancia del contador de rendimiento.</span><span class="sxs-lookup"><span data-stu-id="7bbba-107">There is a limit on the length of a performance counter instance's name.</span></span> <span data-ttu-id="7bbba-108">Cuando un nombre de instancia del contador de Windows Communication Foundation (WCF) supera la longitud máxima, WCF reemplaza una parte del nombre de instancia con un valor hash.</span><span class="sxs-lookup"><span data-stu-id="7bbba-108">When a Windows Communication Foundation (WCF) counter instance name exceeds the maximum length, WCF replaces a portion of the instance name with a hash value.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7930b-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="7930b-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7bbba-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="7bbba-109">See also</span></span>
 
-- [<span data-ttu-id="7930b-110">Contadores de rendimiento</span><span class="sxs-lookup"><span data-stu-id="7930b-110">Performance Counters</span></span>](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
+- [<span data-ttu-id="7bbba-110">Contadores de rendimiento</span><span class="sxs-lookup"><span data-stu-id="7bbba-110">Performance Counters</span></span>](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)

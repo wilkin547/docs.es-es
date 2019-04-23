@@ -19,16 +19,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf78ded62f11b336d9f5fe0f3a205275ae37189b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157409"
 ---
-# <a name="createassemblycache-function"></a><span data-ttu-id="bca7e-102">CreateAssemblyCache (Función)</span><span class="sxs-lookup"><span data-stu-id="bca7e-102">CreateAssemblyCache Function</span></span>
-<span data-ttu-id="bca7e-103">Obtiene un puntero a una nueva [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) instancia que representa la caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="bca7e-103">Gets a pointer to a new [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) instance that represents the global assembly cache.</span></span>  
+# <a name="createassemblycache-function"></a><span data-ttu-id="e60d3-102">CreateAssemblyCache (Función)</span><span class="sxs-lookup"><span data-stu-id="e60d3-102">CreateAssemblyCache Function</span></span>
+<span data-ttu-id="e60d3-103">Obtiene un puntero a una nueva [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) instancia que representa la caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="e60d3-103">Gets a pointer to a new [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) instance that represents the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bca7e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="bca7e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e60d3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e60d3-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateAssemblyCache (  
@@ -37,24 +37,24 @@ HRESULT CreateAssemblyCache (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bca7e-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="bca7e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e60d3-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="e60d3-105">Parameters</span></span>  
  `ppAsmCache`  
- <span data-ttu-id="bca7e-106">[out] El valor devuelto `IAssemblyCache` puntero.</span><span class="sxs-lookup"><span data-stu-id="bca7e-106">[out] The returned `IAssemblyCache` pointer.</span></span>  
+ <span data-ttu-id="e60d3-106">[out] El valor devuelto `IAssemblyCache` puntero.</span><span class="sxs-lookup"><span data-stu-id="e60d3-106">[out] The returned `IAssemblyCache` pointer.</span></span>  
   
  `dwReserved`  
- <span data-ttu-id="bca7e-107">[in] Reservado para extensibilidad futura.</span><span class="sxs-lookup"><span data-stu-id="bca7e-107">[in] Reserved for future extensibility.</span></span> `dwReserved` <span data-ttu-id="bca7e-108">debe ser 0 (cero).</span><span class="sxs-lookup"><span data-stu-id="bca7e-108">must be 0 (zero).</span></span>  
+ <span data-ttu-id="e60d3-107">[in] Reservado para extensibilidad futura.</span><span class="sxs-lookup"><span data-stu-id="e60d3-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="e60d3-108">`dwReserved` debe ser 0 (cero).</span><span class="sxs-lookup"><span data-stu-id="e60d3-108">`dwReserved` must be 0 (zero).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bca7e-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bca7e-109">Requirements</span></span>  
- <span data-ttu-id="bca7e-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bca7e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e60d3-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e60d3-109">Requirements</span></span>  
+ <span data-ttu-id="e60d3-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e60d3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bca7e-111">**Encabezado**: Fusion.h</span><span class="sxs-lookup"><span data-stu-id="bca7e-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="e60d3-111">**Encabezado**: Fusion.h</span><span class="sxs-lookup"><span data-stu-id="e60d3-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="bca7e-112">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bca7e-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e60d3-112">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e60d3-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="bca7e-113">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="bca7e-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="e60d3-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e60d3-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bca7e-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="bca7e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e60d3-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="e60d3-114">See also</span></span>
 
-- [<span data-ttu-id="bca7e-115">IAssemblyCache (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="bca7e-115">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [<span data-ttu-id="bca7e-116">Funciones estáticas globales de la fusión</span><span class="sxs-lookup"><span data-stu-id="bca7e-116">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [<span data-ttu-id="bca7e-117">Caché global de ensamblados</span><span class="sxs-lookup"><span data-stu-id="bca7e-117">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+- [<span data-ttu-id="e60d3-115">IAssemblyCache (interfaz)</span><span class="sxs-lookup"><span data-stu-id="e60d3-115">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [<span data-ttu-id="e60d3-116">Funciones estáticas globales de la fusión</span><span class="sxs-lookup"><span data-stu-id="e60d3-116">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [<span data-ttu-id="e60d3-117">Caché global de ensamblados</span><span class="sxs-lookup"><span data-stu-id="e60d3-117">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
