@@ -6,10 +6,10 @@ helpviewer_keywords:
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126365"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Información general acerca de los patrones de control de UI Automation
@@ -18,7 +18,7 @@ ms.locfileid: "59126365"
   
  Esta introducción presenta los patrones de control de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . Los patrones de control proporcionan una manera de categorizar y exponer la funcionalidad de un control independientemente de su tipo o apariencia.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] usa patrones de control para representar comportamientos de control comunes. Por ejemplo, utilice el patrón de control Invoke para los controles que se puedan invocar (como los botones) y el patrón de control Scroll para los controles que tengan barras de desplazamiento (como los cuadros de lista, las vistas de lista o los cuadros combinados). Como cada patrón de control representa una funcionalidad independiente, se pueden combinar para describir el conjunto completo de funcionalidad que admite un control determinado.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] utiliza patrones de control para representar comportamientos de control comunes. Por ejemplo, utilice el patrón de control Invoke para los controles que se puedan invocar (como los botones) y el patrón de control Scroll para los controles que tengan barras de desplazamiento (como los cuadros de lista, las vistas de lista o los cuadros combinados). Como cada patrón de control representa una funcionalidad independiente, se pueden combinar para describir el conjunto completo de funcionalidad que admite un control determinado.  
   
 > [!NOTE]
 >  Los controles agregados, creados con controles secundarios que proporcionan a [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] la funcionalidad que expone el objeto primario, deben implementar todos los patrones de control normalmente asociados con cada control secundario. En cambio, no es necesario que los controles secundarios implementen esos mismos patrones de control.  
@@ -74,8 +74,8 @@ ms.locfileid: "59126365"
   
 ## <a name="see-also"></a>Vea también
 
-- [Patrones de controles de UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Asignación de patrones de controles para clientes de UI Automation](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [Información general sobre UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)
-- [Propiedades de UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [Eventos de UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Asignación de patrones de control para clientes de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
+- [Información general sobre la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Propiedades de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
+- [Eventos de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)

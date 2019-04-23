@@ -16,10 +16,10 @@ helpviewer_keywords:
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
 ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124623"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Orígenes de datos compatibles con formularios Windows Forms
@@ -60,5 +60,5 @@ Tradicionalmente, el enlace de datos se han usado en las aplicaciones para aprov
 ## <a name="see-also"></a>Vea también
 
 - [Notificación de cambios en el enlace de datos de Windows Forms](change-notification-in-windows-forms-data-binding.md)
-- [Enlace de datos y formularios Windows Forms](data-binding-and-windows-forms.md)
+- [Enlace de datos y Windows Forms](data-binding-and-windows-forms.md)
 - [Enlace de datos en Windows Forms](windows-forms-data-binding.md)

@@ -12,10 +12,10 @@ ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8b88a07115871e48a7981bbb868ff2ef4ce8cf85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127704"
 ---
 # <a name="msgbox-sample"></a>Ejemplo MsgBox
@@ -47,6 +47,6 @@ En este ejemplo se muestra cómo pasar tipos de cadena por valor como parámetro
 ## <a name="see-also"></a>Vea también
 
 - [Serialización de cadenas](marshaling-strings.md)
-- [Cálculo de referencias predeterminado para cadenas](default-marshaling-for-strings.md)
+- [Serialización predeterminada para cadenas](default-marshaling-for-strings.md)
 - [Crear prototipos en código administrado](creating-prototypes-in-managed-code.md)
 - [Especificar un juego de caracteres](specifying-a-character-set.md)

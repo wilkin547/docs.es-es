@@ -11,10 +11,10 @@ helpviewer_keywords:
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
 ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125164"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData (Tipo XAML intrínseco)
@@ -53,4 +53,4 @@ Habilita la posición de islas de datos XML dentro de una producción de XAML. E
 
 - <xref:System.Windows.Data.XmlDataProvider>
 - [Información general sobre el enlace de datos](../wpf/data/data-binding-overview.md)
-- [Enlazar extensión de marcado](../wpf/advanced/binding-markup-extension.md)
+- [Binding (extensión de marcado)](../wpf/advanced/binding-markup-extension.md)

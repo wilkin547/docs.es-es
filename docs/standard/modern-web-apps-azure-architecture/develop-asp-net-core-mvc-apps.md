@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Des
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978337"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59128393"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -425,7 +425,6 @@ Puede crear su propio servicio de autenticación, realizar la integración con A
 #### <a name="custom-security"></a>Seguridad personalizada
 
 Tenga especial cuidado al crear una implementación de criptografía, una pertenencia de usuarios o un sistema de generación de tokens propios. Existen muchas alternativas comerciales y de código abierto disponibles que seguramente ofrecerán una mayor seguridad que una implementación personalizada.
-
 
 > ### <a name="references--security"></a>Referencias: seguridad
 >

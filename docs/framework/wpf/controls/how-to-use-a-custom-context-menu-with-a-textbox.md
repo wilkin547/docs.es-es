@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar un menú contextual personalizado con un control TextBox
+title: Procedimiento Usar un menú contextual personalizado con un control TextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - TextBox control [WPF], custom content menus
 ms.assetid: 842d3cd5-6fa0-4be4-8d90-6c7466213b1c
 ms.openlocfilehash: b0507c6fa37f0f51f9e12ebe5f908c39c25b50d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129421"
 ---
-# <a name="how-to-use-a-custom-context-menu-with-a-textbox"></a>Filtrar Usar un menú contextual personalizado con un control TextBox
+# <a name="how-to-use-a-custom-context-menu-with-a-textbox"></a>Procedimiento Usar un menú contextual personalizado con un control TextBox
 En este ejemplo se muestra cómo definir e implementar un menú contextual personalizado simple para un <xref:System.Windows.Controls.TextBox>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -37,6 +37,6 @@ En este ejemplo se muestra cómo definir e implementar un menú contextual perso
   
 ## <a name="see-also"></a>Vea también
 
-- [Usar la revisión ortográfica con un menú contextual](how-to-use-spell-checking-with-a-context-menu.md)
+- [Usar el corrector ortográfico con un menú contextual](how-to-use-spell-checking-with-a-context-menu.md)
 - [Información general sobre TextBox](textbox-overview.md)
-- [Información general sobre el control RichTextBox](richtextbox-overview.md)
+- [RichTextBox Overview](richtextbox-overview.md) (Introducción a RichTextBox)

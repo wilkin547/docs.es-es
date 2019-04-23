@@ -8,10 +8,10 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121984"
 ---
 # <a name="using-message-contracts"></a>Usar contratos de mensaje
@@ -105,7 +105,7 @@ public class BankingTransaction
  <xref:System.ServiceModel.MessageContractAttribute> permite especificar los atributos WrapperName y WrapperNamespace que controlan el nombre del elemento contenedor en el cuerpo del mensaje SOAP. De forma predeterminada el nombre del tipo de contrato de mensaje se usa para el contenedor y el espacio de nombres en el que se define el contrato de mensaje; `http://tempuri.org/` se usa como espacio de nombres predeterminado.  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute> los atributos se omiten en los contratos de mensaje. Si se requiere un <xref:System.Runtime.Serialization.KnownTypeAttribute>, colóquelo en la operación que esté utilizando el contrato de mensaje en cuestión.  
+>  Los atributos <xref:System.Runtime.Serialization.KnownTypeAttribute> se omiten en los contratos de mensaje. Si se requiere un <xref:System.Runtime.Serialization.KnownTypeAttribute>, colóquelo en la operación que esté utilizando el contrato de mensaje en cuestión.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Controlar los nombres y espacios de nombres del encabezado y parte del cuerpo  
  En la representación de SOAP de un contrato de mensaje, cada encabezado y la parte del cuerpo se asigna a un elemento XML que tiene un nombre y un espacio de nombres.  

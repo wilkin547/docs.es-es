@@ -1,5 +1,5 @@
 ---
-title: Filtrar para descargar un archivo en segundo plano
+title: Procedimiento para descargar un archivo en segundo plano
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
 ms.openlocfilehash: af5a607b4800635d096e83b55a5bd5a912c8538d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128783"
 ---
-# <a name="how-to-download-a-file-in-the-background"></a>Filtrar para descargar un archivo en segundo plano
+# <a name="how-to-download-a-file-in-the-background"></a>Procedimiento para descargar un archivo en segundo plano
 Descargar un archivo es una tarea común y, por lo general, resulta útil ejecutar esta operación que puede requerir mucho tiempo en un subproceso independiente. Use el componente <xref:System.ComponentModel.BackgroundWorker> para realizar esta tarea con muy poco código.  
   
 ## <a name="example"></a>Ejemplo  
@@ -68,5 +68,5 @@ Descargar un archivo es una tarea común y, por lo general, resulta útil ejecut
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Filtrar para ejecutar una operación en segundo plano](how-to-run-an-operation-in-the-background.md)
-- [Filtrar para implementar un formulario que usa una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Cómo: Ejecutar una operación en segundo plano](how-to-run-an-operation-in-the-background.md)
+- [Cómo: Implementar un formulario que usa una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)

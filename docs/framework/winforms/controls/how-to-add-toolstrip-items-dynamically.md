@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agregar dinámicamente elementos de ToolStrip
+title: Procedimiento para agregar dinámicamente elementos de ToolStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: 0e8dea56-5f46-408b-914d-7e360341a234
 ms.openlocfilehash: d84b62005554479d227778f513e72594322791a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124935"
 ---
-# <a name="how-to-add-toolstrip-items-dynamically"></a>Filtrar para agregar dinámicamente elementos de ToolStrip
+# <a name="how-to-add-toolstrip-items-dynamically"></a>Procedimiento para agregar dinámicamente elementos de ToolStrip
 Puede rellenar dinámicamente la colección de elementos de menú de un control <xref:System.Windows.Forms.ToolStrip> cuando se abre el menú.  
   
 ## <a name="example"></a>Ejemplo  
@@ -44,4 +44,4 @@ Puede rellenar dinámicamente la colección de elementos de menú de un control 
 - <xref:System.Windows.Forms.ToolStripItem>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - <xref:System.Windows.Forms.ToolStripDropDownButton>
-- [ToolStrip](toolstrip-control-windows-forms.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)

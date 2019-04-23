@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear una escena 3D
+title: Procedimiento Crear una escena 3D
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
 ms.openlocfilehash: 8e176cb437055787da86d56770dd71323134fa33
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126235"
 ---
-# <a name="how-to-create-a-3-d-scene"></a>Filtrar Crear una escena 3D
+# <a name="how-to-create-a-3-d-scene"></a>Procedimiento Crear una escena 3D
 En este ejemplo se muestra cómo crear un objeto 3D que parece una hoja de papel que se ha girado plana. Un <xref:System.Windows.Controls.Viewport3D> junto con los siguientes componentes se usan para crear esta escena 3D sencilla:  
   
 -   Se crea una cámara mediante un <xref:System.Windows.Media.Media3D.PerspectiveCamera>. La cámara especifica qué parte de la escena 3D es visible.  

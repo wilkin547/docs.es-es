@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
 ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120671"
 ---
 # <a name="oracle-and-adonet"></a>Oracle y ADO.NET
@@ -80,4 +80,4 @@ csc /r:System.Data.OracleClient.dll
 ## <a name="see-also"></a>Vea también
 
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

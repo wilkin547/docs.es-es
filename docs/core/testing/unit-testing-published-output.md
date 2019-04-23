@@ -6,10 +6,10 @@ ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
 ms.openlocfilehash: 660b966c6d02353b855e5728094083042a561558
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126092"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Prueba de la salida publicada con vstest dotnet
@@ -39,5 +39,5 @@ dotnet vstest out/MyProject.Tests.dll
 ## <a name="see-also"></a>Vea también
 
 - [Pruebas unitarias con pruebas de dotnet y xUnit](unit-testing-with-dotnet-test.md)
-- [Prueba unitaria de C# con NUnit y .NET Core](unit-testing-with-nunit.md)
+- [Prueba unitaria de C# con NUnit y .NET Core](unit-testing-with-nunit.md)
 - [Pruebas unitarias con pruebas de dotnet y MSTest](unit-testing-with-mstest.md)

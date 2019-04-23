@@ -11,10 +11,10 @@ api_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e536e61a8d812e442e1e54188c99d6a1d4586757
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125572"
 ---
 # <a name="icorprofilercallback8-interface"></a>Interfaz ICorProfilerCallback8
@@ -26,8 +26,8 @@ ms.locfileid: "59125572"
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)|Notifica al generador de perfiles que se ha iniciado la compilación JIT de un método dinámico.|  
-|[Método DynamicMethodJITCompilationFinished](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|Notifica al generador de perfiles que ha finalizado la compilación JIT de un método dinámico.|  
+|[DynamicMethodJITCompilationStarted (método)](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)|Notifica al generador de perfiles que se ha iniciado la compilación JIT de un método dinámico.|  
+|[DynamicMethodJITCompilationFinished (método)](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|Notifica al generador de perfiles que ha finalizado la compilación JIT de un método dinámico.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
@@ -39,4 +39,4 @@ ms.locfileid: "59125572"
 ## <a name="see-also"></a>Vea también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
-- [Interfaz ICorProfilerCallback9](icorprofilercallback9-interface.md)
+- [ICorProfilerCallback9 (interfaz)](icorprofilercallback9-interface.md)

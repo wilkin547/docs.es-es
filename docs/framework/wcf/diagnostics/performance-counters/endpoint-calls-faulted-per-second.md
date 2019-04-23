@@ -3,10 +3,10 @@ title: 'Punto de conexión: Errores de llamadas por segundo'
 ms.date: 03/30/2017
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
 ms.openlocfilehash: f425d95868a9ba5bc3c2f2291db2bc414b1918e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122231"
 ---
 # <a name="endpoint-calls-faulted-per-second"></a>Punto de conexión: Errores de llamadas por segundo
@@ -23,4 +23,4 @@ Nombre del contador: Errores de llamadas por segundo.
   
 ## <a name="see-also"></a>Vea también
 
-- [Especificación y administración de errores en contratos y servicios](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Especificación y gestión de errores en contratos y servicios](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

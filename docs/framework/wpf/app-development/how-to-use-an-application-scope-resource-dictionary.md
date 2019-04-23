@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar un diccionario de recursos en el ámbito de aplicación
+title: Procedimiento Usar un diccionario de recursos en el ámbito de aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
 ms.openlocfilehash: 589e28b3c05496e3fc17055b98240e389faed068
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125385"
 ---
-# <a name="how-to-use-an-application-scope-resource-dictionary"></a>Filtrar Usar un diccionario de recursos en el ámbito de aplicación
+# <a name="how-to-use-an-application-scope-resource-dictionary"></a>Procedimiento Usar un diccionario de recursos en el ámbito de aplicación
 En este ejemplo se muestra cómo definir y usar un diccionario de recursos personalizado de ámbito de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  

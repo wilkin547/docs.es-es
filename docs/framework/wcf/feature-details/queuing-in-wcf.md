@@ -3,10 +3,10 @@ title: Las colas en WCF
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
 ms.openlocfilehash: 502f1ad74cd4bd6294db11a3e48f4c41068704ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128770"
 ---
 # <a name="queuing-in-wcf"></a>Las colas en WCF
@@ -50,7 +50,7 @@ En esta sección se describe cómo usar la comunicación en cola en Windows Comm
   
 -   `ExactlyOnce`: Cuando se establece en `true` (valor predeterminado), el canal en cola garantiza que el mensaje, si entrega, no se duplica. Además, garantiza que el mensaje no se pierda. Si no puede entregarse el mensaje, o expira el periodo de vida del mismo antes de poder entregarlo, tanto el mensaje fallido como la razón del error en la entrega se registran en una cola de componentes con problemas de entrega. Cuando se establece en `false`, el canal en cola realiza un esfuerzo para transferir el mensaje. En este caso, se puede optar por elegir una cola de mensajes no enviados.  
   
--   `Durable:` Cuando se establece en `true` (valor predeterminado), el canal en cola garantiza que MSMQ almacena el mensaje de forma duradera en el disco. Así, si el servicio de MSMQ se detiene y reinicia, los mensajes del disco se transfieren a la cola de destino o se entregan al servicio. Cuando se establece en `false`, los mensajes se guardan en un almacén volátil y se pierden en caso de que se detenga y reinicie el servicio de MSMQ.  
+-   `Durable:` cuando se establece en `true` (el valor predeterminado), el canal en cola garantiza que MSMQ almacena el mensaje en el disco de manera duradera. Así, si el servicio de MSMQ se detiene y reinicia, los mensajes del disco se transfieren a la cola de destino o se entregan al servicio. Cuando se establece en `false`, los mensajes se guardan en un almacén volátil y se pierden en caso de que se detenga y reinicie el servicio de MSMQ.  
   
  MSMQ exige una cola transaccional para que la transferencia `ExactlyOnce` sea de confianza. Además, MSMQ exige que la transacción lea desde una cola transaccional. Por lo tanto, cuando utilice `NetMsmqBinding`, recuerde que se requiere una transacción para enviar o recibir mensajes cuando `ExactlyOnce` está establecido en `true`. De igual forma, MSMQ exige a la cola que sea no transaccional para una mayor garantía, como cuando `ExactlyOnce` es `false` y en mensajería volátil. Así, al establecer `ExactlyOnce` en `false` o durable en `false`, no puede enviar o recibir mediante una transacción.  
   
@@ -78,7 +78,7 @@ En esta sección se describe cómo usar la comunicación en cola en Windows Comm
   
  Además de la seguridad de transporte, el propio mensaje SOAP puede protegerse utilizando la seguridad de mensaje. Para obtener más información, consulte [proteger mensajes utilizando Message Security](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md).  
   
- `MsmqTransportSecurity` También expone dos propiedades, `MsmqEncryptionAlgorithm` y `MsmqHashAlgorithm`. Éstas son enumeraciones de distintos algoritmos que permiten elegir el cifrado de la transferencia cola a cola de mensajes y el algoritmo hash de las firmas.  
+ `MsmqTransportSecurity` también expone dos propiedades, `MsmqEncryptionAlgorithm` y `MsmqHashAlgorithm`. Éstas son enumeraciones de distintos algoritmos que permiten elegir el cifrado de la transferencia cola a cola de mensajes y el algoritmo hash de las firmas.  
   
 #### <a name="other-properties"></a>Otras propiedades  
  Además de las propiedades anteriores, existen otras propiedades específicas de MSMQ expuestas en el enlace:  
@@ -105,9 +105,9 @@ En esta sección se describe cómo usar la comunicación en cola en Windows Comm
 ### <a name="sample-code"></a>Código de ejemplo  
  Si desea obtener instrucciones paso a paso sobre cómo escribir servicios WCF que usen MSMQ, vea los temas siguientes:  
   
--   [Filtrar para intercambiar mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Cómo: Intercambiar mensajes con puntos de conexión WCF y Message Queue Server de las aplicaciones](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Filtrar para intercambiar mensajes en cola con puntos de conexión de WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Cómo: Intercambiar los mensajes en cola con puntos de conexión WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Si desea obtener un ejemplo de código completo que muestre el uso de MSMQ en WCF, vea los temas siguientes:  
   
@@ -115,7 +115,7 @@ En esta sección se describe cómo usar la comunicación en cola en Windows Comm
   
 -   [Comunicación en cola volátil](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
   
--   [Colas con problemas de entrega](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+-   [Colas de mensajes fallidos](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
   
 -   [Sesiones y colas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
@@ -127,5 +127,5 @@ En esta sección se describe cómo usar la comunicación en cola en Windows Comm
   
 ## <a name="see-also"></a>Vea también
 
-- [Extremos de servicio y direccionamiento de la cola](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [Puntos de conexión de servicio y direccionamiento de la cola](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
 - [Alojamiento web de una aplicación en cola](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

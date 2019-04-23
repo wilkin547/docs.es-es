@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123778"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator (Interfaz)
@@ -30,7 +30,7 @@ Usa la capa de servicios de acceso a datos para buscar los metadatos de los ensa
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetMetadata](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Recupera los metadatos de una imagen del proceso de destino.|  
+|[GetMetaData (método)](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Recupera los metadatos de una imagen del proceso de destino.|  
   
 ## <a name="remarks"></a>Comentarios  
  El cliente API (es decir, el depurador) debe implementar esta interfaz según corresponda para el proceso de destino concreto. Por ejemplo, la implementación de un proceso activo sería diferente de un volcado de memoria.  
@@ -46,4 +46,4 @@ Usa la capa de servicios de acceso a datos para buscar los metadatos de los ensa
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

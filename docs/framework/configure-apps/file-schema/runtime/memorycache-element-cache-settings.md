@@ -1,5 +1,5 @@
 ---
-title: <memoryCache> Elemento (configuración de caché)
+title: Elemento <memoryCache> (configuración de caché)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <memoryCache> element
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
 ms.openlocfilehash: dbb46e7cf2580635add9d3100c8177c99cbae6bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126820"
 ---
 # <a name="memorycache-element-cache-settings"></a>\<memoryCache > elemento (configuración de caché)
@@ -31,7 +31,7 @@ Define un elemento que se usa para configurar una memoria caché basada en la cl
 ```  
   
 ## <a name="type"></a>Tipo  
- <xref:System.Runtime.Caching.MemoryCache> clase.  
+ Clase<xref:System.Runtime.Caching.MemoryCache> .  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  

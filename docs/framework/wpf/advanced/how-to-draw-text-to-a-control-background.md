@@ -1,5 +1,5 @@
 ---
-title: Filtrar Dibujar texto en el fondo de un control
+title: Procedimiento Dibujar texto en el fondo de un control
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], drawing text to backgrounds
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - typography [WPF], drawing text to control backgrounds
 ms.assetid: 686d8fba-f61c-4974-a871-c635d67a7f69
 ms.openlocfilehash: 76449c88f9a720741c8ed61255e04a40e6a8613f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128458"
 ---
-# <a name="how-to-draw-text-to-a-controls-background"></a>Filtrar Dibujar texto en el fondo de un control
+# <a name="how-to-draw-text-to-a-controls-background"></a>Procedimiento Dibujar texto en el fondo de un control
 Puede dibujar texto directamente en el fondo de un control mediante la conversión de una cadena de texto a un <xref:System.Windows.Media.FormattedText> objeto y, a continuación, dibuje el objeto para el control <xref:System.Windows.Media.DrawingContext>. También puede usar esta técnica para dibujar en el fondo de objetos derivados de <xref:System.Windows.Controls.Panel>, tales como <xref:System.Windows.Controls.Canvas> y <xref:System.Windows.Controls.StackPanel>.  
   
  ![Controles mostrando texto como fondo](./media/drawtext2background01.png "DrawText2Background01")  

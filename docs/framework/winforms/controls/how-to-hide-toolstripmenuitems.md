@@ -1,5 +1,5 @@
 ---
-title: Filtrar para ocultar ToolStripMenuItems
+title: Procedimiento para ocultar ToolStripMenuItems
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - hiding menu items
 ms.assetid: 418a768f-808a-44cd-8cef-f4e161883621
 ms.openlocfilehash: dc9daa945f2a546548f2cc6ea033378bd9ceff93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127431"
 ---
-# <a name="how-to-hide-toolstripmenuitems"></a>Filtrar para ocultar ToolStripMenuItems
+# <a name="how-to-hide-toolstripmenuitems"></a>Procedimiento para ocultar ToolStripMenuItems
 Ocultar elementos de menú es una manera de controlar la interfaz de usuario de la aplicación y restringir los comandos de usuario. A menudo, deseará ocultar un menú completo cuando no están disponibles todos los elementos de menú en él. Esto supone menos distracciones para el usuario. Además, es posible que desea ocultar y deshabilitar el menú o elemento de menú, como ocultar por sí solo no impide que el usuario acceso a un comando de menú mediante una tecla de método abreviado.  
   
 ### <a name="to-hide-any-menu-item-programmatically"></a>Para ocultar cualquier elemento de menú mediante programación  
@@ -43,4 +43,4 @@ Ocultar elementos de menú es una manera de controlar la interfaz de usuario de 
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
 - <xref:System.Windows.Forms.MenuStrip>
 - [Información general sobre el control MenuStrip](menustrip-control-overview-windows-forms.md)
-- [Filtrar para deshabilitar ToolStripMenuItems](how-to-disable-toolstripmenuitems.md)
+- [Cómo: Deshabilitar ToolStripMenuItems](how-to-disable-toolstripmenuitems.md)

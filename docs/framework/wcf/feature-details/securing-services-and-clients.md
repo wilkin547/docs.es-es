@@ -5,10 +5,10 @@ helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 ms.openlocfilehash: e455c7a48e1484d5acdcc5f6cdc9098997a3ba83
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120736"
 ---
 # <a name="securing-services-and-clients"></a>Protección de servicios y clientes
@@ -27,7 +27,7 @@ La información de esta sección se centra en programar la seguridad en Windows 
  [Sesiones seguras](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
  Una explicación de las consideraciones necesarias para proteger una sesión WCF.  
   
- [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  Explicación de algunas de las tareas comunes necesarias para la utilización de los certificados X.509.  
   
 ## <a name="reference"></a>Referencia  
@@ -46,7 +46,7 @@ La información de esta sección se centra en programar la seguridad en Windows 
   
  [Enlaces y seguridad](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
   
- [Capacidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [Funcionalidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
   
  [Extensión de la seguridad](../../../../docs/framework/wcf/extending/extending-security.md)  
   
@@ -55,4 +55,4 @@ La información de esta sección se centra en programar la seguridad en Windows 
 ## <a name="see-also"></a>Vea también
 
 - [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

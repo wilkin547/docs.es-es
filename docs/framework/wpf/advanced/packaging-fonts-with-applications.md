@@ -11,10 +11,10 @@ helpviewer_keywords:
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
 ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123804"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empaquetar fuentes con aplicaciones
@@ -174,7 +174,7 @@ Este tema proporciona información general sobre cómo empaquetar fuentes con su
 
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- [Microsoft Typography: Vínculos, noticias y contactos](https://docs.microsoft.com/typography/)
+- [Tipografía de Microsoft: Vínculos, noticias y contactos](https://docs.microsoft.com/typography/)
 - [Especificación OpenType](https://www.microsoft.com/typography/otspec/)
 - [Características de las fuentes OpenType](opentype-font-features.md)
 - [Paquete de fuentes OpenType de ejemplo](sample-opentype-font-pack.md)

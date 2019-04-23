@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Exp
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 68f88d29a6c88f4ce261a0a2794035d43db1fc0c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 22cb673f09faf7b0eabcfa5b3f6700d33242d84b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921109"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59122699"
 ---
 # <a name="common-web-application-architectures"></a>Arquitecturas de aplicaciones web comunes
 
@@ -30,7 +30,7 @@ Un proyecto nuevo de ASP.NET Core, independientemente de que se cree en Visual S
 
 ![](./media/image5-1.png)
 
-**Figura 5-1.** Una aplicación ASP.NET Core de un solo proyecto.
+**Figura 5-1**. Una aplicación ASP.NET Core de un solo proyecto.
 
 En un escenario de un solo proyecto, la separación de intereses se logra mediante el uso de carpetas. La plantilla predeterminada incluye carpetas independientes para las responsabilidades del patrón MVC de modelos, vistas y controladores, así como carpetas adicionales para los datos y servicios. En esta disposición, los detalles de presentación deben estar limitados tanto como sea posible a la carpeta Vistas y los detalles de implementación del acceso a datos se deben limitar a las clases de la carpeta Datos. La lógica de negocios debe residir en los servicios y las clases de la carpeta Modelos.
 
@@ -93,7 +93,7 @@ El enfoque más sencillo para escalar una aplicación web en Azure consiste en c
 
 ![](./media/image5-6.png)
 
-**Figura 5-6.** Escalado de plan de App Service en Azure.
+**Figura 5-6**. Escalado de plan de App Service en Azure.
 
 ## <a name="clean-architecture"></a>Arquitectura limpia
 
@@ -292,15 +292,15 @@ Tenga en cuenta que los contenedores de Docker en ejecución pueden estar enlaza
 Si quiere agregar compatibilidad con Docker a la aplicación mediante Visual Studio, asegúrese de que Docker Desktop se esté ejecutando. Si Docker Desktop no está funcionando cuando se inicia el asistente, el asistente no se ejecutará correctamente. Además, el asistente examinará el contenedor que ha elegido actualmente para agregar la compatibilidad correcta con Docker. Si quiere agregar compatibilidad con contenedores de Windows, debe ejecutar el asistente mientras Docker Desktop se ejecuta con contenedores de Windows configurados. Si quiere agregar compatibilidad con contenedores de Linux, ejecute el asistente mientras Docker se ejecuta con contenedores de Linux configurados.
 
 ### <a name="references--common-web-architectures"></a>Referencias: arquitecturas web comunes
-> - **The Clean Architecture (La arquitectura limpia)**  
+> - **The Clean Architecture** (La arquitectura limpia)  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
-> - **The Onion Architecture (La arquitectura cebolla)**  
+> - **The Onion Architecture** (La arquitectura cebolla)  
 >   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **The Repository Pattern (El modelo de repositorio)**  
+> - **The Repository Pattern** (El modelo de repositorio)  
 >   <https://deviq.com/repository-pattern/>
-> - **Clean Architecture Solution Sample (Ejemplo de solución de arquitectura limpia)**  
+> - **Clean Architecture Solution Sample** (Ejemplo de solución de arquitectura limpia)  
 >   <https://github.com/ardalis/cleanarchitecture>
-> - **Architecting Microservices e-book (Libro electrónico de arquitectura de microservicios)**  
+> - **Architecting Microservices e-book** (Libro electrónico de arquitectura de microservicios)  
 >   <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]

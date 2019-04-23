@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agregar información sobre herramientas a celdas individuales en un control DataGridView de formularios Windows Forms
+title: Procedimiento para agregar información sobre herramientas a celdas individuales en un control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
 ms.openlocfilehash: 3307c92a13e5730de6dce0fe45b924e44b7af554
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119644"
 ---
-# <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Filtrar para agregar información sobre herramientas a celdas individuales en un control DataGridView de formularios Windows Forms
+# <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Procedimiento para agregar información sobre herramientas a celdas individuales en un control DataGridView de formularios Windows Forms
 De forma predeterminada, la información sobre herramientas se usa para mostrar los valores de <xref:System.Windows.Forms.DataGridView> celdas que son demasiado pequeñas para mostrar todo su contenido. Puede invalidar este comportamiento, sin embargo, para establecer los valores de texto de información sobre herramientas de celdas individuales. Esto es útil para mostrar a los usuarios información adicional sobre una celda o para proporcionar a los usuarios una descripción alternativa del contenido de la celda. Por ejemplo, si tiene una fila que muestra los iconos de estado, es posible que desee proporcionar explicaciones de texto mediante información sobre herramientas.  
   
  También puede deshabilitar la presentación de información sobre herramientas de nivel de celda estableciendo el <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType> propiedad `false`.  
@@ -48,4 +48,4 @@ De forma predeterminada, la información sobre herramientas se usa para mostrar 
 - <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCell>
 - <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType>
-- [Programar con celdas, filas y columnas en el control DataGridView de formularios Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [Programar con celdas, filas y columnas en el control DataGridView de Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)

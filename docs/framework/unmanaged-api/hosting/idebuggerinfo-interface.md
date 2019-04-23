@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94dfeaaa4ae917540c8030034959ad2f693bb025
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123741"
 ---
 # <a name="idebuggerinfo-interface"></a>IDebuggerInfo (Interfaz)
@@ -30,7 +30,7 @@ Proporciona métodos para obtener información sobre el estado de los servicios 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método IsDebuggerAttached](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-isdebuggerattached-method.md)|Obtiene un valor que indica si un depurador administrado está asociado a este proceso.|  
+|[IsDebuggerAttached (método)](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-isdebuggerattached-method.md)|Obtiene un valor que indica si un depurador administrado está asociado a este proceso.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,4 +44,4 @@ Proporciona métodos para obtener información sobre el estado de los servicios 
 ## <a name="see-also"></a>Vea también
 
 - [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [CorRuntimeHost (Coclase)](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+- [CorRuntimeHost (coclase)](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

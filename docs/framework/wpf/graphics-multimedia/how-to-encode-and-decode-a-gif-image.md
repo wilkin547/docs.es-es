@@ -1,5 +1,5 @@
 ---
-title: Filtrar Codificar y descodificar una imagen GIF
+title: Procedimiento Codificar y descodificar una imagen GIF
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - GIF encoding [WPF]
 ms.assetid: 9cdd9ec7-71eb-444b-b9e3-991958461163
 ms.openlocfilehash: 35bd08f0d5e4d2ee9b8731706c9f1d770d67f633
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124746"
 ---
-# <a name="how-to-encode-and-decode-a-gif-image"></a>Filtrar Codificar y descodificar una imagen GIF
+# <a name="how-to-encode-and-decode-a-gif-image"></a>Procedimiento Codificar y descodificar una imagen GIF
 Los ejemplos siguientes muestran cómo descodificar y codificar una [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] específico de imagen <xref:System.Windows.Media.Imaging.GifBitmapDecoder> y <xref:System.Windows.Media.Imaging.GifBitmapEncoder> objetos.  
   
 ## <a name="example"></a>Ejemplo  

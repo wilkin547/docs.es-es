@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
 ms.openlocfilehash: b5a7f68edc49a02bb99ca05765d4582b798e72ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127392"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Asignación del modelo de objetos de distribución de WCF a Atom y RSS
@@ -42,7 +42,7 @@ Al desarrollar un servicio de distribución de Windows Communication Foundation 
  [!code-csharp[SyndicationMapping#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#10)]
  [!code-vb[SyndicationMapping#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#10)]  
   
- `SerializeItem` Serializa un elemento de distribución.  
+ `SerializeItem` serializa un elemento de distribución.  
   
  [!code-csharp[SyndicationMapping#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#11)]
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
@@ -399,8 +399,8 @@ Al desarrollar un servicio de distribución de Windows Communication Foundation 
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general de distribución de WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
-- [Arquitectura de distribución](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
-- [Filtrar para crear una fuente RSS básica](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
-- [Filtrar para crear una fuente Atom básica](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
-- [Filtrar para exponer una fuente como Atom y RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+- [Información general de redifusión en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [Arquitectura de redifusión](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+- [Cómo: Creación de una fuente RSS básica](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
+- [Cómo: Creación de una fuente básica de Atom](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
+- [Cómo: Exponer una fuente como Atom y RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

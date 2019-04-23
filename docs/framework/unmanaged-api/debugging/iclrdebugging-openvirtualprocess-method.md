@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122582"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess (Método)
@@ -74,7 +74,7 @@ HRESULT OpenVirtualProcess(
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|E_POINTER|`pDataTarget` es `null`.|  
+|E_POINTER|El valor de `pDataTarget` es `null`.|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|El [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) devolución de llamada devuelve un error o no proporciona un identificador válido.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` no implementa las interfaces de destino de datos necesarios para esta versión del tiempo de ejecución.|  
 |CORDBG_E_NOT_CLR|El módulo indicado no es un módulo CLR. Este resultado HRESULT también se devuelve cuando un módulo CLR no se puede detectar porque se ha dañado la memoria, el módulo no está disponible o la versión de CLR es posterior a la versión de correcciones de compatibilidad.|  
@@ -98,5 +98,5 @@ HRESULT OpenVirtualProcess(
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

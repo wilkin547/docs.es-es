@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
 ms.openlocfilehash: 5eb81fd2a64f06f1252f71e251e58df568e7407c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120684"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>Obtener un valor único de una base de datos
@@ -23,6 +23,6 @@ En ocasiones se debe devolver información de bases de datos consistente en un �
 ## <a name="see-also"></a>Vea también
 
 - [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Ejecutar un comando](../../../../docs/framework/data/adonet/executing-a-command.md)
+- [Ejecución de un comando](../../../../docs/framework/data/adonet/executing-a-command.md)
 - [DbConnection, DbCommand y DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

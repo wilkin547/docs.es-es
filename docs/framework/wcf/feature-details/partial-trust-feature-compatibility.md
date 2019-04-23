@@ -3,10 +3,10 @@ title: Compatibilidad de característica de confianza parcial
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124571"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilidad de característica de confianza parcial
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
   
 -   Al usar el atributo `[ServiceKnownType]` , el método especificado debe ser `public`.  
   
--   `[MessageContract]` las clases y sus miembros pueden ser `public`. Si la clase `[MessageContract]` se define en el ensamblado de aplicación puede ser `internal` y tener miembros `internal` .  
+-   Las clases`[MessageContract]` y sus miembros pueden ser `public`. Si la clase `[MessageContract]` se define en el ensamblado de aplicación puede ser `internal` y tener miembros `internal` .  
   
 ## <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema  
  <xref:System.ServiceModel.BasicHttpBinding> y <xref:System.ServiceModel.WebHttpBinding> se admiten totalmente en un entorno de confianza parcial. <xref:System.ServiceModel.WSHttpBinding> solo se admite para el modo de seguridad de transporte.  
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
   
 -   <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>, y <xref:System.IdentityModel.Tokens>.  
+-   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>y <xref:System.IdentityModel.Tokens>.  
   
  No se admiten los siguientes orígenes de seguimiento:  
   

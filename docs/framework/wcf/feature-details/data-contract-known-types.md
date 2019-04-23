@@ -10,10 +10,10 @@ helpviewer_keywords:
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
 ms.openlocfilehash: bedf35544454a32ff13856a072779cd70723e989
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129628"
 ---
 # <a name="data-contract-known-types"></a>Tipos conocidos de contratos de datos
@@ -175,5 +175,5 @@ La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite espec
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>
 - [Tipos conocidos](../../../../docs/framework/wcf/samples/known-types.md)
-- [Equivalencia del contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [Diseño de contratos de servicios](../../../../docs/framework/wcf/designing-service-contracts.md)
+- [Equivalencia de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Diseño de contratos de servicio](../../../../docs/framework/wcf/designing-service-contracts.md)

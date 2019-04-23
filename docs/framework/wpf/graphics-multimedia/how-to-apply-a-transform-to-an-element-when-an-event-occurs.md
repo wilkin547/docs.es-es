@@ -1,5 +1,5 @@
 ---
-title: Filtrar Aplicar una transformación a un elemento cuando se produce un evento
+title: Procedimiento Aplicar una transformación a un elemento cuando se produce un evento
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
 ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126443"
 ---
-# <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Filtrar Aplicar una transformación a un elemento cuando se produce un evento
+# <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Procedimiento Aplicar una transformación a un elemento cuando se produce un evento
 En este ejemplo se muestra cómo aplicar un <xref:System.Windows.Media.ScaleTransform> cuando se produce un evento. El concepto que se muestra aquí es el mismo que se utiliza para aplicar otros tipos de transformaciones. Para obtener más información acerca de los tipos de transformaciones disponibles, consulte el <xref:System.Windows.Media.Transform> clase o [información general sobre transformaciones](transforms-overview.md).  
   
  Puede aplicar una transformación a un elemento de cualquiera de estas dos maneras:  

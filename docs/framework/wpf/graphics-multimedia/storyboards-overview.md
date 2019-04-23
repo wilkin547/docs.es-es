@@ -10,10 +10,10 @@ helpviewer_keywords:
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
 ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124844"
 ---
 # <a name="storyboards-overview"></a>Información general sobre objetos Storyboard
@@ -61,10 +61,10 @@ En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboa
   
 |El guión gráfico se comienza utilizando...|Por instancia|Estilo|Plantilla de control|Plantilla de datos|Ejemplo|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> y una <xref:System.Windows.EventTrigger>|Sí|Sí|Sí|Sí|[Animar una propiedad mediante un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> y una <xref:System.Windows.EventTrigger>|Sí|Sí|Sí|Sí|[Animar una propiedad utilizando un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> y una propiedad <xref:System.Windows.Trigger>|No|Sí|Sí|Sí|[Activar una animación al cambiar el valor de una propiedad](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> y un <xref:System.Windows.DataTrigger>|No|Sí|Sí|Sí|[Filtrar Activar una animación cuando cambian los datos](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método|Sí|No|No|No|[Animar una propiedad mediante un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> y un <xref:System.Windows.DataTrigger>|No|Sí|Sí|Sí|[Cómo: Activar una animación cuando cambian los datos](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
+|Método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Sí|No|No|No|[Animar una propiedad utilizando un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  En el ejemplo siguiente se usa un <xref:System.Windows.Media.Animation.Storyboard> para animar la <xref:System.Windows.FrameworkElement.Width%2A> de un <xref:System.Windows.Shapes.Rectangle> elemento y el <xref:System.Windows.Media.SolidColorBrush.Color%2A> de un <xref:System.Windows.Media.SolidColorBrush> se usa para pintar que <xref:System.Windows.Shapes.Rectangle>.  
   
@@ -276,7 +276,7 @@ En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboa
   
 -   No puede especificar un <xref:System.Windows.EventTrigger.SourceName%2A> para un <xref:System.Windows.EventTrigger> o <xref:System.Windows.Trigger>.  
   
--   No se puede usar expresiones de enlace de datos o las referencias de recursos dinámicos para establecer <xref:System.Windows.Media.Animation.Storyboard> o valores de propiedad de animación. Eso es porque todos los elementos de un <xref:System.Windows.Style> debe ser seguro para subprocesos, y el sistema de control de tiempo debe <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> objetos para hacerlos seguros para subprocesos. Un <xref:System.Windows.Media.Animation.Storyboard> no se puede inmovilizar si lo o sus escalas de tiempo secundarias contienen expresiones de enlace de datos o las referencias de recursos dinámicos. Para obtener más información sobre la inmovilización y otras <xref:System.Windows.Freezable> características, vea el [Freezable Objects Overview](../advanced/freezable-objects-overview.md).  
+-   No se puede usar expresiones de enlace de datos o las referencias de recursos dinámicos para establecer <xref:System.Windows.Media.Animation.Storyboard> o valores de propiedad de animación. Eso es porque todos los elementos de un <xref:System.Windows.Style> debe ser seguro para subprocesos, y el sistema de control de tiempo debe <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> objetos para hacerlos seguros para subprocesos. Un <xref:System.Windows.Media.Animation.Storyboard> no se puede inmovilizar si lo o sus escalas de tiempo secundarias contienen expresiones de enlace de datos o las referencias de recursos dinámicos. Para obtener más información sobre la inmovilización y otras <xref:System.Windows.Freezable> características, vea el [Freezable Objects Overview](../advanced/freezable-objects-overview.md).  
   
 -   En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], no se puede declarar controladores de eventos para <xref:System.Windows.Media.Animation.Storyboard> o eventos de animación.  
   
@@ -290,7 +290,7 @@ En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboa
   
 -   El <xref:System.Windows.EventTrigger.SourceName%2A> para un <xref:System.Windows.EventTrigger> o un <xref:System.Windows.Trigger> solo pueden hacer referencia a objetos secundarios de la <xref:System.Windows.Controls.ControlTemplate>.  
   
--   No se puede usar expresiones de enlace de datos o las referencias de recursos dinámicos para establecer <xref:System.Windows.Media.Animation.Storyboard> o valores de propiedad de animación. Eso es porque todos los elementos de un <xref:System.Windows.Controls.ControlTemplate> debe ser seguro para subprocesos, y el sistema de control de tiempo debe <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> objetos para hacerlos seguros para subprocesos. Un <xref:System.Windows.Media.Animation.Storyboard> no se puede inmovilizar si lo o sus escalas de tiempo secundarias contienen expresiones de enlace de datos o las referencias de recursos dinámicos. Para obtener más información sobre la inmovilización y otras <xref:System.Windows.Freezable> características, vea el [Freezable Objects Overview](../advanced/freezable-objects-overview.md).  
+-   No se puede usar expresiones de enlace de datos o las referencias de recursos dinámicos para establecer <xref:System.Windows.Media.Animation.Storyboard> o valores de propiedad de animación. Eso es porque todos los elementos de un <xref:System.Windows.Controls.ControlTemplate> debe ser seguro para subprocesos, y el sistema de control de tiempo debe <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> objetos para hacerlos seguros para subprocesos. Un <xref:System.Windows.Media.Animation.Storyboard> no se puede inmovilizar si lo o sus escalas de tiempo secundarias contienen expresiones de enlace de datos o las referencias de recursos dinámicos. Para obtener más información sobre la inmovilización y otras <xref:System.Windows.Freezable> características, vea el [Freezable Objects Overview](../advanced/freezable-objects-overview.md).  
   
 -   En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], no se puede declarar controladores de eventos para <xref:System.Windows.Media.Animation.Storyboard> o eventos de animación.  
   

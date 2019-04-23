@@ -7,12 +7,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: e3569ec8608a52101cc0bf752d39fbe01ab46917
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c165470cd00ac39a45464ec5a534eb0eea531be2
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561977"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59121997"
 ---
 # <a name="network-programming-how-to-topics"></a>Temas de procedimientos de programación de red
 La lista siguiente incluye vínculos a los temas de procedimientos relacionados con la programación de red que se pueden encontrar en la documentación conceptual.  
@@ -78,6 +78,7 @@ La lista siguiente incluye vínculos a los temas de procedimientos relacionados 
 -   [Cómo: Hacer ping a un host](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Ejemplos de red para .NET en la galería de código de MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

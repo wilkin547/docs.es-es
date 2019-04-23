@@ -8,10 +8,10 @@ helpviewer_keywords:
 - PrintPreviewControl control
 ms.assetid: 4513c6c7-5e9b-4f4c-82ca-00f993a26955
 ms.openlocfilehash: e9f1c2ae912b6beeba70c318b94a3052e2f99acb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122504"
 ---
 # <a name="printpreviewcontrol-control-overview-windows-forms"></a>Información general sobre el control PrintPreviewControl (formularios Windows Forms)
@@ -23,6 +23,6 @@ Los formularios de Windows <xref:System.Windows.Forms.PrintPreviewControl> se us
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.PrintPreviewControl>
-- [Información general sobre el control PrintPreviewDialog](printpreviewdialog-control-overview-windows-forms.md)
-- [Control PrintPreviewControl](printpreviewcontrol-control-windows-forms.md)
+- [Información general del control PrintPreviewDialog](printpreviewdialog-control-overview-windows-forms.md)
+- [PrintPreviewControl (control)](printpreviewcontrol-control-windows-forms.md)
 - [Controles y componentes de cuadros de diálogo](dialog-box-controls-and-components-windows-forms.md)
