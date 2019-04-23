@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 882242da493c49a2e6aa09888e9503dcf2933589
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119592"
 ---
-# <a name="ceesectionreloctype-enumeration"></a><span data-ttu-id="be0e9-102">CeeSectionRelocType (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="be0e9-102">CeeSectionRelocType Enumeration</span></span>
-<span data-ttu-id="be0e9-103">Proporciona valores para influir en el tipo de `reloc` instrucción se emite en una llamada a [ICeeGen:: AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).</span><span class="sxs-lookup"><span data-stu-id="be0e9-103">Provides values to influence the type of `reloc` instruction emitted in a call to [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).</span></span>  
+# <a name="ceesectionreloctype-enumeration"></a><span data-ttu-id="e6c91-102">CeeSectionRelocType (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="e6c91-102">CeeSectionRelocType Enumeration</span></span>
+<span data-ttu-id="e6c91-103">Proporciona valores para influir en el tipo de `reloc` instrucción se emite en una llamada a [ICeeGen:: AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).</span><span class="sxs-lookup"><span data-stu-id="e6c91-103">Provides values to influence the type of `reloc` instruction emitted in a call to [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="be0e9-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="be0e9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6c91-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e6c91-104">Syntax</span></span>  
   
 ```  
 typedef enum  {  
@@ -50,37 +50,37 @@ typedef enum  {
     } CeeSectionRelocType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="be0e9-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="be0e9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e6c91-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="e6c91-105">Members</span></span>  
   
-|<span data-ttu-id="be0e9-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="be0e9-106">Member</span></span>|<span data-ttu-id="be0e9-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="be0e9-107">Description</span></span>|  
+|<span data-ttu-id="e6c91-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="e6c91-106">Member</span></span>|<span data-ttu-id="e6c91-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="e6c91-107">Description</span></span>|  
 |------------|-----------------|  
-|`srRelocAbsolute`|<span data-ttu-id="be0e9-108">Genera solo una sección relacionados con `reloc`y envía nada en una sección .reloc.</span><span class="sxs-lookup"><span data-stu-id="be0e9-108">Generates only a section-relative `reloc`, sending nothing into a .reloc section.</span></span>|  
-|`srRelocHighLow`|<span data-ttu-id="be0e9-109">Genera un `reloc` para una ubicación dimensionado por puntero.</span><span class="sxs-lookup"><span data-stu-id="be0e9-109">Generates a `reloc` for a pointer-sized location.</span></span> <span data-ttu-id="be0e9-110">Esto se transforma en BASED_HIGHLOW o BASED_DIR64, dependiendo de la plataforma.</span><span class="sxs-lookup"><span data-stu-id="be0e9-110">This is transformed into BASED_HIGHLOW or BASED_DIR64 depending on the platform.</span></span>|  
-|`srRelocHighAdj`|<span data-ttu-id="be0e9-111">Genera un `reloc` para la parte superior de 16 bits de un número de 32 bits, donde los 16 bits inferiores se incluyen en la siguiente palabra en la tabla .reloc.</span><span class="sxs-lookup"><span data-stu-id="be0e9-111">Generates a `reloc` for the top 16 bits of a 32-bit number, where the bottom 16 bits are included in the next word in the .reloc table.</span></span>|  
-|`srRelocMapToken`|<span data-ttu-id="be0e9-112">Genera una reubicación de asignación de token, envía nada a una sección .reloc.</span><span class="sxs-lookup"><span data-stu-id="be0e9-112">Generates a token map relocation, sending nothing into a .reloc section.</span></span>|  
-|`srRelocRelative`|<span data-ttu-id="be0e9-113">Indica que el valor es una corrección de la dirección relativa.</span><span class="sxs-lookup"><span data-stu-id="be0e9-113">Indicates that the value is a relative address fixup.</span></span>|  
-|`srRelocFilePos`|<span data-ttu-id="be0e9-114">Genera solo una sección relacionados con `reloc`y envía nada en una sección .reloc.</span><span class="sxs-lookup"><span data-stu-id="be0e9-114">Generates only a section-relative `reloc`, sending nothing into a .reloc section.</span></span> <span data-ttu-id="be0e9-115">Esto `reloc` es relativo a la posición de la sección, no direcciones virtuales de la sección del archivo.</span><span class="sxs-lookup"><span data-stu-id="be0e9-115">This `reloc` is relative to the file position of the section, not the section's virtual address.</span></span>|  
-|`srRelocCodeRelative`|<span data-ttu-id="be0e9-116">Especifica una dirección relativa del código de corrección.</span><span class="sxs-lookup"><span data-stu-id="be0e9-116">Specifies a code-relative address fixup.</span></span>|  
-|`srRelocIA64Imm64`|<span data-ttu-id="be0e9-117">Genera un `reloc` para una dirección de 64 bits en ia64 `movl` instrucción.</span><span class="sxs-lookup"><span data-stu-id="be0e9-117">Generates a `reloc` for a 64 bit address in an ia64 `movl` instruction.</span></span>|  
-|`srRelocDir64`|<span data-ttu-id="be0e9-118">Genera un `reloc` para una dirección de 64 bits.</span><span class="sxs-lookup"><span data-stu-id="be0e9-118">Generates a `reloc` for a 64-bit address.</span></span>|  
-|`srRelocIA64PcRel25`|<span data-ttu-id="be0e9-119">Generar un `reloc` para una dirección relativa de PC de 25 bits en ia64 `br.call` instrucción.</span><span class="sxs-lookup"><span data-stu-id="be0e9-119">Generate a `reloc` for a 25-bit PC-relative address in an ia64 `br.call` instruction.</span></span>|  
-|`srRelocIA64PcRel64`|<span data-ttu-id="be0e9-120">Genera un `reloc` para una dirección relativa de PC de 64 bits en ia64 `brl.call` instrucción.</span><span class="sxs-lookup"><span data-stu-id="be0e9-120">Generates a `reloc` for a 64-bit PC-relative address in an ia64 `brl.call` instruction.</span></span>|  
-|`srRelocAbsoluteTagged`|<span data-ttu-id="be0e9-121">Genera un 30 bits-relativa a la sección `reloc`, que se usa para los valores de puntero etiquetadas.</span><span class="sxs-lookup"><span data-stu-id="be0e9-121">Generates a 30-bit section-relative `reloc`, used for tagged pointer values.</span></span>|  
-|`srRelocSentinel`|<span data-ttu-id="be0e9-122">Un valor de Centinela para ayudar a garantizar las adiciones a esta enumeración se reflejan en el interno `reloc` matriz nombre.</span><span class="sxs-lookup"><span data-stu-id="be0e9-122">A sentinel value to help ensure any additions to this enum are reflected to the internal `reloc` name array.</span></span>|  
-|`srNoBaseReloc`|<span data-ttu-id="be0e9-123">Especifica que no emita una base de `reloc`.</span><span class="sxs-lookup"><span data-stu-id="be0e9-123">Specifies not to emit a base `reloc`.</span></span>|  
-|`srRelocPtr`|<span data-ttu-id="be0e9-124">Un valor que indica que el contenido anterior a la corrección de memoria es un puntero en lugar de una sección de desplazamiento.</span><span class="sxs-lookup"><span data-stu-id="be0e9-124">A value indicating that the pre-fixup contents of memory are a pointer rather than a section offset.</span></span>|  
+|`srRelocAbsolute`|<span data-ttu-id="e6c91-108">Genera solo una sección relacionados con `reloc`y envía nada en una sección .reloc.</span><span class="sxs-lookup"><span data-stu-id="e6c91-108">Generates only a section-relative `reloc`, sending nothing into a .reloc section.</span></span>|  
+|`srRelocHighLow`|<span data-ttu-id="e6c91-109">Genera un `reloc` para una ubicación dimensionado por puntero.</span><span class="sxs-lookup"><span data-stu-id="e6c91-109">Generates a `reloc` for a pointer-sized location.</span></span> <span data-ttu-id="e6c91-110">Esto se transforma en BASED_HIGHLOW o BASED_DIR64, dependiendo de la plataforma.</span><span class="sxs-lookup"><span data-stu-id="e6c91-110">This is transformed into BASED_HIGHLOW or BASED_DIR64 depending on the platform.</span></span>|  
+|`srRelocHighAdj`|<span data-ttu-id="e6c91-111">Genera un `reloc` para la parte superior de 16 bits de un número de 32 bits, donde los 16 bits inferiores se incluyen en la siguiente palabra en la tabla .reloc.</span><span class="sxs-lookup"><span data-stu-id="e6c91-111">Generates a `reloc` for the top 16 bits of a 32-bit number, where the bottom 16 bits are included in the next word in the .reloc table.</span></span>|  
+|`srRelocMapToken`|<span data-ttu-id="e6c91-112">Genera una reubicación de asignación de token, envía nada a una sección .reloc.</span><span class="sxs-lookup"><span data-stu-id="e6c91-112">Generates a token map relocation, sending nothing into a .reloc section.</span></span>|  
+|`srRelocRelative`|<span data-ttu-id="e6c91-113">Indica que el valor es una corrección de la dirección relativa.</span><span class="sxs-lookup"><span data-stu-id="e6c91-113">Indicates that the value is a relative address fixup.</span></span>|  
+|`srRelocFilePos`|<span data-ttu-id="e6c91-114">Genera solo una sección relacionados con `reloc`y envía nada en una sección .reloc.</span><span class="sxs-lookup"><span data-stu-id="e6c91-114">Generates only a section-relative `reloc`, sending nothing into a .reloc section.</span></span> <span data-ttu-id="e6c91-115">Esto `reloc` es relativo a la posición de la sección, no direcciones virtuales de la sección del archivo.</span><span class="sxs-lookup"><span data-stu-id="e6c91-115">This `reloc` is relative to the file position of the section, not the section's virtual address.</span></span>|  
+|`srRelocCodeRelative`|<span data-ttu-id="e6c91-116">Especifica una dirección relativa del código de corrección.</span><span class="sxs-lookup"><span data-stu-id="e6c91-116">Specifies a code-relative address fixup.</span></span>|  
+|`srRelocIA64Imm64`|<span data-ttu-id="e6c91-117">Genera un `reloc` para una dirección de 64 bits en ia64 `movl` instrucción.</span><span class="sxs-lookup"><span data-stu-id="e6c91-117">Generates a `reloc` for a 64 bit address in an ia64 `movl` instruction.</span></span>|  
+|`srRelocDir64`|<span data-ttu-id="e6c91-118">Genera un `reloc` para una dirección de 64 bits.</span><span class="sxs-lookup"><span data-stu-id="e6c91-118">Generates a `reloc` for a 64-bit address.</span></span>|  
+|`srRelocIA64PcRel25`|<span data-ttu-id="e6c91-119">Generar un `reloc` para una dirección relativa de PC de 25 bits en ia64 `br.call` instrucción.</span><span class="sxs-lookup"><span data-stu-id="e6c91-119">Generate a `reloc` for a 25-bit PC-relative address in an ia64 `br.call` instruction.</span></span>|  
+|`srRelocIA64PcRel64`|<span data-ttu-id="e6c91-120">Genera un `reloc` para una dirección relativa de PC de 64 bits en ia64 `brl.call` instrucción.</span><span class="sxs-lookup"><span data-stu-id="e6c91-120">Generates a `reloc` for a 64-bit PC-relative address in an ia64 `brl.call` instruction.</span></span>|  
+|`srRelocAbsoluteTagged`|<span data-ttu-id="e6c91-121">Genera un 30 bits-relativa a la sección `reloc`, que se usa para los valores de puntero etiquetadas.</span><span class="sxs-lookup"><span data-stu-id="e6c91-121">Generates a 30-bit section-relative `reloc`, used for tagged pointer values.</span></span>|  
+|`srRelocSentinel`|<span data-ttu-id="e6c91-122">Un valor de Centinela para ayudar a garantizar las adiciones a esta enumeración se reflejan en el interno `reloc` matriz nombre.</span><span class="sxs-lookup"><span data-stu-id="e6c91-122">A sentinel value to help ensure any additions to this enum are reflected to the internal `reloc` name array.</span></span>|  
+|`srNoBaseReloc`|<span data-ttu-id="e6c91-123">Especifica que no emita una base de `reloc`.</span><span class="sxs-lookup"><span data-stu-id="e6c91-123">Specifies not to emit a base `reloc`.</span></span>|  
+|`srRelocPtr`|<span data-ttu-id="e6c91-124">Un valor que indica que el contenido anterior a la corrección de memoria es un puntero en lugar de una sección de desplazamiento.</span><span class="sxs-lookup"><span data-stu-id="e6c91-124">A value indicating that the pre-fixup contents of memory are a pointer rather than a section offset.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="be0e9-125">Requisitos</span><span class="sxs-lookup"><span data-stu-id="be0e9-125">Requirements</span></span>  
- <span data-ttu-id="be0e9-126">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="be0e9-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6c91-125">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e6c91-125">Requirements</span></span>  
+ <span data-ttu-id="e6c91-126">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e6c91-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="be0e9-127">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="be0e9-127">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e6c91-127">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="e6c91-127">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="be0e9-128">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="be0e9-128">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e6c91-128">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e6c91-128">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="be0e9-129">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="be0e9-129">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="e6c91-129">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6c91-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="be0e9-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="be0e9-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e6c91-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="e6c91-130">See also</span></span>
 
-- [<span data-ttu-id="be0e9-131">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="be0e9-131">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [<span data-ttu-id="be0e9-132">ICeeGen (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="be0e9-132">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
-- [<span data-ttu-id="be0e9-133">Método AddSectionReloc</span><span class="sxs-lookup"><span data-stu-id="be0e9-133">AddSectionReloc Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)
+- [<span data-ttu-id="e6c91-131">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="e6c91-131">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="e6c91-132">ICeeGen (interfaz)</span><span class="sxs-lookup"><span data-stu-id="e6c91-132">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="e6c91-133">AddSectionReloc (método)</span><span class="sxs-lookup"><span data-stu-id="e6c91-133">AddSectionReloc Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)

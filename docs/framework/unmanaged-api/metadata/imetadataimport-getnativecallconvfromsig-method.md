@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef1ac83b383a9f6bbee7f55441d2abfcb081afa6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122751"
 ---
-# <a name="imetadataimportgetnativecallconvfromsig-method"></a><span data-ttu-id="14f0a-102">IMetaDataImport::GetNativeCallConvFromSig (Método)</span><span class="sxs-lookup"><span data-stu-id="14f0a-102">IMetaDataImport::GetNativeCallConvFromSig Method</span></span>
-<span data-ttu-id="14f0a-103">Obtiene la convención de llamada nativa del método representado por el puntero de firma especificado.</span><span class="sxs-lookup"><span data-stu-id="14f0a-103">Gets the native calling convention for the method that is represented by the specified signature pointer.</span></span>  
+# <a name="imetadataimportgetnativecallconvfromsig-method"></a><span data-ttu-id="572da-102">IMetaDataImport::GetNativeCallConvFromSig (Método)</span><span class="sxs-lookup"><span data-stu-id="572da-102">IMetaDataImport::GetNativeCallConvFromSig Method</span></span>
+<span data-ttu-id="572da-103">Obtiene la convención de llamada nativa del método representado por el puntero de firma especificado.</span><span class="sxs-lookup"><span data-stu-id="572da-103">Gets the native calling convention for the method that is represented by the specified signature pointer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="14f0a-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="14f0a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="572da-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="572da-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNativeCallConvFromSig (  
@@ -37,27 +37,27 @@ HRESULT GetNativeCallConvFromSig (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="14f0a-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="14f0a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="572da-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="572da-105">Parameters</span></span>  
  `pvSig`  
- <span data-ttu-id="14f0a-106">[in] Un puntero a la firma de metadatos del método para devolver la convención de llamada.</span><span class="sxs-lookup"><span data-stu-id="14f0a-106">[in] A pointer to the metadata signature of the method to return the calling convention for.</span></span>  
+ <span data-ttu-id="572da-106">[in] Un puntero a la firma de metadatos del método para devolver la convención de llamada.</span><span class="sxs-lookup"><span data-stu-id="572da-106">[in] A pointer to the metadata signature of the method to return the calling convention for.</span></span>  
   
  `cbSig`  
- <span data-ttu-id="14f0a-107">[in] El tamaño en bytes de `pvSig`.</span><span class="sxs-lookup"><span data-stu-id="14f0a-107">[in] The size in bytes of `pvSig`.</span></span>  
+ <span data-ttu-id="572da-107">[in] El tamaño en bytes de `pvSig`.</span><span class="sxs-lookup"><span data-stu-id="572da-107">[in] The size in bytes of `pvSig`.</span></span>  
   
  `pCallConv`  
- <span data-ttu-id="14f0a-108">[out] Un puntero a la convención de llamada nativa.</span><span class="sxs-lookup"><span data-stu-id="14f0a-108">[out] A pointer to the native calling convention.</span></span>  
+ <span data-ttu-id="572da-108">[out] Un puntero a la convención de llamada nativa.</span><span class="sxs-lookup"><span data-stu-id="572da-108">[out] A pointer to the native calling convention.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="14f0a-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="14f0a-109">Requirements</span></span>  
- <span data-ttu-id="14f0a-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="14f0a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="572da-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="572da-109">Requirements</span></span>  
+ <span data-ttu-id="572da-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="572da-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="14f0a-111">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="14f0a-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="572da-111">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="572da-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="14f0a-112">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="14f0a-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="572da-112">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="572da-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="14f0a-113">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="14f0a-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="572da-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="572da-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="14f0a-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="14f0a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="572da-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="572da-114">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.CallingConvention>
-- [<span data-ttu-id="14f0a-115">IMetaDataImport (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="14f0a-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="14f0a-116">IMetaDataImport2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="14f0a-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="572da-115">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="572da-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="572da-116">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="572da-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -14,7 +14,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e5479fad3f19c219a0ca1d5d01934ce92a7162e
 ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127181"

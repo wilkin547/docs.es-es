@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ac0e5db4a87b49d631bad4411f03fae8c1199aea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125637"
 ---
-# <a name="imetadataemitsethandler-method"></a><span data-ttu-id="7f4cc-102">IMetaDataEmit::SetHandler (Método)</span><span class="sxs-lookup"><span data-stu-id="7f4cc-102">IMetaDataEmit::SetHandler Method</span></span>
-<span data-ttu-id="7f4cc-103">Establece el método al que hace referencia especificado `IUnknown` puntero como una devolución de llamada de notificación para las reasignaciones de token.</span><span class="sxs-lookup"><span data-stu-id="7f4cc-103">Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.</span></span>  
+# <a name="imetadataemitsethandler-method"></a><span data-ttu-id="4d828-102">IMetaDataEmit::SetHandler (Método)</span><span class="sxs-lookup"><span data-stu-id="4d828-102">IMetaDataEmit::SetHandler Method</span></span>
+<span data-ttu-id="4d828-103">Establece el método al que hace referencia especificado `IUnknown` puntero como una devolución de llamada de notificación para las reasignaciones de token.</span><span class="sxs-lookup"><span data-stu-id="4d828-103">Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7f4cc-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7f4cc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4d828-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4d828-104">Syntax</span></span>  
   
 ```  
 HRESULT SetHandler (   
@@ -35,25 +35,25 @@ HRESULT SetHandler (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7f4cc-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7f4cc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4d828-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="4d828-105">Parameters</span></span>  
  `pUnk`  
- <span data-ttu-id="7f4cc-106">[in] Para registrar el controlador.</span><span class="sxs-lookup"><span data-stu-id="7f4cc-106">[in] The handler to register.</span></span>  
+ <span data-ttu-id="4d828-106">[in] Para registrar el controlador.</span><span class="sxs-lookup"><span data-stu-id="4d828-106">[in] The handler to register.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7f4cc-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="7f4cc-107">Remarks</span></span>  
- <span data-ttu-id="7f4cc-108">El motor de metadatos envía la notificación mediante el método proporcionado por `SetHandler`, a los compiladores que no generan registros de forma optimizada y que le gustaría optimizar registros guardados.</span><span class="sxs-lookup"><span data-stu-id="7f4cc-108">The metadata engine sends notification by using the method that is provided by `SetHandler`, to compilers that do not generate records in an optimized way and that would like to optimize saved records.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4d828-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="4d828-107">Remarks</span></span>  
+ <span data-ttu-id="4d828-108">El motor de metadatos envía la notificación mediante el método proporcionado por `SetHandler`, a los compiladores que no generan registros de forma optimizada y que le gustaría optimizar registros guardados.</span><span class="sxs-lookup"><span data-stu-id="4d828-108">The metadata engine sends notification by using the method that is provided by `SetHandler`, to compilers that do not generate records in an optimized way and that would like to optimize saved records.</span></span>  
   
- <span data-ttu-id="7f4cc-109">Si el método de devolución de llamada no se proporciona a través de `SetHandler`, no se realizará ninguna optimización en Guardar, excepto donde importación varios ámbitos se han combinado mediante `IMapToken` en cada ámbito de replicación de mezcla.</span><span class="sxs-lookup"><span data-stu-id="7f4cc-109">If the callback method is not provided through `SetHandler`, no optimization will be performed on save except where several import scopes have been merged using `IMapToken` on merge for each scope.</span></span>  
+ <span data-ttu-id="4d828-109">Si el método de devolución de llamada no se proporciona a través de `SetHandler`, no se realizará ninguna optimización en Guardar, excepto donde importación varios ámbitos se han combinado mediante `IMapToken` en cada ámbito de replicación de mezcla.</span><span class="sxs-lookup"><span data-stu-id="4d828-109">If the callback method is not provided through `SetHandler`, no optimization will be performed on save except where several import scopes have been merged using `IMapToken` on merge for each scope.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7f4cc-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7f4cc-110">Requirements</span></span>  
- <span data-ttu-id="7f4cc-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7f4cc-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4d828-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4d828-110">Requirements</span></span>  
+ <span data-ttu-id="4d828-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4d828-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7f4cc-112">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="7f4cc-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4d828-112">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="4d828-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7f4cc-113">**Biblioteca:** Usar como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7f4cc-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4d828-113">**Biblioteca:** Usar como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4d828-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="7f4cc-114">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="7f4cc-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="4d828-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d828-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f4cc-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="7f4cc-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d828-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="4d828-115">See also</span></span>
 
-- [<span data-ttu-id="7f4cc-116">IMetaDataEmit (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="7f4cc-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="7f4cc-117">IMetaDataEmit2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="7f4cc-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="4d828-116">IMetaDataEmit (interfaz)</span><span class="sxs-lookup"><span data-stu-id="4d828-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="4d828-117">IMetaDataEmit2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="4d828-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
