@@ -3,10 +3,10 @@ title: Asignación externa
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
 ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218685"
 ---
 # <a name="external-mapping"></a>Asignación externa
@@ -27,7 +27,7 @@ ms.locfileid: "59218685"
   
 -   La asignación externa invalida la asignación basada en atributos. En otras palabras, al utilizar un origen de asignación externo para crear un <xref:System.Data.Linq.DataContext>, el <xref:System.Data.Linq.DataContext> omite todos los atributos de asignación que se han creado en las clases. Este comportamiento es cierto si la clase está incluida en el archivo de asignación externo.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no se admite el uso híbrido de los dos enfoques de asignación (basado en atributos y externos).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite el uso híbrido de los dos enfoques de asignación (basado en atributos y externo).  
   
 ## <a name="xml-schema-definition-file"></a>Archivo de definición de esquema XML  
  La asignación externa en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] debe ser válida según la siguiente definición de esquema XML.  
@@ -145,4 +145,4 @@ elementFormDefault="qualified" >
 
 - [Generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Filtrar para generar el modelo de objetos como un archivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Cómo: Generar el modelo de objetos como un archivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

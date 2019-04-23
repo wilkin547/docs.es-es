@@ -1,5 +1,5 @@
 ---
-title: Filtrar Aplicar estilo a controles en un elemento ToolBar
+title: Procedimiento Aplicar estilo a controles en un elemento ToolBar
 ms.date: 03/30/2017
 helpviewer_keywords:
 - styling controls on toolbar [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - customizing controls on toolbar [WPF]
 ms.assetid: ba6ae056-d6a9-4c24-90f8-467ab0bc0b1a
 ms.openlocfilehash: 580b56ebb47aa7bd50da0a966ccf60f7ea9fb2a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217788"
 ---
-# <a name="how-to-style-controls-on-a-toolbar"></a>Filtrar Aplicar estilo a controles en un elemento ToolBar
+# <a name="how-to-style-controls-on-a-toolbar"></a>Procedimiento Aplicar estilo a controles en un elemento ToolBar
 El <xref:System.Windows.Controls.ToolBar> define <xref:System.Windows.ResourceKey> objetos para especificar el estilo de los controles dentro de la <xref:System.Windows.Controls.ToolBar>.  Para aplicar estilo a un control en un <xref:System.Windows.Controls.ToolBar>, establezca el `x:key` atributo del estilo a un <xref:System.Windows.ResourceKey> definido en <xref:System.Windows.Controls.ToolBar>.  
   
  El <xref:System.Windows.Controls.ToolBar> define los siguientes elementos <xref:System.Windows.ResourceKey> objetos:  

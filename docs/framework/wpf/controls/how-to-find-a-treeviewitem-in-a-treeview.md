@@ -1,5 +1,5 @@
 ---
-title: Filtrar Buscar un TreeViewItem en un TreeView
+title: Procedimiento Buscar un TreeViewItem en un TreeView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
 ms.openlocfilehash: 034ec2e57fb3b6a9b3a81f66f6888a68e2c113d7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219049"
 ---
-# <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Filtrar Buscar un TreeViewItem en un TreeView
+# <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Procedimiento Buscar un TreeViewItem en un TreeView
 El <xref:System.Windows.Controls.TreeView> control proporciona una manera cómoda de mostrar datos jerárquicos. Si su <xref:System.Windows.Controls.TreeView> está enlazado a un origen de datos, el <xref:System.Windows.Controls.TreeView.SelectedItem%2A> propiedad proporciona una manera cómoda para que pueda recuperar rápidamente el objeto de datos seleccionado. Normalmente es mejor trabajar con el objeto de datos subyacente, pero a veces es posible que deba manipular mediante programación los datos que contiene <xref:System.Windows.Controls.TreeViewItem>. Por ejemplo, es posible que deba expandir mediante programación el <xref:System.Windows.Controls.TreeViewItem>, o seleccione un elemento diferente en el <xref:System.Windows.Controls.TreeView>.  
   
  Para buscar un <xref:System.Windows.Controls.TreeViewItem> que contiene un objeto de datos específico, deberá recorrer cada nivel de la <xref:System.Windows.Controls.TreeView>. Los elementos de un <xref:System.Windows.Controls.TreeView> también se pueden virtualizar para mejorar el rendimiento. En el caso donde es posible que se puede virtualizar elementos, también debe tener en cuenta un <xref:System.Windows.Controls.TreeViewItem> para comprobar si contiene el objeto de datos.  

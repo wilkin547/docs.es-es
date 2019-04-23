@@ -13,10 +13,10 @@ ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217879"
 ---
 # <a name="releasehandlefailed-mda"></a>MDA de releaseHandleFailed
@@ -28,7 +28,7 @@ El Asistente para depuración administrada (MDA) de `releaseHandleFailed` se act
 ## <a name="cause"></a>Motivo  
  Los usuarios deben proporcionar la implementación del método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> si crean clases que deriven de <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle>. Por lo tanto, las circunstancias son específicas de cada recurso. Sin embargo, los requisitos son los siguientes:  
   
--   <xref:System.Runtime.InteropServices.SafeHandle> y <xref:System.Runtime.InteropServices.CriticalHandle> tipos representan contenedores en torno a los recursos de procesos fundamentales. Si se produce una pérdida de memoria, con el tiempo, esto puede inutilizar el proceso.  
+-   Los tipos <xref:System.Runtime.InteropServices.SafeHandle> y <xref:System.Runtime.InteropServices.CriticalHandle> representan contenedores que contienen recursos de procesos fundamentales. Si se produce una pérdida de memoria, con el tiempo, esto puede inutilizar el proceso.  
   
 -   Para que el método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> realice su función, no debe haber errores en él. Una vez que el proceso adquiere este tipo de recurso, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> es la única manera de liberarlo. Por lo tanto, los errores conllevan pérdidas de recursos.  
   
@@ -93,5 +93,5 @@ bool ReleaseHandle()
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnóstico de errores con asistentes de depuraciones administradas](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

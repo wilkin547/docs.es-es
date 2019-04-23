@@ -9,10 +9,10 @@ ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9b7e8a4d92661b974fba7c88989891b30e54e94d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218457"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5
@@ -38,4 +38,4 @@ Mensaje para cerrar las aplicaciones .NET Framework que estén en uso
 
 - [Implementación](../../../docs/framework/deployment/index.md)
 - [Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Procedimiento para obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
