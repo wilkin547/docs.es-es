@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d64e254f5dd1f7d35150953c31854f45eb06b12
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3e6057d1ce6b5d0e961449ef298b1a50c7a407ef
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496955"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59200537"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)
 La herramienta de la directiva de seguridad de acceso del código (CAS), o herramienta Caspol.exe, permite a los usuarios y administradores modificar las directivas de seguridad correspondientes a los niveles de equipo, usuario y empresa.  
@@ -247,5 +247,6 @@ caspol -all -resolveperm testassembly
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Herramientas](index.md)
 - [Símbolos del sistema](developer-command-prompt-for-vs.md)

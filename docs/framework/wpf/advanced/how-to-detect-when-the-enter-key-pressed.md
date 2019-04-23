@@ -1,5 +1,5 @@
 ---
-title: Filtrar Detectar cuando la escriba tecla presionada
+title: Procedimiento Detectar cuando la escriba tecla presionada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - keys [WPF], Enter
 ms.assetid: a66f39d2-ef4a-43a5-b454-a4ea0fe88655
 ms.openlocfilehash: a99da5804bbc31897198b9b6d9e21da9f17dfe26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204619"
 ---
-# <a name="how-to-detect-when-the-enter-key-pressed"></a>Filtrar Detectar cuando la escriba tecla presionada
+# <a name="how-to-detect-when-the-enter-key-pressed"></a>Procedimiento Detectar cuando la escriba tecla presionada
 En este ejemplo se muestra cómo detectar cuándo el <xref:System.Windows.Input.Key.Enter> se presiona la tecla del teclado.  
   
  Este ejemplo consta de un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivo y un archivo de código subyacente.  

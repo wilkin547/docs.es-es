@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar SystemParameters
+title: Procedimiento Usar SystemParameters
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
 ms.openlocfilehash: 344fb54b48bcbf188b36a29d8205c21deff713c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199861"
 ---
-# <a name="how-to-use-systemparameters"></a>Filtrar Usar SystemParameters
+# <a name="how-to-use-systemparameters"></a>Procedimiento Usar SystemParameters
 En este ejemplo se muestra cómo obtener acceso y usar las propiedades de <xref:System.Windows.SystemParameters> con el fin de estilo de un botón o personalizarlo.  
   
 ## <a name="example"></a>Ejemplo  

@@ -1,5 +1,5 @@
 ---
-title: <add> Elemento para connectionManagement (configuración de red)
+title: Elemento <add> para connectionManagement (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 ms.openlocfilehash: 3a046fd386536b29ea2dcad5660c65c08b7e4478
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204255"
 ---
 # <a name="add-element-for-connectionmanagement-network-settings"></a>\<Agregar > elemento para connectionManagement (configuración de red)
@@ -39,7 +39,7 @@ Agrega una dirección IP o nombre DNS a la lista de administración de conexión
   
 ### <a name="attributes"></a>Atributos  
   
-|**Atributo**|**Descripción**|  
+|**Attribute**|**Descripción**|  
 |-------------------|---------------------|  
 |`address`|Cadena que describe una dirección IP o nombre DNS.|  
 |`maxconnection`|Número máximo de conexiones permitido en un servidor. Si no se proporciona, el valor predeterminado es 2.|  
@@ -49,7 +49,7 @@ Agrega una dirección IP o nombre DNS a la lista de administración de conexión
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Especifica el número máximo de conexiones a un host de red.|  
   

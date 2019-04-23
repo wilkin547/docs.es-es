@@ -2,12 +2,12 @@
 title: Ejemplos de programación de red
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: b74de4b9b7ef6a505b0f6f986ffe5152b60e7956
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 6d66a5ce0835a52dd1b8c331d94bc58ce17622c1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220301"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59204554"
 ---
 # <a name="network-programming-samples"></a>Ejemplos de programación de red
 En esta sección se incluyen descripciones y vínculos a ejemplos de programación de redes que se pueden descargar y que usan clases en los espacios de nombres <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> y relacionados. 
@@ -51,13 +51,13 @@ En esta sección se incluyen descripciones y vínculos a ejemplos de programaci�
   
  [Ejemplo de tecnología de explorador FTP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms233623(v=vs.85))  
  Muestra cómo enumerar el contenido de un servidor FTP.  
-  
-  
+
 ## <a name="reference"></a>Referencia  
  <xref:System.Net>  
   
  <xref:System.Net.NetworkInformation>  
   
 ## <a name="see-also"></a>Vea también
+
 - [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Temas de procedimientos de programación de redes](../../../docs/framework/network-programming/network-programming-how-to-topics.md)

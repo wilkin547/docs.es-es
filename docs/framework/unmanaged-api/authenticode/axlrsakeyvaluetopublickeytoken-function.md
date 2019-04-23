@@ -11,10 +11,10 @@ ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49476a4417e5431842f8e2ba0371c53c5c9f03e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207830"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_Función AxlRSAKeyValueToPublicKeyToken
@@ -42,7 +42,7 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
  [out] Puntero a WCHAR * para recibir el token de clave pública de codificación hexadecimal.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si la función se realiza correctamente. De lo contrario, devuelve un código de error.  
+ `S_OK` si la función se realiza correctamente. De lo contrario, devuelve un código de error.  
   
 ## <a name="see-also"></a>Vea también
 

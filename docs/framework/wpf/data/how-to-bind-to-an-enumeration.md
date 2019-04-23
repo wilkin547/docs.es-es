@@ -1,5 +1,5 @@
 ---
-title: Filtrar Enlazar a una enumeración
+title: Procedimiento Enlazar a una enumeración
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binding data [WPF], enumeration
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - enumeration [WPF]
 ms.assetid: b9091eba-1119-424e-868b-d1a4168b3732
 ms.openlocfilehash: 5026261366d6abde82790f05780d8ba2c29c4a49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210027"
 ---
-# <a name="how-to-bind-to-an-enumeration"></a>Filtrar Enlazar a una enumeración
+# <a name="how-to-bind-to-an-enumeration"></a>Procedimiento Enlazar a una enumeración
 En este ejemplo se muestra cómo enlazar a una enumeración enlazando al método GetValues de la enumeración.  
   
 ## <a name="example"></a>Ejemplo  

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Convertir una imagen en escala de grises
+title: Procedimiento Convertir una imagen en escala de grises
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - grayscale [WPF], converting images to
 ms.assetid: 77935ff0-4500-4307-9710-96999dcf579f
 ms.openlocfilehash: f3b7837c6c25db1aa3bdd11786df90660a75da87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200290"
 ---
-# <a name="how-to-convert-an-image-to-greyscale"></a>Filtrar Convertir una imagen en escala de grises
+# <a name="how-to-convert-an-image-to-greyscale"></a>Procedimiento Convertir una imagen en escala de grises
 En este ejemplo se muestra cómo convertir una imagen en escala de grises utilizando <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.  
   
 ## <a name="example"></a>Ejemplo  

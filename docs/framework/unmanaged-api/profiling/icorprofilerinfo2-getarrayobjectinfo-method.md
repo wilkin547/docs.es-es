@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5276c69da05cedcd3195a09da12ddc5b2d0fed67
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201278"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo (Método)
@@ -52,7 +52,7 @@ HRESULT GetArrayObjectInfo(
  [out] Una matriz que contiene enteros, cada uno que representa la parte inferior se enlaza de una dimensión de la matriz.  
   
  `ppData`  
- [out] Un puntero a la dirección del búfer sin formato para la matriz, que se distribuyen según la convención de C++.  
+ [out] Un puntero a la dirección del búfer sin formato para la matriz, que se distribuyen según la C++ convención.  
   
 ## <a name="remarks"></a>Comentarios  
  El `pDimensionSizes` y `pDimensionLowerBounds` son matrices paralelas, por lo que los elementos que se encuentra en el mismo índice de cada matriz son características de la misma entidad.  
@@ -68,5 +68,5 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerInfo (Interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 (Interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

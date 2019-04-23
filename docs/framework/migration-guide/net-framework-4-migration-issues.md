@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d861aa59b31871d20d21d88d9587239f76ae386d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 368d5f7fa2eec8f3526a10b4777a862e8334617c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203644"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59210235"
 ---
 # <a name="net-framework-4-migration-issues"></a>Problemas de migración de .NET Framework 4
 
@@ -85,7 +85,6 @@ Espacio de nombres: <xref:System>; ensamblado: mscorlib (en mscorlib.dll)
 | ------- | ------------------------ | ------------------- |
 | **Horario de verano** | Para ser coherentes con el reloj del sistema, las propiedades de tiempo (como <xref:System.TimeZoneInfo.Local> y <xref:System.DateTime.Now>) ahora usan las reglas del sistema operativo, en lugar de otros datos de .NET Framework, para las operaciones de horario de verano. | Ninguno. |
 | **Aplicar formato a cadenas** | Para admitir el formato que tiene en cuenta la referencia cultural, la estructura <xref:System.TimeSpan> incluye nuevas sobrecargas de los métodos `ToString`, `Parse` y `TryParse`, además de los nuevos métodos `ParseExact` y `TryParseExact`. | Ninguno. |
-
 
 ### <a name="globalization"></a>Globalización
 

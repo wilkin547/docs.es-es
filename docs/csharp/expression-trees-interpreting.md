@@ -3,12 +3,12 @@ title: Interpretación de expresiones
 description: Obtenga información sobre cómo escribir código para examinar la estructura de un árbol de expresión.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 952a1c553e2392ffc717dc344dfe77a11f025cc4
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201981"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59211249"
 ---
 # <a name="interpreting-expressions"></a>Interpretación de expresiones
 
@@ -355,7 +355,6 @@ Expression<Func<int, int>> factorial = (n) =>
 
 Este código representa una posible implementación para la función *factorial* matemática. La manera en que he escrito este código resalta dos limitaciones en la creación de árboles de expresión asignando expresiones lambda a las expresiones. En primer lugar, las expresiones lambda de instrucción no están permitidas. Eso significa que no puedo usar bucles, bloques, instrucciones IF/ELSE ni otras estructuras de control comunes en C#. Estoy limitado al uso de expresiones. En segundo lugar, no puedo llamar recursivamente a la misma expresión.
 Podría si ya fuera un delegado, pero no puedo llamarla en su forma de árbol de expresión. En la sección de [Crear árboles de expresión](expression-trees-building.md), obtendrá las técnicas para superar estas limitaciones.
-
 
 En esta expresión, encontrará nodos de todos estos tipos:
 1. Equal (expresión binaria)

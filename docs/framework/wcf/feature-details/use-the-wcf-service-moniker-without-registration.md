@@ -1,17 +1,17 @@
 ---
-title: Filtrar para usar el moniker de servicio de Windows Communication Foundation sin registrarse
+title: Procedimiento para usar el moniker de servicio de Windows Communication Foundation sin registrarse
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
 ms.openlocfilehash: be4798663d0b39301ec496df45a4a7a5bf9c88e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203982"
 ---
-# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Filtrar para usar el moniker de servicio de Windows Communication Foundation sin registrarse
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Procedimiento para usar el moniker de servicio de Windows Communication Foundation sin registrarse
 Para conectarse y comunicarse con un servicio de Windows Communication Foundation (WCF), una aplicación cliente WCF debe tener los detalles de la dirección del servicio, la configuración de enlace y el contrato de servicio.  
   
  El moniker de servicio WCF normalmente obtiene el contrato necesario a través de un registro previo de los tipos de atributo obligatorio, pero puede haber casos donde esto no es posible. En lugar del registro, el moniker puede obtener la definición del contrato en forma de documento de lenguaje de descripción de servicios Web (WSDL), mediante el uso del parámetro `wsdl` o a través de Metadatos Exchange, utilizando el parámetro `mexAddress`.  
@@ -59,4 +59,4 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para registrar y configurar un moniker de servicio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+- [Cómo: Registrar y configurar un Moniker de servicio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un DockPanel
+title: Procedimiento Crear un DockPanel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - DockPanel control [WPF], creating
 ms.assetid: 9194f663-e279-4f1a-86d7-125a57d05c6f
 ms.openlocfilehash: 35434a13386ae89fdc1428bd632d21c1551c9871
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200602"
 ---
-# <a name="how-to-create-a-dockpanel"></a>Filtrar Crear un DockPanel
+# <a name="how-to-create-a-dockpanel"></a>Procedimiento Crear un DockPanel
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente se crea y utiliza una instancia de <xref:System.Windows.Controls.DockPanel> mediante código. En el ejemplo se muestra cómo dividir el espacio mediante la creación de cinco <xref:System.Windows.Shapes.Rectangle> elementos y colocarlos (acoplarlos) dentro de un elemento primario <xref:System.Windows.Controls.DockPanel>. Si mantiene la configuración predeterminada, el último rectángulo rellena todo el espacio sin asignar restante.  
   

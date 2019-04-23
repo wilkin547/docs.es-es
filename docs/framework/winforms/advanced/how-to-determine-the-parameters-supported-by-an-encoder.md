@@ -1,5 +1,5 @@
 ---
-title: Filtrar para determinar los parámetros que admite un codificador
+title: Procedimiento para determinar los parámetros que admite un codificador
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
 ms.openlocfilehash: 2626eee239d9876125340dd133c5a9b3e45c3d7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204580"
 ---
-# <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>Filtrar para determinar los parámetros que admite un codificador
+# <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>Procedimiento para determinar los parámetros que admite un codificador
 Puede ajustar los parámetros de imagen, como el nivel de calidad y la compresión, pero debe saber qué parámetros son compatibles con un codificador de imagen determinado. El <xref:System.Drawing.Image> clase proporciona el <xref:System.Drawing.Image.GetEncoderParameterList%2A> método para que pueda determinar qué parámetros de imagen se admiten para un codificador determinado. Especifique el codificador con un GUID. El <xref:System.Drawing.Image.GetEncoderParameterList%2A> método devuelve una matriz de <xref:System.Drawing.Imaging.EncoderParameter> objetos.  
   
 ## <a name="example"></a>Ejemplo  
@@ -32,6 +32,6 @@ Puede ajustar los parámetros de imagen, como el nivel de calidad y la compresi�
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para enumerar los codificadores instalados](how-to-list-installed-encoders.md)
+- [Cómo: Enumerar los codificadores instalados](how-to-list-installed-encoders.md)
 - [Tipos de mapas de bits](types-of-bitmaps.md)
 - [Usar codificadores y descodificadores de imagen en la interfaz GDI+ administrada](using-image-encoders-and-decoders-in-managed-gdi.md)

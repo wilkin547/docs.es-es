@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
 ms.openlocfilehash: 566a7905ac2eda17046595bcccc868e44f6a1e9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203943"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Agrupación de conexiones de SQL Server (ADO.NET)
@@ -19,7 +19,7 @@ La conexión a un servidor de bases de datos suele constar de varios pasos que r
   
  La agrupación de conexiones reduce el número de veces que es necesario abrir nuevas conexiones. El *agrupador* mantiene la propiedad de la conexión física. Para administrar las conexiones, mantiene un conjunto de conexiones activas para cada configuración de conexión dada. Cada vez que un usuario llama a `Open` en una conexión, el agrupador comprueba si hay una conexión disponible en el grupo. Si hay disponible una conexión agrupada, la devuelve a la persona que llama en lugar de abrir una nueva. Cuando la aplicación llama a `Close` en la conexión, el agrupador la devuelve al conjunto agrupado de conexiones activas en lugar de cerrarla. Una vez que la conexión vuelve al grupo, ya está preparada para volverse a utilizar en la siguiente llamada a `Open`.  
   
- Solo se pueden agrupar conexiones con la misma configuración. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] mantiene varios grupos al mismo tiempo, uno para cada configuración. Las conexiones se dividen en grupos por cadena de conexión, y por identidad de Windows si se utiliza seguridad integrada. Las conexiones también se agrupan en función de si están incluidas en una transacción. Cuando se usa <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, la instancia de <xref:System.Data.SqlClient.SqlCredential> afecta al grupo de conexiones. Distintas instancias de <xref:System.Data.SqlClient.SqlCredential> usarán diferentes grupos de conexiones, incluso si el identificador de usuario y la contraseña son iguales.  
+ Solo se pueden agrupar conexiones con la misma configuración. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] mantiene varios grupos de forma simultánea, uno para cada configuración. Las conexiones se dividen en grupos por cadena de conexión, y por identidad de Windows si se utiliza seguridad integrada. Las conexiones también se agrupan en función de si están incluidas en una transacción. Cuando se usa <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, la instancia de <xref:System.Data.SqlClient.SqlCredential> afecta al grupo de conexiones. Distintas instancias de <xref:System.Data.SqlClient.SqlCredential> usarán diferentes grupos de conexiones, incluso si el identificador de usuario y la contraseña son iguales.  
   
  La agrupación de conexiones puede mejorar de forma considerable el rendimiento y la escalabilidad de la aplicación. De forma predeterminada, la agrupación de conexiones está habilitada en [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. A menos que la deshabilite explícitamente, el agrupador optimiza las conexiones a medida que se abren y cierran en la aplicación. También puede proporcionar varios modificadores de cadena de conexión para controlar el comportamiento de agrupación de conexiones. Para obtener más información, vea "Control de la agrupación de conexiones con palabras clave de cadena de conexión" más adelante en este tema.  
   
@@ -80,7 +80,7 @@ Para obtener más información acerca de los eventos asociados con la apertura y
  Si existe una conexión en un servidor que ha desaparecido, se puede extraer del grupo aunque el agrupador de conexiones no haya detectado la conexión rota y la haya marcado como no válida. El motivo es que la sobrecarga de comprobar que la conexión es aún válida eliminaría los beneficios de tener un concentrador y ocasionaría que se produjera otro viaje de ida y vuelta (round trip) al servidor. Cuando esto ocurre, el primer intento para usar la conexión detectará que ésta se ha roto y se iniciará una excepción.  
   
 ## <a name="clearing-the-pool"></a>Borrado del grupo  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 introdujo dos nuevos métodos para borrar el grupo: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> y <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` Borra los grupos de conexión de un proveedor dado, y `ClearPool` borra el grupo de conexión que está asociado con una conexión específica. Si en el momento de la llamada se están usando conexiones, se marcan de forma adecuada. Cuando se cierran, se descartan en lugar de devolverse al grupo.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 introdujo dos nuevos métodos para borrar el grupo: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> y <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` borra los grupos de conexión de un proveedor dado, y `ClearPool` borra el grupo de conexión que está asociado a una conexión concreta. Si en el momento de la llamada se están usando conexiones, se marcan de forma adecuada. Cuando se cierran, se descartan en lugar de devolverse al grupo.  
   
 ## <a name="transaction-support"></a>Compatibilidad con transacciones  
  Las conexiones se extraen del grupo y se asignan en función del contexto de transacción. A menos que se especifique `Enlist=false` en la cadena de conexión, el grupo de conexión garantiza que la conexión está dada de alta en el contexto de <xref:System.Transactions.Transaction.Current%2A>. Cuando se cierra una conexión y se devuelve al grupo con una transacción `System.Transactions` dada de alta, se reserva de forma que la siguiente solicitud de ese grupo de conexiones con la misma transacción `System.Transactions` devolverá la misma conexión, si está disponible. Si se emite dicha solicitud y no hay conexiones agrupadas disponibles, se extrae una conexión de la parte sin transacción del grupo y se le da de alta. Si no hay conexiones disponibles en cualquier área del grupo, se crea y da de alta una nueva conexión.  
@@ -134,4 +134,4 @@ using (SqlConnection connection = new SqlConnection(
 - [Agrupación de conexiones](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [SQL Server y ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [Contadores de rendimiento](../../../../docs/framework/data/adonet/performance-counters.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

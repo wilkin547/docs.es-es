@@ -19,10 +19,10 @@ helpviewer_keywords:
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
 ms.openlocfilehash: 0bcb0e7369345aaae39d99a005a07304aaad7043
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200355"
 ---
 # <a name="threading-model"></a>Modelo de subprocesos
@@ -74,7 +74,7 @@ ms.locfileid: "59200355"
   
  ![Captura de pantalla que muestra la cola del distribuidor.](./media/threading-model/threading-dispatcher-queue.png)  
   
- [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] lleva a cabo la revisión ortográfica mediante este mecanismo. Corrector ortográfico se realiza en segundo plano con el tiempo de inactividad de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso. Echemos un vistazo al código.  
+ [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] realiza la revisión ortográfica mediante este mecanismo. Corrector ortográfico se realiza en segundo plano con el tiempo de inactividad de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso. Echemos un vistazo al código.  
   
  En el ejemplo siguiente se muestra el XAML que crea la interfaz de usuario.  
   
@@ -92,12 +92,12 @@ ms.locfileid: "59200355"
   
  Además de actualizar el texto en el <xref:System.Windows.Controls.Button>, este controlador es responsable de programar la primera comprobación de número primo agregando un delegado para el <xref:System.Windows.Threading.Dispatcher> cola. En ocasiones, después de este controlador de eventos ha finalizado su trabajo, el <xref:System.Windows.Threading.Dispatcher> seleccionará este delegado para la ejecución.  
   
- Como mencionamos anteriormente, <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> es el <xref:System.Windows.Threading.Dispatcher> miembro que se usa para programar un delegado para la ejecución. En este caso, elegimos el <xref:System.Windows.Threading.DispatcherPriority.SystemIdle> prioridad. El <xref:System.Windows.Threading.Dispatcher> se ejecutará este delegado sólo cuando no hay ningún evento importante por procesar. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] la capacidad de respuesta es más importante que la comprobación de números. También se pasa un nuevo delegado que representa la rutina de comprobación de números.  
+ Como mencionamos anteriormente, <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> es el <xref:System.Windows.Threading.Dispatcher> miembro que se usa para programar un delegado para la ejecución. En este caso, elegimos el <xref:System.Windows.Threading.DispatcherPriority.SystemIdle> prioridad. El <xref:System.Windows.Threading.Dispatcher> se ejecutará este delegado sólo cuando no hay ningún evento importante por procesar. La capacidad de respuesta de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] es más importante que la comprobación de números. También se pasa un nuevo delegado que representa la rutina de comprobación de números.  
   
  [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
  [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
   
- Este método comprueba si el siguiente número impar es primo. Si es primo, el método actualiza directamente el `bigPrime`<xref:System.Windows.Controls.TextBlock> para reflejar su detección. Se puede hacer porque el cálculo se está produciendo en el mismo subproceso que se ha usado para crear el componente. Si hubiéramos decidido usar un subproceso independiente para el cálculo, tendríamos que usar un mecanismo de sincronización más complicado y ejecutar la actualización en el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso. A continuación se mostrará esta situación.  
+ Este método comprueba si el siguiente número impar es primo. Si es primo, el método actualiza directamente el `bigPrime` <xref:System.Windows.Controls.TextBlock> para reflejar su detección. Se puede hacer porque el cálculo se está produciendo en el mismo subproceso que se ha usado para crear el componente. Si hubiéramos decidido usar un subproceso independiente para el cálculo, tendríamos que usar un mecanismo de sincronización más complicado y ejecutar la actualización en el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso. A continuación se mostrará esta situación.  
   
  Para el código fuente completo para este ejemplo, vea el [Single-Threaded Application with Long-Running Calculation Sample](https://go.microsoft.com/fwlink/?LinkID=160038)  
   
@@ -141,9 +141,9 @@ ms.locfileid: "59200355"
 ### <a name="multiple-windows-multiple-threads"></a>Varias ventanas, varios subprocesos  
  Algunos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones requieren varias ventanas de nivel superior. Es perfectamente aceptable para un subproceso /<xref:System.Windows.Threading.Dispatcher> combinación para administrar varias ventanas, pero a veces varios subprocesos hacer mejor su trabajo. Esto es especialmente cierto si hay alguna posibilidad de que una de las ventanas monopolice el subproceso.  
   
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Explorador funciona de esta manera. Cada nueva ventana del Explorador pertenece al proceso original, pero se crea bajo el control de un subproceso independiente.  
+ El Explorador de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] funciona de esta manera. Cada nueva ventana del Explorador pertenece al proceso original, pero se crea bajo el control de un subproceso independiente.  
   
- Mediante el uso de un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Frame> control, podemos mostrar páginas Web. Podemos crear fácilmente un sencillo [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] sustituir. Comenzamos con una característica importante: la capacidad de abrir una nueva ventana del explorador. Cuando el usuario hace clic en el botón "Nueva ventana", se inicia una copia de nuestra ventana en un subproceso independiente. De este modo, las operaciones de ejecución prolongada o de bloqueo en una de las ventanas no bloquearán a todas las demás.  
+ Mediante el uso de un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Frame> control, podemos mostrar páginas Web. Podemos crear fácilmente un sencillo [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] sustituir. Comenzamos con una característica importante: la capacidad de abrir una nueva ventana del explorador. Cuando el usuario hace clic en el botón "Nueva ventana", se inicia una copia de nuestra ventana en un subproceso independiente. De este modo, las operaciones de ejecución prolongada o de bloqueo en una de las ventanas no bloquearán a todas las demás.  
   
  En realidad, el modelo de explorador web tiene su propio modelo complicado de subprocesos. Lo elegimos porque debería resultar conocido para la mayoría de los lectores.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "59200355"
  [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent1)]
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent1)]  
   
- `GetWeatherAsync` usaría una de las técnicas descritas anteriormente, como la creación de un subproceso en segundo plano, para realizar el trabajo de forma asincrónica, no bloquea el subproceso de llamada.  
+ `GetWeatherAsync` usaría una de las técnicas descritas anteriormente, como la creación de un subproceso en segundo plano, para hacer el trabajo de forma asincrónica, sin bloquear el subproceso de llamada.  
   
  Una de las partes más importantes de este patrón es llamar a la *MethodName* `Completed` método en el mismo subproceso que llama el *MethodName* `Async` que comience con método. Podrían hacerlo mediante [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bastante sencilla, almacenando <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>, pero, a continuación, el componente no gráfico solo podría usarse en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones, no en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] programas.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "59200355"
   
  ![Captura de pantalla que muestra un cuadro de mensajes con un botón Aceptar](./media/threading-model/threading-message-loop.png)  
   
- Algún subproceso debe estar a cargo de la ventana del cuadro de mensaje. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] podría crear un nuevo subproceso para la ventana del cuadro de mensaje, pero este subproceso no podrá representar los elementos deshabilitados en la ventana original (recuerde la explicación anterior sobre la exclusión mutua). En su lugar, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utiliza un sistema de procesamiento de mensajes anidados. El <xref:System.Windows.Threading.Dispatcher> clase incluye un método especial denominado <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, que almacena el punto de ejecución actual de la aplicación, a continuación, comienza un nuevo bucle de mensajes. Cuando finaliza el bucle de mensajes anidados, se reanuda la ejecución después del original <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> llamar.  
+ Algún subproceso debe estar a cargo de la ventana del cuadro de mensaje. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] podría crear un nuevo subproceso para la ventana del cuadro de mensaje, pero este subproceso no podría representar los elementos deshabilitados en la ventana original (recuerde la explicación anterior sobre la exclusión mutua). En su lugar, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utiliza un sistema de procesamiento de mensajes anidados. El <xref:System.Windows.Threading.Dispatcher> clase incluye un método especial denominado <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, que almacena el punto de ejecución actual de la aplicación, a continuación, comienza un nuevo bucle de mensajes. Cuando finaliza el bucle de mensajes anidados, se reanuda la ejecución después del original <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> llamar.  
   
  En este caso, <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> mantiene el contexto de programa en la llamada a <xref:System.Windows.MessageBox>.<xref:System.Windows.MessageBox.Show%2A>, y se inicia un nuevo bucle de mensajes para volver a dibujar la ventana de fondo y controlar la entrada de la ventana del cuadro de mensaje. Cuando el usuario hace clic en Aceptar y borra la ventana emergente, se sale del bucle anidado y se reanuda el control después de llamar a <xref:System.Windows.MessageBox.Show%2A>.  
   
@@ -217,4 +217,4 @@ ms.locfileid: "59200355"
   
 ## <a name="see-also"></a>Vea también
 
-- [Single-Threaded Application with Long-Running Calculation Sample](https://go.microsoft.com/fwlink/?LinkID=160038)
+- [Single-Threaded Application with Long-Running Calculation Sample](https://go.microsoft.com/fwlink/?LinkID=160038) (Ejemplo de aplicación de un único subproceso con un cálculo de ejecución prolongada)

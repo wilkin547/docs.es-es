@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebec8c880f5b40ed3294585b9be0e83972ac12a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1f9a88a347650474c7a63b41984e3346e0ce205
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741711"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59204567"
 ---
 # <a name="shadow-copying-assemblies"></a>Copias sombra de ensamblados
 Las instantáneas permiten que los ensamblados que se usan en un dominio de aplicación se actualicen sin descargar el dominio de aplicación. Esto es especialmente útil para las aplicaciones que tienen que estar disponibles continuamente, como los sitios de ASP.NET.  
@@ -78,6 +78,7 @@ Las instantáneas permiten que los ensamblados que se usan en un dominio de apli
  La clase <xref:System.AppDomain> tiene varios métodos, como <xref:System.AppDomain.SetShadowCopyFiles%2A> y <xref:System.AppDomain.ClearShadowCopyPath%2A>, que pueden utilizarse para controlar la creación de instantáneas en un dominio de aplicación, pero estos métodos se marcaron como obsoletos en la versión 2.0 de .NET Framework. La forma recomendada de configurar un dominio de aplicación es utilizar las propiedades de la clase <xref:System.AppDomainSetup>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>

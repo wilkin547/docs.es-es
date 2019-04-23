@@ -1,5 +1,5 @@
 ---
-title: <servicePointManager> Elemento (configuración de red)
+title: Elemento <servicePointManager> (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 ms.openlocfilehash: 407ed85de109a671030eccff8ddd92af91628014
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202214"
 ---
 # <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > elemento (configuración de red)
@@ -42,7 +42,7 @@ Configura las conexiones a los recursos de red.
   
 ### <a name="attributes"></a>Atributos  
   
-|**Atributo**|**Descripción**|  
+|**Attribute**|**Descripción**|  
 |-------------------|---------------------|  
 |`checkCertificateName`|Especifica si el sistema debe comprobar que el nombre del certificado coincide con el nombre de host del servidor antes de usar el certificado. El valor predeterminado es `true`.|  
 |`checkCertificateRevocationList`|Especifica si el sistema debe comprobar si se ha revocado el certificado antes de usar el certificado. El valor predeterminado es `false`.|  
@@ -57,7 +57,7 @@ Configura las conexiones a los recursos de red.
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
 |[Configuración](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
   

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209156"
 ---
 # <a name="fromtoby-animations-overview"></a>Información general sobre animaciones From/To/By
@@ -36,7 +36,7 @@ En este tema se describe cómo usar animaciones From/To/By para animar propiedad
   
  Las clases de animación From/To/By pertenecen a la <xref:System.Windows.Media.Animation> espacio de nombres y use la convención de nomenclatura siguiente:  
   
- *\<tipo >* `Animation`  
+ *\<Tipo>* `Animation`  
   
  Donde *\<Tipo>* es el tipo de valor que la clase anima.  
   
@@ -138,15 +138,15 @@ En este tema se describe cómo usar animaciones From/To/By para animar propiedad
   
 -   Una animación de trazado genera valores de salida desde un <xref:System.Windows.Media.PathGeometry>. Para obtener más información, consulte el [información general sobre animaciones de trazado](path-animations-overview.md).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] También permite crear sus propios tipos de animación personalizada. Para obtener más información, consulte el [Custom Animations Overview](custom-animations-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también le permite crear sus propios tipos de animaciones personalizadas. Para obtener más información, consulte el [Custom Animations Overview](custom-animations-overview.md).  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Media.Animation.Timeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - [Información general sobre animaciones](animation-overview.md)
-- [Información general sobre objetos Storyboard](storyboards-overview.md)
+- [Información general sobre objetos Storyboard ](storyboards-overview.md)
 - [Información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md)
-- [Información general sobre animaciones en trazados](path-animations-overview.md)
-- [Información general sobre animaciones personalizadas](custom-animations-overview.md)
-- [FROM, To y por el ejemplo de valores de destino de animación](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Información general sobre animaciones en trazados ](path-animations-overview.md)
+- [Información general sobre animaciones personalizadas ](custom-animations-overview.md)
+- [Ejemplo de valores de destino de animación From, To y By](https://go.microsoft.com/fwlink/?LinkID=159988)

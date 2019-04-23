@@ -8,10 +8,10 @@ helpviewer_keywords:
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
 ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201603"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>Información general sobre el control RichTextBox (formularios Windows Forms)
@@ -27,5 +27,5 @@ Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control se ut
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.RichTextBox>
-- [Control RichTextBox](richtextbox-control-windows-forms.md)
+- [RichTextBox (control)](richtextbox-control-windows-forms.md)
 - [Información general sobre el control TextBox](textbox-control-overview-windows-forms.md)

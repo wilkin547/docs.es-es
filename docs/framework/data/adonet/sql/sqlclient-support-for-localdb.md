@@ -3,10 +3,10 @@ title: Compatibilidad de SqlClient para LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204762"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Compatibilidad de SqlClient para LocalDB
@@ -29,7 +29,7 @@ A partir de SQL Server nombre de código Denali, una versión ligera de SQL Serv
     server=(localdb)\\myInstance  
     ```  
   
- `User Instance=True` no se permite cuando se conecta a una base de datos LocalDB.  
+ `User Instance=True` no se permite al conectarse a una base de datos de LocalDB.  
   
  Puede descargar LocalDB de [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). Si va a usar sqlcmd.exe para modificar datos en la instancia de LocalDB, necesitará sqlcmd de SQL Server 2012, que también se puede obtener desde SQL Server 2012 Feature Pack.  
   
@@ -61,4 +61,4 @@ A partir de SQL Server nombre de código Denali, una versión ligera de SQL Serv
 ## <a name="see-also"></a>Vea también
 
 - [Características de SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

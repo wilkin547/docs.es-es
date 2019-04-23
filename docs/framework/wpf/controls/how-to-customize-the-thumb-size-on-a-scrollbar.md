@@ -1,5 +1,5 @@
 ---
-title: Filtrar Personalizar el tamaño de un control de posición en un objeto ScrollBar
+title: Procedimiento Personalizar el tamaño de un control de posición en un objeto ScrollBar
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ScrollBar control [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - thumb size [WPF]
 ms.assetid: fa32b866-5ca1-4e73-85e7-2ac64b80d194
 ms.openlocfilehash: 60ae7c4e95801036c5deb0c485645297509b830c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207284"
 ---
-# <a name="how-to-customize-the-thumb-size-on-a-scrollbar"></a>Filtrar Personalizar el tamaño de un control de posición en un objeto ScrollBar
+# <a name="how-to-customize-the-thumb-size-on-a-scrollbar"></a>Procedimiento Personalizar el tamaño de un control de posición en un objeto ScrollBar
 En este tema se explica cómo establecer el <xref:System.Windows.Controls.Primitives.Thumb> de un <xref:System.Windows.Controls.Primitives.ScrollBar> a un tamaño fijo y cómo especificar un tamaño mínimo para el <xref:System.Windows.Controls.Primitives.Thumb> de un <xref:System.Windows.Controls.Primitives.ScrollBar>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -32,4 +32,4 @@ En este tema se explica cómo establecer el <xref:System.Windows.Controls.Primit
   
 ## <a name="see-also"></a>Vea también
 
-- [Estilos y plantillas de ScrollBar](scrollbar-styles-and-templates.md)
+- [ScrollBar Styles and Templates](scrollbar-styles-and-templates.md) (Estilos y plantillas de ScrollBar)

@@ -1,18 +1,18 @@
 ---
-title: Filtrar Crear controles TreeView simples o complejos
+title: Procedimiento Crear controles TreeView simples o complejos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], creating
 - Control class [WPF], TreeView [WPF], creating
 ms.assetid: 1defbb78-b8e7-4c0e-b650-576453ac828d
 ms.openlocfilehash: 7edb4933ebcc0f0d2cb02754238c2342ee9dd4a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59205152"
 ---
-# <a name="how-to-create-simple-or-complex-treeviews"></a>Filtrar Crear controles TreeView simples o complejos
+# <a name="how-to-create-simple-or-complex-treeviews"></a>Procedimiento Crear controles TreeView simples o complejos
 En este ejemplo se muestra cómo crear simples o complejas <xref:System.Windows.Controls.TreeView> controles.  
   
  Un <xref:System.Windows.Controls.TreeView> consta de una jerarquía de <xref:System.Windows.Controls.TreeViewItem> controles, que pueden contener cadenas de texto simple y el contenido también más complejo, tales como <xref:System.Windows.Controls.Button> controles o <xref:System.Windows.Controls.StackPanel> con contenido incrustado. Puede definir explícitamente el <xref:System.Windows.Controls.TreeView> contenido o un origen de datos puede proporcionar el contenido. En este tema se proporciona ejemplos de estos conceptos.  

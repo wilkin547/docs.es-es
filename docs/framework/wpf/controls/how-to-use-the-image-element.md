@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar el elemento de imagen
+title: Procedimiento Usar el elemento de imagen
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - rendering images [WPF]
 ms.assetid: 5b92e74b-1b56-4756-ac64-d5e9e08d9854
 ms.openlocfilehash: 967159894e25721bdf380f851712e91d76088f87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59205308"
 ---
-# <a name="how-to-use-the-image-element"></a>Filtrar Usar el elemento de imagen
+# <a name="how-to-use-the-image-element"></a>Procedimiento Usar el elemento de imagen
 En este ejemplo se muestra cómo incluir imágenes en una aplicación mediante el <xref:System.Windows.Controls.Image> elemento.  
   
 ## <a name="example"></a>Ejemplo  

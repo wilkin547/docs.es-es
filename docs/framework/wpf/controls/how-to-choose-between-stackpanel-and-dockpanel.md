@@ -1,5 +1,5 @@
 ---
-title: Filtrar Elegir entre StackPanel y DockPanel
+title: Procedimiento Elegir entre StackPanel y DockPanel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - controls [WPF], StackPanel
 ms.assetid: f9239086-451f-42e6-81f7-ef89ef349742
 ms.openlocfilehash: 8338421dfb1bea856c15edf9d324cec955584f9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206972"
 ---
-# <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>Filtrar Elegir entre StackPanel y DockPanel
+# <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>Procedimiento Elegir entre StackPanel y DockPanel
 En este ejemplo se muestra cómo elegir entre usar un <xref:System.Windows.Controls.StackPanel> o un <xref:System.Windows.Controls.DockPanel> cuando apilar el contenido en un <xref:System.Windows.Controls.Panel>.  
   
 ## <a name="example"></a>Ejemplo  

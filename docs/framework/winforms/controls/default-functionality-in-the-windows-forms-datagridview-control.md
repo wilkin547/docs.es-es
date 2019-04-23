@@ -6,10 +6,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
 ms.openlocfilehash: 26633b0abaa8c1c2916153b2236ecf9e4982fd68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208870"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Funcionalidad predeterminada en el control DataGridView de formularios Windows Forms
@@ -49,4 +49,4 @@ Los formularios de Windows <xref:System.Windows.Forms.DataGridView> control prop
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.DataGridView>
-- [Control DataGridView](datagridview-control-windows-forms.md)
+- [DataGridView (control)](datagridview-control-windows-forms.md)

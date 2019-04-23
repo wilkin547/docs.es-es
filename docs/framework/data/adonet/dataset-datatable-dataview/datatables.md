@@ -3,10 +3,10 @@ title: Objetos DataTable
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
 ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207323"
 ---
 # <a name="datatables"></a>Objetos DataTable
@@ -21,16 +21,16 @@ Un objeto <xref:System.Data.DataSet> está formado por una colección de tablas,
  Se pueden crear relaciones primarias-secundarias entre tablas utilizando una o varias columnas relacionadas de las tablas. Crear una relación entre **DataTable** objetos mediante un <xref:System.Data.DataRelation>. **DataRelation** objetos, a continuación, pueden usarse para devolver las filas relacionadas de primario o secundario de una fila determinada. Para obtener más información, consulte [agregar objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Crear un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
+ [Creación de un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
  Explica cómo crear un **DataTable** y agréguelo a un **DataSet**.  
   
  [Definición del esquema de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  Proporciona información sobre cómo crear y usar **DataColumn** objetos y las restricciones.  
   
- [Manipular datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Manipulación de datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  Explica cómo se agregan, modifican y eliminan datos en una tabla. Explica cómo usar **DataTable** eventos para examinar los cambios a los datos en la tabla.  
   
- [Controlar eventos de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ [Control de eventos de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
  Proporciona información sobre los eventos disponibles para su uso con un **DataTable**, incluidos los eventos cuando se modifican los valores de columna y se agregan o eliminan filas.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
@@ -57,4 +57,4 @@ Un objeto <xref:System.Data.DataSet> está formado por una colección de tablas,
   
 ## <a name="see-also"></a>Vea también
 
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

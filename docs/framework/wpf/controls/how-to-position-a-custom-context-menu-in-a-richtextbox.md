@@ -1,5 +1,5 @@
 ---
-title: Filtrar Colocar un menú contextual personalizado en un control RichTextBox
+title: Procedimiento Colocar un menú contextual personalizado en un control RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - context menus [WPF], positioning
 ms.assetid: bf77c930-a546-4573-9a56-9af345ba189a
 ms.openlocfilehash: f9407f59c3daafd09fa5b84006f33ef2f3ebd31f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209429"
 ---
-# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a>Filtrar Colocar un menú contextual personalizado en un control RichTextBox
+# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a>Procedimiento Colocar un menú contextual personalizado en un control RichTextBox
 En este ejemplo se muestra cómo colocar un menú contextual personalizado para un <xref:System.Windows.Controls.RichTextBox>.  
   
  Cuando se implementa un menú contextual personalizado para un control **RichTextBox**, es responsable del control de la posición del menú contextual.  De forma predeterminada, se abre un menú contextual personalizado en el centro del control **RichTextBox**.  
@@ -36,5 +36,5 @@ En este ejemplo se muestra cómo colocar un menú contextual personalizado para 
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre el control RichTextBox](richtextbox-overview.md)
+- [RichTextBox Overview](richtextbox-overview.md) (Introducción a RichTextBox)
 - [Información general sobre TextBox](textbox-overview.md)

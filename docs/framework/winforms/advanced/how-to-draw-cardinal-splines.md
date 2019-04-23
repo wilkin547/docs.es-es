@@ -1,5 +1,5 @@
 ---
-title: Filtrar para dibujar curvas spline cardinales
+title: Procedimiento para dibujar curvas spline cardinales
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
 ms.openlocfilehash: 2f03177bf97936a2ca9558972d4d82fa3e07463c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204957"
 ---
-# <a name="how-to-draw-cardinal-splines"></a>Filtrar para dibujar curvas spline cardinales
+# <a name="how-to-draw-cardinal-splines"></a>Procedimiento para dibujar curvas spline cardinales
 Una curva spline cardinal es una curva que se pasa sin problemas a través de un conjunto determinado de puntos. Para dibujar una curva spline cardinal, cree un <xref:System.Drawing.Graphics> objeto y pasar la dirección de una matriz de puntos para el <xref:System.Drawing.Graphics.DrawCurve%2A> método.  
   
 ### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Dibujar una curva Cardinal Spline en forma de campana  

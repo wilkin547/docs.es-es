@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560821"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59208129"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analizar cadenas de fecha y hora en .NET
 
@@ -32,7 +32,6 @@ El análisis de cadenas para convertirlas en objetos <xref:System.DateTime> requ
 1. Puede especificarse cómo se establecen los componentes que faltan en la representación de texto en la fecha y hora.
 
 Los métodos <xref:System.DateTime.Parse%2A> y <xref:System.DateTime.TryParse%2A> convierten varias representaciones comunes de fecha y hora. Los métodos <xref:System.DateTime.ParseExact%2A> y <xref:System.DateTime.TryParseExact%2A> convierten una representación de cadena que se ajusta al modelo especificado por una cadena de formato de fecha y hora. (Para obtener más información, vea los artículos sobre [cadenas con formato de fecha y hora estándar](standard-date-and-time-format-strings.md) y [cadenas con formato de fecha y hora personalizado](custom-date-and-time-format-strings.md)).
-
 
 El objeto <xref:System.Globalization.DateTimeFormatInfo> actual proporciona más control sobre la forma en que debe interpretarse el texto como fecha y hora. Las propiedades de un objeto <xref:System.Globalization.DateTimeFormatInfo> describen los separadores de fecha y hora, los nombres de los meses, días y eras, así como el formato de las designaciones "a. m." y "p. m.". La referencia cultural del subproceso actual proporciona un objeto <xref:System.Globalization.DateTimeFormatInfo> que representa la referencia cultural actual. Si quiere una referencia cultural específica o una configuración personalizada, especifique el parámetro <xref:System.IFormatProvider> de un método de análisis. Para el parámetro <xref:System.IFormatProvider>, especifique un objeto <xref:System.Globalization.CultureInfo>, que representa una referencia cultural, o un objeto <xref:System.Globalization.DateTimeFormatInfo>.
 

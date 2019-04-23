@@ -1,5 +1,5 @@
 ---
-title: Filtrar Enlazar a los resultados de una consulta LINQ to XML, XDocument o XElement
+title: Procedimiento Enlazar a los resultados de una consulta LINQ to XML, XDocument o XElement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
 ms.openlocfilehash: afecb87dcfce1a8c48f1b2108edeae3cfd2aa16f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209663"
 ---
-# <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>Filtrar Enlazar a los resultados de una consulta LINQ to XML, XDocument o XElement
+# <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>Procedimiento Enlazar a los resultados de una consulta LINQ to XML, XDocument o XElement
 En este ejemplo muestra cómo enlazar datos XML a un <xref:System.Windows.Controls.ItemsControl> mediante <xref:System.Xml.Linq.XDocument>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -43,5 +43,5 @@ En este ejemplo muestra cómo enlazar datos XML a un <xref:System.Windows.Contro
 
 - [Información general sobre orígenes de enlaces](binding-sources-overview.md)
 - [Información general de enlace de datos WPF con LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
-- [Ejemplo de enlace de datos WPF utilizando LINQ to XML](/visualstudio/designers/wpf-data-binding-using-linq-to-xml-example)
+- [Ejemplo de enlace de datos WPF mediante LINQ to XML](/visualstudio/designers/wpf-data-binding-using-linq-to-xml-example)
 - [Propiedades dinámicas de LINQ to XML](/visualstudio/designers/linq-to-xml-dynamic-properties)

@@ -5,12 +5,12 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3f5d44e90ba705195deba54ef658668488cdb0f7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466952"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59200372"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>¿Qué es ML.NET y cómo puedo informarme sobre los aspectos básicos del aprendizaje automático?
 
@@ -24,7 +24,6 @@ ML.NET es un marco de Machine Learning gratuito, de código abierto y multiplata
 Machine Learning es una técnica de ciencia de datos que permite a los equipos usar los datos existentes para predecir tendencias, resultados y comportamientos futuros. Mediante Machine Learning, los equipos aprenden sin necesidad de programarlos explícitamente.
 
 Las previsiones o predicciones a partir de Machine Learning pueden hacer que las aplicaciones y los dispositivos resulten más inteligentes. Al comprar en línea, Machine Learning ayuda a recomendar otros productos que podrían interesarle en función de lo que ha comprado. Cuando se pasa la tarjeta de crédito, Machine Learning compara la transacción con una base de datos de transacciones y ayuda a detectar fraudes. Cuando el robot aspirador limpia una habitación, Machine Learning le ayuda a decidir si ha terminado el trabajo.
-
 
 ## <a name="short-videos-on-data-science"></a>Vídeos cortos sobre ciencia de datos 
 

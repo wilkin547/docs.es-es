@@ -9,10 +9,10 @@ helpviewer_keywords:
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
 ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203631"
 ---
 # <a name="application-settings-overview"></a>Introducción a la configuración de la aplicación
@@ -53,9 +53,9 @@ En este tema se describe cómo crear y almacenar los datos de configuración en 
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Filtrar para validar la configuración de la aplicación](how-to-validate-application-settings.md)
+- [Cómo: Validar la configuración de la aplicación](how-to-validate-application-settings.md)
 - [Administrar la configuración de la aplicación (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [Cómo leer valores de configuración en tiempo de ejecución con C#](how-to-read-settings-at-run-time-with-csharp.md)
+- [Cómo: Leer la configuración en tiempo de ejecución conC#](how-to-read-settings-at-run-time-with-csharp.md)
 - [Utilizar valores de configuración de aplicación y de usuario](using-application-settings-and-user-settings.md)
 - [Arquitectura de configuración de la aplicación](application-settings-architecture.md)
-- [Configuración de la aplicación para controles personalizados](application-settings-for-custom-controls.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)

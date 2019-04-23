@@ -1,5 +1,5 @@
 ---
-title: Filtrar Manipular grupos de filas de una tabla mediante la propiedad RowGroups
+title: Procedimiento Manipular grupos de filas de una tabla mediante la propiedad RowGroups
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
 ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209975"
 ---
-# <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>Filtrar Manipular grupos de filas de una tabla mediante la propiedad RowGroups
+# <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>Procedimiento Manipular grupos de filas de una tabla mediante la propiedad RowGroups
 En este ejemplo muestra algunas de las operaciones más comunes que se pueden realizar en grupos de filas de una tabla mediante el <xref:System.Windows.Documents.Table.RowGroups%2A> propiedad.  
   
 ## <a name="example"></a>Ejemplo  

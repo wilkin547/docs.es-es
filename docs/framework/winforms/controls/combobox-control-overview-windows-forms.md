@@ -10,10 +10,10 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
 ms.openlocfilehash: 80056771744c9b97828a024adf32638e545a839e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211587"
 ---
 # <a name="combobox-control-overview-windows-forms"></a>Información general sobre el control ComboBox (formularios Windows Forms)
@@ -26,11 +26,11 @@ Los formularios de Windows <xref:System.Windows.Forms.ComboBox> control se usa p
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.ComboBox>
-- [Información general sobre el control ListBox](listbox-control-overview-windows-forms.md)
+- [Información general sobre ListBox (Control)](listbox-control-overview-windows-forms.md)
 - [Cuándo utilizar un control ComboBox de formularios Windows Forms en lugar de un control ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [Filtrar para agregar y quitar elementos de un control ComboBox, ListBox o CheckedListBox de formularios Windows Forms](add-and-remove-items-from-a-wf-combobox.md)
-- [Filtrar para ordenar el contenido de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Filtrar para obtener acceso a elementos específicos de un control ComboBox, ListBox o CheckedListBox de formularios Windows Forms](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)
-- [Filtrar para enlazar un control ComboBox o ListBox de formularios Windows Forms a datos](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [Cómo: Agregar y quitar elementos de un Windows Forms control ComboBox, ListBox o CheckedListBox (Control)](add-and-remove-items-from-a-wf-combobox.md)
+- [Cómo: Ordenar el contenido de un Windows Forms control ComboBox, ListBox o CheckedListBox (Control)](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Cómo: Tener acceso a específicos de elementos en un Windows Forms control ComboBox, ListBox o CheckedListBox (Control)](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)
+- [Cómo: Enlazar un Control de ListBox o ComboBox de formularios Windows Forms a datos](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
 - [Controles de formularios Windows Forms usados para mostrar opciones](windows-forms-controls-used-to-list-options.md)
-- [Filtrar para crear una tabla de búsqueda para un control ComboBox, ListBox o CheckedListBox de formularios Windows Forms](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [Cómo: Crear una tabla de búsqueda para un Windows Forms control ComboBox, ListBox o CheckedListBox (Control)](create-a-lookup-table-for-a-wf-combobox-listbox.md)

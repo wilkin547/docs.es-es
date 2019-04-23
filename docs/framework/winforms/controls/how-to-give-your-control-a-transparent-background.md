@@ -1,5 +1,5 @@
 ---
-title: Filtrar para proporcionar un fondo transparente a un control
+title: Procedimiento para proporcionar un fondo transparente a un control
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent backgrounds [Windows Forms], custom controls
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
 ms.openlocfilehash: 671075973793d7fbf0b70ce77428a0a632305b9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206101"
 ---
-# <a name="how-to-give-your-control-a-transparent-background"></a>Filtrar para proporcionar un fondo transparente a un control
+# <a name="how-to-give-your-control-a-transparent-background"></a>Procedimiento para proporcionar un fondo transparente a un control
 En versiones anteriores de .NET Framework, los controles no admitían la opción de establecer fondos transparentes sin establecer primero el método <xref:System.Windows.Forms.Control.SetStyle%2A> en el constructor de formularios. En la versión actual de .NET Framework, el color de fondo de la mayoría de los controles se puede establecer como <xref:System.Drawing.Color.Transparent%2A> en la ventana **Propiedades** durante el tiempo de diseño o como código en el constructor del formulario.  
   
 > [!NOTE]
@@ -24,11 +24,11 @@ En versiones anteriores de .NET Framework, los controles no admitían la opción
   
 ### <a name="to-give-your-control-a-transparent-backcolor"></a>Proporcionar un fondo transparente a un control  
   
--   En la ventana Propiedades, elija el <xref:System.Windows.Forms.ButtonBase.BackColor%2A> propiedad y establecerla en <xref:System.Drawing.Color.Transparent%2A>  
+-   En la ventana Propiedades, elija la propiedad <xref:System.Windows.Forms.ButtonBase.BackColor%2A> y establézcala como <xref:System.Drawing.Color.Transparent%2A>  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Drawing.Color.FromArgb%2A>
-- [Desarrollar controles personalizados de formularios Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)
-- [Utilizar clases gráficas administradas](../advanced/using-managed-graphics-classes.md)
-- [Filtrar para dibujar líneas opacas y semitransparentes](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)
+- [Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)
+- [Using Managed Graphics Classes](../advanced/using-managed-graphics-classes.md) (Usar clases gráficas administradas)
+- [Cómo: Dibujar líneas opacas y semitransparentes](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)

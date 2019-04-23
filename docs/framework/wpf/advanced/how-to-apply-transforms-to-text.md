@@ -1,5 +1,5 @@
 ---
-title: Filtrar Aplicar transformaciones a texto
+title: Procedimiento Aplicar transformaciones a texto
 ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], rotated text
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
 ms.openlocfilehash: 46a57364e0c18cc4c9fe7884642cd0b718c20f31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208675"
 ---
-# <a name="how-to-apply-transforms-to-text"></a>Filtrar Aplicar transformaciones a texto
+# <a name="how-to-apply-transforms-to-text"></a>Procedimiento Aplicar transformaciones a texto
 Las transformaciones pueden modificar la presentación del texto en la aplicación. Los ejemplos siguientes usan diferentes tipos de transformaciones de representación para influir en la presentación del texto en un <xref:System.Windows.Controls.TextBlock> control.  
   
 ## <a name="example"></a>Ejemplo  

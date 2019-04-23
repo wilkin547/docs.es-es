@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar un objeto a lo largo de un trazado (animación en matriz con acumulación de desplazamiento)
+title: Procedimiento Animar un objeto a lo largo de un trazado (animación en matriz con acumulación de desplazamiento)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - matrix animation with offset accumulation [WPF]
 ms.assetid: 1bca90ef-9832-4128-8ed6-62908e7ec146
 ms.openlocfilehash: 3e7b892e2a2215d26512850477844d71bce7fe09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207375"
 ---
-# <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>Filtrar Animar un objeto a lo largo de un trazado (animación en matriz con acumulación de desplazamiento)
+# <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>Procedimiento Animar un objeto a lo largo de un trazado (animación en matriz con acumulación de desplazamiento)
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> clase para animar un objeto a lo largo de una ruta de acceso y hacer que dicha animación su desplazamiento se acumulan los valores de medida que se repite.  
   
 ## <a name="example"></a>Ejemplo  
@@ -36,4 +36,4 @@ En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.Ma
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre animaciones](animation-overview.md)
-- [Temas "Cómo..." de animación de trazado](path-animation-how-to-topics.md)
+- [Temas de procedimientos de animación de trazado](path-animation-how-to-topics.md)

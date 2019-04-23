@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1962815b8e294b1321320ce500554046d05f4c8f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654138"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59210144"
 ---
 # <a name="runtime-callable-wrapper"></a>Contenedor al que se puede llamar en tiempo de ejecución
 Common Language Runtime expone objetos COM mediante un proxy denominado el contenedor RCW (Runtime Callable Wrapper). Aunque el contenedor RCW aparece como un objeto corriente para los clientes .NET, su función principal es calcular referencias de llamadas entre un cliente .NET y un objeto COM.  
@@ -25,8 +25,7 @@ Common Language Runtime expone objetos COM mediante un proxy denominado el conte
 En la imagen siguiente se muestra el proceso para obtener acceso a objetos COM a través del contenedor RCW:
 
  ![Proceso para obtener acceso a objetos COM a través del contenedor RCW.](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
-   
-  
+
  Usando los metadatos derivados de una biblioteca de tipos, CLR crea el objeto COM al que se está llamando y un contenedor para dicho objeto. Cada contenedor RCW mantiene una memoria caché de punteros de interfaz en el objeto COM que contiene y libera su referencia en el objeto COM cuando el contenedor RCW ya no es necesario. CLR realiza la recolección de elementos no utilizados en el contenedor RCW.  
   
  Entre otras actividades, el contenedor RCW calcula referencias de datos entre el código administrado y no administrado, en nombre del objeto encapsulado. El contenedor RCW proporciona específicamente serialización para argumentos de métodos y valores devueltos de métodos cada vez que el cliente y el servidor tienen representaciones diferentes de los datos que se pasan entre ellos.  
@@ -60,6 +59,7 @@ En la imagen siguiente se muestra el proceso para obtener acceso a objetos COM a
 |**IEnumVARIANT**|Permite tratar como colecciones a los tipos COM que admiten enumeraciones.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Contenedores COM](com-wrappers.md)
 - [Contenedor CCW (COM callable wrapper)](com-callable-wrapper.md)
 - [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
