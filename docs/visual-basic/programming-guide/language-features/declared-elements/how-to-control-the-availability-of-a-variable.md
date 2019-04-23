@@ -1,5 +1,5 @@
 ---
-title: Filtrar Controlar la disponibilidad de una Variable (Visual Basic)
+title: Procedimiento Controlar la disponibilidad de una Variable (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access levels, declared elements
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
 ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311531"
 ---
-# <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Filtrar Controlar la disponibilidad de una Variable (Visual Basic)
+# <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Procedimiento Controlar la disponibilidad de una Variable (Visual Basic)
 Controlar la disponibilidad de una variable especificando su *nivel de acceso*. El nivel de acceso determina qué código tiene permiso para leer o escribir en la variable.  
   
 -   *Variables de miembro* (definido en el nivel de módulo y fuera de cualquier procedimiento) predeterminado para el acceso público, lo que significa que cualquier código que pueda verlos puede tener acceso a ellos. Puede cambiar esto especificando un modificador de acceso.  
@@ -89,8 +89,8 @@ Private numberForMeOnly As Integer
 ## <a name="see-also"></a>Vea también
 
 - [Niveles de acceso en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Dim (Instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Public](../../../../visual-basic/language-reference/modifiers/public.md)
-- [Protegido](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private](../../../../visual-basic/language-reference/modifiers/private.md)

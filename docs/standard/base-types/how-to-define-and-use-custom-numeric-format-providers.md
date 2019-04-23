@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Definir y usar proveedores de formato numérico personalizado'
+title: Procedimiento para definir y usar proveedores de formato numérico personalizado
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18a784db1ff02f459fbc2265c3ca1a2abfaff9b4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879041"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59318382"
 ---
-# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Cómo: Definir y usar proveedores de formato numérico personalizado
+# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Procedimiento para definir y usar proveedores de formato numérico personalizado
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ofrece un amplio control sobre la representación de cadena de valores numéricos. Admite las siguientes características para personalizar el formato de los valores numéricos:  
   
 -   Cadenas con formato numérico estándar, que proporcionan un conjunto predefinido de formatos para convertir números en su representación de cadena. Se pueden usar con cualquier método de formato numérico, como <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, que tiene un parámetro `format`. Para obtener detalles, vea [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
@@ -37,9 +37,9 @@ ms.locfileid: "43879041"
   
 ### <a name="to-define-a-custom-format-provider"></a>Para definir un proveedor de formato personalizado  
   
-1.  Defina una clase que implementa las interfaces <xref:System.IFormatProvider> y <xref:System.ICustomFormatter>.  
+1. Defina una clase que implementa las interfaces <xref:System.IFormatProvider> y <xref:System.ICustomFormatter>.  
   
-2.  Implemente el método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A> es un método de devolución de llamada que el método de formato (como el método <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>) invoca para recuperar el objeto realmente responsable del formato personalizado. Una implementación típica de <xref:System.IFormatProvider.GetFormat%2A> hace lo siguiente:  
+2. Implemente el método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A> es un método de devolución de llamada que el método de formato (como el método <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>) invoca para recuperar el objeto realmente responsable del formato personalizado. Una implementación típica de <xref:System.IFormatProvider.GetFormat%2A> hace lo siguiente:  
   
     1.  Determina si el objeto <xref:System.Type> pasado como un parámetro de método representa a una interfaz <xref:System.ICustomFormatter>.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "43879041"
   
     3.  Si el parámetro no representa la interfaz <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> devuelve `null`.  
   
-3.  Implemente el método <xref:System.ICustomFormatter.Format%2A>. Este método es invocado por el método <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> y es responsable de devolver la representación de cadena de un número. La implementación del método normalmente implica lo siguiente:  
+3. Implemente el método <xref:System.ICustomFormatter.Format%2A>. Este método es invocado por el método <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> y es responsable de devolver la representación de cadena de un número. La implementación del método normalmente implica lo siguiente:  
   
     1.  Opcionalmente, asegúrese de que el método se haya diseñado para proporcionar servicios de formato al examinar el parámetro `provider`. En el caso de los objetos de formato que implementan <xref:System.IFormatProvider> y <xref:System.ICustomFormatter>, esto implica probar la igualdad del parámetro `provider` y el objeto de formato actual.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "43879041"
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>Para usar un objeto de formato numérico personalizado  
   
-1.  Cree una nueva instancia de la clase de formato personalizado.  
+1. Cree una nueva instancia de la clase de formato personalizado.  
   
-2.  Llame al método de formato <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> y pásele el objeto de formato personalizado, el especificador de formato (o <xref:System.String.Empty?displayProperty=nameWithType> si no se usa ninguno) y el valor numérico al que se va a dar formato.  
+2. Llame al método de formato <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> y pásele el objeto de formato personalizado, el especificador de formato (o <xref:System.String.Empty?displayProperty=nameWithType> si no se usa ninguno) y el valor numérico al que se va a dar formato.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se define un proveedor de formato numérico personalizado denominado `TelephoneFormatter` que convierte un número que representa un número de teléfono de los Estados Unidos en su formato NANP o E.123. El método controla dos especificadores de formato, "N" (que genera el formato NANP) e "I" (que genera el formato E.123 internacional).  

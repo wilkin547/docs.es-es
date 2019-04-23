@@ -1,5 +1,5 @@
 ---
-title: Filtrar para dibujar un control ToolStrip de manera personalizada
+title: Procedimiento para dibujar un control ToolStrip de manera personalizada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
 ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311050"
 ---
-# <a name="how-to-custom-draw-a-toolstrip-control"></a>Filtrar para dibujar un control ToolStrip de manera personalizada
+# <a name="how-to-custom-draw-a-toolstrip-control"></a>Procedimiento para dibujar un control ToolStrip de manera personalizada
 Los controles <xref:System.Windows.Forms.ToolStrip> tienen las siguientes clases de representación (dibujo) asociadas:  
   
 -   <xref:System.Windows.Forms.ToolStripSystemRenderer> proporciona la apariencia y el estilo del sistema operativo.  
@@ -139,5 +139,5 @@ Los controles <xref:System.Windows.Forms.ToolStrip> tienen las siguientes clases
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [Controles compatibles con dibujos propietarios integrados](controls-with-built-in-owner-drawing-support.md)
-- [Filtrar para crear y establecer un representador personalizado para el control ToolStrip de formularios Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [Cómo: Crear y establecer a un representador personalizado para el Control ToolStrip de Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [Información sobre el control ToolStrip](toolstrip-control-overview-windows-forms.md)

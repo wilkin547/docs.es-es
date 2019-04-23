@@ -1,5 +1,5 @@
 ---
-title: Filtrar para usar la información sobre herramientas en los controles ToolStrip
+title: Procedimiento para usar la información sobre herramientas en los controles ToolStrip
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], adding tooltips
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
 ms.openlocfilehash: ffaf859fafc87131de525f7bf2f52db421a208c0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317004"
 ---
-# <a name="how-to-use-tooltips-in-toolstrip-controls"></a>Filtrar para usar la información sobre herramientas en los controles ToolStrip
+# <a name="how-to-use-tooltips-in-toolstrip-controls"></a>Procedimiento para usar la información sobre herramientas en los controles ToolStrip
 Puede mostrar un <xref:System.Windows.Forms.ToolTip> para el <xref:System.Windows.Forms.ToolStrip> control que desee estableciendo el control <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> propiedad `true`.  
   
 ### <a name="to-display-a-tooltip"></a>Para mostrar una información sobre herramientas  
@@ -30,7 +30,7 @@ Puede mostrar un <xref:System.Windows.Forms.ToolTip> para el <xref:System.Window
   
      El `AutoToolTip` propiedad es `true` de forma predeterminada para <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripDropDownButton>, y <xref:System.Windows.Forms.ToolStripSplitButton>.  
   
-     Un <xref:System.Windows.Forms.ToolStripButton> usa su `Text` propiedad para el <xref:System.Windows.Forms.ToolTip> texto de forma predeterminada. Utilice este procedimiento para mostrar el texto personalizado en un <xref:System.Windows.Forms.ToolStripButton><xref:System.Windows.Forms.ToolTip>.  
+     Un <xref:System.Windows.Forms.ToolStripButton> usa su `Text` propiedad para el <xref:System.Windows.Forms.ToolTip> texto de forma predeterminada. Utilice este procedimiento para mostrar el texto personalizado en un <xref:System.Windows.Forms.ToolStripButton> <xref:System.Windows.Forms.ToolTip>.  
   
 > [!NOTE]
 >  Si establece <xref:System.Windows.Forms.ToolStripItemDisplayStyle> a <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None> o <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>, se mostrará ningún texto en el botón, pero sigue apareciendo la información sobre herramientas.  

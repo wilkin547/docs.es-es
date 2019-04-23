@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear teclas de acceso con controles Label de formularios Windows Forms
+title: Procedimiento para crear teclas de acceso con controles Label de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
 ms.openlocfilehash: ffe4bf6fb29e82b04938e2ba9a2d9d21e5eabcde
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314313"
 ---
-# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Filtrar para crear teclas de acceso con controles Label de formularios Windows Forms
+# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Procedimiento para crear teclas de acceso con controles Label de formularios Windows Forms
 Windows Forms <xref:System.Windows.Forms.Label> controles pueden usarse para definir teclas de acceso para otros controles. Al definir una clave de acceso en un control de etiqueta, el usuario puede presionar la tecla ALT y el carácter designado para mover el foco al control que le sigue en el orden de tabulación. Dado que las etiquetas no pueden recibir el foco, el foco se mueve automáticamente al siguiente control en el orden de tabulación. Use esta técnica para asignar las claves de acceso a los cuadros de texto, cuadros combinados, cuadros de lista y cuadrículas de datos.  
   
 ### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>Para asignar una tecla de acceso a un control con una etiqueta  
@@ -65,6 +65,6 @@ Windows Forms <xref:System.Windows.Forms.Label> controles pueden usarse para def
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para cambiar el tamaño de un control Label de formularios Windows Forms para ajustar su contenido](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Cómo: Tamaño de un Control de etiqueta de Windows Forms para ajustar su contenido](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Información general sobre el control Label](label-control-overview-windows-forms.md)
-- [Control Label](label-control-windows-forms.md)
+- [Etiqueta (control)](label-control-windows-forms.md)

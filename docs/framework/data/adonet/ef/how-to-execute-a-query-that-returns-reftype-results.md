@@ -1,18 +1,18 @@
 ---
-title: Filtrar para ejecutar una consulta que devuelve resultados RefType
+title: Procedimiento para ejecutar una consulta que devuelve resultados RefType
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
 ms.openlocfilehash: f3f1e11d3211140abb02733de4b5b46ac93cf769
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317173"
 ---
-# <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Filtrar para ejecutar una consulta que devuelve resultados RefType
+# <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Procedimiento para ejecutar una consulta que devuelve resultados RefType
 En este tema se muestra cómo ejecutar un comando contra un modelo conceptual usando un objeto <xref:System.Data.EntityClient.EntityCommand>, y cómo recuperar los resultados de <xref:System.Data.Metadata.Edm.RefType> usando un <xref:System.Data.EntityClient.EntityDataReader>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  

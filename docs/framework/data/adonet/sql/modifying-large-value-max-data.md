@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
 ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317108"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modificar datos de valores grandes (max) en ADO.NET
@@ -21,7 +21,7 @@ Los tipos de datos de objeto grande (LOB) son aquellos que superan el tamaño m�
   
  **Libros en pantalla de SQL Server**  
   
-1. [Usar tipos de datos de valores grandes](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [Uso de tipos de datos de valores grandes](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>Restricciones de los tipos de valor grande  
  Las siguientes restricciones se aplican a los tipos de datos `max`, que no existen para tipos de datos más pequeños:  
@@ -33,7 +33,7 @@ Los tipos de datos de objeto grande (LOB) son aquellos que superan el tamaño m�
 -   Las columnas `varchar` grandes no se pueden utilizar como columnas de claves de partición.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Trabajar con tipos de valor grande en Transact-SQL  
- La función `OPENROWSET` de Transact-SQL es un método de un solo uso para la conexión y el acceso a datos remotos. Incluye toda la información de conexión necesaria para tener acceso a datos remotos desde un origen de datos OLE DB. `OPENROWSET` puede hacer referencia a la cláusula FROM de una consulta como si fuese un nombre de tabla. y como si fuera la tabla de destino de una instrucción INSERT, UPDATE o DELETE, sujeta a las capacidades del proveedor OLE DB.  
+ La función `OPENROWSET` de Transact-SQL es un método de un solo uso para la conexión y el acceso a datos remotos. Incluye toda la información de conexión necesaria para tener acceso a datos remotos desde un origen de datos OLE DB. Se puede hacer referencia a `OPENROWSET` en la cláusula FROM de una consulta como si fuese un nombre de tabla. y como si fuera la tabla de destino de una instrucción INSERT, UPDATE o DELETE, sujeta a las capacidades del proveedor OLE DB.  
   
  La función `OPENROWSET` incluye el proveedor de conjuntos de filas `BULK`, que permite leer datos directamente de un archivo sin tener que cargarlos en una tabla de destino. Esto permite usar `OPENROWSET` en una instrucción INSERT SELECT simple.  
   
@@ -254,4 +254,4 @@ WHERE   DocumentID=@DocumentID
 - [Datos binarios y datos de valores grandes de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [Asignaciones de tipos de datos de SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [Operaciones de datos de SQL Server en ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

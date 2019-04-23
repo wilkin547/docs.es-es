@@ -1,5 +1,5 @@
 ---
-title: Filtrar para disponer objetos en capas en formularios Windows Forms
+title: Procedimiento para disponer objetos en capas en formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 ms.openlocfilehash: 8d0abbf0f71ac176d17261a0ae863938c575bdaf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311668"
 ---
-# <a name="how-to-layer-objects-on-windows-forms"></a>Filtrar para disponer objetos en capas en formularios Windows Forms
+# <a name="how-to-layer-objects-on-windows-forms"></a>Procedimiento para disponer objetos en capas en formularios Windows Forms
 Al crear una interfaz de usuario complejas o trabajar con un formulario de múltiples documentos (MDI) de la interfaz, que a menudo desea capas controles y formularios secundarios para crear interfaces de usuario (UI) más complejas. Para mover y realizar un seguimiento de los controles y ventanas dentro del contexto de un grupo, manipular su orden z. *Orden Z* es el diseño visual de los controles en un formulario de eje z del formulario (intensidad). La ventana en la parte superior del orden z se superpone a todas las demás ventanas. Todas las demás ventanas superponen a la ventana en la parte inferior del orden z.  
   
 > [!NOTE]
@@ -54,7 +54,7 @@ Al crear una interfaz de usuario complejas o trabajar con un formulario de múlt
   
 ## <a name="see-also"></a>Vea también
 
-- [Controles de Windows Forms](index.md)
+- [Controles de formularios Windows Forms](index.md)
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

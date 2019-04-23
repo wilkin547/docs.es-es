@@ -3,10 +3,10 @@ title: Comportamiento de auditoría de servicio
 ms.date: 03/30/2017
 ms.assetid: 59bf0cda-e496-4418-a3a1-2f0f6e85f8ce
 ms.openlocfilehash: 1719db9749336d584627280aba3412557b164356
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310400"
 ---
 # <a name="service-auditing-behavior"></a>Comportamiento de auditoría de servicio
@@ -53,4 +53,4 @@ Este ejemplo muestra cómo utilizar <xref:System.ServiceModel.Description.Servic
 ## <a name="see-also"></a>Vea también
 
 - [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Filtrar para auditar eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Cómo: Auditar eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)

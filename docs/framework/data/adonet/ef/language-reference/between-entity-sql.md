@@ -3,10 +3,10 @@ title: BETWEEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
 ms.openlocfilehash: eae4387bcd5cbaf381ebf7169b6bc54d60328377
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309308"
 ---
 # <a name="between-entity-sql"></a>BETWEEN (Entity SQL)
@@ -20,13 +20,13 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="arguments"></a>Argumentos  
  `expression`  
- Cualquier expresión válida que se va a probar en el intervalo definido por `begin_expression` y `end_expression`. `expression` debe ser el mismo tipo que `begin_expression` y `end_expression`.  
+ Cualquier expresión válida que se va a probar en el intervalo definido por `begin_expression` y `end_expression`. `expression` debe ser del mismo tipo que `begin_expression` y `end_expression`.  
   
  `begin_expression`  
- Cualquier expresión válida. `begin_expression` debe ser el mismo tipo que `expression` y `end_expression`. `begin_expression` debe ser menor que `end_expression`, lo contrario, el valor devuelto se negará.  
+ Cualquier expresión válida. `begin_expression` debe ser del mismo tipo que `expression` y `end_expression`. `begin_expression` debe ser menor que `end_expression`; de lo contrario, el valor devuelto se negará.  
   
  `end_expression`  
- Cualquier expresión válida. `end_expression` debe ser el mismo tipo que `expression` y `begin_expression`.  
+ Cualquier expresión válida. `end_expression` debe ser del mismo tipo que `expression` y `begin_expression`.  
   
  NOT  
  Especifica que el resultado de BETWEEN se niega.  
@@ -35,7 +35,7 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
  Actúa como un marcador de posición que indica que `expression` debe estar dentro del intervalo indicado por `begin_expression` y `end_expression`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Si `expression` está dentro del intervalo indicado por `begin_expression` y `end_expression`; en caso contrario, `false`. `null` se devolverá si `expression` es `null` o si `begin_expression` o `end_expression` es `null`.  
+ `true` si `expression` está dentro del intervalo indicado por `begin_expression` y `end_expression`; de lo contrario, `false`. Se devolverá `null` si `expression` es `null` o si `begin_expression` o `end_expression` es `null`.  
   
 ## <a name="remarks"></a>Comentarios  
  Para especificar un intervalo exclusivo, utilice el mayor que (>) y menor que (<) operadores en lugar de BETWEEN.  

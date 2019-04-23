@@ -5,10 +5,10 @@ ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e25f044247064db26e4e1e74590d6f4970fe4477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318785"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Tutorial: Uso de ML.NET en un escenario de clasificación multiclase para clasificar problemas de GitHub
@@ -52,7 +52,7 @@ Las fases del flujo de trabajo son las siguientes:
 
 1. **Entender el problema**
 2. **Preparar los datos**
-   * **Carga de los datos**
+   * **Cargar los datos**
    * **Extraer características (transformar los datos)**
 3. **Compilar y entrenar** 
    * **Entrenar el modelo**
@@ -150,7 +150,7 @@ Cree tres campos globales para contener las rutas de acceso a los archivos desca
 * `_mlContext` es el elemento <xref:Microsoft.ML.MLContext> que proporciona el contexto de procesamiento.
 * `_trainingDataView` es el elemento <xref:Microsoft.Data.DataView.IDataView> que se usa para procesar el conjunto de datos de entrenamiento.
 * `_predEngine` es el elemento <xref:Microsoft.ML.PredictionEngine%602> que se usa para las predicciones únicas.
-* `_reader` es el elemento <xref:Microsoft.ML.Data.TextLoader> utilizado para cargar y transformar los conjuntos de datos.
+* `_reader` es el <xref:Microsoft.ML.Data.TextLoader> utilizado para cargar y transformar los conjuntos de datos.
 
 Agregue el código siguiente a la línea justo encima del método `Main` para especificar esas rutas de acceso y otras variables:
 
@@ -170,12 +170,12 @@ Quite la definición de clase existente y agregue el código siguiente, que tien
 
 [!code-csharp[DeclareGlobalVariables](~/samples/machine-learning/tutorials/GitHubIssueClassification/GitHubIssueData.cs#DeclareTypes)]
 
-`GitHubIssue` es la clase del conjunto de datos de entrada y contiene los siguientes campos de <xref:System.String>:
+`GitHubIssue` es la clase de conjunto de datos de entrada y contiene los siguientes campos de <xref:System.String>:
 
-* `ID` contiene un valor para el id. del problema de GitHub.
-* `Area` contiene un valor para la etiqueta `Area`.
-* `Title` contiene el título del problema de GitHub.
-* `Description` contiene la descripción del problema de GitHub.
+* `ID` contiene un valor para el id. del problema de GitHub
+* `Area` contiene un valor para la etiqueta `Area`
+* `Title` contiene el título del problema de GitHub
+* `Description` contiene la descripción del problema de GitHub
 
 `IssuePrediction` es la clase usada para la predicción una vez entrenado el modelo. Tiene un solo elemento `string` (`Area`) y un atributo `PredictedLabel` `ColumnName`. `Label` se usa para crear y entrenar el modelo, y se usa también con un segundo conjunto de datos para evaluar el modelo. `PredictedLabel` se usa durante la predicción y la evaluación. Para la evaluación, se utiliza una entrada con los datos de entrenamiento, los valores de predicción y el modelo.
 
@@ -203,8 +203,8 @@ Ha definido el esquema de datos anteriormente al crear la clase `GitHubIssue`. P
 
 * `ID`, la primera columna (id. de problema de GitHub).
 * `Area`, la segunda columna (la predicción para el entrenamiento).
-* la tercera columna `Title` (título del problema de GitHub) es la primera [característica](../resources/glossary.md##feature) usada para predecir `Area`
-* la cuarta columna `Description` es la segunda característica usada para predecir `Area`
+* `Title`, la tercera columna (título del problema de GitHub), es la primera [característica](../resources/glossary.md##feature) usada para predecir el `Area`.
+* `Description`, la cuarta columna, es la segunda característica usada para predecir el `Area`.
 
 Para inicializar y cargar la variable global `_trainingDataView` con el fin de volver a usarla para la canalización, agregue el siguiente código después de la inicialización de `mlContext`:
 
@@ -299,7 +299,7 @@ Para agregar el algoritmo de aprendizaje, llame al método contenedor `mlContext
 
 ### <a name="train-the-model"></a>Entrenar el modelo
 
-Se entrena el modelo, <xref:Microsoft.ML.Data.TransformerChain%601>, en función del conjunto de datos que se haya cargado y transformado. Una vez que se ha definido el estimador, entrenará el modelo mediante <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> proporcionando al mismo tiempo los datos de entrenamiento ya cargados. Este método devuelve un modelo que se usa para las predicciones. `trainingPipeline.Fit()` entrena la canalización y devuelve `Transformer` según el elemento `DataView` que se pasa. El experimento no se ejecuta hasta que se ejecute el método `.Fit()`.
+Se entrena el modelo, <xref:Microsoft.ML.Data.TransformerChain%601>, en función del conjunto de datos que se haya cargado y transformado. Una vez que se ha definido el estimador, entrenará el modelo mediante <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> proporcionando al mismo tiempo los datos de entrenamiento ya cargados. Este método devuelve un modelo que se usa para las predicciones. `trainingPipeline.Fit()` entrena la canalización y devuelve `Transformer` según la `DataView` que se pasa. El experimento no se ejecuta hasta que se ejecute el método `.Fit()`.
 
 Agregue el código siguiente al método `BuildAndTrainModel`:
 

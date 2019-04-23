@@ -1,15 +1,15 @@
 ---
-title: Filtrar para validar archivos DBML y de asignación externa
+title: Procedimiento para validar archivos DBML y de asignación externa
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
 ms.openlocfilehash: 83a26f22495c849aa00143ca36b63fa147120c28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310244"
 ---
-# <a name="how-to-validate-dbml-and-external-mapping-files"></a>Filtrar para validar archivos DBML y de asignación externa
+# <a name="how-to-validate-dbml-and-external-mapping-files"></a>Procedimiento para validar archivos DBML y de asignación externa
 Los archivos de asignación externa y los archivos .dbml que se modifican se deben validar con sus respectivas definiciones de esquema. En este tema proporciona a los usuarios de Visual Studio con los pasos para implementar el proceso de validación.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  

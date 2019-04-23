@@ -1,22 +1,22 @@
 ---
-title: Filtrar Crear un contrato de Windows Communication Foundation con una clase
+title: Procedimiento Crear un contrato de Windows Communication Foundation con una clase
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
 ms.openlocfilehash: 37d0e6fae8ad0f3a91f1bead23fb5823fc52d420
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313232"
 ---
-# <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>Filtrar Crear un contrato de Windows Communication Foundation con una clase
+# <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>Procedimiento Crear un contrato de Windows Communication Foundation con una clase
 Es la mejor manera de crear un contrato de Windows Communication Foundation (WCF) mediante el uso de una interfaz. Para obtener más información, vea [Cómo: Definir un contrato de servicio](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md). Una alternativa, descrita aquí, es crear una clase y después aplicar directamente el atributo <xref:System.ServiceModel.ServiceContractAttribute> a la clase directamente y el atributo <xref:System.ServiceModel.OperationContractAttribute> a cada uno de los métodos de la clase que forman parte del contrato.  
   
 > [!WARNING]
->  `[ServiceContract]` y `[ServiceContractAttribute]` hacer lo mismo. Lo mismo es cierto para `[OperationContract]` y `[OperationContractAttribute]`. En cada caso, el primero es una abreviatura para el último.  
+>  `[ServiceContract]` y `[ServiceContractAttribute]` hacen lo mismo. Lo mismo es cierto para `[OperationContract]` y `[OperationContractAttribute]`. En cada caso, el primero es una abreviatura para el último.  
   
  Para obtener más información sobre los contratos de servicio, consulte [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md).  
   

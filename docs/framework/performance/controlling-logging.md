@@ -7,10 +7,10 @@ ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312103"
 ---
 # <a name="controlling-net-framework-logging"></a>Controlar el registro de .NET Framework
@@ -53,7 +53,7 @@ Provider                                 GUID
   
     -   El parámetro `-p` identifica el GUID del proveedor.  
   
-    -   `0x1CCBD` Especifica las categorías de eventos que se generará.  
+    -   `0x1CCBD` especifica las categorías de eventos que se van a producir.  
   
     -   `0x5` establece el nivel de registro (en este caso, detallado (5)).  
   

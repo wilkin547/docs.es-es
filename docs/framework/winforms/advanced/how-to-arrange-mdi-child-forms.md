@@ -1,5 +1,5 @@
 ---
-title: Filtrar para organizar formularios secundarios MDI
+title: Procedimiento para organizar formularios secundarios MDI
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
 ms.openlocfilehash: c7a9d03ef60586e1162f088d662dfe44bbdcb591
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317238"
 ---
-# <a name="how-to-arrange-mdi-child-forms"></a>Filtrar para organizar formularios secundarios MDI
+# <a name="how-to-arrange-mdi-child-forms"></a>Procedimiento para organizar formularios secundarios MDI
 A menudo, las aplicaciones van a tener comandos de menú para acciones (como Mosaico, Cascada y Organizar) que controlan el diseño de los formularios secundarios MDI abiertos. Puede usar el método <xref:System.Windows.Forms.Form.LayoutMdi%2A> con uno de los valores de enumeración de <xref:System.Windows.Forms.MdiLayout> para reorganizar los formularios secundarios en un formulario primario MDI.  
   
  Los valores de la enumeración de <xref:System.Windows.Forms.MdiLayout> muestran los formularios secundarios en cascada, en mosaico horizontal o vertical o como iconos de formulario secundario dispuestos a lo largo de la parte inferior del formulario MDI. Estos valores tienen el mismo efecto que los comandos de Windows **ventanas en cascada**, **mostrar ventanas en paralelo**, **mostrar ventanas apiladas**, y **mostrar el escritorio** , respectivamente.  
@@ -50,7 +50,7 @@ A menudo, las aplicaciones van a tener comandos de menú para acciones (como Mos
 ## <a name="see-also"></a>Vea también
 
 - [Aplicaciones de interfaz de múltiples documentos (MDI)](multiple-document-interface-mdi-applications.md)
-- [Filtrar para crear formularios principales MDI](how-to-create-mdi-parent-forms.md)
-- [Filtrar para crear formularios secundarios MDI](how-to-create-mdi-child-forms.md)
-- [Filtrar para determinar el formulario secundario MDI activo](how-to-determine-the-active-mdi-child.md)
-- [Filtrar para enviar datos al formulario secundario MDI activo](how-to-send-data-to-the-active-mdi-child.md)
+- [Cómo: Crear formularios principales MDI](how-to-create-mdi-parent-forms.md)
+- [Cómo: Crear formularios MDI secundarios](how-to-create-mdi-child-forms.md)
+- [Cómo: Determinar el formulario secundario MDI activo](how-to-determine-the-active-mdi-child.md)
+- [Cómo: Enviar datos al formulario secundario MDI activo](how-to-send-data-to-the-active-mdi-child.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer la propiedad ProtectionLevel
+title: Procedimiento para establecer la propiedad ProtectionLevel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
 ms.openlocfilehash: 77596d682af6f2579ca512b0a6de1694452e025b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317784"
 ---
-# <a name="how-to-set-the-protectionlevel-property"></a>Filtrar para establecer la propiedad ProtectionLevel
+# <a name="how-to-set-the-protectionlevel-property"></a>Procedimiento para establecer la propiedad ProtectionLevel
 Puede establecer el nivel de protección aplicando un atributo adecuado y estableciendo la propiedad. Puede establecer la protección en el nivel del servicio para que afecte a todas las partes de cada mensaje o puede establecer la protección en los niveles cada vez más individuales, desde los métodos a las partes del mensaje. Para obtener más información sobre la `ProtectionLevel` propiedad, vea [Understanding Protection Level](../../../docs/framework/wcf/understanding-protection-level.md).  
   
 > [!NOTE]

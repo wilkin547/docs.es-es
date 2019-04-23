@@ -7,10 +7,10 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316744"
 ---
 # <a name="key-frame-animations-overview"></a>Información general sobre animaciones de fotogramas clave
@@ -46,7 +46,7 @@ Este tema es una introducción a las animaciones de fotogramas clave. Las animac
   
  Las clases de animación de fotogramas clave pertenecen a la <xref:System.Windows.Media.Animation> espacio de nombres y cumplen con la convención de nomenclatura siguiente:  
   
- *\<tipo >* `AnimationUsingKeyFrames`  
+ *\<Tipo>* `AnimationUsingKeyFrames`  
   
  Donde *\<Tipo>* es el tipo de valor que la clase anima.  
   
@@ -79,7 +79,7 @@ Este tema es una introducción a las animaciones de fotogramas clave. Las animac
 ## <a name="target-values-key-frames-and-key-times"></a>Valores de destino (fotogramas clave) y valores KeyTime  
  Del mismo modo que hay distintos tipos de animaciones de fotogramas clave para animar diferentes tipos de propiedades, también hay distintos tipos de objetos de fotogramas clave: uno para cada tipo de valor animado y método de interpolación admitido. Los tipos de fotogramas clave cumplen con la convención de nomenclatura siguiente:  
   
- *\<Métodointerpolación >\<tipo >* `KeyFrame`  
+ *\<MétodoInterpolación>\<Tipo>* `KeyFrame`  
   
  Donde *\<MétodoInterpolación>* es el método de interpolación que el fotograma clave usa y *\<Tipo>* es el tipo de valor que la clase anima. Una animación de fotogramas clave que admite los tres métodos de interpolación tendrá tres tipos de fotogramas clave que se pueden usar. Por ejemplo, puede usar tres tipos de fotogramas clave con un <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, y <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>. (Los métodos de interpolación se describen detalladamente en una sección posterior).  
   
@@ -291,6 +291,6 @@ Una curva spline clave con los puntos de control (0.25, 0.5) y (0.75, 1.0)
 - [Ejemplo de animación de curva Spline clave](https://go.microsoft.com/fwlink/?LinkID=160011)
 - [Ejemplo de animación de fotogramas clave](https://go.microsoft.com/fwlink/?LinkID=160012)
 - [Información general sobre animaciones](animation-overview.md)
-- [Información general sobre objetos Storyboard](storyboards-overview.md)
+- [Información general sobre objetos Storyboard ](storyboards-overview.md)
 - [Temas de procedimientos de fotogramas clave](key-frame-animation-how-to-topics.md)
 - [Información general sobre comportamientos de control de tiempo](timing-behaviors-overview.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30828
 ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
 ms.openlocfilehash: 3593f238c72cbcce911c72e42552d6a75188b628
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310699"
 ---
 # <a name="as-any-is-not-supported-in-declare-statements"></a>'As Any' no se admite en instrucciones 'Declare'
@@ -33,5 +33,5 @@ El `Any` se utilizó el tipo de datos con `Declare` instrucciones en Visual Basi
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Tutorial: Llamar a las API de Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
-- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Crear prototipos en código administrado](../../../framework/interop/creating-prototypes-in-managed-code.md)

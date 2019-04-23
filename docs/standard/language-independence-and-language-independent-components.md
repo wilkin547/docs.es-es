@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846472"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59313377"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 .NET Framework. es independiente del lenguaje. Esto significa que, como desarrollador, puede utilizar uno de los muchos lenguajes que tienen como destino .NET Framework; por ejemplo, C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL y Windows PowerShell. Puede acceder a los tipos y miembros de las bibliotecas de clases desarrolladas para .NET Framework sin necesidad de conocer el lenguaje en el que se escribieron originalmente y sin necesidad de seguir ninguna de las convenciones del lenguaje original. Si es un desarrollador de componentes, podrá acceder a su componente desde cualquier aplicación de .NET Framework, con independencia del lenguaje.  
@@ -517,13 +517,13 @@ ms.locfileid: "57846472"
   
  Para crear componentes conformes a CLS:  
   
-1.  Utilice <xref:System.CLSCompliantAttribute> para marcar el ensamblado como conforme a CLS.  
+1. Utilice <xref:System.CLSCompliantAttribute> para marcar el ensamblado como conforme a CLS.  
   
-2.  Marque como no conforme los tipos expuestos públicamente en el ensamblado que no sean conformes a CLS.  
+2. Marque como no conforme los tipos expuestos públicamente en el ensamblado que no sean conformes a CLS.  
   
-3.  Marque como no conforme los miembros expuestos públicamente en tipos conformes a CLS.  
+3. Marque como no conforme los miembros expuestos públicamente en tipos conformes a CLS.  
   
-4.  Proporcione una alternativa conforme a CLS para los miembros que no sean conformes a CLS.  
+4. Proporcione una alternativa conforme a CLS para los miembros que no sean conformes a CLS.  
   
  Si ha marcado correctamente todos los tipos y miembros no conformes, el compilador no debe emitir ninguna advertencia de no conformidad. Sin embargo, debe indicar qué miembros no son conformes a CLS y mostrar las alternativas conformes a CLS en la documentación del producto.  
   

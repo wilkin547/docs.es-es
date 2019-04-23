@@ -1,5 +1,5 @@
 ---
-title: Filtrar Ejecutar código de confianza parcial en un espacio aislado
+title: Procedimiento Ejecutar código de confianza parcial en un espacio aislado
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -11,13 +11,13 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316536"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Filtrar Ejecutar código de confianza parcial en un espacio aislado
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procedimiento Ejecutar código de confianza parcial en un espacio aislado
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  El uso de espacios aislados consiste en ejecutar código en un entorno de seguridad restringido que limita los permisos de acceso concedidos al código. Por ejemplo, si tiene una biblioteca administrada procedente de un origen en el que no confía plenamente, no la ejecute como si fuese de plena confianza. En su lugar, coloque el código en un espacio aislado que limite los permisos a los que considere necesarios (por ejemplo, el permiso <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  

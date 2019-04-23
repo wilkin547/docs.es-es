@@ -1,5 +1,5 @@
 ---
-title: Filtrar para mostrar iconos del control ListView de formularios Windows Forms
+title: Procedimiento para mostrar iconos del control ListView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - list views [Windows Forms], displaying icons
 ms.assetid: 9d577542-8595-429b-99e5-078770ec9d35
 ms.openlocfilehash: 8e4ae744eecbe894767114179dd63651828b191b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318616"
 ---
-# <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>Filtrar para mostrar iconos del control ListView de formularios Windows Forms
+# <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>Procedimiento para mostrar iconos del control ListView de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.ListView> control puede mostrar iconos de tres listas de imágenes. Las vistas lista, detalles y SmallIcon muestran imágenes de la lista de imágenes especificado en el <xref:System.Windows.Forms.ListView.SmallImageList%2A> propiedad. La vista LargeIcon muestra imágenes de la lista de imágenes especificado en el <xref:System.Windows.Forms.ListView.LargeImageList%2A> propiedad. Una vista de lista también puede mostrar un conjunto adicional de iconos, establecidos el <xref:System.Windows.Forms.ListView.StateImageList%2A> propiedad, junto a los iconos grandes o pequeños. Para obtener más información acerca de las listas de imágenes, consulte [componente ImageList](imagelist-component-windows-forms.md) y [Cómo: Agregar o quitar imágenes con el Windows Forms ImageList (componente)](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
   
 ### <a name="to-display-images-in-a-list-view"></a>Para mostrar imágenes en una vista de lista  
@@ -39,8 +39,8 @@ Los formularios de Windows <xref:System.Windows.Forms.ListView> control puede mo
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre el control ListView](listview-control-overview-windows-forms.md)
-- [Filtrar para agregar y quitar elementos con el control ListView de formularios Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Filtrar para agregar columnas al control ListView de formularios Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Filtrar para agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [Componente ImageList](imagelist-component-windows-forms.md)
+- [Información general del control ListView](listview-control-overview-windows-forms.md)
+- [Cómo: Agregar y quitar elementos con el Control ListView de formularios de Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Cómo: Agregar columnas al Control de ListView de Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Cómo: Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [ImageList (componente)](imagelist-component-windows-forms.md)

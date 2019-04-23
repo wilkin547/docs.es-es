@@ -1,18 +1,18 @@
 ---
-title: Filtrar Animar un objeto mediante fotogramas clave
+title: Procedimiento Animar un objeto mediante fotogramas clave
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
 ms.openlocfilehash: b0a0f7c00125a43228a2658415b72f4d541f37be
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315847"
 ---
-# <a name="how-to-animate-an-object-by-using-key-frames"></a>Filtrar Animar un objeto mediante fotogramas clave
+# <a name="how-to-animate-an-object-by-using-key-frames"></a>Procedimiento Animar un objeto mediante fotogramas clave
 En este ejemplo se muestra cómo animar un objeto, que en este ejemplo es el <xref:System.Windows.Controls.Page.Background%2A> propiedad de un <xref:System.Windows.Controls.Page> control mediante fotogramas clave.  
   
 ## <a name="example"></a>Ejemplo  

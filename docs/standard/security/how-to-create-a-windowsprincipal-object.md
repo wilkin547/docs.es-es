@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear un objeto WindowsPrincipal
+title: Procedimiento para crear un objeto WindowsPrincipal
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,13 +14,13 @@ ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8f298a7b036857e783efa128ce45ee8634ce993d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314468"
 ---
-# <a name="how-to-create-a-windowsprincipal-object"></a>Filtrar para crear un objeto WindowsPrincipal
+# <a name="how-to-create-a-windowsprincipal-object"></a>Procedimiento para crear un objeto WindowsPrincipal
 Hay dos maneras de crear un objeto <xref:System.Security.Principal.WindowsPrincipal>, dependiendo de si el código debe realizar la validación basada en rol una sola vez o varias veces.  
   
  Si el código debe realizar la validación basada en rol varias veces, el primero de los procedimientos indicados a continuación produce menos sobrecarga. Cuando solo hace falta llevar a cabo una vez validaciones basadas en rol, puede crear un objeto <xref:System.Security.Principal.WindowsPrincipal> usando el segundo de los procedimientos indicados a continuación.  

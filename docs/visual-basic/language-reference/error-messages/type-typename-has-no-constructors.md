@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
 ms.openlocfilehash: 8564499b9ff55514179314217b7d40d8d3cdf6a2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311659"
 ---
 # <a name="type-typename-has-no-constructors"></a>Tipo de '\<typename >' no tiene constructores
@@ -32,4 +32,4 @@ Un tipo no admite una llamada a `Sub New()`. Una causa probable puede ser un arc
 ## <a name="see-also"></a>Vea también
 
 - [Objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [Hable con nosotros](/visualstudio/ide/talk-to-us)

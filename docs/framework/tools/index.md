@@ -10,10 +10,10 @@ ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311960"
 ---
 # <a name="net-framework-tools"></a>Herramientas de .NET Framework
@@ -95,7 +95,7 @@ La mayoría de las herramientas de .NET Framework que se describen en esta secci
  [Regsvcs.exe (Herramienta de instalación de servicios de .NET)](../../../docs/framework/tools/regsvcs-exe-net-services-installation-tool.md)  
  Carga y registra un ensamblado, genera e instala una biblioteca de tipos en una aplicación especificada de la versión de COM+ 1.0 y configura servicios que ha agregado a una clase mediante programación.  
   
- [Resgen.exe (Generador de archivos de recursos)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
+ [Resgen.exe (generador de archivos de recursos)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
  Convierte archivos de texto (.txt o .restext) y archivos de formato de recursos basado en XML (.resx) en archivos binarios de Common Language Runtime (.resources) que se pueden incrustar en un archivo ejecutable binario en tiempo de ejecución o compilar en ensamblados satélite.  
   
  [SecAnnotate.exe (Herramienta Anotador de seguridad de .NET)](../../../docs/framework/tools/secannotate-exe-net-security-annotator-tool.md)  

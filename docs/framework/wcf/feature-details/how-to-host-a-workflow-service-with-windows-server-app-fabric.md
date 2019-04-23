@@ -1,15 +1,15 @@
 ---
-title: Filtrar para hospedar un servicio de flujo de trabajo con Windows Server App Fabric
+title: Procedimiento para hospedar un servicio de flujo de trabajo con Windows Server App Fabric
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
 ms.openlocfilehash: d1042aca7e4127c39e59bf0bf400974f0cecb1e8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314742"
 ---
-# <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Filtrar para hospedar un servicio de flujo de trabajo con Windows Server App Fabric
+# <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Procedimiento para hospedar un servicio de flujo de trabajo con Windows Server App Fabric
 Hospedar servicios de flujo de trabajo en App Fabric es parecido al hospedaje en IIS/WAS. Las herramientas que proporciona App Fabric para implementar, supervisar y administrar los servicios de flujo de trabajo son la única diferencia. Este tema usa el servicio de flujo de trabajo creado en el [creación de un servicio de flujo de trabajo de larga ejecución](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). que le guiará por el proceso de creación de un servicio de flujo de trabajo. En este tema se explicará cómo hospedar el servicio de flujo de trabajo usando App Fabric. Para obtener más información acerca de Windows Server App Fabric, consulte [documentación de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Antes de completar los pasos siguientes asegúrese de que tiene instalado Windows Server App Fabric.  Para ello, abra Internet Information Services (inetmgr.exe), haga clic en el nombre del servidor en el **conexiones** ver, haga clic en sitios y haga clic en **sitio Web predeterminado**. En el lado derecho de la pantalla verá una sección denominada **App Fabric**. Si no ve esta sección (estará en la parte superior del panel derecho), no tiene App Fabric instalado. Para obtener más información acerca de cómo instalar Windows Server App Fabric, consulte [instalar Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136).  
   
 ### <a name="creating-a-simple-workflow-service"></a>Crear un servicio de flujo de trabajo simple  
@@ -92,7 +92,7 @@ Hospedar servicios de flujo de trabajo en App Fabric es parecido al hospedaje en
   
 ## <a name="see-also"></a>Vea también
 
-- [Crear un servicio de flujo de trabajo de larga ejecución](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
+- [Creación de un servicio de flujo de trabajo de larga ejecución](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
 - [Características de hospedaje de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193143)
 - [Cómo instalar Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136)
 - [Documentación de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)

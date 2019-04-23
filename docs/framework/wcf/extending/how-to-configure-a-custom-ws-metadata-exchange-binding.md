@@ -1,18 +1,18 @@
 ---
-title: Filtrar para configurar un enlace de WS-Metadata Exchange personalizado
+title: Procedimiento para configurar un enlace de WS-Metadata Exchange personalizado
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
 ms.openlocfilehash: 51681e258e6a21b3a7ae604d1c0ef65d320bfb4f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311882"
 ---
-# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Filtrar para configurar un enlace de WS-Metadata Exchange personalizado
+# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Procedimiento para configurar un enlace de WS-Metadata Exchange personalizado
 En este tema se explica cómo configurar un enlace personalizado de intercambio de WS-Metadata. Windows Communication Foundation (WCF) incluye cuatro enlaces de metadatos definido por el sistema, pero puede publicar metadatos usando cualquier enlace que desee. En este tema, se mostrará cómo publicar metadatos mediante `wsHttpBinding`. Este enlace le da la opción de exponer los metadatos de una manera segura. El código de este artículo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>El uso de un archivo de configuración  

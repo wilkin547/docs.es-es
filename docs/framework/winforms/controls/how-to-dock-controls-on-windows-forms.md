@@ -1,5 +1,5 @@
 ---
-title: Filtrar para acoplar controles en formularios Windows Forms
+title: Procedimiento para acoplar controles en formularios Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], docking
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
 ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317264"
 ---
-# <a name="how-to-dock-controls-on-windows-forms"></a>Filtrar para acoplar controles en formularios Windows Forms
+# <a name="how-to-dock-controls-on-windows-forms"></a>Procedimiento para acoplar controles en formularios Windows Forms
 Puede acoplar controles a los bordes del formulario o hacer que rellene el contenedor del control (un formulario o un control contenedor). Por ejemplo, en el Explorador de Windows se acopla su <xref:System.Windows.Forms.TreeView> control a la izquierda de la ventana y su <xref:System.Windows.Forms.ListView> control a la derecha de la ventana. Use el <xref:System.Windows.Forms.Control.Dock%2A> propiedad para todos los controles de Windows Forms visibles definir el modo de acoplamiento.  
   
 > [!NOTE]
@@ -38,12 +38,12 @@ Puede acoplar controles a los bordes del formulario o hacer que rellene el conte
   
 ## <a name="see-also"></a>Vea también
 
-- [Controles de Windows Forms](index.md)
+- [Controles de formularios Windows Forms](index.md)
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)
-- [Filtrar para delimitar y acoplar controles secundarios en un control FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [Filtrar para delimitar y acoplar controles secundarios en un control TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Cómo: Delimitar y acoplar controles secundarios en un Control FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Cómo: Delimitar y acoplar controles secundarios en un Control TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
 - [Información general sobre la propiedad AutoSize](autosize-property-overview.md)
-- [Filtrar para delimitar controles en formularios Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Cómo: Delimitar controles en Windows Forms](how-to-anchor-controls-on-windows-forms.md)

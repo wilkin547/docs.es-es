@@ -1,5 +1,5 @@
 ---
-title: Filtrar para mostrar iconos de error para la validación de formularios con el componente ErrorProvider de formularios Windows Forms
+title: Procedimiento para mostrar iconos de error para la validación de formularios con el componente ErrorProvider de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
 ms.openlocfilehash: 9487d4f82878ffefe17c576b16f654293ef01106
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316510"
 ---
-# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Filtrar para mostrar iconos de error para la validación de formularios con el componente ErrorProvider de formularios Windows Forms
+# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Procedimiento para mostrar iconos de error para la validación de formularios con el componente ErrorProvider de formularios Windows Forms
 Puede usar un formulario Windows Forms <xref:System.Windows.Forms.ErrorProvider> componente para mostrar un icono de error cuando el usuario escribe datos no válidos. Debe tener al menos dos controles del formulario con el fin de pestaña entre ellos y, por tanto, invocar el código de validación.  
   
 ### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>Para mostrar un icono de error cuando el valor de un control no es válido  
@@ -95,5 +95,5 @@ Puede usar un formulario Windows Forms <xref:System.Windows.Forms.ErrorProvider>
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
-- [Información general sobre el componente ErrorProvider](errorprovider-component-overview-windows-forms.md)
-- [Filtrar para ver errores de un conjunto de datos con el componente ErrorProvider de formularios Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Información general del componente ErrorProvider](errorprovider-component-overview-windows-forms.md)
+- [Cómo: Ver errores de un conjunto de datos con el componente ErrorProvider de formularios Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

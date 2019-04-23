@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409450"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59315769"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamiento de serialización predeterminado
 La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada. Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  
@@ -64,11 +64,11 @@ BSTR MethodOne (BSTR b) {
   
  Si no es una interfaz de un objeto conocido, el serializador realiza lo siguiente:  
   
-1.  El serializador consulta al objeto la interfaz **IProvideClassInfo2**. Si se proporciona, el serializador usa el CLSID devuelto de **IProvideClassInfo2.GetGUID** para identificar la coclase que proporciona la interfaz. Con el CLSID, el serializador puede ubicar el contenedor en el Registro si previamente se ha registrado el ensamblado.  
+1. El serializador consulta al objeto la interfaz **IProvideClassInfo2**. Si se proporciona, el serializador usa el CLSID devuelto de **IProvideClassInfo2.GetGUID** para identificar la coclase que proporciona la interfaz. Con el CLSID, el serializador puede ubicar el contenedor en el Registro si previamente se ha registrado el ensamblado.  
   
-2.  El serializador consulta a la interfaz la interfaz **IProvideClassInfo**. Si se proporciona, el serializador usa el **ITypeInfo** devuelto desde **IProvideClassInfo.GetClassinfo** para determinar el CLSID de la clase que expone la interfaz. El serializador puede usar el CLSID para buscar los metadatos del contenedor.  
+2. El serializador consulta a la interfaz la interfaz **IProvideClassInfo**. Si se proporciona, el serializador usa el **ITypeInfo** devuelto desde **IProvideClassInfo.GetClassinfo** para determinar el CLSID de la clase que expone la interfaz. El serializador puede usar el CLSID para buscar los metadatos del contenedor.  
   
-3.  Si el serializador sigue sin poder identificar la clase, encapsula la interfaz en una clase de contenedor genérica denominada **System.__ComObject**.  
+3. Si el serializador sigue sin poder identificar la clase, encapsula la interfaz en una clase de contenedor genérica denominada **System.__ComObject**.  
   
 ## <a name="default-marshaling-for-delegates"></a>Serialización predeterminada para delegados  
  Un delegado administrado se serializa como una interfaz COM o como un puntero de función según el mecanismo de llamada:  
@@ -440,6 +440,7 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Tipos que pueden o que no pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md)
 - [Copiar y fijar](copying-and-pinning.md)
 - [Serialización predeterminada para matrices](default-marshaling-for-arrays.md)

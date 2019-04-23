@@ -1,18 +1,18 @@
 ---
-title: Filtrar para crear una actividad
+title: Procedimiento para crear una actividad
 ms.date: 09/14/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315145"
 ---
-# <a name="how-to-create-an-activity"></a>Filtrar para crear una actividad
+# <a name="how-to-create-an-activity"></a>Procedimiento para crear una actividad
 
 Las actividades son la unidad básica de comportamiento en [!INCLUDE[wf1](../../../includes/wf1-md.md)]. La lógica de ejecución de una actividad se puede implementar en un código administrado o mediante otras actividades. Este tema muestra cómo crear dos actividades. La primera actividad es una actividad simple que usa código para implementar la lógica de ejecución. La implementación de la segunda actividad se define mediante otras actividades. Estas actividades se usan en los siguientes pasos del tutorial.
 
@@ -46,7 +46,7 @@ Las actividades son la unidad básica de comportamiento en [!INCLUDE[wf1](../../
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
-    > La actividad `ReadInt` se deriva de <xref:System.Activities.NativeActivity%601> en lugar de <xref:System.Activities.CodeActivity>, que es el valor predeterminado para la plantilla de actividades de código. <xref:System.Activities.CodeActivity%601> se puede usar si la actividad proporciona un único resultado, que se expone a través de la <xref:System.Activities.Activity%601.Result%2A> argumento, pero <xref:System.Activities.CodeActivity%601> no admite el uso de marcadores, por lo que <xref:System.Activities.NativeActivity%601> se usa.
+    > La actividad `ReadInt` se deriva de <xref:System.Activities.NativeActivity%601> en lugar de <xref:System.Activities.CodeActivity>, que es el valor predeterminado para la plantilla de actividades de código. <xref:System.Activities.CodeActivity%601> puede usarse si la actividad proporciona un único resultado, que se expone a través del argumento <xref:System.Activities.Activity%601.Result%2A>, pero <xref:System.Activities.CodeActivity%601> no admite el uso de marcadores, por lo que se usa <xref:System.Activities.NativeActivity%601>.
 
 ## <a name="create-the-prompt-activity"></a>Creación de la actividad Prompt
 
@@ -106,7 +106,7 @@ Para obtener instrucciones sobre cómo crear un flujo de trabajo mediante el uso
 
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
-- [Diseñar e implementar actividades personalizadas](designing-and-implementing-custom-activities.md)
+- [Diseño e implementación de actividades personalizadas](designing-and-implementing-custom-activities.md)
 - [Tutorial de introducción](getting-started-tutorial.md)
-- [Filtrar para crear un flujo de trabajo](how-to-create-a-workflow.md)
-- [Uso de la ExpressionTextBox en un diseñador de actividad personalizado](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [Cómo: Crear un flujo de trabajo](how-to-create-a-workflow.md)
+- [Uso de ExpressionTextBox en un diseñador de actividad personalizado](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397990"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59310569"
 ---
 # <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
 <a name="top"></a> En este tema se describen problemas relacionados con la recolección de elementos no utilizados y el uso de memoria. Se tratan problemas relativos al montón administrado y se explica cómo minimizar el efecto de la recolección de elementos no utilizados en las aplicaciones. Cada problema contiene vínculos a procedimientos que puede emplear para investigar los problemas.  
@@ -84,7 +84,7 @@ ms.locfileid: "47397990"
 -   [El uso de CPU durante una recolección de elementos no utilizados es demasiado alto](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
-### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problema: Se produce una excepción de memoria insuficiente  
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problema: Se inicia una excepción de memoria insuficiente  
  Hay dos casos justificados para que se produzca una excepción <xref:System.OutOfMemoryException> administrada:  
   
 -   La escasez de memoria virtual.  
@@ -278,7 +278,7 @@ ms.locfileid: "47397990"
 <a name="OOMIsManaged"></a>   
 ##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Para determinar si la excepción de memoria insuficiente está administrada  
   
-1.  En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando de impresión de excepciones (**pe**):  
+1. En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando de impresión de excepciones (**pe**):  
   
      **!pe**  
   
@@ -292,7 +292,7 @@ ms.locfileid: "47397990"
     StackTrace (generated):  
     ```  
   
-2.  Si el resultado no especifica ninguna excepción, tiene que determinar de qué subproceso procede la excepción de memoria insuficiente. Escriba el comando siguiente en el depurador para mostrar todos los subprocesos con sus pilas de llamadas:  
+2. Si el resultado no especifica ninguna excepción, tiene que determinar de qué subproceso procede la excepción de memoria insuficiente. Escriba el comando siguiente en el depurador para mostrar todos los subprocesos con sus pilas de llamadas:  
   
      **~\*KB**  
   
@@ -302,7 +302,7 @@ ms.locfileid: "47397990"
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0   
     ```  
   
-3.  Puede usar el comando siguiente para volcar las excepciones anidadas.  
+3. Puede usar el comando siguiente para volcar las excepciones anidadas.  
   
      **!pe -nested**  
   
@@ -323,7 +323,7 @@ ms.locfileid: "47397990"
   
      En este ejemplo, el tamaño de la mayor región disponible es de aproximadamente 24000 KB (3A980 en hexadecimal). Esta región es mucho menor que cuando el recolector de elementos no utilizados necesita un segmento.  
   
-     O bien  
+     o bien  
   
 -   Use el comando **vmstat**:  
   
@@ -344,9 +344,9 @@ ms.locfileid: "47397990"
 <a name="Physical"></a>   
 ##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Para determinar si hay suficiente memoria física  
   
-1.  Inicie el Administrador de tareas de Windows.  
+1. Inicie el Administrador de tareas de Windows.  
   
-2.  En la pestaña **Rendimiento**, busque el valor confirmado. (En Windows 7, busque **Asignación (KB)** en el grupo **Sistema**).  
+2. En la pestaña **Rendimiento**, busque el valor confirmado. (En Windows 7, busque **Asignación (KB)** en el grupo **Sistema**).  
   
      Si el **Total** se aproxima al **Límite** hay poca memoria física.  
   
@@ -494,13 +494,13 @@ ms.locfileid: "47397990"
 <a name="Finalize"></a>   
 ##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Para determinar si hay objetos en espera de finalización  
   
-1.  En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:  
+1. En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:  
   
      **!finalizequeue**  
   
      Observe el número de objetos que están listos para la finalización. Si el número es elevado, debe examinar por qué estos finalizadores no pueden progresar en absoluto o con la rapidez suficiente.  
   
-2.  Para obtener un resultado de subprocesos, escriba el comando siguiente:  
+2. Para obtener un resultado de subprocesos, escriba el comando siguiente:  
   
      **threads -special**  
   

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para determinar los elementos activados en el control CheckedListBox de formularios Windows Forms
+title: Procedimiento para determinar los elementos activados en el control CheckedListBox de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
 ms.openlocfilehash: 10793053934dce0bb83113004a79f1c265f5f267
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316575"
 ---
-# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Filtrar para determinar los elementos activados en el control CheckedListBox de formularios Windows Forms
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Procedimiento para determinar los elementos activados en el control CheckedListBox de formularios Windows Forms
 Cuando se presentan datos en un formulario Windows Forms <xref:System.Windows.Forms.CheckedListBox> control, puede iterar a través de la colección almacenada en el <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> propiedad o paso a través de la lista mediante el <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> método para determinar qué elementos están activados. El <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> método toma un número de índice del elemento como argumento y devuelve `true` o `false`. Al contrario de lo que cabría esperar, el <xref:System.Windows.Forms.ListBox.SelectedItems%2A> y <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> propiedades no determinan qué elementos están activados, determinan qué elementos se resaltan.  
   
 ### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>Para determinar los elementos activados en un control CheckedListBox  

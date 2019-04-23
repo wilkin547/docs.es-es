@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
 ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313572"
 ---
 # <a name="security-wpf"></a>Seguridad (WPF)
@@ -266,7 +266,7 @@ ms.locfileid: "59313572"
   
 |Área|Recurso|  
 |----------|--------------|  
-|Código administrado|[Patrones y prácticas Guía de seguridad para las aplicaciones](https://go.microsoft.com/fwlink/?LinkId=117426)|  
+|Código administrado|[Modelos y prácticas Guía de seguridad para aplicaciones](https://go.microsoft.com/fwlink/?LinkId=117426)|  
 |[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[Seguridad de acceso del código](../misc/code-access-security.md)|  
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Seguridad de confianza parcial de WPF](wpf-partial-trust-security.md)|  
@@ -276,7 +276,7 @@ ms.locfileid: "59313572"
 - [Seguridad de confianza parcial de WPF](wpf-partial-trust-security.md)
 - [Estrategia de seguridad de WPF: Seguridad de plataforma](wpf-security-strategy-platform-security.md)
 - [Estrategia de seguridad de WPF: Ingeniería de seguridad](wpf-security-strategy-security-engineering.md)
-- [Patrones y prácticas Guía de seguridad para las aplicaciones](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [Modelos y prácticas Guía de seguridad para aplicaciones](https://go.microsoft.com/fwlink/?LinkId=117426)
 - [Seguridad de acceso del código](../misc/code-access-security.md)
 - [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Información general sobre XAML (WPF)](./advanced/xaml-overview-wpf.md)

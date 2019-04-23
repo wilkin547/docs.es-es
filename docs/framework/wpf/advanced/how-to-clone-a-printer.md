@@ -1,5 +1,5 @@
 ---
-title: Filtrar Clonar una impresora
+title: Procedimiento Clonar una impresora
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
 ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310465"
 ---
-# <a name="how-to-clone-a-printer"></a>Filtrar Clonar una impresora
+# <a name="how-to-clone-a-printer"></a>Procedimiento Clonar una impresora
 En algún momento, la mayoría de las empresas comprará varias impresoras del mismo modelo. Normalmente, estas se instalan con valores de configuración prácticamente idénticos. Instalación de cada impresora puede llevar mucho tiempo y propensas a errores. El <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> espacio de nombres y el <xref:System.Printing.PrintServer.InstallPrintQueue%2A> clase que se exponen a través de Microsoft .NET Framework hace posible instalar al instante cualquier número de colas de impresión adicionales que se clonan desde una cola de impresión existente.  
   
 ## <a name="example"></a>Ejemplo  

@@ -3,10 +3,10 @@ title: Ejemplo de tecnología de serialización básica
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315015"
 ---
 # <a name="basic-serialization-technology-sample"></a>Ejemplo de tecnología de serialización básica
@@ -46,13 +46,13 @@ ms.locfileid: "59315015"
   
  Por ejemplo:  
   
- **Serialize.exe - sx Test.xml 10**  
+ **Serialize.exe -sx Test.xml 10**  
   
  Para deserializar el archivo **Test.xml** del ejemplo anterior, use los parámetros **dx Test.xml**.  
   
  Por ejemplo:  
   
- **Serialize.exe - dx Test.xml**  
+ **Serialize.exe -dx Test.xml**  
   
  En los dos ejemplos anteriores, la "x" en el modificador de la línea de comandos indica que desea realizar una serialización de XML SOAP. Puede utilizar "b" en su lugar para utilizar la serialización binaria. Si desea realizar la serialización con un gran número de nodos, puede que prefiera redirigir el resultado de la consola a un archivo.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59315015"
   
     -   <xref:System.IO.Stream> Se utiliza para serializar y deserializar. El tipo de secuencia concreto utilizado en este ejemplo es el tipo <xref:System.IO.FileStream>. Sin embargo, la serialización se puede utilizar con cualquier tipo derivado de <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File> Utilizado para crear <xref:System.IO.FileStream> objetos para leer y crear archivos en disco.  
+    -   <xref:System.IO.File> Se utiliza para crear objetos <xref:System.IO.FileStream> para leer y crear archivos en disco.  
   
     -   <xref:System.IO.FileStream> Se utiliza para serializar y deserializar las listas vinculadas.  
   
@@ -94,6 +94,6 @@ ms.locfileid: "59315015"
 - [Serialización básica](../../../docs/standard/serialization/basic-serialization.md)
 - [Serialización binaria](../../../docs/standard/serialization/binary-serialization.md)
 - [Controlar la serialización XML mediante atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [Introducir la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Serialización](../../../docs/standard/serialization/index.md)
-- [Serialización de SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)

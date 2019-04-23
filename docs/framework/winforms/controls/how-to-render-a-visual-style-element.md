@@ -1,5 +1,5 @@
 ---
-title: Filtrar para representar un elemento de estilo visual
+title: Procedimiento para representar un elemento de estilo visual
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
 ms.openlocfilehash: 57c2bc5722f77338225d70b514345344211656dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312402"
 ---
-# <a name="how-to-render-a-visual-style-element"></a>Filtrar para representar un elemento de estilo visual
+# <a name="how-to-render-a-visual-style-element"></a>Procedimiento para representar un elemento de estilo visual
 El <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> expone el espacio de nombres <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> elementos (UI) compatibles con los estilos visuales de la interfaz de objetos que representan el usuario de Windows. En este tema se muestra cómo utilizar el <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> clase para representar el <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> que representa el **cerrar sesión** y **apagar** botones del menú Inicio.  
   
 ### <a name="to-render-a-visual-style-element"></a>Para representar un elemento de estilo visual  

@@ -1,15 +1,15 @@
 ---
-title: Filtrar Invocar un método delegado (Visual Basic)
+title: Procedimiento Invocar un método delegado (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
 ms.openlocfilehash: ac3e32010e7c20ba76e39915d694b11ab3a65d40
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319617"
 ---
-# <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Filtrar Invocar un método delegado (Visual Basic)
+# <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Procedimiento Invocar un método delegado (Visual Basic)
 En este ejemplo se muestra cómo asociar un método con un delegado y, a continuación, se invoca ese método a través del delegado.  
   
 ### <a name="create-the-delegate-and-matching-procedures"></a>Crear el delegado y los procedimientos correspondientes  
@@ -44,7 +44,7 @@ En este ejemplo se muestra cómo asociar un método con un delegado y, a continu
   
 ## <a name="see-also"></a>Vea también
 
-- [Delegate (Instrucción)](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Delegate (instrucción)](../../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)
 - [Aplicaciones multiproceso](../../../../standard/threading/using-threads-and-threading.md)

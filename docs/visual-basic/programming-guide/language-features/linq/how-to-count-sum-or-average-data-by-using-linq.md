@@ -1,5 +1,5 @@
 ---
-title: Filtrar Recuento, suma o promedio de datos usando LINQ (Visual Basic)
+title: Procedimiento Recuento, suma o promedio de datos usando LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - average operator [LINQ in Visual Basic]
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
 ms.openlocfilehash: 9b29c738a953bb6260357b1b67cc46a97eeb4369
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313637"
 ---
-# <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Filtrar Recuento, suma o promedio de datos usando LINQ (Visual Basic)
+# <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Procedimiento Recuento, suma o promedio de datos usando LINQ (Visual Basic)
 Language-Integrated Query (LINQ) facilita el acceso a la información de la base de datos y ejecutar consultas.  
   
  El ejemplo siguiente muestra cómo crear una nueva aplicación que realiza consultas en una base de datos de SQL Server. El ejemplo de cuenta, suma y calcula el promedio de los resultados mediante el uso de la `Aggregate` y `Group By` cláusulas. Para obtener más información, consulte [cláusula Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md) y [Group By Clause](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
@@ -82,6 +82,6 @@ Language-Integrated Query (LINQ) facilita el acceso a la información de la base
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
-- [DataContext (Métodos) (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
-- [Aggregate Clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
-- [Group By (Cláusula)](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [Métodos DataContext (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [Aggregate (cláusula)](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [Group By (cláusula)](../../../../visual-basic/language-reference/queries/group-by-clause.md)

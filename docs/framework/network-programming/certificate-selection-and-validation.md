@@ -2,17 +2,17 @@
 title: Selección y validación de certificados
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 6d2c5470856f09d3da3bcae890717757c598a4c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666675"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59318356"
 ---
 # <a name="certificate-selection-and-validation"></a>Selección y validación de certificados
 Las clases <xref:System.Net> admiten varios métodos para seleccionar y validar <xref:System.Security.Cryptography.X509Certificates> para conexiones de Capa de sockets seguros (SSL). Un cliente puede seleccionar uno o varios certificados para autenticarse en un servidor. Un servidor puede requerir que un certificado de cliente tenga uno o más atributos específicos para la autenticación.  
   
-## <a name="definition"></a>de esquema JSON  
+## <a name="definition"></a>Definición  
  Un certificado es un flujo de bytes ASCII que contiene una clave pública, atributos (por ejemplo, el número de versión, el número de serie y la fecha de expiración) y una firma digital de una entidad de certificación. Los certificados se usan para establecer una conexión cifrada o para autenticar un cliente en un servidor.  
   
 ## <a name="client-certificate-selection-and-validation"></a>Selección y validación de certificados de cliente  
@@ -29,11 +29,11 @@ Las clases <xref:System.Net> admiten varios métodos para seleccionar y validar 
 ## <a name="client-certificate-selection"></a>Selección de certificado de cliente  
  .NET Framework selecciona el certificado de cliente que va a presentar al servidor de la siguiente manera:  
   
-1.  Si se ha presentado un certificado de cliente anteriormente al servidor, el certificado se almacena en caché cuando se presenta por primera vez y se vuelve a usar para las solicitudes de certificado de cliente posteriores.  
+1. Si se ha presentado un certificado de cliente anteriormente al servidor, el certificado se almacena en caché cuando se presenta por primera vez y se vuelve a usar para las solicitudes de certificado de cliente posteriores.  
   
-2.  Si hay un delegado, use siempre el resultado del delegado como certificado de cliente para seleccionar. Intente usar un certificado almacenado en caché siempre que sea posible, pero no use credenciales anónimas almacenadas en caché si el delegado ha devuelto null y la colección de certificados no está vacía.  
+2. Si hay un delegado, use siempre el resultado del delegado como certificado de cliente para seleccionar. Intente usar un certificado almacenado en caché siempre que sea posible, pero no use credenciales anónimas almacenadas en caché si el delegado ha devuelto null y la colección de certificados no está vacía.  
   
-3.  Si este es el primer desafío de un certificado de cliente, el marco de trabajo enumera los certificados de los objetos de la clase <xref:System.Security.Cryptography.X509Certificates.X509Certificate> o <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> asociados a la conexión y busca una coincidencia entre la lista de emisores de certificados proporcionados por el servidor y el nombre del emisor del certificado de cliente. El primer certificado que coincida se envía al servidor. Si ningún certificado coincide o la colección de certificados está vacía, se envía una credencial anónima al servidor.  
+3. Si este es el primer desafío de un certificado de cliente, el marco de trabajo enumera los certificados de los objetos de la clase <xref:System.Security.Cryptography.X509Certificates.X509Certificate> o <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> asociados a la conexión y busca una coincidencia entre la lista de emisores de certificados proporcionados por el servidor y el nombre del emisor del certificado de cliente. El primer certificado que coincida se envía al servidor. Si ningún certificado coincide o la colección de certificados está vacía, se envía una credencial anónima al servidor.  
   
 ## <a name="tools-for-certificate-configuration"></a>Herramientas para la configuración de certificados  
  Hay varias herramientas disponibles para la configuración de certificados de cliente y servidor.  
@@ -53,5 +53,6 @@ La herramienta *HttpCfg.exe* se puede usar para configurar certificados de servi
  Además de estas herramientas, las clases <xref:System.Security.Cryptography.X509Certificates.X509Certificate> y <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> proporcionan métodos para cargar un certificado desde el sistema de archivos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Seguridad en la programación para redes](../../../docs/framework/network-programming/security-in-network-programming.md)
 - [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)

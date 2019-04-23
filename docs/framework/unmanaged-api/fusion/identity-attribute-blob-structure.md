@@ -19,10 +19,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314079"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB (Estructura)
@@ -244,7 +244,7 @@ Exit:
   
 ## <a name="see-also"></a>Vea también
 
-- [IReferenceIdentity (Interfaz)](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
-- [IEnumIDENTITY_ATTRIBUTE (Interfaz)](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
-- [IDENTITY_ATTRIBUTE (Estructura)](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
+- [IReferenceIdentity (interfaz)](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [IEnumIDENTITY_ATTRIBUTE (interfaz)](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+- [IDENTITY_ATTRIBUTE (estructura)](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
 - [Estructuras de fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

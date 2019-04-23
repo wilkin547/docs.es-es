@@ -1,5 +1,5 @@
 ---
-title: Filtrar para suplantar a un cliente en un servicio
+title: Procedimiento para suplantar a un cliente en un servicio
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
 ms.openlocfilehash: d58f25f279bf2baa1caa7744cea94b909f48866f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310582"
 ---
-# <a name="how-to-impersonate-a-client-on-a-service"></a>Filtrar para suplantar a un cliente en un servicio
+# <a name="how-to-impersonate-a-client-on-a-service"></a>Procedimiento para suplantar a un cliente en un servicio
 Suplantar a un cliente en un servicio de Windows Communication Foundation (WCF) permite que el servicio realizar acciones en nombre del cliente. Para las acciones sujetas a las comprobaciones de la lista de control de acceso (ACL), como el acceso a los directorios y archivos de un equipo o el acceso a una base de datos de SQL Server, ACL realiza una comprobación frente a la cuenta de usuario del cliente. Este tema muestra los pasos básicos requeridos para permitir a un cliente de un dominio de Windows establecer un nivel de la suplantación del cliente. Para obtener un ejemplo ilustrativo, consulte [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obtener más información sobre la suplantación del cliente, consulte [delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 > [!NOTE]
@@ -49,5 +49,5 @@ Suplantar a un cliente en un servicio de Windows Communication Foundation (WCF) 
 
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.Security.Principal.TokenImpersonationLevel>
-- [Suplantar el cliente](../../../docs/framework/wcf/samples/impersonating-the-client.md)
+- [Suplantación del cliente](../../../docs/framework/wcf/samples/impersonating-the-client.md)
 - [Delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

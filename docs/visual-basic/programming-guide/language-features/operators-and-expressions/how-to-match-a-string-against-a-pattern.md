@@ -1,5 +1,5 @@
 ---
-title: Filtrar Coincide con una cadena con un patrón (Visual Basic)
+title: Procedimiento Coincide con una cadena con un patrón (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
 ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316276"
 ---
-# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Filtrar Coincide con una cadena con un patrón (Visual Basic)
+# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Procedimiento Coincide con una cadena con un patrón (Visual Basic)
 Si desea averiguar si una expresión de la [tipo de datos String](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisface un patrón, puede usar el [Like (operador)](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
  `Like` toma dos operandos. El operando izquierdo es una expresión de cadena y el operando derecho es una cadena que contiene el patrón que se usará para la coincidencia. `Like` Devuelve un `Boolean` valor que indica si la expresión de cadena ajusta al modelo.  
@@ -82,5 +82,5 @@ Si desea averiguar si una expresión de la [tipo de datos String](../../../../vi
 
 - [Operadores de comparación](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [Operadores y expresiones](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Like (Operador)](../../../../visual-basic/language-reference/operators/like-operator.md)
-- [String (Tipo de datos)](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Like (operador)](../../../../visual-basic/language-reference/operators/like-operator.md)
+- [String (tipo de datos)](../../../../visual-basic/language-reference/data-types/string-data-type.md)

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
 ms.openlocfilehash: 0cc1ac9adf40948a5109b37336d45a2be833e54f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317212"
 ---
 # <a name="optimizing-performance-text"></a>Optimizar el rendimiento: Texto
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluye compatibilidad para la presentación del contenido de texto mediante el uso de características enriquecidas [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] controles. En general, puede dividir la representación de texto en tres capas:  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluye compatibilidad para la presentación de contenido de texto mediante el uso de controles [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] completos. En general, puede dividir la representación de texto en tres capas:  
   
 1. Mediante el <xref:System.Windows.Documents.Glyphs> y <xref:System.Windows.Media.GlyphRun> objetos directamente.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "59317212"
   
  En la tabla siguiente se muestra el costo de mostrar 1000 <xref:System.Windows.Controls.TextBlock> objetos con y sin explícita <xref:System.Windows.Documents.Run>.  
   
-|**Tipo TextBlock**|**Hora de creación (ms)**|**Representar el tiempo (ms)**|  
+|**Tipo TextBlock**|**Tiempo de creación (ms)**|**Tiempo de representación (ms)**|  
 |------------------------|------------------------------|----------------------------|  
 |Propiedades de texto de configuración de ejecución|146|540|  
 |Propiedades de texto de configuración de TextBlock|43|453|  
@@ -107,7 +107,7 @@ ms.locfileid: "59317212"
   
  La solución a este problema es sencilla. Si el <xref:System.Windows.Controls.Label> no está establecido en personalizado <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> valor, reemplace el <xref:System.Windows.Controls.Label> con un <xref:System.Windows.Controls.TextBlock> y enlazar los datos su <xref:System.Windows.Controls.TextBlock.Text%2A> propiedad a la cadena de origen.  
   
-|**Propiedad enlazada a datos**|**Hora de actualización (ms)**|  
+|**Propiedad enlazada a datos**|**Tiempo de actualización (ms)**|  
 |-----------------------------|----------------------------|  
 |Label.Content|835|  
 |TextBlock.Text|242|  
@@ -142,14 +142,14 @@ ms.locfileid: "59317212"
   
  En la tabla siguiente se muestra el costo de rendimiento de mostrar 1000 <xref:System.Windows.Documents.Hyperlink> elementos con y sin subrayado.  
   
-|**Hipervínculo**|**Hora de creación (ms)**|**Representar el tiempo (ms)**|  
+|**Hyperlink**|**Tiempo de creación (ms)**|**Tiempo de representación (ms)**|  
 |-------------------|------------------------------|----------------------------|  
 |Con subrayado|289|1130|  
 |Sin subrayado|299|776|  
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>Características de formato de texto  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona servicios, como la división de palabras automática de formato de texto enriquecido. Estos servicios pueden afectar al rendimiento de la aplicación y solo deben usarse cuando sea necesario.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona servicios de formato de texto enriquecido, como la división de palabras automática. Estos servicios pueden afectar al rendimiento de la aplicación y solo deben usarse cuando sea necesario.  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>Evitar el uso innecesario de la división de palabras  
  División de palabras automática busca los puntos de interrupción de guion para las líneas de texto y permite las posiciones de salto adicional para las líneas en <xref:System.Windows.Controls.TextBlock> y <xref:System.Windows.Documents.FlowDocument> objetos. De forma predeterminada, la característica de división de palabras automática está deshabilitada en estos objetos. Puede habilitarla si establece la propiedad IsHyphenationEnabled del objeto en `true`. Sin embargo, si se habilita esta característica, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inicia la interoperabilidad de [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)], lo que puede afectar el rendimiento de la aplicación. Se recomienda que no se la división de palabras automática a menos que lo necesite.  

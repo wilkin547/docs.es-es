@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312181"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorización basada en notificaciones con WIF
@@ -60,4 +60,4 @@ En una aplicación de usuario de confianza, la autorización determina los recur
   
 5. El acceso se concede si el resultado es true y se deniega si es false. Por ejemplo, la regla podría ser que el usuario tenga 21 años o más y resida en el estado de Washington.  
   
- <xref:System.Security.Claims.ClaimsAuthorizationManager> es útil para Exteriorizar la lógica de decisión de autorización basada en sus aplicaciones. ClaimsAuthorizationManager es un componente de WIF que se distribuye como parte de .NET 4.5. ClaimsAuthorizationManager permite interceptar solicitudes entrantes e implementar la lógica deseada para tomar decisiones de autorización en función de las notificaciones entrantes. Esto es importante cuando es necesario cambiar la lógica de autorización. En ese caso, el uso de ClaimsAuthorizationManager no afectará a la integridad de la aplicación y se reducirá la probabilidad de un error de aplicación como resultado del cambio. Para obtener más información sobre cómo usar ClaimsAuthorizationManager para implementar el control de acceso basado en notificaciones, consulte [How To: Implementar notificaciones de autorización en una aplicación de ASP.NET compatible con notificaciones mediante WIF y ACS](https://go.microsoft.com/fwlink/?LinkID=247446).
+ <xref:System.Security.Claims.ClaimsAuthorizationManager> es útil para exteriorizar la lógica de decisión de la autorización basada en notificaciones de las aplicaciones. ClaimsAuthorizationManager es un componente de WIF que se distribuye como parte de .NET 4.5. ClaimsAuthorizationManager permite interceptar solicitudes entrantes e implementar la lógica deseada para tomar decisiones de autorización en función de las notificaciones entrantes. Esto es importante cuando es necesario cambiar la lógica de autorización. En ese caso, el uso de ClaimsAuthorizationManager no afectará a la integridad de la aplicación y se reducirá la probabilidad de un error de aplicación como resultado del cambio. Para obtener más información sobre cómo usar ClaimsAuthorizationManager para implementar el control de acceso basado en notificaciones, consulte [How To: Implementar notificaciones de autorización en una aplicación de ASP.NET compatible con notificaciones mediante WIF y ACS](https://go.microsoft.com/fwlink/?LinkID=247446).

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para usar un nombre de usuario personalizado y un validador de contraseñas
+title: Procedimiento para usar un nombre de usuario personalizado y un validador de contraseñas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
 ms.openlocfilehash: 5ad53700590c3f3683663d306e15fcbe857f625e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308515"
 ---
-# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Filtrar para usar un nombre de usuario personalizado y un validador de contraseñas
+# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Procedimiento para usar un nombre de usuario personalizado y un validador de contraseñas
 De forma predeterminada, cuando se usa un nombre de usuario y una contraseña para la autenticación, Windows Communication Foundation (WCF) utiliza Windows para validar el nombre de usuario y la contraseña. Sin embargo, WCF permite esquemas de autenticación de nombre y contraseña de usuario personalizada, también conocido como *validadores*. Para incorporar un nombre de usuario personalizado y un validador de contraseña, cree una clase que derive de <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> y, a continuación, configúrela.  
   
  Para una aplicación de ejemplo, vea [validador de contraseña de nombre de usuario](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
@@ -120,5 +120,5 @@ De forma predeterminada, cuando se usa un nombre de usuario y una contraseña pa
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
-- [Filtrar para usar el proveedor de pertenencia de ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [Cómo: Usar el proveedor de pertenencia ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
 - [Autenticación](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

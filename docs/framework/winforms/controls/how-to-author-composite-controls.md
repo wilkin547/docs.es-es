@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear controles compuestos
+title: Procedimiento para crear controles compuestos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], creating composite controls
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
 ms.openlocfilehash: 8bb630d3fb7e064935440439f2f07816e87c77dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317017"
 ---
-# <a name="how-to-author-composite-controls"></a>Filtrar para crear controles compuestos
+# <a name="how-to-author-composite-controls"></a>Procedimiento para crear controles compuestos
 Los controles compuestos pueden emplearse de muchas formas. Puede crearlos como parte de un proyecto de aplicación de escritorio de Windows y utilizarlos solo en formularios del proyecto. También podría crearlos en un proyecto de Biblioteca de controles de Windows, compilar el proyecto en un ensamblado y utilizar los controles en otros proyectos. Es posible incluso heredar de ellos y utilizar la herencia visual para personalizarlos rápidamente para fines especiales.  
   
 > [!NOTE]
@@ -80,10 +80,10 @@ Los controles compuestos pueden emplearse de muchas formas. Puede crearlos como 
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Crear un control compuesto con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Tutorial: Crear un control compuesto con Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Tutorial: Heredar de un control de formularios Windows Forms con Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Tutorial: Heredar de un control de formularios Windows Forms con Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Tutorial: Crear un Control compuesto con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Tutorial: Crear un Control compuesto con VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Tutorial: Heredar de un Control de Windows Forms con Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Tutorial: Heredar de un Control de Windows Forms con VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [Recomendaciones sobre tipos de controles](control-type-recommendations.md)
-- [Filtrar para crear controles de formularios Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Cómo: Crear controles de Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)

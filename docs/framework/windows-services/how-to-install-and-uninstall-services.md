@@ -1,5 +1,5 @@
 ---
-title: Filtrar Instalar y desinstalar servicios de Windows
+title: Procedimiento Instalar y desinstalar servicios de Windows
 ms.date: 02/05/2019
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 43b5ad2f346406897e8bcbcce5660a6c9524f9af
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0119fee443aafd1d4215260d2cf42cec9f7eba74
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826278"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59308476"
 ---
-# <a name="how-to-install-and-uninstall-windows-services"></a>Filtrar Instalar y desinstalar servicios de Windows
+# <a name="how-to-install-and-uninstall-windows-services"></a>Procedimiento Instalar y desinstalar servicios de Windows
 Si desarrolla un servicio de Windows con .NET Framework, puede instalar rápidamente la aplicación de servicio mediante la utilidad de línea de comandos [*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md). Los desarrolladores que quieran publicar un servicio de Windows que los usuarios puedan instalar y desinstalar deben usar InstallShield. Para más información, vea [Creación de un paquete de instalador (cliente de Windows)](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).
   
 > [!WARNING]
@@ -34,13 +34,13 @@ Si desarrolla un servicio de Windows con .NET Framework, puede instalar rápidam
   
 ### <a name="install-your-service-manually"></a>Instalación manual del servicio  
   
-1.  Desde el menú **Inicio**, seleccione el directorio **Visual Studio \<*versión*>** y, después **Símbolo del sistema para desarrolladores para VS \<*versión*>**.
+1. Desde el menú **Inicio**, seleccione el directorio **Visual Studio \<*versión*>** y, después **Símbolo del sistema para desarrolladores para VS \<*versión*>**.
   
      Aparecerá el símbolo del sistema para desarrolladores de Visual Studio. 
   
-2.  Obtenga acceso al directorio donde se encuentra el archivo ejecutable compilado del proyecto.  
+2. Obtenga acceso al directorio donde se encuentra el archivo ejecutable compilado del proyecto.  
   
-3.  Ejecute *InstallUtil.exe* desde la línea de comandos con el archivo ejecutable del proyecto como parámetro:  
+3. Ejecute *InstallUtil.exe* desde la línea de comandos con el archivo ejecutable del proyecto como parámetro:  
   
     ```console
     installutil <yourproject>.exe  
@@ -58,7 +58,7 @@ Si desarrolla un servicio de Windows con .NET Framework, puede instalar rápidam
   
      Aparecerá el símbolo del sistema para desarrolladores de Visual Studio.  
   
-2.  Ejecute *InstallUtil.exe* desde la línea de comandos con la salida del proyecto como parámetro:  
+2. Ejecute *InstallUtil.exe* desde la línea de comandos con la salida del proyecto como parámetro:  
   
     ```console  
     installutil /u <yourproject>.exe  
@@ -67,6 +67,7 @@ Si desarrolla un servicio de Windows con .NET Framework, puede instalar rápidam
 3. Después de eliminar el archivo ejecutable de un servicio, es posible que el servicio permanezca en el Registro. En ese caso, use el comando [sc delete](/windows-server/administration/windows-commands/sc-delete) para quitar la entrada del servicio del Registro.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Introducción a las aplicaciones de servicios de Windows](../windows-services/introduction-to-windows-service-applications.md)
 - [Cómo: Crear servicios de Windows](../windows-services/how-to-create-windows-services.md)
 - [Cómo: Agregar instaladores a una aplicación de servicio](../windows-services/how-to-add-installers-to-your-service-application.md)

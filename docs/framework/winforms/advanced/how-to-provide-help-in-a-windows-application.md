@@ -1,5 +1,5 @@
 ---
-title: Filtrar para proporcionar ayuda en una aplicación Windows
+title: Procedimiento para proporcionar ayuda en una aplicación Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], Windows applications
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
 ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312726"
 ---
-# <a name="how-to-provide-help-in-a-windows-application"></a>Filtrar para proporcionar ayuda en una aplicación Windows
+# <a name="how-to-provide-help-in-a-windows-application"></a>Procedimiento para proporcionar ayuda en una aplicación Windows
 Puede usar de la <xref:System.Windows.Forms.HelpProvider> componente para asociar los temas de ayuda dentro de un archivo de ayuda a controles específicos en los formularios de Windows. El archivo de ayuda puede ser HTML, HTMLHelp 1.x o superior.  
   
 > [!NOTE]
@@ -57,7 +57,7 @@ Puede usar de la <xref:System.Windows.Forms.HelpProvider> componente para asocia
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para mostrar ayuda emergente](how-to-display-pop-up-help.md)
-- [Controlar la ayuda mediante información sobre herramientas](control-help-using-tooltips.md)
-- [Integrar la Ayuda de usuario en formularios Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Cómo: Mostrar ayuda emergente](how-to-display-pop-up-help.md)
+- [Controlar la ayuda mediante componentes Tooltip](control-help-using-tooltips.md)
+- [Integrar la Ayuda de usuario en Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

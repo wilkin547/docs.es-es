@@ -1,15 +1,15 @@
 ---
-title: Filtrar para importar metadatos a puntos de conexión de servicio
+title: Procedimiento para importar metadatos a puntos de conexión de servicio
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
 ms.openlocfilehash: afee3f2236db99b14c0e840d987e4862a260568e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318291"
 ---
-# <a name="how-to-import-metadata-into-service-endpoints"></a>Filtrar para importar metadatos a puntos de conexión de servicio
+# <a name="how-to-import-metadata-into-service-endpoints"></a>Procedimiento para importar metadatos a puntos de conexión de servicio
 En este tema se explica cómo importar los metadatos en una colección de extremos de servicio y usar el servicio definido en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). En este tema se muestra cómo crear una aplicación cliente que importa los metadatos desde el servicio y, a continuación, llama al método `Add` en el servicio.  
   
 ### <a name="to-import-metadata-into-service-endpoints"></a>Para importar metadatos a puntos de conexión de servicio  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 9410d166a3f91770cb0c64b9971dc58ad9cd07cb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843700"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59314690"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Tutorial: Manipular archivos y directorios en Visual Basic
 En este tutorial se ofrece una introducción a los conceptos básicos de E/S de archivos en Visual Basic. En él se describe cómo crear una pequeña aplicación que enumera y examina archivos de texto en un directorio. Para cada archivo de texto seleccionado, la aplicación proporciona atributos de archivo y la primera línea de contenido. Existe una opción para escribir información en un archivo de registro.  
@@ -31,17 +31,17 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
   
 ### <a name="to-create-the-project"></a>Para crear el proyecto  
   
-1.  En el menú **Archivo**, haga clic en **Nuevo proyecto**.  
+1. En el menú **Archivo**, haga clic en **Nuevo proyecto**.  
   
      Aparecerá el cuadro de diálogo **Nuevo proyecto** .  
   
-2.  En el panel **Plantillas instaladas**, expanda **Visual Basic** y haga clic en **Windows**. En el panel **Plantillas** situado en el medio, haga clic en **Aplicación de Windows Forms**.  
+2. En el panel **Plantillas instaladas**, expanda **Visual Basic** y haga clic en **Windows**. En el panel **Plantillas** situado en el medio, haga clic en **Aplicación de Windows Forms**.  
   
-3.  En la casilla **Nombre**, escriba `FileExplorer` para establecer el nombre del proyecto y, luego, haga clic en **Aceptar**.  
+3. En la casilla **Nombre**, escriba `FileExplorer` para establecer el nombre del proyecto y, luego, haga clic en **Aceptar**.  
   
      Visual Studio agrega el proyecto al **Explorador de soluciones** y se abre el Diseñador de Windows Forms.  
   
-4.  Agregue los controles de la siguiente tabla al formulario y establezca los valores correspondientes para sus propiedades.  
+4. Agregue los controles de la siguiente tabla al formulario y establezca los valores correspondientes para sus propiedades.  
   
     |Control|Propiedad.|Valor|  
     |-------------|--------------|-----------|  
@@ -53,15 +53,15 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Para seleccionar una carpeta y enumerar archivos en una carpeta  
   
-1.  Cree un controlador de eventos `Click` para `browseButton` haciendo doble clic en el control del formulario. Se abrirá el Editor de código.  
+1. Cree un controlador de eventos `Click` para `browseButton` haciendo doble clic en el control del formulario. Se abrirá el Editor de código.  
   
-2.  Agregue el código siguiente al controlador de eventos `Click`.  
+2. Agregue el código siguiente al controlador de eventos `Click`.  
   
      [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
      La llamada `FolderBrowserDialog1.ShowDialog` abre el cuadro de diálogo **Buscar carpeta**. Después de que el usuario hace clic en **Aceptar**, la propiedad <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> se envía como un argumento al método `ListFiles`, que se agrega en el paso siguiente.  
   
-3.  Agregue el siguiente método `ListFiles`.  
+3. Agregue el siguiente método `ListFiles`.  
   
      [!code-vb[VbVbcnMyFileSystem#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#104)]  
   
@@ -71,17 +71,17 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
   
      Las cadenas devueltas por el método `GetFiles` se agregan luego al elemento **ListBox**.  
   
-4.  Ejecute la aplicación. Haga clic en el botón **Examinar**. En el cuadro de diálogo **Buscar carpeta**, busque una carpeta que contenga archivos .txt y, luego, selecciónela y haga clic en **Aceptar**.  
+4. Ejecute la aplicación. Haga clic en el botón **Examinar**. En el cuadro de diálogo **Buscar carpeta**, busque una carpeta que contenga archivos .txt y, luego, selecciónela y haga clic en **Aceptar**.  
   
      El elemento `ListBox` contiene una lista de archivos .txt de la carpeta seleccionada.  
   
-5.  Deje de ejecutar la aplicación.  
+5. Deje de ejecutar la aplicación.  
   
 ### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>Para obtener los atributos de un archivo y contenido de un archivo de texto  
   
-1.  Cree un controlador de eventos `Click` para `examineButton` haciendo doble clic en el control del formulario.  
+1. Cree un controlador de eventos `Click` para `examineButton` haciendo doble clic en el control del formulario.  
   
-2.  Agregue el código siguiente al controlador de eventos `Click`.  
+2. Agregue el código siguiente al controlador de eventos `Click`.  
   
      [!code-vb[VbVbcnMyFileSystem#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#105)]  
   
@@ -89,7 +89,7 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
   
      La ruta del archivo se envía como argumento al método `GetTextForOutput`, que se agrega en el paso siguiente. Este método devuelve una cadena que contiene información del archivo. La información del archivo aparece en un elemento **MessageBox**.  
   
-3.  Agregue el siguiente método `GetTextForOutput`.  
+3. Agregue el siguiente método `GetTextForOutput`.  
   
      [!code-vb[VbVbcnMyFileSystem#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#107)]  
   
@@ -97,15 +97,15 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
   
      El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> lee el contenido del archivo en <xref:System.IO.StreamReader>. La primera línea del contenido se obtiene de `StreamReader` y se agrega a `StringBuilder`.  
   
-4.  Ejecute la aplicación. Haga clic en **Examinar** y busque una carpeta que contenga archivos .txt. Haga clic en **Aceptar**.  
+4. Ejecute la aplicación. Haga clic en **Examinar** y busque una carpeta que contenga archivos .txt. Haga clic en **Aceptar**.  
   
      Seleccione un archivo en `ListBox` y, luego, haga clic en **Examine** (Examinar). La información del archivo se muestra en un `MessageBox`.  
   
-5.  Deje de ejecutar la aplicación.  
+5. Deje de ejecutar la aplicación.  
   
 ### <a name="to-add-a-log-entry"></a>Para agregar una entrada de registro  
   
-1.  Agregue el siguiente código al final del controlador de eventos `examineButton_Click`.  
+1. Agregue el siguiente código al final del controlador de eventos `examineButton_Click`.  
   
      [!code-vb[VbVbcnMyFileSystem#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#106)]  
   
@@ -113,41 +113,41 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
   
      El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>, con el argumento `append` establecido en `True`, se usa para crear la entrada de registro.  
   
-2.  Ejecute la aplicación. Busque un archivo de texto, selecciónelo en `ListBox`, seleccione la casilla **Guardar resultados** y, luego, haga clic en **Examine** (Examinar). Compruebe que la entrada de registro se ha escrito en el archivo `log.txt`.  
+2. Ejecute la aplicación. Busque un archivo de texto, selecciónelo en `ListBox`, seleccione la casilla **Guardar resultados** y, luego, haga clic en **Examine** (Examinar). Compruebe que la entrada de registro se ha escrito en el archivo `log.txt`.  
   
-3.  Deje de ejecutar la aplicación.  
+3. Deje de ejecutar la aplicación.  
   
 ### <a name="to-use-the-current-directory"></a>Para usar el directorio actual  
   
-1.  Cree un controlador de eventos para `Form1_Load` haciendo doble clic en el formulario.  
+1. Cree un controlador de eventos para `Form1_Load` haciendo doble clic en el formulario.  
   
-2.  Agregue el siguiente código al controlador de eventos.  
+2. Agregue el siguiente código al controlador de eventos.  
   
      [!code-vb[VbVbcnMyFileSystem#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#102)]  
   
      Este código establece el directorio predeterminado del explorador de carpetas en el directorio actual.  
   
-3.  Ejecute la aplicación. Al hacer clic en **Examinar** la primera vez, se abre el cuadro de diálogo **Buscar carpeta** en el directorio actual.  
+3. Ejecute la aplicación. Al hacer clic en **Examinar** la primera vez, se abre el cuadro de diálogo **Buscar carpeta** en el directorio actual.  
   
-4.  Deje de ejecutar la aplicación.  
+4. Deje de ejecutar la aplicación.  
   
 ### <a name="to-selectively-enable-controls"></a>Para habilitar los controles de forma selectiva  
   
-1.  Agregue el siguiente método `SetEnabled`.  
+1. Agregue el siguiente método `SetEnabled`.  
   
      [!code-vb[VbVbcnMyFileSystem#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#108)]  
   
      El método `SetEnabled` habilita o deshabilita los controles dependiendo de si hay un elemento seleccionado en `ListBox`.  
   
-2.  Cree un controlador de eventos `SelectedIndexChanged` para `filesListBox` haciendo doble clic en el control `ListBox` del formulario.  
+2. Cree un controlador de eventos `SelectedIndexChanged` para `filesListBox` haciendo doble clic en el control `ListBox` del formulario.  
   
-3.  Agregue una llamada a `SetEnabled` en el nuevo controlador de eventos `filesListBox_SelectedIndexChanged`.  
+3. Agregue una llamada a `SetEnabled` en el nuevo controlador de eventos `filesListBox_SelectedIndexChanged`.  
   
-4.  Agregue una llamada a `SetEnabled` al final del controlador de eventos `browseButton_Click`.  
+4. Agregue una llamada a `SetEnabled` al final del controlador de eventos `browseButton_Click`.  
   
-5.  Agregue una llamada a `SetEnabled` al final del controlador de eventos `Form1_Load`.  
+5. Agregue una llamada a `SetEnabled` al final del controlador de eventos `Form1_Load`.  
   
-6.  Ejecute la aplicación. La casilla **Guardar resultados** y el botón **Examine** (Examinar) se deshabilitan si no hay ningún elemento seleccionado en `ListBox`.  
+6. Ejecute la aplicación. La casilla **Guardar resultados** y el botón **Examine** (Examinar) se deshabilitan si no hay ningún elemento seleccionado en `ListBox`.  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>Ejemplo completo usando My.Computer.FileSystem  
  A continuación, se muestra el ejemplo completo.  

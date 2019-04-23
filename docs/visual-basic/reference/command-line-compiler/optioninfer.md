@@ -9,10 +9,10 @@ helpviewer_keywords:
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
 ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315509"
 ---
 # <a name="-optioninfer"></a>-optioninfer
@@ -26,7 +26,7 @@ Permite el uso de la inferencia de tipo de variable local en declaraciones de va
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`+` &#124; `-`|Opcional. Especifique `-optioninfer+` para habilitar la inferencia de tipo de variable local o `-optioninfer-` para bloquearla. La opción `-optioninfer`, sin ningún valor especificado, es igual a `-optioninfer+`. El valor predeterminado cuando el modificador `-optioninfer` no está presente también es `-optioninfer+`. El valor predeterminado se establece en el archivo de respuesta vbc.rsp.|  
   
@@ -61,4 +61,4 @@ vbc -optioninfer+ test.vb
 - [Valores predeterminados de Visual Basic, Proyectos, Opciones (Cuadro de diálogo)](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [Página Compilación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [Compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
+- [Compilación desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agregar funcionalidades de búsqueda a un control ListView
+title: Procedimiento para agregar funcionalidades de búsqueda a un control ListView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
 ms.openlocfilehash: d5d4dae55fc9f0613ab6535b2fe57e262d0ef141
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314027"
 ---
-# <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Filtrar para agregar funcionalidades de búsqueda a un control ListView
+# <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Procedimiento para agregar funcionalidades de búsqueda a un control ListView
 A menudo, cuando se trabaja con una amplia lista de elementos en un <xref:System.Windows.Forms.ListView> control, desea ofrecer capacidades de búsqueda para el usuario. El <xref:System.Windows.Forms.ListView> control ofrece esta funcionalidad de dos maneras diferentes: coincidencia de texto y búsqueda de ubicación.  
   
  El <xref:System.Windows.Forms.ListView.FindItemWithText%2A> método le permite realizar una búsqueda de texto en un <xref:System.Windows.Forms.ListView> en la vista de lista o detalles, dada una cadena de búsqueda y una inicial y final opcional índice. En cambio, el <xref:System.Windows.Forms.ListView.FindNearestItem%2A> método le permite encontrar un elemento en un <xref:System.Windows.Forms.ListView> en el icono o el icono de vista, dado un conjunto de coordenadas x e y y una dirección de búsqueda.  
@@ -52,6 +52,6 @@ A menudo, cuando se trabaja con una amplia lista de elementos en un <xref:System
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.FindItemWithText%2A>
 - <xref:System.Windows.Forms.ListView.FindNearestItem%2A>
-- [Control ListView](listview-control-windows-forms.md)
-- [Información general sobre el control ListView](listview-control-overview-windows-forms.md)
-- [Filtrar para agregar y quitar elementos con el control ListView de formularios Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [ListView (Control)](listview-control-windows-forms.md)
+- [Información general del control ListView](listview-control-overview-windows-forms.md)
+- [Cómo: Agregar y quitar elementos con el Control ListView de formularios de Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

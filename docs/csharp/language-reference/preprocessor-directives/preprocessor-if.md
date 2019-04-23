@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 027c99df806197637675837b7556b176dc115aba
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545824"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59318980"
 ---
 # <a name="if-c-reference"></a>#if (Referencia de C#)
 
@@ -24,7 +24,7 @@ Cuando el compilador de C# encuentra una directiva `#if`, seguida finalmente por
 #endif
 ```
 
-Puede usar los operadores [==](../operators/equality-operators.md#equality-operator-) (igualdad) y [!=](../operators/equality-operators.md#inequality-operator-) (desigualdad) solo para comprobar los valores [true](../keywords/true.md) o [false](../keywords/false.md). True significa que el símbolo está definido. La instrucción `#if DEBUG` tiene el mismo significado que `#if (DEBUG == true)`. Puede usar los operadores [&&](../operators/conditional-and-operator.md) (y), [&#124;&#124;](../operators/conditional-or-operator.md) (o) y [!](../operators/logical-negation-operator.md) (no) para evaluar si se han definido varios símbolos. Es posible agrupar símbolos y operadores mediante paréntesis.
+Puede usar los operadores [==](../operators/equality-operators.md#equality-operator-) (igualdad) y [!=](../operators/equality-operators.md#inequality-operator-) (desigualdad) solo para comprobar los valores [true](../keywords/true.md) o [false](../keywords/false.md). True significa que el símbolo está definido. La instrucción `#if DEBUG` tiene el mismo significado que `#if (DEBUG == true)`. Puede usar los operadores [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (y), [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (o) y [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (no) para evaluar si se han definido varios símbolos. Es posible agrupar símbolos y operadores mediante paréntesis.
 
 ## <a name="remarks"></a>Comentarios
 

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para guardar archivos con el control RichTextBox de formularios Windows Forms
+title: Procedimiento para guardar archivos con el control RichTextBox de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
 ms.openlocfilehash: 4784ddd563ccec0f7e6271700781ee1b5d3ac105
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318421"
 ---
-# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Filtrar para guardar archivos con el control RichTextBox de formularios Windows Forms
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Procedimiento para guardar archivos con el control RichTextBox de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control puede escribir la información que se muestra en uno de los siguientes formatos:  
   
 -   Texto sin formato  
@@ -91,5 +91,5 @@ Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control puede
 
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
-- [Control RichTextBox](richtextbox-control-windows-forms.md)
+- [RichTextBox (control)](richtextbox-control-windows-forms.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
 ms.openlocfilehash: bea4f7e90df29678697fe6708bdc6a73145522db
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317706"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>Cómo permitir las solicitudes de metadatos durante la autorización
@@ -25,7 +25,7 @@ Durante la autorización personalizada, puede ser necesario permitir una solicit
   
 2. Invalide el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> . El método devuelve `true` o `false` dependiendo de si se permite la autorización. La información sobre el procedimiento actual se encuentra en <xref:System.ServiceModel.OperationContext> que se pasa como un parámetro al método.  
   
-3. En la invalidación, compruebe el nombre del contrato, espacio de nombres y la acción tal como se muestra en el ejemplo siguiente. Si las condiciones son válidas, a continuación, devolver `true.`  
+3. En la invalidación, compruebe el nombre del contrato, espacio de nombres y la acción tal como se muestra en el ejemplo siguiente. Si las condiciones son válidas, devuelva `true.`  
   
 4. Utilice el punto de extensibilidad para emplear la clase. Para obtener más información, vea [Cómo: Crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
   

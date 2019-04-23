@@ -1,5 +1,5 @@
 ---
-title: Filtrar para determinar cuándo cambian los atributos de formato en el control RichTextBox de formularios Windows Forms
+title: Procedimiento para determinar cuándo cambian los atributos de formato en el control RichTextBox de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
 ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308463"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Filtrar para determinar cuándo cambian los atributos de formato en el control RichTextBox de formularios Windows Forms
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Procedimiento para determinar cuándo cambian los atributos de formato en el control RichTextBox de formularios Windows Forms
 Un uso común de los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control es dar formato al texto con atributos tales como las opciones de fuente o estilos de párrafo. La aplicación puede necesitar realizar un seguimiento de los cambios en el formato del texto para mostrar una barra de herramientas, como en muchas aplicaciones de procesamiento de texto.  
   
 ### <a name="to-respond-to-changes-in-formatting-attributes"></a>Para responder a cambios en atributos de formato  
@@ -84,5 +84,5 @@ Un uso común de los formularios de Windows <xref:System.Windows.Forms.RichTextB
 
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
-- [Control RichTextBox](richtextbox-control-windows-forms.md)
+- [RichTextBox (control)](richtextbox-control-windows-forms.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

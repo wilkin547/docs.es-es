@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517687"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59314014"
 ---
 # <a name="composite-formatting"></a>Formatos compuestos
 
@@ -100,15 +100,15 @@ La característica de formato compuesto se admite mediante métodos como los sig
   
  El modo de interpretar las llaves de escape puede dar lugar a resultados inesperados. Tomemos como ejemplo el elemento de formato "{{{0:D}}}", cuyo propósito es mostrar una llave de apertura, un valor numérico con formato de número decimal y una llave de cierre; pero que, en la práctica, se interpreta de la siguiente forma:  
   
-1.  Las dos primeras llaves de apertura ("{{") son llaves de escape y dan lugar a en una llave de apertura.  
+1. Las dos primeras llaves de apertura ("{{") son llaves de escape y dan lugar a en una llave de apertura.  
   
-2.  Los tres caracteres siguientes ("{0:") se interpretan como el inicio de un elemento de formato.  
+2. Los tres caracteres siguientes ("{0:") se interpretan como el inicio de un elemento de formato.  
   
-3.  El siguiente carácter ("D") se interpretaría como el especificador de formato numérico estándar decimal, pero las dos llaves de escape siguientes ("}}") dan lugar a una única llave. Como la cadena resultante ("D}") no es un especificador de formato numérico estándar, se interpreta como una cadena de formato personalizado que significa que debe mostrarse la cadena literal "D}".  
+3. El siguiente carácter ("D") se interpretaría como el especificador de formato numérico estándar decimal, pero las dos llaves de escape siguientes ("}}") dan lugar a una única llave. Como la cadena resultante ("D}") no es un especificador de formato numérico estándar, se interpreta como una cadena de formato personalizado que significa que debe mostrarse la cadena literal "D}".  
   
-4.  La última llave ("}") se interpreta como el final del elemento de formato.  
+4. La última llave ("}") se interpreta como el final del elemento de formato.  
   
-5.  Como resultado final, se muestra la cadena literal "{D}". No se muestra el valor numérico al que se debía dar formato.  
+5. Como resultado final, se muestra la cadena literal "{D}". No se muestra el valor numérico al que se debía dar formato.  
   
  Una forma de escribir código e impedir que las llaves de escape y los elementos de formato se malinterpreten consiste en dar formato a las llaves y elementos de formato por separado. Es decir, en la primera operación de formato mostrar una llave de apertura literal, en la siguiente operación mostrar el resultado del elemento de formato y, por último, en la operación final mostrar una llave de cierre literal. En el ejemplo siguiente se muestra este enfoque.  
   
@@ -120,11 +120,11 @@ La característica de formato compuesto se admite mediante métodos como los sig
   
  Cada valor de la lista de parámetros que se corresponda con un elemento de formato se convierte en una cadena del siguiente modo:  
   
-1.  Si el valor al que se va a dar formato es `null`, se devuelve una cadena vacía <xref:System.String.Empty?displayProperty=nameWithType>.  
+1. Si el valor al que se va a dar formato es `null`, se devuelve una cadena vacía <xref:System.String.Empty?displayProperty=nameWithType>.  
   
-2.  Si hay disponible una implementación de <xref:System.ICustomFormatter>, el runtime llama al método <xref:System.ICustomFormatter.Format%2A>. Pasa al método el valor *formatString* del elemento de formato, si hay alguno, o `null` si no lo hay, junto con la implementación de <xref:System.IFormatProvider>. Si la llamada al método <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> devuelve `null`, la ejecución avanza al siguiente paso; en caso contrario, se devuelve el resultado de la llamada a <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>.
+2. Si hay disponible una implementación de <xref:System.ICustomFormatter>, el runtime llama al método <xref:System.ICustomFormatter.Format%2A>. Pasa al método el valor *formatString* del elemento de formato, si hay alguno, o `null` si no lo hay, junto con la implementación de <xref:System.IFormatProvider>. Si la llamada al método <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> devuelve `null`, la ejecución avanza al siguiente paso; en caso contrario, se devuelve el resultado de la llamada a <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>.
   
-3.  Si el valor implementa la interfaz <xref:System.IFormattable>, se llama al método <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> de esta. Se pasa al método el valor *formatString*, si hubiera uno presente en el elemento de formato, o `null` si no lo hubiera. El argumento <xref:System.IFormatProvider> se determina de la siguiente forma:  
+3. Si el valor implementa la interfaz <xref:System.IFormattable>, se llama al método <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> de esta. Se pasa al método el valor *formatString*, si hubiera uno presente en el elemento de formato, o `null` si no lo hubiera. El argumento <xref:System.IFormatProvider> se determina de la siguiente forma:  
   
     -   Para un valor numérico, si se llama a un método de formato compuesto con un argumento <xref:System.IFormatProvider> que no sea null, el runtime solicita un objeto <xref:System.Globalization.NumberFormatInfo> a su método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. En caso de no poder proporcionar uno, si el valor del argumento es `null`, o si el método de formato compuesto no tiene un parámetro <xref:System.IFormatProvider>, se usa el objeto <xref:System.Globalization.NumberFormatInfo> para la referencia cultural del subproceso actual.  
   
@@ -132,7 +132,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
   
     -   Para objetos de otros tipos, si se llama a un formato compuesto con un argumento <xref:System.IFormatProvider>, su valor se pasa directamente a la implementación <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. En caso contrario, `null` se pasa a la implementación <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
   
-4.  Se llama al método sin parámetros `ToString` del tipo, que reemplaza a <xref:System.Object.ToString?displayProperty=nameWithType> o hereda el comportamiento de su clase base. En este caso, se omite la cadena de formato especificada por el componente *formatString* en el elemento de formato, si estuviera presente.  
+4. Se llama al método sin parámetros `ToString` del tipo, que reemplaza a <xref:System.Object.ToString?displayProperty=nameWithType> o hereda el comportamiento de su clase base. En este caso, se omite la cadena de formato especificada por el componente *formatString* en el elemento de formato, si estuviera presente.  
   
  La alineación se aplica después de que se hayan realizado los pasos anteriores.  
   

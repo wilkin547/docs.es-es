@@ -1,18 +1,18 @@
 ---
-title: Filtrar para llamar a funciones de base de datos personalizadas
+title: Procedimiento para llamar a funciones de base de datos personalizadas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
 ms.openlocfilehash: cc2e25183649f6a95e7862520ccc5719f201277a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311492"
 ---
-# <a name="how-to-call-custom-database-functions"></a>Filtrar para llamar a funciones de base de datos personalizadas
+# <a name="how-to-call-custom-database-functions"></a>Procedimiento para llamar a funciones de base de datos personalizadas
 En este tema se describe cómo llamar a las funciones personalizadas definidas en la base de datos desde consultas LINQ to Entities.  
   
  Las funciones de base de datos llamadas desde LINQ to Entities se ejecutan en la base de datos. La ejecución de funciones en la base de datos puede mejorar el rendimiento de la aplicación.  
@@ -62,5 +62,5 @@ En este tema se describe cómo llamar a las funciones personalizadas definidas e
   
 ## <a name="see-also"></a>Vea también
 
-- [.edmx, Información general sobre el archivo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Introducción al archivo .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Consultas en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

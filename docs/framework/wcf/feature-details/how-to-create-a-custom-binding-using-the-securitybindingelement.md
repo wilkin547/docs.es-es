@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear un enlace personalizado mediante SecurityBindingElement
+title: Procedimiento para crear un enlace personalizado mediante SecurityBindingElement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316809"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Filtrar para crear un enlace personalizado mediante SecurityBindingElement
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procedimiento para crear un enlace personalizado mediante SecurityBindingElement
 Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por el sistema que se pueden configurar pero no proporcionan completa flexibilidad al configurar todas las opciones de seguridad que WCF admite. Este tema muestra cómo crear un enlace personalizado directamente a partir de elementos de enlace individuales y resalta algunos de los ajustes de seguridad que pueden especificarse al crear este tipo de enlaces. Para obtener más información acerca de cómo crear enlaces personalizados, consulte [extender enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> no admite la <xref:System.ServiceModel.Channels.IDuplexSessionChannel> shape, que es el uso de forma de canal predeterminada mediante TCP de canal de transporte cuando <xref:System.ServiceModel.TransferMode> está establecido en <xref:System.ServiceModel.TransferMode.Buffered>. Debe establecer <xref:System.ServiceModel.TransferMode> en <xref:System.ServiceModel.TransferMode.Streamed> para usar <xref:System.ServiceModel.Channels.SecurityBindingElement> en este escenario.  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement> no admite la forma de canal de <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, que es el uso predeterminado de la forma de canal por el transporte TCP cuando <xref:System.ServiceModel.TransferMode> se establece en <xref:System.ServiceModel.TransferMode.Buffered>. Debe establecer <xref:System.ServiceModel.TransferMode> en <xref:System.ServiceModel.TransferMode.Streamed> para usar <xref:System.ServiceModel.Channels.SecurityBindingElement> en este escenario.  
   
 ## <a name="creating-a-custom-binding"></a>Creación de un enlace personalizado  
  En WCF todos los enlaces se componen de *elementos de enlace*. Cada elemento de enlace deriva de la clase <xref:System.ServiceModel.Channels.BindingElement>. En el caso de los enlaces estándar proporcionados por el sistema, los elementos de enlace se crean y se configuran automáticamente, pero se pueden personalizar algunos de los valores de las propiedades.  

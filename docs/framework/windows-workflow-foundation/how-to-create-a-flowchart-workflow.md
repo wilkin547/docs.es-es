@@ -1,18 +1,18 @@
 ---
-title: Filtrar para crear un flujo de trabajo de diagrama de flujo
+title: Procedimiento para crear un flujo de trabajo de diagrama de flujo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
 ms.openlocfilehash: 15cf94d5ea191435723f754f35e43d65632142e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311206"
 ---
-# <a name="how-to-create-a-flowchart-workflow"></a>Filtrar para crear un flujo de trabajo de diagrama de flujo
+# <a name="how-to-create-a-flowchart-workflow"></a>Procedimiento para crear un flujo de trabajo de diagrama de flujo
 Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En este tema le ayudará a crear un flujo de trabajo que usa tanto las actividades integradas, como el <xref:System.Activities.Statements.Flowchart> actividad y las actividades personalizadas del anterior [Cómo: Crear una actividad](how-to-create-an-activity.md) tema. El flujo de trabajo modela un juego de adivinanzas de números.  
   
 > [!NOTE]
@@ -155,7 +155,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programación de Windows Workflow Foundation](programming.md)
-- [Diseñar flujos de trabajo](designing-workflows.md)
+- [Diseño de flujos de trabajo](designing-workflows.md)
 - [Tutorial de introducción](getting-started-tutorial.md)
-- [Filtrar para crear una actividad](how-to-create-an-activity.md)
-- [Filtrar para ejecutar un flujo de trabajo](how-to-run-a-workflow.md)
+- [Cómo: Crear una actividad](how-to-create-an-activity.md)
+- [Cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)

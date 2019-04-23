@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
 ms.openlocfilehash: 5a24a2117a031bfe49d0c27dbcefae6db00e6045
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314560"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Crear mi primera aplicación web de ASP.NET para notificaciones
@@ -41,11 +41,11 @@ ms.locfileid: "59314560"
   
  Para compilar la primera aplicación ASP.NET compatible con notificaciones mediante WIF, siga las instrucciones de uno de los sitios siguientes:  
   
--   [Cómo compilar aplicaciones web MVC de ASP.NET con reconocimiento de notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [Cómo: Compilar la aplicación Web de MVC de ASP.NET para notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [Cómo compilar aplicaciones de formularios Web Forms de ASP.NET con reconocimiento de notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [Cómo: Crear aplicaciones de formularios Web ASP.NET para notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [Cómo compilar aplicaciones ASP.NET con reconocimiento de mediante la autenticación basada en formularios](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [Cómo: Crear aplicaciones ASP.NET para notificaciones mediante la autenticación basada en formularios](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>Vea también
 

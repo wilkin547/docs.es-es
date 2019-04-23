@@ -1,5 +1,5 @@
 ---
-title: Filtrar Cambie el valor de un argumento de procedimiento (Visual Basic)
+title: Procedimiento Cambie el valor de un argumento de procedimiento (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
 ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316627"
 ---
-# <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Filtrar Cambie el valor de un argumento de procedimiento (Visual Basic)
+# <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Procedimiento Cambie el valor de un argumento de procedimiento (Visual Basic)
 Cuando se llama a un procedimiento, cada argumento proporcionado se corresponde a uno de los parámetros definidos en el procedimiento. En algunos casos, el código del procedimiento puede cambiar el valor subyacente a un argumento en el código de llamada. En otros casos, el procedimiento puede cambiar sólo su copia local de un argumento.  
   
  Cuando se llama al procedimiento, Visual Basic hace una copia local de cada argumento que se pasa [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Para cada argumento pasado [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic proporciona el código del procedimiento una referencia directa al elemento de programación subyacente del argumento en el código de llamada.  
@@ -81,11 +81,11 @@ Cuando se llama a un procedimiento, cada argumento proporcionado se corresponde 
 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
-- [Filtrar para pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)
-- [Pasar argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)
+- [Cómo: Pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)
+- [Paso de argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)
 - [Diferencias entre argumentos modificables y no modificables](./differences-between-modifiable-and-nonmodifiable-arguments.md)
 - [Diferencias entre pasar un argumento por valor y por referencia](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [Filtrar para proteger un argumento de procedimiento para que no se realicen cambios de valor](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Filtrar para forzar un argumento para que pase como un valor](./how-to-force-an-argument-to-be-passed-by-value.md)
-- [Pasar argumentos por posición o por nombre](./passing-arguments-by-position-and-by-name.md)
-- [Tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Cómo: Proteger un argumento de procedimiento contra cambios de valor](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Cómo: Forzar un argumento para pasar por valor](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Paso de argumentos por posición o por nombre](./passing-arguments-by-position-and-by-name.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

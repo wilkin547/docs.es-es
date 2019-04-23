@@ -1,5 +1,5 @@
 ---
-title: Filtrar para validar la configuración de la aplicación
+title: Procedimiento para validar la configuración de la aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317898"
 ---
-# <a name="how-to-validate-application-settings"></a>Filtrar para validar la configuración de la aplicación
+# <a name="how-to-validate-application-settings"></a>Procedimiento para validar la configuración de la aplicación
 En este tema se muestra cómo validar la configuración de la aplicación antes de conservarla.  
   
  Como la configuración de la aplicación está fuertemente tipada, tiene cierta confianza en que los usuarios no puedan asignar los datos de un tipo incorrecto a una configuración especificada. Sin embargo, aún es posible que un usuario intente asignar un valor a una configuración que se encuentre fuera de los límites aceptables (por ejemplo, proporcionar una fecha de nacimiento perteneciente al futuro). <xref:System.Configuration.ApplicationSettingsBase>, la clase primaria de todas las clases de configuración de la aplicación, expone cuatro eventos para habilitar la comprobación de esos límites. Al controlarse estos eventos, se incluye todo el código de validación en una sola ubicación, en lugar de dispersarse por todo el proyecto.  
@@ -162,5 +162,5 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
   
 ## <a name="see-also"></a>Vea también
 
-- [Crear controladores de eventos en formularios Windows Forms](../creating-event-handlers-in-windows-forms.md)
-- [Filtrar para crear la configuración de la aplicación](how-to-create-application-settings.md)
+- [Crear controladores de eventos en Windows Forms](../creating-event-handlers-in-windows-forms.md)
+- [Cómo: Crear configuración de la aplicación](how-to-create-application-settings.md)

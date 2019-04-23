@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer estilos de celda predeterminados para el control DataGridView de formularios Windows Forms
+title: Procedimiento para establecer estilos de celda predeterminados para el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - data grids [Windows Forms], cell styles
 ms.assetid: 1aaaca43-5340-447e-99c0-9177d9776aa1
 ms.openlocfilehash: e52729a4ff5b95cd45a970068f1874ad77f8ce35
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319201"
 ---
-# <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>Filtrar para establecer estilos de celda predeterminados para el control DataGridView de formularios Windows Forms
+# <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>Procedimiento para establecer estilos de celda predeterminados para el control DataGridView de formularios Windows Forms
 Con el control <xref:System.Windows.Forms.DataGridView>, puede especificar los estilos de celda predeterminados para todo el control y para columnas y filas específicas. Estos valores predeterminados filtran desde el nivel de control al nivel de columna, después al nivel de fila y, después, al nivel de celda. Si una determinada propiedad <xref:System.Windows.Forms.DataGridViewCellStyle> no está establecida en el nivel de celda, se usa el valor de propiedad predeterminado en el nivel de fila. Si la propiedad tampoco está establecida en el nivel de fila, se usa el valor de columna predeterminado. Por último, si la propiedad tampoco está establecida en el nivel de columna, se usa el valor predeterminado de <xref:System.Windows.Forms.DataGridView>. Con esta configuración, puede evitar tener que duplicar los valores de propiedad en varios niveles. En cada nivel, simplemente hay que especificar los estilos que difieren de los niveles situados por encima de él. Para obtener más información, consulte [estilos de celda en el DataGridView Control de Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
  Visual Studio es altamente compatible con esta tarea.  Consulte también [Cómo: Establecer estilos de celda predeterminados y formatos de datos para los Windows Forms Control DataGridView de formularios mediante el diseñador](default-cell-styles-datagridview.md).  
@@ -59,6 +59,6 @@ Con el control <xref:System.Windows.Forms.DataGridView>, puede especificar los e
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>
 - [Estilo y formato básicos del control DataGridView en formularios Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Estilos de celda en el control DataGridView de formularios Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Estilos de celda en el control DataGridView de Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Procedimientos recomendados para ajustar la escala del control DataGridView en formularios Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Filtrar para establecer estilos de fila alternos para el control DataGridView de formularios Windows Forms](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)
+- [Cómo: Establecer estilos de fila alternos para el Control DataGridView de Windows Forms](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)

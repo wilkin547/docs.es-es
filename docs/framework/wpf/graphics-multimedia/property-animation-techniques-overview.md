@@ -10,10 +10,10 @@ helpviewer_keywords:
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
 ms.openlocfilehash: ebee350f69b5c5e4f9d38c452b9c87bf003528ee
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317914"
 ---
 # <a name="property-animation-techniques-overview"></a>Información general sobre técnicas de animación de propiedades
@@ -56,10 +56,10 @@ En este tema se describen los enfoques diferentes para animar propiedades: guion
   
 |El guión gráfico se comienza utilizando...|Por instancia|Estilo|Plantilla de control|Plantilla de datos|Ejemplo|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> y una <xref:System.Windows.EventTrigger>|Sí|Sí|Sí|Sí|[Animar una propiedad mediante un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> y una <xref:System.Windows.EventTrigger>|Sí|Sí|Sí|Sí|[Animar una propiedad utilizando un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> y una propiedad <xref:System.Windows.Trigger>|No|Sí|Sí|Sí|[Activar una animación al cambiar el valor de una propiedad](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> y un <xref:System.Windows.DataTrigger>|No|Sí|Sí|Sí|[Filtrar Activar una animación cuando cambian los datos](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método|Sí|No|No|No|[Animar una propiedad mediante un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> y un <xref:System.Windows.DataTrigger>|No|Sí|Sí|Sí|[Cómo: Activar una animación cuando cambian los datos](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
+|Método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Sí|No|No|No|[Animar una propiedad utilizando un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Para obtener más información acerca de <xref:System.Windows.Media.Animation.Storyboard> objetos, vea el [Storyboards Overview](storyboards-overview.md).  
   
@@ -124,6 +124,6 @@ En este tema se describen los enfoques diferentes para animar propiedades: guion
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre animaciones](animation-overview.md)
-- [Información general sobre objetos Storyboard](storyboards-overview.md)
-- [Información general sobre sistemas de temporización y animación](animation-and-timing-system-overview.md)
+- [Información general sobre objetos Storyboard ](storyboards-overview.md)
+- [Información general sobre sistemas de control de tiempo y animación ](animation-and-timing-system-overview.md)
 - [Información general sobre las propiedades de dependencia](../advanced/dependency-properties-overview.md)

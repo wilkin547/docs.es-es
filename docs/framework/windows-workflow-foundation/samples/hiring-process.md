@@ -3,10 +3,10 @@ title: Proceso de contratación
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313156"
 ---
 # <a name="hiring-process"></a>Proceso de contratación
@@ -18,7 +18,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
  Este ejemplo muestra las siguientes características de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]:  
   
--   <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Sequence> flujos de trabajo para el modelado de procesos empresariales.  
+-   Los flujos de trabajo <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Sequence> para modelar los procesos de negocio.  
   
 -   Servicios de flujo de trabajo.  
   
@@ -38,9 +38,9 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 -   Composición de actividades.  
   
--   <xref:System.Activities.Statements.Parallel> actividades.  
+-   Actividades <xref:System.Activities.Statements.Parallel>.  
   
--   <xref:System.Activities.Statements.CancellationScope> actividad.  
+-   Actividad <xref:System.Activities.Statements.CancellationScope>.  
   
 -   Temporizadores duraderos (actividad<xref:System.Activities.Statements.Delay>).  
   
@@ -121,10 +121,10 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
 |Composición de actividades|La definición del proceso utiliza la composición libre de <xref:System.Activities.Activity>. El Diagrama de flujo contiene varias actividades Sequence y Parallel que al mismo tiempo contienen otras actividades (y así sucesivamente).|HiringRequestService|  
 |Actividades paralelas|-   <xref:System.Activities.Statements.ParallelForEach%601> se usa para registrar en la Bandeja de entrada del CEO y responsables de recursos humanos en paralelo (en espera para el paso de aprobación de los directores de recursos humanos dos).<br />-   <xref:System.Activities.Statements.Parallel> se usa para realizar algunas tareas de limpieza en los pasos Completed y Rejected.|HiringRequestService|  
 |Cancelación de modelo|El Diagrama de flujo utiliza <xref:System.Activities.Statements.CancellationScope> para crear el comportamiento de cancelación (en este caso, se lleva a cabo alguna limpieza).|HiringRequestService|  
-|Participante de persistencia del cliente|`HiringRequestPersistenceParticipant` guarda los datos de una variable de flujo de trabajo a una tabla almacenada en la base de datos de recursos humanos de Contoso.|HiringRequestService|  
-|Servicios de flujo de trabajo|`ResumeRequestService` se implementa mediante los servicios de flujo de trabajo. La definición del Flujo de trabajo y la información del servicio se encuentran en ResumeRequestService.xamlx. El servicio se configura para utilizar la persistencia y el seguimiento.|ResumeRequestService|  
-|Temporizadores duraderos|`ResumeRequestService` utiliza temporizadores duraderos para definir la duración de una publicación de vacante (es la publicación de vacante cierra una vez que expire el tiempo de espera,).|ResumeRequestService|  
-|Transacciones|<xref:System.Activities.Statements.TransactionScope> se utiliza para garantizar la coherencia de datos dentro de la ejecución de varias actividades (cuando se recibe un nuevo curriculum vitae).|ResumeRequestService|  
+|Participante de persistencia del cliente|`HiringRequestPersistenceParticipant` guarda los datos de una variable de flujo de trabajo en una tabla almacenada en la base de datos de Recursos Humanos de Contoso.|HiringRequestService|  
+|Servicios de flujo de trabajo|`ResumeRequestService` se implementa utilizando los servicios de flujo de trabajo. La definición del Flujo de trabajo y la información del servicio se encuentran en ResumeRequestService.xamlx. El servicio se configura para utilizar la persistencia y el seguimiento.|ResumeRequestService|  
+|Temporizadores duraderos|`ResumeRequestService` utiliza temporizadores duraderos para definir la duración de la publicación de vacante (una vez que expira el tiempo de espera, se cierra la publicación de vacante).|ResumeRequestService|  
+|Transacciones|<xref:System.Activities.Statements.TransactionScope> se utiliza para garantizar la coherencia de los datos dentro de la ejecución de varias actividades (cuando se recibe un nuevo curriculum vitae).|ResumeRequestService|  
 |Transacciones|El participante de persistencia personalizado (`HiringRequestPersistenceParticipant`) y el participante de seguimiento personalizado (`HistoryFileTrackingParticipant`) usan la misma transacción.|HiringRequestService|  
 |Utilizar [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en aplicaciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].|Los flujos de trabajo están accesibles desde dos aplicaciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].|InternalClient / CareersWebSite|  
   

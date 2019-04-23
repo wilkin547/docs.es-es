@@ -2,12 +2,12 @@
 title: Cancelar tareas asincrónicas tras un período de tiempo (C#)
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: 48d3d41e8c4e2d696065c11245279e49142afa07
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 64a2a81e5de17594a84782f6474033d04662d8ea
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125774"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59318395"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>Cancelar tareas asincrónicas tras un período de tiempo (C#)
 
@@ -20,19 +20,19 @@ Este ejemplo se agrega al código que se desarrolla en [Cancel an Async Task or 
 
 ## <a name="download-the-example"></a>Descargar el ejemplo
 
-Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) en [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: Ajustar la aplicación [C# y Visual Basic]) y después seguir estos pasos.
+Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) desde [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de Async: Ajuste de la aplicación) y después seguir estos pasos.
 
-1.  Descomprima el archivo descargado y, a continuación, inicie Visual Studio.
+1. Descomprima el archivo descargado y, a continuación, inicie Visual Studio.
 
-2.  En la barra de menús, elija **Archivo** > **Abrir** > **Proyecto/Solución**.
+2. En la barra de menús, elija **Archivo** > **Abrir** > **Proyecto/Solución**.
 
-3.  En el cuadro de diálogo **Abrir proyecto**, abra la carpeta que contiene el código de ejemplo que descomprimió y, a después, abra el archivo de solución (.sln) para AsyncFineTuningCS.
+3. En el cuadro de diálogo **Abrir proyecto**, abra la carpeta que contiene el código de ejemplo que descomprimió y, a después, abra el archivo de solución (.sln) para AsyncFineTuningCS.
 
-4.  En el **Explorador de soluciones**, abra el menú contextual del proyecto **CancelAfterTime** y, después, elija **Establecer como proyecto de inicio**.
+4. En el **Explorador de soluciones**, abra el menú contextual del proyecto **CancelAfterTime** y, después, elija **Establecer como proyecto de inicio**.
 
-5.  Presione la tecla **F5** para ejecutar el proyecto. (O presione **Ctrl**+**F5** para ejecutar el proyecto sin depurarlo).
+5. Presione la tecla **F5** para ejecutar el proyecto. (O presione **Ctrl**+**F5** para ejecutar el proyecto sin depurarlo).
 
-6.  Ejecute el programa varias veces para comprobar que la salida puede mostrar resultados para todos los sitios web, para ningún sitio web o para algunos sitios web.
+6. Ejecute el programa varias veces para comprobar que la salida puede mostrar resultados para todos los sitios web, para ningún sitio web o para algunos sitios web.
 
 Si no quiere descargar el proyecto, puede revisar el archivo MainWindow.xaml.cs al final de este tema.
 
@@ -92,7 +92,7 @@ El código siguiente es el texto completo del archivo MainWindow.xaml.cs para el
 
 Observe que debe agregar una referencia para <xref:System.Net.Http>.
 
-Puede descargar el proyecto de [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: Ajustar la aplicación [C# y Visual Basic]).
+Puede descargar el proyecto desde [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de async: Ajuste de la aplicación).
 
 ```csharp
 using System;
@@ -218,7 +218,7 @@ namespace CancelAfterTime
 ## <a name="see-also"></a>Vea también
 
 - [Programación asincrónica con Async y Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [C#])
+- [Tutorial: Acceso a web usando Async y Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Cancelar una tarea asincrónica o una lista de tareas (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
 - [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Ajuste de la aplicación asincrónica [C#])
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: ajuste de la aplicación)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de async: Ajuste de la aplicación)

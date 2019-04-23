@@ -3,10 +3,10 @@ title: Tipos de valor devueltos asincrónicos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
 ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313286"
 ---
 # <a name="async-return-types-visual-basic"></a>Tipos de valor devueltos asincrónicos (Visual Basic)
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync` se llama y se espera con una instrucción await en lugar de una expresión await, similar a la instrucción de llamada para sincrónica `Sub` o método que devuelve void. La aplicación de un `Await` operador en este caso no genera un valor.  
+ Se llama y se espera a `Task_MethodAsync` mediante una instrucción await en lugar de una expresión await, similar a la instrucción de llamada para un `Sub` sincrónica o método que devuelve void. La aplicación de un `Await` operador en este caso no genera un valor.  
   
  El código siguiente llama y espera al método `Task_MethodAsync`.  
   
@@ -296,6 +296,6 @@ End Sub
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [Tutorial: Acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Flujo de control en programas Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [Visual Basic])
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
-- [Await (Operador)](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [Await (operador)](../../../../visual-basic/language-reference/operators/await-operator.md)

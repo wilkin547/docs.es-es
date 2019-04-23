@@ -1,18 +1,18 @@
 ---
-title: Filtrar para crear una fuente Atom básica
+title: Procedimiento para crear una fuente Atom básica
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
 ms.openlocfilehash: 11aa71f82af5a1bd764a4cc9e3514a795d559fc2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311856"
 ---
-# <a name="how-to-create-a-basic-atom-feed"></a>Filtrar para crear una fuente Atom básica
+# <a name="how-to-create-a-basic-atom-feed"></a>Procedimiento para crear una fuente Atom básica
 Windows Communication Foundation (WCF) le permite crear un servicio que expone una fuente de distribución. En este tema se discute cómo crear un servicio de distribución que exponga una fuente de distribución Atom.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Creación de un servicio de distribución básico  

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
 ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312831"
 ---
 # <a name="handling-datatable-events"></a>Controlar eventos de DataTable
@@ -81,7 +81,7 @@ El objeto <xref:System.Data.DataTable> proporciona una serie de eventos que una 
   
 ## <a name="see-also"></a>Vea también
 
-- [Manipular datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [Controlar eventos de DataAdapter](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
+- [Manipulación de datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Control de eventos de DataAdapter](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
 - [Controlar eventos de DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

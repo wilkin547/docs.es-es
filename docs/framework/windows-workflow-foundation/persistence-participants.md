@@ -3,10 +3,10 @@ title: Participantes de persistencia
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
 ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316367"
 ---
 # <a name="persistence-participants"></a>Participantes de persistencia
@@ -58,7 +58,7 @@ Un participante de persistencia puede tomar parte en una operación de persisten
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Filtrar para crear un participante de persistencia personalizado](how-to-create-a-custom-persistence-participant.md)  
+-   [Cómo: Crear a un participante de persistencia personalizado](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Vea también
 

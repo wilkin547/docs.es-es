@@ -1,5 +1,5 @@
 ---
-title: Filtrar Auditar eventos de seguridad de Windows Communication Foundation
+title: Procedimiento Auditar eventos de seguridad de Windows Communication Foundation
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
 ms.openlocfilehash: 634489ced9b437d7b273eb5fa1092165cc6a935f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311115"
 ---
-# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Filtrar Auditar eventos de seguridad de Windows Communication Foundation
+# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Procedimiento Auditar eventos de seguridad de Windows Communication Foundation
 Windows Communication Foundation (WCF) le permite registrar eventos de seguridad en el registro de eventos de Windows, que se pueden ver mediante el Visor de eventos de Windows. Este tema explica cómo configurar una aplicación para que registre los eventos de seguridad. Para obtener más información acerca de la auditoría de WCF, vea [auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Para auditar los eventos de seguridad en el código  

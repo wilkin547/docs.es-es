@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Mostrar fechas en calendarios no gregorianos'
+title: Procedimiento para mostrar fechas en calendarios no gregorianos
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63af71f92af9c2f3a5986dcb73f44d0e53c00f58
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079466"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59313312"
 ---
-# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Cómo: Mostrar fechas en calendarios no gregorianos
+# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Procedimiento para mostrar fechas en calendarios no gregorianos
 Los tipos <xref:System.DateTime> y <xref:System.DateTimeOffset> usan el calendario gregoriano como calendario predeterminado. Esto significa que al llamar al método `ToString` de un valor de fecha y hora se muestra la representación de cadena de esa fecha y hora en el calendario gregoriano, aunque se creara con otro calendario. Esto se muestra en el ejemplo siguiente, que usa dos maneras diferentes de crear un valor de fecha y hora con el calendario persa, pero muestra esos valores de fecha y hora en el calendario gregoriano cuando llama al método <xref:System.DateTime.ToString%2A>. En este ejemplo se reflejan dos técnicas usadas habitualmente, aunque incorrectas, para mostrar la fecha en un calendario determinado.  
   
  [!code-csharp[Formatting.HowTo.Calendar#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#1)]
@@ -30,26 +30,26 @@ Los tipos <xref:System.DateTime> y <xref:System.DateTimeOffset> usan el calendar
   
 ### <a name="to-display-the-date-for-a-cultures-default-calendar"></a>Para mostrar la fecha del calendario predeterminado de una referencia cultural  
   
-1.  Cree una instancia de un objeto de calendario derivado de la clase <xref:System.Globalization.Calendar> que representa al calendario que se va a usar.  
+1. Cree una instancia de un objeto de calendario derivado de la clase <xref:System.Globalization.Calendar> que representa al calendario que se va a usar.  
   
-2.  Cree una instancia de un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural cuyo formato se va a usar para mostrar la fecha.  
+2. Cree una instancia de un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural cuyo formato se va a usar para mostrar la fecha.  
   
-3.  Llame al método <xref:System.Array.Exists%2A?displayProperty=nameWithType> para determinar si el objeto de calendario es miembro de la matriz devuelta por la propiedad <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>. Esto indica que el calendario puede actuar como calendario predeterminado del objeto <xref:System.Globalization.CultureInfo>. Si no es miembro de la matriz, siga las instrucciones de la sección "Para mostrar la fecha en cualquier calendario".  
+3. Llame al método <xref:System.Array.Exists%2A?displayProperty=nameWithType> para determinar si el objeto de calendario es miembro de la matriz devuelta por la propiedad <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>. Esto indica que el calendario puede actuar como calendario predeterminado del objeto <xref:System.Globalization.CultureInfo>. Si no es miembro de la matriz, siga las instrucciones de la sección "Para mostrar la fecha en cualquier calendario".  
   
-4.  Asigne el objeto de calendario a la propiedad <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> del objeto <xref:System.Globalization.DateTimeFormatInfo> devuelto por la propiedad <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
+4. Asigne el objeto de calendario a la propiedad <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> del objeto <xref:System.Globalization.DateTimeFormatInfo> devuelto por la propiedad <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
   
     > [!NOTE]
     >  La clase <xref:System.Globalization.CultureInfo> también tiene una propiedad <xref:System.Globalization.CultureInfo.Calendar%2A>. Pero es de solo lectura y constante; no cambia para reflejar el nuevo calendario predeterminado asignado a la propiedad <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>.  
   
-5.  Llame al método <xref:System.DateTime.ToString%2A> o <xref:System.DateTime.ToString%2A> y pásele el objeto <xref:System.Globalization.CultureInfo> cuyo calendario predeterminado se modificó en el paso anterior.  
+5. Llame al método <xref:System.DateTime.ToString%2A> o <xref:System.DateTime.ToString%2A> y pásele el objeto <xref:System.Globalization.CultureInfo> cuyo calendario predeterminado se modificó en el paso anterior.  
   
 ### <a name="to-display-the-date-in-any-calendar"></a>Para mostrar la fecha en cualquier calendario  
   
-1.  Cree una instancia de un objeto de calendario derivado de la clase <xref:System.Globalization.Calendar> que representa al calendario que se va a usar.  
+1. Cree una instancia de un objeto de calendario derivado de la clase <xref:System.Globalization.Calendar> que representa al calendario que se va a usar.  
   
-2.  Determine qué elementos de fecha y hora deben aparecer en la representación de cadena del valor de fecha y hora.  
+2. Determine qué elementos de fecha y hora deben aparecer en la representación de cadena del valor de fecha y hora.  
   
-3.  Para cada elemento de fecha y hora que quiera mostrar, llame al método `Get` del objeto de calendario... . Están disponibles los siguientes métodos:  
+3. Para cada elemento de fecha y hora que quiera mostrar, llame al método `Get` del objeto de calendario... . Están disponibles los siguientes métodos:  
   
     -   <xref:System.Globalization.Calendar.GetYear%2A>, para mostrar el año en el calendario adecuado.  
   

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para descifrar elementos XML con claves asimétricas
+title: Procedimiento para descifrar elementos XML con claves asimétricas
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,13 +15,13 @@ ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 303c7db984b682d24a8f0e00160eb2d0827a84e6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314430"
 ---
-# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Filtrar para descifrar elementos XML con claves asimétricas
+# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Procedimiento para descifrar elementos XML con claves asimétricas
 Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar y descifrar un elemento dentro de un documento XML.  El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.  Para obtener más información sobre el estándar de cifrado XML, vea la recomendación de World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
   
  El ejemplo de este procedimiento descifra un elemento XML que se cifró mediante los métodos descritos en [Cómo: Cifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  Encuentre un <`EncryptedData`> elemento, se descifra el elemento y, a continuación, reemplaza el elemento con el elemento XML de texto simple original.  
@@ -84,4 +84,4 @@ Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptograph
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Security.Cryptography.Xml>
-- [Filtrar para cifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)
+- [Cómo: Cifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)

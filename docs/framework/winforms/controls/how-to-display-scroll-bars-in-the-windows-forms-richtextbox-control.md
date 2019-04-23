@@ -1,5 +1,5 @@
 ---
-title: Filtrar para mostrar barras de desplazamiento en el control RichTextBox de formularios Windows Forms
+title: Procedimiento para mostrar barras de desplazamiento en el control RichTextBox de formularios Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes [Windows Forms], displaying scroll bars
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
 ms.openlocfilehash: 152706cee511e4bca1dd324a652e8077b1f8548a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312662"
 ---
-# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Filtrar para mostrar barras de desplazamiento en el control RichTextBox de formularios Windows Forms
+# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Procedimiento para mostrar barras de desplazamiento en el control RichTextBox de formularios Windows Forms
 De forma predeterminada, los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control muestra las barras de desplazamiento horizontales y verticales según sea necesario. Hay siete valores posibles para el <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> propiedad de la <xref:System.Windows.Forms.RichTextBox> control, que se describen en la tabla siguiente.  
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Para mostrar las barras de desplazamiento en un control RichTextBox  
@@ -24,7 +24,7 @@ De forma predeterminada, los formularios de Windows <xref:System.Windows.Forms.R
   
     |Valor|Descripción|  
     |-----------|-----------------|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (predeterminado)|Muestra las barras de desplazamiento horizontal o vertical, o ambos, solo cuando el texto supera el ancho o la longitud del control.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (valor predeterminado)|Muestra las barras de desplazamiento horizontal o vertical, o ambos, solo cuando el texto supera el ancho o la longitud del control.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|Nunca se muestra ningún tipo de barra de desplazamiento.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|Muestra una barra solo cuando el texto supera el ancho del control de desplazamiento horizontal. (Para ello, el <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> propiedad debe establecerse en `false`.)|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|Muestra una barra solo cuando el texto supera el alto del control de desplazamiento vertical.|  
@@ -37,11 +37,11 @@ De forma predeterminada, los formularios de Windows <xref:System.Windows.Forms.R
     |Valor|Descripción|  
     |-----------|-----------------|  
     |`false`|Texto del control no se ajusta automáticamente para ajustarse al ancho del control, por lo que se desplazará a la derecha hasta que se alcanza un salto de línea. Use este valor si anteriormente eligió las barras de desplazamiento horizontal o ambos.|  
-    |`true` (predeterminado)|Texto del control se ajusta automáticamente para ajustarse al ancho del control. No aparecerá la barra de desplazamiento horizontal. Use este valor si anteriormente eligió los barras de desplazamiento vertical, o ninguno, para mostrar uno o varios párrafos.|  
+    |`true` (valor predeterminado)|Texto del control se ajusta automáticamente para ajustarse al ancho del control. No aparecerá la barra de desplazamiento horizontal. Use este valor si anteriormente eligió los barras de desplazamiento vertical, o ninguno, para mostrar uno o varios párrafos.|  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
-- [Control RichTextBox](richtextbox-control-windows-forms.md)
+- [RichTextBox (control)](richtextbox-control-windows-forms.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

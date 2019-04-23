@@ -10,10 +10,10 @@ ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308723"
 ---
 # <a name="editing-xml-schemas"></a>Edición de esquemas XML
@@ -139,8 +139,8 @@ La edición de un esquema XML es una de las características más importantes de
 
 - [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lectura y escritura de esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Cómo atravesar esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Recorrido de esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [Inclusión o importación de esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
 - [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [Conjunto de información posterior a la compilación de esquemas](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

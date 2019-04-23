@@ -3,10 +3,10 @@ title: 'Transporte: Transacciones personalizadas sobre ejemplo UDP'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
 ms.openlocfilehash: e257c987d93fc7a5b5e8e7f51d79dd8399b45d72
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310127"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transporte: Transacciones personalizadas sobre ejemplo UDP
@@ -46,7 +46,7 @@ byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMes
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- `TransactionMessageBuffer.WriteTransactionMessageBuffer` es un método auxiliar que contiene una nueva funcionalidad para combinar el token de propagación de la transacción actual con la entidad del mensaje y lo coloca en un búfer.  
+ `TransactionMessageBuffer.WriteTransactionMessageBuffer` es un método del asistente que contiene la nueva funcionalidad para combinar el token de propagación para la transacción actual con la entidad del mensaje y lo coloca en un búfer.  
   
  Para el transporte de flujo de transacciones personalizadas, la implementación del cliente debe conocer qué operaciones de servicio requieren flujo de transacción y pasar esta información a WCF. Debería haber también un mecanismo para transmitir la transacción del usuario en el nivel de transporte. Este ejemplo utiliza "Inspectores de mensaje WCF" para obtener esta información. El inspector de mensaje de cliente implementado aquí, que se denomina `TransactionFlowInspector`, realiza las tareas siguientes:  
   
@@ -159,7 +159,7 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- `TransactionMessageBuffer.ReadTransactionMessageBuffer()` es el método auxiliar que invierte el proceso de serialización realizado por `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.  
+ `TransactionMessageBuffer.ReadTransactionMessageBuffer()` es el método del asistente que invierte el proceso de serialización realizado por `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.  
   
  Si se fluye una transacción, se anexa al mensaje en `TransactionMessageProperty`.  
   

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Escribir un método de extensión (Visual Basic)
+title: Procedimiento Escribir un método de extensión (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extending data types [Visual Basic]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
 ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313767"
 ---
-# <a name="how-to-write-an-extension-method-visual-basic"></a>Filtrar Escribir un método de extensión (Visual Basic)
+# <a name="how-to-write-an-extension-method-visual-basic"></a>Procedimiento Escribir un método de extensión (Visual Basic)
 Métodos de extensión permiten agregar métodos a una clase existente. El método de extensión puede llamarse como si fuera una instancia de esa clase.  
   
 ### <a name="to-define-an-extension-method"></a>Para definir un método de extensión  
@@ -84,7 +84,7 @@ End Module
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
-- [Métodos de extensión.](./extension-methods.md)
-- [Module (Instrucción)](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [Métodos de extensión](./extension-methods.md)
+- [Module (instrucción)](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

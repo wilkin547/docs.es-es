@@ -3,10 +3,10 @@ title: 'Tutorial: Modelo de objetos simple y consultas (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
 ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309464"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Tutorial: Modelo de objetos simple y consultas (C#)
@@ -87,7 +87,7 @@ Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../.
   
 -   Designará la propiedad `CustomerID` como representativa de una columna de clave principal en la base de datos.  
   
--   Designará los campos `_CustomerID` y `_City` para el almacenamiento privado. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] puede almacenar y recuperar los valores directamente, en lugar de utilizar descriptores de acceso públicos que podrían incluir lógica empresarial.  
+-   Designará los campos `_CustomerID` y `_City` para el almacenamiento privado. Después, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] podrá almacenar y recuperar los valores directamente, en lugar de utilizar descriptores de acceso públicos que podrían incluir lógica empresarial.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>Para representar las características de dos columnas de base de datos  
   
@@ -156,4 +156,4 @@ Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../.
   
 ## <a name="see-also"></a>Vea también
 
-- [Aprender con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para cifrar elementos XML con claves asimétricas
+title: Procedimiento para cifrar elementos XML con claves asimétricas
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,13 +20,13 @@ ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ec5d42bd003f6fb6a79bbd71beb8c88efa4e84c2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318031"
 ---
-# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Filtrar para cifrar elementos XML con claves asimétricas
+# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Procedimiento para cifrar elementos XML con claves asimétricas
 Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar un elemento dentro de un documento XML.  El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.  Para obtener más información sobre el estándar de cifrado XML, vea la especificación de World Wide Web Consortium (W3C) para cifrado XML ubicado en <https://www.w3.org/TR/xmldsig-core/>.  
   
  Puede usar el cifrado de XML para reemplazar cualquier elemento o documento XML con un elemento <`EncryptedData`> que contenga los datos XML cifrados.  El <`EncryptedData`> elemento también puede contener subelementos con información acerca de las claves y los procesos usados durante el cifrado.  El cifrado XML permite que un documento contenga varios elementos cifrados y permite cifrar varias veces un elemento.  El ejemplo de código en este procedimiento muestra cómo crear un <`EncryptedData`> elemento junto con otros subelementos que puede usar posteriormente durante el descifrado.  
@@ -145,4 +145,4 @@ Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptograph
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Security.Cryptography.Xml>
-- [Filtrar para descifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+- [Cómo: Descifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)

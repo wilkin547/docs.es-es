@@ -1,15 +1,15 @@
 ---
-title: Filtrar Obtener acceso a los servicios WCF con unidireccional y contratos de solicitud-respuesta
+title: Procedimiento Obtener acceso a los servicios WCF con unidireccional y contratos de solicitud-respuesta
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
 ms.openlocfilehash: 119a63978f6c45aa940ff999249c654c7cf96d91
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309256"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Filtrar Obtener acceso a los servicios WCF con unidireccional y contratos de solicitud-respuesta
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Procedimiento Obtener acceso a los servicios WCF con unidireccional y contratos de solicitud-respuesta
 Los procedimientos siguientes describen cómo tener acceso a un servicio de Windows Communication Foundation (WCF) que define un contrato unidireccional y un contrato de solicitud-respuesta y no usa el patrón de comunicación dúplex.  
   
 ### <a name="to-define-the-service"></a>Para definir el servicio  

@@ -5,10 +5,10 @@ f1_keywords:
 - vbrArgument_Range1toFF1
 ms.assetid: a447f9a6-1c90-4c71-abff-81170331e4c5
 ms.openlocfilehash: 9c362c789cc2f06fe9e4560bfdd0dc0db4429e4b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319058"
 ---
 # <a name="argument-argumentname-must-be-within-the-range-1-to-255"></a>Argumento '\<argumentname >' debe estar dentro del intervalo de 1 a 255
@@ -22,4 +22,4 @@ Un argumento no es válido porque está fuera del intervalo de 0 a 255.
   
 ## <a name="see-also"></a>Vea también
 
-- [Pasar argumentos por valor y por referencia](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Paso de argumentos por valor y por referencia](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

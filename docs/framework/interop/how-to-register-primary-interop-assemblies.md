@@ -1,5 +1,5 @@
 ---
-title: Filtrar para registrar ensamblados de interoperabilidad primarios
+title: Procedimiento para registrar ensamblados de interoperabilidad primarios
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c5f1882c37861fe7dd7997348dc51e30ce2950e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218546"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59314755"
 ---
-# <a name="how-to-register-primary-interop-assemblies"></a>Filtrar para registrar ensamblados de interoperabilidad primarios
+# <a name="how-to-register-primary-interop-assemblies"></a>Procedimiento para registrar ensamblados de interoperabilidad primarios
 
 Las clases solo se pueden serializar con la interoperabilidad COM y siempre se serializan como interfaces. En algunos casos, la interfaz usada para calcular las referencias de la clase se conoce como interfaz de clase. Para obtener información sobre cómo invalidar la interfaz de clase con una interfaz de su elección, vea [Contenedor CCW](../../../docs/framework/interop/com-callable-wrapper.md).
 
@@ -36,7 +36,7 @@ Use la [herramienta Registro de ensamblados (Regasm.exe)](../../../docs/framewor
 
 ## <a name="to-register-a-primary-interop-assembly"></a>Para registrar un ensamblado de interoperabilidad primario
 
-1.  En el símbolo del sistema, escriba:
+1. En el símbolo del sistema, escriba:
 
      **regasm** *nombre_de_ensamblado*
 

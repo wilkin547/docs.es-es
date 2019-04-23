@@ -1,5 +1,5 @@
 ---
-title: Filtrar Llamar a un procedimiento de propiedad (Visual Basic)
+title: Procedimiento Llamar a un procedimiento de propiedad (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
 ms.openlocfilehash: d05c1b63f5567ade9935f80ecc022eb4840e0af0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318759"
 ---
-# <a name="how-to-call-a-property-procedure-visual-basic"></a>Filtrar Llamar a un procedimiento de propiedad (Visual Basic)
+# <a name="how-to-call-a-property-procedure-visual-basic"></a>Procedimiento Llamar a un procedimiento de propiedad (Visual Basic)
 Se llama a un procedimiento de propiedad almacenar un valor en la propiedad o recuperar su valor. Obtener acceso a una propiedad del mismo modo que obtener acceso a una variable.  
   
  La propiedad `Set` procedimiento almacena un valor y su `Get` procedimiento recupera el valor. Sin embargo, no llame explícitamente estos procedimientos por su nombre. Utilice la propiedad en una instrucción de asignación o una expresión, tal como podría almacenar o recuperar el valor de una variable. Visual Basic realiza las llamadas a procedimientos de la propiedad.  
@@ -54,14 +54,14 @@ Se llama a un procedimiento de propiedad almacenar un valor en la propiedad o re
   
 ## <a name="see-also"></a>Vea también
 
-- [Procedimientos de propiedad](./property-procedures.md)
+- [Procedimientos de propiedades](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
-- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Diferencias entre propiedades y variables en Visual Basic](./differences-between-properties-and-variables.md)
-- [Filtrar para crear una propiedad](./how-to-create-a-property.md)
-- [Filtrar para declarar una propiedad con niveles de acceso mixtos](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Filtrar Declarar y llamar a una propiedad predeterminada en Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Filtrar para establecer un valor en una propiedad](./how-to-put-a-value-in-a-property.md)
-- [Filtrar para obtener un valor de una propiedad](./how-to-get-a-value-from-a-property.md)
-- [Get (Instrucción)](../../../../visual-basic/language-reference/statements/get-statement.md)
-- [Set (Instrucción)](../../../../visual-basic/language-reference/statements/set-statement.md)
+- [Property (instrucción)](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Diferencias entre propiedades y Variables en Visual Basic](./differences-between-properties-and-variables.md)
+- [Cómo: Crear una propiedad](./how-to-create-a-property.md)
+- [Cómo: Declarar una propiedad con niveles de acceso mixtos](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Cómo: Declarar y llamar a una propiedad predeterminada en Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Cómo: Establecer un valor en una propiedad](./how-to-put-a-value-in-a-property.md)
+- [Cómo: Obtener un valor de una propiedad](./how-to-get-a-value-from-a-property.md)
+- [Get (instrucción)](../../../../visual-basic/language-reference/statements/get-statement.md)
+- [Set (instrucción)](../../../../visual-basic/language-reference/statements/set-statement.md)

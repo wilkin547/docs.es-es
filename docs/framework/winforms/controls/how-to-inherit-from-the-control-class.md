@@ -1,5 +1,5 @@
 ---
-title: Filtrar para heredar de la clase Control
+title: Procedimiento para heredar de la clase Control
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
 ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314222"
 ---
-# <a name="how-to-inherit-from-the-control-class"></a>Filtrar para heredar de la clase Control
+# <a name="how-to-inherit-from-the-control-class"></a>Procedimiento para heredar de la clase Control
 Si desea crear un control completamente personalizado para usar en un formulario de Windows, debe heredar la <xref:System.Windows.Forms.Control> clase. Al heredar el <xref:System.Windows.Forms.Control> clase requiere que realice más planeación e implementación, también proporciona con la mayor variedad de opciones. Al heredar de <xref:System.Windows.Forms.Control>, hereda la funcionalidad básica que hace funcionar los controles. La funcionalidad inherente a la <xref:System.Windows.Forms.Control> clase controla la entrada de usuario a través del teclado y mouse, define los límites y el tamaño del control, proporciona un identificador de windows y proporciona seguridad y control de mensajes. No incorpora ningún dibujo, que en este caso es la representación real de la interfaz gráfica del control, ni cualquier funcionalidad de interacción de usuario específico. Debe proporcionar todos estos elementos por medio del código personalizado.  
   
 > [!NOTE]
@@ -46,8 +46,8 @@ Si desea crear un control completamente personalizado para usar en un formulario
 ## <a name="see-also"></a>Vea también
 
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
-- [Filtrar para heredar de la clase UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Filtrar para heredar de controles de formularios Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Filtrar para crear controles de formularios Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Cómo: Heredar de la clase UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Cómo: Heredar de Windows existente controles de formularios](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Cómo: Crear controles de Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Solucionar problemas de controladores de eventos heredados en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Desarrollar controles de formularios Windows Forms en tiempo de diseño](developing-windows-forms-controls-at-design-time.md)
+- [Desarrollar controles de Windows Forms en tiempo de diseño](developing-windows-forms-controls-at-design-time.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer el tamaño de los paneles de la barra de estado
+title: Procedimiento para establecer el tamaño de los paneles de la barra de estado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
 ms.openlocfilehash: efd3074aaf018e7226c484061cbacb2eac0be820
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311908"
 ---
-# <a name="how-to-set-the-size-of-status-bar-panels"></a>Filtrar para establecer el tamaño de los paneles de la barra de estado
+# <a name="how-to-set-the-size-of-status-bar-panels"></a>Procedimiento para establecer el tamaño de los paneles de la barra de estado
 > [!NOTE]
 >  El control <xref:System.Windows.Forms.ToolStripStatusLabel> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.StatusBar>; sin embargo, el control <xref:System.Windows.Forms.StatusBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.  
   
@@ -70,5 +70,5 @@ ms.locfileid: "59311908"
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [Tutorial: Actualizar la información de la barra de estado en tiempo de ejecución](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Filtrar para determinar en qué panel del control StatusBar de formularios Windows Forms se hizo clic](determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [Información general sobre el control StatusBar](statusbar-control-overview-windows-forms.md)
+- [Cómo: Determinar qué Panel de Control StatusBar de formularios Windows Forms se hizo clic](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Información general sobre StatusBar (Control)](statusbar-control-overview-windows-forms.md)

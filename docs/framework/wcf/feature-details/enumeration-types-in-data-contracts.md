@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
 ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309646"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Tipos de enumeración en contratos de datos
@@ -100,4 +100,4 @@ Las enumeraciones se pueden expresar en el modelo del contrato de datos. En este
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Especificación de transferencia de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Definición de transferencias de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

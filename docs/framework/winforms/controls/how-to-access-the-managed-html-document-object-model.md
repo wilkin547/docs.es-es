@@ -1,5 +1,5 @@
 ---
-title: Filtrar para obtener acceso a Document Object Model HTML administrado
+title: Procedimiento para obtener acceso a Document Object Model HTML administrado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
 ms.openlocfilehash: 04d5f9e6f128d9b4ed3f07a5faebe06ae4ffdebf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315197"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>Filtrar para obtener acceso a Document Object Model HTML administrado
+# <a name="how-to-access-the-managed-html-document-object-model"></a>Procedimiento para obtener acceso a Document Object Model HTML administrado
 Puede acceder al Document Object Model (DOM) HTML administrado desde dos tipos de aplicaciones:  
   
 -   Una aplicación de A Windows Forms (.exe) que hospedó el control <xref:System.Windows.Forms.WebBrowser> administrado. Estas dos tecnologías se complementan entre sí; el control <xref:System.Windows.Forms.WebBrowser> muestra la página al usuario y el DOM HTML representa la estructura lógica del documento.  

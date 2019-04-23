@@ -3,10 +3,10 @@ title: Control de mensajes dudosos en MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316471"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Control de mensajes dudosos en MSMQ 4,0
@@ -35,7 +35,7 @@ Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. En e
 
 -   Reject: Para rechazar el mensaje, envía el mensaje a la cola de mensajes no enviados del remitente. Este valor solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
- El ejemplo muestra cómo usar el desecho de `Move` para el mensaje dudoso. `Move` hace que el mensaje mover a la subcola de mensajes dudosos.
+ El ejemplo muestra cómo usar el desecho de `Move` para el mensaje dudoso. `Move` mueve el mensaje a la subcola de mensajes dudosos.
 
  El contrato de servicio es `IOrderProcessor`, que define un servicio unidireccional que es adecuado para usarse con colas.
 

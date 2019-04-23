@@ -15,10 +15,10 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
 ms.openlocfilehash: 62e137df53d06f5aedb2701b5727c25e52f35614
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319071"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Tutorial: Crear un formulario MDI con combinación de menús y controles ToolStrip
@@ -209,7 +209,7 @@ El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> e
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [Filtrar para crear formularios principales MDI](../advanced/how-to-create-mdi-parent-forms.md)
-- [Filtrar para crear formularios secundarios MDI](../advanced/how-to-create-mdi-child-forms.md)
-- [Filtrar para insertar un elemento MenuStrip en un menú desplegable MDI](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
-- [ToolStrip](toolstrip-control-windows-forms.md)
+- [Cómo: Crear formularios principales MDI](../advanced/how-to-create-mdi-parent-forms.md)
+- [Cómo: Crear formularios MDI secundarios](../advanced/how-to-create-mdi-child-forms.md)
+- [Cómo: Insertar un elemento MenuStrip en un menú desplegable MDI](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)
