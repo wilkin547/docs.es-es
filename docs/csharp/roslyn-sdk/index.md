@@ -4,11 +4,11 @@ description: Aprenda a usar el SDK de .NET Compiler Platform (también denominad
 ms.date: 10/10/2017
 ms.custom: mvc
 ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706551"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>SDK de .NET Compiler Platform
 

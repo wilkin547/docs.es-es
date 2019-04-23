@@ -1,41 +1,34 @@
-items:
 - name: Aplicaciones de servicios de Windows
   href: index.md
   items:
-  - name: Introducción a las aplicaciones de servicios de Windows
-    href: introduction-to-windows-service-applications.md
-  - name: 'Tutorial: Creación de una aplicación de servicio de Windows'
-    href: walkthrough-creating-a-windows-service-application-in-the-component-designer.md
-  - name: Arquitectura de programación de aplicaciones de servicio
-    href: service-application-programming-architecture.md
-  - name: Procedimiento para crear servicios de Windows
-    href: how-to-create-windows-services.md
-    items:
-    - name: Procedimiento para escribir servicios mediante programación
-      href: how-to-write-services-programmatically.md
-    - name: Procedimiento para agregar instaladores a una aplicación de servicio
-      href: how-to-add-installers-to-your-service-application.md
-    - name: Procedimiento para especificar el contexto de seguridad de los servicios
-      href: how-to-specify-the-security-context-for-services.md
-    - name: Procedimiento Instalación y desinstalación de servicios
-      href: how-to-install-and-uninstall-services.md
-    - name: Procedimiento para iniciar servicios
-      href: how-to-start-services.md
-    - name: Procedimiento para pausar un servicio de Windows (Visual Basic)
-      href: how-to-pause-a-windows-service-visual-basic.md
-    - name: Procedimiento para continuar un servicio de Windows (Visual Basic)
-      href: how-to-continue-a-windows-service-visual-basic.md
-    - name: Procedimiento para depurar aplicaciones de servicios de Windows
-      href: how-to-debug-windows-service-applications.md
-    - name: Procedimiento para registrar información sobre servicios
-      href: how-to-log-information-about-services.md
-    - name: 'Solución del problema: Depurar servicios de Windows'
-      href: troubleshooting-debugging-windows-services.md
-    - name: 'Solución del problema: la aplicación de servicio no se instala'
-      href: troubleshooting-service-application-wont-install.md
-ms.openlocfilehash: 0b60da73c822f1b87d437076915735c327ca60f8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469959"
+    - name: Introducción a las aplicaciones de servicios de Windows
+      href: introduction-to-windows-service-applications.md
+    - name: 'Tutorial: Creación de una aplicación de servicio de Windows'
+      href: walkthrough-creating-a-windows-service-application-in-the-component-designer.md
+    - name: Arquitectura de programación de aplicaciones de servicio
+      href: service-application-programming-architecture.md
+    - name: Procedimiento para crear servicios de Windows
+      href: how-to-create-windows-services.md
+      items:
+        - name: Procedimiento para escribir servicios mediante programación
+          href: how-to-write-services-programmatically.md
+        - name: Procedimiento para agregar instaladores a una aplicación de servicio
+          href: how-to-add-installers-to-your-service-application.md
+        - name: Procedimiento para especificar el contexto de seguridad de los servicios
+          href: how-to-specify-the-security-context-for-services.md
+        - name: Procedimiento Instalación y desinstalación de servicios
+          href: how-to-install-and-uninstall-services.md
+        - name: Procedimiento para iniciar servicios
+          href: how-to-start-services.md
+        - name: Procedimiento para pausar un servicio de Windows (Visual Basic)
+          href: how-to-pause-a-windows-service-visual-basic.md
+        - name: Procedimiento para continuar un servicio de Windows (Visual Basic)
+          href: how-to-continue-a-windows-service-visual-basic.md
+        - name: Procedimiento para depurar aplicaciones de servicios de Windows
+          href: how-to-debug-windows-service-applications.md
+        - name: Procedimiento para registrar información sobre servicios
+          href: how-to-log-information-about-services.md
+        - name: 'Solución del problema: Depurar servicios de Windows'
+          href: troubleshooting-debugging-windows-services.md
+        - name: 'Solución del problema: la aplicación de servicio no se instala'
+          href: troubleshooting-service-application-wont-install.md

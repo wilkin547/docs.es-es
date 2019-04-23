@@ -4,8 +4,13 @@ description: Obtenga información sobre cómo compilar .NET Core y la CLI de .NE
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
+ms.openlocfilehash: 523b537ba07afd1b6c56192c5e2589082fe5820f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650887"
 ---
-
 # <a name="build-net-core-from-source"></a>Compilación de .NET Core a partir del código fuente
 
 La capacidad de compilar .NET Core a partir de su código fuente es importante en varios sentidos: facilita la portabilidad de .NET Core a nuevas plataformas, permite contribuciones y correcciones del producto y permite crear versiones personalizadas de .NET.

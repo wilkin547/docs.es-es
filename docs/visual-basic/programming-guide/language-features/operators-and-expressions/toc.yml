@@ -1,32 +1,25 @@
-items:
 - name: Operadores y expresiones
   href: index.md
   items:
-  - name: Tareas comunes realizadas con operadores
-    href: common-tasks-performed-with-visual-basic-operators.md
-  - name: Operadores aritméticos
-    href: arithmetic-operators.md
-  - name: Operadores de comparación
-    href: comparison-operators.md
-  - name: Procedimiento para comprobar si dos objetos son iguales
-    href: how-to-test-whether-two-objects-are-the-same.md
-  - name: Procedimiento para comprobar si una cadena coincide con un patrón
-    href: how-to-match-a-string-against-a-pattern.md
-  - name: Operadores de concatenación
-    href: concatenation-operators.md
-  - name: Operadores lógicos y bit a bit
-    href: logical-and-bitwise-operators.md
-  - name: Combinación eficaz de operadores
-    href: efficient-combination-of-operators.md
-  - name: Procedimiento para calcular valores numéricos
-    href: how-to-calculate-numeric-values.md
-  - name: Comparaciones de valores
-    href: value-comparisons.md
-  - name: Expresiones booleanas
-    href: boolean-expressions.md
-ms.openlocfilehash: b16598c335031cf099e0549d491adfc204fc6d35
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470214"
+    - name: Tareas comunes realizadas con operadores
+      href: common-tasks-performed-with-visual-basic-operators.md
+    - name: Operadores aritméticos
+      href: arithmetic-operators.md
+    - name: Operadores de comparación
+      href: comparison-operators.md
+    - name: Procedimiento para comprobar si dos objetos son iguales
+      href: how-to-test-whether-two-objects-are-the-same.md
+    - name: Procedimiento para comprobar si una cadena coincide con un patrón
+      href: how-to-match-a-string-against-a-pattern.md
+    - name: Operadores de concatenación
+      href: concatenation-operators.md
+    - name: Operadores lógicos y bit a bit
+      href: logical-and-bitwise-operators.md
+    - name: Combinación eficaz de operadores
+      href: efficient-combination-of-operators.md
+    - name: Procedimiento para calcular valores numéricos
+      href: how-to-calculate-numeric-values.md
+    - name: Comparaciones de valores
+      href: value-comparisons.md
+    - name: Expresiones booleanas
+      href: boolean-expressions.md

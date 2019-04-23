@@ -1,87 +1,80 @@
-items:
-- name: Procesamiento de unidades, directorios y archivos
+- name: 'Procesamiento de unidades, directorios y archivos'
   href: processing.md
   items:
-  - name: Acceso a archivos con Visual Basic
-    href: file-access.md
-    items:
-    - name: Lectura de archivos
-      href: reading-from-files.md
+    - name: Acceso a archivos con Visual Basic
+      href: file-access.md
       items:
-      - name: Procedimiento para leer archivos de texto
-        href: how-to-read-from-text-files.md
-      - name: Procedimiento para leer archivos de texto delimitado por comas
-        href: how-to-read-from-comma-delimited-text-files.md
-      - name: Procedimiento para leer archivos de texto de ancho fijo
-        href: how-to-read-from-fixed-width-text-files.md
-      - name: Procedimiento para leer archivos de texto con varios formatos
-        href: how-to-read-from-text-files-with-multiple-formats.md
-      - name: Procedimiento para leer archivos binarios
-        href: how-to-read-from-binary-files.md
-      - name: Procedimiento para leer texto de archivos con StreamReader
-        href: how-to-read-text-from-files-with-a-streamreader.md
-    - name: Escritura en archivos
-      href: writing-to-files.md
+        - name: Lectura de archivos
+          href: reading-from-files.md
+          items:
+            - name: Procedimiento para leer archivos de texto
+              href: how-to-read-from-text-files.md
+            - name: Procedimiento para leer archivos de texto delimitado por comas
+              href: how-to-read-from-comma-delimited-text-files.md
+            - name: Procedimiento para leer archivos de texto de ancho fijo
+              href: how-to-read-from-fixed-width-text-files.md
+            - name: Procedimiento para leer archivos de texto con varios formatos
+              href: how-to-read-from-text-files-with-multiple-formats.md
+            - name: Procedimiento para leer archivos binarios
+              href: how-to-read-from-binary-files.md
+            - name: Procedimiento para leer texto de archivos con StreamReader
+              href: how-to-read-text-from-files-with-a-streamreader.md
+        - name: Escritura en archivos
+          href: writing-to-files.md
+          items:
+            - name: Procedimiento para escribir texto en archivos
+              href: how-to-write-text-to-files.md
+            - name: Procedimiento para anexar a archivos de texto
+              href: how-to-append-to-text-files.md
+            - name: Procedimiento para escribir en archivos binarios
+              href: how-to-write-to-binary-files.md
+            - name: Procedimiento para escribir texto en archivos del directorio Mis documentos
+              href: how-to-write-text-to-files-in-the-my-documents-directory.md
+            - name: Procedimiento para escribir texto en archivos con StreamReader
+              href: how-to-write-text-to-files-with-a-streamwriter.md
+        - name: 'Creación, eliminación y movimiento de archivos y directorios'
+          href: creating-deleting-and-moving-files-and-directories.md
+          items:
+            - name: Procedimiento para copiar archivos con un patrón específico en un directorio
+              href: how-to-copy-files-with-a-specific-pattern-to-a-directory.md
+            - name: Procedimiento para crear una copia de un archivo en el mismo directorio
+              href: how-to-create-a-copy-of-a-file-in-the-same-directory.md
+            - name: Procedimiento para crear una copia de un archivo en otro directorio
+              href: how-to-create-a-copy-of-a-file-in-a-different-directory.md
+            - name: Procedimiento para crear un archivo
+              href: how-to-create-a-file.md
+            - name: Procedimiento para eliminar un archivo
+              href: how-to-delete-a-file.md
+            - name: Procedimiento para buscar archivos con un patrón concreto
+              href: how-to-find-files-with-a-specific-pattern.md
+            - name: Procedimiento para mover un archivo
+              href: how-to-move-a-file.md
+            - name: Procedimiento para cambiar el nombre de un archivo
+              href: how-to-rename-a-file.md
+            - name: Procedimiento para copiar un directorio en otro
+              href: how-to-copy-a-directory-to-another-directory.md
+            - name: Procedimiento para crear un directorio
+              href: how-to-create-a-directory.md
+            - name: Procedimiento para buscar subdirectorios con un patrón concreto
+              href: how-to-find-subdirectories-with-a-specific-pattern.md
+            - name: Procedimiento para obtener la colección de archivos de un directorio
+              href: how-to-get-the-collection-of-files-in-a-directory.md
+            - name: Procedimiento para recuperar el contenido del directorio Mis documentos
+              href: how-to-retrieve-the-contents-of-the-my-documents-directory.md
+            - name: Procedimiento para analizar rutas de acceso a archivos
+              href: how-to-parse-file-paths.md
+        - name: Analizar archivos de texto con el objeto TextFieldParser
+          href: parsing-text-files-with-the-textfieldparser-object.md
+        - name: Codificaciones de archivos
+          href: file-encodings.md
+        - name: 'Solución del problema: leer y escribir en archivos de texto'
+          href: troubleshooting-reading-from-and-writing-to-text-files.md
+    - name: Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework
+      href: basics-of-net-framework-file-io-and-the-file-system.md
       items:
-      - name: Procedimiento para escribir texto en archivos
-        href: how-to-write-text-to-files.md
-      - name: Procedimiento para anexar a archivos de texto
-        href: how-to-append-to-text-files.md
-      - name: Procedimiento para escribir en archivos binarios
-        href: how-to-write-to-binary-files.md
-      - name: Procedimiento para escribir texto en archivos del directorio Mis documentos
-        href: how-to-write-text-to-files-in-the-my-documents-directory.md
-      - name: Procedimiento para escribir texto en archivos con StreamReader
-        href: how-to-write-text-to-files-with-a-streamwriter.md
-    - name: Creación, eliminación y movimiento de archivos y directorios
-      href: creating-deleting-and-moving-files-and-directories.md
-      items:
-      - name: Procedimiento para copiar archivos con un patrón específico en un directorio
-        href: how-to-copy-files-with-a-specific-pattern-to-a-directory.md
-      - name: Procedimiento para crear una copia de un archivo en el mismo directorio
-        href: how-to-create-a-copy-of-a-file-in-the-same-directory.md
-      - name: Procedimiento para crear una copia de un archivo en otro directorio
-        href: how-to-create-a-copy-of-a-file-in-a-different-directory.md
-      - name: Procedimiento para crear un archivo
-        href: how-to-create-a-file.md
-      - name: Procedimiento para eliminar un archivo
-        href: how-to-delete-a-file.md
-      - name: Procedimiento para buscar archivos con un patrón concreto
-        href: how-to-find-files-with-a-specific-pattern.md
-      - name: Procedimiento para mover un archivo
-        href: how-to-move-a-file.md
-      - name: Procedimiento para cambiar el nombre de un archivo
-        href: how-to-rename-a-file.md
-      - name: Procedimiento para copiar un directorio en otro
-        href: how-to-copy-a-directory-to-another-directory.md
-      - name: Procedimiento para crear un directorio
-        href: how-to-create-a-directory.md
-      - name: Procedimiento para buscar subdirectorios con un patrón concreto
-        href: how-to-find-subdirectories-with-a-specific-pattern.md
-      - name: Procedimiento para obtener la colección de archivos de un directorio
-        href: how-to-get-the-collection-of-files-in-a-directory.md
-      - name: Procedimiento para recuperar el contenido del directorio Mis documentos
-        href: how-to-retrieve-the-contents-of-the-my-documents-directory.md
-      - name: Procedimiento para analizar rutas de acceso a archivos
-        href: how-to-parse-file-paths.md
-    - name: Analizar archivos de texto con el objeto TextFieldParser
-      href: parsing-text-files-with-the-textfieldparser-object.md
-    - name: Codificaciones de archivos
-      href: file-encodings.md
-    - name: 'Solución del problema: leer y escribir en archivos de texto'
-      href: troubleshooting-reading-from-and-writing-to-text-files.md
-  - name: Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework
-    href: basics-of-net-framework-file-io-and-the-file-system.md
-    items:
-    - name: Clases usadas en el sistema de archivos y la E/S de archivos en .NET Framework
-      href: classes-used-in-net-framework-file-io-and-the-file-system.md
-  - name: 'Tutorial: Manipulación de archivos mediante métodos de .NET Framework'
-    href: walkthrough-manipulating-files-by-using-net-framework-methods.md
-  - name: 'Tutorial: Manipulación de archivos y directorios'
-    href: walkthrough-manipulating-files-and-directories.md
-ms.openlocfilehash: 04d5b3252fa087fcbba7d29662e7ad1e3fb24d2e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470727"
+        - name: Clases usadas en el sistema de archivos y la E/S de archivos en .NET Framework
+          href: classes-used-in-net-framework-file-io-and-the-file-system.md
+    - name: 'Tutorial: Manipulación de archivos mediante métodos de .NET Framework'
+      href: walkthrough-manipulating-files-by-using-net-framework-methods.md
+    - name: 'Tutorial: Manipulación de archivos y directorios'
+      href: walkthrough-manipulating-files-and-directories.md

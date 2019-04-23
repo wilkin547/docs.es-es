@@ -1,13 +1,19 @@
 ---
 title: 'Tipos que aceptan valores NULL: Guía de programación de C#'
 ms.custom: seodec18
-description: 'Más información sobre los tipos que aceptan valores NULL de C# y su uso'
+description: Más información sobre los tipos que aceptan valores NULL de C# y su uso
 ms.date: 07/30/2018
 helpviewer_keywords:
-  - 'nullable types [C#]'
-  - 'C# language, nullable types'
-  - 'types [C#], nullable'
+- nullable types [C#]
+- C# language, nullable types
+- types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
+ms.openlocfilehash: 740b39c9c729f0768e75b0465eb8ca98eb5b318f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710152"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Tipos que aceptan valores NULL (Guía de programación de C#)
 

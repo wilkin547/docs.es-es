@@ -1,49 +1,42 @@
-items:
-- name: Instrucciones, expresiones y operadores
+- name: 'Instrucciones, expresiones y operadores'
   href: index.md
   items:
-  - name: Instrucciones
-    href: statements.md
-  - name: Expresiones
-    href: expressions.md
-    items:
-    - name: Miembros con forma de expresión
-      href: expression-bodied-members.md
-  - name: Operadores
-    href: operators.md
-  - name: Funciones anónimas
-    href: anonymous-functions.md
-    items:
-    - name: Expresiones lambda
-      href: lambda-expressions.md
+    - name: Instrucciones
+      href: statements.md
+    - name: Expresiones
+      href: expressions.md
       items:
-      - name: Procedimiento para usar expresiones lambda en una consulta
-        href: how-to-use-lambda-expressions-in-a-query.md
-      - name: Procedimiento para usar expresiones lambda fuera de LINQ
-        href: how-to-use-lambda-expressions-outside-linq.md
-    - name: Métodos anónimos
-      href: anonymous-methods.md
-  - name: Operadores sobrecargables
-    href: overloadable-operators.md
-  - name: Operadores de conversión
-    href: conversion-operators.md
-    items:
-    - name: Uso de operadores de conversión
-      href: using-conversion-operators.md
-    - name: Procedimiento para implementar conversiones definidas por el usuario entre estructuras
-      href: how-to-implement-user-defined-conversions-between-structs.md
-  - name: Expresiones de valor predeterminado
-    href: default-value-expressions.md
-  - name: Comparaciones de igualdad
-    href: equality-comparisons.md
-    items:
-    - name: Procedimiento para definir la igualdad de valores para un tipo
-      href: how-to-define-value-equality-for-a-type.md
-    - name: Procedimiento para probar la igualdad de referencia (identidad)
-      href: how-to-test-for-reference-equality-identity.md
-ms.openlocfilehash: d5f37fd97cf72c7c8d9b7854753eb25fdea8bbb2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470022"
+        - name: Miembros con forma de expresión
+          href: expression-bodied-members.md
+    - name: Operadores
+      href: operators.md
+    - name: Funciones anónimas
+      href: anonymous-functions.md
+      items:
+        - name: Expresiones lambda
+          href: lambda-expressions.md
+          items:
+            - name: Procedimiento para usar expresiones lambda en una consulta
+              href: how-to-use-lambda-expressions-in-a-query.md
+            - name: Procedimiento para usar expresiones lambda fuera de LINQ
+              href: how-to-use-lambda-expressions-outside-linq.md
+        - name: Métodos anónimos
+          href: anonymous-methods.md
+    - name: Operadores sobrecargables
+      href: overloadable-operators.md
+    - name: Operadores de conversión
+      href: conversion-operators.md
+      items:
+        - name: Uso de operadores de conversión
+          href: using-conversion-operators.md
+        - name: Procedimiento para implementar conversiones definidas por el usuario entre estructuras
+          href: how-to-implement-user-defined-conversions-between-structs.md
+    - name: Expresiones de valor predeterminado
+      href: default-value-expressions.md
+    - name: Comparaciones de igualdad
+      href: equality-comparisons.md
+      items:
+        - name: Procedimiento para definir la igualdad de valores para un tipo
+          href: how-to-define-value-equality-for-a-type.md
+        - name: Procedimiento para probar la igualdad de referencia (identidad)
+          href: how-to-test-for-reference-equality-identity.md

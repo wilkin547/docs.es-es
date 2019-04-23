@@ -9,11 +9,11 @@ ms.assetid: 10cfea92-db5e-4bcb-b301-ef029bcf77a3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 194184f6ddafa1341fbb731ba51e9635ea66ffa3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768789"
 ---
 # <a name="metadata-unmanaged-api-reference"></a>Metadatos (Referencia de la API no administrada)
 La API de metadatos permite a un cliente, como un compilador, generar o acceder a los metadatos de un componente sin que Common Language Runtime (CLR) cargue los tipos.  

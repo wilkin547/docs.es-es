@@ -1,153 +1,146 @@
-items:
 - name: Contadores de rendimiento
   href: index.md
   items:
-  - name: Contadores del rendimiento de las operaciones
-    href: operation-performance-counters.md
-    items:
-    - name: Llamadas
-      href: calls.md
-    - name: Llamadas por segundo
-      href: calls-per-second.md
-    - name: Llamadas pendientes
-      href: calls-outstanding.md
-    - name: Errores de llamadas
-      href: calls-failed.md
-    - name: Errores de llamadas por segundo
-      href: calls-failed-per-second.md
-    - name: Errores de llamadas
-      href: calls-faulted.md
-    - name: Errores de llamadas por segundo
-      href: calls-faulted-per-second.md
-    - name: Duración de llamadas
-      href: calls-duration.md
-    - name: Errores de autenticación y validación de la seguridad
-      href: security-validation-and-authentication-failures.md
-    - name: Errores de autenticación y validación de la seguridad por segundo
-      href: security-validation-and-authentication-failures-per-second.md
-    - name: Llamadas de seguridad no autorizadas
-      href: security-calls-not-authorized.md
-    - name: Llamadas de seguridad no autorizadas por segundo
-      href: security-calls-not-authorized-per-second.md
-    - name: Flujo de transacciones
-      href: transactions-flowed.md
-    - name: Flujo de transacciones por segundo
-      href: transactions-flowed-per-second.md
-  - name: Contadores de rendimiento de los servicios
-    href: service-performance-counters.md
-    items:
-    - name: Llamadas
-      href: service-calls.md
-    - name: Llamadas por segundo
-      href: service-calls-per-second.md
-    - name: Llamadas pendientes
-      href: service-calls-outstanding.md
-    - name: Errores de llamadas
-      href: service-calls-failed.md
-    - name: Errores de llamadas por segundo
-      href: service-calls-failed-per-second.md
-    - name: Errores de llamadas
-      href: service-calls-faulted.md
-    - name: Errores de llamadas por segundo
-      href: service-calls-faulted-per-second.md
-    - name: Duración de llamadas
-      href: service-calls-duration.md
-    - name: Instancias
-      href: instances.md
-    - name: Instancias por segundo
-      href: instances-per-second.md
-    - name: Porcentaje de máximo de llamadas simultáneas
-      href: percent-of-max-concurrent-calls.md
-    - name: Porcentaje de máximo de instancias simultáneas
-      href: percent-of-max-concurrent-instances.md
-    - name: Porcentaje de máximo de sesiones simultáneas
-      href: percent-of-max-concurrent-sessions.md
-    - name: Mensajes en cola quitados
-      href: queue-dropped-messages.md
-    - name: Mensajes en cola quitados por segundo
-      href: queue-dropped-messages-per-second.md
-    - name: Mensajes dudosos en cola
-      href: queued-poison-messages.md
-    - name: Mensajes dudosos en cola por segundo
-      href: queued-poison-messages-per-second.md
-    - name: Mensajes rechazados en cola
-      href: queued-rejected-messages.md
-    - name: Mensajes en cola rechazados por segundo
-      href: queued-rejected-messages-per-second.md
-    - name: Mensajes de mensajería de confianza quitados
-      href: reliable-messaging-messages-dropped.md
-    - name: Mensajes de mensajería de confianza quitados por segundo
-      href: reliable-messaging-messages-dropped-per-second.md
-    - name: Errores en las sesiones de mensajería fiables
-      href: reliable-messaging-sessions-faulted.md
-    - name: Errores en sesiones de mensajería de confianza por segundo
-      href: reliable-messaging-sessions-faulted-per-second.md
-    - name: Llamadas de seguridad no autorizadas
-      href: service-security-calls-not-authorized.md
-    - name: Llamadas de seguridad no autorizadas por segundo
-      href: service-security-calls-not-authorized-per-second.md
-    - name: Errores de autenticación y validación de la seguridad
-      href: service-security-validation-and-authentication-failures.md
-    - name: Errores de autenticación y validación de la seguridad por segundo
-      href: service-security-validation-and-authentication-failures-per-second.md
-    - name: Flujo de transacciones
-      href: service-transactions-flowed.md
-    - name: Flujo de transacciones por segundo
-      href: service-transactions-flowed-per-second.md
-    - name: Operaciones de transacción anuladas
-      href: transacted-operations-aborted.md
-    - name: Operaciones de transacción anuladas por segundo
-      href: transacted-operations-aborted-per-second.md
-    - name: Operaciones de transacción confirmadas
-      href: transacted-operations-committed.md
-    - name: Operaciones de transacción confirmadas por segundo
-      href: transacted-operations-committed-per-second.md
-    - name: Operaciones de transacción dudosas
-      href: transacted-operations-in-doubt.md
-    - name: Operaciones de transacción dudosas por segundo
-      href: transacted-operations-in-doubt-per-second.md
-  - name: Contadores de rendimiento del extremo
-    href: endpoint-performance-counters.md
-    items:
-    - name: Llamadas
-      href: endpoint-calls.md
-    - name: Llamadas por segundo
-      href: endpoint-calls-per-second.md
-    - name: Llamadas pendientes
-      href: endpoint-calls-outstanding.md
-    - name: Errores de llamadas
-      href: endpoint-calls-failed.md
-    - name: Errores de llamadas por segundo
-      href: endpoint-calls-failed-per-second.md
-    - name: Errores de llamadas
-      href: endpoint-calls-faulted.md
-    - name: Errores de llamadas por segundo
-      href: endpoint-calls-faulted-per-second.md
-    - name: Duración de llamadas
-      href: endpoint-calls-duration.md
-    - name: Mensajes de mensajería de confianza quitados
-      href: endpoint-reliable-messaging-messages-dropped.md
-    - name: Mensajes de mensajería de confianza quitados por segundo
-      href: endpoint-reliable-messaging-messages-dropped-per-second.md
-    - name: Errores en las sesiones de mensajería fiables
-      href: endpoint-reliable-messaging-sessions-faulted.md
-    - name: Errores en sesiones de mensajería de confianza por segundo
-      href: endpoint-reliable-messaging-sessions-faulted-per-second.md
-    - name: Llamadas de seguridad no autorizadas
-      href: endpoint-security-calls-not-authorized.md
-    - name: Llamadas de seguridad no autorizadas por segundo
-      href: endpoint-security-calls-not-authorized-per-second.md
-    - name: Errores de autenticación y validación de la seguridad
-      href: endpoint-security-validation-and-authentication-failures.md
-    - name: Errores de autenticación y validación de la seguridad por segundo
-      href: endpoint-security-validation-and-authentication-failures-per-second.md
-    - name: Flujo de transacciones
-      href: endpoint-transactions-flowed.md
-    - name: Flujo de transacciones por segundo
-      href: endpoint-transactions-flowed-per-second.md
-ms.openlocfilehash: 1330af4c40fecfb31fd26ddf3dd152bd5b33deb6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469831"
+    - name: Contadores del rendimiento de las operaciones
+      href: operation-performance-counters.md
+      items:
+        - name: Llamadas
+          href: calls.md
+        - name: Llamadas por segundo
+          href: calls-per-second.md
+        - name: Llamadas pendientes
+          href: calls-outstanding.md
+        - name: Errores de llamadas
+          href: calls-failed.md
+        - name: Errores de llamadas por segundo
+          href: calls-failed-per-second.md
+        - name: Errores de llamadas
+          href: calls-faulted.md
+        - name: Errores de llamadas por segundo
+          href: calls-faulted-per-second.md
+        - name: Duración de llamadas
+          href: calls-duration.md
+        - name: Errores de autenticación y validación de la seguridad
+          href: security-validation-and-authentication-failures.md
+        - name: Errores de autenticación y validación de la seguridad por segundo
+          href: security-validation-and-authentication-failures-per-second.md
+        - name: Llamadas de seguridad no autorizadas
+          href: security-calls-not-authorized.md
+        - name: Llamadas de seguridad no autorizadas por segundo
+          href: security-calls-not-authorized-per-second.md
+        - name: Flujo de transacciones
+          href: transactions-flowed.md
+        - name: Flujo de transacciones por segundo
+          href: transactions-flowed-per-second.md
+    - name: Contadores de rendimiento de los servicios
+      href: service-performance-counters.md
+      items:
+        - name: Llamadas
+          href: service-calls.md
+        - name: Llamadas por segundo
+          href: service-calls-per-second.md
+        - name: Llamadas pendientes
+          href: service-calls-outstanding.md
+        - name: Errores de llamadas
+          href: service-calls-failed.md
+        - name: Errores de llamadas por segundo
+          href: service-calls-failed-per-second.md
+        - name: Errores de llamadas
+          href: service-calls-faulted.md
+        - name: Errores de llamadas por segundo
+          href: service-calls-faulted-per-second.md
+        - name: Duración de llamadas
+          href: service-calls-duration.md
+        - name: Instancias
+          href: instances.md
+        - name: Instancias por segundo
+          href: instances-per-second.md
+        - name: Porcentaje de máximo de llamadas simultáneas
+          href: percent-of-max-concurrent-calls.md
+        - name: Porcentaje de máximo de instancias simultáneas
+          href: percent-of-max-concurrent-instances.md
+        - name: Porcentaje de máximo de sesiones simultáneas
+          href: percent-of-max-concurrent-sessions.md
+        - name: Mensajes en cola quitados
+          href: queue-dropped-messages.md
+        - name: Mensajes en cola quitados por segundo
+          href: queue-dropped-messages-per-second.md
+        - name: Mensajes dudosos en cola
+          href: queued-poison-messages.md
+        - name: Mensajes dudosos en cola por segundo
+          href: queued-poison-messages-per-second.md
+        - name: Mensajes rechazados en cola
+          href: queued-rejected-messages.md
+        - name: Mensajes en cola rechazados por segundo
+          href: queued-rejected-messages-per-second.md
+        - name: Mensajes de mensajería de confianza quitados
+          href: reliable-messaging-messages-dropped.md
+        - name: Mensajes de mensajería de confianza quitados por segundo
+          href: reliable-messaging-messages-dropped-per-second.md
+        - name: Errores en las sesiones de mensajería fiables
+          href: reliable-messaging-sessions-faulted.md
+        - name: Errores en sesiones de mensajería de confianza por segundo
+          href: reliable-messaging-sessions-faulted-per-second.md
+        - name: Llamadas de seguridad no autorizadas
+          href: service-security-calls-not-authorized.md
+        - name: Llamadas de seguridad no autorizadas por segundo
+          href: service-security-calls-not-authorized-per-second.md
+        - name: Errores de autenticación y validación de la seguridad
+          href: service-security-validation-and-authentication-failures.md
+        - name: Errores de autenticación y validación de la seguridad por segundo
+          href: service-security-validation-and-authentication-failures-per-second.md
+        - name: Flujo de transacciones
+          href: service-transactions-flowed.md
+        - name: Flujo de transacciones por segundo
+          href: service-transactions-flowed-per-second.md
+        - name: Operaciones de transacción anuladas
+          href: transacted-operations-aborted.md
+        - name: Operaciones de transacción anuladas por segundo
+          href: transacted-operations-aborted-per-second.md
+        - name: Operaciones de transacción confirmadas
+          href: transacted-operations-committed.md
+        - name: Operaciones de transacción confirmadas por segundo
+          href: transacted-operations-committed-per-second.md
+        - name: Operaciones de transacción dudosas
+          href: transacted-operations-in-doubt.md
+        - name: Operaciones de transacción dudosas por segundo
+          href: transacted-operations-in-doubt-per-second.md
+    - name: Contadores de rendimiento del extremo
+      href: endpoint-performance-counters.md
+      items:
+        - name: Llamadas
+          href: endpoint-calls.md
+        - name: Llamadas por segundo
+          href: endpoint-calls-per-second.md
+        - name: Llamadas pendientes
+          href: endpoint-calls-outstanding.md
+        - name: Errores de llamadas
+          href: endpoint-calls-failed.md
+        - name: Errores de llamadas por segundo
+          href: endpoint-calls-failed-per-second.md
+        - name: Errores de llamadas
+          href: endpoint-calls-faulted.md
+        - name: Errores de llamadas por segundo
+          href: endpoint-calls-faulted-per-second.md
+        - name: Duración de llamadas
+          href: endpoint-calls-duration.md
+        - name: Mensajes de mensajería de confianza quitados
+          href: endpoint-reliable-messaging-messages-dropped.md
+        - name: Mensajes de mensajería de confianza quitados por segundo
+          href: endpoint-reliable-messaging-messages-dropped-per-second.md
+        - name: Errores en las sesiones de mensajería fiables
+          href: endpoint-reliable-messaging-sessions-faulted.md
+        - name: Errores en sesiones de mensajería de confianza por segundo
+          href: endpoint-reliable-messaging-sessions-faulted-per-second.md
+        - name: Llamadas de seguridad no autorizadas
+          href: endpoint-security-calls-not-authorized.md
+        - name: Llamadas de seguridad no autorizadas por segundo
+          href: endpoint-security-calls-not-authorized-per-second.md
+        - name: Errores de autenticación y validación de la seguridad
+          href: endpoint-security-validation-and-authentication-failures.md
+        - name: Errores de autenticación y validación de la seguridad por segundo
+          href: endpoint-security-validation-and-authentication-failures-per-second.md
+        - name: Flujo de transacciones
+          href: endpoint-transactions-flowed.md
+        - name: Flujo de transacciones por segundo
+          href: endpoint-transactions-flowed-per-second.md

@@ -1,16 +1,9 @@
-items:
 - name: Comentarios en código
   href: comments-in-code.md
   items:
-  - name: Documentar el código con XML
-    href: documenting-your-code-with-xml.md
-  - name: Procesamiento del archivo XML
-    href: processing-the-xml-file.md
-  - name: Procedimiento para crear documentación XML
-    href: how-to-create-xml-documentation.md
-ms.openlocfilehash: 9a5c821d3f3de1b47ab4be58835d2562a1228cf2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470735"
+    - name: Documentar el código con XML
+      href: documenting-your-code-with-xml.md
+    - name: Procesamiento del archivo XML
+      href: processing-the-xml-file.md
+    - name: Procedimiento para crear documentación XML
+      href: how-to-create-xml-documentation.md

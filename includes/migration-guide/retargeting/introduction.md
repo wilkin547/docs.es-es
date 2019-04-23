@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d4f22aa41eb7aeffd655d980cb8418649462273e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757791"
+---
 ## <a name="introduction"></a>Introducción
 Los cambios de redestinación afectan a las aplicaciones que se vuelven a compilar para tener como destino otra versión de .NET Framework. Son los siguientes:
 

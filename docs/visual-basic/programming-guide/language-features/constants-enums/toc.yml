@@ -1,36 +1,29 @@
-items:
 - name: Constantes y enumeraciones
   href: index.md
   items:
-  - name: Información general sobre las constantes
-    href: constants-overview.md
-    items:
-    - name: Procedimiento para declarar una constante
-      href: how-to-declare-a-constant.md
-    - name: Constantes definidas por el usuario
-      href: user-defined-constants.md
-    - name: Tipos de datos constantes y literales
-      href: constant-and-literal-data-types.md
-    - name: Procedimiento para agrupar valores de constantes relacionadas
-      href: how-to-group-related-constant-values-together.md
-  - name: Información general sobre las enumeraciones
-    href: enumerations-overview.md
-    items:
-    - name: Procedimiento para declarar enumeraciones
-      href: how-to-declare-enumerations.md
-    - name: Procedimiento para hacer referencia al miembro de una enumeración
-      href: how-to-refer-to-an-enumeration-member.md
-    - name: Enumeraciones y calificación de nombres
-      href: enumerations-and-name-qualification.md
-    - name: Procedimiento para iterar una enumeración
-      href: how-to-iterate-through-an-enumeration.md
-    - name: Procedimiento para determinar la cadena asociada a un valor de enumeración
-      href: how-to-determine-the-string-associated-with-an-enumeration-value.md
-    - name: Cuándo se debe utilizar una enumeración
-      href: when-to-use-an-enumeration.md
-ms.openlocfilehash: d04784aa644ef5d37a7b3d416f8a15f2e5113f98
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470790"
+    - name: Información general sobre las constantes
+      href: constants-overview.md
+      items:
+        - name: Procedimiento para declarar una constante
+          href: how-to-declare-a-constant.md
+        - name: Constantes definidas por el usuario
+          href: user-defined-constants.md
+        - name: Tipos de datos constantes y literales
+          href: constant-and-literal-data-types.md
+        - name: Procedimiento para agrupar valores de constantes relacionadas
+          href: how-to-group-related-constant-values-together.md
+    - name: Información general sobre las enumeraciones
+      href: enumerations-overview.md
+      items:
+        - name: Procedimiento para declarar enumeraciones
+          href: how-to-declare-enumerations.md
+        - name: Procedimiento para hacer referencia al miembro de una enumeración
+          href: how-to-refer-to-an-enumeration-member.md
+        - name: Enumeraciones y calificación de nombres
+          href: enumerations-and-name-qualification.md
+        - name: Procedimiento para iterar una enumeración
+          href: how-to-iterate-through-an-enumeration.md
+        - name: Procedimiento para determinar la cadena asociada a un valor de enumeración
+          href: how-to-determine-the-string-associated-with-an-enumeration-value.md
+        - name: Cuándo se debe utilizar una enumeración
+          href: when-to-use-an-enumeration.md

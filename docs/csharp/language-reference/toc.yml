@@ -1,138 +1,131 @@
-items:
 - name: Referencia del lenguaje
   href: index.md
   items:
-  - name: Configurar la versión del lenguaje
-    href: configure-language-version.md
-  - name: Palabras clave de C#
-    href: keywords/index.md
-  - name: Operadores de C#
-    href: operators/index.md
-  - name: Caracteres especiales de C#
-    href: tokens/index.md
-  - name: Directivas de preprocesador de C#
-    href: preprocessor-directives/index.md
-  - name: Opciones del compilador de C#
-    href: compiler-options/index.md
-  - name: Errores del compilador de C#
-    href: compiler-messages/index.md
-  - name: Borrador de especificación de C# 6.0
-    items:
-    - name: Introducción
-      href: ../../../_csharplang/spec/introduction.md
-    - name: Estructura léxica
-      href: ../../../_csharplang/spec/lexical-structure.md
-    - name: Conceptos básicos
-      href: ../../../_csharplang/spec/basic-concepts.md
-    - name: Tipos
-      href: ../../../_csharplang/spec/types.md
-    - name: Variables
-      href: ../../../_csharplang/spec/variables.md
-    - name: Conversiones
-      href: ../../../_csharplang/spec/conversions.md
-    - name: Expresiones
-      href: ../../../_csharplang/spec/expressions.md
-    - name: Instrucciones
-      href: ../../../_csharplang/spec/statements.md
-    - name: Espacios de nombres
-      href: ../../../_csharplang/spec/namespaces.md
-    - name: Clases
-      href: ../../../_csharplang/spec/classes.md
-    - name: Estructuras
-      href: ../../../_csharplang/spec/structs.md
-    - name: Matrices
-      href: ../../../_csharplang/spec/arrays.md
-    - name: Interfaces
-      href: ../../../_csharplang/spec/interfaces.md
-    - name: Enumeraciones
-      href: ../../../_csharplang/spec/enums.md
-    - name: Delegados
-      href: ../../../_csharplang/spec/delegates.md
-    - name: Excepciones
-      href: ../../../_csharplang/spec/exceptions.md
-    - name: Atributos
-      href: ../../../_csharplang/spec/attributes.md
-    - name: Código no seguro
-      href: ../../../_csharplang/spec/unsafe-code.md
-    - name: Comentarios de documentación
-      href: ../../../_csharplang/spec/documentation-comments.md
-  - name: Propuestas del lenguaje de C#7.0
-    items:
-    - name: Detección de patrones
-      href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
-    - name: Funciones locales
-      href: ../../../_csharplang/proposals/csharp-7.0/local-functions.md
-    - name: Declaraciones de variable out
-      href: ../../../_csharplang/proposals/csharp-7.0/out-var.md
-    - name: Expresiones throw
-      href: ../../../_csharplang/proposals/csharp-7.0/throw-expression.md
-    - name: Literales binarios
-      href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
-    - name: Separadores de dígitos
-      href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
-  - name: Propuestas del lenguaje de C# 7.1
-    items:
-    - name: Método async main
-      href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
-    - name: Expresiones predeterminadas
-      href: ../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
-    - name: Inferir nombres de tupla
-      href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
-    - name: Coincidencia de patrones con genéricos
-      href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
-  - name: Propuestas del lenguaje de C# 7.2
-    items:
-    - name: Referencias readonly
-      href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
-    - name: Seguridad de tiempo de compilación para tipos similares a ref
-      href: ../../../_csharplang/proposals/csharp-7.2/span-safety.md
-    - name: Argumentos con nombre no finales
-      href: ../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
-    - name: Private protected
-      href: ../../../_csharplang/proposals/csharp-7.2/private-protected.md
-    - name: Ref condicional
-      href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
-    - name: Separador de dígito inicial
-      href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-  - name: Propuestas del lenguaje de C# 7.3
-    items:
-    - name: Restricciones de tipo genérico no administrado
-      href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
-    - name: Los campos de indexación `fixed` no deberían requerir anclaje independientemente del contexto movible/inamovible
-      href: ../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
-    - name: Instrucción `fixed` basada en patrones
-      href: ../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
-    - name: Reasignación de referencias locales
-      href: ../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
-    - name: Inicializadores de matriz stackalloc
-      href: ../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
-    - name: Atributos de campo de destino de propiedad implementada automáticamente
-      href: ../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
-    - name: Variables de expresión en inicializadores
-      href: ../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
-    - name: Igualdad (==) y desigualdad (!=) de tuplas
-      href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
-    - name: Mejoras en los candidatos de sobrecarga
-      href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
-  - name: Propuestas del lenguaje de C# 8.0
-    items:
-    - name: 'Tipos de referencia NULL: propuesta'
-      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
-    - name: 'Tipos de referencias que aceptan valores NULL: especificación'
-      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
-    - name: Coincidencia de patrones recursiva
-      href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
-    - name: Flujos asincrónicos
-      href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
-    - name: Intervalos
-      href: ../../../_csharplang/proposals/csharp-8.0/ranges.md
-    - name: using basado en patrón y declaraciones using
-      href: ../../../_csharplang/proposals/csharp-8.0/using.md
-    - name: Asignación de uso combinado de NULL
-      href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
-ms.openlocfilehash: a2c2b2377b093b542f9d45ae688de121db1c1959
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470543"
+    - name: Configurar la versión del lenguaje
+      href: configure-language-version.md
+    - name: 'Palabras clave de C#'
+      href: keywords/index.md
+    - name: 'Operadores de C#'
+      href: operators/index.md
+    - name: 'Caracteres especiales de C#'
+      href: tokens/index.md
+    - name: 'Directivas de preprocesador de C#'
+      href: preprocessor-directives/index.md
+    - name: 'Opciones del compilador de C#'
+      href: compiler-options/index.md
+    - name: 'Errores del compilador de C#'
+      href: compiler-messages/index.md
+    - name: 'Borrador de especificación de C# 6.0'
+      items:
+        - name: Introducción
+          href: ../../../_csharplang/spec/introduction.md
+        - name: Estructura léxica
+          href: ../../../_csharplang/spec/lexical-structure.md
+        - name: Conceptos básicos
+          href: ../../../_csharplang/spec/basic-concepts.md
+        - name: Tipos
+          href: ../../../_csharplang/spec/types.md
+        - name: Variables
+          href: ../../../_csharplang/spec/variables.md
+        - name: Conversiones
+          href: ../../../_csharplang/spec/conversions.md
+        - name: Expresiones
+          href: ../../../_csharplang/spec/expressions.md
+        - name: Instrucciones
+          href: ../../../_csharplang/spec/statements.md
+        - name: Espacios de nombres
+          href: ../../../_csharplang/spec/namespaces.md
+        - name: Clases
+          href: ../../../_csharplang/spec/classes.md
+        - name: Estructuras
+          href: ../../../_csharplang/spec/structs.md
+        - name: Matrices
+          href: ../../../_csharplang/spec/arrays.md
+        - name: Interfaces
+          href: ../../../_csharplang/spec/interfaces.md
+        - name: Enumeraciones
+          href: ../../../_csharplang/spec/enums.md
+        - name: Delegados
+          href: ../../../_csharplang/spec/delegates.md
+        - name: Excepciones
+          href: ../../../_csharplang/spec/exceptions.md
+        - name: Atributos
+          href: ../../../_csharplang/spec/attributes.md
+        - name: Código no seguro
+          href: ../../../_csharplang/spec/unsafe-code.md
+        - name: Comentarios de documentación
+          href: ../../../_csharplang/spec/documentation-comments.md
+    - name: 'Propuestas del lenguaje de C#7.0'
+      items:
+        - name: Detección de patrones
+          href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
+        - name: Funciones locales
+          href: ../../../_csharplang/proposals/csharp-7.0/local-functions.md
+        - name: Declaraciones de variable out
+          href: ../../../_csharplang/proposals/csharp-7.0/out-var.md
+        - name: Expresiones throw
+          href: ../../../_csharplang/proposals/csharp-7.0/throw-expression.md
+        - name: Literales binarios
+          href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
+        - name: Separadores de dígitos
+          href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
+    - name: 'Propuestas del lenguaje de C# 7.1'
+      items:
+        - name: Método async main
+          href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
+        - name: Expresiones predeterminadas
+          href: ../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
+        - name: Inferir nombres de tupla
+          href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
+        - name: Coincidencia de patrones con genéricos
+          href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
+    - name: 'Propuestas del lenguaje de C# 7.2'
+      items:
+        - name: Referencias readonly
+          href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
+        - name: Seguridad de tiempo de compilación para tipos similares a ref
+          href: ../../../_csharplang/proposals/csharp-7.2/span-safety.md
+        - name: Argumentos con nombre no finales
+          href: ../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
+        - name: Private protected
+          href: ../../../_csharplang/proposals/csharp-7.2/private-protected.md
+        - name: Ref condicional
+          href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
+        - name: Separador de dígito inicial
+          href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
+    - name: 'Propuestas del lenguaje de C# 7.3'
+      items:
+        - name: Restricciones de tipo genérico no administrado
+          href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
+        - name: Los campos de indexación `fixed` no deberían requerir anclaje independientemente del contexto movible/inamovible
+          href: ../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
+        - name: Instrucción `fixed` basada en patrones
+          href: ../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
+        - name: Reasignación de referencias locales
+          href: ../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
+        - name: Inicializadores de matriz stackalloc
+          href: ../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
+        - name: Atributos de campo de destino de propiedad implementada automáticamente
+          href: ../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
+        - name: Variables de expresión en inicializadores
+          href: ../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
+        - name: Igualdad (==) y desigualdad (!=) de tuplas
+          href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
+        - name: Mejoras en los candidatos de sobrecarga
+          href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
+    - name: 'Propuestas del lenguaje de C# 8.0'
+      items:
+        - name: 'Tipos de referencia NULL: propuesta'
+          href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
+        - name: 'Tipos de referencias que aceptan valores NULL: especificación'
+          href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+        - name: Coincidencia de patrones recursiva
+          href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
+        - name: Flujos asincrónicos
+          href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
+        - name: Intervalos
+          href: ../../../_csharplang/proposals/csharp-8.0/ranges.md
+        - name: using basado en patrón y declaraciones using
+          href: ../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: Asignación de uso combinado de NULL
+          href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md

@@ -7,8 +7,8 @@ ms.openlocfilehash: 0fc8a3e3d30331cf6948b9fbbf911a72f3c9924e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960477"
 ---
 # <a name="machine-learning-resources---mlnet"></a>Recursos de aprendizaje automático: ML.NET
 

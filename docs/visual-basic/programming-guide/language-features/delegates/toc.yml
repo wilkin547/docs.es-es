@@ -1,16 +1,9 @@
-items:
 - name: Delegados
   href: index.md
   items:
-  - name: Procedimiento para invocar un método delegado
-    href: how-to-invoke-a-delegate-method.md
-  - name: Procedimiento para pasar procedimientos a otro procedimiento
-    href: how-to-pass-procedures-to-another-procedure.md
-  - name: Conversión de delegado flexible
-    href: relaxed-delegate-conversion.md
-ms.openlocfilehash: 245db8051550fbdaa16338a8f184c0b900b20139
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469871"
+    - name: Procedimiento para invocar un método delegado
+      href: how-to-invoke-a-delegate-method.md
+    - name: Procedimiento para pasar procedimientos a otro procedimiento
+      href: how-to-pass-procedures-to-another-procedure.md
+    - name: Conversión de delegado flexible
+      href: relaxed-delegate-conversion.md
