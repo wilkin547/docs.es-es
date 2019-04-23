@@ -5,20 +5,20 @@ f1_keywords:
 - vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
 ms.openlocfilehash: 8c9f326cc165955353dab6c33b65ed23e3f03d35
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338636"
 ---
-# <a name="path-pathname-not-found"></a><span data-ttu-id="661e5-102">Ruta de acceso '\<pathname >' no encontrado</span><span class="sxs-lookup"><span data-stu-id="661e5-102">Path '\<pathname>' not found</span></span>
-<span data-ttu-id="661e5-103">El sistema operativo no puede encontrar la ruta de acceso especificada durante la operación de acceso a archivo o acceso a disco.</span><span class="sxs-lookup"><span data-stu-id="661e5-103">The operating system is unable to find the path specified path during a file-access or disk-access operation.</span></span> <span data-ttu-id="661e5-104">La ruta de acceso a un archivo debe incluir la especificación de unidad y los directorios y subdirectorios que deben recorrerse para localizar el archivo.</span><span class="sxs-lookup"><span data-stu-id="661e5-104">The path to a file must include the drive specification and the directories and subdirectories that must be traversed to locate the file.</span></span> <span data-ttu-id="661e5-105">Una ruta de acceso puede ser relativa o absoluta.</span><span class="sxs-lookup"><span data-stu-id="661e5-105">A path can be relative or absolute.</span></span>  
+# <a name="path-pathname-not-found"></a><span data-ttu-id="250ac-102">Ruta de acceso '\<pathname >' no encontrado</span><span class="sxs-lookup"><span data-stu-id="250ac-102">Path '\<pathname>' not found</span></span>
+<span data-ttu-id="250ac-103">El sistema operativo no puede encontrar la ruta de acceso especificada durante la operación de acceso a archivo o acceso a disco.</span><span class="sxs-lookup"><span data-stu-id="250ac-103">The operating system is unable to find the path specified path during a file-access or disk-access operation.</span></span> <span data-ttu-id="250ac-104">La ruta de acceso a un archivo debe incluir la especificación de unidad y los directorios y subdirectorios que deben recorrerse para localizar el archivo.</span><span class="sxs-lookup"><span data-stu-id="250ac-104">The path to a file must include the drive specification and the directories and subdirectories that must be traversed to locate the file.</span></span> <span data-ttu-id="250ac-105">Una ruta de acceso puede ser relativa o absoluta.</span><span class="sxs-lookup"><span data-stu-id="250ac-105">A path can be relative or absolute.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="661e5-106">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="661e5-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="250ac-106">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="250ac-106">To correct this error</span></span>  
   
-1. <span data-ttu-id="661e5-107">Asegúrese de que la ruta de acceso incluye los elementos necesarios.</span><span class="sxs-lookup"><span data-stu-id="661e5-107">Ensure that the path includes the required elements.</span></span>  
+1. <span data-ttu-id="250ac-107">Asegúrese de que la ruta de acceso incluye los elementos necesarios.</span><span class="sxs-lookup"><span data-stu-id="250ac-107">Ensure that the path includes the required elements.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="661e5-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="661e5-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="250ac-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="250ac-108">See also</span></span>
 
-- [<span data-ttu-id="661e5-109">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="661e5-109">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
-- [<span data-ttu-id="661e5-110">Filtrar para analizar rutas de acceso a archivos</span><span class="sxs-lookup"><span data-stu-id="661e5-110">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [<span data-ttu-id="250ac-109">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="250ac-109">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [<span data-ttu-id="250ac-110">Cómo: Analizar rutas de acceso a archivos</span><span class="sxs-lookup"><span data-stu-id="250ac-110">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

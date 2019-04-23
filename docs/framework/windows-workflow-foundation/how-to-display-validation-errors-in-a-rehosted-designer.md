@@ -1,22 +1,22 @@
 ---
-title: Filtrar para mostrar errores de validación en un diseñador hospedado en otro host
+title: Procedimiento para mostrar errores de validación en un diseñador hospedado en otro host
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
 ms.openlocfilehash: a3d993f55bf130039905f1a6512a7ae104512432
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310205"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770911"
 ---
-# <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a><span data-ttu-id="b3013-102">Filtrar para mostrar errores de validación en un diseñador hospedado en otro host</span><span class="sxs-lookup"><span data-stu-id="b3013-102">How to: Display Validation Errors in a Rehosted Designer</span></span>
-<span data-ttu-id="b3013-103">En este tema se describe cómo recuperar y publicar errores de validación en [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] hospedado en otro host.</span><span class="sxs-lookup"><span data-stu-id="b3013-103">This topic describes how to retrieve and publish validation errors in a rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span> <span data-ttu-id="b3013-104">Esto proporciona un procedimiento para confirmar que un flujo de trabajo de un diseñador hospedado en otro host es válido.</span><span class="sxs-lookup"><span data-stu-id="b3013-104">This provides us with a procedure to confirm that a workflow in a rehosted designer is valid.</span></span>  
+# <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a><span data-ttu-id="37f56-102">Procedimiento para mostrar errores de validación en un diseñador hospedado en otro host</span><span class="sxs-lookup"><span data-stu-id="37f56-102">How to: Display Validation Errors in a Rehosted Designer</span></span>
+<span data-ttu-id="37f56-103">En este tema se describe cómo recuperar y publicar errores de validación en [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] hospedado en otro host.</span><span class="sxs-lookup"><span data-stu-id="37f56-103">This topic describes how to retrieve and publish validation errors in a rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span> <span data-ttu-id="37f56-104">Esto proporciona un procedimiento para confirmar que un flujo de trabajo de un diseñador hospedado en otro host es válido.</span><span class="sxs-lookup"><span data-stu-id="37f56-104">This provides us with a procedure to confirm that a workflow in a rehosted designer is valid.</span></span>  
   
- <span data-ttu-id="b3013-105">Esta tarea tiene dos partes.</span><span class="sxs-lookup"><span data-stu-id="b3013-105">This task has two parts.</span></span> <span data-ttu-id="b3013-106">La primera consiste en proporcionar una implementación de <xref:System.Activities.Presentation.Validation.IValidationErrorService>.</span><span class="sxs-lookup"><span data-stu-id="b3013-106">The first is to provide an implementation <xref:System.Activities.Presentation.Validation.IValidationErrorService>.</span></span>  <span data-ttu-id="b3013-107">Hay un método crítico que se debe implementar en esta interfaz, <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> que pasará una lista de los objetos <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> que contienen información sobre los errores al registro de depuración.</span><span class="sxs-lookup"><span data-stu-id="b3013-107">There is one critical method to implement on this interface, <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> which will pass you a list of <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> objects containing information about the errors to the debug log.</span></span>  <span data-ttu-id="b3013-108">Después de implementar la interfaz, la información de error se recupera publicando una instancia de esa implementación en el contexto de edición.</span><span class="sxs-lookup"><span data-stu-id="b3013-108">After implementing the interface, you retrieve the error information by publishing an instance of that implementation to the editing context.</span></span>  
+ <span data-ttu-id="37f56-105">Esta tarea tiene dos partes.</span><span class="sxs-lookup"><span data-stu-id="37f56-105">This task has two parts.</span></span> <span data-ttu-id="37f56-106">La primera consiste en proporcionar una implementación de <xref:System.Activities.Presentation.Validation.IValidationErrorService>.</span><span class="sxs-lookup"><span data-stu-id="37f56-106">The first is to provide an implementation <xref:System.Activities.Presentation.Validation.IValidationErrorService>.</span></span>  <span data-ttu-id="37f56-107">Hay un método crítico que se debe implementar en esta interfaz, <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> que pasará una lista de los objetos <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> que contienen información sobre los errores al registro de depuración.</span><span class="sxs-lookup"><span data-stu-id="37f56-107">There is one critical method to implement on this interface, <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> which will pass you a list of <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> objects containing information about the errors to the debug log.</span></span>  <span data-ttu-id="37f56-108">Después de implementar la interfaz, la información de error se recupera publicando una instancia de esa implementación en el contexto de edición.</span><span class="sxs-lookup"><span data-stu-id="37f56-108">After implementing the interface, you retrieve the error information by publishing an instance of that implementation to the editing context.</span></span>  
   
-### <a name="implement-the-ivalidationerrorservice-interface"></a><span data-ttu-id="b3013-109">Implementar la interfaz IValidationErrorService</span><span class="sxs-lookup"><span data-stu-id="b3013-109">Implement the IValidationErrorService Interface</span></span>  
+### <a name="implement-the-ivalidationerrorservice-interface"></a><span data-ttu-id="37f56-109">Implementar la interfaz IValidationErrorService</span><span class="sxs-lookup"><span data-stu-id="37f56-109">Implement the IValidationErrorService Interface</span></span>  
   
-1. <span data-ttu-id="b3013-110">A continuación se incluye un ejemplo de código para una implementación sencilla que escribirá los errores de validación en el registro de depuración.</span><span class="sxs-lookup"><span data-stu-id="b3013-110">Here is a code sample for a simple implementation that will write out the validation errors to the debug log.</span></span>  
+1. <span data-ttu-id="37f56-110">A continuación se incluye un ejemplo de código para una implementación sencilla que escribirá los errores de validación en el registro de depuración.</span><span class="sxs-lookup"><span data-stu-id="37f56-110">Here is a code sample for a simple implementation that will write out the validation errors to the debug log.</span></span>  
   
     ```  
     using System.Activities.Presentation.Validation;  
@@ -36,9 +36,9 @@ ms.locfileid: "59310205"
     }  
     ```  
   
-### <a name="publishing-to-the-editing-context"></a><span data-ttu-id="b3013-111">Publicar en el contexto de edición</span><span class="sxs-lookup"><span data-stu-id="b3013-111">Publishing to the Editing Context</span></span>  
+### <a name="publishing-to-the-editing-context"></a><span data-ttu-id="37f56-111">Publicar en el contexto de edición</span><span class="sxs-lookup"><span data-stu-id="37f56-111">Publishing to the Editing Context</span></span>  
   
-1. <span data-ttu-id="b3013-112">A continuación se incluye el código que publicará esto en el contexto de edición.</span><span class="sxs-lookup"><span data-stu-id="b3013-112">Here is the code that will publish this to the editing context.</span></span>  
+1. <span data-ttu-id="37f56-112">A continuación se incluye el código que publicará esto en el contexto de edición.</span><span class="sxs-lookup"><span data-stu-id="37f56-112">Here is the code that will publish this to the editing context.</span></span>  
   
     ```  
     wd.Context.Services.Publish<IValidationErrorService>(new DebugValidationErrorService());  
