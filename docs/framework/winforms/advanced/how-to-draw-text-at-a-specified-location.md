@@ -1,5 +1,5 @@
 ---
-title: Filtrar para dibujar texto en una ubicación especificada
+title: Procedimiento para dibujar texto en una ubicación especificada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,43 +11,43 @@ helpviewer_keywords:
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
 ms.openlocfilehash: f7834ea45db8dd6e971defd9c3b2b152ffddf512
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336413"
 ---
-# <a name="how-to-draw-text-at-a-specified-location"></a><span data-ttu-id="ae240-102">Filtrar para dibujar texto en una ubicación especificada</span><span class="sxs-lookup"><span data-stu-id="ae240-102">How to: Draw Text at a Specified Location</span></span>
-<span data-ttu-id="ae240-103">Al realizar dibujos personalizados, puede dibujar texto en una sola línea horizontal a partir de un punto especificado.</span><span class="sxs-lookup"><span data-stu-id="ae240-103">When you perform custom drawing, you can draw text in a single horizontal line starting at a specified point.</span></span> <span data-ttu-id="ae240-104">Puede dibujar texto mediante el uso de esta manera el <xref:System.Drawing.Graphics.DrawString%2A> sobrecargar el método de la <xref:System.Drawing.Graphics> clases que toman un <xref:System.Drawing.Point> o <xref:System.Drawing.PointF> parámetro.</span><span class="sxs-lookup"><span data-stu-id="ae240-104">You can draw text in this manner by using the <xref:System.Drawing.Graphics.DrawString%2A> overloaded method of the <xref:System.Drawing.Graphics> class that takes a <xref:System.Drawing.Point> or <xref:System.Drawing.PointF> parameter.</span></span> <span data-ttu-id="ae240-105">El <xref:System.Drawing.Graphics.DrawString%2A> método también requiere una <xref:System.Drawing.Brush> y</span><span class="sxs-lookup"><span data-stu-id="ae240-105">The <xref:System.Drawing.Graphics.DrawString%2A> method also requires a <xref:System.Drawing.Brush> and</span></span> <xref:System.Drawing.Font>  
+# <a name="how-to-draw-text-at-a-specified-location"></a><span data-ttu-id="f462b-102">Procedimiento para dibujar texto en una ubicación especificada</span><span class="sxs-lookup"><span data-stu-id="f462b-102">How to: Draw Text at a Specified Location</span></span>
+<span data-ttu-id="f462b-103">Al realizar dibujos personalizados, puede dibujar texto en una sola línea horizontal a partir de un punto especificado.</span><span class="sxs-lookup"><span data-stu-id="f462b-103">When you perform custom drawing, you can draw text in a single horizontal line starting at a specified point.</span></span> <span data-ttu-id="f462b-104">Puede dibujar texto mediante el uso de esta manera el <xref:System.Drawing.Graphics.DrawString%2A> sobrecargar el método de la <xref:System.Drawing.Graphics> clases que toman un <xref:System.Drawing.Point> o <xref:System.Drawing.PointF> parámetro.</span><span class="sxs-lookup"><span data-stu-id="f462b-104">You can draw text in this manner by using the <xref:System.Drawing.Graphics.DrawString%2A> overloaded method of the <xref:System.Drawing.Graphics> class that takes a <xref:System.Drawing.Point> or <xref:System.Drawing.PointF> parameter.</span></span> <span data-ttu-id="f462b-105">El <xref:System.Drawing.Graphics.DrawString%2A> método también requiere una <xref:System.Drawing.Brush> y <xref:System.Drawing.Font></span><span class="sxs-lookup"><span data-stu-id="f462b-105">The <xref:System.Drawing.Graphics.DrawString%2A> method also requires a <xref:System.Drawing.Brush> and <xref:System.Drawing.Font></span></span>  
   
- <span data-ttu-id="ae240-106">También puede usar el <xref:System.Windows.Forms.TextRenderer.DrawText%2A> sobrecargar el método de la <xref:System.Windows.Forms.TextRenderer> que toma un <xref:System.Drawing.Point>.</span><span class="sxs-lookup"><span data-stu-id="ae240-106">You can also use the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> overloaded method of the <xref:System.Windows.Forms.TextRenderer> that takes a <xref:System.Drawing.Point>.</span></span> <xref:System.Windows.Forms.TextRenderer.DrawText%2A> <span data-ttu-id="ae240-107">También requiere un <xref:System.Drawing.Color> y un <xref:System.Drawing.Font>.</span><span class="sxs-lookup"><span data-stu-id="ae240-107">also requires a <xref:System.Drawing.Color> and a <xref:System.Drawing.Font>.</span></span>  
+ <span data-ttu-id="f462b-106">También puede usar el <xref:System.Windows.Forms.TextRenderer.DrawText%2A> sobrecargar el método de la <xref:System.Windows.Forms.TextRenderer> que toma un <xref:System.Drawing.Point>.</span><span class="sxs-lookup"><span data-stu-id="f462b-106">You can also use the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> overloaded method of the <xref:System.Windows.Forms.TextRenderer> that takes a <xref:System.Drawing.Point>.</span></span> <span data-ttu-id="f462b-107"><xref:System.Windows.Forms.TextRenderer.DrawText%2A> También requiere un <xref:System.Drawing.Color> y un <xref:System.Drawing.Font>.</span><span class="sxs-lookup"><span data-stu-id="f462b-107"><xref:System.Windows.Forms.TextRenderer.DrawText%2A> also requires a <xref:System.Drawing.Color> and a <xref:System.Drawing.Font>.</span></span>  
   
- <span data-ttu-id="ae240-108">La siguiente ilustración muestra el resultado del texto dibujado en un punto especificado cuando se usa el <xref:System.Drawing.Graphics.DrawString%2A> método sobrecargado.</span><span class="sxs-lookup"><span data-stu-id="ae240-108">The following illustration shows the output of text drawn at a specified point when you use the <xref:System.Drawing.Graphics.DrawString%2A> overloaded method.</span></span>  
+ <span data-ttu-id="f462b-108">La siguiente ilustración muestra el resultado del texto dibujado en un punto especificado cuando se usa el <xref:System.Drawing.Graphics.DrawString%2A> método sobrecargado.</span><span class="sxs-lookup"><span data-stu-id="f462b-108">The following illustration shows the output of text drawn at a specified point when you use the <xref:System.Drawing.Graphics.DrawString%2A> overloaded method.</span></span>  
   
  ![Captura de pantalla que muestra la salida de texto en un punto especificado.](./media/how-to-draw-text-at-a-specified-location/font-text-specified-point.png)  
   
-### <a name="to-draw-a-line-of-text-with-gdi"></a><span data-ttu-id="ae240-110">Para dibujar una línea de texto con GDI +</span><span class="sxs-lookup"><span data-stu-id="ae240-110">To draw a line of text with GDI+</span></span>  
+### <a name="to-draw-a-line-of-text-with-gdi"></a><span data-ttu-id="f462b-110">Para dibujar una línea de texto con GDI +</span><span class="sxs-lookup"><span data-stu-id="f462b-110">To draw a line of text with GDI+</span></span>  
   
-1. <span data-ttu-id="ae240-111">Use la <xref:System.Drawing.Graphics.DrawString%2A> método, pasando el texto que desee, <xref:System.Drawing.Point> o <xref:System.Drawing.PointF>, <xref:System.Drawing.Font>, y <xref:System.Drawing.Brush>.</span><span class="sxs-lookup"><span data-stu-id="ae240-111">Use the <xref:System.Drawing.Graphics.DrawString%2A> method, passing the text you want, <xref:System.Drawing.Point> or <xref:System.Drawing.PointF>, <xref:System.Drawing.Font>, and <xref:System.Drawing.Brush>.</span></span>  
+1. <span data-ttu-id="f462b-111">Use la <xref:System.Drawing.Graphics.DrawString%2A> método, pasando el texto que desee, <xref:System.Drawing.Point> o <xref:System.Drawing.PointF>, <xref:System.Drawing.Font>, y <xref:System.Drawing.Brush>.</span><span class="sxs-lookup"><span data-stu-id="f462b-111">Use the <xref:System.Drawing.Graphics.DrawString%2A> method, passing the text you want, <xref:System.Drawing.Point> or <xref:System.Drawing.PointF>, <xref:System.Drawing.Font>, and <xref:System.Drawing.Brush>.</span></span>  
   
      [!code-csharp[System.Drawing.AlignDrawnText#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#30)]
      [!code-vb[System.Drawing.AlignDrawnText#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#30)]  
   
-### <a name="to-draw-a-line-of-text-with-gdi"></a><span data-ttu-id="ae240-112">Para dibujar una línea de texto con GDI</span><span class="sxs-lookup"><span data-stu-id="ae240-112">To draw a line of text with GDI</span></span>  
+### <a name="to-draw-a-line-of-text-with-gdi"></a><span data-ttu-id="f462b-112">Para dibujar una línea de texto con GDI</span><span class="sxs-lookup"><span data-stu-id="f462b-112">To draw a line of text with GDI</span></span>  
   
-1. <span data-ttu-id="ae240-113">Use la <xref:System.Windows.Forms.TextRenderer.DrawText%2A> método, pasando el texto que desee, <xref:System.Drawing.Point>, <xref:System.Drawing.Font>, y <xref:System.Drawing.Color>.</span><span class="sxs-lookup"><span data-stu-id="ae240-113">Use the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> method, passing the text you want, <xref:System.Drawing.Point>, <xref:System.Drawing.Font>, and <xref:System.Drawing.Color>.</span></span>  
+1. <span data-ttu-id="f462b-113">Use la <xref:System.Windows.Forms.TextRenderer.DrawText%2A> método, pasando el texto que desee, <xref:System.Drawing.Point>, <xref:System.Drawing.Font>, y <xref:System.Drawing.Color>.</span><span class="sxs-lookup"><span data-stu-id="f462b-113">Use the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> method, passing the text you want, <xref:System.Drawing.Point>, <xref:System.Drawing.Font>, and <xref:System.Drawing.Color>.</span></span>  
   
      [!code-csharp[System.Drawing.AlignDrawnText#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#40)]
      [!code-vb[System.Drawing.AlignDrawnText#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#40)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ae240-114">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="ae240-114">Compiling the Code</span></span>  
- <span data-ttu-id="ae240-115">Los ejemplos anteriores requieren:</span><span class="sxs-lookup"><span data-stu-id="ae240-115">The previous examples require:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="f462b-114">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="f462b-114">Compiling the Code</span></span>  
+ <span data-ttu-id="f462b-115">Los ejemplos anteriores requieren:</span><span class="sxs-lookup"><span data-stu-id="f462b-115">The previous examples require:</span></span>  
   
--   <xref:System.Windows.Forms.PaintEventArgs>  `e`<span data-ttu-id="ae240-116">, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="ae240-116">, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+-   <span data-ttu-id="f462b-116"><xref:System.Windows.Forms.PaintEventArgs>  `e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="f462b-116"><xref:System.Windows.Forms.PaintEventArgs>  `e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ae240-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="ae240-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f462b-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="f462b-117">See also</span></span>
 
-- [<span data-ttu-id="ae240-118">Filtrar para dibujar texto con GDI</span><span class="sxs-lookup"><span data-stu-id="ae240-118">How to: Draw Text with GDI</span></span>](how-to-draw-text-with-gdi.md)
-- [<span data-ttu-id="ae240-119">Utilizar fuentes y texto</span><span class="sxs-lookup"><span data-stu-id="ae240-119">Using Fonts and Text</span></span>](using-fonts-and-text.md)
-- [<span data-ttu-id="ae240-120">Filtrar para construir fuentes y familias de fuentes</span><span class="sxs-lookup"><span data-stu-id="ae240-120">How to: Construct Font Families and Fonts</span></span>](how-to-construct-font-families-and-fonts.md)
-- [<span data-ttu-id="ae240-121">Filtrar para dibujar texto ajustado en un rectángulo</span><span class="sxs-lookup"><span data-stu-id="ae240-121">How to: Draw Wrapped Text in a Rectangle</span></span>](how-to-draw-wrapped-text-in-a-rectangle.md)
+- [<span data-ttu-id="f462b-118">Cómo: Dibujar texto con GDI</span><span class="sxs-lookup"><span data-stu-id="f462b-118">How to: Draw Text with GDI</span></span>](how-to-draw-text-with-gdi.md)
+- [<span data-ttu-id="f462b-119">Utilizar fuentes y texto</span><span class="sxs-lookup"><span data-stu-id="f462b-119">Using Fonts and Text</span></span>](using-fonts-and-text.md)
+- [<span data-ttu-id="f462b-120">Cómo: Construir fuentes y familias de fuentes</span><span class="sxs-lookup"><span data-stu-id="f462b-120">How to: Construct Font Families and Fonts</span></span>](how-to-construct-font-families-and-fonts.md)
+- [<span data-ttu-id="f462b-121">Cómo: Dibujar texto ajustado en un rectángulo</span><span class="sxs-lookup"><span data-stu-id="f462b-121">How to: Draw Wrapped Text in a Rectangle</span></span>](how-to-draw-wrapped-text-in-a-rectangle.md)

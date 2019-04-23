@@ -5,21 +5,21 @@ f1_keywords:
 - vbrArgument_MinusOneOrGTZero1
 ms.assetid: 22c6bf5f-5194-43ec-8a8c-88f781801927
 ms.openlocfilehash: 789bed10022d38eb9b88cadfdffeb78be444e0fa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337206"
 ---
-# <a name="argument-argumentname-must-be-greater-than-0-or-equal-to--1"></a><span data-ttu-id="5d05a-102">Argumento '\<argumentname >' debe ser mayor que 0 o igual a -1</span><span class="sxs-lookup"><span data-stu-id="5d05a-102">Argument '\<argumentname>' must be greater than 0 or equal to -1</span></span>
-<span data-ttu-id="5d05a-103">El valor del argumento es menor que 0, pero no es igual a -1.</span><span class="sxs-lookup"><span data-stu-id="5d05a-103">An argument's value is less than 0 but not equal to -1.</span></span>  
+# <a name="argument-argumentname-must-be-greater-than-0-or-equal-to--1"></a><span data-ttu-id="f829b-102">Argumento '\<argumentname >' debe ser mayor que 0 o igual a -1</span><span class="sxs-lookup"><span data-stu-id="f829b-102">Argument '\<argumentname>' must be greater than 0 or equal to -1</span></span>
+<span data-ttu-id="f829b-103">El valor del argumento es menor que 0, pero no es igual a -1.</span><span class="sxs-lookup"><span data-stu-id="f829b-103">An argument's value is less than 0 but not equal to -1.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="5d05a-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="5d05a-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f829b-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="f829b-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="5d05a-105">Asegúrese de que el valor del argumento está dentro del intervalo válido.</span><span class="sxs-lookup"><span data-stu-id="5d05a-105">Ensure that the argument's value falls within the valid range.</span></span>  
+1. <span data-ttu-id="f829b-105">Asegúrese de que el valor del argumento está dentro del intervalo válido.</span><span class="sxs-lookup"><span data-stu-id="f829b-105">Ensure that the argument's value falls within the valid range.</span></span>  
   
-2. <span data-ttu-id="5d05a-106">Si se proporciona el argumento mediante un cálculo, compruebe los valores de los procesos de cálculo.</span><span class="sxs-lookup"><span data-stu-id="5d05a-106">If the argument is supplied by a calculation, check the values the calculation processes.</span></span>  
+2. <span data-ttu-id="f829b-106">Si se proporciona el argumento mediante un cálculo, compruebe los valores de los procesos de cálculo.</span><span class="sxs-lookup"><span data-stu-id="f829b-106">If the argument is supplied by a calculation, check the values the calculation processes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5d05a-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="5d05a-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f829b-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="f829b-107">See also</span></span>
 
-- [<span data-ttu-id="5d05a-108">Pasar argumentos por valor y por referencia</span><span class="sxs-lookup"><span data-stu-id="5d05a-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="f829b-108">Paso de argumentos por valor y por referencia</span><span class="sxs-lookup"><span data-stu-id="f829b-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

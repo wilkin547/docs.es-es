@@ -1,5 +1,5 @@
 ---
-title: Filtrar para aplanar un trazado curvo en una línea
+title: Procedimiento para aplanar un trazado curvo en una línea
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [Windows Forms], flattening curves into lines
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - drawing [Windows Forms], flattening curves
 ms.assetid: e654b8de-25f4-4735-9208-42e4514a589c
 ms.openlocfilehash: a151b4244e14d3704fd5fa1c55de92211981232f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215162"
 ---
-# <a name="how-to-flatten-a-curved-path-into-a-line"></a><span data-ttu-id="051a5-102">Filtrar para aplanar un trazado curvo en una línea</span><span class="sxs-lookup"><span data-stu-id="051a5-102">How to: Flatten a Curved Path into a Line</span></span>
-<span data-ttu-id="051a5-103">Un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto almacena una secuencia de líneas y curvas spline de Bézier.</span><span class="sxs-lookup"><span data-stu-id="051a5-103">A <xref:System.Drawing.Drawing2D.GraphicsPath> object stores a sequence of lines and Bézier splines.</span></span> <span data-ttu-id="051a5-104">Puede agregar varios tipos de curvas (elipses, arcos, curvas spline cardinales) a una ruta de acceso, pero se convierte cada curva en una curva spline de Bézier antes de almacenarse en la ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="051a5-104">You can add several types of curves (ellipses, arcs, cardinal splines) to a path, but each curve is converted to a Bézier spline before it is stored in the path.</span></span> <span data-ttu-id="051a5-105">Acoplamiento de una ruta de acceso consiste en convertir cada curva spline de Bézier en la ruta de acceso a una secuencia de líneas rectas.</span><span class="sxs-lookup"><span data-stu-id="051a5-105">Flattening a path consists of converting each Bézier spline in the path to a sequence of straight lines.</span></span> <span data-ttu-id="051a5-106">La siguiente ilustración muestra una ruta de acceso antes y después de hacerlo.</span><span class="sxs-lookup"><span data-stu-id="051a5-106">The following illustration shows a path before and after flattening.</span></span>  
+# <a name="how-to-flatten-a-curved-path-into-a-line"></a><span data-ttu-id="df974-102">Procedimiento para aplanar un trazado curvo en una línea</span><span class="sxs-lookup"><span data-stu-id="df974-102">How to: Flatten a Curved Path into a Line</span></span>
+<span data-ttu-id="df974-103">Un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto almacena una secuencia de líneas y curvas spline de Bézier.</span><span class="sxs-lookup"><span data-stu-id="df974-103">A <xref:System.Drawing.Drawing2D.GraphicsPath> object stores a sequence of lines and Bézier splines.</span></span> <span data-ttu-id="df974-104">Puede agregar varios tipos de curvas (elipses, arcos, curvas spline cardinales) a una ruta de acceso, pero se convierte cada curva en una curva spline de Bézier antes de almacenarse en la ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="df974-104">You can add several types of curves (ellipses, arcs, cardinal splines) to a path, but each curve is converted to a Bézier spline before it is stored in the path.</span></span> <span data-ttu-id="df974-105">Acoplamiento de una ruta de acceso consiste en convertir cada curva spline de Bézier en la ruta de acceso a una secuencia de líneas rectas.</span><span class="sxs-lookup"><span data-stu-id="df974-105">Flattening a path consists of converting each Bézier spline in the path to a sequence of straight lines.</span></span> <span data-ttu-id="df974-106">La siguiente ilustración muestra una ruta de acceso antes y después de hacerlo.</span><span class="sxs-lookup"><span data-stu-id="df974-106">The following illustration shows a path before and after flattening.</span></span>  
   
- <span data-ttu-id="051a5-107">![Líneas rectas y curvas](./media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")</span><span class="sxs-lookup"><span data-stu-id="051a5-107">![Straight Lines and Curves](./media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")</span></span>  
+ <span data-ttu-id="df974-107">![Líneas rectas y curvas](./media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")</span><span class="sxs-lookup"><span data-stu-id="df974-107">![Straight Lines and Curves](./media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")</span></span>  
   
-### <a name="to-flatten-a-path"></a><span data-ttu-id="051a5-108">Para aplanar un trazado</span><span class="sxs-lookup"><span data-stu-id="051a5-108">To Flatten a Path</span></span>  
+### <a name="to-flatten-a-path"></a><span data-ttu-id="df974-108">Para aplanar un trazado</span><span class="sxs-lookup"><span data-stu-id="df974-108">To Flatten a Path</span></span>  
   
--   <span data-ttu-id="051a5-109">Llame a la <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> método de un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto.</span><span class="sxs-lookup"><span data-stu-id="051a5-109">call the <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> method of a <xref:System.Drawing.Drawing2D.GraphicsPath> object.</span></span> <span data-ttu-id="051a5-110">El <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> método recibe un argumento de aplanamiento que especifica la distancia máxima entre el trazado y la ruta de acceso original.</span><span class="sxs-lookup"><span data-stu-id="051a5-110">The <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> method receives a flatness argument that specifies the maximum distance between the flattened path and the original path.</span></span>  
+-   <span data-ttu-id="df974-109">Llame a la <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> método de un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto.</span><span class="sxs-lookup"><span data-stu-id="df974-109">call the <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> method of a <xref:System.Drawing.Drawing2D.GraphicsPath> object.</span></span> <span data-ttu-id="df974-110">El <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> método recibe un argumento de aplanamiento que especifica la distancia máxima entre el trazado y la ruta de acceso original.</span><span class="sxs-lookup"><span data-stu-id="df974-110">The <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> method receives a flatness argument that specifies the maximum distance between the flattened path and the original path.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="051a5-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="051a5-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df974-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="df974-111">See also</span></span>
 
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
-- [<span data-ttu-id="051a5-112">Líneas, curvas y formas</span><span class="sxs-lookup"><span data-stu-id="051a5-112">Lines, Curves, and Shapes</span></span>](lines-curves-and-shapes.md)
-- [<span data-ttu-id="051a5-113">Crear y dibujar trazados</span><span class="sxs-lookup"><span data-stu-id="051a5-113">Constructing and Drawing Paths</span></span>](constructing-and-drawing-paths.md)
+- [<span data-ttu-id="df974-112">Líneas, curvas y formas</span><span class="sxs-lookup"><span data-stu-id="df974-112">Lines, Curves, and Shapes</span></span>](lines-curves-and-shapes.md)
+- [<span data-ttu-id="df974-113">Crear y dibujar trazados</span><span class="sxs-lookup"><span data-stu-id="df974-113">Constructing and Drawing Paths</span></span>](constructing-and-drawing-paths.md)
