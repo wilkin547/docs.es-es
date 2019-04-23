@@ -11,12 +11,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: a205ee04d1b0b68666ca50109001e71288d7f434
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef25b3fb5657d833bbccf5bace71e049623476c9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517843"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59294424"
 ---
 # <a name="if-else-c-reference"></a>if-else (Referencia de C#)
 
@@ -82,7 +82,7 @@ El ejemplo siguiente determina si un carácter de entrada es una letra minúscul
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-Puesto que puede ser válida tanto una instrucción del bloque else como del bloque then, puede usar cualquier expresión booleana válida para la condición. Puede usar operadores lógicos tales como [&&](../operators/conditional-and-operator.md), [&](../operators/and-operator.md), [&#124;&#124;](../operators/conditional-or-operator.md), [&#124;](../operators/or-operator.md) y [!](../operators/logical-negation-operator.md) para hacer condiciones compuestas. En el código siguiente, se muestran algunos ejemplos:
+Puesto que puede ser válida tanto una instrucción del bloque else como del bloque then, puede usar cualquier expresión booleana válida para la condición. Puede usar [operadores lógicos](../operators/boolean-logical-operators.md) como `!`, `&&`, `||`, `&`, `|` y `^` para hacer condiciones compuestas. En el código siguiente, se muestran algunos ejemplos:
 
 ```csharp
 // NOT

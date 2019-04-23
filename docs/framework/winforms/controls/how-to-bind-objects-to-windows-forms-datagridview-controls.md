@@ -1,5 +1,5 @@
 ---
-title: Filtrar para enlazar objetos a controles DataGridView de formularios Windows Forms
+title: Procedimiento para enlazar objetos a controles DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - object binding [Windows Forms], DataGridView control
 ms.assetid: cb8f29fa-577e-4e2b-883f-3a01c6189b9c
 ms.openlocfilehash: 02c4f94eddfcf782d7d2323787d9b6a9b18db2d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180263"
 ---
-# <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>Filtrar para enlazar objetos a controles DataGridView de formularios Windows Forms
+# <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>Procedimiento para enlazar objetos a controles DataGridView de formularios Windows Forms
 El ejemplo de código siguiente muestra cómo enlazar una colección de objetos a un control <xref:System.Windows.Forms.DataGridView> de modo que cada objeto se muestre como una fila independiente. En este ejemplo también se explica cómo mostrar una propiedad con un tipo de enumeración en <xref:System.Windows.Forms.DataGridViewComboBoxColumn> para que la lista desplegable del cuadro combinado contenga los valores de la enumeración.  
   
 ## <a name="example"></a>Ejemplo  
@@ -33,5 +33,5 @@ El ejemplo de código siguiente muestra cómo enlazar una colección de objetos 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.DataGridView>
-- [Mostrar datos en el control DataGridView de formularios Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Filtrar para obtener acceso a objetos enlazados a filas DataGridView de formularios Windows Forms](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)
+- [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Cómo: Obtener acceso a objetos enlazados a Windows Forms filas DataGridView](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)

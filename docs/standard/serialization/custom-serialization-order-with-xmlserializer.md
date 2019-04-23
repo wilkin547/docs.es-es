@@ -3,10 +3,10 @@ title: Orden de serialización personalizada con XmlSerializer
 ms.date: 03/30/2017
 ms.assetid: 975abd20-2a1d-42db-aed3-e898025ccce7
 ms.openlocfilehash: f63d460163c33c4253cf565a5755babc1030164f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295044"
 ---
 # <a name="custom-serialization-order-with-xmlserializer"></a>Orden de serialización personalizada con XmlSerializer
@@ -37,6 +37,6 @@ ms.locfileid: "59295044"
 - [Serialización básica](../../../docs/standard/serialization/basic-serialization.md)
 - [Serialización binaria](../../../docs/standard/serialization/binary-serialization.md)
 - [Controlar la serialización XML mediante atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [Introducir la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Serialización](../../../docs/standard/serialization/index.md)
-- [Serialización de SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)

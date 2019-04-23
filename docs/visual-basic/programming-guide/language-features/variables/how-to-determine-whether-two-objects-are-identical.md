@@ -1,5 +1,5 @@
 ---
-title: Filtrar Determinar si dos objetos son idénticos (Visual Basic)
+title: Procedimiento Determinar si dos objetos son idénticos (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - testing [Visual Basic], objects
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
 ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295047"
 ---
-# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Filtrar Determinar si dos objetos son idénticos (Visual Basic)
+# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Procedimiento Determinar si dos objetos son idénticos (Visual Basic)
 En Visual Basic, dos referencias de variables se consideran idénticas si sus punteros son iguales, es decir, si ambas variables señalan a la misma instancia de clase en la memoria. Por ejemplo, en una aplicación Windows Forms, es posible que desee realizar una comparación para determinar si la instancia actual (`Me`) es el mismo que una instancia concreta, como `Form2`.  
   
  Visual Basic proporciona dos operadores para comparar los punteros. El [operador Is](../../../../visual-basic/language-reference/operators/is-operator.md) devuelve `True` si los objetos son idénticos y el [IsNot (operador)](../../../../visual-basic/language-reference/operators/isnot-operator.md) devuelve `True` si no lo son.  
@@ -52,10 +52,10 @@ En Visual Basic, dos referencias de variables se consideran idénticas si sus pu
   
 ## <a name="see-also"></a>Vea también
 
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Valores de las variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Is (Operador)](../../../../visual-basic/language-reference/operators/is-operator.md)
-- [IsNot (Operador)](../../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Filtrar para determinar si dos objetos están relacionados](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Is (operador)](../../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot (operador)](../../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Cómo: Determinar si dos objetos están relacionados](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
 - [Me, My, MyBase y MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

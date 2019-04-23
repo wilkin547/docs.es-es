@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 864a8a4dd9f96da2fd0e0025848a910b4f8b0a70
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180526"
 ---
 # <a name="iactiononclrevent-interface"></a>IActionOnCLREvent (Interfaz)
@@ -30,7 +30,7 @@ Proporciona el [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanage
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)|Realiza una devolución de llamada para un evento registrado.|  
+|[OnEvent (método)](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)|Realiza una devolución de llamada para un evento registrado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -43,7 +43,7 @@ Proporciona el [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanage
   
 ## <a name="see-also"></a>Vea también
 
-- [EClrEvent (Enumeración)](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
-- [ICLRControl (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [ICLROnEventManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)
+- [EClrEvent (enumeración)](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
+- [ICLRControl (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [ICLROnEventManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)
 - [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

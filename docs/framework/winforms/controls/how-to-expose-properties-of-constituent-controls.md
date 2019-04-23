@@ -1,5 +1,5 @@
 ---
-title: Filtrar para exponer propiedades de controles constituyentes
+title: Procedimiento para exponer propiedades de controles constituyentes
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
 ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294917"
 ---
-# <a name="how-to-expose-properties-of-constituent-controls"></a>Filtrar para exponer propiedades de controles constituyentes
+# <a name="how-to-expose-properties-of-constituent-controls"></a>Procedimiento para exponer propiedades de controles constituyentes
 Los controles que componen un control compuesto se denominan *controles constituyentes*. Estos controles suelen declararse como privados y, por tanto, no se puede acceder por el desarrollador. Si desea que las propiedades de estos controles disponibles para usuarios futuros, debe exponer al usuario. Se expone una propiedad de un control constituyente creando una propiedad en el control de usuario, y usando el `get` y `set` descriptores de acceso de esa propiedad para llevar a cabo el cambio en la propiedad privada del control constituyente.  
   
  Considere la posibilidad de un control de usuario hipotético con un botón constituyente denominado `MyButton`. En este ejemplo, cuando el usuario solicita la `ConstituentButtonBackColor` propiedad, el valor almacenado en el <xref:System.Windows.Forms.Control.BackColor%2A> propiedad de `MyButton` se entrega. Cuando el usuario asigna un valor a esta propiedad, ese valor se pasa automáticamente a la <xref:System.Windows.Forms.Control.BackColor%2A> propiedad de `MyButton` y `set` se ejecutará el código, cambiar el color de `MyButton`.  
@@ -60,5 +60,5 @@ public Color ButtonColor
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.UserControl>
-- [Propiedades de los controles de formularios Windows Forms](properties-in-windows-forms-controls.md)
+- [Propiedades de los controles de Windows Forms](properties-in-windows-forms-controls.md)
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)

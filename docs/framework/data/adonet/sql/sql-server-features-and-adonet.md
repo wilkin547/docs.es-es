@@ -3,10 +3,10 @@ title: Características de SQL Server y ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
 ms.openlocfilehash: 4f2d93ca2abc15e4c7af8489d5b875c0a46d7185
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294904"
 ---
 # <a name="sql-server-features-and-adonet"></a>Características de SQL Server y ADO.NET
@@ -16,10 +16,10 @@ En los temas de esta sección se describen las características de SQL Server or
   
  **Libros en pantalla de SQL Server**  
   
-1. [Desarrollo (Motor de base de datos)](https://go.microsoft.com/fwlink/?LinkId=115245)  
+1. [Desarrollo (motor de base de datos)](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Enumerar instancias de SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
+ [Enumeración de instancias de SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
  Describe cómo enumerar instancias activas de SQL Server.  
   
  [Estadísticas de proveedor de SQL Server](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
@@ -52,4 +52,4 @@ En los temas de esta sección se describen las características de SQL Server or
 - [Recuperar y modificar datos en ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
 - [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

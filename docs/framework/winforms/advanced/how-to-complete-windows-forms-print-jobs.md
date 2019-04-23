@@ -1,5 +1,5 @@
 ---
-title: Filtrar para completar trabajos de impresión de formularios Windows Forms
+title: Procedimiento para completar trabajos de impresión de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
 ms.openlocfilehash: 256b9a3d8842aaa4b032e67ebac9ca6a9e1ef34a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59293760"
 ---
-# <a name="how-to-complete-windows-forms-print-jobs"></a>Filtrar para completar trabajos de impresión de formularios Windows Forms
+# <a name="how-to-complete-windows-forms-print-jobs"></a>Procedimiento para completar trabajos de impresión de formularios Windows Forms
 Con frecuencia, los procesadores de textos y otras aplicaciones que implican impresión proporcionará la opción para mostrar un mensaje a los usuarios que un trabajo de impresión está completado. Puede proporcionar esta funcionalidad en los formularios Windows Forms controlando el <xref:System.Drawing.Printing.PrintDocument.EndPrint> eventos de la <xref:System.Drawing.Printing.PrintDocument> componente.  
   
  El procedimiento siguiente requiere que se haya creado una aplicación basada en Windows con un <xref:System.Drawing.Printing.PrintDocument> componente en este, que es la manera estándar de habilitar la impresión desde una aplicación basada en Windows. Para obtener más información acerca de la impresión de Windows Forms mediante el <xref:System.Drawing.Printing.PrintDocument> componente, vea [Cómo: Crear trabajos de impresión estándar de Windows Forms](how-to-create-standard-windows-forms-print-jobs.md).  
@@ -83,4 +83,4 @@ Con frecuencia, los procesadores de textos y otras aplicaciones que implican imp
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Funcionalidad para imprimir en formularios Windows Forms](windows-forms-print-support.md)
+- [Windows Forms Print Support](windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)

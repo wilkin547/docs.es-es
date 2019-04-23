@@ -1,5 +1,5 @@
 ---
-title: Filtrar para asociar un menú contextual a un nodo TreeView
+title: Procedimiento para asociar un menú contextual a un nodo TreeView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], shortcut menus
 ms.assetid: a23c6752-fd8f-44ad-b781-bab37962fc7c
 ms.openlocfilehash: f818cccb3103866af993f1aff527a9c1a7c82109
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294178"
 ---
-# <a name="how-to-attach-a-shortcut-menu-to-a-treeview-node"></a>Filtrar para asociar un menú contextual a un nodo TreeView
+# <a name="how-to-attach-a-shortcut-menu-to-a-treeview-node"></a>Procedimiento para asociar un menú contextual a un nodo TreeView
 Los formularios de Windows <xref:System.Windows.Forms.TreeView> control muestra una jerarquía de nodos, similares a los archivos y carpetas que se muestra en el panel izquierdo del explorador de Windows. Estableciendo el <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> propiedad, puede proporcionar operaciones contextuales al usuario cuando haga clic en el <xref:System.Windows.Forms.TreeView> control. Asociando un <xref:System.Windows.Forms.ContextMenuStrip> componente con la persona <xref:System.Windows.Forms.TreeNode> elementos, puede agregar un nivel de funcionalidad del menú contextual para personalizado su <xref:System.Windows.Forms.TreeView> controles.  
   
 ### <a name="to-associate-a-shortcut-menu-with-a-treenode-programmatically"></a>Para asociar un menú contextual a un objeto TreeNode mediante programación  
@@ -39,4 +39,4 @@ Los formularios de Windows <xref:System.Windows.Forms.TreeView> control muestra 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.ContextMenuStrip>
-- [TreeView (Control)](treeview-control-windows-forms.md)
+- [TreeView (control)](treeview-control-windows-forms.md)
