@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3ff91a24dec7f8507989b701ea24b569c1670c89
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109720"
 ---
-# <a name="imetadataimportgetpermissionsetprops-method"></a><span data-ttu-id="fc3cf-102">IMetaDataImport::GetPermissionSetProps (Método)</span><span class="sxs-lookup"><span data-stu-id="fc3cf-102">IMetaDataImport::GetPermissionSetProps Method</span></span>
-<span data-ttu-id="fc3cf-103">Obtiene los metadatos asociados con el <xref:System.Security.PermissionSet?displayProperty=nameWithType> representado por el token de permiso especificado.</span><span class="sxs-lookup"><span data-stu-id="fc3cf-103">Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.</span></span>  
+# <a name="imetadataimportgetpermissionsetprops-method"></a><span data-ttu-id="22627-102">IMetaDataImport::GetPermissionSetProps (Método)</span><span class="sxs-lookup"><span data-stu-id="22627-102">IMetaDataImport::GetPermissionSetProps Method</span></span>
+<span data-ttu-id="22627-103">Obtiene los metadatos asociados con el <xref:System.Security.PermissionSet?displayProperty=nameWithType> representado por el token de permiso especificado.</span><span class="sxs-lookup"><span data-stu-id="22627-103">Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fc3cf-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="fc3cf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="22627-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="22627-104">Syntax</span></span>  
   
 ```  
 HRESULT GetPermissionSetProps (  
@@ -38,30 +38,30 @@ HRESULT GetPermissionSetProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fc3cf-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="fc3cf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="22627-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="22627-105">Parameters</span></span>  
  `pm`  
- <span data-ttu-id="fc3cf-106">[in] El token de metadatos de permiso que representa el permiso establecido para obtener las propiedades de metadatos.</span><span class="sxs-lookup"><span data-stu-id="fc3cf-106">[in] The Permission metadata token that represents the permission set to get the metadata properties for.</span></span>  
+ <span data-ttu-id="22627-106">[in] El token de metadatos de permiso que representa el permiso establecido para obtener las propiedades de metadatos.</span><span class="sxs-lookup"><span data-stu-id="22627-106">[in] The Permission metadata token that represents the permission set to get the metadata properties for.</span></span>  
   
  `pdwAction`  
- <span data-ttu-id="fc3cf-107">[out] Un puntero al conjunto de permisos.</span><span class="sxs-lookup"><span data-stu-id="fc3cf-107">[out] A pointer to the permission set.</span></span>  
+ <span data-ttu-id="22627-107">[out] Un puntero al conjunto de permisos.</span><span class="sxs-lookup"><span data-stu-id="22627-107">[out] A pointer to the permission set.</span></span>  
   
  `ppvPermission`  
- <span data-ttu-id="fc3cf-108">[out] Un puntero a la firma de metadatos binaria del conjunto de permisos.</span><span class="sxs-lookup"><span data-stu-id="fc3cf-108">[out] A pointer to the binary metadata signature of the permission set.</span></span>  
+ <span data-ttu-id="22627-108">[out] Un puntero a la firma de metadatos binaria del conjunto de permisos.</span><span class="sxs-lookup"><span data-stu-id="22627-108">[out] A pointer to the binary metadata signature of the permission set.</span></span>  
   
  `pcbPermission`  
- <span data-ttu-id="fc3cf-109">[out] El tamaño en bytes de `ppvPermission`.</span><span class="sxs-lookup"><span data-stu-id="fc3cf-109">[out] The size in bytes of `ppvPermission`.</span></span>  
+ <span data-ttu-id="22627-109">[out] El tamaño en bytes de `ppvPermission`.</span><span class="sxs-lookup"><span data-stu-id="22627-109">[out] The size in bytes of `ppvPermission`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fc3cf-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fc3cf-110">Requirements</span></span>  
- <span data-ttu-id="fc3cf-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fc3cf-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="22627-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="22627-110">Requirements</span></span>  
+ <span data-ttu-id="22627-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="22627-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fc3cf-112">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="fc3cf-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="22627-112">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="22627-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="fc3cf-113">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fc3cf-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="22627-113">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="22627-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="fc3cf-114">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="fc3cf-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="22627-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="22627-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fc3cf-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="fc3cf-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22627-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="22627-115">See also</span></span>
 
 - <xref:System.Security.PermissionSet>
-- [<span data-ttu-id="fc3cf-116">IMetaDataImport (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="fc3cf-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="fc3cf-117">IMetaDataImport2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="fc3cf-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="22627-116">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="22627-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="22627-117">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="22627-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
