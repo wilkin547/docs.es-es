@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308658"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672295"
 ---
 # <a name="c-operators"></a>Operadores de C#
 
@@ -158,6 +158,14 @@ Este operador tiene mayor precedencia que el de la sección siguiente y menor qu
 Este operador tiene mayor precedencia que el de la sección siguiente y menor que el de la anterior.
 
 [x &#124; y](or-operator.md): OR lógico o bit a bit. Por lo general puede usarlo con tipos enteros y tipos `enum`.
+
+## <a name="true-operator"></a>Operador "true"
+
+El operador [true](../keywords/true-false-operators.md) devuelve el valor [bool](../keywords/bool.md) `true` para indicar que un operado es definitivamente "true". 
+
+## <a name="false-operator"></a>Operador "false"
+
+El operador [false](../keywords/true-false-operators.md) devuelve el valor [bool](../keywords/bool.md) `true` para indicar que un operado es definitivamente "false". 
 
 ## <a name="conditional-and-operator"></a>Operador condicional AND
 
