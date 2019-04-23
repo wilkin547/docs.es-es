@@ -3,10 +3,10 @@ title: Seguimiento de eventos en Seguimiento de eventos para Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
 ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300650"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Seguimiento de eventos en Seguimiento de eventos para Windows
@@ -20,7 +20,7 @@ Este ejemplo muestra cómo habilitar el seguimiento en un servicio de flujo de t
 |Componente|Descripción|
 |---------------|-----------------|
 |Tiempo de ejecución de seguimiento|Proporciona la infraestructura para emitir registros de seguimiento.|
-|Participantes de seguimiento|Tiene acceso a los registros de seguimiento. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] se distribuye con un participante de seguimiento que escribe registros de seguimiento como eventos de seguimiento de eventos para Windows (ETW).|
+|Participantes de seguimiento|Tiene acceso a los registros de seguimiento. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] se distribuye con un participante de seguimiento que escribe los eventos de seguimiento como eventos de Seguimiento de eventos para Windows (ETW).|
 |Perfil de seguimiento|Un mecanismo de filtrado que permite a un participante de seguimiento suscribirse a un subconjunto de los registros de seguimiento emitidos desde una instancia de flujo de trabajo.|
 
  En la siguiente tabla se detallan los registros de seguimiento que emite el tiempo de ejecución del flujo de trabajo.

@@ -1,18 +1,18 @@
 ---
-title: Filtrar para proteger un servicio con un certificado X.509
+title: Procedimiento para proteger un servicio con un certificado X.509
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
 ms.openlocfilehash: 75c7a0e50301ce80d51b9b2a10ed650a1600ec79
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300091"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Filtrar para proteger un servicio con un certificado X.509
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procedimiento para proteger un servicio con un certificado X.509
 Protección de un servicio con un certificado X.509 es una técnica básica que utilizan la mayoría de los enlaces de Windows Communication Foundation (WCF). En este tema se describen los pasos necesarios para configurar un servicio autoalojado con un certificado X.509.  
   
  Un requisito previo es un certificado válido que se puede utilizar para autenticar el servidor. Una entidad emisora de certificados de confianza debe emitir el certificado. Si el certificado no es válido, cualquier cliente que intente usar el servicio no confiará en el servicio y, por tanto, no se realizará ninguna conexión. Para obtener más información sobre el uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
@@ -84,4 +84,4 @@ Protección de un servicio con un certificado X.509 es una técnica básica que 
   
 ## <a name="see-also"></a>Vea también
 
-- [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

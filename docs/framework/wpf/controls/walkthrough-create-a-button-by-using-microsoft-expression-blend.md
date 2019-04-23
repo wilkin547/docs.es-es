@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
 ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300466"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Tutorial: Crear un botón mediante Microsoft Expression Blend
@@ -249,7 +249,7 @@ Este tutorial le guía a través del proceso de creación de un [!INCLUDE[TLA2#t
   
 ## <a name="see-also"></a>Vea también
 
-- [Crear un botón mediante XAML](walkthrough-create-a-button-by-using-xaml.md)
+- [Crear un botón mediante el uso de XAML](walkthrough-create-a-button-by-using-xaml.md)
 - [Aplicar estilos y plantillas](styling-and-templating.md)
 - [Información general sobre animaciones](../graphics-multimedia/animation-overview.md)
 - [Información general sobre el dibujo con colores sólidos y degradados](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)

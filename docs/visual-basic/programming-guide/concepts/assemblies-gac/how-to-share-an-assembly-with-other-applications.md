@@ -1,15 +1,15 @@
 ---
-title: Filtrar Compartir un ensamblado con otras aplicaciones (Visual Basic)
+title: Procedimiento Compartir un ensamblado con otras aplicaciones (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
 ms.openlocfilehash: 520fe69d30ca55251ae7a19dcd7a1ea0c11e7bd5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302224"
 ---
-# <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Filtrar Compartir un ensamblado con otras aplicaciones (Visual Basic)
+# <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Procedimiento Compartir un ensamblado con otras aplicaciones (Visual Basic)
 Los ensamblados pueden ser privados o compartidos: de forma predeterminada, la mayoría de los programas sencillos constan de un ensamblado privado porque no se diseñaron para ser usados por otras aplicaciones.  
   
  Para compartir un ensamblado con otras aplicaciones, debe colocarse en la [caché global de ensamblados](../../../../framework/app-domains/gac.md) (GAC).  

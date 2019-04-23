@@ -1,15 +1,15 @@
 ---
-title: Filtrar para crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF
+title: Procedimiento para crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
 ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303926"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Filtrar para crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procedimiento para crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF
 A veces los programadores deben tener un control absoluto de la forma en que se devuelven los datos desde una operación de un servicio. Esto sucede cuando una operación de servicio debe devolver datos en un formato no compatible con WCF. En este tema describe el uso del modelo de programación de WEB HTTP de WCF para crear este tipo de servicio. Este servicio tiene una operación que devuelve una secuencia.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar el contrato de servicios  
@@ -51,7 +51,7 @@ A veces los programadores deben tener un control absoluto de la forma en que se 
        }  
     ```  
   
-     Observe la última línea de código: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     Observe la antepenúltima línea de código: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
      Esto establece el encabezado content-type en `"image/jpeg"`. Aunque en este ejemplo se muestra cómo devolver un archivo .jpg, se puede modificar para devolver cualquier tipo de datos que se requiera, en cualquier formato. La operación debe recuperar o generar los datos y, a continuación, escribirlos en una secuencia.  
   

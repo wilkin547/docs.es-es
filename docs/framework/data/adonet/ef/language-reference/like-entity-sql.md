@@ -3,10 +3,10 @@ title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
 ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302262"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
@@ -32,7 +32,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
  Especifica que el resultado de LIKE se niega.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Si el `string` coincide con el patrón; en caso contrario, `false`.  
+ `true` si el elemento `string` coincide con el patrón; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] las expresiones que utilizan el operador LIKE se evalúan en gran parte del mismo modo que las expresiones que utilizan la igualdad como criterios de filtro. Sin embargo, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] las expresiones que utilizan el operador LIKE pueden incluir literales y caracteres comodín.  

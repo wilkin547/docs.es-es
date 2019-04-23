@@ -10,10 +10,10 @@ helpviewer_keywords:
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
 ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302717"
 ---
 # <a name="determining-object-type-visual-basic"></a>Determinar tipos de objeto (Visual Basic)
@@ -47,8 +47,8 @@ Variables de objeto genéricas (es decir, las variables se declaran como `Object
 ## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
-- [Llamar a una propiedad o método mediante un nombre de cadena](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [If...Then...Else (Instrucción)](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [String (Tipo de datos)](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [Integer (Tipo de datos)](../../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Llamada a una propiedad o método mediante un nombre de cadena](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
+- [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [If...Then...Else (instrucción)](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [String (tipo de datos)](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Integer (tipo de datos)](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

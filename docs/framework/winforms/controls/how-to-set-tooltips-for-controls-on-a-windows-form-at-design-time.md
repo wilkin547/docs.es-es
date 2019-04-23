@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer información sobre herramientas en controles de formularios Windows Forms en tiempo de diseño
+title: Procedimiento para establecer información sobre herramientas en controles de formularios Windows Forms en tiempo de diseño
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
 ms.openlocfilehash: cc8f8c620516a943d6d70187e19b72f5a2a99888
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301339"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Filtrar para establecer información sobre herramientas en controles de formularios Windows Forms en tiempo de diseño
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Procedimiento para establecer información sobre herramientas en controles de formularios Windows Forms en tiempo de diseño
 Puede establecer un <xref:System.Windows.Forms.ToolTip> cadena en el código o en el Diseñador de Windows Forms. Para obtener más información sobre la <xref:System.Windows.Forms.ToolTip> componente, vea [información general del componente ToolTip](tooltip-component-overview-windows-forms.md).  
   
 > [!NOTE]
@@ -79,5 +79,5 @@ Puede establecer un <xref:System.Windows.Forms.ToolTip> cadena en el código o e
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre el componente ToolTip](tooltip-component-overview-windows-forms.md)
-- [Filtrar para cambiar el retardo del componente ToolTip de formularios Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
-- [ToolTip](tooltip-component-windows-forms.md)
+- [Cómo: Cambiar el retardo del componente ToolTip de formularios Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+- [ToolTip (componente)](tooltip-component-windows-forms.md)

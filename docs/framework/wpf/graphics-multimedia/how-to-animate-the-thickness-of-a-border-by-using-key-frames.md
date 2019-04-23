@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar el grosor de un borde mediante fotogramas clave
+title: Procedimiento Animar el grosor de un borde mediante fotogramas clave
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], border thickness with key frames
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
 ms.openlocfilehash: 101fd077bf125faadbd9a0186c2282e4b20ee78f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301794"
 ---
-# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Filtrar Animar el grosor de un borde mediante fotogramas clave
+# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Procedimiento Animar el grosor de un borde mediante fotogramas clave
 En este ejemplo se muestra cómo animar la <xref:System.Windows.Controls.Control.BorderThickness%2A> propiedad de un <xref:System.Windows.Controls.Border>.  
   
 ## <a name="example"></a>Ejemplo  

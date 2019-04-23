@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear un cliente federado
+title: Procedimiento para crear un cliente federado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
 ms.openlocfilehash: 19ffe7e3fb0de9b377279d9cd274f998a104c6b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303393"
 ---
-# <a name="how-to-create-a-federated-client"></a>Filtrar para crear un cliente federado
+# <a name="how-to-create-a-federated-client"></a>Procedimiento para crear un cliente federado
 En Windows Communication Foundation (WCF), creando un cliente para un *servicio federado* consta de tres pasos principales:  
   
 1. Configurar un [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) o un enlace personalizado similar. Para obtener más información acerca de cómo crear un enlace adecuado, vea [Cómo: Crear un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). También puede ejecutar el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) frente al extremo de metadatos del servicio federado para generar un archivo de configuración para la comunicación con el servicio federado y uno o más Servicios de token de seguridad.  
@@ -163,9 +163,9 @@ En Windows Communication Foundation (WCF), creando un cliente para un *servicio 
 ## <a name="see-also"></a>Vea también
 
 - [Ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Filtrar para deshabilitar sesiones seguras en WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [Filtrar para crear un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Filtrar para configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Filtrar para configurar un emisor local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Cómo: Deshabilitar las sesiones seguras en WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Cómo: Create a WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Cómo: Configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Cómo: Configurar a un emisor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [Consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [Filtrar para proteger puntos de conexión de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [Cómo: Proteger los extremos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

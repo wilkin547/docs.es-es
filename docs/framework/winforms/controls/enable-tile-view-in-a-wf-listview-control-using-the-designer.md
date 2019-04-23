@@ -1,5 +1,5 @@
 ---
-title: Filtrar para habilitar la vista en mosaico en un control ListView de formularios Windows Forms mediante el diseñador
+title: Procedimiento para habilitar la vista en mosaico en un control ListView de formularios Windows Forms mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tile view feature
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
 ms.openlocfilehash: f8c8a1b2e3d2adfa7daadd609051ffc304150efe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300598"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Filtrar para habilitar la vista en mosaico en un control ListView de formularios Windows Forms mediante el diseñador
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Procedimiento para habilitar la vista en mosaico en un control ListView de formularios Windows Forms mediante el diseñador
 La característica de vista de mosaico de la <xref:System.Windows.Forms.ListView> control le permite proporcionar equilibrio visual entre la información gráfica y textual. La información de texto que se muestra para un elemento en la vista de mosaico es igual que la información de columna definida para la vista de detalles. Vista en mosaico funciona en combinación con la agrupación o la inserción marca las características de la <xref:System.Windows.Forms.ListView> control.  
   
  La vista de mosaico usa una imagen 32 x 32 y varias líneas de texto, como se muestra en la siguiente imagen.  
@@ -38,4 +38,4 @@ La característica de vista de mosaico de la <xref:System.Windows.Forms.ListView
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
-- [Información general sobre el control ListView](listview-control-overview-windows-forms.md)
+- [Información general del control ListView](listview-control-overview-windows-forms.md)

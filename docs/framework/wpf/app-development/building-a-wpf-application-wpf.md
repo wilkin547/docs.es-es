@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
 ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300962"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilar una aplicación de WPF (WPF)
@@ -101,7 +101,7 @@ End Sub
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>Compilación del marcado: Paso 2  
- No todas las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] se compilan en el paso 1 de la compilación de marcado. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] los archivos que tienen definidos localmente las referencias de tipos (referencias a tipos definidos en el código en otro lugar en el mismo proyecto) están exentos de la compilación en este momento. Esto se debe a que estos tipos definidos localmente solo existen en el código fuente y aún no están generados. Para determinar esto, el analizador usa heurística que implica la búsqueda de elementos como `x:Name` en el archivo de marcado. Cuando se encuentra este tipo de instancia, la compilación del archivo de marcado se pospone hasta que se hayan generado los archivos de código y, en ese momento, el segundo paso de la compilación de marcado procesa estos archivos.  
+ No todas las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] se compilan en el paso 1 de la compilación de marcado. Los archivos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que tienen referencias de tipos definidos localmente (referencias a tipos definidos en el código en otro lugar del mismo proyecto) no se compilan en este momento. Esto se debe a que estos tipos definidos localmente solo existen en el código fuente y aún no están generados. Para determinar esto, el analizador usa heurística que implica la búsqueda de elementos como `x:Name` en el archivo de marcado. Cuando se encuentra este tipo de instancia, la compilación del archivo de marcado se pospone hasta que se hayan generado los archivos de código y, en ese momento, el segundo paso de la compilación de marcado procesa estos archivos.  
   
 <a name="File_Classification"></a>   
 ### <a name="file-classification"></a>Clasificación de archivos  
@@ -169,5 +169,5 @@ End Sub
 
 - [Implementar una aplicación WPF](deploying-a-wpf-application-wpf.md)
 - [Referencia de MSBuild para WPF](/visualstudio/msbuild/wpf-msbuild-reference)
-- [Pack URI en WPF](pack-uris-in-wpf.md)
+- [Identificadores URI de paquete en WPF](pack-uris-in-wpf.md)
 - [Archivos de recursos, contenido y datos de aplicaciones de WPF](wpf-application-resource-content-and-data-files.md)

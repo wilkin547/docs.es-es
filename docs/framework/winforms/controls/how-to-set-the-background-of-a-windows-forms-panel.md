@@ -1,5 +1,5 @@
 ---
-title: Filtrar Establecer el fondo de un Panel de formularios Windows Forms
+title: Procedimiento Establecer el fondo de un Panel de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
 ms.openlocfilehash: 9336be2aebb10e5c0bd0bf4648cae34a3b5fe7c3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300413"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Filtrar Establecer el fondo de un Panel de formularios Windows Forms
+# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Procedimiento Establecer el fondo de un Panel de formularios Windows Forms
 Un formulario Windows Forms <xref:System.Windows.Forms.Panel> control puede mostrar un color de fondo y una imagen de fondo. El <xref:System.Windows.Forms.Control.BackColor%2A> propiedad establece el color de fondo para los controles contenidos, como etiquetas y botones de radio. Si el <xref:System.Windows.Forms.Control.BackgroundImage%2A> no se establece la propiedad, el <xref:System.Windows.Forms.Control.BackColor%2A> selección rellenará todo el panel. Si el <xref:System.Windows.Forms.Control.BackgroundImage%2A> propiedad está establecida, la imagen se mostrará detrás de los controles contenidos.  
   
 ### <a name="to-set-the-background-programmatically"></a>Para establecer el fondo mediante programación  
@@ -71,5 +71,5 @@ Un formulario Windows Forms <xref:System.Windows.Forms.Panel> control puede most
 
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [Control Panel](panel-control-windows-forms.md)
-- [Información general sobre el control Panel](panel-control-overview-windows-forms.md)
+- [Panel (control)](panel-control-windows-forms.md)
+- [Información general del control Panel](panel-control-overview-windows-forms.md)

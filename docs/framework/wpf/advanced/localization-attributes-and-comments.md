@@ -6,14 +6,14 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301859"
 ---
 # <a name="localization-attributes-and-comments"></a>Atributos y comentarios sobre localización
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] comentarios de localización son propiedades, en [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] código fuente, proporcionada los desarrolladores para ofrecer reglas y sugerencias para la localización. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] comentarios de localización contienen dos conjuntos de información: atributos de localizabilidad y comentarios de localización de forma libre. Los atributos de localización se usan en la API de localización de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para indicar qué recursos se van a localizar. Los comentarios de forma libre son cualquier información que el autor de la aplicación quiera incluir.  
+Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] son propiedades, en el código fuente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], que proporcionan los desarrolladores para ofrecer reglas y sugerencias para la localización. Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contienen dos conjuntos de información: atributos de localizabilidad y comentarios de localización de forma libre. Los atributos de localización se usan en la API de localización de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para indicar qué recursos se van a localizar. Los comentarios de forma libre son cualquier información que el autor de la aplicación quiera incluir.  
 
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>Comentarios de localización  
@@ -23,7 +23,7 @@ ms.locfileid: "59301859"
   
 2. Durante el proceso de compilación, puede especificar en el archivo .proj si quiere dejar comentarios de localización de forma libre en el ensamblado, quitar parte de los comentarios o quitarlos todos. Los comentarios eliminados se colocan en un archivo independiente. Especifique la opción mediante una etiqueta `LocalizationDirectivesToLocFile`; p. ej.:  
   
-     `<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>` *valor* `</LocalizationDirectivesToLocFile>`  
   
 3. Los valores que se pueden asignar son:  
   

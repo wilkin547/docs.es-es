@@ -1,5 +1,5 @@
 ---
-title: Filtrar para desencadenar eventos de menú para los botones de la barra de herramientas
+title: Procedimiento para desencadenar eventos de menú para los botones de la barra de herramientas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
 ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303991"
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Filtrar para desencadenar eventos de menú para los botones de la barra de herramientas
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Procedimiento para desencadenar eventos de menú para los botones de la barra de herramientas
 > [!NOTE]
 >  El control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar>; sin embargo, el control <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.  
   
@@ -137,6 +137,6 @@ ms.locfileid: "59303991"
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Filtrar para agregar botones a un control de la barra de herramientas](how-to-add-buttons-to-a-toolbar-control.md)
-- [Filtrar para definir un icono para un botón de la barra de herramientas](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Barra de herramientas (Control)](toolbar-control-windows-forms.md)
+- [Cómo: Agregar botones a un Control de barra de herramientas](how-to-add-buttons-to-a-toolbar-control.md)
+- [Cómo: Definir un icono para un botón de barra de herramientas](how-to-define-an-icon-for-a-toolbar-button.md)
+- [ToolBar (control)](toolbar-control-windows-forms.md)

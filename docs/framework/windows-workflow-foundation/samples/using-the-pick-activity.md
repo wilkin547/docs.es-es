@@ -3,10 +3,10 @@ title: Uso de la actividad Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302989"
 ---
 # <a name="using-the-pick-activity"></a>Uso de la actividad Pick
@@ -17,7 +17,7 @@ En este ejemplo se muestra cómo utilizar la actividad <xref:System.Activities.S
  En este ejemplo se pide a un usuario que escriba su nombre en la consola dentro de un determinado período de tiempo. La actividad <xref:System.Activities.Statements.Pick> del ejemplo tiene dos bifurcaciones cuya ejecución depende de si el usuario escribe su nombre en un intervalo de 5 segundos o no. Si el usuario escribe su nombre en 5 segundos, se ejecuta la primera bifurcación, que contiene una actividad `ReadLine` personalizada; de lo contrario, se ejecuta la otra bifurcación, que contiene una actividad <xref:System.Activities.Statements.Delay>. Una vez escrito el nombre de un usuario en la consola, se imprime en la consola. Si no se escribe ninguna entrada en 5 segundos, la operación agota el tiempo de espera.
 
 ## <a name="demonstrates"></a>Demostraciones
- <xref:System.Activities.Statements.Pick> actividad.
+ Actividad <xref:System.Activities.Statements.Pick>.
 
 ## <a name="discussion"></a>Discusión
  En este ejemplo se incluyen un flujo de trabajo de diseñador y un flujo de trabajo codificado.

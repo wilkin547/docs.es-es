@@ -1,5 +1,5 @@
 ---
-title: Filtrar para garantizar que la fila seleccionada de una tabla secundaria conserve la posición correcta
+title: Procedimiento para garantizar que la fila seleccionada de una tabla secundaria conserve la posición correcta
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
 ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303146"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Filtrar para garantizar que la fila seleccionada de una tabla secundaria conserve la posición correcta
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Procedimiento para garantizar que la fila seleccionada de una tabla secundaria conserve la posición correcta
 A menudo, cuando se trabaja con enlace de datos en Windows Forms, los datos se muestran en lo que se denomina una vista primaria/secundaria o una vista maestra/detalles. Esto hace referencia a un escenario de enlace de datos donde los datos del mismo origen se muestran en dos controles. Al cambiar la selección en un control, los datos mostrados en el segundo control cambiarán. Por ejemplo, el primer control puede contener una lista de clientes y el segundo de una lista de pedidos relacionados con el cliente seleccionado en el primer control.  
   
  A partir de .NET Framework versión 2.0, cuando se muestran datos en una vista primaria/secundaria, quizás tenga que realizar algunos pasos adicionales para asegurarse de que la fila seleccionada actualmente en la tabla secundaria no se restablece a la primera fila de la tabla. Para ello, tendrá que almacenar en caché la posición de la tabla secundaria y restablecerla después de que cambie la tabla primaria. Normalmente, el restablecimiento del elemento secundario se produce la primera vez que cambia un campo en una fila de la tabla primaria.  
@@ -85,6 +85,6 @@ A menudo, cuando se trabaja con enlace de datos en Windows Forms, los datos se m
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados](multiple-controls-bound-to-data-source-synchronized.md)
+- [Cómo: Garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados](multiple-controls-bound-to-data-source-synchronized.md)
 - [Componente BindingSource](./controls/bindingsource-component.md)
-- [Enlace de datos y formularios Windows Forms](data-binding-and-windows-forms.md)
+- [Enlace de datos y Windows Forms](data-binding-and-windows-forms.md)

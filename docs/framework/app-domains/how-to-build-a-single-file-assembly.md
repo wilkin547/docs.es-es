@@ -16,10 +16,10 @@ ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a73b2d8948c9a046fd77c02f1bcc87f5738105d9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304004"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Procedimiento para compilar un ensamblado de un solo archivo
@@ -90,7 +90,7 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 ## <a name="see-also"></a>Vea también
 
-- [Crear ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
-- [Ensamblados de varios archivos](../../../docs/framework/app-domains/multifile-assemblies.md)
-- [Procedimiento para compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
+- [Ensamblados de múltiples archivos](../../../docs/framework/app-domains/multifile-assemblies.md)
+- [Cómo: Compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)

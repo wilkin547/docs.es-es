@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301404"
 ---
 # <a name="drag-and-drop-overview"></a>Información general sobre la función de arrastrar y colocar
@@ -54,7 +54,7 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
  El origen y el destino de una operación de arrastrar y colocar son elementos de la interfaz de usuario; sin embargo, los datos que se transfieren no suelen tener una representación visual. Puede escribir código para proporcionar una representación visual de los datos que se arrastran, como ocurre al arrastrar archivos en el Explorador de Windows. De forma predeterminada, se proporciona información al usuario cambiando el cursor para representar el efecto que la operación de arrastrar y colocar tendrá en los datos, por ejemplo si los datos se mueven o se copian.  
   
 ### <a name="drag-and-drop-effects"></a>Efectos de arrastrar y colocar  
- Las operaciones de arrastrar y colocar pueden tener efectos distintos en los datos transferidos. Por ejemplo, puede copiar los datos o puede mover los datos. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] define un <xref:System.Windows.DragDropEffects> enumeración que se puede utilizar para especificar el efecto de una operación de arrastrar y colocar. En el origen de arrastre, puede especificar los efectos que el origen permitirá en el método <xref:System.Windows.DragDrop.DoDragDrop%2A>. En el destino de colocación, puede especificar el efecto que pretende tener el destino en la propiedad <xref:System.Windows.DragEventArgs.Effects%2A> de la clase <xref:System.Windows.DragEventArgs>. Cuando el destino de colocación especifica su efecto deseado en el evento <xref:System.Windows.DragDrop.DragOver>, esta información se devuelve al origen de arrastre en el evento <xref:System.Windows.DragDrop.GiveFeedback>. El origen de arrastre usa esta información para informar al usuario de qué efecto pretende tener en los datos el destino de colocación. Cuando se colocan los datos, el destino de colocación especifica su efecto real en el evento <xref:System.Windows.DragDrop.Drop>. Esta información se devuelve al origen de arrastre como valor devuelto del método <xref:System.Windows.DragDrop.DoDragDrop%2A>. Si el destino de colocación devuelve un efecto que no está en la lista de orígenes de arrastre de `allowedEffects`, la operación de arrastrar y colocar se cancela sin que se produzca ninguna transferencia de datos.  
+ Las operaciones de arrastrar y colocar pueden tener efectos distintos en los datos transferidos. Por ejemplo, puede copiar los datos o puede mover los datos. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] define una enumeración <xref:System.Windows.DragDropEffects> que puede usar para especificar el efecto de una operación de arrastrar y colocar. En el origen de arrastre, puede especificar los efectos que el origen permitirá en el método <xref:System.Windows.DragDrop.DoDragDrop%2A>. En el destino de colocación, puede especificar el efecto que pretende tener el destino en la propiedad <xref:System.Windows.DragEventArgs.Effects%2A> de la clase <xref:System.Windows.DragEventArgs>. Cuando el destino de colocación especifica su efecto deseado en el evento <xref:System.Windows.DragDrop.DragOver>, esta información se devuelve al origen de arrastre en el evento <xref:System.Windows.DragDrop.GiveFeedback>. El origen de arrastre usa esta información para informar al usuario de qué efecto pretende tener en los datos el destino de colocación. Cuando se colocan los datos, el destino de colocación especifica su efecto real en el evento <xref:System.Windows.DragDrop.Drop>. Esta información se devuelve al origen de arrastre como valor devuelto del método <xref:System.Windows.DragDrop.DoDragDrop%2A>. Si el destino de colocación devuelve un efecto que no está en la lista de orígenes de arrastre de `allowedEffects`, la operación de arrastrar y colocar se cancela sin que se produzca ninguna transferencia de datos.  
   
  Es importante recordar que, en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], los valores <xref:System.Windows.DragDropEffects> solo se usan para proporcionar comunicación entre el origen de arrastre y el destino de colocación relativa a los efectos de la operación de arrastrar y colocar. El efecto real de la operación de arrastrar y colocar depende de que se escriba el código adecuado en la aplicación.  
   
@@ -146,11 +146,11 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
   
  Dentro del controlador de eventos <xref:System.Windows.UIElement.MouseMove>, llame al método <xref:System.Windows.DragDrop.DoDragDrop%2A> para que inicie la operación de arrastrar y colocar. El método <xref:System.Windows.DragDrop.DoDragDrop%2A> toma tres parámetros:  
   
--   `dragSource` : Una referencia al objeto de dependencia que es el origen de los datos transferidos; Esto suele ser el origen de la <xref:System.Windows.UIElement.MouseMove> eventos.  
+-   `dragSource` – Una referencia al objeto de dependencia que es el origen de los datos transferidos; suele ser el origen del evento <xref:System.Windows.UIElement.MouseMove>.  
   
--   `data` -Un objeto que contiene los datos transferidos, ajustados en un <xref:System.Windows.DataObject>.  
+-   `data` – Un objeto que contiene los datos transferidos, ajustados en un <xref:System.Windows.DataObject>.  
   
--   `allowedEffects` -Uno de los <xref:System.Windows.DragDropEffects> valores de enumeración que especifica los efectos permitidos de la operación de arrastrar y colocar.  
+-   `allowedEffects` – Uno de los valores de enumeración <xref:System.Windows.DragDropEffects> que especifica los efectos permitidos de la operación de arrastrar y colocar.  
   
  Puede pasar cualquier objeto serializable en el parámetro `data`. Si los datos todavía no están ajustados en un <xref:System.Windows.DataObject>, se ajustarán automáticamente en un <xref:System.Windows.DataObject> nuevo. Para pasar varios elementos de datos, debe crear por su cuenta el <xref:System.Windows.DataObject> y pasarlo al método <xref:System.Windows.DragDrop.DoDragDrop%2A>. Para obtener más información, consulte [Datos y objetos de datos](data-and-data-objects.md).  
   
@@ -218,6 +218,6 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Clipboard>
-- [Tutorial: Habilitar la técnica de arrastrar y colocar en un control de usuario](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Tutorial: Lo que permite arrastrar y colocar en un Control de usuario](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
 - [Temas "Cómo..."](drag-and-drop-how-to-topics.md)
 - [Arrastrar y colocar](drag-and-drop.md)

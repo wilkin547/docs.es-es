@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
 ms.openlocfilehash: 169cb49cc5abc76b7c52785392d0083b81a99450
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300949"
 ---
 # <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>El modificador 'Custom' no es válido en eventos declarados sin tipos de delegado explícitos
@@ -42,6 +42,6 @@ A diferencia de un evento no personalizado, un `Custom Event` declaración requi
   
 ## <a name="see-also"></a>Vea también
 
-- [Event (Instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)
-- [Delegate (Instrucción)](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Delegate (instrucción)](../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -1,18 +1,18 @@
 ---
-title: Filtrar para configurar un cliente WCF para interoperar con los servicios WSE 3.0
+title: Procedimiento para configurar un cliente WCF para interoperar con los servicios WSE 3.0
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
 ms.openlocfilehash: 62642651516274a27c44abfc19e94dc529690ea9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304550"
 ---
-# <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Filtrar para configurar un cliente WCF para interoperar con los servicios WSE 3.0
+# <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Procedimiento para configurar un cliente WCF para interoperar con los servicios WSE 3.0
 Los clientes de Windows Communication Foundation (WCF) son compatibles con el nivel de conexión con Web Services Enhancements 3.0 para servicios de Microsoft .NET (WSE) cuando los clientes de WCF se configuran para usar la versión de agosto de 2004 de la especificación WS-Addressing.  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>Configuración de un cliente WCF para interoperar con un servicio web WSE 3.0  
@@ -64,4 +64,4 @@ Los clientes de Windows Communication Foundation (WCF) son compatibles con el ni
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Channels.Binding>
-- [Interoperarabilidad con WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)
+- [Interoperar con WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

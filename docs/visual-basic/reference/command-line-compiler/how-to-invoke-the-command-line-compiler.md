@@ -1,5 +1,5 @@
 ---
-title: Filtrar Invocar el compilador de línea de comandos (Visual Basic)
+title: Procedimiento Invocar el compilador de línea de comandos (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
 ms.openlocfilehash: 67cad0df3f10ff1fa1f6a58546fe150232fe1283
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302808"
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Filtrar Invocar el compilador de línea de comandos (Visual Basic)
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Procedimiento Invocar el compilador de línea de comandos (Visual Basic)
 Puede invocar el compilador de línea de comandos escribiendo el nombre de su archivo ejecutable en la línea de comandos, también conocido como el símbolo de MS-DOS. Si compila desde la línea de comandos de Windows de forma predeterminada, debe escribir la ruta de acceso completa al archivo ejecutable. Para invalidar este comportamiento predeterminado, puede utilizar el símbolo del sistema para desarrolladores de Visual Studio o modifique la variable de entorno PATH. Ambos permiten compilar desde cualquier directorio escribiendo simplemente el nombre del compilador.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  

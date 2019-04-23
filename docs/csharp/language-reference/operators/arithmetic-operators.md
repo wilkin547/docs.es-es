@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 192acf6fea0c6014aaf092077f8deaa844dfd2ec
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633808"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59301131"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operadores aritméticos (referencia de C#)
 
@@ -93,7 +93,7 @@ El operador de multiplicación `*` calcula el producto de sus operandos:
 
 [!code-csharp-interactive[multiplication operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Multiplication)]
 
-El operador unario `*` es un [operador de direccionamiento indirecto del puntero](multiplication-operator.md#pointer-indirection-operator).
+El operador unario `*` es el [operador de direccionamiento indirecto del puntero](multiplication-operator.md#pointer-indirection-operator).
 
 ## <a name="division-operator-"></a>Operador de división /
 
@@ -239,7 +239,7 @@ Para obtener más información, vea los comentarios en las páginas de referenci
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 
-Los tipos definidos por el usuario pueden [sobrecargar](../keywords/operator.md) los operadores unarios (`++`, `--`, `+` y `-`), los operadores binarios (`*`, `/`, `%`, `+` y `-`) y los operadores aritméticos. Cuando se sobrecarga un operador binario, también se sobrecarga de forma implícita el operador de asignación compuesta correspondiente. Un tipo definido por el usuario no puede sobrecargar de forma explícita un operador de asignación compuesta.
+Un tipo definido por el usuario puede [sobrecargar](../keywords/operator.md) los operadores unarios (`++`, `--`, `+` y `-`), los operadores binarios (`*`, `/`, `%`, `+` y `-`) y los operadores aritméticos. Cuando se sobrecarga un operador binario, también se sobrecarga de forma implícita el operador de asignación compuesta correspondiente. Un tipo definido por el usuario no puede sobrecargar de forma explícita un operador de asignación compuesta.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

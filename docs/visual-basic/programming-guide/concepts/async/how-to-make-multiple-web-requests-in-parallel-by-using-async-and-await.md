@@ -1,15 +1,15 @@
 ---
-title: Filtrar Hacer varias solicitudes Web en paralelo utilizando Async y Await (Visual Basic)
+title: Procedimiento Hacer varias solicitudes Web en paralelo utilizando Async y Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
 ms.openlocfilehash: c799fa83c0157019961da6adcf89b6ab6f906763
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303471"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Filtrar Hacer varias solicitudes Web en paralelo utilizando Async y Await (Visual Basic)
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Procedimiento Hacer varias solicitudes Web en paralelo utilizando Async y Await (Visual Basic)
 En un método asincrónico, las tareas se inician en el momento de crearse. El [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operador se aplica a la tarea en el momento en el método donde no puede continuar el procesamiento hasta que finalice la tarea. A menudo se espera una tarea en cuanto se crea, como se muestra en el ejemplo siguiente.  
   
 ```vb  
@@ -68,9 +68,9 @@ Dim result = Await myTask
   
 3. Agregue los siguientes métodos de soporte técnico al proyecto:  
   
-    -   `ProcessURLAsync` usa un <xref:System.Net.Http.HttpClient> método para descargar el contenido de un sitio Web como una matriz de bytes. Luego, el método de soporte, `ProcessURLAsync`, muestra y devuelve la longitud de la matriz.  
+    -   `ProcessURLAsync` usa un método <xref:System.Net.Http.HttpClient> para descargar el contenido de un sitio web como una matriz de bytes. Luego, el método de soporte, `ProcessURLAsync`, muestra y devuelve la longitud de la matriz.  
   
-    -   `DisplayResults` Muestra el número de bytes en la matriz de bytes para cada dirección URL. En esta pantalla se muestra cuándo se ha terminado la descarga de cada tarea.  
+    -   `DisplayResults` muestra el número de bytes de la matriz de bytes de cada dirección URL. En esta pantalla se muestra cuándo se ha terminado la descarga de cada tarea.  
   
      Copie los métodos siguientes y péguelos después el `startButton_Click` controlador de eventos en el archivo MainWindow.xaml.vb.  
   
@@ -207,4 +207,4 @@ End Class
 
 - [Tutorial: Acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Filtrar Ampliar el tutorial de Async usando Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Cómo: Ampliar el tutorial de Async usando Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

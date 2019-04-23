@@ -15,10 +15,10 @@ helpviewer_keywords:
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
 ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301040"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Espacios de nombres y asignación de espacios de nombres XAML para WPF
@@ -49,7 +49,7 @@ En este tema se explica con mayor detalle la presencia y el propósito de las do
   
  `clr-namespace:` El espacio de nombres CLR declarado dentro del ensamblado que contiene los tipos públicos que se exponen como elementos.  
   
- `assembly=` El ensamblado que contiene algunos o todos los que se hace referencia [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] espacio de nombres. Este valor suele ser simplemente el nombre del ensamblado, no la ruta de acceso, y no incluye la extensión (como .dll o .exe). La ruta de acceso a ese ensamblado se debe establecer como referencia de proyecto en el archivo de proyecto que contiene el XAML que se va a asignar. Para incorporar el control de versiones y la firma de nombre seguro, el `assembly` valor puede ser una cadena definida por <xref:System.Reflection.AssemblyName>, en lugar del nombre de cadena simple.  
+ `assembly=` El ensamblado que contiene la totalidad o parte del espacio de nombres [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] al que se hace referencia. Este valor suele ser simplemente el nombre del ensamblado, no la ruta de acceso, y no incluye la extensión (como .dll o .exe). La ruta de acceso a ese ensamblado se debe establecer como referencia de proyecto en el archivo de proyecto que contiene el XAML que se va a asignar. Para incorporar el control de versiones y la firma de nombre seguro, el `assembly` valor puede ser una cadena definida por <xref:System.Reflection.AssemblyName>, en lugar del nombre de cadena simple.  
   
  Observe que el carácter que separa el token `clr-namespace` de su valor es un signo de dos puntos (:), mientras que el carácter que separa el token `assembly` de su valor es un signo igual (=). El carácter que se usa entre estos dos tokens es un punto y coma. Además, no incluya espacios en blanco en cualquier lugar en la declaración.  
   
@@ -99,7 +99,7 @@ End Namespace
 ```  
   
 ### <a name="mapping-to-current-assemblies"></a>Asignar a ensamblados actuales  
- `assembly` puede omitirse si el `clr-namespace` que se hace referencia se define dentro del mismo ensamblado que el código de aplicación que hace referencia a las clases personalizadas. Otra sintaxis equivalente para este caso consiste en especificar `assembly=`, sin ningún token de cadena tras el signo igual.  
+ Se puede omitir `assembly` si el `clr-namespace` al que se hace referencia se define dentro del mismo ensamblado que el código de aplicación que hace referencia a las clases personalizadas. Otra sintaxis equivalente para este caso consiste en especificar `assembly=`, sin ningún token de cadena tras el signo igual.  
   
  Las clases personalizadas no se pueden usar como elemento raíz de una página si se definen en el mismo ensamblado. No es necesario asignar las clases parciales; únicamente es necesario asignar las clases que no son la clase parcial de una página de la aplicación si piensa hacerles referencia como elementos en XAML.  
   
@@ -114,7 +114,7 @@ End Namespace
   
  [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] usa un espacio de nombres de diseñador que está asignado normalmente al prefijo `d:`. Las plantillas de proyecto de WPF más recientes podrían pre-asignar este espacio de nombres XAML para admitir el intercambio de XAML entre [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] y otros entornos de diseño. Este espacio de nombres XAML de diseño se usa para perpetuar el estado del diseño mientras la interfaz de usuario basada en XAML en el diseñador va y vuelve. También lo usan características como `d:IsDataSource`, que habilitan los orígenes de datos en tiempo de ejecución en un diseñador.  
   
- Otro prefijo que podría ver asignado es `mc:`. `mc:` sirve para la compatibilidad de marcado y aprovecha un modelo de compatibilidad de marcado que no es necesariamente específico de XAML. Hasta cierto punto, las características de compatibilidad de marcado se pueden usar para intercambiar XAML entre marcos o entre otros límites de implementación de respaldo, trabajar entre contextos de esquema XAML, ofrecer compatibilidad para modos limitados en los diseñadores, etc. Para obtener más información sobre los conceptos de compatibilidad de marcado y cómo se relacionan a WPF, vea [compatibilidad de marcado (mc:) Características del lenguaje](markup-compatibility-mc-language-features.md).  
+ Otro prefijo que podría ver asignado es `mc:`. `mc:` es para ofrecer compatibilidad de marcado, y aprovecha un modelo de compatibilidad de marcado que no es necesariamente específico de XAML. Hasta cierto punto, las características de compatibilidad de marcado se pueden usar para intercambiar XAML entre marcos o entre otros límites de implementación de respaldo, trabajar entre contextos de esquema XAML, ofrecer compatibilidad para modos limitados en los diseñadores, etc. Para obtener más información sobre los conceptos de compatibilidad de marcado y cómo se relacionan a WPF, vea [compatibilidad de marcado (mc:) Características del lenguaje](markup-compatibility-mc-language-features.md).  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF y carga de ensamblados  
  El contexto de esquema XAML para WPF se integra con el modelo de aplicación de WPF, que a su vez usa el concepto definido por el CLR de <xref:System.AppDomain>. La secuencia siguiente describe cómo el contexto de esquema XAML interpreta cómo cargar ensamblados o buscar tipos en tiempo de ejecución o en tiempo de diseño, según el uso WPF de <xref:System.AppDomain> y otros factores.  

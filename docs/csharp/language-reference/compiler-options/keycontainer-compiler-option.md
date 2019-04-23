@@ -8,12 +8,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: 06a714bf9140ac793e8d853183047ca7255d565e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf51bccc98f04c38149ec821b7064a4844d7e804
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729000"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59302782"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (Opciones del compilador de C#)
 Especifica el nombre del contenedor de claves criptográficas.  
@@ -41,7 +41,7 @@ Especifica el nombre del contenedor de claves criptográficas.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Esta opción del compilador no está disponible en el entorno de desarrollo de Visual Studio.  
+1. Esta opción del compilador no está disponible en el entorno de desarrollo de Visual Studio.  
   
  Puede tener acceso mediante programación a esta opción del compilador con <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A>.  
   

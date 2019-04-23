@@ -1,18 +1,18 @@
 ---
-title: Filtrar para bloquear controles en formularios Windows Forms
+title: Procedimiento para bloquear controles en formularios Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
 ms.openlocfilehash: ac5fbf33564ed2dd1a030132a35b36164f777519
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301703"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a>Filtrar para bloquear controles en formularios Windows Forms
+# <a name="how-to-lock-controls-to-windows-forms"></a>Procedimiento para bloquear controles en formularios Windows Forms
 Al diseñar la interfaz de usuario (UI) de la aplicación de Windows, puede bloquear los controles una vez que se colocan correctamente, por lo que no accidentalmente mover o cambiar su tamaño al establecer otras propiedades.  
   
  Además, puede bloquear y desbloquear todos los controles del formulario a la vez, lo cual resulta útil para formularios con muchos controles, o puede desbloquear controles individuales. Una vez que haya colocado todos los controles donde desee en el formulario, bloquear en lugar de para evitar movimientos erróneos.  
@@ -48,7 +48,7 @@ Al diseñar la interfaz de usuario (UI) de la aplicación de Windows, puede bloq
   
 ## <a name="see-also"></a>Vea también
 
-- [Controles de Windows Forms](index.md)
+- [Controles de formularios Windows Forms](index.md)
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

@@ -3,12 +3,12 @@ title: Historia de C# - Guía de C#
 description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo ha evolucionado desde entonces?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126154"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59303367"
 ---
 # <a name="the-history-of-c"></a>Historia de C\#
 
@@ -20,11 +20,11 @@ En este artículo se proporciona un historial de cada versión principal del len
 Las herramientas de compilación de C# consideran que la última versión principal del lenguaje es la versión predeterminada. Puede haber versiones secundarias entre versiones principales, que se detallan en los otros artículos de esta sección. Para usar las características más recientes en una versión secundaria, tendrá que [configurar la versión del idioma de compilador](../language-reference/configure-language-version.md) y seleccionar la versión. Ha habido tres versiones secundarias desde C# 7.0:
 
 * [C# 7.3](csharp-7-3.md):
-  - C# 7.3 se encuentra disponible actualmente en la [versión 15.7 de Visual Studio 2017](https://visualstudio.microsoft.com/vs/whatsnew/) y en el [SDK 2.1.300 RC1 de .NET Core 2.1](../../core/whats-new/index.md).
+  - C# 7.3 está disponible a partir de la [versión 15.7 de Visual Studio 2017](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) y el [SDK de .NET Core 2.1](../../core/whats-new/dotnet-core-2-1.md).
 * [C# 7.2](csharp-7-2.md):
-  - C# 7.2 se encuentra disponible actualmente en la [versión 15.5 de Visual Studio 2017](https://visualstudio.microsoft.com/vs/whatsnew/) y en el [SDK de .NET Core 2.0](../../core/whats-new/index.md).
+  - C# 7.2 está disponible a partir de la [versión 15.5 de Visual Studio 2017](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) y el [SDK de .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
 * [C# 7.1](csharp-7-1.md):
-  - Estas características se agregaron en la [versión 15.3 de Visual Studio 2017](https://visualstudio.microsoft.com/vs/whatsnew/) y en el [SDK de .NET Core 2.0](../../core/whats-new/index.md).
+  - C# 7.1 está disponible a partir de la [versión 15.3 de Visual Studio 2017](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) y el [SDK de .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
 
 ## <a name="c-version-10"></a>C# versión 1.0
 

@@ -1,18 +1,18 @@
 ---
-title: Filtrar para personalizar un enlace proporcionado por el sistema
+title: Procedimiento para personalizar un enlace proporcionado por el sistema
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
 ms.openlocfilehash: 0c5474a65bee7d3d290372e79f8423ea9986235f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301183"
 ---
-# <a name="how-to-customize-a-system-provided-binding"></a>Filtrar para personalizar un enlace proporcionado por el sistema
+# <a name="how-to-customize-a-system-provided-binding"></a>Procedimiento para personalizar un enlace proporcionado por el sistema
 Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por el sistema que le permiten configurar algunas de las propiedades de los elementos de enlace subyacente, pero no todas las propiedades. En este tema se muestra cómo establecer las propiedades en los elementos de enlace para crear un enlace personalizado.  
   
  Para obtener más información acerca de cómo crear y configurar elementos de enlace sin utilizar los enlaces proporcionados por el sistema directamente, vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear una interfaz de usuario de varios paneles con formularios Windows Forms mediante el diseñador
+title: Procedimiento para crear una interfaz de usuario de varios paneles con formularios Windows Forms mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - user interface [Windows Forms], multipane
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
 ms.openlocfilehash: 9f3350e32c0fbff58678052d26be954d30d512a7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301300"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Filtrar para crear una interfaz de usuario de varios paneles con formularios Windows Forms mediante el diseñador
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Procedimiento para crear una interfaz de usuario de varios paneles con formularios Windows Forms mediante el diseñador
 En el siguiente procedimiento, creará una interfaz de usuario de varios paneles similar al usado en Microsoft Outlook, con un **carpeta** lista, un **mensajes** panel y un **devistaprevia** panel. Esta disposición se logra principalmente mediante el acoplamiento de controles con el formulario.  
   
  Al acoplar un control, es necesario determinar cuál de los bordes del contenedor primario de un control está enchufado al. Por lo tanto, si establece la <xref:System.Windows.Forms.SplitContainer.Dock%2A> propiedad <xref:System.Windows.Forms.DockStyle.Right>, el borde derecho del control estará acoplado al borde derecho de su control principal. Además, el borde del control acoplado cambia para coincidir con el de su control contenedor. Para obtener más información acerca de cómo los <xref:System.Windows.Forms.SplitContainer.Dock%2A> propiedad, consulte [Cómo: Acoplar controles en Windows Forms](how-to-dock-controls-on-windows-forms.md).  
@@ -49,4 +49,4 @@ En el siguiente procedimiento, creará una interfaz de usuario de varios paneles
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Control SplitContainer](splitcontainer-control-windows-forms.md)
+- [SplitContainer (control)](splitcontainer-control-windows-forms.md)
