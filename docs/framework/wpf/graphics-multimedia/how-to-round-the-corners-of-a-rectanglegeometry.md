@@ -1,5 +1,5 @@
 ---
-title: Filtrar Redondear las esquinas de un RectangleGeometry
+title: Procedimiento Redondear las esquinas de un RectangleGeometry
 ms.date: 03/30/2017
 helpviewer_keywords:
 - corners [WPF], rounding
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - rounding corners of RectangleGeometry objects [WPF]
 ms.assetid: 926644bc-1357-4c0b-ac81-694bd090ae87
 ms.openlocfilehash: eb2f173bedb903e12b2795264c684524cfa09825
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089138"
 ---
-# <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>Filtrar Redondear las esquinas de un RectangleGeometry
+# <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>Procedimiento Redondear las esquinas de un RectangleGeometry
 Para redondear los vértices de un <xref:System.Windows.Media.RectangleGeometry>, establezca su <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> y <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> propiedades en un valor mayor que cero. Cuanto mayor sea el valores, más redondeadas serán las esquinas del rectángulo.  
   
 ## <a name="example"></a>Ejemplo  

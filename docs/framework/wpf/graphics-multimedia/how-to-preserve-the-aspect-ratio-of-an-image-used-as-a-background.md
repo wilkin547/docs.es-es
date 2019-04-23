@@ -1,5 +1,5 @@
 ---
-title: Filtrar Conservar la relación de aspecto de una imagen usada como fondo
+title: Procedimiento Conservar la relación de aspecto de una imagen usada como fondo
 ms.date: 03/30/2017
 helpviewer_keywords:
 - aspect ratios of background images [WPF], preserving
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
 ms.openlocfilehash: 4ae6f1242548038bcd54b7218783e5063fa67872
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083250"
 ---
-# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Filtrar Conservar la relación de aspecto de una imagen usada como fondo
+# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Procedimiento Conservar la relación de aspecto de una imagen usada como fondo
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.TileBrush.Stretch%2A> propiedad de un <xref:System.Windows.Media.ImageBrush> con el fin de conservar la relación de aspecto de la imagen.  
   
  De forma predeterminada, cuando se usa un <xref:System.Windows.Media.ImageBrush> para pintar un área, el contenido se expande para rellenar completamente el área de salida. Cuando el área de salida y la imagen tienen relaciones de aspecto diferentes, la imagen queda distorsionada al ajustarse.  

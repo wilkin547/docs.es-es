@@ -8,10 +8,10 @@ helpviewer_keywords:
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
 ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091439"
 ---
 # <a name="inline-styles-and-templates"></a>Estilos y plantillas insertados
@@ -20,15 +20,15 @@ ms.locfileid: "59091439"
 ## <a name="limitations-of-inline-styles-and-templates"></a>Limitaciones de plantillas y estilos en línea  
  En [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], técnicamente se pueden establecer propiedades de estilo y plantilla de dos maneras. Puede usar la sintaxis de atributo para hacer referencia a un estilo que se ha definido dentro de un recurso, por ejemplo `<` *objeto*`Style="{StaticResource`*myResourceKey*`}" .../>`. O bien, puede usar la sintaxis de elemento de propiedad para definir un estilo en línea, por ejemplo:  
   
- `<` *objeto* `>`  
+ `<` *object* `>`  
   
- `<` *objeto* `.Style>`  
+ `<` *object* `.Style>`  
   
  `<` `Style`  `.../>`  
   
- `</` *objeto* `.Style>`  
+ `</` *object* `.Style>`  
   
- `</` *objeto* `>`  
+ `</` *object* `>`  
   
  El uso de atributos es mucho más común. Un estilo que se definen en línea y no está definido en los recursos se limita necesariamente a solo el elemento contenedor y no se puede volver a utilizar fácilmente porque no tiene ninguna clave de recurso. En general es más versátil y útil un estilo definido por los recursos y es más en consonancia con el general [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] principio del modelo de separar la lógica del programa en el código de diseño en el marcado de programación.  
   

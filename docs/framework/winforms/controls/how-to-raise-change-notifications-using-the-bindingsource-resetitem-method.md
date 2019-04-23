@@ -1,5 +1,5 @@
 ---
-title: Filtrar para provocar notificaciones de cambios mediante el método ResetItem de BindingSource
+title: Procedimiento para provocar notificaciones de cambios mediante el método ResetItem de BindingSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - change notifications
 ms.assetid: ab8b4096-37ff-4e30-aabc-de79a2f2e972
 ms.openlocfilehash: 68073f245e1a2eb18a277d7011ca0183dabb3724
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085069"
 ---
-# <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>Filtrar para provocar notificaciones de cambios mediante el método ResetItem de BindingSource
+# <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>Procedimiento para provocar notificaciones de cambios mediante el método ResetItem de BindingSource
 Algunos orígenes de datos para sus controles no provocan notificaciones de cambios cuando se cambian, agregan o eliminan elementos. Con el componente <xref:System.Windows.Forms.BindingSource>, puede enlazar a tales orígenes de datos y provocar una notificación de cambios desde el código.  
   
 ## <a name="example"></a>Ejemplo  
@@ -42,4 +42,4 @@ Algunos orígenes de datos para sus controles no provocan notificaciones de camb
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Componente BindingSource](bindingsource-component.md)
-- [Filtrar para enlazar un control de formularios Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Cómo: Enlazar un Control de Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

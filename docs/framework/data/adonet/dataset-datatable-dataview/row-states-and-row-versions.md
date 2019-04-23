@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
 ms.openlocfilehash: 83147c3f9d70434f5c8dd34e2e56f44f71adc53d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092908"
 ---
 # <a name="row-states-and-row-versions"></a>Estados y versiones de filas
@@ -23,7 +23,7 @@ ADO.NET administra las filas de las tablas mediante estados de fila y versiones 
 |<xref:System.Data.DataRowState.Added>|Se ha agregado la fila a la tabla, pero no se ha llamado a `AcceptChanges`.|  
 |<xref:System.Data.DataRowState.Modified>|Se ha cambiado algún elemento de la fila.|  
 |<xref:System.Data.DataRowState.Deleted>|Se ha eliminado la fila de una tabla y no se ha llamado a `AcceptChanges`.|  
-|<xref:System.Data.DataRowState.Detached>|La fila no forma parte de ninguna `DataRowCollection`. El valor de `RowState` de una fila recién creada se establece en `Detached`. Una vez que se ha agregado la nueva `DataRow` a `DataRowCollection` llamando al método `Add`, el valor de la propiedad `RowState` se establece en `Added`.<br /><br /> `Detached` También se establece para una fila que se ha quitado de un `DataRowCollection` utilizando el `Remove` método, o mediante el `Delete` método seguido por el `AcceptChanges` método.|  
+|<xref:System.Data.DataRowState.Detached>|La fila no forma parte de ninguna `DataRowCollection`. El valor de `RowState` de una fila recién creada se establece en `Detached`. Una vez que se ha agregado la nueva `DataRow` a `DataRowCollection` llamando al método `Add`, el valor de la propiedad `RowState` se establece en `Added`.<br /><br /> También se establece `Detached` en una fila que se ha quitado de una `DataRowCollection` con el método `Remove`, o mediante el método `Delete` seguido del método `AcceptChanges`.|  
   
  Si se llama a `AcceptChanges` en un objeto <xref:System.Data.DataSet>, <xref:System.Data.DataTable> o <xref:System.Data.DataRow>, se quitan todas las filas con el estado de fila `Deleted`. Las filas que quedan reciben el estado de fila `Unchanged` y los valores de la versión de fila `Original` se sobrescriben con los valores de la versión de fila `Current`. Si se llama a `RejectChanges`, se quitan todas las filas con el estado de fila `Added`. Las filas que quedan reciben el estado de fila `Unchanged` y los valores de la versión de fila `Current` se sobrescriben con los valores de la versión de fila `Original`.  
   
@@ -50,7 +50,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
   
  Se puede comprobar si una `DataRow` tiene una versión de fila concreta llamando al método <xref:System.Data.DataRow.HasVersion%2A> y pasando `DataRowVersion` como argumento. Por ejemplo, `DataRow.HasVersion(DataRowVersion.Original)` devolverá `false` para las filas recién agregadas antes de llamar a `AcceptChanges`.  
   
- En el siguiente ejemplo de código, se muestran los valores en todas las filas eliminadas de una tabla. `Deleted` las filas no tienen un `Current` versión de fila, lo que debe pasar `DataRowVersion.Original` al tener acceso a los valores de columna.  
+ En el siguiente ejemplo de código, se muestran los valores en todas las filas eliminadas de una tabla. Las filas `Deleted` no tienen una versión de fila `Current` y, por lo tanto, debe pasar `DataRowVersion.Original` cuando obtenga acceso a los valores de columna.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -96,7 +96,7 @@ foreach (DataRow delRow in delRows)
   
 ## <a name="see-also"></a>Vea también
 
-- [Manipular datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Manipulación de datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Objetos DataAdapter y DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

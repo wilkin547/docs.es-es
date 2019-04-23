@@ -8,10 +8,10 @@ ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4c1d07e2469a36c4b8e1ef7b8d90a80a3530ae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097179"
 ---
 # <a name="constrained-execution-regions"></a>regiones de ejecución restringidas
@@ -70,14 +70,14 @@ Una región de ejecución restringida (CER) es parte de un mecanismo para crear 
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. En condiciones excepcionales, se garantiza que el método limita los daños de estado a la instancia actual.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, En condiciones excepcionales, CLR no ofrece ninguna garantía relativa a la coherencia de estado; es decir, la condición puede dañar el proceso.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>. En condiciones excepcionales, CLR no ofrece ninguna garantía con respecto a la coherencia del estado; es decir, la condición podría dañar el proceso.  
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. En condiciones excepcionales, se garantiza que el método no dañe el estado.  
   
 ## <a name="reliability-trycatchfinally"></a>try/catch/finally de fiabilidad  
  `try/catch/finally` de fiabilidad es un mecanismo de control de excepciones con el mismo nivel de garantías de previsibilidad que la versión no administrada. El bloque `catch/finally` es la CER. Los métodos del bloque necesitan preparación anticipada y deben ser no interrumpibles.  
   
- En la versión 2.0 de .NET Framework, el código informa al tiempo de ejecución de que un elemento try es de confianza mediante una llamada al elemento <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> inmediatamente anterior a un bloque try. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> es un miembro de <xref:System.Runtime.CompilerServices.RuntimeHelpers>, una clase de compatibilidad del compilador. Llame a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> directamente pendiente de disponibilidad mediante compiladores.  
+ En la versión 2.0 de .NET Framework, el código informa al tiempo de ejecución de que un elemento try es de confianza mediante una llamada al elemento <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> inmediatamente anterior a un bloque try. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> es miembro de <xref:System.Runtime.CompilerServices.RuntimeHelpers>, una clase de soporte del compilador. Llame a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> directamente pendiente de disponibilidad mediante compiladores.  
   
 ## <a name="noninterruptible-regions"></a>Regiones no interrumpibles  
  Una región no interrumpible agrupa un conjunto de instrucciones en una CER.  
@@ -116,4 +116,4 @@ Una región de ejecución restringida (CER) es parte de un mecanismo para crear 
   
 ## <a name="see-also"></a>Vea también
 
-- [Procedimientos recomendados para la confiabilidad](../../../docs/framework/performance/reliability-best-practices.md)
+- [Reliability Best Practices (Procedimientos recomendados para la confiabilidad)](../../../docs/framework/performance/reliability-best-practices.md)

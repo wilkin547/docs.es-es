@@ -19,10 +19,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0c5dabd4145098941e9e8a7e36fa3215c26713d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084926"
 ---
 # <a name="createassemblyenum-function"></a>CreateAssemblyEnum (Función)
@@ -70,6 +70,6 @@ HRESULT CreateAssemblyEnum (
   
 ## <a name="see-also"></a>Vea también
 
-- [IAssemblyEnum (Interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
-- [IAssemblyName (Interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyEnum (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [IAssemblyName (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
 - [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

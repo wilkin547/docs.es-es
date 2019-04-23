@@ -20,10 +20,10 @@ helpviewer_keywords:
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
 ms.openlocfilehash: 4f70d2aef3bb064a3df9db9c87671040776332a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089827"
 ---
 # <a name="basic-and-digest-authentication"></a>Autenticación básica e implícita
@@ -48,5 +48,5 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
   
 ## <a name="see-also"></a>Vea también
 
-- [Autenticación de NTLM y Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
+- [Autenticación NTLM y Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
 - [Autenticación de Internet](../../../docs/framework/network-programming/internet-authentication.md)

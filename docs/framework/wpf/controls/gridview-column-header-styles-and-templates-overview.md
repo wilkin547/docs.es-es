@@ -9,10 +9,10 @@ helpviewer_keywords:
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
 ms.openlocfilehash: 83643d8acea706bad439683702e4228d240b97bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090327"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Información general sobre plantillas y estilos de encabezado de columna en modo GridView
@@ -29,7 +29,7 @@ Esta introducción describe el orden de prioridad para las propiedades que usa p
 |-|-|-|-|  
 |**Clases**|<xref:System.Windows.Controls.GridView>|<xref:System.Windows.Controls.GridViewColumn>|<xref:System.Windows.Controls.GridViewColumnHeader>|  
 |**Propiedades del menú contextual**|<xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu%2A>|No es aplicable|<xref:System.Windows.FrameworkElement.ContextMenu%2A>|  
-|**Información sobre herramientas**<br /><br /> **Propiedades**|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|No es aplicable|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
+|**ToolTip**<br /><br /> **Propiedades**|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|No es aplicable|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
 |**Plantilla de encabezado**<br /><br /> **Propiedades**|<xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
 |**Propiedades de estilo**|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
   

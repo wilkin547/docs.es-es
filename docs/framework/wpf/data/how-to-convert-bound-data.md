@@ -1,5 +1,5 @@
 ---
-title: Filtrar Convertir datos enlazados
+title: Procedimiento Convertir datos enlazados
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
 ms.openlocfilehash: 40699bec1c6cd775f7f8495b7a49eda15fb2ed83
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59093805"
 ---
-# <a name="how-to-convert-bound-data"></a>Filtrar Convertir datos enlazados
+# <a name="how-to-convert-bound-data"></a>Procedimiento Convertir datos enlazados
 En este ejemplo se muestra cómo aplicar la conversión a datos que se utilizan en enlaces.  
   
  Para convertir datos durante el enlace, debe crear una clase que implementa el <xref:System.Windows.Data.IValueConverter> interfaz, que incluye el <xref:System.Windows.Data.IValueConverter.Convert%2A> y <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> métodos.  

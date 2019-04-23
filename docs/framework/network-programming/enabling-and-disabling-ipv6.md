@@ -2,12 +2,12 @@
 title: Habilitar y deshabilitar IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 75c452216a5f4a74792d641a840f53e4423ab92f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73dee0cb57674c8a2fa4ba2246162870ab1e3a10
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543768"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59083691"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Habilitar y deshabilitar IPv6
 Para usar el protocolo IPv6, asegúrese de que está ejecutando una versión del sistema operativo que admita IPv6 y asegúrese de que el sistema operativo y las clases de red están configurados correctamente.  
@@ -45,6 +45,7 @@ Para usar el protocolo IPv6, asegúrese de que está ejecutando una versión del
  En la versión 2.0 de .NET Framework y versiones posteriores, si Windows admite IPv6, entonces los miembros de la clase <xref:System.Net.Dns?displayProperty=nameWithType> (por ejemplo, el método <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType>), devolverán las direcciones de IPv6 con una limitación. Los miembros obsoletos del DNS <xref:System.Net.Dns?displayProperty=nameWithType> (por ejemplo, el método <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType>) leerán y reconocerán el valor en el archivo de configuración para la configuración habilitada para IPv6.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Protocolo de Internet versión 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [Sockets](../../../docs/framework/network-programming/sockets.md)
 - [Esquema de la configuración de red](../../../docs/framework/configure-apps/file-schema/network/index.md)

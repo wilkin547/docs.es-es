@@ -1,5 +1,5 @@
 ---
-title: Filtrar Pintar un área con un color sólido
+title: Procedimiento Pintar un área con un color sólido
 ms.date: 03/30/2017
 helpviewer_keywords:
 - solid colors [WPF], painting with
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
 ms.openlocfilehash: c85ba72c858d155f29875bb944824db1c44ffaab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086850"
 ---
-# <a name="how-to-paint-an-area-with-a-solid-color"></a>Filtrar Pintar un área con un color sólido
+# <a name="how-to-paint-an-area-with-a-solid-color"></a>Procedimiento Pintar un área con un color sólido
 Para pintar un área con un color sólido, puede usar un pincel del sistema predefinidos, como <xref:System.Windows.Media.Brushes.Red%2A> o <xref:System.Windows.Media.Brushes.Blue%2A>, o bien puede crear un nuevo <xref:System.Windows.Media.SolidColorBrush> y describir su <xref:System.Windows.Media.SolidColorBrush.Color%2A> mediante valores alfabéticos, rojos, verde y azules. En XAML, también puede pintar un área con un color sólido utilizando la notación hexadecimal.  
   
  Los ejemplos siguientes se usa cada una de estas técnicas para pintar un <xref:System.Windows.Shapes.Rectangle> azul.  
@@ -27,7 +27,7 @@ Para pintar un área con un color sólido, puede usar un pincel del sistema pred
   
  [!code-csharp[brushsamples_procedural_snip#_graphicsmm_PredefinedBrush1](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_predefinedbrush1)]  
   
- **Mediante la notación Hexadecimal**  
+ **Utilizar la notación hexadecimal**  
   
  En el ejemplo siguiente se utiliza la notación hexadecimal de 8 dígitos para pintar un rectángulo azul.  
   

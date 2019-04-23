@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a97ba44cfadc27582b2ae9119c01b392f14a19f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7ee801a5af214e2306e6f1667b5e4ee067683fdb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496500"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59093116"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Herramienta de conversión de CorFlags)
 La herramienta de conversión CorFlags permite configurar la sección de CorFlags del encabezado de una imagen ejecutable portátil.  
@@ -53,6 +53,7 @@ CorFlags.exe assembly [options]
  Si no se especifica ninguna opción, la herramienta de conversión CorFlags muestra las marcas para el ensamblado especificado.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Herramientas](../../../docs/framework/tools/index.md)
 - [Aplicaciones de 64 bits](../../../docs/framework/64-bit-apps.md)
 - [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

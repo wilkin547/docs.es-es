@@ -1,5 +1,5 @@
 ---
-title: <ipv6> Elemento (configuración de red)
+title: Elemento <ipv6> (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
 ms.openlocfilehash: b8969cecf8ffb2ef23522f193bb322b1170e6111
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089217"
 ---
 # <a name="ipv6-element-network-settings"></a>\<IPv6 > elemento (configuración de red)
@@ -36,7 +36,7 @@ Habilita el protocolo de Internet versión 6 (IPv6) las respuestas de miembros o
   
 ### <a name="attributes"></a>Atributos  
   
-|**Atributo**|**Descripción**|  
+|**Attribute**|**Descripción**|  
 |-------------------|---------------------|  
 |`enabled`|Especifica si los miembros de la <xref:System.Net.Dns> clase devolver el protocolo de Internet versión 6 (IPv6) las direcciones. El valor predeterminado es `false`.|  
   
@@ -45,9 +45,9 @@ Habilita el protocolo de Internet versión 6 (IPv6) las respuestas de miembros o
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[configuración](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esta configuración habilita la compatibilidad de IPv6 para los miembros obsoletos de la <xref:System.Net.Dns> clase: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, y <xref:System.Net.Dns.Resolve%2A>. Para otros miembros de la <xref:System.Net?displayProperty=nameWithType> espacio de nombres, se pueden devolver direcciones IPv6 si IPv6 está habilitado en el sistema operativo.  

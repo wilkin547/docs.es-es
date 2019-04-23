@@ -5,10 +5,10 @@ helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
 ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091946"
 ---
 # <a name="exporting-and-importing-metadata"></a>Exportación e importación de metadatos
@@ -48,16 +48,16 @@ En Windows Communication Foundation (WCF), exportación de metadatos es el proce
  El tipo vuelve a producir <xref:System.ServiceModel.Description.WsdlExporter> cualquier excepción detectada durante el proceso de exportación. Estas excepciones no se capturan como errores en la propiedad `Errors`. Cuando <xref:System.ServiceModel.Description.WsdlExporter> produce una excepción, está en un estado de error y no se puede reutilizar. <xref:System.ServiceModel.Description.WsdlExporter> agrega advertencias a su propiedad `Errors` cuando no se puede exportar una operación porque utiliza acciones de carácter comodín y cuando se encuentran nombres de enlace duplicados.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Filtrar para importar metadatos a puntos de conexión de servicio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [Cómo: Importar los metadatos en los puntos de conexión de servicio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Describe cómo importar los metadatos descargados en objetos de descripción.  
   
- [Filtrar para exportar metadatos desde puntos de conexión de servicio](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Cómo: Exportar metadatos desde puntos de conexión de servicio](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Describe cómo exportar objetos de descripción en metadatos.  
   
  [ServiceDescription y referencias WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Describe la asignación entre los objetos de descripción y WSDL.  
   
- [Filtrar para usar Svcutil.exe para exportar metadatos desde el código de servicio compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Cómo: Utilice Svcutil.exe para exportar metadatos desde el código de servicio compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Describe el uso de Svcutil.exe para exportar metadatos para los servicios, contratos y tipos de datos en ensamblados compilados.  
   
  [Referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
@@ -71,4 +71,4 @@ En Windows Communication Foundation (WCF), exportación de metadatos es el proce
 ## <a name="see-also"></a>Vea también
 
 - [Exportación de metadatos personalizados para una extensión WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)
-- [Importación de  metadatos personalizados para una extensión de WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
+- [Importación de metadatos personalizados para una extensión WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

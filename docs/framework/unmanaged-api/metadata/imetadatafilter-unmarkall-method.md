@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d084c3065bc23d45173a094bbfa9cc4c62cd4133
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086005"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>IMetaDataFilter::UnmarkAll (Método)
@@ -47,4 +47,4 @@ HRESULT UnmarkAll ();
   
 ## <a name="see-also"></a>Vea también
 
-- [IMetaDataFilter (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [IMetaDataFilter (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085134"
 ---
 # <a name="annotating-typed-datasets"></a>Comentar conjuntos de datos con tipo
@@ -69,7 +69,7 @@ Las anotaciones permiten modificar los nombres de los elementos del <xref:System
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Propiedad**|PropertyName|typedName|  
+|**Property**|PropertyName|typedName|  
 |**Secundarios** descriptor de acceso|GetChildTableNameRows|typedChildren|  
 |**Elemento primario** descriptor de acceso|TableNameRow|typedParent|  
 |**Conjunto de datos** eventos|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
@@ -228,4 +228,4 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 - <xref:System.Data.DataSet>
 - [Objetos DataSet con tipo](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
 - [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

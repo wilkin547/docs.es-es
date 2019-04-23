@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed1d7ad95b7c8474121994d0f54557c1c36cb531
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095131"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs (Método)
@@ -61,4 +61,4 @@ HRESULT GetCachedWinRTTypesForIIDs (
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugAppDomain3 (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)
+- [ICorDebugAppDomain3 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)

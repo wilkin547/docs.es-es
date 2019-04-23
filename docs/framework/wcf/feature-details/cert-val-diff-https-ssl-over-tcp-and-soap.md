@@ -8,10 +8,10 @@ helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
 ms.openlocfilehash: 0ab343da821e8994ac3a652bfc55db261d5e48f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089489"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Diferencias en la validación de certificados entre HTTPS, SSL a través de TCP, y seguridad SOAP
@@ -50,4 +50,4 @@ Puede usar certificados en Windows Communication Foundation (WCF) con seguridad 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Net.Security.RemoteCertificateValidationCallback>
-- [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

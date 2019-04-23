@@ -13,10 +13,10 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
 ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095495"
 ---
 # <a name="data-binding-and-windows-forms"></a>Enlace de datos y formularios Windows Forms
@@ -57,5 +57,5 @@ Windows Forms permite enlazar no solo a orígenes de datos tradicionales, sino t
 
 - <xref:System.Windows.Forms.Binding>
 - [Enlace de datos en Windows Forms](windows-forms-data-binding.md)
-- [Filtrar para enlazar el control DataGrid de formularios Windows Forms a un origen de datos](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Cómo: Enlazar el Control DataGrid de Windows Forms a un origen de datos](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Componente BindingSource](./controls/bindingsource-component.md)

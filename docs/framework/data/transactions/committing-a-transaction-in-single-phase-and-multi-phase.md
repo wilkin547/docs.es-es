@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
 ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089570"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Confirmar una transacción en fase única y múltiple
@@ -112,4 +112,4 @@ public void InDoubt (Enlistment enlistment)
 ## <a name="see-also"></a>Vea también
 
 - [Optimización mediante el uso de la confirmación de fase única y de la inscripción de fase única promovible](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
-- [Dar de alta los recursos como participantes en una transacción](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+- [Inscribir recursos como participantes en una transacción](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

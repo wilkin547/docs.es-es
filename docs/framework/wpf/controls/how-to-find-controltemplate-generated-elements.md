@@ -1,5 +1,5 @@
 ---
-title: Filtrar para buscar elementos generados por un objeto ControlTemplate
+title: Procedimiento para buscar elementos generados por un objeto ControlTemplate
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - finding ControlTemplate elements [WPF]
 ms.assetid: d7b25447-ceff-4bb4-9be5-fd7c40ef00af
 ms.openlocfilehash: 426f6c93433711ac72fe67eff2ee3006aa4d9166
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092133"
 ---
-# <a name="how-to-find-controltemplate-generated-elements"></a>Filtrar para buscar elementos generados por un objeto ControlTemplate
+# <a name="how-to-find-controltemplate-generated-elements"></a>Procedimiento para buscar elementos generados por un objeto ControlTemplate
 En este ejemplo se muestra cómo buscar elementos generados por un <xref:System.Windows.Controls.ControlTemplate>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -30,7 +30,7 @@ En este ejemplo se muestra cómo buscar elementos generados por un <xref:System.
   
 ## <a name="see-also"></a>Vea también
 
-- [Buscar elementos generados por una clase DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)
+- [Find DataTemplate-Generated Elements](../data/how-to-find-datatemplate-generated-elements.md) (Cómo buscar elementos generados por una clase DataTemplate)
 - [Aplicar estilos y plantillas](styling-and-templating.md)
 - [Ámbitos de nombres XAML de WPF](../advanced/wpf-xaml-namescopes.md)
 - [Árboles en WPF](../advanced/trees-in-wpf.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para dibujar un mapa de bits existente en la pantalla
+title: Procedimiento para dibujar un mapa de bits existente en la pantalla
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - images [Windows Forms], displaying on Windows Forms
 ms.assetid: 5bc558d7-b326-4050-a834-b8600da0de95
 ms.openlocfilehash: 90511adf9caffe7952e270d6fe32dd85162a29d7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089184"
 ---
-# <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>Filtrar para dibujar un mapa de bits existente en la pantalla
+# <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>Procedimiento para dibujar un mapa de bits existente en la pantalla
 Puede dibujar fácilmente una imagen existente en la pantalla. En primer lugar, deberá crear un <xref:System.Drawing.Bitmap> objeto utilizando el constructor de mapa de bits que toma un nombre de archivo, <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>. Este constructor acepta imágenes con distintos formatos de archivo, incluidos BMP, GIF, JPEG, PNG y TIFF. Después de haber creado el <xref:System.Drawing.Bitmap> de objetos, pasar ese <xref:System.Drawing.Bitmap> de objeto para el <xref:System.Drawing.Graphics.DrawImage%2A> método de un <xref:System.Drawing.Graphics> objeto.  
   
 ## <a name="example"></a>Ejemplo  

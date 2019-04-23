@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cb9aa09447acf28f1ed10ba409ce936cdb4f84a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085043"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3 (Interfaz)
@@ -30,7 +30,7 @@ Proporciona un método que extiende "ICorDebugCode" y "ICorDebugCode2" para prop
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)|Para un desplazamiento de IL especificado, obtiene los desplazamientos nativos donde se debe colocar un punto de interrupción de modo que el depurador pueda obtener el valor devuelto de una función.|  
+|[GetReturnValueLiveOffset (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)|Para un desplazamiento de IL especificado, obtiene los desplazamientos nativos donde se debe colocar un punto de interrupción de modo que el depurador pueda obtener el valor devuelto de una función.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -48,5 +48,5 @@ Proporciona un método que extiende "ICorDebugCode" y "ICorDebugCode2" para prop
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugILFrame3 (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugILFrame3 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

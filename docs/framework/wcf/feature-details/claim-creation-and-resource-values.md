@@ -5,10 +5,10 @@ helpviewer_keywords:
 - claims [WCF], creation and resource values
 ms.assetid: 30431f76-cbe7-4bad-bad7-8e43e23a82d4
 ms.openlocfilehash: bd9a8b7faf3cd7a648ff6b2a50ac68f21561497c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59093701"
 ---
 # <a name="claim-creation-and-resource-values"></a>Creación de notificaciones y valores de recursos
@@ -16,13 +16,13 @@ La clase <xref:System.IdentityModel.Claims.Claim> proporciona varios métodos pa
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateDnsClaim%2A>  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> (no comprueba la longitud o contenido de la matriz de bytes)  
+-   <xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> (no compruebe la longitud o contenido de la matriz de bytes)  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateNameClaim%2A>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateSpnClaim%2A>  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> (no comprueba la longitud o contenido de la matriz de bytes)  
+-   <xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> (no compruebe la longitud o contenido de la matriz de bytes)  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateUpnClaim%2A>  
   

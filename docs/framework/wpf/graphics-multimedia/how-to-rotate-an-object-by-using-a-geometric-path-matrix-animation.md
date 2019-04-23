@@ -1,5 +1,5 @@
 ---
-title: Filtrar Girar un objeto mediante un trazado geométrico (animación en matriz)
+title: Procedimiento Girar un objeto mediante un trazado geométrico (animación en matriz)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - matrix animation [WPF]
 ms.assetid: 877dc9aa-6bdc-4beb-8772-3efaec32c0f0
 ms.openlocfilehash: 8f1b0ac42ea7509f8bc22b0bd2f50e2f96b5bee5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087891"
 ---
-# <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>Filtrar Girar un objeto mediante un trazado geométrico (animación en matriz)
+# <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>Procedimiento Girar un objeto mediante un trazado geométrico (animación en matriz)
 En este ejemplo se muestra cómo usar un <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> y un <xref:System.Windows.Media.MatrixTransform> para girar (pivotar) un objeto a lo largo de un trazado geométrico definido por un <xref:System.Windows.Media.PathGeometry> objeto.  
   
 ## <a name="example"></a>Ejemplo  
@@ -34,5 +34,5 @@ En este ejemplo se muestra cómo usar un <xref:System.Windows.Media.Animation.Ma
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre animaciones](animation-overview.md)
-- [Temas "Cómo..." de animación de trazado](path-animation-how-to-topics.md)
+- [Temas de procedimientos de animación de trazado](path-animation-how-to-topics.md)
 - [Ejemplo de animación de trazado](https://go.microsoft.com/fwlink/?LinkID=160028)

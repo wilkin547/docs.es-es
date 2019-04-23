@@ -3,12 +3,12 @@ title: Patrones comunes para delegados
 description: Obtenga información sobre los patrones comunes para usar delegados en su código para evitar el acoplamiento seguro entre sus componentes.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827025"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59095703"
 ---
 # <a name="common-patterns-for-delegates"></a>Patrones comunes para delegados
 
@@ -70,7 +70,7 @@ Hasta ahora nuestro ejemplo es bastante sencillo, pero sigue mostrando algunas i
 
 Con los tipos de delegado definidos en Core Framework es más sencillo para los usuarios trabajar con los delegados. No necesita definir tipos nuevos, y los desarrolladores que usen su biblioteca no necesitan aprender nuevos tipos de delegado especializados.
 
-Las interfaces que se han usado son tan mínimas y flexibles como es posible: para crear un registrador de salida nuevo, debe crear un método. Ese método puede ser un método estático o un método de instancia. Puede tener cualquier acceso.
+Las interfaces que se usan son tan mínimas y flexibles como sea posible: Para crear un nuevo registrador de salida, debe crear un método. Ese método puede ser un método estático o un método de instancia. Puede tener cualquier acceso.
 
 ## <a name="formatting-output"></a>Resultados con formato
 
@@ -98,7 +98,6 @@ El componente de registro se está desarrollando correctamente. Vamos a agregar 
 Aquí se muestra ese registrador basado en archivos:
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
-
 
 Una vez que haya creado esta clase, puede inicializarla y esta asocia su método LogMessage al componente de registrador:
 

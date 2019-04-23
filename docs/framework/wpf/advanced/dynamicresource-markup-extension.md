@@ -9,10 +9,10 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
 ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091413"
 ---
 # <a name="dynamicresource-markup-extension"></a>Extensión de marcado DynamicResource
@@ -60,7 +60,7 @@ Proporciona un valor para cualquier [!INCLUDE[TLA2#tla_xaml](../../../../include
   
  `DynamicResource` se puede usar en la sintaxis de elemento de objeto. En este caso, especificando el valor de la <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> propiedad es obligatoria.  
   
- `DynamicResource` También puede utilizarse en el uso de atributos detallado que especifica el <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> como propiedad = par de valor:  
+ `DynamicResource` también se puede utilizar en el uso de atributos detallado que especifica la propiedad <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> como un par de propiedad=valor:  
   
 ```xml  
 <object property="{DynamicResource ResourceKey=key}" .../>  
@@ -79,5 +79,5 @@ Proporciona un valor para cualquier [!INCLUDE[TLA2#tla_xaml](../../../../include
 - [x:Key (Directiva)](../../xaml-services/x-key-directive.md)
 - [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
 - [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md)
-- [Extensión de marcado StaticResource](staticresource-markup-extension.md)
+- [StaticResource (extensión de marcado)](staticresource-markup-extension.md)
 - [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md)

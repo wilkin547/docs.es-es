@@ -1,5 +1,5 @@
 ---
-title: Filtrar para enlazar un control de formularios Windows Forms a un objeto Factory
+title: Procedimiento para enlazar un control de formularios Windows Forms a un objeto Factory
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
 ms.openlocfilehash: 2de892d94afdfcdc580d20f90fb60ebabf4a9b37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59093038"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Filtrar para enlazar un control de formularios Windows Forms a un objeto Factory
+# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Procedimiento para enlazar un control de formularios Windows Forms a un objeto Factory
 Al crear controles que interactúan con datos, a veces considerará necesario enlazar un control a un objeto o un método que genere otros objetos. Este tipo de objetos o métodos se denomina generador. El origen de datos podría ser, por ejemplo, el valor devuelto de una llamada al método, en lugar de un objeto en la memoria o un tipo. Puede enlazar un control a este tipo de origen de datos mientras el origen devuelve una colección.  
   
  Puede enlazar fácilmente un control a un objeto de generador utilizando el control <xref:System.Windows.Forms.BindingSource>.  
@@ -43,4 +43,4 @@ Al crear controles que interactúan con datos, a veces considerará necesario en
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Componente BindingSource](bindingsource-component.md)
-- [Filtrar para enlazar un control de formularios Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Cómo: Enlazar un Control de Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

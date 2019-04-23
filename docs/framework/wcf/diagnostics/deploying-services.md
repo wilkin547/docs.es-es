@@ -3,10 +3,10 @@ title: Desarrollo de servicios
 ms.date: 03/30/2017
 ms.assetid: ac361bfb-017d-4da9-a2d7-fc0fb72d65bb
 ms.openlocfilehash: 2c3cd17b597fafcd02b9155089bc583fafbc9dea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085770"
 ---
 # <a name="deploying-services"></a>Desarrollo de servicios
@@ -17,5 +17,5 @@ Este tema describe cómo puede implementar una aplicación de Windows Communicat
   
 ## <a name="see-also"></a>Vea también
 
-- [Hospedaje](../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Hospedar aplicaciones de WPF](../../../../docs/framework/wcf/feature-details/hosting.md)
 - [Servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md)

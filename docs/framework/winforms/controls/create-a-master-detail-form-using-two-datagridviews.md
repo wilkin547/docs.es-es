@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un formulario principal-detalle mediante dos controles DataGridView de formularios Windows Forms
+title: Procedimiento Crear un formulario principal-detalle mediante dos controles DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], creating
 ms.assetid: 99f6e876-3f7f-4139-9063-e36587c95b02
 ms.openlocfilehash: ccd9354d623cf1b452bc3890b7fd9a5248cb69c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088800"
 ---
-# <a name="how-to-create-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Filtrar para crear un formulario maestro y detalle mediante dos controles DataGridView de formularios Windows Forms
+# <a name="how-to-create-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Procedimiento para crear un formulario maestro y detalle mediante dos controles DataGridView de formularios Windows Forms
 En el ejemplo de código siguiente se crea un formulario Maestro y detalles mediante dos controles <xref:System.Windows.Forms.DataGridView> enlazados a dos componentes <xref:System.Windows.Forms.BindingSource>. El origen de datos es un <xref:System.Data.DataSet> que contiene las tablas `Customers` y `Orders` de la base de datos de ejemplo de SQL Server Northwind, junto con una <xref:System.Data.DataRelation> que relaciona las dos mediante la columna `CustomerID`.  
   
  Un <xref:System.Windows.Forms.BindingSource> se enlaza a la tabla primaria `Customers` del conjunto de datos. Estos datos se muestran en el control maestro <xref:System.Windows.Forms.DataGridView>. El otro <xref:System.Windows.Forms.BindingSource> se enlaza al primer conector de datos. La propiedad <xref:System.Windows.Forms.BindingSource.DataMember%2A> del segundo <xref:System.Windows.Forms.BindingSource> se establece en el nombre <xref:System.Data.DataRelation>. Esto hace que el control de detalles asociados <xref:System.Windows.Forms.DataGridView> muestre las filas de la tabla secundaria `Orders` que corresponden a la fila actual del control maestro <xref:System.Windows.Forms.DataGridView>.  
@@ -41,6 +41,6 @@ En el ejemplo de código siguiente se crea un formulario Maestro y detalles medi
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Tutorial: Crear un formulario maestro y detalle mediante dos controles DataGridView de formularios Windows Forms](creating-a-master-detail-form-using-two-datagridviews.md)
-- [Mostrar datos en el control DataGridView de formularios Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Tutorial: Creación de un formulario principal-detalle mediante dos controles DataGridView de formularios Windows Forms](creating-a-master-detail-form-using-two-datagridviews.md)
+- [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Proteger la información de conexión](../../data/adonet/protecting-connection-information.md)

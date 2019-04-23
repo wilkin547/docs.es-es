@@ -20,10 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096269"
 ---
 # <a name="common-type-system"></a>Sistema de tipos comunes
@@ -41,7 +41,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
   
 -   [Tipos de .NET](#types_in_the_net_framework)  
   
--   [Definiciones de tipos](#type_definitions)  
+-   [Definiciones de tipo](#type_definitions)  
   
 -   [Miembros de tipos](#type_members)  
   

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear texto de tamaño variable en un control ComboBox
+title: Procedimiento para crear texto de tamaño variable en un control ComboBox
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
 ms.openlocfilehash: 9155893b3d47707e0e55ee33e30d7998654f9e93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085615"
 ---
-# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Filtrar para crear texto de tamaño variable en un control ComboBox
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Procedimiento para crear texto de tamaño variable en un control ComboBox
 En este ejemplo muestra el dibujo personalizado de texto en un <xref:System.Windows.Forms.ComboBox> control. Cuando un elemento cumple determinados criterios, se dibuja en una fuente mayor y activa el rojo.  
   
 ## <a name="example"></a>Ejemplo  
@@ -73,5 +73,5 @@ End Sub
 - <xref:System.Windows.Forms.DrawItemEventArgs>
 - <xref:System.Windows.Forms.ComboBox.MeasureItem>
 - [Controles compatibles con dibujos propietarios integrados](controls-with-built-in-owner-drawing-support.md)
-- [Control ListBox](listbox-control-windows-forms.md)
-- [Control ComboBox](combobox-control-windows-forms.md)
+- [ListBox (control)](listbox-control-windows-forms.md)
+- [ComboBox (control)](combobox-control-windows-forms.md)

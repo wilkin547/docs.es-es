@@ -9,10 +9,10 @@ helpviewer_keywords:
 - changing selections in a RichTextBox [WPF]
 ms.assetid: f1213205-1ad7-4cd2-b115-460173cc5aa3
 ms.openlocfilehash: b8acfe7cde1fe5dae96cd6324f75c5b146be9ec9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096232"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a>Cambiar mediante programación la selección en un control RichTextBox
@@ -31,5 +31,5 @@ En este ejemplo se muestra cómo cambiar mediante programación la selección ac
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre el control RichTextBox](richtextbox-overview.md)
+- [RichTextBox Overview](richtextbox-overview.md) (Introducción a RichTextBox)
 - [Información general sobre TextBox](textbox-overview.md)

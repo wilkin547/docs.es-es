@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13640e508dafe28b53f4254656afe744b90a2eb2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 906d9d4dfd1c1082a4b49b7143f590967dcc7fd0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491482"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59092272"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (herramienta de almacenamiento aislado)
 La herramienta de almacenamiento aislado incluye o quita todos los almacenes existentes del usuario actual.  
@@ -61,6 +61,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
  Si la movilidad está habilitada realmente para el usuario, no afecta a la administración de Storeadm.exe. Si la herramienta se ejecuta sin ninguna opción, todas las acciones se aplican al almacén local. Si la herramienta se ejecuta con la opción **/roaming**, todas las acciones se aplican al almacén que tiene posibilidad de movilidad. Si la herramienta se ejecuta con la opción **/machine**, todas las acciones se aplican al almacén del equipo.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Herramientas](../../../docs/framework/tools/index.md)
 - [Almacenamiento aislado](../../../docs/standard/io/isolated-storage.md)
 - [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

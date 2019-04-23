@@ -6,14 +6,14 @@ helpviewer_keywords:
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
 ms.openlocfilehash: ac7ca815bedf180c8a680840f585d08f7018d6ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087838"
 ---
 # <a name="optimizing-performance-data-binding"></a>Optimizar el rendimiento: Enlace de datos
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] enlace de datos proporciona una manera sencilla y coherente para las aplicaciones presentar e interactuar con datos. Los elementos se pueden enlazar a datos desde una variedad de orígenes de datos en forma de objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] y [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una manera sencilla y coherente para que las aplicaciones presenten datos e interactúen con ellos. Los elementos se pueden enlazar a datos desde una variedad de orígenes de datos en forma de objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] y [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
   
  En este tema se proporcionan recomendaciones de rendimiento del enlace de datos.  
 
@@ -35,7 +35,7 @@ ms.locfileid: "59087838"
   
  La tabla siguiente compara la velocidad de enlace de datos el <xref:System.Windows.Controls.TextBlock.Text%2A> propiedad de mil <xref:System.Windows.Controls.TextBlock> elementos usan estos tres métodos.  
   
-|**Enlazar la propiedad Text de TextBlock**|**Tiempo de enlace (ms)**|**Tiempo de representación, incluido el enlace (ms)**|  
+|**Enlazar la propiedad de texto de TextBlock**|**Tiempo de enlace (ms)**|**Tiempo de representación, incluido el enlace (ms)**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |Para una propiedad de un objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]|115|314|  
 |Para una propiedad de un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objeto que implementa <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
@@ -45,7 +45,7 @@ ms.locfileid: "59087838"
 ## <a name="binding-to-large-clr-objects"></a>Enlazar a objetos CLR grandes  
  Hay un impacto significativo en el rendimiento al enlazar datos a un único objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con miles de propiedades. Puede minimizar este impacto si divide el objeto único en varios objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con menos propiedades. En la tabla se muestran los tiempos de enlace y representación para el enlace de datos de un único objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] grande frente a varios objetos más pequeños.  
   
-|**Datos enlace 1000 objetos TextBlock**|**Tiempo de enlace (ms)**|**Tiempo de representación, incluido el enlace (ms)**|  
+|**Enlace de datos de 1000 objetos TextBlock**|**Tiempo de enlace (ms)**|**Tiempo de representación, incluido el enlace (ms)**|  
 |---------------------------------------------|-----------------------------|--------------------------------------------------|  
 |Para una objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con 1000 propiedades|950|1200|  
 |Para 1000 objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con una propiedad|115|314|  
@@ -58,7 +58,7 @@ ms.locfileid: "59087838"
   
  La tabla siguiente se muestra el tiempo necesario para actualizar el <xref:System.Windows.Controls.ListBox> (con virtualización de interfaz de usuario desactivada) cuando se agrega un elemento. El número de la primera fila representa el tiempo transcurrido cuando el [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> está enlazado el objeto <xref:System.Windows.Controls.ListBox> del elemento <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. El número de la segunda fila representa el tiempo transcurrido cuando un <xref:System.Collections.ObjectModel.ObservableCollection%601> está enlazado a la <xref:System.Windows.Controls.ListBox> del elemento <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Tenga en cuenta el ahorro de tiempo significativo mediante la <xref:System.Collections.ObjectModel.ObservableCollection%601> estrategia de enlace de datos.  
   
-|**El ItemsSource de enlace de datos**|**Tiempo de actualización para 1 elemento (ms)**|  
+|**Enlace de datos de ItemsSource**|**Tiempo de actualización para 1 elemento (ms)**|  
 |--------------------------------------|---------------------------------------|  
 |Para un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> objeto|1656|  
 |Para un <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
@@ -69,7 +69,7 @@ ms.locfileid: "59087838"
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>No convierta objetos CLR a XML solamente para enlazar datos.  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite enlazar datos a [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] contenido; sin embargo, el enlace de datos a [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] contenido es más lento que el enlace de datos a [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objetos. No convierta datos de objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] a XML si la única finalidad es el enlace de datos.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite enlazar datos a contenido [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. Sin embargo, el enlace de datos al contenido [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] es más lento que el enlace de datos a objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. No convierta datos de objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] a XML si la única finalidad es el enlace de datos.  
   
 ## <a name="see-also"></a>Vea también
 
@@ -83,4 +83,4 @@ ms.locfileid: "59087838"
 - [Texto](optimizing-performance-text.md)
 - [Otras recomendaciones de rendimiento](optimizing-performance-other-recommendations.md)
 - [Información general sobre el enlace de datos](../data/data-binding-overview.md)
-- [Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Tutorial: Almacenamiento en caché datos de la aplicación en una aplicación WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

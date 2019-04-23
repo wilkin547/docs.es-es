@@ -1,5 +1,5 @@
 ---
-title: Filtrar Representar un intervalo para cada fotograma mediante CompositionTarget
+title: Procedimiento Representar un intervalo para cada fotograma mediante CompositionTarget
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
 ms.openlocfilehash: 00b416d423a4bdc8bab576add2d77fd305ea6e0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089424"
 ---
-# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Filtrar Representar un intervalo para cada fotograma mediante CompositionTarget
+# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Procedimiento Representar un intervalo para cada fotograma mediante CompositionTarget
 El motor de animación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona muchas características para crear animaciones basadas en fotogramas. Sin embargo, hay escenarios de aplicación en el los que necesita un control específico sobre la representación según el fotograma. La <xref:System.Windows.Media.CompositionTarget> objeto proporciona la capacidad para crear animaciones personalizadas basándose en una devolución de llamada por fotograma.  
   
  <xref:System.Windows.Media.CompositionTarget> es una clase estática que representa la superficie de visualización en el que se va a dibujar la aplicación. El <xref:System.Windows.Media.CompositionTarget.Rendering> evento se provoca cada vez que se dibuja la escena de la aplicación. La velocidad de los fotogramas de representación es el número de veces que se dibuja la escena por segundo.  

@@ -1,5 +1,5 @@
 ---
-title: Filtrar para controlar errores y excepciones que se producen con el enlace de datos
+title: Procedimiento para controlar errores y excepciones que se producen con el enlace de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], handling errors and exceptions
 ms.assetid: eddc5bad-9513-47df-ab28-f02d8dff7892
 ms.openlocfilehash: 709db2a98074e3322adad8b1275b3c4418c14636
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084627"
 ---
-# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>Filtrar para controlar errores y excepciones que se producen con el enlace de datos
+# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>Procedimiento para controlar errores y excepciones que se producen con el enlace de datos
 A menudo, las excepciones y los errores se producen en los objetos comerciales subyacentes cuando se enlazan a controles. Puede interceptar estos errores y excepciones y, después, recuperar o pasar la información de error al usuario controlando el evento <xref:System.Windows.Forms.Binding.BindingComplete> para un componente <xref:System.Windows.Forms.Binding>, <xref:System.Windows.Forms.BindingSource> o <xref:System.Windows.Forms.CurrencyManager> determinado.  
   
 ## <a name="example"></a>Ejemplo  

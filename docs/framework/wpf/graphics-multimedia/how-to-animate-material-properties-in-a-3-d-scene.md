@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar propiedades de material en una escena 3D
+title: Procedimiento Animar propiedades de material en una escena 3D
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Material properties [WPF], animating in 3-D scenes
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - 3-D scenes [WPF], animating Material properties
 ms.assetid: 229fd6eb-7401-4992-b0c9-8b28de230c0f
 ms.openlocfilehash: 58e880a2828d21ee76f7fac6bdcf313e8454e65b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090906"
 ---
-# <a name="how-to-animate-material-properties-in-a-3-d-scene"></a>Filtrar Animar propiedades de material en una escena 3D
+# <a name="how-to-animate-material-properties-in-a-3-d-scene"></a>Procedimiento Animar propiedades de material en una escena 3D
 En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.Brush.Opacity%2A> propiedad de la <xref:System.Windows.Media.Media3D.Material> aplicado a un [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] modelo.  
   
  En el ejemplo de código siguiente se define la <xref:System.Windows.Media.LinearGradientBrush> usa como el <xref:System.Windows.Media.Media3D.Material> aplicado al objeto 3D.  

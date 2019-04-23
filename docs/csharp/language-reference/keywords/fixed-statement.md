@@ -7,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: c93c00ca939bcb6c3c7feea4e6b6234f738298dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ef334f6d200e75f29e22a9586f4538309797942
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605537"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59095989"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed (Instrucción, Referencia de C#)
 
@@ -62,7 +62,6 @@ fixed (byte* ps = srcarray, pd = dstarray)
     ps++; // invalid: cannot modify ps, as it is declared in the fixed statement.
 }
 ```
-
 
 En el modo no seguro, puede asignar memoria en la pila, en la que no está sujeta a la recolección de elementos no utilizados y, por tanto, no necesita anclarse. Para obtener más información, consulte [stackalloc](stackalloc.md).
 

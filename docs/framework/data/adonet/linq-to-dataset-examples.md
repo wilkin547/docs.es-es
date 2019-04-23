@@ -3,10 +3,10 @@ title: Ejemplos de LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
 ms.openlocfilehash: 07ad4a993187c91babb74fae9d05f17b66c2098b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091699"
 ---
 # <a name="linq-to-dataset-examples"></a>Ejemplos de LINQ to DataSet
@@ -26,7 +26,7 @@ Esta sección proporciona a los ejemplos de programación de conjunto de datos q
   
 -   [Operadores de elementos](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
   
--   [Operadores de agregación](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
+-   [Operadores de agregado](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
   
 -   [Operadores de combinación](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
   
@@ -39,13 +39,13 @@ Esta sección proporciona a los ejemplos de programación de conjunto de datos q
   
 -   [Ordenación](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [Operadores de conjuntos](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+-   [Operadores Set](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
   
 -   [Operadores de conversión](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
   
 -   [Operadores de elementos](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
   
--   [Operadores de agregación](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
+-   [Operadores de agregado](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
   
 -   [Join](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
   
@@ -55,4 +55,4 @@ Esta sección proporciona a los ejemplos de programación de conjunto de datos q
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
-- [Cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [Carga de datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

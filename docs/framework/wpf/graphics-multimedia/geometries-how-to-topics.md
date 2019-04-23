@@ -7,17 +7,17 @@ helpviewer_keywords:
 - geometry classes [WPF]
 ms.assetid: 83873331-b013-472e-8197-8ba993dd242f
 ms.openlocfilehash: 3afee770e36b7daea754775f64dd7f1030659267
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096244"
 ---
 # <a name="geometries-how-to-topics"></a>Temas "Cómo..." de objetos de geometría
 Los temas de esta sección muestran cómo usar <xref:System.Windows.Media.Geometry> objetos en sus aplicaciones.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Animar un objeto EllipseGeometry](how-to-animate-an-ellipsegeometry.md)  
+ [Animar un EllipseGeometry](how-to-animate-an-ellipsegeometry.md)  
  [Animar el tamaño de un objeto ArcSegment](how-to-animate-the-size-of-an-arcsegment.md)  
  [Controlar el relleno de una forma compuesta](how-to-control-the-fill-of-a-composite-shape.md)  
  [Crear una geometría combinada](how-to-create-a-combined-geometry.md)  
@@ -26,11 +26,11 @@ Los temas de esta sección muestran cómo usar <xref:System.Windows.Media.Geomet
  [Crear una línea mediante la clase LineGeometry](how-to-create-a-line-using-a-linegeometry.md)  
  [Crear un LineSegment en una clase PathGeometry](how-to-create-a-linesegment-in-a-pathgeometry.md)  
  [Crear una forma mediante una clase PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [Crear una forma mediante un objeto StreamGeometry](how-to-create-a-shape-using-a-streamgeometry.md)  
+ [Crear una forma utilizando StreamGeometry](how-to-create-a-shape-using-a-streamgeometry.md)  
  [Crear una curva Bézier cuadrática](how-to-create-a-quadratic-bezier-curve.md)  
  [Crear un arco elíptico](how-to-create-an-elliptical-arc.md)  
- [Crear varios subtrazados en un objeto PathGeometry](how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
- [Definir un rectángulo mediante una clase RectangleGeometry](how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
+ [Crear varios subtrazados en un PathGeometry](how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
+ [Definir un rectángulo usando una clase RectangleGeometry](how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
  [Redondear las esquinas de un RectangleGeometry](how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
 ## <a name="see-also"></a>Vea también

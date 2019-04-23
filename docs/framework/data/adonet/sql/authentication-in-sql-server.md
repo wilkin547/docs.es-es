@@ -3,10 +3,10 @@ title: Autenticación en SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084042"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticación en SQL Server
@@ -82,6 +82,6 @@ SQL Server admite dos modos de autenticación, el modo de autenticación de Wind
 
 - [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Conectarse a un origen de datos](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Conexión a un origen de datos](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Cadenas de conexión](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
