@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fcdcb8d70e04430ac09c78f0ef0ce1d95358db53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148881"
 ---
 # <a name="iobjecthandle-interface"></a>IObjectHandle (Interfaz)
@@ -30,7 +30,7 @@ Proporciona un método para desencapsular objetos de cálculo de referencias por
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método Unwrap](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Desencapsula un objeto de cálculo de referencias por valor desde el direccionamiento indirecto.|  
+|[Unwrap (método)](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Desencapsula un objeto de cálculo de referencias por valor desde el direccionamiento indirecto.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

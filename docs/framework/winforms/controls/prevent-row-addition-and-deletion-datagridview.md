@@ -1,5 +1,5 @@
 ---
-title: Filtrar para impedir la adición y eliminación de filas en el control DataGridView de formularios Windows Forms
+title: Procedimiento para impedir la adición y eliminación de filas en el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - data grids [Windows Forms], disabling data entry
 ms.assetid: ef9539ce-539b-404e-84b6-ac282b64b88c
 ms.openlocfilehash: a80b10f2d3c2b6dea198fea83f1ffaaa358b68ea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147893"
 ---
-# <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control"></a>Filtrar para impedir la adición y eliminación de filas en el control DataGridView de formularios Windows Forms
+# <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control"></a>Procedimiento para impedir la adición y eliminación de filas en el control DataGridView de formularios Windows Forms
 En algunos casos, querrá impedir que los usuarios incluyan nuevas filas de datos o eliminen las filas existentes en el control <xref:System.Windows.Forms.DataGridView>. La propiedad <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> indica si la fila para nuevos registros está presente en la parte inferior del control, mientras que la propiedad <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> indica si las filas se pueden quitar. El ejemplo de código siguiente utiliza estas propiedades y también establece la propiedad <xref:System.Windows.Forms.DataGridView.ReadOnly%2A> para que el control sea únicamente de solo lectura.  
   
  Visual Studio es compatible con esta tarea. Consulte también [Cómo: Impedir la adición de la fila y la eliminación en la Windows Forms Control DataGridView de formularios mediante el diseñador](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md).  
@@ -39,4 +39,4 @@ En algunos casos, querrá impedir que los usuarios incluyan nuevas filas de dato
 - <xref:System.Windows.Forms.DataGridView.ReadOnly%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A?displayProperty=nameWithType>
-- [Características básicas de columnas, filas y celdas en el control DataGridView de formularios Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)

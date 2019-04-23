@@ -1,5 +1,5 @@
 ---
-title: Filtrar Dibujar una línea
+title: Procedimiento Dibujar una línea
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawing [WPF], lines
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
 ms.openlocfilehash: c11dfb9523834ec2e622cb2e62bd6982a1a78fd4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143525"
 ---
-# <a name="how-to-draw-a-line"></a>Filtrar Dibujar una línea
+# <a name="how-to-draw-a-line"></a>Procedimiento Dibujar una línea
 En este ejemplo se muestra cómo dibujar líneas con el <xref:System.Windows.Shapes.Line> elemento.  
   
  Para dibujar una línea, cree un <xref:System.Windows.Shapes.Line> elemento. Use su <xref:System.Windows.Shapes.Line.X1%2A> y <xref:System.Windows.Shapes.Line.Y1%2A> propiedades para establecer su punto inicial; y utilice su <xref:System.Windows.Shapes.Line.X2%2A> y <xref:System.Windows.Shapes.Line.Y2%2A> propiedades para establecer su punto de conexión. Por último, establezca su <xref:System.Windows.Shapes.Shape.Stroke%2A> y <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> porque una línea sin un trazo es invisible.  

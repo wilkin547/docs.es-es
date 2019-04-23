@@ -5,10 +5,10 @@ helpviewer_keywords:
 - metadata [WCF], retrieving
 ms.assetid: 18d8ba4c-af0f-4827-a50b-4202d767bacc
 ms.openlocfilehash: bb415d88c2bae75cb16aa137bdf867eb463afa63
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152404"
 ---
 # <a name="retrieving-metadata"></a>Recuperación de metadatos
@@ -23,13 +23,13 @@ La recuperación de metadatos es el proceso de solicitar y recuperar los metadat
  De forma predeterminada, se ata una instancia <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> a una instancia <xref:System.ServiceModel.ChannelFactory> única. Puede cambiar o reemplazar la instancia <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> utilizada por <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> invalidando el método virtual <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A>. De igual forma, puede cambiar o reemplazar la instancia de <xref:System.Net.HttpWebRequest> utilizada por <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> para realizar solicitudes HTTP/GET mediante la invalidación del método virtual <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType>.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Filtrar para usar Svcutil.exe para descargar documentos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
+ [Cómo: Utilice Svcutil.exe para descargar documentos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
  Demuestra cómo usar Svcutil.exe para descargar los documentos de metadatos.  
   
- [Filtrar para usar MetadataResolver para obtener dinámicamente metadatos de enlace](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
+ [Cómo: Utilizar MetadataResolver para obtener dinámicamente metadatos de enlace](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
  Muestra cómo utilizar <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> para obtener dinámicamente metadatos de enlace en el tiempo de ejecución.  
   
- [Filtrar para usar MetadataExchangeClient para recuperar metadatos](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
+ [Cómo: Utilizar MetadataExchangeClient para recuperar metadatos](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
  Muestra cómo utilizar la clase <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> para descargar los archivos de metadatos en un objeto <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> que contiene objetos <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> para escribir en archivos o para otros usos.  
   
 ## <a name="see-also"></a>Vea también

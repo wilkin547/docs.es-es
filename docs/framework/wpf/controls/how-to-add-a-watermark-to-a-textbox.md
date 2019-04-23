@@ -1,5 +1,5 @@
 ---
-title: Filtrar Agregar una marca de agua a un control TextBox
+title: Procedimiento Agregar una marca de agua a un control TextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
 ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142420"
 ---
-# <a name="how-to-add-a-watermark-to-a-textbox"></a>Filtrar Agregar una marca de agua a un control TextBox
+# <a name="how-to-add-a-watermark-to-a-textbox"></a>Procedimiento Agregar una marca de agua a un control TextBox
 El ejemplo siguiente muestra cómo facilitar el uso de un <xref:System.Windows.Controls.TextBox> al mostrar una imagen de fondo explicativa dentro de la <xref:System.Windows.Controls.TextBox> hasta que el usuario escribe texto, momento en que se quita la imagen. Además, la imagen de fondo se puede restaurar de nuevo si el usuario quita los datos proporcionados. Consulte la siguiente ilustración.  
   
  ![Un cuadro de texto con una imagen de fondo](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
@@ -32,4 +32,4 @@ El ejemplo siguiente muestra cómo facilitar el uso de un <xref:System.Windows.C
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre TextBox](textbox-overview.md)
-- [Información general sobre el control RichTextBox](richtextbox-overview.md)
+- [RichTextBox Overview](richtextbox-overview.md) (Introducción a RichTextBox)

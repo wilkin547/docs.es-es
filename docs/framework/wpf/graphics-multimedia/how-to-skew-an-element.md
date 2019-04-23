@@ -1,5 +1,5 @@
 ---
-title: Filtrar Sesgar un elemento
+title: Procedimiento Sesgar un elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - skewing elements [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
 ms.openlocfilehash: 47f671f493e7b379c36f9bf4b50ec9d185d10b8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144968"
 ---
-# <a name="how-to-skew-an-element"></a>Filtrar Sesgar un elemento
+# <a name="how-to-skew-an-element"></a>Procedimiento Sesgar un elemento
 En este ejemplo se muestra cómo usar un <xref:System.Windows.Media.SkewTransform> para sesgar un elemento. Un sesgo, también conocido como distorsión, es una transformación que expande el espacio de coordenadas de una manera no uniforme. Un uso típico de un <xref:System.Windows.Media.SkewTransform> para simular [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] profundidad en [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] objetos.  
   
  Use la <xref:System.Windows.Media.SkewTransform.CenterX%2A> y <xref:System.Windows.Media.SkewTransform.CenterY%2A> propiedades para especificar el centro de punto de la <xref:System.Windows.Media.SkewTransform>.  

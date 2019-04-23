@@ -3,10 +3,10 @@ title: SKIP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
 ms.openlocfilehash: e8ef529ea8d2be2ef8eb3a2eb606e7ca8bf13f0a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147880"
 ---
 # <a name="skip-entity-sql"></a>SKIP (Entity SQL)
@@ -38,6 +38,6 @@ Puede realizar la paginación física utilizando la subcláusula SKIP en la clá
 ## <a name="see-also"></a>Vea también
 
 - [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
-- [Filtrar Página de resultados de la consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
+- [Cómo: Página de resultados de la consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [Paginación](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)
 - [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

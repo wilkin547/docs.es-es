@@ -1,5 +1,5 @@
 ---
-title: Filtrar Establecer la alineación horizontal y vertical de un TileBrush
+title: Procedimiento Establecer la alineación horizontal y vertical de un TileBrush
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
 ms.openlocfilehash: ddef63bba7fce1bfb8d50b4f2dbaaddfa76709ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149193"
 ---
-# <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Filtrar Establecer la alineación horizontal y vertical de un TileBrush
+# <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Procedimiento Establecer la alineación horizontal y vertical de un TileBrush
 En este ejemplo se muestra cómo controlar la alineación horizontal y vertical del contenido en un mosaico. Para controlar la alineación horizontal y vertical de un <xref:System.Windows.Media.TileBrush>, use su <xref:System.Windows.Media.TileBrush.AlignmentX%2A> y <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propiedades.  
   
  El <xref:System.Windows.Media.TileBrush.AlignmentX%2A> y <xref:System.Windows.Media.TileBrush.AlignmentY%2A> las propiedades de un <xref:System.Windows.Media.TileBrush> se usan cuando cualquiera de las siguientes condiciones es verdadera:  

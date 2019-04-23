@@ -1,5 +1,5 @@
 ---
-title: Filtrar para emitir un bip desde un formulario Windows Forms
+title: Procedimiento para emitir un bip desde un formulario Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
 ms.openlocfilehash: 0aa01f600873dd8853e1c33d5443448835e11455
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146229"
 ---
-# <a name="how-to-play-a-beep-from-a-windows-form"></a>Filtrar para emitir un bip desde un formulario Windows Forms
+# <a name="how-to-play-a-beep-from-a-windows-form"></a>Procedimiento para emitir un bip desde un formulario Windows Forms
 En este ejemplo se reproduce un sonido en tiempo de ejecución.  
   
 ## <a name="example"></a>Ejemplo  
@@ -46,5 +46,5 @@ public void onePing()
 
 - <xref:Microsoft.VisualBasic.Interaction.Beep%2A>
 - <xref:System.Media.SoundPlayer>
-- [Filtrar para reproducir un sonido del sistema desde un formulario Windows Forms](how-to-play-a-system-sound-from-a-windows-form.md)
-- [Filtrar para reproducir un sonido desde un formulario Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Cómo: Reproducir un sonido del sistema desde Windows Forms](how-to-play-a-system-sound-from-a-windows-form.md)
+- [Cómo: Reproducir un sonido desde Windows Forms](how-to-play-a-sound-from-a-windows-form.md)

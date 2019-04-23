@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2c6f28a88c709c27df82250fcbdc22de210e93a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b47af2955d0ad8e618d0143d7eedff7c74278fbd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663302"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59151000"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF de .NET para aplicaciones de la Tienda Windows
 <xref:System.Composition?displayProperty=nameWithType> y sus espacios de nombres secundarios contiene tipos para desarrollar aplicaciones [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] extensibles con Managed Extensibility Framework (MEF). Estos espacios de nombres forman parte del subconjunto [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] del sistema operativo [!INCLUDE[win8](../../../includes/win8-md.md)].  
@@ -27,6 +27,7 @@ ms.locfileid: "54663302"
  Para más información acerca de [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y una lista de espacios de nombres y tipos que contiene, consulte [Información general de .NET para aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/p/?LinkID=238312) en el Centro de desarrollo de Windows.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general de .NET para aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/p/?LinkID=238312)
 - [.NET para aplicaciones de la Tienda Windows: API admitidas](https://go.microsoft.com/fwlink/p/?LinkID=247912)
 - [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)

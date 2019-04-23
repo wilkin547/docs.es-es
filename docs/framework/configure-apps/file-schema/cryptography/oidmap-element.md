@@ -1,5 +1,5 @@
 ---
-title: <oidMap> Elemento
+title: <oidMap> (Elemento)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#oidMap
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146879"
 ---
 # <a name="oidmap-element"></a>\<oidMap > elemento
@@ -77,6 +77,6 @@ Contiene asignaciones de identificador (OID) de objeto ASN.1 a clases.
 
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Esquema de la configuración de criptografía](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [servicios criptográficos](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [Configurar clases de criptografía](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [Asignar identificadores de objeto a algoritmos de criptografía](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

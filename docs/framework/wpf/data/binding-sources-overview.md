@@ -7,10 +7,10 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
 ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145930"
 ---
 # <a name="binding-sources-overview"></a>Información general sobre orígenes de enlaces
@@ -18,15 +18,15 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
 
 <a name="binding_sources"></a>   
 ## <a name="binding-source-types"></a>Tipos de orígenes de enlace  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] enlace de datos admite los siguientes tipos de origen de enlace:  
+ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] admite los siguientes tipos de orígenes de enlace:  
   
 |Origen de enlace|Descripción|  
 |--------------------|-----------------|  
-|[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objetos|Puede enlazar a propiedades públicas, subpropiedades, así como de indizadores de cualquier objeto [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. El motor de enlace utiliza la reflexión [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] para obtener los valores de las propiedades. Como alternativa, los objetos que implementan <xref:System.ComponentModel.ICustomTypeDescriptor> o tiene un registrado <xref:System.ComponentModel.TypeDescriptionProvider> también funcionan con el motor de enlace.<br /><br /> Para más información acerca de cómo implementar una clase que puede actuar como un origen de enlace, consulte [Implementar una clase para el origen de enlace](#classes) más adelante en este tema.|  
+|Objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].|Puede enlazar a propiedades públicas, subpropiedades, así como de indizadores de cualquier objeto [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. El motor de enlace utiliza la reflexión [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] para obtener los valores de las propiedades. Como alternativa, los objetos que implementan <xref:System.ComponentModel.ICustomTypeDescriptor> o tiene un registrado <xref:System.ComponentModel.TypeDescriptionProvider> también funcionan con el motor de enlace.<br /><br /> Para más información acerca de cómo implementar una clase que puede actuar como un origen de enlace, consulte [Implementar una clase para el origen de enlace](#classes) más adelante en este tema.|  
 |objetos dinámicos|Puede enlazar a las propiedades disponibles y los indizadores de un objeto que implementa el <xref:System.Dynamic.IDynamicMetaObjectProvider> interfaz. Si se puede acceder al miembro en código, puede enlazar a él. Por ejemplo, si un objeto dinámico permite acceder a un miembro en código mediante `someObjet.AProperty`, puede enlazar a él estableciendo el trazado de enlace en `AProperty`.|  
-|[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] objetos|Puede enlazar a [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] objetos, como <xref:System.Data.DataTable>. El [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> implementa el <xref:System.ComponentModel.IBindingList> interfaz, que proporciona notificaciones de cambios que escucha el motor de enlace.|  
-|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] objetos|Puede enlazar y ejecutar `XPath` consultas en un <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, o <xref:System.Xml.XmlElement>. Una manera cómoda de acceder a [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] datos que es el origen de enlace en el marcado están usar un <xref:System.Windows.Data.XmlDataProvider> objeto. Para más información, consulte [Cómo: Enlazar a datos XML mediante XMLDataProvider y consultas XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> También puede enlazar a un <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>, o enlazar a los resultados de consultas ejecutadas en objetos de estos tipos mediante LINQ to XML. Una manera cómoda de usar LINQ to XML para acceder a los datos XML que es el origen de enlace en el marcado es usar un <xref:System.Windows.Data.ObjectDataProvider> objeto. Para más información, consulte [Cómo: Enlazar a los resultados de una consulta LINQ for XML, XDocument o XElement](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
-|<xref:System.Windows.DependencyObject> objetos|Puede enlazar a propiedades de dependencia de cualquier <xref:System.Windows.DependencyObject>. Para ver un ejemplo, consulte [Cómo: Enlazar las propiedades de dos controles](how-to-bind-the-properties-of-two-controls.md).|  
+|Objetos [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)].|Puede enlazar a [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] objetos, como <xref:System.Data.DataTable>. El [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> implementa el <xref:System.ComponentModel.IBindingList> interfaz, que proporciona notificaciones de cambios que escucha el motor de enlace.|  
+|Objetos [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].|Puede enlazar y ejecutar `XPath` consultas en un <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, o <xref:System.Xml.XmlElement>. Una manera cómoda de acceder a [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] datos que es el origen de enlace en el marcado están usar un <xref:System.Windows.Data.XmlDataProvider> objeto. Para más información, consulte [Cómo: Enlazar a datos XML mediante XMLDataProvider y consultas XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> También puede enlazar a un <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>, o enlazar a los resultados de consultas ejecutadas en objetos de estos tipos mediante LINQ to XML. Una manera cómoda de usar LINQ to XML para acceder a los datos XML que es el origen de enlace en el marcado es usar un <xref:System.Windows.Data.ObjectDataProvider> objeto. Para más información, consulte [Cómo: Enlazar a los resultados de una consulta LINQ for XML, XDocument o XElement](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
+|Objetos <xref:System.Windows.DependencyObject>.|Puede enlazar a propiedades de dependencia de cualquier <xref:System.Windows.DependencyObject>. Para ver un ejemplo, consulte [Cómo: Enlazar las propiedades de dos controles](how-to-bind-the-properties-of-two-controls.md).|  
   
 <a name="classes"></a>   
 ## <a name="implementing-a-class-for-the-binding-source"></a>Implementar una clase para el origen de enlace  
@@ -96,7 +96,7 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
 
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
-- [Especificar el origen de enlace](how-to-specify-the-binding-source.md)
+- [Especificación del origen de enlace](how-to-specify-the-binding-source.md)
 - [Información general sobre el enlace de datos](data-binding-overview.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)
 - [Información general de enlace de datos WPF con LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)

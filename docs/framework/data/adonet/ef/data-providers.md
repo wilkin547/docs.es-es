@@ -3,10 +3,10 @@ title: Proveedores de datos de Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
 ms.openlocfilehash: 897afcd606a9b9b6c3b316d03dd5cb8e2adedbc0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142004"
 ---
 # <a name="entity-framework-data-providers"></a>Proveedores de datos de Entity Framework
@@ -23,9 +23,9 @@ En esta sección se proporciona información sobre los proveedores de datos que 
  [Entity Framework (SQL Server Compact)](https://go.microsoft.com/fwlink/?LinkId=135638)  
  Describe las limitaciones del proveedor y cómo usar [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] con una base de datos de SQL Server Compact.  
   
- [Otros proveedores para Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699)  
+ [Proveedores de terceros para Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699)  
  Lista de otros proveedores de datos disponibles actualmente para Entity Framework.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Trabajar con proveedores de datos](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [Trabajo con proveedores de datos](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

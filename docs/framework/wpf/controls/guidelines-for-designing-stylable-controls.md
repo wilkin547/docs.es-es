@@ -6,10 +6,10 @@ helpviewer_keywords:
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
 ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148166"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Instrucciones para el diseño de controles con estilos
@@ -38,15 +38,15 @@ En este documento se resume un conjunto de procedimientos recomendados que se de
 <a name="General_Guidelines"></a>   
 ## <a name="general-guidelines"></a>Instrucciones generales  
   
--   **No fuerza de manera estricta los contratos de plantilla.** El contrato de la plantilla de un control puede constar de elementos, comandos, enlaces, desencadenadores o incluso configuraciones de propiedades necesarios o previstos para que un control funcione correctamente.  
+-   **No aplicar de manera estricta los contratos de plantilla.** El contrato de la plantilla de un control puede constar de elementos, comandos, enlaces, desencadenadores o incluso configuraciones de propiedades necesarios o previstos para que un control funcione correctamente.  
   
     -   Minimice los contratos lo máximo posible.  
   
-    -   Diseño con la expectativa de que, durante el período de diseño (es decir, al usar una herramienta de diseño), es habitual que una plantilla de control presente el estado de incompleta. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no ofrece un estado de infraestructura de "redacción", por lo que los controles deben compilarse con la expectativa de que ese estado podría ser válido.  
+    -   Diseño con la expectativa de que, durante el período de diseño (es decir, al usar una herramienta de diseño), es habitual que una plantilla de control presente el estado de incompleta. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no ofrece una infraestructura con el estado de "redacción", por lo que los controles deben crearse con la expectativa de que dicho estado puede ser válido.  
   
     -   No lance excepciones cuando no se respeta cualquier aspecto de un contrato de plantilla. En este sentido, los paneles no deben iniciar excepciones si tienen demasiados o muy pocos elementos secundarios.  
   
--   **Funcionalidad periférica de factor en elementos auxiliares de plantilla.** Cada control debe centrarse en su funcionalidad principal y en su propuesta de valor verdadero, cuya definición debe realizarse según el uso común del control. Para ello, use los elementos de redacción y del asistente dentro de la plantilla, a fin de habilitar las visualizaciones y los comportamientos periféricos, es decir, aquellos comportamientos y visualizaciones que no contribuyen a la funcionalidad principal del control. Los elementos del asistente se dividen en tres categorías:  
+-   **Funcionalidad periférica de factor en elementos del asistente con plantillas.** Cada control debe centrarse en su funcionalidad principal y en su propuesta de valor verdadero, cuya definición debe realizarse según el uso común del control. Para ello, use los elementos de redacción y del asistente dentro de la plantilla, a fin de habilitar las visualizaciones y los comportamientos periféricos, es decir, aquellos comportamientos y visualizaciones que no contribuyen a la funcionalidad principal del control. Los elementos del asistente se dividen en tres categorías:  
   
     -   Los tipos del asistente **independientes** son controles públicos y reutilizables o primitivos que se usan de forma "anónima" en una plantilla, lo que significa que ni el elemento del asistente ni el control con estilo tienen constancia del otro. Técnicamente, cualquier elemento puede ser un tipo anónimo, pero en este contexto, el término describe los tipos que encapsulan la funcionalidad especializada para habilitar escenarios concretos.  
   
@@ -79,7 +79,7 @@ En este documento se resume un conjunto de procedimientos recomendados que se de
   
 -   **Usar la propiedad Name para marcar los elementos dentro de una plantilla**. Un control que necesita buscar un elemento en su estilo para tener acceso a él mediante programación debe hacerlo mediante la propiedad `Name` y el paradigma `FindName`. Un control no debería producir una excepción cuando no se encuentra un elemento, pero de forma silenciosa y sencilla debe deshabilitar la funcionalidad que requiere ese elemento.  
   
--   **Use los procedimientos recomendados para expresar el estado de control y el comportamiento de un estilo.** A continuación se presenta una lista ordenada de los procedimientos recomendados para expresar los cambios de estado del control y el comportamiento de un estilo. Debe usar el primer elemento de la lista que habilita su escenario.  
+-   **Usar procedimientos recomendados para expresar el estado del control y el comportamiento de un estilo.** A continuación se presenta una lista ordenada de los procedimientos recomendados para expresar los cambios de estado del control y el comportamiento de un estilo. Debe usar el primer elemento de la lista que habilita su escenario.  
   
     1.  Enlace de propiedades. Ejemplo: enlace entre <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType> y <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>.  
   
@@ -99,9 +99,9 @@ En este documento se resume un conjunto de procedimientos recomendados que se de
   
 -   **Usar desencadenadores de estilo (a diferencia de los desencadenadores de plantilla) con moderación**. Los desencadenadores que afectan a las propiedades de elementos en la plantilla se deben declarar en la plantilla. Los desencadenadores que afectan a las propiedades del control (no `TargetName`) se pueden declarar en el estilo, a menos que sepa que el cambio de la plantilla también destruye el desencadenador.  
   
--   **Ser coherente con los patrones de estilo existente.** Muchas veces, hay varias formas de resolver un problema. Debe conocer los patrones de aplicación de estilos de control existentes y, cuando sea posible, mantener la coherencia con ellos. Esto es especialmente importante para los controles que derivan del mismo tipo base (por ejemplo, <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>, y así sucesivamente).  
+-   **Ser coherente con los patrones de estilo existentes.** Muchas veces, hay varias formas de resolver un problema. Debe conocer los patrones de aplicación de estilos de control existentes y, cuando sea posible, mantener la coherencia con ellos. Esto es especialmente importante para los controles que derivan del mismo tipo base (por ejemplo, <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>, y así sucesivamente).  
   
--   **Exponer propiedades para habilitar escenarios de personalización comunes sin volver a crear plantillas**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no admite partes acoplables/personalizables, por lo que un usuario de control se deja con sólo dos métodos de personalización: configurar propiedades directamente o configurar propiedades con estilos. Habida cuenta de lo anterior, resulta conveniente exponer un número limitado de propiedades orientadas a escenarios de personalización muy comunes y de alta prioridad, ya que, de lo contrario, sería necesario volver a crear plantillas. A continuación se presentan procedimientos recomendados para saber cuándo y cómo habilitar escenarios de personalización:  
+-   **Exponer propiedades para habilitar escenarios de personalización comunes sin volver a crear plantillas**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no admite partes acoplables/personalizables, por lo que un usuario de control solo puede usar dos métodos de personalización: configurar propiedades directamente o configurar propiedades con estilos. Habida cuenta de lo anterior, resulta conveniente exponer un número limitado de propiedades orientadas a escenarios de personalización muy comunes y de alta prioridad, ya que, de lo contrario, sería necesario volver a crear plantillas. A continuación se presentan procedimientos recomendados para saber cuándo y cómo habilitar escenarios de personalización:  
   
     -   Las personalizaciones muy comunes deben exponerse como propiedades en el control, a fin de que la plantilla pueda usarlas.  
   

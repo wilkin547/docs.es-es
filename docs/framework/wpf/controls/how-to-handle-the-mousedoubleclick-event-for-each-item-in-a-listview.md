@@ -1,5 +1,5 @@
 ---
-title: Filtrar Controlar el evento MouseDoubleClick para cada elemento de un control ListView
+title: Procedimiento Controlar el evento MouseDoubleClick para cada elemento de un control ListView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
 ms.openlocfilehash: 443e5c620ef5bf240d3e317f0234aac0b29b456f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145085"
 ---
-# <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>Filtrar Controlar el evento MouseDoubleClick para cada elemento de un control ListView
+# <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>Procedimiento Controlar el evento MouseDoubleClick para cada elemento de un control ListView
 Para controlar un evento para un elemento en un <xref:System.Windows.Controls.ListView>, deberá agregar un controlador de eventos a cada <xref:System.Windows.Controls.ListViewItem>. Cuando un <xref:System.Windows.Controls.ListView> está enlazado a un origen de datos, no cree explícitamente un <xref:System.Windows.Controls.ListViewItem>, pero se puede controlar el evento para cada elemento mediante la adición de un <xref:System.Windows.EventSetter> a un estilo de un <xref:System.Windows.Controls.ListViewItem>.  
   
 ## <a name="example"></a>Ejemplo  

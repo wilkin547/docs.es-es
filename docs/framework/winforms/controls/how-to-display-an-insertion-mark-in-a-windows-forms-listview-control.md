@@ -1,5 +1,5 @@
 ---
-title: Filtrar para mostrar una marca de inserción en un control ListView de formularios Windows Forms
+title: Procedimiento para mostrar una marca de inserción en un control ListView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
 ms.openlocfilehash: 60b775408f5c43ff08fc5c7de72a8302b20b2264
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145618"
 ---
-# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Filtrar para mostrar una marca de inserción en un control ListView de formularios Windows Forms
+# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Procedimiento para mostrar una marca de inserción en un control ListView de formularios Windows Forms
 La marca de inserción del control <xref:System.Windows.Forms.ListView> muestra a los usuarios el punto en el que se insertarán los elementos arrastrados. Cuando un usuario arrastra un elemento a un punto entre otros dos elementos, la marca de inserción muestra la nueva ubicación esperada del elemento.  
   
 > [!NOTE]
@@ -47,6 +47,6 @@ La marca de inserción del control <xref:System.Windows.Forms.ListView> muestra 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListViewInsertionMark>
-- [Control ListView](listview-control-windows-forms.md)
-- [Información general sobre el control ListView](listview-control-overview-windows-forms.md)
-- [Tutorial: Llevar a cabo una operación de arrastrar y colocar en formularios Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+- [ListView (Control)](listview-control-windows-forms.md)
+- [Información general del control ListView](listview-control-overview-windows-forms.md)
+- [Tutorial: Realizar una operación de arrastrar y colocar en Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

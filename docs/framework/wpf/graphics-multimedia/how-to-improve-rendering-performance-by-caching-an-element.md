@@ -1,5 +1,5 @@
 ---
-title: Filtrar para mejorar el rendimiento de la representación mediante el almacenamiento en caché de un elemento
+title: Procedimiento para mejorar el rendimiento de la representación mediante el almacenamiento en caché de un elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - rendering performance [WPF], caching an element
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - UIElement [WPF], caching
 ms.assetid: 4739c1fc-60ba-4c46-aba6-f6c1a2688f19
 ms.openlocfilehash: 118e8b0cca52c44788c9d5b291d710f765e7af2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153379"
 ---
-# <a name="how-to-improve-rendering-performance-by-caching-an-element"></a>Filtrar para mejorar el rendimiento de la representación mediante el almacenamiento en caché de un elemento
+# <a name="how-to-improve-rendering-performance-by-caching-an-element"></a>Procedimiento para mejorar el rendimiento de la representación mediante el almacenamiento en caché de un elemento
 Use la <xref:System.Windows.Media.BitmapCache> clase para mejorar el rendimiento de la representación de un complejo <xref:System.Windows.UIElement>. Para almacenar en caché un elemento, crear una nueva instancia de la <xref:System.Windows.Media.BitmapCache> clase y se asigna a la propiedad del elemento <xref:System.Windows.UIElement.CacheMode%2A> propiedad. Puede volver a usar un <xref:System.Windows.Media.BitmapCache> eficazmente en un <xref:System.Windows.Media.BitmapCacheBrush>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -28,4 +28,4 @@ Use la <xref:System.Windows.Media.BitmapCache> clase para mejorar el rendimiento
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>
-- [Filtrar para usar un elemento almacenado en caché como pincel](how-to-use-a-cached-element-as-a-brush.md)
+- [Cómo: Usar un elemento almacenado en caché como pincel](how-to-use-a-cached-element-as-a-brush.md)

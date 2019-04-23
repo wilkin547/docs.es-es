@@ -1,12 +1,12 @@
 ---
-title: <scopedCertificates> Elemento
+title: <scopedCertificates> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
 ms.openlocfilehash: 73e78a6ca27ed45e1eadc7121987b75f79bc6aa5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145205"
 ---
 # <a name="scopedcertificates-element"></a>\<scopedCertificates > elemento
@@ -80,8 +80,8 @@ sección endpointBehaviors
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
-- [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Filtrar para crear un cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Cómo: Crear a un cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)
 - [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)
 - [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

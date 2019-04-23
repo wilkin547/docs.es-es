@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
 ms.openlocfilehash: 76ac31e9082216d0024160c51a7495855eee5601
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142149"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Procedimientos recomendados para ajustar la escala del control DataGridView en formularios Windows Forms
@@ -138,9 +138,9 @@ El <xref:System.Windows.Forms.DataGridView> control está diseñado para proporc
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.DataGridView>
-- [Ajuste del rendimiento del control DataGridView en formularios Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Modo virtual del control DataGridView de formularios Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Modos de presentación de datos en el control DataGridView de formularios Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
-- [Estilos de celda en el control DataGridView de formularios Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Filtrar para establecer estilos de celda predeterminados para el control DataGridView de formularios Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Ajuste del rendimiento del control DataGridView en Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Modo virtual del control DataGridView de Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Modos de presentación de datos en el control DataGridView de Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Estilos de celda en el control DataGridView de Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Cómo: Establecer estilos de celda predeterminados para el Control DataGridView de Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
 - [Opciones de ajuste de tamaño en el control DataGridView de formularios Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md)

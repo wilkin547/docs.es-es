@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 03263f94-e539-440b-a67c-8b9110c96dcd
 ms.openlocfilehash: 8fcf90e76dd0edcb5349984ebb70124400297a1d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143304"
 ---
 # <a name="control-help-using-tooltips"></a>Controlar la ayuda mediante información sobre herramientas
@@ -19,7 +19,7 @@ Puede usar el <xref:System.Windows.Forms.ToolTip> especializado de componente pa
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para mostrar ayuda emergente](how-to-display-pop-up-help.md)
-- [ToolTip](../controls/tooltip-component-windows-forms.md)
-- [Integrar la Ayuda de usuario en formularios Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Cómo: Mostrar ayuda emergente](how-to-display-pop-up-help.md)
+- [ToolTip (componente)](../controls/tooltip-component-windows-forms.md)
+- [Integrar la Ayuda de usuario en Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

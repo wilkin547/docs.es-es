@@ -11,10 +11,10 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
 ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146775"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Representar controles con estilos visuales
@@ -54,9 +54,9 @@ ms.locfileid: "59146775"
 ## <a name="visual-style-element-and-rendering-classes"></a>Clases de representación y de elementos de estilos visuales  
  El espacio de nombres <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> incluye clases que se pueden usar para dibujar y obtener información sobre cualquier control o elemento de IU que sea compatible con los estilos visuales. Los controles compatibles incluyen controles comunes que tienen una clase de representación en el espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> (consulte la sección anterior), así como otros controles, como los controles de pestaña y los controles rebar. Otros elementos de IU compatibles incluyen las partes del menú **Inicio** , la barra de tareas y el área de no cliente de Windows.  
   
- Las clases principales del espacio de nombres <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> son <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> y <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> es una clase base para identificar cualquier control o elemento de IU compatible con estilos visuales. Además de <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> , el espacio de nombres <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> incluye muchas clases anidadas de <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> con propiedades `static` que devuelven una clase <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> para cada estado de un control, parte de control u otro elemento de IU compatible con los estilos visuales.  
+ Las clases principales del espacio de nombres <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> son <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> y <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> es una clase básica para identificar cualquier control o elemento de IU compatible con los estilos visuales. Además de <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> , el espacio de nombres <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> incluye muchas clases anidadas de <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> con propiedades `static` que devuelven una clase <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> para cada estado de un control, parte de control u otro elemento de IU compatible con los estilos visuales.  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Proporciona los métodos que dibujan y obtención información sobre cada <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> definida por el estilo visual actual del sistema operativo. En la información que se puede recuperar de un elemento se incluye su tamaño predeterminado, el tipo de fondo y las definiciones de color. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> ajusta la funcionalidad de los estilos visuales (UxTheme) API desde la parte del Shell de Windows de Windows Platform SDK. Para obtener más información, consulte [Enabling Visual Styles](/windows/desktop/controls/cookbook-overview).  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> proporciona los métodos necesarios para dibujar y obtener información sobre cada clase <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> definida por el estilo visual actual del sistema operativo. En la información que se puede recuperar de un elemento se incluye su tamaño predeterminado, el tipo de fondo y las definiciones de color. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> ajusta la funcionalidad de la API de estilos visuales (UxTheme) desde la parte del Shell de Windows de Windows Platform SDK. Para obtener más información, consulte [Enabling Visual Styles](/windows/desktop/controls/cookbook-overview).  
   
  Para obtener más información sobre el uso de <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> y <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, vea [Cómo: Representar un elemento de estilo Visual](how-to-render-a-visual-style-element.md).  
   
@@ -80,4 +80,4 @@ ms.locfileid: "59146775"
   
 ## <a name="see-also"></a>Vea también
 
-- [Dibujo y representación personalizados de controles](custom-control-painting-and-rendering.md)
+- [Custom Control Painting and Rendering](custom-control-painting-and-rendering.md) (Pintura y representación personalizadas de controles)

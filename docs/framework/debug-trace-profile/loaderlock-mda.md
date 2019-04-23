@@ -13,10 +13,10 @@ ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9a70b8c3509b785d70b041b449c759e7994e5984
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148725"
 ---
 # <a name="loaderlock-mda"></a>loaderLock (MDA)
@@ -57,4 +57,4 @@ El Asistente para la depuración administrada (MDA) `loaderLock` detecta los int
   
 ## <a name="see-also"></a>Vea también
 
-- [Diagnóstico de errores con asistentes de depuraciones administradas](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

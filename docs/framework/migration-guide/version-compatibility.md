@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ef9445bb56523f3ef2adf668a4a637868b5d565
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f27385fadd872d2ff6f84cabe079811142008df
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558922"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59143655"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilidad de versiones en .NET Framework
 La compatibilidad con versiones anteriores significa que una aplicación desarrollada en una versión determinada de una plataforma se ejecutará en las versiones posteriores de esa plataforma. .NET Framework intenta maximizar la compatibilidad con versiones anteriores: el código fuente escrito para una versión de .NET Framework debe compilarse en versiones posteriores de .NET Framework, y los archivos binarios que se ejecutan en una versión de .NET Framework deberán comportarse del mismo modo en versiones posteriores de .NET Framework.  
@@ -66,6 +66,7 @@ La compatibilidad con versiones anteriores significa que una aplicación desarro
  Si no encuentra una solución conveniente para su problema, recuerde que .NET Framework 4.5 (o sus versiones secundarias) se ejecuta en paralelo con las versiones 1.1, 2.0 y 3.5, y es una actualización en contexto que reemplaza la versión 4. En el caso de las aplicaciones dirigidas a las versiones 1.1, 2.0 y 3.5, puede instalar la versión adecuada de .NET Framework en el equipo de destino para ejecutar la aplicación en su entorno más conveniente. Para más información acerca de la ejecución en paralelo, consulte [Ejecución en paralelo](../../../docs/framework/deployment/side-by-side-execution.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Novedades](../../../docs/framework/whats-new/index.md)
 - [Lo obsoleto en la biblioteca de clases](../../../docs/framework/whats-new/whats-obsolete.md)
 - [Compatibilidad de aplicaciones](../../../docs/framework/migration-guide/application-compatibility.md)

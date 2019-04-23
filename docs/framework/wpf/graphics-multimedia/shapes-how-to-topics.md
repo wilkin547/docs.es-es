@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
 ms.openlocfilehash: d304a411a92272315506a08a714ae1a5f9b6a000
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150168"
 ---
 # <a name="shapes-how-to-topics"></a>Temas "Cómo..." de formas
 Los temas de esta sección muestran cómo usar <xref:System.Windows.Shapes.Shape> objetos que se va a dibujar formas básicas en la pantalla.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Dibujar una forma cerrada mediante el elemento Polygon](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [Dibujar una forma cerrada utilizando el elemento Polygon](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
  [Dibujar una elipse o un círculo](how-to-draw-an-ellipse-or-a-circle.md)  
  [Dibujar una línea](how-to-draw-a-line.md)  
  [Dibujar una Polilínea mediante el uso del elemento Polyline](how-to-draw-a-polyline-by-using-the-polyline-element.md)  

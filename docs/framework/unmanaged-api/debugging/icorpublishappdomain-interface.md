@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d9dbaac5b08cf3f700b5f2581c60d0cb7bf3f545
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152144"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain (Interfaz)
@@ -30,8 +30,8 @@ Representa y proporciona información sobre un dominio de aplicación.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetID](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Obtiene el identificador único para este `ICorPublishAppDomain`.|  
-|[Método GetName](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Obtiene el nombre del dominio de aplicación que hace referencia esta `ICorPublishAppDomain`.|  
+|[GetID (método)](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Obtiene el identificador único para este `ICorPublishAppDomain`.|  
+|[GetName (método)](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Obtiene el nombre del dominio de aplicación que hace referencia esta `ICorPublishAppDomain`.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,5 +44,5 @@ Representa y proporciona información sobre un dominio de aplicación.
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [CorpubPublish (coclase)](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

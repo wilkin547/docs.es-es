@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar el valor del grosor de un borde
+title: Procedimiento Animar el valor del grosor de un borde
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - animation [WPF], changes to border thickness
 ms.assetid: fd021978-f74b-4e7b-a7f7-3987dcad9e0f
 ms.openlocfilehash: 10e177d1f6d6add4638ce14af900e75d7e363890
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150740"
 ---
-# <a name="how-to-animate-a-borderthickness-value"></a>Filtrar Animar el valor del grosor de un borde
+# <a name="how-to-animate-a-borderthickness-value"></a>Procedimiento Animar el valor del grosor de un borde
 En este ejemplo se muestra cómo animar los cambios realizados en el grosor de un borde mediante la <xref:System.Windows.Media.Animation.ThicknessAnimation> clase.  
   
 ## <a name="example"></a>Ejemplo  
@@ -32,5 +32,5 @@ En este ejemplo se muestra cómo animar los cambios realizados en el grosor de u
 - <xref:System.Windows.Controls.Border.BorderThickness%2A>
 - <xref:System.Windows.Controls.Border>
 - [Información general sobre animaciones](../graphics-multimedia/animation-overview.md)
-- [Temas "Cómo..." de animación y control de tiempo](../graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Temas de procedimientos de temporización y animación](../graphics-multimedia/animation-and-timing-how-to-topics.md)
 - [Animar el grosor de un borde mediante fotogramas clave](../graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)

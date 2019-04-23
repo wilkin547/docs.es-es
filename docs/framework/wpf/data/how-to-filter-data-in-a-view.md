@@ -1,5 +1,5 @@
 ---
-title: Filtrar Filtrar datos en una vista
+title: Procedimiento Filtrar datos en una vista
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
 ms.openlocfilehash: a31c07e6be26f67cc29813a14745ecf4a83ab98a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147477"
 ---
-# <a name="how-to-filter-data-in-a-view"></a>Filtrar Filtrar datos en una vista
+# <a name="how-to-filter-data-in-a-view"></a>Procedimiento Filtrar datos en una vista
 En este ejemplo se muestra cómo filtrar datos en una vista.  
   
 ## <a name="example"></a>Ejemplo  

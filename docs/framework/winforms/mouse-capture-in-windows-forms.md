@@ -5,10 +5,10 @@ helpviewer_keywords:
 - mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
 ms.openlocfilehash: 30432c6978f60cc9ad47d5df5dafc7aa45229f3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151650"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Captura del mouse (ratón) en formularios Windows Forms
@@ -23,4 +23,4 @@ ms.locfileid: "59151650"
   
 ## <a name="see-also"></a>Vea también
 
-- [Entradas mediante el mouse (ratón) en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Entradas mediante el mouse en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)

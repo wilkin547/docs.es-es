@@ -1,5 +1,5 @@
 ---
-title: Filtrar para crear un lápiz
+title: Procedimiento para crear un lápiz
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Pen object
 ms.assetid: 7fbea8b7-7ac1-4413-9c17-733a850381e3
 ms.openlocfilehash: 69fe6157c710ae63df9dbf391a5d355d1c3f9765
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148114"
 ---
-# <a name="how-to-create-a-pen"></a>Filtrar para crear un lápiz
+# <a name="how-to-create-a-pen"></a>Procedimiento para crear un lápiz
 Este ejemplo se crea un <xref:System.Drawing.Pen> objeto.  
   
 ## <a name="example"></a>Ejemplo  

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Codificar y descodificar una imagen WDP
+title: Procedimiento Codificar y descodificar una imagen WDP
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - encoding WDP images [WPF]
 ms.assetid: 911777d1-516b-49db-a87b-b54e31b18532
 ms.openlocfilehash: b143106092235b42044d264189c135d2cd65426c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153366"
 ---
-# <a name="how-to-encode-and-decode-a-wdp-image"></a>Filtrar Codificar y descodificar una imagen WDP
+# <a name="how-to-encode-and-decode-a-wdp-image"></a>Procedimiento Codificar y descodificar una imagen WDP
 Los ejemplos siguientes muestran cómo descodificar y codificar una [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] específico de imagen <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> y <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> objetos.  
   
 ## <a name="example"></a>Ejemplo  

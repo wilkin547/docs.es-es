@@ -1,18 +1,18 @@
 ---
-title: Filtrar Acumular valores de animaciones durante la repetición de ciclos
+title: Procedimiento Acumular valores de animaciones durante la repetición de ciclos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accumulating animation values across repeating cycles [WPF]
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
 ms.openlocfilehash: 4b739883322751e2df86e13bfd07249abdb10a08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146021"
 ---
-# <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Filtrar Acumular valores de animaciones durante la repetición de ciclos
+# <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Procedimiento Acumular valores de animaciones durante la repetición de ciclos
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propiedad que se va a acumular valores de animaciones entre ciclos que se repiten.  
   
 ## <a name="example"></a>Ejemplo  

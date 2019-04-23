@@ -3,10 +3,10 @@ title: WSDL y directivas
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
 ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151910"
 ---
 # <a name="wsdl-and-policy"></a>WSDL y directivas
@@ -75,5 +75,5 @@ En este tema se trata WSDL 1.1 de Windows Communication Foundation (WCF), los de
 ## <a name="see-also"></a>Vea también
 
 - [Publicación de WSDL personalizada](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Filtrar para exportar el WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Filtrar para importar el WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Cómo: Exportación de WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Cómo: Importar el WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

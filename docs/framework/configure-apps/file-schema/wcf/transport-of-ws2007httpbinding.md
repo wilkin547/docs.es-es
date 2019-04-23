@@ -3,10 +3,10 @@ title: <transport> de <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
 ms.openlocfilehash: a1540b53d4af76141c1daee60a6bddbbecd9d6da
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153873"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<transporte > de \<ws2007HttpBinding >

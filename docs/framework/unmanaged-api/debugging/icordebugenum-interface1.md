@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9afaeebfdb98a404ea53b0b5ec147f8c8104e14d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148816"
 ---
 # <a name="icordebugenum-interface"></a>Interfaz ICorDebugEnum
@@ -31,10 +31,10 @@ Sirve como la interfaz base abstracta para los enumeradores utilizados por una a
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método Clone](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Crea una copia de este `ICorDebugEnum` objeto.|  
-|[Método GetCount](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Obtiene el número de elementos de la enumeración.|  
-|[Método Reset](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Mueve el cursor al principio de la enumeración.|  
-|[Método Skip](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Mueve el cursor hacia delante en la enumeración por el número especificado de elementos.|  
+|[Clone (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Crea una copia de este `ICorDebugEnum` objeto.|  
+|[GetCount (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Obtiene el número de elementos de la enumeración.|  
+|[Reset (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Mueve el cursor al principio de la enumeración.|  
+|[Skip (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Mueve el cursor hacia delante en la enumeración por el número especificado de elementos.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los enumeradores siguientes derivan de `ICorDebugEnum`:  
@@ -95,4 +95,4 @@ Sirve como la interfaz base abstracta para los enumeradores utilizados por una a
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 043fe74f66635c30f12555efb9ccc9415e200ec3
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4104ddba1942f9cb9bd860d53dc54968de5af891
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835244"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59151273"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importar una biblioteca de tipos como un ensamblado
 Las definiciones de tipos COM residen normalmente en una biblioteca de tipos. Por el contrario, los compiladores conformes a CLS generan metadatos de tipos en un ensamblado. Las dos fuentes de información de tipos son muy diferentes. En este tema se describen técnicas para generar metadatos a partir de una biblioteca de tipos. El ensamblado resultante se denomina ensamblado de interoperabilidad y la información de tipos que contiene permite a las aplicaciones de .NET Framework usar tipos COM.  
@@ -71,6 +71,7 @@ Las definiciones de tipos COM residen normalmente en una biblioteca de tipos. Po
  Para más información sobre el proceso de importación de interoperabilidad COM, vea [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [Exponer componentes COM en .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
 - [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))

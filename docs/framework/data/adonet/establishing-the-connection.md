@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
 ms.openlocfilehash: 7f8cca02e673339e892c16e0de99e20accdfd404
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142350"
 ---
 # <a name="establishing-the-connection"></a>Establecer la conexión
@@ -144,7 +144,7 @@ nwindConn.Open();
   
 ## <a name="see-also"></a>Vea también
 
-- [Conectarse a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Conexión a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Cadenas de conexión](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Agrupación de conexiones de OLE DB, ODBC y Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

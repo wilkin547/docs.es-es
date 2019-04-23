@@ -1,5 +1,5 @@
 ---
-title: Filtrar Desencadenar la reproducción de medios con un evento de usuario
+title: Procedimiento Desencadenar la reproducción de medios con un evento de usuario
 ms.date: 03/30/2017
 helpviewer_keywords:
 - synchronizing media playback with events [WPF]
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - multimedia [WPF], synchronizing media playback with events
 ms.assetid: c4dbe632-6e7f-4d7f-9df5-98737a758bc3
 ms.openlocfilehash: ae8ba54cc852bb85350492c95e3e890aebf6534f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150181"
 ---
-# <a name="how-to-trigger-media-playback-with-a-user-event"></a>Filtrar Desencadenar la reproducción de medios con un evento de usuario
+# <a name="how-to-trigger-media-playback-with-a-user-event"></a>Procedimiento Desencadenar la reproducción de medios con un evento de usuario
 En este ejemplo se muestra cómo sincronizar la reproducción de medios con un evento.  
   
 ## <a name="example"></a>Ejemplo  

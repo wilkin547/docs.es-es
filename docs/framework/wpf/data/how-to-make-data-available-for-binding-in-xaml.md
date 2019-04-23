@@ -1,5 +1,5 @@
 ---
-title: Filtrar Hacer que los datos estén disponibles para el enlace en XAML
+title: Procedimiento Hacer que los datos estén disponibles para el enlace en XAML
 ms.date: 01/29/2018
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
 ms.openlocfilehash: 2d51f06da31482c46b04d1eb86172c3eda246c20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145371"
 ---
-# <a name="how-to-make-data-available-for-binding-in-xaml"></a>Filtrar Hacer que los datos estén disponibles para el enlace en XAML
+# <a name="how-to-make-data-available-for-binding-in-xaml"></a>Procedimiento Hacer que los datos estén disponibles para el enlace en XAML
 Este tema describen varias maneras de hacer que datos disponibles para enlace en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], según las necesidades de su aplicación.  
   
 ## <a name="example"></a>Ejemplo  

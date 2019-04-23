@@ -1,5 +1,5 @@
 ---
-title: <authenticationModules> Elemento (configuración de red)
+title: Elemento <authenticationModules> (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 ms.openlocfilehash: 8878bcbdf8b3613677231db3e91a6d71dfa10bae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143343"
 ---
 # <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > elemento (configuración de red)
@@ -37,15 +37,15 @@ Especifica los módulos que se usa para autenticar las solicitudes de red.
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[agregar](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|Agrega un módulo de autenticación a la aplicación.|  
-|[desactivada](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|Borra todos los módulos de autenticación de la aplicación.|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|Agrega un módulo de autenticación a la aplicación.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|Borra todos los módulos de autenticación de la aplicación.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|Quita un módulo de autenticación de la aplicación.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
 |[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
   

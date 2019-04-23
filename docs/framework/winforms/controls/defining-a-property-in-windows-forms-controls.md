@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
 ms.openlocfilehash: 905578454b0bc6b5e74202d15c91645fed0fd461
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143252"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Definir una propiedad en los controles de formularios Windows Forms
@@ -122,7 +122,7 @@ public int Value {
   
 ## <a name="see-also"></a>Vea también
 
-- [Propiedades de los controles de formularios Windows Forms](properties-in-windows-forms-controls.md)
+- [Propiedades de los controles de Windows Forms](properties-in-windows-forms-controls.md)
 - [Definir valores predeterminados con los métodos ShouldSerialize y Reset](defining-default-values-with-the-shouldserialize-and-reset-methods.md)
 - [Eventos de cambio de propiedades](property-changed-events.md)
-- [Atributos en controles de formularios Windows Forms](attributes-in-windows-forms-controls.md)
+- [Atributos en controles de Windows Forms](attributes-in-windows-forms-controls.md)

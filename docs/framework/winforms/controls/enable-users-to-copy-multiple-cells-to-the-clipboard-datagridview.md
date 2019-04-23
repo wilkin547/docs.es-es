@@ -1,5 +1,5 @@
 ---
-title: Filtrar para permitir que los usuarios copien varias celdas en el Portapapeles desde el control DataGridView de formularios Windows Forms
+title: Procedimiento para permitir que los usuarios copien varias celdas en el Portapapeles desde el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying multiple cells
 ms.assetid: fd0403b2-d0e3-4ae0-839c-0f737e1eb4a9
 ms.openlocfilehash: f7b6c37db0935dae703e9641b2c2605b2ec88126
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142238"
 ---
-# <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>Filtrar para permitir que los usuarios copien varias celdas en el Portapapeles desde el control DataGridView de formularios Windows Forms
+# <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>Procedimiento para permitir que los usuarios copien varias celdas en el Portapapeles desde el control DataGridView de formularios Windows Forms
 Cuando se habilita la copia de celdas, los datos de su control <xref:System.Windows.Forms.DataGridView> son más fácilmente accesibles para otras aplicaciones mediante el <xref:System.Windows.Forms.Clipboard>. Los valores de las celdas seleccionadas se convierten en cadenas y se agregan al Portapapeles como valores de texto delimitados por tabulaciones para pegarlos en aplicaciones como el Bloc de notas y Excel, y como una tabla con formato HTML para pegarlos en aplicaciones como Word.  
   
  Puede configurar la copia de celdas para copiar solo valores de celda, para incluir el texto de encabezado de filas y columnas en los datos del Portapapeles, o para incluir el texto de encabezado solo cuando los usuarios seleccionan filas o columnas completas.  
@@ -49,4 +49,4 @@ Cuando se habilita la copia de celdas, los datos de su control <xref:System.Wind
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A>
 - <xref:System.Windows.Forms.DataGridView.GetClipboardContent%2A>
-- [Selección y uso del Portapapeles con el control DataGridView de formularios Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [Selección y uso del Portapapeles con el control DataGridView de Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)

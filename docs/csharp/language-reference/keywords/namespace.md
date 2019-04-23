@@ -10,10 +10,10 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148764"
 ---
 # <a name="namespace-c-reference"></a>espacio de nombres (Referencia de C#)
@@ -28,15 +28,15 @@ En un espacio de nombres, se pueden declarar cero o más de los siguientes tipos
 
 - otro espacio de nombres
 
-- [clase](class.md)
+- [class](class.md)
 
-- [interfaz](interface.md)
+- [interface](interface.md)
 
 - [struct](struct.md)
 
 - [enum](enum.md)
 
-- [delegado](delegate.md)
+- [delegate](delegate.md)
 
 Tanto si se declara explícitamente un espacio de nombres en un archivo de código fuente de C# como si no, el compilador agrega un espacio de nombres predeterminado. Este espacio de nombres sin nombre, que a veces se denomina espacio de nombres global, está presente en todos los archivos. Todos los identificadores del espacio de nombres global están disponibles para su uso en un espacio de nombres con nombre.
 
@@ -58,9 +58,9 @@ Para obtener más información sobre el uso de los espacios de nombres, vea los 
 
 - [Espacios de nombres](../../programming-guide/namespaces/index.md)
 
-- [Uso de espacios de nombres](../../programming-guide/namespaces/using-namespaces.md)
+- [Utilizar espacios de nombres](../../programming-guide/namespaces/using-namespaces.md)
 
-- [Procedimiento para usar el alias del espacio de nombres global](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
+- [Cómo: Utilizar el alias del espacio de nombres global](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
@@ -72,5 +72,5 @@ Para obtener más información sobre el uso de los espacios de nombres, vea los 
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](index.md)
 - [Palabras clave del espacio de nombres](namespace-keywords.md)
-- [utilizar](using-directive.md)
-- [uso de versión estática](using-static.md)
+- [using](using-directive.md)
+- [using static](using-static.md)

@@ -3,10 +3,10 @@ title: Interpretar códigos de error devueltos por wsatConfig.exe
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
 ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151637"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretar códigos de error devueltos por wsatConfig.exe
@@ -21,7 +21,7 @@ En este tema se hace una lista de todos los códigos de error generados por la u
 |2|Se ha producido un error inesperado al intentar ponerse en contacto con MSDTC para recuperar su configuración de seguridad.|Asegúrese de que el servicio de MSDTC no está deshabilitado, y resuelva todos los problemas enumerados en la excepción devuelta.|  
 |3|La cuenta bajo la que se ejecutó WsatConfig.exe no tenía los permisos necesarios para leer los valores de seguridad de red.|Ejecute WsatConfig.exe con una cuenta de usuario Administrador.|  
 |4|Permita "Acceso DTC a red" para MSDTC antes de intentar habilitar la compatibilidad WS-AT.|Permita “Acceso DTC a red” para MSDTC y vuelva a ejecutar la utilidad.|  
-|5|El puerto indicado estaba fuera del intervalo. El valor de debe estar entre 1 y 65535|Corrija el `-port:<portNum>`<br /><br /> opción de línea de comandos como se indica en el mensaje de error.|  
+|5|El puerto indicado estaba fuera del intervalo. El valor de debe estar entre 1 y 65535|Corrija `-port:<portNum>`<br /><br /> opción de línea de comandos como se indica en el mensaje de error.|  
 |6|Se ha especificado un certificado del punto de conexión no válido en la línea de comandos.  No se ha podido encontrar el certificado o éste no ha superado la comprobación.|Corrija la opción de la línea de comandos `-endpointCert`. Asegúrese de que el certificado tiene una clave privada, se va a utilizar para ClientAuthentication y ServerAuthentication, está instalado en el almacén de certificados de LocalMachine\MY y es de plena confianza.|  
 |7|Se ha especificado un certificado de cuentas no válido en la línea de comandos.|Corrija la opción de la línea de comandos `-accountsCerts`. El certificado especificado no estaba correctamente especificado o no se pudo encontrar.|  
 |8|Se especificó un tiempo de espera predeterminado fuera del intervalo de 1 a 3600 segundos.|Escriba un valor de tiempo de espera predeterminado correcto tal y como se indica.|  

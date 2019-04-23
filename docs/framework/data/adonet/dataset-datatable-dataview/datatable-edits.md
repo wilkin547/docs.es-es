@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
 ms.openlocfilehash: 0300ceab16d9a94bd04468f7acd105e69d13e643
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150948"
 ---
 # <a name="datatable-edits"></a>Ediciones de DataTable
@@ -91,6 +91,6 @@ protected static void OnColumnChanged(
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataRowVersion>
-- [Manipular datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [Controlar eventos de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
-- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Manipulación de datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Control de eventos de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

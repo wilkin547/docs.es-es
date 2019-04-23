@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8e81cea13fb8d25701ccbe163f112904baf47a9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143174"
 ---
 # <a name="isymunmanageddispose-interface"></a>ISymUnmanagedDispose (Interfaz)
@@ -30,7 +30,7 @@ Se deshace de los recursos no administrados.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método Destroy](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|Hace que el objeto subyacente liberar todas las referencias internas y devuelva un error en las llamadas de método subsiguientes.|  
+|[Destroy (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|Hace que el objeto subyacente liberar todas las referencias internas y devuelva un error en las llamadas de método subsiguientes.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado**: CorSym.idl, CorSym.h  

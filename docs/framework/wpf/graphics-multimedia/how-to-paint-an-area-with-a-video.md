@@ -1,5 +1,5 @@
 ---
-title: Filtrar Pintar un área con un vídeo
+title: Procedimiento Pintar un área con un vídeo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
 ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151182"
 ---
-# <a name="how-to-paint-an-area-with-a-video"></a>Filtrar Pintar un área con un vídeo
+# <a name="how-to-paint-an-area-with-a-video"></a>Procedimiento Pintar un área con un vídeo
 En este ejemplo se muestra cómo pintar un área con medios. Una manera de pintar un área con medios es usar un <xref:System.Windows.Controls.MediaElement> junto con un <xref:System.Windows.Media.VisualBrush>. Utilice la <xref:System.Windows.Controls.MediaElement> para cargar y reproducir el archivo multimedia y, a continuación, usarla para establecer el <xref:System.Windows.Media.VisualBrush.Visual%2A> propiedad de la <xref:System.Windows.Media.VisualBrush>. A continuación, puede usar el <xref:System.Windows.Media.VisualBrush> para pintar un área con el elemento multimedia cargado.  
   
 ## <a name="example"></a>Ejemplo  

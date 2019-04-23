@@ -1,18 +1,18 @@
 ---
-title: Filtrar para asignar relaciones de base de datos
+title: Procedimiento para asignar relaciones de base de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152885"
 ---
-# <a name="how-to-map-database-relationships"></a>Filtrar para asignar relaciones de base de datos
+# <a name="how-to-map-database-relationships"></a>Procedimiento para asignar relaciones de base de datos
 Puede codificar como referencias de propiedad en la clase de entidad cualquier relación de datos que vaya a ser siempre la misma. En la base de datos de ejemplo Northwind, por ejemplo, dado que los clientes normalmente realizan pedidos, hay siempre una relación en el modelo entre los clientes y sus pedidos.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] define un <xref:System.Data.Linq.Mapping.AssociationAttribute> atributo para ayudar a representar tales relaciones. Este atributo se utiliza junto con los tipos <xref:System.Data.Linq.EntitySet%601> y <xref:System.Data.Linq.EntityRef%601> para representar lo que sería una relación de clave externa en una base de datos. Para obtener más información, vea la sección de atributo de asociación de [asignación basada en atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
@@ -28,7 +28,7 @@ Puede codificar como referencias de propiedad en la clase de entidad cualquier r
   
 -   Varios a varios: En las relaciones de varios a varios, la clave principal de la tabla de vínculos (también denominado el *unión* tabla) suele estar formada por un conjunto de claves externas de las otras dos tablas.  
   
-     Por ejemplo, considere un `Employee` - `Project` relación muchos a muchos formada mediante la tabla de vínculos `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requiere que este tipo de relación se modele utilizando tres clases: `Employee`, `Project`, y `EmployeeProject`. En este caso, al cambiar la relación entre `Employee` y `Project` puede parecer necesario actualizar la clave principal de `EmployeeProject`. Sin embargo, esta situación se modela mejor eliminando un `EmployeeProject` existente y creando un nuevo `EmployeeProject`.  
+     Por ejemplo, considere un `Employee` - `Project` relación muchos a muchos formada mediante la tabla de vínculos `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requiere que tal relación se modele utilizando tres clases: `Employee`, `Project` y `EmployeeProject`. En este caso, al cambiar la relación entre `Employee` y `Project` puede parecer necesario actualizar la clave principal de `EmployeeProject`. Sin embargo, esta situación se modela mejor eliminando un `EmployeeProject` existente y creando un nuevo `EmployeeProject`.  
   
     > [!NOTE]
     >  Las relaciones en las bases de datos relacionales se modelan normalmente como valores de clave externa que hacen referencia a claves principales de otras tablas. Para navegar entre ellos se asociación explícitamente las dos tablas mediante el uso de un operador relacional *combinación* operación.  
@@ -55,5 +55,5 @@ Puede codificar como referencias de propiedad en la clase de entidad cualquier r
   
 ## <a name="see-also"></a>Vea también
 
-- [Filtrar para personalizar clases de entidades con el editor de código](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
-- [El modelo de objetos de LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Cómo: Personalizar las clases de entidad mediante el Editor de código](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Modelo de objetos de LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

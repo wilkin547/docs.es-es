@@ -16,10 +16,10 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
 ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148102"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensiones de marcado y XAML de WPF
@@ -41,13 +41,13 @@ En este tema se presenta el concepto de extensiones de marcado para XAML, inclui
 ## <a name="xaml-defined-markup-extensions"></a>Extensiones de marcado definidas por XAML  
  Existen varias extensiones de marcado que no son específicas de la implementación de WPF de XAML, pero que son implementaciones intrínsecas o características de XAML como lenguaje. Estas extensiones de marcado se implementan en el ensamblado System.Xaml como parte de los servicios XAML de .NET Framework generales y están dentro del espacio de nombres XAML del lenguaje XAML. En cuanto al uso de marcación común, estas extensiones de marcado se suelen identificar por el prefijo `x:` en el uso. La <xref:System.Windows.Markup.MarkupExtension> clase base (que también se define en System.Xaml) proporciona el patrón que deben usar todas las extensiones de marcado para ser compatibles con los lectores XAML y escritores XAML, incluidos en WPF XAML.  
   
--   `x:Type` proporciona el <xref:System.Type> objeto para el tipo con nombre. Esta función se usa con más frecuencia en estilos y plantillas. Para obtener más información, consulte [x:Type (Extensión de marcado)](../../xaml-services/x-type-markup-extension.md).  
+-   `x:Type` proporciona el objeto <xref:System.Type> para el tipo con nombre. Esta función se usa con más frecuencia en estilos y plantillas. Para obtener más información, consulte [x:Type (Extensión de marcado)](../../xaml-services/x-type-markup-extension.md).  
   
 -   `x:Static` genera valores estáticos. Los valores proceden de entidades de código de tipo de valor que no son directamente el tipo del valor de una propiedad de destino, pero que se pueden evaluar como ese tipo. Para obtener más información, consulte [Extensiones de marcado x:Static](../../xaml-services/x-static-markup-extension.md).  
   
 -   `x:Null` especifica `null` como un valor para una propiedad y se puede usar para atributos o valores de elemento de propiedad. Para obtener más información, consulte [x:Null (Extensión de marcado)](../../xaml-services/x-null-markup-extension.md).  
   
--   `x:Array` proporciona compatibilidad para la creación de matrices generales en sintaxis XAML, para los casos donde el soporte de colección proporcionado por los elementos base y los modelos de control no se use deliberadamente. Para obtener más información, consulte [x:Array (Extensión de marcado)](../../xaml-services/x-array-markup-extension.md).  
+-   `x:Array` admite la creación de matrices generales en sintaxis XAML para casos en los que no se use deliberadamente el soporte de colección que proporcionan los elementos base y los modelos de control. Para obtener más información, consulte [x:Array (Extensión de marcado)](../../xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
 >  El prefijo `x:` se usa para la asignación de espacio de nombres típica de XAML para los objetos intrínsecos del lenguaje XAML, en el elemento raíz de una producción o un archivo XAML. Por ejemplo, las plantillas de Visual Studio para las aplicaciones WPF inician un archivo XAML usando esta `x:` asignación. Puede elegir un token de prefijo diferente en su propia asignación de espacio de nombres XAML, pero en esta documentación se presupone la asignación `x:` predeterminada como manera de identificar las entidades que forman una parte definida del espacio de nombres XAML del lenguaje XAML, en lugar de un espacio de nombres predeterminado de WPF o de otros espacios de nombres XAML que no estén relacionados con ningún marco específico.  
@@ -56,19 +56,19 @@ En este tema se presenta el concepto de extensiones de marcado para XAML, inclui
 ## <a name="wpf-specific-markup-extensions"></a>Extensiones de marcado específicas de WPF  
  Las extensiones de marcado más comunes que se usan en la programación de WPF son las que admiten referencias de recursos (`StaticResource` y `DynamicResource`) y las que admiten el enlace de datos (`Binding`).  
   
--   `StaticResource` Proporciona un valor para una propiedad sustituyendo el valor de un recurso ya definido. Finalmente, se realiza una evaluación `StaticResource` en tiempo de carga XAML y no tiene acceso al gráfico de objetos en tiempo de ejecución. Para obtener más información, consulte [Extensión de marcado StaticResource](staticresource-markup-extension.md).  
+-   `StaticResource` proporciona un valor para una propiedad sustituyendo el valor de un recurso ya definido. Finalmente, se realiza una evaluación `StaticResource` en tiempo de carga XAML y no tiene acceso al gráfico de objetos en tiempo de ejecución. Para obtener más información, consulte [Extensión de marcado StaticResource](staticresource-markup-extension.md).  
   
--   `DynamicResource` Proporciona un valor para una propiedad aplazando ese valor para que sea una referencia de tiempo de ejecución a un recurso. Una referencia de recurso dinámico fuerza una nueva búsqueda cada vez que se tiene acceso a este tipo de recurso y tiene acceso al gráfico de objetos en tiempo de ejecución. Para obtener este acceso, las propiedades de dependencia del sistema de propiedades de WPF y las expresiones evaluadas admiten el concepto `DynamicResource`. Por lo tanto, solo puede usar `DynamicResource` para un destino de propiedad de dependencia. Para obtener más información, consulte [Extensión de marcado DynamicResource](dynamicresource-markup-extension.md).  
+-   `DynamicResource` proporciona un valor para una propiedad aplazando ese valor para que sea una referencia a un recurso en tiempo de ejecución. Una referencia de recurso dinámico fuerza una nueva búsqueda cada vez que se tiene acceso a este tipo de recurso y tiene acceso al gráfico de objetos en tiempo de ejecución. Para obtener este acceso, las propiedades de dependencia del sistema de propiedades de WPF y las expresiones evaluadas admiten el concepto `DynamicResource`. Por lo tanto, solo puede usar `DynamicResource` para un destino de propiedad de dependencia. Para obtener más información, consulte [Extensión de marcado DynamicResource](dynamicresource-markup-extension.md).  
   
--   `Binding` proporciona el que valor de una propiedad, utilizando el contexto de datos que se aplica al objeto primario en tiempo de ejecución de enlace de datos. Esta extensión de marcado es relativamente compleja, porque permite una sintaxis insertada sustancial para especificar un enlace de datos. Para obtener más información, consulte [Binding (extensión de marcado)](binding-markup-extension.md).  
+-   `Binding` proporciona un valor enlazado a datos para una propiedad mediante el contexto de datos que se aplica al objeto primario en tiempo de ejecución. Esta extensión de marcado es relativamente compleja, porque permite una sintaxis insertada sustancial para especificar un enlace de datos. Para obtener más información, consulte [Binding (extensión de marcado)](binding-markup-extension.md).  
   
 -   `RelativeSource` Proporciona información de origen para un <xref:System.Windows.Data.Binding> que puede navegar por varias posibles relaciones en el árbol de objetos de tiempo de ejecución. Esto proporciona un origen especializado para los enlaces que se crean en plantillas de uso múltiple o creados en código sin conocimiento completo del árbol de objetos adyacente. Para obtener más información, consulte [Extensión de marcado RelativeSource](relativesource-markupextension.md).  
   
--   `TemplateBinding` permite que una plantilla de control utilizar valores de propiedades con plantilla procedentes de propiedades definido por el modelo de objeto de la clase que usará la plantilla. En otras palabras, la propiedad dentro de la definición de plantilla puede obtener acceso a un contexto que solo existe cuando se aplica la plantilla. Para obtener más información, consulte [Extensión de marcado TemplateBinding](templatebinding-markup-extension.md). Para obtener más información sobre el uso práctico de `TemplateBinding`, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+-   `TemplateBinding` permite que una plantilla de control use valores para propiedades con plantilla procedentes de propiedades definidas por el modelo de objeto de la clase que usará la plantilla. En otras palabras, la propiedad dentro de la definición de plantilla puede obtener acceso a un contexto que solo existe cuando se aplica la plantilla. Para obtener más información, consulte [Extensión de marcado TemplateBinding](templatebinding-markup-extension.md). Para obtener más información sobre el uso práctico de `TemplateBinding`, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 -   `ColorConvertedBitmap` admite un escenario de creación de imágenes relativamente avanzado. Para obtener más información, consulte [ColorConvertedBitmap (extensión de marcado)](colorconvertedbitmap-markup-extension.md).  
   
--   `ComponentResourceKey` y `ThemeDictionary` admiten aspectos de la búsqueda de recursos, especialmente para los recursos y temas que se empaquetan con controles personalizados. Para obtener más información, consulte [Extensión de marcado ComponentResourceKey](componentresourcekey-markup-extension.md), [Extensión de marcado ThemeDictionary](themedictionary-markup-extension.md) o [Información general sobre la creación de controles](../controls/control-authoring-overview.md).  
+-   `ComponentResourceKey` y `ThemeDictionary` admiten aspectos de búsqueda de recursos, especialmente para recursos y temas que se empaquetan con controles personalizados. Para obtener más información, consulte [Extensión de marcado ComponentResourceKey](componentresourcekey-markup-extension.md), [Extensión de marcado ThemeDictionary](themedictionary-markup-extension.md) o [Información general sobre la creación de controles](../controls/control-authoring-overview.md).  
   
 <a name="StarExtension"></a>   
 ## <a name="extension-classes"></a>*Clases de extensión  
@@ -119,9 +119,9 @@ En este tema se presenta el concepto de extensiones de marcado para XAML, inclui
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
-- [Espacio de nombres de XAML (x:) Características del lenguaje](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML Namespace (x:) Características del lenguaje](../../xaml-services/xaml-namespace-x-language-features.md)
 - [Extensiones XAML de WPF](wpf-xaml-extensions.md)
-- [Extensión de marcado StaticResource](staticresource-markup-extension.md)
-- [Enlazar extensión de marcado](binding-markup-extension.md)
-- [Extensión de marcado DynamicResource](dynamicresource-markup-extension.md)
-- [x:Type (Extensión de marcado)](../../xaml-services/x-type-markup-extension.md)
+- [StaticResource (extensión de marcado)](staticresource-markup-extension.md)
+- [Binding (extensión de marcado)](binding-markup-extension.md)
+- [DynamicResource (extensión de marcado)](dynamicresource-markup-extension.md)
+- [x:Type (extensión de marcado)](../../xaml-services/x-type-markup-extension.md)

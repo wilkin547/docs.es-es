@@ -5,10 +5,10 @@ ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 186d9eec0aa6ad9e327b1dd4d0f19e251c79ecf9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147282"
 ---
 # <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol::GetValue (método)
@@ -62,5 +62,5 @@ HRESULT GetValue(
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaz ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugVariableSymbol (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

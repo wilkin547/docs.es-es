@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8136ccc2306894f2a2cfc0203460cb62c0bbec73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143096"
 ---
 # <a name="iceegengenerateceememoryimage-method"></a>ICeeGen::GenerateCeeMemoryImage (Método)
@@ -52,4 +52,4 @@ HRESULT GenerateCeeMemoryImage (
   
 ## <a name="see-also"></a>Vea también
 
-- [ICeeGen (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

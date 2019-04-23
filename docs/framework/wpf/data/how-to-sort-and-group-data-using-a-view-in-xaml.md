@@ -1,5 +1,5 @@
 ---
-title: Filtrar Ordenar y agrupar datos mediante una vista en XAML
+title: Procedimiento Ordenar y agrupar datos mediante una vista en XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], grouping data in views in XAML
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
 ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144526"
 ---
-# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Filtrar Ordenar y agrupar datos mediante una vista en XAML
+# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Procedimiento Ordenar y agrupar datos mediante una vista en XAML
 En este ejemplo se muestra cómo crear una vista de una recolección de datos en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Las vistas permiten para las funcionalidades de agrupación, ordenación, filtrado y la noción de elemento actual.  
   
 ## <a name="example"></a>Ejemplo  

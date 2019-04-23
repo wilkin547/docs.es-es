@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: ebc238f6739f7db23d570688ea3c6e2031f9699f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25d7b0e8b8b98d68a0fb4a3cadab3d9f3e8747bd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729137"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59146151"
 ---
 # <a name="introducing-pluggable-protocols"></a>Escribir protocolos acoplables
 Microsoft .NET Framework proporciona una implementación por capas, extensible y administrada de servicios de Internet que se puede integrar rápida y fácilmente en las aplicaciones. Las clases de acceso a Internet de los espacios de nombres <xref:System.Net> y <xref:System.Net.Sockets> se pueden usar para implementar aplicaciones basadas en Internet y en web.  
@@ -67,6 +67,7 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  Los programadores que están familiarizados con la interfaz de Windows Sockets o que necesitan el control que proporciona la programación en el nivel de socket constatarán que las clases **System.Net.Sockets** se adaptan a sus necesidades. Las clases **System.Net.Sockets** son una transición del código administrado al código nativo dentro de las clases **System.Net**. En la mayoría de los casos, las clases **System.Net.Sockets** serializan los datos en sus homólogos de 32 bits de Windows, además de controlar todas las comprobaciones de seguridad necesarias.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Programming Pluggable Protocols (Programar protocolos acoplables)](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
 - [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)

@@ -3,10 +3,10 @@ title: <serviceCertificate> de <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
 ms.openlocfilehash: 4fe196ef8737c7abde939e36c2bb7afd5a0d86b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145345"
 ---
 # <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate > de \<clientCredentials > elemento
@@ -60,5 +60,5 @@ Especifica el certificado que se va a utilizar al autenticar un servicio al clie
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)
-- [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

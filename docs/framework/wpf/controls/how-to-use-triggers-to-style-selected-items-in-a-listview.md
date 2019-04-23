@@ -1,17 +1,17 @@
 ---
-title: Filtrar Usar desencadenadores para aplicar un estilo a los elementos seleccionados en un control ListView
+title: Procedimiento Usar desencadenadores para aplicar un estilo a los elementos seleccionados en un control ListView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 1e2bdce0-afe8-4507-9b18-f33de43de25a
 ms.openlocfilehash: ad64382b871bae9114a1e63257de3f8595376923
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145410"
 ---
-# <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>Filtrar Usar desencadenadores para aplicar un estilo a los elementos seleccionados en un control ListView
+# <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>Procedimiento Usar desencadenadores para aplicar un estilo a los elementos seleccionados en un control ListView
 En este ejemplo se muestra cómo definir <xref:System.Windows.Style.Triggers%2A> para un <xref:System.Windows.Controls.ListViewItem> control para que cuando un valor de propiedad de un <xref:System.Windows.Controls.ListViewItem> cambios, el <xref:System.Windows.Style> de la <xref:System.Windows.Controls.ListViewItem> cambia en respuesta.  
   
 ## <a name="example"></a>Ejemplo  

@@ -10,10 +10,10 @@ ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143772"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Instrucciones de programación segura para código sin administrar
@@ -48,7 +48,7 @@ El código de algunas bibliotecas necesita llamar a código no administrado (por
 |Palabra clave|Consideraciones de seguridad|  
 |-------------|-----------------------------|  
 |**safe**|Totalmente inofensivo cuando lo llama cualquier código, aunque sea código malintencionado. Se puede usar como cualquier otro código administrado. Por ejemplo, las funciones que obtienen la hora del día suelen ser seguras.|  
-|**nativas**|Neutro en cuanto a seguridad: es decir, código no administrado que requiere permiso para llamar a código no administrado. Se comprueba la seguridad, lo que detiene a los llamadores no autorizados.|  
+|**native**|Neutro en cuanto a seguridad: es decir, código no administrado que requiere permiso para llamar a código no administrado. Se comprueba la seguridad, lo que detiene a los llamadores no autorizados.|  
 |**unsafe**|Punto de entrada de código no administrado potencialmente peligroso sin seguridad. Los desarrolladores deben extremar las precauciones cuando utilicen este tipo de código no administrado, y asegurarse de aplicar otras protecciones para evitar vulnerabilidades de seguridad. Los desarrolladores deben actuar con responsabilidad, ya que esta palabra clave invalida el sistema de seguridad.|  
   
 ## <a name="see-also"></a>Vea también
