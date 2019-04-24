@@ -11,11 +11,11 @@ ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872851"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -62,7 +62,7 @@ Managed Extensibility Framework o MEF es una biblioteca para crear aplicaciones 
 
 <a name="simplecalculator_an_example_application"></a>
 
-## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: aplicación de ejemplo
+## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: ejemplo de aplicación
 
 La manera más sencilla de ver qué puede hacer MEF es compilar una aplicación sencilla con él. En este ejemplo, compilará una calculadora muy sencilla denominada SimpleCalculator. El objetivo de SimpleCalculator es crear una aplicación de consola que acepte comandos aritméticos básicos, con el formato "5+3" ó "6-2", y devuelva respuestas correctas. Con MEF, podrá agregar nuevos operadores sin cambiar el código de la aplicación.
 

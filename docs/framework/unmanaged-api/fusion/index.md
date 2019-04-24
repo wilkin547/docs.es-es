@@ -9,14 +9,14 @@ ms.assetid: f8f20967-ea17-4900-bf05-87a078095fe6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc6c9079b6f233946fa38979800e28097e849f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946125"
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Fusión (Referencia de la API no administrada)
-La API de fusión permite a un host en tiempo de ejecución acceder a las propiedades de recursos de una aplicación para encontrar las versiones correctas de estos recursos para la aplicación.  
+La API de fusión permite a un host de tiempo de ejecución acceder a las propiedades de los recursos de una aplicación para encontrar las versiones correctas de estos recursos para la aplicación.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Interfaces de Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  

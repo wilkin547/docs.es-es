@@ -29,11 +29,11 @@ ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683306"
 ---
 # <a name="generics-in-net"></a>Elementos genéricos en .NET
 
@@ -169,7 +169,7 @@ ms.locfileid: "48584148"
 |[Covarianza y contravarianza](../../../docs/standard/generics/covariance-and-contravariance.md)|Describe la covarianza y la contravarianza en los parámetros de tipo genérico.|  
 |[Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)|Proporciona información de resumen sobre las características y escenarios de uso de los tipos de colección en .NET, incluidos los tipos genéricos.|  
 |[Cuándo utilizar colecciones genéricas](../../../docs/standard/collections/when-to-use-generic-collections.md)|Describe las reglas generales para determinar cuándo utilizar los tipos de colección genéricos.|  
-|[Definición de un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Explica cómo generar ensamblados dinámicos que incluyan métodos y tipos genéricos.|  
+|[Cómo: Definir un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Explica cómo generar ensamblados dinámicos que incluyan métodos y tipos genéricos.|  
 |[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Describe los genéricos a los usuarios de Visual Basic e incluye temas sobre el uso y la definición de tipos genéricos.|  
 |[Introducción a los genéricos](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)|Proporciona información general sobre la definición y uso de tipos genéricos para usuarios de C#.|  
 |[Información general sobre genéricos en Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Describe los genéricos a los usuarios de C++ e incluye las diferencias entre genéricos y plantillas.|  

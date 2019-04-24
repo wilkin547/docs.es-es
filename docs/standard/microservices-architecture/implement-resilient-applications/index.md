@@ -1,26 +1,26 @@
 ---
-title: Implementing Resilient Applications
-description: Learn about resilience, a core concept in a microservices architecture. You must know how to handle transient failures gracefully because they will occur.
+title: Implementar aplicaciones resistentes
+description: Obtenga información sobre la resistencia, un concepto básico en una arquitectura de microservicios. Debe saber cómo controlar errores transitorios correctamente porque se producirán.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
 ms.openlocfilehash: 00724509ba6e027ef73f72bfb6f85b8ec0aa9d25
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977722"
 ---
-# <a name="implement-resilient-applications"></a>Implement Resilient Applications
+# <a name="implement-resilient-applications"></a>Implementación de aplicaciones resistentes
 
-*Your microservice and cloud-based applications must embrace the partial failures that will certainly occur eventually. You must design your application to be resilient to those partial failures.*
+*Sus aplicaciones basadas en microservicios y en la nube deben estar preparadas para los errores parciales que seguramente se acabarán produciendo en algún momento. Debe diseñar su aplicación de modo que sea resistente a estos errores parciales.*
 
-Resiliency is the ability to recover from failures and continue to function. It isn't about avoiding failures but accepting the fact that failures will happen and responding to them in a way that avoids downtime or data loss. The goal of resiliency is to return the application to a fully functioning state after a failure.
+La resistencia es la capacidad de recuperarse de errores y seguir funcionando. No se trata de evitar los errores, sino de aceptar el hecho de que se producirán errores y responder a ellos para evitar el tiempo de inactividad o la pérdida de datos. El objetivo de la resistencia consiste en que la aplicación vuelva a un estado totalmente operativo después de un error.
 
-It's challenging enough to design and deploy a microservices-based application. But you also need to keep your application running in an environment where some sort of failure is certain. Therefore, your application should be resilient. It should be designed to cope with partial failures, like network outages or nodes or VMs crashing in the cloud. Even microservices (containers) being moved to a different node within a cluster can cause intermittent short failures within the application.
+Es todo un desafío diseñar e implementar una aplicación basada en microservicios. Pero también necesita mantener la aplicación en ejecución en un entorno en el que con seguridad se producirá algún tipo de error. Por lo tanto, la aplicación debe ser resistente. Debe estar diseñada para hacer frente a errores parciales, como las interrupciones de red o el bloqueo de nodos o máquinas virtuales en la nube. Incluso los microservicios (contenedores) que se mueven a otro nodo dentro de un clúster pueden causar breves errores intermitentes dentro de la aplicación.
 
-The many individual components of your application should also incorporate health monitoring features. By following the guidelines in this chapter, you can create an application that can work smoothly in spite of transient downtime or the normal hiccups that occur in complex and cloud-based deployments.
+Los numerosos componentes individuales de la aplicación también deberían incorporar características de seguimiento de estado. Mediante las directrices descritas en este capítulo, podrá crear una aplicación que funcione sin problemas aunque se produzcan tiempos de inactividad transitorios o las interrupciones típicas de las implementaciones complejas y basadas en la nube.
 
 >[!div class="step-by-step"]
->[Previous](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
->[Next](handle-partial-failure.md)
+>[Anterior](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[Siguiente](handle-partial-failure.md)

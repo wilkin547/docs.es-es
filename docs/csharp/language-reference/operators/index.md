@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689819"
 ---
 # <a name="c-operators"></a>Operadores de C#
 
@@ -77,7 +77,7 @@ Estos operadores tienen mayor precedencia que los de la sección siguiente y men
 
 [\!x](boolean-logical-operators.md#logical-negation-operator-): negación lógica.
 
-[~x](bitwise-complement-operator.md): complemento bit a bit.
+[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-): complemento bit a bit.
 
 [++x](arithmetic-operators.md#increment-operator-): incremento de prefijo. Devuelve el valor de x después de actualizar la ubicación de almacenamiento con el valor de x que es uno mayor (normalmente agrega el entero 1).
 
@@ -90,6 +90,10 @@ Estos operadores tienen mayor precedencia que los de la sección siguiente y men
 [&x](and-operator.md): dirección de.
 
 [*x](multiplication-operator.md): desreferenciación.
+
+El [operador true](../keywords/true-false-operators.md) devuelve el valor [bool](../keywords/bool.md) `true` para indicar que un operando es definitivamente true.
+
+El [operador false](../keywords/true-false-operators.md) devuelve el valor [bool](../keywords/bool.md) `true` para indicar que un operado es definitivamente "false".
 
 ## <a name="multiplicative-operators"></a>Operadores de multiplicación
 
@@ -113,9 +117,9 @@ Estos operadores tienen mayor precedencia que los de la sección siguiente y men
 
 Estos operadores tienen mayor precedencia que los de la sección siguiente y menor que el de la anterior.
 
-[x <\<  y](left-shift-operator.md): desplaza los bits a la izquierda y rellena con cero a la derecha.
+[x <\<  y](bitwise-and-shift-operators.md#left-shift-operator-): desplaza los bits a la izquierda y rellena con cero a la derecha.
 
-[x >> y](right-shift-operator.md): desplaza los bits a la derecha. Si el operando izquierdo es `int` o `long`, los bits de la izquierda se rellenan con el bit de signo. Si el operando izquierdo es `uint` o `ulong`, los bits de la izquierda se rellenan con cero.
+[x >> y](bitwise-and-shift-operators.md#right-shift-operator-): desplaza los bits a la derecha. Si el operando izquierdo es `int` o `long`, los bits de la izquierda se rellenan con el bit de signo. Si el operando izquierdo es `uint` o `ulong`, los bits de la izquierda se rellenan con cero.
 
 ## <a name="relational-and-type-testing-operators"></a>Operadores de comprobación de tipos y relacionales
 
@@ -145,27 +149,19 @@ Estos operadores tienen mayor precedencia que los de la sección siguiente y men
 
 Este operador tiene mayor precedencia que el de la sección siguiente y menor que el de la anterior.
 
-[x & y](and-operator.md): AND lógico o bit a bit. Por lo general puede usarlo con tipos enteros y tipos `enum`.
+`x & y` – [AND lógico](boolean-logical-operators.md#logical-and-operator-) para los operandos `bool` o [AND lógico bit a bit](bitwise-and-shift-operators.md#logical-and-operator-) para los operandos de los tipos integrales.
 
 ## <a name="logical-xor-operator"></a>Operador lógico XOR
 
 Este operador tiene mayor precedencia que el de la sección siguiente y menor que el de la anterior.
 
-[x ^ y](xor-operator.md): XOR lógico o bit a bit. Por lo general puede usarlo con tipos enteros y tipos `enum`.
+`x ^ y` – [XOR lógico](boolean-logical-operators.md#logical-exclusive-or-operator-) para los operandos `bool` o [XOR lógico bit a bit](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) para los operandos de los tipos integrales.
 
 ## <a name="logical-or-operator"></a>Operador lógico OR (||)
 
 Este operador tiene mayor precedencia que el de la sección siguiente y menor que el de la anterior.
 
-[x &#124; y](or-operator.md): OR lógico o bit a bit. Por lo general puede usarlo con tipos enteros y tipos `enum`.
-
-## <a name="true-operator"></a>Operador "true"
-
-El operador [true](../keywords/true-false-operators.md) devuelve el valor [bool](../keywords/bool.md) `true` para indicar que un operado es definitivamente "true". 
-
-## <a name="false-operator"></a>Operador "false"
-
-El operador [false](../keywords/true-false-operators.md) devuelve el valor [bool](../keywords/bool.md) `true` para indicar que un operado es definitivamente "false". 
+`x | y` – [OR lógico](boolean-logical-operators.md#logical-or-operator-) para los operandos `bool` o [OR lógico bit a bit](bitwise-and-shift-operators.md#logical-or-operator-) para los operandos de los tipos integrales.
 
 ## <a name="conditional-and-operator"></a>Operador condicional AND
 
@@ -201,21 +197,21 @@ Estos operadores tienen mayor precedencia que los de la sección siguiente y men
 
 [x -= y](subtraction-assignment-operator.md): decremento. Reste el valor de `y` del valor de `x`, almacene el resultado en `x` y devuelva el nuevo valor. Si `x` designa un `event`, `y` debe ser una función adecuada que C# quite como un controlador de eventos.
 
-[x *= y](multiplication-assignment-operator.md): asignación de multiplicación. Multiplique el valor de `y` por el valor de `x`, almacene el resultado en `x` y devuelva el nuevo valor.
+[x *= y](arithmetic-operators.md#compound-assignment): asignación de multiplicación. Multiplique el valor de `y` por el valor de `x`, almacene el resultado en `x` y devuelva el nuevo valor.
 
 [x /= y](arithmetic-operators.md#compound-assignment): asignación de división. Divida el valor de `x` por el valor de `y`, almacene el resultado en `x` y devuelva el nuevo valor.
 
 [x %= y](arithmetic-operators.md#compound-assignment): asignación del resto. Divida el valor de `x` por el valor de `y`, almacene el resto en `x` y devuelva el nuevo valor.
 
-[x &= y](and-assignment-operator.md): asignación de AND. AND el valor de `y` con el valor de `x`, almacene el resultado en `x` y devuelva el nuevo valor.
+[x &= y](boolean-logical-operators.md#compound-assignment): asignación de AND. AND el valor de `y` con el valor de `x`, almacene el resultado en `x` y devuelva el nuevo valor.
 
-[x &#124;= y](or-assignment-operator.md): asignación de OR. OR el valor de `y` con el valor de `x`, almacene el resultado en `x` y devuelva el nuevo valor.
+[x &#124;= y](boolean-logical-operators.md#compound-assignment): asignación de OR. OR el valor de `y` con el valor de `x`, almacene el resultado en `x` y devuelva el nuevo valor.
 
-[x ^= y](xor-assignment-operator.md): asignación de XOR. XOR el valor de `y` con el valor de `x`, almacene el resultado en `x` y devuelva el nuevo valor.
+[x ^= y](boolean-logical-operators.md#compound-assignment): asignación de XOR. XOR el valor de `y` con el valor de `x`, almacene el resultado en `x` y devuelva el nuevo valor.
 
-[x <<= y](left-shift-assignment-operator.md): asignación de desplazamiento a la izquierda. Desplace el valor de `x` a la izquierda `y` lugares, almacene el resultado en `x` y devuelva el nuevo valor.
+[x <<= y](bitwise-and-shift-operators.md#compound-assignment): asignación de desplazamiento a la izquierda. Desplace el valor de `x` a la izquierda `y` lugares, almacene el resultado en `x` y devuelva el nuevo valor.
 
-[x >>= y](right-shift-assignment-operator.md): asignación de desplazamiento a la derecha. Desplace el valor de `x` a la derecha `y` posiciones, almacene el resultado en `x` y devuelva el nuevo valor.
+[x >>= y](bitwise-and-shift-operators.md#compound-assignment): asignación de desplazamiento a la derecha. Desplace el valor de `x` a la derecha `y` posiciones, almacene el resultado en `x` y devuelva el nuevo valor.
 
 [=>](lambda-operator.md): declaración lambda.
 
