@@ -7,10 +7,10 @@ ms.date: 04/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
 ms.openlocfilehash: 86eba0c7a3eaeed008d41ff950bf2fd7e0e5fb57
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481345"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutorial: Agrupación de flores de iris mediante un aprendiz de agrupación en clústeres con ML.NET
@@ -201,4 +201,4 @@ En este tutorial ha aprendido a:
 
 Visite nuestro repositorio de GitHub para obtener más información y encontrar más ejemplos.
 > [!div class="nextstepaction"]
-> [Repositorio dotnet/machinelearning de GitHub](https://github.com/dotnet/machinelearning/)
+> [Repositorio de GitHub de dotnet/machinelearning](https://github.com/dotnet/machinelearning/)
