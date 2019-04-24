@@ -33,10 +33,10 @@ helpviewer_keywords:
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
 ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427323"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operadores lógicos booleanos (referencia de C#)
@@ -161,10 +161,10 @@ Los operadores lógicos condicionales `&&` y `||` no admiten la asignación comp
 
 En la lista siguiente se ordenan los operadores lógicos desde la prioridad más alta a la más baja:
 
-- Operador lógico de negación `!`
-- AND lógico (operador) `&`
+- Operador de negación lógico `!`
+- Operador AND lógico `&`
 - Operador OR exclusivo lógico `^`
-- Operador lógico OR (||) `|`
+- Operador OR lógico `|`
 - Operador AND lógico condicional `&&`
 - Operador OR lógico condicional `||`
 
@@ -184,7 +184,7 @@ Un tipo definido por el usuario no puede sobrecargar los operadores lógicos con
 
 Para más información, vea las secciones siguientes de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md):
 
-- [Operador lógico de negación](~/_csharplang/spec/expressions.md#logical-negation-operator)
+- [Operador de negación lógico](~/_csharplang/spec/expressions.md#logical-negation-operator)
 - [Operadores lógicos](~/_csharplang/spec/expressions.md#logical-operators)
 - [Operadores lógicos condicionales](~/_csharplang/spec/expressions.md#conditional-logical-operators)
 
@@ -192,4 +192,4 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
-- [operadores de C#](index.md)
+- [Operadores de C#](index.md)
