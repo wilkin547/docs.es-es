@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309490"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613257"
 ---
 # <a name="com-callable-wrapper"></a>Contenedor CCW
 
@@ -182,7 +182,7 @@ Para obtener el DispId de un miembro de interfaz en tiempo de ejecución, los cl
 
 Las interfaces duales permiten el enlace en tiempo de diseño y en tiempo de ejecución de los clientes COM con los miembros de interfaz. El establecimiento de la interfaz de clase en dual puede ser útil en tiempo de diseño y durante las pruebas. Esta opción también es aceptable para una clase administrada (y sus clases base) que no se va a modificar nunca. En todos los demás casos, no es necesario establecer la interfaz de clase en dual.
 
-Una interfaz dual generada automáticamente puede ser apropiada en algunos casos, pero a menudo genera complicaciones de control de versiones. Por ejemplo, los clientes COM que usen la interfaz de clase de una clase derivada se pueden interrumpir con facilidad si se hacen cambios en la clase base. Si la clase base es de terceros, el usuario no tiene control sobre el diseño de la interfaz de clase. Además, a diferencia de una interfaz de solo envío, una interfaz dual (**ClassInterfaceType.AutoDual**) proporciona una descripción de la interfaz de clase en la biblioteca de tipos exportada. Dicha descripción hace que los clientes enlazados en tiempo de ejecución almacenen en caché los identificadores DispId en tiempo de ejecución.
+Una interfaz dual generada automáticamente puede ser apropiada en algunos casos, pero a menudo genera complicaciones de control de versiones. Por ejemplo, los clientes COM que usen la interfaz de clase de una clase derivada se pueden interrumpir con facilidad si se hacen cambios en la clase base. Si la clase base es de terceros, el usuario no tiene control sobre el diseño de la interfaz de clase. Además, a diferencia de una interfaz de solo envío, una interfaz dual (**ClassInterfaceType.AutoDual**) proporciona una descripción de la interfaz de clase en la biblioteca de tipos exportada. Dicha descripción hace que los clientes enlazados en tiempo de ejecución almacenen en caché los identificadores DispId en tiempo de compilación.
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Asegúrese de que todas las notificaciones de eventos COM están enlazadas tardíamente.
 

@@ -3,10 +3,10 @@ title: Controlar el flujo en los programas asincrónicos (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
 ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326208"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Controlar el flujo en los programas asincrónicos (C#)
@@ -388,6 +388,6 @@ int contentLength = await getLengthTask;
 ## <a name="see-also"></a>Vea también
 
 - [Programación asincrónica con Async y Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Tipos de valor devueltos asincrónicos (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
+- [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de async [C#])
 - [Tutorial: Acceso a web usando Async y Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Ejemplo de Async: Flujo de control en programas asincrónicos (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Async Sample: Flujo de control en programas asincrónicos (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

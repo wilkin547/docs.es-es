@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480838"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672464"
 ---
 # <a name="is-c-reference"></a>is (Referencia de C#)
 
@@ -84,7 +84,7 @@ La expresión `is` es `true` si *expr* no es `null` y se cumple alguna de las si
 
 - *expr* tiene un tipo en tiempo de compilación que es una clase base de *type* y *expr* tiene un tipo en tiempo de ejecución que es *type* o se deriva de *type*. El *tipo en tiempo de compilación* de una variable es el tipo de la variable tal como se define en su declaración. El *tipo en tiempo de ejecución* de una variable es el tipo de la instancia que se asigna a esa variable.
 
-- *type* es una instancia de un tipo que implementa la interfaz *type*.
+- *expr* es una instancia de un tipo que implementa la interfaz *type*.
 
 A partir de C# 7.1, *expr* puede tener un tipo de tiempo de compilación definido por un parámetro y sus restricciones. 
 
@@ -144,7 +144,7 @@ En el ejemplo siguiente se muestra una comparación de comprobaciones `null`:
  
 ### <a name="var" /> Patrón var </a>
 
-Una coincidencia de patrones con el patrón var siempre se realiza correctamente para las expresiones no nulas: si *expr* es `null`, la expresión `is` es `false`. El valor no nulo de *expr* siempre se asigna a una variable local del mismo tipo que el tipo de tiempo de ejecución de *expr*.  Su sintaxis es:
+El patrón `var` es un comodín para cualquier tipo o valor. El valor de *expr* siempre se asigna a una variable local del mismo tipo que el tipo de tiempo de compilación de *expr*. El resultado de la expresión `is` es siempre `true`. Su sintaxis es:
 
 ```csharp 
    expr is var varname

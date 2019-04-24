@@ -3,10 +3,10 @@ title: 'Tutorial: Acceso a web usando Async y Await (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
 ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306734"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Tutorial: Acceso a web usando Async y Await (C#)
@@ -235,7 +235,7 @@ Tenga en cuenta que los recuentos tardan unos segundos en mostrarse. Durante ese
     using (WebResponse response = webReq.GetResponseAsync())
     ```
 
-2. `GetResponseAsync` devuelve un valor <xref:System.Threading.Tasks.Task%601>. En este caso, la *variable de devolución de tarea*, `TResult`, tiene un tipo <xref:System.Net.WebResponse>. La tarea es una promesa para generar un objeto `WebResponse` real después de que se descarguen los datos solicitados y la tarea se ejecute hasta completarse.
+2. `GetResponseAsync` devuelve <xref:System.Threading.Tasks.Task%601>. En este caso, la *variable de devolución de tarea*, `TResult`, tiene un tipo <xref:System.Net.WebResponse>. La tarea es una promesa para generar un objeto `WebResponse` real después de que se descarguen los datos solicitados y la tarea se ejecute hasta completarse.
 
      Para recuperar el valor `WebResponse` de la tarea, aplique un operador [await](../../../../csharp/language-reference/keywords/await.md) a la llamada a `GetResponseAsync`, como se muestra en el código siguiente.
 
@@ -690,11 +690,11 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>Vea también
 
-- [Ejemplo de Async: obtener acceso al tutorial web (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Async Sample: Acceso al tutorial web (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [async](../../../../csharp/language-reference/keywords/async.md)
 - [await](../../../../csharp/language-reference/keywords/await.md)
 - [Programación asincrónica con Async y Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Tipos de valor devueltos asincrónicos (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [Task-based Asynchronous Programming (TAP) (Programación asincrónica basada en tareas [TAP])](https://www.microsoft.com/en-us/download/details.aspx?id=19957)
-- [Procedimiento para ampliar el tutorial de async usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [Procedimiento para realizar varias solicitudes web en paralelo con async y await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de async [C#])
+- [Task-based Asynchronous Programming (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957) (Programación asincrónica basada en tareas [TAP])
+- [Cómo: Ampliar el tutorial de async usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Cómo: Hacer varias solicitudes web en paralelo usando async y await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
