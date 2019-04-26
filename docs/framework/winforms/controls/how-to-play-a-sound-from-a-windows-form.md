@@ -12,11 +12,11 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
 ms.openlocfilehash: 3b9eb6f902d0d2193f0099f8e868e4ead347ce26
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913415"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>Procedimiento para reproducir un sonido desde un formulario Windows Forms
 En este ejemplo se reproduce un sonido en una ruta de acceso determinada en tiempo de ejecución.  

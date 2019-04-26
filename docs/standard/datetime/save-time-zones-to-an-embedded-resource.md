@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Guardar zonas horarias en un recurso incrustado
+title: Procedimiento para guardar zonas horarias en un recurso incrustado
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912709"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Procedimiento Guardar zonas horarias en un recurso incrustado
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Procedimiento para guardar zonas horarias en un recurso incrustado
 
 Una aplicación compatible con zona horaria a menudo requiere la presencia de una zona horaria determinada. Sin embargo, dado que la disponibilidad de la persona <xref:System.TimeZoneInfo> objetos depende de la información almacenada en el registro del sistema local, las zonas horarias disponibles habitualmente incluso puede que falte. Además, crea una instancia de información sobre zonas horarias personalizadas mediante el uso de la <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método no se almacena con otra información de zona horaria en el registro. Para asegurarse de que estas zonas horarias están disponibles cuando se necesiten, puede serializarlas para ellos y restaurarlas más adelante mediante la deserialización de ellos.
 
