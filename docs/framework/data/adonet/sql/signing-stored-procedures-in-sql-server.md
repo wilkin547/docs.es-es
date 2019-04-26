@@ -3,11 +3,11 @@ title: Firmar procedimientos almacenados en SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
 ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922192"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Firmar procedimientos almacenados en SQL Server
  Una firma digital es un resumen de datos cifrados con una clave privada del firmante. La clave privada garantiza que la firma digital sea única para su portador o propietario. Puede firmar los ensamblados, las funciones (excepto funciones con valores de tabla alineados), procedimientos almacenados y desencadenadores.  

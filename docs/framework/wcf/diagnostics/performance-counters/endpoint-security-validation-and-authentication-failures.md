@@ -1,16 +1,16 @@
 ---
-title: 'punto de conexión: Errores en la autenticación y validación de la seguridad'
+title: 'Punto de conexión: Errores de autenticación y validación de la seguridad'
 ms.date: 03/30/2017
 ms.assetid: 5bad60aa-6084-4c7b-aefd-9b581f04382e
 ms.openlocfilehash: e69549a276e2f9cece966dd44f6a1b3a3d3cb59f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916336"
 ---
-# <a name="endpoint-security-validation-and-authentication-failures"></a>punto de conexión: Errores en la autenticación y validación de la seguridad
-Nombre del contador: errores en la autenticación y validación de la seguridad  
+# <a name="endpoint-security-validation-and-authentication-failures"></a>Punto de conexión: Errores de autenticación y validación de la seguridad
+Nombre del contador: Errores de autenticación y validación de la seguridad  
   
 ## <a name="description"></a>Descripción  
  Este contador se incrementa siempre que se rechaza un mensaje debido a un problema de seguridad que no abarca el contador "Llamadas de seguridad no autorizadas". Entre estos problemas se incluyen:  

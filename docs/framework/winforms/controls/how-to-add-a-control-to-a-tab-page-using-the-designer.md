@@ -7,11 +7,11 @@ helpviewer_keywords:
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
 ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011247"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Procedimiento para agregar un control a una ficha mediante el diseñador
 El uso de los formularios de Windows <xref:System.Windows.Forms.TabControl> consiste en mostrar otros controles de forma organizada. Puede usar estas instrucciones para mostrar una imagen en la parte principal de una página de ficha. Para obtener información sobre cómo agregar un icono a la parte de la etiqueta de una página de ficha, vea [Cómo: Cambiar la apariencia del control TabControl de formularios de Windows](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  

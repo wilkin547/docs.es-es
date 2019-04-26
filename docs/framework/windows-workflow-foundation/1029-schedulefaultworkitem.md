@@ -3,18 +3,18 @@ title: 1029 - ScheduleFaultWorkItem
 ms.date: 03/30/2017
 ms.assetid: 3a56b29e-f740-459d-8576-d81e58bf5a03
 ms.openlocfilehash: f5beab91f7dd39a3f8ed3b76d6c0a1ddd9bd77c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924363"
 ---
 # <a name="1029---schedulefaultworkitem"></a>1029 - ScheduleFaultWorkItem
 ## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
-|Id.|1029|  
+|ID|1029|  
 |Palabras clave|WFRuntime|  
 |Nivel|Detallado|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
@@ -23,7 +23,7 @@ ms.locfileid: "33509735"
  Indica que se ha programado un FaultWorkItem.  
   
 ## <a name="message"></a>Mensaje  
- Un FaultWorkItem se ha programado para la actividad '%1', DisplayName: '%2', InstanceId: '%3'.  La excepción se propagó desde la actividad '%4', DisplayName: '%5', InstanceId: '%6'.  
+ Se ha programado un FaultWorkItem para la actividad '%1', DisplayName: '%2', InstanceId: '%3'.  La excepción se propagó desde la actividad '%4', DisplayName: '%5', InstanceId: '%6'.  
   
 ## <a name="details"></a>Detalles  
   

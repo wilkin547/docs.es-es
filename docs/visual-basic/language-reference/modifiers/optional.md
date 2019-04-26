@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
 ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920671"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 Especifica que se puede omitir un argumento de procedimiento cuando se llama al procedimiento.  

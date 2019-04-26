@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
 ms.openlocfilehash: d6e28e5e87c3a88e4db3fc81177894683dbb0908
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920450"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 Especifica que uno o varios elementos de programación declarados son accesibles solo desde dentro de su contexto de declaración, incluido dentro de los tipos contenidos.  

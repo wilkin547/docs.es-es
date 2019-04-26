@@ -3,11 +3,11 @@ title: 'Punto de conexión: Errores de autenticación y validación de la seguri
 ms.date: 03/30/2017
 ms.assetid: 89a70b90-d7e4-4b03-9b84-4dc88ce3d605
 ms.openlocfilehash: 43886f79585fb9a63eeb51360cc869365c100a1d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916544"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>Punto de conexión: Errores de autenticación y validación de la seguridad por segundo
 Nombre del contador: Errores de autenticación y validación de la seguridad por segundo  

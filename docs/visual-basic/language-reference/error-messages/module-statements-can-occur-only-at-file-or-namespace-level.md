@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30617
 ms.assetid: 5e9de8e5-d26b-4fb2-9e28-814413fe9cef
 ms.openlocfilehash: bf0239422fb5a98e4670aea407f684753d3a7ea4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920866"
 ---
 # <a name="module-statements-can-occur-only-at-file-or-namespace-level"></a>Las instrucciones 'Module' sólo pueden ocurrir en el nivel de archivo o de espacio de nombres
 `Module` las instrucciones deben aparecer en la parte superior del archivo de origen inmediatamente después de `Option` y `Imports` instrucciones, los atributos globales y las declaraciones de espacio de nombres, pero antes de todas las demás declaraciones.  

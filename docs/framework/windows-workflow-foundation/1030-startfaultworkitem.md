@@ -3,18 +3,18 @@ title: 1030 - StartFaultWorkItem
 ms.date: 03/30/2017
 ms.assetid: e1601fb9-0bc6-4dbe-816f-f24914063d34
 ms.openlocfilehash: 3848d644e77041a62a52eb2eae5eeef286dfe334
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924324"
 ---
 # <a name="1030---startfaultworkitem"></a>1030 - StartFaultWorkItem
 ## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
-|Id.|1030|  
+|ID|1030|  
 |Palabras clave|WFRuntime|  
 |Nivel|Detallado|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID451
 ms.assetid: 8542382a-689f-4e1b-abc0-c1e2dadb92f4
 ms.openlocfilehash: 7da1de98132f47740e805ed34ff3890f0ba0f889
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920755"
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a>El procedimiento Let de la propiedad no está definido y el procedimiento Get no ha devuelto un objeto
 Solo pueden aplicar determinadas propiedades, métodos y las operaciones a `Collection` objetos. Especifica una operación o propiedad que es exclusiva para colecciones, pero el objeto no es una colección.  

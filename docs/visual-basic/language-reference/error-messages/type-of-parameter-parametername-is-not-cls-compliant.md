@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
 ms.openlocfilehash: e0852536a86dd415334f95a47ceb800ed2c591ad
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924025"
 ---
 # <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>Tipo de parámetro '\<parametername >' no es conforme a CLS
 Un procedimiento está marcado como `<CLSCompliant(True)>` pero declara un parámetro con un tipo que está marcado como `<CLSCompliant(False)>`, no está marcado o no cumple los requisitos porque es un tipo no conforme.  
