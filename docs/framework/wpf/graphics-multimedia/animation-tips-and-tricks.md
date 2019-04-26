@@ -15,11 +15,11 @@ helpviewer_keywords:
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
 ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020275"
 ---
 # <a name="animation-tips-and-tricks"></a>Sugerencias y trucos para animaciones
 Cuando se trabaja con animaciones en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], hay una serie de sugerencias y trucos que pueden mejorar las animaciones un mejor rendimiento y evitar muchas frustraciones.  
