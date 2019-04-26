@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
 ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878831"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtrar con DataView (LINQ to DataSet)
 La capacidad de filtrar datos utilizando criterios específicos y después presentarlos a un cliente mediante un control de IU es un aspecto importante del enlace de datos. <xref:System.Data.DataView> proporciona varias maneras de filtrar datos y devolver subconjuntos de filas de datos que reúnan determinados criterios. Además de basado en la cadena de las capacidades de filtrado <xref:System.Data.DataView> también proporciona la capacidad de usar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expresiones para los criterios de filtrado. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] las expresiones que se permiten para las operaciones de filtrado más complejas y eficaces que el filtrado basado en cadena.  

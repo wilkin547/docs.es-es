@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
 ms.openlocfilehash: 75e1d583d2a4d519619a440800cdeb1403fedac2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936501"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>Procedimiento Cargar entidades relacionadas (WCF Data Services)
 Cuando necesite cargar entidades asociadas en [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede usar el método <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> de la clase <xref:System.Data.Services.Client.DataServiceContext>. También puede usar el <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> método en el <xref:System.Data.Services.Client.DataServiceQuery%601> para requerir que las entidades relacionadas se carguen rápidamente en la misma respuesta de consulta.  

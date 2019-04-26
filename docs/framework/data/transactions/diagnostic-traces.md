@@ -3,11 +3,11 @@ title: Seguimiento del diagnóstico
 ms.date: 03/30/2017
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
 ms.openlocfilehash: 56f79fb9140785188996cc413eca4dd530037ccd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934802"
 ---
 # <a name="diagnostic-traces"></a>Seguimiento del diagnóstico
 Los rastros son la publicación de mensajes concretos que se generan durante la ejecución de la aplicación. Cuando se utiliza traza debe existir un mecanismo para recopilar y registrar los mensajes que se envían. Los agentes de escucha son los objetos encargados de recibir los mensajes de seguimiento. Un agente de escucha se encarga de recopilar, almacenar y enrutar los mensajes de seguimiento. Los agentes de escucha dirigen los resultados del seguimiento a un destino apropiado, como un registro, una ventana o un archivo de texto.  
@@ -39,13 +39,13 @@ Los rastros son la publicación de mensajes concretos que se generan durante la 
   
 |Nivel de seguimiento|Descripción|  
 |-----------------|-----------------|  
-|Crítico|Los errores serios, como lo siguiente, han producido:<br /><br /> -Un error que puede provocar una pérdida de inmediata en funciones de usuario.<br />-Un evento que requiere que un administrador tomar medidas para evitar la pérdida de funcionalidad.<br />-Se bloquea el código.<br />: Este nivel de seguimiento también puede proporcionar suficiente contexto para interpretar otros seguimientos críticos. Esto puede ayudar a identificar la secuencia de operaciones que conducen a un error serio.|  
+|Crítico|Los errores serios, como lo siguiente, han producido:<br /><br /> -Un error que puede producir una pérdida inmediata en la funcionalidad del usuario.<br />-Un evento que requiere que un administrador tomar medidas para evitar la pérdida de funcionalidad.<br />-Código no responde.<br />-En este nivel de seguimiento también puede proporcionar contexto suficiente para interpretar otros rastros críticos. Esto puede ayudar a identificar la secuencia de operaciones que conducen a un error serio.|  
 |Error|Se ha producido un error (por ejemplo, configuración no válida o comportamiento de la red) que puede producir una pérdida de funcionalidad del usuario.|  
 |Advertencia|Existe una condición que puede producir como consecuencia un error o error crítico (por ejemplo, error de asignación o aproximación a un límite). El procesamiento normal de errores del código de usuario (por ejemplo, transacciones anuladas, tiempos de espera, error en la autenticación) también puede generar un mensaje de advertencia.|  
 |Información|Se han generado mensajes útiles para supervisar y diagnosticar el estado del sistema, medir el rendimiento o perfilar. Éstos pueden incluir transacción e inscripción de los eventos perpetuos, como una transacción que se está creando o confirmando, el cruce de un límite significativo o la asignación de recursos significativos. Un programador puede utilizar a continuación tal información para el diseño de la capacidad y gestión de rendimiento.|  
   
 ## <a name="trace-codes"></a>Códigos de seguimiento  
- La tabla siguiente hace una lista de los códigos de seguimiento que se generan mediante la infraestructura <xref:System.Transactions>. Incluido en la tabla son el identificador de código de seguimiento, la <xref:System.Diagnostics.EventTypeFilter.EventType%2A> nivel de enumeración para el seguimiento y los datos adicionales incluidos en el **TraceRecord** para el seguimiento. Además, el nivel de seguimiento correspondiente del seguimiento también se almacena en la **TraceRecord**.  
+ La tabla siguiente hace una lista de los códigos de seguimiento que se generan mediante la infraestructura <xref:System.Transactions>. El identificador de código de seguimiento, se encuentran incluidos en la tabla el <xref:System.Diagnostics.EventTypeFilter.EventType%2A> nivel de enumeración para el seguimiento y los datos adicionales contenidas en el **TraceRecord** para el seguimiento. Además, el nivel de seguimiento correspondiente del seguimiento también se almacena en el **TraceRecord**.  
   
 |TraceCode|EventType|Datos adicionales en TraceRecord|  
 |---------------|---------------|-------------------------------|  
@@ -56,12 +56,12 @@ Los rastros son la publicación de mensajes concretos que se generan durante la 
 |TransactionRollbackCalled|Advertencia|TransactionTraceId|  
 |TransactionAborted|Advertencia|TransactionTraceId|  
 |TransactionInDoubt|Advertencia|TransactionTraceId|  
-|TransactionScopeCreated|Info|TransactionScopeResult, que puede ser lo siguientes:<br /><br /> -Nueva transacción.<br />-Se pasa transaction.<br />-Pasa la transacción dependiente.<br />-Utilizando la transacción actual.<br />-No hay ninguna transacción.<br /><br /> Nueva TransactionTraceId actual|  
-|TransactionScopeDisposed|Info|TransactionTraceId de ámbito de la transacción actual "había esperado".|  
-|TransactionScopeIncomplete|Advertencia|TransactionTraceId de ámbito de la transacción actual "había esperado".|  
-|TransactionScopeNestedIncorrectly|Advertencia|TransactionTraceId de ámbito de la transacción actual "había esperado".|  
+|TransactionScopeCreated|Info|TransactionScopeResult, que puede ser lo siguientes:<br /><br /> -Nueva transacción.<br />-La transacción pasó.<br />-Transacción dependiente pasó.<br />-Usar la transacción actual.<br />-No hay ninguna transacción.<br /><br /> Nueva TransactionTraceId actual|  
+|TransactionScopeDisposed|Info|TransactionTraceId de ámbito de la transacción actual "esperada".|  
+|TransactionScopeIncomplete|Advertencia|TransactionTraceId de ámbito de la transacción actual "esperada".|  
+|TransactionScopeNestedIncorrectly|Advertencia|TransactionTraceId de ámbito de la transacción actual "esperada".|  
 |TransactionScopeCurrentTransactionChanged|Advertencia|TransactionTraceId actual anterior, otro TransactionTraceId|  
-|TransactionScopeTimeout|Advertencia|TransactionTraceId de ámbito de la transacción actual "había esperado".|  
+|TransactionScopeTimeout|Advertencia|TransactionTraceId de ámbito de la transacción actual "esperada".|  
 |DependentCloneCreated|Info|TransactionTraceId, tipo de transacción dependiente creada (RollbackIfNotComplete/BlockCommitUntilComplete)|  
 |DependentCloneComplete|Info|TransactionTraceId|  
 |RecoveryComplete|Info|Recurso Administrador GUID (de la base)|  
@@ -134,4 +134,4 @@ Los rastros son la publicación de mensajes concretos que se generan durante la 
  `</ResourceManagerId>`  
   
 ## <a name="security-issues-for-tracing"></a>Problemas de seguridad para seguir paso a paso  
- Cuando usted como administrador activa el seguimiento, la información confidencial puede escribirse en un registro de seguimiento que está visible públicamente de forma predeterminada. Para mitigar ninguna amenaza de seguridad posible, considere la posibilidad de almacenar el registro de seguimiento en una ubicación segura que se controla mediante permisos de acceso de sistema de archivos y recursos compartidos.
+ Cuando usted como administrador activa el seguimiento, se podría escribir información confidencial en un registro de seguimiento que está visible de forma predeterminada. Para mitigar cualquier posible amenaza de seguridad, considere la posibilidad de almacenar el registro de seguimiento en una ubicación segura controlado mediante permisos de acceso del sistema de archivos y recursos compartidos.

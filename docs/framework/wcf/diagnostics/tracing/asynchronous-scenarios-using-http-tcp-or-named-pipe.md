@@ -3,11 +3,11 @@ title: Escenarios asincrónicos en los que se usa HTTP, TCP o canalizaciones con
 ms.date: 03/30/2017
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
 ms.openlocfilehash: d08f70186a59b8717c4441167ee720ba1c20b9dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998295"
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>Escenarios asincrónicos en los que se usa HTTP, TCP o canalizaciones con nombre
 En este tema se describen las actividades y transferencias para diferentes escenarios asincrónicos de solicitud-respuesta, con solicitudes de varios subprocesos, utilizando HTTP, TCP o canalización con nombre.  
@@ -33,16 +33,16 @@ En este tema se describen las actividades y transferencias para diferentes escen
 #### <a name="propagation-is-disabled-on-either-sides-using-http"></a>La propagación está deshabilitada en cualquier lado, utilizando HTTP  
  Si `propagateActivity` = `false` en cualquier lado, ProcessMessage no indica a qué actividad processaction debe transferirse a. Por consiguiente, se invoca una nueva actividad ProcessAction temporal con un nuevo id. Cuando la respuesta asincrónica coincide con la solicitud en el código ServiceModel, el id. de actividad se puede recuperar del contexto local. La actividad ProcessAction actual se puede transferir a con ese id.  
   
- ![Escenarios asincrónicos mediante HTTP&#47;TCP&#47;canalización con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
+ ![Escenarios asincrónicos mediante HTTP&#47;TCP&#47;Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
   
- Figura 2. Cliente asincrónico, sin devolución de llamada, `propagateActivity` = `false` a ambos lados, HTTP  
+ Figura 2. Cliente asincrónico, sin devolución de llamada, `propagateActivity` = `false` en ambos lados, HTTP  
   
  Para los escenarios basados en HTTP, ReceiveBytes se invoca en el primer mensaje para enviar y existe para la duración de la solicitud.  
   
- Se crea una actividad procesar acción en un cliente asincrónico cuando `propagateActivity` = `false` en el llamador o destinatario, y cuando el mensaje de respuesta no incluye un encabezado de acción.  
+ Se crea una actividad procesar acción en un cliente asincrónico cuando `propagateActivity` = `false` en el llamador o destinatario y el mensaje de respuesta no incluye un encabezado de acción.  
   
 #### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>La propagación está habilitada en ambos lados, utilizando TCP o canalización con nombre  
- ![Escenarios asincrónicos mediante HTTP&#47;TCP&#47;canalización con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
+ ![Escenarios asincrónicos mediante HTTP&#47;TCP&#47;Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
   
  Figura 3: Cliente asincrónico, sin devolución de llamada, `propagateActivity` = `true` en ambos lados, canalización con nombre/TCP  
   
@@ -57,14 +57,14 @@ En este tema se describen las actividades y transferencias para diferentes escen
   
  ![Escenarios asincrónicos mediante HTTP&#47;TCP&#47; canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
   
- Figura 4. Cliente asincrónico, sin devolución de llamada, `propagateActivity` = `false` a ambos lados, canalización con nombre/TCP  
+ Figura 4. Cliente asincrónico, sin devolución de llamada, `propagateActivity` = `false` en cualquier lado, canalización con nombre/TCP  
   
 ### <a name="asynchronous-client-with-callback"></a>Cliente asincrónico con devolución de llamada  
  Este escenario agrega las actividades G y A', para la devolución de llamada y `endCall`y sus transferencias dentro/fuera.  
   
- Esta sección solo se muestra el uso de HTTP con `propragateActivity` = `true`. Sin embargo, las actividades adicionales y transferencias también se aplican a los otros casos (es decir, `propagateActivity` = `false`, utilizando TCP o canalizaciones con nombre).  
+ Esta sección solo se muestra utilizando HTTP con `propragateActivity` = `true`. Sin embargo, las actividades adicionales y transferencias también se aplican a los demás casos (es decir, `propagateActivity` = `false`, utilizando TCP o canalizaciones con nombre).  
   
- La devolución de llamada crea una nueva actividad (G) cuando el cliente llama al código de usuario para notificar que los resultados están listos. A continuación, el código de usuario llama a `endCall` dentro de la devolución de llamada (como se muestra en la figura 5) o fuera de la devolución de llamada (figura 6). Dado que no se sabe qué actividad de usuario `endCall` se llama desde, esta actividad con la etiqueta `A’`. Es posible que A' puede ser idéntico o diferente de A.  
+ La devolución de llamada crea una nueva actividad (G) cuando el cliente llama al código de usuario para notificar que los resultados están listos. A continuación, el código de usuario llama a `endCall` dentro de la devolución de llamada (como se muestra en la figura 5) o fuera de la devolución de llamada (figura 6). Puesto que no se sabe qué actividad de usuario `endCall` se llama desde, esta actividad se identifica como `A’`. Es posible que A' puede ser idéntico o diferente de A.  
   
  ![Escenarios asincrónicos](../../../../../docs/framework/wcf/diagnostics/tracing/media/asynccallback1.gif "AsyncCallback1")  
   
