@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
 ms.openlocfilehash: dfd366cd823931962af878de59225ea183fff7c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863511"
 ---
 # <a name="procedures-in-visual-basic"></a>Procedimientos en Visual Basic
 Un *procedimiento* es un bloque de instrucciones de Visual Basic dentro de una instrucción de declaración (`Function`, `Sub`, `Operator`, `Get`, `Set`) y una búsqueda de coincidencias `End` declaración. Todas las instrucciones ejecutables en Visual Basic deben estar dentro de algún procedimiento.  

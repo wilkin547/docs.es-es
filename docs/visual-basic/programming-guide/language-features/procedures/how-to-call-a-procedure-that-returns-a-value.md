@@ -8,11 +8,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
 ms.openlocfilehash: 6f45f01489ee84b6addb1f7c7c8dc584332f38dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864187"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Procedimiento Llamar a un procedimiento que devuelve un valor (Visual Basic)
 Un `Function` procedimiento devuelve un valor al código de llamada. Llamarlo mediante la inclusión de su nombre y argumentos en el lado derecho de una instrucción de asignación o en una expresión.  

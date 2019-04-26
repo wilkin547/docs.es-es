@@ -22,11 +22,11 @@ helpviewer_keywords:
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
 ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864500"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Operadores lógicos y bit a bit en Visual Basic
 Los operadores lógicos comparan `Boolean` expresiones y devuelven un `Boolean` resultado. El `And`, `Or`, `AndAlso`, `OrElse`, y `Xor` operadores son *binario* porque toman dos operandos, mientras el `Not` operador es *unario* porque toma un solo operando. Algunos de estos operadores también pueden realizar operaciones lógicas bit a bit de valores enteros.  

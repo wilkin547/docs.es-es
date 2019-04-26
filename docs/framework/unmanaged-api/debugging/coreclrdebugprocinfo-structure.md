@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9d4b27ca0bf454b42f15b849008e5a3019bb09a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864083"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>CoreClrDebugProcInfo (Estructura)
 Representa un proceso que se ejecuta en un equipo remoto.  
@@ -47,10 +47,10 @@ struct  CoreClrDebugProcInfo {
 |`m_wszName`|Línea de comandos del proceso. Este miembro puede truncarse.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CoreClrRemoteDebuggingInterfaces.h  
+ **Encabezado**: CoreClrRemoteDebuggingInterfaces.h  
   
- **Biblioteca:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
  **Versiones de .NET framework:** 3.5 SP1

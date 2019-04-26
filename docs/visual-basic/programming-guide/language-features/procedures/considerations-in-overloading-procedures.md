@@ -26,11 +26,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
 ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864356"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Consideraciones sobre la sobrecarga de procedimientos (Visual Basic)
 Cuando se sobrecarga un procedimiento, debe usar otro *firma* para cada versión sobrecargada. Normalmente esto significa que cada versión debe especificar una lista de parámetros distinta. Para obtener más información, vea "Firma diferente" en [sobrecarga de procedimientos](./procedure-overloading.md).  

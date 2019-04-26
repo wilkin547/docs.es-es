@@ -10,11 +10,11 @@ ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868997"
 ---
 # <a name="security-and-remoting-considerations"></a>Consideraciones de seguridad y de interacción remota
 La comunicación remota permite configurar llamadas transparentes entre dominios de aplicación, procesos o equipos. Sin embargo, el recorrido de la pila de seguridad de acceso del código no puede cruzar los límites de los procesos o equipos (se aplica entre dominios de aplicación del mismo proceso).  

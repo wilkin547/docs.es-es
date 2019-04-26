@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 18aff4d8-bde8-461b-9960-ccabb24e9d22
 ms.openlocfilehash: dd53c2fd16a82ce0f69a33e0b7d7ffef7815b91b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877154"
 ---
 # <a name="how-to-retrieve-many-objects-at-once"></a>Procedimiento para recuperar muchos objetos a la vez
 Puede recuperar muchos objetos en una consulta mediante <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.  
