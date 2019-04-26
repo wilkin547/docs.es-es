@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
 ms.openlocfilehash: f52ff1b669f821d102a65888189d9bbf2c000da8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983117"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>Obtener detalles de atributos de texto diversos mediante UI Automation
 > [!NOTE]
