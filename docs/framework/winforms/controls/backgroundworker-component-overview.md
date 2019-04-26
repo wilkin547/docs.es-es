@@ -18,11 +18,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
 ms.openlocfilehash: da535da0b0d1416597d2a62a96cec544d7be68fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011819"
 ---
 # <a name="backgroundworker-component-overview"></a>Información general sobre el componente BackgroundWorker
 Muchas operaciones que se realizan habitualmente pueden tardar mucho tiempo en ejecutarse. Por ejemplo:  
