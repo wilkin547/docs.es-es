@@ -3,11 +3,11 @@ title: Hospedaje en una aplicación administrada
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
 ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855834"
 ---
 # <a name="hosting-in-a-managed-application"></a>Hospedaje en una aplicación administrada
 Servicios de Windows Communication Foundation (WCF) se pueden hospedar en cualquier [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicación. Los servicios autohospedados constituyen la opción de hospedaje más flexible porque es la que requiere una menor infraestructura para su implementación. Sin embargo, también es la opción de hospedaje menos robusta, porque las aplicaciones administradas no proporcionan hospedaje avanzado y características de administración de otras opciones de hospedaje de WCF, como los servicios de Internet Information Services (IIS) y Windows.  

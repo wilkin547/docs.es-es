@@ -14,24 +14,24 @@ ms.assetid: 3f63b1bc-9a4b-4bde-84ea-ab028a80d3e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a65798c46b01bb7a702559d685590ecf7a6f2793
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61819761"
 ---
 # <a name="finding-the-time-zones-defined-on-a-local-system"></a>Buscar las zonas horarias definidas en un sistema local
 
 La clase <xref:System.TimeZoneInfo> no expone un constructor público. Como resultado, la palabra clave `new` no se puede utilizar para crear un nuevo objeto <xref:System.TimeZoneInfo>. En su lugar, se crean instancias de los objetos <xref:System.TimeZoneInfo> recuperando información sobre zonas horarias predefinidas del registro o creando una zona horaria personalizada. En este tema, se explica cómo crear instancias de una zona horaria a partir de los datos almacenados en el registro. Además, las propiedades `static` (`shared` en Visual Basic) de la clase <xref:System.TimeZoneInfo> proporcionan acceso a la hora universal coordinada (UTC) y a la zona horaria local.
 
 > [!NOTE]
-> Para las zonas horarias que no están definidas en el registro, puede crear zonas horarias personalizadas mediante llamadas a las sobrecargas del método <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>. Creación de una zona horaria personalizada se describe en el [Cómo: crear zonas horarias sin reglas de ajuste](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) y [Cómo: crear zonas horarias con reglas de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) temas. Además, puede crear instancias de un objeto <xref:System.TimeZoneInfo> restaurándolo a partir de una cadena serializada con el método <xref:System.TimeZoneInfo.FromSerializedString%2A>. Serializar y deserializar un <xref:System.TimeZoneInfo> objeto se describe en el [Cómo: guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) y [Cómo: restaurar zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) temas.
+> Para las zonas horarias que no están definidas en el registro, puede crear zonas horarias personalizadas mediante llamadas a las sobrecargas del método <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>. Creación de una zona horaria personalizada se describe en el [Cómo: Crear zonas horarias sin reglas de ajuste](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) y [Cómo: Creación de zonas horarias con reglas de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) temas. Además, puede crear instancias de un objeto <xref:System.TimeZoneInfo> restaurándolo a partir de una cadena serializada con el método <xref:System.TimeZoneInfo.FromSerializedString%2A>. Serializar y deserializar un <xref:System.TimeZoneInfo> objeto se describe en el [Cómo: Guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) y [Cómo: Restaurar zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) temas.
 
 ## <a name="accessing-individual-time-zones"></a>Acceso a zonas horarias individuales
 
-La clase <xref:System.TimeZoneInfo> proporciona dos objetos de zona horaria predefinidos que representan la hora UTC y la zona horaria local. Están disponibles desde las propiedades <xref:System.TimeZoneInfo.Utc%2A> y <xref:System.TimeZoneInfo.Local%2A>, respectivamente. Para obtener instrucciones sobre cómo acceder a las zonas de hora local o UTC, consulte [Cómo: obtener acceso a los objetos de zona horaria local y UTC predefinidos](../../../docs/standard/datetime/access-utc-and-local.md).
+La clase <xref:System.TimeZoneInfo> proporciona dos objetos de zona horaria predefinidos que representan la hora UTC y la zona horaria local. Están disponibles desde las propiedades <xref:System.TimeZoneInfo.Utc%2A> y <xref:System.TimeZoneInfo.Local%2A>, respectivamente. Para obtener instrucciones sobre cómo acceder a las zonas de hora local o UTC, consulte [Cómo: Obtener acceso a los objetos de zona horaria local y UTC predefinidos](../../../docs/standard/datetime/access-utc-and-local.md).
 
-También puede crear instancias de un objeto <xref:System.TimeZoneInfo> que representa cualquier zona horaria definida en el registro. Para obtener instrucciones sobre cómo crear instancias de un objeto de zona horaria concreto, vea [Cómo: crear una instancia de un objeto TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
+También puede crear instancias de un objeto <xref:System.TimeZoneInfo> que representa cualquier zona horaria definida en el registro. Para obtener instrucciones sobre cómo crear instancias de un objeto de zona horaria concreto, vea [Cómo: Crear una instancia de un objeto TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
 
 ## <a name="time-zone-identifiers"></a>Identificadores de zona horaria
 
@@ -40,6 +40,6 @@ El identificador de zona horaria es un campo clave que identifica de forma únic
 ## <a name="see-also"></a>Vea también
 
 - [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
-- [Acceso a los objetos de zona horaria local y UTC predefinidos](../../../docs/standard/datetime/access-utc-and-local.md)
-- [Crear instancias de un objeto TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md)
+- [Cómo: Obtener acceso a los objetos de zona horaria local y UTC predefinidos](../../../docs/standard/datetime/access-utc-and-local.md)
+- [Cómo: Crear una instancia de un objeto TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md)
 - [Conversión de horas entre zonas horarias](../../../docs/standard/datetime/converting-between-time-zones.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
 ms.openlocfilehash: 8fb78f3c14708c79f1910e202287c25a3b2213b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803056"
 ---
 # <a name="get-accessor-of-property-propertyname-is-not-accessible"></a>'Get' descriptor de acceso de propiedad '\<propertyname >' no es accesible
 Una instrucción intenta recuperar el valor de una propiedad cuando no tiene acceso a la propiedad `Get` procedimiento.  

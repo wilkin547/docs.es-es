@@ -14,11 +14,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
 ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830172"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Características de los elementos declarados (Visual Basic)
 Un *característica* de un elemento declarado es un aspecto del elemento que afecta a cómo el código puede interactuar con él. Cada elemento declarado tiene una o varias de las siguientes características asociadas con él:  

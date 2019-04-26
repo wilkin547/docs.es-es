@@ -3,11 +3,11 @@ title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
 ms.openlocfilehash: 575b2a3e34246e1082d34545baaf812203a1dde1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855847"
 ---
 # <a name="hosting"></a>Hospedaje
 Los temas de esta sección describen el hospedaje de servicios. Se puede hospedar un servicio de Internet Information Services (IIS), servicio de activación de proceso de Windows (WAS), Windows Server AppFabric, un servicio de Windows o una aplicación administrada, esta opción se conoce a menudo como *autohospedaje*.  

@@ -3,11 +3,11 @@ title: Hospedar servicios de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
 ms.openlocfilehash: c933fd2bd46588ccd5c6115fbc2efca72bfadca4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855873"
 ---
 # <a name="hosting-workflow-services"></a>Hospedar servicios de flujo de trabajo
 Debe hospedarse un servicio del flujo de trabajo para que responda a los mensajes entrantes. Los servicios del flujo de trabajo usan la infraestructura de mensajería de WCF y, por lo tanto, se hospedan de maneras similares. Como los servicios WCF, servicios de flujo de trabajo se pueden hospedar en cualquier aplicación administrada, en Internet Information Services (IIS) o en Windows Process Activation Services (WAS). Además, los servicios de flujo de trabajo pueden hospedarse en Windows Server App Fabric. Para obtener más información acerca de Windows Server App Fabric, consulte [documentación de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric Hosting Features](https://go.microsoft.com/fwlink/?LinkId=196494), y [conceptos de hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495). Para obtener más información sobre las diversas maneras de hospedaje de WCF los servicios, consulte [servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md).
@@ -18,7 +18,7 @@ Debe hospedarse un servicio del flujo de trabajo para que responda a los mensaje
 ## <a name="hosting-under-iis-or-was"></a>Hospedar en IIS o WAS
  Hospedar un servicio de flujo de trabajo en IIS o FUE implica la creación de un directorio virtual y la colocación de archivos en el directorio virtual para definir el servicio y su comportamiento. Al hospedar un servicio de flujo de trabajo en IIS o WAS, existen varias posibilidades:
 
--   Coloque un archivo .xamlx que defina el servicio de flujo de trabajo en un directorio virtual de IIS/WAS junto con un archivo Web.config que especifique los comportamientos del servicio, los extremos y otros elementos de configuración.
+-   Coloque un archivo .xamlx que defina el servicio de flujo de trabajo en un directorio virtual de IIS/WAS junto con un archivo Web.config que especifique los comportamientos del servicio, los puntos de conexión y otros elementos de configuración.
 
 -   Coloque en un directorio virtual de IIS/WAS un archivo .xamlx que defina el servicio del flujo de trabajo. El archivo .xamlx especifica los extremos que se van a exponer. Los extremos se especifican en un elemento `WorkflowService.Endpoints`, como se muestra en el siguiente ejemplo.
 

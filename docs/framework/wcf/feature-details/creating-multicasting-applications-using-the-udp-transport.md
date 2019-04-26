@@ -3,11 +3,11 @@ title: Crear aplicaciones de multidifusión mediante el transporte UDP
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
 ms.openlocfilehash: b65a277b6e76767d1e3bfdbebbac5051759986e0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857199"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Crear aplicaciones de multidifusión mediante el transporte UDP
 Las aplicaciones de multidifusión envían pequeños mensajes a un gran número de destinatarios al mismo tiempo sin necesidad de establecer conexiones punto a punto. El énfasis de esas aplicaciones es la velocidad sobre la conconfiabilidad. Es decir es más importante enviar datos puntualmente que asegurarse de que cualquier mensaje concreto se reciba realmente. WCF admite ahora la escritura de aplicaciones de multidifusión mediante <xref:System.ServiceModel.UdpBinding>. Este transporte es útil en escenarios donde un servicio necesita enviar pequeños mensajes a varios clientes simultáneamente. Una aplicación de cotización bursátil es un ejemplo de este tipo de servicio.  
@@ -59,7 +59,7 @@ Console.WriteLine("Start receiving stock information");
 Console.ReadLine();
 ```  
   
- La aplicación especifica la dirección UDP en la que todos los servicios escucharán. Se crea un nuevo <xref:System.ServiceModel.ServiceHost> y un extremo de servicio se expone mediante <xref:System.ServiceModel.UdpBinding>. <xref:System.ServiceModel.ServiceHost> se abre y empezará a escuchar mensajes entrantes.  
+ La aplicación especifica la dirección UDP en la que todos los servicios escucharán. Se crea un nuevo <xref:System.ServiceModel.ServiceHost> y un punto de conexión de servicio se expone mediante <xref:System.ServiceModel.UdpBinding>. <xref:System.ServiceModel.ServiceHost> se abre y empezará a escuchar mensajes entrantes.  
   
  En este tipo de escenario es el cliente quien envía realmente mensajes de multidifusión. Cada servicio que está escuchando en la dirección UDP correcta recibirá los mensajes de multidifusión. A continuación se muestra un ejemplo de un cliente que envía mensajes de multidifusión:  
   
