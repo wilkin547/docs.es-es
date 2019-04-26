@@ -3,18 +3,18 @@ title: 1012 - StartExecuteActivityWorkItem
 ms.date: 03/30/2017
 ms.assetid: 29e9b1c6-c5d7-4b58-b59d-a06a923d3c80
 ms.openlocfilehash: d6b330bc454c39584e5027f757fd9d9d3434d941
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924584"
 ---
 # <a name="1012---startexecuteactivityworkitem"></a>1012 - StartExecuteActivityWorkItem
 ## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
-|Id.|1012|  
+|ID|1012|  
 |Palabras clave|WFRuntime|  
 |Nivel|Detallado|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
