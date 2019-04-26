@@ -3,11 +3,11 @@ title: Literales
 description: Obtenga información sobre los tipos literales en la F# lenguaje de programación.
 ms.date: 02/08/2019
 ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904571"
 ---
 # <a name="literals"></a>Literales
 
@@ -28,7 +28,7 @@ La siguiente tabla muestra los tipos literales en F#. Caracteres que representan
 |uint16|número natural de 16 bits sin signo|us|`86us`|
 |int<br /><br />int32|entero de 32 bits con signo|l o none|`86`<br /><br />`86l`|
 |uint<br /><br />uint32|número natural de 32 bits sin signo|u o ul|`86u`<br /><br />`86ul`|
-|unativeint|puntero nativo como un número natural sin signo|anular|`0x00002D3Fun`|
+|unativeint.|puntero nativo como un número natural sin signo|anular|`0x00002D3Fun`|
 |int64|entero de 64 bits con signo|L|`86L`|
 |uint64|número natural de 64 bits sin signo|UL|`86UL`|
 |float32 único,|número de punto flotante de 32 bits|F o f|`4.14F` o `4.14f`|

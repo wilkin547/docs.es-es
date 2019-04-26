@@ -1,5 +1,5 @@
 ---
-title: Filtrar Obtener un elemento ListBoxItem
+title: Procedimiento Obtener un elemento ListBoxItem
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListBoxItem [WPF]
 ms.assetid: da877c6f-5fd8-40cb-8909-225cbfd99aa5
 ms.openlocfilehash: 27a435feb4a941c77af221ab25bd63ea98b16e92
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910330"
 ---
 # <a name="how-to-get-a-listboxitem"></a>Procedimiento Obtener un elemento ListBoxItem
 Si necesita obtener un determinado <xref:System.Windows.Controls.ListBoxItem> en un índice determinado en un <xref:System.Windows.Controls.ListBox>, puede usar un <xref:System.Windows.Controls.ItemContainerGenerator>.  

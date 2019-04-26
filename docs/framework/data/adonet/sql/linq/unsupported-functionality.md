@@ -3,11 +3,11 @@ title: Funcionalidad incompatible
 ms.date: 03/30/2017
 ms.assetid: e480cfb5-697e-42c8-bed5-9264c945c4f9
 ms.openlocfilehash: 18a1a8f33a9360b4299648bcd329f4c5f2e7de88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917563"
 ---
 # <a name="unsupported-functionality"></a>Funcionalidad incompatible
 En LINQ to SQL, la siguiente funcionalidad de SQL no se puede exponer a través de la conversión de las construcciones existentes de Common Language Runtime (CLR) y .NET Framework:  

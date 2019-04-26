@@ -3,11 +3,11 @@ title: Escenarios de seguimiento de traza de un extremo a otro
 ms.date: 03/30/2017
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
 ms.openlocfilehash: 6e2f62841e610d6eab95b908088f24cf2fec0c34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912514"
 ---
 # <a name="end-to-end-tracing-scenarios"></a>Escenarios de seguimiento de traza de un extremo a otro
 Esta sección contiene temas que describen los diferentes escenarios de utilización del seguimiento de traza.  

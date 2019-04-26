@@ -1,5 +1,5 @@
 ---
-title: Filtrar Convertir un elemento BitmapSource en un formato de píxeles indizado
+title: Procedimiento Convertir un elemento BitmapSource a un formato de píxeles indexado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - BitmapSource objects [WPF], converting to palettized pixel format
 ms.assetid: ccb03a83-8c72-4353-89da-48312d16548b
 ms.openlocfilehash: 69ccf82a42f6ec640106f554a10e7d2c86754220
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910018"
 ---
-# <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a>Procedimiento Convertir un elemento BitmapSource en un formato de píxeles indizado
+# <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a>Procedimiento Convertir un elemento BitmapSource a un formato de píxeles indexado
 En este ejemplo se muestra cómo convertir un <xref:System.Windows.Media.Imaging.BitmapSource> a un formato de píxeles indizado.  
   
 ## <a name="example"></a>Ejemplo  

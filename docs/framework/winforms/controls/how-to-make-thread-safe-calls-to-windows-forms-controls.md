@@ -1,5 +1,5 @@
 ---
-title: Filtrar Realizar llamadas seguras para subprocesos a controles de formularios Windows Forms
+title: Procedimiento Realizar llamadas seguras para subprocesos a controles de formularios Windows Forms
 ms.date: 02/19/2019
 dev_langs:
 - csharp
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
 ms.openlocfilehash: 3211df1f0e585780039471b80b5b913613ad9bbd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913801"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Filtrar Realizar llamadas seguras para subprocesos a controles de formularios Windows Forms
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Procedimiento Realizar llamadas seguras para subprocesos a controles de formularios Windows Forms
 
 El multithreading puede mejorar el rendimiento de las aplicaciones de Windows Forms, pero el acceso a los controles de Windows Forms no es intrínsecamente seguro para subprocesos. El multithreading puede exponer el código de errores muy graves y complejos. Dos o más subprocesos para manipular un control pueden forzar el control a un estado incoherente y conducir a condiciones de carrera, interbloqueos y se inmoviliza o se bloquea. Si implementa multithreading en la aplicación, asegúrese de llamar a los controles entre subprocesos de forma segura para subprocesos. Para obtener más información, consulte [Managed threading best practices](../../../standard/threading/managed-threading-best-practices.md). 
 
