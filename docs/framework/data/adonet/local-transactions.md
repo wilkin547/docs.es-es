@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
 ms.openlocfilehash: e139cafa168b0a6851e5d8474e6bb4db94f36e9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878519"
 ---
 # <a name="local-transactions"></a>Transacciones locales
 Las transacciones de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] se utilizan cuando se desea enlazar varias tareas para que se ejecuten como una sola unidad de trabajo. Por ejemplo, imagine que una aplicación realiza dos tareas. Primero, actualiza una tabla con información de pedidos. Luego, actualiza una tabla que contiene la información de inventario, cargando en cuenta los elementos pedidos. Si se produce un error en alguna de las tareas, a continuación, ambas actualizaciones se revierten.  

@@ -3,11 +3,11 @@ title: Crear roles de aplicación en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
 ms.openlocfilehash: f836fd239eca30d0a1f4a667cddc844446d1d951
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878025"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Crear roles de aplicación en SQL Server
 Los roles de aplicación proporcionan un método para asignar permisos a una aplicación sin necesidad de utilizar un rol o o un usuario de base de datos. Los usuarios se pueden conectar a la base de datos, activar el rol de aplicación y asumir los permisos concedidos a la aplicación. Los permisos concedidos al rol de aplicación se mantienen mientras dura la conexión.  

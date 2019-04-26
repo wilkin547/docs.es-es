@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
 ms.openlocfilehash: 6c2e554b7e6bde3e82190f70723f272b0d39a18a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880040"
 ---
 # <a name="handling-dataview-events"></a>Controlar eventos de DataView
 Puede utilizar el evento <xref:System.Data.DataView.ListChanged> de la <xref:System.Data.DataView> para determinar si se ha actualizado una vista. Entre las actualizaciones que generan el evento se incluyen la agregación de una fila a la tabla subyacente, así como su eliminación o modificación; la agregación de una columna al esquema de la tabla subyacente o su eliminación y la modificación de una relación primaria o secundaria. El **ListChanged** evento también le notifica si la lista de filas que está viendo ha cambiado considerablemente por la aplicación de un nuevo criterio de ordenación o filtro.  
