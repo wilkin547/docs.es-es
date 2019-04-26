@@ -13,11 +13,11 @@ helpviewer_keywords:
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
 ms.openlocfilehash: 88002e2c099ed9503beddb190d243aadcc1087fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908029"
 ---
 # <a name="array-conversions-visual-basic"></a>Conversión de matrices (Visual Basic)
 Puede convertir un tipo de matriz a un tipo de matriz diferente siempre que se cumplan las condiciones siguientes:  

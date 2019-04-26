@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
 ms.openlocfilehash: 52c448f21be056e6166334785943356039baf3ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909305"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Escenarios del control DataGridView (formularios Windows Forms)
 Con el <xref:System.Windows.Forms.DataGridView> control, puede mostrar datos tabulares de una variedad de orígenes de datos. Para usos simples, puede rellenar manualmente un <xref:System.Windows.Forms.DataGridView> y manipular los datos directamente a través del control. Por lo general, sin embargo, almacenará los datos en un origen de datos externo y enlazar el control a él a través de un <xref:System.Windows.Forms.BindingSource> componente.  

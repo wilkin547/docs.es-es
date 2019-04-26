@@ -3,11 +3,11 @@ title: Seguimiento de actividades en la seguridad de mensajes
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 ms.openlocfilehash: c3bd36598fd903dc016959149e563174624d084b
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912657"
 ---
 # <a name="activity-tracing-in-message-security"></a>Seguimiento de actividades en la seguridad de mensajes
 En este tema se describe el seguimiento de actividades para el procesamiento de seguridad, que pasa en las tres fases siguientes.  
@@ -19,7 +19,7 @@ En este tema se describe el seguimiento de actividades para el procesamiento de 
 -   Autorización y comprobación. Esto puede pasar localmente o en la comunicación entre extremos.  
   
 ## <a name="negotiationsct-exchange"></a>Intercambio de SCT/negociación.  
- En la fase del intercambio de SCT/negociación, dos tipos de actividad se crean en el cliente: “Configurar sesión segura” y “Cerrar sesión segura”. “Configurar sesión segura” abarca los seguimientos de los intercambios de mensajes RST/RSTR/SCT, mientras que “Cerrar sesión segura” incluye los seguimientos para el mensaje de cancelación.  
+ En la fase de intercambio de SCT/negociación, se crean dos tipos de actividad en el cliente: "Configurar sesión segura" y "Cerrar sesión segura". “Configurar sesión segura” abarca los seguimientos de los intercambios de mensajes RST/RSTR/SCT, mientras que “Cerrar sesión segura” incluye los seguimientos para el mensaje de cancelación.  
   
  En el servidor, cada solicitud/responda para RST/RSTR/SCT aparece en su propia actividad. Si `propagateActivity` = `true` en el servidor y cliente, las actividades del servidor tienen el mismo identificador y aparecen juntas en el "Configurar sesión segura" cuando se ven a través de Service Trace Viewer.  
   
@@ -42,7 +42,7 @@ En este tema se describe el seguimiento de actividades para el procesamiento de 
 |-|---------------------------------------------------------------------------------|  
 |Hora en la que tiene lugar el cifrado/descifrado y la autenticación de la firma|En mensaje recibido|  
 |Actividades|Los seguimientos se emiten en la actividad ProcessAction en el cliente y servidor.|  
-|Seguimientos|-sendSecurityHeader (remitente):<br />: Mensaje de inicio de sesión<br />-Cifrar los datos de solicitud<br />-receiveSecurityHeader (receptor):<br />-Comprobar firma<br />-Descifrar los datos de respuesta<br />-Autenticación|  
+|Seguimientos|-   sendSecurityHeader (sender):<br />: Mensaje de inicio de sesión<br />-Cifrar los datos de solicitud<br />-   receiveSecurityHeader (receiver):<br />-Comprobar firma<br />-Descifrar los datos de respuesta<br />-Autenticación|  
   
 > [!NOTE]
 >  En modo de transporte puro, el cifrado/descifrado del mensaje solo sucede en transporte sin actividades adicionales.  

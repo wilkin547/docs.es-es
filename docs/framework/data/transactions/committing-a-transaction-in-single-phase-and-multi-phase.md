@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
 ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875971"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Confirmar una transacción en fase única y múltiple
 Un administrador de recursos (RM) administra cada recurso utilizado, cuyas acciones coordina un administrador de transacciones (TM). El [dar de alta recursos como participantes en una transacción](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) tema explica cómo pueden inscribirse en una transacción de un recurso (o varios recursos). En este tema se trata cómo la confirmación de la transacción se puede coordinar entre los recursos inscritos.  

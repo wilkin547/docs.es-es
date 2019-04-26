@@ -9,11 +9,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
 ms.openlocfilehash: 1b85941c14721280a5025db442c4793930244ec8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864551"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Diferencias entre pasar un argumento por valor y por referencia (Visual Basic)
 Al pasar uno o más argumentos a un procedimiento, cada argumento corresponde a un elemento de programación subyacente en el código de llamada. Puede pasar el valor de este elemento subyacente, o bien una referencia a él. Esto se conoce como el *mecanismo para pasar argumentos*.  

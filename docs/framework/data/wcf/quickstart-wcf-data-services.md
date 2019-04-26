@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
 ms.openlocfilehash: f20ffcf356aa0493b1e2356746d9ad7b27d9a1aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876205"
 ---
 # <a name="quickstart-wcf-data-services"></a>Inicio rápido (Servicios de datos de WCF)
 
@@ -28,7 +28,7 @@ Para completar este tutorial rápido, debe instalar los siguientes componentes:
 
 - Una instancia de SQL Server. Esto incluye SQL Server Express, que se incluye en una instalación predeterminada de Visual Studio 2015 o como parte de la **procesamiento y almacenamiento de datos** carga de trabajo en Visual Studio 2017.
 
-- Base de datos de ejemplo Northwind. Para descargar esta base de datos de ejemplo, consulte la página de descarga, [bases de datos de ejemplo para SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
+- Base de datos de ejemplo Northwind. Para descargar esta base de datos de ejemplo, consulte la página de descargas, [Bases de datos de ejemplo de SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
 
 ## <a name="wcf-data-services-quickstart-tasks"></a>Tareas del tutorial rápido de WCF data services
 
@@ -45,7 +45,7 @@ Para completar este tutorial rápido, debe instalar los siguientes componentes:
  Crear una aplicación WPF para consumir la fuente de OData, enlazar datos a controles de Windows, cambie los datos en los controles enlazados y, a continuación, devuelva los cambios al servicio de datos.
 
 > [!NOTE]
-> Archivos de proyecto de una versión completada del tutorial rápido se pueden descargar desde el [WCF Data Services Documentation Samples](https://go.microsoft.com/fwlink/?LinkId=179994) página.
+> Los archivos de proyecto de una versión completada del tutorial rápido se pueden descargar en la página de [ejemplos de documentación de Servicios de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=179994) .
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
 ms.openlocfilehash: eed20417b44b9af78c92871a619f2ccf857b6bba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864472"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>API para el hospedaje nativo de WPF en explorador
 Hospedaje de [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] aplicaciones en exploradores Web se ve facilitado por un servidor de documentos activos (también denominado DocObject) registrado desde el Host de WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] puede activar y directamente integrar con un documento activo. Para el hospedaje de aplicaciones XBAP y documentos XAML flexibles en los exploradores Mozilla, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] ofrece un complemento NPAPI, que proporciona un entorno de hospedaje similar a la [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] servidor de documentos activos como [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] does. Sin embargo, la manera más fácil práctica para hospedar las aplicaciones XBAP y XAML se documenta en otros exploradores y aplicaciones independientes es mediante el control de explorador Web Internet Explorer. El control de explorador Web proporciona el entorno de hospedaje de servidor complejo de documento activo, pero permite su propio host personalizar y extender ese entorno y comunicarse directamente con el objeto de documento activo actual.  

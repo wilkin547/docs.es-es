@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
 ms.openlocfilehash: bb279e6fa16b82bffbebc777f791ce7a6e06255d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875334"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Utilidad del cliente de Servicio de datos de WCF (DataSvcUtil.exe)
 
@@ -38,7 +38,7 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |Opción|Descripción|
 |------------|-----------------|
 |`/dataservicecollection`|Especifica que también se genera el código necesario para enlazar los objetos a los controles.|
-|`/help`<br /><br /> o bien<br /><br /> `/?`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|
+|`/help`<br /><br /> -o bien-<br /><br /> `/?`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|
 |`/in:` *\<file>*|Especifica el archivo .csdl o .edmx o un directorio donde se encuentra el archivo.|
 |`/language:`[VB&#124;CSharp]|Especifica el lenguaje de los archivos de código fuente generados. El lenguaje predeterminado es C#.|
 |`/nologo`|Evita que se muestre el mensaje de copyright.|

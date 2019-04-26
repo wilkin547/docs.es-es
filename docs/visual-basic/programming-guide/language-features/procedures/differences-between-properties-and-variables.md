@@ -15,11 +15,11 @@ helpviewer_keywords:
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
 ms.openlocfilehash: de4800e23519c2cc1c8b2b219287b9fa018b9bbf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864579"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Diferencias entre propiedades y variables en Visual Basic
 Variables y propiedades representan valores que puede tener acceso. Sin embargo, hay diferencias en el almacenamiento y la implementación.  
