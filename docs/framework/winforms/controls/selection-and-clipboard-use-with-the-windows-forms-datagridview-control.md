@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
 ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902257"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Selección y uso del Portapapeles con el control DataGridView de formularios Windows Forms
 El `DataGridView` control proporciona una variedad de opciones para configurar cómo los usuarios pueden seleccionar celdas, filas y columnas. Por ejemplo, puede habilitar selección única o múltiple, selección de filas o columnas cuando los usuarios, haga clic en las celdas completas o selección de filas o columnas completas solo cuando los usuarios, haga clic en los encabezados, lo que permite también la selección de celda. Si desea proporcionar su propia interfaz de usuario para la selección, se puede deshabilitar la selección ordinaria y controlar todas las selecciones mediante programación. Además, puede habilitar que los usuarios copien los valores seleccionados en el Portapapeles.  

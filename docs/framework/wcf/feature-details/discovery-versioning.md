@@ -3,11 +3,11 @@ title: Versión de la detección
 ms.date: 03/30/2017
 ms.assetid: f91c6d0a-3af2-45c5-9a5c-e75390619836
 ms.openlocfilehash: 18c160e5e08ed9b6733bed9d5e40a4dde00dfd1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856653"
 ---
 # <a name="discovery-versioning"></a>Versión de la detección
 Este tema proporciona información general breve sobre la implementación de algunas nuevas características de detección. También proporciona información general sobre cómo seleccionar la versión de detección que se desea usar.  
@@ -26,7 +26,7 @@ Este tema proporciona información general breve sobre la implementación de alg
 -   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
 ### <a name="discoveryversionwsdiscoveryapril2005"></a>DiscoveryVersion.WSDiscoveryApril2005  
- Proporcionar <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005> como constructor parámetro hace que la implementación use la versión April2005 del protocolo WS-Discovery. Esta versión corresponde a la versión publicada de la especificación de protocolo de WS-Discovery. Esta versión se debería utilizar para interoperar con la aplicación heredada que utiliza la versión April2005 de WS-Discovery.  
+ Proporcionar <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005> como un constructor de parámetro hace que la implementación use la versión April2005 del protocolo WS-Discovery. Esta versión corresponde a la versión publicada de la especificación de protocolo de WS-Discovery. Esta versión se debería utilizar para interoperar con la aplicación heredada que utiliza la versión April2005 de WS-Discovery.  
   
 ### <a name="discoveryversionwsdiscovery11"></a>DiscoveryVersion.WSDiscovery11  
  Es la versión de detección predeterminada utilizada por las API <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscovery11>. Ésta es la versión actual normalizada del protocolo de WS-Discovery.  
