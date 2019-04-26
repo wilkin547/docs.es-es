@@ -11,78 +11,78 @@ ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dfd241056947fbf1daf48b84ff41e3f74ff7b8de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674289"
 ---
-# <a name="compatsortnlsversion-element"></a><span data-ttu-id="1d945-102">\<CompatSortNLSVersion > elemento</span><span class="sxs-lookup"><span data-stu-id="1d945-102">\<CompatSortNLSVersion> Element</span></span>
-<span data-ttu-id="1d945-103">Especifica que el runtime debe usar criterios de ordenación heredados al realizar comparaciones de cadenas.</span><span class="sxs-lookup"><span data-stu-id="1d945-103">Specifies that the runtime should use legacy sort orders when performing string comparisons.</span></span>  
+# <a name="compatsortnlsversion-element"></a><span data-ttu-id="f4f4d-102">\<CompatSortNLSVersion > elemento</span><span class="sxs-lookup"><span data-stu-id="f4f4d-102">\<CompatSortNLSVersion> Element</span></span>
+<span data-ttu-id="f4f4d-103">Especifica que el runtime debe usar criterios de ordenación heredados al realizar comparaciones de cadenas.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-103">Specifies that the runtime should use legacy sort orders when performing string comparisons.</span></span>  
   
- <span data-ttu-id="1d945-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="1d945-104">\<configuration></span></span>  
-<span data-ttu-id="1d945-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="1d945-105">\<runtime></span></span>  
-<span data-ttu-id="1d945-106">\<CompatSortNLSVersion > elemento</span><span class="sxs-lookup"><span data-stu-id="1d945-106">\<CompatSortNLSVersion> Element</span></span>  
+ <span data-ttu-id="f4f4d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f4f4d-104">\<configuration></span></span>  
+<span data-ttu-id="f4f4d-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="f4f4d-105">\<runtime></span></span>  
+<span data-ttu-id="f4f4d-106">\<CompatSortNLSVersion > elemento</span><span class="sxs-lookup"><span data-stu-id="f4f4d-106">\<CompatSortNLSVersion> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1d945-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1d945-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f4f4d-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f4f4d-107">Syntax</span></span>  
   
 ```xml  
 <CompatSortNLSVersion    
    enabled="4096"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="1d945-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="1d945-108">Attributes and Elements</span></span>  
- <span data-ttu-id="1d945-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="1d945-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f4f4d-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="f4f4d-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="f4f4d-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="1d945-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="1d945-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f4f4d-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="f4f4d-110">Attributes</span></span>  
   
-|<span data-ttu-id="1d945-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="1d945-111">Attribute</span></span>|<span data-ttu-id="1d945-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="1d945-112">Description</span></span>|  
+|<span data-ttu-id="f4f4d-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="f4f4d-111">Attribute</span></span>|<span data-ttu-id="f4f4d-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="f4f4d-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="1d945-113">Atributo necesario.</span><span class="sxs-lookup"><span data-stu-id="1d945-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="1d945-114">Especifica el identificador de configuración regional cuyo criterio de ordenación se va a usar.</span><span class="sxs-lookup"><span data-stu-id="1d945-114">Specifies the locale ID whose sort order is to be used.</span></span>|  
+|`enabled`|<span data-ttu-id="f4f4d-113">Atributo necesario.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="f4f4d-114">Especifica el identificador de configuración regional cuyo criterio de ordenación se va a usar.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-114">Specifies the locale ID whose sort order is to be used.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="1d945-115">Atributo enabled</span><span class="sxs-lookup"><span data-stu-id="1d945-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="f4f4d-115">Atributo enabled</span><span class="sxs-lookup"><span data-stu-id="f4f4d-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="1d945-116">Valor</span><span class="sxs-lookup"><span data-stu-id="1d945-116">Value</span></span>|<span data-ttu-id="1d945-117">Descripción</span><span class="sxs-lookup"><span data-stu-id="1d945-117">Description</span></span>|  
+|<span data-ttu-id="f4f4d-116">Valor</span><span class="sxs-lookup"><span data-stu-id="f4f4d-116">Value</span></span>|<span data-ttu-id="f4f4d-117">Descripción</span><span class="sxs-lookup"><span data-stu-id="f4f4d-117">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="1d945-118">4096</span><span class="sxs-lookup"><span data-stu-id="1d945-118">4096</span></span>|<span data-ttu-id="1d945-119">El identificador de configuración regional que representa un criterio de ordenación alternativo.</span><span class="sxs-lookup"><span data-stu-id="1d945-119">The locale ID that represents an alternate sort order.</span></span> <span data-ttu-id="1d945-120">En este caso, 4096 representa el criterio de ordenación de [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] y versiones anteriores.</span><span class="sxs-lookup"><span data-stu-id="1d945-120">In this case, 4096 represents the sort order of the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] and earlier versions.</span></span>|  
+|<span data-ttu-id="f4f4d-118">4096</span><span class="sxs-lookup"><span data-stu-id="f4f4d-118">4096</span></span>|<span data-ttu-id="f4f4d-119">El identificador de configuración regional que representa un criterio de ordenación alternativo.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-119">The locale ID that represents an alternate sort order.</span></span> <span data-ttu-id="f4f4d-120">En este caso, 4096 representa el criterio de ordenación de [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] y versiones anteriores.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-120">In this case, 4096 represents the sort order of the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] and earlier versions.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="1d945-121">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="1d945-121">Child Elements</span></span>  
- <span data-ttu-id="1d945-122">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="1d945-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f4f4d-121">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="f4f4d-121">Child Elements</span></span>  
+ <span data-ttu-id="f4f4d-122">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="1d945-123">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="1d945-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f4f4d-123">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="f4f4d-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="1d945-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="1d945-124">Element</span></span>|<span data-ttu-id="1d945-125">Descripción</span><span class="sxs-lookup"><span data-stu-id="1d945-125">Description</span></span>|  
+|<span data-ttu-id="f4f4d-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="f4f4d-124">Element</span></span>|<span data-ttu-id="f4f4d-125">Descripción</span><span class="sxs-lookup"><span data-stu-id="f4f4d-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="1d945-126">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1d945-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="1d945-127">Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="1d945-127">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="f4f4d-126">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="f4f4d-127">Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-127">Contains information about runtime initialization options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1d945-128">Comentarios</span><span class="sxs-lookup"><span data-stu-id="1d945-128">Remarks</span></span>  
- <span data-ttu-id="1d945-129">Ya que realizan operaciones de mayúsculas y minúsculas, ordenación y comparación de cadenas por la <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> clase en el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] cumple el estándar Unicode 5.1, los resultados de los métodos de comparación de cadenas como <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> y <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> pueden diferir de versiones anteriores de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1d945-129">Because string comparison, sorting, and casing operations performed by the <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> class in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] conform to the Unicode 5.1 standard, the results of string comparison methods such as <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> and <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> may differ from previous versions of the .NET Framework.</span></span> <span data-ttu-id="1d945-130">Si la aplicación depende de un comportamiento heredado, puede restaurar las reglas de comparación y ordenación de cadenas usadas en [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] y versiones anteriores incluyendo el elemento `<CompatSortNLSVersion>` en el archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="1d945-130">If your application depends on legacy behavior, you can restore the string comparison and sorting rules used in the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] and earlier versions by including the `<CompatSortNLSVersion>` element in your application's configuration file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f4f4d-128">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f4f4d-128">Remarks</span></span>  
+ <span data-ttu-id="f4f4d-129">Ya que realizan operaciones de mayúsculas y minúsculas, ordenación y comparación de cadenas por la <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> clase en el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] cumple el estándar Unicode 5.1, los resultados de los métodos de comparación de cadenas como <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> y <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> pueden diferir de versiones anteriores de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-129">Because string comparison, sorting, and casing operations performed by the <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> class in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] conform to the Unicode 5.1 standard, the results of string comparison methods such as <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> and <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> may differ from previous versions of the .NET Framework.</span></span> <span data-ttu-id="f4f4d-130">Si la aplicación depende de un comportamiento heredado, puede restaurar las reglas de comparación y ordenación de cadenas usadas en [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] y versiones anteriores incluyendo el elemento `<CompatSortNLSVersion>` en el archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-130">If your application depends on legacy behavior, you can restore the string comparison and sorting rules used in the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] and earlier versions by including the `<CompatSortNLSVersion>` element in your application's configuration file.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="1d945-131">La restauración de reglas de comparación y ordenación de cadenas heredadas también requiere que la biblioteca de vínculos dinámicos sort00001000.dll esté disponible en el sistema local.</span><span class="sxs-lookup"><span data-stu-id="1d945-131">Restoring legacy string comparison and sorting rules also requires the sort00001000.dll dynamic link library to be available on the local system.</span></span>  
+>  <span data-ttu-id="f4f4d-131">La restauración de reglas de comparación y ordenación de cadenas heredadas también requiere que la biblioteca de vínculos dinámicos sort00001000.dll esté disponible en el sistema local.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-131">Restoring legacy string comparison and sorting rules also requires the sort00001000.dll dynamic link library to be available on the local system.</span></span>  
   
- <span data-ttu-id="1d945-132">También puede usar reglas de ordenación y comparación de cadenas heredadas en un dominio de aplicación concreto. Para ello, pase la cadena "NetFx40_Legacy20SortingBehavior" al método <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> al crear el dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="1d945-132">You can also use legacy string sorting and comparison rules in a specific application domain by passing the string "NetFx40_Legacy20SortingBehavior" to the <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> method when you create the application domain.</span></span>  
+ <span data-ttu-id="f4f4d-132">También puede usar reglas de ordenación y comparación de cadenas heredadas en un dominio de aplicación concreto. Para ello, pase la cadena "NetFx40_Legacy20SortingBehavior" al método <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> al crear el dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-132">You can also use legacy string sorting and comparison rules in a specific application domain by passing the string "NetFx40_Legacy20SortingBehavior" to the <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> method when you create the application domain.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1d945-133">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1d945-133">Example</span></span>  
- <span data-ttu-id="1d945-134">En el ejemplo siguiente, se crean instancias de dos objetos <xref:System.String> y se llama al método <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> para compararlas usando las convenciones de la referencia cultural actual.</span><span class="sxs-lookup"><span data-stu-id="1d945-134">The following example instantiates two <xref:System.String> objects and calls the <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> method to compare them by using the conventions of the current culture.</span></span>  
+## <a name="example"></a><span data-ttu-id="f4f4d-133">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f4f4d-133">Example</span></span>  
+ <span data-ttu-id="f4f4d-134">En el ejemplo siguiente, se crean instancias de dos objetos <xref:System.String> y se llama al método <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> para compararlas usando las convenciones de la referencia cultural actual.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-134">The following example instantiates two <xref:System.String> objects and calls the <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> method to compare them by using the conventions of the current culture.</span></span>  
   
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- <span data-ttu-id="1d945-135">Al ejecutar el ejemplo en [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], muestra el siguiente resultado.</span><span class="sxs-lookup"><span data-stu-id="1d945-135">When you run the example on the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], it displays the following output.</span></span>  
+ <span data-ttu-id="f4f4d-135">Al ejecutar el ejemplo en [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], muestra el siguiente resultado.</span><span class="sxs-lookup"><span data-stu-id="f4f4d-135">When you run the example on the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], it displays the following output.</span></span>  
   
 ```  
 sta follows a in the sort order.  
 ```  
   
- <span data-ttu-id="1d945-136">Este es completamente diferente del resultado que se muestra al ejecutar el ejemplo en [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1d945-136">This is completely different from the output that is displayed when you run the example on the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span></span>  
+ <span data-ttu-id="f4f4d-136">Este es completamente diferente del resultado que se muestra al ejecutar el ejemplo en [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f4f4d-136">This is completely different from the output that is displayed when you run the example on the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span></span>  
   
 ```  
 sta equals a in the sort order.  
 ```  
   
- <span data-ttu-id="1d945-137">Sin embargo, si agrega el siguiente archivo de configuración al directorio del ejemplo y, a continuación, ejecuta el ejemplo en [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], el resultado es idéntico al producido por el ejemplo cuando se ejecuta en [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1d945-137">However, if you add the following configuration file to the example's directory and then run the example on the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], the output is identical to that produced by the example when it is run on the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span></span>  
+ <span data-ttu-id="f4f4d-137">Sin embargo, si agrega el siguiente archivo de configuración al directorio del ejemplo y, a continuación, ejecuta el ejemplo en [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], el resultado es idéntico al producido por el ejemplo cuando se ejecuta en [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f4f4d-137">However, if you add the following configuration file to the example's directory and then run the example on the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], the output is identical to that produced by the example when it is run on the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span></span>  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -93,7 +93,7 @@ sta equals a in the sort order.
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1d945-138">Vea también</span><span class="sxs-lookup"><span data-stu-id="1d945-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f4f4d-138">Vea también</span><span class="sxs-lookup"><span data-stu-id="f4f4d-138">See also</span></span>
 
-- [<span data-ttu-id="1d945-139">Esquema de la configuración de Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="1d945-139">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="1d945-140">Esquema de los archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="1d945-140">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="f4f4d-139">Esquema de la configuración de Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="f4f4d-139">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="f4f4d-140">Esquema de los archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="f4f4d-140">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
