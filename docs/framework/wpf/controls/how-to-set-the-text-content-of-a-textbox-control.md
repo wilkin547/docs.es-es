@@ -9,11 +9,11 @@ helpviewer_keywords:
 - TextBox control [WPF], setting text content
 ms.assetid: bcd25fc7-a52f-4453-b802-2c8d2b335ab8
 ms.openlocfilehash: da91e27b804d649f5b8010bc9d7c074425be26f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024149"
 ---
 # <a name="how-to-set-the-text-content-of-a-textbox-control"></a>Procedimiento Establecer el contenido de texto de un control TextBox
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Controls.TextBox.Text%2A> propiedad para establecer el contenido inicial del texto de un <xref:System.Windows.Controls.TextBox> control.  

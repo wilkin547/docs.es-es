@@ -5,11 +5,11 @@ helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
 ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921958"
 ---
 # <a name="load-balancing"></a>Equilibrio de carga
 Una manera de aumentar la capacidad de las aplicaciones de Windows Communication Foundation (WCF) es escalarlas implementándolas en una granja de servidores con equilibrio de carga. Aplicaciones WCF pueden ser el equilibrio de carga mediante técnicas, incluidos los equilibradores de carga de software como Windows Network Load Balancing de equilibrio de carga estándar, así como dispositivos de equilibrio de carga basado en hardware.  
