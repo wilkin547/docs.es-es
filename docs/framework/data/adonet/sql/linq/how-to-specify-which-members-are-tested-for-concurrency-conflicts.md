@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d2cda293-1e2f-4878-af0e-5aaf0d092120
 ms.openlocfilehash: 9a1b4ab2dc28c569473eddbf50b96d10298d8d3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902738"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Procedimiento para especificar en qué miembros se comprueban los conflictos de simultaneidad
 Aplicar una de las tres enumeraciones a la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> propiedad en un <xref:System.Data.Linq.Mapping.ColumnAttribute> comprueba el atributo para especificar qué miembros estarán incluidos en la actualización para la detección de conflictos de simultaneidad optimista.  

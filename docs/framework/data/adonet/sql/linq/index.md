@@ -3,11 +3,11 @@ title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
 ms.openlocfilehash: 532813f68c0996337ce3bed8172a826425db1ec0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902608"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] es un componente de [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] versión 3.5 que proporciona una infraestructura en tiempo de ejecución para administrar los datos relacionales como objetos.  
@@ -38,7 +38,7 @@ ms.locfileid: "56092233"
  [Language-Integrated Query (LINQ):C#](../../../../../csharp/programming-guide/concepts/linq/index.md)\
  Proporciona información general sobre las tecnologías LINQ en C#.
  
- [Language-Integrated Query (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [Language Integrated Query (LINQ) (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Proporciona información general sobre las tecnologías LINQ en Visual Basic.
   
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
