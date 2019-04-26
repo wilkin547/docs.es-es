@@ -5,11 +5,11 @@ helpviewer_keywords:
 - TextBox control [WPF], multiple lines of text
 ms.assetid: 05914a93-d0ea-4a9a-b693-09df7d4e2ac2
 ms.openlocfilehash: 29fb4c9498fe163c36e71680242d3ef8cf98c089
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001278"
 ---
 # <a name="how-to-create-a-multiline-textbox-control"></a>Procedimiento Crear un control TextBox multilínea
 En este ejemplo se muestra cómo usar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] para definir un <xref:System.Windows.Controls.TextBox> control que se expandirá automáticamente para alojar varias líneas de texto.  

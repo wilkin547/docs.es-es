@@ -3,17 +3,17 @@ title: Quitar el estado de vista, el diseñador agrega a un archivo XAML - WF
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
 ms.openlocfilehash: 71a2aadeefd53b391f4589ed9dc32d9cd6e3183a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004944"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Quitar el estado de vista, el diseñador agrega a un archivo XAML
 
 Este ejemplo muestra cómo crear una clase que se deriva de <xref:System.Xaml.XamlWriter> y quita el estado de vista de un archivo XAML. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] escribe información en el documento XAML, que se conoce como estado de la vista. El estado de la vista hace referencia a la información que se necesita en tiempo de diseño, como la posición del diseño, que no se necesita en tiempo de ejecución. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] inserta esta información en el documento XAML mientras se edita. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] escribe el estado de la vista en el archivo XAML con el atributo `mc:Ignorable`, por lo que esta información no se carga cuando el tiempo de ejecución carga el archivo XAML. Este ejemplo muestra cómo crear una clase que quite esa información del estado de vista mientras se procesan los nodos XAML.
 
-## <a name="discussion"></a>Explicación
+## <a name="discussion"></a>Discusión
 
 En este ejemplo se muestra cómo crear un sistema de escritura personalizado.
 

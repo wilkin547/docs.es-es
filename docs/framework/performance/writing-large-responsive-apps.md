@@ -5,11 +5,11 @@ ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861236"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escribir aplicaciones grandes de .NET Framework que respondan
 En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de las aplicaciones .NET Framework de gran tamaño o de aquellas aplicaciones que procesan una gran cantidad de datos, como archivos o bases de datos. Estas sugerencias proceden de reescribir los compiladores de C# y Visual Basic en código administrado; además, el artículo incluye varios ejemplos reales del compilador de C#. 
@@ -408,7 +408,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- Como puede ver, el nuevo código con almacenamiento en caché tiene un campo `SyntaxTree` denominado `cachedResult`. Cuando este campo es null, `GetSyntaxTreeAsync()` hace el trabajo y guarda el resultado en la caché. `GetSyntaxTreeAsync()` devuelve el objeto `SyntaxTree`. El problema es que cuando se tiene una función `async` de tipo `Task<SyntaxTree>`, y se devuelve un valor de tipo `SyntaxTree`, el compilador emite código para asignar una tarea que contenga el resultado (mediante `Task<SyntaxTree>.FromResult()`). La tarea se marca como completada y el resultado está disponible de inmediato. En el código de los nuevos compiladores, la aparición de objetos <xref:System.Threading.Tasks.Task> que ya se habían completado se producía tan a menudo que corregir estas asignaciones mejoró sensiblemente la respuesta. 
+ Como puede ver, el nuevo código con almacenamiento en caché tiene un campo `SyntaxTree` denominado `cachedResult`. Cuando este campo es null, `GetSyntaxTreeAsync()` hace el trabajo y guarda el resultado en la caché. `GetSyntaxTreeAsync()` Devuelve el `SyntaxTree` objeto. El problema es que cuando se tiene una función `async` de tipo `Task<SyntaxTree>`, y se devuelve un valor de tipo `SyntaxTree`, el compilador emite código para asignar una tarea que contenga el resultado (mediante `Task<SyntaxTree>.FromResult()`). La tarea se marca como completada y el resultado está disponible de inmediato. En el código de los nuevos compiladores, la aparición de objetos <xref:System.Threading.Tasks.Task> que ya se habían completado se producía tan a menudo que corregir estas asignaciones mejoró sensiblemente la respuesta. 
   
  **Corrección para el ejemplo 6**  
   
