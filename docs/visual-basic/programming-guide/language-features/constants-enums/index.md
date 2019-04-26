@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
 ms.openlocfilehash: dfd9330210dd748d739cd8da2985795099beacd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907301"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Constantes y enumeraciones en Visual Basic
 Las constantes son una forma de usar nombres significativos en lugar de un valor que no cambia. Las constantes almacenan valores que, como su nombre indica, permanecen constantes durante la ejecución de una aplicación. Puede usar constantes para proporcionar nombres descriptivos, en lugar de números, de forma que el código sea más legible.  
@@ -25,14 +25,14 @@ Las constantes son una forma de usar nombres significativos en lugar de un valor
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |[Información general sobre las constantes](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|En los temas de esta sección se describen las constantes y sus usos.|  
 |[Información general sobre las enumeraciones](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|En los temas de esta sección se describen las enumeraciones y sus usos.|  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |[Const (instrucción)](../../../../visual-basic/language-reference/statements/const-statement.md)|Se describe la instrucción `Const`, que se usa para declarar constantes.|  
 |[Enum (instrucción)](../../../../visual-basic/language-reference/statements/enum-statement.md)|Se describe la instrucción `Enum`, que se usa para crear enumeraciones.|  

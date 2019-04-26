@@ -5,11 +5,11 @@ ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906326"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)
 
@@ -337,8 +337,7 @@ Aplicar la directiva `Dynamic` a un método implica los siguientes cambios de di
 
 - Si el método es genérico, los tipos sobre los cuales se crea una instancia del método se marcan con la directiva `Browse`.
 
-- 
-  `MethodInfo.Invoke` puede invocar al método y la creación de delegados se hace posible mediante <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>.
+- `MethodInfo.Invoke` puede invocar al método y la creación de delegados se hace posible mediante <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>.
 
 Aplicar la directiva `Dynamic` a un campo implica los siguientes cambios de directiva:
 

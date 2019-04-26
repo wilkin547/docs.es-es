@@ -3,11 +3,11 @@ title: Colecciones de esquemas de Oracle
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
 ms.openlocfilehash: 016a21b2106e955fd9806c5fb62833bc37da1f2f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878480"
 ---
 # <a name="oracle-schema-collections"></a>Colecciones de esquemas de Oracle
 
@@ -56,7 +56,7 @@ El proveedor de datos Microsoft .NET Framework para Oracle admite, además de la
 |OWNER|String|Propietario de la tabla, vista o clúster.|
 |TABLE_NAME|String|Nombre de la tabla, vista o clúster.|
 |COLUMN_NAME|String|Nombre de columna.|
-|Id.|Decimal|Número de secuencia de la columna que se crea.|
+|ID|Decimal|Número de secuencia de la columna que se crea.|
 |DATATYPE|String|Tipo de datos de la columna.|
 |LENGTH|Decimal|Longitud de la columna en bytes.|
 |PRECISION|Decimal|Precisión decimal del tipo de datos NUMBER; precisión binaria del tipo de datos FLOAT; NULL para todos los demás tipos de datos.|
@@ -187,7 +187,7 @@ El proveedor de datos Microsoft .NET Framework para Oracle admite, además de la
 |ColumName|DataType|Descripción|
 |----------------|--------------|-----------------|
 |NAME|String|Nombre del usuario.|
-|Id.|Decimal|Número de id. del usuario.|
+|ID|Decimal|Número de id. del usuario.|
 |CREATEDATE|DateTime|Fecha de creación del usuario.|
 
 ## <a name="views"></a>Vistas
