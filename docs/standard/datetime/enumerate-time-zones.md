@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Enumerar zonas horarias presentes en un equipo
+title: Procedimiento para enumerar zonas horarias presentes en un equipo
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,18 +12,18 @@ ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 697cd40482aee73fd150359acb710ffc258c3df2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908679"
 ---
-# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Procedimiento Enumerar zonas horarias presentes en un equipo
+# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Procedimiento para enumerar zonas horarias presentes en un equipo
 
 Para trabajar correctamente con una zona horaria designada, es necesario que la información sobre esa zona horaria esté a disposición del sistema. Los sistemas operativos Windows XP y Windows Vista almacenar esta información en el registro. Pero aunque el número total de zonas horarias que existe en el mundo es elevado, el Registro contiene información sobre solo un subconjunto de ellas. Además, el propio Registro es una estructura dinámica cuyo contenido está sujeto a cambios intencionados y accidentales. Como resultado, una aplicación no siempre puede suponer que una zona horaria determinada esté definida y disponible en un sistema. El primer paso para muchas aplicaciones que usan aplicaciones de información de zona horaria es determinar si las zonas horarias necesarias están disponibles en el sistema local o proporcionar al usuario una lista de zonas horarias entre las que seleccionar. Esto exige que una aplicación enumere las zonas horarias definidas en un sistema local.
 
 > [!NOTE]
-> Si una aplicación se basa en la presencia de una zona horaria determinada que no se pueden definir en un sistema local, la aplicación puede garantizar su presencia si serializar y deserializar la información sobre la zona horaria. La zona horaria, a continuación, se pueden agregar a un control de lista para que el usuario de la aplicación puede seleccionarla. Para obtener más información, vea [Cómo: Guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) y [Cómo: Restaurar zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+> Si una aplicación se basa en la presencia de una zona horaria determinada que no se pueden definir en un sistema local, la aplicación puede garantizar su presencia si serializar y deserializar la información sobre la zona horaria. La zona horaria, a continuación, se pueden agregar a un control de lista para que el usuario de la aplicación puede seleccionarla. Para obtener más detalles, vea [Cómo: Guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) y [Cómo: Restaurar zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Para enumerar las zonas horarias presentes en el sistema local
 

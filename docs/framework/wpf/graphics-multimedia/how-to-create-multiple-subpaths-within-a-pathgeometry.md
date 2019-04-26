@@ -7,11 +7,11 @@ helpviewer_keywords:
 - subpaths [WPF]
 ms.assetid: 104a862c-dde2-4e62-ac87-80660dd1681c
 ms.openlocfilehash: 286075448cd6a343f8a7b15b2b5005f840f68e1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904727"
 ---
 # <a name="how-to-create-multiple-subpaths-within-a-pathgeometry"></a>Procedimiento Crear varios subtrazados en un objeto PathGeometry
 En este ejemplo se muestra cómo crear varios subtrazados en un <xref:System.Windows.Media.PathGeometry>. Para crear varios subtrazados, cree un <xref:System.Windows.Media.PathFigure> para cada subtrazado.  
