@@ -3,11 +3,11 @@ title: Implementación de un servicio WFC hospedado en Internet Information Serv
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
 ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858329"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implementación de un servicio WFC hospedado en Internet Information Services
 
@@ -23,7 +23,7 @@ Desarrollar e implementar un servicio de Windows Communication Foundation (WCF) 
 
 - Configurar el servicio WCF.
 
-Para obtener un tutorial detallado de la creación de un servicio WCF hospedado en IIS, consulte [Cómo: hospedar un servicio WCF en IIS](how-to-host-a-wcf-service-in-iis.md).
+Para obtener un tutorial detallado de la creación de un servicio WCF hospedado en IIS, vea [Cómo: Hospedar un servicio WCF en IIS](how-to-host-a-wcf-service-in-iis.md).
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>Asegurarse de que IIS, ASP.NET y WCF se instalen y registren correctamente
 
@@ -35,7 +35,7 @@ Pueden encontrar instrucciones para instalar IIS en otros sistemas operativos en
 
 El proceso de instalación de .NET Framework registra automáticamente WCF con IIS si IIS ya está presente en el equipo. Si se instala IIS después de .NET Framework, se requiere un paso adicional para registrar WCF en IIS y ASP.NET. Puede hacer esto de la siguiente manera, en función de su sistema operativo:
 
-- Windows 7 y Windows Server 2003: Use el [herramienta de registro de ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) herramienta para registrar WCF con IIS. Para usar esta herramienta, escriba **ServiceModelReg.exe /i /x** en el [símbolo del sistema para desarrolladores de Visual Studio](../../tools/developer-command-prompt-for-vs.md).
+- Windows 7 y Windows Server 2003: Use la [herramienta de registro de ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) herramienta para registrar WCF con IIS. Para usar esta herramienta, escriba **ServiceModelReg.exe /i /x** en el [símbolo del sistema para desarrolladores de Visual Studio](../../tools/developer-command-prompt-for-vs.md).
 
 - Windows 7: Por último, debe comprobar que ASP.NET está configurado para utilizar .NET Framework versión 4 o posterior. Para ello, ejecute la herramienta ASPNET_Regiis con la `–i` opción. Para obtener más información, consulte [herramienta de registro de IIS de ASP.NET](https://go.microsoft.com/fwlink/?LinkId=201186).
 
@@ -115,4 +115,4 @@ Por ejemplo, un extremo de WCF configurado para usar la autenticación implícit
 
 - [Hospedaje en Internet Information Services](hosting-in-internet-information-services.md)
 - [Procedimientos recomendados de hospedaje de Internet Information Services](internet-information-services-hosting-best-practices.md)
-- [Características de hospedaje de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Características de hospedaje de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -3,11 +3,11 @@ title: Procedimiento Comparar el contenido de dos carpetas (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
 ms.openlocfilehash: 668f72e2a891a9332093b97ebc927c156ad2087c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855717"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Procedimiento Comparar el contenido de dos carpetas (LINQ) (Visual Basic)
 En este ejemplo se muestran tres maneras de comparar dos listados de archivos:  
