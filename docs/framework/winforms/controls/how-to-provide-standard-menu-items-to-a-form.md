@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: 75db9126-e70c-4e81-921d-b83c0a4a9f50
 ms.openlocfilehash: bb101c57cfb453e0419357741c5cf42dc29221b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913203"
 ---
 # <a name="how-to-provide-standard-menu-items-to-a-form"></a>Procedimiento para proporcionar elementos de menú estándar a un formulario
 Puede proporcionar un menú estándar para los formularios con el control <xref:System.Windows.Forms.MenuStrip>.  

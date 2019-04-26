@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], DockPanel
 ms.assetid: 62544800-db6a-4124-8cb0-ed9bc4a90901
 ms.openlocfilehash: ff2f23a0515f8a086d3082c6bf3000c49ed91dfd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911864"
 ---
 # <a name="dockpanel-how-to-topics"></a>Temas "Cómo..." del elemento DockPanel
 Los temas de esta sección describen cómo usar el <xref:System.Windows.Controls.DockPanel> elemento que se va a colocar los elementos secundarios a lo largo del borde de un contenedor de diseño.  
