@@ -17,11 +17,11 @@ ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d5f807481468b61365c8b4d8412f12a4741ebb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912761"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Efectuar operaciones aritméticas con fechas y horas
 
@@ -78,7 +78,7 @@ La <xref:System.TimeZoneInfo> clase incluye una serie de métodos de conversión
 
 Para obtener más información, consulte [convertir horas entre zonas horarias](../../../docs/standard/datetime/converting-between-time-zones.md).
 
-La <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> clase no proporciona ningún método que se aplica automáticamente a las reglas de ajuste al realizar la fecha y hora aritmético. Para hacerlo, puede convertir la hora de una zona horaria a la hora UTC, realizar la operación aritmética y, después, convertir la hora UTC de nuevo a la hora de la zona horaria. Para obtener más información, vea [Cómo: Usar zonas horarias en fecha y hora aritmético](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).
+La <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> clase no proporciona ningún método que se aplica automáticamente a las reglas de ajuste al realizar la fecha y hora aritmético. Para hacerlo, puede convertir la hora de una zona horaria a la hora UTC, realizar la operación aritmética y, después, convertir la hora UTC de nuevo a la hora de la zona horaria. Para obtener más detalles, vea [Cómo: Usar zonas horarias en fecha y hora aritmético](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).
 
 Por ejemplo, el código siguiente se parece al código anterior que sumaba dos horas y media a la fecha y hora 2:00 a. m. del 9 de marzo de 2008. Pero, dado que convierte una hora estándar central a la hora UTC antes de realizar la operación aritmética de fecha y hora y, después, convierte el resultado en hora UTC de nuevo a la hora estándar central, la hora resultante refleja la transición de la zona de la hora estándar central al horario de verano.
 

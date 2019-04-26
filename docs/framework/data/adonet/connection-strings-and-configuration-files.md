@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880079"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadenas de conexión y archivos de configuración
 La incrustación de cadenas de conexión en el código de la aplicación puede producir vulnerabilidades en la seguridad y problemas de mantenimiento. Las cadenas de conexión sin cifrar compiladas en el código fuente de una aplicación se pueden ver con la herramienta [Ildasm.exe (Desensamblador de IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Además, si la cadena de conexión cambia en algún momento, será necesario compilar de nuevo la aplicación. Por estas razones, se recomienda almacenar las cadenas de conexión en un archivo de configuración de la aplicación.  

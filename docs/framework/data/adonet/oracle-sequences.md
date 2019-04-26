@@ -3,11 +3,11 @@ title: Secuencias de Oracle
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
 ms.openlocfilehash: 8fe7513093d06f3928540f2de8cba902ce62b56e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878457"
 ---
 # <a name="oracle-sequences"></a>Secuencias de Oracle
 El proveedor de datos .NET Framework para Oracle proporciona compatibilidad para recuperar los valores clave de secuencia de Oracle que genera el servidor después de realizar inserciones con <xref:System.Data.OracleClient.OracleDataAdapter>.  

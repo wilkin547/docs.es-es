@@ -3,11 +3,11 @@ title: propiedad
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
 ms.openlocfilehash: 71a04f334ec465b0f11cc8f18f2680df651081eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879051"
 ---
 # <a name="property"></a>propiedad
 *Propiedades* son los pilares fundamentales de [tipos de entidad](../../../../docs/framework/data/adonet/entity-type.md) y [tipos complejos](../../../../docs/framework/data/adonet/complex-type.md). Las propiedades definen la forma y características de datos que una instancia del tipo de entidad o la instancia del tipo complejo contendrá. Las propiedades en un modelo conceptual son análogas a las propiedades definidas en una clase. Del mismo modo que las propiedades en una clase definen la forma de la clase y proporcionan información sobre los objetos, las propiedades en un modelo conceptual definen la forma de un tipo de entidad y proporcionan información sobre las instancias del tipo de entidad.  
