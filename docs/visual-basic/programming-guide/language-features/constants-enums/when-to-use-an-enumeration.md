@@ -5,11 +5,11 @@ helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
 ms.openlocfilehash: ff2d8c324aee8bbccef050c020e5392368b05b1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907314"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>Cuándo se debe usar una enumeración (Visual Basic)
 Las enumeraciones ofrecen una manera fácil de trabajar con conjuntos de constantes relacionadas. Una enumeración, o `Enum`, es un nombre simbólico para un conjunto de valores. Las enumeraciones se tratan como tipos de datos, y puede usarlos para crear conjuntos de constantes para su uso con variables y propiedades.  

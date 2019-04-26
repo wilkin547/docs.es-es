@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear zonas horarias sin reglas de ajuste
+title: Procedimiento para crear zonas horarias sin reglas de ajuste
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb3ffc7b6f1f7baec7ce6beb5a50b706ff78bfa1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026554"
 ---
-# <a name="how-to-create-time-zones-without-adjustment-rules"></a>Procedimiento Crear zonas horarias sin reglas de ajuste
+# <a name="how-to-create-time-zones-without-adjustment-rules"></a>Procedimiento para crear zonas horarias sin reglas de ajuste
 
 La información de zona horaria exacta requerida por una aplicación puede no encontrarse en un sistema determinado por varias razones:
 

@@ -3,11 +3,11 @@ title: F#instrucciones de diseño del componente
 description: Obtenga información sobre las directrices para escribir en él F# componentes pensados para su uso por otros llamadores.
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55066030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902166"
 ---
 # <a name="f-component-design-guidelines"></a>F#instrucciones de diseño del componente
 
@@ -84,7 +84,7 @@ La siguiente tabla sigue las convenciones de mayúsculas y minúsculas y nomencl
 | Parámetros | camelCase | Sustantivo |  typeName, transformación, intervalo | |
 | permitir que los valores (internos) | camelCase o PascalCase | Sustantivo o verbo |  getValue, myTable |
 | permitir que los valores (externo) | camelCase o PascalCase | Verbo y sustantivo  | List.Map, Dates.Today | a menudo son públicos enlazado a Let valores al seguir los patrones de diseño funcionales tradicional. Sin embargo, normalmente usar PascalCase cuando el identificador puede usarse desde otros lenguajes. NET. |
-| Property  | PascalCase  | Sustantivo o adjetivo  | IsEndOfFile, color de fondo  | Las propiedades booleanas generalmente uso es y puede y debe ser afirmativa, como en IsEndOfFile, no IsNotEndOfFile.
+| Propiedad  | PascalCase  | Sustantivo o adjetivo  | IsEndOfFile, color de fondo  | Las propiedades booleanas generalmente uso es y puede y debe ser afirmativa, como en IsEndOfFile, no IsNotEndOfFile.
 
 #### <a name="avoid-abbreviations"></a>Evitar las abreviaturas
 

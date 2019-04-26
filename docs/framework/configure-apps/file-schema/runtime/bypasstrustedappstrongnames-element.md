@@ -10,13 +10,13 @@ ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c39d9a1e3da9cccb2f027e9597a6f2272d187ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674212"
 ---
-# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames > elemento
+# <a name="bypasstrustedappstrongnames-element"></a>Elemento \<bypassTrustedAppStrongNames>
 Especifica si se debe omitir la validación de los nombres seguros en los ensamblados de plena confianza que se cargan en plena confianza <xref:System.AppDomain>.  
   
  \<configuration>  
@@ -70,7 +70,7 @@ Especifica si se debe omitir la validación de los nombres seguros en los ensamb
 -   no tenga firma retrasada.  
   
 > [!NOTE]
->  Si la característica de omisión se ha desactivado para todas las aplicaciones en el equipo mediante el uso de una clave del registro, este archivo de configuración no tiene ningún efecto. Para obtener más información, vea [Cómo: Deshabilitar la característica de omisión de nombres seguros](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
+>  Si la característica de omisión se ha desactivado para todas las aplicaciones en el equipo mediante el uso de una clave del registro, este archivo de configuración no tiene ningún efecto. Para obtener más información, vea [Cómo: para deshabilitar la característica de omisión de nombres seguros](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra cómo especificar el comportamiento que valida la firma de nombre seguro de ensamblados de plena confianza.  

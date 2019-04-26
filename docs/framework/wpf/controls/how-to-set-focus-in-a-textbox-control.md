@@ -9,11 +9,11 @@ helpviewer_keywords:
 - TextBox control [WPF], setting focus
 ms.assetid: 24b61b45-dc2d-425e-9839-b017af7ab86f
 ms.openlocfilehash: f4ba367ea9bdfcd6dbab7a5015472ec33adfe46f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024357"
 ---
 # <a name="how-to-set-focus-in-a-textbox-control"></a>Procedimiento Establecer el foco en un control TextBox
 En este ejemplo se muestra cómo usar el <xref:System.Windows.UIElement.Focus%2A> método para establecer el foco en un <xref:System.Windows.Controls.TextBox> control.  

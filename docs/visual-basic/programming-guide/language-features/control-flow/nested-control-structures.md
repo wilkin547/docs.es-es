@@ -11,11 +11,11 @@ helpviewer_keywords:
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
 ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908002"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Estructuras de control anidadas (Visual Basic)
 Puede colocar las instrucciones de control dentro de otras instrucciones de control, por ejemplo un `If...Then...Else` bloquear dentro de un `For...Next` bucle. Una instrucción de control que se coloca dentro de otra instrucción de control se dice que *anidada*.  
