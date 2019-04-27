@@ -3,11 +3,11 @@ title: 'Bucles: expresión for...in'
 description: Vea cómo el F# for.. en expresión de construcción de bucle se utiliza para recorrer en iteración las coincidencias de un patrón en una colección enumerable.
 ms.date: 05/16/2016
 ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024448"
 ---
 # <a name="loops-forin-expression"></a>Bucles: expresión for...in
 
@@ -28,11 +28,11 @@ La expresión enumerable se puede especificar como una colección enumerable o, 
 
 Al expresar un intervalo mediante el `..` , puede usar la sintaxis siguiente.
 
-*iniciar* ... *Finalizar*
+*iniciar* ... *finish*
 
 También puede usar una versión que incluye un incremento denominado el *omitir*, como en el código siguiente.
 
-*iniciar* ... *omitir* ... *Finalizar*
+*iniciar* ... *omitir* ... *finish*
 
 Al usar intervalos de enteros y una variable de contador simple como un patrón, el comportamiento típico es incrementar la variable de contador en 1 en cada iteración, pero si el intervalo incluye un valor de omisión, el contador se incrementa en el valor de omisión en su lugar.
 
