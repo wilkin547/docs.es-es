@@ -1,17 +1,17 @@
 ---
-title: Cuándo se deben implementar contenedores de Windows para máquinas virtuales de Azure (nube IaaS)
+title: Cuándo se deben implementar contenedores de Windows en máquinas virtuales de Azure (nube IaaS)
 description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | Cuándo se deben implementar contenedores de Windows para máquinas virtuales de Azure (nube IaaS)
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 51217e2c94fd9727c8f7907e791cdebaec98f14f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011962"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>Cuándo se deben implementar contenedores de Windows para máquinas virtuales de Azure (nube IaaS)
+# <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>Cuándo se deben implementar contenedores de Windows en máquinas virtuales de Azure (nube IaaS)
 
 Si su organización usa máquinas virtuales de Azure, incluso si también usa contenedores de Windows, siguen siendo ocuparse de IaaS. Esto significa que tratar con las operaciones de infraestructura, revisiones de sistema operativo de la máquina virtual y la complejidad de la infraestructura para aplicaciones altamente escalables cuando necesite implementar en varias máquinas virtuales en una infraestructura con equilibrio de carga. Los escenarios principales para usar contenedores de Windows en una máquina virtual de Azure son:
 

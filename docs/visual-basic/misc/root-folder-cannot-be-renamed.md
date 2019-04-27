@@ -3,11 +3,11 @@ title: No se puede cambiar el nombre de la carpeta raíz
 ms.date: 07/20/2015
 ms.assetid: 325eb73c-d5fe-4b65-8926-5dabff007277
 ms.openlocfilehash: 0482a6eccf587a18be05f263949b65cda743d1f0
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58028589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023037"
 ---
 # <a name="root-folder-cannot-be-renamed"></a>No se puede cambiar el nombre de la carpeta raíz
 Se ha intentado cambiar el nombre del directorio raíz. Esto puede deberse a una ruta de acceso de archivo analizada incorrectamente.  
