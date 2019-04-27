@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
 ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903908"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Procedimiento para eliminar filas de la base de datos
 Puede eliminar filas en una base de datos mediante la eliminación de la correspondiente [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objetos de su colección relacionada con la tabla. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Convierte los cambios en el código SQL apropiado `DELETE` comandos.  

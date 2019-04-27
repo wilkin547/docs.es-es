@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
 ms.openlocfilehash: 84762d8917609b84a049ea665b575acfa6e5fecf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857537"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Procedimiento para configurar servicios WCF para interoperar con clientes de servicios web ASP.NET
 Para configurar un punto de conexión de servicio de Windows Communication Foundation (WCF) para poder interoperar con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] clientes de servicios Web, use la <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> tipo como tipo de enlace para el punto de conexión de servicio.  

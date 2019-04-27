@@ -3,11 +3,11 @@ title: Procedimiento Cargar y descargar ensamblados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bbc84236-04b6-4c1b-9672-52773f65a5dc
 ms.openlocfilehash: efd8ddbe45323e1f80cec54379d61b5aa8a435cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61818656"
 ---
 # <a name="how-to-load-and-unload-assemblies-visual-basic"></a>Procedimiento Cargar y descargar ensamblados (Visual Basic)
 Los ensamblados a los que hace referencia el programa se cargarán automáticamente en tiempo de compilación, pero también es posible cargar ensamblados específicos en el dominio de aplicación actual en tiempo de ejecución. Para obtener más información, vea [Cómo: Cargar ensamblados en un dominio de aplicación](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  

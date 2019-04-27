@@ -8,11 +8,11 @@ ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 777d496614435106b84b47b9aa3d35d964bc3e07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704744"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > elemento
 Especifica si common language runtime permite código administrado para detectar infracciones de acceso y otras excepciones de estado dañado.  

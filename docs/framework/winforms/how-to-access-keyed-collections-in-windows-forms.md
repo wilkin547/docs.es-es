@@ -9,11 +9,11 @@ helpviewer_keywords:
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
 ms.openlocfilehash: fdd3a56ab9a267990bb0e832c0d4cc2af9334034
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801834"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>Procedimiento para obtener acceso a colecciones con claves en formularios Windows Forms
 -   Puede tener acceso a elementos de colección individuales por clave. Esta funcionalidad se ha agregado a muchas clases de colección que se suelen usar las aplicaciones de Windows Forms. En la lista siguiente muestra algunas de las clases de colección que tienen colecciones con claves accesible:  

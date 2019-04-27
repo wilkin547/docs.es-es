@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual Basic code, operators
 ms.assetid: cb44c210-686f-4417-a13f-51c0d60161f8
 ms.openlocfilehash: 3fbb8dd0dafb0d16531f13280a2033e4f085897f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801288"
 ---
 # <a name="operators-summary-visual-basic"></a>Resumen de operadores (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
