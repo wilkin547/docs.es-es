@@ -9,11 +9,11 @@ helpviewer_keywords:
 - recognition of handwriting [WPF]
 ms.assetid: f4e8576d-e731-4bac-9818-22e2ae636636
 ms.openlocfilehash: 417af272514ac9ce68c8faa72339f2befc2dd7c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923388"
 ---
 # <a name="handwriting-recognition"></a>Reconocimiento de entradas manuscritas
 En esta sección se explican los fundamentos del reconocimiento en relación con la entrada de lápiz digital en la plataforma WPF.  

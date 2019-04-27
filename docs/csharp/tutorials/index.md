@@ -2,12 +2,12 @@
 title: Tutoriales de C#
 description: Explore estos tutoriales de C# para obtener información sobre cómo compilar programas de C# y conocer las características de este lenguaje.
 ms.date: 10/25/2018
-ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706317"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773906"
 ---
 # <a name="c-tutorials"></a>Tutoriales de C#
 
@@ -50,6 +50,7 @@ Todos los tutoriales de introducción posteriores a la lección Hola mundo se en
 * [Tipos de referencia que aceptan valores NULL](nullable-reference-types.md): se muestra cómo usar los tipos de referencia que aceptan valores NULL para expresar la intención de referencias nulas.
 * [Actualización de un proyecto para usar tipos de referencia nula](upgrade-to-nullable-references.md): demuestra técnicas para actualizar un proyecto existente y usar los tipos de referencia nula.
 * [Ampliación de las funcionalidades de datos mediante la coincidencia de patrones](pattern-matching.md): demuestra cómo usar la coincidencia de patrones para ampliar los tipos más allá de sus características principales.
+* [Trabajo con secuencias de datos mediante índices y rangos](ranges-indexes.md): Muestra la nueva sintaxis adecuada para tener acceso a elementos o rangos individuales de un contenedor de datos secuencial.
 
 ## <a name="general-tutorials"></a>Tutoriales generales
 

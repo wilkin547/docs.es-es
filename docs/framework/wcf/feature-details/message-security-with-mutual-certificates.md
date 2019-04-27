@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
 ms.openlocfilehash: 8fc8d6d4a63b7a752fb8c26991d904761fdcebdd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923075"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Seguridad de mensajes con certificados mutuos
 El escenario siguiente muestra un servicio de Windows Communication Foundation (WCF) y el cliente protegido utilizando el modo de seguridad de mensajes. El cliente y el servicio se autentican con certificados.  

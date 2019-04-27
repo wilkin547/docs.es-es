@@ -1,5 +1,5 @@
 ---
-title: <proceduresignature1> no es compatible con CLS porque sobrecarga a <proceduresignature2> que difiere de ella sólo en la matriz de tipos de parámetro de matriz o en el rango de los tipos de parámetro de matriz
+title: <proceduresignature1> no es conforme a CLS porque sobrecarga <proceduresignature2> que difiere de él en la matriz de tipos de parámetro de matriz o en el rango de los tipos de parámetro de matriz
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40035
@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
 ms.openlocfilehash: 0bda4ad6a4d5368d93e2ca603b78bf9db6aca858
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920918"
 ---
 # <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > no es conforme a CLS porque sobrecarga \<proceduresignature2 > que difiere de él en la matriz de tipos de parámetro de matriz o en el rango de los tipos de parámetro de matriz
 Un procedimiento o propiedad se marca como `<CLSCompliant(True)>` cuando reemplaza otro procedimiento o propiedad y la única diferencia entre sus listas de parámetros es el nivel de anidamiento de una matriz escalonada o el rango de matriz.  
