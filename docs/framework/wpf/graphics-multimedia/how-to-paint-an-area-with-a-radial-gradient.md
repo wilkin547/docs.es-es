@@ -10,13 +10,13 @@ helpviewer_keywords:
 - painting [WPF], with radial gradients
 ms.assetid: b5d0fc8a-8986-4796-b003-a75b41a48928
 ms.openlocfilehash: c3bcc11dea4b1f223f629415591ab03588881dde
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921840"
 ---
-# <a name="how-to-paint-an-area-with-a-radial-gradient"></a>Filtrar Pintar un área con un degradado radial
+# <a name="how-to-paint-an-area-with-a-radial-gradient"></a>Procedimiento Pintar un área con un degradado radial
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.RadialGradientBrush> clase para pintar un área con un degradado radial.  
   
 ## <a name="example"></a>Ejemplo  

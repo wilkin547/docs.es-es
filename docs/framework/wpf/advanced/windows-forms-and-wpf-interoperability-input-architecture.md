@@ -14,11 +14,11 @@ helpviewer_keywords:
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
 ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007102"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Arquitectura de entrada de interoperabilidad entre formularios Windows Forms y WPF
 Interoperación entre el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] requiere que ambas tecnologías tengan el procesamiento de entrada de teclado correspondiente. Este tema describe cómo estas tecnologías implementan para habilitar la interoperabilidad sin contratiempos en aplicaciones híbridas de procesamiento de mensajes y teclado.  

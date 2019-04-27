@@ -3,11 +3,11 @@ title: Administrar permisos con procedimientos almacenados en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
 ms.openlocfilehash: 0688157b45892cacb73f858dffb93836da9fc91d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923128"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Administrar permisos con procedimientos almacenados en SQL Server
 Un modo de establecer varias líneas de defensa en torno a su base de datos consiste en implementar el acceso a todos los datos usando procedimientos almacenados o roles definidos por el usuario. Debe revocar o denegar todos los permisos a los objetos subyacentes, como tablas, y conceder permisos a los procedimientos almacenados. Esto crea un perímetro de seguridad en torno a sus datos y objetos de base de datos.  

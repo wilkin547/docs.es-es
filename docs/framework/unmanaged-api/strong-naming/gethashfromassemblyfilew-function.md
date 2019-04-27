@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9a88adec508d80a40ec044e5011d3115e197e334
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000550"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>GetHashFromAssemblyFileW (Función)
 Obtiene un hash del archivo de ensamblado especificado mediante un algoritmo hash concreto. La ruta de acceso al archivo de ensamblado debe especificarse como una cadena Unicode.  

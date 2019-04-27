@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d0fb35f5d7fec0c79a31cd8d7b77cf2b1c043f60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986081"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter (Método)
 Define un único parámetro del método actual. El tipo de parámetro procede de la posición del parámetro (secuencia) dentro de la firma del método.  
