@@ -5,11 +5,11 @@ ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 031ec811315f4a9d9f1f73d34e32236d2cf27729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866839"
 ---
 # <a name="net-native-reflection-api-reference"></a>Referencia de la API de reflexión de .NET nativo
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] incluye tres nuevos tipos de excepción: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), y [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) . Tenga en cuenta lo siguiente acerca de los tres tipos de excepción:  
@@ -20,9 +20,9 @@ ms.locfileid: "59169083"
  No debe administrar estas excepciones en su código.  
  Estas excepciones indican que los metadatos necesarios para la aplicación no están presentes (las excepciones [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) y [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) ) o que falta el código de implementación necesario para la aplicación (la excepción [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) ). Corrija estas condiciones de excepción mediante la modificación de un archivo de directivas de tiempo de ejecución (.rd.xml) para que el código de implementación o los metadatos necesarios estén disponibles en tiempo de ejecución. Para obtener más información, consulta [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Existen dos solucionadores de problemas que proporcionan las entradas adecuadas para el archivo de directivas de tiempo de ejecución que eliminará las excepciones [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) y [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) :  
   
--   [Solucionador de problemas de MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) para los tipos.  
+- [Solucionador de problemas de MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) para los tipos.  
   
--   [Solucionador de problemas de MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) para los métodos.  
+- [Solucionador de problemas de MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) para los métodos.  
   
 > [!NOTE]
 >  Esta documentación hace referencia a tres tipos de excepciones que son exclusivos de [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Para obtener documentación de referencia para la API de reflexión de .NET Framework core, vea el <xref:System.Reflection>, <xref:System.Reflection.Context> y <xref:System.Reflection.Emit> espacios de nombres. Para la documentación de referencia de la API de interoperabilidad de .NET Framework, consulte <xref:System.Runtime.InteropServices>.  

@@ -3,11 +3,11 @@ title: Participantes de persistencia
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
 ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672658"
 ---
 # <a name="persistence-participants"></a>Participantes de persistencia
 Un participante de persistencia puede tomar parte en una operación de persistencia (guardar o cargar) desencadenada por un host de la aplicación. El [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] se suministra con dos clases abstractas, **PersistenceParticipant** y **PersistenceIOParticipant**, que puede usar para crear un participante de persistencia. Un participante de persistencia se deriva de una de estas clases, implementa los métodos de interés y, a continuación, agrega una instancia de la clase a la colección <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> del objeto <xref:System.ServiceModel.Activities.WorkflowServiceHost>. El host de la aplicación puede buscar estas extensiones de flujo de trabajo cuando se conserve una instancia de flujo de trabajo e invocar los métodos apropiados en los participantes de persistencia en los momentos adecuados.  
@@ -48,17 +48,17 @@ Un participante de persistencia puede tomar parte en una operación de persisten
   
  Al cargar una instancia de flujo de trabajo el proveedor de persistencia crea un bloqueo en esa instancia. Esto evita que más de un host cargue la instancia en un escenario de múltiples nodos. Si intenta cargar una instancia de flujo de trabajo que se ha bloqueado verá una excepción similar al siguiente: La excepción "System.ServiceModel.Persistence.InstanceLockException: No se pudo completar la operación solicitada porque el bloqueo por ejemplo ' 00000000-0000-0000-0000-000000000000' no se pudo adquirir ". Este error se debe a una de las siguientes causas:  
   
--   En un escenario de múltiples nodos, la instancia la carga otro host.  Hay varias maneras diferentes para resolver estos tipos de conflictos: reenviar el procesamiento el nodo que posee el bloqueo y reintentarlo, o forzar la carga, lo que hará que el otro host no pueda guardar el trabajo.  
+- En un escenario de múltiples nodos, la instancia la carga otro host.  Hay varias maneras diferentes para resolver estos tipos de conflictos: reenviar el procesamiento el nodo que posee el bloqueo y reintentarlo, o forzar la carga, lo que hará que el otro host no pueda guardar el trabajo.  
   
--   En un escenario de un solo nodo y el host está bloqueado.  Cuando el host se inicia de nuevo (un reciclaje de proceso o creando un nuevo generador de proveedores de persistencia), el nuevo host intentar cargar una instancia que ya está bloqueada por el host antiguo porque el bloqueo no ha expirado todavía.  
+- En un escenario de un solo nodo y el host está bloqueado.  Cuando el host se inicia de nuevo (un reciclaje de proceso o creando un nuevo generador de proveedores de persistencia), el nuevo host intentar cargar una instancia que ya está bloqueada por el host antiguo porque el bloqueo no ha expirado todavía.  
   
--   En un escenario de un solo nodo y la instancia en cuestión se anuló en algún momento y se creó una nueva instancia del proveedor de persistencia que tiene otro identificador de host.  
+- En un escenario de un solo nodo y la instancia en cuestión se anuló en algún momento y se creó una nueva instancia del proveedor de persistencia que tiene otro identificador de host.  
   
  El valor de tiempo de espera de bloqueo tiene un valor predeterminado de 5 minutos; puede especificar un valor diferente de tiempo de espera al llamar a <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A>.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Cómo: Crear a un participante de persistencia personalizado](how-to-create-a-custom-persistence-participant.md)  
+- [Cómo: Crear a un participante de persistencia personalizado](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Vea también
 

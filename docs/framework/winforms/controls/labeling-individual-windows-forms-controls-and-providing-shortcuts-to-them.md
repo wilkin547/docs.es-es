@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
 ms.openlocfilehash: 8d7ae8c807b8c5347a455b81c2c1a1b0897430c2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013015"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos
 Los controles que se agregan a Windows Forms tienen propiedades y métodos que permiten a los usuarios especificar en mayor medida la forma de utilizarlos. La personalización de la interfaz de usuario para que se ajuste a las necesidades del usuario es muy importante para el buen diseño de las aplicaciones para Windows.  

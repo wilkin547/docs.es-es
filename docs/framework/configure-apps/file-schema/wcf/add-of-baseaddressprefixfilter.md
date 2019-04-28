@@ -3,11 +3,11 @@ title: <add> de <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
 ms.openlocfilehash: a58a29e44fff3d653d04da271e3b240f2969611f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673756"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<Agregar > de \<baseAddressPrefixFilter >
 Representa un elemento de configuración que especifica un filtro de paso a través, que proporciona un mecanismo para escoger los enlaces adecuados de Internet Information Services (IIS) al hospedar una aplicación de Windows Communication Foundation (WCF) en IIS.  

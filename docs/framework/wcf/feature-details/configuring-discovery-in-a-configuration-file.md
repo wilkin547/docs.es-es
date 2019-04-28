@@ -3,17 +3,17 @@ title: Configurar la detección en un archivo de configuración
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
 ms.openlocfilehash: c282767e686ac8a6382268aee8b45eb2d1297f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857524"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Configurar la detección en un archivo de configuración
 Hay cuatro grupos principales de configuración usados en la detección. Este tema describirá brevemente cada uno de ellos y mostrará ejemplos de cómo configurarlos. Tras cada sección, se ofrece un vínculo a documentación más detallada sobre cada área.  
   
 ## <a name="behavior-configuration"></a>Configuración de comportamiento  
- La detección usa comportamientos de servicio y comportamientos de extremo. El comportamiento <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> habilita la detección para todos los extremos de un servicio y le permite especificar los extremos del anuncio.  En el siguiente ejemplo, se muestra cómo agregar <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> y especificar un extremo del anuncio.  
+ La detección usa comportamientos de servicio y comportamientos de extremo. El comportamiento <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> habilita la detección para todos los extremos de un servicio y le permite especificar los extremos del anuncio.  En el siguiente ejemplo, se muestra cómo agregar <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> y especificar un punto de conexión del anuncio.  
   
 ```xml  
 <behaviors>  
@@ -28,7 +28,7 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
       </serviceBehaviors>  
 ```  
   
- Cuando especifique el comportamiento, haga referencia a él desde un elemento <`service`>, tal como se muestra en el siguiente ejemplo.  
+ Una vez que especifique el comportamiento, haga referencia a él desde un <`service`> elemento tal como se muestra en el ejemplo siguiente.  
   
 ```xml  
 <system.serviceModel>  
@@ -44,9 +44,9 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
     </service>  
 ```  
   
- Para que un servicio sea reconocible, también debe agregar un extremo de detección; en el ejemplo anterior, se agrega un extremo estándar <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+ Para que un servicio sea reconocible, también debe agregar un punto de conexión de detección; en el ejemplo anterior, se agrega un punto de conexión estándar <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
   
- Cuando agregue extremos de anuncio también debe agregar un servicio de escucha de anuncio al elemento <`services`>, tal como se muestra en el siguiente ejemplo.  
+ Al agregar los extremos de anuncio también debe agregar un servicio de agente de escucha de anuncio en el <`services`> elemento tal como se muestra en el ejemplo siguiente.  
   
 ```xml  
 <services>  
@@ -64,7 +64,7 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
    </service>  
 ```  
   
- El comportamiento <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> se usa para habilitar o deshabilitar la detección de un extremo concreto.  En el siguiente ejemplo, se configura un servicio con dos extremos de la aplicación: uno con detección habilitada y uno con detección deshabilitada. Para cada extremo, se agrega un comportamiento <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>.  
+ El comportamiento <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> se usa para habilitar o deshabilitar la detección de un punto de conexión concreto.  En el siguiente ejemplo, se configura un servicio con dos puntos de conexión de la aplicación: uno con detección habilitada y uno con detección deshabilitada. Para cada punto de conexión, se agrega un comportamiento <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>.  
   
 ```xml  
 <system.serviceModel>  
@@ -104,7 +104,7 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
    </behaviors>  
 ```  
   
- El comportamiento <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> también se puede usar para agregar metadatos personalizados a los metadatos del extremo devuelto por el servicio. En el ejemplo siguiente se muestra cómo hacerlo.  
+ El comportamiento <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> también se puede usar para agregar metadatos personalizados a los metadatos del punto de conexión devuelto por el servicio. En el ejemplo siguiente se muestra cómo hacerlo.  
   
 ```xml  
 <behavior name="ep4Behavior">  
@@ -177,10 +177,10 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
     </client>  
 ```  
   
- Para obtener más información acerca de los criterios de búsqueda, vea [buscar de detección y FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Para obtener más información sobre la detección y vea los elementos de enlace, [información general sobre la detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ Para obtener más información acerca de los criterios de búsqueda, vea [buscar de detección y FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Para obtener más información sobre la detección y enlace los elementos, vea [información general sobre la detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
   
 ## <a name="standard-endpoint-configuration"></a>Configuración de punto de conexión estándar  
- Los extremos estándar son extremos predefinidos que tienen valores predeterminados para una o varias propiedades (dirección, enlace o contrato) o uno o varios valores de propiedad que no se pueden modificar. .NET 4 se distribuye con 3 extremos estándar relacionados con la detección: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> y <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> es un extremo estándar pre-configurado para las operaciones de detección en un enlace de multidifusión de UDP. La clase <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> es un extremo estándar pre-configurado para enviar mensajes de anuncio en un enlace de UDP. <xref:System.ServiceModel.Discovery.DynamicEndpoint> es un extremo estándar que usa la detección para buscar la dirección de extremo de un servicio detectado dinámicamente durante el tiempo de ejecución.  Los enlaces estándar se especifican con un elemento <`endpoint`> que contiene un atributo de clase que especifica el tipo de extremo estándar que se va a agregar. En el siguiente ejemplo, se muestra cómo agregar <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> y <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
+ Los puntos de conexión estándar son puntos de conexión predefinidos que tienen valores predeterminados para una o varias propiedades (dirección, enlace o contrato) o uno o varios valores de propiedad que no se pueden modificar. .NET 4 se distribuye con 3 puntos de conexión estándar relacionados con la detección: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> y <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> es un extremo estándar pre-configurado para las operaciones de detección en un enlace de multidifusión de UDP. La clase <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> es un punto de conexión estándar pre-configurado para enviar mensajes de anuncio en un enlace de UDP. <xref:System.ServiceModel.Discovery.DynamicEndpoint> es un extremo estándar que usa la detección para buscar la dirección de extremo de un servicio detectado dinámicamente durante el tiempo de ejecución.  Los enlaces estándar se especifican con un <`endpoint`> elemento que contiene un atributo de clase que especifica el tipo de punto de conexión estándar para agregar. En el siguiente ejemplo, se muestra cómo agregar <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> y <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
   
 ```xml  
 <services>  
@@ -194,7 +194,7 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
 </services>  
 ```  
   
- Los extremos estándar se configuran en un elemento <`standardEndpoints`>. El ejemplo siguiente muestra cómo habilitar y configurar <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> y <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
+ Puntos de conexión estándar se configuran en un <`standardEndpoints`> elemento. El ejemplo siguiente muestra cómo habilitar y configurar <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> y <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
   
 ```xml  
 <standardEndpoints>  
@@ -226,7 +226,7 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
       </udpDiscoveryEndpoint>  
 ```  
   
- Cuando haya agregado la configuración de extremo estándar, haga referencia a la configuración en el elemento <`endpoint`> para cada extremo, tal como se muestra en el siguiente ejemplo.  
+ Una vez que haya agregado la configuración de punto de conexión estándar, haga referencia a la configuración en el <`endpoint`> (elemento) para cada punto de conexión como se muestra en el ejemplo siguiente.  
   
 ```xml  
 <services>  
@@ -240,7 +240,7 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
 </services>  
 ```  
   
- A diferencia de los otros extremos estándar usados en la detección, debe especificar un enlace y un contrato para <xref:System.ServiceModel.Discovery.DynamicEndpoint>. El ejemplo siguiente muestra cómo agregar y configurar <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  
+ A diferencia de los otros punto de conexión estándar usados en la detección, debe especificar un enlace y un contrato para <xref:System.ServiceModel.Discovery.DynamicEndpoint>. El ejemplo siguiente muestra cómo agregar y configurar <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  
   
 ```xml  
 <system.serviceModel>  
@@ -269,4 +269,4 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
 </system.ServiceModel>  
 ```  
   
- Para obtener más información acerca de los puntos de conexión estándares vea [puntos de conexión estándar](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+ Para obtener más información acerca de los extremos estándares, consulte [puntos de conexión estándar](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)

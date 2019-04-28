@@ -14,18 +14,18 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
 ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013236"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Procedimiento Establecer imágenes en tiempo de ejecución (formularios Windows Forms)
 Puede establecer mediante programación la imagen que muestra un formulario Windows Forms <xref:System.Windows.Forms.PictureBox> control.  
   
 ### <a name="to-set-a-picture-programmatically"></a>Para establecer una imagen mediante programación  
   
--   Establecer el <xref:System.Windows.Forms.PictureBox.Image%2A> propiedad utilizando el <xref:System.Drawing.Image.FromFile%2A> método de la <xref:System.Drawing.Image> clase.  
+- Establecer el <xref:System.Windows.Forms.PictureBox.Image%2A> propiedad utilizando el <xref:System.Drawing.Image.FromFile%2A> método de la <xref:System.Drawing.Image> clase.  
   
      En el ejemplo siguiente, la ruta de acceso establecida para la ubicación de la imagen es la carpeta Mis documentos. Hecho esto, ya que puede asumir que la mayoría de los equipos que ejecutan el sistema operativo de Windows tendrán este directorio. Esto permite también a los usuarios con niveles de acceso mínimos ejecutar la aplicación de forma segura. El ejemplo siguiente se da por supuesto un formulario con un <xref:System.Windows.Forms.PictureBox> control ya se ha agregado.  
   
@@ -67,7 +67,7 @@ Puede establecer mediante programación la imagen que muestra un formulario Wind
   
 ### <a name="to-clear-a-graphic"></a>Para borrar un gráfico  
   
--   En primer lugar, liberar la memoria utilizada por la imagen y, a continuación, desactive el gráfico. Colección de elementos no utilizados liberará la memoria más adelante si la administración de memoria se convierte en un problema.  
+- En primer lugar, liberar la memoria utilizada por la imagen y, a continuación, desactive el gráfico. Colección de elementos no utilizados liberará la memoria más adelante si la administración de memoria se convierte en un problema.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  

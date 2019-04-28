@@ -3,11 +3,11 @@ title: TraceListener
 ms.date: 03/30/2017
 ms.assetid: c2c0b595-a384-4eb3-b94d-1b3be7cc7a5c
 ms.openlocfilehash: 1bd15aafc85e5553a4b4acef6901beb9a0f1745e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703470"
 ---
 # <a name="tracelistener"></a>TraceListener
 TraceListener  
@@ -31,14 +31,14 @@ class TraceListener
 ### <a name="name"></a>Name  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Nombre del agente de escucha de seguimiento.  
   
 ### <a name="tracelistenerarguments"></a>TraceListenerArgument  
  Tipo de datos: Matriz de TraceListenerArgument  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Los argumentos del agente de escucha de seguimiento.  
   

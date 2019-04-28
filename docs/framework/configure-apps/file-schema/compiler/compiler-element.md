@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
 ms.openlocfilehash: 34753d538ff37ac4ae621f653d47ac92ac6749a0
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705381"
 ---
 # <a name="compiler-element"></a>\<compilador > elemento
 
@@ -45,7 +45,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |---------------|-----------------|
 |`compilerOptions`|Atributo opcional.<br /><br /> Especifica los argumentos específicos del compilador adicionales para la compilación. Los valores para el `compilerOptions` atributo aparecen normalmente en un tema de las opciones del compilador para el compilador.|
 |`extension`|Atributo necesario.<br /><br /> Proporciona una lista separada por comas de extensiones de nombre de archivo utilizado por los archivos de origen para el proveedor de lenguaje. Por ejemplo, "cs".|
-|`language`|Atributo necesario.<br /><br /> Proporciona una lista separada por comas de nombres de lenguajes admitidos por el proveedor de lenguaje. Por ejemplo, "C#; cs; csharp".|
+|`language`|Atributo necesario.<br /><br /> Proporciona una lista separada por comas de nombres de lenguajes admitidos por el proveedor de lenguaje. Por ejemplo, "c#; cs; csharp".|
 |`type`|Atributo necesario.<br /><br /> Especifica el nombre de tipo del proveedor del lenguaje, incluido el nombre del ensamblado que contiene la implementación del proveedor. El nombre de tipo debe cumplir los requisitos definidos en [especificar nombres de tipo completos](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|
 |`warningLevel`|Atributo opcional.<br /><br /> Especifica el nivel de advertencia del compilador predeterminado; Determina el nivel en el que el proveedor de lenguaje trata las advertencias de compilación como errores.|
 

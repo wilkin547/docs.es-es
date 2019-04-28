@@ -11,11 +11,11 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
 ms.openlocfilehash: a887e83babd6126d298170c6aead45c5370c1916
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010259"
 ---
 # <a name="glyphs"></a>Glifos
 Los glifos son una representación de bajo nivel de un carácter que se va a dibujar en la pantalla. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona acceso directo a los glifos para los clientes que quieran interceptar y conservar el texto después de darle formato.  

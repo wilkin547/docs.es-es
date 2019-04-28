@@ -3,22 +3,22 @@ title: Generación de un cliente WCF a partir de los metadatos de servicio
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
 ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856003"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generación de un cliente WCF a partir de los metadatos de servicio
 En este tema se describe cómo utilizar los diversos modificadores de Svcutil.exe para generar los clientes a partir de documentos de metadatos.  
   
  Los documentos de metadatos pueden estar en un almacenamiento duradero o recuperarse en línea. La recuperación en línea sigue el protocolo WS-MetadataExchange o el protocolo Microsoft Discovery (DISCO). Svcutil.exe emite simultáneamente las siguientes solicitudes de metadatos para recuperar los metadatos:  
   
--   Solicitud WS-MetadataExchange (MEX) a la dirección proporcionada.  
+- Solicitud WS-MetadataExchange (MEX) a la dirección proporcionada.  
   
--   Solicitud MEX a la dirección proporcionada con `/mex` anexado.  
+- Solicitud MEX a la dirección proporcionada con `/mex` anexado.  
   
--   Solicitud DISCO (mediante el [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) desde los servicios Web de ASP.NET) a la dirección proporcionada.  
+- Solicitud DISCO (mediante el [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) desde los servicios Web de ASP.NET) a la dirección proporcionada.  
   
  Svcutil.exe genera el cliente basado en el lenguaje de descripción de servicios Web (WSDL) o en el archivo de directivas recibido desde el servicio. El nombre principal de usuario (UPN) se genera concatenando el nombre de usuario con "\@" y, a continuación, agregar un nombre de dominio completo (FQDN). Sin embargo, para los usuarios que se registraron en Active Directory, este formato no es válido y el UPN que genera la herramienta produce un error en la autenticación Kerberos con el mensaje de error siguiente: **Error en el intento de inicio de sesión.** Para resolver este problema, debe corregir manualmente el archivo de cliente generado por la herramienta.  
   

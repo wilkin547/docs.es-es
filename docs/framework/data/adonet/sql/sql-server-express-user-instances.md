@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876283"
 ---
 # <a name="sql-server-express-user-instances"></a>Instancias de usuario de SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) incorpora una nueva característica de instancia de usuario, que solo está disponible cuando se usa el proveedor de datos .NET Framework para SQL Server (`SqlClient`). Una instancia de usuario es una instancia independiente del motor de base de datos de SQL Server Express que se genera mediante una instancia primaria. Las instancias de usuario permiten a los usuarios que no son administradores en sus equipos locales adjuntar y conectarse a bases de datos de SQL Server Express. Cada instancia se ejecuta en el contexto de seguridad del usuario individual, ya que solo se puede ejecutar una instancia por usuario.  
@@ -41,15 +41,15 @@ sp_configure 'user instances enabled','0'
   
  Tenga en cuenta lo siguiente sobre la cadena de conexión de ejemplo que se muestra a continuación:  
   
--   La palabra clave `Data Source` hace referencia a la instancia primaria de SQL Server Express que está generando la instancia de usuario. La instancia predeterminada es .\sqlexpress.  
+- La palabra clave `Data Source` hace referencia a la instancia primaria de SQL Server Express que está generando la instancia de usuario. La instancia predeterminada es .\sqlexpress.  
   
--   El valor de `Integrated Security` está establecido en `true`. Para conectarse a una instancia de usuario, se requiere la autenticación de Windows; los inicios de sesión de SQL no están permitidos.  
+- El valor de `Integrated Security` está establecido en `true`. Para conectarse a una instancia de usuario, se requiere la autenticación de Windows; los inicios de sesión de SQL no están permitidos.  
   
--   La `User Instance` está establecida en `true`, por lo que invoca una instancia de usuario. (El valor predeterminado es `false`.)  
+- La `User Instance` está establecida en `true`, por lo que invoca una instancia de usuario. (El valor predeterminado es `false`.)  
   
--   La palabra clave de cadena de conexión `AttachDbFileName` se utiliza para adjuntar el archivo de base de datos primario (.mdf), que debe incluir el nombre de ruta de acceso completo. `AttachDbFileName` se corresponde también con las claves "extended properties" e "initial file name" dentro de una cadena de conexión <xref:System.Data.SqlClient.SqlConnection>.  
+- La palabra clave de cadena de conexión `AttachDbFileName` se utiliza para adjuntar el archivo de base de datos primario (.mdf), que debe incluir el nombre de ruta de acceso completo. `AttachDbFileName` se corresponde también con las claves "extended properties" e "initial file name" dentro de una cadena de conexión <xref:System.Data.SqlClient.SqlConnection>.  
   
--   La cadena de sustitución `|DataDirectory|`, que va entre barras verticales, hace referencia al directorio de datos de la aplicación que abre la conexión y proporciona una ruta de acceso relativa que muestra la ubicación de los archivos de la base de datos y de registro .mdf y .ldf. Si quiere ubicar estos archivos en cualquier otro lugar, debe indicar la ruta de acceso completa.  
+- La cadena de sustitución `|DataDirectory|`, que va entre barras verticales, hace referencia al directorio de datos de la aplicación que abre la conexión y proporciona una ruta de acceso relativa que muestra la ubicación de los archivos de la base de datos y de registro .mdf y .ldf. Si quiere ubicar estos archivos en cualquier otro lugar, debe indicar la ruta de acceso completa.  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -144,11 +144,11 @@ private static void OpenSqlConnection()
   
  Los escenarios de instancias de usuario incluyen:  
   
--   Cualquier aplicación de un único usuario en la que no sea necesario compartir datos  
+- Cualquier aplicación de un único usuario en la que no sea necesario compartir datos  
   
--   Implementación ClickOnce Si .NET Framework 2.0, o posterior, y SQL Server Express ya están instalados en el equipo de destino, los usuarios que no sean administradores pueden instalar y utilizar el paquete de instalación que se descargó como resultado de una acción ClickOnce. Un administrador debe instalar SQL Server Express si forma parte de la instalación. Para obtener más información, consulte [implementación de ClickOnce para formularios Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
+- Implementación ClickOnce Si .NET Framework 2.0, o posterior, y SQL Server Express ya están instalados en el equipo de destino, los usuarios que no sean administradores pueden instalar y utilizar el paquete de instalación que se descargó como resultado de una acción ClickOnce. Un administrador debe instalar SQL Server Express si forma parte de la instalación. Para obtener más información, consulte [implementación de ClickOnce para formularios Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
--   Hospedaje de ASP.NET dedicado con autenticación de Windows. Una sola instancia de SQL Express Server se puede hospedar en una intranet. La aplicación se conecta usando la cuenta de Windows ASPNET, sin que haya suplantación. No se debería utilizar instancias de usuario en escenarios de hospedaje compartido o de terceros en los que todas las aplicaciones compartirían la misma instancia de usuario y dejarían de permanecer aisladas las unas de las otras.  
+- Hospedaje de ASP.NET dedicado con autenticación de Windows. Una sola instancia de SQL Express Server se puede hospedar en una intranet. La aplicación se conecta usando la cuenta de Windows ASPNET, sin que haya suplantación. No se debería utilizar instancias de usuario en escenarios de hospedaje compartido o de terceros en los que todas las aplicaciones compartirían la misma instancia de usuario y dejarían de permanecer aisladas las unas de las otras.  
   
 ## <a name="see-also"></a>Vea también
 

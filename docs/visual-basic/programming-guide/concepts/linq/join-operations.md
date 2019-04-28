@@ -3,11 +3,11 @@ title: Join Operations (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
 ms.openlocfilehash: c7bd81f729558c8ec41baacda99765eb2f862b29
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61834384"
 ---
 # <a name="join-operations-visual-basic"></a>Join Operations (Visual Basic)
 Una *combinación* de dos orígenes de datos es la asociación de objetos de un origen de datos con los objetos que comparten un atributo común en otro origen de datos.  
@@ -18,7 +18,7 @@ Una *combinación* de dos orígenes de datos es la asociación de objetos de un 
   
  En la ilustración siguiente se muestra una vista conceptual de dos conjuntos y los elementos de esos conjuntos que se incluyen en una combinación interna o en una combinación externa izquierda.  
   
- ![Dos círculos superpuestos mostrando interna&#47;externa.](./media/join-operations/join-method-overlapping-circles.png)  
+ ![Dos círculos superpuestos en los que se muestra el interior y el exterior.](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>Métodos  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
 ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800144"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Datos introducidos por el usuario en una aplicación de formularios Windows Forms
 En Windows Forms, proporcionados por el usuario se envían a las aplicaciones en forma de mensajes de Windows. Una serie de métodos reemplazables procesan estos mensajes en la aplicación, el formulario y controlar el nivel. Cuando estos métodos reciben los mensajes del mouse y teclado, generan eventos que pueden administrarse para obtener información sobre el mouse o entrada del teclado. En muchos casos, las aplicaciones de Windows Forms será capaces de procesar todas las entradas de usuario controlando estos eventos. En otros casos, una aplicación puede necesitar reemplazar uno de los métodos que procesan mensajes para interceptar un mensaje concreto antes de ser recibido por la aplicación, formulario o control.  

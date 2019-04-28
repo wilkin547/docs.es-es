@@ -1,5 +1,5 @@
 ---
-title: Guardar y restaurar zonas horarias
+title: Guardado y restauración de zonas horarias
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,13 +20,13 @@ ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9d783f9e0d098e472dcf67aea394804d6eef2662
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026528"
 ---
-# <a name="saving-and-restoring-time-zones"></a>Guardar y restaurar zonas horarias
+# <a name="saving-and-restoring-time-zones"></a>Guardado y restauración de zonas horarias
 
 La <xref:System.TimeZoneInfo> clase se basa en el registro para recuperar los datos de zona horaria predefinidos. Sin embargo, el registro es una estructura dinámica. Además, se usa la información de zona horaria que el registro contiene el sistema operativo principalmente para controlar las conversiones y los ajustes de hora para el año actual. Esto tiene dos implicaciones importantes para las aplicaciones que dependen de datos de zona horaria precisos:
 

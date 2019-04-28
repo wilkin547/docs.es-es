@@ -3,11 +3,11 @@ title: System.String (Métodos)
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
 ms.openlocfilehash: 3a7b45f27441d889524f5055eb5c6a3b06937bd3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876660"
 ---
 # <a name="systemstring-methods"></a>System.String (Métodos)
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite los métodos <xref:System.String> siguientes.  
@@ -15,9 +15,9 @@ ms.locfileid: "59160503"
 ## <a name="unsupported-systemstring-methods-in-general"></a>Métodos System.String no admitidos en general  
  Métodos <xref:System.String> no admitidos en general:  
   
--   Sobrecargas que reconocen la referencia cultural (métodos que toman un `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
+- Sobrecargas que reconocen la referencia cultural (métodos que toman un `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
   
--   Métodos que utilizan o generan una matriz `char`.  
+- Métodos que utilizan o generan una matriz `char`.  
   
 ## <a name="unsupported-systemstring-static-methods"></a>Métodos System.String estáticos no admitidos  
   
@@ -47,13 +47,13 @@ ms.locfileid: "59160503"
   
 ## <a name="differences-from-net"></a>Diferencias respecto a .NET  
   
--   Las consultas no tienen en cuenta las intercalaciones de SQL Server que podrían aplicarse en el servidor y, por lo tanto, proporcionan de forma predeterminada comparaciones dependientes de la referencia cultural, sin distinción entre mayúsculas y minúsculas. Este comportamiento difiere del predeterminado, la semántica con distinción entre mayúsculas y minúsculas de .NET Framework.  
+- Las consultas no tienen en cuenta las intercalaciones de SQL Server que podrían aplicarse en el servidor y, por lo tanto, proporcionan de forma predeterminada comparaciones dependientes de la referencia cultural, sin distinción entre mayúsculas y minúsculas. Este comportamiento difiere del predeterminado, la semántica con distinción entre mayúsculas y minúsculas de .NET Framework.  
   
--   Cuando `LastIndexOf` devuelve 0, la cadena es `NULL` o la posición encontrada es 0.  
+- Cuando `LastIndexOf` devuelve 0, la cadena es `NULL` o la posición encontrada es 0.  
   
--   Pueden obtenerse resultados inesperados en operaciones de concatenación u otras operaciones con cadenas de longitud fija (`CHAR`, `NCHAR`), porque a estos tipos se les aplica relleno automáticamente en la base de datos.  
+- Pueden obtenerse resultados inesperados en operaciones de concatenación u otras operaciones con cadenas de longitud fija (`CHAR`, `NCHAR`), porque a estos tipos se les aplica relleno automáticamente en la base de datos.  
   
--   Dado que muchos métodos, como `Replace`, `ToLower`, `ToUpper`, y el indizador de carácter, no tienen ningún equivalente válido para las columnas `TEXT` o `NTEXT` y XML, se producirán `SqlExceptions` si se convierten de la forma habitual. Este comportamiento se considera que es aceptable para estos tipos. Sin embargo, todas las operaciones de cadena deben coincidir con la semántica de Common Language Runtime (CLR) para `VARCHAR`, `NVARCHAR`, `VARCHAR(max)` y `NVARCHAR(max)`.  
+- Dado que muchos métodos, como `Replace`, `ToLower`, `ToUpper`, y el indizador de carácter, no tienen ningún equivalente válido para las columnas `TEXT` o `NTEXT` y XML, se producirán `SqlExceptions` si se convierten de la forma habitual. Este comportamiento se considera que es aceptable para estos tipos. Sin embargo, todas las operaciones de cadena deben coincidir con la semántica de Common Language Runtime (CLR) para `VARCHAR`, `NVARCHAR`, `VARCHAR(max)` y `NVARCHAR(max)`.  
   
 ## <a name="see-also"></a>Vea también
 

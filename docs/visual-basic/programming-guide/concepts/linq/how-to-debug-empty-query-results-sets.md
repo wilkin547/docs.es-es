@@ -3,11 +3,11 @@ title: Procedimiento Depurar conjuntos de resultados de consulta vacíos (Visual
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
 ms.openlocfilehash: 80e505be03a26f80bbba9d3673732505b27e9598
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855691"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Procedimiento Depurar conjuntos de resultados de consulta vacíos (Visual Basic)
 Uno de los problemas más habituales al consultar árboles XML es que si el árbol XML tiene un espacio de nombres predeterminado, el desarrollador a veces escribe la consulta como si el código XML no estuviera en un espacio de nombres.  

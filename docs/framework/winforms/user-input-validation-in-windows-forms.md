@@ -8,11 +8,11 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
 ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800131"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validación de los datos proporcionados por el usuario en formularios Windows Forms
 Cuando los usuarios escriben datos en la aplicación, desea comprobar que los datos son válidos antes de que lo usa la aplicación. Puede requerir que determinados campos de texto no sea de longitud cero, que tenga formato de un campo como un número de teléfono u otro tipo de datos con formato correcto o que una cadena no contiene caracteres no seguros que podrían usarse para poner en peligro la seguridad de una base de datos. Windows Forms proporciona varias maneras de validar la entrada en la aplicación.  
@@ -27,11 +27,11 @@ Cuando los usuarios escriben datos en la aplicación, desea comprobar que los da
 ## <a name="event-driven-validation"></a>Validación controlada por eventos  
  Si desea tener control completo mediante programación a través de la validación, o necesita realizar comprobaciones de validación compleja, debe usar los eventos de validación integrados en la mayoría de los controles de Windows Forms. Cada control que acepta la entrada de usuario de forma libre tiene un <xref:System.Windows.Forms.Control.Validating> evento que se producirá cada vez que el control requiere validación de datos. En el <xref:System.Windows.Forms.Control.Validating> el método de control de eventos, puede validar entrada de varias maneras de usuario. Por ejemplo, si tiene un cuadro de texto que debe contener un código postal, puede realizar la validación de las maneras siguientes:  
   
--   Si el código postal debe pertenecer a un grupo específico de códigos postales, puede realizar una comparación de cadenas en la entrada para validar los datos introducidos por el usuario. Por ejemplo, si el código postal debe estar en el conjunto {10001, 10002, 10003}, puede usar una comparación de cadenas para validar los datos.  
+- Si el código postal debe pertenecer a un grupo específico de códigos postales, puede realizar una comparación de cadenas en la entrada para validar los datos introducidos por el usuario. Por ejemplo, si el código postal debe estar en el conjunto {10001, 10002, 10003}, puede usar una comparación de cadenas para validar los datos.  
   
--   Si el código postal debe estar en un formulario específico puede utilizar expresiones regulares para validar los datos introducidos por el usuario. Por ejemplo, para validar el formato `#####` o `#####-####`, puede usar la expresión regular `^(\d{5})(-\d{4})?$`. Para validar el formulario `A#A #A#`, puede usar la expresión regular `[A-Z]\d[A-Z] \d[A-Z]\d`. Para obtener más información sobre las expresiones regulares, vea [expresiones regulares de .NET Framework](../../standard/base-types/regular-expressions.md) y [ejemplos de expresiones regulares](../../standard/base-types/regular-expression-examples.md).  
+- Si el código postal debe estar en un formulario específico puede utilizar expresiones regulares para validar los datos introducidos por el usuario. Por ejemplo, para validar el formato `#####` o `#####-####`, puede usar la expresión regular `^(\d{5})(-\d{4})?$`. Para validar el formulario `A#A #A#`, puede usar la expresión regular `[A-Z]\d[A-Z] \d[A-Z]\d`. Para obtener más información sobre las expresiones regulares, vea [expresiones regulares de .NET Framework](../../standard/base-types/regular-expressions.md) y [ejemplos de expresiones regulares](../../standard/base-types/regular-expression-examples.md).  
   
--   Si el código postal debe ser un código postal de Estados Unidos, podría llamar a un servicio Web de código postal para validar los datos introducidos por el usuario.  
+- Si el código postal debe ser un código postal de Estados Unidos, podría llamar a un servicio Web de código postal para validar los datos introducidos por el usuario.  
   
  El <xref:System.Windows.Forms.Control.Validating> evento se proporciona un objeto de tipo <xref:System.ComponentModel.CancelEventArgs>. Si determina que los datos del control no sean válidos, puede cancelar el <xref:System.Windows.Forms.Control.Validating> eventos mediante el establecimiento de este objeto <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propiedad `true`. Si no establece la <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propiedad, Windows Forms asumirá que la validación se realizó correctamente para ese control y generar el <xref:System.Windows.Forms.Control.Validated> eventos.  
   
@@ -58,11 +58,11 @@ Cuando los usuarios escriben datos en la aplicación, desea comprobar que los da
 #### <a name="explicit-validation"></a>Validación explícita  
  El enfoque de validación explícita valida los datos al mismo tiempo. Puede validar los datos en respuesta a una acción del usuario, como hacer clic en un botón de guardar o un vínculo siguiente. Cuando se produce la acción del usuario, puede desencadenar la validación explícita en una de las maneras siguientes:  
   
--   Llame a <xref:System.Windows.Forms.ContainerControl.Validate%2A> para validar el último control que ha perdido el foco.  
+- Llame a <xref:System.Windows.Forms.ContainerControl.Validate%2A> para validar el último control que ha perdido el foco.  
   
--   Llame a <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> para validar todos los controles secundarios en un control de formulario o contenedor.  
+- Llame a <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> para validar todos los controles secundarios en un control de formulario o contenedor.  
   
--   Llamar a un método personalizado para validar los datos en los controles manualmente.  
+- Llamar a un método personalizado para validar los datos en los controles manualmente.  
   
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Controles de comportamiento predeterminado de la validación implícita de Windows Forms  
  Diferentes controles de Windows Forms tienen valores predeterminados diferentes para sus <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> propiedad. La tabla siguiente muestran los controles más comunes y sus valores predeterminados.  
@@ -79,11 +79,11 @@ Cuando los usuarios escriben datos en la aplicación, desea comprobar que los da
 ## <a name="closing-the-form-and-overriding-validation"></a>Cerrando el formulario y reemplazar la validación  
  Cuando un control mantiene el foco porque los datos que contiene no están válidos, es imposible cerrar el formulario principal en una de las formas habituales:  
   
--   Al hacer clic en el **cerrar** botón.  
+- Al hacer clic en el **cerrar** botón.  
   
--   Seleccionando **cerrar** en el **sistema** menú.  
+- Seleccionando **cerrar** en el **sistema** menú.  
   
--   Mediante una llamada a la <xref:System.Windows.Forms.Form.Close%2A> método mediante programación.  
+- Mediante una llamada a la <xref:System.Windows.Forms.Form.Close%2A> método mediante programación.  
   
  Sin embargo, en algunos casos, puede dejar que el usuario cierra el formulario, independientemente de si son válidos los valores de los controles. Puede invalidar la validación y cerrar un formulario que contenga datos no válidos mediante la creación de un controlador para el formulario <xref:System.Windows.Forms.Form.Closing> eventos. En el evento, establezca la <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propiedad `false`. Esto obliga al formulario a cerrarse. Para obtener más información y un ejemplo, vea <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
 ms.openlocfilehash: 1892e910a86e01b7b2ee0f6a2403ad7af4688808
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857784"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Procedimiento para crear una notificación personalizada
 La infraestructura del modelo de identidad en Windows Communication Foundation (WCF) proporciona un conjunto de tipos de notificación integrados y derechos con las funciones auxiliares para crear <xref:System.IdentityModel.Claims.Claim> instancias con esos tipos y derechos. Estas demandas integradas están diseñadas para modelar la información que se encuentra en tipos de credencial del cliente que WCF admite de forma predeterminada. En muchos casos, las demandas integradas son suficientes; sin embargo, algunas aplicaciones pueden exigir demandas personalizadas. Una demanda está compuesta por el tipo de demanda, el recurso para el que la demanda se aplica y el derecho que se impone sobre ese recurso. En este tema se describe cómo crear una demanda personalizada.  
@@ -19,15 +19,15 @@ La infraestructura del modelo de identidad en Windows Communication Foundation (
   
 1. Cree una demanda personalizada pasando el tipo de demanda, valor de recurso y derecho al constructor <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29>.  
   
-    1.  Seleccione un valor único para el tipo de demanda.  
+    1. Seleccione un valor único para el tipo de demanda.  
   
          El tipo de demanda es un identificador de cadena único. Es la responsabilidad del diseñador de la demanda personalizada asegurar que el identificador de cadena que se usa para el tipo de demanda sea único. Para obtener una lista de tipos de notificación que se definen mediante WCF, vea el <xref:System.IdentityModel.Claims.ClaimTypes> clase.  
   
-    2.  Elija el tipo de datos primitivo y el valor para el recurso.  
+    2. Elija el tipo de datos primitivo y el valor para el recurso.  
   
          Un recurso es un objeto. El tipo CLR del recurso puede ser primitivo, como <xref:System.String> o <xref:System.Int32>, así como cualquier tipo serializable. El tipo CLR del recurso debe ser serializable, porque las demandas se serializan en varios puntos de WCF. Los tipos primitivos son serializables.  
   
-    3.  Elija un derecho definido por WCF o un valor único para un derecho personalizado.  
+    3. Elija un derecho definido por WCF o un valor único para un derecho personalizado.  
   
          Un derecho es un identificador de cadena único. Los derechos que se definen mediante WCF se definen en el <xref:System.IdentityModel.Claims.Rights> clase.  
   
@@ -42,11 +42,11 @@ La infraestructura del modelo de identidad en Windows Communication Foundation (
   
 1. Cree una demanda personalizada pasando el tipo de demanda, valor de recurso y derecho al constructor <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29>.  
   
-    1.  Seleccione un valor único para el tipo de demanda.  
+    1. Seleccione un valor único para el tipo de demanda.  
   
          El tipo de demanda es un identificador de cadena único. Es la responsabilidad del diseñador de la demanda personalizada asegurar que el identificador de cadena que se usa para el tipo de demanda sea único. Para obtener una lista de tipos de notificación que se definen mediante WCF, vea el <xref:System.IdentityModel.Claims.ClaimTypes> clase.  
   
-    2.  Elija o defina un tipo no primitivo serializable para el recurso.  
+    2. Elija o defina un tipo no primitivo serializable para el recurso.  
   
          Un recurso es un objeto. El tipo CLR del recurso debe ser serializable, porque las demandas se serializan en varios puntos de WCF. Los tipos primitivos ya son serializables.  
   
@@ -57,7 +57,7 @@ La infraestructura del modelo de identidad en Windows Communication Foundation (
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)] 
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]        
   
-    3.  Elija un derecho definido por WCF o un valor único para un derecho personalizado.  
+    3. Elija un derecho definido por WCF o un valor único para un derecho personalizado.  
   
          Un derecho es un identificador de cadena único. Los derechos que se definen mediante WCF se definen en el <xref:System.IdentityModel.Claims.Rights> clase.  
   

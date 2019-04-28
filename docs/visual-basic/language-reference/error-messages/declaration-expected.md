@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
 ms.openlocfilehash: 64ee75c93615f57b15fea29f06fff500a395ba0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803836"
 ---
 # <a name="declaration-expected"></a>Se esperaba una declaración
 Una instrucción no declarativa, como una asignación o una instrucción del bucle, se produce fuera de cualquier procedimiento. Sólo se permiten declaraciones procedimientos externos.  
@@ -23,11 +23,11 @@ Una instrucción no declarativa, como una asignación o una instrucción del buc
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Mueva la instrucción no declarativa en el cuerpo de un procedimiento.  
+- Mueva la instrucción no declarativa en el cuerpo de un procedimiento.  
   
--   Comience la declaración con una palabra clave de declaración adecuada.  
+- Comience la declaración con una palabra clave de declaración adecuada.  
   
--   Asegúrese de que una palabra clave no está mal escrita.  
+- Asegúrese de que una palabra clave no está mal escrita.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -13,11 +13,11 @@ ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e4deadc175bd4cc3635a6c8d8d8b80100b5a9938
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868841"
 ---
 # <a name="security-and-serialization"></a>Seguridad y serialización
 Como la serialización puede permitir que otro código vea o modifique datos de instancias de objeto que de otra forma podrían estar inaccesibles, se requiere un permiso especial del código que realiza la serialización: <xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> especificada. De acuerdo con la directiva predeterminada, no se concede este permiso al código descargado de Internet o de la intranet; únicamente el código del equipo local tiene garantizado este permiso.  
@@ -28,7 +28,7 @@ Como la serialización puede permitir que otro código vea o modifique datos de 
   
  La interfaz <xref:System.Runtime.Serialization.ISerializable> está pensada que solo la infraestructura de serialización la utilice. Sin embargo, si no está protegida, existe el riesgo potencial de que pueda mostrar información confidencial. Si proporciona una serialización personalizada mediante la implementación de **ISerializable**, asegúrese de tomar las siguientes precauciones:  
   
--   El método <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> debe protegerse explícitamente, bien exigiendo que **SecurityPermission** tenga el permiso **SerializationFormatter** especificado o bien asegurándose de que no se publica información confidencial con el resultado del método. Por ejemplo:  
+- El método <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> debe protegerse explícitamente, bien exigiendo que **SecurityPermission** tenga el permiso **SerializationFormatter** especificado o bien asegurándose de que no se publica información confidencial con el resultado del método. Por ejemplo:  
   
     ```vb  
     Public Overrides<SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  
@@ -45,7 +45,7 @@ Como la serialización puede permitir que otro código vea o modifique datos de 
     }  
     ```  
   
--   El constructor especial que se usa para la serialización también debe realizar una validación de entrada exhaustiva y debe ser de tipo protegido o privado para ayudar a la protección contra el uso indebido por parte de código malintencionado. Debe imponer las mismas comprobaciones de seguridad y los mismos permisos que se requieren para obtener una instancia de esta clase por otros medios, como la creación explícita de la clase o la creación indirecta a través de algún tipo de generador.  
+- El constructor especial que se usa para la serialización también debe realizar una validación de entrada exhaustiva y debe ser de tipo protegido o privado para ayudar a la protección contra el uso indebido por parte de código malintencionado. Debe imponer las mismas comprobaciones de seguridad y los mismos permisos que se requieren para obtener una instancia de esta clase por otros medios, como la creación explícita de la clase o la creación indirecta a través de algún tipo de generador.  
   
 ## <a name="see-also"></a>Vea también
 
