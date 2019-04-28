@@ -13,11 +13,11 @@ ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4893adaf528f1a9ef8fc8eab8027406fd8520cc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704796"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > elemento
 Especifica si se deshabilita el almacenamiento en caché de errores que se producen porque no se encontró el ensamblado mediante sondeo de enlace.  
@@ -63,11 +63,11 @@ Especifica si se deshabilita el almacenamiento en caché de errores que se produ
   
  Algunos enlaces de errores de carga no se ven afectados por este elemento y siempre se almacenan en caché. Estos errores se producen porque se encontró el ensamblado, pero no se pudo cargar. Producen <xref:System.BadImageFormatException> o <xref:System.IO.FileLoadException>. En la lista siguiente incluye algunos ejemplos de tales errores.  
   
--   Si intenta cargar un archivo no es un ensamblado válido, se producirá un error en los intentos posteriores para cargar el ensamblado incluso si se reemplaza el archivo incorrecto con el ensamblado correcto.  
+- Si intenta cargar un archivo no es un ensamblado válido, se producirá un error en los intentos posteriores para cargar el ensamblado incluso si se reemplaza el archivo incorrecto con el ensamblado correcto.  
   
--   Si intenta cargar un ensamblado que está bloqueado por el sistema de archivos, se producirá un error en los intentos posteriores para cargar el ensamblado incluso después de que el ensamblado se libera por el sistema de archivos.  
+- Si intenta cargar un ensamblado que está bloqueado por el sistema de archivos, se producirá un error en los intentos posteriores para cargar el ensamblado incluso después de que el ensamblado se libera por el sistema de archivos.  
   
--   Si una o varias versiones del ensamblado que está intentando cargar es en la ruta de acceso de sondeo, pero la versión específica que solicita no está entre ellos, se producirá un error en los intentos posteriores para cargar esa versión incluso si se mueve la versión correcta en la ruta de acceso de sondeo.  
+- Si una o varias versiones del ensamblado que está intentando cargar es en la ruta de acceso de sondeo, pero la versión específica que solicita no está entre ellos, se producirá un error en los intentos posteriores para cargar esa versión incluso si se mueve la versión correcta en la ruta de acceso de sondeo.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra cómo deshabilitar el almacenamiento en caché de errores de enlace de ensamblado que se producen porque no se encontró el ensamblado mediante sondeo.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
 ms.openlocfilehash: ab45278b2e1199282e3066c34828b9bda716e162
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803693"
 ---
 # <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>Propiedad predeterminada '\<nombrepropiedad1 >' entra en conflicto con la propiedad predeterminada '\<nombrepropiedad2 >' en '\<classname >', por lo que se debe declarar como 'Shadows'
 Se declara una propiedad con el mismo nombre que una propiedad definida en la clase base. En esta situación, la propiedad de esta clase debe ocultar la propiedad de clase base.  
@@ -23,7 +23,7 @@ Se declara una propiedad con el mismo nombre que una propiedad definida en la cl
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Agregar el `Shadows` palabra clave para la declaración o cambie el nombre de la propiedad que se declara.  
+- Agregar el `Shadows` palabra clave para la declaración o cambie el nombre de la propiedad que se declara.  
   
 ## <a name="see-also"></a>Vea también
 

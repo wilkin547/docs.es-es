@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30737
 ms.assetid: 3f40bacd-3fac-4741-b204-852f693d4340
 ms.openlocfilehash: f5053bddf4b9ba791ad6d0733e1dd89c4ded91bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918273"
 ---
 # <a name="no-accessible-main-method-with-an-appropriate-signature-was-found-in-name"></a>No se encontró ningún método 'Main' accesible con una firma apropiada en '\<nombre >'
 Las aplicaciones de línea de comandos deben tener un `Sub Main` definido. `Main` debe declararse como `Public Shared` si está definido en una clase o como `Public` si está definido en un módulo.  
@@ -21,7 +21,7 @@ Las aplicaciones de línea de comandos deben tener un `Sub Main` definido. `Main
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Definir un `Public Sub Main` procedimiento para el proyecto. Declara como `Shared` si y solo si se define dentro de una clase.  
+- Definir un `Public Sub Main` procedimiento para el proyecto. Declara como `Shared` si y solo si se define dentro de una clase.  
   
 ## <a name="see-also"></a>Vea también
 

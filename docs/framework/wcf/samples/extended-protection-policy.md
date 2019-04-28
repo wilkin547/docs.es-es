@@ -3,11 +3,11 @@ title: Directiva de protección extendida
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
 ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990176"
 ---
 # <a name="extended-protection-policy"></a>Directiva de protección extendida
 Protección extendida es una iniciativa de seguridad para protegerse contra los ataques de tipo "Man in the middle" (MITM). Un ataque MITM es una amenaza de seguridad en la que MITM toma las credenciales de un cliente y lo reenvía a un servidor.  
@@ -34,9 +34,9 @@ Protección extendida es una iniciativa de seguridad para protegerse contra los 
   
 4. Este ejemplo requiere que el cliente establezca un canal seguro con el servidor, por lo que es necesaria la presencia de un certificado de servidor que se puede instalar desde el Administrador de Internet Information Services (IIS).  
   
-    1.  Abra el Administrador de IIS. Abra **certificados de servidor**, que aparece en el **característica vista** pestaña cuando se selecciona el nodo raíz (nombre de equipo).  
+    1. Abra el Administrador de IIS. Abra **certificados de servidor**, que aparece en el **característica vista** pestaña cuando se selecciona el nodo raíz (nombre de equipo).  
   
-    2.  Para las pruebas de este ejemplo, puede crear un certificado autofirmado. Si no desea que Internet Explorer le indique que el certificado no es seguro, instálelo en el almacén Entidades emisoras de certificados raíz de confianza.  
+    2. Para las pruebas de este ejemplo, puede crear un certificado autofirmado. Si no desea que Internet Explorer le indique que el certificado no es seguro, instálelo en el almacén Entidades emisoras de certificados raíz de confianza.  
   
 5. Abra el **acciones** panel para el sitio Web predeterminado. Haga clic en **editar sitio**, **enlaces**. Agregue HTTPS como un tipo si no está presente, con el número de puerto 443. Asigne el certificado SSL creado en el paso anterior.  
   

@@ -3,11 +3,11 @@ title: <clientVia>
 ms.date: 03/30/2017
 ms.assetid: c27ee94e-babd-459b-9574-2a6d67d11314
 ms.openlocfilehash: b8864760c1700cd785922b922346204d194f56cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673633"
 ---
 # <a name="clientvia"></a>\<clientVia>
 Especifica URI para el que se debe crear el canal de transporte. Para obtener más información, consulta <xref:System.ServiceModel.Description.ClientViaBehavior>.  

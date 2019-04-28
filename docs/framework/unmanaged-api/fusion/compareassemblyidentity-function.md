@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 652000367c19572f73296c704047830ce1c74574
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914529"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity (Función)
 Compara dos identidades de ensamblado para determinar si son equivalentes.  
@@ -65,11 +65,11 @@ STDAPI CompareAssemblyIdentity (
 ## <a name="remarks"></a>Comentarios  
  `CompareAssemblyIdentity` comprueba si `pwzAssemblyIdentity1` y `pwzAssemblyIdentity2` son equivalentes. `pfEquivalent` se establece en `true` en una o varias de las condiciones siguientes:  
   
--   Las identidades de dos ensamblado son equivalentes. Para los ensamblados con nombre seguro, la equivalencia requiere que el nombre del ensamblado, versión, token de clave pública y la referencia cultural para que sean idénticos. Para los ensamblados nombres simple, la equivalencia requiere a una coincidencia en el nombre de ensamblado y la referencia cultural.  
+- Las identidades de dos ensamblado son equivalentes. Para los ensamblados con nombre seguro, la equivalencia requiere que el nombre del ensamblado, versión, token de clave pública y la referencia cultural para que sean idénticos. Para los ensamblados nombres simple, la equivalencia requiere a una coincidencia en el nombre de ensamblado y la referencia cultural.  
   
--   Ambas identidades de ensamblado hacen referencia a ensamblados que se ejecutan en .NET Framework. Esta condición devuelve `true` incluso si no coinciden los números de versión del ensamblado.  
+- Ambas identidades de ensamblado hacen referencia a ensamblados que se ejecutan en .NET Framework. Esta condición devuelve `true` incluso si no coinciden los números de versión del ensamblado.  
   
--   Los dos ensamblados no son ensamblados administrados, pero `fUnified1` o `fUnified2` se estableció en `true`.  
+- Los dos ensamblados no son ensamblados administrados, pero `fUnified1` o `fUnified2` se estableció en `true`.  
   
  El `fUnified` marca indica que todos los números de versión hasta el número de versión del ensamblado con nombre seguro se consideran equivalentes al ensamblado con nombre seguro. Por ejemplo, si el valor de `pwzAssemblyIndentity1` es "MyAssembly, versión = 3.0.0.0, culture = neutral, publicKeyToken =..." y el valor de `fUnified1` es `true`, esto indica que deben ser todas las versiones de MyAssembly desde la versión 0.0.0.0 hasta la versión 3.0.0.0 se tratan como equivalentes. En tal caso, si `pwzAssemblyIndentity2` hace referencia al mismo ensamblado como `pwzAssemblyIndentity1`, excepto que presenta un menor número de versión `pfEquivalent` está establecido en `true`. Si `pwzAssemblyIdentity2` hace referencia a un mayor número de versión `pfEquivalent` está establecido en `true` solo si el valor de `fUnified2` es `true`.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857797"
 ---
 # <a name="bindings-and-security"></a>Enlaces y seguridad
 Los enlaces proporcionados por el sistema incluidos con Windows Communication Foundation (WCF) ofrecen una forma rápida de programar aplicaciones de WCF. Con una excepción, todos los enlaces tienen un esquema de seguridad predeterminado habilitó. Este tema le ayuda a seleccionar el enlace adecuado a sus necesidades de seguridad.  
@@ -35,21 +35,21 @@ Los enlaces proporcionados por el sistema incluidos con Windows Communication Fo
   
  Este enlace está diseñado para su uso con un rango de tecnologías existentes, incluyendo las siguientes:  
   
--   Servicios Web ASP.NET (ASMX), versión 1.  
+- Servicios Web ASP.NET (ASMX), versión 1.  
   
--   Aplicaciones de mejoras de servicios Web (WSE).  
+- Aplicaciones de mejoras de servicios Web (WSE).  
   
--   Perfil básico tal como se define en la interoperabilidad de servicios Web (WS-I) especificación (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
+- Perfil básico tal como se define en la interoperabilidad de servicios Web (WS-I) especificación (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
   
--   Perfil de seguridad básico tal y como se define en WS-I.  
+- Perfil de seguridad básico tal y como se define en WS-I.  
   
  De forma predeterminada, este enlace no es seguro. Está diseñado para interoperar con servicios ASMX. Cuando la seguridad está habilitada, el enlace está diseñado para ofrecer una interoperación perfecta con los mecanismos de seguridad de Internet Information Services (IIS), como la autenticación básica, el resumen y la seguridad integrada de Windows. Para obtener más información, consulte [información general sobre la seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Este enlace admite lo siguiente:  
   
--   Seguridad de transporte de HTTPS.  
+- Seguridad de transporte de HTTPS.  
   
--   Autenticación básica HTTP  
+- Autenticación básica HTTP  
   
--   WS-Security.  
+- WS-Security.  
   
  Para obtener más información, vea<xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>y <xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
@@ -58,11 +58,11 @@ Los enlaces proporcionados por el sistema incluidos con Windows Communication Fo
   
  De forma predeterminada, este enlace implementa la especificación WS-Security y proporciona interoperabilidad con servicios que implementan las especificaciones WS - *. Admite lo siguiente:  
   
--   Seguridad de transporte de HTTPS.  
+- Seguridad de transporte de HTTPS.  
   
--   WS-Security.  
+- WS-Security.  
   
--   Protección de transportes HTTPS con seguridad de credenciales de mensajes SOAP para autenticar al llamador.  
+- Protección de transportes HTTPS con seguridad de credenciales de mensajes SOAP para autenticar al llamador.  
   
  Para obtener más información, consulte <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, y <xref:System.ServiceModel.HttpProxyCredentialType>.  
   
@@ -71,23 +71,23 @@ Los enlaces proporcionados por el sistema incluidos con Windows Communication Fo
   
  Este enlace está diseñado para habilitar las aplicaciones de servicio dúplex. Este enlace implementa la especificación WS-Security para la seguridad de transferencia basada en mensajes. La seguridad de transporte no está disponible. De forma predeterminada, proporciona las características siguientes:  
   
--   Implementa mensajería con WS-Reliable para proporcionar fiabilidad.  
+- Implementa mensajería con WS-Reliable para proporcionar fiabilidad.  
   
--   Implementa WS-Security para la autenticación y la seguridad de la transferencia.  
+- Implementa WS-Security para la autenticación y la seguridad de la transferencia.  
   
--   Utiliza HTTP para la entrega de mensajes.  
+- Utiliza HTTP para la entrega de mensajes.  
   
--   Utiliza codificación de mensajes de texto/XML.  
+- Utiliza codificación de mensajes de texto/XML.  
   
  Mediante el uso de WS-Security (seguridad de capa del mensaje), el enlace le permite configurar los parámetros siguientes:  
   
--   El conjunto de algoritmos de seguridad para determinar el algoritmo criptográfico.  
+- El conjunto de algoritmos de seguridad para determinar el algoritmo criptográfico.  
   
--   Opciones de enlaces para lo siguiente:  
+- Opciones de enlaces para lo siguiente:  
   
-    -   Proporcionar credenciales de servicio disponibles fuera de banda en el cliente.  
+    - Proporcionar credenciales de servicio disponibles fuera de banda en el cliente.  
   
-    -   Proporcionar credenciales de servicio negociadas desde el servicio como parte de la configuración del canal.  
+    - Proporcionar credenciales de servicio negociadas desde el servicio como parte de la configuración del canal.  
   
  Para obtener más información, vea <xref:System.ServiceModel.WSDualHttpSecurity> y <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
@@ -96,21 +96,21 @@ Los enlaces proporcionados por el sistema incluidos con Windows Communication Fo
   
  Este enlace se optimiza para la comunicación entre equipos. De manera predeterminada, tiene las siguientes características:  
   
--   Implementa la seguridad de nivel de transporte.  
+- Implementa la seguridad de nivel de transporte.  
   
--   Reutiliza la seguridad de Windows para la autenticación y seguridad de la transferencia.  
+- Reutiliza la seguridad de Windows para la autenticación y seguridad de la transferencia.  
   
--   Utiliza TCP para el transporte.  
+- Utiliza TCP para el transporte.  
   
--   Implementa la codificación de mensajes binarios.  
+- Implementa la codificación de mensajes binarios.  
   
--   Implementa mensajería WS-Reliable.  
+- Implementa mensajería WS-Reliable.  
   
  Entre las opciones posibles se encuentran las siguientes:  
   
--   Capa de seguridad de mensajes (mediante WS-Security).  
+- Capa de seguridad de mensajes (mediante WS-Security).  
   
--   Seguridad de transporte con credencial de mensaje; confidencialidad e integridad proporcionadas por la seguridad del nivel de transporte (TLS) sobre TCP, y credenciales para la autorización proporcionada por WS-Security.  
+- Seguridad de transporte con credencial de mensaje; confidencialidad e integridad proporcionadas por la seguridad del nivel de transporte (TLS) sobre TCP, y credenciales para la autorización proporcionada por WS-Security.  
   
  Para obtener más información, consulte <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, y <xref:System.ServiceModel.MessageCredentialType>.  
   
@@ -119,17 +119,17 @@ Los enlaces proporcionados por el sistema incluidos con Windows Communication Fo
   
  Este enlace se optimiza para la comunicación entre procesos (normalmente en el mismo equipo). De forma predeterminada, este enlace tiene las características siguientes:  
   
--   Utiliza la seguridad de transporte para la transferencia y autenticación de mensajes.  
+- Utiliza la seguridad de transporte para la transferencia y autenticación de mensajes.  
   
--   Utiliza canalizaciones con nombre para la entrega de mensajes.  
+- Utiliza canalizaciones con nombre para la entrega de mensajes.  
   
--   Implementa la codificación de mensajes binarios.  
+- Implementa la codificación de mensajes binarios.  
   
--   Cifrado y firmado de mensajes.  
+- Cifrado y firmado de mensajes.  
   
  Entre las opciones posibles se encuentran las siguientes:  
   
--   Autenticación utilizando la seguridad de Windows.  
+- Autenticación utilizando la seguridad de Windows.  
   
  Para obtener más información, vea <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> y <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
   
@@ -140,9 +140,9 @@ Los enlaces proporcionados por el sistema incluidos con Windows Communication Fo
   
  De forma predeterminada, este enlace utiliza la seguridad de transporte y proporciona las siguientes características de seguridad:  
   
--   La seguridad se puede deshabilitar (Ninguno).  
+- La seguridad se puede deshabilitar (Ninguno).  
   
--   Seguridad de transporte de MSMQ (Transporte).  
+- Seguridad de transporte de MSMQ (Transporte).  
   
  Para obtener más información, vea <xref:System.ServiceModel.NetMsmqSecurity> y <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
@@ -153,15 +153,15 @@ Los enlaces proporcionados por el sistema incluidos con Windows Communication Fo
   
  De forma predeterminada, este enlace utiliza la seguridad de transporte y proporciona las siguientes características de seguridad:  
   
--   La seguridad se puede deshabilitar (Ninguno).  
+- La seguridad se puede deshabilitar (Ninguno).  
   
--   Seguridad de transporte de MSMQ (Transporte).  
+- Seguridad de transporte de MSMQ (Transporte).  
   
--   Seguridad de mensajes basados en SOAP (Mensaje)  
+- Seguridad de mensajes basados en SOAP (Mensaje)  
   
--   Transporte y seguridad de mensajes simultáneos (Ambos).  
+- Transporte y seguridad de mensajes simultáneos (Ambos).  
   
--   Tipos de credencial de cliente admitidos: Ninguno, Windows, el nombre de usuario, el certificado, IssuedToken.  
+- Tipos de credencial de cliente admitidos: Ninguno, Windows, el nombre de usuario, el certificado, IssuedToken.  
   
  Se admite la credencial <xref:System.ServiceModel.MessageCredentialType.Certificate> solo cuando el modo de seguridad está establecido en <xref:System.ServiceModel.NetMsmqSecurityMode.Both> o <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.  
   

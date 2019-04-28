@@ -5,11 +5,11 @@ helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
 ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858031"
 ---
 # <a name="data-contract-surrogates"></a>Suplentes de contratos de datos
 El contrato de datos *suplente* es una característica avanzada que se basa en el modelo del contrato de datos. Esta característica está diseñada para ser utilizada para la personalización de tipo y substitución en situaciones donde los usuarios desean cambiar cómo un tipo se serializa, deserializa o se proyecta en metadatos. Algunos escenarios donde se puede utilizar un suplente es cuando un contrato de datos no se ha especificado para el tipo, los campos y las propiedades no están marcados con el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> o los usuarios desean crear dinámicamente las variaciones del esquema.  
@@ -37,13 +37,13 @@ El contrato de datos *suplente* es una característica avanzada que se basa en e
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
--   Durante la serialización, la asignación devuelta por este método se utiliza subsiguientemente para transformar la instancia original en una instancia suplente llamando al método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>.  
+- Durante la serialización, la asignación devuelta por este método se utiliza subsiguientemente para transformar la instancia original en una instancia suplente llamando al método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>.  
   
--   Durante la deserialización la asignación devuelta por este método es utilizada por el serializador para deserializar en una instancia del tipo suplente. Llama subsiguientemente a <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> para transformar la instancia suplente en una instancia del tipo original.  
+- Durante la deserialización la asignación devuelta por este método es utilizada por el serializador para deserializar en una instancia del tipo suplente. Llama subsiguientemente a <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> para transformar la instancia suplente en una instancia del tipo original.  
   
--   Durante la exportación, el tipo de suplente devuelto por este método se refleja para obtener el contrato de datos para utilizar para generar los metadatos.  
+- Durante la exportación, el tipo de suplente devuelto por este método se refleja para obtener el contrato de datos para utilizar para generar los metadatos.  
   
--   Durante la importación, el tipo inicial se cambia a un tipo suplente que se refleja para obtener el contrato de datos para utilizarlos para propósitos como referenciar el soporte.  
+- Durante la importación, el tipo inicial se cambia a un tipo suplente que se refleja para obtener el contrato de datos para utilizarlos para propósitos como referenciar el soporte.  
   
  El parámetro <xref:System.Type> es el tipo del objeto que se serializa, deserializa, importa o exporta. El método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> debe devolver el tipo de entrada si el suplente no controla el tipo. De lo contrario, devuelva el tipo suplente adecuado. Si existen varios tipos suplentes, las numerosas asignaciones se pueden definir en este método.  
   

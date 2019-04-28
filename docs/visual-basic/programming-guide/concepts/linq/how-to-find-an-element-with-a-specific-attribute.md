@@ -3,11 +3,11 @@ title: Procedimiento Buscar un elemento con un atributo específico (Visual Basi
 ms.date: 07/20/2015
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
 ms.openlocfilehash: d4af129cdb7e9049be747b9eb29aaa26ef5d8188
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855626"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>Procedimiento Buscar un elemento con un atributo específico (Visual Basic)
 En este tema se muestra cómo buscar un elemento que tiene un atributo con un valor específico.  

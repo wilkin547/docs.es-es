@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Controlar la serialización de clases derivadas
+title: Procedimiento para controlar la serialización de clases derivadas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
 ms.openlocfilehash: 12cb3a1fb3311450b8597ef13f1f2efa4adeaf7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922517"
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a>Procedimiento Controlar la serialización de clases derivadas
+# <a name="how-to-control-serialization-of-derived-classes"></a>Procedimiento para controlar la serialización de clases derivadas
 El uso del atributo **XmlElementAttribute** para cambiar el nombre de un elemento XML no es la única manera de personalizar la serialización de objeto. También puede personalizar la secuencia XML derivando de una clase existente e indicando a la instancia <xref:System.Xml.Serialization.XmlSerializer> cómo serializar la nueva clase.  
   
  Por ejemplo, dada una clase `Book`, puede derivar de él y crear una clase `ExpandedBook` que tiene más propiedades. Pero debe indicarle a **XmlSerializer** que acepte el tipo derivado al serializar o deserializar. Para ello, cree una instancia <xref:System.Xml.Serialization.XmlElementAttribute> y establezca su propiedad **Type** en el tipo de clase derivada. Agregue **XmlElementAttribute** a una instancia <xref:System.Xml.Serialization.XmlAttributes>. Después, agregue **XmlAttributes** a una instancia <xref:System.Xml.Serialization.XmlAttributeOverrides>. Para ello, especifique el tipo que se invalida y el nombre del miembro que acepta la clase derivada. Esta implementación se muestra en el ejemplo siguiente.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
 ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014285"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Ampliar el modelo de la aplicación de Visual Basic
 Puede agregar funcionalidad al modelo de aplicación invalidando el `Overridable` los miembros de la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> clase. Esta técnica permite personalizar el comportamiento del modelo de aplicación y agregar llamadas a sus propios métodos como la aplicación se inicia y se cierra.  
@@ -38,11 +38,11 @@ Puede agregar funcionalidad al modelo de aplicación invalidando el `Overridable
   
      El <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> método llama a los métodos siguientes:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Determina si la aplicación tiene definida una pantalla de presentación y si es así, muestra la pantalla de presentación en un subproceso independiente.  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Determina si la aplicación tiene definida una pantalla de presentación y si es así, muestra la pantalla de presentación en un subproceso independiente.  
   
          El <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> método contiene el código que muestra la presentación de pantalla de al menos el número de milisegundos especificados por el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> propiedad. Para usar esta funcionalidad, debe agregar la pantalla de presentación para la aplicación mediante el **Diseñador de proyectos** (que establece el `My.Application.MinimumSplashScreenDisplayTime` propiedad a dos segundos), o establecer el `My.Application.MinimumSplashScreenDisplayTime` propiedad en un método que reemplaza el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> método. Para obtener más información, consulta <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Permite que un diseñador emitir código que inicializa la pantalla de presentación.  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Permite que un diseñador emitir código que inicializa la pantalla de presentación.  
   
          De forma predeterminada, este método no hace nada. Si selecciona una pantalla de presentación para su aplicación en Visual Basic **Diseñador de proyectos**, invalida el diseñador la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> método con un método que establece el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> propiedad a una nueva instancia de la forma de pantalla de presentación .  
   
@@ -54,11 +54,11 @@ Puede agregar funcionalidad al modelo de aplicación invalidando el `Overridable
   
      De forma predeterminada, antes de entrar en el bucle de mensajes de Windows Forms, este método llama a la `OnCreateMainForm` (para crear el formulario principal de la aplicación) y `HideSplashScreen` (para cerrar la pantalla de presentación) métodos:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Proporciona una manera para que un diseñador emitir código que inicializa el formulario principal.  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Proporciona una manera para que un diseñador emitir código que inicializa el formulario principal.  
   
          De forma predeterminada, este método no hace nada. Sin embargo, cuando selecciona un formulario principal de la aplicación en Visual Basic **Diseñador de proyectos**, el diseñador reemplaza el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> método con un método que establece el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> propiedad a una nueva instancia del formulario principal.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Si la aplicación tiene definida una pantalla de presentación y está abierta, este método cierra la pantalla de presentación.  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Si la aplicación tiene definida una pantalla de presentación y está abierta, este método cierra la pantalla de presentación.  
   
          De forma predeterminada, este método cierra la pantalla de presentación.  
   
@@ -97,7 +97,6 @@ Puede agregar funcionalidad al modelo de aplicación invalidando el `Overridable
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - [Información general sobre el modelo de aplicaciones de Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
 - [Página de aplicación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

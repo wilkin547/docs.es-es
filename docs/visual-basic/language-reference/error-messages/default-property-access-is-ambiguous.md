@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
 ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803735"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Acceso a la propiedad predeterminada es ambiguo entre los miembros heredados\<defaultpropertyname >' de interfaz '\<interfacename1 >' y '\<defaultpropertyname >' de interfaz '\< interfacename2 >'
 Una interfaz hereda de dos interfaces, cada una de las cuales declara una propiedad predeterminada con el mismo nombre. El compilador no puede resolver un acceso a esta propiedad predeterminada sin calificación. Esto se ilustra en el siguiente ejemplo:  
@@ -41,7 +41,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Evite heredar a miembros con el mismo nombre. En el ejemplo anterior, si `testObj` no necesita ninguno de los miembros de, digamos, `Iface2`, declárelo como sigue:  
+- Evite heredar a miembros con el mismo nombre. En el ejemplo anterior, si `testObj` no necesita ninguno de los miembros de, digamos, `Iface2`, declárelo como sigue:  
   
     ```  
     Dim testObj As Iface1  
@@ -49,7 +49,7 @@ End Class
   
      -o bien-  
   
--   Implementar la interfaz que hereda de una clase. A continuación, puede implementar cada una de las propiedades heredadas con nombres diferentes. Sin embargo, solo uno de ellos puede ser la propiedad predeterminada de la clase de implementación. Esto se ilustra en el siguiente ejemplo:  
+- Implementar la interfaz que hereda de una clase. A continuación, puede implementar cada una de las propiedades heredadas con nombres diferentes. Sin embargo, solo uno de ellos puede ser la propiedad predeterminada de la clase de implementación. Esto se ilustra en el siguiente ejemplo:  
   
     ```  
     Public Class useIface3  

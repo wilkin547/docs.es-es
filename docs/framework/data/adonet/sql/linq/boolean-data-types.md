@@ -3,11 +3,11 @@ title: Tipos de datos booleanos
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
 ms.openlocfilehash: 2535d72a89691466b977e1d4c460ff73e3b93dc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877401"
 ---
 # <a name="boolean-data-types"></a>Tipos de datos booleanos
 Los operadores booleanos funcionan tal como cabía esperar en Common Language Runtime (CLR), con la salvedad de que no hay equivalencia para el comportamiento de cortocircuito. Por ejemplo, el operador `AndAlso` de Visual Basic se comporta como el operador `And`. El operador `&&` de C# se comporta como el operador `&`.  

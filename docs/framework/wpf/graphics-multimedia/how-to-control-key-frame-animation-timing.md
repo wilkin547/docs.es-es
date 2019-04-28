@@ -1,5 +1,5 @@
 ---
-title: Filtrar Controlar la temporización de animaciones de fotogramas clave
+title: Procedimiento Controlar la temporización de animaciones de fotogramas clave
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - timing key-frame animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
 ms.openlocfilehash: d0ea56b24f8fffeb688d297a675681bce3fdc4e0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911512"
 ---
-# <a name="how-to-control-key-frame-animation-timing"></a>Filtrar Controlar la temporización de animaciones de fotogramas clave
+# <a name="how-to-control-key-frame-animation-timing"></a>Procedimiento Controlar la temporización de animaciones de fotogramas clave
 
 En este ejemplo se muestra cómo controlar la temporización de fotogramas clave dentro de una animación de fotogramas clave. Al igual que otras animaciones, animaciones de fotogramas clave tienen una <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propiedad. Además de especificar la duración de una animación, deberá especificar qué parte de esa duración se asigna a cada uno de los fotogramas clave. Para asignar el tiempo, especifica un <xref:System.Windows.Media.Animation.KeyTime> para cada fotograma clave en la animación.
 

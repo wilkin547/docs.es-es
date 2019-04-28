@@ -6,11 +6,11 @@ helpviewer_keywords:
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
 ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827949"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Diferencias entre sombrear y reemplazar (Visual Basic)
 Al definir una clase que hereda de una clase base, a veces desea definir uno o más de los elementos de la clase base en la clase derivada. Sombrear y reemplazar ambos están disponibles para este propósito.  
@@ -41,15 +41,15 @@ Al definir una clase que hereda de una clase base, a veces desea definir uno o m
 ## <a name="guidelines"></a>Instrucciones  
  Normalmente, usa a reemplazar en los casos siguientes:  
   
--   Define las clases derivadas polimórficas.  
+- Define las clases derivadas polimórficas.  
   
--   Desea que la seguridad de que el compilador aplicar el tipo de elemento idéntico y la secuencia de llamada.  
+- Desea que la seguridad de que el compilador aplicar el tipo de elemento idéntico y la secuencia de llamada.  
   
  Normalmente, usa el sombreado en los casos siguientes:  
   
--   Se prevé que la clase base podría modificarse y define un elemento con el mismo nombre que el suyo.  
+- Se prevé que la clase base podría modificarse y define un elemento con el mismo nombre que el suyo.  
   
--   Desea la libertad de cambiar el tipo de elemento o secuencia de llamada.  
+- Desea la libertad de cambiar el tipo de elemento o secuencia de llamada.  
   
 ## <a name="see-also"></a>Vea también
 

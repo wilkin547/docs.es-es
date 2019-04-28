@@ -3,11 +3,11 @@ title: Elección de un patrón de intercambio de mensajes
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
 ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922868"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes
 El primer paso para escribir un transporte personalizado es decidir qué *patrones de intercambio de mensajes* (o MEP) son necesarios para el canal que está desarrollando. Este tema describe las opciones disponibles y trata sobre los distintos requisitos. Se trata de la primera tarea se describe en la lista de tareas de desarrollo de canal [desarrollar canales](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -15,15 +15,15 @@ El primer paso para escribir un transporte personalizado es decidir qué *patron
 ## <a name="six-message-exchange-patterns"></a>Seis patrones de intercambio de mensajes  
  Hay tres MEP entre los que elegir:  
   
--   Datagrama (<xref:System.ServiceModel.Channels.IInputChannel> y <xref:System.ServiceModel.Channels.IOutputChannel>)  
+- Datagrama (<xref:System.ServiceModel.Channels.IInputChannel> y <xref:System.ServiceModel.Channels.IOutputChannel>)  
   
      Al utilizar un MEP de datagrama, un cliente envía un mensaje con un *desencadenar y omitir* exchange. Un intercambio de este tipo es uno que exige una confirmación fuera de banda de entrega correcta. El mensaje se podría perderse por el camino y no llegar nunca al servicio. Si la operación de envío se completa correctamente en la parte del cliente, no garantiza que el extremo remoto haya recibido el mensaje. El datagrama es un bloque de creación fundamental para la mensajería, ya que puede crear sus propios protocolos encima de él, incluidos protocolos confiables y seguros. Los canales de datagrama del cliente implementan la interfaz <xref:System.ServiceModel.Channels.IOutputChannel> y los del servicio, la interfaz <xref:System.ServiceModel.Channels.IInputChannel>.  
   
--   Solicitud-respuesta (<xref:System.ServiceModel.Channels.IRequestChannel> y <xref:System.ServiceModel.Channels.IReplyChannel>)  
+- Solicitud-respuesta (<xref:System.ServiceModel.Channels.IRequestChannel> y <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
      En este MEP, un mensaje se envía y se recibe una respuesta. El patrón está compuesto de los pares solicitud-respuesta. Los ejemplos de llamadas de solicitud-respuesta son llamadas a procedimientos remotos (RPC) y solicitudes GET del explorador. Este patrón también se conoce como dúplex medio. En este MEP, los canales de cliente implementan <xref:System.ServiceModel.Channels.IRequestChannel> y los canales de servicio <xref:System.ServiceModel.Channels.IReplyChannel>.  
   
--   Dúplex (<xref:System.ServiceModel.Channels.IDuplexChannel>)  
+- Dúplex (<xref:System.ServiceModel.Channels.IDuplexChannel>)  
   
      El MEP dúplex permite que un cliente envíe un número arbitrario de mensajes y que se reciban en cualquier orden. El MEP de dúplex es como una conversación telefónica, donde cada palabra que se pronuncia es un mensaje. Dado que ambos lados pueden enviar y recibir en este MEP, la interfaz implementada por los canales de servicio y cliente es <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
@@ -32,17 +32,17 @@ Los tres patrones de intercambio de mensajes básicos. De arriba abajo: datagram
   
  Cada uno de estos MEP también puede admitir *sesiones*. Una sesión (e implementación de <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> de tipo <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) pone en correlación todos los mensajes enviados y recibidos en un canal. El patrón de solicitud-respuesta es una sesión autónoma de dos mensajes, ya que la solicitud y la respuesta se ponen en correlación. Por el contrario, el patrón de solicitud-respuesta que admite las sesiones implica que se ponen en correlación todos los pares de solicitud/respuesta en ese canal entre sí. Esto le da un total de seis MEP entre los que elegir:  
   
--   Datagrama  
+- Datagrama  
   
--   Solicitud-respuesta  
+- Solicitud-respuesta  
   
--   Dúplex  
+- Dúplex  
   
--   Datagrama con sesiones  
+- Datagrama con sesiones  
   
--   Solicitud-respuesta con sesiones  
+- Solicitud-respuesta con sesiones  
   
--   Dúplex con sesiones  
+- Dúplex con sesiones  
   
 > [!NOTE]
 >  En el caso del transporte de UDP, el único MEP que se admite es el datagrama, ya que UDP es en sí mismo un protocolo de tipo desencadenar y omitir.  
@@ -72,25 +72,25 @@ Los tres patrones de intercambio de mensajes básicos. De arriba abajo: datagram
 ## <a name="writing-sessionful-channels"></a>Creación de canales con sesión  
  Como autor del canal con sesión, hay algunas cosas que el canal deberá hacer para proporcionar sesiones. En el lado del envío, el canal tendrá que:  
   
--   Para cada canal nuevo, crear una sesión nueva y asociarla a un identificador de sesión nuevo que sea una cadena única. U obtener una nueva sesión a partir del canal con sesión debajo de usted en la pila.  
+- Para cada canal nuevo, crear una sesión nueva y asociarla a un identificador de sesión nuevo que sea una cadena única. U obtener una nueva sesión a partir del canal con sesión debajo de usted en la pila.  
   
--   Para cada mensaje enviado utilizando este canal, si el canal creó la sesión (lo contrario a obtenerla de la capa debajo de usted), tendrá que asociar el mensaje con la sesión. Para los canales de protocolo, esto se realiza normalmente añadiendo un encabezado SOAP. En el caso de los canales de transporte, esto se hace normalmente creando una nueva conexión de transporte o agregando la información de sesión al protocolo de tramas.  
+- Para cada mensaje enviado utilizando este canal, si el canal creó la sesión (lo contrario a obtenerla de la capa debajo de usted), tendrá que asociar el mensaje con la sesión. Para los canales de protocolo, esto se realiza normalmente añadiendo un encabezado SOAP. En el caso de los canales de transporte, esto se hace normalmente creando una nueva conexión de transporte o agregando la información de sesión al protocolo de tramas.  
   
--   Para cada mensaje enviado mediante este canal, necesita proporcionar las garantías de entrega mencionadas anteriormente. Si está confiando en el canal situado debajo de usted para proporcionar la sesión, ese canal también proporcionará las garantías de la entrega. Si está proporcionando la sesión usted mismo, necesita implementar esas garantías como parte del protocolo. En general, si está escribiendo un canal de protocolo que supone WCF en ambos lados, es posible que necesite el transporte de TCP o el canal de mensajería confiable y confíe en cualquier de ellos para proporcionar una sesión.  
+- Para cada mensaje enviado mediante este canal, necesita proporcionar las garantías de entrega mencionadas anteriormente. Si está confiando en el canal situado debajo de usted para proporcionar la sesión, ese canal también proporcionará las garantías de la entrega. Si está proporcionando la sesión usted mismo, necesita implementar esas garantías como parte del protocolo. En general, si está escribiendo un canal de protocolo que supone WCF en ambos lados, es posible que necesite el transporte de TCP o el canal de mensajería confiable y confíe en cualquier de ellos para proporcionar una sesión.  
   
--   Cuando se llama a <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> en su canal, realice el trabajo necesario para cerrar la sesión mediante el tiempo de espera especificado o el valor predeterminado. Esto puede ser tan simple como llamar a <xref:System.ServiceModel.ICommunicationObject.Close%2A> en el canal debajo de usted (si acabara de obtener una sesión de él) o enviar un mensaje SOAP especial o cerrar una conexión de transporte.  
+- Cuando se llama a <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> en su canal, realice el trabajo necesario para cerrar la sesión mediante el tiempo de espera especificado o el valor predeterminado. Esto puede ser tan simple como llamar a <xref:System.ServiceModel.ICommunicationObject.Close%2A> en el canal debajo de usted (si acabara de obtener una sesión de él) o enviar un mensaje SOAP especial o cerrar una conexión de transporte.  
   
--   Cuando se llama a <xref:System.ServiceModel.ICommunicationObject.Abort%2A> en su canal, finalice la sesión bruscamente sin realizar E/S. Esto puede significar no hacer nada o puede suponer interrumpir la conexión de red o algún otro recurso.  
+- Cuando se llama a <xref:System.ServiceModel.ICommunicationObject.Abort%2A> en su canal, finalice la sesión bruscamente sin realizar E/S. Esto puede significar no hacer nada o puede suponer interrumpir la conexión de red o algún otro recurso.  
   
  En el lado de recepción, el canal tendrá que:  
   
--   Para cada mensaje entrante, el agente de escucha debe detectar la sesión a la que pertenece. Si éste es el primer mensaje en la sesión, el agente de escucha del canal debe crear un nuevo canal y devolverlo desde la llamada a <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType>. De lo contrario, el agente de escucha del canal debe buscar el canal existente que corresponde a la sesión y entregar el mensaje a través de ese canal.  
+- Para cada mensaje entrante, el agente de escucha debe detectar la sesión a la que pertenece. Si éste es el primer mensaje en la sesión, el agente de escucha del canal debe crear un nuevo canal y devolverlo desde la llamada a <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType>. De lo contrario, el agente de escucha del canal debe buscar el canal existente que corresponde a la sesión y entregar el mensaje a través de ese canal.  
   
--   Si su canal proporciona la sesión (junto con las garantías de la entrega necesarias), es posible que se pida al lado de recepción que realice algunas acciones como volver a ordenar los mensajes y enviar confirmaciones.  
+- Si su canal proporciona la sesión (junto con las garantías de la entrega necesarias), es posible que se pida al lado de recepción que realice algunas acciones como volver a ordenar los mensajes y enviar confirmaciones.  
   
--   Cuando se llama a <xref:System.ServiceModel.ICommunicationObject.Close%2A> en su canal, realice el trabajo necesario para cerrar la sesión mediante el tiempo de espera especificado o el valor predeterminado. Esto podría producir excepciones si el canal recibe un mensaje mientras espera que el tiempo de espera esté a punto de agotarse. Esto se debe a que el canal estará en estado de cierre cuando reciba un mensaje por lo que se producirá una.  
+- Cuando se llama a <xref:System.ServiceModel.ICommunicationObject.Close%2A> en su canal, realice el trabajo necesario para cerrar la sesión mediante el tiempo de espera especificado o el valor predeterminado. Esto podría producir excepciones si el canal recibe un mensaje mientras espera que el tiempo de espera esté a punto de agotarse. Esto se debe a que el canal estará en estado de cierre cuando reciba un mensaje por lo que se producirá una.  
   
--   Cuando se llama a <xref:System.ServiceModel.ICommunicationObject.Abort%2A> en su canal, finalice la sesión bruscamente sin realizar E/S. De nuevo, esto puede significar no hacer nada o puede suponer interrumpir la conexión de red o algún otro recurso.  
+- Cuando se llama a <xref:System.ServiceModel.ICommunicationObject.Abort%2A> en su canal, finalice la sesión bruscamente sin realizar E/S. De nuevo, esto puede significar no hacer nada o puede suponer interrumpir la conexión de red o algún otro recurso.  
   
 ## <a name="see-also"></a>Vea también
 

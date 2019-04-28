@@ -3,11 +3,11 @@ title: Elemento <httpListener> (configuración de red)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705082"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > elemento (configuración de red)
 Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> clase.  
@@ -52,9 +52,9 @@ Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> cla
   
  El `http.sys` servicio expone dos cadenas de identificador URI de solicitud:  
   
--   URI sin formato  
+- URI sin formato  
   
--   URI convertido  
+- URI convertido  
   
  El URI sin procesar es el <xref:System.Uri?displayProperty=nameWithType> proporcionado en la línea de solicitud de una solicitud HTTP:  
   
@@ -72,11 +72,11 @@ Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> cla
   
  El `http.sys` servicio combina el <xref:System.Uri.Host%2A?displayProperty=nameWithType> valor de propiedad y la cadena en la línea de solicitud para crear un URI convertido. Además, `http.sys` y <xref:System.Uri?displayProperty=nameWithType> clase también hace lo siguiente:  
   
--   Escapes de Naciones Unidas por ciento de todos los valores codificados.  
+- Escapes de Naciones Unidas por ciento de todos los valores codificados.  
   
--   Caracteres no ASCII de codificación de porcentaje se convierte en una representación de caracteres UTF-16. Tenga en cuenta que se admiten caracteres UTF-8 y ANSI/DBCS, así como caracteres Unicode (codificación Unicode con el formato % uXXXX).  
+- Caracteres no ASCII de codificación de porcentaje se convierte en una representación de caracteres UTF-16. Tenga en cuenta que se admiten caracteres UTF-8 y ANSI/DBCS, así como caracteres Unicode (codificación Unicode con el formato % uXXXX).  
   
--   Ejecuta otros pasos de normalización, como la compresión de la ruta de acceso.  
+- Ejecuta otros pasos de normalización, como la compresión de la ruta de acceso.  
   
  Puesto que la solicitud no contiene toda la información sobre la codificación utilizada para los valores codificados por porcentaje, no puede ser posible determinar la codificación correcta simplemente analizando los valores codificados por porcentaje.  
   

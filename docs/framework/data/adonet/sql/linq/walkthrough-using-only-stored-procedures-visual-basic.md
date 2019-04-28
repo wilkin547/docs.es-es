@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
 ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876738"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Tutorial: Usar solo procedimientos almacenados (Visual Basic)
 Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para tener acceso a los datos utilizando procedimientos almacenados solamente. Este enfoque suelen utilizarlo los administradores de bases de datos para limitar el acceso al almacén de datos.  
@@ -28,13 +28,13 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
 ## <a name="prerequisites"></a>Requisitos previos  
  En este tutorial se requiere lo siguiente:  
   
--   Este tutorial utiliza una carpeta dedicada ("c:\linqtest3") que contiene los archivos. Cree esta carpeta antes de empezar el tutorial.  
+- Este tutorial utiliza una carpeta dedicada ("c:\linqtest3") que contiene los archivos. Cree esta carpeta antes de empezar el tutorial.  
   
--   Base de datos de ejemplo Northwind.  
+- Base de datos de ejemplo Northwind.  
   
      Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft. Para obtener instrucciones, consulte [descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\linqtest3.  
   
--   Archivo de código de Visual Basic generado a partir de la base de datos Northwind.  
+- Archivo de código de Visual Basic generado a partir de la base de datos Northwind.  
   
      Este tutorial se escribió utilizando la herramienta SqlMetal con la línea de comandos siguiente:  
   
@@ -45,17 +45,17 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
 ## <a name="overview"></a>Información general  
  Este tutorial se compone de seis tareas principales:  
   
--   Configurar la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solución en Visual Studio.  
+- Configurar la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solución en Visual Studio.  
   
--   Agregar el ensamblado System.Data.Linq al proyecto.  
+- Agregar el ensamblado System.Data.Linq al proyecto.  
   
--   Agregar el archivo de código de la base de datos al proyecto.  
+- Agregar el archivo de código de la base de datos al proyecto.  
   
--   Crear una conexión con la base de datos.  
+- Crear una conexión con la base de datos.  
   
--   Configurar la interfaz de usuario.  
+- Configurar la interfaz de usuario.  
   
--   Ejecutar y probar la aplicación.  
+- Ejecutar y probar la aplicación.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Crear una solución LINQ to SQL  
  En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.  

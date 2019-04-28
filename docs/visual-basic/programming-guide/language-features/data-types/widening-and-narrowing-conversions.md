@@ -20,11 +20,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
 ms.openlocfilehash: 9f1a71e8e2e3e4ebb9b412be74b5ea8702eb164f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827163"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Conversiones de ampliación y de restricción (Visual Basic)
 Una consideración importante con una conversión de tipos es si el resultado de la conversión está dentro del intervalo del tipo de datos de destino.  
@@ -68,15 +68,15 @@ Una consideración importante con una conversión de tipos es si el resultado de
 ## <a name="narrowing-conversions"></a>conversiones de restricción  
  Las conversiones de restricción estándares incluyen lo siguiente:  
   
--   Las direcciones inversas de las conversiones de ampliación en la anterior tabla (excepto en que cada tipo se amplía a sí mismo)  
+- Las direcciones inversas de las conversiones de ampliación en la anterior tabla (excepto en que cada tipo se amplía a sí mismo)  
   
--   Conversiones en ambas direcciones entre [booleano](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) y cualquier tipo numérico  
+- Conversiones en ambas direcciones entre [booleano](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) y cualquier tipo numérico  
   
--   Conversiones de cualquier tipo numérico a cualquier tipo enumeran (`Enum`)  
+- Conversiones de cualquier tipo numérico a cualquier tipo enumeran (`Enum`)  
   
--   Conversiones en ambas direcciones entre [cadena](../../../../visual-basic/language-reference/data-types/string-data-type.md) y cualquier tipo numérico, `Boolean`, o [fecha](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+- Conversiones en ambas direcciones entre [cadena](../../../../visual-basic/language-reference/data-types/string-data-type.md) y cualquier tipo numérico, `Boolean`, o [fecha](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
--   Conversiones de un tipo de datos o un objeto de tipo a un tipo derivado de este  
+- Conversiones de un tipo de datos o un objeto de tipo a un tipo derivado de este  
   
  Las conversiones de restricción no siempre se realizan correctamente en tiempo de ejecución y pueden producir errores o provocar pérdida de datos. Se produce un error si el tipo de datos de destino no puede recibir el valor que se va a convertir. Por ejemplo, una conversión numérica puede provocar un desbordamiento. El compilador no permite realizar conversiones de restricción implícitamente a menos que el [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) establece el tipo de conmutador para la comprobación `Off`.  
   
@@ -89,9 +89,9 @@ Una consideración importante con una conversión de tipos es si el resultado de
 ## <a name="exceptions-during-conversion"></a>Excepciones durante la conversión  
  Dado que las conversiones de ampliación siempre se realice correctamente, no producen excepciones. Conversiones de restricción, cuando fallan, suelen producen las excepciones siguientes:  
   
--   <xref:System.InvalidCastException> : si no se define ninguna conversión entre los dos tipos  
+- <xref:System.InvalidCastException> : si no se define ninguna conversión entre los dos tipos  
   
--   <xref:System.OverflowException> : (solo tipos enteros) si el valor convertido es demasiado grande para el tipo de destino  
+- <xref:System.OverflowException> : (solo tipos enteros) si el valor convertido es demasiado grande para el tipo de destino  
   
  Si define una clase o estructura un [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) para que actúe como un operador de conversión a o desde esa clase o estructura, que `CType` puede producir cualquier excepción que considere adecuada. Además, que `CType` podría llamar a funciones de Visual Basic o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] métodos, que a su vez pueden producir una variedad de excepciones.  
   

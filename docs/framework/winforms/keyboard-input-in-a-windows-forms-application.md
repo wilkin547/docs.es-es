@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 68f5bc70-14d5-45c9-b288-7d7b1493ee79
 ms.openlocfilehash: eaeee45e2c7856012b4ff20eefea3fca53679467
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800846"
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Entradas mediante teclado en una aplicación de Windows Forms
 Windows Forms incluye eventos de teclado estándar que le permiten dar respuesta a pulsaciones de teclas específicas y también proporcionan maneras de interceptar, modificar y utilizar presiones de tecla a la aplicación, el formulario, y controlar el nivel.  

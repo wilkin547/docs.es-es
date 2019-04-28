@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
 ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877687"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Habilitar conjuntos de resultados activos múltiples
 MARS (Multiple Active Result Sets, conjuntos de resultados activos múltiples) es una característica que funciona con SQL Server y que permite la ejecución de varios lotes en una sola conexión. Cuando MARS está habilitado para su uso con SQL Server, cada objeto de comando usado agrega una sesión a la conexión.  
@@ -75,15 +75,15 @@ string connectionString = "Data Source=MSSQL1;" +
   
  El entorno de ejecución por lotes incluye los siguientes componentes:  
   
--   Definición de opciones (por ejemplo, ANSI_NULLS, DATE_FORMAT, LANGUAGE, TEXTSIZE)  
+- Definición de opciones (por ejemplo, ANSI_NULLS, DATE_FORMAT, LANGUAGE, TEXTSIZE)  
   
--   Contexto de seguridad (rol del usuario o de la aplicación)  
+- Contexto de seguridad (rol del usuario o de la aplicación)  
   
--   Contexto de la base de datos (base de datos actual)  
+- Contexto de la base de datos (base de datos actual)  
   
--   Las variables de estado de ejecución (por ejemplo, @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
+- Las variables de estado de ejecución (por ejemplo, @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
   
--   Tablas temporales de nivel superior  
+- Tablas temporales de nivel superior  
   
  Con MARS, hay un entorno de ejecución predeterminado asociado con una conexión. Cada lote nuevo que comienza a ejecutarse en una conexión dada recibe una copia del entorno predeterminado. Cada vez que se ejecuta código en un lote dado, todos los cambios realizados en el entorno están en el ámbito del lote específico. Finalizada la ejecución, la configuración de ejecución se copia en el entorno predeterminado. En el caso de un único lote que emite varios comandos para que se ejecuten de forma secuencial en la misma transacción, la semántica es la misma a la expuesta por las conexiones que implican clientes o servidores anteriores.  
   
