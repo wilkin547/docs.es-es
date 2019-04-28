@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
 ms.openlocfilehash: 9b0293472f5eda74c2bf8fb215e15ae5cf8d8b98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802336"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>Los parámetros genéricos utilizados como tipos de parámetros opcionales deben tener restricción de clase
 Se declara un procedimiento con un parámetro opcional que se utiliza un parámetro de tipo que no esté restringido a ser un tipo de referencia.  
@@ -25,7 +25,7 @@ Se declara un procedimiento con un parámetro opcional que se utiliza un paráme
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Restringir el parámetro de tipo para aceptar sólo un tipo de referencia o no lo utilice para el parámetro opcional.  
+- Restringir el parámetro de tipo para aceptar sólo un tipo de referencia o no lo utilice para el parámetro opcional.  
   
 ## <a name="see-also"></a>Vea también
 

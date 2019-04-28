@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879819"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Sincronización de DataSet y XmlDataDocument
 El <xref:System.Data.DataSet> de ADO.NET proporciona una representación relacional de datos. Para el acceso a datos jerárquicos puede utilizar las clases XML disponibles en .NET Framework. Históricamente, estas dos representaciones de datos se han utilizado independientemente. Sin embargo, .NET Framework permite el acceso sincrónico en tiempo real a las representaciones relacionales y jerárquicas de los datos a través de la **DataSet** objeto y el <xref:System.Xml.XmlDataDocument> objeto, respectivamente.  
@@ -19,7 +19,7 @@ El <xref:System.Data.DataSet> de ADO.NET proporciona una representación relacio
   
  Hay varias formas que puede sincronizar un **DataSet** con un **XmlDataDocument**. Puede realizar lo siguiente:  
   
--   Rellenar un **DataSet** con el esquema (es decir, una estructura relacional) y los datos y, a continuación, sincronizarlo con un nuevo **XmlDataDocument**. Esto ofrece una vista jerárquica de los datos relacionales existentes. Por ejemplo:  
+- Rellenar un **DataSet** con el esquema (es decir, una estructura relacional) y los datos y, a continuación, sincronizarlo con un nuevo **XmlDataDocument**. Esto ofrece una vista jerárquica de los datos relacionales existentes. Por ejemplo:  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -37,7 +37,7 @@ El <xref:System.Data.DataSet> de ADO.NET proporciona una representación relacio
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
--   Rellenar un **DataSet** con solo esquema (como fuertemente tipado **conjunto de datos**), sincronizarlo con un **XmlDataDocument**y, a continuación, cargue el  **XmlDataDocument** desde un documento XML. Esto ofrece una vista relacional de los datos jerárquicos existentes. Los nombres de tabla y columna en su **DataSet** esquema debe coincidir con los nombres de los elementos XML que desea sincronizarlos. La coincidencia distingue mayúsculas de minúsculas.  
+- Rellenar un **DataSet** con solo esquema (como fuertemente tipado **conjunto de datos**), sincronizarlo con un **XmlDataDocument**y, a continuación, cargue el  **XmlDataDocument** desde un documento XML. Esto ofrece una vista relacional de los datos jerárquicos existentes. Los nombres de tabla y columna en su **DataSet** esquema debe coincidir con los nombres de los elementos XML que desea sincronizarlos. La coincidencia distingue mayúsculas de minúsculas.  
   
      Tenga en cuenta que el esquema de la **DataSet** sólo debe coincidir con los elementos XML que desea exponer en la vista relacional. De esta forma puede tener un documento XML muy grande y una "ventana" relacional muy pequeña de ese documento. El **XmlDataDocument** conserva todo el documento XML, aunque la **DataSet** expone sólo una pequeña parte de ella. (Para obtener un ejemplo detallado, consulte [sincronizar DataSet con XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md).)  
   
@@ -63,7 +63,7 @@ El <xref:System.Data.DataSet> de ADO.NET proporciona una representación relacio
   
      No se puede cargar un **XmlDataDocument** si está sincronizado con un **DataSet** que contiene los datos. Se iniciará una excepción.  
   
--   Cree un nuevo **XmlDataDocument** cargarlo desde un documento XML y, a continuación, obtener acceso a la vista relacional de los datos mediante el **DataSet** propiedad de la **XmlDataDocument**. Deberá establecer el esquema de la **DataSet** antes de poder ver cualquiera de los datos en el **XmlDataDocument** mediante el **conjunto de datos**. De nuevo, los nombres de los nombres de tabla y columna en su **DataSet** esquema debe coincidir con los nombres de los elementos XML que desea sincronizarlos. La coincidencia distingue mayúsculas de minúsculas.  
+- Cree un nuevo **XmlDataDocument** cargarlo desde un documento XML y, a continuación, obtener acceso a la vista relacional de los datos mediante el **DataSet** propiedad de la **XmlDataDocument**. Deberá establecer el esquema de la **DataSet** antes de poder ver cualquiera de los datos en el **XmlDataDocument** mediante el **conjunto de datos**. De nuevo, los nombres de los nombres de tabla y columna en su **DataSet** esquema debe coincidir con los nombres de los elementos XML que desea sincronizarlos. La coincidencia distingue mayúsculas de minúsculas.  
   
      El ejemplo de código siguiente muestra cómo obtener acceso a la vista relacional de los datos en un **XmlDataDocument**.  
   

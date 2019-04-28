@@ -8,18 +8,18 @@ ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ad61b3824b8155cf3f68f61865891c023b4cf32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674017"
 ---
-# <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp> Element
+# <a name="shadowcopyverifybytimestamp-element"></a>Elemento \<shadowCopyVerifyByTimestamp>
 Especifica si la creación de instantáneas usa el comportamiento de inicio predeterminado especificado en [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o se revierte el comportamiento de inicio de versiones anteriores de .NET Framework.  
   
  \<Configuración > elemento  
 \<en tiempo de ejecución > elemento  
-\<shadowCopyVerifyByTimestamp> Element  
+Elemento \<shadowCopyVerifyByTimestamp>  
   
 ## <a name="syntax"></a>Sintaxis  
   

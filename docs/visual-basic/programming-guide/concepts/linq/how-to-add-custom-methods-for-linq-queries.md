@@ -1,15 +1,15 @@
 ---
-title: Filtrar Agregar métodos personalizados para las consultas LINQ (Visual Basic)
+title: Procedimiento Agregar métodos personalizados para las consultas LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
 ms.openlocfilehash: 59d08f7b7799964063514ad294567aadd11b0579
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59614014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855379"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Filtrar Agregar métodos personalizados para las consultas LINQ (Visual Basic)
+# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Procedimiento Agregar métodos personalizados para las consultas LINQ (Visual Basic)
 
 Puede extender el conjunto de métodos que puede usar para consultas LINQ agregando métodos de extensión a la interfaz <xref:System.Collections.Generic.IEnumerable%601>. Por ejemplo, además de las operaciones habituales de promedio o de máximo, puede crear un método de agregación personalizado para calcular un valor a partir de una secuencia de valores. También puede crear un método que funcione como un filtro personalizado o como una transformación de datos específica para una secuencia de valores y que devuelva una secuencia nueva. Ejemplos de dichos métodos son <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Reverse%2A>.
 

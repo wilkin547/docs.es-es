@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
 ms.openlocfilehash: 0443e5b37e637351d6491c37ec443c93636460a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857628"
 ---
 # <a name="contracts"></a>Contratos
 En esta sección se muestra cómo definir e implementar contratos de Windows Communication Foundation (WCF). Un contrato de servicio especifica lo que un punto de conexión comunica al mundo exterior. En un nivel más concreto, es una instrucción sobre un conjunto de mensajes concretos organizada en patrones de intercambio de mensajes básicos (MEP), como solicitud/respuesta, unidireccional y dúplex. Si un contrato de servicio es un conjunto relacionado de forma lógica de intercambios de mensajes, una operación de servicio es un intercambio único de mensajes. Por ejemplo, una operación `Hello` debe aceptar obviamente un mensaje (de manera que el autor de la llamada pueda anunciar el saludo) y puede o no devolver un mensaje (dependiendo de la cortesía de la operación).  
@@ -21,32 +21,32 @@ En esta sección se muestra cómo definir e implementar contratos de Windows Com
 ## <a name="overview"></a>Información general  
  En este tema se proporciona un alto nivel de orientación conceptual para diseñar e implementar los servicios de WCF. Los subtemas proporcionan más información detallada sobre las características del diseño e implementación. Antes de diseñar e implementar la aplicación de WCF, se recomienda que:  
   
--   Entender lo que es un contrato de servicio, cómo funciona, y cómo crear uno.  
+- Entender lo que es un contrato de servicio, cómo funciona, y cómo crear uno.  
   
--   Comprenda que los contratos especifican requisitos mínimos que la configuración en tiempo de ejecución o el entorno de alojamiento pueden no admitir.  
+- Comprenda que los contratos especifican requisitos mínimos que la configuración en tiempo de ejecución o el entorno de alojamiento pueden no admitir.  
   
 ## <a name="service-contracts"></a>Contratos de servicio  
  Un contrato de servicios es una instrucción que proporciona información sobre:  
   
--   La agrupación de operaciones en un servicio.  
+- La agrupación de operaciones en un servicio.  
   
--   La firma de las operaciones en términos de mensajes intercambiados.  
+- La firma de las operaciones en términos de mensajes intercambiados.  
   
--   Los tipos de datos de estos mensajes.  
+- Los tipos de datos de estos mensajes.  
   
--   La ubicación de las operaciones.  
+- La ubicación de las operaciones.  
   
--   Los protocolos concretos y formatos de serialización que se utilizan para admitir la comunicación correcta con el servicio.  
+- Los protocolos concretos y formatos de serialización que se utilizan para admitir la comunicación correcta con el servicio.  
   
  Por ejemplo, un contrato de orden de compra podría tener una operación `CreateOrder` que acepte una entrada de tipos de información de orden y devuelva información de error o completada, además de un identificador de orden. También podría tener una operación `GetOrderStatus` que acepte un identificador de orden y devuelva información de estado de la orden. Un contrato de servicio de este tipo especificaría lo siguiente:  
   
--   Que el contrato de la orden compra consistiese en las operaciones `CreateOrder` y `GetOrderStatus`.  
+- Que el contrato de la orden compra consistiese en las operaciones `CreateOrder` y `GetOrderStatus`.  
   
--   Que las operaciones han especificado mensajes de entrada y de salida.  
+- Que las operaciones han especificado mensajes de entrada y de salida.  
   
--   Los datos que estos mensajes pueden llevar.  
+- Los datos que estos mensajes pueden llevar.  
   
--   Instrucciones de categorías sobre la infraestructura de la comunicación necesaria para procesar correctamente los mensajes. Por ejemplo, estos detalles incluyen qué formularios de seguridad son necesarios para establecer una comunicación correcta.  
+- Instrucciones de categorías sobre la infraestructura de la comunicación necesaria para procesar correctamente los mensajes. Por ejemplo, estos detalles incluyen qué formularios de seguridad son necesarios para establecer una comunicación correcta.  
   
  Para transmitir este tipo de información a las aplicaciones en otras plataformas (incluidas plataformas de terceros), los contratos de servicio XML se expresan públicamente en formatos XML estándar, como [lenguaje de descripción de servicios Web (WSDL)](https://go.microsoft.com/fwlink/?LinkId=87004) y [esquemas XML (XSD)](https://go.microsoft.com/fwlink/?LinkId=87005), entre otros. Los desarrolladores para muchas plataformas pueden utilizar esta información de contrato público para crear aplicaciones que pueden comunicarse con el servicio, porque entienden el lenguaje de la especificación y porque esos lenguajes están diseñados para permitir la interoperación describiendo los formularios, formatos y protocolos públicos que el servicio admite. Para obtener más información acerca de cómo WCF controla este tipo de información, consulte [metadatos](../../../../docs/framework/wcf/feature-details/metadata.md).  
   

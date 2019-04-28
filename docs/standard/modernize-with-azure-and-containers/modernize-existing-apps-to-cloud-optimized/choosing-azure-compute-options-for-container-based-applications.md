@@ -1,17 +1,17 @@
 ---
-title: Seleccionar plataformas de Azure compute para las aplicaciones basadas en contenedor
+title: Elección de plataformas de procesos de Azure para aplicaciones basadas en contenedores
 description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | Seleccionar plataformas de Azure compute para las aplicaciones basadas en contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
 ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811767"
 ---
-# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Seleccionar plataformas de Azure compute para las aplicaciones basadas en contenedor
+# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Elección de plataformas de procesos de Azure para aplicaciones basadas en contenedores
 
 Como habrá observado después de leer las secciones anteriores, Azure es una nube abierta que ofrece varias opciones. Puede usar la mejor opción para sus necesidades, sin embargo, también expone preguntas acerca de qué producto o tecnología que se debe usar para las aplicaciones en contenedores.
 

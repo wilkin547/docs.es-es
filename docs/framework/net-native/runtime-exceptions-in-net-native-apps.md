@@ -5,11 +5,11 @@ ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 06e07c41d398c0792094b4481a38c69b2ba73004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866787"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Excepciones de tiempo de ejecución en las aplicaciones nativas de .NET
 Es importante probar las versiones de lanzamiento de la aplicación de la Plataforma universal de Windows en las plataformas de destino, ya que las configuraciones de depuración y de lanzamiento son completamente diferentes. De forma predeterminada, la configuración de depuración utiliza el tiempo de ejecución de .NET Core para compilar la aplicación, pero la configuración de lanzamiento usa .NET Native para compilar la aplicación en código nativo.  
@@ -24,11 +24,11 @@ Es importante probar las versiones de lanzamiento de la aplicación de la Plataf
   
  Cuando se depuran compilaciones de lanzamiento que se compilaron con .NET Native:  
   
--   Use el motor de depuración de .NET Native, que es diferente de las herramientas de depuración de .NET normal.  
+- Use el motor de depuración de .NET Native, que es diferente de las herramientas de depuración de .NET normal.  
   
--   El tamaño de su archivo ejecutable se reduce tanto como sea posible. Una de las formas en que .NET Native reduce el tamaño de un archivo ejecutable es recortando considerablemente los mensajes de excepción en tiempo de ejecución, un tema que se explica con más detalle en la sección [Runtime exception messages](#Messages) .  
+- El tamaño de su archivo ejecutable se reduce tanto como sea posible. Una de las formas en que .NET Native reduce el tamaño de un archivo ejecutable es recortando considerablemente los mensajes de excepción en tiempo de ejecución, un tema que se explica con más detalle en la sección [Runtime exception messages](#Messages) .  
   
--   El código está altamente optimizado. Esto significa que la inserción se utiliza siempre que es posible. (La inserción mueve código de rutinas externas a la rutina de llamada).   El hecho de que .NET Native ofrezca un tiempo de ejecución especializado e implemente inserción intensa afecta a la pila de llamadas que se muestra cuando se depura.  Para más información, consulte la sección [Runtime call stack](#CallStack) .  
+- El código está altamente optimizado. Esto significa que la inserción se utiliza siempre que es posible. (La inserción mueve código de rutinas externas a la rutina de llamada).   El hecho de que .NET Native ofrezca un tiempo de ejecución especializado e implemente inserción intensa afecta a la pila de llamadas que se muestra cuando se depura.  Para más información, consulte la sección [Runtime call stack](#CallStack) .  
   
 > [!NOTE]
 >  Puede controlar si las compilaciones de depuración y de lanzamiento se compilan con la cadena de herramientas de .NET Native mediante la activación o desactivación del cuadro **Compilar con cadena de herramientas de .NET Native** .   Sin embargo, tenga en cuenta que la Tienda Windows siempre compilará la versión de producción de la aplicación con la cadena de herramientas de .NET Native.  

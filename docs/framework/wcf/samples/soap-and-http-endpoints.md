@@ -3,11 +3,11 @@ title: Extremos SOAP y HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
 ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007825"
 ---
 # <a name="soap-and-http-endpoints"></a>Extremos SOAP y HTTP
 Este ejemplo muestra cómo implementar un servicio basado en RPC y exponerlo en el formato SOAP y el formato "Plain Old XML" (POX) mediante el modelo de programación Web de WCF. Consulte la [servicio HTTP básico](../../../../docs/framework/wcf/samples/basic-http-service.md) ejemplo para obtener más detalles sobre el enlace HTTP para el servicio. Este ejemplo se centra en los detalles relativos a la exposición del mismo servicio a través de SOAP y HTTP utilizando enlaces diferentes.  
@@ -22,11 +22,11 @@ Este ejemplo muestra cómo implementar un servicio basado en RPC y exponerlo en 
   
  El archivo Web.config configura el servicio WCF con 3 puntos de conexión:  
   
--   El punto de conexión ~/service.svc/mex que expone los metadatos del servicio para el acceso de los clientes basados en SOAP.  
+- El punto de conexión ~/service.svc/mex que expone los metadatos del servicio para el acceso de los clientes basados en SOAP.  
   
--   El punto de conexión ~/service.svc/http que permite a los clientes tener acceso al servicio utilizando el enlace HTTP.  
+- El punto de conexión ~/service.svc/http que permite a los clientes tener acceso al servicio utilizando el enlace HTTP.  
   
--   El punto de conexión ~/service.svc/soap que permite a los clientes tener acceso al servicio utilizando el enlace SOAP sobre HTTP.  
+- El punto de conexión ~/service.svc/soap que permite a los clientes tener acceso al servicio utilizando el enlace SOAP sobre HTTP.  
   
  El extremo HTTP se configura con un <`webHttp`> punto de conexión estándar que tiene `helpEnabled` establecido en `true`. Como resultado, el servicio expone XHTML basado en la página de Ayuda en ~/service.svc/http/help que los clientes basados en HTTP pueden utilizar para tener acceso al servicio.  
   

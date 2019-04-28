@@ -9,11 +9,11 @@ helpviewer_keywords:
 - spin button control [Windows Forms], Windows Forms
 ms.assetid: cff3cf30-4d46-4381-87df-37bfe83c71c5
 ms.openlocfilehash: 218eb685e546acac76a18450612a1601ab87276b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61805767"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>Información general sobre el control NumericUpDown (formularios Windows Forms)
 El <xref:System.Windows.Forms.NumericUpDown> control es similar a una combinación de un cuadro de texto y un par de flechas en las que el usuario puede hacer clic para ajustar un valor. El control muestra y establece un valor numérico único de una lista de opciones de valor numérico fijas. El usuario puede aumentar y disminuir el número, haga clic en arriba y abajo las flechas, presionando las teclas de dirección arriba y abajo, o escribiendo un número en el elemento de cuadro de texto del control. Al presionar la tecla flecha arriba desplaza el número en el valor máximo; al hacer clic en la tecla flecha abajo mueve el número hacia el valor mínimo.  

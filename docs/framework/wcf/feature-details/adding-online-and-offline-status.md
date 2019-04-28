@@ -3,11 +3,11 @@ title: Cómo agregar el estado en línea y sin conexión
 ms.date: 03/30/2017
 ms.assetid: 05e5f51d-81b6-4c17-b364-9dda447a5fce
 ms.openlocfilehash: 15a963d4de0dcf1d7f0162b0a3266e17d4073ecd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857745"
 ---
 # <a name="adding-online-and-offline-status"></a>Cómo agregar el estado en línea y sin conexión
 En muchos casos, es importante que una aplicación supervise los detalles concretos del estado de una conexión de canal del mismo nivel. Puede obtener esta información llamando al método `GetProperty` en una implementación de la interfaz <xref:System.ServiceModel.IOnlineStatus>. Un objeto con una implementación de esta interfaz puede supervisar el estado de la conexión o registrarse  para los controladores de eventos, como `OnOnline` y `OnOffline`, y reaccionar inmediatamente en cuanto se produzcan cambios en el estado en línea.  

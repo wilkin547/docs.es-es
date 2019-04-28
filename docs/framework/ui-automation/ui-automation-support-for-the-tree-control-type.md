@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Tree control type
 ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
 ms.openlocfilehash: 001381eddf56022e2b3e934604e42d871a64d730
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996528"
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>Compatibilidad de UI Automation para el tipo de control Tree
 > [!NOTE]
@@ -33,9 +33,9 @@ ms.locfileid: "59157266"
   
  La vista de control del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] consta de:  
   
--   Cero a muchos elementos dentro del contenedor (los elementos se pueden basar en el elemento del árbol, el elemento de datos u otro tipo de control).  
+- Cero a muchos elementos dentro del contenedor (los elementos se pueden basar en el elemento del árbol, el elemento de datos u otro tipo de control).  
   
--   Cero, una o dos barras de desplazamiento.  
+- Cero, una o dos barras de desplazamiento.  
   
  La vista de contenido del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] consta de cero a muchos elementos dentro del contenedor (los elementos se pueden basar en el elemento del árbol, el elemento de datos u otro tipo de control).  
   

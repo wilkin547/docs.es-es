@@ -5,11 +5,11 @@ helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
 ms.openlocfilehash: 99b4dd5e4acfce8bea4d3c2cae3a53152585675d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857940"
 ---
 # <a name="extending-clients"></a>Extensión de clientes
 En una aplicación que realiza la llamada, el nivel de modelo de servicio es responsable de traducir invocaciones de método en el código de la aplicación a mensajes salientes, insertarlos en los canales subyacentes, traducir los resultados en valores devueltos y los parámetros de salida en el código de la aplicación, y devolver los resultados al autor de la llamada. Las extensiones de modelo de servicio modifican o implementan el comportamiento de la comunicación o la ejecución y características implicadas en la funcionalidad de distribuidor o cliente, comportamientos personalizados, interceptación de mensajes y parámetros, y otra funcionalidad de extensibilidad.  
@@ -28,46 +28,46 @@ En una aplicación que realiza la llamada, el nivel de modelo de servicio es res
 ## <a name="scenarios"></a>Escenarios  
  Hay varias razones para extender el sistema cliente, incluidas:  
   
--   Validación personalizada del mensaje. Un usuario puede querer exigir que un mensaje sea válido para un determinado esquema. Esto se puede hacer implementando la interfaz <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> y asignando la implementación en la propiedad <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>. Para obtener ejemplos, vea [Cómo: Inspeccionar o modificar mensajes en el cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md) y [Cómo: Inspeccionar o modificar mensajes en el cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
+- Validación personalizada del mensaje. Un usuario puede querer exigir que un mensaje sea válido para un determinado esquema. Esto se puede hacer implementando la interfaz <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> y asignando la implementación en la propiedad <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>. Para obtener ejemplos, vea [Cómo: Inspeccionar o modificar mensajes en el cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md) y [Cómo: Inspeccionar o modificar mensajes en el cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
   
--   Registro personalizado de mensajes. Un usuario puede desear inspeccionar y registrar un conjunto de mensajes de la aplicación que fluyen a través de un extremo. Esto también se puede lograr con las interfaces del interceptor de mensajes.  
+- Registro personalizado de mensajes. Un usuario puede desear inspeccionar y registrar un conjunto de mensajes de la aplicación que fluyen a través de un extremo. Esto también se puede lograr con las interfaces del interceptor de mensajes.  
   
--   Transformaciones personalizadas del mensaje. En lugar de modificar el código de aplicación, el usuario puede querer aplicar ciertas transformaciones al mensaje en el tiempo de ejecución (por ejemplo, para controlar las versiones). Esto también se puede lograr, de nuevo, con las interfaces del interceptor de mensajes.  
+- Transformaciones personalizadas del mensaje. En lugar de modificar el código de aplicación, el usuario puede querer aplicar ciertas transformaciones al mensaje en el tiempo de ejecución (por ejemplo, para controlar las versiones). Esto también se puede lograr, de nuevo, con las interfaces del interceptor de mensajes.  
   
--   Modelo de datos personalizado. Un usuario desee tener un modelo de datos o de serialización no compatible de forma predeterminada en WCF (es decir, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, y <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> objetos). Esto se puede hacer implementando las interfaces del formateador de mensajes. Para obtener más información, vea <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType> y la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType>.  
+- Modelo de datos personalizado. Un usuario desee tener un modelo de datos o de serialización no compatible de forma predeterminada en WCF (es decir, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, y <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> objetos). Esto se puede hacer implementando las interfaces del formateador de mensajes. Para obtener más información, vea <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType> y la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType>.  
   
--   Validación personalizada de parámetros. Un usuario puede querer exigir que los parámetros con tipo sean válidos (por oposición a XML). Esto puede hacerse mediante las interfaces del inspector de parámetros. Como ejemplo, vea [Cómo: Inspeccionar o modificar los parámetros](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md) o [validación del cliente](../../../../docs/framework/wcf/samples/client-validation.md).  
+- Validación personalizada de parámetros. Un usuario puede querer exigir que los parámetros con tipo sean válidos (por oposición a XML). Esto puede hacerse mediante las interfaces del inspector de parámetros. Como ejemplo, vea [Cómo: Inspeccionar o modificar los parámetros](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md) o [validación del cliente](../../../../docs/framework/wcf/samples/client-validation.md).  
   
 ### <a name="using-the-clientruntime-class"></a>Uso de la clase ClientRuntime  
  La clase <xref:System.ServiceModel.Dispatcher.ClientRuntime> es un punto de extensibilidad al que puede agregar objetos de extensión que interceptan los mensajes y extienden el comportamiento del cliente. Los objetos de interceptación pueden procesar todos los mensajes de un contrato determinado, procesar solo los mensajes para operaciones determinadas, realizar la inicialización personalizada de canales e implementar otro comportamiento de aplicación cliente personalizado.  
   
--   La propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A> devuelve el objeto en tiempo de ejecución de envío para los clientes de devolución de llamada iniciados por el servicio.  
+- La propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A> devuelve el objeto en tiempo de ejecución de envío para los clientes de devolución de llamada iniciados por el servicio.  
   
--   La propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector%2A> acepta un objeto de selector de operación personalizado.  
+- La propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector%2A> acepta un objeto de selector de operación personalizado.  
   
--   La propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers%2A> habilita la adición de un inicializador de canales que puede inspeccionar o modificar el canal del cliente.  
+- La propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers%2A> habilita la adición de un inicializador de canales que puede inspeccionar o modificar el canal del cliente.  
   
--   La propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> obtiene una colección de objetos <xref:System.ServiceModel.Dispatcher.ClientOperation> a la que puede agregar interceptores de mensajes personalizados que proporcionan funcionalidad específica a los mensajes de esa operación.  
+- La propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> obtiene una colección de objetos <xref:System.ServiceModel.Dispatcher.ClientOperation> a la que puede agregar interceptores de mensajes personalizados que proporcionan funcionalidad específica a los mensajes de esa operación.  
   
--   La propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing%2A> permite a una aplicación desactivar algunos encabezados de direccionamiento automáticos para controlar directamente el direccionamiento.  
+- La propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing%2A> permite a una aplicación desactivar algunos encabezados de direccionamiento automáticos para controlar directamente el direccionamiento.  
   
--   La propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime.Via%2A> establece el valor del destino del mensaje en el nivel de transporte para admitir intermediarios y otros escenarios.  
+- La propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime.Via%2A> establece el valor del destino del mensaje en el nivel de transporte para admitir intermediarios y otros escenarios.  
   
--   El <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> propiedad obtiene una colección de <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> objetos a los que puede agregar interceptores de mensajes personalizados para todos los mensajes viajan a través de un cliente de WCF.  
+- El <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> propiedad obtiene una colección de <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> objetos a los que puede agregar interceptores de mensajes personalizados para todos los mensajes viajan a través de un cliente de WCF.  
   
  Además, hay varias propiedades que recuperan la información del contrato:  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractName%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractName%2A>  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractNamespace%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractNamespace%2A>  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractClientType%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractClientType%2A>  
   
  Si el cliente de WCF es un cliente WCF dúplex, las propiedades siguientes también recuperan la información de cliente WCF de devolución de llamada:  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackClientType%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackClientType%2A>  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>  
   
  Para extender la ejecución del cliente WCF a través de un cliente WCF completa, revise las propiedades disponibles en la <xref:System.ServiceModel.Dispatcher.ClientRuntime> clase para ver si modificando una propiedad o implementando una interfaz y agregándola a una propiedad crean la funcionalidad que está buscando. Una vez que haya elegido una extensión determinada que desea crear, inserte su extensión en la propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime> adecuada implementando un comportamiento de cliente que proporciona el acceso a la clase <xref:System.ServiceModel.Dispatcher.ClientRuntime> cuando se invoca.  
   
@@ -80,31 +80,31 @@ En una aplicación que realiza la llamada, el nivel de modelo de servicio es res
   
  Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> para buscar el objeto <xref:System.ServiceModel.Dispatcher.ClientOperation> que representa una operación de servicio determinada. Las propiedades siguientes le permiten insertar objetos personalizados en el sistema de cliente WCF:  
   
--   Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> para insertar una implementación personalizada de <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> para una operación o modificar el formateador actual.  
+- Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> para insertar una implementación personalizada de <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> para una operación o modificar el formateador actual.  
   
--   Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A> para insertar una implementación personalizada de <xref:System.ServiceModel.Dispatcher.IParameterInspector> o modificar la actual.  
+- Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A> para insertar una implementación personalizada de <xref:System.ServiceModel.Dispatcher.IParameterInspector> o modificar la actual.  
   
  Las propiedades siguientes le permiten modificar el sistema interactuando con el formateador y los inspectores de parámetro personalizados:  
   
--   Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.SerializeRequest%2A> para controlar la serialización de un mensaje saliente.  
+- Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.SerializeRequest%2A> para controlar la serialización de un mensaje saliente.  
   
--   Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply%2A> para controlar la deserialización de un mensaje entrante.  
+- Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply%2A> para controlar la deserialización de un mensaje entrante.  
   
--   Utilice la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A> para controlar la acción de WS-Addressing del mensaje de solicitud.  
+- Utilice la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A> para controlar la acción de WS-Addressing del mensaje de solicitud.  
   
--   Use la <xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A> y <xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A> para especificar qué métodos de cliente WCF están asociados con una operación asincrónica.  
+- Use la <xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A> y <xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A> para especificar qué métodos de cliente WCF están asociados con una operación asincrónica.  
   
--   Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A> para obtener una colección que contiene los tipos que pueden aparecer en errores de SOAP como tipo de detalle.  
+- Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A> para obtener una colección que contiene los tipos que pueden aparecer en errores de SOAP como tipo de detalle.  
   
--   Use las propiedades <xref:System.ServiceModel.Dispatcher.ClientOperation.IsInitiating%2A> y <xref:System.ServiceModel.Dispatcher.ClientOperation.IsTerminating%2A> para controlar si una sesión se inicia o se anula, respectivamente, cuando se llama a la operación.  
+- Use las propiedades <xref:System.ServiceModel.Dispatcher.ClientOperation.IsInitiating%2A> y <xref:System.ServiceModel.Dispatcher.ClientOperation.IsTerminating%2A> para controlar si una sesión se inicia o se anula, respectivamente, cuando se llama a la operación.  
   
--   Utilice la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.IsOneWay%2A> para controlar si la operación es unidireccional.  
+- Utilice la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.IsOneWay%2A> para controlar si la operación es unidireccional.  
   
--   Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.Parent%2A> para obtener el objeto <xref:System.ServiceModel.Dispatcher.ClientRuntime> contenedor.  
+- Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.Parent%2A> para obtener el objeto <xref:System.ServiceModel.Dispatcher.ClientRuntime> contenedor.  
   
--   Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.Name%2A> para obtener el nombre de la operación.  
+- Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.Name%2A> para obtener el nombre de la operación.  
   
--   Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A> para controlar qué método se asigna a la operación.  
+- Use la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A> para controlar qué método se asigna a la operación.  
   
  Para extender la ejecución del cliente WCF en sólo una operación de servicio, revise las propiedades disponibles en la <xref:System.ServiceModel.Dispatcher.ClientOperation> clase para ver si modificando una propiedad o implementando una interfaz y agregándola a una propiedad crean la funcionalidad que está buscando. Una vez que haya elegido una extensión determinada que desea crear, inserte su extensión en la propiedad <xref:System.ServiceModel.Dispatcher.ClientOperation> adecuada implementando un comportamiento de cliente que proporciona el acceso a la clase <xref:System.ServiceModel.Dispatcher.ClientOperation> cuando se invoca. Dentro de ese comportamiento, podrá modificar a continuación la propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime> para ajustarse a sus requisitos.  
   

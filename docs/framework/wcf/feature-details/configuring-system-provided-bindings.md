@@ -7,20 +7,20 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
 ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857420"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configuración de enlaces proporcionados por el sistema
 Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al hablar con un punto de conexión e indican cómo conectarse a un punto de conexión. Los enlaces están compuestos de elementos que definen cómo los canales de Windows Communication Foundation (WCF) se disponen en capa para proporcionar las características de comunicación necesaria. Un enlace contiene tres tipos de elementos:  
   
--   Elementos de enlace de canal protocolares, que determinan la seguridad, confiabilidad, valores de flujo de contexto o los protocolos definidos por el usuario que se han de utilizar con los mensajes que se envían al extremo.  
+- Elementos de enlace de canal protocolares, que determinan la seguridad, confiabilidad, valores de flujo de contexto o los protocolos definidos por el usuario que se han de utilizar con los mensajes que se envían al extremo.  
   
--   Elementos de enlace de canal de transporte, que determinan el protocolo de transporte subyacente que se ha de usar al enviar mensajes al extremo, por ejemplo, TCP o HTTP.  
+- Elementos de enlace de canal de transporte, que determinan el protocolo de transporte subyacente que se ha de usar al enviar mensajes al extremo, por ejemplo, TCP o HTTP.  
   
--   Elementos de enlace de codificación de mensajes, que determinan la codificación de la conexión que se ha de utilizar para los mensajes que se envían al punto de conexión, como, por ejemplo, texto/XML, binaria o Mecanismo de optimización de transmisión de mensajes (MTOM).  
+- Elementos de enlace de codificación de mensajes, que determinan la codificación de la conexión que se ha de utilizar para los mensajes que se envían al punto de conexión, como, por ejemplo, texto/XML, binaria o Mecanismo de optimización de transmisión de mensajes (MTOM).  
   
  Este tema presentan todos los enlaces de Windows Communication Foundation (WCF) proporcionado por el sistema. Si ninguno de ellos cumple los requisitos exactos de su aplicación, puede crear un enlace mediante la clase <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información sobre cómo crear enlaces personalizados, vea [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

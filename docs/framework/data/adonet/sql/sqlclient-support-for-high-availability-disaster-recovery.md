@@ -3,11 +3,11 @@ title: Compatibilidad de SqlClient para alta disponibilidad y recuperación ante
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876099"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SqlClient para alta disponibilidad y recuperación ante desastres
 Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) para grupos de disponibilidad AlwaysOn de alta disponibilidad y recuperación ante desastres.  Se agregó la característica de grupos de disponibilidad AlwaysOn para SQL Server 2012. Para obtener más información acerca de los grupos de disponibilidad AlwaysOn, vea los libros en pantalla de SQL Server.  
@@ -21,9 +21,9 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
   
  Las propiedades de conexión siguientes se agregaron a SqlClient en [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]:  
   
--   `ApplicationIntent`  
+- `ApplicationIntent`  
   
--   `MultiSubnetFailover`  
+- `MultiSubnetFailover`  
   
  Mediante programación puede modificar estas palabras clave de cadena de conexión con:  
   
@@ -45,17 +45,17 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
   
  Use las directrices siguientes para conectarse a un servidor en un grupo de disponibilidad o la instancia de clúster de conmutación por error de SQL Server 2012:  
   
--   Use la propiedad de conexión `MultiSubnetFailover` al conectarse a una sola subred o a múltiples subredes; mejorará el rendimiento en ambos casos.  
+- Use la propiedad de conexión `MultiSubnetFailover` al conectarse a una sola subred o a múltiples subredes; mejorará el rendimiento en ambos casos.  
   
--   Para conectarse a un grupo de disponibilidad, especifique el agente de escucha del grupo de disponibilidad como el servidor en la cadena de conexión.  
+- Para conectarse a un grupo de disponibilidad, especifique el agente de escucha del grupo de disponibilidad como el servidor en la cadena de conexión.  
   
--   Conectarse a un servidor SQL Server configurada con más de 64 direcciones IP de instancia provocará un error de conexión.  
+- Conectarse a un servidor SQL Server configurada con más de 64 direcciones IP de instancia provocará un error de conexión.  
   
--   Comportamiento de una aplicación que usa el `MultiSubnetFailover` propiedad de conexión no se ve afectada en función del tipo de autenticación: Autenticación de SQL Server, la autenticación Kerberos o autenticación de Windows.  
+- Comportamiento de una aplicación que usa el `MultiSubnetFailover` propiedad de conexión no se ve afectada en función del tipo de autenticación: Autenticación de SQL Server, la autenticación Kerberos o autenticación de Windows.  
   
--   Aumente el valor de `Connect Timeout` para alojar el tiempo de conmutación por error y reducir los reintentos de conexión de la aplicación.  
+- Aumente el valor de `Connect Timeout` para alojar el tiempo de conmutación por error y reducir los reintentos de conexión de la aplicación.  
   
--   No se admiten transacciones distribuidas.  
+- No se admiten transacciones distribuidas.  
   
  Si el enrutamiento de solo lectura no está vigente, la conexión a una ubicación de réplica secundaria producirá un error en las situaciones siguientes:  
   

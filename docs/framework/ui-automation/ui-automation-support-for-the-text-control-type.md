@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
 ms.openlocfilehash: f98477117981504b9c4df43626c7bcb8c4088922
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996559"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>Compatibilidad de UI Automation para el tipo de control Text
 > [!NOTE]
@@ -33,11 +33,11 @@ ms.locfileid: "59103784"
   
  Un control de texto se puede usar solo como una etiqueta o como texto estático en un formulario. También puede estar dentro de la estructura de un:  
   
--   ListItem  
+- ListItem  
   
--   TreeItem  
+- TreeItem  
   
--   DataItem  
+- DataItem  
   
  Es posible que los controles de texto no estén en la vista de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] porque el texto se suele mostrar a través del elemento `NameProperty` de otro control. Por ejemplo, el texto que se utiliza para etiquetar un control Combo Box se expone a través del valor `NameProperty` del control. Como control Combo Box está en la vista de contenido del árbol de Automatización de la interfaz de usuario, no es necesario que el control de texto esté ahí. Los controles de texto siempre tienen 0 elementos secundarios en la vista de contenido  
   

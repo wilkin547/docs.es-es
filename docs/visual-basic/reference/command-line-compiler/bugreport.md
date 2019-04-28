@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 ms.openlocfilehash: e7b4ebc58b6fe9850b92ef945cb0d715e4369efe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839571"
 ---
 # <a name="-bugreport"></a>-bugreport
 Crea un archivo que puede usar cuando se archiva un informe de errores.  
@@ -31,17 +31,17 @@ Crea un archivo que puede usar cuando se archiva un informe de errores.
 ## <a name="remarks"></a>Comentarios  
  La siguiente información se agrega a `file`:  
   
--   Una copia de todos los archivos de código fuente de la compilación.  
+- Una copia de todos los archivos de código fuente de la compilación.  
   
--   Una lista de las opciones del compilador utilizadas en la compilación.  
+- Una lista de las opciones del compilador utilizadas en la compilación.  
   
--   Información de versión sobre su compilador, el common language runtime y el sistema operativo.  
+- Información de versión sobre su compilador, el common language runtime y el sistema operativo.  
   
--   Resultados del compilador, si los hay.  
+- Resultados del compilador, si los hay.  
   
--   Una descripción del problema, para el que se le pedirá.  
+- Una descripción del problema, para el que se le pedirá.  
   
--   Una descripción de cómo cree que el problema debe corregirse para que se le pedirá.  
+- Una descripción de cómo cree que el problema debe corregirse para que se le pedirá.  
   
  Dado que una copia de todos los archivos de código fuente se incluye en `file`, que es posible que desee reproducir el defecto de código (sospechado) en el programa más corto posible.  
   

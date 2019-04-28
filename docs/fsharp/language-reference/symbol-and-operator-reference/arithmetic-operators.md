@@ -3,11 +3,11 @@ title: Operadores aritméticos
 description: Obtenga información sobre los operadores aritméticos que están disponibles en el F# lenguaje de programación.
 ms.date: 04/04/2018
 ms.openlocfilehash: 826f334125a542855bf2fda43465618403d49d4c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925858"
 ---
 # <a name="arithmetic-operators"></a>Operadores aritméticos
 

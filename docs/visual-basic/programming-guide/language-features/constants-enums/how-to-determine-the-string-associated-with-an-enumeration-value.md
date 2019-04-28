@@ -7,18 +7,18 @@ helpviewer_keywords:
 - values [Visual Basic], enumeration members
 ms.assetid: 9253e7c8-579c-49a2-8f26-392b20ea99eb
 ms.openlocfilehash: 4fa04fa621347ae961975bfb636734e6c9df39fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906807"
 ---
 # <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a>Procedimiento Determinar la cadena asociada con un valor de enumeración (Visual Basic)
 El <xref:System.Enum.GetValues%2A> y <xref:System.Enum.GetNames%2A> métodos permiten determinar las cadenas y valores asociados a los miembros de enumeración.  
   
 ### <a name="to-determine-the-string-associated-with-an-enumeration"></a>Para determinar la cadena asociada a una enumeración  
   
--   Use el <xref:System.Enum.GetNames%2A> método para recuperar las cadenas asociadas a los miembros de enumeración. En este ejemplo declara una enumeración, `flavorEnum`, a continuación, usa el <xref:System.Enum.GetNames%2A> método para mostrar las cadenas asociadas a cada miembro.  
+- Use el <xref:System.Enum.GetNames%2A> método para recuperar las cadenas asociadas a los miembros de enumeración. En este ejemplo declara una enumeración, `flavorEnum`, a continuación, usa el <xref:System.Enum.GetNames%2A> método para mostrar las cadenas asociadas a cada miembro.  
   
      [!code-vb[VbEnumsTask#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#2)]  
   

@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
 ms.openlocfilehash: ad0da9f7f0412c14b5362e3f631a7aa4af1f8260
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61812058"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implementación de aplicaciones .NET existentes como contenedores de Windows
 
@@ -39,13 +39,13 @@ En los contenedores de Windows, el proceso de empaquetado de aplicaciones está 
 
 Muchas organizaciones están incluir en un contenedor aplicaciones monolíticas existentes por las razones siguientes:
 
--   **Versión agilidad a través de implementación mejoradas**. Los contenedores ofrecen un contrato de la implementación coherente entre el desarrollo y operaciones. Cuando se usa contenedores, no escuchará a los desarrolladores dicen, "Funciona en mi equipo, ¿por qué no en producción?" Puede decir, "se ejecuta como un contenedor, para que se ejecute en producción." La aplicación empaquetada, con todas sus dependencias, se puede ejecutar en cualquier entorno compatible con basadas en contenedores. Se ejecutará la manera en que estaba pensado para ejecutarse en todos los destinos de implementación (desarrollo, control de calidad, ensayo y producción). Contenedores eliminan la mayoría de fricción cuando pasan de una fase a la siguiente, lo que mejora considerablemente la implementación, y se pueden enviar con mayor rapidez.
+- **Versión agilidad a través de implementación mejoradas**. Los contenedores ofrecen un contrato de la implementación coherente entre el desarrollo y operaciones. Cuando se usa contenedores, no escuchará a los desarrolladores dicen, "Funciona en mi equipo, ¿por qué no en producción?" Puede decir, "se ejecuta como un contenedor, para que se ejecute en producción." La aplicación empaquetada, con todas sus dependencias, se puede ejecutar en cualquier entorno compatible con basadas en contenedores. Se ejecutará la manera en que estaba pensado para ejecutarse en todos los destinos de implementación (desarrollo, control de calidad, ensayo y producción). Contenedores eliminan la mayoría de fricción cuando pasan de una fase a la siguiente, lo que mejora considerablemente la implementación, y se pueden enviar con mayor rapidez.
 
--   **Reducciones de costos**. Contenedores de dar lugar a reducir los costes, ya sea mediante la consolidación y la eliminación del hardware existente, o mediante la ejecución de aplicaciones en una mayor densidad por unidad de hardware.
+- **Reducciones de costos**. Contenedores de dar lugar a reducir los costes, ya sea mediante la consolidación y la eliminación del hardware existente, o mediante la ejecución de aplicaciones en una mayor densidad por unidad de hardware.
 
--   **Portabilidad**. Los contenedores son modulares y portátil. Se admiten contenedores de docker en cualquier sistema operativo (Windows y Linux), en cualquier nube pública principal (Microsoft Azure, Amazon AWS, Google, IBM) en un entorno local y privada o entornos de nube híbrida.
+- **Portabilidad**. Los contenedores son modulares y portátil. Se admiten contenedores de docker en cualquier sistema operativo (Windows y Linux), en cualquier nube pública principal (Microsoft Azure, Amazon AWS, Google, IBM) en un entorno local y privada o entornos de nube híbrida.
 
--   **Control**. Los contenedores ofrecen un entorno flexible y seguro que se controla en el nivel de contenedor. Un contenedor puede protegido, aislado y limitado incluso estableciendo directivas de restricción de ejecución en el contenedor. Como se detalla en la sección acerca de los contenedores de Windows, los contenedores de Hyper-V y Windows Server 2016 ofrecen opciones de soporte técnico de enterprise adicionales.
+- **Control**. Los contenedores ofrecen un entorno flexible y seguro que se controla en el nivel de contenedor. Un contenedor puede protegido, aislado y limitado incluso estableciendo directivas de restricción de ejecución en el contenedor. Como se detalla en la sección acerca de los contenedores de Windows, los contenedores de Hyper-V y Windows Server 2016 ofrecen opciones de soporte técnico de enterprise adicionales.
 
 Mejoras considerables en agilidad, portabilidad y control en última instancia, produzcan reducciones considerables del costo al usar contenedores para desarrollar y mantener aplicaciones.
 
@@ -123,15 +123,15 @@ Ejecutar un contenedor en Windows con o sin aislamiento de Hyper-V es una decisi
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Documentación de contenedores de Windows**
+- **Documentación de contenedores de Windows**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/>
 
--   **Aspectos básicos de contenedores de Windows**
+- **Aspectos básicos de contenedores de Windows**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
--   **Infografía: Microsoft y contenedores**
+- **Infografía: Microsoft y contenedores**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -145,18 +145,18 @@ Sin embargo, al pensar en el entorno de implementación de producción o incluso
 > **Figura 4-7.5.** El ecosistema de contenedor en Azure
 
 En el ecosistema de contenedor en Azure, los siguientes productos admiten los contenedores que se consideran infraestructura:
--   **Azure Container Instances (ACI)**
--   **Máquinas virtuales de Azure** (con el soporte técnico del contenedor)
--   **Azure Virtual Machine Scale Sets** (con el soporte técnico del contenedor)
+- **Azure Container Instances (ACI)**
+- **Máquinas virtuales de Azure** (con el soporte técnico del contenedor)
+- **Azure Virtual Machine Scale Sets** (con el soporte técnico del contenedor)
 
 Entre esos tres, ACI ofrece una gran ventaja, que es el hecho de que no es necesario mantener el sistema operativo subyacente, no hay necesidad de actualizar/aplicar revisiones, etc. pero ACI todavía se coloca en el nivel de infraestructura, como se explica mejor en las próximas secciones de este libro.
 
 Los productos en Azure contenedores auxiliares que están a la vez que coloca más en la PaaS (plataforma como servicio) niveles son:
 
--   **Azure App Service**
--   **Azure Kubernetes Service (AKS y ACS)**
--   **Azure Service Fabric** 
--   **Azure Batch** 
+- **Azure App Service**
+- **Azure Kubernetes Service (AKS y ACS)**
+- **Azure Service Fabric** 
+- **Azure Batch** 
 
 A continuación, Azure Container Registry es un registro de contenedor escalable alto hospedado en Azure que puede usar en todos los productos anteriores al registrar e implementar las imágenes de contenedor personalizado.
 
