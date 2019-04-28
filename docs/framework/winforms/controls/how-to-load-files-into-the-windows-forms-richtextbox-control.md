@@ -16,11 +16,11 @@ helpviewer_keywords:
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
 ms.openlocfilehash: ffbce7401f068b3d0a7fee4fd8ba04c10cb6f6b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918559"
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Procedimiento para cargar archivos en el control RichTextBox de formularios Windows Forms
 El control <xref:System.Windows.Forms.RichTextBox> de Windows Forms puede mostrar un archivo de texto sin formato, un archivo de texto sin formato Unicode o un archivo de formato de texto enriquecido (RTF). Para ello, llame al método <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> . También puede usar el método <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> para cargar los datos desde una secuencia. Para obtener más información, consulta <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  

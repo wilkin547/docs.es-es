@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673763"
 ---
 # <a name="listeners-element-for-source"></a>\<los agentes de escucha > (elemento) para \<origen >
 Agrega o quita los agentes de escucha en el <xref:System.Diagnostics.TraceSource.Listeners%2A> colección para un <xref:System.Diagnostics.TraceSource>. Un agente de escucha dirige los resultados del seguimiento a un destino apropiado, como un registro, la ventana o el archivo de texto.  

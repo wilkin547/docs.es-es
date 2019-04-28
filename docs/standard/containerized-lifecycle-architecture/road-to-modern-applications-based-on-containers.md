@@ -1,17 +1,17 @@
 ---
-title: Carretera para aplicaciones modernas basadas en contenedores
+title: El camino hacia las aplicaciones modernas basadas en contenedores
 description: Comprender que Docker, contenedores y una arquitectura de Microservicios no son una solución única. Aquí encontrará algunas referencias que le ayudará a decidir.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
 ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922621"
 ---
-# <a name="road-to-modern-applications-based-on-containers"></a>Carretera para aplicaciones modernas basadas en contenedores
+# <a name="road-to-modern-applications-based-on-containers"></a>El camino hacia las aplicaciones modernas basadas en contenedores
 
 Probablemente está leyendo este libro porque está planeando el desarrollo de aplicaciones nueva o va a evaluar el impacto del uso de Docker, contenedores y enfoques nuevos como los Microservicios en su empresa.
 

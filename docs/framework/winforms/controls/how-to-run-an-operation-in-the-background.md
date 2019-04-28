@@ -14,11 +14,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 5b56e2aa-dc05-444f-930c-2d7b23f9ad5b
 ms.openlocfilehash: 5ccbb6e4c09f5417f6c2766824ec7ed9722eed52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013340"
 ---
 # <a name="how-to-run-an-operation-in-the-background"></a>Procedimiento para ejecutar una operación en segundo plano
 Si tiene una operación que tarda mucho tiempo en completarse y no desea causar retrasos en la interfaz de usuario, puede utilizar la clase <xref:System.ComponentModel.BackgroundWorker> para ejecutar la operación en otro subproceso.  
@@ -36,7 +36,7 @@ Si tiene una operación que tarda mucho tiempo en completarse y no desea causar 
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
+- Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
   
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   

@@ -20,11 +20,11 @@ helpviewer_keywords:
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
 ms.openlocfilehash: 93d5466c1f528ea3c8fa360222f046b0c2672fa6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012703"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog (Componente, formularios Windows Forms)
 Los formularios de Windows <xref:System.Windows.Forms.PageSetupDialog> componente es un cuadro de diálogo preconfigurado que se usa para establecer los detalles de la página para la impresión en aplicaciones basadas en Windows. Usar dentro de la aplicación basada en Windows como una solución sencilla para los usuarios para establecer preferencias de la página en lugar de configurar su propio cuadro de diálogo. Puede habilitar a los usuarios establecer borde y los ajustes de margen, encabezados y pies de página y orientación vertical y horizontal. Al basarse en cuadros de diálogo estándar de Windows, crea aplicaciones cuya funcionalidad básica resultará de inmediato familiar a los usuarios.  

@@ -3,18 +3,18 @@ title: 1002 - WorkflowApplicationTerminated
 ms.date: 03/30/2017
 ms.assetid: 4e8b111f-79dc-4898-bb4a-e9b36f69420f
 ms.openlocfilehash: 01c9aba6e863e07a1a999a28fccefbab95a34d5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008660"
 ---
 # <a name="1002---workflowapplicationterminated"></a>1002 - WorkflowApplicationTerminated
 ## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
-|Id.|1002|  
+|ID|1002|  
 |Palabras clave|WFRuntime|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

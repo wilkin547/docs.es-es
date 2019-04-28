@@ -3,11 +3,11 @@ title: Iniciar varias tareas asincrónicas y procesarlas a medida que se complet
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
 ms.openlocfilehash: a9a41c354993e0d362c344d523d6c4c4b6f61f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925130"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Iniciar varias tareas asincrónicas y procesarlas a medida que se completa (Visual Basic)
 Si usa <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, puede iniciar varias tareas a la vez y procesarlas una por una a medida que se completen, en lugar de procesarlas en el orden en el que se han iniciado.  
@@ -50,27 +50,27 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
   
  En el archivo MainWindow.xaml.vb del proyecto, realice los cambios siguientes en el `AccessTheWebAsync` método.  
   
--   Ejecute la consulta aplicando <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> en lugar de <xref:System.Linq.Enumerable.ToArray%2A>.  
+- Ejecute la consulta aplicando <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> en lugar de <xref:System.Linq.Enumerable.ToArray%2A>.  
   
     ```vb  
     Dim downloadTasks As List(Of Task(Of Integer)) = downloadTasksQuery.ToList()  
     ```  
   
--   Agregue un bucle while que realice los pasos siguientes para cada tarea de la colección.  
+- Agregue un bucle while que realice los pasos siguientes para cada tarea de la colección.  
   
-    1.  Espera una llamada a `WhenAny` para identificar la primera tarea en la colección para finalizar su descarga.  
+    1. Espera una llamada a `WhenAny` para identificar la primera tarea en la colección para finalizar su descarga.  
   
         ```vb  
         Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
         ```  
   
-    2.  Quita la tarea de la colección.  
+    2. Quita la tarea de la colección.  
   
         ```vb  
         downloadTasks.Remove(firstFinishedTask)  
         ```  
   
-    3.  Espera `firstFinishedTask`, que se devuelve mediante una llamada a `ProcessURLAsync`. La variable `firstFinishedTask` es un <xref:System.Threading.Tasks.Task%601> donde `TReturn` es un entero. La tarea ya está completa, pero la espera para recuperar la longitud del sitio web descargado, como se muestra en el ejemplo siguiente.  
+    3. Espera `firstFinishedTask`, que se devuelve mediante una llamada a `ProcessURLAsync`. La variable `firstFinishedTask` es un <xref:System.Threading.Tasks.Task%601> donde `TReturn` es un entero. La tarea ya está completa, pero la espera para recuperar la longitud del sitio web descargado, como se muestra en el ejemplo siguiente.  
   
         ```vb  
         Dim length = Await firstFinishedTask  

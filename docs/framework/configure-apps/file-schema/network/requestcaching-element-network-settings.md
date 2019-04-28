@@ -9,13 +9,13 @@ helpviewer_keywords:
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
 ms.openlocfilehash: af290e4b9258a08425a15e297ff538502edea916
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674433"
 ---
-# <a name="requestcaching-element-network-settings"></a>\<requestCaching > elemento (configuración de red)
+# <a name="requestcaching-element-network-settings"></a>Elemento \<requestCaching> (configuración de red)
 Controla el mecanismo de almacenamiento en caché para las solicitudes de red.  
   
  \<configuration>  

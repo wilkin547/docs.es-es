@@ -12,11 +12,11 @@ helpviewer_keywords:
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
 ms.openlocfilehash: fe08ac5dc0600e0861bb349ce99875af8658eb4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675278"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Esquema de configuración de compilador y proveedor de lenguaje
 La configuración de compilador y proveedor de lenguaje especifica los elementos de configuración del compilador para los proveedores de lenguaje disponibles. Cada elemento de configuración de compilador especifica el nombre del tipo de proveedor de código, los parámetros del compilador, los nombres de lenguaje admitidos y las extensiones de archivo admitidas.  

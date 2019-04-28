@@ -3,11 +3,11 @@ title: Utilizar una resolución del contrato de datos
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
 ms.openlocfilehash: b1c545d84db68f4b13925dd9088cc9d81050b5e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918572"
 ---
 # <a name="using-a-data-contract-resolver"></a>Utilizar una resolución del contrato de datos
 Una resolución del contrato de datos le permite configurar los tipos conocidos dinámicamente. Se necesitan tipos conocidos al serializar o deserializar un tipo no esperado por un contrato de datos. Para obtener más información sobre los tipos conocidos, consulte [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Los tipos conocidos se suelen especificar de modo estático. Esto significa que tendría que conocer todos los tipos posibles que puede recibir una operación mientras la implementa. Hay escenarios en los que no esto no se cumple y es importante saber especificar los tipos conocidos de forma dinámica.  

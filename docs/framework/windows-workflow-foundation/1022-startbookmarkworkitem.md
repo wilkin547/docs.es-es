@@ -3,18 +3,18 @@ title: 1022 - StartBookmarkWorkItem
 ms.date: 03/30/2017
 ms.assetid: 4415fbdb-0329-4019-803f-aea66e75f3da
 ms.openlocfilehash: 93d906b32b51effaa709da6763f535708cd6f821
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924727"
 ---
 # <a name="1022---startbookmarkworkitem"></a>1022 - StartBookmarkWorkItem
 ## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
-|Id.|1022|  
+|ID|1022|  
 |Palabras clave|WFRuntime|  
 |Nivel|Detallado|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

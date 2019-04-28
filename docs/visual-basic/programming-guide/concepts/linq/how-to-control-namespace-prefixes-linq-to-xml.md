@@ -3,11 +3,11 @@ title: Procedimiento Control de los prefijos de Namespace (Visual Basic) (LINQ t
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
 ms.openlocfilehash: 7e5a05d2fa93e61338f450d0a4d890fa94c04fd2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855405"
 ---
 # <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Procedimiento Control de los prefijos de Namespace (Visual Basic) (LINQ to XML)
 En este tema se describe cómo puede controlar prefijos de espacios de nombres.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
 ms.openlocfilehash: dbffe2bd196e798b90104aebb74269387660c794
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918208"
 ---
 # <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>No compatible con CLS \<membername > no se permite en una interfaz conforme a CLS
 Una propiedad, procedimiento o evento en una interfaz se marca como `<CLSCompliant(True)>` cuando la propia interfaz está marcada como `<CLSCompliant(False)>` o no está marcada.  
@@ -29,11 +29,11 @@ Una propiedad, procedimiento o evento en una interfaz se marca como `<CLSComplia
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Si requiere conformidad con CLS y tiene control sobre el código fuente de interfaz, marque la interfaz como `<CLSCompliant(True)>` si todos sus miembros son conformes.  
+- Si requiere conformidad con CLS y tiene control sobre el código fuente de interfaz, marque la interfaz como `<CLSCompliant(True)>` si todos sus miembros son conformes.  
   
--   Si requiere conformidad con CLS y no tiene control sobre el código fuente de interfaz, o si no cumple las condiciones ser compatible, defina a este miembro dentro de una interfaz diferente.  
+- Si requiere conformidad con CLS y no tiene control sobre el código fuente de interfaz, o si no cumple las condiciones ser compatible, defina a este miembro dentro de una interfaz diferente.  
   
--   Si necesita que este miembro permanezca dentro de su interfaz actual, quite el <xref:System.CLSCompliantAttribute> de su definición o márquelo como `<CLSCompliant(False)>`.  
+- Si necesita que este miembro permanezca dentro de su interfaz actual, quite el <xref:System.CLSCompliantAttribute> de su definición o márquelo como `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Vea también
 

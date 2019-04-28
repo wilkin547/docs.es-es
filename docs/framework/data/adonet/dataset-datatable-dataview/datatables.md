@@ -3,11 +3,11 @@ title: Objetos DataTable
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
 ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880008"
 ---
 # <a name="datatables"></a>Objetos DataTable
 Un objeto <xref:System.Data.DataSet> está formado por una colección de tablas, relaciones y restricciones. En ADO.NET, <xref:System.Data.DataTable> objetos se utilizan para representar las tablas en un **DataSet**. Un **DataTable** representa una tabla de datos relacionales en memoria; los datos son locales para el. Aplicación basada en red en el que reside, pero se pueden llenar desde un origen de datos, como Microsoft SQL Server mediante un **DataAdapter** para obtener más información, consulte [llenar un DataSet desde un objeto DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  

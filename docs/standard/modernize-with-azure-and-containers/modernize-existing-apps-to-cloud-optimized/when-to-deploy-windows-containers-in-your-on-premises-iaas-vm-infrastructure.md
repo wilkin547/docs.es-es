@@ -1,23 +1,23 @@
 ---
-title: Cuándo se deben implementar contenedores de Windows en sus instalaciones infraestructura IaaS VM
+title: Cuándo se deben implementar contenedores de Windows en la infraestructura de máquina virtual IaaS local
 description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | Cuándo se deben implementar contenedores de Windows en sus instalaciones infraestructura IaaS VM
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: ed9b64927372837c3ecf9377261150d4ee29d323
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012001"
 ---
-# <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>Cuándo se deben implementar contenedores de Windows en sus instalaciones infraestructura IaaS VM
+# <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>Cuándo se deben implementar contenedores de Windows en la infraestructura de máquina virtual IaaS local
 
--   Su organización podría no estar listo para pasar a la nube, o es posible que no pueda mover a la nube para una razón empresarial. Sin embargo, todavía puede obtener las ventajas de utilizar contenedores de Windows en sus propios centros de datos.
+- Su organización podría no estar listo para pasar a la nube, o es posible que no pueda mover a la nube para una razón empresarial. Sin embargo, todavía puede obtener las ventajas de utilizar contenedores de Windows en sus propios centros de datos.
 
--   Es posible que tenga otros artefactos que se va a utilizar localmente y lo que podría ralentizar su trabajo al intentar mover a la nube. Por ejemplo, seguridad o autenticación de dependencias con en el entorno local de Windows Server Active Directory o cualquier otro activo en el entorno local.
+- Es posible que tenga otros artefactos que se va a utilizar localmente y lo que podría ralentizar su trabajo al intentar mover a la nube. Por ejemplo, seguridad o autenticación de dependencias con en el entorno local de Windows Server Active Directory o cualquier otro activo en el entorno local.
 
--   Si empieza a usar contenedores de Windows hoy en día, puede realizar una migración por fases en la nube mañana desde una posición mucho mejor. Contenedores de Windows se está convirtiendo en una unidad de implementación para cualquier nube, con ningún bloqueo en el repositorio.
+- Si empieza a usar contenedores de Windows hoy en día, puede realizar una migración por fases en la nube mañana desde una posición mucho mejor. Contenedores de Windows se está convirtiendo en una unidad de implementación para cualquier nube, con ningún bloqueo en el repositorio.
 
 >[!div class="step-by-step"]
 >[Anterior](when-not-to-deploy-to-windows-containers.md)

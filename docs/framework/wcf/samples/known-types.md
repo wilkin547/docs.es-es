@@ -3,11 +3,11 @@ title: Tipos conocidos
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
 ms.openlocfilehash: f2a5e6d5f5755d15bdc642ea3e64fb44af05cdab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989903"
 ---
 # <a name="known-types"></a>Tipos conocidos
 Este ejemplo muestra cómo especificar la información sobre los tipos derivados en un contrato de datos. Los contratos de datos le permiten pasar los datos estructurados hacia y desde los servicios. En la programación orientada a objetos, un tipo que hereda de otro tipo se puede utilizar en lugar del tipo original. En la programación orientada a servicios, se comunican esquemas en lugar los tipos y por consiguiente, no se conserva la relación entre los tipos. El atributo <xref:System.Runtime.Serialization.KnownTypeAttribute> permite información sobre los tipos derivados que deben incluirse en el contrato de datos. Si no se utiliza este mecanismo, un tipo derivado no se puede enviar o recibir donde se espera un tipo base.  

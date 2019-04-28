@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
 ms.openlocfilehash: bbcc666b99c2bade479e5ee51750b043c820845d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879910"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>Objetos AcceptChange y RejectChange
 Después de comprobar la exactitud de los cambios realizados a los datos en un <xref:System.Data.DataTable>, puede aceptar los cambios mediante el <xref:System.Data.DataRow.AcceptChanges%2A> método de la <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, o <xref:System.Data.DataSet>, que establecerá el **actual** fila los valores sean los **Original** valores y establecerá el **RowState** propiedad **Unchanged**. Aceptar o rechazar cambios, se elimina **RowError** información y establece el **HasErrors** propiedad **false**. Aceptar o rechazar cambios también puede afectar a la actualización de datos en el origen de datos. Para obtener más información, consulte [actualizar orígenes de datos con objetos DataAdapter](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  

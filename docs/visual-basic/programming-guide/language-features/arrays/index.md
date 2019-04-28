@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 ms.openlocfilehash: 6b131d073e10f99feaf770fe5fd3c393551fa5a3
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907183"
 ---
 # <a name="arrays-in-visual-basic"></a>Matrices en Visual Basic
 
@@ -296,7 +296,7 @@ Para más información sobre las colecciones, vea [Colecciones](../../concepts/c
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Término|de esquema JSON|
+|Término|Definición|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|Explica el rango y las dimensiones de las matrices.|
 |[Cómo: Inicializar una Variable de matriz en Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Describe cómo se llenan las matrices con valores iniciales.|

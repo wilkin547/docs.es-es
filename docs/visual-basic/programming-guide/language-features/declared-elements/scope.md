@@ -16,11 +16,11 @@ helpviewer_keywords:
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
 ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917844"
 ---
 # <a name="scope-in-visual-basic"></a>Ámbito en Visual Basic
 El *ámbito* de un elemento declarado es el conjunto de todo el código que puede hacer referencia sin calificar su nombre o que están disponibles a través de un [instrucción Imports (tipo y Namespace. NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Un elemento puede tener el ámbito en uno de los siguientes niveles:  
@@ -37,11 +37,11 @@ El *ámbito* de un elemento declarado es el conjunto de todo el código que pued
 ## <a name="specifying-scope-and-defining-variables"></a>Especificar ámbito y definir Variables  
  Especifique el ámbito de un elemento cuando lo declare. El ámbito puede depender de los siguientes factores:  
   
--   La región en la que se declara el elemento (bloquear, procedimiento, módulo, clase o estructura)  
+- La región en la que se declara el elemento (bloquear, procedimiento, módulo, clase o estructura)  
   
--   El espacio de nombres que contiene la declaración del elemento  
+- El espacio de nombres que contiene la declaración del elemento  
   
--   El nivel de acceso que se declara para el elemento  
+- El nivel de acceso que se declara para el elemento  
   
  Tenga cuidado al definir las variables con el mismo nombre pero con un ámbito diferente, porque al hacerlo puede provocar resultados inesperados. Para obtener más información, consulta [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
@@ -51,21 +51,21 @@ El *ámbito* de un elemento declarado es el conjunto de todo el código que pued
 ### <a name="block-scope"></a>Ámbito de bloque  
  Un bloque es un conjunto de instrucciones encerrado entre iniciar y terminar las instrucciones de declaración, como las siguientes:  
   
--   `Do` y `Loop`  
+- `Do` y `Loop`  
   
--   `For` [`Each`] y `Next`  
+- `For` [`Each`] y `Next`  
   
--   `If` y `End If`  
+- `If` y `End If`  
   
--   `Select` y `End Select`  
+- `Select` y `End Select`  
   
--   `SyncLock` y `End SyncLock`  
+- `SyncLock` y `End SyncLock`  
   
--   `Try` y `End Try`  
+- `Try` y `End Try`  
   
--   `While` y `End While`  
+- `While` y `End While`  
   
--   `With` y `End With`  
+- `With` y `End With`  
   
  Si declara una variable dentro de un bloque, puede usar solo dentro de ese bloque. En el ejemplo siguiente, el ámbito de la variable de entero `cube` es el bloque entre `If` y `End If`, y ya no puede hacer referencia a `cube` cuando termina la ejecución del bloque.  
   
@@ -127,9 +127,9 @@ Public strMsg As String
 ### <a name="advantages-of-local-variables"></a>Ventajas de las Variables locales  
  Las variables locales son una buena elección para cualquier tipo de cálculo temporal, por las razones siguientes:  
   
--   **Evitar conflictos de nombres.** Nombres de variables locales no son susceptibles a entrar en conflicto. Por ejemplo, puede crear varios procedimientos distintos que contiene una variable denominada `intTemp`. Siempre que cada `intTemp` se declara como una variable local, cada procedimiento reconoce solo su propia versión de `intTemp`. Cualquier procedimiento puede cambiar el valor de su local `intTemp` sin que afecte a `intTemp` variables en otros procedimientos.  
+- **Evitar conflictos de nombres.** Nombres de variables locales no son susceptibles a entrar en conflicto. Por ejemplo, puede crear varios procedimientos distintos que contiene una variable denominada `intTemp`. Siempre que cada `intTemp` se declara como una variable local, cada procedimiento reconoce solo su propia versión de `intTemp`. Cualquier procedimiento puede cambiar el valor de su local `intTemp` sin que afecte a `intTemp` variables en otros procedimientos.  
   
--   **Consumo de memoria.** Las variables locales consumen memoria solo mientras se ejecuta el procedimiento. Su memoria se libera cuando el procedimiento vuelve al código de llamada. Por el contrario, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) y [estático](../../../../visual-basic/language-reference/modifiers/static.md) variables consumen recursos de memoria hasta que la aplicación deja de ejecutarse, por lo que ellos solo cuando sea necesario. *Las variables de instancia* consumir memoria mientras su instancia sigue existiendo, lo que hace que sean menos eficientes que las variables locales, pero potencialmente más eficaces que `Shared` o `Static` variables.  
+- **Consumo de memoria.** Las variables locales consumen memoria solo mientras se ejecuta el procedimiento. Su memoria se libera cuando el procedimiento vuelve al código de llamada. Por el contrario, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) y [estático](../../../../visual-basic/language-reference/modifiers/static.md) variables consumen recursos de memoria hasta que la aplicación deja de ejecutarse, por lo que ellos solo cuando sea necesario. *Las variables de instancia* consumir memoria mientras su instancia sigue existiendo, lo que hace que sean menos eficientes que las variables locales, pero potencialmente más eficaces que `Shared` o `Static` variables.  
   
 ### <a name="minimizing-scope"></a>Minimizar el ámbito  
  En general, al declarar cualquier variable o constante, es buena práctica hacer lo más restringidas que sea posible el ámbito de programación (ámbito de bloque es el más restringido). Esto ayuda a conservar memoria y reduce las posibilidades de que el código de forma errónea que hace referencia a la variable equivocada. De forma similar, debe declarar una variable para que sea [estático](../../../../visual-basic/language-reference/modifiers/static.md) sólo cuando es necesario que conserve su valor entre las llamadas a procedimiento.  

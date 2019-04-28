@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
 ms.openlocfilehash: 29dbdf74808fc98bb856483c3fd8e3a09a72113b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925585"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Espacio de pila insuficiente (Visual Basic)
 La pila es un área de trabajo de memoria que aumenta y disminuye dinámicamente con las exigencias de su programa en ejecución. Se superaron su límite.  

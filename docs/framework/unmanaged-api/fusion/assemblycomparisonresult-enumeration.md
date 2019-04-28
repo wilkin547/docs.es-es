@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03b8ecc996e14263510e2d0a658cec020696c263
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914506"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult (Enumeración)
 Indica la equivalencia de dos identidades de ensamblado, según lo determinado por la [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) función.  

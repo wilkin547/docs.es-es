@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 ms.openlocfilehash: ca0f95342783d22559761294ccea6056cd3e4fa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918455"
 ---
 # <a name="long-data-type-visual-basic"></a>Tipo de datos Long (Visual Basic)
 
@@ -68,13 +68,13 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="programming-tips"></a>Sugerencias de programación
 
--   **Consideraciones de interoperabilidad.** Si interactúa con componentes no escritos para .NET Framework, por ejemplo objetos de automatización o COM, recuerde que `Long` tiene un ancho de datos diferente (32 bits) en otros entornos. Si se pasa un argumento de 32 bits a esos componentes, declárelo como `Integer` en lugar de `Long` en el nuevo código de Visual Basic.  
+- **Consideraciones de interoperabilidad.** Si interactúa con componentes no escritos para .NET Framework, por ejemplo objetos de automatización o COM, recuerde que `Long` tiene un ancho de datos diferente (32 bits) en otros entornos. Si se pasa un argumento de 32 bits a esos componentes, declárelo como `Integer` en lugar de `Long` en el nuevo código de Visual Basic.  
   
--   **Ampliación.** El `Long` tipo de datos se amplía a `Decimal`, `Single`, o `Double`. Esto significa que puede convertir un tipo de datos `Long` en cualquiera de estos tipos sin que se produzca un error <xref:System.OverflowException?displayProperty=nameWithType>.  
+- **Ampliación.** El `Long` tipo de datos se amplía a `Decimal`, `Single`, o `Double`. Esto significa que puede convertir un tipo de datos `Long` en cualquiera de estos tipos sin que se produzca un error <xref:System.OverflowException?displayProperty=nameWithType>.  
   
--   **Caracteres de tipo.** Al agregar el carácter de tipo literal `L` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Long`. Si se agrega el carácter de tipo identificador `&` a cualquier identificador, se convierte forzosamente al tipo `Long`.  
+- **Caracteres de tipo.** Al agregar el carácter de tipo literal `L` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Long`. Si se agrega el carácter de tipo identificador `&` a cualquier identificador, se convierte forzosamente al tipo `Long`.  
   
--   **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Int64?displayProperty=nameWithType>.  
+- **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Int64?displayProperty=nameWithType>.  
 
 ## <a name="see-also"></a>Vea también
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
 ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907014"
 ---
 # <a name="decision-structures-visual-basic"></a>Estructuras de decisión (Visual Basic)
 Visual Basic le permite probar condiciones y realizar diferentes operaciones en función de los resultados de la prueba. Se puede comprobar una condición es true o false para distintos valores de una expresión, o varias excepciones que se genera cuando se ejecuta una serie de instrucciones.  
@@ -26,13 +26,13 @@ Visual Basic le permite probar condiciones y realizar diferentes operaciones en 
 ## <a name="ifthenelse-construction"></a>If... Entonces... Construcción else  
  `If...Then...Else` construcciones le permiten probar uno o más condiciones y ejecutar una o varias instrucciones según cada condición. Puede probar condiciones y realizar acciones de las maneras siguientes:  
   
--   Ejecutar una o varias instrucciones si una condición es `True`  
+- Ejecutar una o varias instrucciones si una condición es `True`  
   
--   Ejecutar una o varias instrucciones si una condición es `False`  
+- Ejecutar una o varias instrucciones si una condición es `False`  
   
--   Ejecutar algunas instrucciones si una condición es `True` y otros usuarios si es `False`  
+- Ejecutar algunas instrucciones si una condición es `True` y otros usuarios si es `False`  
   
--   Probar una condición adicional si es un requisito previo `False`  
+- Probar una condición adicional si es un requisito previo `False`  
   
  La estructura de control que ofrece todas estas posibilidades es la [si... Entonces... Else (instrucción)](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Puede usar una versión de línea, si tiene una prueba y una instrucción para ejecutar. Si tiene un conjunto de condiciones y acciones más complejo, puede usar la versión de varias líneas.  
   

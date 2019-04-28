@@ -27,11 +27,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
 ms.openlocfilehash: 9121041f936c091cda0e2af41b4f5be8d826d582
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906638"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Procedimiento Defina una clase que pueda proporcionar una funcionalidad idéntica en tipos de datos diferentes (Visual Basic)
 Puede definir una clase desde la que se puedan crear objetos que proporcionen una funcionalidad idéntica en tipos de datos diferentes. Para ello, especifique uno o más *parámetros de tipo* en la definición. Posteriormente, la clase puede servir de plantilla para los objetos que usan distintos tipos de datos. Una clase definida de esta manera se denomina *clase genérica*.  
@@ -50,11 +50,11 @@ Puede definir una clase desde la que se puedan crear objetos que proporcionen un
   
 4. Si el código realiza operaciones en un parámetro de tipo distintas de la asignación simple, siga ese parámetro de tipo con una cláusula `As` para agregar una o más *restricciones*. Una restricción garantiza que el tipo proporcionado para ese parámetro de tipo satisfaga un requisito como el siguiente:  
   
-    -   Admitir una operación, como `>`, que realice el código.  
+    - Admitir una operación, como `>`, que realice el código.  
   
-    -   Admita a un miembro, como un método, al que accede el código.  
+    - Admita a un miembro, como un método, al que accede el código.  
   
-    -   Exponer un constructor sin parámetros.  
+    - Exponer un constructor sin parámetros.  
   
      Si no especifica ninguna restricción, las únicas operaciones y miembros que el código podrá usar son las que admite el [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). Para obtener más información, consulta [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
   

@@ -3,11 +3,11 @@ title: Excepciones esperadas
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
 ms.openlocfilehash: 3add9faa9a07249639c1ff3e83469d0634008472
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990202"
 ---
 # <a name="expected-exceptions"></a>Excepciones esperadas
 Este ejemplo muestra cómo detectar las excepciones esperadas cuando se usa un cliente con tipo. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora. En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - rich edit controls
 ms.assetid: 3225f2ef-c6d9-4bd4-9d3e-2219e58edbf2
 ms.openlocfilehash: 2b1a6604df3979e83e4a815cdb4a9397ab4e67ad
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012469"
 ---
 # <a name="richtextbox-control-windows-forms"></a>RichTextBox (Control, formularios Windows Forms)
 Los formularios de Windows `RichTextBox` control se utiliza para mostrar, escribir y manipular texto con formato. El `RichTextBox` hace lo mismo que el <xref:System.Windows.Forms.TextBox> hace control, pero también puede mostrar fuentes, colores y vínculos; Cargar texto e imágenes incrustadas desde un archivo; Deshacer y rehacer operaciones; de edición y buscar caracteres especificados. El `RichTextBox` control normalmente se usa para manipular texto y proporcionar características de presentación similares a las aplicaciones de procesamiento de textos como Microsoft Word. Como el <xref:System.Windows.Forms.TextBox> (control), el `RichTextBox` control puede mostrar barras de desplazamiento; pero a diferencia del <xref:System.Windows.Forms.TextBox> control, muestra barras de desplazamiento horizontal y vertical de forma predeterminada y tiene una configuración adicional de la barra de desplazamiento.  

@@ -3,11 +3,11 @@ title: Los segmentos (F#)
 description: Obtenga información sobre cómo utilizar los segmentos existentes F# tipos de datos y cómo definir sus propios segmentos para otros tipos de datos.
 ms.date: 01/22/2019
 ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926005"
 ---
 # <a name="slices"></a>Segmentos
 

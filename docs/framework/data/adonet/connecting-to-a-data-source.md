@@ -3,11 +3,11 @@ title: Conectarse a un origen de datos en ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
 ms.openlocfilehash: c04624be758e4bc7c8b1981ad6a9dc44430d62b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879988"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Conectarse a un origen de datos en ADO.NET
 En ADO.NET utilizará un **conexión** objetos para conectarse a un origen de datos específica, proporcionando la información de autenticación necesaria en una cadena de conexión. El **conexión** objeto que se usa depende del tipo de origen de datos.  

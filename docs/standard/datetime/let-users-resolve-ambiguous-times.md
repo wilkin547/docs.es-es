@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Permitir que los usuarios resuelvan horas ambiguas
+title: Procedimiento para permitir que los usuarios resuelvan horas ambiguas
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,13 +9,13 @@ ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae6d16bda7a2cd6f2367129b737ec79d8193ebf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903791"
 ---
-# <a name="how-to-let-users-resolve-ambiguous-times"></a>Procedimiento Permitir que los usuarios resuelvan horas ambiguas
+# <a name="how-to-let-users-resolve-ambiguous-times"></a>Procedimiento para permitir que los usuarios resuelvan horas ambiguas
 
 Una hora ambigua es aquella que se asigna a más de una hora universal coordinada (UTC). Esto sucede cuando la hora del reloj se atrasa, como durante la transición del horario de verano de una zona horaria al horario estándar. Cuando se enfrente a una hora ambigua, puede realizar una de las siguientes acciones:
 

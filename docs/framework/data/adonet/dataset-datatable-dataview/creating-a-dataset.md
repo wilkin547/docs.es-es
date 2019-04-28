@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 57629d8f-393e-4677-8b83-29ffde27f5fc
 ms.openlocfilehash: d2d17056e6dcd29ef9b5c5e8c3024a32fce32bd5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879884"
 ---
 # <a name="creating-a-dataset"></a>Crear un objeto DataSet
 Puede crear una instancia de <xref:System.Data.DataSet> llamando al constructor <xref:System.Data.DataSet>. Si lo desea, especifique un nombre de argumento. Si no especifica ningún nombre para el <xref:System.Data.DataSet>, se establecerá el nombre "NewDataSet".  

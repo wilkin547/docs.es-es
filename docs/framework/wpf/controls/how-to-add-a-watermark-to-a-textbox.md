@@ -9,11 +9,11 @@ helpviewer_keywords:
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
 ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911629"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>Procedimiento Agregar una marca de agua a un control TextBox
 El ejemplo siguiente muestra cómo facilitar el uso de un <xref:System.Windows.Controls.TextBox> al mostrar una imagen de fondo explicativa dentro de la <xref:System.Windows.Controls.TextBox> hasta que el usuario escribe texto, momento en que se quita la imagen. Además, la imagen de fondo se puede restaurar de nuevo si el usuario quita los datos proporcionados. Consulte la siguiente ilustración.  

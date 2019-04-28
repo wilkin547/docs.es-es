@@ -7,11 +7,11 @@ helpviewer_keywords:
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
 ms.openlocfilehash: f168d6d9cd6970353e75fa35a7e52cc7156fda72
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907652"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Procedimiento Declarar enumeraciones (Visual Basic)
 Crear una enumeración con el `Enum` instrucción en la sección de declaraciones de una clase o módulo. No se puede declarar una enumeración dentro de un método. Para especificar el nivel adecuado de acceso, use `Private`, `Protected`, `Friend`, o `Public`.  
@@ -38,7 +38,7 @@ Crear una enumeración con el `Enum` instrucción en la sección de declaracione
   
 ### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>Para declarar una enumeración como un tipo explícito  
   
--   Especificar el tipo de la enumeración mediante el `As` cláusula, tal como se muestra en el ejemplo siguiente.  
+- Especificar el tipo de la enumeración mediante el `As` cláusula, tal como se muestra en el ejemplo siguiente.  
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   

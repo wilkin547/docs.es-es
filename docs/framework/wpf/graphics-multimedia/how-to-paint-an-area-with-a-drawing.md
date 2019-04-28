@@ -1,5 +1,5 @@
 ---
-title: Filtrar Pintar un área con un dibujo
+title: Procedimiento Pintar un área con un dibujo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - drawings [WPF], painting with
 ms.assetid: c10dc4b1-09b1-41e8-ad14-456b5fb377df
 ms.openlocfilehash: 6b204ae631912181333e2559ebadcdc37e7693b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010090"
 ---
-# <a name="how-to-paint-an-area-with-a-drawing"></a>Filtrar Pintar un área con un dibujo
+# <a name="how-to-paint-an-area-with-a-drawing"></a>Procedimiento Pintar un área con un dibujo
 En este ejemplo se muestra cómo pintar un área con un dibujo. Para pintar un área con un dibujo, usa un <xref:System.Windows.Media.DrawingBrush> y uno o varios <xref:System.Windows.Media.Drawing> objetos.   En el ejemplo siguiente se usa un <xref:System.Windows.Media.DrawingBrush> para pintar un objeto con un dibujo de dos elipses.  
   
 ## <a name="example"></a>Ejemplo  

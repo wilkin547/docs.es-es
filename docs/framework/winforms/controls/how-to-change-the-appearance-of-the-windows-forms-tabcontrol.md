@@ -12,11 +12,11 @@ helpviewer_keywords:
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
 ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904272"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Procedimiento para cambiar el aspecto apariencia del control TabControl de formularios Windows Forms
 Puede cambiar la apariencia de fichas en Windows Forms mediante el uso de las propiedades de la <xref:System.Windows.Forms.TabControl> y <xref:System.Windows.Forms.TabPage> objetos que componen las fichas individuales en el control. Al establecer estas propiedades, puede mostrar imágenes en las fichas, mostrar pestañas verticalmente en lugar de horizontalmente, mostrar varias filas de pestañas y habilitar o deshabilitar las fichas mediante programación.  
@@ -43,7 +43,7 @@ Puede cambiar la apariencia de fichas en Windows Forms mediante el uso de las pr
   
 ### <a name="to-arrange-tabs-on-the-side-of-the-control"></a>Para organizar las fichas en el lado del control  
   
--   Establecer el <xref:System.Windows.Forms.TabControl.Alignment%2A> propiedad de la <xref:System.Windows.Forms.TabControl> a <xref:System.Windows.Forms.TabAlignment.Left> o <xref:System.Windows.Forms.TabAlignment.Right>.  
+- Establecer el <xref:System.Windows.Forms.TabControl.Alignment%2A> propiedad de la <xref:System.Windows.Forms.TabControl> a <xref:System.Windows.Forms.TabAlignment.Left> o <xref:System.Windows.Forms.TabAlignment.Right>.  
   
 ### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a>Para habilitar o deshabilitar todos los controles en una ficha mediante programación  
   
@@ -63,7 +63,7 @@ Puede cambiar la apariencia de fichas en Windows Forms mediante el uso de las pr
   
 ### <a name="to-display-tabs-as-buttons"></a>Para mostrar fichas como botones  
   
--   Establecer el <xref:System.Windows.Forms.TabControl.Appearance%2A> propiedad de la <xref:System.Windows.Forms.TabControl> a <xref:System.Windows.Forms.TabAppearance.Buttons> o <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
+- Establecer el <xref:System.Windows.Forms.TabControl.Appearance%2A> propiedad de la <xref:System.Windows.Forms.TabControl> a <xref:System.Windows.Forms.TabAppearance.Buttons> o <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
 ## <a name="see-also"></a>Vea también
 

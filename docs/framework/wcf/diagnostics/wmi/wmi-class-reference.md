@@ -3,17 +3,17 @@ title: Referencia de clases WMI
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
 ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915665"
 ---
 # <a name="wmi-class-reference"></a>Referencia de clases WMI
 Esta sección enumeran todas las clases WMI expuestas por el proveedor WMI de Windows Communication Foundation (WCF).  
   
 ## <a name="accessing-wmi-instances"></a>Tener acceso a las instancias de WMI  
- No se puede crear directamente una instancia de todas las clases enumeradas en la Referencia de objeto WMI, excepto para Service, AppDomain, Contrat, ServiceAppDomain, ServiceToEndpointAssociation y Endpoint. Para tener acceso a otras instancias, puede tener acceso a las propiedades de las clases de nivel superior mencionadas anteriormente. Por ejemplo, puede obtener acceso a la instancia TransportBindingElement desde la instancia Endpoint -> Binding -> BindingElements.  
+ No se puede crear directamente una instancia de todas las clases enumeradas en la Referencia de objeto WMI, excepto para Service, AppDomain, Contrat, ServiceAppDomain, ServiceToEndpointAssociation y Endpoint. Para tener acceso a otras instancias, puede tener acceso a las propiedades de las clases de nivel superior mencionadas anteriormente. Por ejemplo, puede tener acceso a la instancia TransportBindingElement desde la instancia Endpoint -> Binding -> BindingElements.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
@@ -24,7 +24,7 @@ Esta sección enumeran todas las clases WMI expuestas por el proveedor WMI de Wi
   
  [AsymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
   
- "Clase behavior"  
+ "Clase de comportamiento"  
   
  [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
@@ -80,7 +80,7 @@ Esta sección enumeran todas las clases WMI expuestas por el proveedor WMI de Wi
   
  [OneWayBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/onewaybindingelement.md)  
   
- "Operation (clase)"  
+ "Clase de operación"  
   
  [OperationBehaviorAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/operationbehaviorattribute.md)  
   

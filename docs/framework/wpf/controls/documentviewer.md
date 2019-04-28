@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
 ms.openlocfilehash: cc9031a19cb49736cf039d53d02ff2bc571ff978
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911903"
 ---
 # <a name="documentviewer"></a>DocumentViewer
 El <xref:System.Windows.Controls.DocumentViewer> control se usa para ver <xref:System.Windows.Documents.FixedDocument> contenido (como [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documentos) en un formato paginado.  

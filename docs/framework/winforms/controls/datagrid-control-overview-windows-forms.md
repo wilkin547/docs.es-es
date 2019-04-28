@@ -21,11 +21,11 @@ helpviewer_keywords:
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
 ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904450"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Información general del control DataGrid (Formularios Windows Forms)
 > [!NOTE]
@@ -57,13 +57,13 @@ ms.locfileid: "59304745"
   
  Los orígenes de datos válidos para <xref:System.Windows.Forms.DataGrid> son:  
   
--   Clase <xref:System.Data.DataTable>  
+- Clase <xref:System.Data.DataTable>  
   
--   Clase <xref:System.Data.DataView>  
+- Clase <xref:System.Data.DataView>  
   
--   Clase <xref:System.Data.DataSet>  
+- Clase <xref:System.Data.DataSet>  
   
--   Clase <xref:System.Data.DataViewManager>  
+- Clase <xref:System.Data.DataViewManager>  
   
  Si su origen es un conjunto de datos, el conjunto de datos podría ser un objeto en el formulario o un objeto pasado al formulario por un servicio web XML. Puede enlazar a conjuntos de datos con tipo o sin tipo.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "59304745"
   
  Las siguientes estructuras se pueden enlazar si sus elementos exponen propiedades públicas:  
   
--   Cualquier componente que implemente la interfaz <xref:System.Collections.IList>. Esto incluye las matrices unidimensionales.  
+- Cualquier componente que implemente la interfaz <xref:System.Collections.IList>. Esto incluye las matrices unidimensionales.  
   
--   Cualquier componente que implemente la interfaz <xref:System.ComponentModel.IListSource>.  
+- Cualquier componente que implemente la interfaz <xref:System.ComponentModel.IListSource>.  
   
--   Cualquier componente que implemente la interfaz <xref:System.ComponentModel.IBindingList>.  
+- Cualquier componente que implemente la interfaz <xref:System.ComponentModel.IBindingList>.  
   
  Para obtener más información sobre posibles orígenes de datos, vea el artículo sobre los [orígenes de datos compatibles con formularios Windows Forms](../data-sources-supported-by-windows-forms.md).  
   

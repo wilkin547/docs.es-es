@@ -3,11 +3,11 @@ title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
 ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989895"
 ---
 # <a name="jsonp"></a>JSONP
 En este ejemplo se muestra cómo admitir JSON con relleno (JSONP) en los servicios REST de WCF. JSONP es una convención usada para invocar scripts entre dominios generando las etiquetas de scripts en el documento actual. El resultado se devuelve en una función de devolución de llamada especificada. JSONP se basa en la idea de que etiquetas como `<script src="http://..." >` pueden evaluar scripts desde cualquier dominio y la secuencia de comandos que recuperan dichas etiquetas se evalúa dentro de un ámbito en el que ya se pueden definir otras funciones.

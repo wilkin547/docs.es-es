@@ -3,11 +3,11 @@ title: <allowedAudienceUris>
 ms.date: 03/30/2017
 ms.assetid: 0f4dc73d-d95d-4193-9755-7df4cf2b8e1c
 ms.openlocfilehash: f758fc8e0934f56f9593246497d8aba5084c4a79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673516"
 ---
 # <a name="allowedaudienceuris"></a>\<allowedAudienceUris>
 Representa una colección de los URI de destino para los que el token de seguridad <xref:System.IdentityModel.Tokens.SamlSecurityToken> se puede destinar con el fin de que una instancia de <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> lo considere válido.  
@@ -49,9 +49,9 @@ Representa una colección de los URI de destino para los que el token de segurid
 ## <a name="remarks"></a>Comentarios  
  Debería utilizar esta colección en una aplicación federada que utilice un servicio de token seguro (STS) que emita tokens de seguridad <xref:System.IdentityModel.Tokens.SamlSecurityToken>. Cuando el STS emite el token de seguridad, puede especificar el URI de los servicios Web para el que está dirigido el token de seguridad mediante la agregación de una <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> al token de seguridad. Eso le permite al <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> del servicio Web del destinatario comprobar que el token de seguridad emitido está dirigido a este servicio Web especificando que esta comprobación debería tener lugar haciendo lo siguiente:  
   
--   Establezca el atributo `audienceUriMode` de `<issuedTokenAuthentication>` en <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> o <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly>.  
+- Establezca el atributo `audienceUriMode` de `<issuedTokenAuthentication>` en <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> o <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly>.  
   
--   Especifique el conjunto de identificadores URI válidos, agregando los URI a esta colección.  
+- Especifique el conjunto de identificadores URI válidos, agregando los URI a esta colección.  
   
  Para obtener más información, consulta <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   

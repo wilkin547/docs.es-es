@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
 ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918364"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Nombre \<namespacename > en el espacio de nombres raíz \<fullnamespacename > no es conforme a CLS
 Un ensamblado está marcado como `<CLSCompliant(True)>`, pero un elemento del nombre de espacio de nombres raíz comienza con un carácter de subrayado (`_`).  
@@ -29,9 +29,9 @@ Un ensamblado está marcado como `<CLSCompliant(True)>`, pero un elemento del no
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Si requiere conformidad con CLS, cambie el nombre del espacio de nombres raíz para que ninguno de sus elementos comienza con un carácter de subrayado.  
+- Si requiere conformidad con CLS, cambie el nombre del espacio de nombres raíz para que ninguno de sus elementos comienza con un carácter de subrayado.  
   
--   Si necesita que el espacio de nombres permanecen sin cambios, a continuación, quite el <xref:System.CLSCompliantAttribute> desde el ensamblado o márquelo como `<CLSCompliant(False)>`.  
+- Si necesita que el espacio de nombres permanecen sin cambios, a continuación, quite el <xref:System.CLSCompliantAttribute> desde el ensamblado o márquelo como `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Vea también
 

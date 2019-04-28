@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 ms.openlocfilehash: 794a3d8e118cadd2a2752e1bbf85ef930deb2f27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922802"
 ---
 # <a name="message-security-with-a-windows-client"></a>Seguridad del mensaje con un cliente de Windows
 Este escenario muestra un cliente de Windows Communication Foundation (WCF) y un servidor protegido por el modo de seguridad de mensaje. El cliente y el servicio se autentican utilizando las credenciales de Windows.  
@@ -31,9 +31,9 @@ Este escenario muestra un cliente de Windows Communication Foundation (WCF) y un
 ## <a name="service"></a>web de Office  
  El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
--   Cree un servicio independiente mediante el código sin configuración.  
+- Cree un servicio independiente mediante el código sin configuración.  
   
--   Cree un servicio mediante la configuración proporcionada, pero sin definir ningún punto de conexión.  
+- Cree un servicio mediante la configuración proporcionada, pero sin definir ningún punto de conexión.  
   
 ### <a name="code"></a>Código  
  El código siguiente muestra cómo crear un extremo de servicio que utiliza la seguridad del mensaje para establecer un contexto seguro con una máquina Windows.  
@@ -75,9 +75,9 @@ Este escenario muestra un cliente de Windows Communication Foundation (WCF) y un
 ## <a name="client"></a>Cliente  
  El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
--   Cree un cliente independiente mediante el código (y el código de cliente).  
+- Cree un cliente independiente mediante el código (y el código de cliente).  
   
--   Cree un cliente que no defina direcciones de punto de conexión. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:  
+- Cree un cliente que no defina direcciones de punto de conexión. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

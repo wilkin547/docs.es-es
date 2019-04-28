@@ -3,11 +3,11 @@ title: Inferir relaciones
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
 ms.openlocfilehash: f8a9aba493dfe82466608ea60932ddfec5ef64f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879676"
 ---
 # <a name="inferring-relationships"></a>Inferir relaciones
 Si un elemento que se deduce como una tabla tiene un elemento secundario que también se deduce como una tabla, se creará una <xref:System.Data.DataRelation> entre las dos tablas. Una nueva columna con el nombre de **ParentTableName_Id** se agregará a la tabla creada para el elemento primario y la tabla creada para el elemento secundario. El **ColumnMapping** propiedad de esta columna de identidad se establecerá en **MappingType.Hidden**. La columna será una clave principal de incremento automático para la tabla primaria y se usará para la **DataRelation** entre las dos tablas. El tipo de datos de la columna de identidad agregada será **System.Int32**, a diferencia del tipo de datos de todas las demás columnas deducidas, que es **System.String**. Un <xref:System.Data.ForeignKeyConstraint> con **DeleteRule** = **Cascade** también se creará con la nueva columna en el elemento primario y secundario de las tablas.  

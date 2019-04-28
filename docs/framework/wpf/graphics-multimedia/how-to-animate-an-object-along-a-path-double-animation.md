@@ -9,11 +9,11 @@ helpviewer_keywords:
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
 ms.openlocfilehash: 54f345bbe6b513e3593cbf45ba190d4a44228424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010116"
 ---
 # <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Procedimiento Animación de un objeto a lo largo de un trazado (animación doble)
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> clase para mover un objeto a lo largo de un trazado definido por un <xref:System.Windows.Media.PathGeometry>.  
@@ -21,9 +21,9 @@ En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.Do
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente utiliza dos <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> objetos que se va a mover un rectángulo a lo largo de un trazado geométrico:  
   
--   La primera <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> anima la <xref:System.Windows.Media.TranslateTransform.X%2A> de la <xref:System.Windows.Media.TranslateTransform> aplicada al rectángulo. Hace que el rectángulo se mueva horizontalmente a lo largo del trazado.  
+- La primera <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> anima la <xref:System.Windows.Media.TranslateTransform.X%2A> de la <xref:System.Windows.Media.TranslateTransform> aplicada al rectángulo. Hace que el rectángulo se mueva horizontalmente a lo largo del trazado.  
   
--   El segundo <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> anima la <xref:System.Windows.Media.TranslateTransform.Y%2A> de la <xref:System.Windows.Media.TranslateTransform> aplicada al rectángulo. Hace que el rectángulo se mueva verticalmente a lo largo del trazado.  
+- El segundo <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> anima la <xref:System.Windows.Media.TranslateTransform.Y%2A> de la <xref:System.Windows.Media.TranslateTransform> aplicada al rectángulo. Hace que el rectángulo se mueva verticalmente a lo largo del trazado.  
   
  [!code-xaml[PathAnimationGallery_snippet#DoubleAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/doubleanimationusingpathexample.xaml#doubleanimationusingpathwholepage)]  
   

@@ -3,11 +3,11 @@ title: Introducción a la autenticación HTTP
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
 ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918910"
 ---
 # <a name="understanding-http-authentication"></a>Introducción a la autenticación HTTP
 La autenticación es el proceso de identificar si un cliente es elegible para tener acceso a un recurso. El protocolo HTTP soporta la autenticación como un medio de negociar el acceso a un recurso seguro.  
@@ -29,11 +29,11 @@ La autenticación es el proceso de identificar si un cliente es elegible para te
 ## <a name="choosing-an-authentication-scheme"></a>Elegir un esquema de autenticación  
  Al seleccionar los esquemas de autenticación potenciales para un servidor HTTP, deben considerarse algunos elementos, como los siguientes:  
   
--   Considere si el recurso necesita ser protegido. La utilización de la autenticación de HTTP requiere transmitir más datos y puede limitar la interoperabilidad con los clientes. Permita el acceso anónimo a los recursos que no necesitan ser protegidos.  
+- Considere si el recurso necesita ser protegido. La utilización de la autenticación de HTTP requiere transmitir más datos y puede limitar la interoperabilidad con los clientes. Permita el acceso anónimo a los recursos que no necesitan ser protegidos.  
   
--   Si el recurso necesita ser protegido, considere qué esquemas de autenticación proporcionan el nivel necesario de seguridad. El esquema de autenticación estándar más débil aquí descrito es la autenticación básica. La autenticación básica no protege las credenciales del usuario. El esquema de autenticación estándar más fuerte es Negociar la autenticación, que resulta en el protocolo Kerberos.  
+- Si el recurso necesita ser protegido, considere qué esquemas de autenticación proporcionan el nivel necesario de seguridad. El esquema de autenticación estándar más débil aquí descrito es la autenticación básica. La autenticación básica no protege las credenciales del usuario. El esquema de autenticación estándar más fuerte es Negociar la autenticación, que resulta en el protocolo Kerberos.  
   
--   Un servidor no debería presentar (en los encabezados de la autenticación de WWW) ningún esquema que no esté preparado para aceptar o que no proteja adecuadamente el recurso protegido. Los clientes son libres de elegir entre cualquiera de los esquemas de autenticación que el servidor presenta. Algunos clientes tienen como valor predeterminado un esquema de autenticación débil o el primer esquema de autenticación en la lista del servidor.  
+- Un servidor no debería presentar (en los encabezados de la autenticación de WWW) ningún esquema que no esté preparado para aceptar o que no proteja adecuadamente el recurso protegido. Los clientes son libres de elegir entre cualquiera de los esquemas de autenticación que el servidor presenta. Algunos clientes tienen como valor predeterminado un esquema de autenticación débil o el primer esquema de autenticación en la lista del servidor.  
   
 ## <a name="see-also"></a>Vea también
 

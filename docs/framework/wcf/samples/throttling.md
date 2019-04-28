@@ -7,10 +7,10 @@ helpviewer_keywords:
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
 ms.openlocfilehash: d41270d63d188443207c78a3c55b469e2bd7b482
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006314"
 ---
 # <a name="throttling"></a>Limitación de peticiones
 El ejemplo de limitación de peticiones muestra el uso de la limitación de controles. Los controles de limitación de peticiones establecen límites en el número de llamadas simultáneas, instancias o sesiones para evitar el consumo excesivo de recursos. El comportamiento de la limitación de peticiones se especifica en los valores del archivo de configuración del servicio. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  

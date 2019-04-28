@@ -3,11 +3,11 @@ title: Integración con Common Language Runtime de SQL Server
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
 ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876348"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Integración con Common Language Runtime de SQL Server
 SQL Server 2005 introdujo la integración del componente Common Language Runtime (CLR) de .NET Framework para Microsoft Windows. Esto significa que ahora se pueden escribir procedimientos almacenados, desencadenadores, tipos definidos por el usuario, funciones definidas por el usuario, agregados definidos por el usuario y funciones con valores de tabla de transmisión por secuencias mediante cualquier lenguaje de .NET Framework, como Microsoft Visual Basic .NET y Microsoft Visual C#. El espacio de nombres <xref:Microsoft.SqlServer.Server> contiene un conjunto de nuevas interfaces de programación de aplicaciones (API) que permiten que el código administrado interactúe con el entorno de Microsoft SQL Server.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - graphics [WPF], shapes
 ms.assetid: 49a4a8b7-e738-45be-8dac-b54a6d8f5b21
 ms.openlocfilehash: b0ab703596612524881ab892a1095b0f49cd1551
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904323"
 ---
 # <a name="how-to-create-a-shape-by-using-a-pathgeometry"></a>Procedimiento Crear una forma mediante una clase PathGeometry
 En este ejemplo se muestra cómo crear una forma mediante la <xref:System.Windows.Media.PathGeometry> clase. <xref:System.Windows.Media.PathGeometry> los objetos se componen de uno o varios <xref:System.Windows.Media.PathFigure> objetos; cada <xref:System.Windows.Media.PathFigure> representa una "figura" diferentes o forma. Cada <xref:System.Windows.Media.PathFigure> sí se compone de uno o varios <xref:System.Windows.Media.PathSegment> objetos que representan una parte conectada de la figura o forma. Tipos de segmentos incluyen <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.ArcSegment>, y <xref:System.Windows.Media.BezierSegment>.  

@@ -3,11 +3,11 @@ title: Inferir texto de elemento
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
 ms.openlocfilehash: 6ffe8f2fbf01fbe8dfa9d78f3dfb9e39b6e80b16
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879637"
 ---
 # <a name="inferring-element-text"></a>Inferir texto de elemento
 Si un elemento contiene texto y no tiene elementos secundarios que se deducen como tablas (como elementos con atributos) o elementos repetidos, una nueva columna con el nombre **TableName_Text** se agregarán a la tabla que se deduzca para el elemento. El texto contenido en el elemento se agregará a una fila de la tabla y se almacenará en la nueva columna. El **ColumnMapping** propiedad de la nueva columna se establecerá en **MappingType.SimpleContent**.  

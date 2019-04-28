@@ -11,11 +11,11 @@ helpviewer_keywords:
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
 ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917935"
 ---
 # <a name="lifetime-in-visual-basic"></a>Período de duración en Visual Basic
 El *duración* de un elemento declarado es el período de tiempo durante el cual está disponible para su uso. Las variables son los únicos elementos que tienen duración. Para este propósito, el compilador trata los parámetros de procedimiento y función que se devuelve como casos especiales de variables. La duración de una variable que representa el período de tiempo durante el cual puede contener un valor. Puede cambiar su valor a través de su duración, pero siempre contiene un valor.  
