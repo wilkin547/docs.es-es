@@ -10,20 +10,20 @@ helpviewer_keywords:
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
 ms.openlocfilehash: 256b9a3d8842aaa4b032e67ebac9ca6a9e1ef34a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937857"
 ---
-# <a name="how-to-complete-windows-forms-print-jobs"></a><span data-ttu-id="e9e7c-102">Procedimiento para completar trabajos de impresión de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e9e7c-102">How to: Complete Windows Forms Print Jobs</span></span>
-<span data-ttu-id="e9e7c-103">Con frecuencia, los procesadores de textos y otras aplicaciones que implican impresión proporcionará la opción para mostrar un mensaje a los usuarios que un trabajo de impresión está completado.</span><span class="sxs-lookup"><span data-stu-id="e9e7c-103">Frequently, word processors and other applications that involve printing will provide the option to display a message to users that a print job is complete.</span></span> <span data-ttu-id="e9e7c-104">Puede proporcionar esta funcionalidad en los formularios Windows Forms controlando el <xref:System.Drawing.Printing.PrintDocument.EndPrint> eventos de la <xref:System.Drawing.Printing.PrintDocument> componente.</span><span class="sxs-lookup"><span data-stu-id="e9e7c-104">You can provide this functionality in your Windows Forms by handling the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
+# <a name="how-to-complete-windows-forms-print-jobs"></a><span data-ttu-id="5750a-102">Procedimiento para completar trabajos de impresión de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5750a-102">How to: Complete Windows Forms Print Jobs</span></span>
+<span data-ttu-id="5750a-103">Con frecuencia, los procesadores de textos y otras aplicaciones que implican impresión proporcionará la opción para mostrar un mensaje a los usuarios que un trabajo de impresión está completado.</span><span class="sxs-lookup"><span data-stu-id="5750a-103">Frequently, word processors and other applications that involve printing will provide the option to display a message to users that a print job is complete.</span></span> <span data-ttu-id="5750a-104">Puede proporcionar esta funcionalidad en los formularios Windows Forms controlando el <xref:System.Drawing.Printing.PrintDocument.EndPrint> eventos de la <xref:System.Drawing.Printing.PrintDocument> componente.</span><span class="sxs-lookup"><span data-stu-id="5750a-104">You can provide this functionality in your Windows Forms by handling the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
   
- <span data-ttu-id="e9e7c-105">El procedimiento siguiente requiere que se haya creado una aplicación basada en Windows con un <xref:System.Drawing.Printing.PrintDocument> componente en este, que es la manera estándar de habilitar la impresión desde una aplicación basada en Windows.</span><span class="sxs-lookup"><span data-stu-id="e9e7c-105">The following procedure requires that you have created a Windows-based application with a <xref:System.Drawing.Printing.PrintDocument> component on it, which is the standard way of enabling printing from a Windows-based application.</span></span> <span data-ttu-id="e9e7c-106">Para obtener más información acerca de la impresión de Windows Forms mediante el <xref:System.Drawing.Printing.PrintDocument> componente, vea [Cómo: Crear trabajos de impresión estándar de Windows Forms](how-to-create-standard-windows-forms-print-jobs.md).</span><span class="sxs-lookup"><span data-stu-id="e9e7c-106">For more information about printing from Windows Forms using the <xref:System.Drawing.Printing.PrintDocument> component, see [How to: Create Standard Windows Forms Print Jobs](how-to-create-standard-windows-forms-print-jobs.md).</span></span>  
+ <span data-ttu-id="5750a-105">El procedimiento siguiente requiere que se haya creado una aplicación basada en Windows con un <xref:System.Drawing.Printing.PrintDocument> componente en este, que es la manera estándar de habilitar la impresión desde una aplicación basada en Windows.</span><span class="sxs-lookup"><span data-stu-id="5750a-105">The following procedure requires that you have created a Windows-based application with a <xref:System.Drawing.Printing.PrintDocument> component on it, which is the standard way of enabling printing from a Windows-based application.</span></span> <span data-ttu-id="5750a-106">Para obtener más información acerca de la impresión de Windows Forms mediante el <xref:System.Drawing.Printing.PrintDocument> componente, vea [Cómo: Crear trabajos de impresión estándar de Windows Forms](how-to-create-standard-windows-forms-print-jobs.md).</span><span class="sxs-lookup"><span data-stu-id="5750a-106">For more information about printing from Windows Forms using the <xref:System.Drawing.Printing.PrintDocument> component, see [How to: Create Standard Windows Forms Print Jobs](how-to-create-standard-windows-forms-print-jobs.md).</span></span>  
   
-### <a name="to-complete-a-print-job"></a><span data-ttu-id="e9e7c-107">Para completar un trabajo de impresión</span><span class="sxs-lookup"><span data-stu-id="e9e7c-107">To complete a print job</span></span>  
+### <a name="to-complete-a-print-job"></a><span data-ttu-id="5750a-107">Para completar un trabajo de impresión</span><span class="sxs-lookup"><span data-stu-id="5750a-107">To complete a print job</span></span>  
   
-1. <span data-ttu-id="e9e7c-108">Establecer el <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> propiedad de la <xref:System.Drawing.Printing.PrintDocument> componente.</span><span class="sxs-lookup"><span data-stu-id="e9e7c-108">Set the <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> property of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
+1. <span data-ttu-id="5750a-108">Establecer el <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> propiedad de la <xref:System.Drawing.Printing.PrintDocument> componente.</span><span class="sxs-lookup"><span data-stu-id="5750a-108">Set the <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> property of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
   
     ```vb  
     PrintDocument1.DocumentName = "MyTextFile"  
@@ -37,9 +37,9 @@ ms.locfileid: "59293760"
     printDocument1->DocumentName = "MyTextFile";  
     ```  
   
-2. <span data-ttu-id="e9e7c-109">Escriba código para controlar el evento <xref:System.Drawing.Printing.PrintDocument.EndPrint> .</span><span class="sxs-lookup"><span data-stu-id="e9e7c-109">Write code to handle the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event.</span></span>  
+2. <span data-ttu-id="5750a-109">Escriba código para controlar el evento <xref:System.Drawing.Printing.PrintDocument.EndPrint> .</span><span class="sxs-lookup"><span data-stu-id="5750a-109">Write code to handle the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event.</span></span>  
   
-     <span data-ttu-id="e9e7c-110">En el ejemplo de código siguiente se muestra un cuadro de mensaje que indica que ha terminado de imprimir el documento.</span><span class="sxs-lookup"><span data-stu-id="e9e7c-110">In the following code example, a message box is displayed, indicating that the document has finished printing.</span></span>  
+     <span data-ttu-id="5750a-110">En el ejemplo de código siguiente se muestra un cuadro de mensaje que indica que ha terminado de imprimir el documento.</span><span class="sxs-lookup"><span data-stu-id="5750a-110">In the following code example, a message box is displayed, indicating that the document has finished printing.</span></span>  
   
     ```vb  
     Private Sub PrintDocument1_EndPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDocument1.EndPrint  
@@ -66,7 +66,7 @@ ms.locfileid: "59293760"
        }  
     ```  
   
-     <span data-ttu-id="e9e7c-111">(Visual C# y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="e9e7c-111">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="5750a-111">(Visual C# y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="5750a-111">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.EndPrint += new  
@@ -80,7 +80,7 @@ ms.locfileid: "59293760"
        (this, &Form1::printDocument1_EndPrint);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="e9e7c-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="e9e7c-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5750a-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="5750a-112">See also</span></span>
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- <span data-ttu-id="e9e7c-113">[Windows Forms Print Support](windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="e9e7c-113">[Windows Forms Print Support](windows-forms-print-support.md)</span></span>
+- <span data-ttu-id="5750a-113">[Windows Forms Print Support](windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="5750a-113">[Windows Forms Print Support](windows-forms-print-support.md)</span></span>

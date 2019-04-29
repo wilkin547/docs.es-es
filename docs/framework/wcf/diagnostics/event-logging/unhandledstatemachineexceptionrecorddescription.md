@@ -3,23 +3,23 @@ title: UnhandledStateMachineExceptionRecordDescription
 ms.date: 03/30/2017
 ms.assetid: f4a0e8af-7d6c-4091-8d6c-b99e8ff3a07b
 ms.openlocfilehash: 903133dec95e5429cb71343d9af7667c7df4a9d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944344"
 ---
-# <a name="unhandledstatemachineexceptionrecorddescription"></a><span data-ttu-id="7878f-102">UnhandledStateMachineExceptionRecordDescription</span><span class="sxs-lookup"><span data-stu-id="7878f-102">UnhandledStateMachineExceptionRecordDescription</span></span>
-<span data-ttu-id="7878f-103">Id.: 136</span><span class="sxs-lookup"><span data-stu-id="7878f-103">Id: 136</span></span>  
+# <a name="unhandledstatemachineexceptionrecorddescription"></a><span data-ttu-id="cb2d8-102">UnhandledStateMachineExceptionRecordDescription</span><span class="sxs-lookup"><span data-stu-id="cb2d8-102">UnhandledStateMachineExceptionRecordDescription</span></span>
+<span data-ttu-id="cb2d8-103">Id.: 136</span><span class="sxs-lookup"><span data-stu-id="cb2d8-103">Id: 136</span></span>  
   
- <span data-ttu-id="7878f-104">Gravedad: Error</span><span class="sxs-lookup"><span data-stu-id="7878f-104">Severity: Error</span></span>  
+ <span data-ttu-id="cb2d8-104">Gravedad: Error</span><span class="sxs-lookup"><span data-stu-id="cb2d8-104">Severity: Error</span></span>  
   
- <span data-ttu-id="7878f-105">Categoría: TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="7878f-105">Category: TransactionBridge</span></span>  
+ <span data-ttu-id="cb2d8-105">Categoría: TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="cb2d8-105">Category: TransactionBridge</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7878f-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="7878f-106">Description</span></span>  
- <span data-ttu-id="7878f-107">Este evento indica que se inició una excepción no controlada mientras una máquina de estados procesaba un evento.</span><span class="sxs-lookup"><span data-stu-id="7878f-107">This event indicates that an unhandled exception was thrown while a state machine was processing an event.</span></span> <span data-ttu-id="7878f-108">El evento enumera el id. de transacción, el nombre del equipo de estados, el estado actual, el historial, el id. de inscripción, la excepción, el nombre del proceso y el id. de proceso.</span><span class="sxs-lookup"><span data-stu-id="7878f-108">The event lists the transaction ID, State machine name, Current state, History, Enlistment ID, exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="cb2d8-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="cb2d8-106">Description</span></span>  
+ <span data-ttu-id="cb2d8-107">Este evento indica que se inició una excepción no controlada mientras una máquina de estados procesaba un evento.</span><span class="sxs-lookup"><span data-stu-id="cb2d8-107">This event indicates that an unhandled exception was thrown while a state machine was processing an event.</span></span> <span data-ttu-id="cb2d8-108">El evento enumera el id. de transacción, el nombre del equipo de estados, el estado actual, el historial, el id. de inscripción, la excepción, el nombre del proceso y el id. de proceso.</span><span class="sxs-lookup"><span data-stu-id="cb2d8-108">The event lists the transaction ID, State machine name, Current state, History, Enlistment ID, exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7878f-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="7878f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cb2d8-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="cb2d8-109">See also</span></span>
 
-- [<span data-ttu-id="7878f-110">Registro de eventos</span><span class="sxs-lookup"><span data-stu-id="7878f-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="7878f-111">Referencia general de eventos</span><span class="sxs-lookup"><span data-stu-id="7878f-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [<span data-ttu-id="cb2d8-110">Registro de eventos</span><span class="sxs-lookup"><span data-stu-id="cb2d8-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [<span data-ttu-id="cb2d8-111">Referencia general de eventos</span><span class="sxs-lookup"><span data-stu-id="cb2d8-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

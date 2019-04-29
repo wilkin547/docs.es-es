@@ -26,7 +26,7 @@ helpviewer_keywords:
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
 ms.openlocfilehash: 571af49cdf82b876cfb72a7c7636874c8d155fb7
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61803147"
@@ -39,7 +39,7 @@ ms.locfileid: "61803147"
   
 ### <a name="to-determine-which-modifier-key-was-pressed"></a><span data-ttu-id="7d080-115">Para determinar qué tecla modificadora se presionó</span><span class="sxs-lookup"><span data-stu-id="7d080-115">To determine which modifier key was pressed</span></span>  
   
--   <span data-ttu-id="7d080-116">Utilice el bit a bit `AND` operador con el <xref:System.Windows.Forms.Control.ModifierKeys%2A> propiedad y un valor de la <xref:System.Windows.Forms.Keys> enumeración para determinar si se presiona una tecla modificadora determinada.</span><span class="sxs-lookup"><span data-stu-id="7d080-116">Use the bitwise `AND` operator with the <xref:System.Windows.Forms.Control.ModifierKeys%2A> property and a value of the <xref:System.Windows.Forms.Keys> enumeration to determine whether a particular modifier key is pressed.</span></span> <span data-ttu-id="7d080-117">El ejemplo de código siguiente muestra cómo determinar si se presiona la tecla MAYÚS dentro de un <xref:System.Windows.Forms.Control.KeyPress> controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="7d080-117">The following code example shows how to determine whether the SHIFT key is pressed within a <xref:System.Windows.Forms.Control.KeyPress> event handler.</span></span>  
+- <span data-ttu-id="7d080-116">Utilice el bit a bit `AND` operador con el <xref:System.Windows.Forms.Control.ModifierKeys%2A> propiedad y un valor de la <xref:System.Windows.Forms.Keys> enumeración para determinar si se presiona una tecla modificadora determinada.</span><span class="sxs-lookup"><span data-stu-id="7d080-116">Use the bitwise `AND` operator with the <xref:System.Windows.Forms.Control.ModifierKeys%2A> property and a value of the <xref:System.Windows.Forms.Keys> enumeration to determine whether a particular modifier key is pressed.</span></span> <span data-ttu-id="7d080-117">El ejemplo de código siguiente muestra cómo determinar si se presiona la tecla MAYÚS dentro de un <xref:System.Windows.Forms.Control.KeyPress> controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="7d080-117">The following code example shows how to determine whether the SHIFT key is pressed within a <xref:System.Windows.Forms.Control.KeyPress> event handler.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DetermineModifierKey#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/cpp/form1.cpp#5)]
      [!code-csharp[System.Windows.Forms.DetermineModifierKey#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/CS/form1.cs#5)]

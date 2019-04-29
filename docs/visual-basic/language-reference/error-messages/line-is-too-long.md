@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 27270ec3-82a4-4693-a948-dd4664a5f060
 ms.openlocfilehash: 5f67c5ad5fdc64b0a023b0472072be10987c3437
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61921061"
@@ -21,7 +21,7 @@ ms.locfileid: "61921061"
   
 ## <a name="to-correct-this-error"></a><span data-ttu-id="185bb-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="185bb-105">To correct this error</span></span>  
   
--   <span data-ttu-id="185bb-106">Reduzca la longitud de la línea a 65535 caracteres o menos.</span><span class="sxs-lookup"><span data-stu-id="185bb-106">Shorten the length of the line to 65535 characters or fewer.</span></span>  
+- <span data-ttu-id="185bb-106">Reduzca la longitud de la línea a 65535 caracteres o menos.</span><span class="sxs-lookup"><span data-stu-id="185bb-106">Shorten the length of the line to 65535 characters or fewer.</span></span>  
   
 ## <a name="see-also"></a><span data-ttu-id="185bb-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="185bb-107">See also</span></span>
 
