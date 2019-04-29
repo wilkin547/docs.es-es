@@ -8,24 +8,24 @@ helpviewer_keywords:
 - ListView controls [WPF], using
 ms.assetid: 49dfef1a-dddf-4fc6-a511-6d5f925a4781
 ms.openlocfilehash: 734b5265c1d25e4538c40f5a43bff220d675eedb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932584"
 ---
-# <a name="listview-overviews"></a><span data-ttu-id="76597-102">Información general sobre ListView</span><span class="sxs-lookup"><span data-stu-id="76597-102">ListView Overviews</span></span>
-<span data-ttu-id="76597-103">Los temas de esta sección muestran cómo utilizar un <xref:System.Windows.Controls.ListView> control.</span><span class="sxs-lookup"><span data-stu-id="76597-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
+# <a name="listview-overviews"></a><span data-ttu-id="15e0b-102">Información general sobre ListView</span><span class="sxs-lookup"><span data-stu-id="15e0b-102">ListView Overviews</span></span>
+<span data-ttu-id="15e0b-103">Los temas de esta sección muestran cómo utilizar un <xref:System.Windows.Controls.ListView> control.</span><span class="sxs-lookup"><span data-stu-id="15e0b-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="76597-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="76597-104">In This Section</span></span>  
- [<span data-ttu-id="76597-105">Información general sobre ListView</span><span class="sxs-lookup"><span data-stu-id="76597-105">ListView Overview</span></span>](listview-overview.md)  
- [<span data-ttu-id="76597-106">Información general sobre GridView</span><span class="sxs-lookup"><span data-stu-id="76597-106">GridView Overview</span></span>](gridview-overview.md)  
- <span data-ttu-id="76597-107">[GridView Column Header Styles and Templates Overview](gridview-column-header-styles-and-templates-overview.md) (Información general sobre plantillas y estilos de encabezado de columna en modo GridView)</span><span class="sxs-lookup"><span data-stu-id="76597-107">[GridView Column Header Styles and Templates Overview](gridview-column-header-styles-and-templates-overview.md)</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="15e0b-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="15e0b-104">In This Section</span></span>  
+ [<span data-ttu-id="15e0b-105">Información general sobre ListView</span><span class="sxs-lookup"><span data-stu-id="15e0b-105">ListView Overview</span></span>](listview-overview.md)  
+ [<span data-ttu-id="15e0b-106">Información general sobre GridView</span><span class="sxs-lookup"><span data-stu-id="15e0b-106">GridView Overview</span></span>](gridview-overview.md)  
+ <span data-ttu-id="15e0b-107">[GridView Column Header Styles and Templates Overview](gridview-column-header-styles-and-templates-overview.md) (Información general sobre plantillas y estilos de encabezado de columna en modo GridView)</span><span class="sxs-lookup"><span data-stu-id="15e0b-107">[GridView Column Header Styles and Templates Overview](gridview-column-header-styles-and-templates-overview.md)</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="76597-108">Referencia</span><span class="sxs-lookup"><span data-stu-id="76597-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="15e0b-108">Referencia</span><span class="sxs-lookup"><span data-stu-id="15e0b-108">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   
  <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="76597-109">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="76597-109">Related Sections</span></span>  
- [<span data-ttu-id="76597-110">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="76597-110">How-to Topics</span></span>](listview-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="15e0b-109">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="15e0b-109">Related Sections</span></span>  
+ [<span data-ttu-id="15e0b-110">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="15e0b-110">How-to Topics</span></span>](listview-how-to-topics.md)

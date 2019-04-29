@@ -5,36 +5,36 @@ f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
 ms.openlocfilehash: d3d0ebd003f178567ec9e9b19d6baccb8bc15f60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935244"
 ---
-# <a name="bad-file-mode"></a><span data-ttu-id="b9ea0-102">Modo de archivo incorrecto</span><span class="sxs-lookup"><span data-stu-id="b9ea0-102">Bad file mode</span></span>
-<span data-ttu-id="b9ea0-103">Las instrucciones que se utilizan para manipular el contenido del archivo deben ser adecuadas para el modo en que se abrió el archivo.</span><span class="sxs-lookup"><span data-stu-id="b9ea0-103">Statements used in manipulating file contents must be appropriate to the mode in which the file was opened.</span></span> <span data-ttu-id="b9ea0-104">Entre las posibles causas se incluyen:</span><span class="sxs-lookup"><span data-stu-id="b9ea0-104">Possible causes include:</span></span>  
+# <a name="bad-file-mode"></a><span data-ttu-id="08da9-102">Modo de archivo incorrecto</span><span class="sxs-lookup"><span data-stu-id="08da9-102">Bad file mode</span></span>
+<span data-ttu-id="08da9-103">Las instrucciones que se utilizan para manipular el contenido del archivo deben ser adecuadas para el modo en que se abrió el archivo.</span><span class="sxs-lookup"><span data-stu-id="08da9-103">Statements used in manipulating file contents must be appropriate to the mode in which the file was opened.</span></span> <span data-ttu-id="08da9-104">Entre las posibles causas se incluyen:</span><span class="sxs-lookup"><span data-stu-id="08da9-104">Possible causes include:</span></span>  
   
--   <span data-ttu-id="b9ea0-105">Un `FilePutObject` o `FileGetObject` instrucción especifica un archivo secuencial.</span><span class="sxs-lookup"><span data-stu-id="b9ea0-105">A `FilePutObject` or `FileGetObject` statement specifies a sequential file.</span></span>  
+- <span data-ttu-id="08da9-105">Un `FilePutObject` o `FileGetObject` instrucción especifica un archivo secuencial.</span><span class="sxs-lookup"><span data-stu-id="08da9-105">A `FilePutObject` or `FileGetObject` statement specifies a sequential file.</span></span>  
   
--   <span data-ttu-id="b9ea0-106">Un `Print` instrucción especifica un archivo abierto para un modo de acceso distinto `Output` o `Append`.</span><span class="sxs-lookup"><span data-stu-id="b9ea0-106">A `Print` statement specifies a file opened for an access mode other than `Output` or `Append`.</span></span>  
+- <span data-ttu-id="08da9-106">Un `Print` instrucción especifica un archivo abierto para un modo de acceso distinto `Output` o `Append`.</span><span class="sxs-lookup"><span data-stu-id="08da9-106">A `Print` statement specifies a file opened for an access mode other than `Output` or `Append`.</span></span>  
   
--   <span data-ttu-id="b9ea0-107">Un `Input` instrucción especifica un archivo abierto para un modo de acceso distinto `Input`</span><span class="sxs-lookup"><span data-stu-id="b9ea0-107">An `Input` statement specifies a file opened for an access mode other than `Input`</span></span>  
+- <span data-ttu-id="08da9-107">Un `Input` instrucción especifica un archivo abierto para un modo de acceso distinto `Input`</span><span class="sxs-lookup"><span data-stu-id="08da9-107">An `Input` statement specifies a file opened for an access mode other than `Input`</span></span>  
   
--   <span data-ttu-id="b9ea0-108">Se intenta escribir en un archivo de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="b9ea0-108">An attempt to write to a read-only file.</span></span>  
+- <span data-ttu-id="08da9-108">Se intenta escribir en un archivo de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="08da9-108">An attempt to write to a read-only file.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b9ea0-109">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="b9ea0-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="08da9-109">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="08da9-109">To correct this error</span></span>  
   
--   <span data-ttu-id="b9ea0-110">Asegúrese de que `FilePutObject` y `FileGetObject` sólo hacen referencia a archivos abiertos para `Random` o `Binary` acceso.</span><span class="sxs-lookup"><span data-stu-id="b9ea0-110">Make sure `FilePutObject` and `FileGetObject` are only referring to files open for `Random` or `Binary` access.</span></span>  
+- <span data-ttu-id="08da9-110">Asegúrese de que `FilePutObject` y `FileGetObject` sólo hacen referencia a archivos abiertos para `Random` o `Binary` acceso.</span><span class="sxs-lookup"><span data-stu-id="08da9-110">Make sure `FilePutObject` and `FileGetObject` are only referring to files open for `Random` or `Binary` access.</span></span>  
   
--   <span data-ttu-id="b9ea0-111">Asegúrese de que `Print` especifica un archivo abierto para cualquiera `Output` o `Append` modo de acceso.</span><span class="sxs-lookup"><span data-stu-id="b9ea0-111">Make sure `Print` specifies a file opened for either `Output` or `Append` access mode.</span></span> <span data-ttu-id="b9ea0-112">Si no es así, utilice otra instrucción para colocar datos en el archivo o vuelva a abrir el archivo en un modo adecuado.</span><span class="sxs-lookup"><span data-stu-id="b9ea0-112">If not, use a different statement to place data in the file, or reopen the file in an appropriate mode.</span></span>  
+- <span data-ttu-id="08da9-111">Asegúrese de que `Print` especifica un archivo abierto para cualquiera `Output` o `Append` modo de acceso.</span><span class="sxs-lookup"><span data-stu-id="08da9-111">Make sure `Print` specifies a file opened for either `Output` or `Append` access mode.</span></span> <span data-ttu-id="08da9-112">Si no es así, utilice otra instrucción para colocar datos en el archivo o vuelva a abrir el archivo en un modo adecuado.</span><span class="sxs-lookup"><span data-stu-id="08da9-112">If not, use a different statement to place data in the file, or reopen the file in an appropriate mode.</span></span>  
   
--   <span data-ttu-id="b9ea0-113">Asegúrese de que `Input` especifica un archivo abierto para `Input`.</span><span class="sxs-lookup"><span data-stu-id="b9ea0-113">Make sure `Input` specifies a file opened for `Input`.</span></span> <span data-ttu-id="b9ea0-114">Si no es así, utilice otra instrucción para colocar datos en el archivo o vuelva a abrir el archivo en un modo adecuado.</span><span class="sxs-lookup"><span data-stu-id="b9ea0-114">If not, use a different statement to place data in the file or reopen the file in an appropriate mode.</span></span>  
+- <span data-ttu-id="08da9-113">Asegúrese de que `Input` especifica un archivo abierto para `Input`.</span><span class="sxs-lookup"><span data-stu-id="08da9-113">Make sure `Input` specifies a file opened for `Input`.</span></span> <span data-ttu-id="08da9-114">Si no es así, utilice otra instrucción para colocar datos en el archivo o vuelva a abrir el archivo en un modo adecuado.</span><span class="sxs-lookup"><span data-stu-id="08da9-114">If not, use a different statement to place data in the file or reopen the file in an appropriate mode.</span></span>  
   
--   <span data-ttu-id="b9ea0-115">Si está escribiendo en un archivo de solo lectura, cambie el estado de lectura/escritura del archivo o no intente escribir en él.</span><span class="sxs-lookup"><span data-stu-id="b9ea0-115">If you are writing to a read-only file, change the read/write status of the file or do not try to write to it.</span></span>  
+- <span data-ttu-id="08da9-115">Si está escribiendo en un archivo de solo lectura, cambie el estado de lectura/escritura del archivo o no intente escribir en él.</span><span class="sxs-lookup"><span data-stu-id="08da9-115">If you are writing to a read-only file, change the read/write status of the file or do not try to write to it.</span></span>  
   
--   <span data-ttu-id="b9ea0-116">Use la funcionalidad disponible en el objeto `My.Computer.FileSystem` .</span><span class="sxs-lookup"><span data-stu-id="b9ea0-116">Use the functionality available in the `My.Computer.FileSystem` object.</span></span>  
+- <span data-ttu-id="08da9-116">Use la funcionalidad disponible en el objeto `My.Computer.FileSystem` .</span><span class="sxs-lookup"><span data-stu-id="08da9-116">Use the functionality available in the `My.Computer.FileSystem` object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b9ea0-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="b9ea0-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08da9-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="08da9-117">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileSystem>
-- [<span data-ttu-id="b9ea0-118">Solución de problemas: Leer y escribir en archivos de texto</span><span class="sxs-lookup"><span data-stu-id="b9ea0-118">Troubleshooting: Reading from and Writing to Text Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [<span data-ttu-id="08da9-118">Solución de problemas: Leer y escribir en archivos de texto</span><span class="sxs-lookup"><span data-stu-id="08da9-118">Troubleshooting: Reading from and Writing to Text Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
