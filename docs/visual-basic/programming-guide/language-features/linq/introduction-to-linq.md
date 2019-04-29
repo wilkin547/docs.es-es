@@ -13,11 +13,11 @@ helpviewer_keywords:
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781009"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introducción a LINQ en Visual Basic
 Language-Integrated Query (LINQ) agrega capacidades de consulta a Visual Basic y proporciona funcionalidades sencillas y potentes cuando se trabaja con todos los tipos de datos. En lugar de enviar una consulta a una base de datos que se procesen o trabajar con la sintaxis de consulta diferentes para cada tipo de datos que está buscando, LINQ presenta las consultas como parte del lenguaje Visual Basic. Utiliza una sintaxis unificada independientemente del tipo de datos.  
@@ -182,11 +182,11 @@ Puede usar características de consulta LINQ adicionales llamando a los miembros
 ## <a name="visual-basic-features-that-support-linq"></a>Características de Visual Basic que admiten LINQ  
  Visual Basic incluye otras características destacables que simplifican el uso de LINQ y reducen la cantidad de código que se debe escribir para realizar consultas LINQ. Entre ellas se incluyen las siguientes:  
   
--   **Tipos anónimos**, que le permiten crear un nuevo tipo basado en un resultado de la consulta.  
+- **Tipos anónimos**, que le permiten crear un nuevo tipo basado en un resultado de la consulta.  
   
--   **Las variables con tipo implícito**, que le permiten aplazar la especificación de un tipo y permiten que el compilador infiera el tipo según el resultado de la consulta.  
+- **Las variables con tipo implícito**, que le permiten aplazar la especificación de un tipo y permiten que el compilador infiera el tipo según el resultado de la consulta.  
   
--   **Métodos de extensión**, que le permiten extender un tipo existente con sus propios métodos sin modificar el propio tipo.  
+- **Métodos de extensión**, que le permiten extender un tipo existente con sus propios métodos sin modificar el propio tipo.  
   
  Para obtener más información, consulte [LINQ de soporte técnico que las características de Visual Basic](../../concepts/linq/features-that-support-linq.md).  
   

@@ -3,11 +3,11 @@ title: Procedimiento para publicar metadatos para un servicio mediante un archiv
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761460"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Procedimiento para publicar metadatos para un servicio mediante un archivo de configuración
 Esta es una de dos temas de procedimientos que muestran la publicación de metadatos para un servicio de Windows Communication Foundation (WCF). Hay dos maneras de especificar cómo debería publicar metadatos un servicio: mediante un archivo de configuración y mediante código. En este tema se muestra cómo publicar metadatos para un servicio mediante un archivo de configuración.  
@@ -140,21 +140,21 @@ namespace Metadata.Samples
   
 7. Para los puntos de conexión de metadatos agregados en el paso anterior, establezca el atributo `binding` en uno de los siguientes valores:  
   
-    -   `mexHttpBinding` para la publicación HTTP.  
+    - `mexHttpBinding` para la publicación HTTP.  
   
-    -   `mexHttpsBinding` para la publicación HTTPS.  
+    - `mexHttpsBinding` para la publicación HTTPS.  
   
-    -   `mexNamedPipeBinding` para la publicación de la canalización con nombre.  
+    - `mexNamedPipeBinding` para la publicación de la canalización con nombre.  
   
-    -   `mexTcpBinding` para la publicación TCP.  
+    - `mexTcpBinding` para la publicación TCP.  
   
 8. Para los puntos de conexión de metadatos agregados en un paso anterior, establezca la dirección en:  
   
-    -   Una cadena vacía para utilizar la dirección base de la aplicación host como el punto de publicación si la dirección base es igual que el enlace de los metadatos.  
+    - Una cadena vacía para utilizar la dirección base de la aplicación host como el punto de publicación si la dirección base es igual que el enlace de los metadatos.  
   
-    -   Una dirección relativa si la aplicación host tiene una dirección base.  
+    - Una dirección relativa si la aplicación host tiene una dirección base.  
   
-    -   Una dirección absoluta.  
+    - Una dirección absoluta.  
   
 9. Compile y ejecute la aplicación de consola.  
   

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
 ms.openlocfilehash: 24ad74f04a3ac31d0b0d0d87f0d74f88c0521f50
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768724"
 ---
 # <a name="extending-wcf"></a>Extensión de WCF
-Windows Communication Foundation (WCF) le permite modificar y extender los componentes de tiempo de ejecución para controlar con precisión y extender las aplicaciones basadas en servicio. Los temas de esta sección hacen profundizan en la arquitectura de la extensibilidad. Para obtener más información acerca de la programación básica, consulte [programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+Windows Communication Foundation (WCF) le permite modificar y extender los componentes de tiempo de ejecución para controlar con precisión y extender las aplicaciones basadas en servicios. Los temas de esta sección hacen profundizan en la arquitectura de la extensibilidad. Para obtener más información acerca de la programación básica, vea [programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Extensión de ServiceHost y la capa de modelos de servicios](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
@@ -27,10 +27,10 @@ Windows Communication Foundation (WCF) le permite modificar y extender los compo
  El nivel del canal se encuentra bajo el nivel de modelo de servicio y es responsable para el intercambio de mensajes entre los clientes y servicios. Las extensiones de canal pueden implementar la nueva funcionalidad de protocolo, como la seguridad. Las extensiones del canal también transportan la funcionalidad, como implementar un nuevo transporte de red para llevar los mensajes SOAP.  
   
  [Extensión de la seguridad](../../../../docs/framework/wcf/extending/extending-security.md)  
- La seguridad en WCF consta de la transferencia de seguridad (integridad, confidencialidad y autenticación), control de acceso (autorización) y auditoría. Las clases que se encuentran en la `IdentityModel` WCF utiliza espacio de nombres para el control de acceso. Entender la arquitectura de seguridad le permite crear tipos de notificación personalizados para alojar los sistemas de control de acceso personalizados.  
+ Seguridad en WCF consta de la transferencia de seguridad (integridad, confidencialidad y autenticación), control de acceso (autorización) y auditoría. Las clases que se encuentran en el `IdentityModel` espacio de nombres usan WCF para el control de acceso. Entender la arquitectura de seguridad le permite crear tipos de notificación personalizados para alojar los sistemas de control de acceso personalizados.  
   
  [Extensión del sistema de metadatos](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
- El sistema de metadatos WCF es un grupo de clases e interfaces que representan los metadatos requeridos para implementar las aplicaciones basadas en servicio. Modifique o extienda las clases o implemente y configure las interfaces para exportar e importar metadatos personalizados, como las extensiones de Lenguaje de descripción de servicios Web (WSDL) o las aserciones personalizadas de WS-PolicyAttachments.  
+ El sistema de metadatos WCF es un grupo de clases e interfaces que representan los metadatos necesarios para implementar aplicaciones basadas en servicio. Modifique o extienda las clases o implemente y configure las interfaces para exportar e importar metadatos personalizados, como las extensiones de Lenguaje de descripción de servicios Web (WSDL) o las aserciones personalizadas de WS-PolicyAttachments.  
   
  [Extensión de codificadores y serializadores](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
  Los codificadores y serializadores traducen los datos de un formulario a otro. Los temas de esta sección exponen cómo extender las clases proporcionadas para cumplir los requisitos especiales.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782439"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Acceso a los servicios mediante un cliente WCF
 
@@ -178,11 +178,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 Muchas de las excepciones iniciadas por un cliente WCF están provocados por una excepción en el servicio. Estos son algunos ejemplos:
 
--   <xref:System.Net.Sockets.SocketException>: El host remoto cerró fuerza una conexión existente.
+- <xref:System.Net.Sockets.SocketException>: El host remoto cerró fuerza una conexión existente.
 
--   <xref:System.ServiceModel.CommunicationException>: La conexión subyacente se cerró inesperadamente.
+- <xref:System.ServiceModel.CommunicationException>: La conexión subyacente se cerró inesperadamente.
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>: Se anuló la conexión de socket. La causa puede ser un error en el procesamiento del mensaje, que se superó el tiempo de espera de recepción en el host remoto, o bien un problema de recursos de red subyacente.
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>: Se anuló la conexión de socket. La causa puede ser un error en el procesamiento del mensaje, que se superó el tiempo de espera de recepción en el host remoto, o bien un problema de recursos de red subyacente.
 
 Cuando se producen estos tipos de excepciones, la mejor manera de resolver el problema es activar el seguimiento en el lado del servicio y determinar qué excepción se produjo allí. Para obtener más información acerca del seguimiento, vea [seguimiento](../../../docs/framework/wcf/diagnostics/tracing/index.md) y [utilizando seguimiento de la solución de problemas de la aplicación](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 

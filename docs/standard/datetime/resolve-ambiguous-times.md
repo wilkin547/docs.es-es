@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Resolver horas ambiguas
+title: Procedimiento para resolver horas ambiguas
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aae3e5145d2fa85cd55fc5b1288ef4aaa0fef48f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796414"
 ---
-# <a name="how-to-resolve-ambiguous-times"></a>Procedimiento Resolver horas ambiguas
+# <a name="how-to-resolve-ambiguous-times"></a>Procedimiento para resolver horas ambiguas
 
 Una hora ambigua es aquella que se asigna a más de una hora universal coordinada (UTC). Esto sucede cuando la hora del reloj se atrasa, como durante la transición del horario de verano de una zona horaria al horario estándar. Cuando se enfrente a una hora ambigua, puede realizar una de las siguientes acciones:
 

@@ -4,39 +4,39 @@ ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
 ms.openlocfilehash: a357f153d61b6a8e1e105639bd68647dabdc26f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940483"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Cómo habilitar la detección de reproducción de tokens
 ## <a name="applies-to"></a>Se aplica a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Formularios Web Forms ASP.NET®  
+- Formularios Web Forms ASP.NET®  
   
 ## <a name="summary"></a>Resumen  
  En este tema de procedimientos se detallan los procedimientos necesarios para habilitar la detección de reproducción de tokens en una aplicación ASP.NET que usa WIF. También se proporcionan instrucciones para probar la aplicación a fin de comprobar que esté habilitada la detección de reproducción de tokens. Esta sección de procedimientos no tiene instrucciones detalladas para crear un servicio de token de seguridad (STS) y en su lugar se utiliza el STS de desarrollo que se incluye con la extensión Identity and Access Tool. El STS de desarrollo no realiza la autenticación real y está pensado únicamente para pruebas. Para completar este procedimiento, tendrá que instalar la extensión Identity and Access Tool. Se puede descargar desde la ubicación siguiente: [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Contenido  
   
--   Objetivos  
+- Objetivos  
   
--   Información general  
+- Información general  
   
--   Resumen de pasos  
+- Resumen de pasos  
   
--   Paso 1 - Crear una aplicación de formularios Web Forms ASP.NET simple y habilitar la detección de reproducción  
+- Paso 1 - Crear una aplicación de formularios Web Forms ASP.NET simple y habilitar la detección de reproducción  
   
--   Paso 2 – Probar la solución  
+- Paso 2 – Probar la solución  
   
 ## <a name="objectives"></a>Objetivos  
   
--   Crear una aplicación ASP.NET simple que use WIF y el STS de desarrollo desde la herramienta Identity and Access Tool  
+- Crear una aplicación ASP.NET simple que use WIF y el STS de desarrollo desde la herramienta Identity and Access Tool  
   
--   Habilitar la detección de reproducción de tokens y comprobar que funciona  
+- Habilitar la detección de reproducción de tokens y comprobar que funciona  
   
 ## <a name="overview"></a>Información general  
  Los ataques de reproducción se producen cuando un cliente intenta autenticarse en un usuario de confianza con un token STS que ya ha usado. Para evitar este tipo de ataque, WIF contiene una caché de detección de reproducción de tokens STS ya usados. Cuando está habilitada, la detección de reproducción comprueba el token de la solicitud entrante y verifica si el token ya se ha usado. Si el token ya se ha usado, se rechaza la solicitud y se produce una excepción <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException>.  
@@ -45,9 +45,9 @@ ms.locfileid: "59772926"
   
 ## <a name="summary-of-steps"></a>Resumen de pasos  
   
--   Paso 1 - Crear una aplicación de formularios Web Forms ASP.NET simple y habilitar la detección de reproducción  
+- Paso 1 - Crear una aplicación de formularios Web Forms ASP.NET simple y habilitar la detección de reproducción  
   
--   Paso 2 – Probar la solución  
+- Paso 2 – Probar la solución  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-replay-detection"></a>Paso 1 - Crear una aplicación de formularios Web Forms ASP.NET simple y habilitar la detección de reproducción  
  En este paso, creará una aplicación de formularios Web Forms de ASP.NET y modificará el archivo *Web.config* para habilitar la detección de reproducción.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - StatusBar control [WPF]
 ms.assetid: aba45aed-7953-4b2c-bc29-315a9be6c440
 ms.openlocfilehash: 8998eba8a713cada62c8defc8d7500bf3bc036a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791058"
 ---
 # <a name="statusbar"></a>StatusBar
 Un <xref:System.Windows.Controls.Primitives.StatusBar> es un área horizontal en la parte inferior de una ventana donde una aplicación puede mostrar información de estado.  

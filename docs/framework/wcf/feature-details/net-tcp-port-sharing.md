@@ -6,11 +6,11 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762764"
 ---
 # <a name="nettcp-port-sharing"></a>Uso compartido de puertos Net.TCP
 Windows Communication Foundation (WCF) proporciona un nuevo protocolo de red basados en TCP (net.tcp://) para la comunicación de alto rendimiento. WCF también introduce un nuevo componente del sistema, el servicio de uso compartido de puertos Net.TCP que permite a los puertos de net.tcp para compartirse entre varios procesos de usuario.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) proporciona un nuevo protocolo de red bas
 ## <a name="port-sharing-architecture"></a>Arquitectura de uso compartido de puertos  
  La arquitectura de uso compartido de puertos en WCF tiene tres componentes principales:  
   
--   Un proceso de trabajo: Cualquier proceso que se comunica sobre net.tcp:// utilizando los puertos compartidos.  
+- Un proceso de trabajo: Cualquier proceso que se comunica sobre net.tcp:// utilizando los puertos compartidos.  
   
--   El transporte TCP de WCF: Implementa el protocolo net.tcp://.  
+- El transporte TCP de WCF: Implementa el protocolo net.tcp://.  
   
--   El servicio de uso compartido de puertos Net.TCP: Permite que varios procesos de trabajo compartir el mismo puerto TCP.  
+- El servicio de uso compartido de puertos Net.TCP: Permite que varios procesos de trabajo compartir el mismo puerto TCP.  
   
  El servicio de uso compartido de puertos Net.TCP es un servicio de Windows de modo de usuario que acepta conexiones net.tcp:// en nombre de los procesos de trabajo que se conectan a través de él. Cuando una conexión de socket llega, el servicio de uso compartido de puertos inspecciona la secuencia del mensaje entrante para obtener su dirección de destino. Basándose en esta dirección, el servicio de uso compartido de puertos puede enrutar el flujo de datos a la aplicación que finalmente lo procesa.  
   

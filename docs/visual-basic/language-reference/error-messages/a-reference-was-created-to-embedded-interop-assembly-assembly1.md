@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
 ms.openlocfilehash: c0b4f56e3d1613486dd1198976557831ce657e1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774873"
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>Se creó una referencia al ensamblado de interoperabilidad incrustado '\<ensamblado1 >' debido a una referencia indirecta a dicho ensamblado desde el ensamblado '\<ensamblado2 >'
 Se ha creado una referencia al ensamblado de interoperabilidad "\<ensamblado1>" insertado debido a una referencia indirecta a dicho ensamblado desde el ensamblado "\<ensamblado2>". Considere cambiar la propiedad "Incrustar tipos de interoperabilidad" en uno de los ensamblados.  
@@ -27,9 +27,9 @@ Se ha creado una referencia al ensamblado de interoperabilidad "\<ensamblado1>" 
   
 ### <a name="to-address-this-warning"></a>Para resolver esta advertencia  
   
--   Para incrustar información de tipo de interoperabilidad para ambos ensamblados, establezca la propiedad `Embed Interop Types` de todas las referencias a ensamblado1 en `True`.  
+- Para incrustar información de tipo de interoperabilidad para ambos ensamblados, establezca la propiedad `Embed Interop Types` de todas las referencias a ensamblado1 en `True`.  
   
--   Para quitar la advertencia, puede establecer la propiedad `Embed Interop Types` de ensamblado1 en `False`. En este caso, se proporciona información de tipo de interoperabilidad por un ensamblado de interoperabilidad primario (PIA).  
+- Para quitar la advertencia, puede establecer la propiedad `Embed Interop Types` de ensamblado1 en `False`. En este caso, se proporciona información de tipo de interoperabilidad por un ensamblado de interoperabilidad primario (PIA).  
   
 ## <a name="see-also"></a>Vea también
 

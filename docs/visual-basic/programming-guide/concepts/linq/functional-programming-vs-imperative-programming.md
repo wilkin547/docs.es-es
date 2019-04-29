@@ -3,11 +3,11 @@ title: Diferencias entre la programación funcional y Programación imperativa (
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
 ms.openlocfilehash: dec9fd4b59d96c0548e49276a27103114a7b3e8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931673"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Diferencias entre la programación funcional y Programación imperativa (Visual Basic)
 Este tema compara y contrasta la programación funcional y la programación imperativa (orientada a procedimientos) más tradicional.  
@@ -35,11 +35,11 @@ Este tema compara y contrasta la programación funcional y la programación impe
 ## <a name="advantages-of-pure-functions"></a>Ventajas de las funciones puras  
  El motivo principal para implementar transformaciones funcionales como funciones puras es que las funciones puras son ajustables: es decir, independientes y sin estado. Estas características aportan varias ventajas, incluyendo las siguientes:  
   
--   Mayor legibilidad y facilidad de mantenimiento. Esto se debe a que cada función está diseñada para cumplir una tarea específica dependiendo de sus argumentos. Esta función no depende de ningún estado externo.  
+- Mayor legibilidad y facilidad de mantenimiento. Esto se debe a que cada función está diseñada para cumplir una tarea específica dependiendo de sus argumentos. Esta función no depende de ningún estado externo.  
   
--   Desarrollo reiterativo más sencillo. Como es más sencillo refactorizar el código, la implementación de los cambios de diseño resulta a menudo más fácil. Por ejemplo, supongamos que escribe una transformación complicada y después se da cuenta de que parte del código se repite varias veces en la transformación. Si refactoriza mediante un método puro, puede llamar a su método puro cuando lo desee sin preocuparse de efectos secundarios.  
+- Desarrollo reiterativo más sencillo. Como es más sencillo refactorizar el código, la implementación de los cambios de diseño resulta a menudo más fácil. Por ejemplo, supongamos que escribe una transformación complicada y después se da cuenta de que parte del código se repite varias veces en la transformación. Si refactoriza mediante un método puro, puede llamar a su método puro cuando lo desee sin preocuparse de efectos secundarios.  
   
--   Pruebas y depuraciones más sencillas. Como las funciones puras se pueden probar más fácilmente en aislamiento, puede escribir código de prueba que llame a la función pura con valores típicos, casos avanzados válidos y casos avanzados no válidos.  
+- Pruebas y depuraciones más sencillas. Como las funciones puras se pueden probar más fácilmente en aislamiento, puede escribir código de prueba que llame a la función pura con valores típicos, casos avanzados válidos y casos avanzados no válidos.  
   
 ## <a name="transitioning-for-oop-developers"></a>Transición para desarrolladores de OOP  
  En la programación orientada a objetos (OOP) tradicional, la mayoría de desarrolladores están acostumbrados a programar en estilo imperativo/de procedimientos. Para pasar al desarrollo en un estilo funcional puro, tienen que realizar una transición en su forma de pensar y en su planteamiento del desarrollo.  

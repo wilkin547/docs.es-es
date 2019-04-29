@@ -3,11 +3,11 @@ title: Información general de Detección de WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
 ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784259"
 ---
 # <a name="wcf-discovery-overview"></a>Información general de Detección de WCF
 Las API de detección proporcionan un modelo de programación unificado para la detección y la publicación dinámica de servicios Web mediante el protocolo WS-Discovery. Estas API permiten a los servicios publicarse y a los clientes encontrar los servicios publicados. Una vez que un servicio es reconocible, tiene la capacidad de enviar mensajes de anuncio, así como realizar escuchas y responder a solicitudes de detección. Los servicios reconocibles pueden enviar mensajes de Hola para anunciar su llegada a la red, así como mensajes de Adiós para anunciar su salida de la red. Para encontrar un servicio, los clientes envían a una solicitud `Probe` que contiene criterios específicos, como tipos de contratos de servicios, palabras clave y ámbito de red. Los servicios reciben la solicitud `Probe` y determinan si coinciden con los criterios. Si un servicio coincide, responde devolviendo un mensaje `ProbeMatch` al cliente con la información necesaria para ponerse en contacto con el servicio. Los clientes también pueden enviar solicitudes `Resolve` para buscar servicios que pueden haber cambiado la dirección de punto de conexión. Los servicios coincidentes responden a las solicitudes `Resolve` devolviendo un mensaje `ResolveMatch` al cliente.  
@@ -15,11 +15,11 @@ Las API de detección proporcionan un modelo de programación unificado para la 
 ## <a name="ad-hoc-and-managed-modes"></a>Modos ad hoc y administrados  
  La API de detección admite dos modos diferentes: Administrado y Ad Hoc. En el modo administrado, hay un servidor centralizado, denominado proxy de detección, que contiene información sobre los servicios disponibles. El proxy de detección se puede rellenar con información sobre servicios de diferentes maneras. Por ejemplo, los servicios pueden enviar mensajes de anuncio durante el inicio al proxy de detección, o el proxy puede leer datos de una base de datos o un archivo de configuración para determinar qué servicios están disponibles. El modo en que se rellena el proxy de detección depende por completo del desarrollador. Los clientes utilizan el proxy de detección para recuperar información sobre servicios disponibles. Cuando un cliente busca un servicio, envía un mensaje `Probe` al proxy de detección y el proxy determina si alguno de los servicios que conoce coincide con el servicio que busca el cliente. Si hay coincidencias, el proxy de detección devuelve una respuesta `ProbeMatch` al cliente. A continuación, el cliente puede ponerse en contacto con el servicio de forma directa a través de la información de servicio devuelta por el proxy. El principio básico del modo administrado es que las solicitudes de detección se envían en modo de unidifusión a una autoridad, el proxy de detección. El sistema .NET Framework contiene componentes clave que le permiten compilar su propio proxy. Los clientes y los servicios pueden buscar el proxy a través de varios métodos:  
   
--   El proxy puede responder a los mensajes ad hoc.  
+- El proxy puede responder a los mensajes ad hoc.  
   
--   El proxy puede enviar un mensaje de anuncio durante el inicio.  
+- El proxy puede enviar un mensaje de anuncio durante el inicio.  
   
--   Los clientes y los servicios se pueden escribir para buscar un punto de conexión conocido concreto.  
+- Los clientes y los servicios se pueden escribir para buscar un punto de conexión conocido concreto.  
   
  En modo ad hoc, no hay ningún servidor centralizado. Todos los mensajes de detección, como anuncios de servicio y solicitudes de clientes, se envían en modo de multidifusión. De forma predeterminada, .NET Framework contiene soporte para la detección ad hoc en el protocolo UDP. Por ejemplo, si un servicio se configura para enviar un anuncio de Hola durante el inicio, lo manda en una dirección de multidifusión conocida mediante el protocolo UDP. Los clientes tienen que realizar escuchas activas de estos anuncios y procesarlos de forma correspondiente. Cuando un cliente envía un mensaje `Probe` para un servicio, se envía a través de la red mediante un protocolo de multidifusión. Cada servicio que recibe la solicitud determina si ésta coincide con los criterios del mensaje `Probe` y responde directamente al cliente con un mensaje `ProbeMatch` si el servicio coincide con los criterios especificados en el mensaje `Probe`.  
   

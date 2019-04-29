@@ -3,11 +3,11 @@ title: Ejemplo de tecnología de serialización básica
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795023"
 ---
 # <a name="basic-serialization-technology-sample"></a>Ejemplo de tecnología de serialización básica
 [Descargar ejemplo](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -62,21 +62,21 @@ ms.locfileid: "59315015"
   
  Las viñetas siguientes describen brevemente las clases y las tecnologías que se utilizan en este ejemplo.  
   
--   Serialización en tiempo de ejecución  
+- Serialización en tiempo de ejecución  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> Usar para hacer referencia a un <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> o un <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> objeto.  
+    - <xref:System.Runtime.Serialization.IFormatter> Usar para hacer referencia a un <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> o un <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> objeto.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Usado para serializar una lista vinculada a una secuencia en un formato binario. El formateador binario utiliza un formato que solo entiende el tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Sin embargo, los datos son concisos.  
+    - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Usado para serializar una lista vinculada a una secuencia en un formato binario. El formateador binario utiliza un formato que solo entiende el tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Sin embargo, los datos son concisos.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Usado para serializar una lista vinculada a una secuencia en formato SOAP. SOAP es un formato estándar.  
+    - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Usado para serializar una lista vinculada a una secuencia en formato SOAP. SOAP es un formato estándar.  
   
--   E/S de secuencia  
+- E/S de secuencia  
   
-    -   <xref:System.IO.Stream> Se utiliza para serializar y deserializar. El tipo de secuencia concreto utilizado en este ejemplo es el tipo <xref:System.IO.FileStream>. Sin embargo, la serialización se puede utilizar con cualquier tipo derivado de <xref:System.IO.Stream>.  
+    - <xref:System.IO.Stream> Se utiliza para serializar y deserializar. El tipo de secuencia concreto utilizado en este ejemplo es el tipo <xref:System.IO.FileStream>. Sin embargo, la serialización se puede utilizar con cualquier tipo derivado de <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File> Se utiliza para crear objetos <xref:System.IO.FileStream> para leer y crear archivos en disco.  
+    - <xref:System.IO.File> Se utiliza para crear objetos <xref:System.IO.FileStream> para leer y crear archivos en disco.  
   
-    -   <xref:System.IO.FileStream> Se utiliza para serializar y deserializar las listas vinculadas.  
+    - <xref:System.IO.FileStream> Se utiliza para serializar y deserializar las listas vinculadas.  
   
 ## <a name="see-also"></a>Vea también
 

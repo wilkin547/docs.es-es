@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
 ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796109"
 ---
 # <a name="wif-and-web-farms"></a>WIF y granjas de servidores web
 Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de una aplicación de usuario de confianza (RP) implementada en una granja de servidores web, debe realizar determinados pasos para garantizar que WIF pueda procesar tokens de instancias de la aplicación de RP que se ejecutan en equipos diferentes de la granja de servidores. Este proceso implica la validación de firmas de token de sesión, el cifrado y descifrado de tokens de sesión, el almacenamiento en caché de tokens de sesión y la detección de tokens de seguridad reproducidos.  
@@ -17,21 +17,21 @@ Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de un
   
  Cuando se usa la configuración predeterminada, WIF hace lo siguiente:  
   
--   Usa una instancia de la clase <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> para leer y escribir un token de sesión (una instancia de la clase <xref:System.IdentityModel.Tokens.SessionSecurityToken>) que contiene las notificaciones y demás información sobre el token de seguridad que se ha usado para la autenticación, así como información sobre la propia sesión. El token de sesión se empaqueta y se almacena en una cookie de la sesión. De forma predeterminada, <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> usa la clase <xref:System.IdentityModel.ProtectedDataCookieTransform>, que emplea la API de protección de datos (DPAPI), para proteger el token de sesión. DPAPI proporciona protección mediante las credenciales de usuario o equipo y almacena los datos clave en el perfil de usuario.  
+- Usa una instancia de la clase <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> para leer y escribir un token de sesión (una instancia de la clase <xref:System.IdentityModel.Tokens.SessionSecurityToken>) que contiene las notificaciones y demás información sobre el token de seguridad que se ha usado para la autenticación, así como información sobre la propia sesión. El token de sesión se empaqueta y se almacena en una cookie de la sesión. De forma predeterminada, <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> usa la clase <xref:System.IdentityModel.ProtectedDataCookieTransform>, que emplea la API de protección de datos (DPAPI), para proteger el token de sesión. DPAPI proporciona protección mediante las credenciales de usuario o equipo y almacena los datos clave en el perfil de usuario.  
   
--   Usa una implementación en memoria predeterminada de la clase <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> para almacenar y procesar el token de sesión.  
+- Usa una implementación en memoria predeterminada de la clase <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> para almacenar y procesar el token de sesión.  
   
  Esta configuración predeterminada funciona en escenarios en los que se implementa la aplicación de RP en un único equipo; pero si se implementa en una granja de servidores web, cada solicitud HTTP se puede enviar a otra instancia de la aplicación de RP que se ejecuta en un equipo diferente y ser procesada por ella. En este escenario, la configuración de WIF predeterminada que se ha descrito anteriormente no funciona, ya que la protección de token y el almacenamiento en caché de token dependen de un equipo concreto.  
   
  Para implementar una aplicación de RP en una granja de servidores web, debe asegurarse de que el procesamiento de tokens de sesión (así como de tokens reproducidos) no dependa de la aplicación que se ejecuta en un equipo específico. Una manera de hacerlo es implementar la aplicación de RP de modo que use la funcionalidad proporcionada por el elemento de configuración `<machineKey>` de ASP.NET y proporcione almacenamiento en caché distribuido para el procesamiento de tokens de sesión y tokens reproducidos. El elemento `<machineKey>` permite especificar las claves necesarias para validar, cifrar y descifrar los tokens de un archivo de configuración, lo que permite especificar las mismas claves en diferentes equipos de la granja de servidores web. WIF proporciona un controlador de token de sesión especializado, <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>, que protege los tokens con las claves especificadas en el elemento `<machineKey>`. Para implementar esta estrategia, siga estas instrucciones:  
   
--   Use el elemento `<machineKey>` de ASP.NET de la configuración para especificar de forma explícita las claves de firma y cifrado que se pueden usar en los equipos de la granja de servidores. El siguiente XML muestra la especificación del elemento `<machineKey>` bajo el elemento `<system.web>` de un archivo de configuración.  
+- Use el elemento `<machineKey>` de ASP.NET de la configuración para especificar de forma explícita las claves de firma y cifrado que se pueden usar en los equipos de la granja de servidores. El siguiente XML muestra la especificación del elemento `<machineKey>` bajo el elemento `<system.web>` de un archivo de configuración.  
   
     ```xml  
     <machineKey compatibilityMode="Framework45" decryptionKey="CC510D … 8925E6" validationKey="BEAC8 … 6A4B1DE" />  
     ```  
   
--   Configure la aplicación para que use <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> al agregarlo a la colección de controladores de tokens. Si hay un controlador de este tipo, primero debe quitar <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (o cualquier controlador derivado de la clase <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>) de la colección de controladores de tokens. <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> usa la clase <xref:System.IdentityModel.Services.MachineKeyTransform>, que protege los datos de la cookie de la sesión con el material criptográfico especificado en el elemento `<machineKey>`. El siguiente XML muestra cómo agregar <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> a una colección de controladores de tokens.  
+- Configure la aplicación para que use <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> al agregarlo a la colección de controladores de tokens. Si hay un controlador de este tipo, primero debe quitar <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (o cualquier controlador derivado de la clase <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>) de la colección de controladores de tokens. <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> usa la clase <xref:System.IdentityModel.Services.MachineKeyTransform>, que protege los datos de la cookie de la sesión con el material criptográfico especificado en el elemento `<machineKey>`. El siguiente XML muestra cómo agregar <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> a una colección de controladores de tokens.  
   
     ```xml  
     <securityTokenHandlers>  
@@ -40,7 +40,7 @@ Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de un
     </securityTokenHandlers>  
     ```  
   
--   Derive de <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> e implemente el almacenamiento en caché distribuido, es decir, una memoria caché que sea accesible desde todos los equipos de la granja de servidores en la que se puede ejecutar el RP. Configure el RP para que use la memoria caché distribuida al especificar el elemento [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) del archivo de configuración. Puede invalidar el método <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> de la clase derivada para implementar elementos secundarios del elemento `<sessionSecurityTokenCache>` si fueran necesarios.  
+- Derive de <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> e implemente el almacenamiento en caché distribuido, es decir, una memoria caché que sea accesible desde todos los equipos de la granja de servidores en la que se puede ejecutar el RP. Configure el RP para que use la memoria caché distribuida al especificar el elemento [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) del archivo de configuración. Puede invalidar el método <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> de la clase derivada para implementar elementos secundarios del elemento `<sessionSecurityTokenCache>` si fueran necesarios.  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de un
   
      Una manera de implementar el almacenamiento en caché distribuido es proporcionar un front-end de WCF para la memoria caché personalizada. Para más información sobre la implementación de un servicio de almacenamiento en caché de WCF, vea [Servicio de almacenamiento en caché de WCF](#BKMK_TheWCFCachingService). Para más información sobre la implementación de un cliente WCF que la aplicación de RP pueda usar para llamar al servicio de almacenamiento en caché, vea [Cliente de almacenamiento en caché de WCF](#BKMK_TheWCFClient).  
   
--   Si la aplicación detecta tokens reproducidos, debe seguir una estrategia similar de almacenamiento en caché distribuido para la memoria caché de reproducción de tokens al derivar de <xref:System.IdentityModel.Tokens.TokenReplayCache> y apuntar al servicio de almacenamiento en caché de reproducción de tokens del elemento de configuración [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
+- Si la aplicación detecta tokens reproducidos, debe seguir una estrategia similar de almacenamiento en caché distribuido para la memoria caché de reproducción de tokens al derivar de <xref:System.IdentityModel.Tokens.TokenReplayCache> y apuntar al servicio de almacenamiento en caché de reproducción de tokens del elemento de configuración [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
   
 > [!IMPORTANT]
 >  Todos los XML de ejemplo y el código de este tema procede de la [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) ejemplo.  

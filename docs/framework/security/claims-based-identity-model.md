@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792826"
 ---
 # <a name="claims-based-identity-model"></a>Modelo de identidad basado en notificaciones
 Al compilar aplicaciones para notificaciones, la identidad del usuario se representa en la aplicación como un conjunto de notificaciones. Una notificación podría ser el nombre del usuario, otra podría ser una dirección de correo electrónico. La idea es que se configure un sistema de identidad externo para proporcionar a la aplicación la información que necesita sobre el usuario con cada solicitud realizada, junto con la garantía criptográfica de que los datos de identidad recibidos proceden de una fuente de confianza.  
   
  Con este modelo, el inicio de sesión único es mucho más fácil de lograr y la aplicación ya no es responsable de las siguientes acciones:  
   
--   Autenticar usuarios.  
+- Autenticar usuarios.  
   
--   Almacenar cuentas de usuario y contraseñas.  
+- Almacenar cuentas de usuario y contraseñas.  
   
--   Llamar a directorios de empresa para buscar datos de identidad de usuario.  
+- Llamar a directorios de empresa para buscar datos de identidad de usuario.  
   
--   Integrarse con sistemas de identidad de otras plataformas o empresas.  
+- Integrarse con sistemas de identidad de otras plataformas o empresas.  
   
  De acuerdo con este modelo, la aplicación toma decisiones relacionadas con la identidad en función de las notificaciones proporcionadas por el sistema que autenticó al usuario. Esto puede ser desde la simple personalización de la aplicación con el nombre del usuario a la autorización del usuario para obtener acceso a características y recursos de más valor en la aplicación.  
   
  En este tema se proporciona la información siguiente:  
   
--   [Introducción a la identidad basada en notificaciones](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [Introducción a la identidad basada en notificaciones](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [Escenario básico para un modelo de identidad basado en notificaciones](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [Escenario básico para un modelo de identidad basado en notificaciones](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>Introducción a la identidad basada en notificaciones  

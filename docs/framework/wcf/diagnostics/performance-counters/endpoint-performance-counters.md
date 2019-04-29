@@ -3,11 +3,11 @@ title: Contadores de rendimiento del extremo
 ms.date: 03/30/2017
 ms.assetid: 7d44d576-bd4e-453b-8b76-a818ce90b806
 ms.openlocfilehash: f07e318e39a68e689ec484b09fa743623cfb51d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797233"
 ---
 # <a name="endpoint-performance-counters"></a>Contadores de rendimiento del extremo
 Los contadores de rendimiento del punto de conexión capturan datos que revelan cómo un punto de conexión está aceptando los mensajes. Se pueden encontrar en el objeto de rendimiento `ServiceModelEndpoint 4.0.0.0` al verlo con el Monitor de rendimiento. Las instancias se denominan utilizando este patrón:  

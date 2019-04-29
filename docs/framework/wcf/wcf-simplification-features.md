@@ -3,11 +3,11 @@ title: Características de simplificación de WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
 ms.openlocfilehash: 54255e07df5a46cc975ffd4db5c18dc828a1de44
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791188"
 ---
 # <a name="wcf-simplification-features"></a>Características de simplificación de WCF
 
@@ -94,7 +94,7 @@ WCF proporciona el modo de compatibilidad de ASP.NET para conceder a los desarro
 
 En la tabla siguiente se describen los valores que han cambiado y dónde encontrar información adicional.
 
-|Property|Activado|Nuevo valor predeterminado|Más información|
+|Propiedad|Activado|Nuevo valor predeterminado|Más información|
 |--------------|--------|-----------------|----------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 segundos|Esta propiedad determina cuánto tiempo puede tardar una conexión TCP autenticarse a sí mismo mediante el protocolo de tramas. NET. Un cliente debe enviar algunos datos iniciales antes de que el servidor tenga información suficiente para realizar la autenticación. Este tiempo de expiración se ha hecho intencionadamente más breve que ReceiveTimeout (10 min) para que los clientes no autenticados y malintencionados no conserven las conexiones con el servidor durante mucho tiempo. El valor predeterminado es 30 segundos. Para obtener más información acerca de <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * número de procesadores|Esta propiedad del nivel de socket describe el número de solicitudes "pendientes de aceptación" que se van a poner en cola. Si la cola de trabajos pendientes de escucha se llena, las nuevas solicitudes de socket se rechazarán. Para obtener más información acerca de <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|

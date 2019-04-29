@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787860"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procedimiento para crear un enlace personalizado mediante SecurityBindingElement
 Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por el sistema que se pueden configurar pero no proporcionan completa flexibilidad al configurar todas las opciones de seguridad que WCF admite. Este tema muestra cómo crear un enlace personalizado directamente a partir de elementos de enlace individuales y resalta algunos de los ajustes de seguridad que pueden especificarse al crear este tipo de enlaces. Para obtener más información acerca de cómo crear enlaces personalizados, consulte [extender enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -32,22 +32,22 @@ Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por
   
  Se utilizan clases adicionales cuando se proporciona seguridad de nivel de transporte:  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
 ## <a name="required-binding-elements"></a>Elementos de enlace necesarios  
  Hay un gran número de posibles elementos de enlace que se pueden combinar en un enlace. No todas estas combinaciones son válidas. En esta sección se describen los elementos necesarios que se deben encontrar en un enlace de seguridad.  
   
  La validez de los enlaces de seguridad depende de muchos factores, como los siguientes:  
   
--   Modo de seguridad.  
+- Modo de seguridad.  
   
--   Protocolo de transporte.  
+- Protocolo de transporte.  
   
--   El patrón de intercambio de mensajes (MEP) especificado en el contrato.  
+- El patrón de intercambio de mensajes (MEP) especificado en el contrato.  
   
  En la tabla siguiente se muestran las configuraciones de pila de los elementos de enlace válidos para cada combinación de los factores mencionados. Tenga en cuenta que éstos son los requisitos mínimos. Puede agregar otros elementos de enlace al enlace, como elementos de enlace de codificación de mensajes y elementos de enlace de transacción.  
   

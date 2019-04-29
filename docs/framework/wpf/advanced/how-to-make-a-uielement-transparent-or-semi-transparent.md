@@ -1,5 +1,5 @@
 ---
-title: Filtrar Hacer que un elemento UIElement sea transparente o semitransparente
+title: Procedimiento Hacer que un elemento UIElement sea transparente o semitransparente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UIElements [WPF], transparency
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - UIElements [WPF], opacity
 ms.assetid: a49fc8d6-7b32-4f28-9122-39b632a19b4b
 ms.openlocfilehash: 1de9a7e11fee241ecb71242e9808e77b7e5e63b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942875"
 ---
-# <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>Filtrar Hacer que un elemento UIElement sea transparente o semitransparente
+# <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>Procedimiento Hacer que un elemento UIElement sea transparente o semitransparente
 En este ejemplo se muestra cómo realizar una <xref:System.Windows.UIElement> transparente o semitransparente. Para hacer un elemento transparente o semitransparente, establezca su <xref:System.Windows.UIElement.Opacity%2A> propiedad. Un valor de `0.0` hace que el elemento sea completamente transparente, mientras que un valor de `1.0` hace que el elemento sea completamente opaco. Un valor de `0.5` hace que el elemento 50% opaco y así sucesivamente. Un elemento <xref:System.Windows.UIElement.Opacity%2A> está establecido en `1.0` de forma predeterminada.  
   
 ## <a name="example"></a>Ejemplo  

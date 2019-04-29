@@ -7,11 +7,11 @@ helpviewer_keywords:
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
 ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928614"
 ---
 # <a name="introduction-to-extensibility"></a>Introducción a la extensibilidad
 El modelo de aplicación de Windows Communication Foundation (WCF) está diseñado para resolver la mayor parte de los requisitos de comunicación de cualquier aplicación distribuida. No obstante, siempre hay escenarios con los que el modelo de aplicación predeterminado y las implementaciones proporcionadas por sistema no son compatibles. El modelo de extensibilidad WCF está diseñado para admitir escenarios personalizados permitiéndole modificar el comportamiento del sistema en cada nivel, incluso al punto de reemplazar el modelo de toda la aplicación. Este tema describe las distintas áreas de extensión e indica dónde obtener más información acerca de cada una de ellas.  
@@ -19,11 +19,11 @@ El modelo de aplicación de Windows Communication Foundation (WCF) está diseña
 ## <a name="areas-to-extend"></a>Áreas que pueden extenderse  
  Puede extenderse:  
   
--   El tiempo de ejecución de la aplicación. De este modo se extiende la distribución y el procesamiento de mensajes para la aplicación. Esta área también incluye la extensión del sistema de seguridad, el sistema de metadatos, el sistema de serialización, y los enlaces y elementos de enlace que conectan la aplicación con el sistema del canal subyacente.  
+- El tiempo de ejecución de la aplicación. De este modo se extiende la distribución y el procesamiento de mensajes para la aplicación. Esta área también incluye la extensión del sistema de seguridad, el sistema de metadatos, el sistema de serialización, y los enlaces y elementos de enlace que conectan la aplicación con el sistema del canal subyacente.  
   
--   El canal y su tiempo de ejecución. Así se extiende el sistema que funciona en el nivel de mensaje, proporcionando compatibilidad con el protocolo, el transporte y la codificación.  
+- El canal y su tiempo de ejecución. Así se extiende el sistema que funciona en el nivel de mensaje, proporcionando compatibilidad con el protocolo, el transporte y la codificación.  
   
--   El tiempo de ejecución del host. Se extiende la relación del dominio de aplicación de hospedaje al tiempo de ejecución del canal y de la aplicación.  
+- El tiempo de ejecución del host. Se extiende la relación del dominio de aplicación de hospedaje al tiempo de ejecución del canal y de la aplicación.  
   
 ### <a name="extending-the-application-runtime"></a>Extender el tiempo de ejecución de la aplicación  
  En las aplicaciones de WCF, hay una diferencia entre los mensajes que están destinados a un canal correspondiente y los mensajes que están destinadas a la propia aplicación. Los mensajes del canal admiten alguna funcionalidad relacionada con el canal, como establecer una conversación segura o una sesión de confianza. Estos mensajes no están disponibles para el tiempo de ejecución de la aplicación; se procesan antes de que se implique el nivel de la aplicación.  

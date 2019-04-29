@@ -4,49 +4,49 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940522"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Cómo compilar aplicaciones web MVC de ASP.NET con reconocimiento de notificaciones mediante WIF
 ## <a name="applies-to"></a>Se aplica a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® MVC  
+- ASP.NET® MVC  
   
 ## <a name="summary"></a>Resumen  
  Este tema de procedimientos proporciona procedimientos paso a paso para crear una sencilla aplicación web de ASP.NET MVC para notificaciones. También proporciona instrucciones sobre cómo probar la aplicación web sencilla de ASP.NET MVC para notificaciones para obtener una implementación correcta de la autenticación basada en notificaciones. Este tema de procedimientos no tiene instrucciones detalladas para crear un Servicio de tokens de seguridad (STS) y presupone que ya ha configurado uno.  
   
 ## <a name="contents"></a>Contenido  
   
--   Objetivos  
+- Objetivos  
   
--   Resumen de pasos  
+- Resumen de pasos  
   
--   Paso 1: Crear una aplicación sencilla de ASP.NET MVC  
+- Paso 1: Crear una aplicación sencilla de ASP.NET MVC  
   
--   Paso 2: Configurar una aplicación de ASP.NET MVC para la autenticación basada en notificaciones  
+- Paso 2: Configurar una aplicación de ASP.NET MVC para la autenticación basada en notificaciones  
   
--   Paso 3: Probar la solución  
+- Paso 3: Probar la solución  
   
--   Elementos relacionados  
+- Elementos relacionados  
   
 ## <a name="objectives"></a>Objetivos  
   
--   Configurar una aplicación web de ASP.NET MVC para la autenticación basada en notificaciones  
+- Configurar una aplicación web de ASP.NET MVC para la autenticación basada en notificaciones  
   
--   Probar una aplicación web de ASP.NET MVC para notificaciones correcta  
+- Probar una aplicación web de ASP.NET MVC para notificaciones correcta  
   
 ## <a name="summary-of-steps"></a>Resumen de pasos  
   
--   Paso 1: Crear una aplicación sencilla de ASP.NET MVC  
+- Paso 1: Crear una aplicación sencilla de ASP.NET MVC  
   
--   Paso 2: Configurar una aplicación de ASP.NET MVC para la autenticación basada en notificaciones  
+- Paso 2: Configurar una aplicación de ASP.NET MVC para la autenticación basada en notificaciones  
   
--   Paso 3: Probar la solución  
+- Paso 3: Probar la solución  
   
 ## <a name="step-1--create-simple-aspnet-mvc-application"></a>Paso 1: Crear una aplicación sencilla de ASP.NET MVC  
  En este paso se crea una aplicación de ASP.NET MVC.  
@@ -218,4 +218,4 @@ ms.locfileid: "59335672"
   
 ## <a name="related-items"></a>Elementos relacionados  
   
--   [Cómo: Crear aplicaciones de formularios Web ASP.NET para notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [Cómo: Crear aplicaciones de formularios Web ASP.NET para notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
 ms.openlocfilehash: 81220ad4c0bf00a38abfe7257d5fc61e92e8d885
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779098"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Procedimiento para admitir la interoperabilidad COM mostrando un formulario Windows Forms con el método ShowDialog
 Puede resolver problemas de interoperabilidad del Modelo de objetos componentes (COM) mostrando el formulario de Windows Forms en un bucle de mensajes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , que se crea con el método <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> .  
   
  Para que un formulario funcione correctamente con una aplicación cliente COM, debe ejecutarlo en un bucle de mensajes de Windows Forms. Para ello, siga uno de estos procedimientos:  
   
--   Use el método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> para mostrar el formulario de Windows Forms.  
+- Use el método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> para mostrar el formulario de Windows Forms.  
   
--   Muestre cada Windows Form en un subproceso independiente. Para obtener más información, vea [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+- Muestre cada Windows Form en un subproceso independiente. Para obtener más información, vea [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="procedure"></a>Procedimiento  
  El uso del método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> puede ser la manera más fácil de mostrar un formulario en un bucle de mensajes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] porque, de todos los enfoques, es el que necesita menos código para su implementación.  
@@ -35,7 +35,7 @@ Puede resolver problemas de interoperabilidad del Modelo de objetos componentes 
   
 #### <a name="to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Para admitir la interoperabilidad COM mostrando un formulario de Windows Forms con el método ShowDialog  
   
--   Reemplace todas las llamadas al método <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> por llamadas al método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> en su componente de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
+- Reemplace todas las llamadas al método <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> por llamadas al método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> en su componente de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
   
 ## <a name="see-also"></a>Vea también
 

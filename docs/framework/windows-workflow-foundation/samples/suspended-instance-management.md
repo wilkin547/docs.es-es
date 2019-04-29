@@ -3,11 +3,11 @@ title: Administración de instancias suspendidas
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
 ms.openlocfilehash: ace4d2baef8f6b030790deaa5b1c20bb4b0cd30d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785910"
 ---
 # <a name="suspended-instance-management"></a>Administración de instancias suspendidas
 En este ejemplo se muestra cómo administrar instancias de flujo de trabajo que se han suspendido.  La acción predeterminada para <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> es `AbandonAndSuspend`. Esto significa que, de forma predeterminada, las excepciones no controladas producidas por una instancia de flujo de trabajo hospedada en <xref:System.ServiceModel.WorkflowServiceHost> causarán que la instancia se elimine de la memoria (se abandone) y la versión duradera/conservada de la instancia se marque como suspendida. Una instancia de flujo de trabajo suspendida no se podrá ejecutar hasta que no se anule la suspensión.
@@ -26,41 +26,41 @@ En este ejemplo se muestra cómo administrar instancias de flujo de trabajo que 
 
 1. En este ejemplo se requiere que los siguientes componentes de Windows estén habilitados:
 
-    1.  Microsoft Message Queuing (MSMQ)
+    1. Microsoft Message Queuing (MSMQ)
 
-    2.  SQL Server Express
+    2. SQL Server Express
 
 2. Configure la base de datos de SQL Server.
 
-    1.  Desde un símbolo del sistema de Visual Studio 2010, ejecute "setup.cmd" desde la función muestra suspendedinstancemanagement, que hace lo siguiente:
+    1. Desde un símbolo del sistema de Visual Studio 2010, ejecute "setup.cmd" desde la función muestra suspendedinstancemanagement, que hace lo siguiente:
 
-        1.  Crea una base de datos de persistencia mediante SQL Server Express. Si la base de datos de persistencia ya existe, se quita y se vuelve a crear.
+        1. Crea una base de datos de persistencia mediante SQL Server Express. Si la base de datos de persistencia ya existe, se quita y se vuelve a crear.
 
-        2.  Configura la base de datos para la persistencia.
+        2. Configura la base de datos para la persistencia.
 
-        3.  Agrega IIS APPPOOL\DefaultAppPool y NT AUTHORITY\Network Service al rol InstanceStoreUsers que se definió al configurar la base de datos para la persistencia.
+        3. Agrega IIS APPPOOL\DefaultAppPool y NT AUTHORITY\Network Service al rol InstanceStoreUsers que se definió al configurar la base de datos para la persistencia.
 
 3. Configure la cola del servicio.
 
-    1.  En Visual Studio 2010, haga clic en el **SampleWorkflowApp** del proyecto y haga clic en **establecer como proyecto de inicio**.
+    1. En Visual Studio 2010, haga clic en el **SampleWorkflowApp** del proyecto y haga clic en **establecer como proyecto de inicio**.
 
-    2.  Compile y ejecute SampleWorkflowApp presionando **F5**. Esto creará la cola necesaria.
+    2. Compile y ejecute SampleWorkflowApp presionando **F5**. Esto creará la cola necesaria.
 
-    3.  Presione **ENTRAR** para detener SampleWorkflowApp.
+    3. Presione **ENTRAR** para detener SampleWorkflowApp.
 
-    4.  Abra la consola Administración del equipo ejecutando Compmgmt.msc desde un símbolo del sistema.
+    4. Abra la consola Administración del equipo ejecutando Compmgmt.msc desde un símbolo del sistema.
 
-    5.  Expanda **aplicaciones de servicio y**, **Message Queue Server**, **colas privadas**.
+    5. Expanda **aplicaciones de servicio y**, **Message Queue Server**, **colas privadas**.
 
-    6.  Haga clic en el **ReceiveTx** poner en cola y seleccione **propiedades**.
+    6. Haga clic en el **ReceiveTx** poner en cola y seleccione **propiedades**.
 
-    7.  Seleccione el **seguridad** pestaña y permitir **todo el mundo** tenga permisos para **recibir mensaje**, **Inspeccionar mensaje**, y  **Enviar mensaje**.
+    7. Seleccione el **seguridad** pestaña y permitir **todo el mundo** tenga permisos para **recibir mensaje**, **Inspeccionar mensaje**, y  **Enviar mensaje**.
 
 4. Ejecute el ejemplo.
 
-    1.  En Visual Studio 2010, el proyecto SampleWorkflowApp vuelva a ejecutar sin depuración presionando **CTRL+F5**. En la ventana de la consola se imprimirán dos direcciones de extremo: una para el extremo de la aplicación y otra procedente de <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. A continuación, se crea una instancia de flujo de trabajo y en la ventana de la consola aparecerán los registros de seguimiento de esa instancia. La instancia de flujo de trabajo producirá una excepción que hará que la instancia se suspenda y se anule.
+    1. En Visual Studio 2010, el proyecto SampleWorkflowApp vuelva a ejecutar sin depuración presionando **CTRL+F5**. En la ventana de la consola se imprimirán dos direcciones de extremo: una para el extremo de la aplicación y otra procedente de <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. A continuación, se crea una instancia de flujo de trabajo y en la ventana de la consola aparecerán los registros de seguimiento de esa instancia. La instancia de flujo de trabajo producirá una excepción que hará que la instancia se suspenda y se anule.
 
-    2.  La utilidad de línea de comandos se puede utilizar a continuación para realizar más acciones en cualquiera de estas instancias. La sintaxis para los argumentos de la línea de comandos es la siguiente:
+    2. La utilidad de línea de comandos se puede utilizar a continuación para realizar más acciones en cualquiera de estas instancias. La sintaxis para los argumentos de la línea de comandos es la siguiente:
 
          `SuspendedInstanceManagement -Command:[CommandName] -Server:[ServerName] -Database:[DatabaseName] -InstanceId:[InstanceId]`
 

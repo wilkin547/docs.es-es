@@ -16,11 +16,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792202"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Tutorial: Implementar un formulario que usa una operación en segundo plano
 Si tiene una operación que tarda mucho tiempo en completarse, y no desea la interfaz de usuario (UI) deje de responder o "bloquee", puede usar el <xref:System.ComponentModel.BackgroundWorker> clase para ejecutar la operación en otro subproceso.  
@@ -29,13 +29,13 @@ Si tiene una operación que tarda mucho tiempo en completarse, y no desea la int
   
  Las tareas ilustradas en este tutorial incluyen:  
   
--   Crear una aplicación basada en Windows  
+- Crear una aplicación basada en Windows  
   
--   Creación de un <xref:System.ComponentModel.BackgroundWorker> en el formulario  
+- Creación de un <xref:System.ComponentModel.BackgroundWorker> en el formulario  
   
--   Agregar controladores de eventos asincrónicos  
+- Agregar controladores de eventos asincrónicos  
   
--   Agregar informes de progreso y compatibilidad con la cancelación  
+- Agregar informes de progreso y compatibilidad con la cancelación  
   
  Para obtener una lista completa del código utilizado en este ejemplo, vea [Cómo: Implementar un formulario que utiliza una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
@@ -68,7 +68,7 @@ Si tiene una operación que tarda mucho tiempo en completarse, y no desea la int
   
 #### <a name="to-create-a-backgroundworker-with-the-designer"></a>Para crear un componente BackgroundWorker con el diseñador  
   
--   Desde el **componentes** pestaña de la **cuadro de herramientas**, arrastre un <xref:System.ComponentModel.BackgroundWorker> hasta el formulario.  
+- Desde el **componentes** pestaña de la **cuadro de herramientas**, arrastre un <xref:System.ComponentModel.BackgroundWorker> hasta el formulario.  
   
 ## <a name="adding-asynchronous-event-handlers"></a>Agregar controladores de eventos asincrónicos  
  Ahora está listo para agregar controladores de eventos para el <xref:System.ComponentModel.BackgroundWorker> eventos asincrónicos del componente. Se llama a la laboriosa operación que se ejecutará en segundo plano, que calcula los números de Fibonacci, mediante uno de estos controladores de eventos.  
@@ -145,7 +145,7 @@ Si tiene una operación que tarda mucho tiempo en completarse, y no desea la int
   
 #### <a name="to-test-your-project"></a>Para probar el proyecto  
   
--   Presione F5 para compilar y ejecutar la aplicación.  
+- Presione F5 para compilar y ejecutar la aplicación.  
   
      Mientras se ejecuta el cálculo en segundo plano, verá el <xref:System.Windows.Forms.ProgressBar> muestra el progreso del cálculo hacia su finalización. También puede cancelar la operación pendiente.  
   
@@ -154,11 +154,11 @@ Si tiene una operación que tarda mucho tiempo en completarse, y no desea la int
 ## <a name="next-steps"></a>Pasos siguientes  
  Ahora que ha implementado un formulario que utiliza un <xref:System.ComponentModel.BackgroundWorker> componente para ejecutar un cálculo en segundo plano, puede explorar otras posibilidades para las operaciones asincrónicas:  
   
--   Usar varios <xref:System.ComponentModel.BackgroundWorker> objetos para varias operaciones simultáneas.  
+- Usar varios <xref:System.ComponentModel.BackgroundWorker> objetos para varias operaciones simultáneas.  
   
--   Para depurar su aplicación multiproceso, consulte [Cómo: Utilice la ventana subprocesos](/visualstudio/debugger/how-to-use-the-threads-window).  
+- Para depurar su aplicación multiproceso, consulte [Cómo: Utilice la ventana subprocesos](/visualstudio/debugger/how-to-use-the-threads-window).  
   
--   Implemente su propio componente que admita el modelo de programación asincrónica. Para más información, consulte [Event-based Asynchronous Pattern Overview](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) (Introducción al patrón asincrónico basado en eventos).  
+- Implemente su propio componente que admita el modelo de programación asincrónica. Para más información, consulte [Event-based Asynchronous Pattern Overview](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) (Introducción al patrón asincrónico basado en eventos).  
   
     > [!CAUTION]
     >  Cuando se usa multithreading de algún tipo, se expone a posibles errores muy graves y complejos. Vea [Procedimientos recomendados para el subprocesamiento administrado](../../../standard/threading/managed-threading-best-practices.md) antes de implementar cualquier solución que utilice multithreading.  

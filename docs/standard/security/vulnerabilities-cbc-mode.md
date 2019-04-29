@@ -1,17 +1,17 @@
 ---
-title: Vulnerabilidades de control de tiempo con descifrado simétrico modo CBC mediante el relleno
+title: Vulnerabilidades de temporalización con descifrado simétrico en modo CBC al usar el relleno
 description: Obtenga información sobre cómo detectar y mitigar las vulnerabilidades de control de tiempo con el descifrado simétrico modo de encadenamiento de bloques de cifrado (CBC), mediante el relleno.
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
 ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933905"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de control de tiempo con descifrado simétrico modo CBC mediante el relleno
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de temporalización con descifrado simétrico en modo CBC al usar el relleno
 
 Microsoft cree que ya no es seguro descifrar los datos cifrados con el modo de encadenamiento de bloques de cifrado (CBC) del cifrado simétrico cuando se ha aplicado el relleno que se pueda comprobar sin primero asegurarse que la integridad del texto cifrado, excepto para muy específicas circunstancias. Esta decisión se basa en la investigación criptográfica conocido actualmente. 
 

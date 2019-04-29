@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
 ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778786"
 ---
 # <a name="choosing-between-class-and-struct"></a>Elegir entre clases y structs
 Una de las decisiones de diseño básicos que se enfrenta a cada diseñador framework es si va a diseñar un tipo como una clase (un tipo de referencia) o como un struct (un tipo de valor). Buen conocimiento de las diferencias en el comportamiento de los tipos de referencia y tipos de valor es fundamental para tomar esta decisión.  
@@ -39,13 +39,13 @@ Una de las decisiones de diseño básicos que se enfrenta a cada diseñador fram
   
  **X AVOID** definir un struct a menos que el tipo tenga todas las características siguientes:  
   
--   Representa un valor único, similar a los tipos primitivos lógicamente (`int`, `double`, etcetera.).  
+- Representa un valor único, similar a los tipos primitivos lógicamente (`int`, `double`, etcetera.).  
   
--   Tiene un tamaño de instancia inferior a 16 bytes.  
+- Tiene un tamaño de instancia inferior a 16 bytes.  
   
--   Es inmutable.  
+- Es inmutable.  
   
--   No tendrá que realizar la conversión boxing con frecuencia.  
+- No tendrá que realizar la conversión boxing con frecuencia.  
   
  En todos los demás casos, debe definir los tipos como clases.  
   

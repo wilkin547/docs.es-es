@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 ms.openlocfilehash: b0279c5ac658c7d0749f62066abbd705d0a271af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793905"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Especifica el nombre del ensamblado del que este módulo formará parte.  
@@ -33,9 +33,9 @@ Especifica el nombre del ensamblado del que este módulo formará parte.
   
  El `-moduleassemblyname` opción es necesaria sólo cuando se cumplan lo siguiente:  
   
--   Un tipo de datos en el módulo necesita acceso a un `Friend` tipo en un ensamblado de referencia.  
+- Un tipo de datos en el módulo necesita acceso a un `Friend` tipo en un ensamblado de referencia.  
   
--   El ensamblado de referencia ha concedido acceso de ensamblado de confianza al ensamblado en el que se compilará el módulo.  
+- El ensamblado de referencia ha concedido acceso de ensamblado de confianza al ensamblado en el que se compilará el módulo.  
   
  Para obtener más información acerca de cómo crear un módulo, consulte [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Para obtener más información acerca de los ensamblados de confianza, consulte [ensamblados de confianza](../../../standard/assembly/friend-assemblies.md).  
   

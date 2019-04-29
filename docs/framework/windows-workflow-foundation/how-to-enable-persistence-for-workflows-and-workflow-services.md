@@ -3,11 +3,11 @@ title: Procedimiento para habilitar la persistencia para flujos de trabajo y ser
 ms.date: 03/30/2017
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
 ms.openlocfilehash: 6a2a8d73298e14f92f376b97b9637db91532e937
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761434"
 ---
 # <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Procedimiento para habilitar la persistencia para flujos de trabajo y servicios de flujo de trabajo
 En este tema se describe cómo habilitar la persistencia para los flujos de trabajo y los servicios de flujo de trabajo.  

@@ -3,11 +3,11 @@ title: Interoperabilidad con Enterprise Services y transacciones de COM+
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793658"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Interoperabilidad con Enterprise Services y transacciones de COM+
 El espacio de nombres <xref:System.Transactions> admite la interoperabilidad entre los objetos de transacción creados utilizando este espacio de nombres y las transacciones creadas a través de COM+.  
@@ -29,9 +29,9 @@ El espacio de nombres <xref:System.Transactions> admite la interoperabilidad ent
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> Especifica los requisitos siguientes:  
   
--   Cuando se comprueba <xref:System.Transactions.Transaction.Current%2A>, <xref:System.Transactions> debería admitir las transacciones en el contexto de COM+ si detecta que se está ejecutando en un contexto distinto del contexto predeterminado. Observe que el contexto predeterminado no puede contener una transacción. Por consiguiente, en el contexto predeterminado, la transacción almacenada en el almacenamiento local de subprocesos utilizado por <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> se devuelve incluso con <xref:System.Transactions>, para <xref:System.Transactions.Transaction.Current%2A>.  
+- Cuando se comprueba <xref:System.Transactions.Transaction.Current%2A>, <xref:System.Transactions> debería admitir las transacciones en el contexto de COM+ si detecta que se está ejecutando en un contexto distinto del contexto predeterminado. Observe que el contexto predeterminado no puede contener una transacción. Por consiguiente, en el contexto predeterminado, la transacción almacenada en el almacenamiento local de subprocesos utilizado por <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> se devuelve incluso con <xref:System.Transactions>, para <xref:System.Transactions.Transaction.Current%2A>.  
   
--   Si se crea un nuevo objeto <xref:System.Transactions.TransactionScope> y la creación se produce en un contexto distinto del contexto predeterminado, la transacción que es actual para el objeto <xref:System.Transactions.TransactionScope> se debería reflejar en COM+. En este caso, <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> se comporta como <xref:System.Transactions.EnterpriseServicesInteropOption.Full> en eso crea un contexto de nuevo COM+.  
+- Si se crea un nuevo objeto <xref:System.Transactions.TransactionScope> y la creación se produce en un contexto distinto del contexto predeterminado, la transacción que es actual para el objeto <xref:System.Transactions.TransactionScope> se debería reflejar en COM+. En este caso, <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> se comporta como <xref:System.Transactions.EnterpriseServicesInteropOption.Full> en eso crea un contexto de nuevo COM+.  
   
  Además cuando <xref:System.Transactions.Transaction.Current%2A> se establece en <xref:System.Transactions.EnterpriseServicesInteropOption.Full> y <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, ambos de estos modos implican que no se puede establecer ese <xref:System.Transactions.Transaction.Current%2A> directamente.  Cualquier intento para establecer directamente <xref:System.Transactions.Transaction.Current%2A> otro distinto de crear resultados <xref:System.Transactions.TransactionScope> en un <xref:System.InvalidOperationException>. Nuevos ambientes de transacción han heredado el valor de enumeración <xref:System.Transactions.EnterpriseServicesInteropOption> que no especifica que valor hay que utilizar. Por ejemplo, si crea un nuevo objeto <xref:System.Transactions.TransactionScope> con <xref:System.Transactions.EnterpriseServicesInteropOption.Full>, y, a continuación, crea un segundo objeto <xref:System.Transactions.TransactionScope> pero no especifica un valor <xref:System.Transactions.EnterpriseServicesInteropOption>, el segundo objeto <xref:System.Transactions.TransactionScope> también tiene <xref:System.Transactions.EnterpriseServicesInteropOption.Full>.  
   
@@ -39,11 +39,11 @@ El espacio de nombres <xref:System.Transactions> admite la interoperabilidad ent
   
 1. <xref:System.Transactions.Transaction.Current%2A> se comprueba para ver si hay una transacción. Comprueba los resultados en:  
   
-    -   Una comprobación para ver si hay un ámbito.  
+    - Una comprobación para ver si hay un ámbito.  
   
-    -   Si hay un ámbito, el valor de la enumeración <xref:System.Transactions.EnterpriseServicesInteropOption> que se ha pasado cuando se ha creado el ámbito inicialmente, se comprueba.  
+    - Si hay un ámbito, el valor de la enumeración <xref:System.Transactions.EnterpriseServicesInteropOption> que se ha pasado cuando se ha creado el ámbito inicialmente, se comprueba.  
   
-    -   Si la enumeración <xref:System.Transactions.EnterpriseServicesInteropOption> está establecida en <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, la transacción de COM+ (Transacción <xref:System.EnterpriseServices> ) tiene precedencia sobre la transacción <xref:System.Transactions> en almacenamiento local de subprocesos administrado.  
+    - Si la enumeración <xref:System.Transactions.EnterpriseServicesInteropOption> está establecida en <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, la transacción de COM+ (Transacción <xref:System.EnterpriseServices> ) tiene precedencia sobre la transacción <xref:System.Transactions> en almacenamiento local de subprocesos administrado.  
   
          Si el valor se ha establecido en <xref:System.Transactions.EnterpriseServicesInteropOption.None>, la transacción <xref:System.Transactions> toma precedentes en el almacenamiento local de subproceso.  
   
@@ -53,11 +53,11 @@ El espacio de nombres <xref:System.Transactions> admite la interoperabilidad ent
   
 3. Si se va a crear una nueva transacción, los valores siguientes de resultado <xref:System.Transactions.EnterpriseServicesInteropOption> en:  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: se crea una transacción asociada a un contexto de COM+.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: se crea una transacción asociada a un contexto de COM+.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>: un <xref:System.Transactions> se crea la transacción.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.None>: un <xref:System.Transactions> se crea la transacción.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: si hay un contexto de COM +, se crea y se adjunta al contexto de una transacción.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: si hay un contexto de COM +, se crea y se adjunta al contexto de una transacción.  
   
  La tabla siguiente muestra el contexto del Enterprise Services (ES) y un ámbito transaccional que requiere una transacción mediante la enumeración <xref:System.Transactions.EnterpriseServicesInteropOption>.  
   
@@ -75,6 +75,6 @@ El espacio de nombres <xref:System.Transactions> admite la interoperabilidad ent
   
  En la tabla anterior:  
   
--   ST quiere decir que <xref:System.Transactions> administra la transacción ambiente del ámbito, separada de la transacción de cualquier contexto <xref:System.EnterpriseServices> que puede estar presente.  
+- ST quiere decir que <xref:System.Transactions> administra la transacción ambiente del ámbito, separada de la transacción de cualquier contexto <xref:System.EnterpriseServices> que puede estar presente.  
   
--   ES quiere decir que la transacción ambiente del ámbito es la misma que la transacción del contexto <xref:System.EnterpriseServices>.
+- ES quiere decir que la transacción ambiente del ámbito es la misma que la transacción del contexto <xref:System.EnterpriseServices>.

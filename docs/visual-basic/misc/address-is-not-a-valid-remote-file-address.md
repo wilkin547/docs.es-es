@@ -3,11 +3,11 @@ title: <address> no es una dirección de archivo remoto válida
 ms.date: 07/20/2015
 ms.assetid: 2c312242-6c42-4754-a1f5-7e801a542604
 ms.openlocfilehash: 65fded4d7f9316cda8724b262216de1ad01f9ee3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940652"
 ---
 # <a name="address-is-not-a-valid-remote-file-address"></a>\<dirección > no es una dirección de archivo remoto válida
 \<dirección > no es una dirección de archivo remoto válida. Una dirección válida debe incluir un protocolo, una ruta de acceso y un nombre de archivo.  
@@ -16,7 +16,7 @@ ms.locfileid: "58039579"
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Compruebe la dirección que ha especificado para determinar dónde se produce el error y especifique la información necesaria.  
+- Compruebe la dirección que ha especificado para determinar dónde se produce el error y especifique la información necesaria.  
   
 ## <a name="see-also"></a>Vea también
 

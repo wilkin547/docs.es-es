@@ -9,32 +9,32 @@ helpviewer_keywords:
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
 ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937974"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Procedimiento para construir fuentes y familias de fuentes
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] las fuentes con el mismo tipo de letra pero distintos estilos se agrupa en familias de fuentes. Por ejemplo, la familia de fuentes Arial contiene las siguientes fuentes:  
   
--   Arial normal  
+- Arial normal  
   
--   Arial negrita  
+- Arial negrita  
   
--   Arial cursiva  
+- Arial cursiva  
   
--   Arial negrita cursiva  
+- Arial negrita cursiva  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] utiliza cuatro estilos para formar familias: normal, negrita, cursiva y negrita cursiva. Adjetivos como *restringir* y *redondea* no se consideran estilos; más bien forman parte del nombre de familia. Por ejemplo, Arial Narrow es una familia de fuentes con los miembros siguientes:  
   
--   Arial Narrow Normal  
+- Arial Narrow Normal  
   
--   Arial Narrow negrita  
+- Arial Narrow negrita  
   
--   Arial Narrow Cursiva  
+- Arial Narrow Cursiva  
   
--   Arial Narrow negrita cursiva  
+- Arial Narrow negrita cursiva  
   
  Antes de poder dibujar texto con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], deberá construir una <xref:System.Drawing.FontFamily> objeto y un <xref:System.Drawing.Font> objeto. El <xref:System.Drawing.FontFamily> objeto especifica el tipo de letra (por ejemplo, Arial) y el <xref:System.Drawing.Font> objeto especifica el tamaño, estilo y unidades.  
   

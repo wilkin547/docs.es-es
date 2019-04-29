@@ -9,11 +9,11 @@ helpviewer_keywords:
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
 ms.openlocfilehash: 9c8f2392137d04f56096120cec64b60c42c47419
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791162"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Utilizar transformaciones para ajustar la escala de los colores
 Una transformación de escala multiplica uno o varios de los cuatro componentes de color por un número. En la siguiente tabla figuran las entradas de la matriz de color que representan el escalado.  
