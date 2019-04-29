@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 88f3c270d2ab0adc0b683fda0e0f4bc1d474fb09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765451"
 ---
-# <a name="icordebugerrorinfoenum-interface"></a><span data-ttu-id="96a02-102">Interfaz ICorDebugErrorInfoEnum</span><span class="sxs-lookup"><span data-stu-id="96a02-102">ICorDebugErrorInfoEnum Interface</span></span>
+# <a name="icordebugerrorinfoenum-interface"></a><span data-ttu-id="52c70-102">Interfaz ICorDebugErrorInfoEnum</span><span class="sxs-lookup"><span data-stu-id="52c70-102">ICorDebugErrorInfoEnum Interface</span></span>
 
-<span data-ttu-id="96a02-103">`ICorDebugErrorInfoEnum` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="96a02-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="96a02-104">No utilice esta interfaz.</span><span class="sxs-lookup"><span data-stu-id="96a02-104">Do not use this interface.</span></span>  
+<span data-ttu-id="52c70-103">`ICorDebugErrorInfoEnum` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="52c70-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="52c70-104">No utilice esta interfaz.</span><span class="sxs-lookup"><span data-stu-id="52c70-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="96a02-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="96a02-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52c70-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="52c70-105">See also</span></span>
 
-- [<span data-ttu-id="96a02-106">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="96a02-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="52c70-106">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="52c70-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

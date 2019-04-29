@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9687f6139d67a2387091367c2c72167e03be4eee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698296"
 ---
-# <a name="iclrdatatargetgetcurrentthreadid-method"></a><span data-ttu-id="28b58-102">ICLRDataTarget::GetCurrentThreadID (Método)</span><span class="sxs-lookup"><span data-stu-id="28b58-102">ICLRDataTarget::GetCurrentThreadID Method</span></span>
-<span data-ttu-id="28b58-103">Obtiene el identificador de sistema operativo para el subproceso actual.</span><span class="sxs-lookup"><span data-stu-id="28b58-103">Gets the operating system identifier for the current thread.</span></span>  
+# <a name="iclrdatatargetgetcurrentthreadid-method"></a><span data-ttu-id="a7cad-102">ICLRDataTarget::GetCurrentThreadID (Método)</span><span class="sxs-lookup"><span data-stu-id="a7cad-102">ICLRDataTarget::GetCurrentThreadID Method</span></span>
+<span data-ttu-id="a7cad-103">Obtiene el identificador de sistema operativo para el subproceso actual.</span><span class="sxs-lookup"><span data-stu-id="a7cad-103">Gets the operating system identifier for the current thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="28b58-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="28b58-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a7cad-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a7cad-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentThreadID (  
@@ -35,22 +35,22 @@ HRESULT GetCurrentThreadID (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="28b58-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="28b58-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a7cad-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a7cad-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="28b58-106">[out] Un puntero al identificador del sistema operativo del subproceso actual para el proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="28b58-106">[out] A pointer to the operating system identifier of the current thread for the target process.</span></span>  
+ <span data-ttu-id="a7cad-106">[out] Un puntero al identificador del sistema operativo del subproceso actual para el proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="a7cad-106">[out] A pointer to the operating system identifier of the current thread for the target process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="28b58-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="28b58-107">Remarks</span></span>  
- <span data-ttu-id="28b58-108">Si no hay ningún subproceso actual durante el proceso de destino, el `GetCurrentThreadID` método puede producir un error.</span><span class="sxs-lookup"><span data-stu-id="28b58-108">If there is no current thread for the target process, the `GetCurrentThreadID` method may fail.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a7cad-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a7cad-107">Remarks</span></span>  
+ <span data-ttu-id="a7cad-108">Si no hay ningún subproceso actual durante el proceso de destino, el `GetCurrentThreadID` método puede producir un error.</span><span class="sxs-lookup"><span data-stu-id="a7cad-108">If there is no current thread for the target process, the `GetCurrentThreadID` method may fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="28b58-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="28b58-109">Requirements</span></span>  
- <span data-ttu-id="28b58-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="28b58-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a7cad-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a7cad-109">Requirements</span></span>  
+ <span data-ttu-id="a7cad-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a7cad-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="28b58-111">**Encabezado**: ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="28b58-111">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="a7cad-111">**Encabezado**: ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="a7cad-111">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="28b58-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="28b58-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a7cad-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a7cad-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="28b58-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="28b58-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a7cad-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a7cad-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="28b58-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="28b58-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7cad-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="a7cad-114">See also</span></span>
 
-- [<span data-ttu-id="28b58-115">ICLRDataTarget (interfaz)</span><span class="sxs-lookup"><span data-stu-id="28b58-115">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [<span data-ttu-id="a7cad-115">ICLRDataTarget (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a7cad-115">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

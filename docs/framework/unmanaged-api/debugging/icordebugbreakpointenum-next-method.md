@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 18b65eb3e733fa7970e4c0e7de09755598eaf149
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645349"
 ---
-# <a name="icordebugbreakpointenumnext-method"></a><span data-ttu-id="9c239-102">ICorDebugBreakpointEnum::Next (Método)</span><span class="sxs-lookup"><span data-stu-id="9c239-102">ICorDebugBreakpointEnum::Next Method</span></span>
-<span data-ttu-id="9c239-103">Obtiene el número especificado de instancias de ICorDebugBreakpoint de la enumeración, comenzando en la posición actual.</span><span class="sxs-lookup"><span data-stu-id="9c239-103">Gets the specified number of ICorDebugBreakpoint instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugbreakpointenumnext-method"></a><span data-ttu-id="70674-102">ICorDebugBreakpointEnum::Next (Método)</span><span class="sxs-lookup"><span data-stu-id="70674-102">ICorDebugBreakpointEnum::Next Method</span></span>
+<span data-ttu-id="70674-103">Obtiene el número especificado de instancias de ICorDebugBreakpoint de la enumeración, comenzando en la posición actual.</span><span class="sxs-lookup"><span data-stu-id="70674-103">Gets the specified number of ICorDebugBreakpoint instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9c239-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9c239-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="70674-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="70674-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9c239-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9c239-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="70674-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="70674-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="9c239-106">[in] El número de `ICorDebugBreakpoint` instancias va a recuperar.</span><span class="sxs-lookup"><span data-stu-id="9c239-106">[in] The number of `ICorDebugBreakpoint` instances to be retrieved.</span></span>  
+ <span data-ttu-id="70674-106">[in] El número de `ICorDebugBreakpoint` instancias va a recuperar.</span><span class="sxs-lookup"><span data-stu-id="70674-106">[in] The number of `ICorDebugBreakpoint` instances to be retrieved.</span></span>  
   
  `breakpoints`  
- <span data-ttu-id="9c239-107">[out] Una matriz de punteros, cada uno de los cuales señala a una `ICorDebugBreakpoint` objeto que representa un punto de interrupción.</span><span class="sxs-lookup"><span data-stu-id="9c239-107">[out] An array of pointers, each of which points to an `ICorDebugBreakpoint` object that represents a breakpoint.</span></span>  
+ <span data-ttu-id="70674-107">[out] Una matriz de punteros, cada uno de los cuales señala a una `ICorDebugBreakpoint` objeto que representa un punto de interrupción.</span><span class="sxs-lookup"><span data-stu-id="70674-107">[out] An array of pointers, each of which points to an `ICorDebugBreakpoint` object that represents a breakpoint.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="9c239-108">[out] Un puntero al número de `ICorDebugBreakpoint` instancias devueltas realmente.</span><span class="sxs-lookup"><span data-stu-id="9c239-108">[out] A pointer to the number of `ICorDebugBreakpoint` instances actually returned.</span></span> <span data-ttu-id="9c239-109">Este valor puede ser null si `celt` es uno.</span><span class="sxs-lookup"><span data-stu-id="9c239-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="70674-108">[out] Un puntero al número de `ICorDebugBreakpoint` instancias devueltas realmente.</span><span class="sxs-lookup"><span data-stu-id="70674-108">[out] A pointer to the number of `ICorDebugBreakpoint` instances actually returned.</span></span> <span data-ttu-id="70674-109">Este valor puede ser null si `celt` es uno.</span><span class="sxs-lookup"><span data-stu-id="70674-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9c239-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9c239-110">Requirements</span></span>  
- <span data-ttu-id="9c239-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9c239-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="70674-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="70674-110">Requirements</span></span>  
+ <span data-ttu-id="70674-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="70674-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9c239-112">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9c239-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="70674-112">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="70674-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9c239-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9c239-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="70674-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="70674-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9c239-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9c239-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="70674-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70674-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

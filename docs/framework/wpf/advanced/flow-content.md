@@ -8,22 +8,22 @@ helpviewer_keywords:
 - flow content reference [WPF]
 ms.assetid: d32501af-0bac-4b80-8a20-61a6996753fe
 ms.openlocfilehash: 47bdc48eb6f2fcb0ffd73f06a58bd01d716e56fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789303"
 ---
-# <a name="flow-content"></a><span data-ttu-id="a2fe9-102">Contenido dinámico</span><span class="sxs-lookup"><span data-stu-id="a2fe9-102">Flow Content</span></span>
-<span data-ttu-id="a2fe9-103">Elementos de contenido dinámico proporcionan los bloques de creación para crear contenido dinámico adecuado para el hospedaje en un <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="a2fe9-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+# <a name="flow-content"></a><span data-ttu-id="ec366-102">Contenido dinámico</span><span class="sxs-lookup"><span data-stu-id="ec366-102">Flow Content</span></span>
+<span data-ttu-id="ec366-103">Elementos de contenido dinámico proporcionan los bloques de creación para crear contenido dinámico adecuado para el hospedaje en un <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="ec366-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a2fe9-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="a2fe9-104">In This Section</span></span>  
- [<span data-ttu-id="a2fe9-105">Información general sobre documentos dinámicos</span><span class="sxs-lookup"><span data-stu-id="a2fe9-105">Flow Document Overview</span></span>](flow-document-overview.md)  
- [<span data-ttu-id="a2fe9-106">Información general sobre el modelo de contenido de TextElement</span><span class="sxs-lookup"><span data-stu-id="a2fe9-106">TextElement Content Model Overview</span></span>](textelement-content-model-overview.md)  
- [<span data-ttu-id="a2fe9-107">Información general sobre tablas</span><span class="sxs-lookup"><span data-stu-id="a2fe9-107">Table Overview</span></span>](table-overview.md)  
- [<span data-ttu-id="a2fe9-108">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="a2fe9-108">How-to Topics</span></span>](flow-content-elements-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ec366-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="ec366-104">In This Section</span></span>  
+ [<span data-ttu-id="ec366-105">Información general sobre documentos dinámicos</span><span class="sxs-lookup"><span data-stu-id="ec366-105">Flow Document Overview</span></span>](flow-document-overview.md)  
+ [<span data-ttu-id="ec366-106">Información general sobre el modelo de contenido de TextElement</span><span class="sxs-lookup"><span data-stu-id="ec366-106">TextElement Content Model Overview</span></span>](textelement-content-model-overview.md)  
+ [<span data-ttu-id="ec366-107">Información general sobre tablas</span><span class="sxs-lookup"><span data-stu-id="ec366-107">Table Overview</span></span>](table-overview.md)  
+ [<span data-ttu-id="ec366-108">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="ec366-108">How-to Topics</span></span>](flow-content-elements-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="a2fe9-109">Referencia</span><span class="sxs-lookup"><span data-stu-id="a2fe9-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ec366-109">Referencia</span><span class="sxs-lookup"><span data-stu-id="ec366-109">Reference</span></span>  
  <xref:System.Windows.Documents.FlowDocument>  
   <xref:System.Windows.Documents.Block>  
   <xref:System.Windows.Documents.List>  
@@ -38,5 +38,5 @@ ms.locfileid: "57373548"
   <xref:System.Windows.Documents.Span>  
   <xref:System.Windows.Documents.ListItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="a2fe9-110">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="a2fe9-110">Related Sections</span></span>  
- [<span data-ttu-id="a2fe9-111">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="a2fe9-111">Documents in WPF</span></span>](documents-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="ec366-110">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="ec366-110">Related Sections</span></span>  
+ [<span data-ttu-id="ec366-111">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="ec366-111">Documents in WPF</span></span>](documents-in-wpf.md)
