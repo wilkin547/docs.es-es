@@ -19,11 +19,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
 ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791916"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Argumentos y parámetros de procedimiento (Visual Basic)
 En la mayoría de los casos, un procedimiento necesita cierta información sobre las circunstancias en que se ha llamado. Un procedimiento que realiza tareas repetitivas o compartidas utiliza información diferente para cada llamada. Esta información se compone de variables, constantes y expresiones que se pasan al procedimiento cuando se llama al método.  
@@ -49,11 +49,11 @@ En la mayoría de los casos, un procedimiento necesita cierta información sobre
   
  Si espera que el código de llamada proporcionar un argumento con un tipo de datos diferente del parámetro correspondiente, como `Byte` a un `String` parámetro, debe hacer lo siguiente:  
   
--   Proporcionar sólo argumentos con tipos de datos que se convierten en el tipo de datos del parámetro;  
+- Proporcionar sólo argumentos con tipos de datos que se convierten en el tipo de datos del parámetro;  
   
--   Establecer `Option Strict Off` para permitir que las conversiones de restricción implícitas; o  
+- Establecer `Option Strict Off` para permitir que las conversiones de restricción implícitas; o  
   
--   Utilizar una palabra clave de conversión para convertir explícitamente el tipo de datos.  
+- Utilizar una palabra clave de conversión para convertir explícitamente el tipo de datos.  
   
 ### <a name="type-parameters"></a>Parámetros de tipo  
  Un *procedimiento genérico* también define uno o más *parámetros de tipo* además de sus parámetros normales. Un procedimiento genérico permite que el código de llamada pasar tipos de datos diferentes cada vez que llama al procedimiento, por lo que puede personalizar los tipos de datos a los requisitos de cada llamada individual. Vea [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  

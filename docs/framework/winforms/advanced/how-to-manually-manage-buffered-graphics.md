@@ -9,18 +9,18 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
 ms.openlocfilehash: 965e3225f8cf1af6d61b81434089ebacac8ad13a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781321"
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>Procedimiento para administrar manualmente gráficos almacenados en búfer
 Para escenarios más avanzados de almacenamiento en búfer doble, puede usar el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] clases para implementar su propia lógica de almacenamiento en búfer doble. La clase responsable de asignar y administrar búferes de gráficos individuales es el <xref:System.Drawing.BufferedGraphicsContext> clase. Cada aplicación tiene su propio valor predeterminado <xref:System.Drawing.BufferedGraphicsContext> que administra todo el doble búfer predeterminado para esa aplicación. Puede recuperar una referencia a esta instancia mediante una llamada a la <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  
   
 ### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a>Para obtener una referencia a la clase BufferedGraphicsContext predeterminada  
   
--   Establecer el <xref:System.Drawing.BufferedGraphicsManager.Current%2A> propiedad, como se muestra en el siguiente ejemplo de código.  
+- Establecer el <xref:System.Drawing.BufferedGraphicsManager.Current%2A> propiedad, como se muestra en el siguiente ejemplo de código.  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#11)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#11)]  
@@ -32,7 +32,7 @@ Para escenarios más avanzados de almacenamiento en búfer doble, puede usar el 
   
 ### <a name="to-create-a-dedicated-bufferedgraphicscontext"></a>Para crear una clase BufferedGraphicsContext dedicada  
   
--   Declare y cree una nueva instancia de la <xref:System.Drawing.BufferedGraphicsContext> clase, como se muestra en el siguiente ejemplo de código.  
+- Declare y cree una nueva instancia de la <xref:System.Drawing.BufferedGraphicsContext> clase, como se muestra en el siguiente ejemplo de código.  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#12)]  

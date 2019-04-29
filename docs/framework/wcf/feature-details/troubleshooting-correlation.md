@@ -3,11 +3,11 @@ title: Solución de problemas de correlación
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
 ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932826"
 ---
 # <a name="troubleshooting-correlation"></a>Solución de problemas de correlación
 La correlación se utiliza para relacionar los mensajes del servicio de flujo de trabajo entre sí y con la instancia de flujo de trabajo correcta, pero si no está configurada correctamente, los mensajes no se recibirán y las aplicaciones no funcionarán de forma adecuada. Este tema proporciona información general de varios métodos para solucionar problemas de la correlación y también enumera algunos problemas comunes que se pueden producir cuando se usa.
@@ -161,7 +161,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- No se permite persistencia entre un <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> par o una <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> par. Se crea una zona sin persistencia que dura hasta que ambas actividades se han completado. Si en esta zona sin persistencia hay una actividad, por ejemplo una actividad de demora, y provoca que el flujo de trabajo se vuelva inactivo, este no persistirá ni siquiera aunque el host se configure para hacer persistir los flujos de trabajo cuando se vuelvan inactivos. Si una actividad, por ejemplo una actividad de persistencia, intenta persistir de modo explícito en la zona sin persistencia, se inicia una excepción grave, el flujo de trabajo se anula y se devuelve un objeto <xref:System.ServiceModel.FaultException> al autor de la llamada. El mensaje de la excepción grave es "System.InvalidOperationException: las actividades persistentes no pueden estar incluidas en bloques sin persistencia.". Esta excepción no se devuelve al autor de la llamada pero puede observarse si se habilita el seguimiento. El mensaje para el objeto <xref:System.ServiceModel.FaultException> devuelto al autor de la llamada es "No se puede realizar la operación porque WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' se ha completado".
+ No se permite persistencia entre un <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> par o una <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> par. Se crea una zona sin persistencia que dura hasta que ambas actividades se han completado. Si en esta zona sin persistencia hay una actividad, por ejemplo una actividad de demora, y provoca que el flujo de trabajo se vuelva inactivo, este no persistirá ni siquiera aunque el host se configure para hacer persistir los flujos de trabajo cuando se vuelvan inactivos. Si una actividad, por ejemplo una actividad de persistencia, intenta persistir de modo explícito en la zona sin persistencia, se inicia una excepción grave, el flujo de trabajo se anula y se devuelve un objeto <xref:System.ServiceModel.FaultException> al autor de la llamada. El mensaje de excepción grave es "System.InvalidOperationException: Conservar las actividades no pueden estar dentro de bloques sin persistencia. ". Esta excepción no se devuelve al autor de la llamada pero puede observarse si se habilita el seguimiento. El mensaje para el objeto <xref:System.ServiceModel.FaultException> devuelto al autor de la llamada es "No se puede realizar la operación porque WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' se ha completado".
 
  Para obtener más información sobre la correlación de solicitud-respuesta, vea [solicitud-respuesta](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).
 
@@ -188,7 +188,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- Si se configura incorrectamente una consulta XPath de modo que no se recuperen los datos de correlación, se devuelve un error con el mensaje siguiente: "Una consulta de correlación produjo un conjunto de resultados vacío. Asegúrese de que las consultas de correlación del punto de conexión están configuradas correctamente.". Un modo rápido de solucionar esto es reemplazar la consulta XPath con un valor literal según se describe en la sección anterior. Este problema puede producirse si usa el generador de consultas XPath en el **agregar inicializadores de correlación** o **Definition de CorrelatesOn** cuadros de diálogo y el servicio de flujo de trabajo usa contratos de mensaje. En el ejemplo siguiente, se define una clase de contrato de mensaje.
+ Si una consulta XPath está configurada incorrectamente que se recupera ningún dato de correlación, se devuelve un error con el siguiente mensaje: "Una consulta de correlación produjo un conjunto de resultados vacío. Asegúrese de que las consultas de correlación del extremo están configuradas correctamente.". Un modo rápido de solucionar esto es reemplazar la consulta XPath con un valor literal según se describe en la sección anterior. Este problema puede producirse si usa el generador de consultas XPath en el **agregar inicializadores de correlación** o **Definition de CorrelatesOn** cuadros de diálogo y el servicio de flujo de trabajo usa contratos de mensaje. En el ejemplo siguiente, se define una clase de contrato de mensaje.
 
 ```csharp
 [MessageContract]

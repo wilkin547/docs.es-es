@@ -10,11 +10,11 @@ helpviewer_keywords:
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775757"
 ---
 # <a name="use-the-automationid-property"></a>Utilizar la propiedad AutomationID
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "59173100"
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Usar un valor de AutomationID único y reconocible para buscar un elemento concreto en el árbol de Automatización de la interfaz de usuario  
   
--   Utilice una herramienta como [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] para informar a <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> de un elemento de interés de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] . Este valor se puede copiar y pegar en una aplicación cliente, como un script de prueba para las pruebas automatizadas posteriores. Este método reduce y simplifica el código necesario para identificar y buscar un elemento en tiempo de ejecución.  
+- Utilice una herramienta como [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] para informar a <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> de un elemento de interés de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] . Este valor se puede copiar y pegar en una aplicación cliente, como un script de prueba para las pruebas automatizadas posteriores. Este método reduce y simplifica el código necesario para identificar y buscar un elemento en tiempo de ejecución.  
   
 > [!CAUTION]
 >  En general, debe intentar obtener solo elementos secundarios directos del elemento <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Una búsqueda de descendientes puede iterar a través de cientos o incluso miles de elementos, lo que posiblemente provocaría un desbordamiento de pila. Si intenta obtener un elemento concreto en un nivel inferior, debe iniciar la búsqueda desde la ventana de aplicación o desde un contenedor en un nivel inferior.  
@@ -45,7 +45,7 @@ ms.locfileid: "59173100"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Usar una ruta de acceso persistente para volver a un elemento AutomationElement previamente identificado  
   
--   Las aplicaciones cliente, desde los scripts de prueba simples a las utilidades robustas de registro y reproducción, pueden requerir acceso a elementos de los que actualmente no haya instancias, como un diálogo de apertura de archivo o un elemento de menú y, por tanto, no existen en el árbol de Automatización de la interfaz de usuario. Estos elementos solo se pueden crear instancias mediante la reproducción, o "reproducir" una secuencia concreta de acciones de interfaz de usuario mediante el uso de las propiedades de automatización de interfaz de usuario, como AutomationID, patrones de control y los agentes de escucha de eventos.
+- Las aplicaciones cliente, desde los scripts de prueba simples a las utilidades robustas de registro y reproducción, pueden requerir acceso a elementos de los que actualmente no haya instancias, como un diálogo de apertura de archivo o un elemento de menú y, por tanto, no existen en el árbol de Automatización de la interfaz de usuario. Estos elementos solo se pueden crear instancias mediante la reproducción, o "reproducir" una secuencia concreta de acciones de interfaz de usuario mediante el uso de las propiedades de automatización de interfaz de usuario, como AutomationID, patrones de control y los agentes de escucha de eventos.
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  
@@ -54,7 +54,7 @@ ms.locfileid: "59173100"
   
 #### <a name="use-a-relative-path-to-return-to-a-previously-identified-automationelement"></a>Usar una ruta de acceso relativa para volver a un elemento AutomationElement previamente identificado  
   
--   En ciertas circunstancias, como solo se garantiza que AutomationID es único entre elementos del mismo nivel, varios elementos del árbol de Automatización de la interfaz de usuario pueden tener valores de propiedad AutomationID idénticos. En estos casos, los elementos se pueden identificar de forma única en función de un elemento primario y, si es necesario, un elemento primario del primario. Por ejemplo, un desarrollador puede proporcionar una barra de menús con varios elementos de menú, cada uno de ellos con varios elementos de menú secundarios donde se identifican los elementos secundarios con elementos AutomationID secuenciales como "Elemento1", "Elemento2" y así sucesivamente. Cada elemento de menú podría, por tanto, identificarse de forma única por su AutomationID junto con el AutomationID de su elemento primario y, si es necesario, el elemento primario de su primario.  
+- En ciertas circunstancias, como solo se garantiza que AutomationID es único entre elementos del mismo nivel, varios elementos del árbol de Automatización de la interfaz de usuario pueden tener valores de propiedad AutomationID idénticos. En estos casos, los elementos se pueden identificar de forma única en función de un elemento primario y, si es necesario, un elemento primario del primario. Por ejemplo, un desarrollador puede proporcionar una barra de menús con varios elementos de menú, cada uno de ellos con varios elementos de menú secundarios donde se identifican los elementos secundarios con elementos AutomationID secuenciales como "Elemento1", "Elemento2" y así sucesivamente. Cada elemento de menú podría, por tanto, identificarse de forma única por su AutomationID junto con el AutomationID de su elemento primario y, si es necesario, el elemento primario de su primario.  
   
 ## <a name="see-also"></a>Vea también
 

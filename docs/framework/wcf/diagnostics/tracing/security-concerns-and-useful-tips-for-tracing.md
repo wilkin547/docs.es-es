@@ -3,11 +3,11 @@ title: Riesgos de seguridad y sugerencias útiles para el seguimiento
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 ms.openlocfilehash: 72d35230820e8466cd9c63a76b26c7a23bdfe024
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663718"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Riesgos de seguridad y sugerencias útiles para el seguimiento
 Este tema describe cómo puede proteger información confidencial de ser expuesta, así como sugerencias útiles al utilizar WebHost.  
@@ -22,11 +22,11 @@ Este tema describe cómo puede proteger información confidencial de ser expuest
   
  Las sugerencias siguientes pueden ayudarle a evitar que se exponga el contenido de un archivo de seguimiento involuntariamente:  
   
--   Asegúrese de que los archivos de registro estén protegidos mediante listas de control de acceso (ACL) tanto en WebHost y como en escenarios de host propio.  
+- Asegúrese de que los archivos de registro estén protegidos mediante listas de control de acceso (ACL) tanto en WebHost y como en escenarios de host propio.  
   
--   Elija una extensión de archivo que no se pueda servir fácilmente utilizando una solicitud web. Por ejemplo, la extensión de archivo .xml no es una opción segura. Puede comprobar la guía de administración de IIS para ver una lista de extensiones que se pueden servir.  
+- Elija una extensión de archivo que no se pueda servir fácilmente utilizando una solicitud web. Por ejemplo, la extensión de archivo .xml no es una opción segura. Puede comprobar la guía de administración de IIS para ver una lista de extensiones que se pueden servir.  
   
--   Especifique una ruta de acceso absoluta para la ubicación del archivo de registro, que debería estar fuera del directorio público raíz de WebHost para evitar que una parte externa obtenga acceso utilizando un explorador web.  
+- Especifique una ruta de acceso absoluta para la ubicación del archivo de registro, que debería estar fuera del directorio público raíz de WebHost para evitar que una parte externa obtenga acceso utilizando un explorador web.  
   
  De forma predeterminada, las claves e información personal identificable (PII) como nombre de usuario y contraseña no están registradas en trazas y los mensajes registrados. Sin embargo, un administrador del equipo puede utilizar el atributo `enableLoggingKnownPII` en el elemento `machineSettings` del archivo Machine.config para permitir que las aplicaciones que se ejecutan en el equipo registren información personal identificable (PII) conocida:  
   

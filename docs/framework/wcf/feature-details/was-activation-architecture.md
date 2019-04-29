@@ -3,11 +3,11 @@ title: Arquitectura de activación de WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
 ms.openlocfilehash: 9c1af21782b377a9fb01cbd05e4fe61f6a69f3ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932721"
 ---
 # <a name="was-activation-architecture"></a>Arquitectura de activación de WAS
 Este tema detalla y discute los componentes de Windows Process Activation Service (también conocido como WAS).  
@@ -15,15 +15,15 @@ Este tema detalla y discute los componentes de Windows Process Activation Servic
 ## <a name="activation-components"></a>Componentes de activación  
  WAS está compuesto por varios componentes arquitectónicos:  
   
--   Adaptadores de escucha. Servicios de Windows que reciben mensajes en protocolos de red concretos y se comunican con WAS para enrutar los mensajes entrantes hasta el proceso de trabajo correcto.  
+- Adaptadores de escucha. Servicios de Windows que reciben mensajes en protocolos de red concretos y se comunican con WAS para enrutar los mensajes entrantes hasta el proceso de trabajo correcto.  
   
--   WAS. El servicio de Windows que administra la creación y duración de procesos de trabajo.  
+- WAS. El servicio de Windows que administra la creación y duración de procesos de trabajo.  
   
--   La aplicación ejecutable del proceso de trabajo genérica (w3wp.exe).  
+- La aplicación ejecutable del proceso de trabajo genérica (w3wp.exe).  
   
--   Administrador de aplicaciones. Administra la creación y duración de dominios de aplicación que hospedan aplicaciones dentro del proceso de trabajo.  
+- Administrador de aplicaciones. Administra la creación y duración de dominios de aplicación que hospedan aplicaciones dentro del proceso de trabajo.  
   
--   Controladores de protocolos. Componentes específicos de protocolos que se ejecutan en el proceso de trabajo y administran la comunicación entre el proceso de trabajo y los adaptadores de escucha individuales. Existen dos tipos de controladores de protocolo: controladores de protocolo de proceso y controladores de protocolo del AppDomain.  
+- Controladores de protocolos. Componentes específicos de protocolos que se ejecutan en el proceso de trabajo y administran la comunicación entre el proceso de trabajo y los adaptadores de escucha individuales. Existen dos tipos de controladores de protocolo: controladores de protocolo de proceso y controladores de protocolo del AppDomain.  
   
  Cuando WAS activa una instancia del proceso de trabajo, carga los controladores de protocolo de proceso requeridos en el proceso de trabajo y utiliza el administrador de aplicaciones para crear un dominio de aplicación que hospede la aplicación. El dominio de la aplicación carga el código de la aplicación así como los controladores de protocolo del AppDomain que requieren los protocolos de red utilizados por la aplicación.  
   

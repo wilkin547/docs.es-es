@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795593"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Use herramientas de Docker en Visual Studio 2017 en Windows
 
@@ -29,7 +29,7 @@ Hay dos niveles de compatibilidad con Docker que puede agregar a un proyecto. En
 
 El **Agregar > compatibilidad con Docker** y **Agregar > compatibilidad con el contenedor de orquestador** los comandos se encuentran en el menú contextual (o el menú contextual) del nodo de proyecto para un proyecto de ASP.NET Core en  **El Explorador de soluciones**, como se muestra en la figura 4-31:
 
-![Agregar la opción de menú de la compatibilidad con Docker en Visual Studio](./media/add-docker-support-menu.png)
+![Opción de menú Agregar compatibilidad con Docker en Visual Studio](./media/add-docker-support-menu.png)
 
 **Figura 4-31**. Agregar compatibilidad con Docker a un proyecto de Visual Studio 2017
 
@@ -37,7 +37,7 @@ El **Agregar > compatibilidad con Docker** y **Agregar > compatibilidad con el c
 
 Puede agregar compatibilidad con Docker a un proyecto de ASP.NET Core existente seleccionando **agregar** > **Docker admite** en **el Explorador de soluciones**. También puede habilitar compatibilidad con Docker durante la creación del proyecto seleccionando **habilitar Docker admite** en el **nueva aplicación Web de ASP.NET Core** cuadro de diálogo que se abre al hacer clic en **Aceptar** en el **nuevo proyecto** cuadro de diálogo, como se muestra en la figura 4-32.
 
-![Habilitar compatibilidad con Docker para la nueva aplicación web de ASP.NET Core en Visual Studio](./media/enable-docker-support-visual-studio.png)
+![Habilitación de la compatibilidad con Docker para una nueva aplicación web de ASP.NET Core en Visual Studio](./media/enable-docker-support-visual-studio.png)
 
 **Figura 4-32**. Habilitar la compatibilidad con Docker durante la creación del proyecto en Visual Studio 2017
 
@@ -46,7 +46,7 @@ Al agregar o habilitar la compatibilidad con Docker, Visual Studio agrega un *Do
 > [!NOTE]
 > Cuando se habilita la compatibilidad con Docker Compose durante la creación del proyecto para un proyecto ASP.NET (.NET Framework, no en un proyecto .NET Core) tal como se muestra en la figura 4-33, también se agrega compatibilidad con la orquestación de contenedor.
 
-![Habilitar Docker compose de soporte técnico para un proyecto de ASP.NET](media/enable-docker-compose-support.png)
+![Habilitación de la compatibilidad con Docker Compose para un proyecto de ASP.NET](media/enable-docker-compose-support.png)
 
 **Figura 4-33**. Habilitar la compatibilidad con Docker Compose para un proyecto de ASP.NET en Visual Studio 2017
 
@@ -58,11 +58,11 @@ Para agregar compatibilidad con la orquestación de contenedor, haga doble clic 
 
 Después de agregar compatibilidad con la orquestación de contenedor para el proyecto, verá un archivo Dockerfile que se agrega al proyecto y un **docker-compose** carpeta agregada a la solución en **el Explorador de soluciones**, como se muestra en la figura 4-34:
 
-![Archivos de docker en el Explorador de soluciones en Visual Studio](media/docker-support-solution-explorer.png)
+![Archivos de Docker en el Explorador de soluciones en Visual Studio](media/docker-support-solution-explorer.png)
 
 **Figura 4-34**. Archivos de docker en el Explorador de soluciones en Visual Studio 2017
 
-Si *docker-compose.yml* ya existe, Visual Studio agrega simplemente las líneas de código de configuración necesarias.
+Si *docker-compose.yml* ya existe, Visual Studio le agrega simplemente las líneas de código de configuración necesarias.
 
 ## <a name="configure-docker-tools"></a>Configurar las herramientas de Docker
 
@@ -74,7 +74,7 @@ En el menú principal, elija **Herramientas > opciones**y expanda **contenedor H
 
 En la tabla siguiente puede ayudarle a decidir cómo establecer estas opciones.
 
-| nombre | Configuración predeterminada | Se aplica a | Descripción |
+| Name | Configuración predeterminada | Se aplica a | Descripción |
 | -----|:---------------:|:----------:| ----------- |
 | Extraiga automáticamente imágenes de Docker necesarias al cargar el proyecto | Activado | Docker Compose | Para aumentar el rendimiento al cargar los proyectos de Visual Studio se iniciará una operación de extracción de Docker en segundo plano para que cuando esté listo para ejecutar el código, ya se descarga la imagen o en el proceso de descarga. Si simplemente está cargando proyectos y código de exploración, puede desactivar esta opción para evitar la descarga de imágenes de contenedor que no es necesario. |
 | Iniciar automáticamente los contenedores en segundo plano | Activado | Docker Compose | Nuevo para aumentar el rendimiento, Visual Studio crea un contenedor con montajes de volumen listo al compilar y ejecutar el contenedor. Si desea controlar cuando se crea el contenedor, desactivar esta opción. |

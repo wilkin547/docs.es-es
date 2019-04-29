@@ -3,11 +3,11 @@ title: Cadena de patrón no válida
 ms.date: 07/20/2015
 ms.assetid: ec1aecdb-5339-4a93-be71-eec56b1d7438
 ms.openlocfilehash: 7390b9b32eea248969813b52f8d9799798718de0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790603"
 ---
 # <a name="invalid-pattern-string"></a>Cadena de patrón no válida
 La cadena de patrón especificada en la operación `Like` de una búsqueda no es válida.  

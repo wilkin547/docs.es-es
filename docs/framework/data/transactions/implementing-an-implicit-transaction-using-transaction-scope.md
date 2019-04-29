@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793684"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementar una transacción implícita mediante el ámbito de la transacción
 La clase <xref:System.Transactions.TransactionScope> proporciona una manera simple de marcar un bloque de código como participar en una transacción, sin exigirle que interactuara con la propia transacción. Un ámbito de la transacción puede seleccionar y administrar automáticamente la transacción ambiente. Debido a su facilidad de uso y eficacia, se recomienda que utilice la clase <xref:System.Transactions.TransactionScope> al desarrollar una aplicación de transacción.  
@@ -71,11 +71,11 @@ void SomeMethod()
   
  Un objeto <xref:System.Transactions.TransactionScope> tiene tres opciones:  
   
--   Unir la transacción ambiente o crear una nueva si no existe.  
+- Unir la transacción ambiente o crear una nueva si no existe.  
   
--   Ser un nuevo ámbito de la raíz, eso es, iniciar una nueva transacción y tener esa transacción siendo la nueva transacción ambiente dentro de su propio ámbito.  
+- Ser un nuevo ámbito de la raíz, eso es, iniciar una nueva transacción y tener esa transacción siendo la nueva transacción ambiente dentro de su propio ámbito.  
   
--   No tomar parte en absoluto en una transacción. Como resultado, no hay ninguna transacción ambiente.  
+- No tomar parte en absoluto en una transacción. Como resultado, no hay ninguna transacción ambiente.  
   
  Si se crean instancias del ámbito con <xref:System.Transactions.TransactionScopeOption.Required>, y una transacción ambiente está presente, el ámbito combina dicha transacción. Si, por otro lado, no hay ninguna transacción ambiente, a continuación, el ámbito crea una nueva transacción y se vuelve el ámbito de la raíz. Este es el valor predeterminado. Cuando se utiliza <xref:System.Transactions.TransactionScopeOption.Required>, el código dentro del ámbito no necesita comportarse de manera diferente si es la raíz o simplemente uniendo la transacción ambiente. Debería funcionar idénticamente en ambos casos.  
   

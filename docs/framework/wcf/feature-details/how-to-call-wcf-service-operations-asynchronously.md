@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
 ms.openlocfilehash: 2815757bf9b00375f763673f18180bfbf51a165a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779228"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Procedimiento Llamar a operaciones de servicio WCF de forma asincrónica
 En este tema se explica cómo puede tener acceso un cliente a una operación de servicio de forma asincrónica. El servicio en este tema implementa la interfaz `ICalculator`. El cliente puede llamar a las operaciones de esta interfaz de forma asincrónica mediante el modelo de llamada asincrónica orientado a eventos. (Para obtener más información sobre el modelo de llamada asincrónica basado en eventos, vea [programación multiproceso con el modelo asincrónico basado en eventos](https://go.microsoft.com/fwlink/?LinkId=248184)). Para obtener un ejemplo que muestra cómo implementar una operación asincrónica en un servicio, vea [Cómo: Implementar una operación de servicio asincrónico](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Para obtener más información acerca de las operaciones sincrónicas y asincrónicas, vea [sincrónica y operaciones asincrónicas](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
@@ -30,17 +30,17 @@ En este tema se explica cómo puede tener acceso un cliente a una operación de 
   
      Esto genera, además de las operaciones sincrónicas y estándares basado en delegados asincrónicas, una clase de cliente WCF que contiene:  
   
-    -   Dos <`operationName` > `Async` operaciones para su uso con el enfoque de llamada asincrónico basado en eventos. Por ejemplo:  
+    - Dos <`operationName` > `Async` operaciones para su uso con el enfoque de llamada asincrónico basado en eventos. Por ejemplo:  
   
          [!code-csharp[EventAsync#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#1)]
          [!code-vb[EventAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#1)]  
   
-    -   Eventos completados de operación del formulario <`operationName` > `Completed` para su uso con el enfoque de llamada asincrónico basado en eventos. Por ejemplo:  
+    - Eventos completados de operación del formulario <`operationName` > `Completed` para su uso con el enfoque de llamada asincrónico basado en eventos. Por ejemplo:  
   
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    -   <xref:System.EventArgs?displayProperty=nameWithType> tipos para cada operación (el formato <`operationName`>`CompletedEventArgs`) para su uso con el enfoque de llamada asincrónico basado en eventos. Por ejemplo:  
+    - <xref:System.EventArgs?displayProperty=nameWithType> tipos para cada operación (el formato <`operationName`>`CompletedEventArgs`) para su uso con el enfoque de llamada asincrónico basado en eventos. Por ejemplo:  
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  

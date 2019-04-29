@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 47fee26a0c4c25e4bff5bca94e5e26daaf98cccd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782491"
 ---
 # <a name="verifyclientkey-function"></a>Función VerifyClientKey
 Garantiza que la clave de cliente cuenta con la seguridad adecuada.  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c6017b6-0c4f-4192-bd67-9515f5d1ec82
 ms.openlocfilehash: b7c5cf93a82ac88c25f9c478ad52cf41eb6f6d65
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790304"
 ---
 # <a name="behaviors-of-workflow"></a>\<comportamientos > de flujo de trabajo
 Este elemento contiene el **serviceBehaviors** colección.  Cada elemento de la colección define elementos de comportamiento utilizados por servicios del flujo de trabajo. Su único identifica cada elemento de comportamiento **nombre** atributo.  

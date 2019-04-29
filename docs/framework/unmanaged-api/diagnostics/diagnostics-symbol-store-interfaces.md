@@ -12,11 +12,11 @@ ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787899"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>Interfaces de almacén de símbolos de diagnósticos
 En este tema se describe las interfaces no administradas que permiten a un compilador generar información de símbolos para su uso por un depurador.  
@@ -29,7 +29,7 @@ En este tema se describe las interfaces no administradas que permiten a un compi
  Define la interfaz para la asociación automática del depurador que invoca el servidor.  
   
  [INotifyConnection2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- Declara los métodos para registrar y anular el registro de un origen de notificación de conexión.  
+ Declara los métodos para registrar y anular el registro de un origen de conexión de notificación.  
   
  [INotifySink2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
  Declara los métodos de notificación del receptor.  
@@ -44,7 +44,7 @@ En este tema se describe las interfaces no administradas que permiten a un compi
  Esta interfaz es el complemento de lectura a [ISymUnmanagedAsyncMethodPropertiesWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
   
  [ISymUnmanagedAsyncMethodPropertiesWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)  
- Permite la definición de la información de método asincrónico opcional por cada símbolo de método. Debe usar con un método abierto (es decir, entre las llamadas a la [OpenMethod (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)y [CloseMethod (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
+ Permite la definición de la información de método asincrónico opcional por el símbolo de método. Debe usar con un método abierto (es decir, entre las llamadas a la [OpenMethod (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)y [CloseMethod (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
   
  [ISymUnmanagedBinder (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
  Representa un enlazador de símbolos de código no administrado.  
@@ -77,10 +77,10 @@ En este tema se describe las interfaces no administradas que permiten a un compi
  Representa un espacio de nombres.  
   
  [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)  
- Representa un lector de símbolos que proporciona acceso a documentos, métodos y variables del sistema en un almacén de símbolos.  
+ Representa un lector de símbolos que proporciona acceso a documentos, métodos y variables dentro de un almacén de símbolos.  
   
  [ISymUnmanagedReader2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)  
- Obtiene un método del lector de símbolos según un token de método y un número de versión de editar y copiar.  
+ Obtiene un método del lector de símbolos dado un token de método y un número de versión de editar y copiar.  
   
  [ISymUnmanagedReaderSymbolSearchInfo (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)  
  Proporciona métodos que obtienen información de búsqueda de símbolos.  
@@ -95,19 +95,19 @@ En este tema se describe las interfaces no administradas que permiten a un compi
  Proporciona datos del servidor de origen para un módulo.  
   
  [ISymUnmanagedSymbolSearchInfo (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)  
- Proporciona métodos que obtienen información sobre la ruta de acceso de búsqueda.  
+ Proporciona métodos que obtienen información acerca de la ruta de acceso de búsqueda.  
   
  [ISymUnmanagedVariable (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
  Representa una variable, como un parámetro, una variable local o un campo.  
   
  [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- Representa un escritor de símbolos y proporciona métodos para definir documentos, puntos de secuencia, ámbitos léxicos y variables.  
+ Representa un escritor de símbolos y proporciona métodos para definir documentos, puntos de secuencia, los ámbitos léxicos y variables.  
   
  [ISymUnmanagedWriter2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- Representa un escritor de símbolos y proporciona métodos para definir documentos, puntos de secuencia, ámbitos léxicos y variables. Extiende el `ISymUnmanagedWriter` interfaz.  
+ Representa un escritor de símbolos y proporciona métodos para definir documentos, puntos de secuencia, los ámbitos léxicos y variables. Extiende la `ISymUnmanagedWriter` interfaz.  
   
  [ISymUnmanagedWriter3 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)  
- Representa un escritor de símbolos y proporciona métodos para definir documentos, puntos de secuencia, ámbitos léxicos y variables. Extiende el `ISymUnmanagedWriter` interfaz.  
+ Representa un escritor de símbolos y proporciona métodos para definir documentos, puntos de secuencia, los ámbitos léxicos y variables. Extiende la `ISymUnmanagedWriter` interfaz.  
   
  [ISymUnmanagedWriter4 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)  
  ISymUnmanagedWriter4 (interfaz).  

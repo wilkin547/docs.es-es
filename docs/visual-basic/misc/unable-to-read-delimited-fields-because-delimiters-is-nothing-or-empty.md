@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_DelimitersNothing
 ms.assetid: 94f64c48-8e17-449d-b92a-0426efec879c
 ms.openlocfilehash: a431c8df582a3d02c8bfc9ac259725087aacb05e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668944"
 ---
 # <a name="unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty"></a>No se pueden leer campos delimitados porque la propiedad Delimiters tiene un valor Nothing o está vacía.
 `TextFieldParser` no puede leer el archivo porque la propiedad `Delimiters` está establecida en `Nothing` o está vacía.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Suministre un valor válido para `Delimiters`.  
+- Suministre un valor válido para `Delimiters`.  
   
 ## <a name="see-also"></a>Vea también
 

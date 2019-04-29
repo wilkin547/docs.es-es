@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73d5c98500c510630b1f8d6081b654a6dbd88a5b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771806"
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>ICLRMetaHostPolicy::GetRequestedRuntime (Método)
 
@@ -46,7 +46,7 @@ HRESULT GetRequestedRuntime(
 
 ## <a name="parameters"></a>Parámetros
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`dwPolicyFlags`|[in] Obligatorio. Especifica un miembro de la [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) enumeración, que representa una directiva de enlace y cualquier número de modificadores. La única directiva que está disponible actualmente es [METAHOST_POLICY_HIGHCOMPAT](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).<br /><br /> Los modificadores son [METAHOST_POLICY_EMULATE_EXE_LAUNCH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_APPLY_UPGRADE_POLICY](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_SHOW_ERROR_DIALOG](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_USE_PROCESS_IMAGE_PATH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), y [METAHOST_POLICY_ENSURE_SKU_SUPPORTED](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).|
 |`pwzBinary`|[in] Opcional. Especifica la ruta de acceso del archivo del ensamblado.|
@@ -78,9 +78,9 @@ Este método devuelve los siguientes HRESULT específicos y los errores HRESULT 
 |HRESULT|Descripción|
 |-------------|-----------------|
 |S_OK|El método se completó correctamente.|
-|E_POINTER|`pwzVersion` no es nulo y `pcchVersion` es nulo.<br /><br /> O bien<br /><br /> `pwzImageVersion` no es nulo y `pcchImageVersion` es nulo.|
+|E_POINTER|`pwzVersion` no es nulo y `pcchVersion` es nulo.<br /><br /> -o bien-<br /><br /> `pwzImageVersion` no es nulo y `pcchImageVersion` es nulo.|
 |E_INVALIDARG|`dwPolicyFlags` no especifica `METAHOST_POLICY_HIGHCOMPAT`.|
-|ERROR_INSUFFICIENT_BUFFER|La memoria asignada a `pwzVersion` no es adecuada.<br /><br /> O bien<br /><br /> La memoria asignada a `pwzImageVersion` no es adecuada.|
+|ERROR_INSUFFICIENT_BUFFER|La memoria asignada a `pwzVersion` no es adecuada.<br /><br /> -o bien-<br /><br /> La memoria asignada a `pwzImageVersion` no es adecuada.|
 |CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags` incluye METAHOST_POLICY_APPLY_UPGRADE_POLICY y tanto `pwzVersion` como `pcchVersion` son nulos.|
 
 ## <a name="requirements"></a>Requisitos

@@ -3,11 +3,11 @@ title: Programación orientada a objetos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
 ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783518"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Programación orientada a objetos (Visual Basic)
 
@@ -217,7 +217,7 @@ Todas las clases y miembros de clase pueden especificar el nivel de acceso que p
 
 Están disponibles los siguientes modificadores de acceso:
 
-|Modificador de Visual Basic|de esquema JSON|
+|Modificador de Visual Basic|Definición|
 |---------------------------|----------------|
 |[Public](../../../visual-basic/language-reference/modifiers/public.md)|Puede obtener acceso al tipo o miembro cualquier otro código del mismo ensamblado o de otro ensamblado que haga referencia a éste.|
 |[Private](../../../visual-basic/language-reference/modifiers/private.md)|Solamente puede obtener acceso al tipo o miembro el código de la misma clase.|
@@ -338,7 +338,7 @@ De forma predeterminada, una clase derivada hereda todos los miembros de su clas
 
 Los siguientes modificadores se utilizan para controlar cómo se reemplazan propiedades y métodos:
 
-|Modificador de Visual Basic|de esquema JSON|
+|Modificador de Visual Basic|Definición|
 |---------------------------|----------------|
 |[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|Permite invalidar un miembro de una clase derivada.|
 |[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|Invalida un miembro virtual (invalidable) definido en la clase base.|

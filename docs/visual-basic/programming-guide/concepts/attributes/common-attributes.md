@@ -3,24 +3,24 @@ title: Atributos comunes (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
 ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794035"
 ---
 # <a name="common-attributes-visual-basic"></a>Atributos comunes (Visual Basic)
 En este tema se describe los atributos que se usan normalmente en programas de Visual Basic.  
   
--   [Atributos globales](#Global)  
+- [Atributos globales](#Global)  
   
--   [Atributo Obsolete](#Obsolete)  
+- [Atributo Obsolete](#Obsolete)  
   
--   [Atributo Conditional](#Conditional)  
+- [Atributo Conditional](#Conditional)  
   
--   [Atributos de información del llamador](#CallerInfo)  
+- [Atributos de información del llamador](#CallerInfo)  
   
--   [Atributos de Visual Basic](#VB)  
+- [Atributos de Visual Basic](#VB)  
   
 ## <a name="Global"></a> Atributos globales  
  La mayoría de los atributos se aplican a elementos específicos del lenguaje, como las clases o los métodos, aunque algunos atributos son globales (se aplican a todo un ensamblado o módulo). Por ejemplo, el atributo <xref:System.Reflection.AssemblyVersionAttribute> se puede usar para insertar información de versión en un ensamblado, como en este ejemplo:  
@@ -33,11 +33,11 @@ En este tema se describe los atributos que se usan normalmente en programas de V
   
  Los atributos de ensamblado son valores que proporcionan información sobre un ensamblado. Se dividen en las siguientes categorías:  
   
--   Atributos de identidad del ensamblado  
+- Atributos de identidad del ensamblado  
   
--   Atributos informativos  
+- Atributos informativos  
   
--   Atributos de manifiesto del ensamblado  
+- Atributos de manifiesto del ensamblado  
   
 ### <a name="assembly-identity-attributes"></a>Atributos de identidad del ensamblado  
  Tres atributos, con un nombre seguro (si procede), determinan la identidad de un ensamblado: nombre, versión y referencia cultural. Estos atributos forman el nombre completo del ensamblado y son necesarios cuando se hace referencia a este en el código. Puede establecer la versión y la referencia cultural de un ensamblado mediante atributos, pero el valor de nombre lo establece el compilador, el IDE de Visual Studio en el [cuadro de diálogo de información de ensamblado](/visualstudio/ide/reference/assembly-information-dialog-box) o la herramienta Assembly Linker (Al.exe) cuando se crea el ensamblado, a partir del archivo que contiene el manifiesto del ensamblado. El atributo <xref:System.Reflection.AssemblyFlagsAttribute> especifica si pueden coexistir varias copias del ensamblado.  

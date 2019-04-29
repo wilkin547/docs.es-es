@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
 ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943356"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Procedimiento Controlar la disponibilidad de una Variable (Visual Basic)
 Controlar la disponibilidad de una variable especificando su *nivel de acceso*. El nivel de acceso determina qué código tiene permiso para leer o escribir en la variable.  
   
--   *Variables de miembro* (definido en el nivel de módulo y fuera de cualquier procedimiento) predeterminado para el acceso público, lo que significa que cualquier código que pueda verlos puede tener acceso a ellos. Puede cambiar esto especificando un modificador de acceso.  
+- *Variables de miembro* (definido en el nivel de módulo y fuera de cualquier procedimiento) predeterminado para el acceso público, lo que significa que cualquier código que pueda verlos puede tener acceso a ellos. Puede cambiar esto especificando un modificador de acceso.  
   
--   *Las variables locales* (definido dentro de un procedimiento) nominalmente tienen acceso público, aunque sólo el código dentro de su procedimiento puede tener acceso a ellos. No se puede cambiar el nivel de acceso de una variable local, pero puede cambiar el nivel de acceso del procedimiento que lo contiene.  
+- *Las variables locales* (definido dentro de un procedimiento) nominalmente tienen acceso público, aunque sólo el código dentro de su procedimiento puede tener acceso a ellos. No se puede cambiar el nivel de acceso de una variable local, pero puede cambiar el nivel de acceso del procedimiento que lo contiene.  
   
  Para obtener más información, consulte [tener acceso a los niveles en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   

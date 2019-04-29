@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
 ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938767"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Atributos de CLR relacionados con XAML para los tipos y bibliotecas personalizados
 En este tema se describe los atributos de runtime (CLR) de lenguaje comunes que se definen por los servicios XAML de .NET Framework. También describe otros atributos CLR que se definen en .NET Framework que tienen un escenario relacionado con el XAML para que los ensamblados o tipos de aplicación. Atribución de ensamblados, tipos o miembros con estos atributos CLR proporciona información de sistema de tipos XAML relacionada con los tipos. Se proporciona información a cualquier consumidor XAML que usa los servicios XAML de .NET Framework para procesar el flujo de nodo XAML directamente o a través de los lectores XAML dedicados y escritores XAML.  
@@ -90,9 +90,9 @@ En este tema se describe los atributos de runtime (CLR) de lenguaje comunes que 
   
  **Argumentos:** Admite dos formas de atribución:  
   
--   Una cadena que especifica el nombre de una propiedad en el tipo con atributos.  
+- Una cadena que especifica el nombre de una propiedad en el tipo con atributos.  
   
--   Una cadena que especifica el nombre de una propiedad y un <xref:System.Type> para el tipo que define la propiedad con nombre. Este formulario sirve para especificar a un miembro adjuntable que la propiedad de ámbito de nombres XAML.  
+- Una cadena que especifica el nombre de una propiedad y un <xref:System.Type> para el tipo que define la propiedad con nombre. Este formulario sirve para especificar a un miembro adjuntable que la propiedad de ámbito de nombres XAML.  
   
  <xref:System.Windows.Markup.NameScopePropertyAttribute> Especifica una propiedad que proporciona el valor de ámbito de nombres XAML para la clase con atributos. Se espera la propiedad de ámbito de nombres XAML que hacen referencia a un objeto que implementa <xref:System.Windows.Markup.INameScope> y contiene el ámbito de nombres XAML real, su almacén y su comportamiento.  
   
@@ -219,9 +219,9 @@ En este tema se describe los atributos de runtime (CLR) de lenguaje comunes que 
   
  **Argumentos:**  
   
--   Una cadena que especifica el identificador del espacio de nombres XAML para agregar.  
+- Una cadena que especifica el identificador del espacio de nombres XAML para agregar.  
   
--   Una cadena que especifica el identificador del espacio de nombres XAML que pueden incluir el espacio de nombres XAML del argumento anterior.  
+- Una cadena que especifica el identificador del espacio de nombres XAML que pueden incluir el espacio de nombres XAML del argumento anterior.  
   
  <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> Especifica que otro espacio de nombres XAML puede incluir un espacio de nombres XAML. Normalmente, el espacio de nombres XAML que realiza la inclusión se indica en un objeto <xref:System.Windows.Markup.XmlnsDefinitionAttribute> definido anteriormente. Esta técnica se puede usar para las versiones de un vocabulario XAML en una biblioteca y para que sea compatible con el marcado definido previamente en el vocabulario con versiones anteriores.  
   
@@ -230,40 +230,40 @@ En este tema se describe los atributos de runtime (CLR) de lenguaje comunes que 
   
  **Argumentos:**  
   
--   Una cadena que especifica el identificador del espacio de nombres XAML para definir.  
+- Una cadena que especifica el identificador del espacio de nombres XAML para definir.  
   
--   Una cadena que asigna un espacio de nombres CLR. El espacio de nombres CLR debe definir los tipos públicos en el ensamblado y, al menos uno de los tipos del espacio de nombres CLR debe ser destinado al uso XAML.  
+- Una cadena que asigna un espacio de nombres CLR. El espacio de nombres CLR debe definir los tipos públicos en el ensamblado y, al menos uno de los tipos del espacio de nombres CLR debe ser destinado al uso XAML.  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> Especifica una asignación en cada ensamblado entre un espacio de nombres XAML y un espacio de nombres CLR que se usa para la resolución de tipos por un escritor de objetos XAML o un contexto de esquema XAML.  
   
  Más de un <xref:System.Windows.Markup.XmlnsDefinitionAttribute> pueden aplicarse a un ensamblado. Esto puede hacerse para cualquier combinación de los siguientes motivos:  
   
--   El diseño de la biblioteca contiene varios espacios de nombres CLR para la organización lógica de acceso de API de tiempo de ejecución; Sin embargo, desea que todos los tipos de esos espacios de nombres se puede usar XAML haciendo referencia al mismo espacio de nombres XAML. En este caso, se aplican varios <xref:System.Windows.Markup.XmlnsDefinitionAttribute> atributos con el mismo <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> valor, pero con distintos <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> valores. Esto es especialmente útil si va a definir las asignaciones para el espacio de nombres XAML que el marco de trabajo o la aplicación pretende ser el espacio de nombres XAML predeterminado de uso común.  
+- El diseño de la biblioteca contiene varios espacios de nombres CLR para la organización lógica de acceso de API de tiempo de ejecución; Sin embargo, desea que todos los tipos de esos espacios de nombres se puede usar XAML haciendo referencia al mismo espacio de nombres XAML. En este caso, se aplican varios <xref:System.Windows.Markup.XmlnsDefinitionAttribute> atributos con el mismo <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> valor, pero con distintos <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> valores. Esto es especialmente útil si va a definir las asignaciones para el espacio de nombres XAML que el marco de trabajo o la aplicación pretende ser el espacio de nombres XAML predeterminado de uso común.  
   
--   El diseño de la biblioteca contiene varios espacios de nombres CLR y desea una separación de espacio de nombres XAML deliberada entre los usos de tipos en los espacios de nombres CLR.  
+- El diseño de la biblioteca contiene varios espacios de nombres CLR y desea una separación de espacio de nombres XAML deliberada entre los usos de tipos en los espacios de nombres CLR.  
   
--   Definir un espacio de nombres CLR del ensamblado, y desea que sea accesible a través de más de un espacio de nombres XAML. Este escenario se produce cuando son compatibles con varios vocabularios con el mismo código base.  
+- Definir un espacio de nombres CLR del ensamblado, y desea que sea accesible a través de más de un espacio de nombres XAML. Este escenario se produce cuando son compatibles con varios vocabularios con el mismo código base.  
   
--   Definir la compatibilidad con el lenguaje XAML en uno o varios espacios de nombres CLR. En estos casos, el <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> valor debe ser `http://schemas.microsoft.com/winfx/2006/xaml`.  
+- Definir la compatibilidad con el lenguaje XAML en uno o varios espacios de nombres CLR. En estos casos, el <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> valor debe ser `http://schemas.microsoft.com/winfx/2006/xaml`.  
   
 ### <a name="xmlnsprefixattribute"></a>XmlnsPrefixAttribute  
  **Documentación de referencia:**  <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
   
  **Argumentos:**  
   
--   Una cadena que especifica el identificador de un espacio de nombres XAML.  
+- Una cadena que especifica el identificador de un espacio de nombres XAML.  
   
--   Cadena que especifica un prefijo recomendado.  
+- Cadena que especifica un prefijo recomendado.  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> Especifica un prefijo recomendado para usar un espacio de nombres XAML. El prefijo es útil al escribir elementos y atributos en un archivo XAML que se serializa mediante los servicios XAML de .NET Framework <xref:System.Xaml.XamlXmlWriter>, o cuando una biblioteca de implementación de XAML interactúa con un entorno de diseño que tiene el XAML de las características de edición.  
   
  Más de un <xref:System.Windows.Markup.XmlnsPrefixAttribute> pueden aplicarse a un ensamblado. Esto puede hacerse para cualquier combinación de los siguientes motivos:  
   
--   El ensamblado define los tipos de más de un espacio de nombres XAML. En este caso debe definir los valores de prefijo diferente para cada espacio de nombres XAML.  
+- El ensamblado define los tipos de más de un espacio de nombres XAML. En este caso debe definir los valores de prefijo diferente para cada espacio de nombres XAML.  
   
--   Son compatibles con varios vocabularios y usar prefijos diferentes para cada vocabulario y el espacio de nombres XAML.  
+- Son compatibles con varios vocabularios y usar prefijos diferentes para cada vocabulario y el espacio de nombres XAML.  
   
--   Definir la compatibilidad con el lenguaje XAML en el ensamblado y tienen un <xref:System.Windows.Markup.XmlnsDefinitionAttribute> para `http://schemas.microsoft.com/winfx/2006/xaml`. En este caso, normalmente debe promover el prefijo `x`.  
+- Definir la compatibilidad con el lenguaje XAML en el ensamblado y tienen un <xref:System.Windows.Markup.XmlnsDefinitionAttribute> para `http://schemas.microsoft.com/winfx/2006/xaml`. En este caso, normalmente debe promover el prefijo `x`.  
   
 > [!NOTE]
 >  Servicios XAML de .NET framework también define el atributo relacionado con el XAML <xref:System.Windows.Markup.RootNamespaceAttribute>. Este atributo es un atributo de nivel de ensamblado para la compatibilidad con el sistema de proyecto y no es relevante para los tipos personalizados de XAML.  

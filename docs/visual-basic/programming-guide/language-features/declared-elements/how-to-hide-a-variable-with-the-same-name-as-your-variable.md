@@ -13,18 +13,18 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
 ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794711"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Procedimiento Ocultar una Variable con el mismo nombre que su Variable (Visual Basic)
 Puede ocultar una variable por *sombrear* él, es decir, si se redefine con una variable del mismo nombre. Puede reemplazar la variable que desea ocultar de dos maneras:  
   
--   **Sombreado por ámbito.** Puede ocultar a través de ámbito por si vuelve a declarar dentro de una subregión de la región que contiene la variable que desea ocultar.  
+- **Sombreado por ámbito.** Puede ocultar a través de ámbito por si vuelve a declarar dentro de una subregión de la región que contiene la variable que desea ocultar.  
   
--   **Sombreado por herencia.** Si la variable que desea ocultar se define en el nivel de clase, puede reemplazar mediante herencia volviéndola a declarar con la [sombras](../../../../visual-basic/language-reference/modifiers/shadows.md) palabra clave en una clase derivada.  
+- **Sombreado por herencia.** Si la variable que desea ocultar se define en el nivel de clase, puede reemplazar mediante herencia volviéndola a declarar con la [sombras](../../../../visual-basic/language-reference/modifiers/shadows.md) palabra clave en una clase derivada.  
   
 ## <a name="two-ways-to-hide-a-variable"></a>Dos maneras para ocultar una Variable  
   

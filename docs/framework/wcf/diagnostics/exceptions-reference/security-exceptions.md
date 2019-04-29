@@ -3,11 +3,11 @@ title: Excepciones de seguridad
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 ms.openlocfilehash: c1eeca9111837b9833de54ecafbc981d1c2b6343
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780866"
 ---
 # <a name="security-exceptions"></a>Excepciones de seguridad
 En este tema se enumeran todas las excepciones de seguridad.  
@@ -29,8 +29,8 @@ En este tema se enumeran todas las excepciones de seguridad.
 |CachedNegotiationStateQuotaReached|El servicio no puede almacenar en caché el estado de la negociación cuando se ha alcanzado la capacidad especificada. Reintente la solicitud.|  
 |CacheQuotaReached|No se puede agregar el elemento. Se especifica el tamaño de caché máximo.|  
 |CannotDetermineSPNBasedOnAddress|El cliente no puede determinar el nombre de la entidad de seguridad del servicio basándose en la identidad en la dirección de destino especificada con el propósito de SspiNegotiation/Kerberos. La identidad de la dirección de destino debe ser una identidad UPN (como acmedomain\\\alice) o identidad SPN (como host/bobs-machine).|  
-|CannotFindCert|No se puede encontrar el certificado X.509 mediante el criterio de búsqueda concreto: StoreName, StoreLocation, FindType, FindValue.|  
-|CannotFindCertForTarget|No se puede encontrar el certificado X.509 mediante el criterio de búsqueda concreto: StoreName, StoreLocation, FindType, FindValue para el destino especificado.|  
+|CannotFindCert|No se encuentra el certificado X.509 mediante los criterios de búsqueda especificado: StoreName, StoreLocation, FindType, FindValue.|  
+|CannotFindCertForTarget|No se encuentra el certificado X.509 con los criterios de búsqueda especificado: StoreName, StoreLocation, FindType, FindValue para el destino especificado.|  
 |CannotFindCorrelationStateForApplyingSecurity|No se puede encontrar el estado de correlación para aplicar la seguridad para responder en el respondedor.|  
 |CannotFindNegotiationState|No se puede encontrar el estado de negociación para el contexto especificado.|  
 |CannotFindSecuritySession|No se puede encontrar la sesión de seguridad con el id. especificado.|  
@@ -48,18 +48,18 @@ En este tema se enumeran todas las excepciones de seguridad.
 |ClientCredentialTypeMustBeSpecifiedForMixedMode|ClientCredentialType.None no es válido para el modo de seguridad de TransportWithMessageCredential. Especifique un tipo de credencial o utilice un modo de seguridad diferente.|  
 |ConfigurationSchemaInsuffientForSecurityBindingElementInstance|El esquema de configuración no es suficiente para describir la configuración no estándar del siguiente elemento de enlace de seguridad:|  
 |DerivedKeyTokenGenerationAndLengthTooHigh|La generación y longitud especificada de la clave derivada producen un desplazamiento de derivación de claves mayor que el desplazamiento máximo permitido.|  
-|DnsIdentityCheckFailedForIncomingMessage|Error en la comprobación de identidad para el mensaje entrante. Se especificó la identidad del sistema de nombres de dominio (DNS) esperada del extremo remoto. El extremo remoto proporcionó la demanda especificada del sistema de nombres de dominio (DNS). Si éste es un extremo remoto legítimo, puede corregir el problema especificando la identidad del sistema de nombres de dominio como la propiedad de identidad de EndpointAddress al crear el proxy del canal.|  
+|DnsIdentityCheckFailedForIncomingMessage|Error en la comprobación de identidad para el mensaje entrante. Se especificó la identidad del sistema de nombres de dominio (DNS) esperada del punto de conexión remoto. El extremo remoto proporcionó la demanda especificada del sistema de nombres de dominio (DNS). Si éste es un punto de conexión remoto legítimo, puede corregir el problema especificando la identidad del sistema de nombres de dominio como la propiedad de identidad de EndpointAddress al crear el proxy del canal.|  
 |DnsIdentityCheckFailedForOutgoingMessage|Error en la comprobación de identidad para el mensaje que estaba saliendo. El punto de conexión remoto debería haber tenido la identidad especificada del sistema de nombres de dominio. El extremo remoto proporcionó la demanda del sistema de nombres de dominio (DNS). Si éste es un punto de conexión remoto legítimo, puede corregir el problema especificando de manera explícita la identidad DNS como la propiedad Identity de EndpointAddress al crear el proxy del canal.|  
 |DuplicateIdInMessageToBeVerified|El id. especificado se produjo dos veces en el mensaje que se suministra para la comprobación.|  
 |EmptyBase64Attribute|Un valor vacío se encontró para el espacio de nombres y nombre de atributo de base64 necesario.|  
 |ExportOfBindingWithAsymmetricAndTransportSecurityNotSupported|Error en la exportación de la directiva de seguridad. El enlace contiene un elemento AsymmetricSecurityBindingElement y otro de enlace de transporte seguro. No se admite la exportación de directivas para este tipo de enlaces.|  
 |ExportOfBindingWithSymmetricAndTransportSecurityNotSupported|Error en la exportación de la directiva de seguridad. El enlace contiene un elemento SymmetricSecurityBindingElement y otro de enlace de transporte seguro. No se admite la exportación de directivas para este tipo de enlaces.|  
 |ExportOfBindingWithTransportSecurityBindingElementAndNoTransportSecurityNotSupported|Error en la exportación de la directiva de seguridad. El enlace contiene un TransportSecurityBindingElement pero ningún elemento de enlace de transporte que implemente ITransportTokenAssertionProvider. No se admite la exportación de directivas para este tipo de enlaces. Asegúrese de que el elemento de enlace de transporte en el enlace implementa la interfaz ITransportTokenAssertionProvider.|  
-|FoundMultipleCerts|Se encontraron varios certificados X.509 mediante el criterio de búsqueda especificado: StoreName, StoreLocation, FindType, FindValue. Proporcione un valor de búsqueda más concreto.|  
-|FoundMultipleCertsForTarget|Se encontraron múltiples certificados X.509 mediante el criterio de búsqueda especificado: StoreName, StoreLocation, FindType, FindValue para el destino especificado. Proporcione un valor de búsqueda más concreto.|  
+|FoundMultipleCerts|Se encontró varios certificados X.509 con los criterios de búsqueda especificado: StoreName, StoreLocation, FindType, FindValue. Proporcione un valor de búsqueda más concreto.|  
+|FoundMultipleCertsForTarget|Se encontró varios certificados X.509 con los criterios de búsqueda especificado: StoreName, StoreLocation, FindType, FindValue para el destino especificado. Proporcione un valor de búsqueda más concreto.|  
 |HeaderDecryptionNotSupportedInWsSecurityJan2004|SecurityVersion.WSSecurityJan2004 no admite el descifrado de encabezados. Utilice SecurityVersion.WsSecurityXXX2005 y superiores o utilice seguridad de transporte para cifrar el mensaje completo.|  
 |IdentityCheckFailedForIncomingMessage|Error en la comprobación de identidad para el mensaje entrante. La identidad esperada se especifica para el punto de conexión de destino.|  
-|IdentityCheckFailedForOutgoingMessage|Error en la comprobación de identidad para el mensaje saliente. La identidad esperada se especifica para el extremo de destino.|  
+|IdentityCheckFailedForOutgoingMessage|Error en la comprobación de identidad para el mensaje saliente. La identidad esperada se especifica para el punto de conexión de destino.|  
 |IncorrectSpnOrUpnSpecified|Error de autenticación de la interfaz del proveedor de compatibilidad para seguridad (SSPI). Es posible que el servidor no se esté ejecutando en una cuenta con la identidad especificada. Si el servidor se está ejecutando en una cuenta de servicio (servicio de red, por ejemplo), especifique el ServicePrincipalName de la cuenta como la identidad en la EndpointAddress para el servidor. Si el servidor se está ejecutando en una cuenta de usuario, especifique el UserPrincipalName de la cuenta como la identidad en la EndpointAddress para el servidor.|  
 |InvalidAttributeInSignedHeader|El encabezado firmado especificado contiene el atributo especificado. Se especifica el atributo esperado.|  
 |InvalidCloseResponseAction|Se recibió una respuesta de cierre de sesión de seguridad con la acción no válida especificada.|  

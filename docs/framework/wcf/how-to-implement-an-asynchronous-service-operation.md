@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
 ms.openlocfilehash: 603ee57475b3e7b1af607d49050e3276fd3082d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929082"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Procedimiento para implementar una operación de servicios asincrónica
 En las aplicaciones de Windows Communication Foundation (WCF), una operación de servicio se puede implementar forma sincrónica o asincrónica sin dictar al cliente cómo llamarla. Por ejemplo, operaciones de servicio asincrónicas pueden llamarse de forma sincrónica, y las operaciones de servicio sincrónicas pueden llamarse de forma asincrónica. Para obtener un ejemplo que muestra cómo llamar a una operación de forma asincrónica en una aplicación cliente, consulte [Cómo: Llamar a las operaciones de servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Para obtener más información acerca de las operaciones sincrónicas y asincrónicas, vea [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) y [sincrónica y operaciones asincrónicas](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). En este tema se describe la estructura básica de una operación de servicio asincrónica, el código no está completo. Para obtener un ejemplo completo de los lados del servicio y el cliente, consulte [asincrónico](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
@@ -34,11 +34,11 @@ En las aplicaciones de Windows Communication Foundation (WCF), una operación de
   
 1. Una interfaz del contrato de servicio con:  
   
-    1.  Una operación `SampleMethod` sincrónica.  
+    1. Una operación `SampleMethod` sincrónica.  
   
-    2.  Una operación `BeginSampleMethod` asincrónica.  
+    2. Una operación `BeginSampleMethod` asincrónica.  
   
-    3.  Asincrónico `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` par de operaciones.  
+    3. Asincrónico `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` par de operaciones.  
   
 2. Una implementación de servicio mediante un objeto <xref:System.IAsyncResult?displayProperty=nameWithType>.  
   

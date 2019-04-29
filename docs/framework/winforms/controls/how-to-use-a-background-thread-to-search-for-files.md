@@ -11,11 +11,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
 ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785858"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Procedimiento para usar un subproceso en segundo plano para buscar archivos
 El <xref:System.ComponentModel.BackgroundWorker> componente reemplaza y agrega funcionalidad a la <xref:System.Threading> espacio de nombres; sin embargo, el <xref:System.Threading> espacio de nombres se conserva por compatibilidad con versiones anteriores y uso futuro, si elige. Para obtener más información, consulte [general sobre el componente BackgroundWorker](backgroundworker-component-overview.md).  
@@ -28,13 +28,13 @@ El <xref:System.ComponentModel.BackgroundWorker> componente reemplaza y agrega f
   
  El ejemplo siguiente (`DirectorySearcher`) muestra un control Windows Forms multiproceso que utiliza un subproceso en segundo plano para buscar de forma recursiva un directorio para archivos que coinciden con una cadena de búsqueda especificado y, a continuación, rellena el cuadro de lista con el resultado de búsqueda. Los conceptos clave que se muestra en el ejemplo son los siguientes:  
   
--   `DirectorySearcher` inicia un nuevo subproceso para llevar a cabo la búsqueda. El subproceso se ejecuta el `ThreadProcedure` método que a su vez llama a la aplicación auxiliar `RecurseDirectory` método para realizar la búsqueda y rellenar el cuadro de lista. Sin embargo, para rellenar el cuadro de lista requiere una llamada entre subprocesos, como se explica en los siguientes dos elementos con viñetas.  
+- `DirectorySearcher` inicia un nuevo subproceso para llevar a cabo la búsqueda. El subproceso se ejecuta el `ThreadProcedure` método que a su vez llama a la aplicación auxiliar `RecurseDirectory` método para realizar la búsqueda y rellenar el cuadro de lista. Sin embargo, para rellenar el cuadro de lista requiere una llamada entre subprocesos, como se explica en los siguientes dos elementos con viñetas.  
   
--   `DirectorySearcher` define el `AddFiles` método para agregar archivos a un cuadro de lista; sin embargo, `RecurseDirectory` no se puede invocar directamente `AddFiles` porque `AddFiles` pueden ejecutar solo en el subproceso STA que creó `DirectorySearcher`.  
+- `DirectorySearcher` define el `AddFiles` método para agregar archivos a un cuadro de lista; sin embargo, `RecurseDirectory` no se puede invocar directamente `AddFiles` porque `AddFiles` pueden ejecutar solo en el subproceso STA que creó `DirectorySearcher`.  
   
--   La única manera de `RecurseDirectory` puede llamar a `AddFiles` es a través de una llamada entre subprocesos, es decir, al llamar a <xref:System.Windows.Forms.Control.Invoke%2A> o <xref:System.Windows.Forms.Control.BeginInvoke%2A> para calcular las referencias `AddFiles` al subproceso de la creación de `DirectorySearcher`. `RecurseDirectory` usa <xref:System.Windows.Forms.Control.BeginInvoke%2A> para que la llamada puede realizarse de manera asincrónica.  
+- La única manera de `RecurseDirectory` puede llamar a `AddFiles` es a través de una llamada entre subprocesos, es decir, al llamar a <xref:System.Windows.Forms.Control.Invoke%2A> o <xref:System.Windows.Forms.Control.BeginInvoke%2A> para calcular las referencias `AddFiles` al subproceso de la creación de `DirectorySearcher`. `RecurseDirectory` usa <xref:System.Windows.Forms.Control.BeginInvoke%2A> para que la llamada puede realizarse de manera asincrónica.  
   
--   Un método de cálculo de referencias requiere el equivalente de un puntero de función o una devolución de llamada. Esto se logra mediante delegados en .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> toma a un delegado como argumento. `DirectorySearcher` por lo tanto, define un delegado (`FileListDelegate`), enlaza `AddFiles` a una instancia de `FileListDelegate` en su constructor y pasa a la instancia de este delegado <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` También define a un delegado de eventos que se calcula cuando se ha completado la búsqueda.  
+- Un método de cálculo de referencias requiere el equivalente de un puntero de función o una devolución de llamada. Esto se logra mediante delegados en .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> toma a un delegado como argumento. `DirectorySearcher` por lo tanto, define un delegado (`FileListDelegate`), enlaza `AddFiles` a una instancia de `FileListDelegate` en su constructor y pasa a la instancia de este delegado <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` También define a un delegado de eventos que se calcula cuando se ha completado la búsqueda.  
   
 ```vb  
 Option Strict  

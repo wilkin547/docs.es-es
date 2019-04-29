@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
 ms.openlocfilehash: 88e13fcd03c6a10cf1450cec90f9ca60aedc3eb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778721"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 Un modificador de acceso de miembro que especifica que uno o varios elementos de programación declaran están accesibles únicamente desde dentro de su propia clase o desde una clase derivada.  
@@ -30,15 +30,15 @@ Un modificador de acceso de miembro que especifica que uno o varios elementos de
   
 ## <a name="rules"></a>Reglas  
   
--   **Contexto de declaración.** Puede usar `Protected` sólo en el nivel de clase. Esto significa que el contexto de declaración de un `Protected` elemento debe ser una clase y no puede ser un archivo de código fuente, espacio de nombres, interfaz, módulo, estructura o procedimiento.  
+- **Contexto de declaración.** Puede usar `Protected` sólo en el nivel de clase. Esto significa que el contexto de declaración de un `Protected` elemento debe ser una clase y no puede ser un archivo de código fuente, espacio de nombres, interfaz, módulo, estructura o procedimiento.  
 
 ## <a name="behavior"></a>Comportamiento  
   
--   **Nivel de acceso.** Todo el código en una clase puede tener acceso a sus elementos. Código de cualquier clase que derive de una clase base puede tener acceso a todas las `Protected` elementos de la clase base. Esto es cierto para todas las generaciones de derivación. Esto significa que puede tener acceso una clase `Protected` elementos de la clase base de la clase base y así sucesivamente.  
+- **Nivel de acceso.** Todo el código en una clase puede tener acceso a sus elementos. Código de cualquier clase que derive de una clase base puede tener acceso a todas las `Protected` elementos de la clase base. Esto es cierto para todas las generaciones de derivación. Esto significa que puede tener acceso una clase `Protected` elementos de la clase base de la clase base y así sucesivamente.  
   
      Acceso protegido no es un supraconjunto ni un subconjunto de acceso de confianza.  
   
--   **Modificadores de acceso.** Las palabras clave que especifican el nivel de acceso se denominan *modificadores de acceso*. Para obtener una comparación de los modificadores de acceso, consulte [tener acceso a los niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Modificadores de acceso.** Las palabras clave que especifican el nivel de acceso se denominan *modificadores de acceso*. Para obtener una comparación de los modificadores de acceso, consulte [tener acceso a los niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  El modificador `Protected` se puede utilizar en los contextos siguientes:  
   

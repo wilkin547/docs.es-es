@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651628"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum (Interfaz)
 Proporciona un enumerador para los objetos que se recolectarán como elementos no utilizados.  
@@ -39,11 +39,11 @@ Proporciona un enumerador para los objetos que se recolectarán como elementos n
   
  El [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objetos de la colección que se rellena mediante este método representan tres tipos de objetos:  
   
--   Objetos de todas las pilas administradas. Esto incluye referencias activas en código administrado, así como los objetos creados por common language runtime.  
+- Objetos de todas las pilas administradas. Esto incluye referencias activas en código administrado, así como los objetos creados por common language runtime.  
   
--   Objetos de la tabla de identificadores. Esto incluye las referencias fuertes (`HNDTYPE_STRONG` y `HNDTYPE_REFCOUNT`) y las variables estáticas en un módulo.  
+- Objetos de la tabla de identificadores. Esto incluye las referencias fuertes (`HNDTYPE_STRONG` y `HNDTYPE_REFCOUNT`) y las variables estáticas en un módulo.  
   
--   Objetos de la cola del finalizador. La cola del finalizador raíces objetos hasta que se ha ejecutado el finalizador.  
+- Objetos de la cola del finalizador. La cola del finalizador raíces objetos hasta que se ha ejecutado el finalizador.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

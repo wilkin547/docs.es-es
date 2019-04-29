@@ -1,18 +1,18 @@
 ---
-title: Hospedaje de un servicio WCF en una aplicación administrada
+title: Procedimiento para hospedar un servicio WCF en una aplicación administrada
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
 ms.openlocfilehash: 131d99457427e0818f78076d987f550a99ad7cf0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929316"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Cómo: hospedar un servicio WCF en una aplicación administrada
+# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Procedimiento Hospedar un servicio WCF en una aplicación administrada
 
 Para hospedar un servicio dentro de una aplicación administrada, incruste el código del servicio dentro del código de la aplicación administrada, defina un extremo para el servicio de manera imperativa mediante código, de manera declarativa mediante configuración o usando extremos predeterminados y, a continuación, cree una instancia de <xref:System.ServiceModel.ServiceHost>.
 
@@ -50,7 +50,7 @@ El siguiente procedimiento muestra cómo implementar un servicio autohospedado e
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > Para obtener más información acerca de cómo definir e implementar una interfaz de servicio, consulte [Cómo: definir un contrato de servicio](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) y [Cómo: implementar un contrato de servicio](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
+    > Para obtener más información acerca de cómo definir e implementar una interfaz de servicio, vea [Cómo: Definir un contrato de servicio](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) y [Cómo: Implementar un contrato de servicio](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
 
 5. Al principio del método `Main`, cree una instancia de la clase <xref:System.Uri> con la dirección base del servicio.
 
@@ -63,7 +63,7 @@ El siguiente procedimiento muestra cómo implementar un servicio autohospedado e
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]
 
     > [!NOTE]
-    > En este ejemplo se usan puntos de conexión predeterminados, y este servicio no requiere ningún archivo de configuración. Si no se configura ningún punto de conexión, el tiempo de ejecución crea uno para cada dirección base de cada contrato de servicio implementado por el servicio. Para obtener más información sobre los puntos de conexión predeterminados, consulte [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+    > En este ejemplo se usan puntos de conexión predeterminados, y este servicio no requiere ningún archivo de configuración. Si no se configura ningún extremo, el tiempo de ejecución crea uno para cada dirección base de cada contrato de servicio implementado por el servicio. Para obtener más información sobre los puntos de conexión predeterminados, consulte [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
 
 7. Presione **Ctrl**+**MAYÚS**+**B** para compilar la solución.
 
@@ -89,7 +89,7 @@ El siguiente procedimiento muestra cómo implementar un servicio autohospedado e
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente ejemplo crea un objeto <xref:System.ServiceModel.ServiceHost> para hospedar un servicio de tipo `HelloWorldService`, y, a continuación, llama al método <xref:System.ServiceModel.ICommunicationObject.Open%2A> en <xref:System.ServiceModel.ServiceHost>. Se proporciona una dirección base mediante código, se habilita la publicación de metadatos y se usan puntos de conexión predeterminados.
+El siguiente ejemplo crea un objeto <xref:System.ServiceModel.ServiceHost> para hospedar un servicio de tipo `HelloWorldService`, y, a continuación, llama al método <xref:System.ServiceModel.ICommunicationObject.Open%2A> en <xref:System.ServiceModel.ServiceHost>. Se proporciona una dirección base mediante código, se habilita la publicación de metadatos y se usan extremos predeterminados.
 
 [!code-csharp[CFX_SelfHost4#5](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#5)]
 [!code-vb[CFX_SelfHost4#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#5)]
@@ -99,11 +99,11 @@ El siguiente ejemplo crea un objeto <xref:System.ServiceModel.ServiceHost> para 
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [Cómo: hospedar un servicio WCF en IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Cómo: Hospedar un servicio WCF en IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [Probar internamente](../../../docs/framework/wcf/samples/self-host.md)
 - [Servicios de hospedaje](../../../docs/framework/wcf/hosting-services.md)
-- [Cómo definir un contrato de servicios](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [Cómo implementar un contrato de servicio](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
+- [Cómo: Definir un contrato de servicio](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Cómo: Implementar un contrato de servicio](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 - [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Enlaces proporcionados por el sistema](../../../docs/framework/wcf/system-provided-bindings.md)

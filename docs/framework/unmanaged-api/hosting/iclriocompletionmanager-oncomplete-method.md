@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d9d4336b79b60e69f980b6d5931e2994732f30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792696"
 ---
 # <a name="iclriocompletionmanageroncomplete-method"></a>ICLRIoCompletionManager::OnComplete (Método)
 Notifica a common language runtime (CLR) del estado de una solicitud de E/S que se hace mediante una llamada a la [IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) método.  
@@ -41,11 +41,11 @@ HRESULT OnComplete (
  `dwErrorCode`  
  [in] Un valor HRESULT que indica el estado de la operación de enlace.  
   
--   S_OK indica que la operación se completó correctamente.  
+- S_OK indica que la operación se completó correctamente.  
   
--   HOST_E_INTERRUPTED indica que la llamada finalizó antes de completarse.  
+- HOST_E_INTERRUPTED indica que la llamada finalizó antes de completarse.  
   
--   E_FAIL indica que se produjo un error catastrófico, irrecuperable desconocido.  
+- E_FAIL indica que se produjo un error catastrófico, irrecuperable desconocido.  
   
  `NumberOfBytesTransferred`  
  [in] El número de bytes transferidos durante el procesamiento de la solicitud de E/S.  

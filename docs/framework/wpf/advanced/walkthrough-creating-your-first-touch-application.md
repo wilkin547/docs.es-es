@@ -11,11 +11,11 @@ helpviewer_keywords:
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778825"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>Tutorial: Crear la primera aplicación táctil
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite que las aplicaciones responder a la entrada táctil. Por ejemplo, puede interactuar con una aplicación mediante el uso de uno o más dedos en un dispositivo táctil, como una pantalla táctil en este tutorial se crea una aplicación que permite al usuario mover, cambiar el tamaño o girar un solo objeto mediante el uso de interacción.  
@@ -23,9 +23,9 @@ ms.locfileid: "59326988"
 ## <a name="prerequisites"></a>Requisitos previos  
  Necesita los componentes siguientes para completar este tutorial:  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   Un dispositivo que acepta la entrada táctil, como una pantalla táctil, compatible con Windows Touch.  
+- Un dispositivo que acepta la entrada táctil, como una pantalla táctil, compatible con Windows Touch.  
   
  Además, debe tener un conocimiento básico de cómo crear una aplicación en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], especialmente cómo suscribirse a y controlar un evento. Para obtener más información, vea [Tutorial: Mi primera aplicación de escritorio de WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
@@ -73,11 +73,11 @@ ms.locfileid: "59326988"
 ## <a name="testing-the-application"></a>Probar la aplicación
  Para probar la aplicación, intente las siguientes manipulaciones. Tenga en cuenta que puede realizar más de una de las siguientes acciones al mismo tiempo.
 
--   Para mover el <xref:System.Windows.Shapes.Rectangle>, coloque un dedo en el <xref:System.Windows.Shapes.Rectangle> y mueva el dedo por la pantalla.
+- Para mover el <xref:System.Windows.Shapes.Rectangle>, coloque un dedo en el <xref:System.Windows.Shapes.Rectangle> y mueva el dedo por la pantalla.
 
--   Para cambiar el tamaño de la <xref:System.Windows.Shapes.Rectangle>, coloque dos dedos en la <xref:System.Windows.Shapes.Rectangle> y acérquelos o aléjelos aparte entre sí.
+- Para cambiar el tamaño de la <xref:System.Windows.Shapes.Rectangle>, coloque dos dedos en la <xref:System.Windows.Shapes.Rectangle> y acérquelos o aléjelos aparte entre sí.
 
--   Para girar el <xref:System.Windows.Shapes.Rectangle>, coloque dos dedos en la <xref:System.Windows.Shapes.Rectangle> y gírelos entre sí.
+- Para girar el <xref:System.Windows.Shapes.Rectangle>, coloque dos dedos en la <xref:System.Windows.Shapes.Rectangle> y gírelos entre sí.
 
  Para producir inercia, generar rápidamente los dedos en la pantalla de medida que realiza las manipulaciones anteriores. El <xref:System.Windows.Shapes.Rectangle> seguirá mover, cambiar el tamaño o gire durante algunos segundos antes de detenerse.
 

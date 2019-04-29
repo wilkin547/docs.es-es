@@ -1,5 +1,5 @@
 ---
-title: Filtrar Arrastrar y colocar la entrada manuscrita
+title: Procedimiento Arrastrar y colocar la entrada de lápiz
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - dropping ink [WPF]
 ms.assetid: 932dc410-2bf3-4486-ab31-13487ba59f60
 ms.openlocfilehash: d562a0a9b483e7fa24cf412a1735c96cd896aaf5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776186"
 ---
-# <a name="how-to-drag-and-drop-ink"></a>Filtrar Arrastrar y colocar la entrada manuscrita
+# <a name="how-to-drag-and-drop-ink"></a>Procedimiento Arrastrar y colocar la entrada de lápiz
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea una aplicación que permite al usuario arrastrar los trazos seleccionados de una <xref:System.Windows.Controls.InkCanvas> a otro.  
   

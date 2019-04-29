@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d20c640d6a6a43b7bde4c7d46df470c7bc8c5aa2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942518"
 ---
 # <a name="icordebugmodule2setjmcstatus-method"></a>ICorDebugModule2::SetJMCStatus (Método)
 Establece el estado de "sólo mi código" (JMC) de todos los métodos de todas las clases en ICorDebugModule2 en el valor especificado, excepto aquellos en los `pTokens` matriz, que establece en el valor opuesto.  

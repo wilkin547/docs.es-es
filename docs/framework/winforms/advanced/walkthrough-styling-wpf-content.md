@@ -7,22 +7,22 @@ helpviewer_keywords:
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 ms.openlocfilehash: 887a157494c2992c1ae5868229c442f31fafb276
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781308"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Tutorial: Aplicar estilos a contenido de WPF
 En este tutorial se muestra cómo aplicar un estilo a un control de Windows Presentation Foundation (WPF) hospedado en un Windows Form.
 
  En este tutorial, realizará las tareas siguientes:
 
--   Crear el proyecto.
+- Crear el proyecto.
 
--   Crear el tipo de control WPF.
+- Crear el tipo de control WPF.
 
--   Aplicar un estilo al control WPF.
+- Aplicar un estilo al control WPF.
 
 > [!NOTE]
 >  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -30,7 +30,7 @@ En este tutorial se muestra cómo aplicar un estilo a un control de Windows Pres
 ## <a name="prerequisites"></a>Requisitos previos  
  Necesita los componentes siguientes para completar este tutorial:  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Crear el proyecto  
  El primer paso es crear el proyecto de Windows Forms.  
@@ -40,7 +40,7 @@ En este tutorial se muestra cómo aplicar un estilo a un control de Windows Pres
   
 #### <a name="to-create-the-project"></a>Para crear el proyecto  
   
--   Cree un nuevo proyecto de aplicación de Windows Forms en Visual Basic o Visual C# llamado `StylingWpfContent`.  
+- Cree un nuevo proyecto de aplicación de Windows Forms en Visual Basic o Visual C# llamado `StylingWpfContent`.  
   
 ## <a name="creating-the-wpf-control-types"></a>Crear los tipos de control WPF  
  Después de agregar un tipo de control WPF al proyecto, puede hospedarlo en un control <xref:System.Windows.Forms.Integration.ElementHost>.  

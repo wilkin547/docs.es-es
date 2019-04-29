@@ -3,11 +3,11 @@ title: Funciones de primera clase
 description: Obtenga información sobre las funciones de primera clase y cómo son importantes para la programación funcional en F#.
 ms.date: 10/29/2018
 ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772767"
 ---
 # <a name="first-class-functions"></a>Funciones de primera clase
 
@@ -150,7 +150,7 @@ Para obtener más información sobre la currificación, vea "Aplicación parcial
 
 ## <a name="identifier-and-function-definition-are-interchangeable"></a>El identificador y la definición de función pueden usarse indistintamente
 
-El nombre de variable `num` de los ejemplos anteriores se evalúa como el entero 10, y no es de extrañar que el entero 10 sea también válido en los casos en los que `num` es válido. Lo mismo se aplica a los identificadores de las funciones y sus valores: siempre que se pueda usar el nombre de la función, se podrá usar la expresión lamdba enlazada al mismo.
+El nombre de variable `num` de los ejemplos anteriores se evalúa como el entero 10, y no es de extrañar que el entero 10 sea también válido en los casos en los que `num` es válido. Lo mismo se aplica a los identificadores de las funciones y sus valores: siempre que se pueda usar el nombre de la función, se podrá usar la expresión lambda enlazada al mismo.
 
 En el siguiente ejemplo, se define una función `Boolean` denominada `isNegative` y, a continuación, se usan indistintamente el nombre y la definición de la función. En los tres ejemplos siguientes, se devuelve y se muestra `False`.
 
@@ -194,4 +194,4 @@ El código siguiente contiene todos los ejemplos de este tema.
 - [Tuplas](../language-reference/tuples.md)
 - [Funciones](../language-reference/functions/index.md)
 - [`let` enlaces](../language-reference/functions/let-bindings.md)
-- [Expresiones lambda: El `fun` palabra clave](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
+- [Expresiones lambda: `fun`Palabra clave](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

@@ -3,27 +3,27 @@ title: función definida por el modelo
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
 ms.openlocfilehash: 77152e8f37b009cbc3e72f053ead867914768d3d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772268"
 ---
 # <a name="model-defined-function"></a>función definida por el modelo
 Un *función definida por modelo* es una función que se define en un modelo conceptual. El cuerpo de una función definida por el modelo se expresa en [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), lo que permite que se expresa con independencia de la función de reglas o lenguajes admitidos en el origen de datos.  
   
  La definición para una función definida por el modelo contiene la información siguiente:  
   
--   El nombre de la función. (Necesario)  
+- El nombre de la función. (Necesario)  
   
--   El tipo del valor devuelto. (Opcional)  
+- El tipo del valor devuelto. (Opcional)  
   
     > [!NOTE]
     >  Si no se especifica ningún tipo de valor devuelto, este es void.  
   
--   Información de parámetros. (Opcional)  
+- Información de parámetros. (Opcional)  
   
--   Un [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) expresión que define el cuerpo de la función.  
+- Un [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) expresión que define el cuerpo de la función.  
   
  Tenga en cuenta que las funciones definidas por el modelo no admiten parámetros de salida. Esta restricción se aplica para que las funciones definidas por el modelo puedan ser compuestas.  
   

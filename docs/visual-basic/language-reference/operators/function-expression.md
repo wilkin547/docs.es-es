@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778539"
 ---
 # <a name="function-expression-visual-basic"></a>Expresión de función (Visual Basic)
 Declara los parámetros y el código que definen una expresión de función lambda.  
@@ -40,19 +40,19 @@ End Function
 ## <a name="lambda-expression-syntax"></a>Sintaxis de la expresión lambda  
  La sintaxis de una expresión lambda es similar al de una función estándar. Las diferencias son como sigue:  
   
--   Una expresión lambda no tiene un nombre.  
+- Una expresión lambda no tiene un nombre.  
   
--   Las expresiones lambda no pueden tener modificadores, como `Overloads` o `Overrides`.  
+- Las expresiones lambda no pueden tener modificadores, como `Overloads` o `Overrides`.  
   
--   Las expresiones lambda no usan un `As` cláusula para designar el tipo de valor devuelto de la función. En su lugar, el tipo se deduce del valor que se evalúa como el cuerpo de una expresión lambda de línea o el valor devuelto de una expresión lambda de varias líneas. Por ejemplo, si el cuerpo de una expresión lambda de una línea es `Where cust.City = "London"`, su tipo de valor devuelto es `Boolean`.  
+- Las expresiones lambda no usan un `As` cláusula para designar el tipo de valor devuelto de la función. En su lugar, el tipo se deduce del valor que se evalúa como el cuerpo de una expresión lambda de línea o el valor devuelto de una expresión lambda de varias líneas. Por ejemplo, si el cuerpo de una expresión lambda de una línea es `Where cust.City = "London"`, su tipo de valor devuelto es `Boolean`.  
   
--   El cuerpo de una expresión lambda de línea debe ser una expresión, no una instrucción. El cuerpo puede constar de una llamada a un procedimiento function, pero no es una llamada a un procedimiento sub.  
+- El cuerpo de una expresión lambda de línea debe ser una expresión, no una instrucción. El cuerpo puede constar de una llamada a un procedimiento function, pero no es una llamada a un procedimiento sub.  
   
--   Deben haber especificado todos los parámetros deben deducir los tipos de datos o todos.  
+- Deben haber especificado todos los parámetros deben deducir los tipos de datos o todos.  
   
--   No se permiten parámetros Optional y Paramarray.  
+- No se permiten parámetros Optional y Paramarray.  
   
--   No se permiten parámetros genéricos.  
+- No se permiten parámetros genéricos.  
   
 ## <a name="example"></a>Ejemplo  
  Los ejemplos siguientes muestran dos maneras de crear expresiones lambda simples. El primer ejemplo usa un `Dim` para proporcionar un nombre para la función. Para llamar a la función, enviar un valor para el parámetro.  

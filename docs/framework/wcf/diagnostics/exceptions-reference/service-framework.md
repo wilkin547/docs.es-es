@@ -3,11 +3,11 @@ title: Marco de servicios
 ms.date: 03/30/2017
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
 ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780762"
 ---
 # <a name="service-framework"></a>Marco de servicios
 En este tema se enumeran las excepciones generadas por Service Framework Data.  
@@ -16,23 +16,23 @@ En este tema se enumeran las excepciones generadas por Service Framework Data.
   
 |Código de recurso|Cadena de recurso|  
 |-------------------|---------------------|  
-|ABindingInstanceHasAlreadyBeenAssociatedTo1|Una instancia de enlace ya se ha asociado para que escuche al identificador uniforme de recursos especificado. Si dos puntos de conexión desean compartir el mismo indicador de recurso ListenUniform, también deben compartir la misma instancia de objeto de enlace. Los dos extremos en conflicto se especificaron en llamadas AddServiceEndpoint (), en un archivo de configuración, o una combinación de AddServiceEndpoint () y configuración.|  
+|ABindingInstanceHasAlreadyBeenAssociatedTo1|Una instancia de enlace ya se ha asociado para que escuche al identificador uniforme de recursos especificado. Si dos extremos desean compartir el mismo indicador de recurso ListenUniform, también deben compartir la misma instancia de objeto de enlace. Los dos puntos de conexión en conflicto se especificaron en llamadas AddServiceEndpoint (), en un archivo de configuración, o una combinación de AddServiceEndpoint () y configuración.|  
 |AChannelServiceEndpointIsNull0|Un canal o punto de conexión de servicio es nulo.|  
 |AChannelServiceEndpointSContractSNameIsNull0|Un nombre del contrato de punto de conexión de servicio/canal es nulo o vacío.|  
-|AChannelServiceEndpointSContractSNamespace0|Un espacio de nombres de contrato de punto de conexión de servicio/canal es nulo.|  
+|AChannelServiceEndpointSContractSNamespace0|Un espacio de nombres de contrato de extremo de servicio/canal es nulo.|  
 |BaseAddressCannotHaveFragment|Una dirección base no puede contener un fragmento de identificador uniforme de recursos.|  
 |BaseAddressCannotHaveQuery|Una dirección base no puede contener una cadena de solicitud de identificador uniforme de recursos.|  
 |BaseAddressCannotHaveUserInfo|Una dirección base no puede contener una sección de información del usuario de identificador uniforme de recursos.|  
 |BaseAddressDuplicateScheme|Esta colección ya contiene una dirección con el esquema especificado. Solo se permite una dirección para cada esquema de esta colección.|  
 |BaseAddressMustBeAbsolute|Solo un identificador uniforme de recursos absoluto se puede utilizar como una dirección base.|  
-|BindingDoesnTSupportAnyChannelTypes1|El enlace especificado no permite crear ningún tipo de canal. Los elementos de enlace en un enlace personalizado se apilan incorrectamente o en el orden equivocado. En la parte inferior de la pila se requiere un transporte. El orden recomendado para los elementos de enlace es: TransactionFlow, ReliableSession, Security, CompositeDuplex, OneWay, StreamSecurity, MessageEncoding, Transport.|  
+|BindingDoesnTSupportAnyChannelTypes1|El enlace especificado no permite crear ningún tipo de canal. Los elementos de enlace en un enlace personalizado se apilan incorrectamente o en el orden equivocado. En la parte inferior de la pila se requiere un transporte. El orden recomendado para los elementos de enlace es: TransactionFlow, ReliableSession, Security, CompositeDuplex, OneWay, StreamSecurity, MessageEncoding, transporte.|  
 |BindingDoesnTSupportDuplexButContractRequires1|El contrato requiere Dúplex. El enlace especificado no lo admite o no está configurado correctamente para admitirlo.|  
 |BindingDoesnTSupportOneWayButContractRequires1|El contrato requiere Unidireccional. El enlace especificado no lo admite o no está configurado correctamente para admitirlo.|  
 |BindingDoesnTSupportRequestReplyButContract1|El contrato requiere Solicitud/Respuesta. El enlace especificado no lo admite o no está configurado correctamente para admitirlo.|  
 |BindingDoesnTSupportSessionButContractRequires1|El contrato requiere Sesión.  El enlace especificado no lo admite o no está configurado correctamente para admitirlo.|  
 |BindingDoesnTSupportOneWayButContractRequires1|El contrato requiere Bidireccional (solicitud-respuesta o dúplex). El enlace especificado no lo admite o no está configurado correctamente para admitirlo.|  
 |BindingRequirementsAttributeDisallowsQueuedDelivery1|DeliveryRequirementsAttribute no permite QueuedDelivery. El enlace para el extremo con el contrato especificado lo admite.|  
-|BindingRequirementsAttributeRequiresQueuedDelivery1|DeliveryRequirementsAttribute requiere QueuedDelivery. El enlace para el extremo con el contrato especificado no lo admite o no está configurado correctamente para admitirlo.|  
+|BindingRequirementsAttributeRequiresQueuedDelivery1|DeliveryRequirementsAttribute requiere QueuedDelivery. El enlace para el punto de conexión con el contrato especificado no lo admite o no está configurado correctamente para admitirlo.|  
 |channelDoesNotHaveADuplexSession0|El canal actual no permite cerrar la sesión de salida. Este canal no implementa ISessionChannel\<IDuplexSession >.|  
 |ClientRuntimeRequiresFormatter0|El ClientOperation especificado requiere un formateador, porque SerializeRequest y DeserializeReply no son ambos falsos.|  
 |CommunicationObjectAborted1|El objeto de comunicación especificado no se puede utilizar para la comunicación porque se ha detenido.|  
@@ -43,12 +43,12 @@ En este tema se enumeran las excepciones generadas por Service Framework Data.
 |DispatchRuntimeRequiresFormatter0|El DispatchOperation especificado requiere un formateador, porque DeserializeRequest y SerializeReply no son ambos falsos.|  
 |EndMethodsCannotBeDecoratedWithOperationContractAttribute|El método End no se puede utilizar con OperationContractAttribute al utilizar el patrón de diseño de IAsyncResult. Solo el método Begin correspondiente se puede utilizar con OperationContractAttribute. Ese atributo se aplica al par de métodos Begin-End.|  
 |EndpointListenerRequirementsCannotBeMetBy3|IChannelListener no puede cumplir los requisitos de ChannelDispatcher para el enlace especificado porque el contrato requiere la compatibilidad con uno de estos tipos de canales especificados. Pero el enlace solo admite estos tipos de canales especificados.|  
-|EndpointsMustHaveAValidBinding0|Los extremos deben tener un enlace válido.|  
+|EndpointsMustHaveAValidBinding0|Los puntos de conexión deben tener un enlace válido.|  
 |InvalidOrUnrecognizedAction|No se puede procesar el mensaje porque la acción especificada no es válida ni reconocida.|  
 |MultipleMebesInParameters|Se encontró más de un MessageEncodingBindingElement en BindingParameters del BindingContext. CustomBinding no puede tener varios MessageEncodingBindingElements. Solo deje uno de estos elementos y elimine el resto.|  
 |MultipleStreamUpgradeProvidersInParameters|Se encontró más de un IStreamUpgradeProviderElement en los BindingParameters del BindingContext. CustomBinding no puede tener más de un IStreamUpgradeProviderElements. Solo deje uno de estos elementos y elimine el resto.|  
 |NoChannelBuilderAvailable|El enlace no se puede utilizar para crear un generador de canales o un escuchador de canales porque no tiene un TransportBindingElement. Cada enlace debe tener al menos un elemento de enlace que derive de TransportBindingElement.|  
-|NotAllBindingElementsBuilt|No se utilizaron algunos de los elementos de enlace de este enlace al compilar el generador y el escuchador de canales. Los elementos de enlace no están ordenados correctamente. El orden recomendado para los elementos de enlace es: TransactionFlow, ReliableSession, Security, CompositeDuplex, OneWay, StreamSecurity, MessageEncoding, Transport.  Tenga en cuenta que TransportBindingElement debe ser el último. Los elementos de enlace especificados no se compilaron.|  
+|NotAllBindingElementsBuilt|No se utilizaron algunos de los elementos de enlace de este enlace al compilar el generador y el escuchador de canales. Los elementos de enlace no están ordenados correctamente. El orden recomendado para los elementos de enlace es: TransactionFlow, ReliableSession, Security, CompositeDuplex, OneWay, StreamSecurity, MessageEncoding, transporte.  Tenga en cuenta que TransportBindingElement debe ser el último. Los elementos de enlace especificados no se compilaron.|  
 |RuntimeRequiresInvoker0|La operación de distribución requiere un invocador.|  
 |ServiceHasZeroAppEndpoints|El Servicio especificado no tiene puntos de conexión de aplicación (sin infraestructura). Esto podría deberse a que no se encontrón ningún archivo de configuración para su aplicación o a que no se encontró ningún elemento de servicio que coincidiese con el nombre del servicio en el archivo de configuración o porque no se definió ningún extremo en el elemento de servicio.|  
 |SFxActionMismatch|No se puede crear un mensaje escrito debido a una desigualdad de acción. Se esperaba la acción especificada se pero encontró otra|  
@@ -57,7 +57,7 @@ En este tema se enumeran las excepciones generadas por Service Framework Data.
 |SFxBadMetadataMustBePolicy|Debe proporcionar un XmlElement de directiva que tiene el nombre y espacio de nombres especificado. El XmlElement tiene el nombre y espacio de nombres especificado.|  
 |SFxBodyObjectTypeCannotBeInherited|El tipo especificado no puede heredar de ninguna clase que no sea el objeto que se va a utilizar como objeto de cuerpo en estilo RPC.|  
 |SFxBodyObjectTypeCannotBeInterface|El tipo especificado implementa la interfaz especificada, que no se admite para el objeto de cuerpo en estilo RPC.|  
-|SFxCallbackBehaviorAttributeOnlyOnDuplex|CallbackBehaviorAttribute solo se puede ejecutar como un comportamiento en un extremo con un contrato dúplex. El contrato especificado no es dúplex y no contiene ninguna operación de devolución de llamada.|  
+|SFxCallbackBehaviorAttributeOnlyOnDuplex|CallbackBehaviorAttribute solo se puede ejecutar como un comportamiento en un punto de conexión con un contrato dúplex. El contrato especificado no es dúplex y no contiene ninguna operación de devolución de llamada.|  
 |SFxCallbackRequestReplyInOrder1|La respuesta no se puede recibir desde esta operación hasta que el Mensaje actual complete el procesamiento. Si desea permitir el procesamiento de mensajes descompuestos, especifique ConcurrencyMode de Reentrante o Varios en los especificados.|  
 |SfxCallbackTypeCannotBeNull|Para utilizar el contrato especificado con DuplexChannelFactory, el contrato debe especificar un contrato de devolución de llamada válido. Si su contrato tiene un contrato de devolución de llamada, utilice ChannelFactory en lugar de DuplexChannelFactory.|  
 |SFxCannotGetMetadataFromLocation|MetadataExchangeClient solo puede recibir los metadatos de MetadataLocations HTTPS y HTTP. No puede recibir metadatos de los especificados.|  
@@ -76,7 +76,7 @@ En este tema se enumeran las excepciones generadas por Service Framework Data.
 |SFxChannelDispatcherMultipleHost0|El ChannelDispatcher no se puede agregar a más de un ServiceHost.|  
 |SFxChannelDispatcherNoHost0|No se puede abrir el ChannelDispatcher porque no está adjunto a un ServiceHost.|  
 |SfxChannelFactoryDisposed|No se puede abrir este ChannelFactory puesto que ya se ha dispuesto el ChannelFactory. Cree de nuevo el ChannelFactory antes de utilizarlo.|  
-|SFxChannelFactoryNoBinding|No se puede abrir el ChannelFactory porque no se ha asociado ningún enlace a su punto de conexión. Especifique un enlace con el constructor o la propiedad del punto de conexión.|  
+|SFxChannelFactoryNoBinding|No se puede abrir el ChannelFactory porque no se ha asociado ningún enlace a su extremo. Especifique un enlace con el constructor o la propiedad del punto de conexión.|  
 |SFxChannelTerminated0|Una operación marcada como IsTerminating ya se ha invocado en este canal, haciendo que se termine la conexión del canal. No se pueden invocar más operaciones en este canal. Recree el canal para continuar la comunicación.|  
 |SFxCloseTimedOut1|La operación de cierre de ServiceHost se detuvo después de lo especificado. Esto podría deberse a que un cliente no cerró un canal con sesión en el tiempo requerido. Puede que el tiempo permitido para esta operación sea parte de un tiempo de espera mayor.|  
 |SfxCloseTimedOutWaitingForDispatchToComplete|Se superó el tiempo de espera del proceso de cierre mientras se esperaba que se completase la distribución del servicio.|  
@@ -96,7 +96,7 @@ En este tema se enumeran las excepciones generadas por Service Framework Data.
 |SFxDataContractSerializerDoesNotSupportBareArray|DataContractSerializer no admite la colección especificada en el elemento especificado.|  
 |SFxDictionaryIsEmpty|La operación no se puede realizar porque el diccionario está vacío.|  
 |SFxDocEncodedNotSupported|Error que refleja lo especificado. No se admite la codificación por documento. Cambie “Uso” a Literal o “Estilo” a RPC.|  
-|SFxDuplicateInitiatingActionAtSameVia|Este servicio tiene varios puntos de conexión que escuchan al especificado. Los puntos de conexión comparten la misma acción de iniciación especificada. Los mensajes con esta acción se quitarían porque el distribuidor no sería capaz de determinar el punto de conexión correcto para administrar el mensaje.|  
+|SFxDuplicateInitiatingActionAtSameVia|Este servicio tiene varios puntos de conexión que escuchan al especificado. Los puntos de conexión comparten la misma acción de iniciación especificada. Los mensajes con esta acción se quitarían porque el distribuidor no sería capaz de determinar el extremo correcto para administrar el mensaje.|  
 |SFXEndpointBehaviorUsedOnWrongSide|El IEndpointBehavior especificado no se puede utilizar en el servidor. Este comportamiento solo se puede aplicar a los clientes.|  
 |SFxEndpointNoMatchingScheme|No se puede encontrar la dirección base que coincide con el esquema especificado para el extremo con el enlace especificado. Se especifican los esquemas de direcciones base registrados.|  
 |SFxErrorCreatingMtomReader|Se produjo un error al crear un lector para el mensaje del mecanismo de optimización de la transmisión de mensajes.|  
@@ -145,7 +145,7 @@ En este tema se enumeran las excepciones generadas por Service Framework Data.
 |SFxSchemaDoesNotContainType|El esquema con el espacio de nombres de destino especificado no contiene un tipo con el nombre especificado.|  
 |SfxServiceContractAttributeNotFound|Al tipo de contrato especificado no se le atribuye ServiceContractAttribute. Para definir un contrato válido, debe atribuirse ServiceContractAttribute al tipo especificado. El tipo puede ser o una interfaz de contrato o una clase de servicio.|  
 |SFxServiceContractGeneratorConfigRequired|Para generar información de configuración mediante el método GenerateServiceEndpoint, la instancia de ServiceContractGenerator debe inicializarse mediante  un objeto de configuración válido.|  
-|SFxServiceHostBaseCannotAddEndpointAfterOpen|No se pueden agregar puntos de conexión después de que ServiceHost esté en uno de los siguientes estados:<br /><br /> -Abierto<br />: Error en<br />-Terminada<br />-Cierre|  
+|SFxServiceHostBaseCannotAddEndpointAfterOpen|No se pueden agregar extremos después de que ServiceHost esté en uno de los siguientes estados:<br /><br /> -Abierto<br />-Error<br />-Terminado<br />-Cerrado|  
 |SFxServiceHostBaseCannotAddEndpointWithoutDescription|Los extremos no se pueden agregar antes de que se inicie la propiedad Description.|  
 |SFxServiceMetadataBehaviorNoHttpBaseAddress|La propiedad HttpGetEnabled de ServiceMetadataBehavior está definida como true y la propiedad HttpGetUrl es una dirección relativa, pero no hay ninguna dirección base HTTP. Proporcione una dirección base HTTP o defina HttpGetUrl como una dirección absoluta.|  
 |SFxServiceMetadataBehaviorNoHttpsBaseAddress|La propiedad HttpsGetEnabled de ServiceMetadataBehavior está definida como true y la propiedad HttpsGetUrl es una dirección relativa, pero no hay ninguna dirección base HTTPS. Proporcione una dirección base HTTPS o defina HttpsGetUrl como una dirección absoluta.|  

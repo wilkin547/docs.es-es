@@ -1,15 +1,15 @@
 ---
-title: Cómo crear un punto de conexión de servicio en configuración
+title: Procedimiento para crear un punto de conexión de servicio en la configuración
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
 ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787652"
 ---
-# <a name="how-to-create-a-service-endpoint-in-configuration"></a>Cómo crear un punto de conexión de servicio en configuración
+# <a name="how-to-create-a-service-endpoint-in-configuration"></a>Procedimiento para crear un punto de conexión de servicio en la configuración
 Los extremos proporcionan a los clientes con acceso a la funcionalidad que ofrece un servicio de Windows Communication Foundation (WCF). Puede definir uno o más extremos para un servicio usando una combinación de direcciones de extremo relativas y absolutas; si no se define ninguno, el tiempo de ejecución proporciona varios de forma predeterminada. En este tema se muestra cómo agregar extremos mediante un archivo de configuración que contiene tanto direcciones absolutas como relativas.  
   
 ## <a name="example"></a>Ejemplo  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
 ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791721"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Configura el <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) y la <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) cuando se usa federados de autenticación a través del protocolo WS-Federation. Configura el <xref:System.Security.Claims.ClaimsAuthorizationManager> cuando se usa el <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> clase para proporcionar control de acceso basado en notificaciones.  
@@ -52,9 +52,9 @@ Configura el <xref:System.IdentityModel.Services.WSFederationAuthenticationModul
 ## <a name="remarks"></a>Comentarios  
  El \<federationConfiguration > elemento proporciona configuraciones en dos escenarios diferentes:  
   
--   Cuando se utiliza WS-Federation en una aplicación Web pasiva, el elemento contiene los valores que configuren el <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) y la <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). También hace referencia a la configuración de identidad que se usará para configurar los controladores de token de seguridad y certificados y los componentes como el Administrador de autorización de notificaciones y el Administrador de autenticación de notificaciones.  
+- Cuando se utiliza WS-Federation en una aplicación Web pasiva, el elemento contiene los valores que configuren el <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) y la <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). También hace referencia a la configuración de identidad que se usará para configurar los controladores de token de seguridad y certificados y los componentes como el Administrador de autorización de notificaciones y el Administrador de autenticación de notificaciones.  
   
--   Cuando se usa el <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> para proporcionar control de acceso basado en notificaciones en el código de clase, el elemento hace referencia a la configuración de identidad que configura el Administrador de autorización de notificaciones y la directiva que se utiliza para realizar la autorización decisiones. Esto es cierto incluso en escenarios que no son escenarios pasivos de Web; Por ejemplo, las aplicaciones de Windows Communication Foundation (WCF) o una aplicación que no está basada en Web. Si la aplicación no es una aplicación Web pasiva, el [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) elemento (y sus elementos secundarios de directiva, si está presente) de la configuración de identidad al que hace referencia el `<federationConfiguration>` elemento ¿se aplica la configuración única. El resto se pasa por alto.  
+- Cuando se usa el <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> para proporcionar control de acceso basado en notificaciones en el código de clase, el elemento hace referencia a la configuración de identidad que configura el Administrador de autorización de notificaciones y la directiva que se utiliza para realizar la autorización decisiones. Esto es cierto incluso en escenarios que no son escenarios pasivos de Web; Por ejemplo, las aplicaciones de Windows Communication Foundation (WCF) o una aplicación que no está basada en Web. Si la aplicación no es una aplicación Web pasiva, el [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) elemento (y sus elementos secundarios de directiva, si está presente) de la configuración de identidad al que hace referencia el `<federationConfiguration>` elemento ¿se aplica la configuración única. El resto se pasa por alto.  
   
  Independientemente del escenario, el tiempo de ejecución carga la configuración de federación de forma predeterminada. El comportamiento se define como sigue:  
   

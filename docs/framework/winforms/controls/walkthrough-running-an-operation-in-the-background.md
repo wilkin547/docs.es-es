@@ -14,11 +14,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792176"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Tutorial: Ejecutar una operación en segundo plano
 Si tiene una operación que tarda mucho tiempo en completarse y no desea causar retrasos en la interfaz de usuario, puede utilizar la clase <xref:System.ComponentModel.BackgroundWorker> para ejecutar la operación en otro subproceso.  
@@ -96,9 +96,9 @@ Si tiene una operación que tarda mucho tiempo en completarse y no desea causar 
   
 ## <a name="next-steps"></a>Pasos siguientes  
   
--   Implementar un formulario que informa del progreso mientras se realiza una operación asincrónica. Para obtener más información, vea [Cómo: Implementar un formulario que utiliza una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md).  
+- Implementar un formulario que informa del progreso mientras se realiza una operación asincrónica. Para obtener más información, vea [Cómo: Implementar un formulario que utiliza una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
--   Implemente una clase que admita el modelo asincrónico para componentes. Para obtener más información, consulte [implementar el modelo asincrónico basado en eventos](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
+- Implemente una clase que admita el modelo asincrónico para componentes. Para obtener más información, consulte [implementar el modelo asincrónico basado en eventos](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>Vea también
 

@@ -3,17 +3,17 @@ title: Descargar el paquete del controlador de token web de JSON
 ms.date: 10/10/2018
 ms.assetid: d12b3f5b-f1f1-4a9d-a159-0c13e5976c90
 ms.openlocfilehash: 8f878d23afd76488de7da03f16f72cbfa43c17d7
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792761"
 ---
 # <a name="download-the-json-web-token-handler-package"></a>Descargue el paquete de controladores de Token Web JSON
 
 En este tema se explica cómo descargar y usar el controlador de token web JSON en el proyecto.
 
-La extensión del controlador de token web JSON está disponible como paquete NuGet, que agrega los ensamblados y referencias necesarios al proyecto. Si aún no tiene NuGet instalado, vaya a [nuget.org](https://nuget.org) para instalarlo. Puede ver el historial de creación de versiones para la extensión si visita su página en NuGet: [Controlador de token web JSON en NuGet](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/).
+La extensión del controlador de token web JSON está disponible como paquete NuGet, que agrega los ensamblados y referencias necesarios al proyecto. Si aún no tiene NuGet instalado, vaya a [nuget.org](https://nuget.org) para instalarlo. Puede ver el historial de control de versiones para la extensión si visita su página en NuGet: [Controlador de Token Web JSON en NuGet](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/)
 
 ## <a name="use-the-package-manager-gui"></a>Usar la GUI del Administrador de paquetes
 

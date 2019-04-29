@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID440
 ms.assetid: 2c4be5c5-2f0d-4a2b-96fe-d1b24f08fc4c
 ms.openlocfilehash: 8370f744b916ce4a797c808ed58c5fc9580e6278
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935296"
 ---
 # <a name="automation-error"></a>Error de automatización
 Se ha producido un error al ejecutar un método u obtener o establecer una propiedad de una variable de objeto. El error se notificó a través de la aplicación que creó el objeto.  

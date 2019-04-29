@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792839"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorización basada en notificaciones con WIF
 En una aplicación de usuario de confianza, la autorización determina los recursos a los que una identidad autenticada puede tener acceso y las operaciones que puede realizar en estos. Una autorización incorrecta o débil da lugar a la revelación de información y a la alteración de los datos. En este tema se describen distintos enfoques para implementar la autorización para aplicaciones web y servicios Web ASP.NET compatibles con notificaciones mediante Windows Identity Foundation (WIF) y un servicio de token de seguridad (STS), por ejemplo, el Servicio de control de acceso (ACS) de Microsoft Azure.  
@@ -25,13 +25,13 @@ En una aplicación de usuario de confianza, la autorización determina los recur
 ### <a name="iprincipalisinrole-method"></a>Método IPrincipal.IsInRole  
  Para implementar el enfoque RBAC en las aplicaciones para notificaciones, use el método **IsInRole()** de la interfaz **IPrincipal**, de la misma forma en que lo haría en aplicaciones no compatibles con notificaciones. Existen varias formas de usar el método **IsInRole()**:  
   
--   Al llamar explícitamente a **IPrincipal.IsInRole("Administrator")**. En este enfoque, el resultado es un valor booleano. Úselo en las instrucciones condicionales. Se puede usar arbitrariamente en cualquier parte del código.  
+- Al llamar explícitamente a **IPrincipal.IsInRole("Administrator")**. En este enfoque, el resultado es un valor booleano. Úselo en las instrucciones condicionales. Se puede usar arbitrariamente en cualquier parte del código.  
   
--   Mediante la petición de seguridad **PrincipalPermission.Demand()**. En este enfoque, se produce una excepción en caso de que la petición no se cumpla. Esta debe ajustarse a la estrategia de control de excepciones. La generación de excepciones es mucho más costosa desde el punto de vista del rendimiento que la devolución del valor booleano. Se puede usar en cualquier parte del código.  
+- Mediante la petición de seguridad **PrincipalPermission.Demand()**. En este enfoque, se produce una excepción en caso de que la petición no se cumpla. Esta debe ajustarse a la estrategia de control de excepciones. La generación de excepciones es mucho más costosa desde el punto de vista del rendimiento que la devolución del valor booleano. Se puede usar en cualquier parte del código.  
   
--   Al usar los atributos declarativos **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**. Este enfoque se denomina declarativo porque se usa para representar métodos. No se puede usar en bloques de código dentro de implementaciones de método. Se produce una excepción en caso de que no se cumpla la petición. Debe asegurarse de que se ajuste a la estrategia de control de excepciones.  
+- Al usar los atributos declarativos **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**. Este enfoque se denomina declarativo porque se usa para representar métodos. No se puede usar en bloques de código dentro de implementaciones de método. Se produce una excepción en caso de que no se cumpla la petición. Debe asegurarse de que se ajuste a la estrategia de control de excepciones.  
   
--   Al usar la autorización para URL, mediante la sección **\<authorization>** de **web.config**. Este enfoque resulta conveniente al administrar la autorización en un nivel de dirección URL. Es el nivel más amplio de todos los mencionados anteriormente. La ventaja de este enfoque es que los cambios se realizan en el archivo de configuración, lo que significa que el código no debe compilarse para beneficiarse del cambio.  
+- Al usar la autorización para URL, mediante la sección **\<authorization>** de **web.config**. Este enfoque resulta conveniente al administrar la autorización en un nivel de dirección URL. Es el nivel más amplio de todos los mencionados anteriormente. La ventaja de este enfoque es que los cambios se realizan en el archivo de configuración, lo que significa que el código no debe compilarse para beneficiarse del cambio.  
   
 ### <a name="expressing-roles-as-claims"></a>Expresar roles como notificaciones  
  Cuando se llama al método **IsInRole()**, se comprueba si el usuario actual tiene ese rol. En las aplicaciones para notificaciones, el rol se expresa mediante un tipo de notificación de rol que debe estar disponible en el token. El tipo de notificación de rol se expresa mediante el URI siguiente:  
@@ -40,11 +40,11 @@ En una aplicación de usuario de confianza, la autorización determina los recur
   
  Hay varias formas de enriquecer un token con un tipo de notificación de rol:  
   
--   **Durante la emisión de tokens**. Cuando se autentica un usuario, tanto el STS del proveedor de identidad como un proveedor de federación, por ejemplo, Microsoft Azure Access Control Service (ACS), pueden emitir la notificación de rol.  
+- **Durante la emisión de tokens**. Cuando se autentica un usuario, tanto el STS del proveedor de identidad como un proveedor de federación, por ejemplo, Microsoft Azure Access Control Service (ACS), pueden emitir la notificación de rol.  
   
--   **Al transformar notificaciones arbitrarias en notificaciones de tipo de rol mediante ClaimsAuthenticationManager**. ClaimsAuthenticationManager es un componente que se distribuye como parte de WIF. Permite interceptar las solicitudes al iniciar una aplicación, inspeccionar tokens y transformarlos mediante la adición, cambio o eliminación de notificaciones. Para obtener más información acerca de cómo usar ClaimsAuthenticationManager para transformar notificaciones, consulte [How To: Control de acceso (RBAC) basado en el rol de implementar en una aplicación de ASP.NET compatible con notificaciones mediante WIF y ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
+- **Al transformar notificaciones arbitrarias en notificaciones de tipo de rol mediante ClaimsAuthenticationManager**. ClaimsAuthenticationManager es un componente que se distribuye como parte de WIF. Permite interceptar las solicitudes al iniciar una aplicación, inspeccionar tokens y transformarlos mediante la adición, cambio o eliminación de notificaciones. Para obtener más información acerca de cómo usar ClaimsAuthenticationManager para transformar notificaciones, consulte [How To: Control de acceso (RBAC) basado en el rol de implementar en una aplicación de ASP.NET compatible con notificaciones mediante WIF y ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
   
--   **Al asignar notificaciones arbitrarias a un tipo de rol mediante la sección de configuración samlSecurityTokenRequirement**: enfoque declarativo donde la transformación de las notificaciones se lleva a cabo únicamente a través de la configuración sin necesidad de codificación.  
+- **Al asignar notificaciones arbitrarias a un tipo de rol mediante la sección de configuración samlSecurityTokenRequirement**: enfoque declarativo donde la transformación de las notificaciones se lleva a cabo únicamente a través de la configuración sin necesidad de codificación.  
   
 <a name="BKMK_2"></a>   
 ## <a name="claims-based-authorization"></a>Autorización basada en notificaciones  

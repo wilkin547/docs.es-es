@@ -3,11 +3,11 @@ title: Interoperabilidad de cliente
 ms.date: 03/30/2017
 ms.assetid: e890e40a-b76a-48c4-9e5b-a4b385fac847
 ms.openlocfilehash: 8aadd1592cdb08c9c44490ebfbaba1c9d3d9606e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944019"
 ---
 # <a name="client-interoperability"></a>Interoperabilidad de cliente
 Esta sección contiene ejemplos que muestran la interoperabilidad entre Windows Communication Foundation (WCF) y otras tecnologías.  

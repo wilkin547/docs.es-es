@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
 ms.openlocfilehash: 836ec4390e7675effe57c75c79768272d66925a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775913"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Procedimiento Crear literales XML (Visual Basic)
 Puede crear un documento, fragmento o elemento XML directamente en el código mediante el uso de un literal XML. Los ejemplos de este tema muestran cómo crear un elemento XML que tiene tres elementos secundarios y cómo crear un documento XML.  
@@ -18,7 +18,7 @@ Puede crear un documento, fragmento o elemento XML directamente en el código me
   
 ### <a name="to-create-an-xml-element"></a>Para crear un elemento XML  
   
--   Crear el XML en línea mediante la sintaxis de literales XML, que es el mismo que la sintaxis XML.  
+- Crear el XML en línea mediante la sintaxis de literales XML, que es el mismo que la sintaxis XML.  
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
@@ -36,7 +36,7 @@ Puede crear un documento, fragmento o elemento XML directamente en el código me
   
 ### <a name="to-create-an-xml-document"></a>Para crear un documento XML  
   
--   Crear el documento XML en línea. El código siguiente crea un documento XML que tiene la sintaxis literal, una declaración XML, una instrucción de procesamiento, un comentario y un elemento que contiene otro elemento.  
+- Crear el documento XML en línea. El código siguiente crea un documento XML que tiene la sintaxis literal, una declaración XML, una instrucción de procesamiento, un comentario y un elemento que contiene otro elemento.  
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   

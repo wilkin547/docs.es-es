@@ -9,28 +9,30 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938091"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Procedimiento para crear un degradado de trazado
 La <xref:System.Drawing.Drawing2D.PathGradientBrush> clase le permite personalizar el modo de rellenar una forma con colores que cambian gradualmente. Por ejemplo, puede especificar un color para el centro de una ruta de acceso y otro color para el límite de una ruta de acceso. También puede especificar colores independientes para cada uno de varios puntos a lo largo del límite de una ruta de acceso.  
   
 > [!NOTE]
->  En [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], una ruta de acceso es una secuencia de líneas y curvas mantenidas por un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. Para obtener más información acerca de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] rutas de acceso, consulte [trazados de gráficos en GDI +](graphics-paths-in-gdi.md) y [Constructing y dibujar trazados](constructing-and-drawing-paths.md).  
-  
+>  En GDI +, una ruta de acceso es una secuencia de líneas y curvas mantenidas por un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. Para obtener más información sobre las rutas de GDI +, consulte [trazados de gráficos en GDI +](graphics-paths-in-gdi.md) y [Constructing y dibujar trazados](constructing-and-drawing-paths.md).  
+
+Los ejemplos de este artículo son métodos que se llaman desde un control <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
+
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Para rellenar una elipse con un degradado de trazado  
   
--   El ejemplo siguiente rellena una elipse con un pincel de degradado de la ruta de acceso. Se establece el color central en azul y el color del límite se establece a aguamarina. La siguiente ilustración muestra la elipse rellena.  
+- El ejemplo siguiente rellena una elipse con un pincel de degradado de la ruta de acceso. Se establece el color central en azul y el color del límite se establece a aguamarina. La siguiente ilustración muestra la elipse rellena.  
   
      ![Trayecto degradado rellena una elipse.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
      De forma predeterminada, un pincel de degradado de la ruta de acceso no se extiende fuera del límite de la ruta de acceso. Si usa el pincel de degradado de trazado para rellenar una figura que se extiende más allá del límite de la ruta de acceso, no se rellenará el área de la pantalla fuera de la ruta de acceso.  
   
-     La siguiente ilustración se muestra lo que sucede si cambia la <xref:System.Drawing.Graphics.FillEllipse%2A> llamar en el código siguiente al `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     La siguiente ilustración se muestra lo que sucede si cambia la <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> llamar en el código siguiente al `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
      ![Trayecto degradado extendida más allá del límite de la ruta de acceso.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
@@ -41,12 +43,12 @@ La <xref:System.Drawing.Drawing2D.PathGradientBrush> clase le permite personaliz
   
 ### <a name="to-specify-points-on-the-boundary"></a>Para especificar los puntos en el límite  
   
--   El ejemplo siguiente crea un pincel de degradado de la ruta de acceso desde una ruta de acceso en forma de estrella. El código establece el <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> propiedad, que establece el color del centroide de la estrella a rojo. A continuación, el código establece la <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> propiedad para especificar distintos colores (almacenados en el `colors` matriz) en los puntos individuales el `points` matriz. La última instrucción del código rellena la ruta de acceso en forma de estrella con el pincel de degradado de la ruta de acceso.  
+- El ejemplo siguiente crea un pincel de degradado de la ruta de acceso desde una ruta de acceso en forma de estrella. El código establece el <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> propiedad, que establece el color del centroide de la estrella a rojo. A continuación, el código establece la <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> propiedad para especificar distintos colores (almacenados en el `colors` matriz) en los puntos individuales el `points` matriz. La última instrucción del código rellena la ruta de acceso en forma de estrella con el pincel de degradado de la ruta de acceso.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   En el ejemplo siguiente se dibuja un degradado de trazado sin un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto en el código. La instancia concreta <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> constructor en el ejemplo recibe una matriz de puntos pero no requiere un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. Además, tenga en cuenta que el <xref:System.Drawing.Drawing2D.PathGradientBrush> se utiliza para rellenar un rectángulo, no una ruta de acceso. El rectángulo es mayor que el trayecto cerrado utilizado para definir el pincel, por lo que parte del rectángulo no lo pinta el pincel. La siguiente ilustración muestra el rectángulo (línea de puntos) y la parte del rectángulo pintado mediante el pincel de degradado de la ruta de acceso: 
+- En el ejemplo siguiente se dibuja un degradado de trazado sin un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto en el código. La instancia concreta <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> constructor en el ejemplo recibe una matriz de puntos pero no requiere un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. Además, tenga en cuenta que el <xref:System.Drawing.Drawing2D.PathGradientBrush> se utiliza para rellenar un rectángulo, no una ruta de acceso. El rectángulo es mayor que el trayecto cerrado utilizado para definir el pincel, por lo que parte del rectángulo no lo pinta el pincel. La siguiente ilustración muestra el rectángulo (línea de puntos) y la parte del rectángulo pintado mediante el pincel de degradado de la ruta de acceso: 
   
      ![Parte de degradado pintada el pincel de degradado de trazado.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
@@ -55,7 +57,7 @@ La <xref:System.Drawing.Drawing2D.PathGradientBrush> clase le permite personaliz
   
 ### <a name="to-customize-a-path-gradient"></a>Para personalizar un degradado de trazado  
   
--   Una forma de personalizar un pincel de degradado de la ruta de acceso es establecer su <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> propiedad. Las escalas del foco especifican una ruta de acceso interna que se encuentra dentro de la ruta de acceso principal. El color central se muestra en cualquier lugar dentro de esa ruta de acceso interna en lugar de hacerlo solo en el punto central.  
+- Una forma de personalizar un pincel de degradado de la ruta de acceso es establecer su <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> propiedad. Las escalas del foco especifican una ruta de acceso interna que se encuentra dentro de la ruta de acceso principal. El color central se muestra en cualquier lugar dentro de esa ruta de acceso interna en lugar de hacerlo solo en el punto central.  
   
      El ejemplo siguiente crea un pincel de degradado de ruta de acceso basado en un trazado elíptico. El código establece el color del límite a azul, Establece el color central a aguamarina y, a continuación, usa el pincel de degradado de trazado para rellenar el trazado elíptico.  
   
@@ -72,7 +74,7 @@ La <xref:System.Drawing.Drawing2D.PathGradientBrush> clase le permite personaliz
   
 ### <a name="to-customize-with-interpolation"></a>Para personalizar con interpolación  
   
--   Otra forma de personalizar un pincel de degradado de la ruta de acceso es especificar una matriz de colores de interpolación y una matriz de posiciones de interpolación.  
+- Otra forma de personalizar un pincel de degradado de la ruta de acceso es especificar una matriz de colores de interpolación y una matriz de posiciones de interpolación.  
   
      El ejemplo siguiente crea un pincel de degradado de ruta de acceso basado en un triángulo. El código establece el <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> propiedad de pincel de degradado de trazado para especificar una matriz de colores de interpolación (verde oscuro, aguamarina, azul) y una matriz de posiciones de interpolación (0, 0.25, 1). Al mover desde el límite del triángulo para el punto central, el color cambia gradualmente de verde oscuro a aguamarina y, a continuación, de aguamarina a azul. Se produce el cambio de verde oscuro a aguamarina en 25 por ciento de la distancia de verde oscuro a azul.  
   
@@ -85,7 +87,7 @@ La <xref:System.Drawing.Drawing2D.PathGradientBrush> clase le permite personaliz
   
 ### <a name="to-set-the-center-point"></a>Para establecer el punto central  
   
--   De forma predeterminada, el punto central de un pincel de degradado de la ruta de acceso es el centroide de la ruta de acceso utilizado para construir el pincel. Puede cambiar la ubicación del punto central estableciendo el <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propiedad de la <xref:System.Drawing.Drawing2D.PathGradientBrush> clase.  
+- De forma predeterminada, el punto central de un pincel de degradado de la ruta de acceso es el centroide de la ruta de acceso utilizado para construir el pincel. Puede cambiar la ubicación del punto central estableciendo el <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propiedad de la <xref:System.Drawing.Drawing2D.PathGradientBrush> clase.  
   
      El ejemplo siguiente crea un pincel de degradado de ruta de acceso en función de una elipse. El centro de la elipse se encuentra en (70, 35), pero el punto central del pincel de degradado de trazado se establece en (120, 40).  
   
@@ -96,7 +98,7 @@ La <xref:System.Drawing.Drawing2D.PathGradientBrush> clase le permite personaliz
   
      ![Trayecto degradado con relleno elipse y el punto central.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
--   Puede establecer el punto central de un pincel de degradado de la ruta de acceso a una ubicación fuera de la ruta de acceso que se usó para construir el pincel. En el ejemplo siguiente se sustituye la llamada para establecer el <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propiedad en el código anterior.  
+- Puede establecer el punto central de un pincel de degradado de la ruta de acceso a una ubicación fuera de la ruta de acceso que se usó para construir el pincel. En el ejemplo siguiente se sustituye la llamada para establecer el <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propiedad en el código anterior.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  

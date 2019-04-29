@@ -12,11 +12,11 @@ helpviewer_keywords:
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
 ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776550"
 ---
 # <a name="how-to-clone-a-printer"></a>Procedimiento Clonar una impresora
 En algún momento, la mayoría de las empresas comprará varias impresoras del mismo modelo. Normalmente, estas se instalan con valores de configuración prácticamente idénticos. Instalación de cada impresora puede llevar mucho tiempo y propensas a errores. El <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> espacio de nombres y el <xref:System.Printing.PrintServer.InstallPrintQueue%2A> clase que se exponen a través de Microsoft .NET Framework hace posible instalar al instante cualquier número de colas de impresión adicionales que se clonan desde una cola de impresión existente.  
@@ -28,9 +28,9 @@ En algún momento, la mayoría de las empresas comprará varias impresoras del m
   
 2. Crear un <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> desde el <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> de la <xref:System.Printing.PrintQueue>. El <xref:System.Collections.DictionaryEntry.Value%2A> propiedad de cada entrada de este diccionario es un objeto de uno de los tipos derivados de <xref:System.Printing.IndexedProperties.PrintProperty>. Hay dos maneras de establecer el valor de una entrada en este diccionario.  
   
-    -   Usar el diccionario **quitar** y <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> métodos para quitar la entrada y, a continuación, vuelva a agregarlo con el valor deseado.  
+    - Usar el diccionario **quitar** y <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> métodos para quitar la entrada y, a continuación, vuelva a agregarlo con el valor deseado.  
   
-    -   Usar el diccionario <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> método.  
+    - Usar el diccionario <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> método.  
   
      El ejemplo siguiente muestra ambas maneras.  
   

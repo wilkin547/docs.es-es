@@ -3,21 +3,21 @@ title: Herramientas
 ms.date: 03/30/2017
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
 ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780749"
 ---
 # <a name="tools"></a>Herramientas
-Este tema enumeran todas las excepciones generadas por herramientas de Windows Communication Foundation (WCF).  
+En este tema se enumera todas las excepciones generadas por las herramientas de Windows Communication Foundation (WCF).  
   
 ## <a name="exception-list"></a>Lista de excepciones  
   
 |Código de recurso|Cadena de recurso|  
 |-------------------|---------------------|  
-|ParametersTarget|\<enum >|  
-|ParametersToolConfig|\<configFile >|  
+|ParametersTarget|\<enum>|  
+|ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|La ruta de acceso especificada no es válida. Compruebe el argumento especificado.|  
 |ParametersReference|\<ruta de acceso de archivo >|  
 |WrnCannotLoadConfigFileForValidation|Se ha producido un error durante el procesamiento del archivo de configuración cargado de la ubicación especificada. No se pueden validar los servicios que se definen en este archivo de configuración.|  
@@ -68,17 +68,17 @@ Este tema enumeran todas las excepciones generadas por herramientas de Windows C
 |HelpCodeGenerationCategory|-= CODE GENERATION =-|  
 |RetreivingMetadataWithMexAndDisco|Intentando descargar los metadatos a partir de lo especificado utilizando intercambio de metadatos WS o DISCO.|  
 |ErrGeneralSchemaValidation|Se produjo un error al comprobar los esquemas XML que se generaron durante la exportación.|  
-|ParametersDirectory|\<directorio >|  
+|ParametersDirectory|\<directory>|  
 |ErrCannotLoadSpecifiedType|Ningún tipo se puede cargar para el valor especificado que se pasó a la opción especificada. Asegúrese de que el ensamblado al que pertenece este tipo se especifica utilizando la opción especificada.|  
 |ErrOptionModeConflict|La opción especificada no se puede utilizar con la opción especificada porque implican tipos de salida diferentes.|  
 |ErrIsNotAnAssembly|No puede cargar lo especificado como un ensamblado. Compruebe que este archivo es un .NET ensamblado.|  
 |ErrInputConflictsWithMode|La entrada leída a partir de lo especificado es incoherente con otras opciones.|  
 |ErrDuplicateValuePassedToTypeArg|El valor especificado se pasó varias veces a la opción especificada. Se puede especificar cada tipo solo una vez.|  
-|ErrInputEPRFileParseError|No puede leer la referencia del extremo a partir de lo especificado. Compruebe que el formato XML es correcto y válido.|  
+|ErrInputEPRFileParseError|No puede leer la referencia del punto de conexión a partir de lo especificado. Compruebe que el formato XML es correcto y válido.|  
 |ErrCouldNotCreateCodeProvider|No se puede crear un proveedor de código para el valor especificado, que se pasó a la /{1} argumento. Compruebe que el proveedor de código se instala y configura correctamente.|  
 |ErrPathTooLongDirOnly|El resultante la ruta de acceso especificada es demasiado largo. Revise el argumento especificado.|  
 |HelpDataContractSerializer|Genere tipos de datos que utilicen el serializador DataContract para la serialización y deserialización.|  
-|ErrUnableToExportEndpoint|Se produjo un error al exportar el nombre de punto de conexión especificado en el espacio de nombres especificado en el tipo de servicio especificado situado en el archivo de configuración cargado para el ensamblado.|  
+|ErrUnableToExportEndpoint|Se produjo un error al exportar el nombre de extremo especificado en el espacio de nombres especificado en el tipo de servicio especificado situado en el archivo de configuración cargado para el ensamblado.|  
 |HelpUsage1|Muestra el uso de la Ayuda.|  
 |HelpUsage2|Muestra el uso de la Ayuda.|  
 |HelpUsage3|Muestra el uso de la Ayuda.|  
@@ -87,7 +87,7 @@ Este tema enumeran todas las excepciones generadas por herramientas de Windows C
 |ErrDirectoryNotFound|No se puede encontrar el directorio especificado. Compruebe que el directorio existe y que tiene los permisos adecuados para leerlo.|  
 |ErrUnableToLoadFile|No puede leer el archivo especificado.|  
 |ErrNoFilesFound|La ruta de acceso de entrada especificada no parece hacer referencia a ningún archivo existente.|  
-|ParametersConfig|\<configFile >|  
+|ParametersConfig|\<configFile>|  
 |ErrDirectoryInsteadOfFile|La ruta de acceso de entrada especificada parece ser un directorio. La entrada debe ser direcciones URL o rutas de acceso de archivo.|  
 |HelpConfig|Indica a las herramientas que generen un archivo de configuración con el nombre proporcionado. Valor predeterminado: output.config.|  
 |ErrSingleUseSwitch|No puede especificarse la opción especificada varias veces.|  
@@ -112,9 +112,9 @@ Este tema enumeran todas las excepciones generadas por herramientas de Windows C
 |ErrInvalidTarget|El destino especificado no es válido cuando se especifica utilizando la opción especificada. Se especifican los destinos soportados.|  
 |ErrPathTooLong|La ruta de acceso resultante es demasiado larga. Revise los argumentos especificados.|  
 |HelpCommonOptionsCategory|-= COMMON OPTIONS =-|  
-|ParametersServiceName|\<serviceConfigName >|  
+|ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|No se especificaron archivos de entrada válidos. Especifique documentos de metadatos o archivos de ensamblado.|  
-|ParametersLanguage|\<idioma >|  
+|ParametersLanguage|\<Lenguaje >|  
 |ErrUnableToLoadMetadataDocument|Se produjo un error al leer los metadatos a partir de uno de los documentos cargados. Se especifica el identificador del documento.|  
 |ErrConflictingInputs|El argumento de entrada especificado está en conflicto con lo especificado porque implican modos diferentes de operación de la herramienta.|  
 |WrnUnableToLoadContractForValidation|Se produjo un error al cargar un tipo de contrato. Se especifican el tipo y detalles.|  
@@ -125,7 +125,7 @@ Este tema enumeran todas las excepciones generadas por herramientas de Windows C
 |GeneratingFiles|Generando archivos…|  
 |ErrCannotSpecifyMultipleMappingsForNamespace|Un valor no válido especificado se pasó a la opción especificada. El espacio de nombres de destino especificado no puede estar asignado a varios espacios de nombres CLR como se ha especificado.|  
 |ErrCouldNotLoadReferenceAssemblyAt|No puede cargar el ensamblado de referencia especificado.|  
-|ParametersOut|\<archivo >|  
+|ParametersOut|\<file>|  
 |NoCodeWasGeneratedSuggestDCOnly|Para generar los contratos a partir de los esquemas, utilice la opción especificada.|  
 |ErrUnableToLoadInputConfig|No puede cargar el archivo de configuración especificado.|  
 |ErrUnexpectedDelimiter|Un delimitador de argumentos no válido (':' o '=') no puede iniciar la opción.|  
@@ -142,7 +142,7 @@ Este tema enumeran todas las excepciones generadas por herramientas de Windows C
 |ErrCodegenError|Se produjo un error al generar código en el lenguaje especificado.<br /><br /> El lenguaje no soporta todos los elementos de código que se están generando. Se debería utilizar otro lenguaje.|  
 |ErrInputWsdlParseError|Se produjo un error de análisis de WSDL al leer lo especificado. Compruebe que el formato XML es correcto y válido.|  
 |ErrCouldNotCreateInstance|No puede crear ninguna instancia del tipo especificado que se pasó al argumento especificado.|  
-|ParametersNamespace|\<cadena, cadena >|  
+|ParametersNamespace|\<string,string>|  
 |HelpNostdlib|No hacer referencia a las bibliotecas estándares (de forma predeterminada se hace referencia a mscorlib.dll y system.servicemodel.dll.)|  
 |WrnCannotLoadConfigFileForExport|Se produjo un error durante el procesamiento del archivo de configuración que se cargó a partir de lo especificado. No se pueden cargar los servicios que se definen en este archivo de configuración.|  
 |WrnUnableToLoadContractForExport|Se produjo un error al cargar un tipo de contrato. No se puede exportar este tipo especificado.|

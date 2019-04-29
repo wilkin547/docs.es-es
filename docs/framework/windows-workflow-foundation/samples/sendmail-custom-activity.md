@@ -3,11 +3,11 @@ title: Actividad personalizada SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785949"
 ---
 # <a name="sendmail-custom-activity"></a>Actividad personalizada SendMail
 En este ejemplo se muestra cómo crear una actividad personalizada que deriva de <xref:System.Activities.AsyncCodeActivity> para enviar correo utilizando SMTP para el uso dentro de una aplicación de flujo de trabajo. La actividad personalizada utiliza las capacidades de <xref:System.Net.Mail.SmtpClient> para enviar correo electrónico de forma asincrónica y enviar correo electrónico con la autenticación. También proporciona algunas características de usuario final como el modo de prueba, reemplazo del token, plantillas de archivo y ruta de colocación para dejar la prueba.  
@@ -107,13 +107,13 @@ new SendMail
   
  Para obtener más información acerca de cómo configurar un servidor SMTP, vea los vínculos siguientes.  
   
--   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [Configurar el servicio SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [Configurar el servicio SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0: Configurar el correo electrónico SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
+- [IIS 7.0: Configurar el correo electrónico SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [Cómo instalar el servicio SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [Cómo instalar el servicio SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  Hay disponibles para descarga emuladores de SMTP proporcionados por terceros.  
   

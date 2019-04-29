@@ -5,52 +5,52 @@ helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
 ms.openlocfilehash: 223b86310d90c877df15a99c90a0a72ea780734a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784285"
 ---
 # <a name="claims-and-tokens"></a>Notificaciones y tokens
 En este tema se describe los distintos tipos de notificación que Windows Communication Foundation (WCF) crea a partir de los tokens predeterminados que admite.  
   
  Puede examinar las notificaciones de una credencial del cliente mediante <xref:System.IdentityModel.Claims.ClaimSet> y las clases <xref:System.IdentityModel.Claims.Claim>. `ClaimSet` contiene una colección de objetos `Claim`. Cada `Claim` posee los siguientes miembros importantes:  
   
--   La propiedad <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> devuelve un Identificador uniforme de recursos (URI) que especifica el tipo de notificación que se realiza. Por ejemplo, un tipo de notificación puede ser una huella digital de un certificado, en cuyo caso el URI es `http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint`.  
+- La propiedad <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> devuelve un Identificador uniforme de recursos (URI) que especifica el tipo de notificación que se realiza. Por ejemplo, un tipo de notificación puede ser una huella digital de un certificado, en cuyo caso el URI es `http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint`.  
   
--   La propiedad <xref:System.IdentityModel.Claims.Claim.Right%2A> devuelve una dirección URI que especifica el derecho de la notificación. Los derechos predefinidos se encuentran en la clase (<xref:System.IdentityModel.Claims.Rights>, <xref:System.IdentityModel.Claims.Rights.Identity%2A>) <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.  
+- La propiedad <xref:System.IdentityModel.Claims.Claim.Right%2A> devuelve una dirección URI que especifica el derecho de la notificación. Los derechos predefinidos se encuentran en la clase (<xref:System.IdentityModel.Claims.Rights>, <xref:System.IdentityModel.Claims.Rights.Identity%2A>) <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.  
   
--   La propiedad <xref:System.IdentityModel.Claims.Claim.Resource%2A> devuelve el recurso asociado con la notificación.  
+- La propiedad <xref:System.IdentityModel.Claims.Claim.Resource%2A> devuelve el recurso asociado con la notificación.  
   
  Cada <xref:System.IdentityModel.Claims.ClaimSet> también posee una propiedad <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A>, que representa el <xref:System.IdentityModel.Claims.ClaimSet> de `Issuer`.  
   
 ## <a name="windows-accounts"></a>Cuentas de Windows  
  Cuando una credencial del cliente se asigna a una cuenta de usuario de Windows, el <xref:System.IdentityModel.Claims.ClaimSet> resultante adopta los siguientes valores:  
   
--   `Issuer` es el valor devuelto por la propiedad estática de Windows de la clase <xref:System.IdentityModel.Claims.ClaimSet>.  
+- `Issuer` es el valor devuelto por la propiedad estática de Windows de la clase <xref:System.IdentityModel.Claims.ClaimSet>.  
   
--   Las notificaciones de la colección son:  
+- Las notificaciones de la colección son:  
   
-    -   <xref:System.IdentityModel.Claims.Claim> con un valor <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> de identificador de seguridad (SID), un valor de propiedad <xref:System.IdentityModel.Claims.Claim.Right%2A> de `Identity`. y <xref:System.IdentityModel.Claims.Claim.Resource%2A> que devuelve el valor SID real. Un SID es un valor único que emite el controlador de dominio para cada usuario. El SID se utiliza para identificar al usuario en interacciones con seguridad de Windows.  
+    - <xref:System.IdentityModel.Claims.Claim> con un valor <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> de identificador de seguridad (SID), un valor de propiedad <xref:System.IdentityModel.Claims.Claim.Right%2A> de `Identity`. y <xref:System.IdentityModel.Claims.Claim.Resource%2A> que devuelve el valor SID real. Un SID es un valor único que emite el controlador de dominio para cada usuario. El SID se utiliza para identificar al usuario en interacciones con seguridad de Windows.  
   
-    -   <xref:System.IdentityModel.Claims.Claim> con un valor <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> de SID, <xref:System.IdentityModel.Claims.Claim.Right%2A> de `PossessProperty`, y <xref:System.IdentityModel.Claims.Claim.Resource%2A> del valor SID.  
+    - <xref:System.IdentityModel.Claims.Claim> con un valor <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> de SID, <xref:System.IdentityModel.Claims.Claim.Right%2A> de `PossessProperty`, y <xref:System.IdentityModel.Claims.Claim.Resource%2A> del valor SID.  
   
-    -   Una <xref:System.IdentityModel.Claims.Claim> con un <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> de <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, un <xref:System.IdentityModel.Claims.Claim.Right%2A> de `PossessProperty`, y un <xref:System.IdentityModel.Claims.Claim.Resource%2A> de cadena que contiene el nombre de usuario (por ejemplo, "MYMACHINE\Bob").  
+    - Una <xref:System.IdentityModel.Claims.Claim> con un <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> de <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, un <xref:System.IdentityModel.Claims.Claim.Right%2A> de `PossessProperty`, y un <xref:System.IdentityModel.Claims.Claim.Resource%2A> de cadena que contiene el nombre de usuario (por ejemplo, "MYMACHINE\Bob").  
   
-    -   Notificaciones SID adicionales con <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> para los distintos grupos a los que pertenece el usuario.  
+    - Notificaciones SID adicionales con <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> para los distintos grupos a los que pertenece el usuario.  
   
 ## <a name="certificates"></a>Certificados  
  Cuando la credencial del cliente es un certificado, el <xref:System.IdentityModel.Claims.ClaimSet> resultante tiene los siguientes valores:  
   
--   Para los certificados de emisión propia, `Issuer` es el propio <xref:System.IdentityModel.Claims.ClaimSet>. El <xref:System.IdentityModel.Claims.ClaimSet> devuelve <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> de <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>, un <xref:System.IdentityModel.Claims.Claim.Right%2A> de `Identity`, y un valor <xref:System.IdentityModel.Claims.Claim.Resource%2A> que es una matriz <xref:System.Byte> que contiene la huella digital del certificado.  
+- Para los certificados de emisión propia, `Issuer` es el propio <xref:System.IdentityModel.Claims.ClaimSet>. El <xref:System.IdentityModel.Claims.ClaimSet> devuelve <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> de <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>, un <xref:System.IdentityModel.Claims.Claim.Right%2A> de `Identity`, y un valor <xref:System.IdentityModel.Claims.Claim.Resource%2A> que es una matriz <xref:System.Byte> que contiene la huella digital del certificado.  
   
--   Para un certificado emitido por una entidad de certificación, el emisor es el `ClaimSet` que representa el certificado de la entidad de certificación.  
+- Para un certificado emitido por una entidad de certificación, el emisor es el `ClaimSet` que representa el certificado de la entidad de certificación.  
   
--   Las `Claims` de la colección incluyen.  
+- Las `Claims` de la colección incluyen.  
   
-    -   Una `Claim` con un `ClaimType` de huella digital, un `Right` PossessProperty, y un `Resource` que es una matriz de bytes que contiene la huella digital del certificado.  
+    - Una `Claim` con un `ClaimType` de huella digital, un `Right` PossessProperty, y un `Resource` que es una matriz de bytes que contiene la huella digital del certificado.  
   
-    -   Las notificaciones PossessProperty adicionales de varios tipos, incluidas X500DistinguishedName, Dns, Name, Upn y Rsa, representan varias propiedades del certificado. El recurso de la notificación Rsa es la clave pública asociada al certificado. **Nota** donde el tipo de credencial de cliente es un certificado que el servicio se asigna a un Windows cuenta, dos `ClaimSet` los objetos se generan. El primero contiene todas las notificaciones relacionadas con la cuenta de Windows, y el segundo todas las notificaciones relacionadas con el certificado.  
+    - Las notificaciones PossessProperty adicionales de varios tipos, incluidas X500DistinguishedName, Dns, Name, Upn y Rsa, representan varias propiedades del certificado. El recurso de la notificación Rsa es la clave pública asociada al certificado. **Nota** donde el tipo de credencial de cliente es un certificado que el servicio se asigna a un Windows cuenta, dos `ClaimSet` los objetos se generan. El primero contiene todas las notificaciones relacionadas con la cuenta de Windows, y el segundo todas las notificaciones relacionadas con el certificado.  
   
 ## <a name="user-namepassword"></a>Nombre de usuario/contraseña  
  Cuando la credencial del cliente es un nombre de usuario/contraseña (o equivalente) que no se asigna a una cuenta de Windows, el `ClaimSet` resultante es emitido por la propiedad <xref:System.IdentityModel.Claims.ClaimSet.System%2A> estática de la clase `ClaimSet`. El `ClaimSet` contiene un `Identity` de notificación de tipo <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> cuyo recurso es el nombre de usuario del cliente. Una notificación correspondiente tiene un `Right` de `PossessProperty`.  

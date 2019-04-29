@@ -10,20 +10,20 @@ helpviewer_keywords:
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
 ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779046"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Procedimiento para usar el modo de composición para controlar la combinación alfa
 Puede haber ocasiones en que desee crear un mapa de bits fuera de la pantalla que tiene las siguientes características:  
   
--   Colores tienen valores alfabéticos que son menos de 255.  
+- Colores tienen valores alfabéticos que son menos de 255.  
   
--   Colores no son alfabéticos mezclan entre sí al crear el mapa de bits.  
+- Colores no son alfabéticos mezclan entre sí al crear el mapa de bits.  
   
--   Cuando se muestra el mapa de bits terminado, los colores del mapa de bits son una combinación con los colores de fondo de la pantalla alfa.  
+- Cuando se muestra el mapa de bits terminado, los colores del mapa de bits son una combinación con los colores de fondo de la pantalla alfa.  
   
  Para crear un mapa de bits, construya un espacio en blanco <xref:System.Drawing.Bitmap> objeto y, a continuación, construya un <xref:System.Drawing.Graphics> objeto basado en ese mapa de bits. Establezca el modo de composición de la <xref:System.Drawing.Graphics> objeto <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>.  
   

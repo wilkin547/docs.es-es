@@ -1,5 +1,5 @@
 ---
-title: Los generadores de perfiles CLR y las aplicaciones de Windows Store
+title: Aplicaciones de la Tienda Windows y generadores de perfiles CLR
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,13 +15,13 @@ ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775107"
 ---
-# <a name="clr-profilers-and-windows-store-apps"></a>Los generadores de perfiles CLR y las aplicaciones de Windows Store
+# <a name="clr-profilers-and-windows-store-apps"></a>Aplicaciones de la Tienda Windows y generadores de perfiles CLR
 
 En este tema se describe lo que debe pensar cuando las herramientas de diagnóstico de escritura que analizan administra el código que se ejecuta dentro de una aplicación de Windows Store. También proporciona instrucciones para modificar las herramientas de desarrollo existentes para que siguen funcionando cuando se ejecutan en las aplicaciones de Windows Store. Para entender esta información, es mejor que si está familiarizado con la API de generación de perfiles de en tiempo de ejecución de lenguaje común, ya ha usado esta API en una herramienta de diagnóstico que se ejecuta correctamente en las aplicaciones de escritorio de Windows y, ahora está interesado en la modificación de la herramienta Para ejecutar correctamente en las aplicaciones de Windows Store.
 

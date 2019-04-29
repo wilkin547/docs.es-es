@@ -13,20 +13,20 @@ ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795010"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Tutorial: Crear una aplicación criptográfica
 En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de código están diseñados para una aplicación de Windows Forms. Esta aplicación no muestra escenarios del mundo real, como el uso de tarjetas inteligentes. En su lugar, muestra los aspectos básicos del cifrado y el descifrado.  
   
  En este tutorial se usan las siguientes directrices para el cifrado:  
   
--   Use la clase <xref:System.Security.Cryptography.RijndaelManaged>, un algoritmo simétrico, para cifrar y descifrar datos mediante su <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> y <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> generados automáticamente.  
+- Use la clase <xref:System.Security.Cryptography.RijndaelManaged>, un algoritmo simétrico, para cifrar y descifrar datos mediante su <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> y <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> generados automáticamente.  
   
--   Use el <xref:System.Security.Cryptography.RSACryptoServiceProvider>, un algoritmo asimétrico, para cifrar y descifrar la clave en los datos cifrados por <xref:System.Security.Cryptography.RijndaelManaged>. Los algoritmos asimétricos son útiles para pequeñas cantidades de datos, como las claves.  
+- Use el <xref:System.Security.Cryptography.RSACryptoServiceProvider>, un algoritmo asimétrico, para cifrar y descifrar la clave en los datos cifrados por <xref:System.Security.Cryptography.RijndaelManaged>. Los algoritmos asimétricos son útiles para pequeñas cantidades de datos, como las claves.  
   
     > [!NOTE]
     >  Si desea proteger los datos en el equipo en lugar de intercambiar contenido cifrado con otras personas, considere la posibilidad de usar la clase <xref:System.Security.Cryptography.ProtectedData> o <xref:System.Security.Cryptography.ProtectedMemory>.  
@@ -48,7 +48,7 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
 ## <a name="prerequisites"></a>Requisitos previos  
  Necesita los componentes siguientes para completar este tutorial:  
   
--   Referencias a los espacios de nombres <xref:System.IO> y <xref:System.Security.Cryptography>.  
+- Referencias a los espacios de nombres <xref:System.IO> y <xref:System.Security.Cryptography>.  
   
 ## <a name="creating-a-windows-forms-application"></a>Crear una aplicación de Windows Forms  
  La mayoría de los ejemplos de código de este tutorial están diseñados para actuar como controladores de eventos de los controles de botón. En la tabla siguiente se enumeran los controles necesarios para que la aplicación de ejemplo y los nombres necesarios coincidan con los ejemplos de código.  
@@ -100,15 +100,15 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
   
  El paquete de cifrado usa el siguiente formato:  
   
--   Longitud de clave, bytes 0 - 3  
+- Longitud de clave, bytes 0 - 3  
   
--   Longitud del IV, bytes 4 - 7  
+- Longitud del IV, bytes 4 - 7  
   
--   Clave cifrada  
+- Clave cifrada  
   
--   Vector de inicialización (IV)  
+- Vector de inicialización (IV)  
   
--   Texto cifrado  
+- Texto cifrado  
   
  Puede usar la longitud de la clave y del IV para determinar los puntos iniciales y la longitud de todas las partes del paquete de cifrado, que posteriormente se puede usar para descifrar el archivo.  
   

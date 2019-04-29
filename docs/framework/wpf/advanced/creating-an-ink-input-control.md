@@ -15,26 +15,26 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928725"
 ---
 # <a name="creating-an-ink-input-control"></a>Creación de un control de entrada manuscrita
 Puede crear un control personalizado dinámicamente y estáticamente representa la entrada de lápiz. Es decir, represente la tinta mientras el usuario dibuja un trazo, causando parece "fluir" del lápiz de tablet PC y mostrar tinta después de se agrega al control, mediante el lápiz de tablet PC, pegado desde el Portapapeles, o cargar desde un archivo. Para representar dinámicamente la tinta, el control debe usar un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Para representar estáticamente tinta, debe invalidar los métodos de evento de lápiz (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, y <xref:System.Windows.UIElement.OnStylusUp%2A>) para recopilar <xref:System.Windows.Input.StylusPoint> datos, crear los trazos y agregarlos a un <xref:System.Windows.Controls.InkPresenter> (que representa la entrada de lápiz en el control).  
   
  Este tema contiene las siguientes subsecciones:  
   
--   [Cómo: Recopilar datos de puntos de lápiz y crear trazos de tinta](#CollectingStylusPointDataAndCreatingInkStrokes)  
+- [Cómo: Recopilar datos de puntos de lápiz y crear trazos de tinta](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Cómo: Habilitar el Control y aceptar la entrada del mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
+- [Cómo: Habilitar el Control y aceptar la entrada del mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
   
--   [Incorporación de todos](#PuttingItTogether)  
+- [Incorporación de todos](#PuttingItTogether)  
   
--   [Uso de complementos adicionales y representadores dinámicos](#UsingAdditionalPluginsAndDynamicRenderers)  
+- [Uso de complementos adicionales y representadores dinámicos](#UsingAdditionalPluginsAndDynamicRenderers)  
   
--   [Conclusión](#AdvancedInkHandling_Conclusion)  
+- [Conclusión](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
 ## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Procedimiento Recopilar datos de puntos de lápiz y crear trazos de tinta  

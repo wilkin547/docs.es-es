@@ -16,11 +16,11 @@ ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795207"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Procedimiento para obtener acceso a los dispositivos de cifrado de hardware
 Puede usar la clase <xref:System.Security.Cryptography.CspParameters> para obtener acceso a los dispositivos de cifrado de hardware. Por ejemplo, puede usar esta clase para integrar la aplicación con una tarjeta inteligente, un generador de números aleatorios de hardware o una implementación de hardware de un determinado algoritmo criptográfico.  
@@ -54,8 +54,8 @@ Puede usar la clase <xref:System.Security.Cryptography.CspParameters> para obten
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
--   Incluya los espacios de nombres <xref:System> y <xref:System.Security.Cryptography>.  
+- Incluya los espacios de nombres <xref:System> y <xref:System.Security.Cryptography>.  
   
--   Debe tener un lector de tarjetas inteligentes y los controladores correspondientes instalados en el equipo.  
+- Debe tener un lector de tarjetas inteligentes y los controladores correspondientes instalados en el equipo.  
   
--   Debe inicializar el objeto <xref:System.Security.Cryptography.CspParameters> con la información específica de su lector de tarjetas.  Para obtener más información, consulte la documentación de su lector de tarjetas.
+- Debe inicializar el objeto <xref:System.Security.Cryptography.CspParameters> con la información específica de su lector de tarjetas.  Para obtener más información, consulte la documentación de su lector de tarjetas.

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697854"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator (Interfaz)
 Usa la capa de servicios de acceso a datos para buscar los metadatos de los ensamblados en un proceso de destino.  

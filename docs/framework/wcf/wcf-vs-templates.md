@@ -3,11 +3,11 @@ title: Plantillas de Visual Studio para WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
 ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780671"
 ---
 # <a name="wcf-visual-studio-templates"></a>Plantillas de Visual Studio para WCF
 Las plantillas de Visual Studio de Windows Communication Foundation (WCF) son predefinida proyecto y plantillas de elemento que puede usar en Visual Studio para compilar rápidamente servicios WCF y aplicaciones que lo rodea.  
@@ -20,11 +20,11 @@ Las plantillas de Visual Studio de Windows Communication Foundation (WCF) son pr
   
  Cuando se crea un nuevo proyecto con el **servicio WCF** plantilla, el nuevo proyecto incluye automáticamente los tres archivos siguientes:  
   
--   Archivo de contrato de servicio (IService1.cs o IService1.vb). El archivo de contrato de servicio es una interfaz que tiene los atributos de servicio WCF aplicados. Este archivo proporciona una definición de un servicio simple que muestra cómo definir los servicios, e incluye operaciones basadas en parámetros y un ejemplo de contrato de datos simple. Este es el archivo predeterminado mostrado en el editor de código después de crear un proyecto de servicio WCF.  
+- Archivo de contrato de servicio (IService1.cs o IService1.vb). El archivo de contrato de servicio es una interfaz que tiene los atributos de servicio WCF aplicados. Este archivo proporciona una definición de un servicio simple que muestra cómo definir los servicios, e incluye operaciones basadas en parámetros y un ejemplo de contrato de datos simple. Este es el archivo predeterminado mostrado en el editor de código después de crear un proyecto de servicio WCF.  
   
--   Archivo de implementación de servicio (Service1.cs o Service1.vb). El archivo de implementación de servicio implementa el contrato definido en el archivo de contrato de servicio.  
+- Archivo de implementación de servicio (Service1.cs o Service1.vb). El archivo de implementación de servicio implementa el contrato definido en el archivo de contrato de servicio.  
   
--   Archivo de configuración de la aplicación (App.config). El archivo de configuración proporciona los elementos básicos de un modelo de servicio WCF con un enlace HTTP seguro. Además incluye un punto de conexión para el servicio y habilita el intercambio de metadatos.  
+- Archivo de configuración de la aplicación (App.config). El archivo de configuración proporciona los elementos básicos de un modelo de servicio WCF con un enlace HTTP seguro. Además incluye un punto de conexión para el servicio y habilita el intercambio de metadatos.  
   
 > [!NOTE]
 >  Visual Studio está configurado para reconocer el archivo App.config como archivo de configuración para el proyecto cuando se ejecuta mediante el [Host de servicio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), que es la configuración predeterminada. Si hospeda la biblioteca de servicios en un ejecutable, sitúe el código de configuración en el archivo de configuración del ejecutable, ya que los archivos de configuración para DLL no son válidos.  
@@ -34,13 +34,13 @@ Las plantillas de Visual Studio de Windows Communication Foundation (WCF) son pr
   
  Cuando se crea un nuevo proyecto con el **servicio de aplicación Web de WCF** plantilla, el proyecto incluye los cuatro archivos siguientes:  
   
--   Archivo de host del servicio (service1.svc).  
+- Archivo de host del servicio (service1.svc).  
   
--   Archivo de contrato de servicio (IService1.cs o IService1.vb).  
+- Archivo de contrato de servicio (IService1.cs o IService1.vb).  
   
--   Archivo de implementación de servicio (Service1.cs o Service1.vb).  
+- Archivo de implementación de servicio (Service1.cs o Service1.vb).  
   
--   Archivo de configuración web (Web.config).  
+- Archivo de configuración web (Web.config).  
   
  La plantilla crea automáticamente un sitio web (que se implementará en un directorio virtual), y hospeda un servicio en él.  
   

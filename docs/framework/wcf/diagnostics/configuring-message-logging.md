@@ -5,11 +5,11 @@ helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
 ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785013"
 ---
 # <a name="configuring-message-logging"></a>Configuración del registro de mensajes
 En este tema se describe cómo puede configurar el registro de mensajes para distintos escenarios.  
@@ -83,11 +83,11 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
 ### <a name="other-options"></a>Otras opciones  
  Además de los niveles del registro, el usuario puede especificar las opciones siguientes:  
   
--   Registro del mensaje completo (`logEntireMessage` atributo): Este valor especifica si se registra el mensaje completo (encabezado del mensaje y cuerpo). El valor predeterminado es `false`, lo que significa que solo se registra el encabezado. Esta configuración afecta a los niveles de registro de mensajes de servicio y transporte.  
+- Registro del mensaje completo (`logEntireMessage` atributo): Este valor especifica si se registra el mensaje completo (encabezado del mensaje y cuerpo). El valor predeterminado es `false`, lo que significa que solo se registra el encabezado. Esta configuración afecta a los niveles de registro de mensajes de servicio y transporte.  
   
--   Número máximo de mensajes para registrar (`maxMessagesToLog` atributo): Este valor especifica el número máximo de mensajes en el registro. Se contarán todos los mensajes (servicio, transporte y mensajes incorrectos) hacia esta cuota. Cuando se alcance, se emitirá un seguimiento y no se registrará ningún mensaje adicional. El valor predeterminado es 10000.  
+- Número máximo de mensajes para registrar (`maxMessagesToLog` atributo): Este valor especifica el número máximo de mensajes en el registro. Se contarán todos los mensajes (servicio, transporte y mensajes incorrectos) hacia esta cuota. Cuando se alcance, se emitirá un seguimiento y no se registrará ningún mensaje adicional. El valor predeterminado es 10000.  
   
--   Tamaño máximo de mensaje para registrar (`maxSizeOfMessageToLog` atributo): Este valor especifica el tamaño máximo de mensajes en el registro en bytes. Los mensajes que superan el límite de tamaño no están registrados y no se realizará ninguna otra actividad para ese mensaje. Este valor afecta a todos los niveles de seguimiento. Si el seguimiento de ServiceModel está activado, se emitirá el seguimiento de nivel de advertencia en el primer punto de registro (ServiceModelSend * o TransportReceive) para notificar al usuario. El valor predeterminado para los mensajes de nivel de servicio y de transporte es 256 K, mientras que el valor predeterminado para los mensajes incorrectos es 4 K.  
+- Tamaño máximo de mensaje para registrar (`maxSizeOfMessageToLog` atributo): Este valor especifica el tamaño máximo de mensajes en el registro en bytes. Los mensajes que superan el límite de tamaño no están registrados y no se realizará ninguna otra actividad para ese mensaje. Este valor afecta a todos los niveles de seguimiento. Si el seguimiento de ServiceModel está activado, se emitirá el seguimiento de nivel de advertencia en el primer punto de registro (ServiceModelSend * o TransportReceive) para notificar al usuario. El valor predeterminado para los mensajes de nivel de servicio y de transporte es 256 K, mientras que el valor predeterminado para los mensajes incorrectos es 4 K.  
   
     > [!CAUTION]
     >  El tamaño del mensaje que se calcula para comparar con el valor de `maxSizeOfMessageToLog` es el tamaño del mensaje en memoria antes de la serialización. Este tamaño puede diferir de la longitud real de la cadena del mensaje que está registrando y, en muchas ocasiones, es mayor que el tamaño real. Como resultado, es posible que los mensajes no estén registrados. Puede consignar este hecho al especificar el atributo `maxSizeOfMessageToLog` para que sea un 10% mayor que el tamaño del mensaje esperado. Además, si los mensajes incorrectos se registran, el espacio en disco real utilizado por los registros de los mensajes puede ser hasta 5 veces más que el tamaño del valor especificado por `maxSizeOfMessageToLog`.  

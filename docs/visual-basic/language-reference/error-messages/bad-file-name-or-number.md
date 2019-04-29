@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
 ms.openlocfilehash: 2e5d4a3ddd66df85dc4758e22b36ac1ed495659a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935231"
 ---
 # <a name="bad-file-name-or-number"></a>Número o nombre de archivo incorrecto
 Se produjo un error al intentar obtener acceso al archivo especificado. Entre las posibles causas de este error son:  
   
--   La instrucción hace referencia a un archivo con un nombre de archivo o un número que no se especificó en el `FileOpen` instrucción o que se especificó en un `FileOpen` instrucción pero era posteriormente cerrado.  
+- La instrucción hace referencia a un archivo con un nombre de archivo o un número que no se especificó en el `FileOpen` instrucción o que se especificó en un `FileOpen` instrucción pero era posteriormente cerrado.  
   
--   Una instrucción hace referencia a un archivo con un número que está fuera del intervalo del número de archivos.  
+- Una instrucción hace referencia a un archivo con un número que está fuera del intervalo del número de archivos.  
   
--   Una instrucción hace referencia a un nombre de archivo o un número que no es válido.  
+- Una instrucción hace referencia a un nombre de archivo o un número que no es válido.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   

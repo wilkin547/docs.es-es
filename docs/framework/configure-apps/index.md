@@ -25,11 +25,11 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775874"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurar aplicaciones con archivos de configuración
 .NET Framework, a través de archivos de configuración, proporciona a los programadores y administradores control y flexibilidad sobre la manera en que se ejecutan las aplicaciones. Los archivos de configuración son archivos XML que se pueden cambiar según sea necesario. Un administrador puede controlar a qué recursos protegidos puede tener acceso una aplicación, qué versiones de ensamblados utilizará la aplicación y dónde se ubican las aplicaciones y los objetos remotos. Los programadores pueden colocar valores en archivos de configuración, con lo que no es necesario volver a compilar una aplicación cada vez que cambia un valor. En esta sección se describe lo que se puede configurar y por qué es útil configurar una aplicación.  
@@ -66,7 +66,7 @@ ms.locfileid: "59147113"
   
  El nombre y la ubicación del archivo de configuración de la aplicación dependen del host de la aplicación, que puede ser:  
   
--   Aplicación hospedada en un ejecutable.  
+- Aplicación hospedada en un ejecutable.  
   
      Estas aplicaciones tienen dos archivos de configuración: un archivo de configuración de origen, que el desarrollador modifica durante el desarrollo, y un archivo de salida, que se distribuye con la aplicación.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59147113"
   
      Visual Studio copia automáticamente el archivo de configuración de origen en el directorio donde se ubica el ensamblado compilado para crear el archivo de configuración de salida, que se implementa con la aplicación. En algunos casos, Visual Studio puede modificar el archivo de configuración de salida. Para obtener más información, vea la sección [Redirecting assembly versions at the app level](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) (Redirigir versiones de ensamblado en el nivel de aplicación) del artículo [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md) (Redirigir versiones de ensamblado).  
   
--   Aplicación hospedada en ASP.NET.  
+- Aplicación hospedada en ASP.NET.  
   
      Para obtener más información sobre los archivos de configuración de ASP.NET, vea [opciones de configuración de ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
--   Aplicación hospedada en Internet Explorer.  
+- Aplicación hospedada en Internet Explorer.  
   
      Si una aplicación hospedada en Internet Explorer tiene un archivo de configuración, la ubicación de este archivo se especifica en una etiqueta `<link>` con la sintaxis siguiente:  
   
@@ -94,11 +94,11 @@ ms.locfileid: "59147113"
   
  Los archivos de configuración de seguridad están en las ubicaciones siguientes:  
   
--   Archivo de configuración de directiva de empresa: %*runtime-install-path*%\Config\Enterprisesec.config  
+- Archivo de configuración de directiva de empresa: %*runtime-install-path*%\Config\Enterprisesec.config  
   
--   Archivo de configuración de directiva de empresa: %*runtime-install-path*%\Config\Security.config  
+- Archivo de configuración de directiva de empresa: %*runtime-install-path*%\Config\Security.config  
   
--   Archivo de configuración de directiva de usuario: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
+- Archivo de configuración de directiva de usuario: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Cómo: Buscar ensamblados mediante DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  

@@ -3,11 +3,11 @@ title: Diferencias entre Entity SQL y Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
 ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774756"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Diferencias entre Entity SQL y Transact-SQL
 En este tema se describe las diferencias entre [!INCLUDE[esql](../../../../../../includes/esql-md.md)] y [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
@@ -20,15 +20,15 @@ En este tema se describe las diferencias entre [!INCLUDE[esql](../../../../../..
 ## <a name="support-for-collections"></a>Compatibilidad con colecciones  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] trata las colecciones como entidades de primera clase. Por ejemplo:  
   
--   Las expresiones de colecciones son válidas en una cláusula `from`.  
+- Las expresiones de colecciones son válidas en una cláusula `from`.  
   
--   Las subconsultas `in` y `exists` se han generalizado para permitir cualquier tipo de colección.  
+- Las subconsultas `in` y `exists` se han generalizado para permitir cualquier tipo de colección.  
   
      Una subconsulta es un tipo de colección. `e1 in e2` y `exists(e)` son las construcciones de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] que permiten realizar estas operaciones.  
   
--   Las operaciones Set, como `union`, `intersect` y `except`, funcionan ahora en colecciones.  
+- Las operaciones Set, como `union`, `intersect` y `except`, funcionan ahora en colecciones.  
   
--   Las combinaciones funcionan en colecciones.  
+- Las combinaciones funcionan en colecciones.  
   
 ## <a name="support-for-expressions"></a>Compatibilidad con expresiones  
  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] tiene subconsultas (tablas) y expresiones (filas y columnas).  

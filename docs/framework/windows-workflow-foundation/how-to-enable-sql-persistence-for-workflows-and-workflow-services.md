@@ -1,18 +1,18 @@
 ---
-title: Filtrar Habilitar la persistencia de SQL para flujos de trabajo y los servicios de flujo de trabajo
+title: Procedimiento para habilitar la persistencia de SQL para flujos de trabajo y servicios de flujo de trabajo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
 ms.openlocfilehash: 84a9220e39c0d79dc53bee576735d1062c1c037c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779215"
 ---
-# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Filtrar Habilitar la persistencia de SQL para flujos de trabajo y los servicios de flujo de trabajo
+# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Procedimiento para habilitar la persistencia de SQL para flujos de trabajo y servicios de flujo de trabajo
 
 En este tema se describe cómo configurar la característica Almacén de instancias de flujo de trabajo de SQL para habilitar la persistencia para los flujos de trabajo y servicios de flujo de trabajo, según la programación, o mediante un archivo de configuración.
 

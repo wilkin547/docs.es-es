@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
 ms.openlocfilehash: 64e639e5fd6200b525ef6face56f7df2e804d7ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767109"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Procedimiento para importar aserciones de directivas personalizadas
 Las aserciones de directivas describen las funciones y requisitos de un extremo de servicio.  Las aplicaciones cliente pueden utilizar aserciones de directivas en metadatos del servicio para configurar el enlace de cliente o para personalizar el contrato de servicio de un punto de conexión de servicio.  

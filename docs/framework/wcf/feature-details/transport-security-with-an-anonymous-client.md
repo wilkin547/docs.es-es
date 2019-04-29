@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
 ms.openlocfilehash: 20d7e59ba2b4b9dedc0b0daff1c1aa9c5210e61b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932968"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Seguridad de transporte con clientes anónimos
 
@@ -32,24 +32,24 @@ Para obtener más información sobre el uso de un certificado con un servicio, c
 |Transporte|HTTPS|
 |Enlaces|<xref:System.ServiceModel.WSHttpBinding>|
 
-## <a name="service"></a>Servicio
+## <a name="service"></a>web de Office
 
 El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:
 
 - Cree un servicio independiente mediante el código sin configuración.
 
-- Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.
+- Cree un servicio mediante la configuración proporcionada, pero sin definir ningún punto de conexión.
 
 ### <a name="code"></a>Código
 
-El código siguiente muestra cómo crear un punto de conexión mediante la seguridad del transporte:
+El código siguiente muestra cómo crear un extremo mediante la seguridad del transporte:
 
 [!code-csharp[c_SecurityScenarios#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
 [!code-vb[c_SecurityScenarios#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]
 
 ### <a name="configuration"></a>Configuración
 
-El código siguiente configura el mismo punto de conexión mediante la configuración. Ningún mecanismo autentica el cliente y es, por lo tanto, anónimo.
+El código siguiente configura el mismo extremo mediante la configuración. Ningún mecanismo autentica el cliente y es, por lo tanto, anónimo.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -84,7 +84,7 @@ El código y la configuración siguientes están diseñados para ejecutarse de f
 
 - Cree un cliente independiente mediante el código (y el código de cliente).
 
-- Cree un cliente que no defina direcciones de extremo. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:
+- Cree un cliente que no defina direcciones de punto de conexión. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:
 
      [!code-csharp[C_SecurityScenarios#0](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]

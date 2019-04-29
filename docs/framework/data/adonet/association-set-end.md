@@ -3,20 +3,20 @@ title: extremo del conjunto de asociaciones
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
 ms.openlocfilehash: 7b6c646592c1878ea30396d98b4976dc8fa0be12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769595"
 ---
 # <a name="association-set-end"></a>extremo del conjunto de asociaciones
 Un *final del conjunto de asociaciones* identifica el [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) y [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md) al final de un [conjunto de asociaciones](../../../../docs/framework/data/adonet/association-set.md). Los extremos de conjuntos de asociaciones se definen como parte de un conjunto de asociaciones, que debe tener exactamente dos extremos.  
   
  Una definición de extremo de conjunto de asociaciones contiene la información siguiente:  
   
--   Uno de los tipos de entidad implicados en el conjunto de asociaciones. (Necesario)  
+- Uno de los tipos de entidad implicados en el conjunto de asociaciones. (Necesario)  
   
--   El conjunto de entidades para el tipo de entidad implicado en el conjunto de asociaciones. (Necesario)  
+- El conjunto de entidades para el tipo de entidad implicado en el conjunto de asociaciones. (Necesario)  
   
 ## <a name="example"></a>Ejemplo  
  El diagrama siguiente muestra un modelo conceptual con dos asociaciones: `WrittenBy` y `PublishedBy`.  

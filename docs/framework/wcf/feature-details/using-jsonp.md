@@ -3,11 +3,11 @@ title: Utilizar JSONP
 ms.date: 03/30/2017
 ms.assetid: f386718c-b4ba-4931-a610-40c27a46672a
 ms.openlocfilehash: 622fbdbf2674aea552cfd57f528d7cc5168cfda8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932839"
 ---
 # <a name="using-jsonp"></a>Utilizar JSONP
 
@@ -19,7 +19,7 @@ callback({"a" = \\"b\\"});
 
 En el ejemplo anterior, la carga de JSON, `{"a" = \\"b\\"}`, se ajusta a una llamada de función, `callback`. La función de devolución de llamada ya debe estar definido en la página web actual. El tipo de contenido de una respuesta JSONP es `application/javascript`.
 
-JSONP no está habilitado automáticamente. Para habilitarlo, establezca el atributo `javascriptCallbackEnabled` como `true` en uno de los extremos estándar HTTP (<xref:System.ServiceModel.Description.WebHttpEndpoint> o <xref:System.ServiceModel.Description.WebScriptEndpoint>), como se muestra en el siguiente ejemplo.
+JSONP no está habilitado automáticamente. Para habilitarlo, establezca el atributo `javascriptCallbackEnabled` como `true` en uno de los puntos de conexión estándar HTTP (<xref:System.ServiceModel.Description.WebHttpEndpoint> o <xref:System.ServiceModel.Description.WebScriptEndpoint>), como se muestra en el siguiente ejemplo.
 
 ```xml
 <system.serviceModel>

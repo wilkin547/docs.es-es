@@ -3,11 +3,11 @@ title: Celdas de referencia
 description: Obtenga información sobre cómo F# celdas de referencia son ubicaciones de almacenamiento que le permiten crear valores mutables con semántica de referencia.
 ms.date: 05/16/2016
 ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795411"
 ---
 # <a name="reference-cells"></a>Celdas de referencia
 
@@ -50,7 +50,7 @@ let ref x = { contents = x }
 
 En la tabla siguiente se muestran las características que están disponibles en la celda de referencia.
 
-|Operador, miembro o campo|Descripción|Tipo|de esquema JSON|
+|Operador, miembro o campo|Descripción|Tipo|Definición|
 |--------------------------|-----------|----|----------|
 |`!` (operador de desreferencia)|Devuelve el valor subyacente.|`'a ref -> 'a`|`let (!) r = r.contents`|
 |`:=` (operador de asignación)|Cambia el valor subyacente.|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|

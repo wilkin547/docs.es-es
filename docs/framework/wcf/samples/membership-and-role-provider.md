@@ -3,11 +3,11 @@ title: Proveedor de pertenencia y roles
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
 ms.openlocfilehash: b5cb743fb3533d2f3a8016c9357d6ead498a5878
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756122"
 ---
 # <a name="membership-and-role-provider"></a>Proveedor de pertenencia y roles
 El ejemplo de proveedor de pertenencia y función muestra el modo en que un servicio puede utilizar los proveedores de pertenencia y función de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] para autenticar y autorizar a los clientes.  
@@ -19,15 +19,15 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
   
  Este ejemplo demuestra cómo:  
   
--   Un cliente se puede autenticar utilizando la combinación de nombre de usuario y contraseña.  
+- Un cliente se puede autenticar utilizando la combinación de nombre de usuario y contraseña.  
   
--   El servidor puede validar las credenciales del cliente con el proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+- El servidor puede validar las credenciales del cliente con el proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
--   El servidor se puede autenticar utilizando el certificado X.509 del servidor.  
+- El servidor se puede autenticar utilizando el certificado X.509 del servidor.  
   
--   El servidor puede asignar el cliente autenticado a un rol utilizando el proveedor de roles de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+- El servidor puede asignar el cliente autenticado a un rol utilizando el proveedor de roles de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
--   El servidor puede utilizar `PrincipalPermissionAttribute` para controlar el acceso a ciertos métodos expuestos por el servicio.  
+- El servidor puede utilizar `PrincipalPermissionAttribute` para controlar el acceso a ciertos métodos expuestos por el servicio.  
   
  Los proveedores de roles y pertenencia se configuran para utilizar un almacén respaldado por SQL Server. En el archivo de configuración del servicio se especifica una cadena de conexión y varias opciones. Al proveedor de pertenencia se le da el nombre `SqlMembershipProvider` y al proveedor de roles se le da el nombre `SqlRoleProvider`.  
   
@@ -164,7 +164,7 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
   
 ### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
--   Ejecute Cleanup.bat en la carpeta de ejemplos después de que haya terminado de ejecutar el ejemplo.  
+- Ejecute Cleanup.bat en la carpeta de ejemplos después de que haya terminado de ejecutar el ejemplo.  
   
 > [!NOTE]
 >  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado los ejemplos de Windows Communication Foundation (WCF) que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser - trustedpeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
@@ -174,7 +174,7 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
   
  A continuación, se proporciona una breve descripción de las diferentes secciones de los archivos por lotes de manera que se puedan modificar para ejecutarse con la configuración adecuada.  
   
--   Crear el certificado de servidor.  
+- Crear el certificado de servidor.  
   
      Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar. La variable %SERVER_NAME% especifica el nombre del servidor. Cambie esta variable para especificar su propio nombre de servidor. Este archivo por lotes tiene como valor predeterminado el host local.  
   
@@ -190,7 +190,7 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   Instalar el certificado del servidor en el almacén de certificados de confianza del cliente.  
+- Instalar el certificado del servidor en el almacén de certificados de confianza del cliente.  
   
      Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.  
   

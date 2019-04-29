@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
 ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788835"
 ---
 # <a name="structured-navigation-overview"></a>Información general sobre la navegación estructurada
 Contenido que puede hospedarse en una [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], un <xref:System.Windows.Controls.Frame>, o un <xref:System.Windows.Navigation.NavigationWindow> se compone de páginas que se pueden identificar por módulo [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] y navegar mediante hipervínculos. La estructura de páginas y las formas en que se puede navegar por ellas, tal como se define mediante hipervínculos, se conoce como topología de navegación. Esta topología se adapta a diversos tipos de aplicaciones, especialmente a aquéllas que navegan por documentos. Con estas aplicaciones, el usuario puede navegar de una página a otra sin necesidad de saber nada sobre la otra.  
@@ -25,15 +25,15 @@ Contenido que puede hospedarse en una [!INCLUDE[TLA#tla_xbap](../../../../includ
 ## <a name="structured-navigation"></a>Navegación estructurada  
  Cuando una página llama a otra página en una navegación estructurada, se requieren algunos o todos los comportamientos siguientes:  
   
--   La página que llama navega a la página llamada y, opcionalmente, pasa los parámetros requeridos por la página llamada.  
+- La página que llama navega a la página llamada y, opcionalmente, pasa los parámetros requeridos por la página llamada.  
   
--   La página llamada, cuando un usuario ha terminado de usar la página que llama, vuelve específicamente a la página que llama y, opcionalmente:  
+- La página llamada, cuando un usuario ha terminado de usar la página que llama, vuelve específicamente a la página que llama y, opcionalmente:  
   
-    -   Devuelve información de estado que describe cómo se completó la página que llama (por ejemplo, si un usuario presionó un botón Aceptar o Cancelar).  
+    - Devuelve información de estado que describe cómo se completó la página que llama (por ejemplo, si un usuario presionó un botón Aceptar o Cancelar).  
   
-    -   Devuelve los datos recopilados del usuario (por ejemplo, los datos de un nuevo empleado).  
+    - Devuelve los datos recopilados del usuario (por ejemplo, los datos de un nuevo empleado).  
   
--   Cuando se devuelve la página que llama a la página llamada, la página llamada se quita del historial de navegación para aislar cada instancia de una página llamada de otra.  
+- Cuando se devuelve la página que llama a la página llamada, la página llamada se quita del historial de navegación para aislar cada instancia de una página llamada de otra.  
   
  En la ilustración siguiente se muestran estos comportamientos:  
   
@@ -115,17 +115,17 @@ Contenido que puede hospedarse en una [!INCLUDE[TLA#tla_xbap](../../../../includ
   
  No es necesario pasar parámetros a la página llamada. En su lugar, podría hacer lo siguiente:  
   
--   En la página que llama:  
+- En la página que llama:  
   
-    1.  Crear una instancia de la llamada <xref:System.Windows.Navigation.PageFunction%601> utilizando el constructor predeterminado.  
+    1. Crear una instancia de la llamada <xref:System.Windows.Navigation.PageFunction%601> utilizando el constructor predeterminado.  
   
-    2.  Store los parámetros en <xref:System.Windows.Application.Properties%2A>.  
+    2. Store los parámetros en <xref:System.Windows.Application.Properties%2A>.  
   
-    3.  Vaya a la llamada <xref:System.Windows.Navigation.PageFunction%601>.  
+    3. Vaya a la llamada <xref:System.Windows.Navigation.PageFunction%601>.  
   
--   Desde la llamada <xref:System.Windows.Navigation.PageFunction%601>:  
+- Desde la llamada <xref:System.Windows.Navigation.PageFunction%601>:  
   
-    -   Recuperar y utilizar los parámetros almacenados en <xref:System.Windows.Application.Properties%2A>.  
+    - Recuperar y utilizar los parámetros almacenados en <xref:System.Windows.Application.Properties%2A>.  
   
  Pero, como verá en breve, aún necesitará utilizar código para crear una instancia y navegar a la página llamada para recopilar los datos devueltos por la página llamada. Por este motivo, el <xref:System.Windows.Navigation.PageFunction%601> debe mantenerse activo; de lo contrario, la próxima vez vaya a la <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] crea una instancia de la <xref:System.Windows.Navigation.PageFunction%601> utilizando el constructor predeterminado.  
   

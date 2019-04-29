@@ -1,5 +1,5 @@
 ---
-title: ToggleButton estilos y plantillas
+title: Estilos y plantillas de ToggleButton
 ms.date: 03/30/2017
 helpviewer_keywords:
 - states [WPF], ToggleButton
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - parts [WPF], ToggleButton
 ms.assetid: 54f23f30-4bcb-4f09-8ce4-376a13a255a1
 ms.openlocfilehash: 46fd7d07c3904ee752ae3f467f65af4b0c031c84
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57509514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790759"
 ---
-# <a name="togglebutton-styles-and-templates"></a>ToggleButton estilos y plantillas
+# <a name="togglebutton-styles-and-templates"></a>Estilos y plantillas de ToggleButton
 
 En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Primitives.ToggleButton> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 

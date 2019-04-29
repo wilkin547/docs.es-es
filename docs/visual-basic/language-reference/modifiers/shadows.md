@@ -12,11 +12,11 @@ helpviewer_keywords:
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
 ms.openlocfilehash: c314db90a1a0f89613e20897387bdec8ec534837
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778734"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 Especifica que un elemento de programación declarado vuelve a declarar y oculta un elemento con el mismo nombre, o un conjunto de elementos sobrecargados, en una clase base.  
@@ -28,19 +28,19 @@ Especifica que un elemento de programación declarado vuelve a declarar y oculta
   
 ## <a name="rules"></a>Reglas  
   
--   **Contexto de declaración.** Puede usar `Shadows` sólo en el nivel de clase. Esto significa que el contexto de declaración de un `Shadows` elemento debe ser una clase y no puede ser un archivo de código fuente, espacio de nombres, interfaz, módulo, estructura o procedimiento.  
+- **Contexto de declaración.** Puede usar `Shadows` sólo en el nivel de clase. Esto significa que el contexto de declaración de un `Shadows` elemento debe ser una clase y no puede ser un archivo de código fuente, espacio de nombres, interfaz, módulo, estructura o procedimiento.  
   
      Puede declarar un único elemento sombreado en una única instrucción de declaración.  
   
--   **Modificadores combinados.** No puede especificar `Shadows` junto con `Overloads`, `Overrides`, o `Static` en la misma declaración.  
+- **Modificadores combinados.** No puede especificar `Shadows` junto con `Overloads`, `Overrides`, o `Static` en la misma declaración.  
   
--   **Tipos de elemento.** Puede reemplazar cualquier tipo de elemento declarado con cualquier otro tipo. Si sombrea una propiedad o procedimiento con otra propiedad o procedimiento, los parámetros y el tipo de valor devuelto no es necesario para que coincida con los de la propiedad de clase base o el procedimiento.  
+- **Tipos de elemento.** Puede reemplazar cualquier tipo de elemento declarado con cualquier otro tipo. Si sombrea una propiedad o procedimiento con otra propiedad o procedimiento, los parámetros y el tipo de valor devuelto no es necesario para que coincida con los de la propiedad de clase base o el procedimiento.  
   
--   **Acceso a.** El elemento sombreado en la clase base está disponible normalmente desde dentro de la clase derivada que lo reemplaza. Sin embargo, se aplican las consideraciones siguientes.  
+- **Acceso a.** El elemento sombreado en la clase base está disponible normalmente desde dentro de la clase derivada que lo reemplaza. Sin embargo, se aplican las consideraciones siguientes.  
   
-    -   Si el elemento reemplazado no es accesible desde el código que hace referencia a él, la referencia se resuelve en el elemento sombreado. Por ejemplo, si un `Private` elemento oculta o prevalece sobre un elemento de clase base, el código que no tiene permiso para tener acceso a la `Private` elemento tiene acceso al elemento de clase base en su lugar.  
+    - Si el elemento reemplazado no es accesible desde el código que hace referencia a él, la referencia se resuelve en el elemento sombreado. Por ejemplo, si un `Private` elemento oculta o prevalece sobre un elemento de clase base, el código que no tiene permiso para tener acceso a la `Private` elemento tiene acceso al elemento de clase base en su lugar.  
   
-    -   Ocultar un elemento, es posible acceder el elemento sombreado a través de un objeto declarado con el tipo de la clase base. También puede acceder a través de `MyBase`.  
+    - Ocultar un elemento, es posible acceder el elemento sombreado a través de un objeto declarado con el tipo de la clase base. También puede acceder a través de `MyBase`.  
   
  El modificador `Shadows` se puede utilizar en los contextos siguientes:  
   

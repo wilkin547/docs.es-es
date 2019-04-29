@@ -3,11 +3,11 @@ title: Control de errores de WCF
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
 ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791227"
 ---
 # <a name="wcf-error-handling"></a>Control de errores de WCF
 Los errores detectados por una aplicación WCF pertenecen a uno de los tres grupos:  
@@ -26,13 +26,13 @@ Los errores detectados por una aplicación WCF pertenecen a uno de los tres grup
   
  El control de errores en WCF se realiza mediante una o varias de las siguientes acciones:  
   
--   Controlar directamente la excepción producida, que solo se lleva a cabo para errores de comunicación y de proxy o canal.  
+- Controlar directamente la excepción producida, que solo se lleva a cabo para errores de comunicación y de proxy o canal.  
   
--   Usar contratos de errores  
+- Usar contratos de errores  
   
--   Implementar la interfaz <xref:System.ServiceModel.Dispatcher.IErrorHandler>  
+- Implementar la interfaz <xref:System.ServiceModel.Dispatcher.IErrorHandler>  
   
--   Controlar eventos <xref:System.ServiceModel.ServiceHost>  
+- Controlar eventos <xref:System.ServiceModel.ServiceHost>  
   
 ## <a name="fault-contracts"></a>Contrato de error  
  Los contratos de error le permiten definir los errores que se pueden producir durante la operación de servicio en una plataforma de manera independiente. De forma predeterminada, todas las excepciones producidas desde una operación de servicio se devolverán al cliente como objeto <xref:System.ServiceModel.FaultException>. El objeto <xref:System.ServiceModel.FaultException> contendrá muy poca información. Puede controlar la información enviada al cliente mediante la definición de un contrato de error y la devolución del error como clase <xref:System.ServiceModel.FaultException%601>. Para obtener más información, consulte [especificar y controlar errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

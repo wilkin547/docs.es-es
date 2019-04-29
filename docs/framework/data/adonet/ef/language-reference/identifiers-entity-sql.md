@@ -3,11 +3,11 @@ title: Identificadores (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
 ms.openlocfilehash: 702a9c69c37b572fde18dd57c44608678174fb15
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774665"
 ---
 # <a name="identifiers-entity-sql"></a>Identificadores (Entity SQL)
 En [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se utilizan identificadores como representación de los alias de expresiones de consulta, referencias de variables, propiedades de objetos, funciones, etc. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] proporciona dos tipos de identificadores: simples y entre comillas.  
@@ -20,15 +20,15 @@ En [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se utilizan identific
   
  Un identificador entre comillas no puede incluir los caracteres siguientes:  
   
--   Nueva línea.  
+- Nueva línea.  
   
--   Retorno de carro.  
+- Retorno de carro.  
   
--   Tabulaciones.  
+- Tabulaciones.  
   
--   Retroceso.  
+- Retroceso.  
   
--   Corchetes adicionales (es decir, corchetes dentro de los corchetes que delinean el identificador).  
+- Corchetes adicionales (es decir, corchetes dentro de los corchetes que delinean el identificador).  
   
  Un identificador entre comillas puede incluir caracteres Unicode.  
   
@@ -53,13 +53,13 @@ En [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se utilizan identific
 ## <a name="aliasing-rules"></a>Reglas de alias  
  Se recomienda especificar alias en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta siempre que sea necesario, incluidos los siguientes [!INCLUDE[esql](../../../../../../includes/esql-md.md)] construye:  
   
--   Campos de un constructor de fila.  
+- Campos de un constructor de fila.  
   
--   Elementos de la cláusula FROM de una expresión de consulta.  
+- Elementos de la cláusula FROM de una expresión de consulta.  
   
--   Elementos de la cláusula SELECT de una expresión de consulta.  
+- Elementos de la cláusula SELECT de una expresión de consulta.  
   
--   Elementos de la cláusula GROUP BY de una expresión de consulta.  
+- Elementos de la cláusula GROUP BY de una expresión de consulta.  
   
 ### <a name="valid-aliases"></a>Alias válidos  
  Los alias válidos en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] son cualquier identificador simple o un identificador entre comillas.  
@@ -67,9 +67,9 @@ En [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se utilizan identific
 ### <a name="alias-generation"></a>Generación de alias  
  Si no se especifica ningún alias en un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expresión de consulta, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] intenta generar uno basándose en las siguientes reglas simples:  
   
--   Si la expresión de consulta (para la que el alias está sin especificar) es un identificador simple o entre comillas, ese identificador se utiliza como alias. Por ejemplo, `ROW(a, [b])` se convierte en `ROW(a AS a, [b] AS [b])`.  
+- Si la expresión de consulta (para la que el alias está sin especificar) es un identificador simple o entre comillas, ese identificador se utiliza como alias. Por ejemplo, `ROW(a, [b])` se convierte en `ROW(a AS a, [b] AS [b])`.  
   
--   Si la expresión de consulta es más compleja, pero el último componente es un identificador simple, ese identificador se utiliza como alias. Por ejemplo, `ROW(a.a1, b.[b1])` se convierte en `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
+- Si la expresión de consulta es más compleja, pero el último componente es un identificador simple, ese identificador se utiliza como alias. Por ejemplo, `ROW(a.a1, b.[b1])` se convierte en `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
   
  Recomendamos que no utilice el alias implícito si desea utilizar el nombre del alias después. Cuando aparezca un conflicto en los alias (implícito o explícito) o se repitan en el mismo ámbito, habrá un error de compilación. Un alias implícito pasará la compilación aun cuando sea un alias explícito o implícito del mismo nombre.  
   
@@ -107,11 +107,11 @@ SELECT 1 AS X, 2 AS X …
   
  Las siguientes son notas adicionales sobre los ámbitos:  
   
--   La lista de selección puede incluir nombres nuevos en el ámbito, en orden. Las expresiones de proyección a la derecha podrían hacer referencia a los nombres proyectados en la izquierda.  
+- La lista de selección puede incluir nombres nuevos en el ámbito, en orden. Las expresiones de proyección a la derecha podrían hacer referencia a los nombres proyectados en la izquierda.  
   
--   La cláusula ORDER BY puede hacer referencia a los nombres (alias) especificados en la lista de selección.  
+- La cláusula ORDER BY puede hacer referencia a los nombres (alias) especificados en la lista de selección.  
   
--   El orden de evaluación de las cláusulas dentro de la expresión SELECT determina el orden en que los nombres se incluyen en el ámbito. La cláusula FROM se evalúa primero y a continuación se evalúan las cláusulas WHERE, GROUP BY, HAVING, SELECT y, finalmente, ORDER BY.  
+- El orden de evaluación de las cláusulas dentro de la expresión SELECT determina el orden en que los nombres se incluyen en el ámbito. La cláusula FROM se evalúa primero y a continuación se evalúan las cláusulas WHERE, GROUP BY, HAVING, SELECT y, finalmente, ORDER BY.  
   
 ### <a name="aggregate-handling"></a>Control de los agregados  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite dos formas de agregados: agregados basados en la colección y agregados basados en grupo. Los agregados basados en la colección son la construcción preferida en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] y los agregados basados en el grupo se admiten por compatibilidad con SQL.  

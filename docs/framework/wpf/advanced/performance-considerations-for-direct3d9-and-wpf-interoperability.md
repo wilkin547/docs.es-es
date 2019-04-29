@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
 ms.openlocfilehash: 1371fa901bebc503a0091f3229a8fd7e6ccc2c86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772858"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Consideraciones de rendimiento para la interoperabilidad entre Direct3D9 y WPF
 Puede hospedar contenido Direct3D9 mediante la <xref:System.Windows.Interop.D3DImage> clase. Hospedar contenido Direct3D9 puede afectar al rendimiento de la aplicación. En este tema se describe los procedimientos recomendados para optimizar el rendimiento al hospedar contenido Direct3D9 en una aplicación de Windows Presentation Foundation (WPF). Estas recomendaciones incluyen cómo usar <xref:System.Windows.Interop.D3DImage> y procedimientos recomendados cuando usa Windows Vista, Windows XP, y se muestran varios monitores.  

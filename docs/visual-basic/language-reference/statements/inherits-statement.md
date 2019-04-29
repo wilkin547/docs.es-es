@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
 ms.openlocfilehash: 5ab90e44e2809c1e71d7f100970b7be73af4a732
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784207"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 Hace que la clase o interfaz actual herede los atributos, variables, propiedades, procedimientos y eventos de otra clase o conjunto de interfaces.  
@@ -37,11 +37,11 @@ Inherits basetypenames
   
 ## <a name="rules"></a>Reglas  
   
--   **Herencia de clases.** Si una clase utiliza la `Inherits` instrucción, puede especificar sólo una clase base.  
+- **Herencia de clases.** Si una clase utiliza la `Inherits` instrucción, puede especificar sólo una clase base.  
   
      Una clase no puede heredar de una clase anidada dentro de él.  
   
--   **Herencia de interfaz.** Si usa una interfaz el `Inherits` instrucción, puede especificar una o varias interfaces bases. Puede heredar de dos interfaces incluso si cada uno de ellos define un miembro con el mismo nombre. Si lo hace, el código de implementación debe utilizar la calificación de nombres para especificar qué miembro se implementa.  
+- **Herencia de interfaz.** Si usa una interfaz el `Inherits` instrucción, puede especificar una o varias interfaces bases. Puede heredar de dos interfaces incluso si cada uno de ellos define un miembro con el mismo nombre. Si lo hace, el código de implementación debe utilizar la calificación de nombres para especificar qué miembro se implementa.  
   
      Una interfaz no puede heredar de otra interfaz con un nivel de acceso más restrictivo. Por ejemplo, un `Public` interfaz no puede heredar de un `Friend` interfaz.  
   

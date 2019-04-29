@@ -3,11 +3,11 @@ title: Directiva de x:Property
 ms.date: 03/30/2017
 ms.assetid: 618555a8-c893-455c-810f-ac54cd24ef10
 ms.openlocfilehash: ab25381769e7001f7f48d73e717b5f495da90dfa
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796453"
 ---
 # <a name="xproperty-directive"></a>Directiva de x:Property
 Declara una propiedad XAML en el marcado.  
@@ -32,7 +32,7 @@ Declara una propiedad XAML en el marcado.
 |`propertyType`|Nombre del tipo (u otra forma de cadena, específica del marco) que especifica el tipo de esta propiedad.|  
   
 ## <a name="remarks"></a>Comentarios  
- En la implementación de servicios XAML de .NET Framework, `x:Property` no tiene un respaldo de tipos directo pero es compatible con la clase <xref:System.Windows.Markup.PropertyDefinition>. En un flujo de nodo XAML, un elemento `x:Property` se representa como un miembro denominado `Property`, del espacio de nombres de XAML de lenguaje XAML. El miembro `Property` contiene atributos tal y como declara el marcado.  
+ En la implementación de servicios XAML de .NET Framework, `x:Property` no tiene un respaldo de tipos directo pero es compatible con la clase <xref:System.Windows.Markup.PropertyDefinition>. En un flujo de nodo XAML, un elemento `x:Property` se representa como un miembro llamado `Property`, del espacio de nombres XAML de lenguaje XAML. El miembro `Property` contiene atributos tal y como declara el marcado.  
   
  Los significados de `Name` y `Type` no están asignados en el nivel de servicios XAML de .NET Framework. Se almacenan en el flujo de nodo XAML inicial como valores de cadena, para ser interpretados posteriormente conforme a las reglas que puedan imponer marcos concretos. El significado puede alinearse con un nombre XAML y un significado de tipo XAML, o puede ser válido solo en un sistema de tipos de respaldo, dependiendo de la implementación.  
   

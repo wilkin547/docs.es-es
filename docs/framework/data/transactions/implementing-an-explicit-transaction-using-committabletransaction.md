@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793723"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementar una transacción explícita mediante una transacción confirmable
 La clase <xref:System.Transactions.CommittableTransaction> proporciona a las aplicaciones una manera explícita de utilizar una transacción, a diferencia de utilizar implícitamente la clase <xref:System.Transactions.TransactionScope>. Es útil para las aplicaciones que desean utilizar la misma transacción por varias llamadas de función o llamadas de subproceso múltiples. A diferencia de la clase <xref:System.Transactions.TransactionScope>, el sistema de escritura de la aplicación ha de llamar específicamente a los métodos <xref:System.Transactions.CommittableTransaction.Commit%2A> y <xref:System.Transactions.Transaction.Rollback%2A> para confirmar o anular la transacción.  
@@ -22,9 +22,9 @@ La clase <xref:System.Transactions.CommittableTransaction> proporciona a las apl
   
  Debe tener en cuenta lo siguiente cuando trabaje con la clase <xref:System.Transactions.CommittableTransaction>,  
   
--   Al crear una transacción <xref:System.Transactions.CommittableTransaction>, no se establece la transacción ambiente. Tendrá que establecer y restablecer específicamente la transacción de ambiente con el fin de garantizar que los administradores de recursos funcionen bajo el contexto de transacción correcto cuando sea apropiado. La manera de establecer la transacción ambiente actual está estableciendo la propiedad <xref:System.Transactions.Transaction.Current%2A> estática en el objeto <xref:System.Transactions.Transaction> global.  
+- Al crear una transacción <xref:System.Transactions.CommittableTransaction>, no se establece la transacción ambiente. Tendrá que establecer y restablecer específicamente la transacción de ambiente con el fin de garantizar que los administradores de recursos funcionen bajo el contexto de transacción correcto cuando sea apropiado. La manera de establecer la transacción ambiente actual está estableciendo la propiedad <xref:System.Transactions.Transaction.Current%2A> estática en el objeto <xref:System.Transactions.Transaction> global.  
   
--   No se puede reutilizar un objeto <xref:System.Transactions.CommittableTransaction>. Una vez confirmado o revertido un objeto <xref:System.Transactions.CommittableTransaction>, no se puede utilizar de nuevo en una transacción. Es decir, no se puede establecer como el contexto de la transacción ambiente actual.  
+- No se puede reutilizar un objeto <xref:System.Transactions.CommittableTransaction>. Una vez confirmado o revertido un objeto <xref:System.Transactions.CommittableTransaction>, no se puede utilizar de nuevo en una transacción. Es decir, no se puede establecer como el contexto de la transacción ambiente actual.  
   
 ## <a name="creating-a-committabletransaction"></a>Crear un CommittableTransaction  
  En el ejemplo siguiente se crea una nueva instancia de <xref:System.Transactions.CommittableTransaction> y se confirma.  
