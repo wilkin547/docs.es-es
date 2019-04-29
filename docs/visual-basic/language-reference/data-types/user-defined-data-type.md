@@ -24,11 +24,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: 5fe12d18c7f403c1a50ed548a260ba39e83280eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746770"
 ---
 # <a name="user-defined-data-type"></a>Tipo de datos definido por el usuario
 Contiene los datos en un formato que defina. El `Structure` instrucción define el formato.  
@@ -50,15 +50,15 @@ Contiene los datos en un formato que defina. El `Structure` instrucción define 
   
 ## <a name="programming-tips"></a>Sugerencias de programación  
   
--   **Consumo de memoria.** Al igual que sucede con los demás tipos de datos compuestos, no puede calcularse de forma precisa el consumo total de memoria de una estructura sumando las asignaciones de almacenamiento nominal de sus miembros. Es más, no puede suponerse que el orden de almacenamiento en memoria sea el mismo que el orden de la declaración. Si necesita controlar el diseño de almacenamiento de una estructura, puede aplicar el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> a la instrucción `Structure`.  
+- **Consumo de memoria.** Al igual que sucede con los demás tipos de datos compuestos, no puede calcularse de forma precisa el consumo total de memoria de una estructura sumando las asignaciones de almacenamiento nominal de sus miembros. Es más, no puede suponerse que el orden de almacenamiento en memoria sea el mismo que el orden de la declaración. Si necesita controlar el diseño de almacenamiento de una estructura, puede aplicar el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> a la instrucción `Structure`.  
   
--   **Consideraciones de interoperabilidad.** Si trabaja con componentes no escritos para .NET Framework, por ejemplo objetos de automatización o COM, tenga en cuenta que los tipos definidos por el usuario en otros entornos no son compatibles con Visual Basic los tipos de estructuras.  
+- **Consideraciones de interoperabilidad.** Si trabaja con componentes no escritos para .NET Framework, por ejemplo objetos de automatización o COM, tenga en cuenta que los tipos definidos por el usuario en otros entornos no son compatibles con Visual Basic los tipos de estructuras.  
   
--   **Ampliación.** No hay ninguna conversión automática a o desde cualquier tipo de datos de estructura. Puede definir operadores de conversión en la estructura utilizando el [Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md), y se puede declarar cada operador de conversión se `Widening` o `Narrowing`.  
+- **Ampliación.** No hay ninguna conversión automática a o desde cualquier tipo de datos de estructura. Puede definir operadores de conversión en la estructura utilizando el [Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md), y se puede declarar cada operador de conversión se `Widening` o `Narrowing`.  
   
--   **Caracteres de tipo.** Tipos de datos de estructura no tienen ningún carácter de tipo literal o un carácter de tipo identificador.  
+- **Caracteres de tipo.** Tipos de datos de estructura no tienen ningún carácter de tipo literal o un carácter de tipo identificador.  
   
--   **Tipo de marco de trabajo.** No hay ningún tipo correspondiente en .NET Framework. Todas las estructuras heredan de la clase de .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, pero ninguna estructura individual que corresponde a <xref:System.ValueType?displayProperty=nameWithType>.  
+- **Tipo de marco de trabajo.** No hay ningún tipo correspondiente en .NET Framework. Todas las estructuras heredan de la clase de .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, pero ninguna estructura individual que corresponde a <xref:System.ValueType?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Ejemplo  
  El paradigma siguiente muestra el esquema de la declaración de una estructura.  

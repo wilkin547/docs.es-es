@@ -3,11 +3,11 @@ title: Message Queuing a Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
 ms.openlocfilehash: c0674d23f1b4e611e8f3b51a6480a65e9b52d038
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756460"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Message Queuing a Windows Communication Foundation
 Este ejemplo muestra cómo una aplicación de Message Queuing (MSMQ) puede enviar un mensaje de MSMQ a un servicio de Windows Communication Foundation (WCF). El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.  
@@ -118,15 +118,15 @@ Console.ReadLine();
 
 2. Si se ejecuta el servicio primero, comprobará que la cola esté presente. Si la cola no está presente, el servicio creará una. Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ. Siga estos pasos para crear una cola en Windows 2008.
 
-    1.  Abra el administrador del servidor en Visual Studio 2012.
+    1. Abra el administrador del servidor en Visual Studio 2012.
 
-    2.  Expanda el **características** ficha.
+    2. Expanda el **características** ficha.
 
-    3.  Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.
+    3. Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.
 
-    4.  Compruebe el **transaccional** cuadro.
+    4. Compruebe el **transaccional** cuadro.
 
-    5.  Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.
+    5. Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.
 
 3. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

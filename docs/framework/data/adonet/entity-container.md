@@ -3,20 +3,20 @@ title: contenedor de entidades
 ms.date: 03/30/2017
 ms.assetid: 16e80405-2c75-42fc-b0e4-b1df53b1c584
 ms.openlocfilehash: 4a629a800df63c67dc17d3fc1531a9862861e9c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667253"
 ---
 # <a name="entity-container"></a>contenedor de entidades
 Un *contenedor de entidades* es una agrupación lógica de [conjuntos de entidades](../../../../docs/framework/data/adonet/entity-set.md), [conjuntos de asociaciones](../../../../docs/framework/data/adonet/association-set.md), y [importaciones de función](../../../../docs/framework/data/adonet/model-declared-function.md).  
   
  Un contenedor de entidades definido en un modelo conceptual debe cumplir las condiciones siguientes:  
   
--   Se debe definir al menos un contenedor de entidades en cada modelo conceptual.  
+- Se debe definir al menos un contenedor de entidades en cada modelo conceptual.  
   
--   El contenedor de entidades debe tener un nombre único en cada modelo conceptual.  
+- El contenedor de entidades debe tener un nombre único en cada modelo conceptual.  
   
  Un contenedor de entidades puede definir conjuntos de entidades o de asociaciones que usan tipos de entidad o asociaciones definidos en uno o varios espacios de nombres. Para obtener más información, consulte [Entity Data Model: Los espacios de nombres](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md).  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
 ms.openlocfilehash: d98c5906d99dff9371f8290e7dbc9c9011cd0c29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650497"
 ---
 # <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Procedimiento para mostrar fichas alineadas a la izquierda con TabControl
 La propiedad <xref:System.Windows.Forms.TabControl.Alignment%2A> de <xref:System.Windows.Forms.TabControl> permite mostrar pestañas verticalmente (a lo largo del borde izquierdo o derecho del control) en lugar de horizontalmente (en la parte superior o inferior del control). De forma predeterminada, esta presentación vertical produce una mala experiencia de usuario porque la propiedad <xref:System.Windows.Forms.TabPage.Text%2A> del objeto <xref:System.Windows.Forms.TabPage> no se muestra en la pestaña cuando se habilitan estilos visuales. Tampoco hay una manera directa de controlar la dirección del texto dentro de la pestaña. Puede usar la característica «dibujado por el propietario» en <xref:System.Windows.Forms.TabControl> para mejorar la experiencia.  

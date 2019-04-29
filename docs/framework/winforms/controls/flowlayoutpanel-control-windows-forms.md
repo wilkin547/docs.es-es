@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms, arranging contents
 ms.assetid: 630c9305-9ecf-4f99-94f9-ddf06de82713
 ms.openlocfilehash: ed32d88894b2f0c4be8f1adeca8e891f3ac13810
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651485"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>FlowLayoutPanel (Control, formularios Windows Forms)
 El control `FlowLayoutPanel` organiza su contenido en una dirección de flujo horizontal o vertical. Su contenido puede ajustarse desde una fila a la siguiente o desde una columna a la siguiente. Además, el contenido puede recortarse en lugar de ajustarse.  

@@ -6,8 +6,8 @@ ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608649"
 ---
 # <a name="contract-first-tool"></a>Herramienta de contrato primero
 Los contratos de servicio deben crearse a menudo desde servicios existentes. En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], las clases de contrato de datos se pueden crear automáticamente a partir de servicios existentes mediante la herramienta de contrato primero. Para usar la herramienta de contrato primero, el archivo de definición de esquema XML (XSD) se debe descargar localmente; la herramienta no puede importar contratos de datos remotos a través de HTTP.
@@ -69,31 +69,31 @@ Los contratos de servicio deben crearse a menudo desde servicios existentes. En 
 
  Se pueden configurar las opciones avanzadas siguientes para la generación de código desde contratos. Los valores solo se pueden configurar para todos los archivos del proyecto; no se pueden configurar para archivos individuales en este momento.
 
--   **Modo de serializador**: Esta configuración determina qué serializador se usa para leer archivos de contrato de servicio. Cuando **serializador XML** está activada, el **tipos de colección** y **reutilizar tipos** opciones están deshabilitadas. Estas opciones solo se aplican a la **Data Contract Serializer**.
+- **Modo de serializador**: Esta configuración determina qué serializador se usa para leer archivos de contrato de servicio. Cuando **serializador XML** está activada, el **tipos de colección** y **reutilizar tipos** opciones están deshabilitadas. Estas opciones solo se aplican a la **Data Contract Serializer**.
 
--   **Volver a usar tipos**: Esta configuración especifica qué bibliotecas se usan para reutilizar tipos. Esta configuración solo se aplica si **modo de serializador** está establecido en **Data Contract Serializer**.
+- **Volver a usar tipos**: Esta configuración especifica qué bibliotecas se usan para reutilizar tipos. Esta configuración solo se aplica si **modo de serializador** está establecido en **Data Contract Serializer**.
 
--   **Tipo de colección**: Esta configuración especifica el tipo completo o calificado con el ensamblado que se usará para el tipo de datos de la colección. Esta configuración solo se aplica si **modo de serializador** está establecido en **Data Contract Serializer**.
+- **Tipo de colección**: Esta configuración especifica el tipo completo o calificado con el ensamblado que se usará para el tipo de datos de la colección. Esta configuración solo se aplica si **modo de serializador** está establecido en **Data Contract Serializer**.
 
--   **Tipo de diccionario**: Esta configuración especifica el tipo completo o calificado con el ensamblado que se usará para el tipo de datos de diccionario.
+- **Tipo de diccionario**: Esta configuración especifica el tipo completo o calificado con el ensamblado que se usará para el tipo de datos de diccionario.
 
--   **EnableDataBinding**: Esta configuración especifica si se debe implementar la <xref:System.ComponentModel.INotifyPropertyChanged> interfaz en todos los tipos de datos para implementar el enlace de datos.
+- **EnableDataBinding**: Esta configuración especifica si se debe implementar la <xref:System.ComponentModel.INotifyPropertyChanged> interfaz en todos los tipos de datos para implementar el enlace de datos.
 
--   **ExcludedTypes**: esta configuración especifica la lista de tipos de completo o calificado con el ensamblado que se excluirán de los ensamblados de referencia. Esta configuración solo se aplica si **modo de serializador** está establecido en **Data Contract Serializer**.
+- **ExcludedTypes**: esta configuración especifica la lista de tipos de completo o calificado con el ensamblado que se excluirán de los ensamblados de referencia. Esta configuración solo se aplica si **modo de serializador** está establecido en **Data Contract Serializer**.
 
--   **GenerateInternalTypes**: Esta configuración especifica si se debe generar clases marcadas como internas. Esta configuración solo se aplica si **modo de serializador** está establecido en **Data Contract Serializer**.
+- **GenerateInternalTypes**: Esta configuración especifica si se debe generar clases marcadas como internas. Esta configuración solo se aplica si **modo de serializador** está establecido en **Data Contract Serializer**.
 
--   **GenerateSerializableTypes**: Esta configuración especifica si se debe generar clases con el <xref:System.SerializableAttribute> atributo. Esta configuración solo se aplica si **modo de serializador** está establecido en **Data Contract Serializer**.
+- **GenerateSerializableTypes**: Esta configuración especifica si se debe generar clases con el <xref:System.SerializableAttribute> atributo. Esta configuración solo se aplica si **modo de serializador** está establecido en **Data Contract Serializer**.
 
--   **ImportXMLTypes**: Esta configuración especifica si se configura el serializador de contratos de datos para aplicar la <xref:System.SerializableAttribute> atributo a clases sin el <xref:System.Runtime.Serialization.DataContractAttribute> atributo.  Esta configuración solo se aplica si **modo de serializador** está establecido en **Data Contract Serializer**.
+- **ImportXMLTypes**: Esta configuración especifica si se configura el serializador de contratos de datos para aplicar la <xref:System.SerializableAttribute> atributo a clases sin el <xref:System.Runtime.Serialization.DataContractAttribute> atributo.  Esta configuración solo se aplica si **modo de serializador** está establecido en **Data Contract Serializer**.
 
--   **SupportFx35TypedDataSets**: Esta configuración especifica si se proporciona una funcionalidad adicional para los conjuntos de datos con tipo creados para .NET Framework 3.5. Cuando **modo de serializador** está establecido en **serializador XML**, el <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> extensión se agregará al importador de esquema XML cuando este valor se establece en True. Cuando **modo de serializador** está establecido en **Data Contract Serializer**, el tipo <xref:System.DateTimeOffset> se excluirán de las referencias cuando este valor se establece en False, por lo que un <xref:System.DateTimeOffset> siempre se genera para versiones anteriores de framework.
+- **SupportFx35TypedDataSets**: Esta configuración especifica si se proporciona una funcionalidad adicional para los conjuntos de datos con tipo creados para .NET Framework 3.5. Cuando **modo de serializador** está establecido en **serializador XML**, el <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> extensión se agregará al importador de esquema XML cuando este valor se establece en True. Cuando **modo de serializador** está establecido en **Data Contract Serializer**, el tipo <xref:System.DateTimeOffset> se excluirán de las referencias cuando este valor se establece en False, por lo que un <xref:System.DateTimeOffset> siempre se genera para versiones anteriores de framework.
 
--   **InputXsdFiles**: Esta configuración especifica la lista de archivos de entrada. Cada archivo debe contener un esquema XML válido.
+- **InputXsdFiles**: Esta configuración especifica la lista de archivos de entrada. Cada archivo debe contener un esquema XML válido.
 
--   **Lenguaje**: Esta configuración especifica el lenguaje del código de contrato generado. El valor debe ser reconocible por <xref:System.CodeDom.Compiler.CodeDomProvider>.
+- **Lenguaje**: Esta configuración especifica el lenguaje del código de contrato generado. El valor debe ser reconocible por <xref:System.CodeDom.Compiler.CodeDomProvider>.
 
--   **NamespaceMappings**: Esta configuración especifica las asignaciones de los espacios de nombres de destino XSD a espacios de nombres CLR. Cada asignación debe usar el formato siguiente:
+- **NamespaceMappings**: Esta configuración especifica las asignaciones de los espacios de nombres de destino XSD a espacios de nombres CLR. Cada asignación debe usar el formato siguiente:
 
     ```xml
     "<Schema Namespace>, <CLR Namespace>"
@@ -105,7 +105,7 @@ Los contratos de servicio deben crearse a menudo desde servicios existentes. En 
     "*, <CLR Namespace>"
     ```
 
--   **OutputDirectory**: Esta configuración especifica el directorio donde se generarán los archivos de código.
+- **OutputDirectory**: Esta configuración especifica el directorio donde se generarán los archivos de código.
 
  Los valores se usarán para generar tipos de contrato de servicio a partir de los archivos de contrato de servicio cuando se compile el proyecto.
 

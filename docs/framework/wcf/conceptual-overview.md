@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 503fae4b-014c-44df-a9c7-c76ec4ed4229
 ms.openlocfilehash: 7a885bd4ff0d3c35e26fd0f37e82a41abf713b6e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608670"
 ---
 # <a name="conceptual-overview"></a>Información conceptual
-En este tema se resume información acerca de la Windows Communication Foundation (WCF) mensajería sistema y las clases que admiten su uso.  
+En este tema se resume información acerca de la Windows Communication Foundation (WCF) del sistema y las clases que admiten su uso de mensajería.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [¿Qué es Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)  
- Una descripción breve de WCF.  
+ Una breve introducción a WCF.  
   
  [Conceptos básicos de Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)  
- Una descripción de los conceptos principales del modelo de programación WCF.  
+ Un esquema de los conceptos principales del modelo de programación de WCF.  
   
  [Arquitectura de Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)  
- Una representación gráfica de la arquitectura WCF.  
+ Una representación gráfica de la arquitectura de WCF.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.ServiceModel>  

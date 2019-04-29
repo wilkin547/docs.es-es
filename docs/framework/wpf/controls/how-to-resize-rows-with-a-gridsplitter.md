@@ -7,11 +7,11 @@ helpviewer_keywords:
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
 ms.openlocfilehash: 6760a7a691af4f666294556cae3bc95a4299730a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770713"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>Procedimiento Cambiar el tamaño de filas con un GridSplitter
 En este ejemplo se muestra cómo usar una horizontal <xref:System.Windows.Controls.GridSplitter> para redistribuir el espacio entre las dos filas de un <xref:System.Windows.Controls.Grid> sin cambiar las dimensiones de la <xref:System.Windows.Controls.Grid>.  

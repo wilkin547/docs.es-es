@@ -3,11 +3,11 @@ title: Problemas conocidos en SqlClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
 ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607753"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemas conocidos en SqlClient para Entity Framework
 En esta sección se describen problemas conocidos relacionados con el proveedor de datos .NET Framework para SQL Server (SqlClient).  
@@ -25,15 +25,15 @@ En esta sección se describen problemas conocidos relacionados con el proveedor 
   
  A continuación se ilustran escenarios típicos que podrían conducir a la presencia de los operadores CROSS APPLY y/o OUTER APPLY en la consulta de salida:  
   
--   Una subconsulta correlacionada con paginación.  
+- Una subconsulta correlacionada con paginación.  
   
--   Un `AnyElement` sobre una subconsulta correlacionada o sobre una colección generada mediante navegación.  
+- Un `AnyElement` sobre una subconsulta correlacionada o sobre una colección generada mediante navegación.  
   
--   Consultas de LINQ que utilizan métodos de agrupación que aceptan un selector de elemento.  
+- Consultas de LINQ que utilizan métodos de agrupación que aceptan un selector de elemento.  
   
--   Una consulta en la que se especifica explícitamente un operador CROSS APPLY u OUTER APPLY  
+- Una consulta en la que se especifica explícitamente un operador CROSS APPLY u OUTER APPLY  
   
--   Una consulta que tiene una construcción DEREF sobre una construcción REF.  
+- Una consulta que tiene una construcción DEREF sobre una construcción REF.  
   
 ## <a name="skip-operator"></a>Operador SKIP  
  Si usas [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], uso de SKIP con ORDER BY en columnas sin clave podría devolver resultados incorrectos. Se puede omitir un número superior al número especificado de filas si la columna sin clave tiene datos duplicados en ella. Esto se debe a cómo se convierte SKIP en [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]. Por ejemplo, en la siguiente consulta, más de cinco filas pueden omitirse si `E.NonKeyColumn` tiene valores duplicados:  

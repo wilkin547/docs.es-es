@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
 ms.openlocfilehash: 2221f2677183cf360fa82a4d73a679a8b68927d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761707"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Nombres de atributos y elementos XML declarados (Visual Basic)
 Este tema proporciona instrucciones de Visual Basic para asignar nombres a los elementos XML y atributos en los literales XML.  En un literal XML, puede especificar un nombre local o un nombre completo. Un nombre completo consta de un prefijo de espacio de nombres XML, dos puntos y un nombre local. Para obtener más información acerca de los prefijos de espacio de nombres XML, vea [Literal de elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
@@ -21,17 +21,17 @@ Este tema proporciona instrucciones de Visual Basic para asignar nombres a los e
 ## <a name="rules"></a>Reglas  
  Un nombre local de un elemento o atributo en Visual Basic debe cumplir las reglas siguientes.  
   
--   Puede comenzar con un espacio de nombres. Debe comenzar con un carácter alfabético o un carácter de subrayado (`_`).  
+- Puede comenzar con un espacio de nombres. Debe comenzar con un carácter alfabético o un carácter de subrayado (`_`).  
   
--   Debe contener solo caracteres alfabéticos, dígitos decimales, caracteres de subrayado, puntos (.) y guiones (-).  
+- Debe contener solo caracteres alfabéticos, dígitos decimales, caracteres de subrayado, puntos (.) y guiones (-).  
   
--   No debe ser más de 1.024 caracteres.  
+- No debe ser más de 1.024 caracteres.  
   
--   Dos puntos que aparecen en los nombres indican demarcación del espacio de nombres. Por lo tanto, puede usar dos puntos exclusivamente para especificar un espacio de nombres XML para un nombre determinado.  
+- Dos puntos que aparecen en los nombres indican demarcación del espacio de nombres. Por lo tanto, puede usar dos puntos exclusivamente para especificar un espacio de nombres XML para un nombre determinado.  
   
  Además, deben adherirse a la instrucción siguiente.  
   
--   La especificación XML 1.0 reserva todos los nombres que comienzan con la cadena "xml", de cualquier variación de mayúsculas y minúsculas. Por lo tanto, no use esos nombres para el elemento y nombres de atributo.  
+- La especificación XML 1.0 reserva todos los nombres que comienzan con la cadena "xml", de cualquier variación de mayúsculas y minúsculas. Por lo tanto, no use esos nombres para el elemento y nombres de atributo.  
   
 ### <a name="name-length-guidelines"></a>Directrices de longitud de nombre  
  Como cuestión práctica, debe ser un nombre más corto posible al identificar claramente la naturaleza del elemento. Esto mejora la legibilidad del código y reduce el tamaño de archivo de origen y de longitud de línea.  

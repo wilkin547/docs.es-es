@@ -3,11 +3,11 @@ title: Instancias de flujo de trabajo no persistentes
 ms.date: 03/30/2017
 ms.assetid: 5e01af77-6b14-4964-91a5-7dfd143449c0
 ms.openlocfilehash: 410451f0dfeb91111e77634245aa786c4afc5b04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644270"
 ---
 # <a name="non-persisted-workflow-instances"></a>Instancias de flujo de trabajo no persistentes
 Cuando se crea una nueva instancia de un flujo de trabajo cuyo estado persiste en <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, el host del servicio crea una entrada inicial para ese servicio en el almacén de instancias. Posteriormente, cuando la instancia de flujo de trabajo persiste por primera vez, <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> almacena el estado de la instancia actual. Si el flujo de trabajo se hospeda en el Servicio de activación de procesos de Windows, los datos de implementación del servicio también se escriben en el almacén de la instancia cuando la instancia persiste por primera vez.  
@@ -17,13 +17,13 @@ Cuando se crea una nueva instancia de un flujo de trabajo cuyo estado persiste e
 ## <a name="the-non-persisted-state"></a>El estado no persistente  
  Las instancias del flujo de trabajo que no han persistido permanecen en un estado no persistente en los siguientes casos:  
   
--   El host del servicio se bloquea antes de que la instancia de flujo de trabajo se guarde por primera vez. La instancia de flujo de trabajo permanece en el almacén de la instancia y no se recupera. Si llega un mensaje correlacionado, la instancia de flujo de trabajo se activa de nuevo.  
+- El host del servicio se bloquea antes de que la instancia de flujo de trabajo se guarde por primera vez. La instancia de flujo de trabajo permanece en el almacén de la instancia y no se recupera. Si llega un mensaje correlacionado, la instancia de flujo de trabajo se activa de nuevo.  
   
--   La instancia de flujo de trabajo experimenta una excepción antes de ser guardada por primera vez. Dependiendo de lo que devolvió <xref:System.Activities.UnhandledExceptionAction>, se producen los siguientes escenarios:  
+- La instancia de flujo de trabajo experimenta una excepción antes de ser guardada por primera vez. Dependiendo de lo que devolvió <xref:System.Activities.UnhandledExceptionAction>, se producen los siguientes escenarios:  
   
-    -   <xref:System.Activities.UnhandledExceptionAction> se establece en <xref:System.Activities.UnhandledExceptionAction.Abort>: cuando se produce una excepción, la información de la implementación del servicio se escribe en el almacén de la instancia y la instancia de flujo de trabajo se descarga desde la memoria. La instancia de flujo de trabajo permanece en un estado no persistente y no se puede recargar.  
+    - <xref:System.Activities.UnhandledExceptionAction> se establece en <xref:System.Activities.UnhandledExceptionAction.Abort>: Cuando se produce una excepción, se escribe información de implementación de servicio en el almacén de instancias y la instancia de flujo de trabajo se descarga de la memoria. La instancia de flujo de trabajo permanece en un estado no persistente y no se puede recargar.  
   
-    -   <xref:System.Activities.UnhandledExceptionAction> se establece en <xref:System.Activities.UnhandledExceptionAction.Cancel> o en <xref:System.Activities.UnhandledExceptionAction.Terminate>: cuando se produce una excepción, la información de la implementación del servicio se escribe en el almacén de la instancia y la instancia de actividad se establece en <xref:System.Activities.ActivityInstanceState.Closed>.  
+    - <xref:System.Activities.UnhandledExceptionAction> se establece en <xref:System.Activities.UnhandledExceptionAction.Cancel> o <xref:System.Activities.UnhandledExceptionAction.Terminate>: Cuando se produce una excepción, se escribe información de implementación de servicio en el almacén de instancias y el estado de la instancia de actividad está establecido en <xref:System.Activities.ActivityInstanceState.Closed>.  
   
  Para minimizar el riesgo de encontrar descargadas instancias de flujo de trabajo no persistentes, recomendamos conservar el flujo de trabajo temprano en su ciclo de vida.  
   
@@ -34,7 +34,7 @@ Cuando se crea una nueva instancia de un flujo de trabajo cuyo estado persiste e
   
  Para encontrar instancias no persistentes en el almacén de instancias de flujo de trabajo de SQL, puede utilizar las siguientes consultas SQL:  
   
--   Esta consulta encuentra todas las instancias que no se han conservado y devuelve su identificador y hora de creación (almacenados en hora UTC).  
+- Esta consulta encuentra todas las instancias que no se han conservado y devuelve su identificador y hora de creación (almacenados en hora UTC).  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -42,7 +42,7 @@ Cuando se crea una nueva instancia de un flujo de trabajo cuyo estado persiste e
         where IsInitialized = 0  
     ```  
   
--   Esta consulta encuentra todas las instancias que no se han conservado, y que no se han cargado, y devuelve su identificador y hora de creación (almacenados en hora UTC).  
+- Esta consulta encuentra todas las instancias que no se han conservado, y que no se han cargado, y devuelve su identificador y hora de creación (almacenados en hora UTC).  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -51,7 +51,7 @@ Cuando se crea una nueva instancia de un flujo de trabajo cuyo estado persiste e
             and CurrentMachine is NULL  
     ```  
   
--   Esta consulta encuentra todas las instancias suspendidas que no se han conservado, y que no se han cargado, y devuelve su identificador y hora de creación (almacenados en hora UTC), el motivo de la suspensión y el nombre de la excepción.  
+- Esta consulta encuentra todas las instancias suspendidas que no se han conservado, y que no se han cargado, y devuelve su identificador y hora de creación (almacenados en hora UTC), el motivo de la suspensión y el nombre de la excepción.  
   
     ```sql  
     select InstanceId, CreationTime, SuspensionReason, SuspensionExceptionName   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762466"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Realizar pruebas de posicionamiento en la capa visual
 En este tema se proporciona información general sobre la funcionalidad de prueba de posicionamiento que proporciona la capa visual. Compatibilidad con pruebas de posicionamiento permite determinar si un valor de geometría o un punto está dentro del contenido representado de un <xref:System.Windows.Media.Visual>, lo que permite implementar el comportamiento de la interfaz de usuario, como un rectángulo de selección para seleccionar varios objetos.  
@@ -22,13 +22,13 @@ En este tema se proporciona información general sobre la funcionalidad de prueb
 ## <a name="hit-testing-scenarios"></a>Escenarios de pruebas de posicionamiento  
  El <xref:System.Windows.UIElement> clase proporciona el <xref:System.Windows.UIElement.InputHitTest%2A> método, lo que permite a la prueba un elemento con un determinado valor de coordenadas de posicionamiento. En muchos casos, el <xref:System.Windows.UIElement.InputHitTest%2A> método proporciona la funcionalidad deseada para implementar la prueba de posicionamiento de elementos. Sin embargo, hay varios escenarios en los que puede necesitar implementar pruebas de posicionamiento en la capa visual.  
   
--   Pruebas de posicionamiento frente a que no sean de<xref:System.Windows.UIElement> objetos: Esto se aplica si se alcanzan las pruebas que no sean de<xref:System.Windows.UIElement> objetos, como <xref:System.Windows.Media.DrawingVisual> u objetos gráficos.  
+- Pruebas de posicionamiento frente a que no sean de<xref:System.Windows.UIElement> objetos: Esto se aplica si se alcanzan las pruebas que no sean de<xref:System.Windows.UIElement> objetos, como <xref:System.Windows.Media.DrawingVisual> u objetos gráficos.  
   
--   La prueba de posicionamiento mediante un objeto geometry: Esto se aplica si necesita usar un objeto de geometría en lugar de con el valor de coordenadas de un punto de prueba de posicionamiento.  
+- La prueba de posicionamiento mediante un objeto geometry: Esto se aplica si necesita usar un objeto de geometría en lugar de con el valor de coordenadas de un punto de prueba de posicionamiento.  
   
--   La prueba de posicionamiento frente a varios objetos: Esto se aplica cuando se necesita la prueba varios objetos, tales como objetos superpuestos de posicionamiento. Puede obtener resultados para todos los elementos visuales que corten una geometría o un punto, no solamente para el primero.  
+- La prueba de posicionamiento frente a varios objetos: Esto se aplica cuando se necesita la prueba varios objetos, tales como objetos superpuestos de posicionamiento. Puede obtener resultados para todos los elementos visuales que corten una geometría o un punto, no solamente para el primero.  
   
--   Omitiendo <xref:System.Windows.UIElement> la directiva de prueba de posicionamiento: Esto se aplica cuando se necesita pasar por alto la <xref:System.Windows.UIElement> directiva, que tiene en cuenta factores tales como si un elemento está deshabilitado o no visible de la prueba de posicionamiento.  
+- Omitiendo <xref:System.Windows.UIElement> la directiva de prueba de posicionamiento: Esto se aplica cuando se necesita pasar por alto la <xref:System.Windows.UIElement> directiva, que tiene en cuenta factores tales como si un elemento está deshabilitado o no visible de la prueba de posicionamiento.  
   
 > [!NOTE]
 >  Para obtener un ejemplo de código completo que muestra la prueba de posicionamiento en la capa visual, vea [Ejemplo de prueba de posicionamiento con DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994) y [Ejemplo de prueba de posicionamiento de interoperabilidad con Win32](https://go.microsoft.com/fwlink/?LinkID=159995).  

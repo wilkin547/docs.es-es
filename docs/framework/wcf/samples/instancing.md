@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
 ms.openlocfilehash: 2cc3c54563b261d49264314f7306193accbe4040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596808"
 ---
 # <a name="instancing"></a>Creación de instancias
 El ejemplo de la creación de instancias muestra el valor de comportamiento de creación de instancias, que controla cómo las instancias de una clase de servicio se crean en respuesta a las solicitudes de cliente. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa el `ICalculator` contrato de servicio. Este ejemplo define un nuevo contrato, `ICalculatorInstance`, que se hereda de `ICalculator`. El contrato especificado por `ICalculatorInstance` proporciona tres operaciones adicionales para inspeccionar el estado de la instancia del servicio. Modificando el valor de la creación de instancias, puede observar el cambio en el comportamiento ejecutando el cliente.  
@@ -22,11 +22,11 @@ El ejemplo de la creación de instancias muestra el valor de comportamiento de c
   
  Los siguientes modos de creación de instancias están disponibles:  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Se crea una nueva instancia de servicio para cada solicitud de cliente.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Se crea una nueva instancia de servicio para cada solicitud de cliente.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Una nueva instancia se crea para cada nueva sesión de cliente y se mantienen durante la duración de esa sesión (requiere un enlace que admita la sesión).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Una nueva instancia se crea para cada nueva sesión de cliente y se mantienen durante la duración de esa sesión (requiere un enlace que admita la sesión).  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: Una única instancia de la clase de servicio administra todas las solicitudes de cliente durante la vida de la aplicación.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: Una única instancia de la clase de servicio administra todas las solicitudes de cliente durante la vida de la aplicación.  
   
  La clase de servicio especifica el comportamiento de la creación de instancias con el atributo `[ServiceBehavior(InstanceContextMode=<setting>)]` como se muestra en el ejemplo de código que sigue. Cambiando las líneas que se marcan con comentarios, se puede observar el comportamiento de cada uno de los modos de la instancia. Recuerde recompilar el servicio después de cambiar el modo de la creación de instancias. No hay ninguna configuración relacionada con la creación de instancias para especificar en el cliente.  
   

@@ -3,11 +3,11 @@ title: Procedimiento para usar EdmGen.exe para generar código de capa de objeto
 ms.date: 03/30/2017
 ms.assetid: c44d2ebe-f66f-42cb-9741-4a3f0c2dcffb
 ms.openlocfilehash: 8a39027ee6a5647bbd645f5a38e35d61f7ebbd8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605774"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>Procedimiento para usar EdmGen.exe para generar código de capa de objeto
 En este tema se muestra cómo usar el [EDM Generator (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md) herramienta para generar el código de capa de objeto basado en el archivo de CSDL.  

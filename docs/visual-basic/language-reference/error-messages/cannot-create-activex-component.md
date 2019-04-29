@@ -5,18 +5,18 @@ f1_keywords:
 - vbrID429
 ms.assetid: 7fc5a271-8195-40a2-89f9-e05fd71bb8e0
 ms.openlocfilehash: 2c0df10d38d7fba8cb8b473b62d85592f8e63db1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649951"
 ---
 # <a name="cannot-create-activex-component"></a>No se puede crear el componente ActiveX
 Intentó poner un control ActiveX en un formulario en el tiempo de diseño o agregar un formulario a un proyecto con un control ActiveX en él, pero no se pudo encontrar la información asociada correspondiente en el Registro.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Puede que la información en el Registro se haya eliminado o esté dañada. Reinstale el control ActiveX o póngase en contacto con el proveedor del control.  
+- Puede que la información en el Registro se haya eliminado o esté dañada. Reinstale el control ActiveX o póngase en contacto con el proveedor del control.  
   
 ## <a name="see-also"></a>Vea también
 

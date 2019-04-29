@@ -3,18 +3,18 @@ title: Funciones de agregado (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
 ms.openlocfilehash: 113c19078feeca24a0817e52f8eb0d04537b0684
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607224"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Funciones de agregado (Entity SQL)
 Un agregado es una construcción de lenguaje que comprime una colección en una propiedad escalar como parte de una operación de grupo. Los agregados de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tienen dos formas:  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funciones de colección que se pueden usar en cualquier parte en una expresión. Esto incluye el uso de funciones de agregado en proyecciones y predicados que actúan en colecciones. Las funciones de colección constituyen el modo preferido de especificar agregados en [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funciones de colección que se pueden usar en cualquier parte en una expresión. Esto incluye el uso de funciones de agregado en proyecciones y predicados que actúan en colecciones. Las funciones de colección constituyen el modo preferido de especificar agregados en [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
--   Agregados basados en grupos en expresiones de consulta que tienen una cláusula GROUP BY. Como en [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], los agregados de grupo aceptan los modificadores DISTINCT y ALL como modificadores para la entrada agregada.  
+- Agregados basados en grupos en expresiones de consulta que tienen una cláusula GROUP BY. Como en [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], los agregados de grupo aceptan los modificadores DISTINCT y ALL como modificadores para la entrada agregada.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] primero intenta interpretar una expresión como una función de la colección y si la expresión es en el contexto de una expresión SELECT interpreta como un agregado de grupo.  
   

@@ -3,11 +3,11 @@ title: Consideraciones de desarrollo e implementación
 ms.date: 03/30/2017
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
 ms.openlocfilehash: d0402fde61b1bfcdee6e0e8e435d35e59ad76b6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606646"
 ---
 # <a name="development-and-deployment-considerations"></a>Consideraciones de desarrollo e implementación
 Los temas de esta sección tratan aspectos que hay que considerar cuando se desarrolla o implementa una aplicación basada en ADO.NET Entity Framework.  

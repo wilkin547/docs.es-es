@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 310915ce84819a2a5a2d5e1f22356b61c16e7ec7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599018"
 ---
 # <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE (Enumeración)
 Indica si un campo es estático y, si lo es, la calidad estática que se aplica al campo. Estos valores se pueden combinar con la operación OR bit a bit para indicar que el campo tiene varias calidades estáticas diferentes.  

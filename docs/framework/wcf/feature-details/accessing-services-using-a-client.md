@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
 ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696228"
 ---
 # <a name="accessing-services-using-a-client"></a>Acceso a los servicios utilizando un cliente
 Las aplicaciones cliente deben crear, configurar y usar objetos de cliente o canal WCF para comunicarse con los servicios. El [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) tema proporciona información general de los objetos y pasos necesarios para crear objetos de cliente y el canal básicos y usarlas.  
@@ -20,13 +20,13 @@ Las aplicaciones cliente deben crear, configurar y usar objetos de cliente o can
 ## <a name="overview"></a>Información general  
  Este tema describe el comportamiento y problemas relacionados con:  
   
--   Canal y duraciones de la sesión.  
+- Canal y duraciones de la sesión.  
   
--   Control de excepciones  
+- Control de excepciones  
   
--   Entender los problemas que ocasionan el bloqueo.  
+- Entender los problemas que ocasionan el bloqueo.  
   
--   Inicializar los canales interactivamente .  
+- Inicializar los canales interactivamente .  
   
 ### <a name="channel-and-session-lifetimes"></a>Duración de canales y sesiones  
  Las aplicaciones de Windows Communication Foundation (WCF) incluye dos categorías de canales, datagrama y canal con sesión.  

@@ -3045,11 +3045,11 @@ f1_keywords:
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
 ms.openlocfilehash: 6a339fc91ce5e1b4ff3c5cbaacdae72f02fdf733
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58022970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594781"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>Lo sentimos, no tenemos detalles sobre este error de Visual Basic
 Lo sentimos, pero no tenemos información específica sobre este error. Puede buscar información en la web mediante el número y el texto del mensaje de error. Si lo prefiere, puede preguntar a otros desarrolladores a través de uno de estos foros:  

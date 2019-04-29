@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], creating data objects
 ms.assetid: 022fa142-717d-4fea-a53c-3b52e9d91aff
 ms.openlocfilehash: deae8751518d9322e8d924a1b1fcbc20e25b35ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776498"
 ---
 # <a name="how-to-create-a-data-object"></a>Procedimiento Crear un objeto de datos
 Los ejemplos siguientes muestran distintas maneras de crear un objeto de datos mediante los constructores proporcionadas por el <xref:System.Windows.DataObject> clase.  

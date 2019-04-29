@@ -3,11 +3,11 @@ title: Propiedad y separación de esquemas de usuario en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
 ms.openlocfilehash: b56a2c6f1211a11d2aa55de0cc101f6b90f7f83d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646064"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Propiedad y separación de esquemas de usuario en SQL Server
 Un concepto básico en la seguridad de SQL Server es que los propietarios de los objetos disponen de permisos irrevocables para administrarlos. No puede quitar privilegios de un propietario del objeto y no puede eliminar usuarios de una base de datos si en ella existen objetos que les pertenezcan.  
@@ -29,13 +29,13 @@ Server.Database.DatabaseSchema.DatabaseObject
 ### <a name="built-in-schemas"></a>Esquemas integrados  
  SQL Server incluye diez esquemas predefinidos que usan el mismo nombre que los usuarios y los roles de base de datos integrados. Estos esquemas se han creado principalmente por compatibilidad con versiones anteriores. No puede quitar los esquemas con el mismo nombre que las funciones fijas de base de datos, aunque no los necesite. No puede colocar los siguientes esquemas:  
   
--   `dbo`  
+- `dbo`  
   
--   `guest`  
+- `guest`  
   
--   `sys`  
+- `sys`  
   
--   `INFORMATION_SCHEMA`  
+- `INFORMATION_SCHEMA`  
   
  Si los quita de la base de datos modelo, no aparecerán en las nuevas bases de datos.  
   

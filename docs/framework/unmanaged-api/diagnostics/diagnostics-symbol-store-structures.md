@@ -10,21 +10,21 @@ ms.assetid: 0d423791-d40d-45c6-a82b-1a165768d737
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e7bd0fabcd4838990ae8704de4f83e9677dbc08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599291"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>Estructuras de almacén de símbolos de diagnósticos
-Este tema describe las estructuras no administradas que utiliza la API del almacén de símbolos de diagnósticos.  
+En este tema se describe las estructuras no administradas que utiliza la API del almacén de símbolos de diagnósticos.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [CALL_ID (estructura)](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
- Proporciona información a un depurador sobre una función que se está llamando.  
+ Proporciona información a un depurador sobre una función que se llama.  
   
  [SYMLINEDELTA (estructura)](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- Proporciona información al controlador de símbolos sobre métodos que se movieron como resultado de modificaciones.  
+ Proporciona información al controlador de símbolos acerca de los métodos que se movieron como resultado de las modificaciones.  
   
  [USER_THREAD (estructura)](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
  Proporciona información a un depurador sobre un subproceso.  

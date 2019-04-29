@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765276"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion (Función)
 Permite al host determinar qué versión de common language runtime (CLR) que se usará dentro del proceso antes de inicializar CLR de forma explícita.  
@@ -72,15 +72,15 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
 3. La función especificada por `hostCallback` , a continuación, realiza la siguiente secuencia de llamadas:  
   
-    -   La función especificada por el `pBeginHostSetup` parámetro.  
+    - La función especificada por el `pBeginHostSetup` parámetro.  
   
-    -   `CorBindToRuntimeEx` (o a otra función de inicialización en tiempo de ejecución).  
+    - `CorBindToRuntimeEx` (o a otra función de inicialización en tiempo de ejecución).  
   
-    -   [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    - [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
-    -   [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    - [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
-    -   La función especificada por el `pEndHostSetup` parámetro.  
+    - La función especificada por el `pEndHostSetup` parámetro.  
   
  Todas las llamadas de `pBeginHostSetup` a `pEndHostSetup` se debe producir en un único subproceso o fibra, con la misma pila lógica. Este subproceso puede ser diferente del subproceso en el que `hostCallback` se llama.  
   

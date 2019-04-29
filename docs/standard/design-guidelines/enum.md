@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: KrzysztofCwalina
 ms.openlocfilehash: c0645ba1179c4c6fd961b871b3061cd51174f427
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669100"
 ---
 # <a name="enum-design"></a>Diseño de enumeraciones
 Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumeraciones: enumeraciones simples de enumeraciones y marca.  
@@ -48,17 +48,17 @@ Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumer
   
  **✓ CONSIDER** con <xref:System.Int32> (el valor predeterminado en la mayoría de lenguajes de programación) como el tipo subyacente de una enumeración, a menos que cualquiera de las acciones siguientes es verdadera:  
   
--   La enumeración es una enumeración de marcas y dispone de más de 32 indicadores o espera tener más en el futuro.  
+- La enumeración es una enumeración de marcas y dispone de más de 32 indicadores o espera tener más en el futuro.  
   
--   El tipo subyacente debe ser diferente de <xref:System.Int32> para facilitar la interoperabilidad con código no administrado espera las enumeraciones de diferente tamaño.  
+- El tipo subyacente debe ser diferente de <xref:System.Int32> para facilitar la interoperabilidad con código no administrado espera las enumeraciones de diferente tamaño.  
   
--   Un tipo subyacente de menor tamaño daría lugar a importantes ahorros de espacio. Si espera que la enumeración se utiliza principalmente como un argumento para el flujo de control, el tamaño hace poca diferencia. El ahorro de tamaño puede ser considerable si:  
+- Un tipo subyacente de menor tamaño daría lugar a importantes ahorros de espacio. Si espera que la enumeración se utiliza principalmente como un argumento para el flujo de control, el tamaño hace poca diferencia. El ahorro de tamaño puede ser considerable si:  
   
-    -   Esperar la enumeración que se usará como un campo en una estructura con instancias con mucha frecuencia o clase.  
+    - Esperar la enumeración que se usará como un campo en una estructura con instancias con mucha frecuencia o clase.  
   
-    -   Se espera que los usuarios para crear matrices de gran tamaño o colecciones de las instancias de la enumeración.  
+    - Se espera que los usuarios para crear matrices de gran tamaño o colecciones de las instancias de la enumeración.  
   
-    -   Espera un gran número de instancias de la enumeración que se va a serializar.  
+    - Espera un gran número de instancias de la enumeración que se va a serializar.  
   
  Para el uso de memoria, tenga en cuenta que los objetos administrados son siempre `DWORD`-alineadas, por lo que necesita de forma eficaz varias enumeraciones u otras estructuras pequeño en una instancia para empaquetar una enumeración con más pequeña para marcar la diferencia, porque el tamaño total de instancias siempre es Si va a redondear hasta un `DWORD`.  
   

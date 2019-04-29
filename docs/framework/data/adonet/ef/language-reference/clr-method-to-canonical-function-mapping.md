@@ -3,11 +3,11 @@ title: Asignar un método CLR a una función canónica
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605722"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Asignar un método CLR a una función canónica
 
@@ -40,10 +40,10 @@ En los escenarios LINQ, las consultas en Entity Framework implican la asignació
 
 |Método System.String (instancia)|Función canónica|Notas|
 |---------------------------------------|------------------------|-----------|
-|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Si `value` no es una constante, asigna a IndexOf(`this`, `value`) > 0.|
+|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Si `value` no es una constante, entonces asigna a IndexOf (`this`, `value`) > 0|
 |Boolean EndsWith(String `value`)|`this` AL IGUAL QUE `'` % `value`'|Si `value` no es una constante, entonces asigna a Right(`this`, length(`value`)) = `value`.|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|Si `value` no es una constante, entonces asigna a IndexOf(`this`, `value`) = 1.|
-|Longitud|Length(`this`)||
+|Length|Length(`this`)||
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||
@@ -67,10 +67,10 @@ En los escenarios LINQ, las consultas en Entity Framework implican la asignació
 |System.DateTime.UtcNow|CurrentUtcDateTime()||
 |Boolean op_Equality(DateTime `d1`, DateTime `d2`)|= (operador)||
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> (operador)||
-|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>= (operador)||
+|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|> = (operador)||
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= (operador)||
 |Booleano op_LessThan (fecha y hora `t1`, fecha y hora `t2`)|< (operador)||
-|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= (operador)||
+|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|< = (operador)||
 |Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` como DateInterval, \_<br /><br /> ByVal `DateValue` como DateTime, \_<br /><br /> ByVal opcional `FirstDayOfWeekValue` como FirstDayOfWeek = VbSunday, \_<br /><br /> ByVal opcional `FirstWeekOfYearValue` como FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) As Integer||Para obtener más información, consulte la sección Función DatePart.|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||
@@ -91,7 +91,7 @@ En los escenarios LINQ, las consultas en Entity Framework implican la asignació
 |Minute|Minute(`this`)|
 |Mes|Month(`this`)|
 |Second|Second(`this`)|
-|Year|Year(`this`)|
+|Año|Year(`this`)|
 
 ## <a name="systemdatetimeoffset-method-instance-mapping"></a>Asignación del método System.DateTimeOffset (instancia)
 
@@ -105,7 +105,7 @@ La asignación mostrada para los métodos `get` sobre las propiedades enumeradas
 |Minute|Minute(`this`)|No se admite en SQL Server 2005.|
 |Mes|Month(`this`)|No se admite en SQL Server 2005.|
 |Second|Second(`this`)|No se admite en SQL Server 2005.|
-|Year|Year(`this`)|No se admite en SQL Server 2005.|
+|Año|Year(`this`)|No se admite en SQL Server 2005.|
 
 > [!NOTE]
 > El método <xref:System.DateTimeOffset.Equals%2A> devuelve `true` si los objetos <xref:System.DateTimeOffset> comparados son iguales; de lo contrario, devuelve `false`. El método <xref:System.DateTimeOffset.CompareTo%2A> devuelve 0, 1 o -1 dependiendo de si el objeto <xref:System.DateTimeOffset> comparado es igual, mayor que, o menor que, respectivamente.

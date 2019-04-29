@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
 ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669372"
 ---
 # <a name="weak-event-patterns"></a>Modelos de evento débil
 En las aplicaciones, es posible que los controladores que están conectados a orígenes de eventos no se destruirán en coordinación con el objeto de agente de escucha que adjuntó el controlador para el origen. Esta situación puede provocar pérdidas de memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] presenta un patrón de diseño que se puede usar para resolver este problema, que proporciona una clase de administrador dedicada para eventos concretos e implementando una interfaz en los agentes de escucha para ese evento. Este patrón de diseño se conoce como el *modelo de evento débil*.  
@@ -40,13 +40,13 @@ En las aplicaciones, es posible que los controladores que están conectados a or
 
  Las secciones siguientes describen cómo implementar el modelo de evento débil.  Para propósitos de este tutorial, el evento para la suscripción tiene las siguientes características.  
   
--   Es el nombre del evento `SomeEvent`.  
+- Es el nombre del evento `SomeEvent`.  
   
--   El evento es desencadenado por la `EventSource` clase.  
+- El evento es desencadenado por la `EventSource` clase.  
   
--   El controlador de eventos tiene el tipo: `SomeEventEventHandler` (o `EventHandler<SomeEventEventArgs>`).  
+- El controlador de eventos tiene el tipo: `SomeEventEventHandler` (o `EventHandler<SomeEventEventArgs>`).  
   
--   El evento pasa un parámetro de tipo `SomeEventEventArgs` a los controladores de eventos.  
+- El evento pasa un parámetro de tipo `SomeEventEventArgs` a los controladores de eventos.  
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>Uso de una clase de administrador de eventos débiles existente  
   

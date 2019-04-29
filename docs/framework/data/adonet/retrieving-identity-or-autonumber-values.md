@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
 ms.openlocfilehash: 63db9aa4d6be0a01b4b5b354a27536c614548c20
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664238"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Recuperar valores autonuméricos y de identidad
 
@@ -55,7 +55,7 @@ Si el comando de inserción ejecuta un lote que incluye tanto una instrucción I
 
 ## <a name="merging-new-identity-values"></a>Combinar nuevos valores de identidad
 
-Un caso frecuente es llamar al método `GetChanges` de `DataTable` para crear una copia que contiene únicamente filas modificadas y utilizar la nueva copia al llamar al método `Update` de `DataAdapter`. Esto es especialmente útil cuando hay que calcular las referencias de las filas modificadas en un componente independiente que realiza la actualización. Después de la actualización, la copia puede contener nuevos valores de identidad que se deben volver a combinar en el `DataTable` original. Probablemente los nuevos valores de identidad son diferentes a los valores originales de `DataTable`. Para realizar la combinación, los valores originales de la **AutoIncrement** deben conservarse las columnas de la copia, para poder localizar y actualizar las filas existentes en el original `DataTable`, en lugar de anexar filas nuevas con los nuevos valores de identidad. No obstante, de manera predeterminada estos valores se pierden después de una llamada al método `Update` de `DataAdapter`, debido a que se llama implícitamente a `AcceptChanges` en cada `DataRow` actualizada.
+Un caso frecuente es llamar al método `GetChanges` de `DataTable` para crear una copia que contiene únicamente filas modificadas y utilizar la nueva copia al llamar al método `Update` de `DataAdapter`. Esto es especialmente útil cuando hay que serializar las filas modificadas en un componente independiente que realiza la actualización. Después de la actualización, la copia puede contener nuevos valores de identidad que se deben volver a combinar en el `DataTable` original. Probablemente los nuevos valores de identidad son diferentes a los valores originales de `DataTable`. Para realizar la combinación, los valores originales de la **AutoIncrement** deben conservarse las columnas de la copia, para poder localizar y actualizar las filas existentes en el original `DataTable`, en lugar de anexar filas nuevas con los nuevos valores de identidad. No obstante, de manera predeterminada estos valores se pierden después de una llamada al método `Update` de `DataAdapter`, debido a que se llama implícitamente a `AcceptChanges` en cada `DataRow` actualizada.
 
 Hay dos maneras de mantener los valores originales de `DataColumn` en `DataRow` durante una actualización de `DataAdapter`:
 
@@ -92,7 +92,7 @@ La propiedad `UpdatedRowSource` del comando de inserción se establece en `Updat
 [!code-csharp[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#1)]
 [!code-vb[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#1)]
 
-El controlador de eventos `OnRowUpdated` comprueba <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> de <xref:System.Data.SqlClient.SqlRowUpdatedEventArgs> para determinar si la fila es una inserción. Si lo es, entonces la propiedad se establece <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> en <xref:System.Data.UpdateStatus.SkipCurrentRow>. La fila está actualizada, pero los valores originales de la fila se mantienen. En el cuerpo principal del procedimiento, se llama al método <xref:System.Data.DataSet.Merge%2A> para combinar el nuevo valor de identidad en el `DataTable` original y, finalmente, se llama a `AcceptChanges`.
+El controlador de eventos `OnRowUpdated` comprueba <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> de <xref:System.Data.SqlClient.SqlRowUpdatedEventArgs> para determinar si la fila es una inserción. Si lo es, entonces la propiedad se establece <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> en <xref:System.Data.UpdateStatus.SkipCurrentRow>. La fila está actualizada, pero los valores originales de la fila se mantienen. En el cuerpo principal del procedimiento, se llama al método <xref:System.Data.DataSet.Merge%2A> para fusión mediante combinación el nuevo valor de identidad en el `DataTable` original y, finalmente, se llama a `AcceptChanges`.
 
 [!code-csharp[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#2)]
 [!code-vb[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#2)]
@@ -108,7 +108,7 @@ En lugar de agregar información de esquema utilizando `MissingSchemaAction.AddW
 [!code-csharp[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#1)]
 [!code-vb[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#1)]
 
-El controlador de eventos `RowUpdated` utiliza el mismo <xref:System.Data.OleDb.OleDbConnection> abierto que la instrucción `Update` de `OleDbDataAdapter`. Comprueba el `StatementType` de <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> de las filas insertadas. Para cada Insertar fila de un nuevo <xref:System.Data.OleDb.OleDbCommand> se crea para ejecutar el SELECT @@IDENTITY instrucción en la conexión, devolviendo el nuevo `Autonumber` valor, que se coloca en el **CategoryID** columna de la `DataRow`. La propiedad `Status` se establece luego en `UpdateStatus.SkipCurrentRow` para suprimir la llamada oculta a `AcceptChanges`. En el cuerpo principal del procedimiento, se llama al método `Merge` para combinar los dos objetos `DataTable` y, finalmente, se llama a `AcceptChanges`.
+El controlador de eventos `RowUpdated` utiliza el mismo <xref:System.Data.OleDb.OleDbConnection> abierto que la instrucción `Update` de `OleDbDataAdapter`. Comprueba el `StatementType` de <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> de las filas insertadas. Para cada Insertar fila de un nuevo <xref:System.Data.OleDb.OleDbCommand> se crea para ejecutar el SELECT @@IDENTITY instrucción en la conexión, devolviendo el nuevo `Autonumber` valor, que se coloca en el **CategoryID** columna de la `DataRow`. La propiedad `Status` se establece luego en `UpdateStatus.SkipCurrentRow` para suprimir la llamada oculta a `AcceptChanges`. En el cuerpo principal del procedimiento, se llama al método `Merge` para fusionar mediante combinación los dos objetos `DataTable` y, finalmente, se llama a `AcceptChanges`.
 
 [!code-csharp[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#2)]
 [!code-vb[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#2)]

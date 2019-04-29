@@ -3,11 +3,11 @@ title: Registros de seguimiento
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
 ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699856"
 ---
 # <a name="tracking-records"></a>Registros de seguimiento
 El tiempo de ejecución del flujo de trabajo sirve para emitir los registros de seguimiento con el fin de seguir la ejecución de una instancia de flujo de trabajo.  
@@ -26,27 +26,27 @@ El tiempo de ejecución del flujo de trabajo sirve para emitir los registros de 
   
  El tiempo de ejecución del flujo de trabajo emite los siguientes tipos de objetos <xref:System.Activities.Tracking.TrackingRecord>:  
   
--   **WorkflowInstanceRecord** : este <xref:System.Activities.Tracking.TrackingRecord> describe el ciclo de vida de la instancia de flujo de trabajo. Por ejemplo, se emite un registro cuando el flujo de trabajo se inicia o se completa, y contiene el estado de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceRecord>.  
+- **WorkflowInstanceRecord** : este <xref:System.Activities.Tracking.TrackingRecord> describe el ciclo de vida de la instancia de flujo de trabajo. Por ejemplo, se emite un registro cuando el flujo de trabajo se inicia o se completa, y contiene el estado de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceRecord>.  
   
--   **WorkflowInstanceAbortedRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cuando se anula una instancia de flujo de trabajo. El registro contiene el motivo de la anulación de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>.  
+- **WorkflowInstanceAbortedRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cuando se anula una instancia de flujo de trabajo. El registro contiene el motivo de la anulación de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>.  
   
--   **WorkflowInstanceUnhandledExceptionRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera si una excepción se produce en la instancia de flujo de trabajo y no está controlada por ninguna actividad. El registro contiene los detalles de la excepción. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.  
+- **WorkflowInstanceUnhandledExceptionRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera si una excepción se produce en la instancia de flujo de trabajo y no está controlada por ninguna actividad. El registro contiene los detalles de la excepción. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.  
   
--   **WorkflowInstanceSuspendedRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cada vez que se suspende una instancia de flujo de trabajo. El registro contiene el motivo de la suspensión de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>.  
+- **WorkflowInstanceSuspendedRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cada vez que se suspende una instancia de flujo de trabajo. El registro contiene el motivo de la suspensión de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>.  
   
--   **WorkflowInstanceTerminatedRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cada vez que finaliza una instancia de flujo de trabajo. El registro contiene el motivo de la finalización de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>.  
+- **WorkflowInstanceTerminatedRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cada vez que finaliza una instancia de flujo de trabajo. El registro contiene el motivo de la finalización de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>.  
   
--   **ActivityStateRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cuando se ejecuta una actividad dentro de un flujo de trabajo. Estos registros indican el estado de la actividad dentro de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.ActivityStateRecord>.  
+- **ActivityStateRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cuando se ejecuta una actividad dentro de un flujo de trabajo. Estos registros indican el estado de la actividad dentro de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.ActivityStateRecord>.  
   
--   **ActivityScheduledRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cuando una actividad programa una actividad secundaria. Este registro contiene los detalles para el actividad primaria (la actividad que se programa) y la actividad secundaria programada. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.ActivityScheduledRecord>.  
+- **ActivityScheduledRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cuando una actividad programa una actividad secundaria. Este registro contiene los detalles para el actividad primaria (la actividad que se programa) y la actividad secundaria programada. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.ActivityScheduledRecord>.  
   
--   **FaultPropagationRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera para cada controlador que examine el registro hasta que se administre. Se utiliza para denotar la ruta de acceso que usó un error en la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.FaultPropagationRecord>.  
+- **FaultPropagationRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera para cada controlador que examine el registro hasta que se administre. Se utiliza para denotar la ruta de acceso que usó un error en la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.FaultPropagationRecord>.  
   
--   **CancelRequestedRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cada vez que una actividad intenta cancelar una actividad secundaria. Este registro contiene los detalles para la actividad primaria (la actividad que se programa) y la actividad secundaria que se vaya a cancelar. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.CancelRequestedRecord>.  
+- **CancelRequestedRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cada vez que una actividad intenta cancelar una actividad secundaria. Este registro contiene los detalles para la actividad primaria (la actividad que se programa) y la actividad secundaria que se vaya a cancelar. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.CancelRequestedRecord>.  
   
--   **BookmarkResumptionRecord** : este <xref:System.Activities.Tracking.TrackingRecord> realiza un seguimiento de cualquier marcador que se haya reanudado correctamente. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.BookmarkResumptionRecord>.  
+- **BookmarkResumptionRecord** : este <xref:System.Activities.Tracking.TrackingRecord> realiza un seguimiento de cualquier marcador que se haya reanudado correctamente. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.BookmarkResumptionRecord>.  
   
--   **CustomTrackingRecord** : este <xref:System.Activities.Tracking.TrackingRecord> se crea y emitidos por el autor de un flujo de trabajo dentro de una actividad de flujo de trabajo personalizado. Los registros de seguimiento personalizados se pueden rellenar con datos que se van a emitir junto con los registros. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.CustomTrackingRecord>.  
+- **CustomTrackingRecord** : este <xref:System.Activities.Tracking.TrackingRecord> se crea y emitidos por el autor de un flujo de trabajo dentro de una actividad de flujo de trabajo personalizado. Los registros de seguimiento personalizados se pueden rellenar con datos que se van a emitir junto con los registros. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
  Por ejemplo, podría haber una actividad <xref:System.Activities.Statements.Sequence> simple que contenga una operación <xref:System.Activities.Statements.WriteLine> con registros de seguimiento emitidos en el siguiente orden:  
   

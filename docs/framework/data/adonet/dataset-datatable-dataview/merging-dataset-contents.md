@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
 ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607935"
 ---
 # <a name="merging-dataset-contents"></a>Combinar contenido de DataSet
 
@@ -18,7 +18,7 @@ Se puede utilizar el método <xref:System.Data.DataSet.Merge%2A> para combinar e
 
 ## <a name="primary-keys"></a>Claves principales
 
-Si la tabla que recibe datos y esquema nuevos a partir de una combinación tiene una clave principal, las nuevas filas de los datos entrantes se hacen coincidir con las filas existentes que tienen los mismos valores de clave principal <xref:System.Data.DataRowVersion.Original> que los de los datos entrantes. Si las columnas del esquema entrante coinciden con las del esquema existente, se modificarán los datos de las filas existentes. Las columnas que no coincidan con el esquema existente se pasarán por alto o se agregarán en función del parámetro <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>. Las nuevas filas con valores de clave principal que no coincidan con las filas existentes se agregarán a la tabla existente.
+Si la tabla que recibe datos y esquema nuevos a partir de una fusión mediante combinación tiene una clave principal, las nuevas filas de los datos entrantes se hacen coincidir con las filas existentes que tienen los mismos valores de clave principal <xref:System.Data.DataRowVersion.Original> que los de los datos entrantes. Si las columnas del esquema entrante coinciden con las del esquema existente, se modificarán los datos de las filas existentes. Las columnas que no coincidan con el esquema existente se pasarán por alto o se agregarán en función del parámetro <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>. Las nuevas filas con valores de clave principal que no coincidan con las filas existentes se agregarán a la tabla existente.
 
 Si las filas entrantes o las existentes tienen un estado <xref:System.Data.DataRowState.Added>, se harán coincidir sus valores de clave principal mediante el valor de clave principal <xref:System.Data.DataRowVersion.Current> de la fila `Added`, ya que no existe ninguna versión de fila `Original`.
 
@@ -28,10 +28,10 @@ Si la tabla que recibe nuevos datos de una combinación no tiene una clave princ
 
 ## <a name="table-names-and-namespaces"></a>Nombres de tabla y espacios de nombres
 
-A los objetos <xref:System.Data.DataTable> se les puede asignarse también un valor de propiedad <xref:System.Data.DataTable.Namespace%2A>. Cuando se asignan los valores <xref:System.Data.DataTable.Namespace%2A>, <xref:System.Data.DataSet> puede contener varios objetos <xref:System.Data.DataTable> con el mismo valor <xref:System.Data.DataTable.TableName%2A>. Durante las operaciones de combinación, se utilizan tanto <xref:System.Data.DataTable.TableName%2A> como <xref:System.Data.DataTable.Namespace%2A> para identificar el destino de una combinación. Si no se ha asignado <xref:System.Data.DataTable.Namespace%2A> solo se utiliza <xref:System.Data.DataTable.TableName%2A> para identificar el destino de una combinación.
+A los objetos <xref:System.Data.DataTable> se les puede asignarse también un valor de propiedad <xref:System.Data.DataTable.Namespace%2A>. Cuando se asignan los valores <xref:System.Data.DataTable.Namespace%2A>, <xref:System.Data.DataSet> puede contener varios objetos <xref:System.Data.DataTable> con el mismo valor <xref:System.Data.DataTable.TableName%2A>. Durante las operaciones de fusión mediante combinación, se utilizan tanto <xref:System.Data.DataTable.TableName%2A> como <xref:System.Data.DataTable.Namespace%2A> para identificar el destino de una fusión mediante combinación. Si no se ha asignado <xref:System.Data.DataTable.Namespace%2A> solo se utiliza <xref:System.Data.DataTable.TableName%2A> para identificar el destino de una fusión mediante combinación.
 
 > [!NOTE]
-> Este comportamiento ha cambiado en la versión 2.0 de .NET Framework. En la versión 1.1, se admitían los espacios de nombres pero eran pasados por alto durante las operaciones de combinación. Por ello, un <xref:System.Data.DataSet> que utiliza valores de propiedad <xref:System.Data.DataTable.Namespace%2A> tendrá diferentes comportamientos en función de la versión de .NET Framework que se ejecute. Por ejemplo, suponga que tiene dos `DataSets` que contienen `DataTables` con los mismos valores de propiedad <xref:System.Data.DataTable.TableName%2A> pero distintos valores de propiedad <xref:System.Data.DataTable.Namespace%2A>. En la versión 1.1 de .NET Framework, los nombres <xref:System.Data.DataTable.Namespace%2A> distintos serán pasados por alto cuando se combinen dos objetos <xref:System.Data.DataSet>. Sin embargo, a partir de la versión 2.0 de .NET Framework, la combinación produce dos nuevos `DataTables` para crearse en el <xref:System.Data.DataSet> de destino. El `DataTables` original no se verá afectado por la combinación.
+> Este comportamiento ha cambiado en la versión 2.0 de .NET Framework. En la versión 1.1, se admitían los espacios de nombres pero eran pasados por alto durante las operaciones de fusión mediante combinación. Por ello, un <xref:System.Data.DataSet> que utiliza valores de propiedad <xref:System.Data.DataTable.Namespace%2A> tendrá diferentes comportamientos en función de la versión de .NET Framework que se ejecute. Por ejemplo, suponga que tiene dos `DataSets` que contienen `DataTables` con los mismos valores de propiedad <xref:System.Data.DataTable.TableName%2A> pero distintos valores de propiedad <xref:System.Data.DataTable.Namespace%2A>. En la versión 1.1 de .NET Framework, los nombres <xref:System.Data.DataTable.Namespace%2A> distintos serán pasados por alto cuando se combinen dos objetos <xref:System.Data.DataSet>. Sin embargo, a partir de la versión 2.0 de .NET Framework, la combinación produce dos nuevos `DataTables` para crearse en el <xref:System.Data.DataSet> de destino. El `DataTables` original no se verá afectado por la combinación.
 
 ## <a name="preservechanges"></a>PreserveChanges
 

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
 ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640513"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Ajuste automático de escala en Windows Forms
 
 El escalado automático permite que un formulario y sus respectivos controles, diseñados en una máquina con una determinada resolución de pantalla o fuente del sistema, se muestren correctamente en otra máquina con una resolución de pantalla o una fuente de sistema diferentes. El escalado automático garantiza que el formulario y sus controles cambien de tamaño para mantener la coherencia con las ventanas nativas y otras aplicaciones tanto en máquinas de los usuarios como en las de otros desarrolladores. La compatibilidad de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] con el escalado automático y los estilos visuales permite que las aplicaciones de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] mantengan una apariencia coherente en comparación con aplicaciones Windows nativas en cada equipo de usuario.
 
-En su mayor parte, el escalado automático funciona según lo previsto en [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 y versiones posteriores. Sin embargo, los cambios en la combinación de fuentes pueden causar problemas. Para obtener un ejemplo de cómo resolver este problema, consulte [Cómo: responder a los cambios de esquema de fuentes en una aplicación de Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+En su mayor parte, el escalado automático funciona según lo previsto en [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 y versiones posteriores. Sin embargo, los cambios en la combinación de fuentes pueden causar problemas. Para obtener un ejemplo de cómo resolver este problema, consulte [Cómo: Responder a los cambios de esquema de fuentes en una aplicación de Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
 ## <a name="need-for-automatic-scaling"></a>Necesidad de escalado automático
 
@@ -105,4 +105,4 @@ Windows Forms ahora usa la lógica siguiente para escalar automáticamente los f
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
 - [Representar controles con estilos visuales](./controls/rendering-controls-with-visual-styles.md)
-- [Procedimiento para mejorar el rendimiento evitando el ajuste de tamaño automático](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [Cómo: Mejorar el rendimiento evitando el ajuste de escala automática](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

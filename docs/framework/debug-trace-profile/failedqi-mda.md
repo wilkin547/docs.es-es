@@ -11,11 +11,11 @@ ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754731"
 ---
 # <a name="failedqi-mda"></a>MDA de failedQI
 El asistente para la depuración administrada (MDA) `failedQI` se activa cuando Runtime llama a `QueryInterface` en un puntero de interfaz COM en nombre de un contenedor al que se puede llamar en tiempo de ejecución (RCW) y la llamada `QueryInterface` falla.  
@@ -25,11 +25,11 @@ El asistente para la depuración administrada (MDA) `failedQI` se activa cuando 
   
 ## <a name="cause"></a>Motivo  
   
--   La llamada se realiza desde el contexto equivocado.  
+- La llamada se realiza desde el contexto equivocado.  
   
--   El servidor proxy registrado no puede realizar la llamada `QueryInterface` porque se intentó realizar en el contexto equivocado.  
+- El servidor proxy registrado no puede realizar la llamada `QueryInterface` porque se intentó realizar en el contexto equivocado.  
   
--   Un servidor proxy propiedad de OLE devolvió un valor HRESULT de error.   
+- Un servidor proxy propiedad de OLE devolvió un valor HRESULT de error.   
   
 ## <a name="resolution"></a>Resolución  
  Consulte la documentación sobre reglas COM recogida en el sitio de MSDN.  

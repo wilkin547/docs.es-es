@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a731df84af0991f80c560db417df0ffe053a5e2b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598940"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 (Función)
 Notifica al generador de perfiles que se pasa a una función de control.  
@@ -43,9 +43,9 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
  El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
   
--   En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
+- En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
   
--   En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
+- En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

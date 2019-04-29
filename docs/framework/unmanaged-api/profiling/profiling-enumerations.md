@@ -9,11 +9,11 @@ ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 996352637f34b0b6c0d12e611a6d9e70ab85230e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757578"
 ---
 # <a name="profiling-enumerations"></a>Enumeraciones para generación de perfiles
 En esta sección se describen las enumeraciones no administradas que utiliza la API de generación de perfiles.  
@@ -23,7 +23,7 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  Indica el tipo de cláusula de excepción en la que el código acaba de entrar o de la que acaba de salir.  
   
  [COR_PRF_CODEGEN_FLAGS (enumeración)](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md)  
- Define las marcas de generación de código que se pueden establecer con el [icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) método.  
+ Define las marcas de generación de código que se pueden establecer con el [Icorprofilerfunctioncontrol](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) método.  
   
  [COR_PRF_FINALIZER_FLAGS (enumeración)](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md)  
  Describe el finalizador de un objeto.  
@@ -38,10 +38,10 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  Indica las propiedades de la raíz de un recolector de elementos no utilizados.  
   
  [COR_PRF_GC_ROOT_KIND (enumeración)](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md)  
- Indica el tipo de raíz del recolector de elementos no utilizados que se expone mediante el [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) devolución de llamada.  
+ Indica el tipo de raíz del recolector de elementos que se expone mediante el [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) devolución de llamada.  
   
  [COR_PRF_HIGH_MONITOR (enumeración)](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)  
- Proporciona marcas, además de las que se encuentran en el [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeración que puede especificar el generador de perfiles a la [icorprofilerinfo5:: Seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) método cuando se está cargando.  
+ Proporciona marcas, además de los que se encuentran en el [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeración que el generador de perfiles puede especificar para el [icorprofilerinfo5:: Seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) método cuando se está cargando.  
   
  [COR_PRF_JIT_CACHE (enumeración)](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md)  
  Indica el resultado de una búsqueda de función en caché.  

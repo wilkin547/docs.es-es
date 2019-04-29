@@ -3,11 +3,11 @@ title: 'Generar SQL a partir de árboles de comandos: procedimientos recomendado
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
 ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606672"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generar SQL a partir de árboles de comandos: procedimientos recomendados
 
@@ -117,7 +117,7 @@ ON b.y = d.z
 
 Para explicar la redirección de alias de entrada, considere la estructura de las expresiones relacionales, como DbFilterExpression, DbProjectExpression, DbCrossJoinExpression, DbJoinExpression, DbSortExpression, DbGroupByExpression, DbApplyExpression y DbSkipExpression.
 
-Cada uno de estos tipos tiene una o más propiedades Input que describen una colección de entradas, y se usa una variable de enlace correspondiente a cada entrada para representar cada elemento de dicha entrada durante un recorrido de la colección. La variable de enlace se usa al hacer referencia al elemento de entrada, por ejemplo en la propiedad Predicate de DbFilterExpression o en la propiedad Projection de DbProjectExpression.
+Cada uno de estos tipos tiene una o más propiedades Input que describen una colección de entradas, y se usa una variable de enlace correspondiente a cada entrada para representar cada elemento de dicha entrada durante un recorrido de la colección. La variable de enlace se usa al hacer referencia al elemento de entrada, por ejemplo en la propiedad Predicado de DbFilterExpression o en la propiedad Projection de DbProjectExpression.
 
 Al agregar más nodos de expresión relacional en una única instrucción SELECT de SQL y evaluar una expresión que forma parte de una expresión relacional (por ejemplo parte de la propiedad Projection de DbProjectExpression), es posible que la variable de enlace que utiliza no sea igual que el alias de la entrada, ya que se redirigen varios enlaces de expresión a una única extensión.  Este problema se denomina cambio de nombre de alias.
 

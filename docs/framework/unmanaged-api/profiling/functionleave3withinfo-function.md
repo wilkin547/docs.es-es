@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4304c933b9802ef565b8d18f1e04591e7fa83cb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598823"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo (Función)
 Notifica al generador de perfiles que se devuelve desde una función de control y proporciona un identificador que puede pasarse a la [método ICorProfilerInfo3:: Getfunctionleave3info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) para recuperar el marco de pila y el valor devuelto.  
@@ -48,9 +48,9 @@ void __stdcall FunctionLeave3WithInfo(
   
  El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
   
--   En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
+- En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
   
--   En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
+- En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
   
  La implementación de `FunctionLeave3WithInfo` no debe bloquearse, porque ello retrasará la recolección de elementos. La implementación no debe intentar una recolección de elementos, ya que la pila no puede estar en un estado compatible con la colección de elementos no utilizados. Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionLeave3WithInfo` devuelve.  
   

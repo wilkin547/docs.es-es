@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 48c9f5ed-76bf-4228-ab10-5217bbb295a3
 ms.openlocfilehash: 3bd7934cef03df391c1871b8499f911a023d7d3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644537"
 ---
 # <a name="query-expression-syntax-examples-projection--linq-to-dataset"></a>Ejemplos de sintaxis de expresiones de consulta: Proyección (LINQ to DataSet)
 Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enumerable.Select%2A> y <xref:System.Linq.Enumerable.SelectMany%2A> para consultar un <xref:System.Data.DataSet> usando la sintaxis de expresión de consultas.  

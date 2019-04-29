@@ -3,18 +3,18 @@ title: Referencia de eventos de seguimiento
 ms.date: 03/30/2017
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
 ms.openlocfilehash: 5b3bba83b3c6c7ab27c9470213b7675f7e107c7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699882"
 ---
 # <a name="tracking-events-reference"></a>Referencia de eventos de seguimiento
 Durante la ejecución, el flujo de trabajo en [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] genera eventos de seguimiento cuando va pasando por sus distintas fases de su duración. El host puede suscribirse a estos eventos y mantenerse actualizado con el estado del progreso del flujo de trabajo todo el tiempo que dure. Los eventos de seguimiento generados se tratan en esta sección.  
   
 ## <a name="event-reference"></a>Referencia de eventos  
   
-|Identificador del evento|Nivel de evento|Mensaje del evento|Palabras clave|  
+|Id. de evento|Nivel de evento|Mensaje del evento|Palabras clave|  
 |--------------|-----------------|-------------------|--------------|  
 |[100 - WorkflowInstanceRecord](100-workflowinstancerecord.md)|Información|TrackRecord= WorkflowInstanceRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, Annotations = %6, ProfileName = %7|EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking|  
 |[101 - WorkflowInstanceUnhandledExceptionRecord](101-workflowinstanceunhandledexceptionrecord.md)|Error|TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9, Annotations= %10, ProfileName = %11|EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking|  
@@ -69,12 +69,12 @@ Durante la ejecución, el flujo de trabajo en [!INCLUDE[netfx_current_short](../
 |[1029 - ScheduleFaultWorkItem](1029-schedulefaultworkitem.md)|Detallado|Se ha programado un FaultWorkItem para la actividad '%1', DisplayName: '%2', InstanceId: '%3'.  La excepción se propagó desde la actividad '%4', DisplayName: '%5', InstanceId: '%6'.|WFRuntime|  
 |[1030 - StartFaultWorkItem](1030-startfaultworkitem.md)|Detallado|Iniciando la ejecución de un FaultWorkItem para la actividad '%1', DisplayName: '%2', InstanceId: '%3'.  La excepción se propagó desde la actividad '%4', DisplayName: '%5', InstanceId: '%6'.|WFRuntime|  
 |[1031 - CompleteFaultWorkItem](1031-completefaultworkitem.md)|Detallado|Un FaultWorkItem se ha completado para la actividad '%1', DisplayName: '%2', InstanceId: '%3'. La excepción se propagó desde la actividad '%4', DisplayName: '%5', InstanceId: '%6'.|WFRuntime|  
-|[1032 - ScheduleRuntimeWorkItem](1032-scheduleruntimeworkitem.md)|Detallado|Se ha programado un elemento de trabajo en tiempo de ejecución para la actividad '%1', DisplayName: '%2', InstanceId: '%3'.|WFRuntime|  
-|[1033 - StartRuntimeWorkItem](1033-startruntimeworkitem.md)|Detallado|Iniciando la ejecución de un elemento de trabajo de tiempo de ejecución para la actividad '%1', DisplayName: '%2', InstanceId: '%3'.|WFRuntime|  
-|[1034 - CompleteRuntimeWorkItem](1034-completeruntimeworkitem.md)|Detallado|Se ha completado un elemento de trabajo en tiempo de ejecución para la actividad '%1', DisplayName: '%2', InstanceId: '%3'.|WFRuntime|  
+|[1032 - ScheduleRuntimeWorkItem](1032-scheduleruntimeworkitem.md)|Detallado|Se ha programado un elemento de trabajo en runtime para la actividad '%1', DisplayName: '%2', InstanceId: '%3'.|WFRuntime|  
+|[1033 - StartRuntimeWorkItem](1033-startruntimeworkitem.md)|Detallado|Iniciando la ejecución de un elemento de trabajo de runtime para la actividad '%1', DisplayName: '%2', InstanceId: '%3'.|WFRuntime|  
+|[1034 - CompleteRuntimeWorkItem](1034-completeruntimeworkitem.md)|Detallado|Se ha completado un elemento de trabajo en runtime para la actividad '%1', DisplayName: '%2', InstanceId: '%3'.|WFRuntime|  
 |[1035 - RuntimeTransactionSet](1035-runtimetransactionset.md)|Detallado|Se ha establecido la transacción en tiempo de ejecución mediante la actividad '%1', DisplayName: '%2', InstanceId: '%3'.  Ejecución aislada para la actividad '%4', DisplayName: '%5', InstanceId: '%6'.|WFRuntime|  
-|[1036 - RuntimeTransactionCompletionRequested](1036-runtimetransactioncompletionrequested.md)|Detallado|La actividad '%1', DisplayName: '%2', InstanceId: '%3' ha programado la finalización de la transacción en tiempo de ejecución.|WFRuntime|  
-|[1037 - RuntimeTransactionComplete](1037-runtimetransactioncomplete.md)|Detallado|La transacción en tiempo de ejecución se ha completado con el estado '%1'.|WFRuntime|  
+|[1036 - RuntimeTransactionCompletionRequested](1036-runtimetransactioncompletionrequested.md)|Detallado|La actividad '%1', DisplayName: '%2', InstanceId: '%3' ha programado la finalización de la transacción en runtime.|WFRuntime|  
+|[1037 - RuntimeTransactionComplete](1037-runtimetransactioncomplete.md)|Detallado|La transacción en runtime se ha completado con el estado '%1'.|WFRuntime|  
 |[1038 - EnterNoPersistBlock](1038-enternopersistblock.md)|Detallado|Entrando en un bloque no persistente.|WFRuntime|  
 |[1039 - ExitNoPersistBlock](1039-exitnopersistblock.md)|Detallado|Saliendo de un bloque no persistente.|WFRuntime|  
 |[1040 - InArgumentBound](1040-inargumentbound.md)|Detallado|El argumento '%1' en la actividad '%2', DisplayName: '%3', InstanceId: '%4' se ha enlazado con el valor: %5.|WFActivities|  

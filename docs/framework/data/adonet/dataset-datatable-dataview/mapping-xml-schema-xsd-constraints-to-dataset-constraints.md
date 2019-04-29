@@ -3,22 +3,22 @@ title: Asignar restricciones de un esquema XML (XSD) a restricciones de conjunto
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
 ms.openlocfilehash: a1690e99aeaeb7ed9c85fd28697ae22d34bb2018
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607907"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Asignar restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos
 El lenguaje de definición de esquemas XML (XSD) permite especificar restricciones para los elementos y atributos que define. Al asignar un esquema XML al esquema relacional de un <xref:System.Data.DataSet>, restricciones de esquema XML se asignan a las restricciones relacionales apropiadas en las tablas y columnas dentro de la **DataSet**.  
   
  En esta sección se describe la asignación de las siguientes restricciones de esquema XML:  
   
--   La restricción de unicidad especificada mediante el **único** elemento.  
+- La restricción de unicidad especificada mediante el **único** elemento.  
   
--   La restricción de clave especificada mediante el **clave** elemento.  
+- La restricción de clave especificada mediante el **clave** elemento.  
   
--   La restricción keyref especificada mediante el **keyref** elemento.  
+- La restricción keyref especificada mediante el **keyref** elemento.  
   
  El uso de una restricción sobre un elemento o un atributo permite especificar ciertas restricciones para los valores del elemento en cualquier instancia del documento. Por ejemplo, una restricción de clave en un **CustomerID** elemento secundario de un **cliente** elemento en el esquema indica que los valores de la **CustomerID** debe ser el elemento secundario único en cualquier instancia del documento, y que no se permiten valores null.  
   

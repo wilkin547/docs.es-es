@@ -5,18 +5,18 @@ helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
 ms.openlocfilehash: 0f8b4c15f2afefbc62b98dca66dcf3ccc31b1dc0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753041"
 ---
 # <a name="analytic-trace-event-reference"></a>Referencia de evento de traza analítica
-La siguiente tabla definen los niveles de eventos, identificadores y mensajes asociados a la traza analítica de WCF.  
+En la tabla siguiente define los niveles de eventos, identificadores y los mensajes asociados con la traza analítica de WCF.  
   
 ## <a name="event-reference"></a>Referencia de eventos  
   
-|Identificador del evento|Nivel de evento|Mensaje del evento|Palabras clave|  
+|Id. de evento|Nivel de evento|Mensaje del evento|Palabras clave|  
 |--------------|-----------------|-------------------|--------------|  
 |[131 - BufferPoolAllocation](../../../../../docs/framework/wcf/diagnostics/etw/131-bufferpoolallocation.md)|Detallado|Asignación de grupo %1 Bytes.|Infraestructura|  
 |[132 - BufferPoolChangeQuota](../../../../../docs/framework/wcf/diagnostics/etw/132-bufferpoolchangequota.md)|Detallado|BufferPool de tamaño %1, cambiar la cuota por %2.|Infraestructura|  
@@ -126,7 +126,7 @@ La siguiente tabla definen los niveles de eventos, identificadores y mensajes as
 |[3305 - ClientBaseCachedChannelFactoryCount](../../../../../docs/framework/wcf/diagnostics/etw/3305-clientbasecachedchannelfactorycount.md)|Información|El número de generadores de canales en caché es: '%1'.  Como máximo, se pueden almacenar en caché '%2' generadores de canales.|ServiceModel|  
 |[3306 - ClientBaseChannelFactoryAgedOutofCache](../../../../../docs/framework/wcf/diagnostics/etw/3306-clientbasechannelfactoryagedoutofcache.md)|Información|Un generador de canales se ha eliminado de la memoria caché al alcanzarse su límite de '%1'.|ServiceModel|  
 |[3307 - ClientBaseChannelFactoryCacheHit](../../../../../docs/framework/wcf/diagnostics/etw/3307-clientbasechannelfactorycachehit.md)|Información|Se encontró un generador de canales coincidente en la memoria caché.|ServiceModel|  
-|[3308 - ClientBaseUsingLocalChannelFactory](../../../../../docs/framework/wcf/diagnostics/etw/3308-clientbaseusinglocalchannelfactory.md)|Información|No utiliza el generador de canales de memoria caché, es decir, el almacenamiento en caché deshabilitado para la instancia.|ServiceModel|  
+|[3308 - ClientBaseUsingLocalChannelFactory](../../../../../docs/framework/wcf/diagnostics/etw/3308-clientbaseusinglocalchannelfactory.md)|Información|No usa el generador de canales de caché, es decir, almacenamiento en caché deshabilitado por ejemplo.|ServiceModel|  
 |[3309 - QueryCompositionExecuted](../../../../../docs/framework/wcf/diagnostics/etw/3309-querycompositionexecuted.md)|Información|Se ejecutó la composición de consultas '%1' en el URI de solicitud: '%2'.|ServiceModel|  
 |[3310 - DispatchFailed](../../../../../docs/framework/wcf/diagnostics/etw/3310-dispatchfailed.md)|Error|La operación '%1' se distribuyó con errores.|ServiceModel|  
 |[3311 - DispatchSuccessful](../../../../../docs/framework/wcf/diagnostics/etw/3311-dispatchsuccessful.md)|Información|La operación '%1' se distribuyó correctamente.|ServiceModel|  
@@ -187,7 +187,7 @@ La siguiente tabla definen los niveles de eventos, identificadores y mensajes as
 |[3371 - MtomMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3371-mtommessageencodingstart.md)|Detallado|MtomMessageEncoder inició la codificación del mensaje.|Canal|  
 |[3372 - TextMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3372-textmessageencodingstart.md)|Detallado|TextMessageEncoder inició la codificación del mensaje.|Canal|  
 |[3373 - BinaryMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3373-binarymessagedecodingstart.md)|Detallado|BinaryMessageEncoder inició la descodificación del mensaje.|Canal|  
-|[3374 - MtomMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3374-mtommessagedecodingstart.md)|Detallado|MtomMessageEncoder inició la descodificación del mensaje.|Canal|  
+|[3374 - MtomMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3374-mtommessagedecodingstart.md)|Detallado|MtomMessageEncoder zahájil dekódování zprávy.|Canal|  
 |[3375 - TextMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3375-textmessagedecodingstart.md)|Detallado|TextMessageEncoder inició la descodificación del mensaje.|Canal|  
 |[3376 - HttpResponseReceiveStart](../../../../../docs/framework/wcf/diagnostics/etw/3376-httpresponsereceivestart.md)|Información|El transporte HTTP comenzó a recibir un mensaje.|HTTP|  
 |[3377 - SocketReadStop](../../../../../docs/framework/wcf/diagnostics/etw/3377-socketreadstop.md)|Detallado|SocketId:%1 leer bytes '%2' leídos de '%3'.|TCP|  
@@ -322,9 +322,9 @@ La siguiente tabla definen los niveles de eventos, identificadores y mensajes as
 |[4814 - EndpointDiscoverabilityDisabled](../../../../../docs/framework/wcf/diagnostics/etw/4814-endpointdiscoverabilitydisabled.md)|Información|Se ha deshabilitado la detectabilidad de extremo con EndpointAddress='%1' y ListenUri='%2'.|de esquema JSON|  
 |[4814 - EndpointDiscoverabilityDisabled](../../../../../docs/framework/wcf/diagnostics/etw/4814-endpointdiscoverabilitydisabled.md)|Información|Se ha habilitado la detectabilidad de extremo con EndpointAddress='%1' y ListenUri='%2'.|de esquema JSON|  
 |[4816 - FindInitiatedInDiscoveryClientChannel](../../../../../docs/framework/wcf/diagnostics/etw/4816-findinitiatedindiscoveryclientchannel.md)|Detallado|Se inició una operación de búsqueda en el DiscoveryClientChannel para descubrir los extremos.|de esquema JSON|  
-|[4817 - InnerChannelCreationFailed](../../../../../docs/framework/wcf/diagnostics/etw/4817-innerchannelcreationfailed.md)|Advertencia|DiscoveryClientChannel no pudo crear el canal con un extremo detectado con EndpointAddress='%1' y Via='%2'. DiscoveryClientChannel ahora intentará usar el siguiente extremo detectable disponible.|de esquema JSON|  
-|[4818 - InnerChannelOpenFailed](../../../../../docs/framework/wcf/diagnostics/etw/4818-innerchannelopenfailed.md)|Advertencia|DiscoveryClientChannel no pudo abrir el canal con un extremo detectado con EndpointAddress='%1' y Via='%2' DiscoveryClientChannel ahora intentará usar el siguiente extremo detectable disponible.|de esquema JSON|  
-|[4819 - InnerChannelOpenSucceeded](../../../../../docs/framework/wcf/diagnostics/etw/4819-innerchannelopensucceeded.md)|Información|DiscoveryClientChannel detectó correctamente un extremo y abrió el canal con él. El cliente está conectado a un servicio que usa EndpointAddress='%1' y Via='%2'.|de esquema JSON|  
+|[4817 - InnerChannelCreationFailed](../../../../../docs/framework/wcf/diagnostics/etw/4817-innerchannelcreationfailed.md)|Advertencia|DiscoveryClientChannel no pudo crear el canal con un punto de conexión detectado con EndpointAddress='%1' y Via='%2'. DiscoveryClientChannel ahora intentará usar el siguiente extremo detectable disponible.|de esquema JSON|  
+|[4818 - InnerChannelOpenFailed](../../../../../docs/framework/wcf/diagnostics/etw/4818-innerchannelopenfailed.md)|Advertencia|DiscoveryClientChannel no pudo abrir el canal con un punto de conexión detectado con EndpointAddress='%1' y Via='%2' DiscoveryClientChannel ahora intentará usar el siguiente extremo detectable disponible.|de esquema JSON|  
+|[4819 - InnerChannelOpenSucceeded](../../../../../docs/framework/wcf/diagnostics/etw/4819-innerchannelopensucceeded.md)|Información|DiscoveryClientChannel detectó correctamente un punto de conexión y abrió el canal con él. El cliente está conectado a un servicio que usa EndpointAddress='%1' y Via='%2'.|de esquema JSON|  
 |[4820 - SynchronizationContextReset](../../../../../docs/framework/wcf/diagnostics/etw/4820-synchronizationcontextreset.md)|Información|SynchronizationContext se ha restablecido a su valor original de %1 mediante DiscoveryClientChannel.|de esquema JSON|  
 |[4821 - SynchronizationContextSetToNull](../../../../../docs/framework/wcf/diagnostics/etw/4821-synchronizationcontextsettonull.md)|Información|SynchronizationContext se ha establecido en NULL mediante DiscoveryClientChannel antes de iniciar la operación Find.|de esquema JSON|  
 |[5001 - DCSerializeWithSurrogateStart](../../../../../docs/framework/wcf/diagnostics/etw/5001-dcserializewithsurrogatestart.md)|Detallado|Inicio de la serialización de DataContract %1 con suplentes.|Serialización|  

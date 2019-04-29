@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
 ms.openlocfilehash: 5bab8b5a19f33f8dcfcc5a5f5d882309a4b1cc99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781451"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>Procedimiento para crear una fuente RSS básica
 Windows Communication Foundation (WCF) le permite crear un servicio que expone una fuente de distribución. En este tema se discute cómo crear un servicio de distribución que exponga una fuente de  distribución RSS.  

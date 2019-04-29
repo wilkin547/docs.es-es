@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 343e8dda-70b2-409d-9334-ce9a880c3cea
 ms.openlocfilehash: da583ed207a8c4fc9e061d517895ca0f2fea2f5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613545"
 ---
 # <a name="query-expression-syntax-examples-join-operators"></a>Ejemplos de sintaxis de expresiones de consulta: Operadores de combinación
 La combinación es una operación importante de las consultas dirigidas a orígenes de datos que no tienen relaciones navegables entre ellos, como las tablas de bases de datos relacionales. Una combinación de dos orígenes de datos es la asociación de objetos en un origen de datos con objetos que comparten un atributo común en el otro origen de datos. Para obtener más información, consulte [Standard Query Operators Overview](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  

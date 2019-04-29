@@ -5,11 +5,11 @@ f1_keywords:
 - WcfOptions
 ms.assetid: 6abe5d34-519b-4cef-8f02-3c0a7f125585
 ms.openlocfilehash: 2fa060e567fba9bb5e6344b2c8fc67fb639ad0f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608455"
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a>Controlar inicio automático del host de servicio de WCF
 Puede controlar la capacidad de inicio automático del Host de servicio de Windows Communication Foundation (WCF) (WcfSvcHost.exe) para un proyecto de biblioteca de servicios WCF al depurar otro proyecto en la misma solución de Visual Studio que contiene varios proyectos.  
@@ -20,13 +20,13 @@ Puede controlar la capacidad de inicio automático del Host de servicio de Windo
   
  Esta opción está disponible para los proyectos siguientes:  
   
--   Proyecto de biblioteca de servicio WCF.  
+- Proyecto de biblioteca de servicio WCF.  
   
--   Proyecto de biblioteca de servicio de flujo de trabajo secuencial.  
+- Proyecto de biblioteca de servicio de flujo de trabajo secuencial.  
   
--   Proyecto de biblioteca de servicio de flujo de trabajo de equipo de estado.  
+- Proyecto de biblioteca de servicio de flujo de trabajo de equipo de estado.  
   
--   Proyecto de biblioteca de servicio de distribución.  
+- Proyecto de biblioteca de servicio de distribución.  
   
 ## <a name="see-also"></a>Vea también
 

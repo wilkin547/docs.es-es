@@ -10,11 +10,11 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755953"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Información general sobre el control RadioButton (formularios Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RadioButton> controles presentan un conjunto de dos o más opciones mutuamente excluyentes para el usuario. Aunque los botones de radio y casillas de verificación puede parecer que funcionan de forma similar, hay una diferencia importante: cuando un usuario selecciona un botón de radio, los otros botones de radio en el mismo grupo no se puede seleccionar también. En cambio, se puede seleccionar cualquier número de casillas de verificación. Definir un grupo de botones de radio indica al usuario, "Aquí se muestra un conjunto de opciones desde el que puede elegir uno y solo uno."  

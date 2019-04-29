@@ -11,8 +11,8 @@ ms.openlocfilehash: e4b54026c71e18e4011661c5cad2ca95dfcb733e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608858"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Herramienta del editor de configuración (SvcConfigEditor.exe)
 El editor de configuración de servicios de Windows Communication Foundation (SvcConfigEditor.exe) permite a los administradores y programadores crear y modificar la configuración para los servicios WCF mediante una interfaz gráfica de usuario. Con esta herramienta puede administrar los valores para los enlaces, comportamientos, servicios y diagnósticos de WCF sin tener que editar directamente los archivos de configuración XML.  
@@ -50,11 +50,11 @@ El editor de configuración de servicios de Windows Communication Foundation (Sv
   
  La interfaz de usuario del editor de configuración de servicio está dividida en las áreas siguientes:  
   
--   Panel Ver árbol, que muestra los elementos de configuración en una estructura de árbol a la izquierda. Puede realizar operaciones en el árbol haciendo clic con el botón secundario en los nodos.  
+- Panel Ver árbol, que muestra los elementos de configuración en una estructura de árbol a la izquierda. Puede realizar operaciones en el árbol haciendo clic con el botón secundario en los nodos.  
   
--   Panel de tareas, que muestra las tareas comunes para los elementos vigentes en la parte inferior izquierda de la ventana.  
+- Panel de tareas, que muestra las tareas comunes para los elementos vigentes en la parte inferior izquierda de la ventana.  
   
--   Panel de detalles, que muestra valores detallados del nodo de configuración seleccionado en Ver árbol a la derecha.  
+- Panel de detalles, que muestra valores detallados del nodo de configuración seleccionado en Ver árbol a la derecha.  
   
 ### <a name="opening-a-configuration-file"></a>Abrir un archivo de configuración  
   
@@ -77,16 +77,16 @@ El editor de configuración de servicios de Windows Communication Foundation (Sv
 #### <a name="creating-a-new-service-configuration"></a>Crear una nueva configuración de servicio  
  Puede crear una nueva configuración de servicio de las maneras siguientes:  
   
--   Mediante un asistente: Haga clic en el vínculo **crear un nuevo servicio...** en el panel de tareas o la página de resumen para iniciar al asistente. También puede hacer en el **archivo** -> menú **Agregar nuevo elemento**.  
+- Mediante un asistente: Haga clic en el vínculo **crear un nuevo servicio...** en el panel de tareas o la página de resumen para iniciar al asistente. También puede hacer en el **archivo** -> menú **Agregar nuevo elemento**.  
   
--   Crear manualmente: Puede hacer clic en el **servicios** nodo y elija **nuevo servicio**.  
+- Crear manualmente: Puede hacer clic en el **servicios** nodo y elija **nuevo servicio**.  
   
 #### <a name="creating-a-new-service-endpoint-configuration"></a>Crear una nueva configuración de extremo de servicio  
  Puede crear una nueva configuración de punto de conexión de servicio de las maneras siguientes:  
   
--   Crear mediante un asistente: haga clic en el vínculo **crear un nuevo extremo de servicio...** en el panel de tareas o la página de resumen para iniciar al asistente. También puede hacer en el **archivo** -> menú **Agregar nuevo elemento**.  
+- Crear mediante un asistente: haga clic en el vínculo **crear un nuevo extremo de servicio...** en el panel de tareas o la página de resumen para iniciar al asistente. También puede hacer en el **archivo** -> menú **Agregar nuevo elemento**.  
   
--   Crear manualmente: Una vez creado un servicio, haga clic en el **extremos** nodo y elija "**nuevo extremo de servicio**".  
+- Crear manualmente: Una vez creado un servicio, haga clic en el **extremos** nodo y elija "**nuevo extremo de servicio**".  
   
 #### <a name="editing-a-service-configuration"></a>Editar una configuración de servicio  
   
@@ -121,9 +121,9 @@ El editor de configuración de servicios de Windows Communication Foundation (Sv
 #### <a name="creating-a-new-client-endpoint-configuration"></a>Crear una nueva configuración de punto de conexión de cliente  
  Puede crear una nueva configuración de extremo de cliente de las maneras siguientes:  
   
--   Asistente para crear: Haga clic en el vínculo **crear un nuevo cliente...** en el **panel de tareas** a la izquierda inferior de la ventana, o **página resumen** para iniciar el asistente. También puede hacer en el **archivo** -> menú **Agregar nuevo elemento**. El asistente le pedirá que indique la ubicación de la configuración de servicio, a partir de la cual se genera la configuración del cliente. A continuación podrá elegir el punto de conexión de servicio con el que conectarse.  
+- Asistente para crear: Haga clic en el vínculo **crear un nuevo cliente...** en el **panel de tareas** a la izquierda inferior de la ventana, o **página resumen** para iniciar el asistente. También puede hacer en el **archivo** -> menú **Agregar nuevo elemento**. El asistente le pedirá que indique la ubicación de la configuración de servicio, a partir de la cual se genera la configuración del cliente. A continuación podrá elegir el punto de conexión de servicio con el que conectarse.  
   
--   Crear manualmente: Haga clic en el **extremos** nodo bajo **cliente**y elija **nuevo punto de conexión de cliente**.  
+- Crear manualmente: Haga clic en el **extremos** nodo bajo **cliente**y elija **nuevo punto de conexión de cliente**.  
   
 #### <a name="editing-a-client-endpoint-configuration"></a>Editar una configuración de punto de conexión de cliente  
   
@@ -141,27 +141,27 @@ El editor de configuración de servicios de Windows Communication Foundation (Sv
 #### <a name="creating-a-new-standard-endpoint-configuration"></a>Crear una nueva configuración de punto de conexión estándar  
  Puede crear una nueva configuración de punto de conexión estándar de las maneras siguientes:  
   
--   Haga clic en el **punto de conexión estándar** nodo y seleccione **nueva configuración de extremo estándar...** Seleccione el tipo de enlace en el cuadro de diálogo y haga clic en **Aceptar**.  
+- Haga clic en el **punto de conexión estándar** nodo y seleccione **nueva configuración de extremo estándar...** Seleccione el tipo de enlace en el cuadro de diálogo y haga clic en **Aceptar**.  
   
--   Seleccione el **punto de conexión estándar** nodo y haga clic en **nueva configuración de extremo estándar...** en el **panel de tareas** en la parte izquierda inferior de la ventana.  
+- Seleccione el **punto de conexión estándar** nodo y haga clic en **nueva configuración de extremo estándar...** en el **panel de tareas** en la parte izquierda inferior de la ventana.  
   
  El **crear un nuevo extremo estándar** cuadro de diálogo muestra y enumera todos los tipos de punto de conexión estándar.  
   
 #### <a name="viewing-and-editing-a-standard-endpoint-configuration"></a>Ver y editar una configuración de punto de conexión estándar  
  Puede abrir una configuración de extremo estándar para verla y editarla de las siguientes maneras:  
   
--   Haga clic para expandir el **punto de conexión estándar** nodo y haga clic en el subnodo del extremo respectivo.  
+- Haga clic para expandir el **punto de conexión estándar** nodo y haga clic en el subnodo del extremo respectivo.  
   
--   Haga clic en el **punto de conexión estándar** nodo y haga clic en el punto de conexión respectivo en el panel de detalles.  
+- Haga clic en el **punto de conexión estándar** nodo y haga clic en el punto de conexión respectivo en el panel de detalles.  
   
  Los atributos para el punto de conexión se muestran en el panel derecho para edición.  
   
 #### <a name="deleting-a-standard-endpoint-configuration"></a>Eliminar una configuración de punto de conexión estándar  
  Puede eliminar una configuración de punto de conexión estándar de las maneras siguientes:  
   
--   Haga clic para expandir el **punto de conexión estándar** con el botón secundario en el subnodo del extremo respectivo y nodo. Use el comando contextual **eliminar la configuración de punto de conexión estándar** para eliminar el punto de conexión.  
+- Haga clic para expandir el **punto de conexión estándar** con el botón secundario en el subnodo del extremo respectivo y nodo. Use el comando contextual **eliminar la configuración de punto de conexión estándar** para eliminar el punto de conexión.  
   
--   Haga clic en el **punto de conexión estándar** nodo. En el **tarea** panel, haga clic en **eliminar la configuración de punto de conexión estándar**.  
+- Haga clic en el **punto de conexión estándar** nodo. En el **tarea** panel, haga clic en **eliminar la configuración de punto de conexión estándar**.  
   
  Si el punto de conexión estándar se está usando, se muestra un mensaje de advertencia al intentar eliminarlo: **El punto de conexión estándar está en uso. Si lo elimina ahora, asegúrese de eliminar todas sus referencias en otras partes de la configuración (por ejemplo, en el punto de conexión de servicio o punto de conexión del cliente). De lo contrario, la configuración no será válida y no se puede abrir la próxima vez. ¿Está seguro de que desea eliminar el punto de conexión estándar? "**  
   
@@ -175,11 +175,11 @@ El editor de configuración de servicios de Windows Communication Foundation (Sv
 #### <a name="creating-a-new-binding-configuration"></a>Crear una nueva configuración de enlace  
  Puede crear una nueva configuración de enlace de las maneras siguientes.  
   
--   Haga clic en el **enlaces** nodo y seleccione **nueva configuración de enlace**... Seleccione el tipo de enlace en el cuadro de diálogo y haga clic en **Aceptar**.  
+- Haga clic en el **enlaces** nodo y seleccione **nueva configuración de enlace**... Seleccione el tipo de enlace en el cuadro de diálogo y haga clic en **Aceptar**.  
   
--   Seleccione el **enlaces** nodo y haga clic en **nueva configuración de enlace**... en el **panel de tareas** en la parte izquierda inferior de la ventana.  
+- Seleccione el **enlaces** nodo y haga clic en **nueva configuración de enlace**... en el **panel de tareas** en la parte izquierda inferior de la ventana.  
   
--   En la página Resumen de servicio o cliente, haga clic en **haga clic en crear** en el **configuración de enlace** campo para crear una configuración de enlace para el extremo correspondiente.  
+- En la página Resumen de servicio o cliente, haga clic en **haga clic en crear** en el **configuración de enlace** campo para crear una configuración de enlace para el extremo correspondiente.  
   
 #### <a name="adding-binding-element-extensions-to-a-custom-binding"></a>Agregar extensiones de elemento de enlace a un enlace personalizado  
   
@@ -278,9 +278,9 @@ El editor de configuración de servicios de Windows Communication Foundation (Sv
 ##### <a name="creating-a-new-behavior-configuration"></a>Crear una nueva configuración de comportamiento  
  Puede crear una nueva configuración de comportamiento de dos maneras:  
   
--   Haga clic en uno de los nodos de comportamiento y seleccione "**... la nueva configuración de comportamiento**  
+- Haga clic en uno de los nodos de comportamiento y seleccione "**... la nueva configuración de comportamiento**  
   
--   Seleccione uno de los nodos de comportamiento y haga clic en el **nueva configuración de comportamiento**... en el **panel de tareas** en la parte izquierda inferior de la ventana.  
+- Seleccione uno de los nodos de comportamiento y haga clic en el **nueva configuración de comportamiento**... en el **panel de tareas** en la parte izquierda inferior de la ventana.  
   
 ##### <a name="adding-behavior-element-extensions-to-a-behavior"></a>Agregar las extensiones de elemento de comportamiento a un comportamiento  
   
@@ -319,13 +319,13 @@ El editor de configuración de servicios de Windows Communication Foundation (Sv
 #### <a name="extensions"></a>Extensiones  
  Nuevas extensiones de enlace, extensiones de elemento de enlace, extensiones de punto de conexión estándar y extensiones de comportamiento se pueden registrar para su uso en la configuración de WCF. Las extensiones son pares de nombre/tipo. El nombre define el nombre de la extensión en la configuración, mientras que el tipo implementa la extensión. Hay cuatro tipos de extensiones:  
   
--   Las extensiones de enlace definen un tipo entero de enlace. Ejemplo: `basicHttpBinding`.  
+- Las extensiones de enlace definen un tipo entero de enlace. Ejemplo: `basicHttpBinding`.  
   
--   Las extensiones de elemento de enlace definen un elemento de un enlace. Ejemplo: `textMessageEncoding`.  
+- Las extensiones de elemento de enlace definen un elemento de un enlace. Ejemplo: `textMessageEncoding`.  
   
--   Las extensiones de extremo estándar definen un extremo estándar completo. Ejemplo: `discoveryEndpoint`.  
+- Las extensiones de extremo estándar definen un extremo estándar completo. Ejemplo: `discoveryEndpoint`.  
   
--   Las extensiones de elemento de comportamiento definen un elemento de un comportamiento. Ejemplo: `clientVia`.  
+- Las extensiones de elemento de comportamiento definen un elemento de un comportamiento. Ejemplo: `clientVia`.  
   
  Las extensiones registradas en configuración se pueden utilizar como cualquier otro componente WCF del mismo tipo.  
   

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
 ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663949"
 ---
 # <a name="types-of-bitmaps"></a>Tipos de mapas de bits
 Un mapa de bits es una matriz de bits que especifica el color de cada píxel en una matriz rectangular de píxeles. El número de bits asignado a un píxel individual determina el número de colores que se pueden asignar a ese píxel. Por ejemplo, si cada píxel se representa mediante 4 bits, a continuación, un píxel determinado puede asignarse uno de los 16 colores distintos (2 ^ 4 = 16). En la tabla siguiente se muestra algunos ejemplos del número de colores que se pueden asignar a un píxel representado por un número determinado de bits.  

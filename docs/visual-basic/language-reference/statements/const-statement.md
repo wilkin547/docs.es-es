@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
 ms.openlocfilehash: 089c2dca99373f379e1eff319cf8c41242e5f135
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638320"
 ---
 # <a name="const-statement-visual-basic"></a>Instrucción Const (Visual Basic)
 Declara y define una o varias constantes.  
@@ -57,35 +57,35 @@ Const constantlist
   
 ## <a name="rules"></a>Reglas  
   
--   **Contexto de declaración.** Una constante declarada en el nivel de módulo, fuera de cualquier procedimiento, es un *constante miembro*; es un miembro de la clase, estructura o módulo que lo declara.  
+- **Contexto de declaración.** Una constante declarada en el nivel de módulo, fuera de cualquier procedimiento, es un *constante miembro*; es un miembro de la clase, estructura o módulo que lo declara.  
   
      Una constante declarada en el nivel de procedimiento es un *constante local*; éste es local para el procedimiento o bloque que lo declara.  
   
--   **Atributos.** Puede aplicar atributos solo a las constantes de miembro, no a las constantes locales. Un atributo proporciona información a los metadatos del ensamblado, que no son significativos para el almacenamiento temporal como constantes locales.  
+- **Atributos.** Puede aplicar atributos solo a las constantes de miembro, no a las constantes locales. Un atributo proporciona información a los metadatos del ensamblado, que no son significativos para el almacenamiento temporal como constantes locales.  
   
--   **Modificadores.** De forma predeterminada, todas las constantes son `Shared`, `Static`, y `ReadOnly`. No se puede usar cualquiera de estas palabras clave al declarar una constante.  
+- **Modificadores.** De forma predeterminada, todas las constantes son `Shared`, `Static`, y `ReadOnly`. No se puede usar cualquiera de estas palabras clave al declarar una constante.  
   
      En el nivel de procedimiento, no puede usar `Shadows` o cualquier acceso modificadores para declarar constantes locales.  
   
--   **Varias constantes.** Puede declarar varias constantes en la misma instrucción de declaración, especificando el `constantname` parte para cada uno de ellos. Varias constantes están separadas por comas.  
+- **Varias constantes.** Puede declarar varias constantes en la misma instrucción de declaración, especificando el `constantname` parte para cada uno de ellos. Varias constantes están separadas por comas.  
   
 ## <a name="data-type-rules"></a>Reglas de tipo de datos  
   
--   **Tipos de datos.** El `Const` instrucción puede declarar el tipo de datos de una variable. Puede especificar cualquier tipo de datos o el nombre de una enumeración.  
+- **Tipos de datos.** El `Const` instrucción puede declarar el tipo de datos de una variable. Puede especificar cualquier tipo de datos o el nombre de una enumeración.  
   
--   **Tipo predeterminado.** Si no especifica `datatype`, la constante tiene el tipo de datos del `initializer`. Si se especifican ambas `datatype` y `initializer`, tipo de datos de `initializer` debe ser convertible a `datatype`. Si no `datatype` ni `initializer` está presente, el valor predeterminado es de tipo de datos `Object`.  
+- **Tipo predeterminado.** Si no especifica `datatype`, la constante tiene el tipo de datos del `initializer`. Si se especifican ambas `datatype` y `initializer`, tipo de datos de `initializer` debe ser convertible a `datatype`. Si no `datatype` ni `initializer` está presente, el valor predeterminado es de tipo de datos `Object`.  
   
--   **Diferentes tipos.** Puede especificar los tipos de datos diferentes para distintas constantes utilizando otro `As` cláusula para cada variable que declare. Sin embargo, no se puede declarar varias constantes para que sea del mismo tipo mediante un común `As` cláusula.  
+- **Diferentes tipos.** Puede especificar los tipos de datos diferentes para distintas constantes utilizando otro `As` cláusula para cada variable que declare. Sin embargo, no se puede declarar varias constantes para que sea del mismo tipo mediante un común `As` cláusula.  
   
--   **Inicialización.** Debe inicializar el valor de cada constante en `constantlist`. Usa `initializer` para proporcionar una expresión que se asignará a la constante. La expresión puede ser cualquier combinación de literales, otras constantes que ya están definidas y miembros de enumeración que ya están definidos. Puede utilizar operadores aritméticos y lógicos para combinar estos elementos.  
+- **Inicialización.** Debe inicializar el valor de cada constante en `constantlist`. Usa `initializer` para proporcionar una expresión que se asignará a la constante. La expresión puede ser cualquier combinación de literales, otras constantes que ya están definidas y miembros de enumeración que ya están definidos. Puede utilizar operadores aritméticos y lógicos para combinar estos elementos.  
   
      No se puede usar las variables o funciones en `initializer`. Sin embargo, puede usar palabras clave de conversión, como `CByte` y `CShort`. También puede usar `AscW` si se le llama con una constante `String` o `Char` argumento, puesto que puede evaluarse en tiempo de compilación.  
   
 ## <a name="behavior"></a>Comportamiento  
   
--   **Ámbito.** Constantes locales solo son accesibles desde dentro de su procedimiento o bloque. Constantes de miembro son accesibles desde cualquier lugar dentro de su clase, estructura o módulo.  
+- **Ámbito.** Constantes locales solo son accesibles desde dentro de su procedimiento o bloque. Constantes de miembro son accesibles desde cualquier lugar dentro de su clase, estructura o módulo.  
   
--   **Calificación.** Código fuera de una clase, estructura o módulo debe calificar el nombre de una constante de miembro con el nombre de esa clase, estructura o módulo. Fuera de que un procedimiento o bloque no puede hacer referencia a una de estas constantes local dentro de ese procedimiento o bloque de código.  
+- **Calificación.** Código fuera de una clase, estructura o módulo debe calificar el nombre de una constante de miembro con el nombre de esa clase, estructura o módulo. Fuera de que un procedimiento o bloque no puede hacer referencia a una de estas constantes local dentro de ese procedimiento o bloque de código.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `Const` instrucción para declarar constantes para su uso en lugar de valores literales.  

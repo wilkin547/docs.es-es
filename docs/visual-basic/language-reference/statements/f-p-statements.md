@@ -3,11 +3,11 @@ title: Instrucciones F-P (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cdce7ab0-c52e-4d33-a29b-bf32cdacc79f
 ms.openlocfilehash: f5f1ed4f9d16bb9687e874c97364777494ca6052
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638095"
 ---
 # <a name="f-p-statements"></a>Instrucciones F-P
 En la tabla siguiente contiene una lista de instrucciones del lenguaje Visual Basic.  

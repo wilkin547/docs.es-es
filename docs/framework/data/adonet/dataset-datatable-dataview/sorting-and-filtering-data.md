@@ -6,24 +6,24 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607432"
 ---
 # <a name="sorting-and-filtering-data"></a>Ordenar y filtrar datos
 La <xref:System.Data.DataView> proporciona varias formas de ordenación y filtrado de datos en una <xref:System.Data.DataTable>:  
   
--   Mediante la propiedad <xref:System.Data.DataView.Sort%2A> puede especificar criterios simples o múltiples de ordenación de columnas e incluir parámetros ASC (ascendente) y DESC (descendente).  
+- Mediante la propiedad <xref:System.Data.DataView.Sort%2A> puede especificar criterios simples o múltiples de ordenación de columnas e incluir parámetros ASC (ascendente) y DESC (descendente).  
   
--   Mediante la propiedad <xref:System.Data.DataView.ApplyDefaultSort%2A> puede crear automáticamente un criterio de ordenación, en orden ascendente, basado en la columna o columnas de clave principal de la tabla. <xref:System.Data.DataView.ApplyDefaultSort%2A> solo se aplica cuando el **ordenación** propiedad es una referencia nula o una cadena vacía, y cuando la tabla tiene definida una clave principal.  
+- Mediante la propiedad <xref:System.Data.DataView.ApplyDefaultSort%2A> puede crear automáticamente un criterio de ordenación, en orden ascendente, basado en la columna o columnas de clave principal de la tabla. <xref:System.Data.DataView.ApplyDefaultSort%2A> solo se aplica cuando el **ordenación** propiedad es una referencia nula o una cadena vacía, y cuando la tabla tiene definida una clave principal.  
   
--   Mediante la propiedad <xref:System.Data.DataView.RowFilter%2A> puede especificar subconjuntos de filas basándose en sus valores de columna. Para obtener más información sobre las expresiones válidas para la **RowFilter** propiedad, vea la información de referencia para la <xref:System.Data.DataColumn.Expression%2A> propiedad de la <xref:System.Data.DataColumn> clase.  
+- Mediante la propiedad <xref:System.Data.DataView.RowFilter%2A> puede especificar subconjuntos de filas basándose en sus valores de columna. Para obtener más información sobre las expresiones válidas para la **RowFilter** propiedad, vea la información de referencia para la <xref:System.Data.DataColumn.Expression%2A> propiedad de la <xref:System.Data.DataColumn> clase.  
   
      Si desea devolver los resultados de una consulta determinada en los datos, en lugar de proporcionar una vista dinámica de un subconjunto de los datos, usen el <xref:System.Data.DataView.Find%2A> o <xref:System.Data.DataView.FindRows%2A> métodos de la **DataView** para lograr un mejor rendimiento en lugar de establecer el **RowFilter** propiedad. Establecer el **RowFilter** propiedad vuelve a generar el índice de los datos, agrega sobrecarga a la aplicación y reduce el rendimiento. El **RowFilter** propiedad se utiliza mejor en una aplicación enlazada a datos donde un control enlazado muestra resultados filtrados. El **buscar** y **FindRows** métodos aprovechan el índice actual, sin necesidad de volver a generar. Para obtener más información sobre la **buscar** y **FindRows** métodos, vea [buscar filas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).  
   
--   Mediante la propiedad <xref:System.Data.DataView.RowStateFilter%2A> puede especificar las versiones de fila que desea ver. El **DataView** administra implícitamente qué versión de fila exponer, dependiendo del **RowState** de la fila subyacente. Por ejemplo, si la **RowStateFilter** está establecido en **DataViewRowState.Deleted**, **DataView** expone el **Original** versión de fila de todos los **Deleted** filas porque no hay ningún **actual** versión de fila. Puede determinar qué versión de una fila que se va a se expone mediante el uso de la **RowVersion** propiedad de la **DataRowView**.  
+- Mediante la propiedad <xref:System.Data.DataView.RowStateFilter%2A> puede especificar las versiones de fila que desea ver. El **DataView** administra implícitamente qué versión de fila exponer, dependiendo del **RowState** de la fila subyacente. Por ejemplo, si la **RowStateFilter** está establecido en **DataViewRowState.Deleted**, **DataView** expone el **Original** versión de fila de todos los **Deleted** filas porque no hay ningún **actual** versión de fila. Puede determinar qué versión de una fila que se va a se expone mediante el uso de la **RowVersion** propiedad de la **DataRowView**.  
   
      En la tabla siguiente se muestra las opciones para **DataViewRowState**.  
   

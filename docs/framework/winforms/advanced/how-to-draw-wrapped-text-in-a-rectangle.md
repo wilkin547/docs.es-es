@@ -10,11 +10,11 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
 ms.openlocfilehash: 8e5c7cab1f977bef0570b2e540d7bf3a630aceb0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781412"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Procedimiento para dibujar texto ajustado en un rectángulo
 Puede dibujar texto ajustado en un rectángulo mediante el uso de la <xref:System.Drawing.Graphics.DrawString%2A> sobrecargar el método de la <xref:System.Drawing.Graphics> clases que toman un <xref:System.Drawing.Rectangle> o <xref:System.Drawing.RectangleF> parámetro. También se puede utilizar un <xref:System.Drawing.Brush> y un <xref:System.Drawing.Font>.  
@@ -42,7 +42,7 @@ Puede dibujar texto ajustado en un rectángulo mediante el uso de la <xref:Syste
 ## <a name="compiling-the-code"></a>Compilar el código  
  Los ejemplos anteriores requieren:  
   
--   <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+- <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vea también
 

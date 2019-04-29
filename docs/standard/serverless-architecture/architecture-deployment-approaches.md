@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640285"
 ---
-# <a name="architecture-deployment-approaches"></a>Métodos de implementación de arquitectura
+# <a name="architecture-deployment-approaches"></a>Enfoques para la implementación de arquitecturas
 
 Independientemente de la arquitectura puede variar el enfoque empleado para diseñar una aplicación empresarial, la implementación o la implementación de esas aplicaciones. Las empresas a hospedan aplicaciones en todo, desde el hardware físico a las funciones sin servidor.
 
@@ -138,9 +138,9 @@ Hay una amplia gama de opciones disponibles para la arquitectura, incluidos un e
 
 |         |IaaS     |PaaS     |Contenedor|Sin servidor|
 |---------|---------|---------|---------|----------|
-|**Escalar**|MÁQUINA VIRTUAL       |Instancia |Aplicación      |Función  |
+|**Escalar**|VM       |Instancia |Aplicación      |Función  |
 |**Abstrae**|Hardware|Plataforma|Sistema operativo Host|Tiempo de ejecución   |
-|**Unidad** |MÁQUINA VIRTUAL       |Proyecto  |Imagen    |Código      |
+|**Unit** |VM       |Proyecto  |Imagen    |Código      |
 |**Duración**|meses|Días o meses|Minutos en días|Milisegundos en minutos|
 |**responsabilidad**|Las aplicaciones, las dependencias, en tiempo de ejecución y del sistema operativo|Las aplicaciones y dependencias|En tiempo de ejecución, dependencias y las aplicaciones|Función
 
@@ -156,10 +156,10 @@ El siguiente capítulo centrarse en la arquitectura sin servidor, casos de uso y
 
 * [Guía de arquitectura de aplicación de Azure](https://docs.microsoft.com/azure/architecture/guide/)
 * [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-* [SQL Azure](https://docs.microsoft.com/azure/sql-database)
+* [Azure SQL](https://docs.microsoft.com/azure/sql-database)
 * [Patrón de arquitectura de N niveles](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
 * [Kubernetes en Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-* [Microservicios](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
+* [Microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
 * [Arquitectura de referencia de N niveles de máquina virtual](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
 * [Máquinas virtuales](https://docs.microsoft.com/azure/virtual-machines/)
 * [¿Qué es Docker?](../microservices-architecture/container-docker-introduction/docker-defined.md)

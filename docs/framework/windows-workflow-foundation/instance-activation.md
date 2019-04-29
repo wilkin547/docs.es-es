@@ -3,11 +3,11 @@ title: Activación de instancias
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
 ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641675"
 ---
 # <a name="instance-activation"></a>Activación de instancias
 El almacén de instancias de flujo de trabajo de SQL ejecuta una tarea interna que se inicia periódicamente y que detecta instancias de flujo de trabajo ejecutables o activables en la base de datos de persistencia. Si encuentra una instancia de flujo de trabajo ejecutable, notifica al host de flujo de trabajo que es capaz de activar la instancia. Si el almacén de instancias encuentra una instancia de flujo de trabajo activable, notifica a un host genérico que activa un host del flujo de trabajo, que a su vez ejecuta la instancia de flujo de trabajo. Las siguientes secciones en este tema explican el proceso de activación de la instancia en detalle.  
@@ -15,11 +15,11 @@ El almacén de instancias de flujo de trabajo de SQL ejecuta una tarea interna q
 ## <a name="RunnableSection"></a> Detectar y activar instancias de flujo de trabajo ejecutables  
  El Store de instancia de flujo de trabajo de SQL considera que una instancia de flujo de trabajo *ejecutable* si la instancia no está en estado suspendido o en estado completado y cumple las condiciones siguientes:  
   
--   La instancia se desbloquea y tiene un temporizador pendiente que ha expirado.  
+- La instancia se desbloquea y tiene un temporizador pendiente que ha expirado.  
   
--   La instancia tiene un bloqueo expirado en ella.  
+- La instancia tiene un bloqueo expirado en ella.  
   
--   La instancia está desbloqueada y su estado es **Executing**.  
+- La instancia está desbloqueada y su estado es **Executing**.  
   
  El almacén de instancias de flujo de trabajo de SQL genera <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> cuando encuentra una instancia ejecutable. Después de esto, SqlWorkflowInstanceStore detiene la supervisión hasta que se llame a <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> cuando se encuentre en el almacén.  
   

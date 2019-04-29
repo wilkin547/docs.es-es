@@ -11,11 +11,11 @@ ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 35560b966d5fba60ac35b2eb1e559e196fc868f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754547"
 ---
 # <a name="invalidiunknown-mda"></a>MDA de invalidIUnknownPointer
 El asistente para la depuración administrada (MDA) de `invalidIUnknown` se activa cuando un puntero `IUnknown` no válido se pasa a código administrado de código nativo. Se produce un error en `IUnknown` a la hora de devolver un resultado correctamente cuando se solicita la interfaz `IUnknown`.  
@@ -24,7 +24,7 @@ El asistente para la depuración administrada (MDA) de `invalidIUnknown` se acti
  Se produce un error inesperado al calcular referencias de un puntero a una interfaz COM durante el cálculo de referencias del argumento.  
   
 ## <a name="cause"></a>Motivo  
-  Implementación de `QueryInterface` incorrecta en la interfaz COM pasada al CLR.  
+ Implementación de `QueryInterface` incorrecta en la interfaz COM pasada al CLR.  
   
 ## <a name="resolution"></a>Resolución  
  Corrija la implementación de `QueryInterface`.  

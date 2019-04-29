@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7532218728aead72186b5156da87db6d3bc0a8c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698218"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs (Función)
 Proporciona un mecanismo para enumerar los CLR de un proceso.  
@@ -68,7 +68,7 @@ HRESULT EnumerateCLRs (
 ## <a name="remarks"></a>Comentarios  
  Para un proceso de destino identificado por `debuggeePID`, la función devuelve una matriz de rutas de acceso, `ppStringArrayOut`, a los CLR cargados en el proceso; una matriz de identificadores de eventos, `ppHandleArrayOut`, que puede contener un evento de inicio continuo para el CLR en el mismo índice; y el tamaño de las matrices, `pdwArrayLengthOut`, que especifica el número de CLR que hay cargados.  
   
- En el sistema operativo Windows, `debuggeePID` se asigna a un identificador de proceso del sistema operativo.  
+ En el sistema operativo Windows, `debuggeePID` se asigna a un identificador de procesos del sistema operativo.  
   
  Esta función asigna la memoria para `ppHandleArrayOut` y `ppStringArrayOut`. Para liberar la memoria asignada, debe llamar a [CloseCLREnumeration (función)](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md).  
   

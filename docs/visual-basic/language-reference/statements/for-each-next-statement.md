@@ -23,11 +23,11 @@ helpviewer_keywords:
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638082"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Instrucción For Each...Next (Visual Basic)
 Repite un grupo de instrucciones para cada elemento de una colección.  
@@ -92,11 +92,11 @@ Next [ element ]
   
  `Exit For` a menudo se usa después de una evaluación de alguna condición, por ejemplo, en un `If`... `Then`... `Else` estructura. Desea usar `Exit For` para las condiciones siguientes:  
   
--   Continuar recorrer en iteración es innecesarios o imposible. Esto podría deberse a un valor erróneo o una solicitud de finalización.  
+- Continuar recorrer en iteración es innecesarios o imposible. Esto podría deberse a un valor erróneo o una solicitud de finalización.  
   
--   Se detectó una excepción en un `Try`... `Catch`... `Finally`. Puede usar `Exit For` al final de la `Finally` bloque.  
+- Se detectó una excepción en un `Try`... `Catch`... `Finally`. Puede usar `Exit For` al final de la `Finally` bloque.  
   
--   Hay un bucle sin fin, que es un bucle que podría ejecutar un número grande o incluso infinito de veces. Si se detecta una condición de ese tipo, puede usar `Exit For` para salir del bucle. Para obtener más información, consulte [hacer... Instrucción de bucle](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- Hay un bucle sin fin, que es un bucle que podría ejecutar un número grande o incluso infinito de veces. Si se detecta una condición de ese tipo, puede usar `Exit For` para salir del bucle. Para obtener más información, consulte [hacer... Instrucción de bucle](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="iterators"></a>Iterators  
  Usa un *iterador* para realizar una iteración personalizada en una colección. Un iterador puede ser una función o un `Get` descriptor de acceso. Usa un `Yield` instrucción para devolver cada elemento de la colección a la vez.  

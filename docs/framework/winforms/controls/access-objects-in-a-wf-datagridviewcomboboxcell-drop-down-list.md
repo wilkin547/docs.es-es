@@ -10,11 +10,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
 ms.openlocfilehash: 17b7c93effe9338a9e2d6cb207a948a956d9b666
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640435"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Procedimiento para obtener acceso a objetos de una lista desplegable DataGridViewComboBoxCell en formularios Windows Forms
 Al igual que el <xref:System.Windows.Forms.ComboBox> (control), el <xref:System.Windows.Forms.DataGridViewComboBoxColumn> y <xref:System.Windows.Forms.DataGridViewComboBoxCell> tipos le permiten agregar objetos arbitrarios a las listas de la lista desplegable. Con esta característica, puede representar estados complejos en una lista desplegable sin tener que almacenar los objetos correspondientes en una colección independiente.  
@@ -44,7 +44,7 @@ Al igual que el <xref:System.Windows.Forms.ComboBox> (control), el <xref:System.
   
 ### <a name="to-retrieve-the-currently-selected-business-object"></a>Para recuperar el objeto de negocios seleccionada actualmente  
   
--   Obtenga la celda <xref:System.Windows.Forms.DataGridViewCell.Value%2A> propiedad y convertirlo en el tipo de objeto de negocios.  
+- Obtenga la celda <xref:System.Windows.Forms.DataGridViewCell.Value%2A> propiedad y convertirlo en el tipo de objeto de negocios.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
@@ -66,7 +66,7 @@ Al igual que el <xref:System.Windows.Forms.ComboBox> (control), el <xref:System.
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Referencias a los ensamblados System y System.Windows.Forms.  
+- Referencias a los ensamblados System y System.Windows.Forms.  
   
 ## <a name="see-also"></a>Vea también
 

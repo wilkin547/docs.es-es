@@ -3,28 +3,28 @@ title: Soporte técnico para consultas
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
 ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641520"
 ---
 # <a name="support-for-queries"></a>Soporte técnico para consultas
 El almacén de instancias de flujo de trabajo de SQL graba un conjunto de propiedades conocidas en el almacén. Los usuarios pueden consultar instancias basadas en estas propiedades. La siguiente lista contiene algunas de estas propiedades conocidas:  
   
--   **Nombre del sitio.** Nombre del sitio web que contiene el servicio.  
+- **Nombre del sitio.** Nombre del sitio web que contiene el servicio.  
   
--   **Ruta de acceso de la aplicación relativa.** Ruta de acceso de la aplicación relativa al sitio web.  
+- **Ruta de acceso de la aplicación relativa.** Ruta de acceso de la aplicación relativa al sitio web.  
   
--   **Ruta de acceso relativa del servicio.** Ruta de acceso del servicio relativa a la aplicación.  
+- **Ruta de acceso relativa del servicio.** Ruta de acceso del servicio relativa a la aplicación.  
   
--   **Nombre de servicio.** Nombre del servicio.  
+- **Nombre de servicio.** Nombre del servicio.  
   
--   **Namespace de servicio.** Nombre del espacio de nombres que usa el servicio.  
+- **Namespace de servicio.** Nombre del espacio de nombres que usa el servicio.  
   
--   **Máquina actual.**  
+- **Máquina actual.**  
   
--   **Último equipo**. El equipo en el que la instancia de servicio del flujo de trabajo se ejecutó la última vez.  
+- **Último equipo**. El equipo en el que la instancia de servicio del flujo de trabajo se ejecutó la última vez.  
   
 > [!NOTE]
 >  En el caso de los escenarios auto-hospedados con el host de servicio de flujo de trabajo, sólo se rellenan las últimas cuatro propiedades. En el caso de escenarios de aplicación de flujo de trabajo, solo se rellena la última propiedad.  

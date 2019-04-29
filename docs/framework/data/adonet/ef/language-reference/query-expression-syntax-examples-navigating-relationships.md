@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0d4a7f41-c758-4059-8f83-d2e9c2745593
 ms.openlocfilehash: 2133ae7902cc4746e00be75e7a801296073041e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614289"
 ---
 # <a name="query-expression-syntax-examples-navigating-relationships"></a>Ejemplos de sintaxis de expresiones de consulta: Navegar por relaciones
 Las propiedades de navegación de [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] son propiedades de acceso directo que se emplean para localizar las entidades situadas en los extremos de una asociación. Las propiedades de navegación permiten a un usuario navegar de una entidad a otra, o desde una entidad a entidades relacionadas a través de un conjunto de asociaciones. En este tema se ofrecen ejemplos de la sintaxis de las expresiones de consultas para navegar por las relaciones a través de propiedades de navegación de las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  

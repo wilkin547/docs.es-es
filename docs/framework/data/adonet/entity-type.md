@@ -3,22 +3,22 @@ title: tipo de entidad
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
 ms.openlocfilehash: 026b0aef7cf2de8fe222721191afa459859701ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667188"
 ---
 # <a name="entity-type"></a>tipo de entidad
 El *tipo de entidad* es el bloque de creación fundamental para describir la estructura de datos con Entity Data Model (EDM). En un modelo conceptual, un tipo de entidad representa la estructura de conceptos de nivel superior, como clientes o pedidos. Un tipo de entidad es una plantilla para las instancias de tipo de entidad. Cada plantilla contiene la información siguiente:  
   
--   Un nombre único. (Requerido)  
+- Un nombre único. (Requerido)  
   
--   Un [clave de entidad](../../../../docs/framework/data/adonet/entity-key.md) definido por una o varias propiedades. (Requerido)  
+- Un [clave de entidad](../../../../docs/framework/data/adonet/entity-key.md) definido por una o varias propiedades. (Requerido)  
   
--   Datos en forma de [propiedades](../../../../docs/framework/data/adonet/property.md). (Opcional)  
+- Datos en forma de [propiedades](../../../../docs/framework/data/adonet/property.md). (Opcional)  
   
--   [Las propiedades de navegación](../../../../docs/framework/data/adonet/navigation-property.md) que permiten la navegación de una [final](../../../../docs/framework/data/adonet/association-end.md) de un [asociación](../../../../docs/framework/data/adonet/association-type.md) al otro extremo. (Opcional)  
+- [Las propiedades de navegación](../../../../docs/framework/data/adonet/navigation-property.md) que permiten la navegación de una [final](../../../../docs/framework/data/adonet/association-end.md) de un [asociación](../../../../docs/framework/data/adonet/association-type.md) al otro extremo. (Opcional)  
   
  En una aplicación, una instancia de un tipo de entidad representa un objeto específico (como un cliente o un pedido concreto). Cada instancia de un tipo de entidad debe tener un único [clave de entidad](../../../../docs/framework/data/adonet/entity-key.md) dentro de un [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md).  
   

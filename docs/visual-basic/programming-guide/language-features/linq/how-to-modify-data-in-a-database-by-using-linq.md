@@ -13,11 +13,11 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
 ms.openlocfilehash: 8770a8761af4b55394d9280b21d2a6a5b71b6ed5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594223"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Procedimiento Modificar datos en una base de datos usando LINQ (Visual Basic)
 Language Integrated Query de Query (LINQ) facilitan el acceso a la información de la base de datos y modificar los valores de la base de datos.  

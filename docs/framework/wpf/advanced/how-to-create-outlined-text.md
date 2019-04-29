@@ -12,11 +12,11 @@ helpviewer_keywords:
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
 ms.openlocfilehash: 237bdc097cd2a3fbfff6dd79bce401c2d091e211
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776769"
 ---
 # <a name="how-to-create-outlined-text"></a>Procedimiento Crear texto con contorno
 En la mayoría de los casos, cuando se agregan adorno a cadenas de texto en su [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicación, que usa texto en términos de una colección de caracteres discretos, o glifos. Por ejemplo, podría crear un pincel de degradado lineal y se aplicará la <xref:System.Windows.Controls.Control.Foreground%2A> propiedad de un <xref:System.Windows.Controls.TextBox> objeto. Al mostrar o editar el cuadro de texto, el pincel de degradado lineal se aplica automáticamente al conjunto actual de caracteres de la cadena de texto.  

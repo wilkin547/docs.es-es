@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84f71266d84cc98c2a5deb4aa8639e36808315a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628033"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager (Función)
 Obtiene un puntero a una interfaz que permite que common language runtime (CLR) para administrar las identidades.  

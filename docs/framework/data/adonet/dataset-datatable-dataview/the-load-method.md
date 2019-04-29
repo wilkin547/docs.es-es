@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
 ms.openlocfilehash: 82f840ab7dd26a4888ebf024d696f2c70701eb18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607237"
 ---
 # <a name="the-load-method"></a>El método de carga
 Se puede utilizar el método <xref:System.Data.DataTable.Load%2A> para cargar una <xref:System.Data.DataTable> con filas desde un origen de datos. Se trata de un método sobrecargado que, en su forma más sencilla, acepta un único parámetro, un **DataReader**. En este formulario, simplemente se cargan los **DataTable** con filas. Opcionalmente, puede especificar el **LoadOption** parámetro para controlar cómo se agregan datos a la **DataTable**.  

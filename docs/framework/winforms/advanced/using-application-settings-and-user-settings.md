@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
 ms.openlocfilehash: ea6994e653b3a06239634f5a0fddea84a07086e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777187"
 ---
 # <a name="using-application-settings-and-user-settings"></a>Utilizar valores de configuración de aplicación y de usuario
 A partir de .NET Framework 2.0, puede crear y tener acceso a los valores que se conservan entre sesiones de ejecución de la aplicación. Estos valores se denominan *configuración*. Puede representa las preferencias del usuario o información valiosa de la aplicación debe usar. Por ejemplo, podría crear una serie de valores que almacenan las preferencias del usuario para la combinación de colores de una aplicación. O bien, podría almacenar la cadena de conexión que especifica una base de datos que usa su aplicación. La configuración permite que conservar la información que es fundamental para la aplicación fuera del código y creación de perfiles que almacenan las preferencias de usuarios individuales.  

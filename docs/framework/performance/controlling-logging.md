@@ -7,18 +7,18 @@ ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723672"
 ---
 # <a name="controlling-net-framework-logging"></a>Controlar el registro de .NET Framework
 Se puede utilizar el seguimiento de eventos para Windows (ETW) para registrar los eventos de Common Language Runtime (CLR). Es posible crear y ver los seguimientos mediante las siguientes herramientas:  
   
--   Las herramientas de línea de comandos [Logman](/windows-server/administration/windows-commands/logman) y [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1), que se incluyen con el sistema operativo Windows.  
+- Las herramientas de línea de comandos [Logman](/windows-server/administration/windows-commands/logman) y [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1), que se incluyen con el sistema operativo Windows.  
   
--   Las herramientas [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) del [Kit de herramientas de rendimiento de Windows](/windows-hardware/test/wpt/). Para obtener más información sobre Xperf, vea el [blog de rendimiento de Windows](https://go.microsoft.com/fwlink/?LinkId=179509).  
+- Las herramientas [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) del [Kit de herramientas de rendimiento de Windows](/windows-hardware/test/wpt/). Para obtener más información sobre Xperf, vea el [blog de rendimiento de Windows](https://go.microsoft.com/fwlink/?LinkId=179509).  
   
  Para capturar información de eventos de CLR, el proveedor de CLR debe estar instalado en el equipo. Para confirmar que el proveedor está instalado, escriba `logman query providers` en el símbolo del sistema. Se muestra una lista de proveedores. Esta lista debería contener una entrada para el proveedor de CLR, del modo siguiente.  
   
@@ -37,11 +37,11 @@ Provider                                 GUID
   
  Para activar el registro, el usuario debe especificar tres cosas:  
   
--   El proveedor con el que comunicarse.  
+- El proveedor con el que comunicarse.  
   
--   Número de 64 bits que representa un conjunto de palabras clave. Cada palabra clave representa un conjunto de eventos que el proveedor puede activar. El número representa un conjunto combinado de palabras clave que se pueden activar.  
+- Número de 64 bits que representa un conjunto de palabras clave. Cada palabra clave representa un conjunto de eventos que el proveedor puede activar. El número representa un conjunto combinado de palabras clave que se pueden activar.  
   
--   Un número pequeño que representa el nivel (de detalle) con que se realiza el registro. El nivel 1 es el menos detallado y el nivel 5, el más detallado. El nivel 0 es un valor predeterminado cuyo significado es específico del proveedor.  
+- Un número pequeño que representa el nivel (de detalle) con que se realiza el registro. El nivel 1 es el menos detallado y el nivel 5, el más detallado. El nivel 0 es un valor predeterminado cuyo significado es específico del proveedor.  
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>Para capturar eventos ETW de CLR mediante Logman  
   
@@ -51,15 +51,15 @@ Provider                                 GUID
   
      donde:  
   
-    -   El parámetro `-p` identifica el GUID del proveedor.  
+    - El parámetro `-p` identifica el GUID del proveedor.  
   
-    -   `0x1CCBD` especifica las categorías de eventos que se van a producir.  
+    - `0x1CCBD` especifica las categorías de eventos que se van a producir.  
   
-    -   `0x5` establece el nivel de registro (en este caso, detallado (5)).  
+    - `0x5` establece el nivel de registro (en este caso, detallado (5)).  
   
-    -   El parámetro `-ets` indica a Logman que envíe los comandos a las sesiones de seguimiento de eventos.  
+    - El parámetro `-ets` indica a Logman que envíe los comandos a las sesiones de seguimiento de eventos.  
   
-    -   El parámetro `-ct perf` especifica que la función `QueryPerformanceCounter` se utilizará para registrar la marca de tiempo para cada evento.  
+    - El parámetro `-ct perf` especifica que la función `QueryPerformanceCounter` se utilizará para registrar la marca de tiempo para cada evento.  
   
 2. Para dejar de registrar los eventos, escriba:  
   
@@ -86,7 +86,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-tracerpt"></a>Para ver los eventos ETW de CLR mediante Tracerpt  
   
--   En el símbolo del sistema, escriba:  
+- En el símbolo del sistema, escriba:  
   
      `tracerpt clrevents.etl`  
   
@@ -94,7 +94,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-xperf"></a>Para ver los eventos ETW de CLR mediante Xperf  
   
--   En el símbolo del sistema, escriba:  
+- En el símbolo del sistema, escriba:  
   
      `xperf clrevents.etl`  
   
@@ -102,7 +102,7 @@ Provider                                 GUID
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>Para convertir el archivo .etl en un archivo de valores separados por comas  
   
--   En el símbolo del sistema, escriba:  
+- En el símbolo del sistema, escriba:  
   
      `xperf -i clrevents.etl -f clrevents.csv`  
   

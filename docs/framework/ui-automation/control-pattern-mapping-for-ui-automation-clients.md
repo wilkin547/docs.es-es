@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609898"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Asignación de patrones de controles para clientes de UI Automation
 > [!NOTE]
@@ -20,11 +20,11 @@ ms.locfileid: "59101138"
   
  En la siguiente tabla se organizan los patrones de control en las siguientes categorías:  
   
--   Se admite. El control debe admitir este patrón de control.  
+- Se admite. El control debe admitir este patrón de control.  
   
--   Compatibilidad condicional. El control puede admitir este patrón de control según el estado del control.  
+- Compatibilidad condicional. El control puede admitir este patrón de control según el estado del control.  
   
--   No se admite. El control no admite este patrón de control; los controles personalizados pueden admitir este patrón de control.  
+- No se admite. El control no admite este patrón de control; los controles personalizados pueden admitir este patrón de control.  
   
 > [!NOTE]
 >  Algunos controles tienen compatibilidad condicional con varios patrones de control, en función de la funcionalidad del control. Por ejemplo, el control de elemento de menú tiene compatibilidad condicional con el patrón de control <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>o <xref:System.Windows.Automation.SelectionItemPattern> , en función de su función en el control de menú.  

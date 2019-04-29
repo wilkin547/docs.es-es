@@ -3,11 +3,11 @@ title: Almacenamiento en caché del plan de consulta [Entity SQL]
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613669"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Almacenamiento en caché del plan de consulta [Entity SQL]
 Siempre que se intenta ejecutar una consulta, la canalización de la consulta examina la memoria caché del plan de consulta para comprobar si la citada consulta ya está compilada y disponible. En ese caso, vuelve a utilizar el plan almacenado en caché en lugar de compilar uno nuevo. Si no se encuentra ninguna coincidencia en la memoria caché del plan de consulta, la consulta se compila y se almacena en memoria caché. Las consultas se identifican mediante su colección de parámetros (nombres y tipos) y texto de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Todas las comparaciones de texto distinguen mayúsculas de minúsculas.  
@@ -34,19 +34,19 @@ Siempre que se intenta ejecutar una consulta, la canalización de la consulta ex
   
  Para que se encuentre una coincidencia apropiada de las consultas en la memoria caché del plan de consulta, estas deben cumplir los requisitos siguientes:  
   
--   El texto de la consulta debe ser un patrón constante, preferentemente una cadena o un recurso constante.  
+- El texto de la consulta debe ser un patrón constante, preferentemente una cadena o un recurso constante.  
   
--   Se debe utilizar <xref:System.Data.EntityClient.EntityParameter> o <xref:System.Data.Objects.ObjectParameter> siempre que se deba pasar un valor proporcionado por el usuario.  
+- Se debe utilizar <xref:System.Data.EntityClient.EntityParameter> o <xref:System.Data.Objects.ObjectParameter> siempre que se deba pasar un valor proporcionado por el usuario.  
   
  Se deben evitar los patrones de consulta siguientes, que consumen innecesariamente espacios en la memoria caché del plan de consulta:  
   
--   Cambios en las mayúsculas o minúsculas del texto.  
+- Cambios en las mayúsculas o minúsculas del texto.  
   
--   Cambios en los espacios en blanco.  
+- Cambios en los espacios en blanco.  
   
--   Cambios en los valores literales.  
+- Cambios en los valores literales.  
   
--   Cambios en el texto incluido en los comentarios.  
+- Cambios en el texto incluido en los comentarios.  
   
 ## <a name="see-also"></a>Vea también
 

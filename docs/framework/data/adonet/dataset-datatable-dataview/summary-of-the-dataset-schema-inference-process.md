@@ -3,32 +3,32 @@ title: Resumen del proceso de inferencia del esquema de DataSet
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
 ms.openlocfilehash: 272e5762b7afd9f3ab24cbdec5f31bb120364815
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607302"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>Resumen del proceso de inferencia del esquema de DataSet
 El proceso de inferencia determina en primer lugar, a partir del documento XML, qué elementos se inferirán como tablas. A partir del XML restante, el proceso de inferencia determina las columnas para dichas tablas. En el caso de las tablas anidadas, el proceso de inferencia genera objetos <xref:System.Data.DataRelation> y <xref:System.Data.ForeignKeyConstraint> anidados.  
   
  A continuación se resumen brevemente las reglas de inferencia:  
   
--   Los elementos que tienen atributos se deducen como tablas.  
+- Los elementos que tienen atributos se deducen como tablas.  
   
--   Los elementos que tienen elementos secundarios se deducen como tablas.  
+- Los elementos que tienen elementos secundarios se deducen como tablas.  
   
--   Los elementos que se repiten se deducen como una única tabla.  
+- Los elementos que se repiten se deducen como una única tabla.  
   
--   Si el elemento de documento, o raíz, no tiene atributos y no se deduciría ningún elemento secundario como una columna, se deduce como un <xref:System.Data.DataSet>. De lo contrario, el elemento de documento se deducirá como una tabla.  
+- Si el elemento de documento, o raíz, no tiene atributos y no se deduciría ningún elemento secundario como una columna, se deduce como un <xref:System.Data.DataSet>. De lo contrario, el elemento de documento se deducirá como una tabla.  
   
--   Los atributos se deducen como columnas.  
+- Los atributos se deducen como columnas.  
   
--   Los elementos que no tienen atributos o elementos secundarios, y que no se repiten, se deducen como columnas.  
+- Los elementos que no tienen atributos o elementos secundarios, y que no se repiten, se deducen como columnas.  
   
--   Para los elementos que se deducen como tablas anidadas dentro de otros elementos que también se deducen como tablas, anidada **DataRelation** se crea entre las dos tablas. Una nueva columna de clave principal denominada **TableName_Id** se agrega a ambas tablas y usa el **DataRelation**. Un **ForeignKeyConstraint** se crea entre las dos tablas mediante el **TableName_Id** columna.  
+- Para los elementos que se deducen como tablas anidadas dentro de otros elementos que también se deducen como tablas, anidada **DataRelation** se crea entre las dos tablas. Una nueva columna de clave principal denominada **TableName_Id** se agrega a ambas tablas y usa el **DataRelation**. Un **ForeignKeyConstraint** se crea entre las dos tablas mediante el **TableName_Id** columna.  
   
--   Para los elementos que se deducen como tablas y que contienen texto pero no tener elementos secundarios, una nueva columna denominada **TableName_Text** se crea para el texto de cada uno de los elementos. Si un elemento se deduce como una tabla y tiene texto, pero también tiene elementos secundarios, se pasa por alto el texto.  
+- Para los elementos que se deducen como tablas y que contienen texto pero no tener elementos secundarios, una nueva columna denominada **TableName_Text** se crea para el texto de cada uno de los elementos. Si un elemento se deduce como una tabla y tiene texto, pero también tiene elementos secundarios, se pasa por alto el texto.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -3,11 +3,11 @@ title: Introducción a las transformaciones funcionales puras (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 82bf3348-c503-4854-a91f-71f9835779ff
 ms.openlocfilehash: 32cd588d527dbc3e995ea8629f024498c80cba2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614406"
 ---
 # <a name="introduction-to-pure-functional-transformations-visual-basic"></a>Introducción a las transformaciones funcionales puras (Visual Basic)
 Esta sección ofrece una introducción a las transformaciones funcionales, incluyendo los conceptos subyacentes y los constructores del lenguaje que las hacen posible. Realiza una comparación entre las metodologías de programación de orientación a objetos y de transformación funcional, incluyendo consejos acerca de cómo llevar a cabo la transición a ésta última. Aunque es posible utiliza las transformaciones funcionales en numerosos escenarios, aquí utilizaremos la transformación XML como un ejemplo concreto.  

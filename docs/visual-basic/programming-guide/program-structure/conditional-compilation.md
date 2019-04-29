@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
 ms.openlocfilehash: 828edf2e5491394f5ac802b5c9babfb3df359e59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758462"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Compilación condicional en Visual Basic
 En *compilación condicional*, bloques concretos de código en un programa se compilan selectivamente mientras otros se omiten.  
@@ -29,11 +29,11 @@ En *compilación condicional*, bloques concretos de código en un programa se co
 ## <a name="declaring-conditional-compilation-constants"></a>Declarar constantes de compilación condicional  
  Puede establecer las constantes de compilación condicional en uno de tres maneras:  
   
--   En el **Diseñador de proyectos**  
+- En el **Diseñador de proyectos**  
   
--   En la línea de comandos cuando se usa el compilador de línea de comandos  
+- En la línea de comandos cuando se usa el compilador de línea de comandos  
   
--   En el código  
+- En el código  
   
  Constantes de compilación condicional tienen un ámbito especial y no es accesible desde el código estándar. El ámbito de una constante de compilación condicional es dependiente de la forma en que se establece. La tabla siguiente enumera el ámbito de las constantes declaradas con cada uno de los tres métodos mencionados anteriormente.  
   

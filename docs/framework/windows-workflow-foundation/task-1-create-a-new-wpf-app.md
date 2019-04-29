@@ -3,11 +3,11 @@ title: 'Tarea 1: Crear una aplicación de Windows Presentation Foundation'
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
 ms.openlocfilehash: 63b84e4fd2c88d98fbf417ee1f55ec203d295116
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641649"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Tarea 1: Crear una aplicación de Windows Presentation Foundation
 En esta tarea, creará una aplicación vacía de Windows Presentation Foundation (WPF) mediante la plantilla de aplicaciones de WPF de Visual Studio y agregue referencias a adecuado [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ensamblados de flujo de trabajo.  
@@ -32,11 +32,11 @@ En esta tarea, creará una aplicación vacía de Windows Presentation Foundation
   
 9. En el **Agregar referencia** cuadro de diálogo, haga clic en el **.NET** , mantenga presionada la tecla CTRL, seleccione los ensamblados siguientes y, a continuación, haga clic en **Aceptar**:  
   
-    -   System.Activities  
+    - System.Activities  
   
-    -   System.Activities.Presentation  
+    - System.Activities.Presentation  
   
-    -   System.Activities.Core.Presentation  
+    - System.Activities.Core.Presentation  
   
 10. Haga clic en **Aceptar**.  
   

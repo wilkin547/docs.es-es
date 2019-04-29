@@ -1,5 +1,5 @@
 ---
-title: Campo de HttpWebRequest._HttpResponse
+title: Campo HttpWebRequest._HttpResponse
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -13,13 +13,13 @@ ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: ef746d4a2e6782fa295b7c27f32ce5dc117350a7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675499"
 ---
-# <a name="httpwebrequesthttpresponse-field"></a>HttpWebRequest. \_Campo HttpResponse
+# <a name="httpwebrequesthttpresponse-field"></a>HttpWebRequest. \_HttpResponse campo
 
 `HttpWebRequest._HttpResponse` es un <xref:System.Net.HttpWebResponse> que contiene los detalles de la respuesta HTTP de una solicitud HTTP. Puede ser `null` hasta que se reciba una respuesta HTTP.
 
@@ -30,14 +30,14 @@ internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> El `HttpWebRequest._HttpResponse` campo es interno y no están hechos para usarse directamente en el código.
+> El `HttpWebRequest._HttpResponse` campo es interna y no están hechos para usarse directamente en el código.
 > 
 > Microsoft no admite el uso de este campo en una aplicación de producción bajo ninguna circunstancia.
 
 ## <a name="requirements"></a>Requisitos
 
-**Namespace:** <xref:System.Net>
+**Espacio de nombres:** <xref:System.Net>
 
-**Ensamblado:** sistema (en System.dll)
+**Ensamblado:** Sistema (en System.dll)
 
-**Versiones de .NET framework:** disponible desde la versión 2.0.
+**Versiones de .NET framework:** Disponible desde la versión 2.0.

@@ -13,11 +13,11 @@ ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9a70b8c3509b785d70b041b449c759e7994e5984
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754237"
 ---
 # <a name="loaderlock-mda"></a>loaderLock (MDA)
 El Asistente para la depuración administrada (MDA) `loaderLock` detecta los intentos de ejecutar código administrado en un subproceso que contiene el bloqueo del cargador del sistema operativo Microsoft Windows.  Cualquier ejecución de este tipo no es válida porque puede causar interbloqueos y el uso de archivos DLL antes de que se hayan inicializado por el cargador del sistema operativo.  

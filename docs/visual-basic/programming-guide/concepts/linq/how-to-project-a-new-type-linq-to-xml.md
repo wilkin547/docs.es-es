@@ -3,11 +3,11 @@ title: Procedimiento Proyectar un nuevo tipo (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
 ms.openlocfilehash: a94180705674c8aee3ce45607f89fdbba1c873b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757136"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Procedimiento Proyectar un nuevo tipo (LINQ to XML) (Visual Basic)
 Otros ejemplos de esta sección han mostrado consultados que devuelven resultados como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> de `string` y <xref:System.Collections.Generic.IEnumerable%601> de `int`. Se trata de tipos de resultados comunes, pero no son adecuados para cada caso. En muchos casos querrá que sus consultas devuelvan un <xref:System.Collections.Generic.IEnumerable%601> de algún otro tipo.  

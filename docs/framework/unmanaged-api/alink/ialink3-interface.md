@@ -9,14 +9,14 @@ ms.assetid: a96bf3cc-75a0-49c9-bf5e-4d7ad5dab716
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16c787d865313f77417093555ea0cedb72aeb042
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753665"
 ---
 # <a name="ialink3-interface"></a>IALink3 (Interfaz)
-Proporciona un método único, `SetManifestFile`, lo que permite especificar o restablecer el archivo de manifiesto que el vinculador usará cuando se crea un ensamblado.  
+Proporciona un método único, `SetManifestFile`, que le permite especificar o restablecer el archivo de manifiesto que el vinculador usará cuando crea un ensamblado.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [SetManifestFile (método)](../../../../docs/framework/unmanaged-api/alink/setmanifestfile-method.md)  
@@ -30,4 +30,4 @@ Proporciona un método único, `SetManifestFile`, lo que permite especificar o r
  Ayuda a construir los ensamblados de .NET Framework.  
   
  [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)  
- Genera un archivo que tiene un ensamblado de manifiesto de uno o más archivos que son módulos o archivos de recursos.
+ Genera un archivo que tiene un ensamblado de manifiesto de uno o varios archivos que son módulos o archivos de recursos.

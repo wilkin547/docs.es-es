@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
 ms.openlocfilehash: 6ec98aabd92a7a0fed11482bdf6e5e8ddc045a7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700817"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Asignar nombres de algoritmo a clases de criptografía
 Hay cuatro maneras que un desarrollador puede crear un objeto de criptografía mediante el [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
   
--   Crear un objeto mediante el **nuevo** operador.  
+- Crear un objeto mediante el **nuevo** operador.  
   
--   Crear un objeto que implementa un algoritmo de criptografía concreto mediante una llamada a la **Create** método en la clase abstracta para el algoritmo.  
+- Crear un objeto que implementa un algoritmo de criptografía concreto mediante una llamada a la **Create** método en la clase abstracta para el algoritmo.  
   
--   Crear un objeto que implementa un algoritmo de criptografía concreto mediante una llamada a la <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> método.  
+- Crear un objeto que implementa un algoritmo de criptografía concreto mediante una llamada a la <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> método.  
   
--   Crear un objeto que implementa una clase de algoritmos de cifrado (por ejemplo, un cifrado por bloques simétrico) mediante una llamada a la **crear** método en la clase abstracta de ese tipo de algoritmo (como <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
+- Crear un objeto que implementa una clase de algoritmos de cifrado (por ejemplo, un cifrado por bloques simétrico) mediante una llamada a la **crear** método en la clase abstracta de ese tipo de algoritmo (como <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
   
  Por ejemplo, suponga que un programador desea calcular el hash SHA1 de un conjunto de bytes. El <xref:System.Security.Cryptography> espacio de nombres contiene dos implementaciones del algoritmo SHA1, una implementación estrictamente administrada y otra que contiene CryptoAPI. El desarrollador puede decidir crear una instancia de una implementación SHA1 concreta (como la <xref:System.Security.Cryptography.SHA1Managed>) mediante una llamada a la **nuevo** operador. Sin embargo, si no importa qué clase de common language runtime carga siempre y cuando la clase implementa el algoritmo hash SHA1, el desarrollador puede crear un objeto mediante una llamada a la <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> método. Este método llama a **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**, que debe devolver una implementación del algoritmo hash SHA1.  
   

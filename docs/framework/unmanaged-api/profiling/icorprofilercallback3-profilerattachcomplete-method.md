@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6bd3326aa5807bd7f2dd882991d211cbbf873067
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650834"
 ---
 # <a name="icorprofilercallback3profilerattachcomplete-method"></a>ICorProfilerCallback3::ProfilerAttachComplete (Método)
 Lo llama common language runtime (CLR) para indicar que el generador de perfiles puede llamar ahora a la [ICorProfilerInfo3:: EnumJITedFunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md) y [ICorProfilerInfo3:: EnumModules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md) métodos de puesta al día.  
@@ -36,9 +36,9 @@ HRESULT ProfilerAttachComplete ();
 ## <a name="remarks"></a>Comentarios  
  El `ProfilerAttachComplete` devolución de llamada se emite después el [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) se llama al método. Indica que:  
   
--   Las devoluciones de llamada que solicitó el generador de perfiles en `InitializeForAttach` se han activado.  
+- Las devoluciones de llamada que solicitó el generador de perfiles en `InitializeForAttach` se han activado.  
   
--   El generador de perfiles ya puede poner al día los identificadores asociados sin preocuparse sobre las notificaciones que faltan.  
+- El generador de perfiles ya puede poner al día los identificadores asociados sin preocuparse sobre las notificaciones que faltan.  
   
  CLR pasa por alto el valor devuelto por esta devolución de llamada.  
   

@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
 ms.openlocfilehash: 6f6f27eaecd760e565eeb98a286252981d6df0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61615030"
 ---
 # <a name="initialization-expressions"></a>Expresiones de inicialización
 Una expresión de inicialización inicializa un objeto nuevo. Se admiten la mayoría de las expresiones de inicialización, incluso las de Visual Basic 9.0 y C# 3.0. Los tipos siguientes pueden ser inicializados y devueltos por una consulta de LINQ to Entities:  
   
--   Una colección de cero o más objetos entidad con tipo o una proyección de tipos complejos definidos en el modelo conceptual.  
+- Una colección de cero o más objetos entidad con tipo o una proyección de tipos complejos definidos en el modelo conceptual.  
   
--   Tipos CLR admitidos por [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+- Tipos CLR admitidos por [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
   
--   Colecciones insertadas.  
+- Colecciones insertadas.  
   
--   Tipos anónimos.  
+- Tipos anónimos.  
   
  En el ejemplo siguiente se muestra la inicialización de tipos anónimos en sintaxis de expresiones de consulta:  
   

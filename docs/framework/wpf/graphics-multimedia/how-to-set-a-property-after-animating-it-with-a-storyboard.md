@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
 ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651108"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Procedimiento Establecer una propiedad después de animarla con un guión gráfico
 En algunos casos, es posible que parece que no se puede cambiar el valor de una propiedad después de que se ha animado.  
@@ -30,11 +30,11 @@ En algunos casos, es posible que parece que no se puede cambiar el valor de una 
   
  El código anterior no parece hacer nada: la permanece pincel amarillo, que es el valor proporcionado por el <xref:System.Windows.Media.Animation.ColorAnimation> que anima el pincel. El valor de propiedad subyacente (el valor base) realmente se cambia a azul. Sin embargo, el valor efectivo o actual, sigue siendo amarillo porque la <xref:System.Windows.Media.Animation.ColorAnimation> continúa invalidando el valor base. Si desea que el valor base vuelva a ser el valor efectivo, debe detener la animación de influir en la propiedad. Hay tres maneras de hacer esto con animaciones de guión gráfico:  
   
--   Establecer la animación <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propiedad <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+- Establecer la animación <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propiedad <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
--   Quitar el guión gráfico.  
+- Quitar el guión gráfico.  
   
--   Quitar la animación de la propiedad individual.  
+- Quitar la animación de la propiedad individual.  
   
 ## <a name="set-the-animations-fillbehavior-property-to-stop"></a>Establecer FillBehavior (propiedad) de la animación en Stop  
  Estableciendo <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> a <xref:System.Windows.Media.Animation.FillBehavior.Stop>, indica a la animación deje de afectar a su propiedad de destino una vez que llega al final de su período activo.  

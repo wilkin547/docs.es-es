@@ -3,11 +3,11 @@ title: Asignar restricciones KEYREF de un esquema XML (XSD) a restricciones de c
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607506"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Asignar restricciones KEYREF de un esquema XML (XSD) a restricciones de conjuntos de datos
 El **keyref** elemento le permite establecer vínculos entre elementos dentro de un documento. Esto es similar a una relación de clave externa en una base de datos relacional. Si especifica un esquema de la **keyref** elemento, el elemento se convierte durante el proceso de asignación de esquema para una restricción de clave externa correspondiente en las columnas de las tablas de la <xref:System.Data.DataSet>. De forma predeterminada, el **keyref** elemento también genera una relación con el **ParentTable**, **ChildTable**, **ParentColumn**y  **ChildColumn** propiedades especificadas en la relación.  
@@ -75,7 +75,7 @@ Order(OrderNumber, EmpNumber)
   
  Además, el **DataSet** define las restricciones siguientes:  
   
--   Una restricción unique en la **orden** tabla.  
+- Una restricción unique en la **orden** tabla.  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
--   Una relación entre el **orden** y **OrderDetail** tablas. El **Nested** propiedad está establecida en **False** porque los dos elementos no están anidados en el esquema.  
+- Una relación entre el **orden** y **OrderDetail** tablas. El **Nested** propiedad está establecida en **False** porque los dos elementos no están anidados en el esquema.  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
--   Una restricción foreign key en el **OrderDetail** tabla.  
+- Una restricción foreign key en el **OrderDetail** tabla.  
   
     ```  
               ConstraintName: OrderNoRef  

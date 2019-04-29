@@ -3,11 +3,11 @@ title: Transacciones de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 6081fb02-c0f2-483d-97b8-f3b7dc03011d
 ms.openlocfilehash: 17e4b712f5b6955ab777168d60d8a28e8b0ebd63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670201"
 ---
 # <a name="workflow-transactions"></a>Transacciones de flujo de trabajo
 

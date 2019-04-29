@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
 ms.openlocfilehash: 4da98f5caa0cbf4714d16f66a18c67844bf5c201
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696331"
 ---
 # <a name="image"></a>Imagen
 El <xref:System.Windows.Controls.Image> elemento se usa para mostrar imágenes de mapa de bits en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones.  

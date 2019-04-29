@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 656f2498c7dd9ba165ab6759d8ca3b26e0d7c93f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598784"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall (Función)
 Notifica al generador de perfiles que la función que se ejecuta actualmente está a punto de realizar una llamada de cola a otra función.  
@@ -48,9 +48,9 @@ void __stdcall FunctionTailcall (
   
  El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
   
--   En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
+- En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
   
--   En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
+- En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
   
  La implementación de `FunctionTailcall` no debe bloquearse porque retrasará la recolección de elementos. La implementación no debe intentar una recolección porque la pila no puede estar en un estado compatible con la colección de elementos no utilizados. Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionTailcall` devuelve.  
   

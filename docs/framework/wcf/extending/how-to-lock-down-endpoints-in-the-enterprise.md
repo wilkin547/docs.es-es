@@ -3,11 +3,11 @@ title: Procedimiento para bloquear puntos de conexión en la empresa
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
 ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766843"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Procedimiento para bloquear puntos de conexión en la empresa
 Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conforme a las directivas de seguridad de la empresa. El siguiente tema describe cómo desarrollar e instalar un validador de punto de conexión de cliente que puede usarse para validar todas las aplicaciones cliente de Windows Communication Foundation (WCF) instaladas en los equipos.  
@@ -43,15 +43,15 @@ Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conf
   
 3. Utilice los tipos de espacio de nombres de <xref:System.Configuration?displayProperty=nameWithType> para:  
   
-    1.  Agregue la extensión a la [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) sección con un nombre de tipo completo y bloquee el elemento.  
+    1. Agregue la extensión a la [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) sección con un nombre de tipo completo y bloquee el elemento.  
   
          [!code-csharp[LockdownValidation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#5)]  
   
-    2.  Agregue el elemento de comportamiento a la `EndpointBehaviors` propiedad de la [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección y bloquee el elemento. (Para instalar el validador en el servicio, el validador debe ser un <xref:System.ServiceModel.Description.IServiceBehavior> que se agregue a la propiedad `ServiceBehaviors`.) El ejemplo de código siguiente se muestra la configuración adecuada después de los pasos a. y b., con la única excepción de que no hay ningún nombre seguro.  
+    2. Agregue el elemento de comportamiento a la `EndpointBehaviors` propiedad de la [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección y bloquee el elemento. (Para instalar el validador en el servicio, el validador debe ser un <xref:System.ServiceModel.Description.IServiceBehavior> que se agregue a la propiedad `ServiceBehaviors`.) El ejemplo de código siguiente se muestra la configuración adecuada después de los pasos a. y b., con la única excepción de que no hay ningún nombre seguro.  
   
          [!code-csharp[LockdownValidation#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#6)]  
   
-    3.  Guarde el archivo machine.config. El ejemplo de código siguiente realiza todas las tareas en el paso 3 pero guarda localmente una copia del archivo machine.config modificado.  
+    3. Guarde el archivo machine.config. El ejemplo de código siguiente realiza todas las tareas en el paso 3 pero guarda localmente una copia del archivo machine.config modificado.  
   
          [!code-csharp[LockdownValidation#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#7)]  
   

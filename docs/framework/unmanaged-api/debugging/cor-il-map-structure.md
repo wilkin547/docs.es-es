@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e6d8023c7ac6d917c9df40fb18316ddc12df5ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609429"
 ---
 # <a name="corilmap-structure"></a>COR_IL_MAP (Estructura)
 Especifica los cambios en el desplazamiento relativo de una función.  
@@ -49,37 +49,37 @@ typedef struct _COR_IL_MAP {
   
  Para la ejecución paso a paso para que funcionen correctamente, deben cumplirse los siguientes requisitos:  
   
--   El mapa se debe ordenar en orden ascendente.  
+- El mapa se debe ordenar en orden ascendente.  
   
--   No se debe reordenar código MSIL instrumentado.  
+- No se debe reordenar código MSIL instrumentado.  
   
--   No se debe quitar el código de MSIL original.  
+- No se debe quitar el código de MSIL original.  
   
--   La asignación debería incluir las entradas para asignar todos los puntos de secuencia del archivo de programa (PDB) de la base de datos.  
+- La asignación debería incluir las entradas para asignar todos los puntos de secuencia del archivo de programa (PDB) de la base de datos.  
   
  El mapa no interpola las entradas que faltan. El ejemplo siguiente muestra un mapa y sus resultados.  
   
  Mapa:  
   
--   desplazamiento anterior 0, 0 nuevo desplazamiento  
+- desplazamiento anterior 0, 0 nuevo desplazamiento  
   
--   desplazamiento anterior 5, 10 nuevo desplazamiento  
+- desplazamiento anterior 5, 10 nuevo desplazamiento  
   
--   desplazamiento anterior 9, 20 nuevo desplazamiento  
+- desplazamiento anterior 9, 20 nuevo desplazamiento  
   
  Resultados:  
   
--   Un desplazamiento anterior de 0, 1, 2, 3 o 4 se asignará a un nuevo desplazamiento de 0.  
+- Un desplazamiento anterior de 0, 1, 2, 3 o 4 se asignará a un nuevo desplazamiento de 0.  
   
--   Un desplazamiento anterior de 5, 6, 7 u 8 se asignará al nuevo desplazamiento de 10.  
+- Un desplazamiento anterior de 5, 6, 7 u 8 se asignará al nuevo desplazamiento de 10.  
   
--   Un desplazamiento anterior de 9 o versiones posteriores se asignará al nuevo desplazamiento de 20.  
+- Un desplazamiento anterior de 9 o versiones posteriores se asignará al nuevo desplazamiento de 20.  
   
--   Se asignará un nuevo desplazamiento de 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 al anterior desplazamiento de 0.  
+- Se asignará un nuevo desplazamiento de 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 al anterior desplazamiento de 0.  
   
--   Un nuevo desplazamiento de 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 se asignará al anterior desplazamiento 5.  
+- Un nuevo desplazamiento de 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 se asignará al anterior desplazamiento 5.  
   
--   Se asignará un nuevo desplazamiento de 20 o superior al desplazamiento anterior de 9.  
+- Se asignará un nuevo desplazamiento de 20 o superior al desplazamiento anterior de 9.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

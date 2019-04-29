@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
 ms.openlocfilehash: a7bdfc244b0ff1c2ed625235df7e74ced026c542
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773079"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Procedimiento para habilitar la detección de repetición de mensajes
 Un ataque de reproducción se produce cuando un atacante copia una secuencia de mensajes entre dos partes y reproduce la secuencia a una o más partes. A menos que se mitigue, los equipos sujetos al ataque procesarán el flujo como mensajes legítimos, generando un intervalo de consecuencias erróneas, como las órdenes redundantes de un elemento.  
@@ -30,13 +30,13 @@ Un ataque de reproducción se produce cuando un atacante copia una secuencia de 
   
 2. Utilizar la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> para devolver una referencia a la clase <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> y establecer cualquiera de las propiedades siguientes, según corresponda:  
   
-    1.  `DetectReplay`. Valor Boolean. Esto rige si el cliente debería detectar las reproducciones del servidor. De manera predeterminada, es `true`.  
+    1. `DetectReplay`. Valor Boolean. Esto rige si el cliente debería detectar las reproducciones del servidor. De manera predeterminada, es `true`.  
   
-    2.  `MaxClockSkew`. Valor <xref:System.TimeSpan>. Rige qué sesgo temporal puede tolerar el mecanismo de reproducción entre el cliente y el servidor. El mecanismo de seguridad examina la marca de tiempo enviada y determina si se fue enviada demasiado lejos en el pasado. El valor predeterminado es 5 minutos.  
+    2. `MaxClockSkew`. Valor <xref:System.TimeSpan>. Rige qué sesgo temporal puede tolerar el mecanismo de reproducción entre el cliente y el servidor. El mecanismo de seguridad examina la marca de tiempo enviada y determina si se fue enviada demasiado lejos en el pasado. El valor predeterminado es 5 minutos.  
   
-    3.  `ReplayWindow`. Valor `TimeSpan`. Esto rige cuánto tiempo un mensaje puede vivir en la red después de que el servidor lo envíe (a través de los intermediarios) antes de alcanzar el cliente. El cliente realiza el seguimiento de las firmas de los mensajes enviados dentro del `ReplayWindow` último para los propósitos de detección de reproducción.  
+    3. `ReplayWindow`. Valor `TimeSpan`. Esto rige cuánto tiempo un mensaje puede vivir en la red después de que el servidor lo envíe (a través de los intermediarios) antes de alcanzar el cliente. El cliente realiza el seguimiento de las firmas de los mensajes enviados dentro del `ReplayWindow` último para los propósitos de detección de reproducción.  
   
-    4.  `ReplayCacheSize`. Valor de entero. El cliente almacena las firmas del mensaje en una memoria caché. Este valor especifica cuántas firmas que puede almacenar la memoria caché. Si el número de mensajes enviado dentro de la última ventana de reproducción alcanza el límite de la memoria caché, se rechazan los nuevos mensajes hasta que las firmas almacenadas en memoria caché más antiguas alcancen el límite horario. El valor predeterminado es 500000.  
+    4. `ReplayCacheSize`. Valor de entero. El cliente almacena las firmas del mensaje en una memoria caché. Este valor especifica cuántas firmas que puede almacenar la memoria caché. Si el número de mensajes enviado dentro de la última ventana de reproducción alcanza el límite de la memoria caché, se rechazan los nuevos mensajes hasta que las firmas almacenadas en memoria caché más antiguas alcancen el límite horario. El valor predeterminado es 500000.  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>Para controlar la detección de reproducción en el servicio utilizando código  
   
@@ -88,19 +88,19 @@ Un ataque de reproducción se produce cuando un atacante copia una secuencia de 
   
  Si no utiliza las sesiones de conversación seguras, la detección de reproducción no garantiza la detección de reproducciones en escenarios de granja de servidores y cuando se recicla el proceso. Esto se aplica a los enlaces siguientes proporcionados por el sistema:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>.  
+- <xref:System.ServiceModel.BasicHttpBinding>.  
   
--   <xref:System.ServiceModel.WSHttpBinding> con la propiedad <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> establecida en `false`.  
+- <xref:System.ServiceModel.WSHttpBinding> con la propiedad <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> establecida en `false`.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
--   Los espacios de nombres siguientes son necesarios para compilar el código:  
+- Los espacios de nombres siguientes son necesarios para compilar el código:  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
 ## <a name="see-also"></a>Vea también
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
 ms.openlocfilehash: c948c20788ae4e16e6b626a3f168cf9dcb94d718
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608884"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Enlaces de Windows Communication Foundation
 Los enlaces especifican cómo un punto de conexión de servicio de Windows Communication Foundation (WCF) se comunica con otros puntos de conexión. En lo más básico, un enlace debe especificar el transporte (por ejemplo, HTTP o TCP) a utilizar. También puede establecer otras características, como seguridad y soporte de transacción, a través de los enlaces.  

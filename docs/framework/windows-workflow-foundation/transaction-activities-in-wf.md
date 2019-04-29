@@ -3,11 +3,11 @@ title: Actividades de transacción en WF
 ms.date: 03/30/2017
 ms.assetid: fb33378e-82c6-4ea0-870f-76dc77e7f0fe
 ms.openlocfilehash: 7ffd64abdc6edf45174d4b756833d65ec0ef747c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670266"
 ---
 # <a name="transaction-activities-in-wf"></a>Actividades de transacción en WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tiene varias actividades proporcionadas por el sistema para modelar transacciones, la compensación y la cancelación. Estos modelos de programación permiten que el flujo de trabajo continúe avanzando en caso de cambios en la lógica de negocios y el control de errores. Para obtener más información sobre las transacciones, compensación y cancelación, consulte [transacciones](workflow-transactions.md), [compensación](compensation.md), y [cancelación](modeling-cancellation-behavior-in-workflows.md).  

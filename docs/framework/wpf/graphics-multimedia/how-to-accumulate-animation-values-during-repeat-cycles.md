@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
 ms.openlocfilehash: 4b739883322751e2df86e13bfd07249abdb10a08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762181"
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Procedimiento Acumular valores de animaciones durante la repetición de ciclos
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propiedad que se va a acumular valores de animaciones entre ciclos que se repiten.  
@@ -22,13 +22,13 @@ En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.Do
   
  El ejemplo siguiente muestra este comportamiento al animar el ancho de cuatro rectángulos. El ejemplo:  
   
--   Anima el primer rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimation> y establece el <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propiedad `true`.  
+- Anima el primer rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimation> y establece el <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propiedad `true`.  
   
--   Anima el segundo rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimation> y establece el <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propiedad en el valor predeterminado de `false`.  
+- Anima el segundo rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimation> y establece el <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propiedad en el valor predeterminado de `false`.  
   
--   Anima el tercer rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> y establece el <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> propiedad `true`.  
+- Anima el tercer rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> y establece el <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> propiedad `true`.  
   
--   Anima el último rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> y establece el <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> propiedad `false`.  
+- Anima el último rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> y establece el <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> propiedad `false`.  
   
  [!code-xaml[timingbehaviors_snip#IsCumulativeWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsCumulativeExample.xaml#iscumulativewholepage)]  
   
