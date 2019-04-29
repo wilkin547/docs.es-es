@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f256195a4cd5b18f568e05156db867aa5dba9161
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627968"
 ---
-# <a name="etasktype-enumeration"></a><span data-ttu-id="3ba3b-102">ETaskType (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="3ba3b-102">ETaskType Enumeration</span></span>
-<span data-ttu-id="3ba3b-103">Contiene valores que indican el tipo de tarea que se representa mediante un [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) o un [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interfaz.</span><span class="sxs-lookup"><span data-stu-id="3ba3b-103">Contains values that indicate the type of task that is represented by either an [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) or an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.</span></span>  
+# <a name="etasktype-enumeration"></a><span data-ttu-id="0cfdd-102">ETaskType (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="0cfdd-102">ETaskType Enumeration</span></span>
+<span data-ttu-id="0cfdd-103">Contiene valores que indican el tipo de tarea que se representa mediante un [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) o un [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interfaz.</span><span class="sxs-lookup"><span data-stu-id="0cfdd-103">Contains values that indicate the type of task that is represented by either an [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) or an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3ba3b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="3ba3b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0cfdd-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0cfdd-104">Syntax</span></span>  
   
 ```  
 typedef enum ETaskType {  
@@ -44,31 +44,31 @@ typedef enum ETaskType {
 } ETaskType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="3ba3b-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="3ba3b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0cfdd-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="0cfdd-105">Members</span></span>  
   
-|<span data-ttu-id="3ba3b-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="3ba3b-106">Member</span></span>|<span data-ttu-id="3ba3b-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="3ba3b-107">Description</span></span>|  
+|<span data-ttu-id="0cfdd-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="0cfdd-106">Member</span></span>|<span data-ttu-id="0cfdd-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="0cfdd-107">Description</span></span>|  
 |------------|-----------------|  
-|`TT_ADUNLOAD`|<span data-ttu-id="3ba3b-108">La interfaz representa una tarea de descarga del dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="3ba3b-108">The interface represents an application domain unloading task.</span></span>|  
-|`TT_DEBUGGERHELPER`|<span data-ttu-id="3ba3b-109">La interfaz representa una tarea de la aplicación auxiliar de depurador.</span><span class="sxs-lookup"><span data-stu-id="3ba3b-109">The interface represents a debugger helper task.</span></span>|  
-|`TT_FINALIZER`|<span data-ttu-id="3ba3b-110">La interfaz representa una tarea de finalizador.</span><span class="sxs-lookup"><span data-stu-id="3ba3b-110">The interface represents a finalizer task.</span></span>|  
-|`TT_GC`|<span data-ttu-id="3ba3b-111">La interfaz representa una tarea de recopilación de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="3ba3b-111">The interface represents a garbage collection task.</span></span>|  
-|`TT_THREADPOOL_GATE`|<span data-ttu-id="3ba3b-112">La interfaz representa una tarea de subproceso de la puerta.</span><span class="sxs-lookup"><span data-stu-id="3ba3b-112">The interface represents a gate thread task.</span></span>|  
-|`TT_THREADPOOL_IOCOMPLETION`|<span data-ttu-id="3ba3b-113">La interfaz representa una tarea de subproceso de E/S o una tarea de subproceso de puerto de finalización.</span><span class="sxs-lookup"><span data-stu-id="3ba3b-113">The interface represents an I/O thread task or a completion port thread task.</span></span>|  
-|`TT_THREADPOOL_TIMER`|<span data-ttu-id="3ba3b-114">La interfaz representa una tarea de subproceso de temporizador.</span><span class="sxs-lookup"><span data-stu-id="3ba3b-114">The interface represents a timer thread task.</span></span>|  
-|`TT_THREADPOOL_WAIT`|<span data-ttu-id="3ba3b-115">La interfaz representa una tarea de espera de subproceso.</span><span class="sxs-lookup"><span data-stu-id="3ba3b-115">The interface represents a wait thread task.</span></span>|  
-|`TT_THREADPOOL_WORKER`|<span data-ttu-id="3ba3b-116">La interfaz representa una tarea de subproceso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="3ba3b-116">The interface represents a worker thread task.</span></span>|  
-|`TT_UNKNOWN`|<span data-ttu-id="3ba3b-117">La tarea es desconocida.</span><span class="sxs-lookup"><span data-stu-id="3ba3b-117">The task is unknown.</span></span>|  
-|`TT_USER`|<span data-ttu-id="3ba3b-118">La interfaz representa una tarea de usuario.</span><span class="sxs-lookup"><span data-stu-id="3ba3b-118">The interface represents a user task.</span></span>|  
+|`TT_ADUNLOAD`|<span data-ttu-id="0cfdd-108">La interfaz representa una tarea de descarga del dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="0cfdd-108">The interface represents an application domain unloading task.</span></span>|  
+|`TT_DEBUGGERHELPER`|<span data-ttu-id="0cfdd-109">La interfaz representa una tarea de la aplicación auxiliar de depurador.</span><span class="sxs-lookup"><span data-stu-id="0cfdd-109">The interface represents a debugger helper task.</span></span>|  
+|`TT_FINALIZER`|<span data-ttu-id="0cfdd-110">La interfaz representa una tarea de finalizador.</span><span class="sxs-lookup"><span data-stu-id="0cfdd-110">The interface represents a finalizer task.</span></span>|  
+|`TT_GC`|<span data-ttu-id="0cfdd-111">La interfaz representa una tarea de recopilación de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="0cfdd-111">The interface represents a garbage collection task.</span></span>|  
+|`TT_THREADPOOL_GATE`|<span data-ttu-id="0cfdd-112">La interfaz representa una tarea de subproceso de la puerta.</span><span class="sxs-lookup"><span data-stu-id="0cfdd-112">The interface represents a gate thread task.</span></span>|  
+|`TT_THREADPOOL_IOCOMPLETION`|<span data-ttu-id="0cfdd-113">La interfaz representa una tarea de subproceso de E/S o una tarea de subproceso de puerto de finalización.</span><span class="sxs-lookup"><span data-stu-id="0cfdd-113">The interface represents an I/O thread task or a completion port thread task.</span></span>|  
+|`TT_THREADPOOL_TIMER`|<span data-ttu-id="0cfdd-114">La interfaz representa una tarea de subproceso de temporizador.</span><span class="sxs-lookup"><span data-stu-id="0cfdd-114">The interface represents a timer thread task.</span></span>|  
+|`TT_THREADPOOL_WAIT`|<span data-ttu-id="0cfdd-115">La interfaz representa una tarea de espera de subproceso.</span><span class="sxs-lookup"><span data-stu-id="0cfdd-115">The interface represents a wait thread task.</span></span>|  
+|`TT_THREADPOOL_WORKER`|<span data-ttu-id="0cfdd-116">La interfaz representa una tarea de subproceso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="0cfdd-116">The interface represents a worker thread task.</span></span>|  
+|`TT_UNKNOWN`|<span data-ttu-id="0cfdd-117">La tarea es desconocida.</span><span class="sxs-lookup"><span data-stu-id="0cfdd-117">The task is unknown.</span></span>|  
+|`TT_USER`|<span data-ttu-id="0cfdd-118">La interfaz representa una tarea de usuario.</span><span class="sxs-lookup"><span data-stu-id="0cfdd-118">The interface represents a user task.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3ba3b-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3ba3b-119">Requirements</span></span>  
- <span data-ttu-id="3ba3b-120">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3ba3b-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0cfdd-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0cfdd-119">Requirements</span></span>  
+ <span data-ttu-id="0cfdd-120">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0cfdd-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3ba3b-121">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3ba3b-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="0cfdd-121">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0cfdd-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3ba3b-122">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3ba3b-122">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="0cfdd-122">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0cfdd-122">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3ba3b-123">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ba3b-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0cfdd-123">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0cfdd-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ba3b-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="3ba3b-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0cfdd-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="0cfdd-124">See also</span></span>
 
-- [<span data-ttu-id="3ba3b-125">Enumeraciones para hosts</span><span class="sxs-lookup"><span data-stu-id="3ba3b-125">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="0cfdd-125">Enumeraciones para hosts</span><span class="sxs-lookup"><span data-stu-id="0cfdd-125">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

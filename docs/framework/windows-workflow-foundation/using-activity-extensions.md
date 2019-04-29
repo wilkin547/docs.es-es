@@ -3,26 +3,26 @@ title: Utilizar extensiones de actividad
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
 ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669516"
 ---
-# <a name="using-activity-extensions"></a><span data-ttu-id="ec149-102">Utilizar extensiones de actividad</span><span class="sxs-lookup"><span data-stu-id="ec149-102">Using Activity Extensions</span></span>
-<span data-ttu-id="ec149-103">Las actividades pueden interactuar con extensiones de aplicación de flujo de trabajo que permiten al host proporcionar función adicional que no se modela explícitamente en el flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ec149-103">Activities can interact with workflow application extensions that allow the host to provide additional functionality that is not explicitly modeled in the workflow.</span></span>  <span data-ttu-id="ec149-104">En este tema se describe cómo crear y utilizar una extensión para contar el número de veces que la actividad se ejecuta.</span><span class="sxs-lookup"><span data-stu-id="ec149-104">This topic describes how to create and use an extension to count the number of times the activity executes.</span></span>
+# <a name="using-activity-extensions"></a><span data-ttu-id="8295b-102">Utilizar extensiones de actividad</span><span class="sxs-lookup"><span data-stu-id="8295b-102">Using Activity Extensions</span></span>
+<span data-ttu-id="8295b-103">Las actividades pueden interactuar con extensiones de aplicación de flujo de trabajo que permiten al host proporcionar función adicional que no se modela explícitamente en el flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="8295b-103">Activities can interact with workflow application extensions that allow the host to provide additional functionality that is not explicitly modeled in the workflow.</span></span>  <span data-ttu-id="8295b-104">En este tema se describe cómo crear y utilizar una extensión para contar el número de veces que la actividad se ejecuta.</span><span class="sxs-lookup"><span data-stu-id="8295b-104">This topic describes how to create and use an extension to count the number of times the activity executes.</span></span>
 
-### <a name="to-use-an-activity-extension-to-count-executions"></a><span data-ttu-id="ec149-105">Utilizar una extensión de actividad para contar las ejecuciones</span><span class="sxs-lookup"><span data-stu-id="ec149-105">To use an activity extension to count executions</span></span>
+### <a name="to-use-an-activity-extension-to-count-executions"></a><span data-ttu-id="8295b-105">Utilizar una extensión de actividad para contar las ejecuciones</span><span class="sxs-lookup"><span data-stu-id="8295b-105">To use an activity extension to count executions</span></span>
 
-1. <span data-ttu-id="ec149-106">Abra Visual Studio 2010.</span><span class="sxs-lookup"><span data-stu-id="ec149-106">Open Visual Studio 2010.</span></span> <span data-ttu-id="ec149-107">Seleccione **nueva**, **proyecto**.</span><span class="sxs-lookup"><span data-stu-id="ec149-107">Select **New**, **Project**.</span></span> <span data-ttu-id="ec149-108">En el **Visual C#** nodo, seleccione **flujo de trabajo**.</span><span class="sxs-lookup"><span data-stu-id="ec149-108">Under the **Visual C#** node, select **Workflow**.</span></span>  <span data-ttu-id="ec149-109">Seleccione **aplicación de consola de flujos de trabajo** desde la lista de plantillas.</span><span class="sxs-lookup"><span data-stu-id="ec149-109">Select **Workflow Console Application** from the list of templates.</span></span> <span data-ttu-id="ec149-110">Dé un nombre al proyecto `Extensions`.</span><span class="sxs-lookup"><span data-stu-id="ec149-110">Name the project `Extensions`.</span></span> <span data-ttu-id="ec149-111">Haga clic en **Aceptar** para crear el proyecto.</span><span class="sxs-lookup"><span data-stu-id="ec149-111">Click **OK** to create the project.</span></span>
+1. <span data-ttu-id="8295b-106">Abra Visual Studio 2010.</span><span class="sxs-lookup"><span data-stu-id="8295b-106">Open Visual Studio 2010.</span></span> <span data-ttu-id="8295b-107">Seleccione **nueva**, **proyecto**.</span><span class="sxs-lookup"><span data-stu-id="8295b-107">Select **New**, **Project**.</span></span> <span data-ttu-id="8295b-108">En el **Visual C#** nodo, seleccione **flujo de trabajo**.</span><span class="sxs-lookup"><span data-stu-id="8295b-108">Under the **Visual C#** node, select **Workflow**.</span></span>  <span data-ttu-id="8295b-109">Seleccione **aplicación de consola de flujos de trabajo** desde la lista de plantillas.</span><span class="sxs-lookup"><span data-stu-id="8295b-109">Select **Workflow Console Application** from the list of templates.</span></span> <span data-ttu-id="8295b-110">Dé un nombre al proyecto `Extensions`.</span><span class="sxs-lookup"><span data-stu-id="8295b-110">Name the project `Extensions`.</span></span> <span data-ttu-id="8295b-111">Haga clic en **Aceptar** para crear el proyecto.</span><span class="sxs-lookup"><span data-stu-id="8295b-111">Click **OK** to create the project.</span></span>
 
-2. <span data-ttu-id="ec149-112">Agregar un `using` instrucción en el archivo Program.cs para el **System.Collections.Generic** espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="ec149-112">Add a `using` statement in the Program.cs file for the **System.Collections.Generic** namespace.</span></span>
+2. <span data-ttu-id="8295b-112">Agregar un `using` instrucción en el archivo Program.cs para el **System.Collections.Generic** espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="8295b-112">Add a `using` statement in the Program.cs file for the **System.Collections.Generic** namespace.</span></span>
 
     ```
     using System.Collections.Generic;
     ```
 
-3. <span data-ttu-id="ec149-113">En el archivo Program.cs, cree una nueva clase denominada **ExecutionCountExtension**.</span><span class="sxs-lookup"><span data-stu-id="ec149-113">In the Program.cs file, create a new class named **ExecutionCountExtension**.</span></span> <span data-ttu-id="ec149-114">El código siguiente crea una extensión de flujo de trabajo que realiza el seguimiento de los identificadores de instancia cuando su **registrar** se llama al método.</span><span class="sxs-lookup"><span data-stu-id="ec149-114">The following code creates a workflow extension that tracks instance IDs when its **Register** method is called.</span></span>
+3. <span data-ttu-id="8295b-113">En el archivo Program.cs, cree una nueva clase denominada **ExecutionCountExtension**.</span><span class="sxs-lookup"><span data-stu-id="8295b-113">In the Program.cs file, create a new class named **ExecutionCountExtension**.</span></span> <span data-ttu-id="8295b-114">El código siguiente crea una extensión de flujo de trabajo que realiza el seguimiento de los identificadores de instancia cuando su **registrar** se llama al método.</span><span class="sxs-lookup"><span data-stu-id="8295b-114">The following code creates a workflow extension that tracks instance IDs when its **Register** method is called.</span></span>
 
     ```
     // This extension collects a list of workflow Ids
@@ -56,7 +56,7 @@ ms.locfileid: "59768967"
     }
     ```
 
-4. <span data-ttu-id="ec149-115">Crear una actividad que consume el **ExecutionCountExtension**.</span><span class="sxs-lookup"><span data-stu-id="ec149-115">Create an activity that consumes the **ExecutionCountExtension**.</span></span> <span data-ttu-id="ec149-116">El código siguiente define una actividad que recupera el **ExecutionCountExtension** objeto desde el tiempo de ejecución y llama a su **registrar** método cuando se ejecuta la actividad.</span><span class="sxs-lookup"><span data-stu-id="ec149-116">The following code defines an activity that retrieves the **ExecutionCountExtension** object from the runtime and calls its **Register** method when the activity executes.</span></span>
+4. <span data-ttu-id="8295b-115">Crear una actividad que consume el **ExecutionCountExtension**.</span><span class="sxs-lookup"><span data-stu-id="8295b-115">Create an activity that consumes the **ExecutionCountExtension**.</span></span> <span data-ttu-id="8295b-116">El código siguiente define una actividad que recupera el **ExecutionCountExtension** objeto desde el tiempo de ejecución y llama a su **registrar** método cuando se ejecuta la actividad.</span><span class="sxs-lookup"><span data-stu-id="8295b-116">The following code defines an activity that retrieves the **ExecutionCountExtension** object from the runtime and calls its **Register** method when the activity executes.</span></span>
 
     ```
     // Activity that consumes an extension provided by the host. If the extension is available
@@ -75,7 +75,7 @@ ms.locfileid: "59768967"
     }
     ```
 
-5. <span data-ttu-id="ec149-117">Implemente la actividad en el **Main** método del archivo program.cs.</span><span class="sxs-lookup"><span data-stu-id="ec149-117">Implement the activity in the **Main** method of the program.cs file.</span></span> <span data-ttu-id="ec149-118">El siguiente código contiene los métodos para generar dos flujos de trabajo diferentes, ejecuta cada flujo de trabajo varias veces y muestra los datos resultantes que se contienen en la extensión.</span><span class="sxs-lookup"><span data-stu-id="ec149-118">The following code contains methods to generate two different workflows, execute each workflow several times, and display the resulting data that is contained in the extension.</span></span>
+5. <span data-ttu-id="8295b-117">Implemente la actividad en el **Main** método del archivo program.cs.</span><span class="sxs-lookup"><span data-stu-id="8295b-117">Implement the activity in the **Main** method of the program.cs file.</span></span> <span data-ttu-id="8295b-118">El siguiente código contiene los métodos para generar dos flujos de trabajo diferentes, ejecuta cada flujo de trabajo varias veces y muestra los datos resultantes que se contienen en la extensión.</span><span class="sxs-lookup"><span data-stu-id="8295b-118">The following code contains methods to generate two different workflows, execute each workflow several times, and display the resulting data that is contained in the extension.</span></span>
 
     ```
     class Program
