@@ -11,11 +11,11 @@ helpviewer_keywords:
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
 ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760758"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inicializadores de objeto: Tipos con nombre y anónimos (Visual Basic)
 Los inicializadores de objeto permiten especificar las propiedades de un objeto complejo mediante el uso de una sola expresión. Se puede usar para crear instancias de tipos con nombre y de tipos anónimos.  
@@ -63,11 +63,11 @@ Los inicializadores de objeto permiten especificar las propiedades de un objeto 
   
 ### <a name="remarks-about-named-types"></a>Comentarios acerca de los tipos con nombre  
   
--   Un miembro de clase no se puede inicializar más de una vez en la lista de inicializadores de objeto. La declaración de `cust7` produce un error.  
+- Un miembro de clase no se puede inicializar más de una vez en la lista de inicializadores de objeto. La declaración de `cust7` produce un error.  
   
      [!code-vb[VbVbalrObjectInit#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#9)]  
   
--   Un miembro puede utilizarse para inicializar u otro campo. Si se tiene acceso a un miembro antes de que se ha inicializado, como se muestra en la siguiente declaración de `cust8`, se usará el valor predeterminado. Recuerde que cuando se procesa una declaración que usa a un inicializador de objeto, lo primero que ocurre es que se invoca al constructor apropiado. Después de eso, se inicializan los campos individuales de la lista de inicializadores. En los ejemplos siguientes, el valor predeterminado para `Name` se asigna para `cust8`, y se asigna un valor inicializado en `cust9`.  
+- Un miembro puede utilizarse para inicializar u otro campo. Si se tiene acceso a un miembro antes de que se ha inicializado, como se muestra en la siguiente declaración de `cust8`, se usará el valor predeterminado. Recuerde que cuando se procesa una declaración que usa a un inicializador de objeto, lo primero que ocurre es que se invoca al constructor apropiado. Después de eso, se inicializan los campos individuales de la lista de inicializadores. En los ejemplos siguientes, el valor predeterminado para `Name` se asigna para `cust8`, y se asigna un valor inicializado en `cust9`.  
   
      [!code-vb[VbVbalrObjectInit#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#10)]  
   
@@ -75,17 +75,17 @@ Los inicializadores de objeto permiten especificar las propiedades de un objeto 
   
      [!code-vb[VbVbalrObjectInit#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#11)]  
   
--   Se pueden anidar inicializadores de objeto. En el ejemplo siguiente, `AddressClass` es una clase que tiene dos propiedades, `City` y `State`y el `Customer` clase tiene un `Address` propiedad que es una instancia de `AddressClass`.  
+- Se pueden anidar inicializadores de objeto. En el ejemplo siguiente, `AddressClass` es una clase que tiene dos propiedades, `City` y `State`y el `Customer` clase tiene un `Address` propiedad que es una instancia de `AddressClass`.  
   
      [!code-vb[VbVbalrObjectInit#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#12)]  
   
--   La lista de inicialización no puede estar vacía.  
+- La lista de inicialización no puede estar vacía.  
   
--   La instancia que se está inicializarla no puede ser de tipo Object.  
+- La instancia que se está inicializarla no puede ser de tipo Object.  
   
--   No pueden ser miembros de clase que se inicializan los miembros compartidos, miembros de solo lectura, constantes o llamadas a métodos.  
+- No pueden ser miembros de clase que se inicializan los miembros compartidos, miembros de solo lectura, constantes o llamadas a métodos.  
   
--   Los miembros de clase que se está inicializando no indexados o calificados. Los ejemplos siguientes provocan errores del compilador:  
+- Los miembros de clase que se está inicializando no indexados o calificados. Los ejemplos siguientes provocan errores del compilador:  
   
      `'' Not valid.`  
   
@@ -109,19 +109,19 @@ Los inicializadores de objeto permiten especificar las propiedades de un objeto 
   
 ### <a name="remarks-about-anonymous-types"></a>Comentarios sobre los tipos anónimos  
   
--   Normalmente, todos o la mayoría de las propiedades de una declaración de tipos anónimos serán propiedades de clave, que se indican escribiendo la palabra clave `Key` delante del nombre de propiedad.  
+- Normalmente, todos o la mayoría de las propiedades de una declaración de tipos anónimos serán propiedades de clave, que se indican escribiendo la palabra clave `Key` delante del nombre de propiedad.  
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
      Para obtener más información acerca de las propiedades de clave, consulte [clave](../../../../visual-basic/language-reference/modifiers/key.md).  
   
--   Llamada como tipos, las listas de inicializadores para las definiciones de tipo anónimo deben declarar al menos una propiedad.  
+- Llamada como tipos, las listas de inicializadores para las definiciones de tipo anónimo deben declarar al menos una propiedad.  
   
      [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
--   Cuando se declara una instancia de un tipo anónimo, el compilador genera una definición de tipo anónimo coincidente. Los nombres y tipos de datos de las propiedades se toman de la declaración de instancia y se incluyen el compilador en la definición. Las propiedades no son denominadas y definidas con antelación, como se haría para un tipo con nombre. Se deducen sus tipos. No se puede especificar los tipos de datos de las propiedades mediante el uso de un `As` cláusula.  
+- Cuando se declara una instancia de un tipo anónimo, el compilador genera una definición de tipo anónimo coincidente. Los nombres y tipos de datos de las propiedades se toman de la declaración de instancia y se incluyen el compilador en la definición. Las propiedades no son denominadas y definidas con antelación, como se haría para un tipo con nombre. Se deducen sus tipos. No se puede especificar los tipos de datos de las propiedades mediante el uso de un `As` cláusula.  
   
--   Tipos anónimos también pueden establecer los nombres y valores de sus propiedades de otras maneras. Por ejemplo, una propiedad de tipo anónimo puede tomar el nombre y el valor de una variable, o el nombre y valor de una propiedad de otro objeto.  
+- Tipos anónimos también pueden establecer los nombres y valores de sus propiedades de otras maneras. Por ejemplo, una propiedad de tipo anónimo puede tomar el nombre y el valor de una variable, o el nombre y valor de una propiedad de otro objeto.  
   
      [!code-vb[VbVbalrObjectInit#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#15)]  
   

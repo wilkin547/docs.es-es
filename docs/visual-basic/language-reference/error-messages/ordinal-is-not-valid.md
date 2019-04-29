@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
 ms.openlocfilehash: 28f78161e14604c1f59872801855ccc918faec58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772494"
 ---
 # <a name="ordinal-is-not-valid"></a>El ordinal no es válido
 La llamada a una biblioteca de vínculos dinámicos (DLL) indica que use un número en lugar de un nombre de procedimiento mediante el `#num` sintaxis. Este error tiene las siguientes causas posibles:  
   
--   Un intento para convertir el `#num` expresión a un error de ordinal.  
+- Un intento para convertir el `#num` expresión a un error de ordinal.  
   
--   El `#num` especificado no se especifica ninguna función en el archivo DLL.  
+- El `#num` especificado no se especifica ninguna función en el archivo DLL.  
   
--   Una biblioteca de tipos tiene una declaración no válida, lo que resulta en un uso interno de un número ordinal no válido.  
+- Una biblioteca de tipos tiene una declaración no válida, lo que resulta en un uso interno de un número ordinal no válido.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   

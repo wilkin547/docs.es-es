@@ -3,11 +3,11 @@ title: Procedimiento para implementar una aplicación cliente que usa el proxy d
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
 ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784272"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Procedimiento para implementar una aplicación cliente que usa el proxy de detección para buscar un servicio
 Este tema es el tercero de tres temas y describe cómo implementar un proxy de detección. En el tema anterior, [Cómo: Implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), implementa un servicio WCF que se registra con el proxy de detección. En este tema se creará a un cliente WCF que usa al proxy de detección para encontrar el servicio WCF.  
@@ -18,9 +18,9 @@ Este tema es el tercero de tres temas y describe cómo implementar un proxy de d
   
 2. Agregue referencias a los siguientes ensamblados:  
   
-    1.  System.ServiceModel  
+    1. System.ServiceModel  
   
-    2.  System.ServiceModel.Discovery  
+    2. System.ServiceModel.Discovery  
   
 3. Agregue al proyecto GeneratedClient.cs, que se encuentra en la parte inferior de este tema.  
   

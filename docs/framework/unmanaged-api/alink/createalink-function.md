@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b494b8b776f4cb0eb534233c5a03ab2d34a698ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790047"
 ---
 # <a name="createalink-function"></a>CreateALink (Función)
 Crea una instancia de la herramienta Assembly Linker y establece un puntero a la interfaz especificada.  

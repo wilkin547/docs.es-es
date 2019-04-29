@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
 ms.openlocfilehash: 5a0f6e0fab5d0f2fe8574e348fc6b8ae726eeb99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757409"
 ---
 # <a name="parameter-design"></a>Diseño de parámetros
 Esta sección proporciona instrucciones generales sobre el diseño de parámetro, incluidas secciones con instrucciones para la comprobación de argumentos. Además, debe hacer referencia a las directrices descritas en [parámetros nomenclatura](../../../docs/standard/design-guidelines/naming-parameters.md).  

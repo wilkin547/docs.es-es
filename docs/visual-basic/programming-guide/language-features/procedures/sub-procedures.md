@@ -12,11 +12,11 @@ helpviewer_keywords:
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
 ms.openlocfilehash: b70594e002bbf08f0890586e78df901ccb26c7ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791826"
 ---
 # <a name="sub-procedures-visual-basic"></a>Subprocedimientos (Visual Basic)
 Un `Sub` procedimiento es una serie de instrucciones de Visual Basic está incluido en el `Sub` y `End Sub` instrucciones. El `Sub` procedimiento realiza una tarea y, a continuación, devuelve el control al código de llamada, pero no devuelve un valor al código de llamada.  

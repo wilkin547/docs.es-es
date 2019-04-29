@@ -3,11 +3,11 @@ title: Objetos BFILE de Oracle
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
 ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771974"
 ---
 # <a name="oracle-bfiles"></a>Objetos BFILE de Oracle
 El proveedor de datos .NET Framework para Oracle incluye la clase <xref:System.Data.OracleClient.OracleBFile>, que se utiliza para trabajar con el tipo de datos <xref:System.Data.OracleClient.OracleType.BFile> de Oracle.  
@@ -16,11 +16,11 @@ El proveedor de datos .NET Framework para Oracle incluye la clase <xref:System.D
   
  Otras características de un **BFILE** tipo de datos que lo distinguen de un **LOB** son que el tipo de datos:  
   
--   contiene datos no estructurados.  
+- contiene datos no estructurados.  
   
--   admite el troceo en el servidor.  
+- admite el troceo en el servidor.  
   
--   utiliza semántica de copia de referencia. Por ejemplo, si realiza una operación de copia en un **BFILE**, solo el **BFILE** se copia el localizador (que es una referencia al archivo). Los datos del archivo no se copian.  
+- utiliza semántica de copia de referencia. Por ejemplo, si realiza una operación de copia en un **BFILE**, solo el **BFILE** se copia el localizador (que es una referencia al archivo). Los datos del archivo no se copian.  
   
  El **BFILE** se debe usar el tipo de datos para hacer referencia a los LOB que son de gran tamaño y por lo tanto, no es práctico almacenar en la base de datos. Más sobrecarga de comunicación, el servidor y el cliente está implicada cuando se usa un **BFILE** tipo de datos en comparación con el **LOB** tipo de datos. Resulta más eficaz para tener acceso a un **BFILE** si sólo necesita obtener una pequeña cantidad de datos. En cambio, si necesita obtener el objeto entero, es más eficiente tener acceso a los LOB residentes en la base de datos.  
   

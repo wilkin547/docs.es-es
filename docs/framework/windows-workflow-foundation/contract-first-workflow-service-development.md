@@ -3,47 +3,47 @@ title: Desarrollo de servicio de flujo de trabajo de contrato primero
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
 ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774210"
 ---
 # <a name="contract-first-workflow-service-development"></a>Desarrollo de servicio de flujo de trabajo de contrato primero
 A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], las características de Windows Workflow Foundation (WF) una mejor integración entre los servicios web y flujos de trabajo en forma de desarrollo de flujo de trabajo de contrato primero. La herramienta de desarrollo de flujo de trabajo de contrato primero permite diseñar el contrato en Code First. La herramienta después genera automáticamente una plantilla de actividad en el cuadro de herramientas para las operaciones del contrato. Este tema proporciona información general sobre cómo se asignan las actividades y las propiedades de un servicio de flujo de trabajo a los atributos de un contrato de servicio. Para obtener un ejemplo paso a paso de creación de un servicio de flujo de trabajo de contrato primero, vea [Cómo: Crear un servicio de flujo de trabajo que consuma un contrato de servicio existente](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>En este tema  
   
--   [Asignación de atributos de contrato de servicio a los atributos de flujo de trabajo](contract-first-workflow-service-development.md#MappingAttributes)  
+- [Asignación de atributos de contrato de servicio a los atributos de flujo de trabajo](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [Atributos de contrato de servicio](contract-first-workflow-service-development.md#ServiceContract)  
+    - [Atributos de contrato de servicio](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [Atributos de contrato de operación](contract-first-workflow-service-development.md#OperationContract)  
+    - [Atributos de contrato de operación](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [Atributos de contrato de mensaje](contract-first-workflow-service-development.md#MessageContract)  
+    - [Atributos de contrato de mensaje](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [Atributos de contrato de datos](contract-first-workflow-service-development.md#DataContract)  
+    - [Atributos de contrato de datos](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [Atributos de contrato de error](contract-first-workflow-service-development.md#FaultContract)  
+    - [Atributos de contrato de error](contract-first-workflow-service-development.md#FaultContract)  
   
--   [Información de implementación y soporte técnico adicionales](contract-first-workflow-service-development.md#AdditionalSupport)  
+- [Información de implementación y soporte técnico adicionales](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [Características del contrato de servicio no admitido](contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    - [Características del contrato de servicio no admitido](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [Generación de las actividades de mensajes configuradas](contract-first-workflow-service-development.md#ActivityGeneration)  
+    - [Generación de las actividades de mensajes configuradas](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> Asignación de atributos de contrato de servicio a los atributos de flujo de trabajo  
  En las tablas de las siguientes secciones se especifican los diferentes atributos y propiedades de WCF, así como el modo en que se asignan a las actividades y a las propiedades de mensajería en un flujo de trabajo de contrato primero.  
   
--   [Atributos de contrato de servicio](contract-first-workflow-service-development.md#ServiceContract)  
+- [Atributos de contrato de servicio](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [Atributos de contrato de operación](contract-first-workflow-service-development.md#OperationContract)  
+- [Atributos de contrato de operación](contract-first-workflow-service-development.md#OperationContract)  
   
--   [Atributos de contrato de mensaje](contract-first-workflow-service-development.md#MessageContract)  
+- [Atributos de contrato de mensaje](contract-first-workflow-service-development.md#MessageContract)  
   
--   [Atributos de contrato de datos](contract-first-workflow-service-development.md#DataContract)  
+- [Atributos de contrato de datos](contract-first-workflow-service-development.md#DataContract)  
   
--   [Atributos de contrato de error](contract-first-workflow-service-development.md#FaultContract)  
+- [Atributos de contrato de error](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> Atributos de contrato de servicio  
   
@@ -109,25 +109,24 @@ A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], las caracterí
   
 ## <a name="AdditionalSupport"></a> Información de implementación y soporte técnico adicionales  
   
--   [Características del contrato de servicio no admitido](contract-first-workflow-service-development.md#UnsupportedFeatures)  
+- [Características del contrato de servicio no admitido](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [Generación de las actividades de mensajes configuradas](contract-first-workflow-service-development.md#ActivityGeneration)  
+- [Generación de las actividades de mensajes configuradas](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> Características del contrato de servicio no admitido  
   
--   No se admite el uso de tareas TPL (biblioteca de tareas en paralelo) en contratos.  
+- No se admite el uso de tareas TPL (biblioteca de tareas en paralelo) en contratos.  
   
--   No se admite la herencia en contratos de servicio.  
+- No se admite la herencia en contratos de servicio.  
   
 ### <a name="ActivityGeneration"></a> Generación de las actividades de mensajes configuradas  
  Dos métodos static públicos se agregan a las actividades <xref:System.ServiceModel.Activities.Receive> y <xref:System.ServiceModel.Activities.SendReply> para admitir la creación de actividades de mensaje preconfiguradas al usar servicios de flujo de trabajo de contrato primero.  
   
--   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
   
- La actividad generada por estos métodos debe pasar la validación del contrato y, por consiguiente, estos métodos se usan internamente como parte de la lógica de validación para <xref:System.ServiceModel.Activities.Receive> y <xref:System.ServiceModel.Activities.SendReply>. 
-  <xref:System.ServiceModel.Activities.Receive.OperationName%2A>, <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>, <xref:System.ServiceModel.Activities.Receive.Action%2A>, <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>, <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> y <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> están preconfigurados para coincidir con el contrato importado. En la página de propiedades de contenido para las actividades en el Diseñador de flujo de trabajo, el **mensaje** o **parámetros** secciones también están preconfiguradas para coincidir con el contrato.  
+ La actividad generada por estos métodos debe pasar la validación del contrato y, por consiguiente, estos métodos se usan internamente como parte de la lógica de validación para <xref:System.ServiceModel.Activities.Receive> y <xref:System.ServiceModel.Activities.SendReply>. <xref:System.ServiceModel.Activities.Receive.OperationName%2A>, <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>, <xref:System.ServiceModel.Activities.Receive.Action%2A>, <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>, <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> y <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> están preconfigurados para coincidir con el contrato importado. En la página de propiedades de contenido para las actividades en el Diseñador de flujo de trabajo, el **mensaje** o **parámetros** secciones también están preconfiguradas para coincidir con el contrato.  
   
  Error de WCF contratos también se controlan mediante la devolución de un conjunto independiente de configurado <xref:System.ServiceModel.Activities.SendReply> actividades para cada uno de los errores que se muestran en el <xref:System.ServiceModel.Description.OperationDescription.Faults%2A> <xref:System.ServiceModel.Description.FaultDescriptionCollection>.  
   

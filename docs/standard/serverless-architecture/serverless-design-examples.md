@@ -5,11 +5,11 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784437"
 ---
 # <a name="serverless-design-examples"></a>Ejemplos de diseño sin servidor
 
@@ -78,7 +78,7 @@ Una puerta de enlace de API proporciona un único punto de entrada para los clie
 ## <a name="recommended-resources"></a>Recursos recomendados
 
 * [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-* [IoT Hub de Azure](https://docs.microsoft.com/azure/iot-hub)
+* [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
 * [Desafíos y soluciones de la administración de datos distribuidos](../microservices-architecture/architect-microservice-container-applications/distributed-data-management.md)
 * [Diseño de microservicios: identificación de los límites del microservicio](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
 * [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)

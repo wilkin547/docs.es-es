@@ -8,11 +8,11 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: 911c2064e34ed8d0a341ffd9a52f852eab677e0a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771401"
 ---
 # <a name="popup-placement-behavior"></a>Posición de un control Popup
 Un <xref:System.Windows.Controls.Primitives.Popup> control muestra el contenido en una ventana independiente que flota sobre una aplicación. Puede especificar la posición de un <xref:System.Windows.Controls.Primitives.Popup> relativa a un control, el mouse o la pantalla mediante el uso de la <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, y <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> propiedades.  Estas propiedades trabajan juntos para proporcionar flexibilidad para especificar la posición de la <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -36,13 +36,13 @@ Un <xref:System.Windows.Controls.Primitives.Popup> control muestra el contenido 
 ## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>Definiciones de términos: Anatomía de un elemento emergente  
  Los siguientes términos son útiles para comprender cómo la <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, y <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> propiedades se relacionan entre sí y el <xref:System.Windows.Controls.Primitives.Popup>:  
   
--   Objeto de destino  
+- Objeto de destino  
   
--   Área de destino  
+- Área de destino  
   
--   Origen de destino  
+- Origen de destino  
   
--   Punto de alineación del elemento Popup  
+- Punto de alineación del elemento Popup  
   
  Estos términos proporcionan una manera cómoda para hacer referencia a distintos aspectos de la <xref:System.Windows.Controls.Primitives.Popup> y el control que está asociado.  
   
@@ -135,11 +135,11 @@ Un <xref:System.Windows.Controls.Primitives.Popup> control muestra el contenido 
 ## <a name="when-the-popup-encounters-the-edge-of-the-screen"></a>Cuando el elemento emergente llega al borde de la pantalla  
  Por motivos de seguridad, un <xref:System.Windows.Controls.Primitives.Popup> no pueden estar ocultos por el borde de una pantalla. Una de las tres operaciones siguientes se produce cuando el <xref:System.Windows.Controls.Primitives.Popup> encuentra un borde de la pantalla:  
   
--   El elemento emergente se realinea a lo largo del borde de la pantalla que podría oscurecer el <xref:System.Windows.Controls.Primitives.Popup>.  
+- El elemento emergente se realinea a lo largo del borde de la pantalla que podría oscurecer el <xref:System.Windows.Controls.Primitives.Popup>.  
   
--   El elemento emergente usa un punto de alineación del elemento Popup distinto.  
+- El elemento emergente usa un punto de alineación del elemento Popup distinto.  
   
--   El elemento emergente usa un origen de destino y un punto de alineación del elemento Popup distintos.  
+- El elemento emergente usa un origen de destino y un punto de alineación del elemento Popup distintos.  
   
  Estas opciones se describen más adelante en esta sección.  
   

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un efecto de activación mediante eventos
+title: Procedimiento Crear un efecto de sustitución mediante eventos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - element colors [WPF], changing
 ms.assetid: 3b20d028-6f1c-4b25-95d2-fa68cefbdb4c
 ms.openlocfilehash: 87740a215136863199d962a2704cf691f27fc3bc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776654"
 ---
-# <a name="how-to-create-a-rollover-effect-using-events"></a>Filtrar Crear un efecto de activación mediante eventos
+# <a name="how-to-create-a-rollover-effect-using-events"></a>Procedimiento Crear un efecto de sustitución mediante eventos
 En este ejemplo se muestra cómo cambiar el color de un elemento cuando el puntero del mouse entra y sale del área ocupado por el elemento.  
   
  Este ejemplo consta de un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivo y un archivo de código subyacente.  

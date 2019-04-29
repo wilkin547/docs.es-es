@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Separator control [WPF]
 ms.assetid: 1b872bc6-1a26-401c-989b-3fafecc5a4ef
 ms.openlocfilehash: d3d8fb637363a154013115f95bae52904467b46e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938962"
 ---
 # <a name="separator"></a>Separador
-A <xref:System.Windows.Controls.Separator> control dibuja una línea, horizontal o vertical, entre los elementos en controles, como <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, y <xref:System.Windows.Controls.ToolBar>.  
+Un <xref:System.Windows.Controls.Separator> control dibuja una línea, horizontal o vertical, entre los elementos en controles, como <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, y <xref:System.Windows.Controls.ToolBar>.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

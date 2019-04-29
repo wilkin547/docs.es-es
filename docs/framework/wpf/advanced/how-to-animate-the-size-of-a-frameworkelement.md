@@ -1,18 +1,18 @@
 ---
-title: Filtrar Animar el tamaño de un elemento FrameworkElement
+title: Procedimiento Animar el tamaño de un elemento FrameworkElement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], FrameworkElement size
 - FrameworkElement [WPF], animating size of
 ms.assetid: d4cd5a13-c20d-4a6f-a2ba-14f2c9ce4cef
 ms.openlocfilehash: d1995deec5ab2c9bf405911af43b4d242d599119
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776914"
 ---
-# <a name="how-to-animate-the-size-of-a-frameworkelement"></a>Filtrar Animar el tamaño de un elemento FrameworkElement
+# <a name="how-to-animate-the-size-of-a-frameworkelement"></a>Procedimiento Animar el tamaño de un elemento FrameworkElement
 Para animar el tamaño de un <xref:System.Windows.FrameworkElement>, o bien puede animar su <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> propiedades o use un elemento animado <xref:System.Windows.Media.ScaleTransform>.  
   
  En el ejemplo siguiente anima el tamaño de dos botones con estos dos enfoques. Se cambia el tamaño de un botón, animando su <xref:System.Windows.FrameworkElement.Width%2A> cambia el tamaño de propiedad y otro animando un <xref:System.Windows.Media.ScaleTransform> aplicado a su <xref:System.Windows.UIElement.RenderTransform%2A> propiedad. Cada botón contiene texto. Inicialmente, el texto aparece en la misma en ambos botones, pero cuando se cambia el tamaño de los botones, el texto en el segundo botón se distorsiona.  

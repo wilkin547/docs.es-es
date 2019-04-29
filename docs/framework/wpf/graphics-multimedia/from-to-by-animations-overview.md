@@ -9,11 +9,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762402"
 ---
 # <a name="fromtoby-animations-overview"></a>Información general sobre animaciones From/To/By
 En este tema se describe cómo usar animaciones From/To/By para animar propiedades de dependencia. Una animación From/To/By crea una transición entre dos valores.  
@@ -65,15 +65,15 @@ En este tema se describe cómo usar animaciones From/To/By para animar propiedad
 ## <a name="target-values"></a>Valores de destino  
  Una animación From/To/By crea una transición entre dos valores de destino. Es habitual especificar un valor inicial (establecerlo mediante el uso de la <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propiedad) y un valor final (establecer utilizando la <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propiedad). Pero también se puede especificar solo un valor inicial, un valor de destino o un valor de desplazamiento. En estos casos, la animación obtiene el valor de destino que falta de la propiedad que se anima. La lista siguiente describe las diferentes maneras de especificar los valores de destino de una animación.  
   
--   **Valor inicial**  
+- **Valor inicial**  
   
      Use el <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propiedad cuando desee especificar explícitamente el valor inicial de una animación. Puede usar el <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propiedad por sí solo o con el <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> o <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propiedad. Si especifica solo el <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propiedad, las transiciones de animación de ese valor al valor base de la propiedad animada.  
   
--   **Valor final**  
+- **Valor final**  
   
      Para especificar un valor final de una animación, use su <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propiedad. Si usas el <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propiedad por sí sola, la animación obtiene su valor inicial de la propiedad que se anima o desde la salida de otra animación que se aplica a la misma propiedad. Puede usar el <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propiedad junto con la <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propiedad para especificar explícitamente los valores de la animación iniciales y finales.  
   
--   **Valor de desplazamiento**  
+- **Valor de desplazamiento**  
   
      El <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propiedad le permite especificar un desplazamiento en lugar de un explícita valor inicial o final de la animación. El <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propiedad de una animación especifica cuánto la animación cambia un valor a través de su duración. Puede usar el <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propiedad por sí solo o con el <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propiedad. Si especifica solo el <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propiedad, la animación agrega el valor de desplazamiento al valor base de la propiedad o a la salida de otra animación.  
   
@@ -134,9 +134,9 @@ En este tema se describe cómo usar animaciones From/To/By para animar propiedad
 ## <a name="other-animation-types"></a>Otros tipos de animación  
  Animaciones From/To/By no son el único tipo de animaciones que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona: también proporciona animaciones de fotogramas clave y las animaciones de trazado.  
   
--   Una animación de fotogramas clave se anima a lo largo de cualquier cantidad de valores de destino, que se describen mediante fotogramas clave. Para obtener más información, consulte el [información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md).  
+- Una animación de fotogramas clave se anima a lo largo de cualquier cantidad de valores de destino, que se describen mediante fotogramas clave. Para obtener más información, consulte el [información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md).  
   
--   Una animación de trazado genera valores de salida desde un <xref:System.Windows.Media.PathGeometry>. Para obtener más información, consulte el [información general sobre animaciones de trazado](path-animations-overview.md).  
+- Una animación de trazado genera valores de salida desde un <xref:System.Windows.Media.PathGeometry>. Para obtener más información, consulte el [información general sobre animaciones de trazado](path-animations-overview.md).  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también le permite crear sus propios tipos de animaciones personalizadas. Para obtener más información, consulte el [Custom Animations Overview](custom-animations-overview.md).  
   

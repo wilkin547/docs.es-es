@@ -3,11 +3,11 @@ title: Ejemplos de consultas basadas en métodos (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
 ms.openlocfilehash: 9419bd664a0e918b1ed40e5d468d01cf724f054d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772307"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Ejemplos de consultas basadas en métodos (LINQ to DataSet)
 Esta sección proporciona LINQ a conjunto de datos de ejemplos de sintaxis de consulta basada en métodos que usan los operadores de consulta estándar de programación. El <xref:System.Data.DataSet> usado en estos ejemplos se rellena usando el `FillDataSet` método, que se especifica en [cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obtener más información, consulte [Standard Query Operators Overview (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) o [Standard Query Operators Overview (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  

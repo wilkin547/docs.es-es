@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3be6f2b9454ed2f74d2cc6792cd9aaa2c25215db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765211"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo (Estructura)
 Proporciona detalles sobre el `Event_MDAFired` evento que desencadena la creación de un Asistente para depuración administrada (MDA).  
@@ -47,9 +47,9 @@ typedef struct _MDAInfo {
   
  El tiempo de ejecución realiza los pasos siguientes cuando se desencadena un evento que desencadena la creación de un MDA:  
   
--   Si el host no ha registrado un [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) instancia mediante una llamada a [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) para recibir una notificación de un `Event_MDAFired` eventos, el tiempo de ejecución continúa con su predeterminada, el comportamiento no hospedado.  
+- Si el host no ha registrado un [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) instancia mediante una llamada a [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) para recibir una notificación de un `Event_MDAFired` eventos, el tiempo de ejecución continúa con su predeterminada, el comportamiento no hospedado.  
   
--   Si el host ha registrado un controlador para este evento, el tiempo de ejecución comprueba si se adjunta un depurador al proceso. Si es así, el tiempo de ejecución se interrumpe el depurador. Cuando el depurador continúa, llama al host. Si no hay ningún depurador está conectado, el runtime llama a `IActionOnCLREvent::OnEvent` y pasa un puntero a un `MDAInfo` la instancia como el `data` parámetro.  
+- Si el host ha registrado un controlador para este evento, el tiempo de ejecución comprueba si se adjunta un depurador al proceso. Si es así, el tiempo de ejecución se interrumpe el depurador. Cuando el depurador continúa, llama al host. Si no hay ningún depurador está conectado, el runtime llama a `IActionOnCLREvent::OnEvent` y pasa un puntero a un `MDAInfo` la instancia como el `data` parámetro.  
   
  El host puede elegir para activar el MDA y recibir una notificación cuando se activa un MDA. Esto proporciona al host una oportunidad para invalidar el comportamiento predeterminado y anular el subproceso administrado que provocó el evento, para impedir que se dañe el estado del proceso. Para obtener más información sobre el uso de los MDA, consulte [Diagnosing Errors with Managed Debugging Assistants](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   

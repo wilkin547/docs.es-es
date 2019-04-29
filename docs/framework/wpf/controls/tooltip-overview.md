@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
 ms.openlocfilehash: 08b30d8be83ef9d814d17c5d4ec0c95a26bacdad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790733"
 ---
 # <a name="tooltip-overview"></a>Información general de información sobre herramientas
 Información sobre herramientas es una pequeña ventana emergente que aparece cuando un usuario detiene el puntero del mouse sobre un elemento, tal como sobreutilizado un <xref:System.Windows.Controls.Button>. En este tema se presenta la información sobre herramientas y se explica cómo crear y personalizar el contenido de la información sobre herramientas.  
@@ -24,9 +24,9 @@ Información sobre herramientas es una pequeña ventana emergente que aparece cu
   
  La información sobre herramientas puede contener una o más líneas de texto, imágenes, formas u otro contenido visual. Para definir la información sobre herramientas de un control, establezca una de las siguientes propiedades en el contenido de la información sobre herramientas.  
   
--   <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
   
  La propiedad que utilice depende de si el control que define la información sobre herramientas se hereda de la <xref:System.Windows.FrameworkContentElement> o <xref:System.Windows.FrameworkElement> clase.  
   

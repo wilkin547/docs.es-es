@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 12ef215253ca02048a5a3fc2c7c682823233929f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779826"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot (Método)
 Recorre los marcos administrados en la pila para el subproceso especificado y envía información al generador de perfiles a través de una devolución de llamada.  
@@ -91,11 +91,11 @@ HRESULT DoStackSnapshot(
   
  Recorridos de pila asincrónicos fácilmente pueden provocar interbloqueos o infracciones de acceso, a menos que siga estas directrices:  
   
--   Cuando suspende directamente los subprocesos, recuerde que sólo un subproceso que nunca se ha ejecutado el código administrado puede suspender otro subproceso.  
+- Cuando suspende directamente los subprocesos, recuerde que sólo un subproceso que nunca se ha ejecutado el código administrado puede suspender otro subproceso.  
   
--   Bloquear siempre su [ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) hasta que finalice el recorrido de pila del subproceso que la devolución de llamada.  
+- Bloquear siempre su [ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) hasta que finalice el recorrido de pila del subproceso que la devolución de llamada.  
   
--   No mantenga un bloqueo mientras el generador de perfiles llama a una función CLR que puede desencadenar una recolección de elementos. Es decir, no mantenga un bloqueo si el subproceso propietario puede realizar una llamada que se desencadena una recolección de elementos.  
+- No mantenga un bloqueo mientras el generador de perfiles llama a una función CLR que puede desencadenar una recolección de elementos. Es decir, no mantenga un bloqueo si el subproceso propietario puede realizar una llamada que se desencadena una recolección de elementos.  
   
  Hay también un riesgo de interbloqueo si llama a `DoStackSnapshot` desde un subproceso que ha creado el generador de perfiles para que pueda recorrer la pila de un subproceso de destino diferente. La primera vez que el subproceso que creó entra en ciertos `ICorProfilerInfo*` métodos (incluidos `DoStackSnapshot`), el CLR llevará a cabo por el subproceso, la inicialización específica de CLR en ese subproceso. Si el generador de perfiles ha suspendido el subproceso de destino cuya pila se está intentando recorrer y si ese subproceso de destino que ha ocurrido con su propio bloqueo es necesario para realizar esta inicialización por subproceso, se producirá un interbloqueo. Para evitar este interbloqueo, realice una llamada inicial a `DoStackSnapshot` desde tu subproceso creado por el generador de perfiles para recorrer otro subproceso de destino, pero no suspender el subproceso de destino en primer lugar. Esta llamada inicial garantiza que se puede completar la inicialización por subproceso sin interbloqueo. Si `DoStackSnapshot` se realiza correctamente y notifica al menos un fotograma, después de ese punto, estará seguro de ese subproceso creado por el generador de perfiles para suspender cualquier subproceso de destino y la llamada `DoStackSnapshot` para recorrer la pila del subproceso de destino.  
   

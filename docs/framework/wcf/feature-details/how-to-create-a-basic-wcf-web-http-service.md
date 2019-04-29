@@ -1,25 +1,25 @@
 ---
-title: 'Cómo: Crear un servicio básico web HTTP de WCF'
+title: Procedimiento para crear un servicio básico web HTTP de WCF
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
 ms.openlocfilehash: 1b76d21cb4f416aae76e7597ad16cfd45e5b7cad
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779202"
 ---
-# <a name="how-to-create-a-basic-wcf-web-http-service"></a>Cómo: Crear un servicio básico web HTTP de WCF
+# <a name="how-to-create-a-basic-wcf-web-http-service"></a>Procedimiento para crear un servicio básico web HTTP de WCF
 
-Windows Communication Foundation (WCF) le permite crear un servicio que expone un extremo Web. Los puntos de conexión web envían los datos por XML o JSON, no hay ninguna envoltura SOAP. En este tema se muestra cómo exponer este tipo de extremos.
+Windows Communication Foundation (WCF) le permite crear un servicio que expone un extremo Web. Los puntos de conexión web envían los datos por XML o JSON, no hay ninguna envoltura SOAP. En este tema se muestra cómo exponer este tipo de puntos de conexión.
 
 > [!NOTE]
-> La única manera de proteger un extremo web es exponerlo a través de HTTPS, utilizando la seguridad de transporte. Al usar la seguridad basada en mensaje, la información de seguridad se coloca normalmente en encabezados SOAP, y dado que los mensajes enviados a los extremos que no son SOAP no contienen envoltura SOAP, no hay ningún lugar donde colocar la información de seguridad y debe confiar en la seguridad de transporte.
+> La única manera de proteger un punto de conexión web es exponerlo a través de HTTPS, utilizando la seguridad de transporte. Al usar la seguridad basada en mensaje, la información de seguridad se coloca normalmente en encabezados SOAP, y dado que los mensajes enviados a los puntos de conexión que no son SOAP no contienen envoltura SOAP, no hay ningún lugar donde colocar la información de seguridad y debe confiar en la seguridad de transporte.
 
-## <a name="to-create-a-web-endpoint"></a>Para crear un punto de conexión web
+## <a name="to-create-a-web-endpoint"></a>Para crear un extremo web
 
 1. Defina un contrato de servicios mediante una interfaz marcada con los atributos <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> y <xref:System.ServiceModel.Web.WebGetAttribute>.
 
@@ -47,13 +47,13 @@ Windows Communication Foundation (WCF) le permite crear un servicio que expone u
      [!code-vb[htBasicService#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#3)]
 
     > [!NOTE]
-    > Si no agrega un extremo, <xref:System.ServiceModel.Web.WebServiceHost> crea automáticamente un extremo predeterminado. <xref:System.ServiceModel.Web.WebServiceHost> también agrega <xref:System.ServiceModel.Description.WebHttpBehavior> y deshabilita la página de ayuda de HTTP y la funcionalidad GET del lenguaje de descripción de servicios Web (WSDL) para que el extremo de metadatos no interfiera con el extremo HTTP predeterminado.
+    > Si no agrega un punto de conexión, <xref:System.ServiceModel.Web.WebServiceHost> crea automáticamente un punto de conexión predeterminado. <xref:System.ServiceModel.Web.WebServiceHost> también agrega <xref:System.ServiceModel.Description.WebHttpBehavior> y deshabilita la página de ayuda de HTTP y la funcionalidad GET del lenguaje de descripción de servicios Web (WSDL) para que el extremo de metadatos no interfiera con el extremo HTTP predeterminado.
     >
     >  Agregar un punto de conexión que no es SOAP a una dirección URL de"" causa un comportamiento inesperado cuando se intenta llamar a una operación en el punto de conexión. La razón de esto es el URI del extremo es el mismo que el URI de la página de ayuda (la página que se muestra al ir a la dirección base de un servicio WCF) de escucha.
 
      Para evitar que esto suceda, puede realizar una de las siguientes acciones:
 
-    - Siempre especifique un URI que no esté en blanco para un extremo que no sea SOAP.
+    - Siempre especifique un URI que no esté en blanco para un punto de conexión que no sea SOAP.
 
     - Desactive la página de ayuda. Esto puede hacerse con el código siguiente:
 
@@ -86,7 +86,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que expone u
      [!code-csharp[htBasicService#6](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#6)]
      [!code-vb[htBasicService#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#6)]
 
-2. Agregue <xref:System.ServiceModel.Description.WebHttpBehavior> al extremo que <xref:System.ServiceModel.ChannelFactory%601> llamará.
+2. Agregue <xref:System.ServiceModel.Description.WebHttpBehavior> al punto de conexión que <xref:System.ServiceModel.ChannelFactory%601> llamará.
 
      [!code-csharp[htBasicService#7](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#7)]
      [!code-vb[htBasicService#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#7)]

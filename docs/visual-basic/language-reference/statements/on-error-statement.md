@@ -23,11 +23,11 @@ helpviewer_keywords:
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
 ms.openlocfilehash: 0a5a5261e6b71178adce02a5635c1f91a1469f3d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784077"
 ---
 # <a name="on-error-statement-visual-basic"></a>Instrucción On Error (Visual Basic)
 Habilita una rutina de control de errores y se especifica la ubicación de la rutina dentro de un procedimiento; También puede usarse para deshabilitar una rutina de control de errores.  

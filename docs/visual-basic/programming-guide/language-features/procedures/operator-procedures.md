@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791981"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedimientos de operador (Visual Basic)
 Un procedimiento de operador es una serie de instrucciones de Visual Basic que definen el comportamiento de un operador estándar (como `*`, `<>`, o `And`) en una clase o estructura que ha definido. Esto también se denomina *sobrecarga de operadores*.  
@@ -31,13 +31,13 @@ Un procedimiento de operador es una serie de instrucciones de Visual Basic que d
 ## <a name="types-of-operator-procedure"></a>Tipos de procedimientos de operador  
  Un procedimiento de operador puede ser uno de los siguientes tipos:  
   
--   Una definición de un operador unario donde el argumento es del tipo de la clase o estructura.  
+- Una definición de un operador unario donde el argumento es del tipo de la clase o estructura.  
   
--   Una definición de un operador binario donde al menos uno de los argumentos es del tipo de la clase o estructura.  
+- Una definición de un operador binario donde al menos uno de los argumentos es del tipo de la clase o estructura.  
   
--   Una definición de un operador de conversión donde el argumento es del tipo de la clase o estructura.  
+- Una definición de un operador de conversión donde el argumento es del tipo de la clase o estructura.  
   
--   Una definición de un operador de conversión que devuelve el tipo de la clase o estructura.  
+- Una definición de un operador de conversión que devuelve el tipo de la clase o estructura.  
   
  Los operadores de conversión siempre son unarias y siempre utilizan `CType` como el operador que se está definiendo.  
   

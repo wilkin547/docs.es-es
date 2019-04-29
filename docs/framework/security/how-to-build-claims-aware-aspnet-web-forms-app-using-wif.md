@@ -4,47 +4,47 @@ ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
 ms.openlocfilehash: 74f15c3ac6e5192ce3565579d515198d3b7e39f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940535"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Cómo compilar aplicaciones de formularios Web Forms de ASP.NET con reconocimiento de notificaciones mediante WIF
 ## <a name="applies-to"></a>Se aplica a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Formularios Web Forms ASP.NET®  
+- Formularios Web Forms ASP.NET®  
   
 ## <a name="summary"></a>Resumen  
  Este tema de procedimientos proporciona procedimientos paso a paso para crear una sencilla aplicación de formularios Web Forms ASP.NET para notificaciones. También proporciona instrucciones sobre cómo probar la aplicación sencilla de formularios Web Forms ASP.NET para notificaciones para obtener una implementación correcta de la autenticación federada. Este tema de procedimientos no tiene instrucciones detalladas para crear un Servicio de tokens de seguridad (STS) y presupone que ya ha configurado uno.  
   
 ## <a name="contents"></a>Contenido  
   
--   Objetivos  
+- Objetivos  
   
--   Resumen de pasos  
+- Resumen de pasos  
   
--   Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
+- Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
   
--   Paso 2: Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
+- Paso 2: Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
   
--   Paso 3: Probar la solución  
+- Paso 3: Probar la solución  
   
 ## <a name="objectives"></a>Objetivos  
   
--   Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
+- Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
   
--   Probar una aplicación de formularios Web Forms ASP.NET para notificaciones correcta  
+- Probar una aplicación de formularios Web Forms ASP.NET para notificaciones correcta  
   
 ## <a name="summary-of-steps"></a>Resumen de pasos  
   
--   Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
+- Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
   
--   Paso 2: Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación federada  
+- Paso 2: Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación federada  
   
--   Paso 3: Probar la solución  
+- Paso 3: Probar la solución  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
  En este paso creará una aplicación de formularios Web Forms ASP.NET.  

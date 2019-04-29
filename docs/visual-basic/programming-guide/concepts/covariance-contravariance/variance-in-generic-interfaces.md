@@ -3,28 +3,28 @@ title: Varianza en Interfaces genéricas (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
 ms.openlocfilehash: 50a1aeb5c17a0f193b9e90ca2167ef298f7ed237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787223"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Varianza en Interfaces genéricas (Visual Basic)
 En .NET Framework 4 se ha presentado la compatibilidad con la varianza para varias interfaces genéricas existentes. La compatibilidad con la varianza permite la conversión implícita de clases que implementan estas interfaces. Las interfaces siguientes ahora son variantes:  
   
--   <xref:System.Collections.Generic.IEnumerable%601> (T es covariante)  
+- <xref:System.Collections.Generic.IEnumerable%601> (T es covariante)  
   
--   <xref:System.Collections.Generic.IEnumerator%601> (T es covariante)  
+- <xref:System.Collections.Generic.IEnumerator%601> (T es covariante)  
   
--   <xref:System.Linq.IQueryable%601> (T es covariante)  
+- <xref:System.Linq.IQueryable%601> (T es covariante)  
   
--   <xref:System.Linq.IGrouping%602> (`TKey` y `TElement` son covariantes)  
+- <xref:System.Linq.IGrouping%602> (`TKey` y `TElement` son covariantes)  
   
--   <xref:System.Collections.Generic.IComparer%601> (T es contravariante)  
+- <xref:System.Collections.Generic.IComparer%601> (T es contravariante)  
   
--   <xref:System.Collections.Generic.IEqualityComparer%601> (T es contravariante)  
+- <xref:System.Collections.Generic.IEqualityComparer%601> (T es contravariante)  
   
--   <xref:System.IComparable%601> (T es contravariante)  
+- <xref:System.IComparable%601> (T es contravariante)  
   
  La covarianza permite que un método tenga un tipo de valor devuelto más derivado que los que se definen en los parámetros de tipo genérico de la interfaz. Para ilustrar la característica de la covarianza, considere estas interfaces genéricas: `IEnumerable(Of Object)` y `IEnumerable(Of String)`. La interfaz `IEnumerable(Of String)` no hereda la interfaz `IEnumerable(Of Object)`. En cambio, el tipo `String` hereda el tipo `Object`, y en algunos casos puede que quiera asignar objetos de estas interfaces entre sí. Esto se muestra en el ejemplo de código siguiente.  
   
