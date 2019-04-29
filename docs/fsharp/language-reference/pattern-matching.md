@@ -3,11 +3,11 @@ title: Coincidencia de modelos
 description: Obtenga información sobre cómo se usan patrones en F# para comparar los datos con estructuras lógicas, descomponer datos en sus partes constituyentes o extraer información de los datos.
 ms.date: 05/16/2016
 ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795465"
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos
 
@@ -29,7 +29,7 @@ Cada modelo actúa como una regla para transformar la entrada de alguna manera. 
 
 Modelos admitidos se muestran en la tabla siguiente. En tiempo de ejecución, la entrada se prueba con cada uno de los siguientes patrones en el orden mostrado en la tabla, y patrones aplica de forma recursiva, del primero al último tal y como aparecen en el código y de izquierda a derecha para los modelos en cada línea.
 
-|nombre|Descripción|Ejemplo|
+|Name|Descripción|Ejemplo|
 |----|-----------|-------|
 |Patrón de constante|Cualquier numérico, carácter o literal de cadena, una constante de enumeración o un identificador literal definido|`1.0`, `"test"`, `30`, `Color.Red`|
 |Patrón de identificador|Un valor de caso de una unión discriminada, una etiqueta de excepción o un caso de modelo activo|`Some(x)`<br /><br />`Failure(msg)`|
@@ -39,13 +39,13 @@ Modelos admitidos se muestran en la tabla siguiente. En tiempo de ejecución, la
 |Y el patrón|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |Modelo de cons|*identificador* :: *identificador de la lista*|`h :: t`|
 |Modelo de lista|[ *modelo_1*;...; *modelo_n* ]|`[ a; b; c ]`|
-|Patrón de matriz|[&#124; *modelo_1*;..; *modelo_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
-|Modelo entre paréntesis|( *patrón* )|`( a )`|
+|Patrón de matriz|[&#124; *pattern_1*; .; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|Modelo entre paréntesis|( *pattern* )|`( a )`|
 |Modelo de tupla|( *modelo_1*,..., *modelo_n* )|`( a, b )`|
 |Modelo de registro|{ *identificador1* = *modelo_1*;...; *identificador_n* = *modelo_n* }|`{ Name = name; }`|
 |Patrón de caracteres comodín|_|`_`|
 |Modelo junto con anotación de tipo|*patrón* : *tipo*|`a : int`|
-|Modelo de prueba de tipo|:? *tipo* [como *identificador* ]|`:? System.DateTime as dt`|
+|Modelo de prueba de tipo|:? *type* [ as *identifier* ]|`:? System.DateTime as dt`|
 |Modelo de null|nulo|`null`|
 
 ## <a name="constant-patterns"></a>Modelos de constante

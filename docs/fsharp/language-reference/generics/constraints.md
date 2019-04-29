@@ -3,11 +3,11 @@ title: Restricciones
 description: Obtenga información sobre F# restricciones que se aplican a los parámetros de tipo genérico para especificar los requisitos para un argumento de tipo en una función o tipo genérico.
 ms.date: 05/16/2016
 ms.openlocfilehash: b253ce50707512a0d46c41bba2dde34adcc24d0e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937519"
 ---
 # <a name="constraints"></a>Restricciones
 
@@ -31,8 +31,8 @@ Hay varias restricciones diferentes que puede aplicar para limitar los tipos que
 |Restricción de constructor|*parámetro de tipo* : (nuevo: unidad -&gt; ' un)|El tipo proporcionado debe tener un constructor predeterminado.|
 |Restricción de tipo de valor|: struct|El tipo proporcionado debe ser un tipo de valor. NET.|
 |Restricción de tipo de referencia|: no struct|El tipo proporcionado debe ser un tipo de referencia. NET.|
-|Restricción de tipo de enumeración|: enumeración&lt;*tipo subyacente*&gt;|El tipo proporcionado debe ser un tipo enumerado que tiene el tipo subyacente especificado; no se ha diseñado para su uso común.|
-|Restricción de delegado|: delegar&lt;*tupla de tipo de parámetro*, *tipo de valor devuelto*&gt;|El tipo proporcionado debe ser un tipo de delegado que tiene los argumentos especificados y devuelve el valor; no se ha diseñado para su uso común.|
+|Restricción de tipo de enumeración|: enum&lt;*underlying-type*&gt;|El tipo proporcionado debe ser un tipo enumerado que tiene el tipo subyacente especificado; no se ha diseñado para su uso común.|
+|Restricción de delegado|: delegate&lt;*tuple-parameter-type*, *return-type*&gt;|El tipo proporcionado debe ser un tipo de delegado que tiene los argumentos especificados y devuelve el valor; no se ha diseñado para su uso común.|
 |Restricción de comparación|: comparación|El tipo proporcionado debe admitir la comparación.|
 |Restricción de igualdad|: igualdad|El tipo proporcionado debe admitir la igualdad.|
 |Restricción no administrada|: no administrado|El tipo proporcionado debe ser un tipo no administrado. Los tipos no administrados son cualquier ciertos tipos primitivos (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, o `decimal`), tipos de enumeración, `nativeptr<_>`, o una estructura no genérica cuyos campos son todos los tipos no administrados.|

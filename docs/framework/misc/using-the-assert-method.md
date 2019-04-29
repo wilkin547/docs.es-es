@@ -19,11 +19,11 @@ ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869022"
 ---
 # <a name="using-the-assert-method"></a>Utilizar el método Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -43,19 +43,19 @@ ms.locfileid: "59073733"
   
  La siguiente ilustración muestra lo que sucede cuando se usa **Assert**. Supongamos que son ciertas las siguientes declaraciones sobre los ensamblados A, B, C, E y F y los permisos P1 y P1A:  
   
--   P1A representa el derecho a leer archivos .txt de la unidad C.  
+- P1A representa el derecho a leer archivos .txt de la unidad C.  
   
--   P1 representa el derecho a leer todos los archivos de la unidad C.  
+- P1 representa el derecho a leer todos los archivos de la unidad C.  
   
--   Tanto P1A como P1 son **FileIOPermission** tipos y P1A es un subconjunto de P1.  
+- Tanto P1A como P1 son **FileIOPermission** tipos y P1A es un subconjunto de P1.  
   
--   Se ha concedido el permiso P1A a los ensamblados E y F.  
+- Se ha concedido el permiso P1A a los ensamblados E y F.  
   
--   Se ha concedido el permiso P1 al ensamblado C.  
+- Se ha concedido el permiso P1 al ensamblado C.  
   
--   No se ha concedido ni el permiso P1 ni el P1A a los ensamblados A y B.  
+- No se ha concedido ni el permiso P1 ni el P1A a los ensamblados A y B.  
   
--   El método A está incluido en el ensamblado A, el método B incluido en el ensamblado B, y así sucesivamente.  
+- El método A está incluido en el ensamblado A, el método B incluido en el ensamblado B, y así sucesivamente.  
   
  ![Diagrama que muestra los ensamblados del método Assert.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   
