@@ -3,11 +3,11 @@ title: Traza analítica de WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723360"
 ---
 # <a name="wcf-analytic-tracing"></a>Traza analítica de WCF
 Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en la secuencia de los seguimientos analíticos que Windows Communication Foundation (WCF) se escribe en ETW en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Los seguimientos analíticos pretenden facilitar la visibilidad en los servicios sin que el rendimiento se vea penalizado. En este ejemplo se muestra cómo usar el <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API para escribir los eventos que se integran con los servicios WCF.  
@@ -22,11 +22,11 @@ Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en la secu
 ## <a name="self-hosting-vs-web-hosting"></a>Autohospedaje y Hospedaje web  
  Para los servicios hospedados en Web, los seguimientos analíticos de WCF proporcionan un campo, denominado "HostReference", que se usa para identificar el servicio que está emitiendo los seguimientos. Los seguimientos extensibles de usuario pueden participar en este modelo; este ejemplo muestra los procedimientos recomendados para ello. El formato de un host Web hacen referencia a cuando la canalización '&#124;' carácter aparece realmente en el cuadro cadena puede ser cualquiera de las siguientes acciones:  
   
--   Si la aplicación no está en la raíz.  
+- Si la aplicación no está en la raíz.  
   
      \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
--   Si la aplicación está en la raíz.  
+- Si la aplicación está en la raíz.  
   
      \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
@@ -77,13 +77,13 @@ Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en la secu
   
 10. Pruebe el servicio con el Cliente de prueba WCF.  
   
-    1.  En el cliente de prueba WCF, haga doble clic en **Add()** bajo el nodo de servicio ICalculator.  
+    1. En el cliente de prueba WCF, haga doble clic en **Add()** bajo el nodo de servicio ICalculator.  
   
          El **Add()** método aparece en el panel derecho con dos parámetros.  
   
-    2.  Escriba 2 en el primer parámetro y 3 en el segundo.  
+    2. Escriba 2 en el primer parámetro y 3 en el segundo.  
   
-    3.  Haga clic en **Invoke** para invocar el método.  
+    3. Haga clic en **Invoke** para invocar el método.  
   
 11. Vaya a la **Visor de eventos** ventana que ya ha abierto. Vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **aplicación Aplicaciones de servidor**.  
   

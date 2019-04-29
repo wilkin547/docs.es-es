@@ -3,11 +3,11 @@ title: 'Simultaneidad optimista: Información general'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
 ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767499"
 ---
 # <a name="optimistic-concurrency-overview"></a>Simultaneidad optimista: Información general
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite el control de simultaneidad optimista. La tabla siguiente describen los términos que se aplican a la simultaneidad optimista en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentación:  
@@ -22,9 +22,9 @@ ms.locfileid: "59106553"
   
  En el [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelo de objetos, un *conflicto de simultaneidad optimista* se produce cuando se cumplen las condiciones siguientes:  
   
--   El cliente intenta enviar cambios a la base de datos.  
+- El cliente intenta enviar cambios a la base de datos.  
   
--   Uno o más valores de comprobación de actualizaciones se han actualizado en la base de datos desde la última vez que el cliente los leyó.  
+- Uno o más valores de comprobación de actualizaciones se han actualizado en la base de datos desde la última vez que el cliente los leyó.  
   
  Para resolver el conflicto, primero se detectan los miembros del objeto que están en conflicto y, después, se decide qué hacer.  
   
@@ -49,44 +49,44 @@ ms.locfileid: "59106553"
 ## <a name="conflict-detection-and-resolution-checklist"></a>Lista de comprobación para detectar y resolver conflictos  
  Puede detectar y resolver los conflictos en cualquier nivel de detalle. Por una parte, puede resolver todos los conflictos de una de tres maneras (vea <xref:System.Data.Linq.RefreshMode>) sin consideraciones adicionales. En el otro extremo, puede designar una acción concreta para cada tipo de conflicto en cada miembro en conflicto.  
   
--   Especifique o revise las opciones de <xref:System.Data.Linq.Mapping.UpdateCheck> en su modelo de objetos.  
+- Especifique o revise las opciones de <xref:System.Data.Linq.Mapping.UpdateCheck> en su modelo de objetos.  
   
      Para obtener más información, vea [Cómo: Especificar qué miembros se comprueban los conflictos de simultaneidad](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  
   
--   En el bloque la try/catch de la llamada a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, especifique en qué punto desea que se inicien excepciones.  
+- En el bloque la try/catch de la llamada a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, especifique en qué punto desea que se inicien excepciones.  
   
      Para obtener más información, vea [Cómo: Especificar las excepciones de simultaneidad cuando se inician](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
   
--   Determine cuántos detalles del conflicto desea recuperar e incluya el código correspondiente en el bloque try/catch.  
+- Determine cuántos detalles del conflicto desea recuperar e incluya el código correspondiente en el bloque try/catch.  
   
      Para obtener más información, vea [Cómo: Recuperar información de conflictos de entidad](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) y [Cómo: Recuperar información de conflictos de miembros](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).  
   
--   Incluir en su `try` / `catch` cómo desea resolver los distintos conflictos que detecte el código.  
+- Incluir en su `try` / `catch` cómo desea resolver los distintos conflictos que detecte el código.  
   
      Para obtener más información, vea [Cómo: Resolver conflictos de simultaneidad conservando valores de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [Cómo: Resolver conflictos de simultaneidad sobrescribiendo valores de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), y [Cómo: Resolver conflictos de combinación con los valores de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>Tipos LINQ to SQL que admiten la detección y resolución de conflictos  
  Entre las clases y características que admiten la resolución de conflictos de simultaneidad optimista en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], se incluyen:  
   
--   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Vea también
 

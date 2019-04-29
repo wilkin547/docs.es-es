@@ -10,11 +10,11 @@ ms.assetid: 57d68c70-aba1-4bad-a13f-6d0c55f43746
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7675e4ade28be1f57e20e655fd7b82603b91f4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756187"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>Enumeraciones de almacén de símbolos de diagnósticos
 En este tema se describe las enumeraciones no administradas que utiliza la API del almacén de símbolos de diagnósticos.  
@@ -24,10 +24,10 @@ En este tema se describe las enumeraciones no administradas que utiliza la API d
  Indica el tipo de dirección de memoria.  
   
  [CorSymSearchPolicyAttributes (enumeración)](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- Especifica la directiva que se utilizará al realizar una búsqueda de un lector de símbolos.  
+ Especifica la directiva que se usará al realizar una búsqueda de un lector de símbolos.  
   
  [CorSymVarFlag (enumeración)](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- Indica si una variable es generada por el compilador.  
+ Indica si una variable es generado por el compilador.  
   
  [NOTIFY_FILTER (enumeración)](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
  Identifica las devoluciones de llamada para las funciones del depurador.  

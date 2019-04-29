@@ -3,11 +3,11 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760719"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities proporciona la capacidad de realizar consultas integradas en lenguajes (LINQ) que permite a los desarrolladores de software escribir consultas contra el modelo conceptual de Entity Framework mediante Visual Basic o Visual C#. Las consultas con Entity Framework se representan mediante consultas de árboles de comandos, que se ejecutan en el contexto del objeto. LINQ to Entities convierte las consultas de Language-Integrated Queries (LINQ) en consultas de árboles de comandos, ejecuta las consultas en Entity Framework y devuelve objetos que se pueden usar tanto en Entity Framework como en LINQ. A continuación se muestra el proceso para crear y ejecutar una consulta de LINQ to Entities.  
@@ -57,13 +57,13 @@ LINQ to Entities proporciona la capacidad de realizar consultas integradas en le
   
  Los resultados de las consultas se suelen devolver en forma de alguno de los elementos siguientes.  
   
--   Una colección con cero o más objetos entidad con tipo o una proyección de tipos complejos que se define en el modelo conceptual.  
+- Una colección con cero o más objetos entidad con tipo o una proyección de tipos complejos que se define en el modelo conceptual.  
   
--   Tipos CLR admitidos por [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+- Tipos CLR admitidos por [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
   
--   Colecciones insertadas.  
+- Colecciones insertadas.  
   
--   Tipos anónimos.  
+- Tipos anónimos.  
   
  Para obtener más información, consulte [resultados de la consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md).  
   

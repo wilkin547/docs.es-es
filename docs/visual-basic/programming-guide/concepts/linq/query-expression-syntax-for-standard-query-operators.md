@@ -3,11 +3,11 @@ title: Sintaxis de expresiones de consulta para operadores de consulta estándar
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
 ms.openlocfilehash: bdbca93d5898e363ccf62b13231163573e2ba972
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766537"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>Sintaxis de expresiones de consulta para operadores de consulta estándar (Visual Basic)
 Algunos de los operadores de consulta estándar usan con más frecuencia tienen dedicados sintaxis de palabra clave del lenguaje Visual Basic que permite que se llama como parte de un *expresión de consulta*. Una expresión de consulta constituye una forma diferente de expresar una consulta, más legible que su equivalente *basada en métodos*. Las cláusulas de las expresiones de consulta se convierten en llamadas a los métodos de consulta en tiempo de compilación.  

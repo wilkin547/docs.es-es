@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1678f1de7c23387f028348dadbc7b61e2cdc035c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701026"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock (Método)
 Devuelve el subproceso administrado que posee el bloqueo de monitor en este objeto.  
@@ -56,9 +56,9 @@ HRESULT GetThreadOwningMonitorLock (
 ## <a name="remarks"></a>Comentarios  
  Si un subproceso administrado posee el bloqueo de monitor en este objeto:  
   
--   El método devuelve S_OK.  
+- El método devuelve S_OK.  
   
--   El objeto de subproceso es válido hasta que sale del subproceso.  
+- El objeto de subproceso es válido hasta que sale del subproceso.  
   
  Si ningún subproceso administrado posee el bloqueo de monitor en este objeto, `ppThread` y `pAcquisitionCount` han cambiado, y el método devuelve S_FALSE.  
   

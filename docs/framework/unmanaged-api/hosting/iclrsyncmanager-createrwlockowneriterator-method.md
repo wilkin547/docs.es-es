@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c742410da8e7dbce53b53978516ab94243455849
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763716"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator (Método)
 Solicita que common language runtime (CLR) crea un iterador para el host se utiliza para determinar el conjunto de tareas que esperan en un bloqueo de lector y escritor.  
@@ -58,9 +58,9 @@ HRESULT CreateRWLockOwnerIterator (
 ## <a name="remarks"></a>Comentarios  
  Hosts normalmente llamar el `CreateRWLockOwnerIterator`, `DeleteRWLockOwnerIterator`, y `GetRWLockOwnerNext` métodos durante la detección de interbloqueo. El host es responsable de garantizar que el bloqueo de lector y escritor sigue siendo válido, ya que el CLR realiza ningún intento para mantener activo el bloqueo de lector y escritor. Existen varias estrategias para el host garantizar la validez del bloqueo:  
   
--   El host puede bloquear las llamadas de liberación en el bloqueo de lector y escritor (por ejemplo, [IHostSemaphore:: ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) asegurándose de que este bloque no causar un interbloqueo.  
+- El host puede bloquear las llamadas de liberación en el bloqueo de lector y escritor (por ejemplo, [IHostSemaphore:: ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) asegurándose de que este bloque no causar un interbloqueo.  
   
--   El host puede bloquear la salida de espera en el objeto de evento asociado con el bloqueo de lector y escritor, vuelva a asegurarse de que este bloque no causar un interbloqueo.  
+- El host puede bloquear la salida de espera en el objeto de evento asociado con el bloqueo de lector y escritor, vuelva a asegurarse de que este bloque no causar un interbloqueo.  
   
 > [!NOTE]
 >  `CreateRWLockOwnerIterator` debe llamarse únicamente en los subprocesos que se están ejecutando código no administrado.  

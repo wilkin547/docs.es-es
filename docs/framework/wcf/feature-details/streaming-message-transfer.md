@@ -3,20 +3,20 @@ title: Transferencia de mensajes por secuencias
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
 ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747581"
 ---
 # <a name="streaming-message-transfer"></a>Transferencia de mensajes por secuencias
 Los transportes de Windows Communication Foundation (WCF) admiten dos modos de transferencia de mensajes:  
   
--   Las transferencias almacenadas en búfer contienen el mensaje completo en un búfer de memoria hasta que la transferencia haya finalizado. Un mensaje almacenado en búfer debe entregarse por completo antes de que un receptor pueda leerlo.  
+- Las transferencias almacenadas en búfer contienen el mensaje completo en un búfer de memoria hasta que la transferencia haya finalizado. Un mensaje almacenado en búfer debe entregarse por completo antes de que un receptor pueda leerlo.  
   
--   Las transferencias por secuencias exponen el mensaje como una secuencia. El receptor inicia a procesar el mensaje antes de que se haya entregado por completo.  
+- Las transferencias por secuencias exponen el mensaje como una secuencia. El receptor inicia a procesar el mensaje antes de que se haya entregado por completo.  
   
--   Las transferencias por secuencias pueden mejorar la escalabilidad de un servicio eliminando el requisito de grandes búferes de memoria. La mejora de la escalabilidad mediante el cambio del modo de transferencia depende del tamaño de los mensajes que se estén transfiriendo. Los tamaños de mensaje grandes favorecen el uso de transferencias por secuencias.  
+- Las transferencias por secuencias pueden mejorar la escalabilidad de un servicio eliminando el requisito de grandes búferes de memoria. La mejora de la escalabilidad mediante el cambio del modo de transferencia depende del tamaño de los mensajes que se estén transfiriendo. Los tamaños de mensaje grandes favorecen el uso de transferencias por secuencias.  
   
  De forma predeterminada, los transportes HTTP, TCP/IP, y de canalización con nombre usan transferencias almacenadas en búfer. En este documento se describe cómo intercambiar estos transportes desde un modo de transferencia almacenado en búfer hasta otro de transferencia por secuencias y las consecuencias de ello.  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
 ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761382"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Procedimiento para enlazar datos al control MaskedTextBox
 Puede enlazar datos a un <xref:System.Windows.Forms.MaskedTextBox> controlar igual que lo haría para cualquier otro control de Windows Forms. Sin embargo, si el formato de los datos en la base de datos no coincide con el formato esperado por la definición de máscara, deberá volver a formatear los datos. El siguiente procedimiento muestra cómo hacer esto mediante la <xref:System.Windows.Forms.Binding.Format> y <xref:System.Windows.Forms.Binding.Parse> eventos de la <xref:System.Windows.Forms.Binding> clase para mostrar el número de teléfono distinto y campos de la base de datos de extensión de teléfono como un único campo editable.  
@@ -239,15 +239,15 @@ Puede enlazar datos a un <xref:System.Windows.Forms.MaskedTextBox> controlar igu
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
--   Crear un objeto Visual C# o proyecto de Visual Basic.  
+- Crear un objeto Visual C# o proyecto de Visual Basic.  
   
--   Agregar el <xref:System.Windows.Forms.TextBox> y <xref:System.Windows.Forms.MaskedTextBox> controles al formulario, como se describe en el procedimiento anterior.  
+- Agregar el <xref:System.Windows.Forms.TextBox> y <xref:System.Windows.Forms.MaskedTextBox> controles al formulario, como se describe en el procedimiento anterior.  
   
--   Abra el archivo de código fuente para el formulario del proyecto predeterminado.  
+- Abra el archivo de código fuente para el formulario del proyecto predeterminado.  
   
--   Reemplace el código fuente en este archivo con el código que aparece en la sección "Código" anterior.  
+- Reemplace el código fuente en este archivo con el código que aparece en la sección "Código" anterior.  
   
--   Compile la aplicación.  
+- Compile la aplicación.  
   
 ## <a name="see-also"></a>Vea también
 

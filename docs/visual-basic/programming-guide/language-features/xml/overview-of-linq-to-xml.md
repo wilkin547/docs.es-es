@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
 ms.openlocfilehash: 91f622b9eecdd1aec8b9361493095e92a851988e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761850"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Información general sobre LINQ to XML en Visual Basic
 Visual Basic ofrece compatibilidad con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mediante literales XML y propiedades de eje XML. Esto le permite usar una sintaxis familiar y cómoda para trabajar con XML en el código de Visual Basic. *Literales XML* permiten incluir XML directamente en el código. *Propiedades de eje XML* permitirle acceso a los nodos secundarios, los nodos descendientes y los atributos de un literal XML. Para obtener más información, consulte [información general sobre literales de XML](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) y [acceso a XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  

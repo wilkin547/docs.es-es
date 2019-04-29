@@ -10,11 +10,11 @@ helpviewer_keywords:
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
 ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773160"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optimizar el rendimiento: Aprovechar el hardware
 La arquitectura interna de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tiene dos canalizaciones de representación, hardware y software. En este tema se proporciona información sobre estas canalizaciones de representación que le ayudarán a tomar decisiones acerca de las optimizaciones del rendimiento de las aplicaciones.  
@@ -34,23 +34,23 @@ La arquitectura interna de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tl
   
  Las características del hardware gráfico que más afectan a los niveles de representación son:  
   
--   **RAM de vídeo** La cantidad de memoria de vídeo en el hardware gráfico determina el tamaño y el número de búferes que puede utilizarse para la composición de gráficos.  
+- **RAM de vídeo** La cantidad de memoria de vídeo en el hardware gráfico determina el tamaño y el número de búferes que puede utilizarse para la composición de gráficos.  
   
--   **Sombreador de píxeles** Un sombreador de píxeles es una función de procesamiento de gráficos que calcula los efectos píxel por píxel. Según la resolución de los gráficos mostrados, puede haber varios millones de píxeles que deban procesarse en cada fotograma mostrado.  
+- **Sombreador de píxeles** Un sombreador de píxeles es una función de procesamiento de gráficos que calcula los efectos píxel por píxel. Según la resolución de los gráficos mostrados, puede haber varios millones de píxeles que deban procesarse en cada fotograma mostrado.  
   
--   **Sombreador de vértices** Un sombreador de vértices es una función de procesamiento de gráficos que realiza operaciones matemáticas en los datos de vértice del objeto.  
+- **Sombreador de vértices** Un sombreador de vértices es una función de procesamiento de gráficos que realiza operaciones matemáticas en los datos de vértice del objeto.  
   
--   **Compatibilidad con texturas múltiples** La compatibilidad con texturas múltiples hace referencia a la capacidad de aplicar dos o más texturas distintas durante una operación de combinación en un objeto gráfico 3D. El grado de compatibilidad con texturas múltiples queda determinado por el número de unidades de múltiples texturas en el hardware gráfico.  
+- **Compatibilidad con texturas múltiples** La compatibilidad con texturas múltiples hace referencia a la capacidad de aplicar dos o más texturas distintas durante una operación de combinación en un objeto gráfico 3D. El grado de compatibilidad con texturas múltiples queda determinado por el número de unidades de múltiples texturas en el hardware gráfico.  
   
  El sombreador de píxeles, del sombreador de vértices y texturas múltiples características que se usan para definir específico [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] niveles de versión, que, a su vez, se usan para definir los niveles de representación diferente en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Las características del hardware gráfico determinan la capacidad de representación de una aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. El sistema [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] define tres niveles de representación:  
   
--   **Nivel de representación 0** Sin aceleración de hardware gráfico. El [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] el nivel de versión es menor que la versión 7.0.  
+- **Nivel de representación 0** Sin aceleración de hardware gráfico. El [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] el nivel de versión es menor que la versión 7.0.  
   
--   **Nivel de representación 1** aceleración de hardware gráfico parcial. El [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] nivel de versión es mayor o igual a la versión 7.0, y **menor** que la versión 9.0.  
+- **Nivel de representación 1** aceleración de hardware gráfico parcial. El [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] nivel de versión es mayor o igual a la versión 7.0, y **menor** que la versión 9.0.  
   
--   **Nivel de representación 2** La mayoría de las características de gráficos utiliza la aceleración de hardware gráfico. El nivel de versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] es mayor o igual que la versión 9.0.  
+- **Nivel de representación 2** La mayoría de las características de gráficos utiliza la aceleración de hardware gráfico. El nivel de versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] es mayor o igual que la versión 9.0.  
   
  Para obtener más información sobre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] niveles de representación, vea [niveles de representación de gráficos](graphics-rendering-tiers.md).  
   

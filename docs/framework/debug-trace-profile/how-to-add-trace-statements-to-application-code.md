@@ -16,11 +16,11 @@ ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754548"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Procedimiento para agregar instrucciones de seguimiento al código de una aplicación
 Los métodos que se usan con mayor frecuencia para traza son los métodos para escribir los resultados en agentes de escucha: **Escribir**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, y **producirá un error en**. Estos métodos pueden dividirse en dos categorías: **Escribir**, **WriteLine**, y **producirá un error en** emiten resultados de forma incondicional, mientras que **WriteIf**, **WriteLineIf**y  **Assert** comprueban una condición booleana y escriben o no escriben en función del valor de la condición. **WriteIf** y **WriteLineIf** emiten resultados si la condición es `true` y **Assert** emite resultados si la condición es `false`.  

@@ -3,11 +3,11 @@ title: Proyecciones y transformaciones (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 297de224-b625-44cf-8c00-186b6189aa0e
 ms.openlocfilehash: dc53141a5fd9f3cd029c1694f489c683cc3ee271
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766524"
 ---
 # <a name="projections-and-transformations-linq-to-xml-visual-basic"></a>Proyecciones y transformaciones (LINQ to XML) (Visual Basic)
 En esta sección se proporcionan ejemplos de proyecciones y transformaciones [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

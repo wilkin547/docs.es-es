@@ -7,11 +7,11 @@ helpviewer_keywords:
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
 ms.openlocfilehash: be3c74e8f8c69eb9f0a1d0dda4d6c90dfd7e567a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760745"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Procedimiento Deducir tipos y nombres de propiedad en declaraciones de tipos anónimos (Visual Basic)
 Los tipos anónimos no proporcionan ningún mecanismo para especificar directamente los tipos de datos de propiedades. Los tipos de todas las propiedades son inferidos. En el ejemplo siguiente, los tipos de `Name` y `Price` se infieren directamente de los valores que se usan para inicializarlos.  
@@ -24,11 +24,11 @@ Los tipos anónimos no proporcionan ningún mecanismo para especificar directame
   
 #### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a>Los tipos anónimos pueden inferir nombres y tipos de propiedad de los orígenes siguientes:  
   
--   Nombres de variables. El tipo anónimo `anonProduct` tendrá dos propiedades, `productName` y `productPrice`. Sus tipos de datos serán los de las variables originales, `String` y `Double`, respectivamente.  
+- Nombres de variables. El tipo anónimo `anonProduct` tendrá dos propiedades, `productName` y `productPrice`. Sus tipos de datos serán los de las variables originales, `String` y `Double`, respectivamente.  
   
      [!code-vb[VbVbalrAnonymousTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#11)]  
   
--   Nombres de campo o propiedad de otros objetos. Por ejemplo, considere un objeto `car` de un tipo `CarClass` que incluya las propiedades `Name` y `ID` . Para crear una nueva instancia de tipo anónimo, `car1`, con las propiedades `Name` y `ID` que se inicializan con los valores del objeto `car` , puede escribir lo siguiente:  
+- Nombres de campo o propiedad de otros objetos. Por ejemplo, considere un objeto `car` de un tipo `CarClass` que incluya las propiedades `Name` y `ID` . Para crear una nueva instancia de tipo anónimo, `car1`, con las propiedades `Name` y `ID` que se inicializan con los valores del objeto `car` , puede escribir lo siguiente:  
   
      [!code-vb[VbVbalrAnonymousTypes#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#34)]  
   
@@ -36,13 +36,13 @@ Los tipos anónimos no proporcionan ningún mecanismo para especificar directame
   
      [!code-vb[VbVbalrAnonymousTypes#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#35)]  
   
--   Nombres de miembros XML.  
+- Nombres de miembros XML.  
   
      [!code-vb[VbVbalrAnonymousTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#12)]  
   
      El tipo resultante de `anon` tendría una propiedad, `Book`, del tipo <xref:System.Collections.IEnumerable>(de XElement).  
   
--   Una función sin parámetros, como `SomeFunction` en el ejemplo siguiente.  
+- Una función sin parámetros, como `SomeFunction` en el ejemplo siguiente.  
   
      `Dim sc As New SomeClass`  
   
@@ -56,7 +56,7 @@ Los tipos anónimos no proporcionan ningún mecanismo para especificar directame
   
 #### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>Se producirá un error en la inferencia de nombre en muchas circunstancias, incluidas las siguientes:  
   
--   La inferencia se deriva de la invocación de un método, un constructor o una propiedad con parámetros que requiere argumentos. La declaración anterior de `anon1` genera un error si `someFunction` tiene uno o más argumentos.  
+- La inferencia se deriva de la invocación de un método, un constructor o una propiedad con parámetros que requiere argumentos. La declaración anterior de `anon1` genera un error si `someFunction` tiene uno o más argumentos.  
   
      `' Not valid.`  
   
@@ -68,7 +68,7 @@ Los tipos anónimos no proporcionan ningún mecanismo para especificar directame
   
      `Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}`  
   
--   La inferencia se deriva de una expresión compleja.  
+- La inferencia se deriva de una expresión compleja.  
   
     ```  
     Dim aString As String = "Act "  
@@ -80,7 +80,7 @@ Los tipos anónimos no proporcionan ningún mecanismo para especificar directame
   
      [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]  
   
--   La inferencia de varias propiedades genera dos o más propiedades con el mismo nombre. Si nos referimos a las declaraciones de los ejemplos anteriores, no se pueden mostrar `product.Name` y `car1.Name` como propiedades del mismo tipo anónimo. Esto se debe a que el identificador inferido de cada uno de ellos sería `Name`.  
+- La inferencia de varias propiedades genera dos o más propiedades con el mismo nombre. Si nos referimos a las declaraciones de los ejemplos anteriores, no se pueden mostrar `product.Name` y `car1.Name` como propiedades del mismo tipo anónimo. Esto se debe a que el identificador inferido de cada uno de ellos sería `Name`.  
   
      `' Not valid.`  
   
@@ -98,7 +98,7 @@ Los tipos anónimos no proporcionan ningún mecanismo para especificar directame
   
      `' Dim anon7 = New With {Key product.Price, Key price}`  
   
--   El tipo y el valor iniciales de una propiedad dependen de otra propiedad que todavía no está establecida. Por ejemplo, `.IDName = .LastName` no es válido en una declaración de tipo anónimo, a menos que `.LastName` ya esté inicializado.  
+- El tipo y el valor iniciales de una propiedad dependen de otra propiedad que todavía no está establecida. Por ejemplo, `.IDName = .LastName` no es válido en una declaración de tipo anónimo, a menos que `.LastName` ya esté inicializado.  
   
      `' Not valid.`  
   
@@ -108,7 +108,7 @@ Los tipos anónimos no proporcionan ningún mecanismo para especificar directame
   
      [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]  
   
--   Un nombre de propiedad del tipo anónimo es igual que el nombre de un miembro de <xref:System.Object>. Por ejemplo, la siguiente declaración genera un error porque `Equals` es un método de <xref:System.Object>.  
+- Un nombre de propiedad del tipo anónimo es igual que el nombre de un miembro de <xref:System.Object>. Por ejemplo, la siguiente declaración genera un error porque `Equals` es un método de <xref:System.Object>.  
   
      `' Not valid.`  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
 ms.openlocfilehash: 0c5474a65bee7d3d290372e79f8423ea9986235f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767122"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Procedimiento para personalizar un enlace proporcionado por el sistema
 Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por el sistema que le permiten configurar algunas de las propiedades de los elementos de enlace subyacente, pero no todas las propiedades. En este tema se muestra cómo establecer las propiedades en los elementos de enlace para crear un enlace personalizado.  

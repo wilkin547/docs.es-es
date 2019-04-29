@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
 ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925653"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Operaciones básicas de consulta (Visual Basic)
 Este tema proporciona una breve introducción a [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expresiones en Visual Basic y algunos de los tipos de operaciones que se realizan en una consulta. Para obtener más información, vea los temas siguientes:  
@@ -81,7 +81,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Para seleccionar varios campos del origen de datos, tiene dos opciones:  
   
--   En el `Select` cláusula, especificar los campos que van a incluir en el resultado. El compilador definirá un tipo anónimo que tiene esos campos como sus propiedades. Para más información, vea [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+- En el `Select` cláusula, especificar los campos que van a incluir en el resultado. El compilador definirá un tipo anónimo que tiene esos campos como sus propiedades. Para más información, vea [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
      Dado que los elementos devueltos en el ejemplo siguiente son instancias de un tipo anónimo, no se puede consultar el tipo por su nombre en otro lugar en el código. El nombre designado por el compilador para el tipo contiene caracteres que no son válidos en el código de Visual Basic normal. En el ejemplo siguiente, los elementos de la colección devuelta por la consulta en `londonCusts4` son instancias de un tipo anónimo  
   
@@ -89,7 +89,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      -o bien-  
   
--   Definir un tipo con nombre que contenga los campos concretos que desea incluir en el resultado y crear e inicializar instancias del tipo en el `Select` cláusula. Use esta opción solo si tiene que utilizar fuera de la colección en el que se devuelven los resultados individuales, o si tiene que pasarlos como parámetros en las llamadas a métodos. El tipo de `londonCusts5` en el ejemplo siguiente es IEnumerable (Of NamePhone).  
+- Definir un tipo con nombre que contenga los campos concretos que desea incluir en el resultado y crear e inicializar instancias del tipo en el `Select` cláusula. Use esta opción solo si tiene que utilizar fuera de la colección en el que se devuelven los resultados individuales, o si tiene que pasarlos como parámetros en las llamadas a métodos. El tipo de `londonCusts5` en el ejemplo siguiente es IEnumerable (Of NamePhone).  
   
      [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   

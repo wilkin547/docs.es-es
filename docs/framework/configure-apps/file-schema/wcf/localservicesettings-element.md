@@ -3,11 +3,11 @@ title: Elemento <localServiceSettings>
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
 ms.openlocfilehash: e987d14edde3af6aca2ceb392976abe3b6460c9c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614575"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings > elemento
 Especifica la configuración de seguridad de un servicio local para este enlace.  
@@ -76,13 +76,13 @@ Especifica la configuración de seguridad de un servicio local para este enlace.
   
  Los siguientes atributos del elemento `localServiceSecuritySettings` pueden ayudar a mitigar un ataque de seguridad de denegación de servicio (DOS):  
   
--   `maxCachedCookies`: controla el número máximo de SecurityContextTokens limitados por el tiempo que están almacenados en memoria caché por el servidor después de realizar una negociación SPNEGO o SSL.  
+- `maxCachedCookies`: controla el número máximo de SecurityContextTokens limitados por el tiempo que están almacenados en memoria caché por el servidor después de realizar una negociación SPNEGO o SSL.  
   
--   `issuedCookieLifetime`: controla la duración de los SecurityContextTokens emitidos por el servidor tras la negociación SPNEGO o SSL. El servidor almacena en memoria caché los SecurityContextTokens durante este período de tiempo.  
+- `issuedCookieLifetime`: controla la duración de los SecurityContextTokens emitidos por el servidor tras la negociación SPNEGO o SSL. El servidor almacena en memoria caché los SecurityContextTokens durante este período de tiempo.  
   
--   `maxPendingSessions`: controla el número máximo de conversaciones seguras que se establecen en el servidor pero para las que no se ha procesado ningún mensaje de aplicación. Esta cuota evita que los clientes establezcan conversaciones seguras en el servicio, por lo que el servicio mantiene el estado para cada cliente, pero sin usarlo nunca.  
+- `maxPendingSessions`: controla el número máximo de conversaciones seguras que se establecen en el servidor pero para las que no se ha procesado ningún mensaje de aplicación. Esta cuota evita que los clientes establezcan conversaciones seguras en el servicio, por lo que el servicio mantiene el estado para cada cliente, pero sin usarlo nunca.  
   
--   `inactivityTimeout`: controla el tiempo máximo que el servicio mantiene viva una conversación segura sin recibir un mensaje de aplicación. Esta cuota evita que los clientes establezcan conversaciones seguras en el servicio, por lo que el servicio mantiene el estado para cada cliente, pero sin usarlo nunca.  
+- `inactivityTimeout`: controla el tiempo máximo que el servicio mantiene viva una conversación segura sin recibir un mensaje de aplicación. Esta cuota evita que los clientes establezcan conversaciones seguras en el servicio, por lo que el servicio mantiene el estado para cada cliente, pero sin usarlo nunca.  
   
  En una sesión de conversación segura, tenga en cuenta que tanto el atributo `inactivityTimeout` como el atributo `receiveTimeout` del enlace afectan al tiempo de espera de la sesión. El más corto de los dos determina cuándo se agota el tiempo de espera.  
   

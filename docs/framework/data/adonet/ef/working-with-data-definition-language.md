@@ -6,24 +6,24 @@ dev_langs:
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
 ms.openlocfilehash: 75a214ad1099bf48dcb2c2d3b36bf07dc0524f8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763924"
 ---
 # <a name="working-with-data-definition-language"></a>Trabajar con lenguaje de definición de datos
 A partir de la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] versión 4, el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es compatible con el lenguaje de definición de datos (DDL). Esto le permite crear o eliminar una instancia de la base de datos basada en la cadena de conexión y los metadatos del modelo de almacenamiento (SSDL).  
   
  Los siguientes métodos de <xref:System.Data.Objects.ObjectContext> utilizan la cadena de conexión y el contenido SSDL para crear o eliminar la base de datos, comprobar si la base de datos existe y ver el script DDL generado:  
   
--   <xref:System.Data.Objects.ObjectContext.CreateDatabase%2A>  
+- <xref:System.Data.Objects.ObjectContext.CreateDatabase%2A>  
   
--   <xref:System.Data.Objects.ObjectContext.DeleteDatabase%2A>  
+- <xref:System.Data.Objects.ObjectContext.DeleteDatabase%2A>  
   
--   <xref:System.Data.Objects.ObjectContext.DatabaseExists%2A>  
+- <xref:System.Data.Objects.ObjectContext.DatabaseExists%2A>  
   
--   <xref:System.Data.Objects.ObjectContext.CreateDatabaseScript%2A>  
+- <xref:System.Data.Objects.ObjectContext.CreateDatabaseScript%2A>  
   
 > [!NOTE]
 >  La ejecución de los comandos DDL supone que se cuenta con los permisos necesarios.  
@@ -40,13 +40,13 @@ A partir de la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)
   
 2. Agregue un modelo existente a la aplicación.  
   
-    1.  Agregar un modelo vacío denominado `SchoolModel`. Para crear un modelo vacío, consulte el [Cómo: Crear un nuevo archivo .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) tema.  
+    1. Agregar un modelo vacío denominado `SchoolModel`. Para crear un modelo vacío, consulte el [Cómo: Crear un nuevo archivo .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) tema.  
   
      El archivo SchoolModel.edmx se añade al proyecto.  
   
-    1.  Copie el conceptual, almacenamiento y la asignación de contenido para el modelo School desde el [modelo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) tema.  
+    1. Copie el conceptual, almacenamiento y la asignación de contenido para el modelo School desde el [modelo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) tema.  
   
-    2.  Abra el archivo SchoolModel.edmx y pegue el contenido dentro de las etiquetas `edmx:Runtime`.  
+    2. Abra el archivo SchoolModel.edmx y pegue el contenido dentro de las etiquetas `edmx:Runtime`.  
   
 3. Agregue el siguiente código a la función principal. El código inicializa la cadena de conexión en el servidor de bases de datos, ve el script DDL, crea la base de datos, agrega una nueva entidad al contexto y guarda los cambios en la base de datos.  
   

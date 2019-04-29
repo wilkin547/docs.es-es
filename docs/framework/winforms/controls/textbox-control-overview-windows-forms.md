@@ -12,11 +12,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], adding
 ms.assetid: d1a9c7f5-fa53-480a-a75c-158f8649ea2f
 ms.openlocfilehash: a91b67df1071c79707bb20a68efb4d5e6f083ae0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932553"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>Información general sobre el control TextBox (formularios Windows Forms)
 Los cuadros de texto de Windows Forms se utilizan para obtener datos proporcionados por el usuario o para mostrar texto. El <xref:System.Windows.Forms.TextBox> control se utiliza generalmente para el texto editable, aunque también se pueden hacer de solo lectura. Los cuadros de texto pueden mostrar varias líneas, ajustar el texto para el tamaño del control y agregar formato básico. El <xref:System.Windows.Forms.TextBox> control proporciona un único estilo de formato para mostrar o escribir en el control de texto. Para mostrar varios tipos de texto con formato, use el <xref:System.Windows.Forms.RichTextBox> control. Para obtener más información, consulte [información general del Control RichTextBox](richtextbox-control-overview-windows-forms.md).  

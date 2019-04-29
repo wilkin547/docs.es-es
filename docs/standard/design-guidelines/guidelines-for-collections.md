@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: KrzysztofCwalina
 ms.openlocfilehash: a8e8672d71500478dbbe28512e413e8ada501f45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669056"
 ---
 # <a name="guidelines-for-collections"></a>Instrucciones para colecciones
 Cualquier tipo que se ha diseñado específicamente para manipular un grupo de objetos que tienen alguna característica común puede considerarse una colección. Casi siempre es adecuado para estos tipos implementar <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, por lo que en esta sección se considere sólo tipos que implementan una o ambas de estas interfaces para ser colecciones.  

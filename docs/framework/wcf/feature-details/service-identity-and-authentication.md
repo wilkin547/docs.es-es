@@ -8,11 +8,11 @@ helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
 ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748270"
 ---
 # <a name="service-identity-and-authentication"></a>Identidad del servicio y autenticación
 Un servicio *identidad de extremo* es un valor generado desde el servicio de lenguaje de descripción de servicios Web (WSDL). Este valor, propagado a cualquier cliente, se utiliza para autenticar el servicio. Después de que el cliente inicie una comunicación con un punto de conexión y el servicio se autentique a sí mismo ante el cliente, el cliente compara el valor de identidad del punto de conexión con el valor real devuelto por el proceso de autenticación del punto de conexión. Si coinciden, se asegura al cliente que se ha puesto en contacto con el punto de conexión de servicio esperado. Esto funciona como una protección frente a *"phishing"* al impedir que un cliente se redirige a un punto de conexión hospedado por un servicio malintencionado.  
@@ -26,9 +26,9 @@ Un servicio *identidad de extremo* es un valor generado desde el servicio de len
   
  El procesamiento de la identidad consta de las siguientes fases:  
   
--   En la fase de diseño, el programador del cliente determina la identidad del servicio desde los metadatos del punto de conexión (se expone a través de WSDL).  
+- En la fase de diseño, el programador del cliente determina la identidad del servicio desde los metadatos del punto de conexión (se expone a través de WSDL).  
   
--   En el tiempo de ejecución, la aplicación de cliente comprueba las notificaciones de las credenciales de seguridad del servicio antes de enviar ningún mensaje al servicio.  
+- En el tiempo de ejecución, la aplicación de cliente comprueba las notificaciones de las credenciales de seguridad del servicio antes de enviar ningún mensaje al servicio.  
   
  El procesamiento de identidad en el cliente es análogo a la autenticación del cliente en el servicio. Un servicio seguro no ejecuta código hasta que se hayan autenticado las credenciales del cliente. Del mismo modo, el cliente no envía mensajes al servicio hasta que las credenciales del servicio se hayan autenticado en función de lo que se conoce de antemano de los metadatos del servicio.  
   
@@ -78,21 +78,21 @@ Un servicio *identidad de extremo* es un valor generado desde el servicio de len
   
  Si el canal se configura para autenticar mediante capa de sockets seguros (SSL) del nivel de transporte o mensaje con certificados X.509 para la autenticación, los siguientes valores de identidad son válidos:  
   
--   DNS. WCF garantiza que el certificado proporcionado durante el protocolo de enlace SSL contiene un DNS o `CommonName` atributo (CN) igual al valor especificado en la identidad DNS en el cliente. Observe que estas comprobaciones se hacen además de determinar la validez del certificado de servidor. De forma predeterminada, WCF valida que el certificado de servidor es emitido por una entidad emisora raíz de confianza.  
+- DNS. WCF garantiza que el certificado proporcionado durante el protocolo de enlace SSL contiene un DNS o `CommonName` atributo (CN) igual al valor especificado en la identidad DNS en el cliente. Observe que estas comprobaciones se hacen además de determinar la validez del certificado de servidor. De forma predeterminada, WCF valida que el certificado de servidor es emitido por una entidad emisora raíz de confianza.  
   
--   Certificado. Durante el protocolo de enlace SSL, WCF asegura que el punto de conexión remoto proporciona el valor de certificado exacto especificado en la identidad.  
+- Certificado. Durante el protocolo de enlace SSL, WCF asegura que el punto de conexión remoto proporciona el valor de certificado exacto especificado en la identidad.  
   
--   Referencia del certificado. Igual que el certificado.  
+- Referencia del certificado. Igual que el certificado.  
   
--   RSA. Durante el protocolo de enlace SSL, WCF asegura que el punto de conexión remoto proporciona la clave RSA exacta especificada en la identidad.  
+- RSA. Durante el protocolo de enlace SSL, WCF asegura que el punto de conexión remoto proporciona la clave RSA exacta especificada en la identidad.  
   
  Si el servicio autentica utilizando SSL de nivel de transporte o mensaje con una credencial de Windows para la autenticación y negocia la credencial, son válidos los siguientes valores de identidad:  
   
--   DNS. La negociación pasa el SPN del servicio para que se pueda comprobar el nombre DNS. SPN está en forma de `host/<dns name>`.  
+- DNS. La negociación pasa el SPN del servicio para que se pueda comprobar el nombre DNS. SPN está en forma de `host/<dns name>`.  
   
--   SPN. Se devuelve un SPN de servicio explícito, por ejemplo, `host/myservice`.  
+- SPN. Se devuelve un SPN de servicio explícito, por ejemplo, `host/myservice`.  
   
--   UPN. UPN de la cuenta de servicio. El UPN está en el formulario `username` @ `domain`. Por ejemplo, cuando el servicio se ejecuta en una cuenta de usuario, puede ser `username@contoso.com`.  
+- UPN. UPN de la cuenta de servicio. El UPN está en el formulario `username` @ `domain`. Por ejemplo, cuando el servicio se ejecuta en una cuenta de usuario, puede ser `username@contoso.com`.  
   
  Especificar la identidad mediante programación es opcional (utilizando la propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A>). Si no se especifica ninguna identidad, y el tipo de credencial de cliente es Windows, el valor predeterminado es SPN con el valor establecido en la parte del nombre del host de la dirección del punto de conexión de servicio prefijada con el literal "host/". Si no se especifica ninguna identidad y el tipo de credencial de cliente es un certificado, el valor predeterminado es `Certificate`. Esto se aplica a la seguridad de nivel de mensaje y transporte.  
   

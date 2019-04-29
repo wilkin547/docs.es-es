@@ -7,33 +7,33 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759913"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados
 Si los componentes están definidos por un proyecto en la solución actualmente abierta, estas aparecerán automáticamente en el **cuadro de herramientas**, con ninguna acción requerida por el usuario. Puede rellenar manualmente el **cuadro de herramientas** con componentes personalizados mediante el uso de la [elegir elementos de cuadro de diálogo) (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), pero la **cuadro de herramientas** tiene en cuenta de elementos de la solución de resultados de la compilación con las siguientes características:  
   
--   Implementa <xref:System.ComponentModel.IComponent>;  
+- Implementa <xref:System.ComponentModel.IComponent>;  
   
--   No tiene <xref:System.ComponentModel.ToolboxItemAttribute> establecido en `false`;  
+- No tiene <xref:System.ComponentModel.ToolboxItemAttribute> establecido en `false`;  
   
--   No tiene <xref:System.ComponentModel.DesignTimeVisibleAttribute> establecido en `false`.  
+- No tiene <xref:System.ComponentModel.DesignTimeVisibleAttribute> establecido en `false`.  
   
 > [!NOTE]
 >  El **cuadro de herramientas** no sigue las cadenas de referencia, por lo que no mostrará los elementos que no se compilan en un proyecto de la solución.  
   
  Este tutorial muestra cómo un componente personalizado aparece automáticamente en el **cuadro de herramientas** una vez que se basa el componente. Las tareas ilustradas en este tutorial incluyen:  
   
--   Crear un proyecto de Windows Forms.  
+- Crear un proyecto de Windows Forms.  
   
--   Creación de un componente personalizado.  
+- Creación de un componente personalizado.  
   
--   Creación de una instancia de un componente personalizado.  
+- Creación de una instancia de un componente personalizado.  
   
--   Descarga y carga un componente personalizado.  
+- Descarga y carga un componente personalizado.  
   
  Cuando haya terminado, verá que el **cuadro de herramientas** se rellena con un componente que ha creado.  
   

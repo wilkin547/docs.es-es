@@ -5,20 +5,20 @@ f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
 ms.openlocfilehash: 9aa7ba0babe0a89942e320a76e07c05162b31700
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751623"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Error inesperado porque no se puede conseguir un recurso del sistema operativo necesario para el inicio de una instancia única
 La aplicación no pudo obtener un recurso de sistema operativo necesario. Algunas de las posibles causas de este problema son:  
   
--   La aplicación no tiene permisos para crear objetos de sistema operativo con nombre.  
+- La aplicación no tiene permisos para crear objetos de sistema operativo con nombre.  
   
--   Common Language Runtime no tiene permisos para crear archivos asignados a memoria.  
+- Common Language Runtime no tiene permisos para crear archivos asignados a memoria.  
   
--   La aplicación necesita acceder a un objeto de sistema operativo, pero hay otro proceso que lo está utilizando.  
+- La aplicación necesita acceder a un objeto de sistema operativo, pero hay otro proceso que lo está utilizando.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   

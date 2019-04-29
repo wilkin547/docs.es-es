@@ -3,11 +3,11 @@ title: Directivas de compilador
 description: Obtenga información sobre F# las directivas de preprocesador de lenguaje, directivas de compilación condicional, las directivas de línea y las directivas de compilador.
 ms.date: 12/10/2018
 ms.openlocfilehash: 3fade7407f84b00163bd5b3d7774104bce8a25af
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766108"
 ---
 # <a name="compiler-directives"></a>Directivas de compilador
 
@@ -24,7 +24,7 @@ En la siguiente tabla se recoge una lista de las directivas de preprocesador dis
 |`#if` *Símbolo*|Admite la compilación condicional. Código de la sección después de la `#if` se incluye si el *símbolo* está definido. El símbolo también se puede negar con `!`.|
 |`#else`|Admite la compilación condicional. Marca una sección de código que incluir si el símbolo usado con la directiva `#if` anterior no se ha definido.|
 |`#endif`|Admite la compilación condicional. Marca el final de una sección condicional de código.|
-|`#`[línea] *int*,<br/>`#`[línea] *int* *cadena*,<br/>`#`[línea] *int* *cadena textual*|Indica el nombre de archivo y la línea de código fuente original para la depuración. Esta característica se proporciona para las herramientas que generan código fuente de F#.|
+|`#`[línea] *int*,<br/>`#`[línea] *int* *cadena*,<br/>`#`[line] *int* *verbatim-string*|Indica el nombre de archivo y la línea de código fuente original para la depuración. Esta característica se proporciona para las herramientas que generan código fuente de F#.|
 |`#nowarn` *warningCode*|Deshabilita una o varias advertencias del compilador. Para deshabilitar una advertencia, encuentre su número correspondiente en los resultados del compilador e inclúyalo entre comillas. Omita el prefijo "FS". Para deshabilitar varios números de advertencia en la misma línea, incluya cada número entre comillas y separe cada cadena con un espacio. Por ejemplo:
 
 `#nowarn "9" "40"`

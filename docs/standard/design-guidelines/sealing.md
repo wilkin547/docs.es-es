@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
 ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762070"
 ---
 # <a name="sealing"></a>Sellar
 Una de las características de marcos de trabajo orientado a objetos es que los desarrolladores pueden ampliar y personalizarlos en modos imprevistos por los diseñadores de framework. Se trata de la eficacia y el peligro de diseño extensible. Al diseñar su marco, es, por lo tanto, muy importante para diseñar cuidadosamente para la extensibilidad cuando lo desee y para limitar la extensibilidad cuando resulta peligroso.  
@@ -27,13 +27,13 @@ Una de las características de marcos de trabajo orientado a objetos es que los 
   
  Buenas razones para sellar una clase incluyen lo siguiente:  
   
--   La clase es una clase estática. Consulte [diseño de clases estáticas](../../../docs/standard/design-guidelines/static-class.md).  
+- La clase es una clase estática. Consulte [diseño de clases estáticas](../../../docs/standard/design-guidelines/static-class.md).  
   
--   La clase almacena los secretos de seguridad en los miembros protegidos heredados.  
+- La clase almacena los secretos de seguridad en los miembros protegidos heredados.  
   
--   La clase hereda a muchos miembros virtuales y el costo de sellar ellos individualmente superaría con creces las ventajas de salir de la clase no sellada.  
+- La clase hereda a muchos miembros virtuales y el costo de sellar ellos individualmente superaría con creces las ventajas de salir de la clase no sellada.  
   
--   La clase es un atributo que requiere la búsqueda en tiempo de ejecución muy rápida. Atributos sealed tienen niveles de rendimiento ligeramente superiores que no sellado que. consulte [atributos](../../../docs/standard/design-guidelines/attributes.md).  
+- La clase es un atributo que requiere la búsqueda en tiempo de ejecución muy rápida. Atributos sealed tienen niveles de rendimiento ligeramente superiores que no sellado que. consulte [atributos](../../../docs/standard/design-guidelines/attributes.md).  
   
  **X DO NOT** declarar miembros protegidos o virtuales en tipos sealed.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
 ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762090"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>Temas "Cómo..." sobre programación de capas visuales
 Los temas de esta sección muestran cómo utilizar la capa visual de composición de la prueba de posicionamiento y de bajo nivel.  

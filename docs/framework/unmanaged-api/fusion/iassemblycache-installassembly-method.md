@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7199fbc0c8760354269a50b647952729860c805b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697556"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>IAssemblyCache::InstallAssembly (Método)
 Instala al ensamblado especificado en la caché global de ensamblados.  
@@ -41,9 +41,9 @@ HRESULT InstallAssembly (
  `dwFlags`  
  [in] Marcadores definidos en Fusion.idl. Se admiten los siguientes valores:  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
+- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
+- IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pszManifestFilePath`  
  [in] La ruta de acceso al manifiesto del ensamblado que se va a instalar.  

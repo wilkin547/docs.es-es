@@ -11,11 +11,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
 ms.openlocfilehash: a887dacfcb83b4b6ea4cb2690ab09b0d1b20b4fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772897"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Tutorial: Crear un formulario maestro y detalle mediante dos controles DataGridView de formularios Windows Forms
 Uno de los escenarios más comunes para usar el <xref:System.Windows.Forms.DataGridView> control es el *principal-detalle* formulario, en el que se muestra una relación primaria-secundaria entre dos tablas de base de datos. Selección de filas en la tabla maestra hace que la tabla de detalles actualizar con los datos secundarios correspondientes.  
@@ -27,7 +27,7 @@ Uno de los escenarios más comunes para usar el <xref:System.Windows.Forms.DataG
 ## <a name="prerequisites"></a>Requisitos previos  
  Para poder completar este tutorial, necesitará:  
   
--   Acceso a un servidor que tenga la base de datos de ejemplo Northwind de SQL Server.  
+- Acceso a un servidor que tenga la base de datos de ejemplo Northwind de SQL Server.  
   
 ## <a name="creating-the-form"></a>Crear el formulario  
   
@@ -58,22 +58,22 @@ Uno de los escenarios más comunes para usar el <xref:System.Windows.Forms.DataG
   
 #### <a name="to-test-the-form"></a>Para comprobar el formulario  
   
--   Compile y ejecute la aplicación.  
+- Compile y ejecute la aplicación.  
   
      Verá dos <xref:System.Windows.Forms.DataGridView> controla uno encima del otro. En la parte superior son los clientes de Northwind `Customers` de tabla y, en la parte inferior está la `Orders` correspondiente al cliente seleccionado. Seleccionar filas diferentes en la esquina superior <xref:System.Windows.Forms.DataGridView>, el contenido de la parte inferior <xref:System.Windows.Forms.DataGridView> cambia en consecuencia.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  Esta aplicación le ofrece un conocimiento básico de la <xref:System.Windows.Forms.DataGridView> capacidades del control. Puede personalizar la apariencia y comportamiento de la <xref:System.Windows.Forms.DataGridView> control de varias maneras:  
   
--   Cambiar los estilos de borde y encabezado. Para obtener más información, vea [Cómo: Cambiar el borde y los estilos de línea de cuadrícula en la Windows Forms DataGridView Control](change-the-border-and-gridline-styles-in-the-datagrid.md).  
+- Cambiar los estilos de borde y encabezado. Para obtener más información, vea [Cómo: Cambiar el borde y los estilos de línea de cuadrícula en la Windows Forms DataGridView Control](change-the-border-and-gridline-styles-in-the-datagrid.md).  
   
--   Habilitar o restringir la entrada del usuario a la <xref:System.Windows.Forms.DataGridView> control. Para obtener más información, vea [Cómo: Impedir la adición de la fila y la eliminación en la Windows Forms DataGridView Control](prevent-row-addition-and-deletion-datagridview.md), y [Cómo: Crear columnas de sólo lectura en la Windows Forms DataGridView Control](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
+- Habilitar o restringir la entrada del usuario a la <xref:System.Windows.Forms.DataGridView> control. Para obtener más información, vea [Cómo: Impedir la adición de la fila y la eliminación en la Windows Forms DataGridView Control](prevent-row-addition-and-deletion-datagridview.md), y [Cómo: Crear columnas de sólo lectura en la Windows Forms DataGridView Control](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
   
--   Validar la entrada del usuario a la <xref:System.Windows.Forms.DataGridView> control. Para obtener más información, vea [Tutorial: Validar datos en el Windows Forms DataGridView Control](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
+- Validar la entrada del usuario a la <xref:System.Windows.Forms.DataGridView> control. Para obtener más información, vea [Tutorial: Validar datos en el Windows Forms DataGridView Control](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
   
--   Controlar grandes conjuntos de datos utilizando el modo virtual. Para obtener más información, vea [Tutorial: Implementar el modo Virtual en el Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).  
+- Controlar grandes conjuntos de datos utilizando el modo virtual. Para obtener más información, vea [Tutorial: Implementar el modo Virtual en el Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).  
   
--   Personalizar la apariencia de celdas. Para obtener más información, vea [Cómo: Personalizar la apariencia de celdas en el Control DataGridView de formularios de Windows](customize-the-appearance-of-cells-in-the-datagrid.md) y [Cómo: Establecer estilos de celda predeterminados para los Windows Forms DataGridView Control](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
+- Personalizar la apariencia de celdas. Para obtener más información, vea [Cómo: Personalizar la apariencia de celdas en el Control DataGridView de formularios de Windows](customize-the-appearance-of-cells-in-the-datagrid.md) y [Cómo: Establecer estilos de celda predeterminados para los Windows Forms DataGridView Control](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vea también
 

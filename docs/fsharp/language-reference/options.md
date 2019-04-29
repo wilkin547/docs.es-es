@@ -3,11 +3,11 @@ title: Opciones
 description: Aprenda a usar F# opción tipos cuando no exista un valor real para un valor con nombre o variable.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6d32693bccc74c2cab642e4f626c9463092e8a39
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666487"
 ---
 # <a name="options"></a>Opciones
 

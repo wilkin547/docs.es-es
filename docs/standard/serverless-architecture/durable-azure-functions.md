@@ -5,13 +5,13 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 8ad354e1708eb88f016130f8235f534b967eb122
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776017"
 ---
-# <a name="durable-azure-functions"></a>Durable functions de Azure
+# <a name="durable-azure-functions"></a>Funciones de Azure duraderas
 
 Al crear aplicaciones sin servidor con Azure Functions, las operaciones normalmente se ha diseñado para ejecutarse de forma independiente. La razón de esta opción de diseño es que como las escalas de la plataforma, resulta difícil saber qué se está ejecutando el código en los servidores. También resulta difícil saber cuántas instancias están activas en un momento dado. Sin embargo, hay clases de aplicaciones que requieren el estado actual de un proceso que se conoce. Tenga en cuenta el proceso de enviar un pedido a una tienda en línea. La operación de desprotección podría ser un flujo de trabajo que se compone de varias operaciones que debe conocer el estado del proceso. Dicha información puede incluir el inventario de productos, si el cliente tiene los créditos de su cuenta, además de los resultados del procesamiento de la tarjeta de crédito. Estas operaciones podrían ser fácilmente sus propios flujos de trabajo internos o incluso servicios de sistemas de terceros.
 

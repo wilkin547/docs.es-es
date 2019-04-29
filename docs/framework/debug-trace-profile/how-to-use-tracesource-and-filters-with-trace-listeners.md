@@ -17,11 +17,11 @@ ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6805385ec21deb8748354647ab0f09b3a51353fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754419"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Procedimiento para usar TraceSource y filtros con agentes de escucha de seguimiento
 Una de las nuevas características de la versión 2.0 de .NET Framework es un sistema de seguimiento mejorado. La idea básica no se ha modificado: se envían mensajes de seguimiento a través de conmutadores a agentes de escucha, que notifican los datos a un medio de salida asociado. Una diferencia principal de la versión 2.0 es que los seguimientos se pueden iniciar a través de instancias de la clase <xref:System.Diagnostics.TraceSource>. <xref:System.Diagnostics.TraceSource> está pensada para funcionar como un sistema de seguimiento mejorado y se puede usar en lugar de los métodos estáticos de las clases anteriores de seguimiento <xref:System.Diagnostics.Trace> y <xref:System.Diagnostics.Debug>. Las clases <xref:System.Diagnostics.Trace> y <xref:System.Diagnostics.Debug> conocidas siguen existiendo, pero la práctica recomendada es usar la clase <xref:System.Diagnostics.TraceSource> para realizar el seguimiento.  

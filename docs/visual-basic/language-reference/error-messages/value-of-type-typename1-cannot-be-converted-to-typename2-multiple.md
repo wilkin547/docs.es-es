@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
 ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766823"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>Valor de tipo '\<typename1 >' no se puede convertir a '\<nombredetipo2 >' (varias referencias de archivo)
 Valor de tipo '\<typename1 >' no se puede convertir a '\<nombredetipo2 >'. Discordancia de tipos podría ser debido a la combinación de una referencia a '\<rutadeaccesodearchivo1 >' en el proyecto '\<projectname1 >' con una referencia a '\<rutadeaccesodearchivo2 >' en el proyecto '\<projectname2 >'. Si ambos ensamblados son idénticos, intente reemplazar estas referencias para que ambas procedan de la misma ubicación.  
@@ -27,9 +27,9 @@ Valor de tipo '\<typename1 >' no se puede convertir a '\<nombredetipo2 >'. Disco
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Si los ensamblados de referencia tienen la misma identidad de ensamblado, quitar o reemplazar una de las referencias de archivo, por lo que hay solo una referencia de archivo.  
+- Si los ensamblados de referencia tienen la misma identidad de ensamblado, quitar o reemplazar una de las referencias de archivo, por lo que hay solo una referencia de archivo.  
   
--   Si los ensamblados de referencia no tienen la misma identidad de ensamblado, a continuación, cambie el código para que no intenta convertir a un tipo de una a un tipo en el otro.  
+- Si los ensamblados de referencia no tienen la misma identidad de ensamblado, a continuación, cambie el código para que no intenta convertir a un tipo de una a un tipo en el otro.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -1,17 +1,17 @@
 ---
-title: 'Servicio: Canales y escuchas de canales'
+title: 'Servicio: Escuchas de canales y canales'
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
 ms.openlocfilehash: 88bfdc879e4f3c7df6b2c4035c7ed7fdc2b4c41d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771467"
 ---
-# <a name="service-channel-listeners-and-channels"></a>Servicio: Canales y escuchas de canales
+# <a name="service-channel-listeners-and-channels"></a>Servicio: Escuchas de canales y canales
 
-Hay tres categorías de objetos de canal: canales, escuchas de canales y generadores de canales. Los canales son la interfaz entre la aplicación y la pila de canales. Las escuchas de canales son responsables de crear los canales en el lado de recepción (o escucha), normalmente en respuesta a un nuevo mensaje entrante o conexión. Los generadores de canales son responsables de crear los canales en el lado de envío para iniciar la comunicación con un punto de conexión.
+Hay tres categorías de objetos de canal: canales, escuchas de canales y generadores de canales. Los canales son la interfaz entre la aplicación y la pila de canales. Las escuchas de canales son responsables de crear los canales en el lado de recepción (o escucha), normalmente en respuesta a un nuevo mensaje entrante o conexión. Los generadores de canales son responsables de crear los canales en el lado de envío para iniciar la comunicación con un extremo.
 
 ## <a name="channel-listeners-and-channels"></a>Escuchas de canales y canales
 

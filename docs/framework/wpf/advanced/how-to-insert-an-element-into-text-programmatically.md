@@ -12,11 +12,11 @@ helpviewer_keywords:
 - text [WPF], inserting elements
 ms.assetid: 97bd950a-25ac-4e42-a311-94b6420d4136
 ms.openlocfilehash: ea9850c8490ec37032d4565c6b3375e3116d4313
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757123"
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a>Procedimiento Insertar un elemento en texto mediante programación
 El ejemplo siguiente muestra cómo utilizar dos <xref:System.Windows.Documents.TextPointer> objetos para especificar un intervalo de texto que se aplicará un <xref:System.Windows.Documents.Span> elemento.  

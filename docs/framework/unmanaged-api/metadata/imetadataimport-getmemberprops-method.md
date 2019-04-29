@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 83dec9b6ed3b1e538e0f1b7d13a33b8bdbc1cf54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777733"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps (Método)
 Obtiene la información almacenada en los metadatos de una definición de miembro especificado, incluido el nombre, la firma binaria y la dirección virtual relativa, de la <xref:System.Type> miembro al que hace referencia el token de metadatos especificado. Se trata de un método auxiliar simple: si *mb* es MethodDef, a continuación, **GetMethodProps** se denomina; si *mb* es un FieldDef, a continuación, **GetFieldProps** se llama. Consulte estos otros métodos para obtener más información. 

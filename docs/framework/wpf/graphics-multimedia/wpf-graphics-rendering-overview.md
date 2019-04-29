@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765068"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Información general sobre la representación de gráficos en WPF
 En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Se centra en el rol de la <xref:System.Windows.Media.Visual> clase para representar la compatibilidad en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo.  
@@ -24,27 +24,27 @@ En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA
   
  El <xref:System.Windows.Media.Visual> objeto es un núcleo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objeto, cuyo rol principal es proporcionar compatibilidad con la representación. Controles de interfaz de usuario, como <xref:System.Windows.Controls.Button> y <xref:System.Windows.Controls.TextBox>, derivan de la <xref:System.Windows.Media.Visual> clase y usarla para conservar sus datos de representación. La <xref:System.Windows.Media.Visual> objeto proporciona compatibilidad para:  
   
--   Presentación de salida: Representación persistente, serializa el contenido de dibujo de un objeto visual.  
+- Presentación de salida: Representación persistente, serializa el contenido de dibujo de un objeto visual.  
   
--   Transformaciones: Realización de transformaciones en un objeto visual.  
+- Transformaciones: Realización de transformaciones en un objeto visual.  
   
--   Recorte: Proporcionar compatibilidad con regiones de recorte de un objeto visual.  
+- Recorte: Proporcionar compatibilidad con regiones de recorte de un objeto visual.  
   
--   La prueba de posicionamiento: Determinar si una coordenada o geometría está dentro de los límites de un objeto visual.  
+- La prueba de posicionamiento: Determinar si una coordenada o geometría está dentro de los límites de un objeto visual.  
   
--   Los cálculos del cuadro de límite: Determinar el rectángulo delimitador de un objeto visual.  
+- Los cálculos del cuadro de límite: Determinar el rectángulo delimitador de un objeto visual.  
   
  Sin embargo, la <xref:System.Windows.Media.Visual> objeto no incluye compatibilidad con características no son de representación, como:  
   
--   Control de eventos  
+- Control de eventos  
   
--   Diseño  
+- Diseño  
   
--   Estilos  
+- Estilos  
   
--   Enlace de datos  
+- Enlace de datos  
   
--   Globalización  
+- Globalización  
   
  <xref:System.Windows.Media.Visual> se expone como una clase abstracta pública desde el que se deben derivar clases secundarias. La siguiente ilustración muestra la jerarquía de los objetos visuales que se exponen en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
@@ -127,13 +127,13 @@ Orden de las operaciones de DrawingGroup
   
  Hay que tener en cuenta varios aspectos de la jerarquía de objetos visuales y las listas de instrucciones de gráficos vectoriales:  
   
--   El orden de la jerarquía representa el orden de procesamiento de la información de dibujo. Desde el elemento del objeto visual raíz, se atraviesa a los elementos secundarios de izquierda a derecha y de arriba a abajo. Si un elemento tiene elementos visuales secundarios, se atraviesan antes que los relacionados del elemento.  
+- El orden de la jerarquía representa el orden de procesamiento de la información de dibujo. Desde el elemento del objeto visual raíz, se atraviesa a los elementos secundarios de izquierda a derecha y de arriba a abajo. Si un elemento tiene elementos visuales secundarios, se atraviesan antes que los relacionados del elemento.  
   
--   Elementos de nodo no hoja de la jerarquía, tales como <xref:System.Windows.Controls.ContentPresenter>, se utilizan para contener elementos secundarios, no contienen listas de instrucciones.  
+- Elementos de nodo no hoja de la jerarquía, tales como <xref:System.Windows.Controls.ContentPresenter>, se utilizan para contener elementos secundarios, no contienen listas de instrucciones.  
   
--   Si un elemento visual contiene una lista de instrucciones de gráficos vectoriales y elementos secundarios visuales, la lista de instrucciones del elemento visual primario se representa antes que los dibujos en cualquiera de los objetos visuales secundarios.  
+- Si un elemento visual contiene una lista de instrucciones de gráficos vectoriales y elementos secundarios visuales, la lista de instrucciones del elemento visual primario se representa antes que los dibujos en cualquiera de los objetos visuales secundarios.  
   
--   Los elementos de la lista de instrucciones de gráficos vectoriales se representan de izquierda a derecha.  
+- Los elementos de la lista de instrucciones de gráficos vectoriales se representan de izquierda a derecha.  
   
 <a name="visual_tree"></a>   
 ## <a name="visual-tree"></a>Árbol visual  

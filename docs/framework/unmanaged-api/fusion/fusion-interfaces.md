@@ -9,18 +9,18 @@ ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697672"
 ---
 # <a name="fusion-interfaces"></a>Interfaces de Fusion
-Esta sección describen las interfaces no administradas que utiliza la API de fusión para tener acceso a las propiedades de recursos de la aplicación y a encontrar las versiones correctas de estos recursos para la aplicación.  
+Esta sección describen las interfaces no administradas que utiliza la API de fusión para tener acceso a las propiedades de recursos de la aplicación y a encontrar las versiones correctas de esos recursos para la aplicación.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [IAppIdAuthority (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)  
- Proporciona métodos que generan y comparan las identidades de la aplicación y referencias de claves.  
+ Proporciona métodos que generan y comparan las identidades de aplicaciones y las referencias de claves.  
   
  [IAssemblyCache (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  
  Proporciona una representación de la caché global de ensamblados.  
@@ -56,7 +56,7 @@ Esta sección describen las interfaces no administradas que utiliza la API de fu
  Representa un enumerador para los ensamblados instalados en la caché global de ensamblados.  
   
  [IInstallReferenceItem (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  
- Representa un elemento instalado en la caché global de ensamblados.  
+ Representa un elemento que se instalan en la caché global de ensamblados.  
   
  [IReferenceAppId (interfaz)](../../../../docs/framework/unmanaged-api/fusion/ireferenceappid-interface.md)  
  Representa una referencia al identificador único para la aplicación en el ámbito actual.  

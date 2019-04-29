@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
 ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759874"
 ---
 # <a name="windows-forms-control-development-basics"></a>Fundamentos de desarrollo de controles de formularios Windows Forms
 Un control de Windows Forms es una clase que deriva directa o indirectamente de <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. En la lista siguiente se describe escenarios comunes para desarrollar controles de formularios Windows Forms:  
   
--   Combinación de controles existentes para crear un control compuesto.  
+- Combinación de controles existentes para crear un control compuesto.  
   
      Los controles compuestos encapsulan una interfaz de usuario que se puede reutilizar como un control. Un ejemplo de un control compuesto es un control que consta de un cuadro de texto y un botón Restablecer. Los diseñadores visuales ofrecen una compatibilidad enriquecida para crear controles compuestos. Para crear un control compuesto, derive de <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>. La clase base <xref:System.Windows.Forms.UserControl> proporciona enrutamiento de teclado para los controles secundarios y permite a los controles secundarios para que funcione como un grupo. Para obtener más información, vea [Desarrollar un control de formularios Windows Forms compuesto](developing-a-composite-windows-forms-control.md).  
   
--   Ampliación de un control existente para personalizarlo o agregar a su funcionalidad.  
+- Ampliación de un control existente para personalizarlo o agregar a su funcionalidad.  
   
      Un botón cuyo color no se puede cambiar y un botón que tiene una propiedad adicional que realiza el seguimiento de cuántas veces se ha hecho clic son ejemplos de controles extendidos. Puede personalizar cualquier control de Windows Forms derivados de él y reemplazar o agregando propiedades, métodos y eventos.  
   
--   Creación de un control que no se combina ni extender los controles existentes.  
+- Creación de un control que no se combina ni extender los controles existentes.  
   
      En este escenario, derive el control de la clase base <xref:System.Windows.Forms.Control>. Puede agregar, así como invalidar las propiedades, métodos y eventos de la clase base. Para empezar, vea [Cómo: Desarrollar un Control de formularios de Windows Simple](how-to-develop-a-simple-windows-forms-control.md).  
   

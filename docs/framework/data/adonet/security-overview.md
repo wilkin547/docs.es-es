@@ -3,11 +3,11 @@ title: Seguridad Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
 ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664160"
 ---
 # <a name="security-overview"></a>Información general sobre seguridad
 La protección de una aplicación es un proceso continuo. Es prácticamente imposible que se llegue a un momento en el que un programador pueda garantizar que una aplicación es invulnerable ante todo tipo de ataques, ya que no es posible predecir los tipos de ataques que surgirán en un futuro con las nuevas tecnologías. Al contrario, el hecho de que nadie haya detectado (o publicado) aún brechas de seguridad en un sistema, no quiere decir que éstas no existan o no puedan existir en un futuro. Por lo tanto, es necesario planificar la seguridad durante la fase de diseño del proyecto, así como la forma en que se mantendrá la seguridad durante el ciclo de vida de la aplicación.  
@@ -46,19 +46,19 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
 ## <a name="code-access-security-cas"></a>Seguridad de acceso del código (CAS)  
  La seguridad de acceso del código (CAS) es un mecanismo que ayuda a limitar el acceso del código a recursos y operaciones protegidos. En .NET Framework, CAS realiza las funciones siguientes:  
   
--   Define permisos y conjuntos de permisos que representan el derecho de acceso a varios recursos del sistema.  
+- Define permisos y conjuntos de permisos que representan el derecho de acceso a varios recursos del sistema.  
   
--   Permite a los administradores configurar la directiva de seguridad mediante la asociación de conjuntos de permisos a grupos de código.  
+- Permite a los administradores configurar la directiva de seguridad mediante la asociación de conjuntos de permisos a grupos de código.  
   
--   Permite que el código solicite los permisos que necesita para ejecutarse, así como los permisos que sería útil tener, y especifica los permisos que nunca debe tener el código.  
+- Permite que el código solicite los permisos que necesita para ejecutarse, así como los permisos que sería útil tener, y especifica los permisos que nunca debe tener el código.  
   
--   Concede permisos a cada ensamblado que se carga, basándose en los permisos solicitados por el código y en las operaciones permitidas por la directiva de seguridad.  
+- Concede permisos a cada ensamblado que se carga, basándose en los permisos solicitados por el código y en las operaciones permitidas por la directiva de seguridad.  
   
--   Permite que el código exija que sus llamadores tengan permisos específicos.  
+- Permite que el código exija que sus llamadores tengan permisos específicos.  
   
--   Permite que el código exija que sus llamadores posean una firma digital, por lo que solo los llamadores de una organización o un sitio concretos pueden llamar al código protegido.  
+- Permite que el código exija que sus llamadores posean una firma digital, por lo que solo los llamadores de una organización o un sitio concretos pueden llamar al código protegido.  
   
--   Impone restricciones en el código en tiempo de ejecución mediante la comparación de los permisos concedidos a cada llamador en la pila de llamadas con los permisos que deben poseer.  
+- Impone restricciones en el código en tiempo de ejecución mediante la comparación de los permisos concedidos a cada llamador en la pila de llamadas con los permisos que deben poseer.  
   
  Para reducir los daños que se pueden producir cuando un ataque tiene éxito, elija un contexto de seguridad para el código de forma que se conceda acceso única y exclusivamente a los recursos necesarios para realizar el trabajo.  
   
@@ -72,17 +72,17 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
 ## <a name="database-security"></a>Seguridad de la base de datos  
  El principio de privilegios mínimos también se aplica al origen de los datos. A continuación se citan algunas instrucciones generales para la seguridad de base de datos:  
   
--   Crear cuentas con los privilegios mínimos posibles.  
+- Crear cuentas con los privilegios mínimos posibles.  
   
--   No permitir que los usuarios obtengan acceso a cuentas administrativas tan solo para que el código funcione.  
+- No permitir que los usuarios obtengan acceso a cuentas administrativas tan solo para que el código funcione.  
   
--   No devolver mensajes de error de servidor a las aplicaciones cliente.  
+- No devolver mensajes de error de servidor a las aplicaciones cliente.  
   
--   Validar todas las entradas, tanto en el cliente como en el servidor.  
+- Validar todas las entradas, tanto en el cliente como en el servidor.  
   
--   Usar comandos con parámetros y evitar instrucciones SQL dinámicas.  
+- Usar comandos con parámetros y evitar instrucciones SQL dinámicas.  
   
--   Habilitar el registro y la auditoría de seguridad en la base de datos que se utiliza, de forma que se reciba una alerta en caso de infracciones de seguridad.  
+- Habilitar el registro y la auditoría de seguridad en la base de datos que se utiliza, de forma que se reciba una alerta en caso de infracciones de seguridad.  
   
  Para obtener más información, vea los siguientes recursos.  
   

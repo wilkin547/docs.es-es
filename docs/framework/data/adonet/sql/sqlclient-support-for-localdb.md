@@ -3,11 +3,11 @@ title: Compatibilidad de SqlClient para LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670058"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Compatibilidad de SqlClient para LocalDB
 A partir de SQL Server nombre de código Denali, una versión ligera de SQL Server, denominada LocalDB, estará disponible. Este tema explica cómo conectarse a una base de datos de LocalDB.  
@@ -17,13 +17,13 @@ A partir de SQL Server nombre de código Denali, una versión ligera de SQL Serv
   
  Para resumir lo que puede hacer con LocalDB:  
   
--   Cree e inicie instancias de LocalDB con sqllocaldb.exe o el archivo app.config.  
+- Cree e inicie instancias de LocalDB con sqllocaldb.exe o el archivo app.config.  
   
--   Use sqlcmd.exe para agregar y modificar bases de datos en una instancia de LocalDB. Por ejemplo: `sqlcmd -S (localdb)\myinst`.  
+- Use sqlcmd.exe para agregar y modificar bases de datos en una instancia de LocalDB. Por ejemplo: `sqlcmd -S (localdb)\myinst`.  
   
--   Use la palabra clave de cadena de conexión `AttachDBFilename` para agregar una base de datos a la instancia de LocalDB. Al usar `AttachDBFilename`, si no se especifica el nombre de la base de datos con la palabra clave de cadena de conexión `Database` , se quitará la base de datos de la instancia de LocalDB cuando se cierre la aplicación.  
+- Use la palabra clave de cadena de conexión `AttachDBFilename` para agregar una base de datos a la instancia de LocalDB. Al usar `AttachDBFilename`, si no se especifica el nombre de la base de datos con la palabra clave de cadena de conexión `Database` , se quitará la base de datos de la instancia de LocalDB cuando se cierre la aplicación.  
   
--   Especifique una instancia de LocalDB en la cadena de conexión. Por ejemplo, el nombre de instancia es `myInstance`, la cadena de conexión incluiría:  
+- Especifique una instancia de LocalDB en la cadena de conexión. Por ejemplo, el nombre de instancia es `myInstance`, la cadena de conexión incluiría:  
   
     ```  
     server=(localdb)\\myInstance  
@@ -36,7 +36,7 @@ A partir de SQL Server nombre de código Denali, una versión ligera de SQL Serv
 ## <a name="programmatically-create-a-named-instance"></a>Crear mediante programación una instancia con nombre  
  Una aplicación puede crear una instancia con nombre y especificar una base de datos como sigue:  
   
--   Especifique las instancias de LocalDB para crear en el archivo app.config, como sigue.  El número de versión de la instancia debe ser igual que el número de versión de la instalación de LocalDB.  
+- Especifique las instancias de LocalDB para crear en el archivo app.config, como sigue.  El número de versión de la instancia debe ser igual que el número de versión de la instalación de LocalDB.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -54,9 +54,9 @@ A partir de SQL Server nombre de código Denali, una versión ligera de SQL Serv
     </configuration>  
     ```  
   
--   Especifique el nombre de instancia mediante la palabra clave de cadena de conexión `server` .  El nombre de instancia especificado en la palabra clave de cadena de conexión `server` debe coincidir con el nombre especificado en el archivo app.config.  
+- Especifique el nombre de instancia mediante la palabra clave de cadena de conexión `server` .  El nombre de instancia especificado en la palabra clave de cadena de conexión `server` debe coincidir con el nombre especificado en el archivo app.config.  
   
--   Use la palabra clave de cadena de conexión `AttachDBFilename` para especificar el archivo .MDF.  
+- Use la palabra clave de cadena de conexión `AttachDBFilename` para especificar el archivo .MDF.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -3,11 +3,11 @@ title: <add> de <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
 ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701468"
 ---
 # <a name="add-of-serviceactivations"></a>\<Agregar > de \<serviceActivations >
 
@@ -36,7 +36,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |Atributo|Descripción|
 |---------------|-----------------|
 |factory|Cadena que especifica el nombre de tipo de CLR del generador que genera un elemento de activación de servicio.|
-|servicio|ServiceType que implementa el servicio (Typename calificado completo o Typename corto (cuando se coloca en la carpeta App_Code).|
+|service|ServiceType que implementa el servicio (Typename calificado completo o Typename corto (cuando se coloca en la carpeta App_Code).|
 |relativeAddress|La dirección relativa dentro de la aplicación de IIS actual (por ejemplo “Service.svc”. En WCF 4.0 esta dirección relativa debe contener una de las extensiones de archivo conocidas (.svc, .xamlx, …). No tiene que existir ningún archivo físico para relativeUrl|
 
 ### <a name="child-elements"></a>Elementos secundarios

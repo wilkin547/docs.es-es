@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 ms.openlocfilehash: ecc62292b2b064219127c369f43141a31ffe606d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780073"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory y WSTrustChannel
 Si ya está familiarizado con Windows Communication Foundation (WCF), sabe que un cliente WCF ya reconoce la federación. Al configurar un cliente WCF con <xref:System.ServiceModel.WSFederationHttpBinding> o un enlace personalizado similar, puede habilitar la autenticación federada en un servicio.
@@ -25,7 +25,7 @@ Si ya está familiarizado con Windows Communication Foundation (WCF), sabe que u
 
 - Mediante WIF solo para obtener un token del STS y habilitar a continuación un cliente WCF para autenticar con este token. Para más información, vea el ejemplo [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406).
 
- El primer escenario se explica por sí solo: los clientes de WCF existentes continuarán trabajando con los STS y los usuarios de confianza de WIF. En este tema se describen los dos escenarios restantes.
+ El primer escenario no necesita explicación: Los clientes WCF existentes seguirán funcionando con confianza de WIF y STS. En este tema se describen los dos escenarios restantes.
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Mejorar un cliente de WCF existente con ActAs/OnBehalfOf
 En un escenario de delegación de identidad típico, un cliente llama a un servicio de nivel intermedio, que a su vez llama a un servicio back-end. El servicio de nivel intermedio actúa como el cliente o en su nombre.

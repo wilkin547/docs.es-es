@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
 ms.openlocfilehash: dc979a66c73fdf15a4349a003680156e0ce27ed3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764366"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<typename >' no puede heredar de \<tipo > '\<nombreDeTipoBase >' porque expande el acceso de la base de \<tipo > fuera del ensamblado
 Una clase o interfaz hereda de una clase base o interfaz, pero tiene un nivel de acceso menos restrictivo.  
@@ -23,11 +23,11 @@ Una clase o interfaz hereda de una clase base o interfaz, pero tiene un nivel de
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Cambiar el nivel de acceso de la clase derivada o interfaz sea al menos tan restrictiva como de la clase base o interfaz.  
+- Cambiar el nivel de acceso de la clase derivada o interfaz sea al menos tan restrictiva como de la clase base o interfaz.  
   
      -o bien-  
   
--   Si necesita el nivel de acceso menos restrictivo, quite el `Inherits` instrucción. No se puede heredar de una clase base más restringido o interfaz.  
+- Si necesita el nivel de acceso menos restrictivo, quite el `Inherits` instrucción. No se puede heredar de una clase base más restringido o interfaz.  
   
 ## <a name="see-also"></a>Vea también
 

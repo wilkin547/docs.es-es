@@ -9,11 +9,11 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
 ms.openlocfilehash: 15b37c71e6643b588c0378510965a9a3e7cb56e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672580"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Procedimiento para comprobar el comportamiento de UserControl en tiempo de ejecución
 Al desarrollar un <xref:System.Windows.Forms.UserControl>, debe probar su comportamiento en tiempo de ejecución. Puede crear un proyecto de aplicación basada en Windows independiente y colocar el control en un formulario de prueba, pero este procedimiento es un problema. Una forma más rápida y sencilla es usar el **UserControl Test Container** proporcionadas por Visual Studio. Este contenedor de prueba se inicia directamente desde un proyecto de biblioteca de control de Windows.  

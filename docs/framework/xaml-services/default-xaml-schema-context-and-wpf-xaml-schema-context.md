@@ -3,11 +3,11 @@ title: Contexto de esquema XAML predeterminado y contexto de esquema XAML de WPF
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
 ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689403"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Contexto de esquema XAML predeterminado y contexto de esquema XAML de WPF
 Un contexto de esquema XAML es una entidad conceptual que califica cómo interactúa una producción de XAML que usa un vocabulario XAML concreto con el objeto de escritura de comportamiento, incluido cómo resuelve la asignación de tipos, cómo se cargan los ensamblados, cómo ciertos lector y escritor se interpreta la configuración. En este tema se describe las características de los servicios XAML de .NET Framework y el contexto de esquema XAML predeterminado asociado, que se basa en el sistema de tipos CLR. En este tema también se describe el contexto de esquema XAML que se usa para WPF.  
@@ -50,11 +50,11 @@ Un contexto de esquema XAML es una entidad conceptual que califica cómo interac
   
 2. En caso contrario, una de las técnicas siguientes en función de CLR <xref:System.Reflection.Assembly> API se usan para cargar un ensamblado:  
   
-    -   Si está calificado el nombre de la asignación, llame a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> en el nombre completo.  
+    - Si está calificado el nombre de la asignación, llame a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> en el nombre completo.  
   
-    -   Si se produce un error en el paso anterior, use el nombre corto (y el token de clave pública si está presente) para llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+    - Si se produce un error en el paso anterior, use el nombre corto (y el token de clave pública si está presente) para llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-    -   Si el nombre no completo en la asignación, llamar a <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+    - Si el nombre no completo en la asignación, llamar a <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
  `XamlBuildTask` se usa para Windows Communication Foundation (WCF) y Windows Workflow Foundation.  
@@ -82,11 +82,11 @@ Un contexto de esquema XAML es una entidad conceptual que califica cómo interac
   
 2. En caso contrario, una de las técnicas siguientes se usa para cargar un ensamblado:  
   
-    -   Llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> en el nombre completo.  
+    - Llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> en el nombre completo.  
   
-    -   Si un nombre corto + la combinación de tokens clave pública coinciden con el ensamblado que se cargó el BAML de, utilice ese ensamblado.  
+    - Si un nombre corto + la combinación de tokens clave pública coinciden con el ensamblado que se cargó el BAML de, utilice ese ensamblado.  
   
-    -   Use el nombre corto + el token de clave pública para llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+    - Use el nombre corto + el token de clave pública para llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
 ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776485"
 ---
 # <a name="how-to-create-a-routedcommand"></a>Procedimiento Crear un comando RoutedCommand
 En este ejemplo se muestra cómo crear una personalizada <xref:System.Windows.Input.RoutedCommand> y cómo implementar el comando personalizado mediante la creación de un <xref:System.Windows.Input.ExecutedRoutedEventHandler> y un <xref:System.Windows.Input.CanExecuteRoutedEventHandler> y adjuntarlos a un <xref:System.Windows.Input.CommandBinding>.  Para obtener más información sobre los comandos, consulte el [información general sobre comandos](commanding-overview.md).  

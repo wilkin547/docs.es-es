@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
 ms.openlocfilehash: a6ddbaa358709fe306f1529112d1f2bd0a715a91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649964"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>No se puede convertir un tipo anónimo en un árbol de expresión porque contiene un campo que se usa en la inicialización de otro campo
 El compilador no acepta la conversión de un anónimo en un árbol de expresión cuando se usa una propiedad del tipo anónimo para inicializar otra propiedad del tipo anónimo. Por ejemplo, en el código siguiente, `Prop1` se declara en la lista de inicialización y, a continuación, se utiliza como valor inicial para `Prop2`.  
@@ -35,7 +35,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Asigne el valor inicial para `Prop1` a una variable local. Asignar esa variable a ambos `Prop1` y `Prop2`, tal y como se muestra en el código siguiente.  
+- Asigne el valor inicial para `Prop1` a una variable local. Asignar esa variable a ambos `Prop1` y `Prop2`, tal y como se muestra en el código siguiente.  
   
     ```  
     Sub Main()  

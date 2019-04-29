@@ -3,11 +3,11 @@ title: Compatibilidad con JSON y otros formatos de transferencia de datos
 ms.date: 03/30/2017
 ms.assetid: a527f1be-4e37-4beb-9a95-291480d19627
 ms.openlocfilehash: 9bf27a853fff42c098446067fa6f0db6bf4dbc4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747607"
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a>Compatibilidad con JSON y otros formatos de transferencia de datos
 JSON (notación de objetos JavaScript) es un formato de codificación de datos eficaz que permite intercambios rápidos de cantidades pequeñas de datos entre los exploradores de cliente y servicios web con AJAX habilitado (JavaScript asincrónico y XML).  

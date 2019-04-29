@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d98829b29100824e5d606e23aaf287c9f6e81d69
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771922"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext (Función)
 Esta función admite la infraestructura de .NET Framework y no está pensada para utilizarse directamente desde el código.  

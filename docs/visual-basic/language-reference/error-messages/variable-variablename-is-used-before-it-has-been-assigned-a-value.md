@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
 ms.openlocfilehash: 46551a917aeb794c8d35985076b67a315386f628
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766732"
 ---
 # <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>Variable '\<NombreDeVariable >' se utiliza antes de que se le ha asignado un valor
 Variable '\<NombreDeVariable >' se utiliza antes de que se le ha asignado un valor. Podría producirse una excepción de referencia nula en tiempo de ejecución.  
@@ -27,9 +27,9 @@ Variable '\<NombreDeVariable >' se utiliza antes de que se le ha asignado un val
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Compruebe la lógica del flujo de control y asegúrese de que la variable tiene un valor válido antes de que el control pasa a cualquier instrucción que lo lee.  
+- Compruebe la lógica del flujo de control y asegúrese de que la variable tiene un valor válido antes de que el control pasa a cualquier instrucción que lo lee.  
   
--   Una manera de garantizar que la variable siempre tiene un valor válido es inicializarla como parte de su declaración. Consulte "Inicialización" en [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md).  
+- Una manera de garantizar que la variable siempre tiene un valor válido es inicializarla como parte de su declaración. Consulte "Inicialización" en [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
 ## <a name="see-also"></a>Vea también
 

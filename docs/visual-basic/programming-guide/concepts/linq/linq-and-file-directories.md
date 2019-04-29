@@ -3,11 +3,11 @@ title: LINQ y directorios de archivos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
 ms.openlocfilehash: 56967a82bf63d8421d34af48dcc6384ded85e2ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663445"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>LINQ y directorios de archivos (Visual Basic)
 Muchas operaciones de sistema de archivos son esencialmente consultas y, por tanto, son adecuadas para el enfoque LINQ.  

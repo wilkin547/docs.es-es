@@ -3,11 +3,11 @@ title: Procedimiento para agregar detectabilidad mediante programación a un cli
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
 ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761551"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedimiento para agregar detectabilidad mediante programación a un cliente y un servicio de WCF
 En este tema se explica cómo hacer que un servicio de Windows Communication Foundation (WCF) que pueda detectar. Se basa en el [autohospedar](https://go.microsoft.com/fwlink/?LinkId=145523) ejemplo.  

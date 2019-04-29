@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
 ms.openlocfilehash: a974df5d2305b88946981d0d258a8088b23d3fc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766615"
 ---
 # <a name="xml-comment-exception-must-have-a-cref-attribute"></a>La excepción del comentario XML debe tener un atributo 'cref'
 El \<excepción > etiqueta proporciona una manera de documentar las excepciones que se pueden iniciar mediante un método. Necesario `cref` atributo designa el nombre de un miembro, que está activado de forma que el generador de documentación. Si el miembro existe, se traduce en el nombre de elemento canónico en el archivo de documentación.  
@@ -21,7 +21,7 @@ El \<excepción > etiqueta proporciona una manera de documentar las excepciones 
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Agregar el `cref` atribuir a la excepción como sigue:  
+- Agregar el `cref` atribuir a la excepción como sigue:  
   
     ```  
     '''<exception cref="member">description</exception>  
