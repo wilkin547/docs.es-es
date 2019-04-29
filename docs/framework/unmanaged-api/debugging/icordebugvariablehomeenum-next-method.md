@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: be1ba87ae979911dd21647569725eafa2c80ffa6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768815"
 ---
-# <a name="icordebugvariablehomeenumnext-method"></a><span data-ttu-id="dd11c-102">Método ICorDebugVariableHomeEnum::Next</span><span class="sxs-lookup"><span data-stu-id="dd11c-102">ICorDebugVariableHomeEnum::Next Method</span></span>
-<span data-ttu-id="dd11c-103">Obtiene el número especificado de [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instancias que contienen información sobre las variables locales y los argumentos en una función.</span><span class="sxs-lookup"><span data-stu-id="dd11c-103">Gets the specified number of [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances that contain information about the local variables and arguments in a function.</span></span>  
+# <a name="icordebugvariablehomeenumnext-method"></a><span data-ttu-id="d04b3-102">Método ICorDebugVariableHomeEnum::Next</span><span class="sxs-lookup"><span data-stu-id="d04b3-102">ICorDebugVariableHomeEnum::Next Method</span></span>
+<span data-ttu-id="d04b3-103">Obtiene el número especificado de [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instancias que contienen información sobre las variables locales y los argumentos en una función.</span><span class="sxs-lookup"><span data-stu-id="d04b3-103">Gets the specified number of [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances that contain information about the local variables and arguments in a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd11c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="dd11c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d04b3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d04b3-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -37,37 +37,37 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dd11c-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="dd11c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d04b3-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="d04b3-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="dd11c-106">[in] Número de objetos que se van a recuperar.</span><span class="sxs-lookup"><span data-stu-id="dd11c-106">[in] The number of objects to be retrieved.</span></span>  
+ <span data-ttu-id="d04b3-106">[in] Número de objetos que se van a recuperar.</span><span class="sxs-lookup"><span data-stu-id="d04b3-106">[in] The number of objects to be retrieved.</span></span>  
   
  `homes`  
- <span data-ttu-id="dd11c-107">Una matriz de punteros, cada uno de los cuales señala a un [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) objeto que proporciona información sobre una variable local o argumento de una función.</span><span class="sxs-lookup"><span data-stu-id="dd11c-107">An array of pointers, each of which points to a [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object that provides information about  a local variable or argument of a function.</span></span>  
+ <span data-ttu-id="d04b3-107">Una matriz de punteros, cada uno de los cuales señala a un [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) objeto que proporciona información sobre una variable local o argumento de una función.</span><span class="sxs-lookup"><span data-stu-id="d04b3-107">An array of pointers, each of which points to a [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object that provides information about  a local variable or argument of a function.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="dd11c-108">[out] El número de instancias realmente devueltos en los objetos.</span><span class="sxs-lookup"><span data-stu-id="dd11c-108">[out] The number of instances actually returned in objects.</span></span>  
+ <span data-ttu-id="d04b3-108">[out] El número de instancias realmente devueltos en los objetos.</span><span class="sxs-lookup"><span data-stu-id="d04b3-108">[out] The number of instances actually returned in objects.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="dd11c-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="dd11c-109">Return Value</span></span>  
- <span data-ttu-id="dd11c-110">El método devuelve los valores siguientes.</span><span class="sxs-lookup"><span data-stu-id="dd11c-110">The method returns the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d04b3-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="d04b3-109">Return Value</span></span>  
+ <span data-ttu-id="d04b3-110">El método devuelve los valores siguientes.</span><span class="sxs-lookup"><span data-stu-id="d04b3-110">The method returns the following values.</span></span>  
   
-|<span data-ttu-id="dd11c-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="dd11c-111">HRESULT</span></span>|<span data-ttu-id="dd11c-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="dd11c-112">Description</span></span>|  
+|<span data-ttu-id="d04b3-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d04b3-111">HRESULT</span></span>|<span data-ttu-id="d04b3-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="d04b3-112">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="dd11c-113">El método se completó correctamente.</span><span class="sxs-lookup"><span data-stu-id="dd11c-113">The method completed successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="dd11c-114">Recupera el número real de las instancias, tal como se refleja en `pceltFetched`, es menor que el número de instancias solicitadas.</span><span class="sxs-lookup"><span data-stu-id="dd11c-114">The actual number of instances retrieved, as reflected in `pceltFetched`, is less than the number of instances requested.</span></span>|  
+|`S_OK`|<span data-ttu-id="d04b3-113">El método se completó correctamente.</span><span class="sxs-lookup"><span data-stu-id="d04b3-113">The method completed successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="d04b3-114">Recupera el número real de las instancias, tal como se refleja en `pceltFetched`, es menor que el número de instancias solicitadas.</span><span class="sxs-lookup"><span data-stu-id="d04b3-114">The actual number of instances retrieved, as reflected in `pceltFetched`, is less than the number of instances requested.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="dd11c-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="dd11c-115">Remarks</span></span>  
- <span data-ttu-id="dd11c-116">El [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) método recupera un máximo de `celt` objetos que comienza en la posición actual del enumerador.</span><span class="sxs-lookup"><span data-stu-id="dd11c-116">The [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) method retrieves a maximum of  `celt` objects starting at the current position of the enumerator.</span></span> <span data-ttu-id="dd11c-117">Cuando el método vuelve, `pceltFetched` contiene el número real de los objetos recuperados.</span><span class="sxs-lookup"><span data-stu-id="dd11c-117">When the method returns, `pceltFetched` contains the actual number of objects retrieved.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d04b3-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="d04b3-115">Remarks</span></span>  
+ <span data-ttu-id="d04b3-116">El [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) método recupera un máximo de `celt` objetos que comienza en la posición actual del enumerador.</span><span class="sxs-lookup"><span data-stu-id="d04b3-116">The [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) method retrieves a maximum of  `celt` objects starting at the current position of the enumerator.</span></span> <span data-ttu-id="d04b3-117">Cuando el método vuelve, `pceltFetched` contiene el número real de los objetos recuperados.</span><span class="sxs-lookup"><span data-stu-id="d04b3-117">When the method returns, `pceltFetched` contains the actual number of objects retrieved.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dd11c-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="dd11c-118">Requirements</span></span>  
- <span data-ttu-id="dd11c-119">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dd11c-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d04b3-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d04b3-118">Requirements</span></span>  
+ <span data-ttu-id="d04b3-119">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d04b3-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dd11c-120">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dd11c-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d04b3-120">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d04b3-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="dd11c-121">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dd11c-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d04b3-121">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d04b3-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dd11c-122">**Versiones de .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd11c-122">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="d04b3-122">**Versiones de .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d04b3-122">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd11c-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="dd11c-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d04b3-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="d04b3-123">See also</span></span>
 
-- [<span data-ttu-id="dd11c-124">ICorDebugVariableHomeEnum (interfaz)</span><span class="sxs-lookup"><span data-stu-id="dd11c-124">ICorDebugVariableHomeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
-- [<span data-ttu-id="dd11c-125">ICorDebugVariableHome (interfaz)</span><span class="sxs-lookup"><span data-stu-id="dd11c-125">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [<span data-ttu-id="d04b3-124">ICorDebugVariableHomeEnum (interfaz)</span><span class="sxs-lookup"><span data-stu-id="d04b3-124">ICorDebugVariableHomeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
+- [<span data-ttu-id="d04b3-125">ICorDebugVariableHome (interfaz)</span><span class="sxs-lookup"><span data-stu-id="d04b3-125">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

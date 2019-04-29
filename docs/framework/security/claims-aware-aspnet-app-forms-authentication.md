@@ -1,80 +1,80 @@
 ---
-title: Cómo Crear aplicaciones ASP.NET para notificaciones mediante la autenticación basada en formularios
+title: Cómo compilar aplicaciones ASP.NET con reconocimiento de mediante la autenticación basada en formularios
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
 ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792755"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a><span data-ttu-id="99f2b-102">Cómo Crear aplicaciones ASP.NET para notificaciones mediante la autenticación basada en formularios</span><span class="sxs-lookup"><span data-stu-id="99f2b-102">How To: Build Claims-Aware ASP.NET Application Using Forms-Based Authentication</span></span>
+# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a><span data-ttu-id="aca03-102">Cómo compilar aplicaciones ASP.NET con reconocimiento de mediante la autenticación basada en formularios</span><span class="sxs-lookup"><span data-stu-id="aca03-102">How To: Build Claims-Aware ASP.NET Application Using Forms-Based Authentication</span></span>
 
-## <a name="applies-to"></a><span data-ttu-id="99f2b-103">Se aplica a</span><span class="sxs-lookup"><span data-stu-id="99f2b-103">Applies To</span></span>
+## <a name="applies-to"></a><span data-ttu-id="aca03-103">Se aplica a</span><span class="sxs-lookup"><span data-stu-id="aca03-103">Applies To</span></span>
 
-- <span data-ttu-id="99f2b-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="99f2b-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>
+- <span data-ttu-id="aca03-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="aca03-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>
 
-- <span data-ttu-id="99f2b-105">Formularios Web Forms ASP.NET®</span><span class="sxs-lookup"><span data-stu-id="99f2b-105">ASP.NET® Web Forms</span></span>
+- <span data-ttu-id="aca03-105">Formularios Web Forms ASP.NET®</span><span class="sxs-lookup"><span data-stu-id="aca03-105">ASP.NET® Web Forms</span></span>
 
-## <a name="summary"></a><span data-ttu-id="99f2b-106">Resumen</span><span class="sxs-lookup"><span data-stu-id="99f2b-106">Summary</span></span>
+## <a name="summary"></a><span data-ttu-id="aca03-106">Resumen</span><span class="sxs-lookup"><span data-stu-id="aca03-106">Summary</span></span>
 
-<span data-ttu-id="99f2b-107">Este tema de procedimientos proporciona procedimientos paso a paso para crear una sencilla aplicación de formularios Web Forms ASP.NET para notificaciones que usa la autenticación de formularios.</span><span class="sxs-lookup"><span data-stu-id="99f2b-107">This How-To provides detailed step-by-step procedures for creating a simple claims-aware ASP.NET Web Forms application that uses Forms authentication.</span></span> <span data-ttu-id="99f2b-108">También proporciona instrucciones para probar la aplicación a fin de comprobar que las notificaciones se presentan cuando un usuario inicia sesión con la autenticación de formularios.</span><span class="sxs-lookup"><span data-stu-id="99f2b-108">It also provides instructions for how to test the application to verify that claims are presented when a user signs in with Forms authentication.</span></span>
+<span data-ttu-id="aca03-107">Este tema de procedimientos proporciona procedimientos paso a paso para crear una sencilla aplicación de formularios Web Forms ASP.NET para notificaciones que usa la autenticación de formularios.</span><span class="sxs-lookup"><span data-stu-id="aca03-107">This How-To provides detailed step-by-step procedures for creating a simple claims-aware ASP.NET Web Forms application that uses Forms authentication.</span></span> <span data-ttu-id="aca03-108">También proporciona instrucciones para probar la aplicación a fin de comprobar que las notificaciones se presentan cuando un usuario inicia sesión con la autenticación de formularios.</span><span class="sxs-lookup"><span data-stu-id="aca03-108">It also provides instructions for how to test the application to verify that claims are presented when a user signs in with Forms authentication.</span></span>
 
-## <a name="contents"></a><span data-ttu-id="99f2b-109">Contenido</span><span class="sxs-lookup"><span data-stu-id="99f2b-109">Contents</span></span>
+## <a name="contents"></a><span data-ttu-id="aca03-109">Contenido</span><span class="sxs-lookup"><span data-stu-id="aca03-109">Contents</span></span>
 
-- <span data-ttu-id="99f2b-110">Objetivos</span><span class="sxs-lookup"><span data-stu-id="99f2b-110">Objectives</span></span>
+- <span data-ttu-id="aca03-110">Objetivos</span><span class="sxs-lookup"><span data-stu-id="aca03-110">Objectives</span></span>
 
-- <span data-ttu-id="99f2b-111">Información general</span><span class="sxs-lookup"><span data-stu-id="99f2b-111">Overview</span></span>
+- <span data-ttu-id="aca03-111">Información general</span><span class="sxs-lookup"><span data-stu-id="aca03-111">Overview</span></span>
 
-- <span data-ttu-id="99f2b-112">Resumen de pasos</span><span class="sxs-lookup"><span data-stu-id="99f2b-112">Summary of Steps</span></span>
+- <span data-ttu-id="aca03-112">Resumen de pasos</span><span class="sxs-lookup"><span data-stu-id="aca03-112">Summary of Steps</span></span>
 
-- <span data-ttu-id="99f2b-113">Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET</span><span class="sxs-lookup"><span data-stu-id="99f2b-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>
+- <span data-ttu-id="aca03-113">Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET</span><span class="sxs-lookup"><span data-stu-id="aca03-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>
 
-- <span data-ttu-id="99f2b-114">Paso 2: Configurar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios</span><span class="sxs-lookup"><span data-stu-id="99f2b-114">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>
+- <span data-ttu-id="aca03-114">Paso 2: Configurar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios</span><span class="sxs-lookup"><span data-stu-id="aca03-114">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>
 
-- <span data-ttu-id="99f2b-115">Paso 3: Probar la solución</span><span class="sxs-lookup"><span data-stu-id="99f2b-115">Step 3 – Test Your Solution</span></span>
+- <span data-ttu-id="aca03-115">Paso 3: Probar la solución</span><span class="sxs-lookup"><span data-stu-id="aca03-115">Step 3 – Test Your Solution</span></span>
 
-## <a name="objectives"></a><span data-ttu-id="99f2b-116">Objetivos</span><span class="sxs-lookup"><span data-stu-id="99f2b-116">Objectives</span></span>
+## <a name="objectives"></a><span data-ttu-id="aca03-116">Objetivos</span><span class="sxs-lookup"><span data-stu-id="aca03-116">Objectives</span></span>
 
-- <span data-ttu-id="99f2b-117">Configurar una aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios</span><span class="sxs-lookup"><span data-stu-id="99f2b-117">Configure an ASP.NET Web Forms application for claims using Forms authentication</span></span>
+- <span data-ttu-id="aca03-117">Configurar una aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios</span><span class="sxs-lookup"><span data-stu-id="aca03-117">Configure an ASP.NET Web Forms application for claims using Forms authentication</span></span>
 
-- <span data-ttu-id="99f2b-118">Probar la aplicación de formularios Web Forms ASP.NET para ver si funciona correctamente</span><span class="sxs-lookup"><span data-stu-id="99f2b-118">Test the ASP.NET Web Forms application to see if it is working properly</span></span>
+- <span data-ttu-id="aca03-118">Probar la aplicación de formularios Web Forms ASP.NET para ver si funciona correctamente</span><span class="sxs-lookup"><span data-stu-id="aca03-118">Test the ASP.NET Web Forms application to see if it is working properly</span></span>
 
-## <a name="overview"></a><span data-ttu-id="99f2b-119">Información general</span><span class="sxs-lookup"><span data-stu-id="99f2b-119">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="aca03-119">Información general</span><span class="sxs-lookup"><span data-stu-id="aca03-119">Overview</span></span>
 
-<span data-ttu-id="99f2b-120">En .NET 4.5, WIF y su autorización basada en notificaciones se han incluido como parte integral del marco.</span><span class="sxs-lookup"><span data-stu-id="99f2b-120">In .NET 4.5, WIF and its claims-based authorization have been included as an integral part of the Framework.</span></span> <span data-ttu-id="99f2b-121">Anteriormente, si quería notificaciones de un usuario de ASP.NET, tenía que instalar WIF y, después, convertir las interfaces a objetos de entidad de seguridad como `Thread.CurrentPrincipal` o `HttpContext.Current.User`.</span><span class="sxs-lookup"><span data-stu-id="99f2b-121">Previously, if you wanted claims from an ASP.NET user, you were required to install WIF, and then cast interfaces to Principal objects such as `Thread.CurrentPrincipal` or `HttpContext.Current.User`.</span></span> <span data-ttu-id="99f2b-122">Ahora, estos objetos de entidad de seguridad sirven las notificaciones automáticamente.</span><span class="sxs-lookup"><span data-stu-id="99f2b-122">Now, claims are served automatically by these Principal objects.</span></span>
+<span data-ttu-id="aca03-120">En .NET 4.5, WIF y su autorización basada en notificaciones se han incluido como parte integral del marco.</span><span class="sxs-lookup"><span data-stu-id="aca03-120">In .NET 4.5, WIF and its claims-based authorization have been included as an integral part of the Framework.</span></span> <span data-ttu-id="aca03-121">Anteriormente, si quería notificaciones de un usuario de ASP.NET, tenía que instalar WIF y, después, convertir las interfaces a objetos de entidad de seguridad como `Thread.CurrentPrincipal` o `HttpContext.Current.User`.</span><span class="sxs-lookup"><span data-stu-id="aca03-121">Previously, if you wanted claims from an ASP.NET user, you were required to install WIF, and then cast interfaces to Principal objects such as `Thread.CurrentPrincipal` or `HttpContext.Current.User`.</span></span> <span data-ttu-id="aca03-122">Ahora, estos objetos de entidad de seguridad sirven las notificaciones automáticamente.</span><span class="sxs-lookup"><span data-stu-id="aca03-122">Now, claims are served automatically by these Principal objects.</span></span>
 
-<span data-ttu-id="99f2b-123">La autenticación de formularios se ha beneficiado de la inclusión de WIF en .NET 4.5, ya que todos los usuarios autenticados mediante formularios automáticamente tienen notificaciones asociadas.</span><span class="sxs-lookup"><span data-stu-id="99f2b-123">Forms authentication has benefited from WIF’s inclusion in .NET 4.5 because all users authenticated by Forms automatically have claims associated with them.</span></span> <span data-ttu-id="99f2b-124">Puede empezar a usar estas notificaciones inmediatamente en una aplicación de ASP.NET que use la autenticación de formularios, como se muestra en este tema de procedimientos.</span><span class="sxs-lookup"><span data-stu-id="99f2b-124">You can begin using these claims immediately in an ASP.NET application that uses Forms authentication, as this How-To demonstrates.</span></span>
+<span data-ttu-id="aca03-123">La autenticación de formularios se ha beneficiado de la inclusión de WIF en .NET 4.5, ya que todos los usuarios autenticados mediante formularios automáticamente tienen notificaciones asociadas.</span><span class="sxs-lookup"><span data-stu-id="aca03-123">Forms authentication has benefited from WIF’s inclusion in .NET 4.5 because all users authenticated by Forms automatically have claims associated with them.</span></span> <span data-ttu-id="aca03-124">Puede empezar a usar estas notificaciones inmediatamente en una aplicación de ASP.NET que use la autenticación de formularios, como se muestra en este tema de procedimientos.</span><span class="sxs-lookup"><span data-stu-id="aca03-124">You can begin using these claims immediately in an ASP.NET application that uses Forms authentication, as this How-To demonstrates.</span></span>
 
-## <a name="summary-of-steps"></a><span data-ttu-id="99f2b-125">Resumen de pasos</span><span class="sxs-lookup"><span data-stu-id="99f2b-125">Summary of Steps</span></span>
+## <a name="summary-of-steps"></a><span data-ttu-id="aca03-125">Resumen de pasos</span><span class="sxs-lookup"><span data-stu-id="aca03-125">Summary of Steps</span></span>
 
-- <span data-ttu-id="99f2b-126">Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET</span><span class="sxs-lookup"><span data-stu-id="99f2b-126">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>
+- <span data-ttu-id="aca03-126">Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET</span><span class="sxs-lookup"><span data-stu-id="aca03-126">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>
 
-- <span data-ttu-id="99f2b-127">Paso 2: Configurar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios</span><span class="sxs-lookup"><span data-stu-id="99f2b-127">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>
+- <span data-ttu-id="aca03-127">Paso 2: Configurar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios</span><span class="sxs-lookup"><span data-stu-id="aca03-127">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>
 
-- <span data-ttu-id="99f2b-128">Paso 3: Probar la solución</span><span class="sxs-lookup"><span data-stu-id="99f2b-128">Step 3 – Test Your Solution</span></span>
+- <span data-ttu-id="aca03-128">Paso 3: Probar la solución</span><span class="sxs-lookup"><span data-stu-id="aca03-128">Step 3 – Test Your Solution</span></span>
 
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="99f2b-129">Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET</span><span class="sxs-lookup"><span data-stu-id="99f2b-129">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="aca03-129">Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET</span><span class="sxs-lookup"><span data-stu-id="aca03-129">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>
 
-<span data-ttu-id="99f2b-130">En este paso creará una aplicación de formularios Web Forms ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="99f2b-130">In this step, you will create a new ASP.NET Web Forms application.</span></span>
+<span data-ttu-id="aca03-130">En este paso creará una aplicación de formularios Web Forms ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="aca03-130">In this step, you will create a new ASP.NET Web Forms application.</span></span>
 
-#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="99f2b-131">Para crear una aplicación de ASP.NET sencilla</span><span class="sxs-lookup"><span data-stu-id="99f2b-131">To create a simple ASP.NET application</span></span>
+#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="aca03-131">Para crear una aplicación de ASP.NET sencilla</span><span class="sxs-lookup"><span data-stu-id="aca03-131">To create a simple ASP.NET application</span></span>
 
-1. <span data-ttu-id="99f2b-132">Inicie Visual Studio y haga clic en **Archivo**, **Nuevo** y, luego, en **Proyecto**.</span><span class="sxs-lookup"><span data-stu-id="99f2b-132">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>
+1. <span data-ttu-id="aca03-132">Inicie Visual Studio y haga clic en **Archivo**, **Nuevo** y, luego, en **Proyecto**.</span><span class="sxs-lookup"><span data-stu-id="aca03-132">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>
 
-2. <span data-ttu-id="99f2b-133">En la ventana **Nuevo proyecto**, haga clic en **Aplicación de formularios Web Forms ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="99f2b-133">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>
+2. <span data-ttu-id="aca03-133">En la ventana **Nuevo proyecto**, haga clic en **Aplicación de formularios Web Forms ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="aca03-133">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>
 
-3. <span data-ttu-id="99f2b-134">En **Nombre**, escriba `TestApp` y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="99f2b-134">In **Name**, enter `TestApp` and press **OK**.</span></span>
+3. <span data-ttu-id="aca03-134">En **Nombre**, escriba `TestApp` y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="aca03-134">In **Name**, enter `TestApp` and press **OK**.</span></span>
 
-## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-forms-authentication"></a><span data-ttu-id="99f2b-135">Paso 2: Configurar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios</span><span class="sxs-lookup"><span data-stu-id="99f2b-135">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-forms-authentication"></a><span data-ttu-id="aca03-135">Paso 2: Configurar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios</span><span class="sxs-lookup"><span data-stu-id="aca03-135">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>
 
-<span data-ttu-id="99f2b-136">En este paso se agrega una entrada de configuración al archivo de configuración *Web.config* y se edita el archivo *Default.aspx* para que muestre la información de notificaciones de una cuenta.</span><span class="sxs-lookup"><span data-stu-id="99f2b-136">In this step you will add a configuration entry to the *Web.config* configuration file and edit the *Default.aspx* file to display claims information for an account.</span></span>
+<span data-ttu-id="aca03-136">En este paso se agrega una entrada de configuración al archivo de configuración *Web.config* y se edita el archivo *Default.aspx* para que muestre la información de notificaciones de una cuenta.</span><span class="sxs-lookup"><span data-stu-id="aca03-136">In this step you will add a configuration entry to the *Web.config* configuration file and edit the *Default.aspx* file to display claims information for an account.</span></span>
 
-#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a><span data-ttu-id="99f2b-137">Para configurar la aplicación ASP.NET para notificaciones mediante la autenticación de formularios</span><span class="sxs-lookup"><span data-stu-id="99f2b-137">To configure ASP.NET application for claims using Forms authentication</span></span>
+#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a><span data-ttu-id="aca03-137">Para configurar la aplicación ASP.NET para notificaciones mediante la autenticación de formularios</span><span class="sxs-lookup"><span data-stu-id="aca03-137">To configure ASP.NET application for claims using Forms authentication</span></span>
 
-1. <span data-ttu-id="99f2b-138">En el archivo *Default.aspx*, reemplace el marcado existente por el siguiente:</span><span class="sxs-lookup"><span data-stu-id="99f2b-138">In the *Default.aspx* file, replace the existing markup with the following:</span></span>
+1. <span data-ttu-id="aca03-138">En el archivo *Default.aspx*, reemplace el marcado existente por el siguiente:</span><span class="sxs-lookup"><span data-stu-id="aca03-138">In the *Default.aspx* file, replace the existing markup with the following:</span></span>
 
     ```aspx
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TestApp._Default" %>
@@ -93,9 +93,9 @@ ms.locfileid: "57354757"
     </asp:Content>
     ```
 
-    <span data-ttu-id="99f2b-139">Este paso agrega un control GridView a la página *Default.aspx* que se va a rellenar con las notificaciones recuperadas de la autenticación de formularios.</span><span class="sxs-lookup"><span data-stu-id="99f2b-139">This step adds a GridView control to your *Default.aspx* page that will be populated with the claims retrieved from Forms authentication.</span></span>
+    <span data-ttu-id="aca03-139">Este paso agrega un control GridView a la página *Default.aspx* que se va a rellenar con las notificaciones recuperadas de la autenticación de formularios.</span><span class="sxs-lookup"><span data-stu-id="aca03-139">This step adds a GridView control to your *Default.aspx* page that will be populated with the claims retrieved from Forms authentication.</span></span>
 
-2. <span data-ttu-id="99f2b-140">Guarde el archivo *Default.aspx* y abra su archivo de código subyacente denominado *Default.aspx.cs*.</span><span class="sxs-lookup"><span data-stu-id="99f2b-140">Save the *Default.aspx* file, then open its code-behind file named *Default.aspx.cs*.</span></span> <span data-ttu-id="99f2b-141">Reemplace el código existente por el siguiente:</span><span class="sxs-lookup"><span data-stu-id="99f2b-141">Replace the existing code with the following:</span></span>
+2. <span data-ttu-id="aca03-140">Guarde el archivo *Default.aspx* y abra su archivo de código subyacente denominado *Default.aspx.cs*.</span><span class="sxs-lookup"><span data-stu-id="aca03-140">Save the *Default.aspx* file, then open its code-behind file named *Default.aspx.cs*.</span></span> <span data-ttu-id="aca03-141">Reemplace el código existente por el siguiente:</span><span class="sxs-lookup"><span data-stu-id="aca03-141">Replace the existing code with the following:</span></span>
 
     ```csharp
     using System;
@@ -120,16 +120,16 @@ ms.locfileid: "57354757"
     }
     ```
 
-    <span data-ttu-id="99f2b-142">El código anterior muestra notificaciones sobre un usuario autenticado, incluidos los usuarios identificados mediante la autenticación de formularios.</span><span class="sxs-lookup"><span data-stu-id="99f2b-142">The above code will display claims about an authenticated user, including users identified by Forms authentication.</span></span>
+    <span data-ttu-id="aca03-142">El código anterior muestra notificaciones sobre un usuario autenticado, incluidos los usuarios identificados mediante la autenticación de formularios.</span><span class="sxs-lookup"><span data-stu-id="aca03-142">The above code will display claims about an authenticated user, including users identified by Forms authentication.</span></span>
 
-## <a name="step-3--test-your-solution"></a><span data-ttu-id="99f2b-143">Paso 3: Probar la solución</span><span class="sxs-lookup"><span data-stu-id="99f2b-143">Step 3 – Test Your Solution</span></span>
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="aca03-143">Paso 3: Probar la solución</span><span class="sxs-lookup"><span data-stu-id="aca03-143">Step 3 – Test Your Solution</span></span>
 
-<span data-ttu-id="99f2b-144">En este paso se prueba la aplicación de formularios Web Forms ASP.NET y se comprueba que se presentan notificaciones cuando un usuario inicia sesión con la autenticación de formularios.</span><span class="sxs-lookup"><span data-stu-id="99f2b-144">In this step you will test your ASP.NET Web Forms application, and verify that claims are presented when a user signs in with Forms authentication.</span></span>
+<span data-ttu-id="aca03-144">En este paso se prueba la aplicación de formularios Web Forms ASP.NET y se comprueba que se presentan notificaciones cuando un usuario inicia sesión con la autenticación de formularios.</span><span class="sxs-lookup"><span data-stu-id="aca03-144">In this step you will test your ASP.NET Web Forms application, and verify that claims are presented when a user signs in with Forms authentication.</span></span>
 
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a><span data-ttu-id="99f2b-145">Para probar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios</span><span class="sxs-lookup"><span data-stu-id="99f2b-145">To test your ASP.NET Web Forms application for claims using Forms authentication</span></span>
+#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a><span data-ttu-id="aca03-145">Para probar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios</span><span class="sxs-lookup"><span data-stu-id="aca03-145">To test your ASP.NET Web Forms application for claims using Forms authentication</span></span>
 
-1. <span data-ttu-id="99f2b-146">Presione **F5** para compilar y ejecutar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="99f2b-146">Press **F5** to build and run the application.</span></span> <span data-ttu-id="99f2b-147">Debe aparecer *Default.aspx*, que tiene los vínculos **Registrarse** e **Iniciar sesión** en la parte superior derecha de la página.</span><span class="sxs-lookup"><span data-stu-id="99f2b-147">You should be presented with *Default.aspx*, which has **Register** and **Log in** links in the top right of the page.</span></span> <span data-ttu-id="99f2b-148">Haga clic en **Registrarse**.</span><span class="sxs-lookup"><span data-stu-id="99f2b-148">Click **Register**.</span></span>
+1. <span data-ttu-id="aca03-146">Presione **F5** para compilar y ejecutar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="aca03-146">Press **F5** to build and run the application.</span></span> <span data-ttu-id="aca03-147">Debe aparecer *Default.aspx*, que tiene los vínculos **Registrarse** e **Iniciar sesión** en la parte superior derecha de la página.</span><span class="sxs-lookup"><span data-stu-id="aca03-147">You should be presented with *Default.aspx*, which has **Register** and **Log in** links in the top right of the page.</span></span> <span data-ttu-id="aca03-148">Haga clic en **Registrarse**.</span><span class="sxs-lookup"><span data-stu-id="aca03-148">Click **Register**.</span></span>
 
-2. <span data-ttu-id="99f2b-149">En la página **Registrarse**, cree una cuenta de usuario y luego haga clic en **Registrarse**.</span><span class="sxs-lookup"><span data-stu-id="99f2b-149">On the **Register** page, create a user account, and then click **Register**.</span></span> <span data-ttu-id="99f2b-150">Se crea la cuenta mediante la autenticación de formularios y la sesión se inicia automáticamente.</span><span class="sxs-lookup"><span data-stu-id="99f2b-150">Your account will be created using Forms authentication, and you will be automatically signed in.</span></span>
+2. <span data-ttu-id="aca03-149">En la página **Registrarse**, cree una cuenta de usuario y luego haga clic en **Registrarse**.</span><span class="sxs-lookup"><span data-stu-id="aca03-149">On the **Register** page, create a user account, and then click **Register**.</span></span> <span data-ttu-id="aca03-150">Se crea la cuenta mediante la autenticación de formularios y la sesión se inicia automáticamente.</span><span class="sxs-lookup"><span data-stu-id="aca03-150">Your account will be created using Forms authentication, and you will be automatically signed in.</span></span>
 
-3. <span data-ttu-id="99f2b-151">Después de que se le haya redirigido a la página principal, debería ver una tabla debajo del título **Sus notificaciones** con la información de notificaciones **Emisor**, **OriginalIssuer**, **Tipo**, **Valor** y **ValueType** sobre la cuenta.</span><span class="sxs-lookup"><span data-stu-id="99f2b-151">After you have been redirected to the home page, you should see a table beneath the **Your Claims** heading that includes the **Issuer**, **OriginalIssuer**, **Type**, **Value**, and **ValueType** claims information about your account.</span></span>
+3. <span data-ttu-id="aca03-151">Después de que se le haya redirigido a la página principal, debería ver una tabla debajo del título **Sus notificaciones** con la información de notificaciones **Emisor**, **OriginalIssuer**, **Tipo**, **Valor** y **ValueType** sobre la cuenta.</span><span class="sxs-lookup"><span data-stu-id="aca03-151">After you have been redirected to the home page, you should see a table beneath the **Your Claims** heading that includes the **Issuer**, **OriginalIssuer**, **Type**, **Value**, and **ValueType** claims information about your account.</span></span>

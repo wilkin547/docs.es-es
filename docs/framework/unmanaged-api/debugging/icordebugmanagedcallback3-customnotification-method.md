@@ -18,54 +18,54 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b086c27d73324b4d834c9afa9e7aea20bf6d9148
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914867"
 ---
-# <a name="icordebugmanagedcallback3customnotification-method"></a><span data-ttu-id="7e18b-102">ICorDebugManagedCallback3::CustomNotification (Método)</span><span class="sxs-lookup"><span data-stu-id="7e18b-102">ICorDebugManagedCallback3::CustomNotification Method</span></span>
-<span data-ttu-id="7e18b-103">Indica que se ha producido una notificación del depurador personalizada.</span><span class="sxs-lookup"><span data-stu-id="7e18b-103">Indicates that a custom debugger notification has been raised.</span></span>  
+# <a name="icordebugmanagedcallback3customnotification-method"></a><span data-ttu-id="ab124-102">ICorDebugManagedCallback3::CustomNotification (Método)</span><span class="sxs-lookup"><span data-stu-id="ab124-102">ICorDebugManagedCallback3::CustomNotification Method</span></span>
+<span data-ttu-id="ab124-103">Indica que se ha producido una notificación del depurador personalizada.</span><span class="sxs-lookup"><span data-stu-id="ab124-103">Indicates that a custom debugger notification has been raised.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e18b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7e18b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab124-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ab124-104">Syntax</span></span>  
   
 ```  
 HRESULT CustomNotification(ICorDebugThread *    pThread,  
                            ICorDebugAppDomain * pAppDomain);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7e18b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7e18b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ab124-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ab124-105">Parameters</span></span>  
  `pThread`  
- <span data-ttu-id="7e18b-106">[in] Un puntero para el subproceso que generó la notificación.</span><span class="sxs-lookup"><span data-stu-id="7e18b-106">[in] A pointer to the thread that raised the notification.</span></span>  
+ <span data-ttu-id="ab124-106">[in] Un puntero para el subproceso que generó la notificación.</span><span class="sxs-lookup"><span data-stu-id="ab124-106">[in] A pointer to the thread that raised the notification.</span></span>  
   
  `pAppDomain`  
- <span data-ttu-id="7e18b-107">[in] Un puntero al dominio de aplicación que contiene el subproceso que generó la notificación.</span><span class="sxs-lookup"><span data-stu-id="7e18b-107">[in] A pointer to the application domain that contains the thread that raised the notification.</span></span>  
+ <span data-ttu-id="ab124-107">[in] Un puntero al dominio de aplicación que contiene el subproceso que generó la notificación.</span><span class="sxs-lookup"><span data-stu-id="ab124-107">[in] A pointer to the application domain that contains the thread that raised the notification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7e18b-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="7e18b-108">Return Value</span></span>  
- <span data-ttu-id="7e18b-109">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="7e18b-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ab124-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="ab124-108">Return Value</span></span>  
+ <span data-ttu-id="ab124-109">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="ab124-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="7e18b-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7e18b-110">HRESULT</span></span>|<span data-ttu-id="7e18b-111">Descripción</span><span class="sxs-lookup"><span data-stu-id="7e18b-111">Description</span></span>|  
+|<span data-ttu-id="ab124-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ab124-110">HRESULT</span></span>|<span data-ttu-id="ab124-111">Descripción</span><span class="sxs-lookup"><span data-stu-id="ab124-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="7e18b-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="7e18b-112">S_OK</span></span>|<span data-ttu-id="7e18b-113">El método se completó correctamente.</span><span class="sxs-lookup"><span data-stu-id="7e18b-113">The method completed successfully.</span></span>|  
+|<span data-ttu-id="ab124-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="ab124-112">S_OK</span></span>|<span data-ttu-id="ab124-113">El método se completó correctamente.</span><span class="sxs-lookup"><span data-stu-id="ab124-113">The method completed successfully.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="7e18b-114">Excepciones</span><span class="sxs-lookup"><span data-stu-id="7e18b-114">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="ab124-114">Excepciones</span><span class="sxs-lookup"><span data-stu-id="ab124-114">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7e18b-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="7e18b-115">Remarks</span></span>  
- <span data-ttu-id="7e18b-116">Una llamada posterior a la [Icordebugthread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md) método recupera el objeto de subproceso que se pasó a la <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> método.</span><span class="sxs-lookup"><span data-stu-id="7e18b-116">A subsequent call to the [ICorDebugThread4::GetCurrentCustomDebuggerNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md) method retrieves the thread object that was passed to the <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="7e18b-117">Tipo del objeto de subproceso debe haber habilitado previamente mediante una llamada a la [ICorDebugProcess3:: SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="7e18b-117">The thread object's type must have been previously enabled by calling the [ICorDebugProcess3::SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md) method.</span></span> <span data-ttu-id="7e18b-118">El depurador puede leer parámetros específicos del tipo de los campos del objeto de subproceso y puede almacenar respuestas en los campos.</span><span class="sxs-lookup"><span data-stu-id="7e18b-118">The debugger can read type-specific parameters from the fields of the thread object, and can store responses into fields.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ab124-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ab124-115">Remarks</span></span>  
+ <span data-ttu-id="ab124-116">Una llamada posterior a la [Icordebugthread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md) método recupera el objeto de subproceso que se pasó a la <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> método.</span><span class="sxs-lookup"><span data-stu-id="ab124-116">A subsequent call to the [ICorDebugThread4::GetCurrentCustomDebuggerNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md) method retrieves the thread object that was passed to the <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="ab124-117">Tipo del objeto de subproceso debe haber habilitado previamente mediante una llamada a la [ICorDebugProcess3:: SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="ab124-117">The thread object's type must have been previously enabled by calling the [ICorDebugProcess3::SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md) method.</span></span> <span data-ttu-id="ab124-118">El depurador puede leer parámetros específicos del tipo de los campos del objeto de subproceso y puede almacenar respuestas en los campos.</span><span class="sxs-lookup"><span data-stu-id="ab124-118">The debugger can read type-specific parameters from the fields of the thread object, and can store responses into fields.</span></span>  
   
- <span data-ttu-id="7e18b-119">El [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interfaz no impone ninguna directiva en los tipos de notificaciones o su contenido y la semántica de las notificaciones es estrictamente un contrato entre depuradores, aplicaciones y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7e18b-119">The [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interface imposes no policy on the types of notifications or their contents, and the semantics of the notifications are strictly a contract between debuggers, applications, and the .NET Framework.</span></span>  
+ <span data-ttu-id="ab124-119">El [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interfaz no impone ninguna directiva en los tipos de notificaciones o su contenido y la semántica de las notificaciones es estrictamente un contrato entre depuradores, aplicaciones y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ab124-119">The [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interface imposes no policy on the types of notifications or their contents, and the semantics of the notifications are strictly a contract between debuggers, applications, and the .NET Framework.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7e18b-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7e18b-120">Requirements</span></span>  
- <span data-ttu-id="7e18b-121">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e18b-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab124-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ab124-120">Requirements</span></span>  
+ <span data-ttu-id="ab124-121">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab124-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7e18b-122">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7e18b-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ab124-122">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ab124-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7e18b-123">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7e18b-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ab124-123">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ab124-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7e18b-124">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e18b-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="ab124-124">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab124-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7e18b-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="7e18b-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab124-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="ab124-125">See also</span></span>
 
-- [<span data-ttu-id="7e18b-126">ICorDebugManagedCallback3 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="7e18b-126">ICorDebugManagedCallback3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-interface.md)
-- [<span data-ttu-id="7e18b-127">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="7e18b-127">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="7e18b-128">Depuración</span><span class="sxs-lookup"><span data-stu-id="7e18b-128">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="ab124-126">ICorDebugManagedCallback3 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ab124-126">ICorDebugManagedCallback3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-interface.md)
+- [<span data-ttu-id="ab124-127">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="ab124-127">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="ab124-128">Depuración</span><span class="sxs-lookup"><span data-stu-id="ab124-128">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
