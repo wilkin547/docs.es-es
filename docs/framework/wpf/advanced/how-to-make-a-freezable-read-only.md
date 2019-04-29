@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
 ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771025"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Procedimiento Hacer que un elemento Freezable sea de solo lectura
 En este ejemplo se muestra cómo realizar una <xref:System.Windows.Freezable> de solo lectura mediante una llamada a su <xref:System.Windows.Freezable.Freeze%2A> método.  
   
  No se puede inmovilizar un <xref:System.Windows.Freezable> objeto si alguna de las condiciones siguientes es `true` sobre el objeto:  
   
--   Ha animado o propiedades enlazado a datos.  
+- Ha animado o propiedades enlazado a datos.  
   
--   Tiene propiedades establecidas por un recurso dinámico. Para obtener más información acerca de los recursos dinámicos, consulte el [recursos XAML](xaml-resources.md).  
+- Tiene propiedades establecidas por un recurso dinámico. Para obtener más información acerca de los recursos dinámicos, consulte el [recursos XAML](xaml-resources.md).  
   
--   Contiene <xref:System.Windows.Freezable> subobjetos que no se puede inmovilizar.  
+- Contiene <xref:System.Windows.Freezable> subobjetos que no se puede inmovilizar.  
   
  Si estas condiciones son `false` para su <xref:System.Windows.Freezable> objeto y no va a modificar, considere la posibilidad de inmovilizarlo para obtener ventajas de rendimiento.  
   

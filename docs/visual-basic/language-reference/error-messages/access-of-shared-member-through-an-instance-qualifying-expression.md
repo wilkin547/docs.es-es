@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
 ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751610"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Acceso de miembro compartido mediante una instancia; la expresión calificadora no se evaluará
 Una variable de instancia de una clase o estructura se usa para tener acceso a un `Shared` variable, propiedad, procedimiento o evento definido en esa clase o estructura. Esta advertencia puede producirse también si se usa una variable de instancia para tener acceso a un miembro implícitamente compartido de una clase o estructura, como una constante o enumeración, o una clase anidada o estructura.  
@@ -29,7 +29,7 @@ Una variable de instancia de una clase o estructura se usa para tener acceso a u
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Use el nombre de la clase o estructura que define el `Shared` miembro para acceder a él, como se muestra en el ejemplo siguiente.  
+- Use el nombre de la clase o estructura que define el `Shared` miembro para acceder a él, como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Public Class testClass  

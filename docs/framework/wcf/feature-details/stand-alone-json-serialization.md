@@ -3,11 +3,11 @@ title: Serialización independiente de JSON
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
 ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747594"
 ---
 # <a name="stand-alone-json-serialization"></a>Serialización independiente de JSON
 JSON (JavaScript Object Notation) es un formato de datos diseñado específicamente para usarse por código JavaScript que se ejecute en páginas web dentro del explorador. Es el formato de datos predeterminado utilizado por los servicios de AJAX de ASP.NET creados en Windows Communication Foundation (WCF).  
@@ -42,20 +42,20 @@ JSON (JavaScript Object Notation) es un formato de datos diseñado específicame
 ### <a name="enumerations-and-json"></a>Enumeraciones y JSON  
  Los valores del miembro de enumeración se tratan como números en JSON, que es diferente de cómo se tratan en contratos de datos, donde se incluyen como nombres de miembros. Para obtener más información sobre el tratamiento de contrato de datos, vea [tipos de enumeración en contratos de datos](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
--   Por ejemplo, si tiene `public enum Color {red, green, blue, yellow, pink}`, al serializar `yellow`, se genera el número 3 y no la cadena "amarillo".  
+- Por ejemplo, si tiene `public enum Color {red, green, blue, yellow, pink}`, al serializar `yellow`, se genera el número 3 y no la cadena "amarillo".  
   
--   Todos los miembros `enum` son serializables. Se omiten los atributos <xref:System.Runtime.Serialization.EnumMemberAttribute> y <xref:System.NonSerializedAttribute> si se utilizan.  
+- Todos los miembros `enum` son serializables. Se omiten los atributos <xref:System.Runtime.Serialization.EnumMemberAttribute> y <xref:System.NonSerializedAttribute> si se utilizan.  
   
--   Es posible deserializar un valor `enum` no existente, por ejemplo, el valor 87 se puede deserializar en la enumeración de color anterior aunque no esté definido un nombre de color correspondiente.  
+- Es posible deserializar un valor `enum` no existente, por ejemplo, el valor 87 se puede deserializar en la enumeración de color anterior aunque no esté definido un nombre de color correspondiente.  
   
--   Una `enum` de marcas no es especial y se trata igual que otra `enum`.  
+- Una `enum` de marcas no es especial y se trata igual que otra `enum`.  
   
 ### <a name="datestimes-and-json"></a>Fechas/horas y JSON  
  El formato JSON no admite directamente fechas y horas. No obstante, se usan correctamente y AJAX de ASP.NET proporciona compatibilidad especial para estos tipos. Al usar proxies AJAX de ASP.NET, el tipo <xref:System.DateTime> de .NET se corresponde completamente con el tipo `DateTime` de JavaScript.  
   
--   Cuando no se utiliza ASP.NET, se representa un tipo <xref:System.DateTime> en JSON como una cadena con un formato especial que se describe en la sección de Información avanzada en este tema.  
+- Cuando no se utiliza ASP.NET, se representa un tipo <xref:System.DateTime> en JSON como una cadena con un formato especial que se describe en la sección de Información avanzada en este tema.  
   
--   <xref:System.DateTimeOffset> se representa en JSON como un tipo complejo: {"DateTime":dateTime,"OffsetMinutes":offsetMinutes}. El miembro `offsetMinutes` es el desplazamiento de la hora local respecto a la hora del meridiano de Greenwich (GMT), también conocida como hora universal coordinada (UTC), que está asociado a la ubicación del evento de interés. El miembro `dateTime` representa la instancia temporal en la que se produce el evento de interés (de nuevo, se convierte en un `DateTime` en JavaScript cuando se usa AJAX de ASP.NET y en una cadena cuando no se usa). En la serialización, el miembro `dateTime` siempre se serializa en GMT. Por lo tanto, si se describen las 3:00 a.m. hora de Nueva York, `dateTime` tiene un componente horario de 8:00 a.m. y `offsetMinutes` son 300 (menos 300 minutos o 5 horas con respecto a GMT).  
+- <xref:System.DateTimeOffset> se representa en JSON como un tipo complejo: {"DateTime":dateTime,"OffsetMinutes":offsetMinutes}. El miembro `offsetMinutes` es el desplazamiento de la hora local respecto a la hora del meridiano de Greenwich (GMT), también conocida como hora universal coordinada (UTC), que está asociado a la ubicación del evento de interés. El miembro `dateTime` representa la instancia temporal en la que se produce el evento de interés (de nuevo, se convierte en un `DateTime` en JavaScript cuando se usa AJAX de ASP.NET y en una cadena cuando no se usa). En la serialización, el miembro `dateTime` siempre se serializa en GMT. Por lo tanto, si se describen las 3:00 a.m. hora de Nueva York, `dateTime` tiene un componente horario de 8:00 a.m. y `offsetMinutes` son 300 (menos 300 minutos o 5 horas con respecto a GMT).  
   
     > [!NOTE]
     >  Los objetos <xref:System.DateTime> y <xref:System.DateTimeOffset>, cuando se serializan en JSON, solo conservan información de precisión de milisegundos. Los valores de submilisegundos (micro y nanosegundos) se pierden durante la serialización.  
@@ -63,28 +63,28 @@ JSON (JavaScript Object Notation) es un formato de datos diseñado específicame
 ### <a name="xml-types-and-json"></a>Tipos XML y JSON  
  Los tipos XML se convierten en cadenas JSON.  
   
--   Por ejemplo, si una miembro de datos "q" de tipo XElement contiene \<abc / >, el código JSON es {"q": "\<abc / >"}.  
+- Por ejemplo, si una miembro de datos "q" de tipo XElement contiene \<abc / >, el código JSON es {"q": "\<abc / >"}.  
   
--   Hay algunas reglas especiales que especifican el ajuste de XML; para obtener más información, consulte la sección Información avanzada más adelante en este tema.  
+- Hay algunas reglas especiales que especifican el ajuste de XML; para obtener más información, consulte la sección Información avanzada más adelante en este tema.  
   
--   Si está utilizando AJAX de ASP.NET y no desea usar cadenas en JavaScript, pero quiere XML DOM en su lugar, establezca la propiedad <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> en XML en <xref:System.ServiceModel.Web.WebGetAttribute> o la propiedad <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> en XML en <xref:System.ServiceModel.Web.WebInvokeAttribute>.  
+- Si está utilizando AJAX de ASP.NET y no desea usar cadenas en JavaScript, pero quiere XML DOM en su lugar, establezca la propiedad <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> en XML en <xref:System.ServiceModel.Web.WebGetAttribute> o la propiedad <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> en XML en <xref:System.ServiceModel.Web.WebInvokeAttribute>.  
   
 ### <a name="collections-dictionaries-and-arrays"></a>Colecciones, diccionarios y matrices  
  Todas las colecciones, diccionarios y matrices se representan en JSON como matrices.  
   
--   Cualquier personalización que utilice <xref:System.Runtime.Serialization.CollectionDataContractAttribute> se omite en la representación de JSON.  
+- Cualquier personalización que utilice <xref:System.Runtime.Serialization.CollectionDataContractAttribute> se omite en la representación de JSON.  
   
--   Los diccionarios no son una forma para trabajar directamente con JSON. Diccionario\<cadena, objeto > no se admite en la misma manera en que WCF como se espera que funcione con otras tecnologías JSON. Por ejemplo, si "abc" está asignado a "xyz" y "def" está asignado a 42 en un diccionario, la representación de JSON no es {"abc":"xyz","def":42} si no que en su lugar es [{"Clave":"abc","Valor":"xyz"},{"Clave":"def","Valor":42}].  
+- Los diccionarios no son una forma para trabajar directamente con JSON. Diccionario\<cadena, objeto > no se admite en la misma manera en que WCF como se espera que funcione con otras tecnologías JSON. Por ejemplo, si "abc" está asignado a "xyz" y "def" está asignado a 42 en un diccionario, la representación de JSON no es {"abc":"xyz","def":42} si no que en su lugar es [{"Clave":"abc","Valor":"xyz"},{"Clave":"def","Valor":42}].  
   
--   Si desea trabajar con JSON directamente (obteniendo acceso dinámicamente a claves y valores, sin predefinir una restricción rígida), tiene varias opciones:  
+- Si desea trabajar con JSON directamente (obteniendo acceso dinámicamente a claves y valores, sin predefinir una restricción rígida), tiene varias opciones:  
   
-    -   Considere el uso de la [serialización de JSON (AJAX) débilmente tipada](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md) ejemplo.  
+    - Considere el uso de la [serialización de JSON (AJAX) débilmente tipada](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md) ejemplo.  
   
-    -   Considere usar la interfaz <xref:System.Runtime.Serialization.ISerializable> y los constructores de deserialización; estos dos mecanismos le permiten obtener acceso a parejas de valores y claves de JSON en serialización y deserialización respectivamente, pero no funcionan en escenarios de confianza parcial.  
+    - Considere usar la interfaz <xref:System.Runtime.Serialization.ISerializable> y los constructores de deserialización; estos dos mecanismos le permiten obtener acceso a parejas de valores y claves de JSON en serialización y deserialización respectivamente, pero no funcionan en escenarios de confianza parcial.  
   
-    -   Considere la posibilidad de trabajar con el [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md) en lugar de utilizar un serializador.  
+    - Considere la posibilidad de trabajar con el [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md) en lugar de utilizar un serializador.  
   
-    -   *Polimorfismo* en el contexto de serialización hace referencia a la capacidad de serializar un tipo derivado donde se espera su tipo base. Hay reglas específicas de JSON especiales al utilizar las colecciones de manera polimórfica, por ejemplo, al asignar una colección a un <xref:System.Object>. Este problema se trata con todo detalle en la sección de Información avanzada más adelante en este tema.  
+    - *Polimorfismo* en el contexto de serialización hace referencia a la capacidad de serializar un tipo derivado donde se espera su tipo base. Hay reglas específicas de JSON especiales al utilizar las colecciones de manera polimórfica, por ejemplo, al asignar una colección a un <xref:System.Object>. Este problema se trata con todo detalle en la sección de Información avanzada más adelante en este tema.  
   
 ## <a name="additional-details"></a>Detalles adicionales  
   
@@ -124,9 +124,9 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 #### <a name="supported-and-unsupported-iserializable-types"></a>Tipos compatibles y no compatibles con ISerializable  
  En general, los tipos que implementan la interfaz <xref:System.Runtime.Serialization.ISerializable> son completamente compatibles al serializar o deserializar JSON. No obstante, algunos de estos tipos (incluidos algunos tipos .NET Framework) se implementan de tal forma que los aspectos de serialización específicos de JSON hacen que no se deserialicen correctamente:  
   
--   Con <xref:System.Runtime.Serialization.ISerializable>, el tipo de los miembros de datos individuales nunca se conocen por anticipado. Esto lleva a una situación polimórfica similar a deserializar tipos en un objeto. Como se mencionó anteriormente, esto puede llevar a perder la información de tipo en JSON. Por ejemplo, un tipo que serializa un `enum` en su implementación de <xref:System.Runtime.Serialization.ISerializable> e intenta volver a deserializar correctamente en un `enum` (sin las conversiones adecuadas) tiene errores, porque una `enum` se serializa usando números en JSON y los números JSON se deserializan en tipos numéricos .NET integrados (Int32, decimal o doble). Por tanto, el hecho de que el número usado sea un valor `enum` se pierde.  
+- Con <xref:System.Runtime.Serialization.ISerializable>, el tipo de los miembros de datos individuales nunca se conocen por anticipado. Esto lleva a una situación polimórfica similar a deserializar tipos en un objeto. Como se mencionó anteriormente, esto puede llevar a perder la información de tipo en JSON. Por ejemplo, un tipo que serializa un `enum` en su implementación de <xref:System.Runtime.Serialization.ISerializable> e intenta volver a deserializar correctamente en un `enum` (sin las conversiones adecuadas) tiene errores, porque una `enum` se serializa usando números en JSON y los números JSON se deserializan en tipos numéricos .NET integrados (Int32, decimal o doble). Por tanto, el hecho de que el número usado sea un valor `enum` se pierde.  
   
--   Un tipo <xref:System.Runtime.Serialization.ISerializable> que depende de un orden particular de deserialización en su constructor de deserialización también puede tener errores al deserializar algunos datos JSON, porque la mayoría de serializadores JSON no garantizan ningún orden específico.  
+- Un tipo <xref:System.Runtime.Serialization.ISerializable> que depende de un orden particular de deserialización en su constructor de deserialización también puede tener errores al deserializar algunos datos JSON, porque la mayoría de serializadores JSON no garantizan ningún orden específico.  
   
 #### <a name="factory-types"></a>Tipos de fábrica  
  Mientras que, en general, la interfaz <xref:System.Runtime.Serialization.IObjectReference> se admite en JSON, no se admiten los atributos que requieren la característica "tipo de fábrica" (que devuelven una instancia de un tipo diferente de <xref:System.Runtime.Serialization.IObjectReference.GetRealObject%28System.Runtime.Serialization.StreamingContext%29> del tipo que implementa la interfaz).  
@@ -204,11 +204,11 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 #### <a name="when-are-type-hints-emitted"></a>Cuando se emiten sugerencias de tipo  
  Las sugerencias de tipo pueden aumentar de forma significativa el tamaño del mensaje (una forma de mitigarlo es usar espacios de nombres de contratos de datos más cortos si es posible). Por consiguiente, rigen las siguientes reglas si se emiten sugerencias de tipo:  
   
--   Al usar ASP.NET AJAX, las sugerencias de tipo siempre se emiten cuando es posible, incluso si no existe una asignación base/derivada, por ejemplo, incluso si un Círculo se asigna a Círculo. (Esto es necesario para habilitar completamente el proceso de llamada del entorno JSON de tipo flexible en el entorno .NET de tipo inflexible sin sorpresas de pérdidas de información).  
+- Al usar ASP.NET AJAX, las sugerencias de tipo siempre se emiten cuando es posible, incluso si no existe una asignación base/derivada, por ejemplo, incluso si un Círculo se asigna a Círculo. (Esto es necesario para habilitar completamente el proceso de llamada del entorno JSON de tipo flexible en el entorno .NET de tipo inflexible sin sorpresas de pérdidas de información).  
   
--   Al usar servicios de AJAX sin integración de ASP.NET, las sugerencias de tipo solo se emiten cuando existe una asignación base/derivada, es decir, se emiten cuando un Círculo se asigna a Forma o <xref:System.Object>, pero no cuando se asigna a Círculo. Esto proporciona la información mínima necesaria para implementar correctamente un cliente JavaScript, por tanto para mejorar el rendimiento, pero no protege contra la pérdida de información en clientes designado de forma incorrecta. Evite asignaciones base/derivadas juntas en el servidor si desea evitar este problema en el cliente.  
+- Al usar servicios de AJAX sin integración de ASP.NET, las sugerencias de tipo solo se emiten cuando existe una asignación base/derivada, es decir, se emiten cuando un Círculo se asigna a Forma o <xref:System.Object>, pero no cuando se asigna a Círculo. Esto proporciona la información mínima necesaria para implementar correctamente un cliente JavaScript, por tanto para mejorar el rendimiento, pero no protege contra la pérdida de información en clientes designado de forma incorrecta. Evite asignaciones base/derivadas juntas en el servidor si desea evitar este problema en el cliente.  
   
--   Al utilizar el tipo <xref:System.Runtime.Serialization.DataContractSerializer>, el parámetro de constructor `alwaysEmitTypeInformation` le permite elegir entre los dos modos anteriores, con el valor predeterminado de "`false`" (solo se emiten sugerencias de tipo cuando son necesarias).  
+- Al utilizar el tipo <xref:System.Runtime.Serialization.DataContractSerializer>, el parámetro de constructor `alwaysEmitTypeInformation` le permite elegir entre los dos modos anteriores, con el valor predeterminado de "`false`" (solo se emiten sugerencias de tipo cuando son necesarias).  
   
 #### <a name="duplicate-data-member-names"></a>Nombres de miembros de datos duplicados  
  La información de tipo derivado se presenta en el mismo objeto JSON que la información de tipo base y puede producirse en cualquier orden. Por ejemplo, `Shape` se puede representar como sigue.  
@@ -235,7 +235,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  Todos los mecanismos de tipos conocidos usados por <xref:System.Runtime.Serialization.DataContractSerializer> también se admiten de la misma manera en <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. Tanto los serializadores de leer el mismo elemento de configuración, [ \<dataContractSerializer >](../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md) en [ \<system.runtime.serialization >](../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md), para descubrir tipos conocidos agregados a través de un archivo de configuración.  
   
 #### <a name="collections-assigned-to-object"></a>Colecciones asignadas a objetos  
- Las colecciones asignadas a objetos se serializan como si fueran colecciones que implementan <xref:System.Collections.Generic.IEnumerable%601>: una matriz JSON donde cada entrada tiene una sugerencia de tipo si es un tipo complejo. Por ejemplo, un <xref:System.Collections.Generic.List%601> typu `Shape` asignado a <xref:System.Object> el siguiente aspecto.  
+ Las colecciones asignadas a objetos se serializan como si fueran colecciones que implementan  <xref:System.Collections.Generic.IEnumerable%601>: una matriz JSON donde cada entrada tiene una sugerencia de tipo si es un tipo complejo. Por ejemplo, un <xref:System.Collections.Generic.List%601> typu `Shape` asignado a <xref:System.Object> el siguiente aspecto.  
   
 ```json  
 [{"__type":"Shape:#MyApp.Shapes","x":50,"y":70},  
@@ -245,9 +245,9 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  Al volver a deserializar en <xref:System.Object>:  
   
--   `Shape` debe estar en la lista de tipos conocidos. Tener <xref:System.Collections.Generic.List%601> typu `Shape` en tipos conocidos no tiene ningún efecto. Tenga en cuenta que no es necesario agregar `Shape` a los tipos conocidos en la serialización en este caso, esto se hace automáticamente.  
+- `Shape` debe estar en la lista de tipos conocidos. Tener <xref:System.Collections.Generic.List%601> typu `Shape` en tipos conocidos no tiene ningún efecto. Tenga en cuenta que no es necesario agregar `Shape` a los tipos conocidos en la serialización en este caso, esto se hace automáticamente.  
   
--   La colección se deserializa como un <xref:System.Array> typu <xref:System.Object> que contiene `Shape` instancias.  
+- La colección se deserializa como un <xref:System.Array> typu <xref:System.Object> que contiene `Shape` instancias.  
   
 #### <a name="derived-collections-assigned-to-base-collections"></a>Colecciones derivadas asignadas a colecciones base  
  Cuando una colección derivada se asigna a una colección base, la colección normalmente se serializa como si fuera una colección del tipo base. No obstante, si el tipo de elemento de la colección derivada no se puede asignar al tipo de elemento de la colección base, se inicia una excepción.  

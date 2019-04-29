@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 15ff9ad710b49caf35767acf498a8e55b238d84c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759926"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Tutorial: Organizar controles en formularios Windows Forms mediante guías de alineación
 La posición precisa de los controles del formulario es de alta prioridad para muchas aplicaciones. El Diseñador de Windows Forms ofrece muchas herramientas de diseño para realizar esta acción. Una de las más importantes es la <xref:System.Windows.Forms.Design.Behavior.SnapLine> característica.  
@@ -23,27 +23,27 @@ La posición precisa de los controles del formulario es de alta prioridad para m
   
  Las tareas ilustradas en este tutorial incluyen:  
   
--   Crear un proyecto de Windows Forms  
+- Crear un proyecto de Windows Forms  
   
--   Espaciado y alinear controles mediante las guías de alineación  
+- Espaciado y alinear controles mediante las guías de alineación  
   
--   Alinear al formulario y los márgenes de contenedor  
+- Alinear al formulario y los márgenes de contenedor  
   
--   Alinear a controles agrupados  
+- Alinear a controles agrupados  
   
--   Uso de las guías de alineación para colocar un Control esquematizando su tamaño  
+- Uso de las guías de alineación para colocar un Control esquematizando su tamaño  
   
--   Uso de las guías de alineación al arrastrar un Control desde el cuadro de herramientas  
+- Uso de las guías de alineación al arrastrar un Control desde el cuadro de herramientas  
   
--   Cambiar el tamaño de los controles mediante las guías de alineación  
+- Cambiar el tamaño de los controles mediante las guías de alineación  
   
--   Alinear una etiqueta en el texto de un Control  
+- Alinear una etiqueta en el texto de un Control  
   
--   Uso de las guías de alineación con navegación mediante el teclado  
+- Uso de las guías de alineación con navegación mediante el teclado  
   
--   Las guías de alineación y paneles de diseño  
+- Las guías de alineación y paneles de diseño  
   
--   Deshabilitar las guías de alineación  
+- Deshabilitar las guías de alineación  
   
  Cuando haya terminado, tendrá una descripción de la función de diseño desempeñada por la característica de las guías de alineación.  
   
@@ -216,7 +216,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
   
 #### <a name="to-selectively-disable-snaplines"></a>Para deshabilitar de forma selectiva las guías de alineación  
   
--   Presione la tecla ALT y mientras mueve un control alrededor del formulario.  
+- Presione la tecla ALT y mientras mueve un control alrededor del formulario.  
   
      Tenga en cuenta que no las guías de alineación aparecen y el control no se ajusta a las posibles posiciones de alineación.  
   
@@ -233,9 +233,9 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 ## <a name="next-steps"></a>Pasos siguientes  
  Las guías de alineación ofrecen una forma intuitiva de alinear controles en el formulario. Estas son otras sugerencias para seguir con la exploración:  
   
--   Intente anidar un <xref:System.Windows.Forms.GroupBox> control dentro de otra <xref:System.Windows.Forms.GroupBox> control. Colocar un <xref:System.Windows.Forms.Button> control dentro del elemento secundario <xref:System.Windows.Forms.GroupBox> control y otra dentro del elemento primario <xref:System.Windows.Forms.GroupBox> control. Mover el <xref:System.Windows.Forms.Button> controles alrededor para ver cómo las líneas de ajuste cruzan los límites del contenedor.  
+- Intente anidar un <xref:System.Windows.Forms.GroupBox> control dentro de otra <xref:System.Windows.Forms.GroupBox> control. Colocar un <xref:System.Windows.Forms.Button> control dentro del elemento secundario <xref:System.Windows.Forms.GroupBox> control y otra dentro del elemento primario <xref:System.Windows.Forms.GroupBox> control. Mover el <xref:System.Windows.Forms.Button> controles alrededor para ver cómo las líneas de ajuste cruzan los límites del contenedor.  
   
--   Crear una columna de <xref:System.Windows.Forms.TextBox> controles y una columna correspondiente de <xref:System.Windows.Forms.Label> controles. Establezca el valor de la <xref:System.Windows.Forms.Label> los controles <xref:System.Windows.Forms.Control.AutoSize%2A> propiedad `true`. Usar las guías de alineación para mover el <xref:System.Windows.Forms.Label> controla de manera que su texto mostrado está alineado con el texto en el <xref:System.Windows.Forms.TextBox> controles.  
+- Crear una columna de <xref:System.Windows.Forms.TextBox> controles y una columna correspondiente de <xref:System.Windows.Forms.Label> controles. Establezca el valor de la <xref:System.Windows.Forms.Label> los controles <xref:System.Windows.Forms.Control.AutoSize%2A> propiedad `true`. Usar las guías de alineación para mover el <xref:System.Windows.Forms.Label> controla de manera que su texto mostrado está alineado con el texto en el <xref:System.Windows.Forms.TextBox> controles.  
   
  Para obtener información sobre el diseño de interfaz de usuario de Windows, consulte el libro *Microsoft Windows User Experience, Official Guidelines para diseñadores y desarrolladores de interfaz de usuario* Redmond, Washington: Microsoft Press, 1999. (USBN: 0-7356-0566-1).  
   

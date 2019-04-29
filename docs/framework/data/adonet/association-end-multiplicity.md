@@ -3,22 +3,22 @@ title: multiplicidad de extremo de asociación
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
 ms.openlocfilehash: 59eed56204543adf405cfc7c71a49697a9e18374
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769673"
 ---
 # <a name="association-end-multiplicity"></a>multiplicidad de extremo de asociación
 *Multiplicidad de extremo de asociación* define el número de [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) instancias que pueden estar en un extremo de un [asociación](../../../../docs/framework/data/adonet/association-type.md).  
   
  Una multiplicidad de extremo de asociación puede tener uno de los valores siguientes:  
   
--   uno (1): Indica que esa instancia de tipo exactamente una entidad existe en el extremo de asociación.  
+- uno (1): Indica que esa instancia de tipo exactamente una entidad existe en el extremo de asociación.  
   
--   cero o uno (de 0.. 1): Indica que hay cero o una instancia de tipo de entidad en el extremo de asociación.  
+- cero o uno (de 0.. 1): Indica que hay cero o una instancia de tipo de entidad en el extremo de asociación.  
   
--   muchos (\*): indica que el cero, uno o más instancias del tipo de entidad existen en el extremo de asociación.  
+- muchos (\*): indica que el cero, uno o más instancias del tipo de entidad existen en el extremo de asociación.  
   
  Normalmente, una asociación se caracteriza por sus multiplicidades de extremo de asociación. Por ejemplo, si los extremos de una asociación tienen multiplicidades uno (1) y varios (\*), la asociación se denomina una asociación uno a varios. En el ejemplo siguiente, la asociación `PublishedBy` es una asociación uno a varios (un publicador publica muchos libros y un libro solo puede ser publicado por un publicador). La asociación `WrittenBy` es una asociación varios a varios (un libro puede tener varios autores y un autor puede escribir varios libros).  
   

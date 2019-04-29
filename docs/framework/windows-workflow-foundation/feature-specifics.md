@@ -3,11 +3,11 @@ title: Detalles de las características de Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773713"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Detalles de las características de Windows Workflow Foundation
 
@@ -43,9 +43,9 @@ El <xref:System.ServiceModel.WorkflowServiceHost> es el host de flujo de trabajo
 
 - Los ejemplos para <xref:System.ServiceModel.WorkflowServiceHost> se pueden encontrar en las siguientes secciones:
 
-    - [Ejecución](./samples/execution.md)
+  - [Ejecución](./samples/execution.md)
 
-    - Aplicación: [Administración de instancias suspendidas](./samples/suspended-instance-management.md)
+  - Aplicación: [Administración de instancias suspendidas](./samples/suspended-instance-management.md)
 
 - [Información general de servicios de flujo de trabajo de hospedaje](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -67,13 +67,13 @@ Una correlación es una de estas dos cosas:
 
 - Un ejemplo de correlación utilizado para agrupar mensajes es una correlación solicitud-respuesta que agrupa los mensajes.
 
-    - En un <xref:System.ServiceModel.Activities.Receive> actividad, haga clic en el <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> propiedad y agregue un <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> utilizando el CorrelationHandle creado en el primer paso anterior.
+  - En un <xref:System.ServiceModel.Activities.Receive> actividad, haga clic en el <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> propiedad y agregue un <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> utilizando el CorrelationHandle creado en el primer paso anterior.
 
-    - Crear un <xref:System.ServiceModel.Activities.SendReply> actividad con el botón secundario en el <xref:System.ServiceModel.Activities.Receive> y haga clic en "Crear SendReply". Péguela en su flujo de trabajo después de la actividad <xref:System.ServiceModel.Activities.Receive>.
+  - Crear un <xref:System.ServiceModel.Activities.SendReply> actividad con el botón secundario en el <xref:System.ServiceModel.Activities.Receive> y haga clic en "Crear SendReply". Péguela en su flujo de trabajo después de la actividad <xref:System.ServiceModel.Activities.Receive>.
 
 - Un ejemplo de asignación de un fragmento de datos a una instancia de servicio es la correlación basada en contenido que asigna un fragmento de datos (por ejemplo, un identificador de pedido) a una instancia de flujo de trabajo en particular.
 
-    - En cualquier actividad de mensajería, haga clic en la propiedad `CorrelationInitializers` y agregue un elemento <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> utilizando la variable <xref:System.ServiceModel.Activities.CorrelationHandle> creada anteriormente. Haga doble clic en la propiedad deseada en el mensaje (por ejemplo, OrderID) del menú desplegable. Establezca la propiedad `CorrelatesWith` en la variable <xref:System.ServiceModel.Activities.CorrelationHandle> utilizada anteriormente.
+  - En cualquier actividad de mensajería, haga clic en la propiedad `CorrelationInitializers` y agregue un elemento <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> utilizando la variable <xref:System.ServiceModel.Activities.CorrelationHandle> creada anteriormente. Haga doble clic en la propiedad deseada en el mensaje (por ejemplo, OrderID) del menú desplegable. Establezca la propiedad `CorrelatesWith` en la variable <xref:System.ServiceModel.Activities.CorrelationHandle> utilizada anteriormente.
 
 - [Documentación Conceptual de correlación](../wcf/feature-details/correlation.md)
 
@@ -131,9 +131,9 @@ El [DataContractResolver](../wcf/samples/datacontractresolver.md) soluciona esto
 
 - Ejemplos:
 
-    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
+  - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
+  - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>Escenarios de resolución del contrato de datos
 
@@ -151,25 +151,25 @@ El diagrama de flujo es un paradigma conocido para representar visualmente los p
 
 - La característica de diagrama de flujo utiliza las siguientes clases:
 
-    - <xref:System.Activities.Statements.Flowchart>
+  - <xref:System.Activities.Statements.Flowchart>
 
-    - <xref:System.Activities.Statements.FlowNode>
+  - <xref:System.Activities.Statements.FlowNode>
 
-    - <xref:System.Activities.Statements.FlowDecision>
+  - <xref:System.Activities.Statements.FlowDecision>
 
-    - <xref:System.Activities.Statements.FlowStep>
+  - <xref:System.Activities.Statements.FlowStep>
 
-    - <xref:System.Activities.Statements.FlowSwitch%601>
+  - <xref:System.Activities.Statements.FlowSwitch%601>
 
 - Ejemplos:
 
-    - [Control de errores en una actividad de diagrama de flujo utilizando TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+  - [Control de errores en una actividad de diagrama de flujo utilizando TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [Proceso de contratación](./samples/hiring-process.md)
+  - [Proceso de contratación](./samples/hiring-process.md)
 
 - Documentación del diseñador:
 
-    - [Diseñadores de actividad Flowchart](/visualstudio/workflow-designer/flowchart-activity-designers)
+  - [Diseñadores de actividad Flowchart](/visualstudio/workflow-designer/flowchart-activity-designers)
 
 ### <a name="flowchart-scenarios"></a>Escenarios de diagrama de flujo
 
@@ -197,15 +197,15 @@ Las actividades de procedimiento proporcionan un mecanismo para modelar el flujo
 
 - Ejemplos:
 
-    - [Proceso de contratación](./samples/hiring-process.md)
+  - [Proceso de contratación](./samples/hiring-process.md)
 
-    - [Proceso de compra corporativa](./samples/corporate-purchase-process.md)
+  - [Proceso de compra corporativa](./samples/corporate-purchase-process.md)
 
 - Documentación del diseñador:
 
-    - [Diseñador de actividad Parallel](/visualstudio/workflow-designer/parallel-activity-designer)
+  - [Diseñador de actividad Parallel](/visualstudio/workflow-designer/parallel-activity-designer)
 
-    - [ParallelForEach\<T > Diseñador de actividad](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [ParallelForEach\<T > Diseñador de actividad](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>Escenarios de actividad de procedimiento
 
@@ -277,7 +277,7 @@ El servicio de enrutamiento en .NET 4 está diseñado para que sea más fácil s
 
 2. Protocolo de puente (transporte y mensaje)
 
-3. Control de errores (el enrutador detecta excepciones de comunicación y no puede establecer comunicación con los extremos de reserva)
+3. Control de errores (el enrutador detecta excepciones de comunicación y no puede establecer comunicación con los puntos de conexión de reserva)
 
 4. Actualización dinámica (en memoria) de <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> y configuración de enrutamiento.
 
@@ -323,7 +323,7 @@ Además, los mensajes de detección son válidos para distintos protocolos de re
 
 ### <a name="discovery-scenarios"></a>Escenarios de detección
 
-Un desarrollador no desea codificar de forma rígida los extremos, porque no se sabe cuándo estará disponible un servicio determinado. En su lugar, desea elegir un servicio en tiempo de ejecución. Se necesita más desacoplamiento, solidez y autoconfiguración entre los componentes de la aplicación.
+Un desarrollador no desea programar de forma rígida los puntos de conexión, porque no se sabe cuándo estará disponible un servicio determinado. En su lugar, desea elegir un servicio en tiempo de ejecución. Se necesita más desacoplamiento, solidez y autoconfiguración entre los componentes de la aplicación.
 
 ## <a name="tracking"></a>Seguimiento
 

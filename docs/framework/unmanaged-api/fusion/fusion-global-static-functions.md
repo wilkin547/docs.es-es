@@ -9,11 +9,11 @@ ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86cb59c0935c193a9865d5ace5fe11c96226d9e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697724"
 ---
 # <a name="fusion-global-static-functions"></a>Funciones estáticas globales de la fusión
 Esta sección describen las funciones estáticas globales no administradas que utiliza la API de fusión.  
@@ -26,7 +26,7 @@ Esta sección describen las funciones estáticas globales no administradas que u
  Compara dos identidades de ensamblado para determinar si son equivalentes.  
   
  [CreateApplicationContext (Función)](../../../../docs/framework/unmanaged-api/fusion/createapplicationcontext-function.md)  
- Solo para uso interno. (Esta función admite la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código).  
+ Solo para uso interno. (Esta función admite la infraestructura de .NET Framework y no está pensada para utilizarse directamente desde el código).  
   
  [CreateAssemblyCache (Función)](../../../../docs/framework/unmanaged-api/fusion/createassemblycache-function.md)  
  Obtiene un puntero a una nueva [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) instancia que representa la caché global de ensamblados.  
@@ -41,10 +41,10 @@ Esta sección describen las funciones estáticas globales no administradas que u
  Crea un lector de historial para el archivo especificado.  
   
  [CreateInstallReferenceEnum (Función)](../../../../docs/framework/unmanaged-api/fusion/createinstallreferenceenum-function.md)  
- Obtiene un puntero a un [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) instancia que representa una lista de referencias de una aplicación para el ensamblado especificado.  
+ Obtiene un puntero a un [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) instancia que representa una lista de referencias de la aplicación para el ensamblado especificado.  
   
  [GetAppIdAuthority (Función)](../../../../docs/framework/unmanaged-api/fusion/getappidauthority-function.md)  
- Obtiene un puntero a un [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) instancia que administra las claves para las identidades de la aplicación y referencias.  
+ Obtiene un puntero a un [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) instancia que administra las claves para las identidades de aplicaciones y las referencias.  
   
  [GetAssemblyIdentityFromFile (Función)](../../../../docs/framework/unmanaged-api/fusion/getassemblyidentityfromfile-function.md)  
  Obtiene un puntero a un `IUnknown` objeto con los valores especificados `IID` en el ensamblado en la ruta de acceso de archivo especificado.  
@@ -59,13 +59,13 @@ Esta sección describen las funciones estáticas globales no administradas que u
  Obtiene un puntero a un [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) instancia que administra las claves para los objetos de código.  
   
  [IsFrameworkAssembly (Función)](../../../../docs/framework/unmanaged-api/fusion/isframeworkassembly-function.md)  
- Obtiene un valor que indica si el ensamblado especificado es administrado.  
+ Obtiene un valor que indica si el ensamblado especificado está administrado.  
   
  [NukeDownloadedCache (Función)](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)  
  Elimina la caché de descarga de common language runtime.  
   
  [PreBindAssemblyEx (Función)](../../../../docs/framework/unmanaged-api/fusion/prebindassemblyex-function.md)  
- Obtiene el nombre para mostrar tras aplicar la directiva de un ensamblado.  
+ Obtiene el nombre para mostrar tras aplicar la directiva para un ensamblado.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Interfaces de Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  

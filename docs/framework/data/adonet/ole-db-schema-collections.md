@@ -3,11 +3,11 @@ title: Colecciones de esquemas de OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
 ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772000"
 ---
 # <a name="ole-db-schema-collections"></a>Colecciones de esquemas de OLE DB
 En esta sección se describe la compatibilidad de las colecciones de esquemas con los proveedores OLE DB de Microsoft SQL Server, Oracle y Microsoft Jet.  
@@ -15,17 +15,17 @@ En esta sección se describe la compatibilidad de las colecciones de esquemas co
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Proveedor OLE DB para Microsoft SQL Server  
  El controlador OLE DB de Microsoft SQL Server admite las siguientes colecciones de esquemas específicas además de las colecciones de esquemas comunes:  
   
--   Tablas  
+- Tablas  
   
--   Columnas  
+- Columnas  
   
--   Procedimientos  
+- Procedimientos  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Catálogo  
+- Catálogo  
   
--   Índices  
+- Índices  
   
 ### <a name="tables"></a>Tablas  
   
@@ -154,19 +154,19 @@ En esta sección se describe la compatibilidad de las colecciones de esquemas co
 ## <a name="microsoft-oracle-ole-db-provider"></a>Proveedor OLE DB de Microsoft para Oracle  
  El controlador OLE DB de Microsoft para Oracle admite, además de las colecciones de esquemas comunes, las siguientes colecciones de esquemas específicas:  
   
--   Tablas  
+- Tablas  
   
--   Columnas  
+- Columnas  
   
--   Procedimientos  
+- Procedimientos  
   
--   ProcedureColumns  
+- ProcedureColumns  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Vistas  
+- Vistas  
   
--   Índices  
+- Índices  
   
 ### <a name="tables"></a>Tablas  
   
@@ -297,15 +297,15 @@ En esta sección se describe la compatibilidad de las colecciones de esquemas co
 ## <a name="microsoft-jet-ole-db-provider"></a>Proveedor OLE DB de Microsoft para Jet  
  El controlador OLE DB de Microsoft para Jet admite, además de las colecciones de esquemas comunes, las siguientes colecciones de esquemas específicas:  
   
--   Tablas  
+- Tablas  
   
--   Columnas  
+- Columnas  
   
--   Procedimientos  
+- Procedimientos  
   
--   Vistas  
+- Vistas  
   
--   Índices  
+- Índices  
   
 ### <a name="tables"></a>Tablas  
   

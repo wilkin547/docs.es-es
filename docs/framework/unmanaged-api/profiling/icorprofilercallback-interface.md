@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e2f474317493b3aac421ca1270ff461b97cfe027
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598081"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback (Interfaz)
 Proporciona métodos que se usan por common language runtime (CLR) para notificar a un generador de perfiles de código cuando se producen los eventos al que se ha suscrito el generador de perfiles.  

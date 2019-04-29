@@ -3,22 +3,22 @@ title: Generador de canales y almacenamiento en memoria caché
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784311"
 ---
 # <a name="channel-factory-and-caching"></a>Generador de canales y almacenamiento en memoria caché
 Las aplicaciones cliente de WCF usan la clase <xref:System.ServiceModel.ChannelFactory%601> para crear un canal de comunicación con un servicio WCF.  La crear de instancias de <xref:System.ServiceModel.ChannelFactory%601> genera sobrecarga porque implica las siguientes operaciones:  
   
--   Construir el árbol <xref:System.ServiceModel.Description.ContractDescription>  
+- Construir el árbol <xref:System.ServiceModel.Description.ContractDescription>  
   
--   Reflejar todos los tipos de CLR necesarios  
+- Reflejar todos los tipos de CLR necesarios  
   
--   Construir la pila del canal  
+- Construir la pila del canal  
   
--   Desechar recursos  
+- Desechar recursos  
   
  Para ayudar a reducir esta sobrecarga, WCF puede almacenar en caché los generadores de canal cuando se usa un proxy de cliente de WCF.  
   

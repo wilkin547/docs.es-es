@@ -3,26 +3,26 @@ title: Protocolos de seguridad versión 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
 ms.openlocfilehash: 684ab50b6dab4b97577acf7673ed14c53e5af13e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748582"
 ---
 # <a name="security-protocols-version-10"></a>Protocolos de seguridad versión 1.0
 Los protocolos de seguridad de servicios Web proporcionan mecanismos de seguridad de servicios Web que cubren todos los requisitos de seguridad de mensajería para empresas existentes. En esta sección se describe los detalles de la versión 1.0 de Windows Communication Foundation (WCF) (implementado en el <xref:System.ServiceModel.Channels.SecurityBindingElement>) para los siguiente servicios Web protocolos de seguridad.  
   
 |Especificación/documento|Link|  
 |-|-|  
-|WSS: Message Security 1,0 de SOAP|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
-|WSS: Token Profile 1.0 de Username|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
-|WSS: Token Profile 1,0 de X509|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
-|WSS: Token Profile 1.1 de SAML 1,0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
-|WSS: Message Security 1.1 de SOAP|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
+|WSS: Seguridad del mensaje SOAP 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
+|WSS: Perfil 1.0 de Token de nombre de usuario|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|WSS: X509 token Profile 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
+|WSS: 1.1 de SAML Token Profile 1.0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
+|WSS: Seguridad de los mensajes SOAP 1.1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
 |WSS: Token Profile 1.1 de Username|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
-|WSS: Token Profile 1,1 de X.509|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
-|WSS: Token Profile 1.1 de Kerberos|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
-|WSS: Token Profile 1.1 de SAML 1.1|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
+|WSS: Perfil de Token X.509 1.1|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
+|WSS: Kerberos Token Profile 1.1|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
+|WSS: 1.1 de SAML Token Profile 1.1|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
 |WS-Secure Conversation|<http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
 |WS-Trust|<http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
 |Nota de la aplicación:<br /><br /> Uso de WS-Trust para protocolo de enlace TLS|Para su publicación|  
@@ -32,11 +32,11 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
   
  WCF, versión 1, proporciona 17 modos de autenticación que se pueden usar como base para la configuración de seguridad de servicios Web. Cada modo se optimiza para un conjunto común de requisitos de implementación, como:  
   
--   Credenciales utilizadas para autenticar cliente y servicio.  
+- Credenciales utilizadas para autenticar cliente y servicio.  
   
--   Mecanismos de protección de seguridad de transporte o mensaje.  
+- Mecanismos de protección de seguridad de transporte o mensaje.  
   
--   Patrones de intercambio de mensajes.  
+- Patrones de intercambio de mensajes.  
   
 |Modo de autenticación|Autenticación del cliente|Autenticación de servidor|Modo|  
 |-------------------------|---------------------------|---------------------------|----------|  
@@ -157,7 +157,7 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
 |||  
 |-|-|  
 |Strict|Los elementos se agregan al encabezado de seguridad siguiendo las reglas de diseño descritas en la sección 7.7.1 de la Directiva de seguridad, según un principio general de "declarar antes de usar".|  
-|Lax|Los elementos se agregan al encabezado de seguridad en cualquier orden que cumpla con la seguridad de mensajes WSS: SOAP.|  
+|Lax|Los elementos se agregan al encabezado de seguridad en cualquier orden conforme a WSS: Seguridad del mensaje SOAP.|  
 |LaxTimestampFirst|Igual que Lax, solo que el primer elemento en el encabezado de seguridad debe ser wsse:Timestamp|  
 |LaxTimestampLast|Igual que lax, solo que el último elemento en el encabezado de seguridad debe ser wsse:Timestamp|  
   
@@ -177,7 +177,7 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
   
  Marca de tiempo: true  
   
- Diseño de encabezado de seguridad: Strict  
+ Diseño del encabezado de seguridad: Strict  
   
  Conjunto de algoritmos: Basic256  
   
@@ -640,7 +640,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 ```  
   
 ### <a name="62-using-x509-certificates-for-service-authentication"></a>6.2 Uso de certificados X.509 para la autenticación de servicios  
- En esta sección se describen los modos de autenticación siguientes: MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate y IssuedTokenForCertificate.  
+ En esta sección se describe los modos de autenticación siguientes: MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate y IssuedTokenForCertificate.  
   
 #### <a name="621-mutualcertificate-wss10"></a>6.2.1 MutualCertificate WSS1.0  
  Con este modo de autenticación el cliente autentica mediante un certificado X.509 que aparece en la capa de SOAP como el token del iniciador. La autenticación del servicio también se realiza mediante un certificado X.509.  
@@ -649,7 +649,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  Token del iniciador: el certificado X.509 del cliente, con modo de inclusión establecido en …/IncludeToken/AlwaysToRecipient  
   
- Token del destinatario: el certificado X.509 del servidor, con modo de inclusión establecido en …/IncludeToken/Never  
+ Token del destinatario: Certificado X.509 del servidor, con el modo de inclusión está establecido en .../IncludeToken/Never  
   
  Protección de tokens: False  
   
@@ -811,9 +811,9 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  El enlace usado es un enlace asimétrico con los valores de propiedad siguientes:  
   
- Token del iniciador: certificado X509 de cliente, modo de inclusión establecido en …/IncludeToken/AlwaysToRecipient  
+ Token del iniciador: X509 del cliente certificado, modo de inclusión establecido en .../IncludeToken/AlwaysToRecipient  
   
- Token del destinatario: certificado X509 del servidor, modo de inclusión establecido en …/IncludeToken/AlwaysToInitiator  
+ Token del destinatario: X509 del servidor certificado, modo de inclusión establecido en .../IncludeToken/AlwaysToInitiator  
   
  Protección de tokens: False  
   
@@ -938,7 +938,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  Los modos de autenticación AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 e IssuedTokenForCertificate usan una instancia similar de sp:SymmetricBinding con los siguientes valores de propiedad:  
   
- Token de protección: certificado X.509 de servidor, modo de inclusión establecido en .../IncludeToken/Never  
+ Token de protección: X509 del servidor certificado, modo de inclusión establecido en .../IncludeToken/Never  
 Protección de tokens: False  
   
  Encabezado completo y firmas de cuerpo: True  
@@ -1536,7 +1536,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ## <a name="63-kerberos"></a>6.3 Kerberos  
  Con este modo de autenticación, el cliente se autentica en el servicio utilizando un tique de Kerberos. Ese mismo vale también proporciona autenticación del servidor. El enlace utilizado es un enlace simétrico con las siguientes propiedades:  
   
- Token de protección: vale de Kerberos, modo de inclusión establecido en .../IncludeToken/Once  
+ Token de protección: Vale de Kerberos, modo de inclusión establecido en .../IncludeToken/Once  
 Protección de tokens: False  
   
  Encabezado completo y firmas de cuerpo: True  
@@ -1667,7 +1667,7 @@ TBD
 #### <a name="64-issuedtoken"></a>6.4 IssuedToken  
  Con este modo de autenticación, el cliente no se autentica en el servicio como tal; sino que, en su lugar, presenta un token emitido por un STS y demuestra que conoce una clave compartida. El servicio no se autentica al cliente como tal, sino que, en su lugar, el STS cifra la clave compartida como parte del token emitido, de manera que solo el servicio puede descifrar la clave. El enlace utilizado es un enlace simétrico con las siguientes propiedades:  
   
- Token de protección: token emitido, modo de inclusión establecido en .../IncludeToken/AlwaysToRecipient  
+ Token de protección: Token emitido, modo de inclusión establecido en .../IncludeToken/AlwaysToRecipient  
 Protección de tokens: False  
   
  Encabezado completo y firmas de cuerpo: True  

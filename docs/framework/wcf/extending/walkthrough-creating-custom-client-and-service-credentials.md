@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
 ms.openlocfilehash: db137eb84108c6adbbf04a380934bb6da6936d61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771428"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Tutorial: Crear credenciales de cliente y servicio personalizadas
 En este tema se muestra cómo implementar credenciales de cliente y servicio personalizadas y cómo utilizar las credenciales personalizadas desde el código de la aplicación.  
@@ -18,9 +18,9 @@ En este tema se muestra cómo implementar credenciales de cliente y servicio per
 ## <a name="credentials-extensibility-classes"></a>Clases de extensibilidad de credenciales  
  El <xref:System.ServiceModel.Description.ClientCredentials> y <xref:System.ServiceModel.Description.ServiceCredentials> clases son los puntos de entrada principal para la extensibilidad de seguridad de Windows Communication Foundation (WCF). Estas clases de credenciales proporcionan las API que permiten al código de la aplicación establecer información de las credenciales y convertir los tipos de credenciales en tokens de seguridad. (*Los tokens de seguridad* son la forma utilizada para transmitir información de credenciales dentro de los mensajes SOAP.) Las responsabilidades de estas clases de credenciales pueden dividirse en dos áreas:  
   
--   Proporcione las API para que las aplicaciones establezcan la información de las credenciales.  
+- Proporcione las API para que las aplicaciones establezcan la información de las credenciales.  
   
--   Haga las funciones de un generador para las implementaciones de <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
+- Haga las funciones de un generador para las implementaciones de <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
  Las clases <xref:System.ServiceModel.Description.ClientCredentials> y <xref:System.ServiceModel.Description.ServiceCredentials> heredan de la clase <xref:System.ServiceModel.Security.SecurityCredentialsManager> abstracta que define el contrato para la devolución del <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
@@ -29,22 +29,22 @@ En este tema se muestra cómo implementar credenciales de cliente y servicio per
 ## <a name="reasons-to-customize"></a>Razones para personalizar  
  Hay varias razones para personalizar las clases de credenciales de cliente o servicio. Es más importante es la necesidad de cambiar el comportamiento de seguridad WCF de forma predeterminada con respecto a controlar los tipos de credenciales proporcionados por el sistema, especialmente para los siguientes motivos:  
   
--   Cambios que no son posibles mediante otros puntos de extensibilidad.  
+- Cambios que no son posibles mediante otros puntos de extensibilidad.  
   
--   Agregar nuevos tipos de credenciales.  
+- Agregar nuevos tipos de credenciales.  
   
--   Agregar nuevos tipos de tokens de seguridad personalizados.  
+- Agregar nuevos tipos de tokens de seguridad personalizados.  
   
  En este tema se describe cómo implementar credenciales de cliente y servicio personalizadas y cómo utilizarlas desde el código de la aplicación.  
   
 ## <a name="first-in-a-series"></a>Primero en una serie  
  Creación de una clase de credenciales personalizadas es el primer paso, porque es la razón para personalizar las credenciales cambiar el comportamiento WCF con respecto al suministro de credenciales, serialización de tokens de seguridad o autenticación. Otros temas en esta sección describen cómo crear serializadores y autenticadores personalizados. En este aspecto, crear la clase de credenciales personalizada es el primer tema de la serie. Las acciones subsiguientes (crear serializadores y autenticadores personalizados) sólo se pueden hacer después de crear las credenciales personalizadas. Entre los temas adicionales que se generan a partir de este tema se incluyen:  
   
--   [Cómo: Crear un proveedor de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+- [Cómo: Crear un proveedor de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
--   [Cómo: Crear un autenticador de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+- [Cómo: Crear un autenticador de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
--   [Cómo: Crear un Token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+- [Cómo: Crear un Token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
 ## <a name="procedures"></a>Procedimientos  
   

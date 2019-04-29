@@ -3,11 +3,11 @@ title: 'Tutorial: Acceso a la Web usando Async y Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
 ms.openlocfilehash: 7f9b71bc76e8d17cf2fb6714070b4439265d1fda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765926"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Tutorial: Acceso a la Web usando Async y Await (Visual Basic)
 Puede escribir programas asincrónicos de manera más fácil e intuitiva usando las características async/await. Puede escribir código asincrónico parecido al código sincrónico y dejar que el compilador gestione las difíciles funciones de devolución de llamada y continuaciones que normalmente implica el código asincrónico.  
@@ -20,29 +20,29 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
  En este tutorial, se realizarán las siguientes tareas:  
   
--   [Crear una aplicación WPF](#CreateWPFApp)  
+- [Crear una aplicación WPF](#CreateWPFApp)  
   
--   [Diseñar una ventana MainWindow simple de WPF](#MainWindow)  
+- [Diseñar una ventana MainWindow simple de WPF](#MainWindow)  
   
--   [Agregar una referencia](#AddRef)  
+- [Agregar una referencia](#AddRef)  
   
--   [Para agregar las instrucciones Imports necesarias](#ImportsState)  
+- [Para agregar las instrucciones Imports necesarias](#ImportsState)  
   
--   [Crear una aplicación sincrónica](#synchronous)  
+- [Crear una aplicación sincrónica](#synchronous)  
   
--   [Probar la solución sincrónica](#testSynch)  
+- [Probar la solución sincrónica](#testSynch)  
   
--   [Convertir GetURLContents en un método asincrónico](#GetURLContents)  
+- [Convertir GetURLContents en un método asincrónico](#GetURLContents)  
   
--   [Convertir SumPageSizes en un método asincrónico](#SumPageSizes)  
+- [Convertir SumPageSizes en un método asincrónico](#SumPageSizes)  
   
--   [Convertir startButton_Click en un método asincrónico](#startButton)  
+- [Convertir startButton_Click en un método asincrónico](#startButton)  
   
--   [Probar la solución asincrónica](#testAsynch)  
+- [Probar la solución asincrónica](#testAsynch)  
   
--   [Reemplazar el método GetURLContentsAsync con un método de .NET Framework](#GetURLContentsAsync)  
+- [Reemplazar el método GetURLContentsAsync con un método de .NET Framework](#GetURLContentsAsync)  
   
--   [Ejemplo](#BKMK_CompleteCodeExamples)  
+- [Ejemplo](#BKMK_CompleteCodeExamples)  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener más información, consulte el [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=235233).  
@@ -72,19 +72,19 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
 4. Resalte el control **TextBox** y, en la ventana **Propiedades**, establezca los siguientes valores:  
   
-    -   Establezca la propiedad **Nombre** en `resultsTextBox`.  
+    - Establezca la propiedad **Nombre** en `resultsTextBox`.  
   
-    -   Establezca la propiedad **Alto** en 250.  
+    - Establezca la propiedad **Alto** en 250.  
   
-    -   Establezca la propiedad **Ancho** en 500.  
+    - Establezca la propiedad **Ancho** en 500.  
   
-    -   En la pestaña **Texto**, especifique una fuente monoespaciada, como Lucida Console o Global Monospace.  
+    - En la pestaña **Texto**, especifique una fuente monoespaciada, como Lucida Console o Global Monospace.  
   
 5. Resalte el control **Botón** y, en la ventana **Propiedades**, establezca los siguientes valores:  
   
-    -   Establezca la propiedad **Nombre** en `startButton`.  
+    - Establezca la propiedad **Nombre** en `startButton`.  
   
-    -   Cambie el valor de la propiedad **Contenido** de **Botón** a **Inicio**.  
+    - Cambie el valor de la propiedad **Contenido** de **Botón** a **Inicio**.  
   
 6. Coloque el cuadro de texto y el botón de manera que ambos aparezcan en la ventana **MainWindow**.  
   
@@ -137,13 +137,13 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
 3. El código de la solución sincrónica contiene los cuatro métodos siguientes:  
   
-    -   `SumPageSizes`, que obtiene una lista de direcciones URL de páginas web de `SetUpURLList` y, a continuación, llama a `GetURLContents` y `DisplayResults` para que procesen cada dirección URL.  
+    - `SumPageSizes`, que obtiene una lista de direcciones URL de páginas web de `SetUpURLList` y, a continuación, llama a `GetURLContents` y `DisplayResults` para que procesen cada dirección URL.  
   
-    -   `SetUpURLList`, que crea y devuelve una lista de direcciones web.  
+    - `SetUpURLList`, que crea y devuelve una lista de direcciones web.  
   
-    -   `GetURLContents`, que descarga el contenido de cada sitio web y devuelve el contenido como una matriz de bytes.  
+    - `GetURLContents`, que descarga el contenido de cada sitio web y devuelve el contenido como una matriz de bytes.  
   
-    -   `DisplayResults`, que muestra el número de bytes de la matriz de bytes de cada dirección URL.  
+    - `DisplayResults`, que muestra el número de bytes de la matriz de bytes de cada dirección URL.  
   
      Copie los cuatro métodos siguientes y, a continuación, péguelos en el `startButton_Click` controlador de eventos en el archivo MainWindow.xaml.vb:  
   
@@ -286,9 +286,9 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
 3. Dado que ha agregado el operador `Await` en el paso anterior, se produce un error del compilador. El operador puede usarse únicamente en los métodos marcados con el [Async](../../../../visual-basic/language-reference/modifiers/async.md) modificador. Omita el error mientras repita los pasos de conversión para reemplazar la llamada a `CopyTo` con una llamada a `CopyToAsync`.  
   
-    -   Cambie el nombre del método al que se llama a <xref:System.IO.Stream.CopyToAsync%2A>.  
+    - Cambie el nombre del método al que se llama a <xref:System.IO.Stream.CopyToAsync%2A>.  
   
-    -   El método `CopyTo` o `CopyToAsync` copia bytes a su argumento, `content`, y no devuelve un valor significativo. En la versión sincrónica, la llamada a `CopyTo` es una sencilla instrucción que no devuelve un valor. La versión asincrónica, `CopyToAsync`, devuelve una <xref:System.Threading.Tasks.Task>. La tarea funciona como "Task(void)" y permite que se espere al método. Aplique `Await` o `await` a la llamada a `CopyToAsync`, como se muestra en el código siguiente.  
+    - El método `CopyTo` o `CopyToAsync` copia bytes a su argumento, `content`, y no devuelve un valor significativo. En la versión sincrónica, la llamada a `CopyTo` es una sencilla instrucción que no devuelve un valor. La versión asincrónica, `CopyToAsync`, devuelve una <xref:System.Threading.Tasks.Task>. La tarea funciona como "Task(void)" y permite que se espere al método. Aplique `Await` o `await` a la llamada a `CopyToAsync`, como se muestra en el código siguiente.  
   
         ```vb  
         Await responseStream.CopyToAsync(content)  
@@ -317,9 +317,9 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
      El método `GetURLContents` tiene una instrucción return, y la instrucción devuelve una matriz de bytes. Por lo tanto, el tipo de valor devuelto de la versión de async es Task(T), donde T es una matriz de bytes. Realice los cambios siguientes en la firma del método:  
   
-    -   Cambie el tipo de valor devuelto a `Task(Of Byte())`.  
+    - Cambie el tipo de valor devuelto a `Task(Of Byte())`.  
   
-    -   Por convención, los métodos asincrónicos tienen nombres que terminan en "Async", por lo que debe cambiar el nombre del método a `GetURLContentsAsync`.  
+    - Por convención, los métodos asincrónicos tienen nombres que terminan en "Async", por lo que debe cambiar el nombre del método a `GetURLContentsAsync`.  
   
      En el código siguiente se muestran estos cambios.  
   
@@ -334,9 +334,9 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
 1. Repita los pasos del procedimiento anterior para `SumPageSizes`. Primero, cambie la llamada a `GetURLContents` a una llamada asincrónica.  
   
-    -   Cambie el nombre del método al que se llama de `GetURLContents` a `GetURLContentsAsync`, si aún no lo ha hecho.  
+    - Cambie el nombre del método al que se llama de `GetURLContents` a `GetURLContentsAsync`, si aún no lo ha hecho.  
   
-    -   Aplique `Await` a la tarea que devuelve `GetURLContentsAsync` para obtener el valor de la matriz de bytes.  
+    - Aplique `Await` a la tarea que devuelve `GetURLContentsAsync` para obtener el valor de la matriz de bytes.  
   
      En el código siguiente se muestran estos cambios.  
   
@@ -355,11 +355,11 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
 2. Realice los cambios siguientes en la firma del método:  
   
-    -   Marque el método con el modificador `Async`.  
+    - Marque el método con el modificador `Async`.  
   
-    -   Agregue "Async" al nombre del método.  
+    - Agregue "Async" al nombre del método.  
   
-    -   Esta vez no hay ninguna variable de devolución de tarea, T, porque `SumPageSizesAsync` no devuelve un valor para T. (El método no tiene ninguna instrucción `Return`). Sin embargo, el método debe devolver `Task` para admitir await. Por lo tanto, cambie el tipo de método de `Sub` a `Function`. El tipo de valor devuelto de la función es `Task`.  
+    - Esta vez no hay ninguna variable de devolución de tarea, T, porque `SumPageSizesAsync` no devuelve un valor para T. (El método no tiene ninguna instrucción `Return`). Sin embargo, el método debe devolver `Task` para admitir await. Por lo tanto, cambie el tipo de método de `Sub` a `Function`. El tipo de valor devuelto de la función es `Task`.  
   
      En el código siguiente se muestran estos cambios.  
   
@@ -422,9 +422,9 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
 2. Deberían aparecer resultados similares a los de la solución sincrónica. No obstante, debe tener en cuenta las siguientes diferencias.  
   
-    -   No todos los resultados se producen al mismo tiempo cuando se completa el procesamiento. Por ejemplo, ambos programas contienen una línea en `startButton_Click` que borra el cuadro de texto. La intención es borrar el cuadro de texto entre ejecuciones si elige el botón **Inicio** por segunda vez, después de que haya aparecido un conjunto de resultados. En la versión sincrónica, el cuadro de texto se borra antes de que aparezcan los recuentos por segunda vez, cuando se completen las descargas y el subproceso de interfaz de usuario esté libre para llevar a cabo otro trabajo. En la versión asincrónica, el cuadro de texto se borra inmediatamente después de que se elija el botón **Inicio**.  
+    - No todos los resultados se producen al mismo tiempo cuando se completa el procesamiento. Por ejemplo, ambos programas contienen una línea en `startButton_Click` que borra el cuadro de texto. La intención es borrar el cuadro de texto entre ejecuciones si elige el botón **Inicio** por segunda vez, después de que haya aparecido un conjunto de resultados. En la versión sincrónica, el cuadro de texto se borra antes de que aparezcan los recuentos por segunda vez, cuando se completen las descargas y el subproceso de interfaz de usuario esté libre para llevar a cabo otro trabajo. En la versión asincrónica, el cuadro de texto se borra inmediatamente después de que se elija el botón **Inicio**.  
   
-    -   Lo más importante es que el subproceso de interfaz de usuario no se bloquea durante las descargas. Puede mover o cambiar el tamaño de la ventana mientras se descargan, se cuentan y se muestran los recursos web. Si uno de los sitios web es lento o no responde, puede cancelar la operación eligiendo el botón **Cerrar** (la X en el campo de color rojo en la esquina superior derecha).  
+    - Lo más importante es que el subproceso de interfaz de usuario no se bloquea durante las descargas. Puede mover o cambiar el tamaño de la ventana mientras se descargan, se cuentan y se muestran los recursos web. Si uno de los sitios web es lento o no responde, puede cancelar la operación eligiendo el botón **Cerrar** (la X en el campo de color rojo en la esquina superior derecha).  
   
 ## <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
 ### <a name="GetURLContentsAsync"></a> Reemplazar el método GetURLContentsAsync con un método de .NET Framework  
@@ -675,7 +675,7 @@ End Class
   
 ## <a name="see-also"></a>Vea también
 
-- [Async Sample: Obtener acceso al tutorial de la Web (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Async Sample: Acceso al tutorial web (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [Await (operador)](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

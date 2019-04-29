@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31180
 ms.assetid: 2a393327-d8e2-4187-85b1-642b4f53b4ae
 ms.openlocfilehash: dd7add295641e6a27c361c663d6075413b0f499c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774808"
 ---
 # <a name="xml-entity-references-are-not-supported"></a>No se admiten referencias de entidad XML
 Una referencia de entidad (por ejemplo, `©`) que no está definido en el XML 1.0 specification se incluye como un valor de un literal XML. Solo `&`, `"`, `<`, `>`, y `'` se admiten referencias de entidad XML en literales XML.  
@@ -21,7 +21,7 @@ Una referencia de entidad (por ejemplo, `©`) que no está definido en el XML 1.
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Quite la referencia de entidad no admitido.  
+- Quite la referencia de entidad no admitido.  
   
 ## <a name="see-also"></a>Vea también
 

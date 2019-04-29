@@ -3,11 +3,11 @@ title: Flujos de trabajo asincrónicos
 description: Obtenga información sobre la compatibilidad en el F# lenguaje de programación para realizar cálculos de forma asincrónica, que se ejecutan sin bloquear la ejecución de otro trabajo.
 ms.date: 05/16/2016
 ms.openlocfilehash: 7643a26469ee6a6cf15940f90611fd430beef42e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703548"
 ---
 # <a name="asynchronous-workflows"></a>Flujos de trabajo asincrónicos
 

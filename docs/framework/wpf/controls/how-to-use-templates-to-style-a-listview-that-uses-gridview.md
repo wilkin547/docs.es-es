@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 94bf964b-96c8-4bdf-a0c3-f5271b7cb565
 ms.openlocfilehash: 1caa652c4a2a3a7d0a8d40fe703df7a3e8038c9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699128"
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>Procedimiento Usar plantillas para aplicar un estilo a un control ListView que usa un modo GridView
 En este ejemplo se muestra cómo usar el <xref:System.Windows.DataTemplate> y <xref:System.Windows.Style> objetos que se va a especificar la apariencia de un <xref:System.Windows.Controls.ListView> control que utiliza un <xref:System.Windows.Controls.GridView> modo de vista.  

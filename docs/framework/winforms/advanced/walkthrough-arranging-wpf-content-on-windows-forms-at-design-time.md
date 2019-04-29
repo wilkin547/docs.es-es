@@ -10,26 +10,26 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748257"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Tutorial: Organizar contenido de WPF en formularios Windows Forms en tiempo de diseño
 Este tutorial muestra cómo usar las características de diseño de Windows Forms, como la delimitación y las líneas de ajuste, para organizar los controles de Windows Presentation Foundation (WPF).
 
  En este tutorial, realizará las tareas siguientes:
 
--   Crear el proyecto.
+- Crear el proyecto.
 
--   Crear el control WPF.
+- Crear el control WPF.
 
--   Hospedar controles WPF en un panel de diseño.
+- Hospedar controles WPF en un panel de diseño.
 
--   Usar líneas de ajuste para alinear os controles WPF.
+- Usar líneas de ajuste para alinear os controles WPF.
 
--   Delimitar y acoplar controles WPF.
+- Delimitar y acoplar controles WPF.
 
 > [!NOTE]
 >  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -37,7 +37,7 @@ Este tutorial muestra cómo usar las características de diseño de Windows Form
 ## <a name="prerequisites"></a>Requisitos previos  
  Necesita los componentes siguientes para completar este tutorial:  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Crear el proyecto  
  El primer paso es crear el proyecto de Windows Forms.  
@@ -47,7 +47,7 @@ Este tutorial muestra cómo usar las características de diseño de Windows Form
   
 #### <a name="to-create-the-project"></a>Para crear el proyecto  
   
--   Cree un nuevo proyecto de aplicación de Windows Forms en Visual Basic o Visual C# llamado `ArrangeElementHost`.  
+- Cree un nuevo proyecto de aplicación de Windows Forms en Visual Basic o Visual C# llamado `ArrangeElementHost`.  
   
 ## <a name="creating-the-wpf-control"></a>Crear el control WPF  
  Después de agregar un control WPF al proyecto, puede organizarlo en el formulario.  

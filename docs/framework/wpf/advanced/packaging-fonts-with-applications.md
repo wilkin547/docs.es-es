@@ -11,11 +11,11 @@ helpviewer_keywords:
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
 ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773245"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empaquetar fuentes con aplicaciones
 Este tema proporciona información general sobre cómo empaquetar fuentes con su [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicación.  
@@ -158,17 +158,17 @@ Este tema proporciona información general sobre cómo empaquetar fuentes con su
 ## <a name="limitations-on-font-usage"></a>Limitaciones de uso de fuentes  
  En la lista siguiente se describe varias limitaciones sobre el empaquetado y el uso de fuentes en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones:  
   
--   **Bits de permisos de incrustación de fuentes:** las aplicaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no comprueban ni exigen ningún bit de permisos de incrustación de fuentes. Consulte la [Introducción al empaquetado fuentes](#introduction_to_packaging_fonts) sección para obtener más información.  
+- **Bits de permisos de incrustación de fuentes:** las aplicaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no comprueban ni exigen ningún bit de permisos de incrustación de fuentes. Consulte la [Introducción al empaquetado fuentes](#introduction_to_packaging_fonts) sección para obtener más información.  
   
--   **Sitio de fuentes de origen:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones no permiten una referencia de fuente para http o ftp [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
+- **Sitio de fuentes de origen:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones no permiten una referencia de fuente para http o ftp [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
   
--   **URI absoluto con el paquete: notación:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones no permiten crear un <xref:System.Windows.Media.FontFamily> mediante programación a través de objetos "pack:" como parte de absolutos [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] referencia a una fuente. Por ejemplo, `"pack://application:,,,/resources/#Pericles Light"` es una referencia de fuente no válida.  
+- **URI absoluto con el paquete: notación:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones no permiten crear un <xref:System.Windows.Media.FontFamily> mediante programación a través de objetos "pack:" como parte de absolutos [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] referencia a una fuente. Por ejemplo, `"pack://application:,,,/resources/#Pericles Light"` es una referencia de fuente no válida.  
   
--   **Incrustación de fuentes automática:** Durante el tiempo de diseño, no hay ninguna compatibilidad para la búsqueda de uso de la aplicación de las fuentes e incrustar fuentes automáticamente en recursos de la aplicación.  
+- **Incrustación de fuentes automática:** Durante el tiempo de diseño, no hay ninguna compatibilidad para la búsqueda de uso de la aplicación de las fuentes e incrustar fuentes automáticamente en recursos de la aplicación.  
   
--   **Subconjuntos de fuentes:** las aplicaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no admiten la creación de subconjuntos de fuentes para documentos no fijos.  
+- **Subconjuntos de fuentes:** las aplicaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no admiten la creación de subconjuntos de fuentes para documentos no fijos.  
   
--   En casos donde hay una referencia incorrecta, la aplicación vuelve a usar una fuente disponible.  
+- En casos donde hay una referencia incorrecta, la aplicación vuelve a usar una fuente disponible.  
   
 ## <a name="see-also"></a>Vea también
 

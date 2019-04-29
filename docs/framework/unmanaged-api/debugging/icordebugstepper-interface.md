@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f83b9796bb692ce234a03c596387960bd879ebf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763742"
 ---
 # <a name="icordebugstepper-interface"></a>Interfaz ICorDebugStepper
 Representa un paso en la ejecución del código realizado por un depurador, actúa como identificador entre la emisión y la finalización de un comando, y proporciona un modo de cancelar un paso.  
@@ -42,11 +42,11 @@ Representa un paso en la ejecución del código realizado por un depurador, act�
 ## <a name="remarks"></a>Comentarios  
  El `ICorDebugStepper` interfaz tiene los siguientes objetivos:  
   
--   Actúa como identificador entre un comando de paso que se emite y la finalización de ese comando.  
+- Actúa como identificador entre un comando de paso que se emite y la finalización de ese comando.  
   
--   Proporciona una interfaz central para encapsular toda la ejecución paso a paso que se puede realizar.  
+- Proporciona una interfaz central para encapsular toda la ejecución paso a paso que se puede realizar.  
   
--   Proporciona una manera de cancelar prematuramente una operación de ejecución paso a paso.  
+- Proporciona una manera de cancelar prematuramente una operación de ejecución paso a paso.  
   
  Puede haber más de un motor paso a paso por subproceso. Por ejemplo, se puede alcanzar un punto de interrupción durante la ejecución paso a paso a través de una función, y el usuario que desee iniciar una nueva operación de ejecución paso a paso dentro de esa función. Es el depurador para determinar cómo controlar esta situación. El depurador desear cancelar la operación de ejecución paso a paso original o anidar las dos operaciones. El `ICorDebugStepper` interfaz admite ambas opciones.  
   

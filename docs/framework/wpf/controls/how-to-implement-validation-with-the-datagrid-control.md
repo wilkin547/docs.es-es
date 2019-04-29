@@ -9,11 +9,11 @@ helpviewer_keywords:
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
 ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770882"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Procedimiento para implementar la validación con el control DataGrid
 El <xref:System.Windows.Controls.DataGrid> control le permite realizar la validación en el nivel de la celda y la fila. Con la validación de nivel de celda, validar propiedades individuales de un objeto de datos enlazados cuando un usuario actualiza un valor. Con la validación de nivel de fila, validar los objetos de datos completo cuando un usuario confirma los cambios realizados en una fila. También puede proporcionar comentarios visuales personalizados para los errores de validación, o usar los comentarios visuales predeterminados que el <xref:System.Windows.Controls.DataGrid> proporciona el control.  
@@ -22,7 +22,7 @@ El <xref:System.Windows.Controls.DataGrid> control le permite realizar la valida
   
 ### <a name="to-validate-individual-cell-values"></a>Para validar los valores de celda individual  
   
--   Especifique una o varias reglas de validación en el enlace utilizado con una columna. Esto es similar a la validación de datos en controles simples, como se describe en [Data Binding Overview](../data/data-binding-overview.md).  
+- Especifique una o varias reglas de validación en el enlace utilizado con una columna. Esto es similar a la validación de datos en controles simples, como se describe en [Data Binding Overview](../data/data-binding-overview.md).  
   
      El ejemplo siguiente se muestra un <xref:System.Windows.Controls.DataGrid> control con cuatro columnas enlazadas a distintas propiedades de un objeto de negocios. Tres de las columnas de especifican el <xref:System.Windows.Controls.ExceptionValidationRule> estableciendo el <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> propiedad `true`.  
   
@@ -32,7 +32,7 @@ El <xref:System.Windows.Controls.DataGrid> control le permite realizar la valida
   
 ### <a name="to-customize-cell-validation-feedback"></a>Para personalizar los comentarios de validación de celda  
   
--   Establezca la columna <xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A> propiedad a un estilo apropiado para la columna del control de edición. Dado que los controles de edición se crean en tiempo de ejecución, no puede usar el <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> como lo haría con los controles simples de propiedad adjunta.  
+- Establezca la columna <xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A> propiedad a un estilo apropiado para la columna del control de edición. Dado que los controles de edición se crean en tiempo de ejecución, no puede usar el <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> como lo haría con los controles simples de propiedad adjunta.  
   
      El ejemplo siguiente actualiza en el ejemplo anterior mediante la adición de un estilo de error compartido por las tres columnas con reglas de validación. Cuando un usuario escribe un valor no válido, el estilo cambia el color de fondo de celda y agrega información sobre herramientas. Tenga en cuenta el uso de un desencadenador para determinar si hay un error de validación. Esto es necesario porque actualmente no hay ninguna plantilla de error dedicada para las celdas.  
   
@@ -59,7 +59,7 @@ El <xref:System.Windows.Controls.DataGrid> control le permite realizar la valida
   
 ### <a name="to-customize-row-validation-feedback"></a>Para personalizar los comentarios de validación de fila  
   
--   Establecer la propiedad <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType>. Esta propiedad le permite personalizar los comentarios de validación de filas individuales <xref:System.Windows.Controls.DataGrid> controles. También puede afectar a varios controles mediante un estilo de filas implícitas para establecer el <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> propiedad.  
+- Establecer la propiedad <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType>. Esta propiedad le permite personalizar los comentarios de validación de filas individuales <xref:System.Windows.Controls.DataGrid> controles. También puede afectar a varios controles mediante un estilo de filas implícitas para establecer el <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> propiedad.  
   
      El siguiente ejemplo reemplaza los comentarios de validación de fila predeterminados con un indicador más visible. Cuando un usuario escribe un valor no válido, aparece un círculo rojo con un signo de exclamación blanco en el encabezado de fila. Esto se produce para los errores de validación de fila y celda. El mensaje de error asociado se muestra en una información sobre herramientas.  
   
@@ -73,17 +73,17 @@ El <xref:System.Windows.Controls.DataGrid> control le permite realizar la valida
   
  Para probar la validación, intente lo siguiente:  
   
--   En la columna de identificador, escriba un valor no entero.  
+- En la columna de identificador, escriba un valor no entero.  
   
--   En la columna de fecha de finalización, escriba una fecha anterior a la fecha de inicio.  
+- En la columna de fecha de finalización, escriba una fecha anterior a la fecha de inicio.  
   
--   Elimine el valor de identificador del curso, fecha de inicio o fecha de finalización.  
+- Elimine el valor de identificador del curso, fecha de inicio o fecha de finalización.  
   
--   Para deshacer un valor de celda no válido, coloque el cursor en la celda y presione la tecla ESC.  
+- Para deshacer un valor de celda no válido, coloque el cursor en la celda y presione la tecla ESC.  
   
--   Para deshacer los cambios para una fila completa cuando la celda actual está en modo de edición, presione la tecla ESC dos veces.  
+- Para deshacer los cambios para una fila completa cuando la celda actual está en modo de edición, presione la tecla ESC dos veces.  
   
--   Cuando se produce un error de validación, mueva el puntero del mouse sobre el indicador en el encabezado de fila para ver el mensaje de error asociado.  
+- Cuando se produce un error de validación, mueva el puntero del mouse sobre el indicador en el encabezado de fila para ver el mensaje de error asociado.  
   
  [!code-csharp[DataGrid_Validation#FullCode](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
  [!code-vb[DataGrid_Validation#FullCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  

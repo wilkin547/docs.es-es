@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics containers
 ms.assetid: 74632f91-cefa-4f51-ab7c-f9ac91942caf
 ms.openlocfilehash: cfad7254057a31ea8268784cd4b6849850f3e2aa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766160"
 ---
 # <a name="using-graphics-containers"></a>Utilizar contenedores de gráficos
 Un <xref:System.Drawing.Graphics> objeto proporciona métodos como <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, y <xref:System.Drawing.Graphics.DrawString%2A> para mostrar imágenes vectoriales, imágenes de trama y texto. Un <xref:System.Drawing.Graphics> objeto también tiene varias propiedades que influyen en la calidad y la orientación de los elementos que se dibujan. Por ejemplo, la propiedad del modo suavizado determina si se aplica suavizado de contorno a líneas y curvas, y la propiedad de transformación del mundo influye en la posición y rotación de los elementos que se dibujan.  

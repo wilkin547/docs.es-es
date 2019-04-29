@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ca392dda-16e3-45c7-8d87-12d8d4ee0578
 ms.openlocfilehash: 663356ec3dc39aa3eb7e858f028fc9a8f7d27db6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644473"
 ---
 # <a name="query-expression-syntax-examples-element-operators-linq-to-dataset"></a>Ejemplos de sintaxis de expresiones de consulta: Operadores de elementos (LINQ to DataSet)
 Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enumerable.First%2A> y <xref:System.Linq.Enumerable.ElementAt%2A> para obtener elementos <xref:System.Data.DataRow> de un <xref:System.Data.DataSet> usando la sintaxis de expresiones de consulta.  

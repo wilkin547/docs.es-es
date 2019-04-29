@@ -6,8 +6,8 @@ ms.openlocfilehash: e956b9f8162d55891233a3ab664b05658d50eeab
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773008"
 ---
 # <a name="discovery-security-sample"></a>Ejemplo de seguridad de la detección
 La especificación de la detección no requiere que los puntos de conexión que participan en el proceso de detección sean seguros. Al mejorar los mensajes de detección gracias a la seguridad, se mitigan varios tipos de ataques (alteración del mensaje, denegación de servicio, repetición y suplantación). Este ejemplo implementa canales personalizados que calculan y comprueban las firmas de mensaje utilizando el formato de firma compacto (descrito en la sección 8.2 de la especificación de detección WS). El ejemplo admiten tanto el [especificación de detección 2005](https://go.microsoft.com/fwlink/?LinkId=177912) y [versión 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -47,13 +47,13 @@ La especificación de la detección no requiere que los puntos de conexión que 
 ## <a name="sample-details"></a>Detalles del ejemplo  
  En el ejemplo se incluyen una biblioteca y cuatro aplicaciones de consola:  
   
--   **DiscoverySecurityChannels**: Una biblioteca que expone el enlace seguro. La biblioteca calcula y comprueba la firma compacta para los mensajes entrantes o salientes.  
+- **DiscoverySecurityChannels**: Una biblioteca que expone el enlace seguro. La biblioteca calcula y comprueba la firma compacta para los mensajes entrantes o salientes.  
   
--   **Servicio**: Un servicio que expone el contrato de ICalculatorService, autohospedado. El servicio se marca como detectable. El usuario especifica los detalles del certificado utilizados para firmar los mensajes especificando la ubicación del almacén y nombre, y el nombre de asunto u otro identificador único para el certificado, y el almacén donde se encuentran los certificados de cliente (que se usan para comprobar la firma de los mensajes entrantes). Según estos detalles, se compila y se usa un UdpDiscoveryEndpoint.  
+- **Servicio**: Un servicio que expone el contrato de ICalculatorService, autohospedado. El servicio se marca como detectable. El usuario especifica los detalles del certificado utilizados para firmar los mensajes especificando la ubicación del almacén y nombre, y el nombre de asunto u otro identificador único para el certificado, y el almacén donde se encuentran los certificados de cliente (que se usan para comprobar la firma de los mensajes entrantes). Según estos detalles, se compila y se usa un UdpDiscoveryEndpoint.  
   
--   **Cliente**: Esta clase intenta detectar un ICalculatorService y llamar a métodos en el servicio. De nuevo, se crea un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> con seguridad agregada y se usa para firmar y comprobar los mensajes.  
+- **Cliente**: Esta clase intenta detectar un ICalculatorService y llamar a métodos en el servicio. De nuevo, se crea un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> con seguridad agregada y se usa para firmar y comprobar los mensajes.  
   
--   **AnnouncementListener**: Un servicio autohospedado que realiza escuchas de anuncios en línea y sin conexión y usa el punto de conexión del anuncio seguro.  
+- **AnnouncementListener**: Un servicio autohospedado que realiza escuchas de anuncios en línea y sin conexión y usa el punto de conexión del anuncio seguro.  
   
 > [!NOTE]
 >  Si Setup.bat se ejecuta varias veces, el administrador de certificados le solicita que elija un certificado que agregar, ya que hay certificados duplicados. En ese caso, Setup.bat se debería anular y se debería llamar a Cleanup.bat, porque los duplicados ya se han creado. Cleanup.bat también le solicita que elija un certificado que eliminar. Seleccione un certificado en la lista y siga ejecutando Cleanup.bat hasta que no quede ningún certificado.  

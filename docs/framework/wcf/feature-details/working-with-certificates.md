@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929849"
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 Para programar la seguridad de Windows Communication Foundation (WCF), los certificados digitales de X.509 se usan normalmente para autenticar clientes y servidores, cifrar y firmar mensajes digitalmente. En este tema se explican brevemente las características de los certificados digitales X.509 y cómo usarlos en WCF, y se incluyen vínculos a los temas en los que se explican estos conceptos en mayor profundidad o en los que se muestra cómo llevar a cabo tareas comunes mediante WCF y los certificados.  
@@ -29,27 +29,27 @@ Para programar la seguridad de Windows Communication Foundation (WCF), los certi
 ## <a name="certificate-stores"></a>Almacenes de certificados  
  Los certificados se encuentran en almacenes. Existen dos ubicaciones de almacenamiento principales que se dividen en subalmacenes. Si es el administrador en un equipo, puede ver ambos almacenes principales utilizando la herramienta de complemento MMC. Los usuarios que no sean administradores solo pueden ver el almacén del usuario actual.  
   
--   **El almacén del equipo local**. Este contiene los certificados a los que los procesos del equipo obtiene acceso, como [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Utilice esta ubicación para almacenar certificados que autentiquen el servidor a los clientes.  
+- **El almacén del equipo local**. Este contiene los certificados a los que los procesos del equipo obtiene acceso, como [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Utilice esta ubicación para almacenar certificados que autentiquen el servidor a los clientes.  
   
--   **El almacén del usuario actual**. Las aplicaciones interactivas colocan aquí, por lo general, certificados para el usuario actual del equipo. Si está creando una aplicación cliente, es aquí donde normalmente colocará los certificados que autentiquen un usuario a un servicio.  
+- **El almacén del usuario actual**. Las aplicaciones interactivas colocan aquí, por lo general, certificados para el usuario actual del equipo. Si está creando una aplicación cliente, es aquí donde normalmente colocará los certificados que autentiquen un usuario a un servicio.  
   
  Estos dos almacenes se dividen en subalmacenes. Entre los más importantes de estos cuando se programa con WCF se incluyen:  
   
--   **Entidades de certificación raíz de confianza**. Puede usar los certificados en este almacén para crear una cadena de certificados, que se pueden trazar hacia atrás hasta un certificado de la entidad de certificación en este almacén.  
+- **Entidades de certificación raíz de confianza**. Puede usar los certificados en este almacén para crear una cadena de certificados, que se pueden trazar hacia atrás hasta un certificado de la entidad de certificación en este almacén.  
   
     > [!IMPORTANT]
     >  El equipo local confía implícitamente en cualquier certificado ubicado en este almacén, aún cuando el certificado no proceda de una entidad de certificación de otro fabricante de confianza. Por esta razón, no coloque ningún certificado en este almacén a menos que confíe plenamente en el emisor y comprenda las consecuencias.  
   
--   **Personal**. Este almacén se utiliza para los certificados asociados a un usuario de un equipo. Normalmente este almacén se usa para los certificados emitidos por uno de los certificados de la entidad de certificación situado en el almacén de las Entidades emisoras de certificados raíz de confianza. O bien, una aplicación puede confiar en un certificado que se encuentre aquí y que sea de emisión propia.  
+- **Personal**. Este almacén se utiliza para los certificados asociados a un usuario de un equipo. Normalmente este almacén se usa para los certificados emitidos por uno de los certificados de la entidad de certificación situado en el almacén de las Entidades emisoras de certificados raíz de confianza. O bien, una aplicación puede confiar en un certificado que se encuentre aquí y que sea de emisión propia.  
   
  Para obtener más información sobre los almacenes de certificados, vea [Almacenes de certificados](/windows/desktop/secauthn/certificate-stores).  
   
 ### <a name="selecting-a-store"></a>Selección de un almacén  
  Seleccionar dónde almacenar un certificado depende de cómo y cuándo se ejecute el cliente o el servicio. Se aplican las siguientes reglas generales:  
   
--   Si el servicio WCF se hospeda en un servicio Windows, use el almacén del **equipo local**. Observe que es necesario tener privilegios de administrador para instalar certificados en el almacén de la máquina local.  
+- Si el servicio WCF se hospeda en un servicio Windows, use el almacén del **equipo local**. Observe que es necesario tener privilegios de administrador para instalar certificados en el almacén de la máquina local.  
   
--   Si el servicio o cliente es una aplicación que se ejecuta bajo una cuenta de usuario, use el almacén del **usuario actual**.  
+- Si el servicio o cliente es una aplicación que se ejecuta bajo una cuenta de usuario, use el almacén del **usuario actual**.  
   
 ### <a name="accessing-stores"></a>Obtención de acceso a almacenes  
  Los almacenes son protegidos por las listas de control de acceso (ACL), como las carpetas de un equipo. Al crear un servicio alojado por Internet Information Services (IIS), el proceso [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] se ejecuta bajo la cuenta [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Esa cuenta debe tener acceso al almacén que contiene los certificados que utiliza un servicio. Cada uno de los almacenes principales se encuentra protegido mediante una lista de acceso predeterminada, pero se pueden modificar las listas. Si crea un rol independiente para obtener acceso a un almacén, debe garantizar el permiso de acceso a ese rol. Para obtener información sobre cómo modificar la lista de acceso mediante la herramienta WinHttpCertConfig.exe, vea [Cómo: Crear certificados temporales para su uso durante el desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Para obtener más información sobre cómo usar certificados de cliente con IIS, vea [Cómo llamar a un servicio web con un certificado de cliente para la autenticación en una aplicación web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
@@ -74,11 +74,11 @@ Para programar la seguridad de Windows Communication Foundation (WCF), los certi
   
  También puede establecer la propiedad mediante configuración. Los siguientes elementos se utilizan para especificar el modo de validación:  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+- [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+- [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Autenticación personalizada  
  La propiedad `CertificateValidationMode` también le permite personalizar cómo se autentican los certificados. De manera predeterminada, el nivel se establece en `ChainTrust`. Para utilizar el valor <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, también debe establecer el atributo `CustomCertificateValidatorType` en un ensamblado y tipo utilizado para validar el certificado. Para crear un validador personalizado, debe heredar a partir de la clase <xref:System.IdentityModel.Selectors.X509CertificateValidator> abstracta.  

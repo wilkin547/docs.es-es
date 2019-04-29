@@ -3,11 +3,11 @@ title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
 ms.openlocfilehash: 4cf65637603fd6c20a33b1ae6ecd8b6ded36a246
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760303"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 Especifica el criterio de ordenación utilizado en los objetos devueltos en una instrucción SELECT.  
@@ -79,23 +79,23 @@ ORDER BY ...
 ## <a name="restricted-keywords"></a>Palabras clave restringidas  
  Las palabras clave siguientes debe ir entre comillas cuando se utilizan en una cláusula `ORDER BY` :  
   
--   CROSS  
+- CROSS  
   
--   FULL  
+- FULL  
   
--   KEY  
+- KEY  
   
--   IZQUIERDA  
+- IZQUIERDA  
   
--   ORDER  
+- ORDER  
   
--   OUTER  
+- OUTER  
   
--   DERECHA  
+- DERECHA  
   
--   ROW  
+- ROW  
   
--   VALUE  
+- VALUE  
   
 ## <a name="ordering-nested-queries"></a>Ordenar las consultas anidadas  
  En Entity Framework, una expresión anidada se puede colocar en cualquier parte de la consulta; el orden de una consulta anidada no se conserva.  

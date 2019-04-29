@@ -12,11 +12,11 @@ ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754523"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Procedimiento para crear e inicializar orígenes de seguimiento
 Las aplicaciones utilizan la clase <xref:System.Diagnostics.TraceSource> para generar seguimientos que pueden asociarse con la aplicación. <xref:System.Diagnostics.TraceSource> proporciona métodos de traza que permiten rastrear fácilmente eventos y datos, así como emitir seguimientos de información. El resultado del seguimiento de <xref:System.Diagnostics.TraceSource> se puede crear e inicializar con o sin archivos de configuración. En este tema se proporcionan instrucciones para ambas opciones. Sin embargo, se recomienda usar archivos de configuración para facilitar la reconfiguración de las trazas generadas por los orígenes de traza en tiempo de ejecución.  
@@ -73,7 +73,7 @@ Las aplicaciones utilizan la clase <xref:System.Diagnostics.TraceSource> para ge
   
 ### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>Para inicializar orígenes de traza, agentes de escucha y filtros sin archivo de configuración  
   
--   Use el código de ejemplo siguiente para habilitar la traza a través de un origen de traza sin usar un archivo de configuración. No es un procedimiento recomendado, pero puede haber circunstancias en las que no desee depender de archivos de configuración para garantizar la traza.  
+- Use el código de ejemplo siguiente para habilitar la traza a través de un origen de traza sin usar un archivo de configuración. No es un procedimiento recomendado, pero puede haber circunstancias en las que no desee depender de archivos de configuración para garantizar la traza.  
   
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  

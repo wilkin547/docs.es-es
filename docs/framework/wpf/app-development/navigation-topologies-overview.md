@@ -10,11 +10,11 @@ helpviewer_keywords:
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
 ms.openlocfilehash: 716cfbe7d12ccc2233d018f0346f84cf2fc5e733
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794685"
 ---
 # <a name="navigation-topologies-overview"></a>Información general sobre topologías de navegación
 <a name="introduction"></a> Esta información general proporciona una introducción a las topologías de navegación en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Posteriormente, se tratan tres topologías de navegación comunes y se incluyen ejemplos de estas.  
@@ -24,15 +24,15 @@ ms.locfileid: "59230868"
   
  Este tema contiene las siguientes secciones:  
   
--   [Topologías de navegación](#Navigation_Topologies)  
+- [Topologías de navegación](#Navigation_Topologies)  
   
--   [Topologías de navegación estructurada](#Structured_Navigation_Topologies)  
+- [Topologías de navegación estructurada](#Structured_Navigation_Topologies)  
   
--   [Navegación mediante una topología lineal fija](#Navigation_over_a_Fixed_Linear_Topology)  
+- [Navegación mediante una topología lineal fija](#Navigation_over_a_Fixed_Linear_Topology)  
   
--   [Navegación dinámica mediante una topología jerárquica fija](#Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology)  
+- [Navegación dinámica mediante una topología jerárquica fija](#Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology)  
   
--   [Navegación mediante una topología generada dinámicamente](#Navigation_over_a_Dynamically_Generated_Topology)  
+- [Navegación mediante una topología generada dinámicamente](#Navigation_over_a_Dynamically_Generated_Topology)  
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>Topologías de navegación  
@@ -52,9 +52,9 @@ ms.locfileid: "59230868"
 ## <a name="structured-navigation-topologies"></a>Topologías de navegación estructurada  
  Hay dos tipos generales de topologías de navegación:  
   
--   **Topología fija**: se define en tiempo de compilación y no cambia en tiempo de ejecución. Las topologías fijas son útiles para la navegación a través de una secuencia fija de páginas en un orden lineal o jerárquico.  
+- **Topología fija**: se define en tiempo de compilación y no cambia en tiempo de ejecución. Las topologías fijas son útiles para la navegación a través de una secuencia fija de páginas en un orden lineal o jerárquico.  
   
--   **Topología dinámica**: se define en tiempo de ejecución en función de la entrada que se recopila del usuario, la aplicación o el sistema. Las topologías dinámicas son útiles cuando las páginas pueden navegarse en secuencias diferentes.  
+- **Topología dinámica**: se define en tiempo de ejecución en función de la entrada que se recopila del usuario, la aplicación o el sistema. Las topologías dinámicas son útiles cuando las páginas pueden navegarse en secuencias diferentes.  
   
  Aunque es posible crear topologías de navegación mediante páginas, los ejemplos usan funciones de página porque proporcionan compatibilidad adicional que simplifica la compatibilidad para pasar y devolver los datos a través de las páginas de una topología.  
   
@@ -66,21 +66,21 @@ ms.locfileid: "59230868"
   
  Los comportamientos típicos de la navegación mediante una topología lineal fija son los siguientes:  
   
--   Navegación desde la página de llamada a una página de inicio que inicializa el asistente y dirige a la primera página del asistente. Una página de inicio (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-menos <xref:System.Windows.Navigation.PageFunction%601>) no es necesario, puesto que una página que realiza la llamada puede llamar directamente a la primera página del asistente. Sin embargo, el uso de una página de inicio puede simplificar la inicialización del asistente, especialmente si es compleja.  
+- Navegación desde la página de llamada a una página de inicio que inicializa el asistente y dirige a la primera página del asistente. Una página de inicio (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-menos <xref:System.Windows.Navigation.PageFunction%601>) no es necesario, puesto que una página que realiza la llamada puede llamar directamente a la primera página del asistente. Sin embargo, el uso de una página de inicio puede simplificar la inicialización del asistente, especialmente si es compleja.  
   
--   Los usuarios pueden navegar entre páginas mediante los botones Atrás y Adelante (o hipervínculos).  
+- Los usuarios pueden navegar entre páginas mediante los botones Atrás y Adelante (o hipervínculos).  
   
--   Los usuarios pueden navegar entre páginas mediante el diario.  
+- Los usuarios pueden navegar entre páginas mediante el diario.  
   
--   Los usuarios pueden cancelar al asistente desde cualquier página del asistente presionando el botón Cancelar.  
+- Los usuarios pueden cancelar al asistente desde cualquier página del asistente presionando el botón Cancelar.  
   
--   Los usuarios pueden aceptar al asistente en la última página de este presionando el botón Finalizar.  
+- Los usuarios pueden aceptar al asistente en la última página de este presionando el botón Finalizar.  
   
--   Si se cancela un asistente, este devuelve un resultado adecuado y no devuelve ningún dato.  
+- Si se cancela un asistente, este devuelve un resultado adecuado y no devuelve ningún dato.  
   
--   Si un usuario acepta un asistente, este devuelve un resultado adecuado y los datos que recopiló.  
+- Si un usuario acepta un asistente, este devuelve un resultado adecuado y los datos que recopiló.  
   
--   Cuando se completa el asistente (se acepta o se cancela), las páginas que componen el asistente se quitan del diario. Esto mantiene cada instancia del asistente aislada, lo que evita posibles anomalías de los datos o el estado.  
+- Cuando se completa el asistente (se acepta o se cancela), las páginas que componen el asistente se quitan del diario. Esto mantiene cada instancia del asistente aislada, lo que evita posibles anomalías de los datos o el estado.  
   
 <a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>Navegación dinámica mediante una topología jerárquica fija  
@@ -94,23 +94,23 @@ ms.locfileid: "59230868"
   
  Aunque la secuencia en la que se navega por las páginas de una estructura jerárquica fija se determina en tiempo de ejecución, la experiencia del usuario es la misma que la de una topología lineal fija:  
   
--   Navegación desde la página de llamada a una página de inicio que inicializa el asistente y dirige a la primera página del asistente. Una página de inicio (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-menos <xref:System.Windows.Navigation.PageFunction%601>) no es necesario, puesto que una página que realiza la llamada puede llamar directamente a la primera página del asistente. Sin embargo, el uso de una página de inicio puede simplificar la inicialización del asistente, especialmente si es compleja.  
+- Navegación desde la página de llamada a una página de inicio que inicializa el asistente y dirige a la primera página del asistente. Una página de inicio (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-menos <xref:System.Windows.Navigation.PageFunction%601>) no es necesario, puesto que una página que realiza la llamada puede llamar directamente a la primera página del asistente. Sin embargo, el uso de una página de inicio puede simplificar la inicialización del asistente, especialmente si es compleja.  
   
--   Los usuarios pueden navegar entre páginas mediante los botones Atrás y Adelante (o hipervínculos).  
+- Los usuarios pueden navegar entre páginas mediante los botones Atrás y Adelante (o hipervínculos).  
   
--   Los usuarios pueden navegar entre páginas mediante el diario.  
+- Los usuarios pueden navegar entre páginas mediante el diario.  
   
--   Los usuarios pueden cambiar la secuencia de exploración si navegan hacia atrás a través del diario.  
+- Los usuarios pueden cambiar la secuencia de exploración si navegan hacia atrás a través del diario.  
   
--   Los usuarios pueden cancelar al asistente desde cualquier página del asistente presionando el botón Cancelar.  
+- Los usuarios pueden cancelar al asistente desde cualquier página del asistente presionando el botón Cancelar.  
   
--   Los usuarios pueden aceptar al asistente en la última página de este presionando el botón Finalizar.  
+- Los usuarios pueden aceptar al asistente en la última página de este presionando el botón Finalizar.  
   
--   Si se cancela un asistente, este devuelve un resultado adecuado y no devuelve ningún dato.  
+- Si se cancela un asistente, este devuelve un resultado adecuado y no devuelve ningún dato.  
   
--   Si un usuario acepta un asistente, este devuelve un resultado adecuado y los datos que recopiló.  
+- Si un usuario acepta un asistente, este devuelve un resultado adecuado y los datos que recopiló.  
   
--   Cuando se completa el asistente (se acepta o se cancela), las páginas que componen el asistente se quitan del diario. Esto mantiene cada instancia del asistente aislada, lo que evita posibles anomalías de los datos o el estado.  
+- Cuando se completa el asistente (se acepta o se cancela), las páginas que componen el asistente se quitan del diario. Esto mantiene cada instancia del asistente aislada, lo que evita posibles anomalías de los datos o el estado.  
   
 <a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>Navegación mediante una topología generada dinámicamente  
@@ -124,21 +124,21 @@ ms.locfileid: "59230868"
   
  La secuencia de navegación se conoce como topología generada dinámicamente. Para el usuario, al igual que con las otras topologías de navegación, la experiencia del usuario es la misma que en las topologías anteriores:  
   
--   Navegación desde la página de llamada a una página de inicio que inicializa el asistente y dirige a la primera página del asistente. Una página de inicio (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-menos <xref:System.Windows.Navigation.PageFunction%601>) no es necesario, puesto que una página que realiza la llamada puede llamar directamente a la primera página del asistente. Sin embargo, el uso de una página de inicio puede simplificar la inicialización del asistente, especialmente si es compleja.  
+- Navegación desde la página de llamada a una página de inicio que inicializa el asistente y dirige a la primera página del asistente. Una página de inicio (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-menos <xref:System.Windows.Navigation.PageFunction%601>) no es necesario, puesto que una página que realiza la llamada puede llamar directamente a la primera página del asistente. Sin embargo, el uso de una página de inicio puede simplificar la inicialización del asistente, especialmente si es compleja.  
   
--   Los usuarios pueden navegar entre páginas mediante los botones Atrás y Adelante (o hipervínculos).  
+- Los usuarios pueden navegar entre páginas mediante los botones Atrás y Adelante (o hipervínculos).  
   
--   Los usuarios pueden navegar entre páginas mediante el diario.  
+- Los usuarios pueden navegar entre páginas mediante el diario.  
   
--   Los usuarios pueden cancelar al asistente desde cualquier página del asistente presionando el botón Cancelar.  
+- Los usuarios pueden cancelar al asistente desde cualquier página del asistente presionando el botón Cancelar.  
   
--   Los usuarios pueden aceptar al asistente en la última página de este presionando el botón Finalizar.  
+- Los usuarios pueden aceptar al asistente en la última página de este presionando el botón Finalizar.  
   
--   Si se cancela un asistente, este devuelve un resultado adecuado y no devuelve ningún dato.  
+- Si se cancela un asistente, este devuelve un resultado adecuado y no devuelve ningún dato.  
   
--   Si un usuario acepta un asistente, este devuelve un resultado adecuado y los datos que recopiló.  
+- Si un usuario acepta un asistente, este devuelve un resultado adecuado y los datos que recopiló.  
   
--   Cuando se completa el asistente (se acepta o se cancela), las páginas que componen el asistente se quitan del diario. Esto mantiene cada instancia del asistente aislada, lo que evita posibles anomalías de los datos o el estado.  
+- Cuando se completa el asistente (se acepta o se cancela), las páginas que componen el asistente se quitan del diario. Esto mantiene cada instancia del asistente aislada, lo que evita posibles anomalías de los datos o el estado.  
   
 ## <a name="see-also"></a>Vea también
 

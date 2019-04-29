@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5865935af96260982d47b778d208f4235f6245e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775041"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply (Método)
 Notifica al generador de perfiles que se ha completado la parte del servidor de una llamada remota y el cliente ahora recibe y a procesar la respuesta.  
@@ -39,11 +39,11 @@ HRESULT RemotingClientReceivingReply(
  `pCookie`  
  [in] Un valor que se corresponde con el valor proporcionado en [RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) en estas condiciones:  
   
--   Las cookies GUID de comunicación remota están activas.  
+- Las cookies GUID de comunicación remota están activas.  
   
--   El canal se realiza correctamente en la transmisión del mensaje.  
+- El canal se realiza correctamente en la transmisión del mensaje.  
   
--   Las cookies de GUID están activas en el proceso de servidor.  
+- Las cookies de GUID están activas en el proceso de servidor.  
   
  Esto permite que simplifica el emparejamiento de las llamadas remotas.  
   

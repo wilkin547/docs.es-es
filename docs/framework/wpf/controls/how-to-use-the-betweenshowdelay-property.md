@@ -6,11 +6,11 @@ helpviewer_keywords:
 - BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
 ms.openlocfilehash: b6d55c72c8264546949833fc086937a8b1fe2540
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696059"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>Procedimiento Usar la propiedad BetweenShowDelay
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propiedad de tiempo para que la información sobre herramientas aparece rápidamente, con poco o ningún retraso, cuando el usuario mueve el puntero del mouse en una información sobre herramientas directamente a otro.  
@@ -20,9 +20,9 @@ En este ejemplo se muestra cómo usar el <xref:System.Windows.Controls.ToolTipSe
   
  En cualquiera de los siguientes escenarios, el <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> se aplica, lo que hace que la segunda elipse espera un segundo antes de que aparezca la información sobre herramientas:  
   
--   Si el tiempo se tarda en pasar al segundo botón es más de dos segundos.  
+- Si el tiempo se tarda en pasar al segundo botón es más de dos segundos.  
   
--   Si la información sobre herramientas no está visible al principio del intervalo de tiempo para la primera elipse.  
+- Si la información sobre herramientas no está visible al principio del intervalo de tiempo para la primera elipse.  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
 [!code-xaml[ToolTipService#NoToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  

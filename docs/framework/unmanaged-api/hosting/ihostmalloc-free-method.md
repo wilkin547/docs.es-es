@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21342af13f9d77ebab979102172e1a2c28402273
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796720"
 ---
 # <a name="ihostmallocfree-method"></a>IHostMAlloc::Free (Método)
 Libera la memoria que se asignó utilizando el [Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md) función.  

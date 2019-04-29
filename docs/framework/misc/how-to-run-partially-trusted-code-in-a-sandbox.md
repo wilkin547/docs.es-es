@@ -11,11 +11,11 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752976"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procedimiento Ejecutar código de confianza parcial en un espacio aislado
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -92,15 +92,15 @@ AppDomain.CreateDomain( string friendlyName,
   
      Información adicional:  
   
-    -   Esta es la única sobrecarga del método <xref:System.AppDomain.CreateDomain%2A> que toma <xref:System.Security.PermissionSet> como un parámetro y, por lo tanto, la única sobrecarga que permite cargar una aplicación en un entorno de confianza parcial.  
+    - Esta es la única sobrecarga del método <xref:System.AppDomain.CreateDomain%2A> que toma <xref:System.Security.PermissionSet> como un parámetro y, por lo tanto, la única sobrecarga que permite cargar una aplicación en un entorno de confianza parcial.  
   
-    -   El parámetro `evidence` no se usa para calcular un conjunto de permisos, sino que se usa para identificar otras características de .NET Framework.  
+    - El parámetro `evidence` no se usa para calcular un conjunto de permisos, sino que se usa para identificar otras características de .NET Framework.  
   
-    -   En esta sobrecarga es obligatorio establecer la propiedad <xref:System.AppDomainSetup.ApplicationBase%2A> del parámetro `info`.  
+    - En esta sobrecarga es obligatorio establecer la propiedad <xref:System.AppDomainSetup.ApplicationBase%2A> del parámetro `info`.  
   
-    -   El parámetro `fullTrustAssemblies` tiene la palabra clave `params`, lo que significa que no es necesario crear una matriz <xref:System.Security.Policy.StrongName>. Se permite pasar 0, 1 o más nombres seguros como parámetros.  
+    - El parámetro `fullTrustAssemblies` tiene la palabra clave `params`, lo que significa que no es necesario crear una matriz <xref:System.Security.Policy.StrongName>. Se permite pasar 0, 1 o más nombres seguros como parámetros.  
   
-    -   El código para crear el dominio de aplicación es:  
+    - El código para crear el dominio de aplicación es:  
   
     ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
@@ -108,15 +108,15 @@ AppDomain.CreateDomain( string friendlyName,
   
 5. Cargar el código en el espacio aislado <xref:System.AppDomain> que creó. Esto se puede hacer de dos maneras:  
   
-    -   Llame al método <xref:System.AppDomain.ExecuteAssembly%2A> para el ensamblado.  
+    - Llame al método <xref:System.AppDomain.ExecuteAssembly%2A> para el ensamblado.  
   
-    -   Use el método <xref:System.Activator.CreateInstanceFrom%2A> para crear una instancia de una clase derivada de <xref:System.MarshalByRefObject> en el nuevo <xref:System.AppDomain>.  
+    - Use el método <xref:System.Activator.CreateInstanceFrom%2A> para crear una instancia de una clase derivada de <xref:System.MarshalByRefObject> en el nuevo <xref:System.AppDomain>.  
   
      El segundo método es preferible, porque es más fácil pasar parámetros a la nueva instancia <xref:System.AppDomain>. El método <xref:System.Activator.CreateInstanceFrom%2A> proporciona dos características importantes:  
   
-    -   Puede usar una base de código que apunte a una ubicación que no contenga su ensamblado.  
+    - Puede usar una base de código que apunte a una ubicación que no contenga su ensamblado.  
   
-    -   Puede realizar la creación en un <xref:System.Security.CodeAccessPermission.Assert%2A> de plena confianza (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), lo que le permite crear una instancia de una clase crítica. (Esto ocurre siempre que el ensamblado no tiene ninguna marca de transparencia y se carga como de plena confianza). Por lo tanto, hay que tener cuidado y crear solamente código de confianza con esta función. Le recomendamos que cree solo instancias de clases de plena confianza en el nuevo dominio de aplicación.  
+    - Puede realizar la creación en un <xref:System.Security.CodeAccessPermission.Assert%2A> de plena confianza (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), lo que le permite crear una instancia de una clase crítica. (Esto ocurre siempre que el ensamblado no tiene ninguna marca de transparencia y se carga como de plena confianza). Por lo tanto, hay que tener cuidado y crear solamente código de confianza con esta función. Le recomendamos que cree solo instancias de clases de plena confianza en el nuevo dominio de aplicación.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

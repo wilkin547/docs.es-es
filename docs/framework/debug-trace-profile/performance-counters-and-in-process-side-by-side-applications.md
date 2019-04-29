@@ -13,11 +13,11 @@ ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf8a5a7c97969fb0018bb1dba4ea027fe7afd2c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775861"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Contadores de rendimiento y aplicaciones en paralelo en proceso
 Con el Monitor de rendimiento (Perfmon.exe), es posible diferenciar los contadores de rendimiento por tiempo de ejecución. En este tema se describe el cambio del Registro necesario para habilitar esta funcionalidad.  
@@ -25,9 +25,9 @@ Con el Monitor de rendimiento (Perfmon.exe), es posible diferenciar los contador
 ## <a name="the-default-behavior"></a>El comportamiento predeterminado  
  De forma predeterminada, el Monitor de rendimiento muestra los contadores de rendimiento según cada aplicación. Pero hay dos escenarios en los que esto es problemático:  
   
--   Al supervisar dos aplicaciones que tienen el mismo nombre. Por ejemplo, si ambas aplicaciones se denominan myapp.exe, una se mostrará como **myapp** y la otra como **myapp#1** en la columna **Instance**. En este caso, es difícil que un contador de rendimiento coincida con una aplicación determinada. No está claro si los datos recopilados para **myapp#1** hacen referencia a la primera myapp.exe o a la segunda.  
+- Al supervisar dos aplicaciones que tienen el mismo nombre. Por ejemplo, si ambas aplicaciones se denominan myapp.exe, una se mostrará como **myapp** y la otra como **myapp#1** en la columna **Instance**. En este caso, es difícil que un contador de rendimiento coincida con una aplicación determinada. No está claro si los datos recopilados para **myapp#1** hacen referencia a la primera myapp.exe o a la segunda.  
   
--   Cuando una aplicación usa varias instancias de Common Language Runtime. El [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] admite escenarios de hospedaje de procesos en paralelo; es decir, un único proceso o aplicación puede cargar varias instancias de Common Language Runtime. Si una aplicación denominada myapp.exe carga dos instancias de tiempo de ejecución, se designarán en la columna **Instance** como **myapp** y **myapp#1** de forma predeterminada. En este caso, no está claro si **myapp** y **myapp#1** hacen referencia a dos aplicaciones con el mismo nombre, o a la misma aplicación con dos tiempos de ejecución. Si varias aplicaciones con el mismo nombre cargan varios tiempos de ejecución, la ambigüedad es incluso mayor.  
+- Cuando una aplicación usa varias instancias de Common Language Runtime. El [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] admite escenarios de hospedaje de procesos en paralelo; es decir, un único proceso o aplicación puede cargar varias instancias de Common Language Runtime. Si una aplicación denominada myapp.exe carga dos instancias de tiempo de ejecución, se designarán en la columna **Instance** como **myapp** y **myapp#1** de forma predeterminada. En este caso, no está claro si **myapp** y **myapp#1** hacen referencia a dos aplicaciones con el mismo nombre, o a la misma aplicación con dos tiempos de ejecución. Si varias aplicaciones con el mismo nombre cargan varios tiempos de ejecución, la ambigüedad es incluso mayor.  
   
  Puede establecer una clave del Registro para eliminar esta ambigüedad. Para las aplicaciones desarrolladas mediante [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], este cambio del Registro agrega un identificador de proceso seguido de un identificador de instancia del tiempo de ejecución para el nombre de la aplicación en la columna **Instance**. En lugar de *aplicación* o *aplicación*#1, la aplicación ahora se identifica como *aplicación*_`p`*ID_proceso*\_`r`*ID_tiempo de ejecución* en la columna **Instance**. Si una aplicación se desarrolló con una versión anterior de Common Language Runtime, esa instancia se representa como *aplicación\_*`p`*ID_proceso* siempre que esté instalado [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   

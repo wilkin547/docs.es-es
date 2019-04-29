@@ -3,32 +3,32 @@ title: Proveedor de tokens SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
 ms.openlocfilehash: e662d9b84bbc43178946fdadc8ddbec6f6b6e042
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787509"
 ---
 # <a name="saml-token-provider"></a>Proveedor de tokens SAML
 Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente personalizado. Un proveedor de tokens de Windows Communication Foundation (WCF) se usa para proporcionar las credenciales a la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con el Administrador de credenciales de Token de proveedor predeterminado. WCF también incluye un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] proveedor de tokens. Los proveedores de tokens personalizados son útiles en los casos siguientes:
 
--   Si tiene un almacén de credenciales con el que estos proveedores de tokens no pueden funcionar.
+- Si tiene un almacén de credenciales con el que estos proveedores de tokens no pueden funcionar.
 
--   Si desea proporcionar su propio mecanismo personalizado para transformar las credenciales desde el punto cuando el usuario proporciona detalles cuando el marco de cliente WCF usa las credenciales.
+- Si desea proporcionar su propio mecanismo personalizado para transformar las credenciales desde el punto cuando el usuario proporciona detalles cuando el marco de cliente WCF usa las credenciales.
 
--   Si está creando un token personalizado.
+- Si está creando un token personalizado.
 
  En este ejemplo se muestra cómo crear un proveedor de tokens personalizado que permite que un token SAML obtenido de fuera del marco de cliente WCF que se usará.
 
  En resumen, este ejemplo muestra lo siguiente:
 
--   Cómo se puede configurar un cliente con un proveedor de tokens personalizado.
+- Cómo se puede configurar un cliente con un proveedor de tokens personalizado.
 
--   Cómo un token de SAML se puede pasar a las credenciales del cliente personalizadas.
+- Cómo un token de SAML se puede pasar a las credenciales del cliente personalizadas.
 
--   Cómo se proporciona el token SAML para el marco del cliente WCF.
+- Cómo se proporciona el token SAML para el marco del cliente WCF.
 
--   Cómo el cliente autentica el servidor usando el certificado X.509 del servidor.
+- Cómo el cliente autentica el servidor usando el certificado X.509 del servidor.
 
  El servicio expone dos puntos de conexión para comunicarse con el servicio, definidos mediante el archivo de configuración App.config. Cada punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsFederationHttpBinding` estándar, que usa la seguridad de mensaje. Un punto de conexión espera que el cliente autentique con un token de SAML que utiliza una clave de prueba simétrica mientras el otro espera que el cliente autentique con un token de SAML que utiliza una clave de prueba asimétrica. El servicio también configura el certificado del servicio utilizando comportamiento`serviceCredentials`. El comportamiento `serviceCredentials` le permite configurar un certificado del servicio. Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje. La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las instrucciones de configuración al final de este tema. El comportamiento `serviceCredentials` también le permite configurar certificados en los que se confia para firmar los tokens de SAML. La configuración siguiente hace referencia al certificado 'Alice' instalado durante el ejemplo.
 
@@ -303,7 +303,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 
  A continuación, se proporciona una breve descripción de las diferentes secciones de los archivos por lotes de manera que se puedan modificar para ejecutarse con la configuración adecuada.
 
--   Crear el certificado de servidor:
+- Crear el certificado de servidor:
 
      Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar. La variable `%SERVER_NAME%`especifica el nombre del servidor. Cambie esta variable para especificar su propio nombre de servidor. El valor predeterminado en este archivo por lotes es el host local.
 
@@ -319,7 +319,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
     makecert.exe -sr LocalMachine -ss My -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Instalar el certificado del servidor en el almacén de certificados de confianza de cliente:
+- Instalar el certificado del servidor en el almacén de certificados de confianza de cliente:
 
      Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.
 
@@ -327,7 +327,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   Crear el certificado de emisor.
+- Crear el certificado de emisor.
 
      Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de emisor que se va a usar. La variable `%USER_NAME%` especifica el nombre del emisor. Cambie esta variable para especificar el nombre del emisor. El valor predeterminado en este archivo por lotes es Alice.
 
@@ -343,7 +343,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
     makecert.exe -sr CurrentUser -ss My -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   Instalar el certificado del emisor en el almacén de certificados de confianza del servidor.
+- Instalar el certificado del emisor en el almacén de certificados de confianza del servidor.
 
      Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado del servidor con el certificado de emisor.
 

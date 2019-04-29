@@ -3,11 +3,11 @@ title: Escribir código SQL dinámico y seguro en SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
 ms.openlocfilehash: 236fd925740d37c2cccabfcebfb7fcb46361489d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757721"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Escribir código SQL dinámico y seguro en SQL Server
 La inyección de SQL es el proceso por el cual un usuario malintencionado escribe instrucciones de Transact-SQL en lugar de entradas válidas. Si la entrada se pasa directamente al servidor sin haber sido validada y si la aplicación ejecuta el código inyectado por error, el ataque podría dañar o destruir datos.  
@@ -21,34 +21,34 @@ La inyección de SQL es el proceso por el cual un usuario malintencionado escrib
   
  A continuación se describen algunas directrices de utilidad:  
   
--   No compile nunca instrucciones Transact-SQL directamente desde entradas de usuario; utilice procedimientos almacenados para validar entradas de usuario.  
+- No compile nunca instrucciones Transact-SQL directamente desde entradas de usuario; utilice procedimientos almacenados para validar entradas de usuario.  
   
--   Valide las entradas de usuario comprobando el tipo, la longitud, el formato y el intervalo. Utilice la función Transact-SQL QUOTENAME() para anular los nombres del sistema o la función REPLACE() para anular cualquier carácter de una cadena.  
+- Valide las entradas de usuario comprobando el tipo, la longitud, el formato y el intervalo. Utilice la función Transact-SQL QUOTENAME() para anular los nombres del sistema o la función REPLACE() para anular cualquier carácter de una cadena.  
   
--   Implemente varios niveles de validación en cada nivel de la aplicación.  
+- Implemente varios niveles de validación en cada nivel de la aplicación.  
   
--   Compruebe el tamaño y tipo de los datos de entrada y aplique los límites apropiados. Con ello evitará saturaciones intencionadas del búfer.  
+- Compruebe el tamaño y tipo de los datos de entrada y aplique los límites apropiados. Con ello evitará saturaciones intencionadas del búfer.  
   
--   Pruebe el contenido de variables de cadena y acepte únicamente los valores esperados. Rechace entradas que contengan datos binarios, secuencias de escape y caracteres de comentario.  
+- Pruebe el contenido de variables de cadena y acepte únicamente los valores esperados. Rechace entradas que contengan datos binarios, secuencias de escape y caracteres de comentario.  
   
--   Cuando trabaje con documentos XML, valide todos los datos con su esquema a medida que se escriben.  
+- Cuando trabaje con documentos XML, valide todos los datos con su esquema a medida que se escriben.  
   
--   En entornos de varios niveles, se deben validar todos los datos antes de su admisión en la zona de confianza.  
+- En entornos de varios niveles, se deben validar todos los datos antes de su admisión en la zona de confianza.  
   
--   No se aceptan las siguientes cadenas en campos desde el que se pueden construir los nombres de archivo: AUX, CLOCK$, COM1 a COM8, CON, CONFIG$, LPT1 a LPT8, NUL y PRN.  
+- No se aceptan las siguientes cadenas en campos desde el que se pueden construir los nombres de archivo: AUX, CLOCK$, COM1 a COM8, CON, CONFIG$, LPT1 a LPT8, NUL y PRN.  
   
--   Utilice objetos <xref:System.Data.SqlClient.SqlParameter> con comandos y procedimientos almacenados para proporcionar comprobación de tipos y validación de longitud.  
+- Utilice objetos <xref:System.Data.SqlClient.SqlParameter> con comandos y procedimientos almacenados para proporcionar comprobación de tipos y validación de longitud.  
   
--   Utilice expresiones <xref:System.Text.RegularExpressions.Regex> en código cliente para filtrar caracteres no válidos.  
+- Utilice expresiones <xref:System.Text.RegularExpressions.Regex> en código cliente para filtrar caracteres no válidos.  
   
 ## <a name="dynamic-sql-strategies"></a>Estrategias de SQL dinámico  
  La ejecución de instrucciones SQL creadas de manera dinámica en código basado en procedimientos rompe la cadena de propiedad, lo que lleva a que SQL Server compruebe los permisos del llamador en los objetos a los que se obtiene acceso mediante SQL dinámico.  
   
  SQL Server tiene métodos para conceder a los usuarios acceso a datos mediante procedimientos almacenados y funciones definidas por el usuario que ejecutan SQL dinámico.  
   
--   Usar la suplantación con la cláusula EXECUTE AS de Transact-SQL, como se describe en [Personalizar permisos con suplantación en SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Usar la suplantación con la cláusula EXECUTE AS de Transact-SQL, como se describe en [Personalizar permisos con suplantación en SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
--   Firmar procedimientos almacenados con certificados, como se describe en [Firmar procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Firmar procedimientos almacenados con certificados, como se describe en [Firmar procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  La cláusula EXECUTE AS reemplaza los permisos del llamador por los del usuario especificado en la cláusula EXECUTE AS. Los procedimientos almacenados anidados o los desencadenadores se ejecutan en el contexto de seguridad del usuario proxy. Esto puede interrumpir las aplicaciones que dependen de seguridad por filas o requieren auditoría. Algunas funciones que devuelven la identidad del usuario devuelven el usuario especificado en la cláusula EXECUTE AS, no el llamador original. El contexto de ejecución se revierte al llamador original sólo después de la ejecución o cuando se ha emitido una instrucción REVERT.  

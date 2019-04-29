@@ -12,11 +12,11 @@ helpviewer_keywords:
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
 ms.openlocfilehash: d826fe0a64ad226db62e01259b0466f7f495f8e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757877"
 ---
 # <a name="listview-control-windows-forms"></a>ListView (Control, formularios Windows Forms)
 El control `ListView` de Windows Forms muestra una lista de elementos con iconos. Puede usar una vista de lista para crear una interfaz de usuario similar al panel derecho del Explorador de Windows.  
@@ -58,15 +58,15 @@ El control `ListView` de Windows Forms muestra una lista de elementos con iconos
  [Cómo: Agregar capacidades de búsqueda a un Control ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
  Describe cómo buscar un elemento mediante programación usando coordenadas de pantalla o búsqueda de texto.  
   
--   [Cómo: Habilitar la vista en mosaico en un Control de ListView de Windows Forms mediante el diseñador](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
+- [Cómo: Habilitar la vista en mosaico en un Control de ListView de Windows Forms mediante el diseñador](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [Cómo: Agregar y quitar elementos con el Control de ListView de Windows Forms mediante el diseñador](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
+- [Cómo: Agregar y quitar elementos con el Control de ListView de Windows Forms mediante el diseñador](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [Cómo: Agregar columnas al Control de ListView de Windows Forms mediante el diseñador](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
+- [Cómo: Agregar columnas al Control de ListView de Windows Forms mediante el diseñador](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [Cómo: Agrupar elementos en un Control de ListView de Windows Forms mediante el diseñador](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
+- [Cómo: Agrupar elementos en un Control de ListView de Windows Forms mediante el diseñador](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [Tutorial: Creación de una interfaz de tipo explorador con el ListView y los controles TreeView mediante el diseñador](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
+- [Tutorial: Creación de una interfaz de tipo explorador con el ListView y los controles TreeView mediante el diseñador](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>Referencia  
  Clase <xref:System.Windows.Forms.ListView>  

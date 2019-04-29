@@ -18,11 +18,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
 ms.openlocfilehash: 6e8d1fa72c60c4fa3d2237ad24c2d1b4891a7bf2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791877"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Sobrecarga de procedimiento (Visual Basic)
 *Sobrecarga* un procedimiento significa definirlo en varias versiones, con el mismo nombre pero con distintas listas de parámetros. El propósito de sobrecarga es definir varias versiones estrechamente relacionadas de un procedimiento sin tener que distinguirlas por su nombre. Hacer esto mediante la variación de la lista de parámetros.  
@@ -30,39 +30,39 @@ ms.locfileid: "58828243"
 ## <a name="overloading-rules"></a>Reglas de sobrecarga  
  Cuando se sobrecarga un procedimiento, se aplican las reglas siguientes:  
   
--   **Mismo nombre**. Cada versión sobrecargada debe usar el mismo nombre de procedimiento.  
+- **Mismo nombre**. Cada versión sobrecargada debe usar el mismo nombre de procedimiento.  
   
--   **Firma diferente**. Cada versión sobrecargada debe diferir de todas las versiones sobrecargadas en al menos uno de los siguientes aspectos:  
+- **Firma diferente**. Cada versión sobrecargada debe diferir de todas las versiones sobrecargadas en al menos uno de los siguientes aspectos:  
   
-    -   Número de parámetros  
+    - Número de parámetros  
   
-    -   Orden de los parámetros  
+    - Orden de los parámetros  
   
-    -   Tipos de datos de los parámetros  
+    - Tipos de datos de los parámetros  
   
-    -   Número de parámetros de tipo (para un procedimiento genérico)  
+    - Número de parámetros de tipo (para un procedimiento genérico)  
   
-    -   Tipo de valor devuelto (solo para un operador de conversión)  
+    - Tipo de valor devuelto (solo para un operador de conversión)  
   
      Junto con el nombre del procedimiento, los elementos anteriores se denominan colectivamente la *firma* del procedimiento. Cuando se llama a un procedimiento sobrecargado, el compilador utiliza la firma para comprobar que la llamada coincide con la definición.  
   
--   **Los elementos no forma parte de la firma**. No se pueden sobrecargar un procedimiento sin modificar la firma. En concreto, no se puede sobrecargar un procedimiento cambiando únicamente uno o varios de los siguientes elementos:  
+- **Los elementos no forma parte de la firma**. No se pueden sobrecargar un procedimiento sin modificar la firma. En concreto, no se puede sobrecargar un procedimiento cambiando únicamente uno o varios de los siguientes elementos:  
   
-    -   Palabras clave de modificador de procedimiento, como `Public`, `Shared`, y `Static`  
+    - Palabras clave de modificador de procedimiento, como `Public`, `Shared`, y `Static`  
   
-    -   Nombres de parámetro de tipo o parámetro  
+    - Nombres de parámetro de tipo o parámetro  
   
-    -   Restricciones de parámetro de tipo (para un procedimiento genérico)  
+    - Restricciones de parámetro de tipo (para un procedimiento genérico)  
   
-    -   Palabras clave de modificador de parámetro, como `ByRef` y `Optional`  
+    - Palabras clave de modificador de parámetro, como `ByRef` y `Optional`  
   
-    -   Si devuelve un valor  
+    - Si devuelve un valor  
   
-    -   El tipo de datos del valor devuelto (excepto para un operador de conversión)  
+    - El tipo de datos del valor devuelto (excepto para un operador de conversión)  
   
      Los elementos de la lista anterior no forman parte de la firma. Aunque no se pueden utilizar para diferenciar entre versiones sobrecargadas, se puede variar entre las versiones sobrecargadas que correctamente se diferencian por sus firmas.  
   
--   **Los argumentos enlazados**. Si piensa pasar una variable de objeto enlazado en tiempo de ejecución a una versión sobrecargada, debe declarar el parámetro apropiado como <xref:System.Object>.  
+- **Los argumentos enlazados**. Si piensa pasar una variable de objeto enlazado en tiempo de ejecución a una versión sobrecargada, debe declarar el parámetro apropiado como <xref:System.Object>.  
   
 ## <a name="multiple-versions-of-a-procedure"></a>Varias versiones de un procedimiento  
  Supongamos que está escribiendo un `Sub` procedimiento para registrar una transacción en el saldo de un cliente y desea poder hacer referencia al cliente por nombre o por número de cuenta. Para dar cabida a esto, puede definir dos diferentes `Sub` procedimientos, como en el ejemplo siguiente:  

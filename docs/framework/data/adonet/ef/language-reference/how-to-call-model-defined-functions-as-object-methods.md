@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
 ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774613"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Procedimiento para llamar a funciones definidas por el modelo como métodos de objeto
 En este tema se describe cómo llamar a una función definida por el modelo como un método en un objeto <xref:System.Data.Objects.ObjectContext> o como un método estático en una clase personalizada. Un *función definida por modelo* es una función que se define en el modelo conceptual. Los procedimientos de este tema describen cómo llamar directamente a estas funciones en lugar de hacerlo desde consultas LINQ to Entities. Para obtener información sobre cómo llamar a funciones definidas por el modelo de LINQ a consultas de entidades, vea [Cómo: Llamar a funciones definidas por el modelo en consultas](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
@@ -25,9 +25,9 @@ En este tema se describe cómo llamar a una función definida por el modelo como
   
 2. Agregue un método de Common Language Runtime (CLR) a la clase <xref:System.Data.Objects.ObjectContext> que haga lo siguiente:  
   
-    -   Se asigne a la función definida en el modelo conceptual. Para asignar el método, debe aplicarle un atributo <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Tenga en cuenta que los parámetros <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> y <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> del atributo son el nombre del espacio de nombres del modelo conceptual y el nombre de la función en el modelo conceptual, respectivamente. La resolución del nombre de la función para LINQ distingue entre mayúsculas y minúsculas.  
+    - Se asigne a la función definida en el modelo conceptual. Para asignar el método, debe aplicarle un atributo <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Tenga en cuenta que los parámetros <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> y <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> del atributo son el nombre del espacio de nombres del modelo conceptual y el nombre de la función en el modelo conceptual, respectivamente. La resolución del nombre de la función para LINQ distingue entre mayúsculas y minúsculas.  
   
-    -   Devuelva los resultados del método <xref:System.Linq.IQueryProvider.Execute%2A> devuelto por la propiedad <xref:System.Data.Objects.ObjectContext.QueryProvider%2A>.  
+    - Devuelva los resultados del método <xref:System.Linq.IQueryProvider.Execute%2A> devuelto por la propiedad <xref:System.Data.Objects.ObjectContext.QueryProvider%2A>.  
   
 3. Llame al método como un miembro de una instancia de la clase <xref:System.Data.Objects.ObjectContext>.  
   
@@ -35,11 +35,11 @@ En este tema se describe cómo llamar a una función definida por el modelo como
   
 1. Agregue una clase a la aplicación con un método estático que haga lo siguiente:  
   
-    -   Se asigne a la función definida en el modelo conceptual. Para asignar el método, debe aplicarle un atributo <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Tenga en cuenta que los parámetros <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> y <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> del atributo son el nombre del espacio de nombres del modelo conceptual y el nombre de la función en el modelo conceptual, respectivamente.  
+    - Se asigne a la función definida en el modelo conceptual. Para asignar el método, debe aplicarle un atributo <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Tenga en cuenta que los parámetros <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> y <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> del atributo son el nombre del espacio de nombres del modelo conceptual y el nombre de la función en el modelo conceptual, respectivamente.  
   
-    -   Acepte un argumento <xref:System.Linq.IQueryable>.  
+    - Acepte un argumento <xref:System.Linq.IQueryable>.  
   
-    -   Devuelva los resultados del método <xref:System.Linq.IQueryProvider.Execute%2A> devuelto por la propiedad <xref:System.Linq.IQueryable.Provider%2A>.  
+    - Devuelva los resultados del método <xref:System.Linq.IQueryProvider.Execute%2A> devuelto por la propiedad <xref:System.Linq.IQueryable.Provider%2A>.  
   
 2. Llame al método como un miembro de un método estático en la clase personalizada  
   

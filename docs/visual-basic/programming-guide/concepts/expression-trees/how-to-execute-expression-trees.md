@@ -3,11 +3,11 @@ title: Procedimiento Ejecutar árboles de expresión (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
 ms.openlocfilehash: cccb0b301e1da6d82c616d56604ad46dfde83e2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787184"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>Procedimiento Ejecutar árboles de expresión (Visual Basic)
 En este tema se muestra cómo ejecutar un árbol de expresión. La ejecución de un árbol de expresión puede devolver un valor o simplemente realizar una acción, como llamar a un método.  
@@ -44,9 +44,9 @@ MsgBox(result)
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
--   Agregue una referencia de proyecto a System.Core.dll si todavía no existe.  
+- Agregue una referencia de proyecto a System.Core.dll si todavía no existe.  
   
--   Incluya el espacio de nombres System.Linq.Expressions.  
+- Incluya el espacio de nombres System.Linq.Expressions.  
   
 ## <a name="see-also"></a>Vea también
 

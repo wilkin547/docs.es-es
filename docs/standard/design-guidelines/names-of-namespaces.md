@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
 ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940990"
 ---
 # <a name="names-of-namespaces"></a>Nombres de espacios de nombres
 Como con otras directrices de nomenclatura, el objetivo al asignar nombres a los espacios de nombres está creando una mayor claridad suficiente para los programadores que utilizan el marco de trabajo saber inmediatamente lo que es probable que sea el contenido del espacio de nombres. La plantilla siguiente especifica la regla general para asignar nombres a los espacios de nombres:  
@@ -49,7 +49,7 @@ Como con otras directrices de nomenclatura, el objetivo al asignar nombres a los
   
  Hay instrucciones específicas para evitar conflictos de nombre de tipo para las diferentes categorías de espacios de nombres.  
   
--   **Espacios de nombres del modelo de aplicación**  
+- **Espacios de nombres del modelo de aplicación**  
   
      Los espacios de nombres que pertenecen a un único modelo de aplicación muy a menudo se usan juntos, pero casi nunca se usan con espacios de nombres de otros modelos de aplicación. Por ejemplo, el <xref:System.Windows.Forms?displayProperty=nameWithType> muy rara vez se utiliza el espacio de nombres junto con el <xref:System.Web.UI?displayProperty=nameWithType> espacio de nombres. La siguiente es una lista de grupos de espacio de nombres del modelo de aplicación conocida:  
   
@@ -60,11 +60,11 @@ Como con otras directrices de nomenclatura, el objetivo al asignar nombres a los
   
      Por ejemplo, no agregue un tipo denominado `Page` a la <xref:System.Web.UI.Adapters?displayProperty=nameWithType> espacio de nombres, porque el <xref:System.Web.UI?displayProperty=nameWithType> espacio de nombres ya contiene un tipo denominado `Page`.  
   
--   **Espacios de nombres de la infraestructura**  
+- **Espacios de nombres de la infraestructura**  
   
      Este grupo contiene los espacios de nombres que se importan rara vez durante el desarrollo de aplicaciones comunes. Por ejemplo, `.Design` espacios de nombres se utilizan principalmente al desarrollo de programación de las herramientas. Evitar conflictos con los tipos de estos espacios de nombres no es fundamental.  
   
--   **Espacios de nombres básicos**  
+- **Espacios de nombres básicos**  
   
      Espacios de nombres básicos incluyen todos `System` espacios de nombres, excepto los espacios de nombres de los modelos de aplicación y los espacios de nombres de la infraestructura. Espacios de nombres básicos se incluyen, entre otros, `System`, `System.IO`, `System.Xml`, y `System.Net`.  
   
@@ -72,7 +72,7 @@ Como con otras directrices de nomenclatura, el objetivo al asignar nombres a los
   
      Por ejemplo, nunca use `Stream` como un nombre de tipo. Entraría en conflicto con <xref:System.IO.Stream?displayProperty=nameWithType>, un tipo muy frecuente.  
   
--   **Grupos de espacio de nombres de tecnología**  
+- **Grupos de espacio de nombres de tecnología**  
   
      Esta categoría incluye todos los espacios de nombres con los dos primeros nodos de espacio de nombres mismo `(<Company>.<Technology>*`), como `Microsoft.Build.Utilities` y `Microsoft.Build.Tasks`. Es importante que los tipos que pertenecen a una única tecnología no entran en conflicto entre sí.  
   

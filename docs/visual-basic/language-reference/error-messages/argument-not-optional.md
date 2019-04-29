@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID449
 ms.assetid: 76e7bcf3-24ed-4cd5-945b-b98f1c76944b
 ms.openlocfilehash: bd5c5c498fb489f01e8a867e3400a06ef7905173
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751584"
 ---
 # <a name="argument-not-optional-visual-basic"></a>Argumento no opcional (Visual Basic)
 El número y los tipos de argumentos deben coincidir con los esperados. Hay un número incorrecto de argumentos, o un argumento omitido no es opcional. Solo se omite un argumento de una llamada a un procedimiento definido por el usuario si se ha declarado `Optional` en la definición del procedimiento.  

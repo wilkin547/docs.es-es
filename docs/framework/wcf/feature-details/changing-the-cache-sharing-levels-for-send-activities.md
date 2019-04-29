@@ -3,11 +3,11 @@ title: Cambiar los niveles de uso compartido de caché para actividades Send
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
 ms.openlocfilehash: e439edc14183c2ba2bf9af67e177dddb52c43708
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784298"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Cambiar los niveles de uso compartido de caché para actividades Send
 La extensión <xref:System.ServiceModel.Activities.SendMessageChannelCache> le permite personalizar los niveles de uso compartido de la memoria caché, la configuración de la memoria caché del generador de canales y la de la memoria caché del canal para los flujos de trabajo que envían mensajes a los puntos de conexión de servicio utilizando las actividades de mensajería de <xref:System.ServiceModel.Activities.Send>. Estos flujos de trabajo son normalmente flujos de trabajo del cliente pero podrían ser también servicios de flujo de trabajo que se hospedan en <xref:System.ServiceModel.WorkflowServiceHost>. La memoria caché del generador de canales contiene objetos <xref:System.ServiceModel.ChannelFactory%601> almacenados en caché. La memoria caché del canal contiene canales almacenados en memoria caché.  
@@ -16,15 +16,15 @@ La extensión <xref:System.ServiceModel.Activities.SendMessageChannelCache> le p
 >  Los flujos de trabajo pueden usar las actividades de mensajería de <xref:System.ServiceModel.Activities.Send> para enviar mensajes o parámetros. El tiempo de ejecución del flujo de trabajo agrega los generadores de canales a la memoria caché que crean canales de tipo <xref:System.ServiceModel.Channels.IRequestChannel> cuando se usa una actividad <xref:System.ServiceModel.Activities.ReceiveReply> con una actividad <xref:System.ServiceModel.Activities.Send> y <xref:System.ServiceModel.Channels.IOutputChannel> cuando se usa solo una actividad <xref:System.ServiceModel.Activities.Send> (sin <xref:System.ServiceModel.Activities.ReceiveReply>).  
   
 ## <a name="the-cache-sharing-levels"></a>Niveles de uso compartido de memoria caché  
- De manera predeterminada, en un flujo de trabajo hospedado por <xref:System.ServiceModel.WorkflowServiceHost>, la memoria caché usada por las actividades de mensajería de <xref:System.ServiceModel.Activities.Send> se comparte en todas las instancias de flujo de trabajo en <xref:System.ServiceModel.WorkflowServiceHost> (el almacenamiento en caché de nivel de host). Para un flujo de trabajo del cliente que no esté hospedado por <xref:System.ServiceModel.WorkflowServiceHost>, la memoria caché está solo disponible para la instancia de flujo de trabajo (almacenamiento en caché en el nivel de instancia). La memoria caché solo está disponible para las actividades <xref:System.ServiceModel.Activities.Send> que no usan extremos definidos en la configuración a menos que esté habilitado el almacenamiento en memoria caché no seguro.  
+ De manera predeterminada, en un flujo de trabajo hospedado por <xref:System.ServiceModel.WorkflowServiceHost>, la memoria caché usada por las actividades de mensajería de <xref:System.ServiceModel.Activities.Send> se comparte en todas las instancias de flujo de trabajo en <xref:System.ServiceModel.WorkflowServiceHost> (el almacenamiento en caché de nivel de host). Para un flujo de trabajo del cliente que no esté hospedado por <xref:System.ServiceModel.WorkflowServiceHost>, la memoria caché está solo disponible para la instancia de flujo de trabajo (almacenamiento en caché en el nivel de instancia). La memoria caché solo está disponible para las actividades <xref:System.ServiceModel.Activities.Send> que no usan puntos de conexión definidos en la configuración a menos que esté habilitado el almacenamiento en memoria caché no seguro.  
   
  A continuación, se enumeran los distintos niveles de uso compartido de la memoria caché disponibles para las actividades de <xref:System.ServiceModel.Activities.Send> en un flujo de trabajo y su uso recomendado:  
   
--   **Nivel de host**: En el nivel de uso compartido de host, la memoria caché está disponible solo para las instancias de flujo de trabajo hospedadas en el host de servicio de flujo de trabajo. Además, la memoria caché también puede compartirse entre los hosts de servicio de flujo de trabajo en una memoria caché de todo el proceso.  
+- **Nivel de host**: En el nivel de uso compartido de host, la memoria caché está disponible solo para las instancias de flujo de trabajo hospedadas en el host de servicio de flujo de trabajo. Además, la memoria caché también puede compartirse entre los hosts de servicio de flujo de trabajo en una memoria caché de todo el proceso.  
   
--   **Nivel de instancia**: En la instancia de nivel de uso compartido, la memoria caché está disponible para una instancia de flujo de trabajo concreto a lo largo de su duración, pero la memoria caché no está disponible para otras instancias de flujo de trabajo.  
+- **Nivel de instancia**: En la instancia de nivel de uso compartido, la memoria caché está disponible para una instancia de flujo de trabajo concreto a lo largo de su duración, pero la memoria caché no está disponible para otras instancias de flujo de trabajo.  
   
--   **Sin caché**: La memoria caché se desactiva de forma predeterminada si tiene un flujo de trabajo que usa extremos definidos en la configuración. También se recomienda mantener la memoria caché desactivada en este caso porque activarla podría no ser seguro. Por ejemplo, si se necesita una identidad diferente (con credenciales diferentes o usando la suplantación) para cada envío.  
+- **Sin caché**: La memoria caché se desactiva de forma predeterminada si tiene un flujo de trabajo que usa extremos definidos en la configuración. También se recomienda mantener la memoria caché desactivada en este caso porque activarla podría no ser seguro. Por ejemplo, si se necesita una identidad diferente (con credenciales diferentes o usando la suplantación) para cada envío.  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>Cambiar el nivel de uso compartido de la memoria caché para un flujo de trabajo de cliente  
  Para establecer el uso compartido de la memoria caché en un flujo de trabajo del cliente, agregue una instancia de la clase <xref:System.ServiceModel.Activities.SendMessageChannelCache> como una extensión al conjunto que desee de instancias de flujo de trabajo. Este hecho da como resultado compartir la memoria caché por todas las instancias de flujo de trabajo. En los siguientes ejemplos de código se muestra cómo realizar estos pasos:  
@@ -112,7 +112,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- Para permitir el almacenamiento en caché cuando su servicio del flujo de trabajo tiene los puntos de conexión definidos en la configuración, cree instancias de la clase <xref:System.ServiceModel.Activities.SendMessageChannelCache> usando el constructor parametrizado <xref:System.ServiceModel.Activities.SendMessageChannelCache.%23ctor%2A> con el parámetro `allowUnsafeCaching` definido en `true`. A continuación, agregue la nueva instancia de esta clase como una extensión a un host de servicio de flujo de trabajo o una instancia de flujo de trabajo. El siguiente ejemplo de código muestra cómo habilitar el almacenamiento en caché para una instancia de flujo de trabajo.  
+ Para permitir el almacenamiento en caché cuando su servicio del flujo de trabajo tiene los extremos definidos en la configuración, cree instancias de la clase <xref:System.ServiceModel.Activities.SendMessageChannelCache> usando el constructor parametrizado <xref:System.ServiceModel.Activities.SendMessageChannelCache.%23ctor%2A> con el parámetro `allowUnsafeCaching` definido en `true`. A continuación, agregue la nueva instancia de esta clase como una extensión a un host de servicio de flujo de trabajo o una instancia de flujo de trabajo. El siguiente ejemplo de código muestra cómo habilitar el almacenamiento en caché para una instancia de flujo de trabajo.  
   
 ```csharp  
 SendMessageChannelCache customChannelCacheExtension =   

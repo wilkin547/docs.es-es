@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
 ms.openlocfilehash: c4d3ec4ac0dcd02bc7f7a1d28ba383708d1e3f86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765614"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>Introducción a Data Services de WCF
 En los temas de esta sección le ayudan a comprender rápidamente [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] y cómo usar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para exponer y consumir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes explicando las tecnologías subyacentes. En esta sección se incluye contenido conceptual y una [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) tutorial.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
 ms.openlocfilehash: 107391386dfbb718f9436d9a039b08439fbc3279
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762142"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>Procedimiento Controlar un guión gráfico después de iniciarse
 En este ejemplo se muestra cómo usar código para controlar un <xref:System.Windows.Media.Animation.Storyboard> después de haberse iniciado. Para controlar un guión gráfico en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilice <xref:System.Windows.Trigger> y <xref:System.Windows.TriggerAction> objetos; por ejemplo, vea [usar desencadenadores de eventos para controlar un guión gráfico después de su inicio](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
@@ -21,19 +21,19 @@ En este ejemplo se muestra cómo usar código para controlar un <xref:System.Win
   
  Para poder controlar un guión gráfico, usa el <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método y especifique **true** como segundo parámetro. A continuación, puede usar los métodos interactivos del guión gráfico para pausar, reanudar, buscar, detener, acelerar el tiempo de espera, o ralentizar el guión gráfico o hacer que avance hasta su período de relleno. La siguiente es una lista de los métodos interactivos del guión gráfico:  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Pausa el guión gráfico.  
+- <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Pausa el guión gráfico.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Reanuda un guión gráfico en pausa.  
+- <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Reanuda un guión gráfico en pausa.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Establece la velocidad interactiva del guión gráfico.  
+- <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Establece la velocidad interactiva del guión gráfico.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Busca el guión gráfico de la ubicación especificada.  
+- <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Busca el guión gráfico de la ubicación especificada.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Busca en el guión gráfico en la ubicación especificada. A diferencia de la <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> método, esta operación se procesa antes del paso siguiente.  
+- <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Busca en el guión gráfico en la ubicación especificada. A diferencia de la <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> método, esta operación se procesa antes del paso siguiente.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Hace avanzar el guión gráfico a su período de relleno, si lo tiene.  
+- <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Hace avanzar el guión gráfico a su período de relleno, si lo tiene.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Detiene el guión gráfico.  
+- <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Detiene el guión gráfico.  
   
  En el ejemplo siguiente, se usan varios métodos de guión gráfico para controlar interactivamente un guión gráfico.  
   

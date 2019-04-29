@@ -3,11 +3,11 @@ title: <states> de WCF, <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
 ms.openlocfilehash: fad6f9c8871f79e4a1e26c893eed86ba168f6d01
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757955"
 ---
 # <a name="states-of-wcf-workflowinstancequery"></a>\<Estados > de WCF, \<workflowInstanceQuery >
 
@@ -72,14 +72,14 @@ En la siguiente tabla se describen los valores de estado posibles.
 |Estado|Descripción|  
 |-----------|-----------------|  
 |Anulado|Se ha anulado la instancia de flujo de trabajo.|  
-|Completado|Se ha completado la instancia de flujo de trabajo.|  
+|Completada|Se ha completado la instancia de flujo de trabajo.|  
 |Deleted|Se ha eliminado la instancia de flujo de trabajo.|  
 |Inactivo|La instancia de flujo de trabajo está inactiva.|  
 |Conservado|Se ha guardado la instancia de flujo de trabajo.|  
 |Reanudado|Se ha reanudado la instancia de flujo de trabajo.|  
 |Comenzado|Se ha iniciado la instancia de flujo de trabajo.|  
 |UnhandledException|La instancia de flujo de trabajo ha detectado una excepción no controlada.|  
-|Unloaded|Se ha descargado la instancia de flujo de trabajo.|  
+|Descargado|Se ha descargado la instancia de flujo de trabajo.|  
 |Cancelado|Se ha cancelado la instancia de flujo de trabajo.|  
 |Suspendido|Se suspende la instancia de flujo de trabajo.|  
 |Terminado|Se ha terminado la instancia de flujo de trabajo.|  

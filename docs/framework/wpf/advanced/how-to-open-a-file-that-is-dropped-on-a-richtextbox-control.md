@@ -1,5 +1,5 @@
 ---
-title: Filtrar Abrir un archivo colocado en un control RichTextBox
+title: Procedimiento Abrir un archivo colocado en un control RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - drag-and-drop [WPF], open a dropped file
 ms.assetid: 6bb8bb54-f576-41db-a9a7-24102ddeb490
 ms.openlocfilehash: 8ffa4c9919788060dc4524e127c181ee8282e6f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768607"
 ---
-# <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Filtrar Abrir un archivo colocado en un control RichTextBox
+# <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Procedimiento Abrir un archivo colocado en un control RichTextBox
 En [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, y <xref:System.Windows.Documents.FlowDocument> todos los controles tienen funcionalidad integrada de arrastrar y colocar. La funcionalidad integrada permite arrastrar y colocar texto dentro y entre los controles. Sin embargo, no permite abrir un archivo colocando el archivo en el control. Estos controles también marcan los eventos de arrastrar y colocar como controlado. Como resultado, de forma predeterminada, no se puede agregar sus propios controladores de eventos para proporcionar la funcionalidad para abrir los archivos colocados.  
   
  Para agregar un control adicional para los eventos de arrastrar y colocar en estos controles, use el <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> método para agregar los controladores de eventos para los eventos de arrastrar y colocar. Establecer el `handledEventsToo` parámetro `true` para que el controlador especificado se invoque para un evento enrutado que ya se ha marcado como controlado por otro elemento a lo largo de la ruta del evento.  

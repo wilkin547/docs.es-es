@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778851"
 ---
 # <a name="how-to-validate-application-settings"></a>Procedimiento para validar la configuración de la aplicación
 En este tema se muestra cómo validar la configuración de la aplicación antes de conservarla.  
@@ -34,11 +34,11 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
   
  Un controlador de eventos suele realizar una de las siguientes acciones al detectar un valor no válido:  
   
--   Proporciona automáticamente un valor conocido como correcto, como el valor predeterminado.  
+- Proporciona automáticamente un valor conocido como correcto, como el valor predeterminado.  
   
--   Vuelve a consultar al usuario del código de servidor para obtener información.  
+- Vuelve a consultar al usuario del código de servidor para obtener información.  
   
--   Para los eventos generados antes de sus acciones asociadas, como <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> y <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, usa el <xref:System.ComponentModel.CancelEventArgs> argumento para cancelar la operación.  
+- Para los eventos generados antes de sus acciones asociadas, como <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> y <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, usa el <xref:System.ComponentModel.CancelEventArgs> argumento para cancelar la operación.  
   
  Para más información sobre el control de eventos, consulte [Información general sobre controladores de eventos](../event-handlers-overview-windows-forms.md).  
   
@@ -46,9 +46,9 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
   
 ### <a name="to-obtain-the-application-settings-object"></a>Para obtener el objeto de configuración de la aplicación  
   
--   Obtenga una referencia al objeto de configuración de la aplicación (la instancia del contenedor) completando uno de los siguientes elementos con viñetas:  
+- Obtenga una referencia al objeto de configuración de la aplicación (la instancia del contenedor) completando uno de los siguientes elementos con viñetas:  
   
-    -   Si ha creado la configuración con el cuadro de diálogo Visual Studio Application Settings (Configuración de la aplicación de Visual Studio) en el **Editor de propiedades**, puede recuperar el objeto de configuración predeterminado generado para su lenguaje a través de la siguiente expresión.  
+    - Si ha creado la configuración con el cuadro de diálogo Visual Studio Application Settings (Configuración de la aplicación de Visual Studio) en el **Editor de propiedades**, puede recuperar el objeto de configuración predeterminado generado para su lenguaje a través de la siguiente expresión.  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -60,11 +60,11 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
   
          -o bien-  
   
-    -   Si es desarrollador de Visual Basic y ha creado la configuración de la aplicación mediante el Diseñador de proyectos, puede recuperar la configuración con [My.Settings (Objeto)](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
+    - Si es desarrollador de Visual Basic y ha creado la configuración de la aplicación mediante el Diseñador de proyectos, puede recuperar la configuración con [My.Settings (Objeto)](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
          -o bien-  
   
-    -   Si ha creado la configuración mediante la derivación de <xref:System.Configuration.ApplicationSettingsBase> directamente, deberá crear manualmente una instancia de la clase.  
+    - Si ha creado la configuración mediante la derivación de <xref:System.Configuration.ApplicationSettingsBase> directamente, deberá crear manualmente una instancia de la clase.  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  

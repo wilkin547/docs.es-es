@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31168
 ms.assetid: 45707363-55e4-4151-892d-d8729106355b
 ms.openlocfilehash: 959bbdc70bf08dae05f14520a7a5230b38843065
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766719"
 ---
 # <a name="xml-axis-properties-do-not-support-late-binding"></a>Las propiedades del eje XML no admiten enlace en tiempo de ejecución
 Se ha hecho referencia a una propiedad de eje XML para un objeto sin tipo.  
@@ -21,7 +21,7 @@ Se ha hecho referencia a una propiedad de eje XML para un objeto sin tipo.
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Asegúrese de que el objeto es un tipo seguro <xref:System.Xml.Linq.XElement> objeto antes de hacer referencia a la propiedad de eje XML.  
+- Asegúrese de que el objeto es un tipo seguro <xref:System.Xml.Linq.XElement> objeto antes de hacer referencia a la propiedad de eje XML.  
   
 ## <a name="see-also"></a>Vea también
 

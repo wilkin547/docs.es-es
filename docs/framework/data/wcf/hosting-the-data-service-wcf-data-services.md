@@ -9,32 +9,32 @@ helpviewer_keywords:
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
 ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765585"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hospedar el servicio de datos (Data Services de WCF)
 Mediante el uso de WCF Data Services, puede crear un servicio que expone los datos como un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuentes de distribución. Este servicio de datos se define como una clase que hereda de <xref:System.Data.Services.DataService%601>. Esta clase proporciona la funcionalidad necesaria para procesar mensajes de solicitud, realizar actualizaciones en el origen de datos y generar mensajes de respuesta, tal como requiere OData. Sin embargo, no puede enlazar a un servicio de datos y se escuche en un socket de red para las solicitudes HTTP entrantes. Para esta funcionalidad necesaria, el servicio de datos se basa en un componente de hospedaje.
 
  El host del servicio de datos realiza las siguientes tareas en nombre del servicio de datos:
 
--   Realiza escuchas de las solicitudes y las enruta al servicio de datos.
+- Realiza escuchas de las solicitudes y las enruta al servicio de datos.
 
--   Crea una instancia del servicio de datos para cada solicitud.
+- Crea una instancia del servicio de datos para cada solicitud.
 
--   Solicita al servicio de datos que procese la solicitud entrante.
+- Solicita al servicio de datos que procese la solicitud entrante.
 
--   Envía la respuesta en nombre del servicio de datos.
+- Envía la respuesta en nombre del servicio de datos.
 
  Para simplificar el hospedaje de un servicio de datos, WCF Data Services está diseñado para integrarse con Windows Communication Foundation (WCF). El servicio de datos proporciona una implementación WCF predeterminada que actúa como el host de servicio de datos en un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicación. Por consiguiente, un servicio de datos se puede hospedar de una de las siguientes maneras:
 
--   En una aplicación [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].
+- En una aplicación [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].
 
--   En una aplicación administrada que admita servicios WCF autohospedados.
+- En una aplicación administrada que admita servicios WCF autohospedados.
 
--   En algún otro host del servicio de datos personalizado.
+- En algún otro host del servicio de datos personalizado.
 
 ## <a name="hosting-a-data-service-in-an-aspnet-application"></a>Hospedar un servicio de datos en una aplicación ASP.NET
 
@@ -65,13 +65,13 @@ Cuando se usa el **Agregar nuevo elemento** cuadro de diálogo de Visual Studio 
 ## <a name="defining-a-custom-data-service-host"></a>Definir un host de servicio de datos personalizado
  Para los casos en los que la implementación de un host de WCF sea demasiado restrictiva, se puede definir también un host personalizado para un servicio de datos. Cualquier clase que implemente la interfaz <xref:System.Data.Services.IDataServiceHost> se puede utilizar como el host de red de un servicio de datos. Un host personalizado debe implementar la interfaz <xref:System.Data.Services.IDataServiceHost> y ser capaz de controlar las siguientes responsabilidades básicas del host del servicio de datos:
 
--   Proporcionar la ruta de acceso raíz del servicio al servicio de datos.
+- Proporcionar la ruta de acceso raíz del servicio al servicio de datos.
 
--   Procesar la información de encabezados de respuesta y solicitud en la implementación de miembro de <xref:System.Data.Services.IDataServiceHost> adecuada.
+- Procesar la información de encabezados de respuesta y solicitud en la implementación de miembro de <xref:System.Data.Services.IDataServiceHost> adecuada.
 
--   Controlar las excepciones iniciadas por el servicio de datos.
+- Controlar las excepciones iniciadas por el servicio de datos.
 
--   Validar parámetros en la cadena de consulta.
+- Validar parámetros en la cadena de consulta.
 
 ## <a name="see-also"></a>Vea también
 

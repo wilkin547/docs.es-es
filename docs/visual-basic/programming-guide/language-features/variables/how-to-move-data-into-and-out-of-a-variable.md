@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
 ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756603"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Procedimiento Movimiento de datos dentro y fuera de una Variable (Visual Basic)
 Almacenar un valor en una variable colocando el nombre de variable en el lado izquierdo de una instrucción de asignación.  
@@ -19,7 +19,7 @@ Almacenar un valor en una variable colocando el nombre de variable en el lado iz
   
 #### <a name="to-store-a-value-in-a-variable"></a>Para almacenar un valor en una variable  
   
--   Utilice el nombre de variable en el lado izquierdo de una instrucción de asignación.  
+- Utilice el nombre de variable en el lado izquierdo de una instrucción de asignación.  
   
      En el ejemplo siguiente se establece el valor de la variable `alpha`.  
   
@@ -34,11 +34,11 @@ Almacenar un valor en una variable colocando el nombre de variable en el lado iz
   
 #### <a name="to-retrieve-a-value-from-a-variable"></a>Para recuperar un valor de una variable  
   
--   Utilice el nombre de variable en una expresión. Puede usar una variable en cualquier lugar puede usar una constante o un literal, excepto en una expresión que define el valor de una constante.  
+- Utilice el nombre de variable en una expresión. Puede usar una variable en cualquier lugar puede usar una constante o un literal, excepto en una expresión que define el valor de una constante.  
   
      -o bien-  
   
--   Utilice el nombre de variable siguiendo la igual (`=`) inicie sesión en una instrucción de asignación.  
+- Utilice el nombre de variable siguiendo la igual (`=`) inicie sesión en una instrucción de asignación.  
   
      En el ejemplo siguiente se lee el valor de la variable `startValue` y, a continuación, usa el valor de la variable `counter` en una expresión.  
   

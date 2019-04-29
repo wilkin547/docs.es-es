@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
 ms.openlocfilehash: bc0c822659ee57ac8dd87a2adddcd32e934ea4fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699719"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Procedimiento Configurar un servicio de Windows Communication Foundation para utilizar puertos compartidos
 La manera más fácil de usar puertos de net.tcp:// en su aplicación de Windows Communication Foundation (WCF) es exponer un servicio mediante el <xref:System.ServiceModel.NetTcpBinding>.  

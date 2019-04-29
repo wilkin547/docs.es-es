@@ -9,11 +9,11 @@ helpviewer_keywords:
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
 ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758501"
 ---
 # <a name="anonymous-types-visual-basic"></a>Tipos anónimos (Visual Basic)
 Visual Basic admite los tipos anónimos, lo que le permite crear objetos sin escribir una definición de clase para el tipo de datos. En su lugar, el compilador genera una clase. La clase no tiene ningún nombre utilizable, hereda directamente de <xref:System.Object>y contiene las propiedades especificadas al declarar el objeto. Dado que no se especifica el nombre del tipo de datos, se conoce como un *tipo anónimo*.  
@@ -53,22 +53,22 @@ Visual Basic admite los tipos anónimos, lo que le permite crear objetos sin esc
 ## <a name="key-properties"></a>Propiedades clave  
  Propiedades de clave se diferencian de las propiedades que no son de clave de varias maneras fundamentales:  
   
--   Solo los valores de las propiedades de clave se comparan con el fin de determinar si dos instancias son iguales.  
+- Solo los valores de las propiedades de clave se comparan con el fin de determinar si dos instancias son iguales.  
   
--   Los valores de las propiedades clave son de solo lectura y no se puede cambiar.  
+- Los valores de las propiedades clave son de solo lectura y no se puede cambiar.  
   
--   Solo se incluyen los valores de propiedad de clave en el algoritmo de código hash generado por el compilador para un tipo anónimo.  
+- Solo se incluyen los valores de propiedad de clave en el algoritmo de código hash generado por el compilador para un tipo anónimo.  
   
 ### <a name="equality"></a>Igualdad  
  Instancias de tipos anónimos pueden ser iguales solo si son instancias del mismo tipo anónimo. El compilador trata las dos instancias como instancias del mismo tipo si cumplen las condiciones siguientes:  
   
--   Se declaran en el mismo ensamblado.  
+- Se declaran en el mismo ensamblado.  
   
--   Sus propiedades tienen los mismos nombres, los mismos tipos deducidos y se declaran en el mismo orden. Las comparaciones de nombres no distinguen mayúsculas de minúsculas.  
+- Sus propiedades tienen los mismos nombres, los mismos tipos deducidos y se declaran en el mismo orden. Las comparaciones de nombres no distinguen mayúsculas de minúsculas.  
   
--   Las mismas propiedades en cada una se marcan como propiedades de clave.  
+- Las mismas propiedades en cada una se marcan como propiedades de clave.  
   
--   Al menos una propiedad en cada declaración es una propiedad clave.  
+- Al menos una propiedad en cada declaración es una propiedad clave.  
   
  Una instancia de un tipo anónimo que no tiene ninguna propiedad clave es igual solo a sí mismo.  
   
@@ -86,11 +86,11 @@ Visual Basic admite los tipos anónimos, lo que le permite crear objetos sin esc
 ## <a name="anonymous-types-from-query-expressions"></a>Tipos anónimos desde las expresiones de consulta  
  Las expresiones de consulta no siempre requieren la creación de tipos anónimos. Cuando sea posible, usan un tipo existente para almacenar los datos de columna. Esto se produce cuando la consulta devuelve los registros completos desde el origen de datos o solo un campo de cada registro. En los siguientes ejemplos de código, `customers` es una colección de objetos de un `Customer` clase. La clase tiene muchas propiedades y puede incluir uno o varios de ellos en el resultado de consulta, en cualquier orden. En los dos primeros ejemplos, no hay tipos anónimos son necesarios porque las consultas seleccionan elementos de tipos con nombre:  
   
--   `custs1` contiene una colección de cadenas, porque `cust.Name` es una cadena.  
+- `custs1` contiene una colección de cadenas, porque `cust.Name` es una cadena.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
--   `custs2` contiene una colección de `Customer` objetos, ya que cada elemento de `customers` es un `Customer` objeto y todo el elemento se selecciona la consulta.  
+- `custs2` contiene una colección de `Customer` objetos, ya que cada elemento de `customers` es un `Customer` objeto y todo el elemento se selecciona la consulta.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   

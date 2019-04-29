@@ -6,24 +6,24 @@ dev_langs:
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
 ms.openlocfilehash: f152146e7483c6b3c162fd81f20f359e6c82123a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614965"
 ---
 # <a name="query-execution"></a>Ejecución de la consulta
 Una vez creada por un usuario una consulta LINQ, se convierte en un árbol de comandos. Un árbol de comandos es una representación de una consulta que es compatible con Entity Framework. Posteriormente, el árbol de comandos se ejecuta en el origen de datos. En el momento de la ejecución de la consulta, se evalúan todas las expresiones de consulta (es decir, todos los componentes de la consulta), incluidas las expresiones que se utilizan en la materialización del resultado.  
   
- El momento en que se ejecutan las expresiones de consulta puede variar. Las consultas LINQ siempre se ejecutan cuando se recorre en iteración la variable de consulta, no cuando se crea la citada variable de consulta. Esto se denomina *ejecución diferida*. También se puede obligar a que la consulta se ejecute inmediatamente, lo que es útil para almacenar en caché los resultados de la consulta. Esto se describe más adelante en este tema.  
+ El momento en que se ejecutan las expresiones de consulta puede variar. Las consultas LINQ siempre se ejecutan cuando se recorre en iteración la variable de consulta, no cuando se crea la citada variable de consulta. Esto se denomina *ejecución aplazada*. También se puede obligar a que la consulta se ejecute inmediatamente, lo que es útil para almacenar en caché los resultados de la consulta. Esto se describe más adelante en este tema.  
   
  Cuando se ejecuta una consulta de LINQ to Entities, algunas de sus expresiones podrían ejecutarse en el servidor y ciertas partes podrían ejecutarse de forma local en el cliente. La evaluación en el cliente de una expresión se lleva a cabo antes de ejecutar la consulta en el servidor. Si una expresión se evalúa en el cliente, el resultado de esa evaluación se sustituye por la expresión en la consulta, y ésta se ejecuta entonces en el servidor. Dado que las consultas se ejecutan en el origen de datos, la configuración de este reemplaza el comportamiento especificado en el cliente. Por ejemplo, la precisión numérica y el tratamiento de los valores NULL dependen de la configuración de servidor. Cualquier excepción que se produzca durante la ejecución de la consulta en el servidor se pasa directamente al cliente.  
  
 > [!TIP]
-> Para obtener un resumen adecuado de operadores de consulta en formato de tabla, que le permite identificar rápidamente el comportamiento de ejecución de un operador, consulte [clasificación de operadores de consulta estándar por modo de ejecución (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
+> Para obtener un resumen de operadores de consulta en formato de tabla, que le permite identificar rápidamente el comportamiento de ejecución de un operador, cómodo ver [clasificación de operadores de consulta estándar por modo de ejecución (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
 
 ## <a name="deferred-query-execution"></a>Ejecución de consultas en diferido  
- En una consulta que devuelve una secuencia de valores, la variable de consulta por sí misma nunca conserva los resultados de la consulta y solo almacena los comandos de la misma. La ejecución de la consulta se aplaza hasta que la variable de consulta se recorre en iteración en un bucle `foreach` o `For Each`. Esto se conoce como *ejecución diferida*; es decir, la consulta la ejecución se produce después de que se cree la consulta. Esto significa que se puede ejecutar una consulta con la frecuencia que se desee. Esto es útil cuando, por ejemplo, se tiene una base de datos que otras aplicaciones están actualizando. En su aplicación puede crear una consulta para recuperar la información más reciente y ejecutar de forma repetida la consulta, devolviendo cada vez la información actualizada.  
+ En una consulta que devuelve una secuencia de valores, la variable de consulta por sí misma nunca conserva los resultados de la consulta y solo almacena los comandos de la misma. La ejecución de la consulta se aplaza hasta que la variable de consulta se recorre en iteración en un bucle `foreach` o `For Each`. Esto se conoce como *ejecución aplazada*; es decir, la consulta ejecución se produce después de que se cree la consulta. Esto significa que se puede ejecutar una consulta con la frecuencia que se desee. Esto es útil cuando, por ejemplo, se tiene una base de datos que otras aplicaciones están actualizando. En su aplicación puede crear una consulta para recuperar la información más reciente y ejecutar de forma repetida la consulta, devolviendo cada vez la información actualizada.  
   
  La ejecución aplazada permite combinar varias consultas o ampliar una consulta. Cuando se amplía una consulta, se modifica para incluir las nuevas operaciones. La ejecución eventual reflejará los cambios. En el siguiente ejemplo, la primera consulta devuelve todos los productos. La segunda consulta amplía la primera usando `Where` para devolver todos los productos del tamaño "L":  
   
@@ -47,7 +47,7 @@ Una vez creada por un usuario una consulta LINQ, se convierte en un árbol de co
   
  Ciertas operaciones se ejecutan siempre en el cliente, como el enlace de valores, subexpresiones, subconsultas de cierres, y la materialización de objetos en los resultados de la consulta. La consecuencia final es que estos elementos (por ejemplo, los valores de parámetro) no se pueden actualizar durante la ejecución. Los tipos anónimos se pueden crear alineados en el origen de datos, pero no se debe suponer que esto se vaya a producir. Las agrupaciones alineadas también se pueden crear en el almacén, pero no se debe suponer que esto tenga lugar en cada instancia. En general, es preferible no hacer suposiciones sobre lo que se crea en el servidor.  
   
- En esta sección se describen los escenarios en que el código se ejecuta localmente en el cliente. Para obtener más información acerca de qué tipos de expresiones se ejecutan localmente, consulte [expresiones en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md).  
+ En esta sección se describen los escenarios en que el código se ejecuta localmente en el cliente. Para obtener más información acerca de los tipos de expresiones se ejecutan localmente, consulte [expresiones en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md).  
   
 ### <a name="literals-and-parameters"></a>Literales y parámetros  
  Las variables locales, como la variable `orderID` del ejemplo siguiente, se evalúan en el cliente.  
@@ -87,13 +87,13 @@ Una vez creada por un usuario una consulta LINQ, se convierte en un árbol de co
   
  Por ejemplo, a continuación se indican algunas diferencias de comportamiento entre CLR y SQL Server:  
   
--   SQL Server ordena los GUID de manera diferente que CLR.  
+- SQL Server ordena los GUID de manera diferente que CLR.  
   
--   También puede haber diferencias en la precisión del resultado cuando se trabaja con el tipo Decimal en SQL Server. Esto se debe a los requisitos de precisión fijados para el tipo decimal de SQL Server. Por ejemplo, el valor medio de los valores <xref:System.Decimal> 0.0, 0.0, y 1.0 es 0.3333333333333333333333333333 en memoria en el cliente, pero 0.333333 en el almacén (si se toma como base la precisión predeterminada para el tipo decimal de SQL Server).  
+- También puede haber diferencias en la precisión del resultado cuando se trabaja con el tipo Decimal en SQL Server. Esto se debe a los requisitos de precisión fijados para el tipo decimal de SQL Server. Por ejemplo, el valor medio de los valores <xref:System.Decimal> 0.0, 0.0, y 1.0 es 0.3333333333333333333333333333 en memoria en el cliente, pero 0.333333 en el almacén (si se toma como base la precisión predeterminada para el tipo decimal de SQL Server).  
   
--   Algunas operaciones de comparación de cadenas también se tratan en SQL Server de forma diferente que en CLR. El comportamiento de la comparación de cadenas depende de los valores de intercalación en el servidor.  
+- Algunas operaciones de comparación de cadenas también se tratan en SQL Server de forma diferente que en CLR. El comportamiento de la comparación de cadenas depende de los valores de intercalación en el servidor.  
   
--   Las llamadas a funciones o métodos, cuando se incluyen en una consulta de LINQ to Entities, se asignan a funciones canónicas en Entity Framework, que, posteriormente, se convierten a Transact-SQL y se ejecutan en la base de datos de SQL Server. Hay casos en que el comportamiento que muestran estas funciones asignadas puede diferir de la implementación en las bibliotecas de clases base. Por ejemplo, una llamada a los métodos <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A> y <xref:System.String.EndsWith%2A> con una cadena vacía como parámetro, devolverá `true` si se ejecuta en CLR pero devolverá `false` si se ejecuta en SQL Server. El método <xref:System.String.EndsWith%2A> también puede devolver resultados diferentes porque SQL Server considera que dos cadenas son iguales si solo se diferencian en el espacio en blanco final, mientras que CLR considera que no son iguales. Esto se muestra en el ejemplo siguiente:  
+- Las llamadas a funciones o métodos, cuando se incluyen en una consulta de LINQ to Entities, se asignan a funciones canónicas en Entity Framework, que, posteriormente, se convierten a Transact-SQL y se ejecutan en la base de datos de SQL Server. Hay casos en que el comportamiento que muestran estas funciones asignadas puede diferir de la implementación en las bibliotecas de clases base. Por ejemplo, una llamada a los métodos <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A> y <xref:System.String.EndsWith%2A> con una cadena vacía como parámetro, devolverá `true` si se ejecuta en CLR pero devolverá `false` si se ejecuta en SQL Server. El método <xref:System.String.EndsWith%2A> también puede devolver resultados diferentes porque SQL Server considera que dos cadenas son iguales si solo se diferencian en el espacio en blanco final, mientras que CLR considera que no son iguales. Esto se muestra en el ejemplo siguiente:  
   
  [!code-csharp[DP L2E Conceptual Examples#CanonicalFuncVsCLRBaseType](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#canonicalfuncvsclrbasetype)]
  [!code-vb[DP L2E Conceptual Examples#CanonicalFuncVsCLRBaseType](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#canonicalfuncvsclrbasetype)]

@@ -1,5 +1,5 @@
 ---
-title: PasswordBox estilos y plantillas
+title: Estilos y plantillas de PasswordBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - styles [WPF], PasswordBox
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
 ms.openlocfilehash: 7783330dd56ec5b2759e783a6935761eb3587978
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57509534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770648"
 ---
-# <a name="passwordbox-styles-and-templates"></a>PasswordBox estilos y plantillas
+# <a name="passwordbox-styles-and-templates"></a>Estilos y plantillas de PasswordBox
 
 En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.PasswordBox> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 

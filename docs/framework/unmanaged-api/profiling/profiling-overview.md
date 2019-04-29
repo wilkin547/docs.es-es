@@ -30,11 +30,11 @@ ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757565"
 ---
 # <a name="profiling-overview"></a>Información general sobre la generación de perfiles
 <a name="top"></a> Un generador de perfiles es una herramienta que supervisa la ejecución de otra aplicación. Un generador de perfiles de Common Language Runtime (CLR) es una biblioteca de vínculos dinámicos (DLL) compuesta de funciones que intercambian mensajes con el CLR utilizando la API de generación de perfiles. CLR carga en tiempo de ejecución la DLL del generador de perfiles.  
@@ -47,25 +47,25 @@ ms.locfileid: "58654099"
   
  Esta información general consta de las siguientes secciones:  
   
--   [La API de generación de perfiles](#profiling_api)  
+- [La API de generación de perfiles](#profiling_api)  
   
--   [Características admitidas](#support)  
+- [Características admitidas](#support)  
   
--   [Subprocesos de notificaciones](#notification_threads)  
+- [Subprocesos de notificaciones](#notification_threads)  
   
--   [Seguridad](#security)  
+- [Seguridad](#security)  
   
--   [Combinar código administrado y en un código de Profiler](#combining_managed_unmanaged)  
+- [Combinar código administrado y en un código de Profiler](#combining_managed_unmanaged)  
   
--   [Generación de perfiles de código no administrado](#unmanaged)  
+- [Generación de perfiles de código no administrado](#unmanaged)  
   
--   [Uso de COM](#com)  
+- [Uso de COM](#com)  
   
--   [Pilas de llamadas](#call_stacks)  
+- [Pilas de llamadas](#call_stacks)  
   
--   [Las devoluciones de llamada y profundidad de pila](#callbacks)  
+- [Las devoluciones de llamada y profundidad de pila](#callbacks)  
   
--   [Temas relacionados](#related_topics)  
+- [Temas relacionados](#related_topics)  
   
 <a name="profiling_api"></a>   
 ## <a name="the-profiling-api"></a>La API de generación de perfiles  
@@ -96,33 +96,33 @@ ms.locfileid: "58654099"
   
  La API de generación de perfiles recupera información sobre los siguientes eventos y acciones que se producen en el CLR:  
   
--   Eventos de inicio y cierre de CLR.  
+- Eventos de inicio y cierre de CLR.  
   
--   Eventos de creación y cierre de dominio de aplicación.  
+- Eventos de creación y cierre de dominio de aplicación.  
   
--   Eventos de carga y descarga de ensamblados.  
+- Eventos de carga y descarga de ensamblados.  
   
--   Eventos de carga y descarga de módulos.  
+- Eventos de carga y descarga de módulos.  
   
--   Eventos de creación y destrucción de vtable COM.  
+- Eventos de creación y destrucción de vtable COM.  
   
--   Eventos de compilación Just-In-Time (JIT) y eliminación de código nativo.  
+- Eventos de compilación Just-In-Time (JIT) y eliminación de código nativo.  
   
--   Eventos de carga y descarga de clase.  
+- Eventos de carga y descarga de clase.  
   
--   Eventos de creación y destrucción de subprocesos.  
+- Eventos de creación y destrucción de subprocesos.  
   
--   Eventos de entrada y salida de función.  
+- Eventos de entrada y salida de función.  
   
--   Excepciones.  
+- Excepciones.  
   
--   Transiciones entre la ejecución de código administrado y no administrado.  
+- Transiciones entre la ejecución de código administrado y no administrado.  
   
--   Transiciones entre diferentes contextos de tiempo de ejecución.  
+- Transiciones entre diferentes contextos de tiempo de ejecución.  
   
--   Información sobre suspensiones de tiempo de ejecución.  
+- Información sobre suspensiones de tiempo de ejecución.  
   
--   Información sobre el montón de memoria de tiempo de ejecución y la actividad de recolección de elementos no utilizados.  
+- Información sobre el montón de memoria de tiempo de ejecución y la actividad de recolección de elementos no utilizados.  
   
  Se puede llamar a la API de generación de perfiles desde cualquier lenguaje compatible con COM (no administrado).  
   
@@ -133,19 +133,19 @@ ms.locfileid: "58654099"
 ### <a name="unsupported-functionality"></a>Funcionalidad incompatible  
  La API de generación de perfiles no admite la funcionalidad siguiente:  
   
--   Código no administrado, que se debe perfilar usando métodos de Win32 convencionales. Sin embargo, el generador de perfiles de CLR incluye eventos de transición para determinar los límites entre el código administrado y no administrado.  
+- Código no administrado, que se debe perfilar usando métodos de Win32 convencionales. Sin embargo, el generador de perfiles de CLR incluye eventos de transición para determinar los límites entre el código administrado y no administrado.  
   
--   Aplicaciones que modifican su propio código para propósitos tales como la programación orientada a aspectos.  
+- Aplicaciones que modifican su propio código para propósitos tales como la programación orientada a aspectos.  
   
--   Comprobación de límites, ya que la API de generación de perfiles no proporciona esta información. CLR proporciona compatibilidad intrínseca para la comprobación de límites de todo el código administrado.  
+- Comprobación de límites, ya que la API de generación de perfiles no proporciona esta información. CLR proporciona compatibilidad intrínseca para la comprobación de límites de todo el código administrado.  
   
--   Generación de perfiles remota, que no se admite por las siguientes razones:  
+- Generación de perfiles remota, que no se admite por las siguientes razones:  
   
-    -   La generación remota de perfiles prolonga el tiempo de ejecución. Cuando usa las interfaces de generación de perfiles, debe minimizar el tiempo de ejecución de modo que los resultados de la generación de perfiles no se vean excesivamente afectados. Esto es especialmente cierto cuando se supervisa el rendimiento de la ejecución. Sin embargo, la generación remota de perfiles no es una limitación cuando las interfaces de generación de perfiles se emplean para supervisar el uso de memoria o para obtener información en tiempo de ejecución sobre marcos de pila, objetos, etc.  
+    - La generación remota de perfiles prolonga el tiempo de ejecución. Cuando usa las interfaces de generación de perfiles, debe minimizar el tiempo de ejecución de modo que los resultados de la generación de perfiles no se vean excesivamente afectados. Esto es especialmente cierto cuando se supervisa el rendimiento de la ejecución. Sin embargo, la generación remota de perfiles no es una limitación cuando las interfaces de generación de perfiles se emplean para supervisar el uso de memoria o para obtener información en tiempo de ejecución sobre marcos de pila, objetos, etc.  
   
-    -   El generador de perfiles del código de CLR debe registrar una o más interfaces de devolución de llamada con el motor en tiempo de ejecución en el equipo local en el que se está ejecutando la aplicación para la que se genera el perfil. Esto limita la capacidad para crear un generador de perfiles de código remoto.  
+    - El generador de perfiles del código de CLR debe registrar una o más interfaces de devolución de llamada con el motor en tiempo de ejecución en el equipo local en el que se está ejecutando la aplicación para la que se genera el perfil. Esto limita la capacidad para crear un generador de perfiles de código remoto.  
   
--   Generación de perfiles en entornos de producción con requisitos de alta disponibilidad. La API de generación de perfiles fue creada para admitir diagnósticos en tiempo de desarrollo. No se ha sometido a las rigurosas pruebas exigidas para la compatibilidad de entornos de producción.  
+- Generación de perfiles en entornos de producción con requisitos de alta disponibilidad. La API de generación de perfiles fue creada para admitir diagnósticos en tiempo de desarrollo. No se ha sometido a las rigurosas pruebas exigidas para la compatibilidad de entornos de producción.  
   
  [Volver al principio](#top)  
   
@@ -185,9 +185,9 @@ ms.locfileid: "58654099"
 ## <a name="profiling-unmanaged-code"></a>Código no administrado de generación de perfiles  
  La API de generación de perfiles de Common Language Runtime (CLR) proporciona la compatibilidad mínima para el código no administrado de generación de perfiles. Se proporciona la funcionalidad siguiente:  
   
--   Enumeración de cadenas de pila. Esta característica permite a un generador de perfiles de código determinar el límite entre el código administrado y el código no administrado.  
+- Enumeración de cadenas de pila. Esta característica permite a un generador de perfiles de código determinar el límite entre el código administrado y el código no administrado.  
   
--   Determinación de si una cadena de pila corresponde a código administrado o código nativo.  
+- Determinación de si una cadena de pila corresponde a código administrado o código nativo.  
   
  En las versiones 1.0 y 1.1 de .NET Framework, estos métodos están disponibles a través del subconjunto en proceso de la API de depuración de CLR. Se definen en el archivo CorDebug.idl.  
   

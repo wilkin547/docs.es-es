@@ -3,11 +3,11 @@ title: Autorización y permisos en SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
 ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663965"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorización y permisos en SQL Server
 Al crear objetos de base de datos, se deben conceder permisos de forma explícita para que los usuarios tengan acceso a ellos. Cada objeto susceptible de protegerse tiene permisos que se pueden otorgar a una entidad de seguridad mediante instrucciones de permiso.  
@@ -37,7 +37,7 @@ Al crear objetos de base de datos, se deben conceder permisos de forma explícit
 |REVOKE|Revoca un permiso. Este es el estado predeterminado de un objeto nuevo. Un permiso revocado a un usuario o rol se puede heredar de otros grupos o roles a los que está asignada la entidad de seguridad.|  
 |DENY|DENY revoca un permiso de manera que no pueda ser heredado. DENY tiene prioridad sobre todos los permisos, pero no se aplica a propietarios de objeto o miembros de `sysadmin`. Si deniega permisos a un objeto en el rol `public`, se los deniega igualmente a todos los usuarios y roles excepto a los propietarios del objeto y a los miembros de `sysadmin`.|  
   
--   La instrucción GRANT puede asignar permisos a un grupo o rol que puede ser heredada por los usuarios de la base de datos. No obstante, la instrucción DENY tiene prioridad sobre el resto de las instrucciones de permiso. Por ello, un usuario al que se le ha denegado un permiso no puede heredarlo de otro rol.  
+- La instrucción GRANT puede asignar permisos a un grupo o rol que puede ser heredada por los usuarios de la base de datos. No obstante, la instrucción DENY tiene prioridad sobre el resto de las instrucciones de permiso. Por ello, un usuario al que se le ha denegado un permiso no puede heredarlo de otro rol.  
   
 > [!NOTE]
 >  A los miembros del rol fijo del servidor `sysadmin` y a los propietarios de objetos no se les pueden denegar permisos.  

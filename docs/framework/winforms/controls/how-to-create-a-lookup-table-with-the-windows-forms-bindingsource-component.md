@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
 ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747062"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procedimiento para crear una tabla de búsqueda con el componente BindingSource de formularios Windows Forms
 Una tabla de búsqueda es una tabla de datos con una columna que muestra los datos de los registros de una tabla relacionada. En los procedimientos siguientes se usa un control <xref:System.Windows.Forms.ComboBox> para mostrar el campo con la relación de clave externa desde la tabla primaria a la tabla secundaria.  
@@ -37,13 +37,13 @@ Una tabla de búsqueda es una tabla de datos con una columna que muestra los dat
   
  En el control [ComboBox Control](combobox-control-windows-forms.md) se establecen cuatro propiedades importantes para crear la tabla de búsqueda.  
   
--   La propiedad <xref:System.Windows.Forms.ComboBox.DataSource%2A> contiene el nombre de la tabla.  
+- La propiedad <xref:System.Windows.Forms.ComboBox.DataSource%2A> contiene el nombre de la tabla.  
   
--   La propiedad <xref:System.Windows.Forms.ListControl.DisplayMember%2A> contiene la columna de datos de esa tabla que quiere mostrar para el texto del control (nombre del cliente).  
+- La propiedad <xref:System.Windows.Forms.ListControl.DisplayMember%2A> contiene la columna de datos de esa tabla que quiere mostrar para el texto del control (nombre del cliente).  
   
--   La propiedad <xref:System.Windows.Forms.ListControl.ValueMember%2A> contiene la columna de datos de esa con la información almacenada (número de identificación en la tabla primaria).  
+- La propiedad <xref:System.Windows.Forms.ListControl.ValueMember%2A> contiene la columna de datos de esa con la información almacenada (número de identificación en la tabla primaria).  
   
--   La propiedad <xref:System.Windows.Forms.ListControl.SelectedValue%2A> proporciona el valor de búsqueda de la tabla secundaria, basado en <xref:System.Windows.Forms.ListControl.ValueMember%2A>.  
+- La propiedad <xref:System.Windows.Forms.ListControl.SelectedValue%2A> proporciona el valor de búsqueda de la tabla secundaria, basado en <xref:System.Windows.Forms.ListControl.ValueMember%2A>.  
   
  Los procedimientos siguientes muestran cómo diseñar el formulario como una tabla de búsqueda y enlazar datos a controles en ella. Para realizar correctamente los procedimientos, debe tener un origen de datos con tablas primarias y secundarias que tengan una relación de clave externa, tal y como se indicó anteriormente.  
   
@@ -65,21 +65,21 @@ Una tabla de búsqueda es una tabla de datos con una columna que muestra los dat
   
 3. Haga clic en la flecha junto al cuadro desplegable **Origen de datos**. Si ya se ha configurado un origen de datos para el proyecto o formulario, aparecerá; de lo contrario, realice los pasos siguientes. (En este ejemplo se usan las tablas Customers y Orders de la base de datos de muestra Northwind y se hace referencia a ellas entre paréntesis).  
   
-    1.  Haga clic en **Agregar origen de datos del proyecto** para conectar con los datos y crear un origen de datos.  
+    1. Haga clic en **Agregar origen de datos del proyecto** para conectar con los datos y crear un origen de datos.  
   
-    2.  En la página principal del **Asistente para la configuración de orígenes de datos**, haga clic en **Siguiente**.  
+    2. En la página principal del **Asistente para la configuración de orígenes de datos**, haga clic en **Siguiente**.  
   
-    3.  Seleccione **Base de datos** en la página **Elegir un tipo de origen de datos**.  
+    3. Seleccione **Base de datos** en la página **Elegir un tipo de origen de datos**.  
   
-    4.  Seleccione una conexión de datos en la lista de conexiones disponibles, en la página **Elegir la conexión de datos**. Si los datos que quiere no están disponibles, seleccione **Nueva conexión** para crear una nueva conexión de datos.  
+    4. Seleccione una conexión de datos en la lista de conexiones disponibles, en la página **Elegir la conexión de datos**. Si los datos que quiere no están disponibles, seleccione **Nueva conexión** para crear una nueva conexión de datos.  
   
-    5.  Haga clic en **Sí, guardar la conexión** para guardar la cadena de conexión en el archivo de configuración de la aplicación.  
+    5. Haga clic en **Sí, guardar la conexión** para guardar la cadena de conexión en el archivo de configuración de la aplicación.  
   
-    6.  Seleccione los objetos de base de datos que va a traer a su aplicación. En este caso, seleccione una tabla primaria y una tabla secundaria (por ejemplo, Customers y Orders) con una relación de clave externa.  
+    6. Seleccione los objetos de base de datos que va a traer a su aplicación. En este caso, seleccione una tabla primaria y una tabla secundaria (por ejemplo, Customers y Orders) con una relación de clave externa.  
   
-    7.  Reemplace el nombre del conjunto de datos predeterminado, si lo desea.  
+    7. Reemplace el nombre del conjunto de datos predeterminado, si lo desea.  
   
-    8.  Haga clic en **Finalizar**.  
+    8. Haga clic en **Finalizar**.  
   
 4. En el cuadro desplegable **Mostrar miembro**, seleccione el nombre de la columna (por ejemplo, ContactName) que se mostrará en el cuadro combinado.  
   
