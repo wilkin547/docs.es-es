@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eb5820087001a207af0c2552f91b4c17f5f78ff7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777662"
 ---
-# <a name="imetadataimportgetnestedclassprops-method"></a><span data-ttu-id="50fad-102">IMetaDataImport::GetNestedClassProps (Método)</span><span class="sxs-lookup"><span data-stu-id="50fad-102">IMetaDataImport::GetNestedClassProps Method</span></span>
-<span data-ttu-id="50fad-103">Obtiene la definición de tipo (token) para el elemento primario <xref:System.Type> del elemento especificado de tipo anidado.</span><span class="sxs-lookup"><span data-stu-id="50fad-103">Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.</span></span>  
+# <a name="imetadataimportgetnestedclassprops-method"></a><span data-ttu-id="d0c27-102">IMetaDataImport::GetNestedClassProps (Método)</span><span class="sxs-lookup"><span data-stu-id="d0c27-102">IMetaDataImport::GetNestedClassProps Method</span></span>
+<span data-ttu-id="d0c27-103">Obtiene la definición de tipo (token) para el elemento primario <xref:System.Type> del elemento especificado de tipo anidado.</span><span class="sxs-lookup"><span data-stu-id="d0c27-103">Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="50fad-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="50fad-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0c27-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d0c27-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNestedClassProps (  
@@ -36,23 +36,23 @@ HRESULT GetNestedClassProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="50fad-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="50fad-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d0c27-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="d0c27-105">Parameters</span></span>  
  `tdNestedClass`  
- <span data-ttu-id="50fad-106">[in] Una definición de tipo token que representa el <xref:System.Type> para devolver la clase primaria símbolo (token).</span><span class="sxs-lookup"><span data-stu-id="50fad-106">[in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.</span></span>  
+ <span data-ttu-id="d0c27-106">[in] Una definición de tipo token que representa el <xref:System.Type> para devolver la clase primaria símbolo (token).</span><span class="sxs-lookup"><span data-stu-id="d0c27-106">[in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.</span></span>  
   
  `ptdEnclosingClass`  
- <span data-ttu-id="50fad-107">[out] Un puntero al token de TypeDef para el <xref:System.Type> que `tdNestedClass` está anidado en.</span><span class="sxs-lookup"><span data-stu-id="50fad-107">[out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.</span></span>  
+ <span data-ttu-id="d0c27-107">[out] Un puntero al token de TypeDef para el <xref:System.Type> que `tdNestedClass` está anidado en.</span><span class="sxs-lookup"><span data-stu-id="d0c27-107">[out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="50fad-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="50fad-108">Requirements</span></span>  
- <span data-ttu-id="50fad-109">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="50fad-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0c27-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d0c27-108">Requirements</span></span>  
+ <span data-ttu-id="d0c27-109">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d0c27-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="50fad-110">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="50fad-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d0c27-110">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="d0c27-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="50fad-111">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="50fad-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d0c27-111">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d0c27-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="50fad-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50fad-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d0c27-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0c27-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="50fad-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="50fad-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0c27-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="d0c27-113">See also</span></span>
 
-- [<span data-ttu-id="50fad-114">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="50fad-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="50fad-115">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="50fad-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="d0c27-114">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="d0c27-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="d0c27-115">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="d0c27-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

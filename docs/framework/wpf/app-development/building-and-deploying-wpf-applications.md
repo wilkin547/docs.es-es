@@ -9,32 +9,32 @@ helpviewer_keywords:
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
 ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756980"
 ---
-# <a name="building-and-deploying-wpf-applications"></a><span data-ttu-id="1a4ba-102">Compilar e implementar aplicaciones WPF</span><span class="sxs-lookup"><span data-stu-id="1a4ba-102">Building and Deploying WPF Applications</span></span>
-<span data-ttu-id="1a4ba-103">El modelo de compilación e implementación proporciona la capacidad de crear e implementar aplicaciones locales y remotos, incluidos los siguientes:</span><span class="sxs-lookup"><span data-stu-id="1a4ba-103">The build and deployment model provides the capability to build and deploy applications locally and remotely, including the following:</span></span>  
+# <a name="building-and-deploying-wpf-applications"></a><span data-ttu-id="08bed-102">Compilar e implementar aplicaciones WPF</span><span class="sxs-lookup"><span data-stu-id="08bed-102">Building and Deploying WPF Applications</span></span>
+<span data-ttu-id="08bed-103">El modelo de compilación e implementación proporciona la capacidad de crear e implementar aplicaciones locales y remotos, incluidos los siguientes:</span><span class="sxs-lookup"><span data-stu-id="08bed-103">The build and deployment model provides the capability to build and deploy applications locally and remotely, including the following:</span></span>  
   
--   <span data-ttu-id="1a4ba-104">MSBuild: .NET de compilación del sistema que se encuentra en el espacio de nombres Microsoft.Build.Tasks.Windows.</span><span class="sxs-lookup"><span data-stu-id="1a4ba-104">MSBuild: the .NET build system located in the Microsoft.Build.Tasks.Windows namespace.</span></span>  
+- <span data-ttu-id="08bed-104">MSBuild: .NET de compilación del sistema que se encuentra en el espacio de nombres Microsoft.Build.Tasks.Windows.</span><span class="sxs-lookup"><span data-stu-id="08bed-104">MSBuild: the .NET build system located in the Microsoft.Build.Tasks.Windows namespace.</span></span>  
   
--   <span data-ttu-id="1a4ba-105">Recursos: trabajar con recursos de la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="1a4ba-105">Resources: working with UI resources.</span></span>  
+- <span data-ttu-id="08bed-105">Recursos: trabajar con recursos de la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="08bed-105">Resources: working with UI resources.</span></span>  
   
--   <span data-ttu-id="1a4ba-106">Implementación de ClickOnce: la publicación e implementación sistema .NET.</span><span class="sxs-lookup"><span data-stu-id="1a4ba-106">ClickOnce Deployment: the .NET publishing and deployment system.</span></span>  
+- <span data-ttu-id="08bed-106">Implementación de ClickOnce: la publicación e implementación sistema .NET.</span><span class="sxs-lookup"><span data-stu-id="08bed-106">ClickOnce Deployment: the .NET publishing and deployment system.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1a4ba-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="1a4ba-107">In This Section</span></span>  
- [<span data-ttu-id="1a4ba-108">Compilar una aplicación de WPF</span><span class="sxs-lookup"><span data-stu-id="1a4ba-108">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
- [<span data-ttu-id="1a4ba-109">Implementar una aplicación WPF</span><span class="sxs-lookup"><span data-stu-id="1a4ba-109">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
- [<span data-ttu-id="1a4ba-110">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="1a4ba-110">How-to Topics</span></span>](build-and-deploy-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="08bed-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="08bed-107">In This Section</span></span>  
+ [<span data-ttu-id="08bed-108">Compilar una aplicación de WPF</span><span class="sxs-lookup"><span data-stu-id="08bed-108">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="08bed-109">Implementar una aplicación WPF</span><span class="sxs-lookup"><span data-stu-id="08bed-109">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="08bed-110">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="08bed-110">How-to Topics</span></span>](build-and-deploy-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="1a4ba-111">Referencia</span><span class="sxs-lookup"><span data-stu-id="1a4ba-111">Reference</span></span>  
- <span data-ttu-id="1a4ba-112">MSBuild</span><span class="sxs-lookup"><span data-stu-id="1a4ba-112">MSBuild</span></span>  
+## <a name="reference"></a><span data-ttu-id="08bed-111">Referencia</span><span class="sxs-lookup"><span data-stu-id="08bed-111">Reference</span></span>  
+ <span data-ttu-id="08bed-112">MSBuild</span><span class="sxs-lookup"><span data-stu-id="08bed-112">MSBuild</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="1a4ba-113">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="1a4ba-113">Related Sections</span></span>  
- [<span data-ttu-id="1a4ba-114">Información general sobre la administración de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="1a4ba-114">Application Management Overview</span></span>](application-management-overview.md)  
-  [<span data-ttu-id="1a4ba-115">Windows en aplicaciones para WPF</span><span class="sxs-lookup"><span data-stu-id="1a4ba-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
-  [<span data-ttu-id="1a4ba-116">Información general sobre navegación</span><span class="sxs-lookup"><span data-stu-id="1a4ba-116">Navigation Overview</span></span>](navigation-overview.md)  
-  [<span data-ttu-id="1a4ba-117">Información general sobre las aplicaciones de explorador XAML de WPF</span><span class="sxs-lookup"><span data-stu-id="1a4ba-117">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)  
-  [<span data-ttu-id="1a4ba-118">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="1a4ba-118">Hosting</span></span>](hosting-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="08bed-113">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="08bed-113">Related Sections</span></span>  
+ [<span data-ttu-id="08bed-114">Información general sobre la administración de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="08bed-114">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="08bed-115">Windows en aplicaciones para WPF</span><span class="sxs-lookup"><span data-stu-id="08bed-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
+  [<span data-ttu-id="08bed-116">Información general sobre navegación</span><span class="sxs-lookup"><span data-stu-id="08bed-116">Navigation Overview</span></span>](navigation-overview.md)  
+  [<span data-ttu-id="08bed-117">Información general sobre las aplicaciones de explorador XAML de WPF</span><span class="sxs-lookup"><span data-stu-id="08bed-117">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)  
+  [<span data-ttu-id="08bed-118">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="08bed-118">Hosting</span></span>](hosting-wpf-applications.md)

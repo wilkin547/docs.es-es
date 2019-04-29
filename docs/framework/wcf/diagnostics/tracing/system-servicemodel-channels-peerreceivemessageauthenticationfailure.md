@@ -3,20 +3,20 @@ title: System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: 420e50fd-017c-4e06-bc13-320d4e0dc534
 ms.openlocfilehash: c542cabe49246f8a452f10d95043d363c1c5f3c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766446"
 ---
-# <a name="systemservicemodelchannelspeerreceivemessageauthenticationfailure"></a><span data-ttu-id="876d0-102">System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure</span><span class="sxs-lookup"><span data-stu-id="876d0-102">System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure</span></span>
-<span data-ttu-id="876d0-103">No se pudo autenticar el origen del mensaje.</span><span class="sxs-lookup"><span data-stu-id="876d0-103">The message source could not be authenticated</span></span>  
+# <a name="systemservicemodelchannelspeerreceivemessageauthenticationfailure"></a><span data-ttu-id="dbac0-102">System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure</span><span class="sxs-lookup"><span data-stu-id="dbac0-102">System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure</span></span>
+<span data-ttu-id="dbac0-103">No se pudo autenticar el origen del mensaje.</span><span class="sxs-lookup"><span data-stu-id="dbac0-103">The message source could not be authenticated</span></span>  
   
-## <a name="description"></a><span data-ttu-id="876d0-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="876d0-104">Description</span></span>  
- <span data-ttu-id="876d0-105">Este seguimiento se produce cuando se intentan autenticar los mensajes entrantes y la autenticación de mensajes está habilitada en el enlace.</span><span class="sxs-lookup"><span data-stu-id="876d0-105">This trace occurs while trying to authenticate incoming messages and message authentication is enabled on the binding.</span></span>  
+## <a name="description"></a><span data-ttu-id="dbac0-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="dbac0-104">Description</span></span>  
+ <span data-ttu-id="dbac0-105">Este seguimiento se produce cuando se intentan autenticar los mensajes entrantes y la autenticación de mensajes está habilitada en el enlace.</span><span class="sxs-lookup"><span data-stu-id="dbac0-105">This trace occurs while trying to authenticate incoming messages and message authentication is enabled on the binding.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="876d0-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="876d0-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dbac0-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="dbac0-106">See also</span></span>
 
-- [<span data-ttu-id="876d0-107">Traza</span><span class="sxs-lookup"><span data-stu-id="876d0-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="876d0-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="876d0-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="876d0-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="876d0-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="dbac0-107">Traza</span><span class="sxs-lookup"><span data-stu-id="dbac0-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="dbac0-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="dbac0-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="dbac0-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="dbac0-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
