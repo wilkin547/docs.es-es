@@ -8,11 +8,11 @@ helpviewer_keywords:
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
 ms.openlocfilehash: a7b70669131ae35135088418e4b33b3ae289d322
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761759"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>Información general sobre literales XML (Visual Basic)
 Un *literal XML* le permite incorporar XML directamente en el código de Visual Basic. La sintaxis de literales XML representa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objetos y es similar a la sintaxis XML 1.0. Esto facilita la creación de elementos y documentos XML mediante programación porque el código tiene la misma estructura que el código XML final.  

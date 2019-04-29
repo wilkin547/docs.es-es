@@ -8,11 +8,11 @@ helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
 ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935465"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Especificación del comportamiento de tiempo de ejecución del cliente
 Los clientes de Windows Communication Foundation (WCF), como los servicios Windows Communication Foundation (WCF), pueden configurarse para modificar el comportamiento de tiempo de ejecución para que se adapte a la aplicación cliente. Tres atributos están disponibles para especificar el comportamiento de tiempo de ejecución del cliente. Los objetos de devolución de llamada de cliente dúplex pueden utilizar <xref:System.ServiceModel.CallbackBehaviorAttribute> y los atributos <xref:System.ServiceModel.Description.CallbackDebugBehavior> para modificar su comportamiento de tiempo de ejecución. El otro atributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, se puede utilizar para separar el destino lógico del destino de red inmediato. Además, los tipos de devolución de llamada de cliente dúplex pueden utilizar algunos de los comportamientos de lado del servicio. Para obtener más información, consulte [especificar el comportamiento de tiempo de ejecución de servicio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -32,9 +32,9 @@ Los clientes de Windows Communication Foundation (WCF), como los servicios Windo
   
  Debido a los problemas de seguridad implicados, se recomienda encarecidamente que:  
   
--   Utilice un archivo de configuración de la aplicación para establecer el valor de la propiedad <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> en `true`.  
+- Utilice un archivo de configuración de la aplicación para establecer el valor de la propiedad <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> en `true`.  
   
--   lo haga solamente en escenarios de depuración controlados.  
+- lo haga solamente en escenarios de depuración controlados.  
   
  El ejemplo de código siguiente muestra a un cliente de archivo de configuración que se indica a WCF para devolver información de excepción administrada desde un cliente de objeto de devolución de llamada en los mensajes SOAP.  
   

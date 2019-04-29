@@ -3,11 +3,11 @@ title: Modelo de objetos de Detección de WCF
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
 ms.openlocfilehash: b337eda40fc70a6d0e7b3aeccfc125e6e6bacf8f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935543"
 ---
 # <a name="wcf-discovery-object-model"></a>Modelo de objetos de Detección de WCF
 Detección de WCF consta de un conjunto de tipos que proporcionan un modelo de programación unificado que le permite escribir servicios reconocibles durante el tiempo de ejecución y clientes que encuentran y utilizan estos servicios.  
@@ -17,54 +17,54 @@ Detección de WCF consta de un conjunto de tipos que proporcionan un modelo de p
   
  Un cliente que desea realizar escuchas de mensajes de anuncio del servicio hospeda un servicio de anuncio y agrega uno o más extremos de anuncio. El servicio de anuncio recibe mensajes de anuncio y genera eventos de anuncio.  
   
- El cliente utiliza la clase <xref:System.ServiceModel.Discovery.DiscoveryClient> para buscar servicios disponibles. La aplicación cliente crea instancias de la clase <xref:System.ServiceModel.Discovery.DiscoveryClient>, pasando un extremo de detección que especifica dónde se deben enviar los mensajes de detección. El cliente llama al método <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, que envía una solicitud `Probe`. Los servicios que realizan escuchas de los mensajes de detección reciben esta solicitud `Probe`. Si el servicio coincide con los criterios especificados en `Probe`, devuelve un mensaje `ProbeMatch` al cliente.  
+ El cliente utiliza la clase <xref:System.ServiceModel.Discovery.DiscoveryClient> para buscar servicios disponibles. La aplicación cliente crea instancias de la clase <xref:System.ServiceModel.Discovery.DiscoveryClient>, pasando un punto de conexión de detección que especifica dónde se deben enviar los mensajes de detección. El cliente llama al método <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, que envía una solicitud `Probe`. Los servicios que realizan escuchas de los mensajes de detección reciben esta solicitud `Probe`. Si el servicio coincide con los criterios especificados en `Probe`, devuelve un mensaje `ProbeMatch` al cliente.  
   
 ## <a name="object-model"></a>Modelo de objetos  
  La API de Detección de WCF define las clases siguientes:  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementClient>  
+- <xref:System.ServiceModel.Discovery.AnnouncementClient>  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementService>  
+- <xref:System.ServiceModel.Discovery.AnnouncementService>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryClient>  
+- <xref:System.ServiceModel.Discovery.DiscoveryClient>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  
+- <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>  
+- <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>  
   
--   <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>  
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryProxy>  
+- <xref:System.ServiceModel.Discovery.DiscoveryProxy>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryService>  
+- <xref:System.ServiceModel.Discovery.DiscoveryService>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryVersion>  
+- <xref:System.ServiceModel.Discovery.DiscoveryVersion>  
   
--   <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
+- <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>  
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>  
   
--   <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>  
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria>  
+- <xref:System.ServiceModel.Discovery.FindCriteria>  
   
--   <xref:System.ServiceModel.Discovery.FindRequestContext>  
+- <xref:System.ServiceModel.Discovery.FindRequestContext>  
   
--   <xref:System.ServiceModel.Discovery.FindResponse>  
+- <xref:System.ServiceModel.Discovery.FindResponse>  
   
--   <xref:System.ServiceModel.Discovery.ResolveCriteria>  
+- <xref:System.ServiceModel.Discovery.ResolveCriteria>  
   
--   <xref:System.ServiceModel.Discovery.ResolveResponse>  
+- <xref:System.ServiceModel.Discovery.ResolveResponse>  
   
--   <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
  
--   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
   
 ## <a name="announcementclient"></a>AnnouncementClient  
  La clase <xref:System.ServiceModel.Discovery.AnnouncementClient> proporciona métodos sincrónicos y asincrónicos para enviar los mensajes de anuncio. Hay dos tipos de mensajes de anuncio: Hola y Adiós. Un mensaje Hola se envía para indicar que un servicio se ha vuelto disponible y un mensaje Adiós se envía para indicar que un servicio existente se ha vuelto no disponible. El desarrollador crea una instancia <xref:System.ServiceModel.Discovery.AnnouncementClient>, pasando una instancia de <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> como un parámetro de constructor.  
@@ -100,7 +100,7 @@ Detección de WCF consta de un conjunto de tipos que proporcionan un modelo de p
  La clase <xref:System.ServiceModel.Discovery.DiscoveryVersion> representa la versión del protocolo de detección que se debe utilizar.  
   
 ## <a name="endpointdiscoverybehavior"></a>EndpointDiscoveryBehavior  
- La clase <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> se usa para controlar la detectabilidad de un extremo, especificar las extensiones, los nombres de tipo de contrato adicionales. y los ámbitos asociados a ese extremo. Este comportamiento se agrega a un extremo de la aplicación para configurar su <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>. Cuando <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> se agrega al host de servicio, todos los extremos de la aplicación hospedados por el host del servicio se vuelven reconocibles de forma predeterminada. El desarrollador puede desactivar la detección para un extremo concreto estableciendo la propiedad <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> en `false`.  
+ La clase <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> se usa para controlar la detectabilidad de un punto de conexión, especificar las extensiones, los nombres de tipo de contrato adicionales. y los ámbitos asociados a ese punto de conexión. Este comportamiento se agrega a un punto de conexión de la aplicación para configurar su <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>. Cuando <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> se agrega al host de servicio, todos los puntos de conexión de la aplicación hospedados por el host del servicio se vuelven reconocibles de forma predeterminada. El desarrollador puede desactivar la detección para un extremo concreto estableciendo la propiedad <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> en `false`.  
   
 ## <a name="endpointdiscoverymetadata"></a>EndpointDiscoveryMetadata  
  La clase <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> proporciona una representación independiente de la versión de un extremo publicado por el servicio. Contiene las direcciones de los extremos, los URI de escucha, los nombres del tipo de contrato, los ámbitos, la versión de metadatos y las extensiones especificados por el desarrollador del servicio. La clase <xref:System.ServiceModel.Discovery.FindCriteria> enviada por el cliente durante una operación `Probe` se compara con <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>. Si los criterios coinciden, <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> se devuelve al cliente. La dirección del extremo en <xref:System.ServiceModel.Discovery.ResolveCriteria> se compara con la dirección del extremo de <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>. Si los criterios coinciden, <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> se devuelve al cliente.  
@@ -112,19 +112,19 @@ Detección de WCF consta de un conjunto de tipos que proporcionan un modelo de p
  Se crean instancias de la clase <xref:System.ServiceModel.Discovery.FindRequestContext> mediante el servicio de detección en función del mensaje `Probe` que recibe cuando un cliente inicia una operación `Find`. Contiene una instancia de <xref:System.ServiceModel.Discovery.FindCriteria> especificada por el cliente.  
   
 ## <a name="findresponse"></a>FindResponse  
- La clase <xref:System.ServiceModel.Discovery.FindResponse> se devuelve al realizador de la llamada de <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> con las respuestas de la operación `Find`. También se encuentra en <xref:System.ServiceModel.Discovery.FindCompletedEventArgs>. Contiene una recopilación de <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>, que es la recopilación de extremos detectados y un diccionario de <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> y <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence>.  
+ La clase <xref:System.ServiceModel.Discovery.FindResponse> se devuelve al realizador de la llamada de <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> con las respuestas de la operación `Find`. También se encuentra en <xref:System.ServiceModel.Discovery.FindCompletedEventArgs>. Contiene una colección de <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>, que es la colección de puntos de conexión detectados y un diccionario de <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> y <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence>.  
   
 ## <a name="resolvecriteria"></a>ResolveCriteria  
- La clase <xref:System.ServiceModel.Discovery.ResolveCriteria> es una clase independiente de la versión usada para especificar los criterios empleados al resolver un servicio conocido. Contiene la dirección del extremo del servicio conocido. El desarrollador puede proporcionar los criterios de finalización para la operación de resolución especificando <xref:System.ServiceModel.Discovery.ResolveCriteria.Duration%2A>, que especifica cuánto tiempo espera el cliente para recibir respuestas.  
+ La clase <xref:System.ServiceModel.Discovery.ResolveCriteria> es una clase independiente de la versión usada para especificar los criterios empleados al resolver un servicio conocido. Contiene la dirección del punto de conexión del servicio conocido. El desarrollador puede proporcionar los criterios de finalización para la operación de resolución especificando <xref:System.ServiceModel.Discovery.ResolveCriteria.Duration%2A>, que especifica cuánto tiempo espera el cliente para recibir respuestas.  
   
 ## <a name="resolveresponse"></a>ResolveResponse  
- La clase <xref:System.ServiceModel.Discovery.ResolveResponse> se devuelve al realizador de la llamada del método <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> con la respuesta de la operación `Resolve`. También se encuentra en <xref:System.ServiceModel.Discovery.ResolveCompletedEventArgs>. Contiene una instancia de <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>, que son los extremos detectados y una instancia de <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence>.  
+ La clase <xref:System.ServiceModel.Discovery.ResolveResponse> se devuelve al realizador de la llamada del método <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> con la respuesta de la operación `Resolve`. También se encuentra en <xref:System.ServiceModel.Discovery.ResolveCompletedEventArgs>. Contiene una instancia de <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>, que son los puntos de conexión detectados y una instancia de <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence>.  
   
 ## <a name="servicediscoverybehavior"></a>ServiceDiscoveryBehavior  
- La clase <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> permite al desarrollador agregar la característica de detección a un servicio. Agregue este comportamiento a <xref:System.ServiceModel.ServiceHost>. La clase <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> itera en los extremos de la aplicación agregados al host de servicio y crea una recopilación de <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> de los extremos reconocibles. Todos los extremos son reconocibles de forma predeterminada. La detectabilidad de un extremo determinado se puede controlar agregando <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> a ese extremo del particular. Si los extremos de anuncio se agregan a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>, el anuncio de todos los extremos reconocibles se envía a cada uno de los extremos de anuncio cuando el host de servicio se abre o se cierra.  
+ La clase <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> permite al desarrollador agregar la característica de detección a un servicio. Agregue este comportamiento a <xref:System.ServiceModel.ServiceHost>. La clase <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> itera en los extremos de la aplicación agregados al host de servicio y crea una recopilación de <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> de los extremos reconocibles. Todos los puntos de conexión son reconocibles de forma predeterminada. La detectabilidad de un extremo determinado se puede controlar agregando <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> a ese extremo del particular. Si los extremos de anuncio se agregan a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>, el anuncio de todos los extremos reconocibles se envía a cada uno de los extremos de anuncio cuando el host de servicio se abre o se cierra.  
   
 ## <a name="udpannouncementendpoint"></a>UdpAnnouncementEndpoint  
- La clase <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> es un extremo de anuncio estándar que se pre-configura para el anuncio en un enlace de multidifusión de UDP. De forma predeterminada, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> se establece para utilizar la versión WSApril2005 de WS_Discovery.  
+ La clase <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> es un punto de conexión de anuncio estándar que se pre-configura para el anuncio en un enlace de multidifusión de UDP. De forma predeterminada, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> se establece para utilizar la versión WSApril2005 de WS_Discovery.  
   
 ## <a name="udpdiscoveryendpoint"></a>UdpDiscoveryEndpoint  
- La clase <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> es un extremo de detección estándar que se pre-configura para la detección en un enlace de multidifusión de UDP. De forma predeterminada, <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> se establece para usar la versión WSDiscovery11 de WS-Discovery y el modo <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Adhoc?displayProperty=nameWithType>.
+ La clase <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> es un punto de conexión de detección estándar que se pre-configura para la detección en un enlace de multidifusión de UDP. De forma predeterminada, <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> se establece para usar la versión WSDiscovery11 de WS-Discovery y el modo <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Adhoc?displayProperty=nameWithType>.

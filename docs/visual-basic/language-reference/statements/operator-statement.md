@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
 ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784064"
 ---
 # <a name="operator-statement"></a>Operator Statement
 Declara el símbolo del operador, los operandos y el código que definen un procedimiento de operador en una clase o estructura.  
@@ -114,28 +114,28 @@ End Operator
 ## <a name="matched-pairs"></a>Pares coincidentes  
  Debe definir ciertos operadores como pares coincidentes. Si define un operador de este tipo, debe definir el otro. Los pares correspondientes son los siguientes:  
   
--   `=` y `<>`  
+- `=` y `<>`  
   
--   `>` y `<`  
+- `>` y `<`  
   
--   `>=` y `<=`  
+- `>=` y `<=`  
   
--   `IsTrue` y `IsFalse`  
+- `IsTrue` y `IsFalse`  
   
 ## <a name="data-type-restrictions"></a>Restricciones de tipo de datos  
  Cada operador que define debe implicar la clase o estructura en el que se definen. Esto significa que la clase o estructura debe aparecer como el tipo de datos de las siguientes acciones:  
   
--   El operando de un operador unario.  
+- El operando de un operador unario.  
   
--   Al menos uno de los operandos de un operador binario.  
+- Al menos uno de los operandos de un operador binario.  
   
--   El operando o el tipo de valor devuelto de un operador de conversión.  
+- El operando o el tipo de valor devuelto de un operador de conversión.  
   
  Ciertos operadores tienen datos adicionales que escriba las restricciones, como se indica a continuación:  
   
--   Si define la `IsTrue` y `IsFalse` operadores, deben devolver el `Boolean` tipo.  
+- Si define la `IsTrue` y `IsFalse` operadores, deben devolver el `Boolean` tipo.  
   
--   Si define la `<<` y `>>` operadores, ambos deben especificar el `Integer` tipo para el `operandtype` de `operand2`.  
+- Si define la `<<` y `>>` operadores, ambos deben especificar el `Integer` tipo para el `operandtype` de `operand2`.  
   
  El tipo de valor devuelto no tiene que corresponder con el tipo de uno de los operandos. Por ejemplo, un operador de comparación como `=` o `<>` puede devolver `Boolean` incluso si ninguno de los operandos es `Boolean`.  
   
@@ -144,11 +144,11 @@ End Operator
   
  No puede definir la `AndAlso` operador directamente con un `Operator` instrucción. Sin embargo, puede usar `AndAlso` si ha cumplido las condiciones siguientes:  
   
--   Ha definido `And` en los mismos tipos de operando que se va a utilizar para `AndAlso`.  
+- Ha definido `And` en los mismos tipos de operando que se va a utilizar para `AndAlso`.  
   
--   La definición de `And` devuelve el mismo tipo que la clase o estructura en el que ha definido.  
+- La definición de `And` devuelve el mismo tipo que la clase o estructura en el que ha definido.  
   
--   Ha definido el `IsFalse` operador en la clase o estructura en el que ha definido `And`.  
+- Ha definido el `IsFalse` operador en la clase o estructura en el que ha definido `And`.  
   
  De forma similar, puede usar `OrElse` si ha definido `Or` en los operandos de la mismos, se ha definido con el tipo de valor devuelto de la clase o estructura y `IsTrue` en la clase o estructura.  
   
@@ -157,11 +157,11 @@ End Operator
   
  Si declara un procedimiento de conversión `Widening`, el código de procedimiento no debe generar errores. Esto significa lo siguiente:  
   
--   Siempre debe devolver un valor válido de tipo `type`.  
+- Siempre debe devolver un valor válido de tipo `type`.  
   
--   Deben controlar todas las posibles excepciones y otras condiciones de error.  
+- Deben controlar todas las posibles excepciones y otras condiciones de error.  
   
--   Deben controlar los errores devueltos desde cualquier procedimiento al que llama.  
+- Deben controlar los errores devueltos desde cualquier procedimiento al que llama.  
   
  Si hay alguna posibilidad de que un procedimiento de conversión podría no realizarse correctamente o que TI puede provocar una excepción no controlada, debe declararla como `Narrowing`.  
   

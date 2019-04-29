@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
 ms.openlocfilehash: 7b64302d801a08f976de0ec969983c821f7a8471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796999"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean (Tipo de datos, Visual Basic)
 Contiene valores que solo pueden ser `True` o `False`. Las palabras clave `True` y `False` corresponden a los dos Estados de `Boolean` variables.  
@@ -36,11 +36,11 @@ Contiene valores que solo pueden ser `True` o `False`. Las palabras clave `True`
   
 ## <a name="programming-tips"></a>Sugerencias de programación  
   
--   **Números negativos.** `Boolean` no es un tipo numérico y no puede representar un valor negativo. En cualquier caso, no debe utilizar `Boolean` para contener valores numéricos.  
+- **Números negativos.** `Boolean` no es un tipo numérico y no puede representar un valor negativo. En cualquier caso, no debe utilizar `Boolean` para contener valores numéricos.  
   
--   **Caracteres de tipo.** `Boolean` no tiene ningún carácter de tipo literal o un carácter de tipo identificador.  
+- **Caracteres de tipo.** `Boolean` no tiene ningún carácter de tipo literal o un carácter de tipo identificador.  
   
--   **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Boolean?displayProperty=nameWithType>.  
+- **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Boolean?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, `runningVB` es un `Boolean` variable, que almacena un sí/no.  

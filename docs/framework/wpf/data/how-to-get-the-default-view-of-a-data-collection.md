@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
 ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931533"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Procedimiento Obtener la vista predeterminada de una colección de datos
 Las vistas permiten la misma colección de datos a verse de maneras diferentes, dependiendo de la ordenación, filtrado o criterio de agrupación. Cada colección tiene una vista compartida de forma predeterminada, que se usa como origen de enlace real cuando un enlace especifica una colección como origen. En este ejemplo se muestra cómo obtener la vista predeterminada de una colección.  

@@ -3,11 +3,11 @@ title: Comportamiento de auditoría de servicio
 ms.date: 03/30/2017
 ms.assetid: 59bf0cda-e496-4418-a3a1-2f0f6e85f8ce
 ms.openlocfilehash: 1719db9749336d584627280aba3412557b164356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787457"
 ---
 # <a name="service-auditing-behavior"></a>Comportamiento de auditoría de servicio
 Este ejemplo muestra cómo utilizar <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> para habilitar la auditoría de eventos de seguridad durante las operaciones de servicio. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). El servicio y el cliente se han configurado mediante el [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). El `mode` atributo de la [ \<seguridad >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) se ha establecido en `Message` y `clientCredentialType` se ha establecido en `Windows`. En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  

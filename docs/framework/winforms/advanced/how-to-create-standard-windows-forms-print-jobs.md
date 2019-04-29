@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
 ms.openlocfilehash: 816da93218e20f73f16c14769ed1a549dd3d8eb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937662"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>Procedimiento para crear trabajos de impresión estándar de formularios Windows Forms
 La base de la impresión en Windows Forms es la <xref:System.Drawing.Printing.PrintDocument> componente, más concretamente, el <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos. Al escribir código para controlar la <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos, puede especificar lo que desea imprimir y cómo imprimirlo.  

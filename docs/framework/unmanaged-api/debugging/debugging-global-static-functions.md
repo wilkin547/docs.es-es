@@ -9,11 +9,11 @@ ms.assetid: efc64414-77c3-48d0-881a-8594ed416aad
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2403d736d031aab52525fc12b5071e764a8bde1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698530"
 ---
 # <a name="debugging-global-static-functions"></a>Funciones estáticas globales para la depuración
 Esta sección describe las funciones estáticas globales no administradas que utiliza la API de depuración.  

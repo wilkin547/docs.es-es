@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
 ms.openlocfilehash: 149bbac6d301a9c2f166d05698e3780171126cb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938650"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>Literal de comentario XML (Visual Basic)
 Un literal que representa un <xref:System.Xml.Linq.XComment> objeto.  
@@ -39,9 +39,9 @@ Un literal que representa un <xref:System.Xml.Linq.XComment> objeto.
 ## <a name="remarks"></a>Comentarios  
  Los literales de comentario XML no contienen el contenido del documento; que contienen información sobre el documento. La sección de comentarios XML finaliza con la secuencia "-->". Esto implica los siguientes puntos:  
   
--   No se puede usar una expresión incrustada en un literal de comentario XML porque los delimitadores de expresión incrustada son contenido de comentario XML válido.  
+- No se puede usar una expresión incrustada en un literal de comentario XML porque los delimitadores de expresión incrustada son contenido de comentario XML válido.  
   
--   Las secciones de comentario XML no se pueden anidar, porque `content` no puede contener el valor "-->".  
+- Las secciones de comentario XML no se pueden anidar, porque `content` no puede contener el valor "-->".  
   
  Puede asignar un literal de comentario XML a una variable o incluirlo en un literal de elemento XML.  
   

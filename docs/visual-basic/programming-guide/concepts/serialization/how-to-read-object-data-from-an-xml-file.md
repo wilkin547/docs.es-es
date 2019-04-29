@@ -3,11 +3,11 @@ title: Procedimiento Leer datos de objetos de un archivo XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
 ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907353"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Procedimiento Leer datos de objetos de un archivo XML (Visual Basic)
 En este ejemplo se leen los datos de objetos que se han escrito anteriormente en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -39,11 +39,11 @@ End Sub
 ## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  
   
--   La clase que se está serializando no tiene un constructor público sin parámetros.  
+- La clase que se está serializando no tiene un constructor público sin parámetros.  
   
--   Los datos del archivo no representan los datos de la clase que se va a deserializar.  
+- Los datos del archivo no representan los datos de la clase que se va a deserializar.  
   
--   El archivo no existe (<xref:System.IO.IOException>).  
+- El archivo no existe (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Compruebe siempre las entradas y nunca deserialice datos de un origen que no sea de confianza. El objeto que se ha vuelto a crear se ejecuta en un equipo local con los permisos del código que lo ha deserializado. Compruebe todas las entradas antes de utilizar los datos en la aplicación.  

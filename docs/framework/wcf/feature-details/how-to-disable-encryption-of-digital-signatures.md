@@ -3,11 +3,11 @@ title: Procedimiento para deshabilitar el cifrado de firmas digitales
 ms.date: 03/30/2017
 ms.assetid: fd174313-ad81-4dca-898a-016ccaff8187
 ms.openlocfilehash: e2fd2a058e636ebf398f9d0c71a93788ccd7dfa0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773196"
 ---
 # <a name="how-to-disable-encryption-of-digital-signatures"></a>Procedimiento para deshabilitar el cifrado de firmas digitales
 De forma predeterminada, un mensaje se firma y la firma se cifra digitalmente. Esto se controla mediante la creación de un enlace personalizado con una instancia de <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> o el <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, y estableciendo la propiedad `MessageProtectionOrder` de cualquier clase en un valor de enumeración <xref:System.ServiceModel.Security.MessageProtectionOrder>. De manera predeterminada, es <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Este proceso utiliza hasta un 30 por ciento más de tiempo que si, simplemente, se firma y cifra el mensaje en base a su tamaño total (cuanto más pequeño es el mensaje, mayor es el impacto en el rendimiento). No obstante, deshabilitar el cifrado de la firma puede permitir a un atacante suponer el contenido del mensaje. Esto es posible porque el elemento de firma contiene el código hash del texto sin formato de cada parte del mensaje firmada. Por ejemplo, aunque el cuerpo del mensaje se cifra de forma predeterminada, la firma no cifrada contiene el código hash del cuerpo del mensaje antes del cifrado. Si el conjunto de valores posibles para la parte firmada y cifrada es pequeño, un atacante podría ser capaz de deducir el contenido examinando el valor hash. El cifrado de la firma mitiga este vector de ataque.  

@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
 ms.openlocfilehash: 47e93ee17f160ce5cd701fd0a12ec16b3997ce9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791864"
 ---
 # <a name="property-procedures-visual-basic"></a>Procedimientos de propiedad (Visual Basic)
 Un procedimiento de propiedad es una serie de instrucciones de Visual Basic que manipulan una propiedad personalizada en un módulo, clase o estructura. Procedimientos de propiedad son también se denomina *descriptores de acceso de propiedad*.  
   
  Visual Basic proporciona para los procedimientos de propiedad siguientes:  
   
--   Un `Get` procedimiento devuelve el valor de una propiedad. Se llama cuando tiene acceso a la propiedad en una expresión.  
+- Un `Get` procedimiento devuelve el valor de una propiedad. Se llama cuando tiene acceso a la propiedad en una expresión.  
   
--   Un `Set` procedimiento establece una propiedad en un valor, incluida una referencia de objeto. Se llama al asignar un valor a la propiedad.  
+- Un `Set` procedimiento establece una propiedad en un valor, incluida una referencia de objeto. Se llama al asignar un valor a la propiedad.  
   
  Normalmente definen procedimientos de propiedad en pares, mediante el `Get` y `Set` instrucciones, pero puede definir cualquier procedimiento por sí solo si la propiedad es de solo lectura ([Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)) o de sólo escritura ([establecido Instrucción](../../../../visual-basic/language-reference/statements/set-statement.md)).  
   

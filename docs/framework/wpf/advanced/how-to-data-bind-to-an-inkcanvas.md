@@ -1,18 +1,18 @@
 ---
-title: Filtrar Enlazar datos a un InkCanvas
+title: Procedimiento Enlazar datos a InkCanvas
 ms.date: 03/30/2017
 helpviewer_keywords:
 - InkCanvas [WPF], binding data to
 - binding data [WPF], to InkCanvas
 ms.assetid: 8d6b4d9e-ea7f-4412-ba83-3feccec5a515
 ms.openlocfilehash: 5d3fc0ed7b6176d7bc68bf20af42c311b5563908
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776472"
 ---
-# <a name="how-to-data-bind-to-an-inkcanvas"></a>Filtrar Enlazar datos a un InkCanvas
+# <a name="how-to-data-bind-to-an-inkcanvas"></a>Procedimiento Enlazar datos a InkCanvas
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo enlazar la <xref:System.Windows.Controls.InkCanvas.Strokes%2A> propiedad de un <xref:System.Windows.Controls.InkCanvas> a otro <xref:System.Windows.Controls.InkCanvas>.  
   

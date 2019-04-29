@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear objetos GenericPrincipal y GenericIdentity
+title: Procedimiento para crear objetos GenericPrincipal y GenericIdentity
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,13 +14,13 @@ ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b47f4c093acb094188cbd5a8a0a0026c67eb3f2c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795166"
 ---
-# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Procedimiento Crear objetos GenericPrincipal y GenericIdentity
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Procedimiento para crear objetos GenericPrincipal y GenericIdentity
 
 Puede usar el <xref:System.Security.Principal.GenericIdentity> clase junto con el <xref:System.Security.Principal.GenericPrincipal> clase para crear un esquema de autorización que sea independiente de un dominio de Windows.
 

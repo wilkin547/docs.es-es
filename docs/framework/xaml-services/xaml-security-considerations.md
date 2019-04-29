@@ -9,8 +9,8 @@ ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938793"
 ---
 # <a name="xaml-security-considerations"></a>Consideraciones de seguridad sobre XAML
 Este tema describe procedimientos recomendados de seguridad en las aplicaciones cuando se usa XAML y API de servicios XAML de .NET Framework.  
@@ -34,9 +34,9 @@ Este tema describe procedimientos recomendados de seguridad en las aplicaciones 
 ## <a name="xaml-namespaces-and-assembly-trust"></a>Los espacios de nombres XAML y confianza del ensamblado  
  La sintaxis básica de no completo y la definición de cómo XAML interpreta una asignación de espacio de nombres XAML personalizada a un ensamblado no distingue entre un ensamblado de confianza y que se cargan en el dominio de aplicación. Por lo tanto, es técnicamente posible para un ensamblado de confianza suplantar la identidad de asignación de espacio de nombres XAML prevista del ensamblado de confianza y capturar información de propiedad y objeto declarado de un origen XAML. Si tiene requisitos de seguridad para evitar esta situación, se debe realizar la asignación de espacio de nombres XAML prevista con una de las técnicas siguientes:  
   
--   Utilice un nombre completo del ensamblado con nombre seguro en todas las asignaciones de espacio de nombres XAML realizadas por XAML la aplicación.  
+- Utilice un nombre completo del ensamblado con nombre seguro en todas las asignaciones de espacio de nombres XAML realizadas por XAML la aplicación.  
   
--   Restringir la asignación del ensamblado a un conjunto fijo de ensamblados de referencia, mediante la creación de un determinado <xref:System.Xaml.XamlSchemaContext> para el XAML los lectores XAML y los escritores de objetos. Vea <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
+- Restringir la asignación del ensamblado a un conjunto fijo de ensamblados de referencia, mediante la creación de un determinado <xref:System.Xaml.XamlSchemaContext> para el XAML los lectores XAML y los escritores de objetos. Vea <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
   
 ## <a name="xaml-type-mapping-and-type-system-access"></a>Asignación de tipos XAML y el acceso al sistema de tipo  
  XAML es compatible con su propio sistema de tipos, que en muchos sentidos es igual a cómo CLR implementa el sistema de tipos CLR básico. Sin embargo, ciertos aspectos de reconocimiento de tipo donde se están tomando decisiones de confianza sobre un tipo en función de su información de tipo, debe diferir la información de tipo en lo tipos de respaldo de CLR. Esto es porque algunas de las capacidades de informes específicas del sistema de tipos XAML se dejan abiertos como los métodos virtuales y por lo tanto, no son totalmente bajo el control de las implementaciones de servicios XAML de .NET Framework originales. Estos puntos de extensibilidad existen porque el sistema de tipos XAML es extensible, para que coincida con la extensibilidad de XAML en sí mismo y sus posibles estrategias alternativas de asignación de tipos frente a la implementación de respaldo de CLR predeterminada y el contexto de esquema XAML predeterminado. Para obtener más información, consulte las notas específicas en varias de las propiedades de <xref:System.Xaml.XamlType> y <xref:System.Xaml.XamlMember>.  

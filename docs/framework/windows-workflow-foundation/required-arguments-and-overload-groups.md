@@ -3,11 +3,11 @@ title: Argumentos necesarios y grupos de sobrecarga
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
 ms.openlocfilehash: b5006a201ce5db68e925bd5764fadde308bbccb4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937792"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Argumentos necesarios y grupos de sobrecarga
 Se pueden configurar las actividades de manera que sea necesario enlazar algunos argumentos para que la actividad pueda ejecutarse. El atributo `RequiredArgument` se usa para indicar que se necesitan algunos argumentos en una actividad mientras que el atributo `OverloadGroup` se usa para agrupar categorías de argumentos necesarios. Al usar los atributos, los autores de actividades pueden proporcionar configuraciones simples o complejas de validación de actividades.  
@@ -144,19 +144,19 @@ Public class DbUpdate: AsyncCodeActivity
   
  Al definir un grupo de sobrecargas:  
   
--   Un grupo de sobrecargas no puede ser un subconjunto o un conjunto equivalente de otro grupo de sobrecargas.  
+- Un grupo de sobrecargas no puede ser un subconjunto o un conjunto equivalente de otro grupo de sobrecargas.  
   
     > [!NOTE]
     >  Hay una excepción para esta regla. Si un grupo de sobrecargas es un subconjunto de otro grupo de sobrecargas y el subconjunto solo contiene argumentos donde `RequiredArgument` es `false`, el grupo de sobrecargas es válido.  
   
--   Los grupos de sobrecargas se pueden superponer pero es un error si la intersección de los grupos contiene todos los argumentos necesarios de uno o ambos grupos de sobrecargas. En el ejemplo anterior los grupos de sobrecargas `G2` y `G3` se superponían, pero como la intersección no contenía todos los argumentos de uno o ambos grupos, era válido.  
+- Los grupos de sobrecargas se pueden superponer pero es un error si la intersección de los grupos contiene todos los argumentos necesarios de uno o ambos grupos de sobrecargas. En el ejemplo anterior los grupos de sobrecargas `G2` y `G3` se superponían, pero como la intersección no contenía todos los argumentos de uno o ambos grupos, era válido.  
   
  Al enlazar argumentos en un grupo de sobrecargas:  
   
--   Se considera que un grupo de sobrecargas está enlazado si se enlazan todos los argumentos `RequiredArgument` en el grupo.  
+- Se considera que un grupo de sobrecargas está enlazado si se enlazan todos los argumentos `RequiredArgument` en el grupo.  
   
--   Si un grupo no tiene ningún argumento `RequiredArgument` pero tiene enlazado al menos uno, se considera que el grupo está enlazado.  
+- Si un grupo no tiene ningún argumento `RequiredArgument` pero tiene enlazado al menos uno, se considera que el grupo está enlazado.  
   
--   Es un error de validación si no se enlaza ningún grupo de sobrecargas a menos que un grupo de sobrecargas no tenga ningún argumento `RequiredArgument`.  
+- Es un error de validación si no se enlaza ningún grupo de sobrecargas a menos que un grupo de sobrecargas no tenga ningún argumento `RequiredArgument`.  
   
--   Es un error tener enlazado más de un grupo de sobrecargas; es decir, se enlazan todos los argumentos necesarios en un grupo de sobrecargas y también se enlaza cualquier argumento en otro grupo de sobrecargas.
+- Es un error tener enlazado más de un grupo de sobrecargas; es decir, se enlazan todos los argumentos necesarios en un grupo de sobrecargas y también se enlaza cualquier argumento en otro grupo de sobrecargas.

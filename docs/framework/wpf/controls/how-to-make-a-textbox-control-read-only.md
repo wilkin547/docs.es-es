@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TextBox control read-only
 ms.assetid: e707ec59-8b22-473e-b77c-3060a237517a
 ms.openlocfilehash: 7f24458eb98bd669d59f15c49d1d9e3beb6833b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770947"
 ---
 # <a name="how-to-make-a-textbox-control-read-only"></a>Procedimiento Hacer que un control TextBox sea de solo lectura
 En este ejemplo se muestra cómo configurar un <xref:System.Windows.Controls.TextBox> control no permitir la entrada del usuario o la modificación.  

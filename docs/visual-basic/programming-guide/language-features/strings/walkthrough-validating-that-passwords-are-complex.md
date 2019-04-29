@@ -5,11 +5,11 @@ helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
 ms.openlocfilehash: 829d6485acdca22fbf10160c734e5c7f931dd855
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938260"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Tutorial: Validar la complejidad de contraseñas (Visual Basic)
 Este método comprueba si hay algunas características de contraseña segura y actualiza un parámetro de cadena con información sobre las comprobaciones que la contraseña se produce un error.  
@@ -28,20 +28,20 @@ Este método comprueba si hay algunas características de contraseña segura y a
   
  Para este ejemplo se necesita:  
   
--   Acceso a los miembros del espacio de nombres <xref:System.Text.RegularExpressions>. Agregue una instrucción `Imports` si no hay nombres de miembros completos en el código. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Acceso a los miembros del espacio de nombres <xref:System.Text.RegularExpressions>. Agregue una instrucción `Imports` si no hay nombres de miembros completos en el código. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Seguridad  
  Si te estás cambiando la contraseña a través de una red, deberá usar un método seguro de transferencia de datos. Para obtener más información, consulte [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
  Puede mejorar la precisión de la `ValidatePassword` función agregando comprobaciones de complejidad adicional:  
   
--   Compare la contraseña y sus subcadenas contra un diccionario definido por la aplicación, identificador de usuario y el nombre del usuario. Además, tratar caracteres visualmente similares como equivalentes cuando se realizan las comparaciones. Por ejemplo, se tratan las letras "l" y "e" como equivalentes a los números "1" y "3".  
+- Compare la contraseña y sus subcadenas contra un diccionario definido por la aplicación, identificador de usuario y el nombre del usuario. Además, tratar caracteres visualmente similares como equivalentes cuando se realizan las comparaciones. Por ejemplo, se tratan las letras "l" y "e" como equivalentes a los números "1" y "3".  
   
--   Si hay un solo carácter en mayúscula, asegúrese de que no es el primer carácter de la contraseña.  
+- Si hay un solo carácter en mayúscula, asegúrese de que no es el primer carácter de la contraseña.  
   
--   Asegúrese de que los dos últimos caracteres de la contraseña son caracteres de letras.  
+- Asegúrese de que los dos últimos caracteres de la contraseña son caracteres de letras.  
   
--   No se admiten contraseñas en el que se especifican todos los símbolos de la fila superior del teclado.  
+- No se admiten contraseñas en el que se especifican todos los símbolos de la fila superior del teclado.  
   
 ## <a name="see-also"></a>Vea también
 

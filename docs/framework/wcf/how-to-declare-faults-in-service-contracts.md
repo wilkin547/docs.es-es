@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
 ms.openlocfilehash: 0e173f71201d5f98a04d2ad922469e4ff6666681
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929290"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Procedimiento para declarar errores en contratos de servicios
 En código administrado, las excepciones se inician al producirse condiciones de error. Sin embargo, en las aplicaciones de Windows Communication Foundation (WCF), los contratos de servicio especifican qué información de error se devuelve a los clientes mediante la declaración de los errores de SOAP en el contrato de servicio. Para obtener información general de la relación entre las excepciones y errores, vea [especificar y controlar errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

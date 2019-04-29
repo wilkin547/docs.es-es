@@ -9,13 +9,13 @@ helpviewer_keywords:
 - notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
 ms.openlocfilehash: dc3fffb88ce59ceb908d6febd2f078820513b641
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942146"
 ---
-# <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>Filtrar Recibir una notificación cuando cambia el estado de un reloj
+# <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>Procedimiento Recibir una notificación cuando cambia el estado de un reloj
 Un reloj <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> evento tiene lugar cuando su <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> deja de ser válido, por ejemplo, cuando se inicia o detiene el reloj. Puede registrarse para este evento con directamente mediante un <xref:System.Windows.Media.Animation.Clock>, o bien puede registrar con un <xref:System.Windows.Media.Animation.Timeline>.  
   
  En el ejemplo siguiente, un <xref:System.Windows.Media.Animation.Storyboard> y dos <xref:System.Windows.Media.Animation.DoubleAnimation> objetos se utilizan para animar el ancho de dos rectángulos. El <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> eventos se usan para realizar escuchas de los cambios de estado de reloj.  

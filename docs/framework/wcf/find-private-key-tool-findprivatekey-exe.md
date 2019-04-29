@@ -3,18 +3,18 @@ title: Herramienta de búsqueda de clave privada (FindPrivateKey.exe)
 ms.date: 09/11/2017
 ms.assetid: b8846a95-3fcc-4e8c-b9c0-128d975a6307
 ms.openlocfilehash: 8f156cbb2f4fad8d51e356bd4dee2d72d9397ffb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929589"
 ---
 # <a name="find-private-key-tool-findprivatekeyexe"></a>Herramienta de búsqueda de clave privada (FindPrivateKey.exe)
 
-Esta herramienta de línea de comandos se puede utilizar para recuperar una clave privada de un almacén de certificados. Por ejemplo, *FindPrivateKey.exe* puede usarse para buscar la ubicación y el nombre del archivo de clave privada asociado con un certificado X.509 concreto en el almacén de certificados.
+Esta herramienta de línea de comandos se puede utilizar para recuperar una clave privada de un almacén de certificados. Por ejemplo, *FindPrivateKey.exe* puede usarse para buscar la ubicación y el nombre del archivo de clave privado asociado con un certificado X.509 concreto en el almacén de certificados.
 
 > [!IMPORTANT]
-> La herramienta FindPrivateKey se entrega como ejemplo de WCF. Para obtener más información sobre dónde encontrar el ejemplo y cómo compilarlo, vea [FindPrivateKey](./samples/findprivatekey.md).
+> La herramienta FindPrivateKey se entrega como ejemplo de WCF. Para obtener más información sobre dónde encontrar el ejemplo y cómo crearla, consulte [FindPrivateKey](./samples/findprivatekey.md).
 
 ## <a name="syntax"></a>Sintaxis
 

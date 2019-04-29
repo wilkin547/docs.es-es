@@ -3,11 +3,11 @@ title: Modelar el comportamiento de la cancelación en los flujos de trabajo
 ms.date: 03/30/2017
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
 ms.openlocfilehash: 8bbd746d40e9114eacd5a752481d5316c3f30e57
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934711"
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Modelar el comportamiento de la cancelación en los flujos de trabajo
 Las actividades se pueden cancelar dentro de un flujo de trabajo, por ejemplo, mediante una actividad <xref:System.Activities.Statements.Parallel> que cancele las bifurcaciones incompletas cuando su propiedad <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> se evalúe como `true` o desde fuera del flujo de trabajo, si el host llama al método <xref:System.Activities.WorkflowApplication.Cancel%2A>. Para proporcionar un control de la cancelación, los autores del flujo de trabajo pueden utilizar la actividad <xref:System.Activities.Statements.CancellationScope>, la actividad <xref:System.Activities.Statements.CompensableActivity> o crear actividades personalizadas que proporcionen lógica de cancelación. En este tema se proporciona información general sobre la cancelación en flujos de trabajo.  

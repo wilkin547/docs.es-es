@@ -10,11 +10,11 @@ helpviewer_keywords:
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
 ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783830"
 ---
 # <a name="synclock-statement"></a>SyncLock (Instrucción)
 Adquiere un bloqueo exclusivo para un bloque de instrucciones antes de ejecutar el bloque.  
@@ -46,25 +46,25 @@ End SyncLock
   
 ## <a name="rules"></a>Reglas  
   
--   La bifurcación. No puede bifurcarse en un `SyncLock` bloquear desde fuera del bloque.  
+- La bifurcación. No puede bifurcarse en un `SyncLock` bloquear desde fuera del bloque.  
   
--   Valor de objeto de bloqueo. El valor de `lockobject` no puede ser `Nothing`. Debe crear el objeto de bloqueo antes de usarlo en un `SyncLock` instrucción.  
+- Valor de objeto de bloqueo. El valor de `lockobject` no puede ser `Nothing`. Debe crear el objeto de bloqueo antes de usarlo en un `SyncLock` instrucción.  
   
      No se puede cambiar el valor de `lockobject` mientras se ejecuta un `SyncLock` bloque. El mecanismo requiere que el objeto de bloqueo permanecen sin cambios.  
   
--   No puede usar el [Await](../../../visual-basic/language-reference/operators/await-operator.md) operador en un `SyncLock` bloque.  
+- No puede usar el [Await](../../../visual-basic/language-reference/operators/await-operator.md) operador en un `SyncLock` bloque.  
   
 ## <a name="behavior"></a>Comportamiento  
   
--   Mecanismo. Cuando un subproceso llega la `SyncLock` instrucción, se evalúa como el `lockobject` expresión y suspende la ejecución hasta que adquiere un bloqueo exclusivo en el objeto devuelto por la expresión. Cuando se alcance otro subproceso el `SyncLock` instrucción, no podrá adquirir un bloqueo hasta que se ejecuta el primer subproceso el `End SyncLock` instrucción.  
+- Mecanismo. Cuando un subproceso llega la `SyncLock` instrucción, se evalúa como el `lockobject` expresión y suspende la ejecución hasta que adquiere un bloqueo exclusivo en el objeto devuelto por la expresión. Cuando se alcance otro subproceso el `SyncLock` instrucción, no podrá adquirir un bloqueo hasta que se ejecuta el primer subproceso el `End SyncLock` instrucción.  
   
--   Datos protegidos. Si `lockobject` es un `Shared` variable, el bloqueo exclusivo impide que un subproceso en cualquier instancia de la clase ejecutando el `SyncLock` bloquear mientras está ejecutando ningún otro subproceso. Esto protege los datos que se comparten entre todas las instancias.  
+- Datos protegidos. Si `lockobject` es un `Shared` variable, el bloqueo exclusivo impide que un subproceso en cualquier instancia de la clase ejecutando el `SyncLock` bloquear mientras está ejecutando ningún otro subproceso. Esto protege los datos que se comparten entre todas las instancias.  
   
      Si `lockobject` es una variable de instancia (no `Shared`), el bloqueo impide que un subproceso que se ejecuta en la instancia actual de ejecutar el `SyncLock` bloque al mismo tiempo que otro subproceso en la misma instancia. Esto protege los datos mantenidos por la instancia individual.  
   
--   Adquisición y liberación. Un `SyncLock` bloque se comporta como un `Try...Finally` construcción en el que el `Try` bloque adquiere un bloqueo exclusivo en `lockobject` y `Finally` bloqueo lo libere. Por este motivo, la `SyncLock` bloque garantiza la liberación del bloqueo, independientemente de cómo salga el bloque. Esto es cierto incluso si se produce una excepción no controlada.  
+- Adquisición y liberación. Un `SyncLock` bloque se comporta como un `Try...Finally` construcción en el que el `Try` bloque adquiere un bloqueo exclusivo en `lockobject` y `Finally` bloqueo lo libere. Por este motivo, la `SyncLock` bloque garantiza la liberación del bloqueo, independientemente de cómo salga el bloque. Esto es cierto incluso si se produce una excepción no controlada.  
   
--   Llamadas de Framework. El `SyncLock` bloque adquiere y libera el bloqueo exclusivo mediante una llamada a la `Enter` y `Exit` métodos de la `Monitor` clase en el <xref:System.Threading> espacio de nombres.  
+- Llamadas de Framework. El `SyncLock` bloque adquiere y libera el bloqueo exclusivo mediante una llamada a la `Enter` y `Exit` métodos de la `Monitor` clase en el <xref:System.Threading> espacio de nombres.  
   
 ## <a name="programming-practices"></a>Prácticas recomendadas de programación  
  El `lockobject` expresión siempre debe evaluarse como un objeto que pertenece exclusivamente a la clase. Se debe declarar un `Private` variable de objeto para proteger los datos que pertenecen a la instancia actual, o un `Private Shared` variable de objeto para proteger los datos comunes a todas las instancias.  

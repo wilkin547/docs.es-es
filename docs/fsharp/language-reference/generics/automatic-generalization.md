@@ -3,11 +3,11 @@ title: Generalización automática
 description: Obtenga información sobre cómo F# generaliza automáticamente los argumentos y tipos de funciones para que funcionen con varios tipos cuando sea posible.
 ms.date: 05/16/2016
 ms.openlocfilehash: 15ecf8e6f07da19bb015fd028a7465ba8b837190
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937545"
 ---
 # <a name="automatic-generalization"></a>Generalización automática
 

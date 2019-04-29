@@ -5,11 +5,11 @@ ms.assetid: 14aad5b3-84ab-4bbc-94e3-1eb92e258d10
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8b33b07e7c9f83f5874dea1455cd70dcc3206de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942433"
 ---
 # <a name="icordebugmutabledatatarget-interface"></a>Interfaz ICorDebugMutableDataTarget
 Extiende la [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) interfaz para admitir destinos de datos mutables.  

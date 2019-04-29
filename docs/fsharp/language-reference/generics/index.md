@@ -3,11 +3,11 @@ title: Genéricos
 description: Aprenda a usar F# funciones genéricas y tipos, que le permiten escribir código que funciona con una variedad de tipos sin repetir el código.
 ms.date: 05/16/2016
 ms.openlocfilehash: bafb80893df2f3fab85840ee844bc78d1fb33428
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937532"
 ---
 # <a name="generics"></a>Genéricos
 

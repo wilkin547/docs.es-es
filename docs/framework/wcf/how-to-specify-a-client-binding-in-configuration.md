@@ -3,11 +3,11 @@ title: Procedimiento para especificar un enlace de cliente en la configuración
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
 ms.openlocfilehash: 633bb0feeb0f9354bd6ff8ee6637f123d3e3cbf4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928939"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>Procedimiento para especificar un enlace de cliente en la configuración
 En este ejemplo, se crea una aplicación de consola de cliente para utilizar un servicio de calculadora y el enlace para ese cliente se especifica de manera declarativa en la configuración. El cliente obtiene acceso al `CalculatorService`, que implementa la interfaz `ICalculator`, y el servicio y el cliente utilizan la clase <xref:System.ServiceModel.BasicHttpBinding>.  

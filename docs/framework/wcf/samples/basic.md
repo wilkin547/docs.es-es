@@ -3,14 +3,14 @@ title: Basic2
 ms.date: 03/30/2017
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
 ms.openlocfilehash: 72540a1a36a8807a1644c10448210ddc8bf15b75
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944123"
 ---
 # <a name="basic"></a>Básico
-En esta sección se incluye secciones de ejemplos que muestran la funcionalidad básica de Windows Communication Foundation (WCF).  
+Esta sección incluyen las secciones de ejemplos que muestran la funcionalidad básica de Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
@@ -23,7 +23,7 @@ En esta sección se incluye secciones de ejemplos que muestran la funcionalidad 
  Muestra cómo utilizar el atributo de enlace de un elemento de punto de conexión.  
   
  [Cliente](../../../../docs/framework/wcf/samples/client.md)  
- Muestra las aplicaciones de cliente WCF.  
+ Muestra las aplicaciones cliente WCF.  
   
  [Contrato](../../../../docs/framework/wcf/samples/contract.md)  
  Muestra los contratos de datos.  
@@ -44,7 +44,7 @@ En esta sección se incluye secciones de ejemplos que muestran la funcionalidad 
  Muestra los servicios de WCF.  
   
  [Redifusión](../../../../docs/framework/wcf/samples/syndication.md)  
- Distribución de DemonstratesWCF.  
+ Distribución DemonstratesWCF.  
   
  [Web](../../../../docs/framework/wcf/samples/web.md)  
- Muestra cómo hospedar en Web en WCF.
+ Muestra cómo hospedar Web en WCF.

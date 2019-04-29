@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 309c31dacd801f1c46a2d37932124638bc157cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749051"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform (Método)
 Proporciona información acerca de la plataforma, incluida la arquitectura de procesador y del sistema operativo, en el que se está ejecutando el proceso de destino.  
@@ -44,9 +44,9 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
  Este método debe ejecutarse correctamente. Si se produce un error, la plataforma de destino es inutilizable. El método puede producir un error por las razones siguientes:  
   
--   La plataforma que se está emulando para el destino es inutilizable.  
+- La plataforma que se está emulando para el destino es inutilizable.  
   
--   El hardware real de la plataforma de destino es inutilizable.  
+- El hardware real de la plataforma de destino es inutilizable.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

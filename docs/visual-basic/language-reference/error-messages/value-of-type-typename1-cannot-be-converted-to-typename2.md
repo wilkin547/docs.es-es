@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
 ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766810"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Valor de tipo '\<typename1 >' no se puede convertir a '\<nombredetipo2 >'
 Valor de tipo '\<typename1 >' no se puede convertir a '\<nombredetipo2 >'. Discordancia de tipos podría ser debido a la mezcla de una referencia de archivo con una referencia de proyecto al ensamblado '\<assemblyname >'. Intente reemplazar la referencia de archivo a '\<filepath >' en el proyecto '\<projectname1 >' con una referencia de proyecto a '\<projectname2 >'.  
@@ -57,7 +57,7 @@ Valor de tipo '\<typename1 >' no se puede convertir a '\<nombredetipo2 >'. Disco
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Cambiar la referencia de archivo a una referencia de proyecto.  
+- Cambiar la referencia de archivo a una referencia de proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

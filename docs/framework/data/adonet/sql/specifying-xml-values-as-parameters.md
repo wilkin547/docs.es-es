@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
 ms.openlocfilehash: 4551e8f193ffc9799b57a660f05add888b330484
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876582"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Especificar valores XML como parámetros
 Si una consulta requiere un parámetro cuyo valor es una cadena XML, los programadores pueden suministrar ese valor mediante una instancia de la **SqlXml** tipo de datos. Realmente no hay ningún truco; Las columnas XML en SQL Server aceptan valores de parámetros exactamente igual que otros tipos de datos.  

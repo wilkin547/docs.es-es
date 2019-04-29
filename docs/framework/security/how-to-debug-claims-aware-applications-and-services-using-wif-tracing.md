@@ -4,55 +4,55 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940496"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Cómo depurar servicios y aplicaciones con reconocimiento de notificaciones mediante el seguimiento de WIF
 ## <a name="applies-to"></a>Se aplica a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)  
+- Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)  
   
--   Solución de problemas y depuración de aplicaciones de WIF  
+- Solución de problemas y depuración de aplicaciones de WIF  
   
 ## <a name="summary"></a>Resumen  
  En este procedimiento se describen los pasos necesarios para configurar el seguimiento de WIF, recopilar registros de seguimiento y analizar los registros de seguimiento con la herramienta Visor de seguimiento. Proporciona una correspondencia entre las entradas de seguimiento y las acciones necesarias para solucionar los problemas relacionados con WIF.  
   
 ## <a name="contents"></a>Contenido  
   
--   Objetivos  
+- Objetivos  
   
--   Resumen de pasos  
+- Resumen de pasos  
   
--   Paso 1: configurar el seguimiento de WIF mediante el archivo de configuración Web.config  
+- Paso 1: configurar el seguimiento de WIF mediante el archivo de configuración Web.config  
   
--   Paso 2: analizar los archivos de seguimiento de WIF mediante la herramienta Visor de seguimiento  
+- Paso 2: analizar los archivos de seguimiento de WIF mediante la herramienta Visor de seguimiento  
   
--   Paso 3: identificar soluciones para corregir los problemas relacionados con WIF  
+- Paso 3: identificar soluciones para corregir los problemas relacionados con WIF  
   
--   Elementos relacionados  
+- Elementos relacionados  
   
 ## <a name="objectives"></a>Objetivos  
   
--   Configurar el seguimiento de WIF.  
+- Configurar el seguimiento de WIF.  
   
--   Ver los registros de seguimiento en la herramienta Visor de seguimiento.  
+- Ver los registros de seguimiento en la herramienta Visor de seguimiento.  
   
--   Identificar los problemas relacionados con WIF en los registros de seguimiento.  
+- Identificar los problemas relacionados con WIF en los registros de seguimiento.  
   
--   Aplicar acciones correctivas a los problemas relacionados con WIF encontrados en los registros de seguimiento.  
+- Aplicar acciones correctivas a los problemas relacionados con WIF encontrados en los registros de seguimiento.  
   
 ## <a name="summary-of-steps"></a>Resumen de pasos  
   
--   Paso 1: configurar el seguimiento de WIF mediante el archivo de configuración Web.config  
+- Paso 1: configurar el seguimiento de WIF mediante el archivo de configuración Web.config  
   
--   Paso 2: analizar los archivos de seguimiento de WIF mediante la herramienta Visor de seguimiento  
+- Paso 2: analizar los archivos de seguimiento de WIF mediante la herramienta Visor de seguimiento  
   
--   Paso 3: identificar soluciones para corregir los problemas relacionados con WIF  
+- Paso 3: identificar soluciones para corregir los problemas relacionados con WIF  
   
 ## <a name="step-1--configure-wif-tracing-using-webconfig-configuration-file"></a>Paso 1: configurar el seguimiento de WIF mediante el archivo de configuración Web.config  
  En este paso, realizará cambios en las secciones de configuración del archivo *Web.config* que permite a WIF realizar un seguimiento de sus eventos y almacenarlos en un registro de seguimiento.  
@@ -108,4 +108,4 @@ ms.locfileid: "59321554"
   
 ## <a name="related-items"></a>Elementos relacionados  
   
--   [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

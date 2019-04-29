@@ -3,18 +3,18 @@ title: No se ha establecido la ruta de acceso
 ms.date: 07/20/2015
 ms.assetid: 2e61146f-1b42-4798-b823-bd1041d9d248
 ms.openlocfilehash: 83d6cd310cc7b9b8eb1a89e16f0a08677e356f93
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58028420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942719"
 ---
 # <a name="the-path-has-not-been-set"></a>No se ha establecido la ruta de acceso
 Se intentó realizar una operación de archivo, como mover o copiar un archivo, sin proporcionar la ruta de acceso necesaria. Esto puede ser el resultado de un análisis incorrecto de la ruta de acceso.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Compruebe que se haya proporcionado la ruta de acceso del archivo y que sea correcta.  
+- Compruebe que se haya proporcionado la ruta de acceso del archivo y que sea correcta.  
   
 ## <a name="see-also"></a>Vea también
 

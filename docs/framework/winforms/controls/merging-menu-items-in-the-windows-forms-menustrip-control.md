@@ -6,11 +6,11 @@ helpviewer_keywords:
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
 ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936362"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Combinar elementos de menú en el control MenuStrip de Windows Forms
 Si tiene una aplicación de interfaz de múltiples documentos (MDI), puede combinar elementos de menú o menús completos del formulario secundario en los menús del formulario primario.  
@@ -20,9 +20,9 @@ Si tiene una aplicación de interfaz de múltiples documentos (MDI), puede combi
 ## <a name="general-concepts"></a>Conceptos generales  
  Combinación de procedimientos suponen un destino y un control de código fuente:  
   
--   El destino es el <xref:System.Windows.Forms.MenuStrip> control en la principal o formulario MDI primario en el que se mezclan los elementos de menú.  
+- El destino es el <xref:System.Windows.Forms.MenuStrip> control en la principal o formulario MDI primario en el que se mezclan los elementos de menú.  
   
--   El origen es el <xref:System.Windows.Forms.MenuStrip> control en el formulario MDI secundario que contiene los elementos de menú que desee fusionar mediante combinación en el menú de destino.  
+- El origen es el <xref:System.Windows.Forms.MenuStrip> control en el formulario MDI secundario que contiene los elementos de menú que desee fusionar mediante combinación en el menú de destino.  
   
  El <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> propiedad identifica el elemento de menú cuya lista desplegable se rellenará con los títulos de la actual MDI primario MDI y secundarias del formulario. Por ejemplo, se suelen mostrar elementos secundarios MDI abiertos actualmente en el **ventana** menú.  
   

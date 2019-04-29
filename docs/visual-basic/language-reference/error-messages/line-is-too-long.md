@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 27270ec3-82a4-4693-a948-dd4664a5f060
 ms.openlocfilehash: 5f67c5ad5fdc64b0a023b0472072be10987c3437
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61921061"
@@ -21,7 +21,7 @@ Líneas de texto de origen no pueden superar los 65535 caracteres.
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Reduzca la longitud de la línea a 65535 caracteres o menos.  
+- Reduzca la longitud de la línea a 65535 caracteres o menos.  
   
 ## <a name="see-also"></a>Vea también
 

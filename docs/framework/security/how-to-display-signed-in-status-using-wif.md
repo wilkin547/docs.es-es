@@ -5,51 +5,51 @@ ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
 ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940509"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Cómo mostrar el estado "Firmado" mediante WIF
 ## <a name="applies-to"></a>Se aplica a  
   
--   Microsoft® Windows® Identity Foundation (WIF) 4.5  
+- Microsoft® Windows® Identity Foundation (WIF) 4.5  
   
--   Formularios Web Forms ASP.NET®  
+- Formularios Web Forms ASP.NET®  
   
 ## <a name="summary"></a>Resumen  
  En este tema se describe cómo mostrar el estado de inicio de sesión en una aplicación ASP.NET habilitada para WIF. WIF proporciona el mecanismo para que la aplicación reconozca las notificaciones y administre la autenticación y la autorización de los recursos de la aplicación.  
   
 ## <a name="contents"></a>Contenido  
   
--   Información general  
+- Información general  
   
--   Resumen de pasos  
+- Resumen de pasos  
   
--   Paso 1 - Instalar la extensión Identity and Access  
+- Paso 1 - Instalar la extensión Identity and Access  
   
--   Paso 2 - Crear una aplicación ASP.NET de usuario de confianza  
+- Paso 2 - Crear una aplicación ASP.NET de usuario de confianza  
   
--   Paso 3 - Habilitar STS de desarrollo local para autenticar usuarios  
+- Paso 3 - Habilitar STS de desarrollo local para autenticar usuarios  
   
--   Paso 4 - Modificar la aplicación ASP.NET para que muestre el estado de inicio de sesión  
+- Paso 4 - Modificar la aplicación ASP.NET para que muestre el estado de inicio de sesión  
   
--   Paso 5 - Probar la integración entre WIF y la aplicación ASP.NET  
+- Paso 5 - Probar la integración entre WIF y la aplicación ASP.NET  
   
 ## <a name="overview"></a>Información general  
  En este tema se muestra cómo crear una aplicación sencilla que reconozca notificaciones mediante WIF y la manera de determinar con facilidad si un usuario ha iniciado sesión o no. Los pasos siguientes utilizan el STS de desarrollo local que se incluye con la extensión de Visual Studio Identity and Access. El STS de desarrollo local está pensado para que un entorno de desarrollo y pruebas proporcione un método sencillo para integrar notificaciones en la aplicación. Nunca se debe usar en un entorno de producción, ya que no realiza la autenticación real y no se requieren credenciales. Sin embargo, el código imperativo de los pasos siguientes es el mismo para una aplicación lista para producción que usa autenticación real.  
   
 ## <a name="summary-of-steps"></a>Resumen de pasos  
   
--   Paso 1 - Instalar la extensión Identity and Access  
+- Paso 1 - Instalar la extensión Identity and Access  
   
--   Paso 2 - Crear una aplicación ASP.NET de usuario de confianza  
+- Paso 2 - Crear una aplicación ASP.NET de usuario de confianza  
   
--   Paso 3 - Habilitar STS de desarrollo local para autenticar usuarios  
+- Paso 3 - Habilitar STS de desarrollo local para autenticar usuarios  
   
--   Paso 4 - Modificar la aplicación ASP.NET para que muestre el estado de inicio de sesión  
+- Paso 4 - Modificar la aplicación ASP.NET para que muestre el estado de inicio de sesión  
   
--   Paso 5 - Probar la integración entre WIF y la aplicación ASP.NET  
+- Paso 5 - Probar la integración entre WIF y la aplicación ASP.NET  
   
 ## <a name="step-1--install-the-identity-and-access-extension"></a>Paso 1 - Instalar la extensión Identity and Access  
  Este paso describe la manera de configurar la extensión Identity and Access en Visual Studio 2012. Esta extensión automatiza el proceso de configuración de la aplicación para comunicarse con los extremos de STS.  

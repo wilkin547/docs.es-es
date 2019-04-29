@@ -14,11 +14,11 @@ ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754354"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procedimiento para crear, inicializar y configurar modificadores de seguimiento
 Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la salida del seguimiento.  
@@ -75,11 +75,11 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
   
 2. Si el proyecto no contiene un archivo de configuración (app.config o Web.config), en el menú **Proyecto** seleccione **Agregar nuevo elemento**.  
   
-    -   **Visual Basic:** En el **Agregar nuevo elemento** diálogo cuadro, elija **archivo de configuración de aplicación**.  
+    - **Visual Basic:** En el **Agregar nuevo elemento** diálogo cuadro, elija **archivo de configuración de aplicación**.  
   
          El archivo de configuración de la aplicación se creará y se abrirá. Se trata de un documento XML cuyo elemento raíz es `<configuration>.`  
   
-    -   **Visual C#:** En el **Agregar nuevo elemento** diálogo cuadro, elija **archivo XML**. Asigne el nombre **app.config** a este archivo. En el editor XML, después de la declaración de XML, agregue el siguiente código XML:  
+    - **Visual C#:** En el **Agregar nuevo elemento** diálogo cuadro, elija **archivo XML**. Asigne el nombre **app.config** a este archivo. En el editor XML, después de la declaración de XML, agregue el siguiente código XML:  
   
         ```xml  
         <configuration>  

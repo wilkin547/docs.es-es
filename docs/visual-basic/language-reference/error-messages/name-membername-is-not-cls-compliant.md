@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
 ms.openlocfilehash: 06b20b4f61741f2174654d749df55c3c4348c547
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787470"
 ---
 # <a name="name-membername-is-not-cls-compliant"></a>Nombre \<membername > no es conforme a CLS
 Un ensamblado está marcado como `<CLSCompliant(True)>` pero expone un miembro con un nombre que comienza con un carácter de subrayado (`_`).  
@@ -29,9 +29,9 @@ Un ensamblado está marcado como `<CLSCompliant(True)>` pero expone un miembro c
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Si tiene control sobre el código fuente, cambie el nombre de miembro para que no comienza con un carácter de subrayado.  
+- Si tiene control sobre el código fuente, cambie el nombre de miembro para que no comienza con un carácter de subrayado.  
   
--   Si necesita que el nombre de miembro permanecen sin cambios, quite el <xref:System.CLSCompliantAttribute> de su definición o márquelo como `<CLSCompliant(False)>`. Todavía puede marcar el ensamblado como `<CLSCompliant(True)>`.  
+- Si necesita que el nombre de miembro permanecen sin cambios, quite el <xref:System.CLSCompliantAttribute> de su definición o márquelo como `<CLSCompliant(False)>`. Todavía puede marcar el ensamblado como `<CLSCompliant(True)>`.  
   
 ## <a name="see-also"></a>Vea también
 

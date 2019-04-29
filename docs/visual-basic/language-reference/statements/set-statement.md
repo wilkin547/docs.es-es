@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
 ms.openlocfilehash: 0a8d95ffbabf03a0e6c9d88edb28c248b60f3252
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783882"
 ---
 # <a name="set-statement-visual-basic"></a>Instrucción Set (Visual Basic)
 Declara un `Set` procedimiento de propiedad que se utiliza para asignar un valor a una propiedad.  
@@ -35,13 +35,13 @@ End Set
  `accessmodifier`  
  Opcional en al menos uno de los `Get` y `Set` instrucciones de esta propiedad. Puede ser uno de los siguientes:  
   
--   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
--   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
--   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
--   `Protected Friend`  
+- `Protected Friend`  
   
  Vea [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -70,13 +70,13 @@ End Set
   
 ## <a name="rules"></a>Reglas  
   
--   **Niveles de acceso mixtos.** Si va a definir una propiedad de lectura y escritura, opcionalmente, puede especificar un nivel de acceso diferente para el `Get` o `Set` procedimiento, pero no ambos. Si lo hace, el nivel de acceso del procedimiento debe ser más restrictivo que el nivel de acceso de la propiedad. Por ejemplo, si se declara la propiedad `Friend`, puede declarar el `Set` procedimiento `Private`, pero no `Public`.  
+- **Niveles de acceso mixtos.** Si va a definir una propiedad de lectura y escritura, opcionalmente, puede especificar un nivel de acceso diferente para el `Get` o `Set` procedimiento, pero no ambos. Si lo hace, el nivel de acceso del procedimiento debe ser más restrictivo que el nivel de acceso de la propiedad. Por ejemplo, si se declara la propiedad `Friend`, puede declarar el `Set` procedimiento `Private`, pero no `Public`.  
   
      Si está definiendo un `WriteOnly` propiedad, el `Set` procedimiento representa toda la propiedad. No se puede declarar un acceso diferente nivel `Set`, ya que establecería dos niveles de acceso para la propiedad.  
   
 ## <a name="behavior"></a>Comportamiento  
   
--   **Devolución desde un procedimiento de propiedad.** Cuando el `Set` procedimiento vuelve al código de llamada, la ejecución continúa después de la instrucción que proporciona el valor que se almacenará.  
+- **Devolución desde un procedimiento de propiedad.** Cuando el `Set` procedimiento vuelve al código de llamada, la ejecución continúa después de la instrucción que proporciona el valor que se almacenará.  
   
      `Set` procedimientos de propiedad pueden devolver mediante el [instrucción Return](../../../visual-basic/language-reference/statements/return-statement.md) o [instrucción Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
   

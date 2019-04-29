@@ -14,11 +14,11 @@ helpviewer_keywords:
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
 ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937753"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Procedimiento para copiar píxeles para reducir el parpadeo en formularios Windows Forms
 Al animar un gráfico sencillo, los usuarios a veces pueden encontrarse parpadeos u otros efectos visuales no deseados. Una forma de limitar este problema es usar un proceso "bitblt" en el gráfico. BitBlt es la "bloque de bits transferencia" de los datos de color de un rectángulo de píxeles de origen a un rectángulo de destino de píxeles.  

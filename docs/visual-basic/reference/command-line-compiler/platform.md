@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788913"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Especifica qué versión de la plataforma de Common Language Runtime (CLR) puede ejecutar el archivo de salida.  
@@ -38,31 +38,31 @@ Especifica qué versión de la plataforma de Common Language Runtime (CLR) puede
   
  En general, los ensamblados de .NET Framework escritos en Visual Basic se ejecutarán de la misma manera independientemente de la plataforma. Sin embargo, en algunos casos se comportan de forma diferente en distintas plataformas. Estos casos comunes son:  
   
--   Estructuras que contengan miembros cuyo tamaño varía según la plataforma, como cualquier tipo de puntero.  
+- Estructuras que contengan miembros cuyo tamaño varía según la plataforma, como cualquier tipo de puntero.  
   
--   Aritmética de punteros que incluya tamaños constantes.  
+- Aritmética de punteros que incluya tamaños constantes.  
   
--   Invocación incorrecta de la plataforma o declaraciones COM que utilicen `Integer` para los controladores en lugar de <xref:System.IntPtr>.  
+- Invocación incorrecta de la plataforma o declaraciones COM que utilicen `Integer` para los controladores en lugar de <xref:System.IntPtr>.  
   
--   Conversión de <xref:System.IntPtr> a `Integer`.  
+- Conversión de <xref:System.IntPtr> a `Integer`.  
   
--   Uso de invocación de plataforma o interoperabilidad COM con componentes que no existen en todas las plataformas.  
+- Uso de invocación de plataforma o interoperabilidad COM con componentes que no existen en todas las plataformas.  
   
  El **-plataforma** opción mitigará algunos problemas si sabe que ha realizado suposiciones acerca de la arquitectura de su código se ejecutará en. De manera específica:  
   
--   Si decide que el destino sea una plataforma de 64 bits pero la aplicación se ejecuta en un equipo de 32 bits, el mensaje de error aparece mucho antes y se centra más bien en el problema que en el error que aparece sin utilizar este modificador.  
+- Si decide que el destino sea una plataforma de 64 bits pero la aplicación se ejecuta en un equipo de 32 bits, el mensaje de error aparece mucho antes y se centra más bien en el problema que en el error que aparece sin utilizar este modificador.  
   
--   Si establece la marca `x86` en la opción y posteriormente la aplicación se ejecuta en un equipo de 64 bits, la aplicación se ejecutará en el subsistema WOW, en lugar de ejecutarse de forma nativa.  
+- Si establece la marca `x86` en la opción y posteriormente la aplicación se ejecuta en un equipo de 64 bits, la aplicación se ejecutará en el subsistema WOW, en lugar de ejecutarse de forma nativa.  
   
  En un sistema operativo de Windows de 64 bits:  
   
--   Los ensamblados compilados con `-platform:x86` se ejecutarán en el CLR de 32 bits que se ejecuta en WOW64.  
+- Los ensamblados compilados con `-platform:x86` se ejecutarán en el CLR de 32 bits que se ejecuta en WOW64.  
   
--   Los ejecutables compilados con `-platform:anycpu` se ejecutarán en el CLR de 64 bits.  
+- Los ejecutables compilados con `-platform:anycpu` se ejecutarán en el CLR de 64 bits.  
   
--   Un archivo DLL compilado con `-platform:anycpu` se ejecutará en el mismo CLR que el proceso en el que se cargó.  
+- Un archivo DLL compilado con `-platform:anycpu` se ejecutará en el mismo CLR que el proceso en el que se cargó.  
   
--   Los archivos ejecutables que se compilan con `-platform:anycpu32bitpreferred` se ejecutarán en el CLR de 32 bits.  
+- Los archivos ejecutables que se compilan con `-platform:anycpu32bitpreferred` se ejecutarán en el CLR de 32 bits.  
   
  Para obtener más información sobre cómo desarrollar una aplicación se ejecute en una versión de 64 bits de Windows, consulte [aplicaciones de 64 bits](../../../framework/64-bit-apps.md).  
   

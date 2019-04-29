@@ -9,11 +9,11 @@ helpviewer_keywords:
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
 ms.openlocfilehash: e035ff04a70a441f7f64bbc230ba6d8036fb2ace
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775783"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Asignar identificadores de objeto a algoritmos de criptografía
 Aseguran de firmas digitales que datos no se manipule cuando se envían desde un programa a otro. Normalmente, la firma digital se calcula aplicando una función matemática con el hash de los datos que se firmarán. Al dar formato a un valor hash que se va a firmar, algunos algoritmos de firma digital anexar ASN.1 identificador del objeto (OID) como parte de la operación de formato. El OID identifica el algoritmo que se usó para calcular el hash. Puede asignar los algoritmos a los identificadores de objeto para extender el mecanismo de criptografía para usar algoritmos personalizados. El ejemplo siguiente muestra cómo asignar un identificador de objeto a un nuevo algoritmo de hash.  

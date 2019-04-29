@@ -7,11 +7,11 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788146"
 ---
 # <a name="caching-in-net-framework-applications"></a>Almacenamiento en caché en aplicaciones .NET Framework
 El almacenamiento en caché permite almacenar datos en memoria para un acceso rápido. Cuando se vuelve a acceder a los datos, las aplicaciones pueden obtenerlos de la memoria caché en lugar de recuperarlos de la fuente original. Esto puede mejorar el rendimiento y la escalabilidad. Además, el almacenamiento en caché permite que los datos estén disponibles cuando el origen de datos no está disponible temporalmente.  
@@ -24,17 +24,17 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 ## <a name="caching-data"></a>Almacenar datos en caché  
  Puede almacenar información en caché mediante clases del espacio de nombres <xref:System.Runtime.Caching>. Las clases de almacenamiento en caché de este espacio de nombres proporcionan las siguientes características:  
   
--   Tipos abstractos que proporcionan la base para crear implementaciones de caché personalizadas.  
+- Tipos abstractos que proporcionan la base para crear implementaciones de caché personalizadas.  
   
--   Una implementación de caché de objetos en memoria concreta.  
+- Una implementación de caché de objetos en memoria concreta.  
   
  La clase de almacenamiento en caché base abstracta (<xref:System.Runtime.Caching.ObjectCache>) define las siguientes tareas de almacenamiento en caché:  
   
--   Creación y administración de entradas de caché.  
+- Creación y administración de entradas de caché.  
   
--   Especificación de información de expiración y expulsión.  
+- Especificación de información de expiración y expulsión.  
   
--   Desencadenamiento de eventos producidos en respuesta a cambios en las entradas de caché.  
+- Desencadenamiento de eventos producidos en respuesta a cambios en las entradas de caché.  
   
  La clase <xref:System.Runtime.Caching.MemoryCache> es una implementación de caché de objetos en memoria de la clase <xref:System.Runtime.Caching.ObjectCache>. Puede usar la clase <xref:System.Runtime.Caching.MemoryCache> para la mayoría de las tareas de almacenamiento en caché.  
   
@@ -67,11 +67,11 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
   
  Para extender el almacenamiento en caché, puede hacer lo siguiente:  
   
--   Cree una clase personalizada que derive de la clase <xref:System.Runtime.Caching.ObjectCache> y luego proporcione una implementación de caché personalizada en la clase derivada.  
+- Cree una clase personalizada que derive de la clase <xref:System.Runtime.Caching.ObjectCache> y luego proporcione una implementación de caché personalizada en la clase derivada.  
   
--   Cree una clase que derive de la clase <xref:System.Runtime.Caching.MemoryCache> y personalice o extienda la clase derivada. Para obtener un ejemplo de cómo hacerlo, vea [Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application (Almacenamiento en caché de datos de aplicación mediante varios objetos de caché en una aplicación ASP.NET)](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
+- Cree una clase que derive de la clase <xref:System.Runtime.Caching.MemoryCache> y personalice o extienda la clase derivada. Para obtener un ejemplo de cómo hacerlo, vea [Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application (Almacenamiento en caché de datos de aplicación mediante varios objetos de caché en una aplicación ASP.NET)](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
   
--   Cree una clase que derive de la clase <xref:System.Web.Caching.OutputCacheProvider> y configure la aplicación de modo que use el proveedor de caché de salida personalizado.  
+- Cree una clase que derive de la clase <xref:System.Web.Caching.OutputCacheProvider> y configure la aplicación de modo que use el proveedor de caché de salida personalizado.  
   
  Para más información, vea la entrada [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series) (Almacenamiento en caché de resultados extensible con ASP.NET 4 (VS 2010 y serie .NET 4.0))](https://go.microsoft.com/fwlink/?LinkId=185772) del blog de Scott Guthrie.  
   

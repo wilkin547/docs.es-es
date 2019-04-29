@@ -7,8 +7,8 @@ ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792774"
 ---
 # <a name="custom-token-handlers"></a>Controladores de token personalizados
 En este tema, se describen los controladores de token en WIF y cómo se usan para procesar tokens. El tema también trata la necesidad de crear controladores personalizados de token para los tipos de token que no se admiten de manera predeterminada en WIF.  
@@ -19,23 +19,23 @@ En este tema, se describen los controladores de token en WIF y cómo se usan par
 ## <a name="built-in-security-token-handlers-in-wif"></a>Controladores integrados de token de seguridad en WIF  
  WIF 4.5 incluye nueve clases de controlador de token de seguridad que derivan de la clase base abstracta <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:  
   
--   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
 ## <a name="adding-a-custom-token-handler"></a>Agregar un controlador personalizado de token  
  Algunos tipos de token, como los tokens web simples (SWT) y los tokens web JSON (JWT) no tienen controladores integrados de token proporcionados por WIF. Para estos tipos de token y para otros que no tienen un controlador integrado, debe realizar los pasos siguientes para crear un controlador personalizado de token.  
@@ -46,17 +46,17 @@ En este tema, se describen los controladores de token en WIF y cómo se usan par
   
 2. Invalide los métodos siguientes y proporcione su propia implementación:  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
 3. Agregue una referencia al nuevo controlador personalizado de token del archivo *Web.config* o *App.config*, dentro de la sección **\<system.identityModel>** que se aplica a WIF. Por ejemplo, el marcado siguiente de configuración especifica un nuevo controlador de token denominado **MyCustomTokenHandler** que reside en el espacio de nombres **CustomToken**.  
   

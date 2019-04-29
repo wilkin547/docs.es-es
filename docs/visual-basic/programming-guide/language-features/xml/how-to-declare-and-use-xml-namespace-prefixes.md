@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML namespace prefixes [Visual Basic]
 ms.assetid: 4292e1d9-eb8f-49d6-a3aa-f05a5fbe24d1
 ms.openlocfilehash: 244329058624bebb03440961c1dda4a50b4efb8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791786"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Procedimiento Declarar y usar prefijos de Namespace XML (Visual Basic)
 En este ejemplo se muestra cómo importar el prefijo del espacio de nombres XML `ns` y su uso en un literal XML y propiedades de eje XML.  
@@ -21,7 +21,7 @@ En este ejemplo se muestra cómo importar el prefijo del espacio de nombres XML 
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Una referencia al espacio de nombres <xref:System.Xml.Linq>.  
+- Una referencia al espacio de nombres <xref:System.Xml.Linq>.  
   
 ## <a name="see-also"></a>Vea también
 

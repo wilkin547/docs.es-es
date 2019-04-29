@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cc94c63edb602d87a7c08a9051eb2ef760834477
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791682"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout (Método)
 Obtiene información sobre la distribución de un objeto de cadena. Este método está en desuso en el [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]y se ha reemplazado por la [ICorProfilerInfo3:: Getstringlayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) método.  
@@ -52,11 +52,11 @@ HRESULT GetStringLayout(
 ## <a name="remarks"></a>Comentarios  
  El `GetStringLayout` método obtiene los desplazamientos, relativa a la `ObjectID` puntero, de las ubicaciones donde se almacenan los siguientes:  
   
--   La longitud de búfer de la cadena.  
+- La longitud de búfer de la cadena.  
   
--   La longitud de la propia cadena.  
+- La longitud de la propia cadena.  
   
--   Búfer que contiene la cadena real de caracteres anchos.  
+- Búfer que contiene la cadena real de caracteres anchos.  
   
  Pueden ser cadenas terminadas en null.  
   

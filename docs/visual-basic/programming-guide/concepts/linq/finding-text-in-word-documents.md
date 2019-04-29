@@ -3,11 +3,11 @@ title: Buscar texto en documentos de Word (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
 ms.openlocfilehash: f8414662e2013b152e471d6c4c003e602c0d277d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931552"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Buscar texto en documentos de Word (Visual Basic)
 En este tema se amplían las consultas vistas anteriormente para conseguir algo muy útil: encontrar todas las apariciones de una cierta cadena en el documento.  
@@ -305,7 +305,7 @@ StyleName:Code ><
 ## <a name="next-steps"></a>Pasos siguientes  
  En la sección siguiente se proporciona más información acerca de los documentos WordprocessingML:  
   
--   [Detalles de Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+- [Detalles de Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
 ## <a name="see-also"></a>Vea también
 

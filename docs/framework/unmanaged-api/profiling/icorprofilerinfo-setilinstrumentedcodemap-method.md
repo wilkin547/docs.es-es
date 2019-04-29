@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3a574a04e5746a8b2c9c32160e82aa503b392729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792644"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap (Método)
 Establece un mapa de código para la función especificada con las entradas de asignación de lenguaje intermedio (MSIL) de Microsoft especificadas.  
@@ -58,11 +58,11 @@ HRESULT SetILInstrumentedCodeMap(
   
  El depurador supondrá que cada desplazamiento anterior hace referencia a un desplazamiento dentro del código MSIL original, sin modificar de MSIL, y que cada nuevo desplazamiento hace referencia al desplazamiento de MSIL dentro del nuevo código instrumentado. El mapa se debe ordenar en orden ascendente. Para la ejecución paso a paso para que funcionen correctamente, siga estas instrucciones:  
   
--   No volver a ordenar el código MSIL instrumentado.  
+- No volver a ordenar el código MSIL instrumentado.  
   
--   No quite el código MSIL original.  
+- No quite el código MSIL original.  
   
--   Incluya entradas para todos los puntos de secuencia del archivo de programa (PDB) de la base de datos en el mapa. El mapa no interpola las entradas que faltan. Por lo tanto, dado el mapa siguiente:  
+- Incluya entradas para todos los puntos de secuencia del archivo de programa (PDB) de la base de datos en el mapa. El mapa no interpola las entradas que faltan. Por lo tanto, dado el mapa siguiente:  
   
      (0 anterior, 0 nuevo)  
   
@@ -70,17 +70,17 @@ HRESULT SetILInstrumentedCodeMap(
   
      (9 antiguo, 20 nuevos)  
   
-    -   Un desplazamiento anterior de 0, 1, 2, 3 o 4 se asignará al nuevo desplazamiento de 0.  
+    - Un desplazamiento anterior de 0, 1, 2, 3 o 4 se asignará al nuevo desplazamiento de 0.  
   
-    -   Un desplazamiento anterior de 5, 6, 7 u 8 se asignará al nuevo desplazamiento de 10.  
+    - Un desplazamiento anterior de 5, 6, 7 u 8 se asignará al nuevo desplazamiento de 10.  
   
-    -   Un desplazamiento anterior de 9 o versiones posteriores se asignará al nuevo desplazamiento de 20.  
+    - Un desplazamiento anterior de 9 o versiones posteriores se asignará al nuevo desplazamiento de 20.  
   
-    -   Se asignará un nuevo desplazamiento de 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 al anterior desplazamiento de 0.  
+    - Se asignará un nuevo desplazamiento de 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 al anterior desplazamiento de 0.  
   
-    -   Un nuevo desplazamiento de 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 se asignará al anterior desplazamiento 5.  
+    - Un nuevo desplazamiento de 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 se asignará al anterior desplazamiento 5.  
   
-    -   Se asignará un nuevo desplazamiento de 20 o superior al desplazamiento anterior de 9.  
+    - Se asignará un nuevo desplazamiento de 20 o superior al desplazamiento anterior de 9.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

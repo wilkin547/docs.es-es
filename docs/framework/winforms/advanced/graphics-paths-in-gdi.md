@@ -11,28 +11,28 @@ helpviewer_keywords:
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
 ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938165"
 ---
 # <a name="graphics-paths-in-gdi"></a>Trazados de gráficos en GDI+
 Las rutas de acceso se crean mediante la combinación de líneas, rectángulos y curvas simples. Recuerde que en el [información general sobre gráficos de Vector](vector-graphics-overview.md) que los siguientes bloques de creación básicos han demostrado para ser útiles para dibujar imágenes:  
   
--   Líneas  
+- Líneas  
   
--   Rectángulos  
+- Rectángulos  
   
--   Botón de puntos suspensivos  
+- Botón de puntos suspensivos  
   
--   Arcos  
+- Arcos  
   
--   Polígonos  
+- Polígonos  
   
--   Curvas spline cardinales  
+- Curvas spline cardinales  
   
--   Curvas spline de Bézier  
+- Curvas spline de Bézier  
   
  En GDI +, el <xref:System.Drawing.Drawing2D.GraphicsPath> objeto le permite recopilar una secuencia de estos bloques de creación en una sola unidad. A continuación, se puede dibujar toda la secuencia de líneas, rectángulos, polígonos y curvas con una llamada a la <xref:System.Drawing.Graphics.DrawPath%2A> método de la <xref:System.Drawing.Graphics> clase. La siguiente ilustración muestra una ruta de acceso creado mediante la combinación de una línea, un arco, una curva spline de Bézier y una curva spline cardinal.  
   

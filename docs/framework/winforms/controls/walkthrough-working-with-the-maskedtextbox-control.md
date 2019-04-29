@@ -12,20 +12,20 @@ helpviewer_keywords:
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
 ms.openlocfilehash: ff9a0edb44a95f5853edf711e0a1559e3b2e3b15
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792150"
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>Tutorial: Trabajar con el control MaskedTextBox
 Las tareas ilustradas en este tutorial incluyen:  
   
--   Inicializando el <xref:System.Windows.Forms.MaskedTextBox> control  
+- Inicializando el <xref:System.Windows.Forms.MaskedTextBox> control  
   
--   Mediante el <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> controlador de eventos para alertar al usuario cuando un carácter no es conforme a la máscara  
+- Mediante el <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> controlador de eventos para alertar al usuario cuando un carácter no es conforme a la máscara  
   
--   Asignar un tipo para el <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> propiedad y el uso de la <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> controlador de eventos para alertar al usuario cuando el valor que se intenta confirmar no es válido para el tipo  
+- Asignar un tipo para el <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> propiedad y el uso de la <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> controlador de eventos para alertar al usuario cuando el valor que se intenta confirmar no es válido para el tipo  
   
 ## <a name="creating-the-project-and-adding-a-control"></a>Crear el proyecto y agregar un Control  
   

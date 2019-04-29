@@ -9,11 +9,11 @@ helpviewer_keywords:
 - image formats [Windows Forms], converting between
 ms.assetid: 9d4a692d-73ac-4ce3-9e05-9ec321e8fbd6
 ms.openlocfilehash: 3072c07781a8e8e57b64b48e5b4c304c2a0a0efb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937766"
 ---
 # <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>Procedimiento para convertir una imagen BMP en una imagen PNG
 A menudo, deseará convertir de un formato a otro. Puede hacer esta conversión fácilmente llamando al método <xref:System.Drawing.Image.Save%2A> de la clase <xref:System.Drawing.Image> y especificando <xref:System.Drawing.Imaging.ImageFormat> para el formato de archivo de imagen deseado.  
@@ -27,9 +27,9 @@ A menudo, deseará convertir de un formato a otro. Puede hacer esta conversión 
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Una aplicación de Windows Forms.  
+- Una aplicación de Windows Forms.  
   
--   Una referencia al espacio de nombres `System.Drawing.Imaging`.  
+- Una referencia al espacio de nombres `System.Drawing.Imaging`.  
   
 ## <a name="see-also"></a>Vea también
 

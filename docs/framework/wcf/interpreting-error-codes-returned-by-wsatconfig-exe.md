@@ -3,11 +3,11 @@ title: Interpretar códigos de error devueltos por wsatConfig.exe
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
 ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928822"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretar códigos de error devueltos por wsatConfig.exe
 En este tema se hace una lista de todos los códigos de error generados por la utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe) y acciones recomendadas que se van a tomar.  

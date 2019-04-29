@@ -14,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 55d5904a-f444-4eb5-abd3-6bc74dd14226
 ms.openlocfilehash: 99b04060d4e7c14313655010dc4fbd5ce1c90487
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788679"
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>Procedimiento Conservar y restaurar propiedades en el ámbito de aplicación a través de sesiones de aplicación
 En este ejemplo se muestra cómo conservar las propiedades del ámbito de la aplicación cuando se cierra una aplicación, y cómo restaurar las propiedades de ámbito de la aplicación cuando una aplicación es el siguiente inicio.  

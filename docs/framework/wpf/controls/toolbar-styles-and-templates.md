@@ -10,11 +10,11 @@ helpviewer_keywords:
 - templates [WPF], ToolBar
 ms.assetid: bd875f46-4690-46f5-81e0-f11a9822484f
 ms.openlocfilehash: 1cbb8d54a544b70b4a484c06c6bb2e9ca25029da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59156330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790746"
 ---
 # <a name="toolbar-styles-and-templates"></a>Estilos y plantillas de ToolBar
 En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.ToolBar> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

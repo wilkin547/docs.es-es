@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
 ms.openlocfilehash: a9f74f025af6dfc5737ea9f4971f68c5ad913e8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793463"
 ---
 # <a name="batching-operations-wcf-data-services"></a>Procesar por lotes operaciones (Servicios de datos de WCF)
 El [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] admite el procesamiento por lotes de las solicitudes a un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-servicio basado en. Para obtener más información, consulte [OData: Procesamiento por lotes](https://go.microsoft.com/fwlink/?LinkId=186075). En [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], cada operación que utiliza el <xref:System.Data.Services.Client.DataServiceContext>, como ejecutar una consulta o guardar cambios, tiene como resultado de una solicitud independiente que se envían al servicio de datos. Para mantener un número razonable de conjuntos de operaciones, puede definir los lotes operacionales explícitamente. Esto garantiza que todas las operaciones del lote se envían al servicio de datos en una sola solicitud HTTP, permite que el servidor procesar las operaciones de forma atómica y reduce el número de ida y vuelta al servicio de datos.  

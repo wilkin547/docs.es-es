@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3476a338191a4af9cc01b7e44456f1bd20f52a10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796551"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2 (Interfaz)
 Proporciona métodos que los generadores de perfiles de código usan para comunicarse con el common language runtime (CLR) para controlar la supervisión de eventos e información de solicitud. El `ICorProfilerInfo2` interfaz es una extensión de la [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interfaz. Es decir, proporciona nuevos métodos admitidos en la versión de .NET Framework 2.0 y versiones posteriores.  

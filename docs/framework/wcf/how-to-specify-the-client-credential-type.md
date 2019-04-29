@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
 ms.openlocfilehash: 775c6a297047c7a0e16db091f9a22686fdb01efb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928887"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>Procedimiento para especificar el tipo de credencial de cliente
 Después de establecer un modo de seguridad (ya sea transporte o mensaje), tiene la opción de establecer el tipo de credencial de cliente. Esta propiedad especifica qué tipo de credencial debe proporcionar el cliente al servicio para la autenticación. Para obtener más información acerca de cómo establecer el modo de seguridad (un paso necesario antes de establecer tipo de credencial de cliente), consulte [Cómo: Establecer el modo de seguridad](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  

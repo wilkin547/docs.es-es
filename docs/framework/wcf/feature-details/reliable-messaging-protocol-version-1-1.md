@@ -3,11 +3,11 @@ title: Protocolo de mensajería de confianza versión 1,1
 ms.date: 03/30/2017
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
 ms.openlocfilehash: 6b8732e0b48797c219b53bb8bf70e1ba57e25c42
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55073231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933996"
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Protocolo de mensajería de confianza versión 1,1
 En este tema cubre los detalles de implementación de Windows Communication Foundation (WCF) para el WS-ReliableMessaging protocolo de febrero de 2007 (versión 1.1) necesario para la interoperación mediante el transporte HTTP. WCF sigue la especificación de WS-ReliableMessaging con las restricciones y clarificaciones explicadas en este tema. Tenga en cuenta que la versión 1.1 del protocolo WS-ReliableMessaging se implementa a partir de la [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  
@@ -256,7 +256,7 @@ Example TerminateSequenceResponse message:
 ### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement  
  WCF usa un mecanismo de "apoyo a caballo" de confirmaciones de secuencias proporcionadas en WS-Reliable Messaging. Las siguientes restricciones son aplicables:  
   
--   R1601: Cuando dos secuencias inversas se establecen utilizando el `Offer` mecanismo, el `SequenceAcknowledgement` encabezado puede incluirse en cualquier mensaje de aplicación transmitido al destinatario deseado. El punto de conexión remoto debe poder tener acceso a un encabezado `SequenceAcknowledgement` superpuesto.  
+-   R1601: Cuando dos secuencias inversas se establecen utilizando el `Offer` mecanismo, el `SequenceAcknowledgement` encabezado puede incluirse en cualquier mensaje de aplicación transmitido al destinatario deseado. El extremo remoto debe poder tener acceso a un encabezado `SequenceAcknowledgement` superpuesto.  
   
 -   B1602: WCF no genera `SequenceAcknowledgement` los encabezados que contienen `Nack` elementos. WCF valida que cada `Nack` elemento contiene un número de secuencia, pero en caso contrario, se omite el `Nack` elemento y el valor.  
   

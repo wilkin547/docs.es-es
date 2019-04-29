@@ -3,11 +3,11 @@ title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
 ms.openlocfilehash: 24cf36aba81b5bb31eaac475361e2d07bc6f8b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788406"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 Este elemento define el tipo en el que el entorno de hospedaje de servicio crea instancias de un transporte determinado. Si este elemento está vacío, se usa el tipo predeterminado. Este elemento solo se puede usar en los archivos de configuración del nivel de aplicación o equipo.  
@@ -63,25 +63,25 @@ Este elemento define el tipo en el que el entorno de hospedaje de servicio crea 
 ## <a name="remarks"></a>Comentarios  
  De forma predeterminada, los servicios WCF se ejecutan en paralelo con ASP.NET en dominios de aplicación hospedados (AppDomain). Aunque WCF y ASP.NET pueden coexistir en el mismo AppDomain, la canalización de HTTP de ASP.NET no procesa de forma predeterminada las solicitudes de WCF. Como resultado, varios elementos de la plataforma de la aplicación ASP.NET no están disponibles para los servicios WCF. Éstos incluyen:  
   
--   Autorización de dirección URL/archivo de ASP.NET  
+- Autorización de dirección URL/archivo de ASP.NET  
   
--   Suplantación de ASP.NET  
+- Suplantación de ASP.NET  
   
--   Estado de sesión basado en cookies  
+- Estado de sesión basado en cookies  
   
--   HttpContext.Current  
+- HttpContext.Current  
   
--   Extensibilidad de la canalización a través de HttpModule personalizado  
+- Extensibilidad de la canalización a través de HttpModule personalizado  
   
  Si sus servicios WCF necesitan funcionar en el contexto de ASP.NET, y solo comunicarse sobre HTTP, puede usar el modo de compatibilidad de ASP.NET de WCF. Este modo se activa cuando el atributo `aspNetCompatibilityEnabled` se establece en `true` en el nivel de aplicación. Las implementaciones del servicio deben declarar su capacidad de ejecutarse en modo de compatibilidad usando la clase <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Cuando el modo de compatibilidad está habilitado  
   
--   Se exige la autorización de dirección URL/archivo de ASP.NET antes que la autorización de WCF. Una decisión de autorización se basa en la identidad a nivel de transporte de la solicitud. Se omiten las identidades a nivel de mensaje.  
+- Se exige la autorización de dirección URL/archivo de ASP.NET antes que la autorización de WCF. Una decisión de autorización se basa en la identidad a nivel de transporte de la solicitud. Se omiten las identidades a nivel de mensaje.  
   
--   Las operaciones del servicio WCF empiezan a ejecutarse en el contexto de suplantación de ASP.NET. Si la suplantación de ASP.NET y la suplantación de WCF están habilitadas para un servicio concreto, se aplica el contexto de suplantación de WCF.  
+- Las operaciones del servicio WCF empiezan a ejecutarse en el contexto de suplantación de ASP.NET. Si la suplantación de ASP.NET y la suplantación de WCF están habilitadas para un servicio concreto, se aplica el contexto de suplantación de WCF.  
   
--   HttpContext.Current se puede usar del código del servicio WCF y se evita que los servicios expongan los puntos de conexión que no son HTTP.  
+- HttpContext.Current se puede usar del código del servicio WCF y se evita que los servicios expongan los puntos de conexión que no son HTTP.  
   
--   La canalización de ASP.NET procesa las solicitudes de WCF. HttpModules que se ha configurado para actuar en solicitudes entrante también puede procesar las solicitudes de WCF. Éstas pueden incluir componentes de plataforma de ASP.NET (por ejemplo, <xref:System.Web.SessionState.SessionStateModule>), y también módulos personalizados de terceros.  
+- La canalización de ASP.NET procesa las solicitudes de WCF. HttpModules que se ha configurado para actuar en solicitudes entrante también puede procesar las solicitudes de WCF. Éstas pueden incluir componentes de plataforma de ASP.NET (por ejemplo, <xref:System.Web.SessionState.SessionStateModule>), y también módulos personalizados de terceros.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo de código siguiente muestra cómo habilitar el modo de compatibilidad de ASP.  

@@ -7,51 +7,51 @@ ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940444"
 ---
 # <a name="how-to-transform-incoming-claims"></a>Cómo transformar las notificaciones entrantes
 ## <a name="applies-to"></a>Se aplica a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Formularios Web Forms ASP.NET®  
+- Formularios Web Forms ASP.NET®  
   
 ## <a name="summary"></a>Resumen  
  Este tema de procedimientos proporciona procedimientos paso a paso para crear una sencilla aplicación de formularios Web Forms ASP.NET para notificaciones y transformar las notificaciones entrantes. También se proporcionan instrucciones sobre cómo probar la aplicación para comprobar que las notificaciones transformadas están presentes cuando se ejecuta la aplicación.  
   
 ## <a name="contents"></a>Contenido  
   
--   Objetivos  
+- Objetivos  
   
--   Información general  
+- Información general  
   
--   Resumen de pasos  
+- Resumen de pasos  
   
--   Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
+- Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
   
--   Paso 2: Implementar la transformación de notificaciones con un elemento ClaimsAuthenticationManager personalizado  
+- Paso 2: Implementar la transformación de notificaciones con un elemento ClaimsAuthenticationManager personalizado  
   
--   Paso 3: Probar la solución  
+- Paso 3: Probar la solución  
   
 ## <a name="objectives"></a>Objetivos  
   
--   Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
+- Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
   
--   Transformar las notificaciones entrantes agregando una notificación de rol de administrador  
+- Transformar las notificaciones entrantes agregando una notificación de rol de administrador  
   
--   Probar la aplicación de formularios Web Forms ASP.NET para ver si funciona correctamente  
+- Probar la aplicación de formularios Web Forms ASP.NET para ver si funciona correctamente  
   
 ## <a name="overview"></a>Información general  
  WIF expone una clase denominada <xref:System.Security.Claims.ClaimsAuthenticationManager> que permite a los usuarios modificar notificaciones antes de que se presenten en una aplicación de usuario de confianza (RP). <xref:System.Security.Claims.ClaimsAuthenticationManager> es útil para la separación de intereses entre la autenticación y el código de la aplicación subyacente. En el ejemplo siguiente se muestra cómo agregar un rol a las notificaciones en la <xref:System.Security.Claims.ClaimsPrincipal> entrante que el RP puede necesitar.  
   
 ## <a name="summary-of-steps"></a>Resumen de pasos  
   
--   Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
+- Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
   
--   Paso 2: Implementar la transformación de notificaciones con un elemento ClaimsAuthenticationManager personalizado  
+- Paso 2: Implementar la transformación de notificaciones con un elemento ClaimsAuthenticationManager personalizado  
   
--   Paso 3: Probar la solución  
+- Paso 3: Probar la solución  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
  En este paso creará una aplicación de formularios Web Forms ASP.NET.  

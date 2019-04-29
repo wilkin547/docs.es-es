@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
 ms.openlocfilehash: 7a870eb0c85fa6ed208341a3ac10dce8bb0724bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765705"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Proveedores de Data Services (Data Services de WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] admite varios modelos de proveedor para exponer los datos como un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuentes de distribución. En este tema se proporciona información con el fin de permitirle seleccionar el proveedor de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] más adecuado para su origen de datos.  

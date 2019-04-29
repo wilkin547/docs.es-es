@@ -3,11 +3,11 @@ title: Proyectar XML en una forma distinta (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
 ms.openlocfilehash: ed689e2f0e659eade83fa8e4ec147b0edcddefc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766597"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Proyectar XML en una forma distinta (Visual Basic)
 Este tema muestra un ejemplo de cómo proyectar un XML cuya apariencia es diferente a la del XML de origen.  
@@ -230,7 +230,7 @@ End Module
 ## <a name="next-steps"></a>Pasos siguientes  
  En el siguiente ejemplo, realizará una consulta para buscar todo el texto de un documento de Word:  
   
--   [Buscar texto en documentos de Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Buscar texto en documentos de Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Vea también
 

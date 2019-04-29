@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932800"
 ---
 # <a name="using-message-contracts"></a>Usar contratos de mensaje
 Normalmente, al compilar aplicaciones de Windows Communication Foundation (WCF), los desarrolladores prestan especial atención a los problemas de serialización y estructuras de datos y no es necesario preocuparse de la estructura de los mensajes en el que se transportan los datos. Para estas aplicaciones, la creación de contratos de datos para los parámetros o valores devueltos es fácil. (Para obtener más información, consulte [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -244,11 +244,11 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>Atributos de encabezado SOAP  
  El estándar de SOAP define los siguientes atributos que pueden existir en un encabezado:  
   
--   `Actor/Role` (`Actor` en SOAP 1.1, `Role` en SOAP 1.2)  
+- `Actor/Role` (`Actor` en SOAP 1.1, `Role` en SOAP 1.2)  
   
--   `MustUnderstand`  
+- `MustUnderstand`  
   
--   `Relay`  
+- `Relay`  
   
  El atributo `Actor` o `Role` especifica el Identificador uniforme de recursos (URI) del nodo para el que está dirigido un encabezado determinado. El atributo `MustUnderstand` especifica si el nodo que procesa el encabezado debe entenderlo. El atributo `Relay` especifica si el encabezado se va a retransmitir a los nodos descendentes. WCF no realiza ningún procesamiento de estos atributos en los mensajes entrantes, excepto el `MustUnderstand` atributo, como se especifica en la sección "Versiones de contratos de mensaje" más adelante en este tema. Sin embargo, le permite leer y escribir estos atributos según sea necesario, como en la siguiente descripción.  
   
@@ -323,9 +323,9 @@ public class BankingTransaction
   
  Las siguientes reglas se aplican a los encabezados de versiones:  
   
--   WCF no se opone a los encabezados que faltan, los miembros correspondientes se dejan en sus valores predeterminados.  
+- WCF no se opone a los encabezados que faltan, los miembros correspondientes se dejan en sus valores predeterminados.  
   
--   WCF también omite los encabezados adicionales inesperados. La única excepción a esta regla es si el encabezado adicional tiene un atributo `MustUnderstand` establecido en `true` en el mensaje SOAP entrante. En este caso, se produce una excepción porque no se puede procesar ningún encabezado que deba entenderse.  
+- WCF también omite los encabezados adicionales inesperados. La única excepción a esta regla es si el encabezado adicional tiene un atributo `MustUnderstand` establecido en `true` en el mensaje SOAP entrante. En este caso, se produce una excepción porque no se puede procesar ningún encabezado que deba entenderse.  
   
  Los cuerpos de mensajes tienen reglas de versión similares; se omiten las partes de cuerpo de mensaje adicionales y que faltan.  
   
@@ -334,9 +334,9 @@ public class BankingTransaction
   
  Al crear u obtener acceso a un mensaje utilizando un tipo de contrato de mensaje que hereda de otros tipos de contrato de mensaje, se aplican las reglas siguientes:  
   
--   Todos los encabezados del mensaje en la jerarquía de la herencia se unen para formar el conjunto completo de encabezados del mensaje.  
+- Todos los encabezados del mensaje en la jerarquía de la herencia se unen para formar el conjunto completo de encabezados del mensaje.  
   
--   Todas las partes del cuerpo del mensaje en la jerarquía de la herencia se unen para formar el cuerpo del mensaje completo. Las partes del cuerpo se ordenan de acuerdo con las reglas de clasificación normales (mediante la propiedad <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> y, a continuación, alfabéticamente), sin importar su lugar en la jerarquía de herencia. Se desaconseja en gran medida usar la herencia de contrato de mensaje donde las partes del cuerpo del mensaje tienen lugar en varios niveles del árbol de herencia. Si una clase base y una clase derivada definen un encabezado o una parte del cuerpo con el mismo nombre, el miembro de la clase más base se utiliza para almacenar el valor de ese encabezado o parte del cuerpo.  
+- Todas las partes del cuerpo del mensaje en la jerarquía de la herencia se unen para formar el cuerpo del mensaje completo. Las partes del cuerpo se ordenan de acuerdo con las reglas de clasificación normales (mediante la propiedad <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> y, a continuación, alfabéticamente), sin importar su lugar en la jerarquía de herencia. Se desaconseja en gran medida usar la herencia de contrato de mensaje donde las partes del cuerpo del mensaje tienen lugar en varios niveles del árbol de herencia. Si una clase base y una clase derivada definen un encabezado o una parte del cuerpo con el mismo nombre, el miembro de la clase más base se utiliza para almacenar el valor de ese encabezado o parte del cuerpo.  
   
  Considere las clases del siguiente ejemplo de código:  
   
@@ -361,26 +361,26 @@ public class PatientRecord : PersonRecord
 ## <a name="wsdl-considerations"></a>Consideraciones sobre WSDL  
  Al generar un lenguaje de descripción de servicios Web (WSDL) a partir de un servicio que usa contratos de mensaje, es importante recordar que no todas las características de contratos de mensaje se reflejan en el WSDL resultante. Considere las cuestiones siguientes:  
   
--   WSDL no puede expresar el concepto de una matriz de encabezados. Al crear los mensajes con una matriz de encabezados utilizando <xref:System.ServiceModel.MessageHeaderArrayAttribute>, el WSDL resultante refleja solo un encabezado en lugar de la matriz.  
+- WSDL no puede expresar el concepto de una matriz de encabezados. Al crear los mensajes con una matriz de encabezados utilizando <xref:System.ServiceModel.MessageHeaderArrayAttribute>, el WSDL resultante refleja solo un encabezado en lugar de la matriz.  
   
--   El documento WSDL resultante puede que no refleje alguna información de protección.  
+- El documento WSDL resultante puede que no refleje alguna información de protección.  
   
--   El tipo de mensaje generado en el WSDL tiene el mismo nombre que el nombre de clase del tipo de contrato de mensaje.  
+- El tipo de mensaje generado en el WSDL tiene el mismo nombre que el nombre de clase del tipo de contrato de mensaje.  
   
--   Al utilizar el mismo contrato del mensaje en varias operaciones, se generan varios tipos de mensaje en el documento WSDL. Los nombres se hacen únicos sumando los números "2", "3", etc., para los usos subsiguientes. Al importar el WSDL, varios tipos de contrato de mensaje se crean y son idénticos salvo por sus nombres.  
+- Al utilizar el mismo contrato del mensaje en varias operaciones, se generan varios tipos de mensaje en el documento WSDL. Los nombres se hacen únicos sumando los números "2", "3", etc., para los usos subsiguientes. Al importar el WSDL, varios tipos de contrato de mensaje se crean y son idénticos salvo por sus nombres.  
   
 ## <a name="soap-encoding-considerations"></a>Consideraciones sobre la codificación SOAP  
  WCF permite utilizar estilos de XML, codificación SOAP heredado sin embargo, su uso no se recomienda. Al utilizar este estilo (estableciendo la propiedad `Use` como `Encoded` en el <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> aplicado al contrato de servicio), las siguientes consideraciones adicionales se aplican:  
   
--   No se admiten los encabezados del mensaje; esto significa que el atributo <xref:System.ServiceModel.MessageHeaderAttribute> y el atributo de matriz <xref:System.ServiceModel.MessageHeaderArrayAttribute> son incompatibles con la codificación SOAP.  
+- No se admiten los encabezados del mensaje; esto significa que el atributo <xref:System.ServiceModel.MessageHeaderAttribute> y el atributo de matriz <xref:System.ServiceModel.MessageHeaderArrayAttribute> son incompatibles con la codificación SOAP.  
   
--   Si no se ajusta el contrato del mensaje, esto es, si la propiedad <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> está establecida como `false`, el contrato de mensaje solo puede tener una parte del cuerpo.  
+- Si no se ajusta el contrato del mensaje, esto es, si la propiedad <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> está establecida como `false`, el contrato de mensaje solo puede tener una parte del cuerpo.  
   
--   El nombre del elemento contenedor para el contrato del mensaje de solicitud debe coincidir con el nombre de la operación. Utilice la propiedad `WrapperName` del contrato del mensaje para ello.  
+- El nombre del elemento contenedor para el contrato del mensaje de solicitud debe coincidir con el nombre de la operación. Utilice la propiedad `WrapperName` del contrato del mensaje para ello.  
   
--   El nombre del elemento contenedor del contrato del mensaje de respuesta debe ser igual que el nombre de la operación con el sufijo “Respuesta” agregado. Utilice la propiedad <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> del contrato del mensaje para ello.  
+- El nombre del elemento contenedor del contrato del mensaje de respuesta debe ser igual que el nombre de la operación con el sufijo “Respuesta” agregado. Utilice la propiedad <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> del contrato del mensaje para ello.  
   
--   La codificación SOAP conserva las referencias a objetos. Por ejemplo, considere el fragmento de código siguiente:  
+- La codificación SOAP conserva las referencias a objetos. Por ejemplo, considere el fragmento de código siguiente:  
   
     ```csharp  
     [MessageContract(WrapperName="updateChangeRecord")]  

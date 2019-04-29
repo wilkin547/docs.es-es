@@ -6,19 +6,19 @@ f1_keywords:
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
 ms.openlocfilehash: 1bc75303bcc2f46e54c06e89347da28997e59786
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935257"
 ---
 # <a name="bad-record-length"></a>Longitud de registro incorrecta
 Entre las causas posibles de este error se incluyen:  
   
--   La longitud de una variable de registro especificada en un `FileGet`, `FileGetObject`, `FilePut` o `FilePutObject` instrucción difiere de la longitud especificada en la correspondiente `FileOpen` instrucción.  
+- La longitud de una variable de registro especificada en un `FileGet`, `FileGetObject`, `FilePut` o `FilePutObject` instrucción difiere de la longitud especificada en la correspondiente `FileOpen` instrucción.  
   
--   La variable en un `FilePut` o `FilePutObject` instrucción es o incluye una cadena de longitud variable.  
+- La variable en un `FilePut` o `FilePutObject` instrucción es o incluye una cadena de longitud variable.  
   
--   La variable en un `FilePut` o `FilePutObject` es o incluye un `Variant` tipo.  
+- La variable en un `FilePut` o `FilePutObject` es o incluye un `Variant` tipo.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b3cc158c48e8bb9f833429bbddaa74ed459f1b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61930278"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles (Método)
 Obtiene un enumerador para los identificadores de objeto en un proceso.  
@@ -46,11 +46,11 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  El `types` parámetro especifica los tipos de identificador que desea incluir en la colección. `types` puede ser cualquiera de los siguientes tres miembros de la [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) enumeración:  
   
--   `CorHandleStrongOnly` (controladores para las referencias fuertes solo).  
+- `CorHandleStrongOnly` (controladores para las referencias fuertes solo).  
   
--   `CorHandleWeakOnly` (controladores para solo referencias débiles).  
+- `CorHandleWeakOnly` (controladores para solo referencias débiles).  
   
--   `CorHandleAll` (todos los identificadores).  
+- `CorHandleAll` (todos los identificadores).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

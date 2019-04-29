@@ -3,27 +3,27 @@ title: extremo de asociación
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
 ms.openlocfilehash: e549254533f8362ce3475fb3aa5dbaffb3e900e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769621"
 ---
 # <a name="association-end"></a>extremo de asociación
 Un *extremo de asociación* identifica el [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) en un extremo de un [asociación](../../../../docs/framework/data/adonet/association-type.md) y el número de entidades escriba instancias que pueden existir en dicho extremo de una asociación. Los extremos de asociación se definen como parte de una asociación, y esta debe tener exactamente dos extremos. [Las propiedades de navegación](../../../../docs/framework/data/adonet/navigation-property.md) permiten la navegación de extremo de asociación de uno a otro.  
   
  Una definición de extremo de asociación contiene la información siguiente:  
   
--   Uno de los tipos de entidad implicados en la asociación. (Necesario)  
+- Uno de los tipos de entidad implicados en la asociación. (Necesario)  
   
     > [!NOTE]
     >  En una asociación determinada, el tipo de entidad especificado para cada extremo de la asociación puede ser el mismo. Esto crea una auto-asociación.  
   
--   Un [multiplicidad de extremo de asociación](../../../../docs/framework/data/adonet/association-end-multiplicity.md) que indica el número de instancias del tipo de entidad que pueden estar en un extremo de la asociación. Una multiplicidad de extremo de asociación puede tener un valor uno (1), cero o uno (0.. 1), o muchos (\*).  
+- Un [multiplicidad de extremo de asociación](../../../../docs/framework/data/adonet/association-end-multiplicity.md) que indica el número de instancias del tipo de entidad que pueden estar en un extremo de la asociación. Una multiplicidad de extremo de asociación puede tener un valor uno (1), cero o uno (0.. 1), o muchos (\*).  
   
--   Nombre para el extremo de la asociación. (Opcional)  
+- Nombre para el extremo de la asociación. (Opcional)  
   
--   Información sobre las operaciones que se realizan en el extremo de la asociación, como por ejemplo la eliminación en cascada. (Opcional)  
+- Información sobre las operaciones que se realizan en el extremo de la asociación, como por ejemplo la eliminación en cascada. (Opcional)  
   
 ## <a name="example"></a>Ejemplo  
  El diagrama siguiente muestra un modelo conceptual con dos asociaciones: `PublishedBy` y `WrittenBy`. Los extremos de asociación para la asociación `PublishedBy` son los tipos de entidad `Book` y `Publisher`. La multiplicidad de la `Publisher` final es uno (1) y la multiplicidad de la `Book` final es igual a many (\*), que indica que un publicador publica muchos libros y un libro publicado por un publicador.  

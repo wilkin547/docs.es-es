@@ -3,11 +3,11 @@ title: Seguimiento de variable y argumento
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
 ms.openlocfilehash: 7062e44a18cfd4b07cc63f4b490c08fbbfeeb8a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755524"
 ---
 # <a name="variable-and-argument-tracking"></a>Seguimiento de variable y argumento
 Al realizar el seguimiento de la ejecución de un flujo de trabajo, a menudo resulta útil extraer los datos. Esto proporciona contexto adicional al tener acceso a un registro de seguimiento posterior a la ejecución. En [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], puede extraer cualquier variable o argumento visibles dentro del ámbito de cualquier actividad en un flujo de trabajo que use el seguimiento. Los perfiles de seguimiento facilitan la extracción de datos.  
@@ -15,9 +15,9 @@ Al realizar el seguimiento de la ejecución de un flujo de trabajo, a menudo res
 ## <a name="variables-and-arguments"></a>Variables y argumentos  
  Las variables y los argumentos se extraen cuando una actividad emite ActivityStateRecord.  Una variable solo está disponible para la extracción si se encuentra dentro del ámbito de la actividad. Una variable que se va a extraer de una actividad se especifica de la siguiente manera:  
   
--   Si el nombre de variable especifica una variable, el seguimiento busca la variable en la actividad actual a la que se está realizando el seguimiento y en las actividades primarias. Se busca la variable en el ámbito de actividad actual y en el ámbito primario.  
+- Si el nombre de variable especifica una variable, el seguimiento busca la variable en la actividad actual a la que se está realizando el seguimiento y en las actividades primarias. Se busca la variable en el ámbito de actividad actual y en el ámbito primario.  
   
--   Si las variables que se va a extraer se especifican con nombre = "*", se extraerán todas las variables dentro de la actividad actual se realiza el seguimiento. En este caso, las variables que estén dentro del ámbito pero que estén definidas en actividades primarias no se extraen.  
+- Si las variables que se va a extraer se especifican con nombre = "*", se extraerán todas las variables dentro de la actividad actual se realiza el seguimiento. En este caso, las variables que estén dentro del ámbito pero que estén definidas en actividades primarias no se extraen.  
   
  Al extraer los argumentos, los argumentos extraídos dependen del estado de la actividad. Cuando el estado de una actividad es Executing, solo están disponibles para su extracción `InArguments`. Para cualquier otro estado de actividad (Closed, Faulted, Canceled), todos los argumentos, tanto InArguments como OutArguments, estarán disponibles para la extracción.  
   

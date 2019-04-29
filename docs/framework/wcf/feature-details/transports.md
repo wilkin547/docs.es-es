@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
 ms.openlocfilehash: 6bb8e8b90c26533661684bd403b9ec439f1bb37e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933736"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Transportes en Windows Communication Foundation
 El nivel de transporte está en el nivel más bajo de la pila del canal. Los transportes principales utilizados en Windows Communication Foundation (WCF) son HTTP, HTTPS, TCP y canalizaciones con nombre. Los temas de esta sección tratan sobre la elección entre estos transportes, la configuración del transporte y el establecimiento de propiedades de optimización.  
   
- WCF incluye transportes adicionales. Para obtener información sobre el transporte de Message Queue Server (también conocido como MSMQ), consulte [colas y sesiones confiables](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Para obtener información sobre transporte peer-to-peer, consulte [redes Peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ WCF incluye transportes adicionales. Para obtener información sobre el transporte de Message Queuing (también conocido como MSMQ), consulte [colas y sesiones confiables](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Para obtener información sobre el transporte de punto a punto, vea [Peer-to-Peer Networking](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Elección del transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
@@ -31,8 +31,8 @@ El nivel de transporte está en el nivel más bajo de la pila del canal. Los tra
  [Configuración de HTTP y HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)  
  Describe cómo configurar los elementos de enlace de transporte HTTP y HTTPS.  
   
- [Sustitución de la reserva de direcciones URL de WCF por una reserva restringida](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
- Describe cómo usar las reservas de WCFURL restringido.  
+ [Cómo: Reemplazar la reserva de direcciones URL de WCF con una reserva restringida](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
+ Describe cómo usar las reservas WCFURL restringido.  
   
  [Cuotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
  Describe las consideraciones para establecer las cuotas disponibles en el nivel de transporte.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], event handling
 ms.assetid: b661b3dd-7815-4cc2-a1aa-a9a391ab3427
 ms.openlocfilehash: 3001480959ef90cb31048cbcf70aeff1632979fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941302"
 ---
 # <a name="how-to-handle-the-contextmenustrip-opening-event"></a>Procedimiento para controlar el evento Opening de ContextMenuStrip
 Puede personalizar el comportamiento de su <xref:System.Windows.Forms.ContextMenuStrip> control controlando el <xref:System.Windows.Forms.ToolStripDropDown.Opening> eventos.  

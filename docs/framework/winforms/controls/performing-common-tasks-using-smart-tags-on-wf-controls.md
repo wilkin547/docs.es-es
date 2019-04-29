@@ -7,20 +7,20 @@ helpviewer_keywords:
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 ms.openlocfilehash: a93402be30cb461ac6a0ed9daa4a684598a85da1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932605"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Tutorial: Realizar tareas comunes con etiquetas inteligentes en controles de formularios Windows Forms
 Como construir formularios y controles para la aplicación de Windows Forms, hay muchas tareas que llevará a cabo varias veces. Estas son algunas de las tareas realizadas normalmente que encontrará:  
   
--   Agregar o quitar una pestaña en un <xref:System.Windows.Forms.TabControl>.  
+- Agregar o quitar una pestaña en un <xref:System.Windows.Forms.TabControl>.  
   
--   Acoplar un control a su elemento primario.  
+- Acoplar un control a su elemento primario.  
   
--   Cambiar la orientación de un <xref:System.Windows.Forms.SplitContainer> control.  
+- Cambiar la orientación de un <xref:System.Windows.Forms.SplitContainer> control.  
   
  Para acelerar el desarrollo, muchos controles ofrecen etiquetas inteligentes, que son menús contextuales que le permiten realizar tareas comunes como éstas en un solo gesto en tiempo de diseño. Estas tareas se denominan *verbos de etiquetas inteligentes*.  
   
@@ -28,11 +28,11 @@ Como construir formularios y controles para la aplicación de Windows Forms, hay
   
  Las tareas ilustradas en este tutorial incluyen:  
   
--   Crear un proyecto de Windows Forms  
+- Crear un proyecto de Windows Forms  
   
--   Uso de etiquetas inteligentes  
+- Uso de etiquetas inteligentes  
   
--   Habilitación y deshabilitación de etiquetas inteligentes  
+- Habilitación y deshabilitación de etiquetas inteligentes  
   
  Cuando termine, comprenderá el rol de estas importantes características de diseño.  
   

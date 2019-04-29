@@ -9,11 +9,11 @@ helpviewer_keywords:
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
 ms.openlocfilehash: 3c44748798d5ed554fc9fbded9c3a4d981a66d2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769036"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Procedimiento Hacer referencia a la instancia actual de un objeto (Visual Basic)
 El *instancia actual* de un objeto es la instancia en la que se está ejecutando el código.  
@@ -22,7 +22,7 @@ El *instancia actual* de un objeto es la instancia en la que se está ejecutando
   
 ### <a name="to-refer-to-the-current-instance"></a>Para hacer referencia a la instancia actual  
   
--   Utilice el `Me` palabra clave donde utilizaría normalmente el nombre de una variable de objeto.  
+- Utilice el `Me` palabra clave donde utilizaría normalmente el nombre de una variable de objeto.  
   
     ```  
     Me.ForeColor = System.Drawing.Color.Crimson  
