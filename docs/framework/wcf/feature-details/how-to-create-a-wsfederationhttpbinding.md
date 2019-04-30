@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear un WSFederationHttpBinding'
+title: Procedimiento para crear un WSFederationHttpBinding
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
 ms.openlocfilehash: 16b93126157ff129d5e0b815bc951873e7fa760d
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778357"
 ---
-# <a name="how-to-create-a-wsfederationhttpbinding"></a>Cómo: Crear un WSFederationHttpBinding
+# <a name="how-to-create-a-wsfederationhttpbinding"></a>Procedimiento para crear un WSFederationHttpBinding
 
-En Windows Communication Foundation (WCF), el <xref:System.ServiceModel.WSFederationHttpBinding> clase ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) en configuración) proporciona un mecanismo para exponer un servicio federado. Es decir, un servicio que exige a los clientes su autenticación mediante un token de seguridad emitido por un servicio de token de seguridad. Este tema muestra cómo configurar un <xref:System.ServiceModel.WSFederationHttpBinding> tanto en el código y como en la configuración. Una vez creado el enlace, puede configurar un extremo para que utilice dicho enlace.
+En Windows Communication Foundation (WCF), el <xref:System.ServiceModel.WSFederationHttpBinding> clase ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) en configuración) proporciona un mecanismo para exponer un servicio federado. Es decir, un servicio que exige a los clientes su autenticación mediante un token de seguridad emitido por un servicio de token de seguridad. Este tema muestra cómo configurar un <xref:System.ServiceModel.WSFederationHttpBinding> tanto en el código y como en la configuración. Una vez creado el enlace, puede configurar un punto de conexión para que utilice dicho enlace.
 
  A continuación se describen los pasos básicos:
 
@@ -36,7 +36,7 @@ En Windows Communication Foundation (WCF), el <xref:System.ServiceModel.WSFedera
 
      El URI para un token SAML 1.1 es `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.
 
-4. Opcional. En servicios federados, establezca la propiedad <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> como la dirección URL de los metadatos de un servicio de token de seguridad. Si el servicio está configurado para publicar metadatos, el punto de conexión de los metadatos permite a los clientes del servicio seleccionar un par enlace/punto de conexión adecuado. Para obtener más información acerca de la publicación de metadatos, vea [la publicación de metadatos](publishing-metadata.md).
+4. Opcional. En servicios federados, establezca la propiedad <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> como la dirección URL de los metadatos de un servicio de token de seguridad. Si el servicio está configurado para publicar metadatos, el extremo de los metadatos permite a los clientes del servicio seleccionar un par enlace/extremo adecuado. Para obtener más información acerca de la publicación de metadatos, vea [la publicación de metadatos](publishing-metadata.md).
 
  También pueden establecerse otras propiedades, incluidos el tipo de clave utilizado como clave de prueba en el token emitido, el conjunto de algoritmos utilizado entre el cliente y el servicio, si negociar o especificar explícitamente la credencial del servicio, cualquier demanda concreta que el servicio espera que este contenido en el token emitido, y cualquier elemento XML adicional que deba agregarse a la solicitud que el cliente envía al servicio de token de seguridad.
 
@@ -75,11 +75,11 @@ En Windows Communication Foundation (WCF), el <xref:System.ServiceModel.WSFedera
 
 4. Establezca el atributo `mode` del elemento `<security>``TransportWithMessageCredential` con un valor de `Message` o , como se requiera.
 
-5. Cree un elemento `<message>` como elemento secundario del elemento `<security>`.
+5. Cree un elemento `<message>` como elemento secundario del elemento de `<security>`.
 
 6. Opcional. Establezca el atributo `algorithmSuite` del elemento `<message>` con un valor adecuado. De manera predeterminada, es `Basic256`.
 
-7. Opcional. Si se requiere una clave de prueba asimétrica, establezca el atributo `issuedKeyType` del elemento `<message>` como `AsymmetricKey`. De manera predeterminada, es `SymmetricKey`.
+7. Opcional. Si se requiere una clave de prueba asimétrica, establezca el atributo `issuedKeyType` del elemento `<message>`AsymmetricKey como`AsymmetricKey`. De manera predeterminada, es `SymmetricKey`.
 
 8. Opcional. Establezca el atributo `issuedTokenType` en el elemento `<message>`.
 
@@ -91,11 +91,11 @@ En Windows Communication Foundation (WCF), el <xref:System.ServiceModel.WSFedera
 
 12. Para obtener más información, consulte [autenticación e identidad de servicio](service-identity-and-authentication.md).
 
-13. Obligatorio en el cliente si no se especifica ningún emisor local; no se utiliza en el servicio. Crear un [ \<enlace >](../../../../docs/framework/misc/binding.md) elemento en la sección de enlaces que se puede usar para comunicarse con el servicio de token de seguridad. Para obtener más información acerca de cómo crear un enlace, consulte [Cómo: especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).
+13. Obligatorio en el cliente si no se especifica ningún emisor local; no se utiliza en el servicio. Crear un [ \<enlace >](../../../../docs/framework/misc/binding.md) elemento en la sección de enlaces que se puede usar para comunicarse con el servicio de token de seguridad. Para obtener más información acerca de cómo crear un enlace, consulte [Cómo: Especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).
 
 14. Especifique el enlace creado en el paso anterior estableciendo los atributos `binding` y `bindingConfiguration` del elemento `<issuer>`.
 
-15. No se utiliza en el cliente; opcional en el servicio. Cree un elemento `<issuerMetadata>` como elemento secundario del elemento <`message`>. A continuación, en un atributo `address` del elemento `<issuerMetadata>`, especifique la dirección en la que el servicio de token de seguridad publicará sus metadatos. De manera opcional, agregue un elemento secundario `<identity>` y especifique la identidad del servicio de token de seguridad
+15. No se utiliza en el cliente; opcional en el servicio. Crear un `<issuerMetadata>` como elemento secundario de la <`message`> elemento. A continuación, en un atributo `address` del elemento `<issuerMetadata>`, especifique la dirección en la que el servicio de token de seguridad publicará sus metadatos. De manera opcional, agregue un elemento secundario `<identity>` y especifique la identidad del servicio de token de seguridad
 
 16. Opcional en el cliente y el servicio. Agregue un elemento `<claimTypeRequirements>` como elemento secundario del elemento `<message>`. Especificar demandas necesarias y opcionales que se basa el servicio agregando [ \<Agregar >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-claimtyperequirements.md) elementos a la `<claimTypeRequirements>` tipo de elemento y especifica la notificación con el `claimType` atributo. Especifique si una notificación determinada es obligatoria u opcional estableciendo el atributo `isOptional`.
 
@@ -110,4 +110,4 @@ El ejemplo de código siguiente muestra el código para configurar `WSFederation
 
 - [Federación](federation.md)
 - [Ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Deshabilitar sesiones seguras en WSFederationHttpBinding](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Cómo: Deshabilitar las sesiones seguras en WSFederationHttpBinding](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
