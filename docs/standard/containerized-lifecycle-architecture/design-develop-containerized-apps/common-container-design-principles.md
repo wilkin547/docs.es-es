@@ -1,17 +1,17 @@
 ---
-title: Principios de diseño comunes de contenedor
+title: Principios de diseño de contenedores comunes
 description: Obtenga información sobre un principio fundamental del diseño del contenedor buena, es que un contenedor debe hospedar un solo proceso.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 206963d63cf8e6ab4fc61b9176f1ba095868c6fc
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969122"
 ---
-# <a name="common-container-design-principles"></a>Principios de diseño comunes de contenedor
+# <a name="common-container-design-principles"></a>Principios de diseño de contenedores comunes
 
 Con antelación de introducción al proceso de desarrollo son algunos conceptos básicos que vale la pena mencionar con respecto a cómo usar los contenedores.
 

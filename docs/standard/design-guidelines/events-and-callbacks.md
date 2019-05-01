@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
 author: KrzysztofCwalina
 ms.openlocfilehash: 3609d6ac4847cb081740fd698869df4976f83f8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960412"
 ---
 # <a name="events-and-callbacks"></a>Eventos y devoluciones de llamada
 Las devoluciones de llamada son puntos de extensibilidad que permiten un marco de trabajo para volver a llamar al código de usuario a través de un delegado. Estos delegados se pasan normalmente en el marco de trabajo a través de un parámetro de un método.  

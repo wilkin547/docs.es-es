@@ -3,14 +3,14 @@ title: Ejemplos de herramientas
 ms.date: 03/30/2017
 ms.assetid: ccf90c64-31de-4a18-9208-28887735ce80
 ms.openlocfilehash: 87073aae7c7645e934490174f45ecca58b6a1868
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949999"
 ---
 # <a name="tool-samples"></a>Ejemplos de herramientas
-Esta sección contiene herramientas de Windows Communication Foundation (WCF).  
+Esta sección contiene las herramientas de Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md)  

@@ -3,11 +3,11 @@ title: Instalar Message Queuing (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
 ms.openlocfilehash: 64736f8f0a34a53658dd2838738a3d36b3891d2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954952"
 ---
 # <a name="installing-message-queuing-msmq"></a>Instalar Message Queuing (MSMQ)
 Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Message Queuing 3.0.  
@@ -37,9 +37,9 @@ Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Mess
   
 3. Expanda Microsoft Message Queuing (MSMQ), expanda Núcleo de Microsoft Message Queuing (MSMQ) y, a continuación, active las casillas para que se instalen las siguientes características de Message Queuing:  
   
-    -   Integración de Servicios de dominio de Active Directory MSMQ (para los equipos unidos a un dominio).  
+    - Integración de Servicios de dominio de Active Directory MSMQ (para los equipos unidos a un dominio).  
   
-    -   Compatibilidad con MSMQ HTTP.  
+    - Compatibilidad con MSMQ HTTP.  
   
 4. Haga clic en **Aceptar**.  
   

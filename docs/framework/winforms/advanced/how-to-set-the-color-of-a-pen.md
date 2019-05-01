@@ -10,11 +10,11 @@ helpviewer_keywords:
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
 ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966882"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>Procedimiento para establecer el color de un lápiz
 En este ejemplo se cambia el color de preexistente <xref:System.Drawing.Pen> objeto  
@@ -27,7 +27,7 @@ En este ejemplo se cambia el color de preexistente <xref:System.Drawing.Pen> obj
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Un <xref:System.Drawing.Pen> objeto denominado `myPen`.  
+- Un <xref:System.Drawing.Pen> objeto denominado `myPen`.  
   
 ## <a name="robust-programming"></a>Programación sólida  
  Debe llamar a <xref:System.Drawing.Pen.Dispose%2A> en los objetos que consumen recursos del sistema (como <xref:System.Drawing.Pen> objetos) cuando haya terminado con ellos.  

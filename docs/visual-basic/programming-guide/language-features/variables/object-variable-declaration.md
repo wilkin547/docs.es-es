@@ -13,11 +13,11 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
 ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959983"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Declaración de variables de objeto (Visual Basic)
 Utilice una instrucción de declaración normal para declarar una variable de objeto. Para el tipo de datos, especifica `Object` (es decir, el [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)) o una clase más específica desde la que el objeto se va a crearse.  
@@ -49,19 +49,19 @@ Dim objC As System.OperatingSystem
 ### <a name="advantages-of-early-binding"></a>Ventajas del enlace anticipado  
  Declarar una variable de objeto como una clase específica ofrece varias ventajas:  
   
--   Comprobación automática de tipos  
+- Comprobación automática de tipos  
   
--   Garantiza que el acceso a todos los miembros de la clase específica  
+- Garantiza que el acceso a todos los miembros de la clase específica  
   
--   Compatibilidad con Microsoft IntelliSense del Editor de código  
+- Compatibilidad con Microsoft IntelliSense del Editor de código  
   
--   Mejorar la legibilidad del código  
+- Mejorar la legibilidad del código  
   
--   Menos errores en el código  
+- Menos errores en el código  
   
--   Errores detectados en tiempo de compilación en lugar de tiempo de ejecución  
+- Errores detectados en tiempo de compilación en lugar de tiempo de ejecución  
   
--   Ejecución de código más rápida  
+- Ejecución de código más rápida  
   
 ## <a name="access-to-object-variable-members"></a>Acceso a miembros de Variable de objeto  
  Cuando `Option Strict` está activado `On`, puede tener acceso a una variable de objeto sólo los métodos y propiedades de la clase con la que se ha declarado. Esto se ilustra en el siguiente ejemplo:  

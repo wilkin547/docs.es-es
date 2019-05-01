@@ -10,11 +10,11 @@ ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951715"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Instrucciones de programación segura para código sin administrar
 El código de algunas bibliotecas necesita llamar a código no administrado (por ejemplo, las API de código nativo, como Win32). Como esto implica salir del perímetro de seguridad del código administrado, se requiere mucha precaución. Si el código es neutro en cuanto a seguridad, tanto su código como cualquier otro código que lo llame deberán tener permiso de código no administrado (<xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> especificada).  
@@ -25,9 +25,9 @@ El código de algunas bibliotecas necesita llamar a código no administrado (por
   
  Dado que cualquier código administrado que proporcione una ruta de acceso al código nativo es un posible objetivo de códigos malintencionados, deberá tener mucho cuidado cuando decida qué código no administrado se puede usar de forma segura y cómo se debe usar. Por lo general, el código no administrado nunca debe exponerse directamente a llamadores de confianza parcial. Al evaluar la seguridad del uso de código no administrado en las bibliotecas a las que puede llamar el código de confianza parcial, hay dos aspectos que se deben tener en cuenta:  
   
--   **Funcionalidad**. ¿La API no administrada proporciona funcionalidad que no permita a los llamadores realizar operaciones potencialmente peligrosas? La seguridad de acceso del código utiliza permisos para exigir el acceso a los recursos, por lo que debe tener en cuenta si la API utiliza archivos, una interfaz de usuario o subprocesos, o si expone información protegida. Si es así, el ajuste del código administrado debe solicitar los permisos necesarios para poder escribir dicho código. Además, aunque no esté protegido con un permiso, el acceso a la memoria debe limitarse a la seguridad de tipo estricto.  
+- **Funcionalidad**. ¿La API no administrada proporciona funcionalidad que no permita a los llamadores realizar operaciones potencialmente peligrosas? La seguridad de acceso del código utiliza permisos para exigir el acceso a los recursos, por lo que debe tener en cuenta si la API utiliza archivos, una interfaz de usuario o subprocesos, o si expone información protegida. Si es así, el ajuste del código administrado debe solicitar los permisos necesarios para poder escribir dicho código. Además, aunque no esté protegido con un permiso, el acceso a la memoria debe limitarse a la seguridad de tipo estricto.  
   
--   **Comprobación de parámetros**. Un ataque habitual consiste en pasar parámetros inesperados a métodos de la API de código no administrado que están expuestos, en un intento de hacer que funcionen de manera distinta a su especificación. Las saturaciones del búfer con índices externos al intervalo o valores de desplazamiento son un ejemplo común de este tipo de ataque, al igual que los parámetros que podrían aprovechar un error en el código subyacente. Por lo tanto, aunque la API de código no administrado sea segura funcionalmente (después de las solicitudes necesarias) para los llamadores de confianza parcial, el código administrado también debe comprobar la validez de los parámetros de manera exhaustiva, para asegurarse de que el código malintencionado no pueda realizar llamadas no previstas con el nivel del contenedor de código administrado.  
+- **Comprobación de parámetros**. Un ataque habitual consiste en pasar parámetros inesperados a métodos de la API de código no administrado que están expuestos, en un intento de hacer que funcionen de manera distinta a su especificación. Las saturaciones del búfer con índices externos al intervalo o valores de desplazamiento son un ejemplo común de este tipo de ataque, al igual que los parámetros que podrían aprovechar un error en el código subyacente. Por lo tanto, aunque la API de código no administrado sea segura funcionalmente (después de las solicitudes necesarias) para los llamadores de confianza parcial, el código administrado también debe comprobar la validez de los parámetros de manera exhaustiva, para asegurarse de que el código malintencionado no pueda realizar llamadas no previstas con el nivel del contenedor de código administrado.  
   
 ## <a name="using-suppressunmanagedcodesecurityattribute"></a>Utilizar SuppressUnmanagedCodeSecurityAttribute  
  Hay un aspecto del rendimiento que está relacionado con la aserción y la posterior llamada a código no administrado. Por cada llamada de este tipo, el sistema de seguridad solicita permiso automáticamente al código no administrado, lo que provoca un recorrido de la pila cada vez. Si declara una aserción y, justo después, llama a código no administrado, puede que el recorrido de la pila no tenga sentido: estará formado por su aserción y su llamada a código no administrado.  
@@ -36,11 +36,11 @@ El código de algunas bibliotecas necesita llamar a código no administrado (por
   
  Si utiliza el **SuppressUnmanagedCodeSecurityAttribute**, compruebe los puntos siguientes:  
   
--   Haga que el punto de entrada al código no administrado sea interno o inaccesible fuera de su código.  
+- Haga que el punto de entrada al código no administrado sea interno o inaccesible fuera de su código.  
   
--   Todas las llamadas a código no administrado son vulnerabilidades de seguridad potenciales. Asegúrese de que su código no sea una puerta de entrada que permita al código malintencionado llamar indirectamente a código no administrado y evitar comprobaciones de seguridad. Solicite permisos, si es adecuado.  
+- Todas las llamadas a código no administrado son vulnerabilidades de seguridad potenciales. Asegúrese de que su código no sea una puerta de entrada que permita al código malintencionado llamar indirectamente a código no administrado y evitar comprobaciones de seguridad. Solicite permisos, si es adecuado.  
   
--   Use una convención de nomenclatura que identifique explícitamente el momento en el que crea una ruta de acceso peligrosa a código no administrado, como se describe en la siguiente sección.  
+- Use una convención de nomenclatura que identifique explícitamente el momento en el que crea una ruta de acceso peligrosa a código no administrado, como se describe en la siguiente sección.  
   
 ## <a name="naming-convention-for-unmanaged-code-methods"></a>Convención de nomenclatura para métodos de código no administrado  
  Hay una convención establecida, útil y muy recomendada, para asignar nombres a los métodos de código no administrado. Todos los métodos de código no administrado se dividen en tres categorías: **safe**, **native**y **unsafe**. Estas palabras clave se pueden utilizar como nombres de clases, dentro de las cuales se definen los distintos tipos de puntos de entrada de código no administrado. En el código fuente, estas palabras clave se deben agregar al nombre de la clase, como en `Safe.GetTimeOfDay`, `Native.Xyz`o `Unsafe.DangerousAPI`, por ejemplo. Cada una de estas palabras clave proporciona información de seguridad útil para los desarrolladores que utilizan esa clase, como se describe en la tabla siguiente.  

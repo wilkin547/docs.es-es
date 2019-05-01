@@ -3,11 +3,11 @@ title: Transferir
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
 ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964494"
 ---
 # <a name="transfer"></a>Transferir
 Este tema describe la transferencia en el modelo de seguimiento de actividad de Windows Communication Foundation (WCF).  
@@ -35,9 +35,9 @@ Este tema describe la transferencia en el modelo de seguimiento de actividad de 
 ## <a name="example-of-transfers"></a>Ejemplo de transferencias  
  A continuación se muestran dos ejemplos de transferencia.  
   
--   Al crear un host de servicio, el constructor toma el control del código de llamada o el código de llamada transfiere al constructor. Cuando el constructor ha terminado de ejecutar, devuelve el control al código de llamada o el constructor transfiere de nuevo al código de llamada. Éste es el caso de una relación anidada.  
+- Al crear un host de servicio, el constructor toma el control del código de llamada o el código de llamada transfiere al constructor. Cuando el constructor ha terminado de ejecutar, devuelve el control al código de llamada o el constructor transfiere de nuevo al código de llamada. Éste es el caso de una relación anidada.  
   
--   Cuando un agente de escucha empieza a procesar datos de transporte, crea un nuevo subproceso y da a la actividad Recibir Bytes el contexto adecuado para procesar, es decir, pasar control y datos. Cuando ese subproceso ha finalizado el procesamiento de la solicitud, la actividad Recibir Bytes no devuelve nada al agente de escucha. En este caso, tenemos una transferencia de entrada pero ninguna de salida en la nueva actividad de subproceso. Las dos actividades se relacionan pero no están anidadas.  
+- Cuando un agente de escucha empieza a procesar datos de transporte, crea un nuevo subproceso y da a la actividad Recibir Bytes el contexto adecuado para procesar, es decir, pasar control y datos. Cuando ese subproceso ha finalizado el procesamiento de la solicitud, la actividad Recibir Bytes no devuelve nada al agente de escucha. En este caso, tenemos una transferencia de entrada pero ninguna de salida en la nueva actividad de subproceso. Las dos actividades se relacionan pero no están anidadas.  
   
 ## <a name="activity-transfer-sequence"></a>Secuencia de transferencia de actividad  
  Una secuencia de transferencia de actividad bien formada incluye los pasos siguientes.  

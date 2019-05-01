@@ -3,11 +3,11 @@ title: Visualización de registros de mensajes
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
 ms.openlocfilehash: 2322d2a6e0c5a6f26ad103be72230666f6bca191
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964403"
 ---
 # <a name="viewing-message-logs"></a>Visualización de registros de mensajes
 En este tema se explica cómo puede ver registros de mensajes.  
@@ -29,9 +29,9 @@ En este tema se explica cómo puede ver registros de mensajes.
   
  Para solucionar este problema puede usar uno de los métodos siguientes:  
   
--   Ver sólo dos de los tres registros de mensajes en el [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) en cualquier momento.  
+- Ver sólo dos de los tres registros de mensajes en el [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) en cualquier momento.  
   
--   Si ve los tres registros en el [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) al mismo tiempo, puede modificar el servicio de retransmisión mediante la creación de un nuevo <xref:System.ServiceModel.Channels.Message> instancia. Esta instancia debería ser una copia del cuerpo del mensaje entrante, más todos los encabezados salvo los encabezados `ActivityId` y `Action`. En el ejemplo siguiente de código se muestra cómo hacer esto:  
+- Si ve los tres registros en el [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) al mismo tiempo, puede modificar el servicio de retransmisión mediante la creación de un nuevo <xref:System.ServiceModel.Channels.Message> instancia. Esta instancia debería ser una copia del cuerpo del mensaje entrante, más todos los encabezados salvo los encabezados `ActivityId` y `Action`. En el ejemplo siguiente de código se muestra cómo hacer esto:  
   
 ```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -50,15 +50,15 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 ## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Casos excepcionales de contenido del registro de mensajes inexacto  
  Bajo las condiciones siguientes, los mensajes que se están registrados puede que no sean la representación exacta de la presente secuencia de octeto en la conexión.  
   
--   Para BasicHttpBinding, los encabezados de envoltura se registran para los mensajes entrantes en el espacio de nombres /direccionamiento/ninguno.  
+- Para BasicHttpBinding, los encabezados de envoltura se registran para los mensajes entrantes en el espacio de nombres /direccionamiento/ninguno.  
   
--   Puede que no coincidan los espacios en blanco.  
+- Puede que no coincidan los espacios en blanco.  
   
--   Para los mensajes entrantes, los elementos vacíos se pueden representar de manera diferente. Por ejemplo, \<etiqueta >\</etiqueta > en lugar de \<etiqueta / >  
+- Para los mensajes entrantes, los elementos vacíos se pueden representar de manera diferente. Por ejemplo, \<etiqueta >\</etiqueta > en lugar de \<etiqueta / >  
   
--   Cuando el registro de PII conocido está deshabilitado de forma predeterminada o explícita estableciendo enableLoggingKnownPii="true".  
+- Cuando el registro de PII conocido está deshabilitado de forma predeterminada o explícita estableciendo enableLoggingKnownPii="true".  
   
--   La codificación se habilita para transformar a UTF-8.  
+- La codificación se habilita para transformar a UTF-8.  
   
 ## <a name="see-also"></a>Vea también
 

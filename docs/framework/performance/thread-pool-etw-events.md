@@ -8,20 +8,20 @@ ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caacee591c4df8389cea241916618f50da56b22b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949167"
 ---
 # <a name="thread-pool-etw-events"></a>Eventos ETW de grupo de subprocesos
 <a name="top"></a> Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.  
   
  Hay dos grupos de eventos de grupo de subprocesos:  
   
--   [Eventos de grupo de subprocesos de trabajo](#worker), que proporcionan información sobre cómo una aplicación usa el grupo de subprocesos y el efecto de las cargas de trabajo en el control de simultaneidad.  
+- [Eventos de grupo de subprocesos de trabajo](#worker), que proporcionan información sobre cómo una aplicación usa el grupo de subprocesos y el efecto de las cargas de trabajo en el control de simultaneidad.  
   
--   [Eventos de grupo de subprocesos de E/S](#io), que proporcionan información sobre los subprocesos de E/S que se crean, se retiran, se anula su retirada o finalizan en el grupo de subprocesos.  
+- [Eventos de grupo de subprocesos de E/S](#io), que proporcionan información sobre los subprocesos de E/S que se crean, se retiran, se anula su retirada o finalizan en el grupo de subprocesos.  
   
 <a name="worker"></a>   
 ## <a name="worker-thread-pool-events"></a>Eventos de grupo de subprocesos de trabajo  

@@ -3,11 +3,11 @@ title: Enlazar una propiedad de actividad personalizada a un control de diseñad
 ms.date: 03/30/2017
 ms.assetid: 2e8061ea-10f5-407c-a31f-d0d74ce12f27
 ms.openlocfilehash: 142a9eb273a98d3a2d83a1239d6d7c891d5cc305
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945904"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Enlazar una propiedad de actividad personalizada a un control de diseñador
 
@@ -19,7 +19,7 @@ La operación de enlazar un control de diseñador de cuadro de texto a un argume
 
 2. Cree una nueva clase denominada ComboBoxItemConverter. Agregue una referencia a System.Windows.Data y haga que la clase derive de <xref:System.Windows.Data.IValueConverter>. Haga que Visual Studio implemente la interfaz para generar códigos auxiliares para `Convert` y `ConvertBack`.
 
-3. Agregue el código siguiente al método `Convert`. Este código convierte el <xref:System.Activities.InArgument%601> de tipo <xref:System.String> de la actividad en el valor que se va a colocar en el diseñador.
+3. Agregue el código siguiente al método `Convert` . Este código convierte el <xref:System.Activities.InArgument%601> de tipo <xref:System.String> de la actividad en el valor que se va a colocar en el diseñador.
 
     ```csharp
     ModelItem modelItem = value as ModelItem;
@@ -73,7 +73,7 @@ La operación de enlazar un control de diseñador de cuadro de texto a un argume
     return null;
     ```
 
-4. Agregue el código siguiente al método `ConvertBack`. Este código vuelve a convertir el elemento de cuadro combinado de entrada en un <xref:System.Activities.InArgument%601>.
+4. Agregue el código siguiente al método `ConvertBack` . Este código vuelve a convertir el elemento de cuadro combinado de entrada en un <xref:System.Activities.InArgument%601>.
 
     ```csharp
     // Convert combo box value to InArgument<string>

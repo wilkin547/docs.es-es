@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
 ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946749"
 ---
 # <a name="application-settings-architecture"></a>Arquitectura de configuración de la aplicación
 Este tema describe cómo funciona la arquitectura de la configuración de la aplicación y explora las características avanzadas de la arquitectura, como valores de configuración agrupados y claves de configuración.  
@@ -24,15 +24,15 @@ Este tema describe cómo funciona la arquitectura de la configuración de la apl
 ## <a name="defining-settings"></a>Definir la configuración  
  La arquitectura de configuración de la aplicación se utiliza en [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y en Windows Forms, y contiene un número de clases base que comparten ambos entornos. Lo más importante es <xref:System.Configuration.SettingsBase>, que proporciona acceso a la configuración a través de una colección y proporciona métodos de bajo nivel para cargar y guardar la configuración. Cada entorno implementa su propia clase derivada de <xref:System.Configuration.SettingsBase> para proporcionar funcionalidad de configuración adicional para ese entorno. En una aplicación basada en Windows Forms, toda la configuración de aplicación debe definirse en una clase derivada de la <xref:System.Configuration.ApplicationSettingsBase> (clase), que agrega la siguiente funcionalidad a la clase base:  
   
--   Operaciones de almacenamiento y de carga de nivel superior  
+- Operaciones de almacenamiento y de carga de nivel superior  
   
--   Compatibilidad de la configuración de ámbito de usuario  
+- Compatibilidad de la configuración de ámbito de usuario  
   
--   Revertir la configuración de un usuario a los valores predeterminados  
+- Revertir la configuración de un usuario a los valores predeterminados  
   
--   Actualizar la configuración de una versión de aplicación anterior  
+- Actualizar la configuración de una versión de aplicación anterior  
   
--   Validar la configuración antes de modificarla o después de guardarla  
+- Validar la configuración antes de modificarla o después de guardarla  
   
  La configuración se puede describir utilizando varios atributos definidos dentro de la <xref:System.Configuration> espacio de nombres; estos se describen en [Application Settings Attributes](application-settings-attributes.md). Al definir una configuración, debe aplicar con cualquiera <xref:System.Configuration.ApplicationScopedSettingAttribute> o <xref:System.Configuration.UserScopedSettingAttribute>, que describe si la configuración se aplica a toda la aplicación o sólo para el usuario actual.  
   
@@ -46,11 +46,11 @@ Este tema describe cómo funciona la arquitectura de la configuración de la apl
   
  El sistema de configuración incluido originalmente en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] admite proporcionar datos de configuración de la aplicación estáticos mediante un archivo machine.config del equipo local o dentro de un archivo `app.`exe.config que implemente con su aplicación. La <xref:System.Configuration.LocalFileSettingsProvider> clase expande esta compatibilidad nativa de las maneras siguientes:  
   
--   La configuración de ámbito de aplicación se puede almacenar en los archivos machine.config o `app.`.exe.config. Machine.config siempre es de solo lectura, mientras que `app`.exe.config está restringido por razones de seguridad a solo lectura para la mayoría de las aplicaciones.  
+- La configuración de ámbito de aplicación se puede almacenar en los archivos machine.config o `app.`.exe.config. Machine.config siempre es de solo lectura, mientras que `app`.exe.config está restringido por razones de seguridad a solo lectura para la mayoría de las aplicaciones.  
   
--   La configuración de ámbito de usuario se puede almacenar en archivos `app`.exe.config, en cuyo caso se tratan como valores predeterminados estáticos.  
+- La configuración de ámbito de usuario se puede almacenar en archivos `app`.exe.config, en cuyo caso se tratan como valores predeterminados estáticos.  
   
--   La configuración de ámbito de usuario no predeterminada se almacena en un nuevo archivo, *usuario*.config, donde *usuario* es el nombre de usuario de la persona que actualmente ejecuta la aplicación. Puede especificar un valor predeterminado para una configuración con ámbito de usuario con <xref:System.Configuration.DefaultSettingValueAttribute>. Puesto que la configuración de ámbito de usuario cambia a menudo durante la ejecución de la aplicación, `user`.config siempre es de lectura y escritura.  
+- La configuración de ámbito de usuario no predeterminada se almacena en un nuevo archivo, *usuario*.config, donde *usuario* es el nombre de usuario de la persona que actualmente ejecuta la aplicación. Puede especificar un valor predeterminado para una configuración con ámbito de usuario con <xref:System.Configuration.DefaultSettingValueAttribute>. Puesto que la configuración de ámbito de usuario cambia a menudo durante la ejecución de la aplicación, `user`.config siempre es de lectura y escritura.  
   
  Los tres archivos de configuración almacenan la configuración en formato XML. El elemento XML de nivel superior para la configuración de ámbito de la aplicación es `<appSettings>`, mientras que `<userSettings>` se utiliza para la configuración de ámbito de usuario. Un archivo `app`.exe.config que contiene la configuración de ámbito de la aplicación y los valores predeterminados para la configuración de ámbito de usuario tendría el siguiente aspecto:  
   

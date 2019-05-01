@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
 ms.openlocfilehash: a617100e46d4bcafb9325efa99c255f2f8ee5981
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955173"
 ---
 # <a name="reliable-services"></a>Servicios de confianza
 Las colas y sesiones confiables son las características de Windows Communication Foundation (WCF) que implementan la mensajería de confianza. En este tema se explica las características de mensajería confiables de WCF.  
@@ -22,15 +22,15 @@ Las colas y sesiones confiables son las características de Windows Communicatio
   
  La mensajería de confianza realiza las funciones siguientes:  
   
--   Transfiere garantías para los mensajes enviados desde un origen a un destino sin tener en cuenta la transferencia de los mensajes o los errores de transporte.  
+- Transfiere garantías para los mensajes enviados desde un origen a un destino sin tener en cuenta la transferencia de los mensajes o los errores de transporte.  
   
--   Separa el origen del destino. Este hecho proporciona un error independiente y la recuperación del origen y el destino, además de la transferencia confiable y la entrega de los mensajes aun cuando no está disponible el origen o el destino.  
+- Separa el origen del destino. Este hecho proporciona un error independiente y la recuperación del origen y el destino, además de la transferencia confiable y la entrega de los mensajes aun cuando no está disponible el origen o el destino.  
   
  La mensajería de confianza a menudo viene acompañada de una alta latencia. *Latencia* es el tiempo necesario para que el mensaje en alcanzar el destino desde el origen. WCF, por lo tanto, proporciona los siguientes tipos de mensajería confiable:  
   
--   [Las sesiones confiables](../../../docs/framework/wcf/feature-details/reliable-sessions.md), que ofrece transferencia de confianza sin el costo de latencia alta.  
+- [Las sesiones confiables](../../../docs/framework/wcf/feature-details/reliable-sessions.md), que ofrece transferencia de confianza sin el costo de latencia alta.  
   
--   [Las colas en WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md), que proporciona transferencias de confianza y separación entre el origen y el destino.  
+- [Las colas en WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md), que proporciona transferencias de confianza y separación entre el origen y el destino.  
   
 ## <a name="reliable-sessions"></a>Sesiones de confianza  
  Las sesiones de confianza proporcionan transferencia confiable de un punto de conexión a otro de mensajes entre un origen y un destino mediante el protocolo de mensajería de confianza WS, sin tener en cuenta el número o tipo de intermediarios que separan los puntos de conexión de la mensajería (origen y destino). Esto incluye a cualquier intermediario de transporte que no utilice SOAP (por ejemplo, los servidores proxy HTTP) o los intermediarios que utilicen SOAP (por ejemplo, los puentes o enrutadores basados en SOAP) que son necesarios para que los mensajes fluyan entre los extremos. Las sesiones confiables utilizan una ventana de transferencia en memoria para enmascarar errores de nivel de mensaje de SOAP y restablecer las conexiones en el caso de errores de transporte.  

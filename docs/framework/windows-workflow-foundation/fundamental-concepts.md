@@ -3,11 +3,11 @@ title: Conceptos fundamentales de Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
 ms.openlocfilehash: ce17e5436ecff1937db605450d187184df9104a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945670"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Conceptos fundamentales de Windows Workflow
 El desarrollo del flujo de trabajo en [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] usa conceptos que pueden ser nuevos para algunos desarrolladores de software. En este tema se describen algunos de ellos y la forma en que se implementan.  
@@ -27,27 +27,27 @@ El desarrollo del flujo de trabajo en [!INCLUDE[netfx_current_long](../../../inc
 ## <a name="workflow-runtime"></a>Tiempo de ejecución de flujo de trabajo  
  El tiempo de ejecución de flujo de trabajo es el entorno en el que los flujos de trabajo se ejecutan. <xref:System.Activities.WorkflowInvoker> es la manera más sencilla de ejecutar un flujo de trabajo. El host usa <xref:System.Activities.WorkflowInvoker> para lo siguiente:  
   
--   Para invocar un flujo de trabajo de forma sincrónica.  
+- Para invocar un flujo de trabajo de forma sincrónica.  
   
--   Para proporcionar datos o recuperar las salidas de un flujo de trabajo.  
+- Para proporcionar datos o recuperar las salidas de un flujo de trabajo.  
   
--   Para agregar extensiones que van a usar las actividades.  
+- Para agregar extensiones que van a usar las actividades.  
   
  <xref:System.Activities.ActivityInstance> es el proxy seguro para subprocesos que los hosts pueden usar para interactuar con el tiempo de ejecución. El host usa <xref:System.Activities.ActivityInstance> para lo siguiente:  
   
--   Para adquirir una instancia creándola o cargándola desde un almacén de instancias.  
+- Para adquirir una instancia creándola o cargándola desde un almacén de instancias.  
   
--   Para que se le notifique sobre los eventos de ciclo de vida de la instancia.  
+- Para que se le notifique sobre los eventos de ciclo de vida de la instancia.  
   
--   Para controlar la ejecución del flujo de trabajo.  
+- Para controlar la ejecución del flujo de trabajo.  
   
--   Para proporcionar datos o recuperar las salidas de un flujo de trabajo.  
+- Para proporcionar datos o recuperar las salidas de un flujo de trabajo.  
   
--   Para señalar una continuación del flujo de trabajo y pasar valores en el flujo de trabajo.  
+- Para señalar una continuación del flujo de trabajo y pasar valores en el flujo de trabajo.  
   
--   Para conservar los datos del flujo de trabajo.  
+- Para conservar los datos del flujo de trabajo.  
   
--   Para agregar extensiones que van a usar las actividades.  
+- Para agregar extensiones que van a usar las actividades.  
   
  Las actividades tienen acceso al entorno de tiempo de ejecución de flujo de trabajo mediante la clase derivada de <xref:System.Activities.ActivityContext> adecuada, como <xref:System.Activities.NativeActivityContext> o <xref:System.Activities.CodeActivityContext>. Usan esto para resolver argumentos y variables, para programar las actividades secundarias, y para muchos otros objetivos.  
   
@@ -57,10 +57,10 @@ El desarrollo del flujo de trabajo en [!INCLUDE[netfx_current_long](../../../inc
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Persistencia, descarga y flujos de trabajo de ejecución prolongada  
  El flujo de trabajo de Windows simplifica la creación de programas reactivos de ejecución prolongada al proporcionar:  
   
--   Actividades que tienen acceso a datos externos.  
+- Actividades que tienen acceso a datos externos.  
   
--   La capacidad de crear objetos <xref:System.Activities.Bookmark> que un agente de escucha del host puede reanudar.  
+- La capacidad de crear objetos <xref:System.Activities.Bookmark> que un agente de escucha del host puede reanudar.  
   
--   La capacidad de conservar los datos de un flujo de trabajo y descargar el flujo de trabajo, a continuación, recargue y reactive el flujo de trabajo en respuesta a la reasunción de los objetos <xref:System.Activities.Bookmark> en un flujo de trabajo determinado.  
+- La capacidad de conservar los datos de un flujo de trabajo y descargar el flujo de trabajo, a continuación, recargue y reactive el flujo de trabajo en respuesta a la reasunción de los objetos <xref:System.Activities.Bookmark> en un flujo de trabajo determinado.  
   
  Un flujo de trabajo ejecuta continuamente las actividades hasta que no haya más que ejecutar o hasta que todas las actividades actualmente en ejecución estén esperando datos. En este último estado, el flujo de trabajo está inactivo. Es normal que un host descargue los flujos de trabajo inactivos y los recargue para continuar con la ejecución cuando llega un mensaje. <xref:System.ServiceModel.Activities.WorkflowServiceHost> proporciona la funcionalidad para esta característica y proporciona una directiva de descarga extensible. En el caso de los bloques de ejecución que usen el estado de datos volátil o datos que no se puedan conservar, una actividad puede indicar a un host que no se debería conservar mediante <xref:System.Activities.NoPersistHandle>. Un flujo de trabajo también puede conservar explícitamente sus datos en medios de almacenamiento duraderos mediante la actividad <xref:System.Activities.Statements.Persist>.

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], recoloring images
 ms.assetid: f28c54fd-9c80-4f6f-b242-55f7ffcda84b
 ms.openlocfilehash: b6ec90f5102b562a252218be84aa7b3141e05b83
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948075"
 ---
 # <a name="recoloring-images"></a>Cambiar el color de las imágenes
 Cambio de color es el proceso de ajustar los colores de imagen. Algunos ejemplos de cambio de color están cambiando un color a otro, ajustar la intensidad de un color en relación con otro color, ajustar el brillo o el contraste de todos los colores y conversión de colores a tonalidades de gris.  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
 ms.openlocfilehash: e66acae5e98d561883f4ad59853dfd862c8ebfee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946463"
 ---
 # <a name="statements-in-visual-basic"></a>Instrucciones en Visual Basic
 
@@ -156,7 +156,7 @@ En muchos casos, puede continuar una instrucción en la siguiente línea consecu
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    Para obtener más información, consulte [inicializadores de objeto: tipos con nombre y anónimos](./objects-and-classes/object-initializers-named-and-anonymous-types.md) o [inicializadores de colección](./collection-initializers/index.md).
+    Para obtener más información, consulte [inicializadores de objeto: Tipos con nombre y anónimos](./objects-and-classes/object-initializers-named-and-anonymous-types.md) o [inicializadores de colección](./collection-initializers/index.md).
 
 - Después de una abierta expresión incrustada (`<%=`) o antes del cierre de una expresión incrustada (`%>`) dentro de un literal XML. Por ejemplo:
 
@@ -196,7 +196,7 @@ En muchos casos, puede continuar una instrucción en la siguiente línea consecu
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   Para obtener más información, consulte [con... Terminar con la instrucción](../../../visual-basic/language-reference/statements/with-end-with-statement.md) o [inicializadores de objeto: tipos con nombre y anónimos](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
+   Para obtener más información, consulte [con... Terminar con la instrucción](../../../visual-basic/language-reference/statements/with-end-with-statement.md) o [inicializadores de objeto: Tipos con nombre y anónimos](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
 
 - Después de un calificador de propiedad de eje XML (`.` o `.@` o `...`). Sin embargo, debe incluir un carácter de continuación de línea (`_`) al especificar un calificador de miembro cuando se usa el `With` palabra clave. Por ejemplo:
 
@@ -242,9 +242,9 @@ Si, después de escribir una línea de código, se muestra la línea con un subr
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-|Término|de esquema JSON|
+|Término|Definición|
 |---|---|
 |[Operadores de asignación](../../../visual-basic/language-reference/operators/assignment-operators.md)|Proporciona vínculos a páginas de referencia del lenguaje que describen los operadores de asignación como `=`, `*=`, y `&=`.|
 |[Operadores y expresiones](./operators-and-expressions/index.md)|Se muestra cómo combinar elementos con operadores para obtener nuevos valores.|
-|[Interrumpir y combinar instrucciones en código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Muestra cómo dividir una única instrucción en varias líneas y cómo colocar varias instrucciones en la misma línea.|
-|[Aplicar etiquetas a las instrucciones](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Muestra cómo etiquetar una línea de código.|
+|[Cómo: Interrumpir y combinar instrucciones en código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Muestra cómo dividir una única instrucción en varias líneas y cómo colocar varias instrucciones en la misma línea.|
+|[Cómo: Instrucciones de la etiqueta](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Muestra cómo etiquetar una línea de código.|

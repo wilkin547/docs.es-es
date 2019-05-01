@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949609"
 ---
 # <a name="sending-and-receiving-faults"></a>Envío y recepción de errores
 Los errores de SOAP transportan información de condición de errores desde un servicio a un cliente y, en caso de comunicación dúplex, desde un cliente a un servicio de manera interoperable. Normalmente, un servicio define el contenido del error personalizado y especifica qué operaciones pueden devolverlos. (Para obtener más información, consulte [definir y especificar los errores](../../../docs/framework/wcf/defining-and-specifying-faults.md).) Este tema discute cómo un servicio o cliente dúplex puede enviar esos errores cuando la condición de error correspondiente se ha producido y cómo una aplicación de cliente o servicio administra estos errores. Para obtener información general de control de errores en las aplicaciones de Windows Communication Foundation (WCF), consulte [especificar y controlar errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -47,9 +47,9 @@ Los errores de SOAP transportan información de condición de errores desde un s
 ## <a name="handling-faults"></a>Control de errores  
  En los clientes de WCF, se producen errores de SOAP que se producen durante la comunicación que son de interés para las aplicaciones cliente como excepciones administradas. Aunque hay muchas excepciones que pueden producirse durante la ejecución de cualquier programa, pueden esperar las aplicaciones que usan el modelo de programación de cliente WCF controlar las excepciones de los dos tipos siguientes como resultado de la comunicación.  
   
--   <xref:System.TimeoutException>  
+- <xref:System.TimeoutException>  
   
--   <xref:System.ServiceModel.CommunicationException>  
+- <xref:System.ServiceModel.CommunicationException>  
   
  Los objetos <xref:System.TimeoutException> se producen cuando una operación supera el período de tiempo de espera especificado.  
   
@@ -81,13 +81,13 @@ Los errores de SOAP transportan información de condición de errores desde un s
   
  Normalmente, los canales de objeto de cliente se cierran de una de las siguientes maneras:  
   
--   Cuando el objeto de cliente WCF se recicla.  
+- Cuando el objeto de cliente WCF se recicla.  
   
--   Cuando la aplicación de cliente llama <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
+- Cuando la aplicación de cliente llama <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
   
--   Cuando la aplicación de cliente llama <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
+- Cuando la aplicación de cliente llama <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
   
--   Cuando la aplicación de cliente llama a una operación que es una operación de finalización para una sesión.  
+- Cuando la aplicación de cliente llama a una operación que es una operación de finalización para una sesión.  
   
  En todos los casos, cerrar el canal indica al canal que comience a cerrar todos los canales subyacentes que puedan estar enviando mensajes para admitir una funcionalidad compleja en el nivel de la aplicación. Por ejemplo, cuando un contrato requiere sesiones, un enlace intenta establecer una sesión mediante el intercambio de mensajes con el canal del servicio hasta que se establezca una sesión. Cuando se cierre el canal, el canal de la sesión subyacente notifica al servicio que la sesión se ha terminado. En este caso, si el canal ya se ha anulado, cerrado o es inutilizable (por ejemplo, cuando se desconecta un cable de red), el canal de cliente no puede informar al canal del servicio que se finaliza la sesión y es posible que se produzca una excepción.  
   

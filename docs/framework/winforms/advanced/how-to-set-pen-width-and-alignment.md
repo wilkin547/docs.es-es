@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
 ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967298"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Procedimiento para establecer el ancho y la alineación del lápiz
 Cuando creas un <xref:System.Drawing.Pen>, puede proporcionar el ancho del lápiz como uno de los argumentos al constructor. También puede cambiar el ancho del lápiz con el <xref:System.Drawing.Pen.Width%2A> propiedad de la <xref:System.Drawing.Pen> clase.  
@@ -26,7 +26,7 @@ Cuando creas un <xref:System.Drawing.Pen>, puede proporcionar el ancho del lápi
   
 ### <a name="to-vary-the-width-of-a-pen"></a>Para variar el ancho de un lápiz  
   
--   Establezca el valor de la <xref:System.Drawing.Pen.Alignment%2A> propiedad <xref:System.Drawing.Drawing2D.PenAlignment.Center> (predeterminado) para especificar que los píxeles que se dibuja con el lápiz verde se centrará en la línea teórica. La siguiente ilustración muestra la línea resultante.  
+- Establezca el valor de la <xref:System.Drawing.Pen.Alignment%2A> propiedad <xref:System.Drawing.Drawing2D.PenAlignment.Center> (predeterminado) para especificar que los píxeles que se dibuja con el lápiz verde se centrará en la línea teórica. La siguiente ilustración muestra la línea resultante.  
   
      ![Una delgada línea negra con resaltado verde.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-line.gif)  
   
@@ -37,7 +37,7 @@ Cuando creas un <xref:System.Drawing.Pen>, puede proporcionar el ancho del lápi
   
 ### <a name="to-change-the-alignment-of-a-pen"></a>Para cambiar la alineación de un lápiz  
   
--   Establezca el valor de la <xref:System.Drawing.Pen.Alignment%2A> propiedad <xref:System.Drawing.Drawing2D.PenAlignment.Center> para especificar que los píxeles que se dibuja con el lápiz verde se centrará en los límites del rectángulo.  
+- Establezca el valor de la <xref:System.Drawing.Pen.Alignment%2A> propiedad <xref:System.Drawing.Drawing2D.PenAlignment.Center> para especificar que los píxeles que se dibuja con el lápiz verde se centrará en los límites del rectángulo.  
   
      La siguiente ilustración muestra el rectángulo resultante:
   
@@ -48,7 +48,7 @@ Cuando creas un <xref:System.Drawing.Pen>, puede proporcionar el ancho del lápi
   
 ### <a name="to-create-an-inset-pen"></a>Para crear un lápiz de bajorrelieve  
   
--   Cambiar la alineación del lápiz verde modificando la tercera instrucción en el ejemplo de código anterior como sigue:  
+- Cambiar la alineación del lápiz verde modificando la tercera instrucción en el ejemplo de código anterior como sigue:  
   
      [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
      [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  

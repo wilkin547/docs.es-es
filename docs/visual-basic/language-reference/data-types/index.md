@@ -38,11 +38,11 @@ helpviewer_keywords:
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
 ms.openlocfilehash: 29e5cbe09026dd52811c6c5fb88e940b45b7c0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971748"
 ---
 # <a name="data-type-summary-visual-basic"></a>Resumen de tipos de datos (Visual Basic)
 En la tabla siguiente se muestra los tipos de datos de Visual Basic, sus tipos auxiliares de common language runtime, su asignación de almacenamiento nominal y sus intervalos de valores.  
@@ -77,16 +77,16 @@ En la tabla siguiente se muestra los tipos de datos de Visual Basic, sus tipos a
 ## <a name="memory-consumption"></a>Consumo de memoria  
  Cuando se declara un tipo de datos básico, no es seguro suponer que su consumo de memoria es el mismo que su asignación de almacenamiento nominal. Esto es debido a las siguientes consideraciones:  
   
--   **Asignación de almacenamiento.** Common language runtime puede asignar el almacenamiento en función de las características actuales de la plataforma en que se ejecuta la aplicación. Si la memoria está casi lleno, se pueden empaquetar los elementos declarados como estrechamente juntos como sea posible. En otros casos puede alinear sus direcciones de memoria a los límites naturales del hardware para optimizar el rendimiento.  
+- **Asignación de almacenamiento.** Common language runtime puede asignar el almacenamiento en función de las características actuales de la plataforma en que se ejecuta la aplicación. Si la memoria está casi lleno, se pueden empaquetar los elementos declarados como estrechamente juntos como sea posible. En otros casos puede alinear sus direcciones de memoria a los límites naturales del hardware para optimizar el rendimiento.  
   
--   **Ancho de la plataforma.** Asignación de almacenamiento en una plataforma de 64 bits es diferente a la asignación en una plataforma de 32 bits.  
+- **Ancho de la plataforma.** Asignación de almacenamiento en una plataforma de 64 bits es diferente a la asignación en una plataforma de 32 bits.  
   
 ### <a name="composite-data-types"></a>Tipos de datos compuestos  
  Las mismas consideraciones se aplican a cada miembro de un tipo de datos compuestos, como una estructura o una matriz. No puede depender sumar simplemente las asignaciones de almacenamiento nominal de los miembros del tipo. Además, existen otras consideraciones, como las siguientes:  
   
--   **Carga de trabajo.** Algunos tipos compuestos tienen requisitos adicionales de memoria. Por ejemplo, una matriz utiliza memoria adicional para la propia matriz y también para cada dimensión. En una plataforma de 32 bits, esta sobrecarga actualmente es de 12 bytes y 8 bytes para cada dimensión. En una plataforma de 64 bits se duplica este requisito.  
+- **Carga de trabajo.** Algunos tipos compuestos tienen requisitos adicionales de memoria. Por ejemplo, una matriz utiliza memoria adicional para la propia matriz y también para cada dimensión. En una plataforma de 32 bits, esta sobrecarga actualmente es de 12 bytes y 8 bytes para cada dimensión. En una plataforma de 64 bits se duplica este requisito.  
   
--   **Diseño de almacenamiento.** No puede suponerse que el orden de almacenamiento en memoria es el mismo que el orden de declaración. Incluso no puede realizar suposiciones sobre la alineación de bytes, como un límite de 2 o 4 bytes. Si está definiendo una clase o estructura y necesite controlar el diseño de almacenamiento de sus miembros, puede aplicar el <xref:System.Runtime.InteropServices.StructLayoutAttribute> atributo a la clase o estructura.  
+- **Diseño de almacenamiento.** No puede suponerse que el orden de almacenamiento en memoria es el mismo que el orden de declaración. Incluso no puede realizar suposiciones sobre la alineación de bytes, como un límite de 2 o 4 bytes. Si está definiendo una clase o estructura y necesite controlar el diseño de almacenamiento de sus miembros, puede aplicar el <xref:System.Runtime.InteropServices.StructLayoutAttribute> atributo a la clase o estructura.  
   
 ### <a name="object-overhead"></a>Sobrecarga de objetos  
  Un `Object` que hace referencia a ningún dato básico o compuesto tipo usa 4 bytes además de los datos contenidos en el tipo de datos.  

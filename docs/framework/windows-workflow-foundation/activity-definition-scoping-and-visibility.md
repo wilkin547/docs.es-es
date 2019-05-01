@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
 ms.openlocfilehash: 27c43323a176c841f3d90cb9c52f25599bc0686d
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945956"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Ámbito y visibilidad de la definición de actividad
 El ámbito y visibilidad de la definición de actividad,  como el ámbito y la visibilidad de un objeto, es la capacidad de otros objetos o actividades de obtener acceso a los miembros de la actividad. Las siguientes implementaciones realizan la definición de actividad:  

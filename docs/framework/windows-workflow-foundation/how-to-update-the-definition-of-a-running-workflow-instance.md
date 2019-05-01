@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Actualizar la definición de una instancia de flujo de trabajo de ejecución
+title: Procedimiento para actualizar la definición de una instancia de flujo de trabajo en ejecución
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
 ms.openlocfilehash: d3ff9d217d085e3afe5171cce9d80f8dbc32ff36
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969492"
 ---
-# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Filtrar Actualizar la definición de una instancia de flujo de trabajo de ejecución
+# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Procedimiento para actualizar la definición de una instancia de flujo de trabajo en ejecución
 
 La actualización dinámica proporciona un mecanismo para que los desarrolladores de aplicaciones de flujo de trabajo actualicen la definición de flujo de trabajo de una instancia de flujo de trabajo persistente. El cambio necesario puede ser implementar una corrección de errores, nuevos requisitos o dar cabida a cambios inesperados. Este paso del tutorial muestra cómo usar la actualización dinámica para modificar las instancias conservadas de la `v1` número adivinar el flujo de trabajo para que coincida con la nueva funcionalidad incluida en [Cómo: Hospedar varias versiones de un flujo de trabajo Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
 ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945345"
 ---
 # <a name="from-clause-visual-basic"></a>From (Cláusula, Visual Basic)
 Especifica uno o más variables de rango y una colección a la consulta.  
@@ -48,21 +48,21 @@ From element [ As type ] In collection [ _ ]
   
  Cada `From` cláusula puede ir seguida de cualquier combinación de cláusulas de consulta adicionales para refinar la consulta. Puede refinar la consulta de las maneras siguientes:  
   
--   Combinar varias colecciones implícitamente mediante la `From` y `Select` cláusulas, o explícitamente mediante la `Join` o `Group Join` cláusulas.  
+- Combinar varias colecciones implícitamente mediante la `From` y `Select` cláusulas, o explícitamente mediante la `Join` o `Group Join` cláusulas.  
   
--   Use el `Where` cláusula para filtrar el resultado de la consulta.  
+- Use el `Where` cláusula para filtrar el resultado de la consulta.  
   
--   Ordenar el resultado mediante la `Order By` cláusula.  
+- Ordenar el resultado mediante la `Order By` cláusula.  
   
--   Agrupar resultados similares mediante el uso de la `Group By` cláusula.  
+- Agrupar resultados similares mediante el uso de la `Group By` cláusula.  
   
--   Use el `Aggregate` cláusula para identificar las funciones de agregado que se evalúa para el resultado de toda la consulta.  
+- Use el `Aggregate` cláusula para identificar las funciones de agregado que se evalúa para el resultado de toda la consulta.  
   
--   Use el `Let` cláusula para introducir una variable de iteración cuyo valor viene determinado por una expresión en lugar de una colección.  
+- Use el `Let` cláusula para introducir una variable de iteración cuyo valor viene determinado por una expresión en lugar de una colección.  
   
--   Use el `Distinct` cláusula para pasar por alto los resultados de consulta duplicada.  
+- Use el `Distinct` cláusula para pasar por alto los resultados de consulta duplicada.  
   
--   Identificar las partes del resultado para devolver mediante el uso de la `Skip`, `Take`, `Skip While`, y `Take While` cláusulas.  
+- Identificar las partes del resultado para devolver mediante el uso de la `Skip`, `Take`, `Skip While`, y `Take While` cláusulas.  
   
 ## <a name="example"></a>Ejemplo  
  Consulta la siguiente expresión utiliza una `From` cláusula para declarar una variable de rango `cust` para cada `Customer` objeto en el `customers` colección. El `Where` cláusula usa la variable de rango para restringir los resultados a los clientes de la región especificada. El `For Each` bucle muestra el nombre de la empresa para cada cliente en el resultado de la consulta.  

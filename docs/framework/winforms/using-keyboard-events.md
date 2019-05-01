@@ -10,11 +10,11 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966924"
 ---
 # <a name="using-keyboard-events"></a>Utilizar eventos de teclado
 La mayoría de los programas de Windows Forms procesan la entrada de teclado controlando los eventos de teclado. Este ofrece una introducción a los eventos de teclado, incluidos detalles sobre cuándo usar cada evento y los datos que se proporcionan para cada evento.  Consulte también [información general sobre controladores de eventos (formularios Windows Forms)](event-handlers-overview-windows-forms.md) y [información general sobre eventos (formularios Windows Forms)](events-overview-windows-forms.md).  
@@ -22,11 +22,11 @@ La mayoría de los programas de Windows Forms procesan la entrada de teclado con
 ## <a name="keyboard-events"></a>Eventos de teclado  
  Windows Forms proporciona dos eventos que se producen cuando el usuario presiona una tecla del teclado y un evento cuando el usuario suelta una tecla del teclado:  
   
--   El evento <xref:System.Windows.Forms.Control.KeyDown>, que se produce una vez.  
+- El evento <xref:System.Windows.Forms.Control.KeyDown>, que se produce una vez.  
   
--   El evento <xref:System.Windows.Forms.Control.KeyPress>, que se puede producir varias veces cuando un usuario mantiene presionada la misma tecla.  
+- El evento <xref:System.Windows.Forms.Control.KeyPress>, que se puede producir varias veces cuando un usuario mantiene presionada la misma tecla.  
   
--   El evento <xref:System.Windows.Forms.Control.KeyUp> se produce una vez cuando el usuario suelta una tecla.  
+- El evento <xref:System.Windows.Forms.Control.KeyUp> se produce una vez cuando el usuario suelta una tecla.  
   
  Cuando un usuario presiona una tecla, Windows Forms determina qué evento se genera en función de si el mensaje del teclado especifica una tecla de carácter o una tecla física. Para obtener más información acerca de los caracteres y teclas físicas, consulte [cómo funciona la entrada de teclado](how-keyboard-input-works.md).  
   

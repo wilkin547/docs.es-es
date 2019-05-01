@@ -3,11 +3,11 @@ title: 'Excepciones: Expresión try...with'
 description: Aprenda a usar el F# 'try... with' expresión para el control de excepciones.
 ms.date: 05/16/2016
 ms.openlocfilehash: 742e0b595525c69b83a55682c3c8b9b650326ac7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945550"
 ---
 # <a name="exceptions-the-trywith-expression"></a>Excepciones: Expresión try...with
 
@@ -38,7 +38,7 @@ Puede usar una variedad de patrones para filtrar según el tipo de excepción y 
 
 |Modelo|Descripción|
 |-------|-----------|
-|:? *tipo de excepción*|Coincide con el tipo de excepción de .NET especificado.|
+|:? *exception-type*|Coincide con el tipo de excepción de .NET especificado.|
 |:? *tipo de excepción* como *identificador*|Coincide con el tipo de excepción de .NET especificado, pero proporciona un valor con nombre de la excepción.|
 |*nombre de la excepción*(*argumentos*)|Coincide con un F# tipo de excepción y enlaza los argumentos.|
 |*identifier*|Coincide con cualquier excepción y enlaza el nombre para el objeto de excepción. ¿Equivalente a **:? System.Exception como**_identificador_|

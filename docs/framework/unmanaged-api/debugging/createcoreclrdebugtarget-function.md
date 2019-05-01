@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 48ce5381c745669b813f5b28d801add7daba7825
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965846"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget (Función)
 Crea una conexión a un proxy del depurador que se está ejecutando en un equipo remoto y devuelve un [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) objeto que puede usarse para consultar los procesos en ejecución y tiempos de ejecución cargados en el equipo remoto.  
@@ -46,7 +46,7 @@ HRESULT CreateCoreClrDebugTarget (
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK  
- El número de CLR en el proceso se determinó correctamente y las matrices de ruta de acceso y el identificador correspondiente se rellenaron de forma adecuada.  
+ Se determinó el número de CLR en el proceso y las matrices de rutas de acceso e identificadores correspondientes se rellenaron correctamente.  
   
  E_OUTOFMEMORY  
  No se puede asignar memoria suficiente para `ppTarget`.  

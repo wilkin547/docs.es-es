@@ -5,18 +5,18 @@ f1_keywords:
 - vbrID482
 ms.assetid: 0ce0c4b3-3604-4638-9363-6c9333d0cc9d
 ms.openlocfilehash: 9acf6a31a7437dc9f7349d96b9a69aadaff1725e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58033593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944786"
 ---
 # <a name="printer-error"></a>Error en la impresora
 Se produjo un error en la impresora, pero no se devolvió ninguna otra información al equipo que envió el archivo.  
   
 ### <a name="to-correct-the-error"></a>Para corregir el error  
   
--   Examine físicamente la impresora. Asegúrese de que todas las conexiones entre el equipo y la impresora estén firmes. La mayoría de las impresoras incluyen una pantalla para mostrar información de error como, por ejemplo, los mensajes "Sin conexión" o "Papel agotado".  
+- Examine físicamente la impresora. Asegúrese de que todas las conexiones entre el equipo y la impresora estén firmes. La mayoría de las impresoras incluyen una pantalla para mostrar información de error como, por ejemplo, los mensajes "Sin conexión" o "Papel agotado".  
   
 ## <a name="see-also"></a>Vea también
 

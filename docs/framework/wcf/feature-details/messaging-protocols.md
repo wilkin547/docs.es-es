@@ -3,11 +3,11 @@ title: Protocolos de mensajería
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: a5292914cfebc79bf8a9af1c852dd8feec99eba4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948127"
 ---
 # <a name="messaging-protocols"></a>Protocolos de mensajería
 
@@ -214,7 +214,7 @@ R3412: WCF genera los siguientes errores definidos por WS-Addressing 1.0.
 | `wsa10:MessageAddressingHeaderRequired` | Falta el encabezado Addressing necesario. |
 | `wsa10:DestinationUnreachable` | El mensaje llegó con un `ReplyTo` diferente a la dirección de respuesta establecida para este canal. No hay ningún punto de conexión escuchando en la dirección especificada en encabezado To. |
 | `wsa10:ActionNotSupported` | Los canales de infraestructura o el distribuidor asociados al punto de conexión no reconocen una acción especificada en el encabezado `Action`. |
-| `wsa10:EndpointUnavailable` | El canal RM devuelve este error, indicando que el punto de conexión no procesará la secuencia basada en el examen de los encabezados de direccionamiento del mensaje `CreateSequence`. |
+| `wsa10:EndpointUnavailable` | El canal RM devuelve este error, indicando que el extremo no procesará la secuencia basada en el examen de los encabezados de direccionamiento del mensaje `CreateSequence`. |
 
 El código de las tablas anteriores se asigna a `FaultCode` en SOAP 1.1 y `SubCode` (con Code=Sender) en SOAP 1.2.
 
@@ -223,7 +223,7 @@ El código de las tablas anteriores se asigna a `FaultCode` en SOAP 1.1 y `SubCo
 #### <a name="indicating-use-of-ws-addressing"></a>Indicación del uso de WS-Addressing
 WCF utiliza las aserciones de directiva para indicar la compatibilidad de punto de conexión para una determinada versión de WS-Addressing.
 
-La siguiente aserción de directiva tiene Asunto de directiva de punto de conexión [WS PA] e indica que los mensajes enviados y recibidos desde el punto de conexión deben utilizar WS-Addressing 2004/08.
+La siguiente aserción de directiva tiene Asunto de directiva de extremo [WS PA] e indica que los mensajes enviados y recibidos desde el extremo deben utilizar WS-Addressing 2004/08.
 
 ```xml
 <wsap:UsingAddressing />
@@ -237,7 +237,7 @@ La siguiente aserción de directiva indica que los mensajes enviados y recibidos
 <wsam:Addressing/>
 ```
 
-La siguiente aserción de directiva tiene un asunto de directiva de extremo [WS PA] e indica que los mensajes enviados y recibidos desde el extremo deben utilizar WS-Addressing 2004/08.
+La siguiente aserción de directiva tiene un asunto de directiva de punto de conexión [WS PA] e indica que los mensajes enviados y recibidos desde el punto de conexión deben utilizar WS-Addressing 2004/08.
 
 ```xml
 <wsaw10:UsingAddressing />
@@ -283,7 +283,7 @@ La apariencia de la aserción de directiva completa debe ser como esta:
 </wsam:Addressing>
 ```
 
-El uso de la siguiente aserción que tiene un asunto de punto de conexión de directiva [WS-PA] en los puntos de conexión que usan enlaces HTTP de SOAP 1.1x de WDSL 1.1 requiere dos conexiones HTTP inversas independientes que se utilizarán para los mensajes que fluyen del solicitante al respondedor y del respondedor al solicitante, respectivamente.
+El uso de la siguiente aserción que tiene un asunto de extremo de directiva [WS-PA] en los extremos que usan enlaces HTTP de SOAP 1.1x de WDSL 1.1 requiere dos conexiones HTTP inversas independientes que se utilizarán para los mensajes que fluyen del solicitante al respondedor y del respondedor al solicitante, respectivamente.
 
 ```xml
 <cdp:CompositeDuplex/>
@@ -297,7 +297,7 @@ La declaración anterior conduce a los siguientes requisitos en el encabezado `w
 
 - R3516: Solicitar a los mensajes enviados a un punto de conexión deben tener un `ReplyTo` encabezado con un `[address]` propiedad igual a `http://www.w3.org/2005/08/addressing/anonymous` si el punto de conexión utiliza un enlace de WSDL 1.1 SOAP 1.x HTTP y tiene una directiva alternativa con `wsap:UsingAddressing` aserción y no `cdp:CompositeDuplex` aserción adjuntada.
 
-La especificación WSDL de WS-Addressing intenta describir enlaces de protocolos similares introduciendo un elemento `<wsaw:Anonymous/>` con tres valores textuales (requerido, opcional y prohibido) para indicar requisitos en el encabezado `wsa:ReplyTo` (sección 3.2). Desafortunadamente, tal definición de elemento no es especialmente utilizable como aserción en el contexto de WS-Policy, porque requiere extensiones específicas del dominio para admitir la intersección de alternativas usando este tipo de elementos como aserción. Tal definición de elemento también indica el valor del encabezado `ReplyTo` frente al comportamiento del punto de conexión en la conexión, que lo hace específico para el transporte HTTP.
+La especificación WSDL de WS-Addressing intenta describir enlaces de protocolos similares introduciendo un elemento `<wsaw:Anonymous/>` con tres valores textuales (requerido, opcional y prohibido) para indicar requisitos en el encabezado `wsa:ReplyTo` (sección 3.2). Desafortunadamente, tal definición de elemento no es especialmente utilizable como aserción en el contexto de WS-Policy, porque requiere extensiones específicas del dominio para admitir la intersección de alternativas usando este tipo de elementos como aserción. Tal definición de elemento también indica el valor del encabezado `ReplyTo` frente al comportamiento del extremo en la conexión, que lo hace específico para el transporte HTTP.
 
 #### <a name="action-definition"></a>Definición de acción
 WS-Addressing 2004/08 define un atributo `wsa:Action` para los elementos`wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]`. El enlace ESDL de WS-Addressing 1.0 (WS-ADDR10-WSDL) define un atributo similar, `wsaw10:Action`.
@@ -310,7 +310,7 @@ Para resolver esta controversia, WCF admite una única versión de la `Action` a
 
 B3521: WCF usa la `wsaw10:Action` atributo `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` elementos tal como se define en WS-ADDR10-WSDL para determinar el `Action` URI para los mensajes correspondientes independientemente de la versión de WS-Addressing utilizada por el punto de conexión.
 
-#### <a name="use-endpoint-reference-inside-wsdl-port"></a>Uso de la referencia de punto de conexión dentro del puerto WSDL
+#### <a name="use-endpoint-reference-inside-wsdl-port"></a>Uso de la referencia de extremo dentro del puerto WSDL
 La sección 4.1 de WS-ADDR10-WSDL extiende el elemento `wsdl:port` para incluir el elemento secundario `<wsa10:EndpointReference…/>` para describir el punto de conexión en términos de WS-Addressing. WCF expande esta utilidad en WS-Addressing 2004/08, permitiendo `<wsa:EndpointReference…/>` aparezca como un elemento secundario de `wsdl:port`.
 
 - R3531: Si un punto de conexión tiene una directiva alternativa adjunta con una `<wsaw10:UsingAddressing/>` aserción de directiva, la correspondiente `wsdl:port` elemento puede contener un elemento secundario `<wsa10:EndpointReference …/>`.

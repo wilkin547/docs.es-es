@@ -5,22 +5,22 @@ f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
 ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982441"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub o Function no definida (Visual Basic)
 Un `Sub` o `Function` debe definirse con el fin de llamar. Las causas posibles de este error son:  
   
--   Error al escribir el nombre del procedimiento.  
+- Error al escribir el nombre del procedimiento.  
   
--   Intenta llamar a un procedimiento desde otro proyecto sin agregar explícitamente una referencia a ese proyecto en el **referencias** cuadro de diálogo.  
+- Intenta llamar a un procedimiento desde otro proyecto sin agregar explícitamente una referencia a ese proyecto en el **referencias** cuadro de diálogo.  
   
--   Especifica un procedimiento que no es visible para el procedimiento que realiza la llamada.  
+- Especifica un procedimiento que no es visible para el procedimiento que realiza la llamada.  
   
--   Declaración de una rutina de biblioteca de vínculos dinámicos (DLL) de Windows o una rutina de recurso de código de Macintosh que no está en el recurso de biblioteca o el código especificado.  
+- Declaración de una rutina de biblioteca de vínculos dinámicos (DLL) de Windows o una rutina de recurso de código de Macintosh que no está en el recurso de biblioteca o el código especificado.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   

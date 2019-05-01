@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a673c98b11fbca5f66e9e1ae61f224448c20797
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966210"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType (Enumeración)
 Identifica el origen de un objeto que se va a recolectar como elemento no utilizado.  
@@ -69,9 +69,9 @@ typedef enum {
 ## <a name="remarks"></a>Comentarios  
  El `CorGCReferenceType` enumeración se utiliza como sigue:  
   
--   Como el valor de la `type` campo de la [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) estructura, indica el origen de una referencia o un identificador.  
+- Como el valor de la `type` campo de la [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) estructura, indica el origen de una referencia o un identificador.  
   
--   Como el `types` argumento para el [Icordebugprocess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) método, especifica los tipos de controladores para incluir en la enumeración.  
+- Como el `types` argumento para el [Icordebugprocess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) método, especifica los tipos de controladores para incluir en la enumeración.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

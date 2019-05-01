@@ -6,11 +6,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
 ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966990"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Funcionamiento de la entrada del mouse (ratón) en los formularios Windows Forms
 Recibir y controlar la entrada del mouse es una parte importante de cada aplicación de Windows. Puede controlar los eventos del mouse para llevar a cabo una acción en la aplicación, o usar la información de ubicación del mouse para realizar la prueba de posicionamiento u otras acciones. Además, puede cambiar la manera en que los controles en la aplicación controlan la entrada de mouse. En este tema se describe estos eventos del mouse en detalle y cómo obtener y cambiar la configuración del sistema para el mouse. Para obtener más información acerca de los datos proporcionados con el mouse se producen los eventos y el orden en que el mouse, haga clic en eventos, vea [eventos del Mouse en Windows Forms](mouse-events-in-windows-forms.md).  

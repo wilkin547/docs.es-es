@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
 ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954267"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Convertidores de tipos y extensiones de marcado para XAML
 Los convertidores de tipos y extensiones de marcado son dos técnicas que los sistemas de tipos XAML y escritores de XAML utilizan para generar componentes de gráfico de objeto. Aunque comparten algunas características, los convertidores de tipos y las extensiones de marcado se representan de forma diferente en una secuencia de nodo XAML. En este conjunto de documentación, en ocasiones nos referimos colectivamente a los convertidores de tipos, las extensiones de marcado y construcciones similares como convertidores de valores.  
@@ -22,13 +22,13 @@ Los convertidores de tipos y extensiones de marcado son dos técnicas que los si
 ## <a name="value-converters"></a>Convertidores de valores  
  En XAML, los convertidores de valores se utilizan para varios escenarios. La lista siguiente muestra los distintos tipos de convertidores de valores en XAML:  
   
--   Convertidor de tipos  
+- Convertidor de tipos  
   
--   Extensión de marcado  
+- Extensión de marcado  
   
--   Serializador de valor  
+- Serializador de valor  
   
--   Clase relacionada o clase de compatibilidad que proporciona la lógica para una sintaxis de texto XAML  
+- Clase relacionada o clase de compatibilidad que proporciona la lógica para una sintaxis de texto XAML  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Convertidores de tipos  

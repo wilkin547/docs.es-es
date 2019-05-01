@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ad6526311fce09e49fd42707ff568745188df221
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703602"
+---
 
 > [!NOTE] 
-> Esta API es sólo para uso interno. No está pensado para su uso desde código del desarrollador.
+> Esta API es solo para uso interno. No está pensada para usarla desde código del desarrollador.

@@ -10,18 +10,18 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949947"
 ---
 # <a name="lazy-initialization"></a>Inicialización diferida
 La *inicialización diferida* de un objeto implica que su creación se aplaza hasta que se usa por primera vez. (En este tema, los términos *inicialización diferida* y *creación diferida de instancias* son sinónimos). La inicialización diferida se usa principalmente para mejorar el rendimiento, evitar la pérdida de tiempo en los cálculos y reducir los requisitos de memoria de los programas. Estos son los escenarios más comunes:  
   
--   Cuando hay un objeto costoso de crear y es posible que el programa no lo use. Por ejemplo, supongamos que tiene en memoria un objeto `Customer` con una propiedad `Orders` que contiene una matriz grande de objetos `Order` que, para inicializarse, requieren una conexión de base de datos. Si el usuario nunca solicita que se muestre Orders y nunca usa los datos en un cálculo, no hay ninguna razón para usar la memoria del sistema o ciclos de cálculos para crearlo. Mediante el uso de `Lazy<Orders>` para declarar el objeto `Orders` para la inicialización diferida, puede evitar desperdiciar recursos del sistema si no se usa el objeto.  
+- Cuando hay un objeto costoso de crear y es posible que el programa no lo use. Por ejemplo, supongamos que tiene en memoria un objeto `Customer` con una propiedad `Orders` que contiene una matriz grande de objetos `Order` que, para inicializarse, requieren una conexión de base de datos. Si el usuario nunca solicita que se muestre Orders y nunca usa los datos en un cálculo, no hay ninguna razón para usar la memoria del sistema o ciclos de cálculos para crearlo. Mediante el uso de `Lazy<Orders>` para declarar el objeto `Orders` para la inicialización diferida, puede evitar desperdiciar recursos del sistema si no se usa el objeto.  
   
--   Cuando hay un objeto costoso de crear y quiere diferir su creación hasta después de que se hayan completado otras operaciones costosas. Por ejemplo, supongamos que el programa carga varias instancias de objeto cuando se inicia, pero solo se necesitan de inmediato algunas de ellas. Puede mejorar el rendimiento de inicio del programa si difiere la inicialización de los objetos que no son necesarios hasta que se hayan creado los objetos necesarios.  
+- Cuando hay un objeto costoso de crear y quiere diferir su creación hasta después de que se hayan completado otras operaciones costosas. Por ejemplo, supongamos que el programa carga varias instancias de objeto cuando se inicia, pero solo se necesitan de inmediato algunas de ellas. Puede mejorar el rendimiento de inicio del programa si difiere la inicialización de los objetos que no son necesarios hasta que se hayan creado los objetos necesarios.  
   
  Aunque puede escribir su propio código para llevar a cabo la inicialización diferida, recomendamos que use <xref:System.Lazy%601> en su lugar. <xref:System.Lazy%601> y sus tipos relacionados también admiten la seguridad para subprocesos y ofrecen una directiva coherente de propagación de excepciones.  
   
@@ -128,11 +128,11 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
   
  <xref:System.Threading.ThreadLocal%601> encapsula el objeto de la misma manera que <xref:System.Lazy%601>, pero con estas diferencias básicas:  
   
--   Cada subproceso inicializa la variable local de subproceso mediante sus propios datos privados, que no son accesibles desde otros subprocesos.  
+- Cada subproceso inicializa la variable local de subproceso mediante sus propios datos privados, que no son accesibles desde otros subprocesos.  
   
--   La propiedad <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> es de lectura y escritura y se puede modificar todas las veces que se quiera. Esto puede afectar a la propagación de excepciones; por ejemplo, una operación `get` puede producir una excepción, pero la siguiente puede inicializar correctamente el valor.  
+- La propiedad <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> es de lectura y escritura y se puede modificar todas las veces que se quiera. Esto puede afectar a la propagación de excepciones; por ejemplo, una operación `get` puede producir una excepción, pero la siguiente puede inicializar correctamente el valor.  
   
--   Si no se proporciona ningún delegado de inicialización, <xref:System.Threading.ThreadLocal%601> inicializará su tipo encapsulado mediante el valor predeterminado del tipo. En este sentido, <xref:System.Threading.ThreadLocal%601> es coherente con el atributo <xref:System.ThreadStaticAttribute>.  
+- Si no se proporciona ningún delegado de inicialización, <xref:System.Threading.ThreadLocal%601> inicializará su tipo encapsulado mediante el valor predeterminado del tipo. En este sentido, <xref:System.Threading.ThreadLocal%601> es coherente con el atributo <xref:System.ThreadStaticAttribute>.  
   
  En el ejemplo siguiente se muestra que cada subproceso que tiene acceso a la instancia `ThreadLocal<int>` obtiene su propia copia única de los datos.  
   

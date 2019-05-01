@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984638"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost (Interfaz)
 Proporciona métodos que devuelven una versión concreta de common language runtime (CLR) en función de su número de versión, enumerar todos los CLR instalados, lista de todos los runtimes que se cargan en un proceso especificado, detección la versión CLR utilizada para compilar un ensamblado, sale de un proceso con un apagado limpio en tiempo de ejecución y el enlace de API de consulta heredado.  

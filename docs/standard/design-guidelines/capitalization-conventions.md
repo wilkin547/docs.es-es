@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
 ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966483"
 ---
 # <a name="capitalization-conventions"></a>Normas referentes al uso de minúsculas y mayúsculas
 Las directrices descritas en este capítulo disponer un método sencillo para el uso de caso de que, cuando se aplica de forma coherente, asegúrese de identificadores para los tipos, miembros y parámetros fáciles de leer.  
@@ -23,9 +23,9 @@ Las directrices descritas en este capítulo disponer un método sencillo para el
 ## <a name="capitalization-rules-for-identifiers"></a>Reglas de mayúsculas y minúsculas para los identificadores  
  Para diferenciar las palabras en un identificador, poner en mayúsculas la primera letra de cada palabra en el identificador. No utilice caracteres de subrayado para diferenciar las palabras, o bien, de hecho, en cualquier lugar en los identificadores. Hay dos maneras adecuados para aprovechar los identificadores, según el uso del identificador:  
   
--   PascalCasing  
+- PascalCasing  
   
--   camelCasing  
+- camelCasing  
   
  La convención Pascal, usada para todos los identificadores, excepto los nombres de parámetro, se pone en mayúsculas el primer carácter de cada palabra (incluidos los acrónimos a través de dos letras de longitud), tal como se muestra en los ejemplos siguientes:  
   
@@ -54,7 +54,7 @@ Las directrices descritas en este capítulo disponer un método sencillo para el
 |Tipo|Pascal|`public class StreamReader { ... }`|  
 |Interfaz|Pascal|`public interface IEnumerable { ... }`|  
 |Método|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
-|Property|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
+|Propiedad|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
 |evento|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |Campo|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |Valor de enumeración|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
@@ -67,7 +67,7 @@ Las directrices descritas en este capítulo disponer un método sencillo para el
   
  Estas son las palabras compuestas que se escribe como una sola palabra, como punto de conexión. Con el fin de las directrices de mayúsculas y minúsculas, tratar una palabra compuesta de formulario cerrado como una sola palabra. Usar un diccionario actual para determinar si se escribe una palabra compuesta en forma cerrada.  
   
-|Pascal|Camel|no|  
+|Pascal|Camel|not|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  

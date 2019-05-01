@@ -6,11 +6,11 @@ helpviewer_keywords:
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
 ms.openlocfilehash: b697e8c590d0865b26eaa9f66a333504a5faece2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954055"
 ---
 # <a name="steps-in-the-serialization-process"></a>Pasos del proceso de serialización
 Cuando se llama al método <xref:System.Runtime.Serialization.Formatter.Serialize*> en un [formateador](xref:System.Runtime.Serialization.Formatter), la serialización de objetos procede según la secuencia siguiente de reglas:

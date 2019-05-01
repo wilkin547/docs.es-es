@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
 ms.openlocfilehash: a10255be140c7c86a435cca98cec5df7df82ffee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955498"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Procesar el archivo XML (Visual Basic)
 El compilador genera una cadena de identificador para cada construcción del código que se etiqueta para generar documentación. (Para obtener información sobre cómo etiquetar el código, vea [etiquetas de comentario XML](../../../visual-basic/language-reference/xmldoc/index.md).) La cadena de identificador identifica la construcción de forma exclusiva. Los programas que procesan el archivo XML pueden usar la cadena de identificador para identificar la correspondiente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] elemento reflexión o de metadatos.  
@@ -18,9 +18,9 @@ El compilador genera una cadena de identificador para cada construcción del có
   
  El compilador cumple las siguientes reglas cuando genera las cadenas de identificador:  
   
--   No se coloca espacio en blanco en la cadena.  
+- No se coloca espacio en blanco en la cadena.  
   
--   La primera parte de la cadena ID identifica el tipo de miembro identificado, mediante un carácter único seguido de dos puntos. Se usan los siguientes tipos de miembro.  
+- La primera parte de la cadena ID identifica el tipo de miembro identificado, mediante un carácter único seguido de dos puntos. Se usan los siguientes tipos de miembro.  
   
 |Carácter|Descripción|  
 |---|---|  
@@ -32,9 +32,9 @@ El compilador genera una cadena de identificador para cada construcción del có
 |E|evento: `Event`|  
 |!|cadena de error<br /><br /> El resto de la cadena proporciona información sobre el error. El compilador de Visual Basic genera información de error para vínculos que no se puede resolver.|  
   
--   La segunda parte de la `String` es el nombre completo del elemento, empezando por la raíz del espacio de nombres. El nombre del elemento, sus tipos envolventes y el espacio de nombres están separados por puntos. Si el nombre del elemento ya contiene puntos, se reemplazan por el signo de número (#). Se supone que no hay ningún elemento tiene un signo de número directamente en su nombre. Por ejemplo, el nombre completo de la `String` constructor sería `System.String.#ctor`.  
+- La segunda parte de la `String` es el nombre completo del elemento, empezando por la raíz del espacio de nombres. El nombre del elemento, sus tipos envolventes y el espacio de nombres están separados por puntos. Si el nombre del elemento ya contiene puntos, se reemplazan por el signo de número (#). Se supone que no hay ningún elemento tiene un signo de número directamente en su nombre. Por ejemplo, el nombre completo de la `String` constructor sería `System.String.#ctor`.  
   
--   Para propiedades y métodos, si hay argumentos para el método, sigue la lista de argumentos entre paréntesis. Si no hay ningún argumento, tampoco habrá paréntesis. Los argumentos están separados por comas. La codificación de cada argumento indica directamente cómo se codifica en un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] firma.  
+- Para propiedades y métodos, si hay argumentos para el método, sigue la lista de argumentos entre paréntesis. Si no hay ningún argumento, tampoco habrá paréntesis. Los argumentos están separados por comas. La codificación de cada argumento indica directamente cómo se codifica en un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] firma.  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente muestra cómo las cadenas de identificador para una clase y sus miembros se generan.  

@@ -9,30 +9,30 @@ helpviewer_keywords:
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
 ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981817"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Tutorial: Enlazar a datos en aplicaciones híbridas
 Enlazar un origen de datos a un control es esencial para proporcionar a los usuarios con acceso a datos subyacentes, si usas [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. En este tutorial se muestra cómo puede usar el enlace de datos en aplicaciones híbridas que incluyen ambos [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controles.  
   
  Las tareas ilustradas en este tutorial incluyen:  
   
--   Crear el proyecto.  
+- Crear el proyecto.  
   
--   Definir la plantilla de datos.  
+- Definir la plantilla de datos.  
   
--   Especificar el diseño del formulario.  
+- Especificar el diseño del formulario.  
   
--   Especificar los enlaces de datos.  
+- Especificar los enlaces de datos.  
   
--   Mostrar los datos mediante la interoperación.  
+- Mostrar los datos mediante la interoperación.  
   
--   Agregar el origen de datos al proyecto.  
+- Agregar el origen de datos al proyecto.  
   
--   Enlazar al origen de datos.  
+- Enlazar al origen de datos.  
   
  Para obtener una lista de código completo de las tareas ilustradas en este tutorial, vea [Data Binding in Hybrid Applications Sample](https://go.microsoft.com/fwlink/?LinkID=159983).  
   
@@ -41,9 +41,9 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
 ## <a name="prerequisites"></a>Requisitos previos  
  Necesita los componentes siguientes para completar este tutorial:  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   Acceso a la base de datos de ejemplo Northwind que se ejecutan en Microsoft SQL Server.  
+- Acceso a la base de datos de ejemplo Northwind que se ejecutan en Microsoft SQL Server.  
   
 ## <a name="creating-the-project"></a>Crear el proyecto  
   
@@ -53,9 +53,9 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
   
 2. En el Explorador de soluciones, agregue referencias a los ensamblados siguientes.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
 3. Abra MainWindow.xaml en el [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
@@ -74,7 +74,7 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
   
 #### <a name="to-define-the-data-template"></a>Para definir la plantilla de datos  
   
--   Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
+- Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
@@ -83,13 +83,13 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
   
 #### <a name="to-set-up-the-grid-layout"></a>Para configurar el diseño de cuadrícula  
   
--   Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
+- Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>Para configurar los controles de etiqueta  
   
--   Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
+- Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
@@ -100,7 +100,7 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
   
 #### <a name="to-specify-data-bindings"></a>Para especificar los enlaces de datos  
   
--   Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
+- Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
   
      El <xref:System.Windows.Data.Binding> clase enlaza el <xref:System.Windows.Controls.TextBox> controles a los campos adecuados en la base de datos.  
   
@@ -111,7 +111,7 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
   
 #### <a name="to-display-data-in-the-datagridview-control"></a>Para mostrar los datos en el control DataGridView  
   
--   Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
+- Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   

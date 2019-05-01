@@ -6,8 +6,8 @@ ms.openlocfilehash: 53592db03c88e673d529ef04f2fbc6e182897457
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946671"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>Archivo ReadMe del ejemplo de protección extendida para la autenticación
 Protección extendida es una iniciativa de seguridad para protegerse contra ataques man-in-the-middle (MITM), en el que un atacante (el "man-in-the-middle") intercepta las credenciales de un cliente y los utiliza para tener acceso a recursos seguros en el servidor del cliente previsto.  
@@ -27,9 +27,9 @@ Protección extendida es una iniciativa de seguridad para protegerse contra ataq
   
 4. Este ejemplo requiere que el cliente establezca un canal seguro con el servidor, por lo que es necesaria la presencia de un certificado de servidor que se puede instalar desde el Administrador de Internet Information Services (IIS).  
   
-    1.  Abra el Administrador de IIS -> certificados de servidor (desde la pestaña de vista de características).  
+    1. Abra el Administrador de IIS -> certificados de servidor (desde la pestaña de vista de características).  
   
-    2.  Con fines de prueba de esta muestra, puede crear un certificado autofirmado. (Si no desea que Internet Explorer le indique que el certificado no es seguro, puede instalarlo en el almacén Entidades emisoras de certificados raíz de confianza).  
+    2. Con fines de prueba de esta muestra, puede crear un certificado autofirmado. (Si no desea que Internet Explorer le indique que el certificado no es seguro, puede instalarlo en el almacén Entidades emisoras de certificados raíz de confianza).  
   
 5. Vaya al panel Acciones del sitio web predeterminado. Haga clic en Editar sitio -> enlaces. Agregue HTTPS como tipo si aún no está presente, con el número de puerto 443, y asigne el certificado SSL creado en el paso anterior.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: 73a740d8fa9b9f293e4babb1d2edef81aaeae8aa
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973204"
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
 Aunque puede visualizar un proyecto de Visual Studio como una serie de procedimientos que se ejecutan en una secuencia, en realidad, la mayoría de los programas está dirigidos por eventos, lo que significa que el flujo de ejecución está determinado por elementos externos denominados *eventos*.  
@@ -53,11 +53,11 @@ Aunque puede visualizar un proyecto de Visual Studio como una serie de procedimi
   
  La instrucción `WithEvents` y la cláusula `Handles` suelen ser la mejor opción para controladores de eventos, porque la sintaxis declarativa que utilizan hace que el control de eventos sea más fácil de codificar, leer y depurar. Sin embargo, tenga en cuenta las siguientes limitaciones en el uso de variables `WithEvents`:  
   
--   No puede usar una variable `WithEvents` como una variable de objeto. Es decir, no puede declararla como `Object`: debe especificar el nombre de clase al declarar la variable.  
+- No puede usar una variable `WithEvents` como una variable de objeto. Es decir, no puede declararla como `Object`: debe especificar el nombre de clase al declarar la variable.  
   
--   Dado que los eventos compartidos no están asociados a instancias de clase, no puede usar `WithEvents` para controlar eventos compartidos de forma declarativa. De forma similar, no puede usar `WithEvents` o `Handles` para controlar eventos desde `Structure`. En ambos casos, puede usar la instrucción `AddHandler` para controlar dichos eventos.  
+- Dado que los eventos compartidos no están asociados a instancias de clase, no puede usar `WithEvents` para controlar eventos compartidos de forma declarativa. De forma similar, no puede usar `WithEvents` o `Handles` para controlar eventos desde `Structure`. En ambos casos, puede usar la instrucción `AddHandler` para controlar dichos eventos.  
   
--   No puede crear matrices de las variables `WithEvents`.  
+- No puede crear matrices de las variables `WithEvents`.  
   
  Las variables `WithEvents` permiten que un único controlador de eventos controle uno o varios tipos de eventos, o bien que uno o varios controladores de eventos controlen el mismo tipo de eventos.  
   
@@ -91,7 +91,7 @@ Aunque puede visualizar un proyecto de Visual Studio como una serie de procedimi
   
 ### <a name="to-handle-events-from-a-base-class"></a>Para controlar eventos de una clase base  
   
--   Declare un controlador de eventos en la clase derivada; para ello, agregue una instrucción `Handles MyBase.`*eventname* a la línea de declaración del procedimiento del controlador de eventos, donde *eventname* es el nombre del evento de la clase base que se va a controlar. Por ejemplo:  
+- Declare un controlador de eventos en la clase derivada; para ello, agregue una instrucción `Handles MyBase.`*eventname* a la línea de declaración del procedimiento del controlador de eventos, donde *eventname* es el nombre del evento de la clase base que se va a controlar. Por ejemplo:  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

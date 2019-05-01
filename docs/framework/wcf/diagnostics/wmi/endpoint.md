@@ -3,11 +3,11 @@ title: punto de conexión
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
 ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963610"
 ---
 # <a name="endpoint"></a>punto de conexión
 punto de conexión  
@@ -45,86 +45,86 @@ class Endpoint
 ### <a name="address"></a>Dirección  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un URI que contiene la dirección del extremo.  
   
 ### <a name="addressheaders"></a>AddressHeaders  
  Tipo de datos: matriz de cadenas  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
- La colección de encabezados de dirección adjunta a este extremo.  
+ La colección de encabezados de dirección adjunta a este punto de conexión.  
   
 ### <a name="addressidentity"></a>AddressIdentity  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
- La identidad del extremo.  
+ La identidad del punto de conexión.  
   
 ### <a name="appdomainid"></a>AppDomainId  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
- El id. del appdomain que hospeda al extremo.  
+ El id. del appdomain que hospeda al punto de conexión.  
   
-### <a name="behaviors"></a>Controles de comportamiento  
- Tipo de datos: matriz de comportamientos  
+### <a name="behaviors"></a>comportamientos  
+ Tipo de datos: Matriz de comportamiento  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
- Colección de comportamientos implementada por este extremo.  
+ Colección de comportamientos implementada por este punto de conexión.  
   
 ### <a name="binding"></a>Enlaces  
- Tipo de datos: enlace  
+ Tipo de datos: Enlaces  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
- El enlace utilizado por este extremo.  
+ El enlace utilizado por este punto de conexión.  
   
 ### <a name="contractname"></a>ContractName  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
- Cadena que especifica qué contrato está exponiendo este extremo.  
+ Cadena que especifica qué contrato está exponiendo este punto de conexión.  
   
 ### <a name="counterinstancename"></a>CounterInstanceName  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Nombre de la instancia del contador de rendimiento del extremo.  
   
 ### <a name="listenuri"></a>ListenUri  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El URI en el que el extremo realiza escuchas.  
   
 ### <a name="name"></a>Name  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
- El nombre único de este extremo.  
+ El nombre único de este punto de conexión.  
   
 ### <a name="processid"></a>ProcessId  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El Id. del proceso que hospeda al extremo.  
   
 ### <a name="ref"></a>ref  
  Tipo de datos: Contrato  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
- El contrato que este extremo está exponiendo.  
+ El contrato que este punto de conexión está exponiendo.  
   
 ## <a name="requirements"></a>Requisitos  
   

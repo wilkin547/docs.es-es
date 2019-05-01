@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 674745636033f42eb8fb67babf6f5a3f013491c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993218"
 ---
 # <a name="ihostmanualeventset-method"></a>IHostManualEvent::Set (Método)
 Establece el actual [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) instancia en un estado señalado.  

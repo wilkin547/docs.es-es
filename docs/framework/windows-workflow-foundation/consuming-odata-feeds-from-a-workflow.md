@@ -3,11 +3,11 @@ title: Consumir fuentes de OData desde un flujo de trabajo - WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
 ms.openlocfilehash: aec23667e7388d6bc31d122617795ff5dfdefa5f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946072"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Consumir fuentes de OData desde un flujo de trabajo
 
@@ -84,8 +84,7 @@ Una vez agregados todos los clientes, se devuelve la lista. El método `GetCusto
 > [!NOTE]
 > Si el método que realiza el trabajo asincrónico no tiene un valor devuelto, se utiliza  <xref:System.Action> en lugar de <xref:System.Func%601>. Para obtener ejemplos de creación de un ejemplo asincrónico con ambos enfoques, vea [crear actividades asincrónicas](creating-asynchronous-activities-in-wf.md).
 
-
-  <xref:System.Func%601> está asignado a <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> y, a continuación, se llama a `BeginInvoke`. Puesto que el método que se va a invocar no tiene el acceso al entorno de argumentos de la actividad, el valor del argumento `ServiceUri` se pasa como el primer parámetro, junto con la devolución de llamada y estado por los que se pasaron en <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>. Cuando `GetCustomers` devuelve un resultado, el runtime invoca a <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. El código de <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> recupera el delegado desde la propiedad <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>, llama a `EndInvoke`y devuelve el resultado, que es la lista de clientes devuelta desde el método `GetCustomers` .
+<xref:System.Func%601> está asignado a <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> y, a continuación, se llama a `BeginInvoke`. Puesto que el método que se va a invocar no tiene el acceso al entorno de argumentos de la actividad, el valor del argumento `ServiceUri` se pasa como el primer parámetro, junto con la devolución de llamada y estado por los que se pasaron en <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>. Cuando `GetCustomers` devuelve un resultado, el runtime invoca a <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. El código de <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> recupera el delegado desde la propiedad <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>, llama a `EndInvoke`y devuelve el resultado, que es la lista de clientes devuelta desde el método `GetCustomers` .
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#200](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#200)]
 

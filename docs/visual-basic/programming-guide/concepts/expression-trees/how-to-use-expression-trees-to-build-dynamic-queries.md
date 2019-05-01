@@ -3,11 +3,11 @@ title: Procedimiento Usar árboles de expresión para crear consultas dinámicas
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
 ms.openlocfilehash: 2f91d95f888ab98902cc300afb61c41b62e64050
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966223"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Procedimiento Usar árboles de expresión para crear consultas dinámicas (Visual Basic)
 En LINQ, los árboles de expresión se usan para representar consultas estructuradas destinadas a orígenes de datos que implementan <xref:System.Linq.IQueryable%601>. Por ejemplo, el proveedor LINQ implementa la interfaz <xref:System.Linq.IQueryable%601> para realizar consultas en almacenes de datos relacionales. El compilador de Visual Basic compila las consultas dirigidas a tales orígenes de datos en el código que genera un árbol de expresión en tiempo de ejecución. El proveedor de consultas puede después recorrer la estructura de datos del árbol de expresión y convertirla en un lenguaje de consulta adecuado para el origen de datos.  
@@ -101,13 +101,13 @@ Next
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
--   Cree un nuevo proyecto de **Aplicación de consola**.  
+- Cree un nuevo proyecto de **Aplicación de consola**.  
   
--   Agregue una referencia a System.Core.dll si todavía no existe.  
+- Agregue una referencia a System.Core.dll si todavía no existe.  
   
--   Incluya el espacio de nombres System.Linq.Expressions.  
+- Incluya el espacio de nombres System.Linq.Expressions.  
   
--   Copie el código del ejemplo y péguelo en el `Main` `Sub` procedimiento.  
+- Copie el código del ejemplo y péguelo en el `Main` `Sub` procedimiento.  
   
 ## <a name="see-also"></a>Vea también
 

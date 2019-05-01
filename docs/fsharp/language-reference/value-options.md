@@ -3,11 +3,11 @@ title: Opciones de valor
 description: Obtenga información sobre la F# tipo de opción de valor, que es una versión de la estructura del tipo de opción.
 ms.date: 02/06/2019
 ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982584"
 ---
 # <a name="value-options"></a>Opciones de valor
 
@@ -18,7 +18,7 @@ El tipo de opción de valor F# se utiliza cuando mantiene los siguientes dos cas
 
 No todos los escenarios sensibles al rendimiento se "solucionar" mediante el uso de estructuras. Debe tener en cuenta el costo adicional de copia cuando se usan en lugar de tipos de referencia. Sin embargo, gran F# programas suelen crear instancias de muchos tipos opcionales que fluyen a través de rutas de acceso activas y en estos casos, structs, es posible obtener un mejor rendimiento general durante la vigencia de un programa.
 
-## <a name="definition"></a>de esquema JSON
+## <a name="definition"></a>Definición
 
 Opción de valor se define como un [unión discriminada de struct](discriminated-unions.md#struct-discriminated-unions) que es similar al tipo de opción de referencia. De esta manera, se puede considerar su definición:
 

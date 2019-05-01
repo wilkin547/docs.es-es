@@ -14,11 +14,11 @@ helpviewer_keywords:
 - TIFF decoding [WPF]
 ms.assetid: 1dfe3209-fc73-40e6-ad1c-71c1c58b3364
 ms.openlocfilehash: 0b2b638d3aa81e48a1378794435d59da1b323aa2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947555"
 ---
 # <a name="how-to-encode-and-decode-a-tiff-image"></a>Procedimiento Codificar y descodificar una imagen TIFF
 Los ejemplos siguientes muestran cómo descodificar y codificar una [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] específico de imagen <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> y <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> objetos.  

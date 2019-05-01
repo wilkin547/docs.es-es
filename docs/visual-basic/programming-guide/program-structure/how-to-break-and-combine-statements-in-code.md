@@ -22,18 +22,18 @@ helpviewer_keywords:
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
 ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955628"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Procedimiento Interrumpir y combinar instrucciones en código (Visual Basic)
 Al escribir el código, a veces puede crear instrucciones largas que requieren un desplazamiento horizontal en el Editor de código. Aunque esto no afecta a la forma se ejecuta el código, resulta difícil para que usted u otra persona leer el código tal y como aparece en el monitor. En tales casos, considere la posibilidad de dividir la única instrucción larga en varias líneas.  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>Para dividir una única instrucción en varias líneas  
   
--   Usar el carácter de continuación de línea, que es un carácter de subrayado (`_`), en el punto en el que desea que el salto de línea. El carácter de subrayado debe tener inmediatamente antes un espacio e inmediatamente después un terminador de línea (retorno de carro).  
+- Usar el carácter de continuación de línea, que es un carácter de subrayado (`_`), en el punto en el que desea que el salto de línea. El carácter de subrayado debe tener inmediatamente antes un espacio e inmediatamente después un terminador de línea (retorno de carro).  
   
     > [!NOTE]
     >  En algunos casos, si se omite el carácter de continuación de línea, el compilador de Visual Basic implícitamente continuará, en la siguiente línea de código, la instrucción. Para obtener una lista de elementos de sintaxis para el que puede omitir el carácter de continuación de línea, vea "Continuación de línea implícita" en [instrucciones](../../../visual-basic/programming-guide/language-features/statements.md).  
@@ -54,7 +54,7 @@ Al escribir el código, a veces puede crear instrucciones largas que requieren u
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>Colocar varias instrucciones en la misma línea  
   
--   Separe las instrucciones con un signo de dos puntos (`:`), como en el ejemplo siguiente.  
+- Separe las instrucciones con un signo de dos puntos (`:`), como en el ejemplo siguiente.  
   
      [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   

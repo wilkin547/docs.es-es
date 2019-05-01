@@ -6,11 +6,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
 ms.openlocfilehash: 9dfffe8ea3f76d89823dfe2ef6bd0e4f3accf8f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956486"
 ---
 # <a name="structure-of-the-graphics-interface"></a>Estructura de la interfaz gráfica
 La interfaz de clase administrada para [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] contiene clases de aproximadamente 60, 50 enumeraciones y estructuras de 8. El <xref:System.Drawing.Graphics> clase es el núcleo de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funcionalidad; es la clase que realmente dibuja líneas, curvas, figuras, imágenes y texto.  

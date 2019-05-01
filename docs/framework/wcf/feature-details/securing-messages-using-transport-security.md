@@ -3,11 +3,11 @@ title: Protección de mensajes utilizando la seguridad de transporte
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990969"
 ---
 # <a name="securing-messages-using-transport-security"></a>Protección de mensajes utilizando la seguridad de transporte
 En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ) que puede utilizar para proteger los mensajes enviados a una cola.  
@@ -25,11 +25,11 @@ En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ)
   
  La seguridad de transporte utilizando <xref:System.ServiceModel.NetMsmqBinding> y <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> impacta en cómo los mensajes de MSMQ se protegen en tránsito entre la cola de transmisión y la cola de destino donde estar protegido implica:  
   
--   Firmar el mensaje para asegurarse que no está manipulado.  
+- Firmar el mensaje para asegurarse que no está manipulado.  
   
--   Cifrar el mensaje para asegurarse que no se pueda ver o manipular. Esto se recomienda pero es opcional.  
+- Cifrar el mensaje para asegurarse que no se pueda ver o manipular. Esto se recomienda pero es opcional.  
   
--   El administrador de la cola de destino que identifica el remitente del mensaje para no rechazarlo.  
+- El administrador de la cola de destino que identifica el remitente del mensaje para no rechazarlo.  
   
  En MSMQ, independiente de la autenticación, la cola de destino tiene una lista de control de acceso (ACL) para comprobar si el cliente tiene el permiso para enviar el mensaje a la cola de destino. También se comprueba que la aplicación receptora tenga permiso para recibir el mensaje de la cola de destino.  
   

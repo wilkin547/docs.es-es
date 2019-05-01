@@ -1,21 +1,21 @@
 ---
-title: Filtrar Crear un diseñador de actividad personalizado
+title: Procedimiento para crear un diseñador de actividad personalizado
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
 ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945657"
 ---
-# <a name="how-to-create-a-custom-activity-designer"></a>Filtrar Crear un diseñador de actividad personalizado
+# <a name="how-to-create-a-custom-activity-designer"></a>Procedimiento para crear un diseñador de actividad personalizado
 
 Normalmente los diseñadores de actividad personalizados se implementan de forma que sus actividades asociadas admitan composición con otras actividades cuyos diseñadores se pueden colocar en la superficie de diseño con ellas. Esta funcionalidad requiere que un diseñador de actividad personalizado proporcione una "zona de colocación" donde se puede colocar una actividad arbitraria y también los medios para administrar la colección resultante de elementos en la superficie de diseño. En este tema se describe cómo crear un diseñador de actividad personalizado que contenga esta área de colocación y cómo crear un diseñador de actividad personalizado que proporcione la funcionalidad de edición necesaria para administrar la colección de elementos del diseñador.
 
 Por lo general, los diseñadores de actividad personalizados heredan de <xref:System.Activities.Presentation.ActivityDesigner>, el tipo de diseñador de actividades base predeterminado para cualquier actividad sin un diseñador específico. Este tipo proporciona la experiencia de interactuar en tiempo de diseño con la cuadrícula de propiedades y de configurar los aspectos básicos como la administración de colores e iconos.
 
-<xref:System.Activities.Presentation.ActivityDesigner> usa dos controles de aplicación auxiliar, <xref:System.Activities.Presentation.WorkflowItemPresenter> y <xref:System.Activities.Presentation.WorkflowItemsPresenter>, para facilitar el desarrollo de diseñadores de actividad personalizados. Administran funciones comunes como arrastrar y colocar elementos secundarios, además de la eliminación, selección y adición de esos elementos secundarios. El <xref:System.Activities.Presentation.WorkflowItemPresenter> permite un único elemento secundario de elemento de la interfaz de usuario dentro de, que proporciona la "zona de colocación", mientras el <xref:System.Activities.Presentation.WorkflowItemsPresenter> puede proporcionar compatibilidad con varios elementos de interfaz de usuario, incluida funcionalidad adicional como la ordenación, mover, eliminar y adición de elementos secundarios.
+<xref:System.Activities.Presentation.ActivityDesigner> usa dos controles del asistente, <xref:System.Activities.Presentation.WorkflowItemPresenter> y <xref:System.Activities.Presentation.WorkflowItemsPresenter>, para facilitar el desarrollo de diseñadores de actividad personalizados. Administran funciones comunes como arrastrar y colocar elementos secundarios, además de la eliminación, selección y adición de esos elementos secundarios. El <xref:System.Activities.Presentation.WorkflowItemPresenter> permite un único elemento secundario de elemento de la interfaz de usuario dentro de, que proporciona la "zona de colocación", mientras el <xref:System.Activities.Presentation.WorkflowItemsPresenter> puede proporcionar compatibilidad con varios elementos de interfaz de usuario, incluida funcionalidad adicional como la ordenación, mover, eliminar y adición de elementos secundarios.
 
 El otro elemento importante que se debe destacar en la implementación de un diseñador de actividad personalizado está relacionado con la forma en que las ediciones visuales se enlazan mediante el enlace de datos de [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] a la instancia almacenada en memoria de lo que se está editando en el diseñador. Esto se lleva a cabo mediante el árbol de elementos de modelo, que también es responsable de la habilitación de la notificación de cambios y del seguimiento de eventos como los cambios en los estados.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
 ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983351"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementar el patrón de control Invoke de UI Automation
 > [!NOTE]
@@ -25,30 +25,30 @@ ms.locfileid: "59134789"
 ## <a name="implementation-guidelines-and-conventions"></a>Directrices y convenciones de implementación  
  Al implementar el patrón de control Invoke, tenga en cuenta las siguientes directrices y convenciones:  
   
--   Los controles implementan <xref:System.Windows.Automation.Provider.IInvokeProvider> si el mismo comportamiento no se expone a través de otro proveedor de patrón de control. Por ejemplo, si el método <xref:System.Windows.Automation.InvokePattern.Invoke%2A> de un control realiza la misma acción que los métodos <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> , el control no debe implementar <xref:System.Windows.Automation.Provider.IInvokeProvider>.  
+- Los controles implementan <xref:System.Windows.Automation.Provider.IInvokeProvider> si el mismo comportamiento no se expone a través de otro proveedor de patrón de control. Por ejemplo, si el método <xref:System.Windows.Automation.InvokePattern.Invoke%2A> de un control realiza la misma acción que los métodos <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> , el control no debe implementar <xref:System.Windows.Automation.Provider.IInvokeProvider>.  
   
--   Generalmente, la invocación de un control se realiza con un clic, un doble clic, presionando la tecla ENTRAR, usando un método abreviado de teclado predefinido o alguna combinación alternativa de pulsaciones de teclas.  
+- Generalmente, la invocación de un control se realiza con un clic, un doble clic, presionando la tecla ENTRAR, usando un método abreviado de teclado predefinido o alguna combinación alternativa de pulsaciones de teclas.  
   
--   Se genera<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> en un control que se ha activado (como respuesta a un control que lleva a cabo su acción asociada). Si es posible, se debe generar el evento después de que el control haya completado la acción y haya hecho la devolución sin bloquearse. El evento Invoked debe generarse antes de atender la solicitud Invoke en los escenarios siguientes:  
+- Se genera<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> en un control que se ha activado (como respuesta a un control que lleva a cabo su acción asociada). Si es posible, se debe generar el evento después de que el control haya completado la acción y haya hecho la devolución sin bloquearse. El evento Invoked debe generarse antes de atender la solicitud Invoke en los escenarios siguientes:  
   
-    -   No es posible ni práctico esperar hasta que se complete la acción.  
+    - No es posible ni práctico esperar hasta que se complete la acción.  
   
-    -   La acción requiere la interacción del usuario.  
+    - La acción requiere la interacción del usuario.  
   
-    -   La acción requiere mucho tiempo y provocará que el cliente que llama se bloquee durante un tiempo considerable.  
+    - La acción requiere mucho tiempo y provocará que el cliente que llama se bloquee durante un tiempo considerable.  
   
--   Si la invocación del control tiene efectos secundarios significativos, esos efectos secundarios se deben exponer a través de la propiedad <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> . Por ejemplo, aunque <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> no se asocie a la selección, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> puede provocar que se seleccione otro control.  
+- Si la invocación del control tiene efectos secundarios significativos, esos efectos secundarios se deben exponer a través de la propiedad <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> . Por ejemplo, aunque <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> no se asocie a la selección, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> puede provocar que se seleccione otro control.  
   
--   Normalmente, los efectos de mantener el puntero (o pasar el mouse por encima) no constituyen un evento Invoked. Sin embargo, los controles que realizan una acción (en lugar de producir un efecto visual) según el estado del efecto de mantener el puntero deben admitir el patrón de control <xref:System.Windows.Automation.InvokePattern> .  
+- Normalmente, los efectos de mantener el puntero (o pasar el mouse por encima) no constituyen un evento Invoked. Sin embargo, los controles que realizan una acción (en lugar de producir un efecto visual) según el estado del efecto de mantener el puntero deben admitir el patrón de control <xref:System.Windows.Automation.InvokePattern> .  
   
 > [!NOTE]
 >  Esta implementación se considera un problema de accesibilidad si el control solo se puede invocar como resultado de un efecto secundario relacionado con el mouse.  
   
--   La invocación de un control es diferente de la selección de un elemento. No obstante, dependiendo del control, su invocación puede provocar que el elemento se seleccione como un efecto secundario. Por ejemplo, la invocación de un elemento de lista de documentos [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] en la carpeta Mis documentos selecciona el elemento y abre el documento.  
+- La invocación de un control es diferente de la selección de un elemento. No obstante, dependiendo del control, su invocación puede provocar que el elemento se seleccione como un efecto secundario. Por ejemplo, la invocación de un elemento de lista de documentos [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] en la carpeta Mis documentos selecciona el elemento y abre el documento.  
   
--   Un elemento puede desaparecer del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] inmediatamente después de que se invoque. La solicitud de información del elemento que proporciona la devolución de llamada de evento puede producir un error como resultado. La solución recomendada es la captura previa de la información almacenada en caché.  
+- Un elemento puede desaparecer del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] inmediatamente después de que se invoque. La solicitud de información del elemento que proporciona la devolución de llamada de evento puede producir un error como resultado. La solución recomendada es la captura previa de la información almacenada en caché.  
   
--   Los controles pueden implementar varios patrones de control. Por ejemplo, el control Fill Color de la barra de herramientas de [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] implementa los patrones de control <xref:System.Windows.Automation.InvokePattern> y <xref:System.Windows.Automation.ExpandCollapsePattern> . <xref:System.Windows.Automation.ExpandCollapsePattern> expone el menú y el elemento <xref:System.Windows.Automation.InvokePattern> rellena la selección activa con el color elegido.  
+- Los controles pueden implementar varios patrones de control. Por ejemplo, el control Fill Color de la barra de herramientas de [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] implementa los patrones de control <xref:System.Windows.Automation.InvokePattern> y <xref:System.Windows.Automation.ExpandCollapsePattern> . <xref:System.Windows.Automation.ExpandCollapsePattern> expone el menú y el elemento <xref:System.Windows.Automation.InvokePattern> rellena la selección activa con el color elegido.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>Miembros requeridos para IInvokeProvider  

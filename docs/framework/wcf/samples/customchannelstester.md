@@ -3,11 +3,11 @@ title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
 ms.openlocfilehash: 7402ac9ccc0e5e1777fa77f339d7605e1d306e13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990618"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 El `CustomChannelsTester` es una herramienta que se utiliza para probar las implementaciones del canal personalizadas contra un conjunto de contratos de servicios predefinidos. Puede seleccionar el conjunto de contratos de servicios y pasarlo a la herramienta utilizando un archivo XML. La herramienta genera a continuación el servicio y el cliente que ejerce sus implementaciones del canal personalizadas durante el intercambio de mensajes.  
@@ -20,7 +20,7 @@ El `CustomChannelsTester` es una herramienta que se utiliza para probar las impl
   
 ### <a name="to-run-the-tool"></a>Para ejecutar la herramienta  
   
--   Escriba el siguiente comando en el símbolo del sistema:  
+- Escriba el siguiente comando en el símbolo del sistema:  
   
     ```  
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  
