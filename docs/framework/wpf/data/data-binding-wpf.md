@@ -8,23 +8,23 @@ helpviewer_keywords:
 - binding data [WPF]
 ms.assetid: 90f79b97-17e7-40d1-abf0-3ba600ad1d7e
 ms.openlocfilehash: 60308e4797f613940c2580e10d746fb712af9f6e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954198"
 ---
-# <a name="data-binding-wpf"></a><span data-ttu-id="f5045-102">Enlace de datos (WPF)</span><span class="sxs-lookup"><span data-stu-id="f5045-102">Data Binding (WPF)</span></span>
-<span data-ttu-id="f5045-103">Enlace de datos de Windows Presentation Foundation (WPF) proporciona una manera sencilla y coherente para las aplicaciones presentar e interactuar con datos.</span><span class="sxs-lookup"><span data-stu-id="f5045-103">Windows Presentation Foundation (WPF) data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="f5045-104">Los elementos se pueden enlazar a datos desde una variedad de orígenes de datos en forma de objetos common language runtime (CLR) y XML.</span><span class="sxs-lookup"><span data-stu-id="f5045-104">Elements can be bound to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  
+# <a name="data-binding-wpf"></a><span data-ttu-id="95947-102">Enlace de datos (WPF)</span><span class="sxs-lookup"><span data-stu-id="95947-102">Data Binding (WPF)</span></span>
+<span data-ttu-id="95947-103">Enlace de datos de Windows Presentation Foundation (WPF) proporciona una manera sencilla y coherente para las aplicaciones presentar e interactuar con datos.</span><span class="sxs-lookup"><span data-stu-id="95947-103">Windows Presentation Foundation (WPF) data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="95947-104">Los elementos se pueden enlazar a datos desde una variedad de orígenes de datos en forma de objetos common language runtime (CLR) y XML.</span><span class="sxs-lookup"><span data-stu-id="95947-104">Elements can be bound to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f5045-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="f5045-105">In This Section</span></span>  
- [<span data-ttu-id="f5045-106">Información general sobre el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="f5045-106">Data Binding Overview</span></span>](data-binding-overview.md)  
- [<span data-ttu-id="f5045-107">Información general sobre orígenes de enlaces</span><span class="sxs-lookup"><span data-stu-id="f5045-107">Binding Sources Overview</span></span>](binding-sources-overview.md)  
- [<span data-ttu-id="f5045-108">Información general sobre plantillas de datos</span><span class="sxs-lookup"><span data-stu-id="f5045-108">Data Templating Overview</span></span>](data-templating-overview.md)  
- [<span data-ttu-id="f5045-109">Información general sobre declaraciones de enlaces</span><span class="sxs-lookup"><span data-stu-id="f5045-109">Binding Declarations Overview</span></span>](binding-declarations-overview.md)  
- [<span data-ttu-id="f5045-110">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="f5045-110">How-to Topics</span></span>](data-binding-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="95947-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="95947-105">In This Section</span></span>  
+ [<span data-ttu-id="95947-106">Información general sobre el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="95947-106">Data Binding Overview</span></span>](data-binding-overview.md)  
+ [<span data-ttu-id="95947-107">Información general sobre orígenes de enlaces</span><span class="sxs-lookup"><span data-stu-id="95947-107">Binding Sources Overview</span></span>](binding-sources-overview.md)  
+ [<span data-ttu-id="95947-108">Información general sobre plantillas de datos</span><span class="sxs-lookup"><span data-stu-id="95947-108">Data Templating Overview</span></span>](data-templating-overview.md)  
+ [<span data-ttu-id="95947-109">Información general sobre declaraciones de enlaces</span><span class="sxs-lookup"><span data-stu-id="95947-109">Binding Declarations Overview</span></span>](binding-declarations-overview.md)  
+ [<span data-ttu-id="95947-110">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="95947-110">How-to Topics</span></span>](data-binding-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="f5045-111">Referencia</span><span class="sxs-lookup"><span data-stu-id="f5045-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="95947-111">Referencia</span><span class="sxs-lookup"><span data-stu-id="95947-111">Reference</span></span>  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -33,9 +33,9 @@ ms.locfileid: "57375199"
   
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
-## <a name="related-sections"></a><span data-ttu-id="f5045-112">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="f5045-112">Related Sections</span></span>  
- [<span data-ttu-id="f5045-113">Arrastrar y colocar</span><span class="sxs-lookup"><span data-stu-id="f5045-113">Drag and Drop</span></span>](../advanced/drag-and-drop.md)  
+## <a name="related-sections"></a><span data-ttu-id="95947-112">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="95947-112">Related Sections</span></span>  
+ [<span data-ttu-id="95947-113">Arrastrar y colocar</span><span class="sxs-lookup"><span data-stu-id="95947-113">Drag and Drop</span></span>](../advanced/drag-and-drop.md)  
   
- [<span data-ttu-id="f5045-114">Enlace de datos</span><span class="sxs-lookup"><span data-stu-id="f5045-114">Data Binding</span></span>](../advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="95947-114">Enlace de datos</span><span class="sxs-lookup"><span data-stu-id="95947-114">Data Binding</span></span>](../advanced/optimizing-performance-data-binding.md)  
   
- [<span data-ttu-id="f5045-115">Tutorial: Almacenamiento en caché datos de la aplicación en una aplicación WPF</span><span class="sxs-lookup"><span data-stu-id="f5045-115">Walkthrough: Caching Application Data in a WPF Application</span></span>](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [<span data-ttu-id="95947-115">Tutorial: Almacenamiento en caché datos de la aplicación en una aplicación WPF</span><span class="sxs-lookup"><span data-stu-id="95947-115">Walkthrough: Caching Application Data in a WPF Application</span></span>](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
