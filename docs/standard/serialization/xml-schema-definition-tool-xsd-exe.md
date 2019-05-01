@@ -3,11 +3,11 @@ title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
 ms.openlocfilehash: fa90110a803a97cd7a610fd33f94557c44660e2b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028231"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -177,7 +177,7 @@ Entre las opciones que se pueden establecer para el elemento `<generateDataSet>`
 |lenguaje|Especifica el lenguaje de programación que se utiliza. Se puede elegir entre `CS` (C#, que es el valor predeterminado), `VB` (Visual Basic), `JS` (JScript) o `VJS` (Visual J#). También se puede especificar un nombre completo para una clase que implemente <xref:System.CodeDom.Compiler.CodeDomProvider>.|
 |namespace|Especifica el espacio de nombres del código generado. El espacio de nombres debe ajustarse a los estándares CLR (por ejemplo, no debe incluir espacios ni caracteres de barra diagonal inversa).|
 
- Hay atributos que pueden establecerse en el elemento `<xsd>` de nivel superior. Estas opciones pueden utilizarse con cualquiera de los elementos secundarios (`<generateSchemas>``<generateDataSet>`, `<generateClasses>` o ). El siguiente código XML genera código para un elemento denominado "IDItems" del directorio de resultados denominado "MyOutputDirectory".
+ Hay atributos que pueden establecerse en el elemento `<xsd>` de nivel superior. Estas opciones pueden utilizarse con cualquiera de los elementos secundarios (&lt;generateClasses&gt;,`<generateSchemas>` o ). El siguiente código XML genera código para un elemento denominado "IDItems" del directorio de resultados denominado "MyOutputDirectory".
 
 ```xml
 <xsd xmlns='http://microsoft.com/dotnet/tools/xsd/' output='MyOutputDirectory'>
@@ -191,7 +191,7 @@ En la siguiente tabla se muestran los atributos que también pueden utilizarse c
 
 |Atributo|Descripción|
 |---------------|-----------------|
-|resultado|Nombre del directorio donde se colocará el esquema o archivo de código generado.|
+|salida|Nombre del directorio donde se colocará el esquema o archivo de código generado.|
 |nologo|Suprime la pancarta. Se establece en `true` o `false`.|
 |ayuda|Muestra las opciones y la sintaxis de los comandos para la herramienta. Se establece en `true` o `false`.|
 
