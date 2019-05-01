@@ -14,11 +14,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8fda98c20b42355b9f52595929bbf5b980b5b857
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041553"
 ---
 # <a name="icorprofilercallback6-interface"></a>ICorProfilerCallback6 (Interfaz)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  

@@ -3,11 +3,11 @@ title: LINQ to XML de información general de clases (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
 ms.openlocfilehash: bd6990c387da3c687335561d1e13b7ec62fb5b84
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051525"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML de información general de clases (Visual Basic)
 En este tema se proporciona una lista de las clases de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] en el espacio de nombres <xref:System.Xml.Linq> y proporciona una breve descripción de cada una.  
@@ -26,9 +26,9 @@ En este tema se proporciona una lista de las clases de [!INCLUDE[sqltecxlinq](~/
 ### <a name="xcontainer-class"></a>Clase XContainer  
  <xref:System.Xml.Linq.XContainer> es una clase base abstracta para todos los nodos que pueden tener nodos secundarios. Las siguientes clases se derivan de la clase <xref:System.Xml.Linq.XContainer>:  
   
--   <xref:System.Xml.Linq.XElement>  
+- <xref:System.Xml.Linq.XElement>  
   
--   <xref:System.Xml.Linq.XDocument>  
+- <xref:System.Xml.Linq.XDocument>  
   
 ### <a name="xdeclaration-class"></a>Clase XDeclaration  
  <xref:System.Xml.Linq.XDeclaration> representa una declaración XML. Una declaración XML se utiliza para declarar la versión de XML y la codificación de un documento. Asimismo, una declaración XML especifica si el documento XML es independiente. Si un documento es independiente, no hay declaraciones de marcado externas, ya sea en un DTD externo o en una entidad de parámetro externa a la que se hace referencia desde el subconjunto interno.  
@@ -55,15 +55,15 @@ En este tema se proporciona una lista de las clases de [!INCLUDE[sqltecxlinq](~/
 ### <a name="xnode-class"></a>Clase XNode  
  <xref:System.Xml.Linq.XNode> es una clase abstracta que representa los nodos de un árbol XML. Las siguientes clases se derivan de la clase <xref:System.Xml.Linq.XNode>:  
   
--   <xref:System.Xml.Linq.XText>  
+- <xref:System.Xml.Linq.XText>  
   
--   <xref:System.Xml.Linq.XContainer>  
+- <xref:System.Xml.Linq.XContainer>  
   
--   <xref:System.Xml.Linq.XComment>  
+- <xref:System.Xml.Linq.XComment>  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>  
+- <xref:System.Xml.Linq.XProcessingInstruction>  
   
--   <xref:System.Xml.Linq.XDocumentType>  
+- <xref:System.Xml.Linq.XDocumentType>  
   
 ### <a name="xnodedocumentordercomparer-class"></a>Clase XNodeDocumentOrderComparer  
  <xref:System.Xml.Linq.XNodeDocumentOrderComparer> proporciona la funcionalidad para comparar el orden de documentos de los nodos.  

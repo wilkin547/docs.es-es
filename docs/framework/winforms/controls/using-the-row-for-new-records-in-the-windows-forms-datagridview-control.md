@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
 ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009180"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Utilizar la fila de nuevos registros en el control DataGridView de formularios Windows Forms
 Cuando se usa un <xref:System.Windows.Forms.DataGridView> para modificar los datos en la aplicación, a menudo desea ofrecer a los usuarios la capacidad de agregar nuevas filas de datos al almacén de datos. El <xref:System.Windows.Forms.DataGridView> control admite esta funcionalidad proporcionando una fila para los nuevos registros, siempre se muestra como la última fila. Se marca con un símbolo de asterisco (*) en el encabezado de fila. Las secciones siguientes tratan algunas de las cosas que debe considerar cuando se programa con la fila de nuevos registros habilitada.  
@@ -29,9 +29,9 @@ Cuando se usa un <xref:System.Windows.Forms.DataGridView> para modificar los dat
 ## <a name="the-rows-collection"></a>La colección de filas  
  La fila para los nuevos registros se encuentra en la <xref:System.Windows.Forms.DataGridView> del control <xref:System.Windows.Forms.DataGridView.Rows%2A> colección pero tiene un comportamiento diferente en dos aspectos:  
   
--   No se puede quitar la fila de nuevos registros desde el <xref:System.Windows.Forms.DataGridView.Rows%2A> colección mediante programación. Un <xref:System.InvalidOperationException> se produce si se intentara. También, el usuario no puede eliminar la fila de nuevos registros. El <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> método no quita esta fila desde la <xref:System.Windows.Forms.DataGridView.Rows%2A> colección.  
+- No se puede quitar la fila de nuevos registros desde el <xref:System.Windows.Forms.DataGridView.Rows%2A> colección mediante programación. Un <xref:System.InvalidOperationException> se produce si se intentara. También, el usuario no puede eliminar la fila de nuevos registros. El <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> método no quita esta fila desde la <xref:System.Windows.Forms.DataGridView.Rows%2A> colección.  
   
--   Después de la fila para los nuevos registros no se puede agregar ninguna fila. Un <xref:System.InvalidOperationException> se produce si se intentara. Como resultado, la fila de nuevos registros es siempre la última fila de la <xref:System.Windows.Forms.DataGridView> control. Los métodos de <xref:System.Windows.Forms.DataGridViewRowCollection> que agregan filas:<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, y <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>, todos los métodos de inserción internamente a cuando la fila de nuevos registros está presente.  
+- Después de la fila para los nuevos registros no se puede agregar ninguna fila. Un <xref:System.InvalidOperationException> se produce si se intentara. Como resultado, la fila de nuevos registros es siempre la última fila de la <xref:System.Windows.Forms.DataGridView> control. Los métodos de <xref:System.Windows.Forms.DataGridViewRowCollection> que agregan filas:<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, y <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>, todos los métodos de inserción internamente a cuando la fila de nuevos registros está presente.  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>Personalización visual de la fila para los nuevos registros  
  Cuando se crea la fila de nuevos registros, se basa en la fila especificada por el <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> propiedad. Los estilos de celda que no se especifican para esta fila se heredan de otras propiedades. Para obtener más información sobre la herencia de estilo de celda, vea [estilos de celda en el DataGridView Control de Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  

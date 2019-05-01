@@ -3,11 +3,11 @@ title: Control de mensajes dudosos en MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052097"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Control de mensajes dudosos en MSMQ 4,0
 Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. En este ejemplo se basa en el [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo. Este ejemplo utiliza `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.
@@ -27,13 +27,13 @@ Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. En e
 
  Una vez marcado como dudoso, el mensaje se trata según los valores en la enumeración <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>. Para reiterar los valores posibles:
 
--   Error (valor predeterminado): Error del agente de escucha y también el host de servicio.
+- Error (valor predeterminado): Error del agente de escucha y también el host de servicio.
 
--   Soltar: Para colocar el mensaje.
+- Soltar: Para colocar el mensaje.
 
--   Mover: Para mover el mensaje a la subcola de mensajes dudosos. Este valor solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Mover: Para mover el mensaje a la subcola de mensajes dudosos. Este valor solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
--   Reject: Para rechazar el mensaje, envía el mensaje a la cola de mensajes no enviados del remitente. Este valor solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Reject: Para rechazar el mensaje, envía el mensaje a la cola de mensajes no enviados del remitente. Este valor solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  El ejemplo muestra cómo usar el desecho de `Move` para el mensaje dudoso. `Move` mueve el mensaje a la subcola de mensajes dudosos.
 
@@ -277,15 +277,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 2. Si se ejecuta el servicio primero, comprobará que la cola esté presente. Si la cola no está presente, el servicio creará una. Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ. Siga estos pasos para crear una cola en Windows 2008.
 
-    1.  Abra el administrador del servidor en Visual Studio 2012.
+    1. Abra el administrador del servidor en Visual Studio 2012.
 
-    2.  Expanda el **características** ficha.
+    2. Expanda el **características** ficha.
 
-    3.  Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.
+    3. Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.
 
-    4.  Compruebe el **transaccional** cuadro.
+    4. Compruebe el **transaccional** cuadro.
 
-    5.  Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.
+    5. Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.
 
 3. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

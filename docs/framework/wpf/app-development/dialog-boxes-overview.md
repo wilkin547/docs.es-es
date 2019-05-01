@@ -11,20 +11,20 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052266"
 ---
 # <a name="dialog-boxes-overview"></a>Información general sobre cuadros de diálogo
 Las aplicaciones independientes tienen normalmente una ventana principal que muestra los datos principales en el que la aplicación funciona y expone la funcionalidad para procesar los datos a través de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mecanismos, como las barras de menús, barras de herramientas y barras de estado. Una aplicación no trivial también puede mostrar ventanas adicionales para realizar lo siguiente:  
   
--   Mostrar información específica a los usuarios.  
+- Mostrar información específica a los usuarios.  
   
--   Recopilar información de los usuarios.  
+- Recopilar información de los usuarios.  
   
--   Mostrar y recopilar información.  
+- Mostrar y recopilar información.  
   
  Estos tipos de ventanas se conocen como *cuadros de diálogo*, y hay dos tipos: modales y no modales.  
   
@@ -122,27 +122,27 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
 #### <a name="configuring-a-modal-dialog-box"></a>Configurar un cuadro de diálogo modal  
  La interfaz de usuario de un cuadro de diálogo típico incluye lo siguiente:  
   
--   Los distintos controles que se necesitan para recopilar los datos deseados.  
+- Los distintos controles que se necesitan para recopilar los datos deseados.  
   
--   Mostrando un **Aceptar** botón que los usuarios, haga clic en para cerrar el cuadro de diálogo, vuelva a la función y con el procesamiento.  
+- Mostrando un **Aceptar** botón que los usuarios, haga clic en para cerrar el cuadro de diálogo, vuelva a la función y con el procesamiento.  
   
--   Mostrando un **cancelar** botón que los usuarios hacen clic para cerrar el cuadro de diálogo y detener la función del procesamiento.  
+- Mostrando un **cancelar** botón que los usuarios hacen clic para cerrar el cuadro de diálogo y detener la función del procesamiento.  
   
--   Mostrando un **cerrar** botón en la barra de título.  
+- Mostrando un **cerrar** botón en la barra de título.  
   
--   Mostrar un icono.  
+- Mostrar un icono.  
   
--   Mostrando **minimizar**, **maximizar**, y **restaurar** botones.  
+- Mostrando **minimizar**, **maximizar**, y **restaurar** botones.  
   
--   Mostrando un **sistema** menú para minimizar, maximizar, restaurar y cerrar el cuadro de diálogo.  
+- Mostrando un **sistema** menú para minimizar, maximizar, restaurar y cerrar el cuadro de diálogo.  
   
--   Apertura encima y en el centro de la ventana que ha abierto el cuadro de diálogo.  
+- Apertura encima y en el centro de la ventana que ha abierto el cuadro de diálogo.  
   
--   Los cuadros de diálogo deben ser redimensionables donde sea posible, para evitar que el cuadro de diálogo sea demasiado pequeño y para proporcionar al usuario un tamaño predeterminado útil, necesita establecer las dimensiones mínimas y predeterminadas respectivamente.  
+- Los cuadros de diálogo deben ser redimensionables donde sea posible, para evitar que el cuadro de diálogo sea demasiado pequeño y para proporcionar al usuario un tamaño predeterminado útil, necesita establecer las dimensiones mínimas y predeterminadas respectivamente.  
   
--   Al presionar la tecla ESC debe estar configurado como un método abreviado de teclado que provoca la **cancelar** botón presionar. Esto se consigue estableciendo la <xref:System.Windows.Controls.Button.IsCancel%2A> propiedad de la **cancelar** botón `true`.  
+- Al presionar la tecla ESC debe estar configurado como un método abreviado de teclado que provoca la **cancelar** botón presionar. Esto se consigue estableciendo la <xref:System.Windows.Controls.Button.IsCancel%2A> propiedad de la **cancelar** botón `true`.  
   
--   Al presionar la tecla ENTRAR (o retorno) debe estar configurado como un método abreviado de teclado que provoca la **Aceptar** botón presionar. Esto se consigue estableciendo la <xref:System.Windows.Controls.Button.IsDefault%2A> propiedad de la **Aceptar** botón `true`.  
+- Al presionar la tecla ENTRAR (o retorno) debe estar configurado como un método abreviado de teclado que provoca la **Aceptar** botón presionar. Esto se consigue estableciendo la <xref:System.Windows.Controls.Button.IsDefault%2A> propiedad de la **Aceptar** botón `true`.  
   
  El siguiente código muestra esta configuración.  
   
@@ -183,13 +183,13 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
 #### <a name="validating-user-provided-data"></a>Validar los datos proporcionados por el usuario  
  Cuando un cuadro de diálogo se abre y el usuario proporciona los datos necesarios, un cuadro de diálogo es responsable de garantizar que los datos proporcionados sean válidos por los motivos siguientes:  
   
--   Desde una perspectiva de seguridad, se deben validar todas las entradas.  
+- Desde una perspectiva de seguridad, se deben validar todas las entradas.  
   
--   Desde una perspectiva específica de dominio, la validación de datos impide que los datos incorrectos se procesen por el código, que puede provocar excepciones potencialmente.  
+- Desde una perspectiva específica de dominio, la validación de datos impide que los datos incorrectos se procesen por el código, que puede provocar excepciones potencialmente.  
   
--   Desde una perspectiva de experiencia de usuario, un cuadro de diálogo puede ayudar a los usuarios a mostrarles qué datos de los que han especificado no son válidos.  
+- Desde una perspectiva de experiencia de usuario, un cuadro de diálogo puede ayudar a los usuarios a mostrarles qué datos de los que han especificado no son válidos.  
   
--   Desde una perspectiva de rendimiento, la validación de datos en una aplicación de varios niveles puede reducir el número de recorridos de ida y vuelta entre los niveles de aplicación y cliente, especialmente cuando la aplicación está formada por servicios Web o bases de datos basadas en servidor.  
+- Desde una perspectiva de rendimiento, la validación de datos en una aplicación de varios niveles puede reducir el número de recorridos de ida y vuelta entre los niveles de aplicación y cliente, especialmente cuando la aplicación está formada por servicios Web o bases de datos basadas en servidor.  
   
  Para validar un control enlazado en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], deberá definir una regla de validación y asociarla con el enlace. Una regla de validación es una clase personalizada que deriva de <xref:System.Windows.Controls.ValidationRule>. El ejemplo siguiente muestra una regla de validación, `MarginValidationRule`, que comprueba que un valor enlazado es un <xref:System.Double> y está dentro del intervalo especificado.  
   
@@ -329,11 +329,11 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
 #### <a name="closing-a-modeless-dialog-box"></a>Cerrar un cuadro de diálogo no modal  
  Dado que <xref:System.Windows.Window.DialogResult%2A> no necesita establecerse, un cuadro de diálogo no modal puede cerrarse con sistema proporcionan mecanismos, incluido lo siguiente:  
   
--   Al hacer clic en el **cerrar** botón en la barra de título.  
+- Al hacer clic en el **cerrar** botón en la barra de título.  
   
--   Presionar ALT+F4.  
+- Presionar ALT+F4.  
   
--   Elegir **cerrar** desde el **sistema** menú.  
+- Elegir **cerrar** desde el **sistema** menú.  
   
  Como alternativa, puede llamar su código <xref:System.Windows.Window.Close%2A> cuando el **cerrar** se hace clic en el botón.  
   

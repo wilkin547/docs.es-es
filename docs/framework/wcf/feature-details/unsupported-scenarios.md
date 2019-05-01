@@ -3,11 +3,11 @@ title: Escenarios no admitidos
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050758"
 ---
 # <a name="unsupported-scenarios"></a>Escenarios no admitidos
 Por diversas razones, Windows Communication Foundation (WCF) no es compatible con algunos escenarios de seguridad específicos. Por ejemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition no implementa los protocolos de autenticación SSPI o Kerberos y, por lo tanto, WCF no admite la ejecución de un servicio con la autenticación de Windows en esa plataforma. Se admiten otros mecanismos de autenticación, como nombre de usuario/contraseña y autenticación de HTTP/HTTPS integrada al ejecutar WCF en Windows XP Home Edition.  
@@ -20,13 +20,13 @@ Por diversas razones, Windows Communication Foundation (WCF) no es compatible co
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP y cookie de token de contexto seguro habilitados  
  WCF no admite la suplantación y un <xref:System.InvalidOperationException> se produce cuando se cumplen las condiciones siguientes:  
   
--   El sistema operativo es [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- El sistema operativo es [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   El modo de autenticación resulta en una identidad de Windows.  
+- El modo de autenticación resulta en una identidad de Windows.  
   
--   La propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> de <xref:System.ServiceModel.OperationBehaviorAttribute> se establece en <xref:System.ServiceModel.ImpersonationOption.Required>.  
+- La propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> de <xref:System.ServiceModel.OperationBehaviorAttribute> se establece en <xref:System.ServiceModel.ImpersonationOption.Required>.  
   
--   Se crea un token de contexto de seguridad (SCT) basado en estado (de forma predeterminada, la creación está deshabilitada).  
+- Se crea un token de contexto de seguridad (SCT) basado en estado (de forma predeterminada, la creación está deshabilitada).  
   
  El SCT basado en estado solo se puede crear mediante un enlace personalizado. Para obtener más información, vea [Cómo: Crear un contexto de seguridad para una sesión segura Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) En código, el token se habilita mediante la creación de un elemento de enlace de seguridad ( <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) utilizando el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> y estableciendo el parámetro `requireCancellation` en `false`. El parámetro hace referencia al almacenamiento en caché del SCT. Al establecer el valor en `false`, se habilita la característica del SCT basado en estado.  
   
@@ -68,18 +68,18 @@ Por diversas razones, Windows Communication Foundation (WCF) no es compatible co
   
  Hay dos posibles maneras de saber si un certificado utiliza KSP:  
   
--   Ejecute `p/invoke` para `CertGetCertificateContextProperty` e inspeccione `dwProvType` en la `CertGetCertificateContextProperty` devuelta.  
+- Ejecute `p/invoke` para `CertGetCertificateContextProperty` e inspeccione `dwProvType` en la `CertGetCertificateContextProperty` devuelta.  
   
--   Use la `certutil` línea de comandos desde la línea de comandos para consultar los certificados. Para obtener más información, consulte [tareas de Certutil para solucionar problemas de certificados](https://go.microsoft.com/fwlink/?LinkId=120056).  
+- Use la `certutil` línea de comandos desde la línea de comandos para consultar los certificados. Para obtener más información, consulte [tareas de Certutil para solucionar problemas de certificados](https://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Se produce un error en la seguridad del mensaje si se requiere el uso de suplantación de ASP.NET y compatibilidad de ASP.NET  
  WCF no admite la siguiente combinación de valores porque pueden impedir que se produzca la autenticación cliente:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] La suplantación está habilitada. Esto se hace en el archivo Web.config estableciendo el `impersonate` atributo de la <`identity`> elemento para `true`.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] La suplantación está habilitada. Esto se hace en el archivo Web.config estableciendo el `impersonate` atributo de la <`identity`> elemento para `true`.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidad se habilita estableciendo el `aspNetCompatibilityEnabled` atributo de la [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) a `true`.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidad se habilita estableciendo el `aspNetCompatibilityEnabled` atributo de la [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) a `true`.  
   
--   Se utiliza la seguridad de modo de mensaje.  
+- Se utiliza la seguridad de modo de mensaje.  
   
  El método rápido consiste en desactivar el modo de compatibilidad de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. O bien, si la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] se requiere el modo de compatibilidad, deshabilite el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] suplantación de características y utilice en su lugar la suplantación de proporcionado por WCF. Para obtener más información, consulte [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   

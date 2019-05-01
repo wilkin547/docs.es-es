@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
 ms.openlocfilehash: a962f7cce961b1ee6829702a6815ba02c534efb4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050316"
 ---
 # <a name="mysettings-object"></a>My.Settings (Objeto)
 Proporciona propiedades y métodos para acceder a la configuración de la aplicación.  
@@ -25,13 +25,13 @@ Proporciona propiedades y métodos para acceder a la configuración de la aplica
   
  Cada valor tiene un **nombre**, **tipo**, **ámbito**, y **valor**, y esta configuración determina cómo la propiedad para tener acceso a cada opción de configuración aparece en la `My.Settings` objeto:  
   
--   **Nombre** determina el nombre de la propiedad.  
+- **Nombre** determina el nombre de la propiedad.  
   
--   **Tipo** determina el tipo de la propiedad.  
+- **Tipo** determina el tipo de la propiedad.  
   
--   **Ámbito** indica si la propiedad es de solo lectura. Si el valor es **aplicación**, la propiedad es de solo lectura; si el valor es **usuario**, la propiedad es de lectura y escritura.  
+- **Ámbito** indica si la propiedad es de solo lectura. Si el valor es **aplicación**, la propiedad es de solo lectura; si el valor es **usuario**, la propiedad es de lectura y escritura.  
   
--   **Valor** es el valor predeterminado de la propiedad.  
+- **Valor** es el valor predeterminado de la propiedad.  
   
 ## <a name="methods"></a>Métodos  
   

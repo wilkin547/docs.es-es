@@ -3,11 +3,11 @@ title: LINQ to XML frente a DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
 ms.openlocfilehash: 282df577808342a52a70f419b2a7559752103a0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051499"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML frente a DOM (Visual Basic)
 En esta sección se describen algunas diferencias fundamentales entre [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] y la API de programación XML predominante actual, Document Object Model (DOM) W3C.  
@@ -79,11 +79,11 @@ Dim contacts = _
 ## <a name="working-directly-with-xml-elements"></a>Trabajar directamente con elementos XML  
  La programación con XML suele centrarse en elementos XML y quizás en los atributos. En [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], se puede trabajar directamente con atributos y elementos XML. Por ejemplo, puede realizar lo siguiente:  
   
--   Crear elementos XML sin usar un objeto de documento. Esto simplifica la programación cuando se tiene que trabajar con fragmentos de árboles XML.  
+- Crear elementos XML sin usar un objeto de documento. Esto simplifica la programación cuando se tiene que trabajar con fragmentos de árboles XML.  
   
--   Cargar objetos `T:System.Xml.Linq.XElement` directamente de un archivo XML.  
+- Cargar objetos `T:System.Xml.Linq.XElement` directamente de un archivo XML.  
   
--   Serializar objetos `T:System.Xml.Linq.XElement` a un archivo o una secuencia.  
+- Serializar objetos `T:System.Xml.Linq.XElement` a un archivo o una secuencia.  
   
  Compare esto con modelo DOM del consorcio W3C, en el que el documento XML se usa como contenedor lógico para el árbol XML. En DOM, los nodos XML, incluyendo elementos y atributos, se deben crear en el contexto de un documento XML. A continuación se muestra un fragmento del código para crear un nombre de elemento en DOM:  
   

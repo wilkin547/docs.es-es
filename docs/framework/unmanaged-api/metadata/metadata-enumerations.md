@@ -9,11 +9,11 @@ ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f92b87cc2748a709361ff2c0c8129db5f7fe6046
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042203"
 ---
 # <a name="metadata-enumerations"></a>Enumeraciones para metadatos
 En esta sección se describen las enumeraciones no administradas que la API de metadatos usa.  
@@ -74,7 +74,7 @@ En esta sección se describen las enumeraciones no administradas que la API de m
  Contiene valores que describen el tipo de asignación de archivo que se devuelve de una llamada a la [IMetaDataInfo:: GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) método.  
   
  [CorGenericParamAttr (enumeración)](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)  
- Contiene valores que describen la <xref:System.Type> parámetros de tipos genéricos, como usan en las llamadas a la [IMetaDataEmit2:: DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md) método.  
+ Contiene valores que describen el <xref:System.Type> parámetros para los tipos genéricos, como las usadas en llamadas a la [IMetaDataEmit2:: DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md) método.  
   
  [CorImportOptions (enumeración)](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md)  
  Contiene valores de marca que controlan el comportamiento durante la importación de un ensamblado fuera del ámbito actual.  
@@ -152,7 +152,7 @@ En esta sección se describen las enumeraciones no administradas que la API de m
  Contiene valores que describen las convenciones de llamada no administradas.  
   
  [CorValidatorModuleType (enumeración)](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md)  
- Proporciona los valores utilizados por la [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) interfaz para especificar el tipo del módulo (archivo PE frente a archivo .obj).  
+ Proporciona los valores utilizados por la [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) interfaz para especificar el tipo de módulo (archivo PE frente a archivo .obj).  
   
  [COUNINITIEE (enumeración)](../../../../docs/framework/unmanaged-api/metadata/couninitiee-enumeration.md)  
  Especifica las constantes utilizadas por [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) al inicializar common language runtime.  

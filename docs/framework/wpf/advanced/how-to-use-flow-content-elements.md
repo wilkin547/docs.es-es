@@ -6,40 +6,40 @@ helpviewer_keywords:
 - documents [WPF], flow content elements
 ms.assetid: 70fa11cd-5fa7-4872-a1cc-04d80f1132be
 ms.openlocfilehash: df591304736adf1725b2b4235149bd426fe15216
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052357"
 ---
 # <a name="how-to-use-flow-content-elements"></a>Procedimiento Usar elementos de contenido dinámico
 En el ejemplo siguiente se muestra el uso declarativo de varios elementos de contenido dinámico y los atributos asociados.  Los elementos y atributos que se muestran incluyen:  
   
--   <xref:System.Windows.Documents.Bold> (elemento)  
+- Elemento <xref:System.Windows.Documents.Bold>  
   
--   Atributo <xref:System.Windows.Documents.Block.BreakPageBefore%2A>  
+- <xref:System.Windows.Documents.Block.BreakPageBefore%2A> Atributo  
   
--   Atributo <xref:System.Windows.Documents.TextElement.FontSize%2A>  
+- <xref:System.Windows.Documents.TextElement.FontSize%2A> Atributo  
   
--   <xref:System.Windows.Documents.Italic> (elemento)  
+- Elemento <xref:System.Windows.Documents.Italic>  
   
--   <xref:System.Windows.Documents.LineBreak> (elemento)  
+- Elemento <xref:System.Windows.Documents.LineBreak>  
   
--   <xref:System.Windows.Documents.List> (elemento)  
+- Elemento <xref:System.Windows.Documents.List>  
   
--   <xref:System.Windows.Documents.ListItem> (elemento)  
+- Elemento <xref:System.Windows.Documents.ListItem>  
   
--   <xref:System.Windows.Documents.Paragraph> (elemento)  
+- Elemento <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Run> (elemento)  
+- Elemento <xref:System.Windows.Documents.Run>  
   
--   <xref:System.Windows.Documents.Section> (elemento)  
+- Elemento <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Span> (elemento)  
+- Elemento <xref:System.Windows.Documents.Span>  
   
--   <xref:System.Windows.Documents.Typography.Variants%2A> atributo (superíndice y subíndice)  
+- <xref:System.Windows.Documents.Typography.Variants%2A> atributo (superíndice y subíndice)  
   
--   <xref:System.Windows.Documents.Underline> (elemento)  
+- Elemento <xref:System.Windows.Documents.Underline>  
   
 ## <a name="example"></a>Ejemplo  
  [!code-xaml[FlowDocInlineSnippets#_InlineElementsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocInlineSnippets/CS/document.xaml#_inlineelementsxaml)]

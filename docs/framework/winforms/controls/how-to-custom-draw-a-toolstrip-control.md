@@ -17,20 +17,20 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
 ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052994"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Procedimiento para dibujar un control ToolStrip de manera personalizada
 Los controles <xref:System.Windows.Forms.ToolStrip> tienen las siguientes clases de representación (dibujo) asociadas:  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> proporciona la apariencia y el estilo del sistema operativo.  
+- <xref:System.Windows.Forms.ToolStripSystemRenderer> proporciona la apariencia y el estilo del sistema operativo.  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> proporciona la apariencia y el estilo de Microsoft Office.  
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer> proporciona la apariencia y el estilo de Microsoft Office.  
   
--   <xref:System.Windows.Forms.ToolStripRenderer> es la clase base abstracta para las otras dos clases de representación.  
+- <xref:System.Windows.Forms.ToolStripRenderer> es la clase base abstracta para las otras dos clases de representación.  
   
  Para dibujar de forma personalizada un <xref:System.Windows.Forms.ToolStrip> (lo que también se conoce como dibujado por el propietario), puede invalidar una de las clases del representador y cambiar algún aspecto de la lógica de representación.  
   
@@ -38,20 +38,20 @@ Los controles <xref:System.Windows.Forms.ToolStrip> tienen las siguientes clases
   
 ### <a name="to-switch-between-the-provided-renderers"></a>Para cambiar entre los representadores proporcionados  
   
--   Establezca la propiedad <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> en el valor <xref:System.Windows.Forms.ToolStripRenderMode> que desee.  
+- Establezca la propiedad <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> en el valor <xref:System.Windows.Forms.ToolStripRenderMode> que desee.  
   
      Con <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>, el <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> estático determina el representador de su aplicación. Los demás valores de <xref:System.Windows.Forms.ToolStripRenderMode> son <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional> y <xref:System.Windows.Forms.ToolStripRenderMode.System>.  
   
 ### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a>Para cambiar los bordes de estilo Microsoft Office por rectos  
   
--   Invalide <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, pero no llame a la clase base.  
+- Invalide <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, pero no llame a la clase base.  
   
 > [!NOTE]
 >  Hay una versión de este método para <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer> y <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.  
   
 ### <a name="to-change-the-professionalcolortable"></a>Para cambiar la clase ProfessionalColorTable  
   
--   Invalide <xref:System.Windows.Forms.ProfessionalColorTable> y cambie los colores que desee.  
+- Invalide <xref:System.Windows.Forms.ProfessionalColorTable> y cambie los colores que desee.  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  
@@ -115,11 +115,11 @@ Los controles <xref:System.Windows.Forms.ToolStrip> tienen las siguientes clases
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>Para desactivar los colores de Microsoft Office para toda la aplicación  
   
--   Establezca <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> en `false`.  
+- Establezca <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> en `false`.  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a>Para desactivar los colores de Microsoft Office para un control ToolStrip  
   
--   Use código similar al ejemplo de código siguiente.  
+- Use código similar al ejemplo de código siguiente.  
   
     ```vb  
     Dim colorTable As ProfessionalColorTable()  

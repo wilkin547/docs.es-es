@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
 ms.openlocfilehash: 0bda03d3c01356317fbcc56d44199ff4f9484b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053943"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Especifica que una clase puede usarse únicamente como clase base y que no se puede crear un objeto directamente a partir de él.  
@@ -29,9 +29,9 @@ Especifica que una clase puede usarse únicamente como clase base y que no se pu
   
 ## <a name="rules"></a>Reglas  
   
--   **Contexto de declaración.** Puede usar `MustInherit` únicamente en un `Class` instrucción.  
+- **Contexto de declaración.** Puede usar `MustInherit` únicamente en un `Class` instrucción.  
   
--   **Modificadores combinados.** No puede especificar `MustInherit` junto con `NotInheritable` en la misma declaración.  
+- **Modificadores combinados.** No puede especificar `MustInherit` junto con `NotInheritable` en la misma declaración.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra la herencia forzada y reemplazo forzado. La clase base `shape` define una variable `acrossLine`. Las clases `circle` y `square` derivan `shape`. Heredan la definición de `acrossLine`, pero debe definir la función `area` porque ese cálculo es diferente para cada tipo de forma.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
 ms.openlocfilehash: 6e361cbe89f4c51f28199b008de817c2d48ef326
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051863"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 Especifica que una variable o propiedad se puede leer pero no se escribe.  
@@ -24,11 +24,11 @@ Especifica que una variable o propiedad se puede leer pero no se escribe.
   
 ## <a name="rules"></a>Reglas  
   
--   **Contexto de declaración.** Solo se puede usar `ReadOnly` en un nivel de módulo. Esto significa que el contexto de declaración de un `ReadOnly` elemento debe ser una clase, estructura o módulo y no puede ser un archivo de código fuente, el espacio de nombres o el procedimiento.  
+- **Contexto de declaración.** Solo se puede usar `ReadOnly` en un nivel de módulo. Esto significa que el contexto de declaración de un `ReadOnly` elemento debe ser una clase, estructura o módulo y no puede ser un archivo de código fuente, el espacio de nombres o el procedimiento.  
   
--   **Modificadores combinados.** No puede especificar `ReadOnly` junto con `Static` en la misma declaración.  
+- **Modificadores combinados.** No puede especificar `ReadOnly` junto con `Static` en la misma declaración.  
   
--   **Asignar un valor.** Código consume un `ReadOnly` propiedad no puede establecer su valor. Pero el código que tiene acceso al almacenamiento subyacente puede asignar o cambiar el valor en cualquier momento.  
+- **Asignar un valor.** Código consume un `ReadOnly` propiedad no puede establecer su valor. Pero el código que tiene acceso al almacenamiento subyacente puede asignar o cambiar el valor en cualquier momento.  
   
      Puede asignar un valor a un `ReadOnly` variable solo en su declaración o en el constructor de una clase o estructura en el que está definida.  
   

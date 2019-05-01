@@ -10,30 +10,30 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051031"
 ---
 # <a name="panels-overview"></a>Información general sobre elementos Panel
 <xref:System.Windows.Controls.Panel> los elementos son componentes que controlan la representación de elementos, su tamaño y dimensiones, su posición y la disposición de su contenido secundario. El [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una serie de predefinidos <xref:System.Windows.Controls.Panel> elementos, así como la capacidad de construir personalizado <xref:System.Windows.Controls.Panel> elementos.  
   
  Este tema contiene las siguientes secciones:  
   
--   [La clase Panel](#Panels_view_from_10000_feet)  
+- [La clase Panel](#Panels_view_from_10000_feet)  
   
--   [Miembros comunes del elemento Panel](#Panels_declared_members)  
+- [Miembros comunes del elemento Panel](#Panels_declared_members)  
   
--   [Elementos Panel derivados](#Panels_derived_elements)  
+- [Elementos Panel derivados](#Panels_derived_elements)  
   
--   [Paneles de interfaz de usuario](#Panels_main_UI_elements)  
+- [Paneles de interfaz de usuario](#Panels_main_UI_elements)  
   
--   [Elementos Panel anidados](#Panels_nested_panel_elements)  
+- [Elementos Panel anidados](#Panels_nested_panel_elements)  
   
--   [Elementos Panel personalizados](#Panels_custom_panel_elements)  
+- [Elementos Panel personalizados](#Panels_custom_panel_elements)  
   
--   [Compatibilidad para la localización y globalización](#Panels_global_localization)  
+- [Compatibilidad para la localización y globalización](#Panels_global_localization)  
   
 <a name="Panels_view_from_10000_feet"></a>   
 ## <a name="the-panel-class"></a>La clase Panel  

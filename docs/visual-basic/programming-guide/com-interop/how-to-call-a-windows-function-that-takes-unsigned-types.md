@@ -1,5 +1,5 @@
 ---
-title: Filtrar Llamar a una función de Windows que adopta tipos sin signo (Visual Basic)
+title: Procedimiento Llamar a una función de Windows que adopta tipos sin signo (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 ms.openlocfilehash: d1a679242f89c17e58a837ac2d356e1594972fb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022368"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Filtrar Llamar a una función de Windows que adopta tipos sin signo (Visual Basic)
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Procedimiento Llamar a una función de Windows que adopta tipos sin signo (Visual Basic)
 
 Si está utilizando una clase, módulo o estructura que tiene miembros de tipos enteros sin signo, puede tener acceso a estos miembros con Visual Basic.
 

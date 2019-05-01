@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
 ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032869"
 ---
 # <a name="planning-for-application-performance"></a>Planear para mejorar el rendimiento de aplicaciones
 El éxito de alcanzar sus objetivos de rendimiento depende del grado de desarrollar la estrategia de rendimiento. El planeamiento es la primera fase de desarrollo de cualquier producto. En este tema se describe unas reglas muy sencillas para desarrollar una estrategia de buen rendimiento.  

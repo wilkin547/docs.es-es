@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
 ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053540"
 ---
 # <a name="propertypath-xaml-syntax"></a>Sintaxis de PropertyPath de XAML
 El <xref:System.Windows.PropertyPath> objeto admite una insertada compleja [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sintaxis para establecer varias propiedades que toman el <xref:System.Windows.PropertyPath> tipo como su valor. Este tema se documenta el <xref:System.Windows.PropertyPath> sintaxis que se aplican a la sintaxis de enlace y animación.  
@@ -69,11 +69,11 @@ El <xref:System.Windows.PropertyPath> objeto admite una insertada compleja [!INC
   
  Los paréntesis indican que esta propiedad en un <xref:System.Windows.PropertyPath> deben crearse con una calificación parcial. Puede usar un espacio de nombres XML para buscar el tipo con la asignación adecuada. El `ownerType` busca tipos a los que un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesador tenga acceso a través del <xref:System.Windows.Markup.XmlnsDefinitionAttribute> declaraciones en cada ensamblado. La mayoría de las aplicaciones tienen el espacio de nombres XML predeterminado asignado al espacio de nombres [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], de modo que, normalmente, solo es necesario para los tipos personalizados o para tipos que queden fuera del espacio de nombres.  `propertyName` debe resolverse para ser el nombre de una propiedad que exista en `ownerType`. Esta sintaxis se usa, normalmente, para uno de los siguientes casos:  
   
--   Se especifica la ruta de acceso en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que tiene un estilo o plantilla sin un tipo de destino especificado. Un uso completo, normalmente, no es válido para otros casos que no sean este, porque en los casos sin estilo o sin plantilla, la propiedad existe en una instancia, no en un tipo.  
+- Se especifica la ruta de acceso en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que tiene un estilo o plantilla sin un tipo de destino especificado. Un uso completo, normalmente, no es válido para otros casos que no sean este, porque en los casos sin estilo o sin plantilla, la propiedad existe en una instancia, no en un tipo.  
   
--   La propiedad es una propiedad adjunta.  
+- La propiedad es una propiedad adjunta.  
   
--   Está enlazando a una propiedad estática.  
+- Está enlazando a una propiedad estática.  
   
  Para usar como destino de guión gráfico, la propiedad especificada como `propertyName` debe ser un <xref:System.Windows.DependencyProperty>.  
   
@@ -118,19 +118,19 @@ or
 ### <a name="escapes-for-property-path-strings"></a>Secuencias de escape para cadenas de ruta de acceso de propiedad  
  Para ciertos objetos de negocios, puede encontrar un caso donde la cadena de ruta de acceso de propiedad necesite una secuencia de escape para poder analizarse correctamente. La necesidad de la secuencia de escape no es habitual, ya que muchos de estos caracteres tienen problemas similares de interacción con nombres en lenguajes que, normalmente, se usarían para definir el objeto de negocios.  
   
--   Dentro de los indizadores ([ ]), el carácter de intercalación (^) realiza el escape del carácter siguiente.  
+- Dentro de los indizadores ([ ]), el carácter de intercalación (^) realiza el escape del carácter siguiente.  
   
--   Debe realizar el escape (mediante entidades XML) de determinados caracteres que son especiales para la definición del lenguaje XML. Use `&` para realizar el escape del carácter "&". Use `>` para realizar el escape de la etiqueta final ">".  
+- Debe realizar el escape (mediante entidades XML) de determinados caracteres que son especiales para la definición del lenguaje XML. Use `&` para realizar el escape del carácter "&". Use `>` para realizar el escape de la etiqueta final ">".  
   
--   Debe realizar el escape (con la barra diagonal inversa `\`) de caracteres que son especiales para el comportamiento del analizador XAML de WPF para procesar una extensión de marcado.  
+- Debe realizar el escape (con la barra diagonal inversa `\`) de caracteres que son especiales para el comportamiento del analizador XAML de WPF para procesar una extensión de marcado.  
   
-    -   La barra diagonal inversa (`\`) es el carácter de escape.  
+    - La barra diagonal inversa (`\`) es el carácter de escape.  
   
-    -   El signo igual (`=`) separa el nombre de propiedad del valor de propiedad.  
+    - El signo igual (`=`) separa el nombre de propiedad del valor de propiedad.  
   
-    -   La coma (`,`) separa las propiedades.  
+    - La coma (`,`) separa las propiedades.  
   
-    -   La llave de cierre (`}`) es el final de una extensión de marcado.  
+    - La llave de cierre (`}`) es el final de una extensión de marcado.  
   
 > [!NOTE]
 >  Técnicamente, estos escapes también funcionan para una ruta de acceso de propiedad de guion gráfico, pero, normalmente, se recorren modelos de objetos para los objetos WPF existentes y las secuencias de escape no deberían ser necesarias.  

@@ -6,24 +6,24 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
 ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046923"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración en la información general de las aplicaciones COM+
 Windows Communication Foundation (WCF) proporciona un entorno rico para crear aplicaciones distribuidas. Si ya usa lógica de la aplicación basada en componentes alojada en COM +, puede usar WCF para extender su lógica existente en lugar de tener que rescribirla. Un escenario común es cuando se quiere exponer una lógica de negocio de Enterprise Services o COM+ mediante servicios web.  
   
  Cuando una interfaz en un componente COM+ se expone como un servicio web, la especificación y contrato de estos servicios se determina por una asignación automática realizada cuando se inicia la aplicación. La lista siguiente muestra el modelo conceptual para esta asignación:  
   
--   Un servicio se define para cada clase COM expuesta.  
+- Un servicio se define para cada clase COM expuesta.  
   
--   El contrato para el servicio se deriva directamente de la definición de interfaz del componente seleccionado con la posibilidad de exclusión de método definida en la configuración.  
+- El contrato para el servicio se deriva directamente de la definición de interfaz del componente seleccionado con la posibilidad de exclusión de método definida en la configuración.  
   
--   Las operaciones en ese contrato se derivan directamente de los métodos en la definición de interfaz del componente.  
+- Las operaciones en ese contrato se derivan directamente de los métodos en la definición de interfaz del componente.  
   
--   Los parámetros para esas operaciones se derivan directamente del tipo de interoperabilidad COM que corresponde a los parámetros de método del componente.  
+- Los parámetros para esas operaciones se derivan directamente del tipo de interoperabilidad COM que corresponde a los parámetros de método del componente.  
   
  Las direcciones y enlaces de transporte predeterminados para el servicio son proporcionadas en un archivo de configuración de servicio, pero se pueden reconfigurar si se necesita.  
   
@@ -47,19 +47,19 @@ Windows Communication Foundation (WCF) proporciona un entorno rico para crear ap
 ## <a name="supported-interfaces"></a>Interfaces admitidas  
  Hay algunas restricciones en el tipo de interfaces que se pueden exponer como un servicio web. No se admiten los siguientes tipos de interfaz:  
   
--   Interfaces que pasan referencias de objeto como parámetros: el siguiente enfoque de referencia de objeto limitado se describe en la sección Compatibilidad de referencia de objeto limitado.  
+- Interfaces que pasan referencias de objeto como parámetros: el siguiente enfoque de referencia de objeto limitado se describe en la sección Compatibilidad de referencia de objeto limitado.  
   
--   Interfaces que pasan tupos que no son compatibles con las conversiones [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] de interoperabilidad de COM.  
+- Interfaces que pasan tupos que no son compatibles con las conversiones [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] de interoperabilidad de COM.  
   
--   Interfaces para las aplicaciones que tienen la agrupación de aplicaciones habilitadas cuando lo hospedan COM+.  
+- Interfaces para las aplicaciones que tienen la agrupación de aplicaciones habilitadas cuando lo hospedan COM+.  
   
--   Interfaces de componentes que se marcan como privado en la aplicación.  
+- Interfaces de componentes que se marcan como privado en la aplicación.  
   
--   Interfaces de infraestructura COM+.  
+- Interfaces de infraestructura COM+.  
   
--   Interfaces de la aplicación de sistema.  
+- Interfaces de la aplicación de sistema.  
   
--   Interfaces de los componentes de Enterprise Services no agregados a la caché global de ensamblados.  
+- Interfaces de los componentes de Enterprise Services no agregados a la caché global de ensamblados.  
   
 ### <a name="limited-object-reference-support"></a>Compatibilidad limitada de referencia de objeto  
  Dado que varios componentes implementados de COM+ utilizan objetos por parámetros de referencia, como devolver un objeto ADO Recordset, la integración de COM+ incluye compatibilidad limitada para los parámetros de referencia de objeto. La compatibilidad se limita a los objetos que implementan la interfaz COM `IPersistStream`. Esto incluye los objetos ADO Recordset y se puede implementar para objetos COM específicos de la aplicación.  
@@ -76,15 +76,15 @@ Windows Communication Foundation (WCF) proporciona un entorno rico para crear ap
 ## <a name="selecting-the-hosting-mode"></a>Seleccionar el modo de hospedaje  
  COM+ expone servicios web en uno de los modos de hospedaje siguientes:  
   
--   Hospedaje en COM  
+- Hospedaje en COM  
   
      El servicio web se hospeda dentro del proceso de servidor de COM+ dedicado a la aplicación (Dllhost.exe). Este modo exige que se inicie la aplicación exactamente antes de que pueda recibir solicitudes del servicio web. Las opciones COM+ "Ejecutar como servicio NT” o "Dejar ejecutándose cuando está inactivo" se pueden utilizar para evitar el cierre por inactividad de la aplicación y sus servicios. Este modo proporciona acceso tanto al servicio web como a DCOM a la aplicación de servidor.  
   
--   Hospedado por Web  
+- Hospedado por Web  
   
      El servicio web se hospeda dentro de un proceso de trabajo de servidor web. Este modo no le exige a COM+ que esté activo cuando se recibe la solicitud inicial. Si la aplicación no está activa cuando se recibe esta solicitud, se activa automáticamente antes de procesar la solicitud. Este modo también proporciona acceso a la aplicación de servidor tanto al servicio web como a DCOM, pero produce un salto del proceso para las solicitudes del servicio web. Esto exige normalmente que el cliente habilite la suplantación. En WCF, esto puede hacerse con el <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propiedad de la <xref:System.ServiceModel.Security.WindowsClientCredential> (clase), que se obtiene acceso como una propiedad de la clase genérica <xref:System.ServiceModel.ChannelFactory%601> (clase), así como el <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> valor de enumeración.  
   
--   Hospedaje en web en proceso  
+- Hospedaje en web en proceso  
   
      La lógica del servicio web y de la aplicación COM+ se hospedan dentro del proceso de trabajo del servidor web. Esto proporciona la activación automática del modo de hospedaje en web sin producir un salto del proceso para las solicitudes del servicio web. El inconveniente es que no se puede tener acceso a la aplicación de servidor a través de DCOM.  
   

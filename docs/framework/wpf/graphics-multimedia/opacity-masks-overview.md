@@ -7,11 +7,11 @@ helpviewer_keywords:
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
 ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008478"
 ---
 # <a name="opacity-masks-overview"></a>Información general sobre las máscaras de opacidad
 Las máscaras de opacidad permiten hacer que partes de un elemento o un objeto visual sea total o parcialmente transparentes. Para crear una máscara de opacidad, aplicar un <xref:System.Windows.Media.Brush> a la <xref:System.Windows.UIElement.OpacityMask%2A> propiedad de un elemento o <xref:System.Windows.Media.Visual>.  El pincel se asigna al elemento o al objeto visual, y el valor de opacidad de cada píxel del pincel se usa para determinar la opacidad resultante de cada píxel correspondiente del elemento o objeto visual.  
@@ -36,21 +36,21 @@ Ejemplo de máscara de opacidad
 ## <a name="creating-an-opacity-mask"></a>Creación de una máscara de opacidad  
  Para crear una máscara de opacidad, se crea un <xref:System.Windows.Media.Brush> y aplicarlo a la <xref:System.Windows.UIElement.OpacityMask%2A> propiedad de un elemento u objeto visual. Puede usar cualquier tipo de <xref:System.Windows.Media.Brush> como máscara de opacidad.  
   
--   <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Se usa para hacer que un elemento o se desvanezca visual.  
+- <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Se usa para hacer que un elemento o se desvanezca visual.  
   
      La siguiente imagen muestra un <xref:System.Windows.Media.LinearGradientBrush> usa como máscara de opacidad.  
   
      ![Un objeto con máscara de opacidad LinearGradientBrush](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 Ejemplo de máscara de opacidad LinearGradientBrush  
   
--   <xref:System.Windows.Media.ImageBrush>: Se utiliza para crear textura y efectos de bordes suaves o rasgados.  
+- <xref:System.Windows.Media.ImageBrush>: Se utiliza para crear textura y efectos de bordes suaves o rasgados.  
   
      La siguiente imagen muestra un <xref:System.Windows.Media.ImageBrush> usa como máscara de opacidad.  
   
      ![Objeto que tiene una máscara de opacidad ImageBrush](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 Ejemplo de máscara de opacidad LinearGradientBrush  
   
--   <xref:System.Windows.Media.DrawingBrush>: Se utiliza para crear máscaras de opacidad complejas a partir de patrones de formas, imágenes y degradados.  
+- <xref:System.Windows.Media.DrawingBrush>: Se utiliza para crear máscaras de opacidad complejas a partir de patrones de formas, imágenes y degradados.  
   
      La siguiente imagen muestra un <xref:System.Windows.Media.DrawingBrush> usa como máscara de opacidad.  
   

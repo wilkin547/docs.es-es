@@ -10,11 +10,11 @@ helpviewer_keywords:
 - content [WPF], Frame control
 ms.assetid: 1588f9bf-9001-4437-a8fc-cc57ef50561c
 ms.openlocfilehash: f530fa04e25bfa18095fc3b2a182d3d624789f54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054905"
 ---
 # <a name="frame"></a>Fotograma
 El <xref:System.Windows.Controls.Frame> control admite la navegación de contenido dentro del contenido. <xref:System.Windows.Controls.Frame> puede hospedarse en un elemento raíz como <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, o como una isla dentro de un árbol de contenido que pertenece a un elemento raíz.  

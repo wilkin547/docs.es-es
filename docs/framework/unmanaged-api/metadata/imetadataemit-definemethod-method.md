@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a67e8ce19a2acf5b4ee1d114858e00d93cb183b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044140"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod (Método)
 Crea una definición para un método o una función global con la firma especificada y devuelve un token para esa definición de método.  
@@ -90,9 +90,9 @@ HRESULT DefineMethod (
 ## <a name="defining-a-method-for-pinvoke"></a>Definir un método para PInvoke  
  Para que cada función no administrada que se llame a través de PInvoke, debe definir un método administrado que representa la función no administrada de destino. Para definir el método administrado, utilice `DefineMethod` con algunos de los parámetros establecidos a ciertos valores, dependiendo de la forma en que se utiliza PInvoke:  
   
--   PInvoke verdadero - implica la invocación de un método no administrado externo que reside en una DLL no administrada.  
+- PInvoke verdadero - implica la invocación de un método no administrado externo que reside en una DLL no administrada.  
   
--   PInvoke local: implica la invocación de un método nativo no administrado que está incrustado en el módulo administrado actual.  
+- PInvoke local: implica la invocación de un método nativo no administrado que está incrustado en el módulo administrado actual.  
   
  La configuración de parámetros se proporciona en la tabla siguiente.  
   

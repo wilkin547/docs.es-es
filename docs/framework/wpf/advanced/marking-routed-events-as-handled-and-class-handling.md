@@ -18,11 +18,11 @@ helpviewer_keywords:
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
 ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053878"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marcar eventos enrutados como controlados y control de clases
 Los controladores de un evento enrutado pueden marcar el evento como controlado en los datos del evento. Controlar el evento acorta de forma efectiva la ruta. El control de clases es un concepto de programación que admiten los eventos enrutados. Un controlador de clases tiene la oportunidad de controlar un evento enrutado determinado en un nivel de clase con un controlador que se invoca antes que cualquier controlador de instancias de cualquier instancia de la clase.  
@@ -57,9 +57,9 @@ Los controladores de un evento enrutado pueden marcar el evento como controlado 
   
  En un nivel más profundo que la ruta del evento, también puede haber varios controladores de clases que actúen en cualquier instancia de una clase. Esto se debe a que el modelo de control de clase para los eventos enrutados permite que todas las clases posibles de una jerarquía de clases registren su propio controlador de clase para cada evento enrutado. Cada controlador de clase se agrega a un almacén interno y, cuando se construye la ruta de eventos para una aplicación, todos los controladores de clase se agregan a la ruta del evento. Los controladores de clase se agregan a la ruta de modo que el controlador de la clase más derivada se invoca primero y los controladores de clase de cada clase base sucesiva se invocan después. Por lo general, los controladores de clase no están registrados por lo que también responden a eventos enrutados que ya se marcaron como controlados. Por consiguiente, este mecanismo de control de clases habilita una de dos opciones:  
   
--   Las clases derivadas pueden complementar el control de clases que se hereda de la clase base agregando un controlador que no marca el evento enrutado como controlado, porque el controlador de la clase base se invocará después del controlador de la clase derivada.  
+- Las clases derivadas pueden complementar el control de clases que se hereda de la clase base agregando un controlador que no marca el evento enrutado como controlado, porque el controlador de la clase base se invocará después del controlador de la clase derivada.  
   
--   Las clases derivadas pueden reemplazar el control de clases de la clase base agregando un controlador de clase que marque el evento enrutado como controlado. Debe tener cuidado con este enfoque, porque es posible que cambie el diseño del control de base deseado en áreas como el aspecto visual, la lógica de estado, el control de entrada y la gestión de comandos.  
+- Las clases derivadas pueden reemplazar el control de clases de la clase base agregando un controlador de clase que marque el evento enrutado como controlado. Debe tener cuidado con este enfoque, porque es posible que cambie el diseño del control de base deseado en áreas como el aspecto visual, la lógica de estado, el control de entrada y la gestión de comandos.  
   
 <a name="Class_Handling_of_Routed_Events"></a>   
 ## <a name="class-handling-of-routed-events-by-control-base-classes"></a>Control de clases de eventos enrutados mediante clases base de control  

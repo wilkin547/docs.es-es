@@ -3,11 +3,11 @@ title: Asignación de tipos entre CLR y SQL
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037705"
 ---
 # <a name="sql-clr-type-mapping"></a>Asignación de tipos entre CLR y SQL
 En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a un modelo de objetos expresado en el lenguaje de programación que prefiera. Cuando la aplicación se ejecuta, LINQ to SQL convierte las consultas integradas del lenguaje del modelo de objetos a SQL y las envía a la base de datos para su ejecución. Cuando la base de datos devuelve los resultados, LINQ to SQL los vuelve a convertir en objetos con los que pueda trabajar en su propio lenguaje de programación.  
@@ -16,23 +16,23 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
   
  En este tema se tratan los puntos siguientes:  
   
--   [Asignación de tipos predeterminados](#DefaultTypeMapping)  
+- [Asignación de tipos predeterminados](#DefaultTypeMapping)  
   
--   [Matriz de comportamiento de tiempo de ejecución de la asignación de tipos](#BehaviorMatrix)  
+- [Matriz de comportamiento de tiempo de ejecución de la asignación de tipos](#BehaviorMatrix)  
   
--   [Diferencias de comportamiento entre CLR y la ejecución de SQL](#BehaviorDiffs)  
+- [Diferencias de comportamiento entre CLR y la ejecución de SQL](#BehaviorDiffs)  
   
--   [Asignación de enumeración](#EnumMapping)  
+- [Asignación de enumeración](#EnumMapping)  
   
--   [Asignación numérica](#NumericMapping)  
+- [Asignación numérica](#NumericMapping)  
   
--   [Asignación de texto y XML](#TextMapping)  
+- [Asignación de texto y XML](#TextMapping)  
   
--   [Fecha y hora de asignación](#DateMapping)  
+- [Fecha y hora de asignación](#DateMapping)  
   
--   [Asignación binaria](#BinaryMapping)  
+- [Asignación binaria](#BinaryMapping)  
   
--   [Asignaciones varias](#MiscMapping)  
+- [Asignaciones varias](#MiscMapping)  
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>Asignación de tipos predeterminados  
@@ -58,21 +58,21 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
   
  Por ejemplo, a continuación se indican algunas diferencias de comportamiento entre CLR y SQL Server:  
   
--   SQL Server ordena ciertos tipos de datos de forma diferente a los datos del tipo equivalente en CLR. Por ejemplo, los datos de SQL Server del tipo `UNIQUEIDENTIFIER` se ordenan de forma diferente a los datos de CLR del tipo <xref:System.Guid?displayProperty=nameWithType>.  
+- SQL Server ordena ciertos tipos de datos de forma diferente a los datos del tipo equivalente en CLR. Por ejemplo, los datos de SQL Server del tipo `UNIQUEIDENTIFIER` se ordenan de forma diferente a los datos de CLR del tipo <xref:System.Guid?displayProperty=nameWithType>.  
   
--   SQL Server trata ciertas operaciones de comparación de cadenas de forma diferente a CLR. En SQL Server, el comportamiento de comparación de cadenas depende de la configuración de intercalación del servidor. Para obtener más información, consulte [trabajar con intercalaciones](https://go.microsoft.com/fwlink/?LinkId=115330) en los libros en pantalla de Microsoft SQL Server.  
+- SQL Server trata ciertas operaciones de comparación de cadenas de forma diferente a CLR. En SQL Server, el comportamiento de comparación de cadenas depende de la configuración de intercalación del servidor. Para obtener más información, consulte [trabajar con intercalaciones](https://go.microsoft.com/fwlink/?LinkId=115330) en los libros en pantalla de Microsoft SQL Server.  
   
--   SQL Server puede devolver valores diferentes a los que devuelve CLR para algunas funciones asignadas. Por ejemplo, las funciones de igualdad tendrán resultados distintos porque SQL Server considera que dos cadenas son iguales si solo se diferencian en el espacio en blanco final, mientras que CLR considera que no son iguales.  
+- SQL Server puede devolver valores diferentes a los que devuelve CLR para algunas funciones asignadas. Por ejemplo, las funciones de igualdad tendrán resultados distintos porque SQL Server considera que dos cadenas son iguales si solo se diferencian en el espacio en blanco final, mientras que CLR considera que no son iguales.  
   
 <a name="EnumMapping"></a>   
 ## <a name="enum-mapping"></a>Asignación de enumeración  
  LINQ to SQL admite la asignación del tipo <xref:System.Enum?displayProperty=nameWithType> de CLR a tipos de SQL Server de dos maneras:  
   
--   Asignación a tipos SQL numéricos (`TINYINT`, `SMALLINT`, `INT`, `BIGINT`)  
+- Asignación a tipos SQL numéricos (`TINYINT`, `SMALLINT`, `INT`, `BIGINT`)  
   
      Al asignar un tipo <xref:System.Enum?displayProperty=nameWithType> de CLR a un tipo numérico de SQL, el valor entero subyacente del tipo <xref:System.Enum?displayProperty=nameWithType> de CLR se asigna al valor de la columna de base de datos de SQL Server. Por ejemplo, si un elemento <xref:System.Enum?displayProperty=nameWithType> denominado `DaysOfWeek` contiene un miembro denominado `Tue` con un valor entero subyacente de 3, ese miembro se asigna a un valor de base de datos de 3.  
   
--   Asignación a tipos SQL de texto (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`)  
+- Asignación a tipos SQL de texto (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`)  
   
      Al asignar un tipo <xref:System.Enum?displayProperty=nameWithType> de CLR a un tipo de texto de SQL, el valor de la base de datos SQL se asigna a los nombres de los miembros <xref:System.Enum?displayProperty=nameWithType> de CLR. Por ejemplo, si un tipo <xref:System.Enum?displayProperty=nameWithType> denominado `DaysOfWeek` contiene un miembro denominado `Tue` con un valor entero subyacente de 3, ese miembro se asigna a un valor de base de datos de `Tue`.  
   
@@ -154,13 +154,13 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
 ### <a name="xml-types"></a>Tipos XML  
  El tipo de datos `XML` de SQL Server está disponible a partir de Microsoft SQL Server 2005. Puede asignar el tipo de datos `XML` de SQL Server a <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument> o <xref:System.String>. Si la columna almacena fragmentos XML que no se pueden leer en <xref:System.Xml.Linq.XElement>, dicha columna debe asignarse a <xref:System.String> para evitar errores en tiempo de ejecución. Entre los fragmentos XML que se deben asignar a <xref:System.String> se incluyen los siguientes:  
   
--   Una secuencia de elementos XML  
+- Una secuencia de elementos XML  
   
--   Atributos  
+- Atributos  
   
--   Identificadores públicos (PI)  
+- Identificadores públicos (PI)  
   
--   Comentarios  
+- Comentarios  
   
  Aunque puede asignar <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XDocument> a SQL Server como se muestra en el [matriz de comportamiento del tiempo de ejecución de asignación de tipo](#BehaviorMatrix), el <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> método no tiene ninguna asignación de tipo de SQL Server de forma predeterminada para estos tipos.  
   

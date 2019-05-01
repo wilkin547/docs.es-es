@@ -3,11 +3,11 @@ title: Extremos de servicio y direccionamiento de la cola
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
 ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050394"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Extremos de servicio y direccionamiento de la cola
 En este tema se aborda cómo los clientes direccionan servicios que leen de las colas y cómo los puntos de conexión de servicio se asignan a las colas. Como recordatorio, la siguiente ilustración muestra el clásico Windows Communication Foundation (WCF) en cola la implementación de la aplicación.  
@@ -34,11 +34,11 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
  donde:  
   
--   \<*nombre de host*> es el nombre del equipo que hospeda la cola de destino.  
+- \<*nombre de host*> es el nombre del equipo que hospeda la cola de destino.  
   
--   [privado] es opcional. Se utiliza al direccionar una cola de destino que es una cola privada. Para direccionar una cola pública, no debe especificar privado. Tenga en cuenta que, a diferencia de las rutas de acceso MSMQ, no hay ningún "$" en el formulario URI WCF.  
+- [privado] es opcional. Se utiliza al direccionar una cola de destino que es una cola privada. Para direccionar una cola pública, no debe especificar privado. Tenga en cuenta que, a diferencia de las rutas de acceso MSMQ, no hay ningún "$" en el formulario URI WCF.  
   
--   \<*nombre de la cola*> es el nombre de la cola. El nombre de la cola también puede hacer referencia a una subcola. Por lo tanto, \< *nombre de la cola*> = \< *name-of-queue*> [; *nombre de Sub*].  
+- \<*nombre de la cola*> es el nombre de la cola. El nombre de la cola también puede hacer referencia a una subcola. Por lo tanto, \< *nombre de la cola*> = \< *name-of-queue*> [; *nombre de Sub*].  
   
  Ejemplo 1: Para direccionar una cola privada PurchaseOrders hospedada en el equipo abc atadatum.com, el URI sería MSMQ://ABC.adatum.com/Private/purchaseorders.  
   
@@ -51,9 +51,9 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
 ### <a name="multiple-contracts-in-a-queue"></a>Varios contratos en una cola  
  Los mensajes en una cola pueden implementar diferentes contratos. En este caso, es esencial que una de las condiciones siguientes sea verdadera para leer correctamente y procesar todos los mensajes:  
   
--   Especifique un punto de conexión para un servicio que implementa todos los contratos. Éste es el enfoque recomendado.  
+- Especifique un punto de conexión para un servicio que implementa todos los contratos. Éste es el enfoque recomendado.  
   
--   Especifique varios puntos de conexión con contratos diferentes, pero asegúrese de que todos los puntos de conexión utilicen el mismo objeto `NetMsmqBinding`. La lógica de distribución en ServiceModel utiliza una bomba de mensaje que lee los mensajes del canal de transporte para su distribución, lo que eventualmente desmultiplexa mensajes basados en el contrato a extremos diferentes. Una bomba de mensaje se crea para un par de escucha URI/enlace. La dirección de la cola es utilizada como URI de escucha por el agente de escucha puesto en cola. Si todos los extremos utilizan el mismo objeto de enlace, ello garantiza que se utiliza una única bomba de mensaje para leer el mensaje y desmultiplexarlo a los extremos pertinentes basados en el contrato.  
+- Especifique varios puntos de conexión con contratos diferentes, pero asegúrese de que todos los puntos de conexión utilicen el mismo objeto `NetMsmqBinding`. La lógica de distribución en ServiceModel utiliza una bomba de mensaje que lee los mensajes del canal de transporte para su distribución, lo que eventualmente desmultiplexa mensajes basados en el contrato a extremos diferentes. Una bomba de mensaje se crea para un par de escucha URI/enlace. La dirección de la cola es utilizada como URI de escucha por el agente de escucha puesto en cola. Si todos los extremos utilizan el mismo objeto de enlace, ello garantiza que se utiliza una única bomba de mensaje para leer el mensaje y desmultiplexarlo a los extremos pertinentes basados en el contrato.  
   
 ### <a name="srmp-messaging"></a>Mensajería SRMP  
  Como se ha abordado previamente, puede utilizar el protocolo SRMP para las transferencias de colas a colas. Ello se utiliza normalmente cuando un transporte http transmite mensajes entre la cola de transmisión y la cola de destino.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
 ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051018"
 ---
 # <a name="inline-styles-and-templates"></a>Estilos y plantillas insertados
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona <xref:System.Windows.Style> objetos y objetos de plantilla (<xref:System.Windows.FrameworkTemplate> subclases) como una forma de definir la apariencia visual de un elemento en los recursos, por lo que puede utilizarse varias veces. Por este motivo, los atributos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que toman los tipos <xref:System.Windows.Style> y <xref:System.Windows.FrameworkTemplate> casi siempre que las referencias de recursos en plantillas y estilos existentes en lugar de definir nuevos en línea.  

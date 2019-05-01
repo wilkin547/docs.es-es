@@ -13,11 +13,11 @@ helpviewer_keywords:
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
 ms.openlocfilehash: e6214938262b987a1bae4a9ca1d5c945f8b7fe6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052591"
 ---
 # <a name="local-type-inference-visual-basic"></a>Inferencia de tipo de variable local (Visual Basic)
 El compilador de Visual Basic usa *inferencia* para determinar los tipos de datos de variables locales declaradas sin un `As` cláusula. El compilador deduce el tipo de la variable del tipo de la expresión de inicialización. Esto le permite declarar variables sin especificar explícitamente un tipo, como se muestra en el ejemplo siguiente. Como resultado de las declaraciones, ambos `num1` y `num2` están fuertemente tipados como enteros.  
