@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: 911ba1474677f26a773ff63e958ba0ceedbefd0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 40ec8d033852bba5cb5ccb0739309cfe988a3ce5
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100982"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808363"
 ---
 # <a name="technology-regions-overview"></a>Información general sobre áreas de la tecnología
 Si se usan varias tecnologías de representación en una aplicación, como WPF, Win32 o DirectX, deben compartir las áreas de representación en una ventana común de nivel superior. En este tema se describen los problemas que podrían afectar a la presentación y la entrada de una aplicación de interoperación WPF.  
@@ -25,23 +25,23 @@ Si se usan varias tecnologías de representación en una aplicación, como WPF, 
 ### <a name="region-examples"></a>Ejemplos de región  
  En la ilustración siguiente se muestra una aplicación que mezcla [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Cada tecnología usa su propio conjunto de píxeles independientes no superpuestos y no hay ningún problema con la región.  
   
- ![Una ventana que no tiene problemas de espacio aéreo](./media/migrationinteroparchitectarticle01.png "MigrationInteropArchitectArticle01")  
+ ![Un ejemplo de una aplicación que combine Win32, DirectX y WPF.](./media/technology-regions-overview/win32-directx-windows-presentation-foundation-application.png)  
   
  Suponga que esta aplicación usa la posición del puntero del mouse para crear una animación que se intenta representar sobre cualquiera de estas tres regiones. Independientemente de cuál fuese la tecnología responsable de la animación propiamente dicha, esa tecnología invadiría la región de las otras dos. En la ilustración siguiente se muestra un intento de representar un círculo de WPF sobre una región de Win32.  
   
- ![Diagrama de interoperabilidad](./media/migrationinteroparchitectarticle02.png "MigrationInteropArchitectArticle02")  
+ ![Se intenta representar un círculo WPF sobre una región de Win32.](./media/technology-regions-overview/render-windows-presentation-foundation-circle-over-win32-region.png)  
   
  Otra infracción consiste en intentar usar la transparencia/combinación alfa entre distintas tecnologías.  En la ilustración siguiente, el cuadro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] invade las regiones de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] y [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. Como los píxeles de ese cuadro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] son semitransparentes, deberían ser propiedad conjunta de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], lo que no es posible.  Por tanto, es otra infracción y no se puede generar.  
   
- ![Diagrama de interoperabilidad](./media/migrationinteroparchitectarticle03.png "MigrationInteropArchitectArticle03")  
+ ![Diagrama que muestra un cuadro de WPF infringir las regiones de Win32 y DirectX.](./media/technology-regions-overview/windows-foundation-presentation-box-violate-win32-directx-region.png)  
   
  En los tres ejemplos anteriores se usaban regiones rectangulares, pero es posible usar formas diferentes.  Por ejemplo, una región puede tener un hueco. En la siguiente ilustración se muestra una región de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] con un hueco rectangular del tamaño de las regiones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] combinadas.  
   
- ![Diagrama de interoperabilidad](./media/migrationinteroparchitectarticle04.png "MigrationInteropArchitectArticle04")  
+ ![Diagrama que muestra una región de Win32 con un hueco rectangular.](./media/technology-regions-overview/win32-region-rectangular-hole.png)  
   
  Las regiones también pueden adoptar cualquier forma no rectangular, o cualquier forma que pueda describirse mediante un HRGN de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] (región).  
   
- ![Diagrama de interoperabilidad](./media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
+ ![Diagrama que muestra una región no rectangular.](./media/technology-regions-overview/nonrectangular-win32-region.png)  
   
 ## <a name="transparency-and-top-level-windows"></a>Transparencia y ventanas de nivel superior  
  El administrador de ventanas de Windows realmente solo procesa los HWND de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Por lo tanto, cada [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> es un HWND. El <xref:System.Windows.Window> HWND debe cumplir las reglas generales para todos los HWND. Dentro de ese HWND, el código de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] puede hacer cualquier cosa que admitan las [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en general. Pero para las interacciones con otros HWND en el escritorio, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] debe cumplir las reglas de procesamiento y representación de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] admite ventanas no rectangulares mediante [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]: HRGN para las ventanas no rectangulares y ventanas superpuestas para un alfa por píxel.  
@@ -54,11 +54,11 @@ Si se usan varias tecnologías de representación en una aplicación, como WPF, 
   
  Las ventanas superpuestas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tienen características diferentes según el sistema operativo. Esto se debe a que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] para la representación y las ventanas superpuestas se han diseñado principalmente para la representación de [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)], no la de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)].  
   
--   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] admite ventanas superpuestas con aceleración de hardware en [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] y versiones posteriores. Las ventanas superpuestas con aceleración de hardware en [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] requieren compatibilidad con [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)], por lo que las capacidades dependerán de la versión de [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] que haya en ese equipo.  
+- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] admite ventanas superpuestas con aceleración de hardware en [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] y versiones posteriores. Las ventanas superpuestas con aceleración de hardware en [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] requieren compatibilidad con [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)], por lo que las capacidades dependerán de la versión de [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] que haya en ese equipo.  
   
--   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no admite las claves de color de transparencia, porque [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no puede garantizar que se represente exactamente el color que se solicita, en particular cuando se aplica la aceleración de hardware a la representación.  
+- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no admite las claves de color de transparencia, porque [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no puede garantizar que se represente exactamente el color que se solicita, en particular cuando se aplica la aceleración de hardware a la representación.  
   
--   Si la aplicación se ejecuta en [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], las ventanas superpuestas situadas sobre superficies de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] parpadean cuando se representa la aplicación de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)].  (La secuencia de representación real consiste en que [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] oculta la ventana superpuesta, después [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] dibuja y después [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] vuelve a colocar la ventana superpuesta).  Las ventanas superpuestas que no son de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también tienen esta limitación.  
+- Si la aplicación se ejecuta en [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], las ventanas superpuestas situadas sobre superficies de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] parpadean cuando se representa la aplicación de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)].  (La secuencia de representación real consiste en que [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] oculta la ventana superpuesta, después [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] dibuja y después [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] vuelve a colocar la ventana superpuesta).  Las ventanas superpuestas que no son de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también tienen esta limitación.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -2,12 +2,12 @@
 title: Programación asincrónica
 description: Obtenga información sobre cómo F# programación asincrónica se logra a través de un modelo de programación de nivel de lenguaje que sea fácil de usar y el lenguaje natural.
 ms.date: 06/20/2016
-ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8cd7d7bcecabe8ea2c33a4787fe9ebbadd67fe67
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343459"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808229"
 ---
 # <a name="async-programming-in-f"></a>Programación asincrónica en F\#
 
@@ -26,7 +26,7 @@ Por ejemplo, supongamos que desea descargar el código HTML de dotnetfoundation.
 open System
 open System.Net
 
-let fetchHtmlAsync url = 
+let fetchHtmlAsync url =
     async {
         let uri = Uri(url)
         use webClient = new WebClient()
@@ -45,11 +45,11 @@ Y listo. Aparte del uso de `async`, `let!`, y `return`, esto es normal F# códig
 
 Hay algunas construcciones sintácticas que merece la pena tener en cuenta:
 
-*   `let!` enlaza el resultado de una expresión de async (que se ejecuta en otro contexto).
-*   `use!` funciona igual que `let!`, pero elimina sus recursos enlazados cuando sale del ámbito.
-*   `do!` se espera un flujo de trabajo asincrónico que no devuelve nada.
-*   `return` simplemente devuelve un resultado de una expresión de async.
-*   `return!` ejecuta otro flujo de trabajo asincrónico y devuelve su valor devuelto como resultado.
+* `let!` enlaza el resultado de una expresión de async (que se ejecuta en otro contexto).
+* `use!` funciona igual que `let!`, pero elimina sus recursos enlazados cuando sale del ámbito.
+* `do!` se espera un flujo de trabajo asincrónico que no devuelve nada.
+* `return` simplemente devuelve un resultado de una expresión de async.
+* `return!` ejecuta otro flujo de trabajo asincrónico y devuelve su valor devuelto como resultado.
 
 Además, normal `let`, `use`, y `do` palabras clave pueden utilizarse junto con las versiones asincrónicas tal como haría en una función normal.
 
@@ -59,45 +59,45 @@ Como se mencionó anteriormente, el código asincrónico es una especificación 
 
 1. `Async.RunSynchronously` iniciará un flujo de trabajo asincrónico en otro subproceso y espera su resultado.
 
-```fsharp
-open System
-open System.Net
+    ```fsharp
+    open System
+    open System.Net
 
-let fetchHtmlAsync url = 
-    async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        let! html = webClient.AsyncDownloadString(uri)
-        return html
-    }
+    let fetchHtmlAsync url =
+        async {
+            let uri = Uri(url)
+            use webClient = new WebClient()
+            let! html = webClient.AsyncDownloadString(uri)
+            return html
+        }
 
- // Execution will pause until fetchHtmlAsync finishes
- let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
+    // Execution will pause until fetchHtmlAsync finishes
+    let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
 
- // you actually have the result from fetchHtmlAsync now!
- printfn "%s" html
- ```
+    // you actually have the result from fetchHtmlAsync now!
+    printfn "%s" html
+    ```
 
 2. `Async.Start` iniciar un flujo de trabajo de async en otro subproceso y, le **no** espera su resultado.
 
-```fsharp
-open System
-open System.Net
-  
-let uploadDataAsync url data = 
-    async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        webClient.UploadStringAsync(uri, data)
-    }
+    ```fsharp
+    open System
+    open System.Net
 
-let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
+    let uploadDataAsync url data =
+        async {
+            let uri = Uri(url)
+            use webClient = new WebClient()
+            webClient.UploadStringAsync(uri, data)
+        }
 
-// Execution will continue after calling this!
-Async.Start(workflow)
+    let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
-printfn "%s" "uploadDataAsync is running in the background..."
- ```
+    // Execution will continue after calling this!
+    Async.Start(workflow)
+
+    printfn "%s" "uploadDataAsync is running in the background..."
+    ```
 
 Hay otras maneras de iniciar un flujo de trabajo asincrónicos disponible para escenarios más específicos. Se detallan [en la referencia de Async](https://msdn.microsoft.com/library/ee370232.aspx).
 
@@ -115,13 +115,13 @@ En el ejemplo siguiente, se usará `Async.Parallel` para descargar el código HT
 open System
 open System.Net
 
-let urlList = 
+let urlList =
     [ "https://www.microsoft.com"
       "https://www.google.com"
       "https://www.amazon.com"
       "https://www.facebook.com" ]
 
-let fetchHtmlAsync url = 
+let fetchHtmlAsync url =
     async {
         let uri = Uri(url)
         use webClient = new WebClient()
@@ -144,13 +144,13 @@ for html in htmlList do
 
 ## <a name="important-info-and-advice"></a>Consejos e información importante
 
-*   Anexa "Async" al final de cualquier función que se va a consumir
+* Anexa "Async" al final de cualquier función que se va a consumir
 
  Aunque se trata de una convención de nomenclatura, lo facilitar las cosas como la detectabilidad de las API. Especialmente si hay versiones sincrónicas y asincrónicas de la misma rutina, es una buena idea para indicar explícitamente que es asincrónico por medio del nombre.
 
-*   Escuchar al compilador.
+* Escuchar al compilador.
 
- F#del compilador es muy estricto, lo que casi imposible hacer algo problemáticos, como ejecutar "async" código de forma sincrónica. Si llega a través de una advertencia, que es un inicio de sesión que el código no ejecutará cómo cree que lo hará. Si puede hacer que el compilador feliz, más probable es que se ejecutará el código según lo previsto.
+F#del compilador es muy estricto, lo que casi imposible hacer algo problemáticos, como ejecutar "async" código de forma sincrónica. Si llega a través de una advertencia, que es un inicio de sesión que el código no ejecutará cómo cree que lo hará. Si puede hacer que el compilador feliz, más probable es que se ejecutará el código según lo previsto.
 
 ## <a name="for-the-cvb-programmer-looking-into-f"></a>Para el C#programador/VB estudiando F\#
 
@@ -164,23 +164,23 @@ Hay algunos otros las similitudes y diferencias cabe destacar.
 
 ### <a name="similarities"></a>Similitudes
 
-*   `let!`, `use!`, y `do!` son análogos a `await` al llamar a un trabajo asincrónico desde una `async{ }` bloque.
+* `let!`, `use!`, y `do!` son análogos a `await` al llamar a un trabajo asincrónico desde una `async{ }` bloque.
 
- Las tres palabras clave solo se pueden usar dentro de un `async { }` bloque, similar a cómo `await` solo puede invocarse dentro de un `async` método. En resumen, `let!` es para cuando desee capturar y utilizar un resultado, `use!` es el mismo pero algo cuyos recursos deben obtener limpiados tras su uso, y `do!` es para cuando desee esperar un flujo de trabajo asincrónico sin ningún valor devuelto al finalizar antes de continuar.
+  Las tres palabras clave solo se pueden usar dentro de un `async { }` bloque, similar a cómo `await` solo puede invocarse dentro de un `async` método. En resumen, `let!` es para cuando desee capturar y utilizar un resultado, `use!` es el mismo pero algo cuyos recursos deben obtener limpiados tras su uso, y `do!` es para cuando desee esperar un flujo de trabajo asincrónico sin ningún valor devuelto al finalizar antes de continuar.
 
-*   F#admite el paralelismo de datos de forma similar.
+* F#admite el paralelismo de datos de forma similar.
 
- Aunque funciona de forma muy distinta, `Async.Parallel` corresponde a `Task.WhenAll` en el caso de que los resultados de un conjunto de trabajos asincrónicos cuando se completan.
+  Aunque funciona de forma muy distinta, `Async.Parallel` corresponde a `Task.WhenAll` en el caso de que los resultados de un conjunto de trabajos asincrónicos cuando se completan.
 
 ### <a name="differences"></a>Diferencias
 
-*   Anidar `let!` no se permite, a diferencia de anidados `await`
+* Anidar `let!` no se permite, a diferencia de anidados `await`
 
- A diferencia de `await`, que se pueden anidar indefinidamente, `let!` no se puede y debe tener su resultado enlazados antes de usarlo dentro de otra `let!`, `do!`, o `use!`.
+  A diferencia de `await`, que se pueden anidar indefinidamente, `let!` no se puede y debe tener su resultado enlazados antes de usarlo dentro de otra `let!`, `do!`, o `use!`.
 
-*   Compatibilidad con la cancelación es más sencillo en F# que en C#/VB.
+* Compatibilidad con la cancelación es más sencillo en F# que en C#/VB.
 
- Admitir la cancelación de una tarea a mitad de camino su ejecución en C#/VB requiere comprobación el `IsCancellationRequested` propiedad o llamar a `ThrowIfCancellationRequested()` en un `CancellationToken` objeto que se pasa al método asincrónico.
+  Admitir la cancelación de una tarea a mitad de camino su ejecución en C#/VB requiere comprobación el `IsCancellationRequested` propiedad o llamar a `ThrowIfCancellationRequested()` en un `CancellationToken` objeto que se pasa al método asincrónico.
 
 En cambio, F# flujos de trabajo asincrónicos son cancelables de manera más natural. La cancelación es un proceso sencillo de tres pasos.
 
@@ -200,7 +200,7 @@ let workflow =
             printfn "Working..."
             do! Async.Sleep 1000
     }
-    
+
 let tokenSource = new CancellationTokenSource()
 
 // Start the workflow in the background
@@ -214,6 +214,6 @@ Y listo.
 
 ## <a name="further-resources"></a>Recursos adicionales:
 
-*   [Flujos de trabajo asincrónicos en MSDN](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [Secuencias asincrónicas paraF#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-*   [F#Utilidades de datos HTTP](https://fsharp.github.io/FSharp.Data/library/Http.html)
+* [Flujos de trabajo asincrónicos en MSDN](https://msdn.microsoft.com/library/dd233250.aspx)
+* [Secuencias asincrónicas paraF#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+* [F#Utilidades de datos HTTP](https://fsharp.github.io/FSharp.Data/library/Http.html)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 3a3df65f0c20cff49f9bd2a8790e8d9ae0032391
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097231"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809584"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Procedimiento Enlazar a datos XML mediante XMLDataProvider y consultas XPath
 En este ejemplo se muestra cómo enlazar a [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] datos mediante un <xref:System.Windows.Data.XmlDataProvider>.  
@@ -30,19 +30,19 @@ En este ejemplo se muestra cómo enlazar a [!INCLUDE[TLA#tla_xml](../../../../in
   
  El <xref:System.Windows.Controls.ListBox> mostrará los elementos siguientes cuando se ejecuta este ejemplo. Se trata de los elementos *Title* de todos los elementos que se encuentran bajo *Books* cuyo valor de *Stock* sea "*out*" o cuyo valor de *Number* sea 3 o mayor o igual que 8. Tenga en cuenta que ninguna *CD* se devuelven los elementos porque el <xref:System.Windows.Data.XmlDataProvider.XPath%2A> valor establecido en el <xref:System.Windows.Data.XmlDataProvider> indica que solo el *libros* elementos se deben exponer (básicamente, estableciendo un filtro).  
   
- ![Ejemplo de XPath](./media/xpathexample.PNG "XPathExample")  
+ ![Captura de pantalla del ejemplo de XPath que muestra el título de cuatro libros.](./media/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries/xpath-example-listbox-details.png)  
   
  En este ejemplo, se muestran los títulos de libros porque la <xref:System.Windows.Data.Binding.XPath%2A> de la <xref:System.Windows.Controls.TextBlock> enlace en el <xref:System.Windows.DataTemplate> está establecido en "*título*". Si desea mostrar el valor de un atributo, como el *ISBN*, establecería que <xref:System.Windows.Data.Binding.XPath%2A> valor a "`@ISBN`".  
   
  El método XmlNode.SelectNodes administra las propiedades **XPath** en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Puede modificar las consultas **XPath** para obtener resultados distintos. Estos son algunos ejemplos para el <xref:System.Windows.Data.Binding.XPath%2A> consultar en el límite <xref:System.Windows.Controls.ListBox> del ejemplo anterior:  
   
--   `XPath="Book[1]"` devolverá el primer elemento de libro ("XML in Action"). Tenga en cuenta que los índices de **XPath** se basan en 1, no en 0.  
+- `XPath="Book[1]"` devolverá el primer elemento de libro ("XML in Action"). Tenga en cuenta que los índices de **XPath** se basan en 1, no en 0.  
   
--   `XPath="Book[@*]"` devolverá todos los elementos con cualquier atributo.  
+- `XPath="Book[@*]"` devolverá todos los elementos con cualquier atributo.  
   
--   `XPath="Book[last()-1]"` devolverá los elementos de libro del segundo al último ("Introducing Microsoft .NET").  
+- `XPath="Book[last()-1]"` devolverá los elementos de libro del segundo al último ("Introducing Microsoft .NET").  
   
--   `XPath="*[position()>3]"` devolverá todos los elementos de libro excepto los 3 primeros.  
+- `XPath="*[position()>3]"` devolverá todos los elementos de libro excepto los 3 primeros.  
   
  Al ejecutar un **XPath** de consulta, devuelve un <xref:System.Xml.XmlNode> o una lista de XmlNodes. <xref:System.Xml.XmlNode> es un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objeto, lo que significa que puede usar el <xref:System.Windows.Data.Binding.Path%2A> se va a enlazar el [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] propiedades. Remítase de nuevo al ejemplo anterior. Si el resto del ejemplo permanece igual y cambia el <xref:System.Windows.Controls.TextBlock> enlace al siguiente, verá los nombres de los objetos XmlNodes devueltos en el <xref:System.Windows.Controls.ListBox>. En este caso, el nombre de todos los nodos devueltos es "*Book*".  
   

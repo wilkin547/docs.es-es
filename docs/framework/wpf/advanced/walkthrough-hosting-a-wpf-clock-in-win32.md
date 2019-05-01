@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Hospedar un reloj WPF en Win32'
+title: 'Tutorial: Hospedar un reloj de WPF en Win32'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: a13e21281a4bdb365c3a0541d88cd94b6476492e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.openlocfilehash: 4001c34f6673e036bdbf731baed782c6dc0a16b0
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494953"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808045"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Tutorial: Hospedar un reloj WPF en Win32
+# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Tutorial: Hospedar un reloj de WPF en Win32
 
 Para colocar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dentro de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] de las aplicaciones, usar <xref:System.Windows.Interop.HwndSource>, que proporciona el HWND que incluye su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenido. En primer lugar cree el <xref:System.Windows.Interop.HwndSource>, proporciónele parámetros similares a los de CreateWindow. Indicar a la <xref:System.Windows.Interop.HwndSource> sobre el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenido que desee dentro de él. Por último, debe extraer el HWND de la <xref:System.Windows.Interop.HwndSource>. En este tutorial se muestra cómo crear un mixto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dentro de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplicación que vuelva a implementar el sistema operativo **propiedades de fecha y hora** cuadro de diálogo.
 
@@ -29,11 +29,11 @@ Este tutorial se centra en los pasos importantes para generar una aplicación de
 
 En el siguiente gráfico se muestra el producto final previsto de este tutorial:
 
-![Cuadro de diálogo Propiedades de fecha y hora](./media/interoparch06.PNG "InteropArch06")
+![Captura de pantalla que muestra el cuadro de diálogo Propiedades de fecha y hora.](./media/walkthrough-hosting-a-wpf-clock-in-win32/date-time-properties-dialog.png)
 
-Puede volver a este cuadro de diálogo Crear C++ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] project en [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]y con el editor de cuadro de diálogo para crear lo siguiente:
+Puede volver a este cuadro de diálogo mediante la creación de un C++ proyecto Win32 en Visual Studio y mediante el editor de cuadro de diálogo para crear lo siguiente:
 
-![Cuadro de diálogo Propiedades de fecha y hora](./media/interoparch07.PNG "InteropArch07")
+![Cuadro de diálogo Propiedades de fecha y hora ha vuelto a crear](./media/walkthrough-hosting-a-wpf-clock-in-win32/recreated-date-time-properties-dialog.png)
 
 (No es necesario usar [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] usar <xref:System.Windows.Interop.HwndSource>, y no es necesario usar C++ para escribir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programas, pero esto es una manera bastante habitual para hacerlo y se presta bien a una explicación del tutorial paso a paso).
 
@@ -229,7 +229,7 @@ Y aquí está el código subyacente adjunto:
 
 El resultado final tiene el siguiente aspecto:
 
-![Cuadro de diálogo Propiedades de fecha y hora](./media/interoparch08.PNG "InteropArch08")
+![Cuadro de diálogo Propiedades de fecha y hora de último resultado](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
 Para comparar el resultado final con el código que produjo esta captura de pantalla, vea [Win32 Clock Interoperation Sample](https://go.microsoft.com/fwlink/?LinkID=160051).
 

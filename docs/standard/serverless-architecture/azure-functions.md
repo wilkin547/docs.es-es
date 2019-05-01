@@ -4,12 +4,12 @@ description: Las funciones de Azure proporcionan funcionalidades sin servidor en
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.openlocfilehash: 4febcc01eebf3efce3fc1eb42e19c2ec6c0baa52
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145168"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807901"
 ---
 # <a name="azure-functions"></a>Comprobación de
 
@@ -25,7 +25,7 @@ Para obtener más información, consulte [documentación de Azure Functions](htt
 
 Hay dos versiones del runtime de Azure Functions: 1.x y 2.x. Versión 1.x está disponible con carácter general (GA). Admite el desarrollo de .NET desde el portal o las máquinas Windows y usa .NET Framework. 1.x es compatible con C#, JavaScript, y F#, con compatibilidad experimental con Python, PHP, TypeScript, Batch, Bash y PowerShell.
 
-Versión 2.x está en versión preliminar. Aprovecha .NET Core y admite el desarrollo multiplataforma en máquinas Linux, macOS y Windows. 2.x agrega soporte de primera clase para Java pero todavía no directamente admite cualquiera de los lenguajes experimentales. Versión 2.x usa un nuevo modelo de extensibilidad de enlace que permite a las extensiones de terceros a la plataforma, crear versiones independientes de los enlaces, y una más simplificado de entorno de ejecución.
+[Versión 2.x ahora también está disponible con carácter general](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/). Aprovecha .NET Core y admite el desarrollo multiplataforma en máquinas Linux, macOS y Windows. 2.x agrega soporte de primera clase para Java pero todavía no directamente admite cualquiera de los lenguajes experimentales. Versión 2.x usa un nuevo modelo de extensibilidad de enlace que permite a las extensiones de terceros a la plataforma, crear versiones independientes de los enlaces, y una más simplificado de entorno de ejecución.
 
 > **Hay un problema conocido en la versión 1.x con [compatibilidad de redireccionamiento de enlace](https://github.com/Azure/azure-functions-host/issues/992).** El problema es específico para el desarrollo de. NET. Los proyectos con dependencias en las bibliotecas que son una versión diferente de las bibliotecas incluidas en el tiempo de ejecución se ven afectados. El equipo de funciones se ha comprometido a progresar concreta en el problema. El equipo abordará redirecciones de enlace en 2.x antes de que entre en disponibilidad general. La instrucción del equipo oficial con correcciones sugeridas y soluciones alternativas está disponible aquí: [Resolución de ensamblado en Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
 
@@ -37,9 +37,9 @@ Se admiten los siguientes idiomas ya sea en general (GA), disponibilidad de una 
 
 |Lenguaje      |1.x         |2.x      |
 |--------------|------------|---------|
-|**C#**        |DISPONIBILIDAD GENERAL          |Vista previa  |
-|**JavaScript**|DISPONIBILIDAD GENERAL          |Vista previa  |
-|**F#**        |DISPONIBILIDAD GENERAL          |         |
+|**C#**        |GA          |Vista previa  |
+|**JavaScript**|GA          |Vista previa  |
+|**F#**        |GA          |         |
 |**Java**      |            |Vista previa  |
 |**Python**    |Habilitación de características|         |
 |**PHP**       |Habilitación de características|         |

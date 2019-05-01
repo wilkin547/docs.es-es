@@ -2,12 +2,12 @@
 title: Directiva de autorización
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 87deedb2bd28cd86619eb48d0ff9c3e566174d31
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 50e868645d7e7ccbcf4be697f8bdb1814dd90e9c
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332681"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807972"
 ---
 # <a name="authorization-policy"></a>Directiva de autorización
 
@@ -18,17 +18,17 @@ Este ejemplo muestra cómo implementar una directiva de autorización de notific
 
  En resumen, este ejemplo muestra cómo:
 
--   El cliente se puede autenticar utilizando una contraseña de nombre de usuario.
+- El cliente se puede autenticar utilizando una contraseña de nombre de usuario.
 
--   El cliente se puede autenticar utilizando un certificado X.509.
+- El cliente se puede autenticar utilizando un certificado X.509.
 
--   El servidor valida las credenciales del cliente contra un validador `UsernamePassword` personalizado.
+- El servidor valida las credenciales del cliente contra un validador `UsernamePassword` personalizado.
 
--   El servidor se autentica utilizando el certificado X.509 del servidor.
+- El servidor se autentica utilizando el certificado X.509 del servidor.
 
--   El servidor puede utilizar <xref:System.ServiceModel.ServiceAuthorizationManager> para controlar el acceso a ciertos métodos en el servicio.
+- El servidor puede utilizar <xref:System.ServiceModel.ServiceAuthorizationManager> para controlar el acceso a ciertos métodos en el servicio.
 
--   Cómo implementar <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.
+- Cómo implementar <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.
 
 El servicio expone dos puntos de conexión para comunicarse con el servicio, definidos mediante el archivo de configuración App.config. Cada extremo está compuesto por una dirección, un enlace y un contrato. Un enlace se configura con un enlace `wsHttpBinding` estándar que utiliza la autenticación de WS-Security y del nombre de usuario del cliente. El otro enlace se configura con un enlace `wsHttpBinding` estándar que utiliza la autenticación de WS-Security y del certificado de cliente. El [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) especifica que las credenciales de usuario que se usará para la autenticación de servicio. El certificado de servidor debe contener el mismo valor para el `SubjectName` propiedad como el `findValue` atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
@@ -377,8 +377,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 }
 ```
 
-El código anterior muestra cómo el método <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> comprueba que no se ha añadido ninguna notificación que afecte al procesamiento y añade notificaciones específicas. Las notificaciones que se permiten se obtienen del método `GetAllowedOpList`, que se implementa para devolver una lista concreta de operaciones que el usuario puede realizar. La directiva de autorización agrega notificaciones para tener acceso a la operación determinada. 
-  <xref:System.ServiceModel.ServiceAuthorizationManager> lo utiliza después para realizar decisiones de comprobación de acceso.
+El código anterior muestra cómo el método <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> comprueba que no se ha añadido ninguna notificación que afecte al procesamiento y añade notificaciones específicas. Las notificaciones que se permiten se obtienen del método `GetAllowedOpList`, que se implementa para devolver una lista concreta de operaciones que el usuario puede realizar. La directiva de autorización agrega notificaciones para tener acceso a la operación determinada. <xref:System.ServiceModel.ServiceAuthorizationManager> lo utiliza después para realizar decisiones de comprobación de acceso.
 
 Una vez implementado el <xref:System.IdentityModel.Policy.IAuthorizationPolicy> personalizado, se debe informar al host de servicio sobre las directivas de autorización que desee utilizar.
 
@@ -398,9 +397,9 @@ El archivo por lotes Setup.bat incluido con este ejemplo permite configurar el s
 
 A continuación, se proporciona información general breve de las diferentes secciones de los archivos por lotes para que se puedan modificar para su ejecución en la configuración adecuada:
 
--   Crear el certificado de servidor.
+- Crear el certificado de servidor.
 
-     Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar. La variable %SERVER_NAME% especifica el nombre del servidor. Cambie esta variable para especificar su propio nombre de servidor. El valor predeterminado es el host local.
+    Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar. La variable %SERVER_NAME% especifica el nombre del servidor. Cambie esta variable para especificar su propio nombre de servidor. El valor predeterminado es el host local.
 
     ```
     echo ************
@@ -412,19 +411,19 @@ A continuación, se proporciona información general breve de las diferentes sec
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Instalar el certificado del servidor en el almacén de certificados de confianza del cliente.
+- Instalar el certificado del servidor en el almacén de certificados de confianza del cliente.
 
-     Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente. Se requiere este paso porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente (por ejemplo, un certificado emitido por Microsoft), no es necesario el paso de rellenar el almacén de certificados del cliente con el certificado de servidor.
+    Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente. Se requiere este paso porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente (por ejemplo, un certificado emitido por Microsoft), no es necesario el paso de rellenar el almacén de certificados del cliente con el certificado de servidor.
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   Crear el certificado del cliente.
+- Crear el certificado del cliente.
 
-     Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de cliente que se va a usar. La variable %USER_NAME% especifica el nombre del servidor. Este valor está establecido en "test1" porque se trata del nombre que `IAuthorizationPolicy` busca. Si cambia el valor de %USER_NAME%, debe cambiar el valor correspondiente en el método `IAuthorizationPolicy.Evaluate`.
+    Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de cliente que se va a usar. La variable %USER_NAME% especifica el nombre del servidor. Este valor está establecido en "test1" porque se trata del nombre que `IAuthorizationPolicy` busca. Si cambia el valor de %USER_NAME%, debe cambiar el valor correspondiente en el método `IAuthorizationPolicy.Evaluate`.
 
-     El certificado está almacenado en Mi almacén (Personal) debajo de la ubicación de almacén CurrentUser.
+    El certificado está almacenado en Mi almacén (Personal) debajo de la ubicación de almacén CurrentUser.
 
     ```
     echo ************
@@ -433,9 +432,9 @@ A continuación, se proporciona información general breve de las diferentes sec
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   Instalar el certificado del cliente en el almacén de certificados de confianza del servidor.
+- Instalar el certificado del cliente en el almacén de certificados de confianza del servidor.
 
-     Las líneas siguientes del archivo por lotes Setup.bat copian el certificado del cliente en el almacén de los usuarios de confianza. Se requiere este paso porque el sistema servidor no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado del servidor con el certificado del cliente.
+    Las líneas siguientes del archivo por lotes Setup.bat copian el certificado del cliente en el almacén de los usuarios de confianza. Se requiere este paso porque el sistema servidor no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado del servidor con el certificado del cliente.
 
     ```
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
@@ -461,7 +460,7 @@ A continuación, se proporciona información general breve de las diferentes sec
 
 1. Inicie Client.exe desde *\client\bin*. La actividad del cliente se muestra en la aplicación de consola del cliente.
 
-  Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos
 
@@ -475,7 +474,7 @@ A continuación, se proporciona información general breve de las diferentes sec
 
 5. En el servidor, ejecute `setup.bat service` en línea de comandos de desarrollador para Visual Studio abierto con privilegios de administrador.
 
-   Ejecutando `setup.bat` con el `service` argumento crea un certificado de servicio con el nombre de dominio completo del equipo y exporta el certificado de servicio a un archivo denominado *Service.cer*.
+    Ejecutando `setup.bat` con el `service` argumento crea un certificado de servicio con el nombre de dominio completo del equipo y exporta el certificado de servicio a un archivo denominado *Service.cer*.
 
 6. Editar *Service.exe.config* para reflejar el nuevo nombre del certificado (en el `findValue` atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que es el mismo que el nombre de dominio completo del equipo. Cambie también el **computername** en el \<servicio > /\<baseAddresses > elemento desde el host local para el nombre completo de su equipo de servicio.
 
@@ -483,7 +482,7 @@ A continuación, se proporciona información general breve de las diferentes sec
 
 8. En el cliente, ejecute `setup.bat client` en línea de comandos de desarrollador para Visual Studio abierto con privilegios de administrador.
 
-   Ejecutando `setup.bat` con el `client` argumento crea un certificado de cliente denominado **test1** y exporta el certificado de cliente a un archivo denominado *Client.cer*.
+    Ejecutando `setup.bat` con el `client` argumento crea un certificado de cliente denominado **test1** y exporta el certificado de cliente a un archivo denominado *Client.cer*.
 
 9. En el *Client.exe.config* de archivos en el equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio. Realizar esto reemplazando **localhost** con el nombre de dominio completo del servidor.
 
@@ -491,17 +490,17 @@ A continuación, se proporciona información general breve de las diferentes sec
 
 11. En el cliente, ejecute *ImportServiceCert.bat* en línea de comandos de desarrollador para Visual Studio abierto con privilegios de administrador.
 
-   Esto importa el certificado de servicio desde el archivo Service.cer en el **CurrentUser - TrustedPeople** almacenar.
+    Esto importa el certificado de servicio desde el archivo Service.cer en el **CurrentUser - TrustedPeople** almacenar.
 
 12. En el servidor, ejecute *ImportClientCert.bat* en línea de comandos de desarrollador para Visual Studio abierto con privilegios de administrador.
 
-   Esto importa el certificado de cliente desde el archivo Client.cer en el **LocalMachine - TrustedPeople** almacenar.
+    Esto importa el certificado de cliente desde el archivo Client.cer en el **LocalMachine - TrustedPeople** almacenar.
 
 13. En el equipo servidor, inicie Service.exe desde la ventana de símbolo del sistema.
 
 14. En el equipo cliente, inicie Client.exe desde una ventana de símbolo del sistema.
 
-   Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+    Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="clean-up-after-the-sample"></a>Limpiar después de la muestra
 
