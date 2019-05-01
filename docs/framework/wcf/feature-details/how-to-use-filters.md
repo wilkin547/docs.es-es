@@ -3,22 +3,22 @@ title: Cómo usar los filtros
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
 ms.openlocfilehash: 5d3ed4a1d64edee274e60f5bf156b4294902df8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972866"
 ---
 # <a name="how-to-use-filters"></a>Cómo usar los filtros
 Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que utiliza múltiples filtros. En este ejemplo, los mensajes se enrutan a dos implementaciones de un servicio de la calculadora, regularCalc y roundingCalc. Ambas implementaciones admiten las mismas operaciones; sin embargo, un servicio redondea todos los cálculos al valor entero más cercano antes de devolverlos. Una aplicación cliente debe poder indicar si se debe utilizar la versión del redondeo del servicio; si no se especifica ninguna preferencia de servicio, la carga del mensaje se equilibra entre los dos servicios. Las operaciones expuestas por ambos servicios son:  
   
--   Agregar  
+- Agregar  
   
--   Restar  
+- Restar  
   
--   Multiplicar  
+- Multiplicar  
   
--   Dividir  
+- Dividir  
   
  Dado que ambos servicios implementan las mismas operaciones, no puede utilizar el filtro Action porque la acción especificada en el mensaje no será única. En su lugar, debe realizar un trabajo adicional para asegurarse de que los mensajes se enrutan a los puntos de conexión adecuados.  
   
@@ -137,10 +137,10 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
     > [!NOTE]
     >  El filtro PrefixEndpointAddress no evalúa el nombre de host al realizar una coincidencia, porque se puede hacer referencia a un host único utilizando diversos nombres de host que pueden ser todos ellos métodos válidos para hacer referencia al host de la aplicación cliente. Por ejemplo, todos los nombres siguientes pueden hacer referencia al mismo host:  
     >   
-    > -   localhost  
-    > -   127.0.0.1  
-    > -   `www.contoso.com`  
-    > -   ContosoWeb01  
+    > - localhost  
+    > - 127.0.0.1  
+    > - `www.contoso.com`  
+    > - ContosoWeb01  
   
 4. El filtro final debe admitir el enrutamiento de mensajes que llegan al punto de conexión general sin el encabezado personalizado. En este escenario, los mensajes deberían alternar entre los servicios de regularCalc y roundingCalc. Para admitir el enrutamiento de "operación por turnos" de estos mensajes, utilice un filtro personalizado que permite que cada mensaje procesado debe coincidir con una instancia del filtro.  A continuación, se definen dos instancias de RoundRobinMessageFilter, que se agrupan para indicar que deberían alternar entre sí.  
   

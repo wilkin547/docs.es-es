@@ -9,11 +9,11 @@ helpviewer_keywords:
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
 ms.openlocfilehash: 0327c497025630747e526503556f4a1705948850
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022394"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Procedimiento Objetos de referencia COM desde Visual Basic
 En Visual Basic, agregar referencias a objetos COM que tienen bibliotecas de tipos requiere la creación de un ensamblado de interoperabilidad de la biblioteca COM. Las referencias a los miembros del objeto COM se enrutan al ensamblado de interoperabilidad y, a continuación, se reenvían al objeto COM real. Las respuestas desde el objeto COM se enrutan al ensamblado de interoperabilidad y se reenvían a su [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicación.  
@@ -38,11 +38,11 @@ En Visual Basic, agregar referencias a objetos COM que tienen bibliotecas de tip
   
 2. Llame a Tlbimp desde un símbolo del sistema, que proporciona la siguiente información:  
   
-    -   Nombre y la ubicación del archivo DLL que contiene la biblioteca de tipos  
+    - Nombre y la ubicación del archivo DLL que contiene la biblioteca de tipos  
   
-    -   Nombre y la ubicación del espacio de nombres donde se debe colocar la información  
+    - Nombre y la ubicación del espacio de nombres donde se debe colocar la información  
   
-    -   Nombre y la ubicación del ensamblado de interoperabilidad de destino  
+    - Nombre y la ubicación del ensamblado de interoperabilidad de destino  
   
      El siguiente fragmento de código muestra un ejemplo:  
   

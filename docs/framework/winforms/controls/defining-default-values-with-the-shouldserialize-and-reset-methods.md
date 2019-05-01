@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
 ms.openlocfilehash: f1f5a668c5d4f52ef7dd9f60a31c04f2173165f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972372"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definir valores predeterminados con los métodos ShouldSerialize y Reset
 `ShouldSerialize` y `Reset` son métodos opcionales que puede proporcionar para una propiedad, si la propiedad no es un valor predeterminado simple. Si la propiedad tiene un valor predeterminado simple, debe aplicar el <xref:System.ComponentModel.DefaultValueAttribute> y proporcionar el valor predeterminado para el constructor de clase de atributo en su lugar. Cualquiera de estos mecanismos habilita las siguientes características en el diseñador:  
   
--   La propiedad proporciona una indicación visual en el Explorador de propiedades si se ha modificado desde su valor predeterminado.  
+- La propiedad proporciona una indicación visual en el Explorador de propiedades si se ha modificado desde su valor predeterminado.  
   
--   El usuario puede hacer doble clic en la propiedad y elija **restablecer** para restaurar la propiedad a su valor predeterminado.  
+- El usuario puede hacer doble clic en la propiedad y elija **restablecer** para restaurar la propiedad a su valor predeterminado.  
   
--   El diseñador genera código más eficaz.  
+- El diseñador genera código más eficaz.  
   
     > [!NOTE]
     >  Se aplica ya sea el <xref:System.ComponentModel.DefaultValueAttribute> o proporcionar `Reset` *PropertyName* y `ShouldSerialize` *PropertyName* métodos. No use ambos.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
 ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002175"
 ---
 # <a name="storyboards-overview"></a>Información general sobre objetos Storyboard
 En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboard> objetos para organizar y aplicar animaciones. Describe cómo manipular interactivamente <xref:System.Windows.Media.Animation.Storyboard> objetos y se describe la sintaxis de establecimiento indirecto de propiedades.  
@@ -29,11 +29,11 @@ En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboa
   
  Un <xref:System.Windows.Media.Animation.Storyboard> es un tipo de escala de tiempo contenedora que proporciona información de destino para las escalas de tiempo contiene. Un guión gráfico puede contener cualquier tipo de <xref:System.Windows.Media.Animation.Timeline>, incluidas otras escalas de tiempo contenedoras y animaciones. <xref:System.Windows.Media.Animation.Storyboard> objetos permiten combinar escalas de tiempo que afectan a diversos objetos y propiedades en un árbol de escala de tiempo única, facilitando el proceso organizar y controlar los comportamientos de control de tiempo complejos. Por ejemplo, supongamos que desea un botón que haga estas tres cosas.  
   
--   Aumentar de tamaño y cambiar de color cuando el usuario selecciona el botón.  
+- Aumentar de tamaño y cambiar de color cuando el usuario selecciona el botón.  
   
--   Disminuir de tamaño y volver a su tamaño original cuando se hace clic en él.  
+- Disminuir de tamaño y volver a su tamaño original cuando se hace clic en él.  
   
--   Disminuir de tamaño y desvanecerse con un fundido al 50 % de opacidad al deshabilitarse.  
+- Disminuir de tamaño y desvanecerse con un fundido al 50 % de opacidad al deshabilitarse.  
   
  En este caso, tenemos varios conjuntos de animaciones que se aplican al mismo objeto, y hay que reproducirlas en distintos momentos, según cuál sea el estado del botón. <xref:System.Windows.Media.Animation.Storyboard> objetos permiten organizar las animaciones y aplicarlas en grupos a uno o más objetos.  
   
@@ -43,11 +43,11 @@ En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboa
   
  Por ejemplo, podría usar un <xref:System.Windows.Media.Animation.Storyboard> hacer lo siguiente:  
   
--   Animar un <xref:System.Windows.Media.SolidColorBrush> (elemento no es de marco) que pinta el fondo de un botón (un tipo de <xref:System.Windows.FrameworkElement>),  
+- Animar un <xref:System.Windows.Media.SolidColorBrush> (elemento no es de marco) que pinta el fondo de un botón (un tipo de <xref:System.Windows.FrameworkElement>),  
   
--   Animar un <xref:System.Windows.Media.SolidColorBrush> (elemento no es de marco) que pinta el relleno de un <xref:System.Windows.Media.GeometryDrawing> (elemento no es de marco) muestra mediante un <xref:System.Windows.Controls.Image> (<xref:System.Windows.FrameworkElement>).  
+- Animar un <xref:System.Windows.Media.SolidColorBrush> (elemento no es de marco) que pinta el relleno de un <xref:System.Windows.Media.GeometryDrawing> (elemento no es de marco) muestra mediante un <xref:System.Windows.Controls.Image> (<xref:System.Windows.FrameworkElement>).  
   
--   En el código, animar un <xref:System.Windows.Media.SolidColorBrush> declarado por una clase que también contiene un <xref:System.Windows.FrameworkElement>, si la <xref:System.Windows.Media.SolidColorBrush> registrado su nombre con el que <xref:System.Windows.FrameworkElement>.  
+- En el código, animar un <xref:System.Windows.Media.SolidColorBrush> declarado por una clase que también contiene un <xref:System.Windows.FrameworkElement>, si la <xref:System.Windows.Media.SolidColorBrush> registrado su nombre con el que <xref:System.Windows.FrameworkElement>.  
   
  Sin embargo, no se puede usar un <xref:System.Windows.Media.Animation.Storyboard> para animar un <xref:System.Windows.Media.SolidColorBrush> que no ha registrado su nombre con un <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>, o no se ha usado para establecer una propiedad de un <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>.  
   
@@ -140,9 +140,9 @@ En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboa
   
  Where  
   
--   *ElementPropertyName* es la propiedad de la <xref:System.Windows.FrameworkElement> que el <xref:System.Windows.Freezable> se usa para establecer, y  
+- *ElementPropertyName* es la propiedad de la <xref:System.Windows.FrameworkElement> que el <xref:System.Windows.Freezable> se usa para establecer, y  
   
--   *FreezablePropertyName* es la propiedad de la <xref:System.Windows.Freezable> se va a animar.  
+- *FreezablePropertyName* es la propiedad de la <xref:System.Windows.Freezable> se va a animar.  
   
  El código siguiente muestra cómo animar la <xref:System.Windows.Media.SolidColorBrush.Color%2A> de un <xref:System.Windows.Media.SolidColorBrush> usa para establecer el  
   
@@ -186,9 +186,9 @@ En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboa
   
  Where  
   
--   *OwnerPropertyArrayIndex* es el índice de la <xref:System.Windows.DependencyProperty> matriz que contiene el identificador de la <xref:System.Windows.FrameworkElement> propiedad del objeto que el <xref:System.Windows.Freezable> se usa para establecer, y  
+- *OwnerPropertyArrayIndex* es el índice de la <xref:System.Windows.DependencyProperty> matriz que contiene el identificador de la <xref:System.Windows.FrameworkElement> propiedad del objeto que el <xref:System.Windows.Freezable> se usa para establecer, y  
   
--   *FreezablePropertyArrayIndex* es el índice de la <xref:System.Windows.DependencyProperty> matriz que contiene el identificador de propiedad de destino.  
+- *FreezablePropertyArrayIndex* es el índice de la <xref:System.Windows.DependencyProperty> matriz que contiene el identificador de propiedad de destino.  
   
  El ejemplo siguiente se muestra el <xref:System.Windows.PropertyPath.Path%2A> que acompañaría el <xref:System.Windows.PropertyPath.PathParameters%2A> definido en el ejemplo anterior.
   
@@ -225,17 +225,17 @@ En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboa
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>Controlar guiones gráficos de forma interactiva en XAML  
  Para iniciar un guión gráfico en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], usa un <xref:System.Windows.Media.Animation.BeginStoryboard> desencadenar la acción. <xref:System.Windows.Media.Animation.BeginStoryboard> distribuye las animaciones a los objetos y propiedades que se animan y se inicia el guión gráfico. (Para obtener más información sobre este proceso, consulte el [Animation and Timing System Overview](animation-and-timing-system-overview.md).) Si concede el <xref:System.Windows.Media.Animation.BeginStoryboard> especificando un nombre de su <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> propiedad, facilitar un guión gráfico controlable. A continuación, podrá controlar interactivamente el guión gráfico una vez iniciado. Esta es una lista de acciones de guión gráfico controlables que se utiliza con desencadenadores de eventos para controlar un guión gráfico.  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>: Pausa el guión gráfico.  
+- <xref:System.Windows.Media.Animation.PauseStoryboard>: Pausa el guión gráfico.  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>: Reanuda un guión gráfico en pausa.  
+- <xref:System.Windows.Media.Animation.ResumeStoryboard>: Reanuda un guión gráfico en pausa.  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Cambia la velocidad del guión gráfico.  
+- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Cambia la velocidad del guión gráfico.  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Avanza un guión gráfico hasta el final de su período de relleno, si lo tiene.  
+- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Avanza un guión gráfico hasta el final de su período de relleno, si lo tiene.  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>: Detiene el guión gráfico.  
+- <xref:System.Windows.Media.Animation.StopStoryboard>: Detiene el guión gráfico.  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>: Quita el guión gráfico.  
+- <xref:System.Windows.Media.Animation.RemoveStoryboard>: Quita el guión gráfico.  
   
  En el ejemplo siguiente se utilizan acciones para controlar interactivamente un guión gráfico.  
   
@@ -247,17 +247,17 @@ En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboa
   
  La siguiente lista muestra los métodos que pueden usarse para manipular un <xref:System.Windows.Media.Animation.Storyboard> después de haberse iniciado:  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>  
   
  La ventaja de uso de estos métodos es que no necesita crear <xref:System.Windows.Trigger> o <xref:System.Windows.TriggerAction> objetos; solo necesita una referencia a la controlable <xref:System.Windows.Media.Animation.Storyboard> desea manipular.  
   
@@ -272,13 +272,13 @@ En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboa
 ## <a name="animate-in-a-style"></a>Animar en un estilo  
  Puede usar <xref:System.Windows.Media.Animation.Storyboard> objetos para definir animaciones en un <xref:System.Windows.Style>. Animar con un <xref:System.Windows.Media.Animation.Storyboard> en un <xref:System.Windows.Style> es similar a usar un <xref:System.Windows.Media.Animation.Storyboard> en otra parte, con las tres excepciones siguientes:  
   
--   No se especifica un <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>; el <xref:System.Windows.Media.Animation.Storyboard> siempre tiene como destino el elemento al que el <xref:System.Windows.Style> se aplica. Destino <xref:System.Windows.Freezable> objetos, se debe utilizar el establecimiento indirecto de destinos. Para obtener más información sobre el establecimiento indirecto de destinos, consulte el [establecimiento indirecto de destinos](#pathsyntaxforchangeable) sección.  
+- No se especifica un <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>; el <xref:System.Windows.Media.Animation.Storyboard> siempre tiene como destino el elemento al que el <xref:System.Windows.Style> se aplica. Destino <xref:System.Windows.Freezable> objetos, se debe utilizar el establecimiento indirecto de destinos. Para obtener más información sobre el establecimiento indirecto de destinos, consulte el [establecimiento indirecto de destinos](#pathsyntaxforchangeable) sección.  
   
--   No puede especificar un <xref:System.Windows.EventTrigger.SourceName%2A> para un <xref:System.Windows.EventTrigger> o <xref:System.Windows.Trigger>.  
+- No puede especificar un <xref:System.Windows.EventTrigger.SourceName%2A> para un <xref:System.Windows.EventTrigger> o <xref:System.Windows.Trigger>.  
   
--   No se puede usar expresiones de enlace de datos o las referencias de recursos dinámicos para establecer <xref:System.Windows.Media.Animation.Storyboard> o valores de propiedad de animación. Eso es porque todos los elementos de un <xref:System.Windows.Style> debe ser seguro para subprocesos, y el sistema de control de tiempo debe <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> objetos para hacerlos seguros para subprocesos. Un <xref:System.Windows.Media.Animation.Storyboard> no se puede inmovilizar si lo o sus escalas de tiempo secundarias contienen expresiones de enlace de datos o las referencias de recursos dinámicos. Para obtener más información sobre la inmovilización y otras <xref:System.Windows.Freezable> características, vea el [Freezable Objects Overview](../advanced/freezable-objects-overview.md).  
+- No se puede usar expresiones de enlace de datos o las referencias de recursos dinámicos para establecer <xref:System.Windows.Media.Animation.Storyboard> o valores de propiedad de animación. Eso es porque todos los elementos de un <xref:System.Windows.Style> debe ser seguro para subprocesos, y el sistema de control de tiempo debe <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> objetos para hacerlos seguros para subprocesos. Un <xref:System.Windows.Media.Animation.Storyboard> no se puede inmovilizar si lo o sus escalas de tiempo secundarias contienen expresiones de enlace de datos o las referencias de recursos dinámicos. Para obtener más información sobre la inmovilización y otras <xref:System.Windows.Freezable> características, vea el [Freezable Objects Overview](../advanced/freezable-objects-overview.md).  
   
--   En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], no se puede declarar controladores de eventos para <xref:System.Windows.Media.Animation.Storyboard> o eventos de animación.  
+- En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], no se puede declarar controladores de eventos para <xref:System.Windows.Media.Animation.Storyboard> o eventos de animación.  
   
  Para obtener un ejemplo que muestra cómo definir un guión gráfico en un estilo, vea el [animar en un estilo](how-to-animate-in-a-style.md) ejemplo.  
   
@@ -286,13 +286,13 @@ En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboa
 ## <a name="animate-in-a-controltemplate"></a>Animar en un ControlTemplate  
  Puede usar <xref:System.Windows.Media.Animation.Storyboard> objetos para definir animaciones en un <xref:System.Windows.Controls.ControlTemplate>. Animar con un <xref:System.Windows.Media.Animation.Storyboard> en un <xref:System.Windows.Controls.ControlTemplate> es similar a usar un <xref:System.Windows.Media.Animation.Storyboard> en otra parte, con las dos excepciones siguientes:  
   
--   El <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> solo pueden hacer referencia a objetos secundarios de la <xref:System.Windows.Controls.ControlTemplate>. Si <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> no se especifica, la animación establece como destino el elemento al que el <xref:System.Windows.Controls.ControlTemplate> se aplica.  
+- El <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> solo pueden hacer referencia a objetos secundarios de la <xref:System.Windows.Controls.ControlTemplate>. Si <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> no se especifica, la animación establece como destino el elemento al que el <xref:System.Windows.Controls.ControlTemplate> se aplica.  
   
--   El <xref:System.Windows.EventTrigger.SourceName%2A> para un <xref:System.Windows.EventTrigger> o un <xref:System.Windows.Trigger> solo pueden hacer referencia a objetos secundarios de la <xref:System.Windows.Controls.ControlTemplate>.  
+- El <xref:System.Windows.EventTrigger.SourceName%2A> para un <xref:System.Windows.EventTrigger> o un <xref:System.Windows.Trigger> solo pueden hacer referencia a objetos secundarios de la <xref:System.Windows.Controls.ControlTemplate>.  
   
--   No se puede usar expresiones de enlace de datos o las referencias de recursos dinámicos para establecer <xref:System.Windows.Media.Animation.Storyboard> o valores de propiedad de animación. Eso es porque todos los elementos de un <xref:System.Windows.Controls.ControlTemplate> debe ser seguro para subprocesos, y el sistema de control de tiempo debe <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> objetos para hacerlos seguros para subprocesos. Un <xref:System.Windows.Media.Animation.Storyboard> no se puede inmovilizar si lo o sus escalas de tiempo secundarias contienen expresiones de enlace de datos o las referencias de recursos dinámicos. Para obtener más información sobre la inmovilización y otras <xref:System.Windows.Freezable> características, vea el [Freezable Objects Overview](../advanced/freezable-objects-overview.md).  
+- No se puede usar expresiones de enlace de datos o las referencias de recursos dinámicos para establecer <xref:System.Windows.Media.Animation.Storyboard> o valores de propiedad de animación. Eso es porque todos los elementos de un <xref:System.Windows.Controls.ControlTemplate> debe ser seguro para subprocesos, y el sistema de control de tiempo debe <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> objetos para hacerlos seguros para subprocesos. Un <xref:System.Windows.Media.Animation.Storyboard> no se puede inmovilizar si lo o sus escalas de tiempo secundarias contienen expresiones de enlace de datos o las referencias de recursos dinámicos. Para obtener más información sobre la inmovilización y otras <xref:System.Windows.Freezable> características, vea el [Freezable Objects Overview](../advanced/freezable-objects-overview.md).  
   
--   En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], no se puede declarar controladores de eventos para <xref:System.Windows.Media.Animation.Storyboard> o eventos de animación.  
+- En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], no se puede declarar controladores de eventos para <xref:System.Windows.Media.Animation.Storyboard> o eventos de animación.  
   
  Para obtener un ejemplo que muestra cómo definir un guión gráfico en un <xref:System.Windows.Controls.ControlTemplate>, consulte el [animar en un ControlTemplate](how-to-animate-in-a-controltemplate.md) ejemplo.  
   

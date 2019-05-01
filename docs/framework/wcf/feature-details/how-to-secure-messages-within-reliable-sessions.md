@@ -1,15 +1,15 @@
 ---
-title: Filtrar Proteger los mensajes dentro de sesiones confiables
+title: Procedimiento para proteger mensajes dentro de sesiones confiables
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
 ms.openlocfilehash: ee35f2a36ca08814423b5a3d0b1432bacd28c2e5
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973009"
 ---
-# <a name="how-to-secure-messages-within-reliable-sessions"></a>Filtrar Proteger los mensajes dentro de sesiones confiables
+# <a name="how-to-secure-messages-within-reliable-sessions"></a>Procedimiento para proteger mensajes dentro de sesiones confiables
 
 En este tema se describen los pasos necesarios para habilitar la seguridad de mensajes para los mensajes intercambiados dentro de una sesión confiable utilizando uno de los enlaces proporcionados por el sistema que admiten este tipo de sesión, pero no de forma predeterminada. Habilitar una sesión segura y confiable de manera imperativa mediante código o mediante declaración en el archivo de configuración. Este procedimiento utiliza los archivos de configuración de servicio y cliente para habilitar la sesión segura y confiable.
 

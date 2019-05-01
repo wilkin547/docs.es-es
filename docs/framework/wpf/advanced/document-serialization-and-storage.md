@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962739"
 ---
 # <a name="document-serialization-and-storage"></a>Almacenamiento y serialización de documentos
 Microsoft .NET Framework proporciona un potente entorno para crear y mostrar documentos de alta calidad.  Las características mejoradas que admiten tanto documentos fijos como documentos dinámicos, advanced ver los controles, combinan con eficaces en 2D y 3D capacidades gráficas tomar las aplicaciones de .NET Framework a un nuevo nivel de calidad y experiencia del usuario.  Que se va a administrar con flexibilidad una representación en memoria de un documento es una característica clave de .NET Framework y poder guardar y cargar documentos desde un almacén de datos de forma eficaz es una necesidad de casi cualquier aplicación.  El proceso de convertir un documento de una representación en memoria interna a un almacén de datos externo se denomina “serialización”.  El proceso inverso de leer un almacén de datos y volver a crear la instancia en memoria original se denomina “deserialización”.  
@@ -24,19 +24,19 @@ Microsoft .NET Framework proporciona un potente entorno para crear y mostrar doc
   
 ### <a name="features-of-net-framework-30-document-serializers"></a>Características de los serializadores de documentos de .NET Framework 3.0  
   
--   El acceso directo a los objetos de documento de alto nivel (árbol lógico y elementos visuales) permite el almacenamiento eficiente de contenido paginado, elementos 2D o 3D, imágenes, elementos multimedia, hipervínculos, anotaciones y otro contenido de compatibilidad.  
+- El acceso directo a los objetos de documento de alto nivel (árbol lógico y elementos visuales) permite el almacenamiento eficiente de contenido paginado, elementos 2D o 3D, imágenes, elementos multimedia, hipervínculos, anotaciones y otro contenido de compatibilidad.  
   
--   Funcionamiento sincrónico y asincrónico.  
+- Funcionamiento sincrónico y asincrónico.  
   
--   Compatibilidad con los serializadores de complemento con funciones mejoradas:  
+- Compatibilidad con los serializadores de complemento con funciones mejoradas:  
   
-    -   Acceso para todo el sistema para su uso por todas las aplicaciones de .NET Framework.  
+    - Acceso para todo el sistema para su uso por todas las aplicaciones de .NET Framework.  
   
-    -   Capacidad sencilla de detectar complementos de aplicaciones.  
+    - Capacidad sencilla de detectar complementos de aplicaciones.  
   
-    -   Implementación, instalación y actualización sencillas de complementos personalizados de terceros.  
+    - Implementación, instalación y actualización sencillas de complementos personalizados de terceros.  
   
-    -   Compatibilidad de interfaz de usuario para opciones y configuración personalizadas en tiempo de ejecución.  
+    - Compatibilidad de interfaz de usuario para opciones y configuración personalizadas en tiempo de ejecución.  
   
 ### <a name="xps-print-path"></a>Ruta de impresión XPS  
  Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ruta de impresión también proporciona un mecanismo extensible para escribir documentos a través de la salida impresa.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] funciona como formato de archivo de documento y es el formato nativo de cola de impresión para [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Los documentos de [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] pueden enviarse directamente a impresoras compatibles con [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] sin necesidad de convertirlos a un formato intermedio.  Consulte la [Información general sobre impresión](printing-overview.md) para obtener información adicional sobre las capacidades y opciones de salida de la ruta de impresión.  

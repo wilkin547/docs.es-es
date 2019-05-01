@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, positioning on form
 ms.assetid: b2d62ed8-c391-4a7e-b72e-6bbabfca73dc
 ms.openlocfilehash: 75da29036b1afe7275a19a3e1e11a33b0e266edc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954406"
 ---
 # <a name="arranging-controls-on-windows-forms"></a>Organizar controles en formularios Windows Forms
 Colocar y manipular los controles en formularios de maneras diferentes le permite crear interfaces de usuario que sean intuitivas y funcionales para los usuarios.  

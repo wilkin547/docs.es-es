@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5d60b9a9ae566b5bd686b27b2e09861a8414979
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000238"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx (Función)
 Genera una firma de nombre seguro para el ensamblado especificado, según las marcas especificadas.  
@@ -70,9 +70,9 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Uno o varios de los siguientes valores:  
   
--   `SN_SIGN_ALL_FILES` (0 x 00000001): volver a calcular todos los códigos hash para módulos vinculados.  
+- `SN_SIGN_ALL_FILES` (0 x 00000001): volver a calcular todos los códigos hash para módulos vinculados.  
   
--   `SN_TEST_SIGN` (0 x 00000002): el ensamblado de prueba de inicio de sesión.  
+- `SN_TEST_SIGN` (0 x 00000002): el ensamblado de prueba de inicio de sesión.  
   
 ## <a name="return-value"></a>Valor devuelto  
  `true` Cuando se finaliza correctamente; en caso contrario, `false`.  

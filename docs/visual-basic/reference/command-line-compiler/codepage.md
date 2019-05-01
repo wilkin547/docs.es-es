@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
 ms.openlocfilehash: fda75383435fdff718d1d50bc8583afc9858e7e2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944708"
 ---
 # <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
 Especifica la página de códigos que se va a utilizar para todos los archivos de código fuente en la compilación.  
@@ -26,7 +26,7 @@ Especifica la página de códigos que se va a utilizar para todos los archivos d
   
 |Término|Definición|  
 |---|---|  
-|`id`|Requerido. El compilador usa la página de códigos especificada por `id` para interpretar la codificación de los archivos de origen.|  
+|`id`|Obligatorio. El compilador usa la página de códigos especificada por `id` para interpretar la codificación de los archivos de origen.|  
   
 ## <a name="remarks"></a>Comentarios  
  Para compilar código fuente guardado con una codificación específica, puede usar `-codepage` para especificar qué página de códigos debe usarse. El `-codepage` opción se aplica a todos los archivos de código fuente de la compilación. Para obtener más información, consulte [codificación de caracteres en .NET Framework](../../../standard/base-types/character-encoding.md).  

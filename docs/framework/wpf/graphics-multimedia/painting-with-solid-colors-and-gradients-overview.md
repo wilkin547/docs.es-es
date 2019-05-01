@@ -10,11 +10,11 @@ helpviewer_keywords:
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
 ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009466"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Información general sobre el dibujo con colores sólidos y degradados
 Este tema describe cómo usar <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, y <xref:System.Windows.Media.RadialGradientBrush> objetos para pintar con colores sólidos, degradados lineales y degradados radiales.  
@@ -27,15 +27,15 @@ Este tema describe cómo usar <xref:System.Windows.Media.SolidColorBrush>, <xref
 ### <a name="using-a-solidcolorbrush-in-xaml"></a>Usar SolidColorBrush en "XAML"  
  Para pintar un área con un color sólido en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use una de las opciones siguientes.  
   
--   Seleccione un pincel de color sólido predefinido por su nombre.  Por ejemplo, puede establecer un botón <xref:System.Windows.Controls.Control.Background%2A> "Rojo" o "MediumBlue".  Para obtener una lista de otros predefinidos pinceles de color sólido, vea las propiedades estáticas de la <xref:System.Windows.Media.Brushes> clase. A continuación se muestra un ejemplo.  
+- Seleccione un pincel de color sólido predefinido por su nombre.  Por ejemplo, puede establecer un botón <xref:System.Windows.Controls.Control.Background%2A> "Rojo" o "MediumBlue".  Para obtener una lista de otros predefinidos pinceles de color sólido, vea las propiedades estáticas de la <xref:System.Windows.Media.Brushes> clase. A continuación se muestra un ejemplo.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   Elija un color en la paleta de colores de 32 bits; para ello, especifique las cantidades de rojo, verde y azul que se combinarán en un color sólido.  El formato para especificar un color de la paleta de 32 bits es "*#rrggbb*", donde *rr* es un número hexadecimal de dos dígitos que especifica la cantidad relativa de rojo, *gg* especifica la cantidad de verde y *bb* especifica la cantidad de azul.  Además, el color se puede especificar como "#*aarrggbb*", donde *aa* especifica el valor *alfa*, o la transparencia, del color. Este enfoque le permite crear colores que sean parcialmente transparentes.  En el ejemplo siguiente, la <xref:System.Windows.Controls.Control.Background%2A> de un <xref:System.Windows.Controls.Button> está establecido en rojo completamente opaco mediante la notación hexadecimal.  
+- Elija un color en la paleta de colores de 32 bits; para ello, especifique las cantidades de rojo, verde y azul que se combinarán en un color sólido.  El formato para especificar un color de la paleta de 32 bits es "*#rrggbb*", donde *rr* es un número hexadecimal de dos dígitos que especifica la cantidad relativa de rojo, *gg* especifica la cantidad de verde y *bb* especifica la cantidad de azul.  Además, el color se puede especificar como "#*aarrggbb*", donde *aa* especifica el valor *alfa*, o la transparencia, del color. Este enfoque le permite crear colores que sean parcialmente transparentes.  En el ejemplo siguiente, la <xref:System.Windows.Controls.Control.Background%2A> de un <xref:System.Windows.Controls.Button> está establecido en rojo completamente opaco mediante la notación hexadecimal.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
--   Use la sintaxis de etiqueta de propiedad para describir un <xref:System.Windows.Media.SolidColorBrush>. Esta sintaxis es más detallada y le permite especificar una configuración adicional, como la opacidad del pincel. En el ejemplo siguiente, la <xref:System.Windows.Controls.Control.Background%2A> propiedades de dos <xref:System.Windows.Controls.Button> elementos se establecen en rojo completamente opaco. El color del primer pincel se describe con un nombre de color predefinido. El color del segundo pincel se describe con una notación hexadecimal.  
+- Use la sintaxis de etiqueta de propiedad para describir un <xref:System.Windows.Media.SolidColorBrush>. Esta sintaxis es más detallada y le permite especificar una configuración adicional, como la opacidad del pincel. En el ejemplo siguiente, la <xref:System.Windows.Controls.Control.Background%2A> propiedades de dos <xref:System.Windows.Controls.Button> elementos se establecen en rojo completamente opaco. El color del primer pincel se describe con un nombre de color predefinido. El color del segundo pincel se describe con una notación hexadecimal.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
@@ -43,11 +43,11 @@ Este tema describe cómo usar <xref:System.Windows.Media.SolidColorBrush>, <xref
 ### <a name="painting-with-a-solidcolorbrush-in-code"></a>Pintar con SolidColorBrush en el código  
  Para pintar un área con un color sólido en el código, use una de las opciones siguientes.  
   
--   Utilice uno de los pinceles predefinidos proporcionados por el <xref:System.Windows.Media.Brushes> clase. En el ejemplo siguiente, la <xref:System.Windows.Controls.Control.Background%2A> de un <xref:System.Windows.Controls.Button> está establecido en <xref:System.Windows.Media.Brushes.Red%2A>.  
+- Utilice uno de los pinceles predefinidos proporcionados por el <xref:System.Windows.Media.Brushes> clase. En el ejemplo siguiente, la <xref:System.Windows.Controls.Control.Background%2A> de un <xref:System.Windows.Controls.Button> está establecido en <xref:System.Windows.Media.Brushes.Red%2A>.  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
--   Crear un <xref:System.Windows.Media.SolidColorBrush> y establezca su <xref:System.Windows.Media.SolidColorBrush.Color%2A> propiedad utilizando un <xref:System.Windows.Media.Color> estructura. Puede usar un color predefinido en el <xref:System.Windows.Media.Colors> clase o bien puede crear un <xref:System.Windows.Media.Color> mediante estático <xref:System.Windows.Media.Color.FromArgb%2A> método.  
+- Crear un <xref:System.Windows.Media.SolidColorBrush> y establezca su <xref:System.Windows.Media.SolidColorBrush.Color%2A> propiedad utilizando un <xref:System.Windows.Media.Color> estructura. Puede usar un color predefinido en el <xref:System.Windows.Media.Colors> clase o bien puede crear un <xref:System.Windows.Media.Color> mediante estático <xref:System.Windows.Media.Color.FromArgb%2A> método.  
   
      El ejemplo siguiente muestra cómo establecer el <xref:System.Windows.Media.SolidColorBrush.Color%2A> propiedad de un <xref:System.Windows.Media.SolidColorBrush> mediante un color predefinido.  
   
@@ -81,9 +81,9 @@ Este tema describe cómo usar <xref:System.Windows.Media.SolidColorBrush>, <xref
   
  El <xref:System.Windows.Media.GradientStop> es el bloque de creación básico de un pincel de degradado.  Un delimitador de degradado especifica un <xref:System.Windows.Media.GradientStop.Color%2A> en un <xref:System.Windows.Media.GradientStop.Offset%2A> a lo largo del eje de degradado.  
   
--   El delimitador de degradado <xref:System.Windows.Media.GradientStop.Color%2A> propiedad especifica el color del delimitador de degradado. Puede establecer el color mediante el uso de un color predefinido (proporcionado por el <xref:System.Windows.Media.Colors> clase) o especificando valores ScRGB o ARGB. En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], también puede usar la notación hexadecimal para describir un color. Para obtener más información, consulte el <xref:System.Windows.Media.Color> estructura.  
+- El delimitador de degradado <xref:System.Windows.Media.GradientStop.Color%2A> propiedad especifica el color del delimitador de degradado. Puede establecer el color mediante el uso de un color predefinido (proporcionado por el <xref:System.Windows.Media.Colors> clase) o especificando valores ScRGB o ARGB. En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], también puede usar la notación hexadecimal para describir un color. Para obtener más información, consulte el <xref:System.Windows.Media.Color> estructura.  
   
--   El delimitador de degradado <xref:System.Windows.Media.GradientStop.Offset%2A> propiedad especifica la posición del color del delimitador de degradado en el eje de degradado. El desplazamiento es un <xref:System.Double> que comprendido entre 0 y 1. Cuanto más se acerque a 0 el valor de desplazamiento de un delimitador de degradado, más cerca del inicio del degradado está el color. Cuanto más se acerque a 1 el valor de desplazamiento del degradado, más cerca del final del degradado está el color.  
+- El delimitador de degradado <xref:System.Windows.Media.GradientStop.Offset%2A> propiedad especifica la posición del color del delimitador de degradado en el eje de degradado. El desplazamiento es un <xref:System.Double> que comprendido entre 0 y 1. Cuanto más se acerque a 0 el valor de desplazamiento de un delimitador de degradado, más cerca del inicio del degradado está el color. Cuanto más se acerque a 1 el valor de desplazamiento del degradado, más cerca del final del degradado está el color.  
   
  El color de cada punto entre los delimitadores de degradado está interpolado linealmente como una combinación del color que especifican los dos delimitadores de degradado. En la ilustración siguiente se resaltan los delimitadores de degradado del ejemplo anterior. Los círculos marcan la posición de los delimitadores de degradado y una línea discontinua muestra el eje de degradado.  
   

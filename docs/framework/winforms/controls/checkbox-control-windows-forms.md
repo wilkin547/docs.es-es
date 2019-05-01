@@ -10,11 +10,11 @@ helpviewer_keywords:
 - check boxes
 ms.assetid: 0719d798-c307-40d3-9040-72a62679c227
 ms.openlocfilehash: 207f8f884e8382614bf7d6cbc4a628d98fb3542b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956330"
 ---
 # <a name="checkbox-control-windows-forms"></a>CheckBox (Control, formularios Windows Forms)
 El control de Windows Forms `CheckBox` indica si una condición determinada está activada o desactivada. Normalmente se utiliza para presentar una selección Sí/No o Verdadero/Falso al usuario. Puede utilizar de controles de casilla en grupos para mostrar múltiples opciones de entre las que el usuario puede seleccionar una o más. Es similar al control <xref:System.Windows.Forms.RadioButton>, pero se puede seleccionar cualquier número de controles `CheckBox` agrupados.  

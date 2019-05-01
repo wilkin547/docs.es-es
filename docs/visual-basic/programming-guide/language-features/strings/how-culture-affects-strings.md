@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
 ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024695"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Cómo afecta la referencia cultural a las cadenas en Visual Basic
 Esta página de ayuda explica cómo Visual Basic usa la información de referencia cultural para realizar conversiones de cadenas y comparaciones.  
@@ -29,9 +29,9 @@ Esta página de ayuda explica cómo Visual Basic usa la información de referenc
   
  El `Str` (convierte números en cadenas) y `Val` (convierte las cadenas en números) las funciones no usan información de referencia cultural de la aplicación cuando la conversión entre cadenas y números. En su lugar, reconoce el punto (.) como separador decimal válido. La referencia cultural compatible con análogas de estas funciones son:  
   
--   **Conversiones que usan la referencia cultural actual.** El `CStr` y `Format` funciones conversión un número en una cadena y el `CDbl` y `CInt` funciones convierten una cadena en un número.  
+- **Conversiones que usan la referencia cultural actual.** El `CStr` y `Format` funciones conversión un número en una cadena y el `CDbl` y `CInt` funciones convierten una cadena en un número.  
   
--   **Conversiones que utilizan una referencia cultural concreta.** Cada objeto number tiene un `ToString(IFormatProvider)` método que convierte un número en una cadena, y un `Parse(String, IFormatProvider)` método que convierte una cadena en un número. Por ejemplo, el `Double` tipo proporciona la <xref:System.Double.ToString%28System.IFormatProvider%29> y <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> métodos.  
+- **Conversiones que utilizan una referencia cultural concreta.** Cada objeto number tiene un `ToString(IFormatProvider)` método que convierte un número en una cadena, y un `Parse(String, IFormatProvider)` método que convierte una cadena en un número. Por ejemplo, el `Double` tipo proporciona la <xref:System.Double.ToString%28System.IFormatProvider%29> y <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> métodos.  
   
  Para obtener más información, vea <xref:Microsoft.VisualBasic.Conversion.Str%2A> y <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
@@ -52,9 +52,9 @@ Esta página de ayuda explica cómo Visual Basic usa la información de referenc
 ## <a name="comparing-strings"></a>Comparar cadenas  
  Existen dos situaciones importantes donde se necesitan las comparaciones de cadenas:  
   
--   **Ordenar datos para mostrar al usuario.** Usar operaciones basadas en la referencia cultural actual, por lo que las cadenas se ordenen correctamente.  
+- **Ordenar datos para mostrar al usuario.** Usar operaciones basadas en la referencia cultural actual, por lo que las cadenas se ordenen correctamente.  
   
--   **Determinar si dos cadenas internas de la aplicación coinciden exactamente (normalmente por motivos de seguridad).** Utilice las operaciones que pasar por alto la referencia cultural actual.  
+- **Determinar si dos cadenas internas de la aplicación coinciden exactamente (normalmente por motivos de seguridad).** Utilice las operaciones que pasar por alto la referencia cultural actual.  
   
  Puede realizar ambos tipos de comparaciones con Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A> función. Especifique el valor opcional `Compare` argumento para controlar el tipo de comparación: `Text` para la mayoría de entrada y salida `Binary` para determinar las coincidencias exactas.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013379"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Procedimiento para dar formato al control DataGrid de formularios Windows Forms mediante el diseñador
 
@@ -25,11 +25,11 @@ ms.locfileid: "59333579"
   
  Hay tres aspectos básicos del formato el <xref:System.Windows.Forms.DataGrid> control:  
   
--   Puede establecer propiedades para establecer un estilo predeterminado en el que se muestran los datos.  
+- Puede establecer propiedades para establecer un estilo predeterminado en el que se muestran los datos.  
   
--   Desde esa base, a continuación, puede personalizar la manera en que se muestren determinadas tablas en tiempo de ejecución.  
+- Desde esa base, a continuación, puede personalizar la manera en que se muestren determinadas tablas en tiempo de ejecución.  
   
--   Por último, puede modificar las columnas que se muestran en la cuadrícula de datos, así como los colores y otras opciones de formato se muestra.  
+- Por último, puede modificar las columnas que se muestran en la cuadrícula de datos, así como los colores y otras opciones de formato se muestra.  
   
  Como paso inicial para dar formato a una cuadrícula de datos, puede establecer las propiedades de la <xref:System.Windows.Forms.DataGrid> propio. Estas opciones de color y el formato forman una base desde la que puede realizar, a continuación, cambia en función de las tablas de datos y las columnas mostradas.  
   

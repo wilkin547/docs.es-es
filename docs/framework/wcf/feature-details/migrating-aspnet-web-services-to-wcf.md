@@ -3,11 +3,11 @@ title: Migración de los servicios web ASP.NET a WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
 ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948101"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Migración de los servicios web ASP.NET a WCF
 ASP.NET proporciona bibliotecas de clases y las herramientas de .NET Framework para compilar servicios web, así como funciones para hospedar servicios dentro de Internet Information Services (IIS). Windows Communication Foundation (WCF) proporciona bibliotecas de clases de .NET Framework, herramientas y funciones de hospedaje para habilitar las entidades de software para comunicarse con cualquier protocolo, las utilizadas por los servicios Web incluidas.  Migrar servicios Web de ASP.NET a WCF permite que las aplicaciones pueden aprovechar las nuevas características y mejoras que son exclusivas de WCF.  
@@ -22,13 +22,13 @@ ASP.NET proporciona bibliotecas de clases y las herramientas de .NET Framework p
   
  Dados estos beneficios potenciales de WCF en relación con ASP.NET Web services, si está usando, o está pensando en utilizar los servicios Web de ASP.NET tiene varias opciones:  
   
--   Continuar usar los servicios Web ASP.NET y Prescinda de las ventajas ofrecidas por WCF.  
+- Continuar usar los servicios Web ASP.NET y Prescinda de las ventajas ofrecidas por WCF.  
   
--   Seguir usando los servicios Web ASP.NET con la intención de adoptar WCF en algún momento en el futuro. Los temas de esta sección explican cómo maximizar las perspectivas para poder usar las nuevas aplicaciones de servicio Web ASP.NET junto con las aplicaciones futuras de WCF. Los temas de esta sección también explican cómo crear nuevo Web de ASP.NET en servicios con el fin de facilitar su migración a WCF. Sin embargo, si es importante la protección de los servicios o cuando se necesitan garantías de confiabilidad o transacción, o si personalizada tendrán que construirse medios de administración, que es una opción mejor adoptar WCF. WCF está diseñado precisamente para tales escenarios.  
+- Seguir usando los servicios Web ASP.NET con la intención de adoptar WCF en algún momento en el futuro. Los temas de esta sección explican cómo maximizar las perspectivas para poder usar las nuevas aplicaciones de servicio Web ASP.NET junto con las aplicaciones futuras de WCF. Los temas de esta sección también explican cómo crear nuevo Web de ASP.NET en servicios con el fin de facilitar su migración a WCF. Sin embargo, si es importante la protección de los servicios o cuando se necesitan garantías de confiabilidad o transacción, o si personalizada tendrán que construirse medios de administración, que es una opción mejor adoptar WCF. WCF está diseñado precisamente para tales escenarios.  
   
--   Adopte WCF para el desarrollo nuevo, mientras continúa manteniendo las aplicaciones de servicio Web ASP.NET existentes. Es muy probable que esta opción sea la óptima. Las ventajas de WCF, produce mientras se ahorra el costo de la modificación de las aplicaciones existentes a usarlo. En este escenario, nuevas aplicaciones WCF pueden coexistir con aplicaciones ASP.NET existentes. Nuevas aplicaciones WCF podrán usar los servicios Web de ASP.NET existentes y WCF se puede usar para programar nuevas capacidades operativos en las aplicaciones ASP.NET existentes en virtud del modo de compatibilidad ASP.NET de WCF.  
+- Adopte WCF para el desarrollo nuevo, mientras continúa manteniendo las aplicaciones de servicio Web ASP.NET existentes. Es muy probable que esta opción sea la óptima. Las ventajas de WCF, produce mientras se ahorra el costo de la modificación de las aplicaciones existentes a usarlo. En este escenario, nuevas aplicaciones WCF pueden coexistir con aplicaciones ASP.NET existentes. Nuevas aplicaciones WCF podrán usar los servicios Web de ASP.NET existentes y WCF se puede usar para programar nuevas capacidades operativos en las aplicaciones ASP.NET existentes en virtud del modo de compatibilidad ASP.NET de WCF.  
   
--   Adopte WCF y migrar las aplicaciones de servicio Web ASP.NET existentes a WCF. Puede elegir esta opción para mejorar las aplicaciones existentes con las características proporcionadas por WCF, o para reproducir la funcionalidad de servicios Web ASP.NET existentes dentro de nuevas, las aplicaciones más eficaces de WCF.  
+- Adopte WCF y migrar las aplicaciones de servicio Web ASP.NET existentes a WCF. Puede elegir esta opción para mejorar las aplicaciones existentes con las características proporcionadas por WCF, o para reproducir la funcionalidad de servicios Web ASP.NET existentes dentro de nuevas, las aplicaciones más eficaces de WCF.  
   
 > [!NOTE]
 >  Debe tener cuidado si un servicio WCF está hospedado por IIS 5.x y se desinstala ASP.NET. Cuando un servicio WCF se hospeda por IIS 5.x, el código para el servicio se puede solicitar si se desinstala ASP.NET. Cuando se desinstala ASP.NET en un sistema operativo que se está ejecutando IIS 5.x y WCF se desinstala, un archivo con la extensión .svc se considera un archivo de texto y el contenido, incluido cualquier código fuente, se devuelve al solicitante.  

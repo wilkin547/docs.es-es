@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973651"
 ---
 # <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Cuándo se deben implementar contenedores de Windows en Service Fabric
 
@@ -17,9 +17,9 @@ Las aplicaciones que se basan en los contenedores de Windows rápidamente deba u
 
 Muchas organizaciones están levantando y moviendo las aplicaciones monolíticas existentes a contenedores por dos motivos:
 
--   Reducción de costos, ya sea debido a la consolidación y la eliminación del hardware existente, o mediante la ejecución de aplicaciones en una mayor densidad.
+- Reducción de costos, ya sea debido a la consolidación y la eliminación del hardware existente, o mediante la ejecución de aplicaciones en una mayor densidad.
 
--   Un contrato de la implementación coherente entre el desarrollo y operaciones.
+- Un contrato de la implementación coherente entre el desarrollo y operaciones.
 
 Intentando obtener reducciones de costos es comprensible, y es probable que todas las organizaciones persiguen ese objetivo. Una implementación coherente es más difícil de evaluar, pero es igualmente importante. Un contrato de la implementación coherente dice que los desarrolladores tienen libertad para optar por usar la tecnología que les convenga, y el equipo de operaciones obtiene una única manera de implementar y administrar aplicaciones. Este contrato alivia la dificultad de tener las operaciones de tratar la complejidad de las muchas tecnologías diferentes, o forzar a los desarrolladores trabajar sólo con determinadas tecnologías. Básicamente, cada aplicación está en contenedores en una imagen de implementación independiente.
 

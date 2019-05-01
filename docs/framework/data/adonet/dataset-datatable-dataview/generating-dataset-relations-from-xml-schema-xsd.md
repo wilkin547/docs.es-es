@@ -3,20 +3,20 @@ title: Generar relaciones de objetos DataSet en un esquema XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034325"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generar relaciones de objetos DataSet en un esquema XML (XSD)
 En un <xref:System.Data.DataSet>, para formar una asociación entre dos o más columnas se debe crear una relación primaria-secundaria. Hay tres formas para representar un **DataSet** relación dentro de un esquema (XSD) del lenguaje de definición de esquemas XML:  
   
--   Especificar tipos complejos anidados.  
+- Especificar tipos complejos anidados.  
   
--   Use la **msdata: Relationship** anotación.  
+- Use la **msdata: Relationship** anotación.  
   
--   Especifique un **xs: keyref** sin el **msdata: ConstraintOnly** anotación.  
+- Especifique un **xs: keyref** sin el **msdata: ConstraintOnly** anotación.  
   
 ## <a name="nested-complex-types"></a>Tipos complejos anidados  
  Las definiciones de tipos complejos anidados de un esquema indican las relaciones primaria-secundaria de los elementos. El siguiente fragmento de esquema XML muestra que **OrderDetail** es un elemento secundario de la **orden** elemento.  

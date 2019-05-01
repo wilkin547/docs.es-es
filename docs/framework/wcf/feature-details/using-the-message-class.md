@@ -6,36 +6,35 @@ dev_langs:
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
 ms.openlocfilehash: d9b1c1242fe2686a66e41b777f904a71898159ea
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050654"
 ---
 # <a name="using-the-message-class"></a>Uso de la clase de mensajes
 La <xref:System.ServiceModel.Channels.Message> clase es fundamental a Windows Communication Foundation (WCF). Toda la comunicación entre clientes y servicios, en última instancia, produce como resultado instancias <xref:System.ServiceModel.Channels.Message> que se envían y reciben.  
   
  Normalmente no interactuaría directamente con la clase <xref:System.ServiceModel.Channels.Message>. En su lugar, construcciones de modelo de servicio WCF, como contratos de datos, los contratos de mensaje y contratos de operación, se utilizan para describir los mensajes entrantes y salientes. Sin embargo, en algunos escenarios avanzados puede programar utilizando directamente la clase <xref:System.ServiceModel.Channels.Message>. Por ejemplo, es posible que desee usar la clase <xref:System.ServiceModel.Channels.Message>:  
   
--   Cuando necesite una manera alternativa de crear el contenido del mensaje saliente (por ejemplo, crear un mensaje directamente a partir de un archivo en disco) en lugar de serializar los objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+- Cuando necesite una manera alternativa de crear el contenido del mensaje saliente (por ejemplo, crear un mensaje directamente a partir de un archivo en disco) en lugar de serializar los objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
--   Cuando necesite una manera alternativa de utilizar el contenido del mensaje de entrada (por ejemplo, al desear aplicar una transformación XSLT al contenido de XML sin formato) en lugar de deserializar en los objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+- Cuando necesite una manera alternativa de utilizar el contenido del mensaje de entrada (por ejemplo, al desear aplicar una transformación XSLT al contenido de XML sin formato) en lugar de deserializar en los objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
--   Cuando necesite tratar con mensajes de una manera general sin tener en cuenta el contenido del mensaje (por ejemplo, cuando enrute o reenvíe mensajes al crear un enrutador, equilibrador de carga o un sistema publicación-suscripción  
+- Cuando necesite tratar con mensajes de una manera general sin tener en cuenta el contenido del mensaje (por ejemplo, cuando enrute o reenvíe mensajes al crear un enrutador, equilibrador de carga o un sistema publicación-suscripción  
   
  Antes de usar el <xref:System.ServiceModel.Channels.Message> class, familiarícese con la arquitectura de transferencia de datos WCF en [información general de arquitectura de transferencia de datos](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
   
- 
-  <xref:System.ServiceModel.Channels.Message> es un contenedor de uso general para los datos, pero su diseño sigue estrechamente el diseño de un mensaje en el protocolo SOAP. Simplemente como en SOAP, un mensaje tiene un cuerpo de mensaje y encabezados. El cuerpo del mensaje contiene los datos de carga reales, mientras que los encabezados contienen los contenedores de datos con nombre adicionales. Las reglas para leer y escribir el cuerpo y los encabezados son diferentes; Por ejemplo, los encabezados están almacenados siempre en memoria búfer y se puede tener acceso a ellos todas las veces que se quiera, mientras que el cuerpo se puede leer solo una vez y puede ser transmitido. Normalmente, cuando se utiliza SOAP, el cuerpo del mensaje está asignado al cuerpo SOAP y los encabezados del mensaje están asignados a los encabezados SOAP.  
+ <xref:System.ServiceModel.Channels.Message> es un contenedor de uso general para los datos, pero su diseño sigue estrechamente el diseño de un mensaje en el protocolo SOAP. Simplemente como en SOAP, un mensaje tiene un cuerpo de mensaje y encabezados. El cuerpo del mensaje contiene los datos de carga reales, mientras que los encabezados contienen los contenedores de datos con nombre adicionales. Las reglas para leer y escribir el cuerpo y los encabezados son diferentes; Por ejemplo, los encabezados están almacenados siempre en memoria búfer y se puede tener acceso a ellos todas las veces que se quiera, mientras que el cuerpo se puede leer solo una vez y puede ser transmitido. Normalmente, cuando se utiliza SOAP, el cuerpo del mensaje está asignado al cuerpo SOAP y los encabezados del mensaje están asignados a los encabezados SOAP.  
   
 ## <a name="using-the-message-class-in-operations"></a>Utilizar la clase de mensaje en Operaciones  
  Puede utilizar la clase <xref:System.ServiceModel.Channels.Message> como un parámetro de entrada de una operación, el valor devuelto de una operación, o ambos. Si <xref:System.ServiceModel.Channels.Message> se utiliza en cualquier parte en una operación, se aplican las restricciones siguientes:  
   
--   La operación no puede tener ningún `out` o parámetro `ref`.  
+- La operación no puede tener ningún `out` o parámetro `ref`.  
   
--   No puede haber más de un parámetro `input`. Si el parámetro está presente, debe ser Mensaje o un tipo de contrato de mensaje.  
+- No puede haber más de un parámetro `input`. Si el parámetro está presente, debe ser Mensaje o un tipo de contrato de mensaje.  
   
--   El tipo de valor devuelto debe ser `void`, `Message`o un tipo de contrato de mensaje.  
+- El tipo de valor devuelto debe ser `void`, `Message`o un tipo de contrato de mensaje.  
   
  El ejemplo de código siguiente contiene un contrato de operación válido.  
   
@@ -64,8 +63,7 @@ La <xref:System.ServiceModel.Channels.Message> clase es fundamental a Windows Co
  Hay además, sobrecargas `CreateMessage` que toman <xref:System.Xml.XmlReader> o <xref:System.Xml.XmlDictionaryReader> que representa el mensaje completo y no simplemente el cuerpo. Estas sobrecargas también toman un parámetro `maxSizeOfHeaders` entero. Los encabezados siempre se almacenan en búfer en la memoria en cuanto se crea el mensaje, y este parámetro limita la cantidad de almacenamiento en búfer que tiene lugar. Es importante establecer este parámetro en un valor seguro si el XML procede de un origen que no es de confianza para mitigar la posibilidad de un ataque por denegación de servicio. El SOAP y versiones de WS-Addressing del mensaje que el lector XML representa deben coincidir con las versiones indicadas utilizando el parámetro de versión.  
   
 ## <a name="creating-messages-with-bodywriter"></a>Crear los mensajes con BodyWriter  
- Una sobrecarga `CreateMessage` toma una instancia `BodyWriter` para describir el cuerpo del mensaje. 
-  `BodyWriter` es una clase abstracta que se puede derivar para personalizar cómo se crean los cuerpos del mensaje. Puede crear su propia clase `BodyWriter` derivada para describir los cuerpos del mensaje de una manera personalizada. Debe invalidar el método `BodyWriter.OnWriteBodyContents` que toma <xref:System.Xml.XmlDictionaryWriter>; este método es el responsable de la escritura del cuerpo.  
+ Una sobrecarga `CreateMessage` toma una instancia `BodyWriter` para describir el cuerpo del mensaje. `BodyWriter` es una clase abstracta que se puede derivar para personalizar cómo se crean los cuerpos del mensaje. Puede crear su propia clase `BodyWriter` derivada para describir los cuerpos del mensaje de una manera personalizada. Debe invalidar el método `BodyWriter.OnWriteBodyContents` que toma <xref:System.Xml.XmlDictionaryWriter>; este método es el responsable de la escritura del cuerpo.  
   
  Los sistemas de escritura del cuerpo se pueden almacenar en búfer o no (se pueden transmitir por secuencias). Los sistemas de escritura del cuerpo almacenados en búfer pueden escribir su contenido todas las veces que se quiera, mientras que los transmitidos solo pueden escribir sus contenidos una vez. La propiedad `IsBuffered` indica si un sistema de escritura del cuerpo está almacenado en búfer o no. Puede establecerlo para su sistema de escritura de cuerpo mediante una llamada al constructor `BodyWriter` protegido que toma un parámetro booleano `isBuffered`. Los sistemas de escritura de cuerpo permiten crear un sistema de escritura de cuerpo almacenado en búfer a partir de un sistema de escritura de cuerpo no almacenado en búfer. Puede invalidar el método `OnCreateBufferedCopy` para personalizar este proceso. De forma predeterminada, se usa un búfer en memoria que contiene el XML devuelto por `OnWriteBodyContents`. `OnCreateBufferedCopy` toma un parámetro entero `maxBufferSize`; si invalida este método, no debe crear búferes mayores que este tamaño máximo.  
   
@@ -80,11 +78,11 @@ La <xref:System.ServiceModel.Channels.Message> clase es fundamental a Windows Co
 ## <a name="extracting-message-body-data"></a>Extraer los datos del cuerpo del mensaje  
  La clase `Message` admite varias maneras de extraer información de su cuerpo. Éstos pueden estar clasificados en las categorías siguientes:  
   
--   Obtener el cuerpo del mensaje completo escrito de una vez en un sistema de escritura de XML. Esto se conoce como *escribir un mensaje*.  
+- Obtener el cuerpo del mensaje completo escrito de una vez en un sistema de escritura de XML. Esto se conoce como *escribir un mensaje*.  
   
--   Obtener un lector XML sobre el cuerpo del mensaje. Esto le permite al acceso posterior el cuerpo del mensaje parte por parte, según se requiera. Esto se conoce como *leer un mensaje*.  
+- Obtener un lector XML sobre el cuerpo del mensaje. Esto le permite al acceso posterior el cuerpo del mensaje parte por parte, según se requiera. Esto se conoce como *leer un mensaje*.  
   
--   El mensaje completo, incluido su cuerpo, se puede copiar en un búfer en memoria del tipo <xref:System.ServiceModel.Channels.MessageBuffer>. Esto se conoce como *copiar un mensaje*.  
+- El mensaje completo, incluido su cuerpo, se puede copiar en un búfer en memoria del tipo <xref:System.ServiceModel.Channels.MessageBuffer>. Esto se conoce como *copiar un mensaje*.  
   
  Solo puede tener acceso una vez al cuerpo de `Message`, independientemente de cómo se tiene acceso. Un objeto de mensaje tiene una propiedad `State`, la cual se establece inicialmente en Creada. Los tres métodos de acceso descritos en la lista anterior establecen el estado en Escrito, Leído, y Copiado, respectivamente. Además, un método `Close` puede establecer el estado en Cerrado cuando ya no se necesita el contenido del cuerpo del mensaje. Se puede tener acceso al cuerpo del mensaje solo en el estado Creado y no hay ninguna manera de regresar al estado Creado después de que el estado haya cambiado.  
   
@@ -98,9 +96,9 @@ La <xref:System.ServiceModel.Channels.Message> clase es fundamental a Windows Co
   
  Dos métodos del asistente adicionales escriben ciertas etiquetas de elemento de inicio de SOAP. Estos métodos no tienen acceso al cuerpo del mensaje, de modo que no cambian el estado del mensaje. Se incluyen los siguientes:  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> escribe el elemento de cuerpo de inicio, por ejemplo, `<soap:Body>`.  
+- <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> escribe el elemento de cuerpo de inicio, por ejemplo, `<soap:Body>`.  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> escribe el elemento de envoltura de inicio, por ejemplo, `<soap:Envelope>`.  
+- <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> escribe el elemento de envoltura de inicio, por ejemplo, `<soap:Envelope>`.  
   
  Para escribir las etiquetas de elementos finales correspondientes, llame `WriteEndElement` en el sistema de escritura XML correspondiente. Rara vez se llama a estos métodos directamente.  
   
@@ -140,15 +138,15 @@ La <xref:System.ServiceModel.Channels.Message> clase es fundamental a Windows Co
 ## <a name="accessing-other-message-parts"></a>Tener acceso a otras partes del mensaje  
  Se proporcionan varias propiedades para tener acceso a la información del mensaje que no sea el contenido del cuerpo. Sin embargo, no se puede llamar a éstos una vez se ha cerrado el mensaje:  
   
--   La propiedad <xref:System.ServiceModel.Channels.Message.Headers%2A> representa los encabezados del mensaje. Consulte la sección sobre "Trabajar con encabezados" más adelante en este tema.  
+- La propiedad <xref:System.ServiceModel.Channels.Message.Headers%2A> representa los encabezados del mensaje. Consulte la sección sobre "Trabajar con encabezados" más adelante en este tema.  
   
--   La propiedad <xref:System.ServiceModel.Channels.Message.Properties%2A> representa las propiedades del mensaje, que son partes de datos con nombre adjuntadas al mensaje que generalmente no se emiten cuando se envía el mensaje. Consulte la sección en "Trabajar con propiedades" más adelante en este tema.  
+- La propiedad <xref:System.ServiceModel.Channels.Message.Properties%2A> representa las propiedades del mensaje, que son partes de datos con nombre adjuntadas al mensaje que generalmente no se emiten cuando se envía el mensaje. Consulte la sección en "Trabajar con propiedades" más adelante en este tema.  
   
--   La propiedad <xref:System.ServiceModel.Channels.Message.Version%2A> indica el SOAP y versión WS-Addressing asociada al mensaje o `None` si SOAP está deshabilitado.  
+- La propiedad <xref:System.ServiceModel.Channels.Message.Version%2A> indica el SOAP y versión WS-Addressing asociada al mensaje o `None` si SOAP está deshabilitado.  
   
--   La propiedad <xref:System.ServiceModel.Channels.Message.IsFault%2A> devuelve `true` si el mensaje es un mensaje de error de SOAP.  
+- La propiedad <xref:System.ServiceModel.Channels.Message.IsFault%2A> devuelve `true` si el mensaje es un mensaje de error de SOAP.  
   
--   La propiedad <xref:System.ServiceModel.Channels.Message.IsEmpty%2A> devuelve `true` si el mensaje está vacío.  
+- La propiedad <xref:System.ServiceModel.Channels.Message.IsEmpty%2A> devuelve `true` si el mensaje está vacío.  
   
  Puede utilizar el método <xref:System.ServiceModel.Channels.Message.GetBodyAttribute%28System.String%2CSystem.String%29> para tener acceso a un atributo determinado en el elemento contenedor del cuerpo (por ejemplo, `<soap:Body>`) identificado por un nombre y espacio de nombres determinados. Si no se encuentra dicho atributo, se devuelve `null`. Se puede llamar a este método solo cuando `Message` está en el estado Creado (cuando todavía no se ha tenido acceso al cuerpo del mensaje).  
   
@@ -183,8 +181,7 @@ La <xref:System.ServiceModel.Channels.Message> clase es fundamental a Windows Co
  [!code-csharp[C_UsingTheMessageClass#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#9)]
  [!code-vb[C_UsingTheMessageClass#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#9)]  
   
- 
-  <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents> y los métodos <xref:System.ServiceModel.Channels.Message.OnCreateBufferedCopy%2A> tienen implementaciones predeterminadas que funcionan en la mayoría de los casos.   Las implementaciones predeterminadas llaman a <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A>, almacenan en búfer los resultados y funcionan con el búfer resultante. Sin embargo, en algunos casos esto puede no ser bastante. En el ejemplo anterior, leer el mensaje resulta en 100,000 elementos XML almacenados en búfer, lo cual podría no ser deseable. Es posible que desee invalidar <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents> para devolver una clase <xref:System.Xml.XmlDictionaryReader> derivada personalizada que proporcione números aleatorios. Después, puede invalidar <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A> para usar el lector que el <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents> devuelve el método, tal como se muestra en el ejemplo siguiente.  
+ <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents> y los métodos <xref:System.ServiceModel.Channels.Message.OnCreateBufferedCopy%2A> tienen implementaciones predeterminadas que funcionan en la mayoría de los casos.   Las implementaciones predeterminadas llaman a <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A>, almacenan en búfer los resultados y funcionan con el búfer resultante. Sin embargo, en algunos casos esto puede no ser bastante. En el ejemplo anterior, leer el mensaje resulta en 100,000 elementos XML almacenados en búfer, lo cual podría no ser deseable. Es posible que desee invalidar <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents> para devolver una clase <xref:System.Xml.XmlDictionaryReader> derivada personalizada que proporcione números aleatorios. Después, puede invalidar <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A> para usar el lector que el <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents> devuelve el método, tal como se muestra en el ejemplo siguiente.  
   
  [!code-csharp[C_UsingTheMessageClass#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#10)]
  [!code-vb[C_UsingTheMessageClass#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#10)]  
@@ -209,5 +206,4 @@ La <xref:System.ServiceModel.Channels.Message> clase es fundamental a Windows Co
   
  Si el objeto `Message` debe llevar a cabo alguna operación de limpieza especial cuando ya no se necesita el cuerpo del mensaje, puede invalidar <xref:System.ServiceModel.Channels.Message.OnClose%2A>. La implementación predeterminada no hace nada.  
   
- 
-  `IsEmpty` y las propiedades `IsFault` se pueden invalidar. De forma predeterminada, ambos devuelven `false`.
+ `IsEmpty` y las propiedades `IsFault` se pueden invalidar. De forma predeterminada, ambos devuelven `false`.

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
 ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013535"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Prioridad de operador en Visual Basic
 Cuando se producen varias operaciones en una expresión, cada parte se evalúa y se resuelve en un orden predeterminado llamado *prioridad de operador*.  
@@ -27,13 +27,13 @@ Cuando se producen varias operaciones en una expresión, cada parte se evalúa y
 ## <a name="precedence-rules"></a>Reglas de prioridad  
  Cuando las expresiones contienen operadores de más de una categoría, se evalúan según las reglas siguientes:  
   
--   Los operadores aritméticos y de concatenación tienen el orden de prioridad que se describe en la sección siguiente, y todos tienen mayor prioridad que la comparación, lógicos y operadores bit a bit.  
+- Los operadores aritméticos y de concatenación tienen el orden de prioridad que se describe en la sección siguiente, y todos tienen mayor prioridad que la comparación, lógicos y operadores bit a bit.  
   
--   Todos los operadores de comparación tienen la misma prioridad y todos tienen mayor prioridad que los operadores lógicos y bit a bit, pero con menor prioridad que los operadores aritméticos y de concatenación.  
+- Todos los operadores de comparación tienen la misma prioridad y todos tienen mayor prioridad que los operadores lógicos y bit a bit, pero con menor prioridad que los operadores aritméticos y de concatenación.  
   
--   Los operadores lógicos y bit a bit tienen el orden de prioridad que se describe en la sección siguiente, y todas tienen menor prioridad que los operadores de comparación, concatenación y aritmética.  
+- Los operadores lógicos y bit a bit tienen el orden de prioridad que se describe en la sección siguiente, y todas tienen menor prioridad que los operadores de comparación, concatenación y aritmética.  
   
--   Los operadores con la misma prioridad se evalúan de izquierda a derecha en el orden en que aparecen en la expresión.  
+- Los operadores con la misma prioridad se evalúan de izquierda a derecha en el orden en que aparecen en la expresión.  
   
 ## <a name="precedence-order"></a>Orden de prioridad  
  Los operadores se evalúan en el orden de precedencia siguiente:  

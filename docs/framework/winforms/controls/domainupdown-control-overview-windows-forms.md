@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
 ms.openlocfilehash: bfe3e7239f77c6f1a0d9bb46a96c704653b43364
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972073"
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>Información general sobre el control DomainUpDown (formularios Windows Forms)
 Los formularios de Windows <xref:System.Windows.Forms.DomainUpDown> control es básicamente una combinación de un cuadro de texto y un par de botones para desplazarse hacia arriba o hacia abajo a través de una lista. El control muestra y establece una cadena de texto de una lista de opciones. El usuario puede seleccionar la cadena, haga clic en botones para desplazarse por una lista de arriba y abajo, presionando las teclas de dirección arriba y abajo o escribiendo una cadena que coincide con un elemento en la lista. Es un uso posible para este control para seleccionar elementos de una lista ordenada alfabéticamente de los nombres.  

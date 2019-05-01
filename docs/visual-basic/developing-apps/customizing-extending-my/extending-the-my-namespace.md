@@ -9,32 +9,32 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
 ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014224"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Extender el espacio de nombres My en Visual Basic
 El `My` espacio de nombres en Visual Basic expone propiedades y métodos que permiten aprovechar fácilmente la eficacia de .NET Framework. El `My` simplifica el espacio de nombres de los problemas de programación comunes, a menudo reduce una tarea difícil en una sola línea de código. Además, el `My` espacio de nombres es totalmente extensible para que puedan personalizar el comportamiento de `My` y agregar nuevos servicios a su jerarquía para adaptarse a necesidades específicas de aplicaciones. En este tema se describe cómo personalizar los miembros existentes de la `My` espacio de nombres y cómo agregar sus propias clases personalizadas para el `My` espacio de nombres.  
   
  **Contenido del tema**  
   
--   [Personalizar los existentes a los miembros de mi Namespace](#customizing)  
+- [Personalizar los existentes a los miembros de mi Namespace](#customizing)  
   
--   [Agregar miembros a Mis objetos](#addingtoobjects)  
+- [Agregar miembros a Mis objetos](#addingtoobjects)  
   
--   [Adición de objetos personalizados a la mi Namespace](#addingcustom)  
+- [Adición de objetos personalizados a la mi Namespace](#addingcustom)  
   
--   [Agregar miembros a la mi Namespace](#addingtonamespace)  
+- [Agregar miembros a la mi Namespace](#addingtonamespace)  
   
--   [Agregar eventos a Mis objetos personalizados](#addingevents)  
+- [Agregar eventos a Mis objetos personalizados](#addingevents)  
   
--   [Instrucciones de diseño](#design)  
+- [Instrucciones de diseño](#design)  
   
--   [Diseño de bibliotecas de clases para mi](#designing)  
+- [Diseño de bibliotecas de clases para mi](#designing)  
   
--   [Empaquetar e implementar extensiones](#packaging)  
+- [Empaquetar e implementar extensiones](#packaging)  
   
 ## <a name="customizing"></a> Personalizar los existentes a los miembros de mi Namespace  
  El `My` espacio de nombres en Visual Basic expone información acerca de la aplicación, el equipo y mucho más usada con frecuencia. Para obtener una lista completa de los objetos de la `My` espacio de nombres, vea [My Reference](../../../visual-basic/language-reference/keywords/my-reference.md). Puede que tenga que personalizar los miembros existentes de la `My` espacio de nombres para que el mejor coincide con las necesidades de su aplicación. Cualquier propiedad de un objeto en el `My` espacio de nombres que no es de solo lectura se puede establecer en un valor personalizado.  
@@ -76,22 +76,22 @@ El `My` espacio de nombres en Visual Basic expone propiedades y métodos que per
 ## <a name="design"></a> Instrucciones de diseño  
  Al desarrollar extensiones para la `My` espacio de nombres, utilice las siguientes directrices para ayudar a reducir los costos de mantenimiento de los componentes de extensión.  
   
--   **Incluir la lógica de la extensión.** La lógica que se incluye en el `My` extensión del espacio de nombres debe incluir únicamente el código que se necesita para exponer la funcionalidad requerida en el `My` espacio de nombres. Dado que la extensión residen en los proyectos de usuario como código fuente, actualizar el componente de extensión incurre en un costo de mantenimiento alto y debería evitarse si es posible.  
+- **Incluir la lógica de la extensión.** La lógica que se incluye en el `My` extensión del espacio de nombres debe incluir únicamente el código que se necesita para exponer la funcionalidad requerida en el `My` espacio de nombres. Dado que la extensión residen en los proyectos de usuario como código fuente, actualizar el componente de extensión incurre en un costo de mantenimiento alto y debería evitarse si es posible.  
   
--   **Minimizar las suposiciones de proyecto.** Cuando cree sus extensiones de la `My` espacio de nombres, no suponga un conjunto de referencias, las importaciones de nivel de proyecto o configuración de compilador específica (por ejemplo, `Option Strict` off). En su lugar, minimizar las dependencias y calificar todas las referencias de tipo mediante el uso de la `Global` palabra clave. Además, asegúrese de que se compila con la extensión `Option Strict` activado a minimizar los errores en la extensión.  
+- **Minimizar las suposiciones de proyecto.** Cuando cree sus extensiones de la `My` espacio de nombres, no suponga un conjunto de referencias, las importaciones de nivel de proyecto o configuración de compilador específica (por ejemplo, `Option Strict` off). En su lugar, minimizar las dependencias y calificar todas las referencias de tipo mediante el uso de la `Global` palabra clave. Además, asegúrese de que se compila con la extensión `Option Strict` activado a minimizar los errores en la extensión.  
   
--   **Aislar el código de extensión.** Coloque el código en un único archivo hace que la extensión que pueden implementar fácilmente como una plantilla de elemento de Visual Studio. Para obtener más información, vea "Empaquetar e implementar extensiones" más adelante en este tema. Colocar todas la `My` código de extensión de espacio de nombres en un único archivo o una carpeta independiente en un proyecto también ayuda a los usuarios encontrar la `My` extensión del espacio de nombres.  
+- **Aislar el código de extensión.** Coloque el código en un único archivo hace que la extensión que pueden implementar fácilmente como una plantilla de elemento de Visual Studio. Para obtener más información, vea "Empaquetar e implementar extensiones" más adelante en este tema. Colocar todas la `My` código de extensión de espacio de nombres en un único archivo o una carpeta independiente en un proyecto también ayuda a los usuarios encontrar la `My` extensión del espacio de nombres.  
   
 ## <a name="designing"></a> Diseño de bibliotecas de clases para mi  
  Como sucede con la mayoría de los modelos de objetos, algunos patrones de diseño funcionan bien en el `My` espacio de nombres y otras no. Al diseñar una extensión de la `My` espacio de nombres, tenga en cuenta los siguientes principios:  
   
--   **Métodos sin estado.** Los métodos en el `My` espacio de nombres debe proporcionar una solución completa a una tarea específica. Asegúrese de que los valores de parámetro que se pasan al método proporcionan toda la información necesaria para completar la tarea concreta. Evite crear métodos que se basan en un estado anterior, por ejemplo, las conexiones abiertas a los recursos.  
+- **Métodos sin estado.** Los métodos en el `My` espacio de nombres debe proporcionar una solución completa a una tarea específica. Asegúrese de que los valores de parámetro que se pasan al método proporcionan toda la información necesaria para completar la tarea concreta. Evite crear métodos que se basan en un estado anterior, por ejemplo, las conexiones abiertas a los recursos.  
   
--   **Instancias globales.** El único estado que se mantiene en el `My` espacio de nombres es global para el proyecto. Por ejemplo, `My.Application.Info` encapsula el estado que se comparte en toda la aplicación.  
+- **Instancias globales.** El único estado que se mantiene en el `My` espacio de nombres es global para el proyecto. Por ejemplo, `My.Application.Info` encapsula el estado que se comparte en toda la aplicación.  
   
--   **Tipos de parámetro simples.** Simplificar las cosas, ya que evita los tipos de parámetros complejos. En su lugar, cree los métodos que no tomar ningún parámetro de entrada o que tomen tipos simples de entrada como cadenas, tipos primitivos y así sucesivamente.  
+- **Tipos de parámetro simples.** Simplificar las cosas, ya que evita los tipos de parámetros complejos. En su lugar, cree los métodos que no tomar ningún parámetro de entrada o que tomen tipos simples de entrada como cadenas, tipos primitivos y así sucesivamente.  
   
--   **Métodos de generador.** Algunos tipos tienen necesariamente es difíciles crear instancias. Proporcionar métodos de generador como extensiones a la `My` espacio de nombres permite detectar más fácilmente y utilizar tipos que pertenecen a esta categoría. Es un ejemplo de un método de generador que funciona bien `My.Computer.FileSystem.OpenTextFileReader`. Hay varios tipos de secuencia de .NET Framework. Mediante la especificación de archivos de texto en concreto, el `OpenTextFileReader` ayuda al usuario a entender qué flujo se va a usar.  
+- **Métodos de generador.** Algunos tipos tienen necesariamente es difíciles crear instancias. Proporcionar métodos de generador como extensiones a la `My` espacio de nombres permite detectar más fácilmente y utilizar tipos que pertenecen a esta categoría. Es un ejemplo de un método de generador que funciona bien `My.Computer.FileSystem.OpenTextFileReader`. Hay varios tipos de secuencia de .NET Framework. Mediante la especificación de archivos de texto en concreto, el `OpenTextFileReader` ayuda al usuario a entender qué flujo se va a usar.  
   
  Estas instrucciones no excluye los principios de diseño generales para las bibliotecas de clases. En su lugar, son las recomendaciones que se optimizan para desarrolladores que usan Visual Basic y `My` espacio de nombres. Para los principios de diseño generales para la creación de bibliotecas de clases, vea [instrucciones de diseño de Framework](../../../standard/design-guidelines/index.md).  
   

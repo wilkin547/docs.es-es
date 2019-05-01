@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971917"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Información general sobre las extensiones de marcado para el lenguaje XAML
 Las extensiones de marcado son una técnica XAML para obtener un valor que no es un tipo primitivo ni específico de XAML. Para el uso de atributos, las extensiones de marcado usan la secuencia de caracteres conocida de una llave de apertura `{` para entrar en el ámbito de la extensión de marcado y una llave de cierre `}` para salir. Al usar los servicios XAML de .NET Framework, puede usar algunas de las extensiones de marcado del lenguaje XAML predefinidas del ensamblado System.Xaml. También puede crear subclases de la clase <xref:System.Windows.Markup.MarkupExtension> , definida en System.Xaml, y definir sus propias extensiones de marcado. Asimismo, puede usar las extensiones de marcado definidas por un marco determinado si ya se hace referencia a dicho marco.  
@@ -54,9 +54,9 @@ Las extensiones de marcado son una técnica XAML para obtener un valor que no es
 ## <a name="defining-the-support-type-for-a-custom-markup-extension"></a>Definir el tipo de compatibilidad para una extensión de marcado personalizada  
  Al usar los servicios XAML de .NET Framework o marcos de trabajo que se basan en los servicios XAML de .NET Framework, tiene dos opciones para asignar un nombre al tipo de compatibilidad de la extensión de marcado. El nombre del tipo es pertinente para la manera en que los escritores de objetos XAML intentan obtener acceso e invocar un tipo de compatibilidad de la extensión de marcado cuando encuentran un uso de la extensión de marcado en XAML. Use una de las siguientes estrategias de nomenclatura:  
   
--   Asigne al tipo un nombre que coincida exactamente con el token de uso del marcado XAML. Por ejemplo, para admitir el uso de la extensión `{Collate ...}` , asigne al tipo de compatibilidad el nombre `Collate`.  
+- Asigne al tipo un nombre que coincida exactamente con el token de uso del marcado XAML. Por ejemplo, para admitir el uso de la extensión `{Collate ...}` , asigne al tipo de compatibilidad el nombre `Collate`.  
   
--   Asigne al tipo un nombre que sea el token de la cadena de uso más el sufijo `Extension`. Por ejemplo, para admitir el uso de la extensión `{Collate ...}` , asigne al tipo de compatibilidad el nombre `CollateExtension`.  
+- Asigne al tipo un nombre que sea el token de la cadena de uso más el sufijo `Extension`. Por ejemplo, para admitir el uso de la extensión `{Collate ...}` , asigne al tipo de compatibilidad el nombre `CollateExtension`.  
   
  Según el orden de búsqueda, primero se busca el nombre de clase con el sufijo `Extension`y, a continuación, se busca el nombre de clase sin el sufijo `Extension` .  
   
@@ -81,9 +81,9 @@ public Collate(CollationMode collationMode) {...}
   
  El procesamiento funciona conceptualmente como si la extensión de marcado fuera un objeto que se va a crear y, a continuación, se establecieran sus valores de miembro. Cada propiedad especificada que se va a establecer se evalúa de modo similar a la manera en que se puede establecer un miembro especificado en un objeto creado cuando se analiza XAML. Hay dos diferencias importantes:  
   
--   Como se mencionó anteriormente, un tipo de compatibilidad de la extensión de marcado no necesita tener un constructor predeterminado para que se cree una instancia suya en XAML. La construcción de objetos se aplaza hasta que sus posibles argumentos en la sintaxis de texto se conviertan en tokens y se evalúen como argumentos con nombre o posicionales y se llame al constructor adecuado en ese momento.  
+- Como se mencionó anteriormente, un tipo de compatibilidad de la extensión de marcado no necesita tener un constructor predeterminado para que se cree una instancia suya en XAML. La construcción de objetos se aplaza hasta que sus posibles argumentos en la sintaxis de texto se conviertan en tokens y se evalúen como argumentos con nombre o posicionales y se llame al constructor adecuado en ese momento.  
   
--   Los usos de las extensiones de marcado se pueden anidar. Primero se evalúa la extensión de marcado más interna. Por lo tanto, puede suponer este tipo de uso y declarar uno de los parámetros de construcción de modo que sea un tipo que requiere que se genere un convertidor de valores (como una extensión de marcado).  
+- Los usos de las extensiones de marcado se pueden anidar. Primero se evalúa la extensión de marcado más interna. Por lo tanto, puede suponer este tipo de uso y declarar uno de los parámetros de construcción de modo que sea un tipo que requiere que se genere un convertidor de valores (como una extensión de marcado).  
   
  En el ejemplo anterior se mostró una dependencia de este procesamiento. El escritor de objetos de servicios XAML de .NET Framework procesa los nombres de constantes de enumeración en valores enumerados en un nivel nativo.  
   
@@ -124,9 +124,9 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> notifica información <xref:System.Type> del tipo de objeto que <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> devuelve. Por su firma pura, <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> devuelve <xref:System.Object>. Sin embargo, algunos consumidores podrían desear información más precisa sobre el tipo de valor devuelto. Esto incluye:  
   
--   Diseñadores e IDE, que pueden proporcionar compatibilidad con reconocimiento del tipo para los usos de la extensión de marcado.  
+- Diseñadores e IDE, que pueden proporcionar compatibilidad con reconocimiento del tipo para los usos de la extensión de marcado.  
   
--   Implementaciones avanzadas de controladores `SetMarkupExtension` en las clases de destino, que podrían basarse en la reflexión para determinar el tipo de valor devuelto de una extensión de marcado, en lugar de realizar una bifurcación en implementaciones <xref:System.Windows.Markup.MarkupExtension> conocidas específicas por nombre.  
+- Implementaciones avanzadas de controladores `SetMarkupExtension` en las clases de destino, que podrían basarse en la reflexión para determinar el tipo de valor devuelto de una extensión de marcado, en lugar de realizar una bifurcación en implementaciones <xref:System.Windows.Markup.MarkupExtension> conocidas específicas por nombre.  
   
 <a name="serialization_of_markup_extension_usages"></a>   
 ## <a name="serialization-of-markup-extension-usages"></a>Serialización de los usos de la extensión de marcado  

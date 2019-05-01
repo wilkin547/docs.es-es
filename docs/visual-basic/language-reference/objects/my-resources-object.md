@@ -9,11 +9,11 @@ helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
 ms.openlocfilehash: ee4d30b82ceada5c4f3fc4ad95dc8eeedd9355b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970838"
 ---
 # <a name="myresources-object"></a>My.Resources (Objeto)
 Proporciona propiedades y clases para tener acceso a recursos de la aplicación.  
@@ -32,11 +32,11 @@ Proporciona propiedades y clases para tener acceso a recursos de la aplicación.
   
  Cada recurso tiene un nombre, categoría y valor, y esta configuración de recursos determina cómo aparece en la propiedad para tener acceso al recurso el `My.Resources` objeto. Para los recursos que agregó en el **Diseñador de proyectos**:  
   
--   El nombre determina el nombre de la propiedad,  
+- El nombre determina el nombre de la propiedad,  
   
--   Los datos de recursos están el valor de la propiedad,  
+- Los datos de recursos están el valor de la propiedad,  
   
--   La categoría determina el tipo de la propiedad:  
+- La categoría determina el tipo de la propiedad:  
   
 |Categoría|Propiedad tipo de datos|  
 |---|---|  

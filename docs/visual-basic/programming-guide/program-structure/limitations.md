@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
 ms.openlocfilehash: 10f67c02d25ec275d1c3e98197d51c25aa250c19
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955511"
 ---
 # <a name="visual-basic-limitations"></a>Limitaciones de Visual Basic
 Las versiones anteriores de Visual Basic aplican límites en el código, como la longitud de los nombres de variable, el número de variables permitidas en los módulos y el tamaño de módulo. En Visual Basic. NET, se han reducido estas restricciones, lo que le proporciona mayor libertad para crear y organizar el código.  
@@ -22,15 +22,15 @@ Las versiones anteriores de Visual Basic aplican límites en el código, como la
   
  Estas son algunas limitaciones que pueden surgir en casos extremos:  
   
--   **Longitud del nombre.** Hay un número máximo de caracteres para el nombre de cada elemento de programación declarado. Este valor máximo se aplica a una cadena de calificación completa si está calificado el nombre del elemento. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+- **Longitud del nombre.** Hay un número máximo de caracteres para el nombre de cada elemento de programación declarado. Este valor máximo se aplica a una cadena de calificación completa si está calificado el nombre del elemento. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
--   **Longitud de línea.** Hay un máximo de 65535 caracteres en una línea de código fuente física. La línea de código de origen lógico puede ser mayor si usa caracteres de continuación de línea. Vea [Cómo: Interrumpir y combinar instrucciones en código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+- **Longitud de línea.** Hay un máximo de 65535 caracteres en una línea de código fuente física. La línea de código de origen lógico puede ser mayor si usa caracteres de continuación de línea. Vea [Cómo: Interrumpir y combinar instrucciones en código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
--   **Dimensiones de la matriz.** Hay un número máximo de dimensiones que se pueden declarar para una matriz. Esto limita cuántos índices se pueden utilizar para especificar un elemento de matriz. Consulte [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
+- **Dimensiones de la matriz.** Hay un número máximo de dimensiones que se pueden declarar para una matriz. Esto limita cuántos índices se pueden utilizar para especificar un elemento de matriz. Consulte [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
   
--   **Longitud de cadena.** Hay un número máximo de caracteres Unicode que puede almacenar en una sola cadena. Consulte [tipo de datos de cadena](../../../visual-basic/language-reference/data-types/string-data-type.md).  
+- **Longitud de cadena.** Hay un número máximo de caracteres Unicode que puede almacenar en una sola cadena. Consulte [tipo de datos de cadena](../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
--   **Longitud de cadena de entorno.** Hay un máximo de 32 768 caracteres para cualquier cadena de entorno que se usa como argumento de línea de comandos. Esta es una limitación en todas las plataformas.  
+- **Longitud de cadena de entorno.** Hay un máximo de 32 768 caracteres para cualquier cadena de entorno que se usa como argumento de línea de comandos. Esta es una limitación en todas las plataformas.  
   
 ## <a name="see-also"></a>Vea también
 

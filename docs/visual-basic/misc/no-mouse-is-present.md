@@ -5,22 +5,22 @@ f1_keywords:
 - vbrMouse_NoMouseIsPresent
 ms.assetid: 4472fd57-4217-4463-9d3c-dc4a8fe88f1b
 ms.openlocfilehash: c0e4e2a8cb0aa641b179d8b2608af384d7d4181e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58044643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944942"
 ---
 # <a name="no-mouse-is-present"></a>No hay un mouse presente.
 Se llamó a una de las propiedades del objeto `My.Computer.Mouse` , pero el equipo no tiene ningún mouse o puerto de mouse instalado.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Agregue un bloque `Try...Catch` alrededor de la llamada a la propiedad del objeto `My.Computer.Mouse` .  
+- Agregue un bloque `Try...Catch` alrededor de la llamada a la propiedad del objeto `My.Computer.Mouse` .  
   
      o  
   
--   Instale un mouse en el equipo.  
+- Instale un mouse en el equipo.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
 ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001317"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Consideraciones sobre el diseño del elemento WindowsFormsHost
 Este tema se describe cómo el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento interactúa con el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de diseño.  
@@ -38,13 +38,13 @@ Este tema se describe cómo el <xref:System.Windows.Forms.Integration.WindowsFor
 ## <a name="layout-limitations"></a>Limitaciones de diseño  
  En general, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles no se pueden escalar y se transforma en la medida de lo posible [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. La siguiente lista describe las limitaciones conocidas cuando el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento intenta integrar su hospedado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de diseño.  
   
--   En algunos casos no se puede cambiar el tamaño de los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] (o solo se pueden fijar unas dimensiones específicas). Por ejemplo, un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> control admite sólo un alto, que se define según el tamaño de fuente del control. En un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diseño dinámico donde los elementos pueden ajustar verticalmente, hospedados <xref:System.Windows.Forms.ComboBox> control no se ajustará según lo previsto.  
+- En algunos casos no se puede cambiar el tamaño de los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] (o solo se pueden fijar unas dimensiones específicas). Por ejemplo, un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> control admite sólo un alto, que se define según el tamaño de fuente del control. En un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diseño dinámico donde los elementos pueden ajustar verticalmente, hospedados <xref:System.Windows.Forms.ComboBox> control no se ajustará según lo previsto.  
   
--   Los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] no se pueden girar ni sesgar. El <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento provoca el <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> eventos si aplica una transformación de sesgo o una rotación. Si no controla el <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> evento, un <xref:System.InvalidOperationException> se genera.  
+- Los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] no se pueden girar ni sesgar. El <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento provoca el <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> eventos si aplica una transformación de sesgo o una rotación. Si no controla el <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> evento, un <xref:System.InvalidOperationException> se genera.  
   
--   En la mayoría de los casos, los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] no admiten el escalado proporcional. Aunque las dimensiones generales del control se escalarán, los controles secundarios y los elementos de los componentes del control podrían no cambiar de tamaño según lo previsto. Esta limitación depende del grado de compatibilidad del escalado de cada control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Además, no es posible escalar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles hasta un tamaño de 0 píxeles.  
+- En la mayoría de los casos, los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] no admiten el escalado proporcional. Aunque las dimensiones generales del control se escalarán, los controles secundarios y los elementos de los componentes del control podrían no cambiar de tamaño según lo previsto. Esta limitación depende del grado de compatibilidad del escalado de cada control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Además, no es posible escalar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles hasta un tamaño de 0 píxeles.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] los controles admiten el escalado automático, en el que el formulario cambia de tamaño automáticamente y sus controles en función del tamaño de fuente. En una interfaz de usuario de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], al cambiar el tamaño de fuente no se cambia el tamaño de todo el diseño, aunque es posible que algunos elementos cambien de tamaño dinámicamente.  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] los controles admiten el escalado automático, en el que el formulario cambia de tamaño automáticamente y sus controles en función del tamaño de fuente. En una interfaz de usuario de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], al cambiar el tamaño de fuente no se cambia el tamaño de todo el diseño, aunque es posible que algunos elementos cambien de tamaño dinámicamente.  
   
 ### <a name="z-order"></a>Orden Z  
  En una interfaz de usuario de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], puede cambiar el orden z de los elementos para controlar el comportamiento de superposición. Los controles hospedados de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] se dibujan en un HWND independiente, por lo que siempre se dibujan en la parte superior de los elementos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -94,9 +94,9 @@ Este tema se describe cómo el <xref:System.Windows.Forms.Integration.WindowsFor
   
  Si el <xref:System.Windows.Forms.Control.Size%2A> propiedad no coincide con la restricción especificada, el control hospedado no admite el ajuste de tamaño continuo. Por ejemplo, el <xref:System.Windows.Forms.MonthCalendar> control sólo permite tamaños discretos. Los tamaños permitidos para este control consisten en números enteros (que representa el número de meses) para el alto y ancho. En casos como este, el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento se comporta como sigue:  
   
--   Si el <xref:System.Windows.Forms.Control.Size%2A> propiedad devuelve un tamaño mayor que la restricción especificada, el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento recorta el control hospedado. Alto y ancho se tratan por separado, por lo que es posible que se recorta el control hospedado en cualquier dirección.  
+- Si el <xref:System.Windows.Forms.Control.Size%2A> propiedad devuelve un tamaño mayor que la restricción especificada, el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento recorta el control hospedado. Alto y ancho se tratan por separado, por lo que es posible que se recorta el control hospedado en cualquier dirección.  
   
--   Si el <xref:System.Windows.Forms.Control.Size%2A> propiedad devuelve un tamaño menor que la restricción especificada, <xref:System.Windows.Forms.Integration.WindowsFormsHost> acepta este valor de tamaño y devuelve el valor para el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de diseño.  
+- Si el <xref:System.Windows.Forms.Control.Size%2A> propiedad devuelve un tamaño menor que la restricción especificada, <xref:System.Windows.Forms.Integration.WindowsFormsHost> acepta este valor de tamaño y devuelve el valor para el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de diseño.  
   
 ## <a name="see-also"></a>Vea también
 

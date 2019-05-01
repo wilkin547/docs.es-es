@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991268"
 ---
 # <a name="queues-overview"></a>Información general de colas
 En esta sección se presentan los conceptos generales y básicos detrás de la comunicación puesta en la cola. Secciones subsiguientes no entran en detalles acerca de cómo los conceptos de puesta en cola descritos aquí se manifiestan en Windows Communication Foundation (WCF).  
@@ -36,9 +36,9 @@ En esta sección se presentan los conceptos generales y básicos detrás de la c
 ## <a name="queues-and-transactions"></a>Colas y transacciones  
  Las transacciones le permiten agrupar un conjunto de operaciones de modo que si se produce un error en una operación, se producirá un error en todas las operaciones. Un ejemplo que indica cómo utilizar las transacciones es cuando un rol utiliza un ATM para transferir $1,000 de su cuenta de ahorro a su cuenta corriente. Esto supone las operaciones siguientes:  
   
--   Retirar $1,000 de la cuenta de ahorros.  
+- Retirar $1,000 de la cuenta de ahorros.  
   
--   Depositar $1,000 en la cuenta corriente.  
+- Depositar $1,000 en la cuenta corriente.  
   
  Si la primera operación es correcta y se retiran $1,000 de la cuenta de los ahorros, pero se produce un error en la segunda operación, se pierden los $1,000 porque ya se han retirado de la cuenta de ahorros. Para mantener las cuentas en estado válido, si se produce un error en una operación, se debe producir un error en ambas operaciones.  
   
@@ -59,9 +59,9 @@ En esta sección se presentan los conceptos generales y básicos detrás de la c
   
  Cualquier error, como por ejemplo, un mensaje que no ha alcanzado la cola de destino o un período de vida caducado, se debe procesar por separado. Por lo tanto, no es raro que las aplicaciones en cola escriban dos conjuntos de lógica:  
   
--   Cliente normal y lógica del servicio de enviar y recibir mensajes.  
+- Cliente normal y lógica del servicio de enviar y recibir mensajes.  
   
--   Lógica de la compensación para administrar los mensajes de la transmisión no o entrega no efectuadas.  
+- Lógica de la compensación para administrar los mensajes de la transmisión no o entrega no efectuadas.  
   
  Las secciones siguientes discuten estos conceptos.  
   

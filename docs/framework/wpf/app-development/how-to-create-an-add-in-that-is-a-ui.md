@@ -10,11 +10,11 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947893"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procedimiento Crear un complemento que sea una interfaz de usuario
 En este ejemplo se muestra cómo crear un complemento que es un Windows Presentation Foundation (WPF) que se hospeda en una aplicación independiente de WPF.  
@@ -25,9 +25,9 @@ En este ejemplo se muestra cómo crear un complemento que es un Windows Presenta
   
  En este ejemplo se resalta las extensiones WPF para el modelo de complemento de .NET Framework que habilitan este escenario y se da por supuesto lo siguiente:  
   
--   Conocimiento de que el complemento de modelo de .NET Framework, como canalización, complementos y desarrollo de host. Si no está familiarizado con estos conceptos, consulte [complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Para ver un tutorial que muestra la implementación de una canalización, un complemento y una aplicación host, consulte [Tutorial: Crear una aplicación Extensible](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
+- Conocimiento de que el complemento de modelo de .NET Framework, como canalización, complementos y desarrollo de host. Si no está familiarizado con estos conceptos, consulte [complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Para ver un tutorial que muestra la implementación de una canalización, un complemento y una aplicación host, consulte [Tutorial: Crear una aplicación Extensible](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
--   Conocimiento de las extensiones WPF para el modelo de complemento de .NET Framework. Consulte [información general sobre complementos WPF](wpf-add-ins-overview.md).  
+- Conocimiento de las extensiones WPF para el modelo de complemento de .NET Framework. Consulte [información general sobre complementos WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Ejemplo  
  Para crear un complemento que sea una UI de WPF necesita un código concreto para cada segmento de canalización, el complemento y la aplicación host.  
@@ -87,9 +87,9 @@ En este ejemplo se muestra cómo crear un complemento que es un Windows Presenta
   
  El código para procesar las interacciones con el complemento de la interfaz de usuario se ejecuta en dominio de aplicación del complemento. Estas interacciones incluyen lo siguiente:  
   
--   Controlar la <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
+- Controlar la <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
--   Mostrando el <xref:System.Windows.MessageBox>.  
+- Mostrando el <xref:System.Windows.MessageBox>.  
   
  Esta actividad está completamente aislada de la aplicación host.  
   

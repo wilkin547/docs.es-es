@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
 ms.openlocfilehash: 3d628d75b75c311c266648886b3b971c4833d172
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972255"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Desarrollar controles personalizados de formularios Windows Forms con .NET Framework
 Los controles de Windows Forms son componentes reutilizables que encapsulan la funcionalidad de la interfaz de usuario y se usan en aplicaciones de cliente basadas en Windows. Windows Forms no solo ofrece muchos controles listos para usar, también proporciona la infraestructura para desarrollar sus propios controles. Puede combinar los controles existentes, ampliar los controles existentes o crear sus propios controles personalizados. En esta sección se ofrece información general y ejemplos que le ayudarán a desarrollar controles de Windows Forms.  

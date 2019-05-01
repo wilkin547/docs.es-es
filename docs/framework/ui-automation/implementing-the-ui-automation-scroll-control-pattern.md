@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
 ms.openlocfilehash: bb473b7f10aa400dc42303e1acc15c2bdcd34516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983423"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>Implementación del patrón de control Scroll de UI Automation
 > [!NOTE]
@@ -30,17 +30,17 @@ Ejemplo de un control de desplazamiento que no use barras de desplazamiento
 ## <a name="implementation-guidelines-and-conventions"></a>Directrices y convenciones de implementación  
  Al implementar el patrón de control Scroll, tenga en cuenta las siguientes directrices y convenciones:  
   
--   Los elementos secundarios de este control deben implementar <xref:System.Windows.Automation.Provider.IScrollItemProvider>.  
+- Los elementos secundarios de este control deben implementar <xref:System.Windows.Automation.Provider.IScrollItemProvider>.  
   
--   Las barras de desplazamiento de un control de contenedor no admiten el patrón de control <xref:System.Windows.Automation.ScrollPattern> . Deben admitir el patrón de control <xref:System.Windows.Automation.RangeValuePattern> en su lugar.  
+- Las barras de desplazamiento de un control de contenedor no admiten el patrón de control <xref:System.Windows.Automation.ScrollPattern> . Deben admitir el patrón de control <xref:System.Windows.Automation.RangeValuePattern> en su lugar.  
   
--   Cuando el desplazamiento se mide en porcentajes, todos los valores o cantidades relacionadas con la graduación del desplazamiento deben normalizarse a un intervalo de 0 a 100.  
+- Cuando el desplazamiento se mide en porcentajes, todos los valores o cantidades relacionadas con la graduación del desplazamiento deben normalizarse a un intervalo de 0 a 100.  
   
--   Las propiedades<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> y <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> son independientes de la propiedad <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
+- Las propiedades<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> y <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> son independientes de la propiedad <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
   
--   Si <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` , <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> debe establecerse en el 100 % y <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> debe establecerse en <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. De igual modo, si <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` , <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> debe establecerse en el 100 por ciento y <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> debe establecerse en <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Esto permite que un cliente de la automatización de la interfaz de usuario use estos valores de propiedad del método <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> a la vez que se evita una [condición de carrera](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) si se activa una dirección que al cliente no le interesa para desplazamiento.  
+- Si <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` , <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> debe establecerse en el 100 % y <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> debe establecerse en <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. De igual modo, si <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` , <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> debe establecerse en el 100 por ciento y <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> debe establecerse en <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Esto permite que un cliente de la automatización de la interfaz de usuario use estos valores de propiedad del método <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> a la vez que se evita una [condición de carrera](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) si se activa una dirección que al cliente no le interesa para desplazamiento.  
   
--   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> es específica de la configuración regional. La configuración de HorizontalScrollPercent = 100,0 debe establecer la ubicación de desplazamiento del control en el equivalente de su posición que se encuentra situada más a la derecha para idiomas como el inglés que se leen de izquierda a derecha. Otra alternativa, para idiomas como el árabe que se leen de derecha a izquierda, la configuración de HorizontalScrollPercent = 100,0 debe establecer la ubicación de desplazamiento a la posición que se encuentra más a la izquierda.  
+- <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> es específica de la configuración regional. La configuración de HorizontalScrollPercent = 100,0 debe establecer la ubicación de desplazamiento del control en el equivalente de su posición que se encuentra situada más a la derecha para idiomas como el inglés que se leen de izquierda a derecha. Otra alternativa, para idiomas como el árabe que se leen de derecha a izquierda, la configuración de HorizontalScrollPercent = 100,0 debe establecer la ubicación de desplazamiento a la posición que se encuentra más a la izquierda.  
   
 <a name="Required_Members_for_IScrollProvider"></a>   
 ## <a name="required-members-for-iscrollprovider"></a>Miembros requeridos para IScrollProvider  

@@ -7,27 +7,27 @@ helpviewer_keywords:
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
 ms.openlocfilehash: c97bd891f0bbb58f8b267296b9b53e00a5486622
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047053"
 ---
 # <a name="wcf-feature-details"></a>Detalles de las características de WCF
-Windows Communication Foundation (WCF) permite un amplio control sobre las funciones de mensajería de una aplicación. Los temas de esta sección incluyen detalles sobre las características disponibles. Para obtener más información acerca de la programación básica, consulte [programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+Windows Communication Foundation (WCF) permite un amplio control sobre las funciones de mensajería de una aplicación. Los temas de esta sección incluyen detalles sobre las características disponibles. Para obtener más información acerca de la programación básica, vea [programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  Describe cómo crear y configurar servicios de flujo de trabajo.  
   
- [Puntos de conexión: direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Puntos de conexión: Las direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  Describe cómo controlar varios aspectos del servicio.  
   
  [Transferencia y serialización de datos](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
  Describe cómo la serialización de datos se puede personalizar para la interoperación o la compatibilidad futura.  
   
  [Sesiones, creación de instancias y simultaneidad](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
- Describe los modos de creación de instancias y la sesión de WCF y cómo seleccionar el modo correcto para la aplicación.  
+ Describe los modos de creación de instancias y la sesión de WCF y cómo seleccionar el modo correcto para su aplicación.  
   
  [Transportes](../../../../docs/framework/wcf/feature-details/transports.md)  
  Describe cómo configurar el nivel de transporte, el nivel más bajo de la pila del canal.  
@@ -39,7 +39,7 @@ Windows Communication Foundation (WCF) permite un amplio control sobre las funci
  Explica cómo crear operaciones de transacción que se puedan revertir de ser necesario.  
   
  [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)  
- Describe la seguridad de WCF le ayuda a crear aplicaciones que tienen confidencialidad e integridad. La autenticación y autorización también están disponibles, como lo están las características de auditoría.  
+ Describe cómo la seguridad de WCF le ayuda a crear aplicaciones que tienen confidencialidad e integridad. La autenticación y autorización también están disponibles, como lo están las características de auditoría.  
   
  [Conexión de redes punto a punto](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  Detalla cómo crear servicios del mismo nivel y clientes.  
@@ -57,10 +57,10 @@ Windows Communication Foundation (WCF) permite un amplio control sobre las funci
  Describe cómo usar WCF para extender su lógica existente en lugar de tener que rescribirla si tiene una inversión sustancial en lógica de la aplicación basada en componentes alojada en COM +.  
   
  [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- Describe el modelo de programación Web WCF que permite a los programadores exponer las operaciones de servicio WCF extremos no SOAP.  
+ Describe el modelo de programación Web WCF que permite a los programadores exponer operaciones de servicio WCF a puntos de conexión no SOAP.  
   
  [Redifusión en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
- Describe la compatibilidad para exponer fácilmente las fuentes de distribución de un servicio WCF.  
+ Describe la compatibilidad para exponer fácilmente las fuentes de distribución desde un servicio WCF.  
   
  [Integración de AJAX y compatibilidad de JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
  Describe la compatibilidad con ASP.NET JavaScript asincrónico y XML (AJAX) y el formato de datos JavaScript Object Notation (JSON) permitir que los servicios WCF exponer las operaciones a los clientes de AJAX.  

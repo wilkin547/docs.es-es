@@ -3,11 +3,11 @@ title: Excepciones de IdentityModel
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
 ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998522"
 ---
 # <a name="identitymodel-exceptions"></a>Excepciones de IdentityModel
 En este tema se enumeran todas las excepciones generadas por IdentityModel.  
@@ -88,7 +88,7 @@ En este tema se enumeran todas las excepciones generadas por IdentityModel.
 |TraceCodeSecurityIdentityDeterminationSuccess|Se determinó la identidad para una EndpointAddress.|  
 |UndefinedUseOfPrefixAtElement|El prefijo concreto que se usa en el elemento no tiene ningún espacio de nombres definido.|  
 |TraceCodeSecuritySessionResponderOperationFailure|Error de la operación de la sesión de seguridad en el servidor.|  
-|CannotFindCert|No se puede buscar el certificado X.509 mediante el criterio de búsqueda concreto: StoreName, StoreLocation, FindType, FindValue.|  
+|CannotFindCert|No se puede encontrar el certificado X.509 mediante el criterio de búsqueda concreto: StoreName, StoreLocation, FindType, FindValue.|  
 |X509InvalidUsageTime|La hora concreta de uso del certificado X.509 no es válida. El tiempo de uso no se encuentra entre el tiempo NotBefore y NotAfter requerido.|  
 |TraceCodeSecurityIdentityDeterminationFailure|No se puede determinar la identidad para una EndpointAddress.|  
 |AsyncObjectAlreadyEnded|Ya se ha llamado al método End en este objeto de resultado asincrónico.|  
@@ -227,7 +227,7 @@ En este tema se enumeran todas las excepciones generadas por IdentityModel.
 |UnableToCreateSignatureDeformatterFromAsymmetricCrypto|No se pudo crear un desformateador de firmas para el algoritmo especificado a partir de la clave criptográfica asimétrica especificada.|  
 |TraceCodeIdentityModelAsyncCallbackThrewException|Una devolución de llamada asincrónica produjo una excepción.|  
 |LengthMustBeGreaterThanZero|La longitud de este argumento debe ser mayor de 0.|  
-|FoundMultipleCerts|Se encontraron varios certificados X.509 mediante el criterio de búsqueda especificado: StoreName, StoreLocation, FindType, FindValue. Proporcione un valor de búsqueda más concreto.|  
+|FoundMultipleCerts|Se encontró varios certificados X.509 con los criterios de búsqueda especificado: StoreName, StoreLocation, FindType, FindValue. Proporcione un valor de búsqueda más concreto.|  
 |AtLeastOneTransformRequired|El elemento Transforms debe contener por lo menos una transformación.|  
 |SAMLTokenNotSerialized|La SamlAssertion no se pudo serializar a XML. Vea la excepción interna para obtener detalles.|  
 |TraceCodeSecurityBindingOutgoingMessageSecured|El protocolo de seguridad protegió el mensaje saliente.|  

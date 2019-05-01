@@ -3,11 +3,11 @@ title: Ejemplo de configuración
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
 ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002253"
 ---
 # <a name="configuration-sample"></a>Ejemplo de configuración
 En este ejemplo se muestra el uso de un archivo de configuración para hacer que un servicio se pueda detectar.  
@@ -27,15 +27,15 @@ En este ejemplo se muestra el uso de un archivo de configuración para hacer que
 ## <a name="service-configuration"></a>Configuración del servicio  
  El archivo de configuración de este ejemplo muestra dos características:  
   
--   Hacer que el servicio se pueda detectar a través de un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> estándar.  
+- Hacer que el servicio se pueda detectar a través de un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> estándar.  
   
--   Ajustar la información relacionada con la detección para el extremo de la aplicación del servicio y ajustar algunos de los valores relacionados con la detección en el extremo estándar.  
+- Ajustar la información relacionada con la detección para el extremo de la aplicación del servicio y ajustar algunos de los valores relacionados con la detección en el extremo estándar.  
   
  Para habilitar la detección, se deben realizar algunas modificaciones en el archivo de configuración de la aplicación para el servicio:  
   
--   Un extremo de detección se debe agregar al elemento `<service>`. Se trata de un punto de conexión <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> estándar. Este es un punto de conexión del sistema que el tiempo de ejecución asocia al servicio de detección. El servicio de descarga realiza escuchas de los mensajes en este extremo.  
+- Un extremo de detección se debe agregar al elemento `<service>`. Se trata de un punto de conexión <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> estándar. Este es un punto de conexión del sistema que el tiempo de ejecución asocia al servicio de detección. El servicio de descarga realiza escuchas de los mensajes en este extremo.  
   
--   Se agrega un comportamiento `<serviceDiscovery>` a la sección `<serviceBehaviors>`. Esto permite detectar el servicio en tiempo de ejecución runtime y utiliza el punto de conexión de la detección mencionado previamente para realizar escuchas de `Probe` de detección y mensajes `Resolve`. Con estas dos incorporaciones, el servicio se puede detectar en el punto de conexión de detección especificado.  
+- Se agrega un comportamiento `<serviceDiscovery>` a la sección `<serviceBehaviors>`. Esto permite detectar el servicio en tiempo de ejecución runtime y utiliza el punto de conexión de la detección mencionado previamente para realizar escuchas de `Probe` de detección y mensajes `Resolve`. Con estas dos incorporaciones, el servicio se puede detectar en el punto de conexión de detección especificado.  
   
  El siguiente fragmento de código muestra un servicio con un punto de conexión de la aplicación y un punto de conexión de detección definidos:  
   

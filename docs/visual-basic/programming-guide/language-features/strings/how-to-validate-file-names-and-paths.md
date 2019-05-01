@@ -8,11 +8,11 @@ helpviewer_keywords:
 - paths [Visual Basic], validating
 ms.assetid: f673462d-57b7-4120-b13a-6a7592f7ab2c
 ms.openlocfilehash: c8e01a0f5a3f99fdbc424d6cd7d224367c7bad08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032180"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>Procedimiento Validar los nombres de archivo y rutas de acceso en Visual Basic
 Este ejemplo se devuelve un `Boolean` valor que indica si una cadena representa un nombre de archivo o ruta de acceso. La validación comprueba si el nombre contiene caracteres no permitidos por el sistema de archivos.  

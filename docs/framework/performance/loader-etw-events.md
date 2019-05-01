@@ -8,11 +8,11 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949271"
 ---
 # <a name="loader-etw-events"></a>Eventos ETW de cargador
 <a name="top"></a> Estos eventos recopilan información relativa a la carga y descarga de dominios de aplicación, ensamblados y módulos.  
@@ -21,15 +21,15 @@ ms.locfileid: "59141536"
   
  Los eventos de cargador se subdividen en los siguientes:  
   
--   [Eventos de dominio de aplicación](#application_domain_events)  
+- [Eventos de dominio de aplicación](#application_domain_events)  
   
--   [Eventos de ensamblado de cargador CLR](#clr_loader_assembly_events)  
+- [Eventos de ensamblado de cargador CLR](#clr_loader_assembly_events)  
   
--   [Eventos de módulo](#module_events)  
+- [Eventos de módulo](#module_events)  
   
--   [Eventos del módulo de dominio CLR](#clr_domain_module_events)  
+- [Eventos del módulo de dominio CLR](#clr_domain_module_events)  
   
--   [Eventos de intervalo de módulo](#module_range_events)  
+- [Eventos de intervalo de módulo](#module_range_events)  
   
 <a name="application_domain_events"></a>   
 ## <a name="application-domain-events"></a>Eventos de dominio de aplicación  
@@ -134,11 +134,11 @@ ms.locfileid: "59141536"
   
 ### <a name="remarks"></a>Comentarios  
   
--   Los campos que tienen “Pdb” en sus nombres pueden ser usados por herramientas de generación de perfiles con el objetivo de buscar las PDB que coincidan con los módulos que se cargaron durante la sesión de generación de perfiles. Los valores de estos campos se corresponden a los datos escritos en las secciones IMAGE_DIRECTORY_ENTRY_DEBUG del módulo usadas normalmente en los depuradores para ayudar a localizar las PDB que coinciden con los módulos cargados.  
+- Los campos que tienen “Pdb” en sus nombres pueden ser usados por herramientas de generación de perfiles con el objetivo de buscar las PDB que coincidan con los módulos que se cargaron durante la sesión de generación de perfiles. Los valores de estos campos se corresponden a los datos escritos en las secciones IMAGE_DIRECTORY_ENTRY_DEBUG del módulo usadas normalmente en los depuradores para ayudar a localizar las PDB que coinciden con los módulos cargados.  
   
--   Los nombres de campo que empiezan por “ManagedPdb” hacen referencia a la PDB administrada correspondiente al módulo MSIL que generó el compilador administrado (por ejemplo, el compilador de C# o Visual Basic). Esta PDB usa el formato de PDB administrada y describe el modo en que los elementos del código fuente administrado original —como archivos, números de línea y nombres de símbolos— se asignan a los elementos MSIL que se compilan en el módulo MSIL.  
+- Los nombres de campo que empiezan por “ManagedPdb” hacen referencia a la PDB administrada correspondiente al módulo MSIL que generó el compilador administrado (por ejemplo, el compilador de C# o Visual Basic). Esta PDB usa el formato de PDB administrada y describe el modo en que los elementos del código fuente administrado original —como archivos, números de línea y nombres de símbolos— se asignan a los elementos MSIL que se compilan en el módulo MSIL.  
   
--   Los nombres de campo que empiezan por “NativePdb” hacen referencia a la PDB de NGen generada al llamar a `NGEN createPDB`. Esta PDB usa el formato de PDB nativa y describe el modo en que los elementos del código fuente administrado original —como archivos, números de línea y nombres de símbolos— se asignan a los elementos nativos que se compilan en el módulo NGen.  
+- Los nombres de campo que empiezan por “NativePdb” hacen referencia a la PDB de NGen generada al llamar a `NGEN createPDB`. Esta PDB usa el formato de PDB nativa y describe el modo en que los elementos del código fuente administrado original —como archivos, números de línea y nombres de símbolos— se asignan a los elementos nativos que se compilan en el módulo NGen.  
   
  [Volver al principio](#top)  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: b6537faa3be7ee28a934927fc95100a34a64e176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009492"
 ---
 # <a name="toolstrip-technology-summary"></a>Resumen de la tecnología ToolStrip
 En este tema se resume la información sobre el control `ToolStrip` y las clases que admiten su uso.  
@@ -25,23 +25,23 @@ En este tema se resume la información sobre el control `ToolStrip` y las clases
 ## <a name="background"></a>Fondo  
  Con el control `ToolStrip` y las clases asociadas a él, puede crear funcionalidad avanzada de barras de herramientas con un aspecto y un comportamiento coherente y profesional. El control `ToolStrip` y sus clases ofrecen las siguientes mejoras en comparación con los controles anteriores:  
   
--   Un modelo de evento más coherente.  
+- Un modelo de evento más coherente.  
   
--   Un comportamiento en tiempo de diseño más coherente que contiene editores de colecciones de elementos y listas de tareas.  
+- Un comportamiento en tiempo de diseño más coherente que contiene editores de colecciones de elementos y listas de tareas.  
   
--   Representación personalizada con `ToolStripManager` y `ToolStripRenderer`.  
+- Representación personalizada con `ToolStripManager` y `ToolStripRenderer`.  
   
--   Espacio compartido integrado (uso compartido del espacio horizontal o vertical dentro del área de la herramienta cuando se acopla) con `ToolStripContainer` y `ToolStripPanel`.  
+- Espacio compartido integrado (uso compartido del espacio horizontal o vertical dentro del área de la herramienta cuando se acopla) con `ToolStripContainer` y `ToolStripPanel`.  
   
--   Reordenación de elementos en tiempo de diseño y tiempo de ejecución con la propiedad <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>.  
+- Reordenación de elementos en tiempo de diseño y tiempo de ejecución con la propiedad <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>.  
   
--   Reubicación de elementos a un menú de desbordamiento con la propiedad <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>.  
+- Reubicación de elementos a un menú de desbordamiento con la propiedad <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>.  
   
--   Ubicación de controles completamente configurable con `ToolStripContainer`, `ToolStripPanel` y `ToolStripContentPanel`.  
+- Ubicación de controles completamente configurable con `ToolStripContainer`, `ToolStripPanel` y `ToolStripContentPanel`.  
   
--   Hospedaje de `ToolStrip`, controles tradicionales o personalizados con `ToolStripControlHost`.  
+- Hospedaje de `ToolStrip`, controles tradicionales o personalizados con `ToolStripControlHost`.  
   
--   Combinación de controles `ToolStrip` con `ToolStripPanel`.  
+- Combinación de controles `ToolStrip` con `ToolStripPanel`.  
   
  `ToolStrip` es la clase base extensible de `MenuStrip`, `ContextMenuStrip` y `StatusStrip`. Estos controles son contenedores <xref:System.Windows.Forms.ToolStripItem> que heredan el control de eventos y el comportamiento común, extendidos para que cada implementación se ocupe del comportamiento que es adecuado para ella. Los controles que derivan de <xref:System.Windows.Forms.ToolStripItem> se muestran en la tabla siguiente. La clase base `ToolStrip` administra los eventos de pintura, entrada del usuario y arrastrar y colocar de estos controles.  
   
@@ -63,26 +63,26 @@ En este tema se resume la información sobre el control `ToolStrip` y las clases
 ### <a name="task-dialog-boxes"></a>Cuadros de diálogo de tareas  
  En Visual Studio, al hacer clic en la etiqueta inteligente de un control en el diseñador, se muestra una lista de tareas que permite acceder cómodamente a muchos comandos habituales.  
   
--   [Cuadro de diálogo de tareas de MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [Cuadro de diálogo de tareas de MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [Cuadro de diálogo de tareas de ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
+- [Cuadro de diálogo de tareas de ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [Cuadro de diálogo de tareas de ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
+- [Cuadro de diálogo de tareas de ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [Cuadro de diálogo de tareas de StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
+- [Cuadro de diálogo de tareas de StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [Cuadro de diálogo de tareas de ToolStripContainer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
+- [Cuadro de diálogo de tareas de ToolStripContainer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>Editores de colecciones de elementos  
  En Visual Studio, al hacer clic en **editar elementos** en la tarea de lista o haga clic en el control y seleccione **editar elementos** en el menú contextual, se muestra el editor de colecciones para el control. Los editores de colecciones le permiten agregar, quitar y reordenar los elementos que contiene el control. También puede ver y cambiar las propiedades del control y los elementos del control.  
   
--   [Editor de colección de elementos MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [Editor de colección de elementos MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [Editor de colección de elementos StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
+- [Editor de colección de elementos StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [Editor de colección de elementos ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
+- [Editor de colección de elementos ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [Editor de colección de elementos de ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
+- [Editor de colección de elementos de ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>Hospedaje de controles  
  La clase <xref:System.Windows.Forms.ToolStripControlHost> proporciona contenedores integrados para los controles <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox> y <xref:System.Windows.Forms.ToolStripProgressBar>. También puede hospedar cualquier otro control existente o COM en un <xref:System.Windows.Forms.ToolStripControlHost>.  

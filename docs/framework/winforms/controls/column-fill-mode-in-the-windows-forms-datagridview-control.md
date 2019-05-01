@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
 ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956291"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Modo de relleno de columnas en el control DataGridView de formularios Windows Forms
 En el modo de relleno de columna, el control <xref:System.Windows.Forms.DataGridView> cambia el tamaño de sus columnas automáticamente para que rellenen el ancho del área de visualización disponible. El control no muestra la barra de desplazamiento horizontal excepto cuando es necesario que el ancho de cada columna sea igual o mayor que su valor de propiedad <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
@@ -45,22 +45,22 @@ En el modo de relleno de columna, el control <xref:System.Windows.Forms.DataGrid
 ### <a name="comments"></a>Comentarios  
  Para usar esta aplicación de demostración:  
   
--   Cambie el tamaño del formulario. Observe cómo las columnas cambian el ancho conservando las proporciones indicadas por los valores de la propiedad <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
+- Cambie el tamaño del formulario. Observe cómo las columnas cambian el ancho conservando las proporciones indicadas por los valores de la propiedad <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
   
--   Cambie el tamaño de las columnas arrastrando los divisores de columna con el mouse. Observe cómo cambian los valores <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
+- Cambie el tamaño de las columnas arrastrando los divisores de columna con el mouse. Observe cómo cambian los valores <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
   
--   Cambie el valor <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> de una columna y, después, arrastre para cambiar el tamaño del formulario. Observe cómo, al reducir el formulario lo suficiente, los valores de <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> no son inferiores a los valores <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
+- Cambie el valor <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> de una columna y, después, arrastre para cambiar el tamaño del formulario. Observe cómo, al reducir el formulario lo suficiente, los valores de <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> no son inferiores a los valores <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
   
--   Cambie los valores <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> de todas las columnas por un número grande para que los valores combinados superen el ancho del control. Observe cómo aparece la barra de desplazamiento horizontal.  
+- Cambie los valores <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> de todas las columnas por un número grande para que los valores combinados superen el ancho del control. Observe cómo aparece la barra de desplazamiento horizontal.  
   
--   Cambie los valores <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> de algunas columnas. Observe el efecto cuando se cambia el tamaño de las columnas o del formulario.  
+- Cambie los valores <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> de algunas columnas. Observe el efecto cuando se cambia el tamaño de las columnas o del formulario.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
+- Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
   
--   Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
+- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

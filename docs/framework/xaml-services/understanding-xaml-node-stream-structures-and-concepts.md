@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954094"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Introducción a las estructuras y conceptos de secuencias de nodo XAML
 
@@ -45,13 +45,13 @@ Un bucle de nodo de lectura básico para examinar un flujo de nodo XAML se compo
 
 - En función del <xref:System.Xaml.XamlNodeType> que se notifique como nodo actual o registro actual, haga una de las siguientes llamadas para obtener información sobre el contenido del nodo:
 
-    - Para un <xref:System.Xaml.XamlXmlReader.NodeType%2A> de <xref:System.Xaml.XamlNodeType.StartMember> o <xref:System.Xaml.XamlNodeType.EndMember>, llame a <xref:System.Xaml.XamlXmlReader.Member%2A> para obtener información <xref:System.Xaml.XamlMember> sobre un miembro. Tenga en cuenta que el miembro puede ser una <xref:System.Xaml.XamlDirective>y, por lo tanto, no será necesariamente un miembro definido por tipo convencional del objeto anterior. Por ejemplo, `x:Name` aplicado a un objeto aparece como un miembro XAML donde <xref:System.Xaml.XamlMember.IsDirective%2A> es true y el <xref:System.Xaml.XamlMember.Name%2A> del miembro es `Name`, con otras propiedades que indican que esta directiva está bajo el espacio de nombres XAML del lenguaje XAML.
+  - Para un <xref:System.Xaml.XamlXmlReader.NodeType%2A> de <xref:System.Xaml.XamlNodeType.StartMember> o <xref:System.Xaml.XamlNodeType.EndMember>, llame a <xref:System.Xaml.XamlXmlReader.Member%2A> para obtener información <xref:System.Xaml.XamlMember> sobre un miembro. Tenga en cuenta que el miembro puede ser una <xref:System.Xaml.XamlDirective>y, por lo tanto, no será necesariamente un miembro definido por tipo convencional del objeto anterior. Por ejemplo, `x:Name` aplicado a un objeto aparece como un miembro XAML donde <xref:System.Xaml.XamlMember.IsDirective%2A> es true y el <xref:System.Xaml.XamlMember.Name%2A> del miembro es `Name`, con otras propiedades que indican que esta directiva está bajo el espacio de nombres XAML del lenguaje XAML.
 
-    - Para un <xref:System.Xaml.XamlXmlReader.NodeType%2A> de <xref:System.Xaml.XamlNodeType.StartObject> o <xref:System.Xaml.XamlNodeType.EndObject>, llame a <xref:System.Xaml.XamlXmlReader.Type%2A> para obtener información <xref:System.Xaml.XamlType> sobre un objeto.
+  - Para un <xref:System.Xaml.XamlXmlReader.NodeType%2A> de <xref:System.Xaml.XamlNodeType.StartObject> o <xref:System.Xaml.XamlNodeType.EndObject>, llame a <xref:System.Xaml.XamlXmlReader.Type%2A> para obtener información <xref:System.Xaml.XamlType> sobre un objeto.
 
-    - Para un <xref:System.Xaml.XamlXmlReader.NodeType%2A> de <xref:System.Xaml.XamlNodeType.Value>, llame a <xref:System.Xaml.XamlXmlReader.Value%2A>. Un nodo es un valor si es la expresión más simple de un valor para un miembro, o el texto de inicialización de un objeto (sin embargo, debe tener en cuenta el comportamiento de conversión de tipos, tal como se describe en una sección posterior de este tema).
+  - Para un <xref:System.Xaml.XamlXmlReader.NodeType%2A> de <xref:System.Xaml.XamlNodeType.Value>, llame a <xref:System.Xaml.XamlXmlReader.Value%2A>. Un nodo es un valor si es la expresión más simple de un valor para un miembro, o el texto de inicialización de un objeto (sin embargo, debe tener en cuenta el comportamiento de conversión de tipos, tal como se describe en una sección posterior de este tema).
 
-    - Para un <xref:System.Xaml.XamlXmlReader.NodeType%2A> de <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>, llame a <xref:System.Xaml.XamlXmlReader.Namespace%2A> para obtener información de espacio de nombres para un nodo de espacio de nombres.
+  - Para un <xref:System.Xaml.XamlXmlReader.NodeType%2A> de <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>, llame a <xref:System.Xaml.XamlXmlReader.Namespace%2A> para obtener información de espacio de nombres para un nodo de espacio de nombres.
 
 - Llame a <xref:System.Xaml.XamlXmlReader.Read%2A> para avanzar el lector XAML al nodo siguiente en el flujo de nodo XAML, y vuelva a repetir los pasos.
 
@@ -140,15 +140,15 @@ En el flujo de nodo XAML, puede confiar en el comportamiento siguiente:
 
 - Un nodo `Value` representa el propio valor; no hay ningún «EndValue». Solo puede ir seguido de un `EndMember`.
 
-    - El texto de inicialización de XAML del objeto, tal y como puede usarlo la construcción, no da como resultado una estructura Objeto-Valor. En su lugar, se crea un nodo de miembro dedicado para un miembro denominado `_Initialization` y ese nodo de miembro contiene la cadena de valor de inicialización. Si existe, `_Initialization` siempre es el primer `StartMember`. `_Initialization` se puede calificar en algunas representaciones de servicios XAML con el ámbito de nombres XAML del lenguaje XAML, para aclarar que `_Initialization` no es una propiedad definida en los tipos de respaldo.
+  - El texto de inicialización de XAML del objeto, tal y como puede usarlo la construcción, no da como resultado una estructura Objeto-Valor. En su lugar, se crea un nodo de miembro dedicado para un miembro denominado `_Initialization` y ese nodo de miembro contiene la cadena de valor de inicialización. Si existe, `_Initialization` siempre es el primer `StartMember`. `_Initialization` se puede calificar en algunas representaciones de servicios XAML con el ámbito de nombres XAML del lenguaje XAML, para aclarar que `_Initialization` no es una propiedad definida en los tipos de respaldo.
 
-    - Una combinación Miembro-Valor representa la configuración de atributo del valor. Finalmente podría haber un convertidor de valores implicado en el procesamiento de este valor, y el valor es una cadena sin formato. Sin embargo, esto no se evalúa hasta que un escritor de objetos XAML procesa este flujo de nodo. El escritor de objetos XAML posee el contexto de esquema XAML, la asignación del sistema de tipos y otras compatibilidades que son necesarios para las conversiones de valores.
+  - Una combinación Miembro-Valor representa la configuración de atributo del valor. Finalmente podría haber un convertidor de valores implicado en el procesamiento de este valor, y el valor es una cadena sin formato. Sin embargo, esto no se evalúa hasta que un escritor de objetos XAML procesa este flujo de nodo. El escritor de objetos XAML posee el contexto de esquema XAML, la asignación del sistema de tipos y otras compatibilidades que son necesarios para las conversiones de valores.
 
 - Un nodo `EndMember` puede ir seguido de un nodo `StartMember` para un miembro subsiguiente, o bien de un nodo `EndObject` para el propietario del miembro.
 
 - Un nodo `EndObject` puede ir seguido de un nodo `EndMember` . También puede ir seguido de un nodo `StartObject` para los casos en que los objetos sean del mismo nivel en los elementos de la colección. Asimismo, puede ir seguido de un nodo `Namespace` , que se aplica a un próximo `StartObject`.
 
-    - Para el caso único de cerrar el flujo de nodo completo, el `EndObject` de la raíz no va seguido de nada; el lector es ahora el final del archivo y <xref:System.Xaml.XamlReader.Read%2A> devuelve `false`.
+  - Para el caso único de cerrar el flujo de nodo completo, el `EndObject` de la raíz no va seguido de nada; el lector es ahora el final del archivo y <xref:System.Xaml.XamlReader.Read%2A> devuelve `false`.
 
 <a name="value_converters_and_the_xaml_node_stream"></a>
 

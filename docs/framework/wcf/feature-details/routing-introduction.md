@@ -3,11 +3,11 @@ title: Introducción al enrutamiento
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991099"
 ---
 # <a name="routing-introduction"></a>Introducción al enrutamiento
 El servicio de enrutamiento proporciona un intermediario de SOAP conectable genérico que es capaz de enrutar mensajes en función de su contenido. Con el servicio de enrutamiento, puede crear una lógica de enrutamiento compleja que le permita implementar escenarios como la agregación de servicios, el control de versiones del servicio, el enrutamiento de prioridad y el enrutamiento de multidifusión. El servicio de enrutamiento también proporciona un control de errores, que le permite preparar listas de puntos de conexión de reserva a los que se envían los mensajes si se produce un error al realizar un envío al punto de conexión de destino principal.  
@@ -156,9 +156,9 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
  Aunque muchas configuraciones del servicio de enrutamiento utilizan una lógica de filtros exclusiva que enruta los mensajes solo a un punto de conexión específico, puede que tenga que enrutar un mensaje determinado a varios puntos de conexión de destino. Para difundir un mensaje a varios destinos, deben cumplirse las siguientes condiciones:  
   
--   La forma del canal no puede ser de "solicitud-respuesta" (aunque sí unidireccional o dúplex), porque la aplicación cliente solo puede recibir una respuesta para cada solicitud.  
+- La forma del canal no puede ser de "solicitud-respuesta" (aunque sí unidireccional o dúplex), porque la aplicación cliente solo puede recibir una respuesta para cada solicitud.  
   
--   Varios filtros deben devolver `true` al evaluar el mensaje.  
+- Varios filtros deben devolver `true` al evaluar el mensaje.  
   
  Si se cumplen estas condiciones, el mensaje se enruta a todos los puntos de conexión de todos los filtros que se evalúan como `true`. En el ejemplo siguiente se define una configuración de enrutamiento que dé como resultado los mensajes se enruten a ambos puntos de conexión si la dirección del extremo en el mensaje es `http://localhost:8000/routingservice/router/rounding`.  
   
@@ -195,33 +195,33 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  **Procesamiento de solicitudes**  
   
--   Obtener el **MessageVersion** el enlace y del canal de salida.  
+- Obtener el **MessageVersion** el enlace y del canal de salida.  
   
--   Obtenga el lector del cuerpo del mensaje original.  
+- Obtenga el lector del cuerpo del mensaje original.  
   
--   Cree un nuevo mensaje con la misma acción, lector del cuerpo y un nuevo **MessageVersion**.  
+- Cree un nuevo mensaje con la misma acción, lector del cuerpo y un nuevo **MessageVersion**.  
   
--   Si <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, copie el To, From, FaultTo y RelatesTo encabezados en el nuevo mensaje.  
+- Si <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, copie el To, From, FaultTo y RelatesTo encabezados en el nuevo mensaje.  
   
--   Copie todas las propiedades del mensaje en el nuevo mensaje.  
+- Copie todas las propiedades del mensaje en el nuevo mensaje.  
   
--   Almacene el mensaje de solicitud original para utilizarlo al procesar la respuesta.  
+- Almacene el mensaje de solicitud original para utilizarlo al procesar la respuesta.  
   
--   Devuelva el nuevo mensaje de solicitud.  
+- Devuelva el nuevo mensaje de solicitud.  
   
  **Procesamiento de respuestas**  
   
--   Obtener el **MessageVersion** del mensaje de solicitud original.  
+- Obtener el **MessageVersion** del mensaje de solicitud original.  
   
--   Obtenga el lector del cuerpo del mensaje de respuesta recibido.  
+- Obtenga el lector del cuerpo del mensaje de respuesta recibido.  
   
--   Crear un nuevo mensaje de respuesta con la misma acción, el lector del cuerpo y el **MessageVersion** del mensaje de solicitud original.  
+- Crear un nuevo mensaje de respuesta con la misma acción, el lector del cuerpo y el **MessageVersion** del mensaje de solicitud original.  
   
--   Si <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, copie el To, From, FaultTo y RelatesTo encabezados en el nuevo mensaje.  
+- Si <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, copie el To, From, FaultTo y RelatesTo encabezados en el nuevo mensaje.  
   
--   Copie las propiedades del mensaje en el nuevo mensaje.  
+- Copie las propiedades del mensaje en el nuevo mensaje.  
   
--   Devuelva el nuevo mensaje de respuesta.  
+- Devuelva el nuevo mensaje de respuesta.  
   
  De forma predeterminada, el **SoapProcessingBehavior** se agrega automáticamente a los puntos de conexión de cliente mediante la <xref:System.ServiceModel.Routing.RoutingBehavior> cuando se inicia el servicio; sin embargo, puede controlar si el procesamiento de SOAP se agrega a todos los puntos de conexión de cliente mediante el <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> propiedad. También puede agregar el comportamiento directamente a un punto de conexión específico, y habilitar o deshabilitar este comportamiento en los puntos de conexión si se requiere un control de procesamiento de SOAP más granular.  
   

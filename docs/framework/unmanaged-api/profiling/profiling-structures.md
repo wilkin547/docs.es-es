@@ -9,11 +9,11 @@ ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 229218cb15963846da91f688b0d2faacb20031c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000446"
 ---
 # <a name="profiling-structures"></a>Estructuras para generación de perfiles
 En esta sección se describen las estructuras no administradas que utiliza la API de generación de perfiles.  

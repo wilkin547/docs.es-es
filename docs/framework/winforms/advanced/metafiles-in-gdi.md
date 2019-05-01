@@ -10,11 +10,11 @@ helpviewer_keywords:
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
 ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010041"
 ---
 # <a name="metafiles-in-gdi"></a>Metarchivos en GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona el <xref:System.Drawing.Imaging.Metafile> clase por lo que puede grabar y mostrar metarchivos. Un metarchivo, también denominado imagen vectorial, es una imagen que se almacena como una secuencia de comandos y valores de dibujo. Los comandos y valores que se registran en un <xref:System.Drawing.Imaging.Metafile> objeto se pueda almacenar en memoria o guardado en un archivo o secuencia.  
@@ -22,11 +22,11 @@ ms.locfileid: "59119865"
 ## <a name="metafile-formats"></a>Formatos de metarchivo  
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] puede mostrar metarchivos que se han almacenado en los siguientes formatos:  
   
--   Metarchivo de Windows (WMF)  
+- Metarchivo de Windows (WMF)  
   
--   Metarchivo mejorado (EMF)  
+- Metarchivo mejorado (EMF)  
   
--   EMF +  
+- EMF +  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] puede registrar metarchivos en los formatos EMF y EMF +, pero no en el formato WMF.  
   

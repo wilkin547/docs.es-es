@@ -12,11 +12,11 @@ ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b48dc67e18411d82f03d29ab244d57575d6d720
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050502"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Usar la Biblioteca de clases portable con Model-View-View Model
 Puede usar .NET Framework [biblioteca de clases Portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) para implementar el patrón Model-View-View Model (MVVM) y compartir los ensamblados en varias plataformas.
@@ -32,27 +32,27 @@ Puede usar .NET Framework [biblioteca de clases Portable](../../../docs/standard
 ## <a name="classes-that-support-mvvm"></a>Clases que admiten MVVM
  Cuando el destino es el [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight o Windows Phone 7.5 para su [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] proyecto, existen las siguientes clases para implementar el patrón MVVM:
 
--   Clase <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>
+- Clase <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>
 
--   Clase <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>
+- Clase <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>
 
--   Clase <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>
+- Clase <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>
 
--   Clase <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType>
+- Clase <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType>
 
--   Clase <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType>
+- Clase <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType>
 
--   Clase <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType>
+- Clase <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType>
 
--   Clase <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType>
+- Clase <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType>
 
--   Clase <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType>
+- Clase <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType>
 
--   Clase <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType>
+- Clase <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType>
 
--   Clase <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>
+- Clase <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>
 
--   Todas las clases en el <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> espacio de nombres
+- Todas las clases en el <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> espacio de nombres
 
 ## <a name="implementing-mvvm"></a>Implementar MVVM
  Para implementar MVVM, normalmente crea el modelo y el modelo de vista en un [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] proyecto, porque un [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] proyecto no puede hacer referencia a un proyecto no portable. El modelo y el modelo de vista pueden estar en el mismo proyecto o en proyectos independientes. Si utiliza proyectos independientes, agregue una referencia desde el proyecto de modelo de vista al proyecto de modelo.

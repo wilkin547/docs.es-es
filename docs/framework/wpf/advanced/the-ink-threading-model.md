@@ -14,22 +14,22 @@ helpviewer_keywords:
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
 ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007401"
 ---
 # <a name="the-ink-threading-model"></a>Modelo de subprocesamiento de entrada manuscrita
 Una de las ventajas de la tinta de Tablet PC es que asemeja mucho a escribir con un lápiz normal y el papel.  Para lograr esto, el lápiz de tablet PC recopila datos de entrada a una velocidad mucho mayor que un mouse y representa la entrada de lápiz mientras el usuario escribe.  Subproceso de interfaz (IU) de usuario de la aplicación no es suficiente para recopilar datos del lápiz y representar entrada manuscrita, porque puede quedarse bloqueado.  Para resolver esto, un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación usa dos subprocesos adicionales cuando un usuario escribe con el lápiz.  
   
  En la lista siguiente se describe los subprocesos que participan en la recopilación y representación de entrada de lápiz digital:  
   
--   Subproceso del lápiz - el subproceso que toma la entrada del lápiz óptico.  (En realidad, se trata de un grupo de subprocesos, pero en este tema hace referencia a él como un subproceso del lápiz.)  
+- Subproceso del lápiz - el subproceso que toma la entrada del lápiz óptico.  (En realidad, se trata de un grupo de subprocesos, pero en este tema hace referencia a él como un subproceso del lápiz.)  
   
--   Subproceso de interfaz de usuario de la aplicación: el subproceso que controla la interfaz de usuario de la aplicación.  
+- Subproceso de interfaz de usuario de la aplicación: el subproceso que controla la interfaz de usuario de la aplicación.  
   
--   Subproceso de representación dinámica: el subproceso que representa la entrada de lápiz mientras el usuario dibuja un trazo. El subproceso de representación dinámica es diferente del subproceso que representa otros elementos de interfaz de usuario para la aplicación, como se mencionó en Windows Presentation Foundation [modelo de subprocesos](threading-model.md).  
+- Subproceso de representación dinámica: el subproceso que representa la entrada de lápiz mientras el usuario dibuja un trazo. El subproceso de representación dinámica es diferente del subproceso que representa otros elementos de interfaz de usuario para la aplicación, como se mencionó en Windows Presentation Foundation [modelo de subprocesos](threading-model.md).  
   
  El modelo de entrada de lápiz es la misma si la aplicación usa el <xref:System.Windows.Controls.InkCanvas> o un control personalizado similar a la de [creación de un Control de entrada manuscrita](creating-an-ink-input-control.md).  Aunque en este tema se describe los subprocesos en términos de la <xref:System.Windows.Controls.InkCanvas>, los mismos conceptos se aplican cuando se crea un control personalizado.  
   
@@ -40,17 +40,17 @@ Una de las ventajas de la tinta de Tablet PC es que asemeja mucho a escribir con
   
 1. Acciones que se producen mientras el usuario dibuja el trazo  
   
-    1.  Cuando el usuario dibuja un trazo, los puntos del lápiz llegaran en el subproceso del lápiz.  Complementos del lápiz, incluido el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, acepte los puntos del lápiz en el subproceso del lápiz y tienen la oportunidad de modificarlos antes el <xref:System.Windows.Controls.InkCanvas> los recibe.  
+    1. Cuando el usuario dibuja un trazo, los puntos del lápiz llegaran en el subproceso del lápiz.  Complementos del lápiz, incluido el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, acepte los puntos del lápiz en el subproceso del lápiz y tienen la oportunidad de modificarlos antes el <xref:System.Windows.Controls.InkCanvas> los recibe.  
   
-    2.  El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> representa los puntos del lápiz en el subproceso de representación dinámica. Esto sucede al mismo tiempo que el paso anterior.  
+    2. El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> representa los puntos del lápiz en el subproceso de representación dinámica. Esto sucede al mismo tiempo que el paso anterior.  
   
-    3.  El <xref:System.Windows.Controls.InkCanvas> recibe los puntos del lápiz en el subproceso de interfaz de usuario.  
+    3. El <xref:System.Windows.Controls.InkCanvas> recibe los puntos del lápiz en el subproceso de interfaz de usuario.  
   
 2. Acciones que se produzcan después de que el usuario termina el trazo  
   
-    1.  Cuando el usuario termina de dibujar el trazo, el <xref:System.Windows.Controls.InkCanvas> crea un <xref:System.Windows.Ink.Stroke> objeto y lo agrega a la <xref:System.Windows.Controls.InkPresenter>, que representa de forma estática.  
+    1. Cuando el usuario termina de dibujar el trazo, el <xref:System.Windows.Controls.InkCanvas> crea un <xref:System.Windows.Ink.Stroke> objeto y lo agrega a la <xref:System.Windows.Controls.InkPresenter>, que representa de forma estática.  
   
-    2.  Las alertas de subproceso de interfaz de usuario la <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> que el trazo se representa de forma estática, por lo que el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> quita su representación visual del trazo.  
+    2. Las alertas de subproceso de interfaz de usuario la <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> que el trazo se representa de forma estática, por lo que el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> quita su representación visual del trazo.  
   
 ## <a name="ink-collection-and-stylus-plug-ins"></a>La recopilación de tinta y complementos de lápiz  
  Cada <xref:System.Windows.UIElement> tiene un <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  El <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objetos en el <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> reciben y pueden modificar los puntos del lápiz en el subproceso del lápiz. El <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objetos reciben los puntos del lápiz según el orden en el <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  
@@ -85,16 +85,16 @@ Una de las ventajas de la tinta de Tablet PC es que asemeja mucho a escribir con
   
 1. El usuario inicia el trazo.  
   
-    1.  El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> crea el árbol visual.  
+    1. El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> crea el árbol visual.  
   
 2. El usuario dibuja el trazo.  
   
-    1.  El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> compila el árbol visual.  
+    1. El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> compila el árbol visual.  
   
 3. El usuario termina el trazo.  
   
-    1.  El <xref:System.Windows.Controls.InkPresenter> el trazo se agrega a su árbol visual.  
+    1. El <xref:System.Windows.Controls.InkPresenter> el trazo se agrega a su árbol visual.  
   
-    2.  La capa de integración multimedia (MIL) representa los trazos estáticamente.  
+    2. La capa de integración multimedia (MIL) representa los trazos estáticamente.  
   
-    3.  El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> limpia los objetos visuales.
+    3. El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> limpia los objetos visuales.

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
 ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002084"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>Tutorial: Crear a un cliente de Windows Communication Foundation
 
@@ -47,7 +47,7 @@ En este tutorial aprenderá a:
 
 2. Agregue una referencia en el **GettingStartedClient** proyecto a la <xref:System.ServiceModel> ensamblado: 
 
-    1.  En el **el Explorador de soluciones** ventana, seleccione el **referencias** carpeta bajo la **GettingStartedClient** proyecto y, a continuación, seleccione **Agregar referencia** en el menú contextual. 
+    1. En el **el Explorador de soluciones** ventana, seleccione el **referencias** carpeta bajo la **GettingStartedClient** proyecto y, a continuación, seleccione **Agregar referencia** en el menú contextual. 
 
     2. En el **Agregar referencia** ventana, en **ensamblados** en el lado izquierdo de la ventana, seleccione **Framework**.
     

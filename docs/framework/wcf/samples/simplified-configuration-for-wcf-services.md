@@ -3,11 +3,11 @@ title: Configuración simplificada de los servicios de WCF
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
 ms.openlocfilehash: 47af8dcba35ba31f25597c946596b0cbcac93b4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007856"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Configuración simplificada de los servicios de WCF
 Este ejemplo muestra cómo implementar y configurar un servicio típico y el cliente con Windows Communication Foundation (WCF). Este ejemplo es la base para obtener todos los otros ejemplos tecnológicos básicos.  
@@ -63,11 +63,11 @@ Este ejemplo muestra cómo implementar y configurar un servicio típico y el cli
   
 3. Ejecute el ejemplo siguiendo estos pasos:  
   
-    1.  Haga clic en el **servicio** del proyecto y seleccione **establecer como proyecto de inicio**, a continuación, presione **CTRL+F5**.  
+    1. Haga clic en el **servicio** del proyecto y seleccione **establecer como proyecto de inicio**, a continuación, presione **CTRL+F5**.  
   
-    2.  Espere a que el resultado de la consola confirme que el servicio está activo y en ejecución.  
+    2. Espere a que el resultado de la consola confirme que el servicio está activo y en ejecución.  
   
-    3.  Haga clic en el **cliente** del proyecto y seleccione **establecer como proyecto de inicio**, a continuación, presione **CTRL+F5**.  
+    3. Haga clic en el **cliente** del proyecto y seleccione **establecer como proyecto de inicio**, a continuación, presione **CTRL+F5**.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

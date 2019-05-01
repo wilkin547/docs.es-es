@@ -3,11 +3,11 @@ title: Datos de gran tamaño y secuencias
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038615"
 ---
 # <a name="large-data-and-streaming"></a>Datos de gran tamaño y secuencias
 Windows Communication Foundation (WCF) es una infraestructura de comunicaciones basado en XML. Dado que los datos XML se codifican habitualmente en el formato de texto estándar definido en el [especificación XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838)conectados los arquitectos y desarrolladores de sistemas normalmente están preocupados por la superficie de la conexión (o tamaño) de los mensajes enviados a través de la red y la codificación basada en texto de XML plantea desafíos especiales para la transferencia eficaz de los datos binarios.  
@@ -48,11 +48,11 @@ Windows Communication Foundation (WCF) es una infraestructura de comunicaciones 
   
  El escenario más común en el que se producen estas transferencias de contenido de datos de gran tamaño son transferencias de objetos de datos binarios que:  
   
--   No se pueden dividir con facilidad en una secuencia del mensaje.  
+- No se pueden dividir con facilidad en una secuencia del mensaje.  
   
--   Se deben entregar de forma puntual.  
+- Se deben entregar de forma puntual.  
   
--   No están disponibles en su totalidad cuando se inicia la transferencia.  
+- No están disponibles en su totalidad cuando se inicia la transferencia.  
   
  Para los datos que no tienen estas restricciones, normalmente es mejor enviar secuencias de mensajes dentro del ámbito de una sesión que un mensaje de gran tamaño. Para obtener más información, consulte la sección "Transmisión de datos" más adelante en este tema.  
   
@@ -112,9 +112,9 @@ class MyData
   
  Al utilizar MTOM, el contrato de datos anterior se serializa según las reglas siguientes:  
   
--   Si `binaryBuffer` no es `null` y contiene individualmente bastantes datos para justificar la sobrecarga de externalización de MTOM (encabezados MIME, etc.) cuando se compara con codificación Base64, los datos se exteriorizan y se llevan con el mensaje como una parte binaria de MIME. Si no se supera el umbral, se codifican los datos como Base64.  
+- Si `binaryBuffer` no es `null` y contiene individualmente bastantes datos para justificar la sobrecarga de externalización de MTOM (encabezados MIME, etc.) cuando se compara con codificación Base64, los datos se exteriorizan y se llevan con el mensaje como una parte binaria de MIME. Si no se supera el umbral, se codifican los datos como Base64.  
   
--   La cadena (y todos los otros tipos no binarios) se representa siempre como una cadena dentro del cuerpo del mensaje, sin tener en cuenta el tamaño.  
+- La cadena (y todos los otros tipos no binarios) se representa siempre como una cadena dentro del cuerpo del mensaje, sin tener en cuenta el tamaño.  
   
  El efecto en la codificación MTOM es el mismo con independencia de si se usa un contrato de datos explícito, como se muestra en el ejemplo anterior, si se usa una lista de parámetros en una operación, si se tienen contratos de datos anidados o si se transfiere un objeto de contrato de datos dentro de una colección. Las matrices de bytes son siempre candidatas para la optimización y se optimizan si se cumplen los umbrales de optimización.  
   
@@ -129,21 +129,21 @@ class MyData
 ### <a name="restrictions"></a>Restricciones  
  No se puede usar un número significativo de características de WCF cuando se habilita la transmisión por secuencias:  
   
--   No se pueden utilizar firmas digitales para el cuerpo del mensaje porque requieren calcular un hash sobre el contenido completo del mensaje. Con transmisión por secuencias, el contenido no está totalmente disponible cuando los encabezados del mensaje se construyen y envían y, por consiguiente, no se puede calcular una firma digital.  
+- No se pueden utilizar firmas digitales para el cuerpo del mensaje porque requieren calcular un hash sobre el contenido completo del mensaje. Con transmisión por secuencias, el contenido no está totalmente disponible cuando los encabezados del mensaje se construyen y envían y, por consiguiente, no se puede calcular una firma digital.  
   
--   El cifrado depende de firmas digitales para comprobar que se han reconstruido los datos correctamente.  
+- El cifrado depende de firmas digitales para comprobar que se han reconstruido los datos correctamente.  
   
--   Las sesiones de confianza deben almacenar en búfer los mensajes enviados al cliente para entregarlos más tarde si se pierde un mensaje durante la transferencia y deben contener los mensajes en el servicio antes de entregarlos a la implementación del servicio para conservar el orden del mensaje en caso de que los mensajes se reciban fuera de secuencia.  
+- Las sesiones de confianza deben almacenar en búfer los mensajes enviados al cliente para entregarlos más tarde si se pierde un mensaje durante la transferencia y deben contener los mensajes en el servicio antes de entregarlos a la implementación del servicio para conservar el orden del mensaje en caso de que los mensajes se reciban fuera de secuencia.  
   
  Debido a estas restricciones funcionales, puede utilizar solo las opciones de seguridad de nivel de transporte para la transmisión por secuencias y no puede activar las sesiones de confianza. La transmisión por secuencias solo está disponible con los siguientes enlaces definidos por el sistema:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>  
+- <xref:System.ServiceModel.BasicHttpBinding>  
   
--   <xref:System.ServiceModel.NetTcpBinding>  
+- <xref:System.ServiceModel.NetTcpBinding>  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>  
+- <xref:System.ServiceModel.NetNamedPipeBinding>  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
  Dado que los transportes subyacentes de <xref:System.ServiceModel.NetTcpBinding> y <xref:System.ServiceModel.NetNamedPipeBinding> tienen una compatibilidad inherente con sesiones según la conexión y permiten una entrega confiable, a diferencia de HTTP, en la práctica estas restricciones afectan mínimamente a estos dos enlaces.  
   
@@ -160,11 +160,11 @@ class MyData
 ### <a name="enabling-streaming"></a>Habilitar la transmisión por secuencias  
  Puede habilitar la transmisión por secuencias de las siguientes maneras:  
   
--   Envíe y acepte las solicitudes en modo de transmisión y acepte y devuelva las respuestas en modo almacenado en búfer (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
+- Envíe y acepte las solicitudes en modo de transmisión y acepte y devuelva las respuestas en modo almacenado en búfer (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
   
--   Envíe y acepte las solicitudes en modo de almacenamiento en búfer y acepte y devuelva las respuestas en modo de transmisión (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
+- Envíe y acepte las solicitudes en modo de almacenamiento en búfer y acepte y devuelva las respuestas en modo de transmisión (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
   
--   Envíe y reciba solicitudes y respuestas en modo de transmisión en ambas direcciones. (<xref:System.ServiceModel.TransferMode.Streamed>).  
+- Envíe y reciba solicitudes y respuestas en modo de transmisión en ambas direcciones. (<xref:System.ServiceModel.TransferMode.Streamed>).  
   
  Puede deshabilitar la transmisión por secuencias estableciendo el modo de transferencia en <xref:System.ServiceModel.TransferMode.Buffered>, que es la configuración predeterminada en todos los enlaces. El código siguiente muestra cómo establecer el modo de transferencia en la configuración.  
   

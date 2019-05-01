@@ -1,20 +1,20 @@
 ---
-title: Cómo exponer un contrato a clientes web y de SOAP
+title: Procedimiento para exponer un contrato a clientes web y de SOAP
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
 ms.openlocfilehash: d82c5e3fc33528eadc3c404cca59a3dcf905e0e2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000927"
 ---
-# <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Cómo exponer un contrato a clientes web y de SOAP
+# <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Procedimiento para exponer un contrato a clientes web y de SOAP
 
-De forma predeterminada, Windows Communication Foundation (WCF) hace que los puntos de conexión que estén disponibles sólo para clientes SOAP. En [Cómo: crear un servicio de WCF Web HTTP básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), un punto de conexión está disponible para los clientes que no sea SOAP. Puede haber veces en las que desee poner el mismo contrato a disposición de ambos modos, como, por ejemplo, un punto de conexión web y un punto de conexión SOAP. En este tema se muestra un ejemplo sobre cómo hacerlo.
+De forma predeterminada, Windows Communication Foundation (WCF) hace que los puntos de conexión que estén disponibles sólo para clientes SOAP. En [Cómo: Crear un servicio de WCF Web HTTP básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), un punto de conexión está disponible para los clientes que no sea SOAP. Puede haber veces en las que desee poner el mismo contrato a disposición de ambos modos, como, por ejemplo, un punto de conexión web y un punto de conexión SOAP. En este tema se muestra un ejemplo sobre cómo hacerlo.
 
 ## <a name="to-define-the-service-contract"></a>Para definir el contrato de servicio
 
@@ -57,7 +57,7 @@ De forma predeterminada, Windows Communication Foundation (WCF) hace que los pun
 
 1. Abra Internet Explorer y escriba "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`" y presione ENTRAR. La dirección URL contiene la dirección base del servicio (`http://localhost:8000/`), la dirección relativa del punto de conexión (""), la operación de servicio para llamar ("EchoWithGet") y un signo de interrogación seguido de una lista de parámetros con nombre separados por una y comercial (&).
 
-## <a name="to-call-service-operations-on-the-web-endpoint-in-code"></a>Realización de llamadas a las operaciones de servicio en el punto de conexión web mediante código
+## <a name="to-call-service-operations-on-the-web-endpoint-in-code"></a>Realización de llamadas a las operaciones de servicio en el extremo web mediante código
 
 1. Cree una instancia de <xref:System.ServiceModel.Web.WebChannelFactory%601> dentro de un bloque `using`, tal y como se muestra en el código siguiente.
 

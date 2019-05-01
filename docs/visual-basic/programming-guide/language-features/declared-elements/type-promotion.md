@@ -11,11 +11,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
 ms.openlocfilehash: f7ac6bfb944da8bd50e035ba97b2b513176dc661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973308"
 ---
 # <a name="type-promotion-visual-basic"></a>Promoción de tipos (Visual Basic)
 Cuando se declara un elemento de programación en un módulo, Visual Basic promueve su ámbito al espacio de nombres que contiene el módulo. Esto se conoce como *promoción de tipos*.  
@@ -54,9 +54,9 @@ Cuando se declara un elemento de programación en un módulo, Visual Basic promu
 ## <a name="recommendations"></a>Recomendaciones  
  Las recomendaciones siguientes representan buena práctica de programación.  
   
--   **Nombres únicos.** Cuando tenga control total sobre la nomenclatura de elementos de programación, siempre es una buena idea usar nombres únicos en todas partes. Nombres idénticos requieran la calificación adicional y pueden hacer que el código sea más difícil de leer. También pueden conducir a errores sutiles y resultados imprevistos.  
+- **Nombres únicos.** Cuando tenga control total sobre la nomenclatura de elementos de programación, siempre es una buena idea usar nombres únicos en todas partes. Nombres idénticos requieran la calificación adicional y pueden hacer que el código sea más difícil de leer. También pueden conducir a errores sutiles y resultados imprevistos.  
   
--   **Usar el nombre completo.** Cuando se trabaja con módulos y otros elementos en el mismo espacio de nombres, el enfoque más seguro es utilizar siempre la calificación completa para todos los elementos de programación. Si la promoción de tipos se rechaza para un miembro del módulo y no calificar totalmente ese miembro, podría tener acceso a un elemento de programación diferentes sin darse cuenta.  
+- **Usar el nombre completo.** Cuando se trabaja con módulos y otros elementos en el mismo espacio de nombres, el enfoque más seguro es utilizar siempre la calificación completa para todos los elementos de programación. Si la promoción de tipos se rechaza para un miembro del módulo y no calificar totalmente ese miembro, podría tener acceso a un elemento de programación diferentes sin darse cuenta.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
 ms.openlocfilehash: 6ac878f24de594f8557ded8b0c3356217021b035
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971826"
 ---
 # <a name="xkey-directive"></a>x:Key (Directiva)
 Identifica los elementos que se crean y se hace referencia en un diccionario definido por XAML. Agregar un `x:Key` valor a un elemento de objeto XAML es la manera más común para identificar un recurso en un diccionario de recursos, por ejemplo, en un WPF <xref:System.Windows.ResourceDictionary>.  
@@ -61,9 +61,9 @@ Identifica los elementos que se crean y se hace referencia en un diccionario def
 ## <a name="wpf-usage-notes"></a>Notas de uso WPF  
  Objeto de objetos secundarios de un elemento primario que se una <xref:System.Collections.IDictionary> implementación, como WPF <xref:System.Windows.ResourceDictionary>, normalmente debe incluir un `x:Key` atributo y el valor de clave deben ser único dentro de ese diccionario. Existen dos excepciones notables:  
   
--   Algunos tipos WPF declaran una clave implícita para el uso del diccionario. Por ejemplo, un <xref:System.Windows.Style> con un <xref:System.Windows.Style.TargetType%2A>, o un <xref:System.Windows.DataTemplate> con un <xref:System.Windows.DataTemplate.DataType%2A>, puede estar en un <xref:System.Windows.ResourceDictionary> y usar la clave implícita.  
+- Algunos tipos WPF declaran una clave implícita para el uso del diccionario. Por ejemplo, un <xref:System.Windows.Style> con un <xref:System.Windows.Style.TargetType%2A>, o un <xref:System.Windows.DataTemplate> con un <xref:System.Windows.DataTemplate.DataType%2A>, puede estar en un <xref:System.Windows.ResourceDictionary> y usar la clave implícita.  
   
--   WPF admite un concepto de diccionario de recursos combinados. Las claves se pueden compartir entre diccionarios combinados y el comportamiento de la clave compartido se puede acceder mediante <xref:System.Windows.FrameworkContentElement.FindResource%2A>. Para más información, consulte [Merged Resource Dictionaries](../wpf/advanced/merged-resource-dictionaries.md) (Diccionarios de recursos combinados).  
+- WPF admite un concepto de diccionario de recursos combinados. Las claves se pueden compartir entre diccionarios combinados y el comportamiento de la clave compartido se puede acceder mediante <xref:System.Windows.FrameworkContentElement.FindResource%2A>. Para más información, consulte [Merged Resource Dictionaries](../wpf/advanced/merged-resource-dictionaries.md) (Diccionarios de recursos combinados).  
   
  WPF XAML a la aplicación modelo general, la unicidad de las claves no se comprueba el compilador de marcado XAML. En su lugar, falta o no únicos `x:Key` valores provocar errores del analizador de XAML en tiempo de carga. Sin embargo, un control Visual Studio de diccionarios para WPF puede anotar a menudo tales errores en la fase de diseño.  
   
@@ -101,11 +101,11 @@ keyObject
 |-|-|  
 |`keyObject`|Elemento de objeto para el objeto que se utiliza como clave para un determinado `object` en un diccionario especializado.|  
   
--   Contenedor/elemento primario de este tipo de uso no se muestra aquí. `object` se espera que un elemento secundario de un elemento de objeto que representa una implementación del diccionario especializado. `keyObject` se espera que sea una instancia de objeto (o un valor de un tipo de valor) adecuada como la clave para esa implementación del diccionario especializado particular.  
+- Contenedor/elemento primario de este tipo de uso no se muestra aquí. `object` se espera que un elemento secundario de un elemento de objeto que representa una implementación del diccionario especializado. `keyObject` se espera que sea una instancia de objeto (o un valor de un tipo de valor) adecuada como la clave para esa implementación del diccionario especializado particular.  
   
--   WPF no implementa diccionarios que requieren este uso. Las claves de objeto es más una característica general del lenguaje XAML, posiblemente útil para ciertos escenarios de diccionario personalizado donde es deseable crear el diccionario en XAML. Para las características de WPF como los estilos implícitos que utilizan las claves no son de cadena para los recursos, existen otras técnicas para establecer o especificar las claves, por lo que no es necesario utilizar una clave de objeto.  
+- WPF no implementa diccionarios que requieren este uso. Las claves de objeto es más una característica general del lenguaje XAML, posiblemente útil para ciertos escenarios de diccionario personalizado donde es deseable crear el diccionario en XAML. Para las características de WPF como los estilos implícitos que utilizan las claves no son de cadena para los recursos, existen otras técnicas para establecer o especificar las claves, por lo que no es necesario utilizar una clave de objeto.  
   
--   *keyObject* también podría ser el uso de una extensión de marcado en formulario de elemento de objeto, en lugar de una instancia de objeto directa.  
+- *keyObject* también podría ser el uso de una extensión de marcado en formulario de elemento de objeto, en lugar de una instancia de objeto directa.  
   
 ## <a name="silverlight-usage-notes"></a>Notas de uso de Silverlight  
  `x:Key` para Silverlight se documenta por separado. Para obtener más información, consulte [XAML Namespace (x:) Características del lenguaje (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TreeView control [Windows Forms]
 ms.assetid: 879438b4-4eac-45c6-b345-0229c9b21ab0
 ms.openlocfilehash: a479c288aaf3269c07ab02417226c8e78f5df59a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009255"
 ---
 # <a name="treeview-control-windows-forms"></a>TreeView (Control, formularios Windows Forms)
 El control `TreeView` de Windows Forms muestra una jerarquía de nodos, por ejemplo, la forma en que los archivos y las carpetas se muestran en el panel izquierdo de la característica Explorador de Windows en los sistemas operativos Windows.  

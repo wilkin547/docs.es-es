@@ -12,11 +12,11 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
 ms.openlocfilehash: 765befcf88247e4b2101b13c4937352ba4b070fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009154"
 ---
 # <a name="varieties-of-custom-controls"></a>Variedades de controles personalizados
 .NET Framework permite desarrollar e implementar nuevos controles. Puede extender la funcionalidad del control de usuario ya conocida, así como de los controles existentes, mediante la herencia. También puede escribir controles personalizados que realicen su propia representación.  
@@ -31,17 +31,17 @@ ms.locfileid: "59170713"
   
  La <xref:System.Windows.Forms.Control> clase realiza las tareas siguientes para proporcionar la presentación visual en aplicaciones de Windows Forms:  
   
--   Expone un identificador de ventana.  
+- Expone un identificador de ventana.  
   
--   Administra el enrutamiento de los mensajes.  
+- Administra el enrutamiento de los mensajes.  
   
--   Proporciona eventos de teclado y mouse, y muchos otros eventos de interfaz de usuario.  
+- Proporciona eventos de teclado y mouse, y muchos otros eventos de interfaz de usuario.  
   
--   Proporciona características de diseño avanzadas.  
+- Proporciona características de diseño avanzadas.  
   
--   Contiene muchas propiedades específicas de presentación visual, como <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, y <xref:System.Windows.Forms.Control.Width%2A>.  
+- Contiene muchas propiedades específicas de presentación visual, como <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, y <xref:System.Windows.Forms.Control.Width%2A>.  
   
--   Proporciona la seguridad y la compatibilidad para subprocesos necesarias para un control de Windows Forms que actúa como un control de Microsoft® ActiveX®.  
+- Proporciona la seguridad y la compatibilidad para subprocesos necesarias para un control de Windows Forms que actúa como un control de Microsoft® ActiveX®.  
   
  Dado que la clase base proporciona gran parte de la infraestructura, es relativamente fácil desarrollar sus propios controles de Windows Forms.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59170713"
   
  Herede de la clase <xref:System.Windows.Forms.UserControl> si:  
   
--   Quiere combinar la funcionalidad de varios controles de Windows Forms en una sola unidad reutilizable.  
+- Quiere combinar la funcionalidad de varios controles de Windows Forms en una sola unidad reutilizable.  
   
 ### <a name="extended-controls"></a>Controles extendidos  
  Puede derivar un control heredado de cualquier control de Windows Forms existente. Este enfoque permite conservar toda la funcionalidad inherente de un control de Windows Forms y, después, ampliarla agregando propiedades, métodos u otras características personalizadas. Con esta opción, puede invalidar la lógica de dibujo del control base y, a continuación, cambiar la apariencia de la interfaz de usuario para extenderla.  
@@ -74,9 +74,9 @@ ms.locfileid: "59170713"
   
  Herede de un control de Windows Forms si:  
   
--   La mayor parte de la funcionalidad que necesita es idéntica a la de un control de Windows Forms existente.  
+- La mayor parte de la funcionalidad que necesita es idéntica a la de un control de Windows Forms existente.  
   
--   No necesita una interfaz gráfica de usuario personalizada o quiere diseñar una nueva interfaz gráfica de usuario para un control existente.  
+- No necesita una interfaz gráfica de usuario personalizada o quiere diseñar una nueva interfaz gráfica de usuario para un control existente.  
   
 ### <a name="custom-controls"></a>Controles personalizados  
  Otra forma de crear un control consiste en crear uno prácticamente desde el principio heredando de <xref:System.Windows.Forms.Control>. La <xref:System.Windows.Forms.Control> clase proporciona toda la funcionalidad básica requerida por controles, incluidos los mouse y teclado de control de eventos, pero ninguna funcionalidad específica del control o la interfaz gráfica.  
@@ -91,9 +91,9 @@ ms.locfileid: "59170713"
   
  Herede de la clase <xref:System.Windows.Forms.Control> si:  
   
--   Quiere proporcionar una representación gráfica personalizada del control.  
+- Quiere proporcionar una representación gráfica personalizada del control.  
   
--   Necesita implementar funcionalidad personalizada que no está disponible en los controles estándar.  
+- Necesita implementar funcionalidad personalizada que no está disponible en los controles estándar.  
   
 ### <a name="activex-controls"></a>Controles ActiveX  
  Aunque la infraestructura de Windows Forms se han optimizado para hospedar controles de Windows Forms, todavía puede utilizar los controles ActiveX. Visual Studio es compatible con esta tarea. Para obtener más información, vea [Cómo: Agregar controles ActiveX a formularios Windows](how-to-add-activex-controls-to-windows-forms.md).  

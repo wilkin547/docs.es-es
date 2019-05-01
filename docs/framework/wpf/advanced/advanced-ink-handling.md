@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
 ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008946"
 ---
 # <a name="advanced-ink-handling"></a>Control avanzado de entrada manuscrita
 El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se suministra con el <xref:System.Windows.Controls.InkCanvas>, y es un elemento que se puede colocar en la aplicación para empezar inmediatamente a recopilar y mostrar entradas de lápiz. Sin embargo, si la <xref:System.Windows.Controls.InkCanvas> control no proporciona un nivel suficiente de control, puede mantener el control en un nivel superior mediante la personalización de su propia recopilación de entrada manuscrita y mediante las clases de representación de tinta <xref:System.Windows.Input.StylusPlugIns>.  

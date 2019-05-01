@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
 ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982454"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Esta matriz es fija o está bloqueada temporalmente (Visual Basic)
 Este error tiene las siguientes causas posibles:  
   
--   Uso de `ReDim` para cambiar el número de elementos de una matriz de tamaño fijo.  
+- Uso de `ReDim` para cambiar el número de elementos de una matriz de tamaño fijo.  
   
--   Cambiar el tamaño de una matriz dinámica de nivel de módulo, en el que se ha pasado un elemento como un argumento a un procedimiento. Si se pasa un elemento, la matriz está bloqueada para evitar la desasignación de memoria para el parámetro de referencia dentro del procedimiento.  
+- Cambiar el tamaño de una matriz dinámica de nivel de módulo, en el que se ha pasado un elemento como un argumento a un procedimiento. Si se pasa un elemento, la matriz está bloqueada para evitar la desasignación de memoria para el parámetro de referencia dentro del procedimiento.  
   
--   Al intentar asignar un valor a un `Variant` variable que contiene una matriz, pero la `Variant` está bloqueada actualmente.  
+- Al intentar asignar un valor a un `Variant` variable que contiene una matriz, pero la `Variant` está bloqueada actualmente.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   

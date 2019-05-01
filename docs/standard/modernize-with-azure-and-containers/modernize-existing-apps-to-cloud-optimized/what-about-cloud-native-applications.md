@@ -1,17 +1,17 @@
 ---
-title: ¿Qué sucede con las aplicaciones nativas de la nube?
+title: ¿Qué son las aplicaciones nativas para la nube?
 description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | ¿Qué sucede con las aplicaciones nativas de la nube?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012131"
 ---
-# <a name="what-about-cloud-native-applications"></a>¿Qué sucede con las aplicaciones nativas de la nube?
+# <a name="what-about-cloud-native-applications"></a>¿Qué son las aplicaciones nativas para la nube?
 
 Aunque [nativas de la nube](https://azure.microsoft.com/overview/cloudnative/) las aplicaciones no son el enfoque principal de esta guía, es útil para obtener una descripción de este nivel de madurez de modernización y para distinguirlas de las aplicaciones optimizadas para la nube.
 

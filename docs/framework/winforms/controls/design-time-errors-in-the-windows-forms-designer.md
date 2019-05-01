@@ -9,11 +9,11 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972359"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Errores en tiempo de diseño en el Diseñador de Windows Forms
 En este tema se explica el significado y el uso de la lista de errores en tiempo de diseño que aparece en Microsoft Visual Studio cuando no se puede cargar el Diseñador de Windows Forms. Si esta lista de errores aparece, no debe interpretarse como un error del diseñador, sino como una ayuda para corregir errores en el código.  
@@ -25,11 +25,11 @@ En este tema se explica el significado y el uso de la lista de errores en tiempo
   
  Puede expandir o contraer una categoría de error haciendo clic en el encabezado de la categoría de error o en el botón de contenido adicional de expandir o contraer. Al expandir una categoría de error, se muestra la ayuda adicional siguiente:  
   
--   Instancias del error.  
+- Instancias del error.  
   
--   Ayuda con el error.  
+- Ayuda con el error.  
   
--   Entradas del foro sobre el error.  
+- Entradas del foro sobre el error.  
   
 ### <a name="instances-of-this-error"></a>Instancias del error  
  La lista de ayuda adicional muestra todas las instancias del error en el proyecto actual. Muchos errores incluyen una ubicación exacta en el formato siguiente: *[nombre de proyecto]* *[nombre del formulario]* línea:*[número de línea]* columna:*[número de columna]*. El vínculo **Ir al código** le lleva a la ubicación del código donde se produce el error.  
@@ -45,9 +45,9 @@ En este tema se explica el significado y el uso de la lista de errores en tiempo
 ### <a name="forum-posts-about-this-error"></a>Entradas del foro sobre este error  
  La ayuda adicional incluirá un vínculo a los mensajes del foro de MSDN relacionados con el error. Los foros se buscan por la cadena del mensaje de error. También puede intentar buscar en los foros siguientes:  
   
--   [Foro Diseñador de Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203524)  
+- [Foro Diseñador de Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Foros de Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203523)  
+- [Foros de Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>Omitir y continuar  
  Puede omitir la condición de error y seguir cargando el diseñador. La elección de esta acción puede dar lugar a un comportamiento inesperado. Por ejemplo, puede que no aparezcan controles en la superficie de diseño.  

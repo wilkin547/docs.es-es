@@ -10,11 +10,11 @@ helpviewer_keywords:
 - regions
 ms.assetid: 52184f9b-16dd-4bbd-85be-029112644ceb
 ms.openlocfilehash: 33d4f4ecca7b9d777fa4eab5b6d031de10f03ccc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956807"
 ---
 # <a name="regions-in-gdi"></a>Regiones de GDI+
 Una región es una parte del área de visualización de un dispositivo de salida. Pueden ser regiones simples (un único rectángulo) o complejas (una combinación de polígonos y curvas cerradas). La siguiente ilustración muestra dos regiones: una construida a partir de un rectángulo y el otro construido a partir de una ruta de acceso.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020482"
 ---
 # <a name="drawing-objects-overview"></a>Información general sobre objetos Drawing
 Este tema se presentan <xref:System.Windows.Media.Drawing> objetos y se describe cómo se usan para dibujar con eficacia formas, mapas de bits, texto y multimedia. Usar <xref:System.Windows.Media.Drawing> objetos al crear imágenes prediseñadas, pintar con un <xref:System.Windows.Media.DrawingBrush>, o use <xref:System.Windows.Media.Visual> objetos.  
@@ -23,25 +23,25 @@ Este tema se presentan <xref:System.Windows.Media.Drawing> objetos y se describe
 ## <a name="what-is-a-drawing-object"></a>¿Qué es un objeto Drawing?  
  Un <xref:System.Windows.Media.Drawing> objeto describe contenido visible, como una forma, mapa de bits, vídeo o una línea de texto. Distintos tipos de dibujo describen tipos de contenido diferentes. La siguiente lista muestra los distintos tipos de objetos de dibujo.  
   
--   <xref:System.Windows.Media.GeometryDrawing> – Dibuja una forma.  
+- <xref:System.Windows.Media.GeometryDrawing> – Dibuja una forma.  
   
--   <xref:System.Windows.Media.ImageDrawing> – Dibuja una imagen.  
+- <xref:System.Windows.Media.ImageDrawing> – Dibuja una imagen.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – Dibuja texto.  
+- <xref:System.Windows.Media.GlyphRunDrawing> – Dibuja texto.  
   
--   <xref:System.Windows.Media.VideoDrawing> : Reproduce un archivo de audio o vídeo.  
+- <xref:System.Windows.Media.VideoDrawing> : Reproduce un archivo de audio o vídeo.  
   
--   <xref:System.Windows.Media.DrawingGroup> : Dibuja otros dibujos. Use un grupo de dibujo para combinar otros dibujos en un solo dibujo compuesto.  
+- <xref:System.Windows.Media.DrawingGroup> : Dibuja otros dibujos. Use un grupo de dibujo para combinar otros dibujos en un solo dibujo compuesto.  
   
  <xref:System.Windows.Media.Drawing> los objetos son versátiles; Hay muchas formas en que puede usar un <xref:System.Windows.Media.Drawing> objeto.  
   
--   Puede mostrar como una imagen mediante un <xref:System.Windows.Media.DrawingImage> y un <xref:System.Windows.Controls.Image> control.  
+- Puede mostrar como una imagen mediante un <xref:System.Windows.Media.DrawingImage> y un <xref:System.Windows.Controls.Image> control.  
   
--   Puede utilizarlo con un <xref:System.Windows.Media.DrawingBrush> para pintar un objeto, como el <xref:System.Windows.Controls.Page.Background%2A> de un <xref:System.Windows.Controls.Page>.  
+- Puede utilizarlo con un <xref:System.Windows.Media.DrawingBrush> para pintar un objeto, como el <xref:System.Windows.Controls.Page.Background%2A> de un <xref:System.Windows.Controls.Page>.  
   
--   Puede usar para describir la apariencia de un <xref:System.Windows.Media.DrawingVisual>.  
+- Puede usar para describir la apariencia de un <xref:System.Windows.Media.DrawingVisual>.  
   
--   Puede utilizar para enumerar el contenido de un <xref:System.Windows.Media.Visual>.  
+- Puede utilizar para enumerar el contenido de un <xref:System.Windows.Media.Visual>.  
   
  WPF ofrece otros tipos de objetos capaces de dibujar formas, mapas de bits, texto y elementos multimedia. Por ejemplo, también puede usar <xref:System.Windows.Shapes.Shape> objetos que se va a dibujar formas y el <xref:System.Windows.Controls.MediaElement> control proporciona otra manera de agregar vídeo a la aplicación. Así que ¿cuándo debe usar <xref:System.Windows.Media.Drawing> objetos? Cuando se pueden sacrificar características de marco para obtener ventajas de rendimiento o cuando necesite <xref:System.Windows.Freezable> características. Dado que <xref:System.Windows.Media.Drawing> objetos carecen de compatibilidad con [diseño](../advanced/layout.md), entrada ni foco, ofrecen ventajas de rendimiento que los hacen perfectos para describir fondos, imágenes prediseñadas y dibujos de bajo nivel con <xref:System.Windows.Media.Visual> objetos.  
   

@@ -8,11 +8,11 @@ ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c7969c0a3f5f828f1a1c0d4f33b82881130c6e15
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949258"
 ---
 # <a name="method-etw-events"></a>Eventos ETW de método
 
@@ -47,7 +47,7 @@ En la tabla siguiente se muestra la palabra clave y el nivel. (Para obtener más
 
 En la siguiente tabla se muestra la información del evento.
 
-|Evento|Id. de evento|Descripción|
+|evento|Id. de evento|Descripción|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|Se genera cuando un método se carga just-in-time (carga JIT) o se carga una imagen NGEN. Los métodos dinámicos y genéricos no usan esta versión para cargas de método. Los asistentes de JIT nunca usan esta versión.|
 |`MethodUnLoad_V1`|137|Se genera cuando se descarga un módulo o se destruye un dominio de aplicación. Los métodos dinámicos nunca usan esta versión para descargas de método.|
@@ -84,7 +84,7 @@ En la tabla siguiente se muestra la palabra clave y el nivel.
 
 En la siguiente tabla se muestra la información del evento.
 
-|Evento|Id. de evento|Descripción|
+|evento|Id. de evento|Descripción|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|Se envía antes del inicio de la enumeración durante un informe detallado de inicio.|
 |`DCStartComplete_V1`|145|Se envía al final de la enumeración durante un informe detallado de inicio.|
@@ -114,7 +114,7 @@ En la tabla siguiente se muestra la palabra clave y el nivel.
 
 En la siguiente tabla se muestra la información del evento.
 
-|Evento|Id. de evento|Descripción|
+|evento|Id. de evento|Descripción|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|Se genera cuando la carga de un método es JIT o se carga una imagen NGEN. Los métodos dinámicos y genéricos siempre usan esta versión para cargas de método. Los asistentes de JIT siempre usan esta versión.|
 |`MethodUnLoadVerbose_V1`|144|Se genera cuando se destruye un método dinámico, se descarga un módulo o se destruye un dominio de aplicación. Los métodos dinámicos siempre usan esta versión para descargas de método.|
@@ -153,7 +153,7 @@ En la tabla siguiente se muestra la palabra clave y el nivel.
 
 En la siguiente tabla se muestra la información del evento.
 
-|Evento|Id. de evento|Descripción|
+|evento|Id. de evento|Descripción|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|Se genera cuando se está realizando la compilación JIT de un método.|
 

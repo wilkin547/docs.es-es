@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
 ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953977"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Contextos de servicio disponibles para los convertidores de tipos y las extensiones de marcado
 Los autores de los tipos que admiten los usos de la extensión de marcado y el convertidor de tipos deben tener a menudo la información contextual sobre dónde se encuentra un uso en el marcado o en la estructura gráfica del objeto adyacente. Puede ser necesaria cierta información para que se cree una instancia correcta del objeto proporcionado o para que puedan crearse referencias a objetos existentes del gráfico del objeto. Al usar los servicios XAML de .NET Framework, el contexto que puede ser necesario se expone como una serie de interfaces de servicio. El código de soporte de la extensión de marcado o el convertidor de tipos puede consultar un servicio usando un contexto de proveedor de servicio que esté disponible y se haya pasado desde <xref:System.Xaml.XamlObjectWriter> o tipos relacionados. El contexto de esquema XAML está disponible directamente con uno de estos servicios. En este tema se describe cómo acceder a los contextos de servicio desde una implementación de convertidor de valor y se enumeran los servicios normalmente disponibles y sus funciones.  
