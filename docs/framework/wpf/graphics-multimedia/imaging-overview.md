@@ -22,11 +22,11 @@ helpviewer_keywords:
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
 ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053449"
 ---
 # <a name="imaging-overview"></a>Información general sobre imágenes
 En este tema se proporciona una introducción a [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] permite a los desarrolladores mostrar, transformar y dar formato a imágenes.  
@@ -37,19 +37,19 @@ En este tema se proporciona una introducción a [!INCLUDE[TLA#tla_wic](../../../
   
  Existen dos formas de obtener acceso a [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], un componente administrado y un componente no administrado. El componente no administrado proporciona las siguientes características.  
   
--   Modelo de extensibilidad para formatos de imagen nuevos o de propiedad.  
+- Modelo de extensibilidad para formatos de imagen nuevos o de propiedad.  
   
--   Rendimiento y seguridad mejorados en formatos de imagen nativos, entre los que se incluyen [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)], [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)], [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] y formato de icono (.ico).  
+- Rendimiento y seguridad mejorados en formatos de imagen nativos, entre los que se incluyen [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)], [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)], [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] y formato de icono (.ico).  
   
--   Conservación de datos de imagen de alta profundidad de bits de hasta 8 bits por canal (32 bits por píxel).  
+- Conservación de datos de imagen de alta profundidad de bits de hasta 8 bits por canal (32 bits por píxel).  
   
--   Escalado, recorte y giros de imágenes no destructivos.  
+- Escalado, recorte y giros de imágenes no destructivos.  
   
--   Administración del color simplificada.  
+- Administración del color simplificada.  
   
--   Compatibilidad con metadatos de propiedad integrados.  
+- Compatibilidad con metadatos de propiedad integrados.  
   
--   El componente administrado usa la infraestructura no administrada para proporcionar una integración de imágenes perfecta con otras características de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], tales como [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animación y gráficos. El componente administrado también se beneficia de la Windows Presentation Foundation (WPF) creación de imágenes códec modelo de extensibilidad que habilita el reconocimiento automático de nuevos formatos de imagen en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones.  
+- El componente administrado usa la infraestructura no administrada para proporcionar una integración de imágenes perfecta con otras características de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], tales como [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animación y gráficos. El componente administrado también se beneficia de la Windows Presentation Foundation (WPF) creación de imágenes códec modelo de extensibilidad que habilita el reconocimiento automático de nuevos formatos de imagen en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones.  
   
  La mayoría de los recursos administrados [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] residen en el <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> espacio de nombres, aunque importante varios tipos, como <xref:System.Windows.Media.ImageBrush> y <xref:System.Windows.Media.ImageDrawing> residen en el <xref:System.Windows.Media?displayProperty=nameWithType> espacio de nombres y <xref:System.Windows.Controls.Image> reside en el <xref:System.Windows.Controls?displayProperty=nameWithType> espacio de nombres.  
   
@@ -132,13 +132,13 @@ En este tema se proporciona una introducción a [!INCLUDE[TLA#tla_wic](../../../
 #### <a name="stretching-images"></a>Ajustar imágenes  
  El <xref:System.Windows.Controls.Image.Stretch%2A> propiedad controla cómo se ajusta una imagen para rellenar su contenedor. El <xref:System.Windows.Controls.Image.Stretch%2A> propiedad acepta los valores siguientes, definidos por el <xref:System.Windows.Media.Stretch> enumeración:  
   
--   <xref:System.Windows.Media.Stretch.None>: La imagen no se ajusta para rellenar el área de salida. Si la imagen es más grande que el área de salida, esta se dibujará en dicha área, recortando lo que no se ajuste.  
+- <xref:System.Windows.Media.Stretch.None>: La imagen no se ajusta para rellenar el área de salida. Si la imagen es más grande que el área de salida, esta se dibujará en dicha área, recortando lo que no se ajuste.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: La imagen se escala para ajustarse al área de salida. Como el alto y el ancho de las imágenes se escalan de forma independiente, podría no conservarse la relación de aspecto original de la imagen. En otras palabras, la imagen podría distorsionarse para rellenar por completo el contenedor de salida.  
+- <xref:System.Windows.Media.Stretch.Fill>: La imagen se escala para ajustarse al área de salida. Como el alto y el ancho de las imágenes se escalan de forma independiente, podría no conservarse la relación de aspecto original de la imagen. En otras palabras, la imagen podría distorsionarse para rellenar por completo el contenedor de salida.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: La imagen se escala para que quepa completamente dentro del área de salida. Se conserva la relación de aspecto de la imagen.  
+- <xref:System.Windows.Media.Stretch.Uniform>: La imagen se escala para que quepa completamente dentro del área de salida. Se conserva la relación de aspecto de la imagen.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: La imagen se escala para que rellene completamente el área de salida conservando la relación de aspecto original de la imagen.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: La imagen se escala para que rellene completamente el área de salida conservando la relación de aspecto original de la imagen.  
   
  El ejemplo siguiente aplica a cada uno de los disponibles <xref:System.Windows.Media.Stretch> enumeraciones que permiten una <xref:System.Windows.Controls.Image>.  
   

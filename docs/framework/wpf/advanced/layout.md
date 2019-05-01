@@ -10,30 +10,30 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054364"
 ---
 # <a name="layout"></a>Diseño
 En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Comprender cómo y cuándo se producen los cálculos de diseño es esencial para crear interfaces de usuario en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Este tema contiene las siguientes secciones:  
   
--   [Rectángulos de selección de elementos](#LayoutSystem_BoundingBox)  
+- [Rectángulos de selección de elementos](#LayoutSystem_BoundingBox)  
   
--   [El sistema de diseño](#LayoutSystem_Overview)  
+- [El sistema de diseño](#LayoutSystem_Overview)  
   
--   [Medición y organización de elementos secundarios](#LayoutSystem_Measure_Arrange)  
+- [Medición y organización de elementos secundarios](#LayoutSystem_Measure_Arrange)  
   
--   [Elementos de panel y comportamientos de diseño personalizados](#LayoutSystem_PanelsCustom)  
+- [Elementos de panel y comportamientos de diseño personalizados](#LayoutSystem_PanelsCustom)  
   
--   [Consideraciones del rendimiento del diseño](#LayoutSystem_Performance)  
+- [Consideraciones del rendimiento del diseño](#LayoutSystem_Performance)  
   
--   [Representación de subpíxeles y redondeo del diseño](#LayoutSystem_LayoutRounding)  
+- [Representación de subpíxeles y redondeo del diseño](#LayoutSystem_LayoutRounding)  
   
--   [Pasos adicionales](#LayoutSystem_whatsnext)  
+- [Pasos adicionales](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Rectángulos de selección de elementos  
@@ -120,19 +120,19 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
 ## <a name="layout-performance-considerations"></a>Consideraciones del rendimiento del diseño  
  El diseño es un proceso recursivo. Cada elemento secundario de un <xref:System.Windows.Controls.Panel.Children%2A> colección se procesa durante cada invocación del sistema de diseño. Como resultado, se debería evitar desencadenar el sistema de diseño cuando no sea necesario. Las consideraciones siguientes pueden ayudarle a lograr un mejor rendimiento.  
   
--   Tenga en cuenta qué cambios de valor de propiedad forzarán una actualización recursiva por parte del sistema de diseño.  
+- Tenga en cuenta qué cambios de valor de propiedad forzarán una actualización recursiva por parte del sistema de diseño.  
   
      Las propiedades de dependencia cuyos valores pueden provocar la inicialización del sistema de diseño se marcan con marcas públicas. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> y <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> proporcionan pistas útiles en cuanto a la propiedad que cambia el valor de forzará una recursiva actualización el sistema de diseño. En general, cualquier propiedad que puede afectar al tamaño del rectángulo de selección de un elemento debe tener un <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> marca establecida en true. Para obtener más información sobre las propiedades de dependencia, vea [Información general sobre las propiedades de dependencia](dependency-properties-overview.md).  
   
--   Cuando sea posible, use un <xref:System.Windows.UIElement.RenderTransform%2A> en lugar de un <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
+- Cuando sea posible, use un <xref:System.Windows.UIElement.RenderTransform%2A> en lugar de un <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
      Un <xref:System.Windows.FrameworkElement.LayoutTransform%2A> puede ser una forma muy útil para influir en el contenido de un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Sin embargo, si no tiene el efecto de la transformación de afectar a la posición de otros elementos, es mejor usar un <xref:System.Windows.UIElement.RenderTransform%2A> en su lugar, porque <xref:System.Windows.UIElement.RenderTransform%2A> no invoca el sistema de diseño. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> se aplica su transformación y fuerza una actualización recursiva del diseño para tener en cuenta la nueva posición del elemento afectado.  
   
--   Evitar llamadas innecesarias al <xref:System.Windows.UIElement.UpdateLayout%2A>.  
+- Evitar llamadas innecesarias al <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   
      El <xref:System.Windows.UIElement.UpdateLayout%2A> método fuerza una actualización recursiva del diseño y con frecuencia no es necesario. A menos que esté seguro de que se requiere una actualización completa, confíe en el sistema de diseño para que llame a este método.  
   
--   Cuando se trabaja con un gran <xref:System.Windows.Controls.Panel.Children%2A> colección, considere el uso de un <xref:System.Windows.Controls.VirtualizingStackPanel> en lugar de normal <xref:System.Windows.Controls.StackPanel>.  
+- Cuando se trabaja con un gran <xref:System.Windows.Controls.Panel.Children%2A> colección, considere el uso de un <xref:System.Windows.Controls.VirtualizingStackPanel> en lugar de normal <xref:System.Windows.Controls.StackPanel>.  
   
      Al virtualizar la colección secundaria, la <xref:System.Windows.Controls.VirtualizingStackPanel> solo mantiene los objetos en memoria que están actualmente en la ventanilla del elemento primario. Como resultado, el rendimiento se mejora sustancialmente en la mayoría de escenarios.  
   

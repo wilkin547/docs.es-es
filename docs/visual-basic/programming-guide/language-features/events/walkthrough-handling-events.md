@@ -10,11 +10,11 @@ helpviewer_keywords:
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
 ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053800"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Tutorial: Control de eventos (Visual Basic)
 Éste es el segundo de dos temas que muestran cómo trabajar con eventos. El primer tema, [Tutorial: Declarar y provocar eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), se muestra cómo declarar y provocar eventos. En esta sección se usa el formulario y la clase del tutorial para mostrar cómo controlar eventos cuando tienen lugar.  
@@ -76,7 +76,7 @@ ms.locfileid: "59308567"
   
 #### <a name="to-call-the-longtask-method"></a>Para llamar al método LongTask  
   
--   Agregue el código siguiente al controlador de eventos `Button1_Click` :  
+- Agregue el código siguiente al controlador de eventos `Button1_Click` :  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
@@ -105,7 +105,7 @@ ms.locfileid: "59308567"
   
 #### <a name="to-handle-events-for-a-different-widget"></a>Para controlar los eventos para un widget distinto  
   
--   Agregue la siguiente línea de código para el `Button1_Click` procedimiento, inmediatamente antes de la línea que dice `mWidget.LongTask(12.2, 0.33)`:  
+- Agregue la siguiente línea de código para el `Button1_Click` procedimiento, inmediatamente antes de la línea que dice `mWidget.LongTask(12.2, 0.33)`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#9)]  
   

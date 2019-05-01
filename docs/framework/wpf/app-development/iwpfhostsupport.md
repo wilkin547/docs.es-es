@@ -5,11 +5,11 @@ helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
 ms.openlocfilehash: 074167111b78edc517dda019465260d0acd54737
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006699"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 Las aplicaciones que hospedan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contenido a través de PresentationHost.exe implementan esta interfaz para proporcionar un punto de integración entre el host y PresentationHost.exe.  
@@ -19,11 +19,11 @@ Las aplicaciones que hospedan [!INCLUDE[TLA#tla_winclient](../../../../includes/
   
  La integración habilitada de forma `IWpfHostSupport` permite que PresentationHost.exe:  
   
--   Detectar y registrar con los dispositivos de entrada sin formato (dispositivos de interfaz humana) que está interesada la aplicación host.  
+- Detectar y registrar con los dispositivos de entrada sin formato (dispositivos de interfaz humana) que está interesada la aplicación host.  
   
--   Recibir mensajes de entrada de los dispositivos registrados de entrada sin procesar y reenviar los mensajes adecuados a la aplicación host.  
+- Recibir mensajes de entrada de los dispositivos registrados de entrada sin procesar y reenviar los mensajes adecuados a la aplicación host.  
   
--   Consultar la aplicación host para interfaces de usuario personalizadas de progreso y error.  
+- Consultar la aplicación host para interfaces de usuario personalizadas de progreso y error.  
   
 > [!NOTE]
 >  Esta API solo está destinada y es compatible con el equipo cliente local  

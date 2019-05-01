@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037926"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Recuperación de datos y operaciones CUD en aplicaciones de n niveles (LINQ to SQL)
 Al serializar objetos entidad, como Clientes o Pedidos, con destino a un cliente a través de una red, esas entidades se desasocian de su contexto de datos. El contexto de datos ya no realiza un seguimiento de sus cambios o sus asociaciones con otros objetos. Esto no constituye un problema mientras los clientes solo estén leyendo los datos. También es relativamente sencillo permitir a los clientes agregar nuevas filas a una base de datos. Sin embargo, si su aplicación requiere que los clientes pueden actualizar o eliminar datos, deberá asociar las entidades a un nuevo contexto de datos antes de llamar a <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Además, si está utilizando una comprobación de simultaneidad optimista con valores originales, también necesitará un medio para proporcionar a la base de datos la entidad original y la entidad modificada. Los métodos `Attach` se utilizan para colocar las entidades en un nuevo contexto de datos después de haber sido desasociadas.  
@@ -85,9 +85,9 @@ private void GetProdsByCat_Click(object sender, EventArgs e)
 ### <a name="middle-tier-implementation"></a>Implementación del nivel intermedio  
  El ejemplo siguiente muestra una implementación del método de interfaz en el nivel intermedio. Deberá tener en cuenta los dos puntos principales siguientes:  
   
--   El objeto <xref:System.Data.Linq.DataContext> se declara en el ámbito del método.  
+- El objeto <xref:System.Data.Linq.DataContext> se declara en el ámbito del método.  
   
--   El método devuelve una colección <xref:System.Collections.IEnumerable> de los resultados reales. El serializador ejecutará la consulta para devolver los resultados al nivel de presentación o cliente. Para obtener acceso localmente a los resultados de la consulta en el nivel intermedio, puede forzar la ejecución llamando a `ToList` o `ToArray` para la variable de consulta. A continuación, puede devolver esa lista o matriz como un `IEnumerable`.  
+- El método devuelve una colección <xref:System.Collections.IEnumerable> de los resultados reales. El serializador ejecutará la consulta para devolver los resultados al nivel de presentación o cliente. Para obtener acceso localmente a los resultados de la consulta en el nivel intermedio, puede forzar la ejecución llamando a `ToList` o `ToArray` para la variable de consulta. A continuación, puede devolver esa lista o matriz como un `IEnumerable`.  
   
 ```vb  
 Public Function GetProductsByCategory(ByVal categoryID As Integer) _  
@@ -210,11 +210,11 @@ public void DeleteOrder(Order order)
 ## <a name="updating-data"></a>Actualizar datos  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite actualizaciones en estos escenarios que presentan simultaneidad optimista:  
   
--   Simultaneidad optimista basada en marcas de tiempo o números RowVersion.  
+- Simultaneidad optimista basada en marcas de tiempo o números RowVersion.  
   
--   Simultaneidad optimista basada en valores originales de un subconjunto de propiedades de entidad.  
+- Simultaneidad optimista basada en valores originales de un subconjunto de propiedades de entidad.  
   
--   Simultaneidad optimista basada en las entidades completas originales y modificadas.  
+- Simultaneidad optimista basada en las entidades completas originales y modificadas.  
   
  Puede también realizar actualizaciones o eliminaciones conjuntas sobre una entidad y sus relaciones; por ejemplo, un Cliente y una colección de sus objetos Pedido asociados. Cuando realiza modificaciones sobre el cliente en un grafo de objetos entidad y sus colecciones (`EntitySet`) secundarias, y las comprobaciones de simultaneidad optimista requieren valores originales, el cliente debe proporcionar esos valores originales para cada entidad y cada objeto <xref:System.Data.Linq.EntitySet%601>. Si desea permitir a los clientes realizar, en una única llamada al método, un conjunto de actualizaciones, eliminaciones e inserciones relacionadas, deberá proporcionar al cliente una manera de indicar qué tipo de operación va a realizar sobre cada entidad. En el nivel intermedio, deberá llamar al método <xref:System.Data.Linq.ITable.Attach%2A> apropiado y, a continuación, a <xref:System.Data.Linq.ITable.InsertOnSubmit%2A>, <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A> o <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> (sin `Attach`, para las inserciones) para cada entidad antes de llamar a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. No recupere datos de la base de datos como una manera de obtener valores originales antes de probar las actualizaciones.  
   
@@ -379,11 +379,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="expected-entity-members"></a>Miembros de entidad esperados  
  Como ya se ha dicho anteriormente, solo es necesario establecer ciertos miembros del objeto entidad antes de llamar a los métodos `Attach`. Los miembros de entidad que es necesario establecer deben cumplir los siguientes criterios:  
   
--   Formar parte de la identidad de la entidad.  
+- Formar parte de la identidad de la entidad.  
   
--   Se debe esperar que sean modificados.  
+- Se debe esperar que sean modificados.  
   
--   Ser una marca de tiempo o tener su atributo <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> establecido en un valor distinto de `Never`.  
+- Ser una marca de tiempo o tener su atributo <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> establecido en un valor distinto de `Never`.  
   
  Si una tabla utiliza una marca de tiempo o un número de versión para una comprobación de simultaneidad optimista, se deberán establecer esos miembros antes de llamar a <xref:System.Data.Linq.ITable.Attach%2A>. Un miembro está designado para la comprobación de simultaneidad optimista cuando la propiedad <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> está establecida como verdadera (true) para ese atributo de columna. Cualquier actualización solicitada solo se enviará si los valores de número de versión o marca de tiempo son los mismos en la base de datos.  
   

@@ -3,11 +3,11 @@ title: Comportamiento de depuración de servicio
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
 ms.openlocfilehash: bfed164093e10c070b24832cf5a3be362ad3bc56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007921"
 ---
 # <a name="service-debug-behavior"></a>Comportamiento de depuración de servicio
 Este ejemplo muestra cómo se pueden configurar los valores del comportamiento de servicio de depuración. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa el `ICalculator` contrato de servicio. Este ejemplo define explícitamente el comportamiento de depuración de servicio en el archivo de configuración. También se puede hacer de forma imperiosa en el código.  
@@ -33,12 +33,12 @@ Este ejemplo muestra cómo se pueden configurar los valores del comportamiento d
   
  [\<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) es el elemento de configuración que permite cambiar las propiedades del comportamiento de depuración de servicio. El usuario puede modificar este comportamiento para lograr lo siguiente:  
   
--   Permite al servicio devolver cualquier excepción producida por el código de aplicación aun cuando la excepción no se declare mediante <xref:System.ServiceModel.FaultContractAttribute>. Se ha hecho configurando `includeExceptionDetailInFaults` como `true`. Este valor es útil al depurar los casos donde el servidor produce una excepción inesperada.  
+- Permite al servicio devolver cualquier excepción producida por el código de aplicación aun cuando la excepción no se declare mediante <xref:System.ServiceModel.FaultContractAttribute>. Se ha hecho configurando `includeExceptionDetailInFaults` como `true`. Este valor es útil al depurar los casos donde el servidor produce una excepción inesperada.  
   
     > [!IMPORTANT]
     >  No es seguro para activar este valor en un entorno de producción. Una excepción de servidor inesperada puede tener alguna información que no se piensa para el cliente y establecer así `includeExceptionDetailsInFaults` como `true` podría producir pérdida de la información.  
   
--   El [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) también permite que un usuario habilitar o deshabilitar la página de ayuda. Cada servicio puede exponer opcionalmente una página de ayuda que contiene información sobre el servicio que incluye el extremo para obtener WSDL para el servicio. Esto puede estar habilitado estableciendo `httpHelpPageEnabled` como `true`. Esto permite devolver la página de ayuda a una solicitud GET en la dirección base del servicio. Puede cambiar esta dirección estableciendo otro atributo `httpHelpPageUrl`. Puede realizarlo de manera segura utilizando HTTPS en lugar de HTTP. Esto se puede hacer estableciendo `httpsHelpPageEnabled` y `httpsHelpPageUrl`.  
+- El [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) también permite que un usuario habilitar o deshabilitar la página de ayuda. Cada servicio puede exponer opcionalmente una página de ayuda que contiene información sobre el servicio que incluye el extremo para obtener WSDL para el servicio. Esto puede estar habilitado estableciendo `httpHelpPageEnabled` como `true`. Esto permite devolver la página de ayuda a una solicitud GET en la dirección base del servicio. Puede cambiar esta dirección estableciendo otro atributo `httpHelpPageUrl`. Puede realizarlo de manera segura utilizando HTTPS en lugar de HTTP. Esto se puede hacer estableciendo `httpsHelpPageEnabled` y `httpsHelpPageUrl`.  
   
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Las primeras tres operaciones (Sumar, Restar y Multiplicar) deben ejecutarse exitosamente. Los últimos errores de la operación ("dividir") con una excepción de división entre cero.  
   

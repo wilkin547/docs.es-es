@@ -3,11 +3,11 @@ title: Procedimiento Leer y escribir un documento codificado (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
 ms.openlocfilehash: 7d558b8dea5f376b6ad77e2f4ac93a3f4663cbff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008881"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>Procedimiento Leer y escribir un documento codificado (Visual Basic)
 Para crear un documento XML codificado, se agrega un <xref:System.Xml.Linq.XDeclaration> al árbol XML, estableciendo la codificación en el nombre de página de códigos deseado.  

@@ -3,11 +3,11 @@ title: conjunto de asociaciones
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
 ms.openlocfilehash: af9297d9c827b12ed8611e99930234511f7f661c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034603"
 ---
 # <a name="association-set"></a>conjunto de asociaciones
 Un *conjunto de asociaciones* es un contenedor lógico para [asociación](../../../../docs/framework/data/adonet/association-type.md) instancias del mismo tipo. Un conjunto de asociaciones no es una construcción del modelado de datos; es decir, no describe la estructura de datos o relaciones. En su lugar, un conjunto de asociaciones proporciona una construcción para que un entorno de hospedaje o de almacenamiento (como Common Language Runtime o una base de datos de SQL Server) agrupe las instancias de asociaciones a fin de que se puedan asignar a un almacén de datos.  
@@ -16,11 +16,11 @@ Un *conjunto de asociaciones* es un contenedor lógico para [asociación](../../
   
  Una definición de un conjunto de asociaciones contiene la información siguiente:  
   
--   El nombre del conjunto de asociaciones. (Necesario)  
+- El nombre del conjunto de asociaciones. (Necesario)  
   
--   La asociación cuyas instancias contendrá. (Necesario)  
+- La asociación cuyas instancias contendrá. (Necesario)  
   
--   Dos [extremos del conjunto de asociaciones](../../../../docs/framework/data/adonet/association-set-end.md).  
+- Dos [extremos del conjunto de asociaciones](../../../../docs/framework/data/adonet/association-set-end.md).  
   
 ## <a name="example"></a>Ejemplo  
  El diagrama siguiente muestra un modelo conceptual con dos asociaciones: `PublishedBy` y `WrittenBy`. Aunque la información sobre los conjuntos de asociaciones no se muestra en el diagrama, el diagrama siguiente muestra un ejemplo de conjuntos de asociaciones y conjuntos de entidades basados en este modelo.  

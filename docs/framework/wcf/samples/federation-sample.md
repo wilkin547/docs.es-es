@@ -3,11 +3,11 @@ title: Ejemplo de federación
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
 ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051917"
 ---
 # <a name="federation-sample"></a>Ejemplo de federación
 Este ejemplo muestra la seguridad aliada.  
@@ -17,13 +17,13 @@ Este ejemplo muestra la seguridad aliada.
   
  El escenario se compone de 4 partes:  
   
--   Servicio de la librería  
+- Servicio de la librería  
   
--   STS BookStore  
+- STS BookStore  
   
--   STS HomeRealm   
+- STS HomeRealm   
   
--   Cliente de librería  
+- Cliente de librería  
   
  El servicio de librería admite dos operaciones, `BrowseBooks` y `BuyBook`. Permite el acceso anónimo a la operación `BrowseBooks`, pero requiere acceso autenticado para tener acceso a la operación `BuyBooks`. La autenticación toma el formulario de un token emitido por el STS BookStore. El archivo de configuración para el Servicio de librería dirige los clientes a la STS BookStore mediante `wsFederationHttpBinding`.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
 ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053701"
 ---
 # <a name="3-d-graphics-overview"></a>Información general sobre gráficos 3D
 <a name="introduction"></a> La funcionalidad [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] permite a los programadores dibujar, transformar y animar gráficos 3D tanto en el marcado y en el código de procedimiento. Los desarrolladores pueden combinar gráficos [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] y [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] para crear controles enriquecidos, proporcionar ilustraciones complejas de datos o mejorar la experiencia del usuario de la interfaz de una aplicación. La compatibilidad con [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no se ha diseñado para proporcionar una plataforma completa de desarrollo de juegos. En este tema se proporciona información general sobre la funcionalidad de [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] en el sistema de gráficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -86,11 +86,11 @@ Proyecciones ortográfica y en perspectiva
   
  Para definir las características de la superficie de un modelo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa el <xref:System.Windows.Media.Media3D.Material> clase abstracta. Las subclases concretas de Material determinan algunas de las características del aspecto de la superficie del modelo y, además, cada una de ellas proporciona una propiedad Brush a la que puede pasar SolidColorBrush, TileBrush o VisualBrush.  
   
--   <xref:System.Windows.Media.Media3D.DiffuseMaterial> Especifica que el pincel se aplicará al modelo como si estuviera iluminado con una luz difusa. Utilizar DiffuseMaterial es lo que más se parece al uso directo de pinceles en los modelos [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]; las superficies del modelo no reflejan la luz como si brillasen.  
+- <xref:System.Windows.Media.Media3D.DiffuseMaterial> Especifica que el pincel se aplicará al modelo como si estuviera iluminado con una luz difusa. Utilizar DiffuseMaterial es lo que más se parece al uso directo de pinceles en los modelos [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]; las superficies del modelo no reflejan la luz como si brillasen.  
   
--   <xref:System.Windows.Media.Media3D.SpecularMaterial> Especifica que el pincel se aplicará al modelo como si fuera de la superficie del modelo dura o brillante, capaz de reflejar la iluminación. Puede establecer el grado al que la textura sugerirá esta cualidad, o "brillo", especificando un valor para el <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> propiedad.  
+- <xref:System.Windows.Media.Media3D.SpecularMaterial> Especifica que el pincel se aplicará al modelo como si fuera de la superficie del modelo dura o brillante, capaz de reflejar la iluminación. Puede establecer el grado al que la textura sugerirá esta cualidad, o "brillo", especificando un valor para el <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> propiedad.  
   
--   <xref:System.Windows.Media.Media3D.EmissiveMaterial> le permite especificar que la textura se aplicará como si el modelo estuviera emitiendo luz igual al color del pincel. Esto no convierte el modelo en una luz; sin embargo, participará de manera diferente en el sombreado que si se aplica textura con DiffuseMaterial o SpecularMaterial.  
+- <xref:System.Windows.Media.Media3D.EmissiveMaterial> le permite especificar que la textura se aplicará como si el modelo estuviera emitiendo luz igual al color del pincel. Esto no convierte el modelo en una luz; sin embargo, participará de manera diferente en el sombreado que si se aplica textura con DiffuseMaterial o SpecularMaterial.  
   
  Para mejorar el rendimiento, la ocultas de un <xref:System.Windows.Media.Media3D.GeometryModel3D> (esas caras que están fuera de la vista porque están en el lado opuesto del modelo de la cámara) se seleccionan de la escena.  Para especificar un <xref:System.Windows.Media.Media3D.Material> para aplicar a la cara oculta de un modelo como un plano, establezca el modelo <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> propiedad.  
   
@@ -111,13 +111,13 @@ Proyecciones ortográfica y en perspectiva
   
  Las luces siguientes se derivan de la clase base <xref:System.Windows.Media.Media3D.Light>:  
   
--   <xref:System.Windows.Media.Media3D.AmbientLight>: Proporciona iluminación de ambiente que ilumina todos los objetos uniformemente, independientemente de su ubicación u orientación.  
+- <xref:System.Windows.Media.Media3D.AmbientLight>: Proporciona iluminación de ambiente que ilumina todos los objetos uniformemente, independientemente de su ubicación u orientación.  
   
--   <xref:System.Windows.Media.Media3D.DirectionalLight>: Ilumina como una fuente de luz distante.  Las luces direccionales tienen un <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> especificado como un Vector3D, pero ninguna ubicación concreta.  
+- <xref:System.Windows.Media.Media3D.DirectionalLight>: Ilumina como una fuente de luz distante.  Las luces direccionales tienen un <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> especificado como un Vector3D, pero ninguna ubicación concreta.  
   
--   <xref:System.Windows.Media.Media3D.PointLight>: Ilumina como una fuente de luz cercana. Las luces puntuales tienen posición y emiten la luz desde esa posición. Los objetos de la escena se iluminan dependiendo de su posición y distancia con respecto a la luz. <xref:System.Windows.Media.Media3D.PointLightBase> expone un <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> propiedad, que determina una distancia más allá del cual no se iluminará los modelos por la luz. PointLight también expone propiedades de atenuación que determinan cómo disminuye la intensidad de la luz con la distancia. Puede especificar interpolaciones constantes, lineales o cuadráticas para la atenuación de la luz.  
+- <xref:System.Windows.Media.Media3D.PointLight>: Ilumina como una fuente de luz cercana. Las luces puntuales tienen posición y emiten la luz desde esa posición. Los objetos de la escena se iluminan dependiendo de su posición y distancia con respecto a la luz. <xref:System.Windows.Media.Media3D.PointLightBase> expone un <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> propiedad, que determina una distancia más allá del cual no se iluminará los modelos por la luz. PointLight también expone propiedades de atenuación que determinan cómo disminuye la intensidad de la luz con la distancia. Puede especificar interpolaciones constantes, lineales o cuadráticas para la atenuación de la luz.  
   
--   <xref:System.Windows.Media.Media3D.SpotLight>: Se hereda de <xref:System.Windows.Media.Media3D.PointLight>. Los focos de luz iluminan como las luces puntuales, y tienen posición y dirección. Proyectan la luz en un área cónica establecido por <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> y <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> propiedades, especificadas en grados.  
+- <xref:System.Windows.Media.Media3D.SpotLight>: Se hereda de <xref:System.Windows.Media.Media3D.PointLight>. Los focos de luz iluminan como las luces puntuales, y tienen posición y dirección. Proyectan la luz en un área cónica establecido por <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> y <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> propiedades, especificadas en grados.  
   
  Las luces son <xref:System.Windows.Media.Media3D.Model3D> objetos, por lo que puede transformar y animar propiedades de la luz, incluida la posición, color, dirección y rango.  
   

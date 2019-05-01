@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 ms.openlocfilehash: 230c7cb80ce6b8a29f7334ed0f8d297fd829faf9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009089"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize
 La posición precisa de los controles del formulario es de alta prioridad para muchas aplicaciones. El **Diseñador de Windows Forms** le ofrece muchas herramientas de diseño para realizar esta acción. Tres de las más importantes son la <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, y <xref:System.Windows.Forms.Control.AutoSize%2A> propiedades, que están presentes en todos los controles de Windows Forms.  
@@ -37,13 +37,13 @@ La posición precisa de los controles del formulario es de alta prioridad para m
   
  Las tareas ilustradas en este tutorial incluyen:  
   
--   Crear un proyecto de Windows Forms  
+- Crear un proyecto de Windows Forms  
   
--   Establecer los márgenes para los controles  
+- Establecer los márgenes para los controles  
   
--   Establecer el relleno de los controles  
+- Establecer el relleno de los controles  
   
--   Ajustar automáticamente el tamaño de los controles  
+- Ajustar automáticamente el tamaño de los controles  
   
  Cuando termine, comprenderá el rol de estas importantes características de diseño.  
   
@@ -53,7 +53,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 ## <a name="prerequisites"></a>Requisitos previos  
  Para poder completar este tutorial, necesitará:  
   
--   Permisos suficientes para poder crear y ejecutar proyectos de aplicación de Windows Forms en el equipo donde está instalado Visual Studio.  
+- Permisos suficientes para poder crear y ejecutar proyectos de aplicación de Windows Forms en el equipo donde está instalado Visual Studio.  
   
 ## <a name="creating-the-project"></a>Crear el proyecto  
  El primer paso es crear el proyecto y configurar el formulario.  
@@ -178,11 +178,11 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 ## <a name="next-steps"></a>Pasos siguientes  
  Hay muchas otras características de diseño para organizar controles en las aplicaciones de Windows Forms. Estas son algunas combinaciones que podría probar:  
   
--   Crear un formulario mediante un <xref:System.Windows.Forms.TableLayoutPanel> control. Para obtener más información, consulte [Tutorial: Organizar controles en formularios de Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Intente cambiar los valores de la <xref:System.Windows.Forms.TableLayoutPanel> del control <xref:System.Windows.Forms.Control.Padding%2A> propiedad, así como el <xref:System.Windows.Forms.Control.Margin%2A> propiedad en sus controles secundarios.  
+- Crear un formulario mediante un <xref:System.Windows.Forms.TableLayoutPanel> control. Para obtener más información, consulte [Tutorial: Organizar controles en formularios de Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Intente cambiar los valores de la <xref:System.Windows.Forms.TableLayoutPanel> del control <xref:System.Windows.Forms.Control.Padding%2A> propiedad, así como el <xref:System.Windows.Forms.Control.Margin%2A> propiedad en sus controles secundarios.  
   
--   Pruebe el mismo experimento con un <xref:System.Windows.Forms.FlowLayoutPanel> control. Para obtener más información, consulte [Tutorial: Organizar controles en formularios de Windows Forms mediante FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+- Pruebe el mismo experimento con un <xref:System.Windows.Forms.FlowLayoutPanel> control. Para obtener más información, consulte [Tutorial: Organizar controles en formularios de Windows Forms mediante FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
--   Experimento con el acoplamiento de controles secundarios en un <xref:System.Windows.Forms.Panel> control. El <xref:System.Windows.Forms.Control.Padding%2A> propiedad es una realización más general de la <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> propiedad y se puede satisfacer por sí mismo que este es el caso al colocar un control secundario en un <xref:System.Windows.Forms.Panel> control y establecer el control secundario <xref:System.Windows.Forms.Control.Dock%2A> propiedad <xref:System.Windows.Forms.DockStyle.Fill>. Establecer el <xref:System.Windows.Forms.Panel> del control <xref:System.Windows.Forms.Control.Padding%2A> propiedad para distintos valores y tenga en cuenta el efecto.  
+- Experimento con el acoplamiento de controles secundarios en un <xref:System.Windows.Forms.Panel> control. El <xref:System.Windows.Forms.Control.Padding%2A> propiedad es una realización más general de la <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> propiedad y se puede satisfacer por sí mismo que este es el caso al colocar un control secundario en un <xref:System.Windows.Forms.Panel> control y establecer el control secundario <xref:System.Windows.Forms.Control.Dock%2A> propiedad <xref:System.Windows.Forms.DockStyle.Fill>. Establecer el <xref:System.Windows.Forms.Panel> del control <xref:System.Windows.Forms.Control.Padding%2A> propiedad para distintos valores y tenga en cuenta el efecto.  
   
 ## <a name="see-also"></a>Vea también
 

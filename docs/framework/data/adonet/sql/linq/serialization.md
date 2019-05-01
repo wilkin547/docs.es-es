@@ -6,35 +6,35 @@ dev_langs:
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
 ms.openlocfilehash: b6778522b5757c0ece899f7465d3ab500038fc49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037042"
 ---
 # <a name="serialization"></a>Serialización
 Este tema se describe [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] características de la serialización. En los párrafos siguientes se proporciona información sobre cómo agregar la característica de serialización durante la generación de código en tiempo de diseño y el comportamiento de serialización en tiempo de ejecución de las clases [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  Puede agregar código de serialización en tiempo de diseño mediante cualquiera de estos métodos:  
   
--   En el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], cambie el **modo de serialización** propiedad **Unidirectional**.  
+- En el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], cambie el **modo de serialización** propiedad **Unidirectional**.  
   
--   En la línea de comandos SQLMetal, agregue el **/serialization** opción. Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+- En la línea de comandos SQLMetal, agregue el **/serialization** opción. Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Información general  
  El código generado por [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proporciona funcionalidad de carga aplazada de forma predeterminada. La carga aplazada es muy apropiada en el nivel intermedio, para una carga de datos transparente a petición. Sin embargo, da problemas para la serialización, porque el serializador activa la carga aplazada esté prevista o no. De hecho, cuando se serializa un objeto, se serializa su cierre transitivo en todas las referencias con carga aplazada salientes.  
   
  El [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] característica de serialización resuelve este problema, principalmente mediante dos mecanismos:  
   
--   Un modo <xref:System.Data.Linq.DataContext> para desactivar la carga aplazada (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). Para obtener más información, consulta <xref:System.Data.Linq.DataContext>.  
+- Un modo <xref:System.Data.Linq.DataContext> para desactivar la carga aplazada (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). Para obtener más información, consulta <xref:System.Data.Linq.DataContext>.  
   
--   Un modificador de generación de código para generar los atributos <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> y <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> en las entidades generadas. Este aspecto, que incluye el comportamiento de la carga aplazada de las clases en la serialización, es el asunto principal de este tema.  
+- Un modificador de generación de código para generar los atributos <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> y <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> en las entidades generadas. Este aspecto, que incluye el comportamiento de la carga aplazada de las clases en la serialización, es el asunto principal de este tema.  
   
 ### <a name="definitions"></a>Definiciones  
   
--   *Serializador DataContract*: Serializador predeterminado utilizado por el componente de Windows Communication Framework (WCF) del .NET Framework 3.0 o versiones posteriores.  
+- *Serializador DataContract*: Serializador predeterminado utilizado por el componente de Windows Communication Framework (WCF) del .NET Framework 3.0 o versiones posteriores.  
   
--   *Serialización unidireccional*: La versión serializada de una clase que contiene sólo una propiedad de asociación unidireccional (para evitar un ciclo). Por convención, se marca para la serialización la propiedad que se encuentra en el lado primario de una relación de clave externa y clave principal. No se serializa el otro lado en una asociación bidireccional.  
+- *Serialización unidireccional*: La versión serializada de una clase que contiene sólo una propiedad de asociación unidireccional (para evitar un ciclo). Por convención, se marca para la serialización la propiedad que se encuentra en el lado primario de una relación de clave externa y clave principal. No se serializa el otro lado en una asociación bidireccional.  
   
      La serialización unidireccional es el único tipo de serialización que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite.  
   

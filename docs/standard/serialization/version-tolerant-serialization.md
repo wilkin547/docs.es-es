@@ -14,18 +14,18 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
 ms.openlocfilehash: c899cfe1015a25adc25fc28ee84d0a37a397defe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028257"
 ---
 # <a name="version-tolerant-serialization"></a>Serialización tolerante a versiones
 En la versión 1.0 y 1.1 de .NET Framework, la creación de tipos serializables que serían reutilizables a partir de una versión de una aplicación a lo siguiente, ha resultado problemática. Si un tipo se modificara agregando los campos adicionales, se producirían los problemas siguientes:  
   
--   Las versiones anteriores de una aplicación produciría excepciones en caso de solicitar la deserialización de las nuevas versiones del tipo anterior.  
+- Las versiones anteriores de una aplicación produciría excepciones en caso de solicitar la deserialización de las nuevas versiones del tipo anterior.  
   
--   Las versiones más recientes de una aplicación producirían las excepciones al deserializar versiones anteriores de un tipo con datos que faltan.  
+- Las versiones más recientes de una aplicación producirían las excepciones al deserializar versiones anteriores de un tipo con datos que faltan.  
   
  La Serialización Tolerante a versiones (VTS) es un conjunto de características introducido en .NET Framework 2.0 que facilita, con el tiempo, modificar los tipos serializables. Específicamente, las características VTS están habilitadas para las clases a las que se ha aplicado el atributo <xref:System.SerializableAttribute>, incluidos los tipos genéricos. VTS posibilita el agregar los nuevos campos a esas clases sin interrumpir la compatibilidad con otras versiones del tipo. Para obtener una aplicación de ejemplo en funcionamiento, vea [Ejemplo de tecnología de serialización tolerante a versiones](../../../docs/standard/serialization/version-tolerant-serialization-technology-sample.md).  
   
@@ -36,11 +36,11 @@ En la versión 1.0 y 1.1 de .NET Framework, la creación de tipos serializables 
 ## <a name="feature-list"></a>Lista de características  
  En la lista de características se incluyen las siguientes:  
   
--   Tolerancia de datos extraños o inesperados. Esto permite a las versiones más recientes del tipo enviar los datos a las versiones anteriores.  
+- Tolerancia de datos extraños o inesperados. Esto permite a las versiones más recientes del tipo enviar los datos a las versiones anteriores.  
   
--   Tolerancia de datos opcionales que faltan. Esto permite a las versiones anteriores enviar los datos a las versiones más recientes.  
+- Tolerancia de datos opcionales que faltan. Esto permite a las versiones anteriores enviar los datos a las versiones más recientes.  
   
--   Devoluciones de llamada de la serialización. Esto habilita el valor predeterminado inteligente en casos donde faltan datos.  
+- Devoluciones de llamada de la serialización. Esto habilita el valor predeterminado inteligente en casos donde faltan datos.  
   
  Hay además, una característica para declarar cuando se ha agregado un nuevo campo opcional. Ésta es la propiedad <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> del atributo <xref:System.Runtime.Serialization.OptionalFieldAttribute>.  
   
@@ -262,23 +262,23 @@ End Class
 ## <a name="best-practices"></a>Procedimientos recomendados  
  Para asegurar el comportamiento apropiado de la versión, siga estas reglas al modificar un tipo de la versión para la versión:  
   
--   Nunca quite un campo serializado.  
+- Nunca quite un campo serializado.  
   
--   Nunca aplique el atributo <xref:System.NonSerializedAttribute> a un campo si el atributo no se aplicó al campo en la versión anterior.  
+- Nunca aplique el atributo <xref:System.NonSerializedAttribute> a un campo si el atributo no se aplicó al campo en la versión anterior.  
   
--   Nunca cambie el nombre o el tipo de un campo serializado.  
+- Nunca cambie el nombre o el tipo de un campo serializado.  
   
--   Al agregar un nuevo campo serializado, aplique el atributo **OptionalFieldAttribute**.  
+- Al agregar un nuevo campo serializado, aplique el atributo **OptionalFieldAttribute**.  
   
--   Al quitar un atributo **NonSerializedAttribute** de un campo (que no era serializable en una versión anterior), aplique el atributo **OptionalFieldAttribute**.  
+- Al quitar un atributo **NonSerializedAttribute** de un campo (que no era serializable en una versión anterior), aplique el atributo **OptionalFieldAttribute**.  
   
--   Para todos los campos opcionales, establezca valores predeterminados significativos mediante las devoluciones de llamada de serialización, a menos que se acepten 0 o **null** como valores predeterminados.  
+- Para todos los campos opcionales, establezca valores predeterminados significativos mediante las devoluciones de llamada de serialización, a menos que se acepten 0 o **null** como valores predeterminados.  
   
  Para asegurarse de que un tipo será compatible con motores de serialización futuros, siga estas instrucciones:  
   
--   Establezca siempre correctamente la propiedad **VersionAdded** en el atributo **OptionalFieldAttribute**.  
+- Establezca siempre correctamente la propiedad **VersionAdded** en el atributo **OptionalFieldAttribute**.  
   
--   Evite la versión bifurcada.  
+- Evite la versión bifurcada.  
   
 ## <a name="see-also"></a>Vea también
 

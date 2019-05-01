@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: e4421cbc40cdccc1dbbaeb459cb12fda0ee407cf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022355"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Información general sobre la interoperabilidad COM (Visual Basic)
 El modelo de objetos componentes (COM) permite a un objeto exponer su funcionalidad a otros componentes y aplicaciones host. Aunque los objetos COM han sido fundamentales para Windows durante muchos años de programación, las aplicaciones diseñadas para common language runtime (CLR) proporcionan muchas ventajas.  
@@ -28,15 +28,15 @@ El modelo de objetos componentes (COM) permite a un objeto exponer su funcionali
 ## <a name="type-libraries-and-assembly-manifests"></a>Bibliotecas de tipos y manifiestos de ensamblado  
  Bibliotecas de tipos describen las características de objetos COM, como los nombres de miembros y tipos de datos. Manifiestos de ensamblado realizan la misma función para [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicaciones. Incluyen información acerca de lo siguiente:  
   
--   Identidad del ensamblado, versión, referencia cultural y firma digital.  
+- Identidad del ensamblado, versión, referencia cultural y firma digital.  
   
--   Archivos que componen la implementación del ensamblado.  
+- Archivos que componen la implementación del ensamblado.  
   
--   Tipos y recursos que componen el ensamblado. Esto incluye aquellas que se exportan desde él.  
+- Tipos y recursos que componen el ensamblado. Esto incluye aquellas que se exportan desde él.  
   
--   Dependencias de tiempo de compilación en otros ensamblados.  
+- Dependencias de tiempo de compilación en otros ensamblados.  
   
--   Permisos necesarios para que el ensamblado se ejecute correctamente.  
+- Permisos necesarios para que el ensamblado se ejecute correctamente.  
   
  Para obtener más información sobre los ensamblados y manifiestos de ensamblado, vea [ensamblados de .NET](../../../standard/assembly/index.md).  
   

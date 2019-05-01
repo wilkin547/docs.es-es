@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
 ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050693"
 ---
 # <a name="understanding-generated-client-code"></a>Comprender códigos de cliente generado
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) genera código de cliente y un archivo de configuración de la aplicación cliente para su uso en la compilación de aplicaciones cliente. Este tema proporciona un recorrido por los ejemplos de código generados para los escenarios de contrato de servicio estándar. Para obtener más información sobre la creación de una aplicación cliente mediante el código generado, vea [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md).  
@@ -20,15 +20,15 @@ ms.locfileid: "59189165"
   
  Dado que Svcutil.exe tiene varias opciones que modifican la información de tipo generada, este tema no discute todos los escenarios. Sin embargo, las tareas estándar siguientes implican la ubicación del código generado:  
   
--   Identificar las interfaces del contrato de servicio.  
+- Identificar las interfaces del contrato de servicio.  
   
--   Que identifica la clase de cliente WCF.  
+- Que identifica la clase de cliente WCF.  
   
--   Identificar los tipos de datos.  
+- Identificar los tipos de datos.  
   
--   Identificar los contratos de devolución de llamada para los servicios dúplex.  
+- Identificar los contratos de devolución de llamada para los servicios dúplex.  
   
--   Identificar la interfaz de canal de contrato de servicio del asistente.  
+- Identificar la interfaz de canal de contrato de servicio del asistente.  
   
 ### <a name="finding-service-contract-interfaces"></a>Buscar las interfaces del contrato de servicio  
  Buscar las interfaces que modelan los servicios modelo, buscar las interfaces marcadas con el atributo <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> . A menudo este atributo puede ser difícil de buscar con una lectura rápida debido a la presencia de otros atributos y las propiedades explícitas establecidas en el propio atributo. Recuerde que la interfaz del contrato de servicio y la interfaz del contrato del cliente son dos tipos diferentes. El ejemplo de código siguiente muestra el contrato de servicios original.  

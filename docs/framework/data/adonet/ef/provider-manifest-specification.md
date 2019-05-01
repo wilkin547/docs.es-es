@@ -3,11 +3,11 @@ title: Especificación del manifiesto del proveedor
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034005"
 ---
 # <a name="provider-manifest-specification"></a>Especificación del manifiesto del proveedor
 En esta sección se explica cómo puede un proveedor de almacén de datos admitir los tipos y funciones del almacén de datos.  
@@ -45,18 +45,18 @@ En esta sección se explica cómo puede un proveedor de almacén de datos admiti
   
  Puede escribir un archivo XML que tenga dos secciones:  
   
--   Una lista de tipos de proveedor expresada en términos de "equivalente de EDM" de un tipo de almacén o función. Los tipos de almacén tienen tipos de EDM equivalentes. Las funciones de almacén tienen funciones de EDM correspondientes. Por ejemplo, varchar es un tipo de SQL Server, pero el tipo de EDM correspondiente es string.  
+- Una lista de tipos de proveedor expresada en términos de "equivalente de EDM" de un tipo de almacén o función. Los tipos de almacén tienen tipos de EDM equivalentes. Las funciones de almacén tienen funciones de EDM correspondientes. Por ejemplo, varchar es un tipo de SQL Server, pero el tipo de EDM correspondiente es string.  
   
--   Una lista de funciones admitida por el proveedor donde los tipos de parámetro y de valores devueltos se expresen en términos de EDM.  
+- Una lista de funciones admitida por el proveedor donde los tipos de parámetro y de valores devueltos se expresen en términos de EDM.  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Escribir un proveedor con asignación de tipos asimétrica  
  Cuando se escribe un proveedor de almacén de datos para [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], la asignación de tipos de EDM a proveedor para algunos tipos puede diferir de la asignación de tipos de proveedor a EDM. Por ejemplo, la cadena PrimitiveTypeKind.String de EDM ilimitada se puede asignar a nvarchar(4000) en el proveedor, mientras que nvarchar(4000) se asigna a la cadena PrimitiveTypeKind.String(MaxLength=4000) de EDM.  
   
  Puede escribir un archivo XML que tenga dos secciones:  
   
--   Una lista de tipos de proveedor expresada en términos de EDM y defina la asignación para ambas direcciones: EDM a proveedor y proveedor a EDM.  
+- Una lista de tipos de proveedor expresada en términos de EDM y defina la asignación para ambas direcciones: EDM a proveedor y proveedor a EDM.  
   
--   Una lista de funciones admitida por el proveedor donde los tipos de parámetro y de valores devueltos se expresen en términos de EDM.  
+- Una lista de funciones admitida por el proveedor donde los tipos de parámetro y de valores devueltos se expresen en términos de EDM.  
   
 ## <a name="provider-manifest-discoverability"></a>Detectabilidad del manifiesto del proveedor  
  Varios tipos de componente utilizan indirectamente el manifiesto en Servicios de entidad (por ejemplo Tools o Query), pero los metadatos lo aprovechan de forma más directa con el uso del cargador de metadatos del almacén de datos.  

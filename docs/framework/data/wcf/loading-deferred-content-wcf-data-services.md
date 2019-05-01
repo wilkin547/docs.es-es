@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
 ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037137"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Cargar contenido diferido (Servicios de datos de WCF)
 De forma predeterminada, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita la cantidad de datos que devuelve una consulta. Sin embargo, es posible cargar explícitamente datos adicionales, incluidos los datos de la respuesta paginados, las entidades relacionadas y los flujos de datos binarios, del servicio de datos cuando sea necesario. En este tema se describe cómo cargar dicho contenido aplazado en una aplicación.  
@@ -22,14 +22,14 @@ De forma predeterminada, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.
 ## <a name="related-entities"></a>Entidades relacionadas  
  Cuando se ejecuta una consulta, solo se devuelven las entidades pertenecientes al conjunto de entidades direccionado. Por ejemplo, cuando una consulta al servicio de datos Northwind devuelve entidades `Customers`, no se devuelven de forma predeterminada las entidades `Orders` relacionadas aunque haya una relación entre `Customers` y `Orders`. Además, cuando está habilitada la paginación en el servicio de datos, debe cargar explícitamente las páginas de datos subsiguientes del servicio. Hay dos maneras de cargar las entidades relacionadas:  
   
--   **La carga diligente**: Puede usar el `$expand` opción de consulta que la consulta devuelva entidades que están relacionadas mediante una asociación a la entidad de solicitud establecido que la consulta solicitada. Utilice el método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> en <xref:System.Data.Services.Client.DataServiceQuery%601> para agregar la opción `$expand` a la consulta que se envía al servicio de datos. Puede solicitar varios conjuntos de entidades relacionados separándolos mediante comas, como muestra el ejemplo siguiente. Todas las entidades solicitadas por la consulta se devuelven en una única respuesta. En el ejemplo siguiente se devuelve `Order_Details` y `Customers` junto con el conjunto de entidades `Orders`:  
+- **La carga diligente**: Puede usar el `$expand` opción de consulta que la consulta devuelva entidades que están relacionadas mediante una asociación a la entidad de solicitud establecido que la consulta solicitada. Utilice el método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> en <xref:System.Data.Services.Client.DataServiceQuery%601> para agregar la opción `$expand` a la consulta que se envía al servicio de datos. Puede solicitar varios conjuntos de entidades relacionados separándolos mediante comas, como muestra el ejemplo siguiente. Todas las entidades solicitadas por la consulta se devuelven en una única respuesta. En el ejemplo siguiente se devuelve `Order_Details` y `Customers` junto con el conjunto de entidades `Orders`:  
   
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
      [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita a 12 el número de conjuntos de entidades que se pueden incluir en una única consulta utilizando la opción de consulta `$expand`.  
   
--   **Carga explícita**: Puede llamar a la <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> método en el <xref:System.Data.Services.Client.DataServiceContext> instancia para cargar explícitamente entidades relacionadas. Cada llamada al método <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> crea una solicitud independiente al servicio de datos. En el ejemplo siguiente se carga explícitamente `Order_Details` para una entidad `Orders`:  
+- **Carga explícita**: Puede llamar a la <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> método en el <xref:System.Data.Services.Client.DataServiceContext> instancia para cargar explícitamente entidades relacionadas. Cada llamada al método <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> crea una solicitud independiente al servicio de datos. En el ejemplo siguiente se carga explícitamente `Order_Details` para una entidad `Orders`:  
   
      [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  

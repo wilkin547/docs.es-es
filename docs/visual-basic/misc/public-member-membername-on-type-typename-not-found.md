@@ -5,11 +5,11 @@ f1_keywords:
 - vbrMissingMember_MemberNotFoundOnType2
 ms.assetid: 6300feb8-78ac-4dd0-9653-1d03e1f5bc20
 ms.openlocfilehash: fdaea9d7f0aee92852430ae3ad676bf13a3d9396
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023148"
 ---
 # <a name="public-member-membername-on-type-typename-not-found"></a>Miembro público '\<membername >' en el tipo '\<typename >' no encontrado
 No se puede encontrar el miembro al que está intentando acceder. Este error se puede producir al acceder a miembros no públicos de objetos enlazados en tiempo de ejecución.  

@@ -3,11 +3,11 @@ title: Herramienta de registro de servicio de flujo de trabajo (WFServicesReg.ex
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
 ms.openlocfilehash: 3ea0f737cc050ec3f918044e0e105a41011a3e25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052578"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe)
 El registro de servicio de flujo de trabajo (WFServicesReg.exe) es una herramienta independiente que puede utilizarse para agregar, quitar o reparar los elementos de configuración de los servicios de Windows Workflow Foundation (WF).  
@@ -34,25 +34,25 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="registration"></a>Registro  
  La herramienta inspecciona el archivo Web.config y registra lo siguiente:  
   
--   Ensamblados de referencia [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].  
+- Ensamblados de referencia [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].  
   
--   Proveedor de compilación para archivos .xoml.  
+- Proveedor de compilación para archivos .xoml.  
   
--   Controladores HTTP para archivos .xoml y .rules.  
+- Controladores HTTP para archivos .xoml y .rules.  
   
  La herramienta inspecciona el archivo Machine.config y registra las siguientes extensiones:  
   
--   behaviorExtensions  
+- behaviorExtensions  
   
--   bindingElementExtensions  
+- bindingElementExtensions  
   
--   bindingExtensions  
+- bindingExtensions  
   
  La herramienta también registra los siguientes importadores de metadatos de cliente:  
   
--   policyImporters  
+- policyImporters  
   
--   wsdlImporters  
+- wsdlImporters  
   
  La herramienta también registra los controladores y las asignaciones de secuencias de comandos de .xoml y .rules en la metabase de IIS.  
   
@@ -60,7 +60,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  En equipos de 64 bits, la herramienta registra asignaciones de secuencias de comandos en el modo WOW si el modificador `Enable32BitAppOnWin64` está habilitado, o asignaciones de secuencias de comandos nativas de 64 bits si el modificador `Enable32BitAppOnWin64` está deshabilitado.  
   
- En [!INCLUDE[wv](../../../includes/wv-md.md)] y Windows Server 2008 (IIS 7.0 y versiones posteriores) se registran máquinas, dos conjuntos de controladores .xoml y. Rules: uno para el modo integrado y otra para el modo clásico.  
+ En [!INCLUDE[wv](../../../includes/wv-md.md)] y Windows Server 2008 (IIS 7.0 y versiones posteriores) se registran las máquinas, dos conjuntos de controladores .xoml y. Rules: uno para el modo integrado y otro para el modo clásico.  
   
  En equipos de 64 bits, se registran tres conjuntos de controladores (independientemente del estado del modificador `Enable32BitAppOnWin64`): uno para el modo integrado, otro para el modo clásico de WOW y el tercero para el modo clásico de 64 bits nativo.  
   

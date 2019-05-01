@@ -5,11 +5,11 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
 ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032063"
 ---
 # <a name="base-elements-overview"></a>Información general sobre elementos base
 Un porcentaje elevado de clases de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deriva de cuatro clases a las que se hace referencia normalmente en la documentación de [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] como clases de elementos base. Estas clases son <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, y <xref:System.Windows.FrameworkContentElement>. El <xref:System.Windows.DependencyObject> clase también está relacionada, porque es una clase base común de ambos <xref:System.Windows.UIElement> y <xref:System.Windows.ContentElement>  
@@ -31,49 +31,49 @@ Un porcentaje elevado de clases de [!INCLUDE[TLA#tla_winclient](../../../../incl
   
  Si crea una clase que derive de <xref:System.Windows.DependencyObject>, hereda la funcionalidad siguiente:  
   
--   <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A> soporte técnico y soporte técnico de propiedades general del sistema.  
+- <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A> soporte técnico y soporte técnico de propiedades general del sistema.  
   
--   Capacidad de usar las propiedades de dependencia y las propiedades adjuntas que están implementadas como propiedades de dependencia.  
+- Capacidad de usar las propiedades de dependencia y las propiedades adjuntas que están implementadas como propiedades de dependencia.  
   
  Si crea una clase que derive de <xref:System.Windows.UIElement>, hereda la funcionalidad siguiente a la que se proporciona por <xref:System.Windows.DependencyObject>:  
   
--   Compatibilidad básica para valores de propiedades animadas. Para obtener más información, consulte [Información general sobre animaciones](../graphics-multimedia/animation-overview.md).  
+- Compatibilidad básica para valores de propiedades animadas. Para obtener más información, consulte [Información general sobre animaciones](../graphics-multimedia/animation-overview.md).  
   
--   Compatibilidad con eventos de entrada básicos y compatibilidad con comandos. Para obtener más información, consulte [Información general sobre acciones del usuario](input-overview.md) e [Información general sobre comandos](commanding-overview.md).  
+- Compatibilidad con eventos de entrada básicos y compatibilidad con comandos. Para obtener más información, consulte [Información general sobre acciones del usuario](input-overview.md) e [Información general sobre comandos](commanding-overview.md).  
   
--   Los métodos virtuales se pueden invalidar para proporcionar información a un sistema de diseño.  
+- Los métodos virtuales se pueden invalidar para proporcionar información a un sistema de diseño.  
   
  Si crea una clase que derive de <xref:System.Windows.FrameworkElement>, hereda la funcionalidad siguiente a la que se proporciona por <xref:System.Windows.UIElement>:  
   
--   Compatibilidad con estilos y guiones gráficos. Para obtener más información, consulte <xref:System.Windows.Style> y [Storyboards Overview](../graphics-multimedia/storyboards-overview.md).  
+- Compatibilidad con estilos y guiones gráficos. Para obtener más información, consulte <xref:System.Windows.Style> y [Storyboards Overview](../graphics-multimedia/storyboards-overview.md).  
   
--   Compatibilidad con el enlace de datos. Para obtener más información, consulte [Información general sobre el enlace de datos](../data/data-binding-overview.md).  
+- Compatibilidad con el enlace de datos. Para obtener más información, consulte [Información general sobre el enlace de datos](../data/data-binding-overview.md).  
   
--   Compatibilidad con las referencias de recursos dinámicos. Para obtener más información, consulte [Recursos XAML](xaml-resources.md).  
+- Compatibilidad con las referencias de recursos dinámicos. Para obtener más información, consulte [Recursos XAML](xaml-resources.md).  
   
--   Compatibilidad con la herencia de valores de propiedad y otras marcas en los metadatos, que ayudan a comunicar condiciones sobre las propiedades a los servicios de marco, como el enlace de datos, los estilos o la implementación del marco del diseño. Para obtener más información, consulte [Metadatos de las propiedades de marco de trabajo](framework-property-metadata.md).  
+- Compatibilidad con la herencia de valores de propiedad y otras marcas en los metadatos, que ayudan a comunicar condiciones sobre las propiedades a los servicios de marco, como el enlace de datos, los estilos o la implementación del marco del diseño. Para obtener más información, consulte [Metadatos de las propiedades de marco de trabajo](framework-property-metadata.md).  
   
--   Concepto del árbol lógico. Para obtener más información, consulte [Árboles en WPF](trees-in-wpf.md).  
+- Concepto del árbol lógico. Para obtener más información, consulte [Árboles en WPF](trees-in-wpf.md).  
   
--   Compatibilidad con la implementación de nivel de marco WPF práctica del sistema de diseño, incluyendo un <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> invalidación que puede detectar cambios en las propiedades que influyen en el diseño.  
+- Compatibilidad con la implementación de nivel de marco WPF práctica del sistema de diseño, incluyendo un <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> invalidación que puede detectar cambios en las propiedades que influyen en el diseño.  
   
  Si crea una clase que derive de <xref:System.Windows.ContentElement>, hereda la funcionalidad siguiente a la que se proporciona por <xref:System.Windows.DependencyObject>:  
   
--   Compatibilidad con las animaciones. Para obtener más información, consulte [Información general sobre animaciones](../graphics-multimedia/animation-overview.md).  
+- Compatibilidad con las animaciones. Para obtener más información, consulte [Información general sobre animaciones](../graphics-multimedia/animation-overview.md).  
   
--   Compatibilidad con eventos de entrada básicos y compatibilidad con comandos. Para obtener más información, consulte [Información general sobre acciones del usuario](input-overview.md) e [Información general sobre comandos](commanding-overview.md).  
+- Compatibilidad con eventos de entrada básicos y compatibilidad con comandos. Para obtener más información, consulte [Información general sobre acciones del usuario](input-overview.md) e [Información general sobre comandos](commanding-overview.md).  
   
  Si crea una clase que derive de <xref:System.Windows.FrameworkContentElement>, obtendrá la siguiente funcionalidad a la que proporciona <xref:System.Windows.ContentElement>:  
   
--   Compatibilidad con estilos y guiones gráficos. Para obtener más información, consulte <xref:System.Windows.Style> y [información general sobre animaciones](../graphics-multimedia/animation-overview.md).  
+- Compatibilidad con estilos y guiones gráficos. Para obtener más información, consulte <xref:System.Windows.Style> y [información general sobre animaciones](../graphics-multimedia/animation-overview.md).  
   
--   Compatibilidad con el enlace de datos. Para obtener más información, consulte [Información general sobre el enlace de datos](../data/data-binding-overview.md).  
+- Compatibilidad con el enlace de datos. Para obtener más información, consulte [Información general sobre el enlace de datos](../data/data-binding-overview.md).  
   
--   Compatibilidad con las referencias de recursos dinámicos. Para obtener más información, consulte [Recursos XAML](xaml-resources.md).  
+- Compatibilidad con las referencias de recursos dinámicos. Para obtener más información, consulte [Recursos XAML](xaml-resources.md).  
   
--   Compatibilidad con la herencia de valores de propiedad y otras marcas en los metadatos que ayudan a comunicar condiciones sobre las propiedades a los servicios de marco, como el enlace de datos, los estilos o la implementación del marco del diseño. Para obtener más información, consulte [Metadatos de las propiedades de marco de trabajo](framework-property-metadata.md).  
+- Compatibilidad con la herencia de valores de propiedad y otras marcas en los metadatos que ayudan a comunicar condiciones sobre las propiedades a los servicios de marco, como el enlace de datos, los estilos o la implementación del marco del diseño. Para obtener más información, consulte [Metadatos de las propiedades de marco de trabajo](framework-property-metadata.md).  
   
--   No se hereda el acceso a las modificaciones del sistema de diseño (como <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Solo están disponibles en las implementaciones de sistema de diseño <xref:System.Windows.FrameworkElement>. Sin embargo, hereda un <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> invalidación que puede detectar cambios en las propiedades que influyen en el diseño y comunicárselas a cualquier host de contenido.  
+- No se hereda el acceso a las modificaciones del sistema de diseño (como <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Solo están disponibles en las implementaciones de sistema de diseño <xref:System.Windows.FrameworkElement>. Sin embargo, hereda un <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> invalidación que puede detectar cambios en las propiedades que influyen en el diseño y comunicárselas a cualquier host de contenido.  
   
  Los modelos de contenido se documentan para distintas clases. El modelo de contenido de una clase es uno de los factores posibles que debe considerar si quiere buscar una clase adecuada de la que derivar. Para obtener más información, consulte [Modelo de contenido de WPF](../controls/wpf-content-model.md).  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
 ms.openlocfilehash: 22247c941eff575f0f3e5683e46376054ba13bb5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013426"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Procedimiento para mostrar la vista preliminar en aplicaciones de formularios Windows Forms
 Puede usar el <xref:System.Windows.Forms.PrintPreviewDialog> control para permitir que los usuarios mostrar un documento, a menudo antes de que se imprimen.  
@@ -29,7 +29,7 @@ Puede usar el <xref:System.Windows.Forms.PrintPreviewDialog> control para permit
   
 ### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>Para ver las páginas mediante el control PrintPreviewDialog  
   
--   Use el método <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> para mostrar el cuadro de diálogo, especificando el <xref:System.Drawing.Printing.PrintDocument> que se va a usar.  
+- Use el método <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> para mostrar el cuadro de diálogo, especificando el <xref:System.Drawing.Printing.PrintDocument> que se va a usar.  
   
      En el ejemplo de código siguiente, la <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Click> controlador de eventos abre una instancia de la <xref:System.Windows.Forms.PrintPreviewDialog> control. El documento de impresión se especifica en el <xref:System.Windows.Forms.PrintDialog.Document%2A> propiedad. En el ejemplo siguiente, no se especifica ningún documento para imprimirlo.  
   

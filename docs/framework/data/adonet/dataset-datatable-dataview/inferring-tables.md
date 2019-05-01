@@ -3,20 +3,20 @@ title: Inferir tablas
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
 ms.openlocfilehash: 2c2a93d413f301dc3006b701e4bc7979a3fa7a1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034260"
 ---
 # <a name="inferring-tables"></a>Inferir tablas
 Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML, ADO.NET determina en primer lugar qué elementos XML representan tablas. Las siguientes estructuras XML como resultado una tabla para la **DataSet** esquema:  
   
--   Elementos con atributos  
+- Elementos con atributos  
   
--   Elementos con elementos secundarios  
+- Elementos con elementos secundarios  
   
--   Elementos que se repiten  
+- Elementos que se repiten  
   
 ## <a name="elements-with-attributes"></a>Elementos con atributos  
  Los elementos para los que se han especificado atributos se deducen como tablas. Por ejemplo, tomemos el siguiente código XML:  

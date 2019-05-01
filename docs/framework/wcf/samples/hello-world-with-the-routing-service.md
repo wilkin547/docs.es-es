@@ -3,11 +3,11 @@ title: "\"Hola mundo\" con el Servicio de enrutamiento"
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
 ms.openlocfilehash: 37d2eaffa1ca5a4cce27c4950d00987828a61196
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006608"
 ---
 # <a name="hello-world-with-the-routing-service"></a>"Hola mundo" con el Servicio de enrutamiento
 Este ejemplo muestra el servicio de enrutamiento de Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente WCF que facilita la tarea debe incluir un enrutador basado en contenido en la aplicación. Este ejemplo adapta el ejemplo de calculadora de WCF estándar para comunicarse con el servicio de enrutamiento. En este ejemplo, el cliente de la calculadora se configura para enviar los mensajes a un extremo que expone el enrutador. El servicio de enrutamiento se configura para aceptar todos los mensajes que se le envíen y reenviarlos a un punto de conexión que corresponde al servicio de calculadora. Por tanto, los mensajes enviados desde el cliente son recibidos por el enrutador y se vuelven a enrutar al servicio de calculadora real. Los mensajes del servicio de calculadora se devuelven al enrutador, que a su vez los devuelve al cliente de la calculadora.
@@ -21,9 +21,9 @@ Este ejemplo muestra el servicio de enrutamiento de Windows Communication Founda
     > [!NOTE]
     >  Si presiona F5, el cliente de la calculadora se inicia automáticamente. Si presiona CTRL+MAYÚS+B (para compilar), debe iniciar las siguientes aplicaciones.
     >
-    > 1.  El cliente de la calculadora (./CalculatorClient/bin/client.exe)
-    > 2.  El servicio de calculadora (./CalculatorService/bin/service.exe)
-    > 3.  El servicio de enrutamiento (./RoutingService/bin/RoutingService.exe)
+    > 1. El cliente de la calculadora (./CalculatorClient/bin/client.exe)
+    > 2. El servicio de calculadora (./CalculatorService/bin/service.exe)
+    > 3. El servicio de enrutamiento (./RoutingService/bin/RoutingService.exe)
 
 3. Presione Entrar para iniciar el cliente.
 

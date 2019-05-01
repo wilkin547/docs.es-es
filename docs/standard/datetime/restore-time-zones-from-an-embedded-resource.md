@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Restaurar zonas horarias de un recurso incrustado
+title: Procedimiento para restaurar zonas horarias de un recurso incrustado
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 71fc4e04c87dfa3b83eabb06361d1da94a512a5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026541"
 ---
-# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Procedimiento Restaurar zonas horarias de un recurso incrustado
+# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Procedimiento para restaurar zonas horarias de un recurso incrustado
 
 Este tema describe cómo restaurar zonas horarias que se han guardado en un archivo de recursos. Para obtener información e instrucciones acerca de cómo guardar zonas horarias, vea [Cómo: Guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019084"
 ---
 # <a name="adorners-overview"></a>Información general sobre adornos
 Los Adorners son un tipo especial de <xref:System.Windows.FrameworkElement>, que se usa para proporcionar indicaciones visuales a un usuario. Entre otros usos, los Adorners se pueden utilizar para agregar controladores funcionales a los elementos o proporcionar información de estado sobre un control.  
@@ -23,13 +23,13 @@ Los Adorners son un tipo especial de <xref:System.Windows.FrameworkElement>, que
   
  Algunas aplicaciones comunes de adornos son:  
   
--   Agregar controladores funcionales a un <xref:System.Windows.UIElement> que permiten al usuario manipular el elemento de alguna manera (cambio de tamaño, girar, cambiar de posición, etcetera.).  
+- Agregar controladores funcionales a un <xref:System.Windows.UIElement> que permiten al usuario manipular el elemento de alguna manera (cambio de tamaño, girar, cambiar de posición, etcetera.).  
   
--   Proporcionar comentarios visuales para indicar diversos estados, o en respuesta a distintos eventos.  
+- Proporcionar comentarios visuales para indicar diversos estados, o en respuesta a distintos eventos.  
   
--   Superponer etiquetas contextuales visuales en un <xref:System.Windows.UIElement>.  
+- Superponer etiquetas contextuales visuales en un <xref:System.Windows.UIElement>.  
   
--   Invalidar la totalidad o parte de o enmascarar visualmente un <xref:System.Windows.UIElement>.  
+- Invalidar la totalidad o parte de o enmascarar visualmente un <xref:System.Windows.UIElement>.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un marco básico para adornar elementos visuales. En la tabla siguiente se muestra una lista de los tipos principales utilizados al adornar objetos y su finalidad. A continuación se presentan varios ejemplos de uso.  
   

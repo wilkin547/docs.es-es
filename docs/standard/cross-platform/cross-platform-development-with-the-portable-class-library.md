@@ -10,11 +10,11 @@ ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afaa8e118bb21e5c1e4f1c53b1d0d29ca6bb3bf5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055061"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Desarrollo multiplataforma con la biblioteca de clases Portable
 
@@ -50,13 +50,13 @@ Si desea evaluar la portabilidad de los ensamblados antes de realizar cambios en
 
 Los tipos y miembros disponibles en los proyectos de Biblioteca de clases portable están limitados por varios factores de compatibilidad:
 
--   Deben compartirse en los destinos seleccionados.
+- Deben compartirse en los destinos seleccionados.
 
--   Deben comportarse de manera similar en todos esos destinos.
+- Deben comportarse de manera similar en todos esos destinos.
 
--   No deben ser candidatos para desuso.
+- No deben ser candidatos para desuso.
 
--   Deben tener sentido en un entorno portable, especialmente cuando los miembros auxiliares no son portátiles.
+- Deben tener sentido en un entorno portable, especialmente cuando los miembros auxiliares no son portátiles.
 
 Si un miembro es compatible con la Biblioteca de clases portable y con los destinos seleccionados, aparecerá en su proyecto en IntelliSense. No obstante, recuerde que una API puede ser compatible con la Biblioteca de clases portable, pero si esa API se puede usar dependerá de los destinos que se seleccionen.
 
@@ -78,9 +78,9 @@ Cuando se crea una aplicación Windows Universal que hace referencia a un ensamb
 
 Cuando implemente una aplicación de .NET Framework que haga referencia a un ensamblado de Biblioteca de clases portable, especifique una dependencia en la versión correcta de .NET Framework. Al especificar esta dependencia, se asegura de que la versión requerida se instala con la aplicación.
 
--   Para crear una dependencia con implementación ClickOnce: en **el Explorador de soluciones**, elija el nodo del proyecto para el proyecto que desea publicar. (Este es el proyecto que hace referencia al proyecto de Biblioteca de clases portable). En la barra de menús, elija **proyecto** > **propiedades**y, a continuación, elija el **publicar** ficha. En el **publicar** página, elija **requisitos previos**. Seleccione la versión de .NET Framework necesaria como requisito previo.
+- Para crear una dependencia con implementación ClickOnce: En **el Explorador de soluciones**, elija el nodo del proyecto para el proyecto que desea publicar. (Este es el proyecto que hace referencia al proyecto de Biblioteca de clases portable). En la barra de menús, elija **proyecto** > **propiedades**y, a continuación, elija el **publicar** ficha. En el **publicar** página, elija **requisitos previos**. Seleccione la versión de .NET Framework necesaria como requisito previo.
 
--   Para crear una dependencia con un proyecto de instalación: en **el Explorador de soluciones**, elija el proyecto de instalación. En la barra de menús, elija **proyecto** > **propiedades** > **requisitos previos**. Seleccione la versión de .NET Framework necesaria como requisito previo.
+- Para crear una dependencia con un proyecto de instalación: En **el Explorador de soluciones**, elija el proyecto de instalación. En la barra de menús, elija **proyecto** > **propiedades** > **requisitos previos**. Seleccione la versión de .NET Framework necesaria como requisito previo.
 
 Para obtener más información sobre cómo implementar aplicaciones de .NET Framework, vea [Deployment Guide for Developers](../../../docs/framework/deployment/deployment-guide-for-developers.md).
 

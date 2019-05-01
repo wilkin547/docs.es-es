@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 80bf9de3eb274bf536b2794ba2ed14e7e9b553cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050056"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout (Método)
 Se completa el diseño de campos para una clase que se ha definido por una llamada anterior a [DefineTypeDef (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
@@ -56,9 +56,9 @@ HRESULT SetClassLayout (
   
  Sin embargo, es posible que desea que los campos que disponen de acuerdo con la disposición en el código no administrado. En este caso, elija un diseño secuencial o explícito y llame a `SetClassLayout` para completar el diseño de los campos:  
   
--   Diseño secuencial: Especifique el tamaño de empaquetado. Un campo se alinea según su tamaño natural o el tamaño de empaquetado, sea cual sea resultados en el desplazamiento del campo más pequeño. Establecer `rFieldOffsets` y `ulClassSize` a cero.  
+- Diseño secuencial: Especifique el tamaño de empaquetado. Un campo se alinea según su tamaño natural o el tamaño de empaquetado, sea cual sea resultados en el desplazamiento del campo más pequeño. Establecer `rFieldOffsets` y `ulClassSize` a cero.  
   
--   Diseño explícito: Especificar el desplazamiento de cada campo o especificar el tamaño de la clase y el tamaño de empaquetado.  
+- Diseño explícito: Especificar el desplazamiento de cada campo o especificar el tamaño de la clase y el tamaño de empaquetado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

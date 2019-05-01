@@ -3,11 +3,11 @@ title: Utilización de la suplantación con la seguridad de transporte
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
 ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050680"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilización de la suplantación con la seguridad de transporte
 *Suplantación* es la capacidad de una aplicación de servidor para asumir la identidad del cliente. Es común que los servicios utilicen la suplantación al validar el acceso a los recursos. La aplicación de servidor se ejecuta utilizando una cuenta de servicio, pero cuando el servidor acepta una conexión de cliente, suplanta al cliente para que se realicen comprobaciones de acceso utilizando las credenciales del cliente. La seguridad de transporte es un mecanismo para pasar credenciales y proteger la comunicación mediante esas credenciales. En este tema describe cómo utilizar la seguridad de transporte en Windows Communication Foundation (WCF) con la característica de suplantación. Para obtener más información sobre la suplantación con seguridad de mensajes, vea [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -33,24 +33,24 @@ ms.locfileid: "59151442"
 ### <a name="named-pipe-transport"></a>Transporte de canalización con nombre  
  Los elementos siguientes se utilizan con el transporte de canalización con nombre:  
   
--   El transporte de canalización con nombre solo está pensado para su uso en el equipo local. El transporte de canalización con nombre en WCF impide explícitamente las conexiones entre equipos.  
+- El transporte de canalización con nombre solo está pensado para su uso en el equipo local. El transporte de canalización con nombre en WCF impide explícitamente las conexiones entre equipos.  
   
--   Las canalizaciones con nombre no se pueden utilizar con `Impersonate` o el nivel de suplantación `Delegate`. La canalización con nombre no puede exigir la garantía en equipo en estos niveles de suplantación.  
+- Las canalizaciones con nombre no se pueden utilizar con `Impersonate` o el nivel de suplantación `Delegate`. La canalización con nombre no puede exigir la garantía en equipo en estos niveles de suplantación.  
   
  Para obtener más información acerca de las canalizaciones con nombre, vea [elección del transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ### <a name="http-transport"></a>Transporte HTTP  
  Los enlaces que utilizan el transporte HTTP (<xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.BasicHttpBinding>) admiten varios esquemas de autenticación, como se explica en [descripción de la autenticación HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md). El nivel de suplantación admitido depende del esquema de autenticación. Los elementos siguientes se utilizan con el transporte HTTP:  
   
--   El esquema de autenticación `Anonymous` omite la suplantación.  
+- El esquema de autenticación `Anonymous` omite la suplantación.  
   
--   El `Basic` esquema de autenticación solo admite la `Delegate` nivel. Todos los niveles de suplantación inferiores se actualizan.  
+- El `Basic` esquema de autenticación solo admite la `Delegate` nivel. Todos los niveles de suplantación inferiores se actualizan.  
   
--   El esquema de autenticación `Digest` solo admite los niveles `Impersonate` y `Delegate`.  
+- El esquema de autenticación `Digest` solo admite los niveles `Impersonate` y `Delegate`.  
   
--   El esquema de autenticación `NTLM`, que se puede seleccionar directamente o mediante negociación, solo admite el nivel `Delegate` en el equipo local.  
+- El esquema de autenticación `NTLM`, que se puede seleccionar directamente o mediante negociación, solo admite el nivel `Delegate` en el equipo local.  
   
--   El esquema de autenticación Kerberos, que solo se puede seleccionar mediante negociación, puede utilizarse con cualquier nivel de suplantación admitido.  
+- El esquema de autenticación Kerberos, que solo se puede seleccionar mediante negociación, puede utilizarse con cualquier nivel de suplantación admitido.  
   
  Para obtener más información sobre el transporte HTTP, consulte [elección del transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   

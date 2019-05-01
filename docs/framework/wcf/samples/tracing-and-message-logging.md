@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
 ms.openlocfilehash: 079decb76b45566f354418d671145f0c284628c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007739"
 ---
 # <a name="tracing-and-message-logging"></a>Seguimiento y registro de mensajes
 Este ejemplo muestra cómo habilitar el seguimiento y registro de mensajes. Los rastros resultantes y registros de mensajes se ven utilizando el [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -52,11 +52,11 @@ Este ejemplo muestra cómo habilitar el seguimiento y registro de mensajes. Los 
   
  Es posible extender la traza que proporciona el ServiceModel al crear los rastros de actividad definidos por el usuario. El seguimiento de la actividad definido por el usuario le permite al usuario crear las actividades de seguimiento para:  
   
--   Agrupar rastros en las unidades lógicas de trabajo.  
+- Agrupar rastros en las unidades lógicas de trabajo.  
   
--   Poner en correlación las actividades a través de las transferencias y la propagación.  
+- Poner en correlación las actividades a través de las transferencias y la propagación.  
   
--   Reducir el costo de rendimiento de seguimiento de WCF (por ejemplo, el coste del espacio de disco de un archivo de registro).  
+- Reducir el costo de rendimiento de seguimiento de WCF (por ejemplo, el coste del espacio de disco de un archivo de registro).  
   
  Para obtener más información sobre el seguimiento de actividad definido por el usuario, consulte el [extender seguimiento](../../../../docs/framework/wcf/samples/extending-tracing.md) ejemplo.  
   

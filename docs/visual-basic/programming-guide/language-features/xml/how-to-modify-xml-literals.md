@@ -1,5 +1,5 @@
 ---
-title: Filtrar Modificar literales XML (Visual Basic)
+title: Procedimiento Modificar literales XML (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML axis [Visual Basic], Value
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
 ms.openlocfilehash: 003715b04f3a5c0fb41e846beb189f117378ea58
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053033"
 ---
-# <a name="how-to-modify-xml-literals-visual-basic"></a>Filtrar Modificar literales XML (Visual Basic)
+# <a name="how-to-modify-xml-literals-visual-basic"></a>Procedimiento Modificar literales XML (Visual Basic)
 
 Visual Basic ofrece formas cómodas modificar literales XML. Puede agregar o eliminar elementos y atributos, y también puede reemplazar un elemento existente con un nuevo elemento XML. Este tema proporcionan varios ejemplos de cómo modificar un literal XML existente.
 

@@ -3,11 +3,11 @@ title: Procedimientos recomendados de persistencia
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
 ms.openlocfilehash: fdbf61e559efbd978df1c5a46fcbbbbc528ec98a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005633"
 ---
 # <a name="persistence-best-practices"></a>Procedimientos recomendados de persistencia
 Este documento trata de los procedimientos recomendados el diseño de flujo de trabajo y de la configuración relacionada con la persistencia del flujo de trabajo.  
@@ -26,34 +26,34 @@ Este documento trata de los procedimientos recomendados el diseño de flujo de t
 ## <a name="configuration-of-scalability-parameters"></a>Configuración de los parámetros de escalabilidad  
  Los requisitos de escalabilidad y rendimiento determinan la configuración de los siguientes parámetros:  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
+- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>  
+- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>  
   
--   <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A>  
+- <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A>  
   
  Estos parámetros se deberían establecer como sigue, según sea el escenario.  
   
-### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>Escenario: un número pequeño de instancias de flujo de trabajo que requieren un tiempo de respuesta óptimo  
+### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>Escenario: Un pequeño número de instancias de flujo de trabajo que requieran un tiempo de respuesta óptimo  
  En este escenario, todas las instancias de flujo de trabajo deberían permanecer cargadas cuando se vuelven inactivas. Establezca <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> en un valor grande. El uso de esta configuración evita que una instancia de flujo de trabajo se mueva entre equipos. Utilice esta configuración solo se se cumplen una o más de las condiciones siguientes:  
   
--   Una instancia de flujo de trabajo recibe un mensaje único a lo largo de su duración.  
+- Una instancia de flujo de trabajo recibe un mensaje único a lo largo de su duración.  
   
--   Todas las instancias de flujo de trabajo se ejecutan en un solo equipo  
+- Todas las instancias de flujo de trabajo se ejecutan en un solo equipo  
   
--   El mismo equipo recibe todos los mensajes que son recibidos por una instancia de flujo de trabajo.  
+- El mismo equipo recibe todos los mensajes que son recibidos por una instancia de flujo de trabajo.  
   
  Utilice las actividades <xref:System.Activities.Statements.Persist> o establezca <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> en 0 para habilitar la recuperación de su instancia de flujo de trabajo después de errores en el host de servicio o en el equipo.  
   
-### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>Escenario: las instancias de flujo de trabajo están inactivas durante largos períodos de tiempo  
+### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>Escenario: Las instancias de flujo de trabajo están inactivas durante largos períodos de tiempo  
  En este escenario, establezca <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> en 0 para liberar los recursos lo antes posible.  
   
-### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>Escenario: las instancias de flujo de trabajo reciben varios mensajes en un período de tiempo corto  
+### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>Escenario: Las instancias de flujo de trabajo reciben varios mensajes en un breve período de tiempo  
  En este escenario, establezca <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> en 60 segundos si el mismo equipo recibe estos mensajes. Esto evita una secuencia rápida de descarga y carga de una instancia de flujo de trabajo. Esto permite que la instancia no se mantenga demasiado tiempo en memoria.  
   
  Establezca <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> en 0 y <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A> en BasicRetry o AggressiveRetry si estos mensajes pueden ser recibidos por equipos diferentes. Esto permite que la instancia de flujo de trabajo pueda ser cargada por otro equipo.  
   
-### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>Escenario: el flujo de trabajo utiliza las actividades de retraso con duraciones cortas  
+### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>Escenario: Flujo de trabajo utiliza las actividades de retraso con duraciones cortas  
  En este escenario, <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> sondea regularmente la base de datos de persistencia buscando las instancias que se deberían cargar por una actividad <xref:System.Activities.Statements.Delay> expirada. Si <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> encuentra un temporizador que expirará en el intervalo de sondeo siguiente, el Almacén de instancias de flujo de trabajo de SQL acorta el intervalo de sondeo. El siguiente sondeo se producirá después de que el temporizador haya expirado. De esta manera, el el Almacén de instancias de flujo de trabajo de SQL logra una gran exactitud de temporizadores que se ejecutan durante más tiempo que el intervalo de sondeo, que es establecida por <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A>. Para habilitar el procesamiento oportuno de los retrasos más cortos, la instancia de flujo de trabajo debe permanecer en memoria durante al menos un intervalo de sondeo.  
   
  Establezca <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> en 0 para escribir la fecha de expiración en la base de datos de persistencia.  

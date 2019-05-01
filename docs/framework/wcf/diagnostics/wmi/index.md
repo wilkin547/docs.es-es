@@ -3,11 +3,11 @@ title: Utilización del instrumental de administración de Windows (WMI) para di
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048292"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Utilización del instrumental de administración de Windows (WMI) para diagnósticos
 Windows Communication Foundation (WCF) expone los datos de inspección de un servicio en tiempo de ejecución a través de un proveedor de Instrumental de administración de Windows (WMI) de WCF.  
@@ -112,13 +112,13 @@ Windows Communication Foundation (WCF) expone los datos de inspección de un ser
   
      Este script de PowerShell usa el lenguaje de definición de descriptores de seguridad (SDDL) para conceder acceso al grupo de usuarios integrados para el espacio de nombres WMI "root/servicemodel". Especifica las ACL siguientes:  
   
-    -   Cuenta predefinida Administrador (BA) - Ya tenía acceso.  
+    - Cuenta predefinida Administrador (BA) - Ya tenía acceso.  
   
-    -   Servicio de red (NS) - Ya tenía acceso.  
+    - Servicio de red (NS) - Ya tenía acceso.  
   
-    -   Sistema local (LS) - Ya tenía acceso.  
+    - Sistema local (LS) - Ya tenía acceso.  
   
-    -   Usuarios integrado - El grupo al que se va a conceder acceso.  
+    - Usuarios integrado - El grupo al que se va a conceder acceso.  
   
 #### <a name="to-grant-provider-registration-access"></a>Para conceder acceso de registro de proveedores  
   

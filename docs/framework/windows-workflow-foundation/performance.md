@@ -3,11 +3,11 @@ title: Rendimiento de Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: f7590591bfac374f6de637f57fad9853b82ca20c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007036"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Rendimiento de Windows Workflow Foundation
 
@@ -376,25 +376,25 @@ public class Workflow1 : Activity
 
  Observe que el proveedor de persistencia de SQL de WF4 realiza más trabajo en el nivel de base de datos.  La base de datos SQL puede convertirse en un cuello de botella, por lo que es importante supervisar el uso de CPU y disco en ella.  Asegúrese de incluir los siguientes contadores de rendimiento de la base de datos SQL al realizar la prueba de rendimiento de las aplicaciones de flujo de trabajo:
 
--   PhysicalDisk\\tiempo de lectura de disco %
+- PhysicalDisk\\tiempo de lectura de disco %
 
--   PhysicalDisk\\% de tiempo de disco
+- PhysicalDisk\\% de tiempo de disco
 
--   PhysicalDisk\\hora de escritura de disco %
+- PhysicalDisk\\hora de escritura de disco %
 
--   PhysicalDisk\\% promedio Longitud de cola de disco
+- PhysicalDisk\\% promedio Longitud de cola de disco
 
--   PhysicalDisk\Avg. Longitud de cola de lectura de disco
+- PhysicalDisk\Avg. Longitud de cola de lectura de disco
 
--   PhysicalDisk\Avg. Longitud de cola de escritura de disco
+- PhysicalDisk\Avg. Longitud de cola de escritura de disco
 
--   Disco físico\Longitud de cola de disco actual
+- Disco físico\Longitud de cola de disco actual
 
--   Información de procesador\\% de tiempo de procesador
+- Información de procesador\\% de tiempo de procesador
 
--   Bloqueos temporales de SQL\Media de tiempo de espera de bloqueo temporal (ms)
+- Bloqueos temporales de SQL\Media de tiempo de espera de bloqueo temporal (ms)
 
--   Bloqueos temporales de SQL\Esperas de bloqueo temporal por segundo
+- Bloqueos temporales de SQL\Esperas de bloqueo temporal por segundo
 
 ### <a name="tracking"></a>Seguimiento
  El seguimiento de flujo de trabajo se puede utilizar para realizar el seguimiento del progreso de un flujo de trabajo.  La información incluida en los eventos de seguimiento la determina un perfil de seguimiento.  Cuanto más complejo sea el perfil de seguimiento, más costoso será el seguimiento.
@@ -407,13 +407,13 @@ public class Workflow1 : Activity
 
  Estas son algunas de las ventajas del enfoque de utilizar ETW en lugar de SQL para el seguimiento:
 
--   La recopilación de eventos de seguimiento se puede separar a otro proceso.  Esto proporciona mayor flexibilidad en la forma de grabar los eventos.
+- La recopilación de eventos de seguimiento se puede separar a otro proceso.  Esto proporciona mayor flexibilidad en la forma de grabar los eventos.
 
--   Eventos de seguimiento de ETW se combinan fácilmente con los eventos ETW de WCF u otros proveedores ETW, como un proveedor de kernel o SQL Server.
+- Eventos de seguimiento de ETW se combinan fácilmente con los eventos ETW de WCF u otros proveedores ETW, como un proveedor de kernel o SQL Server.
 
--   Los autores de flujos de trabajo no necesitan modificar un flujo de trabajo para trabajar mejor con una implementación de seguimiento en particular, como el modo por lotes del servicio de seguimiento de SQL de WF3.
+- Los autores de flujos de trabajo no necesitan modificar un flujo de trabajo para trabajar mejor con una implementación de seguimiento en particular, como el modo por lotes del servicio de seguimiento de SQL de WF3.
 
--   Un administrador puede activar o desactivar el seguimiento sin reciclar el proceso de host.
+- Un administrador puede activar o desactivar el seguimiento sin reciclar el proceso de host.
 
  Las ventajas en cuanto a rendimiento para el seguimiento ETW plantean una desventaja.  Los eventos ETW se pueden perder si el sistema está sometido a una intensa presión de recursos.  El procesamiento de eventos no puede bloquear la ejecución normal de programas y, por consiguiente, no se garantiza que todos los eventos ETW se difundan a sus suscriptores.  Esto hace que el seguimiento ETW sea apropiado para la supervisión de estado pero no para el proceso de auditoría.
 

@@ -3,11 +3,11 @@ title: Integración de almacenamiento en caché de ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002734"
 ---
 # <a name="aspnet-caching-integration"></a>Integración de almacenamiento en caché de ASP.NET
 En este ejemplo se muestra cómo utilizar la memoria caché de resultados de ASP.NET con el modelo de programación HTTP wEB de WCF. Este tema se centra en la característica de integración de la memoria caché de resultados de ASP.NET.  
@@ -34,11 +34,11 @@ En este ejemplo se muestra cómo utilizar la memoria caché de resultados de ASP
 ## <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
  El ejemplo consta de tres proyectos:  
   
--   **Servicio**: Un proyecto de aplicación Web que incluye un servicio HTTP WCF hospedado en ASP.NET.  
+- **Servicio**: Un proyecto de aplicación Web que incluye un servicio HTTP WCF hospedado en ASP.NET.  
   
--   **Cliente**: Proyecto de aplicación de consola que realiza las llamadas al servicio.  
+- **Cliente**: Proyecto de aplicación de consola que realiza las llamadas al servicio.  
   
--   **Common**: Una biblioteca compartida que contiene el tipo de cliente utilizado por el cliente y el servicio.  
+- **Common**: Una biblioteca compartida que contiene el tipo de cliente utilizado por el cliente y el servicio.  
   
  Cuando se ejecuta la aplicación de consola Cliente, el cliente realiza las solicitudes al servicio y escribe la información pertinente de las respuestas en la ventana de la consola.  
   

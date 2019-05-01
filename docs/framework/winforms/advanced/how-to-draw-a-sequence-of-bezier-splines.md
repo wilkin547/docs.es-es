@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Bezier splines [Windows Forms], drawing sequence of
 ms.assetid: 37a0bedb-20c2-4cf0-91fa-a5509e826b30
 ms.openlocfilehash: 976787f5830282a581d05a9c24d1f83dceca4b25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004260"
 ---
 # <a name="how-to-draw-a-sequence-of-b233zier-splines"></a>Procedimiento Dibujar una secuencia de B&#233;curvas spline de Bézier
 Puede usar el <xref:System.Drawing.Graphics.DrawBeziers%2A> método de la <xref:System.Drawing.Graphics> conectado de clase para dibujar una secuencia de curvas spline de Bézier.  

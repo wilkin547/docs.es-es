@@ -7,11 +7,11 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 ms.openlocfilehash: e68cf69830aef88f46ff2e288c5aad548db39bdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032388"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementación del proveedor de UI Automation en el cliente
 > [!NOTE]
@@ -39,13 +39,13 @@ ms.locfileid: "59224473"
   
  Los proveedores implementados en el propio código del cliente se registran mediante <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>. Este método toma como argumento una matriz de estructuras <xref:System.Windows.Automation.ClientSideProviderDescription> y cada una de ellas especifica las siguientes propiedades:  
   
--   Una función de devolución de llamada que crea el objeto de proveedor.  
+- Una función de devolución de llamada que crea el objeto de proveedor.  
   
--   El nombre de clase de los controles que suministrará el proveedor.  
+- El nombre de clase de los controles que suministrará el proveedor.  
   
--   El nombre de la imagen de la aplicación (normalmente el nombre completo del archivo ejecutable) que suministrará el proveedor.  
+- El nombre de la imagen de la aplicación (normalmente el nombre completo del archivo ejecutable) que suministrará el proveedor.  
   
--   Marcas que rigen la manera en que el nombre de clase se compara con las clases de ventana que se encuentran en la aplicación de destino.  
+- Marcas que rigen la manera en que el nombre de clase se compara con las clases de ventana que se encuentran en la aplicación de destino.  
   
  Los dos últimos parámetros son opcionales. El cliente puede especificar el nombre de la imagen de la aplicación de destino cuando quiera usar diferentes proveedores para distintas aplicaciones. Por ejemplo, el cliente puede usar un proveedor para un control de vista de lista [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] de una aplicación conocida que admita el patrón de vista múltiple y otro para un control similar de otra aplicación conocida que no lo hace.  
   

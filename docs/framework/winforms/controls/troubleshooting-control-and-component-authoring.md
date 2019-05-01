@@ -12,26 +12,26 @@ helpviewer_keywords:
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009219"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Solución de problemas relacionados con la creación de controles y componentes
 En este tema se enumeran los siguientes problemas comunes que surgen cuando se desarrollan componentes y controles. Para obtener más información, vea [Programar con componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
--   No se puede agregar el control al cuadro de herramientas  
+- No se puede agregar el control al cuadro de herramientas  
   
--   No se puede depurar el control de usuario de Windows Forms o un componente  
+- No se puede depurar el control de usuario de Windows Forms o un componente  
   
--   El evento se genera dos veces en el control o el componente heredado  
+- El evento se genera dos veces en el control o el componente heredado  
   
--   Error en tiempo de diseño: "No se pudo crear el componente '*nombre del componente*'"  
+- Error en tiempo de diseño: "No se pudo crear el componente '*nombre del componente*'"  
   
--   STAThreadAttribute  
+- STAThreadAttribute  
   
--   El icono del componente no aparece en el cuadro de herramientas  
+- El icono del componente no aparece en el cuadro de herramientas  
   
 ## <a name="cannot-add-control-to-toolbox"></a>No se puede agregar el control al cuadro de herramientas  
  Si desea agregar un control personalizado que creó en otro proyecto o un control de terceros al **cuadro de herramientas**, debe hacerlo manualmente. Si el proyecto actual contiene el control o componente, debería aparecer en el **cuadro de herramientas** automáticamente. Para obtener más información, vea [Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
@@ -42,11 +42,11 @@ En este tema se enumeran los siguientes problemas comunes que surgen cuando se d
   
 2. En el cuadro de diálogo **Elegir elementos de cuadro de herramientas**, agregue el componente:  
   
-    -   Si desea agregar un control o un componente de .NET Framework, haga clic en la pestaña **Componentes de .NET Framework**.  
+    - Si desea agregar un control o un componente de .NET Framework, haga clic en la pestaña **Componentes de .NET Framework**.  
   
          -O bien-  
   
-    -   Si desea agregar un componente COM o un control ActiveX, haga clic en la pestaña **Componentes COM**.  
+    - Si desea agregar un componente COM o un control ActiveX, haga clic en la pestaña **Componentes COM**.  
   
 3. Si el control aparece en el cuadro de diálogo, confirme que está seleccionado y, a continuación, haga clic en **Aceptar**.  
   
@@ -54,15 +54,15 @@ En este tema se enumeran los siguientes problemas comunes que surgen cuando se d
   
 4. Si el control no aparece en el cuadro de diálogo, haga lo siguiente:  
   
-    1.  Haga clic en el botón **Examinar**.  
+    1. Haga clic en el botón **Examinar**.  
   
-    2.  Vaya a la carpeta que contiene el archivo .dll que contiene el control.  
+    2. Vaya a la carpeta que contiene el archivo .dll que contiene el control.  
   
-    3.  Seleccione el archivo .dll y haga clic en **Abrir**.  
+    3. Seleccione el archivo .dll y haga clic en **Abrir**.  
   
          El control aparece en el cuadro de diálogo.  
   
-    4.  Confirme que el control está seleccionado y, a continuación, haga clic en **Aceptar**.  
+    4. Confirme que el control está seleccionado y, a continuación, haga clic en **Aceptar**.  
   
          El control se agrega al **cuadro de herramientas**.  
   

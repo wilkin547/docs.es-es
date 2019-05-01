@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033727"
 ---
 # <a name="how-to-map-database-relationships"></a>Procedimiento para asignar relaciones de base de datos
 Puede codificar como referencias de propiedad en la clase de entidad cualquier relación de datos que vaya a ser siempre la misma. En la base de datos de ejemplo Northwind, por ejemplo, dado que los clientes normalmente realizan pedidos, hay siempre una relación en el modelo entre los clientes y sus pedidos.  
@@ -22,11 +22,11 @@ Puede codificar como referencias de propiedad en la clase de entidad cualquier r
   
  La mayoría de las relaciones son de uno a varios, como en el ejemplo que se incluye más adelante en este tema. También puede representar relaciones uno a uno y varios a varios de la manera siguiente:  
   
--   Uno a uno: Para representar este tipo de relación mediante la inclusión de <xref:System.Data.Linq.EntitySet%601> en ambos lados.  
+- Uno a uno: Para representar este tipo de relación mediante la inclusión de <xref:System.Data.Linq.EntitySet%601> en ambos lados.  
   
      Por ejemplo, considere un `Customer` - `SecurityCode` relación, se crean de modo que el código de seguridad del cliente no se encuentra en el `Customer` de tabla y las personas autorizadas pueden tener acceso solo.  
   
--   Varios a varios: En las relaciones de varios a varios, la clave principal de la tabla de vínculos (también denominado el *unión* tabla) suele estar formada por un conjunto de claves externas de las otras dos tablas.  
+- Varios a varios: En las relaciones de varios a varios, la clave principal de la tabla de vínculos (también denominado el *unión* tabla) suele estar formada por un conjunto de claves externas de las otras dos tablas.  
   
      Por ejemplo, considere un `Employee` - `Project` relación muchos a muchos formada mediante la tabla de vínculos `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requiere que tal relación se modele utilizando tres clases: `Employee`, `Project` y `EmployeeProject`. En este caso, al cambiar la relación entre `Employee` y `Project` puede parecer necesario actualizar la clave principal de `EmployeeProject`. Sin embargo, esta situación se modela mejor eliminando un `EmployeeProject` existente y creando un nuevo `EmployeeProject`.  
   

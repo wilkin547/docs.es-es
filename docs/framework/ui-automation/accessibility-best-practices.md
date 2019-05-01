@@ -6,11 +6,11 @@ helpviewer_keywords:
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033233"
 ---
 # <a name="accessibility-best-practices"></a>Procedimientos de accesibilidad recomendados
 > [!NOTE]
@@ -78,9 +78,9 @@ ms.locfileid: "59074240"
   
  Las aplicaciones deben proporcionar las interfaces de teclado siguientes:  
   
--   tabulaciones para todos los controles con los que pueda interactuar el usuario, como botones, vínculos o cuadros de lista  
+- tabulaciones para todos los controles con los que pueda interactuar el usuario, como botones, vínculos o cuadros de lista  
   
--   orden de tabulación lógico  
+- orden de tabulación lógico  
   
 <a name="Show_the_Keyboard_Focus"></a>   
 ### <a name="show-the-keyboard-focus"></a>Mostrar el foco del teclado  
@@ -90,11 +90,11 @@ ms.locfileid: "59074240"
   
  Las aplicaciones deben hacer lo siguiente con el foco del teclado:  
   
--   un elemento deberá tener siempre el foco del teclado  
+- un elemento deberá tener siempre el foco del teclado  
   
--   el foco del teclado debe ser visible y obvio  
+- el foco del teclado debe ser visible y obvio  
   
--   las selecciones y/o los elementos donde se encuentra el foco deben aparecer resaltados visualmente  
+- las selecciones y/o los elementos donde se encuentra el foco deben aparecer resaltados visualmente  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Compatibilidad con los estándares de navegación y esquemas de navegación eficaces  
@@ -102,11 +102,11 @@ ms.locfileid: "59074240"
   
  Las aplicaciones deben proporcionar las interfaces de teclado siguientes:  
   
--   teclas de método abreviado y teclas de acceso subrayadas para todos los comandos, menús y controles  
+- teclas de método abreviado y teclas de acceso subrayadas para todos los comandos, menús y controles  
   
--   métodos abreviados de teclado para los vínculos importantes  
+- métodos abreviados de teclado para los vínculos importantes  
   
--   todos los elementos de menú deben tener una tecla de acceso, todos los botones deben tener teclas de aceleración y todos los comandos deben tener una tecla de aceleración.  
+- todos los elementos de menú deben tener una tecla de acceso, todos los botones deben tener teclas de aceleración y todos los comandos deben tener una tecla de aceleración.  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>No dejar que la ubicación del mouse interfiera con la navegación mediante el teclado  

@@ -11,24 +11,24 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
 ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012482"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Representar un control de formularios Windows Forms
 Representación se refiere al proceso de creación de una representación visual en pantalla de un usuario. Windows Forms utiliza [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (la nueva biblioteca de gráficos de Windows) para la representación. Las clases administradas que proporcionan acceso a [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] están en el <xref:System.Drawing?displayProperty=nameWithType> espacio de nombres y sus subespacios de nombres.  
   
  Los siguientes elementos son necesarios en la representación del control:  
   
--   La funcionalidad de dibujo proporcionada por la clase base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+- La funcionalidad de dibujo proporcionada por la clase base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
--   Los elementos fundamentales de la [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] biblioteca de gráficos.  
+- Los elementos fundamentales de la [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] biblioteca de gráficos.  
   
--   La geometría de la región de dibujo.  
+- La geometría de la región de dibujo.  
   
--   El procedimiento para liberar recursos gráficos.  
+- El procedimiento para liberar recursos gráficos.  
   
 ## <a name="drawing-functionality-provided-by-control"></a>Funcionalidad proporcionada por el Control de dibujo  
  La clase base <xref:System.Windows.Forms.Control> proporciona funcionalidad de dibujo a través de su <xref:System.Windows.Forms.Control.Paint> eventos. Un control provoca la <xref:System.Windows.Forms.Control.Paint> evento cada vez que necesita actualizar su apariencia. Para obtener más información sobre los eventos de .NET Framework, vea [controlar y provocar eventos](../../../standard/events/index.md).  

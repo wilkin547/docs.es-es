@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 8a59a78bbf7ec38f32b14e67d4cb35a9c2375e94
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012032"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Razones para modernizar las aplicaciones .NET existentes a las aplicaciones optimizadas para la nube
 
@@ -33,13 +33,13 @@ Para lograr la agilidad, también necesita procesos automatizados de DevOps que 
 
 La lista siguiente describe los principios principales o prácticas para las aplicaciones optimizadas para la nube. Tenga en cuenta que puede adoptar todas o solo algunos de estos principios en un enfoque incremental o progresivo:
 
--   **Contenedores**. Los contenedores ofrecen la posibilidad de incluir las dependencias de aplicación con la propia aplicación. Inclusión en contenedores reduce considerablemente el número de problemas que pueden producirse al implementar en entornos de producción o de prueba en entornos de ensayo. En última instancia, contenedores de mejoran la agilidad de entrega de aplicaciones.
+- **Contenedores**. Los contenedores ofrecen la posibilidad de incluir las dependencias de aplicación con la propia aplicación. Inclusión en contenedores reduce considerablemente el número de problemas que pueden producirse al implementar en entornos de producción o de prueba en entornos de ensayo. En última instancia, contenedores de mejoran la agilidad de entrega de aplicaciones.
 
--   **En la nube escalable y resistente**. La nube proporciona una plataforma que sea administrado, flexible, escalable y resistente. Estas características son fundamentales para obtener mejoras en los costos y distribuir alta disponibilidad y confiabilidad de las aplicaciones en una entrega continua. Servicios administrados como bases de datos administrados, administra almacenar en caché como un servicio (CaaS) y el almacenamiento administrado son los componentes fundamentales aliviar los costos de mantenimiento de la aplicación.
+- **En la nube escalable y resistente**. La nube proporciona una plataforma que sea administrado, flexible, escalable y resistente. Estas características son fundamentales para obtener mejoras en los costos y distribuir alta disponibilidad y confiabilidad de las aplicaciones en una entrega continua. Servicios administrados como bases de datos administrados, administra almacenar en caché como un servicio (CaaS) y el almacenamiento administrado son los componentes fundamentales aliviar los costos de mantenimiento de la aplicación.
 
--   **Supervisión**. No puede tener una aplicación confiable sin tener una buena forma de detectar y diagnosticar excepciones y problemas de rendimiento de aplicaciones. Deberá obtener conocimiento a través de la administración del rendimiento de aplicación y el análisis instantáneo.
+- **Supervisión**. No puede tener una aplicación confiable sin tener una buena forma de detectar y diagnosticar excepciones y problemas de rendimiento de aplicaciones. Deberá obtener conocimiento a través de la administración del rendimiento de aplicación y el análisis instantáneo.
 
--   **DevOps referencia cultural y la entrega continua**. Adoptar prácticas de DevOps, requiere un cambio cultural en el que los equipos ya no trabajan en silos independientes. Canalizaciones de CI/CD sólo son posibles cuando hay un aumento de la colaboración entre el desarrollo y los equipos de operaciones de TI, compatibles con contenedores y herramientas CI/CD.
+- **DevOps referencia cultural y la entrega continua**. Adoptar prácticas de DevOps, requiere un cambio cultural en el que los equipos ya no trabajan en silos independientes. Canalizaciones de CI/CD sólo son posibles cuando hay un aumento de la colaboración entre el desarrollo y los equipos de operaciones de TI, compatibles con contenedores y herramientas CI/CD.
 
 Figura 4-2 se muestran los principales pilares opcionales de una aplicación optimizada para la nube. Los pilares más implementa, el readier la aplicación estará triunfar en cumple las expectativas de sus clientes.
 
@@ -55,13 +55,13 @@ Su organización puede adoptar estas tecnologías y enfoques gradualmente. No de
 
 Puede obtener mediante la conversión de una aplicación existente a una aplicación optimizada para la nube (sin necesidad de rediseñar o codificación) las siguientes ventajas:
 
--   **Reducir los costes, ya que la infraestructura administrada se controla mediante el proveedor de nube**. Aplicaciones optimizadas para la nube obtienen las ventajas de la nube mediante el uso de elasticidad de la nube de fábrica, el escalado automático y alta disponibilidad. Ventajas están relacionadas no solo a las características de proceso (máquinas virtuales y contenedores), pero también dependen de los recursos en la nube, como DBaaS, CaaS y cualquier infraestructura de una aplicación es posible que sea necesario.
+- **Reducir los costes, ya que la infraestructura administrada se controla mediante el proveedor de nube**. Aplicaciones optimizadas para la nube obtienen las ventajas de la nube mediante el uso de elasticidad de la nube de fábrica, el escalado automático y alta disponibilidad. Ventajas están relacionadas no solo a las características de proceso (máquinas virtuales y contenedores), pero también dependen de los recursos en la nube, como DBaaS, CaaS y cualquier infraestructura de una aplicación es posible que sea necesario.
 
--   **Infraestructura y aplicaciones resistentes**. Al migrar a la nube, deberá adoptar los errores transitorios se producirán errores en la nube. Además, hardware y la infraestructura de nube son "reemplazables," lo que aumenta las oportunidades de tiempo de inactividad transitorio. Al mismo tiempo, las capacidades de nube interna y determinadas técnicas de desarrollo de aplicaciones que implementan la resistencia y automatizan la recuperación facilitan mucho más fácil para recuperarse de errores inesperados en la nube.
+- **Infraestructura y aplicaciones resistentes**. Al migrar a la nube, deberá adoptar los errores transitorios se producirán errores en la nube. Además, hardware y la infraestructura de nube son "reemplazables," lo que aumenta las oportunidades de tiempo de inactividad transitorio. Al mismo tiempo, las capacidades de nube interna y determinadas técnicas de desarrollo de aplicaciones que implementan la resistencia y automatizan la recuperación facilitan mucho más fácil para recuperarse de errores inesperados en la nube.
 
--   **Información detallada sobre el rendimiento de la aplicación**. En la nube las herramientas de supervisión, como Azure Application Insights proporciona visualización de notificaciones, registro y administración de la salud. Los registros de auditoría que aplicaciones fácil depurar y auditoría, es fundamental para una aplicación en la nube confiable.
+- **Información detallada sobre el rendimiento de la aplicación**. En la nube las herramientas de supervisión, como Azure Application Insights proporciona visualización de notificaciones, registro y administración de la salud. Los registros de auditoría que aplicaciones fácil depurar y auditoría, es fundamental para una aplicación en la nube confiable.
 
--   **Portabilidad de aplicaciones, con las implementaciones de agile**. Los contenedores (contenedores Linux o Windows, según el motor de Docker) ofrecen la mejor solución para evitar una aplicación bloqueada en la nube. Fácilmente mediante el uso de contenedores, los hosts de Docker y orquestadores de varias nubes, puede mover de un entorno o en la nube a otra. Los contenedores eliminan la fricción que normalmente se produce en las implementaciones en cualquier entorno (fase, prueba y producción).
+- **Portabilidad de aplicaciones, con las implementaciones de agile**. Los contenedores (contenedores Linux o Windows, según el motor de Docker) ofrecen la mejor solución para evitar una aplicación bloqueada en la nube. Fácilmente mediante el uso de contenedores, los hosts de Docker y orquestadores de varias nubes, puede mover de un entorno o en la nube a otra. Los contenedores eliminan la fricción que normalmente se produce en las implementaciones en cualquier entorno (fase, prueba y producción).
 
 Todas estas ventajas proporcionan en última instancia reducciones de costos importante para el ciclo de vida de aplicación to-end.
 

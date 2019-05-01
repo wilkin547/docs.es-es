@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
 ms.openlocfilehash: d709123895f361c1d2268a218b4163c8d195e1b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047971"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procedimiento para configurar un puerto con un certificado SSL
 Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí mismos con el <xref:System.ServiceModel.WSHttpBinding> que utiliza seguridad de transporte de clase, también debe configurar un puerto con un certificado X.509. Si no está creando un servicio autohospedado, puede hospedar su servicio en Servicios de Internet Information Server (IIS). Para obtener más información, consulte [seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -27,15 +27,15 @@ Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí m
   
  En este tema se describe cómo se realizan varios procedimientos:  
   
--   Determinar la configuración de puerto actual de un equipo.  
+- Determinar la configuración de puerto actual de un equipo.  
   
--   Obtener la huella digital de un certificado (necesario para los dos procedimientos siguientes).  
+- Obtener la huella digital de un certificado (necesario para los dos procedimientos siguientes).  
   
--   Enlazar un certificado SSL a una configuración de puerto.  
+- Enlazar un certificado SSL a una configuración de puerto.  
   
--   Enlazar un certificado SSL a una configuración del puerto y admitir los certificados de cliente.  
+- Enlazar un certificado SSL a una configuración del puerto y admitir los certificados de cliente.  
   
--   Eliminar un certificado SSL de un número de puerto.  
+- Eliminar un certificado SSL de un número de puerto.  
   
  Tenga en cuenta que para modificar los certificados almacenados en el equipo se requieren privilegios de administrador.  
   
@@ -71,9 +71,9 @@ Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí m
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   El **-i** conmutador tiene la sintaxis de `IP`:`port` e indica a la herramienta para establecer el certificado en el puerto 8012 del equipo. De forma opcional, también se pueden reemplazar los cuatro ceros que preceden el número por la dirección IP real del equipo.  
+    - El **-i** conmutador tiene la sintaxis de `IP`:`port` e indica a la herramienta para establecer el certificado en el puerto 8012 del equipo. De forma opcional, también se pueden reemplazar los cuatro ceros que preceden el número por la dirección IP real del equipo.  
   
-    -   El **-h** conmutador especifica la huella digital del certificado.  
+    - El **-h** conmutador especifica la huella digital del certificado.  
   
 2. En [!INCLUDE[wv](../../../../includes/wv-md.md)], use la herramienta Netsh.exe, como se muestra en el ejemplo siguiente.  
   
@@ -81,11 +81,11 @@ Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí m
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    -   El **certhash** parámetro especifica la huella digital del certificado.  
+    - El **certhash** parámetro especifica la huella digital del certificado.  
   
-    -   El **ipport** parámetro especifica la dirección IP y puerto, y funciona exactamente igual que el **-i** switch de la herramienta Httpcfg.exe descrita.  
+    - El **ipport** parámetro especifica la dirección IP y puerto, y funciona exactamente igual que el **-i** switch de la herramienta Httpcfg.exe descrita.  
   
-    -   El **appid** parámetro es un GUID que se puede usar para identificar la aplicación propietaria.  
+    - El **appid** parámetro es un GUID que se puede usar para identificar la aplicación propietaria.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Para enlazar un Certificado SSL a un número de puerto y a certificados de cliente de compatibilidad  
   

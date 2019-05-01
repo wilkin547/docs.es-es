@@ -6,8 +6,8 @@ ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050771"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Solución de problemas de la mensajería en cola
 Esta sección contiene preguntas comunes y solución de problemas para utilizar las colas en Windows Communication Foundation (WCF).  
@@ -29,11 +29,11 @@ Esta sección contiene preguntas comunes y solución de problemas para utilizar 
   
  **R:** Las siguientes características están disponibles en MSMQ 4.0 pero no en MSMQ 3.0:  
   
--   La cola de mensajes no enviados personalizada solo se admite en MSMQ 4.0.  
+- La cola de mensajes no enviados personalizada solo se admite en MSMQ 4.0.  
   
--   MSMQ 3.0 y 4.0 administran los mensajes dudosos de manera diferente.  
+- MSMQ 3.0 y 4.0 administran los mensajes dudosos de manera diferente.  
   
--   Sólo MSMQ 4.0 admite la lectura de transacción remota.  
+- Sólo MSMQ 4.0 admite la lectura de transacción remota.  
   
  Para obtener más información, consulte [diferencias en las características de puesta en cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
@@ -60,19 +60,19 @@ Esta sección contiene preguntas comunes y solución de problemas para utilizar 
   
  **R:** Para determinar la respuesta, funcionan a través de la lista de comprobación siguiente:  
   
--   Compruebe que los requisitos de cola transaccional sean compatibles con las convicciones especificadas. Tenga en cuenta los principios siguientes:  
+- Compruebe que los requisitos de cola transaccional sean compatibles con las convicciones especificadas. Tenga en cuenta los principios siguientes:  
   
-    -   Puede enviar mensajes duraderos (datagramas y sesiones) con "exactamente una vez" garantías (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) solo a una cola transaccional.  
+    - Puede enviar mensajes duraderos (datagramas y sesiones) con "exactamente una vez" garantías (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) solo a una cola transaccional.  
   
-    -   Solo puede enviar las sesiones con "exactamente una" convicción.  
+    - Solo puede enviar las sesiones con "exactamente una" convicción.  
   
-    -   Se requiere una transacción para recibir mensajes en una sesión de una cola transaccional.  
+    - Se requiere una transacción para recibir mensajes en una sesión de una cola transaccional.  
   
-    -   Puede enviar o recibir mensajes volátiles o duraderos (solo datagramas) sin convicciones (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) solo a una cola no transaccional.  
+    - Puede enviar o recibir mensajes volátiles o duraderos (solo datagramas) sin convicciones (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) solo a una cola no transaccional.  
   
--   Compruebe la cola de mensajes no enviados. Si encuentra los mensajes allí, determine por qué no se entregaron.  
+- Compruebe la cola de mensajes no enviados. Si encuentra los mensajes allí, determine por qué no se entregaron.  
   
--   Compruebe la conectividad o los problemas de direccionamiento de las colas de salida.  
+- Compruebe la conectividad o los problemas de direccionamiento de las colas de salida.  
   
  **P: ¿** He especificado una cola de mensajes no enviados personalizada, pero al iniciar la aplicación de remitente, obtengo una excepción que no se encuentra la cola de mensajes no enviados o la aplicación emisora no tiene permiso para la cola. ¿Por qué está sucediendo esto?  
   
@@ -184,17 +184,17 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **R:** Pueden existir tres posibles razones:  
   
--   Si está en modo del dominio, la recepción de transacciones remotas requiere el acceso de red de Microsoft DTC (Coordinador de transacciones distribuidas) (MSDTC). Esto puede habilitar mediante **agregar o quitar componentes**.  
+- Si está en modo del dominio, la recepción de transacciones remotas requiere el acceso de red de Microsoft DTC (Coordinador de transacciones distribuidas) (MSDTC). Esto puede habilitar mediante **agregar o quitar componentes**.  
   
      ![DTC de red de captura de pantalla que muestra la habilitación de acceso.](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)  
   
--   Compruebe el modo de autenticación para comunicarse con el administrador de transacciones. Si está en modo de grupo de trabajo, no debe seleccionarse "se requiere autenticación". Si está en modo de dominio, debe seleccionar "Autenticación mutua requerida".  
+- Compruebe el modo de autenticación para comunicarse con el administrador de transacciones. Si está en modo de grupo de trabajo, no debe seleccionarse "se requiere autenticación". Si está en modo de dominio, debe seleccionar "Autenticación mutua requerida".  
   
      ![Habilitar transacciones XA](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")  
   
--   Asegúrese de que MSDTC está en la lista de excepciones en el **Internet Connection Firewall** configuración.  
+- Asegúrese de que MSDTC está en la lista de excepciones en el **Internet Connection Firewall** configuración.  
   
--   Asegúrese de que está utilizando [!INCLUDE[wv](../../../../includes/wv-md.md)]. MSMQ en [!INCLUDE[wv](../../../../includes/wv-md.md)] admite la lectura de transacciones remotas. MSMQ en versiones anteriores de Windows no admite la lectura de transacciones remotas.  
+- Asegúrese de que está utilizando [!INCLUDE[wv](../../../../includes/wv-md.md)]. MSMQ en [!INCLUDE[wv](../../../../includes/wv-md.md)] admite la lectura de transacciones remotas. MSMQ en versiones anteriores de Windows no admite la lectura de transacciones remotas.  
   
  **P: ¿** Cuando el servicio que lee de la cola es un servicio de red, por ejemplo, en un sitio Web host, ¿por qué obtengo una excepción de acceso denegado se genera cuando se leen de la cola?  
   

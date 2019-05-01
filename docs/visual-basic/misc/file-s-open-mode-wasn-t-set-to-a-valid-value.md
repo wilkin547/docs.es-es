@@ -3,11 +3,11 @@ title: El modo de apertura del archivo no se estableció en un valor válido
 ms.date: 07/20/2015
 ms.assetid: 969541f6-9ff6-4804-ba61-0d17370060ef
 ms.openlocfilehash: 28ee1776d0b99d1a960414edd975ced4f4d85402
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024851"
 ---
 # <a name="files-open-mode-wasnt-set-to-a-valid-value"></a>El modo de apertura del archivo no se estableció en un valor válido
 El valor proporcionado para el modo de apertura del archivo no era válido. En la siguiente tabla se muestran los valores válidos para la enumeración <xref:Microsoft.VisualBasic.OpenMode> .  
@@ -22,7 +22,7 @@ El valor proporcionado para el modo de apertura del archivo no era válido. En l
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Compruebe el valor que se proporciona para el modo de apertura del archivo.  
+- Compruebe el valor que se proporciona para el modo de apertura del archivo.  
   
 ## <a name="see-also"></a>Vea también
 

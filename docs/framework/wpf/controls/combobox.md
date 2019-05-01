@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
 ms.openlocfilehash: d8684ac382fefa308b671d5459125bd755960142
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017927"
 ---
 # <a name="combobox"></a>ComboBox
 El <xref:System.Windows.Controls.ComboBox> control presenta a los usuarios con una lista de opciones. La lista es que se muestra y oculta como el control se expande y contrae. En su estado predeterminado, se contrae la lista, mostrar sólo una opción. El usuario hace clic en un botón para ver una lista completa de opciones.  

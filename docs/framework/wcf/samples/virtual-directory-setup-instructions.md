@@ -3,11 +3,11 @@ title: Instrucciones de configuración del directorio virtual
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007557"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instrucciones de configuración del directorio virtual
 Los ejemplos de Windows Communication Foundation (WCF) están diseñados para compartir un directorio virtual común denominado servicemodelsamples que está asignado a la carpeta %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
@@ -59,9 +59,9 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
 7. De forma predeterminada, las casillas siguientes están activadas:  
   
-    -   **Read**  
+    - **Read**  
   
-    -   **Ejecutar secuencias de comandos (por ejemplo, ASP)**  
+    - **Ejecutar secuencias de comandos (por ejemplo, ASP)**  
   
 8. Haga clic en **siguiente**y, a continuación, haga clic en **finalizar** para completar el asistente.  
   
@@ -84,11 +84,11 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
 2. De forma predeterminada, las casillas siguientes están activadas:  
   
-    -   **Read**  
+    - **Read**  
   
-    -   **Registrar visitas**  
+    - **Registrar visitas**  
   
-    -   **Indizar este recurso**  
+    - **Indizar este recurso**  
   
 3. Seleccione el **examen de directorios** casilla de verificación. Esto permite tener acceso al directorio del directorio mediante Internet Explorer, lo que resulta útil cuando se depura un servicio.  
   
@@ -130,21 +130,21 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
      Si no está en la lista:  
   
-    1.  Haga clic en **Inicio** y después en **Panel de control**.  
+    1. Haga clic en **Inicio** y después en **Panel de control**.  
   
-    2.  Si no ve el **cuentas de usuario** icono, haga clic en **cambiar a vista por categorías**.  
+    2. Si no ve el **cuentas de usuario** icono, haga clic en **cambiar a vista por categorías**.  
   
-    3.  Haga clic en el **cuentas de usuario** icono.  
+    3. Haga clic en el **cuentas de usuario** icono.  
   
-    4.  Bajo "o elija un icono del Panel de Control," haga clic en **cuentas de usuario**.  
+    4. Bajo "o elija un icono del Panel de Control," haga clic en **cuentas de usuario**.  
   
-    5.  En el **cuentas de usuario** cuadro de diálogo, haga clic en el **avanzadas** ficha.  
+    5. En el **cuentas de usuario** cuadro de diálogo, haga clic en el **avanzadas** ficha.  
   
-    6.  Haga clic en **Avanzado**.  
+    6. Haga clic en **Avanzado**.  
   
-    7.  En el **usuarios y grupos locales** cuadro de diálogo, haga clic para expandir el **usuarios** carpeta.  
+    7. En el **usuarios y grupos locales** cuadro de diálogo, haga clic para expandir el **usuarios** carpeta.  
   
-    8.  En el panel derecho, haga doble clic en **cuenta de invitado para Internet**.  
+    8. En el panel derecho, haga doble clic en **cuenta de invitado para Internet**.  
   
     9. En el **propiedades** cuadro de diálogo, copie el nombre se usa como la cuenta de invitado de Internet. De forma predeterminada, el nombre comienza con "USR_" seguido por el nombre del equipo.  
   
@@ -166,17 +166,17 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
      Si el servicio de red no está en la lista:  
   
-    1.  Haga clic en **Agregar**.  
+    1. Haga clic en **Agregar**.  
   
-    2.  En el **Seleccionar usuarios o grupos** cuadro de diálogo, escriba el nombre del equipo seguido por una barra diagonal inversa.  
+    2. En el **Seleccionar usuarios o grupos** cuadro de diálogo, escriba el nombre del equipo seguido por una barra diagonal inversa.  
   
-    3.  Tipo **servicio** después de la barra diagonal inversa (sin espacio).  
+    3. Tipo **servicio** después de la barra diagonal inversa (sin espacio).  
   
-    4.  Haga clic en **comprobar nombres**.  
+    4. Haga clic en **comprobar nombres**.  
   
-    5.  Si se encuentran varios nombres, seleccione **NETWORK SERVICE** y haga clic en **Aceptar**.  
+    5. Si se encuentran varios nombres, seleccione **NETWORK SERVICE** y haga clic en **Aceptar**.  
   
-    6.  Haga clic en **Aceptar** para cerrar el **Seleccionar usuarios o grupos** cuadro de diálogo.  
+    6. Haga clic en **Aceptar** para cerrar el **Seleccionar usuarios o grupos** cuadro de diálogo.  
   
 6. Si utiliza Windows XP SP2 con IIS 5.1, compruebe que cuenta de invitado para Internet y ASPNET aparecen en la **los nombres de usuario o grupo** cuadro.  
   
@@ -184,11 +184,11 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
      Para comprobar si ASPNET forma parte de la **usuarios** grupo de seguridad:  
   
-    1.  En el **iniciar** menú, haga clic en **Panel de Control**.  
+    1. En el **iniciar** menú, haga clic en **Panel de Control**.  
   
-    2.  Haga clic en el **cuentas de usuario** icono.  
+    2. Haga clic en el **cuentas de usuario** icono.  
   
-    3.  En el **grupo** columna, compruebe que el valor de **ASPNET** es "Users".  
+    3. En el **grupo** columna, compruebe que el valor de **ASPNET** es "Users".  
   
 ## <a name="see-also"></a>Vea también
 

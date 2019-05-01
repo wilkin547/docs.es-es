@@ -17,15 +17,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a1d082cae19bd83c90e063d841a0c9e4602bc40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62040708"
 ---
 # <a name="createinstanceenumwmi-function"></a>Función CreateInstanceEnumWmi
 
-Devuelve un enumerador que devuelve las instancias de una clase especificada que cumplen los criterios de selección especificados.
+Devuelve un enumerador que devuelve las instancias de una clase especificada que cumpla los criterios de selección especificados.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 

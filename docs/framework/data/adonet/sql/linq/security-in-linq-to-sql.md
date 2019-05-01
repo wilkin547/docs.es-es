@@ -3,11 +3,11 @@ title: Seguridad de LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
 ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037003"
 ---
 # <a name="security-in-linq-to-sql"></a>Seguridad de LINQ to SQL
 Siempre hay riesgos de seguridad al conectarse a una base de datos. Aunque LINQ to SQL puede incluir algunos modos nuevos de trabajar con datos de SQL Server, no proporciona ningún mecanismo de seguridad adicional.  
@@ -25,13 +25,13 @@ Siempre hay riesgos de seguridad al conectarse a una base de datos. Aunque LINQ 
   
  Sin la seguridad integrada, se necesitará una contraseña de texto no cifrado en la cadena de conexión. El mejor modo de ayudar a proteger la seguridad de la cadena de conexión, en lo que respecta al aumento de orden de riesgos, se detalla a continuación:  
   
--   Utilice la seguridad integrada.  
+- Utilice la seguridad integrada.  
   
--   Proteja las cadenas de conexión con contraseñas y reduzca el tráfico de cadenas de conexión.  
+- Proteja las cadenas de conexión con contraseñas y reduzca el tráfico de cadenas de conexión.  
   
--   Use una clase <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> en lugar de una cadena de conexión dado que limita la duración de la exposición. Se puede crear una instancia de la clase <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> de LINQ to SQL mediante <xref:System.Data.SqlClient.SqlConnection>.  
+- Use una clase <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> en lugar de una cadena de conexión dado que limita la duración de la exposición. Se puede crear una instancia de la clase <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> de LINQ to SQL mediante <xref:System.Data.SqlClient.SqlConnection>.  
   
--   Reduzca las duraciones y los puntos de contacto de todas las cadenas de conexión.  
+- Reduzca las duraciones y los puntos de contacto de todas las cadenas de conexión.  
   
 ## <a name="see-also"></a>Vea también
 

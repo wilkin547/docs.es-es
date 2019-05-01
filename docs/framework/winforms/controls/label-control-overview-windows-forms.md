@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
 ms.openlocfilehash: cc38b0f3ded9e3c2a5a4146eb6bb474921d1e19f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012869"
 ---
 # <a name="label-control-overview-windows-forms"></a>Información general sobre el control Label (formularios Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Label> controles se usan para mostrar texto o imágenes que no se puede editar el usuario. Se usan para identificar los objetos en un formulario, para proporcionar una descripción de lo que algunos controles hará si hace clic en, por ejemplo, o para mostrar información en respuesta a un evento de tiempo de ejecución o proceso en la aplicación. Por ejemplo, puede utilizar etiquetas para agregar títulos descriptivos a los cuadros de texto, cuadros de lista, cuadros combinados y así sucesivamente. También puede escribir código que cambia el texto mostrado por una etiqueta en respuesta a eventos en tiempo de ejecución. Por ejemplo, si la aplicación tarda unos minutos en procesar un cambio, puede mostrar un mensaje de estado de procesamiento en una etiqueta.  

@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
 ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031257"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Interceptar entradas del lápiz óptico
 El <xref:System.Windows.Input.StylusPlugIns> arquitectura proporciona un mecanismo para implementar el control de bajo nivel a través de <xref:System.Windows.Input.Stylus> de entrada y la creación de la entrada de lápiz digital <xref:System.Windows.Ink.Stroke> objetos. La <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> clase proporciona un mecanismo para implementar un comportamiento personalizado y aplicarlo a la secuencia de datos procedente del dispositivo de lápiz para un rendimiento óptimo.  
   
  Este tema contiene las siguientes subsecciones:  
   
--   [Arquitectura](#Architecture)  
+- [Arquitectura](#Architecture)  
   
--   [Implementar complementos de lápiz](#ImplementingStylusPlugins)  
+- [Implementar complementos de lápiz](#ImplementingStylusPlugins)  
   
--   [Agregar el complemento a un InkCanvas](#AddingYourPluginToAnInkCanvas)  
+- [Agregar el complemento a un InkCanvas](#AddingYourPluginToAnInkCanvas)  
   
--   [Conclusión](#Conclusion)  
+- [Conclusión](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>Arquitectura  

@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
 ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026424"
 ---
 # <a name="extension-methods"></a>Métodos de extensión.
 Métodos de extensión son una característica del lenguaje que permite a los métodos estáticos llamar mediante sintaxis de llamada de método de instancia. Estos métodos deben tener al menos un parámetro, que representa la instancia en que es el método operar.  
@@ -22,9 +22,9 @@ Métodos de extensión son una característica del lenguaje que permite a los m�
   
  **✓ CONSIDER** mediante métodos de extensión en cualquiera de los siguientes escenarios:  
   
--   Para proporcionar la aplicación auxiliar de funcionalidad relevante para cada implementación de una interfaz, si dice funcionalidad puede escribirse en términos de la interfaz básica. Esto es porque las implementaciones concretas en caso contrario, no se puede asignar a las interfaces. Por ejemplo, el `LINQ to Objects` operadores se implementan como métodos de extensión para todos los <xref:System.Collections.Generic.IEnumerable%601> tipos. Por lo tanto, cualquier `IEnumerable<>` implementación es automáticamente habilitado para LINQ.  
+- Para proporcionar la aplicación auxiliar de funcionalidad relevante para cada implementación de una interfaz, si dice funcionalidad puede escribirse en términos de la interfaz básica. Esto es porque las implementaciones concretas en caso contrario, no se puede asignar a las interfaces. Por ejemplo, el `LINQ to Objects` operadores se implementan como métodos de extensión para todos los <xref:System.Collections.Generic.IEnumerable%601> tipos. Por lo tanto, cualquier `IEnumerable<>` implementación es automáticamente habilitado para LINQ.  
   
--   Cuando un método de instancia introduce una dependencia en algún tipo, pero esta dependencia interrumpiría las reglas de administración de dependencia. Por ejemplo, una dependencia de <xref:System.String> a <xref:System.Uri?displayProperty=nameWithType> probablemente no es deseable de modo que `String.ToUri()` devolver el método de instancia `System.Uri` sería un diseño incorrecto desde una perspectiva de administración de dependencias. Un método de extensión estático `Uri.ToUri(this string str)` devolver `System.Uri` sería un mejor diseño.  
+- Cuando un método de instancia introduce una dependencia en algún tipo, pero esta dependencia interrumpiría las reglas de administración de dependencia. Por ejemplo, una dependencia de <xref:System.String> a <xref:System.Uri?displayProperty=nameWithType> probablemente no es deseable de modo que `String.ToUri()` devolver el método de instancia `System.Uri` sería un diseño incorrecto desde una perspectiva de administración de dependencias. Un método de extensión estático `Uri.ToUri(this string str)` devolver `System.Uri` sería un mejor diseño.  
   
  **X AVOID** definir métodos de extensión en <xref:System.Object?displayProperty=nameWithType>.  
   

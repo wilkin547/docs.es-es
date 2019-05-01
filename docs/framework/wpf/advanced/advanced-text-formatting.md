@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
 ms.openlocfilehash: fa707ed9c409a2e6933629a658bfe650b43f3233
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032011"
 ---
 # <a name="advanced-text-formatting"></a>Formato de texto avanzado
 Windows Presentation Foundation (WPF) proporciona un sólido conjunto de [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] para incluir texto en la aplicación. Diseño y [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], tales como <xref:System.Windows.Controls.TextBlock>, proporcione los más comunes y elementos de uso general para la presentación de texto. Dibujo [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], tales como <xref:System.Windows.Media.GlyphRunDrawing> y <xref:System.Windows.Media.FormattedText>, proporcionan un medio para incluir texto con formato en dibujos. En el nivel más avanzado, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proporciona un motor para controlar todos los aspectos de presentación de texto, como la administración de objetos incrustados, administración del formato de ejecución de texto y administración del almacén de texto de formato de texto extensible.  
@@ -55,11 +55,11 @@ Windows Presentation Foundation (WPF) proporciona un sólido conjunto de [!INCLU
   
  Para controlar la virtualización del almacén de texto, el almacén de texto debe derivarse de <xref:System.Windows.Media.TextFormatting.TextSource>. <xref:System.Windows.Media.TextFormatting.TextSource> define el método que usa el formateador de texto para recuperar ejecuciones de texto desde el almacén de texto. <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> es el método utilizado por el formateador de texto para recuperar el texto que se ejecuta usado en el formato de línea. La llamada a <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> el formateador de texto realiza repetidamente hasta que se produzca una de las condiciones siguientes:  
   
--   Un <xref:System.Windows.Media.TextFormatting.TextEndOfLine> o se devuelve una subclase.  
+- Un <xref:System.Windows.Media.TextFormatting.TextEndOfLine> o se devuelve una subclase.  
   
--   El ancho acumulado de ejecuciones de texto supera el ancho de línea máximo especificado en la llamada para crear el formateador de texto o la llamada para el formateador de texto <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> método.  
+- El ancho acumulado de ejecuciones de texto supera el ancho de línea máximo especificado en la llamada para crear el formateador de texto o la llamada para el formateador de texto <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> método.  
   
--   Un [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] se devuelve la secuencia de nueva línea, como "CF", "LF" o "CRLF".  
+- Un [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] se devuelve la secuencia de nueva línea, como "CF", "LF" o "CRLF".  
   
 <a name="section4"></a>   
 ## <a name="providing-text-runs"></a>Abastecimiento de ejecuciones de texto  

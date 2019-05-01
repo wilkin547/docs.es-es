@@ -7,15 +7,15 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
 ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014211"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Empaquetar e implementar extensiones My (Visual Basic)
 
-Visual Basic proporciona una manera fácil de implementar personalizado `My` extensiones de espacio de nombres mediante el uso de plantillas de Visual Studio. Si va a crear una plantilla de proyecto para que su `My` las extensiones son una parte integral del nuevo tipo de proyecto, simplemente puede incluir el personalizado `My` código de extensión con el proyecto al exportar la plantilla. Para obtener más información acerca de cómo exportar las plantillas de proyecto, vea [Cómo: crear plantillas de proyecto](/visualstudio/ide/how-to-create-project-templates).
+Visual Basic proporciona una manera fácil de implementar personalizado `My` extensiones de espacio de nombres mediante el uso de plantillas de Visual Studio. Si va a crear una plantilla de proyecto para que su `My` las extensiones son una parte integral del nuevo tipo de proyecto, simplemente puede incluir el personalizado `My` código de extensión con el proyecto al exportar la plantilla. Para obtener más información acerca de cómo exportar las plantillas de proyecto, vea [Cómo: Crear plantillas de proyecto](/visualstudio/ide/how-to-create-project-templates).
 
 Si su custom `My` extensión está en un solo archivo de código, puede exportar el archivo como una plantilla de elementos que los usuarios pueden agregar a cualquier tipo de proyecto de Visual Basic. A continuación, puede personalizar la plantilla de elemento para habilitar funcionalidades adicionales y el comportamiento personalizado `My` extensión en un proyecto de Visual Basic. Estas funcionalidades incluyen lo siguiente:
 
@@ -33,7 +33,7 @@ El primer paso para crear un paquete de implementación para un personalizado `M
 
 ## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Exportar una extensión de espacio de nombres My como una plantilla de elemento
 
-Una vez que tenga un archivo de código que incluye su `My` extensión del espacio de nombres, puede exportar el archivo de código como una plantilla de elemento de Visual Studio. Para obtener instrucciones sobre cómo exportar un archivo como una plantilla de elemento de Visual Studio, consulte [Cómo: crear plantillas de elementos](/visualstudio/ide/how-to-create-item-templates).
+Una vez que tenga un archivo de código que incluye su `My` extensión del espacio de nombres, puede exportar el archivo de código como una plantilla de elemento de Visual Studio. Para obtener instrucciones sobre cómo exportar un archivo como una plantilla de elemento de Visual Studio, consulte [Cómo: Crear plantillas de elementos](/visualstudio/ide/how-to-create-item-templates).
 
 > [!NOTE]
 > Si su `My` extensión del espacio de nombres tiene una dependencia en un ensamblado determinado, puede personalizar la plantilla de elemento para instalar automáticamente su `My` extensión del espacio de nombres cuando se agrega una referencia a ese ensamblado. Como resultado, que desea excluir esa referencia de ensamblado al exportar el archivo de código como una plantilla de elemento de Visual Studio.
@@ -60,8 +60,8 @@ El archivo CustomData contiene un <`VBMyExtensionTemplate>` elemento que tiene a
 
 |Atributo|Descripción|
 |---|---|
-|`ID`|Requerido. Un identificador único para la extensión. Si la extensión que tiene este identificador ya se ha agregado al proyecto, no se pedirá al usuario que vuelva a agregarlo.|
-|`Version`|Requerido. Un número de versión para la plantilla de elemento.|
+|`ID`|Obligatorio. Un identificador único para la extensión. Si la extensión que tiene este identificador ya se ha agregado al proyecto, no se pedirá al usuario que vuelva a agregarlo.|
+|`Version`|Obligatorio. Un número de versión para la plantilla de elemento.|
 |`AssemblyFullName`|Opcional. Nombre de ensamblado. Cuando se agrega una referencia a este ensamblado al proyecto, se pedirá al usuario para agregar el `My` extensión desde esta plantilla de elemento.|
 
 ### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Agregar el \<CustomDataSignature > elemento para el archivo .vstemplate

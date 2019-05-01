@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
 ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048054"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Depuración de errores de autenticación de Windows
 Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, la interfaz del proveedor de compatibilidad para seguridad (SSPI) controla los procesos de seguridad. Cuando se producen errores de seguridad en el nivel de SSPI, se exponen mediante Windows Communication Foundation (WCF). En este tema se proporciona un marco y conjunto de cuestiones que le ayudarán a diagnosticar los errores.  
@@ -45,13 +45,13 @@ Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, l
   
  Específicamente, los cuatro tipos de cuenta incluyen:  
   
--   Usuario local: Perfil de usuario solo el equipo. Por ejemplo: `MachineName\Administrator` o `MachineName\ProfileName`.  
+- Usuario local: Perfil de usuario solo el equipo. Por ejemplo: `MachineName\Administrator` o `MachineName\ProfileName`.  
   
--   Sistema local: La cuenta integrada del sistema en un equipo que no está unido a un dominio.  
+- Sistema local: La cuenta integrada del sistema en un equipo que no está unido a un dominio.  
   
--   Usuario de dominio: Una cuenta de usuario en un dominio de Windows. Por ejemplo: `DomainName\ProfileName`.  
+- Usuario de dominio: Una cuenta de usuario en un dominio de Windows. Por ejemplo: `DomainName\ProfileName`.  
   
--   Equipo del dominio: Un proceso con la identidad de máquina que se ejecutan en un equipo unido a un dominio de Windows. Por ejemplo: `MachineName\Network Service`.  
+- Equipo del dominio: Un proceso con la identidad de máquina que se ejecutan en un equipo unido a un dominio de Windows. Por ejemplo: `MachineName\Network Service`.  
   
 > [!NOTE]
 >  Se captura la credencial de servicio cuando se llama al método <xref:System.ServiceModel.ICommunicationObject.Open%2A> de la clase <xref:System.ServiceModel.ServiceHost>. Se lee la credencial del cliente siempre que el cliente envíe un mensaje.  
@@ -85,15 +85,15 @@ Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, l
   
 2. Es necesaria la negociación de SSPI:  
   
-    1.  Si está usando enlaces estándar, establezca la propiedad `NegotiateServiceCredential` como `true`.  
+    1. Si está usando enlaces estándar, establezca la propiedad `NegotiateServiceCredential` como `true`.  
   
-    2.  Si está utilizando los enlaces personalizados, establezca el atributo `AuthenticationMode` del elemento `Security` como `SspiNegotiated`.  
+    2. Si está utilizando los enlaces personalizados, establezca el atributo `AuthenticationMode` del elemento `Security` como `SspiNegotiated`.  
   
 3. Es necesaria la negociación de SSPI para utilizar Kerberos al no permitir el uso de NTLM:  
   
-    1.  Realice esta acción en el código, con la siguiente instrucción: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1. Realice esta acción en el código, con la siguiente instrucción: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2.  O bien puede hacerlo en el archivo de configuración estableciendo el atributo `allowNtlm` como `false`. Este atributo se encuentra en la [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
+    2. O bien puede hacerlo en el archivo de configuración estableciendo el atributo `allowNtlm` como `false`. Este atributo se encuentra en la [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
 ### <a name="ntlm-protocol"></a>Protocolo NTLM  
   

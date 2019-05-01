@@ -10,11 +10,11 @@ helpviewer_keywords:
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
 ms.openlocfilehash: e764c7e181870d8faf6157cacc13164977ce2e3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013431"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Procedimiento Mostrar los botones de opción en un control MenuStrip (formularios Windows Forms)
 Botones de opción, también conocido como botones de radio, son similares a las casillas excepto en que los usuarios pueden seleccionar solo uno en uno. Aunque de forma predeterminada el <xref:System.Windows.Forms.ToolStripMenuItem> clase no proporciona el comportamiento del botón de opción, la clase proporciona el comportamiento de la casilla de verificación que se puede personalizar para implementar el comportamiento del botón de opción para los elementos de menú en un <xref:System.Windows.Forms.MenuStrip> control.  
@@ -78,7 +78,7 @@ Botones de opción, también conocido como botones de radio, son similares a las
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
+- Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
   
 ## <a name="see-also"></a>Vea también
 

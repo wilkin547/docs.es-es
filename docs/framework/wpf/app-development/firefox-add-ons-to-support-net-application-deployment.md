@@ -8,11 +8,11 @@ helpviewer_keywords:
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
 ms.openlocfilehash: 4b0552ab9f565d9118415bc2da2823762f34fe2c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007414"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Complementos de Firefox para la implementación de aplicaciones .NET
 Habilitar Windows Presentation Foundation (WPF) complemento para Firefox y el Asistente de .NET Framework para Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], sueltos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]y las aplicaciones ClickOnce para que funcione con el explorador Mozilla Firefox.  
@@ -27,9 +27,9 @@ Habilitar Windows Presentation Foundation (WPF) complemento para Firefox y el As
 ## <a name="net-framework-assistant-for-firefox"></a>Asistente de .NET Framework para Firefox  
  El Asistente de .NET Framework para Firefox permite que las aplicaciones independientes de ClickOnce para ejecutarse desde el explorador Firefox. El Asistente de .NET Framework para Firefox funciona exactamente igual cuando se instala antes y después el explorador Firefox. Cuando se inicia el explorador Firefox y [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] está instalado, Firefox busca e instala el Asistente de .NET Framework para Firefox. Los usuarios pueden configurar el Asistente de .NET Framework para Firefox hacer lo siguiente:  
   
--   Preguntar antes de ejecutar la aplicación ClickOnce.  
+- Preguntar antes de ejecutar la aplicación ClickOnce.  
   
--   Informe todas las versiones instaladas de .NET Framework o solo la versión más reciente.  
+- Informe todas las versiones instaladas de .NET Framework o solo la versión más reciente.  
   
  El Asistente de .NET Framework para Firefox se incluye con el [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]. Para obtener información acerca de cómo quitar el Asistente de .NET Framework para Firefox, consulte [cómo quitar el Asistente de .NET Framework para Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
 ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050706"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes
 Los mensajes en cola pueden producir un error en la entrega. Estos mensajes que no se han podido entregar se graban en una cola de mensajes no enviados. Los errores en la entrega pueden deberse a motivos como errores de la red, una cola eliminada, una cola completa, error de autenticación o un error para entregar a tiempo.  
@@ -30,18 +30,18 @@ Los mensajes en cola pueden producir un error en la entrega. Estos mensajes que 
   
  El enlace tiene las propiedades de cola de mensajes no enviados siguientes:  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>Leer mensajes de la cola de mensajes no enviados  
  Una aplicación que lee los mensajes de una cola de mensajes no enviados es similar a un servicio WCF que se lee de una cola de aplicación, salvo por las diferencias menores siguientes:  
   
--   Para leer mensajes de una cola de mensajes no enviados transaccional de un sistema, el identificador URI (Uniform Resource Identifier) debe tener el formato siguiente: net.msmq://localhost/system$;DeadXact.  
+- Para leer mensajes de una cola de mensajes no enviados transaccional de un sistema, el identificador URI (Uniform Resource Identifier) debe tener el formato siguiente: net.msmq://localhost/system$;DeadXact.  
   
--   Para leer mensajes de una cola de mensajes no enviados no transaccional de un sistema, el URI debe tener el formato siguiente: net.msmq://localhost/system$;DeadLetter.  
+- Para leer mensajes de una cola de mensajes no enviados no transaccional de un sistema, el URI debe tener el formato siguiente: net.msmq://localhost/system$;DeadLetter.  
   
--   Para leer mensajes de una cola de mensajes no enviados personalizada, el URI debe tener el formato: MSMQ://localhost/Private/\<*custom-dlq-name*> donde *custom-dlq-name* es el nombre de personalizado cola de mensajes no enviados.  
+- Para leer mensajes de una cola de mensajes no enviados personalizada, el URI debe tener el formato: MSMQ://localhost/Private/\<*custom-dlq-name*> donde *custom-dlq-name* es el nombre de personalizado cola de mensajes no enviados.  
   
  Para obtener más información acerca de la dirección de las colas, consulte [puntos de conexión de servicio y direccionamiento de la cola](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   

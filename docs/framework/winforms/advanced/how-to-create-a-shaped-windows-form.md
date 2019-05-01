@@ -19,11 +19,11 @@ helpviewer_keywords:
 - forms [Windows Forms], custom shapes
 ms.assetid: 6e6041e0-8e67-4487-b1e9-e410dbd1ef6c
 ms.openlocfilehash: 03fcbb97db180e71283810e2daeab9be272b9d5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004385"
 ---
 # <a name="how-to-create-a-shaped-windows-form"></a>Procedimiento para crear un formulario Windows Forms con forma
 En este ejemplo da forma elíptica que cambia el tamaño con el formulario a un formulario.  
@@ -36,7 +36,7 @@ En este ejemplo da forma elíptica que cambia el tamaño con el formulario a un 
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Referencias a los espacios de nombres <xref:System.Windows.Forms> y <xref:System.Drawing>.  
+- Referencias a los espacios de nombres <xref:System.Windows.Forms> y <xref:System.Drawing>.  
   
  Este ejemplo se invalida el <xref:System.Windows.Forms.Control.OnPaint%2A> método para cambiar la forma del formulario. Para usar este código, copie la declaración del método, así como el código de dibujo dentro del método.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
 ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037757"
 ---
 # <a name="componentresourcekey-markup-extension"></a>Extensión de marcado ComponentResourceKey
 Define y hace referencia a las claves de recursos que se cargan desde ensamblados externos. Esto permite una búsqueda de recursos especificar un tipo de destino en un ensamblado, en lugar de un diccionario de recursos explícita en un ensamblado o en una clase.  
@@ -52,9 +52,9 @@ Define y hace referencia a las claves de recursos que se cargan desde ensamblado
 ## <a name="remarks"></a>Comentarios  
  Tal como se muestra en los usos anteriores, un {`ComponentResourceKey`} uso de la extensión de marcado se encuentra en dos lugares:  
   
--   La definición de una clave dentro de un diccionario de recursos de tema, según lo proporcionado por el autor de un control.  
+- La definición de una clave dentro de un diccionario de recursos de tema, según lo proporcionado por el autor de un control.  
   
--   Obtener acceso a un recurso de temas desde el ensamblado, cuando el control vuelve a crear plantillas, pero desea utilizar los valores de propiedad que proceden de los recursos proporcionados por los temas del control.  
+- Obtener acceso a un recurso de temas desde el ensamblado, cuando el control vuelve a crear plantillas, pero desea utilizar los valores de propiedad que proceden de los recursos proporcionados por los temas del control.  
   
  Para hacer referencia a los recursos del componente que proceden de los temas, se recomienda por lo general utilice `{DynamicResource}` lugar `{StaticResource}`. Esto se muestra en los usos. `{DynamicResource}` se recomienda porque el propio tema puede cambiarse por el usuario. Si desea que el recurso de componente que mejor coincida con intención del autor de control para admitir un tema, debe habilitar la referencia de recurso de componente que también sean dinámicos.  
   

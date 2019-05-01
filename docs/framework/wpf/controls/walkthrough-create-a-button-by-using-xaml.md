@@ -5,11 +5,11 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024018"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Tutorial: Crear un botón mediante XAML
 Es el objetivo de este tutorial aprender a crear un botón animado para su uso en una aplicación de Windows Presentation Foundation (WPF). En este tutorial usa los estilos y una plantilla para crear un recurso de botón personalizado que permite la reutilización del código y la separación de lógica de botón de la declaración del botón. Este tutorial está escrito completamente en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -421,15 +421,15 @@ Es el objetivo de este tutorial aprender a crear un botón animado para su uso e
 ## <a name="summary"></a>Resumen  
  En este tutorial, realizó los ejercicios siguientes:  
   
--   Como destino un <xref:System.Windows.Style> a un tipo de objeto (<xref:System.Windows.Controls.Button>).  
+- Como destino un <xref:System.Windows.Style> a un tipo de objeto (<xref:System.Windows.Controls.Button>).  
   
--   Controla las propiedades básicas de los botones de la aplicación completa utilizando la <xref:System.Windows.Style>.  
+- Controla las propiedades básicas de los botones de la aplicación completa utilizando la <xref:System.Windows.Style>.  
   
--   Crear recursos como degradados que se usará para los valores de propiedad de la <xref:System.Windows.Style> establecedores.  
+- Crear recursos como degradados que se usará para los valores de propiedad de la <xref:System.Windows.Style> establecedores.  
   
--   Personalizar el aspecto de botones en toda la aplicación aplicando una plantilla a los botones.  
+- Personalizar el aspecto de botones en toda la aplicación aplicando una plantilla a los botones.  
   
--   Personalizar el comportamiento de los botones en respuesta a las acciones del usuario (como <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, y <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) que incluye los efectos de animación.  
+- Personalizar el comportamiento de los botones en respuesta a las acciones del usuario (como <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, y <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) que incluye los efectos de animación.  
   
 ## <a name="see-also"></a>Vea también
 

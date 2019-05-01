@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
 ms.openlocfilehash: e1f7a7da1ab2ce0ad7d7908ecd1f896d229b8e1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037913"
 ---
 # <a name="formulate-projections"></a>Formular proyecciones
 Los ejemplos siguientes muestran cómo el `select` instrucción C# y `Select` instrucción en Visual Basic se puede combinar con otras características para formar proyecciones de consulta.  
@@ -66,11 +66,11 @@ Los ejemplos siguientes muestran cómo el `select` instrucción C# y `Select` in
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se utilizan consultas anidadas para devolver estos resultados:  
   
--   Una secuencia de todos los pedidos y sus `OrderID` correspondientes.  
+- Una secuencia de todos los pedidos y sus `OrderID` correspondientes.  
   
--   Una subsecuencia de los elementos del pedido que tienen descuento.  
+- Una subsecuencia de los elementos del pedido que tienen descuento.  
   
--   La cantidad de dinero que se ahorra si no se incluye el envío en el precio.  
+- La cantidad de dinero que se ahorra si no se incluye el envío en el precio.  
   
  [!code-csharp[DLinqQueryExamples#65](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#65)]
  [!code-vb[DLinqQueryExamples#65](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#65)]  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051642"
 ---
 # <a name="drag-and-drop-overview"></a>Información general sobre la función de arrastrar y colocar
 Este tema proporciona información general sobre la compatibilidad con arrastrar y colocar en aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Arrastrar y colocar se refiere normalmente a un método de transferencia de datos que implica el uso de un mouse (o cualquier otro dispositivo señalador) para seleccionar uno o más objetos, arrastrar estos objetos sobre un destino deseado en la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] y soltarlos.  
@@ -41,11 +41,11 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
 ## <a name="data-transfer"></a>Transferencia de datos  
  Arrastrar y colocar es parte de un área más general de transferencia de datos. La transferencia de datos incluye la operación de arrastrar y colocar, así como la operación de copiar y pegar. Una operación de arrastrar y colocar es análoga a una operación de copiar y pegar o cortar y pegar que se usa para transferir datos de un objeto o aplicación a otro mediante el Portapapeles del sistema. Ambos tipos de operaciones requieren:  
   
--   Un objeto de origen que proporciona los datos.  
+- Un objeto de origen que proporciona los datos.  
   
--   Una manera de almacenar temporalmente los datos transferidos.  
+- Una manera de almacenar temporalmente los datos transferidos.  
   
--   Un objeto de destino que recibe los datos.  
+- Un objeto de destino que recibe los datos.  
   
  En una operación de copiar y pegar, el Portapapeles del sistema se usa para almacenar temporalmente los datos transferidos; en una operación de arrastrar y colocar, se usa un <xref:System.Windows.DataObject> para almacenar los datos. Desde el punto de vista conceptual, un objeto de datos consta de uno o más pares de <xref:System.Object> que contienen los datos reales y un identificador de formato de datos correspondiente.  
   
@@ -94,31 +94,31 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
   
  Para implementar la operación básica de arrastrar y colocar, realice las siguientes tareas:  
   
--   Identifique el elemento que será un origen de arrastre. Un origen de arrastre puede ser un <xref:System.Windows.UIElement> o un <xref:System.Windows.ContentElement>.  
+- Identifique el elemento que será un origen de arrastre. Un origen de arrastre puede ser un <xref:System.Windows.UIElement> o un <xref:System.Windows.ContentElement>.  
   
--   Cree un controlador de eventos en el origen de arrastre que iniciará la operación de arrastrar y colocar. El evento suele ser un evento <xref:System.Windows.UIElement.MouseMove>.  
+- Cree un controlador de eventos en el origen de arrastre que iniciará la operación de arrastrar y colocar. El evento suele ser un evento <xref:System.Windows.UIElement.MouseMove>.  
   
--   En el controlador de eventos del origen de arrastre, llame al método <xref:System.Windows.DragDrop.DoDragDrop%2A> para que inicie la operación de arrastrar y colocar. En la llamada a <xref:System.Windows.DragDrop.DoDragDrop%2A>, especifique el origen de arrastre, los datos que se van a transferir y los efectos permitidos.  
+- En el controlador de eventos del origen de arrastre, llame al método <xref:System.Windows.DragDrop.DoDragDrop%2A> para que inicie la operación de arrastrar y colocar. En la llamada a <xref:System.Windows.DragDrop.DoDragDrop%2A>, especifique el origen de arrastre, los datos que se van a transferir y los efectos permitidos.  
   
--   Identifique el elemento que será un destino de colocación. Un destino de colocación puede ser un <xref:System.Windows.UIElement> o un <xref:System.Windows.ContentElement>.  
+- Identifique el elemento que será un destino de colocación. Un destino de colocación puede ser un <xref:System.Windows.UIElement> o un <xref:System.Windows.ContentElement>.  
   
--   En el destino de colocación, establezca la propiedad <xref:System.Windows.UIElement.AllowDrop%2A> en `true`.  
+- En el destino de colocación, establezca la propiedad <xref:System.Windows.UIElement.AllowDrop%2A> en `true`.  
   
--   En el destino de colocación, cree un controlador de eventos <xref:System.Windows.DragDrop.Drop> para procesar los datos colocados.  
+- En el destino de colocación, cree un controlador de eventos <xref:System.Windows.DragDrop.Drop> para procesar los datos colocados.  
   
--   En el controlador de eventos <xref:System.Windows.DragDrop.Drop>, extraiga los datos de <xref:System.Windows.DragEventArgs> mediante los métodos <xref:System.Windows.DataObject.GetDataPresent%2A> y <xref:System.Windows.DataObject.GetData%2A>.  
+- En el controlador de eventos <xref:System.Windows.DragDrop.Drop>, extraiga los datos de <xref:System.Windows.DragEventArgs> mediante los métodos <xref:System.Windows.DataObject.GetDataPresent%2A> y <xref:System.Windows.DataObject.GetData%2A>.  
   
--   En el controlador de eventos <xref:System.Windows.DragDrop.Drop>, use los datos para realizar la operación de arrastrar y colocar deseada.  
+- En el controlador de eventos <xref:System.Windows.DragDrop.Drop>, use los datos para realizar la operación de arrastrar y colocar deseada.  
   
  Puede mejorar la implementación de arrastrar y colocar creando un <xref:System.Windows.DataObject> personalizado y controlando eventos opcionales de origen de arrastre y destino de colocación, como se muestra en las siguientes tareas:  
   
--   Para transferir datos personalizados o varios elementos de datos, cree un <xref:System.Windows.DataObject> para pasar al método <xref:System.Windows.DragDrop.DoDragDrop%2A>.  
+- Para transferir datos personalizados o varios elementos de datos, cree un <xref:System.Windows.DataObject> para pasar al método <xref:System.Windows.DragDrop.DoDragDrop%2A>.  
   
--   Para realizar acciones adicionales durante un arrastre, controle los eventos <xref:System.Windows.DragDrop.DragEnter>, <xref:System.Windows.DragDrop.DragOver> y <xref:System.Windows.DragDrop.DragLeave> en el destino de colocación.  
+- Para realizar acciones adicionales durante un arrastre, controle los eventos <xref:System.Windows.DragDrop.DragEnter>, <xref:System.Windows.DragDrop.DragOver> y <xref:System.Windows.DragDrop.DragLeave> en el destino de colocación.  
   
--   Para cambiar la apariencia del puntero del mouse, controle el evento <xref:System.Windows.DragDrop.GiveFeedback> en el origen de arrastre.  
+- Para cambiar la apariencia del puntero del mouse, controle el evento <xref:System.Windows.DragDrop.GiveFeedback> en el origen de arrastre.  
   
--   Para cambiar cómo se cancela la operación de arrastrar y colocar, controle el evento <xref:System.Windows.DragDrop.QueryContinueDrag> en el origen de arrastre.  
+- Para cambiar cómo se cancela la operación de arrastrar y colocar, controle el evento <xref:System.Windows.DragDrop.QueryContinueDrag> en el origen de arrastre.  
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Ejemplo de arrastrar y colocar  
@@ -129,13 +129,13 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
 ### <a name="enabling-an-element-to-be-a-drag-source"></a>Habilitar un elemento para que sea un origen de arrastre  
  Un objeto que es un origen de arrastre es responsable de:  
   
--   Identificar cuándo se produce un arrastre.  
+- Identificar cuándo se produce un arrastre.  
   
--   Iniciar la operación de arrastrar y colocar.  
+- Iniciar la operación de arrastrar y colocar.  
   
--   Identificar los datos que se van a transferir.  
+- Identificar los datos que se van a transferir.  
   
--   Especificar los efectos que puede tener la operación de arrastrar y colocar en los datos transferidos.  
+- Especificar los efectos que puede tener la operación de arrastrar y colocar en los datos transferidos.  
   
  El origen de arrastre también puede proporcionar información al usuario sobre las acciones permitidas (mover, copiar, ninguna) y puede cancelar la operación de arrastrar y colocar en función de las acciones del usuario, como presionar la tecla ESC durante la operación de arrastre.  
   
@@ -146,11 +146,11 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
   
  Dentro del controlador de eventos <xref:System.Windows.UIElement.MouseMove>, llame al método <xref:System.Windows.DragDrop.DoDragDrop%2A> para que inicie la operación de arrastrar y colocar. El método <xref:System.Windows.DragDrop.DoDragDrop%2A> toma tres parámetros:  
   
--   `dragSource` – Una referencia al objeto de dependencia que es el origen de los datos transferidos; suele ser el origen del evento <xref:System.Windows.UIElement.MouseMove>.  
+- `dragSource` – Una referencia al objeto de dependencia que es el origen de los datos transferidos; suele ser el origen del evento <xref:System.Windows.UIElement.MouseMove>.  
   
--   `data` – Un objeto que contiene los datos transferidos, ajustados en un <xref:System.Windows.DataObject>.  
+- `data` – Un objeto que contiene los datos transferidos, ajustados en un <xref:System.Windows.DataObject>.  
   
--   `allowedEffects` – Uno de los valores de enumeración <xref:System.Windows.DragDropEffects> que especifica los efectos permitidos de la operación de arrastrar y colocar.  
+- `allowedEffects` – Uno de los valores de enumeración <xref:System.Windows.DragDropEffects> que especifica los efectos permitidos de la operación de arrastrar y colocar.  
   
  Puede pasar cualquier objeto serializable en el parámetro `data`. Si los datos todavía no están ajustados en un <xref:System.Windows.DataObject>, se ajustarán automáticamente en un <xref:System.Windows.DataObject> nuevo. Para pasar varios elementos de datos, debe crear por su cuenta el <xref:System.Windows.DataObject> y pasarlo al método <xref:System.Windows.DragDrop.DoDragDrop%2A>. Para obtener más información, consulte [Datos y objetos de datos](data-and-data-objects.md).  
   
@@ -171,13 +171,13 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>Habilitar un elemento para que sea un destino de colocación  
  Un objeto que es un destino de colocación es responsable de:  
   
--   Especificar que es un destino de colocación válido.  
+- Especificar que es un destino de colocación válido.  
   
--   Responder al origen de arrastre cuando se arrastra sobre el destino.  
+- Responder al origen de arrastre cuando se arrastra sobre el destino.  
   
--   Comprobar que los datos transferidos están en un formato que puede recibir.  
+- Comprobar que los datos transferidos están en un formato que puede recibir.  
   
--   Procesar los datos colocados.  
+- Procesar los datos colocados.  
   
  Para especificar que un elemento es un destino de colocación, su propiedad <xref:System.Windows.UIElement.AllowDrop%2A> se establece en `true`. A continuación, se generarán los eventos del destino de colocación en el elemento para que pueda controlarlos. Durante una operación de arrastrar y colocar, se produce la siguiente secuencia de eventos en el destino de colocación:  
   

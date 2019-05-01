@@ -6,26 +6,26 @@ helpviewer_keywords:
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
 ms.openlocfilehash: 4a77060661cb0d71b0209cbcdeba23ffc2c6e5c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010675"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Código subyacente y XAML en WPF
 <a name="introduction"></a> Código subyacente es un término que se usa para describir el código que se une con objetos definidos por marcado, cuando un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] página está compilado por marcado. En este tema se describe los requisitos para el código subyacente, así como un mecanismo de código insertado alternativo para el código en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  Este tema contiene las siguientes secciones:  
   
--   [Requisitos previos](#Prerequisites)  
+- [Requisitos previos](#Prerequisites)  
   
--   [Código subyacente y el lenguaje XAML](#codebehind_and_the_xaml_language)  
+- [Código subyacente y el lenguaje XAML](#codebehind_and_the_xaml_language)  
   
--   [Código subyacente, controlador de eventos y los requisitos de la clase parcial de WPF](#Code_behind__Event_Handler__and_Partial_Class)  
+- [Código subyacente, controlador de eventos y los requisitos de la clase parcial de WPF](#Code_behind__Event_Handler__and_Partial_Class)  
   
--   [x:Code](#x_Code)  
+- [x:Code](#x_Code)  
   
--   [Limitaciones del código insertado](#Inline_Code_Limitations)  
+- [Limitaciones del código insertado](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
@@ -38,15 +38,15 @@ ms.locfileid: "59088580"
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
 ## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>Código subyacente, controlador de eventos y los requisitos de la clase parcial de WPF  
   
--   La clase parcial debe derivarse el tipo que respalda el elemento raíz.  
+- La clase parcial debe derivarse el tipo que respalda el elemento raíz.  
   
--   Tenga en cuenta que en el comportamiento predeterminado de las acciones de compilación marcado, puede dejar la derivación en blanco en la definición de clase parcial en el lado de código subyacente. El resultado compilado supondrá que tipo de respaldo de la raíz de la página para ser la base de la clase parcial, incluso si no ha especificado. Sin embargo, confiar en este comportamiento no es una práctica recomendada.  
+- Tenga en cuenta que en el comportamiento predeterminado de las acciones de compilación marcado, puede dejar la derivación en blanco en la definición de clase parcial en el lado de código subyacente. El resultado compilado supondrá que tipo de respaldo de la raíz de la página para ser la base de la clase parcial, incluso si no ha especificado. Sin embargo, confiar en este comportamiento no es una práctica recomendada.  
   
--   Los controladores de eventos que se escribe en el código subyacente deben ser métodos de instancia y no pueden ser métodos estáticos. Estos métodos deben definirse mediante la clase parcial en el espacio de nombres CLR identificado por `x:Class`. No se puede calificar el nombre de un controlador de eventos para indicar a un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesador para buscar un controlador de eventos para la conexión de eventos en un ámbito de clase diferente.  
+- Los controladores de eventos que se escribe en el código subyacente deben ser métodos de instancia y no pueden ser métodos estáticos. Estos métodos deben definirse mediante la clase parcial en el espacio de nombres CLR identificado por `x:Class`. No se puede calificar el nombre de un controlador de eventos para indicar a un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesador para buscar un controlador de eventos para la conexión de eventos en un ámbito de clase diferente.  
   
--   El controlador debe coincidir con el delegado para el evento correspondiente en el sistema de tipos de respaldo.  
+- El controlador debe coincidir con el delegado para el evento correspondiente en el sistema de tipos de respaldo.  
   
--   Para el idioma de Microsoft Visual Basic en concreto, puede usar específico del lenguaje `Handles` palabra clave para asociar controladores a instancias y eventos en la declaración del controlador, en lugar de asociar controladores con atributos en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Sin embargo, esta técnica tiene algunas limitaciones porque la `Handles` palabra clave no es compatible con todas las características específicas de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de eventos, por ejemplo, determinados enruta los escenarios de eventos o eventos adjuntos. Para obtener más información, consulte [Visual Basic y control de eventos de WPF](visual-basic-and-wpf-event-handling.md).  
+- Para el idioma de Microsoft Visual Basic en concreto, puede usar específico del lenguaje `Handles` palabra clave para asociar controladores a instancias y eventos en la declaración del controlador, en lugar de asociar controladores con atributos en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Sin embargo, esta técnica tiene algunas limitaciones porque la `Handles` palabra clave no es compatible con todas las características específicas de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de eventos, por ejemplo, determinados enruta los escenarios de eventos o eventos adjuntos. Para obtener más información, consulte [Visual Basic y control de eventos de WPF](visual-basic-and-wpf-event-handling.md).  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  

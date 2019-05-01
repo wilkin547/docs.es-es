@@ -3,11 +3,11 @@ title: Muestras
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
 ms.openlocfilehash: d06fe74280b713130142d6d7a881c97849598ce4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033415"
 ---
 # <a name="samples"></a>Muestras
 Este tema proporcionan vínculos a las soluciones de Visual Basic y C# que contienen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] código de ejemplo.  
@@ -21,11 +21,11 @@ Este tema proporcionan vínculos a las soluciones de Visual Basic y C# que conti
   
  Siga estos pasos para obtener ejemplos adicionales de aplicaciones y código [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
   
--   Busque problemas específicos en Microsoft Docs.  
+- Busque problemas específicos en Microsoft Docs.  
   
--   Participar en el [foro de LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), dónde debatirá detalladamente temas más complejos con expertos.  
+- Participar en el [foro de LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), dónde debatirá detalladamente temas más complejos con expertos.  
   
--   Estudiar las notas que detalla [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnología, junto con ejemplos de código de Visual Basic y C#. Para obtener más información, consulte [LINQ to SQL: Language-Integrated Query para datos relacionales](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Estudiar las notas que detalla [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnología, junto con ejemplos de código de Visual Basic y C#. Para obtener más información, consulte [LINQ to SQL: Language-Integrated Query para datos relacionales](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="see-also"></a>Vea también
 

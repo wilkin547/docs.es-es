@@ -6,11 +6,11 @@ helpviewer_keywords:
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032362"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Almacenar en caché en los clientes de automatización de la interfaz de usuario
 > [!NOTE]
@@ -64,9 +64,9 @@ ms.locfileid: "59175830"
 ## <a name="retrieving-cached-properties"></a>Recuperación de propiedades almacenadas en caché  
  Puede recuperar las propiedades almacenadas en caché de un elemento mediante los siguientes métodos y propiedades.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
+- <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
  Se produce una excepción si la propiedad solicitada no está en la caché.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "59175830"
 ## <a name="retrieving-cached-control-patterns"></a>Recuperación de patrones de control almacenados en caché  
  Puede recuperar los patrones de control almacenados en caché de un elemento mediante los siguientes métodos.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
  Si el patrón no está almacenado en caché, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> produce una excepción y <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> devuelve `false`.  
   

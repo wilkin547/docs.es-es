@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
 ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053241"
 ---
 # <a name="contextmenu"></a>ContextMenu
 El <xref:System.Windows.Controls.ContextMenu> permite un control mostrar un <xref:System.Windows.Controls.Menu> que es específico para el contexto del control. Normalmente, el <xref:System.Windows.Controls.ContextMenu> se expone en el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mediante el botón secundario del mouse o a través del botón de menú del teclado.  

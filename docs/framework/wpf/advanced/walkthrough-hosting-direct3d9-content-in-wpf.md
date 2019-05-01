@@ -6,40 +6,40 @@ helpviewer_keywords:
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
 ms.openlocfilehash: 07cfa5bed6e5af131a60a303f0702f18413043e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007135"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Tutorial: Hospedar contenido Direct3D9 en WPF
 En este tutorial se muestra cómo hospedar contenido Direct3D9 en una aplicación de Windows Presentation Foundation (WPF).  
   
  En este tutorial, realizará las tareas siguientes:  
   
--   Cree un proyecto WPF para hospedar contenido Direct3D9.  
+- Cree un proyecto WPF para hospedar contenido Direct3D9.  
   
--   Importar el contenido Direct3D9.  
+- Importar el contenido Direct3D9.  
   
--   Mostrar el contenido Direct3D9 mediante la <xref:System.Windows.Interop.D3DImage> clase.  
+- Mostrar el contenido Direct3D9 mediante la <xref:System.Windows.Interop.D3DImage> clase.  
   
  Cuando termine, sabrá cómo hospedar contenido Direct3D9 en una aplicación WPF.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Necesita los componentes siguientes para completar este tutorial:  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   DirectX SDK 9 o posterior.  
+- DirectX SDK 9 o posterior.  
   
--   Un archivo DLL que contiene contenido Direct3D9 en un formato compatible con WPF. Para obtener más información, consulte [interoperabilidad entre Direct3D9 y WPF](wpf-and-direct3d9-interoperation.md) y [Tutorial: Crear contenido Direct3D9 para hospedarlo en WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
+- Un archivo DLL que contiene contenido Direct3D9 en un formato compatible con WPF. Para obtener más información, consulte [interoperabilidad entre Direct3D9 y WPF](wpf-and-direct3d9-interoperation.md) y [Tutorial: Crear contenido Direct3D9 para hospedarlo en WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
   
 ## <a name="creating-the-wpf-project"></a>Crear el proyecto WPF  
  El primer paso es crear el proyecto para la aplicación de WPF.  
   
 #### <a name="to-create-the-wpf-project"></a>Para crear el proyecto de WPF  
   
--   Cree un nuevo proyecto de aplicación de WPF en Visual C# denominado `D3DHost`. Para obtener más información, vea [Tutorial: Mi primera aplicación de escritorio de WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+- Cree un nuevo proyecto de aplicación de WPF en Visual C# denominado `D3DHost`. Para obtener más información, vea [Tutorial: Mi primera aplicación de escritorio de WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
      MainWindow.xaml se abre en el [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   

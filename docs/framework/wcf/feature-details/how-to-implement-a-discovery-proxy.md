@@ -3,22 +3,22 @@ title: Procedimiento para implementar un proxy de detección
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
 ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000914"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Procedimiento para implementar un proxy de detección
 En este tema se explica cómo implementar un proxy de detección. Para obtener más información acerca de la característica de detección de Windows Communication Foundation (WCF), consulte [información general sobre la detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Puede implementarse un proxy de detección creando una clase que extienda la clase abstracta <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Hay otras clases de compatibiildad definidas y usadas en este ejemplo. `OnResolveAsyncResult`, `OnFindAsyncResult` y `AsyncResult`. Estas clases implementan la interfaz <xref:System.IAsyncResult>. Para obtener más información acerca de <xref:System.IAsyncResult> vea [interfaz System.IAsyncResult](xref:System.IAsyncResult).
 
  La implementación de un proxy de detección se divide en tres partes principales en este tema:
 
--   Defina una clase que contenga un almacén de datos y extienda la clase abstracta <xref:System.ServiceModel.Discovery.DiscoveryProxy>.
+- Defina una clase que contenga un almacén de datos y extienda la clase abstracta <xref:System.ServiceModel.Discovery.DiscoveryProxy>.
 
--   Implemente la clase `AsyncResult` del asistente.
+- Implemente la clase `AsyncResult` del asistente.
 
--   Hospede el proxy de detección.
+- Hospede el proxy de detección.
 
 ### <a name="to-create-a-new-console-application-project"></a>Para crear un nuevo proyecto de aplicación de consola
 
@@ -28,9 +28,9 @@ En este tema se explica cómo implementar un proxy de detección. Para obtener m
 
 3. Agregue las siguientes referencias al proyecto:
 
-    1.  System.ServiceModel.dll
+    1. System.ServiceModel.dll
 
-    2.  System.Servicemodel.Discovery.dll
+    2. System.Servicemodel.Discovery.dll
 
     > [!CAUTION]
     >  Asegúrese de que indica la versión 4.0 o posterior de estos ensamblados.

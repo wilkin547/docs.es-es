@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
 ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018393"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Tutorial: Crear un botón mediante Microsoft Expression Blend
 Este tutorial le guía a través del proceso de creación de un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] botón personalizado mediante Microsoft Expression Blend.  
@@ -117,17 +117,17 @@ Este tutorial le guía a través del proceso de creación de un [!INCLUDE[TLA2#t
   
 10. **Asegúrese de glassCube el aspecto de cristal:** Establecer el <xref:System.Windows.Shapes.Shape.Fill%2A> para ello consulte mediante el uso de un degradado lineal que es el 75% opaco y alterna entre el color negro y transparente durante 6 aproximadamente uniformemente espaciados intervalos. Esto es lo que se debe establecer los delimitadores de degradado:  
   
-    -   Delimitador de degradado 1: En blanco con el valor alfa del 75%  
+    - Delimitador de degradado 1: En blanco con el valor alfa del 75%  
   
-    -   Delimitador de degradado 2: Transparente  
+    - Delimitador de degradado 2: Transparente  
   
-    -   Delimitador de degradado 3: En blanco con el valor alfa del 75%  
+    - Delimitador de degradado 3: En blanco con el valor alfa del 75%  
   
-    -   Delimitador de degradado 4: Transparente  
+    - Delimitador de degradado 4: Transparente  
   
-    -   Delimitador de degradado 5: En blanco con el valor alfa del 75%  
+    - Delimitador de degradado 5: En blanco con el valor alfa del 75%  
   
-    -   Delimitador de degradado 6: Transparente  
+    - Delimitador de degradado 6: Transparente  
   
      Esto crea un aspecto de cristal "ondulado".  
   
@@ -173,9 +173,9 @@ Este tutorial le guía a través del proceso de creación de un [!INCLUDE[TLA2#t
   
 6. **Crear desencadenador de propiedad para IsFocused:** Con el mismo procedimiento que para <xref:System.Windows.UIElement.IsMouseOver%2A> (consulte el primer paso de esta sección), cree otro desencadenador de propiedad para el <xref:System.Windows.UIElement.IsFocused%2A> propiedad. Mientras **grabación de desencadenadores que se encuentra en**, agregue las siguientes acciones para el desencadenador:  
   
-    -   **glassCube** Obtiene un <xref:System.Windows.UIElement.Opacity%2A> del 100%.  
+    - **glassCube** Obtiene un <xref:System.Windows.UIElement.Opacity%2A> del 100%.  
   
-    -   **RectánguloExterior** Obtiene un <xref:System.Windows.Shapes.Shape.Stroke%2A> valor de expresión personalizada "{DynamicResource {x: Static SystemColors.HighlightBrushKey}}".  
+    - **RectánguloExterior** Obtiene un <xref:System.Windows.Shapes.Shape.Stroke%2A> valor de expresión personalizada "{DynamicResource {x: Static SystemColors.HighlightBrushKey}}".  
   
  Como último paso en este tutorial, agregaremos las animaciones en el botón. Estas animaciones se desencadena por eventos, en concreto, el <xref:System.Windows.UIElement.MouseEnter> y <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
@@ -208,19 +208,19 @@ Este tutorial le guía a través del proceso de creación de un [!INCLUDE[TLA2#t
   
 5. **Cree otro desencadenador de evento y asociar una animación diferentes:** Vamos a agregar una animación más. Utilice un procedimiento similar a lo que usó para crear la animación anterior de desencadenador de evento:  
   
-    1.  Crear un nuevo evento desencadenador mediante el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
+    1. Crear un nuevo evento desencadenador mediante el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
-    2.  Asociar una nueva escala de tiempo con el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
+    2. Asociar una nueva escala de tiempo con el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
      ![Cómo crear una nueva escala de tiempo](./media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")  
   
-    1.  Para esta escala de tiempo, cree dos fotogramas clave, en segundos entre 0,0 y el otro a 0,3 segundos.  
+    1. Para esta escala de tiempo, cree dos fotogramas clave, en segundos entre 0,0 y el otro a 0,3 segundos.  
   
-    2.  Con el fotograma clave en 0,3 segundos resaltado, establezca el **ángulo de giro** a 360 grados.  
+    2. Con el fotograma clave en 0,3 segundos resaltado, establezca el **ángulo de giro** a 360 grados.  
   
      ![Cómo crear una transformación de giro](./media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")  
   
-    1.  Presione F5 para ejecutar la aplicación. Haga clic en el botón. Tenga en cuenta que la capa de cristal gira en torno a.  
+    1. Presione F5 para ejecutar la aplicación. Haga clic en el botón. Tenga en cuenta que la capa de cristal gira en torno a.  
   
 ## <a name="conclusion"></a>Conclusión  
  Ha completado un botón personalizado. Hizo este con una plantilla de botón que se aplica a todos los botones de la aplicación. Si deja el modo de edición de plantillas (consulte la figura siguiente) y crea más botones, verá que su apariencia y comportamiento como el botón personalizado en lugar de como el botón predeterminado.  
@@ -237,15 +237,15 @@ Este tutorial le guía a través del proceso de creación de un [!INCLUDE[TLA2#t
   
  En conclusión, en el proceso de personalización de una plantilla de botón ha aprendido a hacer lo siguiente en Microsoft Expression Blend:  
   
--   Personalizar la apariencia de un control.  
+- Personalizar la apariencia de un control.  
   
--   Establecer desencadenadores de propiedad. Desencadenadores de propiedad resultan muy útiles, ya que pueden usarse en la mayoría de los objetos, no sólo en los controles.  
+- Establecer desencadenadores de propiedad. Desencadenadores de propiedad resultan muy útiles, ya que pueden usarse en la mayoría de los objetos, no sólo en los controles.  
   
--   Establecer los desencadenadores de eventos. Desencadenadores de eventos son muy útiles porque se puede usar en la mayoría de los objetos, no sólo en los controles.  
+- Establecer los desencadenadores de eventos. Desencadenadores de eventos son muy útiles porque se puede usar en la mayoría de los objetos, no sólo en los controles.  
   
--   Crear animaciones.  
+- Crear animaciones.  
   
--   Varios: crear degradados, agregar BitmapEffects, utilizar las transformaciones y establecer las propiedades básicas de objetos.  
+- Varios: crear degradados, agregar BitmapEffects, utilizar las transformaciones y establecer las propiedades básicas de objetos.  
   
 ## <a name="see-also"></a>Vea también
 

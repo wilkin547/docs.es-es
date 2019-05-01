@@ -3,11 +3,11 @@ title: Actividad
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
 ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998028"
 ---
 # <a name="activity"></a>Actividad
 En este tema describe los seguimientos de actividad en el modelo de seguimiento de Windows Communication Foundation (WCF). Las actividades procesan unidades que ayudan al usuario a reducir el ámbito de un error. Los errores que se producen en la misma actividad están directamente relacionados. Por ejemplo, se produce un error en una operación porque se ha producido un error en el descifrado del mensaje. Los seguimientos para el error de descifrado del mensaje y la operación aparecen en la misma actividad, mostrando una correlación directa entre el error del descifrado y el error de la solicitud.  
@@ -29,18 +29,18 @@ En este tema describe los seguimientos de actividad en el modelo de seguimiento 
 ### <a name="correlating-activities-in-service-trace-viewer"></a>Correlación de actividades en Service Trace Viewer  
  La herramienta Service Trace Viewer proporciona dos vistas de actividades:  
   
--   **Lista** vista, donde el identificador de actividad se usa para correlacionar directamente seguimientos en los procesos. Los seguimientos de diferentes procesos, por ejemplo, cliente y servicio, pero con el mismo id. de actividad se agrupan en la misma actividad. Por consiguiente, un error que se produce en el servicio que, a continuación, produce un error en el cliente, se mostrarán ambos en la misma vista de actividades en la herramienta.  
+- **Lista** vista, donde el identificador de actividad se usa para correlacionar directamente seguimientos en los procesos. Los seguimientos de diferentes procesos, por ejemplo, cliente y servicio, pero con el mismo id. de actividad se agrupan en la misma actividad. Por consiguiente, un error que se produce en el servicio que, a continuación, produce un error en el cliente, se mostrarán ambos en la misma vista de actividades en la herramienta.  
   
--   **Gráfico** vista, donde las actividades están agrupadas por procesos. En esta vista, un cliente y un servicio con el mismo identificador de actividad tienen sus seguimientos en actividades diferentes. Para correlacionar actividades con el mismo id. de actividad en procesos diferentes, la herramienta muestra flujos de mensajes en las actividades relacionadas.  
+- **Gráfico** vista, donde las actividades están agrupadas por procesos. En esta vista, un cliente y un servicio con el mismo identificador de actividad tienen sus seguimientos en actividades diferentes. Para correlacionar actividades con el mismo id. de actividad en procesos diferentes, la herramienta muestra flujos de mensajes en las actividades relacionadas.  
   
  Para obtener más información y para ver una vista gráfica de la herramienta Service Trace Viewer, vea [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) y [utilizando Service Trace Viewer para ver seguimientos correlacionados y Solución de problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
 ## <a name="defining-the-scope-of-an-activity"></a>Definición del ámbito de una actividad  
  Una actividad se define durante el diseño y denota una unidad lógica de trabajo. Los seguimientos emitidos con el mismo identificador de actividad están directamente relacionados, forman parte de la misma actividad. Debido a que una actividad puede cruzar los límites de extremos (una solicitud), se definen dos ámbitos para una actividad.  
   
--   Ámbito `Global`, por aplicación. En este ámbito, la actividad se identifica por su identificador de actividad único globalmente de 128 bits, el gAId. El gAId es lo que se propaga por los puntos de conexión.  
+- Ámbito `Global`, por aplicación. En este ámbito, la actividad se identifica por su identificador de actividad único globalmente de 128 bits, el gAId. El gAId es lo que se propaga por los puntos de conexión.  
   
--   Ámbito `Local`, por extremo. En este ámbito, GAId identifica la actividad, junto con el nombre del origen de seguimiento que emite los seguimientos de actividad y el identificador de proceso. Este triplete constituye el id. de actividad local, lAId. El lAId se utiliza para definir los límites (locales) de una actividad.  
+- Ámbito `Local`, por extremo. En este ámbito, GAId identifica la actividad, junto con el nombre del origen de seguimiento que emite los seguimientos de actividad y el identificador de proceso. Este triplete constituye el id. de actividad local, lAId. El lAId se utiliza para definir los límites (locales) de una actividad.  
   
 ## <a name="trace-schema"></a>Esquema de seguimiento  
  Los seguimientos se pueden emitir utilizando cualquier esquema y entre plataformas de Microsoft. "e2e" (para "to End") es un esquema comúnmente utilizado. Este esquema incluye un identificador de 128 bits (gAId), el nombre del origen de seguimiento y el identificador de proceso. En código administrado, <xref:System.Diagnostics.XmlWriterTraceListener> emite seguimientos en el esquema E2E.  
@@ -64,15 +64,15 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="activity-lifetime"></a>Duración de una actividad  
  En términos estrictos, la evidencia de una actividad se inicia la primera vez que se utiliza el identificador de actividad en un seguimiento emitido y finaliza la última vez que se utiliza en un seguimiento emitido. <xref:System.Diagnostics> proporciona un conjunto predefinido de tipos de seguimiento, incluyendo Iniciar y Detener, para marcar explícitamente los límites de duración de la actividad.  
   
--   Inicio: Indica el principio de una actividad. Un seguimiento "Iniciar" proporciona un registro de comienzo de un nuevo hito de procesamiento. Contiene un nuevo id. de actividad para un origen de seguimiento determinado en un proceso determinado, excepto cuando el id. de actividad se propaga por los extremos, en cuyo caso vemos un "Iniciar" por extremo. Ejemplos de comienzo de una nueva actividad incluyen la creación de un nuevo subproceso para el procesamiento o la entrada en un nuevo método público.  
+- Inicio: Indica el principio de una actividad. Un seguimiento "Iniciar" proporciona un registro de comienzo de un nuevo hito de procesamiento. Contiene un nuevo id. de actividad para un origen de seguimiento determinado en un proceso determinado, excepto cuando el id. de actividad se propaga por los extremos, en cuyo caso vemos un "Iniciar" por extremo. Ejemplos de comienzo de una nueva actividad incluyen la creación de un nuevo subproceso para el procesamiento o la entrada en un nuevo método público.  
   
--   Detener: Indica el final de una actividad. Un seguimiento "Detener" proporciona un registro de finalización de un hito de procesamiento existente. Contiene un id. de actividad existente para un origen de seguimiento de traza determinado en un proceso concreto, excepto cuando el id. de actividad se propaga por los extremos, en cuyo caso vemos un "Stop" por cada extremo.  Terminar un subproceso de procesamiento o salir de un método cuyo comienzo se denotó con un seguimiento "Iniciar" son ejemplos de detención de una actividad.  
+- Detener: Indica el final de una actividad. Un seguimiento "Detener" proporciona un registro de finalización de un hito de procesamiento existente. Contiene un id. de actividad existente para un origen de seguimiento de traza determinado en un proceso concreto, excepto cuando el id. de actividad se propaga por los extremos, en cuyo caso vemos un "Stop" por cada extremo.  Terminar un subproceso de procesamiento o salir de un método cuyo comienzo se denotó con un seguimiento "Iniciar" son ejemplos de detención de una actividad.  
   
--   Suspender: Indica la suspensión del procesamiento de una actividad. Un seguimiento "Suspender" contiene un identificador de actividad existente cuyo procesamiento se espera que se reanude más adelante. Ningún seguimiento se emite con este id. entre los eventos Suspender y Reanudar del origen de seguimientos actual. Entre los ejemplos se incluye la detención de una actividad al llamar una función de biblioteca externa o al esperar un recurso como un puerto de finalización de E/S.  
+- Suspender: Indica la suspensión del procesamiento de una actividad. Un seguimiento "Suspender" contiene un identificador de actividad existente cuyo procesamiento se espera que se reanude más adelante. Ningún seguimiento se emite con este id. entre los eventos Suspender y Reanudar del origen de seguimientos actual. Entre los ejemplos se incluye la detención de una actividad al llamar una función de biblioteca externa o al esperar un recurso como un puerto de finalización de E/S.  
   
--   Reanudar: Indica la reanudación del procesamiento de una actividad. Un seguimiento "Reanudar" contiene un identificador de actividad existente cuyo último seguimiento emitido desde el origen de seguimiento actual fue un seguimiento "Suspender". Entre los ejemplos se incluye el volver desde una llamada a una función de biblioteca externa o cuando se ha señalado la reanudación del procesamiento por un recurso como un puerto de finalización de E/S.  
+- Reanudar: Indica la reanudación del procesamiento de una actividad. Un seguimiento "Reanudar" contiene un identificador de actividad existente cuyo último seguimiento emitido desde el origen de seguimiento actual fue un seguimiento "Suspender". Entre los ejemplos se incluye el volver desde una llamada a una función de biblioteca externa o cuando se ha señalado la reanudación del procesamiento por un recurso como un puerto de finalización de E/S.  
   
--   Transferencia: Puesto que algunas actividades son causadas por otras, o se relacionan con otros usuarios, las actividades pueden deberse a otras actividades mediante seguimientos "Transferir". Una transferencia registra la relación dirigida de una actividad a otra  
+- Transferencia: Puesto que algunas actividades son causadas por otras, o se relacionan con otros usuarios, las actividades pueden deberse a otras actividades mediante seguimientos "Transferir". Una transferencia registra la relación dirigida de una actividad a otra  
   
  Los seguimientos Iniciar y Detener no son críticos para la correlación. Sin embargo, pueden ayudar a aumentar el rendimiento, creación de perfiles y la validación de ámbito de las actividades.  
   
@@ -85,17 +85,17 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="guidelines-for-using-activity-tracing"></a>Instrucciones para el uso de seguimiento de actividades  
  A continuación se muestra una guía sobre el uso de seguimientos ActivityTracing (Iniciar, Detener, Suspender, Reanudar y Transferir).  
   
--   El seguimiento es un gráfico cíclico dirigido, no un árbol. Puede devolver el control a una actividad que generó una actividad.  
+- El seguimiento es un gráfico cíclico dirigido, no un árbol. Puede devolver el control a una actividad que generó una actividad.  
   
--   Una actividad denota un límite de procesamiento que puede ser significativo para el administrador del sistema o para proporcionar compatibilidad.  
+- Una actividad denota un límite de procesamiento que puede ser significativo para el administrador del sistema o para proporcionar compatibilidad.  
   
--   Cada método WCF, tanto en el cliente y el servidor está limitado por a partir de una nueva actividad y luego (después de realizar el trabajo) final de la nueva actividad y volver a la actividad ambiente.  
+- Cada método WCF, tanto en el cliente y el servidor está limitado por a partir de una nueva actividad y luego (después de realizar el trabajo) final de la nueva actividad y volver a la actividad ambiente.  
   
--   Las actividades de larga duración (en curso) como realizar escuchas de conexiones o esperar mensajes se representan haciendo corresponder los marcadores de inicio/detención.  
+- Las actividades de larga duración (en curso) como realizar escuchas de conexiones o esperar mensajes se representan haciendo corresponder los marcadores de inicio/detención.  
   
--   Las actividades activadas mediante el recibo o procesamiento de un mensaje se representan mediante límites de seguimiento.  
+- Las actividades activadas mediante el recibo o procesamiento de un mensaje se representan mediante límites de seguimiento.  
   
--   Las actividades representan actividades, no necesariamente objetos. Una actividad debe interpretarse como "Esto sucedía cuando. . . (se produjo una emisión de seguimientos significativa)”.  
+- Las actividades representan actividades, no necesariamente objetos. Una actividad debe interpretarse como "Esto sucedía cuando. . . (se produjo una emisión de seguimientos significativa)”.  
   
 ## <a name="see-also"></a>Vea también
 

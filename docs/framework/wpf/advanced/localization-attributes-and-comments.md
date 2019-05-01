@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036236"
 ---
 # <a name="localization-attributes-and-comments"></a>Atributos y comentarios sobre localización
 Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] son propiedades, en el código fuente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], que proporcionan los desarrolladores para ofrecer reglas y sugerencias para la localización. Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contienen dos conjuntos de información: atributos de localizabilidad y comentarios de localización de forma libre. Los atributos de localización se usan en la API de localización de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para indicar qué recursos se van a localizar. Los comentarios de forma libre son cualquier información que el autor de la aplicación quiera incluir.  
@@ -27,11 +27,11 @@ Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../inc
   
 3. Los valores que se pueden asignar son:  
   
-    -   **None**: los comentarios y atributos permanecen dentro del ensamblado y no se genera ningún archivo independiente.  
+    - **None**: los comentarios y atributos permanecen dentro del ensamblado y no se genera ningún archivo independiente.  
   
-    -   **CommentsOnly**: elimina solo los comentarios del ensamblado y los coloca en el archivo LocFile independiente.  
+    - **CommentsOnly**: elimina solo los comentarios del ensamblado y los coloca en el archivo LocFile independiente.  
   
-    -   **All**: quita los comentarios y los atributos del ensamblado y los coloca en un archivo LocFile independiente.  
+    - **All**: quita los comentarios y los atributos del ensamblado y los coloca en un archivo LocFile independiente.  
   
 4. Cuando los recursos localizables se extraen de [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], la API de localización [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] respeta los atributos de localizabilidad.  
   
@@ -74,11 +74,11 @@ Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../inc
   
  Hay tres tipos de atributos:  
   
--   **Categoría**. Especifica si un valor debe ser modificable desde una herramienta de localización. Vea <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
+- **Categoría**. Especifica si un valor debe ser modificable desde una herramienta de localización. Vea <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
   
--   **Legibilidad**. Especifica si la herramienta de localización podrá leer (y mostrar) un valor. Vea <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
+- **Legibilidad**. Especifica si la herramienta de localización podrá leer (y mostrar) un valor. Vea <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
   
--   **Modificabilidad**. Especifica si un valor debe ser modificable desde una herramienta de localización. Vea <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
+- **Modificabilidad**. Especifica si un valor debe ser modificable desde una herramienta de localización. Vea <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
   
  Estos atributos se pueden especificar en cualquier orden delimitado por un espacio. En caso de que se especifiquen atributos duplicados, el último atributo invalidará los anteriores. Por ejemplo, Localization.Attributes = "Unmodifiable Modifiable" define el atributo Modificabilidad como Modificable porque es el último valor.  
   

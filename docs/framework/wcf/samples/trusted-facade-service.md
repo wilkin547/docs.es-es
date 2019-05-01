@@ -3,11 +3,11 @@ title: Servicio de fachada confiable
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
 ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007700"
 ---
 # <a name="trusted-facade-service"></a>Servicio de fachada confiable
 Este escenario muestra cómo fluir la información de identidad del llamador de un servicio a otro mediante Windows Communication Foundation (WCF) infraestructura de seguridad.  
@@ -16,11 +16,11 @@ Este escenario muestra cómo fluir la información de identidad del llamador de 
   
  Este ejemplo consta de los siguientes componentes:  
   
--   Cliente de la calculadora  
+- Cliente de la calculadora  
   
--   Servicio de fachada de calculadora  
+- Servicio de fachada de calculadora  
   
--   Servicio back-end de calculadora.  
+- Servicio back-end de calculadora.  
   
  El servicio de la fachada es responsable de validar la solicitud y autenticar el llamador. Después de la autenticación y validación correctas, reenvía la solicitud al servicio back-end utilizando el canal de comunicación controlado de la red perimetral a la red interna. Como parte de la solicitud reenviada, el servicio de fachada incluye información sobre la identidad del llamador para que el servicio back-end pueda utilizar esta información en su procesamiento. La identidad del llamador se transmite utilizando un token de seguridad `Username` dentro del encabezado `Security` del mensaje . El ejemplo utiliza la infraestructura de seguridad WCF para transmitir y extraer esta información desde el `Security` encabezado.  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
  A continuación se proporciona una información general breve de las diferentes secciones de los archivos por lotes.  
   
--   Crear el certificado de servidor.  
+- Crear el certificado de servidor.  
   
      Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar.  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate client.
   
      La variable `%SERVER_NAME%` especifica el nombre del servidor; el valor predeterminado es el host local. El certificado se almacena en el almacén LocalMachine.  
   
--   Instalar el certificado del servicio de fachada en el almacén de certificados de confianza de cliente.  
+- Instalar el certificado del servicio de fachada en el almacén de certificados de confianza de cliente.  
   
      La línea siguiente copia el certificado del servicio de fachada en el almacén de personas de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.  
   

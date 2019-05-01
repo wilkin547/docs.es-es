@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007479"
 ---
 # <a name="ws-transaction-flow"></a>Flujo de la transacción WS
 Este ejemplo muestra el uso de una transacción coordinada por cliente y las opciones de servidor y cliente para el flujo de la transacción utilizando la Transacción atómica del WS o el protocolo OleTransactions. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora, pero las operaciones se atribuyen para demostrar el uso de la `TransactionFlowAttribute` con el **TransactionFlowOption** enumeración para determinar a qué grado de transacción está habilitado el flujo. Dentro del ámbito de la transacción fluida, un registro de las operaciones solicitadas se escribe a una base de datos y se conserva hasta que la transacción coordinada por el cliente se ha completado - si la transacción del cliente no se completa, la transacción del Servicio Web se asegura de que no se confirmen las actualizaciones adecuadas a la base de datos.  
@@ -39,13 +39,13 @@ public interface ICalculator
 
  Esto define las operaciones en el orden que serán procesadas:  
   
--   Una solicitud de operación `Add` debe incluir una transacción fluida.  
+- Una solicitud de operación `Add` debe incluir una transacción fluida.  
   
--   Una solicitud de operación `Subtract` puede incluir una transacción fluida.  
+- Una solicitud de operación `Subtract` puede incluir una transacción fluida.  
   
--   Una solicitud de operación `Multiply` no debe incluir una transacción fluida a través del valor NotAllowed explícito.  
+- Una solicitud de operación `Multiply` no debe incluir una transacción fluida a través del valor NotAllowed explícito.  
   
--   Una solicitud de operación `Divide` no debe incluir una transacción fluida a través de la omisión de un atributo `TransactionFlow`.  
+- Una solicitud de operación `Divide` no debe incluir una transacción fluida a través de la omisión de un atributo `TransactionFlow`.  
   
  Para habilitar el flujo de transacción, los enlaces con el [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) se debe usar la propiedad habilitada además de los atributos de la operación correspondiente. En este ejemplo, la configuración del servicio expone un punto de conexión del TCP y un punto de conexión HTTP además del punto de conexión de intercambio de metadatos. El punto de conexión TCP y el extremo HTTP utilizan los enlaces siguientes, los cuales tienen la [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) propiedad habilitada.  
   
@@ -182,15 +182,15 @@ Console.WriteLine("Transaction committed");
 
  Las llamadas a las operaciones son como sigue:  
   
--   La solicitud `Add` provoca que la transacción necesaria fluya hasta al servicio y las acciones del servicio se producen dentro del ámbito de la transacción del cliente.  
+- La solicitud `Add` provoca que la transacción necesaria fluya hasta al servicio y las acciones del servicio se producen dentro del ámbito de la transacción del cliente.  
   
--   La primera solicitud `Subtract` también fluye la transacción permitida hacia el servicio y de nuevo las acciones del servicio se producen dentro del ámbito de la transacción del cliente.  
+- La primera solicitud `Subtract` también fluye la transacción permitida hacia el servicio y de nuevo las acciones del servicio se producen dentro del ámbito de la transacción del cliente.  
   
--   La segunda solicitud `Subtract` se realiza dentro de un nuevo ámbito de la transacción declarado con la opción `TransactionScopeOption.Suppress`. Esto suprime la transacción exterior inicial del cliente y la solicitud no fluye hasta una transacción al servicio. Este enfoque permite a un cliente cancelar explícitamente una suscripción y protegerse contra el fluir de una transacción a un servicio cuando no es necesario. Las acciones del servicio se producen dentro del ámbito de una transacción nueva y no conectada.  
+- La segunda solicitud `Subtract` se realiza dentro de un nuevo ámbito de la transacción declarado con la opción `TransactionScopeOption.Suppress`. Esto suprime la transacción exterior inicial del cliente y la solicitud no fluye hasta una transacción al servicio. Este enfoque permite a un cliente cancelar explícitamente una suscripción y protegerse contra el fluir de una transacción a un servicio cuando no es necesario. Las acciones del servicio se producen dentro del ámbito de una transacción nueva y no conectada.  
   
--   La solicitud `Multiply` no fluye una transacción al servicio porque la definición generada del cliente de la interfaz `ICalculator` incluye un conjunto <xref:System.ServiceModel.TransactionFlowAttribute> establecido como <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
+- La solicitud `Multiply` no fluye una transacción al servicio porque la definición generada del cliente de la interfaz `ICalculator` incluye un conjunto <xref:System.ServiceModel.TransactionFlowAttribute> establecido como <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
   
--   La solicitud `Divide` no fluye una transacción al servicio porque, de nuevo, la definición de la interfaz `ICalculator` generada del cliente, no incluye un `TransactionFlowAttribute`. Las acciones del servicio se producen de nuevo dentro del ámbito de otra transacción nueva y no conectada.  
+- La solicitud `Divide` no fluye una transacción al servicio porque, de nuevo, la definición de la interfaz `ICalculator` generada del cliente, no incluye un `TransactionFlowAttribute`. Las acciones del servicio se producen de nuevo dentro del ámbito de otra transacción nueva y no conectada.  
   
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
@@ -238,47 +238,47 @@ Press <ENTER> to terminate the service.
   
 1. En un equipo de servicio que ejecute Windows Server 2003 o Windows XP, configure MSDTC para permitir las transacciones de red de entrada según estas instrucciones.  
   
-    1.  Desde el **iniciar** menú, vaya a **Panel de Control**, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.  
+    1. Desde el **iniciar** menú, vaya a **Panel de Control**, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.  
   
-    2.  Expanda **servicios de componentes**. Abra el **equipos** carpeta.  
+    2. Expanda **servicios de componentes**. Abra el **equipos** carpeta.  
   
-    3.  Haga clic en **Mi PC** y seleccione **propiedades**.  
+    3. Haga clic en **Mi PC** y seleccione **propiedades**.  
   
-    4.  En el **MSDTC** , haga clic **configuración de seguridad**.  
+    4. En el **MSDTC** , haga clic **configuración de seguridad**.  
   
-    5.  Comprobar **acceso DTC de red** y **Permitir entrantes**.  
+    5. Comprobar **acceso DTC de red** y **Permitir entrantes**.  
   
-    6.  Haga clic en **Aceptar**, a continuación, haga clic en **Sí** para reiniciar el servicio MSDTC.  
+    6. Haga clic en **Aceptar**, a continuación, haga clic en **Sí** para reiniciar el servicio MSDTC.  
   
-    7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
+    7. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
 2. En un equipo de servicio que ejecute Windows Server 2008 o Windows Vista, configure MSDTC para permitir las transacciones de red de entrada según estas instrucciones.  
   
-    1.  Desde el **iniciar** menú, vaya a **Panel de Control**, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.  
+    1. Desde el **iniciar** menú, vaya a **Panel de Control**, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.  
   
-    2.  Expanda **servicios de componentes**. Abra el **equipos** carpeta. Seleccione **Coordinador de transacciones distribuidas**.  
+    2. Expanda **servicios de componentes**. Abra el **equipos** carpeta. Seleccione **Coordinador de transacciones distribuidas**.  
   
-    3.  Haga clic en **coordinador DTC** y seleccione **propiedades**.  
+    3. Haga clic en **coordinador DTC** y seleccione **propiedades**.  
   
-    4.  En el **seguridad** pestaña **acceso de red DTC** y **Permitir entrantes**.  
+    4. En el **seguridad** pestaña **acceso de red DTC** y **Permitir entrantes**.  
   
-    5.  Haga clic en **Aceptar**, a continuación, haga clic en **Sí** para reiniciar el servicio MSDTC.  
+    5. Haga clic en **Aceptar**, a continuación, haga clic en **Sí** para reiniciar el servicio MSDTC.  
   
-    6.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
+    6. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
 3. En el equipo cliente, configure MSDTC para permitir las transacciones de red salientes:  
   
-    1.  Desde el **iniciar** menú, vaya a `Control Panel`, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.  
+    1. Desde el **iniciar** menú, vaya a `Control Panel`, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.  
   
-    2.  Haga clic en **Mi PC** y seleccione **propiedades**.  
+    2. Haga clic en **Mi PC** y seleccione **propiedades**.  
   
-    3.  En el **MSDTC** , haga clic **configuración de seguridad**.  
+    3. En el **MSDTC** , haga clic **configuración de seguridad**.  
   
-    4.  Comprobar **acceso DTC de red** y **Permitir salientes**.  
+    4. Comprobar **acceso DTC de red** y **Permitir salientes**.  
   
-    5.  Haga clic en **Aceptar**, a continuación, haga clic en **Sí** para reiniciar el servicio MSDTC.  
+    5. Haga clic en **Aceptar**, a continuación, haga clic en **Sí** para reiniciar el servicio MSDTC.  
   
-    6.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
+    6. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

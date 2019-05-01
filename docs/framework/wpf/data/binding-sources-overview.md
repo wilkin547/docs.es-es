@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
 ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023785"
 ---
 # <a name="binding-sources-overview"></a>Información general sobre orígenes de enlaces
 En el enlace de datos, el objeto de origen de enlace hace referencia al objeto de que se obtienen los datos. En este tema se describen los tipos de objetos que se pueden usar como origen de enlace.  
@@ -42,13 +42,13 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
 ### <a name="other-characteristics"></a>Otras características  
  En la lista siguiente se proporcionan otros puntos importantes a tener en cuenta:  
   
--   Si desea crear el objeto en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la clase debe tener un constructor predeterminado. En algunos [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] lenguajes, como C#, el constructor predeterminado puede crearse automáticamente.  
+- Si desea crear el objeto en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la clase debe tener un constructor predeterminado. En algunos [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] lenguajes, como C#, el constructor predeterminado puede crearse automáticamente.  
   
--   Las propiedades que se utilizan como propiedades de origen de enlace para un enlace deben ser propiedades públicas de la clase. No se puede acceder a las propiedades de interfaz definidas explícitamente con fines de enlace, ni tampoco las propiedades protegidas, privadas, internas o virtuales que no tengan ninguna implementación base.  
+- Las propiedades que se utilizan como propiedades de origen de enlace para un enlace deben ser propiedades públicas de la clase. No se puede acceder a las propiedades de interfaz definidas explícitamente con fines de enlace, ni tampoco las propiedades protegidas, privadas, internas o virtuales que no tengan ninguna implementación base.  
   
--   No se puede enlazar a campos públicos.  
+- No se puede enlazar a campos públicos.  
   
--   El tipo de la propiedad declarada en la clase es el tipo que se pasa al enlace. Sin embargo, el tipo utilizado en última instancia por el enlace depende del tipo de la propiedad de destino de enlace, no de la propiedad de origen de enlace. Si hay una diferencia en el tipo, puede escribir un convertidor para controlar cómo la propiedad personalizada se pasa inicialmente al enlace. Para obtener más información, consulta <xref:System.Windows.Data.IValueConverter>.  
+- El tipo de la propiedad declarada en la clase es el tipo que se pasa al enlace. Sin embargo, el tipo utilizado en última instancia por el enlace depende del tipo de la propiedad de destino de enlace, no de la propiedad de origen de enlace. Si hay una diferencia en el tipo, puede escribir un convertidor para controlar cómo la propiedad personalizada se pasa inicialmente al enlace. Para obtener más información, consulta <xref:System.Windows.Data.IValueConverter>.  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>Utilizar objetos completos como origen de enlace  
@@ -80,11 +80,11 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
   
  En esta tabla se describen los siguientes puntos importantes acerca de los requisitos de permisos en el enlace de datos:  
   
--   Para las propiedades [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], el enlace de datos funciona siempre que el motor de enlace tenga acceso a la propiedad de origen de enlace mediante la reflexión. De lo contrario, el motor de enlace emite una advertencia que indica que no se encuentra la propiedad y utiliza el valor de reserva o el valor predeterminado, si está disponible.  
+- Para las propiedades [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], el enlace de datos funciona siempre que el motor de enlace tenga acceso a la propiedad de origen de enlace mediante la reflexión. De lo contrario, el motor de enlace emite una advertencia que indica que no se encuentra la propiedad y utiliza el valor de reserva o el valor predeterminado, si está disponible.  
   
--   Puede enlazar a propiedades en objetos dinámicos que se definen en tiempo de compilación o tiempo de ejecución.  
+- Puede enlazar a propiedades en objetos dinámicos que se definen en tiempo de compilación o tiempo de ejecución.  
   
--   Siempre puede enlazar a propiedades de dependencia.  
+- Siempre puede enlazar a propiedades de dependencia.  
   
  El requisito de permiso para el enlace [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] es similar. En un recinto de confianza parcial, <xref:System.Windows.Data.XmlDataProvider> se produce un error cuando no tiene permisos para acceder a los datos especificados.  
   

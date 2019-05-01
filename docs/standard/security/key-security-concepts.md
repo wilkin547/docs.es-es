@@ -14,11 +14,11 @@ ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c483baeca9efcbc4a38020a7b2f4fa221a6b4028
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018624"
 ---
 # <a name="key-security-concepts"></a>Conceptos clave de seguridad
 Microsoft .NET Framework ofrece seguridad basada en roles para ayudar a solucionar problemas de seguridad relativos a código móvil y para permitir que los componentes determinen qué usuarios tienen autorización para operar.  
@@ -35,11 +35,11 @@ Microsoft .NET Framework ofrece seguridad basada en roles para ayudar a solucion
 ## <a name="principal"></a>Principal  
  Una entidad de seguridad (principal) representa la identidad y el rol de un usuario y actúa en nombre del usuario. La seguridad basada en roles de .NET Framework admite tres tipos de entidades de seguridad:  
   
--   Las entidades de seguridad genéricas representan usuarios y roles que son independientes de los roles y los usuarios de Windows.  
+- Las entidades de seguridad genéricas representan usuarios y roles que son independientes de los roles y los usuarios de Windows.  
   
--   Las entidades de seguridad de Windows representan a los usuarios de Windows y sus roles (o grupos de Windows). Una entidad de seguridad de Windows puede suplantar a otro usuario, lo que significa que la entidad de seguridad puede tener acceso a un recurso en nombre de un usuario presentando la identidad que pertenece a dicho usuario.  
+- Las entidades de seguridad de Windows representan a los usuarios de Windows y sus roles (o grupos de Windows). Una entidad de seguridad de Windows puede suplantar a otro usuario, lo que significa que la entidad de seguridad puede tener acceso a un recurso en nombre de un usuario presentando la identidad que pertenece a dicho usuario.  
   
--   Una aplicación puede definir entidades de seguridad personalizadas que se adapten a las necesidades de esa aplicación en particular. Asimismo, se puede ampliar la noción básica de la identidad y los roles de la entidad de seguridad.  
+- Una aplicación puede definir entidades de seguridad personalizadas que se adapten a las necesidades de esa aplicación en particular. Asimismo, se puede ampliar la noción básica de la identidad y los roles de la entidad de seguridad.  
   
  Para más información, consulte [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md).  
   

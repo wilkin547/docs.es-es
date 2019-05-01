@@ -6,8 +6,8 @@ ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006343"
 ---
 # <a name="usage-of-standard-endpoints"></a>Uso de extremos estándar
 
@@ -143,13 +143,13 @@ public class CustomEndpoint : ServiceEndpoint
 
 2. Habilite varios proyectos para iniciarse.
 
-    1.  En **el Explorador de soluciones**, haga clic en la solución de puntos de conexión estándar y, a continuación, seleccione **propiedades**.
+    1. En **el Explorador de soluciones**, haga clic en la solución de puntos de conexión estándar y, a continuación, seleccione **propiedades**.
 
-    2.  En **propiedades comunes**, seleccione **proyecto de inicio**y, a continuación, haga clic en **varios proyectos de inicio**.
+    2. En **propiedades comunes**, seleccione **proyecto de inicio**y, a continuación, haga clic en **varios proyectos de inicio**.
 
-    3.  Mueva el proyecto de servicio al principio de la lista, con el **acción** establecido en **iniciar**.
+    3. Mueva el proyecto de servicio al principio de la lista, con el **acción** establecido en **iniciar**.
 
-    4.  Mueva el proyecto cliente después del proyecto de servicio, también con la **acción** establecido en **iniciar**.
+    4. Mueva el proyecto cliente después del proyecto de servicio, también con la **acción** establecido en **iniciar**.
 
          De esta forma se especifica que el proyecto Cliente se ejecute después del proyecto Servicio.
 

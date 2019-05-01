@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
 ms.openlocfilehash: 1024cf6f2c1fa112db29cb710eef190a5022d3af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013639"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>No se pudieron inferir los argumentos de tipo a partir del delegado
 Una instrucción de asignación usa `AddressOf` para asignar la dirección de un procedimiento genérico a un delegado, pero no proporciona ningún argumento de tipo al procedimiento genérico.  
@@ -23,7 +23,7 @@ Una instrucción de asignación usa `AddressOf` para asignar la dirección de un
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Especifique los argumentos de tipo para el procedimiento genérico en la expresión `AddressOf` .  
+- Especifique los argumentos de tipo para el procedimiento genérico en la expresión `AddressOf` .  
   
 ## <a name="see-also"></a>Vea también
 

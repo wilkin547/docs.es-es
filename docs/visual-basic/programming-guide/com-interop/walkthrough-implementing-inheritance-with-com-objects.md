@@ -8,11 +8,11 @@ helpviewer_keywords:
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022329"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Tutorial: Implementar la herencia mediante objetos COM (Visual Basic)
 Puede derivar clases de Visual Basic desde `Public` clases de objetos COM, incluso los creados en versiones anteriores de Visual Basic. Las propiedades y métodos de clases que heredan de los objetos COM pueden ser invalidados o sobrecargados solo como propiedades y métodos de cualquier otra clase base pueden ser invalidados o sobrecargados. Herencia de objetos COM resulta útil cuando tiene una biblioteca de clases que no desea volver a compilar.  
@@ -125,9 +125,9 @@ Puede derivar clases de Visual Basic desde `Public` clases de objetos COM, inclu
   
  Pueden invalidar las propiedades y métodos heredados de las clases COM, lo que significa que puede declarar una propiedad local o un método que reemplaza una propiedad o método heredado de una clase COM base. Las reglas para reemplazar propiedades COM heredadas son similares a las reglas para reemplazar otras propiedades y métodos con las siguientes excepciones:  
   
--   Si reemplaza cualquier propiedad o método heredado de una clase COM, debe reemplazar todas las demás propiedades heredadas y métodos.  
+- Si reemplaza cualquier propiedad o método heredado de una clase COM, debe reemplazar todas las demás propiedades heredadas y métodos.  
   
--   Las propiedades que usan `ByRef` no se puede invalidar los parámetros.  
+- Las propiedades que usan `ByRef` no se puede invalidar los parámetros.  
   
 ## <a name="see-also"></a>Vea también
 

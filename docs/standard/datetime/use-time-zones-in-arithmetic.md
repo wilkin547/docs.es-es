@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Usar zonas horarias en fecha y hora aritmético
+title: Procedimiento para usar zonas horarias en operaciones aritméticas de fecha y hora
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026502"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procedimiento Usar zonas horarias en fecha y hora aritmético
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procedimiento para usar zonas horarias en operaciones aritméticas de fecha y hora
 
 Normalmente, al realizar la fecha y hora aritmético mediante <xref:System.DateTime> o <xref:System.DateTimeOffset> valores, el resultado no refleja las reglas de ajuste de zona horaria. Esto es cierto incluso cuando la zona horaria del valor de fecha y hora es claramente identificable (por ejemplo, cuando el <xref:System.DateTime.Kind%2A> propiedad está establecida en <xref:System.DateTimeKind.Local>). En este tema se muestra cómo realizar operaciones aritméticas en valores de fecha y hora que pertenecen a una zona horaria determinada. Los resultados de las operaciones aritméticas reflejarán las reglas de ajuste de la zona horaria.
 

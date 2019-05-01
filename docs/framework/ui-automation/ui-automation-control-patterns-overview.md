@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033090"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Información general acerca de los patrones de control de UI Automation
 > [!NOTE]
@@ -27,11 +27,11 @@ ms.locfileid: "59126365"
 ## <a name="ui-automation-control-pattern-components"></a>Componentes de los patrones de control de Automatización de la interfaz de usuario  
  Los patrones de control admiten los métodos, propiedades, eventos y relaciones necesarios para definir una parte de funcionalidad discreta disponible en un control.  
   
--   La relación entre un elemento de Automatización de la interfaz de usuario y su elemento primario, sus elementos secundarios y los del mismo nivel describe la estructura del elemento dentro del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
+- La relación entre un elemento de Automatización de la interfaz de usuario y su elemento primario, sus elementos secundarios y los del mismo nivel describe la estructura del elemento dentro del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
--   Los métodos permiten que los clientes de Automatización de la interfaz de usuario manipulen el control.  
+- Los métodos permiten que los clientes de Automatización de la interfaz de usuario manipulen el control.  
   
--   Las propiedades y los eventos ofrecen información sobre la funcionalidad del patrón de control, así como información sobre el estado del control.  
+- Las propiedades y los eventos ofrecen información sobre la funcionalidad del patrón de control, así como información sobre el estado del control.  
   
  Los patrones de control se relacionan con [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] de la misma forma en que las interfaces se relacionan con los objetos [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] . En [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)], puede consultar un objeto para averiguar las interfaces que admite y luego usar esas interfaces para acceder a la funcionalidad. En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], los clientes de Automatización de la interfaz de usuario pueden preguntar a un control qué patrones de control admite y, después, interactuar con el control mediante los métodos, propiedades, eventos y estructuras que exponen los patrones de control admitidos. Por ejemplo, para un cuadro de edición multilínea, los proveedores de Automatización de la interfaz de usuario implementan <xref:System.Windows.Automation.Provider.IScrollProvider>. Si un cliente sabe que un elemento <xref:System.Windows.Automation.AutomationElement> admite el patrón de control <xref:System.Windows.Automation.ScrollPattern> , puede utilizar las propiedades, los métodos y los eventos expuestos por este patrón de control para manipular el control o acceder a información sobre el control.  
   

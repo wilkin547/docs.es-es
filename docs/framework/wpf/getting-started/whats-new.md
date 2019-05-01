@@ -6,44 +6,44 @@ helpviewer_keywords:
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
 ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020314"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Novedades de WPF versión 4.5
 <a name="introduction"></a> Este tema contiene información sobre las características nuevas y mejoradas de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] versión 4.5.  
   
  Este tema contiene las siguientes secciones:  
   
--   [Control Ribbon](#ribbon_control)  
+- [Control Ribbon](#ribbon_control)  
   
--   [Rendimiento mejorado al mostrar grandes conjuntos de datos agrupados](#grouped_virtualization)  
+- [Rendimiento mejorado al mostrar grandes conjuntos de datos agrupados](#grouped_virtualization)  
   
--   [Nuevas características para VirtualizingPanel](#VirtualizingPanel)  
+- [Nuevas características para VirtualizingPanel](#VirtualizingPanel)  
   
--   [Enlace a propiedades estáticas](#static_properties)  
+- [Enlace a propiedades estáticas](#static_properties)  
   
--   [Acceso a colecciones en subprocesos que no son de la interfaz de usuario](#xthread_access)  
+- [Acceso a colecciones en subprocesos que no son de la interfaz de usuario](#xthread_access)  
   
--   [Validación sincrónica y asincrónica de datos](#INotifyDataErrorInfo)  
+- [Validación sincrónica y asincrónica de datos](#INotifyDataErrorInfo)  
   
--   [Actualización automática del origen de un enlace de datos](#delay)  
+- [Actualización automática del origen de un enlace de datos](#delay)  
   
--   [Enlace a tipos que implementan ICustomTypeProvider](#ICustomTypeProvider)  
+- [Enlace a tipos que implementan ICustomTypeProvider](#ICustomTypeProvider)  
   
--   [Recuperación de información sobre el enlace de datos de una expresión de enlace](#binding_state)  
+- [Recuperación de información sobre el enlace de datos de una expresión de enlace](#binding_state)  
   
--   [Búsqueda de un objeto DataContext válido](#DisconnectedSource)  
+- [Búsqueda de un objeto DataContext válido](#DisconnectedSource)  
   
--   [Reposición de los datos a medida que cambian sus valores (modelado dinámico)](#live_shaping)  
+- [Reposición de los datos a medida que cambian sus valores (modelado dinámico)](#live_shaping)  
   
--   [Compatibilidad mejorada para establecer una referencia débil a un evento](#weak_event_pattern)  
+- [Compatibilidad mejorada para establecer una referencia débil a un evento](#weak_event_pattern)  
   
--   [Nuevos métodos para la clase Dispatcher](#async)  
+- [Nuevos métodos para la clase Dispatcher](#async)  
   
--   [Extensiones de marcado para eventos](#events_markup_extenions)  
+- [Extensiones de marcado para eventos](#events_markup_extenions)  
   
 <a name="ribbon_control"></a>   
 ## <a name="ribbon-control"></a>Control Ribbon  
@@ -64,9 +64,9 @@ ms.locfileid: "59325831"
 ## <a name="binding-to-static-properties"></a>Enlace a propiedades estáticas  
  Puede usar propiedades estáticas como origen de un enlace de datos. El motor de enlace de datos reconoce cuándo cambia el valor de la propiedad si se genera un evento estático.  Por ejemplo, si la clase `SomeClass` define una propiedad estática denominada `MyProperty`, `SomeClass` puede definir un evento estático que se genera cuando el valor de `MyProperty` cambia.  El evento estático puede utilizar cualquiera de las siguientes firmas.  
   
--   `public static event EventHandler MyPropertyChanged;`  
+- `public static event EventHandler MyPropertyChanged;`  
   
--   `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
+- `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
   
  Tenga en cuenta que en el primer caso, la clase expone un evento estático denominado *PropertyName* `Changed` que pasa <xref:System.EventArgs> al controlador de eventos.  En el segundo caso, la clase expone un evento estático denominado `StaticPropertyChanged` que pasa <xref:System.ComponentModel.PropertyChangedEventArgs> al controlador de eventos. Una clase que implementa la propiedad estática puede elegir generar notificaciones de cambio de propiedad mediante cualquiera de estos métodos.  
   

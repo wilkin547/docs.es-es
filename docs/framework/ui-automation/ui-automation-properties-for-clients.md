@@ -9,11 +9,11 @@ helpviewer_keywords:
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 ms.openlocfilehash: a75b502dc02f0541b9debb6cd1ae23ba10eed8b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033059"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Propiedades de UI Automation para clientes
 > [!NOTE]
@@ -41,11 +41,11 @@ ms.locfileid: "59116368"
   
  Para más información, consulte los temas de referencia siguientes:  
   
--   <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>  
+- <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.FindAll%2A>  
+- <xref:System.Windows.Automation.AutomationElement.FindAll%2A>  
   
--   <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
+- <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
   
 <a name="Retrieving_Properties"></a>   
 ## <a name="retrieving-properties"></a>Recuperación de propiedades  
@@ -53,9 +53,9 @@ ms.locfileid: "59116368"
   
  Además, cualquier propiedad de patrón de control o <xref:System.Windows.Automation.AutomationElement> , incluida una propiedad que no esté disponible en la estructura <xref:System.Windows.Automation.AutomationElement.Cached%2A> o <xref:System.Windows.Automation.AutomationElement.Current%2A> , se puede recuperar con uno de los métodos siguientes:  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>  
   
  Estos métodos ofrecen un rendimiento ligeramente superior así como acceso a la gama completa de propiedades.  
   

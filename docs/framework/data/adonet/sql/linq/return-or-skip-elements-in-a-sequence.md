@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033467"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Devolver u omitir elementos de una secuencia
 Utilice el operador <xref:System.Linq.Queryable.Take%2A> para devolver un número determinado de elementos de una secuencia y omitir el resto.  
@@ -22,9 +22,9 @@ Utilice el operador <xref:System.Linq.Queryable.Take%2A> para devolver un númer
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduce <xref:System.Linq.Queryable.Skip%2A> utilizando una subconsulta con el lenguaje SQL `NOT EXISTS` cláusula. Esta conversión tiene las limitaciones siguientes:  
   
--   El argumento debe ser un conjunto. No se admiten los conjuntos múltiples, aunque estén ordenados.  
+- El argumento debe ser un conjunto. No se admiten los conjuntos múltiples, aunque estén ordenados.  
   
--   La consulta generada puede ser mucho más compleja que la consulta generada para la consulta base en la que se aplica <xref:System.Linq.Queryable.Skip%2A>. Esta complejidad puede mermar el rendimiento o incluso hacer que se agote el tiempo de espera.  
+- La consulta generada puede ser mucho más compleja que la consulta generada para la consulta base en la que se aplica <xref:System.Linq.Queryable.Skip%2A>. Esta complejidad puede mermar el rendimiento o incluso hacer que se agote el tiempo de espera.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se utiliza `Take` para seleccionar los cinco primeros `Employees` contratados. Observe que la colección primero se ordena por `HireDate`.  

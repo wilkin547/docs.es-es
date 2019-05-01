@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
 ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053163"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Tutorial: Asignar propiedades mediante el uso del control ElementHost
 
@@ -21,13 +21,13 @@ En este tutorial se muestra cómo usar el <xref:System.Windows.Forms.Integration
 
 Las tareas ilustradas en este tutorial incluyen:
 
--   Crear el proyecto.
+- Crear el proyecto.
 
--   Definir una nueva asignación de propiedades.
+- Definir una nueva asignación de propiedades.
 
--   Quitar una asignación de propiedades predeterminada.
+- Quitar una asignación de propiedades predeterminada.
 
--   Extender una asignación de propiedades predeterminada.
+- Extender una asignación de propiedades predeterminada.
 
 Para obtener una lista de código completo de las tareas ilustradas en este tutorial, vea [asignar propiedades mediante el ejemplo del Control ElementHost](https://go.microsoft.com/fwlink/?LinkID=160018).
 
@@ -37,7 +37,7 @@ Cuando haya terminado, podrá asignar [!INCLUDE[TLA#tla_winforms](../../../../in
 
 Necesita los componentes siguientes para completar este tutorial:
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-project"></a>Crear el proyecto
 
@@ -47,13 +47,13 @@ Necesita los componentes siguientes para completar este tutorial:
 
 2. En **el Explorador de soluciones**, agregue referencias a los siguientes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ensamblados.
 
-    -   PresentationCore
+    - PresentationCore
 
-    -   PresentationFramework
+    - PresentationFramework
 
-    -   WindowsBase
+    - WindowsBase
 
-    -   WindowsFormsIntegration
+    - WindowsFormsIntegration
 
 3. Copie el código siguiente en la parte superior de la `Form1` archivo de código.
 
@@ -101,7 +101,7 @@ Quitar una asignación de propiedades predeterminada llamando el <xref:System.Wi
 
 ### <a name="to-remove-a-default-property-mapping"></a>Para quitar una asignación de propiedades predeterminada
 
--   Copie el código siguiente en la definición para el `Form1` clase.
+- Copie el código siguiente en la definición para el `Form1` clase.
 
      [!code-csharp[PropertyMappingWithElementHost#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
@@ -114,7 +114,7 @@ Puede usar una asignación de propiedades predeterminada y extenderla con su pro
 
 ### <a name="to-extend-a-default-property-mapping"></a>Para extender una asignación de propiedades predeterminada
 
--   Copie el código siguiente en la definición para el `Form1` clase.
+- Copie el código siguiente en la definición para el `Form1` clase.
 
      [!code-csharp[PropertyMappingWithElementHost#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
@@ -132,11 +132,11 @@ Puede usar una asignación de propiedades predeterminada y extenderla con su pro
 
      El `Form1_Load` método controla el <xref:System.Windows.Forms.Form.Load> eventos y realiza la inicialización siguiente.
 
-    -   Crea un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> elemento.
+    - Crea un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> elemento.
 
-    -   Llama a los métodos definidos anteriormente en el tutorial para configurar las asignaciones de propiedades.
+    - Llama a los métodos definidos anteriormente en el tutorial para configurar las asignaciones de propiedades.
 
-    -   Asigna los valores iniciales a las propiedades asignadas.
+    - Asigna los valores iniciales a las propiedades asignadas.
 
 2. Presione F5 para compilar y ejecutar la aplicación.
 

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bdc889dd6b2854654bfe43b24afbe4cc19863c80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993699"
 ---
 # <a name="icordebugvalue-interface"></a>Interfaz ICorDebugValue
 Representa un valor en el proceso que se está depurando. El valor puede ser de lectura o un valor de escritura.  

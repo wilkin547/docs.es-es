@@ -5,18 +5,18 @@ f1_keywords:
 - vbrGeneral_ArgumentEmptyOrNothing_Name
 ms.assetid: 2c458944-1bdf-4ea7-9caf-560ca7582cc0
 ms.openlocfilehash: 2e4105c0e9ac4e0403661a1160f17d60a27489ea
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58038698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025202"
 ---
 # <a name="argument-argumentname-cannot-be-an-empty-string-or-nothing"></a>Argumento \<nombredeargumento > no puede ser una cadena vacía ni Nothing
 El argumento requiere un valor que no sea una cadena vacía ("") ni tener el valor `Nothing`. Esto puede ser el resultado del cálculo incorrecto del valor.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Suministre un valor válido para el argumento.  
+- Suministre un valor válido para el argumento.  
   
 ## <a name="see-also"></a>Vea también
 

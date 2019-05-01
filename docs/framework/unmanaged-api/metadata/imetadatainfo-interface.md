@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c691c403155d6e10db70c05894fe6a0fd381f036
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042458"
 ---
 # <a name="imetadatainfo-interface"></a>IMetaDataInfo (Interfaz)
 Proporciona un método que obtiene información sobre la asignación de metadatos desde un archivo en disco a la memoria.  

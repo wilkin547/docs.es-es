@@ -8,11 +8,11 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
 ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032245"
 ---
 # <a name="attached-properties-overview"></a>Información general sobre propiedades asociadas
 
@@ -46,11 +46,11 @@ En [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md
 
 Aunque las propiedades adjuntas se pueden establecer en cualquier objeto, eso no significa automáticamente que establecer la propiedad vaya a producir un resultado tangible ni que otro objeto no pueda usar nunca el valor. Por lo general, las propiedades adjuntas están diseñadas para que los objetos procedentes de una amplia variedad de posibles jerarquías de clases o relaciones lógicas puedan, individualmente, notificar información común del tipo que define la propiedad adjunta. El tipo que define la propiedad adjunta suele seguir uno de estos modelos:
 
--   El tipo que define la propiedad adjunta está diseñado para poder ser el elemento primario de los elementos que establecerán los valores de la propiedad adjunta. A continuación, el tipo itera sus objetos secundarios a través de la lógica interna en alguna estructura de árbol de objetos, obtiene los valores y actúa sobre esos valores de algún modo.
+- El tipo que define la propiedad adjunta está diseñado para poder ser el elemento primario de los elementos que establecerán los valores de la propiedad adjunta. A continuación, el tipo itera sus objetos secundarios a través de la lógica interna en alguna estructura de árbol de objetos, obtiene los valores y actúa sobre esos valores de algún modo.
 
--   El tipo que define la propiedad adjunta se usará como el elemento secundario de una variedad de posibles elementos primarios y modelos de contenido.
+- El tipo que define la propiedad adjunta se usará como el elemento secundario de una variedad de posibles elementos primarios y modelos de contenido.
 
--   El tipo que define la propiedad adjunta representa un servicio. Otros tipos establecen los valores de la propiedad adjunta. A continuación, cuando el elemento que establece la propiedad se evalúa en el contexto del servicio, los valores de la propiedad adjunta se obtienen a través de la lógica interna de la clase de servicio.
+- El tipo que define la propiedad adjunta representa un servicio. Otros tipos establecen los valores de la propiedad adjunta. A continuación, cuando el elemento que establece la propiedad se evalúa en el contexto del servicio, los valores de la propiedad adjunta se obtienen a través de la lógica interna de la clase de servicio.
 
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>Ejemplo de una propiedad adjunta definida por el elemento primario
 
@@ -102,9 +102,9 @@ La firma para el **Get_PropertyName_** descriptor de acceso debe ser:
 
 `public static object GetPropertyName(object target)`
 
--   El objeto `target` puede especificarse como un tipo más específico en la implementación. Por ejemplo, el <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> método el tipo del parámetro como <xref:System.Windows.UIElement>, porque la propiedad adjunta solo debe establecerse en <xref:System.Windows.UIElement> instancias.
+- El objeto `target` puede especificarse como un tipo más específico en la implementación. Por ejemplo, el <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> método el tipo del parámetro como <xref:System.Windows.UIElement>, porque la propiedad adjunta solo debe establecerse en <xref:System.Windows.UIElement> instancias.
 
--   El valor devuelto puede especificarse como un tipo más específico en la implementación. Por ejemplo, el <xref:System.Windows.Controls.DockPanel.GetDock%2A> tipos de método como <xref:System.Windows.Controls.Dock>, porque el valor solo puede establecerse en esa enumeración.
+- El valor devuelto puede especificarse como un tipo más específico en la implementación. Por ejemplo, el <xref:System.Windows.Controls.DockPanel.GetDock%2A> tipos de método como <xref:System.Windows.Controls.Dock>, porque el valor solo puede establecerse en esa enumeración.
 
 #### <a name="the-set-accessor"></a>Descriptor de acceso set
 
@@ -112,9 +112,9 @@ La firma para el **Set_PropertyName_** descriptor de acceso debe ser:
 
 `public static void SetPropertyName(object target, object value)`
 
--   El objeto `target` puede especificarse como un tipo más específico en la implementación. Por ejemplo, el <xref:System.Windows.Controls.DockPanel.SetDock%2A> tipos de método como <xref:System.Windows.UIElement>, porque la propiedad adjunta solo debe establecerse en <xref:System.Windows.UIElement> instancias.
+- El objeto `target` puede especificarse como un tipo más específico en la implementación. Por ejemplo, el <xref:System.Windows.Controls.DockPanel.SetDock%2A> tipos de método como <xref:System.Windows.UIElement>, porque la propiedad adjunta solo debe establecerse en <xref:System.Windows.UIElement> instancias.
 
--   El objeto `value` puede especificarse como un tipo más específico en la implementación. Por ejemplo, el <xref:System.Windows.Controls.DockPanel.SetDock%2A> tipos de método como <xref:System.Windows.Controls.Dock>, porque el valor solo puede establecerse en esa enumeración. Recuerde que el valor de este método es la entrada procedente del cargador de XAML cuando encuentra la propiedad adjunta en el uso de propiedades adjuntas en un marcado. Esa entrada es el valor especificado como un valor de atributo XAML en el marcado. Por lo tanto, debe existir compatibilidad con la conversión de tipos, el serializador de valores o la extensión de marcado para el tipo que usa, de modo que el tipo adecuado se pueda crear desde el valor del atributo (que, básicamente, es una cadena).
+- El objeto `value` puede especificarse como un tipo más específico en la implementación. Por ejemplo, el <xref:System.Windows.Controls.DockPanel.SetDock%2A> tipos de método como <xref:System.Windows.Controls.Dock>, porque el valor solo puede establecerse en esa enumeración. Recuerde que el valor de este método es la entrada procedente del cargador de XAML cuando encuentra la propiedad adjunta en el uso de propiedades adjuntas en un marcado. Esa entrada es el valor especificado como un valor de atributo XAML en el marcado. Por lo tanto, debe existir compatibilidad con la conversión de tipos, el serializador de valores o la extensión de marcado para el tipo que usa, de modo que el tipo adecuado se pueda crear desde el valor del atributo (que, básicamente, es una cadena).
 
 El ejemplo siguiente muestra el registro de la propiedad de dependencia (mediante el <xref:System.Windows.DependencyProperty.RegisterAttached%2A> método), así como el **Get_PropertyName_** y **Set_PropertyName_** descriptores de acceso. En el ejemplo, el nombre de la propiedad adjunta es `IsBubbleSource`. Por consiguiente, los descriptores de acceso deben denominarse `GetIsBubbleSource` y `SetIsBubbleSource`.
 
@@ -125,21 +125,21 @@ El ejemplo siguiente muestra el registro de la propiedad de dependencia (mediant
 
 WPF define varios [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] que están diseñadas para proporcionar información sobre las propiedades adjuntas a los procesos de reflexión y a los usuarios típicos de reflexión y la propiedad de información, tales como diseñadores. Dado que las propiedades adjuntas tienen un tipo de ámbito ilimitado, los diseñadores necesitan una manera de evitar abrumar a los usuarios con una lista global de todas las propiedades adjuntas que se definen en una implementación de tecnología específica que utiliza XAML. El [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] que WPF define para las propiedades adjuntas se pueden usar para delimitar las situaciones donde una determinada propiedad adjunta debe mostrarse en una ventana de propiedades. También puede aplicar estos atributos para sus propias propiedades adjuntas personalizadas. El propósito y la sintaxis de [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] se describe en las páginas de referencia correspondientes:
 
--   <xref:System.Windows.AttachedPropertyBrowsableAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
 
 ## Obtener más información sobre las propiedades adjuntas <a name="more"></a>
 
--   Para obtener más información acerca de cómo crear una propiedad adjunta, consulte [Registrar una propiedad asociada](how-to-register-an-attached-property.md).
+- Para obtener más información acerca de cómo crear una propiedad adjunta, consulte [Registrar una propiedad asociada](how-to-register-an-attached-property.md).
 
--   Para obtener escenarios de uso más avanzados sobre las propiedades de dependencia y las propiedades adjuntas, consulte [Propiedades de dependencia personalizadas](custom-dependency-properties.md).
+- Para obtener escenarios de uso más avanzados sobre las propiedades de dependencia y las propiedades adjuntas, consulte [Propiedades de dependencia personalizadas](custom-dependency-properties.md).
 
--   Puede registrar una propiedad como una propiedad adjunta y también como una propiedad de dependencia, pero continuar exponiendo las implementaciones de "contenedor". En este caso, la propiedad puede establecerse en ese elemento o en cualquier elemento a través de la sintaxis XAML de la propiedad adjunta. Un ejemplo de una propiedad con un escenario adecuado para usos estándar y adjuntos es <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
+- Puede registrar una propiedad como una propiedad adjunta y también como una propiedad de dependencia, pero continuar exponiendo las implementaciones de "contenedor". En este caso, la propiedad puede establecerse en ese elemento o en cualquier elemento a través de la sintaxis XAML de la propiedad adjunta. Un ejemplo de una propiedad con un escenario adecuado para usos estándar y adjuntos es <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Vea también
 
