@@ -17,38 +17,38 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2cf75de6a71cfbe25cbde281f837060b88e93753
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988447"
 ---
-# <a name="icordebuginternalframe2-interface"></a><span data-ttu-id="2b78f-102">ICorDebugInternalFrame2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="2b78f-102">ICorDebugInternalFrame2 Interface</span></span>
-<span data-ttu-id="2b78f-103">Proporciona información sobre los marcos internos, incluyendo la dirección de la pila y la posición en relación con los objetos ICorDebugFrame.</span><span class="sxs-lookup"><span data-stu-id="2b78f-103">Provides information about internal frames, including stack address and position in relation to ICorDebugFrame objects.</span></span>  
+# <a name="icordebuginternalframe2-interface"></a><span data-ttu-id="8db22-102">ICorDebugInternalFrame2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="8db22-102">ICorDebugInternalFrame2 Interface</span></span>
+<span data-ttu-id="8db22-103">Proporciona información sobre los marcos internos, incluyendo la dirección de la pila y la posición en relación con los objetos ICorDebugFrame.</span><span class="sxs-lookup"><span data-stu-id="8db22-103">Provides information about internal frames, including stack address and position in relation to ICorDebugFrame objects.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="2b78f-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="2b78f-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8db22-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="8db22-104">Methods</span></span>  
   
-|<span data-ttu-id="2b78f-105">Método</span><span class="sxs-lookup"><span data-stu-id="2b78f-105">Method</span></span>|<span data-ttu-id="2b78f-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="2b78f-106">Description</span></span>|  
+|<span data-ttu-id="8db22-105">Método</span><span class="sxs-lookup"><span data-stu-id="8db22-105">Method</span></span>|<span data-ttu-id="8db22-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="8db22-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="2b78f-107">GetFrameAddress (método)</span><span class="sxs-lookup"><span data-stu-id="2b78f-107">GetFrameAddress Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-getframeaddress-method.md)|<span data-ttu-id="2b78f-108">Devuelve la dirección de pila del marco interno.</span><span class="sxs-lookup"><span data-stu-id="2b78f-108">Returns the stack address of the internal frame.</span></span>|  
-|[<span data-ttu-id="2b78f-109">IsCloserToLeaf (método)</span><span class="sxs-lookup"><span data-stu-id="2b78f-109">IsCloserToLeaf Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-isclosertoleaf-method.md)|<span data-ttu-id="2b78f-110">Comprueba si el `this` marco interno está más cerca de la hoja que el objeto ICorDebugFrame especificado.</span><span class="sxs-lookup"><span data-stu-id="2b78f-110">Checks whether the `this` internal frame is closer to the leaf than the specified ICorDebugFrame object.</span></span>|  
+|[<span data-ttu-id="8db22-107">GetFrameAddress (método)</span><span class="sxs-lookup"><span data-stu-id="8db22-107">GetFrameAddress Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-getframeaddress-method.md)|<span data-ttu-id="8db22-108">Devuelve la dirección de pila del marco interno.</span><span class="sxs-lookup"><span data-stu-id="8db22-108">Returns the stack address of the internal frame.</span></span>|  
+|[<span data-ttu-id="8db22-109">IsCloserToLeaf (método)</span><span class="sxs-lookup"><span data-stu-id="8db22-109">IsCloserToLeaf Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-isclosertoleaf-method.md)|<span data-ttu-id="8db22-110">Comprueba si el `this` marco interno está más cerca de la hoja que el objeto ICorDebugFrame especificado.</span><span class="sxs-lookup"><span data-stu-id="8db22-110">Checks whether the `this` internal frame is closer to the leaf than the specified ICorDebugFrame object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2b78f-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2b78f-111">Remarks</span></span>  
- <span data-ttu-id="2b78f-112">Esta interfaz extiende ICorDebugInternalFrame (interfaz).</span><span class="sxs-lookup"><span data-stu-id="2b78f-112">This interface extends the ICorDebugInternalFrame interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8db22-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="8db22-111">Remarks</span></span>  
+ <span data-ttu-id="8db22-112">Esta interfaz extiende ICorDebugInternalFrame (interfaz).</span><span class="sxs-lookup"><span data-stu-id="8db22-112">This interface extends the ICorDebugInternalFrame interface.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2b78f-113">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="2b78f-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="8db22-113">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="8db22-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2b78f-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2b78f-114">Requirements</span></span>  
- <span data-ttu-id="2b78f-115">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b78f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8db22-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8db22-114">Requirements</span></span>  
+ <span data-ttu-id="8db22-115">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8db22-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2b78f-116">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2b78f-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8db22-116">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8db22-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2b78f-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2b78f-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8db22-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8db22-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2b78f-118">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b78f-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="8db22-118">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8db22-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b78f-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="2b78f-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8db22-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="8db22-119">See also</span></span>
 
-- [<span data-ttu-id="2b78f-120">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="2b78f-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="2b78f-121">Depuración</span><span class="sxs-lookup"><span data-stu-id="2b78f-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="8db22-120">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="8db22-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="8db22-121">Depuración</span><span class="sxs-lookup"><span data-stu-id="8db22-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

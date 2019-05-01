@@ -9,22 +9,22 @@ helpviewer_keywords:
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
 ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010415"
 ---
-# <a name="drag-and-drop"></a><span data-ttu-id="07040-102">Arrastrar y colocar</span><span class="sxs-lookup"><span data-stu-id="07040-102">Drag and Drop</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="07040-103">Proporciona un arrastre muy flexible y la infraestructura de colocación que es compatible con arrastrar y colocar de datos dentro de ambos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones, así como otros [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="07040-103">provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  
+# <a name="drag-and-drop"></a><span data-ttu-id="a9c70-102">Arrastrar y colocar</span><span class="sxs-lookup"><span data-stu-id="a9c70-102">Drag and Drop</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="a9c70-103">Proporciona un arrastre muy flexible y la infraestructura de colocación que es compatible con arrastrar y colocar de datos dentro de ambos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones, así como otros [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="a9c70-103">provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="07040-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="07040-104">In This Section</span></span>  
- [<span data-ttu-id="07040-105">Información general sobre la función de arrastrar y colocar</span><span class="sxs-lookup"><span data-stu-id="07040-105">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)  
- [<span data-ttu-id="07040-106">Datos y objetos de datos</span><span class="sxs-lookup"><span data-stu-id="07040-106">Data and Data Objects</span></span>](data-and-data-objects.md)  
- [<span data-ttu-id="07040-107">Tutorial: Lo que permite arrastrar y colocar en un Control de usuario</span><span class="sxs-lookup"><span data-stu-id="07040-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [<span data-ttu-id="07040-108">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="07040-108">How-to Topics</span></span>](drag-and-drop-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a9c70-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="a9c70-104">In This Section</span></span>  
+ [<span data-ttu-id="a9c70-105">Información general sobre la función de arrastrar y colocar</span><span class="sxs-lookup"><span data-stu-id="a9c70-105">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)  
+ [<span data-ttu-id="a9c70-106">Datos y objetos de datos</span><span class="sxs-lookup"><span data-stu-id="a9c70-106">Data and Data Objects</span></span>](data-and-data-objects.md)  
+ [<span data-ttu-id="a9c70-107">Tutorial: Lo que permite arrastrar y colocar en un Control de usuario</span><span class="sxs-lookup"><span data-stu-id="a9c70-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [<span data-ttu-id="a9c70-108">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="a9c70-108">How-to Topics</span></span>](drag-and-drop-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="07040-109">Referencia</span><span class="sxs-lookup"><span data-stu-id="07040-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a9c70-109">Referencia</span><span class="sxs-lookup"><span data-stu-id="a9c70-109">Reference</span></span>  
  <xref:System.Windows.DataFormat>  
   <xref:System.Windows.DataObject>  
   <xref:System.Windows.DragDrop>  
@@ -32,4 +32,4 @@ ms.locfileid: "57367471"
   <xref:System.Windows.DragEventHandler>  
   <xref:System.Windows.TextDataFormat>  
   
-## <a name="related-sections"></a><span data-ttu-id="07040-110">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="07040-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="a9c70-110">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="a9c70-110">Related Sections</span></span>

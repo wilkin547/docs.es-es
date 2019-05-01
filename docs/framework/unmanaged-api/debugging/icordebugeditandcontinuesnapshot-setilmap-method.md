@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20ab65be32e6730ef828347c28eeed25d9033777
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996039"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="17710-102">ICorDebugEditAndContinueSnapshot::SetILMap (Método)</span><span class="sxs-lookup"><span data-stu-id="17710-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
-<span data-ttu-id="17710-103">`SetILMap` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="17710-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="17710-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="17710-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="07dbd-102">ICorDebugEditAndContinueSnapshot::SetILMap (Método)</span><span class="sxs-lookup"><span data-stu-id="07dbd-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
+<span data-ttu-id="07dbd-103">`SetILMap` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="07dbd-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="07dbd-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="07dbd-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17710-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="17710-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07dbd-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="07dbd-105">See also</span></span>
 
-- [<span data-ttu-id="17710-106">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="17710-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="07dbd-106">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="07dbd-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

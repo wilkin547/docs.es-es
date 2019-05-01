@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db609bdee7975b6c067271f99529e2cf2240f720
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989032"
 ---
-# <a name="icordebugevalnewstring-method"></a><span data-ttu-id="7647c-102">ICorDebugEval::NewString (Método)</span><span class="sxs-lookup"><span data-stu-id="7647c-102">ICorDebugEval::NewString Method</span></span>
-<span data-ttu-id="7647c-103">Asigna una nueva instancia de la cadena con el contenido especificado.</span><span class="sxs-lookup"><span data-stu-id="7647c-103">Allocates a new string instance with the specified contents.</span></span>  
+# <a name="icordebugevalnewstring-method"></a><span data-ttu-id="39424-102">ICorDebugEval::NewString (Método)</span><span class="sxs-lookup"><span data-stu-id="39424-102">ICorDebugEval::NewString Method</span></span>
+<span data-ttu-id="39424-103">Asigna una nueva instancia de la cadena con el contenido especificado.</span><span class="sxs-lookup"><span data-stu-id="39424-103">Allocates a new string instance with the specified contents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7647c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7647c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="39424-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="39424-104">Syntax</span></span>  
   
 ```  
 HRESULT NewString (  
@@ -35,18 +35,18 @@ HRESULT NewString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7647c-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7647c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="39424-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="39424-105">Parameters</span></span>  
  `string`  
- <span data-ttu-id="7647c-106">[in] Puntero al contenido de la cadena.</span><span class="sxs-lookup"><span data-stu-id="7647c-106">[in] Pointer to the contents for the string.</span></span>  
+ <span data-ttu-id="39424-106">[in] Puntero al contenido de la cadena.</span><span class="sxs-lookup"><span data-stu-id="39424-106">[in] Pointer to the contents for the string.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7647c-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="7647c-107">Remarks</span></span>  
- <span data-ttu-id="7647c-108">La cadena siempre se crea en el dominio de aplicación en el que se está ejecutando el subproceso.</span><span class="sxs-lookup"><span data-stu-id="7647c-108">The string is always created in the application domain in which the thread is currently executing.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="39424-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="39424-107">Remarks</span></span>  
+ <span data-ttu-id="39424-108">La cadena siempre se crea en el dominio de aplicación en el que se está ejecutando el subproceso.</span><span class="sxs-lookup"><span data-stu-id="39424-108">The string is always created in the application domain in which the thread is currently executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7647c-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7647c-109">Requirements</span></span>  
- <span data-ttu-id="7647c-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7647c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="39424-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="39424-109">Requirements</span></span>  
+ <span data-ttu-id="39424-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="39424-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7647c-111">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7647c-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="39424-111">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="39424-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7647c-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7647c-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="39424-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="39424-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7647c-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7647c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="39424-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="39424-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c4baa4eb4da48b923ab0137ca25d9d819c94e33d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994037"
 ---
-# <a name="icordebugthreadgetcurrentexception-method"></a><span data-ttu-id="9d8d5-102">ICorDebugThread::GetCurrentException (Método)</span><span class="sxs-lookup"><span data-stu-id="9d8d5-102">ICorDebugThread::GetCurrentException Method</span></span>
-<span data-ttu-id="9d8d5-103">Obtiene un puntero de interfaz a un objeto ICorDebugValue que representa una excepción que se produce actualmente mediante código administrado.</span><span class="sxs-lookup"><span data-stu-id="9d8d5-103">Gets an interface pointer to an ICorDebugValue object that represents an exception that is currently being thrown by managed code.</span></span>  
+# <a name="icordebugthreadgetcurrentexception-method"></a><span data-ttu-id="be973-102">ICorDebugThread::GetCurrentException (Método)</span><span class="sxs-lookup"><span data-stu-id="be973-102">ICorDebugThread::GetCurrentException Method</span></span>
+<span data-ttu-id="be973-103">Obtiene un puntero de interfaz a un objeto ICorDebugValue que representa una excepción que se produce actualmente mediante código administrado.</span><span class="sxs-lookup"><span data-stu-id="be973-103">Gets an interface pointer to an ICorDebugValue object that represents an exception that is currently being thrown by managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9d8d5-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9d8d5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be973-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="be973-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentException (  
@@ -35,22 +35,22 @@ HRESULT GetCurrentException (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9d8d5-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9d8d5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="be973-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="be973-105">Parameters</span></span>  
  `ppExceptionObject`  
- <span data-ttu-id="9d8d5-106">[out] Un puntero a la dirección de un `ICorDebugValue` objeto que representa la excepción producida por el código administrado.</span><span class="sxs-lookup"><span data-stu-id="9d8d5-106">[out] A pointer to the address of an `ICorDebugValue` object that represents the exception that is currently being thrown by managed code.</span></span>  
+ <span data-ttu-id="be973-106">[out] Un puntero a la dirección de un `ICorDebugValue` objeto que representa la excepción producida por el código administrado.</span><span class="sxs-lookup"><span data-stu-id="be973-106">[out] A pointer to the address of an `ICorDebugValue` object that represents the exception that is currently being thrown by managed code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9d8d5-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9d8d5-107">Remarks</span></span>  
- <span data-ttu-id="9d8d5-108">El objeto de excepción existirá desde el momento en que se produce la excepción hasta el final de la `catch` bloque.</span><span class="sxs-lookup"><span data-stu-id="9d8d5-108">The exception object will exist from the time the exception is thrown until the end of the `catch` block.</span></span> <span data-ttu-id="9d8d5-109">Una evaluación de función, que se realiza mediante los métodos ICorDebugEval, borrará el objeto de excepción en el programa de instalación y restaurarla en la finalización.</span><span class="sxs-lookup"><span data-stu-id="9d8d5-109">A function evaluation, which is performed by the ICorDebugEval methods, will clear out the exception object on setup and restore it on completion.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="be973-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="be973-107">Remarks</span></span>  
+ <span data-ttu-id="be973-108">El objeto de excepción existirá desde el momento en que se produce la excepción hasta el final de la `catch` bloque.</span><span class="sxs-lookup"><span data-stu-id="be973-108">The exception object will exist from the time the exception is thrown until the end of the `catch` block.</span></span> <span data-ttu-id="be973-109">Una evaluación de función, que se realiza mediante los métodos ICorDebugEval, borrará el objeto de excepción en el programa de instalación y restaurarla en la finalización.</span><span class="sxs-lookup"><span data-stu-id="be973-109">A function evaluation, which is performed by the ICorDebugEval methods, will clear out the exception object on setup and restore it on completion.</span></span>  
   
- <span data-ttu-id="9d8d5-110">Las excepciones se pueden anidar (por ejemplo, si se produce una excepción en un filtro o en una evaluación de función), por lo que puede haber varias excepciones pendientes en un único subproceso.</span><span class="sxs-lookup"><span data-stu-id="9d8d5-110">Exceptions can be nested (for example, if an exception is thrown in a filter or in a function evaluation), so there may be multiple outstanding exceptions on a single thread.</span></span> <span data-ttu-id="9d8d5-111">`GetCurrentException` Devuelve la excepción más reciente.</span><span class="sxs-lookup"><span data-stu-id="9d8d5-111">`GetCurrentException` returns the most current exception.</span></span>  
+ <span data-ttu-id="be973-110">Las excepciones se pueden anidar (por ejemplo, si se produce una excepción en un filtro o en una evaluación de función), por lo que puede haber varias excepciones pendientes en un único subproceso.</span><span class="sxs-lookup"><span data-stu-id="be973-110">Exceptions can be nested (for example, if an exception is thrown in a filter or in a function evaluation), so there may be multiple outstanding exceptions on a single thread.</span></span> <span data-ttu-id="be973-111">`GetCurrentException` Devuelve la excepción más reciente.</span><span class="sxs-lookup"><span data-stu-id="be973-111">`GetCurrentException` returns the most current exception.</span></span>  
   
- <span data-ttu-id="9d8d5-112">El objeto de excepción y el tipo se pueden cambiar durante la vigencia de la excepción.</span><span class="sxs-lookup"><span data-stu-id="9d8d5-112">The exception object and type may change throughout the life of the exception.</span></span> <span data-ttu-id="9d8d5-113">Por ejemplo, una vez que se produce una excepción de tipo x, common language runtime (CLR) puede quedarse sin memoria y promoverla a una excepción de memoria insuficiente.</span><span class="sxs-lookup"><span data-stu-id="9d8d5-113">For example, after an exception of type x is thrown, the common language runtime (CLR) may run out of memory and promote it to an out-of-memory exception.</span></span>  
+ <span data-ttu-id="be973-112">El objeto de excepción y el tipo se pueden cambiar durante la vigencia de la excepción.</span><span class="sxs-lookup"><span data-stu-id="be973-112">The exception object and type may change throughout the life of the exception.</span></span> <span data-ttu-id="be973-113">Por ejemplo, una vez que se produce una excepción de tipo x, common language runtime (CLR) puede quedarse sin memoria y promoverla a una excepción de memoria insuficiente.</span><span class="sxs-lookup"><span data-stu-id="be973-113">For example, after an exception of type x is thrown, the common language runtime (CLR) may run out of memory and promote it to an out-of-memory exception.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9d8d5-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9d8d5-114">Requirements</span></span>  
- <span data-ttu-id="9d8d5-115">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d8d5-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="be973-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="be973-114">Requirements</span></span>  
+ <span data-ttu-id="be973-115">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="be973-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9d8d5-116">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9d8d5-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="be973-116">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="be973-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9d8d5-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9d8d5-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="be973-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="be973-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9d8d5-118">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d8d5-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="be973-118">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be973-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

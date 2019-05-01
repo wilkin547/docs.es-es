@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b2ba46c025c2d031f0526c6a9da5f6ab07023741
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042744"
 ---
-# <a name="imetadataimportenumevents-method"></a><span data-ttu-id="8c81c-102">IMetaDataImport::EnumEvents (Método)</span><span class="sxs-lookup"><span data-stu-id="8c81c-102">IMetaDataImport::EnumEvents Method</span></span>
-<span data-ttu-id="8c81c-103">Enumera los tokens de definición de eventos del token de TypeDef especificado.</span><span class="sxs-lookup"><span data-stu-id="8c81c-103">Enumerates event definition tokens for the specified TypeDef token.</span></span>  
+# <a name="imetadataimportenumevents-method"></a><span data-ttu-id="3a15a-102">IMetaDataImport::EnumEvents (Método)</span><span class="sxs-lookup"><span data-stu-id="3a15a-102">IMetaDataImport::EnumEvents Method</span></span>
+<span data-ttu-id="3a15a-103">Enumera los tokens de definición de eventos del token de TypeDef especificado.</span><span class="sxs-lookup"><span data-stu-id="3a15a-103">Enumerates event definition tokens for the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c81c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8c81c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a15a-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="3a15a-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumEvents (   
@@ -39,39 +39,39 @@ HRESULT EnumEvents (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8c81c-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="8c81c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3a15a-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="3a15a-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="8c81c-106">[in, out] Un puntero en el enumerador.</span><span class="sxs-lookup"><span data-stu-id="8c81c-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="3a15a-106">[in, out] Un puntero en el enumerador.</span><span class="sxs-lookup"><span data-stu-id="3a15a-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `td`  
- <span data-ttu-id="8c81c-107">[in] El token de TypeDef cuyas definiciones de evento son que hay que enumerar.</span><span class="sxs-lookup"><span data-stu-id="8c81c-107">[in] The TypeDef token whose event definitions are to be enumerated.</span></span>  
+ <span data-ttu-id="3a15a-107">[in] El token de TypeDef cuyas definiciones de evento son que hay que enumerar.</span><span class="sxs-lookup"><span data-stu-id="3a15a-107">[in] The TypeDef token whose event definitions are to be enumerated.</span></span>  
   
  `rEvents`  
- <span data-ttu-id="8c81c-108">[out] Matriz de eventos devueltos.</span><span class="sxs-lookup"><span data-stu-id="8c81c-108">[out] The array of returned events.</span></span>  
+ <span data-ttu-id="3a15a-108">[out] Matriz de eventos devueltos.</span><span class="sxs-lookup"><span data-stu-id="3a15a-108">[out] The array of returned events.</span></span>  
   
  `cMax`  
- <span data-ttu-id="8c81c-109">[in] Tamaño máximo de la matriz `rEvents`.</span><span class="sxs-lookup"><span data-stu-id="8c81c-109">[in] The maximum size of the `rEvents` array.</span></span>  
+ <span data-ttu-id="3a15a-109">[in] Tamaño máximo de la matriz `rEvents`.</span><span class="sxs-lookup"><span data-stu-id="3a15a-109">[in] The maximum size of the `rEvents` array.</span></span>  
   
  `pcEvents`  
- <span data-ttu-id="8c81c-110">[out] El número real de los eventos devueltos en `rEvents`.</span><span class="sxs-lookup"><span data-stu-id="8c81c-110">[out] The actual number of events returned in `rEvents`.</span></span>  
+ <span data-ttu-id="3a15a-110">[out] El número real de los eventos devueltos en `rEvents`.</span><span class="sxs-lookup"><span data-stu-id="3a15a-110">[out] The actual number of events returned in `rEvents`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8c81c-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="8c81c-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3a15a-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="3a15a-111">Return Value</span></span>  
   
-|<span data-ttu-id="8c81c-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8c81c-112">HRESULT</span></span>|<span data-ttu-id="8c81c-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="8c81c-113">Description</span></span>|  
+|<span data-ttu-id="3a15a-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3a15a-112">HRESULT</span></span>|<span data-ttu-id="3a15a-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="3a15a-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="8c81c-114">`EnumEvents` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="8c81c-114">`EnumEvents` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="8c81c-115">No hay ningún evento para enumerar.</span><span class="sxs-lookup"><span data-stu-id="8c81c-115">There are no events to enumerate.</span></span> <span data-ttu-id="8c81c-116">En ese caso, `pcEvents` es cero.</span><span class="sxs-lookup"><span data-stu-id="8c81c-116">In that case, `pcEvents` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="3a15a-114">`EnumEvents` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="3a15a-114">`EnumEvents` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="3a15a-115">No hay ningún evento para enumerar.</span><span class="sxs-lookup"><span data-stu-id="3a15a-115">There are no events to enumerate.</span></span> <span data-ttu-id="3a15a-116">En ese caso, `pcEvents` es cero.</span><span class="sxs-lookup"><span data-stu-id="3a15a-116">In that case, `pcEvents` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8c81c-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8c81c-117">Requirements</span></span>  
- <span data-ttu-id="8c81c-118">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8c81c-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3a15a-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3a15a-117">Requirements</span></span>  
+ <span data-ttu-id="3a15a-118">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3a15a-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8c81c-119">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="8c81c-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3a15a-119">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="3a15a-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8c81c-120">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8c81c-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="3a15a-120">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3a15a-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="8c81c-121">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c81c-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3a15a-121">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a15a-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c81c-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="8c81c-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a15a-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="3a15a-122">See also</span></span>
 
-- [<span data-ttu-id="8c81c-123">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="8c81c-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="8c81c-124">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="8c81c-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="3a15a-123">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="3a15a-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="3a15a-124">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="3a15a-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
