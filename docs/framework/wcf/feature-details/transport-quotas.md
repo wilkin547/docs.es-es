@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
 ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050719"
 ---
 # <a name="transport-quotas"></a>Cuotas de transporte
 Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una conexión está utilizando recursos excesivos. Una cuota es un límite que evita una vez el uso de recursos adicionales una vez que se supera el valor de cuota. Las cuotas de transporte evitan los ataques de denegación de servicio (DoS) malintencionados o involuntarios.  
@@ -19,11 +19,11 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
 ## <a name="types-of-transport-quotas"></a>Tipos de cuotas de transporte  
  Los transportes WCF tienen tres tipos de cuotas:  
   
--   *Los tiempos de espera* mitigar la denegación de servicio que se basan en atar recursos durante un largo período de tiempo.  
+- *Los tiempos de espera* mitigar la denegación de servicio que se basan en atar recursos durante un largo período de tiempo.  
   
--   *Límites de asignación de memoria* evitar que una conexión única agote memoria del sistema y niegue el servicio a otras conexiones.  
+- *Límites de asignación de memoria* evitar que una conexión única agote memoria del sistema y niegue el servicio a otras conexiones.  
   
--   *Límites de tamaño de la colección* delimitan el consumo de recursos que asignar memoria de manera indirecta o están en un suministro limitado.  
+- *Límites de tamaño de la colección* delimitan el consumo de recursos que asignar memoria de manera indirecta o están en un suministro limitado.  
   
 ## <a name="transport-quota-descriptions"></a>Descripciones de la cuota de transporte  
  En esta sección se describe las cuotas de transporte disponibles para los transportes estándares de WCF: HTTP (S), TCP/IP y canalizaciones con nombre. Los transportes personalizados pueden exponer sus propias cuotas configurables no incluidas en esta lista. Consulte la documentación de un transporte personalizado para averiguar sus cuotas.  

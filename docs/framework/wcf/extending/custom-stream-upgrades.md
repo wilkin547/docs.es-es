@@ -6,8 +6,8 @@ ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967913"
 ---
 # <a name="custom-stream-upgrades"></a>Actualizaciones personalizadas de secuencias
 Los transportes orientados a secuencia como TCP y las canalizaciones con nombre funcionan en una secuencia continua de bytes entre el cliente y servidor. Esta secuencia la realiza un objeto <xref:System.IO.Stream>. En una actualización de secuencia, el cliente desea agregar una capa de protocolo opcional a la pila del canal y pide al otro lado del canal de comunicación que lo haga. La actualización de secuencia consiste en reemplazar el objeto <xref:System.IO.Stream> original con uno actualizado.  
@@ -32,35 +32,35 @@ Los transportes orientados a secuencia como TCP y las canalizaciones con nombre 
 ## <a name="how-to-implement-a-stream-upgrade"></a>Cómo implementar una actualización de secuencia  
  Windows Communication Foundation (WCF) proporciona cuatro `abstract` las clases que se pueden implementar:  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
   
  Para implementar una actualización de secuencia personalizada, haga lo siguiente. Este procedimiento implementa un proceso de actualización de secuencia mínimo en los equipos del servidor y del cliente.  
   
 1. Cree una clase que implemente <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
   
-    1.  Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> para tomar la secuencia que se va a actualizar y devuelva la secuencia actualizada. Este método funciona sincrónicamente; hay métodos análogos para iniciar de forma asincrónica la actualización.  
+    1. Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> para tomar la secuencia que se va a actualizar y devuelva la secuencia actualizada. Este método funciona sincrónicamente; hay métodos análogos para iniciar de forma asincrónica la actualización.  
   
-    2.  Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> para comprobar las actualizaciones adicionales.  
+    2. Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> para comprobar las actualizaciones adicionales.  
   
 2. Cree una clase que implemente <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
   
-    1.  Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> para tomar la secuencia que se va a actualizar y devuelva la secuencia actualizada. Este método funciona sincrónicamente; hay métodos análogos para aceptar de forma asincrónica la actualización.  
+    1. Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> para tomar la secuencia que se va a actualizar y devuelva la secuencia actualizada. Este método funciona sincrónicamente; hay métodos análogos para aceptar de forma asincrónica la actualización.  
   
-    2.  Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> para determinar si este aceptador de actualización admite la actualización solicitada en el proceso de actualización.  
+    2. Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> para determinar si este aceptador de actualización admite la actualización solicitada en el proceso de actualización.  
   
 3. Cree una clase que implemente <xref:System.ServiceModel.Channels.StreamUpgradeProvider>. Invalide los métodos <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> y <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> para devolver las instancias del aceptador e iniciador definidas en los pasos 2 y 1.  
   
 4. Cree una clase que implemente <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
   
-    1.  Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> en el cliente y el método <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> en el servicio.  
+    1. Invalide el método <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> en el cliente y el método <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> en el servicio.  
   
-    2.  Invalide el método <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> en el cliente y el método <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> en el servicio para agregar la actualización Elemento de enlace a <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.  
+    2. Invalide el método <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> en el cliente y el método <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> en el servicio para agregar la actualización Elemento de enlace a <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.  
   
 5. Agregue el nuevo elemento de enlace de actualización de secuencia a los enlaces en los equipos del cliente y del servidor.  
   

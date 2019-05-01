@@ -12,11 +12,11 @@ helpviewer_keywords:
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
 ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972294"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Procedimiento para determinar cuándo cambian los atributos de formato en el control RichTextBox de formularios Windows Forms
 Un uso común de los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control es dar formato al texto con atributos tales como las opciones de fuente o estilos de párrafo. La aplicación puede necesitar realizar un seguimiento de los cambios en el formato del texto para mostrar una barra de herramientas, como en muchas aplicaciones de procesamiento de texto.  

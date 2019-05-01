@@ -3,11 +3,11 @@ title: Seguridad de transporte HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 ms.openlocfilehash: b7415dcc1e6c4a5d47d9e7b6e70a86ab1b898783
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000849"
 ---
 # <a name="http-transport-security"></a>Seguridad de transporte HTTP
 Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros (SSL) proporciona la seguridad. SSL se utiliza mucho en Internet para autenticar un servicio a un cliente y proporcionar la confidencialidad (cifrado) al canal. En este tema se explica cómo funciona SSL y cómo se implementa en Windows Communication Foundation (WCF).  
@@ -31,9 +31,9 @@ Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros
 ## <a name="implementing-ssl-with-wcf"></a>Implementar SSL con WCF  
  Seguridad de transporte HTTP (o SSL) se proporciona externamente a WCF. Puede implementar SSL de dos maneras; el factor decisivo es cómo se hospeda su aplicación:  
   
--   Si utiliza Internet Information Services (IIS) que el host WCF, use la infraestructura IIS para configurar un servicio de SSL.  
+- Si utiliza Internet Information Services (IIS) que el host WCF, use la infraestructura IIS para configurar un servicio de SSL.  
   
--   Si va a crear una aplicación autohospedada de WCF, puede enlazar un certificado SSL a la dirección mediante la herramienta HttpCfg.exe.  
+- Si va a crear una aplicación autohospedada de WCF, puede enlazar un certificado SSL a la dirección mediante la herramienta HttpCfg.exe.  
   
 ### <a name="using-iis-for-transport-security"></a>Utilizar IIS para seguridad de transporte   
   

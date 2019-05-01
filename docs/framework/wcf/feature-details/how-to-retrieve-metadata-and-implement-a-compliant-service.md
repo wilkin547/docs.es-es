@@ -3,11 +3,11 @@ title: Procedimiento para recuperar metadatos e implementar un servicio conforme
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
 ms.openlocfilehash: edf8fe2f174202d19b075ec218f059ea9b988843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000797"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Procedimiento para recuperar metadatos e implementar un servicio conforme
 A menudo, no es el mismo rol quien diseña e implementa los servicios. En entornos donde las aplicaciones que interoperan son importantes, los contratos pueden diseñarse o describirse en lenguaje de descripción de servicios Web (WSDL), y un desarrollador deberá implementar un servicio compatible con el contrato proporcionado. También puede migrar un servicio existente a Windows Communication Foundation (WCF), pero conservar el formato. Además, los contratos dúplex exigen a los autores de llamadas que también implementen un contrato de devolución de llamada.  
@@ -39,17 +39,17 @@ A menudo, no es el mismo rol quien diseña e implementa los servicios. En entorn
   
  El código siguiente muestra:  
   
--   La interfaz del contrato de servicio que, una vez implementada, es conforme a los requisitos de contrato (`ISampleService`).  
+- La interfaz del contrato de servicio que, una vez implementada, es conforme a los requisitos de contrato (`ISampleService`).  
   
--   La interfaz del asistente para uso del cliente que extiende tanto la interfaz de contrato del servicio como <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, y que se utiliza en una aplicación cliente (`ISampleServiceChannel`).  
+- La interfaz del asistente para uso del cliente que extiende tanto la interfaz de contrato del servicio como <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, y que se utiliza en una aplicación cliente (`ISampleServiceChannel`).  
   
--   La clase del asistente que extiende <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, y que se utiliza en una aplicación cliente (`SampleServiceClient`).  
+- La clase del asistente que extiende <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, y que se utiliza en una aplicación cliente (`SampleServiceClient`).  
   
--   El archivo de configuración generado desde el servicio.  
+- El archivo de configuración generado desde el servicio.  
   
--   Una implementación de servicio `ISampleService` simple.  
+- Una implementación de servicio `ISampleService` simple.  
   
--   Una conversión del archivo de configuración del cliente en una versión del servicio.  
+- Una conversión del archivo de configuración del cliente en una versión del servicio.  
   
 [!code-csharp[ClientProxyCodeSample#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/proxycode.cs#1)]
 

@@ -1,15 +1,15 @@
 ---
-title: Propiedades frente a Argumentos
+title: Propiedades y Argumentos
 ms.date: 03/30/2017
 ms.assetid: 14651389-4a49-4cbb-9ddf-c83fdc155df1
 ms.openlocfilehash: a6ea4755599f18e8bbaa8187941623578d2168ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962635"
 ---
-# <a name="properties-vs-arguments"></a>Propiedades frente a Argumentos
+# <a name="properties-vs-arguments"></a>Propiedades y Argumentos
 Hay varias opciones disponibles para pasar datos en una actividad. Además de utilizar <xref:System.Activities.InArgument>, las actividades también se pueden desarrollar para recibir datos utilizando las propiedades CLR estándar o las propiedades <xref:System.Activities.ActivityAction> públicas. En este tema se analiza la forma de seleccionar el tipo de método adecuado.  
   
 ## <a name="using-clr-properties"></a>Utilizar propiedades CLR  

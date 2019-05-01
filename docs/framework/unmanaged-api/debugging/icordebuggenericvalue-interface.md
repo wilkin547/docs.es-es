@@ -1,5 +1,5 @@
 ---
-title: ICorDebugGenericValue (Interfaz)
+title: Interfaz ICorDebugGenericValue
 ms.date: 03/30/2017
 api_name:
 - ICorDebugGenericValue
@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ad2209c6e28c7749bd149902e5b696955ee7f13f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988681"
 ---
-# <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue (Interfaz)
+# <a name="icordebuggenericvalue-interface"></a>Interfaz ICorDebugGenericValue
 
 Una subclase de "ICorDebugValue" que se aplica a todos los valores. Esta interfaz proporciona métodos Get y Set para el valor.  
   

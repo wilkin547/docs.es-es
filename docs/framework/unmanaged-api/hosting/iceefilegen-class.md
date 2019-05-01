@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb0e7a676fdbbe3cf04108266471833b28275b1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985366"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen (Clase)
 Proporciona funcionalidad para crear un archivo ejecutable portable (PE) nativo. La interfaz se usará normalmente los compiladores para generar su resultado compilado ejecutable.  

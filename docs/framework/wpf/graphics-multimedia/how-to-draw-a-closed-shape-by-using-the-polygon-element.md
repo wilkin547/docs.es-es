@@ -1,5 +1,5 @@
 ---
-title: Filtrar Dibujar una forma cerrada utilizando el elemento Polygon
+title: Procedimiento Dibujar una forma cerrada mediante el elemento Polygon
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], Polygon elements
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - drawing [WPF], closed shapes with Polygon elements
 ms.assetid: 4b0ca008-29ce-48dd-8bc3-f3a20ffca6a6
 ms.openlocfilehash: 533c341e2fae528ec896bf38bafa13974af1d127
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003241"
 ---
-# <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>Filtrar Dibujar una forma cerrada utilizando el elemento Polygon
+# <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>Procedimiento Dibujar una forma cerrada mediante el elemento Polygon
 En este ejemplo se muestra cómo dibujar una forma cerrada utilizando el <xref:System.Windows.Shapes.Polygon> elemento. Para dibujar una forma cerrada, cree un <xref:System.Windows.Shapes.Polygon> elemento y utilice su <xref:System.Windows.Shapes.Polygon.Points%2A> propiedad para especificar los vértices de una forma. Se dibuja automáticamente una línea que conecta los puntos primeros y últimos. Por último, especifique un <xref:System.Windows.Shapes.Shape.Fill%2A>, un <xref:System.Windows.Shapes.Shape.Stroke%2A>, o ambos.  
   
 ## <a name="example"></a>Ejemplo  

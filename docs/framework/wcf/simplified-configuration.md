@@ -3,11 +3,11 @@ title: Configuración simplificada
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
 ms.openlocfilehash: 13cf8bd46ef3aabb011cb2ddd207963235468662
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967900"
 ---
 # <a name="simplified-configuration"></a>Configuración simplificada
 Configuración de servicios de Windows Communication Foundation (WCF) puede ser una tarea compleja. Existen muchas opciones diferentes y no siempre es fácil determinar qué configuración es necesaria. Aunque los archivos de configuración aumentan la flexibilidad de los servicios de WCF, también son el origen de muchos difícil encontrar problemas. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] aborda estos problemas y proporciona una forma de reducir el tamaño y la complejidad de la configuración del servicio.  

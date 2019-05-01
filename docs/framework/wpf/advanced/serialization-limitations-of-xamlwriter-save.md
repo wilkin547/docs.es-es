@@ -7,11 +7,11 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053436"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Limitaciones en la serialización de XamlWriter.Save
 El [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> puede usarse para serializar el contenido de un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicación como un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivo. Pero existen algunas limitaciones notables relativas a qué se serializa exactamente. En este tema se documentan estas limitaciones y algunas consideraciones generales.  
@@ -36,8 +36,8 @@ El [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:Sys
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>Escenarios realistas para el uso de XAMLWriter.Save  
  Aunque las limitaciones enumeran aquí son bastante importantes, todavía hay varios escenarios adecuados para el uso de <xref:System.Windows.Markup.XamlWriter.Save%2A> para la serialización.  
   
--   Salida vectorial o gráfica: La salida del área representada se puede usar para reproducir el mismo vector o gráfico al volver a cargar.  
+- Salida vectorial o gráfica: La salida del área representada se puede usar para reproducir el mismo vector o gráfico al volver a cargar.  
   
--   Documentos de flujo y de texto enriquecidos: Texto y todos los elemento de formato y la contención dentro de él se conservan en la salida. Esto puede ser útil para los mecanismos afines a la funcionalidad del Portapapeles.  
+- Documentos de flujo y de texto enriquecidos: Texto y todos los elemento de formato y la contención dentro de él se conservan en la salida. Esto puede ser útil para los mecanismos afines a la funcionalidad del Portapapeles.  
   
--   Conservación de datos de objetos comerciales: Si ha almacenado datos en elementos personalizados, como [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] datos, siempre y cuando sigan básica [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reglas, como proporcionar constructores personalizados y conversión para valores de propiedad por referencia, que pueden ser estos objetos de negocios perpetuarse a través de la serialización.
+- Conservación de datos de objetos comerciales: Si ha almacenado datos en elementos personalizados, como [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] datos, siempre y cuando sigan básica [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reglas, como proporcionar constructores personalizados y conversión para valores de propiedad por referencia, que pueden ser estos objetos de negocios perpetuarse a través de la serialización.

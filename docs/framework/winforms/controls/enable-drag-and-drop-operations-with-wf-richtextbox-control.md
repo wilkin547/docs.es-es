@@ -12,11 +12,11 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
 ms.openlocfilehash: 5c60fe411fcbf6257c8aaacf1f7400c11c150ddc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972151"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Procedimiento para habilitar operaciones de arrastrar y colocar con el control RichTextBox de formularios Windows Forms
 Las operaciones de arrastrar y colocar con el control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms se realizan mediante el control de los eventos <xref:System.Windows.Forms.RichTextBox.DragEnter> y <xref:System.Windows.Forms.RichTextBox.DragDrop> . Por lo tanto, las operaciones de arrastrar y colocar son extremadamente sencillas con el control <xref:System.Windows.Forms.RichTextBox> .  

@@ -3,20 +3,20 @@ title: Procedimiento para usar Svcutil.exe para exportar metadatos desde el cód
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
 ms.openlocfilehash: 5b905b6943127d483e001749c263242550ab28ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047343"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Procedimiento para usar Svcutil.exe para exportar metadatos desde el código de servicio compilado
 Svcutil.exe puede exportar metadatos para los servicios, contratos y tipos de datos en ensamblados compilados del siguiente modo:  
   
--   Para exportar los metadatos para todos los contratos de servicios compilados para un conjunto de ensamblados utilizando Svcutil.exe, especifique los ensamblados como parámetros de entrada. Éste es el comportamiento predeterminado.  
+- Para exportar los metadatos para todos los contratos de servicios compilados para un conjunto de ensamblados utilizando Svcutil.exe, especifique los ensamblados como parámetros de entrada. Éste es el comportamiento predeterminado.  
   
--   Para exportar los metadatos para un servicio compilado utilizando Svcutil.exe, especifique el ensamblado de servicio o ensamblados como parámetros de entrada. Debe utilizar la opción `/serviceName` para indicar el nombre de configuración del servicio que quiere exportar. Svcutil.exe carga automáticamente el archivo de configuración para el ensamblado ejecutable especificado.  
+- Para exportar los metadatos para un servicio compilado utilizando Svcutil.exe, especifique el ensamblado de servicio o ensamblados como parámetros de entrada. Debe utilizar la opción `/serviceName` para indicar el nombre de configuración del servicio que quiere exportar. Svcutil.exe carga automáticamente el archivo de configuración para el ensamblado ejecutable especificado.  
   
--   Para exportar todos los tipos de contrato de datos dentro de un conjunto de ensamblados, utilice la opción `/dataContractOnly`.  
+- Para exportar todos los tipos de contrato de datos dentro de un conjunto de ensamblados, utilice la opción `/dataContractOnly`.  
   
 > [!NOTE]
 >  Utilice la opción `/reference` para especificar las rutas de acceso del archivo a cualquier ensamblado dependiente.  

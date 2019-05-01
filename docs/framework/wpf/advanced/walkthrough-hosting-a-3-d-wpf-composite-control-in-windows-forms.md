@@ -9,11 +9,11 @@ helpviewer_keywords:
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
 ms.openlocfilehash: e5b98a33f29759a81ba1cbc1fefbd45c0e5bf736
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007154"
 ---
 # <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>Tutorial: Hospedar un control compuesto 3D de WPF en formularios Windows Forms
 
@@ -23,17 +23,17 @@ En este tutorial, implementará un [!INCLUDE[TLA2#tla_winclient](../../../../inc
 
 Las tareas ilustradas en este tutorial incluyen:
 
--   Crear el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.
+- Crear el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.
 
--   Crear el proyecto de host de Windows Forms.
+- Crear el proyecto de host de Windows Forms.
 
--   Hospedar el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.
+- Hospedar el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Necesita los componentes siguientes para completar este tutorial:
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 <a name="To_Create_the_UserControl"></a>
 ## <a name="create-the-usercontrol"></a>Crear la clase UserControl
@@ -57,11 +57,11 @@ Necesita los componentes siguientes para completar este tutorial:
 
 3. Agregue referencias a los siguientes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ensamblados:
 
-    -   PresentationCore
+    - PresentationCore
 
-    -   PresentationFramework
+    - PresentationFramework
 
-    -   WindowsBase
+    - WindowsBase
 
 4. Agregue una referencia al proyecto `HostingWpfUserControlInWf`.
 

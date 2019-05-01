@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
 ms.openlocfilehash: 73e984193f87b20e0e00d8ab92a7c0fd67f7968f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046584"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Seguridad de los mensajes con un cliente de nombres de usuario
 La siguiente ilustración muestra un servicio de Windows Communication Foundation (WCF) y un cliente que se protegen utilizando la seguridad de nivel de mensaje. La autenticación del servicio se realiza mediante un certificado X.509. El cliente se autentica utilizando un nombre de usuario y contraseña.  
@@ -33,9 +33,9 @@ La siguiente ilustración muestra un servicio de Windows Communication Foundatio
 ## <a name="service"></a>web de Office  
  El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
--   Cree un servicio independiente mediante el código sin configuración.  
+- Cree un servicio independiente mediante el código sin configuración.  
   
--   Cree un servicio mediante la configuración proporcionada, pero sin definir ningún punto de conexión.  
+- Cree un servicio mediante la configuración proporcionada, pero sin definir ningún punto de conexión.  
   
 ### <a name="code"></a>Código  
  El código siguiente muestra cómo crear un extremo de servicio que utiliza la seguridad del mensaje.  

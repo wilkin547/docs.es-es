@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 ms.openlocfilehash: 641a6c1c99169c6836c33b3e84b2ae02aba298d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972242"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>Desarrollar controles de formularios Windows Forms en tiempo de diseño
 Para los autores de controles, .NET Framework proporciona una gran cantidad de tecnologías de creación de controles. Los creadores ya no están limitados al diseño de controles compuestos que actúan como una colección de controles preexistentes. A través de la herencia, puede crear sus propios controles a partir de controles compuestos preexistentes o de controles de Windows Forms preexistentes. También puede diseñar sus propios controles que implementen el dibujo personalizado. Estas opciones permiten una gran flexibilidad en el diseño y la funcionalidad de la interfaz visual. Para aprovechar estas características, debe estar familiarizado con conceptos de programación basada en objetos.  

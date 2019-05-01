@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b523c5819994e6da0332188311b4b631e3f9072
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000589"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 (Interfaz)
 Proporciona métodos que los generadores de perfiles de código usan para comunicarse con Common Language Runtime (CLR) para controlar la supervisión de eventos y para solicitar información. El `ICorProfilerInfo3` interfaz es una extensión de la [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) interfaz. Proporciona nuevos métodos admitidos en [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] y versiones posteriores.  

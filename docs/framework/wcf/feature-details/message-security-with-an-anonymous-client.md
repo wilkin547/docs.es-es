@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 ms.openlocfilehash: 613b85e18109faa2a4386090e91aaddcfd8e0b68
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038591"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Seguridad de mensajes con clientes anónimos
 
@@ -30,13 +30,13 @@ Para una aplicación de ejemplo, vea [Message Security Anonymous](../../../../do
 |Confidencialidad|Sí, mediante el contexto de seguridad compartido|
 |Transporte|HTTP|
 
-## <a name="service"></a>Servicio
+## <a name="service"></a>web de Office
 
 El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:
 
 - Cree un servicio independiente mediante el código sin configuración.
 
-- Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.
+- Cree un servicio mediante la configuración proporcionada, pero sin definir ningún punto de conexión.
 
 ### <a name="code"></a>Código
 
@@ -94,7 +94,7 @@ El código y la configuración siguientes están diseñados para ejecutarse de f
 
 - Cree un cliente independiente mediante el código (y el código de cliente).
 
-- Cree un cliente que no defina direcciones de extremo. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:
+- Cree un cliente que no defina direcciones de punto de conexión. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:
 
     [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
     [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]

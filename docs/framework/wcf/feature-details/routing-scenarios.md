@@ -5,11 +5,11 @@ helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
 ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991067"
 ---
 # <a name="routing-scenarios"></a>Escenarios de enrutamiento
 Aunque el servicio de enrutamiento es muy personalizable, puede ser un desafío para diseñar una lógica de enrutamiento eficaz al crear una nueva configuración desde el principio.  Sin embargo, hay varios escenarios comunes que sigue la mayoría de las configuraciones del servicio de enrutamiento. Aunque puede que estos escenarios no se apliquen directamente a su configuración concreta, el hecho de saber cómo se puede configurar el servicio de enrutamiento para administrar estos escenarios le ayudará a entender el servicio de enrutamiento.  
@@ -49,9 +49,9 @@ Aunque el servicio de enrutamiento es muy personalizable, puede ser un desafío 
 ### <a name="multicast"></a>Multidifusión  
  Al enrutar mensajes, normalmente enruta cada mensaje a un extremo de destino concreto.  Sin embargo, algunas veces, puede necesitar enrutar una copia del mensaje a varios puntos de conexión de destino. Para realizar un enrutamiento de multidifusión, deben cumplirse las siguientes condiciones:  
   
--   La forma del canal no puede ser de solicitud-respuesta (aunque sí unidireccional o dúplex), porque, en caso de solicitud-respuesta, la aplicación cliente solo puede recibir una respuesta para cada solicitud.  
+- La forma del canal no puede ser de solicitud-respuesta (aunque sí unidireccional o dúplex), porque, en caso de solicitud-respuesta, la aplicación cliente solo puede recibir una respuesta para cada solicitud.  
   
--   Varios filtros deben devolver **true** al evaluar el mensaje.  
+- Varios filtros deben devolver **true** al evaluar el mensaje.  
   
  Si se cumplen estas condiciones, cada punto de conexión de destino asociado a un filtro que devuelva un valor verdadero recibirá una copia del mensaje.  
   

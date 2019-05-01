@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
 ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010155"
 ---
 # <a name="custom-animations-overview"></a>Información general sobre animaciones personalizadas
 En este tema se describe cómo y cuándo extender el sistema de animación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] creando fotogramas clave personalizados o clases de animación, o utilizando la devolución de llamada por fotograma para omitirlo.  
@@ -28,11 +28,11 @@ En este tema se describe cómo y cuándo extender el sistema de animación de [!
 ## <a name="extending-the-animation-system"></a>Extender el sistema de animación  
  Hay varias maneras de extender el sistema de animación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], dependiendo del nivel de funcionalidad integrada que se desee utilizar.  Existen tres puntos principales de extensibilidad en el motor de animación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   Crear un objeto de fotograma clave personalizado heredando de uno de los  *\<tipo >* clases de fotograma clave, como <xref:System.Windows.Media.Animation.DoubleKeyFrame>. En este enfoque se utiliza la mayoría de la funcionalidad integrada del motor de animación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+- Crear un objeto de fotograma clave personalizado heredando de uno de los  *\<tipo >* clases de fotograma clave, como <xref:System.Windows.Media.Animation.DoubleKeyFrame>. En este enfoque se utiliza la mayoría de la funcionalidad integrada del motor de animación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   Cree su propia clase de animación heredando de <xref:System.Windows.Media.Animation.AnimationTimeline> o uno de los  *\<tipo >* clases AnimationBase.  
+- Cree su propia clase de animación heredando de <xref:System.Windows.Media.Animation.AnimationTimeline> o uno de los  *\<tipo >* clases AnimationBase.  
   
--   Utilizar la devolución de llamada por fotograma para generar animaciones fotograma a fotograma. En este enfoque se omite completamente el sistema de animación y control de tiempo.  
+- Utilizar la devolución de llamada por fotograma para generar animaciones fotograma a fotograma. En este enfoque se omite completamente el sistema de animación y control de tiempo.  
   
  En la tabla siguiente se describen algunos de los escenarios para extender el sistema de animación.  
   
@@ -47,11 +47,11 @@ En este tema se describe cómo y cuándo extender el sistema de animación de [!
 ## <a name="create-a-custom-key-frame"></a>Crear un fotograma clave personalizado  
  Crear una clase de fotograma clave personalizado es la manera más simple de extender el sistema de animación. Utilice este enfoque cuando desee utilizar un método de interpolación diferente para una animación de fotograma clave.  Como se describe en [Key-Frame Animations Overview](key-frame-animations-overview.md) (Información general sobre animaciones de fotogramas clave ), una animación de fotograma clave usa objetos de fotograma clave para generar sus valores de salida. Cada objeto de fotograma clave realiza tres funciones:  
   
--   Especifica un valor de destino mediante su <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propiedad.  
+- Especifica un valor de destino mediante su <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propiedad.  
   
--   Especifica la hora a la que se debe alcanzar ese valor mediante su <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propiedad.  
+- Especifica la hora a la que se debe alcanzar ese valor mediante su <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propiedad.  
   
--   Interpola entre el valor del fotograma clave anterior y su propio valor implementando el método InterpolateValueCore.  
+- Interpola entre el valor del fotograma clave anterior y su propio valor implementando el método InterpolateValueCore.  
   
  **Instrucciones de implementación**  
   
@@ -87,13 +87,13 @@ En este tema se describe cómo y cuándo extender el sistema de animación de [!
   
  Derivar de la <xref:System.Windows.Media.Animation.AnimationTimeline> clase e invalidar los miembros siguientes:  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A> : Si la nueva clase es concreta, debe invalidar <xref:System.Windows.Freezable.CreateInstanceCore%2A> para devolver una nueva instancia de la clase.  
+- <xref:System.Windows.Freezable.CreateInstanceCore%2A> : Si la nueva clase es concreta, debe invalidar <xref:System.Windows.Freezable.CreateInstanceCore%2A> para devolver una nueva instancia de la clase.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> : Invalide este método para devolver el valor actual de la animación. Acepta tres parámetros: un valor de origen, un valor de destino predeterminado y un <xref:System.Windows.Media.Animation.AnimationClock>. Use la <xref:System.Windows.Media.Animation.AnimationClock> para obtener la hora actual o el progreso de la animación. Puede elegir si desea usar los valores de origen y destino predeterminados.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> : Invalide este método para devolver el valor actual de la animación. Acepta tres parámetros: un valor de origen, un valor de destino predeterminado y un <xref:System.Windows.Media.Animation.AnimationClock>. Use la <xref:System.Windows.Media.Animation.AnimationClock> para obtener la hora actual o el progreso de la animación. Puede elegir si desea usar los valores de origen y destino predeterminados.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> : Invalide esta propiedad para indicar si la animación usa el valor de destino predeterminado especificado por el <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> método.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> : Invalide esta propiedad para indicar si la animación usa el valor de destino predeterminado especificado por el <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> método.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> : Invalide esta propiedad para indicar el <xref:System.Type> de salida produce la animación.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> : Invalide esta propiedad para indicar el <xref:System.Type> de salida produce la animación.  
   
  Si la clase no utiliza propiedades de dependencia para almacenar sus datos o requiere que se inicialice otra vez después de haberse creado, es posible que tenga que invalidar otros métodos; consulte [Freezable Objects Overview](../advanced/freezable-objects-overview.md) (Información general sobre objetos Freezable).  
   

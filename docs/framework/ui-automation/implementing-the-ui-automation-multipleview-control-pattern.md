@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
 ms.openlocfilehash: 74e5908dfcd42d031464ffccedb530be4a71a3f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983364"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>Implementación del patrón de control MultipleView de UI Automation
 > [!NOTE]
@@ -27,13 +27,13 @@ ms.locfileid: "59125203"
 ## <a name="implementation-guidelines-and-conventions"></a>Directrices y convenciones de implementación  
  Al implementar el patrón de control Multiple View, tenga en cuenta las siguientes directrices y convenciones:  
   
--   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> también se debe implementar en un contenedor que administre la vista actual si es diferente de un control que ofrece la vista actual. Por ejemplo, el Explorador de Windows contiene un control de lista para el contenido de la carpeta actual, mientras que la vista del control se administra desde la aplicación del Explorador de Windows.  
+- <xref:System.Windows.Automation.Provider.IMultipleViewProvider> también se debe implementar en un contenedor que administre la vista actual si es diferente de un control que ofrece la vista actual. Por ejemplo, el Explorador de Windows contiene un control de lista para el contenido de la carpeta actual, mientras que la vista del control se administra desde la aplicación del Explorador de Windows.  
   
--   No se considera que un control que puede ordenar su contenido admita varias vistas.  
+- No se considera que un control que puede ordenar su contenido admita varias vistas.  
   
--   La colección de vistas debe ser idéntica en todas las instancias.  
+- La colección de vistas debe ser idéntica en todas las instancias.  
   
--   Los nombres de vista deben ser adecuados para su usarlo en texto a voz, Braille y otras aplicaciones de lenguaje natural.  
+- Los nombres de vista deben ser adecuados para su usarlo en texto a voz, Braille y otras aplicaciones de lenguaje natural.  
   
 <a name="Required_Members_for_IMultipleViewProvider"></a>   
 ## <a name="required-members-for-imultipleviewprovider"></a>Miembros requeridos para IMultipleViewProvider  

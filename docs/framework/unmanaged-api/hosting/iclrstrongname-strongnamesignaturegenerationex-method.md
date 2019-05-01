@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5d2539bc732cdc41c7514fd5d81c449ed8f17a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992893"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx (Método)
 Genera una firma de nombre seguro para el ensamblado especificado, según las marcas especificadas.  
@@ -69,9 +69,9 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Uno o varios de los siguientes valores:  
   
--   `SN_SIGN_ALL_FILES` (0 x 00000001): volver a calcular todos los códigos hash para módulos vinculados.  
+- `SN_SIGN_ALL_FILES` (0 x 00000001): volver a calcular todos los códigos hash para módulos vinculados.  
   
--   `SN_TEST_SIGN` (0 x 00000002): el ensamblado de prueba de inicio de sesión.  
+- `SN_TEST_SIGN` (0 x 00000002): el ensamblado de prueba de inicio de sesión.  
   
 ## <a name="return-value"></a>Valor devuelto  
  `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  

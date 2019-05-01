@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
 ms.openlocfilehash: fcb7809c1025997a0e78647c32590e1abee865ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971020"
 ---
 # <a name="scrollviewer-how-to-topics"></a>Temas "Cómo..." del elemento ScrollViewer
 Los temas de esta sección muestran cómo usar el <xref:System.Windows.Controls.ScrollViewer> elemento para crear las regiones desplazables en sus aplicaciones.  

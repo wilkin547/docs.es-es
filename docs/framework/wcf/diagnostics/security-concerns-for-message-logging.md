@@ -3,11 +3,11 @@ title: Riesgos de seguridad relativos al registro de mensajes
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998158"
 ---
 # <a name="security-concerns-for-message-logging"></a>Riesgos de seguridad relativos al registro de mensajes
 En este tema se describe cómo puede proteger los datos confidenciales para que no se expongan en registros de mensajes, así como los eventos generados por el registro de mensajes.  
@@ -21,11 +21,11 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
   
  Las sugerencias siguientes pueden ayudarle a evitar que se exponga el contenido de un archivo de registro involuntariamente:  
   
--   Asegúrese de que los archivos de registro estén protegidos mediante listas de control de acceso (ACL) tanto en host de web y como en escenarios de host propio.  
+- Asegúrese de que los archivos de registro estén protegidos mediante listas de control de acceso (ACL) tanto en host de web y como en escenarios de host propio.  
   
--   Elija una extensión de archivo que no se pueda servir fácilmente utilizando una solicitud web. Por ejemplo, la extensión de archivo .xml no es una opción segura. Puede comprobar la guía de administración de Internet Information Services (IIS) para ver una lista de extensiones que se pueden servir.  
+- Elija una extensión de archivo que no se pueda servir fácilmente utilizando una solicitud web. Por ejemplo, la extensión de archivo .xml no es una opción segura. Puede comprobar la guía de administración de Internet Information Services (IIS) para ver una lista de extensiones que se pueden servir.  
   
--   Especifique una ruta de acceso absoluta para la ubicación del archivo de registro, que debería estar fuera del directorio público raíz de Web host para evitar que una parte externa obtenga acceso utilizando un explorador web.  
+- Especifique una ruta de acceso absoluta para la ubicación del archivo de registro, que debería estar fuera del directorio público raíz de Web host para evitar que una parte externa obtenga acceso utilizando un explorador web.  
   
  De forma predeterminada, las claves e información personal identificable (PII) como nombre de usuario y contraseña no están registradas en trazas y los mensajes registrados. Sin embargo, un administrador del equipo puede utilizar el atributo `enableLoggingKnownPII` en el elemento `machineSettings` del archivo Machine.config para permitir que las aplicaciones que se ejecutan en el equipo registren información personal identificable (PII) conocida. La siguiente configuración muestra cómo realizar esto:  
   
@@ -99,13 +99,13 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
 ## <a name="events-triggered-by-message-logging"></a>Eventos activados mediante el registro de mensajes  
  La siguiente es una lista de todos los eventos emitidos por el registro de mensajes.  
   
--   Registro de mensajes: Este evento se genera cuando se habilita el registro de mensajes en la configuración o a través de WMI. El contenido del evento es “Se ha activado el registro de mensajes. Puede que se registre información confidencial en texto no cifrado, incluso aunque estuviesen cifrados en la conexión, por ejemplo, los cuerpos de mensajes”.  
+- Registro de mensajes: Este evento se genera cuando se habilita el registro de mensajes en la configuración o a través de WMI. El contenido del evento es “Se ha activado el registro de mensajes. Puede que se registre información confidencial en texto no cifrado, incluso aunque estuviesen cifrados en la conexión, por ejemplo, los cuerpos de mensajes”.  
   
--   Mensaje de cierre de sesión: Este evento se genera cuando se deshabilita el registro de mensajes a través de WMI. El contenido del evento es “Se ha desactivado el registro de mensajes”.  
+- Mensaje de cierre de sesión: Este evento se genera cuando se deshabilita el registro de mensajes a través de WMI. El contenido del evento es “Se ha desactivado el registro de mensajes”.  
   
--   Registrar la PII conocida: Este evento se genera cuando el registro de PII conocido está habilitado. Esto sucede cuando el `enableLoggingKnownPii` atributo en el `machineSettings` elemento del archivo Machine.config se establece en `true`y el `logKnownPii` atributo de la `source` elemento en el archivo App.config o Web.config se establece en `true`.  
+- Registrar la PII conocida: Este evento se genera cuando el registro de PII conocido está habilitado. Esto sucede cuando el `enableLoggingKnownPii` atributo en el `machineSettings` elemento del archivo Machine.config se establece en `true`y el `logKnownPii` atributo de la `source` elemento en el archivo App.config o Web.config se establece en `true`.  
   
--   Registro de PII conocido no permitido: Este evento se genera cuando no se permite el registro de PII conocido. Esto sucede cuando el `logKnownPii` atributo de la `source` elemento en el archivo App.config o Web.config se establece en `true`, pero la `enableLoggingKnownPii` atributo el `machineSettings` elemento del archivo Machine.config se establece en `false`. No se inicia ninguna excepción.  
+- Registro de PII conocido no permitido: Este evento se genera cuando no se permite el registro de PII conocido. Esto sucede cuando el `logKnownPii` atributo de la `source` elemento en el archivo App.config o Web.config se establece en `true`, pero la `enableLoggingKnownPii` atributo el `machineSettings` elemento del archivo Machine.config se establece en `false`. No se inicia ninguna excepción.  
   
  Estos eventos se pueden ver en la herramienta Visor de eventos que viene con Windows. Para obtener más información, consulte [Event Logging](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   

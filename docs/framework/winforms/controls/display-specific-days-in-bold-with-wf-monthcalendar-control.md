@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
 ms.openlocfilehash: 27b19e47d108b9af43a6d8882264d62c726ffe56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972086"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Procedimiento para mostrar días específicos en negrita con el control MonthCalendar de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control puede mostrar días en negrita, como fechas singulares o de forma repetida. Puede hacerlo para llamar la atención sobre las fechas especiales, tales como vacaciones y fines de semana.  

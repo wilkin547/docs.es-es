@@ -3,11 +3,11 @@ title: Proveedores de tipos
 description: Obtenga información sobre cómo un F# proveedor de tipos es un componente que proporciona tipos, propiedades y métodos para su uso en los programas.
 ms.date: 04/02/2018
 ms.openlocfilehash: 39000fd1ca2af78afd1c333816fe9d5c0e2517cb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967770"
 ---
 # <a name="type-providers"></a>Proveedores de tipos
 

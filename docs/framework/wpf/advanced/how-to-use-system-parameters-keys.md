@@ -6,11 +6,11 @@ helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 77571283-d16c-45bb-9f69-cafbbf72b21e
 ms.openlocfilehash: 147f65b4bb214c12317309081c345251d7426cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001447"
 ---
 # <a name="how-to-use-system-parameters-keys"></a>Procedimiento Usar claves de parámetros del sistema
 Los recursos del sistema exponen varias métricas del sistema como recursos para ayudar a los desarrolladores a crear efectos visuales coherentes con la configuración del sistema. <xref:System.Windows.SystemParameters> es una clase que contiene los valores de parámetro del sistema y las claves de recurso que se enlazan a los valores, por ejemplo, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> y <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A>. Las métricas de parámetros del sistema se pueden usar como recursos estáticos o dinámicos. Use un recurso dinámico si quiere que la métrica de parámetros se actualice automáticamente mientras se ejecuta la aplicación. De lo contrario, use un recurso estático.  

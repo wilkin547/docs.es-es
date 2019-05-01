@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
 ms.openlocfilehash: 57e863d9781721a997ae49e1a5c9d8f3562a1bd0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973291"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Conversión de delegado no estricta (Visual Basic)
 Conversión de delegado flexible le permite asignar subfunciones y funciones a delegados o controladores incluso cuando sus firmas no son idénticas. Por lo tanto, el enlace a delegados pasa a ser coherente con el enlace permitido ya las invocaciones de método.  
@@ -19,7 +19,7 @@ Conversión de delegado flexible le permite asignar subfunciones y funciones a d
 ## <a name="parameters-and-return-type"></a>Los parámetros y tipo de valor devuelto  
  En lugar de firma con coincidencia exacta, se requiere conversión flexible que se cumplen las condiciones siguientes cuando `Option Strict` está establecido en `On`:  
   
--   Debe existir una conversión de ampliación desde el tipo de datos de cada parámetro de delegado para el tipo de datos del parámetro correspondiente de la función asignada o `Sub`. En el ejemplo siguiente, el delegado `Del1` tiene un parámetro, un `Integer`. Parámetro `m` en la expresión lambda asignada expresiones deben tener un tipo de datos para el que hay una conversión de ampliación desde `Integer`, tales como `Long` o `Double`.  
+- Debe existir una conversión de ampliación desde el tipo de datos de cada parámetro de delegado para el tipo de datos del parámetro correspondiente de la función asignada o `Sub`. En el ejemplo siguiente, el delegado `Del1` tiene un parámetro, un `Integer`. Parámetro `m` en la expresión lambda asignada expresiones deben tener un tipo de datos para el que hay una conversión de ampliación desde `Integer`, tales como `Long` o `Double`.  
   
      [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
@@ -29,7 +29,7 @@ Conversión de delegado flexible le permite asignar subfunciones y funciones a d
   
      [!code-vb[VbVbalrRelaxedDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#8)]  
   
--   Debe existir una conversión de ampliación en la dirección opuesta, el tipo de valor devuelto de la función asignada o `Sub` para el tipo de valor devuelto del delegado. En los ejemplos siguientes, se debe evaluar el cuerpo de cada expresión lambda asignada a un tipo de datos que se amplía a `Integer` porque el tipo de valor devuelto de `del1` es `Integer`.  
+- Debe existir una conversión de ampliación en la dirección opuesta, el tipo de valor devuelto de la función asignada o `Sub` para el tipo de valor devuelto del delegado. En los ejemplos siguientes, se debe evaluar el cuerpo de cada expresión lambda asignada a un tipo de datos que se amplía a `Integer` porque el tipo de valor devuelto de `del1` es `Integer`.  
   
      [!code-vb[VbVbalrRelaxedDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#3)]  
   

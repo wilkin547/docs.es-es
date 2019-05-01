@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b979b5f4ee849b96cd29b6c8e2e6a8932e88c182
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049562"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo (Interfaz)
 Proporciona métodos para su uso por los generadores de perfiles de código para comunicarse con common language runtime (CLR) para controlar la supervisión de eventos y solicitar información.  

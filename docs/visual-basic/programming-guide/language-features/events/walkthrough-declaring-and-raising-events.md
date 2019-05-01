@@ -10,11 +10,11 @@ helpviewer_keywords:
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
 ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973095"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Tutorial: Declarar y provocar eventos (Visual Basic)
 Este tutorial muestra cómo declarar y provocar eventos para una clase denominada `Widget`. Después de completar los pasos, que es posible que desee leer el tema complementario, [Tutorial: Control de eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), que muestra cómo utilizar eventos de `Widget` objetos que se va a proporcionar información de estado en una aplicación.  
@@ -44,7 +44,7 @@ Este tutorial muestra cómo declarar y provocar eventos para una clase denominad
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>Para declarar un evento para la clase de Widget  
   
--   Use la `Event` palabra clave para declarar un evento en el `Widget` clase. Tenga en cuenta que puede tener un evento `ByVal` y `ByRef` argumentos, como `Widget`del `PercentDone` muestra eventos:  
+- Use la `Event` palabra clave para declarar un evento en el `Widget` clase. Tenga en cuenta que puede tener un evento `ByVal` y `ByRef` argumentos, como `Widget`del `PercentDone` muestra eventos:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   

@@ -3,20 +3,20 @@ title: Bloqueo de seguridad PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989656"
 ---
 # <a name="pii-security-lockdown"></a>Bloqueo de seguridad PII
 Este ejemplo muestra cómo controlar varias características relacionadas con la seguridad de un servicio de Windows Communication Foundation (WCF) mediante:  
   
--   Cifrado de información confidencial en el archivo de configuración de un servicio.  
+- Cifrado de información confidencial en el archivo de configuración de un servicio.  
   
--   Encerrar los elementos en el archivo de configuración para que los subdirectorios del servicio anidados no puedan reemplazar los valores.  
+- Encerrar los elementos en el archivo de configuración para que los subdirectorios del servicio anidados no puedan reemplazar los valores.  
   
--   Controlar el registro de Información de identificación personal (PII) en los registros de seguimiento y de mensajes.  
+- Controlar el registro de Información de identificación personal (PII) en los registros de seguimiento y de mensajes.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
@@ -124,9 +124,9 @@ Este ejemplo muestra cómo controlar varias características relacionadas con la
   
  También es posible cifrar elementos de archivo de configuración mediante DPAPI y RSA. Para obtener más información, vea los siguientes vínculos:  
   
--   [Creación de aplicaciones ASP.NET seguras: Autenticación, autorización y comunicación segura](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [Creación de aplicaciones ASP.NET seguras: Autenticación, autorización y comunicación segura](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [Cómo: Cifrar secciones de configuración en ASP.NET 2.0 mediante RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [Cómo: Cifrar secciones de configuración en ASP.NET 2.0 mediante RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar y ejecutar el ejemplo  
   

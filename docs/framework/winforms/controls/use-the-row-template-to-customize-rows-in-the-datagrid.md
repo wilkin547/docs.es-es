@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
 ms.openlocfilehash: cb3a826262a49a8653e3a344bd126d434f2522dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009193"
 ---
 # <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>Procedimiento para usar la plantilla de filas para personalizar filas en el control DataGridView de formularios Windows Forms
 El <xref:System.Windows.Forms.DataGridView> control usa la plantilla de fila como base para todas las filas que agregan al control mediante enlace de datos o cuando se llama a la <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> método sin especificar una fila existente para usar.  
@@ -28,7 +28,7 @@ El <xref:System.Windows.Forms.DataGridView> control usa la plantilla de fila com
   
 ### <a name="to-use-the-row-template"></a>Para usar la plantilla de fila  
   
--   Establecer propiedades en el objeto recuperado desde el <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> propiedad.  
+- Establecer propiedades en el objeto recuperado desde el <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> propiedad.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CPP/datagridviewrowtemplate.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CS/datagridviewrowtemplate.cs#1)]
@@ -37,9 +37,9 @@ El <xref:System.Windows.Forms.DataGridView> control usa la plantilla de fila com
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Control <xref:System.Windows.Forms.DataGridView> denominado `dataGridView1`.  
+- Control <xref:System.Windows.Forms.DataGridView> denominado `dataGridView1`.  
   
--   Referencias a los ensamblados <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- Referencias a los ensamblados <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 

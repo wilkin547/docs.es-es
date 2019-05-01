@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
 ms.openlocfilehash: 701d10a334757a96ffd634204c1e1d5eb5418ce6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054450"
 ---
 # <a name="double-data-type-visual-basic"></a>Double (Tipo de datos, Visual Basic)
 Contiene números con signo IEEE de 64 bits (8 bytes) precisión doble punto flotante que intervalo entre - 1, 79769313486231570E + 308 a - 4, 94065645841246544E-324 para los valores negativos y de 4, 94065645841246544E-324 a 1, 79769313486231570E + 308 para valores positivos. Números de precisión doble almacenan una aproximación de un número real.  
@@ -36,11 +36,11 @@ Contiene números con signo IEEE de 64 bits (8 bytes) precisión doble punto flo
   
 ## <a name="programming-tips"></a>Sugerencias de programación  
   
--   **Precisión.** Cuando se trabaja con números de punto flotante, recuerde que no siempre tienen una representación precisa en memoria. Esto podría provocar resultados inesperados en ciertas operaciones, como la comparación de valor y el `Mod` operador. Para obtener más información, consulte [solución de problemas de los tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Precisión.** Cuando se trabaja con números de punto flotante, recuerde que no siempre tienen una representación precisa en memoria. Esto podría provocar resultados inesperados en ciertas operaciones, como la comparación de valor y el `Mod` operador. Para obtener más información, consulte [solución de problemas de los tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Ceros finales.** Los tipos de datos de punto flotante no tienen una representación interna de cero caracteres finales. Por ejemplo, no distinguen entre 4,2000 y 4,2. Por lo tanto, cero caracteres finales no aparecen cuando se muestren o valores de punto flotante de impresión.  
+- **Ceros finales.** Los tipos de datos de punto flotante no tienen una representación interna de cero caracteres finales. Por ejemplo, no distinguen entre 4,2000 y 4,2. Por lo tanto, cero caracteres finales no aparecen cuando se muestren o valores de punto flotante de impresión.  
   
--   **Caracteres de tipo.** Al agregar el carácter de tipo literal `R` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Double`. Por ejemplo, si un valor entero seguido `R`, el valor se cambia a un `Double`.  
+- **Caracteres de tipo.** Al agregar el carácter de tipo literal `R` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Double`. Por ejemplo, si un valor entero seguido `R`, el valor se cambia a un `Double`.  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
@@ -53,7 +53,7 @@ Contiene números con signo IEEE de 64 bits (8 bytes) precisión doble punto flo
     Dim num# = 3  
     ```  
   
--   **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Double?displayProperty=nameWithType>.  
+- **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Double?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 

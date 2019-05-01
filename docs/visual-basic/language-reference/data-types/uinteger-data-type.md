@@ -17,11 +17,11 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
 ms.openlocfilehash: 4d93b1e40371b00f9d1ff69ec31ad0983beb493f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971735"
 ---
 # <a name="uinteger-data-type"></a>UInteger (tipo de datos)
 
@@ -66,17 +66,17 @@ Dim number = &H_0FAC_14D7ui
 
  El `UInteger` y `Integer` tipos de datos proporcionan un rendimiento óptimo en un procesador de 32 bits, porque los tipos enteros más pequeños (`UShort`, `Short`, `Byte`, y `SByte`), aunque éstos utilicen menos bits tardan más tiempo en cargar, almacenar y recuperar.  
   
--   **Números negativos.** Dado que `UInteger` es un tipo sin signo, que no puede representar un número negativo. Si usa el operador unario menos (`-`) operador en una expresión que se evalúa como tipo `UInteger`, Visual Basic convierte la expresión a `Long` primero.  
+- **Números negativos.** Dado que `UInteger` es un tipo sin signo, que no puede representar un número negativo. Si usa el operador unario menos (`-`) operador en una expresión que se evalúa como tipo `UInteger`, Visual Basic convierte la expresión a `Long` primero.  
   
--   **Conformidad con CLS.** El `UInteger` es de tipo de datos no forma parte de la [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede utilizar un componente que lo utiliza.
+- **Conformidad con CLS.** El `UInteger` es de tipo de datos no forma parte de la [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede utilizar un componente que lo utiliza.
   
--   **Consideraciones de interoperabilidad.** Si interactúa con componentes no escritos para .NET Framework, por ejemplo objetos de automatización o COM, tenga en cuenta que los tipos, como `uint` puede tener un ancho de datos diferente (16 bits) en otros entornos. Si se pasa un argumento de 16 bits a esos componentes, declárelo como `UShort` en lugar de `UInteger` en el código administrado de Visual Basic.  
+- **Consideraciones de interoperabilidad.** Si interactúa con componentes no escritos para .NET Framework, por ejemplo objetos de automatización o COM, tenga en cuenta que los tipos, como `uint` puede tener un ancho de datos diferente (16 bits) en otros entornos. Si se pasa un argumento de 16 bits a esos componentes, declárelo como `UShort` en lugar de `UInteger` en el código administrado de Visual Basic.  
   
--   **Ampliación.** El `UInteger` tipo de datos se amplía a `Long`, `ULong`, `Decimal`, `Single`, y `Double`. Esto significa que se puede convertir `UInteger` a cualquiera de estos tipos sin que se produzca una <xref:System.OverflowException?displayProperty=nameWithType> error.  
+- **Ampliación.** El `UInteger` tipo de datos se amplía a `Long`, `ULong`, `Decimal`, `Single`, y `Double`. Esto significa que se puede convertir `UInteger` a cualquiera de estos tipos sin que se produzca una <xref:System.OverflowException?displayProperty=nameWithType> error.  
   
--   **Caracteres de tipo.** Anexar los caracteres de tipo literal `UI` a un literal, se convierte a la `UInteger` tipo de datos. `UInteger` no tiene ningún carácter de tipo identificador.  
+- **Caracteres de tipo.** Anexar los caracteres de tipo literal `UI` a un literal, se convierte a la `UInteger` tipo de datos. `UInteger` no tiene ningún carácter de tipo identificador.  
   
--   **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.UInt32?displayProperty=nameWithType>.  
+- **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.UInt32?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df9cc0cc86237b1ec439a4ec4fa6a75429c416d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985782"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage (Función)
 Valida las imágenes de módulo administrado y notifica al cargador del sistema operativo después de que se han cargado.  
@@ -53,23 +53,23 @@ STDAPI _CorValidateImage (
 ## <a name="remarks"></a>Comentarios  
  En Windows XP y versiones posteriores, el cargador del sistema operativo comprueba los módulos administrados examinando el bit de directorio de Descriptor de COM en el encabezado de common object file format (COFF). Un bit establecido indica un módulo administrado. Si el cargador detecta un módulo administrado, carga MsCorEE.dll y llamadas `_CorValidateImage`, que realiza las acciones siguientes:  
   
--   Confirma que la imagen es un módulo administrado válido.  
+- Confirma que la imagen es un módulo administrado válido.  
   
--   Cambia el punto de entrada en la imagen a un punto de entrada en common language runtime (CLR).  
+- Cambia el punto de entrada en la imagen a un punto de entrada en common language runtime (CLR).  
   
--   Para las versiones de 64 bits de Windows, modifica la imagen que está en la memoria transformando PE32 en PE32 + formato.  
+- Para las versiones de 64 bits de Windows, modifica la imagen que está en la memoria transformando PE32 en PE32 + formato.  
   
--   Devuelve al cargador cuándo se cargan las imágenes de módulo administrado.  
+- Devuelve al cargador cuándo se cargan las imágenes de módulo administrado.  
   
  Para las imágenes ejecutables, el cargador del sistema operativo, a continuación, llama a la [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) función, independientemente del punto de entrada especificado en el archivo ejecutable. Para las imágenes de ensamblado DLL, el cargador llama a la [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) función.  
   
  `_CorExeMain` o `_CorDllMain` realiza las acciones siguientes:  
   
--   Inicializa el CLR.  
+- Inicializa el CLR.  
   
--   Busca el punto de entrada administrado desde el encabezado CLR del ensamblado.  
+- Busca el punto de entrada administrado desde el encabezado CLR del ensamblado.  
   
--   Empieza a ejecutarse.  
+- Empieza a ejecutarse.  
   
  Las llamadas de cargador la [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) funcionando cuando administra las imágenes de módulo se descargan. Sin embargo, esta función no realiza ninguna acción; simplemente devuelve.  
   

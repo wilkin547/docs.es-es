@@ -3,11 +3,11 @@ title: Propagación de ID de actividad
 ms.date: 03/30/2017
 ms.assetid: cd1c1ae5-cc8a-4f51-90c9-f7b476bcfe70
 ms.openlocfilehash: e51970f693d9ca2d2f81bf4efc97969896de4828
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998054"
 ---
 # <a name="activity-id-propagation"></a>Propagación de ID de actividad
 La propagación se produce cuando el seguimiento de la actividad ServiceModel está habilitada (propagación de ServiceModel) o deshabilitada (propagación de actividad entre usuarios).  
@@ -18,10 +18,10 @@ La propagación se produce cuando el seguimiento de la actividad ServiceModel es
 ### <a name="server"></a>Servidor  
  Cuando el `propagateActivity` atributo está establecido en `true` en el cliente y el servidor, el identificador de la `ProcessAction` actividad en el servidor es idéntica al identificador propagado `ActivityId` encabezado del mensaje.  
   
- Si no `ActivityId` encabezado está presente en el mensaje (es decir, `propagateActivity` = `false` en el cliente), o cuando `propagateActivity` = `false` en el servidor, el servidor genera un nuevo identificador de actividad.  
+ Cuando no hay ninguna `ActivityId` encabezado está presente en el mensaje (es decir, `propagateActivity` = `false` en el cliente), o cuando `propagateActivity` = `false` en el servidor, el servidor genera un nuevo identificador de actividad.  
   
 ### <a name="client"></a>Cliente  
- Si el cliente es un subproceso único de forma sincrónica, el cliente no tiene en cuenta los valores de `propagateActivity` del cliente o servidor. En su lugar, la respuesta se administra en la actividad de solicitud. Si el cliente sea asincrónico o sincrónico multiproceso, `propagateActivity` = `true` en el cliente y hay un encabezado de Id. de actividad en el mensaje enviado por el servidor, el cliente recupera el identificador de actividad del mensaje y transfiere a la Actividad de acción de proceso que contiene el identificador de actividad propagado. De lo contrario, el cliente se transfiere de la actividad de procesamiento de mensajes a una nueva actividad de acción de procesos. Se realiza esta transferencia adicional a una nueva actividad de procesamiento de acción por coherencia. Dentro de esta actividad, el cliente recupera el id. de actividad de la actividad BeginCall del contexto del subproceso local, cuando se asigna el subproceso para procesamiento del mensaje de respuesta. Se transfiere, a continuación, a la actividad inicial de procesamiento de acción.  
+ Si el cliente es un subproceso único de forma sincrónica, el cliente no tiene en cuenta los valores de `propagateActivity` del cliente o servidor. En su lugar, la respuesta se administra en la actividad de solicitud. Si el cliente es asincrónico o sincrónico multiproceso, `propagateActivity` = `true` en el cliente y hay un encabezado de Id. de actividad en el mensaje enviado por el servidor, el cliente recupera el identificador de actividad del mensaje y se transfiere a la Actividad de acción de proceso que contiene el identificador de actividad propagado. De lo contrario, el cliente se transfiere de la actividad de procesamiento de mensajes a una nueva actividad de acción de procesos. Se realiza esta transferencia adicional a una nueva actividad de procesamiento de acción por coherencia. Dentro de esta actividad, el cliente recupera el id. de actividad de la actividad BeginCall del contexto del subproceso local, cuando se asigna el subproceso para procesamiento del mensaje de respuesta. Se transfiere, a continuación, a la actividad inicial de procesamiento de acción.  
   
  Si el cliente es dúplex, el cliente actúa como servidor al recibir el mensaje.  
   
@@ -33,16 +33,16 @@ La propagación se produce cuando el seguimiento de la actividad ServiceModel es
   
  Si `propagateActivity` = `true` y `ActivityTracing` = `off` para un agente de escucha de seguimiento de ServiceModel (independientemente de si se habilita el seguimiento en ServiceModel), lo siguiente ocurre en el cliente o el servidor:  
   
--   En la solicitud de operación o respuesta de envío, el id. de actividad en TLS se propaga fuera del código de usuario hasta que se forma un mensaje. También se inserta en el mensaje un encabezado de id. de actividad antes de enviarse.  
+- En la solicitud de operación o respuesta de envío, el id. de actividad en TLS se propaga fuera del código de usuario hasta que se forma un mensaje. También se inserta en el mensaje un encabezado de id. de actividad antes de enviarse.  
   
--   Al recibir la solicitud o recibir la respuesta, el id. de actividad se recupera del encabezado del mensaje en cuanto se cree el objeto de mensaje recibido. Se propaga el id. de actividad en TLS en cuanto el mensaje desaparece del ámbito hasta que se alcance el código de usuario.   
+- Al recibir la solicitud o recibir la respuesta, el id. de actividad se recupera del encabezado del mensaje en cuanto se cree el objeto de mensaje recibido. Se propaga el id. de actividad en TLS en cuanto el mensaje desaparece del ámbito hasta que se alcance el código de usuario.  
   
  Estas acciones garantizan que los seguimientos del usuario aparecerán en la misma actividad si la propagación está activada. Sin embargo, no hay garantía en seguimientos de ServiceModel. Los seguimientos de ServiceModel se producen en una actividad de código de usuario si se ejecuta el procesamiento de esos seguimientos en el mismo subproceso donde se estableció la actividad de código de usuario.  
   
  En general, los seguimientos de ServiceModel se puede observar en los lugares siguientes:  
   
--   Si el seguimiento de ServiceModel está deshabilitado, todos los seguimientos emitidos aparecen en actividades de usuario. Si la propagación está habilitada en el servidor y cliente, estos seguimientos estarán en la misma actividad.  
+- Si el seguimiento de ServiceModel está deshabilitado, todos los seguimientos emitidos aparecen en actividades de usuario. Si la propagación está habilitada en el servidor y cliente, estos seguimientos estarán en la misma actividad.  
   
--   Si el seguimiento de ServiceModel está habilitado, pero ActivityTracing está deshabilitado, los seguimientos del usuario aparecen en la misma actividad si la propagación está habilitada en ambos. Los seguimientos de ServiceModel aparecen en la actividad predeterminada 0000, a menos que se produzcan en el mismo subproceso que el procesamiento de código de usuario donde se establece la actividad inicialmente.  
+- Si el seguimiento de ServiceModel está habilitado, pero ActivityTracing está deshabilitado, los seguimientos del usuario aparecen en la misma actividad si la propagación está habilitada en ambos. Los seguimientos de ServiceModel aparecen en la actividad predeterminada 0000, a menos que se produzcan en el mismo subproceso que el procesamiento de código de usuario donde se establece la actividad inicialmente.  
   
--   Si están habilitados ambos seguimientos de ServiceModel y ActivityTracing, los seguimientos del usuario aparecen en actividades definidas por el usuario y los seguimientos de ServiceModel aparecen en actividades definidas por ServiceModel. La propagación se produce en el nivel de ServiceModel.
+- Si están habilitados ambos seguimientos de ServiceModel y ActivityTracing, los seguimientos del usuario aparecen en actividades definidas por el usuario y los seguimientos de ServiceModel aparecen en actividades definidas por ServiceModel. La propagación se produce en el nivel de ServiceModel.

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3fe3cbc4bad83496bcc58aaea60e6724b1d1f06c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988902"
 ---
 # <a name="icordebugframecreatestepper-method"></a>ICorDebugFrame::CreateStepper (Método)
 Obtiene un motor paso a paso que permite al depurador realizar operaciones de ejecución paso a paso en relación con este ICorDebugFrame.  

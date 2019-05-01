@@ -13,22 +13,22 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
 ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967042"
 ---
 # <a name="data-binding-and-windows-forms"></a>Enlace de datos y formularios Windows Forms
 Windows Forms permite enlazar no solo a orígenes de datos tradicionales, sino también a prácticamente cualquier estructura que contenga datos. Se puede enlazar a una matriz de valores que se calcula en tiempo de ejecución, se lee de un archivo o se deriva de los valores de otros controles.  
   
  Además, se puede enlazar cualquier propiedad de cualquier control al origen de datos. En el enlace de datos tradicional, habitualmente se enlaza la propiedad de presentación —por ejemplo, la propiedad <xref:System.Windows.Forms.Control.Text%2A> de un control <xref:System.Windows.Forms.TextBox>— al origen de datos. Con [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], también existe la opción de establecer otras propiedades mediante enlace. Puede usar el enlace para cualquiera de las siguientes tareas:  
   
--   Establecer el gráfico de un control de imagen.  
+- Establecer el gráfico de un control de imagen.  
   
--   Establecer el color de fondo de uno o más controles.  
+- Establecer el color de fondo de uno o más controles.  
   
--   Establecer el tamaño de los controles.  
+- Establecer el tamaño de los controles.  
   
  Esencialmente, el enlace de datos es un modo automático de establecer cualquier propiedad accesible en tiempo de ejecución de cualquier control en un formulario.  
   

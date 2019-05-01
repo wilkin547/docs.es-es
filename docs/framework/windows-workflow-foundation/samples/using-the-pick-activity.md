@@ -3,11 +3,11 @@ title: Uso de la actividad Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004736"
 ---
 # <a name="using-the-pick-activity"></a>Uso de la actividad Pick
 En este ejemplo se muestra cómo utilizar la actividad <xref:System.Activities.Statements.Pick>.
@@ -24,17 +24,17 @@ En este ejemplo se muestra cómo utilizar la actividad <xref:System.Activities.S
 
  Diseñador versión para el Diseñador de flujo de trabajo del ejemplo muestra cómo crear un flujo de trabajo en el diseñador. Están incluidos los siguientes archivos:
 
--   Program.cs: Incluye el `Main` función que se ejecuta el flujo de trabajo.
+- Program.cs: Incluye el `Main` función que se ejecuta el flujo de trabajo.
 
--   ReadString.cs: Una actividad personalizada que lee alguna entrada de la consola.
+- ReadString.cs: Una actividad personalizada que lee alguna entrada de la consola.
 
--   Sequence1.xaml: Un flujo de trabajo creado mediante el diseñador que utiliza Pick.
+- Sequence1.xaml: Un flujo de trabajo creado mediante el diseñador que utiliza Pick.
 
  Flujo de trabajo codificado la versión codificada del ejemplo muestra cómo crear un flujo de trabajo en el diseñador. Están incluidos los siguientes archivos:
 
--   Program.cs: Incluye el `Main` función que se ejecuta el flujo de trabajo.
+- Program.cs: Incluye el `Main` función que se ejecuta el flujo de trabajo.
 
--   ReadString.cs: Una actividad personalizada que lee alguna entrada de la consola.
+- ReadString.cs: Una actividad personalizada que lee alguna entrada de la consola.
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
 ms.openlocfilehash: fdbc69634e86992e71cfccdc080829b6b45f963c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971904"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier (Directiva)
 Modifica el comportamiento de compilación de XAML cuando `x:Class` también se proporciona. En concreto, en lugar de crear una parcial `class` que tiene un `Public` (valor predeterminado), nivel de acceso proporcionado `x:Class` se crea con un `NotPublic` nivel de acceso. Este comportamiento afecta al nivel de acceso para la clase en los ensamblados generados.  
@@ -40,11 +40,11 @@ Modifica el comportamiento de compilación de XAML cuando `x:Class` también se 
 ## <a name="remarks"></a>Comentarios  
  El valor de `x:ClassModifier` en los servicios XAML de .NET Framework uso varía según el lenguaje de programación. La cadena que se va a utilizar depende de cómo cada lenguaje implementa su <xref:System.CodeDom.Compiler.CodeDomProvider> y los convertidores de tipos que devuelve para definir los significados de <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> y <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, y si dicho idioma distingue mayúsculas de minúsculas.  
   
--   Para C#, la cadena debe pasar para designar <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> es `internal`.  
+- Para C#, la cadena debe pasar para designar <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> es `internal`.  
   
--   Para Microsoft Visual Basic. NET, la cadena debe pasar para designar <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> es `Friend`.  
+- Para Microsoft Visual Basic. NET, la cadena debe pasar para designar <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> es `Friend`.  
   
--   Para [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], ningún destino existe compatibles con la compilación XAML; por lo tanto, el valor para pasar no está especificado.  
+- Para [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], ningún destino existe compatibles con la compilación XAML; por lo tanto, el valor para pasar no está especificado.  
   
  También puede especificar <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> (`public` en C#, `Public` en Visual Basic); sin embargo, especificar <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> con poca frecuencia se hace así porque <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ya es el comportamiento predeterminado.  
   

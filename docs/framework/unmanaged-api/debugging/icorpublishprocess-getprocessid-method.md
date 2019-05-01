@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6f3948e45b991e667ea90c7846ee0d6fd630c0db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986601"
 ---
 # <a name="icorpublishprocessgetprocessid-method"></a>ICorPublishProcess::GetProcessID (Método)
 Obtiene el identificador de sistema operativo de este proceso.  

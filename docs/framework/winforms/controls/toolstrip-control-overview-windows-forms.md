@@ -10,11 +10,11 @@ helpviewer_keywords:
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
 ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009531"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Información sobre el control ToolStrip (formularios Windows Forms)
 Los formularios de Windows <xref:System.Windows.Forms.ToolStrip> control y sus clases asociadas proporcionan un marco común para combinar elementos de la interfaz de usuario en los menús, barras de estado y las barras de herramientas. <xref:System.Windows.Forms.ToolStrip> los controles ofrecen una experiencia de tiempo de diseño que incluye la edición y activación en contexto, el diseño personalizado y espacio compartido, que es la capacidad de las barras de herramientas para compartir el espacio horizontal o vertical.  
@@ -24,19 +24,19 @@ Los formularios de Windows <xref:System.Windows.Forms.ToolStrip> control y sus c
 ## <a name="features-of-the-toolstrip-controls"></a>Características de los controles ToolStrip  
  Use el <xref:System.Windows.Forms.ToolStrip> controlar para:  
   
--   Presentar una interfaz de usuario común entre los contenedores.  
+- Presentar una interfaz de usuario común entre los contenedores.  
   
--   Cree fácilmente personalizado, normalmente por cuenta propia las barras de herramientas que admiten avanzadas características de diseño y la interfaz de usuario, como los botones de acoplamiento, espacio compartidos, con texto y las imágenes, botones desplegables y controles, botones y la reordenación de tiempo de ejecución de desbordamiento <xref:System.Windows.Forms.ToolStrip> elementos.  
+- Cree fácilmente personalizado, normalmente por cuenta propia las barras de herramientas que admiten avanzadas características de diseño y la interfaz de usuario, como los botones de acoplamiento, espacio compartidos, con texto y las imágenes, botones desplegables y controles, botones y la reordenación de tiempo de ejecución de desbordamiento <xref:System.Windows.Forms.ToolStrip> elementos.  
   
--   Admiten el desbordamiento y reordenación de elementos en tiempo de ejecución. La característica de desbordamiento mueve los elementos a un menú desplegable cuando no hay espacio suficiente para mostrarlas en un <xref:System.Windows.Forms.ToolStrip>.  
+- Admiten el desbordamiento y reordenación de elementos en tiempo de ejecución. La característica de desbordamiento mueve los elementos a un menú desplegable cuando no hay espacio suficiente para mostrarlas en un <xref:System.Windows.Forms.ToolStrip>.  
   
--   Compatibilidad con el aspecto típico y comportamiento del sistema operativo a través de un modelo común de representación.  
+- Compatibilidad con el aspecto típico y comportamiento del sistema operativo a través de un modelo común de representación.  
   
--   Controlar los eventos de forma coherente para todos los contenedores y los elementos contenidos, de la misma manera controlan los eventos de otros controles.  
+- Controlar los eventos de forma coherente para todos los contenedores y los elementos contenidos, de la misma manera controlan los eventos de otros controles.  
   
--   Arrastre elementos desde una <xref:System.Windows.Forms.ToolStrip> a otra o dentro un <xref:System.Windows.Forms.ToolStrip>.  
+- Arrastre elementos desde una <xref:System.Windows.Forms.ToolStrip> a otra o dentro un <xref:System.Windows.Forms.ToolStrip>.  
   
--   Crear controles de lista desplegable y un usuario de editores de tipos de interfaz con las disposiciones avanzadas en un <xref:System.Windows.Forms.ToolStripDropDown>.  
+- Crear controles de lista desplegable y un usuario de editores de tipos de interfaz con las disposiciones avanzadas en un <xref:System.Windows.Forms.ToolStripDropDown>.  
   
  Utilice la <xref:System.Windows.Forms.ToolStripControlHost> clase usar otros controles en un <xref:System.Windows.Forms.ToolStrip> y obtenga <xref:System.Windows.Forms.ToolStrip> funcionalidad para ellos.  
   

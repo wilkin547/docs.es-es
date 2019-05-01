@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a49252d00f75b4d0b6325aeae0aab22f8ada5e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000329"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies (Función)
 Determina si dos ensamblados presentan diferencias solo mediante sus firmas de nombres seguros.  
@@ -48,11 +48,11 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Uno de los siguientes valores:  
   
--   `SN_CMP_DIFFERENT` (0): Especifica que los ensamblados contienen datos diferentes.  
+- `SN_CMP_DIFFERENT` (0): Especifica que los ensamblados contienen datos diferentes.  
   
--   `SN_CMP_IDENTICAL` (1): Especifica que los ensamblados son exactamente las mismas, incluidos sus firmas y la suma de comprobación.  
+- `SN_CMP_IDENTICAL` (1): Especifica que los ensamblados son exactamente las mismas, incluidos sus firmas y la suma de comprobación.  
   
--   `SN_CMP_SIGONLY` (2): Especifica que los ensamblados se diferencian únicamente por la firma y la suma de comprobación.  
+- `SN_CMP_SIGONLY` (2): Especifica que los ensamblados se diferencian únicamente por la firma y la suma de comprobación.  
   
 ## <a name="return-value"></a>Valor devuelto  
  `true` Cuando se finaliza correctamente; en caso contrario, `false`.  

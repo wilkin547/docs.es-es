@@ -3,11 +3,11 @@ title: Activación NamedPipe
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
 ms.openlocfilehash: 3e6084e8334eddc16b115cc1199819c6ab637666
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051850"
 ---
 # <a name="namedpipe-activation"></a>Activación NamedPipe
 
@@ -114,7 +114,7 @@ Si desea utilizar un enlace seguro de canalización con nombre, cambie el modo d
   </system.serviceModel>
 ```
 
-La información de extremo del cliente se configura como se muestra en el código muestra siguiente.
+La información de punto de conexión del cliente se configura como se muestra en el código muestra siguiente.
 
 ```xml
 <system.serviceModel>

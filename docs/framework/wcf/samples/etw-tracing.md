@@ -3,11 +3,11 @@ title: Seguimiento ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
 ms.openlocfilehash: a5c2f173978f514aa4627caa476a595d8d45d4f9
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051929"
 ---
 # <a name="etw-tracing"></a>Seguimiento ETW
 Este ejemplo muestra cómo implementar el seguimiento de un extremo a otro (E2E) mediante el Seguimiento de eventos para Windows (ETW) y `ETWTraceListener` que se proporciona este ejemplo. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) e incluye el seguimiento de ETW.  

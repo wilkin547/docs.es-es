@@ -3,11 +3,11 @@ title: Correlación del mensaje
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
 ms.openlocfilehash: ed6fc8f5d16ae2d604cdbdf4659ecfaaa83bfa02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989773"
 ---
 # <a name="message-correlation"></a>Correlación del mensaje
 Este ejemplo muestra cómo una aplicación de Message Queuing (MSMQ) puede enviar un mensaje de MSMQ a un servicio de Windows Communication Foundation (WCF) y cómo se pueden correlacionar los mensajes entre las aplicaciones de remitente y receptor en un escenario de solicitud/respuesta. Este ejemplo utiliza el enlace msmqIntegrationBinding. El servicio en este caso es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola. k  
@@ -275,15 +275,15 @@ static void DisplayOrderStatus()
 
 2. Si se ejecuta el servicio primero, comprobará que la cola esté presente. Si la cola no está presente, el servicio creará una. Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ. Siga estos pasos para crear una cola en Windows 2008.
 
-    1.  Abra el administrador del servidor en Visual Studio 2012.
+    1. Abra el administrador del servidor en Visual Studio 2012.
 
-    2.  Expanda el **características** ficha.
+    2. Expanda el **características** ficha.
 
-    3.  Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.
+    3. Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.
 
-    4.  Compruebe el **transaccional** cuadro.
+    4. Compruebe el **transaccional** cuadro.
 
-    5.  Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.
+    5. Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.
 
 3. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

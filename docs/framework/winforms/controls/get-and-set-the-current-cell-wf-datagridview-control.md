@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
 ms.openlocfilehash: fb71a6e3259d3007e11f528377c95a9c4cbeb023
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971332"
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Procedimiento para obtener y establecer la celda actual en el control DataGridView de formularios Windows Forms
 Interacción con el <xref:System.Windows.Forms.DataGridView> a menudo requiere que detectar mediante programación la celda que está actualmente activa. También es posible que deba cambiar la celda actual. Puede realizar estas tareas con el <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> propiedad.  
@@ -26,14 +26,14 @@ Interacción con el <xref:System.Windows.Forms.DataGridView> a menudo requiere q
   
 ### <a name="to-get-the-current-cell-programmatically"></a>Para obtener la celda actual mediante programación  
   
--   Use la <xref:System.Windows.Forms.DataGridView> del control <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> propiedad.  
+- Use la <xref:System.Windows.Forms.DataGridView> del control <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> propiedad.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#080)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#080)]  
   
 ### <a name="to-set-the-current-cell-programmatically"></a>Para establecer la celda actual mediante programación  
   
--   Establecer el <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> propiedad de la <xref:System.Windows.Forms.DataGridView> control. En el ejemplo de código siguiente, se establece la celda actual en la fila 0, columna 1.  
+- Establecer el <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> propiedad de la <xref:System.Windows.Forms.DataGridView> control. En el ejemplo de código siguiente, se establece la celda actual en la fila 0, columna 1.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#085)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#085)]  
@@ -41,11 +41,11 @@ Interacción con el <xref:System.Windows.Forms.DataGridView> a menudo requiere q
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   <xref:System.Windows.Forms.Button> controles denominados `getCurrentCellButton` y `setCurrentCellButton`. En Visual C#, debe asociar el <xref:System.Windows.Forms.Control.Click> eventos para cada botón al controlador de eventos asociados en el código de ejemplo.  
+- <xref:System.Windows.Forms.Button> controles denominados `getCurrentCellButton` y `setCurrentCellButton`. En Visual C#, debe asociar el <xref:System.Windows.Forms.Control.Click> eventos para cada botón al controlador de eventos asociados en el código de ejemplo.  
   
--   Control <xref:System.Windows.Forms.DataGridView> denominado `dataGridView1`.  
+- Control <xref:System.Windows.Forms.DataGridView> denominado `dataGridView1`.  
   
--   Referencias a los ensamblados <xref:System?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- Referencias a los ensamblados <xref:System?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 

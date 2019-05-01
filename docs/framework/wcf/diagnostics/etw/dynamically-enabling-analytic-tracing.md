@@ -3,22 +3,22 @@ title: Habilitar dinámicamente la traza analítica
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
 ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999475"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Habilitar dinámicamente la traza analítica
 Con las herramientas que se distribuyen con el sistema operativo Windows, puede habilitar o deshabilitar la traza de forma dinámica mediante el Seguimiento de eventos para Windows (ETW). Para todos los [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] servicios Windows Communication Foundation (WCF), traza analítica puede habilitarse y deshabilitarse de forma dinámica sin modificar el archivo Web.config de la aplicación o reiniciar el servicio. Esto permite que la aplicación que emite los eventos de traza siga sin más.  
   
  Las opciones de seguimiento de WCF pueden configurarse de forma similar. Por ejemplo, puede cambiar el nivel de gravedad de **Error** a **Información** sin interrumpir a la aplicación. Esto se puede hacer mediante las siguientes herramientas:  
   
--   **Logman** . Una herramienta de línea de comandos para configurar, controlar y consultar los datos de la traza. Para obtener más información, consulte [traza de Logman crear](https://go.microsoft.com/fwlink/?LinkId=165426) y [Logman Update Trace](https://go.microsoft.com/fwlink/?LinkId=165427).  
+- **Logman** . Una herramienta de línea de comandos para configurar, controlar y consultar los datos de la traza. Para obtener más información, consulte [traza de Logman crear](https://go.microsoft.com/fwlink/?LinkId=165426) y [Logman Update Trace](https://go.microsoft.com/fwlink/?LinkId=165427).  
   
--   **EventViewer** . Herramienta de administración gráfica de Windows para ver los resultados de la traza. Para obtener más información, consulte [servicios WCF y seguimiento de eventos para Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) y [Visor de eventos](https://go.microsoft.com/fwlink/?LinkId=165428).  
+- **EventViewer** . Herramienta de administración gráfica de Windows para ver los resultados de la traza. Para obtener más información, consulte [servicios WCF y seguimiento de eventos para Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) y [Visor de eventos](https://go.microsoft.com/fwlink/?LinkId=165428).  
   
--   **Perfmon** . Herramienta de administración gráfica de Windows que usa los contadores para supervisar los contadores de traza y los efectos de la traza durante el rendimiento. Para obtener más información, consulte [crear una Data Recopilador establece manualmente](https://go.microsoft.com/fwlink/?LinkId=165429).  
+- **Perfmon** . Herramienta de administración gráfica de Windows que usa los contadores para supervisar los contadores de traza y los efectos de la traza durante el rendimiento. Para obtener más información, consulte [crear una Data Recopilador establece manualmente](https://go.microsoft.com/fwlink/?LinkId=165429).  
   
 ### <a name="keywords"></a>Palabras clave  
  Al utilizar la clase <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> , los mensajes de traza de .NET Framework se suelen filtrar según el nivel de gravedad (por ejemplo, Error, Advertencia e Información). ETW admite el concepto de nivel de gravedad, pero introduce un mecanismo de filtro nuevo y flexible mediante palabras clave. Las palabras clave son valores textuales arbitrarios que permiten a los eventos de traza proporcionar contexto adicional sobre lo que ese evento significa.  

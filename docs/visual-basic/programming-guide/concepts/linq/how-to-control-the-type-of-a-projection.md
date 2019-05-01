@@ -3,11 +3,11 @@ title: Procedimiento Controlar el tipo de una proyección (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
 ms.openlocfilehash: dd09914a75a8d4b20ddf9ff452f046bf7671152f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051793"
 ---
 # <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Procedimiento Controlar el tipo de una proyección (Visual Basic)
 La proyección es el proceso de tomar un conjunto de datos, filtrarlo, cambiar su forma e incluso cambiar su tipo. La mayoría de las expresiones de consulta realizan proyecciones. La mayor parte de las expresiones de consulta de esta sección se evalúan como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, aunque puede controlar el tipo de proyección para crear colecciones de otros tipos. En este tema se explica cómo hacerlo.  

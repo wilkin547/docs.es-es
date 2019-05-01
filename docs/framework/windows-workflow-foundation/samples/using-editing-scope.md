@@ -3,11 +3,11 @@ title: Usar el ámbito de edición
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
 ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004775"
 ---
 # <a name="using-editing-scope"></a>Usar el ámbito de edición
 Este ejemplo muestra cómo procesar un conjunto de cambios por lotes para que se puedan deshacer en una unidad atómica única. De forma predeterminada, las acciones realizadas por un autor del diseñador de actividades se integran automáticamente en el sistema Deshacer/rehacer.  
@@ -28,9 +28,9 @@ Este ejemplo muestra cómo procesar un conjunto de cambios por lotes para que se
   
 2. Haga clic en **abrir el ámbito de edición**.  
   
-    1.  Este comando llama al método <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, que crea un ámbito de edición y lo inserta en la pila de edición.  
+    1. Este comando llama al método <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, que crea un ámbito de edición y lo inserta en la pila de edición.  
   
-    2.  A continuación, se agregan tres actividades a la clase <xref:System.Activities.Presentation.Model.ModelItem> seleccionada. Tenga en cuenta que si el ámbito de edición no se hubiera abierto con <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, las tres actividades aparecerían en el lienzo del diseñador. Dado que esta operación todavía está pendiente dentro de la clase <xref:System.Activities.Presentation.Model.EditingScope>, el diseñador todavía no se actualiza.  
+    2. A continuación, se agregan tres actividades a la clase <xref:System.Activities.Presentation.Model.ModelItem> seleccionada. Tenga en cuenta que si el ámbito de edición no se hubiera abierto con <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, las tres actividades aparecerían en el lienzo del diseñador. Dado que esta operación todavía está pendiente dentro de la clase <xref:System.Activities.Presentation.Model.EditingScope>, el diseñador todavía no se actualiza.  
   
 3. Presione **Close Editing Scope** para confirmar el ámbito de edición. Las tres actividades aparecen en el diseñador.  
   

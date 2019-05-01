@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9b2244ec1be6fc0e5e19fac5adc7ecb38d68a0af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987992"
 ---
 # <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryRegisterValue (Método)
 Obtiene el valor de un argumento o una variable local, de los cuales la palabra baja y más significativos se almacenan en el registro especificado y la ubicación de memoria, respectivamente, para este marco nativo.  

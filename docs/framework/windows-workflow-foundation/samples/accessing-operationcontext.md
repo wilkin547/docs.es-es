@@ -3,11 +3,11 @@ title: Obtener acceso a OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
 ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005607"
 ---
 # <a name="accessing-operationcontext"></a>Obtener acceso a OperationContext
 Este ejemplo se muestra cómo las actividades de mensajería (<xref:System.ServiceModel.Activities.Receive> y <xref:System.ServiceModel.Activities.Send>) puede usarse con una actividad de ámbito personalizada para tener acceso a <xref:System.ServiceModel.OperationContext.Current%2A> y adjuntar o recuperar un encabezado de mensaje personalizado dentro de un mensaje entrante o saliente.  
@@ -28,13 +28,13 @@ Este ejemplo se muestra cómo las actividades de mensajería (<xref:System.Servi
   
 2. Una vez agregadas las listas de control de acceso de dirección URL, siga estos pasos.  
   
-    1.  Compile la solución.  
+    1. Compile la solución.  
   
-    2.  Establezca varios proyectos de inicio haciendo clic en la solución y seleccione **Establecer proyectos de inicio**.  
+    2. Establezca varios proyectos de inicio haciendo clic en la solución y seleccione **Establecer proyectos de inicio**.  
   
-    3.  Agregar **servicio** y **cliente** (en ese orden) como proyectos de inicio múltiples.  
+    3. Agregar **servicio** y **cliente** (en ese orden) como proyectos de inicio múltiples.  
   
-    4.  Ejecute la aplicación. La consola del cliente muestra un flujo de trabajo que se ejecuta dos veces y la ventana Service muestra el identificador de instancia de estos flujos de trabajo.  
+    4. Ejecute la aplicación. La consola del cliente muestra un flujo de trabajo que se ejecuta dos veces y la ventana Service muestra el identificador de instancia de estos flujos de trabajo.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

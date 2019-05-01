@@ -13,11 +13,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002284"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Pintar con imágenes, dibujos y elementos visuales
 Este tema describe cómo usar <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, y <xref:System.Windows.Media.VisualBrush> objetos que se va a pintar un área con una imagen, un <xref:System.Windows.Media.Drawing>, o un <xref:System.Windows.Media.Visual>.  
@@ -57,15 +57,15 @@ Objetos pintados mediante DrawingBrush
   
  Un <xref:System.Windows.Media.DrawingBrush> pinta un área con un <xref:System.Windows.Media.Drawing> objeto. Un <xref:System.Windows.Media.Drawing> objeto describe contenido visible, como una forma, mapa de bits, vídeo o una línea de texto. Distintos tipos de dibujo describen tipos de contenido diferentes. La siguiente lista muestra los distintos tipos de objetos de dibujo.  
   
--   <xref:System.Windows.Media.GeometryDrawing> – Dibuja una forma.  
+- <xref:System.Windows.Media.GeometryDrawing> – Dibuja una forma.  
   
--   <xref:System.Windows.Media.ImageDrawing> – Dibuja una imagen.  
+- <xref:System.Windows.Media.ImageDrawing> – Dibuja una imagen.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – Dibuja texto.  
+- <xref:System.Windows.Media.GlyphRunDrawing> – Dibuja texto.  
   
--   <xref:System.Windows.Media.VideoDrawing> : Reproduce un archivo de audio o vídeo.  
+- <xref:System.Windows.Media.VideoDrawing> : Reproduce un archivo de audio o vídeo.  
   
--   <xref:System.Windows.Media.DrawingGroup> : Dibuja otros dibujos. Use un grupo de dibujo para combinar otros dibujos en un solo dibujo compuesto.  
+- <xref:System.Windows.Media.DrawingGroup> : Dibuja otros dibujos. Use un grupo de dibujo para combinar otros dibujos en un solo dibujo compuesto.  
   
  Para obtener más información acerca de <xref:System.Windows.Media.Drawing> objetos, vea el [información general sobre objetos de dibujo](drawing-objects-overview.md).  
   
@@ -89,9 +89,9 @@ Objetos pintados mediante DrawingBrush
   
  Hay dos maneras de especificar el <xref:System.Windows.Media.VisualBrush.Visual%2A> contenido de un <xref:System.Windows.Media.VisualBrush>.  
   
--   Cree un nuevo <xref:System.Windows.Media.Visual> y usarlo para establecer el <xref:System.Windows.Media.VisualBrush.Visual%2A> propiedad de la <xref:System.Windows.Media.VisualBrush>. Para obtener un ejemplo, vea el [ejemplo: Pintar un objeto con un objeto Visual](#examplevisualbrush1) la siguiente sección.  
+- Cree un nuevo <xref:System.Windows.Media.Visual> y usarlo para establecer el <xref:System.Windows.Media.VisualBrush.Visual%2A> propiedad de la <xref:System.Windows.Media.VisualBrush>. Para obtener un ejemplo, vea el [ejemplo: Pintar un objeto con un objeto Visual](#examplevisualbrush1) la siguiente sección.  
   
--   Usar una existente <xref:System.Windows.Media.Visual>, que crea una imagen duplicada del destino <xref:System.Windows.Media.Visual>. A continuación, puede usar el <xref:System.Windows.Media.VisualBrush> para crear efectos interesantes, como reflejo y aumento. Para obtener un ejemplo, vea el [ejemplo: Crear una reflexión](#examplevisualbrush2) sección.  
+- Usar una existente <xref:System.Windows.Media.Visual>, que crea una imagen duplicada del destino <xref:System.Windows.Media.Visual>. A continuación, puede usar el <xref:System.Windows.Media.VisualBrush> para crear efectos interesantes, como reflejo y aumento. Para obtener un ejemplo, vea el [ejemplo: Crear una reflexión](#examplevisualbrush2) sección.  
   
  Al definir un nuevo <xref:System.Windows.Media.VisualBrush.Visual%2A> para un <xref:System.Windows.Media.VisualBrush> y que <xref:System.Windows.Media.Visual> es un <xref:System.Windows.UIElement> (por ejemplo, un panel o control), el sistema de diseño se ejecuta en el <xref:System.Windows.UIElement> y sus elementos secundarios cuando la <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> propiedad está establecida en `true`. Sin embargo, la raíz <xref:System.Windows.UIElement> se queda aislado del resto del sistema: los estilos y el diseño externo no pueden atravesar este límite. Por lo tanto, debe especificar explícitamente el tamaño de la raíz <xref:System.Windows.UIElement>, porque su único elemento primario es el <xref:System.Windows.Media.VisualBrush> y por lo tanto no se puede ajustar automáticamente al área pintada. Para más información sobre el diseño en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], consulte [Diseño](../advanced/layout.md).  
   

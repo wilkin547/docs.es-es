@@ -9,11 +9,11 @@ ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8a704d531b1c49ffe653009e0e90f33b7a126e91
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049822"
 ---
 # <a name="metadata-interfaces"></a>Interfaces de metadatos
 En esta sección se describen las interfaces no administradas que proporcionan acceso a los metadatos expuestos por los tipos, métodos o campos .NET Framework, entre otros.  

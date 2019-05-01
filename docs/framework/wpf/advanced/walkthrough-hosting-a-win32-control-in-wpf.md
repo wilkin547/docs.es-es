@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
 ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032349"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Tutorial: Hospedar control Win32 en WPF
 Windows Presentation Foundation (WPF) proporciona un entorno rico para crear aplicaciones. Sin embargo, cuando tiene una inversión sustancial en código Win32, puede ser más efectivo reutilizar al menos parte de ese código en la aplicación de WPF en lugar de volver a escribir por completo. WPF proporciona un mecanismo sencillo para hospedar una ventana de Win32 en una página WPF.  
@@ -47,9 +47,9 @@ Windows Presentation Foundation (WPF) proporciona un entorno rico para crear apl
   
 6. Controle los mensajes seleccionados que se envían a la ventana host, como las notificaciones de los controles secundarios. Hay dos formas de hacerlo.  
   
-    -   Si prefiere controlar los mensajes en la clase de hospedaje, invalide el <xref:System.Windows.Interop.HwndHost.WndProc%2A> método de la <xref:System.Windows.Interop.HwndHost> clase.  
+    - Si prefiere controlar los mensajes en la clase de hospedaje, invalide el <xref:System.Windows.Interop.HwndHost.WndProc%2A> método de la <xref:System.Windows.Interop.HwndHost> clase.  
   
-    -   Si prefiere tener WPF controle los mensajes, controlar el <xref:System.Windows.Interop.HwndHost> clase <xref:System.Windows.Interop.HwndHost.MessageHook> eventos en el código subyacente. Este evento se produce para cada mensaje recibido por la ventana hospedada. Si elige esta opción, debe invalidar igualmente <xref:System.Windows.Interop.HwndHost.WndProc%2A>, pero solo necesita una implementación mínima.  
+    - Si prefiere tener WPF controle los mensajes, controlar el <xref:System.Windows.Interop.HwndHost> clase <xref:System.Windows.Interop.HwndHost.MessageHook> eventos en el código subyacente. Este evento se produce para cada mensaje recibido por la ventana hospedada. Si elige esta opción, debe invalidar igualmente <xref:System.Windows.Interop.HwndHost.WndProc%2A>, pero solo necesita una implementación mínima.  
   
 7. Invalidar el <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> y <xref:System.Windows.Interop.HwndHost.WndProc%2A> métodos de <xref:System.Windows.Interop.HwndHost>. Debe invalidar estos métodos para satisfacer el <xref:System.Windows.Interop.HwndHost> contrato, pero solo puede necesitar proporcionar una implementación mínima.  
   
@@ -129,13 +129,13 @@ Windows Presentation Foundation (WPF) proporciona un entorno rico para crear apl
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Implementar la comunicación entre el control y la página  
  Manipular el control mediante el envío de mensajes de Windows. El control le notifica en qué momento el usuario interactúa con él mediante el envío de notificaciones a la ventana host. El [hospedar un ListBox Control de Win32 en WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control) ejemplo incluye una interfaz de usuario que proporciona varios ejemplos de cómo funciona esto:  
   
--   Anexar un elemento a la lista  
+- Anexar un elemento a la lista  
   
--   Eliminar el elemento seleccionado de la lista  
+- Eliminar el elemento seleccionado de la lista  
   
--   Mostrar el texto del elemento actualmente seleccionado  
+- Mostrar el texto del elemento actualmente seleccionado  
   
--   Mostrar el número de elementos de la lista  
+- Mostrar el número de elementos de la lista  
   
  El usuario también puede seleccionar un elemento en el cuadro de lista haciendo clic en él, tal como haría para una aplicación de Win32 convencional. Los datos mostrados se actualizan cada vez que el usuario cambia el estado del cuadro de lista al seleccionar, agregar o anexar un elemento.  
   

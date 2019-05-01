@@ -6,11 +6,11 @@ helpviewer_keywords:
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
 ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981556"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implementar una aplicación de WPF
 Una vez que se compilan aplicaciones Windows Presentation Foundation (WPF), deben implementarse. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] y .NET Framework incluye varias tecnologías de implementación. La tecnología de implementación que se usa para implementar una aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende del tipo de esta. En este tema se proporciona alguna información general sobre cada tecnología de implementación y su uso, además de los requisitos de implementación de cada tipo de aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -19,21 +19,21 @@ Una vez que se compilan aplicaciones Windows Presentation Foundation (WPF), debe
 ## <a name="deployment-technologies"></a>Tecnologías de implementación  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] y .NET Framework incluye varias tecnologías de implementación, incluidos:  
   
--   Implementación de XCopy.  
+- Implementación de XCopy.  
   
--   Implementación de [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].  
+- Implementación de [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].  
   
--   Implementación de [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)].  
+- Implementación de [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)].  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>Implementación de XCopy  
  La implementación de XCopy se refiere al uso del programa de línea de comandos XCopy para copiar los archivos de una ubicación a otra. La implementación de XCopy es adecuada en las circunstancias siguientes:  
   
--   La aplicación es autónoma. No necesita actualizar el cliente para ejecutarse.  
+- La aplicación es autónoma. No necesita actualizar el cliente para ejecutarse.  
   
--   Los archivos de la aplicación se deben mover de una ubicación a otra; por ejemplo, de la ubicación de compilación (disco local, recurso compartido de archivos [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)], etc.) a la ubicación de publicación (sitio web, recurso compartido de archivos [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)], etc.).  
+- Los archivos de la aplicación se deben mover de una ubicación a otra; por ejemplo, de la ubicación de compilación (disco local, recurso compartido de archivos [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)], etc.) a la ubicación de publicación (sitio web, recurso compartido de archivos [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)], etc.).  
   
--   La aplicación no necesita la integración en el Shell (acceso directo del menú de Inicio, icono de escritorio, etc.).  
+- La aplicación no necesita la integración en el Shell (acceso directo del menú de Inicio, icono de escritorio, etc.).  
   
  Aunque XCopy es adecuado para escenarios de implementación simples, presenta limitaciones cuando se requieren funciones de implementación más complejas. En particular, al usar Xcopy se provoca una sobrecarga al crear, ejecutar y mantener los scripts necesarios para administrar la implementación de una manera robusta. Además, XCopy no admite el control de versiones, la desinstalación ni la reversión.  
   
@@ -49,15 +49,15 @@ Una vez que se compilan aplicaciones Windows Presentation Foundation (WPF), debe
 ### <a name="clickonce-deployment"></a>implementación de ClickOnce  
  [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] habilita la implementación de aplicaciones de estilo web para aplicaciones que no son de web. Las aplicaciones se publican e implementan para Web o para servidores de archivos. Aunque [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] no admite la gama completa de características de cliente que sí poseen las aplicaciones instaladas con [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)], admite un subconjunto que incluye lo siguiente:  
   
--   Integración con el menú Inicio y el panel de control de Programas.  
+- Integración con el menú Inicio y el panel de control de Programas.  
   
--   Control de versiones, reversión y desinstalación.  
+- Control de versiones, reversión y desinstalación.  
   
--   Modo de instalación en línea, que siempre inicia una aplicación desde la ubicación de implementación.  
+- Modo de instalación en línea, que siempre inicia una aplicación desde la ubicación de implementación.  
   
--   Actualización automática cuando se publican nuevas versiones.  
+- Actualización automática cuando se publican nuevas versiones.  
   
--   Registro de extensiones de archivo.  
+- Registro de extensiones de archivo.  
   
  Para obtener más información sobre [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], vea [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
   
@@ -65,11 +65,11 @@ Una vez que se compilan aplicaciones Windows Presentation Foundation (WPF), debe
 ## <a name="deploying-wpf-applications"></a>Implementar aplicaciones de WPF  
  Las opciones de implementación para una aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dependen del tipo de aplicación. Desde una perspectiva de implementación, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tiene tres tipos de aplicación significativos:  
   
--   Aplicaciones independientes.  
+- Aplicaciones independientes.  
   
--   Aplicaciones [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado.  
+- Aplicaciones [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado.  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Implementar aplicaciones independientes  
@@ -89,11 +89,11 @@ Una vez que se compilan aplicaciones Windows Presentation Foundation (WPF), debe
 ### <a name="deploying-xaml-browser-applications"></a>Implementar aplicaciones de explorador XAML  
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] son aplicaciones compiladas que necesitan los tres archivos siguientes para implementarse:  
   
--   *ApplicationName*.exe: El archivo de aplicación del ensamblado ejecutable.  
+- *ApplicationName*.exe: El archivo de aplicación del ensamblado ejecutable.  
   
--   *ApplicationName*.xbap: El manifiesto de implementación.  
+- *ApplicationName*.xbap: El manifiesto de implementación.  
   
--   *ApplicationName*.exe.manifest: Manifiesto de aplicación  
+- *ApplicationName*.exe.manifest: Manifiesto de aplicación  
   
 > [!NOTE]
 >  Para obtener más información sobre los manifiestos de implementación y de aplicación, vea [Compilar una aplicación de WPF (WPF)](building-a-wpf-application-wpf.md).  

@@ -15,11 +15,11 @@ ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055022"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Recursos de aplicación para bibliotecas destinadas a varias plataformas
 Puede usar .NET Framework [biblioteca de clases Portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) tipo para asegurarse de que se pueden tener acceso a recursos en las bibliotecas de clases desde varias plataformas de proyecto. Este tipo de proyecto está disponible en Visual Studio 2012 y tiene como destino el subconjunto portable de la biblioteca de clases de .NET Framework. Mediante la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] se garantiza que se pueda obtener acceso a la biblioteca desde las aplicaciones de escritorio, aplicaciones Silverlight, aplicaciones Windows Phone y aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
@@ -35,7 +35,7 @@ Puede usar .NET Framework [biblioteca de clases Portable](../../../docs/standard
 
  El proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] incluye los cuatro miembros de <xref:System.Resources.ResourceManager> que se enumeran en la tabla siguiente. Estos constructores y métodos permiten crear una instancia de un objeto <xref:System.Resources.ResourceManager> y recuperar recursos de cadena.
 
-|Miembro `ResourceManager`|Descripción|
+|Miembro`ResourceManager` |Descripción|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Crea una instancia de <xref:System.Resources.ResourceManager> para obtener acceso al archivo de recursos con nombre que se encuentra en el ensamblado especificado.|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Crea una instancia de <xref:System.Resources.ResourceManager> que corresponde al tipo especificado.|
@@ -61,9 +61,9 @@ Puede usar .NET Framework [biblioteca de clases Portable](../../../docs/standard
 |BornLength|12|
 |Hired|Fecha de contratación|
 |HiredLength|12|
-|Id.|Id.|
+|ID|ID|
 |ID.Length|12|
-|Nombre|Nombre|
+|Name|Name|
 |NameLength|25|
 |Título|Base de datos de empleados|
 
@@ -90,8 +90,8 @@ Puede usar .NET Framework [biblioteca de clases Portable](../../../docs/standard
 |BornLength|20|
 |Hired|Date embauché|
 |HiredLength|16|
-|Id.|Id.|
-|Nombre|Nom|
+|ID|ID|
+|Name|Nom|
 |Título|Base de données des employés|
 
  El código siguiente muestra cómo obtener acceso a la clase `UILibrary` y a sus recursos desde una aplicación de modo de consola. Requiere que se agregue una referencia a UILIbrary.dll al proyecto de aplicación de consola.

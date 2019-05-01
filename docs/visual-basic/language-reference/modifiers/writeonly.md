@@ -12,11 +12,11 @@ helpviewer_keywords:
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
 ms.openlocfilehash: 1b8de27e872914ba59d73126d2a9a7c42609165e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051824"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 Especifica que se puede escribir pero no leer una propiedad.  
@@ -34,15 +34,15 @@ Especifica que se puede escribir pero no leer una propiedad.
 > [!IMPORTANT]
 >  Al definir y usar un `WriteOnly` propiedad, considere la posibilidad de las medidas de protección adicionales siguientes:  
   
--   **Se ha invalidado.** Si la propiedad es un miembro de una clase, permite que de forma predeterminada [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)y no se ha declarado `Overridable` o `MustOverride`. Esto impide que una clase derivada lo que el acceso no deseado a través de una invalidación.  
+- **Se ha invalidado.** Si la propiedad es un miembro de una clase, permite que de forma predeterminada [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)y no se ha declarado `Overridable` o `MustOverride`. Esto impide que una clase derivada lo que el acceso no deseado a través de una invalidación.  
   
--   **Nivel de acceso.** Si mantiene los datos confidenciales de la propiedad en una o más variables, declárelos [privada](../../../visual-basic/language-reference/modifiers/private.md) para que ningún otro código puede tener acceso a ellos.  
+- **Nivel de acceso.** Si mantiene los datos confidenciales de la propiedad en una o más variables, declárelos [privada](../../../visual-basic/language-reference/modifiers/private.md) para que ningún otro código puede tener acceso a ellos.  
   
--   **Cifrado.** Store todos los datos confidenciales en un formato cifrado en lugar de en texto sin formato. Si algún modo, código malintencionado obtiene acceso a esa área de memoria, es más difícil de hacer uso de los datos. Cifrado también es útil si es necesario serializar los datos confidenciales.  
+- **Cifrado.** Store todos los datos confidenciales en un formato cifrado en lugar de en texto sin formato. Si algún modo, código malintencionado obtiene acceso a esa área de memoria, es más difícil de hacer uso de los datos. Cifrado también es útil si es necesario serializar los datos confidenciales.  
   
--   **Restablecer.** Cuando se termina la clase, estructura o módulo que define la propiedad, restablecer la información confidencial a los valores predeterminados o a otros valores sin sentido. Esto proporciona protección adicional cuando se libera esa área de memoria para el acceso general.  
+- **Restablecer.** Cuando se termina la clase, estructura o módulo que define la propiedad, restablecer la información confidencial a los valores predeterminados o a otros valores sin sentido. Esto proporciona protección adicional cuando se libera esa área de memoria para el acceso general.  
   
--   **Persistencia.** No se conservan los datos confidenciales, por ejemplo en el disco, si se puede evitar. Además, no escribir los datos confidenciales en el Portapapeles.  
+- **Persistencia.** No se conservan los datos confidenciales, por ejemplo en el disco, si se puede evitar. Además, no escribir los datos confidenciales en el Portapapeles.  
   
  El `WriteOnly` modificador se puede usar en este contexto:  
   

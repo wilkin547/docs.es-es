@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
 ms.openlocfilehash: c0bb852fa6c117ae8eb2644a0be75f20367b2054
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983312"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>Implementar el patrón de control ScrollItem de UI Automation
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59095027"
 ## <a name="implementation-guidelines-and-conventions"></a>Directrices y convenciones de implementación  
  Al implementar el patrón de control Scroll Item, tenga en cuenta las siguientes directrices y convenciones:  
   
--   Los elementos que se incluye en un control Window o Canvas no tienen que implementar la interfaz de IScrollItemProvider. Sin embargo, como alternativa, deben exponer una ubicación válida para <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>. Esto permitirá que una aplicación cliente de UI Automation use los métodos de patrón de control <xref:System.Windows.Automation.ScrollPattern> en el contenedor para que muestre el elemento secundario.  
+- Los elementos que se incluye en un control Window o Canvas no tienen que implementar la interfaz de IScrollItemProvider. Sin embargo, como alternativa, deben exponer una ubicación válida para <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>. Esto permitirá que una aplicación cliente de UI Automation use los métodos de patrón de control <xref:System.Windows.Automation.ScrollPattern> en el contenedor para que muestre el elemento secundario.  
   
 <a name="Required_Members_for_IScrollItemProvider"></a>   
 ## <a name="required-members-for-iscrollitemprovider"></a>Miembros requeridos para IScrollItemProvider  

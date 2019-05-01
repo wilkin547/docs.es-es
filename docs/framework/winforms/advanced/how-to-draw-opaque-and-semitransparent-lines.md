@@ -11,11 +11,11 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
 ms.openlocfilehash: 7408722dc13e83828cfca3f0615a2730e3c53461
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004034"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Procedimiento para dibujar líneas opacas y semitransparentes
 Al dibujar una línea, debe pasar un objeto <xref:System.Drawing.Pen> al método <xref:System.Drawing.Graphics.DrawLine%2A> de la clase <xref:System.Drawing.Graphics>. Uno de los parámetros del constructor <xref:System.Drawing.Pen.%23ctor%2A> es un objeto <xref:System.Drawing.Color>. Para dibujar una línea opaca, establezca el componente alfa del color en 255. Para dibujar una línea semitransparente, establezca el componente alfa en cualquier valor entre 1 y 254.  

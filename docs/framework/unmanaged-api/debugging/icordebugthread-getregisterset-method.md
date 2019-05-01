@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 909bcad035516c494d1f867b71bb8f52939eba13
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993998"
 ---
 # <a name="icordebugthreadgetregisterset-method"></a>ICorDebugThread::GetRegisterSet (Método)
 Obtiene un puntero de interfaz al conjunto de registros que está asociado a la parte activa de este objeto ICorDebugThread.  

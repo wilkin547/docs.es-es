@@ -6,8 +6,8 @@ ms.openlocfilehash: 1bc6dd2ef981115068cbd4cd491a14fea70d7e3a
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990605"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Enlace de datos en un cliente de Windows Presentation Foundation
 Este ejemplo muestra el uso de enlace de datos en un cliente de la Windows Presentation Foundation (WPF). El ejemplo usa un servicio de Windows Communication Foundation (WCF) que genera de forma aleatoria una matriz de álbumes para devolver al cliente. Cada álbum tiene un nombre, un precio y una lista de pistas. Las pistas del álbum tienen un nombre y duración. La información devuelta por el servicio se enlaza automáticamente a la interfaz de usuario (IU) proporcionada por el cliente de Windows Presentation Foundation (WPF).  

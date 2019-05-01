@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 002e53d380140a63297a90baa270b5a6f1e5e328
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986835"
 ---
 # <a name="icordebugvalue2getexacttype-method"></a>ICorDebugValue2::GetExactType (Método)
 Obtiene un puntero de interfaz a un objeto "ICorDebugType" que representa el <xref:System.Type> de este valor.  

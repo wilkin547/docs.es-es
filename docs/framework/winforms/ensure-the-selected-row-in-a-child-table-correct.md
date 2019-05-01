@@ -17,11 +17,11 @@ helpviewer_keywords:
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
 ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966959"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Procedimiento para garantizar que la fila seleccionada de una tabla secundaria conserve la posición correcta
 A menudo, cuando se trabaja con enlace de datos en Windows Forms, los datos se muestran en lo que se denomina una vista primaria/secundaria o una vista maestra/detalles. Esto hace referencia a un escenario de enlace de datos donde los datos del mismo origen se muestran en dos controles. Al cambiar la selección en un control, los datos mostrados en el segundo control cambiarán. Por ejemplo, el primer control puede contener una lista de clientes y el segundo de una lista de pedidos relacionados con el cliente seleccionado en el primer control.  
@@ -79,7 +79,7 @@ A menudo, cuando se trabaja con enlace de datos en Windows Forms, los datos se m
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Referencias a los ensamblados System, System.Data, System.Drawing, System.Windows.Forms y System.XML.  
+- Referencias a los ensamblados System, System.Data, System.Drawing, System.Windows.Forms y System.XML.  
   
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [compilación de línea de comandos con csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   

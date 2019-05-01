@@ -10,11 +10,11 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 146d97be-3d97-400e-accb-860bbf47729d
 ms.openlocfilehash: d76c2e5882c9df94674294da00ba446dfbfd2b3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012742"
 ---
 # <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Procedimiento para desplazarse por un conjunto de datos con el control BindingNavigator de Windows Forms
 Al crear aplicaciones controladas por datos, a menudo necesitará mostrar colecciones de datos a los usuarios. El control <xref:System.Windows.Forms.BindingNavigator>, junto con el componente <xref:System.Windows.Forms.BindingSource>, proporciona una solución cómoda y extensible para desplazarse por una colección y mostrar sus elementos secuencialmente.  
@@ -31,7 +31,7 @@ Al crear aplicaciones controladas por datos, a menudo necesitará mostrar colecc
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Referencias a los ensamblados System, System.Data, System.Drawing, System.Windows.Forms y System.Xml.  
+- Referencias a los ensamblados System, System.Data, System.Drawing, System.Windows.Forms y System.Xml.  
   
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   

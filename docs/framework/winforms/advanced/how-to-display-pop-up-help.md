@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
 ms.openlocfilehash: f805840ea3b1a8aef6a289dba064c468a4da0cb0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004346"
 ---
 # <a name="how-to-display-pop-up-help"></a>Procedimiento para mostrar ayuda emergente
 Es una manera de mostrar la Ayuda en Windows Forms a través de la **ayuda** situado en el lado derecho de la barra de título, accesible a través de la <xref:System.Windows.Forms.Form.HelpButton%2A> propiedad. Este tipo de visualización de la Ayuda está indicado para cuadros de diálogo. Los cuadros de diálogo que se muestran de forma modal (con el método <xref:System.Windows.Forms.Form.ShowDialog%2A>) tienen problemas para abrir los sistemas de Ayuda externos porque los cuadros de diálogo modales deben cerrarse antes de poder pasar el foco a otra ventana. Además, el uso de la **ayuda** botón requiere que no hay ningún **minimizar** botón o **maximizar** botón se muestra en la barra de título. Esta es una convención de cuadro de diálogo estándar, mientras que los formularios normalmente tienen **minimizar** y **maximizar** botones.  

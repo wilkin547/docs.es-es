@@ -6,11 +6,11 @@ helpviewer_keywords:
 - threading [Windows Forms], controls
 ms.assetid: c311d652-0f26-45fa-bdcc-b1615d73ce4e
 ms.openlocfilehash: cc7f358a62c8057abb77e1f5a28544bb6c858d98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012729"
 ---
 # <a name="multithreading-in-windows-forms-controls"></a>Subprocesamiento múltiple en los controles de formularios Windows Forms
 En muchas aplicaciones, puede hacer que la interfaz de usuario (UI) con más capacidad de respuesta mediante la realización de operaciones que requieren mucho tiempo en otro subproceso. Existen varias herramientas para multithreading los controles de Windows Forms, incluido el <xref:System.Threading> espacio de nombres, el <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> método y el `BackgroundWorker` componente.  

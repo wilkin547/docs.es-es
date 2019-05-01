@@ -16,11 +16,11 @@ helpviewer_keywords:
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
 ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967094"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Orígenes de datos compatibles con formularios Windows Forms
 Tradicionalmente, el enlace de datos se han usado en las aplicaciones para aprovechar las ventajas de los datos almacenados en bases de datos. Con el enlace de datos de Windows Forms, se puede acceder a datos de las bases de datos, así como datos de otras estructuras, como matrices y colecciones, siempre y cuando se cumplen ciertos requisitos mínimos.  
@@ -47,15 +47,15 @@ Tradicionalmente, el enlace de datos se han usado en las aplicaciones para aprov
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] objetos de datos  
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] Proporciona una serie de estructuras de datos adecuadas para el enlace. Varía en sofisticación y complejidad.  
   
--   <xref:System.Data.DataColumn>. Un <xref:System.Data.DataColumn> es el bloque de creación fundamental de un <xref:System.Data.DataTable>, ya que un número de columnas componen una tabla. Cada <xref:System.Data.DataColumn> tiene un <xref:System.Data.DataColumn.DataType%2A> propiedad que determina el tipo de datos que contiene la columna (por ejemplo, la marca de un automóvil en una tabla con descripciones de automóviles). Puede sencillo enlazar un control (como un <xref:System.Windows.Forms.TextBox> del control <xref:System.Windows.Forms.Control.Text%2A> propiedad) a una columna dentro de una tabla de datos.  
+- <xref:System.Data.DataColumn>. Un <xref:System.Data.DataColumn> es el bloque de creación fundamental de un <xref:System.Data.DataTable>, ya que un número de columnas componen una tabla. Cada <xref:System.Data.DataColumn> tiene un <xref:System.Data.DataColumn.DataType%2A> propiedad que determina el tipo de datos que contiene la columna (por ejemplo, la marca de un automóvil en una tabla con descripciones de automóviles). Puede sencillo enlazar un control (como un <xref:System.Windows.Forms.TextBox> del control <xref:System.Windows.Forms.Control.Text%2A> propiedad) a una columna dentro de una tabla de datos.  
   
--   <xref:System.Data.DataTable>. Un <xref:System.Data.DataTable> es la representación de una tabla con filas y columnas, en [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Una tabla de datos contiene dos colecciones: <xref:System.Data.DataColumn>, que representa las columnas de datos en una tabla determinada (que en última instancia determina los tipos de datos que se pueden escribir en la tabla), y <xref:System.Data.DataRow>, que representa las filas de datos en una tabla determinada. Puede complejo enlazar un control a la información contenida en una tabla de datos (como el enlace de la <xref:System.Windows.Forms.DataGridView> control a una tabla de datos). Sin embargo, al enlazar a un <xref:System.Data.DataTable>, son un enlace realmente a la vista predeterminada de la tabla.  
+- <xref:System.Data.DataTable>. Un <xref:System.Data.DataTable> es la representación de una tabla con filas y columnas, en [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Una tabla de datos contiene dos colecciones: <xref:System.Data.DataColumn>, que representa las columnas de datos en una tabla determinada (que en última instancia determina los tipos de datos que se pueden escribir en la tabla), y <xref:System.Data.DataRow>, que representa las filas de datos en una tabla determinada. Puede complejo enlazar un control a la información contenida en una tabla de datos (como el enlace de la <xref:System.Windows.Forms.DataGridView> control a una tabla de datos). Sin embargo, al enlazar a un <xref:System.Data.DataTable>, son un enlace realmente a la vista predeterminada de la tabla.  
   
--   <xref:System.Data.DataView>. Un <xref:System.Data.DataView> es una vista personalizada de una tabla de datos única que puede filtrar u ordenar. Una vista de datos es los datos usado por los controles de enlace complejo "instantánea". Puede crear un enlace sencillo o complejo enlazar a los datos dentro de una vista de datos, pero tenga en cuenta que va a enlazar a una "imagen" fija de los datos en lugar de un origen de datos limpio y actualizado.  
+- <xref:System.Data.DataView>. Un <xref:System.Data.DataView> es una vista personalizada de una tabla de datos única que puede filtrar u ordenar. Una vista de datos es los datos usado por los controles de enlace complejo "instantánea". Puede crear un enlace sencillo o complejo enlazar a los datos dentro de una vista de datos, pero tenga en cuenta que va a enlazar a una "imagen" fija de los datos en lugar de un origen de datos limpio y actualizado.  
   
--   <xref:System.Data.DataSet>. Un <xref:System.Data.DataSet> es una colección de tablas, relaciones y restricciones de los datos en una base de datos. Puede crear un enlace sencillo o complejo enlazar a los datos dentro de un conjunto de datos, pero tenga en cuenta que va a enlazar con el valor predeterminado <xref:System.Data.DataViewManager> para el <xref:System.Data.DataSet> (consulte el siguiente punto).  
+- <xref:System.Data.DataSet>. Un <xref:System.Data.DataSet> es una colección de tablas, relaciones y restricciones de los datos en una base de datos. Puede crear un enlace sencillo o complejo enlazar a los datos dentro de un conjunto de datos, pero tenga en cuenta que va a enlazar con el valor predeterminado <xref:System.Data.DataViewManager> para el <xref:System.Data.DataSet> (consulte el siguiente punto).  
   
--   <xref:System.Data.DataViewManager>. Un <xref:System.Data.DataViewManager> es una vista personalizada de todo el <xref:System.Data.DataSet>, análogo a un <xref:System.Data.DataView>, pero con las relaciones incluidas. Con un <xref:System.Data.DataViewManager.DataViewSettings%2A> colección, puede establecer filtros predeterminados y las opciones de ordenación para todas las vistas que el <xref:System.Data.DataViewManager> tiene para una tabla determinada.  
+- <xref:System.Data.DataViewManager>. Un <xref:System.Data.DataViewManager> es una vista personalizada de todo el <xref:System.Data.DataSet>, análogo a un <xref:System.Data.DataView>, pero con las relaciones incluidas. Con un <xref:System.Data.DataViewManager.DataViewSettings%2A> colección, puede establecer filtros predeterminados y las opciones de ordenación para todas las vistas que el <xref:System.Data.DataViewManager> tiene para una tabla determinada.  
   
 ## <a name="see-also"></a>Vea también
 

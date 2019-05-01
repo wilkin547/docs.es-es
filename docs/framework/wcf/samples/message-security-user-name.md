@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
 ms.openlocfilehash: 947ef3c2120377fe33e0062d1ed508ddda432314
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972463"
 ---
 # <a name="message-security-user-name"></a>Nombre de usuario de seguridad de mensaje
 Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de nombre de usuario para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor. Todos los mensajes de la aplicación entre el cliente y el servidor se firman y se cifran. De forma predeterminada, el nombre de usuario y contraseña proporcionadas por el cliente se utilizan para iniciar una sesión con una cuenta de Windows válida. En este ejemplo se basa en el [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md). Este ejemplo está compuesto de un programa de consola de cliente (Client.exe) y una biblioteca de servicios (Service.dll) hospedada por Internet Information Services (IIS). El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.  
@@ -19,9 +19,9 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
   
  Este ejemplo también muestra:  
   
--   La asignación predeterminada a cuentas Windows, para que se pueda realizar autorización adicional.  
+- La asignación predeterminada a cuentas Windows, para que se pueda realizar autorización adicional.  
   
--   Cómo tener acceso a la información de identidad del llamador desde el código del servicio.  
+- Cómo tener acceso a la información de identidad del llamador desde el código del servicio.  
   
  El servicio expone un punto de conexión único para comunicarse con el servicio, que se define utilizando el archivo de configuración Web.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un estándar [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), que de forma predeterminada mediante la seguridad de mensaje. Este ejemplo establece el estándar [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) para utilizar la autenticación de nombre de usuario del cliente. El comportamiento especifica que se van a usar las credenciales del usuario para la autenticación del servicio. El certificado de servidor debe contener el mismo valor para el nombre del sujeto, como el `findValue` atributo en el [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
@@ -147,7 +147,7 @@ Press <ENTER> to terminate client.
   
  A continuación se proporciona una información general breve de las diferentes secciones de los archivos por lotes.  
   
--   Crear el certificado de servidor  
+- Crear el certificado de servidor  
   
      Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar.  
   
@@ -163,7 +163,7 @@ Press <ENTER> to terminate client.
   
      La variable %SERVER_NAME% especifica el nombre del servidor. El certificado se almacena en el almacén LocalMachine. Si el archivo por lotes Setup.bat se ejecuta con un argumento de servicio (como `setup.bat service`), % SERVER_NAME% contiene el nombre de dominio completo del equipo.  De lo contrario, tiene como valor predeterminado el host local.  
   
--   Instalar el certificado del servidor en el almacén de certificados de confianza de cliente.  
+- Instalar el certificado del servidor en el almacén de certificados de confianza de cliente.  
   
      La línea siguiente copia el certificado de servidor en el almacén de personas de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.  
   
@@ -171,7 +171,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   Conceder permisos sobre la clave privada del certificado.  
+- Conceder permisos sobre la clave privada del certificado.  
   
      Las líneas siguientes en el archivo por lotes Setup.bat hacen que el certificado de servidor almacenado en el almacén LocalMachine esté accesible para la cuenta de proceso de trabajo de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
--   Ejecute Cleanup.bat en la carpeta de ejemplos después de que haya terminado de ejecutar el ejemplo.  
+- Ejecute Cleanup.bat en la carpeta de ejemplos después de que haya terminado de ejecutar el ejemplo.  
   
     > [!NOTE]
     >  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado los ejemplos de Windows Communication Foundation (WCF) que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser - trustedpeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  

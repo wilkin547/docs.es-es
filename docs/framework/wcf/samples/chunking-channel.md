@@ -3,11 +3,11 @@ title: Canal de fragmentación
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002383"
 ---
 # <a name="chunking-channel"></a>Canal de fragmentación
 Al enviar mensajes de gran tamaño mediante Windows Communication Foundation (WCF), suele ser deseable para limitar la cantidad de memoria utilizada para almacenar en búfer esos mensajes. Una posible solución es transmitir en secuencias el cuerpo del mensaje (suponiendo que la mayor parte de los datos se encuentra en el cuerpo). Sin embargo, algunos protocolos requieren almacenado en búfer del mensaje completo. La mensajería de confianza y la seguridad son dos ejemplos de lo anterior. Otra posible solución es dividir el mensaje grande en mensajes menores llamados fragmentos, enviar uno por uno esos fragmentos y reconstituir el mensaje entero en el lado receptor. La propia aplicación podría hacer esta fragmentación y desfragmentación, o podría utilizar un canal personalizado para hacerlo. El canal de fragmentación muestra cómo un protocolo personalizado o un canal en capas se pueden utilizar para la fragmentación y desfragmentación de mensajes arbitrariamente grandes.  
@@ -240,30 +240,30 @@ interface ITestService
   
  Detalles que se han de tener en cuenta:  
   
--   Send primero llama a `ThrowIfDisposedOrNotOpened` para asegurar que se abre `CommunicationState`.  
+- Send primero llama a `ThrowIfDisposedOrNotOpened` para asegurar que se abre `CommunicationState`.  
   
--   El envío se sincroniza, para que solo un mensaje se pueda enviar a la vez para cada sesión. Hay un `ManualResetEvent` denominado `sendingDone` que se restablece cuando se envía un mensaje fragmentado. Una vez enviado el fragmento del mensaje final, se establece este evento. El método Send espera a que este evento esté establecido antes de intentar enviar el mensaje saliente.  
+- El envío se sincroniza, para que solo un mensaje se pueda enviar a la vez para cada sesión. Hay un `ManualResetEvent` denominado `sendingDone` que se restablece cuando se envía un mensaje fragmentado. Una vez enviado el fragmento del mensaje final, se establece este evento. El método Send espera a que este evento esté establecido antes de intentar enviar el mensaje saliente.  
   
--   Send bloquea el `CommunicationObject.ThisLock` para evitar cambios de estado sincronizados mientras se realiza el envío. Consulte la documentación <xref:System.ServiceModel.Channels.CommunicationObject> para obtener más información sobre los estados y el equipo de estado <xref:System.ServiceModel.Channels.CommunicationObject>.  
+- Send bloquea el `CommunicationObject.ThisLock` para evitar cambios de estado sincronizados mientras se realiza el envío. Consulte la documentación <xref:System.ServiceModel.Channels.CommunicationObject> para obtener más información sobre los estados y el equipo de estado <xref:System.ServiceModel.Channels.CommunicationObject>.  
   
--   El tiempo de espera pasado a Send se utiliza como tiempo de espera para la operación de envío al completo, la cual incluye el envío de todos los fragmentos.  
+- El tiempo de espera pasado a Send se utiliza como tiempo de espera para la operación de envío al completo, la cual incluye el envío de todos los fragmentos.  
   
--   El diseño <xref:System.Xml.XmlDictionaryWriter> personalizado fue elegido para evitar almacenar en búfer el cuerpo del mensaje original completo. Si deseáramos obtener un <xref:System.Xml.XmlDictionaryReader> en el cuerpo utilizando `message.GetReaderAtBodyContents` el cuerpo completo se almacenaría en búfer. En su lugar, tenemos un personalizado <xref:System.Xml.XmlDictionaryWriter> que se pasa a `message.WriteBodyContents`. Mientras el mensaje llama a WriteBase64 en el sistema de escritura, el sistema de escritura empaqueta los fragmentos en los mensajes y los envía utilizando el canal interno. WriteBase64 se bloquea hasta que se envía el fragmento.  
+- El diseño <xref:System.Xml.XmlDictionaryWriter> personalizado fue elegido para evitar almacenar en búfer el cuerpo del mensaje original completo. Si deseáramos obtener un <xref:System.Xml.XmlDictionaryReader> en el cuerpo utilizando `message.GetReaderAtBodyContents` el cuerpo completo se almacenaría en búfer. En su lugar, tenemos un personalizado <xref:System.Xml.XmlDictionaryWriter> que se pasa a `message.WriteBodyContents`. Mientras el mensaje llama a WriteBase64 en el sistema de escritura, el sistema de escritura empaqueta los fragmentos en los mensajes y los envía utilizando el canal interno. WriteBase64 se bloquea hasta que se envía el fragmento.  
   
 ## <a name="implementing-the-receive-operation"></a>Implementar la operación Receive  
  A un nivel alto, la operación Receive comprueba primero que el mensaje entrante no es `null` y que su acción es `ChunkingAction`. Si no cumple ambos criterios, el mensaje se devuelve sin modificar desde Receive. De lo contrario, Receive crea un nuevo `ChunkingReader` y un nuevo `ChunkingMessage` ajustado alrededor de él (llamando a `GetNewChunkingMessage`). Antes de devolver ese nuevo `ChunkingMessage`, Receive utiliza un subproceso de un conjunto de subprocesos para ejecutar `ReceiveChunkLoop`, que llama `innerChannel.Receive` en un bucle y entrega fragmentos a `ChunkingReader` hasta que se reciba el fragmento de mensaje final o se alcance el tiempo de espera de recepción.  
   
  Detalles que se han de tener en cuenta:  
   
--   Al igual que Send, Receive primero llama `ThrowIfDisposedOrNotOepned` para asegurar que se abre `CommunicationState`.  
+- Al igual que Send, Receive primero llama `ThrowIfDisposedOrNotOepned` para asegurar que se abre `CommunicationState`.  
   
--   Receive también se sincroniza para que solo se pueda recibir un mensaje de la sesión al mismo tiempo. Esto es especialmente importante porque una vez se recibe un fragmento de mensaje de inicio, se espera que todos los mensajes siguientes recibidos sean fragmentos de esta nueva secuencia de fragmentos hasta que se reciba un fragmento de mensaje final. Receive no puede incorporar los cambios de los mensajes del canal interno hasta que no se reciban todos los fragmentos que pertenecen al mensaje que se está desfragmentando. Para lograr esto, Receive utiliza un `ManualResetEvent` denominado `currentMessageCompleted`, que se establece cuando el fragmento de mensaje final se recibe y se restablece cuando se recibe un nuevo fragmento de mensaje de inicio.  
+- Receive también se sincroniza para que solo se pueda recibir un mensaje de la sesión al mismo tiempo. Esto es especialmente importante porque una vez se recibe un fragmento de mensaje de inicio, se espera que todos los mensajes siguientes recibidos sean fragmentos de esta nueva secuencia de fragmentos hasta que se reciba un fragmento de mensaje final. Receive no puede incorporar los cambios de los mensajes del canal interno hasta que no se reciban todos los fragmentos que pertenecen al mensaje que se está desfragmentando. Para lograr esto, Receive utiliza un `ManualResetEvent` denominado `currentMessageCompleted`, que se establece cuando el fragmento de mensaje final se recibe y se restablece cuando se recibe un nuevo fragmento de mensaje de inicio.  
   
--   A diferencia de Send, Receive no evita las transiciones de estado sincronizadas mientras recibe. Por ejemplo, se puede llamar a Close mientras se recibe y se espera hasta que las recepciones pendientes del mensaje original se completen o se alcance el valor de tiempo de espera especificado.  
+- A diferencia de Send, Receive no evita las transiciones de estado sincronizadas mientras recibe. Por ejemplo, se puede llamar a Close mientras se recibe y se espera hasta que las recepciones pendientes del mensaje original se completen o se alcance el valor de tiempo de espera especificado.  
   
--   El tiempo de espera pasado a Receive se utiliza como tiempo de espera para la operación de recepción completa, que incluye la recepción todos los fragmentos.  
+- El tiempo de espera pasado a Receive se utiliza como tiempo de espera para la operación de recepción completa, que incluye la recepción todos los fragmentos.  
   
--   Si la capa que consume el mensaje está consumiendo el cuerpo del mensaje a una tasa menor que la tasa de llegadas de fragmentos de mensajes, el `ChunkingReader` almacena en búfer esos fragmentos de entrada hasta el límite especificado por `ChunkingBindingElement.MaxBufferedChunks`. Una vez alcanzado ese límite, ningún fragmento más se extrae de la capa inferior hasta que un fragmento almacenado en búfer se utiliza o se alcanza el tiempo de espera para la recepción.  
+- Si la capa que consume el mensaje está consumiendo el cuerpo del mensaje a una tasa menor que la tasa de llegadas de fragmentos de mensajes, el `ChunkingReader` almacena en búfer esos fragmentos de entrada hasta el límite especificado por `ChunkingBindingElement.MaxBufferedChunks`. Una vez alcanzado ese límite, ningún fragmento más se extrae de la capa inferior hasta que un fragmento almacenado en búfer se utiliza o se alcanza el tiempo de espera para la recepción.  
   
 ## <a name="communicationobject-overrides"></a>Invalidaciones de CommunicationObject  
   

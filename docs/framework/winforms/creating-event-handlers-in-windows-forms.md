@@ -9,11 +9,11 @@ helpviewer_keywords:
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
 ms.openlocfilehash: f969769725ae099ddf477fd11efb03277a555fa6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967107"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Crear controladores de eventos en formularios Windows Forms
 Un controlador de eventos es un procedimiento en el código que determina qué acciones se realizan cuando se produce un evento, por ejemplo, cuando el usuario hace clic en un botón o una cola de mensajes recibe un mensaje. Cuando se genera un evento, se ejecutan los controladores de evento que reciben el evento. Los eventos se pueden asignar a varios controladores y los métodos que controlan eventos determinados se pueden cambiar dinámicamente. También puede usar el Diseñador de Windows Forms para crear controladores de evento.  

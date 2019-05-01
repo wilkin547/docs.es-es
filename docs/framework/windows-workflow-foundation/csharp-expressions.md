@@ -3,30 +3,30 @@ title: Expresiones de C#
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
 ms.openlocfilehash: 2ffc380d9c65ec398084bfcbeadfe0fd2c3d6720
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009817"
 ---
 # <a name="c-expressions"></a>Expresiones de C#
 A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], expresiones de C# se admiten en Windows Workflow Foundation (WF). Nuevos proyectos de flujo de trabajo de C# crean en Visual Studio 2012 que tienen como destino [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usar expresiones de C# y proyectos de flujo de trabajo de Visual Basic usan expresiones de Visual Basic. Los proyectos de flujo de trabajo existentes de [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] que usan expresiones de Visual Basic se pueden migrar a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] independientemente del lenguaje del proyecto y son compatibles. En este tema se proporciona información general sobre las expresiones de C# en [!INCLUDE[wf1](../../../includes/wf1-md.md)].
 
 ## <a name="using-c-expressions-in-workflows"></a>Uso de expresiones de C# en los flujos de trabajo
 
--   [Usar expresiones de C# en el Diseñador de flujo de trabajo](csharp-expressions.md#WFDesigner)
+- [Usar expresiones de C# en el Diseñador de flujo de trabajo](csharp-expressions.md#WFDesigner)
 
-    -   [Con las versiones anteriores compatibilidad](csharp-expressions.md#BackwardCompat)
+    - [Con las versiones anteriores compatibilidad](csharp-expressions.md#BackwardCompat)
 
--   [Usar expresiones de C# en flujos de trabajo de código](csharp-expressions.md#CodeWorkflows)
+- [Usar expresiones de C# en flujos de trabajo de código](csharp-expressions.md#CodeWorkflows)
 
--   [Uso de expresiones de C# en flujos de trabajo XAML](csharp-expressions.md#XamlWorkflows)
+- [Uso de expresiones de C# en flujos de trabajo XAML](csharp-expressions.md#XamlWorkflows)
 
-    -   [Xaml compilado](csharp-expressions.md#CompiledXaml)
+    - [Xaml compilado](csharp-expressions.md#CompiledXaml)
 
-    -   [El lenguaje Xaml flexible](csharp-expressions.md#LooseXaml)
+    - [El lenguaje Xaml flexible](csharp-expressions.md#LooseXaml)
 
--   [Uso de expresiones de C# en servicios de flujo de trabajo XAMLX](csharp-expressions.md#WFServices)
+- [Uso de expresiones de C# en servicios de flujo de trabajo XAMLX](csharp-expressions.md#WFServices)
 
 ### <a name="WFDesigner"></a> Usar expresiones de C# en el Diseñador de flujo de trabajo
  A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], expresiones de C# se admiten en Windows Workflow Foundation (WF). Proyectos de flujo de trabajo de C# creados en Visual Studio 2012 que tienen como destino [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] utilice expresiones de C#, mientras que los proyectos de flujo de trabajo de Visual Basic usan expresiones de Visual Basic. Para especificar la expresión de C# deseada, escríbala en el cuadro con la etiqueta **escriba una expresión de C#**. Esta etiqueta se muestra en la ventana de propiedades cuando se selecciona la actividad en el diseñador o en la actividad en el diseñador de flujo de trabajo. En el ejemplo siguiente, se incluyen dos actividades `WriteLine` en un `Sequence` dentro de `NoPersistScope`.
@@ -70,7 +70,7 @@ CompileExpressions(wf);
 WorkflowInvoker.Invoke(wf);
 ```
 
- Cuando ya se ha creado el flujo de trabajo, se compilan las expresiones de C# mediante una llamada al método auxiliar `CompileExpressions` y, a continuación, se invoca el flujo de trabajo. El siguiente ejemplo es el método `CompileExpressions`.
+ Cuando ya se ha creado el flujo de trabajo, se compilan las expresiones de C# mediante una llamada al método del asistente `CompileExpressions` y, a continuación, se invoca el flujo de trabajo. El siguiente ejemplo es el método `CompileExpressions`.
 
 ```csharp
 static void CompileExpressions(Activity activity)
@@ -176,22 +176,22 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
 
  Hay varias diferencias en la sobrecarga de `CompileExpressions` que compila expresiones de C# en una actividad dinámica.
 
--   El parámetro en `CompileExpressions` es un objeto `DynamicActivity`.
+- El parámetro en `CompileExpressions` es un objeto `DynamicActivity`.
 
--   El nombre de tipo y el espacio de nombres se recuperan mediante la propiedad `DynamicActivity.Name`.
+- El nombre de tipo y el espacio de nombres se recuperan mediante la propiedad `DynamicActivity.Name`.
 
--   El valor de `TextExpressionCompilerSettings.ForImplementation` está establecido en `true`.
+- El valor de `TextExpressionCompilerSettings.ForImplementation` está establecido en `true`.
 
--   Se llama a `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` en lugar de a `CompiledExpressionInvoker.SetCompiledExpressionRoot`.
+- Se llama a `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` en lugar de a `CompiledExpressionInvoker.SetCompiledExpressionRoot`.
 
  Para obtener más información sobre cómo trabajar con expresiones en el código, consulte [creación de flujos de trabajo, actividades y expresiones mediante código imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md).
 
 ### <a name="XamlWorkflows"></a> Uso de expresiones de C# en flujos de trabajo XAML
  Las expresiones de C# se admiten en los flujos de trabajo de XAML. Los flujos de trabajo de XAML compilados se compilan en un tipo, mientras que el runtime carga los flujos de trabajo de XAML dinámico que se compilan en un árbol de actividades cuando se ejecuta el flujo de trabajo.
 
--   [Xaml compilado](csharp-expressions.md#CompiledXaml)
+- [Xaml compilado](csharp-expressions.md#CompiledXaml)
 
--   [El lenguaje Xaml flexible](csharp-expressions.md#LooseXaml)
+- [El lenguaje Xaml flexible](csharp-expressions.md#LooseXaml)
 
 #### <a name="CompiledXaml"></a> Xaml compilado
  Las expresiones de C# se admiten en flujos de trabajo de XAML compilado que se compilan en un tipo como parte de un proyecto de flujo de trabajo de C# que está destinado a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. XAML compilado es el tipo predeterminado de la creación del flujo de trabajo en Visual Studio y proyectos de flujo de trabajo de C# creados en Visual Studio que tienen como destino [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] utilice expresiones de C#.

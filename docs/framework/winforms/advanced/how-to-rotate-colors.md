@@ -9,11 +9,11 @@ helpviewer_keywords:
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
 ms.openlocfilehash: 241d2824fc2d87a0505eb6e790c865bfa7d8ef90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967379"
 ---
 # <a name="how-to-rotate-colors"></a>Procedimiento para rotar colores
 Es difícil visualizar la rotación en un espacio de colores de cuatro dimensiones. Podemos lo hacemos más fácil visualizar la rotación mediante decidido mantener uno de los componentes de color fijo. Supongamos que estamos de acuerdo mantener el componente alfa en 1 (completamente opaco). A continuación, podemos visualizar un espacio tridimensional de color con ejes de rojos, verde y azules como se muestra en la siguiente ilustración.  

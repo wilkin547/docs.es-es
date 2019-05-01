@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d9279808e4ad15b693d06ac8a99dd33a609e5a8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992516"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize (Método)
 Obtiene el tamaño estimado de binario del ensamblado y sus metadatos en el ámbito actual.  
@@ -40,11 +40,11 @@ HRESULT GetSaveSize (
  `fSave`  
  [in] Un valor de la [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) enumeración que especifica si se debe obtener un tamaño exacto o aproximado. Solo los tres valores son válidos: cssAccurate, cssQuick y cssDiscardTransientCAs:  
   
--   cssAccurate devuelve el tamaño de almacenamiento exacto, pero tarda más tiempo para calcular.  
+- cssAccurate devuelve el tamaño de almacenamiento exacto, pero tarda más tiempo para calcular.  
   
--   cssQuick devuelve un tamaño, rellenado por motivos de seguridad, pero tarda menos tiempo para calcular.  
+- cssQuick devuelve un tamaño, rellenado por motivos de seguridad, pero tarda menos tiempo para calcular.  
   
--   indica cssDiscardTransientCAs `GetSaveSize` que puede iniciar lejos los atributos personalizados que se puede descartar.  
+- indica cssDiscardTransientCAs `GetSaveSize` que puede iniciar lejos los atributos personalizados que se puede descartar.  
   
  `pdwSaveSize`  
  [out] Un puntero al tamaño que es necesario para guardar el archivo.  

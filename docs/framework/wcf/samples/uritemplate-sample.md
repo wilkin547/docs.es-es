@@ -3,20 +3,20 @@ title: Ejemplo UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
 ms.openlocfilehash: 5f8a969a9ddea633d12ebe2d922c152dbb0d7241
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007622"
 ---
 # <a name="uritemplate-sample"></a>Ejemplo UriTemplate
 La clase <xref:System.UriTemplate> proporciona los métodos por trabajar con conjuntos de URI que comparten una estructura común. Este ejemplo muestra los siguientes conceptos clave relacionados con `UriTemplate`:  
   
--   Sintaxis para crear plantillas.  
+- Sintaxis para crear plantillas.  
   
--   Crear instancias de URI de una `UriTemplate` utilizando los métodos <xref:System.UriTemplate.BindByName%2A> y <xref:System.UriTemplate.BindByPosition%2A>.  
+- Crear instancias de URI de una `UriTemplate` utilizando los métodos <xref:System.UriTemplate.BindByName%2A> y <xref:System.UriTemplate.BindByPosition%2A>.  
   
--   El método <xref:System.UriTemplateTable.Match%2A>, que es la operación inversa de `BindByName` y `BindByPosition`.  
+- El método <xref:System.UriTemplateTable.Match%2A>, que es la operación inversa de `BindByName` y `BindByPosition`.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   

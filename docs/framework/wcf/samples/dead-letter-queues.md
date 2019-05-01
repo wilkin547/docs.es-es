@@ -3,11 +3,11 @@ title: Colas con problemas de entrega
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051967"
 ---
 # <a name="dead-letter-queues"></a>Colas con problemas de entrega
 Este ejemplo muestra cómo administrar y procesar mensajes que han producido errores en la entrega. Se basa en el [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo. El ejemplo usa el enlace `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.
@@ -24,15 +24,15 @@ Este ejemplo muestra cómo administrar y procesar mensajes que han producido err
 
  La cola de mensajes no enviados en el enlace `NetMsmqBinding` se expresa en las propiedades siguientes:
 
--   La propiedad <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> expresa el tipo de cola de mensajes no enviados requerido por el cliente. Esta enumeración tiene los valores siguientes:
+- La propiedad <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> expresa el tipo de cola de mensajes no enviados requerido por el cliente. Esta enumeración tiene los valores siguientes:
 
--   `None`: No se requiere ninguna cola de mensajes enviados por el cliente.
+- `None`: No se requiere ninguna cola de mensajes enviados por el cliente.
 
--   `System`: La cola de mensajes no enviados del sistema se utiliza para almacenar los mensajes no enviados. Todas las aplicaciones que se ejecutan en el equipo comparten la cola de mensajes no enviados del sistema.
+- `System`: La cola de mensajes no enviados del sistema se utiliza para almacenar los mensajes no enviados. Todas las aplicaciones que se ejecutan en el equipo comparten la cola de mensajes no enviados del sistema.
 
--   `Custom`: Una cola de mensajes no enviados personalizada especificada mediante el <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propiedad se utiliza para almacenar los mensajes no enviados. Esta característica solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. Se utiliza cuando la aplicación debe utilizar su propia cola de mensajes no enviados en lugar de compartirla con otras aplicaciones que se ejecutan en el mismo equipo.
+- `Custom`: Una cola de mensajes no enviados personalizada especificada mediante el <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propiedad se utiliza para almacenar los mensajes no enviados. Esta característica solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. Se utiliza cuando la aplicación debe utilizar su propia cola de mensajes no enviados en lugar de compartirla con otras aplicaciones que se ejecutan en el mismo equipo.
 
--   La propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> expresa la cola concreta que se debe utilizar como cola de mensajes no enviados. Esto solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- La propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> expresa la cola concreta que se debe utilizar como cola de mensajes no enviados. Esto solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  En este ejemplo, el cliente envía un lote de mensajes al servicio desde dentro del ámbito de una transacción y especifica un valor arbitrariamente bajo para el "período de vida" para estos mensajes (aproximadamente 2 segundos). El cliente también especifica una cola de mensajes no enviados personalizada utilizada para poner en cola los mensajes que han expirado.
 
@@ -314,15 +314,15 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 2. Si se ejecuta el servicio primero, comprobará que la cola esté presente. Si la cola no está presente, el servicio creará una. Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ. Siga estos pasos para crear una cola en Windows 2008.
 
-    1.  Abra el administrador del servidor en Visual Studio 2012.
+    1. Abra el administrador del servidor en Visual Studio 2012.
 
-    2.  Expanda el **características** ficha.
+    2. Expanda el **características** ficha.
 
-    3.  Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.
+    3. Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.
 
-    4.  Compruebe el **transaccional** cuadro.
+    4. Compruebe el **transaccional** cuadro.
 
-    5.  Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.
+    5. Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.
 
 3. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

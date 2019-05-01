@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
 ms.openlocfilehash: bcd142785d8ee736c6a1b41950fae80e4d26fa18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013652"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>El tipo de variable '\<NombreDeVariable >' no se inferirá porque está enlazado a un campo en un ámbito de inclusión
 El tipo de variable '\<NombreDeVariable >' no se inferirá porque está enlazado a un campo en un ámbito de inclusión. Cambie el nombre de '\<NombreDeVariable >', o utilice el nombre completo (por ejemplo, 'Me.nombreDeVariable' o 'MiBase.nombreDeVariable').  
@@ -44,19 +44,19 @@ End Class
   
 ### <a name="to-address-this-warning"></a>Para resolver esta advertencia  
   
--   Convierta la variable de control de bucle en local cambiando su nombre por un identificador que tampoco sea el nombre de un campo de la clase.  
+- Convierta la variable de control de bucle en local cambiando su nombre por un identificador que tampoco sea el nombre de un campo de la clase.  
   
     ```  
     For I = 1 To 10  
     ```  
   
--   Asegúrese de que la variable de control de bucle se enlaza al campo de clase agregando el prefijo `Me.` al nombre de variable.  
+- Asegúrese de que la variable de control de bucle se enlaza al campo de clase agregando el prefijo `Me.` al nombre de variable.  
   
     ```  
     For Me.Index = 1 To 10  
     ```  
   
--   En lugar de basarse en la inferencia de tipo local, use una cláusula `As` para especificar un tipo para la variable de control de bucle.  
+- En lugar de basarse en la inferencia de tipo local, use una cláusula `As` para especificar un tipo para la variable de control de bucle.  
   
     ```  
     For Index As Integer = 1 To 10  

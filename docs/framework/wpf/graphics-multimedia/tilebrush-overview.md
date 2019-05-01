@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973763"
 ---
 # <a name="tilebrush-overview"></a>Información general sobre objetos TileBrush
 <xref:System.Windows.Media.TileBrush> los objetos que proporcionan un gran control sobre cómo se pinta un área con una imagen, <xref:System.Windows.Media.Drawing>, o <xref:System.Windows.Media.Visual>. Este tema describe cómo usar <xref:System.Windows.Media.TileBrush> características para obtener más control sobre cómo un <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, o <xref:System.Windows.Media.VisualBrush> pinta un área.  
@@ -40,11 +40,11 @@ Componentes de TileBrush con un valor de TileMode de Tile
 ## <a name="brush-content"></a>Contenido del objeto Brush  
  Hay tres tipos diferentes de <xref:System.Windows.Media.TileBrush> y cada uno de ellos pinta con un tipo diferente del contenido.  
   
--   Si el pincel es un <xref:System.Windows.Media.ImageBrush>, este contenido es una imagen del <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propiedad especifica el contenido de la <xref:System.Windows.Media.ImageBrush>.  
+- Si el pincel es un <xref:System.Windows.Media.ImageBrush>, este contenido es una imagen del <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propiedad especifica el contenido de la <xref:System.Windows.Media.ImageBrush>.  
   
--   Si el pincel es un <xref:System.Windows.Media.DrawingBrush>, este contenido es un dibujo. El <xref:System.Windows.Media.DrawingBrush.Drawing%2A> propiedad especifica el contenido de la <xref:System.Windows.Media.DrawingBrush>.  
+- Si el pincel es un <xref:System.Windows.Media.DrawingBrush>, este contenido es un dibujo. El <xref:System.Windows.Media.DrawingBrush.Drawing%2A> propiedad especifica el contenido de la <xref:System.Windows.Media.DrawingBrush>.  
   
--   Si el pincel es un <xref:System.Windows.Media.VisualBrush>, este contenido es un objeto visual. El <xref:System.Windows.Media.VisualBrush.Visual%2A> propiedad especifica el contenido de la <xref:System.Windows.Media.VisualBrush>.  
+- Si el pincel es un <xref:System.Windows.Media.VisualBrush>, este contenido es un objeto visual. El <xref:System.Windows.Media.VisualBrush.Visual%2A> propiedad especifica el contenido de la <xref:System.Windows.Media.VisualBrush>.  
   
  Puede especificar la posición y las dimensiones de <xref:System.Windows.Media.TileBrush> contenido mediante el uso de la <xref:System.Windows.Media.TileBrush.Viewbox%2A> propiedad, aunque es frecuente dejar el <xref:System.Windows.Media.TileBrush.Viewbox%2A> establecido en su valor predeterminado. De forma predeterminada, el <xref:System.Windows.Media.TileBrush.Viewbox%2A> se configura para contener completamente el contenido del pincel. Para obtener más información acerca de cómo configurar el <xref:System.Windows.Controls.Viewbox>, consulte la <xref:System.Windows.Controls.Viewbox> página de propiedades.  
   
@@ -52,13 +52,13 @@ Componentes de TileBrush con un valor de TileMode de Tile
 ## <a name="the-base-tile"></a>Mosaico base  
  Un <xref:System.Windows.Media.TileBrush> proyecta su contenido en un mosaico base. El <xref:System.Windows.Media.TileBrush.Stretch%2A> propiedad controla cómo <xref:System.Windows.Media.TileBrush> contenido se ajusta para rellenar el mosaico base. El <xref:System.Windows.Media.TileBrush.Stretch%2A> propiedad acepta los valores siguientes, definidos por el <xref:System.Windows.Media.Stretch> enumeración:  
   
--   <xref:System.Windows.Media.Stretch.None>: El contenido del pincel no se ajusta para rellenar el mosaico.  
+- <xref:System.Windows.Media.Stretch.None>: El contenido del pincel no se ajusta para rellenar el mosaico.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: El contenido del pincel se ajusta para rellenar el mosaico. Como el alto y el ancho del contenido se ajustan de forma independiente, podría no conservarse la relación de aspecto original del contenido. En otras palabras, el contenido del pincel podría distorsionarse para rellenar por completo el mosaico de salida.  
+- <xref:System.Windows.Media.Stretch.Fill>: El contenido del pincel se ajusta para rellenar el mosaico. Como el alto y el ancho del contenido se ajustan de forma independiente, podría no conservarse la relación de aspecto original del contenido. En otras palabras, el contenido del pincel podría distorsionarse para rellenar por completo el mosaico de salida.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: El contenido del pincel se escala para que quepa completamente dentro del mosaico. Se conserva la relación de aspecto del contenido.  
+- <xref:System.Windows.Media.Stretch.Uniform>: El contenido del pincel se escala para que quepa completamente dentro del mosaico. Se conserva la relación de aspecto del contenido.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: El contenido del pincel se escala para que rellene completamente el área de salida conservando la relación de aspecto original del contenido.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: El contenido del pincel se escala para que rellene completamente el área de salida conservando la relación de aspecto original del contenido.  
   
  La siguiente imagen ilustra los diferentes <xref:System.Windows.Media.TileBrush.Stretch%2A> configuración.  
   
@@ -99,15 +99,15 @@ Componentes de TileBrush con un valor de TileMode de Tile
 ### <a name="tiling-behavior"></a>Comportamiento de la colocación en mosaico  
  Un <xref:System.Windows.Media.TileBrush> genera un patrón de mosaicos cuando su mosaico base no rellena completamente el área de salida y un modo de disposición en mosaico distinto <xref:System.Windows.Media.TileMode.None> se especifica. Cuando mosaico un icono de pincel de no rellena completamente el área de salida, su <xref:System.Windows.Media.TileBrush.TileMode%2A> propiedad especifica si el mosaico base se debe duplicar para rellenar el área de salida y, si es así, ¿cómo la base se debe duplicar. El <xref:System.Windows.Media.TileBrush.TileMode%2A> propiedad acepta los valores siguientes, definidos por el <xref:System.Windows.Media.TileMode> enumeración:  
   
--   <xref:System.Windows.Media.TileMode.None>: Se dibuja el mosaico base.  
+- <xref:System.Windows.Media.TileMode.None>: Se dibuja el mosaico base.  
   
--   <xref:System.Windows.Media.TileMode.Tile>: Se dibuja el mosaico base y el área restante se rellena repitiendo el mosaico base, que es adyacente al borde izquierdo del siguiente y el borde derecho de un mosaico de forma similar para los bordes superior e inferior.  
+- <xref:System.Windows.Media.TileMode.Tile>: Se dibuja el mosaico base y el área restante se rellena repitiendo el mosaico base, que es adyacente al borde izquierdo del siguiente y el borde derecho de un mosaico de forma similar para los bordes superior e inferior.  
   
--   <xref:System.Windows.Media.TileMode.FlipX>: Igual que <xref:System.Windows.Media.TileMode.Tile>, pero las columnas alternativas de los mosaicos se voltean horizontalmente.  
+- <xref:System.Windows.Media.TileMode.FlipX>: Igual que <xref:System.Windows.Media.TileMode.Tile>, pero las columnas alternativas de los mosaicos se voltean horizontalmente.  
   
--   <xref:System.Windows.Media.TileMode.FlipY>: Igual que <xref:System.Windows.Media.TileMode.Tile>, pero las filas alternas de los mosaicos se voltean verticalmente.  
+- <xref:System.Windows.Media.TileMode.FlipY>: Igual que <xref:System.Windows.Media.TileMode.Tile>, pero las filas alternas de los mosaicos se voltean verticalmente.  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: Combinación de <xref:System.Windows.Media.TileMode.FlipX> y <xref:System.Windows.Media.TileMode.FlipY>.  
+- <xref:System.Windows.Media.TileMode.FlipXY>: Combinación de <xref:System.Windows.Media.TileMode.FlipX> y <xref:System.Windows.Media.TileMode.FlipY>.  
   
  La siguiente imagen ilustra los diferentes modos de colocación en mosaico.  
   

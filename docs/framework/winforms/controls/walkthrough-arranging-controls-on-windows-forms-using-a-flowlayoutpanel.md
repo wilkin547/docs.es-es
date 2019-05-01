@@ -8,11 +8,11 @@ helpviewer_keywords:
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
 ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009128"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Tutorial: Organizar controles en formularios Windows Forms mediante FlowLayoutPanel
 Algunas aplicaciones requieren un formulario con un diseño que se organice de manera adecuada y automática a medida que el formulario o el contenido cambien de tamaño. Si necesita un diseño dinámico y no desea controlar los eventos <xref:System.Windows.Forms.Control.Layout> de forma explícita en el código, considere la posibilidad de usar un panel de diseño.  
@@ -23,23 +23,23 @@ Algunas aplicaciones requieren un formulario con un diseño que se organice de m
   
  El control <xref:System.Windows.Forms.FlowLayoutPanel> organiza su contenido en una dirección de flujo específica: horizontal o vertical. Su contenido puede ajustarse desde una fila a la siguiente o desde una columna a la siguiente. Además, el contenido puede recortarse en lugar de ajustarse. Las tareas ilustradas en este tutorial incluyen:  
   
--   Crear un proyecto de Windows Forms  
+- Crear un proyecto de Windows Forms  
   
--   Organizar los controles horizontal y verticalmente  
+- Organizar los controles horizontal y verticalmente  
   
--   Cambiar la dirección del flujo  
+- Cambiar la dirección del flujo  
   
--   Insertar saltos de flujo  
+- Insertar saltos de flujo  
   
--   Organizar los controles mediante Padding y Margin  
+- Organizar los controles mediante Padding y Margin  
   
--   Insertar controles mediante un doble clic en estos en el cuadro de herramientas  
+- Insertar controles mediante un doble clic en estos en el cuadro de herramientas  
   
--   Insertar un control dibujando su contorno  
+- Insertar un control dibujando su contorno  
   
--   Insertar controles mediante el símbolo de intercalación  
+- Insertar controles mediante el símbolo de intercalación  
   
--   Reasignar controles existentes en un elemento primario diferente  
+- Reasignar controles existentes en un elemento primario diferente  
   
  Cuando termine, comprenderá el rol de estas importantes características de diseño.  
   
@@ -179,13 +179,13 @@ Algunas aplicaciones requieren un formulario con un diseño que se organice de m
 ## <a name="next-steps"></a>Pasos siguientes  
  Puede lograr un diseño complejo mediante una combinación de controles y paneles de diseño. Estas son otras sugerencias para seguir con la exploración:  
   
--   Cambie el tamaño de uno de los controles <xref:System.Windows.Forms.Button> para aumentarlo y observe el efecto en el diseño.  
+- Cambie el tamaño de uno de los controles <xref:System.Windows.Forms.Button> para aumentarlo y observe el efecto en el diseño.  
   
--   Los paneles de diseño pueden contener otros paneles de diseño. Experimente colocando un control <xref:System.Windows.Forms.TableLayoutPanel> en el control existente.  
+- Los paneles de diseño pueden contener otros paneles de diseño. Experimente colocando un control <xref:System.Windows.Forms.TableLayoutPanel> en el control existente.  
   
--   Acople el control <xref:System.Windows.Forms.FlowLayoutPanel> al formulario primario. Cambie el tamaño del formulario y observe el efecto en el diseño.  
+- Acople el control <xref:System.Windows.Forms.FlowLayoutPanel> al formulario primario. Cambie el tamaño del formulario y observe el efecto en el diseño.  
   
--   Establezca la propiedad <xref:System.Windows.Forms.Control.Visible%2A> de uno de los controles en `false` y observe cómo se distribuye <xref:System.Windows.Forms.FlowLayoutPanel> en respuesta.  
+- Establezca la propiedad <xref:System.Windows.Forms.Control.Visible%2A> de uno de los controles en `false` y observe cómo se distribuye <xref:System.Windows.Forms.FlowLayoutPanel> en respuesta.  
   
 ## <a name="see-also"></a>Vea también
 

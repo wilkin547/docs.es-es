@@ -3,11 +3,11 @@ title: Enlace básico
 ms.date: 03/30/2017
 ms.assetid: 2a0e8ac4-23e7-45ef-98dc-40691aac530a
 ms.openlocfilehash: 97529444b23c004604483d2cc4c61eea5ef07f85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955012"
 ---
 # <a name="basic-binding"></a>Enlace básico
 Esta sección contiene ejemplos básicos que muestran cómo utilizar el atributo de enlace de un elemento de punto de conexión.  

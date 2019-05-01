@@ -30,11 +30,11 @@ helpviewer_keywords:
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
 ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981375"
 ---
 # <a name="xaml-syntax-in-detail"></a>Detalles de la sintaxis XAML
 Este tema definen los términos que se utilizan para describir los elementos de sintaxis XAML. Estos términos se usan con frecuencia en el resto de esta documentación, tanto para la documentación de WPF específicamente y otros marcos que utilizan XAML o los conceptos básicos de XAML habilitados por la compatibilidad del lenguaje XAML en el nivel de System.Xaml. En este tema se amplía la terminología básica presentada en el tema [información general sobre XAML (WPF)](xaml-overview-wpf.md).  
@@ -58,9 +58,9 @@ Este tema definen los términos que se utilizan para describir los elementos de 
 ## <a name="object-element-syntax"></a>Sintaxis de elemento de objeto  
  *Sintaxis de elemento de objeto* es la sintaxis de marcado XAML que crea una instancia de una clase o estructura CLR declarando un elemento XML. Esta sintaxis es similar a la sintaxis de elemento de otros lenguajes de marcado, como HTML. Sintaxis de elemento de objeto comienza con un corchete angular de apertura (\<), seguida inmediatamente por el nombre de la clase o estructura que se crea una instancia de tipo. Cero o más espacios pueden seguir el nombre de tipo, y también se pueden declarar cero o más atributos en el elemento de objeto, con uno o varios espacios, separando cada nombre de atributo = par "value". Por último, uno de los siguientes debe ser true:  
   
--   El elemento y la etiqueta deben cerrarse por una barra diagonal (/), seguida inmediatamente por un corchete angular derecho (>).  
+- El elemento y la etiqueta deben cerrarse por una barra diagonal (/), seguida inmediatamente por un corchete angular derecho (>).  
   
--   La etiqueta de apertura debe realizarse por un corchete angular derecho (>). Otros elementos de objeto, los elementos de propiedad o el texto interno, puede seguir la etiqueta de apertura. Exactamente qué contenido puede ser incluido aquí normalmente está restringido por el modelo de objetos del elemento. El equivalente en la etiqueta de cierre para el elemento de objeto también debe existir en un anidamiento correcto y equilibrar con otros pares de etiqueta de apertura y cierre.  
+- La etiqueta de apertura debe realizarse por un corchete angular derecho (>). Otros elementos de objeto, los elementos de propiedad o el texto interno, puede seguir la etiqueta de apertura. Exactamente qué contenido puede ser incluido aquí normalmente está restringido por el modelo de objetos del elemento. El equivalente en la etiqueta de cierre para el elemento de objeto también debe existir en un anidamiento correcto y equilibrar con otros pares de etiqueta de apertura y cierre.  
   
  XAML forma implementada por .NET tiene un conjunto de reglas que asignan elementos de objeto en tipos de atributos en las propiedades o eventos y los espacios de nombres XAML para espacios de nombres CLR y ensamblados. Para WPF y .NET Framework, se asignan a elementos de objeto XAML [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] tipos definidos en ensamblados de referencia y los atributos se asignan a los miembros de esos tipos. Cuando se hace referencia a un tipo CLR en XAML, tendrá acceso a los miembros heredados de ese tipo también.  
   
@@ -154,11 +154,11 @@ Este tema definen los términos que se utilizan para describir los elementos de 
 ## <a name="collection-syntax"></a>Sintaxis de colecciones  
  La especificación XAML requiere que las implementaciones de procesadores XAML para identificar las propiedades donde el tipo de valor es una colección. La implementación del procesador XAML general en .NET se basa en código administrado y el CLR e identifica los tipos de colección a través de uno de los siguientes:  
   
--   Escriba implementa <xref:System.Collections.IList>.  
+- Escriba implementa <xref:System.Collections.IList>.  
   
--   Escriba implementa <xref:System.Collections.IDictionary>.  
+- Escriba implementa <xref:System.Collections.IDictionary>.  
   
--   Tipo se deriva de <xref:System.Array> (para obtener más información acerca de las matrices en XAML, vea [x: Array Markup Extension](../../xaml-services/x-array-markup-extension.md).)  
+- Tipo se deriva de <xref:System.Array> (para obtener más información acerca de las matrices en XAML, vea [x: Array Markup Extension](../../xaml-services/x-array-markup-extension.md).)  
   
  Si el tipo de una propiedad es una colección, el tipo de colección deducido no debe especificarse en el marcado como un elemento de objeto. En su lugar, los elementos que se van a convertirse en los elementos de la colección se especifican como uno o varios elementos secundarios del elemento de propiedad. Cada elemento de este tipo se evalúa a un objeto durante la carga y se agrega a la colección mediante una llamada a la `Add` método de la colección implícita. Por ejemplo, el <xref:System.Windows.Style.Triggers%2A> propiedad de <xref:System.Windows.Style> toma el tipo de colección especializadas <xref:System.Windows.TriggerCollection>, que implementa <xref:System.Collections.IList>. No es necesario crear una instancia de un <xref:System.Windows.TriggerCollection> elemento de objeto en el marcado. En su lugar, especifique uno o más <xref:System.Windows.Trigger> elementos como elementos dentro de la `Style.Triggers` elemento de propiedad, donde <xref:System.Windows.Trigger> (o una clase derivada) es el tipo esperado como el tipo de elemento para fuertemente tipada e implícita <xref:System.Windows.TriggerCollection>.  
   
@@ -264,9 +264,9 @@ Este tema definen los términos que se utilizan para describir los elementos de 
   
  Las propiedades adjuntas utilizan una sintaxis que se parezca ligeramente a la sintaxis de elemento de propiedad, en que especifique también una *typeName*. *propertyName* combinación. Hay dos diferencias importantes:  
   
--   Puede usar el *typeName*. *propertyName* incluso al establecer una propiedad adjunta mediante la sintaxis de atributo de combinación. Las propiedades adjuntas son que el único caso donde calificar el nombre de propiedad es un requisito en una sintaxis de atributo.  
+- Puede usar el *typeName*. *propertyName* incluso al establecer una propiedad adjunta mediante la sintaxis de atributo de combinación. Las propiedades adjuntas son que el único caso donde calificar el nombre de propiedad es un requisito en una sintaxis de atributo.  
   
--   También puede usar la sintaxis de elemento de propiedad para las propiedades adjuntas. Sin embargo, para la sintaxis de elemento de propiedad típica, el *typeName* especificar es el elemento de objeto que contiene el elemento de propiedad. Si se hace referencia a una propiedad adjunta, el *typeName* es la clase que define la propiedad adjunta, no el elemento contenedor del objeto.  
+- También puede usar la sintaxis de elemento de propiedad para las propiedades adjuntas. Sin embargo, para la sintaxis de elemento de propiedad típica, el *typeName* especificar es el elemento de objeto que contiene el elemento de propiedad. Si se hace referencia a una propiedad adjunta, el *typeName* es la clase que define la propiedad adjunta, no el elemento contenedor del objeto.  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>Eventos asociados  

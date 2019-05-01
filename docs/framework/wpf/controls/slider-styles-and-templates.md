@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ControlTemplate [WPF], Slider
 ms.assetid: d89aa97b-075a-4752-9c41-9679df65c491
 ms.openlocfilehash: 385a69ad2bd17ae4c51437245915109aad446bdf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970981"
 ---
 # <a name="slider-styles-and-templates"></a>Estilos y plantillas de Slider
 En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Slider> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

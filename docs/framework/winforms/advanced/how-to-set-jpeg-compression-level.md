@@ -9,11 +9,11 @@ helpviewer_keywords:
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
 ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003891"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Procedimiento para establecer el nivel de compresión de imágenes JPEG
 Puede que desee modificar los parámetros de una imagen al guardar la imagen en el disco para minimizar el tamaño de archivo o mejorar su calidad. Puede ajustar la calidad de una imagen JPEG modificando su nivel de compresión. Para especificar el nivel de compresión al guardar una imagen JPEG, debe crear un <xref:System.Drawing.Imaging.EncoderParameters> objeto y pasarlo a la <xref:System.Drawing.Image.Save%2A> método de la <xref:System.Drawing.Image> clase. Inicializar el <xref:System.Drawing.Imaging.EncoderParameters> objeto para que tenga una matriz que consta de uno <xref:System.Drawing.Imaging.EncoderParameter>. Cuando se crea el <xref:System.Drawing.Imaging.EncoderParameter>, especifique el <xref:System.Drawing.Imaging.Encoder.Quality> codificador y el nivel de compresión.  
@@ -123,11 +123,11 @@ End Function
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Una aplicación de Windows Forms.  
+- Una aplicación de Windows Forms.  
   
--   Un <xref:System.Windows.Forms.PaintEventArgs>, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+- Un <xref:System.Windows.Forms.PaintEventArgs>, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
--   Un archivo de imagen denominado `TestPhoto.jpg` y que se encuentra en **c:\\**.  
+- Un archivo de imagen denominado `TestPhoto.jpg` y que se encuentra en **c:\\**.  
   
 ## <a name="see-also"></a>Vea también
 

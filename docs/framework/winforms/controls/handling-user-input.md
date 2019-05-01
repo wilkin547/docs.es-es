@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
 ms.openlocfilehash: 3ebe82fc18deba52fafe76da7ff85fb247446e46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971241"
 ---
 # <a name="handling-user-input"></a>Controlar la introducción de datos por el usuario
 En este tema se describe los principales eventos de teclado y mouse proporcionados por <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Al controlar un evento, los creadores de controles deben reemplazar el método `On`*EventName* protegido en lugar de asociar un delegado al evento. Para hacer un repaso de los eventos, vea [Provocar eventos de un componente](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120)).  

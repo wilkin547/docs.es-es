@@ -3,11 +3,11 @@ title: Detalles de Office Open XML WordprocessingML Documents (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6b1e155c-7174-4244-a6de-0fddf9a0b0d7
 ms.openlocfilehash: ae684ddcb194000da6bf66d96fb1027d925d7f21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977646"
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a>Detalles de Office Open XML WordprocessingML Documents (Visual Basic)
 Esta sección proporciona información acerca de los detalles de los documentos WordprocessingML XML abierto de Office. Muestra ejemplos de las partes de documento y estilo de un documento XML abierto.  

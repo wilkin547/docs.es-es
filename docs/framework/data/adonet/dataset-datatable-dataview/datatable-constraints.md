@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034364"
 ---
 # <a name="datatable-constraints"></a>Restricciones de DataTable
 Se pueden utilizar restricciones para exigir restricciones sobre los datos de un objeto <xref:System.Data.DataTable> con el fin de mantener la integridad de los datos. Una restricción es una regla automática que se aplica a una columna, o a varias columnas relacionadas, que determina cómo proceder cuando se modifica de alguna manera el valor de una fila. Las restricciones se exigen cuando la `System.Data.DataSet.EnforceConstraints` propiedad de la <xref:System.Data.DataSet> es **true**. Para ver un ejemplo de código que muestre cómo establecer la propiedad `EnforceConstraints`, vea el tema de referencia <xref:System.Data.DataSet.EnforceConstraints%2A>.  

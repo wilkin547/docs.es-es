@@ -9,44 +9,44 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 5b759baebb7192c1ee94b4aa925198864ba7a31a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007167"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Tutorial: Organizar controles de formularios Windows Forms en WPF
 En este tutorial se muestra cómo usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] características de diseño para organizar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles en una aplicación híbrida.  
   
  Las tareas ilustradas en este tutorial incluyen:  
   
--   Crear el proyecto.  
+- Crear el proyecto.  
   
--   Usar la configuración de diseño predeterminada.  
+- Usar la configuración de diseño predeterminada.  
   
--   Ajustar el tamaño al contenido.  
+- Ajustar el tamaño al contenido.  
   
--   Usar el posicionamiento absoluto.  
+- Usar el posicionamiento absoluto.  
   
--   Especificar el tamaño explícitamente.  
+- Especificar el tamaño explícitamente.  
   
--   Establecer las propiedades de diseño.  
+- Establecer las propiedades de diseño.  
   
--   Entender las limitaciones del orden Z.  
+- Entender las limitaciones del orden Z.  
   
--   Acoplar.  
+- Acoplar.  
   
--   Establecer la visibilidad.  
+- Establecer la visibilidad.  
   
--   Hospedar un control que no se ajusta.  
+- Hospedar un control que no se ajusta.  
   
--   Ajustar la escala.  
+- Ajustar la escala.  
   
--   Girar.  
+- Girar.  
   
--   Establecer el relleno y los márgenes.  
+- Establecer el relleno y los márgenes.  
   
--   Usar contenedores de diseño dinámico.  
+- Usar contenedores de diseño dinámico.  
   
  Para obtener una lista de código completo de las tareas ilustradas en este tutorial, vea [Arranging Windows Forms Controls in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=159971).  
   
@@ -64,11 +64,11 @@ Necesita Visual Studio para completar este tutorial.
   
 2. En el Explorador de soluciones, agregue referencias a los ensamblados siguientes.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
-    -   System.Drawing  
+    - System.Drawing  
   
 3. Haga doble clic en MainWindow.xaml para abrirlo en la vista XAML.  
   

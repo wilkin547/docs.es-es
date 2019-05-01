@@ -3,34 +3,34 @@ title: Servicio de enrutamiento
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
 ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991061"
 ---
 # <a name="routing-service"></a>Servicio de enrutamiento
 El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como un enrutador de mensajes. La funcionalidad principal del servicio de enrutamiento es la capacidad de enrutar mensajes según su contenido, lo que permite reenviar un mensaje a un punto de conexión de cliente en función de un valor dentro del propio mensaje, en el encabezado o el cuerpo del mensaje.  
   
  El <xref:System.ServiceModel.Routing.RoutingService> se implementa como un servicio de Windows Communication Foundation (WCF) en el <xref:System.ServiceModel.Routing> espacio de nombres. El servicio de enrutamiento expone uno o más extremos de servicio que reciben mensajes y, a continuación, enruta cada mensaje a uno o más extremos de cliente en función del contenido del mensaje. El servicio proporciona las siguientes características:  
   
--   Enrutamiento basado en contenido  
+- Enrutamiento basado en contenido  
   
-    -   Agregación de servicios  
+    - Agregación de servicios  
   
-    -   Control de versiones de servicios  
+    - Control de versiones de servicios  
   
-    -   Enrutamiento de prioridad  
+    - Enrutamiento de prioridad  
   
-    -   Configuración dinámica  
+    - Configuración dinámica  
   
--   Puente protocolar  
+- Puente protocolar  
   
--   Procesamiento SOAP  
+- Procesamiento SOAP  
   
--   Control de errores avanzado  
+- Control de errores avanzado  
   
--   puntos de conexión de reserva  
+- puntos de conexión de reserva  
   
  Aunque es posible crear un servicio intermedio que logre uno o más de estos objetivos, a menudo este tipo de implementación está vinculado a una solución o un escenario concretos y no se puede aplicar directamente a las nuevas aplicaciones.  
   
@@ -48,13 +48,13 @@ El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como u
   
  A través de la agrupación de filtros de mensajes en tablas de filtros, puede crearse una lógica de enrutamiento que le permita administrar varios escenarios de enrutamiento, como:  
   
--   Agregación de servicios  
+- Agregación de servicios  
   
--   Control de versiones de servicios  
+- Control de versiones de servicios  
   
--   Enrutamiento de prioridad  
+- Enrutamiento de prioridad  
   
--   Configuración dinámica  
+- Configuración dinámica  
   
  Para obtener más información sobre los filtros de mensajes y las tablas de filtros, consulte [enrutamiento Introducción](../../../../docs/framework/wcf/feature-details/routing-introduction.md) y [filtros de mensajes](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
@@ -97,13 +97,13 @@ El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como u
 ## <a name="streaming"></a>Streaming  
  El servicio de enrutamiento puede transmitir los mensajes correctamente si establece el enlace para que admita la transmisión por secuencias.  Sin embargo, hay algunas condiciones en las que es necesario poner en el búfer los mensajes:  
   
--   Multidifusión (usa el búfer para crear copias adicionales de los mensajes)  
+- Multidifusión (usa el búfer para crear copias adicionales de los mensajes)  
   
--   Conmutación por error (usa el búfer en el caso de que sea necesario enviar el mensaje a una reserva)  
+- Conmutación por error (usa el búfer en el caso de que sea necesario enviar el mensaje a una reserva)  
   
--   System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly es false (usa el búfer para presentar MessageFilterTable con un MessageBuffer de modo que los filtros pueden inspeccionar el cuerpo)  
+- System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly es false (usa el búfer para presentar MessageFilterTable con un MessageBuffer de modo que los filtros pueden inspeccionar el cuerpo)  
   
--   Configuración dinámica  
+- Configuración dinámica  
   
 ## <a name="see-also"></a>Vea también
 

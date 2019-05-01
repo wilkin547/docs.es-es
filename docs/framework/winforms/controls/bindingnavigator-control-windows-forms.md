@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data navigation
 ms.assetid: 18c1e2a5-9834-40d3-9b2e-2b545e4e769e
 ms.openlocfilehash: ce67a06a5fe43602258d52548e8d933b99548f44
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961725"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a>BindingNavigator (Control, formularios Windows Forms)
 El control `BindingNavigator` es la interfaz de usuario de navegación y manipulación para los controles de un formulario que están enlazados a datos. El control `BindingNavigator` permite a los usuarios recorrer y manipular los datos en Windows Forms.  

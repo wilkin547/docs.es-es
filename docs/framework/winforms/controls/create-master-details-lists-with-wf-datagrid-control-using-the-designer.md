@@ -7,11 +7,11 @@ helpviewer_keywords:
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
 ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961365"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Procedimiento para crear listas maestro y detalle con el control DataGrid de formularios Windows Forms mediante el diseñador
 
@@ -42,15 +42,15 @@ ms.locfileid: "59332084"
   
 6. Configurar el <xref:System.Windows.Forms.DataGrid> control que desea designar como cuadrícula principal, como se indica a continuación:  
   
-    1.  Seleccione el <xref:System.Data.DataSet> en la lista desplegable en el <xref:System.Windows.Forms.DataGrid.DataSource%2A> propiedad.  
+    1. Seleccione el <xref:System.Data.DataSet> en la lista desplegable en el <xref:System.Windows.Forms.DataGrid.DataSource%2A> propiedad.  
   
-    2.  Seleccione la tabla principal (por ejemplo, "Customers") en la lista desplegable en el <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedad.  
+    2. Seleccione la tabla principal (por ejemplo, "Customers") en la lista desplegable en el <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedad.  
   
 7. Configurar el <xref:System.Windows.Forms.DataGrid> control que desea designar la cuadrícula de detalles, como se indica a continuación:  
   
-    1.  Seleccione el <xref:System.Data.DataSet> en la lista desplegable en el <xref:System.Windows.Forms.DataGrid.DataSource%2A> propiedad.  
+    1. Seleccione el <xref:System.Data.DataSet> en la lista desplegable en el <xref:System.Windows.Forms.DataGrid.DataSource%2A> propiedad.  
   
-    2.  Seleccione la relación (por ejemplo, "Customers.CustOrd") entre las tablas de maestro y detalles de la lista desplegable en el <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedad. Para ver la relación, expanda el nodo, haga clic en el signo más (**+**) aparece junto a la tabla maestra en la lista desplegable.  
+    2. Seleccione la relación (por ejemplo, "Customers.CustOrd") entre las tablas de maestro y detalles de la lista desplegable en el <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedad. Para ver la relación, expanda el nodo, haga clic en el signo más (**+**) aparece junto a la tabla maestra en la lista desplegable.  
   
 ## <a name="see-also"></a>Vea también
 

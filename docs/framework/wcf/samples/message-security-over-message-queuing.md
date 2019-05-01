@@ -3,11 +3,11 @@ title: Seguridad de mensajes mediante Message Queuing
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
 ms.openlocfilehash: 9e9067c38d86bb74c569b6d648d84c7c9ff6fac6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989821"
 ---
 # <a name="message-security-over-message-queuing"></a>Seguridad de mensajes mediante Message Queuing
 Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de certificado X.509v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor sobre MSMQ. En ocasiones es más apropiado utilizar la seguridad del mensaje para garantizar que los mensajes en el almacén de MSMQ permanezcan cifrados y la aplicación pueda realizar su propia autenticación del mensaje.
@@ -20,15 +20,15 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
 
 2. Si se ejecuta el servicio primero, comprobará que la cola esté presente. Si la cola no está presente, el servicio creará una. Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ. Siga estos pasos para crear una cola en Windows 2008.
 
-    1.  Abra el administrador del servidor en Visual Studio 2012.
+    1. Abra el administrador del servidor en Visual Studio 2012.
 
-    2.  Expanda el **características** ficha.
+    2. Expanda el **características** ficha.
 
-    3.  Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.
+    3. Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.
 
-    4.  Compruebe el **transaccional** cuadro.
+    4. Compruebe el **transaccional** cuadro.
 
-    5.  Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.
+    5. Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.
 
 3. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
@@ -77,7 +77,7 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
   
 ### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
--   Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
+- Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
   
     > [!NOTE]
     >  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado los ejemplos de Windows Communication Foundation (WCF) que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser - trustedpeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
@@ -287,7 +287,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
 ## <a name="comments"></a>Comentarios
 
--   Crear el certificado del cliente.
+- Crear el certificado del cliente.
 
      La línea siguiente en el archivo por lotes crea el certificado de cliente. El nombre de cliente especificado se utiliza en el nombre del asunto del certificado creado. El certificado se guarda en el almacén `My`, en la ubicación de almacenamiento `CurrentUser`.
 
@@ -298,7 +298,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   Instalar el certificado del cliente en el almacén de certificados de confianza del servidor.
+- Instalar el certificado del cliente en el almacén de certificados de confianza del servidor.
 
      La línea siguiente del archivo por lotes copia el certificado de cliente en el almacén TrustedPeople del servidor para que el servidor pueda tomar decisiones basadas en la confianza o la ausencia de la misma. Para un certificado instalado en el almacén TrustedPeople confianza para un servicio de Windows Communication Foundation (WCF), el modo de validación del certificado de cliente debe establecerse en `PeerOrChainTrust` o `PeerTrust` valor. Vea el ejemplo de configuración de servicio anterior para obtener información sobre cómo puede hacerse usando un archivo de configuración.
 
@@ -309,7 +309,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   Crear el certificado de servidor.
+- Crear el certificado de servidor.
 
      Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar:
 
@@ -325,7 +325,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
      La variable %SERVER_NAME% especifica el nombre del servidor. El certificado se almacena en el almacén LocalMachine. Si el archivo por lotes de instalación se ejecuta con un argumento de servicio (por ejemplo, `setup.bat service`) % SERVER_NAME % contiene el nombre de dominio completo del equipo. En caso contrario, el valor predeterminado es localhost
 
--   Instalar el certificado del servidor en el almacén de certificados de confianza del cliente.
+- Instalar el certificado del servidor en el almacén de certificados de confianza del cliente.
 
      La línea siguiente copia el certificado de servidor en el almacén de personas de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.
 

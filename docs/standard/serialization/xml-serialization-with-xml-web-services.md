@@ -18,11 +18,11 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
 ms.openlocfilehash: 79cc53be0f099151db1b64190c844b1d57205a44
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018078"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>Serialización XML con servicios Web XML
 La serialización XML es el mecanismo de transporte subyacente utilizado en la arquitectura de los servicios Web XML, realizada por la clase <xref:System.Xml.Serialization.XmlSerializer>. Para controlar el XML generado por un servicio web XML, puede aplicar los atributos de [Atributos que controlan la serialización XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) y [Atributos que controlan la serialización SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) a las clases, los valores devueltos, los parámetros y los campos de un archivo usados para crear un servicio web XML (.asmx). Para obtener más información acerca de cómo crear un servicio Web XML, vea [XML Web Services Using ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100)).  

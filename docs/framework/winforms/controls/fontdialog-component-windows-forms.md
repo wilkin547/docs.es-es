@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], Windows Forms
 ms.assetid: 54015df3-aab2-4338-84e5-ba78cedbfdfc
 ms.openlocfilehash: de3a6b8f59d5ae83d55ea408f70d54d37761f693
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971358"
 ---
 # <a name="fontdialog-component-windows-forms"></a>FontDialog (Componente, formularios Windows Forms)
 El componente <xref:System.Windows.Forms.FontDialog> de Windows Forms es un cuadro de diálogo preconfigurado. Es el mismo **fuente** cuadro de diálogo expuesto por el sistema operativo Windows. El componente se hereda de la <xref:System.Windows.Forms.CommonDialog> clase.  

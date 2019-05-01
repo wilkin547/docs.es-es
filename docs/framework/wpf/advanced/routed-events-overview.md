@@ -16,11 +16,11 @@ helpviewer_keywords:
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
 ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982376"
 ---
 # <a name="routed-events-overview"></a>Información general sobre eventos enrutados
 En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En el tema se define la terminología de los eventos enrutados, se describe cómo se enrutan a través de un árbol de elementos, se resume cómo controlar los eventos enrutados y se explica cómo crear sus propios eventos enrutados personalizados.
@@ -86,11 +86,11 @@ En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_w
 ## <a name="routing-strategies"></a>Estrategias de enrutamiento  
  Los eventos enrutados usan una de estas tres estrategias de enrutamiento:  
   
--   **Propagación:** Se invocan los controladores de eventos en el origen del evento. Después, el evento enrutado va pasando por los elementos primarios sucesivos hasta alcanzar la raíz del árbol de elementos. La mayoría de los eventos enrutados usan la estrategia del enrutamiento de propagación. Los eventos con enrutamiento de propagación generalmente se usan para informar sobre cambios de entrada o de estado procedentes de controles distintos u otros elementos de la interfaz de usuario.  
+- **Propagación:** Se invocan los controladores de eventos en el origen del evento. Después, el evento enrutado va pasando por los elementos primarios sucesivos hasta alcanzar la raíz del árbol de elementos. La mayoría de los eventos enrutados usan la estrategia del enrutamiento de propagación. Los eventos con enrutamiento de propagación generalmente se usan para informar sobre cambios de entrada o de estado procedentes de controles distintos u otros elementos de la interfaz de usuario.  
   
--   **Directo:** Solo el propio elemento de origen tiene la oportunidad de invocar controladores como respuesta. Esto es análogo al "enrutamiento" que usa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] para los eventos. Sin embargo, a diferencia de un estándar [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] eventos, dirigir los eventos enrutados admiten control de clases (control de clases se explica en una sección posterior) y puede usarse por <xref:System.Windows.EventSetter> y <xref:System.Windows.EventTrigger>.  
+- **Directo:** Solo el propio elemento de origen tiene la oportunidad de invocar controladores como respuesta. Esto es análogo al "enrutamiento" que usa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] para los eventos. Sin embargo, a diferencia de un estándar [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] eventos, dirigir los eventos enrutados admiten control de clases (control de clases se explica en una sección posterior) y puede usarse por <xref:System.Windows.EventSetter> y <xref:System.Windows.EventTrigger>.  
   
--   **Túnel:** Inicialmente, se invocan los controladores de eventos en la raíz del árbol de elementos. Después, el evento enrutado viaja a través de los elementos secundarios sucesivos a lo largo de la ruta, hacia el elemento de nodo que es el origen del evento enrutado (el elemento que ha desencadenado el evento enrutado). Los eventos con enrutamiento de tunelización se suelen usar o controlar como parte de la composición de un control, de forma que los eventos de las partes compuestas se puedan suprimir o reemplazar deliberadamente por eventos que son específicos del control completo. Los eventos de entrada proporcionados en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se suelen implementar como un par de tunelización-propagación. Los eventos de tunelización también se conocen a veces como eventos de vista previa, debido a una convención de nomenclatura que se usa para los pares.  
+- **Túnel:** Inicialmente, se invocan los controladores de eventos en la raíz del árbol de elementos. Después, el evento enrutado viaja a través de los elementos secundarios sucesivos a lo largo de la ruta, hacia el elemento de nodo que es el origen del evento enrutado (el elemento que ha desencadenado el evento enrutado). Los eventos con enrutamiento de tunelización se suelen usar o controlar como parte de la composición de un control, de forma que los eventos de las partes compuestas se puedan suprimir o reemplazar deliberadamente por eventos que son específicos del control completo. Los eventos de entrada proporcionados en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se suelen implementar como un par de tunelización-propagación. Los eventos de tunelización también se conocen a veces como eventos de vista previa, debido a una convención de nomenclatura que se usa para los pares.  
   
 <a name="why_use"></a>   
 ## <a name="why-use-routed-events"></a>¿Por qué usar eventos enrutados?  
@@ -104,9 +104,9 @@ En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_w
   
  Aparte del aspecto del enrutamiento, hay otros dos motivos por los que cualquier evento de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se podría implementar como un evento enrutado en lugar de un evento [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] estándar. Si está implementando sus propios eventos, también podría considerar estos principios:  
   
--   Ciertos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] otras características, como aplicar estilos y plantillas <xref:System.Windows.EventSetter> y <xref:System.Windows.EventTrigger> requieren el evento que se hace referencia sea un evento enrutado. Este es el escenario del identificador de eventos mencionado anteriormente.  
+- Ciertos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] otras características, como aplicar estilos y plantillas <xref:System.Windows.EventSetter> y <xref:System.Windows.EventTrigger> requieren el evento que se hace referencia sea un evento enrutado. Este es el escenario del identificador de eventos mencionado anteriormente.  
   
--   Los eventos enrutados admiten un mecanismo de control de clases en el que la clase puede especificar métodos estáticos que tienen la oportunidad de controlar eventos enrutados antes de que cualquier controlador de instancias registrado tenga acceso a ellos. Esto es muy útil en el diseño de controles, porque una clase puede exigir comportamientos de clase orientados a eventos que no se puedan suprimir accidentalmente controlando un evento en una instancia.  
+- Los eventos enrutados admiten un mecanismo de control de clases en el que la clase puede especificar métodos estáticos que tienen la oportunidad de controlar eventos enrutados antes de que cualquier controlador de instancias registrado tenga acceso a ellos. Esto es muy útil en el diseño de controles, porque una clase puede exigir comportamientos de clase orientados a eventos que no se puedan suprimir accidentalmente controlando un evento en una instancia.  
   
  Cada una de las consideraciones anteriores se explica en una sección independiente de este tema.  
   
@@ -147,21 +147,21 @@ En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_w
   
  Sin embargo, hay un mecanismo "handledEventsToo" mediante el cual los agentes de escucha pueden seguir ejecutando controladores en respuesta a eventos enrutados donde <xref:System.Windows.RoutedEventArgs.Handled%2A> es `true` en los datos del evento. Es decir, la ruta de eventos no se detiene realmente al marcar los datos de evento como controlados. Solo puede usar el mecanismo handledEventsToo en código o en un <xref:System.Windows.EventSetter>:  
   
--   En el código, en lugar de usar una sintaxis de eventos específica del lenguaje que funciona para general [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] eventos, llamar a la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] método <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> para agregar el controlador. Especifique el valor de `handledEventsToo` como `true`.  
+- En el código, en lugar de usar una sintaxis de eventos específica del lenguaje que funciona para general [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] eventos, llamar a la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] método <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> para agregar el controlador. Especifique el valor de `handledEventsToo` como `true`.  
   
--   En un <xref:System.Windows.EventSetter>, establezca el <xref:System.Windows.EventSetter.HandledEventsToo%2A> atributo sea `true`.  
+- En un <xref:System.Windows.EventSetter>, establezca el <xref:System.Windows.EventSetter.HandledEventsToo%2A> atributo sea `true`.  
   
  Además del comportamiento que <xref:System.Windows.RoutedEventArgs.Handled%2A> genera el estado de los eventos enrutados, el concepto de <xref:System.Windows.RoutedEventArgs.Handled%2A> tiene implicaciones en cómo debe diseñar la aplicación y escribir el código de controlador de eventos. Puede conceptuar <xref:System.Windows.RoutedEventArgs.Handled%2A> como un protocolo simple que expone los eventos enrutados. Exactamente cómo usar este protocolo es hasta, pero el diseño conceptual de cómo el valor de <xref:System.Windows.RoutedEventArgs.Handled%2A> está pensado para utilizarse es como sigue:  
   
--   Si un evento enrutado está marcado como controlado, no es necesario que los demás elementos a lo largo de esa ruta lo controlen de nuevo.  
+- Si un evento enrutado está marcado como controlado, no es necesario que los demás elementos a lo largo de esa ruta lo controlen de nuevo.  
   
--   Si un evento enrutado no está marcado como controlado, otros agentes de escucha situados anteriormente a lo largo de la ruta han decidido no registrar un controlador o los controladores registrados han decidido no para manipular los datos de eventos y establecer <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true`. (O bien, es posible que el agente de escucha actual sea el primer punto de la ruta). Ahora los controladores del agente de escucha actual tienen tres posibles líneas de acción:  
+- Si un evento enrutado no está marcado como controlado, otros agentes de escucha situados anteriormente a lo largo de la ruta han decidido no registrar un controlador o los controladores registrados han decidido no para manipular los datos de eventos y establecer <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true`. (O bien, es posible que el agente de escucha actual sea el primer punto de la ruta). Ahora los controladores del agente de escucha actual tienen tres posibles líneas de acción:  
   
-    -   No realizar ninguna acción; el evento sigue estando sin controlar y se enruta al agente de escucha siguiente.  
+    - No realizar ninguna acción; el evento sigue estando sin controlar y se enruta al agente de escucha siguiente.  
   
-    -   Ejecutar código en respuesta al evento, pero tomar la determinación de que la acción realizada no ha sido lo suficientemente sustancial como para marcar el evento como controlado. El evento se enruta al agente de escucha siguiente.  
+    - Ejecutar código en respuesta al evento, pero tomar la determinación de que la acción realizada no ha sido lo suficientemente sustancial como para marcar el evento como controlado. El evento se enruta al agente de escucha siguiente.  
   
-    -   Ejecutar código en respuesta al evento. Marcar el evento como controlado en los datos de evento pasados al controlador, porque la acción realizada se ha considerado lo suficientemente sustancial como para marcarlo como controlado. El evento se enruta al agente de escucha siguiente, pero con <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` en sus datos de evento, por lo que solo `handledEventsToo` los agentes de escucha tienen la oportunidad de invocar más controladores.  
+    - Ejecutar código en respuesta al evento. Marcar el evento como controlado en los datos de evento pasados al controlador, porque la acción realizada se ha considerado lo suficientemente sustancial como para marcarlo como controlado. El evento se enruta al agente de escucha siguiente, pero con <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` en sus datos de evento, por lo que solo `handledEventsToo` los agentes de escucha tienen la oportunidad de invocar más controladores.  
   
  El comportamiento de enrutamiento se ha mencionado anteriormente refuerza este diseño conceptual: es más difícil (aunque todavía posible mediante código o estilos) asociar controladores para eventos enrutados que se invocan incluso si un controlador a lo largo de la ruta anterior ya estableció <xref:System.Windows.RoutedEventArgs.Handled%2A>a `true`.  
   

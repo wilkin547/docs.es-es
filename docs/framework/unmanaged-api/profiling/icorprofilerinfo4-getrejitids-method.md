@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9d2d48e5fb070ec0334de579d2e28146177a87b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049484"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs (Método)
 Devuelve una matriz de identificadores que identifican todas recompilada con JIT las versiones de la función especificada que todavía se asignan. Esto incluye versiones recompilada con JIT de funciones que se han revertido posteriormente, pero aún no se ha liberado (por ejemplo, cuando el dominio de aplicación que contiene la función revertida todavía está en uso).  

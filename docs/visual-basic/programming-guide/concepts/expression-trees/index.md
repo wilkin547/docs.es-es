@@ -3,11 +3,11 @@ title: Árboles de expresión (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
 ms.openlocfilehash: c1e576439956a735962978d37430949ed6bc39d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021874"
 ---
 # <a name="expression-trees-visual-basic"></a>Árboles de expresión (Visual Basic)
 Los árboles de expresión representan el código en una estructura de datos en forma de árbol donde cada nodo es una expresión, por ejemplo, una llamada a método o una operación binaria como `x < y`.  

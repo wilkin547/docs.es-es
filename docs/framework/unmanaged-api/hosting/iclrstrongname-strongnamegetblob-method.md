@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 38b6785afae75888398f1c0d3d69be2ce21d67bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993101"
 ---
 # <a name="iclrstrongnamestrongnamegetblob-method"></a>ICLRStrongName::StrongNameGetBlob (Método)
 Llena el búfer especificado con la representación binaria del archivo ejecutable en la dirección especificada.  

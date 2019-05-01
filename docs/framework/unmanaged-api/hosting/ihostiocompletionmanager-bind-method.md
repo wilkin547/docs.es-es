@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3fa87026e0d4c93da782be15bef98afa9a0e4dfd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984365"
 ---
 # <a name="ihostiocompletionmanagerbind-method"></a>IHostIoCompletionManager::Bind (Método)
 El identificador especificado se enlaza a un puerto de terminación de E/S que se ha creado mediante una llamada anterior a [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).  

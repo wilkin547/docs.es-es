@@ -6,11 +6,11 @@ helpviewer_keywords:
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
 ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050368"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabajar con NAT y firewalls
 Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta de acceso directa y abierta para la comunicación. Los paquetes se filtran, enrutan, analizan y transforman tanto en los equipos de extremo como en equipos intermedios de la red. Las traducciones de direcciones de red (NATs) y los firewalls son ejemplos comunes de aplicaciones intermedias que pueden participar en la comunicación de redes.  
@@ -45,11 +45,11 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
   
  Una topología común para las aplicaciones cliente-servidor consiste en tener clientes que estén detrás de un NAT sin Teredo con un firewall solo de salida y un servidor que sea direccionable de manera directa con un firewall fuerte. En este escenario, el transporte TCP con un MEP dúplex y un transporte HTTP con un MEP de solicitud-respuesta funcionan bien. Una topología común para las aplicaciones punto a punto consiste en tener ambos extremos detrás de NAT y firewalls. En este escenario y en escenarios donde la topología de red sea desconocida, considere las recomendaciones siguientes:  
   
--   No utilice transportes duales. Un transporte dual abre más conexiones, lo que reduce la oportunidad de realizar correctamente una conexión.  
+- No utilice transportes duales. Un transporte dual abre más conexiones, lo que reduce la oportunidad de realizar correctamente una conexión.  
   
--   Permita establecer canales secundarios a través de la conexión originaria. Utilizar canales secundarios, como en TCP dúplex, abre menos conexiones, lo que aumenta la oportunidad de realizar correctamente una conexión.  
+- Permita establecer canales secundarios a través de la conexión originaria. Utilizar canales secundarios, como en TCP dúplex, abre menos conexiones, lo que aumenta la oportunidad de realizar correctamente una conexión.  
   
--   Emplee un servicio alcanzable para registrar puntos de conexión o la retransmisión de tráfico. El uso de un servicio de conexión alcanzable globalmente, como un servidor Teredo, aumenta en gran medida la probabilidad de realizar correctamente una conexión cuando la topología de red es restrictiva o desconocida.  
+- Emplee un servicio alcanzable para registrar puntos de conexión o la retransmisión de tráfico. El uso de un servicio de conexión alcanzable globalmente, como un servidor Teredo, aumenta en gran medida la probabilidad de realizar correctamente una conexión cuando la topología de red es restrictiva o desconocida.  
   
  Las siguientes tablas examinan la unidireccional, de solicitud-respuesta y MEP dúplex y el estándar TCP, TCP con Teredo, y los transportes HTTP estándar y dual en WCF.  
   

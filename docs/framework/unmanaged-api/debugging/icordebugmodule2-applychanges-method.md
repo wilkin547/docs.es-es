@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ab0e28bd21b66f370a1a1e82359fe474574fd7bb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987974"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges (Método)
 Aplica los cambios en los metadatos y los cambios en el código de lenguaje intermedio (MSIL) de Microsoft a los procesos en ejecución.  

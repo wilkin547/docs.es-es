@@ -5,11 +5,11 @@ helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
 ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999263"
 ---
 # <a name="event-logging-in-wcf"></a>Registro de eventos en WCF
 Windows Communication Foundation (WCF) realiza un seguimiento de eventos internos en el registro de eventos de Windows.  
@@ -20,19 +20,19 @@ Windows Communication Foundation (WCF) realiza un seguimiento de eventos interno
 ### <a name="application-event-log"></a>Registro de eventos de aplicación  
  El **Application Event Log** contiene la mayoría de los eventos generados por WCF. La mayoría de las entradas indican que se produjo un error en una característica determinada en el inicio de una aplicación. Ejemplos:  
   
--   Registro y seguimiento de mensajes: WCF escribe un evento en el registro de eventos cuando se produce un error en el seguimiento y registro de mensajes. Sin embargo, no todos los errores de seguimiento desencadenan un evento. Para evitar que el registro de eventos que se rellena completamente con errores de seguimientos, WCF implementa un período de espera de 10 minutos para tal evento. Esto significa que si WCF escribe un error de seguimiento en el registro de eventos, no se realizará nuevamente para al menos 10 minutos.  
+- Registro y seguimiento de mensajes: WCF escribe un evento en el registro de eventos cuando se produce un error en el seguimiento y registro de mensajes. Sin embargo, no todos los errores de seguimiento desencadenan un evento. Para evitar que el registro de eventos que se rellena completamente con errores de seguimientos, WCF implementa un período de espera de 10 minutos para tal evento. Esto significa que si WCF escribe un error de seguimiento en el registro de eventos, no se realizará nuevamente para al menos 10 minutos.  
   
--   Agente de escucha compartido: El servicio de uso compartido de puertos TCP de WCF se registra un evento cuando no se inicia.  
+- Agente de escucha compartido: El servicio de uso compartido de puertos TCP de WCF se registra un evento cuando no se inicia.  
   
--   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: Registra los eventos cuando no se puede iniciar el servicio.  
+- [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: Registra los eventos cuando no se puede iniciar el servicio.  
   
--   Eventos de error y graves, como errores de inicio o bloqueos  
+- Eventos de error y graves, como errores de inicio o bloqueos  
   
--   Registro de mensajes activado: Registra los eventos cuando se activa el registro de mensajes. Esto sirve para notificar al administrador que la información confidencial, específica de la aplicación puede estar registrada en encabezados del mensaje y cuerpos.  
+- Registro de mensajes activado: Registra los eventos cuando se activa el registro de mensajes. Esto sirve para notificar al administrador que la información confidencial, específica de la aplicación puede estar registrada en encabezados del mensaje y cuerpos.  
   
--   Se registra un evento cuando se establece el atributo `enableLoggingKnownPII` en el elemento de `machineSettings` del archivo `machine.config`. Este atributo especifica si se permite a cualquier aplicación que se ejecuta en el equipo registrar la información de identificación personal conocida (PII).  
+- Se registra un evento cuando se establece el atributo `enableLoggingKnownPII` en el elemento de `machineSettings` del archivo `machine.config`. Este atributo especifica si se permite a cualquier aplicación que se ejecuta en el equipo registrar la información de identificación personal conocida (PII).  
   
--   Si el atributo `logKnownPii` en o el archivo `app.config` o `web.config` está establecido en `true` para una aplicación concreta con el fin de activar el registro de PII, pero el atributo `enableLoggingKnownPII` del elemento `machineSettings` del archivo `machine.config` está establecido en `false`, se registra un evento. Además, si `logKnownPii` y `enableLoggingKnownPII` están establecidos en `true`, y el evento está registrado. Para obtener más información sobre estas opciones de configuración, consulte la sección de seguridad de la [Configuring Message Logging](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) tema.  
+- Si el atributo `logKnownPii` en o el archivo `app.config` o `web.config` está establecido en `true` para una aplicación concreta con el fin de activar el registro de PII, pero el atributo `enableLoggingKnownPII` del elemento `machineSettings` del archivo `machine.config` está establecido en `false`, se registra un evento. Además, si `logKnownPii` y `enableLoggingKnownPII` están establecidos en `true`, y el evento está registrado. Para obtener más información sobre estas opciones de configuración, consulte la sección de seguridad de la [Configuring Message Logging](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) tema.  
   
 ### <a name="security-event-log"></a>Registro de evento de seguridad  
  El **Security Event Log** contiene eventos de auditoría de seguridad que están registrados por WCF.  

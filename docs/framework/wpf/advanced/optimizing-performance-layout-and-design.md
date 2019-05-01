@@ -10,11 +10,11 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050225"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Optimizar el rendimiento: Presentación y diseño
 El diseño de su aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] puede afectar a su rendimiento si se crea una sobrecarga innecesaria al calcular el diseño y validar las referencias de objeto. La construcción de objetos, especialmente en tiempo de ejecución, puede afectar a las características de rendimiento de la aplicación.  
@@ -26,25 +26,25 @@ El diseño de su aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
  El sistema de diseño completa dos pases por cada miembro secundario de una colección: un pase de medición y un pase de organización. Cada objeto secundario proporciona su propia implementación invalidada del <xref:System.Windows.UIElement.Measure%2A> y <xref:System.Windows.UIElement.Arrange%2A> métodos con el fin de proporcionar su propio comportamiento de diseño específico. En su forma más simple, el diseño es un sistema recursivo que permite dibujar y situar un elemento, así como cambiar su tamaño en pantalla.  
   
--   Un elemento secundario <xref:System.Windows.UIElement> objeto comienza el proceso de diseño, se miden las propiedades del núcleo.  
+- Un elemento secundario <xref:System.Windows.UIElement> objeto comienza el proceso de diseño, se miden las propiedades del núcleo.  
   
--   El objeto <xref:System.Windows.FrameworkElement> propiedades que están relacionadas con el tamaño, como <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, y <xref:System.Windows.FrameworkElement.Margin%2A>, se evalúan.  
+- El objeto <xref:System.Windows.FrameworkElement> propiedades que están relacionadas con el tamaño, como <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, y <xref:System.Windows.FrameworkElement.Margin%2A>, se evalúan.  
   
--   <xref:System.Windows.Controls.Panel>-se aplica la lógica específica, como el <xref:System.Windows.Controls.DockPanel.Dock%2A> propiedad de la <xref:System.Windows.Controls.DockPanel>, o el <xref:System.Windows.Controls.StackPanel.Orientation%2A> propiedad de la <xref:System.Windows.Controls.StackPanel>.  
+- <xref:System.Windows.Controls.Panel>-se aplica la lógica específica, como el <xref:System.Windows.Controls.DockPanel.Dock%2A> propiedad de la <xref:System.Windows.Controls.DockPanel>, o el <xref:System.Windows.Controls.StackPanel.Orientation%2A> propiedad de la <xref:System.Windows.Controls.StackPanel>.  
   
--   El contenido se organiza o se sitúa después de haberse medido todos los objetos secundarios.  
+- El contenido se organiza o se sitúa después de haberse medido todos los objetos secundarios.  
   
--   La colección de objetos secundarios se dibuja en la pantalla.  
+- La colección de objetos secundarios se dibuja en la pantalla.  
   
  Se vuelve a invocar el proceso de pase de diseño si se produce alguna de las siguientes acciones:  
   
--   Un objeto secundario se agrega a la colección.  
+- Un objeto secundario se agrega a la colección.  
   
--   Un <xref:System.Windows.FrameworkElement.LayoutTransform%2A> se aplica a los objetos secundarios.  
+- Un <xref:System.Windows.FrameworkElement.LayoutTransform%2A> se aplica a los objetos secundarios.  
   
--   El <xref:System.Windows.UIElement.UpdateLayout%2A> se llama al método del objeto secundario.  
+- El <xref:System.Windows.UIElement.UpdateLayout%2A> se llama al método del objeto secundario.  
   
--   Cuando se produce un cambio en el valor de una propiedad de dependencia que se marca con metadatos que afectan a los pases de medición o de organización.  
+- Cuando se produce un cambio en el valor de una propiedad de dependencia que se marca con metadatos que afectan a los pases de medición o de organización.  
   
 ### <a name="use-the-most-efficient-panel-where-possible"></a>Usar el panel más eficaz cuando sea posible  
  La complejidad del proceso de diseño se basa directamente en el comportamiento de diseño de la <xref:System.Windows.Controls.Panel>-elementos usas derivados. Por ejemplo, un <xref:System.Windows.Controls.Grid> o <xref:System.Windows.Controls.StackPanel> control proporciona mucha más funcionalidad que un <xref:System.Windows.Controls.Canvas> control. El precio de este mayor aumento de funcionalidad es el mayor aumento de los costos de rendimiento. Sin embargo, si no necesita la funcionalidad que un <xref:System.Windows.Controls.Grid> proporciona control, debe usar alternativas menos costosas, como un <xref:System.Windows.Controls.Canvas> o un panel personalizado.  

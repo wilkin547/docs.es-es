@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034559"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurar parámetros y tipos de datos de parámetro
 
@@ -50,33 +50,33 @@ El tipo del proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dn
 
 |Tipo de .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
-|<xref:System.Boolean>|Boolean|Bit|Booleano|Bit|Byte|
+|<xref:System.Boolean>|Booleano|Bit|Booleano|Bit|Byte|
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|
 |byte[]|Binary|VarBinary. Esta conversión implícita generará un error si la matriz de bytes es mayor que el tamaño máximo de un tipo VarBinary, que es de 8000 bytes. Para las matrices de bytes más de 8.000 bytes, establezca explícitamente la <xref:System.Data.SqlDbType>.|VarBinary|Binary|Raw|
 |<xref:System.Char>| |No se admite la deducción de un tipo <xref:System.Data.SqlDbType> a partir de char.|Char|Char|Byte|
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|
 |<xref:System.DateTimeOffset>|DateTimeOffset|DateTimeOffset en SQL Server 2008. La deducción de un elemento <xref:System.Data.SqlDbType> a partir de DateTimeOffset no se admite en versiones de SQL Server anteriores a SQL Server 2008.|||DateTime|
-|<xref:System.Decimal>|Decimal|Decimal|Decimal|Numérica|Número|
-|<xref:System.Double>|Double|Float|Double|Doble|Double|
+|<xref:System.Decimal>|Decimal|Decimal|Decimal|Numérica|número|
+|<xref:System.Double>|Doble|Float|Doble|Doble|Doble|
 |<xref:System.Single>|Single|Real|Single|Real|Float|
-|<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|
+|<xref:System.Guid>|GUID|UniqueIdentifier|Guid|UniqueIdentifier|Raw|
 |<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|
 |<xref:System.Int32>|Int32|Valor int.|Valor int.|Valor int.|Int32|
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Número|
-|<xref:System.Object>|Objeto|Variante|Variante|No se admite la deducción de un tipo OdbcType a partir de Object.|Blob|
+|<xref:System.Object>|Object|Variante|Variante|No se admite la deducción de un tipo OdbcType a partir de Object.|Blob|
 |<xref:System.String>|String|NVarChar. Esta conversión implícita generará un error en el caso de que la cadena tenga un tamaño superior al tamaño máximo de un tipo NVarChar, que es de 4.000 caracteres. En cadenas con más de 4.000 caracteres, establezca de forma explícita el tipo <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|
-|<xref:System.TimeSpan>|Tiempo|Time en SQL Server 2008. La deducción de un elemento <xref:System.Data.SqlDbType> a partir de TimeSpan no se admite en versiones de SQL Server anteriores a SQL Server 2008.|DBTime|Hora|DateTime|
+|<xref:System.TimeSpan>|Tiempo|Time en SQL Server 2008. La deducción de un elemento <xref:System.Data.SqlDbType> a partir de TimeSpan no se admite en versiones de SQL Server anteriores a SQL Server 2008.|DBTime|Tiempo|DateTime|
 |<xref:System.UInt16>|UInt16|No se admite la deducción de un tipo <xref:System.Data.SqlDbType> a partir de UInt16.|UnsignedSmallInt|Valor int.|UInt16|
 |<xref:System.UInt32>|UInt32|No se admite la deducción de un tipo <xref:System.Data.SqlDbType> a partir de UInt32.|UnsignedInt|BigInt|UInt32|
-|<xref:System.UInt64>|UInt64|No se admite la deducción de un tipo <xref:System.Data.SqlDbType> a partir de UInt64.|UnsignedBigInt|Numérica|Número|
+|<xref:System.UInt64>|UInt64|No se admite la deducción de un tipo <xref:System.Data.SqlDbType> a partir de UInt64.|UnsignedBigInt|Numérica|número|
 ||AnsiString|VarChar|VarChar|VarChar|VarChar|
 ||AnsiStringFixedLength|Char|Char|Char|Char|
-||Moneda|Money|Moneda|No es posible deducir el valor de `OdbcType` a partir de `Currency` .|Número|
+||Moneda|Money|Moneda|No es posible deducir el valor de `OdbcType` a partir de `Currency` .|número|
 ||Fecha|Date en SQL Server 2008. La deducción de un elemento <xref:System.Data.SqlDbType> a partir de Date no se admite en versiones de SQL Server anteriores a SQL Server 2008.|DBDate|Fecha|DateTime|
 ||SByte|No se admite la deducción de un elemento <xref:System.Data.SqlDbType> a partir de SByte.|TinyInt|No se admite la deducción de un tipo `OdbcType` a partir de SByte.|SByte|
 ||StringFixedLength|NChar|WChar|NChar|NChar|
-||Hora|Time en SQL Server 2008. La deducción de un elemento <xref:System.Data.SqlDbType> a partir de Time no se admite en versiones de SQL Server anteriores a SQL Server 2008.|DBTime|Hora|DateTime|
-||VarNumeric|No se admite la deducción de un elemento <xref:System.Data.SqlDbType> a partir de VarNumeric.|VarNumeric|No se admite la deducción de un tipo `OdbcType` a partir de VarNumeric.|Número|
+||Tiempo|Time en SQL Server 2008. La deducción de un elemento <xref:System.Data.SqlDbType> a partir de Time no se admite en versiones de SQL Server anteriores a SQL Server 2008.|DBTime|Tiempo|DateTime|
+||VarNumeric|No se admite la deducción de un elemento <xref:System.Data.SqlDbType> a partir de VarNumeric.|VarNumeric|No se admite la deducción de un tipo `OdbcType` a partir de VarNumeric.|número|
 |tipo definido por el usuario (un objeto con <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Object o String según el proveedor (SqlClient siempre devuelve Object, ODBC siempre devuelve String y el proveedor de datos administrados OleDb puede ver ambos)|SqlDbType.Udt si <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> está presente; de lo contrario, Variant.|OleDbType.VarWChar (si el valor es NULL); de lo contrario, OleDbType.Variant.|OdbcType.NVarChar|no admitido|
 
 > [!NOTE]

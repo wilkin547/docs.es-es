@@ -3,11 +3,11 @@ title: Codificadores personalizados
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996910"
 ---
 # <a name="custom-encoders"></a>Codificadores personalizados
 Este tema describe cómo crear codificadores personalizados.  
@@ -30,11 +30,11 @@ Este tema describe cómo crear codificadores personalizados.
   
  WCF proporciona los siguientes tipos de elementos de enlace que se deriva el <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> clase que pueda proporcionar codificación de texto, binario y Message Transmission Optimization Mechanism (MTOM):  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: El codificador más interoperable, pero el menos eficaz para los mensajes XML. En general, un servicio web, o un cliente de servicios web, pueden entender XML textual. No obstante, la transmisión de grandes bloques de datos binarios en forma de texto no es eficaz.  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: El codificador más interoperable, pero el menos eficaz para los mensajes XML. En general, un servicio web, o un cliente de servicios web, pueden entender XML textual. No obstante, la transmisión de grandes bloques de datos binarios en forma de texto no es eficaz.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Representa el elemento de enlace que especifica la codificación de caracteres y control de versiones usados para los mensajes XML basados en binario. Esto es más eficaz de las opciones de codificación, pero la menos interoperable, porque solo es compatible con los puntos de conexión WCF.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Representa el elemento de enlace que especifica la codificación de caracteres y control de versiones usados para los mensajes XML basados en binario. Esto es más eficaz de las opciones de codificación, pero la menos interoperable, porque solo es compatible con los puntos de conexión WCF.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Representa el elemento de enlace que especifica la codificación de caracteres y control de versiones de mensaje usados para un mensaje con una codificación Message Transmission Optimization Mechanism (MTOM). MTOM es una tecnología eficaz para la transmisión de datos binarios en mensajes de WCF. El codificador MTOM intenta equilibrar la eficacia y la interoperabilidad. El codificador MTOM transmite la mayoría del XML en formato de texto, pero optimiza bloques grandes de datos binarios transmitiéndolos como son, sin convertirlos en texto.  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Representa el elemento de enlace que especifica la codificación de caracteres y control de versiones de mensaje usados para un mensaje con una codificación Message Transmission Optimization Mechanism (MTOM). MTOM es una tecnología eficaz para la transmisión de datos binarios en mensajes de WCF. El codificador MTOM intenta equilibrar la eficacia y la interoperabilidad. El codificador MTOM transmite la mayoría del XML en formato de texto, pero optimiza bloques grandes de datos binarios transmitiéndolos como son, sin convertirlos en texto.  
   
  El elemento de enlace crea un binario, MTOM, o <xref:System.ServiceModel.Channels.MessageEncoderFactory> de texto. El generador crea un binario, MTOM o una instancia <xref:System.ServiceModel.Channels.MessageEncoderFactory> de texto. Normalmente, solo existe una instancia. No obstante, si se utilizan sesiones, puede proporcionarse un codificador diferente para cada sesión. El codificador binario utiliza este recurso para coordinar los diccionarios dinámicos (vea, Infrastructura de XML).  
   
@@ -69,19 +69,19 @@ Este tema describe cómo crear codificadores personalizados.
 ## <a name="writing-your-own-encoder"></a>Escritura de los propios controles  
  Para implementar su propio codificador de mensajes personalizado, debe proporcionar implementaciones personalizadas de las siguientes tres clases base abstractas:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder>  
+- <xref:System.ServiceModel.Channels.MessageEncoder>  
   
--   <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
   
  La conversión de la representación en memoria de un mensaje a una representación que pueda escribirse en una secuencia, se encapsula en la clase <xref:System.ServiceModel.Channels.MessageEncoder>, que actúa como generador para los lectores y sistemas de escritura XML que admiten tipos específicos de codificación XML.  
   
--   Los métodos clave de esta clase que deben invalidarse son:  
+- Los métodos clave de esta clase que deben invalidarse son:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> que adopta un objeto <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> y lo escribe en un objeto <xref:System.IO.Stream>.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> que adopta un objeto <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> y lo escribe en un objeto <xref:System.IO.Stream>.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> que adopta un objeto <xref:System.IO.Stream> y un tamaño de encabezado máximo, y devuelve un objeto <xref:System.ServiceModel.Channels.Message>.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> que adopta un objeto <xref:System.IO.Stream> y un tamaño de encabezado máximo, y devuelve un objeto <xref:System.ServiceModel.Channels.Message>.  
   
  Es el código que se escribe en los métodos que administran la conversión entre el protocolo de transporte estándar y su codificación personalizada.  
   

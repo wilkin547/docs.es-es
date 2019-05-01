@@ -12,18 +12,18 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d197caa2-38a5-4cb4-acc3-562130c2ace3
 ms.openlocfilehash: 79100b52d8e0a5b651edb9d6555a4497287ed858
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972146"
 ---
 # <a name="how-to-display-more-than-one-month-in-the-windows-forms-monthcalendar-control"></a>Procedimiento para mostrar más de un mes en el control MonthCalendar de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control puede mostrar un máximo de 12 meses a la vez. De forma predeterminada, el control muestra un solo mes, pero puede especificar el número de meses se muestra y cómo se organizan dentro del control. Al cambiar las dimensiones del calendario, el control cambia de tamaño, por lo que hay espacio suficiente en el formulario para las nuevas dimensiones.  
   
 ### <a name="to-display-multiple-months"></a>Para mostrar varios meses  
   
--   Establecer el <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> propiedad para el número de meses para mostrar horizontalmente y verticalmente.  
+- Establecer el <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> propiedad para el número de meses para mostrar horizontalmente y verticalmente.  
   
     ```vb  
     MonthCalendar1.CalendarDimensions = New System.Drawing.Size (3,2)  

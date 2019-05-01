@@ -17,11 +17,11 @@ helpviewer_keywords:
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
 ms.openlocfilehash: d4dab1a72d1e240bc428b2c6b83a722584e35ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971800"
 ---
 # <a name="short-data-type-visual-basic"></a>Tipo de datos cortos (Visual Basic)
 Contiene enteros de 16 bits (2 bytes) que el intervalo entre -32.768 y 32.767.  
@@ -62,11 +62,11 @@ Dim number = &H_3264S
 
 ## <a name="programming-tips"></a>Sugerencias de programación
 
--   **Ampliación.** El `Short` tipo de datos se amplía a `Integer`, `Long`, `Decimal`, `Single`, o `Double`. Esto significa que puede convertir un tipo de datos `Short` en cualquiera de estos tipos sin que se produzca un error <xref:System.OverflowException?displayProperty=nameWithType>.  
+- **Ampliación.** El `Short` tipo de datos se amplía a `Integer`, `Long`, `Decimal`, `Single`, o `Double`. Esto significa que puede convertir un tipo de datos `Short` en cualquiera de estos tipos sin que se produzca un error <xref:System.OverflowException?displayProperty=nameWithType>.  
   
--   **Caracteres de tipo.** Al agregar el carácter de tipo literal `S` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Short`. `Short` no tiene ningún carácter de tipo identificador.  
+- **Caracteres de tipo.** Al agregar el carácter de tipo literal `S` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Short`. `Short` no tiene ningún carácter de tipo identificador.  
   
--   **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Int16?displayProperty=nameWithType>.  
+- **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Int16?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 

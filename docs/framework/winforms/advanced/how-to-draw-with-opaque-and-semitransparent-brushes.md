@@ -11,11 +11,11 @@ helpviewer_keywords:
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
 ms.openlocfilehash: a302b8bf978afcead5768fadeb6336c1ece986ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004130"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Procedimiento para dibujar con pinceles opacos y semitransparentes
 Cuando se rellena una forma, se debe pasar un objeto <xref:System.Drawing.Brush> en uno de los métodos de relleno de la clase <xref:System.Drawing.Graphics>. El único parámetro del constructor <xref:System.Drawing.SolidBrush.%23ctor%2A> es un objeto <xref:System.Drawing.Color>. Para rellenar una forma opaca, establezca el componente alfa del color en 255. Para rellenar una forma semitransparente, establezca el componente alfa en cualquier valor entre 1 y 254.  

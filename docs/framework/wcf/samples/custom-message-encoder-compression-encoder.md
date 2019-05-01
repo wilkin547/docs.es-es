@@ -6,8 +6,8 @@ ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003098"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Codificador de mensajes personalizado: codificador de compresión
 Este ejemplo muestra cómo implementar un codificador personalizado mediante la plataforma de Windows Communication Foundation (WCF).  
@@ -29,13 +29,13 @@ Este ejemplo muestra cómo implementar un codificador personalizado mediante la 
   
  El ejemplo muestra cómo crear e integrar un codificador de mensajes personalizados en una aplicación de WCF. GZipEncoder.dll de la biblioteca se implementa tanto en el cliente como en el servicio. Este ejemplo también muestra el impacto de comprimir mensajes. El código en GZipEncoder.dll muestra lo siguiente:  
   
--   Compilar un codificador personalizado y un generador de codificadores.  
+- Compilar un codificador personalizado y un generador de codificadores.  
   
--   Desarrollar un elemento de enlace para un codificador personalizado.  
+- Desarrollar un elemento de enlace para un codificador personalizado.  
   
--   Utilizar la configuración de enlace personalizado para integrar los elementos de enlace personalizado.  
+- Utilizar la configuración de enlace personalizado para integrar los elementos de enlace personalizado.  
   
--   Desarrollar un controlador de configuración personalizado para permitir la configuración del archivo de un elemento de enlace personalizado.  
+- Desarrollar un controlador de configuración personalizado para permitir la configuración del archivo de un elemento de enlace personalizado.  
   
  Tal y como se ha indicado previamente, hay varios niveles que se implementan en un codificador personalizado. Para mostrar mejor la relación entre cada uno de estos niveles, hay un orden simplificado de eventos para el inicio del servicio en la lista siguiente:  
   
@@ -43,13 +43,13 @@ Este ejemplo muestra cómo implementar un codificador personalizado mediante la 
   
 2. Se lee la información de configuración.  
   
-    1.  La configuración de servicio registra el controlador de configuración personalizado.  
+    1. La configuración de servicio registra el controlador de configuración personalizado.  
   
-    2.  El host del servicio se crea y se abre.  
+    2. El host del servicio se crea y se abre.  
   
-    3.  El elemento de configuración personalizado crea y devuelve el elemento de enlace personalizado.  
+    3. El elemento de configuración personalizado crea y devuelve el elemento de enlace personalizado.  
   
-    4.  El elemento de enlace personalizado crea y devuelve el generador de codificadores de mensajes.  
+    4. El elemento de enlace personalizado crea y devuelve el generador de codificadores de mensajes.  
   
 3. Se recibe un mensaje.  
   

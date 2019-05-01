@@ -3,11 +3,11 @@ title: Interceptador de mensajes personalizados
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
 ms.openlocfilehash: d585e60c9b31e56873b0501425f55541bd647e02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990748"
 ---
 # <a name="custom-message-interceptor"></a>Interceptador de mensajes personalizados
 Este ejemplo muestra el uso del modelo de extensibilidad del canal. En particular, muestra cómo implementar un elemento de enlace personalizado que crea generadores de canales y agentes de escucha de canales para interceptar todos los mensajes entrantes y salientes en un punto concreto en la pila de tiempo de ejecución. El ejemplo también incluye un cliente y un servidor que muestran el uso de estos generadores personalizados.  

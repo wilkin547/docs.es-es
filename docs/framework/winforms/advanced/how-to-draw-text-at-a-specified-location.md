@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
 ms.openlocfilehash: f7834ea45db8dd6e971defd9c3b2b152ffddf512
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004065"
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>Procedimiento para dibujar texto en una ubicación especificada
 Al realizar dibujos personalizados, puede dibujar texto en una sola línea horizontal a partir de un punto especificado. Puede dibujar texto mediante el uso de esta manera el <xref:System.Drawing.Graphics.DrawString%2A> sobrecargar el método de la <xref:System.Drawing.Graphics> clases que toman un <xref:System.Drawing.Point> o <xref:System.Drawing.PointF> parámetro. El <xref:System.Drawing.Graphics.DrawString%2A> método también requiere una <xref:System.Drawing.Brush> y <xref:System.Drawing.Font>  
@@ -43,7 +43,7 @@ Al realizar dibujos personalizados, puede dibujar texto en una sola línea horiz
 ## <a name="compiling-the-code"></a>Compilar el código  
  Los ejemplos anteriores requieren:  
   
--   <xref:System.Windows.Forms.PaintEventArgs>  `e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+- <xref:System.Windows.Forms.PaintEventArgs>  `e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vea también
 

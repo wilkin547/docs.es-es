@@ -10,11 +10,11 @@ helpviewer_keywords:
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
 ms.openlocfilehash: efd65ff6417b1a63a7f87917c4d9a95dedc464ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004450"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Procedimiento para seleccionar las impresoras conectadas al equipo de un usuario en formularios Windows Forms
 A menudo, los usuarios quieren elegir una impresora que no sea la predeterminada. Para que los usuarios puedan elegir una impresora de entre las que están instaladas, use el componente <xref:System.Windows.Forms.PrintDialog> . Con el componente <xref:System.Windows.Forms.PrintDialog> , se captura el <xref:System.Windows.Forms.DialogResult> del componente <xref:System.Windows.Forms.PrintDialog> y se usa para seleccionar la impresora.  

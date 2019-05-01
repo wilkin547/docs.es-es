@@ -3,22 +3,22 @@ title: Construcción funcional (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
 ms.openlocfilehash: f677c0d0e204b5d12718701ab70b8a3c1bd3530c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977475"
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>Construcción funcional (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona una manera eficaz de crear elementos XML denominada *construcción funcional*. La construcción funcional es la capacidad de crear un árbol XML en una sola instrucción.  
   
  Hay varias características fundamentales de la interfaz de programación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] que permiten la construcción funcional:  
   
--   El constructor <xref:System.Xml.Linq.XElement> toma varios tipos de argumentos para el contenido. Por ejemplo, puede pasar otro objeto <xref:System.Xml.Linq.XElement>, que se convierte en un elemento secundario. Puede pasar un objeto <xref:System.Xml.Linq.XAttribute>, que se convierte en un atributo del elemento. O bien, puede pasar cualquier otro tipo de objeto, que se convierte en una cadena y en el contenido de texto del elemento.  
+- El constructor <xref:System.Xml.Linq.XElement> toma varios tipos de argumentos para el contenido. Por ejemplo, puede pasar otro objeto <xref:System.Xml.Linq.XElement>, que se convierte en un elemento secundario. Puede pasar un objeto <xref:System.Xml.Linq.XAttribute>, que se convierte en un atributo del elemento. O bien, puede pasar cualquier otro tipo de objeto, que se convierte en una cadena y en el contenido de texto del elemento.  
   
--   El constructor <xref:System.Xml.Linq.XElement> toma una matriz de `params` del tipo <xref:System.Object>, de forma que puede pasar cualquier número de objetos al constructor. Esto permite crear un elemento que tiene un contenido complejo.  
+- El constructor <xref:System.Xml.Linq.XElement> toma una matriz de `params` del tipo <xref:System.Object>, de forma que puede pasar cualquier número de objetos al constructor. Esto permite crear un elemento que tiene un contenido complejo.  
   
--   Si un objeto implementa <xref:System.Collections.Generic.IEnumerable%601>, se enumera la colección del objeto y se agregan todos los elementos de la colección. Si la colección contiene objetos <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>, cada elemento de la colección se agrega por separado. Esto es importante porque le permite pasar los resultados de una consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] al constructor.  
+- Si un objeto implementa <xref:System.Collections.Generic.IEnumerable%601>, se enumera la colección del objeto y se agregan todos los elementos de la colección. Si la colección contiene objetos <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>, cada elemento de la colección se agrega por separado. Esto es importante porque le permite pasar los resultados de una consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] al constructor.  
   
  A continuación se muestra un ejemplo:  
   

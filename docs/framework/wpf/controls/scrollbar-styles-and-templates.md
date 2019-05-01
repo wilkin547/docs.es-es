@@ -10,11 +10,11 @@ helpviewer_keywords:
 - parts [WPF], ScrollBar
 ms.assetid: 066ea45a-e27d-43b0-adfe-cce6934c22f5
 ms.openlocfilehash: 22b2206067302f621a94a1e9abca1607792b3393
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052890"
 ---
 # <a name="scrollbar-styles-and-templates"></a>Estilos y plantillas de ScrollBar
 En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Primitives.ScrollBar> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
 ms.openlocfilehash: cff13439995d8a90da15b7afa15723f21574e35e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962050"
 ---
 # <a name="analytic-tracing-with-etw"></a>Traza analítica con ETW
 Traza analítica de Windows Communication Foundation (WCF) ofrece una manera de capturar información de diagnóstico durante la ejecución de un servicio WCF. Eventos de traza analítica de WCF se emiten en puntos clave de la pila de WCF para permitir que la solución de problemas de servicios WCF en un entorno de producción. Traza analítica de WCF services tiene un impacto mínimo en el rendimiento de un producto de servidor que hospeda [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] servicios WCF como estos eventos se emiten de forma muy eficaz a una sesión de seguimiento de eventos para Windows (ETW).  
