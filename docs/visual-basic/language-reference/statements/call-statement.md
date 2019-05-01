@@ -9,43 +9,43 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
 ms.openlocfilehash: 755443a99a1ad8b0430a76d2dba1ff27472d4c9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945072"
 ---
-# <a name="call-statement-visual-basic"></a><span data-ttu-id="69c1c-102">Call (Instrucción, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69c1c-102">Call Statement (Visual Basic)</span></span>
-<span data-ttu-id="69c1c-103">Transfiere el control a un `Function`, `Sub`, o el procedimiento de la biblioteca de vínculos dinámicos (DLL).</span><span class="sxs-lookup"><span data-stu-id="69c1c-103">Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.</span></span>  
+# <a name="call-statement-visual-basic"></a><span data-ttu-id="53e3d-102">Call (Instrucción, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="53e3d-102">Call Statement (Visual Basic)</span></span>
+<span data-ttu-id="53e3d-103">Transfiere el control a un `Function`, `Sub`, o el procedimiento de la biblioteca de vínculos dinámicos (DLL).</span><span class="sxs-lookup"><span data-stu-id="53e3d-103">Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69c1c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="69c1c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53e3d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="53e3d-104">Syntax</span></span>  
   
 ```  
 [ Call ] procedureName [ (argumentList) ]  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="69c1c-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="69c1c-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="53e3d-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="53e3d-105">Parts</span></span>  
 |||
 |---|---|
-|`procedureName`|<span data-ttu-id="69c1c-106">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="69c1c-106">Required.</span></span> <span data-ttu-id="69c1c-107">Nombre del procedimiento para llamar a.</span><span class="sxs-lookup"><span data-stu-id="69c1c-107">Name of the procedure to call.</span></span>|
-|`argumentList`|<span data-ttu-id="69c1c-108">Opcional.</span><span class="sxs-lookup"><span data-stu-id="69c1c-108">Optional.</span></span> <span data-ttu-id="69c1c-109">Lista de variables o expresiones que representan los argumentos que se pasan al procedimiento cuando se llama.</span><span class="sxs-lookup"><span data-stu-id="69c1c-109">List of variables or expressions representing arguments that are passed to the procedure when it is called.</span></span> <span data-ttu-id="69c1c-110">Varios argumentos están separados por comas.</span><span class="sxs-lookup"><span data-stu-id="69c1c-110">Multiple arguments are separated by commas.</span></span> <span data-ttu-id="69c1c-111">Si incluye `argumentList`, debe encerrarlo entre paréntesis.</span><span class="sxs-lookup"><span data-stu-id="69c1c-111">If you include `argumentList`, you must enclose it in parentheses.</span></span>|
+|`procedureName`|<span data-ttu-id="53e3d-106">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="53e3d-106">Required.</span></span> <span data-ttu-id="53e3d-107">Nombre del procedimiento para llamar a.</span><span class="sxs-lookup"><span data-stu-id="53e3d-107">Name of the procedure to call.</span></span>|
+|`argumentList`|<span data-ttu-id="53e3d-108">Opcional.</span><span class="sxs-lookup"><span data-stu-id="53e3d-108">Optional.</span></span> <span data-ttu-id="53e3d-109">Lista de variables o expresiones que representan los argumentos que se pasan al procedimiento cuando se llama.</span><span class="sxs-lookup"><span data-stu-id="53e3d-109">List of variables or expressions representing arguments that are passed to the procedure when it is called.</span></span> <span data-ttu-id="53e3d-110">Varios argumentos están separados por comas.</span><span class="sxs-lookup"><span data-stu-id="53e3d-110">Multiple arguments are separated by commas.</span></span> <span data-ttu-id="53e3d-111">Si incluye `argumentList`, debe encerrarlo entre paréntesis.</span><span class="sxs-lookup"><span data-stu-id="53e3d-111">If you include `argumentList`, you must enclose it in parentheses.</span></span>|
 |||
   
-## <a name="remarks"></a><span data-ttu-id="69c1c-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="69c1c-112">Remarks</span></span>  
- <span data-ttu-id="69c1c-113">Puede usar el `Call` palabra clave cuando se llama a un procedimiento.</span><span class="sxs-lookup"><span data-stu-id="69c1c-113">You can use the `Call` keyword when you call a procedure.</span></span> <span data-ttu-id="69c1c-114">Para la mayoría de las llamadas de procedimiento, no es necesario usar esta palabra clave.</span><span class="sxs-lookup"><span data-stu-id="69c1c-114">For most procedure calls, you aren’t required to use this  keyword.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="53e3d-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="53e3d-112">Remarks</span></span>  
+ <span data-ttu-id="53e3d-113">Puede usar el `Call` palabra clave cuando se llama a un procedimiento.</span><span class="sxs-lookup"><span data-stu-id="53e3d-113">You can use the `Call` keyword when you call a procedure.</span></span> <span data-ttu-id="53e3d-114">Para la mayoría de las llamadas de procedimiento, no es necesario usar esta palabra clave.</span><span class="sxs-lookup"><span data-stu-id="53e3d-114">For most procedure calls, you aren’t required to use this  keyword.</span></span>  
   
- <span data-ttu-id="69c1c-115">Normalmente, se utiliza el `Call` palabra clave cuando la expresión llamada no se inicia con un identificador.</span><span class="sxs-lookup"><span data-stu-id="69c1c-115">You typically use the `Call` keyword when the called expression doesn’t start with an identifier.</span></span> <span data-ttu-id="69c1c-116">El uso de la `Call` no se recomienda la palabra clave para otros usos.</span><span class="sxs-lookup"><span data-stu-id="69c1c-116">Use of the `Call` keyword for other uses isn’t recommended.</span></span>  
+ <span data-ttu-id="53e3d-115">Normalmente, se utiliza el `Call` palabra clave cuando la expresión llamada no se inicia con un identificador.</span><span class="sxs-lookup"><span data-stu-id="53e3d-115">You typically use the `Call` keyword when the called expression doesn’t start with an identifier.</span></span> <span data-ttu-id="53e3d-116">El uso de la `Call` no se recomienda la palabra clave para otros usos.</span><span class="sxs-lookup"><span data-stu-id="53e3d-116">Use of the `Call` keyword for other uses isn’t recommended.</span></span>  
   
- <span data-ttu-id="69c1c-117">Si el procedimiento devuelve un valor, el `Call` instrucción lo descarta.</span><span class="sxs-lookup"><span data-stu-id="69c1c-117">If the procedure returns a value, the `Call` statement discards it.</span></span>  
+ <span data-ttu-id="53e3d-117">Si el procedimiento devuelve un valor, el `Call` instrucción lo descarta.</span><span class="sxs-lookup"><span data-stu-id="53e3d-117">If the procedure returns a value, the `Call` statement discards it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="69c1c-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="69c1c-118">Example</span></span>  
- <span data-ttu-id="69c1c-119">El código siguiente muestra dos ejemplos donde el `Call` palabra clave es necesario llamar a un procedimiento.</span><span class="sxs-lookup"><span data-stu-id="69c1c-119">The following code shows two examples where the `Call` keyword is necessary to call a procedure.</span></span> <span data-ttu-id="69c1c-120">En ambos ejemplos, la expresión llamada no se inicia con un identificador.</span><span class="sxs-lookup"><span data-stu-id="69c1c-120">In both examples, the called expression doesn't start with an identifier.</span></span>  
+## <a name="example"></a><span data-ttu-id="53e3d-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="53e3d-118">Example</span></span>  
+ <span data-ttu-id="53e3d-119">El código siguiente muestra dos ejemplos donde el `Call` palabra clave es necesario llamar a un procedimiento.</span><span class="sxs-lookup"><span data-stu-id="53e3d-119">The following code shows two examples where the `Call` keyword is necessary to call a procedure.</span></span> <span data-ttu-id="53e3d-120">En ambos ejemplos, la expresión llamada no se inicia con un identificador.</span><span class="sxs-lookup"><span data-stu-id="53e3d-120">In both examples, the called expression doesn't start with an identifier.</span></span>  
   
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   
-## <a name="see-also"></a><span data-ttu-id="69c1c-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="69c1c-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="53e3d-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="53e3d-121">See also</span></span>
 
-- [<span data-ttu-id="69c1c-122">Function (instrucción)</span><span class="sxs-lookup"><span data-stu-id="69c1c-122">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
-- [<span data-ttu-id="69c1c-123">Sub (instrucción)</span><span class="sxs-lookup"><span data-stu-id="69c1c-123">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="69c1c-124">Declare (instrucción)</span><span class="sxs-lookup"><span data-stu-id="69c1c-124">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [<span data-ttu-id="69c1c-125">Expresiones lambda</span><span class="sxs-lookup"><span data-stu-id="69c1c-125">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [<span data-ttu-id="53e3d-122">Function (instrucción)</span><span class="sxs-lookup"><span data-stu-id="53e3d-122">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="53e3d-123">Sub (instrucción)</span><span class="sxs-lookup"><span data-stu-id="53e3d-123">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="53e3d-124">Declare (instrucción)</span><span class="sxs-lookup"><span data-stu-id="53e3d-124">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="53e3d-125">Expresiones lambda</span><span class="sxs-lookup"><span data-stu-id="53e3d-125">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

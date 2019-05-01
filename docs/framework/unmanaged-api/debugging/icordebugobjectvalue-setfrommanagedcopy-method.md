@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e7684804b5f3cb71c38ee498fcc9c80003e7169
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965755"
 ---
-# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="f49eb-102">ICorDebugObjectValue::SetFromManagedCopy (Método)</span><span class="sxs-lookup"><span data-stu-id="f49eb-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
-<span data-ttu-id="f49eb-103">`SetFromManagedCopy` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="f49eb-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="f49eb-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="f49eb-104">Do not call this method.</span></span>  
+# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="20710-102">ICorDebugObjectValue::SetFromManagedCopy (Método)</span><span class="sxs-lookup"><span data-stu-id="20710-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
+<span data-ttu-id="20710-103">`SetFromManagedCopy` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="20710-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="20710-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="20710-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f49eb-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f49eb-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20710-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="20710-105">Syntax</span></span>  
   
 ```  
 HRESULT SetFromManagedCopy (  
@@ -35,7 +35,7 @@ HRESULT SetFromManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="f49eb-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f49eb-106">Requirements</span></span>  
- <span data-ttu-id="f49eb-107">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f49eb-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="20710-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="20710-106">Requirements</span></span>  
+ <span data-ttu-id="20710-107">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="20710-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f49eb-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="f49eb-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20710-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="20710-108">See also</span></span>

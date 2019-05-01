@@ -18,17 +18,17 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 07f3be81431201a4bb6011ea9b8f973061d3d101
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948880"
 ---
-# <a name="icordebugprocess2getversion-method"></a><span data-ttu-id="175c4-102">ICorDebugProcess2::GetVersion (Método)</span><span class="sxs-lookup"><span data-stu-id="175c4-102">ICorDebugProcess2::GetVersion Method</span></span>
+# <a name="icordebugprocess2getversion-method"></a><span data-ttu-id="1c6fc-102">ICorDebugProcess2::GetVersion (Método)</span><span class="sxs-lookup"><span data-stu-id="1c6fc-102">ICorDebugProcess2::GetVersion Method</span></span>
 
-<span data-ttu-id="175c4-103">Obtiene el número de versión de common language runtime (CLR) que se está ejecutando en este proceso.</span><span class="sxs-lookup"><span data-stu-id="175c4-103">Gets the version number of the common language runtime (CLR) that is running in this process.</span></span>
+<span data-ttu-id="1c6fc-103">Obtiene el número de versión de common language runtime (CLR) que se está ejecutando en este proceso.</span><span class="sxs-lookup"><span data-stu-id="1c6fc-103">Gets the version number of the common language runtime (CLR) that is running in this process.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="175c4-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="175c4-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="1c6fc-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1c6fc-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetVersion (
@@ -36,21 +36,21 @@ HRESULT GetVersion (
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="175c4-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="175c4-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="1c6fc-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="1c6fc-105">Parameters</span></span>
 
 `version`\
-<span data-ttu-id="175c4-106">[out] Un puntero a un COR_VERSION (estructura) que almacena el número de versión del tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="175c4-106">[out] A pointer to a COR_VERSION structure that stores the version number of the runtime.</span></span>
+<span data-ttu-id="1c6fc-106">[out] Un puntero a un COR_VERSION (estructura) que almacena el número de versión del tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="1c6fc-106">[out] A pointer to a COR_VERSION structure that stores the version number of the runtime.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="175c4-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="175c4-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="1c6fc-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="1c6fc-107">Remarks</span></span>
 
-<span data-ttu-id="175c4-108">El `GetVersion` método devuelve un código de error si no se ha cargado ningún tiempo de ejecución en el proceso.</span><span class="sxs-lookup"><span data-stu-id="175c4-108">The `GetVersion` method returns an error code if no runtime has been loaded in the process.</span></span>
+<span data-ttu-id="1c6fc-108">El `GetVersion` método devuelve un código de error si no se ha cargado ningún tiempo de ejecución en el proceso.</span><span class="sxs-lookup"><span data-stu-id="1c6fc-108">The `GetVersion` method returns an error code if no runtime has been loaded in the process.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="175c4-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="175c4-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="1c6fc-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1c6fc-109">Requirements</span></span>
 
-<span data-ttu-id="175c4-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="175c4-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="1c6fc-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1c6fc-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="175c4-111">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="175c4-111">**Header:** CorDebug.idl, CorDebug.h</span></span>
+<span data-ttu-id="1c6fc-111">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1c6fc-111">**Header:** CorDebug.idl, CorDebug.h</span></span>
 
-<span data-ttu-id="175c4-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="175c4-112">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="1c6fc-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1c6fc-112">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="175c4-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="175c4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+<span data-ttu-id="1c6fc-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c6fc-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

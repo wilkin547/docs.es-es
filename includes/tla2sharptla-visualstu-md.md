@@ -1,1 +1,9 @@
-<span data-ttu-id="8ac18-101">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="8ac18-101">Visual Studio</span></span>
+---
+ms.openlocfilehash: 91b163a97867c591a7ecc9961dd251208ca0ce01
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696430"
+---
+<span data-ttu-id="9c22d-101">Programa para la mejora</span><span class="sxs-lookup"><span data-stu-id="9c22d-101">Visual Studio</span></span>

@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a6c715183d3ae04130b729a9680335d65959836a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946736"
 ---
-# <a name="isframeworkassembly-function"></a><span data-ttu-id="58dc5-102">IsFrameworkAssembly (Función)</span><span class="sxs-lookup"><span data-stu-id="58dc5-102">IsFrameworkAssembly Function</span></span>
-<span data-ttu-id="58dc5-103">Obtiene un valor que indica si el ensamblado especificado está administrado.</span><span class="sxs-lookup"><span data-stu-id="58dc5-103">Gets a value that indicates whether the specified assembly is managed.</span></span>  
+# <a name="isframeworkassembly-function"></a><span data-ttu-id="ea108-102">IsFrameworkAssembly (Función)</span><span class="sxs-lookup"><span data-stu-id="ea108-102">IsFrameworkAssembly Function</span></span>
+<span data-ttu-id="ea108-103">Obtiene un valor que indica si el ensamblado especificado está administrado.</span><span class="sxs-lookup"><span data-stu-id="ea108-103">Gets a value that indicates whether the specified assembly is managed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="58dc5-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="58dc5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ea108-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ea108-104">Syntax</span></span>  
   
 ```  
 HRESULT IsFrameworkAssembly (  
@@ -37,29 +37,29 @@ HRESULT IsFrameworkAssembly (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="58dc5-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="58dc5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ea108-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ea108-105">Parameters</span></span>  
  `pwzAssemblyReference`  
- <span data-ttu-id="58dc5-106">[in] El nombre del ensamblado que se va a comprobar.</span><span class="sxs-lookup"><span data-stu-id="58dc5-106">[in] The name of the assembly to check.</span></span>  
+ <span data-ttu-id="ea108-106">[in] El nombre del ensamblado que se va a comprobar.</span><span class="sxs-lookup"><span data-stu-id="ea108-106">[in] The name of the assembly to check.</span></span>  
   
  `pbIsFrameworkAssembly`  
- <span data-ttu-id="58dc5-107">[out] Un valor booleano que indica si el ensamblado es administrado.</span><span class="sxs-lookup"><span data-stu-id="58dc5-107">[out] A Boolean value that indicates whether the assembly is managed.</span></span>  
+ <span data-ttu-id="ea108-107">[out] Un valor booleano que indica si el ensamblado es administrado.</span><span class="sxs-lookup"><span data-stu-id="ea108-107">[out] A Boolean value that indicates whether the assembly is managed.</span></span>  
   
  `pwzFrameworkAssemblyIdentity`  
- <span data-ttu-id="58dc5-108">[in] Una cadena sin formato canónico que contiene la identidad única del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="58dc5-108">[in] An uncanonicalized string that contains the unique identity of the assembly.</span></span>  
+ <span data-ttu-id="ea108-108">[in] Una cadena sin formato canónico que contiene la identidad única del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="ea108-108">[in] An uncanonicalized string that contains the unique identity of the assembly.</span></span>  
   
  `pccSize`  
- <span data-ttu-id="58dc5-109">[in] Tamaño de `pwzFrameworkAssemblyIdentity`.</span><span class="sxs-lookup"><span data-stu-id="58dc5-109">[in] The size of `pwzFrameworkAssemblyIdentity`.</span></span>  
+ <span data-ttu-id="ea108-109">[in] Tamaño de `pwzFrameworkAssemblyIdentity`.</span><span class="sxs-lookup"><span data-stu-id="ea108-109">[in] The size of `pwzFrameworkAssemblyIdentity`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="58dc5-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="58dc5-110">Remarks</span></span>  
- <span data-ttu-id="58dc5-111">El `pwzAssemblyReference` parámetro es un puntero a una cadena de caracteres que contiene el nombre de un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="58dc5-111">The `pwzAssemblyReference` parameter is a pointer to a character string that contains the name of an assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ea108-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ea108-110">Remarks</span></span>  
+ <span data-ttu-id="ea108-111">El `pwzAssemblyReference` parámetro es un puntero a una cadena de caracteres que contiene el nombre de un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="ea108-111">The `pwzAssemblyReference` parameter is a pointer to a character string that contains the name of an assembly.</span></span>  
   
- <span data-ttu-id="58dc5-112">Si este ensamblado forma parte de .NET Framework, el `pbIsFrameworkAssembly` parámetro contendrá un valor booleano de `true`.</span><span class="sxs-lookup"><span data-stu-id="58dc5-112">If this assembly is part of the .NET Framework, the `pbIsFrameworkAssembly` parameter will contain a Boolean value of `true`.</span></span>  
+ <span data-ttu-id="ea108-112">Si este ensamblado forma parte de .NET Framework, el `pbIsFrameworkAssembly` parámetro contendrá un valor booleano de `true`.</span><span class="sxs-lookup"><span data-stu-id="ea108-112">If this assembly is part of the .NET Framework, the `pbIsFrameworkAssembly` parameter will contain a Boolean value of `true`.</span></span>  
   
- <span data-ttu-id="58dc5-113">Si el ensamblado con nombre no forma parte de .NET Framework, o si el `pwzAssemblyReference` parámetro no es un ensamblado, el nombre `pbIsFrameworkAssembly` contendrá un valor booleano de `false`.</span><span class="sxs-lookup"><span data-stu-id="58dc5-113">If the named assembly is not part of the .NET Framework, or if the `pwzAssemblyReference` parameter does not name an assembly, `pbIsFrameworkAssembly` will contain a Boolean value of `false`.</span></span>  
+ <span data-ttu-id="ea108-113">Si el ensamblado con nombre no forma parte de .NET Framework, o si el `pwzAssemblyReference` parámetro no es un ensamblado, el nombre `pbIsFrameworkAssembly` contendrá un valor booleano de `false`.</span><span class="sxs-lookup"><span data-stu-id="ea108-113">If the named assembly is not part of the .NET Framework, or if the `pwzAssemblyReference` parameter does not name an assembly, `pbIsFrameworkAssembly` will contain a Boolean value of `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="58dc5-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="58dc5-114">Requirements</span></span>  
- <span data-ttu-id="58dc5-115">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="58dc5-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ea108-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ea108-114">Requirements</span></span>  
+ <span data-ttu-id="ea108-115">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ea108-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="58dc5-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="58dc5-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ea108-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="ea108-116">See also</span></span>
 
-- [<span data-ttu-id="58dc5-117">Funciones estáticas globales de la fusión</span><span class="sxs-lookup"><span data-stu-id="58dc5-117">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [<span data-ttu-id="ea108-117">Funciones estáticas globales de la fusión</span><span class="sxs-lookup"><span data-stu-id="ea108-117">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
