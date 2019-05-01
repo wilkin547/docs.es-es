@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 743160889c4f24a9edb2d0f9799662a74c5061fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 72b9799d1f5ba7efa37d5f8f2a633e6806a58607
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842088"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808098"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Cómo My depende del tipo de proyecto (Visual Basic)
 `My` muestra sólo los objetos requeridos por un tipo de proyecto determinado. Por ejemplo, el `My.Forms` objeto está disponible en una aplicación Windows Forms pero no está disponible en una aplicación de consola. En este tema se describe los `My` objetos están disponibles en diferentes tipos de proyectos.  
@@ -17,11 +17,11 @@ ms.locfileid: "58842088"
 ## <a name="my-in-windows-applications-and-web-sites"></a>Mi Windows en aplicaciones y sitios Web  
  `My` expone solo los objetos que son útiles para el tipo de proyecto actual; Suprime los objetos que no son aplicables. Por ejemplo, la siguiente imagen muestra la `My` modelo de objetos en un proyecto de Windows Forms.  
   
- ![Forma de My en una aplicación Windows Forms](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
+ ![Diagrama que muestra el modelo de objetos de My en una aplicación de Windows Forms.](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
   
  En un proyecto de sitio Web, `My` expone objetos que son relevantes para un desarrollador Web (como el `My.Request` y `My.Response` objetos) y suprime los objetos que no son relevantes (como la `My.Forms` objeto). La siguiente imagen muestra la `My` modelo de objetos en un proyecto de sitio Web:  
   
- ![Forma de My en una aplicación Web](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")  
+ ![Diagrama que muestra el modelo de objetos de My en una aplicación Web.](./media/how-my-depends-on-project-type/my-object-model-web.png)  
   
 ## <a name="project-details"></a>Detalles del proyecto  
  En la tabla siguiente se muestra qué `My` objetos están habilitados de forma predeterminada para ocho tipos de proyecto: Aplicación de Windows, clase, biblioteca, aplicación de consola, Windows biblioteca de controles, Web biblioteca de controles, Windows service, vacío y sitio Web.  
