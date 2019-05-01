@@ -18,36 +18,36 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 810875d1b91265fe886ce3cd11970cad7fee122d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041774"
 ---
-# <a name="icorprofilercallbackruntimethreadresumed-method"></a><span data-ttu-id="6a4c1-102">ICorProfilerCallback::RuntimeThreadResumed (Método)</span><span class="sxs-lookup"><span data-stu-id="6a4c1-102">ICorProfilerCallback::RuntimeThreadResumed Method</span></span>
-<span data-ttu-id="6a4c1-103">Notifica al generador de perfiles que se ha reanudado el subproceso especificado después de haberse suspendido.</span><span class="sxs-lookup"><span data-stu-id="6a4c1-103">Notifies the profiler that the specified thread has resumed after being suspended.</span></span>  
+# <a name="icorprofilercallbackruntimethreadresumed-method"></a><span data-ttu-id="67b14-102">ICorProfilerCallback::RuntimeThreadResumed (Método)</span><span class="sxs-lookup"><span data-stu-id="67b14-102">ICorProfilerCallback::RuntimeThreadResumed Method</span></span>
+<span data-ttu-id="67b14-103">Notifica al generador de perfiles que se ha reanudado el subproceso especificado después de haberse suspendido.</span><span class="sxs-lookup"><span data-stu-id="67b14-103">Notifies the profiler that the specified thread has resumed after being suspended.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a4c1-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6a4c1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="67b14-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="67b14-104">Syntax</span></span>  
   
 ```  
 HRESULT RuntimeThreadResumed(  
     [in] ThreadID threadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6a4c1-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="6a4c1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="67b14-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="67b14-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="6a4c1-106">[in] El identificador del subproceso que se ha reanudado.</span><span class="sxs-lookup"><span data-stu-id="6a4c1-106">[in] The ID of the thread that has been resumed.</span></span>  
+ <span data-ttu-id="67b14-106">[in] El identificador del subproceso que se ha reanudado.</span><span class="sxs-lookup"><span data-stu-id="67b14-106">[in] The ID of the thread that has been resumed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6a4c1-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6a4c1-107">Requirements</span></span>  
- <span data-ttu-id="6a4c1-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a4c1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="67b14-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="67b14-107">Requirements</span></span>  
+ <span data-ttu-id="67b14-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="67b14-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a4c1-109">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6a4c1-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="67b14-109">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="67b14-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6a4c1-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6a4c1-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="67b14-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="67b14-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6a4c1-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a4c1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="67b14-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="67b14-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a4c1-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="6a4c1-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="67b14-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="67b14-112">See also</span></span>
 
-- [<span data-ttu-id="6a4c1-113">ICorProfilerCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="6a4c1-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="6a4c1-114">RuntimeThreadSuspended (método)</span><span class="sxs-lookup"><span data-stu-id="6a4c1-114">RuntimeThreadSuspended Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)
+- [<span data-ttu-id="67b14-113">ICorProfilerCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="67b14-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="67b14-114">RuntimeThreadSuspended (método)</span><span class="sxs-lookup"><span data-stu-id="67b14-114">RuntimeThreadSuspended Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)

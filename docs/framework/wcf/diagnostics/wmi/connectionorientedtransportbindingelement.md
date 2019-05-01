@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: c1308313-f0e2-49e6-977d-6b4ce9ad35d1
 ms.openlocfilehash: 04e6abc5941ec99769ff2c15d47881b60e81d2e0
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048405"
 ---
-# <a name="connectionorientedtransportbindingelement"></a><span data-ttu-id="c66df-102">ConnectionOrientedTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="c66df-102">ConnectionOrientedTransportBindingElement</span></span>
-<span data-ttu-id="c66df-103">ConnectionOrientedTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="c66df-103">ConnectionOrientedTransportBindingElement</span></span>  
+# <a name="connectionorientedtransportbindingelement"></a><span data-ttu-id="f04d4-102">ConnectionOrientedTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="f04d4-102">ConnectionOrientedTransportBindingElement</span></span>
+<span data-ttu-id="f04d4-103">ConnectionOrientedTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="f04d4-103">ConnectionOrientedTransportBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c66df-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c66df-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f04d4-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f04d4-104">Syntax</span></span>  
   
 ```csharp
 class ConnectionOrientedTransportBindingElement : TransportBindingElement  
@@ -28,74 +28,74 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="c66df-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="c66df-105">Methods</span></span>  
- <span data-ttu-id="c66df-106">La clase ConnectionOrientedTransportBindingElement no define ningún método.</span><span class="sxs-lookup"><span data-stu-id="c66df-106">The ConnectionOrientedTransportBindingElement class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="f04d4-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="f04d4-105">Methods</span></span>  
+ <span data-ttu-id="f04d4-106">La clase ConnectionOrientedTransportBindingElement no define ningún método.</span><span class="sxs-lookup"><span data-stu-id="f04d4-106">The ConnectionOrientedTransportBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="c66df-107">Propiedades</span><span class="sxs-lookup"><span data-stu-id="c66df-107">Properties</span></span>  
- <span data-ttu-id="c66df-108">La clase ConnectionOrientedTransportBindingElement tiene las propiedades siguientes:</span><span class="sxs-lookup"><span data-stu-id="c66df-108">The ConnectionOrientedTransportBindingElement class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="f04d4-107">Propiedades</span><span class="sxs-lookup"><span data-stu-id="f04d4-107">Properties</span></span>  
+ <span data-ttu-id="f04d4-108">La clase ConnectionOrientedTransportBindingElement tiene las propiedades siguientes:</span><span class="sxs-lookup"><span data-stu-id="f04d4-108">The ConnectionOrientedTransportBindingElement class has the following properties:</span></span>  
   
-### <a name="channelinitializationtimeout"></a><span data-ttu-id="c66df-109">ChannelInitializationTimeout</span><span class="sxs-lookup"><span data-stu-id="c66df-109">ChannelInitializationTimeout</span></span>  
- <span data-ttu-id="c66df-110">Tipo de datos: datetime</span><span class="sxs-lookup"><span data-stu-id="c66df-110">Data type: datetime</span></span>  
+### <a name="channelinitializationtimeout"></a><span data-ttu-id="f04d4-109">ChannelInitializationTimeout</span><span class="sxs-lookup"><span data-stu-id="f04d4-109">ChannelInitializationTimeout</span></span>  
+ <span data-ttu-id="f04d4-110">Tipo de datos: datetime</span><span class="sxs-lookup"><span data-stu-id="f04d4-110">Data type: datetime</span></span>  
   
- <span data-ttu-id="c66df-111">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="c66df-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="f04d4-111">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="f04d4-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c66df-112">El timespan que especifica cuánto tiempo tiene la inicialización del canal para completarse antes de que se agote el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="c66df-112">The timespan that specifies how long the channel initialization has to complete before timing out.</span></span>  
+ <span data-ttu-id="f04d4-112">El timespan que especifica cuánto tiempo tiene la inicialización del canal para completarse antes de que se agote el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="f04d4-112">The timespan that specifies how long the channel initialization has to complete before timing out.</span></span>  
   
-### <a name="connectionbuffersize"></a><span data-ttu-id="c66df-113">ConnectionBufferSize</span><span class="sxs-lookup"><span data-stu-id="c66df-113">ConnectionBufferSize</span></span>  
- <span data-ttu-id="c66df-114">Tipo de datos: sint32</span><span class="sxs-lookup"><span data-stu-id="c66df-114">Data type: sint32</span></span>  
+### <a name="connectionbuffersize"></a><span data-ttu-id="f04d4-113">ConnectionBufferSize</span><span class="sxs-lookup"><span data-stu-id="f04d4-113">ConnectionBufferSize</span></span>  
+ <span data-ttu-id="f04d4-114">Tipo de datos: sint32</span><span class="sxs-lookup"><span data-stu-id="f04d4-114">Data type: sint32</span></span>  
   
- <span data-ttu-id="c66df-115">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="c66df-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="f04d4-115">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="f04d4-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c66df-116">El tamaño del búfer usado para transmitir un fragmento del mensaje serializado en la conexión del cliente o servicio.</span><span class="sxs-lookup"><span data-stu-id="c66df-116">The size of the buffer used to transmit a chunk of the serialized message on the wire from the client or service.</span></span>  
+ <span data-ttu-id="f04d4-116">El tamaño del búfer usado para transmitir un fragmento del mensaje serializado en la conexión del cliente o servicio.</span><span class="sxs-lookup"><span data-stu-id="f04d4-116">The size of the buffer used to transmit a chunk of the serialized message on the wire from the client or service.</span></span>  
   
-### <a name="hostnamecomparisonmode"></a><span data-ttu-id="c66df-117">HostNameComparisonMode</span><span class="sxs-lookup"><span data-stu-id="c66df-117">HostNameComparisonMode</span></span>  
- <span data-ttu-id="c66df-118">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="c66df-118">Data type: string</span></span>  
+### <a name="hostnamecomparisonmode"></a><span data-ttu-id="f04d4-117">HostNameComparisonMode</span><span class="sxs-lookup"><span data-stu-id="f04d4-117">HostNameComparisonMode</span></span>  
+ <span data-ttu-id="f04d4-118">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="f04d4-118">Data type: string</span></span>  
   
- <span data-ttu-id="c66df-119">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="c66df-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="f04d4-119">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="f04d4-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c66df-120">Un valor que indica si el nombre del host se usa para alcanzar el servicio al coincidir con el URI.</span><span class="sxs-lookup"><span data-stu-id="c66df-120">A value that indicates whether the hostname is used to reach the service when matching on the URI.</span></span>  
+ <span data-ttu-id="f04d4-120">Un valor que indica si el nombre del host se usa para alcanzar el servicio al coincidir con el URI.</span><span class="sxs-lookup"><span data-stu-id="f04d4-120">A value that indicates whether the hostname is used to reach the service when matching on the URI.</span></span>  
   
-### <a name="maxbuffersize"></a><span data-ttu-id="c66df-121">MaxBufferSize</span><span class="sxs-lookup"><span data-stu-id="c66df-121">MaxBufferSize</span></span>  
- <span data-ttu-id="c66df-122">Tipo de datos: sint32</span><span class="sxs-lookup"><span data-stu-id="c66df-122">Data type: sint32</span></span>  
+### <a name="maxbuffersize"></a><span data-ttu-id="f04d4-121">MaxBufferSize</span><span class="sxs-lookup"><span data-stu-id="f04d4-121">MaxBufferSize</span></span>  
+ <span data-ttu-id="f04d4-122">Tipo de datos: sint32</span><span class="sxs-lookup"><span data-stu-id="f04d4-122">Data type: sint32</span></span>  
   
- <span data-ttu-id="c66df-123">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="c66df-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="f04d4-123">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="f04d4-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c66df-124">El tamaño máximo del búfer que se va a usar.</span><span class="sxs-lookup"><span data-stu-id="c66df-124">The maximum size of the buffer to use.</span></span>  
+ <span data-ttu-id="f04d4-124">El tamaño máximo del búfer que se va a usar.</span><span class="sxs-lookup"><span data-stu-id="f04d4-124">The maximum size of the buffer to use.</span></span>  
   
-### <a name="maxoutputdelay"></a><span data-ttu-id="c66df-125">MaxOutputDelay</span><span class="sxs-lookup"><span data-stu-id="c66df-125">MaxOutputDelay</span></span>  
- <span data-ttu-id="c66df-126">Tipo de datos: datetime</span><span class="sxs-lookup"><span data-stu-id="c66df-126">Data type: datetime</span></span>  
+### <a name="maxoutputdelay"></a><span data-ttu-id="f04d4-125">MaxOutputDelay</span><span class="sxs-lookup"><span data-stu-id="f04d4-125">MaxOutputDelay</span></span>  
+ <span data-ttu-id="f04d4-126">Tipo de datos: datetime</span><span class="sxs-lookup"><span data-stu-id="f04d4-126">Data type: datetime</span></span>  
   
- <span data-ttu-id="c66df-127">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="c66df-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="f04d4-127">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="f04d4-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c66df-128">El intervalo máximo de tiempo que un fragmento de un mensaje o un mensaje completo pueden estar almacenados en búfer en memoria antes de que se envíen.</span><span class="sxs-lookup"><span data-stu-id="c66df-128">The maximum interval of time that a chunk of a message or a full message can remain buffered in memory before being sent out.</span></span>  
+ <span data-ttu-id="f04d4-128">El intervalo máximo de tiempo que un fragmento de un mensaje o un mensaje completo pueden estar almacenados en búfer en memoria antes de que se envíen.</span><span class="sxs-lookup"><span data-stu-id="f04d4-128">The maximum interval of time that a chunk of a message or a full message can remain buffered in memory before being sent out.</span></span>  
   
-### <a name="maxpendingaccepts"></a><span data-ttu-id="c66df-129">MaxPendingAccepts</span><span class="sxs-lookup"><span data-stu-id="c66df-129">MaxPendingAccepts</span></span>  
- <span data-ttu-id="c66df-130">Tipo de datos: sint32</span><span class="sxs-lookup"><span data-stu-id="c66df-130">Data type: sint32</span></span>  
+### <a name="maxpendingaccepts"></a><span data-ttu-id="f04d4-129">MaxPendingAccepts</span><span class="sxs-lookup"><span data-stu-id="f04d4-129">MaxPendingAccepts</span></span>  
+ <span data-ttu-id="f04d4-130">Tipo de datos: sint32</span><span class="sxs-lookup"><span data-stu-id="f04d4-130">Data type: sint32</span></span>  
   
- <span data-ttu-id="c66df-131">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="c66df-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="f04d4-131">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="f04d4-131">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c66df-132">El número máximo de subprocesos de aceptación asincrónica pendientes disponibles para procesar conexiones entrantes en el servicio.</span><span class="sxs-lookup"><span data-stu-id="c66df-132">The maximum number of pending asynchronous accept threads that are available for processing incoming connections on the service.</span></span>  
+ <span data-ttu-id="f04d4-132">El número máximo de subprocesos de aceptación asincrónica pendientes disponibles para procesar conexiones entrantes en el servicio.</span><span class="sxs-lookup"><span data-stu-id="f04d4-132">The maximum number of pending asynchronous accept threads that are available for processing incoming connections on the service.</span></span>  
   
-### <a name="maxpendingconnections"></a><span data-ttu-id="c66df-133">MaxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="c66df-133">MaxPendingConnections</span></span>  
- <span data-ttu-id="c66df-134">Tipo de datos: sint32</span><span class="sxs-lookup"><span data-stu-id="c66df-134">Data type: sint32</span></span>  
+### <a name="maxpendingconnections"></a><span data-ttu-id="f04d4-133">MaxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="f04d4-133">MaxPendingConnections</span></span>  
+ <span data-ttu-id="f04d4-134">Tipo de datos: sint32</span><span class="sxs-lookup"><span data-stu-id="f04d4-134">Data type: sint32</span></span>  
   
- <span data-ttu-id="c66df-135">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="c66df-135">Access type: Read-only</span></span>  
+ <span data-ttu-id="f04d4-135">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="f04d4-135">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c66df-136">El número máximo de conexiones pendientes.</span><span class="sxs-lookup"><span data-stu-id="c66df-136">The maximum number of pending connections.</span></span>  
+ <span data-ttu-id="f04d4-136">El número máximo de conexiones pendientes.</span><span class="sxs-lookup"><span data-stu-id="f04d4-136">The maximum number of pending connections.</span></span>  
   
-### <a name="transfermode"></a><span data-ttu-id="c66df-137">TransferMode</span><span class="sxs-lookup"><span data-stu-id="c66df-137">TransferMode</span></span>  
- <span data-ttu-id="c66df-138">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="c66df-138">Data type: string</span></span>  
+### <a name="transfermode"></a><span data-ttu-id="f04d4-137">TransferMode</span><span class="sxs-lookup"><span data-stu-id="f04d4-137">TransferMode</span></span>  
+ <span data-ttu-id="f04d4-138">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="f04d4-138">Data type: string</span></span>  
   
- <span data-ttu-id="c66df-139">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="c66df-139">Access type: Read-only</span></span>  
+ <span data-ttu-id="f04d4-139">Tipo de acceso: De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="f04d4-139">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c66df-140">Un valor que especifica si los mensajes están almacenados en búfer o se transmiten mediante el transporte orientado a la conexión.</span><span class="sxs-lookup"><span data-stu-id="c66df-140">A value that specifies whether the messages are buffered or streamed with the connection-oriented transport.</span></span>  
+ <span data-ttu-id="f04d4-140">Un valor que especifica si los mensajes están almacenados en búfer o se transmiten mediante el transporte orientado a la conexión.</span><span class="sxs-lookup"><span data-stu-id="f04d4-140">A value that specifies whether the messages are buffered or streamed with the connection-oriented transport.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c66df-141">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c66df-141">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f04d4-141">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f04d4-141">Requirements</span></span>  
   
-|<span data-ttu-id="c66df-142">MOF</span><span class="sxs-lookup"><span data-stu-id="c66df-142">MOF</span></span>|<span data-ttu-id="c66df-143">Se declara en Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="c66df-143">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="f04d4-142">MOF</span><span class="sxs-lookup"><span data-stu-id="f04d4-142">MOF</span></span>|<span data-ttu-id="f04d4-143">Se declara en Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="f04d4-143">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="c66df-144">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="c66df-144">Namespace</span></span>|<span data-ttu-id="c66df-145">Se define en root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="c66df-145">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="f04d4-144">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="f04d4-144">Namespace</span></span>|<span data-ttu-id="f04d4-145">Se define en root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="f04d4-145">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="c66df-146">Vea también</span><span class="sxs-lookup"><span data-stu-id="c66df-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f04d4-146">Vea también</span><span class="sxs-lookup"><span data-stu-id="f04d4-146">See also</span></span>
 
 - <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>

@@ -3,21 +3,21 @@ title: Procedimiento Encontrar una lista de elementos secundarios (XPath-LINQ to
 ms.date: 07/20/2015
 ms.assetid: 2868abfd-9f7b-412a-9cb5-f643f0fed146
 ms.openlocfilehash: 7ed31f17157176a6c100a8d02e065843a62b9587
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021666"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="28a80-102">Procedimiento Encontrar una lista de elementos secundarios (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="28a80-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="28a80-103">En este tema se compara el eje de los elementos secundarios de XPath con el eje [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.</span><span class="sxs-lookup"><span data-stu-id="28a80-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="8cef6-102">Procedimiento Encontrar una lista de elementos secundarios (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8cef6-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="8cef6-103">En este tema se compara el eje de los elementos secundarios de XPath con el eje [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.</span><span class="sxs-lookup"><span data-stu-id="8cef6-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
   
- <span data-ttu-id="28a80-104">La expresión XPath es: `./*`</span><span class="sxs-lookup"><span data-stu-id="28a80-104">The XPath expression is: `./*`</span></span>  
+ <span data-ttu-id="8cef6-104">La expresión XPath es: `./*`</span><span class="sxs-lookup"><span data-stu-id="8cef6-104">The XPath expression is: `./*`</span></span>  
   
-## <a name="example"></a><span data-ttu-id="28a80-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="28a80-105">Example</span></span>  
- <span data-ttu-id="28a80-106">Este ejemplo busca todos los elementos secundarios del elemento `Address`.</span><span class="sxs-lookup"><span data-stu-id="28a80-106">This example finds all of the child elements of the `Address` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="8cef6-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8cef6-105">Example</span></span>  
+ <span data-ttu-id="8cef6-106">Este ejemplo busca todos los elementos secundarios del elemento `Address`.</span><span class="sxs-lookup"><span data-stu-id="8cef6-106">This example finds all of the child elements of the `Address` element.</span></span>  
   
- <span data-ttu-id="28a80-107">Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="28a80-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="8cef6-107">Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="8cef6-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -40,7 +40,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="28a80-108">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="28a80-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="8cef6-108">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="8cef6-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -52,6 +52,6 @@ Results are identical
 <Country>USA</Country>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="28a80-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="28a80-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8cef6-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="8cef6-109">See also</span></span>
 
-- [<span data-ttu-id="28a80-110">LINQ to XML para usuarios de XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="28a80-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="8cef6-110">LINQ to XML para usuarios de XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8cef6-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

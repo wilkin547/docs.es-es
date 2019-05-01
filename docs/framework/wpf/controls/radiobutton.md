@@ -8,21 +8,21 @@ helpviewer_keywords:
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
 ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024128"
 ---
-# <a name="radiobutton"></a><span data-ttu-id="f2c2f-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="f2c2f-102">RadioButton</span></span>
-<span data-ttu-id="f2c2f-103"><xref:System.Windows.Controls.RadioButton> los controles normalmente se agrupan juntos para ofrecer a los usuarios una única opción entre varias opciones; se puede seleccionar sólo un botón a la vez.</span><span class="sxs-lookup"><span data-stu-id="f2c2f-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
+# <a name="radiobutton"></a><span data-ttu-id="f5053-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="f5053-102">RadioButton</span></span>
+<span data-ttu-id="f5053-103"><xref:System.Windows.Controls.RadioButton> los controles normalmente se agrupan juntos para ofrecer a los usuarios una única opción entre varias opciones; se puede seleccionar sólo un botón a la vez.</span><span class="sxs-lookup"><span data-stu-id="f5053-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
   
- <span data-ttu-id="f2c2f-104">La siguiente ilustración muestra un ejemplo de un <xref:System.Windows.Controls.RadioButton> control.</span><span class="sxs-lookup"><span data-stu-id="f2c2f-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
+ <span data-ttu-id="f5053-104">La siguiente ilustración muestra un ejemplo de un <xref:System.Windows.Controls.RadioButton> control.</span><span class="sxs-lookup"><span data-stu-id="f5053-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
   
- <span data-ttu-id="f2c2f-105">![Estados del botón de radio](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="f2c2f-105">![Radio button states](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
-<span data-ttu-id="f2c2f-106">RadioButton típico</span><span class="sxs-lookup"><span data-stu-id="f2c2f-106">Typical RadioButton</span></span>  
+ <span data-ttu-id="f5053-105">![Estados del botón de radio](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="f5053-105">![Radio button states](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
+<span data-ttu-id="f5053-106">RadioButton típico</span><span class="sxs-lookup"><span data-stu-id="f5053-106">Typical RadioButton</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="f2c2f-107">Referencia</span><span class="sxs-lookup"><span data-stu-id="f2c2f-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f5053-107">Referencia</span><span class="sxs-lookup"><span data-stu-id="f5053-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="f2c2f-108">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="f2c2f-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="f5053-108">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="f5053-108">Related Sections</span></span>
