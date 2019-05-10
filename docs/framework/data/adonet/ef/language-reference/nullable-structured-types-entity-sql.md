@@ -2,76 +2,76 @@
 title: Tipos estructurados que aceptan valores NULL [Entity SQL]
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: 632b092e1d0d99a2a40cc3cd4b323e234de6232b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6e1669bdc62de379051df60d6650fddb0c808da4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760329"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641829"
 ---
-# <a name="nullable-structured-types-entity-sql"></a><span data-ttu-id="4816a-102">Tipos estructurados que aceptan valores NULL [Entity SQL]</span><span class="sxs-lookup"><span data-stu-id="4816a-102">Nullable Structured Types (Entity SQL)</span></span>
-<span data-ttu-id="4816a-103">Una instancia `null` de un tipo estructurado es una instancia que no existe.</span><span class="sxs-lookup"><span data-stu-id="4816a-103">A `null` instance of a structured type is an instance that does not exist.</span></span> <span data-ttu-id="4816a-104">Es diferente de una instancia existente en la que todas las propiedades tienen valores `null`.</span><span class="sxs-lookup"><span data-stu-id="4816a-104">This is different from an existing instance in which all properties have `null` values.</span></span>  
+# <a name="nullable-structured-types-entity-sql"></a><span data-ttu-id="21def-102">Tipos estructurados que aceptan valores NULL [Entity SQL]</span><span class="sxs-lookup"><span data-stu-id="21def-102">Nullable Structured Types (Entity SQL)</span></span>
+<span data-ttu-id="21def-103">Una instancia `null` de un tipo estructurado es una instancia que no existe.</span><span class="sxs-lookup"><span data-stu-id="21def-103">A `null` instance of a structured type is an instance that does not exist.</span></span> <span data-ttu-id="21def-104">Es diferente de una instancia existente en la que todas las propiedades tienen valores `null`.</span><span class="sxs-lookup"><span data-stu-id="21def-104">This is different from an existing instance in which all properties have `null` values.</span></span>  
   
- <span data-ttu-id="4816a-105">En este tema se describen los tipos estructurados que admiten valores NULL, incluidos los que admiten valores NULL cuyos patrones de código producen instancias de `null` de tipos que admiten valores NULL estructurados.</span><span class="sxs-lookup"><span data-stu-id="4816a-105">This topic describes the nullable structured types, including which types are nullable and which code patterns produce `null` instances of structured nullable types.</span></span>  
+ <span data-ttu-id="21def-105">En este tema se describen los tipos estructurados que admiten valores NULL, incluidos los que admiten valores NULL cuyos patrones de código producen instancias de `null` de tipos que admiten valores NULL estructurados.</span><span class="sxs-lookup"><span data-stu-id="21def-105">This topic describes the nullable structured types, including which types are nullable and which code patterns produce `null` instances of structured nullable types.</span></span>  
   
-## <a name="kinds-of-nullable-structured-types"></a><span data-ttu-id="4816a-106">Modalidad de tipos estructurados que admiten valores NULL</span><span class="sxs-lookup"><span data-stu-id="4816a-106">Kinds of Nullable Structured Types</span></span>  
- <span data-ttu-id="4816a-107">Hay tres modalidades de tipos de estructura que admiten valores NULL:</span><span class="sxs-lookup"><span data-stu-id="4816a-107">There are three kinds of nullable structure types:</span></span>  
+## <a name="kinds-of-nullable-structured-types"></a><span data-ttu-id="21def-106">Modalidad de tipos estructurados que admiten valores NULL</span><span class="sxs-lookup"><span data-stu-id="21def-106">Kinds of Nullable Structured Types</span></span>  
+ <span data-ttu-id="21def-107">Hay tres modalidades de tipos de estructura que admiten valores NULL:</span><span class="sxs-lookup"><span data-stu-id="21def-107">There are three kinds of nullable structure types:</span></span>  
   
-- <span data-ttu-id="4816a-108">Tipos de fila.</span><span class="sxs-lookup"><span data-stu-id="4816a-108">Row types.</span></span>  
+- <span data-ttu-id="21def-108">Tipos de fila.</span><span class="sxs-lookup"><span data-stu-id="21def-108">Row types.</span></span>  
   
-- <span data-ttu-id="4816a-109">Tipos complejos.</span><span class="sxs-lookup"><span data-stu-id="4816a-109">Complex types.</span></span>  
+- <span data-ttu-id="21def-109">Tipos complejos.</span><span class="sxs-lookup"><span data-stu-id="21def-109">Complex types.</span></span>  
   
-- <span data-ttu-id="4816a-110">Tipos de entidad.</span><span class="sxs-lookup"><span data-stu-id="4816a-110">Entity types.</span></span>  
+- <span data-ttu-id="21def-110">Tipos de entidad.</span><span class="sxs-lookup"><span data-stu-id="21def-110">Entity types.</span></span>  
   
-## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a><span data-ttu-id="4816a-111">Patrones de código que generan instancias NULL de tipos estructurados</span><span class="sxs-lookup"><span data-stu-id="4816a-111">Code Patterns that Produce Null Instances of Structured Types</span></span>  
- <span data-ttu-id="4816a-112">Las escenarios siguientes producen instancias `null`:</span><span class="sxs-lookup"><span data-stu-id="4816a-112">The following scenarios produce `null` instances:</span></span>  
+## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a><span data-ttu-id="21def-111">Patrones de código que generan instancias NULL de tipos estructurados</span><span class="sxs-lookup"><span data-stu-id="21def-111">Code Patterns that Produce Null Instances of Structured Types</span></span>  
+ <span data-ttu-id="21def-112">Las escenarios siguientes producen instancias `null`:</span><span class="sxs-lookup"><span data-stu-id="21def-112">The following scenarios produce `null` instances:</span></span>  
   
-- <span data-ttu-id="4816a-113">Dar forma a `null` como un tipo estructurado:</span><span class="sxs-lookup"><span data-stu-id="4816a-113">Shaping `null` as a structured type:</span></span>  
+- <span data-ttu-id="21def-113">Dar forma a `null` como un tipo estructurado:</span><span class="sxs-lookup"><span data-stu-id="21def-113">Shaping `null` as a structured type:</span></span>  
   
     ```  
     TREAT (NULL AS StructuredType)  
     ```  
   
-- <span data-ttu-id="4816a-114">Convertir un tipo base en un tipo derivado:</span><span class="sxs-lookup"><span data-stu-id="4816a-114">Upcasting of a base type to a derived type:</span></span>  
+- <span data-ttu-id="21def-114">Convertir un tipo base en un tipo derivado:</span><span class="sxs-lookup"><span data-stu-id="21def-114">Upcasting of a base type to a derived type:</span></span>  
   
     ```  
     TREAT (BaseType AS DerivedType)  
     ```  
   
-- <span data-ttu-id="4816a-115">Unión externa en una condición falsa:</span><span class="sxs-lookup"><span data-stu-id="4816a-115">Outer join on false condition:</span></span>  
+- <span data-ttu-id="21def-115">Unión externa en una condición falsa:</span><span class="sxs-lookup"><span data-stu-id="21def-115">Outer join on false condition:</span></span>  
   
     ```  
     Collection1 LEFT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-     <span data-ttu-id="4816a-116">O bien</span><span class="sxs-lookup"><span data-stu-id="4816a-116">--or</span></span>  
+     <span data-ttu-id="21def-116">O bien</span><span class="sxs-lookup"><span data-stu-id="21def-116">--or</span></span>  
   
     ```  
     Collection1 RIGHT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-     <span data-ttu-id="4816a-117">O bien</span><span class="sxs-lookup"><span data-stu-id="4816a-117">--or</span></span>  
+     <span data-ttu-id="21def-117">O bien</span><span class="sxs-lookup"><span data-stu-id="21def-117">--or</span></span>  
   
     ```  
     Collection1 FULL OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-- <span data-ttu-id="4816a-118">Desreferenciar `null`:</span><span class="sxs-lookup"><span data-stu-id="4816a-118">Dereferencing a `null` reference:</span></span>  
+- <span data-ttu-id="21def-118">Desreferenciar `null`:</span><span class="sxs-lookup"><span data-stu-id="21def-118">Dereferencing a `null` reference:</span></span>  
   
     ```  
     DEREF(NullRef)  
     ```  
   
-- <span data-ttu-id="4816a-119">Obtener ANYELEMENT de una colección vacía:</span><span class="sxs-lookup"><span data-stu-id="4816a-119">Obtaining ANYELEMENT from an empty collection:</span></span>  
+- <span data-ttu-id="21def-119">Obtener ANYELEMENT de una colección vacía:</span><span class="sxs-lookup"><span data-stu-id="21def-119">Obtaining ANYELEMENT from an empty collection:</span></span>  
   
     ```  
     ANYELEMENT(EmptyCollection)  
     ```  
   
-- <span data-ttu-id="4816a-120">Comprobar instancias `null` de tipos estructurados:</span><span class="sxs-lookup"><span data-stu-id="4816a-120">Checking for `null` instances of structured types:</span></span>  
+- <span data-ttu-id="21def-120">Comprobar instancias `null` de tipos estructurados:</span><span class="sxs-lookup"><span data-stu-id="21def-120">Checking for `null` instances of structured types:</span></span>  
   
     ```csharp  
     ...  
@@ -88,6 +88,6 @@ ms.locfileid: "61760329"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="4816a-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="4816a-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21def-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="21def-121">See also</span></span>
 
-- [<span data-ttu-id="4816a-122">Información general sobre Entity SQL</span><span class="sxs-lookup"><span data-stu-id="4816a-122">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [<span data-ttu-id="21def-122">Información general sobre Entity SQL</span><span class="sxs-lookup"><span data-stu-id="21def-122">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
