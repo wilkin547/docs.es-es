@@ -14,12 +14,12 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bd9fef806434b4ae064161eba11ad113fab07784
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928725"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627385"
 ---
 # <a name="creating-an-ink-input-control"></a>Creación de un control de entrada manuscrita
 Puede crear un control personalizado dinámicamente y estáticamente representa la entrada de lápiz. Es decir, represente la tinta mientras el usuario dibuja un trazo, causando parece "fluir" del lápiz de tablet PC y mostrar tinta después de se agrega al control, mediante el lápiz de tablet PC, pegado desde el Portapapeles, o cargar desde un archivo. Para representar dinámicamente la tinta, el control debe usar un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Para representar estáticamente tinta, debe invalidar los métodos de evento de lápiz (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, y <xref:System.Windows.UIElement.OnStylusUp%2A>) para recopilar <xref:System.Windows.Input.StylusPoint> datos, crear los trazos y agregarlos a un <xref:System.Windows.Controls.InkPresenter> (que representa la entrada de lápiz en el control).  

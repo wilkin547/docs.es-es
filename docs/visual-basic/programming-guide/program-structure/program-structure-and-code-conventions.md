@@ -13,21 +13,21 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: b79e339ebe81a7228a02837e5c0c23c80a8132e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dbe8fe977b2aa11573ab7a1ac1d79be0b5204af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916947"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624329"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Convenciones de código y estructura de programas (Visual Basic)
 Esta sección presenta la estructura de programa típica de Visual Basic, proporciona un sencillo programa de Visual Basic, "Hello, World" y describe las convenciones de código de Visual Basic. Convenciones de código son sugerencias que se centran no en la lógica de un programa, pero en su estructura física y apariencia. Seguirlas hace que el código sea más fácil de leer, comprender y mantener. Convenciones de código pueden incluir, entre otros:  
   
--   Formatos estandarizados para etiquetar y comentar código.  
+- Formatos estandarizados para etiquetar y comentar código.  
   
--   Directrices para el espaciado, formato y aplicar sangría al código.  
+- Directrices para el espaciado, formato y aplicar sangría al código.  
   
--   Convenciones de nomenclatura para objetos, variables y procedimientos.  
+- Convenciones de nomenclatura para objetos, variables y procedimientos.  
   
  Los temas siguientes presentan un conjunto de directrices de programación para programas de Visual Basic, junto con ejemplos de uso correcto.  
   

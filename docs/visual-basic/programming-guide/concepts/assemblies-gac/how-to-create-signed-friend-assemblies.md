@@ -2,12 +2,12 @@
 title: Procedimiento Crear ensamblados de confianza firmados (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3267df18cf5a7be2ceb5867b16cbb58bbf9010ce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022277"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624780"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Procedimiento Crear ensamblados de confianza firmados (Visual Basic)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  

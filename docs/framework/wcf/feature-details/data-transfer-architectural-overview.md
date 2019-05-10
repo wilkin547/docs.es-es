@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 401803229c54a2b38af08c0418b9efd4c64d9d60
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856610"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627028"
 ---
 # <a name="data-transfer-architectural-overview"></a>Información general sobre la arquitectura de transferencia de datos
 Windows Communication Foundation (WCF) puede considerarse como una infraestructura de mensajería. Puede recibir mensajes, procesarlos y enviarlos al código de usuario para realizar acciones adicionales o puede construir mensajes a partir de los datos proporcionados por el código de usuario y entregarlos en un destino. Este tema, que está dirigido a desarrolladores avanzados, describe la arquitectura para el manejo de mensajes y los datos contenidos. Para obtener una vista más sencilla y orientada a tareas sobre cómo enviar y recibir datos, consulte [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -66,9 +66,9 @@ Windows Communication Foundation (WCF) puede considerarse como una infraestructu
 ### <a name="getting-data-from-a-message-body"></a>Obtención de datos del cuerpo de un mensaje  
  Puede extraer los datos almacenados en el cuerpo de un mensaje principalmente de dos maneras:  
   
--   Puede obtener una vez el cuerpo del mensaje al completo llamando al método <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> y pasando un sistema de escritura de XML. El cuerpo del mensaje al completo se escribe en este sistema de escritura. Obtener el cuerpo del mensaje al completo de una vez también se llama *escribir un mensaje*. El canal de pilas realiza principalmente la escritura al enviar mensajes; una parte de la pila de canales tendrá, por lo general, acceso a todo el cuerpo del mensaje, lo codificará y enviará.  
+- Puede obtener una vez el cuerpo del mensaje al completo llamando al método <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> y pasando un sistema de escritura de XML. El cuerpo del mensaje al completo se escribe en este sistema de escritura. Obtener el cuerpo del mensaje al completo de una vez también se llama *escribir un mensaje*. El canal de pilas realiza principalmente la escritura al enviar mensajes; una parte de la pila de canales tendrá, por lo general, acceso a todo el cuerpo del mensaje, lo codificará y enviará.  
   
--   Otra manera de extraer información del cuerpo del mensaje es llamar <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> y obtener un lector XML. A continuación, se puede tener acceso al cuerpo del mensaje de manera consecutiva tanto como sea necesario llamando a los métodos en el lector. Obtener el cuerpo del mensaje parte por parte también se llama *leer un mensaje*. La lectura del mensaje es utilizada principalmente por el marco de trabajo de servicio al recibir mensajes. Por ejemplo, cuando <xref:System.Runtime.Serialization.DataContractSerializer> se está utilizando, el marco de trabajo de servicio obtendrá un lector XML sobre el cuerpo y lo pasará al motor de deserialización, que comenzará, a continuación, a leer el mensaje elemento a elemento y a construir el gráfico de objeto correspondiente.  
+- Otra manera de extraer información del cuerpo del mensaje es llamar <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> y obtener un lector XML. A continuación, se puede tener acceso al cuerpo del mensaje de manera consecutiva tanto como sea necesario llamando a los métodos en el lector. Obtener el cuerpo del mensaje parte por parte también se llama *leer un mensaje*. La lectura del mensaje es utilizada principalmente por el marco de trabajo de servicio al recibir mensajes. Por ejemplo, cuando <xref:System.Runtime.Serialization.DataContractSerializer> se está utilizando, el marco de trabajo de servicio obtendrá un lector XML sobre el cuerpo y lo pasará al motor de deserialización, que comenzará, a continuación, a leer el mensaje elemento a elemento y a construir el gráfico de objeto correspondiente.  
   
  Solo se puede recuperar un cuerpo de mensaje una vez. Esto permite trabajar con secuencias de solo avance. Por ejemplo, puede escribir una invalidación <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> que lee de <xref:System.IO.FileStream> y devuelve los resultados como un conjunto de información XML. Nunca necesitará "rebobinar" hasta el principio del archivo.  
   
@@ -160,11 +160,11 @@ Windows Communication Foundation (WCF) puede considerarse como una infraestructu
 ### <a name="the-istreamprovider-interface"></a>La interfaz IStreamProvider  
  Al escribir un mensaje saliente que contiene un cuerpo transmitido a un sistema de escritura XML, <xref:System.ServiceModel.Channels.Message> utilizará una secuencia de llamadas similar a la siguiente en su implementación <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> :  
   
--   Escriba cualquier información necesaria que preceda a la secuencia (por ejemplo, la etiqueta de apertura XML)  
+- Escriba cualquier información necesaria que preceda a la secuencia (por ejemplo, la etiqueta de apertura XML)  
   
--   Escriba la secuencia.  
+- Escriba la secuencia.  
   
--   Escriba cualquier información que siga a la secuencia (por ejemplo, la etiqueta de cierre XML)  
+- Escriba cualquier información que siga a la secuencia (por ejemplo, la etiqueta de cierre XML)  
   
  Esto funciona bien con codificaciones similares a la codificación XML textual. Sin embargo, hay algunas codificaciones que no proporcionan información del conjunto de información XML (por ejemplo, etiquetas para iniciar y finalizar elementos XML) junto con los datos contenidos en los elementos. Por ejemplo, para la codificación MTOM, la codificación del mensaje se divide en varias partes. Una parte contiene el conjunto de información XML, que puede contener referencias a otras partes de contenido de elementos reales. Puesto que el conjunto de información XML es normalmente pequeño en comparación con el contenido secuenciado, tiene sentido almacenar en búfer el conjunto de información, escribirlo y, a continuación, escribir el contenido de manera secuenciada. Esto significa que cuando se escribe la etiqueta del elemento de cierre, no se debería haber escrito todavía la secuencia.  
   

@@ -2,21 +2,21 @@
 title: Secuencias de Oracle
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 8fe7513093d06f3928540f2de8cba902ce62b56e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ba7b750d48613b80eca0ef3c7c2da127977498d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878457"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64632340"
 ---
 # <a name="oracle-sequences"></a>Secuencias de Oracle
 El proveedor de datos .NET Framework para Oracle proporciona compatibilidad para recuperar los valores clave de secuencia de Oracle que genera el servidor después de realizar inserciones con <xref:System.Data.OracleClient.OracleDataAdapter>.  
   
  SQL Server y Oracle admiten la creación de columnas de incremento automático que pueden designarse como claves principales. Estos valores los genera el servidor cuando se agregan filas a una tabla. En SQL Server se establece la propiedad Identity de una columna; en Oracle se crea una secuencia. La diferencia entre las columnas de incremento automático de SQL Server y las secuencias de Oracle es la siguiente:  
   
--   En SQL Server, marca una columna como columna de incremento automático y SQL Server genera de forma automática nuevos valores para la columna cuando se inserta una nueva fila.  
+- En SQL Server, marca una columna como columna de incremento automático y SQL Server genera de forma automática nuevos valores para la columna cuando se inserta una nueva fila.  
   
--   En Oracle, para generar nuevos valores en una columna de la tabla crea una secuencia, pero no existe vínculo directo entre la secuencia y la tabla o la columna. Las secuencias de Oracle son objetos, de la misma forma que las tablas o los procedimientos almacenados.  
+- En Oracle, para generar nuevos valores en una columna de la tabla crea una secuencia, pero no existe vínculo directo entre la secuencia y la tabla o la columna. Las secuencias de Oracle son objetos, de la misma forma que las tablas o los procedimientos almacenados.  
   
  Cuando crea una secuencia en una base de datos de Oracle, puede definir su valor inicial y el incremento entre los valores. También puede consultar si existen nuevos valores en la secuencia antes de enviar nuevas filas. Esto implica que el código puede reconocer los valores clave de las nuevas filas antes de insertarlas en la base de datos.  
   

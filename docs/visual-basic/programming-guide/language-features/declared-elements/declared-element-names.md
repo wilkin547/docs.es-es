@@ -23,12 +23,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7642aea72ddaa3789dba3b2328f271afcb92a16a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61828625"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610548"
 ---
 # <a name="declared-element-names-visual-basic"></a>Nombres de elementos declarados (Visual Basic)
 Cada elemento declarado tiene un nombre, también denominado una *identificador*, que es lo que el código que se usa para hacer referencia a él.  
@@ -36,13 +36,13 @@ Cada elemento declarado tiene un nombre, también denominado una *identificador*
 ## <a name="rules"></a>Reglas  
  El nombre de un elemento en Visual Basic debe observar las reglas siguientes:  
   
--   Debe comenzar con un carácter alfabético o un carácter de subrayado (`_`).  
+- Debe comenzar con un carácter alfabético o un carácter de subrayado (`_`).  
   
--   Solo debe contener caracteres alfabéticos, dígitos decimales y caracteres de subrayado.  
+- Solo debe contener caracteres alfabéticos, dígitos decimales y caracteres de subrayado.  
   
--   Debe contener al menos un carácter alfabético o dígito decimal si empieza con un carácter de subrayado.  
+- Debe contener al menos un carácter alfabético o dígito decimal si empieza con un carácter de subrayado.  
   
--   No debe superar los 1023 caracteres.  
+- No debe superar los 1023 caracteres.  
   
  La longitud máxima de 1023 caracteres también se aplica a toda la cadena de un nombre completo, como `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
   
@@ -75,9 +75,9 @@ Cada elemento declarado tiene un nombre, también denominado una *identificador*
   
  En general, debe usar nombres de escape solo cuando:  
   
--   El código se migrado desde una versión anterior de Visual Basic que no reservó la palabra clave que se va a usar como un nombre; o  
+- El código se migrado desde una versión anterior de Visual Basic que no reservó la palabra clave que se va a usar como un nombre; o  
   
--   Trabaja con código escrito en otro idioma en el que no se reserva la palabra clave dada.  
+- Trabaja con código escrito en otro idioma en el que no se reserva la palabra clave dada.  
   
  De lo contrario, considere cambiar el nombre del elemento si su nombre entra en conflicto con una palabra clave. El entorno de desarrollo integrado (IDE) proporciona una manera fácil de hacerlo. Para obtener más información, consulte [refactorización](/visualstudio/vb-ide/refactoring-vb).  
   

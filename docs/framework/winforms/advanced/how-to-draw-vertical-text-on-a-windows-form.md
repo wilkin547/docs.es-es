@@ -14,12 +14,12 @@ helpviewer_keywords:
 - text [Windows Forms], drawing
 - text [Windows Forms], vertical text
 ms.assetid: 717a6131-00f6-4373-b574-9894e8317799
-ms.openlocfilehash: eb00928205a318b068d49ea3f6f71c398f77bbcd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 660d7abae5463c976e60b7d9caeae8a798d122ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61722918"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626171"
 ---
 # <a name="how-to-draw-vertical-text-on-a-windows-form"></a>Procedimiento para dibujar texto vertical en un formulario Windows Forms
 El ejemplo de código siguiente muestra cómo dibujar texto vertical en un formulario mediante el uso de la <xref:System.Drawing.Graphics.DrawString%2A> método <xref:System.Drawing.Graphics>.  

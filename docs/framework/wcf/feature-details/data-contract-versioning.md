@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2bfe253011e24e6792fc60221d05fd60555e87c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857160"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627045"
 ---
 # <a name="data-contract-versioning"></a>Versiones de contratos de datos
 A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los contratos de datos que utilizan los servicios. En este tema se explica cómo controlar las versiones de los contratos de datos. En este tema se describen los mecanismos de control de versiones de los contratos de datos. Para una información general completa y una guía preceptiva del control de versiones, vea [prácticas recomendadas: Control de versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -34,13 +34,13 @@ A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los 
   
  Algunos cambios modifican los datos transmitidos, pero puede que sean o no cambios con interrupción. Los siguientes cambios siempre son con interrupción:  
   
--   Cambio del valor <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> o <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> de un contrato de datos.  
+- Cambio del valor <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> o <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> de un contrato de datos.  
   
--   Cambio del orden de miembros de datos utilizando la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> de <xref:System.Runtime.Serialization.DataMemberAttribute>.  
+- Cambio del orden de miembros de datos utilizando la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> de <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
--   Cambio de nombre de un miembro de datos.  
+- Cambio de nombre de un miembro de datos.  
   
--   Cambio del contrato de datos de un miembro de datos. Por ejemplo, cambiar el tipo de miembro de datos de entero a cadena, o de un tipo con un contrato de datos denominado "Cliente" a un tipo con un contrato de datos denominado "Persona."  
+- Cambio del contrato de datos de un miembro de datos. Por ejemplo, cambiar el tipo de miembro de datos de entero a cadena, o de un tipo con un contrato de datos denominado "Cliente" a un tipo con un contrato de datos denominado "Persona."  
   
  Los cambios siguientes también son posibles.  
   
@@ -90,9 +90,9 @@ A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los 
 ## <a name="omitted-default-values"></a>Valores predeterminados ignorados  
  Es posible (aunque no se recomienda) para establecer el `EmitDefaultValue` propiedad del atributo DataMemberAttribute en `false`, tal y como se describe en [valores predeterminados de datos miembro](../../../../docs/framework/wcf/feature-details/data-member-default-values.md). Si este valor es `false`, no se emitirá el miembro de datos si está establecido en su valor predeterminado (normalmente null o cero). Esto no es compatible con miembros de datos necesarios en versiones diferentes de dos maneras:  
   
--   Un contrato de datos con un miembro de datos necesario en una versión no puede recibir datos predeterminados (null o cero) de una versión diferente en la que el miembro de datos tenga `EmitDefaultValue` establecido en `false`.  
+- Un contrato de datos con un miembro de datos necesario en una versión no puede recibir datos predeterminados (null o cero) de una versión diferente en la que el miembro de datos tenga `EmitDefaultValue` establecido en `false`.  
   
--   Un miembro de datos necesario que tiene `EmitDefaultValue` establecido en `false` no se puede utilizar para serializar su valor predeterminado (null o cero), pero puede recibir este tipo de valor en la deserialización. Esto crea un problema de ida y vuelta (los datos se pueden leer pero los mismos datos no se pueden escribir a continuación). Por consiguiente, si `IsRequired` es `true` y `EmitDefaultValue` es `false` en una versión, la misma combinación se debería aplicar al resto de versiones, de tal manera que ninguna versión del contrato de datos pudiese generar un valor que no resulte en un recorrido de ida y vuelta.  
+- Un miembro de datos necesario que tiene `EmitDefaultValue` establecido en `false` no se puede utilizar para serializar su valor predeterminado (null o cero), pero puede recibir este tipo de valor en la deserialización. Esto crea un problema de ida y vuelta (los datos se pueden leer pero los mismos datos no se pueden escribir a continuación). Por consiguiente, si `IsRequired` es `true` y `EmitDefaultValue` es `false` en una versión, la misma combinación se debería aplicar al resto de versiones, de tal manera que ninguna versión del contrato de datos pudiese generar un valor que no resulte en un recorrido de ida y vuelta.  
   
 ## <a name="schema-considerations"></a>Consideraciones del esquema  
  Para obtener una explicación de lo que el esquema se genera para tipos de contrato de datos, vea [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  

@@ -2,12 +2,12 @@
 title: Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0eb2ce0ca7e5d2ffd7ddd9a3d582783b4610427a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005243"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622610"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
 El <xref:System.Activities.Presentation.WorkflowItemPresenter> es un tipo de clave en el modelo de programación Diseñador de WF que permite la creación de una "zona de colocación" donde se puede colocar una actividad arbitraria. Este ejemplo muestra cómo crear a un diseñador de actividad que se muestra este tipo una "zona de colocación."
@@ -16,18 +16,18 @@ El <xref:System.Activities.Presentation.WorkflowItemPresenter> es un tipo de cla
 
 ## <a name="demonstrates"></a>Demostraciones
 
--   Crear un diseñador de actividad personalizado con un objeto <xref:System.Activities.Presentation.WorkflowItemPresenter>.
+- Crear un diseñador de actividad personalizado con un objeto <xref:System.Activities.Presentation.WorkflowItemPresenter>.
 
--   Registrar el diseñador personalizado mediante el almacén de metadatos.
+- Registrar el diseñador personalizado mediante el almacén de metadatos.
 
--   Programar el cuadro de herramientas hospedado en otro host de manera imperativa o mediante declaración.
+- Programar el cuadro de herramientas hospedado en otro host de manera imperativa o mediante declaración.
 
 ## <a name="sample-details"></a>Detalles del ejemplo
  El código de este ejemplo muestra:
 
--   La compilación del diseñador de actividades personalizado para la clase `SimpleNativeActivity`.
+- La compilación del diseñador de actividades personalizado para la clase `SimpleNativeActivity`.
 
--   La creación de un diseñador de actividades personalizado con un objeto <xref:System.Activities.Presentation.WorkflowItemPresenter>.
+- La creación de un diseñador de actividades personalizado con un objeto <xref:System.Activities.Presentation.WorkflowItemPresenter>.
 
 ```xaml
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"

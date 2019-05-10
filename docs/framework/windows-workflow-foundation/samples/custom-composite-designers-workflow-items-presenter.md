@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9da37d2fb9797c9074765326df1e6eca2469607
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005646"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622471"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> es un tipo clave en el modelo de programación de diseñador de WF que permite la edición de una colección de elementos incluidos. En este ejemplo se muestra cómo compilar un diseñador de actividad que muestra este tipo de colección modificable.
 
  En este ejemplo se explica cómo:
 
--   Crear un diseñador de actividad personalizado con un objeto <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
+- Crear un diseñador de actividad personalizado con un objeto <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
 
--   Creación de un diseñador de actividad con una vista "contraída" y "expandida".
+- Creación de un diseñador de actividad con una vista "contraída" y "expandida".
 
--   Invalidar un diseñador predeterminado en una aplicación hospedada en otro host.
+- Invalidar un diseñador predeterminado en una aplicación hospedada en otro host.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
@@ -32,15 +32,15 @@ ms.locfileid: "62005646"
 ## <a name="sample-highlights"></a>Aspectos que se deben destacar del ejemplo
  El código de este ejemplo muestra lo siguiente:
 
--   La actividad para la que se compila un diseñador: `Parallel`
+- La actividad para la que se compila un diseñador: `Parallel`
 
--   La creación de un diseñador de actividades personalizado con un objeto <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Elementos que se deben señalar:
+- La creación de un diseñador de actividades personalizado con un objeto <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Elementos que se deben señalar:
 
-    -   Observe el uso de enlace de datos de WPF para enlazarse a `ModelItem.Branches`. `ModelItem` es la propiedad de `WorkflowElementDesigner` que hace referencia al objeto subyacente para el que se está usando el diseñador, en este caso nuestro `Parallel`.
+    - Observe el uso de enlace de datos de WPF para enlazarse a `ModelItem.Branches`. `ModelItem` es la propiedad de `WorkflowElementDesigner` que hace referencia al objeto subyacente para el que se está usando el diseñador, en este caso nuestro `Parallel`.
 
-    -   La propiedad <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> se puede utilizar para colocar un elemento visual que se mostrará entre los elementos individuales de la colección.
+    - La propiedad <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> se puede utilizar para colocar un elemento visual que se mostrará entre los elementos individuales de la colección.
 
-    -   La propiedad <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> es una plantilla que se puede proporcionar para determinar el diseño de los elementos de la colección. En este caso, se usa un panel de apilamiento horizontal.
+    - La propiedad <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> es una plantilla que se puede proporcionar para determinar el diseño de los elementos de la colección. En este caso, se usa un panel de apilamiento horizontal.
 
  El ejemplo de código siguiente muestra cómo hacerlo.
 
@@ -60,9 +60,9 @@ ms.locfileid: "62005646"
   </sad:WorkflowItemsPresenter>
 ```
 
--   Realice una asociación de `DesignerAttribute` al tipo `Parallel` y, a continuación, genere los atributos indicados.
+- Realice una asociación de `DesignerAttribute` al tipo `Parallel` y, a continuación, genere los atributos indicados.
 
-    -   En primer lugar, registre todos los diseñadores predeterminados.
+    - En primer lugar, registre todos los diseñadores predeterminados.
 
  A continuación se muestra el ejemplo de código.
 
@@ -80,7 +80,7 @@ metadata.Register()
 RegisterCustomMetadata()
 ```
 
-    -   A continuación, invalide el paralelo en el método `RegisterCustomMetadata`.
+    - A continuación, invalide el paralelo en el método `RegisterCustomMetadata`.
 
  El siguiente código muestra esta acción en C# y Visual Basic.
 
@@ -101,7 +101,7 @@ Sub RegisterCustomMetadata()
 End Sub
 ```
 
--   Por último, observe el uso de diferentes plantillas de datos y desencadenadores para seleccionar la plantilla adecuada en función de la propiedad `IsRootDesigner`.
+- Por último, observe el uso de diferentes plantillas de datos y desencadenadores para seleccionar la plantilla adecuada en función de la propiedad `IsRootDesigner`.
 
  A continuación se muestra el ejemplo de código.
 

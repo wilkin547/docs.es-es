@@ -2,12 +2,12 @@
 title: La carpeta no se puede crear porque ya existe un archivo con la misma ruta de acceso.
 ms.date: 07/20/2015
 ms.assetid: 1085c60d-4d38-4d67-a149-d3923eef0cfd
-ms.openlocfilehash: 640c4b5e34f46711c35e635116839452e1666b7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f78fb7ad68dfbfc8980584bda17ec52f63425cab
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942732"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620199"
 ---
 # <a name="the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path"></a>La carpeta no se puede crear porque ya existe un archivo con la misma ruta de acceso.
 Se ha intentado crear un directorio, pero ya existe un archivo con esa ruta de acceso. Esto puede ser el resultado de analizar incorrectamente las rutas de acceso, especialmente cuando se trabaja con rutas de acceso relativas.  

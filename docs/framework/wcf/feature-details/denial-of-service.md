@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 426429eefd038008340a956ab3fa3cba21906c84
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857095"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627023"
 ---
 # <a name="denial-of-service"></a>Denegación de servicio
 La denegación de servicio se produce cuando un sistema está sobrecargado de tal manera que no se pueden procesar los mensajes, o se procesan muy lentamente.  
@@ -19,22 +19,22 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
   
  Las mitigaciones incluyen:  
   
--   Derive de la clase <xref:System.Xml.NameTable> y exija una cuota de tamaño máximo. (No puede evitar el uso de <xref:System.Xml.NameTable> o intercambiar <xref:System.Xml.NameTable> cuando es completo.)  
+- Derive de la clase <xref:System.Xml.NameTable> y exija una cuota de tamaño máximo. (No puede evitar el uso de <xref:System.Xml.NameTable> o intercambiar <xref:System.Xml.NameTable> cuando es completo.)  
   
--   Evite el uso de las propiedades mencionadas y utilice en su lugar el método <xref:System.Xml.XmlReader.MoveToAttribute%2A> con el método <xref:System.Xml.XmlReader.IsStartElement%2A> cuando sea posible; estos métodos no devuelven cadenas y, por tanto, evitan el problema de llenar demasiado la colección <xref:System.Xml.NameTable>.  
+- Evite el uso de las propiedades mencionadas y utilice en su lugar el método <xref:System.Xml.XmlReader.MoveToAttribute%2A> con el método <xref:System.Xml.XmlReader.IsStartElement%2A> cuando sea posible; estos métodos no devuelven cadenas y, por tanto, evitan el problema de llenar demasiado la colección <xref:System.Xml.NameTable>.  
   
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>Cliente malintencionado envía solicitudes de licencia en exceso al servicio  
  Si un cliente malintencionado bombardea un servicio con solicitudes de licencia excesivas, puede hacer que el servidor utilice memoria en exceso.  
   
  Mitigación: Utilice las siguientes propiedades de la <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> clase:  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: controla el número máximo de `SecurityContextToken`s limitados por tiempo que el servidor almacena en memoria caché después de `SPNego` o negociación `SSL`.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: controla el número máximo de `SecurityContextToken`s limitados por tiempo que el servidor almacena en memoria caché después de `SPNego` o negociación `SSL`.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: controla la duración de `SecurityContextTokens` que el servidor emite tras `SPNego` o una negociación `SSL`. El servidor almacena en memoria caché los `SecurityContextToken`s para este período de tiempo.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: controla la duración de `SecurityContextTokens` que el servidor emite tras `SPNego` o una negociación `SSL`. El servidor almacena en memoria caché los `SecurityContextToken`s para este período de tiempo.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: controla el número máximo de conversaciones seguras que se establecen en el servidor pero para las que no se ha procesado ningún mensaje de aplicación. Esta cuota evita que los clientes establezcan conversaciones seguras en el servicio, por lo que el servicio mantiene el estado por cliente, pero sin usarlos.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: controla el número máximo de conversaciones seguras que se establecen en el servidor pero para las que no se ha procesado ningún mensaje de aplicación. Esta cuota evita que los clientes establezcan conversaciones seguras en el servicio, por lo que el servicio mantiene el estado por cliente, pero sin usarlos.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: controla el tiempo máximo en el que el servicio mantiene viva una conversación segura sin recibir un mensaje de aplicación del cliente para la conversación. Esta cuota evita que los clientes establezcan conversaciones seguras en el servicio, por lo que el servicio mantiene el estado por cliente, pero sin usarlos.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: controla el tiempo máximo en el que el servicio mantiene viva una conversación segura sin recibir un mensaje de aplicación del cliente para la conversación. Esta cuota evita que los clientes establezcan conversaciones seguras en el servicio, por lo que el servicio mantiene el estado por cliente, pero sin usarlos.  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding o los enlaces personalizados duales requieren autenticación del cliente  
  De forma predeterminada, <xref:System.ServiceModel.WSDualHttpBinding> tiene la seguridad habilitada. Es posible, sin embargo, que si la autenticación del cliente se deshabilita estableciendo la propiedad <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> en <xref:System.ServiceModel.MessageCredentialType.None>, un usuario malintencionado pueda producir un ataque de denegación de servicio en un tercer servicio. Esto se puede producir porque un cliente malintencionado puede hacer que el servicio envíe una secuencia de mensajes a un tercer servicio.  

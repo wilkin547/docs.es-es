@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: cb2a172ac4e6a0ce4852f4c7cf7044583d9ab6c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 29afeb84498f2b1d000940ddc28545602a44d408
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034438"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626149"
 ---
 # <a name="copying-dataset-contents"></a>Copiar el contenido de DataSet
 Puede crear una copia de un <xref:System.Data.DataSet> por lo que puede trabajar con datos sin afectar a los datos originales o trabajar con un subconjunto de los datos de un **DataSet**. Al copiar un **DataSet**, puede:  

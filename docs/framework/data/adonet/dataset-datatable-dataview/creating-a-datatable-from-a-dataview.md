@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: 784072ecd133333dec13509d0ac10c69b2161cf8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c70dd0401ea518613a2b51f047de13f6c7270152
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034403"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621189"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Crear un objeto DataTable a partir de un objeto DataView
 Después de recuperar datos de un origen de datos y rellenar una <xref:System.Data.DataTable> con los mismos, puede ordenarlos, filtrarlos o limitar los datos devueltos sin volver a recuperarlos. Esto es posible gracias a la clase <xref:System.Data.DataView>. Además, si necesita crear un nuevo <xref:System.Data.DataTable> desde el <xref:System.Data.DataView>, puede usar el <xref:System.Data.DataView.ToTable%2A> método para copiar todas las filas y columnas o un subconjunto de los datos en un nuevo <xref:System.Data.DataTable>. El método <xref:System.Data.DataView.ToTable%2A> proporciona sobrecargas para:  

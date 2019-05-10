@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 6f6f27eaecd760e565eeb98a286252981d6df0bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 78bafcad0a0f34c74ea58f107621ad145c1b405b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61615030"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64631526"
 ---
 # <a name="initialization-expressions"></a>Expresiones de inicialización
 Una expresión de inicialización inicializa un objeto nuevo. Se admiten la mayoría de las expresiones de inicialización, incluso las de Visual Basic 9.0 y C# 3.0. Los tipos siguientes pueden ser inicializados y devueltos por una consulta de LINQ to Entities:  

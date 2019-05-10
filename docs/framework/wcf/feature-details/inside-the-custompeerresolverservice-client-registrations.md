@@ -2,12 +2,12 @@
 title: 'Dentro de CustomPeerResolverService: registros de cliente'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3d1e1c6493da54bc3ae0e74a33985da59382ea52
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972554"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619779"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>Dentro de CustomPeerResolverService: registros de cliente
 Cada nodo de la malla publica su información de punto de conexión en el servicio de resolución a través de la función `Register`. El servicio de resolución almacena esta información como un registro. Este registro contiene un identificador único (RegistrationID) e información de punto de conexión (PeerNodeAddress) para el nodo.  
