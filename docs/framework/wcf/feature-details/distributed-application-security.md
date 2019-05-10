@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70ed0fe9191c18e88198871319b3c3ee3c0b4ab4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856549"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626973"
 ---
 # <a name="distributed-application-security"></a>Seguridad distribuida de aplicaciones
 Seguridad de Windows Communication Foundation (WCF) se divide en tres áreas funcionales principales: seguridad, control de acceso y auditoría de transferencia. La seguridad de transferencia proporciona integridad, confidencialidad y autenticación. La seguridad de transferencia la proporciona uno de los siguientes elementos: seguridad de transporte, seguridad de mensajes o `TransportWithMessageCredential`.  
@@ -20,11 +20,11 @@ Seguridad de Windows Communication Foundation (WCF) se divide en tres áreas fun
 ## <a name="transfer-security-scenarios"></a>Escenarios de seguridad de transferencia  
  Escenarios comunes que emplean la seguridad de transferencia WCF son los siguientes:  
   
--   Transferencia segura mediante Windows. Un cliente y servicio WCF se implementan en un dominio de Windows (o un bosque de Windows). Los mensajes contienen datos personales, por lo que entre los requisitos se incluye la autenticación mutua de cliente y servicio, la integridad y la confidencialidad de los mensajes. Además, se requiere la prueba de que una transacción determinada se produjo, por ejemplo, el receptor del mensaje debería registrar la información de la firma.  
+- Transferencia segura mediante Windows. Un cliente y servicio WCF se implementan en un dominio de Windows (o un bosque de Windows). Los mensajes contienen datos personales, por lo que entre los requisitos se incluye la autenticación mutua de cliente y servicio, la integridad y la confidencialidad de los mensajes. Además, se requiere la prueba de que una transacción determinada se produjo, por ejemplo, el receptor del mensaje debería registrar la información de la firma.  
   
--   Transferencia segura mediante `UserName` y HTTPS. Un cliente y servicio WCF deben desarrollarse para funcionar a través de Internet. Las credenciales de clientes se autentican frente a una base de datos de pares de nombres de usuario y contraseñas. El servicio se implementa en una dirección HTTPS utilizando un certificado Secure Sockets Layer (SSL) de confianza. Dado que los mensajes viajan a través de Internet, el cliente y servicio deben autenticarse mutuamente y se debe preservar la confidencialidad e integridad de los mensajes durante la transferencia.  
+- Transferencia segura mediante `UserName` y HTTPS. Un cliente y servicio WCF deben desarrollarse para funcionar a través de Internet. Las credenciales de clientes se autentican frente a una base de datos de pares de nombres de usuario y contraseñas. El servicio se implementa en una dirección HTTPS utilizando un certificado Secure Sockets Layer (SSL) de confianza. Dado que los mensajes viajan a través de Internet, el cliente y servicio deben autenticarse mutuamente y se debe preservar la confidencialidad e integridad de los mensajes durante la transferencia.  
   
--   Transferencia segura mediante el uso de certificados. Un cliente y servicio WCF deben desarrollarse para funcionar a través de internet pública. El cliente y el servicio tienen certificados que se pueden utilizar para proteger los mensajes. El cliente y el servicio utilizan Internet para comunicarse entre sí y realizar transacciones de valor alto que requieren integridad del mensaje, confidencialidad y autenticación mutua.  
+- Transferencia segura mediante el uso de certificados. Un cliente y servicio WCF deben desarrollarse para funcionar a través de internet pública. El cliente y el servicio tienen certificados que se pueden utilizar para proteger los mensajes. El cliente y el servicio utilizan Internet para comunicarse entre sí y realizar transacciones de valor alto que requieren integridad del mensaje, confidencialidad y autenticación mutua.  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>Integridad, confidencialidad y autenticación  
  Tres funciones se llaman conjuntamente seguridad de transferencia: integridad, confidencialidad y autenticación. La seguridad de transferencia proporciona funciones que ayudan a mitigar las amenazas para una aplicación distribuida. La siguiente tabla describe brevemente las tres funciones que constituyen la seguridad de transferencia.  

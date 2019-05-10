@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31f975b45ee854c73e6d502ece69bee24a7fcc3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 501e23656b3a31dc14e0b2213252ef52c598140f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683137"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622639"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalización y localización de aplicaciones .NET
 
@@ -38,9 +38,9 @@ Este paso implica personalizar una aplicación para referencias culturales o reg
 
 La realización de estos tres pasos ofrece dos ventajas:
 
--   No es necesario volver a plantear una aplicación ya diseñada para admitir una sola referencia cultural, por ejemplo inglés de EE. UU., de forma que admita otras referencias culturales.
+- No es necesario volver a plantear una aplicación ya diseñada para admitir una sola referencia cultural, por ejemplo inglés de EE. UU., de forma que admita otras referencias culturales.
 
--   Da como resultado aplicaciones localizadas que son más estables y tienen menos errores.
+- Da como resultado aplicaciones localizadas que son más estables y tienen menos errores.
 
 En .NET se proporciona una extensa compatibilidad para desarrollar aplicaciones de uso internacional y localizadas. En concreto, muchos miembros de tipo de la biblioteca de clases de .NET contribuyen a la globalización mediante la devolución de valores que reflejan las convenciones de la referencia cultural del usuario actual o de una referencia cultural especificada. Además, .NET admite los ensamblados satélite, que facilitan el proceso de localización de una aplicación.
 

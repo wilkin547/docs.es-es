@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-ms.openlocfilehash: e0852536a86dd415334f95a47ceb800ed2c591ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a719b3f1cbd972e79d057730ac1d89e5d91d97e5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924025"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664308"
 ---
 # <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>Tipo de parámetro '\<parametername >' no es conforme a CLS
 Un procedimiento está marcado como `<CLSCompliant(True)>` pero declara un parámetro con un tipo que está marcado como `<CLSCompliant(False)>`, no está marcado o no cumple los requisitos porque es un tipo no conforme.  
@@ -21,13 +21,13 @@ Un procedimiento está marcado como `<CLSCompliant(True)>` pero declara un pará
   
  Los siguientes tipos de datos de Visual Basic no son conformes a CLS:  
   
--   [SByte (tipo de datos)](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [SByte (tipo de datos)](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [UInteger (tipo de datos)](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [UInteger (tipo de datos)](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [ULong (tipo de datos)](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [ULong (tipo de datos)](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [UShort (tipo de datos)](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [UShort (tipo de datos)](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
  Al aplicar <xref:System.CLSCompliantAttribute> a un elemento de programación, establezca el parámetro `isCompliant` del atributo en `True` o `False` para indicar conformidad o disconformidad. No hay ningún valor predeterminado para este parámetro, por lo que debe proporcionar uno.  
   
@@ -39,8 +39,8 @@ Un procedimiento está marcado como `<CLSCompliant(True)>` pero declara un pará
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Si el procedimiento debe tomar un parámetro de este tipo particular, quite el <xref:System.CLSCompliantAttribute>. El procedimiento no puede ser conforme a CLS.  
+- Si el procedimiento debe tomar un parámetro de este tipo particular, quite el <xref:System.CLSCompliantAttribute>. El procedimiento no puede ser conforme a CLS.  
   
--   Si el procedimiento debe ser conforme a CLS, cambie el tipo de este parámetro para el tipo conforme a CLS más próximo. Por ejemplo, en lugar de `UInteger` , quizá pueda usar `Integer` si no necesita que el intervalo de valores esté por encima de 2.147.483.647. Si necesita el intervalo extendido, puede reemplazar `UInteger` por `Long`.  
+- Si el procedimiento debe ser conforme a CLS, cambie el tipo de este parámetro para el tipo conforme a CLS más próximo. Por ejemplo, en lugar de `UInteger` , quizá pueda usar `Integer` si no necesita que el intervalo de valores esté por encima de 2.147.483.647. Si necesita el intervalo extendido, puede reemplazar `UInteger` por `Long`.  
   
--   Si trabaja con objetos de automatización o COM, tenga en cuenta que algunos tipos tienen anchos de datos distintos que en [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Por ejemplo, `int` suele ser de 16 bits en otros entornos. Si se acepta un entero de 16 bits de esos componentes, declárelo como `Short` en lugar de `Integer` en el código administrado de Visual Basic.
+- Si trabaja con objetos de automatización o COM, tenga en cuenta que algunos tipos tienen anchos de datos distintos que en [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Por ejemplo, `int` suele ser de 16 bits en otros entornos. Si se acepta un entero de 16 bits de esos componentes, declárelo como `Short` en lugar de `Integer` en el código administrado de Visual Basic.

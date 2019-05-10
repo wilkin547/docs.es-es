@@ -2,12 +2,12 @@
 title: Actividades de acceso a bases de datos
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a7c6fa6664acee8000c100513b2cc955ffa3392
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005217"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622454"
 ---
 # <a name="database-access-activities"></a>Actividades de acceso a bases de datos
 Las actividades de acceso a bases de datos permiten tener acceso a una base de datos dentro de un flujo de trabajo. Estas actividades permiten tener acceso a las bases de datos para recuperar o modificar información y usar [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) para tener acceso a la base de datos.  
@@ -247,7 +247,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 ## <a name="configuring-connection-information"></a>Configurar información de conexión
  Todas las actividades de base de datos comparten los mismos parámetros de configuración. Se pueden configurar de dos maneras:
 
--   `ConnectionString + InvariantName`: Establecer al proveedor de ADO.NET de cadena de conexión y el nombre invariable.
+- `ConnectionString + InvariantName`: Establecer al proveedor de ADO.NET de cadena de conexión y el nombre invariable.
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`: Establezca el nombre de la sección de configuración que contiene la información de conexión.
+- `ConfigName`: Establezca el nombre de la sección de configuración que contiene la información de conexión.
 
     ```xml
     <connectionStrings>
@@ -270,7 +270,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
       </connectionStrings>
     ```
 
--   En la actividad:
+- En la actividad:
 
     ```
     Activity dbSelectCount = new DbQueryScalar<int>()
@@ -287,15 +287,15 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
  El script Setup.cmd invoca el archivo de script CreateDb.sql, que contiene comandos SQL con los que realiza lo siguiente:
 
--   Crea una base de datos llamada DbActivitiesSample.
+- Crea una base de datos llamada DbActivitiesSample.
 
--   Crea la tabla Roles.
+- Crea la tabla Roles.
 
--   Crea la tabla Employees.
+- Crea la tabla Employees.
 
--   Inserta tres registros en la tabla Roles.
+- Inserta tres registros en la tabla Roles.
 
--   Inserta doce registros en la tabla Employees.
+- Inserta doce registros en la tabla Employees.
 
 ##### <a name="to-run-setupcmd"></a>Para ejecutar Setup.cmd
 

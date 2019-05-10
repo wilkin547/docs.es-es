@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 84af29aa169710f8de86c383429bf391fbc20bd3
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614228"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469532"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Seguimiento e instrumentación de aplicaciones
 El seguimiento es una manera de supervisar la ejecución de la aplicación mientras se está ejecutando. Puede agregar instrumentación de seguimiento y de depuración a la aplicación de .NET Framework cuando la desarrolle, y puede usar dicha instrumentación mientras desarrolla la aplicación y después de implementarla. Puede usar las clases <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> para registrar información sobre errores y ejecución de la aplicación en registros, archivos de texto u otros dispositivos para su análisis posterior.  
@@ -134,7 +134,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Si implementa su propio agente de escucha podrá obtener resultados personalizados. Un agente de escucha de seguimiento personalizado puede, por ejemplo, mostrar los mensajes en un cuadro de mensaje o conectarse a una base de datos para agregar mensajes a una tabla. Todos los agentes de escucha personalizados deben admitir los seis métodos mencionados anteriormente. Para obtener más información sobre cómo crear agentes de escucha definidos por el desarrollador, consulte <xref:System.Diagnostics.TraceListener> en la documentación de .NET Framework.  
   
 > [!NOTE]
->  En [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], los métodos **Debug.Write**, **Debug.WriteIf**, **Debug.WriteLine** y **Debug.WriteLineIf** han reemplazado al método **Debug.Print** que estaba disponible en versiones anteriores de Visual Basic.  
+>  En Visual Basic, el **Debug.Write**, **Debug.WriteIf**, **Debug.WriteLine**, y **Debug.WriteLineIf** han reemplazado el **Debug.Print** método que estaba disponible en versiones anteriores de Visual Basic.  
   
  Los métodos **Write** y **WriteLine** siempre escriben el texto que especifique. **Assert**, **WriteIf** y **WriteLineIf** requieren un argumento booleano que determina si deben escribir el texto especificado; solo escriben el texto si la expresión es **true** (para **WriteIf** y **WriteLineIf**), o **false** (para **Assert**). El método **Fail** siempre escribe el texto especificado. Para obtener más información, vea [Cómo: Agregar instrucciones de seguimiento al código de aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) y la referencia de .NET Framework.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc14b6a2b3782ae7ed3d26f9878646f004504d1c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875320"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660554"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Usar un servicio de datos en una aplicación cliente (Data Services de WCF)
 Puede tener acceso a un servicio que expone un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuente especificando un URI a un explorador Web. El URI proporciona la dirección de un recurso y los mensajes de solicitud se envían a estas direcciones para obtener acceso o cambiar los datos subyacentes que el recurso representa. El explorador emite un comando GET de HTTP y devuelve el recurso solicitado como una fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Para obtener más información, consulte [acceder al servicio desde un explorador Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -23,24 +23,24 @@ Puede tener acceso a un servicio que expone un [!INCLUDE[ssODataFull](../../../.
 ### <a name="http-actions"></a>Acciones HTTP  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] admite las siguientes acciones HTTP para realizar operaciones de creación, lectura, actualización y eliminación en los datos de la entidad que el recurso direccionado representa:  
   
--   **HTTP GET** -esta es la acción predeterminada cuando se tiene acceso a un recurso desde un explorador. No se proporciona ninguna carga en el mensaje de solicitud y se devuelve un método de respuesta con una carga que contiene los datos solicitados.  
+- **HTTP GET** -esta es la acción predeterminada cuando se tiene acceso a un recurso desde un explorador. No se proporciona ninguna carga en el mensaje de solicitud y se devuelve un método de respuesta con una carga que contiene los datos solicitados.  
   
--   **HTTP POST** -inserta nuevos datos de entidad en el recurso proporcionado. Los datos que se van a insertar se proporcionan en la carga del mensaje de solicitud. La carga del mensaje de respuesta contiene los datos de la entidad recién creada. Esto incluye los valores de clave generados automáticamente. El encabezado también contiene el URI que direcciona el nuevo recurso de entidad.  
+- **HTTP POST** -inserta nuevos datos de entidad en el recurso proporcionado. Los datos que se van a insertar se proporcionan en la carga del mensaje de solicitud. La carga del mensaje de respuesta contiene los datos de la entidad recién creada. Esto incluye los valores de clave generados automáticamente. El encabezado también contiene el URI que direcciona el nuevo recurso de entidad.  
   
--   **HTTP DELETE** -elimina los datos de entidad que representa el recurso especificado. En los mensajes de solicitud o respuesta no hay presente ninguna carga.  
+- **HTTP DELETE** -elimina los datos de entidad que representa el recurso especificado. En los mensajes de solicitud o respuesta no hay presente ninguna carga.  
   
--   **HTTP PUT** : reemplaza entidad los datos existentes en el recurso solicitado con nuevos datos que se proporcionan en la carga del mensaje de solicitud.  
+- **HTTP PUT** : reemplaza entidad los datos existentes en el recurso solicitado con nuevos datos que se proporcionan en la carga del mensaje de solicitud.  
   
--   **HTTP MERGE** : debido a las ineficacias en la ejecución de una eliminación seguida de una instrucción insert en el origen de datos solo para cambiar los datos de entidad, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] presenta una nueva acción MERGE de HTTP. La carga del mensaje de solicitud contiene las propiedades que se deben cambiar en el recurso de entidad direccionado. Dado que HTTP MERGE no se encuentra definido en la especificación HTTP, puede que sea necesario un procesamiento adicional para enrutar una solicitud HTTP MERGE a través de servidores que no reconocen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+- **HTTP MERGE** : debido a las ineficacias en la ejecución de una eliminación seguida de una instrucción insert en el origen de datos solo para cambiar los datos de entidad, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] presenta una nueva acción MERGE de HTTP. La carga del mensaje de solicitud contiene las propiedades que se deben cambiar en el recurso de entidad direccionado. Dado que HTTP MERGE no se encuentra definido en la especificación HTTP, puede que sea necesario un procesamiento adicional para enrutar una solicitud HTTP MERGE a través de servidores que no reconocen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
  Para obtener más información, consulte [OData: Las operaciones](https://go.microsoft.com/fwlink/?LinkId=185792).  
   
 ### <a name="payload-formats"></a>Formatos de carga  
  Para una solicitud PUT, POST o MERGE de HTTP, la carga de un mensaje de solicitud contiene los datos de entidad que el usuario envía al servicio de datos. El contenido de la carga depende del formato de datos del mensaje. Las respuestas HTTP a todas las acciones, excepto DELETE, también contienen este tipo de carga. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] admite los siguientes formatos de carga para tener acceso y cambiar datos con el servicio:  
   
--   **Atom** -codificación de mensajes basada en XML definida por [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] como una extensión para el protocolo de publicación Atom (AtomPub) para habilitar el intercambio de datos a través de HTTP para fuentes Web, podcasts, wikis y funcionalidad de Internet basado en XML. Para obtener más información, consulte [OData: Formato Atom](https://go.microsoft.com/fwlink/?LinkId=185794).  
+- **Atom** -codificación de mensajes basada en XML definida por [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] como una extensión para el protocolo de publicación Atom (AtomPub) para habilitar el intercambio de datos a través de HTTP para fuentes Web, podcasts, wikis y funcionalidad de Internet basado en XML. Para obtener más información, consulte [OData: Formato Atom](https://go.microsoft.com/fwlink/?LinkId=185794).  
   
--   **JSON** -JavaScript Object Notation (JSON) es un formato de intercambio de datos ligero que se basa en un subconjunto del lenguaje de programación JavaScript. Para obtener más información, consulte [OData: Formato JSON](https://go.microsoft.com/fwlink/?LinkId=185795).  
+- **JSON** -JavaScript Object Notation (JSON) es un formato de intercambio de datos ligero que se basa en un subconjunto del lenguaje de programación JavaScript. Para obtener más información, consulte [OData: Formato JSON](https://go.microsoft.com/fwlink/?LinkId=185795).  
   
  El formato de mensaje de la carga se solicita en el encabezado del mensaje de la solicitud HTTP. Para obtener más información, consulte [OData: Las operaciones](https://go.microsoft.com/fwlink/?LinkID=185792).  
   

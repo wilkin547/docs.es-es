@@ -2,12 +2,12 @@
 title: Acción de finalización de instancias
 ms.date: 03/30/2017
 ms.assetid: 90cc99d2-9fef-42fd-bcbf-a56917993721
-ms.openlocfilehash: 646015fbcdb7c734ae8584c7ca3979d64b81339f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d68f41a586e44f96c9ca26cf8a142a2782adaa36
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791123"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662976"
 ---
 # <a name="instance-completion-action"></a>Acción de finalización de instancias
 El **acción de finalización de la instancia** propiedad del Store de instancia de flujo de trabajo de SQL le permite especificar si los datos y metadatos de instancias de flujo de trabajo se eliminan de la base de datos de persistencia después de que se hayan completado las instancias. Los valores permitidos para esta propiedad son **DeleteAll** y **DeleteNothing**. En la lista siguiente se describen estas opciones:  

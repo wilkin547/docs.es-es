@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b753fcffbdaa1cc9ba960a774077457dd0263e0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007401"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621370"
 ---
 # <a name="the-ink-threading-model"></a>Modelo de subprocesamiento de entrada manuscrita
 Una de las ventajas de la tinta de Tablet PC es que asemeja mucho a escribir con un lápiz normal y el papel.  Para lograr esto, el lápiz de tablet PC recopila datos de entrada a una velocidad mucho mayor que un mouse y representa la entrada de lápiz mientras el usuario escribe.  Subproceso de interfaz (IU) de usuario de la aplicación no es suficiente para recopilar datos del lápiz y representar entrada manuscrita, porque puede quedarse bloqueado.  Para resolver esto, un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación usa dos subprocesos adicionales cuando un usuario escribe con el lápiz.  

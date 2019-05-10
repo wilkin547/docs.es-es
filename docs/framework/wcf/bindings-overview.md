@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703691"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652116"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Información general de enlaces de Windows Communication Foundation
 Los enlaces son objetos que se usan para especificar los detalles de comunicación que son necesarias para conectarse al punto de conexión de un servicio de Windows Communication Foundation (WCF). Cada punto de conexión en un servicio WCF requiere un enlace esté bien especificado. En este tema se describe los tipos de datos de comunicación que definen los enlaces, los elementos de un enlace, qué enlaces están incluidos en WCF y cómo se puede especificar un enlace para un punto de conexión.  
@@ -32,13 +32,13 @@ Los enlaces son objetos que se usan para especificar los detalles de comunicaci�
 ## <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema  
  La información de un enlace puede ser compleja y puede que parte de su configuración no sea compatible con otros. Por este motivo, WCF incluye un conjunto de enlaces proporcionados por el sistema. Estos enlaces están diseñados para cubrir la mayoría de los requisitos de aplicación. Las clases siguientes representan algunos ejemplos de enlaces proporcionados por el sistema:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: Un protocolo HTTP enlace adecuado para conectarse a servicios Web que se ajusta a WS-I especificación del perfil básico (por ejemplo, a servicios basados en servicios Web de ASP.NET).  
+- <xref:System.ServiceModel.BasicHttpBinding>: Un protocolo HTTP enlace adecuado para conectarse a servicios Web que se ajusta a WS-I especificación del perfil básico (por ejemplo, a servicios basados en servicios Web de ASP.NET).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: Un enlace interoperable adecuado para conectar a los puntos de conexión que cumplen con WS-* protocolos.  
+- <xref:System.ServiceModel.WSHttpBinding>: Un enlace interoperable adecuado para conectar a los puntos de conexión que cumplen con WS-* protocolos.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Usa el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para conectarse a otros extremos WCF en el mismo equipo.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Usa el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para conectarse a otros extremos WCF en el mismo equipo.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Usa el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para crear las conexiones de mensajes en cola con otros extremos WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Usa el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para crear las conexiones de mensajes en cola con otros extremos WCF.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Este enlace ofrece un mayor rendimiento respecto enlaces HTTP y es ideal para su uso en una red local.
   

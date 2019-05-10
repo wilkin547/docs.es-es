@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a9f04f6da4dc4024f4c9ece19f045eb8e3775e6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098785"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620880"
 ---
 # <a name="use-automatic-layout-overview"></a>Información general sobre el uso del diseño automático
 Este tema presentan las directrices para desarrolladores sobre cómo escribir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones con localizable [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. En el pasado, la localización de una interfaz de usuario era un proceso lento. Todos los idiomas que se adaptaba la interfaz de usuario requiere un ajuste píxel a píxel. Hoy en día con el diseño correcto y derecha estándares de codificación, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] puede crearse para que los localizadores deban realizar menos el cambio de tamaño y posición. El enfoque para escribir aplicaciones que pueden ser más fácil cambiar el tamaño y la posición se denomina diseño automático y se puede lograr mediante el uso de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diseño de la aplicación.  
@@ -19,15 +19,15 @@ Este tema presentan las directrices para desarrolladores sobre cómo escribir [!
 ## <a name="advantages-of-using-automatic-layout"></a>Ventajas de usar el diseño automático  
  Dado que el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de presentación es eficaz y flexible, proporciona la capacidad de diseñar elementos en una aplicación que se pueden ajustar para ajustarse a los requisitos de idiomas diferentes. En la lista siguiente se indican algunas de las ventajas del diseño automático.  
 
--   Interfaz de usuario se muestra correctamente en cualquier idioma.  
+- Interfaz de usuario se muestra correctamente en cualquier idioma.  
 
--   Reduce la necesidad de reajustar la posición y el tamaño de los controles una vez traducido el texto.  
+- Reduce la necesidad de reajustar la posición y el tamaño de los controles una vez traducido el texto.  
   
--   Reduce la necesidad de reajustar el tamaño de la ventana.  
+- Reduce la necesidad de reajustar el tamaño de la ventana.  
 
--   Diseño de interfaz de usuario se representa correctamente en cualquier lenguaje.  
+- Diseño de interfaz de usuario se representa correctamente en cualquier lenguaje.  
 
--   La localización se puede reducir hasta el punto de que es poco más que la traducción de cadenas.  
+- La localización se puede reducir hasta el punto de que es poco más que la traducción de cadenas.  
   
 <a name="autolayout_controls"></a>   
 ## <a name="automatic-layout-and-controls"></a>Diseño automático y controles  

@@ -2,12 +2,12 @@
 title: Correlación de consultas de mensajes LINQ
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: cc13696cfd8eb2dcdf22fdc067518c8bd55ca32d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e979e6539d94d15b74f1da14f7082431ed2ff8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004931"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622724"
 ---
 # <a name="linq-message-query-correlation"></a>Correlación de consultas de mensajes LINQ
 Este ejemplo muestra cómo realizar una correlación basada en contenidos mediante una implementación de <xref:System.ServiceModel.Dispatcher.MessageQuery> personalizada en contraposición a <xref:System.ServiceModel.XPathMessageQuery> proporcionado por el sistema.  
@@ -28,11 +28,11 @@ Este ejemplo muestra cómo realizar una correlación basada en contenidos median
   
 2. Una vez agregadas las listas de control de acceso de dirección URL, siga estos pasos.  
   
-    1.  Compile la solución.  
+    1. Compile la solución.  
   
-    2.  Establezca varios proyectos de inicio haciendo clic en la solución y seleccione **Establecer proyectos de inicio**. Agregar **servicio** y **cliente** (en ese orden) como proyectos de inicio múltiples.  
+    2. Establezca varios proyectos de inicio haciendo clic en la solución y seleccione **Establecer proyectos de inicio**. Agregar **servicio** y **cliente** (en ese orden) como proyectos de inicio múltiples.  
   
-    3.  Ejecute la aplicación. La consola del cliente muestra un flujo de trabajo que envía un pedido y recibe el id. del pedido de compra y, a continuación, confirma el pedido. La ventana Servicio mostrará las solicitudes que se están procesando.  
+    3. Ejecute la aplicación. La consola del cliente muestra un flujo de trabajo que envía un pedido y recibe el id. del pedido de compra y, a continuación, confirma el pedido. La ventana Servicio mostrará las solicitudes que se están procesando.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
