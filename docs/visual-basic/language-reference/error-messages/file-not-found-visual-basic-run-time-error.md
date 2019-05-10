@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
-ms.openlocfilehash: cac84c3fa549760ee92601bbb07a379ea102b6dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 90dbac88854e1fb156b387eaa6df564269d84d29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801392"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629046"
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a>No se encuentra el archivo (error en tiempo de ejecución de Visual Basic)
 No se encontró el archivo que se especifique. El error tiene las siguientes causas posibles:  
