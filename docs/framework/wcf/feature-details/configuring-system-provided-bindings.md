@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 49aacdc7db6bc9e8b951f69bcd880835bb9182f2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857420"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654505"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configuración de enlaces proporcionados por el sistema
 Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al hablar con un punto de conexión e indican cómo conectarse a un punto de conexión. Los enlaces están compuestos de elementos que definen cómo los canales de Windows Communication Foundation (WCF) se disponen en capa para proporcionar las características de comunicación necesaria. Un enlace contiene tres tipos de elementos:  

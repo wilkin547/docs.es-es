@@ -2,12 +2,12 @@
 title: Procedimientos recomendados de confianza parcial
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6c01824ef3d86600fd946e7f510b854b5138ec00
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769465"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603881"
 ---
 # <a name="partial-trust-best-practices"></a>Procedimientos recomendados de confianza parcial
 Este tema describe los procedimientos recomendados al ejecutar Windows Communication Foundation (WCF) en un entorno de confianza parcial.  

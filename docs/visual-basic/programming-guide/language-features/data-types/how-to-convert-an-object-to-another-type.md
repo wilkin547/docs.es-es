@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 1e515c0f4ce8e787754c61a9b53d247fa93c49f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d80dc542f71aaf3eec6891006d77c5d39c985abf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906534"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600990"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Procedimiento Convertir un objeto a otro tipo en Visual Basic
 Convierte un `Object` variable a otro tipo de datos con una palabra clave de conversión como [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md).  
@@ -31,7 +31,7 @@ End Sub
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Una referencia al espacio de nombres <xref:System?displayProperty=nameWithType>.  
+- Una referencia al espacio de nombres <xref:System?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 

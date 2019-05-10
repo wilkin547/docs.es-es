@@ -9,12 +9,12 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5df95c6b5f91cd4f36bd03c1bd291f7a44025ee9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797532"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600084"
 ---
 # <a name="administration-and-diagnostics"></a>Administración y diagnóstico
 Windows Communication Foundation (WCF) proporciona un amplio conjunto de funcionalidades que pueden ayudarle a supervisar las distintas fases del ciclo de vida de la aplicación. Por ejemplo, puede usar la configuración para configurar servicios y clientes en la implementación. WCF incluye un conjunto grande de contadores de rendimiento para ayudarle a calibrar el rendimiento de su aplicación. WCF también expone datos de inspección de un servicio en tiempo de ejecución a través de un proveedor de Instrumental de administración de Windows (WMI) de WCF. Cuando la aplicación experimenta un error o comienza a actuar incorrectamente, puede utilizar el Registro de eventos para ver si algo significativo ha sucedido. También puede utilizar el registro y seguimiento de mensajes para ver qué eventos están pasando de un extremo a otro en su aplicación. Estas características ayudan a los desarrolladores y profesionales de TI a solucionar problemas de aplicaciones WCF cuando no se comporta correctamente.  

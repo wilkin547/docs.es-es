@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b97ce0e4ce32e272ff884240b566c1c1c0e0d271
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903440"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614658"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Representar controles con estilos visuales
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporciona compatibilidad para representar controles y otros elementos de la interfaz de usuario (IU) de Windows usando estilos visuales en los sistemas operativos compatibles. En este tema se tratan los distintos niveles de compatibilidad de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para representar controles y otros elementos de IU con el estilo visual actual del sistema operativo.  
@@ -27,27 +27,27 @@ ms.locfileid: "61903440"
   
  Algunas de estas clases están diseñadas para dibujar el control relacionado tanto si los estilos visuales están disponibles como si no lo están. Si los estilos visuales están habilitados, los miembros de clase dibujarán el control relacionado con estilos visuales. Si no lo están, los miembros de clase dibujarán el control en el estilo clásico de Windows. Estas clases incluyen:  
   
--   <xref:System.Windows.Forms.ButtonRenderer>  
+- <xref:System.Windows.Forms.ButtonRenderer>  
   
--   <xref:System.Windows.Forms.CheckBoxRenderer>  
+- <xref:System.Windows.Forms.CheckBoxRenderer>  
   
--   <xref:System.Windows.Forms.GroupBoxRenderer>  
+- <xref:System.Windows.Forms.GroupBoxRenderer>  
   
--   <xref:System.Windows.Forms.RadioButtonRenderer>  
+- <xref:System.Windows.Forms.RadioButtonRenderer>  
   
  El resto de las clases solo pueden dibujar el control relacionado si los estilos visuales están disponibles; además, sus miembros generarán una excepción si los estilos visuales están deshabilitados. Estas clases incluyen:  
   
--   <xref:System.Windows.Forms.ComboBoxRenderer>  
+- <xref:System.Windows.Forms.ComboBoxRenderer>  
   
--   <xref:System.Windows.Forms.ProgressBarRenderer>  
+- <xref:System.Windows.Forms.ProgressBarRenderer>  
   
--   <xref:System.Windows.Forms.ScrollBarRenderer>  
+- <xref:System.Windows.Forms.ScrollBarRenderer>  
   
--   <xref:System.Windows.Forms.TabRenderer>  
+- <xref:System.Windows.Forms.TabRenderer>  
   
--   <xref:System.Windows.Forms.TextBoxRenderer>  
+- <xref:System.Windows.Forms.TextBoxRenderer>  
   
--   <xref:System.Windows.Forms.TrackBarRenderer>  
+- <xref:System.Windows.Forms.TrackBarRenderer>  
   
  Para obtener más información sobre el uso de estas clases para dibujar un control, vea [Cómo: Usar un Control de clase de representación](how-to-use-a-control-rendering-class.md).  
   

@@ -2,21 +2,21 @@
 title: Seguimiento de actividades en la seguridad de mensajes
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
-ms.openlocfilehash: c3bd36598fd903dc016959149e563174624d084b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65b2842c57da8e17c7280a2becd755ba2aae8364
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912657"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656452"
 ---
 # <a name="activity-tracing-in-message-security"></a>Seguimiento de actividades en la seguridad de mensajes
 En este tema se describe el seguimiento de actividades para el procesamiento de seguridad, que pasa en las tres fases siguientes.  
   
--   Intercambio de SCT/negociación. Esto puede pasar en la capa de transporte (a través del intercambio de datos binarios) o en la capa de mensaje (a través de intercambios de mensajes SOAP).  
+- Intercambio de SCT/negociación. Esto puede pasar en la capa de transporte (a través del intercambio de datos binarios) o en la capa de mensaje (a través de intercambios de mensajes SOAP).  
   
--   Cifrado/descifrado del mensaje, con comprobación y autenticación de firma. Los seguimientos aparecen en la actividad ambiente, normalmente la “Acción de proceso"."  
+- Cifrado/descifrado del mensaje, con comprobación y autenticación de firma. Los seguimientos aparecen en la actividad ambiente, normalmente la “Acción de proceso"."  
   
--   Autorización y comprobación. Esto puede pasar localmente o en la comunicación entre extremos.  
+- Autorización y comprobación. Esto puede pasar localmente o en la comunicación entre extremos.  
   
 ## <a name="negotiationsct-exchange"></a>Intercambio de SCT/negociación.  
  En la fase de intercambio de SCT/negociación, se crean dos tipos de actividad en el cliente: "Configurar sesión segura" y "Cerrar sesión segura". “Configurar sesión segura” abarca los seguimientos de los intercambios de mensajes RST/RSTR/SCT, mientras que “Cerrar sesión segura” incluye los seguimientos para el mensaje de cancelación.  

@@ -2,12 +2,12 @@
 title: Administración de excepciones y errores
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f2042bac30ee84530c0da9c30193919dfb99a608
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991424"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654999"
 ---
 # <a name="handling-exceptions-and-faults"></a>Administración de excepciones y errores
 Las excepciones se utilizan para comunicar localmente los errores dentro del servicio o la implementación del cliente. Los errores, por otro lado, se utilizan para comunicar los errores en los límites del servicio, como del servidor al cliente o viceversa. Además de los errores, los canales de transporte utilizan a menudo mecanismos específicos del transporte para comunicar los errores del nivel de transporte. Por ejemplo, el transporte HTTP utiliza códigos de estado como 404 para comunicar una dirección URL del extremo no existente (no hay ningún extremo para devolver un error). Este documento se compone de tres secciones que proporcionan una guía a los autores del canal personalizado. La primera sección proporciona una guía sobre cuándo y cómo definir y producir las excepciones. La segunda sección proporciona una guía sobre la generación y utilización de errores. La tercera sección explica cómo proporcionar información de seguimiento para ayudar al usuario de su canal personalizado a solucionar problemas de las aplicaciones en ejecución.  

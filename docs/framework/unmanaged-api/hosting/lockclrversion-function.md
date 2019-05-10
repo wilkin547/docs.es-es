@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aab3a2a367f6af1deeb1201d391af271a4bd45ac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765276"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584969"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion (Función)
 Permite al host determinar qué versión de common language runtime (CLR) que se usará dentro del proceso antes de inicializar CLR de forma explícita.  

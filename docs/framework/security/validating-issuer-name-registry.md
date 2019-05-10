@@ -2,12 +2,12 @@
 title: Validar el Registro de nombres de emisores
 ms.date: 03/30/2017
 ms.assetid: c4644dd1-dead-48ff-abeb-7bffae69a6ac
-ms.openlocfilehash: aa6a71ced0f9bf969eb6c8800739f629810dd63f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fc10181a142fd8ca4ebd8250869d49a046623564
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645908"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910779"
 ---
 # <a name="validating-issuer-name-registry"></a>Validar el Registro de nombres de emisores
 El registro de nombres de emisores de validación (VINR) de Windows Identity Foundation permite a las aplicaciones de varios inquilinos asegurarse de que un proveedor de identidad y un inquilino de confianza han emitido un token entrante. Esta funcionalidad es especialmente útil para las aplicaciones de varios inquilinos que usan Microsoft Azure Active Directory, ya que todos los tokens emitidos por Microsoft Azure AD se firman con el mismo certificado. Para diferenciar las solicitudes de varios inquilinos que usan el mismo certificado (y que, por tanto, tienen la misma huella digital), la aplicación debe conservar el nombre de emisor de cada inquilino para realizar la lógica de validación. El VINR proporciona esta funcionalidad y también permite agregar lógica de validación personalizada o almacenar los datos del Registro de emisores en ubicaciones distintas de un archivo de configuración. La extensión se puede agregar a la canalización WIF de la aplicación o usarse de forma independiente.  

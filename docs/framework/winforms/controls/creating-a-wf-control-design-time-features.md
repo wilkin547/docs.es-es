@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 70cd08a9d7d03cec4e946d2acb806dbecfe774f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011564"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211213"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Tutorial: Crear un control de formularios Windows Forms que aproveche las características en tiempo de diseño de Visual Studio
 
@@ -68,17 +68,13 @@ Para obtener el código completo, vea [Cómo: Crear un Control de Windows Forms 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para poder completar este tutorial, necesitará:
-
-- Permisos suficientes para poder crear y ejecutar proyectos de aplicación de Windows Forms en el equipo donde está instalado Visual Studio.
+Para completar este tutorial, necesitará Visual Studio.
 
 ## <a name="creating-the-project"></a>Crear el proyecto
 
 El primer paso es crear el proyecto de aplicación. Este proyecto se utilizará para compilar la aplicación que hospeda el control personalizado.
 
-### <a name="to-create-the-project"></a>Para crear el proyecto
-
-- Cree un proyecto de aplicación de Windows Forms denominado "MarqueeControlTest" (**archivo** > **New** > **proyecto**  >   **Visual C#** o **Visual Basic** > **escritorio clásico de** > **aplicación de Windows Forms**).
+Abra Visual Studio y cree un proyecto de aplicación de Windows Forms denominado "MarqueeControlTest" (**archivo** > **New** > **proyecto**  >  **Visual C#**  o **Visual Basic** > **escritorio clásico de** > **deaplicacióndeformulariosdeWindows**).
 
 ## <a name="creating-a-control-library-project"></a>Crear un proyecto de biblioteca de controles
 

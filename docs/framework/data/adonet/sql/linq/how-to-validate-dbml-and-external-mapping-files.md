@@ -2,12 +2,12 @@
 title: Procedimiento para validar archivos DBML y de asignación externa
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 83a26f22495c849aa00143ca36b63fa147120c28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 9e80f41e05fb78b7a6c1ef9ce47ef611cfe3e57d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310244"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910631"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Procedimiento para validar archivos DBML y de asignación externa
 Los archivos de asignación externa y los archivos .dbml que se modifican se deben validar con sus respectivas definiciones de esquema. En este tema proporciona a los usuarios de Visual Studio con los pasos para implementar el proceso de validación.  
@@ -30,9 +30,9 @@ Los archivos de asignación externa y los archivos .dbml que se modifican se deb
   
 5. Observe cuál es la definición de esquema adecuada para lo que desea.  
   
-    -   DbmlSchema.xsd es la definición de esquema para validar un archivo .dbml. Para obtener más información, consulte [generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+    - DbmlSchema.xsd es la definición de esquema para validar un archivo .dbml. Para obtener más información, consulte [generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-    -   LinqToSqlMapping.xsd es la definición de esquema para validar un archivo XML de asignación externa. Para obtener más información, consulte [asignaciones externas](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+    - LinqToSqlMapping.xsd es la definición de esquema para validar un archivo XML de asignación externa. Para obtener más información, consulte [asignaciones externas](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 6. En el **Use** columna de la fila de la definición de esquema deseado, haga clic para abrir el cuadro de lista desplegable y, a continuación, haga clic en **utilizar este esquema**.  
   
@@ -51,9 +51,9 @@ Los archivos de asignación externa y los archivos .dbml que se modifican se deb
   
 1. Busque el tema de Ayuda que contiene la definición de esquema tal como se ha descrito anteriormente en este tema.  
   
-    -   Los archivos .dbml, vea [generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+    - Los archivos .dbml, vea [generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-    -   Los archivos de asignación externa, vea [asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+    - Los archivos de asignación externa, vea [asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 2. Haga clic en **copiar código** para copiar el archivo de código en el Portapapeles.  
   

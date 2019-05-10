@@ -3,11 +3,11 @@ title: Agrupar datos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
 ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808128"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754464"
 ---
 # <a name="grouping-data-visual-basic"></a>Agrupar datos (Visual Basic)
 El agrupamiento hace referencia a la operación de colocar los datos en grupos de manera que los elementos de cada grupo compartan un atributo común.  
