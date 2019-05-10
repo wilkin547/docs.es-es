@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e9e5e09bdde82c7b818fd47275bdbfeda5850682
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793684"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645757"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementar una transacción implícita mediante el ámbito de la transacción
 La clase <xref:System.Transactions.TransactionScope> proporciona una manera simple de marcar un bloque de código como participar en una transacción, sin exigirle que interactuara con la propia transacción. Un ámbito de la transacción puede seleccionar y administrar automáticamente la transacción ambiente. Debido a su facilidad de uso y eficacia, se recomienda que utilice la clase <xref:System.Transactions.TransactionScope> al desarrollar una aplicación de transacción.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 367527fd638f6855077caf8ff5911edb333dfcbf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758280"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648768"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Procedimiento Contraer y ocultar secciones de código (Visual Basic)
 El `#Region` directiva le permite contraer y ocultar secciones de código en archivos de Visual Basic. El `#Region` directiva le permite especificar un bloque de código que se puede expandir o contraer cuando se usa el editor de código de Visual Studio. La capacidad de ocultar selectivamente el código hace que los archivos más fáciles de administrar y más fácil de leer. Para obtener más información, vea [Esquematización](/visualstudio/ide/outlining).  

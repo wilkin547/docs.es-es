@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2be428f0ae83596a4398fc9830af40d05f6ab191
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047014"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638651"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración con la información general de las aplicaciones COM
 Windows Communication Foundation (WCF) proporciona al desarrollador del código administrado con un entorno rico para crear aplicaciones conectadas. Sin embargo, si tiene una inversión sustancial en código basado en COM no administrado y no desea migrar, puede seguir integrar servicios Web WCF directamente en el código existente mediante el moniker de servicio WCF. El moniker de servicio se puede utilizar a partir de una gama amplia de entornos de desarrollo basados en COM, como Office VBA, Visual Basic 6.0 o Visual C++ 6.0.  

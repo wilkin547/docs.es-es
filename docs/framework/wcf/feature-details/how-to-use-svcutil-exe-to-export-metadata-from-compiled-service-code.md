@@ -2,12 +2,12 @@
 title: Procedimiento para usar Svcutil.exe para exportar metadatos desde el código de servicio compilado
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 5b905b6943127d483e001749c263242550ab28ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 40c684cbc1b14bf14d3ca23cbc044020e36b85f1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047343"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650225"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Procedimiento para usar Svcutil.exe para exportar metadatos desde el código de servicio compilado
 Svcutil.exe puede exportar metadatos para los servicios, contratos y tipos de datos en ensamblados compilados del siguiente modo:  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: 3027be6ee4ed3664b81c661b6a086a3604573833
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c7fb92c963ea7fa4129cddf060fe7c0b0261fc7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802614"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665139"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>La expresión es un valor y, por lo tanto, no puede ser destino de una asignación
 Una instrucción intenta asignar un valor a una expresión. Puede asignar un valor únicamente a una variable de escritura, propiedad o elemento de matriz en tiempo de ejecución. El ejemplo siguiente muestra cómo puede producirse este error.  
@@ -49,13 +49,13 @@ exitButton.Location = exitLocation
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Si la instrucción asigna un valor a una expresión, reemplace la expresión con una variable de escritura única, una propiedad o un elemento de matriz.  
+- Si la instrucción asigna un valor a una expresión, reemplace la expresión con una variable de escritura única, una propiedad o un elemento de matriz.  
   
--   Si la instrucción obtiene acceso indirecto a través de un tipo de valor (normalmente una estructura), cree una variable que contenga el tipo de valor.  
+- Si la instrucción obtiene acceso indirecto a través de un tipo de valor (normalmente una estructura), cree una variable que contenga el tipo de valor.  
   
--   Asignar la estructura adecuada (u otro tipo de valor) a la variable.  
+- Asignar la estructura adecuada (u otro tipo de valor) a la variable.  
   
--   Use la variable para tener acceso a la propiedad para asignarle un valor.  
+- Use la variable para tener acceso a la propiedad para asignarle un valor.  
   
 ## <a name="see-also"></a>Vea también
 

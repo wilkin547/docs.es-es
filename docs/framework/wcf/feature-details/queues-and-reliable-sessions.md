@@ -2,12 +2,12 @@
 title: Colas y sesiones de confianza
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: 1fb7d7db36aa51c63789b6daf0ac3689c87ace5c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d6b1e62e2b0f91856867128c2c0695ab0bdf1c8e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946697"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643526"
 ---
 # <a name="queues-and-reliable-sessions"></a>Colas y sesiones de confianza
 Las colas y sesiones confiables son las características de Windows Communication Foundation (WCF) que implementan la mensajería de confianza. Los temas contenidos en esta sección describen las características de mensajería confiables de WCF.  

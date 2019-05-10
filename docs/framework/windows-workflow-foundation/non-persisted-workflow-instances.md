@@ -2,12 +2,12 @@
 title: Instancias de flujo de trabajo no persistentes
 ms.date: 03/30/2017
 ms.assetid: 5e01af77-6b14-4964-91a5-7dfd143449c0
-ms.openlocfilehash: 410451f0dfeb91111e77634245aa786c4afc5b04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2f28e7b44f951151b47a6424670e5101960e91eb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644270"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649337"
 ---
 # <a name="non-persisted-workflow-instances"></a>Instancias de flujo de trabajo no persistentes
 Cuando se crea una nueva instancia de un flujo de trabajo cuyo estado persiste en <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, el host del servicio crea una entrada inicial para ese servicio en el almacén de instancias. Posteriormente, cuando la instancia de flujo de trabajo persiste por primera vez, <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> almacena el estado de la instancia actual. Si el flujo de trabajo se hospeda en el Servicio de activación de procesos de Windows, los datos de implementación del servicio también se escriben en el almacén de la instancia cuando la instancia persiste por primera vez.  

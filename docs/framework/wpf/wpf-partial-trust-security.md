@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 98377a48b1ffe1ffabd72d0b42de4ed3da3ef93a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696598"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642936"
 ---
 # <a name="wpf-partial-trust-security"></a>Seguridad de confianza parcial de WPF
 <a name="introduction"></a> En general, deben restringirse las aplicaciones de Internet para que no tengan acceso directo a recursos críticos del sistema y así evitar daños malintencionados. De forma predeterminada, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] y lenguajes de scripting del lado cliente no tienen acceso a recursos críticos del sistema. Dado que las aplicaciones hospedadas en Explorador de Windows Presentation Foundation (WPF) se pueden iniciar desde el explorador, deben cumplir un conjunto similar de restricciones. Para aplicar estas restricciones, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se basa en [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] y [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (consulte [estrategia de seguridad de WPF: seguridad de la plataforma](wpf-security-strategy-platform-security.md)). De forma predeterminada, las aplicaciones hospedadas en explorador solicitan la zona de Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] conjunto de permisos, independientemente de si se inician desde Internet, la intranet local o el equipo local. Las aplicaciones que se ejecutan con menos permisos que el conjunto completo de permisos se dice que se ejecutan con confianza parcial.  

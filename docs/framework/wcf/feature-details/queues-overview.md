@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 548594379f95952c79363759b8570cf5e2709cff
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991268"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643557"
 ---
 # <a name="queues-overview"></a>Información general de colas
 En esta sección se presentan los conceptos generales y básicos detrás de la comunicación puesta en la cola. Secciones subsiguientes no entran en detalles acerca de cómo los conceptos de puesta en cola descritos aquí se manifiestan en Windows Communication Foundation (WCF).  

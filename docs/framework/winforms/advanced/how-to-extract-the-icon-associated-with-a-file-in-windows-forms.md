@@ -9,12 +9,12 @@ helpviewer_keywords:
 - file name extension icons [Windows Forms], displaying in a ListView
 - extracting icons associated with a file type [Windows Forms]
 ms.assetid: 88e2ad8b-c34f-415a-84f2-dad756b5c928
-ms.openlocfilehash: d754dc5e8a57b3c4e2e5439bb2524a22d44813c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c3173a3fa756a3294154217f5cf0a13dbc8721f3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004047"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645398"
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Procedimiento para extraer el icono asociado a un archivo en formularios Windows Forms
 Muchos archivos tienen iconos incrustados que proporcionan una representación visual del tipo de archivo asociado. Por ejemplo, documentos de Microsoft Word contienen un icono que se identifica como documentos de Word. Al mostrar los archivos en un control de lista o tabla, desea mostrar el icono que representa el tipo de archivo junto a cada nombre de archivo. Puede hacerlo fácilmente utilizando el <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> método.  

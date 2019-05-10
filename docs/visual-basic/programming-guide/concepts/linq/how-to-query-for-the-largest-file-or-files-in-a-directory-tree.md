@@ -2,12 +2,12 @@
 title: Procedimiento Consulta para el archivo de mayor tamaño o archivos en un árbol de directorios (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: 7ba330b18020b7c3b823b70d0541cdda199aa898
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1a329c16e356686be8eb1530bf4a68b796965c14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008907"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648817"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Procedimiento Consulta para el archivo de mayor tamaño o archivos en un árbol de directorios (LINQ) (Visual Basic)
 En este ejemplo se muestran cinco consultas relacionadas con el tamaño de archivo en bytes:  

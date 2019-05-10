@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: 81220ad4c0bf00a38abfe7257d5fc61e92e8d885
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8254e48444fef248adb7c33b14faa43242647d59
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779098"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655610"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Procedimiento para admitir la interoperabilidad COM mostrando un formulario Windows Forms con el método ShowDialog
 Puede resolver problemas de interoperabilidad del Modelo de objetos componentes (COM) mostrando el formulario de Windows Forms en un bucle de mensajes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , que se crea con el método <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> .  
@@ -41,4 +41,4 @@ Puede resolver problemas de interoperabilidad del Modelo de objetos componentes 
 
 - [Exponer componentes de .NET Framework en COM](../../interop/exposing-dotnet-components-to-com.md)
 - [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
-- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
+- [Aplicaciones de Windows Forms y aplicaciones no administradas](windows-forms-and-unmanaged-applications.md)

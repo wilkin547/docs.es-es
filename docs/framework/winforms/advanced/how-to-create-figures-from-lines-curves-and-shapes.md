@@ -8,12 +8,12 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from shapes
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
-ms.openlocfilehash: eeaf478375e08734b20d83b6f3c8030732495013
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c8cf7a7e08bed56fb704bba4e30ff369bc3fcf89
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937701"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643473"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Procedimiento para crear figuras a partir de líneas, curvas y formas
 Para crear una figura, construya un <xref:System.Drawing.Drawing2D.GraphicsPath>y, a continuación, llamar a métodos, como <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> y <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, para agregar tipos primitivos para la ruta de acceso.  

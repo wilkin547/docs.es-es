@@ -2,12 +2,12 @@
 title: Mallas del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: d93e312e-ac04-40f8-baea-5da1cacb546e
-ms.openlocfilehash: afd9eae36f28c28b33b74c4456feb4ba8c91314d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9113fab13da8503e6ce0335e5bb19a2634973dad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766797"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654490"
 ---
 # <a name="peer-meshes"></a>Mallas del mismo nivel
 Un *malla* es una colección con nombre (un gráfico interconectado) de los nodos del mismo nivel que pueden comunicarse entre sí y que se identifican mediante un identificador de malla único. Cada nodo se conecta a varios nodos. En una malla correctamente conectada, siempre hay una ruta entre dos nodos dados, a una distancia en saltos relativamente corta entre los nodos de los bordes más lejanos, y la malla permanece conectada aun cuando se quitan algunos nodos o conexiones. Los nodos activos en la malla publican la información de su extremo con el Id. de malla pertinente para que otros pares puedan buscarlos.  

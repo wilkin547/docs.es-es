@@ -2,12 +2,12 @@
 title: Protocolo de intercambio de contexto
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb6e52b5622316cfaa9c56b26c3aac6764c71cca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857355"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651107"
 ---
 # <a name="context-exchange-protocol"></a>Protocolo de intercambio de contexto
 En esta sección se describe el protocolo de intercambio de contexto introducido en la versión de Windows Communication Foundation (WCF) .NET Framework versión 3.5. Este protocolo permite al canal de cliente que acepte un contexto proporcionado por un servicio y que lo aplique a todas las solicitudes posteriores a ese servicio enviado sobre la misma instancia del canal de cliente. La implementación del protocolo de intercambio de contexto puede utilizar uno de los dos mecanismos siguientes para propagar el contexto entre el servidor y el cliente: Las cookies HTTP o un encabezado SOAP.  
@@ -21,16 +21,16 @@ En esta sección se describe el protocolo de intercambio de contexto introducido
   
  A continuación, se muestra una lista de invariables en este modo:  
   
--   Cualquier intento de restablecer el contexto mediante `SetContext` una vez abierto el canal inicia una <xref:System.InvalidOperationException>.  
+- Cualquier intento de restablecer el contexto mediante `SetContext` una vez abierto el canal inicia una <xref:System.InvalidOperationException>.  
   
--   Cualquier intento de enviar el contexto utilizando la <xref:System.ServiceModel.Channels.ContextMessageProperty> en un mensaje saliente inicia una <xref:System.InvalidOperationException>.  
+- Cualquier intento de enviar el contexto utilizando la <xref:System.ServiceModel.Channels.ContextMessageProperty> en un mensaje saliente inicia una <xref:System.InvalidOperationException>.  
   
--   Si un mensaje se recibe del servidor con un contexto concreto, cuando el canal ya se ha inicializado con un contexto concreto, se produce una <xref:System.ServiceModel.ProtocolException>.  
+- Si un mensaje se recibe del servidor con un contexto concreto, cuando el canal ya se ha inicializado con un contexto concreto, se produce una <xref:System.ServiceModel.ProtocolException>.  
   
     > [!NOTE]
     >  Es adecuado recibir un contexto inicial desde el servidor solo si el canal se abre sin ningún contexto establecido explícitamente.  
   
--   <xref:System.ServiceModel.Channels.ContextMessageProperty> en un mensaje entrante siempre es null.  
+- <xref:System.ServiceModel.Channels.ContextMessageProperty> en un mensaje entrante siempre es null.  
   
 ## <a name="mode-2-application-context-management"></a>Modo 2: Administración de contexto de la aplicación  
  Éste es el modo cuando <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> se establece en `false`. En este modo el canal de contexto no administra contexto. Es responsabilidad de la aplicación el recuperar, administrar y aplicar el contexto utilizando la <xref:System.ServiceModel.Channels.ContextMessageProperty>. Cualquier intento de llamar al método `GetContext` o `SetContext` produce una <xref:System.InvalidOperationException>.  
@@ -53,7 +53,7 @@ En esta sección se describe el protocolo de intercambio de contexto introducido
   
  Los puntos de conexión de servicio que requieren compatibilidad con respecto al protocolo de intercambio de contexto pueden hacerlo explícito en la directiva publicada. Se han introducido dos nuevas aserciones de directivas para representar el requisito de que el cliente admita el protocolo de intercambio de contexto en el nivel de SOAP o de que habilite la compatibilidad con cookies HTTP. La generación de estas aserciones en la directiva en el servicio está controlada por el valor de la propiedad <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A>, como se muestra a continuación:  
   
--   Para <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>, se genera la siguiente aserción:  
+- Para <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>, se genera la siguiente aserción:  
   
     ```xml  
     <IncludeContext   
@@ -61,7 +61,7 @@ En esta sección se describe el protocolo de intercambio de contexto introducido
     protectionLevel="Sign" />  
     ```  
   
--   Para <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>, se genera la siguiente aserción:  
+- Para <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>, se genera la siguiente aserción:  
   
     ```xml  
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  

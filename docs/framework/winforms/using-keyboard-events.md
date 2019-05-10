@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dc404a73d5de96c69e4241b818965fe2bef22a50
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966924"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655639"
 ---
 # <a name="using-keyboard-events"></a>Utilizar eventos de teclado
 La mayoría de los programas de Windows Forms procesan la entrada de teclado controlando los eventos de teclado. Este ofrece una introducción a los eventos de teclado, incluidos detalles sobre cuándo usar cada evento y los datos que se proporcionan para cada evento.  Consulte también [información general sobre controladores de eventos (formularios Windows Forms)](event-handlers-overview-windows-forms.md) y [información general sobre eventos (formularios Windows Forms)](events-overview-windows-forms.md).  

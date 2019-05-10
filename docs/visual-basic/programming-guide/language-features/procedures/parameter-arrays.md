@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: 8ea4c77056701b8f61c1ed5a53cf20d98ae913bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 372d5fdd2702d6f85f784ee5addea91abe46d3bd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791956"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639021"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Matrices de parámetros (Visual Basic)
 Por lo general, no se puede llamar a un procedimiento con más argumentos de la declaración de procedimiento especifica. Cuando se necesita un número indefinido de argumentos, se puede declarar un *matriz de parámetros*, lo que permite que un procedimiento aceptar una matriz de valores para un parámetro. No es necesario saber el número de elementos de la matriz de parámetros cuando se define el procedimiento. El tamaño de la matriz se determina individualmente por cada llamada al procedimiento.  

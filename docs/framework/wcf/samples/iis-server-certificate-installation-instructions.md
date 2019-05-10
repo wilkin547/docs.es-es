@@ -2,12 +2,12 @@
 title: Instrucciones de instalación del certificado de servidor de Internet Information Services (IIS)
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 8d0b80930424f0d8529f2b035a8e1167f361f99a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 728232c4e1d6309ae0cfacb407417173ece145da
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752495"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648360"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Instrucciones de instalación del certificado de servidor de Internet Information Services (IIS)
 Para ejecutar los ejemplos que se comunican de forma segura con Internet Information Services (IIS), debe crear e instalar un certificado de servidor.  

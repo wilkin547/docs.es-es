@@ -11,23 +11,23 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 695abf51870ef9164e4543a91b3183e801eee55f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913736"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649255"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Procedimiento Modificar el tamaño o la ubicación de una imagen en tiempo de ejecución (formularios Windows Forms)
 Si utiliza los formularios de Windows <xref:System.Windows.Forms.PictureBox> control en un formulario, puede establecer el <xref:System.Windows.Forms.PictureBox.SizeMode%2A> propiedad en él para:  
   
--   Alinear esquina superior izquierda la imagen en la con la esquina superior izquierda del control  
+- Alinear esquina superior izquierda la imagen en la con la esquina superior izquierda del control  
   
--   Centrar la imagen dentro del control  
+- Centrar la imagen dentro del control  
   
--   Ajustar el tamaño del control para que quepa la imagen que muestra  
+- Ajustar el tamaño del control para que quepa la imagen que muestra  
   
--   Estirar cualquier imagen que se muestre para ajustar el control  
+- Estirar cualquier imagen que se muestre para ajustar el control  
   
  Ajuste de una imagen (especialmente uno en formato de mapa de bits) puede producirse una pérdida de calidad de imagen. Los metarchivos, que son listas de instrucciones de gráficos para dibujar imágenes en tiempo de ejecución, son más adecuados para el ajuste de los mapas de bits.  
   

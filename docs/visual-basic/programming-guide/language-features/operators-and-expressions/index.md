@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: b762c3002913cbd925579ef28f2aa01411976c32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40d71c5231b8d278f4ca8d9352e6e3cba5104f9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864330"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649709"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operadores y expresiones en Visual Basic
 Un *operador* es un elemento de código que realiza una operación en uno o más elementos de código que contienen valores. Los elementos de valor incluyen variables, constantes, literales, propiedades, devoluciones de procedimientos `Function` y `Operator` y expresiones.  
@@ -25,13 +25,13 @@ Un *operador* es un elemento de código que realiza una operación en uno o más
 ## <a name="types-of-operators"></a>Tipos de operadores  
  Visual Basic proporciona los siguientes tipos de operadores:  
   
--   Los [operadores aritméticos](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) realizan cálculos familiares en valores numéricos, incluido el desplazamiento de los patrones de bits.  
+- Los [operadores aritméticos](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) realizan cálculos familiares en valores numéricos, incluido el desplazamiento de los patrones de bits.  
   
--   Los [operadores de comparación](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md) comparan dos expresiones y devuelven un valor `Boolean` que representa el resultado de la comparación.  
+- Los [operadores de comparación](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md) comparan dos expresiones y devuelven un valor `Boolean` que representa el resultado de la comparación.  
   
--   Los [operadores de concatenación](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) unen varias cadenas en una sola.  
+- Los [operadores de concatenación](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) unen varias cadenas en una sola.  
   
--   Los [operadores lógicos y bit a bit de Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md) combinan valores `Boolean` o numéricos y devuelven un resultado del mismo tipo de datos que los valores.  
+- Los [operadores lógicos y bit a bit de Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md) combinan valores `Boolean` o numéricos y devuelven un resultado del mismo tipo de datos que los valores.  
   
  Los elementos de valor que se combinan con un operador se denominan *operandos* de ese operador. Los operadores combinados con elementos de valor forman expresiones, salvo el operador de asignación, que forma una *instrucción*. Para obtener más información, vea [Instrucciones (Guía de programación de C#)](../../../../visual-basic/programming-guide/language-features/statements.md).  
   

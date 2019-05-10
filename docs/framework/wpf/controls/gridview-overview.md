@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d1b9efb4016fbc3c4f7e14ea4a1c63308d992504
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008756"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649172"
 ---
 # <a name="gridview-overview"></a>Información general sobre GridView
 <xref:System.Windows.Controls.GridView> modo de vista es uno de los modos de visualización para un <xref:System.Windows.Controls.ListView> control. La <xref:System.Windows.Controls.GridView> clase y sus clases auxiliares permiten que usted y a los usuarios ver colecciones de elementos en una tabla que normalmente utiliza botones como encabezados de columna interactivos. Este tema se presenta la <xref:System.Windows.Controls.GridView> clase y describe su uso.  

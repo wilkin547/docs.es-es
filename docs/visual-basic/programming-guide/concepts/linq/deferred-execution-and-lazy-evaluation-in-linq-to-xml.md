@@ -2,12 +2,12 @@
 title: Ejecución aplazada y evaluación diferida en LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 31998eed-b95e-47fb-a865-9de1f337d1fb
-ms.openlocfilehash: b5c3e2a484aa16df22742ddf77d6438ec2a699bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a8d3bec16fa8ca7f5c587a9fdbb6caac53b74efe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790538"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641986"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>Ejecución aplazada y evaluación diferida en LINQ to XML (Visual Basic)
 Las operaciones de consulta y de eje a menudo se implementan para usar la ejecución aplazada. Este tema describe los requisitos y las ventajas de la ejecución aplazada, y algunas consideraciones acerca de la implementación.  
