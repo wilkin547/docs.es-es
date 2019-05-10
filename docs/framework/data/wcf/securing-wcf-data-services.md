@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf99979e2ea3a47247a5df4b6e0ececab6abe8ef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875737"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645518"
 ---
 # <a name="securing-wcf-data-services"></a>Proteger WCF Data Services
 En este tema se describe las consideraciones de seguridad que son específicas para desarrollar, implementar y ejecutar aplicaciones y servicios de datos de WCF que Servicios de acceso que admiten Open Data Protocol (OData). También debe seguir las recomendaciones para crear aplicaciones seguras de .NET Framework.  
@@ -82,15 +82,15 @@ OData se basa en el protocolo HTTP. En un mensaje HTTP, el encabezado puede cont
 ### <a name="custom-hosting-requirements"></a>Requisitos personalizados de hospedaje  
  De forma predeterminada, WCF Data Services se crea como una aplicación ASP.NET hospedada en IIS. De esta forma, el servicio de datos puede sacar provecho de los comportamientos seguros de esta plataforma. Puede definir los servicios de datos de WCF que se hospedan en un host personalizado. Para obtener más información, consulte [hospeda el servicio de datos](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md). Los componentes y la plataforma que hospedan un servicio de datos deben asegurar los siguientes comportamientos de seguridad para impedir ataques contra el servicio de datos:  
   
--   Limitar la longitud del URI aceptada en una solicitud del servicio de datos para todas las operaciones posibles.  
+- Limitar la longitud del URI aceptada en una solicitud del servicio de datos para todas las operaciones posibles.  
   
--   Limitar el tamaño de los mensajes HTTP tanto entrantes como salientes.  
+- Limitar el tamaño de los mensajes HTTP tanto entrantes como salientes.  
   
--   Limitar el número total de solicitudes pendientes en cualquier momento dado.  
+- Limitar el número total de solicitudes pendientes en cualquier momento dado.  
   
--   Limitar el tamaño de los encabezados HTTP y sus valores y proporcionan acceso de WCF Data Services para los datos del encabezado.  
+- Limitar el tamaño de los encabezados HTTP y sus valores y proporcionan acceso de WCF Data Services para los datos del encabezado.  
   
--   Detectar y contraatacar los ataques conocidos, como ataques SYN de TCP y de reproducción de mensajes.  
+- Detectar y contraatacar los ataques conocidos, como ataques SYN de TCP y de reproducción de mensajes.  
   
 ### <a name="values-are-not-further-encoded"></a>Los valores ya no se codifican  
  Los valores de propiedad que se envían al servicio de datos no se codifican aún más el tiempo de ejecución de WCF Data Services. Por ejemplo, cuando una propiedad de cadena de una entidad contiene contenido HTML con formato, el servicio de datos no codifica las etiquetas en HTML. Además, el servicio de datos ya no codifica los valores de propiedad de la respuesta. Asimismo, la biblioteca cliente ya no efectúa ningún tipo de codificación adicional.  
@@ -98,17 +98,17 @@ OData se basa en el protocolo HTTP. En un mensaje HTTP, el encabezado puede cont
 ### <a name="considerations-for-client-applications"></a>Consideraciones sobre aplicaciones cliente  
  Las siguientes consideraciones de seguridad se aplican a las aplicaciones que usan al cliente de WCF Data Services para tener acceso a los servicios de OData:  
   
--   La biblioteca cliente asume que los protocolos usados para acceder al servicio de datos proporcionan un nivel de seguridad adecuado.  
+- La biblioteca cliente asume que los protocolos usados para acceder al servicio de datos proporcionan un nivel de seguridad adecuado.  
   
--   La biblioteca cliente usa todos los valores predeterminados para las opciones de tiempos de espera y de análisis de las pilas de transporte proporcionadas por la plataforma subyacente.  
+- La biblioteca cliente usa todos los valores predeterminados para las opciones de tiempos de espera y de análisis de las pilas de transporte proporcionadas por la plataforma subyacente.  
   
--   La biblioteca cliente no lee la configuración a partir de los archivos de configuración de la aplicación.  
+- La biblioteca cliente no lee la configuración a partir de los archivos de configuración de la aplicación.  
   
--   La biblioteca cliente no implementa los mecanismos de acceso entre dominios. En su lugar, confía en los mecanismos proporcionados por la pila HTTP subyacente.  
+- La biblioteca cliente no implementa los mecanismos de acceso entre dominios. En su lugar, confía en los mecanismos proporcionados por la pila HTTP subyacente.  
   
--   La biblioteca cliente no dispone de elementos de interfaz de usuario y nunca intenta mostrar o presentar los datos que recibe o envía.  
+- La biblioteca cliente no dispone de elementos de interfaz de usuario y nunca intenta mostrar o presentar los datos que recibe o envía.  
   
--   Se recomienda que las aplicaciones cliente siempre validen la entrada del usuario, así como los datos aceptados de servicios que no sean de confianza.  
+- Se recomienda que las aplicaciones cliente siempre validen la entrada del usuario, así como los datos aceptados de servicios que no sean de confianza.  
   
 ## <a name="see-also"></a>Vea también
 

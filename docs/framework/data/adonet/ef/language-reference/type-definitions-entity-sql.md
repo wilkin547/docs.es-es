@@ -2,12 +2,12 @@
 title: Definiciones de tipo (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a8a0cae4599057a627cce6abebf34c7f05e821f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879559"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641398"
 ---
 # <a name="type-definitions-entity-sql"></a>Definiciones de tipo (Entity SQL)
 Las definiciones de tipo se usan en la instrucción de declaración de una función inline de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -19,25 +19,25 @@ Las definiciones de tipo se usan en la instrucción de declaración de una funci
   
  Las definiciones de tipo pueden ser:  
   
--   El tipo del identificador (por ejemplo, "Int32" o "AdventureWorks.Order").  
+- El tipo del identificador (por ejemplo, "Int32" o "AdventureWorks.Order").  
   
--   La palabra clave `COLLECTION` seguida de otra definición de tipo entre paréntesis (por ejemplo, "Collection(AdventureWorks.Order)").  
+- La palabra clave `COLLECTION` seguida de otra definición de tipo entre paréntesis (por ejemplo, "Collection(AdventureWorks.Order)").  
   
--   La palabra clave ROW seguida de una lista de definiciones de propiedad entre paréntesis (por ejemplo, "Row(x AdventureWorks.Order)"). Definiciones de propiedad tienen un formato como "`identifier type_definition`, `identifier type_definition`,...".  
+- La palabra clave ROW seguida de una lista de definiciones de propiedad entre paréntesis (por ejemplo, "Row(x AdventureWorks.Order)"). Definiciones de propiedad tienen un formato como "`identifier type_definition`, `identifier type_definition`,...".  
   
--   La palabra clave REF seguida del tipo del identificador entre paréntesis (por ejemplo, "Ref(AdventureWorks.Order)"). El operador de definición de tipo REF requiere un tipo de entidad como argumento. No puede especificar un tipo primitivo como argumento.  
+- La palabra clave REF seguida del tipo del identificador entre paréntesis (por ejemplo, "Ref(AdventureWorks.Order)"). El operador de definición de tipo REF requiere un tipo de entidad como argumento. No puede especificar un tipo primitivo como argumento.  
   
  También puede anidar las definiciones de tipo (por ejemplo, "Collection(Row(x Ref(AdventureWorks.Order)))").  
   
  Las opciones de definiciones de tipo son:  
   
--   `IdentifierName supported_type`, o  
+- `IdentifierName supported_type`, o  
   
--   `IdentifierName` COLLECTION(`type_definition`) o  
+- `IdentifierName` COLLECTION(`type_definition`) o  
   
--   `IdentifierName` ROW(`property_definition`) o  
+- `IdentifierName` ROW(`property_definition`) o  
   
--   `IdentifierName` REF(`supported_entity_type`)  
+- `IdentifierName` REF(`supported_entity_type`)  
   
  La opción de definición de propiedad es `IdentifierName type_definition`.  
   
