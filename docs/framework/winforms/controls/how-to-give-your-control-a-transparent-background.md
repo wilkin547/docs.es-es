@@ -6,12 +6,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], transparent background
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
-ms.openlocfilehash: 671075973793d7fbf0b70ce77428a0a632305b9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8a03d9afec5340cd77af465c4470b7484b8926be
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941341"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609703"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a>Procedimiento para proporcionar un fondo transparente a un control
 En versiones anteriores de .NET Framework, los controles no admitían la opción de establecer fondos transparentes sin establecer primero el método <xref:System.Windows.Forms.Control.SetStyle%2A> en el constructor de formularios. En la versión actual de .NET Framework, el color de fondo de la mayoría de los controles se puede establecer como <xref:System.Drawing.Color.Transparent%2A> en la ventana **Propiedades** durante el tiempo de diseño o como código en el constructor del formulario.  

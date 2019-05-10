@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b97c926da28eeb5385de71362a6cbc064ccc20cd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010155"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615441"
 ---
 # <a name="custom-animations-overview"></a>Información general sobre animaciones personalizadas
 En este tema se describe cómo y cuándo extender el sistema de animación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] creando fotogramas clave personalizados o clases de animación, o utilizando la devolución de llamada por fotograma para omitirlo.  

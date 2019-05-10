@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image codecs [Windows Forms], listing
 - image encoders [Windows Forms], listing
 ms.assetid: 49e8e4e9-7a67-42d9-86bf-08821cdc282e
-ms.openlocfilehash: ce297cb6d183bc63c8b276e30100aa4e864cd90d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2634dd96b3aa5edcecde092919eb328b7f3dadc3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61722957"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626842"
 ---
 # <a name="how-to-list-installed-encoders"></a>Procedimiento para enumerar los codificadores instalados
 Es posible que desee enumerar los codificadores de imagen disponibles en un equipo, para determinar si la aplicación puede guardar en un formato de archivo de imagen determinado. El <xref:System.Drawing.Imaging.ImageCodecInfo> clase proporciona el <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> métodos estáticos para que pueda determinar los codificadores de imagen que están disponibles. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> Devuelve una matriz de <xref:System.Drawing.Imaging.ImageCodecInfo> objetos.  

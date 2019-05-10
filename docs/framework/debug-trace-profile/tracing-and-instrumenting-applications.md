@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876153"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614228"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Seguimiento e instrumentación de aplicaciones
 El seguimiento es una manera de supervisar la ejecución de la aplicación mientras se está ejecutando. Puede agregar instrumentación de seguimiento y de depuración a la aplicación de .NET Framework cuando la desarrolle, y puede usar dicha instrumentación mientras desarrolla la aplicación y después de implementarla. Puede usar las clases <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> para registrar información sobre errores y ejecución de la aplicación en registros, archivos de texto u otros dispositivos para su análisis posterior.  
   
  El término *instrumentación* hace referencia a la capacidad de supervisar o medir el nivel de rendimiento de un producto y diagnosticar errores. En programación, esto significa la capacidad de una aplicación para incorporar:  
   
--   **Seguimiento de código**: recibir mensajes informativos sobre la ejecución de una aplicación en tiempo de ejecución.  
+- **Seguimiento de código**: recibir mensajes informativos sobre la ejecución de una aplicación en tiempo de ejecución.  
   
--   **Depuración**: localizar y corregir errores de programación en una aplicación en desarrollo. Para más información, vea [Depuración](/visualstudio/debugger/debugging-in-visual-studio).  
+- **Depuración**: localizar y corregir errores de programación en una aplicación en desarrollo. Para más información, vea [Depuración](/visualstudio/debugger/debugging-in-visual-studio).  
   
--   **Contadores de rendimiento**: componentes que permiten realizar el seguimiento del rendimiento de la aplicación. Para más información, vea [Contadores de rendimiento](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+- **Contadores de rendimiento**: componentes que permiten realizar el seguimiento del rendimiento de la aplicación. Para más información, vea [Contadores de rendimiento](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
--   **Registros de eventos**: componentes que permiten recibir y realizar el seguimiento de eventos importantes en la ejecución de la aplicación. Para obtener más información, vea la clase <xref:System.Diagnostics.EventLog>.  
+- **Registros de eventos**: componentes que permiten recibir y realizar el seguimiento de eventos importantes en la ejecución de la aplicación. Para obtener más información, vea la clase <xref:System.Diagnostics.EventLog>.  
   
  La instrumentación de la aplicación mediante la colocación de instrucciones de seguimiento en puntos estratégicos del código resulta especialmente útil con aplicaciones distribuidas. Mediante el uso de instrucciones de seguimiento, puede instrumentar una aplicación no solo para mostrar información cuando existe algún problema, sino también para supervisar el rendimiento de la aplicación.  
   
@@ -91,11 +91,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 6. Compile la aplicación en código ejecutable mediante uno de los siguientes procedimientos:  
   
-    -   Use el menú **Compilación** junto con la página **Depurar** del cuadro de diálogo **Páginas de propiedades** del **Explorador de soluciones**. Use este procedimiento si compila en Visual Studio.  
+    - Use el menú **Compilación** junto con la página **Depurar** del cuadro de diálogo **Páginas de propiedades** del **Explorador de soluciones**. Use este procedimiento si compila en Visual Studio.  
   
          \- o -  
   
-    -   Use las directivas de compilador **Trace** y **Debug** para el método de línea de comandos de compilación. Para más información, vea [Compilación condicional con Trace y Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Use este procedimiento si compila desde la línea de comandos.  
+    - Use las directivas de compilador **Trace** y **Debug** para el método de línea de comandos de compilación. Para más información, vea [Compilación condicional con Trace y Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Use este procedimiento si compila desde la línea de comandos.  
   
 7. Si se produce un problema durante el tiempo de ejecución, active el modificador de seguimiento adecuado. Para más información, vea [Configuración de modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   

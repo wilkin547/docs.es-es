@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-ms.openlocfilehash: 180fc99195444057c5bbb4a1679e948f9ddf1830
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 560b03b8e2788c88e6c92c64834bf36c750575ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856670"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626942"
 ---
 # <a name="enabling-transaction-flow"></a>Habilitar el flujo de transacciones
 Windows Communication Foundation (WCF) proporciona opciones muy flexibles para controlar el flujo de transacción. La configuración del flujo de transacción de un servicio se puede expresar utilizando una combinación de atributos y configuración.  
@@ -17,11 +17,11 @@ Windows Communication Foundation (WCF) proporciona opciones muy flexibles para c
 ## <a name="transaction-flow-settings"></a>Configuración del flujo de transacción  
  La configuración del flujo de transacción se genera para un extremo de servicio como resultado de la intersección de los tres valores siguientes:  
   
--   El atributo <xref:System.ServiceModel.TransactionFlowAttribute> especificado para cada método en el contrato de servicios.  
+- El atributo <xref:System.ServiceModel.TransactionFlowAttribute> especificado para cada método en el contrato de servicios.  
   
--   La propiedad de enlace `TransactionFlow` en el enlace concreto.  
+- La propiedad de enlace `TransactionFlow` en el enlace concreto.  
   
--   La propiedad de enlace `TransactionFlowProtocol` en el enlace concreto. La propiedad de enlace `TransactionFlowProtocol` le permite elegir entre dos protocolos de transacción diferentes que puede utilizar para el flujo de una transacción. Las siguientes secciones describen brevemente cada uno de ellos.  
+- La propiedad de enlace `TransactionFlowProtocol` en el enlace concreto. La propiedad de enlace `TransactionFlowProtocol` le permite elegir entre dos protocolos de transacción diferentes que puede utilizar para el flujo de una transacción. Las siguientes secciones describen brevemente cada uno de ellos.  
   
 ### <a name="ws-atomictransaction-protocol"></a>Protocolo WS-AtomicTransaction  
  El protocolo WS-AtomicTransaction (WS-AT) es útil para los escenarios cuando se requiere la interoperabilidad con pilas de protocolo de terceros.  

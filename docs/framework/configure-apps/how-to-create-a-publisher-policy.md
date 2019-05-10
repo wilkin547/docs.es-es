@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b37b00cfbeee10f217d1dbe1c754c50b65e31de9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344668"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625866"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Procedimiento para crear una directiva de publicador
 Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar una versión más reciente de un ensamblado mediante la inclusión de un archivo de directiva de publicador con el ensamblado actualizado. El archivo de directiva de publicador especifica redirección de ensamblado y la configuración de base de código y usa el mismo formato que un archivo de configuración de la aplicación. El archivo de directiva de publicador se compila en un ensamblado y colocar en la caché global de ensamblados.  
@@ -57,15 +57,15 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
      En este comando:  
   
-    -   El *directivas* argumento es el nombre del archivo de directiva de publicador.  
+    - El *directivas* argumento es el nombre del archivo de directiva de publicador.  
   
-    -   El *publisherPolicyAssemblyFile* argumento es el nombre del ensamblado de directiva de publicador que da como resultado de este comando. El nombre de archivo de ensamblado debe tener el formato:  
+    - El *publisherPolicyAssemblyFile* argumento es el nombre del ensamblado de directiva de publicador que da como resultado de este comando. El nombre de archivo de ensamblado debe tener el formato:  
   
          **policy.** *número principal* **.** *número secundario* **.** *mainAssemblyName* **.dll**  
   
-    -   El *keyPairFile* argumento es el nombre del archivo que contiene el par de claves. Debe firmar el ensamblado y el ensamblado de directivas del publicador con el mismo par de claves.  
+    - El *keyPairFile* argumento es el nombre del archivo que contiene el par de claves. Debe firmar el ensamblado y el ensamblado de directivas del publicador con el mismo par de claves.  
   
-    -   El *processorArchitecture* argumento identifica la plataforma de destino de un ensamblado específico del procesador.  
+    - El *processorArchitecture* argumento identifica la plataforma de destino de un ensamblado específico del procesador.  
   
         > [!NOTE]
         >  La capacidad para tener como destino una arquitectura de procesador específico es nueva en la versión 2.0 de .NET Framework.  

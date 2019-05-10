@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d24e7ad22eeebfb1c129306451aefbd393a9d087
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020275"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615800"
 ---
 # <a name="animation-tips-and-tricks"></a>Sugerencias y trucos para animaciones
 Cuando se trabaja con animaciones en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], hay una serie de sugerencias y trucos que pueden mejorar las animaciones un mejor rendimiento y evitar muchas frustraciones.  
@@ -41,11 +41,11 @@ Cuando se trabaja con animaciones en [!INCLUDE[TLA2#tla_wpf](../../../../include
   
  Para un <xref:System.Windows.Media.Animation.Timeline> para reflejar los cambios, debe volver a generar su reloj y utilizar para reemplazar el reloj previamente creado. Los relojes no se regeneran automáticamente. A continuación se muestran distintas maneras de aplicar cambios a las escalas de tiempo:  
   
--   Si la escala de tiempo es o pertenece a un <xref:System.Windows.Media.Animation.Storyboard>, puede hacer que reflejan los cambios puede volver a aplicar su guion gráfico utilizando un <xref:System.Windows.Media.Animation.BeginStoryboard> o <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método. El efecto secundario de esta acción es que también se reinicia la animación. En el código, puede usar el <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> hacer una copia de método para avanzar el guión gráfico a su posición anterior.  
+- Si la escala de tiempo es o pertenece a un <xref:System.Windows.Media.Animation.Storyboard>, puede hacer que reflejan los cambios puede volver a aplicar su guion gráfico utilizando un <xref:System.Windows.Media.Animation.BeginStoryboard> o <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método. El efecto secundario de esta acción es que también se reinicia la animación. En el código, puede usar el <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> hacer una copia de método para avanzar el guión gráfico a su posición anterior.  
   
--   Si aplica una animación directamente a una propiedad mediante el <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método, llame a la <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> nuevo al método y pásele la animación que se ha modificado.  
+- Si aplica una animación directamente a una propiedad mediante el <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método, llame a la <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> nuevo al método y pásele la animación que se ha modificado.  
   
--   Si está trabajando directamente en el nivel de relojes, cree y aplique un nuevo conjunto de relojes y utilícelos para reemplazar el conjunto anterior de relojes generados.  
+- Si está trabajando directamente en el nivel de relojes, cree y aplique un nuevo conjunto de relojes y utilícelos para reemplazar el conjunto anterior de relojes generados.  
   
  Para obtener más información acerca de las escalas de tiempo y relojes, consulte [Animation and Timing System Overview](animation-and-timing-system-overview.md).  
   
@@ -105,13 +105,13 @@ Cuando se trabaja con animaciones en [!INCLUDE[TLA2#tla_wpf](../../../../include
   
  Hay diferentes maneras de quitar una animación. Las técnicas siguientes pueden usarse para quitar animaciones que pertenecen a un <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Para quitar un <xref:System.Windows.Media.Animation.Storyboard> empezó con un desencadenador de eventos, vea [Cómo: Quitar un guión gráfico](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
+- Para quitar un <xref:System.Windows.Media.Animation.Storyboard> empezó con un desencadenador de eventos, vea [Cómo: Quitar un guión gráfico](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
   
--   Usar código para quitar un <xref:System.Windows.Media.Animation.Storyboard>, consulte el <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> método.  
+- Usar código para quitar un <xref:System.Windows.Media.Animation.Storyboard>, consulte el <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> método.  
   
  La técnica siguiente se puede utilizar sin tener en cuenta cómo se inició la animación.  
   
--   Para quitar animaciones de una propiedad específica, use el <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> método. Especifique la propiedad animada como primer parámetro, y `null` como el segundo. De este modo, se quitarán todos los relojes de animación de la propiedad.  
+- Para quitar animaciones de una propiedad específica, use el <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> método. Especifique la propiedad animada como primer parámetro, y `null` como el segundo. De este modo, se quitarán todos los relojes de animación de la propiedad.  
   
  Para obtener más información sobre las diferentes maneras de animar propiedades, vea [técnicas de animación de información general sobre propiedades](property-animation-techniques-overview.md).  
   
@@ -120,9 +120,9 @@ Cuando se trabaja con animaciones en [!INCLUDE[TLA2#tla_wpf](../../../../include
   
  Para evitar problemas de rendimiento cuando aplique muchos relojes mediante <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, debe quitar los relojes de composición de la propiedad animada cuando se hayan completado. Hay varias formas de quitar un reloj.  
   
--   Para quitar todos los relojes de una propiedad, utilice el <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> o <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> método del objeto animado. Especifique la propiedad animada como primer parámetro, y `null` como el segundo. De este modo, se quitarán todos los relojes de animación de la propiedad.  
+- Para quitar todos los relojes de una propiedad, utilice el <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> o <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> método del objeto animado. Especifique la propiedad animada como primer parámetro, y `null` como el segundo. De este modo, se quitarán todos los relojes de animación de la propiedad.  
   
--   Para quitar un determinado <xref:System.Windows.Media.Animation.AnimationClock> desde una lista de relojes, utilice la <xref:System.Windows.Media.Animation.Clock.Controller%2A> propiedad de la <xref:System.Windows.Media.Animation.AnimationClock> para recuperar un <xref:System.Windows.Media.Animation.ClockController>, a continuación, llame a la <xref:System.Windows.Media.Animation.ClockController.Remove%2A> método de la <xref:System.Windows.Media.Animation.ClockController>. Esto se hace normalmente el <xref:System.Windows.Media.Animation.Clock.Completed> controlador de eventos de un reloj. Tenga en cuenta que los relojes de raíz única pueden controlarse mediante una <xref:System.Windows.Media.Animation.ClockController>; el <xref:System.Windows.Media.Animation.Clock.Controller%2A> propiedad de un reloj secundario devolverá `null`. Tenga en cuenta también que el <xref:System.Windows.Media.Animation.Clock.Completed> eventos no se llamará si la duración efectiva del reloj es para siempre.  En ese caso, el usuario deberá determinar cuándo llamar a <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
+- Para quitar un determinado <xref:System.Windows.Media.Animation.AnimationClock> desde una lista de relojes, utilice la <xref:System.Windows.Media.Animation.Clock.Controller%2A> propiedad de la <xref:System.Windows.Media.Animation.AnimationClock> para recuperar un <xref:System.Windows.Media.Animation.ClockController>, a continuación, llame a la <xref:System.Windows.Media.Animation.ClockController.Remove%2A> método de la <xref:System.Windows.Media.Animation.ClockController>. Esto se hace normalmente el <xref:System.Windows.Media.Animation.Clock.Completed> controlador de eventos de un reloj. Tenga en cuenta que los relojes de raíz única pueden controlarse mediante una <xref:System.Windows.Media.Animation.ClockController>; el <xref:System.Windows.Media.Animation.Clock.Controller%2A> propiedad de un reloj secundario devolverá `null`. Tenga en cuenta también que el <xref:System.Windows.Media.Animation.Clock.Completed> eventos no se llamará si la duración efectiva del reloj es para siempre.  En ese caso, el usuario deberá determinar cuándo llamar a <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
   
  Este problema se produce principalmente en las animaciones de objetos que tienen un período de duración prolongado.  Cuando un objeto se recolecta como elemento no utilizado, sus relojes también se desconectan y se recolectan como elementos no utilizados.  
   

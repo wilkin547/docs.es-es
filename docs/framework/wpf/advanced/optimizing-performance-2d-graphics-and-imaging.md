@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1869a5c274b3308e718ca550e8e43ff6a72d4b5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981947"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64611850"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Optimizar el rendimiento: Imágenes y gráficos 2D
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona una amplia gama de gráficos 2D y funcionalidad de creación de imágenes que se puede optimizar para los requisitos de la aplicación. Este tema proporciona información acerca de la optimización del rendimiento en esas áreas.  

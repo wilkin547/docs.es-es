@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: 33ebb07e350dbbbdd324b442f52dfb6287322bd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eae78220196395ba3002141f01d554f2335a1f28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858382"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613361"
 ---
 # <a name="bindings-and-binding-elements"></a>Enlaces y elementos de enlace
 Los enlaces son colecciones de elementos de configuración especial, llamados *elementos de enlace*, que son evaluados por el runtime del servicio cada vez que un cliente o el punto de conexión de servicio se está construyendo. El tipo y orden de los elementos de enlace dentro de un enlace determina la selección y el orden de apilamiento del protocolo y los canales de transporte en la pila de canales de un extremo.  
@@ -21,13 +21,13 @@ Los enlaces son colecciones de elementos de configuración especial, llamados *e
 ## <a name="extending-bindings-and-binding-elements"></a>Extender enlaces y elementos de enlace  
  Windows Communication Foundation (WCF) incluye enlaces proporcionados por el sistema que abarcan una amplia gama de escenarios. (Para obtener más información, consulte [System-provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).) Puede haber ocasiones, sin embargo, cuando se necesita crear y utilizar un enlace que no se incluye en WCF. Los siguientes escenarios requieren la creación de un nuevo enlace.  
   
--   Para utilizar un nuevo elemento de enlace (como un nuevo transporte, codificación o elemento de enlace protocolar), debe crear un nuevo enlace que incluya ese elemento de enlace. Por ejemplo, si agregase un `UdpTransportBindingElement` personalizado para transporte de UDP, necesitaría crear un nuevo enlace para utilizarlo. Para obtener información acerca de cómo realizar este comportamiento mediante la <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> , vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+- Para utilizar un nuevo elemento de enlace (como un nuevo transporte, codificación o elemento de enlace protocolar), debe crear un nuevo enlace que incluya ese elemento de enlace. Por ejemplo, si agregase un `UdpTransportBindingElement` personalizado para transporte de UDP, necesitaría crear un nuevo enlace para utilizarlo. Para obtener información acerca de cómo realizar este comportamiento mediante la <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> , vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
--   Para configurar elementos de enlace existentes de tal modo que los enlaces proporcionados por el sistema no se expongan en propiedades públicas. Por ejemplo, debe crear un nuevo enlace para cambiar el orden en el que se realizan las operaciones de firmado y cifrado. Para obtener información acerca de cómo realizar este comportamiento, vea [Cómo: Personalización de un enlace proporcionado por el sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+- Para configurar elementos de enlace existentes de tal modo que los enlaces proporcionados por el sistema no se expongan en propiedades públicas. Por ejemplo, debe crear un nuevo enlace para cambiar el orden en el que se realizan las operaciones de firmado y cifrado. Para obtener información acerca de cómo realizar este comportamiento, vea [Cómo: Personalización de un enlace proporcionado por el sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   
--   Para establecer enlaces estándar corporativos que solo exponen opciones de configuración específicas. Por ejemplo, para crear para su compañía una variante de <xref:System.ServiceModel.WSHttpBinding> en la que la seguridad no puede estar deshabilitada, cree un nuevo enlace que se comporte como el <xref:System.ServiceModel.WSHttpBinding>, pero con la seguridad siempre habilitada. Para obtener más información, consulte [crear enlaces](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+- Para establecer enlaces estándar corporativos que solo exponen opciones de configuración específicas. Por ejemplo, para crear para su compañía una variante de <xref:System.ServiceModel.WSHttpBinding> en la que la seguridad no puede estar deshabilitada, cree un nuevo enlace que se comporte como el <xref:System.ServiceModel.WSHttpBinding>, pero con la seguridad siempre habilitada. Para obtener más información, consulte [crear enlaces](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
--   Para realizar alguna personalización de metadatos, normalmente, pero no necesariamente, para configurar o utilizar algún elemento de enlace personalizado. Para obtener más información acerca de cómo proporcionar compatibilidad con metadatos para los enlaces y elementos de enlace, consulte [configuración y compatibilidad con metadatos](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
+- Para realizar alguna personalización de metadatos, normalmente, pero no necesariamente, para configurar o utilizar algún elemento de enlace personalizado. Para obtener más información acerca de cómo proporcionar compatibilidad con metadatos para los enlaces y elementos de enlace, consulte [configuración y compatibilidad con metadatos](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
 
 ## <a name="channels-bindings-and-binding-elements"></a>Canales, enlaces y elementos de enlace  
  Los enlaces y elementos de enlace son la conexión entre el modelo de programación de aplicaciones, que incluye los atributos y comportamientos, y el modelo del canal, que incluye los generadores y agentes de escucha, codificadores de mensajes e implementaciones de protocolo y transporte. Normalmente, los elementos de enlace y los enlaces se implementan para permitir al nivel de aplicaciones el uso de los canales.  

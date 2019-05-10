@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7b19fbeb0144698c5091a9bbe6bce45c21c4f0d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949947"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616368"
 ---
 # <a name="lazy-initialization"></a>Inicialización diferida
 La *inicialización diferida* de un objeto implica que su creación se aplaza hasta que se usa por primera vez. (En este tema, los términos *inicialización diferida* y *creación diferida de instancias* son sinónimos). La inicialización diferida se usa principalmente para mejorar el rendimiento, evitar la pérdida de tiempo en los cálculos y reducir los requisitos de memoria de los programas. Estos son los escenarios más comunes:  

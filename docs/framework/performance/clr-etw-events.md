@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb7520518497b244be8be3751ca8a3063a02717a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a6b18f736743f1057641c20c7ef2bc544272f94f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788016"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616656"
 ---
 # <a name="clr-etw-events"></a>Eventos ETW de CLR
 Los temas de esta sección describen los eventos de seguimiento de eventos para Windows (ETW). Cada evento tiene una palabra clave y un nivel asociados que se describen en el tema [Palabras clave y niveles ETW de CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md). CLR tiene dos proveedores para los eventos:  

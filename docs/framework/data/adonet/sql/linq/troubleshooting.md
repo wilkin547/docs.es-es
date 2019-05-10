@@ -2,12 +2,12 @@
 title: Solución de problemas
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebcfec475d20492f5ce1f971163544d9faa52223
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917645"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613764"
 ---
 # <a name="troubleshooting"></a>Solución de problemas
 La siguiente información expone algunos problemas que podría encontrar en sus aplicaciones de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y proporciona sugerencias para evitar o reducir el efecto de estos problemas.  
@@ -31,9 +31,9 @@ La siguiente información expone algunos problemas que podría encontrar en sus 
 ## <a name="cascade-delete"></a>Eliminación en cascada  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite ni reconoce las operaciones de eliminación en cascada. Si desea eliminar una fila de una tabla que tiene restringidas las eliminaciones, deberá hacerlo mediante una de las siguientes opciones:  
   
--   Establezca la regla `ON DELETE CASCADE` en la restricción de clave externa de la base de datos.  
+- Establezca la regla `ON DELETE CASCADE` en la restricción de clave externa de la base de datos.  
   
--   Utilice su propio código para eliminar primero los objetos secundarios que impiden que se elimine el objeto primario.  
+- Utilice su propio código para eliminar primero los objetos secundarios que impiden que se elimine el objeto primario.  
   
  En caso contrario, se producirá una excepción <xref:System.Data.SqlClient.SqlException>.  
   
@@ -42,11 +42,11 @@ La siguiente información expone algunos problemas que podría encontrar en sus 
 ## <a name="expression-not-queryable"></a>Expresión que no se puede consultar  
  Si obtiene el error "No se puede consultar una expresión de tipo [expresión]. Compruebe que no falta ninguna referencia de ensamblado", asegúrese de lo siguiente:  
   
--   Su aplicación va destinada a [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
+- Su aplicación va destinada a [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
   
--   Tiene una referencia a `System.Core.dll` y `System.Data.Linq.dll`.  
+- Tiene una referencia a `System.Core.dll` y `System.Data.Linq.dll`.  
   
--   Tiene un `Imports` (Visual Basic) o `using` directiva (C#) para <xref:System.Linq> y <xref:System.Data.Linq>.  
+- Tiene un `Imports` (Visual Basic) o `using` directiva (C#) para <xref:System.Linq> y <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  Durante la depuración una [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto, se podrían recorrer las relaciones de una entidad. Si lo hace, pone estos elementos en la memoria caché, y [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] se da cuenta de su presencia. Si, a continuación, intenta ejecutar <xref:System.Data.Linq.Table%601.Attach%2A> o <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> o un método similar que genere varias filas con que presenten la misma clave, se producirá la excepción <xref:System.Data.Linq.DuplicateKeyException>.  

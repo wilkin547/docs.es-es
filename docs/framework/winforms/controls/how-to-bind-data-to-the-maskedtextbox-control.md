@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f10a19433c70eb0a1dacf99925f70d6796727da9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761382"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612406"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Procedimiento para enlazar datos al control MaskedTextBox
 Puede enlazar datos a un <xref:System.Windows.Forms.MaskedTextBox> controlar igual que lo haría para cualquier otro control de Windows Forms. Sin embargo, si el formato de los datos en la base de datos no coincide con el formato esperado por la definición de máscara, deberá volver a formatear los datos. El siguiente procedimiento muestra cómo hacer esto mediante la <xref:System.Windows.Forms.Binding.Format> y <xref:System.Windows.Forms.Binding.Parse> eventos de la <xref:System.Windows.Forms.Binding> clase para mostrar el número de teléfono distinto y campos de la base de datos de extensión de teléfono como un único campo editable.  

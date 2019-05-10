@@ -9,12 +9,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
-ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b8b6ec195fd3f95a4255ea820f2bffcb3e27ba19
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940990"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615219"
 ---
 # <a name="names-of-namespaces"></a>Nombres de espacios de nombres
 Como con otras directrices de nomenclatura, el objetivo al asignar nombres a los espacios de nombres está creando una mayor claridad suficiente para los programadores que utilizan el marco de trabajo saber inmediatamente lo que es probable que sea el contenido del espacio de nombres. La plantilla siguiente especifica la regla general para asignar nombres a los espacios de nombres:  

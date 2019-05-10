@@ -11,12 +11,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a factory object
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
-ms.openlocfilehash: 2de892d94afdfcdc580d20f90fb60ebabf4a9b37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 61ed671b48fd07559c8403b9f5761dbaee3a66ab
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761421"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612580"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Procedimiento para enlazar un control de formularios Windows Forms a un objeto Factory
 Al crear controles que interactúan con datos, a veces considerará necesario enlazar un control a un objeto o un método que genere otros objetos. Este tipo de objetos o métodos se denomina generador. El origen de datos podría ser, por ejemplo, el valor devuelto de una llamada al método, en lugar de un objeto en la memoria o un tipo. Puede enlazar un control a este tipo de origen de datos mientras el origen devuelve una colección.  

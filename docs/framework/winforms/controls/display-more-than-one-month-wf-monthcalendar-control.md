@@ -11,12 +11,12 @@ helpviewer_keywords:
 - calendars [Windows Forms], multiple months
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d197caa2-38a5-4cb4-acc3-562130c2ace3
-ms.openlocfilehash: 79100b52d8e0a5b651edb9d6555a4497287ed858
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c2252ccf1c8fec0dcaba634e6da093ab976ce1f6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972146"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614764"
 ---
 # <a name="how-to-display-more-than-one-month-in-the-windows-forms-monthcalendar-control"></a>Procedimiento para mostrar más de un mes en el control MonthCalendar de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control puede mostrar un máximo de 12 meses a la vez. De forma predeterminada, el control muestra un solo mes, pero puede especificar el número de meses se muestra y cómo se organizan dentro del control. Al cambiar las dimensiones del calendario, el control cambia de tamaño, por lo que hay espacio suficiente en el formulario para las nuevas dimensiones.  

@@ -2,12 +2,12 @@
 title: Procedimiento para crear un servicio que acepte datos arbitrarios mediante el modelo de programación REST de WCF
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: d7da3a5c6dd4f04c4d902dab9c2dff40413ddd20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1c30491f6c5b0a91f93a6f26417f9dc2b996a48
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857340"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614802"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Procedimiento para crear un servicio que acepte datos arbitrarios mediante el modelo de programación REST de WCF
 A veces los programadores deben tener un control absoluto de la forma en que se devuelven los datos desde una operación de un servicio. Esto sucede cuando una operación de servicio debe devolver datos en un formato no admiten byWCF. En este tema describe el uso del modelo de programación WCF REST para crear un servicio que recibe datos arbitrarios.  
@@ -191,7 +191,7 @@ namespace ReceiveRawData
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
--   Al compilar el código, haga referencia a System.ServiceModel.dll y System.ServiceModel.Web.dll.  
+- Al compilar el código, haga referencia a System.ServiceModel.dll y System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Vea también
 

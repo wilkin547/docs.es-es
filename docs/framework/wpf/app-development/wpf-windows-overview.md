@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 60ed101df691db9f1afa8e47702f131bee384495
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052734"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625321"
 ---
 # <a name="wpf-windows-overview"></a>Información general sobre ventanas de WPF
 Los usuarios interactúan con las aplicaciones independientes de Windows Presentation Foundation (WPF) a través de windows. El propósito principal de una ventana es hospedar contenido que permita visualizar datos y que permita a los usuarios interactuar con estos. Independiente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones proporcionan sus propias ventanas mediante el uso de la <xref:System.Windows.Window> clase. Este tema se presentan <xref:System.Windows.Window> antes de tratar los aspectos básicos de creación y administración de windows en las aplicaciones independientes.  

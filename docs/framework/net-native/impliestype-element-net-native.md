@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ef238a2cb852ecd7fa3f0e2dbe4048ff03a4139
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1cd2177707edfd29dc393e2bcfd6bbacb749b30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868633"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616686"
 ---
 # <a name="impliestype-element-net-native"></a>\<ImpliesType > elemento (.NET Native)
 Aplica una directiva a un tipo, si dicha directiva se ha aplicado al tipo contenedor o al método.  
@@ -75,9 +75,9 @@ Aplica una directiva a un tipo, si dicha directiva se ha aplicado al tipo conten
 ## <a name="remarks"></a>Comentarios  
  El elemento `<ImpliesType>` sirve principalmente para que lo utilicen las bibliotecas. Está pensado para el siguiente escenario:  
   
--   Si una rutina debe reflejarse en un determinado tipo, necesariamente debe reflejarse en un segundo tipo.  
+- Si una rutina debe reflejarse en un determinado tipo, necesariamente debe reflejarse en un segundo tipo.  
   
--   Los metadatos para la creación de instancias implícita del segundo tipo no está disponible, ya que el análisis estático no indica si es necesario.  
+- Los metadatos para la creación de instancias implícita del segundo tipo no está disponible, ya que el análisis estático no indica si es necesario.  
   
  Normalmente, los dos tipos son instancias genéricas con argumentos de tipo compartido.  
   

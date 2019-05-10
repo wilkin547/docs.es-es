@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1433583c4c8e20533e7e18f1722d5481ffed3bbc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002344"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625688"
 ---
 # <a name="timing-behaviors-overview"></a>Información general sobre comportamientos de control de tiempo
 En este tema se describe los comportamientos de temporización de animaciones y otros <xref:System.Windows.Media.Animation.Timeline> objetos.  
