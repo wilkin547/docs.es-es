@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40605d4843bfccf9d2819b3ec6f2ef65f9e9cf9a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920671"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661326"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 Especifica que se puede omitir un argumento de procedimiento cuando se llama al procedimiento.  
@@ -25,13 +25,13 @@ Especifica que se puede omitir un argumento de procedimiento cuando se llama al 
   
  El modificador `Optional` se puede utilizar en los contextos siguientes:  
   
--   [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
 >  Al llamar a un procedimiento con o sin parámetros opcionales, puede pasar argumentos por posición o por nombre. Para obtener más información, consulte [pasar argumentos por posición o por nombre](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  

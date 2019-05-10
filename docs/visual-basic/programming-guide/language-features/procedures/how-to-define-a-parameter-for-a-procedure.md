@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf57d4dbd7e8596396fb2e9099d5984759d6e90d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863706"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665378"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Procedimiento Definir un parámetro para un procedimiento (Visual Basic)
 Un *parámetro* permite pasar un valor al procedimiento cuando lo llama el código de llamada. Declarar cada parámetro para un procedimiento de la misma manera que se declara una variable, especificando su nombre y tipo de datos. También especifica el mecanismo de paso, y si el parámetro es opcional.  
@@ -46,11 +46,11 @@ Un *parámetro* permite pasar un valor al procedimiento cuando lo llama el códi
   
      Especificar los tipos de datos para todos los elementos de programación se conoce como *establecimiento inflexible de tipos*. Al establecer `Option Strict On`, Visual Basic exige el establecimiento inflexible de tipos. Esto se recomienda encarecidamente, por las razones siguientes:  
   
-    -   Habilita la compatibilidad con IntelliSense para las variables y parámetros. Esto le permite ver sus propiedades y otros miembros a medida que escribe en el código.  
+    - Habilita la compatibilidad con IntelliSense para las variables y parámetros. Esto le permite ver sus propiedades y otros miembros a medida que escribe en el código.  
   
-    -   Permite al compilador que realice la comprobación de tipos. Esto ayuda a detectar las instrucciones que se pueden producir un error en tiempo de ejecución debido a errores, como el desbordamiento. También detecta llamadas a métodos en objetos que no las admiten.  
+    - Permite al compilador que realice la comprobación de tipos. Esto ayuda a detectar las instrucciones que se pueden producir un error en tiempo de ejecución debido a errores, como el desbordamiento. También detecta llamadas a métodos en objetos que no las admiten.  
   
-    -   Se produce una ejecución más rápida del código. Una razón para esto es que si no especifica un tipo de datos para un elemento de programación, el compilador de Visual Basic asigna el `Object` tipo. El código compilado que sea necesario convertir entre `Object` y otros tipos de datos, lo que reduce el rendimiento.  
+    - Se produce una ejecución más rápida del código. Una razón para esto es que si no especifica un tipo de datos para un elemento de programación, el compilador de Visual Basic asigna el `Object` tipo. El código compilado que sea necesario convertir entre `Object` y otros tipos de datos, lo que reduce el rendimiento.  
   
 ## <a name="see-also"></a>Vea también
 

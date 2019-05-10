@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 0a9c01269e12c2d84be4f30c236c439012a88153
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d2d5c34a501368ed77d6ceef73b57c6bd79be
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013912"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469511"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Constantes y enumeraciones (Visual Basic)
 Visual Basic proporciona una serie de constantes y enumeraciones para desarrolladores predefinidas. Las constantes almacenan valores que permanecen constantes durante la ejecución de una aplicación. Las enumeraciones proporcionan una forma cómoda de trabajar con conjuntos de constantes relacionadas y asociar valores constantes con nombres.  
@@ -27,7 +27,7 @@ Visual Basic proporciona una serie de constantes y enumeraciones para desarrolla
 |`DEBUG`|Un `Boolean` valor que se puede establecer en el **las propiedades del proyecto** cuadro de diálogo. De forma predeterminada, se define la configuración de depuración para un proyecto `DEBUG`. Cuando `DEBUG` está definido, <xref:System.Diagnostics.Debug> métodos de clase generan resultados en la **salida** ventana. Si no está definido, <xref:System.Diagnostics.Debug> métodos de clase no se compilan y se genera ningún resultado de depuración.|  
 |`TARGET`|Una cadena que representa el tipo de salida para el proyecto o la configuración de la línea de comandos **/target** opción. Los valores posibles de `TARGET` son:<br /><br /> -"winexe" para una aplicación de Windows.<br />-"exe" para una aplicación de consola.<br />-"biblioteca" para una biblioteca de clases.<br />-"module" para un módulo.<br />-El **/target** opción se puede establecer en el entorno de desarrollo integrado de Visual Studio. Para obtener más información, consulte [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|Un `Boolean` valor que se puede establecer en el **las propiedades del proyecto** cuadro de diálogo. De forma predeterminada, todas las configuraciones para un proyecto definen `TRACE`. Cuando `TRACE` está definido, <xref:System.Diagnostics.Trace> métodos de clase generan resultados en la **salida** ventana. Si no está definido, <xref:System.Diagnostics.Trace> no se compilan los métodos de clase y no `Trace` se generan resultados.|  
-|`VBC_VER`|Un número que representa la versión de Visual Basic en *principales*. *menores* formato. El número de versión para [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] es 8.0.|  
+|`VBC_VER`|Un número que representa la versión de Visual Basic en *principales*. *menores* formato.|  
   
 ### <a name="print-and-display-constants"></a>Constantes de impresión y visualización  
  Al llamar a imprimir y mostrar las funciones, puede usar las siguientes constantes en el código en lugar de los valores reales.  

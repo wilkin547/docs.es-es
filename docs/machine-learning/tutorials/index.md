@@ -1,16 +1,16 @@
 ---
-title: 'Tutoriales de aprendizaje automático de . NET: ML.NET'
+title: Tutoriales de ML.NET
 description: Explore los tutoriales de ML.NET para obtener información sobre cómo compilar soluciones de IA personalizadas e integrarlas en las aplicaciones .NET.
 ms.custom: seodec18
 ms.date: 04/05/2019
-ms.openlocfilehash: 45534e196c2dc0cd1994445eeb482474b32aaa41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42f781f53c94d9852f2d75117683eb21dd1c5c6e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019118"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634792"
 ---
-# <a name="net-machine-learning-tutorials---mlnet"></a>Tutoriales de aprendizaje automático de . NET: ML.NET
+# <a name="mlnet-tutorials"></a>Tutoriales de ML.NET 
 
 Los tutoriales siguientes permiten obtener información sobre cómo usar [ML.NET](../index.yml) para crear soluciones de Machine Learning personalizadas e integrarlas en las aplicaciones .NET:
 

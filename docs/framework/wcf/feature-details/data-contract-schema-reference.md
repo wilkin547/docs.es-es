@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: a4ddaaea2133a8adf5271628f442644194a7f453
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7797b7a8786a89671175bccb501b7fe69c021d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857186"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627076"
 ---
 # <a name="data-contract-schema-reference"></a>Referencia de esquema de contrato de datos
 En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.Runtime.Serialization.DataContractSerializer> usa para describir los tipos de Common Language Runtime (CLR) para la serialización XML.  
@@ -24,19 +24,19 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 ### <a name="support-levels"></a>Niveles de compatibilidad  
  El `DataContractSerializer` proporciona los niveles siguientes de compatibilidad para una característica de esquema XML determinada:  
   
--   **Compatible**. Hay asignación explícita desde esta característica a tipos o atributos CLR (o a ambos) mediante `DataContractSerializer`.  
+- **Compatible**. Hay asignación explícita desde esta característica a tipos o atributos CLR (o a ambos) mediante `DataContractSerializer`.  
   
--   **Se omite**. La característica se permite en esquemas importados por el `DataContractSerializer`, pero no tiene ningún efecto sobre la generación de código.  
+- **Se omite**. La característica se permite en esquemas importados por el `DataContractSerializer`, pero no tiene ningún efecto sobre la generación de código.  
   
--   **Se prohíbe**. El `DataContractSerializer` no permite importar un esquema mediante la característica. Por ejemplo, Svcutil.exe, al obtener acceso a un WSDL con un esquema que utiliza esta característica, vuelve a utilizar el <xref:System.Xml.Serialization.XmlSerializer> en su lugar. Esto sucede de forma predeterminada.  
+- **Se prohíbe**. El `DataContractSerializer` no permite importar un esquema mediante la característica. Por ejemplo, Svcutil.exe, al obtener acceso a un WSDL con un esquema que utiliza esta característica, vuelve a utilizar el <xref:System.Xml.Serialization.XmlSerializer> en su lugar. Esto sucede de forma predeterminada.  
   
 ## <a name="general-information"></a>Información general  
   
--   El espacio de nombres del esquema se describe en [Esquema XML](https://go.microsoft.com/fwlink/?LinkId=95475). El prefijo "xs" se utiliza en este documento.  
+- El espacio de nombres del esquema se describe en [Esquema XML](https://go.microsoft.com/fwlink/?LinkId=95475). El prefijo "xs" se utiliza en este documento.  
   
--   Cualquier atributo con un espacio de nombres que no sea del esquema Se ignora.  
+- Cualquier atributo con un espacio de nombres que no sea del esquema Se ignora.  
   
--   Se omite cualquier anotación (excepto aquellas descritas en este documento).  
+- Se omite cualquier anotación (excepto aquellas descritas en este documento).  
   
 ### <a name="xsschema-attributes"></a>\<xs:schema>: attributes  
   
@@ -120,11 +120,11 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 ### <a name="general-information"></a>Información general  
  `<xs:element>` puede aparecer en los contextos siguientes:  
   
--   Puede ocurrir dentro de un `<xs:sequence>`, que describe un miembro de datos de un contrato de datos normal (no de una colección). En este caso, el atributo `maxOccurs` debe ser 1. (No se permite un valor de 0).  
+- Puede ocurrir dentro de un `<xs:sequence>`, que describe un miembro de datos de un contrato de datos normal (no de una colección). En este caso, el atributo `maxOccurs` debe ser 1. (No se permite un valor de 0).  
   
--   Puede ocurrir dentro de un `<xs:sequence>`, que describe un miembro de datos de un contrato de datos de colección. En este caso, el atributo `maxOccurs` debe ser mayor que 1 o "ilimitado".  
+- Puede ocurrir dentro de un `<xs:sequence>`, que describe un miembro de datos de un contrato de datos de colección. En este caso, el atributo `maxOccurs` debe ser mayor que 1 o "ilimitado".  
   
--   Puede ocurrir dentro de `<xs:schema>` como una declaración de elemento global (GED).  
+- Puede ocurrir dentro de `<xs:schema>` como una declaración de elemento global (GED).  
   
 ### <a name="xselement-with-maxoccurs1-within-an-xssequence-data-members"></a>\<xs: element > con maxOccurs = 1 dentro de un \<xs: sequence > (miembros de datos)  
   
@@ -144,17 +144,17 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
   
 ### <a name="xselement-with-maxoccurs1-within-an-xssequence-collections"></a>\<xs: element > con maxOccurs > 1 dentro de un \<xs: sequence > (colecciones)  
   
--   Asigna a un <xref:System.Runtime.Serialization.CollectionDataContractAttribute>.  
+- Asigna a un <xref:System.Runtime.Serialization.CollectionDataContractAttribute>.  
   
--   En tipos de colección, solo se permite un xs:element dentro de un xs:sequence.  
+- En tipos de colección, solo se permite un xs:element dentro de un xs:sequence.  
   
  Las colecciones pueden ser de los siguientes tipos:  
   
--   Colecciones normales (por ejemplo, matrices).  
+- Colecciones normales (por ejemplo, matrices).  
   
--   Colecciones de diccionarios (asignan un valor a otro; por ejemplo, un <xref:System.Collections.Hashtable>).  
+- Colecciones de diccionarios (asignan un valor a otro; por ejemplo, un <xref:System.Collections.Hashtable>).  
   
--   La única diferencia entre un diccionario y una matriz de un tipo de par clave-valor está en el modelo de programación generado. Hay un mecanismo de anotación de esquema que se puede utilizar para indicar que un tipo determinado es una colección de diccionarios.  
+- La única diferencia entre un diccionario y una matriz de un tipo de par clave-valor está en el modelo de programación generado. Hay un mecanismo de anotación de esquema que se puede utilizar para indicar que un tipo determinado es una colección de diccionarios.  
   
  Las reglas para los atributos `ref`, `block`, `default`, `fixed`, `form`e `id` son las mismas que para el caso de que no se trate de una colección. Entre otros atributos se incluyen los de la tabla siguiente.  
   
@@ -168,13 +168,13 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
   
 ### <a name="xselement-within-an-xsschema-global-element-declaration"></a>\<xs: element > dentro de un \<xs: schema > declaración de elemento Global  
   
--   Una declaración de elemento global (GED) que tiene el mismo nombre y espacio de nombres que un tipo en esquema o que define un tipo anónimo dentro de sí mismo, se dice que está asociado al tipo.  
+- Una declaración de elemento global (GED) que tiene el mismo nombre y espacio de nombres que un tipo en esquema o que define un tipo anónimo dentro de sí mismo, se dice que está asociado al tipo.  
   
--   Exportación del esquema: las GED asociadas se generan para cada tipo generado, tanto simple como complejo.  
+- Exportación del esquema: las GED asociadas se generan para cada tipo generado, tanto simple como complejo.  
   
--   Deserialización/serialización: las GED asociadas se utilizan como elementos raíz para el tipo.  
+- Deserialización/serialización: las GED asociadas se utilizan como elementos raíz para el tipo.  
   
--   Importación del esquema: las GED asociadas no se requieren y se omiten si siguen las reglas siguientes (a menos que definan tipos).  
+- Importación del esquema: las GED asociadas no se requieren y se omiten si siguen las reglas siguientes (a menos que definan tipos).  
   
 |Atributo|Schema|  
 |---------------|------------|  
@@ -202,11 +202,11 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
   
  \* Cuando se usa el `simpleType` y `complexType,` asignación para tipos anónimos es el mismo que los tipos no anónimos, salvo que no hay ningún contrato de datos anónimos, por lo que se crea un contrato de datos con nombre, con un nombre generado derivado del nombre de elemento. Las reglas para los tipos anónimos están en la lista siguiente:  
   
--   Detalle de implementación de WCF: Si el `xs:element` nombre no contiene puntos, el tipo anónimo asigna a un tipo interno del tipo de contrato de datos externo. Si el nombre contiene puntos, el tipo de contrato de datos resultante es independiente (no un tipo interno).  
+- Detalle de implementación de WCF: Si el `xs:element` nombre no contiene puntos, el tipo anónimo asigna a un tipo interno del tipo de contrato de datos externo. Si el nombre contiene puntos, el tipo de contrato de datos resultante es independiente (no un tipo interno).  
   
--   El nombre de contrato de datos generado del tipo interno es el nombre de contrato de datos del tipo exterior seguido por un punto, el nombre del elemento, y la cadena “Type”.  
+- El nombre de contrato de datos generado del tipo interno es el nombre de contrato de datos del tipo exterior seguido por un punto, el nombre del elemento, y la cadena “Type”.  
   
--   Si un contrato de datos con este tipo de nombre ya existe, el nombre se hace único anexando "1", "2", "3", y así sucesivamente, hasta que se cree un nombre único.  
+- Si un contrato de datos con este tipo de nombre ya existe, el nombre se hace único anexando "1", "2", "3", y así sucesivamente, hasta que se cree un nombre único.  
   
 ## <a name="simple-types---xssimpletype"></a>Tipos simples: \<xs: simpleType >  
   
@@ -228,11 +228,11 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
   
 ### <a name="xsrestriction"></a>\<xs:restriction>  
   
--   Las restricciones de tipos complejos solo se admiten para base = "`xs:anyType`".  
+- Las restricciones de tipos complejos solo se admiten para base = "`xs:anyType`".  
   
--   Las restricciones de tipos simples de `xs:string` que no tienen facetas de restricciones que no sean `xs:enumeration` están asignadas a contratos de datos de enumeración.  
+- Las restricciones de tipos simples de `xs:string` que no tienen facetas de restricciones que no sean `xs:enumeration` están asignadas a contratos de datos de enumeración.  
   
--   El resto de restricciones de tipos simples se asignan a los tipos que restringen. Por ejemplo, una restricción de `xs:int` se asigna a un entero, como hace `xs:int` . Para obtener más información sobre la asignación de tipo primitivo, vea asignación de tipo/primitivo.  
+- El resto de restricciones de tipos simples se asignan a los tipos que restringen. Por ejemplo, una restricción de `xs:int` se asigna a un entero, como hace `xs:int` . Para obtener más información sobre la asignación de tipo primitivo, vea asignación de tipo/primitivo.  
   
 ### <a name="xsrestriction-attributes"></a>\<xs:restriction>: attributes  
   
@@ -464,9 +464,9 @@ public class Employee : Person
   
  Si un tipo derivado contiene un elemento con el mismo nombre que un elemento en un tipo base, la declaración de elementos duplicados asigna a un miembro de datos con un nombre que se genera para que sea único. Los números enteros positivos se suman al nombre del miembro de datos ("member1", "member2", etc.) hasta que se encuentre un nombre único. De manera inversa:  
   
--   Si un contrato de datos derivado tiene un miembro de datos con el mismo nombre y tipo que un miembro de datos en un contrato de datos base, `DataContractSerializer` genera este elemento correspondiente en el tipo derivado.  
+- Si un contrato de datos derivado tiene un miembro de datos con el mismo nombre y tipo que un miembro de datos en un contrato de datos base, `DataContractSerializer` genera este elemento correspondiente en el tipo derivado.  
   
--   Si un contrato de datos derivado tiene un miembro de datos con el mismo nombre que un miembro de datos en un contrato de datos base pero un tipo diferente, el `DataContractSerializer` importa un esquema con un elemento del tipo `xs:anyType` en las declaraciones de tipos base y de tipos derivados. El nombre de tipo original se conserva en `xs:annotations/xs:appInfo/ser:ActualType/@Name`.  
+- Si un contrato de datos derivado tiene un miembro de datos con el mismo nombre que un miembro de datos en un contrato de datos base pero un tipo diferente, el `DataContractSerializer` importa un esquema con un elemento del tipo `xs:anyType` en las declaraciones de tipos base y de tipos derivados. El nombre de tipo original se conserva en `xs:annotations/xs:appInfo/ser:ActualType/@Name`.  
   
  Ambas variaciones pueden conducir a un esquema con un modelo de contenido ambiguo, que depende del orden de los miembros de datos respectivos.  
   
@@ -609,11 +609,11 @@ public class Employee : Person
   
  Se debería tener en cuenta lo siguiente:  
   
--   `ser:char` se introduce para representar caracteres Unicode de tipo <xref:System.Char>.  
+- `ser:char` se introduce para representar caracteres Unicode de tipo <xref:System.Char>.  
   
--   El `valuespace` de `xs:duration` se reduce a un conjunto ordenado para que pueda asignarse a un <xref:System.TimeSpan>.  
+- El `valuespace` de `xs:duration` se reduce a un conjunto ordenado para que pueda asignarse a un <xref:System.TimeSpan>.  
   
--   `FactoryType` se utiliza en esquemas exportados a partir de tipos que se derivan de <xref:System.Runtime.Serialization.ISerializable>.  
+- `FactoryType` se utiliza en esquemas exportados a partir de tipos que se derivan de <xref:System.Runtime.Serialization.ISerializable>.  
   
 ## <a name="importing-non-datacontract-schemas"></a>Importación de esquemas no DataContract  
  `DataContractSerializer` tiene la opción `ImportXmlTypes` para permitir la importación de esquemas que no cumplen el perfil XSD `DataContractSerializer` (vea la propiedad <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> ). Establecer esta opción en `true` habilita la aceptación de tipos de esquema no conformes y la asignación de ellos a la implementación siguiente, <xref:System.Xml.Serialization.IXmlSerializable> ajuste de una matriz de <xref:System.Xml.XmlNode> (solo difiere el nombre de la clase).  

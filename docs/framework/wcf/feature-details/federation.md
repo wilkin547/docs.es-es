@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: baf65340e390c7439e8639e334819fb0bf60f952
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856836"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662626"
 ---
 # <a name="federation"></a>Federación
 En este tema se proporciona una información general breve sobre el concepto de seguridad federada. También se describe la compatibilidad de Windows Communication Foundation (WCF) para implementar una arquitectura de seguridad federada. Para una aplicación de ejemplo que demuestre la federación, consulte [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -44,17 +44,17 @@ En este tema se proporciona una información general breve sobre el concepto de 
   
  Normalmente, la organización B requiere que un usuario de la organización A proporcione alguna forma válida de autenticación antes de obtener acceso al servicio. Además, la organización también puede requerir que el usuario esté autorizado para tener acceso al recurso concreto en cuestión. Una manera de resolver este problema y permitir a los usuarios de la organización A obtener acceso al recurso de la organización B es la siguiente:  
   
--   Los usuarios de la organización A registran sus credenciales (un nombre de usuario y contraseña) en la organización B.  
+- Los usuarios de la organización A registran sus credenciales (un nombre de usuario y contraseña) en la organización B.  
   
--   Durante el acceso al recurso, los usuarios de la organización A presentan sus credenciales a la organización B y se autentican antes de obtener acceso al recurso.  
+- Durante el acceso al recurso, los usuarios de la organización A presentan sus credenciales a la organización B y se autentican antes de obtener acceso al recurso.  
   
  Este método tiene tres inconvenientes significativos:  
   
--   La organización B tiene que administrar las credenciales de los usuarios de la organización A además de administrar las credenciales de sus usuarios locales.  
+- La organización B tiene que administrar las credenciales de los usuarios de la organización A además de administrar las credenciales de sus usuarios locales.  
   
--   Los usuarios de la organización A han de mantener un conjunto adicional de credenciales (es decir, han de recordar un nombre de usuario y contraseña adicionales) aparte de las credenciales que utilizan normalmente para obtener acceso a los recursos de la organización A. Esto promueve el uso del mismo nombre de usuario y contraseña en varios sitios del servicio, lo que constituye una medida de seguridad débil.  
+- Los usuarios de la organización A han de mantener un conjunto adicional de credenciales (es decir, han de recordar un nombre de usuario y contraseña adicionales) aparte de las credenciales que utilizan normalmente para obtener acceso a los recursos de la organización A. Esto promueve el uso del mismo nombre de usuario y contraseña en varios sitios del servicio, lo que constituye una medida de seguridad débil.  
   
--   La arquitectura no escala a medida que más organizaciones perciben que el recurso de la organización B tiene algún valor.  
+- La arquitectura no escala a medida que más organizaciones perciben que el recurso de la organización B tiene algún valor.  
   
  Un método alternativo, que trata los inconvenientes mencionados anteriormente, consiste en emplear la seguridad federada. En este método, las organizaciones A y B establecen una relación de confianza y emplean el Servicio de tokens de seguridad (STS) para habilitar la negociación de la confianza establecida.  
   
@@ -76,13 +76,13 @@ En este tema se proporciona una información general breve sobre el concepto de 
 ### <a name="phase-1-design-phase"></a>Fase 1: Fase de diseño  
  Durante la fase de diseño, el cliente usa la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para leer la directiva que expone el extremo de servicio y para recopilar los requisitos de autenticación y autorización del servicio. Los proxys adecuados se construyen para crear el siguiente patrón de comunicación de seguridad federada en el cliente:  
   
--   Obtenga un token de seguridad de STS en el dominio de confianza del cliente.  
+- Obtenga un token de seguridad de STS en el dominio de confianza del cliente.  
   
--   Presente el token al STS en el dominio de confianza del servicio.  
+- Presente el token al STS en el dominio de confianza del servicio.  
   
--   Obtenga un token de seguridad del STS en el dominio de confianza del servicio.  
+- Obtenga un token de seguridad del STS en el dominio de confianza del servicio.  
   
--   Presente el token al servicio para obtener acceso al servicio.  
+- Presente el token al servicio para obtener acceso al servicio.  
   
 ### <a name="phase-2-run-time-phase"></a>Fase 2: Fase de tiempo de ejecución  
  Durante la fase de tiempo de ejecución, el cliente crea una instancia de un objeto de la clase de cliente WCF y realiza una llamada con el cliente de WCF. El marco subyacente de WCF administra los pasos mencionados anteriormente en el patrón de comunicación de seguridad federada y permite al cliente consumir el servicio de forma transparente.  

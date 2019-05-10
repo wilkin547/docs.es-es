@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b351b2a69d2829b67c80839f3257fa8e218b55d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876114"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660637"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Actualizar el servicio de datos (Servicios de datos de WCF)
 Cuando se usa el [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente para consumir un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuente, la biblioteca traduce las entradas de la fuente en instancias de clases de servicio de datos de cliente. La instancia de <xref:System.Data.Services.Client.DataServiceContext> a la que pertenece la instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> realiza el seguimiento de estas clases del servicio de datos. El cliente realiza el seguimiento de los cambios en las entidades que se notifican utilizando métodos de <xref:System.Data.Services.Client.DataServiceContext>. Estos métodos permiten al cliente realizar el seguimiento de las entidades agregadas y eliminadas y también de los cambios que se realizan en los valores de propiedad o en las relaciones entre instancias de entidad. Estos cambios se devuelven al servicio de datos como operaciones basadas en REST al llamar al método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
@@ -54,13 +54,13 @@ Cuando se usa el [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bib
   
  Al asociar objetos deben tenerse en cuenta las consideraciones siguientes:  
   
--   Un objeto se adjunta con el estado <xref:System.Data.Services.Client.EntityStates.Unchanged>.  
+- Un objeto se adjunta con el estado <xref:System.Data.Services.Client.EntityStates.Unchanged>.  
   
--   Cuando se adjunta un objeto, no se adjuntan los objetos relacionados con el objeto adjunto.  
+- Cuando se adjunta un objeto, no se adjuntan los objetos relacionados con el objeto adjunto.  
   
--   No se puede adjuntar un objeto si el contexto ya está realizando el seguimiento de la entidad.  
+- No se puede adjuntar un objeto si el contexto ya está realizando el seguimiento de la entidad.  
   
--   Se usa la sobrecarga del método <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> que toma un parámetro `etag` cuando se adjunta un objeto entidad que se recibió junto con un valor de eTag. Este valor de eTag se usa después para comprobar la simultaneidad cuando se guardan los cambios realizados en el objeto adjunto.  
+- Se usa la sobrecarga del método <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> que toma un parámetro `etag` cuando se adjunta un objeto entidad que se recibió junto con un valor de eTag. Este valor de eTag se usa después para comprobar la simultaneidad cuando se guardan los cambios realizados en el objeto adjunto.  
   
  Para obtener más información, vea [Cómo: Asociar una entidad existente a DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md).  
   

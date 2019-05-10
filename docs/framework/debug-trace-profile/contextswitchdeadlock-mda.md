@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43404ba24f6308d8da17b03df9997e893799c8d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1a0e2a6c7851b261baa3e02f6431e7a4ff697e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875009"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660322"
 ---
 # <a name="contextswitchdeadlock-mda"></a>MDA de contextSwitchDeadlock
 
@@ -39,11 +39,11 @@ De forma predeterminada, STA es el modelo de subprocesos del subproceso principa
 
 Es posible que el MDA se active equivocadamente si se cumplen todas las condiciones siguientes:
 
--   Una aplicación crea componentes COM a partir de subprocesos de STA directa o indirectamente a través de bibliotecas.
+- Una aplicación crea componentes COM a partir de subprocesos de STA directa o indirectamente a través de bibliotecas.
 
--   La aplicación se detuvo en el depurador y el usuario continuó con la aplicación o realizó una operación de paso.
+- La aplicación se detuvo en el depurador y el usuario continuó con la aplicación o realizó una operación de paso.
 
--   La depuración sin administrar no está habilitada.
+- La depuración sin administrar no está habilitada.
 
 Para determinar si el MDA se activa equivocadamente, deshabilite todos los puntos de interrupción, reinicie la aplicación y deje que se ejecute sin detenerla. Si el MDA no se activa, es probable que la activación inicial fuese falsa. En este caso, deshabilite el MDA para evitar interferencias con la sesión de depuración.
 

@@ -2,12 +2,12 @@
 title: Diagnóstico de aplicaciones transaccionales
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a4f064d903092b04f8885fb00b56e18c9cfeb74
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856744"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751119"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnóstico de aplicaciones transaccionales
 Este tema describe cómo usar la característica de diagnóstico y administración de Windows Communication Foundation (WCF) para solucionar problemas de una aplicación transaccional.  
@@ -87,15 +87,15 @@ Este tema describe cómo usar la característica de diagnóstico y administraci�
 ## <a name="tracing"></a>Traza  
  Las trazas le permiten supervisar y analizar los errores de sus aplicaciones transaccionales. Puede habilitar el seguimiento mediante las maneras siguientes:  
   
--   Seguimiento de WCF estándar  
+- Seguimiento de WCF estándar  
   
      Este tipo de seguimiento es el mismo que el seguimiento de cualquier aplicación WCF. Para obtener más información, consulta [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
--   Trazado de WS-AtomicTransaction  
+- Trazado de WS-AtomicTransaction  
   
      Seguimiento WS-AtomicTransaction puede habilitarse mediante la [WS-AtomicTransaction Configuration Utility (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Tal seguimiento proporciona una visión sobre el estado de las transacciones y participantes de un sistema. Para también permitir el seguimiento de Service Model, puede establecer la clave del Registro`HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` en un valor válido de la enumeración <xref:System.Diagnostics.SourceLevels>. Puede habilitar el registro de mensajes en la misma manera que otras aplicaciones WCF.  
   
--   Seguimiento de `System.Transactions`  
+- Seguimiento de `System.Transactions`  
   
      Si se usa el protocolo OleTransactions, no se pueden seguir los mensajes de protocolos. La compatibilidad de seguimiento que proporciona la infraestructura <xref:System.Transactions> (que utiliza OleTransactions) permite a los usuarios ver eventos que ocurrieron a las transacciones. Para habilitar el seguimiento para una aplicación <xref:System.Transactions>, incluya el siguiente código en el archivo de configuración `App.config`.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ceff80842ec4e7364a55578c1c3fdb870c73ece
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921113"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661962"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>La resolución de sobrecarga enlazada tardíamente no se puede aplicar a '\<NombreDeProcedimiento >' porque la instancia de acceso es un tipo de interfaz
 El compilador está intentando resolver una referencia a una propiedad o procedimiento sobrecargados, pero se produce un error en la referencia porque es un argumento de tipo `Object` y el objeto que se hace referencia tiene el tipo de datos de una interfaz. El `Object` argumento hace que el compilador para resolver la referencia como en tiempo de ejecución.  
@@ -24,7 +24,7 @@ El compilador está intentando resolver una referencia a una propiedad o procedi
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Use `CType` para convertir el argumento de `Object` al tipo especificado por la firma de la sobrecarga que desea llamar.  
+- Use `CType` para convertir el argumento de `Object` al tipo especificado por la firma de la sobrecarga que desea llamar.  
   
      Tenga en cuenta que no ayuda a convertir el objeto que se hace referencia a la interfaz subyacente. Debe convertir el argumento para evitar este error.  
   
