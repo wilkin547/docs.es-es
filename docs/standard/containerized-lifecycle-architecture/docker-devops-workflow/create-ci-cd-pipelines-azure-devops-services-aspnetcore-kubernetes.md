@@ -4,12 +4,12 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e11c9ec61ea7d5131595f01ce76b5bb810bb70c0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795380"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063312"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Creación de canalizaciones de CI/CD en Azure DevOps Services para una aplicación .NET Core 2.0 en contenedores e implementación en un clúster de Kubernetes
 
@@ -21,7 +21,7 @@ En la figura 5-12 puede ver el escenario de DevOps-to-end, que abarcan la admini
 
 Es importante destacar que los dos canalizaciones y compilación, CI/CD de la versión, están conectados a través del registro de Docker (como Docker Hub o Azure Container Registry). El registro de Docker es una de las principales diferencias en comparación con un proceso de CI/CD tradicionales sin Docker.
 
-Como se muestra en la figura 5-13, la primera fase es la canalización de compilación o CI. En los servicios de DevOps de Azure puede crear canalizaciones de compilación/CD que se compile el código, crear las imágenes de Docker y los inserta en un registro de Docker como Docker Hub o Azure Container Registry.
+Como se muestra en la figura 5-13, la primera fase es la canalización de compilación o CI. En los servicios de DevOps de Azure puede crear canalizaciones de compilación, CI que compile el código, crear las imágenes de Docker y transmitirlos a un registro de Docker como Docker Hub o Azure Container Registry.
 
 ![Vista del explorador de Azure DevOps, definición de tarea de proceso de compilación.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 

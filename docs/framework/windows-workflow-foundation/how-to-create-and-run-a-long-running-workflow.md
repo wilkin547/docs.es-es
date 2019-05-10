@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fd7bf92750c6e314a5c9105bb961bf68b68182cb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773430"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063826"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Procedimiento para crear y ejecutar un flujo de trabajo de larga duración
 Una de las características principales de Windows Workflow Foundation (WF) es la capacidad del tiempo de ejecución para conservar y descargar flujos de trabajo inactivos a una base de datos. Los pasos descritos en [Cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md) muestra los aspectos básicos de hospedaje de flujo de trabajo mediante una aplicación de consola. Se mostraron ejemplos de cómo iniciar flujos de trabajo, de los controladores de ciclo de vida de los flujos de trabajo y de los marcadores de reanudación. Para demostrar la persistencia del flujo de trabajo con efectividad, es necesario un host de flujo de trabajo más complejo que admita el inicio y la reanudación de varias instancias de flujo de trabajo. En este paso del tutorial se muestra cómo crear una aplicación host de Windows Forms que admita iniciar y reanudar varias instancias de flujo de trabajo o la persistencia del flujo de trabajo, y que proporcione una base para características avanzadas como el seguimiento y el control de versiones mostrado en los siguientes pasos del tutorial.  
@@ -119,7 +119,7 @@ Una de las características principales de Windows Workflow Foundation (WF) es l
   
  En el siguiente ejemplo se muestra el formulario completado.  
   
- ![WF45 Formulario de Host de flujo de trabajo de Tutorial de introducción](./media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
+ ![Captura de pantalla de un formulario de Host de flujo de trabajo de Windows Workflow Foundation.](./media/how-to-create-and-run-a-long-running-workflow/windows-workflow-foundation-workflowhostform.png)  
   
 ### <a name="BKMK_AddHelperMethods"></a> Para agregar las propiedades y métodos auxiliares del formulario  
  Los pasos de esta sección agregan propiedades y métodos del asistente a la clase de formulario que configuran la interfaz de usuario del formulario para que se admita la ejecución y la reanudación de flujos de trabajo de acierto de números.  

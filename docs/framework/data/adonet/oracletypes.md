@@ -2,12 +2,12 @@
 title: Tipos de Oracle
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: 3762fdaee1312a7cb008386bb1f6b7bf7cb4316e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb45bc5b7bc317d04f5275afadbb1879117e3af0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878428"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586943"
 ---
 # <a name="oracletypes"></a>Tipos de Oracle
 El proveedor de datos .NET Framework para Oracle incluye varias estructuras que se pueden utilizar para trabajar con tipos de datos de Oracle. Por ejemplo, <xref:System.Data.OracleClient.OracleNumber> y <xref:System.Data.OracleClient.OracleString>.  
@@ -17,9 +17,9 @@ El proveedor de datos .NET Framework para Oracle incluye varias estructuras que 
   
  En los siguientes ejemplos con C#:  
   
--   se crea una tabla de Oracle y se carga de datos.  
+- se crea una tabla de Oracle y se carga de datos.  
   
--   se utiliza un <xref:System.Data.OracleClient.OracleDataReader> para tener acceso a los datos y se emplean varias estructuras <xref:System.Data.OracleClient.OracleType> para mostrarlos.  
+- se utiliza un <xref:System.Data.OracleClient.OracleDataReader> para tener acceso a los datos y se emplean varias estructuras <xref:System.Data.OracleClient.OracleType> para mostrarlos.  
   
 ## <a name="creating-an-oracle-table"></a>Creación de una tabla de Oracle  
  En este ejemplo se crea una tabla de Oracle y se carga de datos. Este ejemplo debe ejecutarse antes que el ejemplo siguiente.  

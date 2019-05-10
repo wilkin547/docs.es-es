@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ee633e2488611417f72a9d51ab6b0fe2d9ddfa27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174114"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583563"
 ---
 # <a name="code-access-security-and-adonet"></a>Seguridad de acceso del código y ADO.NET
 .NET Framework ofrece seguridad basada en roles y seguridad de acceso del código (CAS); ambas se implementan utilizando una infraestructura común proporcionada por Common Language Runtime (CLR). En el mundo del código no administrado, la mayoría de las aplicaciones se ejecutan mediante los permisos del usuario o de la entidad de seguridad. Por consiguiente, los sistemas de equipos pueden resultar dañados y se pueden poner en peligro los datos privados si un usuario con un nivel elevado de privilegios ejecuta software malintencionado o que contenga errores.  
@@ -27,11 +27,11 @@ ms.locfileid: "59174114"
   
  Hay tres tipos de permisos de acceso a código:  
   
--   Los `Code access permissions` derivan de la clase <xref:System.Security.CodeAccessPermission>. Se requieren permisos para tener acceso a recursos protegidos, como archivos y variables de entorno, y para realizar operaciones protegidas, como el acceso a código no administrado.  
+- Los `Code access permissions` derivan de la clase <xref:System.Security.CodeAccessPermission>. Se requieren permisos para tener acceso a recursos protegidos, como archivos y variables de entorno, y para realizar operaciones protegidas, como el acceso a código no administrado.  
   
--   Los `Identity permissions` representan características que identifican un ensamblado. Los permisos se conceden al ensamblado en función de la evidencia, que puede incluir elementos como una firma digital o el origen del código. Los permisos de identidad también derivan de la clase base <xref:System.Security.CodeAccessPermission>.  
+- Los `Identity permissions` representan características que identifican un ensamblado. Los permisos se conceden al ensamblado en función de la evidencia, que puede incluir elementos como una firma digital o el origen del código. Los permisos de identidad también derivan de la clase base <xref:System.Security.CodeAccessPermission>.  
   
--   Los `Role-based security permissions` se basan en el hecho de si una entidad de seguridad tiene una identidad especificada o si es miembro de una función especificada. La clase <xref:System.Security.Permissions.PrincipalPermission> permite comprobar los permisos declarativos e imperativos con la entidad de seguridad activa.  
+- Los `Role-based security permissions` se basan en el hecho de si una entidad de seguridad tiene una identidad especificada o si es miembro de una función especificada. La clase <xref:System.Security.Permissions.PrincipalPermission> permite comprobar los permisos declarativos e imperativos con la entidad de seguridad activa.  
   
  Para determinar si el código tiene autorización para el acceso a un recurso o para ejecutar una operación, el sistema de seguridad en tiempo de ejecución atraviesa la pila de llamadas y compara los permisos concedidos a cada llamador con el permiso que se exige. Si algún llamador de la pila de llamadas no tiene el permiso exigido, se iniciará clase <xref:System.Security.SecurityException> y se rechazará el acceso.  
   

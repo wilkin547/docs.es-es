@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArray_RankMismatch
 ms.assetid: 52505298-9985-4682-8f6e-ff7d56077f34
-ms.openlocfilehash: b6bb78c3f1d7224e6e4b432fd3aef4589f2f1cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1e9695bbc7f104aa741de232f1f6d3c76df2cebf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964897"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591741"
 ---
 # <a name="redim-cannot-change-the-number-of-dimensions"></a>'ReDim' no puede cambiar el número de dimensiones.
 Una operación intenta usar la instrucción `ReDim` para cambiar el rango (número de dimensiones) de una matriz. `ReDim` puede cambiar el tamaño de una o más dimensiones de una matriz que ya se ha declarado formalmente, pero no puede cambiar el rango de la matriz.  

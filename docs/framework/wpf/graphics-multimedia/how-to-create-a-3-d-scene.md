@@ -8,23 +8,23 @@ helpviewer_keywords:
 - scenes [WPF], 3-D
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
-ms.openlocfilehash: 8e176cb437055787da86d56770dd71323134fa33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a431b78993d197dac99f0b6e365823acb295f0b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910187"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64611645"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>Procedimiento Crear una escena 3D
 En este ejemplo se muestra cómo crear un objeto 3D que parece una hoja de papel que se ha girado plana. Un <xref:System.Windows.Controls.Viewport3D> junto con los siguientes componentes se usan para crear esta escena 3D sencilla:  
   
--   Se crea una cámara mediante un <xref:System.Windows.Media.Media3D.PerspectiveCamera>. La cámara especifica qué parte de la escena 3D es visible.  
+- Se crea una cámara mediante un <xref:System.Windows.Media.Media3D.PerspectiveCamera>. La cámara especifica qué parte de la escena 3D es visible.  
   
--   Se crea una malla para especificar la forma del objeto 3D (hoja de papel) mediante el <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> propiedad de <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
+- Se crea una malla para especificar la forma del objeto 3D (hoja de papel) mediante el <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> propiedad de <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
   
--   Se especifica el material que se mostrará en la superficie del objeto (degradado lineal en este ejemplo) mediante el <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> propiedad de <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
+- Se especifica el material que se mostrará en la superficie del objeto (degradado lineal en este ejemplo) mediante el <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> propiedad de <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
   
--   Se crea una luz para destacar del objeto mediante <xref:System.Windows.Media.Media3D.DirectionalLight>.  
+- Se crea una luz para destacar del objeto mediante <xref:System.Windows.Media.Media3D.DirectionalLight>.  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente muestra cómo crear una escena 3D en XAML.  

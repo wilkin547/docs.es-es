@@ -2,12 +2,12 @@
 title: F#instrucciones de formato de código
 description: Obtenga información sobre las directrices para dar formato a F# código.
 ms.date: 02/08/2019
-ms.openlocfilehash: 259d4bb2147d1fc8bc5d35d7ff2e3c34ec2185d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902595"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063604"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#instrucciones de formato de código
 
@@ -86,6 +86,46 @@ type MyFun = int -> int -> string
 
 // Bad
 type MyFunBad = int->int->string
+```
+
+### <a name="surround-function-arguments-with-white-space"></a>Argumentos de la función de rodear con espacios en blanco
+
+Al definir una función, utilice el espacio en blanco alrededor de cada argumento.
+
+```fsharp
+// OK
+let myFun (a: decimal) b c = a + b + c
+
+// Bad
+let myFunBad (a:decimal)(b)c = a + b + c
+```
+
+### <a name="type-annotations"></a>Anotaciones de tipo
+
+#### <a name="right-pad-function-argument-type-annotations"></a>Anotaciones de tipo de argumento de función de la derecha
+
+Al definir argumentos con anotaciones de tipo, use el espacio en blanco después de la `:` símbolo:
+
+```fsharp
+// OK
+let complexFunction (a: int) (b: int) c = a + b + c
+
+// Bad
+let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
+```
+
+#### <a name="surround-return-type-annotations-with-white-space"></a>Anotaciones de tipo de valor devuelto de rodear con espacios en blanco
+
+En un enlazado a let función o valor de anotación de tipo (tipo de valor devuelto en el caso de una función), utilice un espacio en blanco antes y después el `:` símbolo:
+
+```fsharp
+// OK
+let expensiveToCompute : int = 0 // Type annotation for let-bound value
+let myFun (a: decimal) b c : decimal = a + b + c // Type annotation for the return type of a function
+// Bad
+let expensiveToComputeBad1:int = 1
+let expensiveToComputeBad2 :int = 2
+let myFunBad (a: decimal) b c:decimal = a + b + c
 ```
 
 ## <a name="formatting-blank-lines"></a>Aplicar formato a líneas en blanco

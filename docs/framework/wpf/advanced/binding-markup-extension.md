@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ba9f41921749db74444e35948adb2e49c7830f8e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010688"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666300"
 ---
 # <a name="binding-markup-extension"></a>Enlazar extensión de marcado
 Aplaza un valor de propiedad para que sea un valor enlazado a datos, crear un objeto de expresión intermedia y la interpretación de contexto de datos que se aplica al elemento y su enlace en tiempo de ejecución.  

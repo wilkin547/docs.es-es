@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b84afe4e354d4029bc61ba67bc93bd36a3430de4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61975980"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610597"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Procedimiento Declare una constante (Visual Basic)
 Usa el `Const` instrucción declare una constante y establezca su valor. Al declarar una constante, asigna un nombre descriptivo a un valor. Una vez que se declara una constante, no se puede modificar o asignar un nuevo valor.  
@@ -41,7 +41,7 @@ Usa el `Const` instrucción declare una constante y establezca su valor. Al decl
   
 ### <a name="to-declare-a-constant"></a>Para declarar una constante  
   
--   Escribir una declaración que incluye un especificador de acceso, el `Const` palabra clave y una expresión, como en los ejemplos siguientes:  
+- Escribir una declaración que incluye un especificador de acceso, el `Const` palabra clave y una expresión, como en los ejemplos siguientes:  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
@@ -51,7 +51,7 @@ Usa el `Const` instrucción declare una constante y establezca su valor. Al decl
   
 ### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>Para declarar una constante que tiene un tipo de datos explícitamente establecidos  
   
--   Escribir una declaración que incluya la `As` palabra clave y un explícitas tipo de datos, como en los ejemplos siguientes:  
+- Escribir una declaración que incluya la `As` palabra clave y un explícitas tipo de datos, como en los ejemplos siguientes:  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
@@ -59,7 +59,7 @@ Usa el `Const` instrucción declare una constante y establezca su valor. Al decl
   
 ### <a name="to-declare-multiple-constants-on-a-single-line"></a>Para declarar varias constantes en una sola línea  
   
--   Separe las declaraciones con una coma y un espacio, como en el ejemplo siguiente:  
+- Separe las declaraciones con una coma y un espacio, como en el ejemplo siguiente:  
   
     ```  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  

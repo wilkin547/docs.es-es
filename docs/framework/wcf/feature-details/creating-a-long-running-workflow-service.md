@@ -2,12 +2,12 @@
 title: Crear un servicio de flujo de trabajo de larga ejecución
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 10a2c568f14c3f3c1818fd8b3240279b798777b8
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048140"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063799"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Crear un servicio de flujo de trabajo de larga ejecución
 En este tema se describe cómo crear un servicio de flujo de trabajo de larga ejecución. Los servicios de flujo de trabajo de larga ejecución se pueden ejecutar durante períodos de tiempo prolongados. En algún momento, el flujo de trabajo se puede inactivar a la espera de recibir información adicional. En este caso, el flujo de trabajo se conserva en una base de datos SQL y se quita de la memoria. Cuando esté disponible la información adicional, la instancia de flujo de trabajo se vuelve a cargar en la memoria y continua ejecutándose.  En este escenario, el usuario implementa un sistema de pedidos muy simplificado.  El cliente envía un mensaje inicial al servicio de flujo de trabajo para que inicie el pedido. Devuelve un identificador de pedido al cliente. En este momento el servicio de flujo de trabajo espera otro mensaje del cliente y pasa al estado inactivo, y se conserva en una base de datos SQL Server.  Cuando el cliente envía el siguiente mensaje para pedir un elemento, el servicio de flujo de trabajo se vuelve a cargar en memoria y finaliza el procesamiento del pedido. En el ejemplo de código devuelve una cadena que indica que el elemento se ha agregado al pedido. No se pretende que el ejemplo de código sea una aplicación real de la tecnología, sino más bien un ejemplo sencillo que ilustre servicios de flujo de trabajo de ejecución prolongada. En este tema se supone que sabe cómo crear soluciones y proyectos de Visual Studio 2012.
@@ -100,10 +100,15 @@ En este tema se describe cómo crear un servicio de flujo de trabajo de larga ej
     1. Seleccione el **secuencia** que contiene el recién agregado **recepción** y **SendReply** actividades y haga clic en el **Variables** botón. Agregue la variable resaltada en la siguiente ilustración:
 
          ![Agregar nuevas variables](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "agregue la variable ItemId.")
+         
+         También agregar `orderResult` como **cadena** en el `Sequence` ámbito.
 
     2. Seleccione el **recepción** actividad y establezca las propiedades que se muestra en la ilustración siguiente:
 
          ![Establecer las propiedades de la actividad de recepción](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "establecer las propiedades de las actividades de recepción.")
+         
+         > [!NOTE]
+         >  No olvide cambiar **ServiceContractName** campo con `../IAddItem`.
 
     3. Haga clic en el **definir...**  vincular en el **ReceiveAddItem** actividad y agregar los parámetros mostrados en la siguiente ilustración: Esto configura la actividad de recepción para Aceptar dos parámetros, el identificador de pedido y el identificador del elemento que se ordenan.
 

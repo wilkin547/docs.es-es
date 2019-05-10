@@ -2,12 +2,12 @@
 title: Compatibilidad con metadatos y configuración
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74dab4528ae11b60fc930a826962b71595073a7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858369"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587726"
 ---
 # <a name="configuration-and-metadata-support"></a>Compatibilidad con metadatos y configuración
 En este tema se describe cómo habilitar la compatibilidad con configuración y metadatos para los enlaces y elementos de enlaces.  
@@ -15,13 +15,13 @@ En este tema se describe cómo habilitar la compatibilidad con configuración y 
 ## <a name="overview-of-configuration-and-metadata"></a>Información general de configuración y metadatos  
  En este tema se describe las tareas siguientes, que son elementos opcionales 1, 2 y 4 en el [desarrollar canales](../../../../docs/framework/wcf/extending/developing-channels.md) lista de tareas.  
   
--   Habilitación de la compatibilidad con archivos de configuración para un elemento de enlace.  
+- Habilitación de la compatibilidad con archivos de configuración para un elemento de enlace.  
   
--   Habilitación de la compatibilidad con archivos de configuración para un enlace.  
+- Habilitación de la compatibilidad con archivos de configuración para un enlace.  
   
--   Exportación de WSDL y aserciones de directivas para un elemento de enlace.  
+- Exportación de WSDL y aserciones de directivas para un elemento de enlace.  
   
--   Identificación de WSDL y aserciones de directivas para insertar y configurar su enlace o elemento de enlace.  
+- Identificación de WSDL y aserciones de directivas para insertar y configurar su enlace o elemento de enlace.  
   
  Para obtener información sobre cómo crear enlaces definidos por el usuario y elementos de enlace, consulte [crear enlaces](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md) y [creación de un BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md), respectivamente.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 297a951e4678e05da73193133bd6050360b041ff
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923284"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587350"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Configuración y extensión del tiempo de ejecución con comportamientos
 Los comportamientos permiten modificar el comportamiento predeterminado y agregar extensiones personalizadas que inspeccionan y validación la configuración del servicio o modifican el comportamiento en tiempo de ejecución en aplicaciones de cliente y servicio de Windows Communication Foundation (WCF). En este tema se describen las interfaces de comportamiento, cómo implementarlas y cómo agregarlas mediante programación a la descripción del servicio (en una aplicación de servicio) o punto de conexión (en una aplicación cliente) o en un archivo de configuración. Para obtener más información acerca de cómo utilizar los comportamientos proporcionados por el sistema, consulte [especificar el comportamiento de tiempo de ejecución de servicio](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) y [cliente especificar el comportamiento de tiempo de ejecución](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
@@ -20,11 +20,11 @@ Los comportamientos permiten modificar el comportamiento predeterminado y agrega
 ### <a name="behavior-methods"></a>Métodos de comportamiento  
  Todos los comportamientos tienen un `AddBindingParameters` método, un `ApplyDispatchBehavior` método, un `Validate` método y un `ApplyClientBehavior` método con una excepción: Dado que <xref:System.ServiceModel.Description.IServiceBehavior> no se puede ejecutar en un cliente, no implementa `ApplyClientBehavior`.  
   
--   Utilice el método `AddBindingParameters` para modificar o agregar los objetos personalizados a una colección a la que los enlaces personalizados pueden tener acceso para su uso cuando se construya el tiempo de ejecución. Por ejemplo, la forma en que se especifican los requisitos de protección que afectan a la manera en que se crea el canal pero no es conocido por el desarrollador de canales.  
+- Utilice el método `AddBindingParameters` para modificar o agregar los objetos personalizados a una colección a la que los enlaces personalizados pueden tener acceso para su uso cuando se construya el tiempo de ejecución. Por ejemplo, la forma en que se especifican los requisitos de protección que afectan a la manera en que se crea el canal pero no es conocido por el desarrollador de canales.  
   
--   Utilice el método `Validate` para examinar el árbol de descripción y el objeto del tiempo de ejecución correspondiente para garantizar que se ajusta a algún conjunto de criterios.  
+- Utilice el método `Validate` para examinar el árbol de descripción y el objeto del tiempo de ejecución correspondiente para garantizar que se ajusta a algún conjunto de criterios.  
   
--   Utilice los métodos `ApplyDispatchBehavior` y `ApplyClientBehavior` para examinar el árbol de descripción y modificar el tiempo de ejecución para un ámbito determinado en el servicio o el cliente. También puede insertar los objetos de extensión.  
+- Utilice los métodos `ApplyDispatchBehavior` y `ApplyClientBehavior` para examinar el árbol de descripción y modificar el tiempo de ejecución para un ámbito determinado en el servicio o el cliente. También puede insertar los objetos de extensión.  
   
     > [!NOTE]
     >  Aunque se proporciona un árbol de descripción en estos métodos, solo es para el examen. Si se modifica un árbol de descripción, el comportamiento es indefinido.  
@@ -38,13 +38,13 @@ Los comportamientos permiten modificar el comportamiento predeterminado y agrega
   
  Hay cuatro tipos de comportamientos de WCF:  
   
--   Los comportamientos de servicio (tipos <xref:System.ServiceModel.Description.IServiceBehavior>) permiten la personalización del tiempo de ejecución del servicio completo incluido <xref:System.ServiceModel.ServiceHostBase>.  
+- Los comportamientos de servicio (tipos <xref:System.ServiceModel.Description.IServiceBehavior>) permiten la personalización del tiempo de ejecución del servicio completo incluido <xref:System.ServiceModel.ServiceHostBase>.  
   
--   Los comportamientos del extremo (tipos <xref:System.ServiceModel.Description.IEndpointBehavior>) permiten la personalización de los extremos de servicio y sus objetos <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> asociados.  
+- Los comportamientos del extremo (tipos <xref:System.ServiceModel.Description.IEndpointBehavior>) permiten la personalización de los extremos de servicio y sus objetos <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> asociados.  
   
--   Los comportamientos del contrato (tipos <xref:System.ServiceModel.Description.IContractBehavior>) permiten la personalización de las clases <xref:System.ServiceModel.Dispatcher.ClientRuntime> y <xref:System.ServiceModel.Dispatcher.DispatchRuntime> en las aplicaciones de cliente y servicio, respectivamente.  
+- Los comportamientos del contrato (tipos <xref:System.ServiceModel.Description.IContractBehavior>) permiten la personalización de las clases <xref:System.ServiceModel.Dispatcher.ClientRuntime> y <xref:System.ServiceModel.Dispatcher.DispatchRuntime> en las aplicaciones de cliente y servicio, respectivamente.  
   
--   Los comportamientos de la operación (tipos <xref:System.ServiceModel.Description.IOperationBehavior>) permiten la personalización de las clases <xref:System.ServiceModel.Dispatcher.ClientOperation> y <xref:System.ServiceModel.Dispatcher.DispatchOperation>, de nuevo, en el cliente y el servicio.  
+- Los comportamientos de la operación (tipos <xref:System.ServiceModel.Description.IOperationBehavior>) permiten la personalización de las clases <xref:System.ServiceModel.Dispatcher.ClientOperation> y <xref:System.ServiceModel.Dispatcher.DispatchOperation>, de nuevo, en el cliente y el servicio.  
   
  Puede agregar estos comportamientos a los distintos objetos de descripción implementando los atributos personalizados, utilizando los archivos de configuración de la aplicación, o directamente agregándolos a la colección de comportamientos en el objeto de descripción adecuado. Sin embargo, deben agregarse a la descripción del servicio o a un objeto de descripción del punto de conexión del servicio antes de llamar a <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.ServiceHost> o <xref:System.ServiceModel.ChannelFactory%601>.  
   

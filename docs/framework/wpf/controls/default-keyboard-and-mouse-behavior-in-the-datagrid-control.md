@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a518c6123b21ae62742071a0b26c6a09fa272b17
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911851"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591277"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Comportamiento predeterminado de teclado y mouse en el control DataGridView
 Este tema describe cómo los usuarios pueden interactuar con el <xref:System.Windows.Controls.DataGrid> control utilizando el teclado y mouse (ratón).  
@@ -55,21 +55,21 @@ Este tema describe cómo los usuarios pueden interactuar con el <xref:System.Win
   
  Las siguientes teclas de selección modifican selección de varias filas.  
   
--   MAYÚS+FLECHA ABAJO  
+- MAYÚS+FLECHA ABAJO  
   
--   MAYÚS+FLECHA ARRIBA  
+- MAYÚS+FLECHA ARRIBA  
   
--   MAYÚS+AV PÁG  
+- MAYÚS+AV PÁG  
   
--   MAYÚS+RE PÁG  
+- MAYÚS+RE PÁG  
   
--   CTRL+MAYÚS+FLECHA ABAJO  
+- CTRL+MAYÚS+FLECHA ABAJO  
   
--   CTRL+MAYÚS+FLECHA ARRIBA  
+- CTRL+MAYÚS+FLECHA ARRIBA  
   
--   CTRL + MAYÚS + INICIO  
+- CTRL + MAYÚS + INICIO  
   
--   CTRL + MAYÚS + FIN  
+- CTRL + MAYÚS + FIN  
   
 ## <a name="default-mouse-behavior"></a>Comportamiento predeterminado del Mouse  
  La tabla siguiente enumera el comportamiento predeterminado del mouse para el <xref:System.Windows.Controls.DataGrid>.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2f64faab6df678182fb39174c8a558b298a8748
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858083"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584986"
 ---
 # <a name="best-practices-for-queued-communication"></a>Procedimientos recomendados para la comunicación en cola
 Este tema proporciona las prácticas recomendadas para la comunicación en cola en Windows Communication Foundation (WCF). Las secciones siguientes discuten los procedimientos recomendados desde una perspectiva del escenario.  
@@ -48,11 +48,11 @@ Este tema proporciona las prácticas recomendadas para la comunicación en cola 
 ## <a name="achieving-high-throughput"></a>Obtener un alto rendimiento  
  Para lograr un alto rendimiento en un solo punto de conexión, utilice lo siguiente:  
   
--   Procesamiento por lotes con transacciones El procesamiento por lotes con transacciones garantiza que muchos mensajes se puedan leer en una transacción única. Esto optimiza las confirmaciones de transacciones, aumentando el rendimiento total. El costo del procesamiento por lotes es que si se produce un error en un mensaje único dentro de un lote, se deshace el lote completo y se deben procesar los mensajes de uno en uno hasta que sea seguro de nuevo el procesamiento por lotes. En la mayoría de los casos, los mensajes dudosos son raros, así que el procesamiento por lotes es la forma preferida de aumentar el rendimiento del sistema, particularmente cuando se tienen otros administradores de recursos que participan en la transacción. Para obtener más información, consulte [mensajes por lotes en una transacción](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+- Procesamiento por lotes con transacciones El procesamiento por lotes con transacciones garantiza que muchos mensajes se puedan leer en una transacción única. Esto optimiza las confirmaciones de transacciones, aumentando el rendimiento total. El costo del procesamiento por lotes es que si se produce un error en un mensaje único dentro de un lote, se deshace el lote completo y se deben procesar los mensajes de uno en uno hasta que sea seguro de nuevo el procesamiento por lotes. En la mayoría de los casos, los mensajes dudosos son raros, así que el procesamiento por lotes es la forma preferida de aumentar el rendimiento del sistema, particularmente cuando se tienen otros administradores de recursos que participan en la transacción. Para obtener más información, consulte [mensajes por lotes en una transacción](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Simultaneidad. La simultaneidad aumenta el rendimiento, pero también afecta a la contención a los recursos compartidos. Para obtener más información, consulte [simultaneidad](../../../../docs/framework/wcf/samples/concurrency.md).  
+- Simultaneidad. La simultaneidad aumenta el rendimiento, pero también afecta a la contención a los recursos compartidos. Para obtener más información, consulte [simultaneidad](../../../../docs/framework/wcf/samples/concurrency.md).  
   
--   Limitación de peticiones. Para un rendimiento óptimo, limite el número de mensajes en el conductor del distribuidor. Para obtener un ejemplo de cómo hacerlo, consulte [limitación](../../../../docs/framework/wcf/samples/throttling.md).  
+- Limitación de peticiones. Para un rendimiento óptimo, limite el número de mensajes en el conductor del distribuidor. Para obtener un ejemplo de cómo hacerlo, consulte [limitación](../../../../docs/framework/wcf/samples/throttling.md).  
   
  Al utilizar el procesamiento por lotes, sea consciente que la simultaneidad y la limitación de peticiones se traducen en los lotes simultáneos.  
   
@@ -75,11 +75,11 @@ Este tema proporciona las prácticas recomendadas para la comunicación en cola 
   
  Al utilizar `MsmqIntegrationBinding`, sea consciente de lo siguiente:  
   
--   El cuerpo de un mensaje WCF no es el mismo que el cuerpo de un mensaje MSMQ. Cuando se envía un mensaje WCF mediante un enlace en cola, el cuerpo del mensaje WCF se coloca dentro de un mensaje MSMQ. La infraestructura de MSMQ es ajena a esta información adicional; solo ve el mensaje de MSMQ.  
+- El cuerpo de un mensaje WCF no es el mismo que el cuerpo de un mensaje MSMQ. Cuando se envía un mensaje WCF mediante un enlace en cola, el cuerpo del mensaje WCF se coloca dentro de un mensaje MSMQ. La infraestructura de MSMQ es ajena a esta información adicional; solo ve el mensaje de MSMQ.  
   
--   `MsmqIntegrationBinding` admite los tipos de serialización populares. Se basa en el tipo de serialización, el tipo de cuerpo del mensaje genérico, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, toma diferentes tipos de parámetros. Por ejemplo, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> requiere `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> y `MsmqMessage<Stream>` requiere .  
+- `MsmqIntegrationBinding` admite los tipos de serialización populares. Se basa en el tipo de serialización, el tipo de cuerpo del mensaje genérico, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, toma diferentes tipos de parámetros. Por ejemplo, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> requiere `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> y `MsmqMessage<Stream>` requiere .  
   
--   Con la serialización XML, puede especificar el tipo conocido utilizando el `KnownTypes` atributo el [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento que, a continuación, se utiliza para determinar cómo deserializar el mensaje XML.  
+- Con la serialización XML, puede especificar el tipo conocido utilizando el `KnownTypes` atributo el [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento que, a continuación, se utiliza para determinar cómo deserializar el mensaje XML.  
   
 ## <a name="see-also"></a>Vea también
 

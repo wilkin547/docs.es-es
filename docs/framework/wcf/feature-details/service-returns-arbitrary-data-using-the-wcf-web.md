@@ -2,12 +2,12 @@
 title: Procedimiento para crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6c7dd0debb5c491bca84ea9a4845f46b6b57b4a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747854"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586242"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procedimiento para crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF
 A veces los programadores deben tener un control absoluto de la forma en que se devuelven los datos desde una operación de un servicio. Esto sucede cuando una operación de servicio debe devolver datos en un formato no compatible con WCF. En este tema describe el uso del modelo de programación de WEB HTTP de WCF para crear este tipo de servicio. Este servicio tiene una operación que devuelve una secuencia.  

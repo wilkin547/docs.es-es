@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 834829d8eee95a8a62363a05b4af9430c435753b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748270"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586225"
 ---
 # <a name="service-identity-and-authentication"></a>Identidad del servicio y autenticación
 Un servicio *identidad de extremo* es un valor generado desde el servicio de lenguaje de descripción de servicios Web (WSDL). Este valor, propagado a cualquier cliente, se utiliza para autenticar el servicio. Después de que el cliente inicie una comunicación con un punto de conexión y el servicio se autentique a sí mismo ante el cliente, el cliente compara el valor de identidad del punto de conexión con el valor real devuelto por el proceso de autenticación del punto de conexión. Si coinciden, se asegura al cliente que se ha puesto en contacto con el punto de conexión de servicio esperado. Esto funciona como una protección frente a *"phishing"* al impedir que un cliente se redirige a un punto de conexión hospedado por un servicio malintencionado.  

@@ -2,12 +2,12 @@
 title: Soporte técnico para consultas
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: db3580d0a29353aac027bddd8f040d3085d674af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641520"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665300"
 ---
 # <a name="support-for-queries"></a>Soporte técnico para consultas
 El almacén de instancias de flujo de trabajo de SQL graba un conjunto de propiedades conocidas en el almacén. Los usuarios pueden consultar instancias basadas en estas propiedades. La siguiente lista contiene algunas de estas propiedades conocidas:  

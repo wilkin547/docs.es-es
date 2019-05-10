@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982376"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063892"
 ---
 # <a name="routed-events-overview"></a>Información general sobre eventos enrutados
 En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En el tema se define la terminología de los eventos enrutados, se describe cómo se enrutan a través de un árbol de elementos, se resume cómo controlar los eventos enrutados y se explica cómo crear sus propios eventos enrutados personalizados.
@@ -197,10 +197,9 @@ En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_w
   
  Los eventos de entrada de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que se presentan en parejas se implementan de forma que una única acción del usuario desde la entrada, como presionar un botón del mouse, desencadenará los dos eventos enrutados de la pareja secuencialmente. En primer lugar, se desencadena el evento de tunelización, que viaja por su ruta. Después se desencadena el evento de propagación y este viaja por su ruta. Los dos eventos comparten literalmente la misma instancia de datos de evento, porque la <xref:System.Windows.UIElement.RaiseEvent%2A> llamada al método en la clase de implementación que genera el evento de propagación realiza escuchas para los datos del evento desde el evento de tunelización y los reutiliza en el nuevo evento generado. Los agentes de escucha con controladores para el evento de tunelización tienen la primera oportunidad de marcar el evento enrutado como controlado (en primer lugar los controladores de clase y después los controladores de instancia). Si un elemento a lo largo de la ruta de tunelización ha marcado el evento enrutado como controlado, los datos del evento ya controlado se envían para el evento de propagación y no se invocarán los controladores adjuntos típicos para los eventos de entrada de propagación equivalentes. Externamente dará la impresión de que el evento de propagación controlado ni siquiera se ha desencadenado. Este comportamiento de control es útil para la composición de controles, donde podría ser conveniente que fuera el control final y no sus partes compuestas el que informara de todos los eventos de entrada basados en pruebas de posicionamiento o de los eventos de entrada basados en el foco. El elemento del control final está más próximo a la raíz en la composición y, por tanto, tiene la oportunidad de controlar desde la clase el evento de tunelización en primer lugar y posiblemente "reemplazar" dicho evento enrutado por un evento más específico del control, como parte del código que respalda la clase del control.  
   
- Para ilustrar cómo funciona el procesamiento de eventos de entrada, observe el ejemplo de evento de entrada siguiente. En la ilustración del árbol siguiente, `leaf element #2` es el origen de un evento `PreviewMouseDown` y, después, de un evento `MouseDown`.  
+ Para ilustrar cómo funciona el procesamiento de eventos de entrada, observe el ejemplo de evento de entrada siguiente. En la siguiente ilustración del árbol, `leaf element #2` es el origen de ambos un `PreviewMouseDown` y, a continuación, un `MouseDown` eventos:  
   
- ![Diagrama de enrutamiento de eventos](./media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
-Propagación y tunelización de eventos de entrada  
+ ![Diagrama de enrutamiento de eventos](./media/routed-events-overview/input-event-routing.png)  
   
  El orden de procesamiento de los eventos es el siguiente:  
   

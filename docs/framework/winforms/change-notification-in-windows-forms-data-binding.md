@@ -5,21 +5,21 @@ helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4a70f96ad256b22ce0d933a633475161160e5a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011884"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665863"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Notificación de cambios en el enlace de datos de Windows Forms
 Uno de los conceptos más importantes de enlace de datos de Windows Forms es *notificación de cambio*. Para asegurarse de que el origen de datos y los controles enlazados siempre tienen los datos más recientes, debe agregar la notificación de cambio para el enlace de datos. En concreto, para asegurarse de que los controles enlazados se le notifican los cambios realizados en su origen de datos y el origen de datos se le notifican los cambios realizados en las propiedades de un control enlazadas.  
   
  Hay diferentes tipos de notificación de cambios, según el tipo de enlace de datos:  
   
--   Enlace simple en el que una sola propiedad de control se enlaza a una sola instancia de un objeto.  
+- Enlace simple en el que una sola propiedad de control se enlaza a una sola instancia de un objeto.  
   
--   Enlace basado en lista, que puede incluir una sola propiedad de control enlazada a la propiedad de un elemento en una lista o una propiedad de control enlazado a una lista de objetos.  
+- Enlace basado en lista, que puede incluir una sola propiedad de control enlazada a la propiedad de un elemento en una lista o una propiedad de control enlazado a una lista de objetos.  
   
  Además, si va a crear controles de Windows Forms que se desean utilizar para el enlace de datos, debe aplicar el *PropertyName*cambiado patrón a los controles, para que se propagan los cambios a la propiedad de un control enlazado a la origen de datos.  
   

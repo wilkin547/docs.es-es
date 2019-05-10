@@ -2,12 +2,12 @@
 title: Sesiones, creación de instancias y simultaneidad
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 52c9ed5d672ea05fec3333c9fece8b693143d6f3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748023"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586108"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sesiones, creación de instancias y simultaneidad
 Una *sesión* es una correlación de todos los mensajes enviados entre dos extremos. *Creación de instancias* hace referencia al control de la vida de los objetos de servicio definidos por el usuario y sus objetos <xref:System.ServiceModel.InstanceContext> relacionados. La*simultaneidad* es el término dado al control del número de subprocesos que se ejecutan al mismo tiempo en un <xref:System.ServiceModel.InstanceContext> .  

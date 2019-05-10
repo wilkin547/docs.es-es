@@ -2,12 +2,12 @@
 title: Integración de almacenamiento en caché de ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 989f10defa3cde2885d9002b2189751dfe2b920a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002734"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587658"
 ---
 # <a name="aspnet-caching-integration"></a>Integración de almacenamiento en caché de ASP.NET
 En este ejemplo se muestra cómo utilizar la memoria caché de resultados de ASP.NET con el modelo de programación HTTP wEB de WCF. Este tema se centra en la característica de integración de la memoria caché de resultados de ASP.NET.  
