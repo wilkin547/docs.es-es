@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 65a1e34d5b078c49bf59c2d9787812940c9a7494
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b3d0f5c77ebf8527e4854d4edf12d6fa8a4b5f0c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340404"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614630"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Procedimiento Controlar el evento ContextMenuOpening
 El <xref:System.Windows.FrameworkElement.ContextMenuOpening> se pueden controlar eventos en una aplicación para ajustar un menú contextual existente antes para mostrar o suprimir el menú que se mostraría en caso contrario, estableciendo el <xref:System.Windows.RoutedEventArgs.Handled%2A> propiedad `true` en los datos del evento. La razón típica para la configuración de <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true` en el evento son reemplazar el menú completamente con un nuevo datos <xref:System.Windows.Controls.ContextMenu> objeto, que a veces requiere cancelar la operación e iniciar una nuevo abrir. Al escribir controladores para la <xref:System.Windows.FrameworkElement.ContextMenuOpening> eventos, debe ser consciente de los problemas de sincronización entre un <xref:System.Windows.Controls.ContextMenu> control y el servicio que se encarga de abrir y posicionamiento de los menús contextuales para los controles en general. En este tema se muestra algunas de las técnicas de código para el menú contextual de varios escenarios de apertura y muestra un caso donde el problema de sincronización entra en juego.  
   
  Hay varios escenarios para el control de la <xref:System.Windows.FrameworkElement.ContextMenuOpening> eventos:  
   
--   Ajuste de los elementos de menú antes de la presentación.  
+- Ajuste de los elementos de menú antes de la presentación.  
   
--   Reemplazar el menú completo antes de la presentación.  
+- Reemplazar el menú completo antes de la presentación.  
   
--   Suprimir cualquier menú contextual existente y no mostrar ningún menú contextual por completo.  
+- Suprimir cualquier menú contextual existente y no mostrar ningún menú contextual por completo.  
   
 ## <a name="example"></a>Ejemplo  
   

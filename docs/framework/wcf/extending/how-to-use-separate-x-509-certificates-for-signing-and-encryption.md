@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fc5b40bec7c53c9884379658ddce6d036032f160
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766960"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617595"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Procedimiento para usar diferentes certificados X.509 para la firma y el cifrado
 En este tema se muestra cómo configurar Windows Communication Foundation (WCF) para usar certificados diferentes para firmar los mensajes y el cifrado en el cliente y el servicio.  

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54b1d35d1c40289bad465978750ba738acf28c90
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9eef4e1b1c9c82d8576c01dd124ee9ac68c2583
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000576"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610038"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>StrongNameSignatureVerificationFromImage (Función)
 Comprueba si un ensamblado que ya se ha asignado a la memoria es válido para la clave pública asociada.  
@@ -49,22 +49,22 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
  `dwInFlags`  
  [in] Marcas que influyen en el comportamiento de la comprobación. Se admiten los siguientes valores:  
   
--   `SN_INFLAG_FORCE_VER` (0 x 00000001) - fuerza la comprobación incluso si es necesario invalidar la configuración del registro.  
+- `SN_INFLAG_FORCE_VER` (0 x 00000001) - fuerza la comprobación incluso si es necesario invalidar la configuración del registro.  
   
--   `SN_INFLAG_INSTALL` (0 x 00000002): Especifica que se trata de la primera comprobación realizada en esta imagen.  
+- `SN_INFLAG_INSTALL` (0 x 00000002): Especifica que se trata de la primera comprobación realizada en esta imagen.  
   
--   `SN_INFLAG_ADMIN_ACCESS` (0 x 00000004): Especifica que la memoria caché permitirá el acceso únicamente a los usuarios que tienen privilegios administrativos.  
+- `SN_INFLAG_ADMIN_ACCESS` (0 x 00000004): Especifica que la memoria caché permitirá el acceso únicamente a los usuarios que tienen privilegios administrativos.  
   
--   `SN_INFLAG_USER_ACCESS` (0 x 00000008): Especifica que el ensamblado será accesible solo para el usuario actual.  
+- `SN_INFLAG_USER_ACCESS` (0 x 00000008): Especifica que el ensamblado será accesible solo para el usuario actual.  
   
--   `SN_INFLAG_ALL_ACCESS` (0 x 00000010): Especifica que la memoria caché no proporcionará ninguna garantía de restricción de acceso.  
+- `SN_INFLAG_ALL_ACCESS` (0 x 00000010): Especifica que la memoria caché no proporcionará ninguna garantía de restricción de acceso.  
   
--   `SN_INFLAG_RUNTIME` (0 x 80000000): reservado para la depuración interna.  
+- `SN_INFLAG_RUNTIME` (0 x 80000000): reservado para la depuración interna.  
   
  `pdwOutFlags`  
  [out] Una marca para obtener información de salida adicional. Se admite el siguiente valor:  
   
--   `SN_OUTFLAG_WAS_VERIFIED` (0 x 00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.  
+- `SN_OUTFLAG_WAS_VERIFIED` (0 x 00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.  
   
 ## <a name="return-value"></a>Valor devuelto  
  `true` Cuando se finaliza correctamente; en caso contrario, `false`.  

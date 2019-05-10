@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a69e5922d2f66d295024149764c3836f9760b685
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762466"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591238"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Realizar pruebas de posicionamiento en la capa visual
 En este tema se proporciona información general sobre la funcionalidad de prueba de posicionamiento que proporciona la capa visual. Compatibilidad con pruebas de posicionamiento permite determinar si un valor de geometría o un punto está dentro del contenido representado de un <xref:System.Windows.Media.Visual>, lo que permite implementar el comportamiento de la interfaz de usuario, como un rectángulo de selección para seleccionar varios objetos.  

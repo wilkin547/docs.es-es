@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa3d428d311fd954d092c3859cf8ad273e8a5c1f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61861236"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613812"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escribir aplicaciones grandes de .NET Framework que respondan
 En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de las aplicaciones .NET Framework de gran tamaño o de aquellas aplicaciones que procesan una gran cantidad de datos, como archivos o bases de datos. Estas sugerencias proceden de reescribir los compiladores de C# y Visual Basic en código administrado; además, el artículo incluye varios ejemplos reales del compilador de C#. 
@@ -453,13 +453,13 @@ class Compilation { /*...*/
   
  En este artículo se ha explicado cómo deben tenerse en cuenta los síntomas de cuello de botella de rendimiento que pueden afectar a la respuesta de su aplicación, especialmente en sistemas grandes o sistemas que procesan una gran cantidad de datos. Los causantes más habituales son la conversión boxing, las manipulaciones de cadenas, LINQ y lambda, el almacenamiento en caché en métodos asincrónicos, el uso de la memoria caché sin un límite de tamaño o directiva de retirada, la utilización inadecuada de diccionarios y el pase de estructuras.es. No olvide los cuatro hechos sobre el ajuste de las aplicaciones:  
   
--   No optimice prematuramente: sea productivo y ajuste la aplicación cuando detecte problemas. 
+- No optimice prematuramente: sea productivo y ajuste la aplicación cuando detecte problemas. 
   
--   Los perfiles no mienten: si no mide, conjetura. 
+- Los perfiles no mienten: si no mide, conjetura. 
   
--   Unas herramientas buenas marcan la diferencia: descargue PerfView y pruébelo. 
+- Unas herramientas buenas marcan la diferencia: descargue PerfView y pruébelo. 
   
--   La clave son las asignaciones: es donde el equipo de la plataforma de compiladores invirtió más tiempo en mejorar el rendimiento de los nuevos compiladores. 
+- La clave son las asignaciones: es donde el equipo de la plataforma de compiladores invirtió más tiempo en mejorar el rendimiento de los nuevos compiladores. 
   
 ## <a name="see-also"></a>Vea también
 

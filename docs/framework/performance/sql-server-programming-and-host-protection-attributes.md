@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1049187dabbea64599617bb4372ed50515a51e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aafd494a2330609f68295588cf649bc4666f4cfe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949193"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614878"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>Programación en SQL Server y atributos de protección de host
 La capacidad para cargar y ejecutar código administrado en un host de SQL Server requiere que se cumplan los requisitos del host tanto para la seguridad de acceso del código como para la protección de los recursos del host.  Los requisitos de seguridad de acceso de código se especifican mediante uno de los tres conjuntos de permisos de SQL Server: SAFE, EXTERNAL-ACCESS o UNSAFE. El código que se ejecuta dentro de los conjuntos de permisos SAFE o EXTERNAL-ACCESS debe evitar ciertos tipos o miembros que tienen aplicado el atributo <xref:System.Security.Permissions.HostProtectionAttribute>. <xref:System.Security.Permissions.HostProtectionAttribute> no es un permiso de seguridad, por más que una garantía de confiabilidad identifique construcciones de código específico (ya sean tipos o métodos) que el host podría rechazar.  El uso de <xref:System.Security.Permissions.HostProtectionAttribute> requiere un modelo de programación que ayude a proteger la estabilidad del host.  

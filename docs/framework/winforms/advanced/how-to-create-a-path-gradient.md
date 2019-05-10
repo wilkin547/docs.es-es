@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c37a42a5905e34a995efbd73d332b7ef8f90e51d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938091"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603228"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Procedimiento para crear un degradado de trazado
 La <xref:System.Drawing.Drawing2D.PathGradientBrush> clase le permite personalizar el modo de rellenar una forma con colores que cambian gradualmente. Por ejemplo, puede especificar un color para el centro de una ruta de acceso y otro color para el límite de una ruta de acceso. También puede especificar colores independientes para cada uno de varios puntos a lo largo del límite de una ruta de acceso.  
