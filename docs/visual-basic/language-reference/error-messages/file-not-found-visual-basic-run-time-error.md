@@ -4,26 +4,26 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
-ms.openlocfilehash: cac84c3fa549760ee92601bbb07a379ea102b6dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 90dbac88854e1fb156b387eaa6df564269d84d29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801392"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629046"
 ---
-# <a name="file-not-found-visual-basic-run-time-error"></a><span data-ttu-id="5ed16-102">No se encuentra el archivo (error en tiempo de ejecución de Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ed16-102">File not found (Visual Basic Run-Time Error)</span></span>
-<span data-ttu-id="5ed16-103">No se encontró el archivo que se especifique.</span><span class="sxs-lookup"><span data-stu-id="5ed16-103">The file was not found where specified.</span></span> <span data-ttu-id="5ed16-104">El error tiene las siguientes causas posibles:</span><span class="sxs-lookup"><span data-stu-id="5ed16-104">The error has the following possible causes:</span></span>  
+# <a name="file-not-found-visual-basic-run-time-error"></a><span data-ttu-id="df0c0-102">No se encuentra el archivo (error en tiempo de ejecución de Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df0c0-102">File not found (Visual Basic Run-Time Error)</span></span>
+<span data-ttu-id="df0c0-103">No se encontró el archivo que se especifique.</span><span class="sxs-lookup"><span data-stu-id="df0c0-103">The file was not found where specified.</span></span> <span data-ttu-id="df0c0-104">El error tiene las siguientes causas posibles:</span><span class="sxs-lookup"><span data-stu-id="df0c0-104">The error has the following possible causes:</span></span>  
   
-- <span data-ttu-id="5ed16-105">La instrucción hace referencia a un archivo que no existe.</span><span class="sxs-lookup"><span data-stu-id="5ed16-105">A statement refers to a file that does not exist.</span></span>  
+- <span data-ttu-id="df0c0-105">La instrucción hace referencia a un archivo que no existe.</span><span class="sxs-lookup"><span data-stu-id="df0c0-105">A statement refers to a file that does not exist.</span></span>  
   
-- <span data-ttu-id="5ed16-106">Se ha intentado llamar a un procedimiento en una biblioteca de vínculos dinámicos (DLL), pero la biblioteca especificada en el `Lib` cláusula de la `Declare` no se encuentra la instrucción.</span><span class="sxs-lookup"><span data-stu-id="5ed16-106">An attempt was made to call a procedure in a dynamic-link library (DLL), but the library specified in the `Lib` clause of the `Declare` statement cannot be found.</span></span>  
+- <span data-ttu-id="df0c0-106">Se ha intentado llamar a un procedimiento en una biblioteca de vínculos dinámicos (DLL), pero la biblioteca especificada en el `Lib` cláusula de la `Declare` no se encuentra la instrucción.</span><span class="sxs-lookup"><span data-stu-id="df0c0-106">An attempt was made to call a procedure in a dynamic-link library (DLL), but the library specified in the `Lib` clause of the `Declare` statement cannot be found.</span></span>  
   
-- <span data-ttu-id="5ed16-107">Se intentó abrir un proyecto o cargar un archivo de texto que no existe.</span><span class="sxs-lookup"><span data-stu-id="5ed16-107">You attempted to open a project or load a text file that does not exist.</span></span>  
+- <span data-ttu-id="df0c0-107">Se intentó abrir un proyecto o cargar un archivo de texto que no existe.</span><span class="sxs-lookup"><span data-stu-id="df0c0-107">You attempted to open a project or load a text file that does not exist.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="5ed16-108">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="5ed16-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="df0c0-108">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="df0c0-108">To correct this error</span></span>  
   
-1. <span data-ttu-id="5ed16-109">Compruebe la ortografía del nombre de archivo y la especificación de ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="5ed16-109">Check the spelling of the file name and the path specification.</span></span>  
+1. <span data-ttu-id="df0c0-109">Compruebe la ortografía del nombre de archivo y la especificación de ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="df0c0-109">Check the spelling of the file name and the path specification.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ed16-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="5ed16-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df0c0-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="df0c0-110">See also</span></span>
 
-- [<span data-ttu-id="5ed16-111">Declare (instrucción)</span><span class="sxs-lookup"><span data-stu-id="5ed16-111">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="df0c0-111">Declare (instrucción)</span><span class="sxs-lookup"><span data-stu-id="df0c0-111">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
