@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], adding unbound columns
 - DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
-ms.openlocfilehash: 40308f7e8cc12dcff5b7d4393645f6a9007cc2b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d40eea54d908f17fc2fe893d5bc15a073a066ba1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009206"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651576"
 ---
 # <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>Procedimiento para agregar una columna sin enlazar a un control DataGridView de formularios Windows Forms enlazado a datos
 Los datos que muestra en el control <xref:System.Windows.Forms.DataGridView> proceden por lo general de un origen de datos, pero es posible que desee mostrar una columna de datos que no proceda de dicho origen de datos. Este tipo de columna se denomina columna independiente. Las columnas independientes pueden adoptar muchas formas. Con frecuencia, se utilizan para permitir acceder a los detalles de una fila de datos.  

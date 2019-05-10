@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5d4fe5d1b9048f4a8ae22a84e14456318ca38f0f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906989"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645861"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Constantes definidas por el usuario (Visual Basic)
 Una constante es un nombre descriptivo que ocupa el lugar de un número o una cadena que no cambia. Las constantes almacenan valores que, como su nombre indica, permanecen constantes durante la ejecución de una aplicación. Puede usar las constantes que se definen mediante los controles o componentes que funciona con, o puede crear sus propios. Se describen las constantes que crea usted mismo como *definido por el usuario*.  

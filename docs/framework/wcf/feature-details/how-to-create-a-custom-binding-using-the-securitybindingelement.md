@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 76fd6ad954b2cf004c6fdfcf51ef0c619e8c3892
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787860"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662777"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procedimiento para crear un enlace personalizado mediante SecurityBindingElement
 Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por el sistema que se pueden configurar pero no proporcionan completa flexibilidad al configurar todas las opciones de seguridad que WCF admite. Este tema muestra cómo crear un enlace personalizado directamente a partir de elementos de enlace individuales y resalta algunos de los ajustes de seguridad que pueden especificarse al crear este tipo de enlaces. Para obtener más información acerca de cómo crear enlaces personalizados, consulte [extender enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md).  

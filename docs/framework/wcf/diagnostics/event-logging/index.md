@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: adff5bf2fad9f78fccbb606a5bd27f2f1dc32647
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999263"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638766"
 ---
 # <a name="event-logging-in-wcf"></a>Registro de eventos en WCF
 Windows Communication Foundation (WCF) realiza un seguimiento de eventos internos en el registro de eventos de Windows.  

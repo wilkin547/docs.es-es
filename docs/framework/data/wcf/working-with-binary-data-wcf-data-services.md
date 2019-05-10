@@ -8,19 +8,19 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: de85a3aca629582e79712b71ae2e3413b919ab28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 428f12c90d646b1c08cdeaf48467efc2ce53859a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875165"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660254"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Trabajar con datos binarios (Data Services de WCF)
 El [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente le permite recuperar y actualizar los datos binarios desde un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] la fuente en una de las maneras siguientes:  
   
--   Como una propiedad del tipo primitivo de una entidad. Este es el método recomendado para trabajar con objetos de datos binarios pequeños que se pueden cargar con facilidad en la memoria. En este caso, la propiedad binaria es una propiedad de entidad expuesta por el modelo de datos y el servicio de datos serializa los datos binarios como XML codificado binario de base 64 en el mensaje de respuesta.  
+- Como una propiedad del tipo primitivo de una entidad. Este es el método recomendado para trabajar con objetos de datos binarios pequeños que se pueden cargar con facilidad en la memoria. En este caso, la propiedad binaria es una propiedad de entidad expuesta por el modelo de datos y el servicio de datos serializa los datos binarios como XML codificado binario de base 64 en el mensaje de respuesta.  
   
--   Como flujo de recursos binarios independiente. Este es el método recomendado para obtener acceso y cambiar datos de objetos binarios grandes (BLOB) que pueden representar una foto, un vídeo o cualquier otro tipo de datos codificados binarios.  
+- Como flujo de recursos binarios independiente. Este es el método recomendado para obtener acceso y cambiar datos de objetos binarios grandes (BLOB) que pueden representar una foto, un vídeo o cualquier otro tipo de datos codificados binarios.  
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implementa la transmisión por secuencias de datos binarios mediante HTTP, como se define en el [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. En este mecanismo, datos binarios se tratan como un recurso multimedia independiente pero relacionados con una entidad, que se denomina una entrada de vínculo multimedia. Para obtener más información, consulte [proveedor de transmisión](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1aa3030d9daea57bb9b8970baa78f8117a07bd1a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937843"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624205"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Procedimiento para crear una colección de fuentes privada
 El <xref:System.Drawing.Text.PrivateFontCollection> clase hereda de la <xref:System.Drawing.Text.FontCollection> clase base abstracta. Puede usar un <xref:System.Drawing.Text.PrivateFontCollection> objeto para mantener un conjunto de fuentes específicamente para la aplicación. Una colección de fuentes privada puede incluir fuentes del sistema instalados, así como las fuentes que no se han instalado en el equipo. Para agregar un archivo de fuente a una colección de fuentes privada, llame el <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> método de un <xref:System.Drawing.Text.PrivateFontCollection> objeto.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5eb6bd5b5e7b2f0c3692c0fa2431a0b8f295299
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864707"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649723"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Procedimiento Coincide con una cadena con un patrón (Visual Basic)
 Si desea averiguar si una expresión de la [tipo de datos String](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisface un patrón, puede usar el [Like (operador)](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -29,7 +29,7 @@ Si desea averiguar si una expresión de la [tipo de datos String](../../../../vi
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Para hacer coincidir un carácter en la expresión de cadena con un carácter específico  
   
--   Coloque el carácter concreto en la cadena de patrón directamente. Algunos caracteres especiales deben escribirse entre corchetes (`[ ]`). Para obtener más información, consulte [Like (operador)](../../../../visual-basic/language-reference/operators/like-operator.md).  
+- Coloque el carácter concreto en la cadena de patrón directamente. Algunos caracteres especiales deben escribirse entre corchetes (`[ ]`). Para obtener más información, consulte [Like (operador)](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
      El siguiente ejemplo se comprueba si `myString` consta exactamente de carácter único `H`.  
   
@@ -37,7 +37,7 @@ Si desea averiguar si una expresión de la [tipo de datos String](../../../../vi
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Para hacer coincidir un carácter en la expresión de cadena con un carácter comodín  
   
--   Ponga un signo de interrogación (`?`) en la cadena de patrón. Cualquier carácter válido en esta posición realiza una coincidencia correcta.  
+- Ponga un signo de interrogación (`?`) en la cadena de patrón. Cualquier carácter válido en esta posición realiza una coincidencia correcta.  
   
      El siguiente ejemplo se comprueba si `myString` se compone del carácter único `W` seguido de exactamente dos caracteres de los valores.  
   
@@ -45,7 +45,7 @@ Si desea averiguar si una expresión de la [tipo de datos String](../../../../vi
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Para hacer coincidir un carácter en la expresión de cadena con una lista de caracteres  
   
--   Coloque corchetes (`[ ]`) en la cadena de patrón y dentro de los corchetes que ponga la lista de caracteres. No separe los caracteres con comas o cualquier otro separador. Cualquier carácter individual en la lista hace que sea una coincidencia correcta.  
+- Coloque corchetes (`[ ]`) en la cadena de patrón y dentro de los corchetes que ponga la lista de caracteres. No separe los caracteres con comas o cualquier otro separador. Cualquier carácter individual en la lista hace que sea una coincidencia correcta.  
   
      El siguiente ejemplo se comprueba si `myString` consta de cualquier carácter válido seguido exactamente uno de los caracteres `A`, `C`, o `E`.  
   
@@ -55,7 +55,7 @@ Si desea averiguar si una expresión de la [tipo de datos String](../../../../vi
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Para hacer coincidir un carácter en la expresión de cadena con un intervalo de caracteres  
   
--   Coloque corchetes (`[ ]`) en la cadena de patrón y dentro de los corchetes que colocar los caracteres mínimo y máximo del intervalo, separados por un guión (`–`). Cualquier carácter individual dentro del intervalo, realiza una coincidencia correcta.  
+- Coloque corchetes (`[ ]`) en la cadena de patrón y dentro de los corchetes que colocar los caracteres mínimo y máximo del intervalo, separados por un guión (`–`). Cualquier carácter individual dentro del intervalo, realiza una coincidencia correcta.  
   
      El siguiente ejemplo se comprueba si `myString` consta de los caracteres `num` seguido exactamente uno de los caracteres `i`, `j`, `k`, `l`, `m`, o `n`.  
   

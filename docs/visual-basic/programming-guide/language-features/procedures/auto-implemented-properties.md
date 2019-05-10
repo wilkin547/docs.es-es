@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4577609c78271ac91e011b20ef6a8b4066072428
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864318"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649665"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Propiedades implementadas automáticamente (Visual Basic)
 *Propiedades autoimplementadas* le permiten especificar rápidamente una propiedad de una clase sin tener que escribir código para `Get` y `Set` la propiedad. Al escribir código para una propiedad implementada automáticamente, el compilador de Visual Basic crea de manera automática un campo privado para almacenar la variable de propiedad, además de crear los procedimientos `Get` y `Set` asociados.  
@@ -52,13 +52,13 @@ End Class
   
  El campo de respaldo también tiene las siguientes características:  
   
--   El modificador de acceso del campo de respaldo siempre es `Private`, incluso cuando la misma propiedad tiene un nivel de acceso diferente, como `Public`.  
+- El modificador de acceso del campo de respaldo siempre es `Private`, incluso cuando la misma propiedad tiene un nivel de acceso diferente, como `Public`.  
   
--   Si la propiedad está marcada como `Shared`, también se comparte el campo de respaldo.  
+- Si la propiedad está marcada como `Shared`, también se comparte el campo de respaldo.  
   
--   Los atributos especificados para la propiedad no se aplican al campo de respaldo.  
+- Los atributos especificados para la propiedad no se aplican al campo de respaldo.  
   
--   El acceso al campo de respaldo se puede realizar desde el código contenido en la clase y desde herramientas de depuración como la ventana Inspección.  Sin embargo, dicho campo no se muestra en una lista de finalización de palabras de IntelliSense.  
+- El acceso al campo de respaldo se puede realizar desde el código contenido en la clase y desde herramientas de depuración como la ventana Inspección.  Sin embargo, dicho campo no se muestra en una lista de finalización de palabras de IntelliSense.  
   
 ## <a name="initializing-an-auto-implemented-property"></a>Inicializar una propiedad implementada automáticamente  
  Cualquier expresión que se pueda usar para inicializar un campo es válida para inicializar una propiedad implementada automáticamente. Al inicializar una propiedad implementada automáticamente, la expresión se evalúa y se pasa al procedimiento `Set` para la propiedad. En los ejemplos de código siguientes se muestran algunas propiedades implementadas automáticamente que incluyen valores iniciales.  
@@ -78,17 +78,17 @@ End Class
   
  Si desea realizar una de las acciones siguientes, tiene que usar la sintaxis de definición de propiedades expandidas:  
   
--   Agregar código al procedimiento `Get` o `Set` de una propiedad, como código para validar los valores de entrada del procedimiento `Set`. Por ejemplo, puede que desee comprobar si una cadena que representa un número de teléfono contiene la cantidad de números necesaria antes de establecer el valor de propiedad.  
+- Agregar código al procedimiento `Get` o `Set` de una propiedad, como código para validar los valores de entrada del procedimiento `Set`. Por ejemplo, puede que desee comprobar si una cadena que representa un número de teléfono contiene la cantidad de números necesaria antes de establecer el valor de propiedad.  
   
--   Especificar distintos tipos de accesibilidad para los procedimientos `Get` y `Set`. Por ejemplo, puede que desee establecer el procedimiento `Set` como `Private` y el procedimiento `Get` como `Public`.  
+- Especificar distintos tipos de accesibilidad para los procedimientos `Get` y `Set`. Por ejemplo, puede que desee establecer el procedimiento `Set` como `Private` y el procedimiento `Get` como `Public`.  
   
--   Crear propiedades de tipo `WriteOnly`.  
+- Crear propiedades de tipo `WriteOnly`.  
   
--   Usar propiedades parametrizadas (incluidas las propiedades `Default`). Debe declarar una propiedad expandida para especificar un parámetro para la propiedad o para especificar parámetros adicionales para el procedimiento `Set`.  
+- Usar propiedades parametrizadas (incluidas las propiedades `Default`). Debe declarar una propiedad expandida para especificar un parámetro para la propiedad o para especificar parámetros adicionales para el procedimiento `Set`.  
   
--   Colocar un atributo en el campo de respaldo o cambiar el nivel de acceso del campo de respaldo.  
+- Colocar un atributo en el campo de respaldo o cambiar el nivel de acceso del campo de respaldo.  
   
--   Proporcionar comentarios XML para el campo de respaldo.  
+- Proporcionar comentarios XML para el campo de respaldo.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>Expandir una propiedad implementada automáticamente  
  Si tiene que convertir una propiedad implementada automáticamente en una propiedad expandida que contiene un procedimiento `Get` o `Set`, el Editor de código de Visual Basic puede generar automáticamente los procedimientos `Get` y `Set` y la instrucción `End Property` para la propiedad. El código se genera si se coloca el cursor en una línea en blanco que sigue el `Property` (instrucción), escriba un `G` (para `Get`) o un `S` (para `Set`) y presione ENTRAR. El Editor de código de Visual Basic genera automáticamente el procedimiento `Get` o `Set` para las propiedades de solo lectura y de solo escritura al presionar ENTRAR al final de una instrucción `Property`.  

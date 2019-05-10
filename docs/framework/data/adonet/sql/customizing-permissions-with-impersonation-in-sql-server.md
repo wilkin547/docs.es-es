@@ -2,12 +2,12 @@
 title: Personalizar permisos con suplantación en SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d44e410727924260640f0f50aea5ea41f264f3af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877909"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650342"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personalizar permisos con suplantación en SQL Server
 Muchas aplicaciones utilizan procedimientos almacenados para obtener acceso a los datos, sirviéndose del encadenamiento de propiedad para restringir el acceso a tablas base. Se pueden conceder permisos EXECUTE en procedimientos almacenados revocando o denegando permisos en las tablas base. SQL Server no comprueba los permisos del llamador si el procedimiento almacenado y las tablas tienen el mismo propietario. No obstante, el encadenamiento de propiedad no funciona si los objetos tienen distintos propietarios o en el caso de SQL dinámico.  
@@ -59,11 +59,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="specifying-the-execution-context"></a>Especificar el contexto de ejecución  
  Además de especificar un usuario, EXECUTE AS se puede utilizar también con cualquiera de las palabras clave siguientes.  
   
--   CALLER. La ejecución como CALLER es el valor predeterminado; si no se especifica otra opción, el procedimiento se ejecuta en el contexto de seguridad del llamador.  
+- CALLER. La ejecución como CALLER es el valor predeterminado; si no se especifica otra opción, el procedimiento se ejecuta en el contexto de seguridad del llamador.  
   
--   OWNER. La ejecución como OWNER ejecuta el procedimiento en el contexto del propietario del procedimiento. Si el procedimiento se crea en un esquema cuyo propietario es `dbo` o el propietario de la base de datos, el procedimiento se ejecutará con permisos restringidos.  
+- OWNER. La ejecución como OWNER ejecuta el procedimiento en el contexto del propietario del procedimiento. Si el procedimiento se crea en un esquema cuyo propietario es `dbo` o el propietario de la base de datos, el procedimiento se ejecutará con permisos restringidos.  
   
--   SELF. La ejecución como SELF se ejecuta en el contexto de seguridad del creador del procedimiento almacenado. Esto es equivalente a la ejecución como un usuario especificado, en la que el usuario especificado es la persona que crea o altera el procedimiento.  
+- SELF. La ejecución como SELF se ejecuta en el contexto de seguridad del creador del procedimiento almacenado. Esto es equivalente a la ejecución como un usuario especificado, en la que el usuario especificado es la persona que crea o altera el procedimiento.  
   
 ## <a name="see-also"></a>Vea también
 

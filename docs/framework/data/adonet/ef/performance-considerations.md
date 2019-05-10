@@ -2,12 +2,12 @@
 title: Consideraciones sobre el rendimiento (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cd12948d16eea66efb6ee4b427a2c979e0aab3d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879403"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641280"
 ---
 # <a name="performance-considerations-entity-framework"></a>Consideraciones sobre el rendimiento (Entity Framework)
 En este tema se describen las características de rendimiento de ADO.NET Entity Framework y se facilitan algunas consideraciones para ayudar a mejorar el rendimiento de las aplicaciones de Entity Framework.  
@@ -55,12 +55,12 @@ En este tema se describen las características de rendimiento de ADO.NET Entity 
 #### <a name="query-complexity"></a>Complejidad de la consulta  
  Las consultas que requieren un gran número de combinaciones en los comandos que se ejecutan en el origen de datos o que devuelven una gran cantidad de datos pueden afectar al rendimiento de las maneras siguientes:  
   
--   Las consultas realizadas en un modelo conceptual y que parecen sencillas pueden ocasionar la ejecución de consultas más complejas en el origen de datos. Esto se puede producir porque Entity Framework traduce una consulta en un modelo conceptual en una consulta equivalente en el origen de datos. Cuando un único conjunto de entidades en el modelo conceptual se asigna a varias tablas en el origen de datos, o cuando una relación entre entidades se asigna a una tabla de combinación, el comando de consulta ejecutado en la consulta del origen de datos puede requerir una o más combinaciones.  
+- Las consultas realizadas en un modelo conceptual y que parecen sencillas pueden ocasionar la ejecución de consultas más complejas en el origen de datos. Esto se puede producir porque Entity Framework traduce una consulta en un modelo conceptual en una consulta equivalente en el origen de datos. Cuando un único conjunto de entidades en el modelo conceptual se asigna a varias tablas en el origen de datos, o cuando una relación entre entidades se asigna a una tabla de combinación, el comando de consulta ejecutado en la consulta del origen de datos puede requerir una o más combinaciones.  
   
     > [!NOTE]
     >  Use el método <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> de las clases <xref:System.Data.Objects.ObjectQuery%601> o <xref:System.Data.EntityClient.EntityCommand> para ver los comandos que se ejecutan en el origen de datos para una consulta determinada. Para obtener más información, vea [Cómo: Ver los comandos Store](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896348(v=vs.100)).  
   
--   Las consultas de Entity SQL anidadas pueden crear combinaciones en el servidor y devolver un gran número de filas.  
+- Las consultas de Entity SQL anidadas pueden crear combinaciones en el servidor y devolver un gran número de filas.  
   
      El siguiente es un ejemplo de una consulta anidada en una cláusula de proyección:  
   
@@ -72,7 +72,7 @@ En este tema se describen las características de rendimiento de ADO.NET Entity 
   
      Además, provocan que la canalización de la consulta genere una consulta única con duplicación de objetos en las consultas anidadas. Debido a esto, una sola columna se puede duplicar varias veces. En algunas bases de datos, incluyendo SQL Server, esto puede ocasionar que la tabla TempDB crezca demasiado, lo que puede disminuir el rendimiento del servidor. Conviene tener cuidado al ejecutar consultas anidadas.  
   
--   Las consultas que devuelven una gran cantidad de datos pueden disminuir el rendimiento si el cliente está realizando operaciones que tienen un consumo de recursos proporcional al tamaño del conjunto de resultados. En casos como este, considere la posibilidad de limitar la cantidad de datos devuelta por la consulta. Para obtener más información, vea [Cómo: Resultados de la página a través de la consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)).  
+- Las consultas que devuelven una gran cantidad de datos pueden disminuir el rendimiento si el cliente está realizando operaciones que tienen un consumo de recursos proporcional al tamaño del conjunto de resultados. En casos como este, considere la posibilidad de limitar la cantidad de datos devuelta por la consulta. Para obtener más información, vea [Cómo: Resultados de la página a través de la consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)).  
   
  Los comandos generados automáticamente por Entity Framework pueden ser más complejos que los comandos similares escritos explícitamente por un desarrollador de bases de datos. Si necesita un control explícito sobre los comandos ejecutados en el origen de datos, considere la posibilidad de definir una asignación a una función con valores de tabla o a un procedimiento almacenado.  
   
@@ -114,9 +114,9 @@ En este tema se describen las características de rendimiento de ADO.NET Entity 
 ### <a name="distributed-transactions"></a>Transacciones distribuidas  
  Las operaciones de una transacción explícita que requieren recursos administrados por el coordinador de transacciones distribuidas (DTC) serán mucho más caras que las operaciones similares que no requieren DTC. La promoción a DTC se producirá en las situaciones siguientes:  
   
--   Una transacción explícita con una operación en una base de datos de SQL Server 2000 u otro origen de datos que siempre promueve transacciones explícitas a DTC.  
+- Una transacción explícita con una operación en una base de datos de SQL Server 2000 u otro origen de datos que siempre promueve transacciones explícitas a DTC.  
   
--   Una transacción explícita con una operación en SQL Server 2005 cuando [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] administra la conexión. Esto sucede porque SQL Server 2005 promueve a DTC cada vez que se cierra y se vuelve a abrir una conexión dentro de una transacción única, que es el comportamiento predeterminado de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Esta promoción a DTC no se produce si se usa SQL Server 2008. Para evitar esta promoción al usar SQL Server 2005, se debe abrir y cerrar explícitamente la conexión dentro de la transacción. Para obtener más información, consulte [administrar conexiones y transacciones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
+- Una transacción explícita con una operación en SQL Server 2005 cuando [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] administra la conexión. Esto sucede porque SQL Server 2005 promueve a DTC cada vez que se cierra y se vuelve a abrir una conexión dentro de una transacción única, que es el comportamiento predeterminado de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Esta promoción a DTC no se produce si se usa SQL Server 2008. Para evitar esta promoción al usar SQL Server 2005, se debe abrir y cerrar explícitamente la conexión dentro de la transacción. Para obtener más información, consulte [administrar conexiones y transacciones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
  Las transacciones explícitas se usan cuando se ejecutan una o varias operaciones dentro de una transacción <xref:System.Transactions>. Para obtener más información, consulte [administrar conexiones y transacciones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
@@ -147,11 +147,11 @@ En este tema se describen las características de rendimiento de ADO.NET Entity 
 ## <a name="performance-data"></a>Datos de rendimiento  
  Algunos datos de rendimiento para Entity Framework se publican en las entradas siguientes en el [blog del equipo de ADO.NET](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [Explorar el rendimiento de ADO.NET Entity Framework - parte 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [Explorar el rendimiento de ADO.NET Entity Framework - parte 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [Explorar el rendimiento de ADO.NET Entity Framework – parte 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [Explorar el rendimiento de ADO.NET Entity Framework – parte 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [Comparación de rendimiento de ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [Comparación de rendimiento de ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>Vea también
 

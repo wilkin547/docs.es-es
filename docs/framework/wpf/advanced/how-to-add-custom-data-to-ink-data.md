@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ink data [WPF], adding custom data
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
-ms.openlocfilehash: c524e30943a21426e2e5e8fe6ae009999924fead
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7c59a205df5358daec101339cc6a308c8e38a9d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777057"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640866"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>Procedimiento Agregar datos personalizados a datos de entrada de lápiz
 Puede agregar datos personalizados a la entrada de lápiz que se guardarán cuando se guarda la entrada de lápiz como formato serializado de tinta (ISF).  Puede guardar los datos personalizados a la <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, o el <xref:System.Windows.Ink.Stroke>.  Posibilidad de guardar los datos personalizados en los tres objetos le permite decidir el mejor lugar para guardar los datos.  Las tres clases usan métodos similares para almacenar y acceder a los datos personalizados.  

@@ -2,12 +2,12 @@
 title: Seguridad Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4960959dfe6f485a96d29a5da43c2b8c6c98fe3a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664160"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649603"
 ---
 # <a name="security-overview"></a>Información general sobre seguridad
 La protección de una aplicación es un proceso continuo. Es prácticamente imposible que se llegue a un momento en el que un programador pueda garantizar que una aplicación es invulnerable ante todo tipo de ataques, ya que no es posible predecir los tipos de ataques que surgirán en un futuro con las nuevas tecnologías. Al contrario, el hecho de que nadie haya detectado (o publicado) aún brechas de seguridad en un sistema, no quiere decir que éstas no existan o no puedan existir en un futuro. Por lo tanto, es necesario planificar la seguridad durante la fase de diseño del proyecto, así como la forma en que se mantendrá la seguridad durante el ciclo de vida de la aplicación.  

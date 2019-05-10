@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01f9784cc2263c282d75251556a1f000027ca2ae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868763"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639791"
 ---
 # <a name="security-transparent-code-level-1"></a>Código transparente en seguridad, nivel 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,11 +28,11 @@ ms.locfileid: "61868763"
   
  Este tema contiene las siguientes secciones:  
   
--   [El modelo de transparencia de nivel 1](#the_level_1_transparency_model)  
+- [El modelo de transparencia de nivel 1](#the_level_1_transparency_model)  
   
--   [Atributos de transparencia](#transparency_attributes)  
+- [Atributos de transparencia](#transparency_attributes)  
   
--   [Ejemplos de transparencia de seguridad](#security_transparency_examples)  
+- [Ejemplos de transparencia de seguridad](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>Modelo de transparencia de nivel 1  
@@ -40,11 +40,11 @@ ms.locfileid: "61868763"
   
  Puede marcar un ensamblado entero, algunas clases de un ensamblado o algunos métodos de una clase como transparentes en seguridad. El código transparente en seguridad no puede elevar privilegios. Esta restricción tiene tres consecuencias:  
   
--   El código transparente en seguridad no puede realizar acciones <xref:System.Security.Permissions.SecurityAction.Assert>.  
+- El código transparente en seguridad no puede realizar acciones <xref:System.Security.Permissions.SecurityAction.Assert>.  
   
--   Cualquier petición de vínculo que se vea satisfecha por código transparente en seguridad se convierte en una demanda completa.  
+- Cualquier petición de vínculo que se vea satisfecha por código transparente en seguridad se convierte en una demanda completa.  
   
--   Cualquier código no seguro (no comprobable) que deba ejecutarse en código transparente en seguridad hace una demanda completa para el permiso de seguridad <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>.  
+- Cualquier código no seguro (no comprobable) que deba ejecutarse en código transparente en seguridad hace una demanda completa para el permiso de seguridad <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>.  
   
  Estas reglas se aplican durante la ejecución mediante Common Language Runtime (CLR). El código transparente en seguridad pasa todos los requisitos de seguridad del código al que llama de vuelta a sus llamadores. Las demandas que fluyen a través del código transparente en seguridad no pueden elevar privilegios. Si una aplicación de nivel de confianza bajo llama a código transparente en seguridad y crea una demanda de privilegios altos, la demanda fluirá de vuelta al código de nivel de confianza bajo y producirá un error. El código transparente en seguridad no puede detener la demanda porque no puede realizar acciones Assert. El mismo código transparente en seguridad llamado desde código de plena confianza produce una demanda correcta.  
   

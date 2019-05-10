@@ -2,12 +2,12 @@
 title: Expresiones de C#
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: 2ffc380d9c65ec398084bfcbeadfe0fd2c3d6720
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 23c5ee0e0d1408f19e87615008ee95266176d27b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009817"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650952"
 ---
 # <a name="c-expressions"></a>Expresiones de C#
 A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], expresiones de C# se admiten en Windows Workflow Foundation (WF). Nuevos proyectos de flujo de trabajo de C# crean en Visual Studio 2012 que tienen como destino [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usar expresiones de C# y proyectos de flujo de trabajo de Visual Basic usan expresiones de Visual Basic. Los proyectos de flujo de trabajo existentes de [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] que usan expresiones de Visual Basic se pueden migrar a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] independientemente del lenguaje del proyecto y son compatibles. En este tema se proporciona información general sobre las expresiones de C# en [!INCLUDE[wf1](../../../includes/wf1-md.md)].

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 540271c414ac295c419533a4622657d60d123796
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863628"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665393"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Procedimiento Forzar un argumento para pasar por valor (Visual Basic)
 La declaración de procedimiento determina el mecanismo de paso. Si se declara un parámetro [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), espera que Visual Basic pasar el argumento correspondiente por referencia. Esto permite que el procedimiento cambiar el valor del elemento de programación subyacente del argumento en el código de llamada. Si desea proteger el elemento subyacente frente a estos cambios, puede invalidar el `ByRef` llame al mecanismo de paso en el procedimiento, incluya entre paréntesis el nombre del argumento. Los paréntesis son además de los paréntesis para delimitar la lista de argumentos en la llamada.  
@@ -28,9 +28,9 @@ La declaración de procedimiento determina el mecanismo de paso. Si se declara u
   
 ### <a name="to-force-an-argument-to-be-passed-by-value"></a>Para forzar un argumento para pasar por valor  
   
--   Si se declara el correspondiente parámetro `ByVal` en el procedimiento, es necesario realizar ningún paso adicional. Ya espera Visual Basic pasar el argumento por valor.  
+- Si se declara el correspondiente parámetro `ByVal` en el procedimiento, es necesario realizar ningún paso adicional. Ya espera Visual Basic pasar el argumento por valor.  
   
--   Si se declara el correspondiente parámetro `ByRef` en el procedimiento, incluya el argumento entre paréntesis en la llamada a procedimiento.  
+- Si se declara el correspondiente parámetro `ByRef` en el procedimiento, incluya el argumento entre paréntesis en la llamada a procedimiento.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se invalida un `ByRef` declaración de parámetro. En la llamada que obliga a `ByVal`, tenga en cuenta los dos niveles de paréntesis.  

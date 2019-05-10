@@ -5,57 +5,57 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e96515240cdbc1cb05c4d58aee6eb2500e0e313
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d9cc44b8a5d43a3fe0414ddeeb51f37e239480b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62027178"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647899"
 ---
 # <a name="xml-documents-and-data"></a>Documentos y datos XML
 .NET Framework proporciona un conjunto de clases completo e integrado que permiten crear, de forma sencilla, aplicaciones preparadas para XML. Las clases de los espacios de nombres siguientes admiten análisis y escritura XML, edición de datos XML en memoria, validación de datos y transformación XSLT.  
   
--   <xref:System.Xml>  
+- <xref:System.Xml>  
   
--   <xref:System.Xml.XPath>  
+- <xref:System.Xml.XPath>  
   
--   <xref:System.Xml.Xsl>  
+- <xref:System.Xml.Xsl>  
   
--   <xref:System.Xml.Schema>  
+- <xref:System.Xml.Schema>  
   
--   <xref:System.Xml.Linq>  
+- <xref:System.Xml.Linq>  
   
  Para obtener una lista completa, busque "System.Xml" en el [explorador de API de .NET](https://docs.microsoft.com/dotnet/api/?term=system.xml).  
   
  Las clases de estos espacios de nombres admiten las recomendaciones del World Wide Web Consortium (W3C). Por ejemplo:  
   
--   La clase <xref:System.Xml.XmlDocument?displayProperty=nameWithType> implementa las recomendaciones de la [parte principal del nivel 1 de Document Object Model (DOM)](https://www.w3.org/TR/REC-DOM-Level-1/) y de la [parte principal del nivel 2 de DOM](https://www.w3.org/TR/DOM-Level-2-Core/) del W3C.  
+- La clase <xref:System.Xml.XmlDocument?displayProperty=nameWithType> implementa las recomendaciones de la [parte principal del nivel 1 de Document Object Model (DOM)](https://www.w3.org/TR/REC-DOM-Level-1/) y de la [parte principal del nivel 2 de DOM](https://www.w3.org/TR/DOM-Level-2-Core/) del W3C.  
   
--   Las clases <xref:System.Xml.XmlReader?displayProperty=nameWithType> y <xref:System.Xml.XmlWriter?displayProperty=nameWithType> admiten las recomendaciones del W3C sobre [XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) y los [espacios de nombres de XML](https://www.w3.org/TR/REC-xml-names/).  
+- Las clases <xref:System.Xml.XmlReader?displayProperty=nameWithType> y <xref:System.Xml.XmlWriter?displayProperty=nameWithType> admiten las recomendaciones del W3C sobre [XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) y los [espacios de nombres de XML](https://www.w3.org/TR/REC-xml-names/).  
   
--   Los esquemas de la clase <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> admiten las recomendaciones del W3C sobre [Esquema XML, parte 1: estructuras](https://www.w3.org/TR/xmlschema-1/) y en [Esquema XML, parte 2: tipos de datos](https://www.w3.org/TR/xmlschema-2/).  
+- Los esquemas de la clase <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> admiten las recomendaciones del W3C sobre [Esquema XML, parte 1: estructuras](https://www.w3.org/TR/xmlschema-1/) y en [Esquema XML, parte 2: tipos de datos](https://www.w3.org/TR/xmlschema-2/).  
   
--   Las clases del espacio de nombres <xref:System.Xml.Xsl?displayProperty=nameWithType> admiten transformaciones XSLT compatibles con las recomendaciones del W3C sobre [XSLT versión 1.0](https://www.w3.org/TR/xslt).  
+- Las clases del espacio de nombres <xref:System.Xml.Xsl?displayProperty=nameWithType> admiten transformaciones XSLT compatibles con las recomendaciones del W3C sobre [XSLT versión 1.0](https://www.w3.org/TR/xslt).  
   
  Las clases XML de .NET Framework proporcionan estas ventajas:  
   
--   **Productividad.** Gracias a [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) y [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) resulta más sencillo programar con XML y proporciona una experiencia de consulta similar a SQL.  
+- **Productividad.** Gracias a [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) y [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) resulta más sencillo programar con XML y proporciona una experiencia de consulta similar a SQL.  
   
--   **Extensibilidad.** Las clases XML en .NET Framework se pueden extender mediante el uso de clases base abstractas y métodos virtuales. Por ejemplo, puede crear una clase derivada de la clase <xref:System.Xml.XmlUrlResolver> que almacene el flujo caché en el disco local.  
+- **Extensibilidad.** Las clases XML en .NET Framework se pueden extender mediante el uso de clases base abstractas y métodos virtuales. Por ejemplo, puede crear una clase derivada de la clase <xref:System.Xml.XmlUrlResolver> que almacene el flujo caché en el disco local.  
   
--   **Arquitectura conectable.** .NET Framework proporciona una arquitectura en la que los componentes se pueden usar unos con otros y se puede hacer streaming de los datos entre componentes. Por ejemplo, un almacén de datos, como un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>, se puede transformar con la clase <xref:System.Xml.Xsl.XslCompiledTransform> y, posteriormente, se pueden hacer streaming de los resultados a otro almacén o devolverse como flujo desde un servicio web.  
+- **Arquitectura conectable.** .NET Framework proporciona una arquitectura en la que los componentes se pueden usar unos con otros y se puede hacer streaming de los datos entre componentes. Por ejemplo, un almacén de datos, como un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>, se puede transformar con la clase <xref:System.Xml.Xsl.XslCompiledTransform> y, posteriormente, se pueden hacer streaming de los resultados a otro almacén o devolverse como flujo desde un servicio web.  
   
--   **Rendimiento.** Para obtener un mejor rendimiento de la aplicación, algunas de las clases XML de .NET Framework admiten un modelo basado en streaming con las características siguientes:  
+- **Rendimiento.** Para obtener un mejor rendimiento de la aplicación, algunas de las clases XML de .NET Framework admiten un modelo basado en streaming con las características siguientes:  
   
-    -   Almacenamiento en caché mínimo para el análisis de modelos de incorporación de cambios solo hacia delante (<xref:System.Xml.XmlReader>).  
+    - Almacenamiento en caché mínimo para el análisis de modelos de incorporación de cambios solo hacia delante (<xref:System.Xml.XmlReader>).  
   
-    -   Validación solo hacia delante con (<xref:System.Xml.XmlReader>).  
+    - Validación solo hacia delante con (<xref:System.Xml.XmlReader>).  
   
-    -   Navegación al estilo de cursores que reduce la creación de nodos a un único nodo virtual, a la vez que proporciona acceso aleatorio al documento (<xref:System.Xml.XPath.XPathNavigator>).  
+    - Navegación al estilo de cursores que reduce la creación de nodos a un único nodo virtual, a la vez que proporciona acceso aleatorio al documento (<xref:System.Xml.XPath.XPathNavigator>).  
   
      Para obtener un mejor rendimiento cuando se requiera un procesamiento XSLT, puede usar la clase <xref:System.Xml.XPath.XPathDocument>, que es un almacén optimizado de solo lectura para consultas XPath diseñadas para funcionar, de forma eficiente, con la clase <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
--   **Integración con ADO.NET.** Las clases XML y [ADO.NET](../../../../docs/framework/data/adonet/index.md) están estrechamente integradas para reunir datos relacionales y XML. La clase <xref:System.Data.DataSet> es una caché almacenada en memoria de datos devueltos desde una base de datos. La clase <xref:System.Data.DataSet> puede leer y escribir XML mediante las clases <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter>, con el fin de almacenar su estructura de esquema relacional interna como esquemas XML (XSD) y para deducir la estructura de esquema de un documento XML.  
+- **Integración con ADO.NET.** Las clases XML y [ADO.NET](../../../../docs/framework/data/adonet/index.md) están estrechamente integradas para reunir datos relacionales y XML. La clase <xref:System.Data.DataSet> es una caché almacenada en memoria de datos devueltos desde una base de datos. La clase <xref:System.Data.DataSet> puede leer y escribir XML mediante las clases <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter>, con el fin de almacenar su estructura de esquema relacional interna como esquemas XML (XSD) y para deducir la estructura de esquema de un documento XML.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Opciones de procesamiento XML](../../../../docs/standard/data/xml/xml-processing-options.md)  

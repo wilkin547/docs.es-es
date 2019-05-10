@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f1d77ac27def556d94fac12dbde2f36d5b139de
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61830367"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649758"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operadores aritméticos en Visual Basic
 Operadores aritméticos se usan para realizar muchas de las operaciones aritméticas habituales que implican el cálculo de valores numéricos representados por literales, variables, otras expresiones, función y las llamadas de propiedad y constantes. También se clasifican los operadores aritméticos son los operadores de desplazamiento de bits, que actúan en el nivel de los bits individuales de los operandos- and -shift sus patrones de bits hacia la izquierda o derecha.  
@@ -70,13 +70,13 @@ Operadores aritméticos se usan para realizar muchas de las operaciones aritmét
   
  Los desplazamientos aritméticos no son circulares, lo que significa que los bits desplazados fuera de un extremo del resultado no se vuelve a insertar en el otro extremo. Las posiciones de bits que quedan vacantes debidas a un cambio se establecen como sigue:  
   
--   0 para un desplazamiento aritmético a la izquierda  
+- 0 para un desplazamiento aritmético a la izquierda  
   
--   0 para un desplazamiento aritmético a la derecha de un número positivo  
+- 0 para un desplazamiento aritmético a la derecha de un número positivo  
   
--   0 para un desplazamiento aritmético a la derecha de un tipo de datos sin signo (`Byte`, `UShort`, `UInteger`, `ULong`)  
+- 0 para un desplazamiento aritmético a la derecha de un tipo de datos sin signo (`Byte`, `UShort`, `UInteger`, `ULong`)  
   
--   1 para un desplazamiento aritmético a la derecha de un número negativo (`SByte`, `Short`, `Integer`, o `Long`)  
+- 1 para un desplazamiento aritmético a la derecha de un número negativo (`SByte`, `Short`, `Integer`, o `Long`)  
   
  El siguiente ejemplo se desplaza una `Integer` valor left y right.  
   
