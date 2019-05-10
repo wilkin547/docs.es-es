@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 302eb1b88d4e43b4e2bd6395e27a3a6489320085
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9e2942e11ed10dffcfad8f0329295827b7f0d4d8
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640408"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452747"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Procedimiento para agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)
 Puede crear un nodo derivado en un formulario Windows Forms <xref:System.Windows.Forms.TreeView> control o un elemento derivado en un <xref:System.Windows.Forms.ListView> control. La derivación permite agregar cualquier campo que se necesite, así como métodos personalizados y constructores para controlarlos. Uno de los usos de esta característica consiste en adjuntar un objeto Customer a cada nodo de árbol o elemento de lista. Los ejemplos siguientes son para un <xref:System.Windows.Forms.TreeView> control, pero el mismo enfoque se puede usar para un <xref:System.Windows.Forms.ListView> control.  
@@ -86,8 +86,8 @@ Puede crear un nodo derivado en un formulario Windows Forms <xref:System.Windows
     // You should replace the bold text file   
     // in the sample below with a text file of your own choosing.  
     // Note the escape character used (@) when specifying the path.  
-    treeView1.Nodes.Add(new myTreeNode (System.Environment.GetFolderPath _  
-       (System.Environment.SpecialFolder.Personal) _  
+    treeView1.Nodes.Add(new myTreeNode(System.Environment.GetFolderPath
+       (System.Environment.SpecialFolder.Personal)
        + @"\TextFile.txt") );  
     ```  
   
@@ -100,7 +100,7 @@ Puede crear un nodo derivado en un formulario Windows Forms <xref:System.Windows
        "\\TextFile.txt")));  
     ```  
   
-2. Si se pasa el nodo de árbol y se escribe como un <xref:System.Windows.Forms.TreeNode> clase, a continuación, tendrá que convertirlo a la clase derivada. La conversión de tipos es una conversión explícita de un tipo de objeto a otro. Para obtener más información sobre la conversión, consulte [conversiones implícitas y explícitas](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [() operador](~/docs/csharp/language-reference/operators/invocation-operator.md) (Visual C#), o [operador de conversión: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) .  
+2. Si se pasa el nodo de árbol y se escribe como un <xref:System.Windows.Forms.TreeNode> clase, a continuación, tendrá que convertirlo a la clase derivada. La conversión de tipos es una conversión explícita de un tipo de objeto a otro. Para obtener más información sobre la conversión, consulte [conversiones implícitas y explícitas](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [conversiones de tipos](~/docs/csharp/programming-guide/types/casting-and-type-conversions.md) (Visual C#), o [operador de conversión: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) .  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  

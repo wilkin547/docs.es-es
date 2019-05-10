@@ -2,12 +2,12 @@
 title: Asignar relaciones especificadas para elementos anidados
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: 9772f077991c758be65bbb44b9474f1ad341371f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cd0fd66fe70be4b8dea14ac7420e95c4b8bb1158
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785390"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604019"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>Asignar relaciones especificadas para elementos anidados
 Un esquema puede incluir una **msdata: Relationship** anotación para especificar explícitamente la asignación entre dos elementos cualesquiera del esquema. Los dos elementos especificados en **msdata: Relationship** se pueden anidar en el esquema, pero no es necesario. El proceso de asignación utiliza **msdata: Relationship** en el esquema para generar la relación de clave principal/clave externa entre las dos columnas.  

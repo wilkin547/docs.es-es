@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a59e47e529a5002c806e37dba7267b2cf8318a35
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856640"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912710"
 ---
 # <a name="endpoint-addresses"></a>Direcciones de extremo
 Cada punto de conexión tiene una dirección asociada a él, que se utiliza para ubicar e identificar el punto de conexión. Esta dirección está compuesta principalmente de un Identificador uniforme de recursos (URI), que especifica la ubicación del punto de conexión. La dirección de punto de conexión se representa en el modelo de programación de Windows Communication Foundation (WCF) mediante el <xref:System.ServiceModel.EndpointAddress> (clase), que contiene un elemento opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propiedad que habilita la autenticación del punto de conexión por otros extremos que intercambiar mensajes con él y un conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propiedades, que definen cualquier otro encabezado SOAP requerido para alcanzar el servicio. Los encabezados opcionales proporcionan información de direccionamiento adicional y más detallada para identificar o interactuar con el punto de conexión de servicio. La dirección de un punto de conexión se representa en la conexión como una referencia de punto de conexión (EPR) WS-Addressing.  
@@ -19,13 +19,13 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
 ## <a name="uri-structure-of-an-address"></a>Estructura URI de una Dirección  
  El URI de la dirección de la mayoría de transportes tiene cuatro partes. Por ejemplo, las cuatro partes del URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` puede ser detallado como se indica a continuación:  
   
--   Esquema: `http:`
+- Esquema: `http:`
   
--   Equipo: `www.fabrikam.com`  
+- Equipo: `www.fabrikam.com`  
   
--   (opcional) Puerto: 322  
+- (opcional) Puerto: 322  
   
--   Ruta de acceso: /mathservice.svc/secureEndpoint  
+- Ruta de acceso: /mathservice.svc/secureEndpoint  
   
 ## <a name="defining-an-address-for-a-service"></a>Definición de una dirección para un Servicio  
  La dirección de extremo de un servicio puede especificarse de manera imperativa mediante código o de manera declarativa mediante configuración. Normalmente, no resulta muy práctico definir los puntos de conexión en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio. Generalmente, es más práctico definir extremos de servicio mediante la configuración en lugar del código. Mantener la información del enlace y el direccionamiento fuera del código permite cambiar los extremos sin tener que recompilar ni implementar la aplicación.  
@@ -46,9 +46,9 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
  El siguiente ejemplo muestra los componentes que se pueden encontrar en un enlace de IIS:  
   
--   El protocolo de enlace: HTTP  
+- El protocolo de enlace: HTTP  
   
--   Información de enlace: Dirección IP, puerto, encabezado de Host  
+- Información de enlace: Dirección IP, puerto, encabezado de Host  
   
  IIS puede especificar varios enlaces para cada sitio, que resulta en varias direcciones base para cada esquema. Anteriores a [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF no admitía varias direcciones para un esquema y, si se especificaron produjo una <xref:System.ArgumentException> durante la activación.  
   
@@ -100,15 +100,15 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
 ## <a name="extending-addressing-in-wcf-services"></a>Extensión del direccionamiento en servicios WCF  
  El valor predeterminado que se dirige el modelo de servicios WCF usa la dirección URI del extremo para los siguientes fines:  
   
--   Para especificar la dirección del agente de escuchas de servicio, la ubicación en la que el extremo realiza escuchas de mensajes,  
+- Para especificar la dirección del agente de escuchas de servicio, la ubicación en la que el extremo realiza escuchas de mensajes,  
   
--   Para especificar el filtro de dirección de SOAP, la dirección que espera un punto de conexión como un encabezado SOAP.  
+- Para especificar el filtro de dirección de SOAP, la dirección que espera un punto de conexión como un encabezado SOAP.  
   
  Se pueden especificar los valores de cada uno de estos propósitos por separado, permitiendo varias extensiones de direccionamiento que cubren escenarios útiles:  
   
--   Intermediarios SOAP: un mensaje enviado por un cliente atraviesa uno o más servicios adicionales que procesan el mensaje antes de que alcance su destino final. Los intermediarios SOAP pueden realizar varias tareas, como almacenar en memoria caché, enrutar, equilibrar la carga o validar el esquema en los mensajes. Para lograr este escenario, los mensajes se envían a una dirección física independiente (`via`) que hace referencia al intermediario en lugar de simplemente a una dirección lógica (`wsa:To`) que hace referencia al destino final.  
+- Intermediarios SOAP: un mensaje enviado por un cliente atraviesa uno o más servicios adicionales que procesan el mensaje antes de que alcance su destino final. Los intermediarios SOAP pueden realizar varias tareas, como almacenar en memoria caché, enrutar, equilibrar la carga o validar el esquema en los mensajes. Para lograr este escenario, los mensajes se envían a una dirección física independiente (`via`) que hace referencia al intermediario en lugar de simplemente a una dirección lógica (`wsa:To`) que hace referencia al destino final.  
   
--   La dirección que realiza escuchas del extremo es un URI privado y está establecida en un valor diferente del de su propiedad `listenURI`.  
+- La dirección que realiza escuchas del extremo es un URI privado y está establecida en un valor diferente del de su propiedad `listenURI`.  
   
  La dirección de transporte especificada por `via` es la ubicación a la que se debería enviar inicialmente un mensaje de camino a alguna otra dirección remota especificada por el parámetro `to` donde se encuentra el servicio. En la mayoría de los escenarios de Internet, el URI `via` es igual que la propiedad <xref:System.ServiceModel.EndpointAddress.Uri%2A> de la dirección final `to` del servicio. Estas dos direcciones solo se pueden distinguir cuando es necesario el enrutamiento manual.  
   
@@ -117,9 +117,9 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
  Puede definir encabezados de dirección personalizados de dos maneras: mediante código o mediante configuración:  
   
--   Mediante código, los encabezados de dirección personalizados se crean usando la clase <xref:System.ServiceModel.Channels.AddressHeader> y, a continuación, se utilizan en la construcción de una clase <xref:System.ServiceModel.EndpointAddress>.  
+- Mediante código, los encabezados de dirección personalizados se crean usando la clase <xref:System.ServiceModel.Channels.AddressHeader> y, a continuación, se utilizan en la construcción de una clase <xref:System.ServiceModel.EndpointAddress>.  
   
--   En configuración, personalizado [ \<encabezados >](../../configure-apps/file-schema/wcf/headers.md) se especifican como elementos secundarios de la [ \<punto de conexión >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elemento.  
+- En configuración, personalizado [ \<encabezados >](../../configure-apps/file-schema/wcf/headers.md) se especifican como elementos secundarios de la [ \<punto de conexión >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elemento.  
   
  Generalmente, la configuración es preferible al código, puesto que permite cambiar los encabezados después de la implementación.  
   
@@ -128,9 +128,9 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
  Puede especificar una dirección de escuchas personalizada mediante código o configuración:  
   
--   Mediante código, especifique una dirección de escuchas personalizada agregando una clase <xref:System.ServiceModel.Description.ClientViaBehavior> a la colección de comportamientos del extremo.  
+- Mediante código, especifique una dirección de escuchas personalizada agregando una clase <xref:System.ServiceModel.Description.ClientViaBehavior> a la colección de comportamientos del extremo.  
   
--   En configuración, especifique una dirección de escuchas personalizada con el `ListenUri` atributo del servicio [ \<punto de conexión >](../../configure-apps/file-schema/wcf/endpoint-element.md) elemento.  
+- En configuración, especifique una dirección de escuchas personalizada con el `ListenUri` atributo del servicio [ \<punto de conexión >](../../configure-apps/file-schema/wcf/endpoint-element.md) elemento.  
   
 ### <a name="custom-soap-address-filter"></a>Filtro de direcciones SOAP personalizado  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> se utiliza junto con cualquier propiedad <xref:System.ServiceModel.EndpointAddress.Headers%2A> para definir el filtro de direcciones SOAP de un extremo (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). De forma predeterminada, este filtro comprueba que un mensaje entrante tenga un encabezado de mensaje `To` que coincida con el URI del punto de conexión y que todos los encabezados de punto de conexión necesarios se encuentren en el mensaje.  

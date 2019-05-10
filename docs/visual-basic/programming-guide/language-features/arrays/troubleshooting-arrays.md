@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69d5294eacc59718adb1b0a226594d2cf69273f5
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908133"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913466"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Solucionar problemas de matrices (Visual Basic)
 Esta página enumera algunos problemas comunes que pueden producirse al trabajar con matrices.  
@@ -22,7 +22,7 @@ Esta página enumera algunos problemas comunes que pueden producirse al trabajar
 ## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Errores de compilación declarar e inicializar una matriz  
  Pueden surgir errores de compilación de falta de comprensión de las reglas para declarar, crear e inicializar matrices. Las causas más comunes de errores son los siguientes:  
   
--   Proporcionar un [nuevo operador](../../../../visual-basic/language-reference/operators/new-operator.md) cláusula después de especificar longitudes de dimensión en la declaración de variable de matriz. Las líneas de código siguiente muestran declaraciones no válidas de este tipo.  
+- Proporcionar un [nuevo operador](../../../../visual-basic/language-reference/operators/new-operator.md) cláusula después de especificar longitudes de dimensión en la declaración de variable de matriz. Las líneas de código siguiente muestran declaraciones no válidas de este tipo.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ Esta página enumera algunos problemas comunes que pueden producirse al trabajar
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   Especificar longitudes de dimensión durante más de la matriz de nivel superior de una matriz escalonada. La línea de código siguiente muestra una declaración no válida de este tipo.  
+- Especificar longitudes de dimensión durante más de la matriz de nivel superior de una matriz escalonada. La línea de código siguiente muestra una declaración no válida de este tipo.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   Si se omite el `New` palabra clave al especificar los valores de elemento. La línea de código siguiente muestra una declaración no válida de este tipo.  
+- Si se omite el `New` palabra clave al especificar los valores de elemento. La línea de código siguiente muestra una declaración no válida de este tipo.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   Proporcionar un `New` cláusula sin llaves (`{}`). Las líneas de código siguiente muestran declaraciones no válidas de este tipo.  
+- Proporcionar un `New` cláusula sin llaves (`{}`). Las líneas de código siguiente muestran declaraciones no válidas de este tipo.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   

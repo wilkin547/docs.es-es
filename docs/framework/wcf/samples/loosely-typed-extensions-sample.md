@@ -2,12 +2,12 @@
 title: Ejemplo de extensiones débilmente tipadas
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 2f80c3379ba9d7e0649a36c5dd1bd552c1da68c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d92f45382361c61fe9e7ac85ff5d604a2c87b27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006582"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592216"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Ejemplo de extensiones débilmente tipadas
 El modelo de objetos de sindicación proporciona compatibilidad enriquecida para trabajar con datos de extensión (información que está presente en una representación XML de una fuente de sindicación pero no explícitamente expuesta por clases como <xref:System.ServiceModel.Syndication.SyndicationFeed> y <xref:System.ServiceModel.Syndication.SyndicationItem>. Este ejemplo muestra las técnicas básicas para trabajar con datos de extensión.  
@@ -54,15 +54,15 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
  Este documento contiene las siguientes partes de datos de extensión:  
   
--   Atributo `myAttribute` del elemento `<feed>`.  
+- Atributo `myAttribute` del elemento `<feed>`.  
   
--   `<simpleString>` elemento.  
+- `<simpleString>` elemento.  
   
--   `<DataContractExtension>` elemento.  
+- `<DataContractExtension>` elemento.  
   
--   `<XmlSerializerExtension>` elemento.  
+- `<XmlSerializerExtension>` elemento.  
   
--   `<xElementExtension>` elemento.  
+- `<xElementExtension>` elemento.  
   
 ## <a name="writing-extension-data"></a>Cómo escribir datos de extensión  
  Las extensiones de atributo se crean agregando entradas a la colección <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> tal y como se muestra en el código de ejemplo siguiente.  

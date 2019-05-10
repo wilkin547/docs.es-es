@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: ecfd2c3a31b42b380c593aef0bbc23775874cc7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d9f349bf4e7e2a2a698dc988e5c366291169200
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878207"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211461"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Rellenar un conjunto de datos desde un objeto DataAdapter
-[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] de <xref:System.Data.DataSet> es una representación residente en memoria de datos que proporciona un modelo de programación relacional coherente e independiente del origen de datos. `DataSet` representa un conjunto completo de datos que incluye tablas, restricciones y relaciones entre las tablas. Dado que `DataSet` es independiente del origen de datos, `DataSet` puede incluir datos locales de la aplicación y datos de otros muchos orígenes. La interacción con los orígenes de datos existentes se controla mediante el `DataAdapter`.  
+El [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> es una representación residente en memoria de datos que proporciona un modelo de programación relacional coherente e independiente del origen de datos. `DataSet` representa un conjunto completo de datos que incluye tablas, restricciones y relaciones entre las tablas. Dado que `DataSet` es independiente del origen de datos, `DataSet` puede incluir datos locales de la aplicación y datos de otros muchos orígenes. La interacción con los orígenes de datos existentes se controla mediante el `DataAdapter`.  
   
  La propiedad `SelectCommand` de `DataAdapter` es un objeto `Command` que recupera datos del origen de datos. Las propiedades `InsertCommand`, `UpdateCommand`y `DeleteCommand` de `DataAdapter` son objetos `Command` que permiten administrar las actualizaciones de los datos en el origen de datos para reflejar las modificaciones efectuadas en los datos de `DataSet`. Estas propiedades se describen con más detalle en [actualizar orígenes de datos con objetos DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   

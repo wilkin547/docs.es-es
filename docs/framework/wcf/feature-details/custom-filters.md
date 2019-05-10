@@ -2,12 +2,12 @@
 title: Filtros personalizados
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
-ms.openlocfilehash: 4140a944ed195e1defc1a0677d8e26ff4ff85beb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ef94d95737fb743af56f411bcc0f39ceea679a0
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857225"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912680"
 ---
 # <a name="custom-filters"></a>Filtros personalizados
 Los filtros personalizados le permiten definir una lógica coincidente que no se puede lograr mediante los filtros de mensajes proporcionados por el sistema. Por ejemplo, puede crear un filtro personalizado que aplique un algoritmo hash a un elemento de mensaje determinado y, a continuación, examine el valor para determinar si el filtro debería indicar verdadero o falso.  
@@ -46,11 +46,11 @@ public class MyMessageFilter: MessageFilter
   
  En general, debería evitar lo siguiente al implementar un filtro personalizado:  
   
--   La E/S, por ejemplo, guardar los datos en disco o en una base de datos.  
+- La E/S, por ejemplo, guardar los datos en disco o en una base de datos.  
   
--   El procesamiento innecesario, como recorrer varios registros en un documento.  
+- El procesamiento innecesario, como recorrer varios registros en un documento.  
   
--   Las operaciones de bloqueo, por ejemplo, las llamadas que implican obtener un bloqueo en recursos compartidos o realizar búsquedas con una base de datos.  
+- Las operaciones de bloqueo, por ejemplo, las llamadas que implican obtener un bloqueo en recursos compartidos o realizar búsquedas con una base de datos.  
   
  Antes de utilizar un filtro personalizado en un entorno de producción, debería ejecutar pruebas de rendimiento para determinar el promedio de tiempo que el filtro tarda en evaluar un mensaje. Cuando se combina con el tiempo de proceso medio de los demás filtros que se usan en la tabla de filtro, esto le permitirá determinar con precisión el valor de tiempo de espera máximo que la aplicación cliente debería especificar.  
   
