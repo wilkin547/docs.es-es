@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: fb2a7c8e1cf3fbae4c6417dab492343ead991204
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 99ad0db9f0adc54d57c5e9a7ed9a5aef3f0a3131
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793456"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652254"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Enlazar datos a controles (Servicios de datos de WCF)
 Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede enlazar controles como `ComboBox` y `ListView` a una instancia de la clase <xref:System.Data.Services.Client.DataServiceCollection%601>. Esta colección, que hereda de la clase <xref:System.Collections.ObjectModel.ObservableCollection%601>, contiene los datos de una fuente [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Esta clase representa una colección de datos dinámicos que proporciona notificaciones si se agregan o se quitan elementos. Cuando se usa una instancia de <xref:System.Data.Services.Client.DataServiceCollection%601> para enlace de datos, el [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotecas de cliente controlan estos eventos para asegurarse de que los objetos supervisados por el <xref:System.Data.Services.Client.DataServiceContext> sigan estando sincronizados con los datos en el elemento de interfaz de usuario enlazada.  

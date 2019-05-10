@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a53a30d1da7dbc7e279a416db5709a256ee9272e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903908"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648692"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Procedimiento para eliminar filas de la base de datos
 Puede eliminar filas en una base de datos mediante la eliminación de la correspondiente [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objetos de su colección relacionada con la tabla. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Convierte los cambios en el código SQL apropiado `DELETE` comandos.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite ni reconoce las operaciones de eliminación en cascada. Si desea eliminar una fila de una tabla que tiene restricciones, deberá realizar una de las siguientes tareas:  
   
--   Establezca la regla `ON DELETE CASCADE` en la restricción de clave externa de la base de datos.  
+- Establezca la regla `ON DELETE CASCADE` en la restricción de clave externa de la base de datos.  
   
--   Utilice su propio código para eliminar primero los objetos secundarios que impiden que se elimine el objeto primario.  
+- Utilice su propio código para eliminar primero los objetos secundarios que impiden que se elimine el objeto primario.  
   
  De lo contrario, se inicia una excepción. Vea el segundo ejemplo de código que se muestra más adelante en este tema.  
   

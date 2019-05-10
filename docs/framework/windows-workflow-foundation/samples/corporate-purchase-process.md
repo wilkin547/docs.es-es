@@ -2,12 +2,12 @@
 title: Proceso de compra corporativa
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005399"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665936"
 ---
 # <a name="corporate-purchase-process"></a>Proceso de compra corporativa
 En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básicas en función del proceso de compra con selección automática de la mejor propuesta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> y una actividad personalizada <xref:System.Activities.Statements.ForEach%601> para crear un flujo de trabajo que representa el proceso.
@@ -16,27 +16,27 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 
 ## <a name="requirements"></a>Requisitos
 
--   Visual Studio 2012.
+- Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
 ## <a name="demonstrates"></a>Demostraciones
 
--   Actividades personalizadas
+- Actividades personalizadas
 
--   Composición de actividades.
+- Composición de actividades.
 
--   Marcadores
+- Marcadores
 
--   Persistencia
+- Persistencia
 
--   Persistencia esquematizada
+- Persistencia esquematizada
 
--   Traza
+- Traza
 
--   Seguimiento
+- Seguimiento
 
--   Hospedaje de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en clientes diferentes (aplicaciones web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y aplicaciones WinForms).
+- Hospedaje de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en clientes diferentes (aplicaciones web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y aplicaciones WinForms).
 
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
@@ -52,21 +52,21 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
   
 1. Un empleado de la compañía X crea una solicitud de propuestas (RFP).  
   
-    1.  El empleado escribe el título de la solicitud de propuestas y una descripción.  
+    1. El empleado escribe el título de la solicitud de propuestas y una descripción.  
   
-    2.  El empleado selecciona los proveedores que desea invitar a que envíen sus propuestas.  
+    2. El empleado selecciona los proveedores que desea invitar a que envíen sus propuestas.  
   
 2. El empleado envía la propuesta.  
   
-    1.  Se crea una instancia del flujo de trabajo.  
+    1. Se crea una instancia del flujo de trabajo.  
   
-    2.  El flujo de trabajo espera a que todos los proveedores envíen sus propuestas.  
+    2. El flujo de trabajo espera a que todos los proveedores envíen sus propuestas.  
   
 3. Una vez recibidas todas las propuestas, el flujo de trabajo recorre en iteración todas las propuestas recibidas y selecciona la mejor.  
   
-    1.  Cada proveedor tiene una reputación (en este ejemplo la lista de reputaciones se almacena en VendorRepository.cs).  
+    1. Cada proveedor tiene una reputación (en este ejemplo la lista de reputaciones se almacena en VendorRepository.cs).  
   
-    2.  El valor total de la propuesta se determina por (El valor escrito por el proveedor) * (La reputación grabada del proveedor) / 100.  
+    2. El valor total de la propuesta se determina por (El valor escrito por el proveedor) * (La reputación grabada del proveedor) / 100.  
   
 4. El solicitante original puede ver todas las propuestas enviadas. La mejor propuesta se presenta en una sección especial del informe.  
   
@@ -155,20 +155,20 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
   
 ### <a name="web-client-options"></a>Opciones del cliente web  
   
--   **Crear un nuevo RFP**: Crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo de proceso de compra.  
+- **Crear un nuevo RFP**: Crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo de proceso de compra.  
   
--   **Actualizar**: Actualiza la lista de activas y finalizadas en la ventana principal.  
+- **Actualizar**: Actualiza la lista de activas y finalizadas en la ventana principal.  
   
--   **Vista**: Muestra el contenido de una solicitud de propuestas existente. Los proveedores pueden enviar sus propuestas (si están invitados o la solicitud de propuestas no finaliza).  
+- **Vista**: Muestra el contenido de una solicitud de propuestas existente. Los proveedores pueden enviar sus propuestas (si están invitados o la solicitud de propuestas no finaliza).  
   
--   Ver como: El usuario puede tener acceso a la solicitud de propuestas utilizando diferentes identidades seleccionando el participante deseado en el **ver como** cuadro combinado en la cuadrícula de la solicitud de propuestas activa.  
+- Ver como: El usuario puede tener acceso a la solicitud de propuestas utilizando diferentes identidades seleccionando el participante deseado en el **ver como** cuadro combinado en la cuadrícula de la solicitud de propuestas activa.  
   
 ### <a name="winforms-client-options"></a>Opciones del cliente de WinForms  
   
--   **Crear RFP**: Crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo de proceso de compra.  
+- **Crear RFP**: Crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo de proceso de compra.  
   
--   **Actualizar**: Actualiza la lista de activas y finalizadas en la ventana principal.  
+- **Actualizar**: Actualiza la lista de activas y finalizadas en la ventana principal.  
   
--   **Ver RFP**: Muestra el contenido de una solicitud de propuestas existente. Los proveedores pueden enviar sus propuestas (si están invitados o la solicitud de propuestas no finaliza).  
+- **Ver RFP**: Muestra el contenido de una solicitud de propuestas existente. Los proveedores pueden enviar sus propuestas (si están invitados o la solicitud de propuestas no finaliza).  
   
--   **Conectar como**: El usuario puede tener acceso a la solicitud de propuestas utilizando diferentes identidades seleccionando el participante deseado en el **ver como** cuadro combinado en la cuadrícula de la solicitud de propuestas activa.
+- **Conectar como**: El usuario puede tener acceso a la solicitud de propuestas utilizando diferentes identidades seleccionando el participante deseado en el **ver como** cuadro combinado en la cuadrícula de la solicitud de propuestas activa.

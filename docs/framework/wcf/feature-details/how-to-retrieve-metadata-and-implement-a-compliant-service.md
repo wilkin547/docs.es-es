@@ -2,12 +2,12 @@
 title: Procedimiento para recuperar metadatos e implementar un servicio conforme
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: edf8fe2f174202d19b075ec218f059ea9b988843
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 18711c5d6b4c504b6b4334a7198ff7543c711622
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000797"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643607"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Procedimiento para recuperar metadatos e implementar un servicio conforme
 A menudo, no es el mismo rol quien diseña e implementa los servicios. En entornos donde las aplicaciones que interoperan son importantes, los contratos pueden diseñarse o describirse en lenguaje de descripción de servicios Web (WSDL), y un desarrollador deberá implementar un servicio compatible con el contrato proporcionado. También puede migrar un servicio existente a Windows Communication Foundation (WCF), pero conservar el formato. Además, los contratos dúplex exigen a los autores de llamadas que también implementen un contrato de devolución de llamada.  

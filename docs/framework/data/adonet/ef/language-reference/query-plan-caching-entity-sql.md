@@ -2,12 +2,12 @@
 title: Almacenamiento en caché del plan de consulta [Entity SQL]
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9b809962e11ee74a99f736769b47bf3052af5e8a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613669"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641464"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Almacenamiento en caché del plan de consulta [Entity SQL]
 Siempre que se intenta ejecutar una consulta, la canalización de la consulta examina la memoria caché del plan de consulta para comprobar si la citada consulta ya está compilada y disponible. En ese caso, vuelve a utilizar el plan almacenado en caché en lugar de compilar uno nuevo. Si no se encuentra ninguna coincidencia en la memoria caché del plan de consulta, la consulta se compila y se almacena en memoria caché. Las consultas se identifican mediante su colección de parámetros (nombres y tipos) y texto de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Todas las comparaciones de texto distinguen mayúsculas de minúsculas.  

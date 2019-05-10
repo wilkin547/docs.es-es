@@ -2,12 +2,12 @@
 title: Conceptos y terminología (transformación funcional) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: c6308185b39651095482dca434ce25d717bd5e6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1a2dd2fe835ada29fdb6639905673b4e0b60aca6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663484"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642026"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Conceptos y terminología (transformación funcional) (Visual Basic)
 Este tema presenta los conceptos y la terminología en relación con las transformaciones funcionales. La aproximación que utiliza la transformación funcional para transformar datos permite obtener un código que normalmente se escribe más rápido, es más expresivo y fácil de mantener y depurar, si lo comparamos con la programación imperativa, que es más tradicional.  

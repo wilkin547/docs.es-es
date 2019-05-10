@@ -10,12 +10,12 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a9d8c02a05723814d074ff91c847471287588618
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746633"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642972"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Procedimiento para controlar el punto de inserción en un control TextBox de formularios Windows Forms
 Cuando un formulario Windows Forms <xref:System.Windows.Forms.TextBox> control recibe el foco por primera vez, es el punto de inserción predeterminado del cuadro de texto a la izquierda del texto existente. El usuario puede mover el punto de inserción con el teclado o el mouse. Si el cuadro de texto pierde y, a continuación, vuelva a obtener el foco, el punto de inserción será siempre que el usuario dejó.  

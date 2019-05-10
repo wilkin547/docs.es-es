@@ -6,31 +6,31 @@ helpviewer_keywords:
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-ms.openlocfilehash: e713903e2cfbb63cb64ceb94621317f9e76dea70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26511c577bf06b016dfc69cedc7fce2bafb35f32
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921724"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645378"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Procedimiento Pintar un área con un pincel del sistema
 El <xref:System.Windows.SystemColors> clase proporciona acceso a los pinceles del sistema y los colores, como <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, y <xref:System.Windows.SystemColors.DesktopBrush%2A>. Un pincel del sistema es un <xref:System.Windows.Media.SolidColorBrush> objeto que pinta un área con el color del sistema especificado. Un pincel del sistema siempre produce un relleno sólido; no puede usarse para crear un degradado.  
   
  Puede utilizar los pinceles del sistema como un recurso estático o dinámico. Utilice un recurso dinámico si desea que el pincel se actualice automáticamente si el usuario cambia el pincel del sistema mientras se ejecuta la aplicación; de lo contrario, utilice un recurso estático. La clase SystemColors contiene varias propiedades estáticas que siguen una convención de nomenclatura estricta:  
   
--   *\<SystemColor>* Brush  
+- *\<SystemColor>* Brush  
   
      Obtiene una referencia estática a un <xref:System.Windows.Media.SolidColorBrush> del color del sistema especificado.  
   
--   *\<SystemColor>* BrushKey  
+- *\<SystemColor>* BrushKey  
   
      Obtiene una referencia dinámica a un <xref:System.Windows.Media.SolidColorBrush> del color del sistema especificado.  
   
--   *\<SystemColor>* Color  
+- *\<SystemColor>* Color  
   
      Obtiene una referencia estática a una <xref:System.Windows.Media.Color> estructura de color del sistema especificado.  
   
--   *\<SystemColor>* ColorKey  
+- *\<SystemColor>* ColorKey  
   
      Obtiene una referencia dinámica a la <xref:System.Windows.Media.Color> estructura de color del sistema especificado.  
   

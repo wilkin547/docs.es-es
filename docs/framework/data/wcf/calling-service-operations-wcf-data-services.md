@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: aaee236487fedcb0c5d8ad113391bd628b11bb41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c2f57b8ad4f657ab4e556dbda894b95bc41cb542
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793458"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652214"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Operaciones de servicio de llamada (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define las operaciones de servicio para un servicio de datos. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite definir tales operaciones como métodos en el servicio de datos. Las operaciones de servicio se direccionan como los demás recursos del servicio de datos, mediante los URI. Una operación de servicio puede devolver colecciones de tipos de entidad, instancias de tipo de entidad único y tipos primitivos, como entero y cadena. Una operación de servicio también puede devolver `null` (`Nothing` en Visual Basic). La biblioteca cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] se puede usar para tener acceso a operaciones de servicio que admiten solicitudes HTTP GET. Estas clases de operaciones de servicio se definen como métodos a los que se ha aplicado <xref:System.ServiceModel.Web.WebGetAttribute>. Para obtener más información, consulte [las operaciones de servicio](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  

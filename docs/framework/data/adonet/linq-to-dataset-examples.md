@@ -2,12 +2,12 @@
 title: Ejemplos de LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 07ad4a993187c91babb74fae9d05f17b66c2098b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 484b4fcf39ef70fd0ec23c86b320d7f57f4f3eb5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033948"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645933"
 ---
 # <a name="linq-to-dataset-examples"></a>Ejemplos de LINQ to DataSet
 Esta sección proporciona a los ejemplos de programación de conjunto de datos que usan los operadores de consulta estándar LINQ. El <xref:System.Data.DataSet> usado en estos ejemplos se rellena usando el `FillDataSet` método, que se especifica en [cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obtener más información, consulte [Standard Query Operators Overview (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) o [Standard Query Operators Overview (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  

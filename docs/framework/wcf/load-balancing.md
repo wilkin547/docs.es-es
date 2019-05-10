@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3b24ef892e1fe3dd28fee4ce8fa44f7373c7c01
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921958"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645470"
 ---
 # <a name="load-balancing"></a>Equilibrio de carga
 Una manera de aumentar la capacidad de las aplicaciones de Windows Communication Foundation (WCF) es escalarlas implementándolas en una granja de servidores con equilibrio de carga. Aplicaciones WCF pueden ser el equilibrio de carga mediante técnicas, incluidos los equilibradores de carga de software como Windows Network Load Balancing de equilibrio de carga estándar, así como dispositivos de equilibrio de carga basado en hardware.  
@@ -82,9 +82,9 @@ Una manera de aumentar la capacidad de las aplicaciones de Windows Communication
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>Equilibrio de carga con los enlaces WSHttp y WSDualHttp  
  <xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.WSDualHttpBinding> pueden tener la carga equilibrada gracias a las técnicas de equilibrio de carga de HTTP siempre que se hagan algunas modificaciones a la configuración de enlace predeterminada.  
   
--   Desactive el establecimiento del contexto de seguridad: puede lograrse definiendo la propiedad <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> de <xref:System.ServiceModel.WSHttpBinding> en `false`. Como alternativa, si son necesarias las sesiones de seguridad, es posible usar las sesiones de seguridad con estado, como se describe en el [sesiones seguras](../../../docs/framework/wcf/feature-details/secure-sessions.md) tema. Las sesiones de seguridad con estado permiten al servicio seguir estando sin estado ya que se transmitirá todo el estado para la sesión de seguridad con cada solicitud como parte del token de seguridad de protección. Tenga en cuenta que para habilitar una sesión de seguridad con estado, es necesario utilizar <xref:System.ServiceModel.Channels.CustomBinding> o <xref:System.ServiceModel.Channels.Binding> definido por el usuario ya que no se exponen los valores de configuración necesarios en <xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.WSDualHttpBinding> que son proporcionados por el sistema.  
+- Desactive el establecimiento del contexto de seguridad: puede lograrse definiendo la propiedad <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> de <xref:System.ServiceModel.WSHttpBinding> en `false`. Como alternativa, si son necesarias las sesiones de seguridad, es posible usar las sesiones de seguridad con estado, como se describe en el [sesiones seguras](../../../docs/framework/wcf/feature-details/secure-sessions.md) tema. Las sesiones de seguridad con estado permiten al servicio seguir estando sin estado ya que se transmitirá todo el estado para la sesión de seguridad con cada solicitud como parte del token de seguridad de protección. Tenga en cuenta que para habilitar una sesión de seguridad con estado, es necesario utilizar <xref:System.ServiceModel.Channels.CustomBinding> o <xref:System.ServiceModel.Channels.Binding> definido por el usuario ya que no se exponen los valores de configuración necesarios en <xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.WSDualHttpBinding> que son proporcionados por el sistema.  
   
--   No utilice las sesiones confiables. Esta característica está desactivada de forma predeterminada.  
+- No utilice las sesiones confiables. Esta característica está desactivada de forma predeterminada.  
   
 ## <a name="load-balancing-the-nettcp-binding"></a>Equilibrio de carga del enlace Net.TCP  
  Puede equilibrarse la carga de <xref:System.ServiceModel.NetTcpBinding> mediante técnicas de equilibrio de carga de nivel IP. Sin embargo, <xref:System.ServiceModel.NetTcpBinding> agrupa de forma predeterminada las conexiones TCP para reducir la latencia de conexión. Ésta es una optimización que interfiere con el mecanismo básico del equilibrio de carga. El valor de configuración principal para optimizar <xref:System.ServiceModel.NetTcpBinding> es el tiempo de espera de la concesión, que forma parte de la configuración del grupo de conexiones. La agrupación de conexiones produce conexiones de cliente que se asociarán a servidores concretos dentro de la granja. Como la duración de esas conexiones aumenta (un factor controlado por el valor de tiempo de espera de la concesión), la distribución de carga en varios servidores de la granja pasa a estar sin equilibrar. Como resultado, aumentará el tiempo medio de la llamada. Así, al utilizar <xref:System.ServiceModel.NetTcpBinding> en escenarios con carga equilibrada, considere reducir el tiempo de espera de concesión predeterminado utilizado por el enlace. Un tiempo de espera de concesión de 30 segundos es un punto de inicio razonable para los escenarios con carga equilibrada, aunque el valor óptimo depende de la aplicación. Para obtener más información sobre el tiempo de espera de concesión de canal y otras cuotas de transporte, vea [las cuotas de transporte](../../../docs/framework/wcf/feature-details/transport-quotas.md).  
