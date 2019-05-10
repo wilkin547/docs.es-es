@@ -2,12 +2,12 @@
 title: Procedimiento para consultar instancias no guardadas
 ms.date: 03/30/2017
 ms.assetid: 294019b1-c1a7-4b81-a14f-b47c106cd723
-ms.openlocfilehash: 000342013be4380e1a038fb8233050523f6bc758
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cbc3ec59bc0fbd8c39d351c248a664dc9231044c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009791"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584940"
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>Procedimiento para consultar instancias no guardadas
 Cuando se crea una nueva instancia de un servicio y este tiene el comportamiento del almacén de instancias de flujo de trabajo de SQL definido, el host del servicio crea una entrada inicial para esa instancia en el almacén de instancias. Como consecuencia, cuando la instancia de servicio se guarda por primera vez, el comportamiento del almacén de instancias de flujo de trabajo de SQL almacena el estado de la instancia actual junto con los datos adicionales que se requieren para la activación, recuperación y control.  
