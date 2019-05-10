@@ -14,8 +14,6 @@
           href: foreground-and-background-threads.md
         - name: Subprocesamiento administrado y no administrado en Windows
           href: managed-and-unmanaged-threading-in-windows.md
-        - name: 'Thread.Suspend, recolección de elementos no utilizados y puntos de seguridad'
-          href: thread-suspend-garbage-collection-and-safe-points.md
         - name: 'Almacenamiento local para el subproceso: Campos estáticos relacionados con subprocesos y ranuras de datos'
           href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
     - name: Uso de subprocesos y subprocesamiento
