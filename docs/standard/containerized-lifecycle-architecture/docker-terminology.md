@@ -4,12 +4,12 @@ description: Obtenga información sobre la terminología básica que se usa cada
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 79b1c6e01c96a906925e5b81b8ea14f988becd7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d465065341bc58295c965853f4178b05b12a3d9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785598"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591220"
 ---
 # <a name="docker-terminology"></a>Terminología de Docker
 
@@ -33,7 +33,7 @@ En esta sección se enumeran los términos y las definiciones que debe conocer a
 
 **Registro**: servicio que proporciona acceso a los repositorios. El registro predeterminado para la mayoría de las imágenes públicas es [Docker Hub](https://hub.docker.com/) (propiedad de Docker como una organización). Normalmente, un registro contiene repositorios procedentes de varios equipos. Las empresas suelen tener registros privados para almacenar y administrar imágenes que han creado. Azure Container Registry es otro ejemplo.
 
-**Imagen multiarquitectura**: Para la arquitectura de varios, es una característica que simplifica la selección de la imagen apropiada, según la plataforma donde Docker se está ejecutando, por ejemplo, cuando un archivo Dockerfile solicita una imagen base **`FROM mcr.microsoft.com/dotnet/core/sdk:2.1`** del registro realmente Obtiene **`2.1-nanoserver-1709`**, **`2.1-nanoserver-1803`**, **`2.1-nanoserver-1809`** o **`2.1-stretch`**, según el sistema operativo y versión donde se está ejecutando Docker.
+**Imagen multiarquitectura**: Para la arquitectura de varios, es una característica que simplifica la selección de la imagen apropiada, según la plataforma donde Docker se está ejecutando, por ejemplo, cuando un archivo Dockerfile solicita una imagen base **`FROM mcr.microsoft.com/dotnet/core/sdk:2.2`** del registro realmente Obtiene **`2.2-nanoserver-1709`**, **`2.2-nanoserver-1803`**, **`2.2-nanoserver-1809`** o **`2.2-stretch`**, según el sistema operativo y versión donde se está ejecutando Docker.
 
 **Docker Hub**: registro público para cargar imágenes y trabajar con ellas. Docker Hub proporciona hospedaje de imágenes de Docker, registros públicos o privados, desencadenadores de compilación y enlaces web e integración con GitHub y Bitbucket.
 

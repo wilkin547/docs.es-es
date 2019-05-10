@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86efc3a9d9eab5c1529804769af413dd88e71f1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aabf2ad437ee8a50614ca27978aa0a031f5d7e55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792906"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592246"
 ---
 # <a name="resources-in-net-apps"></a>Recursos en aplicaciones .NET
 Casi todas las aplicaciones de calidad de producción tienen que utilizar recursos. Un recurso es cualquier dato no ejecutable que se implemente lógicamente con una aplicación. Los recursos pueden mostrarse en una aplicación como mensajes de error o como parte de la interfaz de usuario. Los recursos pueden contener datos con varios formatos, como objetos almacenados, cadenas e imágenes. (Para poder escribir objetos almacenados en un archivo de recursos, los objetos deben ser serializables). Si los datos se almacenan en un archivo de recursos, es posible modificarlos sin volver a compilar toda la aplicación. Esto también permite almacenar los datos en una sola ubicación y elimina la necesidad de confiar en los datos codificados de forma rígida almacenados en varias ubicaciones.  
@@ -43,23 +43,23 @@ También puede localizar los recursos de una aplicación para determinadas refer
 ## <a name="retrieving-resources"></a>Recuperar recursos  
  En tiempo de ejecución, la aplicación carga los recursos adaptados apropiados para cada subproceso, en función de la referencia cultural especificada por la propiedad <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. El valor de esta propiedad se deriva de la siguiente manera:  
   
--   Asignando directamente un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural adaptada a la propiedad <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>.  
+- Asignando directamente un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural adaptada a la propiedad <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
--   Si no se ha asignado explícitamente una referencia cultural, recuperando la referencia cultural de la interfaz de usuario predeterminada del subproceso de la propiedad <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.  
+- Si no se ha asignado explícitamente una referencia cultural, recuperando la referencia cultural de la interfaz de usuario predeterminada del subproceso de la propiedad <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.  
   
--   Si no se ha asignado explícitamente ninguna referencia cultural a la interfaz de usuario predeterminada del subproceso, recuperando la referencia cultural del usuario actual del equipo local. Las implementaciones de .NET que se ejecutan en Windows realizan esta operación mediante una llamada a la función [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) de Windows.  
+- Si no se ha asignado explícitamente ninguna referencia cultural a la interfaz de usuario predeterminada del subproceso, recuperando la referencia cultural del usuario actual del equipo local. Las implementaciones de .NET que se ejecutan en Windows realizan esta operación mediante una llamada a la función [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) de Windows.  
   
  Para obtener más información sobre cómo establecer la referencia cultural de la interfaz de usuario actual, vea las páginas de referencia de <xref:System.Globalization.CultureInfo> y de <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
  Puede recuperar los recursos para la referencia cultural de la interfaz de usuario actual o para una referencia cultural concreta usando la clase <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Aunque la clase <xref:System.Resources.ResourceManager> se usa principalmente para recuperar recursos, el espacio de nombres <xref:System.Resources?displayProperty=nameWithType> contiene tipos adicionales que puede usar para recuperar recursos. Se incluyen los siguientes:  
   
--   La clase <xref:System.Resources.ResourceReader>, que permite enumerar recursos incrustados en un ensamblado o almacenados en un archivo binario .resources independiente. Resulta útil cuando no se conocen los nombres exactos de los recursos que están disponibles en tiempo de ejecución.  
+- La clase <xref:System.Resources.ResourceReader>, que permite enumerar recursos incrustados en un ensamblado o almacenados en un archivo binario .resources independiente. Resulta útil cuando no se conocen los nombres exactos de los recursos que están disponibles en tiempo de ejecución.  
   
--   La clase <xref:System.Resources.ResXResourceReader>, que permite recuperar recursos de un archivo XML (.resx).  
+- La clase <xref:System.Resources.ResXResourceReader>, que permite recuperar recursos de un archivo XML (.resx).  
   
--   La clase <xref:System.Resources.ResourceSet>, que permite recuperar los recursos de una referencia cultural específica sin observar las reglas de reserva. Los recursos se pueden almacenar en un ensamblado o un archivo binario .resources independiente. También se puede desarrollar una implementación de <xref:System.Resources.IResourceReader> que permite usar la clase <xref:System.Resources.ResourceSet> para recuperar recursos de algún otro origen.  
+- La clase <xref:System.Resources.ResourceSet>, que permite recuperar los recursos de una referencia cultural específica sin observar las reglas de reserva. Los recursos se pueden almacenar en un ensamblado o un archivo binario .resources independiente. También se puede desarrollar una implementación de <xref:System.Resources.IResourceReader> que permite usar la clase <xref:System.Resources.ResourceSet> para recuperar recursos de algún otro origen.  
   
--   La clase <xref:System.Resources.ResXResourceSet>, que permite cargar en la memoria todos los elementos de un archivo de recursos XML.  
+- La clase <xref:System.Resources.ResXResourceSet>, que permite cargar en la memoria todos los elementos de un archivo de recursos XML.  
   
 ## <a name="see-also"></a>Vea también
 

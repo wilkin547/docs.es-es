@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f7770db59c346f0981dd89a9995f11e41d17a1d
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052006"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063489"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Procedimiento Controlar cuándo el texto de TextBox actualiza el origen
 Este tema describe cómo usar el <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propiedad para controlar la temporización de las actualizaciones del origen de enlace. Este tema se usa el <xref:System.Windows.Controls.TextBox> control como un ejemplo.  
@@ -28,7 +28,7 @@ Este tema describe cómo usar el <xref:System.Windows.Data.Binding.UpdateSourceT
   
  Como resultado, el <xref:System.Windows.Controls.TextBlock> muestra el mismo texto (dado que el origen cambia) como el usuario escribe texto en el <xref:System.Windows.Controls.TextBox>, tal y como se muestra en la siguiente captura de pantalla del ejemplo:  
   
- ![Captura de pantalla de ejemplo de enlace de datos simple](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![Captura de pantalla que muestra el enlace de datos simple.](./media/how-to-control-when-the-textbox-text-updates-the-source/data-binding-simple-binding-sample.png)  
   
  Si tiene un cuadro de diálogo o un formulario modificable por el usuario y desea diferir las actualizaciones de origen hasta que el usuario ha terminado de editar los campos y hace clic en "Aceptar", puede establecer el <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor de los enlaces en <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, como en el ejemplo siguiente:  
   

@@ -2,12 +2,12 @@
 title: Usar acciones para implementar el comportamiento del servidor
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23a01b7221fcfcbfc3cceb82123c68879eba98a3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875257"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063163"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Usar acciones para implementar el comportamiento del servidor
 
@@ -46,7 +46,7 @@ Las acciones OData proporcionan una manera de implementar un comportamiento que 
   
 3. Almacenar los resultados de Invoke() para que se puedan recuperar mediante GetResult()  
   
- Los parámetros se pueden pasar como tokens. Esto se debe a que es posible escribir un proveedor de servicios de datos que funcione con tokens que representan recursos; en este caso, quizás necesite convertir (serializar) estos tokens en recursos reales antes de enviarlos a la acción real. Una vez calculadas las referencias del parámetro, este debe estar en un estado editable para que se guarde y se escriba en disco cualquier cambio realizado en el recurso cuando se invoque la acción.  
+ Los parámetros se pueden pasar como tokens. Esto se debe a que es posible escribir un proveedor de servicios de datos que funcione con tokens que representan recursos; en este caso, quizás necesite convertir (serializar) estos tokens en recursos reales antes de enviarlos a la acción real. Una vez calculado el parámetro, debe ser en un estado editable para que los cambios en el recurso que se producen cuando se invoca la acción será guardado y escrito en disco.  
   
  Esta interfaz requiere dos métodos: Invoke y GetResult adecuados. Invoke invoca el delegado que implementa el comportamiento de la acción y GetResult devuelve el resultado de la acción.  
   

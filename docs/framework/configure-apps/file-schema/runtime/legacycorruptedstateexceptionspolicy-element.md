@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 777d496614435106b84b47b9aa3d35d964bc3e07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 78b670d8b23b5ecf274432d3758d07dae34dcfcf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704744"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607170"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > elemento
 Especifica si common language runtime permite código administrado para detectar infracciones de acceso y otras excepciones de estado dañado.  
@@ -58,11 +58,11 @@ Especifica si common language runtime permite código administrado para detectar
   
  A partir de la [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]administrado código ya no detecta estos tipos de excepciones en `catch` bloques. Sin embargo, puede invalidar este cambio y mantener el control de excepciones de estado dañado de dos maneras:  
   
--   Establecer el `<legacyCorruptedStateExceptionsPolicy>` del elemento `enabled` atributo `true`. Esta opción de configuración está aplicado a todo el proceso y afecta a todos los métodos.  
+- Establecer el `<legacyCorruptedStateExceptionsPolicy>` del elemento `enabled` atributo `true`. Esta opción de configuración está aplicado a todo el proceso y afecta a todos los métodos.  
   
  -o bien-  
   
--   Aplicar el <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> al método que contiene las excepciones `catch` bloque.  
+- Aplicar el <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> al método que contiene las excepciones `catch` bloque.  
   
  Este elemento de configuración solo está disponible en el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] y versiones posteriores.  
   

@@ -2,12 +2,12 @@
 title: Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a15024c0d2308da8cf2cc0d72d79c9f585f2912
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051764"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606012"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ayuda a analizar seguimientos del diagnóstico generados por WCF. Service Trace Viewer proporciona una manera de combinar fácilmente, ver y filtrar los mensajes de seguimiento en el registro de modo que puede diagnosticar, reparar y comprobar los problemas de servicio WCF.  
@@ -62,11 +62,11 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Abrir y ver los archivos de seguimiento de WCF  
  El visor de seguimiento de servicio admite tres tipos de archivo:  
   
--   (.SvcLog) del archivo de seguimiento de WCF  
+- (.SvcLog) del archivo de seguimiento de WCF  
   
--   Archivo de seguimiento de eventos (.etl)  
+- Archivo de seguimiento de eventos (.etl)  
   
--   Archivo de seguimiento carmesí  
+- Archivo de seguimiento carmesí  
   
  El visor de seguimiento de servicio le permite abrir cualquier archivo de seguimiento compatible, agregar e integrar archivos de seguimiento adicionales o abrir y fusionar mediante combinación simultáneamente un grupo de archivos de seguimiento.  
   
@@ -106,9 +106,9 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
   
  Hay dos maneras de administrar los proyectos:  
   
--   En el **archivo** menú, puede abrir, guardar y cerrar proyectos.  
+- En el **archivo** menú, puede abrir, guardar y cerrar proyectos.  
   
--   En el **proyecto** ficha, puede agregar archivos a un proyecto.  
+- En el **proyecto** ficha, puede agregar archivos a un proyecto.  
   
 ### <a name="viewing-wcf-traces"></a>Ver seguimiento de WCF  
  WCF emite trazas usando el formato de seguimiento de actividad. En el modelo de seguimiento de actividad, los seguimientos individuales están agrupados en actividades según su propósito. El flujo de control lógico se transfiere entre las actividades. Por ejemplo, durante el tiempo que dura una aplicación, aparecen y desaparecen muchas "actividades de envío de mensaje". Para obtener más información sobre cómo ver los seguimientos y las actividades y la interfaz de usuario de Service Trace Viewer demasiado, consulte [utilizando Service Trace Viewer para ver seguimientos correlacionados y solución de problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
@@ -116,13 +116,13 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
 #### <a name="switching-to-different-views"></a>Alternar vistas diferentes  
  El visor de seguimiento de servicio proporciona estas vistas diferentes. Se muestran como pestañas en el panel izquierdo del Visor y también se puede acceder desde el **vista** menú.  
   
--   Vista de actividad  
+- Vista de actividad  
   
--   Vista de proyecto  
+- Vista de proyecto  
   
--   Vista de mensaje  
+- Vista de mensaje  
   
--   Vista de gráfico  
+- Vista de gráfico  
   
 ##### <a name="activity-view"></a>Vista de actividad  
  Una vez que se abren los archivos de seguimiento, puede ver los seguimientos agrupados por actividades y se muestra en el **actividad** vista en el panel izquierdo.  
@@ -144,9 +144,12 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
   
 ##### <a name="project-view"></a>Vista de proyecto  
  Esta vista le permite administrar los archivos de seguimiento en el proyecto actual. Para obtener información más detallada, consulte la sección Administrar proyecto.  
-  
+
+##### <a name="message-view"></a>Vista de mensaje
+ Esta vista permite ver todos los registros de mensaje realiza un seguimiento, incluido el proceso de acción, la fecha y hora, Acivity y con origen o destino y navegar a los detalles de la traza de registro de mensaje asociado. Puede agrupar los seguimientos de registro de mensaje por límite de la actividad, procesos y subprocesos, o envío y recepción para una navegación más sencilla del flujo de mensajes.
+ 
 ##### <a name="graph-view"></a>Vista de gráfico  
- Una de las características más eficaces de Service Trace Viewer es el **Graph** vista, que muestra los datos de seguimiento para una actividad determinada en forma de gráfico. Esta opción de gráficos le permite ver la ejecución paso a paso de eventos y las relaciones mutuas entre varias actividades cuando los datos se mueven entre ellas.  
+ Esta vista muestra los datos de seguimiento para una actividad determinada en forma de gráfico. Esta opción de gráficos le permite ver la ejecución paso a paso de eventos y las relaciones mutuas entre varias actividades cuando los datos se mueven entre ellas.  
   
  Para cambiar a **Graph** ver, seleccione una actividad en el **actividad** ver y haga clic en el **actividad** ficha o un seguimiento del registro de mensajes en el **mensaje**Vista. Si se cargan varios archivos de seguimiento y la actividad implica seguimientos de más de un archivo, todos los seguimientos pertinentes aparecen en la vista de Gráfico. Haga doble clic en las actividades y seguimientos del registro de mensajes también podrá acceder a la **Graph** vista.  
   
@@ -192,9 +195,9 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
 ###### <a name="options"></a>Opciones  
  Puede seleccionar dos opciones en el **opción** menú en la vista de gráfico.  
   
--   Mostrar seguimientos de límite de la actividad que, cuando se desactiva, omite los seguimientos del límite de la actividad en el gráfico.  
+- Mostrar seguimientos de límite de la actividad que, cuando se desactiva, omite los seguimientos del límite de la actividad en el gráfico.  
   
--   Mostrar seguimientos detallados sin mensaje que, cuando se desactiva, omite todos los seguimientos de nivel detallados, excepto los seguimientos de mensajes. En la mayoría de los casos, los seguimientos de nivel detallados son menos importantes para el análisis. Esta opción es útil cuando no desea analizar los seguimientos de nivel detallados y sólo desea centrarse en seguimientos más importantes.  
+- Mostrar seguimientos detallados sin mensaje que, cuando se desactiva, omite todos los seguimientos de nivel detallados, excepto los seguimientos de mensajes. En la mayoría de los casos, los seguimientos de nivel detallados son menos importantes para el análisis. Esta opción es útil cuando no desea analizar los seguimientos de nivel detallados y sólo desea centrarse en seguimientos más importantes.  
   
 ###### <a name="layout-mode"></a>Modo de diseño  
  El Visor tiene dos modos de diseño: **Proceso** y **subprocesos**. Esta configuración define la unidad más grande de organización. El valor predeterminado es el modo de diseño **proceso**, lo que significa que las actividades se agrupan por procesos en el gráfico.  
@@ -222,22 +225,22 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
 ### <a name="filtering-wcf-traces"></a>Filtrar los seguimientos de WCF  
  Para facilitar el análisis de seguimientos, puede filtrarlos de las maneras siguientes:  
   
--   La barra de herramientas de filtro proporciona el acceso a los filtros predefinidos y personalizados. Se puede habilitar a través de la **vista** menú.  
+- La barra de herramientas de filtro proporciona el acceso a los filtros predefinidos y personalizados. Se puede habilitar a través de la **vista** menú.  
   
--   El filtro predefinido del Visor se puede usar para filtrar selectivamente partes de los seguimientos WCF. Se establece de forma predeterminada que todos los seguimientos de infraestructura puedan pasar. La configuración de este filtro se define en el **opciones de filtro** submenú **vista** menú.  
+- El filtro predefinido del Visor se puede usar para filtrar selectivamente partes de los seguimientos WCF. Se establece de forma predeterminada que todos los seguimientos de infraestructura puedan pasar. La configuración de este filtro se define en el **opciones de filtro** submenú **vista** menú.  
   
--   Los filtros del XPath personalizados les dan a los usuarios el control completo sobre cómo filtrar. Se pueden definir en el **filtro personalizado** en **vista** menú.  
+- Los filtros del XPath personalizados les dan a los usuarios el control completo sobre cómo filtrar. Se pueden definir en el **filtro personalizado** en **vista** menú.  
   
  Sólo se muestran los seguimientos que atraviesan todos los filtros.  
   
 #### <a name="using-the-filter-toolbar"></a>Utilizar la barra de herramientas del filtro  
  La barra de herramientas del filtro aparece en la parte superior de la herramienta. Si no está presente, puede activarla en el **vista** menú. La barra tiene tres componentes:  
   
--   Busca: **Busque** define el asunto que se busca en la operación de filtrado. Por ejemplo, si desea buscar todos los seguimientos que se emitieron en el contexto de proceso X, establezca este campo a X y el **buscar en** campo nombre del proceso. Este campo cambia a un control de selector DateTime cuando se selecciona un filtro basado en tiempo.  
+- Busca: **Busque** define el asunto que se busca en la operación de filtrado. Por ejemplo, si desea buscar todos los seguimientos que se emitieron en el contexto de proceso X, establezca este campo a X y el **buscar en** campo nombre del proceso. Este campo cambia a un control de selector DateTime cuando se selecciona un filtro basado en tiempo.  
   
--   Buscar en: Este campo define el tipo de filtro para aplicar.  
+- Buscar en: Este campo define el tipo de filtro para aplicar.  
   
--   Nivel: La configuración del nivel define el nivel de seguimiento mínimo permitido por el filtro. Por ejemplo, si se fija el nivel en “Error y arriba”, sólo se muestran los seguimientos en el nivel error y crítico. Este filtro se combina con los criterios especificados en Buscar y Buscar en.  
+- Nivel: La configuración del nivel define el nivel de seguimiento mínimo permitido por el filtro. Por ejemplo, si se fija el nivel en “Error y arriba”, sólo se muestran los seguimientos en el nivel error y crítico. Este filtro se combina con los criterios especificados en Buscar y Buscar en.  
   
  El **filtrar ahora** botón inicia la operación de filtrado. Algunos filtros, sobre todo cuando se aplican a un conjunto de datos grande, tardan un buen rato en terminar. Puede cancelar la operación de filtrado presionando el **detener** botón que aparece en la barra de estado en el **operaciones** menú.  
   
@@ -321,27 +324,27 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
 ### <a name="finding-data"></a>Buscar datos  
  El visor proporciona las maneras siguientes de buscar datos:  
   
--   La barra de herramientas Buscar proporciona un acceso rápido a las opciones de búsqueda más comunes.  
+- La barra de herramientas Buscar proporciona un acceso rápido a las opciones de búsqueda más comunes.  
   
--   El cuadro de diálogo Buscar proporciona más opciones de búsqueda. Es accesible a través de la **editar** menú, o mediante la combinación de teclas Ctrl + f el.  
+- El cuadro de diálogo Buscar proporciona más opciones de búsqueda. Es accesible a través de la **editar** menú, o mediante la combinación de teclas Ctrl + f el.  
   
  La barra de herramientas Buscar aparece en la parte superior del visor. Si no está presente, puede activarla en el **vista** menú. La barra tiene dos componentes:  
   
--   Buscar: Permite especificar la palabra clave de búsqueda.  
+- Buscar: Permite especificar la palabra clave de búsqueda.  
   
--   Buscar en: Permite especificar el ámbito de búsqueda. Puede seleccionar buscar en todas las actividades o sólo en la actividad actual.  
+- Buscar en: Permite especificar el ámbito de búsqueda. Puede seleccionar buscar en todas las actividades o sólo en la actividad actual.  
   
  El cuadro de diálogo de la búsqueda proporciona dos opciones adicionales:  
   
--   Buscar destino:  
+- Buscar destino:  
   
-    -   La opción "datos de registro sin procesar" busca la palabra clave en todos los datos sin procesar.  
+    - La opción "datos de registro sin procesar" busca la palabra clave en todos los datos sin procesar.  
   
-    -   Las opciones "Texto XML" y "Atributo XML" solo buscan en elementos XML.  
+    - Las opciones "Texto XML" y "Atributo XML" solo buscan en elementos XML.  
   
-    -   La opción "Mensaje registrado" busca la palabra clave sólo en los mensajes.  
+    - La opción "Mensaje registrado" busca la palabra clave sólo en los mensajes.  
   
--   Ignorar la actividad raíz: La búsqueda ignora las trazas en la actividad "000000000000". De esta forma, se mejora el rendimiento de los archivos de seguimiento grandes cuando la actividad raíz tiene miles de trazas, la mayoría de las cuales son transferencias.  
+- Ignorar la actividad raíz: La búsqueda ignora las trazas en la actividad "000000000000". De esta forma, se mejora el rendimiento de los archivos de seguimiento grandes cuando la actividad raíz tiene miles de trazas, la mayoría de las cuales son transferencias.  
   
 ### <a name="navigating-traces"></a>Navegar por los seguimientos  
  Dado que los seguimientos se graban paso a paso durante el tiempo de ejecución de la aplicación, navegar por los seguimientos puede ayudarle a depurar su aplicación. El visor de seguimiento de servicio proporciona varias maneras de navegar por los seguimientos.  
@@ -349,9 +352,9 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
 #### <a name="step-forward-or-backward"></a>Paso hacia delante o hacia atrás  
  Si considera cada seguimiento como una línea de código en el programa, ir hacia delante es muy similar a "Paso a paso" en el entorno de desarrollo integrado (IDE) de Visual Studio. La diferencia radica en que también puede ir hacia atrás en los seguimientos. Avanzar paso a paso significa ir a la traza siguiente de la actividad.  
   
--   Avanzar paso a paso: Use la **actividad** menús o presione "F10". También puede usar tecla de dirección "abajo" en el panel de seguimiento.  
+- Avanzar paso a paso: Use la **actividad** menús o presione "F10". También puede usar tecla de dirección "abajo" en el panel de seguimiento.  
   
--   Retroceder paso a paso: Use la **actividad** menús o presione "F9". También puede usar tecla de dirección "up" en el panel de seguimiento.  
+- Retroceder paso a paso: Use la **actividad** menús o presione "F9". También puede usar tecla de dirección "up" en el panel de seguimiento.  
   
 > [!NOTE]
 >  Esto puede llevarlo a una actividad que se producen en un proceso diferente o incluso en un equipo diferente, porque los mensajes de WCF pueden llevar identificadores de actividad que abarcan varias máquinas.  
@@ -363,9 +366,9 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
   
  Hay dos maneras de seguir una transferencia: con el mouse o con el teclado:  
   
--   Con el Mouse: Haga doble clic en el seguimiento de transferencia en el panel de seguimiento.  
+- Con el Mouse: Haga doble clic en el seguimiento de transferencia en el panel de seguimiento.  
   
--   Con el teclado: Seleccione una traza de transferencia y use "Seguir transferencia" en el **actividad** menús o presione "F11"  
+- Con el teclado: Seleccione una traza de transferencia y use "Seguir transferencia" en el **actividad** menús o presione "F11"  
   
 > [!NOTE]
 >  En muchos casos, cuando la actividad A transfiere a la actividad B, la actividad A espera hasta que la actividad B transfiere de vuelta a la actividad A. Esto significa que la actividad A no tiene registrado ningún seguimiento cuando la actividad B realiza un seguimiento activo. Sin embargo, también es posible que la actividad A no espere y continúe registrando los seguimientos. También es posible que la actividad B no transfiera de vuelta a la actividad A. En este sentido, las transferencias de actividad aún son diferentes de las llamadas de función. Es más fácil entender las transferencias de actividad en la vista de gráfico.  
@@ -373,9 +376,9 @@ A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas d
 #### <a name="jump-to-next-or-previous-transfer"></a>Pasar a la siguiente o anterior transferencia  
  Cuando analice la actividad actual, o las actividades seleccionadas cuando se han seleccionado varias actividades, puede que desee buscar rápidamente las actividades a las que transfiere. "Pasar a la siguiente transferencia" le permite localizar la siguiente traza de transferencia de la actividad. Una vez que encuentre la traza de transferencia, puede usar "Seguir transferencia" para ir a la siguiente actividad.  
   
--   Saltar a la transferencia siguiente: Use la **actividad** menús o presione "Ctrl + F10".  
+- Saltar a la transferencia siguiente: Use la **actividad** menús o presione "Ctrl + F10".  
   
--   Saltar a la transferencia anterior: Use la **actividad** menús o presione "Ctrl + F9".  
+- Saltar a la transferencia anterior: Use la **actividad** menús o presione "Ctrl + F9".  
   
 #### <a name="navigate-in-graph-view"></a>Navegar en la vista del gráfico  
  Aunque la navegación en el panel de actividad y seguimiento es similar a depurar, usar **Graph** vista proporciona una mejor experiencia de navegación. Para obtener más información, vea la sección "Vista de gráfico".  
