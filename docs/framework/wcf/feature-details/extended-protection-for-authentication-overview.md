@@ -2,12 +2,12 @@
 title: Información general sobre la protección extendida para la autenticación
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c166ae4795a64983c0df81629669c9cbf5b0d97
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856731"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665951"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Información general sobre la protección extendida para la autenticación
 La protección extendida para la autenticación ayuda a protegerse de los ataques de tipo "man-in-the-middle" (MITM), en los que un atacante intercepta las credenciales de un cliente y las reenvía a un servidor.  
@@ -24,11 +24,11 @@ La protección extendida para la autenticación ayuda a protegerse de los ataque
   
  El servidor puede tener los niveles de protección siguientes:  
   
--   Ninguno. No se realiza ninguna validación de enlace de canal. Este es el comportamiento de todos los servidores que no se han actualizado.  
+- Ninguno. No se realiza ninguna validación de enlace de canal. Este es el comportamiento de todos los servidores que no se han actualizado.  
   
--   Parcial. Todos los clientes que se han actualizado deben proporcionar información de enlace de canal al servidor. No es obligatorio para los clientes que no se han actualizado. Esta es una opción intermedia que permite la compatibilidad entre aplicaciones.  
+- Parcial. Todos los clientes que se han actualizado deben proporcionar información de enlace de canal al servidor. No es obligatorio para los clientes que no se han actualizado. Esta es una opción intermedia que permite la compatibilidad entre aplicaciones.  
   
--   Completo. Todos los clientes deben proporcionar información de enlace de canal. El servidor rechazará las solicitudes de autenticación de los clientes que no lo hagan.  
+- Completo. Todos los clientes deben proporcionar información de enlace de canal. El servidor rechazará las solicitudes de autenticación de los clientes que no lo hagan.  
   
  Para obtener más información, vea el ejemplo de protección extendida/CBT para Windows 7.  
   

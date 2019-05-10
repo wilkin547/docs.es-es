@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e89fda72371f197efeeeef8f31ec396c334cfcb2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5702fac139ba602828bb8722a1e3e25d6f1c58f6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122036"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625434"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType (Método)
 Crea una estructura `ExportedType` que contiene los metadatos para el tipo exportado especificado y devuelve el token de metadatos asociado.  
@@ -46,13 +46,13 @@ HRESULT DefineExportedType (
  `tkImplementation`  
  [in] Un token que especifica donde se implementa el tipo exportado. Los valores válidos y sus significados asociados son:  
   
--   `mdFile` El tipo se implementa en un archivo diferente dentro de este ensamblado.  
+- `mdFile` El tipo se implementa en un archivo diferente dentro de este ensamblado.  
   
--   `mdAssemblyRef` El tipo se implementa en un ensamblado diferente.  
+- `mdAssemblyRef` El tipo se implementa en un ensamblado diferente.  
   
--   `mdExportedTYpe` El tipo está anidado dentro de otro tipo.  
+- `mdExportedTYpe` El tipo está anidado dentro de otro tipo.  
   
--   `mdFileNil` El tipo está en el mismo archivo que el manifiesto y no es un tipo anidado.  
+- `mdFileNil` El tipo está en el mismo archivo que el manifiesto y no es un tipo anidado.  
   
  `tkTypeDef`  
  [in] Un token de los metadatos que especifica el tipo que se exportarán. Este valor se introduce en el `TypeDef` tabla en el archivo que implementa el tipo y solo es pertinente si ese archivo se encuentra en este ensamblado.  
