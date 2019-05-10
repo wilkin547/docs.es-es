@@ -9,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fd24369380e5f8ccf8de939c36ba72a12dc872e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864408"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649613"
 ---
 # <a name="function-procedures-visual-basic"></a>Procedimientos de función (Visual Basic)
 Un `Function` procedimiento es una serie de instrucciones de Visual Basic está incluido en el `Function` y `End Function` instrucciones. El `Function` procedimiento realiza una tarea y, a continuación, devuelve el control al código de llamada. Cuando devuelve el control, también devuelve un valor al código de llamada.  
@@ -54,7 +54,7 @@ End Function
 ## <a name="returning-values"></a>Devolver valores  
  El valor de un `Function` procedimiento envía de vuelta al código de llamada se llama a su valor devuelto. El procedimiento devuelve este valor en uno de dos maneras:  
   
--   Usa el `Return` instrucción para especificar el valor devuelto y devuelve el control inmediatamente al programa que realiza la llamada. Esto se ilustra en el siguiente ejemplo:  
+- Usa el `Return` instrucción para especificar el valor devuelto y devuelve el control inmediatamente al programa que realiza la llamada. Esto se ilustra en el siguiente ejemplo:  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
--   Asigna un valor a su propio nombre de función en una o varias instrucciones del procedimiento. No devolver el control al programa que realiza la llamada hasta que un `Exit Function` o `End Function` se ejecuta la instrucción. Esto se ilustra en el siguiente ejemplo:  
+- Asigna un valor a su propio nombre de función en una o varias instrucciones del procedimiento. No devolver el control al programa que realiza la llamada hasta que un `Exit Function` o `End Function` se ejecuta la instrucción. Esto se ilustra en el siguiente ejemplo:  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  

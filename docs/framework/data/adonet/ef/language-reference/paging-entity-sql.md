@@ -2,12 +2,12 @@
 title: Paginación (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ba4f334d-03e5-4a7b-9d42-628f4639b9a2
-ms.openlocfilehash: dd6653c00c72697fa5e8ae896968ec2a9f09ae82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dcde0b74bb3ec845dba4ddfe0a5e389e46bd1c8a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760225"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641766"
 ---
 # <a name="paging-entity-sql"></a>Paginación (Entity SQL)
 Paginación física puede realizarse mediante la [omitir](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) y [límite](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) subcláusulas en el [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) cláusula. Para llevar a cabo la paginación física de forma determinista, debe usar SKIP y LIMIT. Si solo desea restringir el número de filas en el resultado de una manera no determinista, debe usar [superior](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md). TOP y SKIP/LIMIT se excluyen mutuamente.  

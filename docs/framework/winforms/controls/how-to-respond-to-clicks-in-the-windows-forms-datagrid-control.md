@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60c4dac76b4a7868da9143cab1433ee93f97c7d1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913099"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64636808"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Procedimiento para responder a clics en el control DataGrid de formularios Windows Forms
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "61913099"
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Para detectar cuando el usuario de la cuadrícula de datos selecciona una celda diferente  
   
--   En el <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> controlador de eventos, escribir código para responder de forma adecuada.  
+- En el <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> controlador de eventos, escribir código para responder de forma adecuada.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -56,7 +56,7 @@ ms.locfileid: "61913099"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Para determinar qué parte de la cuadrícula de datos que el usuario hizo clic  
   
--   Llame a la <xref:System.Windows.Forms.DataGrid.HitTest%2A> método en un controlador de eventos apropiado, como para el <xref:System.Windows.Forms.Control.MouseDown> o <xref:System.Windows.Forms.Control.Click> eventos.  
+- Llame a la <xref:System.Windows.Forms.DataGrid.HitTest%2A> método en un controlador de eventos apropiado, como para el <xref:System.Windows.Forms.Control.MouseDown> o <xref:System.Windows.Forms.Control.Click> eventos.  
   
      El <xref:System.Windows.Forms.DataGrid.HitTest%2A> método devuelve un <xref:System.Windows.Forms.DataGrid.HitTestInfo> objeto que contiene la fila y columna de un área donde ha hecho clic.  
   

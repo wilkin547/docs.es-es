@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], font styles
 - data grids [Windows Forms], color styles
 ms.assetid: 588f2c57-d963-41b1-9c1d-d02d71818113
-ms.openlocfilehash: 737a4b943125245a2916bbf6b24b8abdffa8e371
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad2426ed9643fd46927c4f8b6373fedbec372d38
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912904"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638096"
 ---
 # <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>Procedimiento para establecer estilos de colores y fuentes en el control DataGridView de formularios Windows Forms
 Para especificar la apariencia visual de las celdas dentro de un control <xref:System.Windows.Forms.DataGridView>, establezca las propiedades de la clase <xref:System.Windows.Forms.DataGridViewCellStyle>. Puede recuperar instancias de esta clase desde distintas propiedades de la clase <xref:System.Windows.Forms.DataGridView> y sus clases complementarias, o puede crear instancias de objetos <xref:System.Windows.Forms.DataGridViewCellStyle> para la asignación de estas propiedades.  
@@ -26,21 +26,21 @@ Para especificar la apariencia visual de las celdas dentro de un control <xref:S
   
 ### <a name="to-specify-the-font-used-by-datagridview-cells"></a>Para especificar la fuente que usan las celdas de DataGridView  
   
--   Establezca la propiedad <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> de un <xref:System.Windows.Forms.DataGridViewCellStyle>. El siguiente ejemplo de código usa la propiedad <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> para establecer la fuente para todo el control.  
+- Establezca la propiedad <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> de un <xref:System.Windows.Forms.DataGridViewCellStyle>. El siguiente ejemplo de código usa la propiedad <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> para establecer la fuente para todo el control.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#101](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#101)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#101](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#101)]  
   
 ### <a name="to-specify-the-foreground-and-background-colors-of-datagridview-cells"></a>Para especificar los colores de primer plano y de fondo de las celdas de DataGridView  
   
--   Establezca las propiedades <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> y <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> de un <xref:System.Windows.Forms.DataGridViewCellStyle>. El siguiente ejemplo de código usa la propiedad <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> para establecer estos estilos para todo el control.  
+- Establezca las propiedades <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> y <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> de un <xref:System.Windows.Forms.DataGridViewCellStyle>. El siguiente ejemplo de código usa la propiedad <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> para establecer estos estilos para todo el control.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#102](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#102)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#102](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#102)]  
   
 ### <a name="to-specify-the-foreground-and-background-colors-of-selected-datagridview-cells"></a>Para especificar los colores de primer plano y de fondo de las celdas seleccionadas de DataGridView  
   
--   Establezca las propiedades <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A> y <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> de un <xref:System.Windows.Forms.DataGridViewCellStyle>. El siguiente ejemplo de código usa la propiedad <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> para establecer estos estilos para todo el control.  
+- Establezca las propiedades <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A> y <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> de un <xref:System.Windows.Forms.DataGridViewCellStyle>. El siguiente ejemplo de código usa la propiedad <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> para establecer estos estilos para todo el control.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#103](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#103)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#103](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#103)]  
@@ -52,9 +52,9 @@ Para especificar la apariencia visual de las celdas dentro de un control <xref:S
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Control <xref:System.Windows.Forms.DataGridView> denominado `dataGridView1`.  
+- Control <xref:System.Windows.Forms.DataGridView> denominado `dataGridView1`.  
   
--   Referencias a los ensamblados <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- Referencias a los ensamblados <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="robust-programming"></a>Programación sólida  
  Para conseguir la máxima escalabilidad, debe compartir objetos <xref:System.Windows.Forms.DataGridViewCellStyle> entre varias filas, columnas o celdas que usen los mismos estilos, en lugar de establecer las propiedades de estilo de cada elemento por separado. Para obtener más información, consulte [mejores prácticas para escalar el DataGridView Control de Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  

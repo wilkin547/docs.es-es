@@ -2,19 +2,19 @@
 title: Autenticación en SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 33a4a9e7e9d6d8c5324c0e108ec3705582efc866
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879024"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649574"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticación en SQL Server
 SQL Server admite dos modos de autenticación, el modo de autenticación de Windows y el modo mixto.  
   
--   La autenticación de Windows es el modo predeterminado, y a menudo se denomina seguridad integrada debido a que este modelo de seguridad de SQL Server está estrechamente integrado con Windows. Para iniciar sesión en SQL Server, se confía en las cuentas de usuario y grupo específicas de Windows. Los usuarios de Windows que ya hayan sido autenticados no tienen que presentar credenciales adicionales.  
+- La autenticación de Windows es el modo predeterminado, y a menudo se denomina seguridad integrada debido a que este modelo de seguridad de SQL Server está estrechamente integrado con Windows. Para iniciar sesión en SQL Server, se confía en las cuentas de usuario y grupo específicas de Windows. Los usuarios de Windows que ya hayan sido autenticados no tienen que presentar credenciales adicionales.  
   
--   El modo mixto admite la autenticación tanto de Windows como de SQL Server. Los pares de nombre de usuario y contraseña se mantienen en SQL Server.  
+- El modo mixto admite la autenticación tanto de Windows como de SQL Server. Los pares de nombre de usuario y contraseña se mantienen en SQL Server.  
   
 > [!IMPORTANT]
 >  Se recomienda utilizar la autenticación de Windows siempre que sea posible. Este modo de autenticación usa una serie de mensajes cifrados para autenticar usuarios en SQL Server. Cuando se utilizan inicios de sesión de SQL Server, los nombres de inicio de sesión de SQL Server y las contraseñas cifradas se pasan a través de la red, lo que hace que sea menos segura.  
@@ -31,19 +31,19 @@ SQL Server admite dos modos de autenticación, el modo de autenticación de Wind
 ## <a name="authentication-scenarios"></a>Escenarios de autenticación  
  Por lo general la autenticación de Windows es la mejor opción en las siguientes situaciones:  
   
--   Existe un controlador de dominio.  
+- Existe un controlador de dominio.  
   
--   La aplicación y la base de datos se encuentran en el mismo equipo.  
+- La aplicación y la base de datos se encuentran en el mismo equipo.  
   
--   Está usando una instancia de SQL Server Express o LocalDB.  
+- Está usando una instancia de SQL Server Express o LocalDB.  
   
  Los inicios de sesión de SQL se usan habitualmente en las siguientes situaciones:  
   
--   Si se tiene un grupo de trabajo.  
+- Si se tiene un grupo de trabajo.  
   
--   Los usuarios se conectan desde diferentes dominios que no son de confianza.  
+- Los usuarios se conectan desde diferentes dominios que no son de confianza.  
   
--   Aplicaciones de Internet, como [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- Aplicaciones de Internet, como [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
   
 > [!NOTE]
 >  La especificación de la autenticación de Windows no deshabilita los inicios de sesión de SQL Server. Utilice el ALTER LOGIN DISABLE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrucción para deshabilitar los inicios de sesión de SQL Server con privilegios elevados.  
@@ -51,11 +51,11 @@ SQL Server admite dos modos de autenticación, el modo de autenticación de Wind
 ## <a name="login-types"></a>Tipos de inicios de sesión  
  SQL Server admite tres tipos de inicios de sesión:  
   
--   Una cuenta de usuario de Windows local o una cuenta de dominio de confianza. SQL Server se basa en Windows para autenticar las cuentas de usuario de Windows.  
+- Una cuenta de usuario de Windows local o una cuenta de dominio de confianza. SQL Server se basa en Windows para autenticar las cuentas de usuario de Windows.  
   
--   Grupo de Windows. Cuando se concede acceso a un grupo de Windows, se concede acceso a todos los inicios de sesión de usuario de Windows miembros de dicho grupo.  
+- Grupo de Windows. Cuando se concede acceso a un grupo de Windows, se concede acceso a todos los inicios de sesión de usuario de Windows miembros de dicho grupo.  
   
--   Inicio de sesión de SQL Server. SQL Server almacena el nombre de usuario y un valor hash de la contraseña en la base de datos maestra, y usa métodos internos de autenticación para comprobar los intentos de inicio de sesión.  
+- Inicio de sesión de SQL Server. SQL Server almacena el nombre de usuario y un valor hash de la contraseña en la base de datos maestra, y usa métodos internos de autenticación para comprobar los intentos de inicio de sesión.  
   
 > [!NOTE]
 >  SQL Server proporciona los inicios de sesión creados a partir de certificados o claves asimétricas que se usan para la firma de código. No se pueden utilizar para conectarse a SQL Server.  

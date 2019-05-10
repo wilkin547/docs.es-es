@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 18d8a22e20626a30585f556f97b54c65f1ab46a2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793723"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645780"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementar una transacción explícita mediante una transacción confirmable
 La clase <xref:System.Transactions.CommittableTransaction> proporciona a las aplicaciones una manera explícita de utilizar una transacción, a diferencia de utilizar implícitamente la clase <xref:System.Transactions.TransactionScope>. Es útil para las aplicaciones que desean utilizar la misma transacción por varias llamadas de función o llamadas de subproceso múltiples. A diferencia de la clase <xref:System.Transactions.TransactionScope>, el sistema de escritura de la aplicación ha de llamar específicamente a los métodos <xref:System.Transactions.CommittableTransaction.Commit%2A> y <xref:System.Transactions.Transaction.Rollback%2A> para confirmar o anular la transacción.  
