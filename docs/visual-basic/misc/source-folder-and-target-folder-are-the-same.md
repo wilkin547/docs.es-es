@@ -2,12 +2,12 @@
 title: La carpeta de origen y de destino son la misma
 ms.date: 07/20/2015
 ms.assetid: d4e6f996-8bbe-45f2-b662-f26b4474f44d
-ms.openlocfilehash: a3739afd25971433d78d84bb183c51ab674ecd9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f631e3a349c049960963227fcd954b46ae4fbeaa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61594768"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619086"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>La carpeta de origen y de destino son la misma
 Se ha realizado un intento para copiar o mover un archivo, pero el directorio de origen especificado y el directorio de destino son el mismo. Esto puede ser el resultado del análisis incorrecto de una ruta de acceso.  

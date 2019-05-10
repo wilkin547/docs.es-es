@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 0b013cff36fc9063f30aaa4356e9e8249dd960d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 0dd70eb5d3b3ad56a8597ce0658a296a03d5f4a7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306500"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618045"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>Tutorial: Manipular datos (Visual Basic)
 Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para agregar, modificar y eliminar datos en una base de datos. Utilizará una copia de la base de datos de ejemplo Northwind para agregar un cliente, cambiar el nombre de un cliente y eliminar un pedido.  
@@ -21,13 +21,13 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
 ## <a name="prerequisites"></a>Requisitos previos  
  En este tutorial se requiere lo siguiente:  
   
--   Este tutorial utiliza una carpeta dedicada ("c:\linqtest2") que contiene los archivos. Cree esta carpeta antes de empezar el tutorial.  
+- Este tutorial utiliza una carpeta dedicada ("c:\linqtest2") que contiene los archivos. Cree esta carpeta antes de empezar el tutorial.  
   
--   Base de datos de ejemplo Northwind.  
+- Base de datos de ejemplo Northwind.  
   
      Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft. Para obtener instrucciones, consulte [descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\linqtest2.  
   
--   Archivo de código de Visual Basic generado a partir de la base de datos Northwind.  
+- Archivo de código de Visual Basic generado a partir de la base de datos Northwind.  
   
      Puede generar este archivo mediante el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o la herramienta SQLMetal. Este tutorial se escribió utilizando la herramienta SQLMetal con la línea de comandos siguiente:  
   
@@ -38,17 +38,17 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
 ## <a name="overview"></a>Información general  
  Este tutorial se compone de seis tareas principales:  
   
--   Crear el [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solución en Visual Studio.  
+- Crear el [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solución en Visual Studio.  
   
--   Agregar el archivo de código de la base de datos al proyecto.  
+- Agregar el archivo de código de la base de datos al proyecto.  
   
--   Crear el nuevo objeto de cliente.  
+- Crear el nuevo objeto de cliente.  
   
--   Modificar el nombre de contacto de un cliente.  
+- Modificar el nombre de contacto de un cliente.  
   
--   Eliminar un pedido.  
+- Eliminar un pedido.  
   
--   Enviar estos cambios a la base de datos Northwind.  
+- Enviar estos cambios a la base de datos Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Crear una solución LINQ to SQL  
  En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.  
@@ -136,7 +136,7 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
 #### <a name="to-change-the-name-of-a-customer"></a>Para cambiar el nombre de un cliente  
   
--   Agregue el código siguiente encima de `Console.ReadLine()`:  
+- Agregue el código siguiente encima de `Console.ReadLine()`:  
   
      [!code-vb[DLinqWalk3VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#4)]  
   
@@ -147,7 +147,7 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
 #### <a name="to-delete-a-row"></a>Para eliminar una fila  
   
--   Agregue el código siguiente justo encima de `Console.ReadLine()`:  
+- Agregue el código siguiente justo encima de `Console.ReadLine()`:  
   
      [!code-vb[DLinqWalk3VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#5)]  
   

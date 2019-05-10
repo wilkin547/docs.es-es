@@ -2,12 +2,12 @@
 title: Ejemplo de integración de SystemWebRouting
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: f4f9772583bbd66d19cc59f453489965aabf74b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9f9dc871b92b8cd689234c79b09c98e38a2848d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007765"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650997"
 ---
 # <a name="systemwebrouting-integration-sample"></a>Ejemplo de integración de SystemWebRouting
 Este ejemplo muestra la integración de nivel de hospedaje con las clases en el espacio de nombres <xref:System.Web.Routing>. Las clases en el espacio de nombres <xref:System.Web.Routing> permiten a una aplicación utilizar direcciones URL que no se corresponden directamente con un recurso físico. Uso de enrutamiento Web permite al desarrollador crear direcciones virtuales para HTTO que, a continuación, se asignan a los servicios WCF reales. Esto es útil cuando un servicio WCF se debe hospedar sin requerir un archivo físico ni un recurso, o cuando se debe tener acceso a los servicios con direcciones URL que no contienen archivos como .html o .aspx. En este ejemplo se muestra cómo utilizar la clase <xref:System.Web.Routing.RouteTable> para crear URI virtuales que se asignan a servicios en ejecución definidos en global.asax. 
@@ -58,13 +58,13 @@ En este ejemplo ya puede instalarse en el equipo. Compruebe el siguiente directo
   
 3. Cree una aplicación web en el Administrador de Internet Information Services (IIS).  
   
-    1.  Haga clic en el Administrador de IIS, el **sitio Web predeterminado** y seleccione **agregar una aplicación**.  
+    1. Haga clic en el Administrador de IIS, el **sitio Web predeterminado** y seleccione **agregar una aplicación**.  
   
-    2.  Para el **alias**, escriba `WebRoutingIntegration`.  
+    2. Para el **alias**, escriba `WebRoutingIntegration`.  
   
-    3.  Para el **ruta de acceso física**, seleccione la carpeta servicio dentro del proyecto.  
+    3. Para el **ruta de acceso física**, seleccione la carpeta servicio dentro del proyecto.  
   
-    4.  Haga clic en **Aceptar**.  
+    4. Haga clic en **Aceptar**.  
   
 4. Iniciar la aplicación, haciendo clic en la aplicación Web y seleccione **administrar aplicación** y, a continuación, **examinar**.  
   
