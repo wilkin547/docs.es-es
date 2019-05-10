@@ -2,12 +2,12 @@
 title: Habilitar dinámicamente la traza analítica
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fc157e6612a59640aef557b57e5e2dd9e91cb529
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999475"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584333"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Habilitar dinámicamente la traza analítica
 Con las herramientas que se distribuyen con el sistema operativo Windows, puede habilitar o deshabilitar la traza de forma dinámica mediante el Seguimiento de eventos para Windows (ETW). Para todos los [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] servicios Windows Communication Foundation (WCF), traza analítica puede habilitarse y deshabilitarse de forma dinámica sin modificar el archivo Web.config de la aplicación o reiniciar el servicio. Esto permite que la aplicación que emite los eventos de traza siga sin más.  

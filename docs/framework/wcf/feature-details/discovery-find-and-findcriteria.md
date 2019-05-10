@@ -2,12 +2,12 @@
 title: Búsqueda de detección y FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 097027026afa6099f85dee1485fa3a451bb8fefd
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856523"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912698"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Búsqueda de detección y FindCriteria
 La operación de búsqueda de detección la inicia un cliente para detectar uno o más servicios, y es una de las acciones principales en detección. Al realizar una búsqueda, se envía un mensaje de sondeo de WS-Discovery a través de la red. Los servicios que coinciden con los criterios especificados responden con mensajes ProbeMatch de WS-Discovery. Para obtener más información acerca de los mensajes de detección, consulte el [especificación WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -20,21 +20,21 @@ La operación de búsqueda de detección la inicia un cliente para detectar uno 
   
  Los criterios de búsqueda incluyen:  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> (opcional). El nombre del contrato del servicio que se busca y los criterios normalmente utilizados al buscar un servicio. Si se especifica más de un nombre de contrato, solo responderán los extremos del servicio que coincidan con TODOS los contratos. Tenga en cuenta que en WCF un punto de conexión sólo puede admitir un contrato.  
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> (opcional). El nombre del contrato del servicio que se busca y los criterios normalmente utilizados al buscar un servicio. Si se especifica más de un nombre de contrato, solo responderán los extremos del servicio que coincidan con TODOS los contratos. Tenga en cuenta que en WCF un punto de conexión sólo puede admitir un contrato.  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> (opcional). Los ámbitos son URI absolutos que se usan para categorizar puntos de conexión de servicio individuales. Puede que quiera usar esto en casos en los que varios extremos expongan el mismo contrato y desee averiguar un método para buscar un subconjunto de extremos. Si se especifica más de un ámbito, solo responderán los puntos de conexión de servicio que coincidan con TODOS los ámbitos.  
+- <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> (opcional). Los ámbitos son URI absolutos que se usan para categorizar puntos de conexión de servicio individuales. Puede que quiera usar esto en casos en los que varios extremos expongan el mismo contrato y desee averiguar un método para buscar un subconjunto de extremos. Si se especifica más de un ámbito, solo responderán los puntos de conexión de servicio que coincidan con TODOS los ámbitos.  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A>. Especifica el algoritmo de coincidencia que se va a usar al establecer las coincidencias de los ámbitos del mensaje de sondeo con los del extremo. Hay cinco reglas de coincidencia de ámbito admitidas:  
+- <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A>. Especifica el algoritmo de coincidencia que se va a usar al establecer las coincidencias de los ámbitos del mensaje de sondeo con los del extremo. Hay cinco reglas de coincidencia de ámbito admitidas:  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> realiza una comparación básica de cadenas con distinción entre mayúsculas y minúsculas.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> realiza una comparación básica de cadenas con distinción entre mayúsculas y minúsculas.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> coincide por segmentos separados por "/". Una búsqueda de `http://contoso/building1` coincide con un servicio con ámbito `http://contoso/building/floor1`. Tenga en cuenta que no coincide `http://contoso/building100` porque los dos últimos segmentos no coinciden.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> coincide por segmentos separados por "/". Una búsqueda de `http://contoso/building1` coincide con un servicio con ámbito `http://contoso/building/floor1`. Tenga en cuenta que no coincide `http://contoso/building100` porque los dos últimos segmentos no coinciden.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> coincide con ámbitos por segmentos mediante una dirección LDAP URL.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> coincide con ámbitos por segmentos mediante una dirección LDAP URL.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> coincide con ámbitos que usan una cadena del UUID exactamente.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> coincide con ámbitos que usan una cadena del UUID exactamente.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> solo coincide con los servicios que no especifican un ámbito.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> solo coincide con los servicios que no especifican un ámbito.  
   
      Si no se especifica una regla de coincidencia de ámbito, se usa <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix>.  
   

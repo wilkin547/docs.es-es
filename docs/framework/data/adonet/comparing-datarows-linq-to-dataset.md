@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 2b45a4629474c394c8e49c41a7a98fc1181e124b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0903aac366426e8b4d271ae4bfaa54c79a198e5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077178"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583752"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>Comparar objetos DataRow (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] define varios operadores de conjuntos para comparar elementos de origen y ver si son iguales. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] proporciona los siguientes operadores de conjuntos:  
   
--   <xref:System.Linq.Enumerable.Distinct%2A>  
+- <xref:System.Linq.Enumerable.Distinct%2A>  
   
--   <xref:System.Linq.Enumerable.Union%2A>  
+- <xref:System.Linq.Enumerable.Union%2A>  
   
--   <xref:System.Linq.Enumerable.Intersect%2A>  
+- <xref:System.Linq.Enumerable.Intersect%2A>  
   
--   <xref:System.Linq.Enumerable.Except%2A>  
+- <xref:System.Linq.Enumerable.Except%2A>  
   
  Estos operadores comparan elementos origen llamando a los métodos <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> y <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> de cada colección de elementos. En el caso de <xref:System.Data.DataRow>, estos operadores realizan una comparación de referencia, lo que en general no constituye un comportamiento ideal para operaciones de conjunto en datos tabulares. Para las operaciones de conjuntos, por lo general deseará determinar si los valores del elemento son iguales o no a las referencias del elemento. Por ello, se ha agregado la clase <xref:System.Data.DataRowComparer> a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Esta clase se puede utilizar para comparar valores de fila.  
   

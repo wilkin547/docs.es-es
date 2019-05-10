@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6aae66de973c357b4b87578221a169bf750739fb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001581"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599015"
 ---
 # <a name="input-overview"></a>Información general sobre acciones del usuario
 <a name="introduction"></a> El [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un eficaz subsistema [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] para obtener datos desde una variedad de dispositivos, incluido el mouse, teclado, táctil y lápiz. En este tema se describen los servicios que proporciona [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y se explica la arquitectura de los sistemas de entrada.

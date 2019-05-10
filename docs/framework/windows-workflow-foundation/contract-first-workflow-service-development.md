@@ -2,12 +2,12 @@
 title: Desarrollo de servicio de flujo de trabajo de contrato primero
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2fcc0054a3e4c9dd2152344617c8506c9ce6b0d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774210"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587603"
 ---
 # <a name="contract-first-workflow-service-development"></a>Desarrollo de servicio de flujo de trabajo de contrato primero
 A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], las características de Windows Workflow Foundation (WF) una mejor integración entre los servicios web y flujos de trabajo en forma de desarrollo de flujo de trabajo de contrato primero. La herramienta de desarrollo de flujo de trabajo de contrato primero permite diseñar el contrato en Code First. La herramienta después genera automáticamente una plantilla de actividad en el cuadro de herramientas para las operaciones del contrato. Este tema proporciona información general sobre cómo se asignan las actividades y las propiedades de un servicio de flujo de trabajo a los atributos de un contrato de servicio. Para obtener un ejemplo paso a paso de creación de un servicio de flujo de trabajo de contrato primero, vea [Cómo: Crear un servicio de flujo de trabajo que consuma un contrato de servicio existente](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  

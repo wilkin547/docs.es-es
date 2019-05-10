@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: dfbdcf29e0fc003f9478e6f691957b67574d5233
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34357ac313e20c5bab5505984f92ea06df80a5c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680668"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595400"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Excepciones y control de excepciones (Guía de programación de C#)
 Las características de control de excepciones del lenguaje C# le ayudan a afrontar cualquier situación inesperada o excepcional que se produce cuando se ejecuta un programa. El control de excepciones usa las palabras clave `try`, `catch` y `finally` para intentar realizar acciones que pueden no completarse correctamente, para controlar errores cuando decide que es razonable hacerlo y para limpiar recursos más adelante. Las excepciones las puede generar Common Language Runtime (CLR), .NET Framework, cualquier biblioteca de terceros o el código de aplicación. Las excepciones se crean mediante el uso de la palabra clave `throw`.  
@@ -26,40 +26,40 @@ Las características de control de excepciones del lenguaje C# le ayudan a afron
 ## <a name="exceptions-overview"></a>Información general sobre excepciones  
  Las excepciones tienen las siguientes propiedades:  
   
--   Las excepciones son tipos que derivan en última instancia de `System.Exception`.  
+- Las excepciones son tipos que derivan en última instancia de `System.Exception`.  
   
--   Use un bloque `try` alrededor de las instrucciones que pueden producir excepciones.  
+- Use un bloque `try` alrededor de las instrucciones que pueden producir excepciones.  
   
--   Una vez que se produce una excepción en el bloque `try`, el flujo de control salta al primer controlador de excepciones asociado que está presente en cualquier parte de la pila de llamadas. En C#, la palabra clave `catch` se utiliza para definir un controlador de excepciones.  
+- Una vez que se produce una excepción en el bloque `try`, el flujo de control salta al primer controlador de excepciones asociado que está presente en cualquier parte de la pila de llamadas. En C#, la palabra clave `catch` se utiliza para definir un controlador de excepciones.  
   
--   Si no hay ningún controlador de excepciones para una excepción determinada, el programa deja de ejecutarse con un mensaje de error.  
+- Si no hay ningún controlador de excepciones para una excepción determinada, el programa deja de ejecutarse con un mensaje de error.  
   
--   No detecte una excepción a menos que pueda controlarla y dejar la aplicación en un estado conocido. Si se detecta `System.Exception`, reinícielo con la palabra clave `throw` al final del bloque `catch`.  
+- No detecte una excepción a menos que pueda controlarla y dejar la aplicación en un estado conocido. Si se detecta `System.Exception`, reinícielo con la palabra clave `throw` al final del bloque `catch`.  
   
--   Si un bloque `catch` define una variable de excepción, puede utilizarla para obtener más información sobre el tipo de excepción que se ha producido.  
+- Si un bloque `catch` define una variable de excepción, puede utilizarla para obtener más información sobre el tipo de excepción que se ha producido.  
   
--   Las excepciones puede generarlas explícitamente un programa con la palabra clave `throw`.  
+- Las excepciones puede generarlas explícitamente un programa con la palabra clave `throw`.  
   
--   Los objetos de excepción contienen información detallada sobre el error, como el estado de la pila de llamadas y una descripción de texto del error.  
+- Los objetos de excepción contienen información detallada sobre el error, como el estado de la pila de llamadas y una descripción de texto del error.  
   
--   El código de un bloque `finally` se ejecuta incluso si se produce una excepción. Use un bloque `finally` para liberar recursos, por ejemplo, para cerrar las secuencias o los archivos que se abrieron en el bloque `try`.  
+- El código de un bloque `finally` se ejecuta incluso si se produce una excepción. Use un bloque `finally` para liberar recursos, por ejemplo, para cerrar las secuencias o los archivos que se abrieron en el bloque `try`.  
   
--   Las excepciones administradas de .NET Framework se implementan en el mecanismo de control de excepciones estructurado de Win32. Para más información, vea [Control de excepciones estructurado (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) y [A Crash Course on the Depths of Win32 Structured Exception Handling](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm) (Curso intensivo sobre los aspectos específicos del control de excepciones estructurado de Win32).  
+- Las excepciones administradas de .NET Framework se implementan en el mecanismo de control de excepciones estructurado de Win32. Para más información, vea [Control de excepciones estructurado (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) y [A Crash Course on the Depths of Win32 Structured Exception Handling](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm) (Curso intensivo sobre los aspectos específicos del control de excepciones estructurado de Win32).  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  Vea los temas siguientes para obtener más información sobre excepciones y control de excepciones:  
   
--   [Utilizar excepciones](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
+- [Utilizar excepciones](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
   
--   [Control de excepciones](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [Control de excepciones](../../../csharp/programming-guide/exceptions/exception-handling.md)  
   
--   [Crear y producir excepciones](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
+- [Crear y producir excepciones](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
   
--   [Excepciones generadas por el compilador](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
+- [Excepciones generadas por el compilador](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
   
--   [Cómo: Controlar una excepción mediante Try y Catch (Guía de programación de C#)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+- [Cómo: Controlar una excepción mediante Try y Catch (Guía de programación de C#)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
   
--   [Cómo: Ejecutar código de limpieza mediante finally](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
+- [Cómo: Ejecutar código de limpieza mediante finally](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
 

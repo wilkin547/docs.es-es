@@ -12,21 +12,21 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 88002e2c099ed9503beddb190d243aadcc1087fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f69ed6e0040f33f810d324a76859d448e9dc7632
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908029"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601142"
 ---
 # <a name="array-conversions-visual-basic"></a>Conversión de matrices (Visual Basic)
 Puede convertir un tipo de matriz a un tipo de matriz diferente siempre que se cumplan las condiciones siguientes:  
   
--   **Rango igual.** Los rangos de las dos matrices deben ser el mismo, es decir, deben tener el mismo número de dimensiones. Sin embargo, las longitudes de las dimensiones correspondientes no es necesario ser el mismo.  
+- **Rango igual.** Los rangos de las dos matrices deben ser el mismo, es decir, deben tener el mismo número de dimensiones. Sin embargo, las longitudes de las dimensiones correspondientes no es necesario ser el mismo.  
   
--   **Tipo de datos del elemento.** Los tipos de datos de los elementos de ambas matrices deben ser tipos de referencia. No puede convertir un `Integer` de matriz a un `Long` de matriz, o incluso en un `Object` de matriz, porque al menos un tipo de valor participa. Para obtener más información, consulta [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+- **Tipo de datos del elemento.** Los tipos de datos de los elementos de ambas matrices deben ser tipos de referencia. No puede convertir un `Integer` de matriz a un `Long` de matriz, o incluso en un `Object` de matriz, porque al menos un tipo de valor participa. Para obtener más información, consulta [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
--   **Conversión de varianza.** Una conversión de ampliación o restricción, debe ser posible entre los tipos de elemento de las dos matrices. Un ejemplo que no cumple este requisito es un intento de conversión entre una `String` matriz y una matriz de una clase derivan de <xref:System.Attribute?displayProperty=nameWithType>. Estos dos tipos no tienen nada en común y no existe ninguna conversión de ningún tipo entre ellos.  
+- **Conversión de varianza.** Una conversión de ampliación o restricción, debe ser posible entre los tipos de elemento de las dos matrices. Un ejemplo que no cumple este requisito es un intento de conversión entre una `String` matriz y una matriz de una clase derivan de <xref:System.Attribute?displayProperty=nameWithType>. Estos dos tipos no tienen nada en común y no existe ninguna conversión de ningún tipo entre ellos.  
   
  Una conversión de tipo de uno matriz a otro es ampliación o restricción dependiendo de si la conversión de los respectivos elementos es de ampliación o restricción. Para obtener más información, consulta [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   

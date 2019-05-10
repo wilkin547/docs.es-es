@@ -2,25 +2,25 @@
 title: Rehospedaje del diseñador
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c67bdc5715a95e3f4252fc9ab0c7b151ddddc6cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005238"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583709"
 ---
 # <a name="designer-rehosting"></a>Rehospedaje del diseñador
 El rehospedaje del diseñador es un escenario común que hace referencia al hospedaje del lienzo de diseño de flujo de trabajo dentro de una aplicación personalizada. La aplicación de hospedaje con la que están familiarizados la mayoría de los usuarios es Visual Studio; sin embargo, hay varios escenarios donde puede resultar útil mostrar el diseñador de flujo de trabajo en una aplicación:  
   
--   Aplicaciones de supervisión (que permiten a un usuario final visualizar el proceso, así como datos en tiempo de ejecución sobre el proceso, como el estado activo actual, los datos de tiempo de ejecución agregados o información de otro tipo sobre una instancia del flujo de trabajo).  
+- Aplicaciones de supervisión (que permiten a un usuario final visualizar el proceso, así como datos en tiempo de ejecución sobre el proceso, como el estado activo actual, los datos de tiempo de ejecución agregados o información de otro tipo sobre una instancia del flujo de trabajo).  
   
--   Aplicaciones que permiten a un usuario personalizar el proceso con un conjunto limitado de actividades.  
+- Aplicaciones que permiten a un usuario personalizar el proceso con un conjunto limitado de actividades.  
   
  Para admitir estos tipos de aplicaciones, el diseñador de flujo de trabajo se distribuye dentro de .NET Framework y se puede hospedar dentro de una aplicación WPF o en una aplicación Winforms con el código de hospedaje de WPF adecuado. En este ejemplo se explica cómo:  
   
--   Rehospedar el diseñador WF.  
+- Rehospedar el diseñador WF.  
   
--   Utilizar el cuadro de herramientas y la cuadrícula de propiedad hospedados en otro host.  
+- Utilizar el cuadro de herramientas y la cuadrícula de propiedad hospedados en otro host.  
   
 ## <a name="rehosting-the-designer"></a>Rehospedar el diseñador  
  En este ejemplo se muestra cómo crear el diseño de WPF para contener el diseñador, que se ve en el siguiente diseño de cuadrícula (el código del cuadro de herramientas se omite por problemas de espacio). Tenga en cuenta la denominación de los bordes que contienen el diseñador y la cuadrícula de propiedad.  

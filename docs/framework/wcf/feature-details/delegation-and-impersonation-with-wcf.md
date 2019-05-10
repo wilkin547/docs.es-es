@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f86636cd244ce53ed00f80b38777e78a3278d6f
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856719"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912504"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegación y suplantación con WCF
 La*suplantación* es una técnica habitual que utilizan los servicios para restringir el acceso de los clientes a los recursos de un dominio de servicio. Los recursos de dominio de servicio pueden ser recursos de equipo, como archivos locales (suplantación), o un recurso en otro equipo, como un recurso compartido de archivos (delegación). Para obtener una aplicación de ejemplo, consulte [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obtener un ejemplo de cómo utilizar la suplantación, vea [Cómo: Suplantar un cliente en un servicio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -37,22 +37,22 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
 ### <a name="cached-token-impersonation"></a>Suplantación del token almacenado en caché  
  Puede realizar la suplantación del token almacenado en caché con lo siguiente:  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>y <xref:System.ServiceModel.NetTcpBinding> con una credencial de cliente de Windows.  
+- <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>y <xref:System.ServiceModel.NetTcpBinding> con una credencial de cliente de Windows.  
   
--   <xref:System.ServiceModel.BasicHttpBinding> con <xref:System.ServiceModel.BasicHttpSecurityMode> definido en la credencial <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> , o cualquier otro enlace estándar donde el cliente presenta una credencial del nombre de usuario que el servicio puede asignar a una cuenta válida de Windows.  
+- <xref:System.ServiceModel.BasicHttpBinding> con <xref:System.ServiceModel.BasicHttpSecurityMode> definido en la credencial <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> , o cualquier otro enlace estándar donde el cliente presenta una credencial del nombre de usuario que el servicio puede asignar a una cuenta válida de Windows.  
   
--   Cualquier <xref:System.ServiceModel.Channels.CustomBinding> que utiliza una credencial de cliente de Windows con `requireCancellation` definido en `true`. (La propiedad está disponible en las clases siguientes: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> y <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) Si se utiliza una conversación segura en el enlace, también debe tener la propiedad `requireCancellation` establecida en `true`.  
+- Cualquier <xref:System.ServiceModel.Channels.CustomBinding> que utiliza una credencial de cliente de Windows con `requireCancellation` definido en `true`. (La propiedad está disponible en las clases siguientes: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> y <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) Si se utiliza una conversación segura en el enlace, también debe tener la propiedad `requireCancellation` establecida en `true`.  
   
--   Cualquier <xref:System.ServiceModel.Channels.CustomBinding> donde el cliente presenta una credencial de nombre de usuario. Si se utiliza una conversación segura en el enlace, también debe tener la propiedad `requireCancellation` establecida en `true`.  
+- Cualquier <xref:System.ServiceModel.Channels.CustomBinding> donde el cliente presenta una credencial de nombre de usuario. Si se utiliza una conversación segura en el enlace, también debe tener la propiedad `requireCancellation` establecida en `true`.  
   
 ### <a name="s4u-based-impersonation"></a>Suplantación basada en S4U  
  Puede realizar la suplantación basada en S4U con lo siguiente:  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>y <xref:System.ServiceModel.NetTcpBinding> con una credencial de certificado de cliente que el servicio puede asignar a una cuenta de Windows válida.  
+- <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>y <xref:System.ServiceModel.NetTcpBinding> con una credencial de certificado de cliente que el servicio puede asignar a una cuenta de Windows válida.  
   
--   Cualquier <xref:System.ServiceModel.Channels.CustomBinding> que utiliza una credencial de cliente de Windows con la propiedad `requireCancellation` definida en `false`.  
+- Cualquier <xref:System.ServiceModel.Channels.CustomBinding> que utiliza una credencial de cliente de Windows con la propiedad `requireCancellation` definida en `false`.  
   
--   Cualquier <xref:System.ServiceModel.Channels.CustomBinding> que utiliza un nombre de usuario o credencial de cliente de Windows y una conversación segura con la propiedad `requireCancellation` establecida en `false`.  
+- Cualquier <xref:System.ServiceModel.Channels.CustomBinding> que utiliza un nombre de usuario o credencial de cliente de Windows y una conversación segura con la propiedad `requireCancellation` establecida en `false`.  
   
  Hasta qué punto el servicio puede suplantar al cliente depende de los privilegios que la cuenta de servicio contiene al intentar suplantar, el tipo de suplantación utilizado y posiblemente hasta qué punto el cliente permite la suplantación.  
   
@@ -201,9 +201,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
  Para obtener instrucciones detalladas acerca de la configuración de la delegación restringida, vea los siguientes temas en MSDN:  
   
--   [Solucionar los errores de la delegación Kerberos](https://go.microsoft.com/fwlink/?LinkId=36724)  
+- [Solucionar los errores de la delegación Kerberos](https://go.microsoft.com/fwlink/?LinkId=36724)  
   
--   [Delegación restringida y transición del protocolo Kerberos](https://go.microsoft.com/fwlink/?LinkId=36725)  
+- [Delegación restringida y transición del protocolo Kerberos](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>Vea también
 

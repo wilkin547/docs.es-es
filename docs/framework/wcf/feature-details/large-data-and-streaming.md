@@ -2,12 +2,12 @@
 title: Datos de gran tamaño y secuencias
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 55001904557efa1c3136a4f619348296681986ed
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038615"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585046"
 ---
 # <a name="large-data-and-streaming"></a>Datos de gran tamaño y secuencias
 Windows Communication Foundation (WCF) es una infraestructura de comunicaciones basado en XML. Dado que los datos XML se codifican habitualmente en el formato de texto estándar definido en el [especificación XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838)conectados los arquitectos y desarrolladores de sistemas normalmente están preocupados por la superficie de la conexión (o tamaño) de los mensajes enviados a través de la red y la codificación basada en texto de XML plantea desafíos especiales para la transferencia eficaz de los datos binarios.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a906db44a548361df2822efa24d1dd1849cb5a24
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954939"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063740"
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Procedimiento para disponer una forma en mosaico con una imagen
 Igual que los iconos se pueden colocar juntos para cubrir un piso, se pueden colocar imágenes rectangulares junto a la otra para rellenar una forma (mosaico). El interior de una forma de mosaico, utilice un pincel de textura. Cuando se construye un <xref:System.Drawing.TextureBrush> de objetos, uno de los argumentos que pasa al constructor es un <xref:System.Drawing.Image> objeto. Cuando se usa el pincel de textura para pintar el interior de una forma, la forma se rellena con las copias repetidas de esta imagen.  
@@ -26,11 +26,11 @@ Igual que los iconos se pueden colocar juntos para cubrir un piso, se pueden col
   
 - Este ejemplo utiliza la siguiente imagen de 75 × 75 para disponer en mosaico un rectángulo de 200 × 200.  
   
- ![Icono 1](./media/tile1.gif "tile1")  
+ ![La imagen de icono que muestra una casa rojo y un árbol.](./media/how-to-tile-a-shape-with-an-image/rectangle-tile-200x200.gif)  
   
 - La siguiente ilustración muestra cómo se coloca en mosaico el rectángulo con la imagen. Tenga en cuenta que todos los iconos tienen la misma orientación; No hay ningún giro.  
   
- ![Icono 2](./media/tile2.gif "tile2")  
+ ![Un rectángulo en mosaico con la imagen con la orientación de la misma para todos los iconos.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-no-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingABrush#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#31)]  
@@ -39,7 +39,7 @@ Igual que los iconos se pueden colocar juntos para cubrir un piso, se pueden col
   
 - Este ejemplo utiliza la misma imagen de 75 × 75 para rellenar un rectángulo de 200 × 200. El modo de ajuste se establece en la imagen se voltea horizontalmente. La siguiente ilustración muestra cómo se coloca en mosaico el rectángulo con la imagen. Tenga en cuenta que, al desplazarse de un mosaico a la siguiente en una fila determinada, la imagen se voltea horizontalmente.  
   
- ![Icono 3](./media/tile3.gif "tile3")  
+ ![Un rectángulo en mosaico con la imagen se voltea horizontalmente.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-horizontal-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.UsingABrush#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#32)]  
@@ -55,7 +55,7 @@ Igual que los iconos se pueden colocar juntos para cubrir un piso, se pueden col
   
 - Este ejemplo utiliza la misma imagen de 75 × 75 para disponer en mosaico un rectángulo de 200 × 200. Se establece el modo de ajuste se voltea la imagen horizontal y verticalmente. La siguiente ilustración muestra cómo el rectángulo se coloca en mosaico la imagen. Tenga en cuenta que, al desplazarse de un mosaico a la siguiente en una fila determinada, la imagen se voltea horizontalmente y al mover de un mosaico a la siguiente en una columna determinada, la imagen se voltea verticalmente.  
   
- ![Icono 5](./media/tile5.gif "tile5")  
+ ![Un rectángulo en mosaico con la imagen se voltea horizontalmente y verticalmente.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-horizontal-vertical-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#34](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
