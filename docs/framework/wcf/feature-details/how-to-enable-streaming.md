@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bd1a52f1ce0f656af79928a20e3badc73661e89a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773027"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635305"
 ---
 # <a name="how-to-enable-streaming"></a>Procedimiento para habilitar el streaming
 Windows Communication Foundation (WCF) puede enviar mensajes mediante transferencias almacenadas en búfer o transmitidas. En el modo de transferencia almacenado en búfer (predeterminado), se debe entregar completamente un mensaje antes de que un receptor pueda leerlo. En modo de transferencia de transmisión por secuencias, el receptor puede empezar a procesar el mensaje antes de se entregue completamente. El modo de transmisión por secuencias es útil cuando la información que se pasa es larga y puede procesarse en serie. El modo de transmisión por secuencias también es útil cuando el mensaje es demasiado grande para que se almacene en búfer completamente.  

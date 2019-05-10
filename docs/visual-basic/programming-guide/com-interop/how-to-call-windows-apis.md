@@ -7,12 +7,12 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: e7b76495b83cb9a1dfe7629a1d82695d2046eac2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3769da28e1c9a27c8363b0d6ec639cedaf0f03be
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61818721"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624853"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Procedimiento Llamar a las API de Windows (Visual Basic)
 En este ejemplo se define y se llama a la `MessageBox` función en user32.dll y, a continuación, se le pasa una cadena.  
@@ -23,16 +23,16 @@ En este ejemplo se define y se llama a la `MessageBox` función en user32.dll y,
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Una referencia al espacio de nombres <xref:System>.  
+- Una referencia al espacio de nombres <xref:System>.  
   
 ## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  
   
--   El método no es estático, es abstracto o se ha definido anteriormente. El tipo primario es una interfaz o la longitud de *nombre* o *dllName* es cero. (<xref:System.ArgumentException>)  
+- El método no es estático, es abstracto o se ha definido anteriormente. El tipo primario es una interfaz o la longitud de *nombre* o *dllName* es cero. (<xref:System.ArgumentException>)  
   
--   El *nombre* o *dllName* es `Nothing`. (<xref:System.ArgumentNullException>)  
+- El *nombre* o *dllName* es `Nothing`. (<xref:System.ArgumentNullException>)  
   
--   Tipo contenedor que se ha creado anteriormente mediante `CreateType`. (<xref:System.InvalidOperationException>)  
+- Tipo contenedor que se ha creado anteriormente mediante `CreateType`. (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>Vea también
 

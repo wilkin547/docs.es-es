@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cde26250db0b3d11c51a18b7ebd378953ae0958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704835"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754675"
 ---
 # <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait > elemento
 
-Especifica si se deshabilita el ciclo de espera para una sección crítica cuando contenidos. \ 
+Especifica si se deshabilita el ciclo de espera para una sección crítica cuando contenidos.  
   
  \<configuration>  
 \<runtime>  
@@ -36,14 +36,14 @@ En las siguientes secciones se describen los atributos, los elementos secundario
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|**enabled**|Especifica si el ciclo de espera para las secciones críticas está habilitada cuando están contenidos.|  
+|**enabled**|Especifica si está deshabilitado el ciclo de espera para las secciones críticas al que están contenidos.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|1|Ciclo de espera está habilitado.|  
-|0|Ciclo de espera está deshabilitado. Este es el valor predeterminado|  
+|1|Deshabilite el ciclo de espera cuando no se puede adquirir una sección crítica.|  
+|0|No deshabilite el ciclo de espera cuando no se puede adquirir una sección crítica. Este es el valor predeterminado.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  

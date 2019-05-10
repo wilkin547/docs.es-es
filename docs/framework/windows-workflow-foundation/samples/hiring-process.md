@@ -2,12 +2,12 @@
 title: Proceso de contratación
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87e49613214a6a608bd8e22dc9470250c90e220a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005061"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622482"
 ---
 # <a name="hiring-process"></a>Proceso de contratación
 Este ejemplo muestra cómo implementar un proceso de negocio mediante actividades de mensajería y dos flujos de trabajo hospedados como servicios de flujo de trabajo. Estos flujos de trabajo son parte de la infraestructura de TI de una compañía ficticia denominada Contoso, Inc.  
@@ -18,35 +18,35 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
  Este ejemplo muestra las siguientes características de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]:  
   
--   Los flujos de trabajo <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Sequence> para modelar los procesos de negocio.  
+- Los flujos de trabajo <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Sequence> para modelar los procesos de negocio.  
   
--   Servicios de flujo de trabajo.  
+- Servicios de flujo de trabajo.  
   
--   Actividades de mensajería.  
+- Actividades de mensajería.  
   
--   Correlación basada en contenido.  
+- Correlación basada en contenido.  
   
--   Actividades personalizadas (declarativas y basadas en código).  
+- Actividades personalizadas (declarativas y basadas en código).  
   
--   Persistencia del servidor SQL proporcionada por el sistema.  
+- Persistencia del servidor SQL proporcionada por el sistema.  
   
--   <xref:System.Activities.Persistence.PersistenceParticipant> personalizado.  
+- <xref:System.Activities.Persistence.PersistenceParticipant> personalizado.  
   
--   Seguimiento personalizado.  
+- Seguimiento personalizado.  
   
--   Seguimiento de eventos para Windows (ETW).  
+- Seguimiento de eventos para Windows (ETW).  
   
--   Composición de actividades.  
+- Composición de actividades.  
   
--   Actividades <xref:System.Activities.Statements.Parallel>.  
+- Actividades <xref:System.Activities.Statements.Parallel>.  
   
--   Actividad <xref:System.Activities.Statements.CancellationScope>.  
+- Actividad <xref:System.Activities.Statements.CancellationScope>.  
   
--   Temporizadores duraderos (actividad<xref:System.Activities.Statements.Delay>).  
+- Temporizadores duraderos (actividad<xref:System.Activities.Statements.Delay>).  
   
--   Transacciones.  
+- Transacciones.  
   
--   Más de un flujo de trabajo en la misma solución.  
+- Más de un flujo de trabajo en la misma solución.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
@@ -64,25 +64,25 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 2. El jefe del solicitante debe aprobar la solicitud:  
   
-    1.  El jefe puede rechazar la solicitud.  
+    1. El jefe puede rechazar la solicitud.  
   
-    2.  El jefe puede devolver la solicitud al solicitante para obtener información adicional:  
+    2. El jefe puede devolver la solicitud al solicitante para obtener información adicional:  
   
-        1.  El solicitante revisa y devuelve la solicitud al jefe.  
+        1. El solicitante revisa y devuelve la solicitud al jefe.  
   
-    3.  El jefe puede dar su aprobación.  
+    3. El jefe puede dar su aprobación.  
   
 3. Después de que el jefe del solicitante da su aprobación, el propietario del departamento debe aprobar la solicitud:  
   
-    1.  El propietario del departamento puede rechazarla.  
+    1. El propietario del departamento puede rechazarla.  
   
-    2.  El propietario del departamento puede aprobarla.  
+    2. El propietario del departamento puede aprobarla.  
   
 4. Después de que el propietario del departamento da su aprobación, el proceso requiere la aprobación de dos responsables de Recursos Humanos o el CEO:  
   
-    1.  El proceso puede pasar al estado de aceptado o rechazado.  
+    1. El proceso puede pasar al estado de aceptado o rechazado.  
   
-    2.  Si se acepta el proceso, se inicia una nueva instancia del flujo de trabajo `ResumeRequest` (`ResumeRequest` se vincula a HiringRequest.csproj a través de una referencia de servicio).  
+    2. Si se acepta el proceso, se inicia una nueva instancia del flujo de trabajo `ResumeRequest` (`ResumeRequest` se vincula a HiringRequest.csproj a través de una referencia de servicio).  
   
  Cuando los responsables aprueban la contratación de un nuevo empleado, Recursos Humanos debe encontrar el candidato adecuado. El segundo flujo de trabajo (`ResumeRequest`, definido en ResumeRequestService.csproj) realiza este proceso. Este flujo de trabajo define el proceso para enviar una publicación de vacante con una oferta de trabajo al sitio web de ofertas de trabajo de Contoso, recibe currículos de los solicitantes y supervisa el estado de la publicación de vacante. Las vacantes están disponibles durante un período de tiempo fijo (hasta que expire) o hasta que un empleado en Contoso decida quitarla. El flujo de trabajo `ResumeRequest` se compone de los siguientes pasos:  
   
@@ -215,19 +215,19 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 2. Si la solución no se compila, compruebe lo siguiente:  
   
-    -   La referencia a `ContosoHR` no no se encuentra en la `InternalClient` o `CareersWebSite` proyectos.  
+    - La referencia a `ContosoHR` no no se encuentra en la `InternalClient` o `CareersWebSite` proyectos.  
   
 3. Si la solución no se ejecuta, compruebe lo siguiente:  
   
-    1.  Todos los servicios se están ejecutando.  
+    1. Todos los servicios se están ejecutando.  
   
-    2.  Las referencias del servicio están actualizadas.  
+    2. Las referencias del servicio están actualizadas.  
   
-        1.  Abra la carpeta App_WebReferences.  
+        1. Abra la carpeta App_WebReferences.  
   
-        2.  Haga clic en **Contoso** y seleccione **actualizar referencias Web/servicio**.  
+        2. Haga clic en **Contoso** y seleccione **actualizar referencias Web/servicio**.  
   
-        3.  Recompile la solución presionando CTRL + MAYÚS + B en Visual Studio.  
+        3. Recompile la solución presionando CTRL + MAYÚS + B en Visual Studio.  
   
 ## <a name="uninstalling"></a>Desinstalación  
   

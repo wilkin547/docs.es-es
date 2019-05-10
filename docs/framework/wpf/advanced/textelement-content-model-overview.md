@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1e1f67440377db95a5e0896b8fd31b1ab720b188
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981882"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630655"
 ---
 # <a name="textelement-content-model-overview"></a>Información general sobre el modelo de contenido de TextElement
 Esta introducción del modelo de contenido describe el contenido compatible con un <xref:System.Windows.Documents.TextElement>. El <xref:System.Windows.Documents.Paragraph> clase es un tipo de <xref:System.Windows.Documents.TextElement>. Un modelo de contenido describe qué objetos o elementos se pueden contener en otros. Esta información general resume el modelo de contenido que se usa para los objetos derivados de <xref:System.Windows.Documents.TextElement>. Para obtener más información, consulte [Flow Document Overview](flow-document-overview.md).  

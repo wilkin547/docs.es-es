@@ -2,21 +2,21 @@
 title: Procedimiento Comparar el contenido de dos carpetas (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 668f72e2a891a9332093b97ebc927c156ad2087c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63027e892fe8404001c6869be33af8cff1bc014a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855717"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644005"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Procedimiento Comparar el contenido de dos carpetas (LINQ) (Visual Basic)
 En este ejemplo se muestran tres maneras de comparar dos listados de archivos:  
   
--   Mediante la consulta de un valor booleano que especifica si las dos listas de archivos son idénticas.  
+- Mediante la consulta de un valor booleano que especifica si las dos listas de archivos son idénticas.  
   
--   Mediante la consulta de la intersección para recuperar los archivos que están en ambas carpetas.  
+- Mediante la consulta de la intersección para recuperar los archivos que están en ambas carpetas.  
   
--   Mediante la consulta de la diferencia de conjuntos para recuperar los archivos que se encuentran en una carpeta, pero no en la otra.  
+- Mediante la consulta de la diferencia de conjuntos para recuperar los archivos que se encuentran en una carpeta, pero no en la otra.  
   
     > [!NOTE]
     >  Las técnicas que se mencionan aquí pueden adaptarse para comparar secuencias de objetos de cualquier tipo.  
