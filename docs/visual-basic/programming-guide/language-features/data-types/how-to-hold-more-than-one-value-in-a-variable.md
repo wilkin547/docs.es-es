@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c3df9873d184ead2de3f82b89a081955ade93b3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906495"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601121"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Procedimiento Contener más de un valor en una Variable (Visual Basic)
 Una variable contiene más de un valor si se declara de un *tipo de datos compuesto*.  
@@ -29,11 +29,11 @@ Una variable contiene más de un valor si se declara de un *tipo de datos compue
   
 2. Si ya no está definido el tipo de datos compuestos, definirlo para que la variable para usarlo.  
   
-    -   Definir una estructura con un [Structure (instrucción)](../../../../visual-basic/language-reference/statements/structure-statement.md).  
+    - Definir una estructura con un [Structure (instrucción)](../../../../visual-basic/language-reference/statements/structure-statement.md).  
   
-    -   Definir una matriz con un [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).  
+    - Definir una matriz con un [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).  
   
-    -   Definir una clase con un [Class (instrucción)](../../../../visual-basic/language-reference/statements/class-statement.md).  
+    - Definir una clase con un [Class (instrucción)](../../../../visual-basic/language-reference/statements/class-statement.md).  
   
 3. Declare la variable con un `Dim` instrucción.  
   

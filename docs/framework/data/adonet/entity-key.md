@@ -2,25 +2,25 @@
 title: clave de entidad
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf8ab7ffacd7565e408e4851ed0f1ef4636b5d80
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879194"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599642"
 ---
 # <a name="entity-key"></a>clave de entidad
 Un *clave de entidad* es un [propiedad](../../../../docs/framework/data/adonet/property.md) o un conjunto de propiedades de un [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) que se usan para determinar la identidad. Las propiedades que constituyen una entidad se eligen en tiempo de diseño. Los valores de las propiedades de clave de entidad deben identificar de forma exclusiva una instancia del tipo de entidad dentro de un [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md) en tiempo de ejecución. Las propiedades que constituyen una clave de entidad se deben elegir de tal forma que garanticen la unicidad de las instancias de un conjunto de entidades.  
   
  Los requisitos para que un conjunto de propiedades sea una clave de entidad son los siguientes:  
   
--   No puede haber dos claves de entidad idénticas en un conjunto de entidades. Es decir, para dos entidades cualesquiera dentro de un conjunto de entidades, los valores de todas las propiedades que constituyen una clave no pueden ser idénticos. Sin embargo, algunos (pero no todos) los valores que constituyen una clave de entidad pueden ser idénticos.  
+- No puede haber dos claves de entidad idénticas en un conjunto de entidades. Es decir, para dos entidades cualesquiera dentro de un conjunto de entidades, los valores de todas las propiedades que constituyen una clave no pueden ser idénticos. Sin embargo, algunos (pero no todos) los valores que constituyen una clave de entidad pueden ser idénticos.  
   
--   Una clave de entidad debe constar de un conjunto de admitir valores NULL, inmutable, [propiedades de tipo primitivo](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
+- Una clave de entidad debe constar de un conjunto de admitir valores NULL, inmutable, [propiedades de tipo primitivo](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
   
--   Las propiedades que constituyen una clave de entidad para un tipo de entidad determinado no pueden cambiar. No se puede designar más de una clave de entidad posible para un tipo de entidad determinado; no se admiten las claves suplentes.  
+- Las propiedades que constituyen una clave de entidad para un tipo de entidad determinado no pueden cambiar. No se puede designar más de una clave de entidad posible para un tipo de entidad determinado; no se admiten las claves suplentes.  
   
--   Cuando una entidad está implicada en una jerarquía de herencia, la entidad raíz debe contener todas las propiedades que constituyen la clave de entidad, y esta se debe definir en el tipo de entidad raíz. Para obtener más información, consulte [Entity Data Model: Herencia](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).  
+- Cuando una entidad está implicada en una jerarquía de herencia, la entidad raíz debe contener todas las propiedades que constituyen la clave de entidad, y esta se debe definir en el tipo de entidad raíz. Para obtener más información, consulte [Entity Data Model: Herencia](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).  
   
 ## <a name="example"></a>Ejemplo  
  El diagrama siguiente muestra un modelo conceptual con tres tipos de entidades: `Book`, `Publisher` y `Author`. Las propiedades de cada tipo de entidad que constituyen su clave de entidad se denotan con "(Key)". Tenga en cuenta que el tipo de entidad `Author` tiene una clave de entidad que consta de dos propiedades, `Name` y `Address`.  

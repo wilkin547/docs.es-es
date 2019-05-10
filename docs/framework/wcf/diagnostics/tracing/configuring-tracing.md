@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c8d4e45035a49a35c32f334895eeae27a1f02a1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912579"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656208"
 ---
 # <a name="configuring-tracing"></a>Configurar seguimiento
 En este tema se describe cómo se puede habilitar el seguimiento, configurar los orígenes de seguimiento para emitir trazas y establecer niveles de seguimiento, establecer el seguimiento y la propagación de actividades para admitir la correlación de seguimiento de un extremo a otro, y establecer escuchas de seguimiento para tener acceso a las trazas.  
@@ -22,9 +22,9 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 ## <a name="enabling-tracing"></a>Habilitar el seguimiento  
  Windows Communication Foundation (WCF) genera los siguientes datos para el seguimiento de diagnóstico:  
   
--   Trazas para los hitos del proceso en todos los componentes de las aplicaciones, como llamadas de operación, excepciones de código, advertencias y otros eventos de procesamiento significativos.  
+- Trazas para los hitos del proceso en todos los componentes de las aplicaciones, como llamadas de operación, excepciones de código, advertencias y otros eventos de procesamiento significativos.  
   
--   Eventos de error de Windows cuando la característica de seguimiento no funciona bien. Consulte [el registro de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+- Eventos de error de Windows cuando la característica de seguimiento no funciona bien. Consulte [el registro de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
  Seguimiento de WCF se basa en la parte superior de <xref:System.Diagnostics>. Para usar el seguimiento, debe definir los orígenes de seguimiento en el archivo de configuración o en el código. WCF define un origen de seguimiento para cada ensamblado WCF. El `System.ServiceModel` origen de seguimiento es el origen de seguimiento WCF más general y graba los hitos del procesamiento a través de la pila de comunicación de WCF de transporte para escribir y salir de código de usuario. El origen de seguimiento `System.ServiceModel.MessageLogging` graba todos los mensajes que fluyen a través del sistema.  
   
@@ -58,19 +58,19 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configurar los orígenes de seguimiento para emitir trazas  
  WCF define un origen de seguimiento para cada ensamblado. Las escuchas definidas para ese origen tienen acceso a las trazas generadas dentro de un ensamblado. Se definen los orígenes de seguimiento siguientes:  
   
--   System.ServiceModel: Registra todas las fases de procesamiento de WCF, cada vez que se lee la configuración, se procesa un mensaje de transporte, seguridad, procesamiento de un mensaje se envía en el código de usuario y así sucesivamente.  
+- System.ServiceModel: Registra todas las fases de procesamiento de WCF, cada vez que se lee la configuración, se procesa un mensaje de transporte, seguridad, procesamiento de un mensaje se envía en el código de usuario y así sucesivamente.  
   
--   System.ServiceModel.MessageLogging: Registra todos los mensajes que fluyen a través del sistema.  
+- System.ServiceModel.MessageLogging: Registra todos los mensajes que fluyen a través del sistema.  
   
--   System.IdentityModel.  
+- System.IdentityModel.  
   
--   System.ServiceModel.Activation.  
+- System.ServiceModel.Activation.  
   
--   System.IO.Log: Registro para la interfaz de .NET Framework para el sistema de archivos de registro comunes (CLFS).  
+- System.IO.Log: Registro para la interfaz de .NET Framework para el sistema de archivos de registro comunes (CLFS).  
   
--   System.Runtime.Serialization: Se registra cuando se leen o escritos los objetos.  
+- System.Runtime.Serialization: Se registra cuando se leen o escritos los objetos.  
   
--   CardSpace.  
+- CardSpace.  
   
  Puede configurar cada origen de seguimiento de manera que se utilice la misma escucha (compartida), como se indica en el ejemplo de configuración siguiente.  
   

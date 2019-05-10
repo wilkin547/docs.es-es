@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 0b517bca3a9e296eb891e30df91c1d32eb357432
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f85acfe7592d7b90423107e0d45bb007fce5f4a8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907223"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601154"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Uso eficiente de tipos de datos (Visual Basic)
 Las variables no declaradas y las variables declaradas sin un tipo de datos se asignan los `Object` tipo de datos. Esto resulta muy fácil escribir programas rápidamente, pero puede hacer que se ejecute más lentamente.  
@@ -26,11 +26,11 @@ Las variables no declaradas y las variables declaradas sin un tipo de datos se a
 ## <a name="strong-typing"></a>Permite establecer tipado fuerte  
  Especificar los tipos de datos para todas las variables se conoce como *establecimiento inflexible de tipos*. Uso de establecimiento inflexible de tipos tiene varias ventajas:  
   
--   Habilita la compatibilidad con IntelliSense para las variables. Esto le permite ver sus propiedades y otros miembros a medida que escribe en el código.  
+- Habilita la compatibilidad con IntelliSense para las variables. Esto le permite ver sus propiedades y otros miembros a medida que escribe en el código.  
   
--   Aprovecha de la comprobación de tipos del compilador. Esto detecta las instrucciones que se pueden producir un error en tiempo de ejecución debido a errores, como el desbordamiento. También detecta llamadas a métodos en objetos que no las admiten.  
+- Aprovecha de la comprobación de tipos del compilador. Esto detecta las instrucciones que se pueden producir un error en tiempo de ejecución debido a errores, como el desbordamiento. También detecta llamadas a métodos en objetos que no las admiten.  
   
--   Se produce una ejecución más rápida del código.  
+- Se produce una ejecución más rápida del código.  
   
 ## <a name="most-efficient-data-types"></a>Tipos de datos más eficaces  
  Para las variables que no contienen nunca fracciones, los tipos de datos enteros son más eficaces que los tipos no integrales. En Visual Basic, `Integer` y `UInteger` son los tipos numéricos más eficaces.  

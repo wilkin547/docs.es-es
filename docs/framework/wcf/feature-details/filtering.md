@@ -2,12 +2,12 @@
 title: Filtrado
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46716d1a96da6ddc729992b546be56c2aec0bf5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856705"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593499"
 ---
 # <a name="filtering"></a>Filtrado
 Windows Communication Foundation (WCF) del sistema de filtrado puede usar los filtros declarativos para igualar mensajes y tomar decisiones operativas. Puede utilizar filtros para determinar qué hacer con un mensaje examinando parte del mensaje. Un proceso de cola, por ejemplo, puede utilizar una consulta de XPath 1.0 para comprobar el elemento de prioridad de un encabezado conocido para determinar si poner un mensaje al principio de la cola.  
@@ -36,9 +36,9 @@ Windows Communication Foundation (WCF) del sistema de filtrado puede usar los fi
 ### <a name="endpoint-address-filters"></a>Filtros de dirección de punto de conexión  
  El <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtra los mensajes y búferes de mensajes basándose en una dirección de extremo, tal y como se representa en su colección de encabezados. Para que un mensaje pase un filtro de este tipo, se deben cumplir las condiciones siguientes:  
   
--   El Identificador uniforme de recursos (URI) de la dirección del filtro debe ser la misma que la del mensaje del encabezado To.  
+- El Identificador uniforme de recursos (URI) de la dirección del filtro debe ser la misma que la del mensaje del encabezado To.  
   
--   Cada parámetro de punto de conexión en la dirección del filtro (colección`address.Headers`) debe encontrar un encabezado en el mensaje para realizar la asignación. Los encabezados adicionales en el mensaje o búfer del mensaje son aceptables para que la coincidencia siga siendo `true`.  
+- Cada parámetro de punto de conexión en la dirección del filtro (colección`address.Headers`) debe encontrar un encabezado en el mensaje para realizar la asignación. Los encabezados adicionales en el mensaje o búfer del mensaje son aceptables para que la coincidencia siga siendo `true`.  
   
 ### <a name="prefix-endpoint-address-filters"></a>Filtros de direcciones de puntos de conexión de prefijos  
   
@@ -79,9 +79,9 @@ Windows Communication Foundation (WCF) del sistema de filtrado puede usar los fi
 ### <a name="de-multiplexing"></a>Demultiplexación  
  Cuando varios puntos de conexión abanican se extienden fuera del mismo `ServiceListener` fuera de la conexión, la única manera de demultiplexar los mensajes y saber si pertenecen a una cierta dirección del punto de conexión, consiste en utilizar <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>s que seleccionen mensajes hacia los puntos de conexión registrados mediante una búsqueda en la información almacenada en los encabezados. En estos filtros, solo aquellos mensajes que pasan tienen todos los encabezados necesarios que corresponden a ambos:  
   
--   El URI en la `EndpointAddress`.  
+- El URI en la `EndpointAddress`.  
   
--   El resto de los parámetros de extremo en la `EndpointAddress` tal y como se especifica en el <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
+- El resto de los parámetros de extremo en la `EndpointAddress` tal y como se especifica en el <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
   
 ## <a name="see-also"></a>Vea también
 
