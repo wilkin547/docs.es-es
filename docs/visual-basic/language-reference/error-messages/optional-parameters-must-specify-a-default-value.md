@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-ms.openlocfilehash: 01c0abb366e8605a9b153333e645fc3276b6bd16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0f501b518d5b3f2d48ced33885da2afd353c609e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772598"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665674"
 ---
-# <a name="optional-parameters-must-specify-a-default-value"></a><span data-ttu-id="2b1ef-102">Los parámetros opcionales deben especificar un valor predeterminado</span><span class="sxs-lookup"><span data-stu-id="2b1ef-102">Optional parameters must specify a default value</span></span>
-<span data-ttu-id="2b1ef-103">Parámetros opcionales deben proporcionar valores predeterminados que se pueden usar si no se proporciona ningún parámetro de un procedimiento que realiza la llamada.</span><span class="sxs-lookup"><span data-stu-id="2b1ef-103">Optional parameters must provide default values that can be used if no parameter is supplied by a calling procedure.</span></span>  
+# <a name="optional-parameters-must-specify-a-default-value"></a><span data-ttu-id="e1cb9-102">Los parámetros opcionales deben especificar un valor predeterminado</span><span class="sxs-lookup"><span data-stu-id="e1cb9-102">Optional parameters must specify a default value</span></span>
+<span data-ttu-id="e1cb9-103">Parámetros opcionales deben proporcionar valores predeterminados que se pueden usar si no se proporciona ningún parámetro de un procedimiento que realiza la llamada.</span><span class="sxs-lookup"><span data-stu-id="e1cb9-103">Optional parameters must provide default values that can be used if no parameter is supplied by a calling procedure.</span></span>  
   
- <span data-ttu-id="2b1ef-104">**Identificador de error:** BC30812</span><span class="sxs-lookup"><span data-stu-id="2b1ef-104">**Error ID:** BC30812</span></span>  
+ <span data-ttu-id="e1cb9-104">**Identificador de error:** BC30812</span><span class="sxs-lookup"><span data-stu-id="e1cb9-104">**Error ID:** BC30812</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="2b1ef-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="2b1ef-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e1cb9-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="e1cb9-105">To correct this error</span></span>  
   
-- <span data-ttu-id="2b1ef-106">Especificar valores predeterminados para los parámetros opcionales; Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="2b1ef-106">Specify default values for optional parameters; for example:</span></span>  
+- <span data-ttu-id="e1cb9-106">Especificar valores predeterminados para los parámetros opcionales; Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="e1cb9-106">Specify default values for optional parameters; for example:</span></span>  
   
     ```  
     Sub Proc1(ByVal X As Integer,   
@@ -30,6 +30,6 @@ ms.locfileid: "61772598"
     End Sub  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="2b1ef-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="2b1ef-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1cb9-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="e1cb9-107">See also</span></span>
 
-- [<span data-ttu-id="2b1ef-108">Opcional</span><span class="sxs-lookup"><span data-stu-id="2b1ef-108">Optional</span></span>](../../../visual-basic/language-reference/modifiers/optional.md)
+- [<span data-ttu-id="e1cb9-108">Opcional</span><span class="sxs-lookup"><span data-stu-id="e1cb9-108">Optional</span></span>](../../../visual-basic/language-reference/modifiers/optional.md)
