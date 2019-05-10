@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: 1be9ff06e749d14b46946e899c6ffb6c3a950d65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f36f5bbaaf28963fc95440a4f3a174b8b48f6276
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972177"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651799"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="b2091-102">Procedimiento para mostrar una página web desde un control LinkLabel de formularios Windows Forms (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b2091-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
-<span data-ttu-id="b2091-103">En este ejemplo se muestra una página Web en el explorador predeterminado cuando un usuario hace clic en un formulario Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span><span class="sxs-lookup"><span data-stu-id="b2091-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="ffbdd-102">Procedimiento para mostrar una página web desde un control LinkLabel de formularios Windows Forms (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffbdd-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
+<span data-ttu-id="ffbdd-103">En este ejemplo se muestra una página Web en el explorador predeterminado cuando un usuario hace clic en un formulario Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span><span class="sxs-lookup"><span data-stu-id="ffbdd-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b2091-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b2091-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ffbdd-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ffbdd-104">Example</span></span>  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -37,19 +37,19 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="b2091-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="b2091-105">Compiling the Code</span></span>  
- <span data-ttu-id="b2091-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="b2091-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="ffbdd-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="ffbdd-105">Compiling the Code</span></span>  
+ <span data-ttu-id="ffbdd-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="ffbdd-106">This example requires:</span></span>  
   
-- <span data-ttu-id="b2091-107">Un formulario de Windows denominado `Form1`.</span><span class="sxs-lookup"><span data-stu-id="b2091-107">A Windows Form named `Form1`.</span></span>  
+- <span data-ttu-id="ffbdd-107">Un formulario de Windows denominado `Form1`.</span><span class="sxs-lookup"><span data-stu-id="ffbdd-107">A Windows Form named `Form1`.</span></span>  
   
-- <span data-ttu-id="b2091-108">Control <xref:System.Windows.Forms.LinkLabel> denominado `LinkLabel1`.</span><span class="sxs-lookup"><span data-stu-id="b2091-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
+- <span data-ttu-id="ffbdd-108">Control <xref:System.Windows.Forms.LinkLabel> denominado `LinkLabel1`.</span><span class="sxs-lookup"><span data-stu-id="ffbdd-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
   
-- <span data-ttu-id="b2091-109">Una conexión activa a Internet.</span><span class="sxs-lookup"><span data-stu-id="b2091-109">An active Internet connection.</span></span>  
+- <span data-ttu-id="ffbdd-109">Una conexión activa a Internet.</span><span class="sxs-lookup"><span data-stu-id="ffbdd-109">An active Internet connection.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="b2091-110">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="b2091-110">.NET Framework Security</span></span>  
- <span data-ttu-id="b2091-111">La llamada a la <xref:System.Diagnostics.Process.Start%2A> método requiere plena confianza.</span><span class="sxs-lookup"><span data-stu-id="b2091-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="b2091-112">Para obtener más información, consulta <xref:System.Security.SecurityException>.</span><span class="sxs-lookup"><span data-stu-id="b2091-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="ffbdd-110">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ffbdd-110">.NET Framework Security</span></span>  
+ <span data-ttu-id="ffbdd-111">La llamada a la <xref:System.Diagnostics.Process.Start%2A> método requiere plena confianza.</span><span class="sxs-lookup"><span data-stu-id="ffbdd-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="ffbdd-112">Para obtener más información, consulta <xref:System.Security.SecurityException>.</span><span class="sxs-lookup"><span data-stu-id="ffbdd-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2091-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="b2091-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ffbdd-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="ffbdd-113">See also</span></span>
 
 - <xref:System.Windows.Forms.LinkLabel>
-- [<span data-ttu-id="b2091-114">LinkLabel (control)</span><span class="sxs-lookup"><span data-stu-id="b2091-114">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)
+- [<span data-ttu-id="ffbdd-114">LinkLabel (control)</span><span class="sxs-lookup"><span data-stu-id="ffbdd-114">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)
