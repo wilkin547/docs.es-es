@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c284e37ce32848ab22ca9ff6cc2ca2a8e6df9cb6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696916"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614508"
 ---
 # <a name="security-wpf"></a>Seguridad (WPF)
 <a name="introduction"></a> Al desarrollar aplicaciones hospedadas en explorador y Windows Presentation Foundation (WPF) independiente, debe tener en cuenta el modelo de seguridad. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] las aplicaciones independientes que se ejecutan con permisos restringidos ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** conjunto de permisos), si se implementa mediante Windows Installer (.msi), como con XCopy o [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. No se admite la implementación de aplicaciones de WPF independientes y de confianza parcial con ClickOnce. Sin embargo, una aplicación host de plena confianza puede crear una confianza parcial <xref:System.AppDomain> mediante el modelo de complementos de .NET Framework. Para obtener más información, consulte [información general sobre complementos de WPF](./app-development/wpf-add-ins-overview.md).  

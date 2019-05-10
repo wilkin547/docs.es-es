@@ -2,12 +2,12 @@
 title: Arquitectura de distribución
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 18719c1a6ece24008cc97f36278e3ea8d3355393
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61596367"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606221"
 ---
 # <a name="architecture-of-syndication"></a>Arquitectura de distribución
 La API de distribución está diseñada para proporcionar un modelo de programación neutral en cuanto al formato que permita escribir contenido distribuido en la conexión en una variedad de formatos. El modelo de datos abstracto está compuesto por las siguientes clases:  

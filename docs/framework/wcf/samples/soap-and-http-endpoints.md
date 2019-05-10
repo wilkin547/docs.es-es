@@ -2,12 +2,12 @@
 title: Extremos SOAP y HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c07391ccd1f8db6e5d2cb6e0c24fc06152d7517f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007825"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617518"
 ---
 # <a name="soap-and-http-endpoints"></a>Extremos SOAP y HTTP
 Este ejemplo muestra cómo implementar un servicio basado en RPC y exponerlo en el formato SOAP y el formato "Plain Old XML" (POX) mediante el modelo de programación Web de WCF. Consulte la [servicio HTTP básico](../../../../docs/framework/wcf/samples/basic-http-service.md) ejemplo para obtener más detalles sobre el enlace HTTP para el servicio. Este ejemplo se centra en los detalles relativos a la exposición del mismo servicio a través de SOAP y HTTP utilizando enlaces diferentes.  

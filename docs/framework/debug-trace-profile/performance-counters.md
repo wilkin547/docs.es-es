@@ -8,31 +8,31 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af558e6712d58e208bf05cdb7a0f847ec4517f0f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874477"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614304"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de rendimiento de .NET Framework
 En este tema se proporciona una lista de contadores de rendimiento que se puede encontrar en el [Monitor de rendimiento de Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
   
--   [Contadores de rendimiento de excepciones](#exception)  
+- [Contadores de rendimiento de excepciones](#exception)  
   
--   [Contadores de rendimiento interoperativos](#interop)  
+- [Contadores de rendimiento interoperativos](#interop)  
   
--   [Contadores de rendimiento JIT](#jit)  
+- [Contadores de rendimiento JIT](#jit)  
   
--   [Contadores de rendimiento de carga](#loading)  
+- [Contadores de rendimiento de carga](#loading)  
   
--   [Contadores de rendimiento de bloqueos y subprocesos](#lockthread)  
+- [Contadores de rendimiento de bloqueos y subprocesos](#lockthread)  
   
--   [Contadores de rendimiento de memoria](#memory)  
+- [Contadores de rendimiento de memoria](#memory)  
   
--   [Contadores de rendimiento de redes](#networking)  
+- [Contadores de rendimiento de redes](#networking)  
   
--   [Contadores de rendimiento de seguridad](#security)  
+- [Contadores de rendimiento de seguridad](#security)  
   
 <a name="exception"></a>   
 ## <a name="exception-performance-counters"></a>Contadores de rendimiento de excepciones  
@@ -161,21 +161,21 @@ En este tema se proporciona una lista de contadores de rendimiento que se puede 
   
  Se admiten varias clases de contadores de rendimiento de redes:  
   
--   Contadores de eventos que miden el número de veces que se produjo un evento.  
+- Contadores de eventos que miden el número de veces que se produjo un evento.  
   
--   Contadores de datos que miden la cantidad de datos enviados o recibidos.  
+- Contadores de datos que miden la cantidad de datos enviados o recibidos.  
   
--   Contadores de duración que miden cuánto duran los diferentes procesos. El tiempo se mide en los objetos cada intervalo (normalmente en segundos) después de salir de estados diferentes.  
+- Contadores de duración que miden cuánto duran los diferentes procesos. El tiempo se mide en los objetos cada intervalo (normalmente en segundos) después de salir de estados diferentes.  
   
--   Contadores por intervalos que miden el número de objetos que están realizando una transición determinada por intervalo (normalmente por segundo).  
+- Contadores por intervalos que miden el número de objetos que están realizando una transición determinada por intervalo (normalmente por segundo).  
   
  Los contadores de rendimiento de red para eventos incluyen lo siguiente:  
   
--   **Conexiones establecidas**  
+- **Conexiones establecidas**  
   
--   **Datagramas recibidos**  
+- **Datagramas recibidos**  
   
--   **Datagramas enviados**  
+- **Datagramas enviados**  
   
  Estos contadores de rendimiento proporcionan recuentos desde que se inició el proceso. Los recuentos de las conexiones de <xref:System.Net.Sockets.Socket> establecidas incluyen llamadas explícitas al método <xref:System.Net.Sockets.Socket> mediante una aplicación para una conexión de socket de secuencia establecida, así como llamadas internas realizadas por otras clases (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient> y <xref:System.Net.Sockets.TcpClient>, por ejemplo) a la clase <xref:System.Net.Sockets.Socket>.  
   
@@ -183,33 +183,33 @@ En este tema se proporciona una lista de contadores de rendimiento que se puede 
   
  Los contadores de rendimiento de red para datos incluyen lo siguiente:  
   
--   **Bytes recibidos**  
+- **Bytes recibidos**  
   
--   **Bytes enviados**  
+- **Bytes enviados**  
   
  Los anteriores contadores de rendimiento proporcionan recuentos de bytes desde que se inició el proceso.  
   
  Hay dos contadores de duración que miden cuánto tardaron los objetos <xref:System.Net.HttpWebRequest> en pasar a través de una parte o la totalidad de su ciclo de vida:  
   
--   **Duración promedio de HttpWebRequest**  
+- **Duración promedio de HttpWebRequest**  
   
--   **Promedio de tiempo en cola de HttpWebRequest**  
+- **Promedio de tiempo en cola de HttpWebRequest**  
   
  Para el contador de la **Duración promedio de HttpWebRequest**, la duración de la mayoría de los objetos <xref:System.Net.HttpWebRequest> siempre comienza con la hora en que se creó el objeto hasta la hora en que la aplicación cerró la secuencia de respuesta. Hay dos casos poco comunes:  
   
--   Si la aplicación nunca llama al método <xref:System.Net.HttpWebRequest.GetResponse%2A> o <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>, la duración del objeto <xref:System.Net.HttpWebRequest> se omite.  
+- Si la aplicación nunca llama al método <xref:System.Net.HttpWebRequest.GetResponse%2A> o <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>, la duración del objeto <xref:System.Net.HttpWebRequest> se omite.  
   
--   Si el objeto <xref:System.Net.HttpWebRequest> produce una <xref:System.Net.WebException> al llamar al método <xref:System.Net.HttpWebRequest.GetResponse%2A> o <xref:System.Net.HttpWebRequest.EndGetResponse%2A>, la duración finaliza cuando se produce la excepción. Técnicamente, la secuencia de respuesta subyacente también se cierra en ese momento (la secuencia de respuesta devuelta al usuario es realmente una secuencia de memoria que contiene una copia de la secuencia de respuesta).  
+- Si el objeto <xref:System.Net.HttpWebRequest> produce una <xref:System.Net.WebException> al llamar al método <xref:System.Net.HttpWebRequest.GetResponse%2A> o <xref:System.Net.HttpWebRequest.EndGetResponse%2A>, la duración finaliza cuando se produce la excepción. Técnicamente, la secuencia de respuesta subyacente también se cierra en ese momento (la secuencia de respuesta devuelta al usuario es realmente una secuencia de memoria que contiene una copia de la secuencia de respuesta).  
   
  Hay cuatro contadores que realizan el seguimiento de determinados problemas de los objetos <xref:System.Net.HttpWebRequest> por intervalo. Estos contadores de rendimiento pueden ayudar a los desarrolladores de aplicaciones, los administradores y el personal de soporte técnico a entender mejor lo que hacen los objetos <xref:System.Net.HttpWebRequest>. Los contadores incluyen lo siguiente:  
   
--   **HttpWebRequests creadas por segundo**  
+- **HttpWebRequests creadas por segundo**  
   
--   **HttpWebRequests en cola por segundo**  
+- **HttpWebRequests en cola por segundo**  
   
--   **HttpWebRequests anuladas por segundo**  
+- **HttpWebRequests anuladas por segundo**  
   
--   **HttpWebRequests con error por segundo**  
+- **HttpWebRequests con error por segundo**  
   
  Para el contador de **HttpWebRequests anuladas por segundo**, también se cuentan las llamadas internas a <xref:System.Net.HttpWebRequest.Abort%2A>. Estas llamadas internas suelen estar provocadas por tiempos de expiración que a una aplicación puede interesarle medir.  
   
@@ -233,9 +233,9 @@ for (int i = 0; i < Array.Length; i++)
   
  Los contadores de rendimiento de red se muestran en dos categorías:  
   
--   «Redes de .NET CLR» - Los contadores de rendimiento originales introducidos en .NET Framework versión 2 y compatibles con .NET Framework versión 2 y posteriores.  
+- «Redes de .NET CLR» - Los contadores de rendimiento originales introducidos en .NET Framework versión 2 y compatibles con .NET Framework versión 2 y posteriores.  
   
--   «Redes de ".NET CLR 4.0.0.0» - Todos los contadores de socket anteriores más los nuevos contadores de rendimiento compatibles con .NET Framework versión 4 y versiones posteriores. Estos nuevos contadores proporcionan información de rendimiento sobre los objetos <xref:System.Net.HttpWebRequest>.  
+- «Redes de ".NET CLR 4.0.0.0» - Todos los contadores de socket anteriores más los nuevos contadores de rendimiento compatibles con .NET Framework versión 4 y versiones posteriores. Estos nuevos contadores proporcionan información de rendimiento sobre los objetos <xref:System.Net.HttpWebRequest>.  
   
  Para más información sobre el acceso y la administración de los contadores de rendimiento en una aplicación, vea [Contadores de rendimiento](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   

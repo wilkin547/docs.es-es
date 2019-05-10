@@ -15,12 +15,12 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-ms.openlocfilehash: 456308e37bddc1df86b49085139a3810c4959a58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a74142b8d8ee3a68daa9966e3f20f3b8e3becb72
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763143"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615399"
 ---
 # <a name="easing-functions"></a>Funciones de aceleración
 Las funciones de aceleración le permiten aplicar fórmulas matemáticas personalizadas a las animaciones. Por ejemplo, puede que quiera que un objeto rebote de forma realista o se comporte como si estuviera sobre un muelle. Podría usar animaciones de fotogramas clave o incluso animaciones From/To/By para aproximarse a estos efectos pero supondría bastante trabajo y la animación sería menos precisa que si usa un fórmula matemática.  

@@ -2,12 +2,12 @@
 title: Procedimiento para usar EdmGen.exe para generar los archivos de asignación y de modelo
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 915a9f3c53dba355480a3869602f963b195d53fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f5781b49817054923cbbbf4d52205b9280ea131a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605995"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64632205"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Procedimiento para usar EdmGen.exe para generar los archivos de asignación y de modelo
 En este tema se muestra cómo usar la herramienta EDM Generator (EdmGen.exe) para generar los siguientes archivos basados en la base de datos School:  

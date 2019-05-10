@@ -2,12 +2,12 @@
 title: Asignar restricciones KEYREF de un esquema XML (XSD) a restricciones de conjuntos de datos
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4cc4cb530b7252f35469fd4bb43bf6da9c1a3e24
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607506"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604022"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Asignar restricciones KEYREF de un esquema XML (XSD) a restricciones de conjuntos de datos
 El **keyref** elemento le permite establecer vínculos entre elementos dentro de un documento. Esto es similar a una relación de clave externa en una base de datos relacional. Si especifica un esquema de la **keyref** elemento, el elemento se convierte durante el proceso de asignación de esquema para una restricción de clave externa correspondiente en las columnas de las tablas de la <xref:System.Data.DataSet>. De forma predeterminada, el **keyref** elemento también genera una relación con el **ParentTable**, **ChildTable**, **ParentColumn**y  **ChildColumn** propiedades especificadas en la relación.  

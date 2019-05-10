@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: 0f589f37d79c9ec8d55153aac4c846726a379055
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3067c90978e6ebd680d10c1c4f9db131f19c9e44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948027"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614752"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Proporcionar información de accesibilidad de controles en Windows Forms
 Las ayudas de accesibilidad son programas y dispositivos especializados que ayudan a las personas con discapacidades a usar los equipos de forma más eficaz. Algunos ejemplos son los lectores de pantalla para invidentes y las utilidades de entrada de voz para las personas que usan comandos verbales en lugar del mouse o el teclado. Estas ayudas de accesibilidad interactúan con las propiedades de accesibilidad que exponen los controles de Windows Forms. Dichas propiedades son:  

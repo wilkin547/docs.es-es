@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16ef27b7d1a36121976cbb026f81984a8b84d1fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873865"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614338"
 ---
 # <a name="trace-switches"></a>Modificadores de seguimiento
 Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la salida del seguimiento. Son objetos que existen en el código y que se pueden configurar externamente mediante el archivo config. Hay tres tipos de modificadores de seguimiento en .NET Framework: la clase <xref:System.Diagnostics.BooleanSwitch> , la clase <xref:System.Diagnostics.TraceSwitch> y la clase <xref:System.Diagnostics.SourceSwitch> . La clase <xref:System.Diagnostics.BooleanSwitch> actúa como modificador para alternar que habilita o deshabilita una serie de instrucciones de seguimiento. Las clases <xref:System.Diagnostics.TraceSwitch> y <xref:System.Diagnostics.SourceSwitch> permiten habilitar un modificador de seguimiento para un nivel de seguimiento determinado para que aparezcan los mensajes de <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.TraceSource> especificados para ese nivel y todos sus niveles inferiores. Si deshabilita el modificador, los mensajes de seguimiento no aparecerán. Todas estas clases derivan de la clase abstracta (**MustInherit**) **Switch**, igual que deberían todos los modificadores desarrollados por el usuario.  
@@ -33,13 +33,13 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
 ## <a name="trace-levels"></a>Niveles de seguimiento  
  Al usar **TraceSwitch**hay que tener en cuenta algunas consideraciones adicionales. Un objeto **TraceSwitch** tiene cuatro propiedades que devuelven valores **Boolean** que indican si el modificador está establecido al menos en un nivel determinado:  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
   
  Los niveles permiten limitar la cantidad de información de seguimiento para recibir solo la información necesaria para solucionar un problema. Configure los modificadores de seguimiento en el nivel de seguimiento adecuado para especificar el nivel de detalle que quiere en la salida del seguimiento. Puede recibir mensajes de error, mensajes de advertencia, mensajes informativos, mensajes de seguimiento detallados o ningún mensaje.  
   

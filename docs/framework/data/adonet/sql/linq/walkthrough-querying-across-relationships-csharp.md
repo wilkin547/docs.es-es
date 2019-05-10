@@ -2,12 +2,12 @@
 title: 'Tutorial: Realizar consultas en varias relaciones (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d9233bc7501544fff04c1c9eae215bd981fa4bd0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033402"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618024"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Tutorial: Realizar consultas en varias relaciones (C#)
 Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *asociaciones* para representar relaciones de clave externa en la base de datos.  

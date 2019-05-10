@@ -2,12 +2,12 @@
 title: Procedimiento para inspeccionar o modificar mensajes en el cliente
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 67fa0e092e6494ff55d71e666b5137cfc9a3069e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3bf349a5b41c56d5dc3a79107b3fc86968033d54
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766849"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606301"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Procedimiento para inspeccionar o modificar mensajes en el cliente
 Puede inspeccionar o modificar los mensajes entrantes o salientes a través de un cliente WCF mediante la implementación de un <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> e insertarlos en el tiempo de ejecución del cliente. Para obtener más información, consulte [los clientes extender](../../../../docs/framework/wcf/extending/extending-clients.md). La característica equivalente del servicio es <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Para obtener un ejemplo de código completo, vea el [inspectores de mensaje](../../../../docs/framework/wcf/samples/message-inspectors.md) ejemplo.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], formatting values
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
-ms.openlocfilehash: 5957a44c7b07aa1b8d8df32667f023c0873ec1de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a5d8de6db8a0d6f62a082fc381a7b855eb948514
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013197"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630606"
 ---
 # <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>Procedimiento para establecer el formato del control NumericUpDown de formularios Windows Forms
 Puede configurar cómo se muestran los valores en los formularios de Windows <xref:System.Windows.Forms.NumericUpDown> control. El <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> propiedad determina cuántos números aparecen después del separador decimal; el valor predeterminado es 0. El <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> propiedad determina si se insertará un separador entre cada tres dígitos decimales; el valor predeterminado es `false`. El control puede mostrar valores en formato hexadecimal, en lugar de formato decimal, si la <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> propiedad está establecida en `true`; el valor predeterminado es `false`.  

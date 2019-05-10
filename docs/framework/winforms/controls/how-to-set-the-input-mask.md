@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd156f9e5bf6519363f66ca61687f1e9f2bfc6ab
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912878"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630427"
 ---
 # <a name="how-to-set-the-input-mask"></a>Procedimiento para establecer la máscara de entrada
 El control de cuadro de texto enmascarado es un control de cuadro de texto mejorado que admite una sintaxis declarativa para aceptar o rechazar la intervención del usuario. Al establecer la propiedad Mask, puede especificar la entrada del usuario permitido sin escribir ninguna lógica de validación personalizada en la aplicación. Para obtener más información, vea la sección Comentarios de la <xref:System.Windows.Forms.MaskedTextBox> clase.  
@@ -34,15 +34,15 @@ El control de cuadro de texto enmascarado es un control de cuadro de texto mejor
   
 1. En **diseño** visualizarla, seleccione un <xref:System.Windows.Forms.MaskedTextBox>.  
   
-    1.  Haga clic en la etiqueta inteligente para abrir el **MaskedTextBox tareas** panel.  
+    1. Haga clic en la etiqueta inteligente para abrir el **MaskedTextBox tareas** panel.  
   
-    2.  Haga clic en **establecer máscara**.  
+    2. Haga clic en **establecer máscara**.  
   
      \- o -  
   
-    1.  En el **propiedades** ventana, seleccione el <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propiedad.  
+    1. En el **propiedades** ventana, seleccione el <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propiedad.  
   
-    2.  Haga clic en el botón de puntos suspensivos en la columna de valor de propiedad.  
+    2. Haga clic en el botón de puntos suspensivos en la columna de valor de propiedad.  
   
      El **máscara de entrada** aparece el cuadro de diálogo.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9086502968fb9046237e77b76b4038a9f32f4ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 96bc833915dd74756220b5e79a2866b41389dd45
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778019"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630502"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>Interfaces de hospedaje de CLR agregadas en .NET Framework 4 y 4.5
 Esta sección describen las interfaces que no administrada de hosts pueden usar para integrar common language runtime (CLR) en el [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]y versiones posteriores en sus aplicaciones. Estas interfaces proporcionan métodos para un host configurar y cargar el tiempo de ejecución en un proceso.  

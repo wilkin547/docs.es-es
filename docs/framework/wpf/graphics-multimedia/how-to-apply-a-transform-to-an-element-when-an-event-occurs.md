@@ -11,12 +11,12 @@ helpviewer_keywords:
 - properties [WPF], RenderTransform
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
-ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8f04db274432c0e89c6839bef825976c8a2f853c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698998"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630751"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Procedimiento Aplicar una transformación a un elemento cuando se produce un evento
 En este ejemplo se muestra cómo aplicar un <xref:System.Windows.Media.ScaleTransform> cuando se produce un evento. El concepto que se muestra aquí es el mismo que se utiliza para aplicar otros tipos de transformaciones. Para obtener más información acerca de los tipos de transformaciones disponibles, consulte el <xref:System.Windows.Media.Transform> clase o [información general sobre transformaciones](transforms-overview.md).  

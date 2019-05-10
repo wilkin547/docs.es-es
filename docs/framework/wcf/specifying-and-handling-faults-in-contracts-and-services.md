@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b9d6a4e2bb6b7e5c750ff7dad92934c4337c0083
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006411"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605943"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Especificación y administración de errores en contratos y servicios
 Aplicaciones de Windows Communication Foundation (WCF) controlar situaciones de error mediante la asignación de objetos de excepción administrada a los objetos de error SOAP y objetos de error de SOAP a los objetos de excepción administrada. Los temas de esta sección describen cómo diseñar contratos para exponer condiciones de error como errores de SOAP personalizados, cómo devolver tales errores como parte de la implementación del servicio y cómo los clientes detectan tales errores.  

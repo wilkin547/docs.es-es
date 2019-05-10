@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a673c98b11fbca5f66e9e1ae61f224448c20797
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 690d556eb3991747d1627bae63b9c59ca68daaaa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966210"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616212"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType (Enumeración)
 Identifica el origen de un objeto que se va a recolectar como elemento no utilizado.  
