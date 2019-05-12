@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo hospedar el entorno de tiempo de e
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 53cdc13d5a356a2975182c58374a0e9c6639ec17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0ebd5b1532af77c082a2d8cd6508a83e969b325e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481150"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587054"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escritura de un host personalizado de .NET Core para controlar el entorno de tiempo de ejecución de .NET desde el código nativo
 
@@ -70,9 +70,9 @@ Algunas propiedades comunes incluyen:
 
 * `TRUSTED_PLATFORM_ASSEMBLIES` Esta es una lista de rutas de acceso de ensamblado (delimitadas por ";" en Windows y ":" en Linux) que el entorno de ejecución puede resolver de forma predeterminada. Algunos hosts tienen manifiestos codificados de forma rígida que enumeran los ensamblados que pueden cargar. Otros colocan cualquier biblioteca en determinadas ubicaciones (junto a *coreclr.dll*, por ejemplo) en esta lista.
 * `APP_PATHS` Esta es una lista de rutas de acceso para explorar un ensamblado si este no puede encontrarse en la lista de ensamblados de plataforma de confianza (TPA). Dado que el host tiene más control sobre los ensamblados que se cargan mediante la lista TPA, es recomendable que los hosts determinen qué ensamblados esperan cargar y los muestren de forma explícita. Pero si es necesario sondear en tiempo de ejecución, esta propiedad puede habilitar ese escenario.
-*  `APP_NI_PATHS` Esta lista es similar a APP_PATHS, excepto que son las rutas de acceso las que se sondean en busca de imágenes nativas.
-*  `NATIVE_DLL_SEARCH_DIRECTORIES` Esta propiedad es una lista de rutas de acceso que el cargador debe sondear cuando busca bibliotecas nativas llamadas mediante p/invoke.
-*  `PLATFORM_RESOURCE_ROOTS` Esta lista incluye rutas de acceso que se van a explorar para ensamblados satélite de recursos (en subdirectorios específicos de la referencia cultural).
+* `APP_NI_PATHS` Esta lista es similar a APP_PATHS, excepto que son las rutas de acceso las que se sondean en busca de imágenes nativas.
+* `NATIVE_DLL_SEARCH_DIRECTORIES` Esta propiedad es una lista de rutas de acceso que el cargador debe sondear cuando busca bibliotecas nativas llamadas mediante p/invoke.
+* `PLATFORM_RESOURCE_ROOTS` Esta lista incluye rutas de acceso que se van a explorar para ensamblados satélite de recursos (en subdirectorios específicos de la referencia cultural).
 
 En este host de ejemplo, la lista TPA se construye simplemente mediante la enumeración de todas las bibliotecas del directorio actual:
 
@@ -166,9 +166,9 @@ Las propiedades comunes de AppDomain incluyen:
 
 * `TRUSTED_PLATFORM_ASSEMBLIES` Esta es una lista de rutas de acceso de ensamblado (delimitada por `;` en Windows y `:` en Linux o Mac) cuya carga debe priorizar AppDomain y a las que debe otorgar plena confianza (incluso en dominios de confianza parcial). Esta lista está diseñada para contener ensamblados de "Framework" y otros módulos de confianza, similares a los GAC en escenarios de .NET Framework. Algunos hosts colocarán una biblioteca junto a *coreclr.dll* en esta lista, otros tienen manifiestos codificados de forma rígida que enumeran ensamblados de confianza para sus fines.
 * `APP_PATHS` Esta es una lista de rutas de acceso para explorar un ensamblado si este no puede encontrarse en la lista de ensamblados de plataforma de confianza (TPA). Dado que el host tiene más control sobre los ensamblados que se cargan mediante la lista TPA, es recomendable que los hosts determinen qué ensamblados esperan cargar y los muestren de forma explícita. Pero si es necesario sondear en tiempo de ejecución, esta propiedad puede habilitar ese escenario.
-*  `APP_NI_PATHS` Esta lista es muy similar a APP_PATHS excepto que está diseñada para ser rutas de acceso que se explorarán para imágenes nativas.
-*  `NATIVE_DLL_SEARCH_DIRECTORIES` Esta propiedad es una lista de rutas de acceso que el cargador debe explorar cuando busca archivos DLL nativos que se han llamado mediante p/invoke.
-*  `PLATFORM_RESOURCE_ROOTS` Esta lista incluye rutas de acceso que se van a explorar para ensamblados satélite de recursos (en subdirectorios específicos de la referencia cultural).
+* `APP_NI_PATHS` Esta lista es muy similar a APP_PATHS excepto que está diseñada para ser rutas de acceso que se explorarán para imágenes nativas.
+* `NATIVE_DLL_SEARCH_DIRECTORIES` Esta propiedad es una lista de rutas de acceso que el cargador debe explorar cuando busca archivos DLL nativos que se han llamado mediante p/invoke.
+* `PLATFORM_RESOURCE_ROOTS` Esta lista incluye rutas de acceso que se van a explorar para ensamblados satélite de recursos (en subdirectorios específicos de la referencia cultural).
 
 En nuestro [host de ejemplo sencillo](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithMscoree), estas propiedades se configuran de la siguiente manera:
 
